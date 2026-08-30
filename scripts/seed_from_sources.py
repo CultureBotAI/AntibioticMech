@@ -1089,33 +1089,33 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
         # empty, and the seeder must not fill it back in.
         merged.pop("mode_of_action", None)
         merged.pop("mode_of_action_notes", None)
-        # The scope describes the value, so it travels with it — and an earlier
-        # version of this block said exactly that and then did the opposite,
-        # carrying the seeder's scope forward beside a mechanism the curator had
-        # replaced. The result asserted selectivity derived for a value no longer
-        # on the record, silently, with every gate green.
+        # The scope describes the value it sits beside, and the seeder cannot
+        # tell a curator's scope from a leftover by looking at it. So it does
+        # not try. The curator owns this block; their mechanism, notes and scope
+        # are copied forward verbatim, including a scope they chose to omit.
         #
-        # Three states, and the seeder can tell them apart:
-        #   - the curator kept the seeder's mechanism: the derived scope still
-        #     describes it, so it stands;
-        #   - the curator changed it AND their scope differs from the derived
-        #     one: they set it deliberately, so it is theirs and is preserved —
-        #     silently discarding curator work is the older sin (#9);
-        #   - the curator changed it and the scope still equals the derived one:
-        #     indistinguishable from a leftover. Dropped, because a missing scope
-        #     says nothing while a wrong one makes a claim. `just worklist`
-        #     surfaces the record as owing one.
+        # An earlier attempt guessed, dropping the scope when the curator changed
+        # the mechanism without changing the scope. Three ways that was worse
+        # than the problem: the enum has two values, so a curator who changed the
+        # mechanism and deliberately picked the value the seeder happened to
+        # derive had their choice deleted as a leftover roughly half the time —
+        # the #9 sin the comment claimed to be avoiding; the resulting
+        # mechanism-without-scope is a state `test_target_scope_accompanies_
+        # every_seeded_mechanism` forbids, so the merge emitted what the gate
+        # rejects; and the comment offered `just worklist` as the mitigation
+        # when no such queue existed. It does now, and it is the honest answer:
+        # a scope the curator owes is curation work to SURFACE, not a value for
+        # the seeder to invent or destroy.
+        #
+        # The one exception is a veto. With no mechanism asserted there is
+        # nothing for a scope to describe, so it goes — whoever set it.
         merged.pop("mode_of_action_target_scope", None)
         if "mode_of_action" in existing:
             merged["mode_of_action"] = existing["mode_of_action"]
+            if "mode_of_action_target_scope" in existing:
+                merged["mode_of_action_target_scope"] = existing["mode_of_action_target_scope"]
         if existing_moa_notes:
             merged["mode_of_action_notes"] = existing_moa_notes
-        existing_scope = existing.get("mode_of_action_target_scope")
-        if existing_scope is not None:
-            mechanism_kept = existing.get("mode_of_action") == record.get("mode_of_action")
-            curator_set_scope = existing_scope != record.get("mode_of_action_target_scope")
-            if mechanism_kept or curator_set_scope:
-                merged["mode_of_action_target_scope"] = existing_scope
 
     # The seeder owns structure-collision todos; every other discussion is the
     # curator's and is appended after them.

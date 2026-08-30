@@ -306,21 +306,31 @@ def test_a_seeded_mode_of_action_is_policed_and_a_curators_is_not(repo_root):
 
 
 def test_target_scope_accompanies_every_seeded_mechanism(records):
-    """A mechanism with no scope is the conflation this field exists to remove:
+    """A SEEDED mechanism with no scope is the conflation this field removes:
     `PROTEIN_SYNTHESIS_INHIBITION` alone cannot tell linezolid's bacterial 50S
-    from omacetaxine's host 80S. A scope with no mechanism describes nothing.
+    from omacetaxine's host 80S. A scope with no mechanism describes nothing,
+    whoever set it.
+
+    Scoped to seeder-owned mechanisms deliberately. Once a curator claims
+    `mode_of_action`, the seeder cannot derive a scope for their value and must
+    not guess, so a curator's mechanism may legitimately carry none — it is
+    curation work, and `just worklist --queue moa-scope` is where it is owed.
+    Requiring one here made the merge emit a state this gate rejected, turning
+    `just qc` red on a curator who had done nothing wrong.
     """
+    from seed_from_sources import curator_owns_mode_of_action
+
     VALID = {"MICROBIAL_TARGET", "HOST_SHARED_TARGET"}
     missing, orphaned, bad = [], [], []
     for path, record in records:
         moa = record.get("mode_of_action")
         scope = record.get("mode_of_action_target_scope")
-        if moa and not scope:
+        if moa and not scope and not curator_owns_mode_of_action(record):
             missing.append(path.name)
         if scope and not moa:
             orphaned.append(path.name)
         if scope and scope not in VALID:
             bad.append(f"{path.name}: {scope}")
-    assert missing == [], f"mechanism with no target scope: {missing[:10]}"
+    assert missing == [], f"seeded mechanism with no target scope: {missing[:10]}"
     assert orphaned == [], f"target scope with no mechanism: {orphaned[:10]}"
     assert bad == [], bad
