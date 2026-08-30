@@ -147,7 +147,10 @@ Five disciplines keep it honest:
   confidence rating** — both mark true mechanisms, and the host-shared value
   covers microbe-selective drugs acting on a conserved machine as well as
   genuinely host-directed ones. It marks where the selectivity question exists;
-  `molecular_targets` is where a curator answers it.
+  `molecular_targets` is where a curator answers it. Once a curator claims
+  `mode_of_action`, the seeder can no longer derive a scope for their value and
+  copies the block forward untouched rather than guessing — `just worklist
+  --queue moa-scope` is where an unsettled scope shows up.
 
   A specific role outranks a generic one, because it identifies the target the
   generic role only gestures at. Ciprofloxacin carries `topoisomerase IV

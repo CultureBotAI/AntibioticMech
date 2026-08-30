@@ -34,6 +34,7 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from seed_from_sources import (  # noqa: E402
     CONF_PATH,
+    MOA_NOTE_MARKER,
     RAW_DIR,
     build_concepts,
     curator_owns_mode_of_action,
@@ -119,6 +120,51 @@ def minted_queue(records: list[dict]) -> list[dict]:
     return rows
 
 
+def mode_of_action_scope_queue(records: list[dict]) -> list[dict]:
+    """Curator-owned mechanisms whose target scope has not been settled.
+
+    The scope describes the mechanism it sits beside, and the seeder derives it
+    from the ChEBI roles. Once a curator claims `mode_of_action`, the seeder can
+    no longer derive a scope for their value and must not guess — it copies the
+    block forward verbatim. That is correct, and it leaves exactly one loose end:
+    a scope that was derived for the seeder's mechanism, still sitting beside a
+    curator's different one.
+
+    This queue is that loose end. It exists because a code comment once offered
+    `just worklist` as the mitigation for precisely this, and no such queue
+    existed — an asserted mitigation that was never built, which is the same
+    defect class as a role map that silently did nothing.
+
+    Two signals, both cheap and both honest about what they mean:
+      - no scope at all beside a curator's mechanism;
+      - the seeder's own note marker still in the notes, meaning the curator
+        appended to the seeder's sentence rather than replacing it, so the scope
+        beside it is very likely still the seeder's and unreviewed.
+    """
+    rows = []
+    for record in records:
+        if not record.get("mode_of_action") or not curator_owns_mode_of_action(record):
+            continue
+        scope = record.get("mode_of_action_target_scope")
+        notes = str(record.get("mode_of_action_notes") or "")
+        if not scope:
+            hint = "curator mechanism with no target scope"
+        elif MOA_NOTE_MARKER in notes:
+            hint = f"scope {scope} may still be the seeder's (its note marker remains)"
+        else:
+            continue
+        rows.append({
+            "queue": "moa-scope",
+            "key": record["identifier"],
+            "label": record["label"],
+            "source": "+".join(sorted({c["source"] for c in record.get("source_concepts", [])})),
+            "source_id": record.get("mode_of_action", ""),
+            "hint": hint,
+        })
+    rows.sort(key=lambda r: r["label"].lower())
+    return rows
+
+
 def unknown_mechanism_queue(records: list[dict]) -> list[dict]:
     """Determinants seeded with mechanism_type UNKNOWN.
 
@@ -156,7 +202,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--queue",
-                        choices=("all", "no-structure", "mechanism", "minted", "unknown-mech"),
+                        choices=("all", "no-structure", "mechanism", "minted", "unknown-mech",
+                                 "moa-scope"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
     parser.add_argument("--tsv", type=Path, help="Write every row (not just --limit) to this TSV.")
@@ -172,6 +219,8 @@ def main() -> int:
         queues["minted"] = minted_queue(records)
     if args.queue in ("all", "unknown-mech"):
         queues["unknown-mech"] = unknown_mechanism_queue(records)
+    if args.queue in ("all", "moa-scope"):
+        queues["moa-scope"] = mode_of_action_scope_queue(records)
 
     for name, rows in queues.items():
         print(f"\n=== {name}: {len(rows)} item(s) ===")

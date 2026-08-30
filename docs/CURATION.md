@@ -77,10 +77,11 @@ you mean it.
 
 **If you change the mechanism, state the scope.** The seeder derived the scope
 for the value it wrote; once you replace that value, the scope describes
-something no longer on the record. So: annotate without changing the mechanism
-and the scope stands; change the mechanism and set a scope, and yours is kept;
-change the mechanism and leave the scope alone, and the seeder drops it rather
-than let it assert selectivity nothing derived. A veto drops it too. It is **not a confidence rating** — `HOST_SHARED_TARGET`
+something no longer on the record — and the seeder cannot tell your scope from
+its own leftover, so it does not guess. It copies your whole block forward
+verbatim, an omitted scope included. `just worklist --queue moa-scope` lists the
+records where that is still owed. A veto is the exception: with no mechanism
+asserted there is nothing for a scope to describe, so it is dropped. It is **not a confidence rating** — `HOST_SHARED_TARGET`
 covers linezolid, which is genuinely microbe-selective on a conserved ribosome,
 as well as omacetaxine, which is not. It marks where the selectivity question
 exists so that `molecular_targets` can answer it.

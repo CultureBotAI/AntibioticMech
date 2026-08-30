@@ -956,16 +956,23 @@ def test_an_unscoped_role_raises_rather_than_emitting_a_bare_mechanism():
                                   {"CHEBI:99999999": "invented"}, "ANTIBACTERIAL")
 
 
-def test_a_curator_correction_never_keeps_a_scope_derived_for_another_mechanism():
-    """`merge_with_existing(record, existing)` — the FRESH SEED is the first
-    argument, the on-disk record the second. An earlier version of this test had
-    them the other way round and passed for the wrong reason, so the four states
-    below are asserted explicitly.
+def test_a_curator_owns_the_whole_mechanism_block_including_its_scope():
+    """`merge_with_existing(record, existing)` — FRESH SEED first, on-disk
+    second. An earlier version of this test had them reversed and passed for the
+    wrong reason.
 
-    The scope describes the value it sits beside. An earlier merge said so in a
-    comment and then carried the seeder's scope forward onto a mechanism the
-    curator had replaced, asserting selectivity derived for a value no longer on
-    the record — silently, with every gate green.
+    The seeder cannot tell a curator's scope from a leftover by looking at it,
+    so it does not guess: the curator's mechanism, notes and scope are copied
+    forward verbatim, a chosen omission included. An earlier attempt DID guess —
+    dropping the scope when the mechanism changed but the scope did not — and
+    was worse three ways: it deleted a deliberate choice whenever the curator
+    picked the value the seeder happened to derive (a two-value enum, so about
+    half the time); it produced a mechanism-with-no-scope that the corpus gate
+    forbade, so the merge emitted what the gate rejected; and it cited a
+    `just worklist` queue that did not exist.
+
+    A veto is the exception: with no mechanism asserted there is nothing for a
+    scope to describe, so it goes regardless of who set it.
     """
     from seed_from_sources import merge_with_existing
 
@@ -973,43 +980,42 @@ def test_a_curator_correction_never_keeps_a_scope_derived_for_another_mechanism(
              "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
              "mode_of_action_notes": "Assigned from ChEBI role CHEBI:48001 (x).",
              "mode_of_action_target_scope": "HOST_SHARED_TARGET"}
+    note = "CURATOR: reassigned after literature review, PMID:1."
 
     def reseed(on_disk):
         return merge_with_existing(dict(fresh), on_disk)
 
-    # 1. Curator kept the seeder's mechanism and only annotated it. The derived
-    #    scope still describes that mechanism, so it stands.
-    kept = reseed(dict(fresh, mode_of_action_notes=(
+    # Curator set a scope differing from the derived one: theirs, kept.
+    a = reseed(dict(fresh, mode_of_action="VIRAL_INTEGRASE_INHIBITION",
+                    mode_of_action_target_scope="MICROBIAL_TARGET", mode_of_action_notes=note))
+    assert a["mode_of_action_target_scope"] == "MICROBIAL_TARGET"
+
+    # Curator's scope HAPPENS to equal the derived one. Still theirs. This is
+    # the case the previous heuristic destroyed.
+    b = reseed(dict(fresh, mode_of_action="MEMBRANE_DISRUPTION",
+                    mode_of_action_target_scope="HOST_SHARED_TARGET", mode_of_action_notes=note))
+    assert b["mode_of_action"] == "MEMBRANE_DISRUPTION"
+    assert b["mode_of_action_target_scope"] == "HOST_SHARED_TARGET"
+
+    # Curator omitted the scope. The omission is carried forward, not filled in;
+    # `just worklist --queue moa-scope` surfaces it as work owed.
+    c = dict(fresh, mode_of_action="VIRAL_INTEGRASE_INHIBITION", mode_of_action_notes=note)
+    del c["mode_of_action_target_scope"]
+    assert "mode_of_action_target_scope" not in reseed(c)
+
+    # Annotated without changing the mechanism: the derived scope still stands.
+    d = reseed(dict(fresh, mode_of_action_notes=(
         "Assigned from ChEBI role CHEBI:48001 (x). CURATOR: confirmed against PMID:1.")))
-    assert kept["mode_of_action"] == "PROTEIN_SYNTHESIS_INHIBITION"
-    assert kept["mode_of_action_target_scope"] == "HOST_SHARED_TARGET"
+    assert d["mode_of_action_target_scope"] == "HOST_SHARED_TARGET"
 
-    # 2. Curator replaced the mechanism and left the scope alone. It was derived
-    #    for a value that is gone, and nothing distinguishes it from a leftover.
-    #    Dropped: a missing scope says nothing, a wrong one makes a claim.
-    stale = reseed(dict(fresh, mode_of_action="VIRAL_INTEGRASE_INHIBITION",
-                        mode_of_action_notes="CURATOR: reassigned, PMID:1."))
-    assert stale["mode_of_action"] == "VIRAL_INTEGRASE_INHIBITION"
-    assert "mode_of_action_target_scope" not in stale, stale
-
-    # 3. Curator replaced the mechanism AND set a scope that differs from the
-    #    derived one. That is deliberate, and theirs. Silently discarding
-    #    curator work is the older and worse sin.
-    owned = reseed(dict(fresh, mode_of_action="VIRAL_INTEGRASE_INHIBITION",
-                        mode_of_action_target_scope="MICROBIAL_TARGET",
-                        mode_of_action_notes="CURATOR: reassigned, PMID:1."))
-    assert owned["mode_of_action_target_scope"] == "MICROBIAL_TARGET"
-
-    # 4. Veto: a note with no value. No mechanism is asserted, so no scope may
-    #    be left behind describing one.
-    veto_disk = {k: v for k, v in fresh.items()
-                 if k not in ("mode_of_action", "mode_of_action_target_scope")}
-    veto_disk["mode_of_action_notes"] = "CURATOR: the cited role is wrong here. Leave blank."
-    veto = reseed(veto_disk)
-    assert "mode_of_action" not in veto
-    assert "mode_of_action_target_scope" not in veto
-
-
+    # Veto, with a scope of either provenance left on disk: nothing to describe.
+    for stranded in ("HOST_SHARED_TARGET", "MICROBIAL_TARGET"):
+        v = dict(fresh, mode_of_action_target_scope=stranded,
+                 mode_of_action_notes="CURATOR: the cited role is wrong here. Leave blank.")
+        del v["mode_of_action"]
+        out = reseed(v)
+        assert "mode_of_action" not in out
+        assert "mode_of_action_target_scope" not in out, stranded
 def test_every_seeded_mechanism_note_explains_its_target_scope():
     """The scope caveat is appended to the cross-activity note, not swapped for
     it.
