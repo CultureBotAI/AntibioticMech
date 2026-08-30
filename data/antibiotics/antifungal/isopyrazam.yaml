@@ -1,0 +1,43 @@
+identifier: antibioticmech:aro-5fd4e54f15
+label: isopyrazam
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: A persisent and broad spectrum fungicide used for the control of Septoria
+  tritici, rusts and other diseases in cereals and some other crops. It is tied to
+  causing cancer.
+definition_source: PMID:35973770
+parent_compounds:
+- ARO:3009539
+xrefs:
+- ARO:3009168
+- cas:881685-58-1
+- CHEBI:83126
+- pubchem.compound:25271089
+activity_roles:
+- CHEBI:86328
+structural_class: fungal succinate dehydrogenase inhibitor
+structural_class_id: ARO:3009539
+chemical_structure:
+  smiles: CC(C)C1C2CCC1C3=C2C=CC=C3NC(=O)C4=CN(N=C4C(F)F)C
+  standard_inchi: InChI=1S/C20H23F2N3O/c1-10(2)16-12-7-8-13(16)17-11(12)5-4-6-15(17)23-20(26)14-9-25(3)24-18(14)19(21)22/h4-6,9-10,12-13,16,19H,7-8H2,1-3H3,(H,23,26)
+  standard_inchi_key: XTDZGXBTXBEZDN-UHFFFAOYSA-N
+  molecular_formula: C20H23F2N3O
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 359.4
+  monoisotopic_mass: 359.18091869
+source_concepts:
+- source: ARO
+  source_id: ARO:3009168
+  source_label: isopyrazam
+  minted_identifier: antibioticmech:aro-5fd4e54f15
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:54:36Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,46 @@
+identifier: CHEBI:83707
+label: flutriafol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: 1-(2-fluorophenyl)-1-(4-fluorophenyl)-2-(1H-1,2,4-triazol-1-yl)ethanol
+  (flutriafol) is a triazole antifungal used as a fungicide in agricultural applications.
+definition_source: PMID:10879820
+parent_compounds:
+- ARO:3007499
+xrefs:
+- ARO:3009308
+- cas:76674-21-0
+- chembl:CHEMBL2136951
+- pubchem.compound:91727
+structural_class: triazole antifungal
+structural_class_id: ARO:3007499
+chemical_structure:
+  smiles: OC(Cn1cncn1)(c1ccc(F)cc1)c1ccccc1F
+  standard_inchi: InChI=1S/C16H13F2N3O/c17-13-7-5-12(6-8-13)16(22,9-21-11-19-10-20-21)14-3-1-2-4-15(14)18/h1-8,10-11,22H,9H2
+  standard_inchi_key: JWUCHKBSVLQQCO-UHFFFAOYSA-N
+  molecular_formula: C16H13F2N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 301.296
+  monoisotopic_mass: 301.10267
+source_concepts:
+- source: ARO
+  source_id: ARO:3009308
+  source_label: flutriafol
+  minted_identifier: antibioticmech:aro-78560ff891
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009288
+  label: Colletotrichum truncatum Cyp51 with mutations associated with resistance
+    to flutriafol
+  evidence:
+  - reference: ARO:3009288
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009308 (flutriafol);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:54:36Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

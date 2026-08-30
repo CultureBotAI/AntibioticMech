@@ -55,10 +55,10 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 | Class | Records | SEEDED | REVIEWED | With CARD mechanism evidence |
 |---|---:|---:|---:|---:|
-| ANTIBACTERIAL | 1108 | 1108 | 0 | 266 |
+| ANTIBACTERIAL | 1088 | 1088 | 0 | 250 |
 | ANTIMYCOBACTERIAL | 144 | 144 | 0 | 31 |
-| ANTIFUNGAL | 575 | 575 | 0 | 25 |
-| ANTIPROTOZOAL | 262 | 262 | 0 | 2 |
+| ANTIFUNGAL | 596 | 596 | 0 | 42 |
+| ANTIPROTOZOAL | 261 | 261 | 0 | 1 |
 | BIOCIDE | 29 | 29 | 0 | 0 |
 | ANTIMICROBIAL_UNSPECIFIED | 485 | 485 | 0 | 0 |
 | **TOTAL** | **2603** | **2603** | **0** | **324** |

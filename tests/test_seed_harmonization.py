@@ -50,11 +50,33 @@ def test_the_narrower_target_group_wins_the_filing():
     assert classify(["CHEBI:35718"], CONF, from_aro=False) == "ANTIFUNGAL"
 
 
-def test_an_aro_concept_with_no_chebi_role_is_antibacterial():
-    """CARD's antibiotic molecule subtree exists because a bacterial resistance
-    determinant acts on each molecule in it."""
+def test_an_aro_concept_with_no_chebi_role_falls_back_to_antibacterial():
+    """The fallback, for a CARD molecule with neither a ChEBI role nor a
+    group-naming drug class."""
     assert classify([], CONF, from_aro=True) == "ANTIBACTERIAL"
     assert classify([], CONF, from_aro=False) == "ANTIMICROBIAL_UNSPECIFIED"
+
+
+def test_a_card_drug_class_that_names_a_target_group_outranks_chebi_roles():
+    """ChEBI gives fluconazole and amphotericin B a generic `antibacterial
+    agent` role. CARD calls them a triazole antifungal and a polyene antifungal
+    — a compound-specific curated classification, and the stronger evidence."""
+    chebi_says_antibacterial = ["CHEBI:33282", "CHEBI:35718"]
+    assert classify(chebi_says_antibacterial, CONF, from_aro=True) == "ANTIBACTERIAL"
+    assert classify(chebi_says_antibacterial, CONF, from_aro=True,
+                    aro_class_ids=("ARO:3007499",)) == "ANTIFUNGAL"  # triazole antifungal
+    assert classify([], CONF, from_aro=True,
+                    aro_class_ids=("ARO:3007497",)) == "ANTIFUNGAL"  # polyene antifungal
+
+
+def test_a_drug_class_that_does_not_name_a_target_group_is_not_guessed_from():
+    """"imidazole antibiotic" covers both antibacterials and antifungals.
+    Inferring the target group from the chemistry is exactly the guess this
+    repository should not make, so such a class is absent from the map and the
+    compound falls through to its ChEBI roles."""
+    assert "ARO:3007507" not in CONF.get("aro_class_to_class", {})
+    assert classify(["CHEBI:35718"], CONF, from_aro=True,
+                    aro_class_ids=("ARO:3007507",)) == "ANTIFUNGAL"
 
 
 def _concept(source, source_id, label, inchikey, roles=()):

@@ -45,11 +45,13 @@ dev = [
     "pytest-cov>=4.1",
     "ruff>=0.4",
 ]
-# Only scripts/research_antibiotic.py needs this, and only when actually calling
-# a provider. Extraction, seeding, validation, rendering and the whole test
-# suite run without it — the same separation data/raw/ has from the upstream
-# ChEBI and CARD releases. Pinned to 3.12+ to match TraitMech and HabitatMech,
-# which share the client and the conventions.
+# Reserved for the model-assisted research path described in NEXT_TASKS.md,
+# which is not implemented yet — nothing in the repository imports this today.
+# When it lands, only that script will need the client, and only when actually
+# calling a provider: extraction, seeding, validation, rendering and the whole
+# test suite must keep running without it, the same separation data/raw/ has
+# from the upstream ChEBI and CARD releases. Pinned to 3.12+ to match TraitMech
+# and HabitatMech, which share the client and the conventions.
 research = [
     "deep-research-client[cyberian]>=0.2.4; python_version >= '3.12'",
 ]

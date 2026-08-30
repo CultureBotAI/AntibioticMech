@@ -14,6 +14,8 @@ xrefs:
 - CHEBI:3371
 - chembl:CHEMBL2221250
 - pubchem.compound:122130878
+activity_roles:
+- CHEBI:33281
 structural_class: aminoglycoside antibiotic
 structural_class_id: ARO:0000016
 chemical_structure:
@@ -31,6 +33,8 @@ source_concepts:
   source_id: ARO:3003993
   source_label: capreomycin
   minted_identifier: antibioticmech:aro-3a5151096c
+  role_terms:
+  - CHEBI:33281
   source_version: '2026-08-29'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
@@ -88,3 +92,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T00:54:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

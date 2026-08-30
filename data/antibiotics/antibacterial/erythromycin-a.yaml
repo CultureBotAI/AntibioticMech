@@ -111,6 +111,8 @@ source_concepts:
   source_id: ARO:0000006
   source_label: erythromycin
   minted_identifier: antibioticmech:aro-1ed7584b6e
+  role_terms:
+  - CHEBI:33281
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:42355
@@ -911,3 +913,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T00:54:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

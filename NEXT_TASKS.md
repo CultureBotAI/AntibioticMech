@@ -18,6 +18,11 @@ end of the scaffolding pass that produced the initial 2,603-record corpus.
 - **Ground the 250 minted records.** `just worklist --queue minted`. Most are
   CARD molecules with a PubChem structure and no ChEBI entry; some deserve a
   ChEBI term request.
+- **Re-file the compounds no source classifies well.** After #2 and #3, a
+  handful remain filed by ChEBI's generic `antibacterial agent` role against
+  clinical reality — ketoconazole is the clearest: ChEBI asserts antibacterial,
+  and CARD's "imidazole antibiotic" class deliberately does not state a target
+  group. These need a curation decision each, not another inference rule.
 - **Resolve the two structure-collision todos.** gramicidin S / gramicidin C and
   patricin A / patricin B share an InChIKey via CARD's PubChem cross-references.
   One CID in each pair is wrong upstream; determine which and file it with CARD.

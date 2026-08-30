@@ -127,6 +127,27 @@ role_to_class:
   CHEBI:65256: {class: BIOCIDE, priority: 5}             # antimicrobial food preservative
   CHEBI:172949: {class: BIOCIDE, priority: 5}            # antimicrobial cosmetic preservative
 
+# ARO drug class -> AntimicrobialClassEnum, for the classes whose NAME states a
+# target group. CARD models antifungal resistance as well as antibacterial, so
+# "every ARO molecule is an antibacterial" is no longer true; a curated,
+# compound-specific drug class is stronger evidence than ChEBI's generic role
+# tags, and this map is consulted before them.
+#
+# Classes whose names do not state a group are deliberately absent.
+# "imidazole antibiotic" and "nitroimidazole antibiotic" each cover both
+# antibacterials and antifungals, and inferring the target group from the
+# chemistry is exactly the guess this repository should not make; those
+# compounds fall through to their ChEBI roles.
+aro_class_to_class:
+  ARO:3007497: ANTIFUNGAL   # polyene antifungal
+  ARO:3007498: ANTIFUNGAL   # allylamine antifungal
+  ARO:3007499: ANTIFUNGAL   # triazole antifungal
+  ARO:3007560: ANTIFUNGAL   # pyrimidine antifungal
+  ARO:3009305: ANTIFUNGAL   # strobilurin fungicide
+  ARO:3009317: ANTIFUNGAL   # benzimidazole antifungal
+  ARO:3009323: ANTIFUNGAL   # carbamate fungicides
+  ARO:3009539: ANTIFUNGAL   # fungal succinate dehydrogenase inhibitor
+
 # ARO determinant lineage -> ResistanceMechanismEnum. CARD's aro.obo does not
 # link a determinant to its mechanism category directly (that association lives
 # in card.json), so the mechanism is read off the determinant's is_a lineage.

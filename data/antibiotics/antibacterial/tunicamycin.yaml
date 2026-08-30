@@ -15,6 +15,8 @@ xrefs:
 - CHEBI:29699
 - chembl:CHEMBL505513
 - pubchem.compound:5354023
+activity_roles:
+- CHEBI:33281
 structural_class: nucleoside antibiotic
 structural_class_id: ARO:3000034
 chemical_structure:
@@ -32,6 +34,8 @@ source_concepts:
   source_id: ARO:0000009
   source_label: tunicamycin
   minted_identifier: antibioticmech:aro-be005cca98
+  role_terms:
+  - CHEBI:33281
   source_version: '2026-08-29'
 resistance_mechanisms:
 - mechanism_type: UNKNOWN
@@ -53,3 +57,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T00:54:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -228,14 +228,30 @@ def structure_from_pubchem(row: dict) -> dict:
     return {k: v for k, v in out.items() if v not in ("", None)}
 
 
-def classify(roles: list[str], conf: dict, from_aro: bool) -> str:
-    """Assign the filesystem/reporting class from the asserted role terms.
+def classify(roles: list[str], conf: dict, from_aro: bool,
+             aro_class_ids: tuple[str, ...] = ()) -> str:
+    """Assign the filesystem/reporting class.
 
-    The most specific role wins by the priority in conf/sources.yaml. An ARO
-    concept with no ChEBI role is ANTIBACTERIAL: CARD's antibiotic molecule
-    subtree is a bacterial-resistance resource and every molecule in it is there
-    because a bacterial determinant acts on it.
+    Order of evidence, strongest first:
+
+    1. **A CARD drug class whose name states a target group** — "triazole
+       antifungal", "polyene antifungal". That is a curated, compound-specific
+       classification and outranks a generic role tag: ChEBI gives fluconazole
+       and amphotericin B an `antibacterial agent` role, and taking that at face
+       value filed both as antibacterials.
+    2. **ChEBI roles**, by the priority table in conf/sources.yaml (narrower
+       target group first, bacteria before fungi and protozoa).
+    3. **The ARO fallback**, ANTIBACTERIAL — for a CARD molecule with no ChEBI
+       role and no group-naming drug class.
+
+    Classes whose names do not state a group are absent from the map on purpose;
+    see conf/sources.yaml.
     """
+    class_map = conf.get("aro_class_to_class", {})
+    for class_id in aro_class_ids:
+        if class_id in class_map:
+            return class_map[class_id]
+
     mapping = conf["role_to_class"]
     best = None
     for role in roles:
@@ -284,9 +300,15 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
             concept.parents = [row["drug_class_id"]]
         chebi_id = next((x for x in split_pipe(row["xrefs"]) if x.startswith("CHEBI:")), "")
         chebi_row = chebi_rows.get(chebi_id)
+        # Roles and structure are independent facts about the cross-referenced
+        # ChEBI entry. ChEBI can hold a compound with an antimicrobial role and
+        # no default structure (miconazole, ketoconazole); reading the roles only
+        # from the structure branch silently lost them and filed those compounds
+        # under the ARO fallback class.
+        if chebi_row:
+            concept.roles = split_pipe(chebi_row["role_ids"])
         if chebi_row and chebi_row["standard_inchi_key"]:
             concept.structure = structure_from_chebi(chebi_row)
-            concept.roles = split_pipe(chebi_row["role_ids"])
         elif row["aro_id"] in pubchem:
             concept.structure = structure_from_pubchem(pubchem[row["aro_id"]])
         concepts.append(concept)
@@ -437,7 +459,10 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     record: dict = {
         "identifier": identifier,
         "label": primary.label,
-        "antimicrobial_class": classify(roles, conf, from_aro=bool(aro)),
+        "antimicrobial_class": classify(
+            roles, conf, from_aro=bool(aro),
+            aro_class_ids=tuple(c.structural_class_id for c in aro if c.structural_class_id),
+        ),
         "curation_status": "SEEDED",
         "grounding_status": grounding_status,
     }

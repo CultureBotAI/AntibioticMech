@@ -34,6 +34,8 @@ xrefs:
 - CHEBI:22907
 - chembl:CHEMBL403664
 - pubchem.compound:5360373
+activity_roles:
+- CHEBI:33281
 structural_class: glycopeptide antibiotic
 structural_class_id: ARO:3000081
 chemical_structure:
@@ -51,6 +53,8 @@ source_concepts:
   source_id: ARO:0000053
   source_label: bleomycin
   minted_identifier: antibioticmech:aro-1504589de3
+  role_terms:
+  - CHEBI:33281
   source_version: '2026-08-29'
 resistance_mechanisms:
 - mechanism_type: UNKNOWN
@@ -78,3 +82,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T00:54:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

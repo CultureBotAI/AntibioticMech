@@ -27,6 +27,7 @@ xrefs:
 - pubchem.compound:5517
 activity_roles:
 - CHEBI:33281
+- CHEBI:33282
 structural_class: fluoroquinolone antibiotic
 structural_class_id: ARO:0000001
 chemical_structure:
@@ -43,6 +44,9 @@ source_concepts:
   source_id: ARO:3004499
   source_label: tosufloxacin
   minted_identifier: antibioticmech:aro-7ba4dd911d
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:77581
@@ -57,3 +61,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T00:54:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

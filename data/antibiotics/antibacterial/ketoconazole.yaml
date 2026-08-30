@@ -15,6 +15,9 @@ xrefs:
 - CHEBI:47519
 - chembl:CHEMBL157101
 - pubchem.compound:456201
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
 structural_class: imidazole antibiotic
 structural_class_id: ARO:3007500
 chemical_structure:
@@ -32,6 +35,9 @@ source_concepts:
   source_id: ARO:3007517
   source_label: ketoconazole
   minted_identifier: antibioticmech:aro-4655b07df9
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
   source_version: '2026-08-29'
 resistance_mechanisms:
 - mechanism_type: UNKNOWN
@@ -98,3 +104,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T00:54:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

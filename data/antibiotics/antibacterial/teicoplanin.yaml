@@ -23,6 +23,10 @@ xrefs:
 - CHEBI:29687
 - chembl:CHEMBL2367892
 - pubchem.compound:16129712
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
 structural_class: glycopeptide antibiotic
 structural_class_id: ARO:3000081
 chemical_structure:
@@ -40,6 +44,10 @@ source_concepts:
   source_id: ARO:0000029
   source_label: teicoplanin
   minted_identifier: antibioticmech:aro-a71ef91d49
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
 - mechanism_type: UNKNOWN
@@ -103,3 +111,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T00:54:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
