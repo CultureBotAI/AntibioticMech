@@ -985,3 +985,36 @@ def test_a_curator_who_claims_the_mechanism_owns_its_target_scope_too():
     merged_veto = merge_with_existing(veto, dict(seeded))
     assert "mode_of_action" not in merged_veto
     assert "mode_of_action_target_scope" not in merged_veto
+
+
+def test_every_seeded_mechanism_note_explains_its_target_scope():
+    """The scope caveat is appended to the cross-activity note, not swapped for
+    it.
+
+    Making it the fallback left 18 records — every cross-activity and every
+    MULTIPLE one — carrying a scope value with no prose saying what it meant.
+    That is the uniform-note problem (#60) inverted: the records most in need of
+    a caveat were exactly the ones that lost it. The closing sentence has one
+    owner so appending cannot duplicate it.
+    """
+    from seed_from_sources import mode_of_action_from_roles
+
+    conf = _conf()
+    names = {"CHEBI:67268": "HIV-1 integrase inhibitor",
+             "CHEBI:48001": "protein synthesis inhibitor",
+             "CHEBI:37416": "EC 2.7.7.6 (RNA polymerase) inhibitor"}
+
+    cases = [
+        (["CHEBI:48001"], "ANTIBACTERIAL"),                 # plain
+        (["CHEBI:67268"], "ANTIBACTERIAL"),                 # cross-activity
+        (["CHEBI:67268"], "ANTIMICROBIAL_UNSPECIFIED"),     # cross-activity, no group
+        (["CHEBI:37416", "CHEBI:48001"], "ANTIBACTERIAL"),  # MULTIPLE
+        (["CHEBI:67268", "CHEBI:48001"], "ANTIBACTERIAL"),  # MULTIPLE + cross-activity
+    ]
+    for roles, klass in cases:
+        _value, notes, scope = mode_of_action_from_roles(roles, conf, names, klass)
+        assert "mode_of_action_target_scope" in notes, (roles, klass, notes)
+        expected = ("host has too" if scope == "HOST_SHARED_TARGET"
+                    else "specific to the microbe or virus")
+        assert expected in notes, (roles, klass, scope, notes)
+        assert notes.count("Not a curator's mechanistic review") == 1, notes

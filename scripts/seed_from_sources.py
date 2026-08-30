@@ -606,13 +606,12 @@ def _cross_activity_note(value: str, antimicrobial_class: str | None) -> str | N
         return (f"ChEBI asserts the role on the compound, and the mechanism implies an "
                 f"{implied.lower().replace('anti', 'anti-')} target while the record has no "
                 f"target group stated at all — evidence a curator can use to file it, not a "
-                f"second activity. Not a curator's mechanistic review.")
+                f"second activity.")
     return (f"ChEBI asserts the role on the compound, but this mechanism belongs to an "
             f"{implied.lower().replace('anti', 'anti-')} activity while the record is filed "
             f"as {antimicrobial_class}. Either the compound has both activities, or the "
             f"filing is wrong — the priority table has put azole antifungals under "
-            f"ANTIBACTERIAL before now. A curator should decide which. Not a curator's "
-            f"mechanistic review.")
+            f"ANTIBACTERIAL before now. A curator should decide which.")
 
 
 def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
@@ -675,18 +674,26 @@ def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
     # The caveat differs by scope, deliberately. A note identical on every record
     # carries no signal precisely because it is uniform (#60); this one says
     # which way the record leans and points at the field that records it.
-    tail = ("ChEBI asserts the role on the compound. " + (
+    #
+    # It is APPENDED to the cross-activity note rather than replacing it. Making
+    # it the fallback left 18 records — every cross-activity and every MULTIPLE
+    # one — carrying a scope value with no prose saying what it meant, which is
+    # the uniform-note problem inverted: the records most in need of a caveat
+    # were the ones that lost it.
+    scope_caveat = (
         "The target it names is one the host has too, so the mechanism is true "
         "but is not evidence of selectivity — see mode_of_action_target_scope."
         if scope == "HOST_SHARED_TARGET" else
         "The role names a target specific to the microbe or virus — see "
-        "mode_of_action_target_scope.") +
-        " Not a curator's mechanistic review.")
+        "mode_of_action_target_scope.")
+    tail = f"ChEBI asserts the role on the compound. {scope_caveat}"
 
     if len(values) == 1:
         value = values[0]
-        note = _cross_activity_note(value, antimicrobial_class) or tail
-        return value, f"{MOA_NOTE_MARKER} {cited}. {note}", scope
+        crossed_note = _cross_activity_note(value, antimicrobial_class)
+        body = f"{crossed_note} {scope_caveat}" if crossed_note else tail
+        return (value, f"{MOA_NOTE_MARKER} {cited}. {body} "
+                       "Not a curator's mechanistic review.", scope)
 
     # The MULTIPLE branch needs the caveat too: a record can carry several
     # mechanisms and still have one of them belong to another activity.
@@ -702,8 +709,8 @@ def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
                  f"{where}.")
     return "MULTIPLE", (f"{MOA_NOTE_MARKER}s {cited}, which map to "
                         f"{', '.join(values)}. ChEBI asserts these roles on the compound; "
-                        f"a curator should decide whether one is primary.{extra} Not a "
-                        f"curator's mechanistic review."), scope
+                        f"a curator should decide whether one is primary.{extra} "
+                        f"{scope_caveat} Not a curator's mechanistic review."), scope
 
 
 def build_record(identifier: str, grounding_status: str, group: list[Concept],

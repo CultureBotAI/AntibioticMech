@@ -46,7 +46,9 @@ mode_of_action: MULTIPLE
 mode_of_action_notes: Assigned from ChEBI roles CHEBI:37416 (EC 2.7.7.6 (RNA polymerase)
   inhibitor), CHEBI:48001 (protein synthesis inhibitor), which map to NUCLEIC_ACID_SYNTHESIS_INHIBITION,
   PROTEIN_SYNTHESIS_INHIBITION. ChEBI asserts these roles on the compound; a curator
-  should decide whether one is primary. Not a curator's mechanistic review.
+  should decide whether one is primary. The target it names is one the host has too,
+  so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CC(=O)Nc1c2sscc-2n(C)c1=O
