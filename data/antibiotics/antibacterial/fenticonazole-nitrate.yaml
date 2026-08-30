@@ -45,7 +45,7 @@ activity_roles:
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:75282 (ergosterol biosynthesis
   inhibitor). ChEBI asserts the role on the compound, but this mechanism belongs to
-  a anti-fungal activity while the record is filed as ANTIBACTERIAL. Either the compound
+  an anti-fungal activity while the record is filed as ANTIBACTERIAL. Either the compound
   has both activities, or the filing is wrong — the priority table has put azole antifungals
   under ANTIBACTERIAL before now. A curator should decide which. Not a curator's mechanistic
   review.
@@ -67,13 +67,17 @@ source_concepts:
   - CHEBI:35718
   - CHEBI:36047
   - CHEBI:86327
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
 - timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T07:29:28Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

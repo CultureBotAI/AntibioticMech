@@ -160,7 +160,8 @@ def role_name_rows(conf: dict, compounds: dict, acc2id: dict) -> list[dict]:
         used.setdefault(accession, set()).add("scope")
     for accession in conf.get("role_to_class", {}):
         used.setdefault(accession, set()).add("class")
-    for accession in conf.get("role_to_mode_of_action", {}):
+    for accession in {**conf.get("role_to_mode_of_action", {}),
+                      **conf.get("role_to_mode_of_action_eukaryotic", {})}:
         used.setdefault(accession, set()).add("mode_of_action")
     rows = []
     for accession, purposes in sorted(used.items()):
@@ -214,7 +215,12 @@ def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> li
     # decide scope: a compound is in this corpus because of the latter, and
     # describes its mechanism with the former. Both are read from the same
     # reviewed has_role edges.
-    mechanism_map = conf.get("role_to_mode_of_action", {})
+    # BOTH maps. Reading only the unconditional one desynced conf from the
+    # committed inventory: roles moved into the eukaryotic map vanished from
+    # mechanism_role_ids on the next extraction, and roles added to it never
+    # arrived at all — which made a role addition inert while looking applied.
+    mechanism_map = {**conf.get("role_to_mode_of_action", {}),
+                     **conf.get("role_to_mode_of_action_eukaryotic", {})}
     mechanism_ids = {acc2id[a] for a in mechanism_map if a in acc2id}
 
     scope = conf["role_scope"]

@@ -12,10 +12,14 @@ on disk.
 
 Exit status is 1 on any drift. The seeded fields are the ones compared; curated
 fields a seeder never writes (causal_graphs, activity_spectrum, producer_organisms,
-mode_of_action, clinical_status, discussions, datasets, curator evidence, and
-curation_history beyond the seed event) are deliberately NOT compared, so
-curation is possible without the check going permanently red. Those fields are
-covered by validation and by tests/test_corpus_integrity.py instead.
+clinical_status, discussions, datasets, curator evidence, and curation_history
+beyond the seed event) are deliberately NOT compared, so curation is possible
+without the check going permanently red. Those fields are covered by validation
+and by tests/test_corpus_integrity.py instead.
+
+`mode_of_action` is NOT one of them. The seeder writes it from ChEBI's mechanism
+roles, and it IS compared — together with its notes — for as long as the notes
+leave it the seeder's. See `curator_owns_mode_of_action` for who owns what.
 """
 
 from __future__ import annotations
@@ -38,6 +42,7 @@ from seed_from_sources import (  # noqa: E402
     attach_aro_mechanism,
     build_concepts,
     card_sourced_view,
+    curator_owns_mode_of_action,
     flag_structure_collisions,
     load_decisions,
     merge,
@@ -105,9 +110,15 @@ def main() -> int:
         # falsifying a seeded mechanism passed every gate. As with the CARD
         # items, a curator can always take ownership by rewriting the notes;
         # that is a deliberate escape hatch, not a hole.
-        on_disk_moa = seeded_mode_of_action(actual)
-        if on_disk_moa is not None and on_disk_moa != seeded_mode_of_action(want):
-            drifted.append((path, "mode_of_action"))
+        if not curator_owns_mode_of_action(actual):
+            if seeded_mode_of_action(actual) != seeded_mode_of_action(want):
+                drifted.append((path, "mode_of_action"))
+            # The note carries the provenance and the cross-activity caveat,
+            # which this PR argues is the difference between a useful record and
+            # a contradictory one. Uncompared, it could be deleted or its cited
+            # role swapped with nothing noticing.
+            if actual.get("mode_of_action_notes") != want.get("mode_of_action_notes"):
+                drifted.append((path, "mode_of_action_notes"))
 
     unlocked = sorted(set(expected) - set(lockfile))
     stale_lock = sorted(set(lockfile) - set(expected))
