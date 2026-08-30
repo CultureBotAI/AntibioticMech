@@ -24,19 +24,13 @@ prose below are the reasoning, the queue is the list.
   No data source will close this column: a mechanism graph is authored from
   primary literature with a citation per edge (see `curation/source_queue.tsv`,
   `discovery-literature`).
-- **Seed `mode_of_action` from ChEBI's mechanism roles.** The top of the source
-  queue, and the cheapest close available: ChEBI already asserts mechanism-shaped
-  roles on 765 of the 2,623 ChEBI-sourced records through reviewed edges —
-  protein synthesis inhibitor, DNA synthesis inhibitor, sterol 14α-demethylase
-  inhibitor, dihydropteroate synthase inhibitor, topoisomerase, HIV
-  RT/integrase/protease, sialidase. Same source, same licence, same extraction
-  path. Needs a curated role→`ModeOfActionEnum` allowlist, not a regex: the same
-  role space also holds angiogenesis and platelet-aggregation inhibitors, which
-  are host-directed and irrelevant here.
-
-  A second pass could add ARO drug-class definitions as a citation source where
-  the definition really is a mechanism claim rather than a structural
-  description — but that is a per-class review, and the ChEBI roles come first.
+- **Extend `mode_of_action` beyond the 433 records ChEBI's roles reach.** Done
+  for those: 33 curated roles now map to `ModeOfActionEnum`. The other 2,490 of the
+  2,923 have no role that names a mechanism. Two routes, neither cheap: ARO
+  drug-class definitions, where the definition really is a mechanism claim rather
+  than a structural description (a per-class review, not a regex), and curated
+  review literature per compound. Prefer the second for anything that will carry
+  a causal graph anyway.
 - **Ground the 250 minted records.** `just worklist --queue minted`. Most are
   CARD molecules with a PubChem structure and no ChEBI entry; some deserve a
   ChEBI term request.

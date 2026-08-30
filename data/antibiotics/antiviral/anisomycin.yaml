@@ -37,6 +37,11 @@ xrefs:
 activity_roles:
 - CHEBI:149553
 - CHEBI:33281
+mode_of_action: MULTIPLE
+mode_of_action_notes: Assigned from ChEBI roles CHEBI:48001 (protein synthesis inhibitor),
+  CHEBI:59517 (DNA synthesis inhibitor), which map to NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+  PROTEIN_SYNTHESIS_INHIBITION. ChEBI asserts these roles on the compound; a curator
+  should decide whether one is primary. Not a curator's mechanistic review.
 chemical_structure:
   smiles: '[H][C@]1(Cc2ccc(OC)cc2)NC[C@H](O)[C@H]1OC(C)=O'
   standard_inchi: InChI=1S/C14H19NO4/c1-9(16)19-14-12(15-8-13(14)17)7-10-3-5-11(18-2)6-4-10/h3-6,12-15,17H,7-8H2,1-2H3/t12-,13+,14+/m1/s1

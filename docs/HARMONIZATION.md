@@ -104,6 +104,42 @@ tetracycline.
 An ARO concept with no ChEBI role is `ANTIBACTERIAL`: every molecule in CARD's
 antibiotic subtree is there because a bacterial resistance determinant acts on it.
 
+## Mode of action
+
+`mode_of_action` is seeded from ChEBI's own mechanism roles. The map in
+`conf/sources.yaml` translates 33 of them — `protein synthesis inhibitor`,
+`sterol 14α-demethylase inhibitor`, `HIV-1 reverse transcriptase inhibitor` and
+so on — into `ModeOfActionEnum`, and 433 of 2,923 records carry a value.
+
+This is a **restatement**, not an inference, and the distinction matters because
+the alternative was tried here and failed. Filing a record on a ChEBI structural
+class whose name states a target group asserted activity for chemotherapy drugs,
+an insecticide and bare ring scaffolds, because a chemical class says what a
+compound IS and its members are not all active on the named target. A role is
+different: ChEBI asserting `protein synthesis inhibitor` of a compound is a
+direct claim about what that compound does, and the map only puts it in this
+schema's words.
+
+Three disciplines keep it honest:
+
+- **Host-directed roles are unmapped.** The same role space holds angiogenesis,
+  acetylcholinesterase, proteasome and platelet-aggregation inhibitors. A mode of
+  action here is a claim about how a compound kills or inhibits a microbe, and
+  inheriting one from unrelated pharmacology is the confident wrongness the gates
+  cannot see.
+- **The residual limit is written into every record.** A role names a
+  *mechanism*, not the organism it acts on — some compounds inhibit protein
+  synthesis in eukaryotes. Each seeded `mode_of_action_notes` says so and names
+  the role it came from. `molecular_targets` is where a curator answers the
+  organism question.
+- **Several mechanisms give `MULTIPLE`, never a silent pick.** Rifampicin carries
+  both an RNA-polymerase and a protein-synthesis role; the notes name both and
+  leave the primary one to a curator.
+
+A curator's `mode_of_action` outranks the seeded one. Ownership is decided by a
+marker in the notes rather than by the field name, the same way CARD-seeded
+mechanism items work.
+
 ## Scope
 
 `conf/sources.yaml` holds the in-scope and out-of-scope ChEBI role roots. Scope

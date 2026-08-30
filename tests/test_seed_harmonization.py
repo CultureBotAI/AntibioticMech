@@ -522,3 +522,56 @@ def test_a_rename_and_a_revert_do_not_wedge_the_gate(tmp_path, monkeypatch):
     assert not [k for k, v in sfs.read_retired().items() if v in live], \
         "a slug a record currently holds must not also be listed as retired"
     assert sfs.read_retired() == {"A:1#erythromycin": "erythromycin"}
+
+
+def test_mode_of_action_restates_a_chebi_role_rather_than_inferring_one():
+    """The distinction that makes this safe where the structural-class map was
+    not: ChEBI asserting `protein synthesis inhibitor` as a ROLE is a direct
+    claim about what the compound does. The map only translates that claim into
+    the schema's vocabulary."""
+    from seed_from_sources import mode_of_action_from_roles
+
+    names = {"CHEBI:48001": "protein synthesis inhibitor",
+             "CHEBI:37416": "EC 2.7.7.6 (RNA polymerase) inhibitor"}
+    value, notes = mode_of_action_from_roles(["CHEBI:48001"], CONF, names)
+    assert value == "PROTEIN_SYNTHESIS_INHIBITION"
+    assert "CHEBI:48001" in notes and "protein synthesis inhibitor" in notes
+    # The limit is stated, not papered over.
+    assert "not the organism it acts on" in notes
+
+    assert mode_of_action_from_roles([], CONF, names) is None
+    assert mode_of_action_from_roles(["CHEBI:99999999"], CONF, names) is None
+
+
+def test_several_mechanisms_give_MULTIPLE_with_all_of_them_named():
+    """Rifampicin carries both an RNA-polymerase and a protein-synthesis role in
+    ChEBI. Picking one silently would assert a primary mechanism no source
+    states; MULTIPLE with both named leaves that to a curator."""
+    from seed_from_sources import mode_of_action_from_roles
+
+    names = {"CHEBI:48001": "protein synthesis inhibitor",
+             "CHEBI:37416": "EC 2.7.7.6 (RNA polymerase) inhibitor"}
+    value, notes = mode_of_action_from_roles(["CHEBI:37416", "CHEBI:48001"], CONF, names)
+    assert value == "MULTIPLE"
+    assert "PROTEIN_SYNTHESIS_INHIBITION" in notes
+    assert "NUCLEIC_ACID_SYNTHESIS_INHIBITION" in notes
+
+
+def test_a_curators_mode_of_action_outranks_the_seeded_one():
+    """Seeded values carry a marker and a re-seed may replace them; a curator's
+    value carries none and must survive, the same device the CARD items use."""
+    from seed_from_sources import MOA_NOTE_MARKER, merge_with_existing
+
+    seeded = {"identifier": "CHEBI:1", "label": "x", "antimicrobial_class": "ANTIBACTERIAL",
+              "curation_status": "SEEDED", "grounding_status": "EXACT",
+              "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+              "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:48001 (...)",
+              "curation_history": []}
+
+    curated = dict(seeded) | {"mode_of_action": "MEMBRANE_DISRUPTION",
+                              "mode_of_action_notes": "curator: acts on the envelope (PMID:1)"}
+    assert merge_with_existing(seeded, curated)["mode_of_action"] == "MEMBRANE_DISRUPTION"
+
+    # A previously seeded value is the seeder's to correct.
+    restated = merge_with_existing(seeded, dict(seeded))
+    assert restated["mode_of_action"] == "PROTEIN_SYNTHESIS_INHIBITION"

@@ -117,6 +117,10 @@ activity_roles:
 - CHEBI:36047
 structural_class: phenicol antibiotic
 structural_class_id: ARO:3000387
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
+  ChEBI asserts the role on the compound; the role names a mechanism, not the organism
+  it acts on. Not a curator's mechanistic review.
 chemical_structure:
   smiles: O=C(N[C@H](CO)[C@H](O)c1ccc([N+](=O)[O-])cc1)C(Cl)Cl
   standard_inchi: InChI=1S/C11H12Cl2N2O5/c12-10(13)11(18)14-8(5-16)9(17)6-1-3-7(4-2-6)15(19)20/h1-4,8-10,16-17H,5H2,(H,14,18)/t8-,9-/m1/s1
