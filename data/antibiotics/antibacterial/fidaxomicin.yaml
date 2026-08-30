@@ -56,8 +56,10 @@ structural_class: macrocyclic antibiotic
 structural_class_id: ARO:3001318
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:37416 (EC 2.7.7.6 (RNA polymerase)
-  inhibitor). ChEBI asserts the role on the compound; the role names a mechanism,
-  not the organism it acts on. Not a curator's mechanistic review.
+  inhibitor). ChEBI asserts the role on the compound. The target it names is one the
+  host has too, so the mechanism is true but is not evidence of selectivity — see
+  mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CCc1c(Cl)c(O)c(Cl)c(O)c1C(=O)O[C@H]1[C@H](O)[C@H](OC)[C@H](OC/C2=C\C=C\C[C@H](O)/C(C)=C/[C@H](CC)[C@@H](O[C@@H]3OC(C)(C)[C@@H](OC(=O)C(C)C)[C@H](O)[C@@H]3O)/C(C)=C/C(C)=C/CC([C@@H](C)O)OC2=O)O[C@@H]1C
   standard_inchi: InChI=1S/C52H74Cl2O18/c1-13-30-22-26(6)33(56)18-16-15-17-31(23-66-51-45(65-12)42(61)44(29(9)67-51)69-49(64)35-32(14-2)36(53)39(58)37(54)38(35)57)48(63)68-34(28(8)55)20-19-25(5)21-27(7)43(30)70-50-41(60)40(59)46(52(10,11)72-50)71-47(62)24(3)4/h15-17,19,21-22,24,28-30,33-34,40-46,50-51,55-61H,13-14,18,20,23H2,1-12H3/b16-15+,25-19+,26-22+,27-21+,31-17+/t28-,29-,30+,33+,34?,40-,41+,42+,43+,44-,45+,46+,50-,51-/m1/s1

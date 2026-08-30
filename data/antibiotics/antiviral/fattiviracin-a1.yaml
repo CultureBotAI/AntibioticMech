@@ -23,8 +23,10 @@ activity_roles:
 - CHEBI:64953
 mode_of_action: VIRAL_RELEASE_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:52425 (EC 3.2.1.18 (exo-α-sialidase)
-  inhibitor). ChEBI asserts the role on the compound; the role names a mechanism,
-  not the organism it acts on. Not a curator's mechanistic review.
+  inhibitor). ChEBI asserts the role on the compound. The target it names is one the
+  host has too, so the mechanism is true but is not evidence of selectivity — see
+  mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CC(O)CCCCCCCCCCCCCCC(CCCCCCCCCCCCCC1CC(=O)OC[C@H]2O[C@@H](OC(CCCCCCCCCCCCCC(CCCCCC(C)O)O[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)CC(=O)OC[C@H]3O[C@@H](O1)[C@H](O)[C@@H](O)[C@@H]3O)[C@H](O)[C@@H](O)[C@@H]2O)O[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O
   standard_inchi: InChI=1S/C81H150O28/c1-54(84)40-32-25-19-13-7-3-4-8-14-20-26-34-42-56(102-78-74(96)70(92)66(88)60(50-82)106-78)43-35-27-21-15-9-5-11-17-23-29-37-46-58-48-64(86)100-52-63-69(91)73(95)77(99)81(109-63)105-59(49-65(87)101-53-62-68(90)72(94)76(98)80(104-58)108-62)47-38-30-24-18-12-6-10-16-22-28-36-44-57(45-39-31-33-41-55(2)85)103-79-75(97)71(93)67(89)61(51-83)107-79/h54-63,66-85,88-99H,3-53H2,1-2H3/t54?,55?,56?,57?,58?,59?,60-,61-,62-,63-,66-,67-,68-,69-,70+,71+,72+,73+,74-,75-,76-,77-,78-,79-,80-,81-/m1/s1

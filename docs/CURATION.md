@@ -66,6 +66,16 @@ mode_of_action_notes: >-
 
 Both survive `just seed-apply`.
 
+**`mode_of_action_target_scope` travels with the value.** It records whether the
+target belongs to the microbe (`MICROBIAL_TARGET`) or is one the host has too
+(`HOST_SHARED_TARGET`), derived from the same roles as the mechanism. Claiming
+the mechanism claims the scope: set it alongside your corrected value, and a
+veto drops it, because a scope describing a mechanism that is no longer asserted
+describes nothing. It is **not a confidence rating** — `HOST_SHARED_TARGET`
+covers linezolid, which is genuinely microbe-selective on a conserved ribosome,
+as well as omacetaxine, which is not. It marks where the selectivity question
+exists so that `molecular_targets` can answer it.
+
 **The notes decide ownership, not the value.** Setting `mode_of_action` without
 writing a note leaves the field the seeder's, and the next run will replace it —
 because a bare value is indistinguishable from a hand-falsified one, and

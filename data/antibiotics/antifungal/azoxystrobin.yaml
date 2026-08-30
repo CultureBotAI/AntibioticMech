@@ -50,8 +50,10 @@ structural_class_id: ARO:3009305
 mode_of_action: ENERGY_METABOLISM_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:141153 (quinone outside inhibitor),
   CHEBI:38499 (mitochondrial cytochrome-bc1 complex inhibitor). ChEBI asserts the
-  role on the compound; the role names a mechanism, not the organism it acts on. Not
+  role on the compound. The target it names is one the host has too, so the mechanism
+  is true but is not evidence of selectivity — see mode_of_action_target_scope. Not
   a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CO/C=C(/C(=O)OC)c1ccccc1Oc1cc(Oc2ccccc2C#N)ncn1
   standard_inchi: InChI=1S/C22H17N3O5/c1-27-13-17(22(26)28-2)16-8-4-6-10-19(16)30-21-11-20(24-14-25-21)29-18-9-5-3-7-15(18)12-23/h3-11,13-14H,1-2H3/b17-13+

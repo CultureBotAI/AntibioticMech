@@ -205,6 +205,21 @@ classes:
           and `causal_graphs`.
         range: ModeOfActionEnum
 
+      mode_of_action_target_scope:
+        description: >-
+          Whether the target `mode_of_action` names belongs to the microbe or is
+          shared with the host. Both are legitimate antimicrobial mechanisms —
+          a host-directed antiviral inhibits host translation the virus depends
+          on, and a virus has no ribosome of its own — but they are different
+          claims, and `PROTEIN_SYNTHESIS_INHIBITION` alone cannot tell
+          linezolid's bacterial 50S from omacetaxine's host 80S. Derived from
+          the ChEBI role, not curated: a role naming a microbe-specific target
+          (DNA gyrase, sterol 14alpha-demethylase, HIV protease) gives
+          MICROBIAL_TARGET; a generic one (protein synthesis inhibitor) gives
+          HOST_SHARED_TARGET. Owned together with `mode_of_action`, so a curator
+          who claims that field owns this one too.
+        range: ModeOfActionTargetScopeEnum
+
       mode_of_action_notes:
         description: >-
           Provenance and rationale for `mode_of_action`, and the field that
@@ -773,6 +788,26 @@ enums:
         description: Several mechanisms are documented and none is primary.
       OTHER:
       UNKNOWN:
+
+  ModeOfActionTargetScopeEnum:
+    description: >-
+      Whether the target named by `mode_of_action` is the microbe's own or one
+      it shares with the host. Not a confidence rating: both values mark true
+      mechanisms, and the distinction is what lets a consumer filter for
+      microbe-selective agents without discarding host-directed ones.
+    permissible_values:
+      MICROBIAL_TARGET:
+        description: >-
+          The ChEBI role names a target specific to the microbe or virus — DNA
+          gyrase, sterol 14alpha-demethylase, chitin synthase, HIV protease.
+      HOST_SHARED_TARGET:
+        description: >-
+          The role names a target the host also has, so the mechanism is true
+          but not evidence of selectivity. Covers both microbe-selective drugs
+          acting on a conserved machine (linezolid on the bacterial ribosome)
+          and genuinely host-directed ones (omacetaxine on host translation).
+          Which of the two applies is a curation question this flag does not
+          answer; it marks where that question exists.
 
   CidalityEnum:
     permissible_values:

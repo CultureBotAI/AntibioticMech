@@ -29,8 +29,10 @@ activity_roles:
 - CHEBI:35718
 mode_of_action: MEMBRANE_DISRUPTION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:24869 (ionophore). ChEBI asserts
-  the role on the compound; the role names a mechanism, not the organism it acts on.
-  Not a curator's mechanistic review.
+  the role on the compound. The target it names is one the host has too, so the mechanism
+  is true but is not evidence of selectivity — see mode_of_action_target_scope. Not
+  a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CC(C)[C@H]1OC(=O)[C@H](Cc2ccccc2)N(C)C(=O)[C@@H](C(C)C)OC(=O)[C@H](Cc2ccccc2)N(C)C(=O)[C@@H](C(C)C)OC(=O)[C@H](Cc2ccccc2)N(C)C1=O
   standard_inchi: InChI=1S/C45H57N3O9/c1-28(2)37-40(49)46(7)35(26-32-21-15-11-16-22-32)44(53)56-39(30(5)6)42(51)48(9)36(27-33-23-17-12-18-24-33)45(54)57-38(29(3)4)41(50)47(8)34(43(52)55-37)25-31-19-13-10-14-20-31/h10-24,28-30,34-39H,25-27H2,1-9H3/t34-,35-,36-,37+,38+,39+/m0/s1

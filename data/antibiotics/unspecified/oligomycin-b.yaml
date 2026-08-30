@@ -29,8 +29,10 @@ activity_roles:
 mode_of_action: ENERGY_METABOLISM_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:20854 (ATP synthase inhibitor),
   CHEBI:73214 (EC 3.6.3.14 (H+-transporting two-sector ATPase) inhibitor). ChEBI asserts
-  the role on the compound; the role names a mechanism, not the organism it acts on.
-  Not a curator's mechanistic review.
+  the role on the compound. The target it names is one the host has too, so the mechanism
+  is true but is not evidence of selectivity — see mode_of_action_target_scope. Not
+  a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CC[C@H]1/C=C/C=C/C[C@@H](C)[C@H](O)[C@@](C)(O)C(=O)[C@@H](C)[C@H](O)[C@@H](C)C(=O)[C@@H](C)[C@H](O)[C@@H](C)/C=C/C(=O)O[C@@H]2[C@H](C)[C@H](CC1)O[C@@]1(O[C@@H](C[C@@H](C)O)[C@@H](C)CC1=O)[C@H]2C
   standard_inchi: InChI=1S/C45H72O12/c1-12-33-17-15-13-14-16-25(3)42(52)44(11,54)43(53)31(9)40(51)30(8)39(50)29(7)38(49)24(2)18-21-37(48)55-41-28(6)34(20-19-33)56-45(32(41)10)36(47)22-26(4)35(57-45)23-27(5)46/h13-15,17-18,21,24-35,38,40-42,46,49,51-52,54H,12,16,19-20,22-23H2,1-11H3/b14-13+,17-15+,21-18+/t24-,25+,26-,27+,28+,29-,30-,31-,32-,33-,34-,35-,38+,40+,41+,42-,44+,45+/m0/s1

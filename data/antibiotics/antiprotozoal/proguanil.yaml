@@ -45,8 +45,10 @@ activity_roles:
 - CHEBI:38068
 mode_of_action: FOLATE_PATHWAY_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:50683 (EC 1.5.1.3 (dihydrofolate
-  reductase) inhibitor). ChEBI asserts the role on the compound; the role names a
-  mechanism, not the organism it acts on. Not a curator's mechanistic review.
+  reductase) inhibitor). ChEBI asserts the role on the compound. The target it names
+  is one the host has too, so the mechanism is true but is not evidence of selectivity
+  — see mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CC(C)NC(=N)NC(=N)Nc1ccc(Cl)cc1
   standard_inchi: InChI=1S/C11H16ClN5/c1-7(2)15-10(13)17-11(14)16-9-5-3-8(12)4-6-9/h3-7H,1-2H3,(H5,13,14,15,16,17)

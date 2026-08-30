@@ -134,11 +134,29 @@ Five disciplines keep it honest:
   action here is a claim about how a compound kills or inhibits a microbe, and
   inheriting one from unrelated pharmacology is the confident wrongness the gates
   cannot see.
-- **The residual limit is written into every record.** A role names a
-  *mechanism*, not the organism it acts on — some compounds inhibit protein
-  synthesis in eukaryotes. Each seeded `mode_of_action_notes` says so and names
-  the role it came from. `molecular_targets` is where a curator answers the
-  organism question.
+- **Whose target it is, is recorded rather than hedged.**
+  `mode_of_action` means *the mechanism by which the compound exerts its
+  antimicrobial effect*. That does **not** require a microbe-specific target: a
+  host-directed antiviral inhibits the host translation the virus depends on,
+  and a virus has no ribosome of its own. Suppressing those would not be rigour;
+  it would make the corpus unable to express a real drug class. But
+  `PROTEIN_SYNTHESIS_INHIBITION` alone cannot tell linezolid's bacterial 50S
+  from omacetaxine's host 80S, so `mode_of_action_target_scope` says which:
+  `MICROBIAL_TARGET` (241 records) when a contributing role names a target the
+  host lacks, `HOST_SHARED_TARGET` (175) when none does. It is **not a
+  confidence rating** — both mark true mechanisms, and the host-shared value
+  covers microbe-selective drugs acting on a conserved machine as well as
+  genuinely host-directed ones. It marks where the selectivity question exists;
+  `molecular_targets` is where a curator answers it.
+
+  A specific role outranks a generic one, because it identifies the target the
+  generic role only gestures at. Ciprofloxacin carries `topoisomerase IV
+  inhibitor` *and* `DNA synthesis inhibitor` and is `MICROBIAL_TARGET`; reading
+  it the other way put the most selective antibacterial class there is on the
+  wrong side of the filter. The split runs inside a single combination drug:
+  sulfamethoxazole is `MICROBIAL_TARGET` because the host has no dihydropteroate
+  synthase, trimethoprim is `HOST_SHARED_TARGET` because the host's
+  dihydrofolate reductase is methotrexate's target.
 - **Several mechanisms give `MULTIPLE`, never a silent pick.** Rifampicin carries
   both an RNA-polymerase and a protein-synthesis role; the notes name both and
   leave the primary one to a curator.

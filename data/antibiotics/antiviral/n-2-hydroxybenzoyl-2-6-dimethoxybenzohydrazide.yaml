@@ -21,8 +21,10 @@ activity_roles:
 - CHEBI:52629
 mode_of_action: VIRAL_POLYMERASE_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:52629 (EC 3.1.26.13 (retroviral
-  ribonuclease H) inhibitor). ChEBI asserts the role on the compound; the role names
-  a mechanism, not the organism it acts on. Not a curator's mechanistic review.
+  ribonuclease H) inhibitor). ChEBI asserts the role on the compound. The role names
+  a target specific to the microbe or virus — see mode_of_action_target_scope. Not
+  a curator's mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: COc1cccc(OC)c1C(=O)NNC(=O)c1ccccc1O
   standard_inchi: InChI=1S/C16H16N2O5/c1-22-12-8-5-9-13(23-2)14(12)16(21)18-17-15(20)10-6-3-4-7-11(10)19/h3-9,19H,1-2H3,(H,17,20)(H,18,21)

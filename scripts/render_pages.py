@@ -225,6 +225,7 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
         "molecular_targets": molecular_targets,
         "mode_of_action": doc.get("mode_of_action"),
         "mode_of_action_notes": doc.get("mode_of_action_notes"),
+        "mode_of_action_target_scope": doc.get("mode_of_action_target_scope"),
         "cidality": doc.get("cidality"),
         "clinical_status": doc.get("clinical_status"),
         "activity_spectrum": doc.get("activity_spectrum") or [],

@@ -617,8 +617,9 @@ def _cross_activity_note(value: str, antimicrobial_class: str | None) -> str | N
 
 def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
                               role_names: dict[str, str],
-                              antimicrobial_class: str | None = None) -> tuple[str, str] | None:
-    """(mode_of_action, notes) from ChEBI's mechanism roles, or None.
+                              antimicrobial_class: str | None = None
+                              ) -> tuple[str, str, str] | None:
+    """(mode_of_action, notes, target_scope) from ChEBI's mechanism roles, or None.
 
     This is a RESTATEMENT, not an inference. ChEBI asserting `protein synthesis
     inhibitor` as a role of a compound is a direct claim about what the compound
@@ -647,12 +648,45 @@ def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
         return None
     cited = ", ".join(f"{role} ({role_names.get(role, '?')})" for role in sorted(hits))
     values = sorted(set(hits.values()))
-    tail = ("ChEBI asserts the role on the compound; the role names a mechanism, not the "
-            "organism it acts on. Not a curator's mechanistic review.")
+
+    # Whose target is it? MICROBIAL_TARGET if ANY contributing role names a
+    # microbe-specific target, because a specific role subsumes a generic one:
+    # ciprofloxacin carries `topoisomerase IV inhibitor` (bacteria-only) AND the
+    # generic `DNA synthesis inhibitor`, and the first identifies the target the
+    # second only gestures at. Marking it host-shared would put the most
+    # selective antibacterial class there is on the wrong side of the filter
+    # this field exists to support. HOST_SHARED_TARGET therefore means the
+    # record has NO role naming a microbe-specific target.
+    #
+    # `mode_of_action` means the mechanism of the ANTIMICROBIAL effect, and that
+    # does not require a microbe-specific target: a host-directed antiviral
+    # inhibits host translation the virus depends on. See #60 and #79.
+    scope_map = conf.get("role_target_scope", {})
+    unscoped = sorted(role for role in hits if role not in scope_map)
+    if unscoped:
+        # A mapped role with no scope would silently emit the safe-looking value.
+        raise KeyError(
+            f"role(s) {unscoped} map to a mode_of_action but have no entry in "
+            "conf/sources.yaml role_target_scope")
+    scope = ("MICROBIAL_TARGET"
+             if any(scope_map[role] == "MICROBIAL_TARGET" for role in hits)
+             else "HOST_SHARED_TARGET")
+
+    # The caveat differs by scope, deliberately. A note identical on every record
+    # carries no signal precisely because it is uniform (#60); this one says
+    # which way the record leans and points at the field that records it.
+    tail = ("ChEBI asserts the role on the compound. " + (
+        "The target it names is one the host has too, so the mechanism is true "
+        "but is not evidence of selectivity — see mode_of_action_target_scope."
+        if scope == "HOST_SHARED_TARGET" else
+        "The role names a target specific to the microbe or virus — see "
+        "mode_of_action_target_scope.") +
+        " Not a curator's mechanistic review.")
 
     if len(values) == 1:
         value = values[0]
-        return value, f"{MOA_NOTE_MARKER} {cited}. {_cross_activity_note(value, antimicrobial_class) or tail}"
+        note = _cross_activity_note(value, antimicrobial_class) or tail
+        return value, f"{MOA_NOTE_MARKER} {cited}. {note}", scope
 
     # The MULTIPLE branch needs the caveat too: a record can carry several
     # mechanisms and still have one of them belong to another activity.
@@ -669,7 +703,7 @@ def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
     return "MULTIPLE", (f"{MOA_NOTE_MARKER}s {cited}, which map to "
                         f"{', '.join(values)}. ChEBI asserts these roles on the compound; "
                         f"a curator should decide whether one is primary.{extra} Not a "
-                        f"curator's mechanistic review.")
+                        f"curator's mechanistic review."), scope
 
 
 def build_record(identifier: str, grounding_status: str, group: list[Concept],
@@ -750,7 +784,8 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     moa = mode_of_action_from_roles(mechanism_roles, conf, load_role_names(),
                                     record["antimicrobial_class"])
     if moa:
-        record["mode_of_action"], record["mode_of_action_notes"] = moa
+        (record["mode_of_action"], record["mode_of_action_notes"],
+         record["mode_of_action_target_scope"]) = moa
 
     structure = next((c.structure for c in group if c.structure.get("standard_inchi")),
                      group[0].structure)
@@ -1047,10 +1082,16 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
         # empty, and the seeder must not fill it back in.
         merged.pop("mode_of_action", None)
         merged.pop("mode_of_action_notes", None)
+        # The scope describes the value, so it travels with it. Leaving the
+        # seeder's scope beside a curator's corrected mechanism would attach a
+        # provenance claim to a value it was never derived from.
+        merged.pop("mode_of_action_target_scope", None)
         if "mode_of_action" in existing:
             merged["mode_of_action"] = existing["mode_of_action"]
         if existing_moa_notes:
             merged["mode_of_action_notes"] = existing_moa_notes
+        if "mode_of_action_target_scope" in existing:
+            merged["mode_of_action_target_scope"] = existing["mode_of_action_target_scope"]
 
     # The seeder owns structure-collision todos; every other discussion is the
     # curator's and is appended after them.

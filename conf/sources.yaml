@@ -289,6 +289,99 @@ role_to_mode_of_action_eukaryotic:
   CHEBI:38499: ENERGY_METABOLISM_INHIBITION   # mitochondrial cytochrome-bc1 (QoI fungicides)
   CHEBI:141153: ENERGY_METABOLISM_INHIBITION  # quinone outside inhibitor
 
+# ChEBI role -> whether the target it names belongs to the microbe or is shared
+# with the host. Consumed alongside the two maps above; every role in either of
+# them must appear here exactly once, and tests enforce that.
+#
+# WHY THIS EXISTS. `mode_of_action` means "the mechanism by which this compound
+# exerts its ANTIMICROBIAL effect". That definition does NOT require a
+# microbe-specific target: a host-directed antiviral inhibits host translation
+# the virus depends on, and a virus has no ribosome of its own. Suppressing
+# those would not be rigour, it would make the corpus unable to express a real
+# drug class. But `PROTEIN_SYNTHESIS_INHIBITION` alone cannot tell linezolid's
+# bacterial 50S from omacetaxine's host 80S, and that conflation is the actual
+# defect #60 was pointing at. This flag separates them without dropping either.
+#
+# NOT A CONFIDENCE RATING. Both values mark true mechanisms. HOST_SHARED_TARGET
+# covers microbe-SELECTIVE drugs acting on a conserved machine (linezolid) as
+# well as genuinely host-directed ones (omacetaxine); it marks where the
+# selectivity question exists, it does not answer it.
+#
+# THE RULE: does the human host have the target the role names? Assigned from
+# each role's actual cohort in this corpus, not from taxonomy alone — and the
+# cohorts overturned two assumptions made elsewhere in this file, both noted
+# below.
+role_target_scope:
+  # --- host lacks the target
+  CHEBI:53559: MICROBIAL_TARGET    # topoisomerase IV — bacterial; humans have no homologue
+  CHEBI:50502: MICROBIAL_TARGET    # dihydropteroate synthase — humans take up folate
+                                   # rather than synthesising it, which is why
+                                   # sulfonamides are selective at all
+  CHEBI:75282: MICROBIAL_TARGET    # ergosterol biosynthesis — the pathway product is
+                                   # fungal; the host makes cholesterol
+  CHEBI:77884: MICROBIAL_TARGET    # sterol 14α-demethylase — the host DOES have CYP51A1,
+                                   # but the fungal enzyme is the drug target and the
+                                   # cohort is 26 azole antifungals with no host-directed
+                                   # member. Selectivity here is the basis of the class.
+  CHEBI:59285: MICROBIAL_TARGET    # squalene monooxygenase — same shape: human SQLE
+                                   # exists, the cohort is 7 allylamine antifungals
+  CHEBI:230471: MICROBIAL_TARGET   # 1,3-β-glucan synthase — fungal cell wall; host lacks
+  CHEBI:59672: MICROBIAL_TARGET    # chitin synthase — fungal/insect; host lacks
+  # --- virus-encoded targets
+  CHEBI:53756: MICROBIAL_TARGET    # HIV-1 reverse transcriptase
+  CHEBI:59897: MICROBIAL_TARGET    # RNA-directed DNA polymerase — telomerase is a host RT,
+                                   # but the cohort is 11 nucleoside/non-nucleoside RT
+                                   # inhibitors and nothing host-directed
+  CHEBI:170010: MICROBIAL_TARGET   # RNA-directed RNA polymerase — hosts have none
+  CHEBI:52629: MICROBIAL_TARGET    # retroviral ribonuclease H (an RT domain)
+  CHEBI:35660: MICROBIAL_TARGET    # HIV protease
+  CHEBI:147285: MICROBIAL_TARGET   # SARS coronavirus main proteinase
+  CHEBI:64924: MICROBIAL_TARGET    # hepatitis C protease
+  CHEBI:67268: MICROBIAL_TARGET    # HIV-1 integrase
+  CHEBI:59886: MICROBIAL_TARGET    # HIV fusion (gp41/CCR5 — CCR5 is host, but the
+                                   # inhibited event is viral entry)
+  CHEBI:71168: MICROBIAL_TARGET    # HIV-1 maturation
+  CHEBI:83799: MICROBIAL_TARGET    # NS5A — viral nonstructural protein
+
+  # --- the host has the target too
+  CHEBI:48001: HOST_SHARED_TARGET  # protein synthesis inhibitor — names a PROCESS, not a
+                                   # target. Correct and canonical for the macrolides,
+                                   # tetracyclines, aminoglycosides and oxazolidinones;
+                                   # also correct, and host-directed, for omacetaxine
+  CHEBI:59517: HOST_SHARED_TARGET  # DNA synthesis inhibitor — same: the fluoroquinolones
+                                   # and gemcitabine both, honestly, belong here
+  CHEBI:50750: HOST_SHARED_TARGET  # EC 5.99.1.3 — this file elsewhere calls it "bacterial
+                                   # gyrase", distinguished from the human topo term
+                                   # CHEBI:50276. The cohort says otherwise: it admits
+                                   # aclacinomycin A and 4'-epidoxorubicin, anthracyclines
+                                   # that poison the HUMAN topoisomerase, alongside the
+                                   # gatifloxacins. The EC covers both.
+  CHEBI:37416: HOST_SHARED_TARGET  # RNA polymerase — rifamycins hit the bacterial enzyme,
+                                   # but the role name is generic and the cohort includes
+                                   # mithramycin, which acts on host transcription
+  CHEBI:50683: HOST_SHARED_TARGET  # dihydrofolate reductase — the host's DHFR is
+                                   # methotrexate's target; selectivity is affinity, not
+                                   # the presence or absence of the enzyme
+  CHEBI:20854: HOST_SHARED_TARGET  # ATP synthase — bedaquiline is selective for the
+                                   # mycobacterial enzyme, but the same role carries the
+                                   # oligomycins, the textbook inhibitors of the HOST
+                                   # mitochondrial F1Fo. One role, both directions.
+  CHEBI:73214: HOST_SHARED_TARGET  # EC 3.6.3.14 — cohort is bafilomycin and concanamycin,
+                                   # V-ATPase inhibitors, and the host has V-ATPases
+  CHEBI:83072: HOST_SHARED_TARGET  # succinate dehydrogenase — respiratory complex II,
+                                   # which the host has
+  CHEBI:24869: HOST_SHARED_TARGET  # ionophore — collapses gradients across any membrane
+  CHEBI:83741: HOST_SHARED_TARGET  # phospholipid biosynthesis — universal
+  CHEBI:52425: HOST_SHARED_TARGET  # exo-α-sialidase — humans have NEU1-4. The drugs of
+                                   # record (oseltamivir) are selective for the viral
+                                   # neuraminidase, but the EC does not say so.
+  # --- mitochondrial: host-shared by definition, since the host is a eukaryote.
+  # These are the conditional map's roles; the conditional decides whether the
+  # claim is COHERENT for the target group, this decides whose target it is.
+  CHEBI:25355: HOST_SHARED_TARGET  # mitochondrial respiratory-chain inhibitor
+  CHEBI:38499: HOST_SHARED_TARGET  # mitochondrial cytochrome-bc1 (QoI fungicides)
+  CHEBI:141153: HOST_SHARED_TARGET # quinone outside inhibitor
+
 # ARO drug class -> AntimicrobialClassEnum, for the classes whose NAME states a
 # target group. CARD models antifungal resistance as well as antibacterial, so
 # "every ARO molecule is an antibacterial" is no longer true; a curated,

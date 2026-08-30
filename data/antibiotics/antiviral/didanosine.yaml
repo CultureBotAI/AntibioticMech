@@ -66,8 +66,10 @@ activity_roles:
 - CHEBI:53756
 mode_of_action: VIRAL_POLYMERASE_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:53756 (HIV-1 reverse transcriptase
-  inhibitor). ChEBI asserts the role on the compound; the role names a mechanism,
-  not the organism it acts on. Not a curator's mechanistic review.
+  inhibitor). ChEBI asserts the role on the compound. The role names a target specific
+  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: O=c1ncnc2c1ncn2[C@H]1CC[C@@H](CO)O1
   standard_inchi: InChI=1S/C10H12N4O3/c15-3-6-1-2-7(17-6)14-5-13-8-9(14)11-4-12-10(8)16/h4-7,15H,1-3H2,(H,11,12,16)/t6-,7+/m0/s1

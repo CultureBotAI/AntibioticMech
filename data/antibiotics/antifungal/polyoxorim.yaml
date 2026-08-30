@@ -33,8 +33,10 @@ activity_roles:
 - CHEBI:86328
 mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:59672 (EC 2.4.1.16 (chitin synthase)
-  inhibitor). ChEBI asserts the role on the compound; the role names a mechanism,
-  not the organism it acts on. Not a curator's mechanistic review.
+  inhibitor). ChEBI asserts the role on the compound. The role names a target specific
+  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@]1([C@H](NC(=O)[C@@H](N)[C@H](O)[C@@H](O)COC(N)=O)C(=O)O)O[C@@H](n2cc(C(=O)O)c(=O)nc2=O)[C@H](O)[C@@H]1O'
   standard_inchi: InChI=1S/C17H23N5O14/c18-5(7(24)4(23)2-35-16(19)33)12(28)20-6(15(31)32)10-8(25)9(26)13(36-10)22-1-3(14(29)30)11(27)21-17(22)34/h1,4-10,13,23-26H,2,18H2,(H2,19,33)(H,20,28)(H,29,30)(H,31,32)(H,21,27,34)/t4-,5-,6-,7+,8-,9+,10+,13+/m0/s1

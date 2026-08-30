@@ -43,8 +43,10 @@ activity_roles:
 - CHEBI:35718
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:37416 (EC 2.7.7.6 (RNA polymerase)
-  inhibitor). ChEBI asserts the role on the compound; the role names a mechanism,
-  not the organism it acts on. Not a curator's mechanistic review.
+  inhibitor). ChEBI asserts the role on the compound. The target it names is one the
+  host has too, so the mechanism is true but is not evidence of selectivity — see
+  mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CC(=O)Nc1c2sscc-2nc1=O
   standard_inchi: InChI=1S/C7H6N2O2S2/c1-3(10)8-5-6-4(2-12-13-6)9-7(5)11/h2H,1H3,(H,8,10)(H,9,11)

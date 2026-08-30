@@ -58,8 +58,10 @@ structural_class: triazole antifungal
 structural_class_id: ARO:3007499
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:75282 (ergosterol biosynthesis
-  inhibitor). ChEBI asserts the role on the compound; the role names a mechanism,
-  not the organism it acts on. Not a curator's mechanistic review.
+  inhibitor). ChEBI asserts the role on the compound. The role names a target specific
+  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: C[C@@H](c1ncncc1F)[C@](O)(Cn1cncn1)c1ccc(F)cc1F
   standard_inchi: InChI=1S/C16H14F3N5O/c1-10(15-14(19)5-20-7-22-15)16(25,6-24-9-21-8-23-24)12-3-2-11(17)4-13(12)18/h2-5,7-10,25H,6H2,1H3/t10-,16+/m0/s1

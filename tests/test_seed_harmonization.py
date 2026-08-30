@@ -540,11 +540,16 @@ def test_mode_of_action_restates_a_chebi_role_rather_than_inferring_one():
 
     names = {"CHEBI:48001": "protein synthesis inhibitor",
              "CHEBI:37416": "EC 2.7.7.6 (RNA polymerase) inhibitor"}
-    value, notes = mode_of_action_from_roles(["CHEBI:48001"], CONF, names)
+    value, notes, scope = mode_of_action_from_roles(["CHEBI:48001"], CONF, names)
     assert value == "PROTEIN_SYNTHESIS_INHIBITION"
     assert "CHEBI:48001" in notes and "protein synthesis inhibitor" in notes
-    # The limit is stated, not papered over.
-    assert "not the organism it acts on" in notes
+    # The limit is stated, not papered over — and it is stated SPECIFICALLY.
+    # This caveat used to be one sentence identical on every seeded record,
+    # which carries no signal precisely because it is uniform (#60). It now
+    # names which way this record leans, and the field carries it as data.
+    assert "the host has too" in notes
+    assert "not evidence of selectivity" in notes
+    assert scope == "HOST_SHARED_TARGET"
 
     assert mode_of_action_from_roles([], CONF, names) is None
     assert mode_of_action_from_roles(["CHEBI:99999999"], CONF, names) is None
@@ -558,7 +563,7 @@ def test_several_mechanisms_give_MULTIPLE_with_all_of_them_named():
 
     names = {"CHEBI:48001": "protein synthesis inhibitor",
              "CHEBI:37416": "EC 2.7.7.6 (RNA polymerase) inhibitor"}
-    value, notes = mode_of_action_from_roles(["CHEBI:37416", "CHEBI:48001"], CONF, names)
+    value, notes, _ = mode_of_action_from_roles(["CHEBI:37416", "CHEBI:48001"], CONF, names)
     assert value == "MULTIPLE"
     assert "PROTEIN_SYNTHESIS_INHIBITION" in notes
     assert "NUCLEIC_ACID_SYNTHESIS_INHIBITION" in notes
@@ -599,7 +604,7 @@ def test_a_mechanism_from_another_activity_says_so():
     names = {"CHEBI:67268": "HIV-1 integrase inhibitor",
              "CHEBI:48001": "protein synthesis inhibitor"}
 
-    value, notes = mode_of_action_from_roles(["CHEBI:67268"], CONF, names, "ANTIFUNGAL")
+    value, notes, _ = mode_of_action_from_roles(["CHEBI:67268"], CONF, names, "ANTIFUNGAL")
     assert value == "VIRAL_INTEGRASE_INHIBITION"
     assert "ANTIFUNGAL" in notes
     # It does NOT assert two activities: the filing may simply be wrong, which
@@ -608,16 +613,16 @@ def test_a_mechanism_from_another_activity_says_so():
     assert "or the filing is wrong" in notes
 
     # On a record filed under the group the mechanism implies, no such caveat.
-    _, aligned = mode_of_action_from_roles(["CHEBI:67268"], CONF, names, "ANTIVIRAL")
+    _, aligned, _scope = mode_of_action_from_roles(["CHEBI:67268"], CONF, names, "ANTIVIRAL")
     assert "filing is wrong" not in aligned
 
     # A mechanism that names no target group never triggers it.
-    _, generic = mode_of_action_from_roles(["CHEBI:48001"], CONF, names, "ANTIFUNGAL")
+    _, generic, _scope = mode_of_action_from_roles(["CHEBI:48001"], CONF, names, "ANTIFUNGAL")
     assert "filing is wrong" not in generic
 
     # An unspecified record gets a different sentence: "two activities" would
     # assert a second activity no source states.
-    _, unspec = mode_of_action_from_roles(["CHEBI:67268"], CONF, names,
+    _, unspec, _scope = mode_of_action_from_roles(["CHEBI:67268"], CONF, names,
                                           "ANTIMICROBIAL_UNSPECIFIED")
     assert "no target group stated" in unspec
 
@@ -884,3 +889,99 @@ def test_no_history_deduplication_on_the_merge_path():
         f"{sorted(banned & defined)} is back on the seeder. An event is only "
         "appended when a seeded field moved, so deleting one deletes a real "
         "change (#73).")
+
+
+def _conf():
+    from pathlib import Path
+
+    import yaml
+    root = Path(__file__).resolve().parent.parent
+    return yaml.safe_load((root / "conf" / "sources.yaml").read_text(encoding="utf-8"))
+
+
+def test_every_mapped_role_declares_a_target_scope():
+    """A role that maps to a mechanism but has no scope would emit a mechanism
+    with no statement of whose target it is. The seeder raises rather than
+    guessing, and this catches it at the config rather than mid-run."""
+    conf = _conf()
+    mapped = set(conf["role_to_mode_of_action"]) | set(conf["role_to_mode_of_action_eukaryotic"])
+    scoped = set(conf["role_target_scope"])
+    assert mapped - scoped == set(), f"mapped but unscoped: {sorted(mapped - scoped)}"
+    assert scoped - mapped == set(), f"scoped but unmapped (dead entry): {sorted(scoped - mapped)}"
+    assert set(conf["role_target_scope"].values()) <= {"MICROBIAL_TARGET", "HOST_SHARED_TARGET"}
+
+
+def test_a_specific_role_outranks_a_generic_one_for_target_scope():
+    """Ciprofloxacin is the case that decides the rule.
+
+    It carries `topoisomerase IV inhibitor` — a target bacteria have and the
+    host does not — AND the generic `DNA synthesis inhibitor`. Taking the
+    host-shared reading whenever any role is generic put the most selective
+    antibacterial class there is on the wrong side of the filter this field
+    exists to support. A specific role subsumes a generic one.
+    """
+    from seed_from_sources import mode_of_action_from_roles
+
+    conf = _conf()
+    names = {"CHEBI:53559": "topoisomerase IV inhibitor",
+             "CHEBI:59517": "DNA synthesis inhibitor",
+             "CHEBI:48001": "protein synthesis inhibitor"}
+
+    both = mode_of_action_from_roles(["CHEBI:59517", "CHEBI:53559"], conf, names, "ANTIBACTERIAL")
+    assert both[2] == "MICROBIAL_TARGET", both
+
+    # Order must not matter.
+    assert mode_of_action_from_roles(
+        ["CHEBI:53559", "CHEBI:59517"], conf, names, "ANTIBACTERIAL")[2] == "MICROBIAL_TARGET"
+
+    # Only generic roles: nothing names a microbe-specific target, so the
+    # question of selectivity is open and the flag says so.
+    only_generic = mode_of_action_from_roles(["CHEBI:48001"], conf, names, "ANTIVIRAL")
+    assert only_generic[2] == "HOST_SHARED_TARGET", only_generic
+    assert "host has too" in only_generic[1], only_generic[1]
+
+
+def test_an_unscoped_role_raises_rather_than_emitting_a_bare_mechanism():
+    """Adding a role to the mechanism map and forgetting the scope map is the
+    obvious way to reintroduce the conflation this field removes. Silently
+    defaulting would assert the safe-looking value; the seeder refuses."""
+    import pytest
+    from seed_from_sources import mode_of_action_from_roles
+
+    conf = _conf()
+    conf = dict(conf, role_to_mode_of_action=dict(conf["role_to_mode_of_action"],
+                                                  **{"CHEBI:99999999": "MEMBRANE_DISRUPTION"}))
+    with pytest.raises(KeyError, match="role_target_scope"):
+        mode_of_action_from_roles(["CHEBI:99999999"], conf,
+                                  {"CHEBI:99999999": "invented"}, "ANTIBACTERIAL")
+
+
+def test_a_curator_who_claims_the_mechanism_owns_its_target_scope_too():
+    """The scope describes the value. Leaving the seeder's scope beside a
+    curator's corrected mechanism would attach a derivation to a value it was
+    never derived from — a provenance claim about work the curator did."""
+    from seed_from_sources import merge_with_existing
+
+    seeded = {"identifier": "CHEBI:1", "label": "widgetmycin",
+              "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+              "mode_of_action_notes": "Assigned from ChEBI role CHEBI:48001 (x).",
+              "mode_of_action_target_scope": "HOST_SHARED_TARGET",
+              "source_concepts": []}
+
+    curated = dict(seeded,
+                   mode_of_action="MEMBRANE_DISRUPTION",
+                   mode_of_action_notes="CURATOR: reassigned after reading the primary literature.",
+                   mode_of_action_target_scope="MICROBIAL_TARGET")
+
+    merged = merge_with_existing(curated, dict(seeded))
+    assert merged["mode_of_action"] == "MEMBRANE_DISRUPTION"
+    assert merged["mode_of_action_target_scope"] == "MICROBIAL_TARGET"
+
+    # A curator VETO (note, no value) must not leave a scope stranded behind,
+    # describing a mechanism that is no longer asserted.
+    veto = {k: v for k, v in curated.items()
+            if k not in ("mode_of_action", "mode_of_action_target_scope")}
+    veto["mode_of_action_notes"] = "CURATOR: the cited role is wrong for this compound."
+    merged_veto = merge_with_existing(veto, dict(seeded))
+    assert "mode_of_action" not in merged_veto
+    assert "mode_of_action_target_scope" not in merged_veto

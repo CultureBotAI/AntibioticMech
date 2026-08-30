@@ -60,8 +60,10 @@ structural_class: fluoroquinolone antibiotic
 structural_class_id: ARO:0000001
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:59517 (DNA synthesis inhibitor).
-  ChEBI asserts the role on the compound; the role names a mechanism, not the organism
-  it acts on. Not a curator's mechanistic review.
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCN(C)CC3)cc21
   standard_inchi: InChI=1S/C17H20FN3O3/c1-3-20-10-12(17(23)24)16(22)11-8-13(18)15(9-14(11)20)21-6-4-19(2)5-7-21/h8-10H,3-7H2,1-2H3,(H,23,24)

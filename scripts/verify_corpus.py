@@ -119,6 +119,13 @@ def main() -> int:
             # role swapped with nothing noticing.
             if actual.get("mode_of_action_notes") != want.get("mode_of_action_notes"):
                 drifted.append((path, "mode_of_action_notes"))
+            # The target scope is derived from the same roles as the value, so a
+            # hand edit that flipped HOST_SHARED_TARGET to MICROBIAL_TARGET would
+            # assert selectivity the sources never claimed — the exact failure
+            # this field exists to prevent, committed through the field itself.
+            if (actual.get("mode_of_action_target_scope")
+                    != want.get("mode_of_action_target_scope")):
+                drifted.append((path, "mode_of_action_target_scope"))
 
     unlocked = sorted(set(expected) - set(lockfile))
     stale_lock = sorted(set(lockfile) - set(expected))

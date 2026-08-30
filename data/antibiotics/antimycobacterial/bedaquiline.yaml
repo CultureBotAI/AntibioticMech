@@ -69,8 +69,10 @@ structural_class: diarylquinoline antibiotic
 structural_class_id: ARO:3004491
 mode_of_action: ENERGY_METABOLISM_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:20854 (ATP synthase inhibitor).
-  ChEBI asserts the role on the compound; the role names a mechanism, not the organism
-  it acts on. Not a curator's mechanistic review.
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: COc1nc2ccc(Br)cc2cc1[C@@H](c1ccccc1)[C@@](O)(CCN(C)C)c1cccc2ccccc12
   standard_inchi: InChI=1S/C32H31BrN2O2/c1-35(2)19-18-32(36,28-15-9-13-22-10-7-8-14-26(22)28)30(23-11-5-4-6-12-23)27-21-24-20-25(33)16-17-29(24)34-31(27)37-3/h4-17,20-21,30,36H,18-19H2,1-3H3/t30-,32-/m1/s1

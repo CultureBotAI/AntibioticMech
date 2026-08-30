@@ -54,8 +54,10 @@ structural_class: nucleoside antibiotic
 structural_class_id: ARO:3000034
 mode_of_action: VIRAL_POLYMERASE_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:53756 (HIV-1 reverse transcriptase
-  inhibitor). ChEBI asserts the role on the compound; the role names a mechanism,
-  not the organism it acts on. Not a curator's mechanistic review.
+  inhibitor). ChEBI asserts the role on the compound. The role names a target specific
+  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: Cc1cn([C@H]2C[C@H](N=[N+]=[N-])[C@@H](CO)O2)c(=O)nc1=O
   standard_inchi: InChI=1S/C10H13N5O4/c1-5-3-15(10(18)12-9(5)17)8-2-6(13-14-11)7(4-16)19-8/h3,6-8,16H,2,4H2,1H3,(H,12,17,18)/t6-,7+,8+/m0/s1

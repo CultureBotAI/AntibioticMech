@@ -25,8 +25,10 @@ activity_roles:
 - CHEBI:67268
 mode_of_action: VIRAL_INTEGRASE_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:67268 (HIV-1 integrase inhibitor).
-  ChEBI asserts the role on the compound; the role names a mechanism, not the organism
-  it acts on. Not a curator's mechanistic review.
+  ChEBI asserts the role on the compound. The role names a target specific to the
+  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: COc1c(O)ccc2c1-c1c3c(c(OC)c4ccnc(c14)C2=O)OCO3
   standard_inchi: InChI=1S/C19H13NO6/c1-23-16-9-5-6-20-14-11(9)13(18-19(16)26-7-25-18)12-8(15(14)22)3-4-10(21)17(12)24-2/h3-6,21H,7H2,1-2H3

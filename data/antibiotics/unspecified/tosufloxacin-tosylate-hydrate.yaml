@@ -46,9 +46,10 @@ activity_roles:
 - CHEBI:33281
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:53559 (topoisomerase IV inhibitor),
-  CHEBI:59517 (DNA synthesis inhibitor). ChEBI asserts the role on the compound; the
-  role names a mechanism, not the organism it acts on. Not a curator's mechanistic
-  review.
+  CHEBI:59517 (DNA synthesis inhibitor). ChEBI asserts the role on the compound. The
+  role names a target specific to the microbe or virus — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: Cc1ccc(S(=O)(=O)O)cc1.NC1CCN(c2nc3c(cc2F)c(=O)c(C(=O)O)cn3-c2ccc(F)cc2F)C1.O
   standard_inchi: InChI=1S/C19H15F3N4O3.C7H8O3S.H2O/c20-9-1-2-15(13(21)5-9)26-8-12(19(28)29)16(27)11-6-14(22)18(24-17(11)26)25-4-3-10(23)7-25;1-6-2-4-7(5-3-6)11(8,9)10;/h1-2,5-6,8,10H,3-4,7,23H2,(H,28,29);2-5H,1H3,(H,8,9,10);1H2
