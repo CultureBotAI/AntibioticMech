@@ -151,8 +151,21 @@ by a source concept's minted identifier), and the mechanism fields on a record �
 `producer_organisms`, `causal_graphs`, `discussions`. `verify-corpus`
 deliberately does not compare those, so curation and reproducibility coexist.
 
-## Licence
+## Licence — unresolved, and worth reading before you reuse this
 
-Code and curated content: [CC0 1.0](LICENSE). Upstream data carries its own
-terms — ChEBI is CC BY 4.0, CARD requires attribution for academic use, and
+Code and curation in this repository are [CC0 1.0](LICENSE). **The record
+content is not cleanly CC0, and saying otherwise would be wrong.**
+
+Every upstream source is CC BY, CC BY-SA, or proprietary; none is CC0. ChEBI is
+CC BY 4.0 and CARD's ontology files are CC BY 4.0, both verified against their
+own licence pages. CC BY 4.0 permits redistribution inside a mixed knowledge
+base provided attribution and the licence notice ride along — which a blanket
+CC0 dedication over the same content would prevent. So the corpus can be
+redistributed with attribution; it cannot be dedicated to the public domain by
+ingestion alone.
+
+Resolving this is a decision for the repository owner, tracked as an open issue:
+the options are to relicense the data as CC BY 4.0 while keeping the code CC0,
+to carry per-record attribution and licence notices, or to seek waivers. Until
+then, treat record content as CC BY 4.0 and attribute ChEBI and CARD.
 `data/raw/MANIFEST.yaml` records what was retrieved and when.

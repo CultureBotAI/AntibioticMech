@@ -3,6 +3,11 @@
 Backlog for AntibioticMech, newest thinking first. Written 2026-08-29, at the
 end of the scaffolding pass that produced the initial corpus.
 
+The source landscape was researched on 2026-08-29 —
+`research/2026-08-29-antimicrobial-data-sources.md` carries the verified
+findings, the refuted claims, and the open questions. It moved MIBiG to the top
+of the queue and moved card.json out of it entirely.
+
 **Candidate data sources live in `curation/source_queue.tsv`**, ranked by the
 corpus gap each one closes, with its licence and structure completeness recorded
 beside it. `just source-queue` prints the top candidates and fails if the queue
@@ -55,9 +60,12 @@ prose below are the reasoning, the queue is the list.
   a real starting set for a curator writing record-level evidence — but a
   reference cited by a ChEBI entry supports the compound, not necessarily any
   antimicrobial claim about it, so it cannot be seeded blind.
-- **Producer organisms and BGCs.** `producer_organisms` is empty. MIBiG is the
-  obvious source for natural products and would connect this corpus to
-  biosynthesis; it needs a compound→BGC mapping that MIBiG's JSON supports.
+- **Producer organisms and BGCs — now the top candidate.** `producer_organisms`
+  is empty on every record. MIBiG 4.0 is CC BY 4.0 with bulk JSON on Zenodo and
+  a machine-readable reviewed flag, which makes it the cleanest licence fit in
+  the queue. Honour its caveat at seed time: about 40% of 4.0-cycle entries had
+  passed expert review at publication, and that flag describes entry curation
+  rather than the strength of the compound–producer link.
 - **Activity spectrum.** `activity_spectrum` is empty. Real MIC data would come
   from a screening resource with assays attached; without the assay a number is
   not an observation, so pick the source carefully.
@@ -68,9 +76,14 @@ prose below are the reasoning, the queue is the list.
 
 ## Later
 
-- **Link `resistance_mechanisms` to CARD's real mechanism categories.** The
-  determinant→mechanism association lives in `card.json`, not `aro.obo`, so most
-  seeded items are `UNKNOWN`. Adding card.json as a third source would fix that.
+- **Ask McMaster about `card.json`.** The determinant→mechanism association
+  lives there, and it is the one source blocked purely on terms rather than
+  content: CARD's non-ontology materials may not be reproduced by a commercial
+  organization without written permission, and the academic clause requires
+  unmodified use. The research pass named a waiver request as the highest-value
+  unblocking action available. Meanwhile the `is_a` + `participates_in` walk over
+  the CC BY 4.0 ontology types 4,530 of 4,555 rows, so this is now an
+  accuracy-and-provenance improvement rather than a coverage gap.
 - **Retired-URL redirects.** The slugs of dropped records are now reserved in
   `data/antibiotics/RETIRED.tsv`, so no URL is ever reissued to a different
   compound — but 134 record pages disappeared without a redirect when unreviewed

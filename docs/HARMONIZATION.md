@@ -47,6 +47,19 @@ actually denotes, and the InChIKey matches ChEBI's.
 
 Two limits on that rule, both deliberate:
 
+### A caution on the InChIKey as identity
+
+The whole corpus keys on the Standard InChIKey, and it has documented limits the
+ChEMBL team states about their own registration system: it does not recognise
+some 1,5 keto-enol tautomer pairs as the same compound, cannot express cis/trans
+isomerism in organometallics (cisplatin and transplatin hash differently only by
+luck of representation), and does not support relative stereochemistry — only
+absolute or none. For this corpus that means two things. A collision is not
+proof of sameness, which is why ChEBI-internal collisions are surfaced rather
+than merged; and an absence of collision is not proof of difference, so a
+tautomer pair can enter as two records with no signal at all. Macrocyclic
+peptides and glycopeptides are where this is most likely to bite.
+
 **ChEBI-internal collisions are not merged.** ChEBI keeps `tetracycline` and
 `tetracycline zwitterion` as separate entries with the same standard InChIKey,
 because they are different protonation states related by `is_conjugate_acid_of`.

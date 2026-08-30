@@ -44,7 +44,14 @@ aro:
   # molecule. Classes become `structural_class` / `parent_compounds`, never records.
   drug_class_marker: classified_as_drug_class
   homepage: https://card.mcmaster.ca/
-  license: CARD academic use
+  # The ONTOLOGY files (aro.obo, aro.owl) are CC BY 4.0 — verified against the
+  # arpcard/aro LICENSE, GitHub's spdx_id, the OBO Foundry registry and CARD's
+  # own download page. This is the only CARD file the pipeline reads.
+  # card.json is NOT this licence: it carries restrictive McMaster terms that
+  # prohibit reproduction by commercial organizations without written
+  # permission and require the materials be used unmodified. Do not add it to
+  # `files` without resolving that first (curation/source_queue.tsv, card-json).
+  license: CC BY 4.0 (aro.obo; card.json is separately restricted)
 
 pubchem:
   name: PubChem
