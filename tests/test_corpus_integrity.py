@@ -3,21 +3,16 @@
 from __future__ import annotations
 
 import re
+import sys
 from collections import Counter, defaultdict
+from pathlib import Path
 
 CURIE = re.compile(r"^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$")
 INCHIKEY = re.compile(r"^[A-Z]{14}-[A-Z]{10}-[A-Z]$")
 
-CLASS_DIRS = {
-    "ANTIBACTERIAL": "antibacterial",
-    "ANTIMYCOBACTERIAL": "antimycobacterial",
-    "ANTIFUNGAL": "antifungal",
-    "ANTIPROTOZOAL": "antiprotozoal",
-    "ANTIVIRAL": "antiviral",
-    "BIOCIDE": "biocide",
-    "ANTIMICROBIAL_UNSPECIFIED": "unspecified",
-    "OTHER": "other",
-}
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+
+from seed_from_sources import CLASS_DIRS  # noqa: E402
 
 
 def test_identifiers_are_unique(records):
@@ -244,8 +239,8 @@ def test_resistance_mechanisms_are_typed_where_aro_says_so(records):
 
 
 def test_retired_slugs_are_never_reissued(repo_root, path_lockfile):
-    """A slug is a published URL. When 134 records left the corpus, their slugs
-    left PATHS.tsv with them and became free for the next compound whose label
+    """A slug is a published URL. When records leave the corpus their slugs
+    leave PATHS.tsv with them and became free for the next compound whose label
     slugified the same way — silently repointing a published URL at a different
     structure. The ledger keeps them reserved."""
     import csv as _csv

@@ -247,6 +247,13 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
     3. **The ARO fallback**, ANTIBACTERIAL — for a CARD molecule with no ChEBI
        role and no group-naming drug class.
 
+    A fourth step, filing on a ChEBI structural class whose name states a target
+    group, was tried and removed: a chemical class is not a target claim, and it
+    filed chemotherapy drugs, an insecticide and bare ring scaffolds as
+    antibacterial. See conf/sources.yaml. Compounds whose only reviewed role is
+    the generic `antimicrobial agent` keep ANTIMICROBIAL_UNSPECIFIED, which is
+    what the sources say.
+
     Classes whose names do not state a group are absent from the map on purpose;
     see conf/sources.yaml.
     """
@@ -263,6 +270,7 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
             best = entry
     if best:
         return best["class"]
+
     if from_aro:
         return "ANTIBACTERIAL"
     return "ANTIMICROBIAL_UNSPECIFIED"
@@ -355,7 +363,8 @@ def read_retired() -> dict[str, str]:
     """Identifier -> slug for records that have left the corpus.
 
     A slug is a published URL. When a record drops out — 134 did when unreviewed
-    ChEBI relations stopped being trusted — its row leaves PATHS.tsv, and without
+    ChEBI relations stopped being trusted, 19 of which later returned — its row
+    leaves PATHS.tsv, and without
     this ledger the string is free for the next compound whose label happens to
     slugify the same way, silently repointing a published URL at a different
     structure. The ledger keeps every retired slug reserved, and hands it back to
@@ -378,7 +387,10 @@ def assign_slugs(records: dict[str, dict], lockfile: dict[str, str],
     """
     retired = read_retired() if retired is None else retired
     assigned = dict(lockfile)
+    already = set(assigned.values())
     for identifier, slug in retired.items():
+        if slug in already:
+            continue  # the slug has been taken by another record since retirement
         if identifier in records and identifier not in assigned:
             assigned[identifier] = slug
     taken = set(assigned.values()) | set(retired.values())
@@ -396,6 +408,20 @@ def assign_slugs(records: dict[str, dict], lockfile: dict[str, str],
             n += 1
         assigned[identifier] = slug
         taken.add(slug)
+
+    # A slug is a published URL and must name exactly one record. The reclaim
+    # path above and a hand-edited PATHS.tsv can each introduce a duplicate, and
+    # two records in one class directory would silently overwrite each other.
+    counts: dict[str, list[str]] = defaultdict(list)
+    for identifier, slug in assigned.items():
+        counts[slug].append(identifier)
+    clashes = {slug: ids for slug, ids in counts.items() if len(ids) > 1}
+    if clashes:
+        raise SystemExit(
+            "slug collision: " + "; ".join(f"{slug} -> {sorted(ids)}" for slug, ids in
+                                           sorted(clashes.items()))
+            + ". A slug names one record; fix data/antibiotics/PATHS.tsv or RETIRED.tsv."
+        )
     return assigned
 
 
@@ -405,6 +431,7 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
     by_identity: dict[str, list[Concept]] = defaultdict(list)
     grounding: dict[str, str] = {}
     skipped: list[Concept] = []
+    overridden: set[str] = set()
 
     for concept in concepts:
         decision = decisions.get(concept.minted, {})
@@ -431,20 +458,52 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
             continue
         identifier, status = resolve_identity(concept, chebi_rows)
         if override:
-            # The override sets identity; it must not silently disagree with the
-            # structure the record will carry. Identifier, structure and merge
-            # key are three separate values here, and a decision that grounds a
-            # concept to CHEBI:X while the record carries a PubChem structure
-            # for something else would key a record to a compound it is not.
-            target_key = chebi_rows.get(override, {}).get("standard_inchi_key", "")
+            # The override sets identity, so it is validated rather than trusted.
+            # Identifier, structure and merge key are three separate values here,
+            # and every way they can disagree has to be refused explicitly: an
+            # earlier version only caught the case where both structures were
+            # present and differed, which let a typo'd CURIE and a structureless
+            # class term through in silence.
+            target = chebi_rows.get(override)
             concept_key = concept.structure.get("standard_inchi_key", "")
-            if target_key and concept_key and target_key != concept_key:
+            if not override.startswith("CHEBI:"):
+                # Only ChEBI targets can be checked: chebi_rows is the only
+                # inventory carrying an identifier-to-structure mapping. An
+                # unvalidatable override is refused rather than trusted — it
+                # would stamp grounding_status EXACT against a target nothing
+                # confirmed exists, on a path where the disagreement between
+                # identifier and structure is not merely unchecked but
+                # uncheckable.
                 raise SystemExit(
                     f"decision on {concept.minted} grounds {concept.label!r} to {override}, "
-                    f"but their structures differ ({concept_key} vs {target_key}). "
-                    f"Fix the decision row in curation/decisions.tsv — a record must not be "
-                    f"keyed to a compound whose structure it does not carry."
+                    f"which is not a ChEBI CURIE. Grounding targets must be ChEBI entries, "
+                    f"because that is the only inventory this repository can check a "
+                    f"structure against."
                 )
+            if True:
+                if target is None:
+                    raise SystemExit(
+                        f"decision on {concept.minted} grounds {concept.label!r} to {override}, "
+                        f"which is not a ChEBI entry in data/raw/chebi_antimicrobials.tsv. "
+                        f"Check the CURIE in curation/decisions.tsv — a typo here mints a "
+                        f"record keyed to a compound that does not exist."
+                    )
+                target_key = target.get("standard_inchi_key", "")
+                if not target_key:
+                    raise SystemExit(
+                        f"decision on {concept.minted} grounds {concept.label!r} to {override}, "
+                        f"a ChEBI term with no structure of its own — a class term, not a "
+                        f"compound. A record is one chemical structure and a drug class is "
+                        f"never a record; ground to the structured entry instead."
+                    )
+                if concept_key and target_key != concept_key:
+                    raise SystemExit(
+                        f"decision on {concept.minted} grounds {concept.label!r} to {override}, "
+                        f"but their structures differ ({concept_key} vs {target_key}). "
+                        f"Fix the decision row in curation/decisions.tsv — a record must not be "
+                        f"keyed to a compound whose structure it does not carry."
+                    )
+            overridden.add(override)
             identifier, status = override, "EXACT"
         by_identity[identifier].append(concept)
         grounding[identifier] = status
@@ -464,6 +523,25 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
         if owner and owner != identifier:
             by_identity[owner].extend(by_identity.pop(identifier))
             grounding.pop(identifier, None)
+
+    # A curator decision must not split one structure across two grounded
+    # records. The InChIKey fold only folds MINTED into EXACT, so an override
+    # that creates a second EXACT identifier for a structure another record
+    # already carries would pass every gate — flag_structure_collisions looks
+    # only at all-MINTED groups.
+    if overridden:
+        owners: dict[str, list[str]] = defaultdict(list)
+        for identifier, group in by_identity.items():
+            if grounding.get(identifier) == "EXACT":
+                owners[group[0].structure["standard_inchi_key"]].append(identifier)
+        for inchikey, ids in sorted(owners.items()):
+            if len(ids) > 1 and any(i in overridden for i in ids):
+                raise SystemExit(
+                    f"a decision grounds a concept to {sorted(i for i in ids if i in overridden)} "
+                    f"while {sorted(i for i in ids if i not in overridden)} already carries "
+                    f"structure {inchikey}. That would split one structure across two grounded "
+                    f"records; ground to the existing identifier instead."
+                )
 
     records: dict[str, dict] = {}
     for identifier, group in by_identity.items():
@@ -658,9 +736,6 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
                 }],
             })
         records[identifier]["resistance_mechanisms"] = items
-        _SEEDED_CARD_IDS.setdefault(identifier, {})["resistance_mechanisms"] = {
-            _item_aro_id(i) for i in items
-        }
         _history_last(records[identifier])
 
     grouped = defaultdict(list)
@@ -683,9 +758,6 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
             }
             items.append(item)
         records[identifier]["molecular_targets"] = items
-        _SEEDED_CARD_IDS.setdefault(identifier, {})["molecular_targets"] = {
-            _item_aro_id(i) for i in items
-        }
         _history_last(records[identifier])
 
 
@@ -693,11 +765,6 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
 # writing
 # --------------------------------------------------------------------------
 
-# Set at seed time to the (field, ARO id) pairs this run actually wrote, per
-# record. Ownership is then a fact about what the seeder produced, not a guess
-# from a citation prefix — a curator citing an ARO determinant CARD does not
-# link to this molecule was previously classified seeder-owned and deleted.
-_SEEDED_CARD_IDS: dict[str, dict[str, set[str]]] = {}
 
 
 def _item_aro_id(item: dict) -> str:
@@ -711,23 +778,31 @@ def _item_aro_id(item: dict) -> str:
 CARD_NOTE_MARKER = "CARD/ARO asserts"
 
 
-def is_card_sourced(item: dict, seeded_ids: set[str] | None = None) -> bool:
+def is_card_sourced(item: dict) -> bool:
     """True when the seeder wrote this item, rather than a curator.
 
-    Two independent signals, either sufficient: the ARO id is one this run
-    emitted for the record and field (exact, available while seeding), or the
-    item carries the seeder's own note marker (available to anyone reading a
-    record off disk, which is what verify-corpus does).
+    One signal: the item cites only ARO terms AND carries the seeder's own note
+    marker. Both halves are needed. The prefix alone deleted a curator's item
+    that cited an ARO determinant CARD does not link to this molecule; the ARO
+    id alone — a second signal tried and removed — deleted a curator's upgrade
+    of a seeded item to a primary citation, which is the workflow
+    docs/HARMONIZATION.md prescribes.
 
-    A curator item that cites an ARO determinant CARD does not link to this
-    molecule matches neither, and is carried forward — the case that motivated
-    replacing the old prefix-only test.
+    Deliberate consequence: an item carrying an emitted ARO id but NOT the
+    marker reads as the curator's and is kept. A record seeded before the marker
+    existed, or one whose notes were reformatted, would therefore survive a
+    re-seed and be emitted twice. No such record exists — verify-corpus is green
+    — and preserving a curator's work is the error worth making in this
+    direction.
     """
-    if seeded_ids and _item_aro_id(item) in seeded_ids:
-        return True
     evidence = item.get("evidence") or []
     if not evidence:
         return False
+    # The marker is decisive and is checked FIRST. Matching an ARO id this run
+    # emitted is NOT sufficient on its own: a curator who replaces the ARO
+    # reference with a PMID — the upgrade docs/HARMONIZATION.md prescribes —
+    # keeps the same determinant, so an id-only rule classified their work as
+    # the seeder's and reverted it on the next re-seed.
     if not all(str(e.get("reference", "")).startswith("ARO:") for e in evidence):
         return False
     return any(CARD_NOTE_MARKER in str(e.get("notes") or "") for e in evidence)
@@ -735,8 +810,7 @@ def is_card_sourced(item: dict, seeded_ids: set[str] | None = None) -> bool:
 
 def card_sourced_view(record: dict, field: str) -> list:
     """The CARD-seeded items of `field`, in seed order — what verify-corpus compares."""
-    seeded_ids = _SEEDED_CARD_IDS.get(record.get("identifier", ""), {}).get(field)
-    return [item for item in (record.get(field) or []) if is_card_sourced(item, seeded_ids)]
+    return [item for item in (record.get(field) or []) if is_card_sourced(item)]
 
 
 def merge_with_existing(record: dict, existing: dict) -> dict:
@@ -772,9 +846,7 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     # curator-upgraded ones are kept, after them.
     for field in ("molecular_targets", "resistance_mechanisms"):
         seeded_items = list(record.get(field) or [])
-        seeded_ids = _SEEDED_CARD_IDS.get(record.get("identifier", ""), {}).get(field, set())
-        curator_items = [i for i in (existing.get(field) or [])
-                         if not is_card_sourced(i, seeded_ids)]
+        curator_items = [i for i in (existing.get(field) or []) if not is_card_sourced(i)]
         if seeded_items or curator_items:
             merged[field] = seeded_items + curator_items
         else:
@@ -864,12 +936,14 @@ def write_lockfile(records: dict[str, dict], slugs: dict[str, str],
         for identifier in sorted(rows):
             writer.writerow([identifier, rows[identifier][0], rows[identifier][1]])
 
-    if only is not None:
-        return
-
     # Anything that was in the lockfile and is not produced any more is retired,
     # not forgotten: its slug stays reserved. A returning identifier is removed
     # from the ledger and reclaims its slug via assign_slugs.
+    #
+    # This runs on a PARTIAL write too. `just seed-canary` on a re-admitted
+    # compound writes its PATHS.tsv row, and skipping the reconciliation left
+    # that identifier in both files — turning the gate red on the step CLAUDE.md
+    # makes mandatory before every bulk write.
     retired = read_retired()
     retired_dates = {}
     if RETIRED_FILE.exists():
@@ -878,13 +952,43 @@ def write_lockfile(records: dict[str, dict], slugs: dict[str, str],
                              for r in csv.DictReader(fh, delimiter="\t")}
     today = date.today().isoformat()
     for identifier, slug in previous.items():
+        if only is not None and identifier not in only:
+            # A partial run knows nothing about identifiers it did not build, so
+            # it must not conclude they are gone.
+            continue
         if identifier not in records:
             retired.setdefault(identifier, slug)
             retired_dates.setdefault(identifier, today)
+        elif slug != rows.get(identifier, (None, slug))[1]:
+            # The identifier survives under a DIFFERENT slug — the documented
+            # rename path. The old slug is a published URL and must be reserved
+            # too, or the next compound that slugifies to it inherits the address.
+            retired.setdefault(f"{identifier}#{slug}", slug)
+            retired_dates.setdefault(f"{identifier}#{slug}", today)
     for identifier in list(retired):
-        if identifier in records:
-            retired.pop(identifier)
-            retired_dates.pop(identifier, None)
+        if "#" in identifier:
+            # A slug this identifier used to hold. It stays reserved unless the
+            # identifier has taken it back — see below.
+            owner, _, old_slug = identifier.partition("#")
+            if owner in rows and rows[owner][1] == old_slug:
+                # The identifier returned to a slug it previously gave up (a
+                # rename, then a revert). Keeping the row would make the ledger
+                # claim a live URL is retired, which is what
+                # test_retired_slugs_are_never_reissued rejects — and no code
+                # path could clear it, so the gate would stay red forever.
+                retired.pop(identifier)
+                retired_dates.pop(identifier, None)
+            continue
+        if identifier not in records:
+            continue
+        if only is not None and identifier not in only:
+            # A partial run builds every record in memory but WRITES only the
+            # named ones. Un-retiring on the strength of the in-memory set would
+            # drop an identifier from the ledger without adding it to PATHS.tsv,
+            # leaving it in neither file and its published slug reserved nowhere.
+            continue
+        retired.pop(identifier)
+        retired_dates.pop(identifier, None)
     if not retired and not RETIRED_FILE.exists():
         return
     with RETIRED_FILE.open("w", newline="", encoding="utf-8") as fh:

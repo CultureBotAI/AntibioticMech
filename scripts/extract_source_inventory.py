@@ -182,6 +182,7 @@ def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> li
         elif r["relation_type_id"] == "4":     # has_role
             has_role[r["init_id"]].append(r["final_id"])
 
+
     scope = conf["role_scope"]
     out_roles = transitive([acc2id[a] for a in scope["out_of_scope"] if a in acc2id], isa_children)
     in_roles = transitive([acc2id[a] for a in scope["in_scope"] if a in acc2id], isa_children) - out_roles

@@ -19,7 +19,7 @@ key on:
 | `CHEBI:48923` erythromycin | A ChEBI *class* over erythromycins A–E |
 | `ARO:0000000` macrolide antibiotic | A drug class — `structural_class`, not a record |
 
-The 364 concepts in that position are not lost: `just worklist` lists them, and
+The 371 concepts in that position are not lost: `just worklist` lists them, and
 each needs either a structure or an `EXCLUDE` decision.
 
 ## Identity resolution

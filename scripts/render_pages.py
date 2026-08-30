@@ -45,6 +45,15 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 TEMPLATES_DIR = REPO_ROOT / "src" / "antibioticmech" / "templates"
 PAGES_DIR = REPO_ROOT / "pages"
+SCHEMA_PATH = REPO_ROOT / "src" / "antibioticmech" / "schema" / "antibioticmech.yaml"
+
+# Enum value -> the directory the corpus files it under. IMPORTED, not copied:
+# the seeder owns the corpus layout, and a second copy here would drift the
+# first time a class is added — which is exactly what happened when ANTIVIRAL
+# had to be threaded through four separate enumerations by hand.
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+from seed_from_sources import CLASS_DIRS  # noqa: E402
+
 MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "MANIFEST.yaml"
 
 # Where the site is served from; the sitemap needs absolute URLs.
@@ -231,6 +240,26 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
     }
 
 
+def class_hierarchy() -> dict[str, list[str]]:
+    """Parent class dir -> narrower class dirs, read from the schema's enum.
+
+    LinkML lets a permissible value declare `is_a`, and AntimicrobialClassEnum
+    uses it to say ANTIMYCOBACTERIAL is a kind of ANTIBACTERIAL — mycobacteria
+    are bacteria. Filing is exclusive and picks the narrower claim, so those
+    records are NOT also under antibacterial, and a reader on the antibacterial
+    page would otherwise never learn that 78 more sit one click away. Deriving
+    the site's cross-links from the schema means the two cannot drift apart.
+    """
+    schema = yaml.safe_load(SCHEMA_PATH.read_text(encoding="utf-8"))
+    values = schema["enums"]["AntimicrobialClassEnum"]["permissible_values"]
+    out: dict[str, list[str]] = {}
+    for name, body in values.items():
+        parent = (body or {}).get("is_a")
+        if parent and parent in CLASS_DIRS and name in CLASS_DIRS:
+            out.setdefault(CLASS_DIRS[parent], []).append(CLASS_DIRS[name])
+    return out
+
+
 def build(out_dir: Path) -> None:
     records = load_records()
     if not records:
@@ -328,6 +357,12 @@ def build(out_dir: Path) -> None:
             }
         )
 
+    # Filing is exclusive but the classes are not disjoint: mycobacteria are
+    # bacteria, so antimycobacterial records ARE antibacterial ones and a reader
+    # on the antibacterial page would otherwise never learn that 78 more sit one
+    # click away. Read from the schema so the site cannot disagree with it.
+    narrower = class_hierarchy()
+
     classes = []
     class_pages: list[str] = []
     for class_dir in class_dirs:
@@ -340,6 +375,14 @@ def build(out_dir: Path) -> None:
                 "pct": round(100 * len(items) / total),
                 "grounded": sum(1 for i in items if i["grounding"] == "EXACT"),
                 "description": CLASS_BLURB.get(class_dir, ""),
+                "narrower": [
+                    {"slug": child, "label": CLASS_LABEL.get(child, child.title()),
+                     "count": len(by_class.get(child, []))}
+                    for child in narrower.get(class_dir, []) if by_class.get(child)
+                ],
+                "broader": next(
+                    ({"slug": parent, "label": CLASS_LABEL.get(parent, parent.title())}
+                     for parent, kids in narrower.items() if class_dir in kids), None),
             }
         )
         ordered = sorted(items, key=lambda r: r["label"])
@@ -355,6 +398,8 @@ def build(out_dir: Path) -> None:
                     label=CLASS_LABEL.get(class_dir, class_dir.replace("-", " ").title()),
                     slug=class_dir,
                     description=CLASS_BLURB.get(class_dir, ""),
+                    narrower=[c for c in classes if c["slug"] == class_dir][0]["narrower"],
+                    broader=[c for c in classes if c["slug"] == class_dir][0]["broader"],
                     records=chunk,
                     total=len(ordered),
                     page=n,

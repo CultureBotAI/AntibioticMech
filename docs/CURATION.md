@@ -84,7 +84,8 @@ requirement.
   string out of circulation, so a later compound can never inherit a published
   URL that pointed at something else. A returning identifier is removed from the
   ledger and reclaims its own slug. 134 slugs were retired when unreviewed ChEBI
-  relations stopped being trusted; the pages they served are gone, and a
+  relations stopped being trusted, 19 of which returned when antivirals entered
+  scope, leaving 115; the pages they served are gone, and a
   redirect map for them is still owed (see NEXT_TASKS.md).
 - **Never hand-edit a seeded field.** `just verify-corpus` rebuilds the corpus
   from `data/raw/` and fails on drift — for the fields the seeder owns. It

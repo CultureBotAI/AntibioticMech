@@ -4,6 +4,23 @@
 {% block content %}
 <h1>{{ label }}</h1>
 <p class="lede">{{ total }} compound records. {{ description }}</p>
+{% if narrower %}
+<p class="note">
+  These classes are not disjoint. Filing is exclusive and picks the narrower
+  claim, so
+  {% for n in narrower %}<a href="{{ n.slug }}.html">{{ n.count }} {{ n.label|lower }}</a>{% if not loop.last %}, {% endif %}{% endfor %}
+  record{{ 's' if narrower|sum(attribute='count') != 1 else '' }}
+  {{ 'are' if narrower|sum(attribute='count') != 1 else 'is' }} listed separately
+  and <strong>not</strong> repeated here — mycobacteria are bacteria, so a
+  question about what acts on bacteria takes both lists together.
+</p>
+{% endif %}
+{% if broader %}
+<p class="note">
+  A subclass of <a href="{{ broader.slug }}.html">{{ broader.label|lower }}</a>:
+  every record here is also one of those, and is listed only here.
+</p>
+{% endif %}
 <input class="searchbox" id="q" type="search" data-index="{{ index_url }}" data-total="{{ total }}" placeholder="Filter all {{ total }} records…" aria-label="Filter records">
 <p class="meta" id="count" aria-live="polite"></p>
 <table id="tbl">

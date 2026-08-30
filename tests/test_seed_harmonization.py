@@ -118,12 +118,82 @@ def test_an_exclude_decision_removes_a_concept_entirely():
     assert records == {} and skipped == []
 
 
+def _chebi_row(inchikey, roles=""):
+    return {"standard_inchi_key": inchikey, "role_ids": roles, "smiles": "",
+            "standard_inchi": "", "molecular_formula": "", "charge": "",
+            "average_mass": "", "monoisotopic_mass": ""}
+
+
 def test_a_curator_identifier_override_wins():
-    concept = _concept("ARO", "ARO:0000018", "viomycin", "GXFAIFRPOKBQRV-GHXCTMGLSA-N")
+    key = "GXFAIFRPOKBQRV-GHXCTMGLSA-N"
+    concept = _concept("ARO", "ARO:0000018", "viomycin", key)
     decisions = {concept.minted: {"decision": "GROUND", "identifier": "CHEBI:9727"}}
-    records, _ = merge([concept], {}, CONF, decisions, "2026-08-29")
+    records, _ = merge([concept], {"CHEBI:9727": _chebi_row(key)}, CONF, decisions, "2026-08-29")
     assert list(records) == ["CHEBI:9727"]
     assert records["CHEBI:9727"]["grounding_status"] == "EXACT"
+
+
+def test_a_ground_decision_to_an_unknown_chebi_id_is_refused():
+    """A typo in a decision row would otherwise mint a record keyed to a
+    compound that does not exist, with grounding_status EXACT."""
+    import pytest
+
+    concept = _concept("ARO", "ARO:0000018", "viomycin", "GXFAIFRPOKBQRV-GHXCTMGLSA-N")
+    decisions = {concept.minted: {"decision": "GROUND", "identifier": "CHEBI:4235700"}}
+    with pytest.raises(SystemExit, match="not a ChEBI entry"):
+        merge([concept], {"CHEBI:42355": _chebi_row("AAAAAAAAAAAAAA-BBBBBBBBBB-C")},
+              CONF, decisions, "2026-08-29")
+
+
+def test_a_ground_decision_to_a_structureless_class_term_is_refused():
+    """CHEBI:48923 "erythromycin" is a class over erythromycins A-E with no
+    structure of its own. A record is one chemical structure and a drug class is
+    never a record, so grounding to one must fail loudly."""
+    import pytest
+
+    concept = _concept("ARO", "ARO:0000006", "erythromycin", "ULGZDMOVFRHVEP-RWJQBGPGSA-N")
+    decisions = {concept.minted: {"decision": "GROUND", "identifier": "CHEBI:48923"}}
+    with pytest.raises(SystemExit, match="no structure of its own"):
+        merge([concept], {"CHEBI:48923": _chebi_row("")}, CONF, decisions, "2026-08-29")
+
+
+def test_a_ground_decision_that_would_split_a_structure_is_refused():
+    """The InChIKey fold only folds MINTED into EXACT, so an override creating a
+    second grounded record for a structure another record already carries would
+    pass every gate — including the collision flagger, which looks only at
+    all-MINTED groups."""
+    import pytest
+
+    key = "ULGZDMOVFRHVEP-RWJQBGPGSA-N"
+    existing = _concept("CHEBI", "CHEBI:42355", "erythromycin A", key)
+    diverted = _concept("ARO", "ARO:0000006", "erythromycin", key)
+    rows = {"CHEBI:42355": _chebi_row(key), "CHEBI:99999": _chebi_row(key)}
+    decisions = {diverted.minted: {"decision": "GROUND", "identifier": "CHEBI:99999"}}
+    with pytest.raises(SystemExit, match="split one structure"):
+        merge([existing, diverted], rows, CONF, decisions, "2026-08-29")
+
+
+def test_a_curator_literature_upgrade_survives_a_reseed():
+    """docs/HARMONIZATION.md tells a curator to replace a CARD item's ARO
+    reference with a primary citation. An ownership rule keyed on the ARO id
+    classified that upgraded item as the seeder's and reverted it."""
+    from seed_from_sources import is_card_sourced, merge_with_existing
+
+    upgraded = {
+        "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION",
+        "aro_id": "ARO:3000375",
+        "label": "ermB",
+        "evidence": [{"reference": "PMID:15980346", "notes": "curator: primary source"}],
+    }
+    # Not the seeder's under either signal that was ever tried: it cites a PMID,
+    # and it carries no CARD note marker.
+    assert not is_card_sourced(upgraded)
+
+    seeded = {"identifier": "CHEBI:42355", "label": "erythromycin A",
+              "antimicrobial_class": "ANTIBACTERIAL", "curation_status": "SEEDED",
+              "grounding_status": "EXACT", "curation_history": []}
+    merged = merge_with_existing(seeded, dict(seeded) | {"resistance_mechanisms": [upgraded]})
+    assert merged["resistance_mechanisms"] == [upgraded]
 
 
 def test_slugs_are_url_safe_and_stable():
@@ -221,7 +291,6 @@ def test_a_curator_item_citing_an_aro_term_is_not_mistaken_for_seeder_output():
                       "notes": "curator: acrB effluxes this compound (PMID pending)"}],
     }
     assert not is_card_sourced(curator_item)
-    assert not is_card_sourced(curator_item, seeded_ids=set())
 
     seeded = {"identifier": "CHEBI:42355", "label": "erythromycin A",
               "antimicrobial_class": "ANTIBACTERIAL", "curation_status": "SEEDED",
@@ -299,3 +368,157 @@ def test_a_ground_decision_to_a_different_structure_is_refused():
     with pytest.raises(SystemExit) as excinfo:
         sfs_merge([concept], chebi_rows, CONF, decisions, "2026-08-29")
     assert "structures differ" in str(excinfo.value)
+
+
+def _ledger_sandbox(tmp_path, monkeypatch, paths_rows, retired_rows=()):
+    """A corpus directory with a lockfile and ledger, for the slug tests."""
+    import seed_from_sources as sfs
+
+    corpus = tmp_path / "antibiotics"
+    corpus.mkdir(parents=True)
+    monkeypatch.setattr(sfs, "CORPUS_DIR", corpus)
+    monkeypatch.setattr(sfs, "PATHS_FILE", corpus / "PATHS.tsv")
+    monkeypatch.setattr(sfs, "RETIRED_FILE", corpus / "RETIRED.tsv")
+    (corpus / "PATHS.tsv").write_text(
+        "identifier\tantimicrobial_class\tslug\n"
+        + "".join(f"{i}\t{c}\t{s}\n" for i, c, s in paths_rows), encoding="utf-8")
+    if retired_rows:
+        (corpus / "RETIRED.tsv").write_text(
+            "identifier\tslug\tretired_on\n"
+            + "".join(f"{i}\t{s}\t2026-08-29\n" for i, s in retired_rows), encoding="utf-8")
+    return sfs, corpus
+
+
+def test_a_canary_on_a_returning_compound_does_not_leave_it_in_both_ledgers(tmp_path, monkeypatch):
+    """`just seed-canary` is mandatory before every bulk write. Skipping the
+    retired-ledger reconciliation on a partial write left a re-admitted
+    identifier in PATHS.tsv and RETIRED.tsv at once, failing the corpus
+    integrity test — the same class of inconsistency `only=` was added to fix.
+    19 antivirals genuinely returned by this path."""
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch,
+                             [("CHEBI:1", "ANTIBACTERIAL", "alpha")],
+                             [("CHEBI:2", "beta")])
+    records = {"CHEBI:1": {"antimicrobial_class": "ANTIBACTERIAL"},
+               "CHEBI:2": {"antimicrobial_class": "ANTIFUNGAL"}}
+    sfs.write_lockfile(records, {"CHEBI:1": "alpha", "CHEBI:2": "beta"}, only={"CHEBI:2"})
+    assert set(sfs.read_retired()) & set(sfs.read_lockfile()) == set()
+    assert "CHEBI:2" in sfs.read_lockfile()
+
+
+def test_a_partial_run_never_retires_an_identifier_it_did_not_build(tmp_path, monkeypatch):
+    """The other half: a canary knows nothing about the records it skipped, so
+    it must not conclude they are gone."""
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch,
+                             [("CHEBI:1", "ANTIBACTERIAL", "alpha"),
+                              ("CHEBI:9", "ANTIFUNGAL", "gamma")])
+    sfs.write_lockfile({"CHEBI:1": {"antimicrobial_class": "ANTIBACTERIAL"}},
+                       {"CHEBI:1": "alpha"}, only={"CHEBI:1"})
+    assert sfs.read_retired() == {}
+    assert "CHEBI:9" in sfs.read_lockfile()
+
+
+def test_the_documented_rename_reserves_the_slug_it_frees(tmp_path, monkeypatch):
+    """CLAUDE.md instructs renaming through PATHS.tsv. Retiring only identifiers
+    that DISAPPEAR meant the freed slug never entered the ledger and was
+    available to the next compound that slugified to it — the one slug-changing
+    operation the docs prescribe was the one the ledger did not cover."""
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch,
+                             [("CHEBI:1", "ANTIBACTERIAL", "erythromycin-a")])
+    sfs.write_lockfile({"CHEBI:1": {"antimicrobial_class": "ANTIBACTERIAL"}},
+                       {"CHEBI:1": "erythromycin"})
+    assert "erythromycin-a" in set(sfs.read_retired().values())
+
+
+def test_two_identifiers_never_receive_the_same_slug(tmp_path, monkeypatch):
+    """A reclaim from the ledger did not check whether the slug had been taken
+    since. Two records in one class directory would then overwrite each other on
+    write, with the integrity test only noticing afterwards."""
+    import pytest
+
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch,
+                             [("CHEBI:9", "ANTIBACTERIAL", "beta")],
+                             [("CHEBI:2", "beta")])
+    records = {"CHEBI:9": {"antimicrobial_class": "ANTIBACTERIAL", "label": "nine"},
+               "CHEBI:2": {"antimicrobial_class": "ANTIFUNGAL", "label": "two"}}
+    assigned = sfs.assign_slugs(records, sfs.read_lockfile())
+    assert assigned["CHEBI:9"] == "beta"
+    assert assigned["CHEBI:2"] != "beta", "a taken slug must not be reclaimed"
+
+    # And a lockfile that already contains a duplicate is refused outright.
+    sfs2, _ = _ledger_sandbox(tmp_path / "second", monkeypatch,
+                              [("CHEBI:9", "ANTIBACTERIAL", "beta"),
+                               ("CHEBI:8", "ANTIFUNGAL", "beta")])
+    with pytest.raises(SystemExit, match="slug collision"):
+        sfs2.assign_slugs(records | {"CHEBI:8": {"antimicrobial_class": "ANTIFUNGAL",
+                                                 "label": "eight"}},
+                          sfs2.read_lockfile())
+
+
+
+def test_the_ledger_holds_through_repeated_renames_and_a_return(tmp_path, monkeypatch):
+    """The composite-key scheme's whole contract, in sequence. Each step was
+    checked by hand once; this keeps it checked.
+
+    A renamed identifier's old slug is reserved under `identifier#slug` so it is
+    never reissued, a second rename reserves the second slug too, a departure
+    reserves the current slug under the plain key, a return reclaims that slug
+    and clears only the plain key — and a different compound whose label
+    slugifies to a retired string gets a suffixed slug instead of inheriting a
+    published URL.
+    """
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch, [("A:1", "ANTIBACTERIAL", "alpha")])
+    record = {"A:1": {"antimicrobial_class": "ANTIBACTERIAL"}}
+
+    sfs.write_lockfile(record, {"A:1": "beta"})
+    assert sfs.read_retired() == {"A:1#alpha": "alpha"}
+
+    sfs.write_lockfile(record, {"A:1": "gamma"})
+    assert set(sfs.read_retired()) == {"A:1#alpha", "A:1#beta"}
+
+    sfs.write_lockfile({}, {})
+    assert sfs.read_retired()["A:1"] == "gamma"
+
+    reclaimed = sfs.assign_slugs(record, sfs.read_lockfile())
+    assert reclaimed == {"A:1": "gamma"}
+    sfs.write_lockfile(record, reclaimed)
+    assert "A:1" not in sfs.read_retired()
+    assert set(sfs.read_retired()) == {"A:1#alpha", "A:1#beta"}
+
+    contender = record | {"B:2": {"antimicrobial_class": "ANTIFUNGAL", "label": "alpha"}}
+    assert sfs.assign_slugs(contender, sfs.read_lockfile())["B:2"] != "alpha"
+
+
+def test_a_canary_does_not_unretire_identifiers_it_did_not_write(tmp_path, monkeypatch):
+    """`records` is the FULL built set even on a partial run — `--only` narrows
+    what is WRITTEN, not what is built. Un-retiring on the strength of the
+    in-memory set dropped every returning identifier from the ledger while
+    writing a PATHS.tsv row for just one, leaving the rest in neither file with
+    their published slugs reserved nowhere."""
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch, [("A:1", "ANTIBACTERIAL", "alpha")],
+                             [("A:2", "beta"), ("A:3", "gamma")])
+    records = {i: {"antimicrobial_class": "ANTIBACTERIAL"} for i in ("A:1", "A:2", "A:3")}
+    sfs.write_lockfile(records, {"A:1": "alpha", "A:2": "beta", "A:3": "gamma"}, only={"A:2"})
+
+    paths, retired = sfs.read_lockfile(), sfs.read_retired()
+    assert "A:2" in paths and "A:2" not in retired      # the one the canary wrote
+    assert "A:3" not in paths, "the canary must not write records it was not asked for"
+    assert "A:3" in retired, "and must not unreserve their slugs either"
+
+
+def test_a_rename_and_a_revert_do_not_wedge_the_gate(tmp_path, monkeypatch):
+    """The composite row is deliberately never revived — except when the
+    identifier takes its old slug back. A rename followed by a revert otherwise
+    leaves the ledger claiming a live URL is retired, which
+    test_retired_slugs_are_never_reissued rejects, with no code path able to
+    clear it: the gate stays red until someone hand-edits RETIRED.tsv."""
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch, [("A:1", "ANTIBACTERIAL", "erythromycin-a")])
+    record = {"A:1": {"antimicrobial_class": "ANTIBACTERIAL"}}
+
+    sfs.write_lockfile(record, {"A:1": "erythromycin"})
+    assert sfs.read_retired() == {"A:1#erythromycin-a": "erythromycin-a"}
+
+    sfs.write_lockfile(record, {"A:1": "erythromycin-a"})          # the curator reverts
+    live = set(sfs.read_lockfile().values())
+    assert not [k for k, v in sfs.read_retired().items() if v in live], \
+        "a slug a record currently holds must not also be listed as retired"
+    assert sfs.read_retired() == {"A:1#erythromycin": "erythromycin"}
