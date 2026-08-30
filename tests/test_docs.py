@@ -51,3 +51,12 @@ def test_the_readme_statistics_block_is_current(repo_root):
     result = subprocess.run([sys.executable, "scripts/check_docs.py", "--check"],
                             cwd=repo_root, capture_output=True, text=True)
     assert result.returncode == 0, result.stderr
+
+
+def test_the_source_queue_is_consistent_with_the_repository(repo_root):
+    """The queue ranks sources we might adopt. Left unchecked it drifts into
+    wishful thinking — a source marked ADOPTED that nothing reads, or a licence
+    left unverified under data the corpus redistributes."""
+    result = subprocess.run([sys.executable, "scripts/check_source_queue.py"],
+                            cwd=repo_root, capture_output=True, text=True)
+    assert result.returncode == 0, result.stderr

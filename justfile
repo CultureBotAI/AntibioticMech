@@ -77,6 +77,11 @@ verify-corpus *args:
 worklist *args:
     uv run python scripts/curation_worklist.py {{args}}
 
+# The prioritized data-source queue: what to adopt next, and what is still
+# unverified about it. `.claude/skills/source-queue` triages it.
+source-queue:
+    uv run python scripts/check_source_queue.py
+
 # Corpus report: records per class, structure coverage, source corroboration,
 # and the mechanism/resistance coverage that curation is filling in.
 report *args:

@@ -30,6 +30,11 @@ COMMANDS = [
         "Every committed inventory must retain its source metadata and integrity hash.",
     ),
     (
+        "source queue",
+        [sys.executable, "scripts/check_source_queue.py"],
+        "An ADOPTED source must be one the pipeline reads under verified redistribution terms.",
+    ),
+    (
         "tests",
         [sys.executable, "-m", "pytest", "-q"],
         "Tests cover harmonization rules and corpus-wide invariants per-record validation cannot see.",

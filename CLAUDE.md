@@ -30,6 +30,7 @@ just test              # unit and corpus-integrity tests
 just validate-all      # closed-schema validation of every record
 just verify-corpus     # prove data/antibiotics reproduces from its inputs
 just worklist          # the curation backlog, ranked
+just source-queue      # the ranked data-source queue and what is unverified in it
 just render            # regenerate the committed site under pages/
 just docs-stats        # refresh the generated README statistics block
 ```
@@ -90,6 +91,16 @@ refused, because it would delete records the run never built.
 **Treat extractor drift as evidence to inspect.** `data/raw/MANIFEST.yaml`
 records the sha256 of every upstream file and every emitted inventory.
 `just provenance-check` after any change to `data/raw/`.
+
+## Adopting a data source
+
+Candidates live in `curation/source_queue.tsv`, ranked by the corpus gap they
+close. Two rules the checker enforces, both of which exist because the corpus is
+CC0: a source cannot be ADOPTED while its redistribution terms are UNVERIFIED,
+and a source with RESTRICTED terms cannot be seeded — it can inform a curator
+and nothing more. Adoption is a pull request that adds the extractor path, the
+committed inventory and its manifest entry; editing the row alone makes
+`just source-queue` fail, which is intended. The `source-queue` skill triages.
 
 ## Semantic invariants
 

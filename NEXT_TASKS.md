@@ -1,7 +1,14 @@
 # NEXT_TASKS
 
 Backlog for AntibioticMech, newest thinking first. Written 2026-08-29, at the
-end of the scaffolding pass that produced the initial 2,603-record corpus.
+end of the scaffolding pass that produced the initial corpus.
+
+**Candidate data sources live in `curation/source_queue.tsv`**, ranked by the
+corpus gap each one closes, with its licence and structure completeness recorded
+beside it. `just source-queue` prints the top candidates and fails if the queue
+disagrees with what the pipeline actually reads. Triage it with the
+`source-queue` skill rather than by rewriting this file — the sources named in
+prose below are the reasoning, the queue is the list.
 
 ## Now
 
