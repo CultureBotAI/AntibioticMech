@@ -46,6 +46,19 @@ STATUS = {"CANDIDATE", "EVALUATING", "ADOPTED", "REJECTED", "BLOCKED"}
 EXTRA_GAPS = {"identity", "structures", "evidence", "classification", "mechanism_type"}
 
 
+# A section in conf/sources.yaml describes a SOURCE when it names one — it has a
+# `name`. The alternative, keying on `homepage`, silently excluded pubchem (which
+# has none) and had to be rescued by a hardcoded special case; any future source
+# section that omitted the key would have been dropped just as quietly, and a
+# check that silently stops checking is worse than no check.
+SOURCE_MARKER = "name"
+
+
+def source_sections(conf: dict) -> set[str]:
+    return {key for key, value in conf.items()
+            if isinstance(value, dict) and SOURCE_MARKER in value}
+
+
 def record_fields() -> set[str]:
     schema = yaml.safe_load(SCHEMA_PATH.read_text(encoding="utf-8"))
     return set(schema["classes"]["AntibioticRecord"]["attributes"])
@@ -64,8 +77,7 @@ def main() -> int:
         rows = list(reader)
 
     conf = yaml.safe_load(CONF_PATH.read_text(encoding="utf-8"))
-    pipeline_sources = {key for key in conf if isinstance(conf.get(key), dict)
-                        and "homepage" in conf[key] or key == "pubchem"}
+    pipeline_sources = source_sections(conf)
     allowed_gaps = record_fields() | EXTRA_GAPS
 
     problems: list[str] = []

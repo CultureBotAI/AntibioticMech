@@ -17,16 +17,26 @@ prose below are the reasoning, the queue is the list.
 
 ## Now
 
-- **Curate the first mechanism graphs.** 0 of 2,603 records carry a
+- **Curate the first mechanism graphs.** 0 of 2,923 records carry a
   `causal_graph`; that number is the point of the repository. Start with the 324
   records that already have CARD target or resistance evidence to build on —
   `just worklist --queue mechanism` ranks them by how much evidence is waiting.
-- **Seed `mode_of_action` from CARD drug classes where it is safe.** Several ARO
-  drug classes state the mechanism in their definition text (macrolides bind the
-  50S subunit; fluoroquinolones inhibit topoisomerase II). Extracting that per
-  class, with the ARO definition as the citation, would move ~1,100 records off
-  `UNKNOWN` — but only where the class definition really is a mechanism claim and
-  not a structural description. Needs a per-class review, not a regex.
+  No data source will close this column: a mechanism graph is authored from
+  primary literature with a citation per edge (see `curation/source_queue.tsv`,
+  `discovery-literature`).
+- **Seed `mode_of_action` from ChEBI's mechanism roles.** The top of the source
+  queue, and the cheapest close available: ChEBI already asserts mechanism-shaped
+  roles on 765 of the 2,623 ChEBI-sourced records through reviewed edges —
+  protein synthesis inhibitor, DNA synthesis inhibitor, sterol 14α-demethylase
+  inhibitor, dihydropteroate synthase inhibitor, topoisomerase, HIV
+  RT/integrase/protease, sialidase. Same source, same licence, same extraction
+  path. Needs a curated role→`ModeOfActionEnum` allowlist, not a regex: the same
+  role space also holds angiogenesis and platelet-aggregation inhibitors, which
+  are host-directed and irrelevant here.
+
+  A second pass could add ARO drug-class definitions as a citation source where
+  the definition really is a mechanism claim rather than a structural
+  description — but that is a per-class review, and the ChEBI roles come first.
 - **Ground the 250 minted records.** `just worklist --queue minted`. Most are
   CARD molecules with a PubChem structure and no ChEBI entry; some deserve a
   ChEBI term request.
@@ -43,8 +53,9 @@ prose below are the reasoning, the queue is the list.
 
 - **Find a resistance source for the antiviral records.** CARD covers bacterial
   and (increasingly) fungal resistance; it has nothing for viruses, so all 474
-  antiviral records carry an empty `resistance_mechanisms` while 279 antibacterial
-  records carry CARD determinants. The obvious candidates are the Stanford HIV
+  antiviral records carry an empty `resistance_mechanisms` while 220
+  antibacterial, 43 antifungal, 14 antimycobacterial and 2 antiprotozoal records
+  carry CARD determinants. The obvious candidates are the Stanford HIV
   Drug Resistance Database for HIV, and the literature for HBV/HSV/influenza —
   each would need the same treatment CARD got: a committed inventory, an explicit
   citation on every item, and a mechanism vocabulary that says what it means.

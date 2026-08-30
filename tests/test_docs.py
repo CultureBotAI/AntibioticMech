@@ -77,3 +77,31 @@ def test_the_source_queue_is_consistent_with_the_repository(repo_root):
     result = subprocess.run([sys.executable, "scripts/check_source_queue.py"],
                             cwd=repo_root, capture_output=True, text=True)
     assert result.returncode == 0, result.stderr
+
+
+def test_no_document_quotes_a_stale_record_count(repo_root):
+    """Figures drift here faster than prose does — the corpus went 2,603 to
+    2,469 to 2,923 inside one working session as a trust filter tightened and a
+    scope decision widened. A document asserting a record count that is no longer
+    true is the most common way this repository misleads a reader."""
+    import glob
+    import re
+
+    actual = len(glob.glob(str(repo_root / "data" / "antibiotics" / "*" / "*.yaml")))
+    if not actual:
+        import pytest
+        pytest.skip("no corpus")
+
+    pattern = re.compile(r"([\d,]{3,})\s+(?:of\s+the\s+)?records\b")
+    stale = []
+    for name in DOC_FILES + ["ATTRIBUTION.md"]:
+        path = repo_root / name
+        if not path.exists():
+            continue
+        for match in pattern.finditer(path.read_text(encoding="utf-8")):
+            value = int(match.group(1).replace(",", ""))
+            # A count is either the corpus total or a documented subset; only a
+            # claim about the whole corpus can be checked mechanically.
+            if 2000 < value < 10000 and value != actual:
+                stale.append(f"{name}: {match.group(0)!r} but the corpus holds {actual}")
+    assert stale == [], stale
