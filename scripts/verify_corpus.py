@@ -123,6 +123,16 @@ def main() -> int:
             # hand edit that flipped HOST_SHARED_TARGET to MICROBIAL_TARGET would
             # assert selectivity the sources never claimed — the exact failure
             # this field exists to prevent, committed through the field itself.
+            #
+            # WHAT THIS DOES AND DOES NOT CATCH. It catches a bare edit: flip
+            # linezolid's scope and leave the notes alone and this reports drift.
+            # It does NOT catch an edit that also claims the field — append one
+            # `CURATOR:` sentence and the whole block above is skipped, exit 0.
+            # That is the same escape hatch `mode_of_action` has, and it is
+            # deliberate: a curator's judgement outranks a ChEBI role. But it
+            # means the guarantee is "a hand edit that does not claim the field",
+            # not "a hand edit". A commit message on this branch said the latter,
+            # which was wrong — see #83.
             if (actual.get("mode_of_action_target_scope")
                     != want.get("mode_of_action_target_scope")):
                 drifted.append((path, "mode_of_action_target_scope"))
