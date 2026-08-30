@@ -1,0 +1,76 @@
+identifier: CHEBI:135732
+label: sofalcone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of chalcones that is benzene in which the hydrogens
+  at positions 1,2 and 5 are replaced by carboxymethoxy, (1E)-1-{4-[(3-methylbut-2-en-1-yl)oxy]phenyl}-3-oxoprop-1-en-3-yl,
+  and (3-methylbut-2-en-1-yl)oxy groups, respectively. It is a gastrointestinal drug
+  currently used for treatment of gastritis and gastric ulcers in Japan and South
+  Korea.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Lavin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Solon
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Tofalcone
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: sofalcona
+  synonym_type: INN
+  source: chebi
+- synonym_text: sofalconum
+  synonym_type: INN
+  source: chebi
+- synonym_text: '{5-[(3-methylbut-2-en-1-yl)oxy]-2-[(2E)-3-{4-[(3-methylbut-2-en-1-yl)oxy]phenyl}prop-2-enoyl]phenoxy}acetic
+    acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-[5-[(3-methyl-2-buten-1-yl)oxy]-2-[3-[4-[(3-methyl-2-buten-1-yl)oxy]phenyl]-1-oxo-2-propen-1-yl]phenoxy]-acetic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SU-88
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23086
+- CHEBI:25384
+- CHEBI:35618
+xrefs:
+- cas:153175-87-2
+- cas:64506-49-6
+- drugbank:DB05197
+- drugcentral:2456
+- hmdb:HMDB0042013
+- kegg.drug:D01956
+- patent:CN1733682
+- reaxys:2191482
+- wikipedia.en:Sofalcone
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)=CCOc1ccc(/C=C/C(=O)c2ccc(OCC=C(C)C)cc2OCC(=O)O)cc1
+  standard_inchi: InChI=1S/C27H30O6/c1-19(2)13-15-31-22-8-5-21(6-9-22)7-12-25(28)24-11-10-23(32-16-14-20(3)4)17-26(24)33-18-27(29)30/h5-14,17H,15-16,18H2,1-4H3,(H,29,30)/b12-7+
+  standard_inchi_key: GFWRVVCDTLRWPK-KPKJPENVSA-N
+  molecular_formula: C27H30O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 450.531
+  monoisotopic_mass: 450.20424
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:135732
+  source_label: sofalcone
+  minted_identifier: antibioticmech:chebi-de5a4ed09a
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

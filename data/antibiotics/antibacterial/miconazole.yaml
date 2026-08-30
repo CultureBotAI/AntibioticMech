@@ -1,0 +1,96 @@
+identifier: antibioticmech:aro-11ab0a98bf
+label: miconazole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Miconazole is a type of imidazole antibiotic, particularly antifungal.
+  It is used to treat oral and vaginal yeast infections, as well as mucosal thrush.
+definition_source: PMID:4919243
+parent_compounds:
+- ARO:3007500
+xrefs:
+- ARO:3007518
+- cas:22916-47-8
+- CHEBI:6923
+- chembl:CHEMBL91
+- pubchem.compound:4189
+structural_class: imidazole antibiotic
+structural_class_id: ARO:3007500
+chemical_structure:
+  smiles: C1=CC(=C(C=C1Cl)Cl)COC(CN2C=CN=C2)C3=C(C=C(C=C3)Cl)Cl
+  standard_inchi: InChI=1S/C18H14Cl4N2O/c19-13-2-1-12(16(21)7-13)10-25-18(9-24-6-5-23-11-24)15-4-3-14(20)8-17(15)22/h1-8,11,18H,9-10H2
+  standard_inchi_key: BYBLEWFAAKGYCD-UHFFFAOYSA-N
+  molecular_formula: C18H14Cl4N2O
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 416.1
+  monoisotopic_mass: 413.986024
+source_concepts:
+- source: ARO
+  source_id: ARO:3007518
+  source_label: miconazole
+  minted_identifier: antibioticmech:aro-11ab0a98bf
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007553
+  label: Candida albicans CDR1 with mutations conferring resistance to antifungals
+  evidence:
+  - reference: ARO:3007553
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007518 (miconazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009251
+  label: Trychophyton rubrum Mdr1 with mutations associated with resistance to miconazole
+  evidence:
+  - reference: ARO:3009251
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007518 (miconazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009258
+  label: Trychophyton rubrum Mdr3 with mutations associated with resistance to miconazole
+  evidence:
+  - reference: ARO:3009258
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007518 (miconazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009264
+  label: Trychophyton rubrum Mfs1 with mutations conferring resistance to miconazole
+  evidence:
+  - reference: ARO:3009264
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007518 (miconazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009425
+  label: fungal MDR
+  evidence:
+  - reference: ARO:3009425
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007518 (miconazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009446
+  label: Candida tropicalis MDR1 with mutations conferring resistance to voriconazole
+  evidence:
+  - reference: ARO:3009446
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007518 (miconazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009461
+  label: Trichophyton rubrum mfs1 with mutations conferring resistance to miconazole
+  evidence:
+  - reference: ARO:3009461
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007518 (miconazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009501
+  label: Aspergillus fumigatus Cyp51a with mutations conferring resistance to miconazole
+  evidence:
+  - reference: ARO:3009501
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007518 (miconazole);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

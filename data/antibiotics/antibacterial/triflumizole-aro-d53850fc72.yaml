@@ -1,0 +1,48 @@
+identifier: antibioticmech:aro-d53850fc72
+label: triflumizole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: 'This compound inhibits sterol 14alpha-demethylase and is used as a fungicide
+  for the control of powdery mildew, scab and other diseases on a variety of crops.
+  It is a member of the following groups: monochlorobenzenes, imidazoles, (trifluoromethyl)benzenes,
+  carboxamidine, ether and conazoles.'
+definition_source: PMID:10919801
+parent_compounds:
+- ARO:3007500
+xrefs:
+- ARO:3009169
+- cas:68694-11-1
+- chembl:CHEMBL463781
+- pubchem.compound:91699
+structural_class: imidazole antibiotic
+structural_class_id: ARO:3007500
+chemical_structure:
+  smiles: CCCOCC(=NC1=C(C=C(C=C1)Cl)C(F)(F)F)N2C=CN=C2
+  standard_inchi: InChI=1S/C15H15ClF3N3O/c1-2-7-23-9-14(22-6-5-20-10-22)21-13-4-3-11(16)8-12(13)15(17,18)19/h3-6,8,10H,2,7,9H2,1H3
+  standard_inchi_key: HSMVPDGQOIQYSR-UHFFFAOYSA-N
+  molecular_formula: C15H15ClF3N3O
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 345.75
+  monoisotopic_mass: 345.0855743
+source_concepts:
+- source: ARO
+  source_id: ARO:3009169
+  source_label: triflumizole
+  minted_identifier: antibioticmech:aro-d53850fc72
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009404
+  label: Zymoseptoria tritici Cyp51 with mutations conferring resistance to triflumazole
+  evidence:
+  - reference: ARO:3009404
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009169 (triflumizole);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

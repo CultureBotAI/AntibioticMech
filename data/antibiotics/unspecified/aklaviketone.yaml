@@ -1,0 +1,52 @@
+identifier: CHEBI:75244
+label: aklaviketone
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxylic ester that is the methyl ester of (1R,2R)-2-ethyl-2,5,7-trihydroxy-4,6,11-trioxo-1,2,3,4,6,11-hexahydrotetracene-1-carboxylic
+  acid.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (1R,2R)-2-ethyl-2,5,7-trihydroxy-4,6,11-trioxo-1,2,3,4,6,11-hexahydrotetracene-1-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-383-Y
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:25830
+- CHEBI:26195
+- CHEBI:26878
+- CHEBI:35294
+- CHEBI:48132
+- CHEBI:51286
+xrefs:
+- cas:116235-59-7
+- kegg.compound:C12423
+- knapsack:C00017921
+- reaxys:4276730
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@@]1(O)CC(=O)c2c(cc3c(c2O)C(=O)c2c(O)cccc2C3=O)[C@H]1C(=O)OC
+  standard_inchi: InChI=1S/C22H18O8/c1-3-22(29)8-13(24)15-10(17(22)21(28)30-2)7-11-16(20(15)27)19(26)14-9(18(11)25)5-4-6-12(14)23/h4-7,17,23,27,29H,3,8H2,1-2H3/t17-,22+/m0/s1
+  standard_inchi_key: MHAXMIHGEZOCTQ-HTAPYJJXSA-N
+  molecular_formula: C22H18O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 410.378
+  monoisotopic_mass: 410.10017
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75244
+  source_label: aklaviketone
+  minted_identifier: antibioticmech:chebi-37e2e4b633
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

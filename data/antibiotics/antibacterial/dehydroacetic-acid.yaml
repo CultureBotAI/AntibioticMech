@@ -1,0 +1,53 @@
+identifier: CHEBI:137426
+label: dehydroacetic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyran-2,4-dione substituted at position 3 by an acetyl group and at
+  position 6 by a methyl group. A fungicide and bactericide it is used primarily in
+  processed fruit and vegetables.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-acetyl-6-methyl-2H-pyran-2,4(3H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Biocide 470F
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methylacetopyronone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:137428
+- CHEBI:17087
+xrefs:
+- cas:520-45-6
+- patent:AU2004287448
+- patent:US3849579
+- wikipedia.en:Dehydroacetic_acid
+activity_roles:
+- CHEBI:24127
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(=O)C1C(=O)C=C(C)OC1=O
+  standard_inchi: InChI=1S/C8H8O4/c1-4-3-6(10)7(5(2)9)8(11)12-4/h3,7H,1-2H3
+  standard_inchi_key: PGRHXDWITVMQBC-UHFFFAOYSA-N
+  molecular_formula: C8H8O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 168.148
+  monoisotopic_mass: 168.04226
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:137426
+  source_label: dehydroacetic acid
+  minted_identifier: antibioticmech:chebi-d01553785a
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

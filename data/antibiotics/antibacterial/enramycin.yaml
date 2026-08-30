@@ -1,0 +1,40 @@
+identifier: antibioticmech:aro-bd55fbe0ca
+label: enramycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Enramycin is a polypeptide antibiotic commonly used as a feed additive
+  for livestock. It is produced by species of the Streptomyces genus and is used to
+  prevent necrotic enteritis in poultry and pigs. Enramycin disrupts cell wall synthesis
+  by inhibiting MurG.
+definition_source: PMID:35841645
+parent_compounds:
+- ARO:3009656
+xrefs:
+- ARO:3007197
+- chembl:CHEMBL2109091
+- pubchem.compound:56842192
+structural_class: ribosomally synthesized and post-translationally modified peptide
+  antibiotics
+structural_class_id: ARO:3009656
+chemical_structure:
+  smiles: CCC(C)CCCC/C=C/C=C/C(=O)NC(CC(=O)O)C(=O)NC1C(OC(=O)C(NC(=O)C(NC(=O)C(NC(=O)NC(=O)C(NC(=O)C(NC(=O)C(NC(=O)C(NC(=O)C(NC(=O)C(NC(=O)C(NC(=O)C(NC(=O)C(NC(=O)N(C(=O)C(NC1=O)C2=CC=C(C=C2)O)CCCCN)C(C)O)C3=CC=C(C=C3)O)C4=CC=C(C=C4)O)C(C)O)CCCNC(=O)N)CC5CNC(=N5)N)C6=CC=C(C=C6)O)CO)C7=CC(=C(C(=C7)Cl)O)Cl)CC8CNC(=N8)N)C)C9=CC=C(C=C9)O)C.O
+  standard_inchi: InChI=1S/C107H138Cl2N26O31.H2O/c1-7-51(2)17-12-10-8-9-11-13-19-76(144)120-74(47-77(145)146)92(152)126-80-55(6)166-102(162)86(60-28-38-68(143)39-29-60)132-88(148)52(3)117-90(150)73(46-63-49-116-104(112)119-63)124-106(164)134-100(160)84(61-43-69(108)87(147)70(109)44-61)128-93(153)75(50-136)123-97(157)81(56-20-30-64(139)31-21-56)127-91(151)72(45-62-48-115-103(111)118-62)122-89(149)71(18-16-41-114-105(113)163)121-94(154)78(53(4)137)125-98(158)82(57-22-32-65(140)33-23-57)130-99(159)83(58-24-34-66(141)35-25-58)129-95(155)79(54(5)138)133-107(165)135(42-15-14-40-110)101(161)85(131-96(80)156)59-26-36-67(142)37-27-59;/h9,11,13,19-39,43-44,51-55,62-63,71-75,78-86,136-143,147H,7-8,10,12,14-18,40-42,45-50,110H2,1-6H3,(H,117,150)(H,120,144)(H,121,154)(H,122,149)(H,123,157)(H,125,158)(H,126,152)(H,127,151)(H,128,153)(H,129,155)(H,130,159)(H,131,156)(H,132,148)(H,133,165)(H,145,146)(H3,111,115,118)(H3,112,116,119)(H3,113,114,163)(H2,124,134,160,164);1H2/b11-9+,19-13+;
+  standard_inchi_key: NJCUSQKMYNTYOW-MWUYRYRWSA-N
+  molecular_formula: C107H140Cl2N26O32
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 2373.3
+  monoisotopic_mass: 2370.9504018
+source_concepts:
+- source: ARO
+  source_id: ARO:3007197
+  source_label: enramycin
+  minted_identifier: antibioticmech:aro-bd55fbe0ca
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

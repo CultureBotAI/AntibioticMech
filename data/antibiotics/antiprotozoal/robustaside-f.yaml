@@ -1,0 +1,45 @@
+identifier: CHEBI:70144
+label: robustaside F
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A β-D-glucoside in which the anomeric position is substituted by a 4-hydroxyphenoxy
+  residue and the positions 2 and 6 are substituted by [(2Z)-3-(2-hydroxy-5-methoxyphenyl)prop-2-enoyl]oxy
+  residues. Isolated from Grevillea, it exhibits antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-hydroxyphenyl 2,6-bis-O-[(2Z)-3-(2-hydroxy-5-methoxyphenyl)prop-2-enoyl]-β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22798
+- CHEBI:26195
+- CHEBI:35618
+- CHEBI:51702
+- CHEBI:63367
+xrefs:
+- reaxys:21220924
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: COc1ccc(O)c(/C=C\C(=O)OC[C@H]2O[C@@H](Oc3ccc(O)cc3)[C@H](OC(=O)/C=C\c3cc(OC)ccc3O)[C@@H](O)[C@@H]2O)c1
+  standard_inchi: InChI=1S/C32H32O13/c1-40-22-9-11-24(34)18(15-22)3-13-27(36)42-17-26-29(38)30(39)31(32(44-26)43-21-7-5-20(33)6-8-21)45-28(37)14-4-19-16-23(41-2)10-12-25(19)35/h3-16,26,29-35,38-39H,17H2,1-2H3/b13-3-,14-4-/t26-,29-,30+,31-,32-/m1/s1
+  standard_inchi_key: VZMAYTGBKKDAOI-KNPJAZBNSA-N
+  molecular_formula: C32H32O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 624.595
+  monoisotopic_mass: 624.18429
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70144
+  source_label: robustaside F
+  minted_identifier: antibioticmech:chebi-bcfa6e71b0
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

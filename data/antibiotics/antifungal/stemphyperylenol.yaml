@@ -1,0 +1,46 @@
+identifier: CHEBI:141330
+label: stemphyperylenol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic polycyclic compound that is 1,2,6b,7,8,12b-hexahydroperylene-3,9-dione
+  which is substituted at positions 1, 4, 7, and 10 by hydroxy groups (the all-S isomer).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,6bS,7S,12bS)-1,4,7,10-tetrahydroxy-1,2,6b,7,8,12b-hexahydroperylene-3,9-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-stemphyperylenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:35681
+- CHEBI:51958
+- CHEBI:76224
+xrefs:
+- cas:102694-33-7
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@]12c3ccc(O)c4c3[C@]([H])(c3ccc(O)c(c31)C(=O)C[C@@H]2O)[C@@H](O)CC4=O'
+  standard_inchi: InChI=1S/C20H16O6/c21-9-3-1-7-15-11(23)5-14(26)20-10(22)4-2-8(18(15)20)16-12(24)6-13(25)19(9)17(7)16/h1-4,11-12,15-16,21-24H,5-6H2/t11-,12-,15+,16+/m0/s1
+  standard_inchi_key: MCWOXLPZYFOWRX-YXAMBPQSSA-N
+  molecular_formula: C20H16O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 352.342
+  monoisotopic_mass: 352.09469
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141330
+  source_label: stemphyperylenol
+  minted_identifier: antibioticmech:chebi-d5aaf60cd7
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

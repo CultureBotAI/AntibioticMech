@@ -1,0 +1,53 @@
+identifier: CHEBI:72669
+label: (+)-phytocassane D
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A phytocassane that is (+)-phytocassane A in which the hydroxy group at
+  position 2 has been oxidised to the corresponding ketone, while the keto group at
+  position 3 has been reduced to give the corresponding 3α hydroxy group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3α-hydroxy-14β-methyl-13-vinyl-5β,8α,9β,10α-podocarp-12-ene-2,11-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,4aR,4bR,8S,8aR,10aS)-2-hydroxy-1,1,4a,8-tetramethyl-7-vinyl-1,4a,4b,8,8a,9,10,10a-octahydrophenanthrene-3,5(2H,4H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,4aR,4bR,8S,8aR,10aS)-7-ethenyl-2-hydroxy-1,1,4a,8-tetramethyl-1,4a,4b,8,8a,9,10,10a-octahydrophenanthrene-3,5(2H,4H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3α,5β,8α,9β,10α,14β)-3-hydroxy-14-methyl-13-vinylpodocarp-12-ene-2,11-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: phytocassane D
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139395
+- CHEBI:2468
+- CHEBI:46640
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12C(=O)C=C(C=C)[C@@H](C)[C@@]1([H])CC[C@]1([H])C(C)(C)[C@H](O)C(=O)C[C@@]21C'
+  standard_inchi: InChI=1S/C20H28O3/c1-6-12-9-14(21)17-13(11(12)2)7-8-16-19(3,4)18(23)15(22)10-20(16,17)5/h6,9,11,13,16-18,23H,1,7-8,10H2,2-5H3/t11-,13-,16-,17+,18-,20-/m1/s1
+  standard_inchi_key: DGUIKAVSMBLZCL-MKSLXUROSA-N
+  molecular_formula: C20H28O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 316.441
+  monoisotopic_mass: 316.20384
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:72669
+  source_label: (+)-phytocassane D
+  minted_identifier: antibioticmech:chebi-9739abf91a
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

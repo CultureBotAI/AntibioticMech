@@ -1,0 +1,41 @@
+identifier: CHEBI:66001
+label: hamacanthin B
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An optically active form of hamacanthin A having S-configuration. It is
+  an antifungal drug isolated from deep water marine sponge Hamacantha sp.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5S)-3,5-bis(6-bromo-1H-indol-3-yl)-5,6-dihydro-2(1H)-pyrazinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:66000
+xrefs:
+- cas:160098-93-1
+- reaxys:9088915
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: O=C1NC[C@H](c2cnc3cc(Br)ccc23)N=C1c1cnc2cc(Br)ccc12
+  standard_inchi: InChI=1S/C20H14Br2N4O/c21-10-1-3-12-14(7-23-16(12)5-10)18-9-25-20(27)19(26-18)15-8-24-17-6-11(22)2-4-13(15)17/h1-8,18,23-24H,9H2,(H,25,27)/t18-/m1/s1
+  standard_inchi_key: MYXLDFYXMNSXDR-GOSISDBHSA-N
+  molecular_formula: C20H14Br2N4O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 486.167
+  monoisotopic_mass: 483.95344
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66001
+  source_label: hamacanthin B
+  minted_identifier: antibioticmech:chebi-86b7447140
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

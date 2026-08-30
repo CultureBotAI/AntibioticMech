@@ -1,0 +1,375 @@
+identifier: CHEBI:2676
+label: amoxicillin
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin in which the substituent at position 6 of the penam ring
+  is a 2-amino-2-(4-hydroxyphenyl)acetamido group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: AMPC
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Amolin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Amopenixin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Clamoxyl
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Moxal
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: amoxicilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: amoxicilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: amoxicillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-[(2R)-2-amino-2-(4-hydroxyphenyl)acetamido]-2,2-dimethylpenam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-{[(2R)-2-amino-2-(4-hydroxyphenyl)acetyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(p-hydroxy-α-aminophenylacetamido)penicillanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AX
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Amoxicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Amoxicillin anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: amoxycilin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: amoxycillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-hydroxyampicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α-amino-p-hydroxybenzylpenicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AMX
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Amoxicilina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Amoxicilline
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Amoxicillinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Amoxycillin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: D-Amoxicillin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- CHEBI:88187
+- ARO:3000008
+xrefs:
+- ARO:0000064
+- cas:26787-78-0
+- drugbank:DB01060
+- drugcentral:192
+- hmdb:HMDB0015193
+- kegg.compound:C06827
+- kegg.drug:D07452
+- lincs.smallmolecule:LSM-5654
+- patent:DE1942693
+- patent:GB1241844
+- patent:GB978178
+- patent:US3192198
+- reaxys:4274654
+- vsdb:1741
+- wikipedia.en:Amoxicillin
+- chembl:CHEMBL1082
+- pubchem.compound:33613
+activity_roles:
+- CHEBI:33231
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
+- CHEBI:38068
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)[C@H](N)c1ccc(O)cc1'
+  standard_inchi: InChI=1S/C16H19N3O5S/c1-16(2)11(15(23)24)19-13(22)10(14(19)25-16)18-12(21)9(17)7-3-5-8(20)6-4-7/h3-6,9-11,14,20H,17H2,1-2H3,(H,18,21)(H,23,24)/t9-,10-,11+,14-/m1/s1
+  standard_inchi_key: LSQZJLSUYDQPKJ-NJBDSQKTSA-N
+  molecular_formula: C16H19N3O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 365.411
+  monoisotopic_mass: 365.10454
+source_concepts:
+- source: ARO
+  source_id: ARO:0000064
+  source_label: amoxicillin
+  minted_identifier: antibioticmech:aro-fbf6a80a9e
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  - CHEBI:38068
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:2676
+  source_label: amoxicillin
+  minted_identifier: antibioticmech:chebi-fa5de6d3c3
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  - CHEBI:38068
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000843
+  label: MUS-1
+  evidence:
+  - reference: ARO:3000843
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000844
+  label: TUS-1
+  evidence:
+  - reference: ARO:3000844
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000873
+  label: TEM-1
+  evidence:
+  - reference: ARO:3000873
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000900
+  label: TEM-30
+  evidence:
+  - reference: ARO:3000900
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000966
+  label: TEM-103
+  evidence:
+  - reference: ARO:3000966
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001396
+  label: OXA-1
+  evidence:
+  - reference: ARO:3001396
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001397
+  label: OXA-2
+  evidence:
+  - reference: ARO:3001397
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003041
+  label: Streptococcus pneumoniae PBP1a conferring resistance to amoxicillin
+  evidence:
+  - reference: ARO:3003041
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003042
+  label: Streptococcus pneumoniae PBP2b conferring resistance to amoxicillin
+  evidence:
+  - reference: ARO:3003042
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003043
+  label: Streptococcus pneumoniae PBP2x conferring resistance to amoxicillin
+  evidence:
+  - reference: ARO:3003043
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003561
+  label: SED-1
+  evidence:
+  - reference: ARO:3003561
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003562
+  label: blaF
+  evidence:
+  - reference: ARO:3003562
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003842
+  label: MUS-2
+  evidence:
+  - reference: ARO:3003842
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004124
+  label: Moraxella catarrhalis M35
+  evidence:
+  - reference: ARO:3004124
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004359
+  label: ACI-1
+  evidence:
+  - reference: ARO:3004359
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004825
+  label: LAP-1
+  evidence:
+  - reference: ARO:3004825
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004826
+  label: LAP-2
+  evidence:
+  - reference: ARO:3004826
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004856
+  label: SCO-1
+  evidence:
+  - reference: ARO:3004856
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005015
+  label: VMB-1
+  evidence:
+  - reference: ARO:3005015
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005035
+  label: YRC-1
+  evidence:
+  - reference: ARO:3005035
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007057
+  label: Helicobacter pylori pbp3 conferring resistance to amoxicillin
+  evidence:
+  - reference: ARO:3007057
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007058
+  label: Helicobacter pylori pbp2 mutants conferring resistance to amoxicillin
+  evidence:
+  - reference: ARO:3007058
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007060
+  label: Helicobacter pylori pbp1 mutants conferring resistance to amoxicillin
+  evidence:
+  - reference: ARO:3007060
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007085
+  label: PRC-1
+  evidence:
+  - reference: ARO:3007085
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007180
+  label: MAB
+  evidence:
+  - reference: ARO:3007180
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007182
+  label: blaC
+  evidence:
+  - reference: ARO:3007182
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007206
+  label: KBL-1
+  evidence:
+  - reference: ARO:3007206
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007442
+  label: SSA
+  evidence:
+  - reference: ARO:3007442
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007531
+  label: Streptococcus pyogenes PBP2x conferring resistance to beta-lactam antibiotics
+  evidence:
+  - reference: ARO:3007531
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007648
+  label: PSZ-1
+  evidence:
+  - reference: ARO:3007648
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007694
+  label: AMZ-1
+  evidence:
+  - reference: ARO:3007694
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000064 (amoxicillin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000064 (amoxicillin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

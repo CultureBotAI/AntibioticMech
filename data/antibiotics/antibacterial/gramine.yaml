@@ -1,0 +1,84 @@
+identifier: CHEBI:28948
+label: gramine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aminoalkylindole that is indole carrying a dimethylaminomethyl substituent
+  at postion 3.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-(1H-indol-3-yl)-N,N-dimethylmethanamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1H-indol-3-ylmethyl)dimethylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(Dimethylaminomethyl)indole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(N,N-Dimethylaminomethyl)indole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-[(Dimethylamino)methyl]indole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Donaxin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Donaxine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Gramin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Gramine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Indol-3-ylmethyldimethylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N-Dimethyl-1H-indole-3-methanamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: beta-Dimethylaminomethylindole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-dimethylaminomethylindole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38631
+- CHEBI:38958
+- CHEBI:50996
+xrefs:
+- cas:87-52-5
+- hmdb:HMDB0035762
+- kegg.compound:C08304
+- knapsack:C00001411
+- lincs.smallmolecule:LSM-6572
+- metacyc.compound:CPD-8915
+- reaxys:140521
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CN(C)Cc1cnc2ccccc12
+  standard_inchi: InChI=1S/C11H14N2/c1-13(2)8-9-7-12-11-6-4-3-5-10(9)11/h3-7,12H,8H2,1-2H3
+  standard_inchi_key: OCDGBSUVYYVKQZ-UHFFFAOYSA-N
+  molecular_formula: C11H14N2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 174.247
+  monoisotopic_mass: 174.1157
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28948
+  source_label: gramine
+  minted_identifier: antibioticmech:chebi-b52848723e
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

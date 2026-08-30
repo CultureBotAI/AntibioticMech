@@ -1,0 +1,52 @@
+identifier: CHEBI:51460
+label: albaflavenone
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbotricyclic compound that is (+)-epi-isozizaene in which the hydrogens
+  at position 5 have been replaced by an oxo group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S,3aR,6S)-3,7,7,8-tetramethyl-2,3,4,5,6,7-hexahydro-1H-3a,6-methanoazulen-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-epi-isozizaen-5-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1R,2S,8S)-2,6,7,7-tetramethyltricyclo[6.2.1.01,5]undec-5-en-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26658
+- CHEBI:36130
+- CHEBI:38032
+- CHEBI:49319
+- CHEBI:51689
+xrefs:
+- kegg.compound:C17954
+- knapsack:C00016952
+- metacyc.compound:CPD-9962
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12CC[C@]3(C1)C(=C(C)C2(C)C)C(=O)C[C@@H]3C'
+  standard_inchi: InChI=1S/C15H22O/c1-9-7-12(16)13-10(2)14(3,4)11-5-6-15(9,13)8-11/h9,11H,5-8H2,1-4H3/t9-,11-,15+/m0/s1
+  standard_inchi_key: SHUZZAXJEJPUGA-CCUNJIBTSA-N
+  molecular_formula: C15H22O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 218.34
+  monoisotopic_mass: 218.16707
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:51460
+  source_label: albaflavenone
+  minted_identifier: antibioticmech:chebi-ff6e76757e
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,55 @@
+identifier: CHEBI:65887
+label: eurycomanone
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quassinoid isolated from Eurycoma longifolia and has been shown to exhibit
+  antineoplastic and antimalarial activties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1β,11β,12α,15β)-1,11,12,14,15-pentahydroxy-11,20-epoxypicrasa-3,13(21)-diene-2,16-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pasakbumin-A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Picrasa-3,13(21)-diene-2,16-dione,11,2O-epoxy-1,11,12,14,15-pentahydroxy-,(1beta,11beta,12alpha,15beta)-,dihydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18946
+- CHEBI:2468
+- CHEBI:26878
+- CHEBI:35681
+- CHEBI:37205
+- CHEBI:37407
+- CHEBI:38164
+- CHEBI:51689
+- CHEBI:72485
+xrefs:
+- cas:84633-29-4
+- reaxys:3635742
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]12[C@@]3(C)[C@H](O)C(=O)C=C(C)[C@]3([H])C[C@@]3([H])OC(=O)[C@H](O)[C@@]4(O)C(=C)[C@@H](O)[C@@]1(O)OC[C@]234'
+  standard_inchi: InChI=1S/C20H24O9/c1-7-4-10(21)13(23)17(3)9(7)5-11-18-6-28-20(27,16(17)18)12(22)8(2)19(18,26)14(24)15(25)29-11/h4,9,11-14,16,22-24,26-27H,2,5-6H2,1,3H3/t9-,11+,12+,13+,14-,16+,17+,18+,19-,20+/m0/s1
+  standard_inchi_key: UCUWZJWAQQRCOR-AIMGAIMTSA-N
+  molecular_formula: C20H24O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 408.403
+  monoisotopic_mass: 408.14203
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65887
+  source_label: eurycomanone
+  minted_identifier: antibioticmech:chebi-2083462703
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

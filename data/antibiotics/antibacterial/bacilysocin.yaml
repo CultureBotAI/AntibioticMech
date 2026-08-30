@@ -1,0 +1,54 @@
+identifier: CHEBI:71621
+label: bacilysocin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxylic ester resulting from the formal condensation of the carboxylic
+  acid group of 12-methyltetradecanoic acide with one of the primary alcoholic hydroxy
+  groups of glycerophosphoglycerol. An antibiotic obtained from Bacillus subtilis
+  168, it has particular activity against certain fungi. The stereochemistries of
+  the hydroxy groups at positions C-2 and C-2' and the methyl group at position C-12
+  have not been determined.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-{[(2,3-dihydroxypropoxy)(hydroxy)phosphoryl]oxy}-2-hydroxypropyl
+    12-methyltetradecanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(12-methyltetradecanoyl)-3-phosphoglyceroglycerol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:16961
+- CHEBI:24360
+- CHEBI:33308
+xrefs:
+- reaxys:10044462
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: CCC(C)CCCCCCCCCCC(=O)OCC(O)COP(=O)(O)OCC(O)CO
+  standard_inchi: InChI=1S/C21H43O9P/c1-3-18(2)12-10-8-6-4-5-7-9-11-13-21(25)28-15-20(24)17-30-31(26,27)29-16-19(23)14-22/h18-20,22-24H,3-17H2,1-2H3,(H,26,27)
+  standard_inchi_key: DIGHTWUQPWHBPG-UHFFFAOYSA-N
+  molecular_formula: C21H43O9P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 470.54
+  monoisotopic_mass: 470.26447
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:71621
+  source_label: bacilysocin
+  minted_identifier: antibioticmech:chebi-5f1147e905
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

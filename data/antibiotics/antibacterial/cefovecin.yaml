@@ -1,0 +1,38 @@
+identifier: antibioticmech:aro-c73757ed91
+label: cefovecin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Cefovecin is a cephalosporin antibiotic used for the treatment of skin
+  infections in cats and dogs. It is used for the treatment of skin infections caused
+  by Pasturella multocida in cats, and Staphylococcus in dogs.
+definition_source: PMID:37107106
+parent_compounds:
+- ARO:0000032
+xrefs:
+- ARO:3007458
+- chembl:CHEMBL2110625
+- pubchem.compound:6336480
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: CO/N=C(/C1=CSC(=N1)N)\C(=O)N[C@H]2[C@@H]3N(C2=O)C(=C(CS3)[C@@H]4CCCO4)C(=O)O
+  standard_inchi: InChI=1S/C17H19N5O6S2/c1-27-21-10(8-6-30-17(18)19-8)13(23)20-11-14(24)22-12(16(25)26)7(5-29-15(11)22)9-3-2-4-28-9/h6,9,11,15H,2-5H2,1H3,(H2,18,19)(H,20,23)(H,25,26)/b21-10-/t9-,11+,15+/m0/s1
+  standard_inchi_key: ZJGQFXVQDVCVOK-QFKLAVHZSA-N
+  molecular_formula: C17H19N5O6S2
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 453.5
+  monoisotopic_mass: 453.07767569
+source_concepts:
+- source: ARO
+  source_id: ARO:3007458
+  source_label: cefovecin
+  minted_identifier: antibioticmech:aro-c73757ed91
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,49 @@
+identifier: CHEBI:65931
+label: fumimycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 1-benzofurans that is 1-benzofuran-2(3H)-one
+  substituted by a propenyl group at position 4, hydroxy groups at positions 5 and
+  6, methyl group at position 3 and a [(2E)-3-carboxyprop-2-enoyl]nitrilo group at
+  position 3. Isolated from the fermentation broth of Aspergillus fumisynnematus F746,
+  it exhibits antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-4-({(3R)-5,6-dihydroxy-3-methyl-2-oxo-4-[(1E)-prop-1-en-1-yl]-2,3-dihydro-1-benzofuran-3-yl}amino)-4-oxobut-2-enoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:26195
+- CHEBI:35735
+- CHEBI:37581
+- CHEBI:38830
+xrefs:
+- chemspider:20557857
+- reaxys:21037523
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C/C=C/c1c(O)c(O)cc2c1[C@@](C)(NC(=O)/C=C/C(=O)O)C(=O)O2
+  standard_inchi: InChI=1S/C16H15NO7/c1-3-4-8-13-10(7-9(18)14(8)22)24-15(23)16(13,2)17-11(19)5-6-12(20)21/h3-7,18,22H,1-2H3,(H,17,19)(H,20,21)/b4-3+,6-5+/t16-/m1/s1
+  standard_inchi_key: QWMZGLCXYLPQAZ-CJWQODIFSA-N
+  molecular_formula: C16H15NO7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 333.296
+  monoisotopic_mass: 333.08485
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65931
+  source_label: fumimycin
+  minted_identifier: antibioticmech:chebi-6909500009
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

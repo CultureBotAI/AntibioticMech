@@ -1,0 +1,43 @@
+identifier: CHEBI:69091
+label: dihydrolicoisoflavone A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 7-hydroxyisoflavones that is the 2,3-dihydro
+  derivative of licoisoflavone A. It has been isolated from Glycyrrhiza uralensis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-[2,4-dihydroxy-3-(3-methylbut-2-en-1-yl)phenyl]-5,7-dihydroxy-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dihydrolicoisoflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:55465
+xrefs:
+- reaxys:10723724
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)=CCc1c(O)ccc(C2COc3cc(O)cc(O)c3C2=O)c1O
+  standard_inchi: InChI=1S/C20H20O6/c1-10(2)3-4-13-15(22)6-5-12(19(13)24)14-9-26-17-8-11(21)7-16(23)18(17)20(14)25/h3,5-8,14,21-24H,4,9H2,1-2H3
+  standard_inchi_key: BAEYWOSUJSUYFI-UHFFFAOYSA-N
+  molecular_formula: C20H20O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 356.374
+  monoisotopic_mass: 356.12599
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69091
+  source_label: dihydrolicoisoflavone A
+  minted_identifier: antibioticmech:chebi-f507506fac
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

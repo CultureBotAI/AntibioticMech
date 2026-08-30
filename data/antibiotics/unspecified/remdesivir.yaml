@@ -1,0 +1,74 @@
+identifier: CHEBI:145994
+label: remdesivir
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxylic ester resulting from the formal condensation of the carboxy
+  group of N-[(S)-{[(2R,3S,4R,5R)-5-(4-aminopyrrolo[2,1-f][1,2,4]triazin-7-yl)-5-cyano-3,4-dihydroxytetrahydrofuran-2-yl]methoxy}(phenoxy)phosphoryl]-L-alanine
+  with the hydroxy group of 2-ethylbutan-1-ol. A broad-spectrum antiviral prodrug
+  with potent in vitro antiviral activity against a diverse panel of RNA viruses such
+  as Ebola virus, MERS-CoV and SARS-CoV. It is currently in Phase III clinical trials
+  for the treatment of Covid-19 in adults.
+definition_source: ChEBI
+synonyms:
+- synonym_text: remdesivirum
+  synonym_type: INN
+  source: chebi
+- synonym_text: remdésivir
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-ethylbutyl N-[(S)-{[(2R,3S,4R,5R)-5-(4-aminopyrrolo[2,1-f][1,2,4]triazin-7-yl)-5-cyano-3,4-dihydroxytetrahydrofuran-2-yl]methoxy}(phenoxy)phosphoryl]-L-alaninate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-2-{(2R,3S,4R,5R)-[5-(4-Aminopyrrolo[2,1-f][1,2,4]triazin-7-yl)-5-cyano-3,4-dihydroxy-tetrahydro-furan-2-ylmethoxy]phenoxy-(S)-phosphorylamino}propionic
+    acid 2-ethyl-butyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-ethylbutyl (2S)-2-{[(S)-{[(2R,3S,4R,5R)-5-(4-aminopyrrolo[2,1-f][1,2,4]triazin-7-yl)-5-cyano-3,4-dihydroxytetrahydrofuran-2-yl]methoxy}(phenoxy)phosphoryl]amino}propanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS 5734
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS-5734
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS5734
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18379
+- CHEBI:27577
+- CHEBI:33308
+- CHEBI:33860
+- CHEBI:37086
+- CHEBI:88341
+xrefs:
+- cas:1809249-37-3
+- drugbank:DB14761
+- kegg.drug:D11472
+- wikipedia.en:Remdesivir
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CCC(CC)COC(=O)[C@H](C)N[P@](=O)(OC[C@H]1O[C@@](C#N)(c2ccc3c(N)ncnn23)[C@H](O)[C@@H]1O)Oc1ccccc1
+  standard_inchi: InChI=1S/C27H35N6O8P/c1-4-18(5-2)13-38-26(36)17(3)32-42(37,41-19-9-7-6-8-10-19)39-14-21-23(34)24(35)27(15-28,40-21)22-12-11-20-25(29)30-16-31-33(20)22/h6-12,16-18,21,23-24,34-35H,4-5,13-14H2,1-3H3,(H,32,37)(H2,29,30,31)/t17-,21+,23+,24+,27-,42-/m0/s1
+  standard_inchi_key: RWWYLEGWBNMMLJ-YSOARWBDSA-N
+  molecular_formula: C27H35N6O8P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 602.585
+  monoisotopic_mass: 602.2254
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:145994
+  source_label: remdesivir
+  minted_identifier: antibioticmech:chebi-8c79f50637
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

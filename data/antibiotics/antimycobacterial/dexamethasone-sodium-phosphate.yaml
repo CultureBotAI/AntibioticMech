@@ -1,0 +1,55 @@
+identifier: CHEBI:4462
+label: dexamethasone sodium phosphate
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic sodium salt which is the disodium salt of dexamethasone phosphate.
+definition_source: ChEBI
+synonyms:
+- synonym_text: disodium 9-fluoro-11β,17-dihydroxy-16α-methyl-3,20-dioxopregna-1,4-dien-21-yl
+    phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dalalone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dexamethasone 21-(disodium phosphate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dexamethasone sodium phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium dexamethasone phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38700
+xrefs:
+- cas:2392-39-4
+- kegg.drug:D00975
+activity_roles:
+- CHEBI:33231
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12C[C@@H](C)[C@](O)(C(=O)COP(=O)([O-])[O-])[C@@]1(C)C[C@H](O)[C@@]1(F)[C@@]2([H])CCC2=CC(=O)C=C[C@@]21C.[Na+].[Na+]'
+  standard_inchi: InChI=1S/C22H30FO8P.2Na/c1-12-8-16-15-5-4-13-9-14(24)6-7-19(13,2)21(15,23)17(25)10-20(16,3)22(12,27)18(26)11-31-32(28,29)30;;/h6-7,9,12,15-17,25,27H,4-5,8,10-11H2,1-3H3,(H2,28,29,30);;/q;2*+1/p-2/t12-,15+,16+,17+,19+,20+,21+,22+;;/m1../s1
+  standard_inchi_key: PLCQGRYPOISRTQ-FCJDYXGNSA-L
+  molecular_formula: C22H28FO8P.2Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 516.41
+  monoisotopic_mass: 516.13012
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4462
+  source_label: dexamethasone sodium phosphate
+  minted_identifier: antibioticmech:chebi-c5dd4e913d
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

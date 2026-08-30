@@ -1,0 +1,49 @@
+identifier: CHEBI:133034
+label: yanuthone L
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A class I yanuthone that is yanuthone K in which a hydrogen of the pro-E
+  methyl group at the terminus of the farnesyl substituent has been replaced by a
+  hydroxy group. Isolated from the filamentous fungus Aspergillus niger, it shows
+  antifungal activity towards the pathogenic yeast Candida albicans (IC50 = 17.0 ±1.9
+  μM).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,2R,6R)-6-[(2E,6E,10E)-12-hydroxy-3,7,11-trimethyldodeca-2,6,10-trien-1-yl]-3-methyl-5-oxo-7-oxabicyclo[4.1.0]hept-3-en-2-yl
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: yanuthone-L
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:133075
+- CHEBI:15734
+- CHEBI:47622
+xrefs:
+- reaxys:27991880
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(=O)O[C@@H]1C(C)=CC(=O)[C@]2(C/C=C(\C)CC/C=C(\C)CC/C=C(\C)CO)O[C@H]12
+  standard_inchi: InChI=1S/C24H34O5/c1-16(9-7-11-18(3)15-25)8-6-10-17(2)12-13-24-21(27)14-19(4)22(23(24)29-24)28-20(5)26/h8,11-12,14,22-23,25H,6-7,9-10,13,15H2,1-5H3/b16-8+,17-12+,18-11+/t22-,23-,24+/m1/s1
+  standard_inchi_key: ULUIYCOUZXIMPX-XXMQOAAMSA-N
+  molecular_formula: C24H34O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 402.531
+  monoisotopic_mass: 402.24062
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:133034
+  source_label: yanuthone L
+  minted_identifier: antibioticmech:chebi-2214c28183
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

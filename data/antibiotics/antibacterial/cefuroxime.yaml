@@ -1,0 +1,191 @@
+identifier: CHEBI:3515
+label: cefuroxime
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 3-(carbamoyloxymethyl)cephalosporin compound having a 7-(2Z)-2-(furan-2-yl)-2-(methoxyimino)acetamido
+  side chain.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Sharox
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Zinacef Danmark
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: cefuroximo
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefuroximum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 3-[(carbamoyloxy)methyl]-7β-[(2Z)-2-(furan-2-yl)-2-(methoxyimino)acetamido]-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-3-[(carbamoyloxy)methyl]-7-{[(2Z)-2-furan-2-yl-2-(methoxyimino)acetyl]amino}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cefuroxim
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cefuroxime
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cephuroxime
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Biofuroksym
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: CXM
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Cefuril
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Cefuroximo
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Cefuroximum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Zinacef
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:24129
+- CHEBI:28084
+- CHEBI:36816
+- ARO:0000032
+xrefs:
+- ARO:0000063
+- cas:55268-75-2
+- drugbank:DB01112
+- drugcentral:565
+- kegg.compound:C06894
+- kegg.drug:D00262
+- metacyc.compound:CPD0-2069
+- patent:DE2439880
+- patent:DE2706413
+- patent:US3974153
+- patent:US4267320
+- reaxys:5783190
+- wikipedia.en:Cefuroxime
+- chembl:CHEMBL1436
+- pubchem.compound:5479529
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(COC(N)=O)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1ccco1'
+  standard_inchi: InChI=1S/C16H16N4O8S/c1-26-19-9(8-3-2-4-27-8)12(21)18-10-13(22)20-11(15(23)24)7(5-28-16(17)25)6-29-14(10)20/h2-4,10,14H,5-6H2,1H3,(H2,17,25)(H,18,21)(H,23,24)/b19-9-/t10-,14-/m1/s1
+  standard_inchi_key: JFPVXVDWJQMJEE-IZRZKJBUSA-N
+  molecular_formula: C16H16N4O8S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 424.391
+  monoisotopic_mass: 424.06888
+source_concepts:
+- source: ARO
+  source_id: ARO:0000063
+  source_label: cefuroxime
+  minted_identifier: antibioticmech:aro-5a4b3112fe
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3515
+  source_label: cefuroxime
+  minted_identifier: antibioticmech:chebi-6baa755c24
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001818
+  label: ACC-4
+  evidence:
+  - reference: ARO:3001818
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000063 (cefuroxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003561
+  label: SED-1
+  evidence:
+  - reference: ARO:3003561
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000063 (cefuroxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004825
+  label: LAP-1
+  evidence:
+  - reference: ARO:3004825
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000063 (cefuroxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004826
+  label: LAP-2
+  evidence:
+  - reference: ARO:3004826
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000063 (cefuroxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004854
+  label: CMY-136
+  evidence:
+  - reference: ARO:3004854
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000063 (cefuroxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004856
+  label: SCO-1
+  evidence:
+  - reference: ARO:3004856
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000063 (cefuroxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005035
+  label: YRC-1
+  evidence:
+  - reference: ARO:3005035
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000063 (cefuroxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007180
+  label: MAB
+  evidence:
+  - reference: ARO:3007180
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000063 (cefuroxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007437
+  label: EBR-5
+  evidence:
+  - reference: ARO:3007437
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000063 (cefuroxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007635
+  label: CAE-1
+  evidence:
+  - reference: ARO:3007635
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000063 (cefuroxime);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000063 (cefuroxime); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

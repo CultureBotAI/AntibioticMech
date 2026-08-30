@@ -1,0 +1,35 @@
+identifier: antibioticmech:aro-65024a8863
+label: lascufloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Lascufloxacin is a fluoroquinolone antibiotic.
+definition_source: PMID:28320717
+parent_compounds:
+- ARO:0000001
+xrefs:
+- ARO:3007024
+- pubchem.compound:71528768
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: COC1=C2C(=CC(=C1N3C[C@@H]([C@@H](C3)F)CNC4CC4)F)C(=O)C(=CN2CCF)C(=O)O
+  standard_inchi: InChI=1S/C21H24F3N3O4/c1-31-20-17-13(19(28)14(21(29)30)9-26(17)5-4-22)6-15(23)18(20)27-8-11(16(24)10-27)7-25-12-2-3-12/h6,9,11-12,16,25H,2-5,7-8,10H2,1H3,(H,29,30)/t11-,16+/m0/s1
+  standard_inchi_key: ZFIOCUITTUUVPV-MEDUHNTESA-N
+  molecular_formula: C21H24F3N3O4
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 439.4
+  monoisotopic_mass: 439.17189074
+source_concepts:
+- source: ARO
+  source_id: ARO:3007024
+  source_label: lascufloxacin
+  minted_identifier: antibioticmech:aro-65024a8863
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

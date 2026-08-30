@@ -1,0 +1,68 @@
+identifier: CHEBI:59057
+label: sulfachloropyridazine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfonamide antimicrobial used for urinary tract infections and in veterinary
+  medicine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sulfachlorpyridazine
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfachlorpyridazinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfacloropiridazina
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-Amino-N-(6-chloro-3-pyridazinyl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-amino-N-(6-chloropyridazin-3-yl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-(6-Chloro-3-pyridazinyl)sulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SCP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulphachlorpyridazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35358
+- CHEBI:36683
+- CHEBI:37921
+xrefs:
+- cas:80-32-0
+- drugcentral:2498
+- kegg.drug:D05948
+- lincs.smallmolecule:LSM-5456
+- reaxys:261558
+- vsdb:1746
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: Nc1ccc(S(=O)(=O)Nc2ccc(Cl)nn2)cc1
+  standard_inchi: InChI=1S/C10H9ClN4O2S/c11-9-5-6-10(14-13-9)15-18(16,17)8-3-1-7(12)2-4-8/h1-6H,12H2,(H,14,15)
+  standard_inchi_key: XOXHILFPRYWFOD-UHFFFAOYSA-N
+  molecular_formula: C10H9ClN4O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 284.728
+  monoisotopic_mass: 284.01347
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59057
+  source_label: sulfachloropyridazine
+  minted_identifier: antibioticmech:chebi-fb43779cdf
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

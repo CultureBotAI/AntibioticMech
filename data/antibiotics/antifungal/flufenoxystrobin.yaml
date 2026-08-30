@@ -1,0 +1,64 @@
+identifier: CHEBI:83194
+label: flufenoxystrobin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An enoate ester that is the methyl ester of (2E)-2-(2-{[2-chloro-4-(trifluoromethyl)phenoxy]methyl}phenyl)-3-methoxyprop-2-enoic
+  acid. A fungicide active against various fungal infections including downy mildew,
+  blight, powdery mildew and rice blast.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (2E)-2-(2-{[2-chloro-4-(trifluoromethyl)phenoxy]methyl}phenyl)-3-methoxyprop-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Flufenoxystrobine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methyl (alphaE)-2-((2-chloro-4-(trifluoromethyl)phenoxy)methyl)-alpha-(methoxymethylene)benzeneacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (2E)-2-{2-[(2-chloro-α,α,α-trifluoro-p-tolyloxy)methyl]phenyl}-3-methoxyacrylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (αE)-2-[[2-chloro-4-(trifluoromethyl)phenoxy]methyl]-α-(methoxymethylene)benzeneacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:35618
+- CHEBI:47985
+- CHEBI:51702
+- CHEBI:83403
+- CHEBI:83565
+- CHEBI:86484
+xrefs:
+- cas:918162-02-4
+- patent:EP1897866
+- patent:WO2012025472
+- pesticides:flufenoxystrobin
+- ppdb:2613
+- reaxys:11654843
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CO/C=C(/C(=O)OC)c1ccccc1COc1ccc(C(F)(F)F)cc1Cl
+  standard_inchi: InChI=1S/C19H16ClF3O4/c1-25-11-15(18(24)26-2)14-6-4-3-5-12(14)10-27-17-8-7-13(9-16(17)20)19(21,22)23/h3-9,11H,10H2,1-2H3/b15-11+
+  standard_inchi_key: MBHXIQDIVCJZTD-RVDMUPIBSA-N
+  molecular_formula: C19H16ClF3O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 400.78
+  monoisotopic_mass: 400.06892
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83194
+  source_label: flufenoxystrobin
+  minted_identifier: antibioticmech:chebi-a5ffffa940
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

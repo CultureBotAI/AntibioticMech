@@ -1,0 +1,58 @@
+identifier: CHEBI:15756
+label: palmitic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Palmitic acid is the most common saturated fatty acid found in animals,
+  plants, and microorganisms. Palmitic acid is found to have antibacterial properties.
+definition_source: PMID:10447892
+synonyms:
+- synonym_text: Cetylic acid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Hexadecanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: N-Hexadecanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Palmitate
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3003956
+xrefs:
+- ARO:3003957
+- cas:57-10-3
+- chembl:CHEMBL82293
+- pubchem.compound:985
+structural_class: antibacterial free fatty acids
+structural_class_id: ARO:3003956
+chemical_structure:
+  smiles: CCCCCCCCCCCCCCCC(=O)O
+  standard_inchi: InChI=1S/C16H32O2/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16(17)18/h2-15H2,1H3,(H,17,18)
+  standard_inchi_key: IPCSVZSSVZVIGE-UHFFFAOYSA-N
+  molecular_formula: C16H32O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 256.43
+  monoisotopic_mass: 256.24023
+source_concepts:
+- source: ARO
+  source_id: ARO:3003957
+  source_label: palmitic acid
+  minted_identifier: antibioticmech:aro-43406990b9
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003960
+  label: farAB
+  evidence:
+  - reference: ARO:3003960
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003957 (palmitic
+      acid); database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

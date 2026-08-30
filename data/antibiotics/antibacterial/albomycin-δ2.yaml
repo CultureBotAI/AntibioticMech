@@ -1,0 +1,46 @@
+identifier: CHEBI:83215
+label: albomycin δ2
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An iron(III) hydroxamate in which desferrialbomycin δ2(3−) is complexed
+  to iron(III).
+definition_source: ChEBI
+synonyms:
+- synonym_text: iron(3+) N5-acetyl-N5-oxido-L-ornithyl-N5-acetyl-N5-oxido-L-ornithyl-N5-acetyl-N5-oxido-L-ornithyl-L-seryl-(3S)-3-{(2R,3R,4R,5R)-5-[4-(carbamoylimino)-3-methyl-2-oxo-3,4-dihydropyrimidin-1(2H)-yl]-3,4-dihydroxytetrahydrothiophen-2-yl}-D-serine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[N5-acetyl-N5-(hydroxy-κO)-L-ornithyl-N5-acetyl-N5-(hydroxy-κO)-L-ornithyl-N5-acetyl-N5-(hydroxy-κO)-L-ornithyl-L-seryl-(3S)-3-{(2R,3R,4R,5R)-5-[4-(carbamoylimino)-3-methyl-2-oxo-3,4-dihydropyrimidin-1(2H)-yl]-3,4-dihydroxytetrahydrothiophen-2-yl}-D-serinato(3−)]iron'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: albomycin δ(2)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:28163
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]1([C@@H](O)[C@@H](NC(=O)[C@H](CO)NC(=O)[C@@H]2CCCN(C(C)=O)[O][Fe]3[O]N(C(C)=O)CCC[C@H](NC(=O)[C@@H](N)CCCN(C(C)=O)[O]3)C(=O)N2)C(=O)O)S[C@@]([H])(n2ccc(=NC(N)=O)n(C)c2=O)[C@H](O)[C@H]1O'
+  standard_inchi: InChI=1S/C37H57N12O18S.Fe/c1-17(51)47(65)12-5-8-20(38)30(57)40-21(9-6-13-48(66)18(2)52)31(58)41-22(10-7-14-49(67)19(3)53)32(59)42-23(16-50)33(60)44-25(35(61)62)26(54)29-27(55)28(56)34(68-29)46-15-11-24(43-36(39)63)45(4)37(46)64;/h11,15,20-23,25-29,34,50,54-56H,5-10,12-14,16,38H2,1-4H3,(H2,39,63)(H,40,57)(H,41,58)(H,42,59)(H,44,60)(H,61,62);/q-3;+3/b43-24+;/t20-,21-,22-,23-,25+,26-,27+,28+,29+,34+;/m0./s1
+  standard_inchi_key: RQZRKFJHRUDTLB-IDJYBIRTSA-N
+  molecular_formula: C37H57FeN12O18S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1045.841
+  monoisotopic_mass: 1045.29839
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83215
+  source_label: albomycin δ2
+  minted_identifier: antibioticmech:chebi-d15d08116d
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

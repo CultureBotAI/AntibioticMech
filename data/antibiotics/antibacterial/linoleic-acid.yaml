@@ -1,0 +1,56 @@
+identifier: CHEBI:17351
+label: linoleic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Linoleic acid is a polyunsaturated omega-6 fatty acid. Linoleic acid has
+  been found to have antibacterial activity, particularly in inhibiting the growth
+  of Gram-positive bacterial species.
+definition_source: PMID:19956944
+synonyms:
+- synonym_text: Linoleate
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Linolic acid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Telfairic acid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3003956
+xrefs:
+- ARO:3003959
+- cas:60-33-3
+- chembl:CHEMBL267476
+- pubchem.compound:5280450
+structural_class: antibacterial free fatty acids
+structural_class_id: ARO:3003956
+chemical_structure:
+  smiles: CCCCC/C=C\C/C=C\CCCCCCCC(=O)O
+  standard_inchi: InChI=1S/C18H32O2/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18(19)20/h6-7,9-10H,2-5,8,11-17H2,1H3,(H,19,20)/b7-6-,10-9-
+  standard_inchi_key: OYHQOLUKZRVURQ-HZJYTTRNSA-N
+  molecular_formula: C18H32O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 280.452
+  monoisotopic_mass: 280.24023
+source_concepts:
+- source: ARO
+  source_id: ARO:3003959
+  source_label: linoleic acid
+  minted_identifier: antibioticmech:aro-36bd42c165
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003960
+  label: farAB
+  evidence:
+  - reference: ARO:3003960
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003959 (linoleic
+      acid); database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

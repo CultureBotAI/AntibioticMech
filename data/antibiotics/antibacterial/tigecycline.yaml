@@ -1,0 +1,159 @@
+identifier: CHEBI:149836
+label: tigecycline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Tetracycline in which the hydroxy group at position 5 and the methyl group
+  at position 6 are replaced by hydrogen, and with a dimethylamino substituent and
+  an (N-tert-butylglycyl)amino substituent at positions 7 and 9, respectively. A glycylcycline
+  antibiotic, it has activity against a broad range of Gram-positive and Gram-negative
+  bacteria, including tetracycline-resistant organisms. It is used for the intravenous
+  treatment of complicated skin and skin structure infections caused by susceptible
+  organisms.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4S,4aS,5aR,12aS)-9-[(N-tert-butylglycyl)amino]-4,7-bis(dimethylamino)-3,10,12,12a-tetrahydroxy-1,11-dioxo-1,4,4a,5,5a,6,11,12a-octahydrotetracene-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4S,4aS,5aR,12aS)-9-(2-(tert-butylamino)acetamido)-4,7-bis(dimethylamino)-1,4,4a,5,5a,6,11,12a-octahydro-3,10,12,12a-tetrahydroxy-1,11-dioxo-2-naphthacenecarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tygacil
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:139592
+- CHEBI:26895
+- ARO:0000042
+xrefs:
+- ARO:0000030
+- cas:220620-09-7
+- drugbank:DB00560
+- drugcentral:2661
+- kegg.compound:C12012
+- kegg.drug:D01079
+- reaxys:8379453
+- chembl:CHEMBL376140
+- pubchem.compound:54686904
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+structural_class: glycylcycline
+structural_class_id: ARO:0000042
+chemical_structure:
+  smiles: '[H][C@@]12Cc3c(N(C)C)cc(NC(=O)CNC(C)(C)C)c(O)c3C(=O)C1=C(O)[C@]1(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@]1([H])C2'
+  standard_inchi: InChI=1S/C29H39N5O8/c1-28(2,3)31-11-17(35)32-15-10-16(33(4)5)13-8-12-9-14-21(34(6)7)24(38)20(27(30)41)26(40)29(14,42)25(39)18(12)23(37)19(13)22(15)36/h10,12,14,21,31,36,38-39,42H,8-9,11H2,1-7H3,(H2,30,41)(H,32,35)/t12-,14-,21-,29-/m0/s1
+  standard_inchi_key: FPZLLRFZJZRHSY-HJYUBDRYSA-N
+  molecular_formula: C29H39N5O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 585.658
+  monoisotopic_mass: 585.27986
+source_concepts:
+- source: ARO
+  source_id: ARO:0000030
+  source_label: tigecycline
+  minted_identifier: antibioticmech:aro-ba2bb436ff
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:149836
+  source_label: tigecycline
+  minted_identifier: antibioticmech:chebi-4917944044
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000026
+  label: mepA
+  evidence:
+  - reference: ARO:3000026
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000205
+  label: tet(X)
+  evidence:
+  - reference: ARO:3000205
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000384
+  label: AcrAB-TolC
+  evidence:
+  - reference: ARO:3000384
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000770
+  label: AdeABC
+  evidence:
+  - reference: ARO:3000770
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003373
+  label: Klebsiella pneumoniae acrR with mutation conferring multidrug antibiotic
+    resistance
+  evidence:
+  - reference: ARO:3003373
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003380
+  label: Klebsiella pneumoniae ramR mutants
+  evidence:
+  - reference: ARO:3003380
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003921
+  label: oqxAB
+  evidence:
+  - reference: ARO:3003921
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004042
+  label: Enterobacter cloacae acrA
+  evidence:
+  - reference: ARO:3004042
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004578
+  label: Acinetobacter baumannii AbuO
+  evidence:
+  - reference: ARO:3004578
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004719
+  label: tet(X3)
+  evidence:
+  - reference: ARO:3004719
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004720
+  label: tet(X4)
+  evidence:
+  - reference: ARO:3004720
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000030 (tigecycline); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

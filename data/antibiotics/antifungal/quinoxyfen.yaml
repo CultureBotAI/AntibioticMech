@@ -1,0 +1,58 @@
+identifier: CHEBI:82040
+label: quinoxyfen
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of quinolines carrying two chloro substituents at
+  positions 5 and 7 together with a 4-fluorophenoxy substituent at position 4. A fungicide
+  used mainly to control powdery mildew in cereals.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,7-dichloro-4-(4-fluorophenoxy)quinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dichloro-4-quinolyl 4-fluorophenyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DE 795
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HSDB 7946
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26513
+- CHEBI:35618
+- CHEBI:36683
+- CHEBI:83575
+xrefs:
+- cas:124495-18-7
+- kegg.compound:C18892
+- patent:EP2308303
+- pesticides:quinoxyfen
+- ppdb:580
+- reaxys:11339818
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: Fc1ccc(Oc2ccnc3cc(Cl)cc(Cl)c23)cc1
+  standard_inchi: InChI=1S/C15H8Cl2FNO/c16-9-7-12(17)15-13(8-9)19-6-5-14(15)20-11-3-1-10(18)2-4-11/h1-8H
+  standard_inchi_key: WRPIRSINYZBGPK-UHFFFAOYSA-N
+  molecular_formula: C15H8Cl2FNO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 308.139
+  monoisotopic_mass: 306.9967
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:82040
+  source_label: quinoxyfen
+  minted_identifier: antibioticmech:chebi-033fa57011
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

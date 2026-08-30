@@ -1,0 +1,45 @@
+identifier: CHEBI:156363
+label: gibepyrone A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 2-pyranones that is 2H-pyran-2-one in which the
+  hydrogens at positions 3 and 6 are replaced by methyl and (2E)-2-buten-2-yl groups,
+  respectively. It is a mycotoxin produced by the rice pathogen Fusarium fujikuroi.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6-[(2E)-but-2-en-2-yl]-3-methyl-2H-pyran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-[(2E)-2-buten-2-yl]-3-methyl-2H-pyran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26188
+- CHEBI:75885
+- CHEBI:78840
+- CHEBI:86478
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C/C=C(\C)c1ccc(C)c(=O)o1
+  standard_inchi: InChI=1S/C10H12O2/c1-4-7(2)9-6-5-8(3)10(11)12-9/h4-6H,1-3H3/b7-4+
+  standard_inchi_key: FEEGMVBAILJAQO-QPJJXVBHSA-N
+  molecular_formula: C10H12O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 164.204
+  monoisotopic_mass: 164.08373
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156363
+  source_label: gibepyrone A
+  minted_identifier: antibioticmech:chebi-940fe69a58
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

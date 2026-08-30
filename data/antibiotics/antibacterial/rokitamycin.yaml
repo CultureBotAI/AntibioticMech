@@ -1,0 +1,52 @@
+identifier: CHEBI:32103
+label: rokitamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Rokitamycin is a macrolide antibiotic. Synthesized from strains of Streptomyces
+  kitasatoensis.
+definition_source: PMID:1779258
+parent_compounds:
+- ARO:0000000
+xrefs:
+- ARO:3003701
+- cas:74014-51-0
+- chembl:CHEMBL1908350
+- pubchem.compound:5282211
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: '[H][C@]1(O[C@H]2[C@H](N(C)C)[C@@H](O)[C@]([H])(O[C@H]3[C@@H](CC=O)C[C@@H](C)[C@@H](O)/C=C/C=C/C[C@@H](C)OC(=O)C[C@@H](O)[C@@H]3OC)O[C@@H]2C)C[C@@](C)(OC(=O)CC)[C@@H](OC(=O)CCC)[C@H](C)O1'
+  standard_inchi: InChI=1S/C42H69NO15/c1-11-16-32(48)55-40-27(6)53-34(23-42(40,7)58-31(47)12-2)56-37-26(5)54-41(36(50)35(37)43(8)9)57-38-28(19-20-44)21-24(3)29(45)18-15-13-14-17-25(4)52-33(49)22-30(46)39(38)51-10/h13-15,18,20,24-30,34-41,45-46,50H,11-12,16-17,19,21-23H2,1-10H3/b14-13+,18-15+/t24-,25-,26-,27+,28+,29+,30-,34+,35-,36-,37-,38+,39+,40+,41+,42-/m1/s1
+  standard_inchi_key: VYWWNRMSAPEJLS-MDWYKHENSA-N
+  molecular_formula: C42H69NO15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 828.006
+  monoisotopic_mass: 827.46672
+source_concepts:
+- source: ARO
+  source_id: ARO:3003701
+  source_label: rokitamycin
+  minted_identifier: antibioticmech:aro-6f4791eb1d
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003697
+  label: MexPQ-OpmE
+  evidence:
+  - reference: ARO:3003697
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003701 (rokitamycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004076
+  label: MuxABC-OpmB
+  evidence:
+  - reference: ARO:3004076
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003701 (rokitamycin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,41 @@
+identifier: antibioticmech:aro-a78f888bde
+label: phenelfamycin C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Phenelfamycin C was isolated from two environmental isolates called AB999F-80
+  and AB1047T-33. They were both identified as Streptomyces violaceoniger strains.
+  Both these strains were found to produce phenelfamycins A-F and unphenelfamycin.
+  Phenelfamycin C has a disaccaride moeity and is isomeric with phenelfamycin D. All
+  phenelfamycins were selected due to their activity against anaerobic bacteria, especially
+  Clostridioides difficile.
+definition_source: PMID:3192489
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3001251
+- CHEBI:222040
+- pubchem.compound:6443945
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: C/C=C/C=C/C1C(C(C(C(O1)(C(COC2CC(C(C(O2)C)OC3CC(C(C(O3)C)O)OC)OC)C(=O)NC/C=C/C=C(\C)/C(C(C)C4CC(C(O4)/C=C/C=C/C=C/C(=O)O)O)OC)O)OC(=O)CC5=CC=CC=C5)O)(C)C
+  standard_inchi: InChI=1S/C58H83NO18/c1-11-12-16-27-46-57(6,7)54(65)55(75-48(63)30-39-24-17-15-18-25-39)58(67,77-46)40(34-71-49-33-45(69-9)53(38(5)73-49)76-50-32-44(68-8)51(64)37(4)72-50)56(66)59-29-22-21-23-35(2)52(70-10)36(3)43-31-41(60)42(74-43)26-19-13-14-20-28-47(61)62/h11-28,36-38,40-46,49-55,60,64-65,67H,29-34H2,1-10H3,(H,59,66)(H,61,62)/b12-11+,14-13+,22-21+,26-19+,27-16+,28-20+,35-23+
+  standard_inchi_key: CFQHTKGGWFGEKG-WYJATRNTSA-N
+  molecular_formula: C58H83NO18
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1082.3
+  monoisotopic_mass: 1081.5610148
+source_concepts:
+- source: ARO
+  source_id: ARO:3001251
+  source_label: phenelfamycin C
+  minted_identifier: antibioticmech:aro-a78f888bde
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

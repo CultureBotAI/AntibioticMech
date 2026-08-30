@@ -1,0 +1,54 @@
+identifier: CHEBI:29701
+label: tyrocidine A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A homodetic cyclic decapeptide consisting of D-Phe, L-Pro, L-Phe, D-Phe,
+  L-Asn, L-Gln, L-Tyr, L-Val, L-Orn, and L-Leu residues coupled in sequence and cyclised
+  head-to-tail.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cyclo(L-asparaginyl-L-glutaminyl-L-tyrosyl-L-valyl-L-ornithyl-L-leucyl-D-phenylalanyl-L-prolyl-L-phenylalanyl-D-phenylalanyl)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TrcA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cyclo-(D-Phe-Pro-Phe-D-Phe-Asn-Gln-Tyr-Val-Orn-Leu)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cyclo-(D-PheProPhe-D-PheAsnGlnTyrValOrnLeu)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24613
+- CHEBI:25903
+- CHEBI:51026
+xrefs:
+- cas:8011-61-8
+- kegg.compound:C12041
+- reaxys:505927
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12CCCN1C(=O)[C@@H](Cc1ccccc1)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CCCN)NC(=O)[C@H](C(C)C)NC(=O)[C@]([H])(Cc1ccc(O)cc1)NC(=O)[C@H](CCC(N)=O)NC(=O)[C@H](CC(N)=O)NC(=O)[C@@H](Cc1ccccc1)NC(=O)[C@H](Cc1ccccc1)NC2=O'
+  standard_inchi: InChI=1S/C66H87N13O13/c1-38(2)32-47-59(85)77-52(36-42-20-12-7-13-21-42)66(92)79-31-15-23-53(79)64(90)76-49(34-41-18-10-6-11-19-41)61(87)74-48(33-40-16-8-5-9-17-40)60(86)75-51(37-55(69)82)62(88)70-46(28-29-54(68)81)58(84)73-50(35-43-24-26-44(80)27-25-43)63(89)78-56(39(3)4)65(91)71-45(22-14-30-67)57(83)72-47/h5-13,16-21,24-27,38-39,45-53,56,80H,14-15,22-23,28-37,67H2,1-4H3,(H2,68,81)(H2,69,82)(H,70,88)(H,71,91)(H,72,83)(H,73,84)(H,74,87)(H,75,86)(H,76,90)(H,77,85)(H,78,89)/t45-,46-,47-,48+,49-,50-,51-,52+,53-,56-/m0/s1
+  standard_inchi_key: GSXRBRIWJGAPDU-BBVRJQLQSA-N
+  molecular_formula: C66H87N13O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1270.5
+  monoisotopic_mass: 1269.65463
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:29701
+  source_label: tyrocidine A
+  minted_identifier: antibioticmech:chebi-88fab18199
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

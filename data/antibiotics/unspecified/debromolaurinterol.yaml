@@ -1,0 +1,42 @@
+identifier: CHEBI:66556
+label: debromolaurinterol
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sesquiterpenoid that is laurinterol in which the bromo group has been
+  replaced by a hydrogen. Isolated from Laurencia intermedia and Aplysia kurodai,
+  it exhibits antimicrobial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-[(1S,2R,5R)-1,2-dimethylbicyclo[3.1.0]hex-2-yl]-5-methylphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26658
+- CHEBI:33853
+xrefs:
+- reaxys:2050843
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12CC[C@@](C)(c3ccc(C)cc3O)[C@@]1(C)C2'
+  standard_inchi: InChI=1S/C15H20O/c1-10-4-5-12(13(16)8-10)14(2)7-6-11-9-15(11,14)3/h4-5,8,11,16H,6-7,9H2,1-3H3/t11-,14+,15+/m1/s1
+  standard_inchi_key: XQATUTRQDIODTL-UGFHNGPFSA-N
+  molecular_formula: C15H20O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 216.324
+  monoisotopic_mass: 216.15142
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66556
+  source_label: debromolaurinterol
+  minted_identifier: antibioticmech:chebi-564beec903
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

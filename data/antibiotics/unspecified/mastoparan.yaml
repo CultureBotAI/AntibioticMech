@@ -1,0 +1,55 @@
+identifier: CHEBI:78496
+label: mastoparan
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of mastopyrans that is a 14-amino acid polypeptide
+  comprising isoleucyl, asparaginyl, leucyl, lysyl, alanyl, leucyl, alanyl, alanyl,
+  leucyl, alanyl, lysyl, lysyl, isoleucyl, and leucinamide residues coupled in sequence.
+  It is the major active component of the venom of the vespid wasp, Vespula lewisii
+  and causes degranulation of mast cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: L-isoleucyl-L-asparaginyl-L-leucyl-L-lysyl-L-alanyl-L-leucyl-L-alanyl-L-alanyl-L-leucyl-L-alanyl-L-lysyl-L-lysyl-L-isoleucyl-L-leucinamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: INLKALAALAKKIL-NH2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ile-Asn-Leu-Lys-Ala-Leu-Ala-Ala-Leu-Ala-Lys-Lys-Ile-Leu-NH2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Mast cell degranulating peptide (Vespula lewisii)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15722
+- CHEBI:78506
+xrefs:
+- cas:72093-21-1
+- kegg.compound:C15947
+- wikipedia.en:Mastoparan
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@H](C)[C@H](N)C(=O)N[C@@H](CC(N)=O)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](C)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@@H](C)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](CCCCN)C(=O)N[C@H](C(=O)N[C@@H](CC(C)C)C(N)=O)[C@@H](C)CC
+  standard_inchi: InChI=1S/C70H131N19O15/c1-17-40(11)55(75)69(103)88-53(35-54(74)90)68(102)87-52(34-39(9)10)67(101)83-46(25-19-22-28-71)62(96)78-45(16)61(95)86-50(32-37(5)6)65(99)79-42(13)58(92)77-43(14)60(94)85-51(33-38(7)8)66(100)80-44(15)59(93)81-47(26-20-23-29-72)63(97)82-48(27-21-24-30-73)64(98)89-56(41(12)18-2)70(104)84-49(57(76)91)31-36(3)4/h36-53,55-56H,17-35,71-73,75H2,1-16H3,(H2,74,90)(H2,76,91)(H,77,92)(H,78,96)(H,79,99)(H,80,100)(H,81,93)(H,82,97)(H,83,101)(H,84,104)(H,85,94)(H,86,95)(H,87,102)(H,88,103)(H,89,98)/t40-,41-,42-,43-,44-,45-,46-,47-,48-,49-,50-,51-,52-,53-,55-,56-/m0/s1
+  standard_inchi_key: MASXKPLGZRMBJF-MVSGICTGSA-N
+  molecular_formula: C70H131N19O15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1478.936
+  monoisotopic_mass: 1478.0072
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:78496
+  source_label: mastoparan
+  minted_identifier: antibioticmech:chebi-adfc769f6e
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

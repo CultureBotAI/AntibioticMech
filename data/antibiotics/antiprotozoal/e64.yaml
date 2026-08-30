@@ -1,0 +1,56 @@
+identifier: CHEBI:30270
+label: E64
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (2S,3S)-3-(N-{(S)-1-[N-(4-guanidinobutyl)carbamoyl]3-methylbutyl}carbamoyl)oxirane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,3S)-3-[((1S)-1-{[4-(carbamimidamido)butyl]carbamoyl}-3-methylbutyl)carbamoyl]oxirane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E 64
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E-64
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23931
+- CHEBI:24436
+- CHEBI:25018
+- CHEBI:35735
+xrefs:
+- beilstein:6666631
+- cas:66701-25-5
+- drugbank:DB04276
+- kegg.compound:C01341
+- pdb-ccd:E64
+- wikipedia.en:E-64
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: CC(C)C[C@H](NC(=O)[C@H]1O[C@@H]1C(=O)O)C(=O)NCCCCNC(=N)N
+  standard_inchi: InChI=1S/C15H27N5O5/c1-8(2)7-9(20-13(22)10-11(25-10)14(23)24)12(21)18-5-3-4-6-19-15(16)17/h8-11H,3-7H2,1-2H3,(H,18,21)(H,20,22)(H,23,24)(H4,16,17,19)/t9-,10-,11-/m0/s1
+  standard_inchi_key: LTLYEAJONXGNFG-DCAQKATOSA-N
+  molecular_formula: C15H27N5O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 357.411
+  monoisotopic_mass: 357.20122
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:30270
+  source_label: E64
+  minted_identifier: antibioticmech:chebi-7d26544826
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

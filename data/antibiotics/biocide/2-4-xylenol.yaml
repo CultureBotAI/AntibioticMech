@@ -1,0 +1,79 @@
+identifier: CHEBI:34241
+label: 2,4-xylenol
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of phenols that phenol substituted by methyl groups
+  at positions 2 and 4.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,4-dimethylphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,3-dimethyl-4-hydroxybenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-hydroxy-2,4-dimethylbenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4-DMP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methyl-p-cresol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,6-dimethylphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-hydroxy-1,3-dimethylbenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-hydroxy-m-xylene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: asym-m-xylenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: gallex
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: m-xylenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:87034
+xrefs:
+- cas:105-67-9
+- chemspider:13839123
+- hmdb:HMDB0245456
+- kegg.compound:C14582
+- knapsack:C00052596
+- metacyc.compound:CPD-18280
+- pdb-ccd:N0D
+- ppdb:1619
+- reaxys:636244
+activity_roles:
+- CHEBI:48219
+chemical_structure:
+  smiles: Cc1ccc(O)c(C)c1
+  standard_inchi: InChI=1S/C8H10O/c1-6-3-4-8(9)7(2)5-6/h3-5,9H,1-2H3
+  standard_inchi_key: KUFFULVDNCHOFZ-UHFFFAOYSA-N
+  molecular_formula: C8H10O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 122.167
+  monoisotopic_mass: 122.07316
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:34241
+  source_label: 2,4-xylenol
+  minted_identifier: antibioticmech:chebi-37b9322c82
+  role_terms:
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

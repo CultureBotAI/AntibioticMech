@@ -1,0 +1,232 @@
+identifier: CHEBI:50694
+label: minocycline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracycline analogue having a dimethylamino group at position 7 and
+  lacking the methyl and hydroxy groups at position 5.
+definition_source: ChEBI
+synonyms:
+- synonym_text: minociclina
+  synonym_type: INN
+  source: chebi
+- synonym_text: minociclinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (4S,4aS,5aR,12aS)-4,7-bis(dimethylamino)-3,10,12,12a-tetrahydroxy-1,11-dioxo-1,4,4a,5,5a,6,11,12a-octahydrotetracene-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4S,4AS,5AR,12AS)-4,7-BIS(DIMETHYLAMINO)-3,10,12,12A-TETRAHYDROXY-1,11-DIOXO-1,4,4A,5,5A,6,11,12A-OCTAHYDROTETRACENE-2-CARBOXAMIDE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-Dimethylamino-6-demethyl-6-deoxytetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Minocycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: minomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:26895
+- CHEBI:48132
+- ARO:3000050
+xrefs:
+- ARO:3000152
+- cas:10118-90-8
+- chemspider:16735907
+- drugbank:DB01017
+- drugcentral:1813
+- hmdb:HMDB0015152
+- kegg.compound:C07225
+- kegg.drug:D05045
+- knapsack:C00018686
+- lipidmaps:LMPK07000002
+- patent:US3226436
+- patent:WO2008104734
+- pdb-ccd:MIY
+- reaxys:3077644
+- chembl:CHEMBL1434
+- pubchem.compound:54675783
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
+structural_class: tetracycline antibiotic
+structural_class_id: ARO:3000050
+chemical_structure:
+  smiles: '[H][C@@]12Cc3c(N(C)C)ccc(O)c3C(=O)C1=C(O)[C@]1(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@]1([H])C2'
+  standard_inchi: InChI=1S/C23H27N3O7/c1-25(2)12-5-6-13(27)15-10(12)7-9-8-11-17(26(3)4)19(29)16(22(24)32)21(31)23(11,33)20(30)14(9)18(15)28/h5-6,9,11,17,27,29-30,33H,7-8H2,1-4H3,(H2,24,32)/t9-,11-,17-,23-/m0/s1
+  standard_inchi_key: DYKFCLLONBREIL-KVUCHLLUSA-N
+  molecular_formula: C23H27N3O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 457.483
+  monoisotopic_mass: 457.1849
+source_concepts:
+- source: ARO
+  source_id: ARO:3000152
+  source_label: minocycline
+  minted_identifier: antibioticmech:aro-62156c8089
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:50694
+  source_label: minocycline
+  minted_identifier: antibioticmech:chebi-305a19e931
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000186
+  label: tet(M)
+  evidence:
+  - reference: ARO:3000186
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000190
+  label: tet(O)
+  evidence:
+  - reference: ARO:3000190
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000191
+  label: tet(Q)
+  evidence:
+  - reference: ARO:3000191
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000192
+  label: tet(S)
+  evidence:
+  - reference: ARO:3000192
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000193
+  label: tet(T)
+  evidence:
+  - reference: ARO:3000193
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000194
+  label: tet(W)
+  evidence:
+  - reference: ARO:3000194
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000195
+  label: tetB(P)
+  evidence:
+  - reference: ARO:3000195
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000196
+  label: tet(32)
+  evidence:
+  - reference: ARO:3000196
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000197
+  label: tet(36)
+  evidence:
+  - reference: ARO:3000197
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000205
+  label: tet(X)
+  evidence:
+  - reference: ARO:3000205
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000556
+  label: tet(44)
+  evidence:
+  - reference: ARO:3000556
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003969
+  label: lmrP
+  evidence:
+  - reference: ARO:3003969
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004442
+  label: tet(W/N/W)
+  evidence:
+  - reference: ARO:3004442
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004576
+  label: tet(61)
+  evidence:
+  - reference: ARO:3004576
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004589
+  label: tet(53)
+  evidence:
+  - reference: ARO:3004589
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004591
+  label: tet(55)
+  evidence:
+  - reference: ARO:3004591
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005056
+  label: tet(X6)
+  evidence:
+  - reference: ARO:3005056
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005057
+  label: tet(X5)
+  evidence:
+  - reference: ARO:3005057
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005166
+  label: tet(X1)
+  evidence:
+  - reference: ARO:3005166
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000152 (minocycline);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000152 (minocycline); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

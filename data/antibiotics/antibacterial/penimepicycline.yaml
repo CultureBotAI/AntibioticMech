@@ -1,0 +1,72 @@
+identifier: CHEBI:75258
+label: penimepicycline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillinate salt obtained by combining equimolar amounts of phenoxymethylpenicillin
+  and pipacycline.
+definition_source: ChEBI
+synonyms:
+- synonym_text: penimepiciclina
+  synonym_type: INN
+  source: chebi
+- synonym_text: penimepicyclinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: pénimépicycline
+  synonym_type: INN
+  source: chebi
+- synonym_text: Hydrocycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Mepicycline penicillinate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Penetracyne
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Penimepiciclina
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pipacycline-penicillin V
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pipacycline/penicillin V
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:75260
+xrefs:
+- cas:4599-60-4
+- kegg.drug:D07233
+- patent:EA012203
+- patent:GB891004
+- patent:GB897826
+- patent:US5637579
+- reaxys:4921287
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12C[C@@]3([H])[C@H](N(C)C)C(O)=C(C(=O)NCN4CCN(CCO)CC4)C(=O)[C@@]3(O)C(O)=C1C(=O)c1c(O)cccc1[C@@]2(C)O.[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)COc1ccccc1'
+  standard_inchi: InChI=1S/C29H38N4O9.C16H18N2O5S/c1-28(41)15-5-4-6-18(35)19(15)23(36)20-16(28)13-17-22(31(2)3)24(37)21(26(39)29(17,42)25(20)38)27(40)30-14-33-9-7-32(8-10-33)11-12-34;1-16(2)12(15(21)22)18-13(20)11(14(18)24-16)17-10(19)8-23-9-6-4-3-5-7-9/h4-6,16-17,22,34-35,37-38,41-42H,7-14H2,1-3H3,(H,30,40);3-7,11-12,14H,8H2,1-2H3,(H,17,19)(H,21,22)/t16-,17-,22-,28+,29-;11-,12+,14-/m01/s1
+  standard_inchi_key: MEGKRPMNPGTIIG-VNYBMUHKSA-N
+  molecular_formula: C16H18N2O5S.C29H38N4O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 937.038
+  monoisotopic_mass: 936.35752
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75258
+  source_label: penimepicycline
+  minted_identifier: antibioticmech:chebi-8c886caec9
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

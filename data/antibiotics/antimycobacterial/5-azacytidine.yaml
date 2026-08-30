@@ -1,0 +1,67 @@
+identifier: CHEBI:2038
+label: 5-azacytidine
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An N-glycosyl-1,3,5-triazine that is 4-amino-1,3,5-triazin-2(1H)-one substituted
+  by a β-D-ribofuranosyl residue via an N-glycosidic linkage. An antineoplastic agent,
+  it is used in the treatment of myeloid leukaemia.
+definition_source: ChEBI
+synonyms:
+- synonym_text: azacitidina
+  synonym_type: INN
+  source: chebi
+- synonym_text: azacitidinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-amino-1-β-D-ribofuranosyl-1,3,5-triazin-2(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Amino-1-beta-D-ribofuranosyl-s-triazin-2(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Azacytidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Azacitidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48009
+- CHEBI:60783
+xrefs:
+- cas:320-67-2
+- drugbank:DB00928
+- drugcentral:25
+- hmdb:HMDB0015063
+- kegg.compound:C11262
+- kegg.drug:D03021
+- lincs.smallmolecule:LSM-5218
+- patent:KR20140069225
+- patent:US2015038444
+- reaxys:620461
+- wikipedia.en:Azacitidine
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: Nc1ncn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c(=O)n1
+  standard_inchi: InChI=1S/C8H12N4O5/c9-7-10-2-12(8(16)11-7)6-5(15)4(14)3(1-13)17-6/h2-6,13-15H,1H2,(H2,9,11,16)/t3-,4-,5-,6-/m1/s1
+  standard_inchi_key: NMUSYJAQQFHJEW-KVTDHHQDSA-N
+  molecular_formula: C8H12N4O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 244.207
+  monoisotopic_mass: 244.08077
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2038
+  source_label: 5-azacytidine
+  minted_identifier: antibioticmech:chebi-57b6f99bd5
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

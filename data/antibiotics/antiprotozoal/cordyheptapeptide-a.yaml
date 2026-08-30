@@ -1,0 +1,47 @@
+identifier: CHEBI:65658
+label: cordyheptapeptide A
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A homodectic cyclic peptide made up from N-methylglycyl, L-phenylalanyl,
+  N-methyl-L-tyrosyl, L-isoleucyl, L-leucyl, N-methyl-D-phenylalanyl and L-prolyl
+  residues linked in sequence. It is an antimalarial drug isolated from the insect
+  pathogenic fungus Cordyceps.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cyclo(N-methylglycyl-L-phenylalanyl-N-methyl-L-tyrosyl-L-isoleucyl-L-leucyl-N-methyl-D-phenylalanyl-L-prolyl)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6S,9S,12S,15S,18R,23aS)-6,18-dibenzyl-12-[(2S)-butan-2-yl]-9-(4-hydroxybenzyl)-15-isobutyl-2,8,17-trimethylhexadecahydro-1H-pyrrolo[1,2-a][1,4,7,10,13,16,19]heptaazacyclohenicosine-1,4,7,10,13,16,19-heptone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24613
+- CHEBI:33853
+- CHEBI:51026
+xrefs:
+- reaxys:11237468
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@@]12CCCN1C(=O)[C@@H](Cc1ccccc1)N(C)C(=O)[C@H](CC(C)C)NC(=O)[C@]([H])([C@@H](C)CC)NC(=O)[C@H](Cc1ccc(O)cc1)N(C)C(=O)[C@H](Cc1ccccc1)NC(=O)CN(C)C2=O'
+  standard_inchi: InChI=1S/C49H65N7O8/c1-8-32(4)43-45(60)51-37(26-31(2)3)46(61)55(7)41(29-34-18-13-10-14-19-34)49(64)56-25-15-20-39(56)48(63)53(5)30-42(58)50-38(27-33-16-11-9-12-17-33)47(62)54(6)40(44(59)52-43)28-35-21-23-36(57)24-22-35/h9-14,16-19,21-24,31-32,37-41,43,57H,8,15,20,25-30H2,1-7H3,(H,50,58)(H,51,60)(H,52,59)/t32-,37-,38-,39-,40-,41+,43-/m0/s1
+  standard_inchi_key: ZXPWAGZHBVVLJM-PPLXTMPISA-N
+  molecular_formula: C49H65N7O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 880.1
+  monoisotopic_mass: 879.48946
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65658
+  source_label: cordyheptapeptide A
+  minted_identifier: antibioticmech:chebi-d91756f4d3
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

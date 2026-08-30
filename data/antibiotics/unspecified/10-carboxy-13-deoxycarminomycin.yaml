@@ -1,0 +1,57 @@
+identifier: CHEBI:31047
+label: 10-carboxy-13-deoxycarminomycin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An anthracycline antibiotic that is 13-deoxycarminomycin substituted at
+  position 10 by a carboxy group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,2R,4S)-4-[(3-amino-2,3,6-trideoxy-α-L-lyxo-hexopyranosyl)oxy]-2-ethyl-2,5,7,12-tetrahydroxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracene-1-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D 788-1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-788-1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D788-1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25830
+- CHEBI:35315
+- CHEBI:35868
+- CHEBI:47779
+- CHEBI:49322
+- CHEBI:63367
+xrefs:
+- cas:97583-07-8
+- kegg.compound:C12427
+- metacyc.compound:CPD-15739
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@@]1(O)C[C@H](O[C@H]2C[C@H](N)[C@H](O)[C@H](C)O2)c2c(O)c3c(c(O)c2[C@H]1C(=O)O)C(=O)c1cccc(O)c1C3=O
+  standard_inchi: InChI=1S/C27H29NO11/c1-3-27(37)8-13(39-14-7-11(28)21(30)9(2)38-14)16-17(20(27)26(35)36)25(34)18-19(24(16)33)23(32)15-10(22(18)31)5-4-6-12(15)29/h4-6,9,11,13-14,20-21,29-30,33-34,37H,3,7-8,28H2,1-2H3,(H,35,36)/t9-,11-,13-,14-,20-,21+,27+/m0/s1
+  standard_inchi_key: MMYTYGXIKKVLES-AGMCFEMXSA-N
+  molecular_formula: C27H29NO11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 543.525
+  monoisotopic_mass: 543.17406
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31047
+  source_label: 10-carboxy-13-deoxycarminomycin
+  minted_identifier: antibioticmech:chebi-2e09d7b012
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

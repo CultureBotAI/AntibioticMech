@@ -1,0 +1,390 @@
+identifier: CHEBI:28077
+label: rifampicin
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of rifamycins that is a a semisynthetic antibiotic
+  derived from Amycolatopsis rifamycinica (previously known as Amycolatopsis mediterranei
+  and Streptomyces mediterranei).
+definition_source: ChEBI
+synonyms:
+- synonym_text: rifampicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: rifampicinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (7S,9E,11S,12R,13S,14R,15R,16R,17S,18S,19E,21Z)-2,15,17,27,29-pentahydroxy-11-methoxy-3,7,12,14,16,18,22-heptamethyl-26-{(E)-[(4-methylpiperazin-1-yl)imino]methyl}-6,23-dioxo-8,30-dioxa-24-azatetracyclo[23.3.1.14,7.05,28]triaconta-1(28),1(29),2,4,9,19,21,25,27-nonaen-13-yl
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(((4-Methyl-1-piperazinyl)imino)methyl)rifamycin SV
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RFP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rifampicin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rifampin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: rifamcin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26580
+- CHEBI:38532
+- CHEBI:46847
+- CHEBI:46920
+- CHEBI:59779
+- CHEBI:72588
+- ARO:3000157
+xrefs:
+- ARO:3000169
+- cas:13292-46-1
+- drugbank:DB01045
+- hmdb:HMDB0015179
+- kegg.compound:C06688
+- kegg.drug:D00211
+- patent:NL6509961
+- patent:US3342810
+- pdb-ccd:RFP
+- reaxys:5723476
+- wikipedia.en:Rifampicin
+- chembl:CHEMBL374478
+- pubchem.compound:135398735
+activity_roles:
+- CHEBI:33231
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:35718
+- CHEBI:35816
+structural_class: rifamycin antibiotic
+structural_class_id: ARO:3000157
+chemical_structure:
+  smiles: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C)CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\C=C\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C
+  standard_inchi: InChI=1S/C43H58N4O12/c1-21-12-11-13-22(2)42(55)45-33-28(20-44-47-17-15-46(9)16-18-47)37(52)30-31(38(33)53)36(51)26(6)40-32(30)41(54)43(8,59-40)57-19-14-29(56-10)23(3)39(58-27(7)48)25(5)35(50)24(4)34(21)49/h11-14,19-21,23-25,29,34-35,39,49-53H,15-18H2,1-10H3,(H,45,55)/b12-11+,19-14+,22-13-,44-20+/t21-,23+,24+,25+,29-,34-,35+,39+,43-/m0/s1
+  standard_inchi_key: JQXXHWHPUNPDRT-WLSIYKJHSA-N
+  molecular_formula: C43H58N4O12
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 822.953
+  monoisotopic_mass: 822.40512
+source_concepts:
+- source: ARO
+  source_id: ARO:3000169
+  source_label: rifampin
+  minted_identifier: antibioticmech:aro-9e3beda439
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:35718
+  - CHEBI:35816
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:28077
+  source_label: rifampicin
+  minted_identifier: antibioticmech:chebi-8bf7b5d163
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:35718
+  - CHEBI:35816
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000245
+  label: RbpA
+  evidence:
+  - reference: ARO:3000245
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000248
+  label: DnaA
+  evidence:
+  - reference: ARO:3000248
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000261
+  label: sigma factor conferring resistance to rifampin
+  evidence:
+  - reference: ARO:3000261
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000384
+  label: AcrAB-TolC
+  evidence:
+  - reference: ARO:3000384
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000390
+  label: rifampin ADP-ribosyltransferase (Arr)
+  evidence:
+  - reference: ARO:3000390
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000444
+  label: rphA
+  evidence:
+  - reference: ARO:3000444
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000501
+  label: rpoB2
+  evidence:
+  - reference: ARO:3000501
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000772
+  label: AdeIJK
+  evidence:
+  - reference: ARO:3000772
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002846
+  label: arr-1
+  evidence:
+  - reference: ARO:3002846
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002847
+  label: arr-2
+  evidence:
+  - reference: ARO:3002847
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002848
+  label: arr-3
+  evidence:
+  - reference: ARO:3002848
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002849
+  label: arr-4
+  evidence:
+  - reference: ARO:3002849
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002850
+  label: arr-5
+  evidence:
+  - reference: ARO:3002850
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002852
+  label: arr-7
+  evidence:
+  - reference: ARO:3002852
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002853
+  label: arr-8
+  evidence:
+  - reference: ARO:3002853
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002883
+  label: rgt1438
+  evidence:
+  - reference: ARO:3002883
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002884
+  label: iri
+  evidence:
+  - reference: ARO:3002884
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003283
+  label: Mycobacterium tuberculosis rpoB with mutations conferring resistance to rifampicin
+  evidence:
+  - reference: ARO:3003283
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003284
+  label: Mycobacterium leprae rpoB mutations conferring resistance to rifampicin
+  evidence:
+  - reference: ARO:3003284
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003285
+  label: Staphylococcus aureus rpoB mutants conferring resistance to rifampicin
+  evidence:
+  - reference: ARO:3003285
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003288
+  label: Escherichia coli rpoB mutants conferring resistance to rifampicin
+  evidence:
+  - reference: ARO:3003288
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003465
+  label: Mycobacterium tuberculosis embB with mutation conferring resistance to rifampicin
+  evidence:
+  - reference: ARO:3003465
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003947
+  label: EfrAB
+  evidence:
+  - reference: ARO:3003947
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003955
+  label: efpA
+  evidence:
+  - reference: ARO:3003955
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003992
+  label: rphB
+  evidence:
+  - reference: ARO:3003992
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004480
+  label: Bifidobacterium adolescentis rpoB mutants conferring resistance to rifampicin
+  evidence:
+  - reference: ARO:3004480
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004563
+  label: Clostridioides difficile rpoB with mutation conferring resistance to rifampicin
+  evidence:
+  - reference: ARO:3004563
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004585
+  label: Klebsiella pneumoniae KpnEF
+  evidence:
+  - reference: ARO:3004585
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004960
+  label: Mycobacterium tuberculosis ponA1 mutations conferring resistance to rifabutin
+  evidence:
+  - reference: ARO:3004960
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004994
+  label: Mycobacterium tuberculosis rpoC mutations confer resistance to rifampicin
+  evidence:
+  - reference: ARO:3004994
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004995
+  label: rifampicin resistant rpoC
+  evidence:
+  - reference: ARO:3004995
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004998
+  label: rifampicin resistant rpoA
+  evidence:
+  - reference: ARO:3004998
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004999
+  label: Mycobacterium tuberculosis rpoA mutations confer resistance to rifampicin
+  evidence:
+  - reference: ARO:3004999
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3005059
+  label: LptD
+  evidence:
+  - reference: ARO:3005059
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007051
+  label: Helicobacter pylori rpoB mutation conferring resistance to rifampicin
+  evidence:
+  - reference: ARO:3007051
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007073
+  label: Bacillus subtilis rpoB mutants conferring resistance to rifampin
+  evidence:
+  - reference: ARO:3007073
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007208
+  label: HelR
+  evidence:
+  - reference: ARO:3007208
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007209
+  label: Streptomyces venezuelae rox
+  evidence:
+  - reference: ARO:3007209
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007210
+  label: Nocardia farcinica rox
+  evidence:
+  - reference: ARO:3007210
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007794
+  label: Vibrio vulnificus rpoB mutants conferring resistance to rifampin
+  evidence:
+  - reference: ARO:3007794
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000169 (rifampin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000737
+  target_label: rifamycin sensitive beta-subunit of RNA polymerase (rpoB)
+  evidence:
+  - reference: ARO:3000737
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000169 (rifampin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

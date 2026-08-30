@@ -1,0 +1,41 @@
+identifier: CHEBI:66249
+label: tolybyssidin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A homodetic cyclic peptide isolated from the culture medium of the cyanobacterium
+  Tolypothrix byssoidea.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R)-1-[(3S,6R,9S,12S,15S,18S,21Z,24S,27S,30S,33S,36S,41aS)-18-benzyl-12,15-di[(2S)-butan-2-yl]-3-(3-carbamimidamidopropyl)-21-ethylidene-9,30-bis[(1R)-1-hydroxyethyl]-6-(2-methylpropyl)-1,4,7,10,13,16,19,22,25,28,31,34,37-tridecaoxo-24,33,36-tri(propan-2-yl)tetracontahydro-1H-pyrrolo[1,2-a][1,4,7,10,13,16,19,22,25,28,31,34,37]tridecaazacyclononatriacontin-27-yl]ethyl
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24613
+xrefs:
+- reaxys:8828542
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C/C=C1\NC(=O)[C@H](Cc2ccccc2)NC(=O)[C@H]([C@@H](C)CC)NC(=O)[C@H]([C@@H](C)CC)NC(=O)[C@H]([C@@H](C)O)NC(=O)[C@@H](CC(C)C)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H]2CCCN2C(=O)[C@H](C(C)C)NC(=O)[C@H](C(C)C)NC(=O)[C@H]([C@@H](C)O)NC(=O)[C@H]([C@@H](C)OC(C)=O)NC(=O)[C@H](C(C)C)NC1=O
+  standard_inchi: InChI=1S/C71H116N16O17/c1-18-38(12)53-65(98)78-48(33-44-26-22-21-23-27-44)60(93)75-45(20-3)58(91)79-50(35(6)7)64(97)86-57(42(16)104-43(17)90)69(102)85-56(41(15)89)67(100)80-51(36(8)9)63(96)81-52(37(10)11)70(103)87-31-25-29-49(87)62(95)76-46(28-24-30-74-71(72)73)59(92)77-47(32-34(4)5)61(94)84-55(40(14)88)68(101)83-54(39(13)19-2)66(99)82-53/h20-23,26-27,34-42,46-57,88-89H,18-19,24-25,28-33H2,1-17H3,(H,75,93)(H,76,95)(H,77,92)(H,78,98)(H,79,91)(H,80,100)(H,81,96)(H,82,99)(H,83,101)(H,84,94)(H,85,102)(H,86,97)(H4,72,73,74)/b45-20-/t38-,39-,40+,41+,42+,46-,47+,48-,49-,50-,51-,52-,53-,54-,55-,56-,57-/m0/s1
+  standard_inchi_key: ZWXCBGUTACBDRV-BAGIKNQXSA-N
+  molecular_formula: C71H116N16O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1465.804
+  monoisotopic_mass: 1464.87044
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66249
+  source_label: tolybyssidin A
+  minted_identifier: antibioticmech:chebi-4e9196a8a2
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

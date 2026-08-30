@@ -1,0 +1,46 @@
+identifier: CHEBI:195528
+label: NPD6433
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An indolyl carboxylate ester that is 1H-indole substituted by methoxycarbonyl
+  and (E)-(8-oxo-1,5,6,8-tetrahydro-2H-1,5-methanopyrido[1,2-a][1,5]diazocin-3(4H)-yl)diazenyl
+  groups at positions 2 and 3, respectively. It targets the enoyl reductase domain
+  of fungal fatty acid synthase, exhibits broad-spectrum antifungal activity, is bioactive
+  against the filamentous mold, Aspergillus fumigatus and has minimal mammalian cytotoxicity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl 3-[(E)-(8-oxo-1,5,6,8-tetrahydro-2H-1,5-methanopyrido[1,2-a][1,5]diazocin-3(4H)-yl)diazenyl]-1H-indole-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24532
+- CHEBI:25248
+- CHEBI:35990
+- CHEBI:46939
+- CHEBI:50996
+- CHEBI:72573
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COC(=O)c1nc2ccccc2c1/N=N/N1C[C@@H]2C[C@H](C1)c1cccc(=O)n1C2
+  standard_inchi: InChI=1S/C21H21N5O3/c1-29-21(28)20-19(15-5-2-3-6-16(15)22-20)23-24-25-10-13-9-14(12-25)17-7-4-8-18(27)26(17)11-13/h2-8,13-14,22H,9-12H2,1H3/b24-23+
+  standard_inchi_key: IXWNPEOFLGJGLY-WCWDXBQESA-N
+  molecular_formula: C21H21N5O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 391.431
+  monoisotopic_mass: 391.16444
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:195528
+  source_label: NPD6433
+  minted_identifier: antibioticmech:chebi-698109ed7f
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

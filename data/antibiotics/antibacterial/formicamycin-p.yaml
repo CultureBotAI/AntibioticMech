@@ -1,0 +1,39 @@
+identifier: antibioticmech:aro-0c3c5e785d
+label: formicamycin P
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Formicamycin congeners are promising antibiotics with potent activity
+  against Gram-positive pathogens including VRE and MRSA and display a high barrier
+  to selection of resistant isolates.
+definition_source: PMID:33440167
+parent_compounds:
+- ARO:3005171
+xrefs:
+- ARO:3007590
+- CHEBI:226642
+- chembl:CHEMBL4637392
+- pubchem.compound:156011794
+structural_class: polyketide with antibiotic activity
+structural_class_id: ARO:3005171
+chemical_structure:
+  smiles: CC1=CC(=CC(=C1C2=CC(=C(C3=C2C(=O)[C@@]4([C@H](C3)C(C5=C(C4=O)C(=CC(=C5)O)O)(C)C)O)Cl)O)O)OC
+  standard_inchi: InChI=1S/C28H25ClO8/c1-11-5-13(37-4)8-18(32)21(11)14-9-19(33)24(29)15-10-20-27(2,3)16-6-12(30)7-17(31)23(16)26(35)28(20,36)25(34)22(14)15/h5-9,20,30-33,36H,10H2,1-4H3/t20-,28-/m1/s1
+  standard_inchi_key: LWRJCRVGRLKUNI-PIIWDFAUSA-N
+  molecular_formula: C28H25ClO8
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 524.9
+  monoisotopic_mass: 524.1237954
+source_concepts:
+- source: ARO
+  source_id: ARO:3007590
+  source_label: formicamycin P
+  minted_identifier: antibioticmech:aro-0c3c5e785d
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

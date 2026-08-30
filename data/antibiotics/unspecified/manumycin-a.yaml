@@ -1,0 +1,69 @@
+identifier: CHEBI:29623
+label: manumycin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polyketide with formula C31H38N2O7 initially isolated from Streptomyces
+  parvulus as a result of a random screening program for farnesyl transferase (FTase)
+  inhibitors. It is a natural product that exhibits anticancer and antibiotic properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E,4E,6R)-N-[(1S,5S,6R)-5-hydroxy-5-{(1E,3E,5E)-7-[(2-hydroxy-5-oxocyclopent-1-en-1-yl)amino]-7-oxohepta-1,3,5-trien-1-yl}-2-oxo-7-oxabicyclo[4.1.0]hept-3-en-3-yl]-2,4,6-trimethyldeca-2,4-dienamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2E,4E,6R)-N-[(1S,5S,6R)-5-Hydroxy-5-[(1E,3E,5E)-7-[(2-hydroxy-5-oxo-1-cyclopenten-1-yl)amino]-7-oxo-1,3,5-heptatrien-1-yl]-2-oxo-7-oxabicyclo[4.1.0]hept-3-en-3-yl]-2,4,6-trimethyl-2,4-decadienamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-manumycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 622141
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: UCF 1C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: UCF1-C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: manumycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:26188
+- CHEBI:26878
+- CHEBI:27171
+- CHEBI:32955
+- CHEBI:51751
+xrefs:
+- cas:52665-74-4
+- chemspider:4942813
+- hmdb:HMDB0242678
+- kegg.compound:C12111
+- lipidmaps:LMFA08020185
+- metacyc.compound:CPD-18768
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CCCC[C@@H](C)/C=C(C)/C=C(\C)C(=O)NC1=C[C@@](O)(/C=C/C=C/C=C/C(=O)NC2=C(O)CCC2=O)[C@@H]2O[C@@H]2C1=O
+  standard_inchi: InChI=1S/C31H38N2O7/c1-5-6-11-19(2)16-20(3)17-21(4)30(38)32-22-18-31(39,29-28(40-29)27(22)37)15-10-8-7-9-12-25(36)33-26-23(34)13-14-24(26)35/h7-10,12,15-19,28-29,34,39H,5-6,11,13-14H2,1-4H3,(H,32,38)(H,33,36)/b8-7+,12-9+,15-10+,20-16+,21-17+/t19-,28-,29-,31+/m1/s1
+  standard_inchi_key: TWWQHCKLTXDWBD-MVTGTTCWSA-N
+  molecular_formula: C31H38N2O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 550.652
+  monoisotopic_mass: 550.2679
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:29623
+  source_label: manumycin A
+  minted_identifier: antibioticmech:chebi-f98c6801c7
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

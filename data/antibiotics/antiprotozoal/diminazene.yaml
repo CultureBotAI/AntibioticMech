@@ -1,0 +1,59 @@
+identifier: CHEBI:81724
+label: diminazene
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A triazene derivative that is triazene in which each of the terminal nitrogens
+  is substituted by a 4-carbamimidoylphenyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: diminazeno
+  synonym_type: INN
+  source: chebi
+- synonym_text: diminazenum
+  synonym_type: INN
+  source: chebi
+- synonym_text: diminazène
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4,4'-triaz-1-ene-1,3-diyldibenzenecarboximidamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,4'-(1-triazene-1,3-diyl)bis-benzenecarboximidamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35359
+- CHEBI:72573
+xrefs:
+- cas:536-71-0
+- drugbank:DB03608
+- kegg.compound:C18388
+- pdb-ccd:BRN
+- reaxys:3153756
+- reaxys:5757660
+- wikipedia.en:Diminazen
+activity_roles:
+- CHEBI:36335
+chemical_structure:
+  smiles: N=C(N)c1ccc(N=NNc2ccc(C(=N)N)cc2)cc1
+  standard_inchi: InChI=1S/C14H15N7/c15-13(16)9-1-5-11(6-2-9)19-21-20-12-7-3-10(4-8-12)14(17)18/h1-8H,(H3,15,16)(H3,17,18)(H,19,20)
+  standard_inchi_key: XNYZHCFCZNMTFY-UHFFFAOYSA-N
+  molecular_formula: C14H15N7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 281.323
+  monoisotopic_mass: 281.13889
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81724
+  source_label: diminazene
+  minted_identifier: antibioticmech:chebi-a8213ef0c2
+  role_terms:
+  - CHEBI:36335
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

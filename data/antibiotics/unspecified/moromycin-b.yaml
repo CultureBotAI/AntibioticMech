@@ -1,0 +1,39 @@
+identifier: CHEBI:66404
+label: moromycin B
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An angucycline that consists of tetrangomycin linked to a deoxy sugar
+  moiety at position 9 via a C-glycosidic bond. It is isolated from Streptomyces sp.KY002
+  and exhibits cytotoxicity against human lung cancer and MCF-7 human breast cancer
+  cells.
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:20857
+- CHEBI:70737
+xrefs:
+- reaxys:19172513
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12O[C@@H](C)C(=O)C[C@]1([H])O[C@]1([H])C[C@H](c3ccc4c(c3O)C(=O)c3ccc5c(c3C4=O)C(=O)C[C@](C)(O)C5)O[C@H](C)[C@@]1([H])O2'
+  standard_inchi: InChI=1S/C31H30O10/c1-12-18(32)8-22-30(39-12)41-29-13(2)38-20(9-21(29)40-22)15-6-7-17-25(26(15)34)28(36)16-5-4-14-10-31(3,37)11-19(33)23(14)24(16)27(17)35/h4-7,12-13,20-22,29-30,34,37H,8-11H2,1-3H3/t12-,13+,20+,21+,22-,29+,30-,31+/m0/s1
+  standard_inchi_key: IVVLBSCKLIYBCU-GEMPFEMJSA-N
+  molecular_formula: C31H30O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 562.571
+  monoisotopic_mass: 562.1839
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66404
+  source_label: moromycin B
+  minted_identifier: antibioticmech:chebi-612989d3a2
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

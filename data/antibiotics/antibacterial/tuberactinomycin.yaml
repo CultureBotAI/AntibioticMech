@@ -1,0 +1,51 @@
+identifier: antibioticmech:aro-4c6e0c1ff0
+label: tuberactinomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Tuberactinomycins are a family of cyclic peptide antibiotics that are
+  important in the treatment of tuberculosis. Tuberactinomycins contain nonproteinogenic
+  amino acids and inhibit group I self-splicing RNA to disrupt prokaryotic protein
+  synthesis.
+definition_source: PMID:7509881
+parent_compounds:
+- ARO:3009657
+xrefs:
+- ARO:3000490
+- pubchem.compound:24847446
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: C1[C@@H](NC(=N[C@H]1O)N)C2C(=O)NCC(C(=O)NC(C(=O)NC(C(=O)N/C(=C\NC(=O)N)/C(=O)N2)CO)CO)NC(=O)CC(C(CCN)O)N
+  standard_inchi: InChI=1S/C25H43N13O11/c26-2-1-15(41)9(27)3-16(42)32-11-5-30-23(48)18(10-4-17(43)37-24(28)36-10)38-20(45)12(6-31-25(29)49)33-21(46)13(7-39)35-22(47)14(8-40)34-19(11)44/h6,9-11,13-15,17-18,39-41,43H,1-5,7-8,26-27H2,(H,30,48)(H,32,42)(H,33,46)(H,34,44)(H,35,47)(H,38,45)(H3,28,36,37)(H3,29,31,49)/b12-6-/t9?,10-,11?,13?,14?,15?,17+,18?/m1/s1
+  standard_inchi_key: JCTPGOAHEVLZAB-KIXAZQDESA-N
+  molecular_formula: C25H43N13O11
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 701.7
+  monoisotopic_mass: 701.32049924
+source_concepts:
+- source: ARO
+  source_id: ARO:3000490
+  source_label: tuberactinomycin
+  minted_identifier: antibioticmech:aro-4c6e0c1ff0
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000729
+  target_label: ribosomal complex
+  evidence:
+  - reference: ARO:3000729
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000490 (tuberactinomycin);
+      database assertion, not a primary citation.
+- target_id: ARO:3000739
+  target_label: RNA guanosine binding site
+  evidence:
+  - reference: ARO:3000739
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000490 (tuberactinomycin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

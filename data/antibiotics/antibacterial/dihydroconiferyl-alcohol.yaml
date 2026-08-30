@@ -1,0 +1,58 @@
+identifier: CHEBI:4559
+label: dihydroconiferyl alcohol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of class of phenols that is 2-methoxyphenol substituted by a
+  3-hydroxypropyl group at position 4.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-(3-hydroxypropyl)-2-methoxyphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(4-guaiacyl)propanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(4-hydroxy-3-methoxyphenyl)-propan-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dihydroconiferyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: guaiacyl propanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:4917
+xrefs:
+- cas:2305-13-7
+- kegg.compound:C10448
+- knapsack:C00002736
+- lincs.smallmolecule:LSM-37090
+- metacyc.compound:CPD-94
+- reaxys:2048960
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1cc(CCCO)ccc1O
+  standard_inchi: InChI=1S/C10H14O3/c1-13-10-7-8(3-2-6-11)4-5-9(10)12/h4-5,7,11-12H,2-3,6H2,1H3
+  standard_inchi_key: MWOMNLDJNQWJMK-UHFFFAOYSA-N
+  molecular_formula: C10H14O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 182.219
+  monoisotopic_mass: 182.09429
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4559
+  source_label: dihydroconiferyl alcohol
+  minted_identifier: antibioticmech:chebi-944ecac219
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

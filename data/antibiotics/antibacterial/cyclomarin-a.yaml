@@ -1,0 +1,41 @@
+identifier: antibioticmech:aro-c10ed01875
+label: cyclomarin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Cyclomarin A was found to be bacteriocidal against bacteria replicating
+  in culture broth and in human-derived macrophages and a series of multidrug resistant
+  clinical isolates. It was identified as a potent antitubercular compound in a natural
+  product whole cell screen. Importantly it kills both growing and dormant, non-replicating
+  mycobacteria.
+definition_source: PMID:27241518
+parent_compounds:
+- ARO:3007540
+xrefs:
+- ARO:3007541
+- CHEBI:182606
+- chembl:CHEMBL1241238
+- pubchem.compound:10772429
+structural_class: cyclomarin antibiotics
+structural_class_id: ARO:3007540
+chemical_structure:
+  smiles: C[C@H]1C(=O)N[C@H](C(=O)N[C@H](C(=O)N([C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N([C@H](C(=O)N1)C[C@@H](C)CO)C)[C@@H](C2=CN(C3=CC=CC=C32)C(C)(C)[C@@H]4CO4)O)[C@H](C)C=C(C)C)CC(C)C)C)C(C)C)[C@@H](C5=CC=CC=C5)OC
+  standard_inchi: InChI=1S/C56H82N8O11/c1-30(2)24-34(8)44-52(70)60-45(47(66)38-27-64(56(10,11)42-29-75-42)39-23-19-18-22-37(38)39)55(73)63(13)41(26-33(7)28-65)50(68)57-35(9)49(67)61-46(48(74-14)36-20-16-15-17-21-36)53(71)58-43(32(5)6)54(72)62(12)40(25-31(3)4)51(69)59-44/h15-24,27,31-35,40-48,65-66H,25-26,28-29H2,1-14H3,(H,57,68)(H,58,71)(H,59,69)(H,60,70)(H,61,67)/t33-,34-,35+,40+,41+,42+,43+,44+,45+,46+,47-,48-/m1/s1
+  standard_inchi_key: WCNJVJCYRBJSLC-BCJYPDSRSA-N
+  molecular_formula: C56H82N8O11
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1043.3
+  monoisotopic_mass: 1042.61030546
+source_concepts:
+- source: ARO
+  source_id: ARO:3007541
+  source_label: cyclomarin A
+  minted_identifier: antibioticmech:aro-c10ed01875
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

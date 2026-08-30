@@ -1,0 +1,872 @@
+id: https://w3id.org/kg-microbe/antibioticmech
+name: antibioticmech
+title: AntibioticMech - Antimicrobial Chemical Structure Schema
+description: |
+  LinkML schema for individual chemical structures with antimicrobial activity.
+
+  One AntibioticRecord is ONE chemical structure — a compound with a defined
+  connectivity (InChIKey), not a drug class. "Macrolide antibiotic" is a
+  structural class and appears as `structural_class` / `parent_compounds` on the
+  records it covers; erythromycin A is a record.
+
+  Records are harmonized from ChEBI (role: antimicrobial agent and its
+  microbe-targeting sub-roles) and CARD's Antibiotic Resistance Ontology
+  (ARO antibiotic molecules), and curated incrementally. The mechanism layer —
+  molecular target, mode of action, resistance route, and the evidence-backed
+  `causal_graphs` — is what makes this a *Mech* repository rather than a
+  compound list.
+
+  Follows the curation pattern of TraitMech, CultureMech, MediaIngredientMech,
+  CommunityMech and HabitatMech: one YAML per entity, ontology-grounded,
+  evidence-backed, closed-schema validated, reproducible from committed inputs.
+
+license: https://creativecommons.org/publicdomain/zero/1.0/
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  antibioticmech: https://w3id.org/kg-microbe/antibioticmech/
+  biolink: https://w3id.org/biolink/vocab/
+  CHEBI: http://purl.obolibrary.org/obo/CHEBI_
+  ARO: http://purl.obolibrary.org/obo/ARO_
+  GO: http://purl.obolibrary.org/obo/GO_
+  PATO: http://purl.obolibrary.org/obo/PATO_
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+  RO: http://purl.obolibrary.org/obo/RO_
+  IAO: http://purl.obolibrary.org/obo/IAO_
+  NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
+  # Chemistry and drug registries
+  pubchem.compound: https://pubchem.ncbi.nlm.nih.gov/compound/
+  CHEMBL.COMPOUND: https://www.ebi.ac.uk/chembl/compound_report_card/
+  cas: https://commonchemistry.cas.org/detail?cas_rn=
+  drugbank: https://go.drugbank.com/drugs/
+  KEGG: https://www.kegg.jp/entry/
+  unii: https://precision.fda.gov/uniisearch/srs/unii/
+  inchikey: https://www.chemspider.com/inchikey/
+  npatlas: https://www.npatlas.org/explore/compounds/
+  mibig: https://mibig.secondarymetabolites.org/repository/
+  # Protein families / complexes for mechanism nodes
+  InterPro: https://www.ebi.ac.uk/interpro/entry/InterPro/
+  NCBIfam: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/evidence/
+  ComplexPortal: https://www.ebi.ac.uk/complexportal/complex/
+  UniProtKB: https://www.uniprot.org/uniprotkb/
+  # Provenance
+  PMID: http://www.ncbi.nlm.nih.gov/pubmed/
+  DOI: https://doi.org/
+  dcterms: http://purl.org/dc/terms/
+  oboInOwl: http://www.geneontology.org/formats/oboInOwl#
+  skos: http://www.w3.org/2004/02/skos/core#
+
+default_prefix: antibioticmech
+default_range: string
+
+imports:
+  - linkml:types
+  # Shared, byte-identical Mech module: Discussion (knowledge gaps) + Dataset.
+  # Vendored + sha-pinned across the Mech repos — see culturebotai-claw#7.
+  - mech_shared
+
+types:
+  curie:
+    typeof: string
+    uri: xsd:string
+    description: A compact URI (prefix:local), e.g. CHEBI:48923.
+    pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+
+# ================================================================
+# ROOT CLASS — one YAML file per AntibioticRecord
+# ================================================================
+
+classes:
+
+  AntibioticRecord:
+    class_uri: antibioticmech:AntibioticRecord
+    tree_root: true
+    description: >-
+      One individual chemical structure with antimicrobial activity. Identity is
+      the structure, not the name or the brand: a record is keyed by a ChEBI
+      CURIE where one exists and otherwise by a minted, content-hashed
+      `antibioticmech:` CURIE, and it carries every source concept that resolved
+      to it.
+    attributes:
+      identifier:
+        description: >-
+          Stable CURIE for this structure. Seeded records prefer the ChEBI
+          CURIE (e.g. CHEBI:48923); a source concept with no defensible ontology
+          identity keeps a minted `antibioticmech:<source>-<hash>` CURIE.
+        identifier: true
+        required: true
+        range: curie
+
+      label:
+        description: >-
+          Preferred compound name. ChEBI's name where the record is grounded in
+          ChEBI, otherwise the source's own name.
+        required: true
+        range: string
+
+      definition:
+        description: >-
+          Textual definition of the compound — ChEBI's IAO:0000115 definition or
+          CARD's ARO definition. Curator may extend.
+        range: string
+
+      definition_source:
+        description: >-
+          IAO:0000119 — citation for the definition (PMID:..., DOI:..., or the
+          source database when the definition is the database's own).
+        range: string
+
+      synonyms:
+        description: Alternate names with their scope and provenance.
+        multivalued: true
+        inlined_as_list: true
+        range: CompoundSynonym
+
+      parent_compounds:
+        description: >-
+          Strictly broader CURIEs — ChEBI is_a parents and the ARO drug class
+          this molecule belongs to. Structural classes live here, never as
+          records of their own.
+        multivalued: true
+        range: curie
+
+      xrefs:
+        description: >-
+          Equivalent identifiers in other resources (ARO, PubChem, ChEMBL, CAS,
+          DrugBank, KEGG, UNII). Use only for the same structure; a broader
+          class belongs in `parent_compounds`.
+        multivalued: true
+        range: curie
+        slot_uri: oboInOwl:hasDbXref
+
+      antimicrobial_class:
+        description: >-
+          Coarse activity bucket used for filesystem layout and reporting,
+          derived from the source role terms at seed time. A compound with more
+          than one microbial target class is filed under its primary class and
+          keeps the rest in `activity_roles`.
+        required: true
+        range: AntimicrobialClassEnum
+
+      activity_roles:
+        description: >-
+          Every antimicrobial role CURIE asserted by a source (e.g.
+          CHEBI:33282 antibacterial agent, CHEBI:35718 antifungal agent).
+          The unreduced evidence behind `antimicrobial_class`.
+        multivalued: true
+        range: curie
+
+      structural_class:
+        description: >-
+          Human-readable chemical class (e.g. "macrolide antibiotic",
+          "glycopeptide antibiotic"), from the ARO drug class or the ChEBI
+          parent lineage.
+        range: string
+
+      structural_class_id:
+        description: CURIE for `structural_class` (ARO or CHEBI).
+        range: curie
+
+      chemical_structure:
+        description: >-
+          The structure itself. A record without an InChIKey is not an
+          individual chemical structure and does not belong in the corpus;
+          `just verify-corpus` enforces this for seeded records.
+        range: ChemicalStructure
+
+      biosynthesis_origin:
+        description: Natural product, semisynthetic derivative, or fully synthetic.
+        range: BiosynthesisOriginEnum
+
+      producer_organisms:
+        description: >-
+          Organisms that biosynthesize this compound, with the biosynthetic gene
+          cluster where one is known. Empty for synthetic compounds.
+        multivalued: true
+        inlined_as_list: true
+        range: ProducerOrganism
+
+      molecular_targets:
+        description: >-
+          The molecular entity or process the compound acts on, grounded in GO,
+          InterPro, ComplexPortal, ARO, or UniProt. Every target carries
+          evidence: this is a mechanistic claim, not a classification.
+        multivalued: true
+        inlined_as_list: true
+        range: MolecularTarget
+
+      mode_of_action:
+        description: >-
+          Coarse mechanism bucket (cell-wall synthesis inhibition, protein
+          synthesis inhibition, ...). The detail belongs in `molecular_targets`
+          and `causal_graphs`.
+        range: ModeOfActionEnum
+
+      mode_of_action_notes:
+        description: Curator rationale for the mode-of-action assignment.
+        range: string
+
+      cidality:
+        description: Whether the compound kills or inhibits growth, where a source states it.
+        range: CidalityEnum
+
+      activity_spectrum:
+        description: >-
+          Measured or curated activity against specific taxa. Each item is one
+          organism-level claim with its assay and citation; unsourced spectrum
+          claims do not belong here.
+        multivalued: true
+        inlined_as_list: true
+        range: ActivityObservation
+
+      resistance_mechanisms:
+        description: >-
+          Known routes by which microbes resist this compound, grounded in ARO
+          where CARD models them.
+        multivalued: true
+        inlined_as_list: true
+        range: ResistanceMechanism
+
+      clinical_status:
+        description: Regulatory / use status, where a source states it.
+        range: ClinicalStatusEnum
+
+      source_concepts:
+        description: >-
+          Every upstream concept that resolved to this record, with its native
+          identifier and label. The merge is the product: this is what shows a
+          consumer that ChEBI and CARD are describing the same structure.
+        multivalued: true
+        inlined_as_list: true
+        range: SourceConcept
+
+      grounding_status:
+        description: >-
+          Whether the record's identity is an ontology term or a minted CURIE,
+          and how that decision was reached.
+        range: GroundingStatusEnum
+
+      grounding_notes:
+        description: Curator rationale for the grounding decision.
+        range: string
+
+      evidence:
+        description: >-
+          Record-level citations. Optional by design (compare
+          `CausalEdge.evidence`, which is required): a seeded record inherits
+          provenance from ChEBI/CARD, while every causal claim must carry its
+          own support.
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
+
+      causal_graphs:
+        description: >-
+          Evidence-backed mechanism graphs: how the compound reaches its target,
+          what the target does, and how the effect propagates to growth
+          inhibition or death.
+        multivalued: true
+        inlined_as_list: true
+        range: CausalGraph
+
+      curation_status:
+        description: >-
+          Lifecycle flag. SEEDED came straight from the committed inventories;
+          REVIEWED has curator sign-off; DEPRECATED is retained for
+          traceability; PROPOSED is a curator/literature addition not yet
+          reviewed.
+        required: true
+        range: CurationStatusEnum
+
+      curation_history:
+        description: Append-only audit trail.
+        multivalued: true
+        inlined_as_list: true
+        range: CurationEvent
+
+      discussions:
+        description: >-
+          Open questions, knowledge gaps, controversies and curation todos
+          attached to this compound (shared Discussion supertype; anchor
+          `attaches_to` into e.g. `causal_graphs#<edge>`).
+        multivalued: true
+        inlined_as_list: true
+        range: Discussion
+
+      datasets:
+        description: Public datasets (screening, omics, structural) relevant to this compound.
+        multivalued: true
+        inlined_as_list: true
+        range: Dataset
+
+  ChemicalStructure:
+    description: >-
+      Structure and computed properties for one compound. The InChIKey is the
+      identity check: two records with the same InChIKey are the same structure
+      and must be merged.
+    attributes:
+      smiles:
+        description: SMILES string, as published by the structure source.
+        range: string
+      standard_inchi:
+        description: Standard InChI.
+        range: string
+      standard_inchi_key:
+        description: Standard InChIKey (14-10-1 block form).
+        range: string
+        pattern: "^[A-Z]{14}-[A-Z]{10}-[A-Z]$"
+      molecular_formula:
+        description: Molecular formula (e.g. C16H18N2O4S).
+        range: string
+      charge:
+        description: Net formal charge.
+        range: integer
+      average_mass:
+        description: Average molecular mass in Da.
+        range: float
+      monoisotopic_mass:
+        description: Monoisotopic mass in Da.
+        range: float
+      structure_source:
+        description: Where the structure came from (e.g. ChEBI, PubChem).
+        range: string
+      retrieved_on:
+        description: Date the structure and properties were retrieved.
+        range: date
+
+  SourceConcept:
+    description: >-
+      One upstream concept that resolved to this record. Keeps the source's own
+      identifier and label so a merge stays auditable and reversible.
+    attributes:
+      source:
+        description: Upstream resource.
+        required: true
+        range: SourceEnum
+      source_id:
+        description: >-
+          The source's native identifier (e.g. CHEBI:48923, ARO:0000006).
+          Free-text for sources without CURIEs.
+        required: true
+        range: string
+      source_label:
+        description: The label the source uses for this concept.
+        required: true
+        range: string
+      minted_identifier:
+        description: >-
+          The content-hashed `antibioticmech:` CURIE for this source concept.
+          Stable across re-seeds and the key that `curation/decisions.tsv` rows
+          are written against — including for concepts that later ground to an
+          ontology term.
+        required: true
+        range: curie
+      role_terms:
+        description: Antimicrobial role CURIEs this source asserts for the concept.
+        multivalued: true
+        range: curie
+      source_version:
+        description: Release or retrieval date of the source inventory.
+        range: string
+
+  CompoundSynonym:
+    description: An alternate name with its scope.
+    attributes:
+      synonym_text:
+        required: true
+        range: string
+      synonym_type:
+        range: SynonymTypeEnum
+      source:
+        description: Where the synonym came from (e.g. "chebi", "aro", "PMID:...").
+        range: string
+
+  ProducerOrganism:
+    description: >-
+      An organism that biosynthesizes this compound. A producer claim is a
+      biological claim and should carry a citation or a BGC accession.
+    attributes:
+      taxon_id:
+        description: NCBITaxon CURIE of the producing organism.
+        required: true
+        range: string
+        pattern: "^NCBITaxon:[0-9]+$"
+      taxon_label:
+        description: Scientific name of the producing organism.
+        required: true
+        range: string
+      biosynthetic_gene_cluster:
+        description: MIBiG accession for the BGC, where one is characterized.
+        range: string
+        pattern: "^BGC[0-9]{7}$"
+      note:
+        range: string
+      reference:
+        description: PMID:..., DOI:..., or an opaque URL.
+        range: string
+
+  MolecularTarget:
+    description: >-
+      The molecular entity or process the compound acts on. Prefer a
+      taxon-agnostic family, complex, or function term; an organism-specific
+      UniProt accession is an example, not the target identity.
+    attributes:
+      target_id:
+        description: CURIE for the target (GO, InterPro, ComplexPortal, ARO, CHEBI).
+        range: curie
+      target_label:
+        description: Human-readable target name (e.g. "50S ribosomal subunit").
+        required: true
+        range: string
+      target_type:
+        description: What kind of entity the target is.
+        range: TargetTypeEnum
+      protein_examples:
+        description: >-
+          Organism-specific UniProt entries illustrating a taxon-agnostic
+          target, each with the organism the role was established in.
+        multivalued: true
+        inlined_as_list: true
+        range: ProteinExample
+      evidence:
+        description: >-
+          Primary-source support for the target claim. Required: a target is a
+          mechanistic assertion, not a classification inherited from ChEBI.
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
+
+  ProteinExample:
+    description: >-
+      A source-backed UniProt protein paired with the organism in which its role
+      was established. Reviewed Swiss-Prot entries are preferred. One subunit
+      accession must not be presented as an entire multisubunit complex.
+    attributes:
+      uniprot_id:
+        required: true
+        range: string
+        pattern: "^UniProtKB:[A-Z0-9]+$"
+      protein_label:
+        required: true
+        range: string
+      gene_symbol:
+        range: string
+      taxon_id:
+        required: true
+        range: string
+        pattern: "^NCBITaxon:[0-9]+$"
+      taxon_label:
+        required: true
+        range: string
+      entry_status:
+        required: true
+        range: UniProtEntryStatusEnum
+      retrieved_on:
+        required: true
+        range: date
+      role:
+        description: Source-backed role in this mechanism, including component role for a complex.
+        range: string
+
+  ActivityObservation:
+    description: >-
+      One activity claim against one target organism, with the assay that
+      produced it. A number without a method is not an observation.
+    attributes:
+      taxon_id:
+        description: NCBITaxon CURIE of the organism tested.
+        range: string
+        pattern: "^NCBITaxon:[0-9]+$"
+      taxon_label:
+        description: Organism or group tested, as named by the source.
+        required: true
+        range: string
+      activity:
+        description: Qualitative outcome.
+        range: ActivityCallEnum
+      mic_value:
+        description: Minimum inhibitory concentration, in `mic_units`.
+        range: float
+      mic_units:
+        description: Units for `mic_value` (e.g. mg/L, µM). Required whenever `mic_value` is set.
+        range: string
+      mic_qualifier:
+        description: Relational qualifier for the reported value (e.g. ">", "<=", "MIC90").
+        range: string
+      assay:
+        description: Method (e.g. "CLSI broth microdilution", "agar diffusion").
+        range: string
+      strain:
+        description: Strain designation, where the source names one.
+        range: string
+      evidence:
+        description: Citation for this observation. Required.
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
+
+  ResistanceMechanism:
+    description: >-
+      A route by which microbes resist this compound. Grounded in ARO where
+      CARD models it, otherwise curator-described with evidence.
+    attributes:
+      mechanism_type:
+        description: Coarse resistance route.
+        required: true
+        range: ResistanceMechanismEnum
+      aro_id:
+        description: ARO CURIE for the determinant or mechanism, where CARD models it.
+        range: curie
+      label:
+        description: Human-readable name of the determinant or mechanism.
+        required: true
+        range: string
+      gene_families:
+        description: Gene or protein family names implicated (e.g. "blaTEM", "ermB").
+        multivalued: true
+        range: string
+      note:
+        range: string
+      evidence:
+        description: Citation for the resistance claim. Required.
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
+
+  EvidenceItem:
+    description: A literature or database citation.
+    attributes:
+      reference:
+        description: PMID:..., DOI:..., a database CURIE, or an opaque URL.
+        required: true
+        range: string
+      snippet:
+        description: Verbatim quote from the source supporting the claim.
+        range: string
+      notes:
+        range: string
+
+  CausalGraph:
+    description: >-
+      A directed mechanism graph for this compound: uptake, target engagement,
+      and the downstream effect on the microbe.
+    attributes:
+      graph_id:
+        identifier: true
+        required: true
+        range: string
+      title:
+        range: string
+      description:
+        range: string
+      scope_status:
+        description: >-
+          Curator disposition for whether this graph represents a biological
+          mechanism. NONMECHANISTIC is reserved for an explicitly reviewed
+          classification or measurement context and must be explained in
+          `scope_notes`.
+        range: CausalGraphScopeEnum
+      scope_notes:
+        range: string
+      nodes:
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: CausalNode
+      edges:
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: CausalEdge
+
+  CausalNode:
+    description: >-
+      A node in a compound mechanism graph. GENE_OR_PROTEIN is restricted to
+      proteins, protein families and complexes; genes and operons are node
+      metadata, not primary nodes.
+    attributes:
+      node_id:
+        identifier: true
+        required: true
+        range: string
+      label:
+        required: true
+        range: string
+      node_type:
+        required: true
+        range: CausalNodeTypeEnum
+      grounding:
+        description: >-
+          Preferred ontology or database CURIE. A protein node should use a
+          family, function, or complex term (GO / InterPro / NCBIfam /
+          ComplexPortal); UniProt accessions are organism-specific instances and
+          belong in `MolecularTarget.protein_examples`.
+        range: curie
+      grounding_status:
+        description: >-
+          Explicit review disposition for a node with no exact grounding.
+          REVIEWED_LABEL_ONLY requires a reason in `grounding_notes`.
+        range: NodeGroundingStatusEnum
+      grounding_notes:
+        range: string
+      xrefs:
+        multivalued: true
+        range: curie
+      description:
+        range: string
+      gene_symbols:
+        description: Gene symbols encoding this protein or the components of this complex.
+        multivalued: true
+        range: string
+
+  CausalEdge:
+    description: An evidence-backed directed relationship in a mechanism graph.
+    attributes:
+      subject:
+        description: Local node_id of the upstream node.
+        required: true
+        range: string
+      predicate:
+        description: Human-readable predicate label or relation CURIE.
+        required: true
+        range: string
+      predicate_id:
+        description: Optional ontology CURIE grounding the predicate.
+        range: curie
+      object:
+        description: Local node_id of the downstream node.
+        required: true
+        range: string
+      description:
+        range: string
+      evidence:
+        description: >-
+          Edge-level support. Required, in contrast to `AntibioticRecord.evidence`:
+          a mechanism claim is curator-asserted and is not covered by ChEBI's or
+          CARD's own provenance.
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
+
+  CurationEvent:
+    description: A timestamped curator action on an AntibioticRecord.
+    attributes:
+      timestamp:
+        range: datetime
+        required: true
+        pattern: "^20[0-9]{2}-"
+      curator:
+        range: string
+      action:
+        range: string
+      changes:
+        range: string
+      llm_assisted:
+        range: boolean
+
+# ================================================================
+# ENUMS
+# ================================================================
+
+enums:
+
+  AntimicrobialClassEnum:
+    description: >-
+      Coarse activity bucket, also the filesystem category. Assigned from the
+      source role terms; a compound asserted against several microbial groups is
+      filed under BROAD_SPECTRUM only when a source says so, not by counting
+      roles.
+    permissible_values:
+      ANTIBACTERIAL:
+        description: Active against bacteria (includes antibacterial drugs and agents).
+      ANTIMYCOBACTERIAL:
+        description: Antitubercular, antimycobacterial and leprostatic agents.
+      ANTIFUNGAL:
+        description: Antifungal agents, drugs, agrochemical fungicides.
+      ANTIPROTOZOAL:
+        description: Antimalarial, antileishmanial, trypanocidal, coccidiostat, antitrichomonal.
+      BIOCIDE:
+        description: Disinfectants and antimicrobial food or cosmetic preservatives.
+      ANTIMICROBIAL_UNSPECIFIED:
+        description: >-
+          Asserted as an antimicrobial agent or antibiotic without a named
+          microbial target group.
+      OTHER:
+        description: In scope by curation but fitting none of the above.
+
+  ModeOfActionEnum:
+    description: Coarse mechanism bucket. Detail lives in molecular_targets and causal_graphs.
+    permissible_values:
+      CELL_WALL_SYNTHESIS_INHIBITION:
+      PROTEIN_SYNTHESIS_INHIBITION:
+      NUCLEIC_ACID_SYNTHESIS_INHIBITION:
+      FOLATE_PATHWAY_INHIBITION:
+      MEMBRANE_DISRUPTION:
+      CELL_MEMBRANE_SYNTHESIS_INHIBITION:
+      ERGOSTEROL_PATHWAY_INHIBITION:
+        description: Antifungal azoles, allylamines, polyenes acting on ergosterol or its synthesis.
+      ENERGY_METABOLISM_INHIBITION:
+      OXIDATIVE_DAMAGE:
+      MULTIPLE:
+        description: Several mechanisms are documented and none is primary.
+      OTHER:
+      UNKNOWN:
+
+  CidalityEnum:
+    permissible_values:
+      BACTERICIDAL:
+      BACTERIOSTATIC:
+      FUNGICIDAL:
+      FUNGISTATIC:
+      CONCENTRATION_DEPENDENT:
+        description: Cidal at higher concentrations, static at lower ones, per source.
+      UNKNOWN:
+
+  ActivityCallEnum:
+    permissible_values:
+      ACTIVE:
+      INACTIVE:
+      VARIABLE:
+      INTRINSICALLY_RESISTANT:
+        description: The organism is intrinsically resistant, per the source.
+
+  ResistanceMechanismEnum:
+    permissible_values:
+      ANTIBIOTIC_INACTIVATION:
+        description: Enzymatic hydrolysis, transfer, or redox modification of the compound.
+      ANTIBIOTIC_TARGET_ALTERATION:
+      ANTIBIOTIC_TARGET_PROTECTION:
+      ANTIBIOTIC_TARGET_REPLACEMENT:
+      ANTIBIOTIC_EFFLUX:
+      REDUCED_PERMEABILITY:
+      ANTIBIOTIC_SEQUESTRATION:
+      METABOLIC_BYPASS:
+      OTHER:
+      UNKNOWN:
+
+  BiosynthesisOriginEnum:
+    permissible_values:
+      NATURAL_PRODUCT:
+      SEMISYNTHETIC:
+      SYNTHETIC:
+      UNKNOWN:
+
+  ClinicalStatusEnum:
+    permissible_values:
+      APPROVED:
+      INVESTIGATIONAL:
+      VETERINARY:
+      AGRICULTURAL:
+      WITHDRAWN:
+      RESEARCH_ONLY:
+      UNKNOWN:
+
+  TargetTypeEnum:
+    permissible_values:
+      PROTEIN:
+      PROTEIN_COMPLEX:
+      RIBOSOMAL_SUBUNIT:
+      NUCLEIC_ACID:
+      MEMBRANE:
+      CELL_WALL_COMPONENT:
+      METABOLIC_PATHWAY:
+      BIOLOGICAL_PROCESS:
+      OTHER:
+
+  SourceEnum:
+    description: Upstream resources harmonized into this corpus.
+    permissible_values:
+      CHEBI:
+        description: ChEBI role hierarchy under antimicrobial agent (CHEBI:33281).
+      ARO:
+        description: CARD Antibiotic Resistance Ontology, antibiotic molecule subtree (ARO:1000003).
+      CURATOR:
+        description: Added by a curator rather than an upstream inventory.
+
+  GroundingStatusEnum:
+    permissible_values:
+      EXACT:
+        description: Identity is an ontology term asserted by the source itself.
+      MINTED:
+        description: >-
+          No defensible ontology identity; the record keeps a content-hashed
+          antibioticmech: CURIE.
+      REVIEW_NEEDED:
+        description: Grounding has not been decided yet.
+
+  CurationStatusEnum:
+    permissible_values:
+      SEEDED:
+        description: Written from the committed inventories; no curator sign-off yet.
+      PROPOSED:
+        description: Curator or literature addition, not yet reviewed.
+      REVIEWED:
+        description: Curator has signed off on identity, structure, class and mechanism.
+      DEPRECATED:
+        description: Superseded or found out of scope; retained for traceability.
+
+  SynonymTypeEnum:
+    permissible_values:
+      EXACT_SYNONYM:
+      NARROW_SYNONYM:
+      BROAD_SYNONYM:
+      RELATED_SYNONYM:
+      BRAND_NAME:
+      INN:
+        description: International Nonproprietary Name.
+
+  CausalGraphScopeEnum:
+    permissible_values:
+      MECHANISTIC:
+        description: The graph represents a source-backed biological mechanism.
+      NONMECHANISTIC:
+        description: An explicitly reviewed classification or measurement context.
+      REVIEW_NEEDED:
+
+  NodeGroundingStatusEnum:
+    permissible_values:
+      REVIEWED_LABEL_ONLY:
+        description: >-
+          Evidence supports the node label, but no exact family, function, or
+          complex term can be asserted without overclaiming.
+
+  UniProtEntryStatusEnum:
+    permissible_values:
+      REVIEWED:
+        description: Manually reviewed UniProtKB/Swiss-Prot entry.
+      UNREVIEWED:
+        description: Automatically annotated UniProtKB/TrEMBL entry.
+
+  CausalNodeTypeEnum:
+    description: Broad categories for nodes in compound mechanism graphs.
+    permissible_values:
+      COMPOUND:
+        description: The antimicrobial compound itself or another chemical entity.
+      CHEMICAL:
+        description: A chemical entity that is not the subject compound.
+      GENE_OR_PROTEIN:
+        description: A protein, protein family, or protein complex.
+      RNA:
+      GENETIC_ELEMENT:
+        description: A plasmid, transposon, or other non-protein genetic element.
+      CELL_STRUCTURE:
+        description: A cell envelope, wall, membrane, or organelle-scale structure.
+      CELLULAR_LOCALIZATION:
+        description: A cellular component or localization.
+      MOLECULAR_FUNCTION:
+      BIOLOGICAL_PROCESS:
+      PATHWAY:
+      TRANSPORT_PROCESS:
+        description: Uptake or efflux of the compound across an envelope layer.
+      STATE:
+        description: A bioenergetic or molecular state (e.g. proton motive force).
+      QUALITY:
+        description: A measurable attribute (e.g. membrane fluidity, permeability).
+      PHENOTYPE:
+        description: An organism-level outcome such as growth inhibition or lysis.
+      ENVIRONMENTAL_FACTOR:
+      EXPERIMENTAL_FACTOR:

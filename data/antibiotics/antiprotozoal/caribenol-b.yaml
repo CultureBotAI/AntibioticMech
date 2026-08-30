@@ -1,0 +1,49 @@
+identifier: CHEBI:65581
+label: caribenol B
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclic terpene ketone that is 2a,3,4,5,5a,6,7,8-octahydroacenaphthylen-1(2H)-one
+  substituted by hydroxy groups at positions 2 and 2a, methyl groups at positions
+  2, 5 and 8 and a 2-methylprop-1-en-1-yl group at position 3. It is isolated from
+  the the West Indian gorgonian octocoral Pseudopterogorgia elisabethae and exhibits
+  antitubercular and antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S,2aR,3S,5S,5aR,8S)-2,2a-dihydroxy-2,5,8-trimethyl-3-(2-methylprop-1-en-1-yl)-2a,3,4,5,5a,6,7,8-octahydroacenaphthylen-1(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:23824
+- CHEBI:26878
+- CHEBI:36130
+- CHEBI:38032
+- CHEBI:51689
+xrefs:
+- chemspider:23076462
+- reaxys:11167805
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]12CC[C@H](C)C3=C1[C@](O)([C@H](C=C(C)C)C[C@@H]2C)[C@](C)(O)C3=O'
+  standard_inchi: InChI=1S/C19H28O3/c1-10(2)8-13-9-12(4)14-7-6-11(3)15-16(14)19(13,22)18(5,21)17(15)20/h8,11-14,21-22H,6-7,9H2,1-5H3/t11-,12-,13+,14+,18+,19+/m0/s1
+  standard_inchi_key: UZKZXPWGNRCNCM-NDNLJYSTSA-N
+  molecular_formula: C19H28O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 304.43
+  monoisotopic_mass: 304.20384
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65581
+  source_label: caribenol B
+  minted_identifier: antibioticmech:chebi-e7e135a06c
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

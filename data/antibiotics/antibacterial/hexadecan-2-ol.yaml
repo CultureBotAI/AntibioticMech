@@ -1,0 +1,52 @@
+identifier: CHEBI:185029
+label: hexadecan-2-ol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A secondary fatty alcohol that is hexadecane substituted by a hydroxy
+  group at position 2.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-hexadecanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-hydroxyhexadecane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hexadecanol-2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl tetradecyl carbinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:167095
+- CHEBI:197387
+xrefs:
+- cas:14852-31-4
+- chemspider:77368
+- reaxys:1748421
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCCCCCCCCCCCC(C)O
+  standard_inchi: InChI=1S/C16H34O/c1-3-4-5-6-7-8-9-10-11-12-13-14-15-16(2)17/h16-17H,3-15H2,1-2H3
+  standard_inchi_key: FVDRFBGMOWJEOR-UHFFFAOYSA-N
+  molecular_formula: C16H34O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 242.447
+  monoisotopic_mass: 242.26097
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:185029
+  source_label: hexadecan-2-ol
+  minted_identifier: antibioticmech:chebi-58b311f056
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

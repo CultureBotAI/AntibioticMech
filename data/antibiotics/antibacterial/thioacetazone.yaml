@@ -1,0 +1,45 @@
+identifier: CHEBI:134958
+label: thioacetazone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Thioacetazone is an inexpensive, antitubercular, bacteriostatic drug that
+  has been widely used in combination with isoniazid in Africa and South America.
+  This drug is rarely in use.
+definition_source: PMID:18094751
+synonyms:
+- synonym_text: amithiozone
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: thiacetazone
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3007161
+xrefs:
+- ARO:3004952
+- cas:104-06-3
+- chembl:CHEMBL375492
+- pubchem.compound:9568512
+structural_class: thiosemicarbazone antibiotic
+structural_class_id: ARO:3007161
+chemical_structure:
+  smiles: CC(=O)Nc1ccc(C=NNC(N)=S)cc1
+  standard_inchi: InChI=1S/C10H12N4OS/c1-7(15)13-9-4-2-8(3-5-9)6-12-14-10(11)16/h2-6H,1H3,(H,13,15)(H3,11,14,16)
+  standard_inchi_key: SRVJKTDHMYAMHA-UHFFFAOYSA-N
+  molecular_formula: C10H12N4OS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 236.3
+  monoisotopic_mass: 236.07318
+source_concepts:
+- source: ARO
+  source_id: ARO:3004952
+  source_label: thioacetazone
+  minted_identifier: antibioticmech:aro-727d7249f2
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

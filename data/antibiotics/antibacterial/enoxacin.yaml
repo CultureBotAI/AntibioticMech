@@ -1,0 +1,267 @@
+identifier: CHEBI:157175
+label: enoxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 1,8-naphthyridine derivative that is 1,4-dihydro-1,8-naphthyridine with
+  an ethyl group at the 1 position, a carboxy group at the 3-position, an oxo sustituent
+  at the 4-position, a fluoro substituent at the 5-position and a piperazin-1-yl group
+  at the 7 position. An antibacterial, it is used in the treatment of urinary-tract
+  infections and gonorrhoea.
+definition_source: ChEBI
+synonyms:
+- synonym_text: enoxacine
+  synonym_type: INN
+  source: chebi
+- synonym_text: enoxacino
+  synonym_type: INN
+  source: chebi
+- synonym_text: enoxacinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1-ethyl-6-fluoro-4-oxo-7-(piperazin-1-yl)-1,4-dihydro-1,8-naphthyridine-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Ethyl-6-fluoro-4-oxo-7-piperazin-1-yl-1,4-dihydro-[1,8]naphthyridine-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-ethyl-6-fluoro-1,4-dihydro-4-oxo-7-(1-piperazinyl)-1,8-naphthyridine-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ENOXACIN
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Enoxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Enroxil
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Penetrex
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:25384
+- CHEBI:33709
+- CHEBI:46848
+- CHEBI:73537
+- CHEBI:86324
+- CHEBI:87211
+- ARO:0000001
+xrefs:
+- ARO:0000023
+- cas:74011-58-8
+- drugbank:DB00467
+- drugcentral:1013
+- kegg.compound:C06979
+- kegg.drug:D00310
+- lincs.smallmolecule:LSM-5848
+- patent:EP9425
+- patent:US4352803
+- patent:US4359578
+- reaxys:3628995
+- vsdb:1896
+- wikipedia.en:Enoxacin
+- chembl:CHEMBL826
+- pubchem.compound:3229
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCNCC3)nc21
+  standard_inchi: InChI=1S/C15H17FN4O3/c1-2-19-8-10(15(22)23)12(21)9-7-11(16)14(18-13(9)19)20-5-3-17-4-6-20/h7-8,17H,2-6H2,1H3,(H,22,23)
+  standard_inchi_key: IDYZIJYBMGIQMJ-UHFFFAOYSA-N
+  molecular_formula: C15H17FN4O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 320.324
+  monoisotopic_mass: 320.12847
+source_concepts:
+- source: ARO
+  source_id: ARO:0000023
+  source_label: enoxacin
+  minted_identifier: antibioticmech:aro-43e6260509
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:157175
+  source_label: enoxacin
+  minted_identifier: antibioticmech:chebi-17865eaac8
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3001216
+  label: mdtH
+  evidence:
+  - reference: ARO:3001216
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003294
+  label: Escherichia coli gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003294
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003295
+  label: Mycobacterium tuberculosis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003295
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003296
+  label: Staphylococcus aureus gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003296
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003297
+  label: Bartonella bacilliformis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003297
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003298
+  label: Mycobacterium leprae gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003298
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003304
+  label: Mycobacterium leprae gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003304
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003305
+  label: Ureaplasma urealyticum gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003305
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003306
+  label: Morganella morganii gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003306
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003307
+  label: Salmonella serovars gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003307
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003308
+  label: Escherichia coli parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003308
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003309
+  label: Ureaplasma urealyticum parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003309
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003310
+  label: Mycoplasma hominis parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003310
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003311
+  label: Streptococcus pneumoniae parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003311
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003312
+  label: Staphylococcus aureus parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003312
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003315
+  label: Staphylococcus aureus parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003315
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003316
+  label: Escherichia coli parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003316
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003317
+  label: Salmonella serovars parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003317
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003459
+  label: Mycobacterium tuberculosis gyrB with mutation conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003459
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003817
+  label: Acinetobacter baumannii gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003817
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003818
+  label: Acinetobacter baumannii parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003818
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004667
+  label: Staphylococcus aureus norA
+  evidence:
+  - reference: ARO:3004667
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000733
+  target_label: fluoroquinolone sensitive gyrA
+  evidence:
+  - reference: ARO:3000733
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000023 (enoxacin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

@@ -1,0 +1,39 @@
+identifier: CHEBI:143285
+label: L-propargylglycine zwitterion
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An L-α-amino acid zwitterion obtained by transfer of a proton from the
+  carboxy group to the amino group of L-propargylglycine. The major species at pH
+  7.3.
+definition_source: ChEBI
+synonyms:
+- synonym_text: L-propargylglycine
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:59869
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C#CC[C@H]([NH3+])C(=O)[O-]
+  standard_inchi: InChI=1S/C5H7NO2/c1-2-3-4(6)5(7)8/h1,4H,3,6H2,(H,7,8)/t4-/m0/s1
+  standard_inchi_key: DGYHPLMPMRKMPD-BYPYZUCNSA-N
+  molecular_formula: C5H7NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 113.116
+  monoisotopic_mass: 113.04768
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:143285
+  source_label: L-propargylglycine zwitterion
+  minted_identifier: antibioticmech:chebi-6256dd77a0
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

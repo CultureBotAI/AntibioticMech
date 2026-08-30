@@ -1,0 +1,45 @@
+identifier: CHEBI:66530
+label: suaveolindole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A terpenoid indole alkaloid that is 1H-indole substituted by cyclohexylmethyl
+  ring at position 3 which in turn is substituted by additional methyl groups at positions
+  2 and 3, a propan-2-ylidene group at position 6 and a 2-carboxyethyl group at position
+  1. Isolated from Greenwayodendron suaveolens, it exhibits antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-[(1S,2R,3R)-2-(1H-indol-3-ylmethyl)-2,3-dimethyl-6-(propan-2-ylidene)cyclohexyl]propanoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:26658
+- CHEBI:65321
+xrefs:
+- reaxys:11253440
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)=C1CC[C@@H](C)[C@@](C)(Cc2cnc3ccccc23)[C@@H]1CCC(=O)O
+  standard_inchi: InChI=1S/C23H31NO2/c1-15(2)18-10-9-16(3)23(4,20(18)11-12-22(25)26)13-17-14-24-21-8-6-5-7-19(17)21/h5-8,14,16,20,24H,9-13H2,1-4H3,(H,25,26)/t16-,20-,23-/m1/s1
+  standard_inchi_key: GVPCTDRGYRLXLX-AYPBNUJASA-N
+  molecular_formula: C23H31NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 353.506
+  monoisotopic_mass: 353.23548
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66530
+  source_label: suaveolindole
+  minted_identifier: antibioticmech:chebi-7968ca011b
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

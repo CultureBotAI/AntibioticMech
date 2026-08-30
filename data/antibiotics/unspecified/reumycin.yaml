@@ -1,0 +1,65 @@
+identifier: CHEBI:121196
+label: reumycin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyrimidotriazine that is 6-methyl-5,6,7,8-tetrahydropyrimido[5,4-e][1,2,4]triazine
+  with oxo groups at positions 5 and 6.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6-methylpyrimido[5,4-e][1,2,4]triazine-5,7(6H,8H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-demethyltoxoflavin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-methyl-8H-pyrimido[5,4-e][1,2,4]triazine-5,7-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-methyl-pyrimido-[5,4-e]-as-triazine-5,7(6H,8H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: reumicine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: reumitsin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: rheumycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: rheumygin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:131697
+- CHEBI:36586
+xrefs:
+- cas:5016-18-2
+- lincs.smallmolecule:LSM-32639
+- metacyc.compound:CPD-21062
+- reaxys:614208
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: Cn1c(=O)nc2nncnc2c1=O
+  standard_inchi: InChI=1S/C6H5N5O2/c1-11-5(12)3-4(9-6(11)13)10-8-2-7-3/h2H,1H3,(H,9,10,13)
+  standard_inchi_key: ZLLAXLPOOMLVRF-UHFFFAOYSA-N
+  molecular_formula: C6H5N5O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 179.139
+  monoisotopic_mass: 179.04432
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:121196
+  source_label: reumycin
+  minted_identifier: antibioticmech:chebi-9d5d7adfc3
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

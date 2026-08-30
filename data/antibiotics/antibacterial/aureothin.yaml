@@ -1,0 +1,56 @@
+identifier: CHEBI:80024
+label: aureothin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A C-nitro compound that is (3Z)-3-[(2E)-2-methyl-3-(4-nitrophenyl)prop-2-en-1-ylidene]tetrahydrofuran
+  which is substituted by a 6-methoxy-3,5-dimethyl-4-oxo-4H-pyran-2-yl group at position
+  5. It is isolated from the soil bacterium, Streptomyces thioluteus and exhibits
+  antitumor, antifungal, and insecticidal activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-methoxy-3,5-dimethyl-6-{(2R,4Z)-4-[(2E)-2-methyl-3-(4-nitrophenyl)prop-2-en-1-ylidene]tetrahydrofuran-2-yl}-4H-pyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-aureothin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methoxy-3,5-dimethyl-6-[(2R,5Z)-5-[(E)-2-methyl-3-(4-nitrophenyl)prop-2-enylidene]oxolan-2-yl]pyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:131906
+- CHEBI:145408
+- CHEBI:26912
+- CHEBI:35716
+- CHEBI:78840
+xrefs:
+- cas:2825-00-5
+- kegg.compound:C15689
+- metacyc.compound:CPD-13144
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@]1(c2oc(OC)c(C)c(=O)c2C)C/C(=C/C(C)=C/c2ccc([N+](=O)[O-])cc2)CO1'
+  standard_inchi: InChI=1S/C22H23NO6/c1-13(9-16-5-7-18(8-6-16)23(25)26)10-17-11-19(28-12-17)21-14(2)20(24)15(3)22(27-4)29-21/h5-10,19H,11-12H2,1-4H3/b13-9+,17-10-/t19-/m1/s1
+  standard_inchi_key: GQKXCBCSVYJUMI-WACKOAQBSA-N
+  molecular_formula: C22H23NO6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 397.427
+  monoisotopic_mass: 397.15254
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:80024
+  source_label: aureothin
+  minted_identifier: antibioticmech:chebi-0ffaa02057
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

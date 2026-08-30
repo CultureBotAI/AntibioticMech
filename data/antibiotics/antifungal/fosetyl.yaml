@@ -1,0 +1,55 @@
+identifier: CHEBI:40926
+label: fosetyl
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A phosphonic ester that is the monoethyl ester of phosphonic acid. A fungicide
+  used (as its aluminium salt) for various horticultural crops used to control a range
+  of diseases including Phytophthora, Pythium and Plasmopara .
+definition_source: ChEBI
+synonyms:
+- synonym_text: ethyl hydrogen phosphonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Monoethyl phosphonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphonic acid, monoethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethyl phosphinic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37735
+xrefs:
+- cas:15845-66-6
+- kegg.compound:C18401
+- pdb-ccd:ATJ
+- pesticides:fosetyl
+- ppdb:1548
+- reaxys:969557
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: '[H]P(=O)(O)OCC'
+  standard_inchi: InChI=1S/C2H7O3P/c1-2-5-6(3)4/h6H,2H2,1H3,(H,3,4)
+  standard_inchi_key: VUERQRKTYBIULR-UHFFFAOYSA-N
+  molecular_formula: C2H7O3P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 110.049
+  monoisotopic_mass: 110.01328
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:40926
+  source_label: fosetyl
+  minted_identifier: antibioticmech:chebi-05b6e703ea
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

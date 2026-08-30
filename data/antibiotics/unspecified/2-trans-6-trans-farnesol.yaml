@@ -1,0 +1,83 @@
+identifier: CHEBI:16619
+label: (2-trans,6-trans)-farnesol
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The (2-trans,6-trans)-stereoisomer of farnesol.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E,6E)-3,7,11-trimethyldodeca-2,6,10-trien-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2-trans,6-trans)-3,7,11-trimethyldodeca-2,6,10-trien-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2E,6E)-3,7,11-trimethyl-2,6,10-dodecatrien-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2E,6E)-Farnesol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2E,6E)-farnesol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-farnesol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E,E)-farnesol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-trans,6-trans-Farnesol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: all-trans-farnesol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans,trans-farnesol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans,trans-α-farnesol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-Farnesol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-farnesol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:28600
+xrefs:
+- bpdb:2113
+- cas:106-28-5
+- gmelin:2210148
+- hmdb:HMDB0004305
+- kegg.compound:C01126
+- knapsack:C00003132
+- lipidmaps:LMPR0103010001
+- metacyc.compound:2-TRANS6-TRANS-FARNESOL
+- reaxys:1723039
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(C)=CCC/C(C)=C/CC/C(C)=C/CO
+  standard_inchi: InChI=1S/C15H26O/c1-13(2)7-5-8-14(3)9-6-10-15(4)11-12-16/h7,9,11,16H,5-6,8,10,12H2,1-4H3/b14-9+,15-11+
+  standard_inchi_key: CRDAMVZIKSXKFV-YFVJMOTDSA-N
+  molecular_formula: C15H26O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 222.372
+  monoisotopic_mass: 222.19837
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:16619
+  source_label: (2-trans,6-trans)-farnesol
+  minted_identifier: antibioticmech:chebi-134af6f602
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

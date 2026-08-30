@@ -1,0 +1,106 @@
+identifier: CHEBI:17754
+label: glycerol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A triol with a structure of propane substituted at positions 1, 2 and
+  3 by hydroxy groups.
+definition_source: ChEBI
+synonyms:
+- synonym_text: glycerolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: propane-1,2,3-triol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2,3-Propanetriol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2,3-Trihydroxypropane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GLYCEROL
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glycerin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glyceritol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glycerol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glyzerin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Gro
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Propanetriol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Trihydroxypropane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: glycyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: glycérine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: glycérol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ölsüß
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17522
+- CHEBI:27136
+xrefs:
+- cas:56-81-5
+- chemspider:733
+- drugbank:DB04077
+- drugcentral:1316
+- ecmdb:ECMDB00131
+- foodb.food:FDB000756
+- gmelin:26279
+- hmdb:HMDB0000131
+- kegg.compound:C00116
+- kegg.drug:D00028
+- knapsack:C00001163
+- lincs.smallmolecule:LSM-37180
+- metacyc.compound:GLYCEROL
+- pdb-ccd:GOL
+- pdb:2AJS
+- pdb:2D03
+- ppdb:1317
+- reaxys:635685
+- umbbd.compound:c0066
+- wikipedia.en:Glycerol
+- ymdb:YMDB00283
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: OCC(O)CO
+  standard_inchi: InChI=1S/C3H8O3/c4-1-3(6)2-5/h3-6H,1-2H2
+  standard_inchi_key: PEDCQBHIVMGVHV-UHFFFAOYSA-N
+  molecular_formula: C3H8O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 92.094
+  monoisotopic_mass: 92.04734
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17754
+  source_label: glycerol
+  minted_identifier: antibioticmech:chebi-2ec05c2c0b
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

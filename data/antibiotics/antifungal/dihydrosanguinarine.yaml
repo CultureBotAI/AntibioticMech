@@ -1,0 +1,56 @@
+identifier: CHEBI:17209
+label: dihydrosanguinarine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzophenanthridine alkaloid obtained by selective hydrogenation of
+  the 13,14-position of sanguinarine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 13-methyl-13,14-dihydro-2H,10H-[1,3]dioxolo[4,5-i][1,3]dioxolo[4',5':4,5]benzo[1,2-c]phenanthridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 13,14-Dihydro-13-methyl-[1,3]benzodioxolo[5,6-c]-1,3-dioxolo[4,5-i]phenanthridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 13,14-dihydro-13-methyl-[1,3]benzodioxolo[5,6-c]-1,3-dioxolo[4,5-i]phenanthridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dihydrosanguinarine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dihydroavicine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38517
+xrefs:
+- cas:3606-45-9
+- kegg.compound:C05191
+- knapsack:C00001847
+- knapsack:C00024647
+- reaxys:48770
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CN1Cc2c(ccc3c2OCO3)-c2ccc3cc4c(cc3c21)OCO4
+  standard_inchi: InChI=1S/C20H15NO4/c1-21-8-15-12(4-5-16-20(15)25-10-22-16)13-3-2-11-6-17-18(24-9-23-17)7-14(11)19(13)21/h2-7H,8-10H2,1H3
+  standard_inchi_key: CIUHLXZTZWTVFL-UHFFFAOYSA-N
+  molecular_formula: C20H15NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 333.343
+  monoisotopic_mass: 333.10011
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17209
+  source_label: dihydrosanguinarine
+  minted_identifier: antibioticmech:chebi-fc6504b0fd
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

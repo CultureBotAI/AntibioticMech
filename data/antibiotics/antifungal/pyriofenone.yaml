@@ -1,0 +1,59 @@
+identifier: CHEBI:83346
+label: pyriofenone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aromatic ketone that is metrafenone in which the 3-bromo-6-methoxy-2-methylphenyl
+  group is replaced by a 5-chloro-2-methoxy-4-methylpyridin-3-yl group. It is a fungicide
+  developed for the control of powdery mildew in cereals and grape vines.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5-chloro-2-methoxy-4-methylpyridin-3-yl)(2,3,4-trimethoxy-6-methylphenyl)methanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5-chloro-2-methoxy-4-methyl-3-pyridinyl)(2,3,4-trimethoxy-6-methylphenyl)methanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5-chloro-2-methoxy-4-methyl-3-pyridyl)(4,5,6-trimethoxy-o-tolyl)methanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: IKF-309
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pyriofénone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:39173
+- CHEBI:76224
+- CHEBI:87035
+xrefs:
+- cas:688046-61-9
+- pesticides:pyriofenone
+- ppdb:2460
+- reaxys:11330354
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: COc1cc(C)c(C(=O)c2c(OC)ncc(Cl)c2C)c(OC)c1OC
+  standard_inchi: InChI=1S/C18H20ClNO5/c1-9-7-12(22-3)16(23-4)17(24-5)13(9)15(21)14-10(2)11(19)8-20-18(14)25-6/h7-8H,1-6H3
+  standard_inchi_key: NMVCBWZLCXANER-UHFFFAOYSA-N
+  molecular_formula: C18H20ClNO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 365.813
+  monoisotopic_mass: 365.103
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83346
+  source_label: pyriofenone
+  minted_identifier: antibioticmech:chebi-de9eaf6c45
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

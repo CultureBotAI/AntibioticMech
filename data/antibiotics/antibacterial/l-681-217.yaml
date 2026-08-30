@@ -1,0 +1,37 @@
+identifier: antibioticmech:aro-ca1f16372a
+label: L-681,217
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: L-681217 is a kirromycin-like antibiotic produced by Streptomyces cattleya.
+  Its biosynthetic gene cluster is characterized.
+definition_source: PMID:3781906
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3001258
+- CHEBI:201407
+- pubchem.compound:6439903
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: CCC(C(=O)NC/C=C/C=C(\C)/C(C(C)C1CC(C(O1)/C=C/C=C/C=C/C(=O)O)O)OC)C2(CC(C(C(O2)/C=C/C=C/C)(C)O)O)O
+  standard_inchi: InChI=1S/C36H53NO10/c1-7-9-12-19-31-35(5,43)30(39)23-36(44,47-31)26(8-2)34(42)37-21-16-15-17-24(3)33(45-6)25(4)29-22-27(38)28(46-29)18-13-10-11-14-20-32(40)41/h7,9-20,25-31,33,38-39,43-44H,8,21-23H2,1-6H3,(H,37,42)(H,40,41)/b9-7+,11-10+,16-15+,18-13+,19-12+,20-14+,24-17+
+  standard_inchi_key: OSKAZZUZQORABG-UQKUNJBPSA-N
+  molecular_formula: C36H53NO10
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 659.8
+  monoisotopic_mass: 659.36694689
+source_concepts:
+- source: ARO
+  source_id: ARO:3001258
+  source_label: L-681,217
+  minted_identifier: antibioticmech:aro-ca1f16372a
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,368 @@
+identifier: CHEBI:100147
+label: nalidixic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid comprising 1,8-naphthyridin-4-one substituted by
+  carboxylic acid, ethyl and methyl groups at positions 3, 1, and 7, respectively.
+  An orally administered antibacterial, it is used in the treatment of lower urinary-tract
+  infections due to Gram-negative bacteria, including the majority of E. coli, Enterobacter,
+  Klebsiella, and Proteus species.
+definition_source: ChEBI
+synonyms:
+- synonym_text: acide nalidixique
+  synonym_type: INN
+  source: chebi
+- synonym_text: acido nalidixico
+  synonym_type: INN
+  source: chebi
+- synonym_text: acidum nalidixicum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1-ethyl-7-methyl-4-oxo-1,4-dihydro-1,8-naphthyridine-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,4-dihydro-1-ethyl-7-methyl-4-oxo-1,8-naphthyridine-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Aethyl-7-methyl-1,8-naphthyridin-4-on-3-karbonsaeure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Ethyl-7-methyl-4-oxo-1,4-dihydro-[1,8]naphthyridine-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-ethyl-1,4-dihydro-7-methyl-4-oxo-1,8-naphthyridine-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-ethyl-7-methyl-1,4-dihydro-1,8-naphthyridin-4-one-3-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-carboxy-1-ethyl-7-methyl-1,8-naphthyridin-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NALIDIXIC ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nalidixic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nalidixin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:25384
+- CHEBI:73537
+- CHEBI:86324
+- ARO:0000001
+xrefs:
+- ARO:3000661
+- cas:389-08-2
+- drugbank:DB00779
+- drugcentral:1875
+- kegg.compound:C05079
+- kegg.drug:D00183
+- lincs.smallmolecule:LSM-5590
+- patent:BE612258
+- patent:US3590036
+- pdb-ccd:NIX
+- reaxys:750515
+- vsdb:1880
+- wikipedia.en:Nalidixic_Acid
+- chembl:CHEMBL5
+- pubchem.compound:4421
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: CCn1cc(C(=O)O)c(=O)c2ccc(C)nc21
+  standard_inchi: InChI=1S/C12H12N2O3/c1-3-14-6-9(12(16)17)10(15)8-5-4-7(2)13-11(8)14/h4-6H,3H2,1-2H3,(H,16,17)
+  standard_inchi_key: MHWLWQUZZRMNGJ-UHFFFAOYSA-N
+  molecular_formula: C12H12N2O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 232.239
+  monoisotopic_mass: 232.08479
+source_concepts:
+- source: ARO
+  source_id: ARO:3000661
+  source_label: nalidixic acid
+  minted_identifier: antibioticmech:aro-4cf71250ed
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:100147
+  source_label: nalidixic acid
+  minted_identifier: antibioticmech:chebi-561a3b207f
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000344
+  label: EmrAB-TolC
+  evidence:
+  - reference: ARO:3000344
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000419
+  label: quinolone resistance protein (qnr)
+  evidence:
+  - reference: ARO:3000419
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003294
+  label: Escherichia coli gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003294
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003295
+  label: Mycobacterium tuberculosis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003295
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003296
+  label: Staphylococcus aureus gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003296
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003297
+  label: Bartonella bacilliformis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003297
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003298
+  label: Mycobacterium leprae gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003298
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003304
+  label: Mycobacterium leprae gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003304
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003305
+  label: Ureaplasma urealyticum gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003305
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003306
+  label: Morganella morganii gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003306
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003307
+  label: Salmonella serovars gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003307
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003308
+  label: Escherichia coli parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003308
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003309
+  label: Ureaplasma urealyticum parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003309
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003310
+  label: Mycoplasma hominis parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003310
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003311
+  label: Streptococcus pneumoniae parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003311
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003312
+  label: Staphylococcus aureus parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003312
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003315
+  label: Staphylococcus aureus parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003315
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003316
+  label: Escherichia coli parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003316
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003317
+  label: Salmonella serovars parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003317
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003381
+  label: Escherichia coli soxR with mutation conferring antibiotic resistance
+  evidence:
+  - reference: ARO:3003381
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003459
+  label: Mycobacterium tuberculosis gyrB with mutation conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003459
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003817
+  label: Acinetobacter baumannii gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003817
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003818
+  label: Acinetobacter baumannii parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003818
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003926
+  label: Salmonella enterica gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003926
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003939
+  label: Salmonella enterica parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003939
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003940
+  label: Shigella flexneri gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003940
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003941
+  label: Shigella flexneri parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003941
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004126
+  label: Escherichia coli LamB
+  evidence:
+  - reference: ARO:3004126
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004127
+  label: Escherichia coli mipA
+  evidence:
+  - reference: ARO:3004127
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004379
+  label: QepA4
+  evidence:
+  - reference: ARO:3004379
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004574
+  label: Acinetobacter baumannii AbaQ
+  evidence:
+  - reference: ARO:3004574
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007011
+  label: mdeA
+  evidence:
+  - reference: ARO:3007011
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007659
+  label: putative nickel/cobalt transporter
+  evidence:
+  - reference: ARO:3007659
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007751
+  label: Salmonella isangi gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3007751
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007752
+  label: Salmonella isangi gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3007752
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000661 (nalidixic
+      acid); database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000733
+  target_label: fluoroquinolone sensitive gyrA
+  evidence:
+  - reference: ARO:3000733
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000661 (nalidixic acid); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

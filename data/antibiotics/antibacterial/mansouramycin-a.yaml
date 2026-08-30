@@ -1,0 +1,49 @@
+identifier: CHEBI:177359
+label: mansouramycin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of isoquinolines that is 5,8-dihydroisoquinoline
+  substituted by methyl, methyl, oxo, methylamino and oxo groups at positions 3, 4,
+  5, 7 and 8, respectively. It was isolated from Streptomyces Sp. strain Mei37 from
+  North Sea coast, Germany.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,4-dimethyl-7-(methylamino)isoquinoline-5,8-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-methylamino-3,4-dimethylisoquinoline-5,8-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24922
+- CHEBI:25830
+- CHEBI:50995
+xrefs:
+- cas:1199808-44-0
+- chemspider:24659745
+- knapsack:C00047986
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CNC1=CC(=O)c2c(cnc(C)c2C)C1=O
+  standard_inchi: InChI=1S/C12H12N2O2/c1-6-7(2)14-5-8-11(6)10(15)4-9(13-3)12(8)16/h4-5,13H,1-3H3
+  standard_inchi_key: SDLNCVBYFYLESJ-UHFFFAOYSA-N
+  molecular_formula: C12H12N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 216.24
+  monoisotopic_mass: 216.08988
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:177359
+  source_label: mansouramycin A
+  minted_identifier: antibioticmech:chebi-2ec0895ef5
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

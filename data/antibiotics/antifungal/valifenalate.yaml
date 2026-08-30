@@ -1,0 +1,57 @@
+identifier: CHEBI:83610
+label: valifenalate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diastereoisomeric mixture of L-(R)- and L-(S)-valifenalate. An anti-peronosporic
+  fungicide, it is used to control mildew in many crops including grapes, potatoes
+  and tomatoes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl 3-(4-chlorophenyl)-3-{[N-(isopropoxycarbonyl)-L-valyl]amino}propanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl N-(isopropoxycarbonyl)-L-valyl-3-(4-chlorophenyl)-β-alaninate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl N-(isopropoxycarbonyl)-L-valyl-3-(p-chlorophenyl)-β-alaninate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl N-[(1-methylethoxy)carbonyl]-L-valyl-3-(4-chlorophenyl)-β-alaninate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: valifénalate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:60915
+- CHEBI:87013
+xrefs:
+- cas:283159-90-0
+- pesticides:valifenalate
+- ppdb:1659
+- reaxys:11327531
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: COC(=O)CC(NC(=O)[C@@H](NC(=O)OC(C)C)C(C)C)c1ccc(Cl)cc1
+  standard_inchi: InChI=1S/C19H27ClN2O5/c1-11(2)17(22-19(25)27-12(3)4)18(24)21-15(10-16(23)26-5)13-6-8-14(20)9-7-13/h6-9,11-12,15,17H,10H2,1-5H3,(H,21,24)(H,22,25)/t15?,17-/m0/s1
+  standard_inchi_key: DBXFMOWZRXXBRN-LWKPJOBUSA-N
+  molecular_formula: C19H27ClN2O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 398.887
+  monoisotopic_mass: 398.16085
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83610
+  source_label: valifenalate
+  minted_identifier: antibioticmech:chebi-2cde3208af
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

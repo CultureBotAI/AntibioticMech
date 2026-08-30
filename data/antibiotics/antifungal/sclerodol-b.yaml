@@ -1,0 +1,43 @@
+identifier: CHEBI:141365
+label: sclerodol B
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 3β-hydroxy steroid that is (3β,5α)-4,4,14-trimethylandrost-8-en-3-ol
+  which is substituted by a (3E,6S)-2-methoxy-2-methylhept-3-en-6-yl group at position
+  17.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3β,23E)-25-methoxylanosta-8,23-dien-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25698
+- CHEBI:26893
+- CHEBI:36836
+xrefs:
+- reaxys:29689270
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12CCC3=C(CC[C@@]4(C)[C@@]3(C)CC[C@]4([H])[C@H](C)C/C=C/C(C)(C)OC)[C@@]1(C)CC[C@H](O)C2(C)C'
+  standard_inchi: InChI=1S/C31H52O2/c1-21(11-10-17-27(2,3)33-9)22-14-19-31(8)24-12-13-25-28(4,5)26(32)16-18-29(25,6)23(24)15-20-30(22,31)7/h10,17,21-22,25-26,32H,11-16,18-20H2,1-9H3/b17-10+/t21-,22-,25+,26+,29-,30-,31+/m1/s1
+  standard_inchi_key: KMUGSJNEBPVLKO-PWUQRKGSSA-N
+  molecular_formula: C31H52O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 456.755
+  monoisotopic_mass: 456.39673
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141365
+  source_label: sclerodol B
+  minted_identifier: antibioticmech:chebi-5c61f9d514
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

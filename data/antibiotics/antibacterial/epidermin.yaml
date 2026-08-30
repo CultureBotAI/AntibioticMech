@@ -1,0 +1,48 @@
+identifier: CHEBI:71659
+label: epidermin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A type A lantibiotic that is a tetracyclic 21-amino-acid peptide which
+  contains meso-lanthionine, 3-methyllanthionine, and S-(2-aminovinyl)-D-cysteine.
+  It is obtained from Staphylococcus epidermidis Tü 3298 and exhibits antibiotic activity
+  against many Gram-positive bacteria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-({(6R,9S,10S,15aS)-10-[({(3R,6S,9S,12S,15S)-12-(4-aminobutyl)-9-benzyl-6-[(2S)-butan-2-yl]-15-[(L-isoleucyl-L-alanyl)amino]-5,8,11,14-tetraoxo-1-thia-4,7,10,13-tetraazacyclohexadecan-3-yl}carbonyl)amino]-9-methyl-1,4,11-trioxododecahydro-1H,9H-pyrrolo[2,1-i][1,4,7,10]thiatriazacyclotridecin-6-yl}carbonyl)-L-alanyl-N-{(2Z)-1-[(2-{[(1S,4S,7S,10S,14R,17Z,23S)-4-(2-amino-2-oxoethyl)-7-benzyl-23-(4-hydroxybenzyl)-3,6,9,15,21,24-hexaoxo-12,19-dithia-2,5,8,16,22,25-hexaazabicyclo[12.6.5]pentacos-17-en-10-yl]amino}-2-oxoethyl)amino]-1-oxobut-2-en-2-yl}-L-lysinamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: staphylococcin 1580
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:51026
+- CHEBI:71645
+xrefs:
+- cas:99165-17-0
+- patent:EP0350810
+- reaxys:11305595
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12CCCN1C(=O)[C@H](NC(=O)[C@@H]1CSC[C@@H](NC(=O)[C@H](C)NC(=O)[C@@H](N)[C@@H](C)CC)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](Cc3ccccc3)C(=O)N[C@@H]([C@@H](C)CC)C(=O)N1)[C@H](C)SC[C@@]([H])(C(=O)N[C@@H](C)C(=O)N[C@@H](CCCCN)C(=O)N/C(=C\C)C(=O)NCC(=O)N[C@@H]1CSC[C@@H]3NC(=O)[C@]([H])(Cc4ccc(O)cc4)NC(=O)[C@@H](CS/C=C\NC3=O)NC(=O)[C@H](CC(N)=O)NC(=O)[C@H](Cc3ccccc3)NC1=O)NC(=O)CNC2=O'
+  standard_inchi: InChI=1S/C98H141N25O23S4/c1-9-51(4)77(102)96(144)107-54(7)81(129)117-70-48-149-49-71(120-97(145)78(52(5)10-2)121-89(137)65(40-57-25-16-13-17-26-57)113-85(133)62(112-92(70)140)28-19-21-35-100)94(142)122-79-55(8)150-50-72(109-76(127)44-105-95(143)73-29-22-37-123(73)98(79)146)90(138)106-53(6)80(128)111-61(27-18-20-34-99)84(132)110-60(11-3)82(130)104-43-75(126)108-68-47-148-46-67-83(131)103-36-38-147-45-69(93(141)115-64(87(135)118-67)41-58-30-32-59(124)33-31-58)119-88(136)66(42-74(101)125)116-86(134)63(114-91(68)139)39-56-23-14-12-15-24-56/h11-17,23-26,30-33,36,38,51-55,61-73,77-79,124H,9-10,18-22,27-29,34-35,37,39-50,99-100,102H2,1-8H3,(H2,101,125)(H,103,131)(H,104,130)(H,105,143)(H,106,138)(H,107,144)(H,108,126)(H,109,127)(H,110,132)(H,111,128)(H,112,140)(H,113,133)(H,114,139)(H,115,141)(H,116,134)(H,117,129)(H,118,135)(H,119,136)(H,120,145)(H,121,137)(H,122,142)/b38-36-,60-11-/t51-,52-,53-,54-,55-,61-,62-,63-,64-,65-,66-,67-,68+,69+,70+,71-,72-,73-,77-,78-,79+/m0/s1
+  standard_inchi_key: CXTXHTVXPMOOSW-JUEJINBGSA-N
+  molecular_formula: C98H141N25O23S4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 2165.626
+  monoisotopic_mass: 2163.9515
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:71659
+  source_label: epidermin
+  minted_identifier: antibioticmech:chebi-6352c2661c
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

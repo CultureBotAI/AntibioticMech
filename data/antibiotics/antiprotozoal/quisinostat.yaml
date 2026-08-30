@@ -1,0 +1,63 @@
+identifier: CHEBI:94771
+label: quisinostat
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of methylindoles that is 1H-indole substituted by
+  methyl and [({1-[5-(hydroxycarbamoyl)pyrimidin-2-yl]piperidin-4-yl}methyl)amino]methyl
+  groups at positions 1 and 3, respectively. It is an orally bioavailable pan-HDAC
+  inhibitor that exhibits antineoplastic activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: quisinostatum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-hydroxy-2-[4-({[(1-methyl-1H-indol-3-yl)methyl]amino}methyl)piperidin-1-yl]pyrimidine-5-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: JNJ 26481585
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: JNJ-26481585
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: JNJ26481585
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24650
+- CHEBI:26151
+- CHEBI:38460
+- CHEBI:39447
+- CHEBI:50995
+xrefs:
+- cas:875320-29-9
+- drugbank:DB12985
+- kegg.drug:D10321
+- lincs.smallmolecule:LSM-5900
+- pdb-ccd:GOK
+- wikipedia.en:Quisinostat
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: Cn1cc(CNCC2CCN(c3ncc(C(=O)NO)cn3)CC2)c2ccccc21
+  standard_inchi: InChI=1S/C21H26N6O2/c1-26-14-17(18-4-2-3-5-19(18)26)11-22-10-15-6-8-27(9-7-15)21-23-12-16(13-24-21)20(28)25-29/h2-5,12-15,22,29H,6-11H2,1H3,(H,25,28)
+  standard_inchi_key: PAWIYAYFNXQGAP-UHFFFAOYSA-N
+  molecular_formula: C21H26N6O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 394.479
+  monoisotopic_mass: 394.21172
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:94771
+  source_label: quisinostat
+  minted_identifier: antibioticmech:chebi-fcee52c183
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

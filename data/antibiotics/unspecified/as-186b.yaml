@@ -1,0 +1,56 @@
+identifier: CHEBI:65444
+label: AS-186b
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dibenzodioxocine that is the 1'-O-acetyl derivative of penicillide.
+  It is isolated from Penicillium purpurogenum and acts as an acyl-CoA:cholesterol
+  acyltransferase inhibitor.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S)-1-(11-hydroxy-4-methoxy-9-methyl-5-oxo-5H,7H-dibenzo[b,g][1,5]dioxocin-3-yl)-3-methylbutyl
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1'-O-acetylpenicillide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Purpactin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: vermixocin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25000
+- CHEBI:33853
+- CHEBI:35618
+- CHEBI:47622
+- CHEBI:71064
+xrefs:
+- cas:133806-59-4
+- reaxys:18624666
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COc1c([C@H](CC(C)C)OC(C)=O)ccc2c1C(=O)OCc1cc(C)cc(O)c1O2
+  standard_inchi: InChI=1S/C23H26O7/c1-12(2)8-19(29-14(4)24)16-6-7-18-20(22(16)27-5)23(26)28-11-15-9-13(3)10-17(25)21(15)30-18/h6-7,9-10,12,19,25H,8,11H2,1-5H3/t19-/m0/s1
+  standard_inchi_key: NUYFKDBCHFKOBT-IBGZPJMESA-N
+  molecular_formula: C23H26O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 414.454
+  monoisotopic_mass: 414.16785
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65444
+  source_label: AS-186b
+  minted_identifier: antibioticmech:chebi-df02be143c
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

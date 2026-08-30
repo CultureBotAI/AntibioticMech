@@ -1,0 +1,52 @@
+identifier: CHEBI:17302
+label: pentadecanal
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A long-chain fatty aldehyde that is pentadecane carrying an oxo substituent
+  at position 1. It is a component of essential oils from plants like Solanum erianthum
+  and Cassia siamea.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-pentadecanal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pentadecanal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-pentadecanal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17176
+- CHEBI:84587
+xrefs:
+- cas:2765-11-9
+- hmdb:HMDB0031078
+- kegg.compound:C01948
+- lipidmaps:LMFA06000083
+- reaxys:1706171
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H]C(=O)CCCCCCCCCCCCCC'
+  standard_inchi: InChI=1S/C15H30O/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16/h15H,2-14H2,1H3
+  standard_inchi_key: XGQJZNCFDLXSIJ-UHFFFAOYSA-N
+  molecular_formula: C15H30O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 226.404
+  monoisotopic_mass: 226.22967
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17302
+  source_label: pentadecanal
+  minted_identifier: antibioticmech:chebi-74fb6acb9d
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,85 @@
+identifier: CHEBI:575568
+label: atovaquone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A naphthoquinone compound having a 4-(4-chlorophenyl)cyclohexyl group
+  at the 2-position and a hydroxy substituent at the 3-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-[trans-4-(4-chlorophenyl)cyclohexyl]-3-hydroxy-1,4-naphthoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(trans-4-(p-Chlorophenyl)cyclohexyl)-3-hydroxy-1,4-naphthoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acuvel
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Mepron
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Wellvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132157
+- CHEBI:83403
+- ARO:3009154
+xrefs:
+- ARO:3009155
+- beilstein:8076827
+- cas:95233-18-4
+- drugbank:DB01117
+- drugcentral:258
+- kegg.drug:D00236
+- patent:EP123238
+- patent:US5053432
+- wikipedia.en:Atovaquone
+- chembl:CHEMBL1450
+- pubchem.compound:74989
+activity_roles:
+- CHEBI:35718
+- CHEBI:38068
+structural_class: napthoquinone antibiotics
+structural_class_id: ARO:3009154
+chemical_structure:
+  smiles: O=C1C(O)=C([C@H]2CC[C@H](c3ccc(Cl)cc3)CC2)C(=O)c2ccccc21
+  standard_inchi: InChI=1S/C22H19ClO3/c23-16-11-9-14(10-12-16)13-5-7-15(8-6-13)19-20(24)17-3-1-2-4-18(17)21(25)22(19)26/h1-4,9-13,15,26H,5-8H2/t13-,15-
+  standard_inchi_key: KUCQYCKVKVOKAY-CTYIDZIISA-N
+  molecular_formula: C22H19ClO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 366.844
+  monoisotopic_mass: 366.10227
+source_concepts:
+- source: ARO
+  source_id: ARO:3009155
+  source_label: atovaquone
+  minted_identifier: antibioticmech:aro-dd10acd6e7
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:38068
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:575568
+  source_label: atovaquone
+  minted_identifier: antibioticmech:chebi-4288d03c34
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:38068
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009290
+  label: Pneumocystis jerovecii dhfr with mutations associated with resistance to
+    Trimethoprim sulfamethoxazole combined with Pyrimethamine atovaquone
+  evidence:
+  - reference: ARO:3009290
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009155 (atovaquone);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}AntibioticMech — antimicrobial chemical structures{% endblock %}
+{% block content %}
+<h1>Antimicrobial chemical structures, harmonized</h1>
+<p class="lede">
+  One <code>AntibioticRecord</code> is one chemical structure — a compound with a
+  defined connectivity (an InChIKey), not a drug class. "Macrolide antibiotic" is a
+  structural class and appears as <code>structural_class</code> on the records it
+  covers; erythromycin A is a record. AntibioticMech merges ChEBI's antimicrobial
+  role hierarchy with CARD's Antibiotic Resistance Ontology (ARO) molecule list onto
+  one identity per structure, and layers on the mechanism a compound list does not
+  carry: molecular target, mode of action, and resistance route.
+</p>
+
+<div class="grid">
+  <div class="card"><div class="n">{{ stats.total }}</div><div class="k">compound records</div></div>
+  <div class="card"><div class="n">{{ stats.grounded }}</div><div class="k">ontology-grounded (ChEBI/ARO)</div></div>
+  <div class="card"><div class="n">{{ stats.multi_source }}</div><div class="k">corroborated by ChEBI and ARO</div></div>
+  <div class="card"><div class="n">{{ stats.reviewed }}</div><div class="k">curator-reviewed</div></div>
+</div>
+
+<h2>Browse by class</h2>
+<table>
+  <caption>Records per antimicrobial class</caption>
+  <thead><tr><th scope="col">Class</th><th scope="col" class="num">Records</th><th scope="col"><span class="visually-hidden">Share</span></th></tr></thead>
+  {% for c in classes %}
+  <tr>
+    <td><a href="class/{{ c.slug }}.html">{{ c.label }}</a></td>
+    <td class="num">{{ c.count }}</td>
+    <td><div class="bar"><span style="width:{{ c.pct }}%"></span></div></td>
+  </tr>
+  {% endfor %}
+</table>
+
+<h2>Identity grounding</h2>
+<p>
+  Every record's identity is either an ontology term asserted by ChEBI or ARO
+  themselves, or — when no defensible term exists — a content-hashed
+  <code>antibioticmech:</code> CURIE minted at seed time. Grounding is a fact about
+  the identifier, kept separately from curator review.
+</p>
+<table>
+  <caption>Grounding status</caption>
+  <thead><tr><th scope="col">Status</th><th scope="col" class="num">Records</th><th scope="col">Meaning</th></tr></thead>
+  {% for g in groundings %}
+  <tr><td><span class="pill{{ ' warn' if g.name != 'EXACT' else '' }}">{{ g.name }}</span></td>
+      <td class="num">{{ g.count }}</td><td>{{ g.meaning }}</td></tr>
+  {% endfor %}
+</table>
+
+<h2>What the mechanism layer holds so far</h2>
+<p>
+  ChEBI and ARO supply identity, structure and cross-references for every record.
+  The mechanism fields below are what curation adds on top, one record at a time —
+  most are still empty, which is the honest state of an incrementally curated corpus.
+</p>
+<table>
+  <caption>Mechanism field coverage</caption>
+  <thead><tr><th scope="col">Field</th><th scope="col" class="num">Records</th><th scope="col" class="num">Share</th></tr></thead>
+  {% for m in mechanism %}
+  <tr><td>{{ m.label }}</td><td class="num">{{ m.count }}</td><td class="num">{{ m.pct }}%</td></tr>
+  {% endfor %}
+</table>
+
+<div class="note warn">
+  <p><strong>This corpus is machine-generated.</strong> {{ stats.seeded }} of
+  {{ stats.total }} records ({{ stats.seeded_pct }}%) have had no human review — their
+  identity, structure and resistance/target links come straight from ChEBI's and
+  CARD's own data. A database assertion is not a primary citation; treat SEEDED
+  records as a starting point for curation, not a reviewed claim.</p>
+</div>
+{% endblock %}

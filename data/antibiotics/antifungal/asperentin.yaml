@@ -1,0 +1,53 @@
+identifier: CHEBI:68792
+label: asperentin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of isocoumarins that is 6,8-dihydroxy-3,4-dihydro-1H-isochromen-1-one
+  substituted by a [6-methyltetrahydro-2H-pyran-2-yl]methyl group at position 3. It
+  has been isolated from the fungus Chaetomium globosum and Aspergillus flavus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6,8-dihydroxy-3-{[(2R,6S)-6-methyltetrahydro-2H-pyran-2-yl]methyl}-3,4-dihydro-1H-isochromen-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,4-dihydro-6,8-dihydroxy-3-(tetrahydro-6-methyl-H-pyran-2-yl)methylisocoumarin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cladosporin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26407
+- CHEBI:33572
+- CHEBI:38758
+xrefs:
+- cas:35818-31-6
+- chemspider:34206
+- reaxys:5086911
+activity_roles:
+- CHEBI:35718
+- CHEBI:64915
+chemical_structure:
+  smiles: '[H][C@]1(CC2Cc3cc(O)cc(O)c3C(=O)O2)CCC[C@H](C)O1'
+  standard_inchi: InChI=1S/C16H20O5/c1-9-3-2-4-12(20-9)8-13-6-10-5-11(17)7-14(18)15(10)16(19)21-13/h5,7,9,12-13,17-18H,2-4,6,8H2,1H3/t9-,12+,13?/m0/s1
+  standard_inchi_key: WOMKDMUZNBFXKG-XAWKZAOJSA-N
+  molecular_formula: C16H20O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 292.331
+  monoisotopic_mass: 292.13107
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68792
+  source_label: asperentin
+  minted_identifier: antibioticmech:chebi-6aaf8cbb57
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

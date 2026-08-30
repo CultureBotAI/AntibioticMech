@@ -1,0 +1,51 @@
+identifier: CHEBI:67558
+label: 5E-7-oxozeaenol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide that is the 7-oxo derivative of zeaenol (the 5E stereoisomer).
+  Isolated from Fungi, it exhibits cytotoxic, antibacterial and inhibitory activity
+  against NF-κB.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S,5E,8S,9S,11E)-8,9,16-trihydroxy-14-methoxy-3-methyl-3,4,9,10-tetrahydro-1H-2-benzoxacyclotetradecine-1,7(8H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2E,5S,6S,8E,11S)-5,6,15-trihydroxy-17-methoxy-11-methyl-12-oxabicyclo[12.4.0]octadeca-1(18),2,8,14,16-pentaene-7,13-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LL-Z1640-1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:2468
+- CHEBI:25106
+- CHEBI:33853
+- CHEBI:35618
+- CHEBI:35681
+xrefs:
+- reaxys:5452473
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1cc(O)c2c(c1)/C=C/C[C@H](O)[C@H](O)C(=O)/C=C/C[C@H](C)OC2=O
+  standard_inchi: InChI=1S/C19H22O7/c1-11-5-3-7-14(20)18(23)15(21)8-4-6-12-9-13(25-2)10-16(22)17(12)19(24)26-11/h3-4,6-7,9-11,15,18,21-23H,5,8H2,1-2H3/b6-4+,7-3+/t11-,15-,18+/m0/s1
+  standard_inchi_key: NEQZWEXWOFPKOT-ULSULSEOSA-N
+  molecular_formula: C19H22O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 362.378
+  monoisotopic_mass: 362.13655
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:67558
+  source_label: 5E-7-oxozeaenol
+  minted_identifier: antibioticmech:chebi-0e9a5203bc
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

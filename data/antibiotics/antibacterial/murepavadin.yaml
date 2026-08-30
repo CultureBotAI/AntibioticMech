@@ -1,0 +1,42 @@
+identifier: antibioticmech:aro-0a013bd963
+label: murepavadin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: A peptidomimetic antibiotic with specific, potent action against members
+  of the Pseudomonas genus. Murepavadin disrupts lipopolysaccharide biosynthesis by
+  binding to lypopolysaccharide transport protein D.
+definition_source: PMID:20167788
+synonyms:
+- synonym_text: POL7080
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3007162
+xrefs:
+- ARO:3007088
+- chembl:CHEMBL3946483
+- pubchem.compound:91824766
+structural_class: protegrin-1-like antibiotic
+structural_class_id: ARO:3007162
+chemical_structure:
+  smiles: CC[C@H](C)[C@H]1C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N2CCC[C@@H]2C(=O)N3CCC[C@H]3C(=O)N[C@H](C(=O)N[C@H](C(=O)N1)CC4=CNC5=CC=CC=C54)[C@@H](C)O)CO)C)CCN)CCN)CC6=CNC7=CC=CC=C76)CCN)CCN)CCCN)CCN
+  standard_inchi: InChI=1S/C73H112N22O16/c1-5-38(2)58-70(108)88-52(24-30-79)65(103)83-47(17-10-25-74)62(100)85-49(21-27-76)63(101)86-51(23-29-78)66(104)89-53(33-41-35-80-45-15-8-6-13-43(41)45)67(105)87-50(22-28-77)64(102)84-48(20-26-75)61(99)82-39(3)60(98)91-55(37-96)72(110)95-32-12-19-57(95)73(111)94-31-11-18-56(94)69(107)93-59(40(4)97)71(109)90-54(68(106)92-58)34-42-36-81-46-16-9-7-14-44(42)46/h6-9,13-16,35-36,38-40,47-59,80-81,96-97H,5,10-12,17-34,37,74-79H2,1-4H3,(H,82,99)(H,83,103)(H,84,102)(H,85,100)(H,86,101)(H,87,105)(H,88,108)(H,89,104)(H,90,109)(H,91,98)(H,92,106)(H,93,107)/t38-,39-,40+,47-,48-,49+,50-,51-,52-,53-,54-,55-,56-,57+,58-,59-/m0/s1
+  standard_inchi_key: RIDRXGOBXZLKHZ-NZUANIILSA-N
+  molecular_formula: C73H112N22O16
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1553.8
+  monoisotopic_mass: 1552.86266557
+source_concepts:
+- source: ARO
+  source_id: ARO:3007088
+  source_label: murepavadin
+  minted_identifier: antibioticmech:aro-0a013bd963
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

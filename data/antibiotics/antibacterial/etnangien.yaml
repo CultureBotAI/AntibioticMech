@@ -1,0 +1,46 @@
+identifier: CHEBI:65868
+label: etnangien
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide antibiotic isolated from the culture broth of the myxobacterium
+  Sorangium cellulosum and has been found to be active against Gram-positive bacteria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4E,6S,8E,10E,12E,14E,16E,18E,20R,21R)-6,20-dihydroxy-4,18-dimethyl-21-[(2S,4R,8S,10Z,12E,15S,16R,17S,18S,19R,20R)-4,16,18,20-tetrahydroxy-8-methoxy-15,17,19-trimethyl-22-oxooxacyclodocosa-10,12-dien-2-yl]docosa-4,8,10,12,14,16,18-heptaenoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25105
+- CHEBI:35868
+xrefs:
+- patent:DE19630980
+- patent:EP2014655
+- patent:EP2247740
+- patent:WO2008142046
+- reaxys:18923823
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]1([C@H](C)[C@H](O)/C=C(C)/C=C/C=C/C=C/C=C/C=C/C[C@H](O)/C=C(\C)CCC(=O)O)C[C@H](O)CCC[C@H](OC)C/C=C\C=C\C[C@H](C)[C@@H](O)[C@H](C)[C@@H](O)[C@H](C)[C@H](O)CC(=O)O1'
+  standard_inchi: InChI=1S/C49H76O11/c1-34(22-17-13-11-9-8-10-12-14-19-24-40(50)30-35(2)28-29-46(54)55)31-43(52)37(4)45-32-41(51)25-21-27-42(59-7)26-20-16-15-18-23-36(3)48(57)39(6)49(58)38(5)44(53)33-47(56)60-45/h8-20,22,30-31,36-45,48-53,57-58H,21,23-29,32-33H2,1-7H3,(H,54,55)/b9-8+,12-10+,13-11+,18-15+,19-14+,20-16-,22-17+,34-31+,35-30+/t36-,37+,38+,39-,40-,41+,42+,43+,44+,45-,48+,49-/m0/s1
+  standard_inchi_key: VHPBIOVAVQXSJO-DLGDGFEOSA-N
+  molecular_formula: C49H76O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 841.136
+  monoisotopic_mass: 840.53876
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65868
+  source_label: etnangien
+  minted_identifier: antibioticmech:chebi-db8211faed
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

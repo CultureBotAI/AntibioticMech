@@ -1,0 +1,46 @@
+identifier: CHEBI:65611
+label: chaetoxanthone A
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A bridged organic heteropentacyclic compund that is 3,4,5,6-tetrahydro-2H,8H-2,6-epoxyoxocino[3,2-b]xanthen-8-one
+  substituted by hydroxy groups at positions 4 and 7, a methoxy group at position
+  9 and a methyl group at position 2 (the 2S,4R,6S stereoisomer). It is isolated from
+  the marine derived fungus Chaetomium and has antiprotozoal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S,4R,6S)-4,7-dihydroxy-9-methoxy-2-methyl-3,4,5,6-tetrahydro-2H,8H-2,6-epoxyoxocino[3,2-b]xanthen-8-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:35990
+- CHEBI:38164
+- CHEBI:3992
+- CHEBI:59779
+xrefs:
+- reaxys:19305737
+activity_roles:
+- CHEBI:35820
+chemical_structure:
+  smiles: '[H][C@]12C[C@@H](O)C[C@](C)(Oc3cc4oc5cccc(OC)c5c(=O)c4c(O)c31)O2'
+  standard_inchi: InChI=1S/C20H18O7/c1-20-8-9(21)6-13(26-20)16-14(27-20)7-12-17(19(16)23)18(22)15-10(24-2)4-3-5-11(15)25-12/h3-5,7,9,13,21,23H,6,8H2,1-2H3/t9-,13+,20+/m1/s1
+  standard_inchi_key: PYEDKAHYOPGAKC-PDXJJUDESA-N
+  molecular_formula: C20H18O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 370.357
+  monoisotopic_mass: 370.10525
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65611
+  source_label: chaetoxanthone A
+  minted_identifier: antibioticmech:chebi-78a46a2409
+  role_terms:
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

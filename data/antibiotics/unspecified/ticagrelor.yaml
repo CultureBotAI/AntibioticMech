@@ -1,0 +1,66 @@
+identifier: CHEBI:68558
+label: ticagrelor
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A triazolopyrimidine that is an adenosine isostere; the cyclopentane ring
+  is similar to ribose and the nitrogen-rich [1,2,3]triazolo[4,5-d]pyrimidine moiety
+  resembles the nucleobase adenine. A platelet aggregation inhibitor which is used
+  for prevention of thromboembolic events in patients with acute coronary syndrome.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Brilinta
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: (1S,2S,3R,5S)-3-[7-{[(1R,2S)-2-(3,4-difluorophenyl)cyclopropyl]amino}-5-(propylsulfanyl)-3H-[1,2,3]triazolo[4,5-d]pyrimidin-3-yl]-5-(2-hydroxyethoxy)cyclopentane-1,2-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1S,2S,3R,5S)-3-(7-((1R,2S)-2-(3,4-Difluorophenyl)cyclopropylamino)-5-(propylthio)-3H-(1,2,3)triazolo(4,5-d)pyrimidin-3-yl)-5-(2-hydroxyethoxy)cyclopentane-1,2-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AZD 6140
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AZD-6140
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AZD6140
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35683
+- CHEBI:37143
+- CHEBI:46789
+- CHEBI:48435
+- CHEBI:50995
+xrefs:
+- cas:274693-27-5
+- drugcentral:4184
+- hmdb:HMDB0015702
+- kegg.drug:D09017
+- patent:WO2012085665
+- reaxys:15468079
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CCCSc1nc(N[C@@H]2C[C@H]2c2ccc(F)c(F)c2)c2nnn([C@@H]3C[C@H](OCCO)[C@@H](O)[C@H]3O)c2n1
+  standard_inchi: InChI=1S/C23H28F2N6O4S/c1-2-7-36-23-27-21(26-15-9-12(15)11-3-4-13(24)14(25)8-11)18-22(28-23)31(30-29-18)16-10-17(35-6-5-32)20(34)19(16)33/h3-4,8,12,15-17,19-20,32-34H,2,5-7,9-10H2,1H3,(H,26,27,28)/t12-,15+,16+,17-,19-,20+/m0/s1
+  standard_inchi_key: OEKWJQXRCDYSHL-FNOIDJSQSA-N
+  molecular_formula: C23H28F2N6O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 522.578
+  monoisotopic_mass: 522.18608
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68558
+  source_label: ticagrelor
+  minted_identifier: antibioticmech:chebi-3066e58dab
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

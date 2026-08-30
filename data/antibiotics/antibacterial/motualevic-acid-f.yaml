@@ -1,0 +1,43 @@
+identifier: CHEBI:66406
+label: motualevic acid F
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 2H-azirine that is 2H-azirene-2-carboxylic acid substituted by a 13,13-dibromotrideca-1,12-dien-1-yl
+  group at position 3 (the 2R stereoisomer). It is isolated from the marine sponge
+  Siliquariaspongia sp. and exhibits antibacterial properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R)-3-[(1E)-13,13-dibromotrideca-1,12-dien-1-yl]-2H-azirene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:37141
+xrefs:
+- reaxys:19364082
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C(O)[C@@H]1N=C1/C=C/CCCCCCCCCC=C(Br)Br
+  standard_inchi: InChI=1S/C16H23Br2NO2/c17-14(18)12-10-8-6-4-2-1-3-5-7-9-11-13-15(19-13)16(20)21/h9,11-12,15H,1-8,10H2,(H,20,21)/b11-9+/t15-/m1/s1
+  standard_inchi_key: XWKHPPWOUIGVPT-SLZMIMFISA-N
+  molecular_formula: C16H23Br2NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 421.173
+  monoisotopic_mass: 419.00955
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66406
+  source_label: motualevic acid F
+  minted_identifier: antibioticmech:chebi-5c0c7a6edf
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

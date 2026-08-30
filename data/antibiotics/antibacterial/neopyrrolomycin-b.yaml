@@ -1,0 +1,46 @@
+identifier: CHEBI:66615
+label: neopyrrolomycin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of trichlorophenols that is 3,4,5-trichlorophenol
+  substituted by a 2,3,4-trichloro-1H-pyrrolyl moiety at position 2. It is isolated
+  from the fermentation broth of Streptomyces and exbits broad-spectrum antibacterial
+  activity against a panel of pathogens including variety of drug-susceptible and
+  drug-resistant phenotypes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,4,5-trichloro-2-(2,3,4-trichloro-1H-pyrrol-1-yl)phenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15258
+- CHEBI:26455
+xrefs:
+- reaxys:19103289
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: Oc1cc(Cl)c(Cl)c(Cl)c1-n1cc(Cl)c(Cl)c1Cl
+  standard_inchi: InChI=1S/C10H3Cl6NO/c11-3-1-5(18)9(8(15)6(3)13)17-2-4(12)7(14)10(17)16/h1-2,18H
+  standard_inchi_key: NTKHEOJBPXFULD-UHFFFAOYSA-N
+  molecular_formula: C10H3Cl6NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 365.858
+  monoisotopic_mass: 362.83458
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66615
+  source_label: neopyrrolomycin B
+  minted_identifier: antibioticmech:chebi-300063a2d5
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,39 @@
+identifier: antibioticmech:aro-4bf8cc8c16
+label: TNP-2198
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: TNP-2198 is an experimental rifamycin-nitroimidazole conjugate currently
+  in development for treatment of several bacterial infections. It exhibits greater
+  activity than rifamycin and nitroimidazole antibiotics administered together and
+  is effective against bacteria resistant to both drug classes.
+definition_source: PMID:35175750
+parent_compounds:
+- ARO:3000157
+xrefs:
+- ARO:3007176
+- chembl:CHEMBL5314439
+- pubchem.compound:136014272
+structural_class: rifamycin antibiotic
+structural_class_id: ARO:3000157
+chemical_structure:
+  smiles: C[C@H]1/C=C/C=C(\C(=O)NC2=C(C3=C(C4=C(C(=C3O)C)O[C@@](C4=O)(O/C=C/[C@@H]([C@H]([C@H]([C@@H]([C@@H]([C@@H]([C@H]1O)C)O)C)OC(=O)C)C)OC)C)C5=NC6(CCN(CC6)CCN7C(=NC=C7[N+](=O)[O-])C)N=C25)O)/C
+  standard_inchi: InChI=1S/C48H61N7O13/c1-23-12-11-13-24(2)46(62)50-38-37-36(51-48(52-37)15-17-53(18-16-48)19-20-54-29(7)49-22-32(54)55(63)64)33-34(42(38)60)41(59)28(6)44-35(33)45(61)47(9,68-44)66-21-14-31(65-10)25(3)43(67-30(8)56)27(5)40(58)26(4)39(23)57/h11-14,21-23,25-27,31,39-40,43,57-60H,15-20H2,1-10H3,(H,50,62)/b12-11+,21-14+,24-13-/t23-,25+,26+,27+,31-,39-,40+,43+,47-/m0/s1
+  standard_inchi_key: OZUTUJQHZGJOKZ-AIGATTFSSA-N
+  molecular_formula: C48H61N7O13
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 944.0
+  monoisotopic_mass: 943.43273503
+source_concepts:
+- source: ARO
+  source_id: ARO:3007176
+  source_label: TNP-2198
+  minted_identifier: antibioticmech:aro-4bf8cc8c16
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

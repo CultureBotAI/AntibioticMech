@@ -1,0 +1,46 @@
+identifier: CHEBI:69621
+label: trichothecin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A trichothecene mycototoxin isolated from the endophytic fungus Trichothecium
+  sp. and it exhibits anti-cancer properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 8-oxo-12,13-epoxytrichothec-9-en-4β-yl (2Z)-but-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4β)-12,13-epoxy-4-[[(2Z)-1-oxo-2-butenyl]oxy]trichothec-9-en-8-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:55517
+xrefs:
+- cas:6379-69-7
+- chemspider:10216230
+- kegg.compound:C09742
+- knapsack:C00003196
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12C=C(C)C(=O)C[C@]1(C)[C@@]1(C)[C@H](OC(=O)/C=C\C)C[C@@]([H])(O2)[C@@]12CO2'
+  standard_inchi: InChI=1S/C19H24O5/c1-5-6-16(21)24-14-8-15-19(10-22-19)18(14,4)17(3)9-12(20)11(2)7-13(17)23-15/h5-7,13-15H,8-10H2,1-4H3/b6-5-/t13-,14-,15-,17+,18-,19+/m1/s1
+  standard_inchi_key: LJWZOKOFCBPNAG-HULHSAFCSA-N
+  molecular_formula: C19H24O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 332.396
+  monoisotopic_mass: 332.16237
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69621
+  source_label: trichothecin
+  minted_identifier: antibioticmech:chebi-3f0d477746
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

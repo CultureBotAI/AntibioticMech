@@ -1,0 +1,47 @@
+identifier: CHEBI:66698
+label: (3R,4R)-(−)-6-methoxy-1-oxo-3-n-pentyl-3,4-dihydro-1H-isochromen-4-yl-acetate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of isochromanes that is 3,4-dihydroisocoumarin substituted
+  by an acetoxy group at position 4, a methoxy group at position 6 and a pentyl group
+  at position 3. Isolated from Xyris pterygoblephara, it exhibits activity against
+  dermatophyte fungi.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,4R)-6-methoxy-1-oxo-3-pentyl-3,4-dihydro-1H-isochromen-4-yl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3R,4R)-(−)-6-methoxy-3,4-dihydro-4-acetoxy-5-n-pentyl-1H-2-benzopyran-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:38762
+- CHEBI:47622
+xrefs:
+- reaxys:15809380
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCC[C@H]1OC(=O)c2ccc(OC)cc2[C@H]1OC(C)=O
+  standard_inchi: InChI=1S/C17H22O5/c1-4-5-6-7-15-16(21-11(2)18)14-10-12(20-3)8-9-13(14)17(19)22-15/h8-10,15-16H,4-7H2,1-3H3/t15-,16-/m1/s1
+  standard_inchi_key: XFZDFYYRUDDKBS-HZPDHXFCSA-N
+  molecular_formula: C17H22O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 306.358
+  monoisotopic_mass: 306.14672
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66698
+  source_label: (3R,4R)-(−)-6-methoxy-1-oxo-3-n-pentyl-3,4-dihydro-1H-isochromen-4-yl-acetate
+  minted_identifier: antibioticmech:chebi-3959766aad
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

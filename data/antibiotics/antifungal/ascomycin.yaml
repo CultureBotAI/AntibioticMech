@@ -1,0 +1,62 @@
+identifier: CHEBI:29582
+label: ascomycin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide that is produced by the fermentation of Streptomyces hygroscopicus
+  and exhibits strong immunosuppressant properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S,4R,5S,8R,9E,12S,14S,15R,16S,18R,19R,26aS)-8-ethyl-5,19-dihydroxy-3-{(1E)-1-[(1R,3R,4R)-4-hydroxy-3-methoxycyclohexyl]prop-1-en-2-yl}-14,16-dimethoxy-4,10,12,18-tetramethyl-5,6,8,11,12,13,14,15,16,17,18,19,24,25,26,26a-hexadecahydro-3H-15,19-epoxypyrido[2,1-c][1,4]oxazacyclotricosine-1,7,20,21(4H,23H)-tetrone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FK 520
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FK520
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FR 900520
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Immunomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L 683590
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25106
+- CHEBI:25698
+- CHEBI:35681
+- CHEBI:38131
+xrefs:
+- cas:104987-12-4
+- kegg.compound:C12102
+- knapsack:C00017631
+- reaxys:5372600
+- wikipedia.en:Ascomycin
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12O[C@@](O)(C(=O)C(=O)N3CCCC[C@H]3C(=O)O[C@H](/C(C)=C/[C@@H]3CC[C@@H](O)[C@H](OC)C3)[C@H](C)[C@@H](O)CC(=O)[C@H](CC)/C=C(\C)C[C@H](C)C[C@@H]1OC)[C@H](C)C[C@@H]2OC'
+  standard_inchi: InChI=1S/C43H69NO12/c1-10-30-18-24(2)17-25(3)19-36(53-8)39-37(54-9)21-27(5)43(51,56-39)40(48)41(49)44-16-12-11-13-31(44)42(50)55-38(28(6)33(46)23-34(30)47)26(4)20-29-14-15-32(45)35(22-29)52-7/h18,20,25,27-33,35-39,45-46,51H,10-17,19,21-23H2,1-9H3/b24-18+,26-20+/t25-,27+,28+,29-,30+,31-,32+,33-,35+,36-,37-,38+,39+,43+/m0/s1
+  standard_inchi_key: ZDQSOHOQTUFQEM-NURRSENYSA-N
+  molecular_formula: C43H69NO12
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 792.02
+  monoisotopic_mass: 791.48198
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:29582
+  source_label: ascomycin
+  minted_identifier: antibioticmech:chebi-a685e9b36d
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

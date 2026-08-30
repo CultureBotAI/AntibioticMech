@@ -1,0 +1,74 @@
+identifier: CHEBI:65858
+label: ergosterol peroxide
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An ergostanoid that is ergosta-6,22-dien-3-ol with a peroxy group between
+  positions 5 and 8 (the 3β,5α,8α,22E stereoisomer). Isolated from Ganoderma lucidum
+  and Cordyceps sinensis, it exhibits antimycobacterial, trypanocidal and antineoplastic
+  activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S,5S,8S,9R,10R,13R,14R,17R)-17-[(2R,3E,5R)-5,6-dimethylhept-3-en-2-yl]-10,13-dimethyl-1,3,4,9,10,11,12,13,14,15,16,17-dodecahydro-2H-5,8-epidioxycyclopenta[a]phenanthren-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (22E,24R)-5α,8α-epidioxyergosta-6,22-dien-3β-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (24R)-5α,8α-epidioxy-24-methylcholesta-6,22-dien-3β-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3β,5α,8α,22E)-5,8-epidioxyergosta-6,22-dien-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5α,8α-epidioxy-22E-ergosta-6,22-dien-3β-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ergosterol 5α,8α-epidioxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ergosterol endoperoxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ergosterol-5,8-peroxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: peroxyergosterol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25702
+- CHEBI:26125
+- CHEBI:35348
+- CHEBI:50403
+xrefs:
+- cas:2061-64-5
+- chemspider:4508532
+- reaxys:96852
+- wikipedia.en:Ergosterol_peroxide
+activity_roles:
+- CHEBI:36335
+- CHEBI:64912
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@]([H])([C@H](C)/C=C/[C@H](C)C(C)C)[C@@]1(C)CC[C@]1([H])[C@@]3(C)CC[C@H](O)C[C@]34C=C[C@]21OO4'
+  standard_inchi: InChI=1S/C28H44O3/c1-18(2)19(3)7-8-20(4)22-9-10-23-25(22,5)13-12-24-26(6)14-11-21(29)17-27(26)15-16-28(23,24)31-30-27/h7-8,15-16,18-24,29H,9-14,17H2,1-6H3/b8-7+/t19-,20+,21-,22+,23+,24+,25+,26+,27+,28-/m0/s1
+  standard_inchi_key: VXOZCESVZIRHCJ-KGHQQZOUSA-N
+  molecular_formula: C28H44O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 428.657
+  monoisotopic_mass: 428.32905
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65858
+  source_label: ergosterol peroxide
+  minted_identifier: antibioticmech:chebi-f00c533a0d
+  role_terms:
+  - CHEBI:36335
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

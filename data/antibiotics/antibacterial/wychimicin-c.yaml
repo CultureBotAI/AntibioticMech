@@ -1,0 +1,36 @@
+identifier: antibioticmech:aro-9612379da5
+label: wychimicin C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Wychimicin C is a spirotetronate polyketides from Actinocrispum wychmicini
+  MI503-A4.
+definition_source: PMID:36071214
+parent_compounds:
+- ARO:3005171
+xrefs:
+- ARO:3007488
+- pubchem.compound:165412941
+structural_class: polyketide with antibiotic activity
+structural_class_id: ARO:3005171
+chemical_structure:
+  smiles: CCC1=C[C@H]2[C@@H]([C@H](C[C@@H]([C@@H]2O)O)C)[C@]/3(C1/C=C/C[C@H](/C(=C/[C@@H]4C=C[C@H](C[C@]45C(=O)/C(=C3/O)/C(=O)O5)C)/C)O[C@H]6C[C@@H]([C@@H]([C@H](O6)C)NC(=O)C7=C(C=CC(=C7C)Cl)O)O)C
+  standard_inchi: InChI=1S/C46H58ClNO11/c1-8-26-18-28-38(23(4)17-33(51)40(28)52)45(7)29(26)10-9-11-34(22(3)16-27-13-12-21(2)20-46(27)42(54)37(41(45)53)44(56)59-46)58-35-19-32(50)39(25(6)57-35)48-43(55)36-24(5)30(47)14-15-31(36)49/h9-10,12-16,18,21,23,25,27-29,32-35,38-40,49-53H,8,11,17,19-20H2,1-7H3,(H,48,55)/b10-9+,22-16+,41-37-/t21-,23+,25-,27+,28+,29?,32+,33+,34-,35+,38-,39-,40-,45-,46-/m1/s1
+  standard_inchi_key: IVEKQRBIUFGUSE-RZSWSVIESA-N
+  molecular_formula: C46H58ClNO11
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 836.4
+  monoisotopic_mass: 835.3698394
+source_concepts:
+- source: ARO
+  source_id: ARO:3007488
+  source_label: wychimicin C
+  minted_identifier: antibioticmech:aro-9612379da5
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

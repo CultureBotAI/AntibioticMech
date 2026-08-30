@@ -1,0 +1,65 @@
+identifier: CHEBI:74803
+label: furaltadone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An oxazolidinone that is 1,3-oxazolidin-2-one substituted at position
+  1 by a (5-nitro-2-furyl)methylene]amino group and at position 5 by a morpholin-4-ylmethyl
+  group. An antibacterial formerly used oraly but withdrawn due to toxicity, it is
+  used topically (as the hydrochloride salt) for treatment of ear disorders.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Altafur
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: furaltadona
+  synonym_type: INN
+  source: chebi
+- synonym_text: furaltadonum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 5-(morpholin-4-ylmethyl)-3-{[(5-nitro-2-furyl)methylene]amino}-1,3-oxazolidin-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-(morpholinomethyl)-3-((5-nitrofurfurylidene)amino)oxazolidone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-morpholinomethyl-3-(5-nitro-2-furfurylidine-amino)-2-oxazolidinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24129
+- CHEBI:35716
+- CHEBI:38785
+- CHEBI:55374
+xrefs:
+- cas:139-91-3
+- kegg.drug:D02510
+- lincs.smallmolecule:LSM-5034
+- patent:CN101497609
+- patent:US2802002
+- reaxys:363627
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H]C(=NN1CC(CN2CCOCC2)OC1=O)c1ccc([N+](=O)[O-])o1'
+  standard_inchi: InChI=1S/C13H16N4O6/c18-13-16(14-7-10-1-2-12(22-10)17(19)20)9-11(23-13)8-15-3-5-21-6-4-15/h1-2,7,11H,3-6,8-9H2
+  standard_inchi_key: YVQVOQKFMFRVGR-UHFFFAOYSA-N
+  molecular_formula: C13H16N4O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 324.293
+  monoisotopic_mass: 324.10698
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:74803
+  source_label: furaltadone
+  minted_identifier: antibioticmech:chebi-64a80bc514
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

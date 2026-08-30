@@ -1,0 +1,53 @@
+identifier: CHEBI:141283
+label: (6E)-nerolidol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A nerolidol in which the double bond at position 6 adopts a trans-configuration.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6E)-3,7,11-trimethyldodeca-1,6,10-trien-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-3,7,11-trimethyldodeca-1,6,10-trien-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-nerolidol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-nerolidol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:7524
+xrefs:
+- bpdb:2114
+- cas:40716-66-3
+- chemspider:4447568
+- foodb.food:FDB021836
+- knapsack:C00029339
+- metacyc.compound:E-nerolidol
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C=CC(C)(O)CC/C=C(\C)CCC=C(C)C
+  standard_inchi: InChI=1S/C15H26O/c1-6-15(5,16)12-8-11-14(4)10-7-9-13(2)3/h6,9,11,16H,1,7-8,10,12H2,2-5H3/b14-11+
+  standard_inchi_key: FQTLCLSUCSAZDY-SDNWHVSQSA-N
+  molecular_formula: C15H26O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 222.372
+  monoisotopic_mass: 222.19837
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141283
+  source_label: (6E)-nerolidol
+  minted_identifier: antibioticmech:chebi-7eea354ceb
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

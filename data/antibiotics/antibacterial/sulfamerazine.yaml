@@ -1,0 +1,99 @@
+identifier: CHEBI:102130
+label: sulfamerazine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfonamide consisting of pyrimidine with a methyl substituent at the
+  4-position and a 4-aminobenzenesulfonamido group at the 2-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sulfamerazina
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfamerazinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-amino-N-(4-methylpyrimidin-2-yl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (p-Aminobenzolsulfonyl)-2-amino-4-methylpyrimidin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(4-Aminobenzenesulfonamido)-4-methylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(Sulfanilamido)-4-methylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(p-Aminobenzolsulfonamido)-4-methylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Sulfa-4-methylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Amino-N-(4-methyl-2-pyrimidinyl)-benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(4-Methyl-2-pyrimidyl)sulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-(4-Methyl-2-pyrimidinyl)sulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfamethyldiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulphamerazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35358
+- CHEBI:39447
+- CHEBI:87228
+- ARO:3000282
+xrefs:
+- ARO:3007469
+- beilstein:249133
+- cas:127-79-7
+- drugbank:DB01581
+- drugcentral:2510
+- gmelin:219949
+- kegg.drug:D02435
+- lincs.smallmolecule:LSM-5979
+- patent:US2407966
+- wikipedia.en:Sulfamerazine
+- chembl:CHEMBL438
+- pubchem.compound:5325
+activity_roles:
+- CHEBI:33282
+structural_class: sulfonamide antibiotic
+structural_class_id: ARO:3000282
+chemical_structure:
+  smiles: Cc1ccnc(NS(=O)(=O)c2ccc(N)cc2)n1
+  standard_inchi: InChI=1S/C11H12N4O2S/c1-8-6-7-13-11(14-8)15-18(16,17)10-4-2-9(12)3-5-10/h2-7H,12H2,1H3,(H,13,14,15)
+  standard_inchi_key: QPPBRPIAZZHUNT-UHFFFAOYSA-N
+  molecular_formula: C11H12N4O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 264.31
+  monoisotopic_mass: 264.0681
+source_concepts:
+- source: ARO
+  source_id: ARO:3007469
+  source_label: sulfamerazine
+  minted_identifier: antibioticmech:aro-55f0ececec
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:102130
+  source_label: sulfamerazine
+  minted_identifier: antibioticmech:chebi-e038db9cae
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

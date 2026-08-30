@@ -1,0 +1,44 @@
+identifier: CHEBI:65964
+label: gilvusmycin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An antibiotic isolated from the culture broth of Streptomyces sp. QM16
+  with potent cytotoxic activity against the human tumor cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6-({6-[(6-acetyl-5-hydroxy-4-methoxy-3,6,7,8-tetrahydropyrrolo[3,2-e]indol-2-yl)carbonyl]-5-hydroxy-4-methoxy-3,6,7,8-tetrahydropyrrolo[3,2-e]indol-2-yl}carbonyl)-3-methyl-4,4a,5,6-tetrahydrocyclopropa[c]pyrrolo[3,2-e]indol-8(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:35618
+- CHEBI:35990
+- CHEBI:38101
+- CHEBI:3992
+xrefs:
+- reaxys:8382539
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COc1c(O)c2c(c3cc(C(=O)N4CCc5c4c(O)c(OC)c4nc(C(=O)N6CC7CC78C6=CC(=O)c6ncc(C)c68)cc54)nc13)CCN2C(C)=O
+  standard_inchi: InChI=1S/C38H34N6O8/c1-15-13-39-29-24(46)11-25-38(26(15)29)12-17(38)14-44(25)37(50)23-10-21-19-6-8-43(31(19)33(48)35(52-4)28(21)41-23)36(49)22-9-20-18-5-7-42(16(2)45)30(18)32(47)34(51-3)27(20)40-22/h9-11,13,17,39-41,47-48H,5-8,12,14H2,1-4H3
+  standard_inchi_key: XUBJLJZOSKJNMY-UHFFFAOYSA-N
+  molecular_formula: C38H34N6O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 702.724
+  monoisotopic_mass: 702.24381
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65964
+  source_label: gilvusmycin
+  minted_identifier: antibioticmech:chebi-08a8bc69af
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

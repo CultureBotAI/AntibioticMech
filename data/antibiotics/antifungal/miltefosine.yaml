@@ -1,0 +1,66 @@
+identifier: CHEBI:75283
+label: miltefosine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A phospholipid that is the hexadecyl monoester of phosphocholine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: miltefosina
+  synonym_type: INN
+  source: chebi
+- synonym_text: miltefosinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: miltéfosine
+  synonym_type: INN
+  source: chebi
+- synonym_text: Hexadecylphosphocholine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hexadecylphosphorylcholine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: monohexadecylphosphocholine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: monohexadecylphosphorylcholine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:16247
+- CHEBI:36700
+xrefs:
+- cas:58066-85-6
+- drugcentral:1810
+- kegg.drug:D02494
+- reaxys:3690495
+- wikipedia.en:Miltefosine
+activity_roles:
+- CHEBI:35718
+- CHEBI:35820
+- CHEBI:70868
+chemical_structure:
+  smiles: CCCCCCCCCCCCCCCCOP(=O)([O-])OCC[N+](C)(C)C
+  standard_inchi: InChI=1S/C21H46NO4P/c1-5-6-7-8-9-10-11-12-13-14-15-16-17-18-20-25-27(23,24)26-21-19-22(2,3)4/h5-21H2,1-4H3
+  standard_inchi_key: PQLXHQMOHUQAKB-UHFFFAOYSA-N
+  molecular_formula: C21H46NO4P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 407.576
+  monoisotopic_mass: 407.31645
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75283
+  source_label: miltefosine
+  minted_identifier: antibioticmech:chebi-efbbe1a567
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:35820
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

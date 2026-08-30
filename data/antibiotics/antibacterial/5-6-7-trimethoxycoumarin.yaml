@@ -1,0 +1,53 @@
+identifier: CHEBI:28126
+label: 5,6,7-trimethoxycoumarin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of coumarins that is coumarin substituted by methoxy
+  groups at positions 5, 6 and 7.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,6,7-trimethoxy-2H-chromen-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,6,7-Trimethoxycoumarin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,6,7-trimethoxy-2H-1-benzopyran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fraxinol methyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23403
+- CHEBI:35618
+xrefs:
+- cas:55085-47-7
+- kegg.compound:C09313
+- knapsack:C00002501
+- reaxys:240375
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1cc2oc(=O)ccc2c(OC)c1OC
+  standard_inchi: InChI=1S/C12H12O5/c1-14-9-6-8-7(4-5-10(13)17-8)11(15-2)12(9)16-3/h4-6H,1-3H3
+  standard_inchi_key: FOBNRKTURPWTQX-UHFFFAOYSA-N
+  molecular_formula: C12H12O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 236.223
+  monoisotopic_mass: 236.06847
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28126
+  source_label: 5,6,7-trimethoxycoumarin
+  minted_identifier: antibioticmech:chebi-1f00d2b374
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

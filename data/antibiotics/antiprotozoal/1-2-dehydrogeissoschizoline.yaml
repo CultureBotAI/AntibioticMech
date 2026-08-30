@@ -1,0 +1,42 @@
+identifier: CHEBI:65736
+label: 1,2-dehydrogeissoschizoline
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An indole alkaloid that is the 1,2-dehydro derivative of geissoschizoline.
+  Isolated from Geissospermum sericeum, it exhibits antiplasmodial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (15β,16α)-1,2-didehydrocuran-17-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:38164
+- CHEBI:38958
+xrefs:
+- reaxys:9080520
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: '[H][C@@]12C[C@]3([H])N(CC[C@]34C(=Nc3ccccc34)[C@H]1CO)C[C@H]2CC'
+  standard_inchi: InChI=1S/C19H24N2O/c1-2-12-10-21-8-7-19-15-5-3-4-6-16(15)20-18(19)14(11-22)13(12)9-17(19)21/h3-6,12-14,17,22H,2,7-11H2,1H3/t12-,13+,14+,17+,19-/m1/s1
+  standard_inchi_key: XJEKUKWZYMNSDW-XTXPVBGVSA-N
+  molecular_formula: C19H24N2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 296.414
+  monoisotopic_mass: 296.18886
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65736
+  source_label: 1,2-dehydrogeissoschizoline
+  minted_identifier: antibioticmech:chebi-fbb59d4d2a
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

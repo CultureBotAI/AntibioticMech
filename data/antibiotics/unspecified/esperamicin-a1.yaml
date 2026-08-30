@@ -1,0 +1,46 @@
+identifier: CHEBI:53273
+label: esperamicin A1
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A naturally occurring antibiotic and antitumor agent isolated from Actinomadura
+  verrucosopora. Its chemical structure consists of a core bicyclo[7.3.1]tridecadiynene
+  moiety containing a 1,5-diyn-3-ene as part of a ten-membered ring, a α,β-unsaturated
+  ketone with a bridgehead double bond and an attached allylic trisulfide. This ring
+  system is attached at one end by a trisaccharide moiety and at the opposite end
+  by a 2-deoxy-L-fucose-anthranilate moiety. The trisaccharide consists of a hydroxyamino
+  sugar which is connected to a isopropylamino sugar through a glycosidic linkage
+  and a thiomethyl sugar through an NH‒O linkage.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl {(1R,4Z,8R,12S,13E)-8-[(4,6-dideoxy-2-O-[2,4-dideoxy-3-O-methyl-4-(propan-2-ylamino)-α-L-threo-pentopyranosyl]-4-{[(2,6-dideoxy-4--methyl-4-thio-β-D-ribo-hexopyranosyl)oxy]amino}-β-D-glucopyranosyl)oxy]-12-[(2,6-dideoxy-3-O-{4,5-dimethoxy-2-[(2-methoxyprop-2-enoyl)amino]benzoyl}-α-L-lyxo-hexopyranosyl)oxy]-1-hydroxy-13-[2-(methyltrisulfanyl)ethylidene]-11-oxobicyclo[7.3.1]trideca-4,9-diene-2,6-diyn-10-yl}carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:53271
+xrefs:
+- cas:99674-26-7
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]1(O[C@@H]2O[C@H](C)[C@@H](NO[C@H]3C[C@H](O)[C@H](SC)[C@@H](C)O3)[C@H](O)[C@H]2O[C@H]2C[C@H](OC)[C@@H](NC(C)C)CO2)C#C/C=C\C#C[C@@]2(O)/C(=C/CSSSC)C1=C(NC(=O)OC)C(=O)[C@H]2O[C@H]1C[C@H](OC(=O)c2cc(OC)c(OC)cc2NC(=O)C(=C)OC)[C@H](O)[C@H](C)O1'
+  standard_inchi: InChI=1S/C59H80N4O22S4/c1-28(2)60-36-27-77-43(25-39(36)73-8)83-52-50(66)47(63-85-45-24-37(64)53(86-12)31(5)79-45)29(3)80-57(52)82-38-18-16-14-15-17-20-59(71)34(19-21-88-89-87-13)46(38)48(62-58(70)76-11)51(67)54(59)84-44-26-42(49(65)30(4)78-44)81-56(69)33-22-40(74-9)41(75-10)23-35(33)61-55(68)32(6)72-7/h14-15,19,22-23,28-31,36-39,42-45,47,49-50,52-54,57,60,63-66,71H,6,21,24-27H2,1-5,7-13H3,(H,61,68)(H,62,70)/b15-14-,34-19+/t29-,30+,31-,36+,37+,38-,39+,42+,43+,44+,45+,47-,49-,50+,52-,53-,54-,57+,59-/m1/s1
+  standard_inchi_key: LJQQFQHBKUKHIS-KSFFZXMPSA-N
+  molecular_formula: C59H80N4O22S4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1325.563
+  monoisotopic_mass: 1324.4147
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:53273
+  source_label: esperamicin A1
+  minted_identifier: antibioticmech:chebi-98edb316a4
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,70 @@
+identifier: CHEBI:31585
+label: exalamide
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An benzamide that is salicylamide in which the phenolic hydroxy group
+  has been converted into the corresponding hexyl ether. It has been used as a topical
+  antifungal agent.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Hyperan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: exalamida
+  synonym_type: INN
+  source: chebi
+- synonym_text: exalamidum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-(hexyloxy)benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-hexyloxybenzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-n-hexyloxybenzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HBA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: o-hexyloxybenzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ortho-hexyloxybenzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22702
+- CHEBI:35618
+xrefs:
+- cas:53370-90-4
+- drugcentral:1119
+- kegg.drug:D01585
+- patent:GB726786
+- reaxys:2645003
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCCCOc1ccccc1C(N)=O
+  standard_inchi: InChI=1S/C13H19NO2/c1-2-3-4-7-10-16-12-9-6-5-8-11(12)13(14)15/h5-6,8-9H,2-4,7,10H2,1H3,(H2,14,15)
+  standard_inchi_key: CKSJXOVLXUMMFF-UHFFFAOYSA-N
+  molecular_formula: C13H19NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 221.3
+  monoisotopic_mass: 221.14158
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31585
+  source_label: exalamide
+  minted_identifier: antibioticmech:chebi-b91339a7cd
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

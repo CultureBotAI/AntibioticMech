@@ -1,0 +1,37 @@
+identifier: antibioticmech:aro-4b92bbd5fb
+label: marinomycin C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Marinomycin C is a member of a new class of bis-salicylate-containing
+  polyene macrodiolides, which have potent antibiotic activity against methicillin-resistant
+  Staphylococcus aureus and vancomycin-resistant Enterococcus faecium.
+definition_source: PMID:16448135
+parent_compounds:
+- ARO:0000000
+xrefs:
+- ARO:3007766
+- pubchem.compound:11240121
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: C/C/1=C\C=C\C=C\C=C\C2=C(C(=CC=C2)O)C(=O)O[C@H](C[C@H](C/C=C/[C@H](C[C@H](C/C(=C/C=C/C=C/C=C\C3=C(C(=CC=C3)O)C(=O)O[C@H](C[C@H](C/C=C/[C@H](C[C@H](C1)O)O)O)C[C@@H](C)O)/C)O)O)O)C[C@@H](C)O
+  standard_inchi: InChI=1S/C58H76O14/c1-39-19-11-7-5-9-13-21-43-23-15-29-53(67)55(43)57(69)72-52(34-42(4)60)38-48(64)28-18-26-46(62)36-50(66)32-40(2)20-12-8-6-10-14-22-44-24-16-30-54(68)56(44)58(70)71-51(33-41(3)59)37-47(63)27-17-25-45(61)35-49(65)31-39/h5-26,29-30,41-42,45-52,59-68H,27-28,31-38H2,1-4H3/b9-5+,10-6+,11-7+,12-8+,21-13-,22-14+,25-17+,26-18+,39-19+,40-20+/t41-,42-,45-,46-,47+,48+,49+,50+,51+,52+/m1/s1
+  standard_inchi_key: GXBIDOSKEKEFEF-LBJGFFSDSA-N
+  molecular_formula: C58H76O14
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 997.2
+  monoisotopic_mass: 996.52350709
+source_concepts:
+- source: ARO
+  source_id: ARO:3007766
+  source_label: marinomycin C
+  minted_identifier: antibioticmech:aro-4b92bbd5fb
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,68 @@
+identifier: CHEBI:34735
+label: edifenphos
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic thiophosphate that is the O-ethyl-S,S-diphenyl ester of phosphorodithioic
+  acid. Used to control a variety of fungal diseases on rice including blast, ear
+  blight and stem rot. Edifenphos is moderately toxic to mammals and fish but poses
+  more of a risk to aquatic invertebrates.
+definition_source: ChEBI
+synonyms:
+- synonym_text: O-ethyl S,S-diphenyl phosphorodithioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BAY 78418
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bayer 78418
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: EDDP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Edifenphos
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ediphenophos
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-Ethyl-S,S-diphenyl dithiophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphorodithioic acid, O-ethyl-S,S-diphenyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37512
+xrefs:
+- cas:17109-49-8
+- hmdb:HMDB0031781
+- kegg.compound:C14436
+- pesticides:edifenphos
+- ppdb:1205
+- reaxys:1988797
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CCOP(=O)(Sc1ccccc1)Sc1ccccc1
+  standard_inchi: InChI=1S/C14H15O2PS2/c1-2-16-17(15,18-13-9-5-3-6-10-13)19-14-11-7-4-8-12-14/h3-12H,2H2,1H3
+  standard_inchi_key: AWZOLILCOUMRDG-UHFFFAOYSA-N
+  molecular_formula: C14H15O2PS2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 310.38
+  monoisotopic_mass: 310.02511
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:34735
+  source_label: edifenphos
+  minted_identifier: antibioticmech:chebi-9fa8bd38bb
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

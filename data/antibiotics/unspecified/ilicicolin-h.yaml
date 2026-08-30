@@ -1,0 +1,50 @@
+identifier: CHEBI:77772
+label: ilicicolin H
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aromatic ketone in which the ketone carbonyl group is attached to a
+  (1R,2R,4aS,7S,8aR)-4,7-dimethyl-1-[(1E)-prop-1-en-1-yl]-1,2,4a,5,6,7,8,8a-octahydronaphthalen-2-yl
+  group and a 4-hydroxy-5-(4-hydroxyphenyl)-2-oxo-1,2-dihydropyridin-3-yl group. Isolated
+  from the from the "imperfect" fungus Cylindrocladium iliciola strain MFC-870.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-({(1R,2S,4aS,7S,8aR)-4,7-dimethyl-1-[(1E)-prop-1-en-1-yl]-1,2,4a,5,6,7,8,8a-octahydronaphthalen-2-yl}carbonyl)-4-hydroxy-5-(4-hydroxyphenyl)pyridin-2(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:138397
+- CHEBI:146212
+- CHEBI:33853
+- CHEBI:36785
+- CHEBI:38182
+- CHEBI:38183
+- CHEBI:76224
+xrefs:
+- knapsack:C00028381
+- patent:CN101260418
+- reaxys:1631061
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12CC[C@H](C)C[C@]1([H])[C@@H](/C=C/C)[C@H](C(=O)c1c(O)c(-c3ccc(O)cc3)cnc1=O)C=C2C'
+  standard_inchi: InChI=1S/C27H31NO4/c1-4-5-20-21-12-15(2)6-11-19(21)16(3)13-22(20)25(30)24-26(31)23(14-28-27(24)32)17-7-9-18(29)10-8-17/h4-5,7-10,13-15,19-22,29H,6,11-12H2,1-3H3,(H2,28,31,32)/b5-4+/t15-,19+,20+,21-,22+/m0/s1
+  standard_inchi_key: BYVVOONSAAQMKI-RFKCMYLBSA-N
+  molecular_formula: C27H31NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 433.548
+  monoisotopic_mass: 433.22531
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77772
+  source_label: ilicicolin H
+  minted_identifier: antibioticmech:chebi-64a16b7763
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

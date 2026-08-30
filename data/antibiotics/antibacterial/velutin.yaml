@@ -1,0 +1,60 @@
+identifier: CHEBI:177047
+label: velutin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dimethoxyflavone that is luteolin in which the hydroxy groups at positions
+  7 and 3' are replaced by methoxy groups.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-hydroxy-2-(4-hydroxy-3-methoxyphenyl)-7-methoxy-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,4'-dihydroxy-7,3'-dimethoxyflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-hydroxy-2-(4-hydroxy-3-methoxyphenyl)-7-methoxy-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-hydroxy-2-(4-hydroxy-3-methoxyphenyl)-7-methoxychromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: flavoyadorigenin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: luteolin 7,3'-dimethyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23798
+- CHEBI:38686
+xrefs:
+- cas:25739-41-7
+- chemspider:4576639
+- knapsack:C00003867
+- lipidmaps:LMPK12111053
+- wikipedia.en:Velutin
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1cc(O)c2c(=O)cc(-c3ccc(O)c(OC)c3)oc2c1
+  standard_inchi: InChI=1S/C17H14O6/c1-21-10-6-12(19)17-13(20)8-14(23-16(17)7-10)9-3-4-11(18)15(5-9)22-2/h3-8,18-19H,1-2H3
+  standard_inchi_key: ROCUOVBWAWAQFD-UHFFFAOYSA-N
+  molecular_formula: C17H14O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 314.293
+  monoisotopic_mass: 314.07904
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:177047
+  source_label: velutin
+  minted_identifier: antibioticmech:chebi-2544b3cc9f
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

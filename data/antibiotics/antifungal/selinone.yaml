@@ -1,0 +1,55 @@
+identifier: CHEBI:66460
+label: selinone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dihydroxyflavanone that is 5,7-dihydroxyflavanone substituted by a prenyloxy
+  group at position 4' (the 2S stereoisomer). Isolated from Selinum vaginatum and
+  Monotes engleri, it exhibits antifungal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-5,7-dihydroxy-2-{4-[(3-methylbut-2-en-1-yl)oxy]phenyl}-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4'-O-prenylnaringenin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dihydroxy-4'-prenyloxyflavanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: archangelone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140377
+- CHEBI:35618
+- CHEBI:38749
+xrefs:
+- cas:14117-54-5
+- hmdb:HMDB0037585
+- lipidmaps:LMPK12140278
+- reaxys:20282948
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(C)=CCOc1ccc([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)cc1
+  standard_inchi: InChI=1S/C20H20O5/c1-12(2)7-8-24-15-5-3-13(4-6-15)18-11-17(23)20-16(22)9-14(21)10-19(20)25-18/h3-7,9-10,18,21-22H,8,11H2,1-2H3/t18-/m0/s1
+  standard_inchi_key: GYSDUVRPSWKYDJ-SFHVURJKSA-N
+  molecular_formula: C20H20O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 340.375
+  monoisotopic_mass: 340.13107
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66460
+  source_label: selinone
+  minted_identifier: antibioticmech:chebi-f862efe7ba
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

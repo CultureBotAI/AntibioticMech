@@ -1,0 +1,107 @@
+identifier: CHEBI:51817
+label: temocillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin compound having a 6α-methoxy and 6β-[2-carboxy(thiophen-3-yl)acetamido
+  side-groups.
+definition_source: ChEBI
+synonyms:
+- synonym_text: temocillina
+  synonym_type: INN
+  source: chebi
+- synonym_text: temocilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: temocillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-[carboxy(thiophen-3-yl)acetamido]-6-methoxy-2,2-dimethylpenam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6S)-6-[2-carboxy(thiophen-3-yl)acetamido]-6-methoxy-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6S)-6-{[carboxy(3-thienyl)acetyl]amino}-6-methoxy-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6S)-6-{[carboxy(thiophen-3-yl)acetyl]amino}-6-methoxy-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-((2S,5R,6S)-2-carboxy-6-methoxy-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo(3.2.0)hept-6-yl)-3-thiophenemalonamic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BRL 17421
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Temocilline
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Temocillinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- ARO:3000008
+xrefs:
+- ARO:3003831
+- cas:66148-78-5
+- drugcentral:2587
+- kegg.drug:D06064
+- patent:DE2600866
+- reaxys:1094670
+- chembl:CHEMBL1276310
+- pubchem.compound:171758
+activity_roles:
+- CHEBI:33282
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H]C(C(=O)O)(C(=O)N[C@]1(OC)C(=O)N2[C@@H](C(=O)O)C(C)(C)S[C@@]21[H])c1ccsc1'
+  standard_inchi: InChI=1S/C16H18N2O7S2/c1-15(2)9(12(22)23)18-13(24)16(25-3,14(18)27-15)17-10(19)8(11(20)21)7-4-5-26-6-7/h4-6,8-9,14H,1-3H3,(H,17,19)(H,20,21)(H,22,23)/t8?,9-,14+,16-/m0/s1
+  standard_inchi_key: BVCKFLJARNKCSS-DWPRYXJFSA-N
+  molecular_formula: C16H18N2O7S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 414.461
+  monoisotopic_mass: 414.05554
+source_concepts:
+- source: ARO
+  source_id: ARO:3003831
+  source_label: temocillin
+  minted_identifier: antibioticmech:aro-c18540f369
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:51817
+  source_label: temocillin
+  minted_identifier: antibioticmech:chebi-fa51383c48
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001782
+  label: OXA-48
+  evidence:
+  - reference: ARO:3001782
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003831 (temocillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007182
+  label: blaC
+  evidence:
+  - reference: ARO:3007182
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003831 (temocillin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

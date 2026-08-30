@@ -1,0 +1,49 @@
+identifier: CHEBI:65720
+label: cytotrienin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 21-membered macrocyclic lactam which contains three conjugated double
+  bonds as part of the ring system. It acts as an apoptosis inducer in human leukemia
+  HL-60 cells and is isolated from Streptomyces sp.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5R,6E,8E,10E,13S,14R,15R,16Z)-15,22,24-trihydroxy-5-methoxy-14,16-dimethyl-3-oxo-2-azabicyclo[18.3.1]tetracosa-1(24),6,8,10,16,20,22-heptaen-13-yl
+    1-[(cyclohex-1-en-1-ylcarbonyl)amino]cyclopropanecarboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24646
+- CHEBI:24995
+- CHEBI:25698
+- CHEBI:35681
+- CHEBI:50351
+- CHEBI:51026
+xrefs:
+- reaxys:18866746
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: CO[C@H]1/C=C/C=C/C=C/C[C@H](OC(=O)C2(NC(=O)C3=CCCCC3)CC2)[C@H](C)[C@@H](O)/C(C)=C\CCc2cc(O)cc(c2O)NC(=O)C1
+  standard_inchi: InChI=1S/C37H48N2O8/c1-24-13-12-16-27-21-28(40)22-30(34(27)43)38-32(41)23-29(46-3)17-10-5-4-6-11-18-31(25(2)33(24)42)47-36(45)37(19-20-37)39-35(44)26-14-8-7-9-15-26/h4-6,10-11,13-14,17,21-22,25,29,31,33,40,42-43H,7-9,12,15-16,18-20,23H2,1-3H3,(H,38,41)(H,39,44)/b5-4+,11-6+,17-10+,24-13-/t25-,29-,31-,33-/m0/s1
+  standard_inchi_key: HNVKTRONBDHSPT-QETCNUOWSA-N
+  molecular_formula: C37H48N2O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 648.797
+  monoisotopic_mass: 648.34107
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65720
+  source_label: cytotrienin A
+  minted_identifier: antibioticmech:chebi-3f9adfb5b7
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

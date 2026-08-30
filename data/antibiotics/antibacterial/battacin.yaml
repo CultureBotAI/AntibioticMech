@@ -1,0 +1,44 @@
+identifier: antibioticmech:aro-e9c8697a8e
+label: battacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Battacin is a cationic lipopeptide antibiotic produced from a Paenibacillus
+  tianmuensis soil isolate. Battacin kills bacteria in vitro and has potent activity
+  against Gram-negative bacteria, including multidrug-resistant and extremely drug-resistant
+  clinical isolates. The bactericidal kinetics of battacin correlate with the depolarization
+  of the cell membrane, suggesting that battacin kills bacteria by disrupting the
+  cytoplasmic membrane.
+definition_source: PMID:22183171
+synonyms:
+- synonym_text: octapeptin B5
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3009657
+xrefs:
+- ARO:3003822
+- pubchem.compound:177394116
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: CCC(C)CCC(CC(=O)N[C@H](CCN)C(=O)NC1CCNC(=O)C(NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@H](NC(=O)[C@@H](NC(=O)C(NC1=O)CCN)CC(C)C)CC2=CC=CC=C2)CCN)CCN)CC(C)C)O
+  standard_inchi: InChI=1S/C50H87N13O10/c1-7-31(6)13-14-33(64)28-42(65)56-34(15-20-51)44(67)60-38-19-24-55-43(66)39(25-29(2)3)61-46(69)36(17-22-53)57-45(68)35(16-21-52)59-50(73)41(27-32-11-9-8-10-12-32)63-49(72)40(26-30(4)5)62-47(70)37(18-23-54)58-48(38)71/h8-12,29-31,33-41,64H,7,13-28,51-54H2,1-6H3,(H,55,66)(H,56,65)(H,57,68)(H,58,71)(H,59,73)(H,60,67)(H,61,69)(H,62,70)(H,63,72)/t31?,33?,34-,35+,36+,37?,38?,39?,40+,41-/m1/s1
+  standard_inchi_key: GFRZMEVTBQRIMT-NUWCLZTQSA-N
+  molecular_formula: C50H87N13O10
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1030.3
+  monoisotopic_mass: 1029.66988602
+source_concepts:
+- source: ARO
+  source_id: ARO:3003822
+  source_label: battacin
+  minted_identifier: antibioticmech:aro-e9c8697a8e
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

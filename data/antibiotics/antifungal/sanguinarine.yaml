@@ -1,0 +1,52 @@
+identifier: CHEBI:17183
+label: sanguinarine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: 13-methyl-2H,10H-[1,3]dioxolo[4,5-i][1,3]dioxolo[4',5':4,5]benzo[1,2-c]phenanthridinium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 13-methyl[1,3]benzodioxolo[5,6-c]-1,3-dioxolo[4,5-i]phenanthridinium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sanguinarine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38517
+- CHEBI:86322
+- CHEBI:86494
+xrefs:
+- bpdb:2914
+- cas:2447-54-3
+- kegg.compound:C06162
+- knapsack:C00001917
+- knapsack:C00024663
+- lincs.smallmolecule:LSM-6639
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: C[n+]1cc2c3c(ccc2c2ccc4cc5c(cc4c21)OCO5)OCO3
+  standard_inchi: InChI=1S/C20H14NO4/c1-21-8-15-12(4-5-16-20(15)25-10-22-16)13-3-2-11-6-17-18(24-9-23-17)7-14(11)19(13)21/h2-8H,9-10H2,1H3/q+1
+  standard_inchi_key: INVGWHRKADIJHF-UHFFFAOYSA-N
+  molecular_formula: C20H14NO4
+  structure_source: ChEBI
+  charge: 1
+  average_mass: 332.335
+  monoisotopic_mass: 332.09173
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17183
+  source_label: sanguinarine
+  minted_identifier: antibioticmech:chebi-f54eb664cb
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

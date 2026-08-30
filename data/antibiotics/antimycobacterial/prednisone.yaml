@@ -1,0 +1,82 @@
+identifier: CHEBI:8382
+label: prednisone
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A synthetic glucocorticoid drug that is particularly effective as an immunosuppressant,
+  and affects virtually all of the immune system. Prednisone is a prodrug that is
+  converted by the liver into prednisolone (a β-hydroxy group instead of the oxo group
+  at position 11), which is the active drug and also a steroid.
+definition_source: ChEBI
+synonyms:
+- synonym_text: prednisona
+  synonym_type: INN
+  source: chebi
+- synonym_text: prednisonum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 17,21-dihydroxypregna-1,4-diene-3,11,20-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-Dehydrocortisone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,4-Pregnadiene-17α,21-diol-3,11,20-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 17,21-Dihydroxypregna-1,4-diene-3,11,20-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dehydrocortisone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: prednison
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139590
+- CHEBI:139592
+- CHEBI:24261
+- CHEBI:35342
+- CHEBI:35344
+- CHEBI:36885
+- CHEBI:47787
+- CHEBI:61313
+- CHEBI:77166
+xrefs:
+- cas:53-03-2
+- drugbank:DB00635
+- drugcentral:2253
+- kegg.compound:C07370
+- patent:US2579479
+- patent:US2837464
+- patent:US2897216
+- patent:US3134718
+- reaxys:2065301
+- wikipedia.en:Prednisone
+activity_roles:
+- CHEBI:33231
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@](O)(C(=O)CO)[C@@]1(C)CC(=O)[C@@]1([H])[C@@]2([H])CCC2=CC(=O)C=C[C@@]21C'
+  standard_inchi: InChI=1S/C21H26O5/c1-19-7-5-13(23)9-12(19)3-4-14-15-6-8-21(26,17(25)11-22)20(15,2)10-16(24)18(14)19/h5,7,9,14-15,18,22,26H,3-4,6,8,10-11H2,1-2H3/t14-,15-,18+,19-,20-,21-/m0/s1
+  standard_inchi_key: XOFYZVNMUHMLCC-ZPOLXVRWSA-N
+  molecular_formula: C21H26O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 358.434
+  monoisotopic_mass: 358.17802
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:8382
+  source_label: prednisone
+  minted_identifier: antibioticmech:chebi-049a176045
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

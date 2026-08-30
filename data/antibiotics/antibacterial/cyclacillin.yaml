@@ -1,0 +1,105 @@
+identifier: CHEBI:31444
+label: cyclacillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: Bastcillin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Calthor
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Citosarin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Cyclapen
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Cyclapen-W
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Syngacillin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Ultracillin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Vastcillin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Vipicil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Wyvital
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: ciclacilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: ciclacillin
+  synonym_type: INN
+  source: chebi
+- synonym_text: ciclacilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: ciclacillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-(1-aminocyclohexanecarboxamido)-2,2-dimethylpenam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1-aminocyclohexyl)penicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-{[(1-aminocyclohexyl)carbonyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(1-aminocyclohexanecarboxamido)penicillanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(1-aminocyclohexylcarboxamido)penicillanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cyclacillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17334
+xrefs:
+- beilstein:849154
+- cas:3485-14-1
+- drugbank:DB01000
+- drugcentral:632
+- kegg.compound:C12766
+- kegg.drug:D01334
+- lincs.smallmolecule:LSM-3987
+- patent:DE1800698
+- patent:US3194802
+- patent:US3478018
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)C1(N)CCCCC1'
+  standard_inchi: InChI=1S/C15H23N3O4S/c1-14(2)9(12(20)21)18-10(19)8(11(18)23-14)17-13(22)15(16)6-4-3-5-7-15/h8-9,11H,3-7,16H2,1-2H3,(H,17,22)(H,20,21)/t8-,9+,11-/m1/s1
+  standard_inchi_key: HGBLNBBNRORJKI-WCABBAIRSA-N
+  molecular_formula: C15H23N3O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 341.433
+  monoisotopic_mass: 341.14093
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31444
+  source_label: cyclacillin
+  minted_identifier: antibioticmech:chebi-45f3097f3a
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

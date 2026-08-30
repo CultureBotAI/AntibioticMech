@@ -1,0 +1,52 @@
+identifier: CHEBI:138889
+label: 6-diazo-5-oxo-L-norleucine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A non-proteinogenic L-α-amino acid that is L-norleucine which is substituted
+  at position 5 by an oxo group and at position 6 by a diazo group. It is as inhibitor
+  of various glutamine-utilising enzymes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (S)-2-amino-6-diazo-5-oxocaproic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-DON
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diazooxonorleucine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17087
+- CHEBI:39444
+- CHEBI:83822
+xrefs:
+- cas:157-03-9
+- metacyc.compound:CPD0-1627
+- pubchem.compound:24893639
+- wikipedia.en:6-Diazo-5-oxo-L-norleucine
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[N-]=[N+]=CC(=O)CC[C@H](N)C(=O)O'
+  standard_inchi: InChI=1S/C6H9N3O3/c7-5(6(11)12)2-1-4(10)3-9-8/h3,5H,1-2,7H2,(H,11,12)/t5-/m0/s1
+  standard_inchi_key: YCWQAMGASJSUIP-YFKPBYRVSA-N
+  molecular_formula: C6H9N3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 171.156
+  monoisotopic_mass: 171.06439
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:138889
+  source_label: 6-diazo-5-oxo-L-norleucine
+  minted_identifier: antibioticmech:chebi-d532f764d2
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

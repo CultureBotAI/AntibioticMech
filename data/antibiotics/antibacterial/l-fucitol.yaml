@@ -1,0 +1,55 @@
+identifier: CHEBI:42600
+label: L-fucitol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The L-enantiomer of fucitol. It is found in nutmeg.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-deoxy-D-galactitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R,3S,4R,5S)-hexane-1,2,3,4,5-pentol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-deoxy-L-galactitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-Fuc-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fucitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:177915
+xrefs:
+- cas:13074-06-1
+- drugbank:DB03815
+- knapsack:C00037416
+- pdb-ccd:FOC
+- wikipedia.en:Fucitol
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@H](O)[C@@H](O)[C@@H](O)[C@H](O)CO
+  standard_inchi: InChI=1S/C6H14O5/c1-3(8)5(10)6(11)4(9)2-7/h3-11H,2H2,1H3/t3-,4+,5+,6-/m0/s1
+  standard_inchi_key: SKCKOFZKJLZSFA-KCDKBNATSA-N
+  molecular_formula: C6H14O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 166.173
+  monoisotopic_mass: 166.08412
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:42600
+  source_label: L-fucitol
+  minted_identifier: antibioticmech:chebi-86ccea471a
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

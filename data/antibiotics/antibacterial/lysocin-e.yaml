@@ -1,0 +1,45 @@
+identifier: antibioticmech:aro-b6c9cc2b59
+label: lysocin E
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: A drug which binds to menaquinone in the bacterial cell membrane. Binding
+  of Lysocin to menaquinone facilitates lysis of the cell.
+definition_source: PMID:25485686
+parent_compounds:
+- ARO:3009657
+xrefs:
+- ARO:3003915
+- CHEBI:220095
+- pubchem.compound:53373747
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: CC[C@H](C)[C@H]1C(=O)N[C@H](C(=O)O[C@@H]([C@@H](C(=O)N[C@@H](C(=O)N[C@H](C(=O)NCC(=O)N([C@@H](C(=O)N[C@H](C(=O)N[C@@H](C(=O)N[C@H](C(=O)N[C@@H](C(=O)N[C@@H](C(=O)N1)CC2=CNC3=CC=CC=C32)CCC(=O)N)CCC(=O)O)CCCN=C(N)N)CC(C)C)CC4=CC=CC=C4)C)CO)CCCN=C(N)N)NC(=O)C[C@@H](CC(C)C)O)C)[C@@H](C)O
+  standard_inchi: InChI=1S/C75H116N20O20/c1-10-40(6)60-71(112)94-61(41(7)97)73(114)115-42(8)62(92-57(100)34-45(98)30-38(2)3)72(113)88-49(23-17-29-82-75(79)80)65(106)91-54(37-96)63(104)84-36-58(101)95(9)55(32-43-18-12-11-13-19-43)70(111)90-52(31-39(4)5)68(109)85-48(22-16-28-81-74(77)78)64(105)87-51(25-27-59(102)103)66(107)86-50(24-26-56(76)99)67(108)89-53(69(110)93-60)33-44-35-83-47-21-15-14-20-46(44)47/h11-15,18-21,35,38-42,45,48-55,60-62,83,96-98H,10,16-17,22-34,36-37H2,1-9H3,(H2,76,99)(H,84,104)(H,85,109)(H,86,107)(H,87,105)(H,88,113)(H,89,108)(H,90,111)(H,91,106)(H,92,100)(H,93,110)(H,94,112)(H,102,103)(H4,77,78,81)(H4,79,80,82)/t40-,41+,42+,45+,48+,49+,50+,51-,52-,53+,54-,55+,60-,61-,62-/m0/s1
+  standard_inchi_key: QJPVBLGWZKAQRW-BQBICWQZSA-N
+  molecular_formula: C75H116N20O20
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1617.8
+  monoisotopic_mass: 1616.86747617
+source_concepts:
+- source: ARO
+  source_id: ARO:3003915
+  source_label: lysocin E
+  minted_identifier: antibioticmech:aro-b6c9cc2b59
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003917
+  label: Staphylococcus aureus menA with mutation conferring resistance to lysocin
+  evidence:
+  - reference: ARO:3003917
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003915 (lysocin
+      E); database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

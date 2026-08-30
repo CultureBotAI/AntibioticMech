@@ -1,0 +1,66 @@
+identifier: CHEBI:244418
+label: dehydrocostus lactone
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterotricyclic compound and guaianolide sesquiterpene lactone
+  that is acrylic acid which is substituted at position 2 by a 4-hydroxy-3,8-bis(methylene)decahydoazulen-5-yl
+  group and in which the hydroxy group and the carboxy group have undergone formal
+  condensation to afford the corresponding γ-lactone.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3aR,6aS,9aS,9bR)-3,6,9-tris(methylene)octahydroazuleno[4,5-b]furan-2,8(3H,4H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3aR,6aS,9aS,9bR)-3,6,9-tris(methylidene)octahydroazuleno[4,5-b]furan-2,8(3H,4H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3aS,6aR,9aR,9bS)-decahydro-3,6,9-tris(methylene)azuleno[4,5-b]furan-2(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-dehydrocostus lactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-dehydrocostuslactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dehydrocostuslactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26979
+- CHEBI:36744
+- CHEBI:37581
+- CHEBI:37667
+xrefs:
+- cas:477-43-0
+- kegg.compound:C09387
+- knapsack:C00003245
+- patent:CN102058579
+- reaxys:4733740
+activity_roles:
+- CHEBI:36335
+- CHEBI:64912
+chemical_structure:
+  smiles: '[H][C@@]12CCC(=C)[C@]1([H])[C@H]1OC(=O)C(=C)[C@@H]1CCC2=C'
+  standard_inchi: InChI=1S/C15H18O2/c1-8-4-7-12-10(3)15(16)17-14(12)13-9(2)5-6-11(8)13/h11-14H,1-7H2/t11-,12-,13-,14-/m0/s1
+  standard_inchi_key: NETSQGRTUNRXEO-XUXIUFHCSA-N
+  molecular_formula: C15H18O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 230.307
+  monoisotopic_mass: 230.13068
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:244418
+  source_label: dehydrocostus lactone
+  minted_identifier: antibioticmech:chebi-44d763c973
+  role_terms:
+  - CHEBI:36335
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

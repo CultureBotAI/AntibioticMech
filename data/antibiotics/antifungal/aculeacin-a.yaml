@@ -1,0 +1,50 @@
+identifier: CHEBI:2450
+label: aculeacin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A lipopeptide that is isolated from Aspergillus aculeatus and exhibits
+  antifungal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Aculeacin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Aculeacins
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24533
+- CHEBI:46895
+xrefs:
+- cas:58814-86-1
+- kegg.compound:C01776
+- knapsack:C00016077
+- metacyc.compound:CPD-13365
+- reaxys:26317172
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCCCCCCCCCCCCC(=O)N[C@H]1C[C@@H](O)[C@@H](O)NC(=O)[C@@H]2[C@@H](O)[C@@H](C)CN2C(=O)[C@H]([C@H](O)CC(N)=O)NC(=O)[C@H]([C@H](O)[C@@H](O)c2ccc(O)cc2)NC(=O)[C@@H]2C[C@@H](O)CN2C(=O)[C@H]([C@@H](C)O)NC1=O
+  standard_inchi: InChI=1S/C51H82N8O17/c1-4-5-6-7-8-9-10-11-12-13-14-15-16-17-37(66)53-32-23-35(64)47(72)57-49(74)41-42(67)27(2)25-59(41)51(76)39(34(63)24-36(52)65)55-48(73)40(44(69)43(68)29-18-20-30(61)21-19-29)56-46(71)33-22-31(62)26-58(33)50(75)38(28(3)60)54-45(32)70/h18-21,27-28,31-35,38-44,47,60-64,67-69,72H,4-17,22-26H2,1-3H3,(H2,52,65)(H,53,66)(H,54,70)(H,55,73)(H,56,71)(H,57,74)/t27-,28+,31+,32-,33-,34+,35+,38-,39-,40-,41-,42-,43-,44-,47+/m0/s1
+  standard_inchi_key: FBCLKBXYZRAXNA-PDIPHZEPSA-N
+  molecular_formula: C51H82N8O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1079.256
+  monoisotopic_mass: 1078.57979
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2450
+  source_label: aculeacin A
+  minted_identifier: antibioticmech:chebi-4f8c133039
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

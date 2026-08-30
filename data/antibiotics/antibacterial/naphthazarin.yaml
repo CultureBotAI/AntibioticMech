@@ -1,0 +1,58 @@
+identifier: CHEBI:28849
+label: naphthazarin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A naphthoquinone that is 1,4-naphthoquinone in which the hydrogens at
+  positions 5 and 8 are replaced by hydroxy groups.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,8-dihydroxy-1,4-naphthoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,8-dihydroxy-1,4-naphthalenedione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,8-dihydroxy-1,4-naphthosemiquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,8-dihydroxynaphthoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: naphthazarine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: naphthazarone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132157
+xrefs:
+- cas:475-38-7
+- kegg.compound:C01938
+- knapsack:C00002846
+- reaxys:880561
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C1C=CC(=O)c2c(O)ccc(O)c21
+  standard_inchi: InChI=1S/C10H6O4/c11-5-1-2-6(12)10-8(14)4-3-7(13)9(5)10/h1-4,11-12H
+  standard_inchi_key: RQNVIKXOOKXAJQ-UHFFFAOYSA-N
+  molecular_formula: C10H6O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 190.154
+  monoisotopic_mass: 190.02661
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28849
+  source_label: naphthazarin
+  minted_identifier: antibioticmech:chebi-1c05ddbd75
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

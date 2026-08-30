@@ -1,0 +1,59 @@
+identifier: CHEBI:172922
+label: ethylzingerone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A methyl ketone that is 4-phenylbutan-2-one in which the phenyl ring is
+  substituted at positions 3 and 4 by ethoxy and hydroxy groups, respectively. It
+  is a preservative with antimicrobial activity and a good safety profile that has
+  been approved for use in cosmetics. It is structurally similar to zingerone, a phytochemical
+  found in the root of the ginger plant Zingiber officinale.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-(3-ethoxy-4-hydroxyphenyl)butan-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-(3-ethoxy-4-hydroxyphenyl)-2-butanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HEPB
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hydroxyethoxyphenyl butanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:35618
+- CHEBI:51867
+xrefs:
+- cas:569646-79-3
+- chemspider:24208550
+activity_roles:
+- CHEBI:172949
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: CCOc1cc(CCC(C)=O)ccc1O
+  standard_inchi: InChI=1S/C12H16O3/c1-3-15-12-8-10(5-4-9(2)13)6-7-11(12)14/h6-8,14H,3-5H2,1-2H3
+  standard_inchi_key: MXLOKFOWFPJWCW-UHFFFAOYSA-N
+  molecular_formula: C12H16O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 208.257
+  monoisotopic_mass: 208.10994
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:172922
+  source_label: ethylzingerone
+  minted_identifier: antibioticmech:chebi-57f0bb035c
+  role_terms:
+  - CHEBI:172949
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

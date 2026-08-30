@@ -1,0 +1,57 @@
+identifier: CHEBI:29668
+label: pulvomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Pulvomycin is a polyketide antibiotic that binds elongation factor Tu
+  (EF-Tu) to inhibit protein biosynthesis by preventing the formation of the ternary
+  complex (EF-Tu*GTP*aa-tRNA). Phenotypically, it was shown that pulvomycin sensitivity
+  is dominant over resistance.
+definition_source: PMID:16734421
+synonyms:
+- synonym_text: Labilomycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3000586
+- cas:11006-66-9
+- pubchem.compound:5282056
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: CO[C@@H]1[C@H](O)[C@@H](OC)[C@H](OC(C)C(O)/C=C/C=C/C=C/C(=O)C(C)C(O)C(C)C2C/C=C/C=C/C=C/C(O)C(=O)/C(C)=C/C=C/C(C)=C/C(O)/C(C)=C\CC(=O)O2)O[C@@H]1C
+  standard_inchi: InChI=1S/C47H66O13/c1-29-20-19-21-31(3)42(53)38(50)24-17-11-10-12-18-25-40(60-41(52)27-26-30(2)39(51)28-29)33(5)43(54)32(4)36(48)22-15-13-14-16-23-37(49)34(6)58-47-46(57-9)44(55)45(56-8)35(7)59-47/h10-24,26,28,32-35,37-40,43-47,49-51,54-55H,25,27H2,1-9H3/b11-10+,14-13+,18-12+,20-19+,22-15+,23-16+,24-17+,29-28+,30-26-,31-21+/t32?,33?,34?,35-,37?,38?,39?,40?,43?,44+,45+,46-,47-/m1/s1
+  standard_inchi_key: FXSFWUNCIOIMAC-YHQXOMPPSA-N
+  molecular_formula: C47H66O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 839.032
+  monoisotopic_mass: 838.45034
+source_concepts:
+- source: ARO
+  source_id: ARO:3000586
+  source_label: pulvomycin
+  minted_identifier: antibioticmech:aro-d399f91ea7
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003369
+  label: Escherichia coli EF-Tu mutants conferring resistance to Pulvomycin
+  evidence:
+  - reference: ARO:3003369
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000586 (pulvomycin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000731
+  target_label: elongation factor Tu
+  evidence:
+  - reference: ARO:3000731
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000586 (pulvomycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

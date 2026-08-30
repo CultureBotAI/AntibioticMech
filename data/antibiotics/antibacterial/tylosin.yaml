@@ -1,0 +1,381 @@
+identifier: CHEBI:17658
+label: tylosin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide antibiotic that is tylonolide having mono- and diglycosyl
+  moieties attached to two of its hydroxy groups. It is found naturally as a fermentation
+  product of Streptomyces fradiae.
+definition_source: ChEBI
+synonyms:
+- synonym_text: tilosina
+  synonym_type: INN
+  source: chebi
+- synonym_text: tylosine
+  synonym_type: INN
+  source: chebi
+- synonym_text: tylosinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: '[(2R,3R,4E,6E,9R,11R,12S,13S,14R)-12-[3,6-dideoxy-4-O-(2,6-dideoxy-3-C-methyl-α-L-ribo-hexopyranosyl)-3-(dimethylamino)-β-D-glucopyranosyloxy]-2-ethyl-14-hydroxy-5,9,13-trimethyl-8,16-dioxo-11-(2-oxoethyl)oxacyclohexadeca-4,6-dien-3-yl]methyl
+    6-deoxy-2,3-di-O-methyl-β-D-allopyranoside'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tylan
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tylocine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tylosin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tylosin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17478
+- CHEBI:25022
+- CHEBI:25105
+- CHEBI:51689
+- CHEBI:63353
+- CHEBI:63367
+- ARO:0000000
+xrefs:
+- ARO:3000145
+- cas:1401-69-0
+- hmdb:HMDB0034108
+- kegg.compound:C01457
+- kegg.drug:D02490
+- lipidmaps:LMPK04000004
+- metacyc.compound:TYLOSIN
+- patent:US2004082524
+- pdb-ccd:TYK
+- reaxys:4651020
+- wikipedia.en:Tylosin
+- chembl:CHEMBL42743
+- pubchem.compound:5280440
+activity_roles:
+- CHEBI:33281
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: CC[C@H]1OC(=O)C[C@@H](O)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)[C@@H](O[C@H]3C[C@@](C)(O)[C@@H](O)[C@H](C)O3)[C@H](N(C)C)[C@H]2O)[C@@H](CC=O)C[C@@H](C)C(=O)/C=C/C(C)=C/[C@@H]1CO[C@@H]1O[C@H](C)[C@@H](O)[C@@H](OC)[C@H]1OC
+  standard_inchi: InChI=1S/C46H77NO17/c1-13-33-30(22-58-45-42(57-12)41(56-11)37(52)26(5)60-45)18-23(2)14-15-31(49)24(3)19-29(16-17-48)39(25(4)32(50)20-34(51)62-33)64-44-38(53)36(47(9)10)40(27(6)61-44)63-35-21-46(8,55)43(54)28(7)59-35/h14-15,17-18,24-30,32-33,35-45,50,52-55H,13,16,19-22H2,1-12H3/b15-14+,23-18+/t24-,25+,26-,27-,28+,29+,30-,32-,33-,35+,36-,37-,38-,39-,40-,41-,42-,43+,44+,45-,46-/m1/s1
+  standard_inchi_key: WBPYTXDJUQJLPQ-VMXQISHHSA-N
+  molecular_formula: C46H77NO17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 916.112
+  monoisotopic_mass: 915.51915
+source_concepts:
+- source: ARO
+  source_id: ARO:3000145
+  source_label: tylosin
+  minted_identifier: antibioticmech:aro-55417425d2
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:17658
+  source_label: tylosin
+  minted_identifier: antibioticmech:chebi-9e80d6723d
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000250
+  label: ErmC
+  evidence:
+  - reference: ARO:3000250
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000318
+  label: mphB
+  evidence:
+  - reference: ARO:3000318
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000319
+  label: mphC
+  evidence:
+  - reference: ARO:3000319
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000326
+  label: ErmE
+  evidence:
+  - reference: ARO:3000326
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000347
+  label: ErmA
+  evidence:
+  - reference: ARO:3000347
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000375
+  label: ErmB
+  evidence:
+  - reference: ARO:3000375
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000392
+  label: Erm(37)
+  evidence:
+  - reference: ARO:3000392
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000462
+  label: mgtA
+  evidence:
+  - reference: ARO:3000462
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000463
+  label: gimA
+  evidence:
+  - reference: ARO:3000463
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000495
+  label: ErmD
+  evidence:
+  - reference: ARO:3000495
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000498
+  label: ErmF
+  evidence:
+  - reference: ARO:3000498
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000522
+  label: ErmG
+  evidence:
+  - reference: ARO:3000522
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000592
+  label: ErmN
+  evidence:
+  - reference: ARO:3000592
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000593
+  label: ErmQ
+  evidence:
+  - reference: ARO:3000593
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000594
+  label: ErmR
+  evidence:
+  - reference: ARO:3000594
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000595
+  label: ErmT
+  evidence:
+  - reference: ARO:3000595
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000596
+  label: ErmX
+  evidence:
+  - reference: ARO:3000596
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000599
+  label: Erm(33)
+  evidence:
+  - reference: ARO:3000599
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000600
+  label: Erm(34)
+  evidence:
+  - reference: ARO:3000600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000601
+  label: Erm(38)
+  evidence:
+  - reference: ARO:3000601
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000602
+  label: Erm(39)
+  evidence:
+  - reference: ARO:3000602
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000603
+  label: Erm(41)
+  evidence:
+  - reference: ARO:3000603
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000604
+  label: Erm(35)
+  evidence:
+  - reference: ARO:3000604
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000605
+  label: Erm(36)
+  evidence:
+  - reference: ARO:3000605
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000865
+  label: oleD
+  evidence:
+  - reference: ARO:3000865
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3001299
+  label: tlrB
+  evidence:
+  - reference: ARO:3001299
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3001300
+  label: myrA
+  evidence:
+  - reference: ARO:3001300
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3001301
+  label: RlmA(II)
+  evidence:
+  - reference: ARO:3001301
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3001302
+  label: chrB
+  evidence:
+  - reference: ARO:3001302
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3001304
+  label: ErmS
+  evidence:
+  - reference: ARO:3001304
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002824
+  label: ErmV
+  evidence:
+  - reference: ARO:3002824
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3002827
+  label: tlrC
+  evidence:
+  - reference: ARO:3002827
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003071
+  label: mphF
+  evidence:
+  - reference: ARO:3003071
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003839
+  label: Mrx
+  evidence:
+  - reference: ARO:3003839
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003991
+  label: mphI
+  evidence:
+  - reference: ARO:3003991
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004133
+  label: Brachyspira hyodysenteriae 23S rRNA with mutation conferring resistance to
+    tylosin
+  evidence:
+  - reference: ARO:3004133
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004176
+  label: Mycoplasma hominis 23S rRNA with mutation conferring resistance to macrolide
+    antibiotics
+  evidence:
+  - reference: ARO:3004176
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004181
+  label: Streptococcus pneumoniae 23S rRNA mutation conferring resistance to macrolides
+    and streptogramins antibiotics
+  evidence:
+  - reference: ARO:3004181
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004544
+  label: mphJ
+  evidence:
+  - reference: ARO:3004544
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004652
+  label: Erm(O)-lrm
+  evidence:
+  - reference: ARO:3004652
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000757
+  target_label: 50S ribosomal subunit P-site
+  evidence:
+  - reference: ARO:3000757
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000145 (tylosin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

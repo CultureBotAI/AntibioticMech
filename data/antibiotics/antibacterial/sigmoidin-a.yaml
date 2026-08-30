@@ -1,0 +1,50 @@
+identifier: CHEBI:66482
+label: sigmoidin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetrahydroxyflavanone that is (2S)-flavanone substituted by hydroxy
+  groups at positions 5, 7, 3' and 4' and prenyl groups at positions 2' and 5'. Isolated
+  from Erythrina sigmoidea, it exhibits anti-inflammatory and antioxidant activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-2-[3,4-dihydroxy-2,5-bis(3-methylbut-2-en-1-yl)phenyl]-5,7-dihydroxy-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)- 2-(3,4-dihydroxy-2,5-bis(3-methyl-2-butenyl)phenyl)-2,3-dihydro-5,7-dihydroxy-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7,3',4'-tetrahydroxy-2',5'-diprenylflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140331
+- CHEBI:38742
+xrefs:
+- cas:87746-48-3
+- lipidmaps:LMPK12140398
+- reaxys:5171104
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)=CCc1cc([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)c(CC=C(C)C)c(O)c1O
+  standard_inchi: InChI=1S/C25H28O6/c1-13(2)5-7-15-9-18(17(8-6-14(3)4)25(30)24(15)29)21-12-20(28)23-19(27)10-16(26)11-22(23)31-21/h5-6,9-11,21,26-27,29-30H,7-8,12H2,1-4H3/t21-/m0/s1
+  standard_inchi_key: BVHLNRAYBCPKOY-NRFANRHFSA-N
+  molecular_formula: C25H28O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 424.493
+  monoisotopic_mass: 424.18859
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66482
+  source_label: sigmoidin A
+  minted_identifier: antibioticmech:chebi-14cff7a1dc
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

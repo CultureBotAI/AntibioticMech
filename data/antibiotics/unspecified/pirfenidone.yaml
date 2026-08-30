@@ -1,0 +1,61 @@
+identifier: CHEBI:32016
+label: pirfenidone
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyridone that is 2-pyridone substituted at positions 1 and 5 by phenyl
+  and methyl groups respectively. An anti-inflammatory drug used for the treatment
+  of idiopathic pulmonary fibrosis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Esbriet
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: pirfenidona
+  synonym_type: INN
+  source: chebi
+- synonym_text: pirfenidonum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 5-methyl-1-phenylpyridin-2(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AMR 69
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AMR-69
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38183
+xrefs:
+- cas:53179-13-8
+- drugcentral:4224
+- kegg.drug:D01583
+- lincs.smallmolecule:LSM-4190
+- reaxys:1526549
+- wikipedia.en:Pirfenidone
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: Cc1ccc(=O)n(-c2ccccc2)c1
+  standard_inchi: InChI=1S/C12H11NO/c1-10-7-8-12(14)13(9-10)11-5-3-2-4-6-11/h2-9H,1H3
+  standard_inchi_key: ISWRGOKTTBVCFA-UHFFFAOYSA-N
+  molecular_formula: C12H11NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 185.226
+  monoisotopic_mass: 185.08406
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32016
+  source_label: pirfenidone
+  minted_identifier: antibioticmech:chebi-c179a3b450
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

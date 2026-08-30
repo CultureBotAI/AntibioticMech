@@ -1,0 +1,108 @@
+identifier: antibioticmech:aro-eb42322815
+label: defensin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Defensins are natural cationic peptides that have antibiotic properties.
+  It is part of the innate immune system of plants and animals.
+definition_source: PMID:12949495
+parent_compounds:
+- ARO:3000053
+xrefs:
+- ARO:3000693
+- CHEBI:82761
+- pubchem.compound:56841867
+structural_class: peptide antibiotic
+structural_class_id: ARO:3000053
+chemical_structure:
+  smiles: C[C@@H](C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](CC(=O)O)C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](CO)C(=O)N[C@@H](C)C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](C)C(=O)N[C@@H](CC1=CC=CC=C1)C(=O)N2CCC[C@H]2C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CCC(=O)O)C(=O)O)NC(=O)CNC(=O)[C@H](CC(=O)N)NC(=O)[C@@H]3CCCN3C(=O)[C@H](CC4=CC=C(C=C4)O)NC(=O)[C@H](C(C)C)NC(=O)[C@H](CCCCN)NC(=O)[C@H](C(C)C)NC(=O)[C@@H]5CCCN5C(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CCCCN)NC(=O)[C@H](CCCCN)NC(=O)CNC(=O)[C@H](C(C)C)NC(=O)[C@@H]6CCCN6C(=O)[C@H](CCCCN)NC(=O)CNC(=O)[C@H](CC7=CNC8=CC=CC=C87)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CC9=CC=CC=C9)N
+  standard_inchi: InChI=1S/C167H257N47O46/c1-87(2)75-113(150(245)200-112(164(259)260)59-63-131(227)228)203-153(248)120-48-31-73-213(120)162(257)117(77-95-37-16-13-17-38-95)205-138(233)93(11)188-142(237)107(56-60-128(221)222)192-137(232)92(10)189-152(247)119(86-215)207-148(243)109(58-62-130(225)226)197-151(246)116(81-132(229)230)202-147(242)108(57-61-129(223)224)193-136(231)91(9)187-125(218)83-184-141(236)115(80-124(173)217)204-154(249)121-49-32-74-214(121)163(258)118(78-96-52-54-98(216)55-53-96)206-159(254)134(89(5)6)208-149(244)104(43-22-26-66-170)198-158(253)135(90(7)8)210-156(251)123-51-34-72-212(123)161(256)111(47-30-70-182-167(178)179)199-145(240)106(46-29-69-181-166(176)177)196-144(239)103(42-21-25-65-169)195-143(238)102(41-20-24-64-168)190-126(219)85-186-157(252)133(88(3)4)209-155(250)122-50-33-71-211(122)160(255)110(44-23-27-67-171)191-127(220)84-185-140(235)114(79-97-82-183-101-40-19-18-39-99(97)101)201-146(241)105(45-28-68-180-165(174)175)194-139(234)100(172)76-94-35-14-12-15-36-94/h12-19,35-40,52-55,82,87-93,100,102-123,133-135,183,215-216H,20-34,41-51,56-81,83-86,168-172H2,1-11H3,(H2,173,217)(H,184,236)(H,185,235)(H,186,252)(H,187,218)(H,188,237)(H,189,247)(H,190,219)(H,191,220)(H,192,232)(H,193,231)(H,194,234)(H,195,238)(H,196,239)(H,197,246)(H,198,253)(H,199,240)(H,200,245)(H,201,241)(H,202,242)(H,203,248)(H,204,249)(H,205,233)(H,206,254)(H,207,243)(H,208,244)(H,209,250)(H,210,251)(H,221,222)(H,223,224)(H,225,226)(H,227,228)(H,229,230)(H,259,260)(H4,174,175,180)(H4,176,177,181)(H4,178,179,182)/t91-,92-,93-,100-,102-,103-,104-,105-,106-,107-,108-,109-,110-,111-,112-,113-,114-,115-,116-,117-,118-,119-,120-,121-,122-,123-,133-,134-,135-/m0/s1
+  standard_inchi_key: ZKALIGRYJXFMNS-XBDDSDALSA-N
+  molecular_formula: C167H257N47O46
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 3659.1
+  monoisotopic_mass: 3656.9215839
+source_concepts:
+- source: ARO
+  source_id: ARO:3000693
+  source_label: defensin
+  minted_identifier: antibioticmech:aro-eb42322815
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003324
+  label: Bacillus subtilis mprF
+  evidence:
+  - reference: ARO:3003324
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000693 (defensin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003769
+  label: Staphylococcus aureus mprF
+  evidence:
+  - reference: ARO:3003769
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000693 (defensin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003770
+  label: Listeria monocytogenes mprF
+  evidence:
+  - reference: ARO:3003770
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000693 (defensin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003772
+  label: Brucella suis mprF
+  evidence:
+  - reference: ARO:3003772
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000693 (defensin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003773
+  label: Clostridium perfringens mprF
+  evidence:
+  - reference: ARO:3003773
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000693 (defensin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003774
+  label: Streptococcus agalactiae mprF
+  evidence:
+  - reference: ARO:3003774
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000693 (defensin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3005044
+  label: OmpA
+  evidence:
+  - reference: ARO:3005044
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000693 (defensin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3005051
+  label: LpsB
+  evidence:
+  - reference: ARO:3005051
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000693 (defensin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3005052
+  label: LpsA
+  evidence:
+  - reference: ARO:3005052
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000693 (defensin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000710
+  target_label: cell membrane component targeted by antibiotic
+  evidence:
+  - reference: ARO:3000710
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000693 (defensin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

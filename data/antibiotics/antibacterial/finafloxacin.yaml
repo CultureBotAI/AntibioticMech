@@ -1,0 +1,74 @@
+identifier: CHEBI:85176
+label: finafloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quinolone that is 4-oxo-1,4-dihydroquinoline-3-carboxylic acid which
+  is substituted at positions 1, 6, 7 and 8 by cyclopropyl, fluoro, hexahydropyrrolo[3,4-b][1,4]oxazin-6-yl
+  and cyano groups respectively; an antibiotic used for treatment of acute otitis
+  externa (swimmer's ear) caused by the bacteria Pseudomonas aeruginosa and Staphylococcus
+  aureus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Xtoro
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 8-cyano-1-cyclopropyl-6-fluoro-7-[(4aS,7aS)-hexahydropyrrolo[3,4-b][1,4]oxazin-6(2H)-yl]-4-oxo-1,4-dihydroquinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18379
+- CHEBI:23765
+- CHEBI:25384
+- CHEBI:37143
+- CHEBI:50995
+- CHEBI:50996
+- CHEBI:51454
+- ARO:0000001
+xrefs:
+- ARO:3004732
+- cas:209342-40-5
+- drugcentral:4920
+- kegg.drug:D10575
+- patent:WO2011003091
+- reaxys:14830297
+- wikipedia.en:Finafloxacin
+- chembl:CHEMBL1908370
+- pubchem.compound:11567473
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: '[H][C@]12CN(c3c(F)cc4c(=O)c(C(=O)O)cn(C5CC5)c4c3C#N)C[C@]1([H])OCCN2'
+  standard_inchi: InChI=1S/C20H19FN4O4/c21-14-5-11-17(25(10-1-2-10)7-13(19(11)26)20(27)28)12(6-22)18(14)24-8-15-16(9-24)29-4-3-23-15/h5,7,10,15-16,23H,1-4,8-9H2,(H,27,28)/t15-,16-/m0/s1
+  standard_inchi_key: FYMHQCNFKNMJAV-HOTGVXAUSA-N
+  molecular_formula: C20H19FN4O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 398.394
+  monoisotopic_mass: 398.13903
+source_concepts:
+- source: ARO
+  source_id: ARO:3004732
+  source_label: finafloxacin
+  minted_identifier: antibioticmech:aro-7be13398f4
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:85176
+  source_label: finafloxacin
+  minted_identifier: antibioticmech:chebi-1f53164593
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

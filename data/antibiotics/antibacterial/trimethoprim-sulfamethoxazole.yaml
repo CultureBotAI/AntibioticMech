@@ -1,0 +1,54 @@
+identifier: antibioticmech:aro-461f91937a
+label: trimethoprim-sulfamethoxazole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: An antibiotic cocktail containing the diaminopyrimidine antibiotic Trimethoprim
+  and the sulfonamide antibiotic sulfamethoxazole (1 TMP:5 SMX).
+definition_source: PMID:4254965
+synonyms:
+- synonym_text: cotrimoxazole
+  synonym_type: EXACT_SYNONYM
+  source: aro
+xrefs:
+- ARO:3004024
+- cas:8064-90-2
+- CHEBI:3770
+- pubchem.compound:358641
+chemical_structure:
+  smiles: CC1=CC(=NO1)NS(=O)(=O)C2=CC=C(C=C2)N.COC1=CC(=CC(=C1OC)OC)CC2=CN=C(N=C2N)N
+  standard_inchi: InChI=1S/C14H18N4O3.C10H11N3O3S/c1-19-10-5-8(6-11(20-2)12(10)21-3)4-9-7-17-14(16)18-13(9)15;1-7-6-10(12-16-7)13-17(14,15)9-4-2-8(11)3-5-9/h5-7H,4H2,1-3H3,(H4,15,16,17,18);2-6H,11H2,1H3,(H,12,13)
+  standard_inchi_key: WZRJTRPJURQBRM-UHFFFAOYSA-N
+  molecular_formula: C24H29N7O6S
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 543.6
+  monoisotopic_mass: 543.19000284
+source_concepts:
+- source: ARO
+  source_id: ARO:3004024
+  source_label: trimethoprim-sulfamethoxazole
+  minted_identifier: antibioticmech:aro-461f91937a
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000386
+  label: MexAB-OprM
+  evidence:
+  - reference: ARO:3000386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004024 (trimethoprim-sulfamethoxazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009290
+  label: Pneumocystis jerovecii dhfr with mutations associated with resistance to
+    Trimethoprim sulfamethoxazole combined with Pyrimethamine atovaquone
+  evidence:
+  - reference: ARO:3009290
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004024 (trimethoprim-sulfamethoxazole);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

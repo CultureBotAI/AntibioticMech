@@ -1,0 +1,45 @@
+identifier: CHEBI:78769
+label: plakortide F free acid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A marine-derived polyketide endoperoxide that exhibits strong inhibitory
+  activity against the opportunistic fungal pathogens Candida albicans, Cryptococcus
+  neoformans and Aspergillus fumigatus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '{(3S,4S,6S)-4,6-diethyl-6-[(5E)-4-ethyloct-5-en-1-yl]-1,2-dioxan-3-yl}acetic
+    acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:25702
+- CHEBI:26188
+- CHEBI:46926
+xrefs:
+- reaxys:26001135
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC/C=C/C(CC)CCC[C@@]1(CC)C[C@H](CC)[C@H](CC(=O)O)OO1
+  standard_inchi: InChI=1S/C20H36O4/c1-5-9-11-16(6-2)12-10-13-20(8-4)15-17(7-3)18(23-24-20)14-19(21)22/h9,11,16-18H,5-8,10,12-15H2,1-4H3,(H,21,22)/b11-9+/t16?,17-,18-,20-/m0/s1
+  standard_inchi_key: KCBAKIPOBYUWOG-QIKPMYDRSA-N
+  molecular_formula: C20H36O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 340.504
+  monoisotopic_mass: 340.26136
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:78769
+  source_label: plakortide F free acid
+  minted_identifier: antibioticmech:chebi-cdf034ae4e
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

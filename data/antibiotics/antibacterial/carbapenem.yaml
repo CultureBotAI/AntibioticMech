@@ -1,0 +1,43 @@
+identifier: CHEBI:46765
+label: carbapenem
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterobicyclic compound that consists of (5R)-1-azabicyclo[3.2.0]hept-2-ene
+  bearing a 7-keto substituent. The parent of the class of carbapenems.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,3-didehydro-1-carbapenam
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R)-1-azabicyclo[3.2.0]hept-2-en-7-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:46633
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12CC=CN1C(=O)C2'
+  standard_inchi: InChI=1S/C6H7NO/c8-6-4-5-2-1-3-7(5)6/h1,3,5H,2,4H2/t5-/m1/s1
+  standard_inchi_key: YZBQHRLRFGPBSL-RXMQYKEDSA-N
+  molecular_formula: C6H7NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 109.128
+  monoisotopic_mass: 109.05276
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:46765
+  source_label: carbapenem
+  minted_identifier: antibioticmech:chebi-c1b974cf3a
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

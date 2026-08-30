@@ -1,0 +1,55 @@
+identifier: CHEBI:72630
+label: papulacandin D
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A papulacandin that is papulacandin A in which the 6-O-acylgalactosyl
+  group is replaced by a hydrogen. It is a carbohydrate-containing antibiotic from
+  the deuteromycetous fungus Papularia sphaerosperma which shows potent antifungal
+  activity against Candida albicans.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,3'R,4'S,5'R,6'R)-3',5,5',7-tetrahydroxy-6'-(hydroxymethyl)-3',4',5',6'-tetrahydro-3H-spiro[2-benzofuran-1,2'-pyran]-4'-yl
+    (2E,4E,7S,8E,10E,14S)-7-hydroxy-8,14-dimethylhexadeca-2,4,8,10-tetraenoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-papulacandin D
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-papulacandin-D
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: papulacandin-D
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26979
+- CHEBI:63367
+- CHEBI:72596
+xrefs:
+- cas:61036-49-5
+- reaxys:7239678
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC[C@H](C)CC/C=C/C=C(\C)[C@@H](O)C/C=C/C=C/C(=O)O[C@H]1[C@H](O)[C@@H](CO)O[C@]2(OCc3cc(O)cc(O)c32)[C@@H]1O
+  standard_inchi: InChI=1S/C31H42O10/c1-4-19(2)11-7-5-8-12-20(3)23(34)13-9-6-10-14-26(36)40-29-28(37)25(17-32)41-31(30(29)38)27-21(18-39-31)15-22(33)16-24(27)35/h5-6,8-10,12,14-16,19,23,25,28-30,32-35,37-38H,4,7,11,13,17-18H2,1-3H3/b8-5+,9-6+,14-10+,20-12+/t19-,23-,25+,28+,29-,30+,31-/m0/s1
+  standard_inchi_key: XKSZJTQIZHUMGA-HPZFVNCBSA-N
+  molecular_formula: C31H42O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 574.667
+  monoisotopic_mass: 574.2778
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:72630
+  source_label: papulacandin D
+  minted_identifier: antibioticmech:chebi-dff8995da7
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

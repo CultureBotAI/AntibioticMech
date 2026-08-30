@@ -1,0 +1,45 @@
+identifier: CHEBI:32207
+label: tetracenomycin F2
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (3E)-4-(3-acetyl-4,5,7-trihydroxy-10-oxo-9,10-dihydroanthracen-2-yl)-3-hydroxybut-3-enoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tcm F2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetracenomycin F2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48132
+xrefs:
+- cas:150547-38-9
+- kegg.compound:C12366
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(=O)c1c(/C=C(/O)CC(=O)O)cc2c(c1O)C(=O)c1c(O)cc(O)cc1C2
+  standard_inchi: InChI=1S/C20H16O8/c1-8(21)16-10(4-13(23)7-15(25)26)2-9-3-11-5-12(22)6-14(24)17(11)20(28)18(9)19(16)27/h2,4-6,22-24,27H,3,7H2,1H3,(H,25,26)/b13-4+
+  standard_inchi_key: OVIPDYYHLHEFDF-YIXHJXPBSA-N
+  molecular_formula: C20H16O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 384.34
+  monoisotopic_mass: 384.08452
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32207
+  source_label: tetracenomycin F2
+  minted_identifier: antibioticmech:chebi-bb1da011a1
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

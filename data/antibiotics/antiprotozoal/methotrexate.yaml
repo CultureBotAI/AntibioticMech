@@ -1,0 +1,86 @@
+identifier: CHEBI:44185
+label: methotrexate
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: Emtexate
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Ledertrexate
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Rheumatrex
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Trexall
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: methotrexatum
+  synonym_type: INN
+  source: chebi
+- synonym_text: metotrexato
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-(4-{[(2,4-diaminopteridin-6-yl)methyl](methyl)amino}benzoyl)-L-glutamic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-amino-10-methylfolic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-amino-N10-methylpteroylglutamic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: METHOTREXATE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MTX
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methotrexate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[4-[[(2,4-diamino-6-pteridinyl)methyl]methylamino]benzoyl]-L-glutamic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26373
+- CHEBI:29347
+- CHEBI:35692
+xrefs:
+- beilstein:70669
+- cas:59-05-2
+- drugbank:DB00563
+- drugcentral:1751
+- kegg.compound:C01937
+- kegg.drug:D00142
+- lincs.smallmolecule:LSM-5690
+- patent:US2512572
+- pdb-ccd:MTX
+- wikipedia.en:Methotrexate
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: CN(Cc1cnc2nc(N)nc(N)c2n1)c1ccc(C(=O)N[C@@H](CCC(=O)O)C(=O)O)cc1
+  standard_inchi: InChI=1S/C20H22N8O5/c1-28(9-11-8-23-17-15(24-11)16(21)26-20(22)27-17)12-4-2-10(3-5-12)18(31)25-13(19(32)33)6-7-14(29)30/h2-5,8,13H,6-7,9H2,1H3,(H,25,31)(H,29,30)(H,32,33)(H4,21,22,23,26,27)/t13-/m0/s1
+  standard_inchi_key: FBOZXECLQNJBKD-ZDUSSCGKSA-N
+  molecular_formula: C20H22N8O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 454.447
+  monoisotopic_mass: 454.17132
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:44185
+  source_label: methotrexate
+  minted_identifier: antibioticmech:chebi-5f01f28068
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,80 @@
+identifier: CHEBI:15854
+label: quinine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cinchona alkaloid that is cinchonidine in which the hydrogen at the
+  6-position of the quinoline ring is substituted by methoxy.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (9R)-6'-methoxy-8α-cinchonan-9-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (-)-Quinine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (8S,9R)-quinine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-(6-methoxyquinolin-4-yl)((2S,4S,8R)-8-vinylquinuclidin-2-yl)methanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-(−)-quinine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-quinine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6'-methoxycinchonidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chinin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quinine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chinine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chininum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: quinina
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:51323
+xrefs:
+- beilstein:91867
+- cas:130-95-0
+- drugbank:DB00468
+- drugcentral:4523
+- kegg.compound:C06526
+- kegg.drug:D08460
+- knapsack:C00002193
+- wikipedia.en:Quinine
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@@]1([C@H](O)c2ccnc3ccc(OC)cc23)C[C@@H]2CC[N@@]1C[C@@H]2C=C'
+  standard_inchi: InChI=1S/C20H24N2O2/c1-3-13-12-22-9-7-14(13)10-19(22)20(23)16-6-8-21-18-5-4-15(24-2)11-17(16)18/h3-6,8,11,13-14,19-20,23H,1,7,9-10,12H2,2H3/t13-,14-,19-,20+/m0/s1
+  standard_inchi_key: LOUPRKONTZGTKE-WZBLMQSHSA-N
+  molecular_formula: C20H24N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 324.424
+  monoisotopic_mass: 324.18378
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:15854
+  source_label: quinine
+  minted_identifier: antibioticmech:chebi-b46279adb0
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

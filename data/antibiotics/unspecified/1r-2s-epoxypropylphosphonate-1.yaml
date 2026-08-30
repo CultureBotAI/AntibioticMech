@@ -1,0 +1,47 @@
+identifier: CHEBI:62247
+label: (1R,2S)-epoxypropylphosphonate(1−)
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organophosphonate oxoanion obtained by deprotonation of one of the
+  two phosphonate OH groups of (1R,2S)-epoxypropylphosphonic acid; major species at
+  pH 7.3.
+definition_source: ChEBI
+synonyms:
+- synonym_text: hydrogen [(2R,3S)-3-methyloxiran-2-yl]phosphonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fosfomycin(1−)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1R,2S)-epoxypropylphosphonate
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:59635
+xrefs:
+- metacyc.compound:CPD0-1113
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C[C@@H]1O[C@@H]1P(=O)([O-])O
+  standard_inchi: InChI=1S/C3H7O4P/c1-2-3(7-2)8(4,5)6/h2-3H,1H3,(H2,4,5,6)/p-1/t2-,3+/m0/s1
+  standard_inchi_key: YMDXZJFXQJVXBF-STHAYSLISA-M
+  molecular_formula: C3H6O4P
+  structure_source: ChEBI
+  charge: -1
+  average_mass: 137.051
+  monoisotopic_mass: 137.00092
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:62247
+  source_label: (1R,2S)-epoxypropylphosphonate(1−)
+  minted_identifier: antibioticmech:chebi-ca956e579e
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

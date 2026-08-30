@@ -1,0 +1,54 @@
+identifier: CHEBI:34638
+label: chromomycin A3
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (1S)-1-C-[(2S,3S)-7-{[4-O-acetyl-2,6-dideoxy-3-O-(2,6-dideoxy-4-O-methyl-α-D-lyxo-hexopyranosyl)-β-D-lyxo-hexopyranosyl]oxy}-3-{[4-O-acetyl-2,6-dideoxy-3-C-methyl-α-L-arabino-hexopyranosyl-(1→3)-2,6-dideoxy-β-D-arabino-hexopyranosyl-(1→3)-2,6-dideoxy-β-D-arabino-hexopyranosyl]oxy}-5,10-dihydroxy-6-methyl-4-oxo-1,2,3,4-tetrahydroanthracen-2-yl]-5-deoxy-1-O-methyl-D-xylulose
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3B-O-(4-O-acetyl-2,6-dideoxy-3-C-methyl-α-L-arabinohexopyranosyl)-7-methylolivomycin
+    D
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Aburamycin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chromomycin A3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Toyomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:51233
+xrefs:
+- beilstein:6630334
+- cas:7059-24-7
+- kegg.compound:C13569
+- kegg.drug:D02062
+- knapsack:C00018673
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]1([C@H](OC)C(=O)[C@@H](O)[C@@H](C)O)Cc2cc3cc(O[C@H]4C[C@@H](O[C@@H]5C[C@@H](O)[C@@H](OC)[C@@H](C)O5)[C@@H](OC(C)=O)[C@@H](C)O4)c(C)c(O)c3c(O)c2C(=O)[C@H]1O[C@H]1C[C@@H](O[C@H]2C[C@@H](O[C@H]3C[C@](C)(O)[C@@H](OC(C)=O)[C@H](C)O3)[C@H](O)[C@@H](C)O2)[C@H](O)[C@@H](C)O1'
+  standard_inchi: InChI=1S/C57H82O26/c1-21-34(79-40-19-37(53(26(6)75-40)77-28(8)59)82-38-16-33(61)52(70-11)25(5)74-38)15-31-13-30-14-32(54(71-12)51(68)46(63)22(2)58)55(50(67)44(30)49(66)43(31)45(21)62)83-41-18-35(47(64)24(4)73-41)80-39-17-36(48(65)23(3)72-39)81-42-20-57(10,69)56(27(7)76-42)78-29(9)60/h13,15,22-27,32-33,35-42,46-48,52-56,58,61-66,69H,14,16-20H2,1-12H3/t22-,23-,24-,25-,26-,27+,32+,33-,35-,36-,37-,38-,39+,40+,41+,42+,46+,47-,48-,52+,53+,54+,55+,56+,57+/m1/s1
+  standard_inchi_key: ZYVSOIYQKUDENJ-WKSBCEQHSA-N
+  molecular_formula: C57H82O26
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1183.257
+  monoisotopic_mass: 1182.50943
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:34638
+  source_label: chromomycin A3
+  minted_identifier: antibioticmech:chebi-74cb731cc3
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

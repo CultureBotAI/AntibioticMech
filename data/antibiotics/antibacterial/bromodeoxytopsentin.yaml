@@ -1,0 +1,49 @@
+identifier: CHEBI:144087
+label: bromodeoxytopsentin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aromatic ketone that is imidazole which is substituted by a 1H-indole-3-carbonyl
+  group and a 6-bromo-1H-indol-3-yl group at positions 2 and 4, respectively. Isolated
+  from the Mediterranean shallow-water sponge, Topsentia genetrix. It is a potent
+  inhibitor of MRSA pyruvate kinase and exhibits antibacterial properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[4-(6-bromo-1H-indol-3-yl)-1H-imidazol-2-yl](1H-indol-3-yl)methanone'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[5-(6-bromo-1H-indol-3-yl)-1H-imidazol-2-yl](1H-indol-3-yl)methanone'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24780
+- CHEBI:38958
+- CHEBI:52514
+- CHEBI:76224
+xrefs:
+- cas:180633-55-0
+- knapsack:C00026966
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C(c1ncc(-c2cnc3cc(Br)ccc23)n1)c1cnc2ccccc12
+  standard_inchi: InChI=1S/C20H13BrN4O/c21-11-5-6-13-14(8-23-17(13)7-11)18-10-24-20(25-18)19(26)15-9-22-16-4-2-1-3-12(15)16/h1-10,22-23H,(H,24,25)
+  standard_inchi_key: RMAWSNVDVKZXDX-UHFFFAOYSA-N
+  molecular_formula: C20H13BrN4O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 405.255
+  monoisotopic_mass: 404.02727
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:144087
+  source_label: bromodeoxytopsentin
+  minted_identifier: antibioticmech:chebi-9c37550b0a
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,56 @@
+identifier: CHEBI:6469
+label: linalyl acetate
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A racemate comprising equimolar amounts of (R)- and (S)-linalyl acetate.
+  It forms a principal component of the essential oils from bergamot and lavender.
+definition_source: ChEBI
+synonyms:
+- synonym_text: rac-3,7-dimethylocta-1,6-dien-3-yl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (±)-3,7-dimethylocta-1,6-dien-3-yl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetic acid linalool ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bergamiol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bergamot mint oil
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:60911
+xrefs:
+- cas:115-95-7
+- hmdb:HMDB0039522
+- kegg.compound:C09863
+- reaxys:1724497
+- wikipedia.en:Linalyl_acetate
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C=C[C@@](C)(CCC=C(C)C)OC(C)=O
+  standard_inchi: InChI=1S/C12H20O2/c1-6-12(5,14-11(4)13)9-7-8-10(2)3/h6,8H,1,7,9H2,2-5H3/t12-/m0/s1
+  standard_inchi_key: UWKAYLJWKGQEPM-LBPRGKRZSA-N
+  molecular_formula: C12H20O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 196.29
+  monoisotopic_mass: 196.14633
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6469
+  source_label: linalyl acetate
+  minted_identifier: antibioticmech:chebi-29fc3d0b24
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

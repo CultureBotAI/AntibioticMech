@@ -1,0 +1,73 @@
+identifier: CHEBI:6129
+label: ketorolac
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A racemate comprising equimolar amounts of (R)-(+)- and (S)-(−)-5-benzoyl-2,3-dihydro-1H-pyrrolizine-1-carboxylic
+  acid. While only the (S)-(−) enantiomer is a COX1 and COX2 inhibitor, the (R)-(+)
+  enantiomer exhibits potent analgesic activity. A non-steroidal anti-inflammatory
+  drug, ketorolac is mainly used (generally as the tromethamine salt) for its potent
+  analgesic properties in the short-term management of post-operative pain, and in
+  eye drops to relieve the ocular itching associated with seasonal allergic conjunctivitis.
+  It was withdrawn from the market in many countries in 1993 following association
+  with haemorrhage and renal failure.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ketorolaco
+  synonym_type: INN
+  source: chebi
+- synonym_text: ketorolacum
+  synonym_type: INN
+  source: chebi
+- synonym_text: kétorolac
+  synonym_type: INN
+  source: chebi
+- synonym_text: rac-5-benzoyl-2,3-dihydro-1H-pyrrolizine-1-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (±)-5-benzoyl-2,3-dihydro-1H-pyrrolizine-1-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (±)-ketorolac
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: rac-ketorolac
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:60911
+xrefs:
+- cas:74103-06-3
+- drugbank:DB00465
+- hmdb:HMDB0014608
+- kegg.compound:C07062
+- kegg.drug:D08104
+- patent:BE856681
+- patent:US4089969
+- patent:US4347186
+- reaxys:413572
+- wikipedia.en:Ketorolac
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C(c1ccccc1)c1ccc2n1CCC2C(=O)O
+  standard_inchi: InChI=1S/C15H13NO3/c17-14(10-4-2-1-3-5-10)13-7-6-12-11(15(18)19)8-9-16(12)13/h1-7,11H,8-9H2,(H,18,19)
+  standard_inchi_key: OZWKMVRBQXNZKK-UHFFFAOYSA-N
+  molecular_formula: C15H13NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 255.273
+  monoisotopic_mass: 255.08954
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6129
+  source_label: ketorolac
+  minted_identifier: antibioticmech:chebi-358cb7e7b8
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

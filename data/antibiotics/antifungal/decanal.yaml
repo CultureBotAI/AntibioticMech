@@ -1,0 +1,76 @@
+identifier: CHEBI:31457
+label: decanal
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A saturated fatty aldehyde formally arising from reduction of the carboxy
+  group of capric acid (decanoic acid).
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-Decanal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-decyl aldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Decanal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: capraldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: caprinaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: decanaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-decaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-decanal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-decyl aldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:12834
+- CHEBI:133249
+- CHEBI:142621
+xrefs:
+- cas:112-31-2
+- gmelin:218612
+- hmdb:HMDB0011623
+- kegg.compound:C12307
+- knapsack:C00030099
+- knapsack:C00030804
+- lipidmaps:LMFA06000052
+- metacyc.compound:CPD-8490
+- patent:JP2002146386
+- reaxys:1362530
+- wikipedia.en:Decanal
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H]C(=O)CCCCCCCCC'
+  standard_inchi: InChI=1S/C10H20O/c1-2-3-4-5-6-7-8-9-10-11/h10H,2-9H2,1H3
+  standard_inchi_key: KSMVZQYAVGTKIV-UHFFFAOYSA-N
+  molecular_formula: C10H20O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 156.269
+  monoisotopic_mass: 156.15142
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31457
+  source_label: decanal
+  minted_identifier: antibioticmech:chebi-b381b81315
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

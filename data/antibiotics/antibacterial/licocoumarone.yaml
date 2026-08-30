@@ -1,0 +1,49 @@
+identifier: CHEBI:69098
+label: licocoumarone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 1-benzofurans which consists of 1-benzofuran
+  substituted by a hydroxy group at position 6, a methoxy group at position 4, a prenyl
+  group at position 5 and a 2,4-dihydroxyphenyl group at position 2. It has been isolated
+  from Glycyrrhiza uralensis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-[6-hydroxy-4-methoxy-5-(3-methylbut-2-en-1-yl)-1-benzofuran-2-yl]benzene-1,3-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(2',4'-dihydroxyphenyl)-6-hydroxy-5-isopentenyl-4-methoxybenzofuran
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33572
+- CHEBI:35618
+- CHEBI:38830
+xrefs:
+- hmdb:HMDB0038755
+- lipidmaps:LMPK12160045
+- reaxys:4821696
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1c(CC=C(C)C)c(O)cc2oc(-c3ccc(O)cc3O)cc12
+  standard_inchi: InChI=1S/C20H20O5/c1-11(2)4-6-14-17(23)10-19-15(20(14)24-3)9-18(25-19)13-7-5-12(21)8-16(13)22/h4-5,7-10,21-23H,6H2,1-3H3
+  standard_inchi_key: CNPMAFLUEHEXRE-UHFFFAOYSA-N
+  molecular_formula: C20H20O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 340.375
+  monoisotopic_mass: 340.13107
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69098
+  source_label: licocoumarone
+  minted_identifier: antibioticmech:chebi-8080cab7f4
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

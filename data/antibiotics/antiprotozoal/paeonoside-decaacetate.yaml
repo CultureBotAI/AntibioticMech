@@ -1,0 +1,47 @@
+identifier: CHEBI:67930
+label: paeonoside decaacetate
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A kaempferol O-glucoside that is the decaacetate ester derivative of paeonoside.
+  Isolated from the aerial parts of Delphinium staphisagria, it exhibits trypanocidal
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-{5-(acetyloxy)-4-oxo-3,7-bis[(2,3,4,6-tetra-O-acetyl-β-D-glucopyranosyl)oxy]-4H-chromen-2-yl}phenyl
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: kaempferol-3,7-di-O-β-D-glucopyranoside decacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22798
+- CHEBI:47622
+- CHEBI:64634
+xrefs:
+- reaxys:23277590
+activity_roles:
+- CHEBI:36335
+chemical_structure:
+  smiles: CC(=O)OC[C@H]1O[C@@H](Oc2cc(OC(C)=O)c3c(=O)c(O[C@@H]4O[C@H](COC(C)=O)[C@@H](OC(C)=O)[C@H](OC(C)=O)[C@H]4OC(C)=O)c(-c4ccc(OC(C)=O)cc4)oc3c2)[C@H](OC(C)=O)[C@@H](OC(C)=O)[C@@H]1OC(C)=O
+  standard_inchi: InChI=1S/C47H50O26/c1-19(48)59-17-34-39(63-23(5)52)42(65-25(7)54)44(67-27(9)56)46(71-34)69-31-15-32(62-22(4)51)36-33(16-31)70-38(29-11-13-30(14-12-29)61-21(3)50)41(37(36)58)73-47-45(68-28(10)57)43(66-26(8)55)40(64-24(6)53)35(72-47)18-60-20(2)49/h11-16,34-35,39-40,42-47H,17-18H2,1-10H3/t34-,35-,39-,40-,42+,43+,44-,45-,46-,47+/m1/s1
+  standard_inchi_key: NLVNWKWBXDAKIC-GHNQEIAISA-N
+  molecular_formula: C47H50O26
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1030.891
+  monoisotopic_mass: 1030.25903
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:67930
+  source_label: paeonoside decaacetate
+  minted_identifier: antibioticmech:chebi-8497fadb31
+  role_terms:
+  - CHEBI:36335
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

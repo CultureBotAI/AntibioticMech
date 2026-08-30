@@ -1,0 +1,52 @@
+identifier: CHEBI:65400
+label: ambiguine H
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An ambiguine which is a (6aS,9R,10R,10aS)-9-ethenyl-10-isocyano-6,6,9-trimethyl-1-(2-methylbut-3-en-2-yl)
+  substituted derivative of 2,6,6a,7,8,9,10,10a-octahydronaphtho[1,2,3-cd]indole.
+  An antimicrobial agent isolated from the cyanobacterium strain, Fischerella.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6aS,9R,10R,10aS)-9-ethenyl-10-isocyano-6,6,9-trimethyl-1-(2-methylbut-3-en-2-yl)-2,6,6a,7,8,9,10,10a-octahydronaphtho[1,2,3-cd]indole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-ambiguine H
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ambiguine H isonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:141618
+- CHEBI:35353
+- CHEBI:38163
+xrefs:
+- chemspider:17214460
+- reaxys:18851757
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12c3c(C(C)(C)C=C)nc4cccc(c34)C(C)(C)[C@@]1([H])CC[C@](C)(C=C)[C@@H]2[N+]#[C-]'
+  standard_inchi: InChI=1S/C26H32N2/c1-9-24(3,4)22-21-19-16(12-11-13-18(19)28-22)25(5,6)17-14-15-26(7,10-2)23(27-8)20(17)21/h9-13,17,20,23,28H,1-2,14-15H2,3-7H3/t17-,20-,23+,26-/m0/s1
+  standard_inchi_key: DBOXZAYTFKDLHJ-CSOFANMDSA-N
+  molecular_formula: C26H32N2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 372.556
+  monoisotopic_mass: 372.25655
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65400
+  source_label: ambiguine H
+  minted_identifier: antibioticmech:chebi-7d9d2370b5
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

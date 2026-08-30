@@ -1,0 +1,45 @@
+identifier: CHEBI:70145
+label: robustaside G
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A β-D-glucoside in which the anomeric position is substituted by a 4-hydroxyphenoxy
+  residue and the positions 2 and 6 by [(2E)-3-(1-hydroxy-4-oxocyclohexa-2,5-dien-1-yl)prop-2-enoyl]oxy
+  residues. Isolated from Grevillea, it exhibits antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-hydroxyphenyl 2,6-bis-O-[(2E)-3-(1-hydroxy-4-oxocyclohexa-2,5-dien-1-yl)prop-2-enoyl]-β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22798
+- CHEBI:33853
+- CHEBI:3992
+- CHEBI:51702
+- CHEBI:63367
+xrefs:
+- reaxys:21220923
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: O=C1C=CC(O)(/C=C/C(=O)OC[C@H]2O[C@@H](Oc3ccc(O)cc3)[C@H](OC(=O)/C=C/C3(O)C=CC(=O)C=C3)[C@@H](O)[C@@H]2O)C=C1
+  standard_inchi: InChI=1S/C30H28O13/c31-18-1-3-21(4-2-18)41-28-27(43-24(35)10-16-30(39)13-7-20(33)8-14-30)26(37)25(36)22(42-28)17-40-23(34)9-15-29(38)11-5-19(32)6-12-29/h1-16,22,25-28,31,36-39H,17H2/b15-9+,16-10+/t22-,25-,26+,27-,28-/m1/s1
+  standard_inchi_key: DKNCSDJNWFKXEC-GEQWPRKQSA-N
+  molecular_formula: C30H28O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 596.541
+  monoisotopic_mass: 596.15299
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70145
+  source_label: robustaside G
+  minted_identifier: antibioticmech:chebi-e2b7255da6
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

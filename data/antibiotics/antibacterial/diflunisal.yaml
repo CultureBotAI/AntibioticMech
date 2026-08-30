@@ -1,0 +1,61 @@
+identifier: CHEBI:39669
+label: diflunisal
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Diflunisal is a salicylic acid derivative and aspirin analogue typically
+  used as a nonsteroidal anti-inflammatory drug. It has been shown to exhibit antibiotic
+  activity against Escherichia coli by inhibiting MurA (MurZ), thereby disrupting
+  cell wall synthesis.
+definition_source: PMID:35453279
+synonyms:
+- synonym_text: Adomal
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Dolobid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Dolobis
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Flovacil
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Fluniget
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Fluodonil
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Flustar
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3007159
+xrefs:
+- ARO:3007091
+- cas:22494-42-4
+- chembl:CHEMBL898
+- pubchem.compound:3059
+structural_class: salicylic acid antibiotic
+structural_class_id: ARO:3007159
+chemical_structure:
+  smiles: O=C(O)c1cc(-c2ccc(F)cc2F)ccc1O
+  standard_inchi: InChI=1S/C13H8F2O3/c14-8-2-3-9(11(15)6-8)7-1-4-12(16)10(5-7)13(17)18/h1-6,16H,(H,17,18)
+  standard_inchi_key: HUPFGZXOMWLGNK-UHFFFAOYSA-N
+  molecular_formula: C13H8F2O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 250.2
+  monoisotopic_mass: 250.04415
+source_concepts:
+- source: ARO
+  source_id: ARO:3007091
+  source_label: diflunisal
+  minted_identifier: antibioticmech:aro-4da855baac
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

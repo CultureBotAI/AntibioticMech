@@ -1,0 +1,71 @@
+identifier: CHEBI:17151
+label: xylitol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pentitol (five-carbon sugar alcohol) having meso-configuration, being
+  derived from xylose by reduction of the carbonyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3r,4S)-pentane-1,2,3,4,5-pentol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: meso-xylitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R,3R,4S)-Pentane-1,2,3,4,5-pentaol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-XYLITOL
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-xylitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Xylit
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Xylitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: xylite
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25899
+xrefs:
+- cas:87-99-0
+- drugbank:DB01904
+- drugcentral:4604
+- gmelin:82893
+- hmdb:HMDB0002917
+- kegg.compound:C00379
+- kegg.drug:D00061
+- metacyc.compound:XYLITOL
+- pdb-ccd:XYL
+- reaxys:1720523
+- wikipedia.en:Xylitol
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: OC[C@@H](O)[C@H](O)[C@@H](O)CO
+  standard_inchi: InChI=1S/C5H12O5/c6-1-3(8)5(10)4(9)2-7/h3-10H,1-2H2/t3-,4+,5+
+  standard_inchi_key: HEBKCHPVOIAQTA-SCDXWVJYSA-N
+  molecular_formula: C5H12O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 152.146
+  monoisotopic_mass: 152.06847
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17151
+  source_label: xylitol
+  minted_identifier: antibioticmech:chebi-bfaea6981e
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

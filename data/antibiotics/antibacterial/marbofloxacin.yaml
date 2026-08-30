@@ -1,0 +1,70 @@
+identifier: CHEBI:132230
+label: marbofloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A fluoroquinolone antibiotic that is 7-oxo-2,3-dihydro-7H-[1,3,4]oxadiazino[6,5,4-ij]quinoline
+  substituted at positions 6, 9 and 10 by carboxy, fluoro and 4-methylpiperazin-1-yl
+  groups, respectively. A synthetic, broad spectrum bactericidal agent, it is used
+  in veterinary medicine, although its mechanism of action is not thoroughly understood.
+definition_source: ChEBI
+synonyms:
+- synonym_text: marbofloxacine
+  synonym_type: INN
+  source: chebi
+- synonym_text: marbofloxacino
+  synonym_type: INN
+  source: chebi
+- synonym_text: marbofloxacinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 9-fluoro-10-(4-methylpiperazin-1-yl)-7-oxo-2,3-dihydro-7H-[1,3,4]oxadiazino[6,5,4-ij]quinoline-6-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:46845
+- CHEBI:83575
+- CHEBI:87211
+- ARO:0000001
+xrefs:
+- ARO:3007046
+- cas:115550-35-1
+- lincs.smallmolecule:LSM-5799
+- wikipedia.en:Marbofloxacin
+- chembl:CHEMBL478120
+- pubchem.compound:60651
+activity_roles:
+- CHEBI:36047
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: CN1CCN(c2c(F)cc3c(=O)c(C(=O)O)cn4c3c2OCN4)CC1
+  standard_inchi: InChI=1S/C16H17FN4O4/c1-19-2-4-20(5-3-19)13-11(17)6-9-12-15(13)25-8-18-21(12)7-10(14(9)22)16(23)24/h6-7,18H,2-5,8H2,1H3,(H,23,24)
+  standard_inchi_key: LPVVTHNMXSEIFM-UHFFFAOYSA-N
+  molecular_formula: C16H17FN4O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 348.334
+  monoisotopic_mass: 348.12338
+source_concepts:
+- source: ARO
+  source_id: ARO:3007046
+  source_label: marbofloxacin
+  minted_identifier: antibioticmech:aro-59c1e98f75
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:132230
+  source_label: marbofloxacin
+  minted_identifier: antibioticmech:chebi-f3a683401d
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

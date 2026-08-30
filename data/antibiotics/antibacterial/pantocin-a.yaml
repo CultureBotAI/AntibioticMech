@@ -1,0 +1,49 @@
+identifier: CHEBI:172375
+label: pantocin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of indolizines that is 3,5,6,7-tetrahydroindolizine
+  which carries a 2-aminoacyl-4-amino-4-oxobutanoic acid, oxo, amino groups at positions
+  3S, 5 and 6S, respectively. It is a ribosomally encoded and post-translationally
+  modified peptide natural product found in several species of the Pantoea genus and
+  derived from a Glu-Glu-Asn precursor peptide.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N2-{[(3S,6S)-6-amino-5-oxo-3,5,6,7-tetrahydroindolizin-3-yl]carbonyl}-L-asparagine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-4-amino-2-({[(3S,6S)-6-amino-5-oxo-3,5,6,7-tetrahydroindolizin-3-yl]carbonyl}amino)-4-oxobutanoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140324
+- CHEBI:140325
+- CHEBI:25384
+- CHEBI:38485
+- CHEBI:50994
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]1(C(=O)N[C@@H](CC(N)=O)C(=O)O)C=CC2=CC[C@H](N)C(=O)N21'
+  standard_inchi: InChI=1S/C13H16N4O5/c14-7-3-1-6-2-4-9(17(6)12(7)20)11(19)16-8(13(21)22)5-10(15)18/h1-2,4,7-9H,3,5,14H2,(H2,15,18)(H,16,19)(H,21,22)/t7-,8-,9-/m0/s1
+  standard_inchi_key: XSESHFKIXVTLOJ-CIUDSAMLSA-N
+  molecular_formula: C13H16N4O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 308.294
+  monoisotopic_mass: 308.11207
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:172375
+  source_label: pantocin A
+  minted_identifier: antibioticmech:chebi-077695d339
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

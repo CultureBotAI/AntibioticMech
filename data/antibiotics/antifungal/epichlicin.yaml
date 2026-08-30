@@ -1,0 +1,43 @@
+identifier: CHEBI:65849
+label: epichlicin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A homodetic cyclic peptide containing L-Pro, D-Tyr, L-Ser, L-Asn and L-Gln
+  as the amino acid residues. Isolated from an endophytic fungus, Epichloe typhina,
+  it exhibits inhibitory activity toward the spore germination of Cladosporium phlei,
+  a pathogenic fungus of the timothy plant.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-[(3R,7S,10R,13S,16S,19S,22S,27aS)-7,13,22-tris(2-amino-2-oxoethyl)-10-(4-hydroxybenzyl)-19-(hydroxymethyl)-1,5,8,11,14,17,20,23-octaoxo-3-undecylhexacosahydro-1H-pyrrolo[2,1-c][1,4,7,10,13,16,19,22]octaazacyclopentacosin-16-yl]propanamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24613
+- CHEBI:51026
+xrefs:
+- reaxys:11108273
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCCCCCCCC[C@@H]1CC(=O)N[C@@H](CC(N)=O)C(=O)N[C@H](Cc2ccc(O)cc2)C(=O)N[C@@H](CC(N)=O)C(=O)N[C@@H](CCC(N)=O)C(=O)N[C@@H](CO)C(=O)N[C@@H](CC(N)=O)C(=O)N2CCC[C@H]2C(=O)N1
+  standard_inchi: InChI=1S/C48H74N12O14/c1-2-3-4-5-6-7-8-9-10-12-28-22-41(67)54-32(23-38(50)64)44(70)56-31(21-27-14-16-29(62)17-15-27)43(69)57-33(24-39(51)65)45(71)55-30(18-19-37(49)63)42(68)59-35(26-61)46(72)58-34(25-40(52)66)48(74)60-20-11-13-36(60)47(73)53-28/h14-17,28,30-36,61-62H,2-13,18-26H2,1H3,(H2,49,63)(H2,50,64)(H2,51,65)(H2,52,66)(H,53,73)(H,54,67)(H,55,71)(H,56,70)(H,57,69)(H,58,72)(H,59,68)/t28-,30+,31-,32+,33+,34+,35+,36+/m1/s1
+  standard_inchi_key: QPLUQODTAQYAFC-FVBCJJOCSA-N
+  molecular_formula: C48H74N12O14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1043.19
+  monoisotopic_mass: 1042.54475
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65849
+  source_label: epichlicin
+  minted_identifier: antibioticmech:chebi-0aed54849f
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

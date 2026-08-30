@@ -1,0 +1,52 @@
+identifier: CHEBI:88298
+label: FR171456
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A steroid acid that is 9β,19-cyclo-5α-ergost-24(28)-ene-4α-carboxylic
+  acid which is substituted by hydroxy groups at the 3β, 8α, and 11α positions, by
+  a methyl group at the 4β position, and by oxo groups at positions 1 and 6. It is
+  a cholesterol and ergosterol synthesis inhibitor isolated from the fungus Sporormiella
+  minima that specifically targets the enzyme, sterol-4-alpha-carboxylate-3-dehydrogenase,
+  encoded by ERG26 in budding yeast, and NSDHL in humans.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3β,8α,11α-trihydroxy-4-methyl-1,6-dioxo-9β,19-cyclo-5α-ergost-24(28)-ene-4α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3β,4α,5α,8α,9β,11α)-3,8,11-trihydroxy-4-methyl-1,6-dioxo-9,19-cycloergost-24(28)-ene-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139333
+- CHEBI:19129
+- CHEBI:36836
+- CHEBI:36883
+- CHEBI:47891
+- CHEBI:51454
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@]([H])([C@H](C)CCC(=C)C(C)C)[C@@]1(C)C[C@@H](O)[C@@]13C[C@@]14C(=O)C[C@H](O)[C@@](C)(C(=O)O)[C@]4([H])C(=O)C[C@]23O'
+  standard_inchi: InChI=1S/C30H44O7/c1-15(2)16(3)7-8-17(4)18-9-10-20-26(18,5)13-23(34)29-14-28(29)22(33)11-21(32)27(6,25(35)36)24(28)19(31)12-30(20,29)37/h15,17-18,20-21,23-24,32,34,37H,3,7-14H2,1-2,4-6H3,(H,35,36)/t17-,18-,20-,21+,23-,24+,26-,27-,28+,29+,30+/m1/s1
+  standard_inchi_key: JAHGNOXPMXOEJS-BSPLYONXSA-N
+  molecular_formula: C30H44O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 516.675
+  monoisotopic_mass: 516.3087
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:88298
+  source_label: FR171456
+  minted_identifier: antibioticmech:chebi-133d18380b
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

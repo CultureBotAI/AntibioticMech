@@ -1,0 +1,59 @@
+identifier: CHEBI:156070
+label: butyl benzoate
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzoate ester obtained by condensation of benzoic acid and butanol.
+  It is used as a perfume ingredient and as a solvent for cellulose ether, a dye carrier
+  for textiles.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Anthrapole AZ
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Dai Cari XBN
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Benzoic acid, butyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benzoic acid butyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benzoic acid n-butyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-butyl benzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36054
+xrefs:
+- cas:136-60-7
+- foodb.food:FDB008741
+- metacyc.compound:CPD-19955
+- reaxys:1867073
+activity_roles:
+- CHEBI:65256
+chemical_structure:
+  smiles: CCCCOC(=O)c1ccccc1
+  standard_inchi: InChI=1S/C11H14O2/c1-2-3-9-13-11(12)10-7-5-4-6-8-10/h4-8H,2-3,9H2,1H3
+  standard_inchi_key: XSIFPSYPOVKYCO-UHFFFAOYSA-N
+  molecular_formula: C11H14O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 178.231
+  monoisotopic_mass: 178.09938
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156070
+  source_label: butyl benzoate
+  minted_identifier: antibioticmech:chebi-29dd02dcb7
+  role_terms:
+  - CHEBI:65256
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

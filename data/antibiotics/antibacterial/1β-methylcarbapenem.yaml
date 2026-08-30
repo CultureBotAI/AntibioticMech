@@ -1,0 +1,40 @@
+identifier: CHEBI:46764
+label: 1β-methylcarbapenem
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: 1β-methyl-2,3-didehydro-1-carbapenam
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4S,5S)-4-methyl-1-azabicyclo[3.2.0]hept-2-en-7-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:46633
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12CC(=O)N1C=C[C@@H]2C'
+  standard_inchi: InChI=1S/C7H9NO/c1-5-2-3-8-6(5)4-7(8)9/h2-3,5-6H,4H2,1H3/t5-,6-/m0/s1
+  standard_inchi_key: YKMONJZIUAOVEM-WDSKDSINSA-N
+  molecular_formula: C7H9NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 123.155
+  monoisotopic_mass: 123.06841
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:46764
+  source_label: 1β-methylcarbapenem
+  minted_identifier: antibioticmech:chebi-fe486ebf7b
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

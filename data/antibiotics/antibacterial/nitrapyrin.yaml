@@ -1,0 +1,59 @@
+identifier: CHEBI:81935
+label: nitrapyrin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A chloropyridine that is 2-chloropyridine which is substituted by a trichloromethyl
+  group at position 6. It is a nitrification inhibitor that is co-applied with nitrogen
+  fertilizer in agroecosystems.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Dowco-163
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: N-Serve
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: N-Serve nitrogen stabilizer
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 2-chloro-6-(trichloromethyl)pyridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α,α,α,6-tetrachloro-2-picoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:39173
+xrefs:
+- cas:1929-82-4
+- kegg.compound:C18751
+- metacyc.compound:NITRAPYRIN
+- pesticides:nitrapyrin
+- ppdb:1200
+- reaxys:1618997
+- wikipedia.en:Nitrapyrin
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Clc1cccc(C(Cl)(Cl)Cl)n1
+  standard_inchi: InChI=1S/C6H3Cl4N/c7-5-3-1-2-4(11-5)6(8,9)10/h1-3H
+  standard_inchi_key: DCUJJWWUNKIJPH-UHFFFAOYSA-N
+  molecular_formula: C6H3Cl4N
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 230.909
+  monoisotopic_mass: 228.90196
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81935
+  source_label: nitrapyrin
+  minted_identifier: antibioticmech:chebi-fadc4c71ed
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

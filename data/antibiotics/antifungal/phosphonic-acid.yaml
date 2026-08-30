@@ -1,0 +1,80 @@
+identifier: CHEBI:44976
+label: phosphonic acid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A phosphorus oxoacid that consists of a single pentavalent phosphorus
+  covalently bound via single bonds to a single hydrogen and two hydroxy groups and
+  via a double bond to an oxygen. The parent of the class of phosphonic acids.
+definition_source: ChEBI
+synonyms:
+- synonym_text: dihydrogen hydridotrioxophosphate(2−)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hydridodihydroxidooxidophosphorus
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hydridotrioxophosphoric(2−) acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (HO)2HPO
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: H2PHO3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: H3PO3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HPO(OH)2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphite
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphonsäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[PHO(OH)2]'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26069
+- CHEBI:33457
+xrefs:
+- cas:13598-36-2
+- gmelin:1619
+- kegg.compound:C06701
+- pdb-ccd:PHS
+- reaxys:1209272
+- wikipedia.en:Phosphonic_acid
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: '[H]OP([H])(=O)O[H]'
+  standard_inchi: InChI=1S/H3O3P/c1-4(2)3/h4H,(H2,1,2,3)
+  standard_inchi_key: ABLZXFCXXLZCGV-UHFFFAOYSA-N
+  molecular_formula: H3O3P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 81.995
+  monoisotopic_mass: 81.98198
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:44976
+  source_label: phosphonic acid
+  minted_identifier: antibioticmech:chebi-e2b45fd74f
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

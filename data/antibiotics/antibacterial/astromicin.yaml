@@ -1,0 +1,169 @@
+identifier: CHEBI:37923
+label: astromicin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An amino cyclitol glycoside that is L-chiro-inositol in which the hydroxy
+  groups at positions 1, 4, and 6 are replaced by aminoacetyl)methylamino, amino,
+  and methoxy groups, respectively, and in which the hydroxy group at position 3 is
+  converted to the corresponding 2,6-diamino-2,3,4,6,7-pentadeoxy-β-L-lyxo-heptopyranoside.
+  The major component of fortimicin, obtained from Micromonospora olivasterospora.
+  It is administered (as the sulfate salt) by intramuscular injection or intravenous
+  infusion for the treatment of severe systemic infections due to sensitive Gram-negative
+  organisms.
+definition_source: ChEBI
+synonyms:
+- synonym_text: astromicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: astromicine
+  synonym_type: INN
+  source: chebi
+- synonym_text: astromicinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-[(1S,2R,3R,4S,5S,6R)-4-amino-3-({(2R,3R,6S)-3-amino-6-[(1S)-1-aminoethyl]tetrahydro-2H-pyran-2-yl}oxy)-2,5-dihydroxy-6-methoxycyclohexyl]-N-methylglycinamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-amino-1-((aminoacetyl)methylamino)-1,4-dideoxy-3-O-(2,6-diamino-2,3,4,6,7-pentadeoxy-β-L-lyxo-heptopyranosyl)-6-O-methyl-L-chiro-inositol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-amino-1-(2-amino-N-methylacetamido)-1,4-dideoxy-3-O-(2,6-diamino-2,3,4,6,7-pentadeoxy-β-L-lyxo-heptopyranosyl)-6-O-methyl-L-chiro-inositol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ASTM
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Astromicin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: KW 1070
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: KW-1070
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: XK 70-1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: XK-70-1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic KW-1070
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: astromycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fortimicin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Astromicina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Astromicine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Astromicinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:22479
+- CHEBI:22507
+- CHEBI:23824
+- CHEBI:29347
+- CHEBI:50994
+- ARO:0000016
+xrefs:
+- ARO:0000003
+- cas:55779-06-1
+- drugcentral:250
+- kegg.compound:C17708
+- kegg.drug:D07470
+- reaxys:3570275
+- wikipedia.en:Astromicin
+- chembl:CHEMBL3084803
+- pubchem.compound:5284517
+activity_roles:
+- CHEBI:33282
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: '[H][C@@]1([C@H](C)N)CC[C@@H](N)[C@@H](O[C@@H]2[C@@H](N)[C@H](O)[C@H](OC)[C@@H](N(C)C(=O)CN)[C@H]2O)O1'
+  standard_inchi: InChI=1S/C17H35N5O6/c1-7(19)9-5-4-8(20)17(27-9)28-15-11(21)13(24)16(26-3)12(14(15)25)22(2)10(23)6-18/h7-9,11-17,24-25H,4-6,18-21H2,1-3H3/t7-,8+,9-,11-,12-,13-,14+,15+,16+,17+/m0/s1
+  standard_inchi_key: BIDUPMYXGFNAEJ-APGVDKLISA-N
+  molecular_formula: C17H35N5O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 405.496
+  monoisotopic_mass: 405.25873
+source_concepts:
+- source: ARO
+  source_id: ARO:0000003
+  source_label: astromicin
+  minted_identifier: antibioticmech:aro-f778372b89
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:37923
+  source_label: astromicin
+  minted_identifier: antibioticmech:chebi-09406857fa
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002528
+  label: AAC(3)-Ia
+  evidence:
+  - reference: ARO:3002528
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000003 (astromicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002529
+  label: AAC(3)-Id
+  evidence:
+  - reference: ARO:3002529
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000003 (astromicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002530
+  label: AAC(3)-Ib
+  evidence:
+  - reference: ARO:3002530
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000003 (astromicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002531
+  label: AAC(3)-Ic
+  evidence:
+  - reference: ARO:3002531
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000003 (astromicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002600
+  label: AAC(3)-Ib/AAC(6')-Ib3 bifunctional protein
+  evidence:
+  - reference: ARO:3002600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000003 (astromicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002666
+  label: rmtF
+  evidence:
+  - reference: ARO:3002666
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000003 (astromicin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000003 (astromicin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

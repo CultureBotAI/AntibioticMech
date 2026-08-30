@@ -1,0 +1,54 @@
+identifier: CHEBI:6358
+label: lactucin
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An azulenofuran that is 3-methylidene-3,3a,4,5,9a,9b-hexahydroazuleno[4,5-b]furan-2,7-dione
+  carrying additional hydroxy, methyl and hydroxymethyl substituents at positions
+  4, 6 and 9 respectively (the 3aR,4S,9aS,9bR-diastereomer). Found in chicory.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3aR,4S,9aS,9bR)-4-hydroxy-9-(hydroxymethyl)-6-methyl-3-methylidene-3,3a,4,5,9a,9b-hexahydroazuleno[4,5-b]furan-2,7-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Lactucine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:35681
+- CHEBI:36130
+- CHEBI:37667
+- CHEBI:39433
+- CHEBI:51689
+xrefs:
+- cas:1891-29-8
+- hmdb:HMDB0035814
+- kegg.compound:C09489
+- knapsack:C00003311
+- reaxys:40523
+- wikipedia.en:Lactucin
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]12C(CO)=CC(=O)C1=C(C)C[C@H](O)[C@@]1([H])C(=C)C(=O)O[C@]21[H]'
+  standard_inchi: InChI=1S/C15H16O5/c1-6-3-9(17)12-7(2)15(19)20-14(12)13-8(5-16)4-10(18)11(6)13/h4,9,12-14,16-17H,2-3,5H2,1H3/t9-,12+,13-,14-/m0/s1
+  standard_inchi_key: VJQAFLAZRVKAKM-VZLIPTOUSA-N
+  molecular_formula: C15H16O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 276.288
+  monoisotopic_mass: 276.09977
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6358
+  source_label: lactucin
+  minted_identifier: antibioticmech:chebi-41642c9a38
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

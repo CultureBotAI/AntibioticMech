@@ -1,0 +1,68 @@
+identifier: CHEBI:193161
+label: isovanillin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzaldehydes that is 4-methoxybenzaldehyde substituted
+  by a hydroxy group at position 3. It is an inhibitor of aldehyde oxidase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-hydroxy-4-methoxybenzaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-hydroxy-p-anisaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-hydroxy-para-anisaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-formyl-2-methoxyphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-formylguaiacol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: iso-vanillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: isovanilline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: m-hydroxy-p-methoxybenzaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22698
+- CHEBI:25235
+- CHEBI:33853
+xrefs:
+- cas:621-59-0
+- knapsack:C00044826
+- metacyc.compound:CPD-8489
+- patent:EP0758639
+- reaxys:1073021
+- wikipedia.en:Isovanillin
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H]C(=O)c1ccc(OC)c(O)c1'
+  standard_inchi: InChI=1S/C8H8O3/c1-11-8-3-2-6(5-9)4-7(8)10/h2-5,10H,1H3
+  standard_inchi_key: JVTZFYYHCGSXJV-UHFFFAOYSA-N
+  molecular_formula: C8H8O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 152.149
+  monoisotopic_mass: 152.04734
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:193161
+  source_label: isovanillin
+  minted_identifier: antibioticmech:chebi-bd5d197fc8
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

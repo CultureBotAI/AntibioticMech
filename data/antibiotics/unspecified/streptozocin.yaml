@@ -1,0 +1,82 @@
+identifier: CHEBI:9288
+label: streptozocin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An N-nitrosourea that is an antibiotic produced by Streptomyces achromogenes.
+  It is used as an antineoplastic agent and to induce diabetes in experimental animals.
+definition_source: ChEBI
+synonyms:
+- synonym_text: estreptozocina
+  synonym_type: INN
+  source: chebi
+- synonym_text: streptozocine
+  synonym_type: INN
+  source: chebi
+- synonym_text: streptozocinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-deoxy-2-{[methyl(nitroso)carbamoyl]amino}-α-D-glucopyranose
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Deoxy-2-(((methylnitrosoamino)carbonyl)amino)-D-glucopyranose
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Deoxy-2-(3-methyl-3-nitrosoureido)-D-glucopyranose
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-D-Glucosyl-(2)-N&#39;-nitrosomethylharnstoff
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-D-Glucosyl-(2)-N'-nitrosomethylurea
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Streptozocinium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Streptozotocin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Zanosar
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:21638
+- CHEBI:76551
+xrefs:
+- cas:18883-66-4
+- drugbank:DB00428
+- hmdb:HMDB0014572
+- kegg.compound:C07313
+- kegg.drug:D05932
+- patent:FR1434920
+- patent:US2005271747
+- patent:US2005272738
+- patent:US2008085882
+- patent:US4156777
+- reaxys:2060675
+- wikipedia.en:Streptozocin
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CN(N=O)C(=O)N[C@@H]1[C@@H](O)[C@H](O)[C@@H](CO)O[C@@H]1O
+  standard_inchi: InChI=1S/C8H15N3O7/c1-11(10-17)8(16)9-4-6(14)5(13)3(2-12)18-7(4)15/h3-7,12-15H,2H2,1H3,(H,9,16)/t3-,4-,5-,6-,7+/m1/s1
+  standard_inchi_key: ZSJLQEPLLKMAKR-GKHCUFPYSA-N
+  molecular_formula: C8H15N3O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 265.222
+  monoisotopic_mass: 265.091
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9288
+  source_label: streptozocin
+  minted_identifier: antibioticmech:chebi-ce1ef0d07f
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

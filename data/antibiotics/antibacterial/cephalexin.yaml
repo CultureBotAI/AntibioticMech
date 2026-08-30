@@ -1,0 +1,122 @@
+identifier: CHEBI:3534
+label: cephalexin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A semisynthetic first-generation cephalosporin antibiotic having methyl
+  and β-(2R)-2-amino-2-phenylacetamido groups at the 3- and 7- of the cephem skeleton,
+  respectively. It is effective against both Gram-negative and Gram-positive organisms,
+  and is used for treatment of infections of the skin, respiratory tract and urinary
+  tract.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefalexina
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefalexine
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefalexinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 7β-[(2R)-2-amino-2-phenylacetamido]-3-methyl-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-7-{[(2R)-2-amino-2-phenylacetyl]amino}-3-methyl-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-(D-α-Aminophenylacetamido)desacetoxycephalosporanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-β-(D-alpha-Amino-alpha-phenylacetylamino)-3-methyl-3-cephem-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CEX
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cefalexin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Celexin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cepastar
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cepexin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cephacillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ceporexin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LEX
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23066
+- CHEBI:72588
+- CHEBI:88225
+- ARO:0000032
+xrefs:
+- ARO:3000641
+- beilstein:965503
+- cas:15686-71-2
+- drugbank:DB00567
+- drugcentral:571
+- hmdb:HMDB0014707
+- kegg.compound:C06895
+- kegg.drug:D00263
+- lincs.smallmolecule:LSM-5957
+- patent:US3275626
+- patent:US3507861
+- reaxys:4238892
+- vsdb:1791
+- wikipedia.en:Cefalexin
+- chembl:CHEMBL1200544
+- pubchem.compound:27447
+activity_roles:
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(C)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)[C@H](N)c1ccccc1'
+  standard_inchi: InChI=1S/C16H17N3O4S/c1-8-7-24-15-11(14(21)19(15)12(8)16(22)23)18-13(20)10(17)9-5-3-2-4-6-9/h2-6,10-11,15H,7,17H2,1H3,(H,18,20)(H,22,23)/t10-,11-,15-/m1/s1
+  standard_inchi_key: ZAIPMKNFIOOWCQ-UEKVPHQBSA-N
+  molecular_formula: C16H17N3O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 347.396
+  monoisotopic_mass: 347.09398
+source_concepts:
+- source: ARO
+  source_id: ARO:3000641
+  source_label: cefalexin
+  minted_identifier: antibioticmech:aro-90e5cc8a68
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3534
+  source_label: cephalexin
+  minted_identifier: antibioticmech:chebi-f5d0d76424
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000641 (cefalexin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

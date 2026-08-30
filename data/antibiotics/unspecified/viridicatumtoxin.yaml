@@ -1,0 +1,63 @@
+identifier: CHEBI:85616
+label: viridicatumtoxin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracycline-like polyketide antibiotic that is produced by several
+  species of Penicillium and Aspergillus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,7a'S,11a'S,12'S)-5',6',7a',10',11a',12'-hexahydroxy-3'-methoxy-2,6,6-trimethyl-7',8'-dioxo-7',7a',8',11',11a',12'-hexahydro-1'H-spiro[cyclohex-2-ene-1,2'-cyclopenta[de]tetracene]-9'-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 159628
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SC 28762
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: viridicatumtoxin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:140324
+- CHEBI:26188
+- CHEBI:26195
+- CHEBI:26878
+- CHEBI:33599
+- CHEBI:33823
+- CHEBI:35618
+- CHEBI:35681
+- CHEBI:3992
+- CHEBI:51689
+- CHEBI:51751
+- CHEBI:51958
+- CHEBI:76224
+xrefs:
+- cas:39277-41-3
+- reaxys:2934660
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COc1cc(O)c2c(O)c3c(c4c2c1[C@]1(C4)C(C)=CCCC1(C)C)[C@H](O)[C@@]1(O)CC(O)=C(C(N)=O)C(=O)[C@@]1(O)C3=O
+  standard_inchi: InChI=1S/C30H31NO10/c1-11-6-5-7-27(2,3)28(11)9-12-16-18(13(32)8-15(41-4)21(16)28)22(34)20-17(12)23(35)29(39)10-14(33)19(26(31)38)24(36)30(29,40)25(20)37/h6,8,23,32-35,39-40H,5,7,9-10H2,1-4H3,(H2,31,38)/t23-,28-,29-,30+/m0/s1
+  standard_inchi_key: SUWQGLGDFGHZNH-WBWZXODPSA-N
+  molecular_formula: C30H31NO10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 565.575
+  monoisotopic_mass: 565.1948
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85616
+  source_label: viridicatumtoxin
+  minted_identifier: antibioticmech:chebi-544e90fc72
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,76 @@
+identifier: CHEBI:34118
+label: oct-1-en-3-ol
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An alkenyl alcohol with a structure based on a C8 unbranched chain with
+  the hydroxy group at C-2 and unsaturation at C-1‒C-2. It is a major volatile compound
+  present in many mushrooms and fungi.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-octen-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-vinylhexanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-hydroxy-1-octene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-octenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: amylvinylcarbinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: matsutake alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: mushroom alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: octene-1-ol-3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: vinyl amyl carbinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: vinyl hexanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:197506
+- CHEBI:50582
+xrefs:
+- bpdb:2063
+- cas:3391-86-4
+- gmelin:648361
+- kegg.compound:C14272
+- knapsack:C00029423
+- lipidmaps:LMFA05000090
+- reaxys:1720733
+- wikipedia.en:1-Octen-3-ol
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C=CC(O)CCCCC
+  standard_inchi: InChI=1S/C8H16O/c1-3-5-6-7-8(9)4-2/h4,8-9H,2-3,5-7H2,1H3
+  standard_inchi_key: VSMOENVRRABVKN-UHFFFAOYSA-N
+  molecular_formula: C8H16O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 128.215
+  monoisotopic_mass: 128.12012
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:34118
+  source_label: oct-1-en-3-ol
+  minted_identifier: antibioticmech:chebi-ff640569c2
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

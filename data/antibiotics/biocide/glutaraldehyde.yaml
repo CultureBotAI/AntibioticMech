@@ -1,0 +1,80 @@
+identifier: CHEBI:64276
+label: glutaraldehyde
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dialdehyde comprised of pentane with aldehyde functions at C-1 and C-5.
+definition_source: ChEBI
+synonyms:
+- synonym_text: glutaral
+  synonym_type: INN
+  source: chebi
+- synonym_text: glutaralum
+  synonym_type: INN
+  source: chebi
+- synonym_text: pentanedial
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,3-Diformylpropane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,5-Pentanedial
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,5-Pentanedione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glutaral
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glutaraldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glutardialdehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glutaric acid dialdehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glutaric dialdehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PENTANEDIAL
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38124
+xrefs:
+- cas:111-30-8
+- drugcentral:3267
+- hmdb:HMDB0029599
+- kegg.compound:C12518
+- kegg.drug:D01120
+- pdb-ccd:PTD
+- ppdb:1567
+- reaxys:605390
+- wikipedia.en:Glutaraldehyde
+activity_roles:
+- CHEBI:48219
+chemical_structure:
+  smiles: O=CCCCC=O
+  standard_inchi: InChI=1S/C5H8O2/c6-4-2-1-3-5-7/h4-5H,1-3H2
+  standard_inchi_key: SXRSQZLOMIGNAQ-UHFFFAOYSA-N
+  molecular_formula: C5H8O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 100.117
+  monoisotopic_mass: 100.05243
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:64276
+  source_label: glutaraldehyde
+  minted_identifier: antibioticmech:chebi-298b0f450d
+  role_terms:
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

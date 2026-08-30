@@ -1,0 +1,46 @@
+identifier: CHEBI:65867
+label: espicufolin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A naphthochromene that is 4H-naphtho[2,3-h]chromene which is substituted
+  at position 2 by a (2R)-butan-2-yl group, at position 5 by a hydroxymethyl group,
+  at position 11 by a hydroxy group, and at positions 4, 7, and 12 by oxogroups. An
+  antibiotic isolated from Streptomyces sp. cu39, it exerts a potent protecting effect
+  on neuronal cells through suppressing L-glutamate toxicity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-[(2R)-butan-2-yl]-11-hydroxy-5-(hydroxymethyl)-4H-naphtho[2,3-h]chromene-4,7,12-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22743
+- CHEBI:25830
+- CHEBI:33853
+- CHEBI:68504
+xrefs:
+- reaxys:8804787
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@@H](C)c1cc(=O)c2c(CO)cc3c(c2o1)C(=O)c1c(O)cccc1C3=O
+  standard_inchi: InChI=1S/C22H18O6/c1-3-10(2)16-8-15(25)17-11(9-23)7-13-19(22(17)28-16)21(27)18-12(20(13)26)5-4-6-14(18)24/h4-8,10,23-24H,3,9H2,1-2H3/t10-/m1/s1
+  standard_inchi_key: HXAZTNIVBVVFJS-SNVBAGLBSA-N
+  molecular_formula: C22H18O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 378.38
+  monoisotopic_mass: 378.11034
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65867
+  source_label: espicufolin
+  minted_identifier: antibioticmech:chebi-8638a2d4c7
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

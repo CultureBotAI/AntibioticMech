@@ -1,0 +1,65 @@
+identifier: CHEBI:5769
+label: humulone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An optically active cyclic ketone consisting of 3,5,6-trihydroxycyclohexa-2,4-dien-1-one
+  bearing two 3-methylbut-2-en-1-yl substituents at positions 4 and 6 as well as a
+  3-methylbutanoyl group at the 2-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6R)-3,5,6-trihydroxy-2-(3-methylbutanoyl)-4,6-bis(3-methylbut-2-en-1-yl)cyclohexa-2,4-dien-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R)-3,5,6-trihydroxy-2-isovaleryl-4,6-bis(3-methylbut-2-enyl)cyclohexa-2,4-dienone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Humulone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: humulon
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α-humulon
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:27136
+- CHEBI:3992
+- CHEBI:46640
+- CHEBI:76224
+xrefs:
+- cas:23510-81-8
+- cas:26472-41-3
+- kegg.compound:C10695
+- knapsack:C00002697
+- patent:CN101134719
+- patent:DE102007028397
+- patent:US2011021610
+- patent:WO2009114939
+- reaxys:3221160
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: CC(C)=CCC1=C(O)[C@](O)(CC=C(C)C)C(=O)C(C(=O)CC(C)C)=C1O
+  standard_inchi: InChI=1S/C21H30O5/c1-12(2)7-8-15-18(23)17(16(22)11-14(5)6)20(25)21(26,19(15)24)10-9-13(3)4/h7,9,14,23-24,26H,8,10-11H2,1-6H3/t21-/m1/s1
+  standard_inchi_key: VMSLCPKYRPDHLN-OAQYLSRUSA-N
+  molecular_formula: C21H30O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 362.466
+  monoisotopic_mass: 362.20932
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5769
+  source_label: humulone
+  minted_identifier: antibioticmech:chebi-2ae7899770
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

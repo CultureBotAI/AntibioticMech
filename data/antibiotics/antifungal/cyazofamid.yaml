@@ -1,0 +1,56 @@
+identifier: CHEBI:81841
+label: cyazofamid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of imidazoles carrying dimethylsulfamyl, cyano,
+  chloro and 4-tolyl substituents at positions 1, 2, 4 and 5 respectively. A fungicide
+  used mainly for controlling Oomycete and Plasmodiophora diseases on potatoes and
+  tomatoes. It is a skin and eye irritant and is moderately toxic to birds, most aquatic
+  organisms, honeybees and earthworms.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-chloro-2-cyano-N,N-dimethyl-5-(4-methylphenyl)-1H-imidazole-1-sulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-chloro-2-cyano-N,N-dimethyl-5-p-tolylimidazole-1-sulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18379
+- CHEBI:24780
+- CHEBI:36683
+- CHEBI:51871
+- CHEBI:87027
+- CHEBI:87068
+xrefs:
+- cas:120116-88-3
+- kegg.compound:C18573
+- patent:CN101647451
+- pesticides:cyazofamid
+- ppdb:186
+- reaxys:9064229
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: Cc1ccc(-c2c(Cl)nc(C#N)n2S(=O)(=O)N(C)C)cc1
+  standard_inchi: InChI=1S/C13H13ClN4O2S/c1-9-4-6-10(7-5-9)12-13(14)16-11(8-15)18(12)21(19,20)17(2)3/h4-7H,1-3H3
+  standard_inchi_key: YXKMMRDKEKCERS-UHFFFAOYSA-N
+  molecular_formula: C13H13ClN4O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 324.793
+  monoisotopic_mass: 324.04477
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81841
+  source_label: cyazofamid
+  minted_identifier: antibioticmech:chebi-634ea43209
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

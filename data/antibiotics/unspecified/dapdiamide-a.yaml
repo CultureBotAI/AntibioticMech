@@ -1,0 +1,44 @@
+identifier: CHEBI:85330
+label: dapdiamide A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the family of dapdiamides consisting of alanylvaline in which
+  one of the methyl hydrogens of alanine is replaced by a fumaramoyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-{[(2E)-4-amino-4-oxobut-2-enoyl]amino}-L-alanyl-L-valine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140324
+- CHEBI:140325
+- CHEBI:51751
+- CHEBI:85331
+xrefs:
+- metacyc.compound:CPD-17539
+- reaxys:20499534
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(C)[C@H](NC(=O)[C@@H](N)CNC(=O)/C=C/C(N)=O)C(=O)O
+  standard_inchi: InChI=1S/C12H20N4O5/c1-6(2)10(12(20)21)16-11(19)7(13)5-15-9(18)4-3-8(14)17/h3-4,6-7,10H,5,13H2,1-2H3,(H2,14,17)(H,15,18)(H,16,19)(H,20,21)/b4-3+/t7-,10-/m0/s1
+  standard_inchi_key: JAGLEOBXISHNNM-BRUQVKLWSA-N
+  molecular_formula: C12H20N4O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 300.315
+  monoisotopic_mass: 300.14337
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85330
+  source_label: dapdiamide A
+  minted_identifier: antibioticmech:chebi-e94551f449
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

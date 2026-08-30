@@ -1,0 +1,49 @@
+identifier: CHEBI:68787
+label: rubrorotiorin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An azaphilone that is 6,6a-dihydro-8H-furo[2,3-h]isochromen-6,8(6aH)-dione
+  substituted by an acetyl group at position 9, a chloro group a position 5, a 3,5-dimethylhepta-1,3-dien-1-yl
+  group at position 3 and a methyl group at position 6a. Isolated from Chaetomium
+  cupreum, it exhibits antifungal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6aS)-9-acetyl-5-chloro-3-[(1E,3E,5S)-3,5-dimethylhepta-1,3-dien-1-yl]-6a-methyl-6H-furo[2,3-h]isochromene-6,8(6aH)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26979
+- CHEBI:36683
+- CHEBI:37581
+- CHEBI:50941
+- CHEBI:51689
+- CHEBI:51867
+xrefs:
+- cas:28763-04-4
+- chemspider:10176672
+- reaxys:15840539
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC[C@H](C)/C=C(C)/C=C/C1=CC2=C(Cl)C(=O)[C@@]3(C)OC(=O)C(C(C)=O)=C3C2=CO1
+  standard_inchi: InChI=1S/C23H23ClO5/c1-6-12(2)9-13(3)7-8-15-10-16-17(11-28-15)19-18(14(4)25)22(27)29-23(19,5)21(26)20(16)24/h7-12H,6H2,1-5H3/b8-7+,13-9+/t12-,23-/m0/s1
+  standard_inchi_key: QJSWSNAZIVGTFZ-NPQXMUAYSA-N
+  molecular_formula: C23H23ClO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 414.885
+  monoisotopic_mass: 414.1234
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68787
+  source_label: rubrorotiorin
+  minted_identifier: antibioticmech:chebi-66c7e68905
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

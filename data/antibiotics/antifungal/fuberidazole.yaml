@@ -1,0 +1,81 @@
+identifier: CHEBI:81926
+label: fuberidazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A ring assembly consisting of benzimidazole substituted at position 2
+  by a 2-furyl group. A fungicide used as a seed treatment to control Fusarium spp.
+  in cereals.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(2-furyl)-1H-benzimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(2'-Furyl)-benzimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(2-Furanyl)-1H-benzimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(2-Furyl)benzimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(furan-2-yl)-benzimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BAY 33172
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bayer 33172
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fuberidatol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fuberidazol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fubridazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Furidazol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Furidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22715
+- CHEBI:24129
+- CHEBI:87036
+xrefs:
+- cas:3878-19-1
+- kegg.compound:C18737
+- pesticides:fuberidazole
+- ppdb:365
+- reaxys:153833
+- wikipedia.en:Fuberidazole
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: c1coc(-c2nc3ccccc3n2)c1
+  standard_inchi: InChI=1S/C11H8N2O/c1-2-5-9-8(4-1)12-11(13-9)10-6-3-7-14-10/h1-7H,(H,12,13)
+  standard_inchi_key: UYJUZNLFJAWNEZ-UHFFFAOYSA-N
+  molecular_formula: C11H8N2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 184.198
+  monoisotopic_mass: 184.06366
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81926
+  source_label: fuberidazole
+  minted_identifier: antibioticmech:chebi-26e68f7f35
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

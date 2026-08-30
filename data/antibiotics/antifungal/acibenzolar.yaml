@@ -1,0 +1,46 @@
+identifier: CHEBI:73185
+label: acibenzolar
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzothiadiazole that is 1,2,3-benzothiadiazole in which the hydrogen
+  at position 7 is replaced by a sulfanylcarbonyl group. It is used (particularly
+  as its S-methyl thioester) as a fungicide and plant activator.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,2,3-benzothiadiazole-7-carbothioic S-acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benzo[1,2,3]thiadiazole-7-carbothioic S-acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48864
+xrefs:
+- cas:126448-41-7
+- reaxys:15696116
+- wikipedia.en:Acibenzolar
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: O=C(S)c1cccc2nnsc12
+  standard_inchi: InChI=1S/C7H4N2OS2/c10-7(11)4-2-1-3-5-6(4)12-9-8-5/h1-3H,(H,10,11)
+  standard_inchi_key: CGIHPACLZJDCBQ-UHFFFAOYSA-N
+  molecular_formula: C7H4N2OS2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 196.256
+  monoisotopic_mass: 195.9765
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:73185
+  source_label: acibenzolar
+  minted_identifier: antibioticmech:chebi-13cd90cb47
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

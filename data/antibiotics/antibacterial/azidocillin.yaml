@@ -1,0 +1,74 @@
+identifier: CHEBI:51758
+label: azidocillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Azidocillin is a narrow-spectrum, semisynthetic penicillin derivative
+  with antibacterial activity.
+definition_source: PMID:4999682
+synonyms:
+- synonym_text: azidocilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: azidocilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2,2-dimethyl-6β-[(2R)-2-azido-2-phenylacetamido]penam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-{[(2R)-2-azido-2-phenylacetyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-(−)-(α-azidobenzyl)penicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: azidocillinum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17334
+- ARO:3000008
+xrefs:
+- ARO:3009126
+- cas:17243-38-8
+- drugbank:DB08795
+- drugcentral:273
+- patent:GB940488
+- patent:US3293242
+- chembl:CHEMBL2105907
+- pubchem.compound:15574941
+activity_roles:
+- CHEBI:33282
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)[C@H](N=[N+]=[N-])c1ccccc1'
+  standard_inchi: InChI=1S/C16H17N5O4S/c1-16(2)11(15(24)25)21-13(23)10(14(21)26-16)18-12(22)9(19-20-17)8-6-4-3-5-7-8/h3-7,9-11,14H,1-2H3,(H,18,22)(H,24,25)/t9-,10-,11+,14-/m1/s1
+  standard_inchi_key: ODFHGIPNGIAMDK-NJBDSQKTSA-N
+  molecular_formula: C16H17N5O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 375.41
+  monoisotopic_mass: 375.10013
+source_concepts:
+- source: ARO
+  source_id: ARO:3009126
+  source_label: azidocillin
+  minted_identifier: antibioticmech:aro-90026a16fc
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:51758
+  source_label: azidocillin
+  minted_identifier: antibioticmech:chebi-d17dc04bde
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

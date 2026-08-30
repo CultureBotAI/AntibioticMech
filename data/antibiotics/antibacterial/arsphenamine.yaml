@@ -1,0 +1,84 @@
+identifier: CHEBI:9016
+label: arsphenamine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Arsphenamine, also known as Salvarsan and 606, is a drug that was used
+  beginning in the 1910s to treat syphilis and trypanosomiasis. It is an organoarsenic
+  compound and was the first modern chemotherapeutic agent.
+definition_source: PMID:18679046
+synonyms:
+- synonym_text: 3,3'-(diarsene-1,2-diyl)bis(6-hydroxybenzenaminium) dichloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,3'-diamino-4,4'-dihydroxyarsenobenzene dihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,4'-(1,2-diarsenediyl)bis(2-aminophenol) dihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,4'-(diarsene-1,2-diyl)bis(2-aminophenol) dihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,4'-arsenobis(2-aminophenol) dihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6,6'-dihydroxy-3,3'-diarsene-1,2-diyldianilinium dichloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Arsphenamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ehrlich 606
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Salvarsan
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: arsenphenolamine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33406
+- CHEBI:36807
+- CHEBI:50954
+- ARO:3000551
+xrefs:
+- ARO:3000552
+- cas:139-93-5
+- gmelin:269938
+- kegg.compound:C11744
+- pubchem.compound:8774
+activity_roles:
+- CHEBI:36051
+structural_class: organoarsenic antibiotic
+structural_class_id: ARO:3000551
+chemical_structure:
+  smiles: '[Cl-].[Cl-].[NH3+]c1cc([As]=[As]c2ccc(O)c([NH3+])c2)ccc1O'
+  standard_inchi: InChI=1S/C12H12As2N2O2.2ClH/c15-9-5-7(1-3-11(9)17)13-14-8-2-4-12(18)10(16)6-8;;/h1-6,17-18H,15-16H2;2*1H
+  standard_inchi_key: VLAXZGHHBIJLAD-UHFFFAOYSA-N
+  molecular_formula: C12H14As2N2O2.2Cl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 439.006
+  monoisotopic_mass: 437.88643
+source_concepts:
+- source: ARO
+  source_id: ARO:3000552
+  source_label: arsphenamine
+  minted_identifier: antibioticmech:aro-b2ea540a4a
+  role_terms:
+  - CHEBI:36051
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:9016
+  source_label: arsphenamine
+  minted_identifier: antibioticmech:chebi-23c61f0455
+  role_terms:
+  - CHEBI:36051
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

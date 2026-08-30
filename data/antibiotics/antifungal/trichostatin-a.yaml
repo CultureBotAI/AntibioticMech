@@ -1,0 +1,56 @@
+identifier: CHEBI:46024
+label: trichostatin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (2E,4E,6R)-7-[4-(dimethylamino)phenyl]-N-hydroxy-4,6-dimethyl-7-oxohepta-2,4-dienamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2E,4E,6R)-7-(4-(dimethylamino)phenyl)-N-hydroxy-4,6-dimethyl-7-oxo-2,4-heptadienamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TRICHOSTATIN A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TSA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24650
+- CHEBI:39146
+- CHEBI:86478
+xrefs:
+- beilstein:5291761
+- cas:58880-19-6
+- drugbank:DB04297
+- hmdb:HMDB0259177
+- knapsack:C00016002
+- pdb-ccd:TSN
+- wikipedia.en:Trichostatin_A
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(/C=C/C(=O)NO)=C\[C@@H](C)C(=O)c1ccc(N(C)C)cc1
+  standard_inchi: InChI=1S/C17H22N2O3/c1-12(5-10-16(20)18-22)11-13(2)17(21)14-6-8-15(9-7-14)19(3)4/h5-11,13,22H,1-4H3,(H,18,20)/b10-5+,12-11+/t13-/m1/s1
+  standard_inchi_key: RTKIYFITIVXBLE-QEQCGCAPSA-N
+  molecular_formula: C17H22N2O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 302.374
+  monoisotopic_mass: 302.16304
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:46024
+  source_label: trichostatin A
+  minted_identifier: antibioticmech:chebi-16b9bef7af
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

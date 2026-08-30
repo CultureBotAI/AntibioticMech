@@ -1,0 +1,53 @@
+identifier: CHEBI:6574
+label: lupulone
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A β-bitter acid in which the acyl group is specified as 3-methylbutanoyl.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,5-dihydroxy-2-(3-methylbutanoyl)-4,6,6-tris(3-methylbut-2-en-1-yl)cyclohexa-2,4-dien-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Lupulon
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: beta-Lupulic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hop β-acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:136848
+xrefs:
+- cas:468-28-0
+- hmdb:HMDB0030041
+- kegg.compound:C10706
+- knapsack:C00002701
+- metacyc.compound:CPD-7110
+- reaxys:6983327
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(C)=CCC1=C(O)C(CC=C(C)C)(CC=C(C)C)C(=O)C(C(=O)CC(C)C)=C1O
+  standard_inchi: InChI=1S/C26H38O4/c1-16(2)9-10-20-23(28)22(21(27)15-19(7)8)25(30)26(24(20)29,13-11-17(3)4)14-12-18(5)6/h9,11-12,19,28-29H,10,13-15H2,1-8H3
+  standard_inchi_key: LSDULPZJLTZEFD-UHFFFAOYSA-N
+  molecular_formula: C26H38O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 414.586
+  monoisotopic_mass: 414.27701
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6574
+  source_label: lupulone
+  minted_identifier: antibioticmech:chebi-021a76a569
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

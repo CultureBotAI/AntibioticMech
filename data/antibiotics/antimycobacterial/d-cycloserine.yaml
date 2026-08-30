@@ -1,0 +1,165 @@
+identifier: CHEBI:40009
+label: D-cycloserine
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 4-amino-1,2-oxazolidin-3-one that has R configuration. It is an antibiotic
+  produced by Streptomyces garyphalus or S. orchidaceus and is used as part of a multi-drug
+  regimen for the treatment of tuberculosis when resistance to, or toxicity from,
+  primary drugs has developed. An analogue of D-alanine, it interferes with bacterial
+  cell wall synthesis in the cytoplasm by competitive inhibition of L-alanine racemase
+  (which forms D-alanine from L-alanine) and D-alanine—D-alanine ligase (which incorporates
+  D-alanine into the pentapeptide required for peptidoglycan formation and bacterial
+  cell wall synthesis).
+definition_source: ChEBI
+synonyms:
+- synonym_text: Seromycin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: cicloserina
+  synonym_type: INN
+  source: chebi
+- synonym_text: cycloserine
+  synonym_type: INN
+  source: chebi
+- synonym_text: cycloserinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: cyclosérine
+  synonym_type: INN
+  source: chebi
+- synonym_text: (4R)-4-aminoisoxazolidin-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-4-amino-3-isoxazolidinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-cycloserine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-4-AMINO-ISOXAZOLIDIN-3-ONE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-(+)-cycloserine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-4-amino-3-isoxazolidinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-4-amino-3-isoxazolidone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-Cycloserine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DCS
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PA 94
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PA-94
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ro-1-9213
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cyclo-D-serine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: orientomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α-Cycloserine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23503
+- CHEBI:25558
+- CHEBI:25807
+- ARO:3007154
+xrefs:
+- ARO:3000760
+- cas:68-41-7
+- drugbank:DB00260
+- drugcentral:759
+- hmdb:HMDB0014405
+- kegg.drug:D00877
+- lincs.smallmolecule:LSM-5932
+- lipidmaps:LMPK14000007
+- metacyc.compound:CPD-2482
+- patent:US2772280
+- patent:US2840565
+- pdb-ccd:4AX
+- reaxys:80798
+- wikipedia.en:Cycloserine
+- chembl:CHEMBL771
+- pubchem.compound:6234
+activity_roles:
+- CHEBI:33231
+structural_class: cycloserine-like antibiotic
+structural_class_id: ARO:3007154
+chemical_structure:
+  smiles: '[H][C@@]1(N)CONC1=O'
+  standard_inchi: InChI=1S/C3H6N2O2/c4-2-1-7-5-3(2)6/h2H,1,4H2,(H,5,6)/t2-/m1/s1
+  standard_inchi_key: DYDCUQKUCUHJBH-UWTATZPHSA-N
+  molecular_formula: C3H6N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 102.093
+  monoisotopic_mass: 102.04293
+source_concepts:
+- source: ARO
+  source_id: ARO:3000760
+  source_label: cycloserine
+  minted_identifier: antibioticmech:aro-000a78a459
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:40009
+  source_label: D-cycloserine
+  minted_identifier: antibioticmech:chebi-0c70ed4cf2
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004941
+  label: Mycobacterium tuberculosis ddlA mutations confer resistance to cycloserine
+  evidence:
+  - reference: ARO:3004941
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000760 (cycloserine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004945
+  label: Mycobacterium tuberculosis ald mutations confer resistance to cycloserine
+  evidence:
+  - reference: ARO:3004945
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000760 (cycloserine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004947
+  label: Mycobacterium tuberculosis alr with mutation conferring resistance to cycloserine
+  evidence:
+  - reference: ARO:3004947
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000760 (cycloserine);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000722
+  target_label: cycloserine sensitive alr
+  evidence:
+  - reference: ARO:3000722
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000760 (cycloserine); database
+      assertion, not a primary citation.
+- target_id: ARO:3000723
+  target_label: cycloserine sensitive D-alanine synthetase
+  evidence:
+  - reference: ARO:3000723
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000760 (cycloserine); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

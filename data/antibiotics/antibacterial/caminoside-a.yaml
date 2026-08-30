@@ -1,0 +1,47 @@
+identifier: CHEBI:65570
+label: caminoside A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A glycolipid with an unusual non-glycerol aglycone, 10-hydroxynonadecan-2-one
+  that is glycosylated at the C10 hydroxy group by a branched tetrasaccharide residue.
+  It is isolated from the marine sponge Caminus sphaeroconia and exhibits potent activity
+  as an inhibitor of a type III bacterial secretory system.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (10R)-2-oxononadecan-10-yl 6-deoxy-α-L-glucopyranosyl-(1→2)-[6-deoxy-β-D-talopyranosyl-(1→6)]-4-O-acetyl-3-O-butyryl-β-D-glucopyranosyl-(1→2)-β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22798
+- CHEBI:33563
+- CHEBI:47622
+- CHEBI:50477
+- CHEBI:51867
+- CHEBI:63567
+xrefs:
+- reaxys:9985572
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]1(O[C@H]2[C@H](O[C@@]3([H])[C@H](O[C@H](CCCCCCCCC)CCCCCCCC(C)=O)O[C@H](CO)[C@@H](O)[C@@H]3O)O[C@H](CO[C@@H]3O[C@H](C)[C@H](O)[C@H](O)[C@@H]3O)[C@@H](OC(C)=O)[C@@H]2OC(=O)CCC)O[C@@H](C)[C@H](O)[C@@H](O)[C@@H]1O'
+  standard_inchi: InChI=1S/C49H86O22/c1-7-9-10-11-12-15-18-22-30(23-19-16-13-14-17-21-26(3)51)66-48-43(39(59)36(56)31(24-50)67-48)70-49-45(71-47-41(61)38(58)35(55)28(5)64-47)44(69-33(53)20-8-2)42(65-29(6)52)32(68-49)25-62-46-40(60)37(57)34(54)27(4)63-46/h27-28,30-32,34-50,54-61H,7-25H2,1-6H3/t27-,28+,30-,31-,32-,34+,35+,36-,37+,38-,39+,40+,41+,42-,43-,44+,45-,46-,47+,48-,49+/m1/s1
+  standard_inchi_key: XTQWRNIJLVUYJY-ZFMPSFEPSA-N
+  molecular_formula: C49H86O22
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1027.205
+  monoisotopic_mass: 1026.56107
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65570
+  source_label: caminoside A
+  minted_identifier: antibioticmech:chebi-c5e79a2791
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

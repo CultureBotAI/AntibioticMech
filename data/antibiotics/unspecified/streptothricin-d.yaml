@@ -1,0 +1,46 @@
+identifier: CHEBI:60828
+label: streptothricin D
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A streptothricin in which the peptide side-chain consists of 3 units of
+  β-lysine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-{[(3S)-3-amino-6-{[(3S)-3-amino-6-{[(3S)-3,6-diaminohexanoyl]amino}hexanoyl]amino}hexanoyl]amino}-4-O-carbamoyl-2-deoxy-N-[(3aS,7R,7aS)-7-hydroxy-4-oxooctahydro-2H-imidazo[4,5-c]pyridin-2-ylidene]-β-D-gulopyranosylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic OP 2C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: racemomycin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26789
+xrefs:
+- cas:3776-37-2
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12N/C(=N/[C@@H]3O[C@H](CO)[C@H](OC(N)=O)[C@@H](O)[C@H]3NC(=O)C[C@@H](N)CCCNC(=O)C[C@@H](N)CCCNC(=O)C[C@@H](N)CCCN)N[C@]1([H])[C@H](O)CNC2=O'
+  standard_inchi: InChI=1S/C31H58N12O10/c32-7-1-4-15(33)10-20(46)37-8-2-5-16(34)11-21(47)38-9-3-6-17(35)12-22(48)40-25-26(49)27(53-30(36)51)19(14-44)52-29(25)43-31-41-23-18(45)13-39-28(50)24(23)42-31/h15-19,23-27,29,44-45,49H,1-14,32-35H2,(H2,36,51)(H,37,46)(H,38,47)(H,39,50)(H,40,48)(H2,41,42,43)/t15-,16-,17-,18+,19+,23+,24-,25+,26-,27-,29+/m0/s1
+  standard_inchi_key: WUJTXMVGXDQPNN-OTQKCRDJSA-N
+  molecular_formula: C31H58N12O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 758.879
+  monoisotopic_mass: 758.43989
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:60828
+  source_label: streptothricin D
+  minted_identifier: antibioticmech:chebi-7ac03b0a9e
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

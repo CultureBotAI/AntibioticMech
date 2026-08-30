@@ -1,0 +1,44 @@
+identifier: CHEBI:71520
+label: paxanthonin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of xanthones that is 9H-xanthen-9-one substituted
+  by a 2,2-dimethyl-4-(prop-1-en-2-yl)cyclopentyl group at position 2, hydroxy groups
+  at positions 1, 3 and 6 and a methoxy group at position 5. It is isolated from the
+  callus of Hypericum perforatum and exhibits antioxidant and antimicrobial activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-[(1S,4S)-2,2-dimethyl-4-(prop-1-en-2-yl)cyclopentyl]-1,3,6-trihydroxy-5-methoxy-9H-xanthen-9-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:35618
+- CHEBI:51149
+xrefs:
+- reaxys:7394169
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]1(C(=C)C)CC(C)(C)[C@@]([H])(c2c(O)cc3oc4c(OC)c(O)ccc4c(=O)c3c2O)C1'
+  standard_inchi: InChI=1S/C24H26O6/c1-11(2)12-8-14(24(3,4)10-12)18-16(26)9-17-19(21(18)28)20(27)13-6-7-15(25)23(29-5)22(13)30-17/h6-7,9,12,14,25-26,28H,1,8,10H2,2-5H3/t12-,14+/m0/s1
+  standard_inchi_key: GYBUSKWANOPNPI-GXTWGEPZSA-N
+  molecular_formula: C24H26O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 410.466
+  monoisotopic_mass: 410.17294
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:71520
+  source_label: paxanthonin
+  minted_identifier: antibioticmech:chebi-205cf2af3e
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

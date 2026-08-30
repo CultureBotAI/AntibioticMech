@@ -1,0 +1,57 @@
+identifier: CHEBI:228133
+label: 1,2-dodecanediol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A medium-chain primary fatty alcohol that is dodecane carrying hydroxy
+  groups at positions 1 and 2.
+definition_source: ChEBI
+synonyms:
+- synonym_text: dodecane-1,2-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-dihydroxydodecane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-dodecylene glycol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-hydroxylauryl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-dodecane-1,2-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:142605
+- CHEBI:167095
+- CHEBI:195615
+xrefs:
+- cas:1119-87-5
+- reaxys:1700179
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCCCCCCCC(O)CO
+  standard_inchi: InChI=1S/C12H26O2/c1-2-3-4-5-6-7-8-9-10-12(14)11-13/h12-14H,2-11H2,1H3
+  standard_inchi_key: ZITKDVFRMRXIJQ-UHFFFAOYSA-N
+  molecular_formula: C12H26O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 202.338
+  monoisotopic_mass: 202.19328
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:228133
+  source_label: 1,2-dodecanediol
+  minted_identifier: antibioticmech:chebi-fa7beeb6d0
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

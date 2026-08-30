@@ -1,0 +1,63 @@
+identifier: CHEBI:38990
+label: vamidothion
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic thiophosphate that is N-methyl-2-[(2-sulfanylethyl)sulfanyl]propanamide
+  in which the thiol group has been converted into the corresponding O,O-dimethyl
+  thiophoshate. Formerly used as an insecticide and acaricide, it is no longer approved
+  for use within the European Union.
+definition_source: ChEBI
+synonyms:
+- synonym_text: O,O-dimethyl S-(2-{[1-methyl-2-(methylamino)-2-oxoethyl]sulfanyl}ethyl)
+    phosphorothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dimethyl S-(2-(1-methylcarbamoylethylthio)ethyl) phosphorothiolate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O,O-Dimethyl S-(2-(1-methylcarbamoylethylthio)ethyl) phosphorothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O,O-dimethyl S-(2-{[1-methyl-2-(methylamino)-2-oxoethyl]sulfanyl}ethyl)
+    thiophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Vamidoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25715
+- CHEBI:37512
+xrefs:
+- cas:2275-23-2
+- kegg.compound:C18666
+- pesticides:vamidothion
+- ppdb:678
+- reaxys:2651123
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: CNC(=O)C(C)SCCSP(=O)(OC)OC
+  standard_inchi: InChI=1S/C8H18NO4PS2/c1-7(8(10)9-2)15-5-6-16-14(11,12-3)13-4/h7H,5-6H2,1-4H3,(H,9,10)
+  standard_inchi_key: LESVOLZBIFDZGS-UHFFFAOYSA-N
+  molecular_formula: C8H18NO4PS2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 287.343
+  monoisotopic_mass: 287.04149
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:38990
+  source_label: vamidothion
+  minted_identifier: antibioticmech:chebi-8772976f7c
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

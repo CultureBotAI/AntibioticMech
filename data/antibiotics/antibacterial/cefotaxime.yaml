@@ -1,0 +1,246 @@
+identifier: CHEBI:204928
+label: cefotaxime
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cephalosporin compound having acetoxymethyl and [2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino
+  side groups.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefotaxima
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefotaximum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 3-(acetoxymethyl)-7β-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino}-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-3-(acetoxymethyl)-7-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-3-Acetoxymethyl-7-{2-(2-amino-thiazol-4-yl)-2-[(Z)-methoxyimino]-acetylamino}-8-oxo-5-thia-1-aza-bicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R,Z)-3-(acetoxymethyl)-7-(2-(2-aminothiazol-4-yl)-2-(methoxyimino)acetamido)-8-oxo-5-thia-1-aza-bicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cephotaxime
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CTX
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: cefotaxime acid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23066
+- CHEBI:36816
+- CHEBI:38418
+- ARO:0000032
+xrefs:
+- ARO:3000645
+- beilstein:1096643
+- cas:63527-52-6
+- drugbank:DB00493
+- drugcentral:546
+- kegg.compound:C06885
+- kegg.drug:D07647
+- patent:DE2556736
+- patent:DE2702501
+- patent:US4098888
+- patent:US4152432
+- pdb-ccd:CE3
+- reaxys:1096643
+- wikipedia.en:Cefotaxime
+- chembl:CHEMBL1730
+- pubchem.compound:5742673
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(COC(C)=O)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1'
+  standard_inchi: InChI=1S/C16H17N5O7S2/c1-6(22)28-3-7-4-29-14-10(13(24)21(14)11(7)15(25)26)19-12(23)9(20-27-2)8-5-30-16(17)18-8/h5,10,14H,3-4H2,1-2H3,(H2,17,18)(H,19,23)(H,25,26)/b20-9-/t10-,14-/m1/s1
+  standard_inchi_key: GPRBEKHLDVQUJE-QSWIMTSFSA-N
+  molecular_formula: C16H17N5O7S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 455.474
+  monoisotopic_mass: 455.05694
+source_concepts:
+- source: ARO
+  source_id: ARO:3000645
+  source_label: cefotaxime
+  minted_identifier: antibioticmech:aro-dc40265400
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:204928
+  source_label: cefotaxime
+  minted_identifier: antibioticmech:chebi-4a4bc5cba7
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000773
+  label: CmeABC
+  evidence:
+  - reference: ARO:3000773
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000930
+  label: TEM-61
+  evidence:
+  - reference: ARO:3000930
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001815
+  label: ACC-1
+  evidence:
+  - reference: ARO:3001815
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001816
+  label: ACC-2
+  evidence:
+  - reference: ARO:3001816
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001818
+  label: ACC-4
+  evidence:
+  - reference: ARO:3001818
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003942
+  label: abcA
+  evidence:
+  - reference: ARO:3003942
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004122
+  label: Klebsiella pneumoniae OmpK37
+  evidence:
+  - reference: ARO:3004122
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004128
+  label: Serratia marcescens Omp1
+  evidence:
+  - reference: ARO:3004128
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004359
+  label: ACI-1
+  evidence:
+  - reference: ARO:3004359
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004446
+  label: Haemophilus influenzae PBP3 conferring resistance to beta-lactam antibiotics
+  evidence:
+  - reference: ARO:3004446
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004559
+  label: CAM-1
+  evidence:
+  - reference: ARO:3004559
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004854
+  label: CMY-136
+  evidence:
+  - reference: ARO:3004854
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004856
+  label: SCO-1
+  evidence:
+  - reference: ARO:3004856
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005015
+  label: VMB-1
+  evidence:
+  - reference: ARO:3005015
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005511
+  label: VIM-63
+  evidence:
+  - reference: ARO:3005511
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007062
+  label: VAM-1
+  evidence:
+  - reference: ARO:3007062
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007085
+  label: PRC-1
+  evidence:
+  - reference: ARO:3007085
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007196
+  label: KPC-123
+  evidence:
+  - reference: ARO:3007196
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007374
+  label: PJM-1
+  evidence:
+  - reference: ARO:3007374
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007531
+  label: Streptococcus pyogenes PBP2x conferring resistance to beta-lactam antibiotics
+  evidence:
+  - reference: ARO:3007531
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000645 (cefotaxime); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

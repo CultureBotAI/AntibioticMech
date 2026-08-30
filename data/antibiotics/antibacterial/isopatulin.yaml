@@ -1,0 +1,52 @@
+identifier: CHEBI:145111
+label: isopatulin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A furopyran and lactone that is (2H-pyran-3(6H)-ylidene)acetic acid which
+  is substituted by hydroxy groups at positions 4 an 6 and in which the hydroxy group
+  at position 4 has condensed with the carboxy group to give the corresponding bicyclic
+  lactone. Also known as neopatulin, it is a mycotoxic substance produced by Aspergillus
+  and Penicillium species.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6-hydroxy-4H-furo[3,2-c]pyran-2(6H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-hydroxy-4,9-dioxabicyclo[4.3.0]nona-1,6-dien-8-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: neopatulin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37581
+- CHEBI:38131
+- CHEBI:74927
+xrefs:
+- cas:70402-10-7
+- metacyc.compound:CPD-16725
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C1C=C2COC(O)C=C2O1
+  standard_inchi: InChI=1S/C7H6O4/c8-6-2-5-4(3-10-6)1-7(9)11-5/h1-2,6,8H,3H2
+  standard_inchi_key: ZGBMSNKHUHZKEP-UHFFFAOYSA-N
+  molecular_formula: C7H6O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 154.121
+  monoisotopic_mass: 154.02661
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:145111
+  source_label: isopatulin
+  minted_identifier: antibioticmech:chebi-51b2cfac24
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

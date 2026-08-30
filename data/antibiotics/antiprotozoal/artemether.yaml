@@ -1,0 +1,79 @@
+identifier: CHEBI:195280
+label: artemether
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An artemisinin derivative that is artemisinin in which the lactone has
+  been converted to the corresponding lactol methyl ether. It is used in combination
+  with lumefantrine as an antimalarial for the treatment of multi-drug resistant strains
+  of falciparum malaria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: artemetero
+  synonym_type: INN
+  source: chebi
+- synonym_text: artemetherum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (3R,5aS,6R,8aS,9R,10S,12R,12aR)-10-methoxy-3,6,9-trimethyldecahydro-3,12-epoxypyrano[4,3-j][1,2]benzodioxepine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1R,4S,5R,8S,9R,10S,12R,13R)-10-methoxy-1,5,9-trimethyl-11,14,15,16-tetraoxatetracyclo[10.3.1.0^{4,13}.0^{8,13}]hexadecane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10-methoxy-1,5,9-trimethyl-(1R,4S,5R,8S,9R,10S,12R,13R)-11,14,15,16-tetraoxatetracyclo[10.3.1.04,13.08,13]hexadecane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: artemisininelactol methyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dihydroartemisinin methyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl-dihydroartemisinine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-artemether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-dihydroartemisinin methyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25702
+- CHEBI:26658
+- CHEBI:59770
+- CHEBI:63920
+- CHEBI:72588
+xrefs:
+- beilstein:6569878
+- cas:71963-77-4
+- drugbank:DB06697
+- drugcentral:245
+- kegg.drug:D02483
+- lincs.smallmolecule:LSM-5519
+- wikipedia.en:Artemether
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]12O[C@H](OC)[C@H](C)[C@]3([H])CC[C@@H](C)[C@]4([H])CC[C@@](C)(OO[C@]143)O2'
+  standard_inchi: InChI=1S/C16H26O5/c1-9-5-6-12-10(2)13(17-4)18-14-16(12)11(9)7-8-15(3,19-14)20-21-16/h9-14H,5-8H2,1-4H3/t9-,10-,11+,12+,13+,14-,15-,16-/m1/s1
+  standard_inchi_key: SXYIRMFQILZOAM-HVNFFKDJSA-N
+  molecular_formula: C16H26O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 298.379
+  monoisotopic_mass: 298.17802
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:195280
+  source_label: artemether
+  minted_identifier: antibioticmech:chebi-4ee5919c05
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

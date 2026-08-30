@@ -1,0 +1,52 @@
+identifier: CHEBI:8349
+label: pradimicin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pradimicins that is isolated from the cultured
+  broth of Actinomadura hibisca No. P157-2 (ATCC 53557).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R)-2-({[(5S,6S)-1,6,9,14-tetrahydroxy-5-{[(2S,3R,4S,5S,6R)-3-hydroxy-6-methyl-5-(methylamino)-4-{[(2S,3R,4S,5R)-3,4,5-trihydroxytetrahydro-2H-pyran-2-yl]oxy}tetrahydro-2H-pyran-2-yl]oxy}-11-methoxy-3-methyl-8,13-dioxo-5,6,8,13-tetrahydrobenzo[a]tetracen-2-yl]carbonyl}amino)propanoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25830
+- CHEBI:26195
+- CHEBI:33575
+- CHEBI:35618
+- CHEBI:35681
+- CHEBI:63353
+- CHEBI:83230
+- CHEBI:83943
+xrefs:
+- cas:117704-65-1
+- kegg.compound:C06784
+- reaxys:4645458
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: CN[C@@H]1[C@H](O[C@@H]2OC[C@@H](O)[C@H](O)[C@H]2O)[C@@H](O)[C@H](O[C@H]2c3cc(C)c(C(=O)N[C@H](C)C(=O)O)c(O)c3-c3c(cc4c(c3O)C(=O)c3cc(OC)cc(O)c3C4=O)[C@@H]2O)O[C@@H]1C
+  standard_inchi: InChI=1S/C40H44N2O18/c1-11-6-18-24(31(49)21(11)37(53)42-12(2)38(54)55)23-16(9-17-25(32(23)50)28(46)15-7-14(56-5)8-19(43)22(15)27(17)45)29(47)35(18)59-40-34(52)36(26(41-4)13(3)58-40)60-39-33(51)30(48)20(44)10-57-39/h6-9,12-13,20,26,29-30,33-36,39-41,43-44,47-52H,10H2,1-5H3,(H,42,53)(H,54,55)/t12-,13-,20-,26+,29+,30+,33-,34-,35+,36+,39+,40+/m1/s1
+  standard_inchi_key: WPICPWIIIBCXCV-NJGWPHBESA-N
+  molecular_formula: C40H44N2O18
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 840.788
+  monoisotopic_mass: 840.25891
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:8349
+  source_label: pradimicin A
+  minted_identifier: antibioticmech:chebi-ded36d2d80
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

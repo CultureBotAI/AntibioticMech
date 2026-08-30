@@ -1,0 +1,50 @@
+identifier: CHEBI:141398
+label: ethyl 2-hydroxy-5-methylpyrazolo[1,5-a]pyrimidine-6-carboxylate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pyrazolopyrimidines that is pyrazophos in which
+  the the thiophosphate group has been hydrolysed to the corresponding hydroxy group.
+  The active fungicide of the profungicide pyrazophos.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-methyl-2-oxo-1,2-dihydro-pyrazolo[1,5-a]pyrimidine-6-carboxylic
+    acid ethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethyl 5-methyl-2-oxo-1,2-dihydropyrazolo[1,5-a]pyrimidine-6-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23990
+- CHEBI:33822
+- CHEBI:38669
+xrefs:
+- cas:57615-05-1
+- reaxys:887640
+activity_roles:
+- CHEBI:24127
+- CHEBI:86328
+chemical_structure:
+  smiles: CCOC(=O)c1cn2nc(O)cc2nc1C
+  standard_inchi: InChI=1S/C10H11N3O3/c1-3-16-10(15)7-5-13-8(11-6(7)2)4-9(14)12-13/h4-5H,3H2,1-2H3,(H,12,14)
+  standard_inchi_key: ZUAAVNLKGAEZDG-UHFFFAOYSA-N
+  molecular_formula: C10H11N3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 221.216
+  monoisotopic_mass: 221.08004
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141398
+  source_label: ethyl 2-hydroxy-5-methylpyrazolo[1,5-a]pyrimidine-6-carboxylate
+  minted_identifier: antibioticmech:chebi-d25d49bacf
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

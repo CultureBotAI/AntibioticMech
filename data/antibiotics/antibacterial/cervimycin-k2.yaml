@@ -1,0 +1,35 @@
+identifier: antibioticmech:aro-819aa3adea
+label: cervimycin K2
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Cervimycins are polyketide antibiotics.
+definition_source: PMID:36173303
+parent_compounds:
+- ARO:3005171
+xrefs:
+- ARO:3007606
+- pubchem.compound:54579611
+structural_class: polyketide with antibiotic activity
+structural_class_id: ARO:3005171
+chemical_structure:
+  smiles: C[C@H]1[C@H](CC[C@@H](O1)O[C@H]2CC[C@@H](O[C@H]2C)O[C@H]3CC[C@@H](O[C@H]3C)O[C@H]4CC[C@@H](O[C@@H]4C)O[C@@H]5[C@H]6CC7=CC8=C(C(=O)C=C(C8=O)OC)C(=C7C(=O)[C@]6(C(=C(C5=O)C(=O)C)O)O[C@H]9CC[C@@H]([C@H](O9)C)O[C@H]1CC[C@@H]([C@H](O1)C)O)O)O
+  standard_inchi: InChI=1S/C57H76O22/c1-24(58)48-53(64)54(78-46-19-13-39(29(6)72-46)77-45-18-12-38(28(5)71-45)76-44-17-11-37(27(4)70-44)74-42-15-9-34(59)25(2)68-42)33-22-31-21-32-50(36(61)23-41(67-8)51(32)62)52(63)49(31)56(66)57(33,55(48)65)79-47-20-14-40(30(7)73-47)75-43-16-10-35(60)26(3)69-43/h21,23,25-30,33-35,37-40,42-47,54,59-60,63,65H,9-20,22H2,1-8H3/t25-,26+,27-,28-,29+,30+,33+,34-,35-,37-,38-,39-,40-,42-,43-,44-,45-,46-,47-,54+,57-/m0/s1
+  standard_inchi_key: DEVSOSMRMRYYLQ-GCAGLVGWSA-N
+  molecular_formula: C57H76O22
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1113.2
+  monoisotopic_mass: 1112.48282405
+source_concepts:
+- source: ARO
+  source_id: ARO:3007606
+  source_label: cervimycin K2
+  minted_identifier: antibioticmech:aro-819aa3adea
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,48 @@
+identifier: CHEBI:65741
+label: 4'-O-demethylknipholone-4'-O-β-D-glucopyranoside
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An anthraquinone that is knipholone in which the O-methyl group is replaced
+  by a β-D-glucopyranosyl group. It is isolated from the roots of Bulbine frutescens
+  and exhibits trypanocidal and antiplasmodial activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-acetyl-4-(4,5-dihydroxy-2-methyl-9,10-dioxo-9,10-dihydroanthracen-1-yl)-3,5-dihydroxyphenyl
+    β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22798
+- CHEBI:26195
+- CHEBI:37484
+- CHEBI:51867
+- CHEBI:76224
+xrefs:
+- reaxys:10140237
+activity_roles:
+- CHEBI:36335
+- CHEBI:64915
+chemical_structure:
+  smiles: CC(=O)c1c(O[C@@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@H]2O)cc(O)c(-c2c(C)cc(O)c3c2C(=O)c2cccc(O)c2C3=O)c1O
+  standard_inchi: InChI=1S/C29H26O13/c1-9-6-13(33)21-22(23(35)11-4-3-5-12(32)19(11)26(21)38)17(9)20-14(34)7-15(18(10(2)31)25(20)37)41-29-28(40)27(39)24(36)16(8-30)42-29/h3-7,16,24,27-30,32-34,36-37,39-40H,8H2,1-2H3/t16-,24-,27+,28-,29-/m1/s1
+  standard_inchi_key: AOJYFODHRHWWEN-GQUXZSRASA-N
+  molecular_formula: C29H26O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 582.514
+  monoisotopic_mass: 582.13734
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65741
+  source_label: 4'-O-demethylknipholone-4'-O-β-D-glucopyranoside
+  minted_identifier: antibioticmech:chebi-ee44bfaf5e
+  role_terms:
+  - CHEBI:36335
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

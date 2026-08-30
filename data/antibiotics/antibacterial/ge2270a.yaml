@@ -1,0 +1,61 @@
+identifier: CHEBI:29584
+label: GE2270A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: GE2270A is the model molecule of cyclic thiazolyl peptide elfamycins.
+  GE2270A is produced by Planobispora rosea. Biosynthesis of the molecule has been
+  shown to originate as a ribosomally synthesized peptide that undergoes significant
+  post-translational modification. Clinical use of cyclic thiazolyl peptides is hindered
+  by their low water solubility and bioavailability.
+definition_source: PMID:10625477
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3001237
+- chembl:CHEMBL1766417
+- pubchem.compound:16129640
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: CNC(=O)CC1NC(=O)c2csc(n2)-c2ccc(-c3nc(C4=NC(C(=O)N5CCCC5C(N)=O)CO4)cs3)nc2-c2csc(n2)-c2csc(n2)C(C(O)c2ccccc2)NC(=O)CNC(=O)c2nc(sc2COC)C(C(C)C)NC(=O)c2nc1sc2C
+  standard_inchi: InChI=1S/C56H55N15O10S6/c1-24(2)39-55-70-42(36(87-55)19-80-5)47(77)59-17-38(73)67-43(44(74)26-10-7-6-8-11-26)54-66-34(23-85-54)52-63-31(20-83-52)41-27(50-64-32(21-82-50)46(76)61-29(16-37(72)58-4)53-69-40(25(3)86-53)48(78)68-39)13-14-28(60-41)51-65-33(22-84-51)49-62-30(18-81-49)56(79)71-15-9-12-35(71)45(57)75/h6-8,10-11,13-14,20-24,29-30,35,39,43-44,74H,9,12,15-19H2,1-5H3,(H2,57,75)(H,58,72)(H,59,77)(H,61,76)(H,67,73)(H,68,78)
+  standard_inchi_key: JMDULECOHIXMNX-UHFFFAOYSA-N
+  molecular_formula: C56H55N15O10S6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1290.553
+  monoisotopic_mass: 1289.25806
+source_concepts:
+- source: ARO
+  source_id: ARO:3001237
+  source_label: GE2270A
+  minted_identifier: antibioticmech:aro-47e9e1ef33
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003361
+  label: Planobispora rosea EF-Tu mutants conferring resistance to inhibitor GE2270A
+  evidence:
+  - reference: ARO:3003361
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001237 (GE2270A);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003438
+  label: Enterococcus faecium EF-Tu mutants conferring resistance to GE2270A
+  evidence:
+  - reference: ARO:3003438
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001237 (GE2270A);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000731
+  target_label: elongation factor Tu
+  evidence:
+  - reference: ARO:3000731
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3001237 (GE2270A); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

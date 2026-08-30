@@ -1,0 +1,100 @@
+identifier: CHEBI:28593
+label: quinidine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cinchona alkaloid consisting of cinchonine with the hydrogen at the
+  6-position of the quinoline ring substituted by methoxy.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Kinidin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: (9S)-6'-methoxycinchonan-9-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-Quinidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-quinidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (8R,9S)-quinidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-(6-methoxyquinolin-4-yl)((3S,4R,7S)-3-vinylquinuclidin-7-yl)methanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-(6-Methoxy-quinolin-4-yl)-((2R,5R)-5-vinyl-1-aza-bicyclo[2.2.2]oct-2-yl)-methanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-(6-methoxyquinolin-4-yl)((2R,5R)-5-vinylquinuclidin-2-yl)methanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-methoxy-α-(5-vinyl-2-quinuclidinyl)-4-quinolinemethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CIN-QUIN
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chinidin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Conchinin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quinidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chinidinum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: conquinine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pitayine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: quinidina
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α-(6-methoxy-4-quinolyl)-5-vinyl-2-quinuclidinemethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-quinine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:51323
+xrefs:
+- cas:56-54-2
+- drugbank:DB00908
+- drugcentral:2346
+- kegg.compound:C06527
+- kegg.drug:D08458
+- lincs.smallmolecule:LSM-3325
+- reaxys:91866
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]1([C@@H](O)c2ccnc3ccc(OC)cc23)C[C@@H]2CC[N@@]1C[C@@H]2C=C'
+  standard_inchi: InChI=1S/C20H24N2O2/c1-3-13-12-22-9-7-14(13)10-19(22)20(23)16-6-8-21-18-5-4-15(24-2)11-17(16)18/h3-6,8,11,13-14,19-20,23H,1,7,9-10,12H2,2H3/t13-,14-,19+,20-/m0/s1
+  standard_inchi_key: LOUPRKONTZGTKE-LHHVKLHASA-N
+  molecular_formula: C20H24N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 324.424
+  monoisotopic_mass: 324.18378
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28593
+  source_label: quinidine
+  minted_identifier: antibioticmech:chebi-2e7e00ad79
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

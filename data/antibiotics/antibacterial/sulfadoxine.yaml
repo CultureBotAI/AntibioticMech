@@ -1,0 +1,142 @@
+identifier: CHEBI:9329
+label: sulfadoxine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfonamide consisting of pyrimidine having methoxy substituents at
+  the 5- and 6-positions and a 4-aminobenzenesulfonamido group at the 4-position.
+  In combination with the antiprotozoal pyrimethamine (CHEBI:8673) it is used as an
+  antimalarial.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sulfadoxina
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfadoxinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-amino-N-(5,6-dimethoxypyrimidin-4-yl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Sulfanilamido-5,6-dimethoxypyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfadoxine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulforthomidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulphadoxine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulphormethoxine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35358
+- CHEBI:39447
+- ARO:3000282
+xrefs:
+- ARO:3000327
+- cas:2447-57-6
+- drugbank:DB01299
+- drugcentral:2503
+- kegg.compound:C07630
+- kegg.drug:D00580
+- lincs.smallmolecule:LSM-5657
+- reaxys:625453
+- vsdb:1784
+- wikipedia.en:Sulfadoxine
+- chembl:CHEMBL1539
+- pubchem.compound:17134
+activity_roles:
+- CHEBI:35718
+- CHEBI:36047
+- CHEBI:38068
+structural_class: sulfonamide antibiotic
+structural_class_id: ARO:3000282
+chemical_structure:
+  smiles: COc1ncnc(NS(=O)(=O)c2ccc(N)cc2)c1OC
+  standard_inchi: InChI=1S/C12H14N4O4S/c1-19-10-11(14-7-15-12(10)20-2)16-21(17,18)9-5-3-8(13)4-6-9/h3-7H,13H2,1-2H3,(H,14,15,16)
+  standard_inchi_key: PJSFRIWCGOHTNF-UHFFFAOYSA-N
+  molecular_formula: C12H14N4O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 310.335
+  monoisotopic_mass: 310.07358
+source_concepts:
+- source: ARO
+  source_id: ARO:3000327
+  source_label: sulfadoxine
+  minted_identifier: antibioticmech:aro-f0cbe86f0c
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:36047
+  - CHEBI:38068
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:9329
+  source_label: sulfadoxine
+  minted_identifier: antibioticmech:chebi-54357c52d5
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:36047
+  - CHEBI:38068
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000410
+  label: sul1
+  evidence:
+  - reference: ARO:3000410
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000327 (sulfadoxine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000412
+  label: sul2
+  evidence:
+  - reference: ARO:3000412
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000327 (sulfadoxine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000413
+  label: sul3
+  evidence:
+  - reference: ARO:3000413
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000327 (sulfadoxine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003386
+  label: Escherichia coli folP with mutation conferring resistance to sulfonamides
+  evidence:
+  - reference: ARO:3003386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000327 (sulfadoxine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003387
+  label: Streptococcus pyogenes folP with mutation conferring resistance to sulfonamides
+  evidence:
+  - reference: ARO:3003387
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000327 (sulfadoxine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009285
+  label: Pneumocystis jerovecii dhfr with mutations associated with resistance to
+    pyrimethamine-sulfadoxine
+  evidence:
+  - reference: ARO:3009285
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000327 (sulfadoxine);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000744
+  target_label: antibiotic sensitive dihydropteroate synthase
+  evidence:
+  - reference: ARO:3000744
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000327 (sulfadoxine); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

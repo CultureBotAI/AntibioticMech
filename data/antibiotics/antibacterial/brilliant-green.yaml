@@ -1,0 +1,57 @@
+identifier: CHEBI:88173
+label: brilliant green
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic hydrogensulfate salt having 4-{[4-(diethylamino)phenyl](phenyl)methylidene}-N,N-diethylcyclohexa-2,5-dien-1-iminium
+  as the counterion.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-{[4-(diethylamino)phenyl](phenyl)methylidene}-N,N-diethylcyclohexa-2,5-dien-1-iminium
+    hydrogen sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4-(4-(Diethylamino)benzhydrylene)cyclohexa-2,5-dien-1-ylidene)diethylammonium
+    hydrogen sulphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Basic green 1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C.I. 42040
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C.I. Basic Green 1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Malachite green G
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:88175
+xrefs:
+- cas:633-03-4
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCN(CC)c1ccc(C(=C2C=CC(=[N+](CC)CC)C=C2)c2ccccc2)cc1.O=S(=O)([O-])O
+  standard_inchi: InChI=1S/C27H33N2.H2O4S/c1-5-28(6-2)25-18-14-23(15-19-25)27(22-12-10-9-11-13-22)24-16-20-26(21-17-24)29(7-3)8-4;1-5(2,3)4/h9-21H,5-8H2,1-4H3;(H2,1,2,3,4)/q+1;/p-1
+  standard_inchi_key: NNBFNNNWANBMTI-UHFFFAOYSA-M
+  molecular_formula: C27H33N2.HO4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 482.646
+  monoisotopic_mass: 482.22393
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:88173
+  source_label: brilliant green
+  minted_identifier: antibioticmech:chebi-edf2506983
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

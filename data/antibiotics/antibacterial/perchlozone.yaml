@@ -1,0 +1,50 @@
+identifier: antibioticmech:aro-1c565a1a6c
+label: perchlozone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Perchlozone is a novel thiosemicarbazone used for the treatment of multidrug-resistant
+  tuberculosis. It is similar to thiacetazone with only a different side chain attached
+  to the thiosemicarbazone moiety. Perchlozone is a prodrug that is activated by ethA
+  and inhibits the HadABC complex.
+definition_source: PMID:25704063
+synonyms:
+- synonym_text: 4-thioureido-iminomethylpyridinium perchlorate
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3007161
+xrefs:
+- ARO:3005175
+- pubchem.compound:5374694
+structural_class: thiosemicarbazone antibiotic
+structural_class_id: ARO:3007161
+chemical_structure:
+  smiles: C1=CN=CC=C1/C=N\NC(=S)N
+  standard_inchi: InChI=1S/C7H8N4S/c8-7(12)11-10-5-6-1-3-9-4-2-6/h1-5H,(H3,8,11,12)/b10-5-
+  standard_inchi_key: QTSJJDIDTYFLFC-YHYXMXQVSA-N
+  molecular_formula: C7H8N4S
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 180.23
+  monoisotopic_mass: 180.04696745
+source_concepts:
+- source: ARO
+  source_id: ARO:3005175
+  source_label: perchlozone
+  minted_identifier: antibioticmech:aro-1c565a1a6c
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3005178
+  label: Mycobacterium tuberculosis ethA mutations conferring resistance to perchlozone
+  evidence:
+  - reference: ARO:3005178
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3005175 (perchlozone);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

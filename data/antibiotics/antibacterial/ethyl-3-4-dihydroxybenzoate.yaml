@@ -1,0 +1,53 @@
+identifier: CHEBI:132364
+label: ethyl 3,4-dihydroxybenzoate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An ethyl ester resulting from the formal condensation of the carboxy group
+  of 3,4-dihydroxybenzoic acid with ethanol. It is the anti-oxidative component of
+  peanut seed testa.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,4-dihydroxybenzoic acid ethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: EDHB
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethyl protocatechuate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: protocatechuic acid ethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23990
+- CHEBI:33566
+xrefs:
+- cas:3943-89-3
+- reaxys:2097435
+- wikipedia.en:Ethyl_protocatechuate
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCOC(=O)c1ccc(O)c(O)c1
+  standard_inchi: InChI=1S/C9H10O4/c1-2-13-9(12)6-3-4-7(10)8(11)5-6/h3-5,10-11H,2H2,1H3
+  standard_inchi_key: KBPUBCVJHFXPOC-UHFFFAOYSA-N
+  molecular_formula: C9H10O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 182.175
+  monoisotopic_mass: 182.05791
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:132364
+  source_label: ethyl 3,4-dihydroxybenzoate
+  minted_identifier: antibioticmech:chebi-a742f93719
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

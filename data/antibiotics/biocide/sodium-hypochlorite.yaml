@@ -1,0 +1,61 @@
+identifier: CHEBI:32146
+label: sodium hypochlorite
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An inorganic sodium salt in which hypochlorite is the counterion. It is
+  used as a bleaching and disinfecting agent and is commonly found in household bleach.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Texant
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Hypochlorite sodium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hypochlorous acid, sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NaClO
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NaOCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium oxychloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38702
+xrefs:
+- cas:7681-52-9
+- drugbank:DBSALT001517
+- foodb.food:FDB015395
+- kegg.drug:D01711
+- ppdb:1493
+- reaxys:11342986
+- wikipedia.en:Sodium_hypochlorite
+activity_roles:
+- CHEBI:48219
+chemical_structure:
+  smiles: '[Na+].[O-]Cl'
+  standard_inchi: InChI=1S/ClO.Na/c1-2;/q-1;+1
+  standard_inchi_key: SUKJFIGYRHOWBL-UHFFFAOYSA-N
+  molecular_formula: ClO.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 74.442
+  monoisotopic_mass: 73.95354
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32146
+  source_label: sodium hypochlorite
+  minted_identifier: antibioticmech:chebi-361485b64b
+  role_terms:
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

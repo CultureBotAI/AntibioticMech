@@ -1,0 +1,40 @@
+identifier: CHEBI:68609
+label: eritoran
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A lipid A derivative used for the treatment of severe sepsis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-O-decyl-2-deoxy-6-O-{2-deoxy-3-O-[(3R)-3-methoxydecyl]-6-O-methyl-2-[(11E)-octadec-11-enoylamino]-4-O-phosphonato-β-D-glucopyranosyl}-2-[(3-oxotetradecanoyl)amino]-1-O-phosphono-α-D-glucopyranose
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25051
+xrefs:
+- reaxys:9470515
+- wikipedia.en:Eritoran
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CCCCCC/C=C\CCCCCCCCCC(=O)N[C@H]1[C@H](OC[C@H]2O[C@H](OP(=O)(O)O)[C@H](NC(=O)CC(=O)CCCCCCCCCCC)[C@@H](OCCCCCCCCCC)[C@@H]2O)O[C@H](COC)[C@@H](OP(=O)(O)O)[C@@H]1OCC[C@@H](CCCCCCC)OC
+  standard_inchi: InChI=1S/C66H126N2O19P2/c1-7-11-15-19-22-25-26-27-28-29-30-32-34-38-42-46-57(70)67-60-64(82-49-47-54(80-6)45-41-36-18-14-10-4)62(86-88(73,74)75)56(51-79-5)85-65(60)83-52-55-61(72)63(81-48-43-39-35-24-21-17-13-9-3)59(66(84-55)87-89(76,77)78)68-58(71)50-53(69)44-40-37-33-31-23-20-16-12-8-2/h25-26,54-56,59-66,72H,7-24,27-52H2,1-6H3,(H,67,70)(H,68,71)(H2,73,74,75)(H2,76,77,78)/b26-25-/t54-,55-,56-,59-,60-,61-,62-,63-,64-,65-,66-/m1/s1
+  standard_inchi_key: BPSMYQFMCXXNPC-MFCPCZTFSA-N
+  molecular_formula: C66H126N2O19P2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1313.677
+  monoisotopic_mass: 1312.843
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68609
+  source_label: eritoran
+  minted_identifier: antibioticmech:chebi-fa76996da8
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

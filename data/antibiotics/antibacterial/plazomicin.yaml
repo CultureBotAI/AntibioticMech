@@ -1,0 +1,50 @@
+identifier: antibioticmech:aro-554b15fa7b
+label: plazomicin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Plazomicin is a neoglycoside, or next-generation, aminoglycoside, that
+  has been identified as a potentially useful agent to combat drug-resistant bacteria,
+  such as Acinetobacter baumannii and Pseudomonas aeruginosa.
+definition_source: PMID:21131322
+synonyms:
+- synonym_text: ACHN-490
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:0000016
+xrefs:
+- ARO:3003675
+- chembl:CHEMBL1650559
+- pubchem.compound:42613186
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: C[C@@]1(CO[C@@H]([C@@H]([C@H]1NC)O)O[C@H]2[C@@H](C[C@@H]([C@H]([C@@H]2O)O[C@@H]3[C@@H](CC=C(O3)CNCCO)N)N)NC(=O)[C@H](CCN)O)O
+  standard_inchi: InChI=1S/C25H48N6O10/c1-25(37)11-38-24(18(35)21(25)29-2)41-20-15(31-22(36)16(33)5-6-26)9-14(28)19(17(20)34)40-23-13(27)4-3-12(39-23)10-30-7-8-32/h3,13-21,23-24,29-30,32-35,37H,4-11,26-28H2,1-2H3,(H,31,36)/t13-,14+,15-,16+,17+,18-,19-,20+,21-,23-,24-,25+/m1/s1
+  standard_inchi_key: IYDYFVUFSPQPPV-PEXOCOHZSA-N
+  molecular_formula: C25H48N6O10
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 592.7
+  monoisotopic_mass: 592.34319175
+source_concepts:
+- source: ARO
+  source_id: ARO:3003675
+  source_label: plazomicin
+  minted_identifier: antibioticmech:aro-554b15fa7b
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002635
+  label: APH(2'')-IIa
+  evidence:
+  - reference: ARO:3002635
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003675 (plazomicin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

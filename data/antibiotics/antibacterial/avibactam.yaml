@@ -1,0 +1,56 @@
+identifier: CHEBI:85984
+label: avibactam
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of azabicycloalkanes that is (2S,5R)-7-oxo-1,6-diazabicyclo[3.2.1]octane-2-carboxamide
+  in which the amino hydrogen at position 6 is replaced by a sulfooxy group. Used
+  (in the form of its sodium salt) in combination with ceftazidime pentahydrate for
+  the treatment of complicated urinary tract infections including pyelonephritis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S,5R)-7-oxo-6-(sulfooxy)-1,6-diazabicyclo[3.2.1]octane-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NXL 104
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NXL104
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:29347
+- CHEBI:38025
+- CHEBI:38295
+- CHEBI:47857
+xrefs:
+- cas:1192500-31-4
+- drugcentral:4946
+- reaxys:22542284
+- wikipedia.en:Avibactam
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: NC(=O)[C@@H]1CC[C@@H]2CN1C(=O)N2OS(=O)(=O)O
+  standard_inchi: InChI=1S/C7H11N3O6S/c8-6(11)5-2-1-4-3-9(5)7(12)10(4)16-17(13,14)15/h4-5H,1-3H2,(H2,8,11)(H,13,14,15)/t4-,5+/m1/s1
+  standard_inchi_key: NDCUAPJVLWFHHB-UHNVWZDZSA-N
+  molecular_formula: C7H11N3O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 265.247
+  monoisotopic_mass: 265.03686
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85984
+  source_label: avibactam
+  minted_identifier: antibioticmech:chebi-0f55f8e408
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

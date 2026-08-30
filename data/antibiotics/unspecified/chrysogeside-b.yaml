@@ -1,0 +1,39 @@
+identifier: CHEBI:68070
+label: chrysogeside B
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A glucosylceramide isolated from Penicillium chrysogenum.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3E)-N-[(2S,3R,4E,8E)-1-(β-D-glucopyranosyloxy)-3-hydroxy-9-methylpentadeca-4,8-dien-2-yl]-2-hydroxynonadec-3-enamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:83264
+xrefs:
+- reaxys:21559830
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CCCCCCCCCCCCCCC/C=C/[C@@H](O)C(=O)N[C@@H](CO[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O)[C@H](O)/C=C/CC/C=C(\C)CCCCCC
+  standard_inchi: InChI=1S/C41H75NO9/c1-4-6-8-10-11-12-13-14-15-16-17-18-19-20-24-29-35(45)40(49)42-33(31-50-41-39(48)38(47)37(46)36(30-43)51-41)34(44)28-25-21-23-27-32(3)26-22-9-7-5-2/h24-25,27-29,33-39,41,43-48H,4-23,26,30-31H2,1-3H3,(H,42,49)/b28-25+,29-24+,32-27+/t33-,34+,35+,36+,37+,38-,39+,41+/m0/s1
+  standard_inchi_key: ZVSKJEHFCITPQT-XCEJTAPFSA-N
+  molecular_formula: C41H75NO9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 726.049
+  monoisotopic_mass: 725.54418
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68070
+  source_label: chrysogeside B
+  minted_identifier: antibioticmech:chebi-f65b9acb86
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

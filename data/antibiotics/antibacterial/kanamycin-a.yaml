@@ -1,0 +1,663 @@
+identifier: CHEBI:17630
+label: kanamycin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Kanamycin is an aminoglycoside antibiotic used to treat different types
+  of bacterial infections. Kanamycin works by binding to the bacterial 30S ribosomal
+  subunit, causing misreading of mRNA and leaving the bacterium unable to synthesize
+  proteins vital to its growth.
+definition_source: PMID:10103173
+synonyms:
+- synonym_text: (1S,2R,3R,4S,6R)-4,6-diamino-3-(6-amino-6-deoxy-α-D-glucopyranosyloxy)-2-hydroxycyclohexyl
+    3-amino-3-deoxy-α-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,6-diamino-2-hydroxy-1,3-cyclohexane 3,6'diamino-3,6'-dideoxydi-α-D-glucoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,6-diamino-2-hydroxy-1,3-cyclohexylene 3,6'-diamino-3,6'-dideoxydi-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: KANAMYCIN A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kanamycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-3-amino-3-deoxy-α-D-glucopyranosyl-(1→6)-O-(6-amino-6-deoxy-α-D-glucopyranosyl-(1→4))-2-deoxy-D-streptamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Aminodeoxykanamycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Aspidium
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Kanamicina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Kanamycin sulfate
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Kanamycine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Kanamycinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Kantrex
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: kanamycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:24951
+- ARO:0000016
+xrefs:
+- ARO:0000049
+- beilstein:61647
+- cas:59-01-8
+- drugbank:DB01172
+- drugcentral:1519
+- gmelin:2044856
+- kegg.compound:C01822
+- lincs.smallmolecule:LSM-5261
+- pdb-ccd:KAN
+- vsdb:1921
+- wikipedia.en:Kanamycin
+- chembl:CHEMBL223520
+- pubchem.compound:6032
+activity_roles:
+- CHEBI:33281
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: NC[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](N)[C@H]3O)[C@H](N)C[C@@H]2N)[C@H](O)[C@@H](O)[C@@H]1O
+  standard_inchi: InChI=1S/C18H36N4O11/c19-2-6-10(25)12(27)13(28)18(30-6)33-16-5(21)1-4(20)15(14(16)29)32-17-11(26)8(22)9(24)7(3-23)31-17/h4-18,23-29H,1-3,19-22H2/t4-,5+,6-,7-,8+,9-,10-,11-,12+,13-,14-,15+,16-,17-,18-/m1/s1
+  standard_inchi_key: SBUJHOSQTJFQJX-NOAMYHISSA-N
+  molecular_formula: C18H36N4O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 484.503
+  monoisotopic_mass: 484.23806
+source_concepts:
+- source: ARO
+  source_id: ARO:0000049
+  source_label: kanamycin A
+  minted_identifier: antibioticmech:aro-70a2160cf2
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:17630
+  source_label: kanamycin A
+  minted_identifier: antibioticmech:chebi-952d7701a7
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000230
+  label: ANT(2'')-Ia
+  evidence:
+  - reference: ARO:3000230
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000491
+  label: acrD
+  evidence:
+  - reference: ARO:3000491
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000858
+  label: armA
+  evidence:
+  - reference: ARO:3000858
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000859
+  label: rmtA
+  evidence:
+  - reference: ARO:3000859
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000860
+  label: rmtB
+  evidence:
+  - reference: ARO:3000860
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000861
+  label: rmtC
+  evidence:
+  - reference: ARO:3000861
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000862
+  label: sgm
+  evidence:
+  - reference: ARO:3000862
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002536
+  label: AAC(3)-IIIa
+  evidence:
+  - reference: ARO:3002536
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002537
+  label: AAC(3)-IIIb
+  evidence:
+  - reference: ARO:3002537
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002544
+  label: AAC(3)-Xa
+  evidence:
+  - reference: ARO:3002544
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002546
+  label: AAC(6')-Ib
+  evidence:
+  - reference: ARO:3002546
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002547
+  label: AAC(6')-Ib-cr1
+  evidence:
+  - reference: ARO:3002547
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002576
+  label: AAC(6')-Ib3
+  evidence:
+  - reference: ARO:3002576
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002577
+  label: AAC(6')-Ib4
+  evidence:
+  - reference: ARO:3002577
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002578
+  label: AAC(6')-Ib7
+  evidence:
+  - reference: ARO:3002578
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002579
+  label: AAC(6')-Ib8
+  evidence:
+  - reference: ARO:3002579
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002580
+  label: AAC(6')-Ib9
+  evidence:
+  - reference: ARO:3002580
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002581
+  label: AAC(6')-Ib10
+  evidence:
+  - reference: ARO:3002581
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002582
+  label: AAC(6')-Ib11
+  evidence:
+  - reference: ARO:3002582
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002583
+  label: AAC(6')-29a
+  evidence:
+  - reference: ARO:3002583
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002584
+  label: AAC(6')-29b
+  evidence:
+  - reference: ARO:3002584
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002585
+  label: AAC(6')-31
+  evidence:
+  - reference: ARO:3002585
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002591
+  label: AAC(6')-Ib-Suzhou
+  evidence:
+  - reference: ARO:3002591
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002592
+  label: AAC(6')-Ib-Hangzhou
+  evidence:
+  - reference: ARO:3002592
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002593
+  label: AAC(6')-Ib-SK
+  evidence:
+  - reference: ARO:3002593
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002597
+  label: AAC(6')-Ie-APH(2'')-Ia bifunctional protein
+  evidence:
+  - reference: ARO:3002597
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002600
+  label: AAC(3)-Ib/AAC(6')-Ib3 bifunctional protein
+  evidence:
+  - reference: ARO:3002600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002634
+  label: APH(2'')-Ie
+  evidence:
+  - reference: ARO:3002634
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002636
+  label: APH(2'')-IIIa
+  evidence:
+  - reference: ARO:3002636
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002637
+  label: APH(2'')-IVa
+  evidence:
+  - reference: ARO:3002637
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002641
+  label: APH(3')-Ia
+  evidence:
+  - reference: ARO:3002641
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002642
+  label: APH(3')-Ib
+  evidence:
+  - reference: ARO:3002642
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002644
+  label: APH(3')-IIa
+  evidence:
+  - reference: ARO:3002644
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002645
+  label: APH(3')-IIb
+  evidence:
+  - reference: ARO:3002645
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002646
+  label: APH(3')-IIc
+  evidence:
+  - reference: ARO:3002646
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002647
+  label: APH(3')-IIIa
+  evidence:
+  - reference: ARO:3002647
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002648
+  label: APH(3')-IVa
+  evidence:
+  - reference: ARO:3002648
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002652
+  label: APH(3')-VIa
+  evidence:
+  - reference: ARO:3002652
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002653
+  label: APH(3')-VIb
+  evidence:
+  - reference: ARO:3002653
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002654
+  label: APH(3')-VIIa
+  evidence:
+  - reference: ARO:3002654
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002666
+  label: rmtF
+  evidence:
+  - reference: ARO:3002666
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002669
+  label: APH(2'')-Ig
+  evidence:
+  - reference: ARO:3002669
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003236
+  label: Mycobacteroides abscessus 16S rRNA mutation conferring resistance to kanamycin
+  evidence:
+  - reference: ARO:3003236
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003399
+  label: Escherichia coli 16S rRNA (rrsB) mutation conferring resistance to kanamycin
+    A
+  evidence:
+  - reference: ARO:3003399
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003436
+  label: Mycobacterium tuberculosis 16S rRNA mutation conferring resistance to kanamycin
+  evidence:
+  - reference: ARO:3003436
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003503
+  label: Borreliella burgdorferi 16S rRNA mutation conferring resistance to kanamycin
+  evidence:
+  - reference: ARO:3003503
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003515
+  label: Mycobacteroides chelonae 16S rRNA mutation conferring resistance to kanamycin
+    A
+  evidence:
+  - reference: ARO:3003515
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003542
+  label: Mycolicibacterium smegmatis 16S rRNA (rrsB) mutation conferring resistance
+    to kanamycin A
+  evidence:
+  - reference: ARO:3003542
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003543
+  label: Mycolicibacterium smegmatis 16S rRNA (rrsA) mutation conferring resistance
+    to kanamycin A
+  evidence:
+  - reference: ARO:3003543
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003688
+  label: PvrR
+  evidence:
+  - reference: ARO:3003688
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003989
+  label: AAC(6')-34
+  evidence:
+  - reference: ARO:3003989
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004046
+  label: kdpDE
+  evidence:
+  - reference: ARO:3004046
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004082
+  label: AcrAD-TolC
+  evidence:
+  - reference: ARO:3004082
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004086
+  label: APH(3')-VIIIb
+  evidence:
+  - reference: ARO:3004086
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004087
+  label: APH(3')-IXa
+  evidence:
+  - reference: ARO:3004087
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004102
+  label: kamB
+  evidence:
+  - reference: ARO:3004102
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004127
+  label: Escherichia coli mipA
+  evidence:
+  - reference: ARO:3004127
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004191
+  label: APH(2'')-If
+  evidence:
+  - reference: ARO:3004191
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004572
+  label: Staphylococcus aureus LmrS
+  evidence:
+  - reference: ARO:3004572
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004641
+  label: AAC(6')-I-43
+  evidence:
+  - reference: ARO:3004641
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004675
+  label: aphA15
+  evidence:
+  - reference: ARO:3004675
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004677
+  label: rmtD2
+  evidence:
+  - reference: ARO:3004677
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004679
+  label: rmtE2
+  evidence:
+  - reference: ARO:3004679
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004680
+  label: APH(3')-VIIIa
+  evidence:
+  - reference: ARO:3004680
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004963
+  label: Mycobacterium tuberculosis eis with mutation conferring resistance to kanamycin
+  evidence:
+  - reference: ARO:3004963
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004966
+  label: Kanamycin resistant whib7
+  evidence:
+  - reference: ARO:3004966
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004967
+  label: Mycobacterium tuberculosis whib7 mutations confer resistance to kanamycin
+  evidence:
+  - reference: ARO:3004967
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005112
+  label: AAC(6')-Ib-cr3
+  evidence:
+  - reference: ARO:3005112
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005114
+  label: AAC(6')-Ib-cr4
+  evidence:
+  - reference: ARO:3005114
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005115
+  label: AAC(6')-Ib-cr5
+  evidence:
+  - reference: ARO:3005115
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005116
+  label: AAC(6')-Ib-cr6
+  evidence:
+  - reference: ARO:3005116
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005117
+  label: AAC(6')-Ib-cr7
+  evidence:
+  - reference: ARO:3005117
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005118
+  label: AAC(6')-Ib-cr8
+  evidence:
+  - reference: ARO:3005118
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005119
+  label: AAC(6')-Ib-cr9
+  evidence:
+  - reference: ARO:3005119
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007011
+  label: mdeA
+  evidence:
+  - reference: ARO:3007011
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007536
+  label: Mycobacterium tuberculosis 16S rRNA (rrnS) mutation conferring resistance
+    to amikacin
+  evidence:
+  - reference: ARO:3007536
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007770
+  label: aac(6')-Ib-cr10
+  evidence:
+  - reference: ARO:3007770
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007771
+  label: aac(6')-Ib-cr11
+  evidence:
+  - reference: ARO:3007771
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000049 (kanamycin
+      A); database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000049 (kanamycin A); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

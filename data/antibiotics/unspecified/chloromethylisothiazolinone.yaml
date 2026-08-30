@@ -1,0 +1,62 @@
+identifier: CHEBI:53621
+label: chloromethylisothiazolinone
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 1,2-thiazole that is 4-isothiazolin-3-one bearing a methyl group on
+  the nitrogen atom and a chlorine at C-5. It is a powerful biocide and preservative
+  and is the major active ingredient in the commercial product KathonTM.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-chloro-2-methyl-1,2-thiazol-3(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,3-dihydro-2-methyl-3-oxo-5-chloroisothiazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Chloro-2-methyl-4-isothiazolin-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-chloro-2-methyl-2H-isothiazol-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CMIT
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MCI
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methylchloroisothiazolinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36683
+- CHEBI:48902
+xrefs:
+- cas:26172-55-4
+- reaxys:1210149
+- wikipedia.en:Methylchloroisothiazolinone
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: Cn1sc(Cl)cc1=O
+  standard_inchi: InChI=1S/C4H4ClNOS/c1-6-4(7)2-3(5)8-6/h2H,1H3
+  standard_inchi_key: DHNRXBZYEKSXIM-UHFFFAOYSA-N
+  molecular_formula: C4H4ClNOS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 149.602
+  monoisotopic_mass: 148.97021
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:53621
+  source_label: chloromethylisothiazolinone
+  minted_identifier: antibioticmech:chebi-e4c5be1542
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

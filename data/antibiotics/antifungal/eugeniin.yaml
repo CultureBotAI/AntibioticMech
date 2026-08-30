@@ -1,0 +1,67 @@
+identifier: CHEBI:4916
+label: eugeniin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An ellagitannin isolated from the dried flower buds of Eugenia caryophyllata.
+  It exhibits α-glucosidase inhibitory activity and antiviral activity against acyclovir
+  and phosphonoacetic acid (PAA)-resistant herpes simplex virus type 1 (HSV-1) as
+  well as the wild-type HSV-1.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (11aR,13S,14R,15S,15aR)-2,3,4,5,6,7-hexahydroxy-9,17-dioxo-9,11,11a,13,14,15,15a,17-octahydrodibenzo[g,i]pyrano[3,2-b][1,5]dioxacycloundecine-13,14,15-triyl
+    tris(3,4,5-trihydroxybenzoate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2,3-trigalloyl-4,6-hexahydroxydiphenoyl β-D-glucopyranose
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cornustannin 2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Eugeniin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tellimagrandin II
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-D-Glucopyranose,cyclic4,6-(4,4',5,5',6,6'-hexahydroxy(1,1'-biphenyl)-2,2'-dicarboxylate)1,2,3-tris(3,4,5-trihydroxybenzoate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22798
+- CHEBI:23909
+- CHEBI:25000
+- CHEBI:37576
+xrefs:
+- cas:58970-75-5
+- hmdb:HMDB0039265
+- kegg.compound:C10224
+- knapsack:C00002920
+- metacyc.compound:CPD-8949
+- reaxys:9038164
+- wikipedia.en:Tellimagrandin_II
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: O=C(O[C@@H]1O[C@@H]2COC(=O)c3cc(O)c(O)c(O)c3-c3c(cc(O)c(O)c3O)C(=O)O[C@H]2[C@H](OC(=O)c2cc(O)c(O)c(O)c2)[C@H]1OC(=O)c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1
+  standard_inchi: InChI=1S/C41H30O26/c42-15-1-10(2-16(43)26(15)50)36(57)65-34-33-23(9-62-39(60)13-7-21(48)29(53)31(55)24(13)25-14(40(61)64-33)8-22(49)30(54)32(25)56)63-41(67-38(59)12-5-19(46)28(52)20(47)6-12)35(34)66-37(58)11-3-17(44)27(51)18(45)4-11/h1-8,23,33-35,41-56H,9H2/t23-,33-,34+,35-,41+/m1/s1
+  standard_inchi_key: JCGHAEBIBSEQAD-UUUCSUBKSA-N
+  molecular_formula: C41H30O26
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 938.665
+  monoisotopic_mass: 938.10253
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4916
+  source_label: eugeniin
+  minted_identifier: antibioticmech:chebi-b9a6cc654b
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

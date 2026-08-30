@@ -1,0 +1,49 @@
+identifier: CHEBI:70715
+label: ceftaroline fosamil acetate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An acetate salt obtained by reaction of ceftaroline fosamil with one equivalent
+  of acetic acid. A prodrug for ceftaroline, used for the treatment of adults with
+  acute bacterial skin and skin structure infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6R,7R)-7-({(2Z)-2-(ethoxyimino)-2-[5-(phosphonoamino)-1,2,4-thiadiazol-3-yl]acetyl}amino)-3-{[4-(1-methylpyridinium-4-yl)-1,3-thiazol-2-yl]sulfanyl}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ceftaroline fosamil acetate (anhydrous)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:59230
+xrefs:
+- cas:400827-46-5
+- reaxys:9540645
+- wikipedia.en:Ceftaroline_fosamil
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: CC(=O)O.[H][C@]12SCC(Sc3nc(-c4cc[n+](C)cc4)cs3)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)/C(=N\OCC)c1nsc(NP(=O)(O)O)n1
+  standard_inchi: InChI=1S/C22H21N8O8PS4.C2H4O2/c1-3-38-26-13(16-25-21(43-28-16)27-39(35,36)37)17(31)24-14-18(32)30-15(20(33)34)12(9-40-19(14)30)42-22-23-11(8-41-22)10-4-6-29(2)7-5-10;1-2(3)4/h4-8,14,19H,3,9H2,1-2H3,(H4-,24,25,27,28,31,33,34,35,36,37);1H3,(H,3,4)/b26-13-;/t14-,19-;/m1./s1
+  standard_inchi_key: UGHHNQFYEVOFIV-VRDMTWHKSA-N
+  molecular_formula: C22H21N8O8PS4.C2H4O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 744.752
+  monoisotopic_mass: 744.03141
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70715
+  source_label: ceftaroline fosamil acetate
+  minted_identifier: antibioticmech:chebi-53c2a0eac9
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

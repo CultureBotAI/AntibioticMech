@@ -1,0 +1,53 @@
+identifier: CHEBI:84037
+label: ravidomycin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A C-glycosylated naphthoisochromene derivative obtained from Streptomyces
+  ravidus; exhibits antibiotic and anticancer properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1ξ)-4-O-acetyl-1,5-anhydro-3,6-dideoxy-3-(dimethylamino)-1-(1-hydroxy-10,12-dimethoxy-6-oxo-8-vinyl-6H-dibenzo[c,h]chromen-4-yl)-D-galactitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AY 25545
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:20857
+- CHEBI:32876
+- CHEBI:33853
+- CHEBI:35618
+- CHEBI:47622
+- CHEBI:50359
+- CHEBI:78840
+xrefs:
+- cas:74622-75-6
+- patent:EP0010964
+- patent:US4230692
+- patent:US4375463
+- reaxys:24732621
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C=Cc1cc(OC)c2c(c1)c(=O)oc1c2cc(OC)c2c(O)ccc(C3O[C@H](C)[C@H](OC(C)=O)[C@H](N(C)C)[C@H]3O)c21
+  standard_inchi: InChI=1S/C31H33NO9/c1-8-16-11-19-23(21(12-16)37-6)18-13-22(38-7)25-20(34)10-9-17(24(25)29(18)41-31(19)36)30-27(35)26(32(4)5)28(14(2)39-30)40-15(3)33/h8-14,26-28,30,34-35H,1H2,2-7H3/t14-,26-,27-,28+,30?/m1/s1
+  standard_inchi_key: GHLIFBNIGXVDHM-VQXSZRIGSA-N
+  molecular_formula: C31H33NO9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 563.603
+  monoisotopic_mass: 563.21553
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:84037
+  source_label: ravidomycin
+  minted_identifier: antibioticmech:chebi-7cd08d18ca
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

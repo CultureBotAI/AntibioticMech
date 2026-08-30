@@ -1,0 +1,74 @@
+identifier: CHEBI:3535
+label: cephalexin monohydrate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrate of cephalexin consisting of equimolar amounts of hydrate and
+  cephalexin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6R,7R)-7-{[(2R)-2-amino-2-phenylacetyl]amino}-3-methyl-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid—water (1/1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7β-[(2R)-2-amino-2-phenylacetamido]-3-methyl-3,4-didehydrocepham-4-carboxylic
+    acid—water (1/1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-(D-α-amino-α-phenylacetamido)-3-methyl-3-cephem-4-carboxylic acid
+    monohydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cephalexin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cephalexin monohydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cefalexin hydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cefalexin monohydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cefalexin·H2O
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cephalexin hydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cephalexin·H2O
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35505
+xrefs:
+- beilstein:8175806
+- cas:23325-78-2
+- drugbank:DB00567
+- kegg.compound:C08099
+- kegg.drug:D00906
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: O.[H][C@]12SCC(C)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)[C@H](N)c1ccccc1
+  standard_inchi: InChI=1S/C16H17N3O4S.H2O/c1-8-7-24-15-11(14(21)19(15)12(8)16(22)23)18-13(20)10(17)9-5-3-2-4-6-9;/h2-6,10-11,15H,7,17H2,1H3,(H,18,20)(H,22,23);1H2/t10-,11-,15-;/m1./s1
+  standard_inchi_key: AVGYWQBCYZHHPN-CYJZLJNKSA-N
+  molecular_formula: C16H17N3O4S.H2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 365.411
+  monoisotopic_mass: 365.10454
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3535
+  source_label: cephalexin monohydrate
+  minted_identifier: antibioticmech:chebi-453b234a74
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

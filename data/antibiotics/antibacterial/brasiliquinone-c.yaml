@@ -1,0 +1,49 @@
+identifier: CHEBI:65518
+label: brasiliquinone C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbopolycyclic compound that is 3,4-dihydrotetraphene-1,7,12(2H)-trione
+  substituted by hydroxy groups at positions 6 and 8 and an ethyl group at position
+  3 (the S stereoisomer). It is isolated from the culture broth of Nocardia brasiliensis
+  and exhibits antibacterial activity against Gram-positive bacteria. It is also active
+  against the multiple drug-resistant P388/ADR tumour cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S)-3-ethyl-6-hydroxy-8-methoxy-3,4-dihydrotetraphene-1,7,12(2H)-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25830
+- CHEBI:33853
+- CHEBI:35294
+- CHEBI:35618
+xrefs:
+- chemspider:8648465
+- reaxys:7544861
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: CC[C@@H]1CC(=O)c2c(cc(O)c3c2C(=O)c2cccc(OC)c2C3=O)C1
+  standard_inchi: InChI=1S/C21H18O5/c1-3-10-7-11-9-14(23)18-19(16(11)13(22)8-10)20(24)12-5-4-6-15(26-2)17(12)21(18)25/h4-6,9-10,23H,3,7-8H2,1-2H3/t10-/m0/s1
+  standard_inchi_key: JCMDNBJXOUWFMR-JTQLQIEISA-N
+  molecular_formula: C21H18O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 350.37
+  monoisotopic_mass: 350.11542
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65518
+  source_label: brasiliquinone C
+  minted_identifier: antibioticmech:chebi-87f40af429
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

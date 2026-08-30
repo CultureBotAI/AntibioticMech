@@ -1,0 +1,59 @@
+identifier: CHEBI:79390
+label: furanomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A non-proteinogenic L-α-amino acid that is L-alanine in which the methyl
+  group is replaced by a (2R,5S)-5-methyl-2,5-dihydrofuran-2-yl moiety.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-amino[(2R,5S)-5-methyl-2,5-dihydrofuran-2-yl]acetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-furanomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,2'R,5'S)-2-amino-2-(5'-methyl-2',5'-dihydrofuran-2'-yl)acetic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6S)-2-amino-3,6-anhydro-2,4,5-trideoxy-6-methyl-D-threo-hex-4-enonic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-(+)-furanomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:51659
+- CHEBI:83822
+xrefs:
+- cas:18455-25-9
+- reaxys:5254308
+- wikipedia.en:Furanomycin
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]1([C@H](N)C(=O)O)C=C[C@H](C)O1'
+  standard_inchi: InChI=1S/C7H11NO3/c1-4-2-3-5(11-4)6(8)7(9)10/h2-6H,8H2,1H3,(H,9,10)/t4-,5+,6-/m0/s1
+  standard_inchi_key: PNOKUGWGMLEAPE-JKUQZMGJSA-N
+  molecular_formula: C7H11NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 157.169
+  monoisotopic_mass: 157.07389
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:79390
+  source_label: furanomycin
+  minted_identifier: antibioticmech:chebi-bc629452ae
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

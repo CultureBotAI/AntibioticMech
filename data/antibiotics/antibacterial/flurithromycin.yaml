@@ -1,0 +1,78 @@
+identifier: CHEBI:131719
+label: flurithromycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An erythromycin derivative that is erythromycin A in which the hydrogen
+  attached to the carbon at position 8 (α to the ketone carbonyl group) has been replaced
+  by a fluorine. It has been used (generally as the corresponding monoethyl succinate
+  ester) as an antibacterial drug.
+definition_source: ChEBI
+synonyms:
+- synonym_text: flurithromycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: flurithromycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: fluritromicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: (3R,4S,5S,6R,7R,9S,11R,12R,13S,14R)-6-{[(2S,3R,4S,6R)-4-(dimethylamino)-3-hydroxy-6-methyltetrahydro-2H-pyran-2-yl]oxy}-14-ethyl-9-fluoro-7,12,13-trihydroxy-4-{[(2R,4R,5S,6S)-5-hydroxy-4-methoxy-4,6-dimethyltetrahydro-2H-pyran-2-yl]oxy}-3,5,7,9,11,13-hexamethyloxacyclotetradecane-2,10-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (8S)-8-fluoroerythromycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 8-fluoroerythromycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cl-932
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: P 80206
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: P-0501A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic P 80206
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37143
+- CHEBI:3992
+- CHEBI:48924
+- CHEBI:72588
+xrefs:
+- cas:82664-20-8
+- drugcentral:1221
+- kegg.drug:D07242
+- reaxys:6950255
+- wikipedia.en:Flurithromycin
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+chemical_structure:
+  smiles: CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@](C)(F)C(=O)[C@H](C)[C@@H](O)[C@]1(C)O
+  standard_inchi: InChI=1S/C37H66FNO13/c1-14-24-37(10,46)29(42)21(5)28(41)34(7,38)17-35(8,45)31(52-33-26(40)23(39(11)12)15-18(2)48-33)19(3)27(20(4)32(44)50-24)51-25-16-36(9,47-13)30(43)22(6)49-25/h18-27,29-31,33,40,42-43,45-46H,14-17H2,1-13H3/t18-,19+,20-,21+,22+,23+,24-,25+,26-,27+,29-,30+,31-,33+,34+,35-,36-,37-/m1/s1
+  standard_inchi_key: XOEUHCONYHZURQ-HNUBZJOYSA-N
+  molecular_formula: C37H66FNO13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 751.927
+  monoisotopic_mass: 751.45182
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:131719
+  source_label: flurithromycin
+  minted_identifier: antibioticmech:chebi-192bb24c3b
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

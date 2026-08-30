@@ -1,0 +1,44 @@
+identifier: CHEBI:70080
+label: 4-hydroxycordoin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of chalcones that is trans-chalcone substituted
+  by hydroxy groups at position 4 and 2' and a (3-methylbut-2-en-1-yl)oxy group at
+  position 4'. It has been isolated from Lonchocarpus neuroscapha.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-1-{2-hydroxy-4-[(3-methylbut-2-en-1-yl)oxy]phenyl}-3-(4-hydroxyphenyl)prop-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23086
+- CHEBI:26195
+- CHEBI:35618
+xrefs:
+- cas:55524-25-9
+- reaxys:2665335
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)=CCOc1ccc(C(=O)/C=C/c2ccc(O)cc2)c(O)c1
+  standard_inchi: InChI=1S/C20H20O4/c1-14(2)11-12-24-17-8-9-18(20(23)13-17)19(22)10-5-15-3-6-16(21)7-4-15/h3-11,13,21,23H,12H2,1-2H3/b10-5+
+  standard_inchi_key: SFXYAAFUXNWNQF-BJMVGYQFSA-N
+  molecular_formula: C20H20O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 324.376
+  monoisotopic_mass: 324.13616
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70080
+  source_label: 4-hydroxycordoin
+  minted_identifier: antibioticmech:chebi-05d0e7bd54
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,77 @@
+identifier: CHEBI:107644
+label: piperonylic acid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzodioxoles that is 1,3-benzodioxole substituted
+  by a carboxy group at position 5. It is a natural product isolated from several
+  plant species. It is a selective mechanism-based inactivator of the trans-cinnamate
+  4-hydroxylase enzyme and exhibits antifungal and skin wound healing properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,3-benzodioxole-5-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,3-dioxaindane-5-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2H-1,3-benzodioxole-5-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,4-(methylenedioxy)benzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,4-dioxymethylenebenzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,4-methylenedioxybenzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-benzodioxolecarboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benzo[d][1,3]dioxole-5-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: heliotropic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: protocatechuic acid methylene ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:33859
+- CHEBI:38298
+xrefs:
+- cas:94-53-1
+- chemspider:6928
+- hmdb:HMDB0032613
+- knapsack:C00031034
+- lincs.smallmolecule:LSM-19007
+- pdb-ccd:0HN
+- reaxys:150206
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: O=C(O)c1ccc2c(c1)OCO2
+  standard_inchi: InChI=1S/C8H6O4/c9-8(10)5-1-2-6-7(3-5)12-4-11-6/h1-3H,4H2,(H,9,10)
+  standard_inchi_key: VDVJGIYXDVPQLP-UHFFFAOYSA-N
+  molecular_formula: C8H6O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 166.132
+  monoisotopic_mass: 166.02661
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:107644
+  source_label: piperonylic acid
+  minted_identifier: antibioticmech:chebi-9c7c4760a7
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

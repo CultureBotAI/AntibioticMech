@@ -1,0 +1,59 @@
+identifier: CHEBI:139474
+label: acedapsone
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfone that is dapsone in which both of the amino groups been acetylation.
+  An antimicrobial drug, it also has antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: acedapsona
+  synonym_type: INN
+  source: chebi
+- synonym_text: acedapsonum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N,N'-[sulfonyldi(4,1-phenylene)]diacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4',4'''-sulfonylbis(acetanilide)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N'-(sulfonyldi-4,1-phenylene)bisacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:13248
+- CHEBI:140325
+- CHEBI:22160
+- CHEBI:35850
+xrefs:
+- cas:77-46-3
+- reaxys:2164071
+- wikipedia.en:Acedapsone
+activity_roles:
+- CHEBI:36043
+- CHEBI:38068
+chemical_structure:
+  smiles: CC(=O)Nc1ccc(S(=O)(=O)c2ccc(NC(C)=O)cc2)cc1
+  standard_inchi: InChI=1S/C16H16N2O4S/c1-11(19)17-13-3-7-15(8-4-13)23(21,22)16-9-5-14(6-10-16)18-12(2)20/h3-10H,1-2H3,(H,17,19)(H,18,20)
+  standard_inchi_key: AMTPYFGPPVFBBI-UHFFFAOYSA-N
+  molecular_formula: C16H16N2O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 332.381
+  monoisotopic_mass: 332.08308
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:139474
+  source_label: acedapsone
+  minted_identifier: antibioticmech:chebi-67b5832aab
+  role_terms:
+  - CHEBI:36043
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

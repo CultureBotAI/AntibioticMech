@@ -1,0 +1,52 @@
+identifier: CHEBI:623918
+label: nikkomycin Z
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A uridine-based nucleoside-peptide antibiotic which inhibits fungal chitin
+  biosynthesis by inhibiting chitin synthase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-{[(2S,3S,4S)-2-amino-4-hydroxy-4-(5-hydroxypyridin-2-yl)-3-methylbutanoyl]amino}-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-β-D-allo-furanuronic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-{[(2S,3S,4S)-2-amino-4-hydroxy-4-(5-hydroxypyridin-2-yl)-3-methylbutanoyl]amino}[(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]acetic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Neopolyoxin C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nikkomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:59668
+xrefs:
+- cas:59456-70-1
+- reaxys:4303204
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@]1([C@H](NC(=O)[C@@H](N)[C@H](C)[C@H](O)c2ccc(O)cn2)C(=O)O)O[C@@H](n2ccc(=O)nc2=O)[C@H](O)[C@@H]1O'
+  standard_inchi: InChI=1S/C20H25N5O10/c1-7(13(28)9-3-2-8(26)6-22-9)11(21)17(31)24-12(19(32)33)16-14(29)15(30)18(35-16)25-5-4-10(27)23-20(25)34/h2-7,11-16,18,26,28-30H,21H2,1H3,(H,24,31)(H,32,33)(H,23,27,34)/t7-,11-,12-,13-,14-,15+,16+,18+/m0/s1
+  standard_inchi_key: WWJFFVUVFNBJTN-VHDFTHOZSA-N
+  molecular_formula: C20H25N5O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 495.445
+  monoisotopic_mass: 495.16014
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:623918
+  source_label: nikkomycin Z
+  minted_identifier: antibioticmech:chebi-af0a3b64de
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

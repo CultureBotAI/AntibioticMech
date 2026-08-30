@@ -1,0 +1,54 @@
+identifier: CHEBI:52250
+label: quinine sulfate
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A organic sulfate salt obtained from guanethidine and sulfuric acid in
+  a 2:1 ratio.
+definition_source: ChEBI
+synonyms:
+- synonym_text: bis[(8α,9R)-6'-methoxycinchonan-9-ol] sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quinine bisulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quinine hydrogen sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quinine sulfate (2:1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quinine sulfate anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:51337
+xrefs:
+- cas:804-63-7
+- drugbank:DB00468
+- reaxys:3582804
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: O=S(=O)([O-])[O-].[H+].[H+].[H][C@@]1([C@H](O)c2ccnc3ccc(OC)cc23)C[C@@H]2CC[N@@]1C[C@@H]2C=C.[H][C@@]1([C@H](O)c2ccnc3ccc(OC)cc23)C[C@@H]2CC[N@@]1C[C@@H]2C=C
+  standard_inchi: InChI=1S/2C20H24N2O2.H2O4S/c2*1-3-13-12-22-9-7-14(13)10-19(22)20(23)16-6-8-21-18-5-4-15(24-2)11-17(16)18;1-5(2,3)4/h2*3-6,8,11,13-14,19-20,23H,1,7,9-10,12H2,2H3;(H2,1,2,3,4)/t2*13-,14-,19-,20+;/m00./s1
+  standard_inchi_key: RONWGALEIBILOG-VMJVVOMYSA-N
+  molecular_formula: 2H.2C20H24N2O2.O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 746.927
+  monoisotopic_mass: 746.33494
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:52250
+  source_label: quinine sulfate
+  minted_identifier: antibioticmech:chebi-36bac99736
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,77 @@
+identifier: CHEBI:3507
+label: cefsulodin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyridinium-substituted semi-synthetic, broad-spectrum, cephalosporin
+  antibiotic.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefsulodine
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefsulodino
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefsulodinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (6R,7R)-3-[(4-carbamoylpyridinium-1-yl)methyl]-8-oxo-7-{[(2R)-2-phenyl-2-sulfoacetyl]amino}-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7β-{[(2R)-2-phenyl-2-sulfoacetyl]amino}-3-(4-carbamoylpyridinium-1-yl)methyl-3,4-didehydrocepham-4-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cefsulodin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140324
+- CHEBI:23066
+- CHEBI:33551
+- ARO:0000032
+xrefs:
+- ARO:3004727
+- cas:62587-73-9
+- drugcentral:558
+- kegg.compound:C11253
+- kegg.drug:D07653
+- wikipedia.en:Cefsulodin
+- chembl:CHEMBL3351077
+- pubchem.compound:5284530
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(C[n+]3ccc(C(N)=O)cc3)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)[C@@H](c1ccccc1)S(=O)(=O)O'
+  standard_inchi: InChI=1S/C22H20N4O8S2/c23-18(27)13-6-8-25(9-7-13)10-14-11-35-21-15(20(29)26(21)16(14)22(30)31)24-19(28)17(36(32,33)34)12-4-2-1-3-5-12/h1-9,15,17,21H,10-11H2,(H4-,23,24,27,28,30,31,32,33,34)/t15-,17-,21-/m1/s1
+  standard_inchi_key: SYLKGLMBLAAGSC-QLVMHMETSA-N
+  molecular_formula: C22H20N4O8S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 532.556
+  monoisotopic_mass: 532.07226
+source_concepts:
+- source: ARO
+  source_id: ARO:3004727
+  source_label: cefsulodin
+  minted_identifier: antibioticmech:aro-c24d53afb7
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3507
+  source_label: cefsulodin
+  minted_identifier: antibioticmech:chebi-d29c6e9cc1
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

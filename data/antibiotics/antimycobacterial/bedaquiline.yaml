@@ -1,0 +1,135 @@
+identifier: CHEBI:72292
+label: bedaquiline
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quinoline-based antimycobacterial drug used (as its fumarate salt) for
+  the treatment of pulmonary multi-drug resistant tuberculosis by inhibition of ATP
+  synthase, an enzyme essential for the replication of the mycobacteria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: bedaquilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: bedaquilinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: bédaquiline
+  synonym_type: INN
+  source: chebi
+- synonym_text: (1R,2S)-1-(6-bromo-2-methoxyquinolin-3-yl)-4-(dimethylamino)-2-(1-naphthyl)-1-phenylbutan-2-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(6-Bromo-2-methoxy-quinolin-3-yl)-4-dimethylamino-2-naphthalen-1-yl-1-phenyl-butan-2-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: R 207910
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: R207910
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TMC 207
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TMC-207
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TMC207
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sirturo
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:25477
+- CHEBI:26513
+- CHEBI:26878
+- CHEBI:35618
+- CHEBI:37141
+- CHEBI:50996
+- ARO:3004491
+xrefs:
+- ARO:3004492
+- cas:654653-93-7
+- cas:843663-66-1
+- drugbank:DB08903
+- drugcentral:4741
+- kegg.drug:D09872
+- patent:WO2005117875
+- patent:WO2006067048
+- pdb-ccd:BQ1
+- reaxys:10733008
+- wikipedia.en:Bedaquiline
+- chembl:CHEMBL376488
+- pubchem.compound:5388906
+activity_roles:
+- CHEBI:33231
+- CHEBI:33282
+- CHEBI:35816
+structural_class: diarylquinoline antibiotic
+structural_class_id: ARO:3004491
+chemical_structure:
+  smiles: COc1nc2ccc(Br)cc2cc1[C@@H](c1ccccc1)[C@@](O)(CCN(C)C)c1cccc2ccccc12
+  standard_inchi: InChI=1S/C32H31BrN2O2/c1-35(2)19-18-32(36,28-15-9-13-22-10-7-8-14-26(22)28)30(23-11-5-4-6-12-23)27-21-24-20-25(33)16-17-29(24)34-31(27)37-3/h4-17,20-21,30,36H,18-19H2,1-3H3/t30-,32-/m1/s1
+  standard_inchi_key: QUIJNHUBAXPXFS-XLJNKUFUSA-N
+  molecular_formula: C32H31BrN2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 555.516
+  monoisotopic_mass: 554.15689
+source_concepts:
+- source: ARO
+  source_id: ARO:3004492
+  source_label: bedaquiline
+  minted_identifier: antibioticmech:aro-147ef273d9
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33282
+  - CHEBI:35816
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:72292
+  source_label: bedaquiline
+  minted_identifier: antibioticmech:chebi-9b38ad9d40
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33282
+  - CHEBI:35816
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007476
+  label: Mycobacterium abscessus atpE with mutation conferring resistance to bedaquiline
+  evidence:
+  - reference: ARO:3007476
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004492 (bedaquiline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007674
+  label: Mycobacterium tuberculosis Rv0678 with mutation conferring resistance to
+    bedaquiline
+  evidence:
+  - reference: ARO:3007674
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004492 (bedaquiline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007692
+  label: Mycobacterium tuberculosis Rv2535c with mutation conferring resistance to
+    bedaquiline
+  evidence:
+  - reference: ARO:3007692
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004492 (bedaquiline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007854
+  label: Mycobacterium tuberculosis atpE with mutation conferring resistance to bedaquiline
+  evidence:
+  - reference: ARO:3007854
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004492 (bedaquiline);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

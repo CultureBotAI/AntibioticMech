@@ -1,0 +1,70 @@
+identifier: CHEBI:176500
+label: BAY11-7085
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfone that is benzene substituted by [(E)-2-cyanoethenyl]sulfonyl
+  and tert-butyl groups at position 1 and 4, respectively. It is an irreversible inhibitor
+  of IκB-α phosphorylation in cells (IC50 = 10 μM) and prevents the activation of
+  NF-κB.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-3-[(4-tert-butylphenyl)sulfonyl]prop-2-enenitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2E)-3-(4-tert-butylbenzene-1-sulfonyl)prop-2-enenitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2E)-3-[[4-(1,1-dimethylethyl)phenyl]sulfonyl]-2-propenenitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-3-(4-t-butylphenylsulfonyl)-2-propenenitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-3-(4-tert-butylphenylsulfonyl)-2-propenenitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BAY-117085
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bay 11-7083
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bay 11-7085
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bay-11-7085
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18379
+- CHEBI:22712
+- CHEBI:35850
+xrefs:
+- cas:196309-76-9
+- chemspider:4510087
+- lincs.smallmolecule:LSM-43815
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)(C)c1ccc(S(=O)(=O)/C=C/C#N)cc1
+  standard_inchi: InChI=1S/C13H15NO2S/c1-13(2,3)11-5-7-12(8-6-11)17(15,16)10-4-9-14/h4-8,10H,1-3H3/b10-4+
+  standard_inchi_key: VHKZGNPOHPFPER-ONNFQVAWSA-N
+  molecular_formula: C13H15NO2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 249.335
+  monoisotopic_mass: 249.08235
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:176500
+  source_label: BAY11-7085
+  minted_identifier: antibioticmech:chebi-32a99a52a0
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,85 @@
+identifier: CHEBI:81784
+label: triflumizole
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxamidine resulting from the formal condensation of the amino group
+  of 4-chloro-2-(trifluoromethyl)aniline with the oxygen of the acetyl group of N-(propoxyacetyl)imidazole.
+  A sterol demethylation inhibitor, it is used as a fungicide for the control of powdery
+  mildew, scab and other diseases on a variety of crops.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Condor
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Procure
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Terraguard
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: (1E)-N-[4-chloro-2-(trifluoromethyl)phenyl]-1-(1H-imidazol-1-yl)-2-propoxyethanimine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1E)-N-[4-chloro-2-(trifluoromethyl)phenyl]-1-(1H-imidazol-1-yl)-2-propoxyethan-1-imine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-4-chloro-α,α,α-trifluoro-N-(1-imidazol-1-yl-2-propoxyethylidene)-o-toluidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-[(1E)-1-[[4-chloro-2-(trifluoromethyl)phenyl]imino]-2-propoxyethyl]-1H-imidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NF-114
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Triflumizol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Trifumine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[N(E)]-4-chloro-N-[1-(1H-imidazol-1-yl)-2-propoxyethylidene]-2-(trifluoromethyl)benzenamine'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24780
+- CHEBI:25698
+- CHEBI:35359
+- CHEBI:83403
+- CHEBI:83565
+- CHEBI:87067
+- CHEBI:87068
+xrefs:
+- cas:68694-11-1
+- cas:99387-89-0
+- kegg.compound:C18493
+- pesticides:triflumizole
+- ppdb:665
+- reaxys:6960813
+activity_roles:
+- CHEBI:77884
+- CHEBI:86328
+chemical_structure:
+  smiles: CCCOC/C(=N\c1ccc(Cl)cc1C(F)(F)F)n1ccnc1
+  standard_inchi: InChI=1S/C15H15ClF3N3O/c1-2-7-23-9-14(22-6-5-20-10-22)21-13-4-3-11(16)8-12(13)15(17,18)19/h3-6,8,10H,2,7,9H2,1H3/b21-14+
+  standard_inchi_key: HSMVPDGQOIQYSR-KGENOOAVSA-N
+  molecular_formula: C15H15ClF3N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 345.752
+  monoisotopic_mass: 345.08557
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81784
+  source_label: triflumizole
+  minted_identifier: antibioticmech:chebi-faf60b50a7
+  role_terms:
+  - CHEBI:77884
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,59 @@
+identifier: CHEBI:134705
+label: etimicin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aminoglycoside antibiotic that is gentamycin C1a in which the hydrogen
+  of the amino group at position 1 is substituted by an ethyl group. It is a fourth
+  generation semisynthetic aminoglycoside that has antimicrobial activity against
+  both gram-positive and gram-negative bacterial infections and also effective against
+  aminoglycoside resistant strains.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,2S,3S,4R,6S)-6-amino-3-{[3-deoxy-4-C-methyl-3-(methylamino)-β-L-arabinopyranosyl]oxy}-4-(ethylamino)-2-hydroxycyclohexyl
+    2,6-diamino-2,3,4,6-tetradeoxy-α-D-erythro-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-N-ethylgentamicin C1a
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-ethylgentamicin C1a
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic 89-07
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: etilmicin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22479
+- CHEBI:22507
+xrefs:
+- cas:59711-96-5
+- drugcentral:5171
+- patent:US5814488
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCN[C@@H]1C[C@H](N)[C@@H](O[C@H]2O[C@H](CN)CC[C@H]2N)[C@H](O)[C@H]1O[C@H]1OC[C@](C)(O)[C@H](NC)[C@H]1O
+  standard_inchi: InChI=1S/C21H43N5O7/c1-4-26-13-7-12(24)16(32-19-11(23)6-5-10(8-22)31-19)14(27)17(13)33-20-15(28)18(25-3)21(2,29)9-30-20/h10-20,25-29H,4-9,22-24H2,1-3H3/t10-,11+,12-,13+,14-,15+,16+,17-,18+,19+,20+,21-/m0/s1
+  standard_inchi_key: NZGMVSJQULXLHF-RAKCNUBFSA-N
+  molecular_formula: C21H43N5O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 477.603
+  monoisotopic_mass: 477.31625
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:134705
+  source_label: etimicin
+  minted_identifier: antibioticmech:chebi-a90eb7c313
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

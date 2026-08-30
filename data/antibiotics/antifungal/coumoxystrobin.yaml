@@ -1,0 +1,62 @@
+identifier: CHEBI:83185
+label: coumoxystrobin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of coumarins that is the methyl ester of (2E)-2-(2-{[(3-butyl-4-methyl-2-oxochromen-7-yl)oxy]methyl}phenyl)-3-methoxyprop-2-enoic
+  acid. A fungicide active against various fungal infections including downy mildew,
+  blight, powdery mildew and rice blast.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (2E)-2-(2-{[(3-butyl-4-methyl-2-oxo-2H-chromen-7-yl)oxy]methyl}phenyl)-3-methoxyprop-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Coumoxystrobine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methyl (alphaE)-2-(((3-butyl-4-methyl-2-oxo-2H-1-benzopyran-7-yl)oxy)methyl)-alpha-(methoxymethylene)benzeneacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (2E)-2-(2-{[(3-butyl-4-methyl-2-oxo-2H-1-benzopyran-7-yl)oxy]methyl}phenyl)-3-methoxyprop-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (βE)-2-[[(3-butyl-4-methyl-2-oxo-2H-1-benzopyran-7-yl)oxy]methyl]-α-(methoxymethylene)benzeneacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23403
+- CHEBI:25248
+- CHEBI:35618
+- CHEBI:47985
+- CHEBI:51702
+- CHEBI:86484
+xrefs:
+- cas:850881-70-8
+- patent:WO2011039105
+- pesticides:coumoxystrobin
+- ppdb:2612
+- reaxys:12643924
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CCCCc1c(C)c2ccc(OCc3ccccc3/C(=C\OC)C(=O)OC)cc2oc1=O
+  standard_inchi: InChI=1S/C26H28O6/c1-5-6-10-21-17(2)20-13-12-19(14-24(20)32-26(21)28)31-15-18-9-7-8-11-22(18)23(16-29-3)25(27)30-4/h7-9,11-14,16H,5-6,10,15H2,1-4H3/b23-16+
+  standard_inchi_key: CWVRPJSBNHNJSI-XQNSMLJCSA-N
+  molecular_formula: C26H28O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 436.504
+  monoisotopic_mass: 436.18859
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83185
+  source_label: coumoxystrobin
+  minted_identifier: antibioticmech:chebi-5eb925e3f2
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

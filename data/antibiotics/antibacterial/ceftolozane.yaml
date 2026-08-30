@@ -1,0 +1,92 @@
+identifier: CHEBI:134719
+label: ceftolozane
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A fifth-generation cephalosporin antibiotic having (5-amino-4-{[(2-aminoethyl)carbamoyl]amino}-1-methyl-1H-pyrazol-2-ium-2-yl)methyl
+  and [(2Z)-2-(5-amino-1,2,4-thiadiazol-3-yl)-2-{[(2-carboxypropan-2-yl)oxy]imino}acetyl]amino
+  side groups located at positions 3 and 7 respectively; developed for the treatment
+  of infections with gram-negative bacteria that have become resistant to conventional
+  antibiotics.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ceftolozano
+  synonym_type: INN
+  source: chebi
+- synonym_text: ceftolozanum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 7-{[(2Z)-2-(5-amino-1,2,4-thiadiazol-3-yl)-2-{[(2-carboxypropan-2-yl)oxy]imino}acetyl]amino}-3-[
+    (5-amino-4-{[(2-aminoethyl)carbamoyl]amino}-1-methyl-1H-pyrazol-2-ium-2-yl)methyl]-3,4-didehydrocepham-4-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-3-[(5-amino-4-{[(2-aminoethyl)carbamoyl]amino}-1-methyl-1H-pyrazol-2-ium-2-yl)methyl]-7-{[(2Z)-2-(5-amino-1,2,4-thiadiazol-3-yl)-2-{[(2-carboxypropan-2-yl)oxy]imino}acetyl]amino}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CXA-101
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Zerbaxa
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23066
+- CHEBI:38099
+- ARO:0000032
+xrefs:
+- ARO:3003927
+- cas:689293-68-3
+- patent:US2017233408
+- patent:WO2016028670
+- reaxys:24720344
+- wikipedia.en:Ceftolozane
+- chembl:CHEMBL2103872
+- pubchem.compound:53234134
+activity_roles:
+- CHEBI:33281
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(C[n+]3cc(NC(=O)NCCN)c(N)n3C)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)/C(=N\OC(C)(C)C(=O)O)c1nsc(N)n1'
+  standard_inchi: InChI=1S/C23H30N12O8S2/c1-23(2,20(40)41)43-31-11(15-30-21(26)45-32-15)16(36)29-12-17(37)35-13(19(38)39)9(8-44-18(12)35)6-34-7-10(14(25)33(34)3)28-22(42)27-5-4-24/h7,12,18,25H,4-6,8,24H2,1-3H3,(H7,26,27,28,29,30,32,36,38,39,40,41,42)/b31-11-/t12-,18-/m1/s1
+  standard_inchi_key: JHFNIHVVXRKLEF-DCZLAGFPSA-N
+  molecular_formula: C23H30N12O8S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 666.703
+  monoisotopic_mass: 666.1751
+source_concepts:
+- source: ARO
+  source_id: ARO:3003927
+  source_label: ceftolozane
+  minted_identifier: antibioticmech:aro-af1946ad8f
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:134719
+  source_label: ceftolozane
+  minted_identifier: antibioticmech:chebi-af6d508119
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004559
+  label: CAM-1
+  evidence:
+  - reference: ARO:3004559
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003927 (ceftolozane);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004854
+  label: CMY-136
+  evidence:
+  - reference: ARO:3004854
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003927 (ceftolozane);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

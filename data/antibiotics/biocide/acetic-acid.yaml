@@ -1,0 +1,103 @@
+identifier: CHEBI:15366
+label: acetic acid
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A simple monocarboxylic acid containing two carbons.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ACETIC ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AcOH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CH3CO2H
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CH3‒COOH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E 260
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E-260
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E260
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Essigsäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HOAc
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: INS No. 260
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MeCO2H
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MeCOOH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methanecarboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acide acétique
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+xrefs:
+- cas:64-19-7
+- drugcentral:4211
+- gmelin:1380
+- hmdb:HMDB0000042
+- kegg.compound:C00033
+- kegg.drug:D00010
+- knapsack:C00001176
+- lipidmaps:LMFA01010002
+- metacyc.compound:ACET
+- pdb-ccd:ACT
+- pdb-ccd:ACY
+- ppdb:1333
+- reaxys:506007
+- wikipedia.en:Acetic_acid
+activity_roles:
+- CHEBI:65256
+chemical_structure:
+  smiles: CC(=O)O
+  standard_inchi: InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)
+  standard_inchi_key: QTBSBXVTEAMEQO-UHFFFAOYSA-N
+  molecular_formula: C2H4O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 60.052
+  monoisotopic_mass: 60.02113
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:15366
+  source_label: acetic acid
+  minted_identifier: antibioticmech:chebi-8cf5782fb8
+  role_terms:
+  - CHEBI:65256
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

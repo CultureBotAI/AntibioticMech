@@ -1,0 +1,42 @@
+identifier: CHEBI:324935
+label: fumagillol
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sesquiterpenoid with antimicrobial properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,4S,5S,6R)-5-methoxy-4-[(2R,3R)-2-methyl-3-(3-methylbut-2-en-1-yl)oxiran-2-yl]-1-oxaspiro[2.5]octan-6-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:133131
+- CHEBI:26658
+- CHEBI:35681
+xrefs:
+- beilstein:5340842
+- cas:108102-51-8
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]1([C@@]2(C)O[C@]2([H])CC=C(C)C)[C@H](OC)[C@H](O)CC[C@]12CO2'
+  standard_inchi: InChI=1S/C16H26O4/c1-10(2)5-6-12-15(3,20-12)14-13(18-4)11(17)7-8-16(14)9-19-16/h5,11-14,17H,6-9H2,1-4H3/t11-,12-,13-,14-,15+,16+/m1/s1
+  standard_inchi_key: CEVCTNCUIVEQOY-JQOWZUPLSA-N
+  molecular_formula: C16H26O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 282.38
+  monoisotopic_mass: 282.18311
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:324935
+  source_label: fumagillol
+  minted_identifier: antibioticmech:chebi-bd7fc20bf3
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

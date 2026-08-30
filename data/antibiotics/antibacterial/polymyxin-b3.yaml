@@ -1,0 +1,66 @@
+identifier: antibioticmech:aro-180f92bec8
+label: polymyxin B3
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Polymyxin B3 is in the family of polymyxin lipopeptides with an octanoic
+  acid acyl group. These antibiotics disrupt the cell membrane of Gram-negative bacteria.
+definition_source: PMID:11330807
+parent_compounds:
+- ARO:3009657
+xrefs:
+- ARO:3000627
+- chembl:CHEMBL2021599
+- pubchem.compound:46883542
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: CCCCCCCC(=O)N[C@@H](CCN)C(=O)N[C@@H]([C@@H](C)O)C(=O)N[C@@H](CCN)C(=O)N[C@H]1CCNC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@H](NC(=O)[C@@H](NC1=O)CCN)CC2=CC=CC=C2)CC(C)C)CCN)CCN)[C@@H](C)O
+  standard_inchi: InChI=1S/C55H96N16O13/c1-6-7-8-9-13-16-43(74)62-35(17-23-56)50(79)71-45(33(5)73)55(84)67-38(20-26-59)47(76)66-40-22-28-61-54(83)44(32(4)72)70-51(80)39(21-27-60)64-46(75)36(18-24-57)65-52(81)41(29-31(2)3)68-53(82)42(30-34-14-11-10-12-15-34)69-48(77)37(19-25-58)63-49(40)78/h10-12,14-15,31-33,35-42,44-45,72-73H,6-9,13,16-30,56-60H2,1-5H3,(H,61,83)(H,62,74)(H,63,78)(H,64,75)(H,65,81)(H,66,76)(H,67,84)(H,68,82)(H,69,77)(H,70,80)(H,71,79)/t32-,33-,35+,36+,37+,38+,39+,40+,41+,42-,44+,45+/m1/s1
+  standard_inchi_key: MUZYEKLWXWDOOD-RUDZPDEXSA-N
+  molecular_formula: C55H96N16O13
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1189.5
+  monoisotopic_mass: 1188.73427718
+source_concepts:
+- source: ARO
+  source_id: ARO:3000627
+  source_label: polymyxin B3
+  minted_identifier: antibioticmech:aro-180f92bec8
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004030
+  label: RosAB
+  evidence:
+  - reference: ARO:3004030
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000627 (polymyxin
+      B3); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004287
+  label: lipid A phosphatase
+  evidence:
+  - reference: ARO:3004287
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000627 (polymyxin
+      B3); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004598
+  label: Klebsiella pneumoniae KpnGH-TolC
+  evidence:
+  - reference: ARO:3004598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000627 (polymyxin
+      B3); database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000710
+  target_label: cell membrane component targeted by antibiotic
+  evidence:
+  - reference: ARO:3000710
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000627 (polymyxin B3); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,47 @@
+identifier: CHEBI:66159
+label: samaderine B
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quassinoid isolated from Quassia indica and Samadera madagascariensis.
+  It exhibits antimalarial and cytotoxic activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,2S,5R,5aR,7aS,11S,11aS,11bR,14S)-1,11-dihydroxy-8,11a,14-trimethyl-1,7,7a,11,11a,11b-hexahydro-2H-2,5,5a-(methanetriyloxymethano)naphtho[1,2-d]oxepine-4,6,10(5H)-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:2468
+- CHEBI:25000
+- CHEBI:35681
+- CHEBI:35990
+- CHEBI:37407
+- CHEBI:38164
+- CHEBI:51689
+- CHEBI:72485
+xrefs:
+- reaxys:6667806
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@@]12C(=O)O[C@@]3([H])[C@H](O)[C@@]4([H])[C@@]1(CO[C@@]23C)C(=O)C[C@@]1([H])C(C)=CC(=O)[C@@H](O)[C@]41C'
+  standard_inchi: InChI=1S/C19H22O7/c1-7-4-9(20)14(23)17(2)8(7)5-10(21)19-6-25-18(3)13(19)16(24)26-15(18)11(22)12(17)19/h4,8,11-15,22-23H,5-6H2,1-3H3/t8-,11+,12+,13-,14+,15-,17-,18-,19+/m0/s1
+  standard_inchi_key: CVLVYBSPYHCGGU-VQXUUFQGSA-N
+  molecular_formula: C19H22O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 362.378
+  monoisotopic_mass: 362.13655
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66159
+  source_label: samaderine B
+  minted_identifier: antibioticmech:chebi-91f3db5e7e
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

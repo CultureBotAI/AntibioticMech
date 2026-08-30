@@ -1,0 +1,42 @@
+identifier: antibioticmech:aro-b2857d2845
+label: selamectin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Selamectin is a topical antiparasitic medication for dogs and cats prescribed
+  for various parasite infections. Exposure caused relevant cell surface alterations.
+  A synergistic effect was observed between ampicillin and selamectin. Selamectin
+  may represent a timely and promising macrocyclic lactone for the treatment of S.
+  aureus infections.
+definition_source: PMID:37764086
+parent_compounds:
+- ARO:3001318
+xrefs:
+- ARO:3007689
+- cas:165108-07-6
+- CHEBI:177562
+- chembl:CHEMBL1908325
+- pubchem.compound:9578507
+structural_class: macrocyclic antibiotic
+structural_class_id: ARO:3001318
+chemical_structure:
+  smiles: C[C@H]1CC[C@]2(C[C@@H]3C[C@H](O2)C/C=C(/[C@H]([C@H](/C=C/C=C/4\CO[C@H]\5[C@@]4([C@@H](C=C(/C5=N/O)C)C(=O)O3)O)C)O[C@H]6C[C@@H]([C@H]([C@@H](O6)C)O)OC)\C)O[C@@H]1C7CCCCC7
+  standard_inchi: InChI=1S/C43H63NO11/c1-24-11-10-14-30-23-50-40-36(44-48)27(4)19-33(43(30,40)47)41(46)52-32-20-31(16-15-25(2)38(24)53-35-21-34(49-6)37(45)28(5)51-35)54-42(22-32)18-17-26(3)39(55-42)29-12-8-7-9-13-29/h10-11,14-15,19,24,26,28-29,31-35,37-40,45,47-48H,7-9,12-13,16-18,20-23H2,1-6H3/b11-10+,25-15+,30-14+,44-36-/t24-,26-,28-,31+,32-,33-,34-,35-,37-,38-,39-,40+,42+,43+/m0/s1
+  standard_inchi_key: AFJYYKSVHJGXSN-XHKIUTQPSA-N
+  molecular_formula: C43H63NO11
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 770.0
+  monoisotopic_mass: 769.44011183
+source_concepts:
+- source: ARO
+  source_id: ARO:3007689
+  source_label: selamectin
+  minted_identifier: antibioticmech:aro-b2857d2845
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

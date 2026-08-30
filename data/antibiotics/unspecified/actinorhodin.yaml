@@ -1,0 +1,62 @@
+identifier: CHEBI:2448
+label: actinorhodin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzoisochromanequinone that is produced by Streptomyces
+  coelicolor A3(2) and exhibits antibiotic activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,2'-[(1R,1'R,3S,3'S)-6,6',9,9'-tetrahydroxy-1,1'-dimethyl-5,5',10,10'-tetraoxo-3,3',4,4',5,5',10,10'-octahydro-1H,1'H-[8,8'-bibenzo[g]isochromene]-3,3'-diyl]diacetic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,2'-[(1R,1'R,3S,3'S)-6,6',9,9'-tetrahydroxy-1,1'-dimethyl-5,5',10,10'-tetraoxo-3,3',4,4',5,5',10,10'-octahydro-1H,1'H-[8,8'-binaphtho[2,3-c]pyran]-3,3'-diyl]diacetic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Actinorhodin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Actinorhodine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25830
+- CHEBI:26188
+- CHEBI:26195
+- CHEBI:35692
+- CHEBI:36820
+- CHEBI:48129
+xrefs:
+- beilstein:76401
+- cas:1397-77-9
+- kegg.compound:C06691
+- metacyc.compound:CPD1A0-6123
+- pdb-ccd:ZCT
+- reaxys:22788170
+- wikipedia.en:Actinorhodin
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C[C@H]1O[C@H](CC(=O)O)CC2=C1C(=O)c1c(O)c(-c3cc(O)c4c(c3O)C(=O)C3=C(C[C@@H](CC(=O)O)O[C@@H]3C)C4=O)cc(O)c1C2=O
+  standard_inchi: InChI=1S/C32H26O14/c1-9-21-15(3-11(45-9)5-19(35)36)29(41)23-17(33)7-13(27(39)25(23)31(21)43)14-8-18(34)24-26(28(14)40)32(44)22-10(2)46-12(6-20(37)38)4-16(22)30(24)42/h7-12,33-34,39-40H,3-6H2,1-2H3,(H,35,36)(H,37,38)/t9-,10-,11+,12+/m1/s1
+  standard_inchi_key: VTIKDEXOEJDMJP-WYUUTHIRSA-N
+  molecular_formula: C32H26O14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 634.546
+  monoisotopic_mass: 634.13226
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2448
+  source_label: actinorhodin
+  minted_identifier: antibioticmech:chebi-cd88b31e3d
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

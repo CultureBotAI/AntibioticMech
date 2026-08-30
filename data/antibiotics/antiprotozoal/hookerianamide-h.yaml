@@ -1,0 +1,47 @@
+identifier: CHEBI:66020
+label: hookerianamide H
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A steroid alkaloid that is 5α-pregn-2-ene-4-one substituted by a N-formylamino
+  group at position 3 and a N,N-dimethylamino group at position 20. Isolated from
+  Sarcococca hookeriana, it exhibits antiplasmodial activity and inhibitory activity
+  against cholinesterase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[(5α,20S)-20-(dimethylamino)-4-oxopregn-2-en-3-yl]formamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 20(N,N-dimethylamino)-3-(N-formylamino)-5α-pregn-2-ene-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24079
+- CHEBI:26767
+- CHEBI:51689
+xrefs:
+- reaxys:18885920
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@@]3([H])C(=O)C(NC=O)=CC[C@]3(C)[C@@]1([H])CC[C@@]1(C)[C@@]2([H])CC[C@]1([H])[C@H](C)N(C)C'
+  standard_inchi: InChI=1S/C24H38N2O2/c1-15(26(4)5)17-8-9-18-16-6-7-20-22(28)21(25-14-27)11-13-24(20,3)19(16)10-12-23(17,18)2/h11,14-20H,6-10,12-13H2,1-5H3,(H,25,27)/t15-,16-,17+,18-,19-,20-,23+,24+/m0/s1
+  standard_inchi_key: BRKREXSOPCTPTI-BLXLMBLLSA-N
+  molecular_formula: C24H38N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 386.58
+  monoisotopic_mass: 386.29333
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66020
+  source_label: hookerianamide H
+  minted_identifier: antibioticmech:chebi-eea0e87d94
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

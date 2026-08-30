@@ -1,0 +1,261 @@
+identifier: CHEBI:6909
+label: metronidazole
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of imidazoles substituted at C-1, -2 and -5 with
+  2-hydroxyethyl, nitro and methyl groups respectively. It has activity against anaerobic
+  bacteria and protozoa, and has a radiosensitising effect on hypoxic tumour cells.
+  It may be given by mouth in tablets, or as the benzoate in an oral suspension. The
+  hydrochloride salt can be used in intravenous infusions. Metronidazole is a prodrug
+  and is selective for anaerobic bacteria due to their ability to intracellularly
+  reduce the nitro group of metronidazole to give nitroso-containing intermediates.
+  These can covalently bind to DNA, disrupting its helical structure, inducing DNA
+  strand breaks and inhibiting bacterial nucleic acid synthesis, ultimately resulting
+  in bacterial cell death.
+definition_source: ChEBI
+synonyms:
+- synonym_text: metronidazol
+  synonym_type: INN
+  source: chebi
+- synonym_text: metronidazolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: métronidazole
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-(2-methyl-5-nitro-1H-imidazol-1-yl)ethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(2-hydroxy-1-ethyl)-2-methyl-5-nitroimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(2-hydroxyethyl)-2-methyl-5-nitroimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(β-ethylol)-2-methyl-5-nitro-3-azapyrrole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(β-hydroxyethyl)-2-methyl-5-nitroimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(β-oxyethyl)-2-methyl-5-nitroimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methyl-1-(2-hydroxyethyl)-5-nitroimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methyl-3-(2-hydroxyethyl)-4-nitroimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methyl-5-nitroimidazole-1-ethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Flagyl
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:15734
+- CHEBI:24780
+- CHEBI:35716
+- ARO:3004115
+xrefs:
+- ARO:3000689
+- cas:443-48-1
+- drugbank:DB00916
+- drugcentral:1790
+- hmdb:HMDB0015052
+- kegg.drug:D00409
+- lincs.smallmolecule:LSM-5628
+- patent:US2944061
+- pdb-ccd:2MN
+- reaxys:611683
+- vsdb:1826
+- wikipedia.en:Metronidazole
+- chembl:CHEMBL137
+- pubchem.compound:4173
+activity_roles:
+- CHEBI:33231
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:35718
+- CHEBI:36047
+- CHEBI:50685
+- CHEBI:86327
+structural_class: nitroimidazole antibiotic
+structural_class_id: ARO:3004115
+chemical_structure:
+  smiles: Cc1ncc([N+](=O)[O-])n1CCO
+  standard_inchi: InChI=1S/C6H9N3O3/c1-5-7-4-6(9(11)12)8(5)2-3-10/h4,10H,2-3H2,1H3
+  standard_inchi_key: VAOCPAMSLUNLGC-UHFFFAOYSA-N
+  molecular_formula: C6H9N3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 171.156
+  monoisotopic_mass: 171.06439
+source_concepts:
+- source: ARO
+  source_id: ARO:3000689
+  source_label: metronidazole
+  minted_identifier: antibioticmech:aro-a369adefb4
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:35718
+  - CHEBI:36047
+  - CHEBI:50685
+  - CHEBI:86327
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:6909
+  source_label: metronidazole
+  minted_identifier: antibioticmech:chebi-daf94f3c73
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:35718
+  - CHEBI:36047
+  - CHEBI:50685
+  - CHEBI:86327
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003950
+  label: msbA
+  evidence:
+  - reference: ARO:3003950
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003964
+  label: hp1181
+  evidence:
+  - reference: ARO:3003964
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003965
+  label: hp1184
+  evidence:
+  - reference: ARO:3003965
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004655
+  label: nimB
+  evidence:
+  - reference: ARO:3004655
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007055
+  label: Helicobacter pylori rdxA mutation conferring resistance to metronidazole
+  evidence:
+  - reference: ARO:3007055
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007056
+  label: Antibiotic resistant Helicobacter pylori nitroreductase
+  evidence:
+  - reference: ARO:3007056
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007059
+  label: Helicobacter pylori frxA mutation conferring resistance to metronidazole
+  evidence:
+  - reference: ARO:3007059
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007104
+  label: nimA
+  evidence:
+  - reference: ARO:3007104
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007105
+  label: nimC
+  evidence:
+  - reference: ARO:3007105
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007106
+  label: nimD
+  evidence:
+  - reference: ARO:3007106
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007107
+  label: nimE
+  evidence:
+  - reference: ARO:3007107
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007108
+  label: nimF
+  evidence:
+  - reference: ARO:3007108
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007109
+  label: nimG
+  evidence:
+  - reference: ARO:3007109
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007110
+  label: nimH
+  evidence:
+  - reference: ARO:3007110
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007111
+  label: nimI
+  evidence:
+  - reference: ARO:3007111
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007112
+  label: nimJ
+  evidence:
+  - reference: ARO:3007112
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007113
+  label: nimK
+  evidence:
+  - reference: ARO:3007113
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007671
+  label: Clostridioides difficile nimB
+  evidence:
+  - reference: ARO:3007671
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000689 (metronidazole);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000742
+  target_label: anaerobe DNA
+  evidence:
+  - reference: ARO:3000742
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000689 (metronidazole); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

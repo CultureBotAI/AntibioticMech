@@ -1,0 +1,49 @@
+identifier: CHEBI:87805
+label: ethionamide S-oxide
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pyridines that is the S-oxide and active metabolite
+  of the antitubercular drug ethionamide.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-(2-ethylpyridin-4-yl)-1-(oxo-λ4-sulfanylidene)methanamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethionamide sulfoxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethionamide sulphoxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26421
+xrefs:
+- hmdb:HMDB0060624
+- reaxys:472920
+activity_roles:
+- CHEBI:33231
+- CHEBI:35816
+chemical_structure:
+  smiles: CCc1cc(C(N)=S=O)ccn1
+  standard_inchi: InChI=1S/C8H10N2OS/c1-2-7-5-6(3-4-10-7)8(9)12-11/h3-5H,2,9H2,1H3
+  standard_inchi_key: QDQQNGZRIJPDGA-UHFFFAOYSA-N
+  molecular_formula: C8H10N2OS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 182.248
+  monoisotopic_mass: 182.05138
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:87805
+  source_label: ethionamide S-oxide
+  minted_identifier: antibioticmech:chebi-e9c14af9e0
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:35816
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,189 @@
+identifier: CHEBI:102265
+label: sulfamethazine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfonamide consisting of pyrimidine with methyl substituents at the
+  4- and 6-positions and a 4-aminobenzenesulfonamido group at the 2-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sulfadimidina
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfadimidine
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfadimidinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-amino-N-(4,6-dimethylpyrimidin-2-yl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (p-Aminobenzolsulfonyl)-2-amino-4,6-dimethylpyrimidin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(4-Aminobenzenesulfonamido)-4,6-dimethylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(p-Aminobenzenesulfonamido)-4,6-dimethylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Sulfanilamido-4,6-dimethylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,6-Dimethyl-2-sulfanilamidopyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Amino-N-(2,6-dimethyl-4-pyrimidinyl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Amino-N-(4,6-dimethyl-pyrimidin-2-yl)-benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(4'-Aminobenzol-sulfonamido)-2,4-dimethylpyrimidin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(4,6-Dimethyl-2-pyrimidyl)sulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-(4,6-Dimethyl-2-pyrimidinyl)sulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-(4,6-Dimethyl-2-pyrimidyl)sulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SMZ
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfadimethyldiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfadimethylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfametazina
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfametazyny
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfamezathine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulphadimethylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulphamethazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulfamethazone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35358
+- CHEBI:39447
+- CHEBI:87228
+- ARO:3000282
+xrefs:
+- ARO:3000325
+- cas:57-68-1
+- drugbank:DB01582
+- drugcentral:2502
+- gmelin:1009759
+- hmdb:HMDB0015522
+- kegg.compound:C19530
+- kegg.drug:D02436
+- lincs.smallmolecule:LSM-5295
+- patent:EP1861101
+- patent:GB546158
+- patent:GB552887
+- patent:US2407966
+- patent:US3119818
+- patent:WO2005016386
+- reaxys:261304
+- vsdb:1829
+- wikipedia.en:Sulfadimidine
+- chembl:CHEMBL446
+- pubchem.compound:5327
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
+structural_class: sulfonamide antibiotic
+structural_class_id: ARO:3000282
+chemical_structure:
+  smiles: Cc1cc(C)nc(NS(=O)(=O)c2ccc(N)cc2)n1
+  standard_inchi: InChI=1S/C12H14N4O2S/c1-8-7-9(2)15-12(14-8)16-19(17,18)11-5-3-10(13)4-6-11/h3-7H,13H2,1-2H3,(H,14,15,16)
+  standard_inchi_key: ASWVTGNCAZCNNR-UHFFFAOYSA-N
+  molecular_formula: C12H14N4O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 278.337
+  monoisotopic_mass: 278.08375
+source_concepts:
+- source: ARO
+  source_id: ARO:3000325
+  source_label: sulfadimidine
+  minted_identifier: antibioticmech:aro-ea37816ce5
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:102265
+  source_label: sulfamethazine
+  minted_identifier: antibioticmech:chebi-0baecafe50
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000410
+  label: sul1
+  evidence:
+  - reference: ARO:3000410
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000325 (sulfadimidine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000412
+  label: sul2
+  evidence:
+  - reference: ARO:3000412
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000325 (sulfadimidine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000413
+  label: sul3
+  evidence:
+  - reference: ARO:3000413
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000325 (sulfadimidine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003386
+  label: Escherichia coli folP with mutation conferring resistance to sulfonamides
+  evidence:
+  - reference: ARO:3003386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000325 (sulfadimidine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003387
+  label: Streptococcus pyogenes folP with mutation conferring resistance to sulfonamides
+  evidence:
+  - reference: ARO:3003387
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000325 (sulfadimidine);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000744
+  target_label: antibiotic sensitive dihydropteroate synthase
+  evidence:
+  - reference: ARO:3000744
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000325 (sulfadimidine); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

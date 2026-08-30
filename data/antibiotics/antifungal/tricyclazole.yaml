@@ -1,0 +1,84 @@
+identifier: CHEBI:81783
+label: tricyclazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A triazolobenzothiazole that is [1,2,4]triazolo[3,4-b][1,3]benzothiazole
+  which is substituted at position 5 by a methyl group. A fungicide used for the control
+  of rice blast, it is not approved for use within the European Union.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Blas-T
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Blascide
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Pilarblas
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Sivic
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Tizole
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Trizole
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 5-methyl[1,2,4]triazolo[3,4-b][1,3]benzothiazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-methyl-1,2,4-triazolo[3,4-b]benzothiazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-methyl-striazolo-[3,4-b]benzothiazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48908
+- ARO:3000003
+xrefs:
+- ARO:3009183
+- cas:41814-78-2
+- hmdb:HMDB0031809
+- kegg.compound:C18492
+- pdb-ccd:BEA
+- pesticides:tricyclazole
+- ppdb:660
+- reaxys:980261
+- chembl:CHEMBL357021
+- pubchem.compound:39040
+activity_roles:
+- CHEBI:86328
+structural_class: antibiotic without defined classification
+structural_class_id: ARO:3000003
+chemical_structure:
+  smiles: Cc1cccc2sc3nncn3c12
+  standard_inchi: InChI=1S/C9H7N3S/c1-6-3-2-4-7-8(6)12-5-10-11-9(12)13-7/h2-5H,1H3
+  standard_inchi_key: DQJCHOQLCLEDLL-UHFFFAOYSA-N
+  molecular_formula: C9H7N3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 189.243
+  monoisotopic_mass: 189.03607
+source_concepts:
+- source: ARO
+  source_id: ARO:3009183
+  source_label: tricyclazole
+  minted_identifier: antibioticmech:aro-6c77456b68
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:81783
+  source_label: tricyclazole
+  minted_identifier: antibioticmech:chebi-1ef5e7bfc0
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

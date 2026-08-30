@@ -1,0 +1,162 @@
+identifier: CHEBI:9332
+label: sulfamethoxazole
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An isoxazole (1,2-oxazole) compound having a methyl substituent at the
+  5-position and a 4-aminobenzenesulfonamido group at the 3-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-amino-N-(5-methyl-1,2-oxazol-3-yl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(p-Aminophenylsulfonamido)-5-methylisoxazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-Sulfanilamido-5-methylisoxazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Amino-N-(5-methyl-3-isoxazolyl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Gantanol (TN)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SMX
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfamethoxazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulphamethoxazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35358
+- CHEBI:48975
+- CHEBI:55373
+- CHEBI:87228
+- ARO:3000282
+xrefs:
+- ARO:3000329
+- cas:723-46-6
+- drugbank:DB01015
+- drugcentral:2514
+- gmelin:226453
+- hmdb:HMDB0015150
+- kegg.compound:C07315
+- kegg.drug:D00447
+- lincs.smallmolecule:LSM-5422
+- reaxys:226453
+- wikipedia.en:Sulfamethoxazole
+- chembl:CHEMBL443
+- pubchem.compound:5329
+activity_roles:
+- CHEBI:33231
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:35718
+- CHEBI:38068
+structural_class: sulfonamide antibiotic
+structural_class_id: ARO:3000282
+chemical_structure:
+  smiles: Cc1cc(NS(=O)(=O)c2ccc(N)cc2)no1
+  standard_inchi: InChI=1S/C10H11N3O3S/c1-7-6-10(12-16-7)13-17(14,15)9-4-2-8(11)3-5-9/h2-6H,11H2,1H3,(H,12,13)
+  standard_inchi_key: JLKIGFTWXXRPMT-UHFFFAOYSA-N
+  molecular_formula: C10H11N3O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 253.283
+  monoisotopic_mass: 253.05211
+source_concepts:
+- source: ARO
+  source_id: ARO:3000329
+  source_label: sulfamethoxazole
+  minted_identifier: antibioticmech:aro-2120ad1e5a
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:35718
+  - CHEBI:38068
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:9332
+  source_label: sulfamethoxazole
+  minted_identifier: antibioticmech:chebi-8619bfe622
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:35718
+  - CHEBI:38068
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000410
+  label: sul1
+  evidence:
+  - reference: ARO:3000410
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000329 (sulfamethoxazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000412
+  label: sul2
+  evidence:
+  - reference: ARO:3000412
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000329 (sulfamethoxazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000413
+  label: sul3
+  evidence:
+  - reference: ARO:3000413
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000329 (sulfamethoxazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003386
+  label: Escherichia coli folP with mutation conferring resistance to sulfonamides
+  evidence:
+  - reference: ARO:3003386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000329 (sulfamethoxazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003387
+  label: Streptococcus pyogenes folP with mutation conferring resistance to sulfonamides
+  evidence:
+  - reference: ARO:3003387
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000329 (sulfamethoxazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004361
+  label: sul4
+  evidence:
+  - reference: ARO:3004361
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000329 (sulfamethoxazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007427
+  label: ThfT
+  evidence:
+  - reference: ARO:3007427
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000329 (sulfamethoxazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007749
+  label: Salmonella gallinarum folP with mutation conferring resistance to sulfonamides
+  evidence:
+  - reference: ARO:3007749
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000329 (sulfamethoxazole);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000744
+  target_label: antibiotic sensitive dihydropteroate synthase
+  evidence:
+  - reference: ARO:3000744
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000329 (sulfamethoxazole);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

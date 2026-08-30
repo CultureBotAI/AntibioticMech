@@ -1,0 +1,75 @@
+identifier: CHEBI:131733
+label: penamecillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillanic acid ester that is the acetoxymethyl ester of benzylpenicillin.
+  It is a prodrug for benzylpenicillin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: penamecilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: penamecillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: pénamécilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: acetoxymethyl (2S,5R,6R)-3,3-dimethyl-7-oxo-6-(2-phenylacetamido)-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetoxymethyl benzylpenicillanate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Benzylpenicillin acetoxymethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:51212
+- CHEBI:72588
+- ARO:3000008
+xrefs:
+- ARO:3009128
+- cas:983-85-7
+- drugcentral:2077
+- kegg.drug:D05406
+- patent:GB1003479
+- patent:US3250679
+- reaxys:5164412
+- wikipedia.en:Penamecillin
+- chembl:CHEMBL2106988
+- pubchem.compound:10250769
+activity_roles:
+- CHEBI:36047
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@]([H])(C(=O)OCOC(C)=O)N1C(=O)[C@@]2([H])NC(=O)Cc1ccccc1'
+  standard_inchi: InChI=1S/C19H22N2O6S/c1-11(22)26-10-27-18(25)15-19(2,3)28-17-14(16(24)21(15)17)20-13(23)9-12-7-5-4-6-8-12/h4-8,14-15,17H,9-10H2,1-3H3,(H,20,23)/t14-,15+,17-/m1/s1
+  standard_inchi_key: NLOOMWLTUVBWAW-HLLBOEOZSA-N
+  molecular_formula: C19H22N2O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 406.46
+  monoisotopic_mass: 406.11986
+source_concepts:
+- source: ARO
+  source_id: ARO:3009128
+  source_label: penamecillin
+  minted_identifier: antibioticmech:aro-b801a86e62
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:131733
+  source_label: penamecillin
+  minted_identifier: antibioticmech:chebi-00f4b4f521
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

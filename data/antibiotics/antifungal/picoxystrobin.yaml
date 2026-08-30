@@ -1,0 +1,56 @@
+identifier: CHEBI:83197
+label: picoxystrobin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An enoate ester that is the methyl ester of (2E)-3-methoxy-2-[2-({[6-(trifluoromethyl)pyridin-2-yl]oxy}methyl)phenyl]prop-2-enoic
+  acid. A cereal fungicide used to control a wide range of diseases including brown
+  rust, tan spot, powdery mildew and net blotch.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (2E)-3-methoxy-2-[2-({[6-(trifluoromethyl)pyridin-2-yl]oxy}methyl)phenyl]prop-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (2E)-3-methoxy-2-{2-[6-(trifluoromethyl)-2-pyridyloxymethyl]phenyl}acrylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (αE)-α-(methoxymethylene)-2-[[[6-(trifluoromethyl)-2-pyridinyl]oxy]methyl]benzeneacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26421
+- CHEBI:35618
+- CHEBI:37143
+- CHEBI:47985
+- CHEBI:51702
+- CHEBI:86484
+xrefs:
+- cas:117428-22-5
+- patent:WO2012020774
+- pesticides:picoxystrobin
+- ppdb:527
+- reaxys:11322204
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CO/C=C(/C(=O)OC)c1ccccc1COc1cccc(C(F)(F)F)n1
+  standard_inchi: InChI=1S/C18H16F3NO4/c1-24-11-14(17(23)25-2)13-7-4-3-6-12(13)10-26-16-9-5-8-15(22-16)18(19,20)21/h3-9,11H,10H2,1-2H3/b14-11+
+  standard_inchi_key: IBSNKSODLGJUMQ-SDNWHVSQSA-N
+  molecular_formula: C18H16F3NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 367.323
+  monoisotopic_mass: 367.10314
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83197
+  source_label: picoxystrobin
+  minted_identifier: antibioticmech:chebi-2bc4703f0c
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

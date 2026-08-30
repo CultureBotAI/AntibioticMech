@@ -1,0 +1,41 @@
+identifier: antibioticmech:aro-34c0642a61
+label: albicidin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Albicidin phytotoxins produced by the sugarcane pathogen Xanthomonas albilineans
+  is a potent DNA gyrase inhibitor with inhibitory effects significantly better than
+  most DNA gyrase inhibitors. Albicidin acts primarily by inhibiting the religation
+  of the cleaved DNA intermediate during the gyrase catalytic sequence similar to
+  quinolones.
+definition_source: PMID:31451755
+parent_compounds:
+- ARO:3009657
+xrefs:
+- ARO:3007658
+- CHEBI:218232
+- chembl:CHEMBL5281137
+- pubchem.compound:78322514
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: C/C(=C\C1=CC=C(C=C1)O)/C(=O)NC2=CC=C(C=C2)C(=O)N[C@@H](CC#N)C(=O)NC3=CC=C(C=C3)C(=O)NC4=C(C(=C(C=C4)C(=O)NC5=C(C(=C(C=C5)C(=O)O)O)OC)O)OC
+  standard_inchi: InChI=1S/C44H38N6O12/c1-23(22-24-4-14-29(51)15-5-24)39(54)46-27-10-6-26(7-11-27)41(56)50-34(20-21-45)43(58)47-28-12-8-25(9-13-28)40(55)48-32-18-16-30(35(52)37(32)61-2)42(57)49-33-19-17-31(44(59)60)36(53)38(33)62-3/h4-19,22,34,51-53H,20H2,1-3H3,(H,46,54)(H,47,58)(H,48,55)(H,49,57)(H,50,56)(H,59,60)/b23-22+/t34-/m0/s1
+  standard_inchi_key: NZSWNNDHPOTJNH-VEJILBAHSA-N
+  molecular_formula: C44H38N6O12
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 842.8
+  monoisotopic_mass: 842.25477067
+source_concepts:
+- source: ARO
+  source_id: ARO:3007658
+  source_label: albicidin
+  minted_identifier: antibioticmech:aro-34c0642a61
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,43 @@
+identifier: CHEBI:79384
+label: BAR0329
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of quinolines that is 2-methoixyquinoline carrying
+  additional 4-chlorobenzyl and (4-carboxamidinopiperidin-1-yl)methyl substituents
+  at positions 3 and 6 respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-{[3-(4-chlorobenzyl)-2-methoxyquinolin-6-yl]methyl}piperazine-1-carboximidamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24436
+- CHEBI:26144
+- CHEBI:26513
+- CHEBI:35618
+- CHEBI:83403
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1nc2ccc(CN3CCN(C(=N)N)CC3)cc2cc1Cc1ccc(Cl)cc1
+  standard_inchi: InChI=1S/C23H26ClN5O/c1-30-22-19(12-16-2-5-20(24)6-3-16)14-18-13-17(4-7-21(18)27-22)15-28-8-10-29(11-9-28)23(25)26/h2-7,13-14H,8-12,15H2,1H3,(H3,25,26)
+  standard_inchi_key: MPNSEMULLQLQCF-UHFFFAOYSA-N
+  molecular_formula: C23H26ClN5O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 423.948
+  monoisotopic_mass: 423.18259
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:79384
+  source_label: BAR0329
+  minted_identifier: antibioticmech:chebi-e17fc4b9ca
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

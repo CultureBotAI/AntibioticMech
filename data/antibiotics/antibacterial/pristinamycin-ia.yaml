@@ -1,0 +1,297 @@
+identifier: CHEBI:8417
+label: pristinamycin IA
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclodepsipeptide that is (together with pristinamycin IIA) a component
+  of pristinamycin, an oral streptogramin antibiotic produced by Streptomyces pristinaespiralis.
+  Pristinamycin exhibits bactericidal activity against Gram positive organisms including
+  methicillin-resistant Staphylococcus aureus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[(6R,9S,10R,13S,15aS,22S,24aS)-22-{[4-(dimethylamino)phenyl]methyl}-6-ethyl-10,23-dimethyl-5,8,12,15,17,21,24-heptaoxo-13-phenyldocosahydro-12H-pyrido[2,1-f]pyrrolo[2,1-l][1,4,7,10,13,16]oxapentaazacyclononadecin-9-yl]-3-hydroxypyridine-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-[4-(Dimethylamino)-N-methyl-L-phenylalanine]virginiamycin S1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic PA 114B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic PA 114B1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Mikamycin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 92554
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ostreogrycin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pristinamycin IA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Streptogramin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Vernamycin B alpha
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Virginiamycin B
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:35213
+- ARO:0000026
+xrefs:
+- ARO:3000583
+- cas:3131-03-1
+- kegg.compound:C11615
+- knapsack:C00018680
+- reaxys:78387
+- wikipedia.en:Pristinamycin_IA
+- chembl:CHEMBL1256399
+- pubchem.compound:11136668
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: streptogramin antibiotic
+structural_class_id: ARO:0000026
+chemical_structure:
+  smiles: CC[C@H]1NC(=O)[C@@H](NC(=O)c2ncccc2O)[C@@H](C)OC(=O)[C@H](c2ccccc2)NC(=O)[C@@H]2CC(=O)CCN2C(=O)[C@H](Cc2ccc(N(C)C)cc2)N(C)C(=O)[C@@H]2CCCN2C1=O
+  standard_inchi: InChI=1S/C45H54N8O10/c1-6-31-42(59)52-22-11-14-32(52)43(60)51(5)34(24-27-16-18-29(19-17-27)50(3)4)44(61)53-23-20-30(54)25-33(53)39(56)49-37(28-12-8-7-9-13-28)45(62)63-26(2)36(40(57)47-31)48-41(58)38-35(55)15-10-21-46-38/h7-10,12-13,15-19,21,26,31-34,36-37,55H,6,11,14,20,22-25H2,1-5H3,(H,47,57)(H,48,58)(H,49,56)/t26-,31-,32+,33+,34+,36+,37+/m1/s1
+  standard_inchi_key: YGXCETJZBDTKRY-DZCVGBHJSA-N
+  molecular_formula: C45H54N8O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 866.973
+  monoisotopic_mass: 866.39629
+source_concepts:
+- source: ARO
+  source_id: ARO:3000583
+  source_label: pristinamycin IA
+  minted_identifier: antibioticmech:aro-15617f2494
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:8417
+  source_label: pristinamycin IA
+  minted_identifier: antibioticmech:chebi-e85390336d
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000250
+  label: ErmC
+  evidence:
+  - reference: ARO:3000250
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000326
+  label: ErmE
+  evidence:
+  - reference: ARO:3000326
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000347
+  label: ErmA
+  evidence:
+  - reference: ARO:3000347
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000375
+  label: ErmB
+  evidence:
+  - reference: ARO:3000375
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000392
+  label: Erm(37)
+  evidence:
+  - reference: ARO:3000392
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000495
+  label: ErmD
+  evidence:
+  - reference: ARO:3000495
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000498
+  label: ErmF
+  evidence:
+  - reference: ARO:3000498
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000522
+  label: ErmG
+  evidence:
+  - reference: ARO:3000522
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000592
+  label: ErmN
+  evidence:
+  - reference: ARO:3000592
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000593
+  label: ErmQ
+  evidence:
+  - reference: ARO:3000593
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000594
+  label: ErmR
+  evidence:
+  - reference: ARO:3000594
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000595
+  label: ErmT
+  evidence:
+  - reference: ARO:3000595
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000596
+  label: ErmX
+  evidence:
+  - reference: ARO:3000596
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000599
+  label: Erm(33)
+  evidence:
+  - reference: ARO:3000599
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000600
+  label: Erm(34)
+  evidence:
+  - reference: ARO:3000600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000601
+  label: Erm(38)
+  evidence:
+  - reference: ARO:3000601
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000602
+  label: Erm(39)
+  evidence:
+  - reference: ARO:3000602
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000603
+  label: Erm(41)
+  evidence:
+  - reference: ARO:3000603
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000604
+  label: Erm(35)
+  evidence:
+  - reference: ARO:3000604
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000605
+  label: Erm(36)
+  evidence:
+  - reference: ARO:3000605
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001307
+  label: vgbA
+  evidence:
+  - reference: ARO:3001307
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001308
+  label: vgbB
+  evidence:
+  - reference: ARO:3001308
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003205
+  label: Erm(43)
+  evidence:
+  - reference: ARO:3003205
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003990
+  label: vgbC
+  evidence:
+  - reference: ARO:3003990
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004094
+  label: Erm(48)
+  evidence:
+  - reference: ARO:3004094
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004181
+  label: Streptococcus pneumoniae 23S rRNA mutation conferring resistance to macrolides
+    and streptogramins antibiotics
+  evidence:
+  - reference: ARO:3004181
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004595
+  label: erm(45)
+  evidence:
+  - reference: ARO:3004595
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007654
+  label: erm(56)
+  evidence:
+  - reference: ARO:3007654
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
+      IA); database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000754
+  target_label: antibiotic sensitive peptidyl transferase (23S rRNA)
+  evidence:
+  - reference: ARO:3000754
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000583 (pristinamycin IA);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

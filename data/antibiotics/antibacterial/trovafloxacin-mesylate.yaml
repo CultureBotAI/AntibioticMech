@@ -1,0 +1,66 @@
+identifier: CHEBI:77568
+label: trovafloxacin mesylate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A methanesulfonate (mesylate) salt prepared from equimolar amounts of
+  trovafloxacin and methanesulfonic acid. A broad-spectrum antibiotic that was withdrawn
+  from the market due to risk of liver failure.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Trovan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: (1R,5S,6s)-3-[6-carboxy-8-(2,4-difluorophenyl)-3-fluoro-5-oxo-5,8-dihydro-1,8-naphthyridin-2-yl]-3-azabicyclo[3.1.0]hexan-6-aminium
+    methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-[(1R,5S,6s)-6-amino-3-azabicyclo[3.1.0]hex-3-yl]-1-(2,4-difluorophenyl)-6-fluoro-4-oxo-1,4-dihydro-1,8-naphthyridine-3-carboxylic
+    acid methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Trovafloxacin monomethanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trovafloxacin methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trovafloxacin monomesylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38037
+xrefs:
+- cas:147059-75-4
+- drugbank:DB00685
+- kegg.drug:D02123
+- patent:EP0930068
+- patent:NZ553119
+- reaxys:8180672
+- wikipedia.en:Trovafloxacin
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: CS(=O)(=O)O.[H][C@@]12CN(c3nc4c(cc3F)c(=O)c(C(=O)O)cn4-c3ccc(F)cc3F)C[C@]1([H])[C@H]2N
+  standard_inchi: InChI=1S/C20H15F3N4O3.CH4O3S/c21-8-1-2-15(13(22)3-8)27-7-12(20(29)30)17(28)9-4-14(23)19(25-18(9)27)26-5-10-11(6-26)16(10)24;1-5(2,3)4/h1-4,7,10-11,16H,5-6,24H2,(H,29,30);1H3,(H,2,3,4)/t10-,11+,16+;
+  standard_inchi_key: DYNZICQDCVYXFW-AHZSKCOESA-N
+  molecular_formula: C20H15F3N4O3.CH4O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 512.466
+  monoisotopic_mass: 512.09774
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77568
+  source_label: trovafloxacin mesylate
+  minted_identifier: antibioticmech:chebi-7bcc69da01
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

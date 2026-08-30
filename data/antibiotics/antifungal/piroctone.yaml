@@ -1,0 +1,54 @@
+identifier: CHEBI:59009
+label: piroctone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclic hydroxamic acid that consists of 1-hydroxypyridin-2-one bearing
+  methyl and 2,4,4-trimethylpentyl substtituents at positions 4 and 6 respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: piroctona
+  synonym_type: INN
+  source: chebi
+- synonym_text: piroctonum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1-hydroxy-4-methyl-6-(2,4,4-trimethylpentyl)pyridin-2(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Hydroxy-4-methyl-6-(2,4,4-trimethylpentyl)-2(1H)-pyridone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23445
+- CHEBI:38183
+- CHEBI:87130
+xrefs:
+- cas:50650-76-5
+- drugcentral:3479
+- kegg.drug:D05504
+- reaxys:1531677
+activity_roles:
+- CHEBI:86327
+chemical_structure:
+  smiles: Cc1cc(CC(C)CC(C)(C)C)n(O)c(=O)c1
+  standard_inchi: InChI=1S/C14H23NO2/c1-10-6-12(15(17)13(16)8-10)7-11(2)9-14(3,4)5/h6,8,11,17H,7,9H2,1-5H3
+  standard_inchi_key: OIQJEQLSYJSNDS-UHFFFAOYSA-N
+  molecular_formula: C14H23NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 237.343
+  monoisotopic_mass: 237.17288
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59009
+  source_label: piroctone
+  minted_identifier: antibioticmech:chebi-b0d6e2ca1a
+  role_terms:
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

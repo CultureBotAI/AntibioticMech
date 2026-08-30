@@ -1,0 +1,59 @@
+identifier: CHEBI:81843
+label: fluazinam
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of aminopyridines that is 2-amino-5-(trifluoromethyl)pyridine
+  in which one of the amino hydrogens is replaced by a 3-chloro-2,6-dinitro-4-(trifluoromethyl)phenyl
+  group. A fungicide used to control grey mould, downy mildew and other fungal pathogens.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Shirlan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 3-chloro-N-[3-chloro-2,6-dinitro-4-(trifluoromethyl)phenyl]-5-(trifluoromethyl)pyridin-2-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-chloro-N-(3-chloro-5-trifluoromethyl-2-pyridyl)-α,α,α-trifluoro-2,6-dinitro-p-toluidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35716
+- CHEBI:38207
+- CHEBI:39173
+- CHEBI:50995
+- CHEBI:83403
+- CHEBI:83565
+xrefs:
+- cas:79622-59-6
+- kegg.compound:C18578
+- patent:NZ582589
+- patent:WO2011092618
+- pesticides:fluazinam
+- ppdb:325
+- reaxys:4772672
+- wikipedia.en:Fluazinam
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: O=[N+]([O-])c1cc(C(F)(F)F)c(Cl)c([N+](=O)[O-])c1Nc1ncc(C(F)(F)F)cc1Cl
+  standard_inchi: InChI=1S/C13H4Cl2F6N4O4/c14-6-1-4(12(16,17)18)3-22-11(6)23-9-7(24(26)27)2-5(13(19,20)21)8(15)10(9)25(28)29/h1-3H,(H,22,23)
+  standard_inchi_key: UZCGKGPEKUCDTF-UHFFFAOYSA-N
+  molecular_formula: C13H4Cl2F6N4O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 465.093
+  monoisotopic_mass: 463.95138
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81843
+  source_label: fluazinam
+  minted_identifier: antibioticmech:chebi-22945cda7f
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

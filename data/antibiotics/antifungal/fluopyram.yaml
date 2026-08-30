@@ -1,0 +1,80 @@
+identifier: CHEBI:83070
+label: fluopyram
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzamides, obtained by formal condensation of
+  the carboxy group of 2-(trifluoromethyl)benzoic acid with the amino group of 2-[3-chloro-5-(trifluoromethyl)pyridin-2-yl]ethylamine.
+  A fungicide used for foiliar application and as a seed treatment in order to control
+  botrystis, powdery mildew and other diseases.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-{2-[3-chloro-5-(trifluoromethyl)pyridin-2-yl]ethyl}-2-(trifluoromethyl)benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-{2-(3-chloro-5-(trifluoromethyl)-2-pyridyl)ethyl}-alpha,alpha,alpha-trifluoro-o-toluamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-{2-[3-chloro-5-(trifluoromethyl)-2-pyridyl]ethyl}-α,α,α-trifluoro-o-toluamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22702
+- CHEBI:26421
+- CHEBI:36683
+- CHEBI:83565
+- CHEBI:87022
+- ARO:3009539
+xrefs:
+- ARO:3009552
+- cas:658066-35-4
+- patent:EP2405752
+- patent:EP2408301
+- patent:US2011319432
+- patent:US2012010253
+- patent:WO2010102964
+- patent:WO2010106008
+- pesticides:fluopyram
+- ppdb:1362
+- reaxys:11323270
+- chembl:CHEMBL2286755
+- pubchem.compound:11158353
+activity_roles:
+- CHEBI:86328
+structural_class: fungal succinate dehydrogenase inhibitor
+structural_class_id: ARO:3009539
+chemical_structure:
+  smiles: O=C(NCCc1ncc(C(F)(F)F)cc1Cl)c1ccccc1C(F)(F)F
+  standard_inchi: InChI=1S/C16H11ClF6N2O/c17-12-7-9(15(18,19)20)8-25-13(12)5-6-24-14(26)10-3-1-2-4-11(10)16(21,22)23/h1-4,7-8H,5-6H2,(H,24,26)
+  standard_inchi_key: KVDJTXBXMWJJEF-UHFFFAOYSA-N
+  molecular_formula: C16H11ClF6N2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 396.718
+  monoisotopic_mass: 396.04641
+source_concepts:
+- source: ARO
+  source_id: ARO:3009552
+  source_label: fluopyram
+  minted_identifier: antibioticmech:aro-007347a5b8
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:83070
+  source_label: fluopyram
+  minted_identifier: antibioticmech:chebi-60a29f91f0
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009551
+  label: Aspergillus fumigatus Cyp51A with mutations conferring resistance to fluopyram
+  evidence:
+  - reference: ARO:3009551
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009552 (fluopyram);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

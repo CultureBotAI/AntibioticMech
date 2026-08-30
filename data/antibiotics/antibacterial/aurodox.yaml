@@ -1,0 +1,52 @@
+identifier: antibioticmech:aro-5086cca2e7
+label: aurodox
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Aurodox is an elongation factor Tu inhibiting antibiotic. It was first
+  referred to as X-5108. It is produced by Streptomyces goldiniensis var. goldiniensis
+  and is active primarily against gram-positive bacteria.
+definition_source: PMID:4781274
+synonyms:
+- synonym_text: antibiotic X-5108
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: goldinodox
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: goldinomycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: mocimycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3001235
+- CHEBI:201478
+- chembl:CHEMBL3221419
+- pubchem.compound:135509117
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: CC[C@H](C(=O)NC/C=C/C=C(\C)/[C@H]([C@@H](C)[C@H]1[C@H]([C@H]([C@H](O1)/C=C/C=C/C=C(\C)/C(=O)C2=C(C=CN(C2=O)C)O)O)O)OC)[C@@]3([C@@H]([C@@H](C([C@@H](O3)/C=C/C=C\C)(C)C)O)O)O
+  standard_inchi: InChI=1S/C44H62N2O12/c1-10-12-14-22-32-43(6,7)39(51)40(52)44(55,58-32)29(11-2)41(53)45-24-18-17-20-27(4)37(56-9)28(5)38-36(50)35(49)31(57-38)21-16-13-15-19-26(3)34(48)33-30(47)23-25-46(8)42(33)54/h10,12-23,25,28-29,31-32,35-40,47,49-52,55H,11,24H2,1-9H3,(H,45,53)/b12-10-,15-13+,18-17+,21-16+,22-14+,26-19+,27-20+/t28-,29-,31-,32+,35+,36+,37-,38+,39+,40-,44-/m1/s1
+  standard_inchi_key: NTAHMPNXQOYXSX-WKSONYIQSA-N
+  molecular_formula: C44H62N2O12
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 811.0
+  monoisotopic_mass: 810.43027542
+source_concepts:
+- source: ARO
+  source_id: ARO:3001235
+  source_label: aurodox
+  minted_identifier: antibioticmech:aro-5086cca2e7
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,42 @@
+identifier: antibioticmech:aro-0ae735fe08
+label: phenelfamycin E
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Phenelfamycin E was isolated from two environmental isolates called AB999F-80
+  and AB1047T-33. They were both identified as Streptomyces violaceoniger strains.
+  Both these strains were found to produce phenelfamycins A-F and unphenelfamycin.
+  Phenelfamycin E has a trisaccaride moeity and is isomeric with phenelfamycin F.
+  All phenelfamycins were selected due to their activity against anaerobic bacteria,
+  especially Clostridioides difficile. Phenelfamycin E and F are the most potent of
+  the phenelfamycins.
+definition_source: PMID:3192490
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3001253
+- CHEBI:222034
+- pubchem.compound:71433564
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: CC=CC=C[C@H]1C([C@H]([C@H]([C@](O1)(C(CO[C@@H]2C[C@H](C([C@H](O2)C)O[C@H]3C[C@@H]([C@@H]([C@H](O3)C)O[C@@H]4C[C@H]([C@H]([C@H](O4)C)O)OC)OC)OC)C(=O)NCC=CC=C(C)C([C@@H](C)C5C[C@H]([C@H](O5)C=CC=CC=CC(=O)O)O)OC)O)OC(=O)CC6=CC=CC=C6)O)(C)C
+  standard_inchi: InChI=1S/C65H95NO21/c1-13-14-18-29-51-64(7,8)61(72)62(84-53(70)32-43-26-19-17-20-27-43)65(74,87-51)44(63(73)66-31-24-23-25-38(2)58(78-12)39(3)47-33-45(67)46(83-47)28-21-15-16-22-30-52(68)69)37-79-54-35-49(76-10)59(41(5)81-54)86-56-36-50(77-11)60(42(6)82-56)85-55-34-48(75-9)57(71)40(4)80-55/h13-30,39-42,44-51,54-62,67,71-72,74H,31-37H2,1-12H3,(H,66,73)(H,68,69)/t39-,40+,41+,42+,44?,45+,46+,47?,48+,49+,50-,51-,54-,55+,56-,57-,58?,59?,60+,61-,62+,65+/m0/s1
+  standard_inchi_key: UDVVGDCMWCVRCO-CUFFYTIGSA-N
+  molecular_formula: C65H95NO21
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1226.4
+  monoisotopic_mass: 1225.63965904
+source_concepts:
+- source: ARO
+  source_id: ARO:3001253
+  source_label: phenelfamycin E
+  minted_identifier: antibioticmech:aro-0ae735fe08
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

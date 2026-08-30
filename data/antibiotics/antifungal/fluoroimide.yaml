@@ -1,0 +1,60 @@
+identifier: CHEBI:81826
+label: fluoroimide
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A maleimide that is substituted at positions 3 and 4 by chlorines and
+  on the nitrogen by a p-fluorophenyl group. Previously used as a fungicide (now obsolete).
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,4-dichloro-1-(4-fluorophenyl)-1N-pyrrole-2,5-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,3-dichloro-N-4-fluorophenylmaleimide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MK 23
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-p-fluorophenyl-2,3-dichloromaleimide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fluoromide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38656
+- CHEBI:38805
+- CHEBI:55417
+- CHEBI:83575
+- CHEBI:87195
+xrefs:
+- cas:41205-21-4
+- kegg.compound:C18551
+- pesticides:fluoroimide
+- ppdb:2926
+- reaxys:1534427
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: O=C1C(Cl)=C(Cl)C(=O)N1c1ccc(F)cc1
+  standard_inchi: InChI=1S/C10H4Cl2FNO2/c11-7-8(12)10(16)14(9(7)15)6-3-1-5(13)2-4-6/h1-4H
+  standard_inchi_key: IPENDKRRWFURRE-UHFFFAOYSA-N
+  molecular_formula: C10H4Cl2FNO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 260.051
+  monoisotopic_mass: 258.96031
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81826
+  source_label: fluoroimide
+  minted_identifier: antibioticmech:chebi-00a10d11ee
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

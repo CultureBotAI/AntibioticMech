@@ -1,0 +1,52 @@
+identifier: CHEBI:8450
+label: procymidone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An azabicycloalkane that is 1,5-dimethyl-3-azabicyclo[3.1.0]hexane-2,4-dione
+  in which the amino hydrogen is replaced by a 3,5-dichlorophenyl group. A fungicide
+  widely used in horticulture as a seed dressing, pre-harvest spray or post-harvest
+  dip for the control of various diseases.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-(3,5-dichlorophenyl)-1,5-dimethyl-3-azabicyclo[3.1.0]hexane-2,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dicyclidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(3',5'-Dichlorophenyl)-1,2-dimethylcyclopropane-1,2-dicarboximide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38295
+- CHEBI:87197
+xrefs:
+- cas:32809-16-8
+- kegg.compound:C10986
+- pesticides:procymidone
+- reaxys:1539058
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: C[C@@]12C[C@]1(C)C(=O)N(c1cc(Cl)cc(Cl)c1)C2=O
+  standard_inchi: InChI=1S/C13H11Cl2NO2/c1-12-6-13(12,2)11(18)16(10(12)17)9-4-7(14)3-8(15)5-9/h3-5H,6H2,1-2H3/t12-,13+
+  standard_inchi_key: QXJKBPAVAHBARF-BETUJISGSA-N
+  molecular_formula: C13H11Cl2NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 284.142
+  monoisotopic_mass: 283.01668
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:8450
+  source_label: procymidone
+  minted_identifier: antibioticmech:chebi-044c5f5060
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

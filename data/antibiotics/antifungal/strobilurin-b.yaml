@@ -1,0 +1,46 @@
+identifier: CHEBI:83924
+label: strobilurin B
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An enoate ester that is the methyl ester of (2E,3Z,5E)-6-(4-chloro-3-methoxyphenyl)-2-(methoxymethylene)-3-methylhexa-3,5-dienoic
+  acid.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (2E,3Z,5E)-6-(4-chloro-3-methoxyphenyl)-2-(methoxymethylene)-3-methylhexa-3,5-dienoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25235
+- CHEBI:47985
+- CHEBI:51702
+- CHEBI:83403
+- CHEBI:86484
+xrefs:
+- cas:65105-52-4
+- knapsack:C00018155
+- reaxys:5285030
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CO/C=C(C(=O)OC)\C(C)=C/C=C/c1ccc(Cl)c(OC)c1
+  standard_inchi: InChI=1S/C17H19ClO4/c1-12(14(11-20-2)17(19)22-4)6-5-7-13-8-9-15(18)16(10-13)21-3/h5-11H,1-4H3/b7-5+,12-6-,14-11+
+  standard_inchi_key: ZDIQYKMDNQULMX-PJUQCDRASA-N
+  molecular_formula: C17H19ClO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 322.788
+  monoisotopic_mass: 322.09719
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83924
+  source_label: strobilurin B
+  minted_identifier: antibioticmech:chebi-e75ca884eb
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

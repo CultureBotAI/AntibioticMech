@@ -1,0 +1,48 @@
+identifier: CHEBI:82758
+label: prodigiosin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of tripyrroles that is a red-coloured pigment with
+  antibiotic properties produced by Serratia marcescens.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-methoxy-5-[(Z)-(5-methyl-4-pentyl-2H-pyrrol-2-ylidene)methyl]-1H,1'H-2,2'-bipyrrole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Methoxy-5-((5-methyl-4-pentyl-2H-pyrrol-2-ylidene)methyl)-2,2'-bipyrrole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:36317
+- CHEBI:36820
+xrefs:
+- cas:82-89-3
+- metacyc.compound:CPD-16992
+- reaxys:4526727
+- wikipedia.en:Prodigiosin
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CCCCCC1=C/C(=C/c2nc(-c3cccn3)cc2OC)N=C1C
+  standard_inchi: InChI=1S/C20H25N3O/c1-4-5-6-8-15-11-16(22-14(15)2)12-19-20(24-3)13-18(23-19)17-9-7-10-21-17/h7,9-13,21,23H,4-6,8H2,1-3H3/b16-12-
+  standard_inchi_key: SZXDNGVQRDTJSD-VBKFSLOCSA-N
+  molecular_formula: C20H25N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 323.44
+  monoisotopic_mass: 323.19976
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:82758
+  source_label: prodigiosin
+  minted_identifier: antibioticmech:chebi-2f267709c5
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

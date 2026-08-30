@@ -1,0 +1,213 @@
+identifier: CHEBI:28368
+label: novobiocin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A coumarin-derived antibiotic obtained from Streptomyces niveus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: novobiocina
+  synonym_type: INN
+  source: chebi
+- synonym_text: novobiocine
+  synonym_type: INN
+  source: chebi
+- synonym_text: novobiocinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-{7-[(3-O-carbamoyl-6-deoxy-5-methyl-4-O-methyl-β-D-gulopyranosyl)oxy]-4-hydroxy-8-methyl-2-oxo-2H-chromen-3-yl}-4-hydroxy-3-(3-methylbut-2-en-1-yl)benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Novobiocin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cathomycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: streptonivicin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23003
+- CHEBI:25698
+- CHEBI:29347
+- CHEBI:33853
+- CHEBI:35313
+- CHEBI:37912
+- CHEBI:63367
+- ARO:3000103
+xrefs:
+- ARO:3000111
+- cas:303-81-1
+- drugbank:DB01051
+- drugcentral:1974
+- hmdb:HMDB0015185
+- kegg.compound:C05080
+- knapsack:C00002487
+- lincs.smallmolecule:LSM-5910
+- patent:WO2012049521
+- patent:WO2012103487
+- pdb-ccd:NOV
+- reaxys:1445842
+- chembl:CHEMBL36506
+- pubchem.compound:54675769
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+structural_class: aminocoumarin antibiotic
+structural_class_id: ARO:3000103
+chemical_structure:
+  smiles: CO[C@@H]1[C@@H](OC(N)=O)[C@@H](O)[C@H](Oc2ccc3c(O)c(NC(=O)c4ccc(O)c(CC=C(C)C)c4)c(=O)oc3c2C)OC1(C)C
+  standard_inchi: InChI=1S/C31H36N2O11/c1-14(2)7-8-16-13-17(9-11-19(16)34)27(37)33-21-22(35)18-10-12-20(15(3)24(18)42-28(21)38)41-29-23(36)25(43-30(32)39)26(40-6)31(4,5)44-29/h7,9-13,23,25-26,29,34-36H,8H2,1-6H3,(H2,32,39)(H,33,37)/t23-,25+,26-,29-/m1/s1
+  standard_inchi_key: YJQPYGGHQPGBLI-KGSXXDOSSA-N
+  molecular_formula: C31H36N2O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 612.632
+  monoisotopic_mass: 612.23191
+source_concepts:
+- source: ARO
+  source_id: ARO:3000111
+  source_label: novobiocin
+  minted_identifier: antibioticmech:aro-de163f36e9
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:28368
+  source_label: novobiocin
+  minted_identifier: antibioticmech:chebi-e739e10a6f
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000386
+  label: MexAB-OprM
+  evidence:
+  - reference: ARO:3000386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000768
+  label: abeS
+  evidence:
+  - reference: ARO:3000768
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000787
+  label: MdtABC-TolC
+  evidence:
+  - reference: ARO:3000787
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000797
+  label: MexCD-OprJ
+  evidence:
+  - reference: ARO:3000797
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3002522
+  label: novA
+  evidence:
+  - reference: ARO:3002522
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003301
+  label: Staphylococcus aureus gyrB conferring resistance to aminocoumarin
+  evidence:
+  - reference: ARO:3003301
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003302
+  label: Bartonella bacilliformis gyrB conferring resistance to aminocoumarin
+  evidence:
+  - reference: ARO:3003302
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003303
+  label: Escherichia coli gyrB conferring resistance to aminocoumarin
+  evidence:
+  - reference: ARO:3003303
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003314
+  label: Staphylococcus aureus parE conferring resistance to aminocoumarin
+  evidence:
+  - reference: ARO:3003314
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003318
+  label: Streptomyces rishiriensis parY mutant conferring resistance to aminocoumarin
+  evidence:
+  - reference: ARO:3003318
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003830
+  label: aminocoumarin-resistant alaS
+  evidence:
+  - reference: ARO:3003830
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003840
+  label: aminocoumarin-resistant cysB
+  evidence:
+  - reference: ARO:3003840
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004076
+  label: MuxABC-OpmB
+  evidence:
+  - reference: ARO:3004076
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3005059
+  label: LptD
+  evidence:
+  - reference: ARO:3005059
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000023
+  target_label: aminocoumarin sensitive parE
+  evidence:
+  - reference: ARO:3000023
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000111 (novobiocin); database
+      assertion, not a primary citation.
+- target_id: ARO:3000734
+  target_label: antibiotic sensitive DNA topoisomerase subunit gyrB
+  evidence:
+  - reference: ARO:3000734
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000111 (novobiocin); database
+      assertion, not a primary citation.
+- target_id: ARO:3003253
+  target_label: aminocoumarin sensitive parY
+  evidence:
+  - reference: ARO:3003253
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000111 (novobiocin); database
+      assertion, not a primary citation.
+- target_id: ARO:3003260
+  target_label: aminocoumarin sensitive gyrB
+  evidence:
+  - reference: ARO:3003260
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000111 (novobiocin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

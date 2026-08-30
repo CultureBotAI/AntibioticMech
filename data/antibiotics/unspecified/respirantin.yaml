@@ -1,0 +1,47 @@
+identifier: CHEBI:66299
+label: respirantin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclodepsipeptide isolated from Streptomyces and Kitasatospora and has
+  been shown to exhibit antimicrobial and antineoplastic activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[(2S,5S,8S,13S,16R,17S)-5-(butan-2-yl)-2,10,10,16-tetramethyl-8,13-bis(2-methylpropyl)-3,6,9,11,14,18-hexaoxo-1,4,12,15-tetraoxa-7-azacyclooctadecan-17-yl]-3-(formylamino)-2-hydroxybenzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cyclodepsipeptide 1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22702
+- CHEBI:24079
+- CHEBI:33853
+- CHEBI:35213
+xrefs:
+- patent:WO2008151306
+- reaxys:11184596
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]1(C(C)CC)OC(=O)[C@H](C)OC(=O)[C@@H](NC(=O)c2cccc(NC=O)c2O)[C@@H](C)OC(=O)[C@H](CC(C)C)OC(=O)C(C)(C)C(=O)[C@H](CC(C)C)NC1=O'
+  standard_inchi: InChI=1S/C37H53N3O13/c1-11-20(6)29-32(45)39-25(15-18(2)3)30(43)37(9,10)36(49)52-26(16-19(4)5)34(47)50-21(7)27(35(48)51-22(8)33(46)53-29)40-31(44)23-13-12-14-24(28(23)42)38-17-41/h12-14,17-22,25-27,29,42H,11,15-16H2,1-10H3,(H,38,41)(H,39,45)(H,40,44)/t20?,21-,22+,25+,26+,27+,29+/m1/s1
+  standard_inchi_key: HJNZTHHOZWMVPB-WCSXKIRISA-N
+  molecular_formula: C37H53N3O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 747.839
+  monoisotopic_mass: 747.35784
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66299
+  source_label: respirantin
+  minted_identifier: antibioticmech:chebi-bfc8afc9f8
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

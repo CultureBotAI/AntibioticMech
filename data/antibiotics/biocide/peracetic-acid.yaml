@@ -1,0 +1,90 @@
+identifier: CHEBI:42530
+label: peracetic acid
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A peroxy acid that is acetic acid in which the OH group is substituted
+  by a hydroperoxy group. It is a versatile oxidising agent that is used as a disinfectant.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Acecide
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Desoxon 1
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Estosteril
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Osbon AC
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Proxitane 4002
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: ethaneperoxoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PAA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acetic peroxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acetyl hydroperoxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acide peracetique
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acido peroxiacetico
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethaneperoxic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: monoperacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: peroxoacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: peroxyacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:177878
+xrefs:
+- cas:79-21-0
+- chemspider:6336
+- drugbank:DB14556
+- hmdb:HMDB0031608
+- kegg.drug:D03467
+- pdb-ccd:F50
+- ppdb:1466
+- reaxys:1098464
+- wikipedia.en:Peracetic_acid
+activity_roles:
+- CHEBI:48219
+chemical_structure:
+  smiles: CC(=O)OO
+  standard_inchi: InChI=1S/C2H4O3/c1-2(3)5-4/h4H,1H3
+  standard_inchi_key: KFSLWBXXFJQRDL-UHFFFAOYSA-N
+  molecular_formula: C2H4O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 76.051
+  monoisotopic_mass: 76.01604
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:42530
+  source_label: peracetic acid
+  minted_identifier: antibioticmech:chebi-745a37cffa
+  role_terms:
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

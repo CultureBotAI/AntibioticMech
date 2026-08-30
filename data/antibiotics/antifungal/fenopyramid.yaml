@@ -1,0 +1,55 @@
+identifier: CHEBI:229753
+label: fenopyramid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A secondary carboxamide resulting from the formal condensation of the
+  carboxy group of 3-(difluoromethyl)-1-methyl-1H-pyrazole-4-carboxylic acid with
+  the amino group of 2-[2,4-bis(trifluoromethyl)phenoxy]aniline. It is a fungicide
+  developed by Shandong United Pesticide Industry Co. that demonstrates effective
+  control against soybean rust, corn rust, and wheat powdery mildew.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-{2-[2,4-bis(trifluoromethyl)phenoxy]phenyl}-3-(difluoromethyl)-1-methyl-1H-pyrazole-4-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LH-371
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[2-[2,4-bis(trifluoromethyl)phenoxy]phenyl]-3-(difluoromethyl)-1-methyl-1H-pyrazole-4-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:35618
+- CHEBI:37143
+- CHEBI:38601
+- CHEBI:83565
+xrefs:
+- cas:2344721-61-3
+- pesticides:fenopyramid
+- reaxys:34823453
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: Cn1cc(C(=O)Nc2ccccc2Oc2ccc(C(F)(F)F)cc2C(F)(F)F)c(C(F)F)n1
+  standard_inchi: InChI=1S/C20H13F8N3O2/c1-31-9-11(16(30-31)17(21)22)18(32)29-13-4-2-3-5-15(13)33-14-7-6-10(19(23,24)25)8-12(14)20(26,27)28/h2-9,17H,1H3,(H,29,32)
+  standard_inchi_key: NYJBDYAABVMJOF-UHFFFAOYSA-N
+  molecular_formula: C20H13F8N3O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 479.327
+  monoisotopic_mass: 479.088
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:229753
+  source_label: fenopyramid
+  minted_identifier: antibioticmech:chebi-66f1167c49
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

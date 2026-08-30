@@ -1,0 +1,78 @@
+identifier: CHEBI:38265
+label: carvone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A p-menthane monoterpenoid that consists of cyclohex-2-enone having methyl
+  and isopropenyl substituents at positions 2 and 5, respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-methyl-5-(prop-1-en-2-yl)cyclohex-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-mentha-1(6),8-dien-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-carvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methyl-5-(1-methyl-1-ethenyl)-2-cyclohexen-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methyl-5-(1-methylethenyl)-2-cyclohexen-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methyl-5-(prop-1-en-2-yl)cyclohex-2-enone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methyl-5-isopropenyl-2-cyclohexenone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-isopropenyl-2-methylcyclohex-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Carvon
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Karvon
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: carvol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-mentha-6,8-dien-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23048
+- CHEBI:86494
+xrefs:
+- cas:99-49-0
+- gmelin:102300
+- metacyc.compound:Carvones
+- reaxys:1364206
+- wikipedia.en:Carvone
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C=C(C)C1CC=C(C)C(=O)C1
+  standard_inchi: InChI=1S/C10H14O/c1-7(2)9-5-4-8(3)10(11)6-9/h4,9H,1,5-6H2,2-3H3
+  standard_inchi_key: ULDHMXUKGWMISQ-UHFFFAOYSA-N
+  molecular_formula: C10H14O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 150.221
+  monoisotopic_mass: 150.10447
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:38265
+  source_label: carvone
+  minted_identifier: antibioticmech:chebi-b48b57b46b
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

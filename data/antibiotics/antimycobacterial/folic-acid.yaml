@@ -1,0 +1,123 @@
+identifier: CHEBI:27470
+label: folic acid
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An N-acyl-amino acid that is a form of the water-soluble vitamin B9. Its
+  biologically active forms (tetrahydrofolate and others) are essential for nucleotide
+  biosynthesis and homocysteine remethylation.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Acfol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Folicet
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: acide folique
+  synonym_type: INN
+  source: chebi
+- synonym_text: acidum folicum
+  synonym_type: INN
+  source: chebi
+- synonym_text: ácido fólico
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-(4-{[(2-amino-4-oxo-3,4-dihydropteridin-6-yl)methyl]amino}benzoyl)-L-glutamic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-2-(4-{[(2-amino-4-oxo-3,4-dihydropteridin-6-yl)methyl]amino}benzamido)pentanedioic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Folate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Folsäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[(4-{[(2-amino-4-oxo-1,4-dihydropteridin-6-yl)methyl]amino}phenyl)carbonyl]-L-glutamic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-pteroyl-L-glutamic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PGA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PteGlu
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pteroyl-L-glutamic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pteroyl-L-monoglutamic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pteroylglutamic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pteroylmonoglutamic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: vitamin B11
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: vitamin B9
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: vitamin Bc
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: vitamin Be
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: vitamin M
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37445
+- CHEBI:51569
+xrefs:
+- cas:59-30-3
+- chemspider:5815
+- drugbank:DB00158
+- drugcentral:1231
+- foodb.food:FDB014504
+- hmdb:HMDB0000121
+- kegg.compound:C00504
+- kegg.drug:D00070
+- knapsack:C00001539
+- lincs.smallmolecule:LSM-5355
+- metacyc.compound:CPD-12826
+- pdb-ccd:FOL
+- reaxys:100781
+- wikipedia.en:Folic_Acid
+activity_roles:
+- CHEBI:33231
+- CHEBI:38068
+chemical_structure:
+  smiles: Nc1nc(=O)c2nc(CNc3ccc(C(=O)N[C@@H](CCC(=O)O)C(=O)O)cc3)cnc2n1
+  standard_inchi: InChI=1S/C19H19N7O6/c20-19-25-15-14(17(30)26-19)23-11(8-22-15)7-21-10-3-1-9(2-4-10)16(29)24-12(18(31)32)5-6-13(27)28/h1-4,8,12,21H,5-7H2,(H,24,29)(H,27,28)(H,31,32)(H3,20,22,25,26,30)/t12-/m0/s1
+  standard_inchi_key: OVBPIULPVIDEAO-LBPRGKRZSA-N
+  molecular_formula: C19H19N7O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 441.404
+  monoisotopic_mass: 441.13968
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:27470
+  source_label: folic acid
+  minted_identifier: antibioticmech:chebi-5463d356da
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

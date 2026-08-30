@@ -1,0 +1,54 @@
+identifier: CHEBI:131601
+label: pyraziflumid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aromatic amide obtained by formal condensation of the carboxy group
+  of pyrazine-2-carboxylic acid with the amino function of 3',4'-difluoro[1,1'-biphenyl]-2-amine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-(3',4'-difluoro[1,1'-biphenyl]-2-yl)-3-(trifluoromethyl)pyrazine-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(3',4'-difluoro[1,1'-biphenyl]-2-yl)-3-(trifluoromethyl)-2-pyrazinecarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(3',4'-difluorobiphenyl-2-yl)-3-(trifluoromethyl)pyrazine-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22888
+- CHEBI:29347
+- CHEBI:38314
+- CHEBI:38582
+- CHEBI:38805
+- CHEBI:62733
+xrefs:
+- cas:942515-63-1
+- pesticides:pyraziflumid
+- ppdb:3087
+- reaxys:12922268
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: O=C(Nc1ccccc1-c1ccc(F)c(F)c1)c1nccnc1C(F)(F)F
+  standard_inchi: InChI=1S/C18H10F5N3O/c19-12-6-5-10(9-13(12)20)11-3-1-2-4-14(11)26-17(27)15-16(18(21,22)23)25-8-7-24-15/h1-9H,(H,26,27)
+  standard_inchi_key: KKEJMLAPZVXPOF-UHFFFAOYSA-N
+  molecular_formula: C18H10F5N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 379.288
+  monoisotopic_mass: 379.0744
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:131601
+  source_label: pyraziflumid
+  minted_identifier: antibioticmech:chebi-c69ab891b2
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

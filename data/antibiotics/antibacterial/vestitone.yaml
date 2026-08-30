@@ -1,0 +1,64 @@
+identifier: CHEBI:16786
+label: vestitone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxyisoflavanone that is isoflavanone substituted by hydroxy groups
+  at positions 7 and 2' and a methoxy group at position 4'.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R)-7-hydroxy-3-(2-hydroxy-4-methoxyphenyl)-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3R)-vestitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,3-Dihydro-7-hydroxy-3-(2-hydroxy-4-methoxyphenyl)-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7,2'-Dihydroxy-4'-methoxyisoflavanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Vestitone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3R)-vestitone
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140183
+- CHEBI:72739
+- CHEBI:72740
+xrefs:
+- cas:158112-50-6
+- cas:66211-83-4
+- hmdb:HMDB0031620
+- kegg.compound:C00786
+- knapsack:C00002584
+- lipidmaps:LMPK12050462
+- metacyc.compound:VESTITONE
+- reaxys:19983204
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1ccc([C@@H]2COc3cc(O)ccc3C2=O)c(O)c1
+  standard_inchi: InChI=1S/C16H14O5/c1-20-10-3-5-11(14(18)7-10)13-8-21-15-6-9(17)2-4-12(15)16(13)19/h2-7,13,17-18H,8H2,1H3/t13-/m0/s1
+  standard_inchi_key: WQCJOKYOIJVEFN-ZDUSSCGKSA-N
+  molecular_formula: C16H14O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 286.283
+  monoisotopic_mass: 286.08412
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:16786
+  source_label: vestitone
+  minted_identifier: antibioticmech:chebi-c4bbd97258
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

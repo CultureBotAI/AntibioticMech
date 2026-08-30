@@ -1,0 +1,72 @@
+identifier: CHEBI:4781
+label: emetine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyridoisoquinoline comprising emetam having methoxy substituents at
+  the 6'-, 7'-, 10- and 11-positions. It is an antiprotozoal agent and emetic. It
+  inhibits SARS-CoV2, Zika and Ebola virus replication and displays antimalarial,
+  antineoplastic and antiamoebic properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6',7',10,11-tetramethoxyemetan
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Emetan
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Emetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Emetine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cephaeline methyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cephaline-O-methyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl cephaeline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24921
+- CHEBI:61692
+xrefs:
+- beilstein:6253162
+- cas:483-18-1
+- drugbank:DB13393
+- drugcentral:1001
+- kegg.compound:C09421
+- knapsack:C00001849
+- lincs.smallmolecule:LSM-2041
+- metacyc.compound:CPD-14817
+- reaxys:100834
+- wikipedia.en:Emetine
+activity_roles:
+- CHEBI:35820
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]1(C[C@@]2([H])NCCc3cc(OC)c(OC)cc32)C[C@@]2([H])c3cc(OC)c(OC)cc3CCN2C[C@@H]1CC'
+  standard_inchi: InChI=1S/C29H40N2O4/c1-6-18-17-31-10-8-20-14-27(33-3)29(35-5)16-23(20)25(31)12-21(18)11-24-22-15-28(34-4)26(32-2)13-19(22)7-9-30-24/h13-16,18,21,24-25,30H,6-12,17H2,1-5H3/t18-,21-,24+,25-/m0/s1
+  standard_inchi_key: AUVVAXYIELKVAI-CKBKHPSWSA-N
+  molecular_formula: C29H40N2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 480.649
+  monoisotopic_mass: 480.29881
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4781
+  source_label: emetine
+  minted_identifier: antibioticmech:chebi-88251d020e
+  role_terms:
+  - CHEBI:35820
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

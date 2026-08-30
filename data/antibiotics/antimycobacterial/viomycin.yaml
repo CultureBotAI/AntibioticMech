@@ -1,0 +1,122 @@
+identifier: CHEBI:15782
+label: viomycin
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclic peptide antibiotic produced by the actinomycete Streptomyces
+  puniceus, used in the treatment of tuberculosis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: viomicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: viomycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: viomycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (3S)-3,6-diamino-N-[(3S,6Z,9S,12S,15S)-6-[(carbamoylamino)methylene]-3-[(4R,6S)-6-hydroxy-2-iminohexahydropyrimidin-4-yl]-9,12-bis(hydroxymethyl)-2,5,8,11,14-pentaoxo-1,4,7,10,13-pentaazacyclohexadecan-15-yl]hexanamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Viomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Celiomycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Florimycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Tuberactinomycin B
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Viocin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:24533
+- CHEBI:25903
+- ARO:3009657
+xrefs:
+- ARO:0000018
+- beilstein:11141953
+- cas:32988-50-4
+- drugcentral:2830
+- kegg.compound:C01540
+- pubchem.compound:135398671
+activity_roles:
+- CHEBI:33231
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: '[H][C@]1([C@]2([H])NC(=O)/C(=C/NC(N)=O)NC(=O)[C@H](CO)NC(=O)[C@H](CO)NC(=O)[C@@H](NC(=O)C[C@@H](N)CCCN)CNC2=O)C[C@H](O)NC(=N)N1'
+  standard_inchi: InChI=1S/C25H43N13O10/c26-3-1-2-10(27)4-16(41)32-12-6-30-23(47)18(11-5-17(42)37-24(28)36-11)38-20(44)13(7-31-25(29)48)33-21(45)14(8-39)35-22(46)15(9-40)34-19(12)43/h7,10-12,14-15,17-18,39-40,42H,1-6,8-9,26-27H2,(H,30,47)(H,32,41)(H,33,45)(H,34,43)(H,35,46)(H,38,44)(H3,28,36,37)(H3,29,31,48)/b13-7-/t10-,11+,12-,14-,15-,17-,18-/m0/s1
+  standard_inchi_key: GXFAIFRPOKBQRV-GHXCTMGLSA-N
+  molecular_formula: C25H43N13O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 685.7
+  monoisotopic_mass: 685.32558
+source_concepts:
+- source: ARO
+  source_id: ARO:0000018
+  source_label: viomycin
+  minted_identifier: antibioticmech:aro-624179df89
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:15782
+  source_label: viomycin
+  minted_identifier: antibioticmech:chebi-7a13922640
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003061
+  label: vph
+  evidence:
+  - reference: ARO:3003061
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000018 (viomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003437
+  label: Mycobacterium tuberculosis 16S rRNA mutation conferring resistance to viomycin
+  evidence:
+  - reference: ARO:3003437
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000018 (viomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003546
+  label: Mycolicibacterium smegmatis 16S rRNA (rrsA) mutation conferring resistance
+    to viomycin
+  evidence:
+  - reference: ARO:3003546
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000018 (viomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003547
+  label: Mycolicibacterium smegmatis 16S rRNA (rrsB) mutation conferring resistance
+    to viomycin
+  evidence:
+  - reference: ARO:3003547
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000018 (viomycin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000729
+  target_label: ribosomal complex
+  evidence:
+  - reference: ARO:3000729
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000018 (viomycin); database
+      assertion, not a primary citation.
+- target_id: ARO:3000739
+  target_label: RNA guanosine binding site
+  evidence:
+  - reference: ARO:3000739
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000018 (viomycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

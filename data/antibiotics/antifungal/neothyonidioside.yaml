@@ -1,0 +1,43 @@
+identifier: CHEBI:82825
+label: neothyonidioside
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A triterpene glycoside obtained from the New Zealand and South Australian
+  sea cucumber Australostichopus mollis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3β)-16,18-dioxo-18,20-epoxylanosta-9(11),25-dien-3-yl 3-O-methyl-β-D-glucopyranosyl-(1→3)-β-D-xylopyranosyl-(1→4)-6-deoxy-β-D-glucopyranosyl-(1→2)-4-O-sulfo-β-D-xylopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25000
+- CHEBI:25872
+- CHEBI:37909
+- CHEBI:61778
+- CHEBI:63567
+- CHEBI:78840
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@]12C(=O)C[C@]3(C)[C@@]1(CC=C1[C@@]3([H])CC[C@@]3([H])C(C)(C)[C@@H](O[C@@H]4OC[C@@H](OS(=O)(=O)O)[C@H](O)[C@H]4O[C@@H]4O[C@H](C)[C@@H](O[C@@H]5OC[C@@H](O)[C@H](O[C@@H]6O[C@H](CO)[C@@H](O)[C@H](OC)[C@H]6O)[C@H]5O)[C@H](O)[C@H]4O)CC[C@]13C)C(=O)O[C@@]2(C)CCCC(=C)C'
+  standard_inchi: InChI=1S/C53H82O24S/c1-23(2)11-10-16-52(8)43-27(55)19-51(7)26-12-13-31-49(4,5)32(15-17-50(31,6)25(26)14-18-53(43,51)48(63)76-52)72-47-42(34(58)30(22-69-47)77-78(64,65)66)75-45-36(60)35(59)39(24(3)70-45)73-44-37(61)40(28(56)21-68-44)74-46-38(62)41(67-9)33(57)29(20-54)71-46/h14,24,26,28-47,54,56-62H,1,10-13,15-22H2,2-9H3,(H,64,65,66)/t24-,26-,28-,29-,30-,31+,32+,33-,34+,35-,36-,37-,38-,39-,40+,41+,42-,43-,44+,45+,46+,47+,50-,51+,52+,53-/m1/s1
+  standard_inchi_key: OQBFQOOZNQRQAW-INFQXDPISA-N
+  molecular_formula: C53H82O24S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1135.282
+  monoisotopic_mass: 1134.49167
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:82825
+  source_label: neothyonidioside
+  minted_identifier: antibioticmech:chebi-805366adbd
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

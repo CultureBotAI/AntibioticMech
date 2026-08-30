@@ -1,0 +1,87 @@
+identifier: CHEBI:131714
+label: furagin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An imidazolidine-2,4-dione that is hydantoin substituted at position 1
+  by a [3-(5-nitro-2-furyl)prop-2-en-1-ylidene]amino group (the configuration of the
+  C=C and C=N bonds in the grouping that links the two heterocycles is not specified).
+  A nitrofuran antibiotic with properties similar to nitrofurantoin, furagin is used
+  in the treatment of urinary tract infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Akritoin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Furagin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 1-{[3-(5-nitro-2-furyl)prop-2-en-1-ylidene]amino}imidazolidine-2,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-((3-(5-nitro-2-furyl)allylidene)amino)-hydantoin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NF 416
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NF-416
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NF416
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: furazidin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: furazidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24628
+- CHEBI:25558
+- CHEBI:25807
+- CHEBI:87230
+- ARO:3004116
+xrefs:
+- ARO:3007677
+- cas:1672-88-4
+- drugcentral:4869
+- kegg.drug:D07998
+- patent:WO9841520
+- reaxys:307076
+- chembl:CHEMBL3707254
+- pubchem.compound:6870646
+activity_roles:
+- CHEBI:36047
+structural_class: nitrofuran antibiotic
+structural_class_id: ARO:3004116
+chemical_structure:
+  smiles: O=C1CN(N=CC=Cc2ccc([N+](=O)[O-])o2)C(=O)N1
+  standard_inchi: InChI=1S/C10H8N4O5/c15-8-6-13(10(16)12-8)11-5-1-2-7-3-4-9(19-7)14(17)18/h1-5H,6H2,(H,12,15,16)
+  standard_inchi_key: DECBQELQORZLLP-UHFFFAOYSA-N
+  molecular_formula: C10H8N4O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 264.197
+  monoisotopic_mass: 264.04947
+source_concepts:
+- source: ARO
+  source_id: ARO:3007677
+  source_label: furazidin
+  minted_identifier: antibioticmech:aro-dfdd8033b4
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:131714
+  source_label: furagin
+  minted_identifier: antibioticmech:chebi-f46e5b09e1
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

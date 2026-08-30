@@ -1,0 +1,63 @@
+identifier: CHEBI:81770
+label: ipconazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of cyclopentanols carrying 1,2,4-triazol-1-ylmethyl,
+  4-chlorobenzyl and isopropyl substituents at positions 1, 2 and 5 respectively.
+  Used to control a range of seed diseases in rice, vegetables and other, mainly non-food,
+  crops.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(4-chlorobenzyl)-5-isopropyl-1-(1H-1,2,4-triazol-1-ylmethyl)cyclopentanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-((4-chlorophenyl)methyl)-5-(1-methylethyl)-1-(1H-1,2,4-triazol-1-ylmethyl)cyclopentanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-[(4-chlorophenyl)methyl]-5-(1-methylethyl)-1-(1H-1,2,4-triazol-1-ylmethyl)cyclopentanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23495
+- CHEBI:26878
+- CHEBI:35727
+- CHEBI:83403
+- CHEBI:87067
+- CHEBI:87100
+xrefs:
+- cas:125225-28-7
+- kegg.compound:C18471
+- patent:AU2010277783
+- patent:EP2265122
+- patent:EP2289320
+- patent:WO2012035670
+- pesticides:ipconazole
+- ppdb:1140
+- reaxys:11288948
+activity_roles:
+- CHEBI:77884
+- CHEBI:86328
+chemical_structure:
+  smiles: CC(C)C1CCC(Cc2ccc(Cl)cc2)C1(O)Cn1cncn1
+  standard_inchi: InChI=1S/C18H24ClN3O/c1-13(2)17-8-5-15(9-14-3-6-16(19)7-4-14)18(17,23)10-22-12-20-11-21-22/h3-4,6-7,11-13,15,17,23H,5,8-10H2,1-2H3
+  standard_inchi_key: QTYCMDBMOLSEAM-UHFFFAOYSA-N
+  molecular_formula: C18H24ClN3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 333.863
+  monoisotopic_mass: 333.16079
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81770
+  source_label: ipconazole
+  minted_identifier: antibioticmech:chebi-48155cfed5
+  role_terms:
+  - CHEBI:77884
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,54 @@
+identifier: CHEBI:85269
+label: 9-fluoro-5-methyl-1-oxo-6,7-dihydro-1H,5H-pyrido[3,2,1-ij]quinoline-2-carboxylic
+  acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pyridoquinolines that is 1-oxo-6,7-dihydro-1H,5H-pyrido[3,2,1-ij]quinoline
+  carrying additional carboxy, methyl and fluoro substituents at positions 2, 5 and
+  9 respectively.
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:37143
+- CHEBI:38921
+- CHEBI:47881
+- CHEBI:86324
+- ARO:0000001
+xrefs:
+- ARO:3007521
+- cas:42835-25-6
+- CHEBI:85267
+- chembl:CHEMBL370252
+- pubchem.compound:3374
+activity_roles:
+- CHEBI:33281
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: CC1CCc2cc(F)cc3c(=O)c(C(=O)O)cn1c23
+  standard_inchi: InChI=1S/C14H12FNO3/c1-7-2-3-8-4-9(15)5-10-12(8)16(7)6-11(13(10)17)14(18)19/h4-7H,2-3H2,1H3,(H,18,19)
+  standard_inchi_key: DPSPPJIUMHPXMA-UHFFFAOYSA-N
+  molecular_formula: C14H12FNO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 261.252
+  monoisotopic_mass: 261.08012
+source_concepts:
+- source: ARO
+  source_id: ARO:3007521
+  source_label: flumequine
+  minted_identifier: antibioticmech:aro-84504339c8
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:85269
+  source_label: 9-fluoro-5-methyl-1-oxo-6,7-dihydro-1H,5H-pyrido[3,2,1-ij]quinoline-2-carboxylic
+    acid
+  minted_identifier: antibioticmech:chebi-ce888b444e
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

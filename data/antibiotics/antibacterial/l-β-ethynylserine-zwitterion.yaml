@@ -1,0 +1,41 @@
+identifier: CHEBI:144729
+label: L-β-ethynylserine zwitterion
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An L-α-amino acid zwitterion obtained by transfer of a proton from the
+  carboxy group to the amino group of L-β-ethynylserine. The major species at pH 7.3.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-azaniumyl-2,4,5-trideoxy-D-threo-pent-4-ynonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,3R)-2-azaniumyl-3-hydroxypent-4-ynoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:59869
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C#C[C@@H](O)[C@H]([NH3+])C(=O)[O-]
+  standard_inchi: InChI=1S/C5H7NO3/c1-2-3(7)4(6)5(8)9/h1,3-4,7H,6H2,(H,8,9)/t3-,4+/m1/s1
+  standard_inchi_key: RBWXRFBKVDBXEG-DMTCNVIQSA-N
+  molecular_formula: C5H7NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 129.115
+  monoisotopic_mass: 129.04259
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:144729
+  source_label: L-β-ethynylserine zwitterion
+  minted_identifier: antibioticmech:chebi-e8012d1da1
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

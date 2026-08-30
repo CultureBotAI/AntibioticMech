@@ -1,0 +1,49 @@
+identifier: CHEBI:27784
+label: gentamycin C1a
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (1R,2S,3S,4R,6S)-4,6-diamino-3-[3-deoxy-4-C-methyl-3-(methylamino)-β-L-arabinopyranosyloxy]-2-hydroxycyclohexyl
+    2,6-diamino-2,3,4,6-tetradeoxy-α-D-erythro-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Gentamicin C1a
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Gentamycin C12
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-3-deoxy-4-C-methyl-3-(methylamino)-beta-L-arabinopyranosyl-(1-6)-O-(2,6-diamino-2,3,4,6-tetradeoxy-alpha-D-erythro-hexopyranosyl-(1-4))-2-deoxy-D-streptamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:28417
+xrefs:
+- cas:26098-04-4
+- drugbank:DB04729
+- kegg.compound:C00908
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CN[C@@H]1[C@@H](O)[C@@H](O[C@@H]2[C@@H](O)[C@H](O[C@H]3O[C@H](CN)CC[C@H]3N)[C@@H](N)C[C@H]2N)OC[C@]1(C)O
+  standard_inchi: InChI=1S/C19H39N5O7/c1-19(27)7-28-18(13(26)16(19)24-2)31-15-11(23)5-10(22)14(12(15)25)30-17-9(21)4-3-8(6-20)29-17/h8-18,24-27H,3-7,20-23H2,1-2H3/t8-,9+,10-,11+,12-,13+,14+,15-,16+,17+,18+,19-/m0/s1
+  standard_inchi_key: VEGXETMJINRLTH-BOZYPMBZSA-N
+  molecular_formula: C19H39N5O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 449.549
+  monoisotopic_mass: 449.28495
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:27784
+  source_label: gentamycin C1a
+  minted_identifier: antibioticmech:chebi-ac39a2d490
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

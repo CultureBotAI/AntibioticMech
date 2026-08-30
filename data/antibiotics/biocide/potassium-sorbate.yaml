@@ -1,0 +1,54 @@
+identifier: CHEBI:77868
+label: potassium sorbate
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A potassium salt having sorbate as the counterion.
+definition_source: ChEBI
+synonyms:
+- synonym_text: potassium (2E,4E)-hexa-2,4-dienoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Potassium (E,E)-2,4-hexadienoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Potassium (E,E)-sorbate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: potassium trans,trans-2,4-hexadienoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: potassium trans,trans-sorbate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26218
+xrefs:
+- cas:24634-61-5
+- kegg.drug:D02411
+- reaxys:5357554
+- wikipedia.en:Potassium_sorbate
+activity_roles:
+- CHEBI:65256
+chemical_structure:
+  smiles: C/C=C/C=C/C(=O)[O-].[K+]
+  standard_inchi: InChI=1S/C6H8O2.K/c1-2-3-4-5-6(7)8;/h2-5H,1H3,(H,7,8);/q;+1/p-1/b3-2+,5-4+;
+  standard_inchi_key: CHHHXKFHOYLYRE-STWYSWDKSA-M
+  molecular_formula: C6H7O2.K
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 150.218
+  monoisotopic_mass: 150.00831
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77868
+  source_label: potassium sorbate
+  minted_identifier: antibioticmech:chebi-36aba043b1
+  role_terms:
+  - CHEBI:65256
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,66 @@
+identifier: CHEBI:45141
+label: pyroquilon
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyrroloquinoline that is 1,2,5,6-tetrahydro-4H-pyrrolo[3,2,1-ij]quinoline
+  in which the hydrogens at position 4 are replaced by an oxo group. A fungicide used
+  to control rice blast, it is not approved wof use within the European Union.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Coratop
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Fongoren
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Fongorene
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Lilolidone
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 1,2,5,6-tetrahydro-4H-pyrrolo[3,2,1-ij]quinolin-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2,5,6-tetrahydropyrrolo[3,2,1-ij]quinolin-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pyroquilone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:50918
+- CHEBI:77727
+xrefs:
+- cas:57369-32-1
+- hmdb:HMDB0037113
+- kegg.compound:C18487
+- pdb-ccd:PYQ
+- pesticides:pyroquilon
+- ppdb:575
+- reaxys:1455831
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: O=C1CCc2cccc3c2N1CC3
+  standard_inchi: InChI=1S/C11H11NO/c13-10-5-4-8-2-1-3-9-6-7-12(10)11(8)9/h1-3H,4-7H2
+  standard_inchi_key: XRJLAOUDSILTFT-UHFFFAOYSA-N
+  molecular_formula: C11H11NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 173.215
+  monoisotopic_mass: 173.08406
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:45141
+  source_label: pyroquilon
+  minted_identifier: antibioticmech:chebi-4d8ad4ae49
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

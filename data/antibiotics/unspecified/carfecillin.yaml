@@ -1,0 +1,67 @@
+identifier: CHEBI:3414
+label: carfecillin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: carfecilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: carfecilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: carfecillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2,2-dimethyl-6β-[(3-oxo-3-phenoxy-2-phenylpropanoyl)amino]penam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-3,3-dimethyl-7-oxo-6-[(3-oxo-3-phenoxy-2-phenylpropanoyl)amino]-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(2-Phenoxycarbonyl-2-phenylacetamido)penicillansäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Carbenicillin phenyl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Carfecillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: carbenicillin phenyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17334
+xrefs:
+- beilstein:1095507
+- beilstein:5405930
+- cas:27025-49-6
+- drugcentral:507
+- kegg.compound:C11752
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)C(C(=O)Oc1ccccc1)c1ccccc1'
+  standard_inchi: InChI=1S/C23H22N2O6S/c1-23(2)17(21(28)29)25-19(27)16(20(25)32-23)24-18(26)15(13-9-5-3-6-10-13)22(30)31-14-11-7-4-8-12-14/h3-12,15-17,20H,1-2H3,(H,24,26)(H,28,29)/t15?,16-,17+,20-/m1/s1
+  standard_inchi_key: NZDASSHFKWDBBU-KVMCETHSSA-N
+  molecular_formula: C23H22N2O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 454.504
+  monoisotopic_mass: 454.11986
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3414
+  source_label: carfecillin
+  minted_identifier: antibioticmech:chebi-f1c0829570
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

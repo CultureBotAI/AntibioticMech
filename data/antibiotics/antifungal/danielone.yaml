@@ -1,0 +1,56 @@
+identifier: CHEBI:4316
+label: danielone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aromatic ketone that is 2-hydroxy-1-phenylethanone substituted by a
+  hydroxy group at position 4 and methoxy groups at positions 3 and 5. It is a phytoalexin
+  isolated from the papaya fruit and exhibits antifungal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-hydroxy-1-(4-hydroxy-3,5-dimethoxyphenyl)ethanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4'-dihydroxy-3',5'-dimethoxyacetophenone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3',5'-dimethoxy-4'-hydroxy-(2-hydroxy)acetophenone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139590
+- CHEBI:15734
+- CHEBI:33853
+- CHEBI:51681
+- CHEBI:76224
+xrefs:
+- cas:90426-22-5
+- hmdb:HMDB0031704
+- kegg.compound:C10674
+- knapsack:C00002692
+- reaxys:3096770
+- wikipedia.en:Danielone
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1cc(C(=O)CO)cc(OC)c1O
+  standard_inchi: InChI=1S/C10H12O5/c1-14-8-3-6(7(12)5-11)4-9(15-2)10(8)13/h3-4,11,13H,5H2,1-2H3
+  standard_inchi_key: ZTBAPEIDNUHRNC-UHFFFAOYSA-N
+  molecular_formula: C10H12O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 212.201
+  monoisotopic_mass: 212.06847
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4316
+  source_label: danielone
+  minted_identifier: antibioticmech:chebi-040df81331
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,64 @@
+identifier: CHEBI:72291
+label: cobicistat
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid amide obtained by formal condensation of the carboxy
+  group of (2S)-2-({[(2-isopropyl-1,3-thiazol-4-yl)methyl](methyl)carbamoyl}amino)-4-(morpholin-4-yl)butanoic
+  acid with the amino group of 1,3-thiazol-5-ylmethyl [(2R,5R)-5-amino-1,6-diphenylhexan-2-yl]carbamate.
+  Acts as a pharmacoenhancer in treatment of HIV-1 by inhibiting P450 enzymes that
+  metabolise other medications..
+definition_source: ChEBI
+synonyms:
+- synonym_text: cobicistatum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1,3-thiazol-5-ylmethyl [(2R,5R)-5-{[(2S)-2-({[(2-isopropyl-1,3-thiazol-4-yl)methyl](methyl)carbamoyl}amino)-4-(morpholin-4-yl)butanoyl]amino}-1,6-diphenylhexan-2-yl]carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS 9350
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS-9350
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:29347
+- CHEBI:38418
+- CHEBI:38785
+- CHEBI:47857
+xrefs:
+- cas:1004316-88-4
+- drugcentral:4299
+- patent:US2010256366
+- patent:WO2008010921
+- patent:WO2012151165
+- reaxys:13088386
+- wikipedia.en:Cobicistat
+activity_roles:
+- CHEBI:35718
+- CHEBI:38068
+chemical_structure:
+  smiles: CC(C)c1nc(CN(C)C(=O)N[C@@H](CCN2CCOCC2)C(=O)N[C@H](CC[C@H](Cc2ccccc2)NC(=O)OCc2cncs2)Cc2ccccc2)cs1
+  standard_inchi: InChI=1S/C40H53N7O5S2/c1-29(2)38-43-34(27-53-38)25-46(3)39(49)45-36(16-17-47-18-20-51-21-19-47)37(48)42-32(22-30-10-6-4-7-11-30)14-15-33(23-31-12-8-5-9-13-31)44-40(50)52-26-35-24-41-28-54-35/h4-13,24,27-29,32-33,36H,14-23,25-26H2,1-3H3,(H,42,48)(H,44,50)(H,45,49)/t32-,33-,36+/m1/s1
+  standard_inchi_key: ZCIGNRJZKPOIKD-CQXVEOKZSA-N
+  molecular_formula: C40H53N7O5S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 776.042
+  monoisotopic_mass: 775.35496
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:72291
+  source_label: cobicistat
+  minted_identifier: antibioticmech:chebi-a6075690d0
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

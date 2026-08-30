@@ -1,0 +1,50 @@
+identifier: CHEBI:66222
+label: thiomarinol C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organosulfur heterocyclic compound produced by a marine bacterium Alteromonas
+  rava and has been shown to exhibit antibacterial activity against Gram-positive
+  and Gram-negative bacteria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5S)-1,5-anhydro-2-deoxy-2-[(2E,4R,5S)-5-hydroxy-4-methylhex-2-en-1-yl]-5-[(2E)-2-methyl-4-oxo-4-({8-oxo-8-[(5-oxo-4,5-dihydro[1,2]dithiolo[4,3-b]pyrrol-6-yl)amino]octyl}oxy)but-2-en-1-yl]-L-arabinitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[8-oxo-8-[(5-oxo-4H-dithiolo[4,3-b]pyrrol-6-yl)amino]octyl](2E)-4-[(2S,3R,4R,5S)-3,4-dihydroxy-5-[(2E,4R,5S)-5-hydroxy-4-methylhex-2-enyl]oxan-2-yl]-3-methylbut-2-enoate'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24995
+- CHEBI:38106
+- CHEBI:51702
+xrefs:
+- metacyc.compound:CPD-17952
+- patent:EP0595458
+- reaxys:7401941
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]1(C/C(C)=C/C(=O)OCCCCCCCC(=O)Nc2c3sscc-3nc2=O)OC[C@H](C/C=C/[C@@H](C)[C@H](C)O)[C@@H](O)[C@H]1O'
+  standard_inchi: InChI=1S/C30H44N2O8S2/c1-18(14-23-28(37)27(36)21(16-40-23)11-9-10-19(2)20(3)33)15-25(35)39-13-8-6-4-5-7-12-24(34)32-26-29-22(17-41-42-29)31-30(26)38/h9-10,15,17,19-21,23,27-28,33,36-37H,4-8,11-14,16H2,1-3H3,(H,31,38)(H,32,34)/b10-9+,18-15+/t19-,20+,21+,23+,27-,28+/m1/s1
+  standard_inchi_key: KYCIRSXXQPEBCI-UYGPANRWSA-N
+  molecular_formula: C30H44N2O8S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 624.822
+  monoisotopic_mass: 624.25391
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66222
+  source_label: thiomarinol C
+  minted_identifier: antibioticmech:chebi-e324de6f96
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

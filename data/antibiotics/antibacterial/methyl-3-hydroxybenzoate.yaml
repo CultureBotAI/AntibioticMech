@@ -1,0 +1,59 @@
+identifier: CHEBI:165218
+label: methyl 3-hydroxybenzoate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzoate ester resulting from the formal condensation of the carboxy
+  group of 3-hydroxybenzoic acid with methanol.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-(methoxycarbonyl)phenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-carbomethoxyphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-hydroxybenzoic acid methyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: m-carbomethoxyphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: m-hydroxybenzoic acid methyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl m-hydroxybenzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:33853
+- CHEBI:36054
+xrefs:
+- cas:19438-10-9
+- chemspider:79453
+- reaxys:2208129
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COC(=O)c1cccc(O)c1
+  standard_inchi: InChI=1S/C8H8O3/c1-11-8(10)6-3-2-4-7(9)5-6/h2-5,9H,1H3
+  standard_inchi_key: YKUCHDXIBAQWSF-UHFFFAOYSA-N
+  molecular_formula: C8H8O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 152.149
+  monoisotopic_mass: 152.04734
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:165218
+  source_label: methyl 3-hydroxybenzoate
+  minted_identifier: antibioticmech:chebi-fb6af706b3
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,50 @@
+identifier: CHEBI:137081
+label: CORM 3
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A ruthenium coordination entity that acts as a water-soluble carbon monoxide-releasing
+  molecule.
+definition_source: ChEBI
+synonyms:
+- synonym_text: tricarbonyl(chloro)(glycinato-κ2N,O)ruthenium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CORM-3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Carbon monoxide releasing molecule 3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tricarbonylchloro(glycinato)ruthenium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35733
+- CHEBI:36604
+xrefs:
+- reaxys:24025482
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C1C[NH2+][Ru-4]([Cl])([C]#[O+])([C]#[O+])([C]#[O+])[O]1
+  standard_inchi: InChI=1S/C2H5NO2.3CO.ClH.Ru/c3-1-2(4)5;3*1-2;;/h1,3H2,(H,4,5);;;;1H;/q;3*+1;;-1/p-2
+  standard_inchi_key: KNIGBBVETQCJTQ-UHFFFAOYSA-L
+  molecular_formula: C5H4ClNO5Ru
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 294.612
+  monoisotopic_mass: 294.88215
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:137081
+  source_label: CORM 3
+  minted_identifier: antibioticmech:chebi-b508c22826
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,53 @@
+identifier: CHEBI:9053
+label: sclareol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A labdane diterpenoid that is labd-14-ene substituted by hydroxy groups
+  at positions 8 and 13. It has been isolated from Salvia sclarea.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,2R,4aS,8aS)-1-[(3R)-3-hydroxy-3-methylpent-4-en-1-yl]-2,5,5,8a-tetramethyldecahydronaphthalen-2-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: labd-14-ene-8,13-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (13R)-Labd-14-ene-8,13-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36770
+xrefs:
+- cas:515-03-7
+- hmdb:HMDB0036827
+- kegg.compound:C09183
+- knapsack:C00000894
+- reaxys:2054148
+- wikipedia.en:Sclareol
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@@](C)(O)[C@H](CC[C@@](C)(O)C=C)[C@@]1(C)CCCC2(C)C'
+  standard_inchi: InChI=1S/C20H36O2/c1-7-18(4,21)13-9-16-19(5)12-8-11-17(2,3)15(19)10-14-20(16,6)22/h7,15-16,21-22H,1,8-14H2,2-6H3/t15-,16+,18-,19-,20+/m0/s1
+  standard_inchi_key: XVULBTBTFGYVRC-HHUCQEJWSA-N
+  molecular_formula: C20H36O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 308.506
+  monoisotopic_mass: 308.27153
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9053
+  source_label: sclareol
+  minted_identifier: antibioticmech:chebi-020fa5c584
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

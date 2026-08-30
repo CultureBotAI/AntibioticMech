@@ -1,0 +1,82 @@
+identifier: CHEBI:3962
+label: curcumin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A β-diketone that is methane in which two of the hydrogens are substituted
+  by feruloyl groups. A natural dyestuff found in the root of Curcuma longa.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1E,6E)-1,7-bis(4-hydroxy-3-methoxyphenyl)hepta-1,6-diene-3,5-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C.I. 75300
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C.I. Natural Yellow 3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Curcumin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Diferuloylmethane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E 100
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kacha haldi
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Natural yellow 3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Turmeric yellow
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:35618
+- CHEBI:51689
+- CHEBI:67265
+- CHEBI:78802
+xrefs:
+- cas:458-37-7
+- chemspider:839564
+- drugbank:DB11672
+- hmdb:HMDB0002269
+- kegg.compound:C10443
+- knapsack:C00002731
+- lincs.smallmolecule:LSM-43083
+- metacyc.compound:CPD-6602
+- patent:DE859145
+- patent:KR20130050834
+- pdb-ccd:CC9
+- reaxys:2306965
+- wikipedia.en:Curcumin
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2)ccc1O
+  standard_inchi: InChI=1S/C21H20O6/c1-26-20-11-14(5-9-18(20)24)3-7-16(22)13-17(23)8-4-15-6-10-19(25)21(12-15)27-2/h3-12,24-25H,13H2,1-2H3/b7-3+,8-4+
+  standard_inchi_key: VFLDPWHFBUODDF-FCXRPNKRSA-N
+  molecular_formula: C21H20O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 368.385
+  monoisotopic_mass: 368.12599
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3962
+  source_label: curcumin
+  minted_identifier: antibioticmech:chebi-c5a6336f21
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

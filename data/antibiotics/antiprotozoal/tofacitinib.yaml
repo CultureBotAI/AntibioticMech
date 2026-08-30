@@ -1,0 +1,67 @@
+identifier: CHEBI:71200
+label: tofacitinib
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyrrolopyrimidine that is pyrrolo[2,3-d]pyrimidine substituted at position
+  4 by an N-methyl,N-(1-cyanoacetyl-4-methylpiperidin-3-yl)amino moiety. Used as its
+  citrate salt to treat moderately to severely active rheumatoid arthritis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: tofacitinibum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 3-{(3R,4R)-4-methyl-3-[methyl(7H-pyrrolo[2,3-d]pyrimidin-4-yl)amino]piperidin-1-yl}-3-oxopropanenitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CP 690550
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CP-690550
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tasocitinib
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18379
+- CHEBI:38670
+- CHEBI:48591
+- CHEBI:50996
+xrefs:
+- cas:477600-75-2
+- drugcentral:4713
+- kegg.drug:D09970
+- lincs.smallmolecule:LSM-1227
+- patent:WO2007012953
+- patent:WO2007107318
+- patent:WO2010123919
+- pdb-ccd:MI1
+- reaxys:11647225
+- wikipedia.en:Tofacitinib
+activity_roles:
+- CHEBI:33281
+- CHEBI:70868
+chemical_structure:
+  smiles: C[C@@H]1CCN(C(=O)CC#N)C[C@@H]1N(C)c1ncnc2nccc12
+  standard_inchi: InChI=1S/C16H20N6O/c1-11-5-8-22(14(23)3-6-17)9-13(11)21(2)16-12-4-7-18-15(12)19-10-20-16/h4,7,10-11,13H,3,5,8-9H2,1-2H3,(H,18,19,20)/t11-,13+/m1/s1
+  standard_inchi_key: UJLAWZDWDVHWOW-YPMHNXCESA-N
+  molecular_formula: C16H20N6O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 312.377
+  monoisotopic_mass: 312.16986
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:71200
+  source_label: tofacitinib
+  minted_identifier: antibioticmech:chebi-91cc65fced
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

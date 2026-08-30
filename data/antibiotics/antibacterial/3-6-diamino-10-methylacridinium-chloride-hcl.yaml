@@ -1,0 +1,56 @@
+identifier: CHEBI:74727
+label: 3,6-diamino-10-methylacridinium chloride.HCl
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrochloride resulting from the reaction of equimolar amounts of 3,6-diamino-10-methylacridinium
+  chloride and hydrogen chloride.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,6-diamino-10-methylacridinium chloride hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,6-diamino-10-methylacridinium chloride monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-amino-6-ammonio-10-methylacridinium dichloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trypaflavine HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trypaflavine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trypaflavine.HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:10597-46-3
+- cas:6034-59-9
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[n+]1c2cc(N)ccc2cc2ccc(N)cc21.Cl.[Cl-]
+  standard_inchi: InChI=1S/C14H13N3.2ClH/c1-17-13-7-11(15)4-2-9(13)6-10-3-5-12(16)8-14(10)17;;/h2-8H,1H3,(H3,15,16);2*1H
+  standard_inchi_key: OEGQPXPIKZELFM-UHFFFAOYSA-N
+  molecular_formula: C14H14N3.Cl.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 296.201
+  monoisotopic_mass: 295.0643
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:74727
+  source_label: 3,6-diamino-10-methylacridinium chloride.HCl
+  minted_identifier: antibioticmech:chebi-2153d4565a
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

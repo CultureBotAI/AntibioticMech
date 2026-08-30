@@ -1,0 +1,66 @@
+identifier: CHEBI:4672
+label: docetaxel anhydrous
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracyclic diterpenoid that is paclitaxel with the N-benzyloxycarbonyl
+  group replaced by N-tert-butoxycarbonyl, and the acetoxy group at position 10 replaced
+  by a hydroxy group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-(acetyloxy)-13α-({(2R,3S)-3-[(tert-butoxycarbonyl)amino]-2-hydroxy-3-phenylpropanoyl}oxy)-1,7β,10β-trihydroxy-9-oxo-5β,20-epoxytax-11-en-2α-yl
+    benzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Docetaxel
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Docetaxel anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-debenzoyl-N-(tert-butoxycarbonyl)-10-deacetylpaclitaxel
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-debenzoyl-N-(tert-butoxycarbonyl)-10-deacetyltaxol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TXL
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:2468
+- CHEBI:52557
+xrefs:
+- beilstein:4290183
+- cas:114977-28-5
+- drugbank:DB01248
+- kegg.compound:C11231
+- kegg.drug:D07866
+- patent:EP253738
+- patent:US4814470
+- pdb-ccd:TXL
+- wikipedia.en:Docetaxel
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]12[C@H](OC(=O)c3ccccc3)[C@]3(O)C[C@]([H])(OC(=O)[C@H](O)[C@@H](NC(=O)OC(C)(C)C)c4ccccc4)C(C)=C([C@@H](O)C(=O)[C@]1(C)[C@@H](O)C[C@H]1OC[C@]12OC(C)=O)C3(C)C'
+  standard_inchi: InChI=1S/C43H53NO14/c1-22-26(55-37(51)32(48)30(24-15-11-9-12-16-24)44-38(52)58-39(3,4)5)20-43(53)35(56-36(50)25-17-13-10-14-18-25)33-41(8,34(49)31(47)29(22)40(43,6)7)27(46)19-28-42(33,21-54-28)57-23(2)45/h9-18,26-28,30-33,35,46-48,53H,19-21H2,1-8H3,(H,44,52)/t26-,27-,28+,30-,31+,32+,33-,35-,41+,42-,43+/m0/s1
+  standard_inchi_key: ZDZOTLJHXYCWBA-VCVYQWHSSA-N
+  molecular_formula: C43H53NO14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 807.89
+  monoisotopic_mass: 807.34661
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4672
+  source_label: docetaxel anhydrous
+  minted_identifier: antibioticmech:chebi-d0fa0b5650
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

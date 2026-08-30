@@ -1,0 +1,66 @@
+identifier: CHEBI:44514
+label: O-methyl-L-threonine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An L-threonine derivative that is L-threonine with a methyl group replacing
+  the hydrogen on the hydroxy side chain.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S,3R)-2-amino-3-methoxybutanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,3R)-2-amino-3-methoxybutyric acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: H-Thr(Me)-OH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-O-methylthreonine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-threonine methyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-methyl threonine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-methyl-threonine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-methylthreonine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25698
+- CHEBI:83822
+- CHEBI:84189
+xrefs:
+- cas:4144-02-9
+- chemspider:20074666
+- pdb-ccd:OLT
+- reaxys:1722343
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CO[C@H](C)[C@H](N)C(=O)O
+  standard_inchi: InChI=1S/C5H11NO3/c1-3(9-2)4(6)5(7)8/h3-4H,6H2,1-2H3,(H,7,8)/t3-,4+/m1/s1
+  standard_inchi_key: FYCWLJLGIAUCCL-DMTCNVIQSA-N
+  molecular_formula: C5H11NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 133.147
+  monoisotopic_mass: 133.07389
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:44514
+  source_label: O-methyl-L-threonine
+  minted_identifier: antibioticmech:chebi-1c0a8f03cf
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

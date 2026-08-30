@@ -1,0 +1,45 @@
+identifier: CHEBI:66751
+label: phosphatoquinone A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterotricyclic compound resulting from the formal epoxidation
+  of the 2-3 double bond of the 1,4-naphthoquinone moiety of phosphatoquinone B. It
+  is isolated from the culture broth of Streptomyces sp.TC-0363 and exhibits inhibitory
+  activity against the enzyme protein tyrosine phosphatase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1aR,7aS)-7a-[(2E)-3,7-dimethylocta-2,6-dien-1-yl]-3,5-dihydroxy-1a-methyl-1a,7a-dihydronaphtho[2,3-b]oxirene-2,7-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26979
+- CHEBI:32955
+- CHEBI:33853
+- CHEBI:3992
+xrefs:
+- reaxys:8168625
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(C)=CCC/C(C)=C/C[C@]12O[C@@]1(C)C(=O)c1c(O)cc(O)cc1C2=O
+  standard_inchi: InChI=1S/C21H24O5/c1-12(2)6-5-7-13(3)8-9-21-18(24)15-10-14(22)11-16(23)17(15)19(25)20(21,4)26-21/h6,8,10-11,22-23H,5,7,9H2,1-4H3/b13-8+/t20-,21+/m0/s1
+  standard_inchi_key: QTORDDSSLVGNHO-BGTMZHHNSA-N
+  molecular_formula: C21H24O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 356.418
+  monoisotopic_mass: 356.16237
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66751
+  source_label: phosphatoquinone A
+  minted_identifier: antibioticmech:chebi-6bdf627375
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

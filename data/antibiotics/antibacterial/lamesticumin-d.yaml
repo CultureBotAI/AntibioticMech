@@ -1,0 +1,43 @@
+identifier: CHEBI:67477
+label: lamesticumin D
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A triterpenoid of the class of onoceranoid-type terpenoids isolated from
+  the twigs of Lansium domesticum.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4aS,7R,8aR)-7-hydroxy-1,1,4a,6-tetramethyl-5-{2-[(1S,4aR,8aR)-5,5,8a-trimethyl-2-methylidene-6-oxodecahydronaphthalen-1-yl]ethyl}-3,4,4a,7,8,8a-hexahydronaphthalen-2(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:138397
+- CHEBI:35681
+- CHEBI:36130
+- CHEBI:36615
+xrefs:
+- reaxys:21534279
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12C[C@@H](O)C(C)=C(CC[C@H]3C(=C)CC[C@@]4([H])C(C)(C)C(=O)CC[C@]34C)[C@@]1(C)CCC(=O)C2(C)C'
+  standard_inchi: InChI=1S/C30H46O3/c1-18-9-12-23-27(3,4)25(32)13-15-29(23,7)20(18)10-11-21-19(2)22(31)17-24-28(5,6)26(33)14-16-30(21,24)8/h20,22-24,31H,1,9-17H2,2-8H3/t20-,22+,23-,24-,29+,30+/m0/s1
+  standard_inchi_key: MGVFDWIGIYHFIO-CKQYGLACSA-N
+  molecular_formula: C30H46O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 454.695
+  monoisotopic_mass: 454.3447
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:67477
+  source_label: lamesticumin D
+  minted_identifier: antibioticmech:chebi-cc50d25f2c
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

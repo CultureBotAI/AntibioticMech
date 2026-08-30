@@ -1,0 +1,38 @@
+identifier: CHEBI:48958
+label: diamide
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Diamide is primarily used as an insecticide with evidence of mammalian
+  toxicity. This compound is chemically classified as being part of the monoazo group.
+  FungAMR listed this compound as having some anti-fungal properties.
+definition_source: PMID:21015756
+parent_compounds:
+- ARO:3000003
+xrefs:
+- ARO:3009178
+- cas:10465-78-8
+- chembl:CHEMBL1255835
+- pubchem.compound:5353800
+structural_class: antibiotic without defined classification
+structural_class_id: ARO:3000003
+chemical_structure:
+  smiles: CN(C)C(=O)N=NC(=O)N(C)C
+  standard_inchi: InChI=1S/C6H12N4O2/c1-9(2)5(11)7-8-6(12)10(3)4/h1-4H3
+  standard_inchi_key: VLSDXINSOMDCBK-UHFFFAOYSA-N
+  molecular_formula: C6H12N4O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 172.188
+  monoisotopic_mass: 172.09603
+source_concepts:
+- source: ARO
+  source_id: ARO:3009178
+  source_label: diamide
+  minted_identifier: antibioticmech:aro-4c4380c22d
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

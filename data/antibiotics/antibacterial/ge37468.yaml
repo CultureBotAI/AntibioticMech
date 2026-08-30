@@ -1,0 +1,39 @@
+identifier: antibioticmech:aro-7d06ad4acd
+label: GE37468
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: GE37468 is a thiazolyl peptide produced by Streptomyces ATCC 55365. GE37468
+  is produced by post-transcription modification of a ribosomally synthesized preprotein,
+  of which the biosynthetic gene cluster has been elucidated.
+definition_source: PMID:21788474
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3001259
+- CHEBI:199144
+- chembl:CHEMBL4646154
+- pubchem.compound:101808822
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: C[C@H]1CC(N2C1C3=NC(=CS3)C4=NC(=CS4)C5=C(C=CC(=N5)C6=NC(=CS6)C(=NC(=C)C(=NC(=C)C(=O)O)O)O)C7=NC(=CC7)C(=N[C@H](C8=NC(=CS8)C(=N[C@H](C9=NC(CS9)C(=N[C@H](C2=O)CC1=CC=C(C=C1)O)O)CC1=CC=CC=C1)O)CC(=N)O)O)O
+  standard_inchi: InChI=1S/C59H52N14O11S5/c1-26-17-45(76)73-47(26)57-72-43(25-89-57)56-68-39(21-85-56)46-32(13-14-35(64-46)53-69-40(22-86-53)50(79)61-27(2)48(77)62-28(3)59(83)84)33-15-16-34(63-33)49(78)66-37(20-44(60)75)55-71-41(23-88-55)51(80)65-36(18-29-7-5-4-6-8-29)54-70-42(24-87-54)52(81)67-38(58(73)82)19-30-9-11-31(74)12-10-30/h4-14,16,21-23,25-26,36-38,42,45,47,74,76H,2-3,15,17-20,24H2,1H3,(H2,60,75)(H,61,79)(H,62,77)(H,65,80)(H,66,78)(H,67,81)(H,83,84)/t26-,36-,37-,38-,42?,45?,47?/m0/s1
+  standard_inchi_key: IZEAZUCUNIRFMQ-SBZMANJYSA-N
+  molecular_formula: C59H52N14O11S5
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1293.5
+  monoisotopic_mass: 1292.2543544
+source_concepts:
+- source: ARO
+  source_id: ARO:3001259
+  source_label: GE37468
+  minted_identifier: antibioticmech:aro-7d06ad4acd
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

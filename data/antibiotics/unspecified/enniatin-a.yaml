@@ -1,0 +1,44 @@
+identifier: CHEBI:64651
+label: enniatin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An enniatin obtained from formal cyclocondensation of three N-[(2R)-2-hydroxy-3-methylbutanoyl]-N-methyl-L-isoleucine
+  units.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S,6R,9S,12R,15S,18R)-3,9,15-tri[(2S)-butan-2-yl]-6,12,18-triisopropyl-4,10,16-trimethyl-1,7,13-trioxa-4,10,16-triazacyclooctadecane-2,5,8,11,14,17-hexone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cyclo((2R)-2-hydroxy-3-methylbutanoyl-N-methyl-L-isoleucyl-(2R)-2-hydroxy-3-methylbutanoyl-N-methyl-L-isoleucyl-(2R)-2-hydroxy-3-methylbutanoyl-N-methyl-L-isoleucyl)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:64648
+xrefs:
+- cas:2503-13-1
+- reaxys:7614579
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@H](C)[C@H]1C(=O)O[C@H](C(C)C)C(=O)N(C)[C@@H]([C@@H](C)CC)C(=O)O[C@H](C(C)C)C(=O)N(C)[C@@H]([C@@H](C)CC)C(=O)O[C@H](C(C)C)C(=O)N1C
+  standard_inchi: InChI=1S/C36H63N3O9/c1-16-22(10)25-34(43)46-29(20(6)7)32(41)38(14)27(24(12)18-3)36(45)48-30(21(8)9)33(42)39(15)26(23(11)17-2)35(44)47-28(19(4)5)31(40)37(25)13/h19-30H,16-18H2,1-15H3/t22-,23-,24-,25-,26-,27-,28+,29+,30+/m0/s1
+  standard_inchi_key: TWHBYJSVDCWICV-BHZTXFQCSA-N
+  molecular_formula: C36H63N3O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 681.912
+  monoisotopic_mass: 681.45643
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:64651
+  source_label: enniatin A
+  minted_identifier: antibioticmech:chebi-d7150fa497
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

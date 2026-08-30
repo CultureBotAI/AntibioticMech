@@ -1,0 +1,70 @@
+identifier: CHEBI:38167
+label: physcion
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dihydroxyanthraquinone that is 9,10-anthraquinone bearing hydroxy substituents
+  at positions 1 and 8, a methoxy group at position 3, and a methyl group at position
+  6. It has been widely isolated and characterised from both terrestrial and marine
+  sources.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,8-dihydroxy-3-methoxy-6-methylanthracene-9,10-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,8-Dihydroxy-3-methoxy-6-methylanthraquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,8-dihydroxy-3-methoxy-6-methyl-9,10-anthracenedione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,8-dihydroxy-3-methyl-6-methoxyanthraquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Emodin monomethyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Parienin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Physcione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rheochrysidin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: parietin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37484
+xrefs:
+- cas:521-61-9
+- kegg.compound:C17045
+- reaxys:1915778
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1cc(O)c2c(c1)C(=O)c1cc(C)cc(O)c1C2=O
+  standard_inchi: InChI=1S/C16H12O5/c1-7-3-9-13(11(17)4-7)16(20)14-10(15(9)19)5-8(21-2)6-12(14)18/h3-6,17-18H,1-2H3
+  standard_inchi_key: FFWOKTFYGVYKIR-UHFFFAOYSA-N
+  molecular_formula: C16H12O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 284.267
+  monoisotopic_mass: 284.06847
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:38167
+  source_label: physcion
+  minted_identifier: antibioticmech:chebi-b25bcb047f
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

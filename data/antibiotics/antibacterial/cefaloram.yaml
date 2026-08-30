@@ -1,0 +1,57 @@
+identifier: CHEBI:192380
+label: cefaloram
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cephalosporin derivative with potent antibacterial activity which binds
+  to and inactivates penicillin-binding proteins (PBPs) located on the inner membrane
+  of the bacterial cell wall. PBPs are enzymes involved in the terminal stages of
+  assembling the bacterial cell wall and in reshaping the cell wall during growth
+  and division, inactivation of which interferes with the cross-linkage of peptidoglycan
+  chains necessary for bacterial cell wall strength and rigidity, resulting in the
+  weakening of the bacterial cell wall and causing cell lysis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefaloramo
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefaloramum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (6R,7R)-3-[(acetyloxy)methyl]-8-oxo-7-(2-phenylacetamido)-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(Acetoxymethyl)-8-oxo-7-(phenylacetamido)-5-thia-1-azabicyclo(4.2.0)oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cephaloram
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H][C@]12SCC(COC(C)=O)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)Cc1ccccc1'
+  standard_inchi: InChI=1S/C18H18N2O6S/c1-10(21)26-8-12-9-27-17-14(16(23)20(17)15(12)18(24)25)19-13(22)7-11-5-3-2-4-6-11/h2-6,14,17H,7-9H2,1H3,(H,19,22)(H,24,25)/t14-,17-/m1/s1
+  standard_inchi_key: GOFCPYKUMJBHBH-RHSMWYFYSA-N
+  molecular_formula: C18H18N2O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 390.417
+  monoisotopic_mass: 390.08856
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:192380
+  source_label: cefaloram
+  minted_identifier: antibioticmech:chebi-5e44d36aab
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

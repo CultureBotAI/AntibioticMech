@@ -1,0 +1,47 @@
+identifier: CHEBI:69218
+label: fatsicarpain C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pentacyclic triterpenoid that is oleana-11,13(18)-diene substituted
+  by a α-hydroxy group at position 3, an oxo group at position 23 and a carboxy group
+  at position 28. Isolated from the leaves and twigs of Fatsia polycarpa, it exhibits
+  anti-HBV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3α)-3-hydroxy-23-oxooleana-11,13(18)-dien-28-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 23-formyl-3α-hydroxyolean-11,13(18)-dien-28-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17478
+- CHEBI:25872
+- CHEBI:35868
+xrefs:
+- reaxys:21876587
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12C=CC3=C4CC(C)(C)CC[C@]4(C(=O)O)CC[C@@]3(C)[C@]1(C)CC[C@]1([H])[C@]2(C)CC[C@@H](O)[C@@]1(C)C=O'
+  standard_inchi: InChI=1S/C30H44O4/c1-25(2)13-15-30(24(33)34)16-14-28(5)19(20(30)17-25)7-8-22-26(3)11-10-23(32)27(4,18-31)21(26)9-12-29(22,28)6/h7-8,18,21-23,32H,9-17H2,1-6H3,(H,33,34)/t21-,22-,23-,26+,27+,28-,29-,30+/m1/s1
+  standard_inchi_key: BICZFYRWUHELRT-KFYXPMKRSA-N
+  molecular_formula: C30H44O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 468.678
+  monoisotopic_mass: 468.32396
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69218
+  source_label: fatsicarpain C
+  minted_identifier: antibioticmech:chebi-af6bcccee5
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

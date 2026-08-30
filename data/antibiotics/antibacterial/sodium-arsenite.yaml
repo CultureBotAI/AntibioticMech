@@ -1,0 +1,69 @@
+identifier: CHEBI:29678
+label: sodium arsenite
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An inoganic sodium salt with formula with formula NaAsO2.
+definition_source: ChEBI
+synonyms:
+- synonym_text: catena-poly[(oxidoarsenate-μ-oxido)]sodium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (NaAsO2)n
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Na+n((̶As(O−)O))̶n
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NaAsO2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium arsenite
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium dioxoarsenate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium meta-arsenite
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium metaarsenite
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22632
+- CHEBI:38702
+xrefs:
+- cas:7784-46-5
+- kegg.compound:C11906
+- metacyc.compound:CPD0-1496
+- ppdb:2877
+- reaxys:14201303
+- reaxys:16472677
+- wikipedia.en:Sodium_arsenite
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: O=[As][O-].[Na+]
+  standard_inchi: InChI=1S/AsHO2.Na/c2-1-3;/h(H,2,3);/q;+1/p-1
+  standard_inchi_key: PTLRDCMBXHILCL-UHFFFAOYSA-M
+  molecular_formula: AsO2.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 129.91
+  monoisotopic_mass: 129.9012
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:29678
+  source_label: sodium arsenite
+  minted_identifier: antibioticmech:chebi-6f5a492f14
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

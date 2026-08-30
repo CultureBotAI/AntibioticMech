@@ -1,0 +1,54 @@
+identifier: CHEBI:83555
+label: proquinazid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of quinazolines that is quinazolin-4-one substituted
+  at positions 2, 3 and 6 by propoxy, propyl and iodo groups respectively. A fungicide
+  with the potential to control powdery mildew in a range of crops including cereals
+  and grapes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6-iodo-2-propoxy-3-propylquinazolin-4(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-iodo-2-propoxy-3-propyl-4(3H)-quinazolinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:37142
+- CHEBI:38530
+xrefs:
+- cas:189278-12-4
+- patent:CN101822255
+- patent:DE10252657
+- patent:WO2011073103
+- patent:WO2011108758
+- pesticides:proquinazid
+- ppdb:555
+- reaxys:11734280
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CCCOc1nc2ccc(I)cc2c(=O)n1CCC
+  standard_inchi: InChI=1S/C14H17IN2O2/c1-3-7-17-13(18)11-9-10(15)5-6-12(11)16-14(17)19-8-4-2/h5-6,9H,3-4,7-8H2,1-2H3
+  standard_inchi_key: FLVBXVXXXMLMOX-UHFFFAOYSA-N
+  molecular_formula: C14H17IN2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 372.206
+  monoisotopic_mass: 372.03348
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83555
+  source_label: proquinazid
+  minted_identifier: antibioticmech:chebi-9e351bcae4
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

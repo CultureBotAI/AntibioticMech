@@ -1,0 +1,41 @@
+identifier: CHEBI:3305
+label: calcimycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Calcimycin (A23187) is a polyether antibiotic and divalent cation ionophore,
+  extracted from Streptomyces chartrecensis.
+definition_source: PMID:38103757
+synonyms:
+- synonym_text: A23187
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3005163
+xrefs:
+- ARO:3007755
+- cas:52665-69-7
+- chembl:CHEMBL1256686
+- pubchem.compound:11957499
+structural_class: ionophore with antibiotic activity
+structural_class_id: ARO:3005163
+chemical_structure:
+  smiles: CNc1ccc2oc(C[C@@H]3OC4(CC[C@@H]3C)O[C@H](C(C)C(=O)c3cccn3)[C@H](C)C[C@H]4C)nc2c1C(=O)O
+  standard_inchi: InChI=1S/C29H37N3O6/c1-15-10-11-29(17(3)13-16(2)27(38-29)18(4)26(33)20-7-6-12-31-20)37-22(15)14-23-32-25-21(36-23)9-8-19(30-5)24(25)28(34)35/h6-9,12,15-18,22,27,30-31H,10-11,13-14H2,1-5H3,(H,34,35)/t15-,16+,17+,18?,22-,27-,29?/m0/s1
+  standard_inchi_key: HIYAVKIYRIFSCZ-CVXKHCKVSA-N
+  molecular_formula: C29H37N3O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 523.63
+  monoisotopic_mass: 523.26824
+source_concepts:
+- source: ARO
+  source_id: ARO:3007755
+  source_label: calcimycin
+  minted_identifier: antibioticmech:aro-93680e4f50
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

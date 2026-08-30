@@ -1,0 +1,46 @@
+identifier: CHEBI:65802
+label: diuvaretin
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of dihydrochalcones that is dihydrochalcone substituted
+  by 2-hydroxybenzyl groups at positions 3 and 5, hydroxy groups at positions 2 and
+  4 and a methoxy group at position 6. Isolated from the roots of Uvaria acuminata
+  and Uvaria chamae, it exhibits cytotoxicity towards human promyelocytic leukemia
+  HL-60 cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-[2,4-dihydroxy-3,5-bis(2-hydroxybenzyl)-6-methoxyphenyl]-3-phenylpropan-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25235
+- CHEBI:33572
+- CHEBI:71230
+xrefs:
+- lipidmaps:LMPK12120472
+- reaxys:2029684
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: COc1c(Cc2ccccc2O)c(O)c(Cc2ccccc2O)c(O)c1C(=O)CCc1ccccc1
+  standard_inchi: InChI=1S/C30H28O6/c1-36-30-23(18-21-12-6-8-14-25(21)32)28(34)22(17-20-11-5-7-13-24(20)31)29(35)27(30)26(33)16-15-19-9-3-2-4-10-19/h2-14,31-32,34-35H,15-18H2,1H3
+  standard_inchi_key: KDEMELRYKGOXDL-UHFFFAOYSA-N
+  molecular_formula: C30H28O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 484.548
+  monoisotopic_mass: 484.18859
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65802
+  source_label: diuvaretin
+  minted_identifier: antibioticmech:chebi-b1d1c071e9
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

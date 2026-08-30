@@ -1,0 +1,68 @@
+identifier: CHEBI:156095
+label: lumefantrine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of fluorenes that is 9-(p-chlorobenzylidene)-9H-fluorene
+  which is substitutec by chlorine at positions 2 and 7, and by a 2-(dibutylamino)-1-hydroxyethyl
+  group at position 4. An antimalarial drug used in combination with artemether for
+  the treatment of multi-drug resistant strains of falciparum malaria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Lumefantrine
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-(dibutylamino)-1-[(9Z)-2,7-dichloro-9-(4-chlorobenzylidene)-9H-fluoren-4-yl]ethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (±)-2,7-Dichloro-9-((Z)-p-chlorobenzylidene)-α-((dibutylamino)methyl)fluorene-4-methanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Dibutylamino-1-[2,7-dichloro-9-(4-chloro-benzylidene)-9H-fluoren-4-yl]-ethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Dibutylamino-1-{2,7-dichloro-9-[1-(4-chloro-phenyl)-meth-(Z)-ylidene]-9H-fluoren-4-yl}-ethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Benflumetol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dl-Benflumelol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24059
+- CHEBI:32876
+- CHEBI:35681
+- CHEBI:83403
+xrefs:
+- beilstein:8811003
+- cas:82186-77-4
+- drugbank:DB06708
+- drugcentral:1617
+- kegg.drug:D03821
+- wikipedia.en:Lumefantrine
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: CCCCN(CCCC)CC(O)c1cc(Cl)cc2c1-c1ccc(Cl)cc1/C2=C/c1ccc(Cl)cc1
+  standard_inchi: InChI=1S/C30H32Cl3NO/c1-3-5-13-34(14-6-4-2)19-29(35)28-18-23(33)17-27-25(15-20-7-9-21(31)10-8-20)26-16-22(32)11-12-24(26)30(27)28/h7-12,15-18,29,35H,3-6,13-14,19H2,1-2H3/b25-15-
+  standard_inchi_key: DYLGFOYVTXJFJP-MYYYXRDXSA-N
+  molecular_formula: C30H32Cl3NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 528.951
+  monoisotopic_mass: 527.15495
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156095
+  source_label: lumefantrine
+  minted_identifier: antibioticmech:chebi-15c3489307
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

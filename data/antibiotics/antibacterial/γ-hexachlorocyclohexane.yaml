@@ -1,0 +1,100 @@
+identifier: CHEBI:32888
+label: γ-hexachlorocyclohexane
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (1r,2R,3S,4r,5R,6S)-1,2,3,4,5,6-hexachlorocyclohexane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1r,2c,3t,4c,5c,6t)-1,2,3,4,5,6-hexachlorocyclohexane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1α,2α,3β,4α,5α,6β)-1,2,3,4,5,6-hexachlorocyclohexane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2,3,4,5,6-Hexachlorocyclohexane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Benzene hexachloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kwell
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Lindan
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Lindane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: gamma-BHC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: gamma-HCH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: gamma-Hexachlorocyclohexane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: γ-1,2,3,4,5,6-hexachlorocyclohexane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: γ-BHC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: γ-HCH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: γ-Hexachlorzyklohexan
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: γ-benzene hexachloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: γ-lindane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23457
+- CHEBI:24536
+xrefs:
+- beilstein:1907337
+- cas:55963-79-6
+- cas:58-89-9
+- drugbank:DB00431
+- drugcentral:1583
+- gmelin:2179629
+- hmdb:HMDB0014575
+- kegg.compound:C07075
+- kegg.drug:D00360
+- ppdb:370
+- umbbd.compound:c0141
+- vsdb:370
+- wikipedia.en:Lindane
+activity_roles:
+- CHEBI:24127
+- CHEBI:33282
+chemical_structure:
+  smiles: Cl[C@H]1[C@H](Cl)[C@@H](Cl)[C@@H](Cl)[C@H](Cl)[C@H]1Cl
+  standard_inchi: InChI=1S/C6H6Cl6/c7-1-2(8)4(10)6(12)5(11)3(1)9/h1-6H/t1-,2-,3-,4+,5+,6+
+  standard_inchi_key: JLYXXMFPNIAWKQ-GNIYUCBRSA-N
+  molecular_formula: C6H6Cl6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 290.832
+  monoisotopic_mass: 287.86007
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32888
+  source_label: γ-hexachlorocyclohexane
+  minted_identifier: antibioticmech:chebi-e48a06275b
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,159 @@
+identifier: CHEBI:4885
+label: ethionamide
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A thiocarboxamide that is pyridine-4-carbothioamide substituted by an
+  ethyl group at position 2. A prodrug that undergoes metabolic activation by conversion
+  to the corresponding S-oxide.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Trecator
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: ethionamidum
+  synonym_type: INN
+  source: chebi
+- synonym_text: etionamida
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-ethylpyridine-4-carbothioamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-ethyl-4-thiopyridylamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ETH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ETP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethinamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethionamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethioniamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethylisothiamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethyonomide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Etionamid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Etionamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Etioniamid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26421
+- CHEBI:47956
+- ARO:3007156
+xrefs:
+- ARO:3003474
+- cas:536-33-4
+- drugbank:DB00609
+- drugcentral:1083
+- hmdb:HMDB0014747
+- kegg.compound:C07665
+- kegg.drug:D00591
+- lincs.smallmolecule:LSM-5620
+- patent:GB800250
+- reaxys:116474
+- wikipedia.en:Ethionamide
+- chembl:CHEMBL1441
+- pubchem.compound:2761171
+activity_roles:
+- CHEBI:33231
+- CHEBI:35816
+structural_class: thioamide antibiotic
+structural_class_id: ARO:3007156
+chemical_structure:
+  smiles: CCc1cc(C(N)=S)ccn1
+  standard_inchi: InChI=1S/C8H10N2S/c1-2-7-5-6(8(9)11)3-4-10-7/h3-5H,2H2,1H3,(H2,9,11)
+  standard_inchi_key: AEOCXXJPGCBFJA-UHFFFAOYSA-N
+  molecular_formula: C8H10N2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 166.249
+  monoisotopic_mass: 166.05647
+source_concepts:
+- source: ARO
+  source_id: ARO:3003474
+  source_label: ethionamide
+  minted_identifier: antibioticmech:aro-64cc27ec2b
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:35816
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:4885
+  source_label: ethionamide
+  minted_identifier: antibioticmech:chebi-276193be4e
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:35816
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003458
+  label: Mycobacterium tuberculosis ethA with mutation conferring resistance to ethionamide
+  evidence:
+  - reference: ARO:3003458
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003474 (ethionamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004876
+  label: Mycobacterium tuberculosis inhA mutations conferring resistance to ethionamide
+  evidence:
+  - reference: ARO:3004876
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003474 (ethionamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004933
+  label: Mycobacterium tuberculosis fabG1 mutation conferring resistance to ethionamide
+  evidence:
+  - reference: ARO:3004933
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003474 (ethionamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004934
+  label: Mycobacterium tuberculosis mshC mutations conferring resistance to ethionamide
+  evidence:
+  - reference: ARO:3004934
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003474 (ethionamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004935
+  label: Mycobacterium tuberculosis nudC mutations conferring resistance to ethionamide
+  evidence:
+  - reference: ARO:3004935
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003474 (ethionamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004955
+  label: Mycobacterium tuberculosis Rv0565c mutation conferring resistance to ethionamide
+  evidence:
+  - reference: ARO:3004955
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003474 (ethionamide);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3003475
+  target_label: Antibiotic sensitive ethA
+  evidence:
+  - reference: ARO:3003475
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3003474 (ethionamide); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

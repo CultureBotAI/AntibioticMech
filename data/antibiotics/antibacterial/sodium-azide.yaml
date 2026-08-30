@@ -1,0 +1,54 @@
+identifier: CHEBI:278547
+label: sodium azide
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The sodium salt of hydrogen azide (hydrazoic acid).
+definition_source: ChEBI
+synonyms:
+- synonym_text: Azoture de sodium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hydrazoic acid, sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NaN3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Natriumazid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hydrazoic acid sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38702
+xrefs:
+- cas:26628-22-8
+- metacyc.compound:CPD-23697
+- pesticides:sodium_azide
+- wikipedia.en:Sodium_azide
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[N-]=[N+]=[N-].[Na+]'
+  standard_inchi: InChI=1S/N3.Na/c1-3-2;/q-1;+1
+  standard_inchi_key: PXIPVTKHYLBLMZ-UHFFFAOYSA-N
+  molecular_formula: N3.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 65.011
+  monoisotopic_mass: 64.99899
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:278547
+  source_label: sodium azide
+  minted_identifier: antibioticmech:chebi-0710897c6a
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

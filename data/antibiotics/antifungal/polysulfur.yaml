@@ -1,0 +1,55 @@
+identifier: CHEBI:17909
+label: polysulfur
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: S
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sn
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfur
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfur, precipitated
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulfur, homopolymer
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulphur
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33403
+xrefs:
+- cas:7704-34-9
+- cas:9035-99-8
+- kegg.compound:C00087
+- pesticides:sulfur
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: S=S=S
+  standard_inchi: InChI=1S/S3/c1-3-2
+  standard_inchi_key: NVSDADJBGGUCLP-UHFFFAOYSA-N
+  molecular_formula: (S)n.S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 96.201
+  monoisotopic_mass: 95.91621
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17909
+  source_label: polysulfur
+  minted_identifier: antibioticmech:chebi-5102ccc03f
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,44 @@
+identifier: CHEBI:315018
+label: echinocandin B
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclic hexapeptide echinocandin antibiotic isolated from Aspergillus
+  nidulans var. echinulatus with specific anti-yeast activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (9Z,12Z)-N-{(2R,6S,9S,11R,12R,14aS,15S,16S,20S,23S,25aS)-23-[(1S,2S)-1,2-dihydroxy-2-(4-hydroxyphenyl)ethyl]-2,11,12,15-tetrahydroxy-6,20-bis[(1R)-1-hydroxyethyl]-16-methyl-5,8,14,19,22,25-hexaoxotetracosahydro-1H-dipyrrolo[2,1-c:2',1'-l][1,4,7,10,13,16]hexaazacyclohenicosin-9-yl}octadeca-9,12-dienamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5.1:6-anhydro{(4R,5R)-4,5-dihydroxy-N2-[(9Z,12Z)-octadeca-9,12-dienoyl]-L-ornithyl-L-threonyl-(4R)-4-hydroxy-L-prolyl-(4S)-4-hydroxy-4-(4-hydroxyphenyl)-L-threonyl-L-threonyl-(3S,4S)-3-hydroxy-4-methyl-L-proline}
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:57248
+xrefs:
+- beilstein:5474543
+- cas:54651-05-7
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCC/C=C\C/C=C\CCCCCCCC(=O)N[C@H]1C[C@@H](O)[C@@H](O)NC(=O)[C@@H]2[C@@H](O)[C@@H](C)CN2C(=O)[C@H]([C@@H](C)O)NC(=O)[C@H]([C@H](O)[C@@H](O)c2ccc(O)cc2)NC(=O)[C@@H]2C[C@@H](O)CN2C(=O)[C@H]([C@@H](C)O)NC1=O
+  standard_inchi: InChI=1S/C52H81N7O16/c1-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-38(65)53-35-26-37(64)48(71)57-50(73)42-43(66)29(2)27-59(42)52(75)40(31(4)61)55-49(72)41(45(68)44(67)32-21-23-33(62)24-22-32)56-47(70)36-25-34(63)28-58(36)51(74)39(30(3)60)54-46(35)69/h9-10,12-13,21-24,29-31,34-37,39-45,48,60-64,66-68,71H,5-8,11,14-20,25-28H2,1-4H3,(H,53,65)(H,54,69)(H,55,72)(H,56,70)(H,57,73)/b10-9-,13-12-/t29-,30+,31+,34+,35-,36-,37+,39-,40-,41-,42-,43-,44-,45-,48+/m0/s1
+  standard_inchi_key: FAUOJMHVEYMQQG-HVYQDZECSA-N
+  molecular_formula: C52H81N7O16
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1060.253
+  monoisotopic_mass: 1059.57398
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:315018
+  source_label: echinocandin B
+  minted_identifier: antibioticmech:chebi-d06791dc9f
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,63 @@
+identifier: antibioticmech:aro-8b2f0e38fa
+label: kirromycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Kirromycin, also known as mocimycin, is the representative molecule of
+  its own class of elfamycins which is composed of more than 10 analogs. Kirromycin
+  binds to the domain 1,2 interface of elongation factor Tu. This interaction maintains
+  the EF-Tu*GTP conformation even after GTP is hydrolyzed to GDP. EF-Tu*GDP normally
+  releases aa-tRNA and then exits the ribosome; however, kirromycin*EF-Tu*GDP*aa-tRNA
+  forms a strong complex and remains bound to the ribosome, prohibits translocation
+  of the peptide chain and translation is halted.
+definition_source: PMID:4373734
+synonyms:
+- synonym_text: mocimycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3001234
+- cas:50935-71-2
+- CHEBI:190786
+- chembl:CHEMBL4297102
+- pubchem.compound:135452521
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: CC[C@H](C(=O)NC/C=C/C=C(\C)/[C@H]([C@@H](C)[C@H]1[C@H]([C@H]([C@H](O1)/C=C/C=C/C=C(\C)/C(=O)C2=C(C=CNC2=O)O)O)O)OC)[C@@]3([C@@H]([C@@H](C([C@@H](O3)/C=C/C=C/C)(C)C)O)O)O
+  standard_inchi: InChI=1S/C43H60N2O12/c1-9-11-13-21-31-42(6,7)38(50)39(51)43(54,57-31)28(10-2)40(52)44-23-17-16-19-26(4)36(55-8)27(5)37-35(49)34(48)30(56-37)20-15-12-14-18-25(3)33(47)32-29(46)22-24-45-41(32)53/h9,11-22,24,27-28,30-31,34-39,48-51,54H,10,23H2,1-8H3,(H,44,52)(H2,45,46,53)/b11-9+,14-12+,17-16+,20-15+,21-13+,25-18+,26-19+/t27-,28-,30-,31+,34+,35+,36-,37+,38+,39-,43-/m1/s1
+  standard_inchi_key: HMSYAPGFKGSXAJ-GFNGQHCCSA-N
+  molecular_formula: C43H60N2O12
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 796.9
+  monoisotopic_mass: 796.41462535
+source_concepts:
+- source: ARO
+  source_id: ARO:3001234
+  source_label: kirromycin
+  minted_identifier: antibioticmech:aro-8b2f0e38fa
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003359
+  label: Streptomyces cinnamoneus EF-Tu mutants conferring resistance to elfamycin
+  evidence:
+  - reference: ARO:3003359
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001234 (kirromycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003368
+  label: Escherichia coli EF-Tu mutants conferring resistance to kirromycin
+  evidence:
+  - reference: ARO:3003368
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001234 (kirromycin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

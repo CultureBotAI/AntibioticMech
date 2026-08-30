@@ -1,0 +1,53 @@
+identifier: CHEBI:65862
+label: erybraedin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pterocarpans that is 3,9-dihydroxypterocarpan
+  substituted with prenyl groups at positions 4 and 10 (the 6aR,11aR stereoisomer).
+  Isolated from Erythrina stricta and Erythrina zeyheri, it exhibits antibacterial,
+  antimycobacterial, antiplasmodial and cytotoxic activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6aR,11aR)-4,10-bis(3-methylbut-2-en-1-yl)-6a,11a-dihydro-6H-[1]benzofuro[3,2-c]chromene-3,9-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6aR,11aR-cis)-6a,11a-dihydro-4,10-bis(3-methyl-2-butenyl)-6H-benzofuro(3,2-c)(1)benzopyran-3,9-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-prenylphaseollidin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26377
+- CHEBI:33853
+xrefs:
+- cas:119269-76-0
+- lipidmaps:LMPK12070044
+- reaxys:9090260
+activity_roles:
+- CHEBI:33282
+- CHEBI:64915
+chemical_structure:
+  smiles: '[H][C@@]12COc3c(ccc(O)c3CC=C(C)C)[C@]1([H])Oc1c2ccc(O)c1CC=C(C)C'
+  standard_inchi: InChI=1S/C25H28O4/c1-14(2)5-7-17-21(26)12-10-19-23(17)28-13-20-16-9-11-22(27)18(8-6-15(3)4)24(16)29-25(19)20/h5-6,9-12,20,25-27H,7-8,13H2,1-4H3/t20-,25-/m0/s1
+  standard_inchi_key: HOGHBEDTLGAJAS-CPJSRVTESA-N
+  molecular_formula: C25H28O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 392.495
+  monoisotopic_mass: 392.19876
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65862
+  source_label: erybraedin A
+  minted_identifier: antibioticmech:chebi-9fad1725f0
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,48 @@
+identifier: CHEBI:65775
+label: 2α-acetoxy-1α-hydroxy-6β,9β,15-tribenzoyloxy-β-dihydroagarofuran
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dihydroagarofuran sesquiterpenoid that consists of dihydroagarofuran
+  substituted by a acetyloxy group at position 2, benzyloxy groups at positions 6,
+  9 and 15 and a hydroxy group at position 1. It is isolated from the roots of Microtropis
+  fokienensis and exhibits antitubercular activity
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,5S,5aS,6R,7S,9R,9aS,10R)-7-(acetyloxy)-5a-[(benzoyloxy)methyl]-6-hydroxy-2,2,9-trimethyloctahydro-2H-3,9a-methano-1-benzoxepine-5,10-diyl
+    dibenzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26979
+- CHEBI:35681
+- CHEBI:35990
+- CHEBI:36054
+- CHEBI:47622
+- CHEBI:71548
+xrefs:
+- reaxys:11042046
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: '[H][C@]12C[C@H](OC(=O)c3ccccc3)[C@]3(COC(=O)c4ccccc4)[C@@H](O)[C@@H](OC(C)=O)C[C@@H](C)[C@@]3(OC1(C)C)[C@@H]2OC(=O)c1ccccc1'
+  standard_inchi: InChI=1S/C38H40O10/c1-23-20-29(45-24(2)39)31(40)37(22-44-33(41)25-14-8-5-9-15-25)30(46-34(42)26-16-10-6-11-17-26)21-28-32(38(23,37)48-36(28,3)4)47-35(43)27-18-12-7-13-19-27/h5-19,23,28-32,40H,20-22H2,1-4H3/t23-,28-,29+,30+,31+,32-,37-,38-/m1/s1
+  standard_inchi_key: ZKSJYLLIQBNONM-MYQHGJAJSA-N
+  molecular_formula: C38H40O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 656.728
+  monoisotopic_mass: 656.26215
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65775
+  source_label: 2α-acetoxy-1α-hydroxy-6β,9β,15-tribenzoyloxy-β-dihydroagarofuran
+  minted_identifier: antibioticmech:chebi-b0104124fa
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

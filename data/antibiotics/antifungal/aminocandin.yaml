@@ -1,0 +1,50 @@
+identifier: CHEBI:84073
+label: aminocandin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the family of echinocandins that shows broad-spectrum in vitro
+  activity against Aspergillus and Candida spp.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[(2R,6S,9S,14aS,15S,16S,20S,23S,25aS)-11-[(2-aminoethyl)amino]-2,15-dihydroxy-6-[(1R)-1-hydroxyethyl]-23-[(1R)-1-hydroxy-2-(4-hydroxyphenyl)ethyl]-20-(hydroxymethyl)-16-methyl-5,8,14,19,22,25-hexaoxotetracosahydro-1H-dipyrrolo[2,1-c:2',1'-l][1,4,7,10,13,16]hexaazacyclohenicosin-9-yl]-4'-(octyloxy)biphenyl-4-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HMR3270
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: IP960
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24613
+- CHEBI:35618
+- CHEBI:57248
+xrefs:
+- drugbank:DB05128
+- reaxys:12385979
+- wikipedia.en:Aminocandin
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCCCCCOc1ccc(-c2ccc(C(=O)N[C@H]3CC(NCCN)CNC(=O)[C@@H]4[C@@H](O)[C@@H](C)CN4C(=O)[C@H](CO)NC(=O)[C@H]([C@H](O)Cc4ccc(O)cc4)NC(=O)[C@@H]4C[C@@H](O)CN4C(=O)[C@H]([C@@H](C)O)NC3=O)cc2)cc1
+  standard_inchi: InChI=1S/C56H79N9O14/c1-4-5-6-7-8-9-24-79-41-20-16-36(17-21-41)35-12-14-37(15-13-35)50(72)60-42-26-38(58-23-22-57)28-59-54(76)48-49(71)32(2)29-65(48)55(77)43(31-66)61-53(75)47(45(70)25-34-10-18-39(68)19-11-34)63-52(74)44-27-40(69)30-64(44)56(78)46(33(3)67)62-51(42)73/h10-21,32-33,38,40,42-49,58,66-71H,4-9,22-31,57H2,1-3H3,(H,59,76)(H,60,72)(H,61,75)(H,62,73)(H,63,74)/t32-,33+,38?,40+,42-,43-,44-,45+,46-,47-,48-,49-/m0/s1
+  standard_inchi_key: UMNFJRNUJIBDSK-NMVZEWDOSA-N
+  molecular_formula: C56H79N9O14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1102.297
+  monoisotopic_mass: 1101.57465
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:84073
+  source_label: aminocandin
+  minted_identifier: antibioticmech:chebi-67ef754294
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

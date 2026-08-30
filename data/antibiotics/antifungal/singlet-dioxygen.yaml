@@ -1,0 +1,50 @@
+identifier: CHEBI:26689
+label: singlet dioxygen
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A reactive oxygen species that is the lowest excited state of the dioxygen
+  molecule.
+definition_source: ChEBI
+synonyms:
+- synonym_text: singlet molecular oxygen
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1O2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15379
+- CHEBI:26523
+xrefs:
+- drugcentral:4235
+- gmelin:491
+- reaxys:16514885
+- reaxys:3587218
+- wikipedia.en:Singlet_oxygen
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: O=O
+  standard_inchi: InChI=1S/O2/c1-2
+  standard_inchi_key: MYMOFIZGZYHOMD-UHFFFAOYSA-N
+  molecular_formula: O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 31.998
+  monoisotopic_mass: 31.98983
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:26689
+  source_label: singlet dioxygen
+  minted_identifier: antibioticmech:chebi-4fb9347d4c
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

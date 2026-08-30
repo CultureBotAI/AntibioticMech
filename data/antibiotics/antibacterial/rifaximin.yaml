@@ -1,0 +1,211 @@
+identifier: CHEBI:75246
+label: rifaximin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A semisynthetic member of the class of rifamycins and non-systemic gastrointestinal
+  site-specific broad spectrum antibiotic. Used in the treatment of traveller's diarrhoea,
+  hepatic encephalopathy and irritable bowel syndrome.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Xifaxsan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: rifaximina
+  synonym_type: INN
+  source: chebi
+- synonym_text: rifaximine
+  synonym_type: INN
+  source: chebi
+- synonym_text: rifaximinun
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2S,16Z,18E,20S,21S,22R,23R,24R,25S,26R,27S,28E)-5,6,21,23-tetrahydroxy-27-methoxy-2,4,11,16,20,22,24,26-octamethyl-1,15-dioxo-1,2-dihydro-2,7-(epoxypentadeca[1,11,13]trienoimino)furo[2'',3'':7',8']naphtho[1',2':4,5]imidazo[1,2-a]pyridin-25-yl
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rifamycin L 105
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rifamycin L 105SV
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rifaxidin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24995
+- CHEBI:26580
+- CHEBI:47622
+- CHEBI:51026
+- CHEBI:51914
+- CHEBI:59779
+- CHEBI:72588
+- ARO:3000157
+xrefs:
+- ARO:3000517
+- cas:80621-81-4
+- drugbank:DB01220
+- drugcentral:2379
+- hmdb:HMDB0015351
+- kegg.drug:D02554
+- reaxys:7790802
+- wikipedia.en:Rifaximin
+- chembl:CHEMBL1617
+- pubchem.compound:6436173
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+structural_class: rifamycin antibiotic
+structural_class_id: ARO:3000157
+chemical_structure:
+  smiles: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c5c(nc6cc(C)ccn65)c4c3C2=O)NC(=O)/C(C)=C\C=C\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C
+  standard_inchi: InChI=1S/C43H51N3O11/c1-19-14-16-46-28(18-19)44-32-29-30-37(50)25(7)40-31(29)41(52)43(9,57-40)55-17-15-27(54-10)22(4)39(56-26(8)47)24(6)36(49)23(5)35(48)20(2)12-11-13-21(3)42(53)45-33(34(32)46)38(30)51/h11-18,20,22-24,27,35-36,39,48-51H,1-10H3,(H,45,53)/b12-11+,17-15+,21-13-/t20-,22+,23+,24+,27-,35-,36+,39+,43-/m0/s1
+  standard_inchi_key: NZCRJKRKKOLAOJ-XRCRFVBUSA-N
+  molecular_formula: C43H51N3O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 785.891
+  monoisotopic_mass: 785.35236
+source_concepts:
+- source: ARO
+  source_id: ARO:3000517
+  source_label: rifaximin
+  minted_identifier: antibioticmech:aro-f950f96b1f
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:75246
+  source_label: rifaximin
+  minted_identifier: antibioticmech:chebi-ca0ee79f16
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000245
+  label: RbpA
+  evidence:
+  - reference: ARO:3000245
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000248
+  label: DnaA
+  evidence:
+  - reference: ARO:3000248
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000261
+  label: sigma factor conferring resistance to rifampin
+  evidence:
+  - reference: ARO:3000261
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000390
+  label: rifampin ADP-ribosyltransferase (Arr)
+  evidence:
+  - reference: ARO:3000390
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000444
+  label: rphA
+  evidence:
+  - reference: ARO:3000444
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000501
+  label: rpoB2
+  evidence:
+  - reference: ARO:3000501
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002883
+  label: rgt1438
+  evidence:
+  - reference: ARO:3002883
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002884
+  label: iri
+  evidence:
+  - reference: ARO:3002884
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003283
+  label: Mycobacterium tuberculosis rpoB with mutations conferring resistance to rifampicin
+  evidence:
+  - reference: ARO:3003283
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003284
+  label: Mycobacterium leprae rpoB mutations conferring resistance to rifampicin
+  evidence:
+  - reference: ARO:3003284
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003285
+  label: Staphylococcus aureus rpoB mutants conferring resistance to rifampicin
+  evidence:
+  - reference: ARO:3003285
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003288
+  label: Escherichia coli rpoB mutants conferring resistance to rifampicin
+  evidence:
+  - reference: ARO:3003288
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003992
+  label: rphB
+  evidence:
+  - reference: ARO:3003992
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004563
+  label: Clostridioides difficile rpoB with mutation conferring resistance to rifampicin
+  evidence:
+  - reference: ARO:3004563
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007208
+  label: HelR
+  evidence:
+  - reference: ARO:3007208
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007209
+  label: Streptomyces venezuelae rox
+  evidence:
+  - reference: ARO:3007209
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000737
+  target_label: rifamycin sensitive beta-subunit of RNA polymerase (rpoB)
+  evidence:
+  - reference: ARO:3000737
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000517 (rifaximin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

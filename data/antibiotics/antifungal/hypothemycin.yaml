@@ -1,0 +1,47 @@
+identifier: CHEBI:83275
+label: hypothemycin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide that is isolated from the cultured broth of Hypomyces subiculosus
+  and shows antifungal activity and inhibits the growth of some human cancer cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1aR,8S,10Z,13S,14S,15aR)-5,13,14-trihydroxy-3-methoxy-8-methyl-8,9,13,14,15,15a-hexahydro-6H-oxireno[k][2]benzoxacyclotetradecine-6,12(1aH)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23824
+- CHEBI:2468
+- CHEBI:25106
+- CHEBI:26188
+- CHEBI:32955
+- CHEBI:33853
+- CHEBI:35618
+- CHEBI:51689
+xrefs:
+- reaxys:6160688
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1cc(O)c2c(c1)[C@H]1O[C@@H]1C[C@H](O)[C@H](O)C(=O)/C=C\C[C@H](C)OC2=O
+  standard_inchi: InChI=1S/C19H22O8/c1-9-4-3-5-12(20)17(23)14(22)8-15-18(27-15)11-6-10(25-2)7-13(21)16(11)19(24)26-9/h3,5-7,9,14-15,17-18,21-23H,4,8H2,1-2H3/b5-3-/t9-,14-,15+,17+,18+/m0/s1
+  standard_inchi_key: SSNQAUBBJYCSMY-KNTMUCJRSA-N
+  molecular_formula: C19H22O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 378.377
+  monoisotopic_mass: 378.13147
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83275
+  source_label: hypothemycin
+  minted_identifier: antibioticmech:chebi-e3ad2749da
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

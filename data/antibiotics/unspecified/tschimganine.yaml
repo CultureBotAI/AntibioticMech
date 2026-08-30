@@ -1,0 +1,51 @@
+identifier: CHEBI:142517
+label: tschimganine
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzoate ester resulting from the formal condensation of the carboxy
+  group of vanillic acid with the hydroxy group of (−)-borneol. A metabolite isolated
+  from Ferula dissecta.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,2R,4S)-1,7,7-trimethylbicyclo[2.2.1]heptan-2-yl 4-hydroxy-3-methoxybenzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chimganin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tschimganin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25235
+- CHEBI:25409
+- CHEBI:33853
+- CHEBI:36054
+- CHEBI:36785
+xrefs:
+- reaxys:26876325
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12CC[C@](C)([C@H](OC(=O)c3ccc(O)c(OC)c3)C1)C2(C)C'
+  standard_inchi: InChI=1S/C18H24O4/c1-17(2)12-7-8-18(17,3)15(10-12)22-16(20)11-5-6-13(19)14(9-11)21-4/h5-6,9,12,15,19H,7-8,10H2,1-4H3/t12-,15+,18+/m0/s1
+  standard_inchi_key: KTOAGBIQQPGNIR-WBHUJUFNSA-N
+  molecular_formula: C18H24O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 304.386
+  monoisotopic_mass: 304.16746
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:142517
+  source_label: tschimganine
+  minted_identifier: antibioticmech:chebi-ab89f93ca9
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

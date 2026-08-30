@@ -1,0 +1,47 @@
+identifier: CHEBI:65524
+label: 5-bromo-8-methoxy-1-methyl-β-carboline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of β-carboline that is 9H-β-carboline substituted
+  by bromo, methoxy and a methyl group at positions 5, 8 and 1 respectively. It is
+  isolated from a marine bryozoan Pterocella vesiculosa and has been found to exhibit
+  moderate antitumour activity against the P388 murine leukemia cell line. Additionally
+  it shows antimicrobial activity towards the Gram-positive bacterium Bacillus subtilis
+  and the fungi Candida albicans and Trichophyton mentagrophytes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-bromo-8-methoxy-1-methyl-9H-β-carboline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22315
+- CHEBI:35618
+- CHEBI:37141
+- CHEBI:60834
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1ccc(Br)c2c1nc1c(C)nccc12
+  standard_inchi: InChI=1S/C13H11BrN2O/c1-7-12-8(5-6-15-7)11-9(14)3-4-10(17-2)13(11)16-12/h3-6,16H,1-2H3
+  standard_inchi_key: OVNRKQHNHZRXHF-UHFFFAOYSA-N
+  molecular_formula: C13H11BrN2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 291.148
+  monoisotopic_mass: 290.00548
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65524
+  source_label: 5-bromo-8-methoxy-1-methyl-β-carboline
+  minted_identifier: antibioticmech:chebi-16255b92a3
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

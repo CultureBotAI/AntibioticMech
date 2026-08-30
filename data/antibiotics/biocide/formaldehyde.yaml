@@ -1,0 +1,76 @@
+identifier: CHEBI:16842
+label: formaldehyde
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aldehyde resulting from the formal oxidation of methanol.
+definition_source: ChEBI
+synonyms:
+- synonym_text: FORMALDEHYDE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FORMALIN
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Formaldehyd
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Formaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Formalin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methanal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methylene oxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Oxomethane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Oxomethylene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17478
+- CHEBI:64708
+xrefs:
+- cas:50-00-0
+- drugbank:DB03843
+- drugcentral:3244
+- gmelin:445
+- hmdb:HMDB0001426
+- kegg.compound:C00067
+- kegg.drug:D00017
+- metacyc.compound:FORMALDEHYDE
+- pdb-ccd:FOR
+- ppdb:359
+- reaxys:1209228
+- umbbd.compound:c0122
+- wikipedia.en:Formaldehyde
+activity_roles:
+- CHEBI:48219
+chemical_structure:
+  smiles: '[H]C([H])=O'
+  standard_inchi: InChI=1S/CH2O/c1-2/h1H2
+  standard_inchi_key: WSFSSNUMVMOOMR-UHFFFAOYSA-N
+  molecular_formula: CH2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 30.026
+  monoisotopic_mass: 30.01056
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:16842
+  source_label: formaldehyde
+  minted_identifier: antibioticmech:chebi-9a807a979b
+  role_terms:
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

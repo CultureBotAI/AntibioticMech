@@ -1,0 +1,86 @@
+identifier: CHEBI:17558
+label: quercitrin
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quercetin O-glycoside that is quercetin substituted by a α-L-rhamnosyl
+  moiety at position 3 via a glycosidic linkage.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-4-oxo-4H-chromen-3-yl 6-deoxy-α-L-mannopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,3',4',5,7-Pentahydroxyflavone-3-L-rhamnoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-((6-Deoxy-alpha-L-mannopyranosyl)-oxy)-2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quercetin 3-L-rhamnoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quercetin 3-O-alpha-L-rhamnopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quercetin 3-O-rhamnoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quercimelin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quercitrin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quercitronic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quercitroside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: luteolin 6-deoxy-α-L-mannopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: quercetin 3-O-α-L-rhamnopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: quercetin-3-L-rhamnoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27848
+- CHEBI:38684
+- CHEBI:63367
+- CHEBI:76424
+xrefs:
+- cas:522-12-3
+- hmdb:HMDB0033751
+- kegg.compound:C01750
+- knapsack:C00005374
+- lipidmaps:LMPK12112171
+- metacyc.compound:QUERCITRIN
+- reaxys:68135
+- wikipedia.en:Quercitrin
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: C[C@@H]1O[C@@H](Oc2c(-c3ccc(O)c(O)c3)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O
+  standard_inchi: InChI=1S/C21H20O11/c1-7-15(26)17(28)18(29)21(30-7)32-20-16(27)14-12(25)5-9(22)6-13(14)31-19(20)8-2-3-10(23)11(24)4-8/h2-7,15,17-18,21-26,28-29H,1H3/t7-,15-,17+,18+,21-/m0/s1
+  standard_inchi_key: OXGUCUVFOIWWQJ-HQBVPOQASA-N
+  molecular_formula: C21H20O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 448.38
+  monoisotopic_mass: 448.10056
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17558
+  source_label: quercitrin
+  minted_identifier: antibioticmech:chebi-ddc0002936
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

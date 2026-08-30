@@ -1,0 +1,44 @@
+identifier: CHEBI:73086
+label: protobassic acid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pentacyclic triterpenoid that is oleanolic acid substituted by hydroxy
+  groups at positions 2, 6 and 23.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2β,3β,6β)-2,3,6,23-tetrahydroxyolean-12-en-28-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:25872
+- CHEBI:33573
+xrefs:
+- cas:37905-13-8
+- hmdb:HMDB0034500
+- reaxys:5913850
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@]12CC=C3[C@]4([H])CC(C)(C)CC[C@]4(C(=O)O)CC[C@@]3(C)[C@]1(C)C[C@@H](O)[C@]1([H])[C@]2(C)C[C@H](O)[C@H](O)[C@@]1(C)CO'
+  standard_inchi: InChI=1S/C30H48O6/c1-25(2)9-11-30(24(35)36)12-10-28(5)17(18(30)13-25)7-8-21-26(3)14-20(33)23(34)27(4,16-31)22(26)19(32)15-29(21,28)6/h7,18-23,31-34H,8-16H2,1-6H3,(H,35,36)/t18-,19+,20-,21+,22+,23-,26+,27-,28+,29+,30-/m0/s1
+  standard_inchi_key: IDQVFXZQPGAVAM-YPRSBIJBSA-N
+  molecular_formula: C30H48O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 504.708
+  monoisotopic_mass: 504.34509
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:73086
+  source_label: protobassic acid
+  minted_identifier: antibioticmech:chebi-6b04cc136d
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

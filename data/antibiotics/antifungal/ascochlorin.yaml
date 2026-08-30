@@ -1,0 +1,68 @@
+identifier: CHEBI:156219
+label: ascochlorin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dihydroxybenzaldehyde that is 2,4-dihydroxybenzaldehyde which is substituted
+  by a (1E,3E)-3-methyl-1-[(1R,2R,6R)-1,2,6-trimethyl-3-oxocyclohexyl]penta-1,3-dien-5-yl
+  group at position 3, chlorine at position 5, and a methyl group at position 6. A
+  meroterpenoid produced by several fungi including Ascochyta viciae . It exhibits
+  anticancer, antifungal and antiprotozoal activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-chloro-4,6-dihydroxy-2-methyl-5-{(2E,4E)-3-methyl-5-[(1R,2R,6R)-1,2,6-trimethyl-3-oxocyclohexyl]penta-2,4-dien-1-yl}benzaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-ascochlorin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LL-Z 1272 gamma
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic LL-Z1272 gamma
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic LL-Z1272γ
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ilicicolin D
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23482
+- CHEBI:26658
+- CHEBI:33572
+- CHEBI:50196
+- CHEBI:64419
+- CHEBI:78840
+- CHEBI:83403
+xrefs:
+- cas:26166-39-2
+- knapsack:C00018754
+- pdb-ccd:3H1
+activity_roles:
+- CHEBI:35718
+- CHEBI:35820
+chemical_structure:
+  smiles: '[H]C(=O)c1c(C)c(Cl)c(O)c(C/C=C(C)/C=C/[C@@]2(C)[C@H](C)CCC(=O)[C@@H]2C)c1O'
+  standard_inchi: InChI=1S/C23H29ClO4/c1-13(10-11-23(5)14(2)7-9-19(26)16(23)4)6-8-17-21(27)18(12-25)15(3)20(24)22(17)28/h6,10-12,14,16,27-28H,7-9H2,1-5H3/b11-10+,13-6+/t14-,16+,23+/m1/s1
+  standard_inchi_key: SETVRSKZJJWOPA-FLDGXQSCSA-N
+  molecular_formula: C23H29ClO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 404.934
+  monoisotopic_mass: 404.17544
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156219
+  source_label: ascochlorin
+  minted_identifier: antibioticmech:chebi-31a6bebed5
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,58 @@
+identifier: CHEBI:16348
+label: 3-nitropropanoic acid
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A C-nitro compound that is propanoic acid in which one of the methyl hydrogens
+  has been replaced by a nitro group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-NITROPROPANOIC ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-nitropropionic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bovinocidin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: beta-Nitropropanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: beta-Nitropropionic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35716
+xrefs:
+- beilstein:1759889
+- cas:504-88-1
+- gmelin:533092
+- kegg.compound:C05669
+- knapsack:C00018684
+- lincs.smallmolecule:LSM-6632
+- pdb-ccd:3NP
+activity_roles:
+- CHEBI:64912
+chemical_structure:
+  smiles: O=C(O)CC[N+](=O)[O-]
+  standard_inchi: InChI=1S/C3H5NO4/c5-3(6)1-2-4(7)8/h1-2H2,(H,5,6)
+  standard_inchi_key: WBLZUCOIBUDNBV-UHFFFAOYSA-N
+  molecular_formula: C3H5NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 119.076
+  monoisotopic_mass: 119.02186
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:16348
+  source_label: 3-nitropropanoic acid
+  minted_identifier: antibioticmech:chebi-f37462aae1
+  role_terms:
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

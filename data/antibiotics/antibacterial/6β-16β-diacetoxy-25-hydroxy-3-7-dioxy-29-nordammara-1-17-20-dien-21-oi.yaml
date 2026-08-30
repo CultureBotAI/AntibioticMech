@@ -1,0 +1,55 @@
+identifier: CHEBI:65752
+label: 6β,16β-diacetoxy-25-hydroxy-3,7-dioxy-29-nordammara-1,17(20)-dien-21-oic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracyclic triterpenoid that is 29-nordammara-1,17(20)-diene substituted
+  by acetoxy groups at positions 6 and 16, a carboxy group at position 21, a hydroxy
+  group at position 25 and oxo groups at positions 3 and 7 respectively. It is isolated
+  from the marine-derived fungal strain Aspergillus sydowii PFW1-13 and exhibits antibacterial
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2Z)-2-[(4α,5α,6β,8α,9β,13α,14β,16β,17Z)-6,16-bis(acetyloxy)-4,8,10,14-tetramethyl-3,7-dioxogon-1-en-17-ylidene]-6-hydroxy-6-methylheptanoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4S,5S,6S,8S,9S,10R,13R,14S,16S,17Z)-6,16-diacetoxy-25-hydroxy-3,7-dioxy-29-nordammara-1,17(20)-dien-21-oic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:20156
+- CHEBI:26878
+- CHEBI:26893
+- CHEBI:35871
+- CHEBI:3992
+- CHEBI:47622
+- CHEBI:79020
+xrefs:
+- reaxys:18842465
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12[C@H](C)C(=O)C=C[C@]1(C)[C@]1([H])CC[C@@]3([H])/C(=C(\CCCC(C)(C)O)C(=O)O)[C@@H](OC(C)=O)C[C@]3(C)[C@@]1(C)C(=O)[C@H]2OC(C)=O'
+  standard_inchi: InChI=1S/C33H46O9/c1-17-22(36)13-15-31(6)24-12-11-21-25(20(29(38)39)10-9-14-30(4,5)40)23(41-18(2)34)16-32(21,7)33(24,8)28(37)27(26(17)31)42-19(3)35/h13,15,17,21,23-24,26-27,40H,9-12,14,16H2,1-8H3,(H,38,39)/b25-20-/t17-,21+,23+,24+,26-,27+,31-,32+,33-/m1/s1
+  standard_inchi_key: WLRJWQXWJBEULT-GAZAAFLYSA-N
+  molecular_formula: C33H46O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 586.722
+  monoisotopic_mass: 586.31418
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65752
+  source_label: 6β,16β-diacetoxy-25-hydroxy-3,7-dioxy-29-nordammara-1,17(20)-dien-21-oic
+    acid
+  minted_identifier: antibioticmech:chebi-c214022a2e
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

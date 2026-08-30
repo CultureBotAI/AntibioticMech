@@ -1,0 +1,44 @@
+identifier: CHEBI:39254
+label: (S)-chloroquine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (4S)-N4-(7-chloroquinolin-4-yl)-N1,N1-diethylpentane-1,4-diamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-N4-(7-chloro-4-quinolinyl)-N1,N1-diethyl-1,4-pentanediamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-chloroquine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:3638
+xrefs:
+- beilstein:7517230
+- cas:58175-86-3
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: CCN(CC)CCC[C@H](C)Nc1ccnc2cc(Cl)ccc12
+  standard_inchi: InChI=1S/C18H26ClN3/c1-4-22(5-2)12-6-7-14(3)21-17-10-11-20-18-13-15(19)8-9-16(17)18/h8-11,13-14H,4-7,12H2,1-3H3,(H,20,21)/t14-/m0/s1
+  standard_inchi_key: WHTVZRBIWZFKQO-AWEZNQCLSA-N
+  molecular_formula: C18H26ClN3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 319.88
+  monoisotopic_mass: 319.18153
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:39254
+  source_label: (S)-chloroquine
+  minted_identifier: antibioticmech:chebi-3d949d29ad
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,36 @@
+identifier: antibioticmech:aro-e45d4c195a
+label: cyclomarin C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Cyclomarin C is a cyclomarin antibiotic.
+definition_source: PMID:27241518
+parent_compounds:
+- ARO:3007540
+xrefs:
+- ARO:3007543
+- CHEBI:211272
+- pubchem.compound:11205419
+structural_class: cyclomarin antibiotics
+structural_class_id: ARO:3007540
+chemical_structure:
+  smiles: C[C@H]1C(=O)N[C@H](C(=O)N[C@H](C(=O)N([C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N([C@H](C(=O)N1)C[C@@H](C)CO)C)[C@@H](C2=CN(C3=CC=CC=C32)C(C)(C)C=C)O)[C@H](C)C=C(C)C)CC(C)C)C)C(C)C)[C@@H](C4=CC=CC=C4)OC
+  standard_inchi: InChI=1S/C56H82N8O10/c1-16-56(11,12)64-29-39(38-24-20-21-25-40(38)64)47(66)45-55(73)63(14)42(28-34(8)30-65)50(68)57-36(10)49(67)61-46(48(74-15)37-22-18-17-19-23-37)53(71)58-43(33(6)7)54(72)62(13)41(27-32(4)5)51(69)59-44(52(70)60-45)35(9)26-31(2)3/h16-26,29,32-36,41-48,65-66H,1,27-28,30H2,2-15H3,(H,57,68)(H,58,71)(H,59,69)(H,60,70)(H,61,67)/t34-,35-,36+,41+,42+,43+,44+,45+,46+,47-,48-/m1/s1
+  standard_inchi_key: NCUTXLGVUNPWKM-XCLVBVFRSA-N
+  molecular_formula: C56H82N8O10
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1027.3
+  monoisotopic_mass: 1026.61539084
+source_concepts:
+- source: ARO
+  source_id: ARO:3007543
+  source_label: cyclomarin C
+  minted_identifier: antibioticmech:aro-e45d4c195a
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,46 @@
+identifier: CHEBI:68700
+label: epi-isochromophilone II
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An azaphilone that is 7,8-dihydro-6H-isochromen-6-one substituted by a
+  chloro group at position 5, a 3,5-dimethylhepta-1,3-dien-1-yl group at position
+  3, a hydroxy group at position 7, a methyl group at position 7 and a 2-oxopropyl
+  group at position 8. Isolated from Chaetomium cupreum, it exhibits antifungal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (7R,8S)-5-chloro-3-[(1E,3E,5S)-3,5-dimethylhepta-1,3-dien-1-yl]-7-hydroxy-7-methyl-8-(2-oxopropyl)-7,8-dihydro-6H-isochromen-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:36683
+- CHEBI:50941
+- CHEBI:51689
+- CHEBI:51867
+xrefs:
+- reaxys:15840533
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC[C@H](C)/C=C(C)/C=C/C1=CC2=C(Cl)C(=O)[C@](C)(O)[C@@H](CC(C)=O)C2=CO1
+  standard_inchi: InChI=1S/C22H27ClO4/c1-6-13(2)9-14(3)7-8-16-11-17-18(12-27-16)19(10-15(4)24)22(5,26)21(25)20(17)23/h7-9,11-13,19,26H,6,10H2,1-5H3/b8-7+,14-9+/t13-,19-,22+/m0/s1
+  standard_inchi_key: QEPMTPAOVMUVBT-NJCRSHSXSA-N
+  molecular_formula: C22H27ClO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 390.907
+  monoisotopic_mass: 390.15979
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68700
+  source_label: epi-isochromophilone II
+  minted_identifier: antibioticmech:chebi-702793cb4c
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,70 @@
+identifier: CHEBI:29672
+label: resorcinol monoacetate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of phenols that is resorcinol in which one of the
+  phenolic hydroxy groups has been converted into its acetate ester. It has keratolytic
+  properties and has been used for the treatment of acne.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Euresol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Remonol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 3-hydroxyphenyl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,3-benzenediol monoacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,3-benzenediol, monoacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-acetoxyphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acetylresorcinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: m-acetoxyphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: m-hydroxyphenyl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140310
+- CHEBI:33853
+xrefs:
+- cas:102-29-4
+- kegg.compound:C12064
+- kegg.drug:D02393
+- lincs.smallmolecule:LSM-3915
+- reaxys:1865490
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(=O)Oc1cccc(O)c1
+  standard_inchi: InChI=1S/C8H8O3/c1-6(9)11-8-4-2-3-7(10)5-8/h2-5,10H,1H3
+  standard_inchi_key: ZZPKZRHERLGEKA-UHFFFAOYSA-N
+  molecular_formula: C8H8O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 152.149
+  monoisotopic_mass: 152.04734
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:29672
+  source_label: resorcinol monoacetate
+  minted_identifier: antibioticmech:chebi-f5d09bcb8b
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

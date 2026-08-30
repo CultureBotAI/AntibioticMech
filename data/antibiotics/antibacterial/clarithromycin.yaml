@@ -1,0 +1,441 @@
+identifier: CHEBI:3732
+label: clarithromycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The 6-O-methyl ether of erythromycin A, clarithromycin is a macrolide
+  antibiotic used in the treatment of respiratory-tract, skin and soft-tissue infections.
+  It is also used to eradicate Helicobacter pylori in the treatment of peptic ulcer
+  disease. It prevents bacteria from growing by interfering with their protein synthesis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: clarithromycina
+  synonym_type: INN
+  source: chebi
+- synonym_text: clarithromycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: clarithromycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: O6-methylerythromycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-O-methylerythromycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-O-methylerythromycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CLA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CLARITHROMYCIN
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Clarithromycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Biaxin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: CLR
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Clambiotic
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Clarith
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Clathromycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Klacid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Klaricid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Macladin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Naxy
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Veclam
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:25105
+- ARO:0000000
+xrefs:
+- ARO:0000065
+- cas:81103-11-9
+- drugbank:DB01211
+- drugcentral:668
+- kegg.compound:C06912
+- kegg.drug:D00276
+- lincs.smallmolecule:LSM-5606
+- lipidmaps:LMPK04000014
+- patent:EP41355
+- patent:US4331803
+- pdb-ccd:CTY
+- reaxys:3581974
+- chembl:CHEMBL1741
+- pubchem.compound:84029
+activity_roles:
+- CHEBI:36047
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: '[H][C@]1(O[C@H]2[C@H](C)[C@@H](O[C@]3([H])O[C@H](C)C[C@H](N(C)C)[C@H]3O)[C@](C)(OC)C[C@@H](C)C(=O)[C@H](C)[C@@H](O)[C@](C)(O)[C@@H](CC)OC(=O)[C@@H]2C)C[C@@](C)(OC)[C@@H](O)[C@H](C)O1'
+  standard_inchi: InChI=1S/C38H69NO13/c1-15-26-38(10,45)31(42)21(4)28(40)19(2)17-37(9,47-14)33(52-35-29(41)25(39(11)12)16-20(3)48-35)22(5)30(23(6)34(44)50-26)51-27-18-36(8,46-13)32(43)24(7)49-27/h19-27,29-33,35,41-43,45H,15-18H2,1-14H3/t19-,20-,21+,22+,23-,24+,25+,26-,27+,29-,30+,31-,32+,33-,35+,36-,37-,38-/m1/s1
+  standard_inchi_key: AGOYDEPGAOXOCK-KCBOHYOISA-N
+  molecular_formula: C38H69NO13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 747.964
+  monoisotopic_mass: 747.47689
+source_concepts:
+- source: ARO
+  source_id: ARO:0000065
+  source_label: clarithromycin
+  minted_identifier: antibioticmech:aro-5c92a4ddc8
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3732
+  source_label: clarithromycin
+  minted_identifier: antibioticmech:chebi-e63133b2eb
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000250
+  label: ErmC
+  evidence:
+  - reference: ARO:3000250
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000316
+  label: mphA
+  evidence:
+  - reference: ARO:3000316
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000318
+  label: mphB
+  evidence:
+  - reference: ARO:3000318
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000319
+  label: mphC
+  evidence:
+  - reference: ARO:3000319
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000326
+  label: ErmE
+  evidence:
+  - reference: ARO:3000326
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000347
+  label: ErmA
+  evidence:
+  - reference: ARO:3000347
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000361
+  label: EreA
+  evidence:
+  - reference: ARO:3000361
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000363
+  label: EreB
+  evidence:
+  - reference: ARO:3000363
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000375
+  label: ErmB
+  evidence:
+  - reference: ARO:3000375
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000392
+  label: Erm(37)
+  evidence:
+  - reference: ARO:3000392
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000495
+  label: ErmD
+  evidence:
+  - reference: ARO:3000495
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000498
+  label: ErmF
+  evidence:
+  - reference: ARO:3000498
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000522
+  label: ErmG
+  evidence:
+  - reference: ARO:3000522
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000592
+  label: ErmN
+  evidence:
+  - reference: ARO:3000592
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000593
+  label: ErmQ
+  evidence:
+  - reference: ARO:3000593
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000594
+  label: ErmR
+  evidence:
+  - reference: ARO:3000594
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000595
+  label: ErmT
+  evidence:
+  - reference: ARO:3000595
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000596
+  label: ErmX
+  evidence:
+  - reference: ARO:3000596
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000599
+  label: Erm(33)
+  evidence:
+  - reference: ARO:3000599
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000600
+  label: Erm(34)
+  evidence:
+  - reference: ARO:3000600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000601
+  label: Erm(38)
+  evidence:
+  - reference: ARO:3000601
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000602
+  label: Erm(39)
+  evidence:
+  - reference: ARO:3000602
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000603
+  label: Erm(41)
+  evidence:
+  - reference: ARO:3000603
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000604
+  label: Erm(35)
+  evidence:
+  - reference: ARO:3000604
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000605
+  label: Erm(36)
+  evidence:
+  - reference: ARO:3000605
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003071
+  label: mphF
+  evidence:
+  - reference: ARO:3003071
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003072
+  label: mphL
+  evidence:
+  - reference: ARO:3003072
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003742
+  label: mphG
+  evidence:
+  - reference: ARO:3003742
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003969
+  label: lmrP
+  evidence:
+  - reference: ARO:3003969
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004134
+  label: Helicobacter pylori 23S rRNA with mutation conferring resistance to clarithromycin
+  evidence:
+  - reference: ARO:3004134
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004160
+  label: Escherichia coli 23S rRNA with mutation conferring resistance to clarithromycin
+  evidence:
+  - reference: ARO:3004160
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004163
+  label: Mycobacteroides abscessus 23S rRNA with mutation conferring resistance to
+    clarithromycin
+  evidence:
+  - reference: ARO:3004163
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004164
+  label: Mycobacterium avium 23S rRNA with mutation conferring resistance to clarithromycin
+  evidence:
+  - reference: ARO:3004164
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004165
+  label: Mycobacteroides chelonae 23S rRNA with mutation conferring resistance to
+    clarithromycin
+  evidence:
+  - reference: ARO:3004165
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004166
+  label: Mycobacterium intracellulare 23S rRNA with mutation conferring resistance
+    to clarithromycin
+  evidence:
+  - reference: ARO:3004166
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004168
+  label: Mycobacterium kansasii 23S rRNA with mutation conferring resistance to clarithromycin
+  evidence:
+  - reference: ARO:3004168
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004169
+  label: Mycolicibacterium smegmatis 23S rRNA with mutation conferring resistance
+    to clarithromycin
+  evidence:
+  - reference: ARO:3004169
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004176
+  label: Mycoplasma hominis 23S rRNA with mutation conferring resistance to macrolide
+    antibiotics
+  evidence:
+  - reference: ARO:3004176
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004177
+  label: Mycoplasmopsis fermentans 23S rRNA with mutation conferring resistance to
+    macrolide antibiotics
+  evidence:
+  - reference: ARO:3004177
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004596
+  label: erm(46)
+  evidence:
+  - reference: ARO:3004596
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004606
+  label: erm(40)
+  evidence:
+  - reference: ARO:3004606
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007032
+  label: Erm(50)
+  evidence:
+  - reference: ARO:3007032
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007033
+  label: Erm(51)
+  evidence:
+  - reference: ARO:3007033
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009647
+  label: erm(55)
+  evidence:
+  - reference: ARO:3009647
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000757
+  target_label: 50S ribosomal subunit P-site
+  evidence:
+  - reference: ARO:3000757
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000065 (clarithromycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

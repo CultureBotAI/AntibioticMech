@@ -1,0 +1,64 @@
+identifier: CHEBI:82033
+label: propamocarb
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbamate ester that is the propyl ester of 3-(dimethylamino)propylcarbamic
+  acid. It is a systemic fungicide, used (normally as the hydrochloride salt) for
+  the control of soil, root and leaf diseases caused by oomycetes, particularly Phytophthora
+  and Pythium species.
+definition_source: ChEBI
+synonyms:
+- synonym_text: propyl [3-(dimethylamino)propyl]carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Propyl (3-(dimethylamino)propyl)carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: propamocarbe
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: propyl 3-(dimethylamino)propylcarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: propyl N-[3-(dimethylamino)propyl]carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:50996
+- CHEBI:87061
+xrefs:
+- cas:24579-73-5
+- kegg.compound:C18885
+- patent:BE708057
+- patent:EP1254894
+- patent:US3649674
+- pesticides:propamocarb
+- ppdb:1546
+- reaxys:2080745
+- wikipedia.en:Propamocarb
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CCCOC(=O)NCCCN(C)C
+  standard_inchi: InChI=1S/C9H20N2O2/c1-4-8-13-9(12)10-6-5-7-11(2)3/h4-8H2,1-3H3,(H,10,12)
+  standard_inchi_key: WZZLDXDUQPOXNW-UHFFFAOYSA-N
+  molecular_formula: C9H20N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 188.271
+  monoisotopic_mass: 188.15248
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:82033
+  source_label: propamocarb
+  minted_identifier: antibioticmech:chebi-9bfd8f2501
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

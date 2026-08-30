@@ -1,0 +1,55 @@
+identifier: CHEBI:83253
+label: fluoxastrobin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An oxime O-ether that is the O-methyl oxime of (2-{[6-(2-chlorophenoxy)-5-fluoropyrimidin-4-yl]oxy}phenyl)(5,6-dihydro-1,4,2-dioxazin-3-yl)methanone.
+  A fungicide used for disease control of potatoes and a wide range of vegetables.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (E)-1-(2-{[6-(2-chlorophenoxy)-5-fluoropyrimidin-4-yl]oxy}phenyl)-1-(5,6-dihydro-1,4,2-dioxazin-3-yl)-N-methoxymethanimine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1E)-(2-((6-(2-chlorophenoxy)-5-fluoro-4-pyrimidinyl)oxy)phenyl)(5,6-dihydro-1,4,2-dioxazin-3-yl)methanone
+    O-methyloxime
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:36816
+- CHEBI:37143
+- CHEBI:39447
+- CHEBI:83256
+- CHEBI:83403
+- CHEBI:86482
+xrefs:
+- cas:361377-29-9
+- patent:EP2319308
+- patent:NZ554381
+- pesticides:fluoxastrobin
+- ppdb:340
+- reaxys:11322454
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CO/N=C(/C1=NOCCO1)c1ccccc1Oc1ncnc(Oc2ccccc2Cl)c1F
+  standard_inchi: InChI=1S/C21H16ClFN4O5/c1-28-26-18(21-27-30-11-10-29-21)13-6-2-4-8-15(13)31-19-17(23)20(25-12-24-19)32-16-9-5-3-7-14(16)22/h2-9,12H,10-11H2,1H3/b26-18+
+  standard_inchi_key: UFEODZBUAFNAEU-NLRVBDNBSA-N
+  molecular_formula: C21H16ClFN4O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 458.833
+  monoisotopic_mass: 458.07933
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83253
+  source_label: fluoxastrobin
+  minted_identifier: antibioticmech:chebi-b249e0d1fa
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

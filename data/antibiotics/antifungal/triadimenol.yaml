@@ -1,0 +1,66 @@
+identifier: CHEBI:9666
+label: triadimenol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of triazoles that is 3,3-dimethyl-1-(1,2,4-triazol-1-yl)butane-1,2-diol
+  substituted at position O1 by a 4-chlorophenyl group. A fungicide for cereals, beet
+  and brassicas used to control a range of diseases including powdery mildew, rusts,
+  bunts and smuts.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-(4-chlorophenoxy)-3,3-dimethyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(4-Chlorophenoxy)-1-tert-butyl-2-(1H-1,2,4-triazole-1-yl)ethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: beta-(4-Chlorophenoxy)-alpha-(1,1-dimethylethyl)-1H-1,2,4-triazole-1-ethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α-tert-butyl-β-(4-chlorophenoxy)-1H-1,2,4-triazole-1-ethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-(4-Chlorophenoxy)-α-(1,1-dimethylethyl)-1H-1,2,4-triazole-1-ethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:141498
+- CHEBI:35618
+- CHEBI:35681
+- CHEBI:83403
+- CHEBI:87067
+- CHEBI:87100
+xrefs:
+- cas:55219-65-3
+- kegg.compound:C11127
+- lincs.smallmolecule:LSM-27940
+- pesticides:triadimenol
+- ppdb:649
+- reaxys:616470
+activity_roles:
+- CHEBI:77884
+- CHEBI:86328
+chemical_structure:
+  smiles: CC(C)(C)C(O)C(Oc1ccc(Cl)cc1)n1cncn1
+  standard_inchi: InChI=1S/C14H18ClN3O2/c1-14(2,3)12(19)13(18-9-16-8-17-18)20-11-6-4-10(15)5-7-11/h4-9,12-13,19H,1-3H3
+  standard_inchi_key: BAZVSMNPJJMILC-UHFFFAOYSA-N
+  molecular_formula: C14H18ClN3O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 295.77
+  monoisotopic_mass: 295.10875
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9666
+  source_label: triadimenol
+  minted_identifier: antibioticmech:chebi-4e1a05dd09
+  role_terms:
+  - CHEBI:77884
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

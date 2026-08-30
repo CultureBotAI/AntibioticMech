@@ -1,0 +1,52 @@
+identifier: CHEBI:85628
+label: tolprocarb
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbamate ester that is the 2,2,2-trifluoroethyl ester of [(2S)-3-methyl-1-(4-methylbenzamido)butan-2-yl]carbamic
+  acid. It is a novel systemic fungicide used for controlling rice blast.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,2,2-trifluoroethyl [(2S)-3-methyl-1-(4-methylbenzamido)butan-2-yl]carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,2,2-trifluoroethyl (S)-[2-methyl-1-(p-toluoylaminomethyl)propyl]carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,2,2-trifluoroethyl N-[(1S)-2-methyl-1-[[(4-methylbenzoyl)amino]methyl]propyl]carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22702
+- CHEBI:23003
+- CHEBI:37143
+- CHEBI:87061
+xrefs:
+- cas:911499-62-2
+- pesticides:tolprocarb
+- ppdb:3080
+- reaxys:11342132
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: Cc1ccc(C(=O)NC[C@@H](NC(=O)OCC(F)(F)F)C(C)C)cc1
+  standard_inchi: InChI=1S/C16H21F3N2O3/c1-10(2)13(21-15(23)24-9-16(17,18)19)8-20-14(22)12-6-4-11(3)5-7-12/h4-7,10,13H,8-9H2,1-3H3,(H,20,22)(H,21,23)/t13-/m1/s1
+  standard_inchi_key: RSOBJVBYZCMJOS-CYBMUJFWSA-N
+  molecular_formula: C16H21F3N2O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 346.349
+  monoisotopic_mass: 346.15043
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85628
+  source_label: tolprocarb
+  minted_identifier: antibioticmech:chebi-10be20a864
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

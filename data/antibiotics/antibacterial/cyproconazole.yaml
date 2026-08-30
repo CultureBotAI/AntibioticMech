@@ -1,0 +1,52 @@
+identifier: CHEBI:83748
+label: cyproconazole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Cyproconazole is a fungicide that prevents wood decay from fungi in above-ground
+  applications, but is not intended to protect trees in the ground.
+definition_source: PMID:23589453
+parent_compounds:
+- ARO:3007499
+xrefs:
+- ARO:3009189
+- cas:94361-06-5
+- chembl:CHEMBL2131954
+- pubchem.compound:86132
+structural_class: triazole antifungal
+structural_class_id: ARO:3007499
+chemical_structure:
+  smiles: CC(C1CC1)C(O)(Cn1cncn1)c1ccc(Cl)cc1
+  standard_inchi: InChI=1S/C15H18ClN3O/c1-11(12-2-3-12)15(20,8-19-10-17-9-18-19)13-4-6-14(16)7-5-13/h4-7,9-12,20H,2-3,8H2,1H3
+  standard_inchi_key: UFNOUKDBUJZYDE-UHFFFAOYSA-N
+  molecular_formula: C15H18ClN3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 291.782
+  monoisotopic_mass: 291.11384
+source_concepts:
+- source: ARO
+  source_id: ARO:3009189
+  source_label: cyproconazole
+  minted_identifier: antibioticmech:aro-bbcb98de5b
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009464
+  label: Zymoseptoria tritici MgAtr with mutations conferring resistance to cyproconazole
+  evidence:
+  - reference: ARO:3009464
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009189 (cyproconazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009532
+  label: Phakospora pachyrhizi Cyp51 with mutations conferring resistance to cyproconazole
+  evidence:
+  - reference: ARO:3009532
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009189 (cyproconazole);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

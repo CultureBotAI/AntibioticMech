@@ -1,0 +1,142 @@
+identifier: CHEBI:49566
+label: cloxacillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A semisynthetic penicillin antibiotic carrying a 3-(2-chlorophenyl)-5-methylisoxazole-4-carboxamido
+  group at position 6.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cloxacilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: cloxacilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: cloxacillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2,2-dimethyl-6β-({[5-methyl-3-(2-chlorophenyl)isoxazol-4-yl]carbonyl}amino)penam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-({[3-(2-chlorophenyl)-5-methylisoxazol-4-yl]carbonyl}amino)-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3-(o-chlorophenyl)-5-methyl-4-isoxazolyl)penicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(3-(o-chlorophenyl)-5-methyl-4-isoxazolecarboxamido)penicillanic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CLOXACILLIN
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cloxacillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chloroxacillin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Clossacillina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Cloxacilina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Cloxacilline
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Cloxacillinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Cloxapen
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Methocillin S
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Orbenin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Syntarpen
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Tegopen
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- CHEBI:72588
+- CHEBI:88187
+- ARO:3000008
+xrefs:
+- ARO:0000011
+- beilstein:1232834
+- cas:61-72-3
+- drugbank:DB01147
+- drugcentral:720
+- hmdb:HMDB0015278
+- kegg.compound:C06923
+- kegg.drug:D07733
+- lincs.smallmolecule:LSM-15183
+- patent:US2996501
+- pdb-ccd:CXN
+- reaxys:1232834
+- vsdb:1859
+- wikipedia.en:Cloxacillin
+- chembl:CHEMBL891
+- pubchem.compound:6098
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)c1c(-c2ccccc2Cl)noc1C'
+  standard_inchi: InChI=1S/C19H18ClN3O5S/c1-8-11(12(22-28-8)9-6-4-5-7-10(9)20)15(24)21-13-16(25)23-14(18(26)27)19(2,3)29-17(13)23/h4-7,13-14,17H,1-3H3,(H,21,24)(H,26,27)/t13-,14+,17-/m1/s1
+  standard_inchi_key: LQOLIRLGBULYKD-JKIFEVAISA-N
+  molecular_formula: C19H18ClN3O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 435.889
+  monoisotopic_mass: 435.06557
+source_concepts:
+- source: ARO
+  source_id: ARO:0000011
+  source_label: cloxacillin
+  minted_identifier: antibioticmech:aro-0542d0dd3d
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:49566
+  source_label: cloxacillin
+  minted_identifier: antibioticmech:chebi-a59d504bdb
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000788
+  label: MdtEF-TolC
+  evidence:
+  - reference: ARO:3000788
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000011 (cloxacillin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000011 (cloxacillin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

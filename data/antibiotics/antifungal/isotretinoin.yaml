@@ -1,0 +1,90 @@
+identifier: CHEBI:6067
+label: isotretinoin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A retinoic acid that is all-trans-retinoic acid in which the double bond
+  which is α,β- to the carboxy group is isomerised to Z configuration. A synthetic
+  retinoid, it is used for the treatment of severe cases of acne and other skin diseases.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Accutane
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Amnesteem
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Claravis
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: isotretinoinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: isotretinoína
+  synonym_type: INN
+  source: chebi
+- synonym_text: isotrétinoine
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2Z,4E6E,8E)-3,7-dimethyl-9-(2,6,6-trimethylcyclohex-1-en-1-yl)nona-2,4,6,8-tetraenoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (7E,9E,11E,13Z)-retinoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 13-RA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 13-cis-Vitamin A acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 13-cis-retinoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Neovitamin A acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cis-RA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: isotretinoino
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26536
+xrefs:
+- cas:4759-48-2
+- drugbank:DB00982
+- drugcentral:1508
+- hmdb:HMDB0006219
+- kegg.drug:D00348
+- lipidmaps:LMPR01090021
+- patent:EP111325
+- patent:US4556518
+- reaxys:1885770
+- wikipedia.en:Isotretinoin
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC1=C(/C=C/C(C)=C/C=C/C(C)=C\C(=O)O)C(C)(C)CCC1
+  standard_inchi: InChI=1S/C20H28O2/c1-15(8-6-9-16(2)14-19(21)22)11-12-18-17(3)10-7-13-20(18,4)5/h6,8-9,11-12,14H,7,10,13H2,1-5H3,(H,21,22)/b9-6+,12-11+,15-8+,16-14-
+  standard_inchi_key: SHGAZHPCJJPHSC-XFYACQKRSA-N
+  molecular_formula: C20H28O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 300.442
+  monoisotopic_mass: 300.20893
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6067
+  source_label: isotretinoin
+  minted_identifier: antibioticmech:chebi-a2b4e4cd7d
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,116 @@
+identifier: CHEBI:16236
+label: ethanol
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A primary alcohol that is ethane in which one of the hydrogens is substituted
+  by a hydroxy group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Dehydrated ethanol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 1-hydroxyethane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Alkohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C2H5OH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ETHANOL
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: EtOH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methylcarbinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[CH2Me(OH)]'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[OEtH]'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alcohol etílico
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alcool éthylique
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: etanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hydroxyethane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: spiritus vini
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Äthanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Äthylalkohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: éthanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134179
+- CHEBI:15734
+- CHEBI:23982
+- CHEBI:50584
+xrefs:
+- cas:64-17-5
+- drugbank:DB00898
+- drugcentral:1076
+- gmelin:787
+- hmdb:HMDB0000108
+- kegg.compound:C00469
+- kegg.drug:D00068
+- kegg.drug:D06542
+- knapsack:C00019560
+- metacyc.compound:ETOH
+- molbase:858
+- molbase:859
+- pdb-ccd:EOH
+- ppdb:1373
+- reaxys:1718733
+- umbbd.compound:c0038
+- wikipedia.en:Ethanol
+activity_roles:
+- CHEBI:48219
+chemical_structure:
+  smiles: CCO
+  standard_inchi: InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3
+  standard_inchi_key: LFQSCWFLJHTTHZ-UHFFFAOYSA-N
+  molecular_formula: C2H6O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 46.069
+  monoisotopic_mass: 46.04186
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:16236
+  source_label: ethanol
+  minted_identifier: antibioticmech:chebi-23413c383b
+  role_terms:
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

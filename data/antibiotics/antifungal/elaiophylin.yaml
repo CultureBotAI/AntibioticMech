@@ -1,0 +1,59 @@
+identifier: CHEBI:77879
+label: elaiophylin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrodiolide that is isolated from several bacteria including Streptomyces
+  violaceoniger and other soil actinomycetes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3E,5E,7S,8S,11E,13E,15S,16S)-8,16-bis{(2S,3R,4S)-4-[(2R,4R,5R,6R)-4-{[(2R,4S,5S,6S)-4,5-dihydroxy-6-methyltetrahydro-2H-pyran-2-yl]oxy}-5-ethyl-2-hydroxy-6-methyltetrahydro-2H-pyran-2-yl]-3-hydroxypentan-2-yl}-7,15-dimethyl-1,9-dioxacyclohexadeca-3,5,11,13-tetraene-2,10-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic 5001B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic 56-62
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Azalomycin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: gopalamicin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: salbomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:145556
+- CHEBI:38131
+- CHEBI:63367
+xrefs:
+- cas:37318-06-2
+- kegg.compound:C15844
+- reaxys:4227388
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@]1([C@@H](C)[C@@H](O)[C@H](C)[C@@]2(O)C[C@@H](O[C@H]3C[C@H](O)[C@H](O)[C@H](C)O3)[C@H](CC)[C@@H](C)O2)OC(=O)/C=C/C=C/[C@H](C)[C@@]([H])([C@@H](C)[C@@H](O)[C@H](C)[C@@]2(O)C[C@@H](O[C@H]3C[C@H](O)[C@H](O)[C@H](C)O3)[C@H](CC)[C@@H](C)O2)OC(=O)/C=C/C=C/[C@@H]1C'
+  standard_inchi: InChI=1S/C54H88O18/c1-13-37-33(9)71-53(63,25-41(37)67-45-23-39(55)49(61)35(11)65-45)31(7)47(59)29(5)51-27(3)19-15-17-22-44(58)70-52(28(4)20-16-18-21-43(57)69-51)30(6)48(60)32(8)54(64)26-42(38(14-2)34(10)72-54)68-46-24-40(56)50(62)36(12)66-46/h15-22,27-42,45-52,55-56,59-64H,13-14,23-26H2,1-12H3/b19-15+,20-16+,21-18+,22-17+/t27-,28-,29-,30-,31-,32-,33+,34+,35-,36-,37+,38+,39-,40-,41+,42+,45-,46-,47+,48+,49+,50+,51-,52-,53+,54+/m0/s1
+  standard_inchi_key: OSERMIPXNLXAPD-MJMYBOKFSA-N
+  molecular_formula: C54H88O18
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1025.28
+  monoisotopic_mass: 1024.59707
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77879
+  source_label: elaiophylin
+  minted_identifier: antibioticmech:chebi-8063802fec
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

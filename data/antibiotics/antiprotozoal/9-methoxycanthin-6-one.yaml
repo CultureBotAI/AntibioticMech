@@ -1,0 +1,49 @@
+identifier: CHEBI:66699
+label: 9-methoxycanthin-6-one
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An indole alkaloid that is the 9-methoxy derivative of canthin-6-one.
+  Isolated from Eurycoma longifolia and Simaba multiflora, it exhibits cytotoxic activity
+  towards human cancer cell lines.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 9-methoxy-6H-indolo[3,2,1-de][1,5]naphthyridin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 13-methoxy-1,6-diazatetracyclo[7.6.1.0(5,16).0(10,15)]hexadeca-3,5(16),6,8,10,12,14-heptaen-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 8-methoxycanthin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:38163
+- CHEBI:38958
+xrefs:
+- reaxys:4470310
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: COc1ccc2c3ccnc4ccc(=O)n(c2c1)c43
+  standard_inchi: InChI=1S/C15H10N2O2/c1-19-9-2-3-10-11-6-7-16-12-4-5-14(18)17(15(11)12)13(10)8-9/h2-8H,1H3
+  standard_inchi_key: OWCRARVHWCCRAG-UHFFFAOYSA-N
+  molecular_formula: C15H10N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 250.257
+  monoisotopic_mass: 250.07423
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66699
+  source_label: 9-methoxycanthin-6-one
+  minted_identifier: antibioticmech:chebi-4b5f7d2099
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

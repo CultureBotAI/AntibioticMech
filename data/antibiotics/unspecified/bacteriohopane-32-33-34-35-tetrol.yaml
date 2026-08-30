@@ -1,0 +1,56 @@
+identifier: CHEBI:132468
+label: bacteriohopane-32,33,34,35-tetrol
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hopanoid that is bacteriohopane carrying four hydroxy substituents at
+  positions 32, 33, 34 and 35.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S,3S,4R,7R)-7-[(3R,3aS,5aR,5bR,7aS,11aS,11bR,13aR,13bS)-5a,5b,8,8,11a,13b-hexamethylicosahydro-1H-cyclopenta[a]chrysen-3-yl]octane-1,2,3,4-tetrol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (32R,33R,34S)-32,33,34,35-bacteriohopanetetrol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 32,33,34,35-bacteriohopanetetrol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bacteriohopanetetrol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetrahydroxybacteriohopane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33573
+- CHEBI:51963
+xrefs:
+- kegg.compound:C21119
+- lipidmaps:LMPR04000004
+- metacyc.compound:CPD-14519
+- reaxys:8603395
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12CC[C@]3([H])[C@@]4(C)CC[C@]([H])([C@H](C)CC[C@@H](O)[C@@H](O)[C@@H](O)CO)[C@]4([H])CC[C@@]3(C)[C@]1(C)CC[C@@]1([H])C(C)(C)CCC[C@]21C'
+  standard_inchi: InChI=1S/C35H62O4/c1-22(9-10-25(37)30(39)26(38)21-36)23-13-18-32(4)24(23)14-19-34(6)28(32)11-12-29-33(5)17-8-16-31(2,3)27(33)15-20-35(29,34)7/h22-30,36-39H,8-21H2,1-7H3/t22-,23-,24+,25-,26+,27+,28-,29-,30-,32+,33+,34-,35-/m1/s1
+  standard_inchi_key: JMKBTQYGOKJMBJ-ZQPPIKFSSA-N
+  molecular_formula: C35H62O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 546.877
+  monoisotopic_mass: 546.46481
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:132468
+  source_label: bacteriohopane-32,33,34,35-tetrol
+  minted_identifier: antibioticmech:chebi-97a7732218
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

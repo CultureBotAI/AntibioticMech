@@ -1,0 +1,65 @@
+identifier: CHEBI:231501
+label: potassium permanganate
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An inorganic potassium salt of permanganic acid.
+definition_source: ChEBI
+synonyms:
+- synonym_text: potassium tetraoxidomanganate(1−)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chameleon mineral
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Condy's crystals
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: KMnO4
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: permanganate of potash
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: permanganic acid (HMnO4), potassium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: permanganic acid potassium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: potassium manganate(VII)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:190303
+xrefs:
+- cas:7722-64-7
+- drugbank:DB13831
+- foodb.food:FDB016259
+- kegg.drug:D02053
+- reaxys:11343348
+- wikipedia.en:Potassium_permanganate
+activity_roles:
+- CHEBI:48219
+chemical_structure:
+  smiles: '[K+].[O]=[Mn](=[O])(=[O])[O-]'
+  standard_inchi: InChI=1S/K.Mn.4O/q+1;;;;;-1
+  standard_inchi_key: VZJVWSHVAAUDKD-UHFFFAOYSA-N
+  molecular_formula: K.MnO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 158.032
+  monoisotopic_mass: 157.88141
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:231501
+  source_label: potassium permanganate
+  minted_identifier: antibioticmech:chebi-8d0ccca78b
+  role_terms:
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

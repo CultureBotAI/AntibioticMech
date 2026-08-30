@@ -1,0 +1,44 @@
+identifier: CHEBI:66539
+label: syncarpamide
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An alkaloid that is the di-O-cinnamoyl derivative of 3,4-di-O-methylnorepinephrine.
+  Isolated from Zanthoxylum syncarpum, it exhibits antiplasmodial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S)-1-(3,4-dimethoxyphenyl)-2-{[(2E)-3-phenylprop-2-enoyl]amino}ethyl
+    (2E)-3-phenylprop-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:22315
+- CHEBI:36087
+- CHEBI:51751
+xrefs:
+- reaxys:9955030
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: COc1ccc([C@@H](CNC(=O)/C=C/c2ccccc2)OC(=O)/C=C/c2ccccc2)cc1OC
+  standard_inchi: InChI=1S/C28H27NO5/c1-32-24-16-15-23(19-25(24)33-2)26(34-28(31)18-14-22-11-7-4-8-12-22)20-29-27(30)17-13-21-9-5-3-6-10-21/h3-19,26H,20H2,1-2H3,(H,29,30)/b17-13+,18-14+/t26-/m1/s1
+  standard_inchi_key: CUXXAUBWEIJETF-AMVLLGRPSA-N
+  molecular_formula: C28H27NO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 457.526
+  monoisotopic_mass: 457.18892
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66539
+  source_label: syncarpamide
+  minted_identifier: antibioticmech:chebi-a022c0a5c9
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

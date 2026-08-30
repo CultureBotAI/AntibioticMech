@@ -1,0 +1,50 @@
+identifier: CHEBI:141334
+label: palmariol B
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzochromenone that is 6H-benzo[c]chromen-6-one which is substituted
+  by a methyl group at position 1, chloro group at position 2, hydroxy groups at positions
+  positions 3 and 7, and by a methoxy group at position 9.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-chloro-3,7-dihydroxy-9-methoxy-1-methyl-6H-benzo[c]chromen-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-chloro-3,7-dihydroxy-9-methoxy-1-methyl-6H-dibenzo[b,d]pyran-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18946
+- CHEBI:33822
+- CHEBI:35618
+- CHEBI:36683
+- CHEBI:64986
+xrefs:
+- reaxys:21206504
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1cc(O)c2c(=O)oc3cc(O)c(Cl)c(C)c3c2c1
+  standard_inchi: InChI=1S/C15H11ClO5/c1-6-12-8-3-7(20-2)4-9(17)13(8)15(19)21-11(12)5-10(18)14(6)16/h3-5,17-18H,1-2H3
+  standard_inchi_key: WMOJBLDBGQOTOS-UHFFFAOYSA-N
+  molecular_formula: C15H11ClO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 306.701
+  monoisotopic_mass: 306.0295
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141334
+  source_label: palmariol B
+  minted_identifier: antibioticmech:chebi-9481041fb0
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

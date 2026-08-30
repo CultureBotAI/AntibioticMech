@@ -1,0 +1,66 @@
+identifier: CHEBI:8464
+label: prontosil
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diphenyldiazene compound having two amino substituents at the 2- and
+  4-positions and an aminosulphonyl substituent at the 4'-position. It was the first
+  antibacterial drug, (introduced 1935) and the first of the sulfonamide antibiotics.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-[(2,4-diaminophenyl)diazenyl]benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Prontosil
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Prontosil rubrum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rubiazol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfamidochrysoidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-((2,4-Diaminophenyl)azo)benzenesulphonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22682
+- CHEBI:35358
+xrefs:
+- cas:103-12-8
+- drugcentral:3561
+- kegg.compound:C07573
+- kegg.drug:D08542
+- patent:DE607537
+- patent:US2085037
+- reaxys:757127
+- wikipedia.en:Prontosil
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: Nc1ccc(/N=N/c2ccc(S(N)(=O)=O)cc2)c(N)c1
+  standard_inchi: InChI=1S/C12H13N5O2S/c13-8-1-6-12(11(14)7-8)17-16-9-2-4-10(5-3-9)20(15,18)19/h1-7H,13-14H2,(H2,15,18,19)/b17-16+
+  standard_inchi_key: ABBQGOCHXSPKHJ-WUKNDPDISA-N
+  molecular_formula: C12H13N5O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 291.336
+  monoisotopic_mass: 291.079
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:8464
+  source_label: prontosil
+  minted_identifier: antibioticmech:chebi-2190edc2f6
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,51 @@
+identifier: CHEBI:70168
+label: fellutanine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 2,5-diketopiperazines that is piperazine-2,5-dione
+  substituted by 1H-indol-3-ylmethyl groups at positions 3 and 6 respectively. Isolated
+  from Penicillium species, it exhibits antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,6S)-3,6-bis(1H-indol-3-ylmethyl)piperazine-2,5-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cyclo(Trp-Trp)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cyclo-(L-Trp-D-Trp)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fellutanine A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38958
+- CHEBI:65061
+xrefs:
+- reaxys:8651145
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C1N[C@H](Cc2cnc3ccccc23)C(=O)N[C@H]1Cc1cnc2ccccc12
+  standard_inchi: InChI=1S/C22H20N4O2/c27-21-19(9-13-11-23-17-7-3-1-5-15(13)17)25-22(28)20(26-21)10-14-12-24-18-8-4-2-6-16(14)18/h1-8,11-12,19-20,23-24H,9-10H2,(H,25,28)(H,26,27)/t19-,20+
+  standard_inchi_key: DNHODRZUCGXYKU-BGYRXZFFSA-N
+  molecular_formula: C22H20N4O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 372.428
+  monoisotopic_mass: 372.15863
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70168
+  source_label: fellutanine
+  minted_identifier: antibioticmech:chebi-23bf202db7
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

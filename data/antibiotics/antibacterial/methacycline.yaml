@@ -1,0 +1,87 @@
+identifier: CHEBI:6805
+label: methacycline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracycline that is the 6-methylene analogue of oxytetracycline, obtained
+  by formal dehydration at position 6.
+definition_source: ChEBI
+synonyms:
+- synonym_text: metaciclina
+  synonym_type: INN
+  source: chebi
+- synonym_text: metacycline
+  synonym_type: INN
+  source: chebi
+- synonym_text: metacyclinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (4S,4aR,5S,5aR,12aS)-4-(dimethylamino)-3,5,10,12,12a-pentahydroxy-6-methylene-1,11-dioxo-1,4,4a,5,5a,6,11,12a-octahydrotetracene-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Demethyl-6-deoxy-5-hydroxy-6-methylenetetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Deoxy-6-demethyl-6-methylene-5-oxytetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Methylene-5-hydroxytetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Methylene-5-oxytetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Methyleneoxytetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methacyclinum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methylenecycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rondomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tri-methacycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:140324
+- CHEBI:26895
+xrefs:
+- cas:914-00-1
+- drugbank:DB00931
+- drugcentral:1727
+- kegg.compound:C07654
+- kegg.drug:D04972
+- patent:US2984686
+- reaxys:2230316
+- wikipedia.en:Methacycline
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H][C@@]12C(=C)c3cccc(O)c3C(=O)C1=C(O)[C@]1(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@]1([H])[C@H]2O'
+  standard_inchi: InChI=1S/C22H22N2O8/c1-7-8-5-4-6-9(25)11(8)16(26)12-10(7)17(27)14-15(24(2)3)18(28)13(21(23)31)20(30)22(14,32)19(12)29/h4-6,10,14-15,17,25,27-29,32H,1H2,2-3H3,(H2,23,31)/t10-,14-,15+,17+,22+/m1/s1
+  standard_inchi_key: MHIGBKBJSQVXNH-IWVLMIASSA-N
+  molecular_formula: C22H22N2O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 442.424
+  monoisotopic_mass: 442.13762
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6805
+  source_label: methacycline
+  minted_identifier: antibioticmech:chebi-8a2a0e734a
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

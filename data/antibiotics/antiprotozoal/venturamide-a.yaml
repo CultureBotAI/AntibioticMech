@@ -1,0 +1,44 @@
+identifier: CHEBI:66353
+label: venturamide A
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An eighteen-membered homodetic cyclic peptide which is isolated from Oscillatoria
+  sp. and exhibits antimalarial activity against the W2 chloroquine-resistant strain
+  of the malarial parasite, Plasmodium falciparum.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4R,11R,18R)-4,7,11-trimethyl-18-(propan-2-yl)-6-oxa-13,20-dithia-3,10,17,22,23,24-hexaazatetracyclo[17.2.1.15,8.112,15]tetracosa-1(21),5(24),7,12(23),14,19(22)-hexaene-2,9,16-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24613
+- CHEBI:38418
+- CHEBI:46812
+- CHEBI:51026
+xrefs:
+- reaxys:8735484
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: Cc1oc2nc1C(=O)N[C@H](C)c1nc(cs1)C(=O)N[C@H](C(C)C)c1nc(cs1)C(=O)N[C@@H]2C
+  standard_inchi: InChI=1S/C21H24N6O4S2/c1-8(2)14-21-25-12(7-33-21)16(28)22-9(3)19-27-15(11(5)31-19)18(30)23-10(4)20-24-13(6-32-20)17(29)26-14/h6-10,14H,1-5H3,(H,22,28)(H,23,30)(H,26,29)/t9-,10-,14-/m1/s1
+  standard_inchi_key: OJMSNONHTSXZKM-GPCCPHFNSA-N
+  molecular_formula: C21H24N6O4S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 488.595
+  monoisotopic_mass: 488.13005
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66353
+  source_label: venturamide A
+  minted_identifier: antibioticmech:chebi-2f7d5f185e
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

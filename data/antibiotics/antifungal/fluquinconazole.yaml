@@ -1,0 +1,58 @@
+identifier: CHEBI:83923
+label: fluquinconazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of quinazolines that is 6-fluoroquinazolin-4-one
+  carrying additional 1,2,4-triazol-1-yl and 2,4-dichlorophenyl substituents at positions
+  2 and 3 respectively. A fungicide used to control Ascomycetes, Deuteromycetes and
+  Basidiomycetes spp. on cereals, beets and fruit.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-(2,4-dichlorophenyl)-6-fluoro-2-(1H-1,2,4-triazol-1-yl)quinazolin-4(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(2,4-Dichlorophenyl)-6-fluoro-2-(1H-1,2,4-triazol-1-yl)-4(3H)-quinazolinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23697
+- CHEBI:35727
+- CHEBI:37143
+- CHEBI:38530
+- CHEBI:87067
+- CHEBI:87100
+xrefs:
+- cas:136426-54-5
+- patent:EP2289324
+- patent:NZ553660
+- patent:NZ585433
+- pesticides:fluquinconazol
+- ppdb:342
+- reaxys:11158677
+activity_roles:
+- CHEBI:77884
+- CHEBI:86328
+chemical_structure:
+  smiles: O=c1c2cc(F)ccc2nc(-n2cncn2)n1-c1ccc(Cl)cc1Cl
+  standard_inchi: InChI=1S/C16H8Cl2FN5O/c17-9-1-4-14(12(18)5-9)24-15(25)11-6-10(19)2-3-13(11)22-16(24)23-8-20-7-21-23/h1-8H
+  standard_inchi_key: IJJVMEJXYNJXOJ-UHFFFAOYSA-N
+  molecular_formula: C16H8Cl2FN5O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 376.178
+  monoisotopic_mass: 375.00899
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83923
+  source_label: fluquinconazole
+  minted_identifier: antibioticmech:chebi-95fb83ef63
+  role_terms:
+  - CHEBI:77884
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

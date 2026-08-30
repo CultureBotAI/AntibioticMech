@@ -1,0 +1,43 @@
+identifier: CHEBI:69518
+label: rubiarbonol G
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pentacyclic triterpenoid of the class of arborinane-type terpenoids
+  isolated from the roots of Rubia yunnanensis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,3S,3aR,5aS,5bS,6S,7aR,9S,11aS,13aR,13bR)-6,9-dihydroxy-3a-(hydroxymethyl)-5a,8,8,11a,13a-pentamethyl-3-(propan-2-yl)-2,3,3a,4,5,5a,5b,6,7,7a,8,9,10,11,11a,13,13a,13b-octadecahydro-1H-cyclopenta[a]chrysen-1-yl
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25872
+- CHEBI:27136
+- CHEBI:47622
+xrefs:
+- reaxys:9308605
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12[C@H](OC(C)=O)C[C@@H](C(C)C)[C@]1(CO)CC[C@]1(C)[C@]2(C)CC=C2[C@@]1([H])[C@@H](O)C[C@@]1([H])C(C)(C)[C@@H](O)CC[C@]21C'
+  standard_inchi: InChI=1S/C32H52O5/c1-18(2)21-15-23(37-19(3)34)27-31(8)12-9-20-26(30(31,7)13-14-32(21,27)17-33)22(35)16-24-28(4,5)25(36)10-11-29(20,24)6/h9,18,21-27,33,35-36H,10-17H2,1-8H3/t21-,22-,23+,24-,25-,26-,27+,29+,30-,31+,32+/m0/s1
+  standard_inchi_key: IPFJEJXCPFOYQR-CRBXCGNKSA-N
+  molecular_formula: C32H52O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 516.763
+  monoisotopic_mass: 516.38147
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69518
+  source_label: rubiarbonol G
+  minted_identifier: antibioticmech:chebi-03d8dfd056
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

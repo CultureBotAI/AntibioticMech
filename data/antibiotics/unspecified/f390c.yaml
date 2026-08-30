@@ -1,0 +1,46 @@
+identifier: CHEBI:65894
+label: F390C
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class xanthones which consists of a dihydroxanthone skeleton
+  substituted by hydroxy groups at positions 4 and 8, a hydroxymethyl group at position
+  6 and a methoxycarbonyl group at position 4a (the 4R,4aS stereoisomer). It is isolated
+  from Penicillium and exhibits potent antitumour activity against both human and
+  murine tumour cell lines.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (4R,4aS)-4,8-dihydroxy-6-(hydroxymethyl)-9-oxo-4,9-dihydro-4aH-xanthene-4a-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22743
+- CHEBI:25248
+- CHEBI:33853
+- CHEBI:51149
+xrefs:
+- reaxys:8161679
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COC(=O)[C@]12Oc3cc(CO)cc(O)c3C(=O)C1=CC=C[C@H]2O
+  standard_inchi: InChI=1S/C16H14O7/c1-22-15(21)16-9(3-2-4-12(16)19)14(20)13-10(18)5-8(7-17)6-11(13)23-16/h2-6,12,17-19H,7H2,1H3/t12-,16+/m1/s1
+  standard_inchi_key: PMHCAQUSIVAZPO-WBMJQRKESA-N
+  molecular_formula: C16H14O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 318.281
+  monoisotopic_mass: 318.07395
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65894
+  source_label: F390C
+  minted_identifier: antibioticmech:chebi-36eb9f97d4
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

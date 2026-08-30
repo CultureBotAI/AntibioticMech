@@ -1,0 +1,64 @@
+identifier: CHEBI:4045
+label: cyprodinil
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of aminopyrimidine that is N-phenylpyrimidin-2-amine
+  carrying additional cyclopropyl and methyl substituents at positions 4 and 6 respectively.
+  A broad spectrum fungicide used to control a range of pathogens including Tapesia
+  yallundae, Botrytis spp., Alternaria spp. and Rhynchospium secalis. Whilst it is
+  a recognised irritant no serious human health concerns have been identified. It
+  is moderately toxic to birds as well as most aquatic organisms and earthworms, but
+  it is not considered toxic to honeybees.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-cyclopropyl-6-methyl-N-phenylpyrimidin-2-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Anilino-4-cyclopropyl-6-methylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Cyclopropyl-6-methyl-N-phenyl-2-pyrimidinamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HSDB 7019
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38338
+- CHEBI:50995
+- CHEBI:51454
+- CHEBI:87208
+xrefs:
+- cas:121552-61-2
+- hmdb:HMDB0034853
+- kegg.compound:C10914
+- patent:EP1023838
+- patent:US2011021580
+- pesticides:cyprodinil
+- ppdb:199
+- reaxys:7813601
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: Cc1cc(C2CC2)nc(Nc2ccccc2)n1
+  standard_inchi: InChI=1S/C14H15N3/c1-10-9-13(11-7-8-11)17-14(15-10)16-12-5-3-2-4-6-12/h2-6,9,11H,7-8H2,1H3,(H,15,16,17)
+  standard_inchi_key: HAORKNGNJCEJBX-UHFFFAOYSA-N
+  molecular_formula: C14H15N3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 225.295
+  monoisotopic_mass: 225.1266
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4045
+  source_label: cyprodinil
+  minted_identifier: antibioticmech:chebi-d966d8deec
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

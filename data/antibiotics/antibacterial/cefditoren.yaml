@@ -1,0 +1,91 @@
+identifier: CHEBI:59343
+label: cefditoren
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A broad spectrum, third-generation cephalosporin antibiotic with (Z)-2-(4-methyl-1,3-thiazol-5-yl)ethenyl
+  and (2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetamido groups at positions
+  3 and 7, respectively, of the cephem skeleton. Generally administered as its orally
+  absorbed pivaloyloxymethyl ester prodrug, it is used for the treatment of mild to
+  moderate infections caused by susceptible strains of microorganisms in acute bacterial
+  exacerbation of chronic bronchitis, community-acquired pneumonia, pharyngitis/tonsillitis,
+  and uncomplicated skin and skin-structure infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7β-(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetamido-3-[(Z)-2-(4-methyl-1,3-thiazol-5-yl)ethenyl]-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-7-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino}-3-[(Z)-2-(4-methyl-1,3-thiazol-5-yl)ethenyl]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CDN
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23066
+- CHEBI:33575
+- ARO:0000032
+xrefs:
+- ARO:3000649
+- cas:104145-95-1
+- drugbank:DB01066
+- kegg.drug:D07639
+- patent:EP475610
+- patent:US2003225265
+- patent:US4839650
+- reaxys:8174297
+- chembl:CHEMBL1743
+- pubchem.compound:9571074
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(/C=C\c3scnc3C)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1'
+  standard_inchi: InChI=1S/C19H18N6O5S3/c1-8-11(33-7-21-8)4-3-9-5-31-17-13(16(27)25(17)14(9)18(28)29)23-15(26)12(24-30-2)10-6-32-19(20)22-10/h3-4,6-7,13,17H,5H2,1-2H3,(H2,20,22)(H,23,26)(H,28,29)/b4-3-,24-12-/t13-,17-/m1/s1
+  standard_inchi_key: KMIPKYQIOVAHOP-YLGJWRNMSA-N
+  molecular_formula: C19H18N6O5S3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 506.591
+  monoisotopic_mass: 506.05008
+source_concepts:
+- source: ARO
+  source_id: ARO:3000649
+  source_label: cefditoren
+  minted_identifier: antibioticmech:aro-5093eead58
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:59343
+  source_label: cefditoren
+  minted_identifier: antibioticmech:chebi-2516619fbe
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004446
+  label: Haemophilus influenzae PBP3 conferring resistance to beta-lactam antibiotics
+  evidence:
+  - reference: ARO:3004446
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000649 (cefditoren);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000649 (cefditoren); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

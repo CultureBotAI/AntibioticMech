@@ -1,0 +1,66 @@
+retrieved_on: '2026-08-29'
+generated_by: scripts/extract_source_inventory.py
+sources:
+  chebi:
+    homepage: https://www.ebi.ac.uk/chebi/
+    license: CC BY 4.0
+    min_stars: 3
+  aro:
+    homepage: https://card.mcmaster.ca/
+    license: CARD academic use
+    molecule_root: ARO:1000003
+downloads:
+  compounds.tsv.gz:
+    url: https://ftp.ebi.ac.uk/pub/databases/chebi/flat_files/compounds.tsv.gz
+    bytes: 6979579
+    sha256: a2ac83b23ed4e54d656a5e0de065147996832e546f22c33117f5de055e9dd81c
+  relation.tsv.gz:
+    url: https://ftp.ebi.ac.uk/pub/databases/chebi/flat_files/relation.tsv.gz
+    bytes: 2694999
+    sha256: 8949d8132a6c59403ebc258732ed7b7b8420b6c54e59932acf0177532a011d0b
+  structures.tsv.gz:
+    url: https://ftp.ebi.ac.uk/pub/databases/chebi/flat_files/structures.tsv.gz
+    bytes: 92799035
+    sha256: e84d6f83f8b8ec334dc73d44a1da7a3db5b1a37243406adb39c8433363f6d11a
+  chemical_data.tsv.gz:
+    url: https://ftp.ebi.ac.uk/pub/databases/chebi/flat_files/chemical_data.tsv.gz
+    bytes: 5058029
+    sha256: 70cfeaa21a765457c260642e484f781a27dbee2587e836f92c6b2c06eeca1a50
+  database_accession.tsv.gz:
+    url: https://ftp.ebi.ac.uk/pub/databases/chebi/flat_files/database_accession.tsv.gz
+    bytes: 3946684
+    sha256: a60ae3f4c9f9dc177906e155f43c7e095de9c905cb2dba15d29a351e2fcbad9d
+  source.tsv.gz:
+    url: https://ftp.ebi.ac.uk/pub/databases/chebi/flat_files/source.tsv.gz
+    bytes: 3723
+    sha256: a02a6a7e65d95c2a0a7392b743de7942b96048ea2b1021a240b73fcfbb02e0dd
+  names.tsv.gz:
+    url: https://ftp.ebi.ac.uk/pub/databases/chebi/flat_files/names.tsv.gz
+    bytes: 9495209
+    sha256: b6ccd1a1d3f79717c9254a0f88ffb8277403ba5824e96d32878f5064e655d2a3
+  aro.obo:
+    url: https://purl.obolibrary.org/obo/aro.obo
+    bytes: 3318162
+    sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+inventories:
+  aro_antibiotics.tsv:
+    rows: 644
+    bytes: 247413
+    sha256: abc0e4f3968a87a90fde9d9ff45e3fef51b0ed6b612a1d3e747d68d4a60f2ed1
+  aro_resistance_edges.tsv:
+    rows: 4555
+    bytes: 539802
+    sha256: 3ab6cd0327b6354333074aeadc7425916928db88256794267e5453bbecb19bad
+  aro_target_edges.tsv:
+    rows: 252
+    bytes: 87594
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+  chebi_antimicrobials.tsv:
+    rows: 2661
+    bytes: 2540740
+    sha256: 8256420e4d3304bbee022f16090b871b28baf756df5e6c3fcd008eae27b8b3f0
+  pubchem_structures.tsv:
+    rows: 271
+    bytes: 158742
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    source: PubChem PUG REST (scripts/enrich_pubchem_structures.py)

@@ -1,0 +1,88 @@
+identifier: CHEBI:223316
+label: (+)-artemisinin
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sesquiterpene lactone obtained from sweet wormwood, Artemisia annua,
+  which is used as an antimalarial for the treatment of multi-drug resistant strains
+  of falciparum malaria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: artemisinin
+  synonym_type: INN
+  source: chebi
+- synonym_text: artemisininum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (3R,5aS,6R,8aS,9R,12S,12aR)-3,6,9-trimethyloctahydro-3,12-epoxypyrano[4,3-j][1,2]benzodioxepin-10(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,5,9-trimethyl-(1R,4S,5R,9R,12S,13R)-11,14,15,16-tetraoxatetracyclo[10.3.1.04,13.08,13]hexadecan-10-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Octahydro-3,6,9-trimethyl-3,12-epoxy-12H-pyrano(4,3-j)-1,2-benzodioxepin-10(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: QHS
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Qing Hau Sau
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Qinghaosu
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quing Hau Sau
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: arteannuin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: artemisinina
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: artemisinine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: huanghuahaosu
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25702
+- CHEBI:37667
+xrefs:
+- cas:63968-64-9
+- drugcentral:3871
+- gmelin:1755493
+- kegg.compound:C09538
+- kegg.drug:D02481
+- knapsack:C00003359
+- lincs.smallmolecule:LSM-6546
+- lipidmaps:LMPR0103190003
+- metacyc.compound:CPD-7561
+- reaxys:4194670
+- wikipedia.en:Artemisinin
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]12OC(=O)[C@H](C)[C@]3([H])CC[C@@H](C)[C@]4([H])CC[C@@](C)(OO[C@]143)O2'
+  standard_inchi: InChI=1S/C15H22O5/c1-8-4-5-11-9(2)12(16)17-13-15(11)10(8)6-7-14(3,18-13)19-20-15/h8-11,13H,4-7H2,1-3H3/t8-,9-,10+,11+,13-,14-,15-/m1/s1
+  standard_inchi_key: BLUAFEHZUWYNDE-NNWCWBAJSA-N
+  molecular_formula: C15H22O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 282.336
+  monoisotopic_mass: 282.14672
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:223316
+  source_label: (+)-artemisinin
+  minted_identifier: antibioticmech:chebi-ab983ede98
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,58 @@
+identifier: CHEBI:81994
+label: fenfuram
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An anilide having 2-methyl-2-furoyl as the N-acyl group. A seed-treatment
+  fungicide used to control bunts and smuts in cereals.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-Methyl-3-furanilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Methyl-N-phenyl-3-furancarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Methyl-N-phenylfuran-3-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Methylfuran-3-carboxanilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fénfurame
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:13248
+- CHEBI:24129
+- CHEBI:87019
+xrefs:
+- cas:24691-80-3
+- kegg.compound:C18833
+- pesticides:fenfuram
+- ppdb:297
+- reaxys:153863
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: Cc1occc1C(=O)Nc1ccccc1
+  standard_inchi: InChI=1S/C12H11NO2/c1-9-11(7-8-15-9)12(14)13-10-5-3-2-4-6-10/h2-8H,1H3,(H,13,14)
+  standard_inchi_key: JFSPBVWPKOEZCB-UHFFFAOYSA-N
+  molecular_formula: C12H11NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 201.225
+  monoisotopic_mass: 201.07898
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81994
+  source_label: fenfuram
+  minted_identifier: antibioticmech:chebi-8e61a03574
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

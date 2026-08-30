@@ -1,0 +1,47 @@
+identifier: CHEBI:2413
+label: acetylblasticidin S
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of blasticidins that is blasticidin S in which the
+  side-chain amino group is acetylated.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-(4-{[(3S)-3-acetamido-5-(N-methylcarbamimidamido)pentanoyl]amino}-2,3,4-trideoxy-β-D-erythro-hex-2-enopyranuronosyl)-4-aminopyrimidin-2(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetylblasticidin S
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22905
+- CHEBI:24436
+- CHEBI:27856
+- CHEBI:38104
+xrefs:
+- kegg.compound:C02808
+- reaxys:8522748
+activity_roles:
+- CHEBI:25605
+chemical_structure:
+  smiles: CC(=O)N[C@@H](CCN(C)C(=N)N)CC(=O)N[C@H]1C=C[C@H](n2ccc(N)nc2=O)O[C@@H]1C(=O)O
+  standard_inchi: InChI=1S/C19H28N8O6/c1-10(28)23-11(5-7-26(2)18(21)22)9-14(29)24-12-3-4-15(33-16(12)17(30)31)27-8-6-13(20)25-19(27)32/h3-4,6,8,11-12,15-16H,5,7,9H2,1-2H3,(H3,21,22)(H,23,28)(H,24,29)(H,30,31)(H2,20,25,32)/t11-,12-,15+,16-/m0/s1
+  standard_inchi_key: KKMQGSAQSNGBOY-RKLWJJNISA-N
+  molecular_formula: C19H28N8O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 464.483
+  monoisotopic_mass: 464.21318
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2413
+  source_label: acetylblasticidin S
+  minted_identifier: antibioticmech:chebi-35d7a045a5
+  role_terms:
+  - CHEBI:25605
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

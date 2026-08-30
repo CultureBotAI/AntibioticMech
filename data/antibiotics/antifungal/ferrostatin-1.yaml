@@ -1,0 +1,54 @@
+identifier: CHEBI:173086
+label: ferrostatin-1
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An ethyl ester resulting from the formal condensation of the carboxy group
+  of 3-amino-4-(cyclohexylamino)benzoic acid with ethanol. It is a potent inhibitor
+  of ferroptosis, a distinct non-apoptotic form of cell death caused by lipid peroxidation.
+  It is also a radical-trapping antioxidant and has the ability to reduce the accumulation
+  of lipid peroxides and chain-carrying peroxyl radicals.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ethyl 3-amino-4-(cyclohexylamino)benzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-amino-4-cyclohexylaminobenzoic acid ethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fer-1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ferrrostatin 1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23990
+- CHEBI:48975
+- CHEBI:50471
+xrefs:
+- cas:347174-05-4
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCOC(=O)c1ccc(NC2CCCCC2)c(N)c1
+  standard_inchi: InChI=1S/C15H22N2O2/c1-2-19-15(18)11-8-9-14(13(16)10-11)17-12-6-4-3-5-7-12/h8-10,12,17H,2-7,16H2,1H3
+  standard_inchi_key: UJHBVMHOBZBWMX-UHFFFAOYSA-N
+  molecular_formula: C15H22N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 262.353
+  monoisotopic_mass: 262.16813
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:173086
+  source_label: ferrostatin-1
+  minted_identifier: antibioticmech:chebi-8db000c353
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

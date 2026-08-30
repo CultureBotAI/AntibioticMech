@@ -1,0 +1,52 @@
+identifier: CHEBI:5569
+label: iminoctadine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of guanidines that is dioctylamine in which a hydrogen
+  from each of the terminal methyl groups is replaced by a guanidino group. Once used
+  as a fungicidal seed dressing, it is no longer approved for use in the European
+  Union.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,1'-(iminodioctane-8,1-diyl)diguanidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Guazatine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24436
+- CHEBI:50995
+- CHEBI:86417
+xrefs:
+- cas:13516-27-3
+- kegg.compound:C10997
+- pdb-ccd:GZZ
+- pesticides:iminoctadine
+- ppdb:398
+- reaxys:1995978
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: N=C(N)NCCCCCCCCNCCCCCCCCNC(=N)N
+  standard_inchi: InChI=1S/C18H41N7/c19-17(20)24-15-11-7-3-1-5-9-13-23-14-10-6-2-4-8-12-16-25-18(21)22/h23H,1-16H2,(H4,19,20,24)(H4,21,22,25)
+  standard_inchi_key: RONFGUROBZGJKP-UHFFFAOYSA-N
+  molecular_formula: C18H41N7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 355.575
+  monoisotopic_mass: 355.34234
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5569
+  source_label: iminoctadine
+  minted_identifier: antibioticmech:chebi-e493be1866
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

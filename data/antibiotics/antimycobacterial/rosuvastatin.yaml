@@ -1,0 +1,64 @@
+identifier: CHEBI:38545
+label: rosuvastatin
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dihydroxy monocarboxylic acid that is (6E)-7-{4-(4-fluorophenyl)-2-[methyl(methylsulfonyl)amino]-6-(propan-2-yl)pyrimidin-5-yl}
+  hept-6-enoic acid carrying two hydroxy substituents at positions 3 and 5 (the 3R,5S-diastereomer).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,5S,6E)-7-{4-(4-fluorophenyl)-2-[methyl(methylsulfonyl)amino]-6-(propan-2-yl)pyrimidin-5-yl}-3,5-dihydroxyhept-6-enoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3R,5S,6E)-7-(4-(4-fluorophenyl)-6-(1-methylethyl)-2-(ethyl(methylsulfonyl)amino)-5-pyrimidinyl)-3,5-dihydroxy-6-heptenoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3R,5S,6E)-7-{4-(4-fluorophenyl)-6-isopropyl-2-[methyl(methylsulfonyl)amino]pyrimidin-5-yl}-3,5-dihydroxyhept-6-enoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35358
+- CHEBI:35972
+- CHEBI:39447
+- CHEBI:83575
+- CHEBI:87635
+xrefs:
+- cas:287714-41-4
+- drugbank:DB01098
+- drugcentral:2406
+- hmdb:HMDB0015230
+- kegg.drug:D08492
+- patent:US2013035316
+- reaxys:9670765
+- wikipedia.en:Rosuvastatin
+activity_roles:
+- CHEBI:33231
+- CHEBI:33282
+- CHEBI:38068
+chemical_structure:
+  smiles: CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1/C=C/[C@@H](O)C[C@@H](O)CC(=O)O
+  standard_inchi: InChI=1S/C22H28FN3O6S/c1-13(2)20-18(10-9-16(27)11-17(28)12-19(29)30)21(14-5-7-15(23)8-6-14)25-22(24-20)26(3)33(4,31)32/h5-10,13,16-17,27-28H,11-12H2,1-4H3,(H,29,30)/b10-9+/t16-,17-/m1/s1
+  standard_inchi_key: BPRHUIZQVSMCRT-VEUZHWNKSA-N
+  molecular_formula: C22H28FN3O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 481.546
+  monoisotopic_mass: 481.16828
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:38545
+  source_label: rosuvastatin
+  minted_identifier: antibioticmech:chebi-f7c90d3f5f
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33282
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

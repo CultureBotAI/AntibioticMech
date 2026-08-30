@@ -1,0 +1,80 @@
+identifier: CHEBI:63284
+label: mycinamicin IV
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A mycinamicin composed of a 16-membered ring macrolactone core, an N,N-dimethylated
+  deoxysugar desosamine and a 2,3-di-O-methylated 6-deoxysugar mycinose.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[(2R,3R,4E,6E,9R,11S,12S,13S,14E)-2-ethyl-9,11,13-trimethyl-8,16-dioxo-12-{[3,4,6-trideoxy-3-(dimethylamino)-β-D-xylo-hexopyranosyl]oxy}oxacyclohexadeca-4,6,14-trien-3-yl]methyl
+    6-deoxy-2,3-di-O-methyl-β-D-allopyranoside'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:63276
+- ARO:0000000
+xrefs:
+- ARO:3001224
+- CHEBI:63276
+- pubchem.compound:6447311
+activity_roles:
+- CHEBI:33281
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: CC[C@H]1OC(=O)/C=C/[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@@H](C)C[C@@H](C)C(=O)/C=C/C=C/[C@@H]1CO[C@@H]1O[C@H](C)[C@@H](O)[C@@H](OC)[C@H]1OC
+  standard_inchi: InChI=1S/C37H61NO11/c1-11-29-26(20-45-37-35(44-10)34(43-9)31(41)25(6)47-37)14-12-13-15-28(39)22(3)18-23(4)33(21(2)16-17-30(40)48-29)49-36-32(42)27(38(7)8)19-24(5)46-36/h12-17,21-27,29,31-37,41-42H,11,18-20H2,1-10H3/b14-12+,15-13+,17-16+/t21-,22+,23-,24+,25+,26+,27-,29+,31+,32+,33+,34+,35+,36-,37+/m0/s1
+  standard_inchi_key: DBTIHDIIXPQOFR-JMHKOBKLSA-N
+  molecular_formula: C37H61NO11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 695.891
+  monoisotopic_mass: 695.42446
+source_concepts:
+- source: ARO
+  source_id: ARO:3001224
+  source_label: mycinamicin
+  minted_identifier: antibioticmech:aro-fe60dfd405
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:63284
+  source_label: mycinamicin IV
+  minted_identifier: antibioticmech:chebi-c4a3b14f93
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3001300
+  label: myrA
+  evidence:
+  - reference: ARO:3001300
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001224 (mycinamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3001301
+  label: RlmA(II)
+  evidence:
+  - reference: ARO:3001301
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001224 (mycinamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3001302
+  label: chrB
+  evidence:
+  - reference: ARO:3001302
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001224 (mycinamicin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3002827
+  label: tlrC
+  evidence:
+  - reference: ARO:3002827
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001224 (mycinamicin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

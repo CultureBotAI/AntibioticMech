@@ -1,0 +1,51 @@
+identifier: CHEBI:78283
+label: 8-demethyl-8-(α-L-rhamnosyl)tetracenomycin C
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of tetracenomycins that is 8-demethyltetracenomycin
+  C in which the hydroxyl hydrogen at position 8 is replaced by an α-L-rhamnosyl residue.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (6aR,7S,10aR)-3-[(6-deoxy-α-L-mannopyranosyl)oxy]-6a,7,10a,12-tetrahydroxy-8-methoxy-1-methyl-6,10,11-trioxo-6,6a,7,10,10a,11-hexahydrotetracene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 8-demethyl-8-α-L-rhamnosyl-tetracenomycin C
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:25248
+- CHEBI:27848
+- CHEBI:33853
+- CHEBI:3992
+- CHEBI:47985
+- CHEBI:48132
+- CHEBI:51689
+- CHEBI:63367
+xrefs:
+- metacyc.compound:CPD-16641
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COC(=O)c1c(O[C@@H]2O[C@@H](C)[C@H](O)[C@@H](O)[C@H]2O)cc2cc3c(c(O)c2c1C)C(=O)[C@]1(O)C(=O)C=C(OC)[C@@H](O)[C@]1(O)C3=O
+  standard_inchi: InChI=1S/C28H28O15/c1-8-15-10(6-12(16(8)25(37)41-4)43-26-21(33)20(32)18(30)9(2)42-26)5-11-17(19(15)31)24(36)27(38)14(29)7-13(40-3)23(35)28(27,39)22(11)34/h5-7,9,18,20-21,23,26,30-33,35,38-39H,1-4H3/t9-,18-,20+,21+,23+,26-,27+,28+/m0/s1
+  standard_inchi_key: QIJXKOOPLDVFLW-DWENXZEQSA-N
+  molecular_formula: C28H28O15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 604.517
+  monoisotopic_mass: 604.14282
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:78283
+  source_label: 8-demethyl-8-(α-L-rhamnosyl)tetracenomycin C
+  minted_identifier: antibioticmech:chebi-3284f2d9fe
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

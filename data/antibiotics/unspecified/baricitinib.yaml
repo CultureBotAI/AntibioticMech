@@ -1,0 +1,83 @@
+identifier: CHEBI:95341
+label: baricitinib
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyrrolopyrimidine that is 7H-pyrrolo[2,3-d]pyrimidine substituted by
+  a 1-[3-(cyanomethyl)-1-(ethanesulfonyl)azetidin-3-yl]-1H-pyrazol-4-yl group at position
+  5. It is an FDA approved selective Janus Kinase 1 and 2 (JAK1 and JAK2) inhibitor
+  used for the treatment of rheumatoid arthritis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Olumiant
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: baricitinibum
+  synonym_type: INN
+  source: chebi
+- synonym_text: '{1-(ethylsulfonyl)-3-[4-(7H-pyrrolo[2,3-d]pyrimidin-4-yl)-1H-pyrazol-1-yl]azetidin-3-yl}acetonitrile'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(ethylsulfonyl)-3-[4-(7H-pyrrolo[2,3-d]pyrimidin-4-yl)-1H-pyrazol-1-yl]-3-azetidineacetonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(3-(4-(3H-pyrrolo[2,3-d]pyrimidin-4-yl)-1H-pyrazol-1-yl)-1-(ethylsulfonyl)azetidin-3-yl)acetonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: INCB 028050
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: INCB-028050
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: INCB028050
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LY 3009104
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LY-3009104
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LY3009104
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18379
+- CHEBI:26410
+- CHEBI:35358
+- CHEBI:38670
+- CHEBI:38777
+xrefs:
+- cas:1187594-09-7
+- chemspider:26373084
+- drugbank:DB11817
+- hmdb:HMDB0248873
+- kegg.drug:D10308
+- lincs.smallmolecule:LSM-6709
+- pdb-ccd:3JW
+- wikipedia.en:Baricitinib
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CCS(=O)(=O)N1CC(CC#N)(n2cc(-c3ncnc4nccc34)cn2)C1
+  standard_inchi: InChI=1S/C16H17N7O2S/c1-2-26(24,25)22-9-16(10-22,4-5-17)23-8-12(7-21-23)14-13-3-6-18-15(13)20-11-19-14/h3,6-8,11H,2,4,9-10H2,1H3,(H,18,19,20)
+  standard_inchi_key: XUZMWHLSFXCVMG-UHFFFAOYSA-N
+  molecular_formula: C16H17N7O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 371.426
+  monoisotopic_mass: 371.11644
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:95341
+  source_label: baricitinib
+  minted_identifier: antibioticmech:chebi-e1b62d6a71
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

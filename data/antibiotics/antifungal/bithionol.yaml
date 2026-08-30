@@ -1,0 +1,80 @@
+identifier: CHEBI:3131
+label: bithionol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aryl sulfide that is diphenyl sulfide in which each phenyl group is
+  substituted at position 2 by hydroxy and at positions 3 and 5 by chlorine. A fungicide
+  and anthelmintic, it was used in various topical drug products for the treatment
+  of liver flukes, but withdrawn after being shown to be a potent photosensitizer
+  with the potential to cause serious skin disorders.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,2'-sulfanediylbis(4,6-dichlorophenol)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,2'-Dihydroxy-3,3',5,5'-tetrachlorodiphenyl sulfide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,2'-Thiobis(4,6-dichlorophenol)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Hydroxy-3,5-dichlorophenyl sulfide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bis(3,5-dichloro-2-hydroxyphenyl) sulfide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bithin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bithionol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bithionol sulfide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23697
+- CHEBI:26195
+- CHEBI:35683
+- CHEBI:38656
+- CHEBI:87039
+- CHEBI:87110
+xrefs:
+- beilstein:2003535
+- cas:97-18-7
+- drugbank:DB04813
+- drugcentral:3032
+- kegg.compound:C07967
+- kegg.drug:D00802
+- lincs.smallmolecule:LSM-2862
+- pdb-ccd:B1T
+- pesticides:bithionol
+- ppdb:2889
+- vsdb:2889
+- wikipedia.en:Bithionol
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: Oc1c(Cl)cc(Cl)cc1Sc1cc(Cl)cc(Cl)c1O
+  standard_inchi: InChI=1S/C12H6Cl4O2S/c13-5-1-7(15)11(17)9(3-5)19-10-4-6(14)2-8(16)12(10)18/h1-4,17-18H
+  standard_inchi_key: JFIOVJDNOJYLKP-UHFFFAOYSA-N
+  molecular_formula: C12H6Cl4O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 356.057
+  monoisotopic_mass: 353.88426
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3131
+  source_label: bithionol
+  minted_identifier: antibioticmech:chebi-d94d336aa7
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

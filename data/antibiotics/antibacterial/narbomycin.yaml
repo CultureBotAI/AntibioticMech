@@ -1,0 +1,90 @@
+identifier: CHEBI:29649
+label: narbomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide antibiotic that is narbonolide having a 3,4,6-trideoxy-3-(dimethylamino)-β-D-xylo-hexopyranosyl
+  residue attached at position 6. It is biosynthesised by Streptomyces venezuelae.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,5R,6S,7S,9R,11E,13R,14R)-14-ethyl-3,5,7,9,13-pentamethyl-2,4,10-trioxooxacyclotetradec-11-en-6-yl
+    3,4,6-trideoxy-3-(dimethylamino)-β-D-xylo-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 12-Deoxypicromycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Narbomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25105
+- CHEBI:51689
+- CHEBI:63367
+- ARO:0000000
+xrefs:
+- ARO:3001226
+- cas:6036-25-5
+- kegg.compound:C11998
+- metacyc.compound:CPD-13834
+- patent:US2006234958
+- patent:US6303767
+- pdb-ccd:NRB
+- reaxys:65732
+- chembl:CHEMBL1999880
+- pubchem.compound:5282036
+activity_roles:
+- CHEBI:33281
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: CC[C@H]1OC(=O)[C@H](C)C(=O)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@@H](C)C[C@@H](C)C(=O)/C=C/[C@H]1C
+  standard_inchi: InChI=1S/C28H47NO7/c1-10-23-15(2)11-12-22(30)16(3)13-17(4)26(19(6)24(31)20(7)27(33)35-23)36-28-25(32)21(29(8)9)14-18(5)34-28/h11-12,15-21,23,25-26,28,32H,10,13-14H2,1-9H3/b12-11+/t15-,16-,17+,18-,19+,20-,21+,23-,25-,26+,28+/m1/s1
+  standard_inchi_key: OXFYAOOMMKGGAI-JLTOUBQASA-N
+  molecular_formula: C28H47NO7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 509.684
+  monoisotopic_mass: 509.33525
+source_concepts:
+- source: ARO
+  source_id: ARO:3001226
+  source_label: narbomycin
+  minted_identifier: antibioticmech:aro-91bf4c54a3
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:29649
+  source_label: narbomycin
+  minted_identifier: antibioticmech:chebi-a3143dd619
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000598
+  label: Erm(31)
+  evidence:
+  - reference: ARO:3000598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001226 (narbomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3001265
+  label: Erm(30)
+  evidence:
+  - reference: ARO:3001265
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001226 (narbomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004592
+  label: erm(32)
+  evidence:
+  - reference: ARO:3004592
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001226 (narbomycin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

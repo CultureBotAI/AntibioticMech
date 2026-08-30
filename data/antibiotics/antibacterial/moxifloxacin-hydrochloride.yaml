@@ -1,0 +1,66 @@
+identifier: CHEBI:7008
+label: moxifloxacin hydrochloride
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrochloride comprising equimolar amounts of moxifloxacin and hydrogen
+  chloride.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Vigamox
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 1-cyclopropyl-6-fluoro-8-methoxy-7-[(4aS,7aS)-octahydro-6H-pyrrolo[3,4-b]pyridin-6-yl]-4-oxo-1,4-dihydroquinoline-3-carboxylic
+    acid hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4aS-cis)-1-Cyclopropyl-6-fluoro-1,4-dihydro-8-methoxy-7-(octahydro-6H-pyrrolol(3,4-b)pyridin-6-yl)-4-oxo-3-quinolinecarboxylic
+    acid, monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Cyclopropyl-6-fluoro-1,4-dihydro-8-methoxy-7-((4aS,7aS)-octahydro-6H-pyrrolo(3,4-b)pyridin-6-yl)-4-oxo-3-quinolinecarboxylic
+    acid, monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Moxifloxacin HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:186826-86-8
+- drugbank:DB00218
+- kegg.compound:C08054
+- kegg.drug:D00874
+- patent:US2010152229
+- patent:US2011212990
+- patent:WO2011121596
+- reaxys:8377447
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
+chemical_structure:
+  smiles: Cl.[H][C@@]12CCCN[C@]1([H])CN(c1c(F)cc3c(=O)c(C(=O)O)cn(C4CC4)c3c1OC)C2
+  standard_inchi: InChI=1S/C21H24FN3O4.ClH/c1-29-20-17-13(19(26)14(21(27)28)9-25(17)12-4-5-12)7-15(22)18(20)24-8-11-3-2-6-23-16(11)10-24;/h7,9,11-12,16,23H,2-6,8,10H2,1H3,(H,27,28);1H/t11-,16+;/m0./s1
+  standard_inchi_key: IDIIJJHBXUESQI-DFIJPDEKSA-N
+  molecular_formula: C21H24FN3O4.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 437.899
+  monoisotopic_mass: 437.15176
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:7008
+  source_label: moxifloxacin hydrochloride
+  minted_identifier: antibioticmech:chebi-30e897174c
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

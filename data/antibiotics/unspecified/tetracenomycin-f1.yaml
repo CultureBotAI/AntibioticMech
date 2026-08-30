@@ -1,0 +1,52 @@
+identifier: CHEBI:32205
+label: tetracenomycin F1
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracenomycin that is 1-methyl-11-oxo-6,11-dihydrotetracene-2-carboxylic
+  acid bearing four hydroxy substituents at positions 3, 8, 10 and 12.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,8,10,12-tetrahydroxy-1-methyl-11-oxo-6,11-dihydrotetracene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tcm F1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetracenomycin F1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:35868
+- CHEBI:48132
+xrefs:
+- cas:149791-45-7
+- kegg.compound:C12367
+- metacyc.compound:CPD-14353
+- reaxys:8806831
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: Cc1c(C(=O)O)c(O)cc2cc3c(c(O)c12)C(=O)c1c(O)cc(O)cc1C3
+  standard_inchi: InChI=1S/C20H14O7/c1-7-14-10(5-12(22)15(7)20(26)27)3-8-2-9-4-11(21)6-13(23)16(9)19(25)17(8)18(14)24/h3-6,21-24H,2H2,1H3,(H,26,27)
+  standard_inchi_key: BJSNGVYBQJIGRT-UHFFFAOYSA-N
+  molecular_formula: C20H14O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 366.325
+  monoisotopic_mass: 366.07395
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32205
+  source_label: tetracenomycin F1
+  minted_identifier: antibioticmech:chebi-73ce9574c3
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

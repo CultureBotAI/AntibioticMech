@@ -1,0 +1,63 @@
+identifier: CHEBI:133817
+label: doxorubicinol
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of tetracenequinones that is the major metabolite
+  of the anthracycline doxorubicin, a chemotherapeutic agent effective against a broad
+  range of malignant neoplasms. It is thought to exhibit cardiotoxic properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,3S)-3-[(1S)-1,2-dihydroxyethyl]-3,5,12-trihydroxy-10-methoxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracen-1-yl
+    3-amino-2,3,6-trideoxy-α-L-lyxo-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 13-dihydrodoxorubicin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic 27706RP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DOXOL
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: adriamycinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25830
+- CHEBI:26191
+- CHEBI:33853
+- CHEBI:35315
+- CHEBI:35618
+- CHEBI:47779
+- CHEBI:49322
+- CHEBI:51286
+xrefs:
+- cas:54193-28-1
+- hmdb:HMDB0041884
+- reaxys:6773847
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)([C@@H](O)CO)C[C@@H]3O[C@H]1C[C@H](N)[C@H](O)[C@H](C)O1
+  standard_inchi: InChI=1S/C27H31NO11/c1-10-22(31)13(28)6-17(38-10)39-15-8-27(36,16(30)9-29)7-12-19(15)26(35)21-20(24(12)33)23(32)11-4-3-5-14(37-2)18(11)25(21)34/h3-5,10,13,15-17,22,29-31,33,35-36H,6-9,28H2,1-2H3/t10-,13-,15-,16-,17-,22+,27-/m0/s1
+  standard_inchi_key: NKZRZOVSJNSBFR-FEMMEMONSA-N
+  molecular_formula: C27H31NO11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 545.541
+  monoisotopic_mass: 545.18971
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:133817
+  source_label: doxorubicinol
+  minted_identifier: antibioticmech:chebi-782442fcab
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

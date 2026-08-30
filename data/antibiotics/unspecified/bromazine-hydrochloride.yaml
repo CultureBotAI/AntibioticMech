@@ -1,0 +1,66 @@
+identifier: CHEBI:59178
+label: bromazine hydrochloride
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The hydrochloride salt of bromazine. An antihistamine with antimicrobial
+  properties, it is used in the control of cutaneous allergies.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-[(4-bromophenyl)(phenyl)methoxy]-N,N-dimethylethanamine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(p-bromo-α-phenylbenzyloxy)-N,N-dimethylethylamine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-[(4-bromophenyl)(phenyl)methoxy]-N,N-dimethylethanamine hydrochloride
+    (1:1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-[(4-bromophenyl)(phenyl)methoxy]-N,N-dimethylethanaminium chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bromazine HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bromodiphenhydramine HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bromodiphenhydramine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-(p-bromobenzhydryloxy)ethyldimethylamine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+- CHEBI:37141
+xrefs:
+- beilstein:3754363
+- cas:1808-12-4
+- drugbank:DB01237
+- kegg.drug:D03166
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C[NH+](C)CCOC(c1ccccc1)c1ccc(Br)cc1.[Cl-]
+  standard_inchi: InChI=1S/C17H20BrNO.ClH/c1-19(2)12-13-20-17(14-6-4-3-5-7-14)15-8-10-16(18)11-9-15;/h3-11,17H,12-13H2,1-2H3;1H
+  standard_inchi_key: ZQDJSWUEGOYDGT-UHFFFAOYSA-N
+  molecular_formula: C17H21BrNO.Cl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 370.718
+  monoisotopic_mass: 369.0495
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59178
+  source_label: bromazine hydrochloride
+  minted_identifier: antibioticmech:chebi-56dfdabe23
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

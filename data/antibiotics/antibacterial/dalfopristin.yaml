@@ -1,0 +1,309 @@
+identifier: CHEBI:4309
+label: dalfopristin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide that is pristinamycin IIA in which the double bond between
+  positions 26 and 26a of the pyrroline ring has been reduced and position 26R carries
+  a [2-(diethylamino)ethyl]sulfonyl group. It is a semi-synthetic streptogramin antibiotic
+  and often used as a mixture with quinupristin for the treatment of vancomycin-resistant
+  Enterococcus faecium.
+definition_source: ChEBI
+synonyms:
+- synonym_text: dalfopristina
+  synonym_type: INN
+  source: chebi
+- synonym_text: dalfopristine
+  synonym_type: INN
+  source: chebi
+- synonym_text: dalfopristinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (3R,4R,5E,10E,12E,14S,26R,26aS)-26-{[2-(diethylamino)ethyl]sulfonyl}-14-hydroxy-4,12-dimethyl-3-(propan-2-yl)-8,9,14,15,24,25,26,26a-octahydro-1H,3H,22H-21,18-(azeno)pyrrolo[2,1-c][1,8,4,19]dioxadiazacyclotetracosine-1,7,16,22(4H,17H)-tetrone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RP 54476
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RP-54476
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RP54476
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:140326
+- CHEBI:25105
+- CHEBI:25106
+- CHEBI:33308
+- CHEBI:35681
+- CHEBI:35850
+- CHEBI:3992
+- CHEBI:46812
+- CHEBI:50996
+- CHEBI:51751
+- ARO:0000026
+xrefs:
+- ARO:3000674
+- cas:112362-50-2
+- drugbank:DB01764
+- drugcentral:778
+- hmdb:HMDB0015566
+- kegg.compound:C08033
+- kegg.drug:D00853
+- pdb-ccd:DOL
+- wikipedia.en:Dalfopristin
+- chembl:CHEMBL1200937
+- pubchem.compound:6323289
+activity_roles:
+- CHEBI:36047
+structural_class: streptogramin antibiotic
+structural_class_id: ARO:0000026
+chemical_structure:
+  smiles: '[H][C@@]12C(=O)O[C@H](C(C)C)[C@H](C)/C=C/C(=O)NC/C=C/C(C)=C/[C@@H](O)CC(=O)Cc3nc(co3)C(=O)N1CC[C@H]2S(=O)(=O)CCN(CC)CC'
+  standard_inchi: InChI=1S/C34H50N4O9S/c1-7-37(8-2)16-17-48(44,45)28-13-15-38-31(28)34(43)47-32(22(3)4)24(6)11-12-29(41)35-14-9-10-23(5)18-25(39)19-26(40)20-30-36-27(21-46-30)33(38)42/h9-12,18,21-22,24-25,28,31-32,39H,7-8,13-17,19-20H2,1-6H3,(H,35,41)/b10-9+,12-11+,23-18+/t24-,25-,28-,31-,32-/m1/s1
+  standard_inchi_key: SUYRLXYYZQTJHF-VMBLUXKRSA-N
+  molecular_formula: C34H50N4O9S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 690.86
+  monoisotopic_mass: 690.32985
+source_concepts:
+- source: ARO
+  source_id: ARO:3000674
+  source_label: dalfopristin
+  minted_identifier: antibioticmech:aro-204bbf1b11
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:4309
+  source_label: dalfopristin
+  minted_identifier: antibioticmech:chebi-73c4cfe8cd
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000118
+  label: vgaB
+  evidence:
+  - reference: ARO:3000118
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000250
+  label: ErmC
+  evidence:
+  - reference: ARO:3000250
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000300
+  label: lsaA
+  evidence:
+  - reference: ARO:3000300
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000326
+  label: ErmE
+  evidence:
+  - reference: ARO:3000326
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000347
+  label: ErmA
+  evidence:
+  - reference: ARO:3000347
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000375
+  label: ErmB
+  evidence:
+  - reference: ARO:3000375
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000392
+  label: Erm(37)
+  evidence:
+  - reference: ARO:3000392
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000453
+  label: streptogramin vat acetyltransferase
+  evidence:
+  - reference: ARO:3000453
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000495
+  label: ErmD
+  evidence:
+  - reference: ARO:3000495
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000498
+  label: ErmF
+  evidence:
+  - reference: ARO:3000498
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000522
+  label: ErmG
+  evidence:
+  - reference: ARO:3000522
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000592
+  label: ErmN
+  evidence:
+  - reference: ARO:3000592
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000593
+  label: ErmQ
+  evidence:
+  - reference: ARO:3000593
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000594
+  label: ErmR
+  evidence:
+  - reference: ARO:3000594
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000595
+  label: ErmT
+  evidence:
+  - reference: ARO:3000595
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000596
+  label: ErmX
+  evidence:
+  - reference: ARO:3000596
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000599
+  label: Erm(33)
+  evidence:
+  - reference: ARO:3000599
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000600
+  label: Erm(34)
+  evidence:
+  - reference: ARO:3000600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000601
+  label: Erm(38)
+  evidence:
+  - reference: ARO:3000601
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000602
+  label: Erm(39)
+  evidence:
+  - reference: ARO:3000602
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000603
+  label: Erm(41)
+  evidence:
+  - reference: ARO:3000603
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000604
+  label: Erm(35)
+  evidence:
+  - reference: ARO:3000604
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000605
+  label: Erm(36)
+  evidence:
+  - reference: ARO:3000605
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002814
+  label: clbA
+  evidence:
+  - reference: ARO:3002814
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002815
+  label: clbB
+  evidence:
+  - reference: ARO:3002815
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002816
+  label: clbC
+  evidence:
+  - reference: ARO:3002816
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3002832
+  label: vgaD
+  evidence:
+  - reference: ARO:3002832
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003441
+  label: cfrA
+  evidence:
+  - reference: ARO:3003441
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003907
+  label: cipA
+  evidence:
+  - reference: ARO:3003907
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003969
+  label: lmrP
+  evidence:
+  - reference: ARO:3003969
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000754
+  target_label: antibiotic sensitive peptidyl transferase (23S rRNA)
+  evidence:
+  - reference: ARO:3000754
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000674 (dalfopristin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

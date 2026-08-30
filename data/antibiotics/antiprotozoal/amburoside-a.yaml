@@ -1,0 +1,47 @@
+identifier: CHEBI:65402
+label: amburoside A
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A β-D-glucoside in which a β-D-glucopyranosyl residue is attached at position
+  4 of 4-hydroxybenzyl 3,4-dihydroxybenzoate via a glycosidic linkage. It is isolated
+  from the trunk barks of Amburana cearensis and exhibits antimalarial, neuroprotective,
+  hepatoprotective and antioxidant activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-(β-D-glucopyranosyloxy)benzyl 3,4-dihydroxybenzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-(O-β-D-glucopyranosyl)benzyl protocatechoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22798
+- CHEBI:33566
+- CHEBI:36054
+xrefs:
+- reaxys:6896550
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: O=C(OCc1ccc(O[C@@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@H]2O)cc1)c1ccc(O)c(O)c1
+  standard_inchi: InChI=1S/C20H22O10/c21-8-15-16(24)17(25)18(26)20(30-15)29-12-4-1-10(2-5-12)9-28-19(27)11-3-6-13(22)14(23)7-11/h1-7,15-18,20-26H,8-9H2/t15-,16-,17+,18-,20-/m1/s1
+  standard_inchi_key: LRFIKYDSTHZRKW-BFMVXSJESA-N
+  molecular_formula: C20H22O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 422.386
+  monoisotopic_mass: 422.1213
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65402
+  source_label: amburoside A
+  minted_identifier: antibioticmech:chebi-dd268f7772
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

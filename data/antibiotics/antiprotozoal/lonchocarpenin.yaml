@@ -1,0 +1,45 @@
+identifier: CHEBI:6521
+label: lonchocarpenin
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxycoumarin that is 2H,8H-benzo[1,2-b:5,4-b']dipyran-2-one substituted
+  by a hydroxy group at position 4, a methoxy group at position 5, 4-methoxyphenyl
+  group at position 3 and two methyl groups at position 8 respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-hydroxy-5-methoxy-3-(4-methoxyphenyl)-8,8-dimethyl-10-(3-methylbut-2-en-1-yl)-2H,8H-benzo[1,2-b:5,4-b']dipyran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25235
+- CHEBI:37912
+xrefs:
+- cas:22263-56-5
+- kegg.compound:C10491
+- knapsack:C00002543
+- reaxys:27068675
+activity_roles:
+- CHEBI:35820
+chemical_structure:
+  smiles: COc1ccc(-c2c(O)c3c(OC)c4c(c(CC=C(C)C)c3oc2=O)OC(C)(C)C=C4)cc1
+  standard_inchi: InChI=1S/C27H28O6/c1-15(2)7-12-18-23-19(13-14-27(3,4)33-23)24(31-6)21-22(28)20(26(29)32-25(18)21)16-8-10-17(30-5)11-9-16/h7-11,13-14,28H,12H2,1-6H3
+  standard_inchi_key: CCYKXDPVYWRNMH-UHFFFAOYSA-N
+  molecular_formula: C27H28O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 448.515
+  monoisotopic_mass: 448.18859
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6521
+  source_label: lonchocarpenin
+  minted_identifier: antibioticmech:chebi-df7b6f6748
+  role_terms:
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

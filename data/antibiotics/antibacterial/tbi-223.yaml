@@ -1,0 +1,38 @@
+identifier: antibioticmech:aro-67d13cef91
+label: TBI-223
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: TBI-223 is a novel oxazolidinone with potentially reduced myelosuppression,
+  compared to linezolid. TBI-223 may be considered an additional treatment against
+  MRSA infections and potentially other Gram-positive bacteria in humans.
+definition_source: PMID:36106881
+parent_compounds:
+- ARO:3000079
+xrefs:
+- ARO:3007480
+- chembl:CHEMBL5201490
+- pubchem.compound:126494519
+structural_class: oxazolidinone antibiotic
+structural_class_id: ARO:3000079
+chemical_structure:
+  smiles: COC(=O)NC[C@H]1CN(C(=O)O1)C2=CC(=C(C=C2)N3CC4(C3)COC4)F
+  standard_inchi: InChI=1S/C17H20FN3O5/c1-24-15(22)19-5-12-6-21(16(23)26-12)11-2-3-14(13(18)4-11)20-7-17(8-20)9-25-10-17/h2-4,12H,5-10H2,1H3,(H,19,22)/t12-/m0/s1
+  standard_inchi_key: ZNBRXLSWXJKKLJ-LBPRGKRZSA-N
+  molecular_formula: C17H20FN3O5
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 365.4
+  monoisotopic_mass: 365.13869891
+source_concepts:
+- source: ARO
+  source_id: ARO:3007480
+  source_label: TBI-223
+  minted_identifier: antibioticmech:aro-67d13cef91
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

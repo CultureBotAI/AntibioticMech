@@ -1,0 +1,168 @@
+identifier: CHEBI:87185
+label: florfenicol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxamide that is the N-dichloroacetyl derivative of (1R,2S)-2-amino-3-fluoro-1-[4-(methanesulfonyl)phenyl]propan-1-ol.
+  A synthetic veterinary antibiotic that is used for treatment of bovine respiratory
+  disease and foot rot; also used in aquaculture.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Nuflor
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Nuflor gold
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 2,2-dichloro-N-{(1R,2S)-3-fluoro-1-hydroxy-1-[4-(methanesulfonyl)phenyl]propan-2-yl}acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (-)-Florfenicol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-threo-2,2-Dichloro-N-(alpha-(fluoromethyl)-beta-hydroxy-p-(methylsulfonyl)phenethyl)acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sch 25298
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sch-25298
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:35681
+- CHEBI:35850
+- CHEBI:36683
+- CHEBI:37143
+- ARO:3000387
+xrefs:
+- ARO:3000461
+- cas:73231-34-2
+- kegg.drug:D04194
+- lincs.smallmolecule:LSM-5287
+- patent:EP14437
+- patent:US4235892
+- reaxys:4202553
+- vsdb:1777
+- wikipedia.en:Florfenicol
+- chembl:CHEMBL1241590
+- pubchem.compound:114811
+activity_roles:
+- CHEBI:33281
+structural_class: phenicol antibiotic
+structural_class_id: ARO:3000387
+chemical_structure:
+  smiles: CS(=O)(=O)c1ccc([C@@H](O)[C@@H](CF)NC(=O)C(Cl)Cl)cc1
+  standard_inchi: InChI=1S/C12H14Cl2FNO4S/c1-21(19,20)8-4-2-7(3-5-8)10(17)9(6-15)16-12(18)11(13)14/h2-5,9-11,17H,6H2,1H3,(H,16,18)/t9-,10-/m1/s1
+  standard_inchi_key: AYIRNRDRBQJXIF-NXEZZACHSA-N
+  molecular_formula: C12H14Cl2FNO4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 358.218
+  monoisotopic_mass: 357.00046
+source_concepts:
+- source: ARO
+  source_id: ARO:3000461
+  source_label: florfenicol
+  minted_identifier: antibioticmech:aro-5edaafadec
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:87185
+  source_label: florfenicol
+  minted_identifier: antibioticmech:chebi-5c111856af
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3002704
+  label: fexA
+  evidence:
+  - reference: ARO:3002704
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3002705
+  label: floR
+  evidence:
+  - reference: ARO:3002705
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3002812
+  label: pp-flo
+  evidence:
+  - reference: ARO:3002812
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003746
+  label: optrA
+  evidence:
+  - reference: ARO:3003746
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003963
+  label: flo
+  evidence:
+  - reference: ARO:3003963
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004146
+  label: cfrC
+  evidence:
+  - reference: ARO:3004146
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004470
+  label: poxtA
+  evidence:
+  - reference: ARO:3004470
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004572
+  label: Staphylococcus aureus LmrS
+  evidence:
+  - reference: ARO:3004572
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004599
+  label: clcD
+  evidence:
+  - reference: ARO:3004599
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004666
+  label: pexA
+  evidence:
+  - reference: ARO:3004666
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007019
+  label: fexB
+  evidence:
+  - reference: ARO:3007019
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000754
+  target_label: antibiotic sensitive peptidyl transferase (23S rRNA)
+  evidence:
+  - reference: ARO:3000754
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000461 (florfenicol); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

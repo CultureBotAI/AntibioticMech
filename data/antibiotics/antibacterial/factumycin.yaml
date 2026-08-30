@@ -1,0 +1,49 @@
+identifier: antibioticmech:aro-fdb0f4de1c
+label: factumycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Factumycin is a kirromycin-like antibiotic produced by Kitasatospora setae
+  and Streptomyces strains. Its biosynthetic cluster has been characterized which
+  has interesting acetyl transferase domains in trans, or outside of the polyketide
+  synthase domains. Factumycin has specific, rather than broad spectrum, antibacterial
+  properties, especially targeting various Acinetobacter baumanii strains.
+definition_source: PMID:7166535
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3001220
+- CHEBI:216503
+- chembl:CHEMBL3218567
+- pubchem.compound:135410114
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: CCC(C(=O)NC/C=C/C=C(/C)\[C@@H]([C@@H](C)C([C@H](/C=C\C=C\C=C\C=C(/C)\C(=O)C1=C(C=CN(C1=O)C)O)O)O)OC)[C@@]2(C[C@@H](C([C@@H](O2)/C=C/C=C\C)(C)C)O)O
+  standard_inchi: InChI=1S/C44H62N2O10/c1-10-12-16-24-36-43(6,7)35(49)28-44(54,56-36)32(11-2)41(52)45-26-20-19-22-30(4)40(55-9)31(5)39(51)34(48)23-18-15-13-14-17-21-29(3)38(50)37-33(47)25-27-46(8)42(37)53/h10,12-25,27,31-32,34-36,39-40,47-49,51,54H,11,26,28H2,1-9H3,(H,45,52)/b12-10-,15-13+,17-14+,20-19+,23-18-,24-16+,29-21+,30-22-/t31-,32?,34-,35-,36-,39?,40-,44-/m0/s1
+  standard_inchi_key: HMBDLBWGDMNPDW-SUXULKRESA-N
+  molecular_formula: C44H62N2O10
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 779.0
+  monoisotopic_mass: 778.44044618
+source_concepts:
+- source: ARO
+  source_id: ARO:3001220
+  source_label: factumycin
+  minted_identifier: antibioticmech:aro-fdb0f4de1c
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3001313
+  label: facT
+  evidence:
+  - reference: ARO:3001313
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001220 (factumycin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

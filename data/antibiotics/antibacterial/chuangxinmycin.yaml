@@ -1,0 +1,63 @@
+identifier: CHEBI:79391
+label: (−)-chuangxinmycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A thiinoindole that is 3,5-dihydro-2H-thiino[4,3,2-cd]indole which is
+  substituted at positions 2 and 3 by carboxy and methyl groups, respectively (the
+  2R,3S diastereoisomer).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3S)-3-methyl-3,5-dihydro-2H-thiino[4,3,2-cd]indole-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4S,5R)-(−)-chuangxinmycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-(4S,5R)-chuangxinmycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chuanghsinmycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chuangxinmycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cis-(−)-3,5-dihydro-3-methyl-2H-thiopyrano(4,3,2-cd)indole-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:38958
+- CHEBI:79393
+xrefs:
+- cas:63339-68-4
+- reaxys:7796054
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@H]1c2cnc3cccc(c23)S[C@H]1C(=O)O
+  standard_inchi: InChI=1S/C12H11NO2S/c1-6-7-5-13-8-3-2-4-9(10(7)8)16-11(6)12(14)15/h2-6,11,13H,1H3,(H,14,15)/t6-,11+/m0/s1
+  standard_inchi_key: DKHFLDXCKWDVMF-UPONEAKYSA-N
+  molecular_formula: C12H11NO2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 233.292
+  monoisotopic_mass: 233.05105
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:79391
+  source_label: (−)-chuangxinmycin
+  minted_identifier: antibioticmech:chebi-a9f211116d
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

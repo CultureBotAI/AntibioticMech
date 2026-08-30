@@ -1,0 +1,51 @@
+identifier: CHEBI:65525
+label: bromophycolide A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diterpenoid that is a macrolide isolated from the Fijian red alga Callophycus
+  serratus. It has been found to exhibit moderate cytotoxicity against several human
+  tumour cell lines via specific apotopic cell death. It also displays anti-HIV, antibacterial,
+  antifungal and antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (9S,12S,13R,15aS,16S)-13,16-dibromo-9-(2-bromopropan-2-yl)-3,12-dihydroxy-12,15a,19-trimethyl-1,9,10,11,12,13,14,15,15a,16,17,18-dodecahydro-7H-6,2-(metheno)-8-benzoxacycloheptadecin-7-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23849
+- CHEBI:25106
+- CHEBI:26878
+- CHEBI:33853
+- CHEBI:37141
+xrefs:
+- chemspider:10480986
+- reaxys:10220528
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+- CHEBI:38068
+chemical_structure:
+  smiles: CC1=C2Cc3cc(ccc3O)C(=O)O[C@H](C(C)(C)Br)CC[C@](C)(O)[C@H](Br)CC[C@]2(C)[C@@H](Br)CC1
+  standard_inchi: InChI=1S/C27H37Br3O4/c1-16-6-9-21(28)26(4)12-10-22(29)27(5,33)13-11-23(25(2,3)30)34-24(32)17-7-8-20(31)18(14-17)15-19(16)26/h7-8,14,21-23,31,33H,6,9-13,15H2,1-5H3/t21-,22+,23-,26-,27-/m0/s1
+  standard_inchi_key: SKIHYPQTROYIIT-VHXXJFIISA-N
+  molecular_formula: C27H37Br3O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 665.301
+  monoisotopic_mass: 662.0242
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65525
+  source_label: bromophycolide A
+  minted_identifier: antibioticmech:chebi-c6db891966
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

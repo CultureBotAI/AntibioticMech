@@ -1,0 +1,46 @@
+identifier: CHEBI:80484
+label: pinocembrin chalcone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of chalcones that is trans-chalcone substituted
+  by hydroxy groups at positions 2', 4' and 6' respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-3-phenyl-1-(2,4,6-trihydroxyphenyl)prop-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2',4',6'-trihydroxychalcone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23086
+xrefs:
+- kegg.compound:C16404
+- knapsack:C00006933
+- lipidmaps:LMPK12120243
+- reaxys:1884469
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: O=C(/C=C/c1ccccc1)c1c(O)cc(O)cc1O
+  standard_inchi: InChI=1S/C15H12O4/c16-11-8-13(18)15(14(19)9-11)12(17)7-6-10-4-2-1-3-5-10/h1-9,16,18-19H/b7-6+
+  standard_inchi_key: LOYXTWZXLWHMBX-VOTSOKGWSA-N
+  molecular_formula: C15H12O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 256.257
+  monoisotopic_mass: 256.07356
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:80484
+  source_label: pinocembrin chalcone
+  minted_identifier: antibioticmech:chebi-4780eab747
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

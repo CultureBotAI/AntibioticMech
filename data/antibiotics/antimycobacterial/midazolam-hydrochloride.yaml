@@ -1,0 +1,60 @@
+identifier: CHEBI:6932
+label: midazolam hydrochloride
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The hydrochloride salt of midazolam.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Buccolam
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Dormicum
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Hypnovel
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Versed
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 8-chloro-6-(2-fluorophenyl)-1-methyl-4H-imidazo[1,5-a][1,4]benzodiazepine
+    hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: midazolam HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:142118
+- CHEBI:36807
+xrefs:
+- cas:59467-96-8
+- drugbank:DB00683
+- hmdb:HMDB0014821
+- kegg.drug:D00696
+- reaxys:6580691
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: Cc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2.Cl
+  standard_inchi: InChI=1S/C18H13ClFN3.ClH/c1-11-21-9-13-10-22-18(14-4-2-3-5-16(14)20)15-8-12(19)6-7-17(15)23(11)13;/h2-9H,10H2,1H3;1H
+  standard_inchi_key: PLYSCVSCYOQVRP-UHFFFAOYSA-N
+  molecular_formula: C18H13ClFN3.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 362.235
+  monoisotopic_mass: 361.05488
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6932
+  source_label: midazolam hydrochloride
+  minted_identifier: antibioticmech:chebi-d8c1a0aec9
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

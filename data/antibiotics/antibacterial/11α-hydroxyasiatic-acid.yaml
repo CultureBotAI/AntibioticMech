@@ -1,0 +1,42 @@
+identifier: CHEBI:68380
+label: 11α-hydroxyasiatic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pentacyclic triterpenoid that is the 11α-hydroxy derivative of asiatic
+  acid. Isolated from the methanolic extract of the leaves of Symplocos lancifolia,
+  it exhibits antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2α,3β,11α)-2,3,11,23-tetrahydroxyurs-12-en-28-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25872
+- CHEBI:35868
+xrefs:
+- reaxys:21306691
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@]3(C)[C@]([H])([C@H](O)C=C4[C@@]3(C)CC[C@@]3(C(=O)O)CC[C@@H](C)[C@H](C)[C@@]43[H])[C@@]1(C)C[C@@H](O)[C@H](O)[C@@]2(C)CO'
+  standard_inchi: InChI=1S/C30H48O6/c1-16-7-10-30(25(35)36)12-11-28(5)18(22(30)17(16)2)13-19(32)23-26(3)14-20(33)24(34)27(4,15-31)21(26)8-9-29(23,28)6/h13,16-17,19-24,31-34H,7-12,14-15H2,1-6H3,(H,35,36)/t16-,17+,19-,20-,21-,22+,23-,24+,26+,27+,28-,29-,30+/m1/s1
+  standard_inchi_key: FFPKNVKIBUBHMY-CCEBUSCFSA-N
+  molecular_formula: C30H48O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 504.708
+  monoisotopic_mass: 504.34509
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68380
+  source_label: 11α-hydroxyasiatic acid
+  minted_identifier: antibioticmech:chebi-8f1547f595
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

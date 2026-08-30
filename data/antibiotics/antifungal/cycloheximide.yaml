@@ -1,0 +1,124 @@
+identifier: CHEBI:27641
+label: cycloheximide
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dicarboximide that is 4-(2-hydroxyethyl)piperidine-2,6-dione in which
+  one of the hydrogens attached to the carbon bearing the hydroxy group is replaced
+  by a 3,5-dimethyl-2-oxocyclohexyl group. It is an antibiotic produced by the bacterium
+  Streptomyces griseus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cicloheximida
+  synonym_type: INN
+  source: chebi
+- synonym_text: cicloheximide
+  synonym_type: INN
+  source: chebi
+- synonym_text: cicloheximidum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-{(2R)-2-[(1S,3S,5S)-3,5-dimethyl-2-oxocyclohexyl]-2-hydroxyethyl}piperidine-2,6-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-((R)-2-((1S,3S,5S)-3,5-dimethyl-2-oxocyclohexyl)-2-hydroxyethyl)glutarimide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cycloheximid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cycloheximide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Zykloheximid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: naramycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: naramycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35356
+- CHEBI:35681
+- CHEBI:3992
+- CHEBI:48589
+- CHEBI:49318
+- CHEBI:87114
+- ARO:3000003
+xrefs:
+- ARO:3009188
+- cas:66-81-9
+- kegg.compound:C06685
+- kegg.drug:D03625
+- knapsack:C00047211
+- lincs.smallmolecule:LSM-2791
+- pdb-ccd:3HE
+- ppdb:1680
+- reaxys:88868
+- wikipedia.en:Cycloheximide
+- cas:4630-75-5
+- chembl:CHEMBL123292
+- pubchem.compound:2900
+activity_roles:
+- CHEBI:24127
+- CHEBI:33281
+- CHEBI:35718
+structural_class: antibiotic without defined classification
+structural_class_id: ARO:3000003
+chemical_structure:
+  smiles: '[H][C@@]1([C@H](O)CC2CC(=O)NC(=O)C2)C[C@@H](C)C[C@H](C)C1=O'
+  standard_inchi: InChI=1S/C15H23NO4/c1-8-3-9(2)15(20)11(4-8)12(17)5-10-6-13(18)16-14(19)7-10/h8-12,17H,3-7H2,1-2H3,(H,16,18,19)/t8-,9-,11-,12+/m0/s1
+  standard_inchi_key: YPHMISFOHDHNIV-FSZOTQKASA-N
+  molecular_formula: C15H23NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 281.352
+  monoisotopic_mass: 281.16271
+source_concepts:
+- source: ARO
+  source_id: ARO:3009188
+  source_label: cycloheximide
+  minted_identifier: antibioticmech:aro-eb6ceb3794
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:27641
+  source_label: cycloheximide
+  minted_identifier: antibioticmech:chebi-122ccc7d98
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009291
+  label: Trychophyton rubrum MFS1 with mutations conferring resistance against cyclohexamide
+  evidence:
+  - reference: ARO:3009291
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009188 (cycloheximide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009326
+  label: Saccharomyces cerevisiae ACT1 with mutations conferring resistance to cycloheximide
+  evidence:
+  - reference: ARO:3009326
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009188 (cycloheximide);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000729
+  target_label: ribosomal complex
+  evidence:
+  - reference: ARO:3000729
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3009188 (cycloheximide); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

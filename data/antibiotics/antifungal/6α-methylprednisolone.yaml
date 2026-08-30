@@ -1,0 +1,91 @@
+identifier: CHEBI:6888
+label: 6α-methylprednisolone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The 6α-stereoisomer of 6-methylprednisolone.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Medrate
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Medrol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Medrone
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Solomet
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Urbason
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: methylprednisolone
+  synonym_type: INN
+  source: chebi
+- synonym_text: methylprednisolonum
+  synonym_type: INN
+  source: chebi
+- synonym_text: metilprednisolona
+  synonym_type: INN
+  source: chebi
+- synonym_text: 11β,17,21-trihydroxy-6α-methylpregna-1,4-diene-3,20-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6α,11β)-11,17,21-trihydroxy-6-methylpregna-1,4-diene-3,20-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-dehydro-6α-methylhydrocortisone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6α-methyl-11β,17α,21-triol-1,4-pregnadiene-3,20-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methylprednisolon
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Δ1-6α-methylhydrocortisone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139590
+- CHEBI:139592
+- CHEBI:50366
+xrefs:
+- cas:83-43-2
+- drugbank:DB00959
+- drugcentral:1768
+- hmdb:HMDB0015094
+- kegg.drug:D00407
+- patent:US2897218
+- patent:US3053832
+- reaxys:2340300
+- vsdb:1936
+- wikipedia.en:Methylprednisolone
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@](O)(C(=O)CO)[C@@]1(C)C[C@H](O)[C@@]1([H])[C@@]2([H])C[C@H](C)C2=CC(=O)C=C[C@@]21C'
+  standard_inchi: InChI=1S/C22H30O5/c1-12-8-14-15-5-7-22(27,18(26)11-23)21(15,3)10-17(25)19(14)20(2)6-4-13(24)9-16(12)20/h4,6,9,12,14-15,17,19,23,25,27H,5,7-8,10-11H2,1-3H3/t12-,14-,15-,17-,19+,20-,21-,22-/m0/s1
+  standard_inchi_key: VHRSUDSXCMQTMA-PJHHCJLFSA-N
+  molecular_formula: C22H30O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 374.477
+  monoisotopic_mass: 374.20932
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6888
+  source_label: 6α-methylprednisolone
+  minted_identifier: antibioticmech:chebi-d5626c0c40
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

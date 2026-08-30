@@ -1,0 +1,283 @@
+identifier: CHEBI:32215
+label: thiamphenicol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Derivative of Chloramphenicol. The nitro group (-NO2) is substituted by
+  a sulfomethyl group (-SO2CH3).
+definition_source: PMID:15539072
+synonyms:
+- synonym_text: 2,2-dichloro-N-{(1R,2R)-2-hydroxy-1-(hydroxymethyl)-2-[4-(methylsulfonyl)phenyl]ethyl}acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-Thiamphenicol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Armai (TN)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-(+)-threo-2,2-Dichloro-N-(beta-hydroxy-alpha-(hydroxymethyl)-p-(methylsulfonyl)phenethyl)acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Thiamphenicol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Thiocymetin (TN)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:29347
+- CHEBI:35850
+- ARO:3000387
+xrefs:
+- ARO:3000456
+- cas:15318-45-3
+- drugbank:DB08621
+- drugcentral:2624
+- kegg.compound:C12853
+- kegg.drug:D01407
+- lincs.smallmolecule:LSM-5858
+- pdb-ccd:TH8
+- vsdb:1911
+- chembl:CHEMBL1236282
+- pubchem.compound:27200
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+structural_class: phenicol antibiotic
+structural_class_id: ARO:3000387
+chemical_structure:
+  smiles: CS(=O)(=O)c1ccc([C@@H](O)[C@@H](CO)NC(=O)C(Cl)Cl)cc1
+  standard_inchi: InChI=1S/C12H15Cl2NO5S/c1-21(19,20)8-4-2-7(3-5-8)10(17)9(6-16)15-12(18)11(13)14/h2-5,9-11,16-17H,6H2,1H3,(H,15,18)/t9-,10-/m1/s1
+  standard_inchi_key: OTVAEFIXJLOWRX-NXEZZACHSA-N
+  molecular_formula: C12H15Cl2NO5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 356.227
+  monoisotopic_mass: 355.0048
+source_concepts:
+- source: ARO
+  source_id: ARO:3000456
+  source_label: thiamphenicol
+  minted_identifier: antibioticmech:aro-af60808af7
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:32215
+  source_label: thiamphenicol
+  minted_identifier: antibioticmech:chebi-ad740ea0f4
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3001328
+  label: Escherichia coli mdfA
+  evidence:
+  - reference: ARO:3001328
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002671
+  label: Limosilactobacillus reuteri cat-TC
+  evidence:
+  - reference: ARO:3002671
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002672
+  label: Bacillus pumilus cat86
+  evidence:
+  - reference: ARO:3002672
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002674
+  label: Clostridium butyricum catB
+  evidence:
+  - reference: ARO:3002674
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002675
+  label: catB2
+  evidence:
+  - reference: ARO:3002675
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002676
+  label: catB3
+  evidence:
+  - reference: ARO:3002676
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002678
+  label: Pseudomonas aeruginosa catB6
+  evidence:
+  - reference: ARO:3002678
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002679
+  label: Pseudomonas aeruginosa catB7
+  evidence:
+  - reference: ARO:3002679
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002680
+  label: catB8
+  evidence:
+  - reference: ARO:3002680
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002681
+  label: catB9
+  evidence:
+  - reference: ARO:3002681
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002682
+  label: catD
+  evidence:
+  - reference: ARO:3002682
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002683
+  label: catA1
+  evidence:
+  - reference: ARO:3002683
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002684
+  label: catII
+  evidence:
+  - reference: ARO:3002684
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002685
+  label: catIII
+  evidence:
+  - reference: ARO:3002685
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002686
+  label: catP
+  evidence:
+  - reference: ARO:3002686
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002687
+  label: catQ
+  evidence:
+  - reference: ARO:3002687
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002688
+  label: catS
+  evidence:
+  - reference: ARO:3002688
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002689
+  label: Plasmid-encoded cat (pp-cat)
+  evidence:
+  - reference: ARO:3002689
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002814
+  label: clbA
+  evidence:
+  - reference: ARO:3002814
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002815
+  label: clbB
+  evidence:
+  - reference: ARO:3002815
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002816
+  label: clbC
+  evidence:
+  - reference: ARO:3002816
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003110
+  label: catB10
+  evidence:
+  - reference: ARO:3003110
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003441
+  label: cfrA
+  evidence:
+  - reference: ARO:3003441
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003697
+  label: MexPQ-OpmE
+  evidence:
+  - reference: ARO:3003697
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003703
+  label: MexMN-OprM
+  evidence:
+  - reference: ARO:3003703
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003907
+  label: cipA
+  evidence:
+  - reference: ARO:3003907
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003983
+  label: CatU
+  evidence:
+  - reference: ARO:3003983
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3005023
+  label: cfrE
+  evidence:
+  - reference: ARO:3005023
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000754
+  target_label: antibiotic sensitive peptidyl transferase (23S rRNA)
+  evidence:
+  - reference: ARO:3000754
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000456 (thiamphenicol); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

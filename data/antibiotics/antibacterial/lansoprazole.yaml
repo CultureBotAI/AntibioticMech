@@ -1,0 +1,83 @@
+identifier: CHEBI:6375
+label: lansoprazole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: Bamalite
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Lanzol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Lanzopral
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Lanzul
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Limpidex
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Monolitum
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Ogastro
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Opiren
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Prevacid
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: lansoprazol
+  synonym_type: INN
+  source: chebi
+- synonym_text: lansoprazolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-({[3-methyl-4-(2,2,2-trifluoroethoxy)pyridin-2-yl]methyl}sulfinyl)-1H-benzimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AG 1749
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22063
+- CHEBI:22715
+- CHEBI:26421
+xrefs:
+- beilstein:4333393
+- cas:103577-45-3
+- drugbank:DB00448
+- drugcentral:1547
+- kegg.drug:D00355
+- lincs.smallmolecule:LSM-5064
+- patent:EP174726
+- patent:US4628098
+- wikipedia.en:Lansoprazole
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Cc1c(OCC(F)(F)F)ccnc1CS(=O)c1nc2ccccc2n1
+  standard_inchi: InChI=1S/C16H14F3N3O2S/c1-10-13(20-7-6-14(10)24-9-16(17,18)19)8-25(23)15-21-11-4-2-3-5-12(11)22-15/h2-7H,8-9H2,1H3,(H,21,22)
+  standard_inchi_key: MJIHNNLFOKEZEW-UHFFFAOYSA-N
+  molecular_formula: C16H14F3N3O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 369.368
+  monoisotopic_mass: 369.07588
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6375
+  source_label: lansoprazole
+  minted_identifier: antibioticmech:chebi-e548239a9f
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

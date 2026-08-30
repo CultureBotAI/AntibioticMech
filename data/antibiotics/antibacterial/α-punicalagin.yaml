@@ -1,0 +1,41 @@
+identifier: CHEBI:233620
+label: α-punicalagin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The α-anomer of punicalagin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,35R,37S,38R,55S)-6,7,8,11,12,23,24,27,28,29,37,43,44,45,48,49,50-heptadecahydroxy-2,14,21,33,36,39,54-heptaoxaundecacyclo[33.20.0.04,9.010,19.013,18.016,25.017,22.026,31.038,55.041,46.047,52]pentapentaconta-4,6,8,10,12,16,18,22,24,26,28,30,41,43,45,47,49,51-octadecaene-3,15,20,32,40,53-hexone
+    (non-preferred name)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alpha-punicalagin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:167695
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C1O[C@@H]2[C@@H](OC(=O)c3cc(O)c(O)c(O)c3-c3c1cc(O)c(O)c3O)[C@@H](O)O[C@@H]1COC(=O)c3cc(O)c(O)c(O)c3-c3c(O)c(O)c4oc(=O)c5c(c(O)c(O)c6oc(=O)c3c4c65)-c3c(cc(O)c(O)c3O)C(=O)O[C@@H]21
+  standard_inchi: InChI=1S/C48H28O30/c49-10-1-6-17(31(59)27(10)55)19-23-21-22-24(47(70)76-38(21)35(63)33(19)61)20(34(62)36(64)39(22)75-46(23)69)18-9(4-13(52)28(56)32(18)60)43(66)74-37-14(5-72-42(6)65)73-48(71)41-40(37)77-44(67)7-2-11(50)25(53)29(57)15(7)16-8(45(68)78-41)3-12(51)26(54)30(16)58/h1-4,14,37,40-41,48-64,71H,5H2/t14-,37-,40+,41-,48+/m1/s1
+  standard_inchi_key: ZJVUMAFASBFUBG-OGJBWQGYSA-N
+  molecular_formula: C48H28O30
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1084.722
+  monoisotopic_mass: 1084.06654
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:233620
+  source_label: α-punicalagin
+  minted_identifier: antibioticmech:chebi-d9631db058
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

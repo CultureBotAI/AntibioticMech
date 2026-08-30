@@ -1,0 +1,48 @@
+identifier: CHEBI:65865
+label: erylatissin C
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dihydroxyflavanone that is (2S)-flavanone substituted by hydroxy groups
+  at positions 7 and 3', a methoxy group at position 4' and a prenyl group at position
+  5'. Isolated from Erythrina latissima, it exhibits antimicrobial and radical scavenging
+  activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-7-hydroxy-2-[3-hydroxy-4-methoxy-5-(3-methylbut-2-en-1-yl)phenyl]-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-7,3'-dihydroxy-4'-methoxy-5'-(γ,γ-dimethylallyl)flavanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140332
+- CHEBI:38738
+- CHEBI:38749
+- CHEBI:48024
+xrefs:
+- reaxys:10590939
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COc1c(O)cc([C@@H]2CC(=O)c3ccc(O)cc3O2)cc1CC=C(C)C
+  standard_inchi: InChI=1S/C21H22O5/c1-12(2)4-5-13-8-14(9-18(24)21(13)25-3)19-11-17(23)16-7-6-15(22)10-20(16)26-19/h4,6-10,19,22,24H,5,11H2,1-3H3/t19-/m0/s1
+  standard_inchi_key: NGSGHHXJBXTNFJ-IBGZPJMESA-N
+  molecular_formula: C21H22O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 354.402
+  monoisotopic_mass: 354.14672
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65865
+  source_label: erylatissin C
+  minted_identifier: antibioticmech:chebi-8b8b8d4144
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

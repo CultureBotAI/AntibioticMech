@@ -1,0 +1,459 @@
+identifier: CHEBI:28915
+label: fosfomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A phosphonic acid having an (R,S)-1,2-epoxypropyl group attached to phosphorus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: fosfomicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: fosfomycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: fosfomycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: '[(2R,3S)-3-methyloxiran-2-yl]phosphonic acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (-)-(1R,2S)-(1,2-Epoxypropyl)phosphonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1R,2S)-epoxypropylphosphonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R-cis)-(3-Methyloxiranyl)phosphonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1R-cis-(1,2-epoxypropyl)phosphonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FCM
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FOSFOMYCIN
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-cis-1,2-epoxypropylphosphonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphonomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cis-(1R,2S)-epoxypropylphosphonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: phosphonemycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1R,2S)-1,2-epoxy-propylphosphonic acid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: phosphomycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: phosphonomycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:26069
+- CHEBI:32955
+- ARO:3007149
+xrefs:
+- ARO:0000025
+- cas:23155-02-4
+- drugbank:DB00828
+- drugcentral:1243
+- kegg.compound:C06454
+- kegg.drug:D04253
+- knapsack:C00000789
+- metacyc.compound:CPD0-1113
+- pdb-ccd:FCN
+- reaxys:1680831
+- chembl:CHEMBL1757
+- pubchem.compound:73491
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+structural_class: phosphonic acid antibiotic
+structural_class_id: ARO:3007149
+chemical_structure:
+  smiles: C[C@@H]1O[C@@H]1P(=O)(O)O
+  standard_inchi: InChI=1S/C3H7O4P/c1-2-3(7-2)8(4,5)6/h2-3H,1H3,(H2,4,5,6)/t2-,3+/m0/s1
+  standard_inchi_key: YMDXZJFXQJVXBF-STHAYSLISA-N
+  molecular_formula: C3H7O4P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 138.059
+  monoisotopic_mass: 138.0082
+source_concepts:
+- source: ARO
+  source_id: ARO:0000025
+  source_label: fosfomycin
+  minted_identifier: antibioticmech:aro-7af65f44e6
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:28915
+  source_label: fosfomycin
+  minted_identifier: antibioticmech:chebi-3102033d1f
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000149
+  label: FosA
+  evidence:
+  - reference: ARO:3000149
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000172
+  label: FosB
+  evidence:
+  - reference: ARO:3000172
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000198
+  label: FosX
+  evidence:
+  - reference: ARO:3000198
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000380
+  label: FosC
+  evidence:
+  - reference: ARO:3000380
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000423
+  label: FomA
+  evidence:
+  - reference: ARO:3000423
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000449
+  label: FomB
+  evidence:
+  - reference: ARO:3000449
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3001329
+  label: mdtG
+  evidence:
+  - reference: ARO:3001329
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002804
+  label: FosA2
+  evidence:
+  - reference: ARO:3002804
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002872
+  label: FosA3
+  evidence:
+  - reference: ARO:3002872
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002873
+  label: FosB3
+  evidence:
+  - reference: ARO:3002873
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002874
+  label: FosC2
+  evidence:
+  - reference: ARO:3002874
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003207
+  label: FosK
+  evidence:
+  - reference: ARO:3003207
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003208
+  label: FosXCC
+  evidence:
+  - reference: ARO:3003208
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003210
+  label: FosA4
+  evidence:
+  - reference: ARO:3003210
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003775
+  label: Escherichia coli murA with mutation conferring resistance to fosfomycin
+  evidence:
+  - reference: ARO:3003775
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003776
+  label: Staphylococcus aureus murA with mutation conferring resistance to fosfomycin
+  evidence:
+  - reference: ARO:3003776
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003777
+  label: Borreliella burgdorferi murA with mutation conferring resistance to fosfomycin
+  evidence:
+  - reference: ARO:3003777
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003784
+  label: Mycobacterium tuberculosis intrinsic murA conferring resistance to fosfomycin
+  evidence:
+  - reference: ARO:3003784
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003785
+  label: Chlamydia trachomatis intrinsic murA conferring resistance to fosfomycin
+  evidence:
+  - reference: ARO:3003785
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003889
+  label: Escherichia coli GlpT with mutation conferring resistance to fosfomycin
+  evidence:
+  - reference: ARO:3003889
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003890
+  label: Escherichia coli UhpT with mutation conferring resistance to fosfomycin
+  evidence:
+  - reference: ARO:3003890
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003893
+  label: Escherichia coli uhpA with mutation conferring resistance to fosfomycin
+  evidence:
+  - reference: ARO:3003893
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003899
+  label: Escherichia coli PtsI with mutation conferring resistance to fosfomycin
+  evidence:
+  - reference: ARO:3003899
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003900
+  label: Escherichia coli cyaA with mutation conferring resistance to fosfomycin
+  evidence:
+  - reference: ARO:3003900
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003901
+  label: Staphylococcus aureus GlpT with mutation conferring resistance to fosfomycin
+  evidence:
+  - reference: ARO:3003901
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003902
+  label: Staphylococcus aureus UhpT with mutation conferring resistance to fosfomycin
+  evidence:
+  - reference: ARO:3003902
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004111
+  label: FosA6
+  evidence:
+  - reference: ARO:3004111
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004113
+  label: FosA7
+  evidence:
+  - reference: ARO:3004113
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004573
+  label: Acinetobacter baumannii AbaF
+  evidence:
+  - reference: ARO:3004573
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004661
+  label: Staphylococcus aureus FosB
+  evidence:
+  - reference: ARO:3004661
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004670
+  label: FosB1
+  evidence:
+  - reference: ARO:3004670
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004671
+  label: FosB4
+  evidence:
+  - reference: ARO:3004671
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004672
+  label: FosB5
+  evidence:
+  - reference: ARO:3004672
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004673
+  label: FosB6
+  evidence:
+  - reference: ARO:3004673
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004674
+  label: FosD
+  evidence:
+  - reference: ARO:3004674
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005024
+  label: FosL1
+  evidence:
+  - reference: ARO:3005024
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005100
+  label: FosB2
+  evidence:
+  - reference: ARO:3005100
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005162
+  label: FosA7.5
+  evidence:
+  - reference: ARO:3005162
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007043
+  label: msr(I)
+  evidence:
+  - reference: ARO:3007043
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007069
+  label: FosY
+  evidence:
+  - reference: ARO:3007069
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007097
+  label: FosM1
+  evidence:
+  - reference: ARO:3007097
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007098
+  label: FosM2
+  evidence:
+  - reference: ARO:3007098
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007099
+  label: FosM3
+  evidence:
+  - reference: ARO:3007099
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007368
+  label: FosG
+  evidence:
+  - reference: ARO:3007368
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007369
+  label: FosH
+  evidence:
+  - reference: ARO:3007369
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007370
+  label: FosI
+  evidence:
+  - reference: ARO:3007370
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007371
+  label: FosA8
+  evidence:
+  - reference: ARO:3007371
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007372
+  label: FosBx1
+  evidence:
+  - reference: ARO:3007372
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000724
+  target_label: fosfomycin sensitive pyruvyl transferase (murA)
+  evidence:
+  - reference: ARO:3000724
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000025 (fosfomycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

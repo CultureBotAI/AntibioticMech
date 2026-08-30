@@ -1,0 +1,78 @@
+identifier: CHEBI:63214
+label: cefodizime
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cephalosporin compound having 5-(carboxymethyl)-4-methyl-1,3-thiazol-2-yl]sulfanyl}methyl
+  and [2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino side groups located
+  at positions 3 and 7 respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefodizima
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefodizimum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 7-{[(22Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino}-3-({[5-(carboxymethyl)-4-methyl-1,3-thiazol-2-yl]sulfanyl}methyl)-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-7-{[(22Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino}-3-({[5-(carboxymethyl)-4-methyl-1,3-thiazol-2-yl]sulfanyl}methyl)-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CDZM
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cephodizime
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23066
+- CHEBI:36816
+- CHEBI:38418
+- ARO:0000032
+xrefs:
+- ARO:3009119
+- cas:69739-16-8
+- drugcentral:541
+- kegg.drug:D07643
+- patent:BE865632
+- patent:US4278793
+- reaxys:5789079
+- chembl:CHEMBL2303613
+- pubchem.compound:5361871
+activity_roles:
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(CSc3nc(C)c(CC(=O)O)s3)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1'
+  standard_inchi: InChI=1S/C20H20N6O7S4/c1-7-10(3-11(27)28)37-20(22-7)36-5-8-4-34-17-13(16(30)26(17)14(8)18(31)32)24-15(29)12(25-33-2)9-6-35-19(21)23-9/h6,13,17H,3-5H2,1-2H3,(H2,21,23)(H,24,29)(H,27,28)(H,31,32)/b25-12-/t13-,17-/m1/s1
+  standard_inchi_key: XDZKBRJLTGRPSS-BGZQYGJUSA-N
+  molecular_formula: C20H20N6O7S4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 584.683
+  monoisotopic_mass: 584.02763
+source_concepts:
+- source: ARO
+  source_id: ARO:3009119
+  source_label: cefodizime
+  minted_identifier: antibioticmech:aro-7502ab5d57
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:63214
+  source_label: cefodizime
+  minted_identifier: antibioticmech:chebi-be8db25c67
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

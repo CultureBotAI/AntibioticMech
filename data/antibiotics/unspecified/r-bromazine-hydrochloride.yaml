@@ -1,0 +1,54 @@
+identifier: CHEBI:59304
+label: (R)-bromazine hydrochloride
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The hydrochloride salt of (R)-bromazine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-[(R)-(4-bromophenyl)(phenyl)methoxy]-N,N-dimethylethanamine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-bromazine HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-bromodiphenhydramine HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-bromodiphenhydramine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-β-(p-bromobenzhydryloxy)ethyldimethylamine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-[(R)-(4-bromophenyl)(phenyl)methoxy]-N,N-dimethylethanaminium chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:59178
+xrefs:
+- drugbank:DB01237
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C[NH+](C)CCO[C@H](c1ccccc1)c1ccc(Br)cc1.[Cl-]
+  standard_inchi: InChI=1S/C17H20BrNO.ClH/c1-19(2)12-13-20-17(14-6-4-3-5-7-14)15-8-10-16(18)11-9-15;/h3-11,17H,12-13H2,1-2H3;1H/t17-;/m1./s1
+  standard_inchi_key: ZQDJSWUEGOYDGT-UNTBIKODSA-N
+  molecular_formula: C17H21BrNO.Cl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 370.718
+  monoisotopic_mass: 369.0495
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59304
+  source_label: (R)-bromazine hydrochloride
+  minted_identifier: antibioticmech:chebi-a1276d60d4
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,47 @@
+identifier: CHEBI:39826
+label: 2-allylphenol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of phenols that is phenol carrying an allyl group
+  at position 2.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(prop-2-en-1-yl)phenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: o-allylphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+xrefs:
+- cas:1745-81-9
+- drugbank:DB02534
+- pdb-ccd:2LP
+- ppdb:3038
+- reaxys:742121
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: C=CCc1ccccc1O
+  standard_inchi: InChI=1S/C9H10O/c1-2-5-8-6-3-4-7-9(8)10/h2-4,6-7,10H,1,5H2
+  standard_inchi_key: QIRNGVVZBINFMX-UHFFFAOYSA-N
+  molecular_formula: C9H10O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 134.178
+  monoisotopic_mass: 134.07316
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:39826
+  source_label: 2-allylphenol
+  minted_identifier: antibioticmech:chebi-b7251eed8e
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

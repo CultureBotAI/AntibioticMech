@@ -1,0 +1,57 @@
+identifier: CHEBI:156228
+label: viridiflorol
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbotricyclic compound that is (1aS,4aR,7aR,7bR)-decahydro-1H-cyclopropa[e]azulene
+  carrying four methyl substituents at positions 1, 1, 4 and 7 as well as a hydroxy
+  substituent at position 4. It is a sesquiterpenoid isolated from several plant species
+  and is a strong feeding deterrent for the melaleuca weevil that retards larval development.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1aR,4S,4aS,7R,7aS,7bS)-1,1,4,7-tetramethyldecahydro-1H-cyclopropa[e]azulen-4-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-viridiflorol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: d-viridiflorol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: himbaccol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26658
+- CHEBI:26878
+- CHEBI:38032
+xrefs:
+- cas:552-02-3
+- foodb.food:FDB015568
+- knapsack:C00021217
+- metacyc.compound:CPD-13864
+- wikipedia.en:Viridiflorol
+activity_roles:
+- CHEBI:64912
+chemical_structure:
+  smiles: '[H][C@]12CC[C@@H](C)[C@@]1([H])[C@]1([H])C(C)(C)[C@]1([H])CC[C@]2(C)O'
+  standard_inchi: InChI=1S/C15H26O/c1-9-5-6-10-12(9)13-11(14(13,2)3)7-8-15(10,4)16/h9-13,16H,5-8H2,1-4H3/t9-,10+,11-,12-,13-,15+/m1/s1
+  standard_inchi_key: AYXPYQRXGNDJFU-IMNVLQEYSA-N
+  molecular_formula: C15H26O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 222.372
+  monoisotopic_mass: 222.19837
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156228
+  source_label: viridiflorol
+  minted_identifier: antibioticmech:chebi-0ceb0e7a54
+  role_terms:
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

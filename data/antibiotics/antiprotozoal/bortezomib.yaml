@@ -1,0 +1,66 @@
+identifier: CHEBI:52717
+label: bortezomib
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: L-Phenylalaninamide substituted at the amide nitrogen by a 1-(dihydroxyboranyl)-3-methylbutyl
+  group and at Nα by a pyrazin-2-ylcarbonyl group. It is a dipeptidyl boronic acid
+  that reversibly inhibits the 26S proteasome.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Velcade
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: N-[(1R)-1-(dihydroxyboranyl)-3-methylbutyl]-Nα-(pyrazin-2-ylcarbonyl)-L-phenylalaninamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[(1R)-3-methyl-1-({(2S)-3-phenyl-2-[(pyrazin-2-ylcarbonyl)amino]propanoyl}amino)butyl]boronic
+    acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[(1R)-1-(DIHYDROXYBORYL)-3-METHYLBUTYL]-N-(PYRAZIN-2-YLCARBONYL)-L-PHENYLALANINAMIDE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PS 341
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PS-341
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22475
+- CHEBI:38314
+- CHEBI:84144
+xrefs:
+- cas:179324-69-7
+- drugbank:DB00188
+- drugcentral:391
+- kegg.drug:D03150
+- lincs.smallmolecule:LSM-6281
+- pdb-ccd:BO2
+- reaxys:8723817
+- wikipedia.en:Bortezomib
+activity_roles:
+- CHEBI:35820
+chemical_structure:
+  smiles: CC(C)C[C@H](NC(=O)[C@H](Cc1ccccc1)NC(=O)c1cnccn1)B(O)O
+  standard_inchi: InChI=1S/C19H25BN4O4/c1-13(2)10-17(20(27)28)24-18(25)15(11-14-6-4-3-5-7-14)23-19(26)16-12-21-8-9-22-16/h3-9,12-13,15,17,27-28H,10-11H2,1-2H3,(H,23,26)(H,24,25)/t15-,17-/m0/s1
+  standard_inchi_key: GXJABQQUPOEUTA-RDJZCZTQSA-N
+  molecular_formula: C19H25BN4O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 384.245
+  monoisotopic_mass: 384.19689
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:52717
+  source_label: bortezomib
+  minted_identifier: antibioticmech:chebi-cbc777021a
+  role_terms:
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

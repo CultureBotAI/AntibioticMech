@@ -1,0 +1,48 @@
+identifier: CHEBI:71658
+label: mersacidin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A type-B lantibiotic containing 3-methyllanthionine and S-(2-aminovinyl)-3-methylcysteine
+  residues and four intra-chain thioether bridges. It is obtained from Bacillus sp.
+  HIL Y-85,54728 and is active in vivo against methicillin-resistant Staphylococcus
+  aureus (MRSA).
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-{(4S,7S,8S,11R,14S,17E,20S,26S)-7-[({(15S,18R,21S,22S,25S,30aS)-22-[(N-{[(2S,3S,6R)-6-amino-2-methyl-5-oxo-1,4-thiazepan-3-yl]carbonyl}-L-phenylalanyl)amino]-25-isobutyl-15-isopropyl-21-methyl-1,4,7,10,13,16,23,26-octaoxooctacosahydro-1H-pyrrolo[2,1-u][1,4,7,10,13,16,19,22,25]thiaoctaazacyclooctacosin-18-yl}carbonyl)amino]-14-[(2R)-butan-2-yl]-4-isobutyl-8,20-dimethyl-23-methylene-3,6,12,15,21,24,27-heptaoxo-9,19-dithia-2,5,13,16,22,25,28-heptaazabicyclo[9.9.8]octacos-17-en-26-yl}propanoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: M87-1551
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:51026
+- CHEBI:71647
+xrefs:
+- cas:128104-18-7
+- reaxys:8197141
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]1(NC(=O)[C@H](Cc2ccccc2)NC(=O)[C@]2([H])NC(=O)[C@@H](N)CS[C@H]2C)C(=O)N[C@@]([H])(CC(C)C)C(=O)N2CCC[C@@]2([H])C(=O)NCC(=O)NCC(=O)NCC(=O)NCC(=O)N[C@@H](C(C)C)C(=O)N[C@H](C(=O)N[C@H]2C(=O)N[C@@H](CC(C)C)C(=O)NC3C(=O)NC(=C)C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](CS[C@@]2([H])C)C(=O)N[C@@]([H])([C@H](C)CC)C(=O)N/C=C/S[C@H]3C)CS[C@H]1C'
+  standard_inchi: InChI=1S/C80H120N20O21S4/c1-14-40(8)61-74(115)82-24-26-122-42(10)62-76(117)87-41(9)66(107)88-48(22-23-59(105)106)68(109)92-52(71(112)95-61)35-124-44(12)64(78(119)89-49(27-37(2)3)69(110)97-62)99-72(113)53-36-125-45(13)65(98-70(111)50(29-46-19-16-15-17-20-46)90-77(118)63-43(11)123-34-47(81)67(108)96-63)79(120)91-51(28-38(4)5)80(121)100-25-18-21-54(100)73(114)86-32-57(103)84-30-55(101)83-31-56(102)85-33-58(104)94-60(39(6)7)75(116)93-53/h15-17,19-20,24,26,37-40,42-45,47-54,60-65H,9,14,18,21-23,25,27-36,81H2,1-8,10-13H3,(H,82,115)(H,83,101)(H,84,103)(H,85,102)(H,86,114)(H,87,117)(H,88,107)(H,89,119)(H,90,118)(H,91,120)(H,92,109)(H,93,116)(H,94,104)(H,95,112)(H,96,108)(H,97,110)(H,98,111)(H,99,113)(H,105,106)/b26-24+/t40-,42+,43+,44+,45+,47+,48+,49+,50+,51+,52+,53+,54+,60+,61+,62?,63-,64-,65-/m1/s1
+  standard_inchi_key: JSWKNDSDVHJUKY-CYGWNLPQSA-N
+  molecular_formula: C80H120N20O21S4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1826.227
+  monoisotopic_mass: 1824.78197
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:71658
+  source_label: mersacidin
+  minted_identifier: antibioticmech:chebi-7758ea07e3
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,64 @@
+identifier: CHEBI:70507
+label: (−)-vincadifformine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aspidosperma alkaloid that is (5α,12β,19α)-2,3-didehydroaspidospermidine
+  which is substituted at position 3 by a methoxycarbonyl group. A natural product
+  found in several species in the Apocynaceae (dogbane) family, including Alstonia
+  spatulata.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (5α,12β,19α)-2,3-didehydroaspidospermidine-3-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5α,12β,19α)-2,3-didehydroaspidospermidine-3-carboxylic acid methyl
+    ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6,7-dihydrotabersonine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: aspidospermidine-3-carboxylic acid, 2,3-didehydro-, methylester, (5alpha,12beta,19alpha)-
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (5S,12R,19S)-2,3-didehydroaspidospermidine-3-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: vincadifformine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:142772
+- CHEBI:25248
+- CHEBI:38101
+- CHEBI:38164
+- CHEBI:50995
+- CHEBI:50996
+xrefs:
+- cas:3247-10-7
+- knapsack:C00024463
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: '[H][C@]12N3CCC[C@@]1(CC)CC(C(=O)OC)=C1Nc4ccccc4[C@@]12CC3'
+  standard_inchi: InChI=1S/C21H26N2O2/c1-3-20-9-6-11-23-12-10-21(19(20)23)15-7-4-5-8-16(15)22-17(21)14(13-20)18(24)25-2/h4-5,7-8,19,22H,3,6,9-13H2,1-2H3/t19-,20-,21-/m0/s1
+  standard_inchi_key: GIGFIWJRTMBSRP-ACRUOGEOSA-N
+  molecular_formula: C21H26N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 338.451
+  monoisotopic_mass: 338.19943
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70507
+  source_label: (−)-vincadifformine
+  minted_identifier: antibioticmech:chebi-b8a9c2c831
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

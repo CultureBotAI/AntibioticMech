@@ -1,0 +1,47 @@
+identifier: CHEBI:65742
+label: 5-O-demethylpaxanthonin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of xanthones consisting of paxanthonin in which
+  the methoxy group at position 5 is replaced by a hydroxy group. Isolated from the
+  roots of Hypericum roeperianum and leaves of Hypericum styphelioides, it exhibits
+  antioxidant and antifungal activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-[(1S,4S)-2,2-dimethyl-4-(prop-1-en-2-yl)cyclopentyl]-1,3,5,6-tetrahydroxy-9H-xanthen-9-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,3,5,6-tetrahydroxy-2-(2',2'-dimethyl-4'-isopropenyl)-cyclopentanylxanthone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:51149
+xrefs:
+- chemspider:13100107
+- reaxys:7665231
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]1(C(=C)C)CC(C)(C)[C@@]([H])(c2c(O)cc3oc4c(O)c(O)ccc4c(=O)c3c2O)C1'
+  standard_inchi: InChI=1S/C23H24O6/c1-10(2)11-7-13(23(3,4)9-11)17-15(25)8-16-18(21(17)28)19(26)12-5-6-14(24)20(27)22(12)29-16/h5-6,8,11,13,24-25,27-28H,1,7,9H2,2-4H3/t11-,13+/m0/s1
+  standard_inchi_key: LYMUFMGSOHLCHO-WCQYABFASA-N
+  molecular_formula: C23H24O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 396.439
+  monoisotopic_mass: 396.15729
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65742
+  source_label: 5-O-demethylpaxanthonin
+  minted_identifier: antibioticmech:chebi-35e471752b
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

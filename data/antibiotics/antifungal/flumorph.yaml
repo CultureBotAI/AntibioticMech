@@ -1,0 +1,45 @@
+identifier: CHEBI:83428
+label: flumorph
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A mixture comprising approximately equal amounts of (E)- and (Z)-fluomorph.
+  It is used as an agrochemical fungicide for the control oomcyetes such as downey
+  mildew on vegetables and grapes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-(4-chlorophenyl)-3-(3,4-dimethoxyphenyl)-1-(morpholin-4-yl)prop-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:60004
+- CHEBI:87134
+xrefs:
+- cas:211867-47-9
+- pesticides:flumorph
+- ppdb:1217
+- reaxys:11327126
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: '[H]C(C(=O)N1CCOCC1)=C(c1ccc(F)cc1)c1ccc(OC)c(OC)c1'
+  standard_inchi: InChI=1S/C21H22FNO4/c1-25-19-8-5-16(13-20(19)26-2)18(15-3-6-17(22)7-4-15)14-21(24)23-9-11-27-12-10-23/h3-8,13-14H,9-12H2,1-2H3
+  standard_inchi_key: BKBSMMUEEAWFRX-UHFFFAOYSA-N
+  molecular_formula: C21H22FNO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 371.408
+  monoisotopic_mass: 371.15329
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83428
+  source_label: flumorph
+  minted_identifier: antibioticmech:chebi-a1b8902166
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

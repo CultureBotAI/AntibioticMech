@@ -1,0 +1,157 @@
+identifier: CHEBI:9328
+label: sulfadiazine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfonamide consisting of pyrimidine with a 4-aminobenzenesulfonamido
+  group at the 2-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sulfadiazina
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfadiazinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-amino-N-(pyrimidin-2-yl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-sulfanilamidopyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-sulfanilylaminopyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-amino-N-2-pyrimidinylbenzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-2-pyrimidinylsulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-2-pyrimidylsulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfadiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulfadiazin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulfapyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulphadiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35358
+- CHEBI:39447
+- CHEBI:48975
+- CHEBI:87228
+- ARO:3000282
+xrefs:
+- ARO:3000324
+- cas:68-35-9
+- drugbank:DB00359
+- drugcentral:2500
+- gmelin:219136
+- hmdb:HMDB0014503
+- kegg.compound:C07658
+- kegg.drug:D00587
+- lincs.smallmolecule:LSM-5457
+- patent:GB557055
+- patent:US2407966
+- patent:US2410793
+- reaxys:235192
+- vsdb:1740
+- wikipedia.en:Sulfadiazine
+- chembl:CHEMBL439
+- pubchem.compound:5215
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:35818
+- CHEBI:35820
+- CHEBI:38068
+structural_class: sulfonamide antibiotic
+structural_class_id: ARO:3000282
+chemical_structure:
+  smiles: Nc1ccc(S(=O)(=O)Nc2ncccn2)cc1
+  standard_inchi: InChI=1S/C10H10N4O2S/c11-8-2-4-9(5-3-8)17(15,16)14-10-12-6-1-7-13-10/h1-7H,11H2,(H,12,13,14)
+  standard_inchi_key: SEEPANYCNGTZFQ-UHFFFAOYSA-N
+  molecular_formula: C10H10N4O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 250.283
+  monoisotopic_mass: 250.05245
+source_concepts:
+- source: ARO
+  source_id: ARO:3000324
+  source_label: sulfadiazine
+  minted_identifier: antibioticmech:aro-ed0c0a5de0
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:35818
+  - CHEBI:35820
+  - CHEBI:38068
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:9328
+  source_label: sulfadiazine
+  minted_identifier: antibioticmech:chebi-7bdd9ca88f
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:35818
+  - CHEBI:35820
+  - CHEBI:38068
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000410
+  label: sul1
+  evidence:
+  - reference: ARO:3000410
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000324 (sulfadiazine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000412
+  label: sul2
+  evidence:
+  - reference: ARO:3000412
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000324 (sulfadiazine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000413
+  label: sul3
+  evidence:
+  - reference: ARO:3000413
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000324 (sulfadiazine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003386
+  label: Escherichia coli folP with mutation conferring resistance to sulfonamides
+  evidence:
+  - reference: ARO:3003386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000324 (sulfadiazine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003387
+  label: Streptococcus pyogenes folP with mutation conferring resistance to sulfonamides
+  evidence:
+  - reference: ARO:3003387
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000324 (sulfadiazine);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000744
+  target_label: antibiotic sensitive dihydropteroate synthase
+  evidence:
+  - reference: ARO:3000744
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000324 (sulfadiazine); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

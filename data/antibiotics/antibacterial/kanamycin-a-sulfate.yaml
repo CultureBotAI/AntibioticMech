@@ -1,0 +1,52 @@
+identifier: CHEBI:6109
+label: kanamycin A sulfate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: Kanamycin A sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kanamycin acid sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kanamycin monosulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kanamycin sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kantrex
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38012
+xrefs:
+- beilstein:3874279
+- cas:25389-94-0
+- kegg.compound:C08046
+- kegg.drug:D00866
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: NC[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](N)[C@H]3O)[C@H](N)C[C@@H]2N)[C@H](O)[C@@H](O)[C@@H]1O.O=S(=O)(O)O
+  standard_inchi: InChI=1S/C18H36N4O11.H2O4S/c19-2-6-10(25)12(27)13(28)18(30-6)33-16-5(21)1-4(20)15(14(16)29)32-17-11(26)8(22)9(24)7(3-23)31-17;1-5(2,3)4/h4-18,23-29H,1-3,19-22H2;(H2,1,2,3,4)/t4-,5+,6-,7-,8+,9-,10-,11-,12+,13-,14-,15+,16-,17-,18-;/m1./s1
+  standard_inchi_key: OOYGSFOGFJDDHP-KMCOLRRFSA-N
+  molecular_formula: C18H36N4O11.H2O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 582.582
+  monoisotopic_mass: 582.20544
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6109
+  source_label: kanamycin A sulfate
+  minted_identifier: antibioticmech:chebi-da7eeaaa5d
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

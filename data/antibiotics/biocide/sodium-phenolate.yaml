@@ -1,0 +1,45 @@
+identifier: CHEBI:52476
+label: sodium phenolate
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: Sodium carbolate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium phenate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium phenoxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:50526
+xrefs:
+- beilstein:3597300
+- cas:139-02-6
+- kegg.drug:D05455
+activity_roles:
+- CHEBI:48219
+chemical_structure:
+  smiles: '[Na+].[O-]c1ccccc1'
+  standard_inchi: InChI=1S/C6H6O.Na/c7-6-4-2-1-3-5-6;/h1-5,7H;/q;+1/p-1
+  standard_inchi_key: NESLWCLHZZISNB-UHFFFAOYSA-M
+  molecular_formula: C6H5O.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 116.095
+  monoisotopic_mass: 116.02381
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:52476
+  source_label: sodium phenolate
+  minted_identifier: antibioticmech:chebi-4d63ceed4e
+  role_terms:
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

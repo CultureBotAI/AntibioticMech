@@ -1,0 +1,42 @@
+identifier: CHEBI:65498
+label: bipinnatone A
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of dihydrochalones that is dihydrochalcone hydroxylated
+  at C-2', C-4', C-6' and C-4 and substituted by a farnesyl group at C-3. It is isolated
+  from the aerial parts of Boronia bipinnata and exhibits antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-{4-hydroxy-3-[(2E,6E)-3,7,11-trimethyldodeca-2,6,10-trien-1-yl]phenyl}-1-(2,4,6-trihydroxyphenyl)propan-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:71230
+xrefs:
+- reaxys:18863623
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: CC(C)=CCC/C(C)=C/CC/C(C)=C/Cc1cc(CCC(=O)c2c(O)cc(O)cc2O)ccc1O
+  standard_inchi: InChI=1S/C30H38O5/c1-20(2)7-5-8-21(3)9-6-10-22(4)11-14-24-17-23(12-15-26(24)32)13-16-27(33)30-28(34)18-25(31)19-29(30)35/h7,9,11-12,15,17-19,31-32,34-35H,5-6,8,10,13-14,16H2,1-4H3/b21-9+,22-11+
+  standard_inchi_key: SJBBGMVJNAOUOI-VLURGLOZSA-N
+  molecular_formula: C30H38O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 478.629
+  monoisotopic_mass: 478.27192
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65498
+  source_label: bipinnatone A
+  minted_identifier: antibioticmech:chebi-b3301ba02f
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

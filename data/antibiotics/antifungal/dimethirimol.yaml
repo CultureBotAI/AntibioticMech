@@ -1,0 +1,68 @@
+identifier: CHEBI:81958
+label: dimethirimol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of aminopyrimidines that is 2-dimethylaminopyrimidine
+  carrying methyl, butyl and hydroxy substituents at posiitons 4, 5 and 6 respectively.
+  A fungicide first marketed in 1970, and used particularly in glasshouses to control
+  powdery mildew, it is no longer approved for use within the European Union.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-butyl-2-(dimethylamino)-6-methylpyrimidin-4(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Dimethylamino-4-hydroxy-5-n-butyl-6-methylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Dimethylamino-4-methyl-5-n-butyl-6-hydroxypyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Butyl-2-(dimethylamino)-6-methyl-4(1H)-pyrimidinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Butyl-2-(dimethylamino)-6-methyl-4-pyrimidinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-n-Butyl-2-dimethylamino-4-hydroxy-6-methylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dimethyrimol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38338
+- CHEBI:38340
+- CHEBI:50996
+- CHEBI:87207
+xrefs:
+- cas:5221-53-4
+- kegg.compound:C18784
+- patent:WO2006069715
+- pesticides:dimethirimol
+- ppdb:243
+- reaxys:746334
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CCCCc1c(C)nc(N(C)C)nc1O
+  standard_inchi: InChI=1S/C11H19N3O/c1-5-6-7-9-8(2)12-11(14(3)4)13-10(9)15/h5-7H2,1-4H3,(H,12,13,15)
+  standard_inchi_key: CJHXCRMKMMBYJQ-UHFFFAOYSA-N
+  molecular_formula: C11H19N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 209.293
+  monoisotopic_mass: 209.15281
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81958
+  source_label: dimethirimol
+  minted_identifier: antibioticmech:chebi-6bb4cfd3c8
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

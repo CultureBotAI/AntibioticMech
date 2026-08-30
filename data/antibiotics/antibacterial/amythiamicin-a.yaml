@@ -1,0 +1,39 @@
+identifier: antibioticmech:aro-b0e6c47827
+label: amythiamicin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Amythiamicin A is a cyclic thiazolyl peptide antibiotic with a structure
+  similar to GE2270A. Amythiamicin B, C, and D also exist, but are not discussed further
+  here. Amythiamicin A was shown to have the highest activity in cell free protein
+  synthesis assays.
+definition_source: PMID:7706132
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3001260
+- CHEBI:220214
+- pubchem.compound:198789
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: CC1=C2C(=O)NC(C3=NC(=CS3)C(=O)NCC(=O)NC(C4=NC(=CS4)C5=NC(=CS5)C6=C(C=CC(=N6)C7=NC(=CS7)C8=NC(CO8)C(=O)N9CCCC9C(=O)N)C3=NC(=CS3)C(=O)NC(C(=N2)S1)CC(=O)NC)C(C)C)C(C)C
+  standard_inchi: InChI=1S/C50H51N15O8S6/c1-20(2)35-48-61-31(19-78-48)46-57-27(15-75-46)38-23(9-10-24(54-38)45-60-30(18-76-45)43-56-26(14-73-43)50(72)65-11-7-8-32(65)39(51)68)44-58-29(17-74-44)41(70)55-25(12-33(66)52-6)47-64-37(22(5)79-47)42(71)63-36(21(3)4)49-59-28(16-77-49)40(69)53-13-34(67)62-35/h9-10,15-21,25-26,32,35-36H,7-8,11-14H2,1-6H3,(H2,51,68)(H,52,66)(H,53,69)(H,55,70)(H,62,67)(H,63,71)
+  standard_inchi_key: BAGBLRBLZUISAJ-UHFFFAOYSA-N
+  molecular_formula: C50H51N15O8S6
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1182.4
+  monoisotopic_mass: 1181.23693069
+source_concepts:
+- source: ARO
+  source_id: ARO:3001260
+  source_label: amythiamicin A
+  minted_identifier: antibioticmech:aro-b0e6c47827
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

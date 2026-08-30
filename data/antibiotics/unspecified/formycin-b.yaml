@@ -1,0 +1,49 @@
+identifier: CHEBI:42654
+label: formycin B
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (1S)-1,4-anhydro-1-(7-oxo-4,7-dihydro-1H-pyrazolo[4,3-d]pyrimidin-3-yl)-D-ribitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FORMYCIN B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Laurusin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ohyamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24088
+xrefs:
+- beilstein:624230
+- cas:13877-76-4
+- drugbank:DB04198
+- pdb-ccd:FMB
+activity_roles:
+- CHEBI:25605
+chemical_structure:
+  smiles: O=c1ncnc2c([C@@H]3O[C@H](CO)[C@@H](O)[C@H]3O)nnc12
+  standard_inchi: InChI=1S/C10H12N4O5/c15-1-3-7(16)8(17)9(19-3)5-4-6(14-13-5)10(18)12-2-11-4/h2-3,7-9,15-17H,1H2,(H,13,14)(H,11,12,18)/t3-,7-,8-,9+/m1/s1
+  standard_inchi_key: MTCJZZBQNCXKAP-KSYZLYKTSA-N
+  molecular_formula: C10H12N4O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 268.229
+  monoisotopic_mass: 268.08077
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:42654
+  source_label: formycin B
+  minted_identifier: antibioticmech:chebi-0b11cda3e2
+  role_terms:
+  - CHEBI:25605
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

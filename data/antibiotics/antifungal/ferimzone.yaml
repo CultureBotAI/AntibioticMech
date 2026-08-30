@@ -1,0 +1,70 @@
+identifier: CHEBI:81844
+label: ferimzone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pyrimidines that is 2-hydrazino-4,6-dimethylpyrimidine
+  in which the two amino hydrogens are replaced by a 1-(2-methylphenyl)ethylidene
+  group. It is used for the control of fungal diseases in rice.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4,6-dimethyl-2-{(2Z)-2-[1-(2-methylphenyl)ethylidene]hydrazino}pyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (Z)-2'-Methylacetophenone 4,6-dimethylpyrimidin-2-ylhydrazone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (Z)-2'-methylacetophenone 4,6-dimethylpyrimidin-2-ylhydrazone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (Z)-4,6-Dimethyl-2(1H)-pyrimidinone (1-(2-methylphenyl)ethylidene)hydrazone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (Z)-Ferimzone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,6-dimethyl-2(1H)-pyrimidinone (2Z)-[1-(2-methylphenyl)ethylidene]hydrazone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,6-dimethyl-2-{2-[(1Z)-1-(2-methylphenyl)ethylidene]hydrazinyl}pyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Meferimzone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TF 164
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27024
+- CHEBI:38532
+- CHEBI:87207
+xrefs:
+- cas:89269-64-7
+- kegg.compound:C18579
+- pesticides:ferimzone
+- reaxys:11322321
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: C/C(=N/Nc1nc(C)cc(C)n1)c1ccccc1C
+  standard_inchi: InChI=1S/C15H18N4/c1-10-7-5-6-8-14(10)13(4)18-19-15-16-11(2)9-12(3)17-15/h5-9H,1-4H3,(H,16,17,19)/b18-13-
+  standard_inchi_key: GOWLARCWZRESHU-AQTBWJFISA-N
+  molecular_formula: C15H18N4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 254.337
+  monoisotopic_mass: 254.15315
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81844
+  source_label: ferimzone
+  minted_identifier: antibioticmech:chebi-157fb03650
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

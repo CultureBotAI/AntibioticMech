@@ -1,0 +1,46 @@
+identifier: CHEBI:156301
+label: auricin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An angucycline-like polyketide discovered in Streptomyces aureofaciens
+  that is only stable at acidic pH.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2'S,3'R,3aR,6'R,11bR)-3'-{[5-(dimethylamino)-6-methyltetrahydro-2H-pyran-2-yl]oxy}-7-hydroxy-6'-methyl-3a,5',6',11b-tetrahydrospiro[benzo[g]furo[3,2-c]isochromene-5,2'-pyran]-2,4',6,11(3H,3'H)-tetrone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132124
+- CHEBI:26188
+- CHEBI:33853
+- CHEBI:37581
+- CHEBI:38164
+- CHEBI:46942
+- CHEBI:48129
+- CHEBI:50996
+- CHEBI:70737
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12CC(=O)O[C@]1([H])C1=C(C(=O)c3c(O)cccc3C1=O)[C@]1(O[C@H](C)CC(=O)[C@H]1OC1CCC(N(C)C)C(C)O1)O2'
+  standard_inchi: InChI=1S/C28H31NO10/c1-12-10-17(31)27(37-20-9-8-15(29(3)4)13(2)35-20)28(38-12)23-22(26-18(39-28)11-19(32)36-26)24(33)14-6-5-7-16(30)21(14)25(23)34/h5-7,12-13,15,18,20,26-27,30H,8-11H2,1-4H3/t12-,13?,15?,18-,20?,26+,27-,28+/m1/s1
+  standard_inchi_key: DIESPMSGQPRWLG-VLKAYIDRSA-N
+  molecular_formula: C28H31NO10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 541.553
+  monoisotopic_mass: 541.1948
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156301
+  source_label: auricin
+  minted_identifier: antibioticmech:chebi-c9f131a2a1
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

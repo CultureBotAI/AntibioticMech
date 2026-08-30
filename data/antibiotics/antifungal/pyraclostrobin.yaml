@@ -1,0 +1,90 @@
+identifier: CHEBI:78780
+label: pyraclostrobin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbamate ester that is the methyl ester of [2-({[1-(4-chlorophenyl)-1H-pyrazol-3-yl]oxy}methyl)phenyl]methoxycarbamic
+  acid. A fungicide used to control major plant pathogens including Septoria tritici,
+  Puccinia spp. and Pyrenophora teres.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl [2-({[1-(4-chlorophenyl)-1H-pyrazol-3-yl]oxy}methyl)phenyl]methoxycarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pyraclostrobine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:26410
+- CHEBI:35618
+- CHEBI:83403
+- CHEBI:86485
+- CHEBI:87066
+- ARO:3009305
+xrefs:
+- ARO:3009304
+- cas:175013-18-0
+- kegg.compound:C18561
+- pesticides:pyraclostrobin
+- ppdb:564
+- reaxys:10095527
+- chembl:CHEMBL519873
+- pubchem.compound:6422843
+activity_roles:
+- CHEBI:86328
+structural_class: strobilurin fungicide
+structural_class_id: ARO:3009305
+chemical_structure:
+  smiles: COC(=O)N(OC)c1ccccc1COc1ccn(-c2ccc(Cl)cc2)n1
+  standard_inchi: InChI=1S/C19H18ClN3O4/c1-25-19(24)23(26-2)17-6-4-3-5-14(17)13-27-18-11-12-22(21-18)16-9-7-15(20)8-10-16/h3-12H,13H2,1-2H3
+  standard_inchi_key: HZRSNVGNWUDEFX-UHFFFAOYSA-N
+  molecular_formula: C19H18ClN3O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 387.823
+  monoisotopic_mass: 387.09858
+source_concepts:
+- source: ARO
+  source_id: ARO:3009304
+  source_label: pyraclostrobin
+  minted_identifier: antibioticmech:aro-52f6a5d5ae
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:78780
+  source_label: pyraclostrobin
+  minted_identifier: antibioticmech:chebi-f9c5067de2
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009278
+  label: Colletotrichum gloeosporioides cytochrome b protein with mutations conferring
+    resistance to pyraclostrobin
+  evidence:
+  - reference: ARO:3009278
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009304 (pyraclostrobin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009479
+  label: Aspergillus fumigatus beta-tubulin with mutations conferring resistance to
+    pyraclostrobin
+  evidence:
+  - reference: ARO:3009479
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009304 (pyraclostrobin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009548
+  label: Aspergillus fumigatus Cyp51A with mutations conferring resistance to pyraclostrobin
+  evidence:
+  - reference: ARO:3009548
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009304 (pyraclostrobin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

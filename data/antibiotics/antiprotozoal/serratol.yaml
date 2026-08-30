@@ -1,0 +1,51 @@
+identifier: CHEBI:156193
+label: serratol
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cembrane diterpenoid obtained by regio- and stereoselective hydration
+  of the exocyclic double bond of cembrene C.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,3E,7E,11E)-4,8,12-trimethyl-1-(propan-2-yl)cyclotetradeca-3,7,11-trien-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-serratol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S(−)-cembra-3E,7E,11E-triene-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26878
+- CHEBI:51026
+- CHEBI:60687
+- CHEBI:78840
+xrefs:
+- cas:67814-27-1
+- foodb.food:FDB019480
+- hmdb:HMDB0039827
+activity_roles:
+- CHEBI:35820
+chemical_structure:
+  smiles: C/C1=C\CC/C(C)=C/C[C@](O)(C(C)C)CC/C(C)=C/CC1
+  standard_inchi: InChI=1S/C20H34O/c1-16(2)20(21)14-12-18(4)10-6-8-17(3)9-7-11-19(5)13-15-20/h8,11-12,16,21H,6-7,9-10,13-15H2,1-5H3/b17-8+,18-12+,19-11+/t20-/m1/s1
+  standard_inchi_key: ZVWXZFYWLABNOW-UYSOGGTPSA-N
+  molecular_formula: C20H34O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 290.491
+  monoisotopic_mass: 290.26097
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156193
+  source_label: serratol
+  minted_identifier: antibioticmech:chebi-dbf577d6ff
+  role_terms:
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

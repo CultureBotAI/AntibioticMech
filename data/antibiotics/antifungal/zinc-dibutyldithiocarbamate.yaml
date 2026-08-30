@@ -1,0 +1,60 @@
+identifier: CHEBI:144323
+label: zinc dibutyldithiocarbamate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dithiocarbamate salt that is the zinc salt of dibutyldithiocarbamic
+  acid.
+definition_source: ChEBI
+synonyms:
+- synonym_text: zinc bis(dibutylcarbamodithioate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (T-4)-bis(dibutylcarbamodithioato-κS,κS')zinc
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bis(dibutyldithiocarbamato)zinc
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dibutyldithiocarbamate zinc salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc bis(dibutyldithiocarbamate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc bis(dibutyldithiocarbamoyl)disulfide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc bis(dibutyldithiocarbamoyl)disulphide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc bis(dibutylthiocarbamoyl)disulfide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27364
+- CHEBI:83060
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CCCCN(CCCC)C(=S)[S-].CCCCN(CCCC)C(=S)[S-].[Zn+2]
+  standard_inchi: InChI=1S/2C9H19NS2.Zn/c2*1-3-5-7-10(9(11)12)8-6-4-2;/h2*3-8H2,1-2H3,(H,11,12);/q;;+2/p-2
+  standard_inchi_key: BOXSVZNGTQTENJ-UHFFFAOYSA-L
+  molecular_formula: 2C9H18NS2.Zn
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 474.158
+  monoisotopic_mass: 472.10528
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:144323
+  source_label: zinc dibutyldithiocarbamate
+  minted_identifier: antibioticmech:chebi-c8af54fdd9
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

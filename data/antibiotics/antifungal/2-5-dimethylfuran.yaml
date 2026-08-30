@@ -1,0 +1,46 @@
+identifier: CHEBI:89052
+label: 2,5-dimethylfuran
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of furans that is furan in which the hydrogens at
+  positions 2 and 5 are replaced by methyl groups.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,5-dimethyl-furan
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,5-dimethylfurane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24129
+xrefs:
+- cas:625-86-5
+- chemspider:11763
+- foodb.food:FDB011193
+- hmdb:HMDB0033182
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: Cc1ccc(C)o1
+  standard_inchi: InChI=1S/C6H8O/c1-5-3-4-6(2)7-5/h3-4H,1-2H3
+  standard_inchi_key: GSNUFIFRDBKVIE-UHFFFAOYSA-N
+  molecular_formula: C6H8O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 96.129
+  monoisotopic_mass: 96.05751
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:89052
+  source_label: 2,5-dimethylfuran
+  minted_identifier: antibioticmech:chebi-d41c469616
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,58 @@
+identifier: CHEBI:195185
+label: gravacridonediol
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An acridone derivative with formula C19H19NO5. It is isolated from the
+  roots of Ruta graveolens and Thamnosma rhodesica.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(1,2-dihydroxypropan-2-yl)-5-hydroxy-11-methyl-1,11-dihydrofuro[2,3-c]acridin-6(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(1,2-dihydroxy-1-methylethyl)-1,11-dihydro-5-hydroxy-11-methylfuro[2,3-c]acridin-6(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(1,2-dihydroxypropan-2-yl)-5-hydroxy-11-methyl-1,2-dihydrouro[2,3-c]acridin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: gravacridondiol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:22315
+- CHEBI:26878
+- CHEBI:27136
+- CHEBI:37407
+- CHEBI:38163
+- CHEBI:61878
+xrefs:
+- cas:37551-75-0
+- chemspider:4476568
+- hmdb:HMDB0029326
+- knapsack:C00050597
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: Cn1c2ccccc2c(=O)c2c(O)cc3c(c21)CC(C(C)(O)CO)O3
+  standard_inchi: InChI=1S/C19H19NO5/c1-19(24,9-21)15-7-11-14(25-15)8-13(22)16-17(11)20(2)12-6-4-3-5-10(12)18(16)23/h3-6,8,15,21-22,24H,7,9H2,1-2H3
+  standard_inchi_key: RQAGSTDFTGSIGB-UHFFFAOYSA-N
+  molecular_formula: C19H19NO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 341.363
+  monoisotopic_mass: 341.12632
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:195185
+  source_label: gravacridonediol
+  minted_identifier: antibioticmech:chebi-97baa38705
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,44 @@
+identifier: CHEBI:66453
+label: scutianthraquinone A
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of hydroxyanthraquinones isolated from the bark
+  of Scutia myrtina. It has been shown to exhibit antiproliferative and antimalarial
+  activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: dimethyl 1,2',5',6-tetrahydroxy-4',8-dimethyl-9'-[(2-methylbutanoyl)oxy]-9,10,10'-trioxo-9,9',10,10'-tetrahydro-2,9'-bianthracene-3',7-dicarboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:36820
+- CHEBI:37484
+xrefs:
+- cas:1160579-07-6
+- reaxys:19363282
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: CCC(C)C(=O)OC1(c2ccc3c(c2O)C(=O)c2c(cc(O)c(C(=O)OC)c2C)C3=O)c2cccc(O)c2C(=O)c2c1cc(O)c(C(=O)OC)c2C
+  standard_inchi: InChI=1S/C39H32O13/c1-7-15(2)36(47)52-39(20-9-8-10-23(40)31(20)35(46)27-17(4)29(38(49)51-6)25(42)14-22(27)39)21-12-11-18-30(33(21)44)34(45)26-16(3)28(37(48)50-5)24(41)13-19(26)32(18)43/h8-15,40-42,44H,7H2,1-6H3
+  standard_inchi_key: LUBCWELSQUOSLN-UHFFFAOYSA-N
+  molecular_formula: C39H32O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 708.672
+  monoisotopic_mass: 708.18429
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66453
+  source_label: scutianthraquinone A
+  minted_identifier: antibioticmech:chebi-75510f7ea8
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

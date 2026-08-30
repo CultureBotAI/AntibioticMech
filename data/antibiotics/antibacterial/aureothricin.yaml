@@ -1,0 +1,60 @@
+identifier: CHEBI:156452
+label: aureothricin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dithiolopyrrolone antibiotic that is 4,5-dihydro[1,2]dithiolo[4,3-b]pyrrole
+  in which the hydrogens at positions 4,5 and 6 have been replaced by methyl, oxo
+  and propanoylamino groups, respectively. It is a moderate antimicrobial by-product
+  of the thiolutin fermentation in various Streptomyces species.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-(4-methyl-5-oxo-4,5-dihydro[1,2]dithiolo[4,3-b]pyrrol-6-yl)propanamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-methyl-6-propionamido-1,2-dithiolo[4,3-b]pyrrol-5(4H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(4,5-dihydro-4-methyl-5-oxo-1,2-dithiolo[4,3-b]pyrrol-6-yl)propionamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-{4-methyl-5-oxo-4H,5H-[1,2]dithiolo[4,3-b]pyrrol-6- yl}propanamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: propanoyl-pyrrothine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: propionopyrrothine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:156449
+xrefs:
+- cas:574-95-8
+- knapsack:C00018653
+- metacyc.compound:CPD-17938
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCC(=O)Nc1c2sscc-2n(C)c1=O
+  standard_inchi: InChI=1S/C9H10N2O2S2/c1-3-6(12)10-7-8-5(4-14-15-8)11(2)9(7)13/h4H,3H2,1-2H3,(H,10,12)
+  standard_inchi_key: UGZYFXMSMFMTSM-UHFFFAOYSA-N
+  molecular_formula: C9H10N2O2S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 242.325
+  monoisotopic_mass: 242.01837
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156452
+  source_label: aureothricin
+  minted_identifier: antibioticmech:chebi-cb204c8135
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

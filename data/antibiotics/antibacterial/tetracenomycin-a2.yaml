@@ -1,0 +1,62 @@
+identifier: CHEBI:32197
+label: tetracenomycin A2
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Tetracenomycin A2 is a tetracenomycin antibiotic, a methyl ester and a
+  tertiary alpha-hydroxy ketone.
+definition_source: PMID:7982994
+synonyms:
+- synonym_text: methyl 10,12-dihydroxy-3,8-dimethoxy-1-methyl-6,11-dioxo-6,11-dihydrotetracene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tcm A2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetracenomycin A2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:48132
+- CHEBI:51286
+- ARO:3007034
+xrefs:
+- ARO:3007037
+- beilstein:5460638
+- cas:82277-62-1
+- kegg.compound:C12371
+- pubchem.compound:134024
+activity_roles:
+- CHEBI:33281
+structural_class: tetracenomycin antibiotic
+structural_class_id: ARO:3007034
+chemical_structure:
+  smiles: COC(=O)c1c(OC)cc2cc3c(c(O)c2c1C)C(=O)c1c(O)cc(OC)cc1C3=O
+  standard_inchi: InChI=1S/C23H18O8/c1-9-16-10(6-15(30-3)17(9)23(28)31-4)5-12-19(21(16)26)22(27)18-13(20(12)25)7-11(29-2)8-14(18)24/h5-8,24,26H,1-4H3
+  standard_inchi_key: BXLGPMDGOMEFBX-UHFFFAOYSA-N
+  molecular_formula: C23H18O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 422.389
+  monoisotopic_mass: 422.10017
+source_concepts:
+- source: ARO
+  source_id: ARO:3007037
+  source_label: tetracenomycin A2
+  minted_identifier: antibioticmech:aro-4077d9d6ef
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:32197
+  source_label: tetracenomycin A2
+  minted_identifier: antibioticmech:chebi-82ed08f86c
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

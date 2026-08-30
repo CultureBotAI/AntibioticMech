@@ -1,0 +1,54 @@
+identifier: CHEBI:83335
+label: triazoxide
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzotriazines that is 1,2,4-benzotriazine 1-oxide
+  which is substituted by chlorine at position 7 and by a 1H-imidazol-1-yl group at
+  position 3. A fungicide, it is used as a seed treatment for control of seed-borne
+  Pyrenophora graminea and Pyrenophora teres in barley.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7-chloro-3-(1H-imidazol-1-yl)-1,2,4-benzotriazine 1-oxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-chloro-3-imidazol-1-yl-1,2,4-benzotriazine 1-oxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24780
+- CHEBI:35580
+- CHEBI:36683
+- CHEBI:51361
+- CHEBI:87068
+xrefs:
+- cas:72459-58-6
+- patent:DE2802488
+- patent:US4239760
+- pdb-ccd:triazoxide
+- ppdb:654
+- reaxys:617803
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: '[O-][n+]1nc(-n2ccnc2)nc2ccc(Cl)cc21'
+  standard_inchi: InChI=1S/C10H6ClN5O/c11-7-1-2-8-9(5-7)16(17)14-10(13-8)15-4-3-12-6-15/h1-6H
+  standard_inchi_key: IQGKIPDJXCAMSM-UHFFFAOYSA-N
+  molecular_formula: C10H6ClN5O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 247.645
+  monoisotopic_mass: 247.02609
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83335
+  source_label: triazoxide
+  minted_identifier: antibioticmech:chebi-4a025c5f20
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

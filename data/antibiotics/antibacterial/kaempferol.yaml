@@ -1,0 +1,110 @@
+identifier: CHEBI:28499
+label: kaempferol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetrahydroxyflavone in which the four hydroxy groups are located at
+  positions 3, 5, 7 and 4'. Acting as an antioxidant by reducing oxidative stress,
+  it is currently under consideration as a possible cancer treatment.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,5,7-trihydroxy-2-(4-hydroxyphenyl)-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,4',5,7-Tetrahydroxyflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4H-1-Benzopyran-4-one, 3,5,7-trihydroxy-2-(4-hydroxyphenyl)-5,7,4'-Trihydroxyflavonol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7,4'-trihydroxyflavonol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C.I. 75640
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Indigo yellow
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kaempferol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kaempherol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kampherol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kempferol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kämpferol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nimbecetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pelargidenolon
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Populnetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rhamnolutein
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rhamnolutin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Robigenin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Swartziol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Trifolitin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: campherol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:28802
+- CHEBI:38684
+- CHEBI:52267
+xrefs:
+- cas:520-18-3
+- drugbank:DB01852
+- hmdb:HMDB0005801
+- kegg.compound:C05903
+- knapsack:C00004565
+- lincs.smallmolecule:LSM-5304
+- lipidmaps:LMPK12110003
+- metacyc.compound:CPD1F-90
+- pdb-ccd:KMP
+- reaxys:304401
+- wikipedia.en:kaempferol
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=c1c(O)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12
+  standard_inchi: InChI=1S/C15H10O6/c16-8-3-1-7(2-4-8)15-14(20)13(19)12-10(18)5-9(17)6-11(12)21-15/h1-6,16-18,20H
+  standard_inchi_key: IYRMWMYZSQPJKC-UHFFFAOYSA-N
+  molecular_formula: C15H10O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 286.239
+  monoisotopic_mass: 286.04774
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28499
+  source_label: kaempferol
+  minted_identifier: antibioticmech:chebi-e9edff159d
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

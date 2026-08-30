@@ -1,0 +1,51 @@
+identifier: CHEBI:28106
+label: isobavachalcone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of chalcones that is trans-chalcone substituted
+  by hydroxy groups at positions 4, 2' and 4' and a prenyl group at position 3'.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-1-[2,4-dihydroxy-3-(3-methylbut-2-en-1-yl)phenyl]-3-(4-hydroxyphenyl)prop-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2',4,4'-trihydroxy-3'-(3-methyl-2-butenyl)chalcone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Isobavachalcone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23086
+- CHEBI:26195
+xrefs:
+- cas:20784-50-3
+- kegg.compound:C08648
+- knapsack:C00002381
+- lipidmaps:LMPK12120039
+- reaxys:2004917
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)=CCc1c(O)ccc(C(=O)/C=C/c2ccc(O)cc2)c1O
+  standard_inchi: InChI=1S/C20H20O4/c1-13(2)3-9-16-19(23)12-10-17(20(16)24)18(22)11-6-14-4-7-15(21)8-5-14/h3-8,10-12,21,23-24H,9H2,1-2H3/b11-6+
+  standard_inchi_key: DUWPGRAKHMEPCM-IZZDOVSWSA-N
+  molecular_formula: C20H20O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 324.376
+  monoisotopic_mass: 324.13616
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28106
+  source_label: isobavachalcone
+  minted_identifier: antibioticmech:chebi-359fe3ab04
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

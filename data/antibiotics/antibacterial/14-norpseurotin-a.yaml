@@ -1,0 +1,47 @@
+identifier: CHEBI:66636
+label: 14-norpseurotin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An alkaloid that is the 14-nor derivative of pseurotin A. Isolated from
+  Aspergillus sydowii, it exhibits antibacterial, antileishmanial and anticancer activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5S,8S,9R)-8-benzoyl-2-[(1S,2S,3Z)-1,2-dihydroxypent-3-en-1-yl]-9-hydroxy-8-methoxy-3-methyl-1-oxa-7-azaspiro[4.4]non-2-ene-4,6-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22315
+- CHEBI:24995
+- CHEBI:35624
+- CHEBI:35681
+- CHEBI:37948
+xrefs:
+- chemspider:23329509
+- reaxys:18842462
+activity_roles:
+- CHEBI:33282
+- CHEBI:70868
+chemical_structure:
+  smiles: C/C=C\[C@H](O)[C@H](O)C1=C(C)C(=O)[C@]2(O1)C(=O)N[C@@](OC)(C(=O)c1ccccc1)[C@@H]2O
+  standard_inchi: InChI=1S/C21H23NO8/c1-4-8-13(23)14(24)15-11(2)16(25)20(30-15)18(27)21(29-3,22-19(20)28)17(26)12-9-6-5-7-10-12/h4-10,13-14,18,23-24,27H,1-3H3,(H,22,28)/b8-4-/t13-,14-,18+,20+,21+/m0/s1
+  standard_inchi_key: FCGCMRDADMTJIM-LFDIKFNASA-N
+  molecular_formula: C21H23NO8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 417.414
+  monoisotopic_mass: 417.14237
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66636
+  source_label: 14-norpseurotin A
+  minted_identifier: antibioticmech:chebi-58998cbca9
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

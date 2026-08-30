@@ -1,0 +1,65 @@
+identifier: CHEBI:61748
+label: (E)-oct-2-enal
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The (E)-isomer of oct-2-enal.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-oct-2-enal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-2-octenal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-trans-octenal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: octene-1-oxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-2-Octen-1-al
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-2-Octenal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-oct-2-enal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-octen-2-al
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2E)-octenal
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:61725
+xrefs:
+- cas:2548-87-0
+- hmdb:HMDB0013809
+- reaxys:1702427
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H]C(=O)/C=C/CCCCC'
+  standard_inchi: InChI=1S/C8H14O/c1-2-3-4-5-6-7-8-9/h6-8H,2-5H2,1H3/b7-6+
+  standard_inchi_key: LVBXEMGDVWVTGY-VOTSOKGWSA-N
+  molecular_formula: C8H14O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 126.199
+  monoisotopic_mass: 126.10447
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:61748
+  source_label: (E)-oct-2-enal
+  minted_identifier: antibioticmech:chebi-d13173cb14
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

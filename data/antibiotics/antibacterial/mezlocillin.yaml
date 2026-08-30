@@ -1,0 +1,111 @@
+identifier: CHEBI:6919
+label: mezlocillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin in which the substituent at position 6 of the penam ring
+  is a (2R)-2-[3-(methanesulfonyl)-2-oxoimidazolidine-1-carboxamido]-2-phenylacetamido
+  group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: mezlocilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: mezlocilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: mezlocillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-{(2R)-2-[3-(methanesulfonyl)-2-oxoimidazolidine-1-carboxamido]-2-phenylacetamido}-2,2-dimethylpenam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-3,3-dimethyl-6-{[(2R)-2-({[3-(methylsulfonyl)-2-oxoimidazolidin-1-yl]carbonyl}amino)-2-phenylacetyl]amino}-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6β-{(2R)-2-[3-(methanesulfonyl)-2-oxoimidazolidine-1-carboxamido]-2-phenylacetamido}penicillanic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Mezlin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Mezlocillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: mezlin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- CHEBI:88187
+- ARO:3000008
+xrefs:
+- ARO:3000639
+- cas:51481-65-3
+- drugbank:DB00948
+- drugcentral:1795
+- kegg.compound:C07221
+- kegg.drug:D05021
+- patent:CN101328187
+- patent:CN101585845
+- patent:CN1485035
+- patent:DE2152967
+- patent:US3974142
+- reaxys:6081499
+- wikipedia.en:Mezlocillin
+- chembl:CHEMBL1731
+- pubchem.compound:656511
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)[C@H](NC(=O)N1CCN(S(C)(=O)=O)C1=O)c1ccccc1'
+  standard_inchi: InChI=1S/C21H25N5O8S2/c1-21(2)14(18(29)30)26-16(28)13(17(26)35-21)22-15(27)12(11-7-5-4-6-8-11)23-19(31)24-9-10-25(20(24)32)36(3,33)34/h4-8,12-14,17H,9-10H2,1-3H3,(H,22,27)(H,23,31)(H,29,30)/t12-,13-,14+,17-/m1/s1
+  standard_inchi_key: YPBATNHYBCGSSN-VWPFQQQWSA-N
+  molecular_formula: C21H25N5O8S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 539.592
+  monoisotopic_mass: 539.11445
+source_concepts:
+- source: ARO
+  source_id: ARO:3000639
+  source_label: mezlocillin
+  minted_identifier: antibioticmech:aro-ecd4ba4634
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:6919
+  source_label: mezlocillin
+  minted_identifier: antibioticmech:chebi-261045f5ba
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005111
+  label: blaS1
+  evidence:
+  - reference: ARO:3005111
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000639 (mezlocillin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000639 (mezlocillin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

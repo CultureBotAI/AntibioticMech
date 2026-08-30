@@ -1,0 +1,49 @@
+identifier: CHEBI:113455
+label: sodium benzoate
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic sodium salt resulting from the replacement of the proton from
+  the carboxy group of benzoic acid by a sodium ion.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Sodium benzoate
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Benzoic acid, sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E211
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38700
+xrefs:
+- cas:532-32-1
+- kegg.drug:D02277
+- reaxys:1100243
+- wikipedia.en:Sodium_benzoate
+activity_roles:
+- CHEBI:65256
+chemical_structure:
+  smiles: O=C([O-])c1ccccc1.[Na+]
+  standard_inchi: InChI=1S/C7H6O2.Na/c8-7(9)6-4-2-1-3-5-6;/h1-5H,(H,8,9);/q;+1/p-1
+  standard_inchi_key: WXMKPNITSTVMEF-UHFFFAOYSA-M
+  molecular_formula: C7H5O2.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 144.105
+  monoisotopic_mass: 144.01872
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:113455
+  source_label: sodium benzoate
+  minted_identifier: antibioticmech:chebi-603779e9f6
+  role_terms:
+  - CHEBI:65256
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

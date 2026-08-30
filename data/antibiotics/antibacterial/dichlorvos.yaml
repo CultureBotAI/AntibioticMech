@@ -1,0 +1,73 @@
+identifier: CHEBI:34690
+label: dichlorvos
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An alkenyl phosphate that is the 2,2-dichloroethenyl ester of dimethyl
+  phosphate.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,2-dichloroethenyl dimethyl phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,2-Dichloroethenyl dimethyl phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DDVP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dichlorvos
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dimethyl 2,2-dichlorovinyl phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dimethyl-2,2-dichlorovinyl phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphoric acid, 2,2-dichloroethenyl dimethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphoric acid, 2,2-dichlorovinyl dimethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:16648
+- CHEBI:25708
+- CHEBI:37494
+- CHEBI:38657
+xrefs:
+- cas:62-73-7
+- hmdb:HMDB0033956
+- kegg.compound:C14430
+- kegg.drug:D03791
+- metacyc.compound:CPD-10185
+- ppdb:220
+- reaxys:1709141
+- wikipedia.en:Dichlorvos
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: COP(=O)(OC)OC=C(Cl)Cl
+  standard_inchi: InChI=1S/C4H7Cl2O4P/c1-8-11(7,9-2)10-3-4(5)6/h3H,1-2H3
+  standard_inchi_key: OEBRKCOSUFCWJD-UHFFFAOYSA-N
+  molecular_formula: C4H7Cl2O4P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 220.976
+  monoisotopic_mass: 219.9459
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:34690
+  source_label: dichlorvos
+  minted_identifier: antibioticmech:chebi-e8ad3ebe8b
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

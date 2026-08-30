@@ -1,0 +1,42 @@
+identifier: CHEBI:132987
+label: alliin zwitterion
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An L-α-amino acid zwitterion that is allin in which a proton has been
+  transferred from the carboxy group to the amino group. It is the major species at
+  pH 7.3.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R)-2-azaniumyl-3-[(S)-prop-2-ene-1-sulfinyl]propanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alliin
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:59869
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C=CC[S@](=O)C[C@H]([NH3+])C(=O)[O-]
+  standard_inchi: InChI=1S/C6H11NO3S/c1-2-3-11(10)4-5(7)6(8)9/h2,5H,1,3-4,7H2,(H,8,9)/t5-,11-/m0/s1
+  standard_inchi_key: XUHLIQGRKRUKPH-DYEAUMGKSA-N
+  molecular_formula: C6H11NO3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 177.225
+  monoisotopic_mass: 177.04596
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:132987
+  source_label: alliin zwitterion
+  minted_identifier: antibioticmech:chebi-96834ae494
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

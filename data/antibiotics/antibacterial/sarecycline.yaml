@@ -1,0 +1,37 @@
+identifier: antibioticmech:aro-a39572002e
+label: sarecycline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Sarecycline is a tetracycline derivative.
+definition_source: PMID:30397052
+parent_compounds:
+- ARO:3000050
+xrefs:
+- ARO:3007025
+- CHEBI:201449
+- chembl:CHEMBL2364632
+- pubchem.compound:54681908
+structural_class: tetracycline antibiotic
+structural_class_id: ARO:3000050
+chemical_structure:
+  smiles: CN(C)[C@H]1[C@@H]2C[C@@H]3CC4=C(C=CC(=C4C(=C3C(=O)[C@@]2(C(=C(C1=O)C(=O)N)O)O)O)O)CN(C)OC
+  standard_inchi: InChI=1S/C24H29N3O8/c1-26(2)18-13-8-11-7-12-10(9-27(3)35-4)5-6-14(28)16(12)19(29)15(11)21(31)24(13,34)22(32)17(20(18)30)23(25)33/h5-6,11,13,18,28-29,32,34H,7-9H2,1-4H3,(H2,25,33)/t11-,13-,18-,24-/m0/s1
+  standard_inchi_key: AYUMVPHUMFKFPJ-SBAJWEJLSA-N
+  molecular_formula: C24H29N3O8
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 487.5
+  monoisotopic_mass: 487.19546489
+source_concepts:
+- source: ARO
+  source_id: ARO:3007025
+  source_label: sarecycline
+  minted_identifier: antibioticmech:aro-a39572002e
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

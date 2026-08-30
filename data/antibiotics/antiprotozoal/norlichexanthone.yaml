@@ -1,0 +1,49 @@
+identifier: CHEBI:7632
+label: norlichexanthone
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of xanthones that is 9H-xanthen-9-one substituted
+  by hydroxy groups at positions 1, 3 and 6 and a methyl group at position 8. It has
+  been isolated from Wardomyces anomalus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,3,6-trihydroxy-8-methyl-9H-xanthen-9-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,3,6-Trihydroxy-8-methyl-9H-xanthen-9-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:51149
+xrefs:
+- cas:20716-98-7
+- kegg.compound:C10087
+- knapsack:C00002969
+- lincs.smallmolecule:LSM-4782
+- reaxys:259778
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: Cc1cc(O)cc2oc3cc(O)cc(O)c3c(=O)c12
+  standard_inchi: InChI=1S/C14H10O5/c1-6-2-7(15)4-10-12(6)14(18)13-9(17)3-8(16)5-11(13)19-10/h2-5,15-17H,1H3
+  standard_inchi_key: AQZHBCDRWFMXIN-UHFFFAOYSA-N
+  molecular_formula: C14H10O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 258.229
+  monoisotopic_mass: 258.05282
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:7632
+  source_label: norlichexanthone
+  minted_identifier: antibioticmech:chebi-7001c70088
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

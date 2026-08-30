@@ -1,0 +1,46 @@
+identifier: CHEBI:71948
+label: tyrocidine B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A homodetic cyclic decapeptide consisting of D-Phe, L-Pro, L-Trp, D-Phe,
+  L-Asn, L-Gln, L-Tyr, L-Val, L-Orn, and L-Leu residues coupled in sequence and cyclised
+  head-to-tail.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cyclo(L-asparaginyl-L-glutaminyl-L-tyrosyl-L-valyl-L-ornithyl-L-leucyl-D-phenylalanyl-L-prolyl-L-tryptophyl-D-phenylalanyl)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cyclo-(D-Phe-Pro-Trp-D-Phe-Asn-Gln-Tyr-Val-Orn-Leu)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24613
+- CHEBI:25903
+- CHEBI:51026
+xrefs:
+- reaxys:505981
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12CCCN1C(=O)[C@@H](Cc1ccccc1)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CCCN)NC(=O)[C@H](C(C)C)NC(=O)[C@]([H])(Cc1ccc(O)cc1)NC(=O)[C@H](CCC(N)=O)NC(=O)[C@H](CC(N)=O)NC(=O)[C@@H](Cc1ccccc1)NC(=O)[C@H](Cc1cnc3ccccc13)NC2=O'
+  standard_inchi: InChI=1S/C68H88N14O13/c1-38(2)31-49-61(88)80-54(34-41-17-9-6-10-18-41)68(95)82-30-14-22-55(82)66(93)79-52(35-43-37-72-46-20-12-11-19-45(43)46)63(90)77-50(32-40-15-7-5-8-16-40)62(89)78-53(36-57(71)85)64(91)73-48(27-28-56(70)84)60(87)76-51(33-42-23-25-44(83)26-24-42)65(92)81-58(39(3)4)67(94)74-47(21-13-29-69)59(86)75-49/h5-12,15-20,23-26,37-39,47-55,58,72,83H,13-14,21-22,27-36,69H2,1-4H3,(H2,70,84)(H2,71,85)(H,73,91)(H,74,94)(H,75,86)(H,76,87)(H,77,90)(H,78,89)(H,79,93)(H,80,88)(H,81,92)/t47-,48-,49-,50+,51-,52-,53-,54+,55-,58-/m0/s1
+  standard_inchi_key: PUVWPDQSNYAMEH-UQHIYWQBSA-N
+  molecular_formula: C68H88N14O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1309.537
+  monoisotopic_mass: 1308.66553
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:71948
+  source_label: tyrocidine B
+  minted_identifier: antibioticmech:chebi-186dd5e561
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

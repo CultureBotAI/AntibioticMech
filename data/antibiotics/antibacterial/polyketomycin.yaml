@@ -1,0 +1,52 @@
+identifier: CHEBI:66771
+label: polyketomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbohydrate-containing antibiotic isolated from the culture broth of
+  Streptomyces sp.MK277-AF1. It exhibits potent antibacterial activity against several
+  Gram-positive bacterial strains and is also found to be cytotoxic against a number
+  of tumour cell lines.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3S,6S)-2-methyl-6-{[(1S,3E,4aS,12aR)-4a,6,12a-trihydroxy-3-(1-hydroxyethylidene)-9-methoxy-11-methyl-2,4,5,7,10-pentaoxo-1,2,3,4,4a,5,7,10,12,12a-decahydrotetracen-1-yl]oxy}tetrahydro-2H-pyran-3-yl
+    2,6-dideoxy-4-O-(2-hydroxy-3,6-dimethylbenzoyl)-3-C-methyl-α-L-xylo-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:23007
+- CHEBI:24400
+- CHEBI:25830
+- CHEBI:26407
+- CHEBI:33823
+- CHEBI:33853
+- CHEBI:35294
+- CHEBI:36054
+xrefs:
+- cas:200625-47-4
+- reaxys:8184047
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]1(O[C@@H]2C(=O)/C(=C(/C)O)C(=O)[C@@]3(O)C(=O)c4c(O)c5c(c(C)c4C[C@@]23O)C(=O)C(OC)=CC5=O)CC[C@]([H])(O[C@H]2C[C@@](C)(O)[C@H](OC(=O)c3c(C)ccc(C)c3O)[C@H](C)O2)[C@@H](C)O1'
+  standard_inchi: InChI=1S/C44H48O18/c1-16-9-10-17(2)33(47)28(16)41(53)62-39-21(6)59-27(15-42(39,7)54)60-24-11-12-26(58-20(24)5)61-40-36(50)30(19(4)45)37(51)44(56)38(52)31-22(14-43(40,44)55)18(3)29-32(35(31)49)23(46)13-25(57-8)34(29)48/h9-10,13,20-21,24,26-27,39-40,45,47,49,54-56H,11-12,14-15H2,1-8H3/b30-19+/t20-,21+,24+,26+,27+,39-,40-,42-,43-,44-/m1/s1
+  standard_inchi_key: OWRCRVABZYJUES-FLJLGRLJSA-N
+  molecular_formula: C44H48O18
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 864.85
+  monoisotopic_mass: 864.28406
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66771
+  source_label: polyketomycin
+  minted_identifier: antibioticmech:chebi-5569c64373
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

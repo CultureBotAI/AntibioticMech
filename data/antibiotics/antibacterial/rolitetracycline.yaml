@@ -1,0 +1,72 @@
+identifier: CHEBI:63334
+label: rolitetracycline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A derivative of tetracycline in which the amide function is substituted
+  with a pyrrolidinomethyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Synterin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: rolitetraciclina
+  synonym_type: INN
+  source: chebi
+- synonym_text: rolitetracyclinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (4S,4aS,5aS,6S,12aS)-4-(dimethylamino)-3,6,10,12,12a-pentahydroxy-6-methyl-1,11-dioxo-N-(pyrrolidin-1-ylmethyl)-1,4,4a,5,5a,6,11,12a-octahydrotetracene-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(1-Pyrrolidinylmethyl)-tetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(Pyrrolidinomethyl)tetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pyrrolidino-methyl-tetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Reverin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:26895
+xrefs:
+- cas:751-97-3
+- drugbank:DB01301
+- drugcentral:2399
+- kegg.drug:D02282
+- patent:US3104240
+- reaxys:73191
+- wikipedia.en:Rolitetracycline
+activity_roles:
+- CHEBI:33282
+- CHEBI:35820
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H][C@]12C[C@@]3([H])[C@H](N(C)C)C(O)=C(C(=O)NCN4CCCC4)C(=O)[C@@]3(O)C(O)=C1C(=O)c1c(O)cccc1[C@@]2(C)O'
+  standard_inchi: InChI=1S/C27H33N3O8/c1-26(37)13-7-6-8-16(31)17(13)21(32)18-14(26)11-15-20(29(2)3)22(33)19(24(35)27(15,38)23(18)34)25(36)28-12-30-9-4-5-10-30/h6-8,14-15,20,31,33-34,37-38H,4-5,9-12H2,1-3H3,(H,28,36)/t14-,15-,20-,26+,27-/m0/s1
+  standard_inchi_key: HMEYVGGHISAPJR-IAHYZSEUSA-N
+  molecular_formula: C27H33N3O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 527.574
+  monoisotopic_mass: 527.22677
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:63334
+  source_label: rolitetracycline
+  minted_identifier: antibioticmech:chebi-a512a29789
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35820
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,63 @@
+identifier: CHEBI:156148
+label: ascofuranone
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dihydroxybenzaldehyde that is 2,4-dihydroxybenzaldehyde which is substituted
+  by a (2E,6E)-7-[(2S)-5,5-dimethyl-4-oxotetrahydrofuran-2-yl]-3-methylocta-2,6-dien-1-yl
+  group at position 3, chlorine at position 5, and a methyl group at position 6. A
+  meroterpenoid produced by the soil fungus, Acremonium sclerotigenum. It is a promising
+  drug candidate against the tropical disease, African trypanosomiasis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-chloro-5-{(2E,6E)-7-[(2S)-5,5-dimethyl-4-oxotetrahydrofuran-2-yl]-3-methylocta-2,6-dien-1-yl}-4,6-dihydroxy-2-methylbenzaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-ascofuranone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S-(E,E))-3-chloro-4,6-dihydroxy-2-methyl-5-(3-methyl-7-(tetrahydro-5,5-dimethyl-4-oxo-2-furanyl)-2,6-octadienyl)-benzaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-ascofuranone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ascofuranon
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26658
+- CHEBI:33572
+- CHEBI:47016
+- CHEBI:50196
+- CHEBI:64419
+- CHEBI:78840
+- CHEBI:83403
+xrefs:
+- cas:38462-04-3
+- knapsack:C00017973
+- wikipedia.en:Ascofuranone
+activity_roles:
+- CHEBI:35820
+chemical_structure:
+  smiles: '[H]C(=O)c1c(C)c(Cl)c(O)c(C/C=C(\C)CC/C=C(\C)[C@]2([H])CC(=O)C(C)(C)O2)c1O'
+  standard_inchi: InChI=1S/C23H29ClO5/c1-13(7-6-8-14(2)18-11-19(26)23(4,5)29-18)9-10-16-21(27)17(12-25)15(3)20(24)22(16)28/h8-9,12,18,27-28H,6-7,10-11H2,1-5H3/b13-9+,14-8+/t18-/m0/s1
+  standard_inchi_key: VGYPZLGWVQQOST-JUERRSSISA-N
+  molecular_formula: C23H29ClO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 420.933
+  monoisotopic_mass: 420.17035
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156148
+  source_label: ascofuranone
+  minted_identifier: antibioticmech:chebi-1fd877718e
+  role_terms:
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

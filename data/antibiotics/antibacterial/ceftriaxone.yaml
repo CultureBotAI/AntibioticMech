@@ -1,0 +1,279 @@
+identifier: CHEBI:29007
+label: ceftriaxone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A third-generation cephalosporin compound having 2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetylamino
+  and [(2-methyl-5,6-dioxo-1,2,5,6-tetrahydro-1,2,4-triazin-3-yl)sulfanyl]methyl side-groups.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ceftriaxona
+  synonym_type: INN
+  source: chebi
+- synonym_text: ceftriaxonum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 7β-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino}-3-{[(2-methyl-5,6-dioxo-1,2,5,6-tetrahydro-1,2,4-triazin-3-yl)sulfanyl]methyl}-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-7-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino}-3-{[(2-methyl-5,6-dioxo-1,2,5,6-tetrahydro-1,2,4-triazin-3-yl)sulfanyl]methyl}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: rocephin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Biotrakson
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: CRO
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Cefatriaxone
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Ceftriaxon
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Ceftriaxona
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Ceftriaxonum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Ceftriazone
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Longacef
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Longaceph
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Rocephin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23066
+- CHEBI:36816
+- CHEBI:38418
+- CHEBI:39410
+- ARO:0000032
+xrefs:
+- ARO:0000062
+- cas:73384-59-5
+- drugbank:DB01212
+- drugcentral:564
+- hmdb:HMDB0015343
+- kegg.compound:C06683
+- kegg.drug:D07659
+- metacyc.compound:CPD-12294
+- patent:GB2022090
+- patent:US4327210
+- reaxys:6495519
+- wikipedia.en:Ceftriaxone
+- chembl:CHEMBL161
+- pubchem.compound:5479530
+activity_roles:
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(CSc3nc(=O)c(=O)nn3C)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1'
+  standard_inchi: InChI=1S/C18H18N8O7S3/c1-25-18(22-12(28)13(29)23-25)36-4-6-3-34-15-9(14(30)26(15)10(6)16(31)32)21-11(27)8(24-33-2)7-5-35-17(19)20-7/h5,9,15H,3-4H2,1-2H3,(H2,19,20)(H,21,27)(H,23,29)(H,31,32)/b24-8-/t9-,15-/m1/s1
+  standard_inchi_key: VAAUVRVFOQPIGI-SPQHTLEESA-N
+  molecular_formula: C18H18N8O7S3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 554.592
+  monoisotopic_mass: 554.04606
+source_concepts:
+- source: ARO
+  source_id: ARO:0000062
+  source_label: ceftriaxone
+  minted_identifier: antibioticmech:aro-f34c32c3a8
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:29007
+  source_label: ceftriaxone
+  minted_identifier: antibioticmech:chebi-ef2d0c9777
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000386
+  label: MexAB-OprM
+  evidence:
+  - reference: ARO:3000386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001071
+  label: SHV-12
+  evidence:
+  - reference: ARO:3001071
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001866
+  label: CTX-M-3
+  evidence:
+  - reference: ARO:3001866
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001878
+  label: CTX-M-15
+  evidence:
+  - reference: ARO:3001878
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001917
+  label: CTX-M-55
+  evidence:
+  - reference: ARO:3001917
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002013
+  label: CMY-2
+  evidence:
+  - reference: ARO:3002013
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002500
+  label: PDC-3
+  evidence:
+  - reference: ARO:3002500
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002502
+  label: PDC-5
+  evidence:
+  - reference: ARO:3002502
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003937
+  label: Neisseria meningititis PBP2 conferring resistance to beta-lactam
+  evidence:
+  - reference: ARO:3003937
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003966
+  label: Klebsiella pneumoniae OmpK35
+  evidence:
+  - reference: ARO:3003966
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003968
+  label: Klebsiella pneumoniae OmpK36
+  evidence:
+  - reference: ARO:3003968
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004128
+  label: Serratia marcescens Omp1
+  evidence:
+  - reference: ARO:3004128
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004446
+  label: Haemophilus influenzae PBP3 conferring resistance to beta-lactam antibiotics
+  evidence:
+  - reference: ARO:3004446
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004578
+  label: Acinetobacter baumannii AbuO
+  evidence:
+  - reference: ARO:3004578
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004585
+  label: Klebsiella pneumoniae KpnEF
+  evidence:
+  - reference: ARO:3004585
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004832
+  label: Neisseria gonorrhoeae PBP2 conferring resistance to beta-lactam antibiotics
+  evidence:
+  - reference: ARO:3004832
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004835
+  label: Neisseria gonorrhoeae pilQ gene conferring resistance to beta-lactam
+  evidence:
+  - reference: ARO:3004835
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005015
+  label: VMB-1
+  evidence:
+  - reference: ARO:3005015
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005111
+  label: blaS1
+  evidence:
+  - reference: ARO:3005111
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007062
+  label: VAM-1
+  evidence:
+  - reference: ARO:3007062
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007085
+  label: PRC-1
+  evidence:
+  - reference: ARO:3007085
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007635
+  label: CAE-1
+  evidence:
+  - reference: ARO:3007635
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007678
+  label: IreK
+  evidence:
+  - reference: ARO:3007678
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000062 (ceftriaxone); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

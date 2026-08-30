@@ -1,0 +1,41 @@
+identifier: CHEBI:69704
+label: 1-(2-hydroxy-4-methoxyphenyl)-3-(4-hydroxy-3-methoxyphenyl)propane
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monomethoxybenzene that is 2-methoxyphenol substituted by a 3-(2-hydroxy-4-methoxyphenyl)propyl
+  group at position 4. Isolated from the stems of Combretum griffithii, it exhibits
+  anticancer activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-[3-(2-hydroxy-4-methoxyphenyl)propyl]-2-methoxyphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134251
+xrefs:
+- reaxys:6521737
+activity_roles:
+- CHEBI:64912
+chemical_structure:
+  smiles: COc1ccc(CCCc2ccc(O)c(OC)c2)c(O)c1
+  standard_inchi: InChI=1S/C17H20O4/c1-20-14-8-7-13(16(19)11-14)5-3-4-12-6-9-15(18)17(10-12)21-2/h6-11,18-19H,3-5H2,1-2H3
+  standard_inchi_key: UDWSABBWZXKLLQ-UHFFFAOYSA-N
+  molecular_formula: C17H20O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 288.343
+  monoisotopic_mass: 288.13616
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69704
+  source_label: 1-(2-hydroxy-4-methoxyphenyl)-3-(4-hydroxy-3-methoxyphenyl)propane
+  minted_identifier: antibioticmech:chebi-20fa5cc869
+  role_terms:
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

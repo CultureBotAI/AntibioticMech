@@ -1,0 +1,61 @@
+identifier: CHEBI:10003
+label: ribostamycin sulfate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aminoglycoside sulfate salt resulting from the reaction of ribostamycin
+  with sulfuric acid.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Vistamycin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Landamycine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ribomycine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SF 733 antibioic sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ribostamycin A sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38012
+- CHEBI:47779
+xrefs:
+- cas:53797-35-6
+- drugbank:DB03615
+- kegg.drug:D02209
+- metacyc.compound:CPD-14143
+- reaxys:8820400
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
+chemical_structure:
+  smiles: NC[C@H]1O[C@H](O[C@H]2[C@H](O[C@@H]3O[C@H](CO)[C@@H](O)[C@H]3O)[C@@H](O)[C@H](N)C[C@@H]2N)[C@H](N)[C@@H](O)[C@@H]1O.O=S(=O)(O)O
+  standard_inchi: InChI=1S/C17H34N4O10.H2O4S/c18-2-6-10(24)12(26)8(21)16(28-6)30-14-5(20)1-4(19)9(23)15(14)31-17-13(27)11(25)7(3-22)29-17;1-5(2,3)4/h4-17,22-27H,1-3,18-21H2;(H2,1,2,3,4)/t4-,5+,6-,7-,8-,9+,10-,11-,12-,13-,14-,15-,16-,17+;/m1./s1
+  standard_inchi_key: RTCDDYYZMGGHOE-YMSVYGIHSA-N
+  molecular_formula: (H2O4S)n.C17H34N4O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 552.556
+  monoisotopic_mass: 552.19487
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:10003
+  source_label: ribostamycin sulfate
+  minted_identifier: antibioticmech:chebi-676201b2d4
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

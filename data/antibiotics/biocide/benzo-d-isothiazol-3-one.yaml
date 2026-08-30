@@ -1,0 +1,67 @@
+identifier: CHEBI:167099
+label: benzo[d]isothiazol-3-one
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterobicyclic compound based on a fused 1,2-thiazole and benzene
+  bicyclic ring skeleton, with the S atom positioned adjacent to one of the positions
+  of ring fusion.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,2-benzisothiazol-3(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-Benzisothiazol-3(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-Benzisothiazolin-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-Benzisothiazoline-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,3-dihydro-3-oxo-1,2-benzisothiazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BIT
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: IPX
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benzisothiazolone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27171
+- CHEBI:38101
+xrefs:
+- cas:2634-33-5
+- hmdb:HMDB0034413
+- ppdb:1361
+- reaxys:119510
+- wikipedia.en:Benzisothiazolinone
+activity_roles:
+- CHEBI:48219
+chemical_structure:
+  smiles: O=c1nsc2ccccc12
+  standard_inchi: InChI=1S/C7H5NOS/c9-7-5-3-1-2-4-6(5)10-8-7/h1-4H,(H,8,9)
+  standard_inchi_key: DMSMPAJRVJJAGA-UHFFFAOYSA-N
+  molecular_formula: C7H5NOS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 151.19
+  monoisotopic_mass: 151.00918
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:167099
+  source_label: benzo[d]isothiazol-3-one
+  minted_identifier: antibioticmech:chebi-830d53a436
+  role_terms:
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

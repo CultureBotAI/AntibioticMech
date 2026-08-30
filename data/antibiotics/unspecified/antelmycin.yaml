@@ -1,0 +1,71 @@
+identifier: CHEBI:88275
+label: antelmycin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A nucleoside antibiotic with anthelminthic properties that is isolated
+  from Streptomyces longissimus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: antelmicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: antelmycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: antelmycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1-N-(2-O-(3-Amino-3-deoxy-beta-D-glucopyranosyl)-4-amino-4-deoxy-D-glycero-D-galacto-D-gluco-beta-D-undecapyranosyl)cytosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Anthelmycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic 33876
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hikizimycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L 33876
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 337588
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:21731
+- CHEBI:23007
+- CHEBI:24400
+- CHEBI:38337
+xrefs:
+- cas:12706-94-4
+- kegg.drug:D02951
+- knapsack:C00018715
+- patent:US3143467
+- reaxys:4284256
+activity_roles:
+- CHEBI:25605
+chemical_structure:
+  smiles: '[H][C@]1([C@H](O[C@@H]2O[C@H](CO)[C@@H](O)[C@H](N)[C@H]2O)[C@@H](O)[C@@H](O)[C@H](O)[C@H](O)CO)O[C@@H](n2ccc(N)nc2=O)[C@H](O)[C@@H](O)[C@@H]1N'
+  standard_inchi: InChI=1S/C21H37N5O14/c22-7-1-2-26(21(37)25-7)19-16(36)12(32)9(24)17(39-19)18(15(35)14(34)10(30)5(29)3-27)40-20-13(33)8(23)11(31)6(4-28)38-20/h1-2,5-6,8-20,27-36H,3-4,23-24H2,(H2,22,25,37)/t5-,6-,8+,9+,10-,11-,12+,13-,14+,15+,16-,17+,18-,19-,20+/m1/s1
+  standard_inchi_key: VQQSDVBOXQHCHU-SKPOXZENSA-N
+  molecular_formula: C21H37N5O14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 583.548
+  monoisotopic_mass: 583.2337
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:88275
+  source_label: antelmycin
+  minted_identifier: antibioticmech:chebi-6030b07963
+  role_terms:
+  - CHEBI:25605
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

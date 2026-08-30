@@ -1,0 +1,63 @@
+identifier: CHEBI:17925
+label: α-D-glucose
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: D-Glucopyranose having α-configuration at the anomeric centre.
+definition_source: ChEBI
+synonyms:
+- synonym_text: α-D-glucopyranose
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ALPHA-D-GLUCOSE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alpha-D-Glucose
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α-D-Glc
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α-dextrose
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:4167
+xrefs:
+- beilstein:1281608
+- beilstein:5730158
+- cas:492-62-6
+- glygen:G58161NS
+- glytoucan:G58161NS
+- gmelin:329225
+- kegg.compound:C00267
+- knapsack:C00001122
+- pdb-ccd:GLC
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: OC[C@H]1O[C@H](O)[C@H](O)[C@@H](O)[C@@H]1O
+  standard_inchi: InChI=1S/C6H12O6/c7-1-2-3(8)4(9)5(10)6(11)12-2/h2-11H,1H2/t2-,3-,4+,5-,6+/m1/s1
+  standard_inchi_key: WQZGKKKJIJFFOK-DVKNGEFBSA-N
+  molecular_formula: C6H12O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 180.156
+  monoisotopic_mass: 180.06339
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17925
+  source_label: α-D-glucose
+  minted_identifier: antibioticmech:chebi-79a6f68385
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

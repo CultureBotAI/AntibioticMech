@@ -1,0 +1,100 @@
+identifier: CHEBI:17650
+label: cortisol
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 17α-hydroxy-C21-steroid that is pregn-4-ene substituted by oxo groups
+  at positions 3 and 20 and hydroxy groups at positions 11, 17 and 21. Cortisol is
+  a corticosteroid hormone or glucocorticoid produced by zona fasciculata of the adrenal
+  cortex, which is a part of the adrenal gland. It is usually referred to as the "stress
+  hormone" as it is involved in response to stress and anxiety, controlled by corticotropin-releasing
+  hormone (CRH). It increases blood pressure and blood sugar, and reduces immune responses.
+definition_source: ChEBI
+synonyms:
+- synonym_text: hidrocortisona
+  synonym_type: INN
+  source: chebi
+- synonym_text: hydrocortisone
+  synonym_type: INN
+  source: chebi
+- synonym_text: hydrocortisonum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 11β,17,21-trihydroxypregn-4-ene-3,20-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (11β)-11,17,21-trihydroxypregn-4-ene-3,20-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 11beta,17alpha,21-Trihydroxy-4-pregnene-3,20-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 11β,17α,21-trihydroxy-4-pregnene-3,20-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 11β-hydrocortisone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 17-hydroxycorticosterone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-pregnen-11β,17α,21-triol-3,20-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cortisol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hydrocortisone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kendall's compound F
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Reichstein's substance M
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:138141
+- CHEBI:139590
+- CHEBI:139592
+- CHEBI:24261
+- CHEBI:35344
+- CHEBI:35346
+- CHEBI:36885
+- CHEBI:47909
+xrefs:
+- beilstein:1354819
+- cas:50-23-7
+- drugbank:DB00741
+- drugcentral:1388
+- kegg.compound:C00735
+- kegg.drug:D00088
+- lincs.smallmolecule:LSM-5980
+- lipidmaps:LMST02030001
+- patent:US2602769
+- pdb-ccd:HCY
+- wikipedia.en:Hydrocortisone
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@](O)(C(=O)CO)[C@@]1(C)C[C@H](O)[C@@]1([H])[C@@]2([H])CCC2=CC(=O)CC[C@@]21C'
+  standard_inchi: InChI=1S/C21H30O5/c1-19-7-5-13(23)9-12(19)3-4-14-15-6-8-21(26,17(25)11-22)20(15,2)10-16(24)18(14)19/h9,14-16,18,22,24,26H,3-8,10-11H2,1-2H3/t14-,15-,16-,18+,19-,20-,21-/m0/s1
+  standard_inchi_key: JYGXADMDTFJGBT-VWUMJDOOSA-N
+  molecular_formula: C21H30O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 362.466
+  monoisotopic_mass: 362.20932
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17650
+  source_label: cortisol
+  minted_identifier: antibioticmech:chebi-cd9b03d97d
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

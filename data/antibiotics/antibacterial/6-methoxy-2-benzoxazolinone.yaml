@@ -1,0 +1,68 @@
+identifier: CHEBI:195240
+label: 6-methoxy-2-benzoxazolinone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 2-benzoxazolinone that is substituted by a methoxy group at position
+  6.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Coixol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 6-methoxy-1,3-benzoxazol-2(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-MBOA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-methoxy-3H-benzoxazol-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-methoxybenzo[d]oxazol-2(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-methoxybenzoxazolin-2(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-methoxybenzoxazolinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MBOA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:46700
+xrefs:
+- cas:532-91-2
+- chemspider:10317
+- foodb.food:FDB015492
+- hmdb:HMDB0036582
+- knapsack:C00036627
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1ccc2nc(=O)oc2c1
+  standard_inchi: InChI=1S/C8H7NO3/c1-11-5-2-3-6-7(4-5)12-8(10)9-6/h2-4H,1H3,(H,9,10)
+  standard_inchi_key: MKMCJLMBVKHUMS-UHFFFAOYSA-N
+  molecular_formula: C8H7NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 165.148
+  monoisotopic_mass: 165.04259
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:195240
+  source_label: 6-methoxy-2-benzoxazolinone
+  minted_identifier: antibioticmech:chebi-f2e95c9f3a
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

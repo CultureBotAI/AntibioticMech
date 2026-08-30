@@ -1,0 +1,62 @@
+identifier: CHEBI:83065
+label: isofetamid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aromatic amide obtained by formal condensation of the carboxy group
+  of 3-methylthiophene-2-carboxylic acid with the amino group of 2-amino-1-(4-isopropoxy-2-methylphenyl)-2-methylpropan-1-one.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[1-(4-isopropoxy-2-methylphenyl)-2-methyl-1-oxopropan-2-yl]-3-methylthiophene-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-methyl-N-{2-methyl-1-[2-methyl-4-(propan-2-yloxy)phenyl]-1-oxopropan-2-yl}thiophene-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: IKF 5411
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: IKF-5411
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[1,1-dimethyl-2-(4-isopropoxy-o-tolyl)-2-oxoethyl]-3-methylthiophene-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[1,1-dimethyl-2-[2-methyl-4-(1-methylethoxy)phenyl]-2-oxoethyl]-3-methyl-2-thiophenecarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26961
+- CHEBI:35618
+- CHEBI:60600
+- CHEBI:62733
+- CHEBI:76224
+xrefs:
+- cas:875915-78-9
+- pesticides:isofetamid
+- ppdb:2781
+- reaxys:11931431
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: Cc1cc(OC(C)C)ccc1C(=O)C(C)(C)NC(=O)c1sccc1C
+  standard_inchi: InChI=1S/C20H25NO3S/c1-12(2)24-15-7-8-16(14(4)11-15)18(22)20(5,6)21-19(23)17-13(3)9-10-25-17/h7-12H,1-6H3,(H,21,23)
+  standard_inchi_key: WMKZDPFZIZQROT-UHFFFAOYSA-N
+  molecular_formula: C20H25NO3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 359.491
+  monoisotopic_mass: 359.15551
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83065
+  source_label: isofetamid
+  minted_identifier: antibioticmech:chebi-1d5ca80d00
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

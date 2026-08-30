@@ -1,0 +1,113 @@
+identifier: CHEBI:3380
+label: captopril
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A L-proline derivative in which L-proline is substituted on nitrogen with
+  a (2S)-2-methyl-3-sulfanylpropanoyl group. It is used as an anti-hypertensive ACE
+  inhibitor drug.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Acepress
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Apopril
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Capoten
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Captolane
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Captoril
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Cesplon
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Dilabar
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Garranil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Hypertil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Lopirin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Tenosbon
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Tensobon
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Tensoprel
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: captoprilum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1-[(2S)-2-methyl-3-sulfanylpropanoyl]-L-proline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-1-[(2S)-2-methyl-3-sulfanylpropanoyl]pyrrolidine-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Captopryl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-2-methyl-3-mercaptopropanoyl-L-proline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-3-mercapto-2-methylpropanoyl-L-proline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-Captopril
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:46701
+- CHEBI:46766
+- CHEBI:47908
+- CHEBI:84186
+xrefs:
+- beilstein:477887
+- cas:62571-86-2
+- drugbank:DB01197
+- drugcentral:484
+- kegg.drug:D00251
+- lincs.smallmolecule:LSM-5648
+- patent:US4046889
+- patent:US4105776
+- wikipedia.en:Captopril
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C[C@H](CS)C(=O)N1CCC[C@H]1C(=O)O
+  standard_inchi: InChI=1S/C9H15NO3S/c1-6(5-14)8(11)10-4-2-3-7(10)9(12)13/h6-7,14H,2-5H2,1H3,(H,12,13)/t6-,7+/m1/s1
+  standard_inchi_key: FAKRSMQSSFJEIM-RQJHMYQMSA-N
+  molecular_formula: C9H15NO3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 217.29
+  monoisotopic_mass: 217.07726
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3380
+  source_label: captopril
+  minted_identifier: antibioticmech:chebi-2abcef0602
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

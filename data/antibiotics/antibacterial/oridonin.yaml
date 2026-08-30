@@ -1,0 +1,55 @@
+identifier: CHEBI:138236
+label: oridonin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heteropentacyclic compound and ent-kaurane diterpenoid with
+  formula C20H28O6 isolated from the leaves of the medicinal herb Rabdosia rubescens.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1α,5β,6β,7α,8α,9β,10α,13α,14R)-1,6,7,14-tetrahydroxy-7,20-epoxykaur-16-en-15-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1α,6β,7α,14R)-7,20-epoxy-1,6,7,14-tetrahydroxykaur-16-en-15-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: isodonol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: oridonine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35681
+- CHEBI:36760
+- CHEBI:38164
+- CHEBI:51689
+- CHEBI:59780
+xrefs:
+- cas:28957-04-2
+- knapsack:C00033270
+- reaxys:1691227
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12CC[C@H]3[C@@]45CO[C@](O)([C@@H](O)[C@]4([H])C(C)(C)CC[C@@H]5O)[C@@]3(C(=O)C1=C)[C@@H]2O'
+  standard_inchi: InChI=1S/C20H28O6/c1-9-10-4-5-11-18-8-26-20(25,19(11,14(9)22)15(10)23)16(24)13(18)17(2,3)7-6-12(18)21/h10-13,15-16,21,23-25H,1,4-8H2,2-3H3/t10-,11-,12-,13+,15+,16-,18+,19-,20+/m0/s1
+  standard_inchi_key: SDHTXBWLVGWJFT-XKCURVIJSA-N
+  molecular_formula: C20H28O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 364.438
+  monoisotopic_mass: 364.18859
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:138236
+  source_label: oridonin
+  minted_identifier: antibioticmech:chebi-11ffc9a7da
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

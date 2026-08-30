@@ -1,0 +1,81 @@
+[project]
+name = "antibioticmech"
+version = "0.1.0"
+description = "Knowledge base of individual chemical structures with antimicrobial activity, harmonized from ChEBI and CARD/ARO and grounded in chemistry and mechanism ontologies"
+authors = [
+    {name = "AntibioticMech Contributors"}
+]
+readme = "README.md"
+license = {text = "CC0-1.0"}
+requires-python = ">=3.10"
+keywords = [
+    "microbiology",
+    "antibiotic",
+    "antimicrobial",
+    "chebi",
+    "card",
+    "aro",
+    "cheminformatics",
+    "mechanism of action",
+    "ontology",
+    "knowledge graph",
+    "linkml",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "linkml>=1.10.0",
+    "linkml-runtime>=1.7.0",
+    "pyyaml>=6.0",
+    "click>=8.1.0",
+    "jinja2>=3.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "ruff>=0.4",
+]
+# Only scripts/research_antibiotic.py needs this, and only when actually calling
+# a provider. Extraction, seeding, validation, rendering and the whole test
+# suite run without it — the same separation data/raw/ has from the upstream
+# ChEBI and CARD releases. Pinned to 3.12+ to match TraitMech and HabitatMech,
+# which share the client and the conventions.
+research = [
+    "deep-research-client[cyberian]>=0.2.4; python_version >= '3.12'",
+]
+
+[project.urls]
+Homepage = "https://github.com/CultureBotAI/AntibioticMech"
+Repository = "https://github.com/CultureBotAI/AntibioticMech"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/antibioticmech"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+# extend-exclude, not exclude: `exclude` REPLACES ruff's defaults (which cover
+# .venv, .git, build/, ...), so setting it would put the whole virtualenv in
+# scope and drown the repo's own findings in third-party ones.
+extend-exclude = ["src/antibioticmech/schema/antibioticmech_dataclasses.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]

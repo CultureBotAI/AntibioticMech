@@ -1,0 +1,67 @@
+identifier: CHEBI:83187
+label: enoxastrobin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An enoate ester that is the methyl ester of (2E)-2-{2-[({(E)-[(3E)-4-(4-chlorophenyl)but-3-en-2-ylidene]amino}oxy)methyl]phenyl}-3-methoxyprop-2-enoic
+  acid. A fungicide used for control of leaf blotch, leaf rust and powdery mildew
+  on wheat and other fungal diseases on cucumbers, tomatoes and grapes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (2E)-2-{2-[({(E)-[(3E)-4-(4-chlorophenyl)but-3-en-2-ylidene]amino}oxy)methyl]phenyl}-3-methoxyprop-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SYP-Z071
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: enestroburin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (2E)-2-{2-[({(E)-[(2E)-3-(4-chlorophenyl)-1-methylprop-2-enylidene]amino}oxy)methyl]phenyl}-3-methoxyacrylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (αE)-2-[[[(E)-[(2E)-3-(4-chlorophenyl)-1-methyl-2-propen-1-ylidene]amino]oxy]methyl]-α-(methoxymethylene)benzeneacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: xiwojunzhi
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: énoxastrobine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:36816
+- CHEBI:47985
+- CHEBI:51702
+- CHEBI:83403
+- CHEBI:86484
+xrefs:
+- cas:238410-11-2
+- pesticides:enoxastrobin
+- ppdb:2851
+- reaxys:23859321
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CO/C=C(/C(=O)OC)c1ccccc1CO/N=C(C)/C=C/c1ccc(Cl)cc1
+  standard_inchi: InChI=1S/C22H22ClNO4/c1-16(8-9-17-10-12-19(23)13-11-17)24-28-14-18-6-4-5-7-20(18)21(15-26-2)22(25)27-3/h4-13,15H,14H2,1-3H3/b9-8+,21-15+,24-16+
+  standard_inchi_key: VMNULHCTRPXWFJ-UJSVPXBISA-N
+  molecular_formula: C22H22ClNO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 399.874
+  monoisotopic_mass: 399.12374
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83187
+  source_label: enoxastrobin
+  minted_identifier: antibioticmech:chebi-5aab7711d2
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

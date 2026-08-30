@@ -1,0 +1,75 @@
+identifier: CHEBI:171741
+label: cerulenin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An epoxydodecadienamide isolated from several species, including Acremonium,
+  Acrocylindrum and Helicoceras. It inhibits the biosynthesis of several lipids by
+  interfering with enzyme function.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3S)-3-[(4E,7E)-nona-4,7-dienoyl]oxirane-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-cerulenin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R,3S)-3-((4E,7E)-Nona-4,7-dienoyl)-oxirane-2-carboxylic acid amide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R,3S)-3-((4E,7E)-nona-4,7-dienoyl)oxirane-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cerulenin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:29347
+- CHEBI:32955
+- ARO:3000003
+xrefs:
+- ARO:3009177
+- beilstein:4807182
+- cas:17397-89-6
+- drugbank:DB01034
+- drugcentral:578
+- kegg.compound:C12058
+- knapsack:C00018711
+- chembl:CHEMBL45627
+- pubchem.compound:5282054
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+structural_class: antibiotic without defined classification
+structural_class_id: ARO:3000003
+chemical_structure:
+  smiles: '[H][C@@]1(C(N)=O)O[C@]1([H])C(=O)CC/C=C/C/C=C/C'
+  standard_inchi: InChI=1S/C12H17NO3/c1-2-3-4-5-6-7-8-9(14)10-11(16-10)12(13)15/h2-3,5-6,10-11H,4,7-8H2,1H3,(H2,13,15)/b3-2+,6-5+/t10-,11-/m1/s1
+  standard_inchi_key: GVEZIHKRYBHEFX-NQQPLRFYSA-N
+  molecular_formula: C12H17NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 223.272
+  monoisotopic_mass: 223.12084
+source_concepts:
+- source: ARO
+  source_id: ARO:3009177
+  source_label: cerulenin
+  minted_identifier: antibioticmech:aro-4511688145
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:171741
+  source_label: cerulenin
+  minted_identifier: antibioticmech:chebi-aec5174768
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

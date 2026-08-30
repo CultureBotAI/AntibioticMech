@@ -1,0 +1,335 @@
+identifier: CHEBI:63611
+label: moxifloxacin
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quinolone that consists of 4-oxo-1,4-dihydroquinoline-3-carboxylic acid
+  bearing a cyclopropyl substituent at position 1, a fluoro substitiuent at position
+  6, a (4aS,7aS)-octahydro-6H-pyrrolo[3,4-b]pyridin-6-yl group at position 7 and a
+  methoxy substituent at position 8. A member of the fluoroquinolone class of antibacterial
+  agents.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-cyclopropyl-6-fluoro-8-methoxy-7-[(4aS,7aS)-octahydro-6H-pyrrolo[3,4-b]pyridin-6-yl]-4-oxo-1,4-dihydroquinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Cyclopropyl-6-fluoro-1,4-dihydro-8-methoxy-7-((4aS,7aS)-octahydro-6H-pyrrolo(3,4-b)pyridin-6-yl)-4-oxo-3-quinolinecarboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Moxifloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Actira (hydrochloride)
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Avelox (hydrochloride)
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Avelox
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: MXFX
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Moxifloxacin hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Vigamox
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23765
+- CHEBI:26512
+- CHEBI:35618
+- CHEBI:51454
+- CHEBI:63697
+- CHEBI:86324
+- CHEBI:87211
+- ARO:0000001
+xrefs:
+- ARO:0000074
+- cas:151096-09-2
+- drugbank:DB00218
+- drugcentral:1854
+- kegg.compound:C07663
+- kegg.drug:D08237
+- lincs.smallmolecule:LSM-5746
+- patent:EP550903
+- reaxys:8365827
+- vsdb:2983
+- wikipedia.en:Moxifloxacin
+- chembl:CHEMBL32
+- pubchem.compound:152946
+activity_roles:
+- CHEBI:33231
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
+- CHEBI:38068
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: '[H][C@@]12CCCN[C@]1([H])CN(c1c(F)cc3c(=O)c(C(=O)O)cn(C4CC4)c3c1OC)C2'
+  standard_inchi: InChI=1S/C21H24FN3O4/c1-29-20-17-13(19(26)14(21(27)28)9-25(17)12-4-5-12)7-15(22)18(20)24-8-11-3-2-6-23-16(11)10-24/h7,9,11-12,16,23H,2-6,8,10H2,1H3,(H,27,28)/t11-,16+/m0/s1
+  standard_inchi_key: FABPRXSRWADJSP-MEDUHNTESA-N
+  molecular_formula: C21H24FN3O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 401.438
+  monoisotopic_mass: 401.17508
+source_concepts:
+- source: ARO
+  source_id: ARO:0000074
+  source_label: moxifloxacin
+  minted_identifier: antibioticmech:aro-d4dcbaef43
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  - CHEBI:38068
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:63611
+  source_label: moxifloxacin
+  minted_identifier: antibioticmech:chebi-5148253f79
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  - CHEBI:38068
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000419
+  label: quinolone resistance protein (qnr)
+  evidence:
+  - reference: ARO:3000419
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000421
+  label: norB
+  evidence:
+  - reference: ARO:3000421
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003294
+  label: Escherichia coli gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003294
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003295
+  label: Mycobacterium tuberculosis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003295
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003296
+  label: Staphylococcus aureus gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003296
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003297
+  label: Bartonella bacilliformis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003297
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003298
+  label: Mycobacterium leprae gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003298
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003304
+  label: Mycobacterium leprae gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003304
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003305
+  label: Ureaplasma urealyticum gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003305
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003306
+  label: Morganella morganii gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003306
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003307
+  label: Salmonella serovars gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003307
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003308
+  label: Escherichia coli parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003308
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003309
+  label: Ureaplasma urealyticum parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003309
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003310
+  label: Mycoplasma hominis parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003310
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003311
+  label: Streptococcus pneumoniae parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003311
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003312
+  label: Staphylococcus aureus parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003312
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003315
+  label: Staphylococcus aureus parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003315
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003316
+  label: Escherichia coli parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003316
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003317
+  label: Salmonella serovars parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003317
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003459
+  label: Mycobacterium tuberculosis gyrB with mutation conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003459
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003817
+  label: Acinetobacter baumannii gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003817
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003818
+  label: Acinetobacter baumannii parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003818
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003995
+  label: Clostridioides difficile gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003995
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004103
+  label: QepA2
+  evidence:
+  - reference: ARO:3004103
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004562
+  label: Clostridioides difficile gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3004562
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004616
+  label: Mycoplasma genitalium 23S rRNA mutations confers resistance to fluoroquinolone
+    and macrolide antibiotics
+  evidence:
+  - reference: ARO:3004616
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004630
+  label: Mycoplasma genitalium parC mutations confers resistance to Moxifloxacin
+  evidence:
+  - reference: ARO:3004630
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004631
+  label: Mycoplasma genitalium gyrA mutation confers resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3004631
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004919
+  label: Mycobacterium tuberculosis eccC5 conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3004919
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007473
+  label: Mycobacterium avium gyrA with mutation conferring resistance to fluoroquinolone
+  evidence:
+  - reference: ARO:3007473
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007806
+  label: Mycobacterium tuberculosis gyrA mutations conferring resistance to moxifloxacin
+  evidence:
+  - reference: ARO:3007806
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000074 (moxifloxacin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000733
+  target_label: fluoroquinolone sensitive gyrA
+  evidence:
+  - reference: ARO:3000733
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000074 (moxifloxacin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

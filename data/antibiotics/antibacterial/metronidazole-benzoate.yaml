@@ -1,0 +1,66 @@
+identifier: CHEBI:50688
+label: metronidazole benzoate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzoate ester resulting from the formal condensation of benzoic acid
+  with the hydroxy group of metronidazole.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Elyzol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Flagyl S
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Flegyl
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Vertisal
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 2-(2-methyl-5-nitro-1H-imidazol-1-yl)ethyl benzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Methyl-5-nitro-1H-imidazole-1-ethyl benzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Benzoylmetronidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36054
+xrefs:
+- cas:13182-89-3
+- drugbank:DB00916
+- reaxys:621902
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
+- CHEBI:50685
+chemical_structure:
+  smiles: Cc1ncc([N+](=O)[O-])n1CCOC(=O)c1ccccc1
+  standard_inchi: InChI=1S/C13H13N3O4/c1-10-14-9-12(16(18)19)15(10)7-8-20-13(17)11-5-3-2-4-6-11/h2-6,9H,7-8H2,1H3
+  standard_inchi_key: CUUCCLJJOWSASK-UHFFFAOYSA-N
+  molecular_formula: C13H13N3O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 275.264
+  monoisotopic_mass: 275.09061
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:50688
+  source_label: metronidazole benzoate
+  minted_identifier: antibioticmech:chebi-2693956bf7
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  - CHEBI:50685
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,58 @@
+identifier: CHEBI:35176
+label: zinc sulfate
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A metal sulfate compound having zinc(2+) as the counterion.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ZnSO4
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc sulfate (1:1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc sulfate anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc sulphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc(2+) sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc(II) sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27364
+- CHEBI:51336
+xrefs:
+- cas:7733-02-0
+- gmelin:18165
+- vsdb:1860
+- wikipedia.en:Zinc_Sulfate
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: O=S(=O)([O-])[O-].[Zn+2]
+  standard_inchi: InChI=1S/H2O4S.Zn/c1-5(2,3)4;/h(H2,1,2,3,4);/q;+2/p-2
+  standard_inchi_key: NWONKYPBYAMBJT-UHFFFAOYSA-L
+  molecular_formula: O4S.Zn
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 161.453
+  monoisotopic_mass: 159.88087
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:35176
+  source_label: zinc sulfate
+  minted_identifier: antibioticmech:chebi-3e87158c50
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

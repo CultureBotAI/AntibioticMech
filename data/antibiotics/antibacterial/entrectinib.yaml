@@ -1,0 +1,88 @@
+identifier: CHEBI:195558
+label: entrectinib
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of indazoles that is 1H-indazole substituted by
+  [4-(4-methylpiperazin-1-yl)-2-(tetrahydro-2H-pyran-4-ylamino)benzoyl]amino and 3,5-difluorobenzyl
+  groups at positions 3 and 5, respectively. It is a potent inhibitor of TRKA, TRKB,
+  TRKC, ROS1, and ALK (IC50 values of 0.1 to 1.7 nM), and used for the treatment of
+  NTRK, ROS1 and ALK gene fusion-positive solid tumours.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Rozlytrek
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: entrectinibum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-[5-(3,5-difluorobenzyl)-1H-indazol-3-yl]-4-(4-methylpiperazin-1-yl)-2-(tetrahydro-2H-pyran-4-ylamino)benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[5-[(3,5-difluorophenyl)methyl]-1H-indazol-3-yl]-4-(4-methyl-1-piperazinyl)-2-[(tetrahydro-2H-pyran-4-yl)amino]benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[5-[[3,5-bis(fluoranyl)phenyl]methyl]-1H-indazol-3-yl]-4-(4-methylpiperazin-1-yl)-2-(oxan-4-ylamino)benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NMS-E 628
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NMS-E628
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RG 6268
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RG-6268
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RG6268
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RXDX 101
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RXDX-101
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:22702
+- CHEBI:38582
+- CHEBI:38769
+- CHEBI:46920
+- CHEBI:46942
+- CHEBI:50995
+xrefs:
+- cas:1108743-60-7
+- chemspider:24808589
+- drugbank:DB11986
+- hmdb:HMDB0304880
+- kegg.drug:D10926
+- pdb-ccd:YMX
+- wikipedia.en:Entrectinib
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CN1CCN(c2ccc(C(=O)Nc3nnc4ccc(Cc5cc(F)cc(F)c5)cc34)c(NC3CCOCC3)c2)CC1
+  standard_inchi: InChI=1S/C31H34F2N6O2/c1-38-8-10-39(11-9-38)25-3-4-26(29(19-25)34-24-6-12-41-13-7-24)31(40)35-30-27-17-20(2-5-28(27)36-37-30)14-21-15-22(32)18-23(33)16-21/h2-5,15-19,24,34H,6-14H2,1H3,(H2,35,36,37,40)
+  standard_inchi_key: HAYYBYPASCDWEQ-UHFFFAOYSA-N
+  molecular_formula: C31H34F2N6O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 560.649
+  monoisotopic_mass: 560.27113
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:195558
+  source_label: entrectinib
+  minted_identifier: antibioticmech:chebi-2181de6d21
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,47 @@
+identifier: CHEBI:141284
+label: 3-acetylbenzamide
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A methyl ketone that is benzamide in which one of the meta hydrogens has
+  been replaced by an acetyl group. It is a bacterial secondary metabolite from actinomycete
+  strain WA23-4-4 isolated from the intestinal tract of Periplaneta americana (American
+  cockroach), it shows significant antifungal activity against Candida albicans ATCC
+  10231 and Aspergillus niger ATCC 16404 but is less active against Trichophyton rubrum
+  ATCC 60836 and Aspergillus fumigatus ATCC 96918.
+definition_source: ChEBI
+synonyms:
+- synonym_text: m-acetylbenzoylamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140324
+- CHEBI:22702
+- CHEBI:51867
+- CHEBI:76224
+xrefs:
+- reaxys:4969128
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(=O)c1cccc(C(N)=O)c1
+  standard_inchi: InChI=1S/C9H9NO2/c1-6(11)7-3-2-4-8(5-7)9(10)12/h2-5H,1H3,(H2,10,12)
+  standard_inchi_key: VTBUZDRQHQPEQY-UHFFFAOYSA-N
+  molecular_formula: C9H9NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 163.176
+  monoisotopic_mass: 163.06333
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141284
+  source_label: 3-acetylbenzamide
+  minted_identifier: antibioticmech:chebi-bfd1fbd454
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

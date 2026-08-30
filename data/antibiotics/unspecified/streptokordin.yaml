@@ -1,0 +1,47 @@
+identifier: CHEBI:66524
+label: streptokordin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyridone that is pyridin-2(1H)-one substituted by an acetyl group at
+  position 4 and a methyl group at position 6. It is isolated from the fermentation
+  broth of Streptomyces sp. KORDI-3238 and exhibits moderate cytotoxicity against
+  a number of human cancer cell lines.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-acetyl-6-methylpyridin-2(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-acetyl-6-methyl-1H-pyridine-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38183
+- CHEBI:51867
+- CHEBI:76224
+xrefs:
+- reaxys:10530579
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(=O)c1cc(C)nc(=O)c1
+  standard_inchi: InChI=1S/C8H9NO2/c1-5-3-7(6(2)10)4-8(11)9-5/h3-4H,1-2H3,(H,9,11)
+  standard_inchi_key: JCPDZXJDYRLFMC-UHFFFAOYSA-N
+  molecular_formula: C8H9NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 151.165
+  monoisotopic_mass: 151.06333
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66524
+  source_label: streptokordin
+  minted_identifier: antibioticmech:chebi-3644601e31
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,77 @@
+identifier: CHEBI:58974
+label: epicillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin in which the substituent at position 6 of the penam ring
+  is a (2R)-2-amino-2-(cyclohexa-1,4-dien-1-yl)acetamido group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: epicilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: epicilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: epicillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-[(2R)-2-amino-2-(cyclohexa-1,4-dien-1-yl)acetamido]-2,2-dimethylpenam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dexacillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dihydroampicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dexacillin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- CHEBI:88187
+- ARO:3000008
+xrefs:
+- ARO:3009131
+- cas:26774-90-3
+- drugcentral:1025
+- patent:DE2161659
+- reaxys:1091831
+- wikipedia.en:Epicillin
+- chembl:CHEMBL2104266
+- pubchem.compound:71392
+activity_roles:
+- CHEBI:33282
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)[C@H](N)C1=CCC=CC1'
+  standard_inchi: InChI=1S/C16H21N3O4S/c1-16(2)11(15(22)23)19-13(21)10(14(19)24-16)18-12(20)9(17)8-6-4-3-5-7-8/h3-4,7,9-11,14H,5-6,17H2,1-2H3,(H,18,20)(H,22,23)/t9-,10-,11+,14-/m1/s1
+  standard_inchi_key: RPBAFSBGYDKNRG-NJBDSQKTSA-N
+  molecular_formula: C16H21N3O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 351.428
+  monoisotopic_mass: 351.12528
+source_concepts:
+- source: ARO
+  source_id: ARO:3009131
+  source_label: epicillin
+  minted_identifier: antibioticmech:aro-0f226030c6
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:58974
+  source_label: epicillin
+  minted_identifier: antibioticmech:chebi-173aad2657
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

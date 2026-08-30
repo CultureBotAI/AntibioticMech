@@ -1,0 +1,90 @@
+identifier: CHEBI:2956
+label: azlocillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A semisynthetic penicillin having a 6β-{(2R)-2-[(2-oxoimidazolidine-1-carbonyl)amino]-2-phenylacetyl}amino
+  side-group. It is an antibiotic used in treating infections caused by Pseudomonas
+  aeruginosa, Escherichia coli and Haemophilus influenzae.
+definition_source: ChEBI
+synonyms:
+- synonym_text: azlocilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: azlocilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: azlocillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2,2-dimethyl-6β-[(2R)-2-{[(2-oxoimidazolidin-1-yl)carbonyl]amino}-2-phenylacetamido]penam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-3,3-dimethyl-7-oxo-6-{[(2R)-2-{[(2-oxoimidazolidin-1-yl)carbonyl]amino}-2-phenylacetyl]amino}-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AZL
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- CHEBI:72588
+- CHEBI:88187
+- ARO:3000008
+xrefs:
+- ARO:3000638
+- cas:37091-66-0
+- drugbank:DB01061
+- drugcentral:277
+- kegg.compound:C06839
+- kegg.drug:D02339
+- lincs.smallmolecule:LSM-15179
+- patent:CN101585844
+- patent:FR2100682
+- patent:US3933795
+- reaxys:5785146
+- wikipedia.en:Azlocillin
+- chembl:CHEMBL1537
+- pubchem.compound:6479523
+activity_roles:
+- CHEBI:36047
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@](NC(=O)N1CCNC1=O)(C(=O)N[C@@H]1C(=O)N2[C@@H](C(=O)O)C(C)(C)S[C@]12[H])c1ccccc1'
+  standard_inchi: InChI=1S/C20H23N5O6S/c1-20(2)13(17(28)29)25-15(27)12(16(25)32-20)22-14(26)11(10-6-4-3-5-7-10)23-19(31)24-9-8-21-18(24)30/h3-7,11-13,16H,8-9H2,1-2H3,(H,21,30)(H,22,26)(H,23,31)(H,28,29)/t11-,12-,13+,16-/m1/s1
+  standard_inchi_key: JTWOMNBEOCYFNV-NFFDBFGFSA-N
+  molecular_formula: C20H23N5O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 461.5
+  monoisotopic_mass: 461.1369
+source_concepts:
+- source: ARO
+  source_id: ARO:3000638
+  source_label: azlocillin
+  minted_identifier: antibioticmech:aro-b556f68684
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:2956
+  source_label: azlocillin
+  minted_identifier: antibioticmech:chebi-190d64eeee
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000638 (azlocillin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

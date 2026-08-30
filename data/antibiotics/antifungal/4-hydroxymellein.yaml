@@ -1,0 +1,55 @@
+identifier: CHEBI:141335
+label: 4-hydroxymellein
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An isochromane that is mellein bearing a hydroxy group at position 4.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4,8-dihydroxy-3-methyl-3,4-dihydro-1H-2-benzopyran-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-methyl-4,8-dihydroxy-3,4-dihydroisocoumarin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,8-dihydroxy-3-methylbenzopyran-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,8-dihydroxy-3-methylisochroman-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18946
+- CHEBI:33853
+- CHEBI:38762
+xrefs:
+- cas:33788-22-6
+- knapsack:C00000119
+- patent:US5185023
+- reaxys:1285737
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: CC1OC(=O)c2c(O)cccc2C1O
+  standard_inchi: InChI=1S/C10H10O4/c1-5-9(12)6-3-2-4-7(11)8(6)10(13)14-5/h2-5,9,11-12H,1H3
+  standard_inchi_key: STSOHAOGZMLWFR-UHFFFAOYSA-N
+  molecular_formula: C10H10O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 194.186
+  monoisotopic_mass: 194.05791
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141335
+  source_label: 4-hydroxymellein
+  minted_identifier: antibioticmech:chebi-2699c95659
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,82 @@
+identifier: CHEBI:74875
+label: dichlofluanid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of sulfamides that is sulfamide in which the hydrogens
+  attached to one of the nitrogens are replaced by methyl groups, while those attached
+  to the other nitrogen are replaced by a phenyl and a [dichloro(fluoro)methyl]sulfanediyl
+  group. A fungicide introduced in 1965 and used in the cultivation of fruit and vegetables,
+  as well as in wood preservatives, it is no longer approved for use in the European
+  Union.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-{[dichloro(fluoro)methyl]sulfanyl}-N',N'-dimethyl-N-phenylsulfuric
+    diamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,1-dichloro-N-((dimethylamino)sulfonyl)-1-fluoro-N-phenylmethanesulfenamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BAY 47531
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bayer 47531
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N-dimethyl-N'-phenyl-N'-fluorodichloromethylthiosulfamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(Dichlor-fluor-methyl-thio)-N',N'-dimethyl-N-phenylschwefel-saeurediamid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(dichlorofluoromethylthio)-N',N'-dimethyl-N-phenylsulfamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(dichlorofluoromethylthio)-N-(dimethylsulfamoyl)-aniline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 218451
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dichlofluanide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36683
+- CHEBI:37143
+- CHEBI:51871
+- CHEBI:87026
+xrefs:
+- cas:1085-98-9
+- kegg.compound:C18820
+- patent:BE609868
+- patent:US3285929
+- patent:US3341403
+- pesticides:dichlofluanid
+- ppdb:216
+- reaxys:2947992
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CN(C)S(=O)(=O)N(SC(F)(Cl)Cl)c1ccccc1
+  standard_inchi: InChI=1S/C9H11Cl2FN2O2S2/c1-13(2)18(15,16)14(17-9(10,11)12)8-6-4-3-5-7-8/h3-7H,1-2H3
+  standard_inchi_key: WURGXGVFSMYFCG-UHFFFAOYSA-N
+  molecular_formula: C9H11Cl2FN2O2S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 333.237
+  monoisotopic_mass: 331.9623
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:74875
+  source_label: dichlofluanid
+  minted_identifier: antibioticmech:chebi-9cfa9b2fef
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

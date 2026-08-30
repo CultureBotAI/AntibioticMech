@@ -1,0 +1,57 @@
+identifier: CHEBI:69086
+label: glycyrin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of coumarins that is coumarin substituted by methoxy
+  groups at positions 5 and 7, a prenyl group at position 6 and a 2,4-dihydroxyphenyl
+  group at position 3. Isolated from Glycyrrhiza uralensis, it exhibits antibacterial
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-(2,4-dihydroxyphenyl)-5,7-dimethoxy-6-(3-methylbut-2-en-1-yl)-2H-chromen-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(2',4'-dihydroxyphenyl)-5,7-dimethoxy-2-isopentenylcoumarin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(2,4-dihydroxyphenyl)-5,7-dimethoxy-6-(3-methyl-but-2-enyl)-1-benzopyran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(2,4-dihydroxyphenyl)-5,7-dimethoxy-6-prenylcoumarin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23403
+- CHEBI:35618
+- CHEBI:76250
+xrefs:
+- cas:66056-18-6
+- hmdb:HMDB0033712
+- lipidmaps:LMPK12160017
+- patent:WO2004064830
+- reaxys:1667250
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1cc2oc(=O)c(-c3ccc(O)cc3O)cc2c(OC)c1CC=C(C)C
+  standard_inchi: InChI=1S/C22H22O6/c1-12(2)5-7-15-19(26-3)11-20-17(21(15)27-4)10-16(22(25)28-20)14-8-6-13(23)9-18(14)24/h5-6,8-11,23-24H,7H2,1-4H3
+  standard_inchi_key: FWWGXZYUURXJLK-UHFFFAOYSA-N
+  molecular_formula: C22H22O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 382.412
+  monoisotopic_mass: 382.14164
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69086
+  source_label: glycyrin
+  minted_identifier: antibioticmech:chebi-0ec5010a9f
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

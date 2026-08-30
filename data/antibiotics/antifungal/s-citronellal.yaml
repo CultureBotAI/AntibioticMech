@@ -1,0 +1,60 @@
+identifier: CHEBI:368
+label: (S)-(−)-citronellal
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The (3S)-stereoisomer of 3,7-dimethyloct-6-enal (citronellal).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S)-3,7-dimethyloct-6-enal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3S)-(−)-citronellal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3S)-3,7-dimethyl-6-octenal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-(-)-Citronellal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-3,7-Dimethyloct-6-enal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-3,7-dimethyl-6-octenal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:47856
+xrefs:
+- beilstein:1720790
+- beilstein:4654383
+- cas:5949-05-3
+- gmelin:2038127
+- kegg.compound:C11384
+- knapsack:C00010309
+- lipidmaps:LMPR0102010011
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H]C(=O)C[C@@H](C)CCC=C(C)C'
+  standard_inchi: InChI=1S/C10H18O/c1-9(2)5-4-6-10(3)7-8-11/h5,8,10H,4,6-7H2,1-3H3/t10-/m0/s1
+  standard_inchi_key: NEHNMFOYXAPHSD-JTQLQIEISA-N
+  molecular_formula: C10H18O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 154.253
+  monoisotopic_mass: 154.13577
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:368
+  source_label: (S)-(−)-citronellal
+  minted_identifier: antibioticmech:chebi-8f0365185c
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

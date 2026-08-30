@@ -1,0 +1,55 @@
+identifier: CHEBI:78288
+label: elloramycin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of tetracenomycins that is 8-demethyltetracenomycin
+  C in which the hydroxyl hydrogens at position 8 and 10 a are replaced by a 2,3,4-tri-O-methyl-α-L-rhamnosyl
+  and methyl groups respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (6aR,7S,10aR)-3-[(6-deoxy-2,3,4-tri-O-methyl-α-L-mannopyranosyl)oxy]-6a,7,12-trihydroxy-8,10a-dimethoxy-1-methyl-6,10,11-trioxo-6,6a,7,10,10a,11-hexahydrotetracene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Elloramycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:25248
+- CHEBI:27848
+- CHEBI:33308
+- CHEBI:33853
+- CHEBI:47985
+- CHEBI:48132
+- CHEBI:51689
+- CHEBI:63367
+xrefs:
+- cas:97218-42-3
+- kegg.compound:C12381
+- knapsack:C00017718
+- metacyc.compound:CPD-16637
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COC(=O)c1c(O[C@@H]2O[C@@H](C)[C@H](OC)[C@@H](OC)[C@H]2OC)cc2cc3c(c(O)c2c1C)C(=O)[C@]1(OC)C(=O)C=C(OC)[C@@H](O)[C@]1(O)C3=O
+  standard_inchi: InChI=1S/C32H36O15/c1-12-19-14(10-16(20(12)29(38)44-7)47-30-25(43-6)24(42-5)23(41-4)13(2)46-30)9-15-21(22(19)34)28(37)32(45-8)18(33)11-17(40-3)27(36)31(32,39)26(15)35/h9-11,13,23-25,27,30,34,36,39H,1-8H3/t13-,23-,24+,25+,27+,30-,31+,32+/m0/s1
+  standard_inchi_key: OYEXGNNKRQPUBW-FJYHMNRNSA-N
+  molecular_formula: C32H36O15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 660.625
+  monoisotopic_mass: 660.20542
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:78288
+  source_label: elloramycin A
+  minted_identifier: antibioticmech:chebi-a6e1644dae
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,76 @@
+identifier: CHEBI:47381
+label: diclofenac
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid consisting of phenylacetic acid having a (2,6-dichlorophenyl)amino
+  group at the 2-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: diclofenaco
+  synonym_type: INN
+  source: chebi
+- synonym_text: diclofenacum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-[(2,6-dichlorophenyl)amino]benzeneacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '{2-[(2,6-dichlorophenyl)amino]phenyl}acetic acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-((2,6-dichlorophenyl)amino)benzeneacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Diclofenac
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[2-(2,6-dichloroanilino)phenyl]acetic acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diclofenac acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diclofenamic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23697
+- CHEBI:25384
+- CHEBI:33709
+- CHEBI:33860
+- CHEBI:50995
+xrefs:
+- cas:15307-86-5
+- drugbank:DB00586
+- drugcentral:865
+- hmdb:HMDB0014724
+- kegg.compound:C01690
+- kegg.drug:D07816
+- lincs.smallmolecule:LSM-2160
+- patent:NL6604752
+- patent:US3558690
+- pdb-ccd:DIF
+- reaxys:2146636
+- vsdb:1933
+- wikipedia.en:Diclofenac
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl
+  standard_inchi: InChI=1S/C14H11Cl2NO2/c15-10-5-3-6-11(16)14(10)17-12-7-2-1-4-9(12)8-13(18)19/h1-7,17H,8H2,(H,18,19)
+  standard_inchi_key: DCOPUUMXTXDBNB-UHFFFAOYSA-N
+  structure_source: ChEBI
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:47381
+  source_label: diclofenac
+  minted_identifier: antibioticmech:chebi-6583c13a25
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

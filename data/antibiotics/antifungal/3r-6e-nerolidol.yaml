@@ -1,0 +1,48 @@
+identifier: CHEBI:59959
+label: (3R,6E)-nerolidol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A (6E)-nerolidol in which the hydroxy group at positon 3 adopts an R-configuration.
+  It is a fertility-related volatile compound secreted by the queens of higher termites
+  from the subfamily Syntermitinae.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,6E)-3,7,11-trimethyldodeca-1,6,10-trien-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3R)-(6E)-nerolidol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:141283
+xrefs:
+- beilstein:4307250
+- cas:77551-75-8
+- chemspider:9416582
+- metacyc.compound:CPD-8843
+- pdb-ccd:28U
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C=C[C@](C)(O)CC/C=C(\C)CCC=C(C)C
+  standard_inchi: InChI=1S/C15H26O/c1-6-15(5,16)12-8-11-14(4)10-7-9-13(2)3/h6,9,11,16H,1,7-8,10,12H2,2-5H3/b14-11+/t15-/m0/s1
+  standard_inchi_key: FQTLCLSUCSAZDY-GOFCXVBSSA-N
+  molecular_formula: C15H26O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 222.372
+  monoisotopic_mass: 222.19837
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59959
+  source_label: (3R,6E)-nerolidol
+  minted_identifier: antibioticmech:chebi-231ff80c37
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

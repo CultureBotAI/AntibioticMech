@@ -1,0 +1,47 @@
+identifier: CHEBI:66086
+label: isariotin F
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterobicyclic compound that is a lactol isolated from the
+  entomopathogenic fungus Isaria tenuipes and exhibits antimalarial and antineoplastic
+  activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-N-[(2R,3S,4aS,8R,8aR)-8-chloro-2,4a-dihydroxy-5-oxo-3,4,4a,5,8,8a-hexahydro-2H-chromen-3-yl]dodec-2-enamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:140325
+- CHEBI:27171
+- CHEBI:36683
+- CHEBI:38131
+- CHEBI:51689
+- CHEBI:51751
+xrefs:
+- reaxys:19979530
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@@]12O[C@@H](O)[C@@H](NC(=O)/C=C/CCCCCCCCC)C[C@@]1(O)C(=O)C=C[C@H]2Cl'
+  standard_inchi: InChI=1S/C21H32ClNO5/c1-2-3-4-5-6-7-8-9-10-11-18(25)23-16-14-21(27)17(24)13-12-15(22)19(21)28-20(16)26/h10-13,15-16,19-20,26-27H,2-9,14H2,1H3,(H,23,25)/b11-10+/t15-,16+,19+,20-,21-/m1/s1
+  standard_inchi_key: BQBLZAMUHGIEFL-JRVIZFGFSA-N
+  molecular_formula: C21H32ClNO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 413.942
+  monoisotopic_mass: 413.1969
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66086
+  source_label: isariotin F
+  minted_identifier: antibioticmech:chebi-ade1e3a6a5
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

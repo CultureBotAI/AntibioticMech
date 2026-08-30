@@ -1,0 +1,58 @@
+identifier: CHEBI:3170
+label: brazilin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A organic heterotetracyclic compound that is a red pigment obtained from
+  the wood of Caesalpinia echinata (Brazil-wood) or Caesalpinia sappan (sappan-wood).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6aS,11bR)-7,11b-dihydroindeno[2,1-c]chromene-3,6a,9,10(6H)-tetrol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-brazilin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Brazilin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Natural Red 24
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: brasilin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26878
+- CHEBI:33566
+- CHEBI:38163
+xrefs:
+- cas:474-07-7
+- kegg.compound:C09920
+- knapsack:C00010268
+- reaxys:4198570
+- wikipedia.en:Brazilin
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12c3cc(O)c(O)cc3C[C@@]1(O)COc1cc(O)ccc12'
+  standard_inchi: InChI=1S/C16H14O5/c17-9-1-2-10-14(4-9)21-7-16(20)6-8-3-12(18)13(19)5-11(8)15(10)16/h1-5,15,17-20H,6-7H2/t15-,16+/m0/s1
+  standard_inchi_key: UWHUTZOCTZJUKC-JKSUJKDBSA-N
+  molecular_formula: C16H14O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 286.283
+  monoisotopic_mass: 286.08412
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3170
+  source_label: brazilin
+  minted_identifier: antibioticmech:chebi-4acde8b024
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

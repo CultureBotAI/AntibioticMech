@@ -1,0 +1,67 @@
+identifier: CHEBI:73178
+label: acibenzolar-S-methyl
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzothiadiazole that is the S-methyl thioester derivative of acibenzolar.
+  A profungicide (by hydrolysis of the thioester group to give the corresponding carboxylic
+  acid), it is used as a fungicide and plant activator on a variety of crops, including
+  cotton, chili peppers, lettuce, onions, spinach, tobacco, and tomatoes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Actigard
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: S-methyl 1,2,3-benzothiadiazole-7-carbothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2,3-benzothiadiazole-7-carboxlic acid thiomethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-(methylthiocarbonyl)-benzo-1,2,3-thiadiazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BTH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-methyl benzo[1,2,3]thiadiazole-7-carbothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benzo-(1,2,3)-thiadiazole-7-carbothioic acid S-methyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48864
+- CHEBI:51277
+xrefs:
+- cas:135158-54-2
+- pesticides:acibenzolar-s-methyl
+- ppdb:13
+- reaxys:8055445
+- wikipedia.en:Acibenzolar-S-methyl
+activity_roles:
+- CHEBI:136645
+- CHEBI:86328
+chemical_structure:
+  smiles: CSC(=O)c1cccc2nnsc12
+  standard_inchi: InChI=1S/C8H6N2OS2/c1-12-8(11)5-3-2-4-6-7(5)13-10-9-6/h2-4H,1H3
+  standard_inchi_key: UELITFHSCLAHKR-UHFFFAOYSA-N
+  molecular_formula: C8H6N2OS2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 210.283
+  monoisotopic_mass: 209.99215
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:73178
+  source_label: acibenzolar-S-methyl
+  minted_identifier: antibioticmech:chebi-0adbed5ed7
+  role_terms:
+  - CHEBI:136645
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,61 @@
+identifier: CHEBI:133741
+label: (E)-dodec-2-enal
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A trans-2,3-unsaturated fatty aldehyde that is (E)-dodec-2-ene in which
+  the allylic methyl group has been oxidised to the corresponding aldehyde.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-dodec-2-enal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-2-dodecen-1-al
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-dodec-2-en-1-al
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: eryngial
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-2-dodecenal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-dodec-2-enal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2E)-dodecenal
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17176
+- CHEBI:84588
+xrefs:
+- cas:20407-84-5
+- hmdb:HMDB0031020
+- patent:EP0282940
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCCCCCC/C=C/C=O
+  standard_inchi: InChI=1S/C12H22O/c1-2-3-4-5-6-7-8-9-10-11-12-13/h10-12H,2-9H2,1H3/b11-10+
+  standard_inchi_key: SSNZFFBDIMUILS-ZHACJKMWSA-N
+  molecular_formula: C12H22O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 182.307
+  monoisotopic_mass: 182.16707
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:133741
+  source_label: (E)-dodec-2-enal
+  minted_identifier: antibioticmech:chebi-3266990553
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,79 @@
+identifier: CHEBI:4784
+label: enalapril
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dicarboxylic acid monoester that is ethyl 4-phenylbutanoate in which
+  a hydrogen α to the carboxy group is substituted by the amino group of L-alanyl-L-proline
+  (S-configuration).
+definition_source: ChEBI
+synonyms:
+- synonym_text: enalaprila
+  synonym_type: INN
+  source: chebi
+- synonym_text: enalaprilum
+  synonym_type: INN
+  source: chebi
+- synonym_text: ánalapril
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-[(2S)-1-ethoxy-1-oxo-4-phenylbutan-2-yl]-L-alanyl-L-proline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-1-(N-(1-(ethoxycarbonyl)-3-phenylpropyl)-L-alanyl)-L-proline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-1-{(S)-2-[1-((S)-Ethoxycarbonyl)-3-phenyl-propylamino]-propionyl}-pyrrolidine-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(N-((S)-1-carboxy-3-phenylpropyl)-L-alanyl)-L-proline 1'-ethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ENALAPRIL
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Enalapril
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36244
+- CHEBI:46761
+xrefs:
+- beilstein:3657467
+- cas:75847-73-3
+- chemspider:4534998
+- drugbank:DB00584
+- drugcentral:1005
+- hmdb:HMDB0014722
+- kegg.compound:C06977
+- kegg.drug:D07892
+- lincs.smallmolecule:LSM-3282
+- metacyc.compound:CPD0-2065
+- patent:EP12401
+- patent:US4374829
+- wikipedia.en:Enalapril
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N1CCC[C@H]1C(=O)O
+  standard_inchi: InChI=1S/C20H28N2O5/c1-3-27-20(26)16(12-11-15-8-5-4-6-9-15)21-14(2)18(23)22-13-7-10-17(22)19(24)25/h4-6,8-9,14,16-17,21H,3,7,10-13H2,1-2H3,(H,24,25)/t14-,16-,17-/m0/s1
+  standard_inchi_key: GBXSMTUPTTWBMN-XIRDDKMYSA-N
+  molecular_formula: C20H28N2O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 376.453
+  monoisotopic_mass: 376.19982
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4784
+  source_label: enalapril
+  minted_identifier: antibioticmech:chebi-96383c32b9
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

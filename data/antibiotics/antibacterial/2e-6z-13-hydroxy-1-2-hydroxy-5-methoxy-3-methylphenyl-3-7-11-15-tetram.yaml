@@ -1,0 +1,45 @@
+identifier: CHEBI:65995
+label: (2E,6Z)-13-hydroxy-1-(2-hydroxy-5-methoxy-3-methylphenyl)-3,7,11,15-tetramethylhexadeca-2,6,14-triene-5,12-dione
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A meroterpenoid that is hexadeca-2,6,14-triene-5,12-dione substituted
+  by a hydroxy group at position 13, a 2-hydroxy-5-methoxy-3-methylphenyl group at
+  position 1 and methyl groups at positions 3, 7, 11 and 15. Isolated from Halidrys
+  siliquosa, it exhibits antibacterial and antifouling activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Z-Halidrysone A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:2468
+- CHEBI:33853
+- CHEBI:35618
+- CHEBI:35681
+- CHEBI:51689
+- CHEBI:64419
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1cc(C)c(O)c(C/C=C(\C)CC(=O)/C=C(/C)CCCC(C)C(=O)C(O)C=C(C)C)c1
+  standard_inchi: InChI=1S/C28H40O5/c1-18(2)13-26(30)28(32)21(5)10-8-9-19(3)14-24(29)15-20(4)11-12-23-17-25(33-7)16-22(6)27(23)31/h11,13-14,16-17,21,26,30-31H,8-10,12,15H2,1-7H3/b19-14-,20-11+
+  standard_inchi_key: HBKSTRSDLUAESY-PKVUCGNLSA-N
+  molecular_formula: C28H40O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 456.623
+  monoisotopic_mass: 456.28757
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65995
+  source_label: (2E,6Z)-13-hydroxy-1-(2-hydroxy-5-methoxy-3-methylphenyl)-3,7,11,15-tetramethylhexadeca-2,6,14-triene-5,12-dione
+  minted_identifier: antibioticmech:chebi-d4565c9404
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

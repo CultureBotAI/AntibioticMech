@@ -1,0 +1,44 @@
+identifier: CHEBI:55482
+label: 4-(2-nitrobutyl)morpholine
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Morpholine substituted at nitrogen by a 2-nitrobutyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-(2-nitrobutyl)-morpholine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(2-Nitrobutyl)morpholine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38785
+xrefs:
+- beilstein:149001
+- cas:2224-44-4
+- patent:US5489588
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CCC(CN1CCOCC1)[N+](=O)[O-]
+  standard_inchi: InChI=1S/C8H16N2O3/c1-2-8(10(11)12)7-9-3-5-13-6-4-9/h8H,2-7H2,1H3
+  standard_inchi_key: GQHVWDKJTDUZRP-UHFFFAOYSA-N
+  molecular_formula: C8H16N2O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 188.227
+  monoisotopic_mass: 188.11609
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:55482
+  source_label: 4-(2-nitrobutyl)morpholine
+  minted_identifier: antibioticmech:chebi-7786f4b4c2
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

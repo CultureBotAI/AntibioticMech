@@ -1,0 +1,71 @@
+identifier: CHEBI:301
+label: (−)-α-phellandrene
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The (R)-(−)-stereoisomer of α-phellandrene.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4R)-p-mentha-1,5-diene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R)-2-methyl-5-(propan-2-yl)cyclohexa-1,3-diene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4R)-p-mentha-1(6),2-diene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R)-2-methyl-5-(1-methylethyl)-1,3-cyclohexadiene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R)-5-isopropyl-2-methylcyclohexa-1,3-diene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-(-)-alpha-Phellandrene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-2-methyl-5-(1-methylethyl)-1,3-cyclohexadiene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-5-isopropyl-2-methylcyclohexa-1,3-diene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α-phellandrene l-form
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:50035
+xrefs:
+- beilstein:2497824
+- beilstein:5239645
+- cas:4221-98-1
+- cas:99-83-2
+- kegg.compound:C09875
+- knapsack:C00003051
+- lipidmaps:LMPR01020061
+- lipidmaps:LMPR0102090021
+- reaxys:4290853
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]1(C(C)C)C=CC(C)=CC1'
+  standard_inchi: InChI=1S/C10H16/c1-8(2)10-6-4-9(3)5-7-10/h4-6,8,10H,7H2,1-3H3/t10-/m1/s1
+  standard_inchi_key: OGLDWXZKYODSOB-SNVBAGLBSA-N
+  molecular_formula: C10H16
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 136.238
+  monoisotopic_mass: 136.1252
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:301
+  source_label: (−)-α-phellandrene
+  minted_identifier: antibioticmech:chebi-dcac805eb1
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

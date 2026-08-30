@@ -1,0 +1,48 @@
+identifier: CHEBI:65475
+label: BE-54238A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heteropentacyclic compound that is isolated from Streptomyces
+  sp. A54238. It exhibits inhibitory efficacy against the growth of human tumour cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[7-hydroxy-1-(1-hydroxyethyl)-8-methyl-6-oxo-1,2,3,8,10,11-hexahydro-6H-benzo[cd]pyrano[3,4-g]pyrrolo[1,2-a]indol-10-yl]acetic
+    acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:35681
+- CHEBI:35871
+- CHEBI:37407
+- CHEBI:38101
+- CHEBI:38164
+- CHEBI:51689
+- CHEBI:76224
+xrefs:
+- reaxys:8519118
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC1OC(CC(=O)O)Cc2c1c(O)c1c3c(c4n(c23)C(C(C)O)CC4)C=CC1=O
+  standard_inchi: InChI=1S/C22H23NO6/c1-9(24)14-4-5-15-12-3-6-16(25)20-19(12)21(23(14)15)13-7-11(8-17(26)27)29-10(2)18(13)22(20)28/h3,6,9-11,14,24,28H,4-5,7-8H2,1-2H3,(H,26,27)
+  standard_inchi_key: AWMWNWIBOOYESP-UHFFFAOYSA-N
+  molecular_formula: C22H23NO6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 397.427
+  monoisotopic_mass: 397.15254
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65475
+  source_label: BE-54238A
+  minted_identifier: antibioticmech:chebi-bca8390cad
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

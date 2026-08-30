@@ -1,0 +1,67 @@
+identifier: CHEBI:138511
+label: piericidin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of monohydroxypyridines that acts as an irreversible
+  mitochondrial Complex I inhibitor that strongly associates with ubiquinone binding
+  sites in both mitochondrial and bacterial forms of NADH:ubiquinone oxidoreductase
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-[(2E,5E,7E,9R,10R,11E)-10-hydroxy-3,7,9,11-tetramethyltrideca-2,5,7,11-tetraen-1-yl]-5,6-dimethoxy-3-methylpyridin-4-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-piericidin A1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-[(2E,5E,7E,11E)-10R-hydroxy-3,7,9R,11-tetramethyl-2,5,7,11-tridecatetraen-1-yl]-5,6-dimethoxy-3-methyl-4-pyridinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-[(2E,5E,7E,9R,10R,11E)-10-hydroxy-3,7,9,11-tetramethyltrideca-2,5,7,11-tetraenyl]-5,6-dimethoxy-3-methyl-1H-pyridin-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AR 054
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Piericidin A1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SN 198E
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Shaoguanmycin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134396
+- CHEBI:25340
+- CHEBI:35618
+- CHEBI:38182
+xrefs:
+- cas:2738-64-9
+- metacyc.compound:CPD0-1233
+- reaxys:4720916
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C/C=C(\C)[C@H](O)[C@H](C)/C=C(C)/C=C/C/C(C)=C/Cc1nc(OC)c(OC)c(O)c1C
+  standard_inchi: InChI=1S/C25H37NO4/c1-9-18(4)22(27)19(5)15-17(3)12-10-11-16(2)13-14-21-20(6)23(28)24(29-7)25(26-21)30-8/h9-10,12-13,15,19,22,27H,11,14H2,1-8H3,(H,26,28)/b12-10+,16-13+,17-15+,18-9+/t19-,22+/m1/s1
+  standard_inchi_key: BBLGCDSLCDDALX-LKGBESRRSA-N
+  molecular_formula: C25H37NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 415.574
+  monoisotopic_mass: 415.27226
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:138511
+  source_label: piericidin A
+  minted_identifier: antibioticmech:chebi-e110475a2b
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,43 @@
+identifier: CHEBI:53749
+label: gemifloxacin mesylate
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The mesylate salt of gemifloxacin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7-[3-(aminomethyl)-4-(methoxyimino)pyrrolidin-1-yl]-1-cyclopropyl-6-fluoro-4-oxo-1,4-dihydro-1,8-naphthyridine-3-carboxylic
+    acid methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38037
+xrefs:
+- beilstein:9176911
+- cas:210353-53-0
+- drugbank:DB01155
+- kegg.drug:D02471
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CO/N=C1\CN(c2nc3c(cc2F)c(=O)c(C(=O)O)cn3C2CC2)CC1CN.CS(=O)(=O)O
+  standard_inchi: InChI=1S/C18H20FN5O4.CH4O3S/c1-28-22-14-8-23(6-9(14)5-20)17-13(19)4-11-15(25)12(18(26)27)7-24(10-2-3-10)16(11)21-17;1-5(2,3)4/h4,7,9-10H,2-3,5-6,8,20H2,1H3,(H,26,27);1H3,(H,2,3,4)/b22-14+;
+  standard_inchi_key: JIYMVSQRGZEYAX-CWUUNJJBSA-N
+  molecular_formula: C18H20FN5O4.CH4O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 485.494
+  monoisotopic_mass: 485.13805
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:53749
+  source_label: gemifloxacin mesylate
+  minted_identifier: antibioticmech:chebi-71b5be365d
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,68 @@
+identifier: CHEBI:29515
+label: ansamitocin P3
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polyketide antibiotic that is isolated from Actinosynnema pretiosum
+  and also exhibits antitumour activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,2R,3S,5S,6S,16E,18E,20R,21S)-11-chloro-21-hydroxy-12,20-dimethoxy-2,5,9,16-tetramethyl-8,23-dioxo-4,24-dioxa-9,22-diazatetracyclo[19.3.1.110,14.03,5]hexacosa-10(26),11,13,16,18-pentaen-6-yl
+    2-methylpropanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2'-De(acetylmethylamino)-2'-methylmaytansine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic C15003P3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C15003P3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Maytansinol isobutyrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ansamitocin P-3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:24995
+- CHEBI:26188
+- CHEBI:32955
+- CHEBI:33308
+- CHEBI:35618
+- CHEBI:51026
+- CHEBI:83403
+xrefs:
+- cas:66584-72-3
+- kegg.compound:C12045
+- knapsack:C00018269
+- lipidmaps:LMPK04000039
+- patent:US2007135629
+- reaxys:5416580
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12O[C@@]1(C)[C@@H](OC(=O)C(C)C)CC(=O)N(C)c1cc(cc(OC)c1Cl)C/C(C)=C/C=C/[C@@H](OC)[C@@]1(O)C[C@]([H])(OC(=O)N1)[C@H]2C'
+  standard_inchi: InChI=1S/C32H43ClN2O9/c1-17(2)29(37)43-25-15-26(36)35(6)21-13-20(14-22(40-7)27(21)33)12-18(3)10-9-11-24(41-8)32(39)16-23(42-30(38)34-32)19(4)28-31(25,5)44-28/h9-11,13-14,17,19,23-25,28,39H,12,15-16H2,1-8H3,(H,34,38)/b11-9+,18-10+/t19-,23+,24-,25+,28+,31+,32+/m1/s1
+  standard_inchi_key: OPQNCARIZFLNLF-JBHFWYGFSA-N
+  molecular_formula: C32H43ClN2O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 635.154
+  monoisotopic_mass: 634.26571
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:29515
+  source_label: ansamitocin P3
+  minted_identifier: antibioticmech:chebi-188600a360
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

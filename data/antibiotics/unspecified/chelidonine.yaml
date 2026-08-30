@@ -1,0 +1,59 @@
+identifier: CHEBI:31389
+label: chelidonine
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (+)-chelidonine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chelidonin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chelidonine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Helidonine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Khelidonin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Stylophorin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35506
+- CHEBI:38517
+- CHEBI:86322
+xrefs:
+- beilstein:4275089
+- beilstein:97913
+- cas:476-32-4
+- kegg.compound:C12242
+- knapsack:C00024623
+- lincs.smallmolecule:LSM-2715
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12c3ccc4c(c3CN(C)[C@]1([H])c1cc3c(cc1C[C@@H]2O)OCO3)OCO4'
+  standard_inchi: InChI=1S/C20H19NO5/c1-21-7-13-11(2-3-15-20(13)26-9-23-15)18-14(22)4-10-5-16-17(25-8-24-16)6-12(10)19(18)21/h2-3,5-6,14,18-19,22H,4,7-9H2,1H3/t14-,18-,19+/m0/s1
+  standard_inchi_key: GHKISGDRQRSCII-ZOCIIQOWSA-N
+  molecular_formula: C20H19NO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 353.374
+  monoisotopic_mass: 353.12632
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31389
+  source_label: chelidonine
+  minted_identifier: antibioticmech:chebi-85e73bf511
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

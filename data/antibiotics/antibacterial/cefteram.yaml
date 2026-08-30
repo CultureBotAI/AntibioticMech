@@ -1,0 +1,68 @@
+identifier: CHEBI:135776
+label: cefteram
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cephalosporin compound having (5-methyl-2H-tetrazol-2-yl)methyl and
+  [(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino side-groups; a third-generation
+  cephalosporin antibiotic.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-[(5-methyl-2H-tetrazol-2-yl)methyl]-7β-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino}-3,4-didehydrocepham-4-carboxyic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-7-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino}-3-[(5-methyl-2H-tetrazol-2-yl)methyl]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cefterame
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ceftetrame
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+- ARO:0000032
+xrefs:
+- ARO:3009121
+- cas:82547-58-8
+- drugcentral:3076
+- reaxys:6030279
+- wikipedia.en:Cefteram
+- chembl:CHEMBL2105953
+- pubchem.compound:6537431
+activity_roles:
+- CHEBI:33282
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(Cn3nnc(C)n3)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1'
+  standard_inchi: InChI=1S/C16H17N9O5S2/c1-6-20-23-24(21-6)3-7-4-31-14-10(13(27)25(14)11(7)15(28)29)19-12(26)9(22-30-2)8-5-32-16(17)18-8/h5,10,14H,3-4H2,1-2H3,(H2,17,18)(H,19,26)(H,28,29)/b22-9-/t10-,14-/m1/s1
+  standard_inchi_key: XSPUSVIQHBDITA-RKYNPMAHSA-N
+  molecular_formula: C16H17N9O5S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 479.504
+  monoisotopic_mass: 479.07941
+source_concepts:
+- source: ARO
+  source_id: ARO:3009121
+  source_label: cefteram
+  minted_identifier: antibioticmech:aro-3849441ecf
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:135776
+  source_label: cefteram
+  minted_identifier: antibioticmech:chebi-c292254293
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

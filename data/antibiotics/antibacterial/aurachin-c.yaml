@@ -1,0 +1,50 @@
+identifier: CHEBI:90888
+label: aurachin C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A C-type aurachin that is quinolin-4-one which is substituted by a hydroxy
+  group at positions 1, a methyl group at position 2, and a triprenyl group at position
+  3.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-hydroxy-2-methyl-3-[(2E,6E)-3,7,11-trimethyldodeca-2,6,10-trien-1-yl]quinolin-4(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: aurachin-C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23765
+- CHEBI:24709
+- CHEBI:27171
+- CHEBI:90918
+xrefs:
+- cas:108354-14-9
+- knapsack:C00017847
+- metacyc.compound:CPD-7733
+- reaxys:19334109
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)=CCC/C(C)=C/CC/C(C)=C/Cc1c(C)n(O)c2ccccc2c1=O
+  standard_inchi: InChI=1S/C25H33NO2/c1-18(2)10-8-11-19(3)12-9-13-20(4)16-17-22-21(5)26(28)24-15-7-6-14-23(24)25(22)27/h6-7,10,12,14-16,28H,8-9,11,13,17H2,1-5H3/b19-12+,20-16+
+  standard_inchi_key: FIHXCHBEHLCXEG-YEFHWUCQSA-N
+  molecular_formula: C25H33NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 379.544
+  monoisotopic_mass: 379.25113
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:90888
+  source_label: aurachin C
+  minted_identifier: antibioticmech:chebi-b5e7a7e52f
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

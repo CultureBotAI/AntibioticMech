@@ -1,0 +1,94 @@
+identifier: CHEBI:8378
+label: prednisolone
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A glucocorticoid that is prednisone in which the oxo group at position
+  11 has been reduced to the corresponding β-hydroxy group. It is a drug metabolite
+  of prednisone.
+definition_source: ChEBI
+synonyms:
+- synonym_text: prednisolona
+  synonym_type: INN
+  source: chebi
+- synonym_text: prednisolonum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 11β,17,21-trihydroxypregna-1,4-diene-3,20-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (11β)-11,17,21-trihydroxypregna-1,4-diene-3,20-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,4-pregnadiene-11β,17α,21-triol-3,20-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,4-pregnadiene-3,20-dione-11β,17α,21-triol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,20-dioxo-11β,17α,21-trihydroxy-1,4-pregnadiene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hydroretrocortine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: metacortandralone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Δ1-dehydrocortisol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Δ1-dehydrohydrocortisone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Δ1-hydrocortisone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139590
+- CHEBI:139592
+- CHEBI:24261
+- CHEBI:35342
+- CHEBI:35344
+- CHEBI:35346
+- CHEBI:36885
+- CHEBI:61313
+- CHEBI:77166
+xrefs:
+- cas:50-24-8
+- drugbank:DB00860
+- drugcentral:2245
+- hmdb:HMDB0014998
+- kegg.compound:C07369
+- kegg.drug:D00472
+- reaxys:1354103
+- vsdb:1848
+- wikipedia.en:Prednisolone
+activity_roles:
+- CHEBI:33231
+- CHEBI:33281
+- CHEBI:35816
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@](O)(C(=O)CO)[C@@]1(C)C[C@H](O)[C@@]1([H])[C@@]2([H])CCC2=CC(=O)C=C[C@@]21C'
+  standard_inchi: InChI=1S/C21H28O5/c1-19-7-5-13(23)9-12(19)3-4-14-15-6-8-21(26,17(25)11-22)20(15,2)10-16(24)18(14)19/h5,7,9,14-16,18,22,24,26H,3-4,6,8,10-11H2,1-2H3/t14-,15-,16-,18+,19-,20-,21-/m0/s1
+  standard_inchi_key: OIGNJSKKLXVSLS-VWUMJDOOSA-N
+  molecular_formula: C21H28O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 360.45
+  monoisotopic_mass: 360.19367
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:8378
+  source_label: prednisolone
+  minted_identifier: antibioticmech:chebi-c95d0e902a
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  - CHEBI:35816
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

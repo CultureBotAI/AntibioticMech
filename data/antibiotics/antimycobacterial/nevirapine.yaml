@@ -1,0 +1,66 @@
+identifier: CHEBI:63613
+label: nevirapine
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dipyridodiazepine that is 5,11-dihydro-6H-dipyrido[3,2-b:2',3'-e][1,4]diazepine
+  which is substituted by methyl, oxo, and cyclopropyl groups at positions 4, 6, and
+  11, respectively. A non-nucleoside reverse transcriptase inhibitor with activity
+  against HIV-1, it is used in combination with other antiretrovirals for the treatment
+  of HIV infection.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Viramune
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 11-cyclopropyl-4-methyl-5,11-dihydro-6H-dipyrido[3,2-b:2',3'-e][1,4]diazepin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 11-cyclopropyl-5,11-dihydro-4-methyl-6H-dipyrido(3,2-b:2',3'-e)(1,4)diazepin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NEV
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NVP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nevirapine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:51454
+- CHEBI:63667
+xrefs:
+- cas:129618-40-2
+- drugbank:DB00238
+- kegg.compound:C07263
+- kegg.drug:D00435
+- lincs.smallmolecule:LSM-5336
+- pdb-ccd:NVP
+- reaxys:4757598
+- wikipedia.en:Nevirapine
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: Cc1ccnc2c1NC(=O)c1cccnc1N2C1CC1
+  standard_inchi: InChI=1S/C15H14N4O/c1-9-6-8-17-14-12(9)18-15(20)11-3-2-7-16-13(11)19(14)10-4-5-10/h2-3,6-8,10H,4-5H2,1H3,(H,18,20)
+  standard_inchi_key: NQDJXKOVJZTUJA-UHFFFAOYSA-N
+  molecular_formula: C15H14N4O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 266.304
+  monoisotopic_mass: 266.11676
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:63613
+  source_label: nevirapine
+  minted_identifier: antibioticmech:chebi-5176020c8d
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

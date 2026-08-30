@@ -1,0 +1,61 @@
+identifier: CHEBI:142825
+label: methfuroxam
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A secondary carboxamide resulting from the formal condensation of the
+  carboxylic acid group of 2,4,5-trimethyl-3-furoic acid with the amino group of aniline.
+  An obsolete fungicide formerly used to control Basidiomycetes pathogens on cereal
+  crops.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,4,5-trimethyl-N-phenyl-3-furamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4,5-trimethyl-N-phenylfuran-3-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4,5-trimethyl-3-furanilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4,5-trimethyl-N-phenyl-3-furancarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: méthfuroxame
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:13248
+- CHEBI:140325
+- CHEBI:24129
+- CHEBI:87019
+xrefs:
+- cas:28730-17-8
+- patent:GB2021951
+- pesticides:methfuroxam
+- ppdb:455
+- reaxys:6397976
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: Cc1oc(C)c(C(=O)Nc2ccccc2)c1C
+  standard_inchi: InChI=1S/C14H15NO2/c1-9-10(2)17-11(3)13(9)14(16)15-12-7-5-4-6-8-12/h4-8H,1-3H3,(H,15,16)
+  standard_inchi_key: ZWJNEYVWPYIKMB-UHFFFAOYSA-N
+  molecular_formula: C14H15NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 229.279
+  monoisotopic_mass: 229.11028
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:142825
+  source_label: methfuroxam
+  minted_identifier: antibioticmech:chebi-1a3d7dc3cb
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

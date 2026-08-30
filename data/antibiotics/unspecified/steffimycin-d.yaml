@@ -1,0 +1,49 @@
+identifier: CHEBI:156294
+label: steffimycin D
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An anthracycline antibiotic that is steffimycin in which the carbonyl
+  group that is adjacent to the carbon bearing both a hydroxy group and a methyl group
+  has been reduced to the corresponding methylene group. An antitumour anthracycline
+  first isolated from Streptomyces steffisburgensis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S,3R)-3,10,12-trihydroxy-2,8-dimethoxy-3-methyl-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracen-1-yl
+    6-deoxy-2-O-methyl-α-L-mannopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-deoxo-steffimycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-deoxosteffimycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:49322
+xrefs:
+- cas:132354-06-4
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COc1cc(O)c2c(c1)C(=O)c1cc3c(c(O)c1C2=O)C(O[C@@H]1O[C@@H](C)[C@H](O)[C@@H](O)[C@H]1OC)[C@H](OC)[C@](C)(O)C3
+  standard_inchi: InChI=1S/C28H32O12/c1-10-19(30)23(34)25(37-4)27(39-10)40-24-16-11(9-28(2,35)26(24)38-5)6-13-18(21(16)32)22(33)17-14(20(13)31)7-12(36-3)8-15(17)29/h6-8,10,19,23-27,29-30,32,34-35H,9H2,1-5H3/t10-,19-,23+,24?,25+,26-,27-,28+/m0/s1
+  standard_inchi_key: FAXXYXLNSNAHOO-MICZPBMFSA-N
+  molecular_formula: C28H32O12
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 560.552
+  monoisotopic_mass: 560.18938
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156294
+  source_label: steffimycin D
+  minted_identifier: antibioticmech:chebi-a5031613b7
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

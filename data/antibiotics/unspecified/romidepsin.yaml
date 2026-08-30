@@ -1,0 +1,74 @@
+identifier: CHEBI:61080
+label: romidepsin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclodepsipeptide consisting of the cyclic disulfide of (2Z)-2-aminobut-2-enoyl,
+  L-valyl, (3S,4E)-3-hydroxy-7-sulfanylhept-4-enoyl, D-valyl and D-cysteinyl residues
+  coupled in sequence and cyclised head-to tail.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Chromadax
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Istodax
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: romidepsina
+  synonym_type: INN
+  source: chebi
+- synonym_text: romidepsine
+  synonym_type: INN
+  source: chebi
+- synonym_text: romidepsinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (1S,4S,7Z,10S,16E,21R)-7-ethylidene-4,21-di(propan-2-yl)-2-oxa-12,13-dithia-5,8,20,23-tetraazabicyclo[8.7.6]tricos-16-ene-3,6,9,19,22-pentone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic FR 901228
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FK228
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FR901228
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC-630176
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24531
+- CHEBI:35213
+- CHEBI:35489
+xrefs:
+- cas:128517-07-7
+- drugcentral:4119
+- kegg.drug:D06637
+- reaxys:6854221
+- wikipedia.en:Romidepsin
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C/C=C1\NC(=O)[C@H]2CSSCC/C=C/[C@H](CC(=O)N[C@H](C(C)C)C(=O)N2)OC(=O)[C@H](C(C)C)NC1=O
+  standard_inchi: InChI=1S/C24H36N4O6S2/c1-6-16-21(30)28-20(14(4)5)24(33)34-15-9-7-8-10-35-36-12-17(22(31)25-16)26-23(32)19(13(2)3)27-18(29)11-15/h6-7,9,13-15,17,19-20H,8,10-12H2,1-5H3,(H,25,31)(H,26,32)(H,27,29)(H,28,30)/b9-7+,16-6-/t15-,17-,19-,20+/m1/s1
+  standard_inchi_key: OHRURASPPZQGQM-GCCNXGTGSA-N
+  molecular_formula: C24H36N4O6S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 540.708
+  monoisotopic_mass: 540.20763
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:61080
+  source_label: romidepsin
+  minted_identifier: antibioticmech:chebi-1bb142f415
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

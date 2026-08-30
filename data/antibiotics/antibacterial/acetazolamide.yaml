@@ -1,0 +1,91 @@
+identifier: CHEBI:27690
+label: acetazolamide
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: Defiltran
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Diacarb
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Diluran
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Glaupax
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: acetazolamida
+  synonym_type: INN
+  source: chebi
+- synonym_text: acetazolamidum
+  synonym_type: INN
+  source: chebi
+- synonym_text: acétazolamide
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-(5-sulfamoyl-1,3,4-thiadiazol-2-yl)acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-acetylamino-1,3,4-thiadiazole-5-sulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-ACETAMIDO-1,3,4-THIADIAZOLE-2-SULFONAMIDE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-acetylamino-1,3,4-thiadiazole-2-sulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetazolamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Diamox
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[5-(aminosulfonyl)-1,3,4-thiadiazol-2-yl]acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[5-(aminosulfonyl)-1,3,5-thiadiazol-2-yl]acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:29347
+- CHEBI:35358
+- CHEBI:38099
+xrefs:
+- beilstein:212994
+- cas:59-66-5
+- drugbank:DB00819
+- drugcentral:56
+- gmelin:365421
+- kegg.compound:C06805
+- kegg.drug:D00218
+- lincs.smallmolecule:LSM-5543
+- patent:US2554816
+- pdb-ccd:AZM
+- wikipedia.en:Acetazolamide
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(=O)Nc1nnc(S(N)(=O)=O)s1
+  standard_inchi: InChI=1S/C4H6N4O3S2/c1-2(9)6-3-7-8-4(12-3)13(5,10)11/h1H3,(H2,5,10,11)(H,6,7,9)
+  standard_inchi_key: BZKPWHYZMXOIDC-UHFFFAOYSA-N
+  molecular_formula: C4H6N4O3S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 222.251
+  monoisotopic_mass: 221.98813
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:27690
+  source_label: acetazolamide
+  minted_identifier: antibioticmech:chebi-1bb791748b
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

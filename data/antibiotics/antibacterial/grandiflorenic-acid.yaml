@@ -1,0 +1,54 @@
+identifier: CHEBI:141130
+label: grandiflorenic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracyclic diterpenoid with formula C20H28O2 which exhibits anti-inflammatory,
+  antibacterial, antileishmanial and wound-healing properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5β,8α,10α,13α)-kaura-9(11),16-dien-18-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ent-kaura-9(11),16-dien-18-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: kaura-9(11),16-dien-18-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: kauradienoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:36760
+- CHEBI:52557
+xrefs:
+- cas:22338-67-6
+- chemspider:24657544
+activity_roles:
+- CHEBI:33282
+- CHEBI:70868
+chemical_structure:
+  smiles: '[H][C@]12CC[C@]34CC(=C)[C@H](CC=C3[C@]1(C)CCC[C@@]2(C)C(=O)O)C4'
+  standard_inchi: InChI=1S/C20H28O2/c1-13-11-20-10-7-15-18(2,16(20)6-5-14(13)12-20)8-4-9-19(15,3)17(21)22/h6,14-15H,1,4-5,7-12H2,2-3H3,(H,21,22)/t14-,15+,18-,19-,20-/m1/s1
+  standard_inchi_key: RJIPNPHMQGDUBW-RFGKEDTNSA-N
+  molecular_formula: C20H28O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 300.442
+  monoisotopic_mass: 300.20893
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141130
+  source_label: grandiflorenic acid
+  minted_identifier: antibioticmech:chebi-d364781faf
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

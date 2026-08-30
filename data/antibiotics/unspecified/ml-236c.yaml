@@ -1,0 +1,53 @@
+identifier: CHEBI:34828
+label: ML-236C
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (4R,6R)-4-hydroxy-6-{2-[(1S,2S,8aR)-2-methyl-1,2,6,7,8,8a-hexahydronaphthalen-1-yl]ethyl}tetrahydro-2H-pyran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4R,6R)-4-hydroxy-6-{2-[(1S,2S,8aR)-2-methyl-1,2,6,7,8,8a-hexahydronaphthalen-1-yl]ethyl}oxan-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic ML 236C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ML 236C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:142348
+- CHEBI:26188
+- CHEBI:35681
+- CHEBI:36785
+- CHEBI:75885
+xrefs:
+- cas:58889-18-2
+- kegg.compound:C14043
+- knapsack:C00018117
+- reaxys:1588586
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12CCCC=C1C=C[C@H](C)[C@@H]2CC[C@@H]1C[C@@H](O)CC(=O)O1'
+  standard_inchi: InChI=1S/C18H26O3/c1-12-6-7-13-4-2-3-5-17(13)16(12)9-8-15-10-14(19)11-18(20)21-15/h4,6-7,12,14-17,19H,2-3,5,8-11H2,1H3/t12-,14+,15+,16-,17-/m0/s1
+  standard_inchi_key: NXIASLUNMKAUTN-WFKFIOEPSA-N
+  molecular_formula: C18H26O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 290.403
+  monoisotopic_mass: 290.18819
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:34828
+  source_label: ML-236C
+  minted_identifier: antibioticmech:chebi-348abba7f3
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

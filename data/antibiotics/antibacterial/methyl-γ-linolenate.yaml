@@ -1,0 +1,55 @@
+identifier: CHEBI:144354
+label: methyl γ-linolenate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A fatty acid methyl ester obtained from the formal condensation of methanol
+  and γ-linolenic acid.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (6Z,9Z,12Z)-octadeca-6,9,12-trienoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6Z,9Z,12Z)-6,9,12-octadecatrienoic acid methyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C18:3 (all cis-6,9,12) methyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (Z,Z,Z)-6,9,12-octadecatrienoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl GLA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: γ-linolenic acid methyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:4986
+xrefs:
+- cas:16326-32-2
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCC/C=C\C/C=C\C/C=C\CCCCC(=O)OC
+  standard_inchi: InChI=1S/C19H32O2/c1-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19(20)21-2/h7-8,10-11,13-14H,3-6,9,12,15-18H2,1-2H3/b8-7-,11-10-,14-13-
+  standard_inchi_key: JFRWATCOFCPIBM-JPFHKJGASA-N
+  molecular_formula: C19H32O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 292.463
+  monoisotopic_mass: 292.24023
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:144354
+  source_label: methyl γ-linolenate
+  minted_identifier: antibioticmech:chebi-c1f54fed70
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

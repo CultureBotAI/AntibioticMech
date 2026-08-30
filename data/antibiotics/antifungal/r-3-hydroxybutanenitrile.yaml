@@ -1,0 +1,59 @@
+identifier: CHEBI:141345
+label: (R)-3-hydroxybutanenitrile
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 3-hydroxybutanenitrile that has R configuration. A metabolite isolated
+  from Aspergillus sp. KJ-9, it is active against a wide variety of phytopathogenic
+  fungi.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R)-3-hydroxybutanenitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3R)-3-hydroxybutyronitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-(−)-3-hydroxybutyronitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-3-hydroxybutanonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-3-hydroxybutyronitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-β-hydroxybutyronitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-3-hydroxybutyronitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:142961
+xrefs:
+- cas:125103-95-9
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C[C@@H](O)CC#N
+  standard_inchi: InChI=1S/C4H7NO/c1-4(6)2-3-5/h4,6H,2H2,1H3/t4-/m1/s1
+  standard_inchi_key: BYJAJQGCMSBKPB-SCSAIBSYSA-N
+  molecular_formula: C4H7NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 85.106
+  monoisotopic_mass: 85.05276
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141345
+  source_label: (R)-3-hydroxybutanenitrile
+  minted_identifier: antibioticmech:chebi-0fd0db1225
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

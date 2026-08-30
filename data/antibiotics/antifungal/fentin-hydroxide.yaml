@@ -1,0 +1,70 @@
+identifier: CHEBI:30473
+label: fentin hydroxide
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organotin compound that is triphenylstannane in which the hydrogen
+  attached to tin is replaced by a hydroxy group. A fungicide used to control a variety
+  of infections including blight on potatoes, leaf spot on sugar beet and alternaria
+  blight on carrots.
+definition_source: ChEBI
+synonyms:
+- synonym_text: triphenylstannanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fentin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sn(OH)Ph3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[Sn(OH)Ph3]'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hydroxytriphenylstannane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hydroxytriphenyltin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: triphenylstannylium hydroxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: triphenyltin hydroxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24651
+- CHEBI:25717
+xrefs:
+- beilstein:4139186
+- cas:76-87-9
+- gmelin:7194
+- kegg.compound:C18729
+- molbase:332
+- ppdb:312
+- reaxys:3770576
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: '[OH][Sn]([c]1ccccc1)([c]1ccccc1)[c]1ccccc1'
+  standard_inchi: InChI=1S/3C6H5.H2O.Sn/c3*1-2-4-6-5-3-1;;/h3*1-5H;1H2;/q;;;;+1/p-1
+  standard_inchi_key: BFWMWWXRWVJXSE-UHFFFAOYSA-M
+  molecular_formula: C18H16OSn
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 367.036
+  monoisotopic_mass: 368.02231
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:30473
+  source_label: fentin hydroxide
+  minted_identifier: antibioticmech:chebi-1c0ba84f32
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,86 @@
+identifier: CHEBI:234200
+label: rafoxanide
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A salicylanilide resulting from the formal condensation of the carboxy
+  group of 2-hydroxy-3,5-diiodobenzoic acid with the amino group of 3-chloro-4-(4-chlorophenoxy)aniline.
+  It is a broad-spectrum anthelmintic used for the treatment of parasitic infections
+  in cattle and sheep.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Disalan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Ranide
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: rafoxanida
+  synonym_type: INN
+  source: chebi
+- synonym_text: rafoxanidum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-[3-chloro-4-(4-chlorophenoxy)phenyl]-2-hydroxy-3,5-diiodobenzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3'-chloro-4'-(4-chlorophenoxy)-3,5-diiodosalicylanilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3'-chloro-4'-(p-chlorophenoxy)-3,5-diiodosalicylanilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,5-diiodo-3'-chloro-4'-(p-chlorophenoxy)salicylanilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,5-diodo-3'-chloro-4'-(p-chlorophenoxy)salicylanilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 355278
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC-355278
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC355278
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:22702
+- CHEBI:33853
+- CHEBI:35618
+- CHEBI:37142
+- CHEBI:53468
+- CHEBI:83403
+xrefs:
+- cas:22662-39-1
+- kegg.drug:D05693
+- pdb-ccd:OX9
+- wikipedia.en:Rafoxanide
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: O=C(Nc1ccc(Oc2ccc(Cl)cc2)c(Cl)c1)c1cc(I)cc(I)c1O
+  standard_inchi: InChI=1S/C19H11Cl2I2NO3/c20-10-1-4-13(5-2-10)27-17-6-3-12(9-15(17)21)24-19(26)14-7-11(22)8-16(23)18(14)25/h1-9,25H,(H,24,26)
+  standard_inchi_key: NEMNPWINWMHUMR-UHFFFAOYSA-N
+  molecular_formula: C19H11Cl2I2NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 626.015
+  monoisotopic_mass: 624.82054
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:234200
+  source_label: rafoxanide
+  minted_identifier: antibioticmech:chebi-6235270c77
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

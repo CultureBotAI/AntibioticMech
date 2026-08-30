@@ -1,0 +1,52 @@
+identifier: CHEBI:65406
+label: ancistrotanzanine A
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An isoquinoline alkaloid that is (3S)-6,8-dimethoxy-1,3-dimethyl-3,4-dihydroisoquinoline
+  substituted by a 1-hydroxy-8-methoxy-3-methylnaphthalen-2-yl group at position 5.
+  It is isolated from the leaves of Ancistrocladus tanzaniensis and exhibits antiplasmodial,
+  antileishmanial and antitrypanocidal activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-[(3S)-6,8-dimethoxy-1,3-dimethyl-3,4-dihydroisoquinolin-5-yl]-8-methoxy-3-methylnaphthalen-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24921
+- CHEBI:24922
+- CHEBI:25324
+- CHEBI:25392
+- CHEBI:35618
+- CHEBI:48851
+- CHEBI:64459
+xrefs:
+- reaxys:9816658
+activity_roles:
+- CHEBI:36335
+- CHEBI:64915
+- CHEBI:70868
+chemical_structure:
+  smiles: COc1cc(OC)c(-c2c(C)cc3cccc(OC)c3c2O)c2c1C(C)=N[C@@H](C)C2
+  standard_inchi: InChI=1S/C25H27NO4/c1-13-10-16-8-7-9-18(28-4)23(16)25(27)21(13)24-17-11-14(2)26-15(3)22(17)19(29-5)12-20(24)30-6/h7-10,12,14,27H,11H2,1-6H3/t14-/m0/s1
+  standard_inchi_key: QGIHYQPVZRSTNP-AWEZNQCLSA-N
+  molecular_formula: C25H27NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 405.494
+  monoisotopic_mass: 405.19401
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65406
+  source_label: ancistrotanzanine A
+  minted_identifier: antibioticmech:chebi-b421f37c22
+  role_terms:
+  - CHEBI:36335
+  - CHEBI:64915
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

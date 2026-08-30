@@ -1,0 +1,51 @@
+identifier: CHEBI:3000
+label: beauvericin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A trimeric cyclodepsipeptide composed from alternating methylphenylalanyl
+  and hydroxyvaleryl residues.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S,6R,9S,12R,15S,18R)-3,9,15-tribenzyl-4,10,16-trimethyl-6,12,18-tri(propan-2-yl)-1,7,13-trioxa-4,10,16-triazacyclooctadecane-2,5,8,11,14,17-hexone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3S,6R,9S,12R,15S,18R)-3,9,15-tribenzyl-6,12,18-triisopropyl-4,10,16-trimethyl-1,7,13-trioxa-4,10,16-triazacyclooctadecane-2,5,8,11,14,17-hexone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Beauvericin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35213
+xrefs:
+- cas:26048-05-5
+- kegg.compound:C11590
+- knapsack:C00027924
+- reaxys:24193536
+- reaxys:5223711
+- wikipedia.en:Beauvericin
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(C)[C@H]1OC(=O)[C@H](Cc2ccccc2)N(C)C(=O)[C@@H](C(C)C)OC(=O)[C@H](Cc2ccccc2)N(C)C(=O)[C@@H](C(C)C)OC(=O)[C@H](Cc2ccccc2)N(C)C1=O
+  standard_inchi: InChI=1S/C45H57N3O9/c1-28(2)37-40(49)46(7)35(26-32-21-15-11-16-22-32)44(53)56-39(30(5)6)42(51)48(9)36(27-33-23-17-12-18-24-33)45(54)57-38(29(3)4)41(50)47(8)34(43(52)55-37)25-31-19-13-10-14-20-31/h10-24,28-30,34-39H,25-27H2,1-9H3/t34-,35-,36-,37+,38+,39+/m0/s1
+  standard_inchi_key: GYSCAQFHASJXRS-FFCOJMSVSA-N
+  molecular_formula: C45H57N3O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 783.963
+  monoisotopic_mass: 783.40948
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3000
+  source_label: beauvericin
+  minted_identifier: antibioticmech:chebi-0c54ffb612
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

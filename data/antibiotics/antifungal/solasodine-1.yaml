@@ -1,0 +1,50 @@
+identifier: CHEBI:145043
+label: solasodine(1+)
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A secondary ammonium ion resulting from the protonation of the amino group
+  of solasodine. The major species at pH 7.3.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (25R)-3β-hydroxy-22α-spirosol-5-en-28-ium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,2'R,4aR,4bS,5'R,6aS,6bR,7S,9aS,10aS,10bS)-2-hydroxy-4a,5',6a,7-tetramethyl-1,2,3,4,4a,4b,5,6,6a,6b,7,9a,10,10a,10b,11-hexadecahydrospiro[naphtho[2',1':4,5]indeno[2,1-b]furan-8,2'-piperidinium]
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: solasod-5-en-3β-ol(1+)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: solasodinium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: solasodine
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:137419
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12CC=C3C[C@@H](O)CC[C@]3(C)[C@@]1([H])CC[C@@]1(C)[C@@]2([H])C[C@]2([H])O[C@]3(CC[C@@H](C)C[NH2+]3)[C@@H](C)[C@]12[H]'
+  standard_inchi: InChI=1S/C27H43NO2/c1-16-7-12-27(28-15-16)17(2)24-23(30-27)14-22-20-6-5-18-13-19(29)8-10-25(18,3)21(20)9-11-26(22,24)4/h5,16-17,19-24,28-29H,6-15H2,1-4H3/p+1/t16-,17+,19+,20-,21+,22+,23+,24+,25+,26+,27-/m1/s1
+  standard_inchi_key: KWVISVAMQJWJSZ-VKROHFNGSA-O
+  molecular_formula: C27H44NO2
+  structure_source: ChEBI
+  charge: 1
+  average_mass: 414.654
+  monoisotopic_mass: 414.33666
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:145043
+  source_label: solasodine(1+)
+  minted_identifier: antibioticmech:chebi-44a5f2ba21
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

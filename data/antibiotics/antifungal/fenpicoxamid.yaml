@@ -1,0 +1,61 @@
+identifier: CHEBI:136340
+label: fenpicoxamid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxamide resulting from the formal condensation of the carboxy group
+  of 3-[(isobutyryloxy)methoxy]-4-methoxypyridine-2-carboxylic acid with the amino
+  group of (3S,6S,7R,8R)-3-amino-8-benzyl-6-methyl-4,9-dioxo-1,5-dioxonan-7-yl 2-methylpropanoate.
+  Introduced by Dow AgroSciences, it is an antibiotic fungicide with a new target
+  site for disease control in Septoria species.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Inatreq
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: (3S,6S,7R,8R)-8-benzyl-3-[({3-[(isobutyryloxy)methoxy]-4-methoxypyridin-2-yl}carbonyl)amino]-6-methyl-4,9-dioxo-1,5-dioxonan-7-yl
+    2-methylpropanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic UK 2A procide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: UK 2A procide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:25000
+- CHEBI:26421
+- CHEBI:59769
+- CHEBI:87114
+xrefs:
+- cas:517875-34-2
+- pesticides:fenpicoxamid
+- reaxys:21250066
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1ccnc(C(=O)N[C@H]2COC(=O)[C@H](Cc3ccccc3)[C@@H](OC(=O)C(C)C)[C@H](C)OC2=O)c1OCOC(=O)C(C)C
+  standard_inchi: InChI=1S/C31H38N2O11/c1-17(2)28(35)42-16-41-26-23(39-6)12-13-32-24(26)27(34)33-22-15-40-30(37)21(14-20-10-8-7-9-11-20)25(19(5)43-31(22)38)44-29(36)18(3)4/h7-13,17-19,21-22,25H,14-16H2,1-6H3,(H,33,34)/t19-,21+,22-,25-/m0/s1
+  standard_inchi_key: QGTOTYJSCYHYFK-RBODFLQRSA-N
+  molecular_formula: C31H38N2O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 614.648
+  monoisotopic_mass: 614.24756
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:136340
+  source_label: fenpicoxamid
+  minted_identifier: antibioticmech:chebi-e8cf5bb773
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,48 @@
+identifier: CHEBI:65493
+label: bidebiline D
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An isoquinoline alkaloid that is a dimer of 10-methoxydehydroanonaine.
+  Isolated from the roots of Polyalthia debilis, it exhibits moderate antimalarial
+  activity by inhibiting the growth of the malarial parasite Plasmodium falciparum.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 11,11'-dimethoxy-6,6',7,7'-tetrahydro-5H,5'H-8,8'-bi[1,3]benzodioxolo[6,5,4-de]benzo[g]quinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bis-7,7'-dehydro-10,10'-dimethoxyanonaine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24921
+- CHEBI:24922
+- CHEBI:35618
+- CHEBI:38104
+- CHEBI:64459
+xrefs:
+- reaxys:9682777
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: COc1ccc2c(-c3c4c5c(cc6c(c5c5cc(OC)ccc35)OCO6)CCN4)c3c4c(cc5c(c4c2c1)OCO5)CCN3
+  standard_inchi: InChI=1S/C36H28N2O6/c1-39-19-3-5-21-23(13-19)31-27-17(11-25-35(31)43-15-41-25)7-9-37-33(27)29(21)30-22-6-4-20(40-2)14-24(22)32-28-18(8-10-38-34(28)30)12-26-36(32)44-16-42-26/h3-6,11-14,37-38H,7-10,15-16H2,1-2H3
+  standard_inchi_key: HXKKJKCNOAUCEJ-UHFFFAOYSA-N
+  molecular_formula: C36H28N2O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 584.628
+  monoisotopic_mass: 584.19474
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65493
+  source_label: bidebiline D
+  minted_identifier: antibioticmech:chebi-74c5023d8b
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

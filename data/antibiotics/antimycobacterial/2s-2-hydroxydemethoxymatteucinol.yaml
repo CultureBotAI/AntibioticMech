@@ -1,0 +1,48 @@
+identifier: CHEBI:67371
+label: (2S)-2'-hydroxydemethoxymatteucinol
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A trihydroxyflavanone that is demethoxymatteucinol with an additional
+  hydroxy group at position 2'. Isolated from Pisonia aculeata, it exhibits antitubercular
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-5,7-dihydroxy-2-(2-hydroxyphenyl)-6,8-dimethyl-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-5,7-dihydroxy-2-(2-hydroxyphenyl)-6,8-dimethyl-2,3-dihydro-4H-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2',4,5-trihydroxy-6,8-dimethylflavanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38739
+xrefs:
+- cas:77744-53-7
+- reaxys:4519598
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: Cc1c(O)c(C)c2c(c1O)C(=O)C[C@@H](c1ccccc1O)O2
+  standard_inchi: InChI=1S/C17H16O5/c1-8-15(20)9(2)17-14(16(8)21)12(19)7-13(22-17)10-5-3-4-6-11(10)18/h3-6,13,18,20-21H,7H2,1-2H3/t13-/m0/s1
+  standard_inchi_key: WOGYXYDORXIAGE-ZDUSSCGKSA-N
+  molecular_formula: C17H16O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 300.31
+  monoisotopic_mass: 300.09977
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:67371
+  source_label: (2S)-2'-hydroxydemethoxymatteucinol
+  minted_identifier: antibioticmech:chebi-99dafc003b
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

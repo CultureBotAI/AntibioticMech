@@ -1,0 +1,62 @@
+identifier: CHEBI:32150
+label: sodium thiosulfate pentahydrate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrate consisting of sodium thiosulfate with 5 mol eq. of water.
+definition_source: ChEBI
+synonyms:
+- synonym_text: PEDMARK
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: sodium sulfurothioate—water (1/5)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Na2S2O3·5H2O
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium thiosulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: disodium thiosulfate pentahydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: disodium thiosulphate pentahydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium sulfurothioate hydrate (2:1:5)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: thiosulfuric acid, disodium salt, pentahydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35505
+xrefs:
+- cas:10102-17-7
+- drugbank:DBSALT002505
+- kegg.drug:D01091
+activity_roles:
+- CHEBI:86327
+chemical_structure:
+  smiles: O=S(=O)([O-])[S-].[H]O[H].[H]O[H].[H]O[H].[H]O[H].[H]O[H].[Na+].[Na+]
+  standard_inchi: InChI=1S/2Na.H2O3S2.5H2O/c;;1-5(2,3)4;;;;;/h;;(H2,1,2,3,4);5*1H2/q2*+1;;;;;;/p-2
+  standard_inchi_key: PODWXQQNRWNDGD-UHFFFAOYSA-L
+  molecular_formula: 5H2O.2Na.O3S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 248.186
+  monoisotopic_mass: 247.96125
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32150
+  source_label: sodium thiosulfate pentahydrate
+  minted_identifier: antibioticmech:chebi-e18ff20353
+  role_terms:
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

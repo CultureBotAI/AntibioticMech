@@ -1,0 +1,37 @@
+identifier: antibioticmech:aro-8013b9b55a
+label: tetronomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Tetronomycin, C34H50O8, isolated from a strain of Streptomyces sp. nov.
+  represents a novel polycyclic ionophore polyether.
+definition_source: PMID:7076564
+parent_compounds:
+- ARO:3005163
+xrefs:
+- ARO:3007768
+- CHEBI:220058
+- pubchem.compound:44472823
+structural_class: ionophore with antibiotic activity
+structural_class_id: ARO:3005163
+chemical_structure:
+  smiles: C[C@H]1CCC[C@H]([C@@H]1[C@@H](C)C(=O)C2=C(C(=C)OC2=O)[O-])/C=C(\CO)/[C@@H]3[C@H](CC[C@@H](O3)/C=C/C[C@@H]4CC[C@H](O4)[C@@H](C)OC)C.[Na+]
+  standard_inchi: InChI=1S/C34H50O8.Na/c1-19-9-7-10-24(29(19)21(3)31(36)30-32(37)23(5)40-34(30)38)17-25(18-35)33-20(2)13-14-27(42-33)12-8-11-26-15-16-28(41-26)22(4)39-6;/h8,12,17,19-22,24,26-29,33,35,37H,5,7,9-11,13-16,18H2,1-4,6H3;/q;+1/p-1/b12-8+,25-17+;/t19-,20-,21+,22+,24-,26+,27-,28-,29-,33-;/m0./s1
+  standard_inchi_key: PYNSBUJNGRHFPI-REIOUMPOSA-M
+  molecular_formula: C34H49NaO8
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 608.7
+  monoisotopic_mass: 608.3325128
+source_concepts:
+- source: ARO
+  source_id: ARO:3007768
+  source_label: tetronomycin
+  minted_identifier: antibioticmech:aro-8013b9b55a
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

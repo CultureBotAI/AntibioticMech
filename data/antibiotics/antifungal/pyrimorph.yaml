@@ -1,0 +1,48 @@
+identifier: CHEBI:83663
+label: pyrimorph
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An enamide resulting from the formal condensation of 3-(p-tert-butylphenyl)-3-(6-chloropyridin-2-yl)acrylic
+  acid with the amino group of morpholine. A fungicide developed in China, it shows
+  high antifungal activity against diseases caused by Phytophthora infestans, Phytophthora
+  capsici, Rhizoctonia solani, Peronophythora litchi, and Pseudoperonospora cubensis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-(4-tert-butylphenyl)-3-(6-chloropyridin-3-yl)-1-(morpholin-4-yl)prop-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(p-tert-butylphenyl)-3-(6-chloropyridin-3-yl)-1-(morpholin-4-yl)prop-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140326
+- CHEBI:38785
+- CHEBI:39173
+- CHEBI:51751
+xrefs:
+- cas:868390-90-3
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: '[H]C(C(=O)N1CCOCC1)=C(c1ccc(C(C)(C)C)cc1)c1ccc(Cl)nc1'
+  standard_inchi: InChI=1S/C22H25ClN2O2/c1-22(2,3)18-7-4-16(5-8-18)19(17-6-9-20(23)24-15-17)14-21(26)25-10-12-27-13-11-25/h4-9,14-15H,10-13H2,1-3H3
+  standard_inchi_key: BAUQXSYUDSNRHL-UHFFFAOYSA-N
+  molecular_formula: C22H25ClN2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 384.907
+  monoisotopic_mass: 384.16046
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83663
+  source_label: pyrimorph
+  minted_identifier: antibioticmech:chebi-f4f1e815b8
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

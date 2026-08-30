@@ -1,0 +1,72 @@
+identifier: CHEBI:7569
+label: nigericin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polyether antibiotic which affects ion transport and ATPase activity
+  in mitochondria. It is produced by Streptomyces hygroscopicus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R)-2-[(2R,3S,6R)-6-{[(2S,4R,5R,7R,9R,10R)-2-{(2S,2'R,3'S,5R,5'R)-5'-[(2S,3S,5R,6R)-6-hydroxy-6-(hydroxymethyl)-3,5-dimethyltetrahydro-2H-pyran-2-yl]-2,3'-dimethyloctahydro-2,2'-bifuran-5-yl}-9-methoxy-2,4,10-trimethyl-1,6-dioxaspiro[4.5]dec-7-yl]methyl}-3-methyltetrahydro-2H-pyran-2-yl]propanoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Azalomycin M
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Helixin C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Polyetherin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36468
+- ARO:3005163
+xrefs:
+- ARO:3007485
+- cas:28380-24-7
+- kegg.compound:C11609
+- knapsack:C00018750
+- patent:US3555150
+- reaxys:74670
+- vsdb:2572
+- wikipedia.en:Nigericin
+- chembl:CHEMBL405862
+- pubchem.compound:34230
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+structural_class: ionophore with antibiotic activity
+structural_class_id: ARO:3005163
+chemical_structure:
+  smiles: '[H][C@]1(C[C@@H]2C[C@@H](OC)[C@@H](C)[C@]3(O2)O[C@](C)([C@@]2([H])CC[C@@](C)([C@]4([H])O[C@@]([H])([C@@]5([H])O[C@@](O)(CO)[C@H](C)C[C@@H]5C)C[C@@H]4C)O2)C[C@H]3C)CC[C@H](C)[C@]([H])([C@@H](C)C(=O)O)O1'
+  standard_inchi: InChI=1S/C40H68O11/c1-21-11-12-28(46-33(21)26(6)36(42)43)17-29-18-30(45-10)27(7)40(48-29)25(5)19-38(9,51-40)32-13-14-37(8,49-32)35-23(3)16-31(47-35)34-22(2)15-24(4)39(44,20-41)50-34/h21-35,41,44H,11-20H2,1-10H3,(H,42,43)/t21-,22-,23-,24+,25+,26+,27+,28+,29+,30+,31+,32+,33+,34-,35+,37-,38-,39-,40+/m0/s1
+  standard_inchi_key: DANUORFCFTYTSZ-SJSJOXFOSA-N
+  molecular_formula: C40H68O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 724.973
+  monoisotopic_mass: 724.47616
+source_concepts:
+- source: ARO
+  source_id: ARO:3007485
+  source_label: nigericin
+  minted_identifier: antibioticmech:aro-0aff72adb5
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:7569
+  source_label: nigericin
+  minted_identifier: antibioticmech:chebi-9c7c4af4e8
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

@@ -1,0 +1,38 @@
+identifier: antibioticmech:aro-ea6589413a
+label: omadacycline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: An aminomethylcycline antibiotic that targets 16s rRNA in gram positive
+  and gram negative bacteria.
+definition_source: PMID:27669321
+parent_compounds:
+- ARO:3000050
+xrefs:
+- ARO:3003936
+- CHEBI:177758
+- chembl:CHEMBL1689772
+- pubchem.compound:54697325
+structural_class: tetracycline antibiotic
+structural_class_id: ARO:3000050
+chemical_structure:
+  smiles: CC(C)(C)CNCC1=CC(=C2C[C@H]3C[C@H]4[C@@H](C(=O)C(=C([C@]4(C(=O)C3=C(C2=C1O)O)O)O)C(=O)N)N(C)C)N(C)C
+  standard_inchi: InChI=1S/C29H40N4O7/c1-28(2,3)12-31-11-14-10-17(32(4)5)15-8-13-9-16-21(33(6)7)24(36)20(27(30)39)26(38)29(16,40)25(37)18(13)23(35)19(15)22(14)34/h10,13,16,21,31,34-35,38,40H,8-9,11-12H2,1-7H3,(H2,30,39)/t13-,16-,21-,29-/m0/s1
+  standard_inchi_key: VJYKVCURWJGLPG-IQZGDKDPSA-N
+  molecular_formula: C29H40N4O7
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 556.6
+  monoisotopic_mass: 556.28969963
+source_concepts:
+- source: ARO
+  source_id: ARO:3003936
+  source_label: omadacycline
+  minted_identifier: antibioticmech:aro-ea6589413a
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

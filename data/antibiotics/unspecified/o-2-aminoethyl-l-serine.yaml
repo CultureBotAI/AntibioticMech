@@ -1,0 +1,56 @@
+identifier: CHEBI:72341
+label: O-(2-aminoethyl)-L-serine
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An L-α-amino acid that is L-serine in which the hydroxy group at position
+  3 is converted to the corresponding 2-aminoethyl ether. An antimetabolic antibiotic
+  obtained from Streptomyces reseoviridofuscus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (L)-3-(2-Aminoethoxy)alanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-2-amino-3-(2-aminoethoxy)propanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-2-amino-3-(2-aminoethoxy)propionic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-3-(2-aminoethoxy)alanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-4-oxalysine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:83822
+- CHEBI:84135
+xrefs:
+- cas:15219-97-3
+- pdb-ccd:OLZ
+- reaxys:4243647
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: NCCOC[C@H](N)C(=O)O
+  standard_inchi: InChI=1S/C5H12N2O3/c6-1-2-10-3-4(7)5(8)9/h4H,1-3,6-7H2,(H,8,9)/t4-/m0/s1
+  standard_inchi_key: SLTGLTLBIVDQKE-BYPYZUCNSA-N
+  molecular_formula: C5H12N2O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 148.162
+  monoisotopic_mass: 148.08479
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:72341
+  source_label: O-(2-aminoethyl)-L-serine
+  minted_identifier: antibioticmech:chebi-516daebfcc
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,44 @@
+identifier: antibioticmech:aro-59d21b914e
+label: antibiotic A40926
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: A40926 is a glycopeptide antibiotic produced by Nonomuraea sp. ATCC 39727.
+  It is precusor of the second-generation glycopeptide antibiotic dalbavancin.
+definition_source: PMID:12837387
+parent_compounds:
+- ARO:3000081
+xrefs:
+- ARO:3000525
+- chembl:CHEMBL1142788
+- pubchem.compound:16133962
+structural_class: glycopeptide antibiotic
+structural_class_id: ARO:3000081
+chemical_structure:
+  smiles: CN[C@@H]1C2=CC(=C(C=C2)O)OC3=CC(=C(C(=C3)O)Cl)[C@H]4C(=O)N[C@@H]5C6=CC(=C(C(=C6)OC7=C(C=C(C=C7)[C@H]([C@H]8C(=O)N[C@@H](C9=C(C(=CC(=C9)O)O[C@@H]2[C@H]([C@H]([C@@H]([C@H](O2)CO)O)O)O)C2=C(C=CC(=C2)[C@H](C(=O)N8)NC5=O)O)C(=O)O)O)Cl)O[C@H]2[C@@H]([C@H]([C@@H]([C@H](O2)C(=O)O)O)O)N)OC2=CC=C(C[C@H](C(=O)N4)NC1=O)C=C2
+  standard_inchi: InChI=1S/C71H66Cl2N8O28/c1-75-48-25-5-10-37(85)40(15-25)104-30-20-33(46(73)38(86)21-30)51-66(97)78-50-27-16-42(103-29-7-2-23(3-8-29)12-35(62(93)79-51)76-63(48)94)60(108-70-47(74)56(89)58(91)61(109-70)69(101)102)43(17-27)105-39-11-6-26(14-34(39)72)54(87)53-67(98)80-52(68(99)100)32-18-28(83)19-41(106-71-59(92)57(90)55(88)44(22-82)107-71)45(32)31-13-24(4-9-36(31)84)49(64(95)81-53)77-65(50)96/h2-11,13-21,35,44,47-59,61,70-71,75,82-92H,12,22,74H2,1H3,(H,76,94)(H,77,96)(H,78,97)(H,79,93)(H,80,98)(H,81,95)(H,99,100)(H,101,102)/t35-,44-,47-,48-,49-,50-,51+,52+,53+,54-,55-,56-,57+,58+,59+,61+,70-,71+/m1/s1
+  standard_inchi_key: VZDDQLYACFXSQP-KBQMXOHMSA-N
+  molecular_formula: C71H66Cl2N8O28
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1550.2
+  monoisotopic_mass: 1548.3363589
+source_concepts:
+- source: ARO
+  source_id: ARO:3000525
+  source_label: antibiotic A40926
+  minted_identifier: antibioticmech:aro-59d21b914e
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000720
+  target_label: acyl-D-alanyl-D-alanine
+  evidence:
+  - reference: ARO:3000720
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000525 (antibiotic A40926);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

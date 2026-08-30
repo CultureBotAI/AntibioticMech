@@ -1,0 +1,75 @@
+identifier: CHEBI:16118
+label: berberine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: 9,10-dimethoxy-5,6-dihydro[1,3]dioxolo[4,5-g]isoquino[3,2-a]isoquinolin-7-ium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,6-dihydro-9,10-dimethoxy-1,3-benzodioxolo[5,6-a]benzo[g]quinolizinium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7,8,13,13a-tetradehydro-9,10-dimethoxy-2,3-[methylenebis(oxy)]berbinium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9,10-dimethoxy-2,3-(methylenedioxy)-7,8,13,13a-tetradehydroberbinium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BERBERINE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Berberin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Berberine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Umbellatine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22754
+- CHEBI:38164
+- CHEBI:86322
+- CHEBI:86494
+xrefs:
+- beilstein:3570374
+- cas:2086-83-1
+- chemspider:2263
+- drugbank:DB04115
+- foodb.food:FDB023165
+- hmdb:HMDB0003409
+- kegg.compound:C00757
+- knapsack:C00001819
+- lincs.smallmolecule:LSM-6553
+- metacyc.compound:BERBERINE
+- pdb-ccd:BER
+- pesticides:berberine
+- wikipedia.en:Berberine
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1ccc2cc3[n+](cc2c1OC)CCc1cc2c(cc1-3)OCO2
+  standard_inchi: InChI=1S/C20H18NO4/c1-22-17-4-3-12-7-16-14-9-19-18(24-11-25-19)8-13(14)5-6-21(16)10-15(12)20(17)23-2/h3-4,7-10H,5-6,11H2,1-2H3/q+1
+  standard_inchi_key: YBHILYKTIRIUTE-UHFFFAOYSA-N
+  molecular_formula: C20H18NO4
+  structure_source: ChEBI
+  charge: 1
+  average_mass: 336.367
+  monoisotopic_mass: 336.12303
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:16118
+  source_label: berberine
+  minted_identifier: antibioticmech:chebi-f4288792c2
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,130 @@
+identifier: CHEBI:32066
+label: Prothionamide
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Prothionamide is a thioamide derivative with antibacterial properties.
+  It increases cell wall permeability and decreases cell wall damage resistance by
+  inhibition of mycolic acid synthesis, resulting in cell death. It is particularly
+  used to treat M. tuberculosis and M. leprae infections.
+definition_source: PMID:6459296
+synonyms:
+- synonym_text: Ektebin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Peteha
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Trevintix
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: protionamida
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-Propylisonicotinylthioamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Propylthioisonicotinamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC-758962
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Protionamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Protionamidum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RP 9778
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RP-9778
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TH-1321
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: prothionamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: protionamid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: protionamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26421
+- ARO:3007156
+xrefs:
+- ARO:3004025
+- cas:14222-60-7
+- drugcentral:2314
+- kegg.drug:D01195
+- lincs.smallmolecule:LSM-4210
+- chembl:CHEMBL1378024
+- pubchem.compound:666418
+activity_roles:
+- CHEBI:33231
+structural_class: thioamide antibiotic
+structural_class_id: ARO:3007156
+chemical_structure:
+  smiles: CCCc1cc(C(N)=S)ccn1
+  standard_inchi: InChI=1S/C9H12N2S/c1-2-3-8-6-7(9(10)12)4-5-11-8/h4-6H,2-3H2,1H3,(H2,10,12)
+  standard_inchi_key: VRDIULHPQTYCLN-UHFFFAOYSA-N
+  molecular_formula: C9H12N2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 180.276
+  monoisotopic_mass: 180.07212
+source_concepts:
+- source: ARO
+  source_id: ARO:3004025
+  source_label: prothionamide
+  minted_identifier: antibioticmech:aro-399b14c9b0
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:32066
+  source_label: Prothionamide
+  minted_identifier: antibioticmech:chebi-79608f5e16
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3005102
+  label: Mycobacterium tuberculosis katG mutations conferring resistance to prothionamide
+  evidence:
+  - reference: ARO:3005102
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004025 (prothionamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3005106
+  label: Mycobacterium tuberculosis ethA mutations conferring resistance to prothionamide
+  evidence:
+  - reference: ARO:3005106
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004025 (prothionamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3005108
+  label: Mycobacterium tuberculosis mshA mutations conferring resistance to prothionamide
+  evidence:
+  - reference: ARO:3005108
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004025 (prothionamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007811
+  label: Mycobacterium tuberculosis fabG1 with mutations conferring resistance to
+    prothionamide
+  evidence:
+  - reference: ARO:3007811
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004025 (prothionamide);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

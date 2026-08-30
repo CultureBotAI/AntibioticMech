@@ -1,0 +1,50 @@
+identifier: CHEBI:70576
+label: (+)-pisiferic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An abietane diterpenoid that is abieta-8,11,13-trien-20-oic acid substituted
+  by a hydroxy group at position 12. It has been isolated from the stem bark of Fraxinus
+  sieboldiana.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 12-hydroxyabieta-8,11,13-trien-20-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pisiferic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:33853
+- CHEBI:36762
+- CHEBI:79084
+xrefs:
+- cas:67494-15-9
+- kegg.compound:C09163
+- knapsack:C00003470
+- reaxys:6893431
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12CCc3cc(C(C)C)c(O)cc3[C@@]1(C(=O)O)CCCC2(C)C'
+  standard_inchi: InChI=1S/C20H28O3/c1-12(2)14-10-13-6-7-17-19(3,4)8-5-9-20(17,18(22)23)15(13)11-16(14)21/h10-12,17,21H,5-9H2,1-4H3,(H,22,23)/t17-,20-/m0/s1
+  standard_inchi_key: ATHWSPHADLLZSS-PXNSSMCTSA-N
+  molecular_formula: C20H28O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 316.441
+  monoisotopic_mass: 316.20384
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70576
+  source_label: (+)-pisiferic acid
+  minted_identifier: antibioticmech:chebi-8fda9e257e
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

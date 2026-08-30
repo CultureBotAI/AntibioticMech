@@ -1,0 +1,116 @@
+identifier: CHEBI:27565
+label: 4-aminosalicylic acid
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aminobenzoic acid that is salicylic acid substituted by an amino group
+  at position 4.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Paser
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 4-amino-2-hydroxybenzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-HYDROXY-4-AMINOBENZOIC ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Aminosalicylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Aminosalicylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Aminosalicylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PAS
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Para-amino salicylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-aminosalicylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22495
+- CHEBI:33853
+- ARO:3007159
+xrefs:
+- ARO:3004019
+- cas:65-49-6
+- drugbank:DB00233
+- drugcentral:2050
+- gmelin:306153
+- hmdb:HMDB0014378
+- kegg.compound:C02518
+- kegg.drug:D00162
+- lincs.smallmolecule:LSM-5862
+- patent:DE50835
+- patent:US2844625
+- patent:US427564
+- pdb-ccd:BHA
+- reaxys:473071
+- wikipedia.en:Aminosalicylic_Acid
+- chembl:CHEMBL1169
+- pubchem.compound:4649
+activity_roles:
+- CHEBI:33231
+structural_class: salicylic acid antibiotic
+structural_class_id: ARO:3007159
+chemical_structure:
+  smiles: Nc1ccc(C(=O)O)c(O)c1
+  standard_inchi: InChI=1S/C7H7NO3/c8-4-1-2-5(7(10)11)6(9)3-4/h1-3,9H,8H2,(H,10,11)
+  standard_inchi_key: WUBBRNOQWQTFEX-UHFFFAOYSA-N
+  molecular_formula: C7H7NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 153.137
+  monoisotopic_mass: 153.04259
+source_concepts:
+- source: ARO
+  source_id: ARO:3004019
+  source_label: para-aminosalicylic acid
+  minted_identifier: antibioticmech:aro-00d24b7d96
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:27565
+  source_label: 4-aminosalicylic acid
+  minted_identifier: antibioticmech:chebi-6e0c7e01d8
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004153
+  label: Mycobacterium tuberculosis thyA with mutation conferring resistance to para-aminosalicylic
+    acid
+  evidence:
+  - reference: ARO:3004153
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004019 (para-aminosalicylic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004157
+  label: Mycobacterium tuberculosis folC with mutation conferring resistance to para-aminosalicylic
+    acid
+  evidence:
+  - reference: ARO:3004157
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004019 (para-aminosalicylic
+      acid); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004184
+  label: Mycobacterium tuberculosis ribD with mutation conferring resistance to para-aminosalicylic
+    acid
+  evidence:
+  - reference: ARO:3004184
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004019 (para-aminosalicylic
+      acid); database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

@@ -1,0 +1,56 @@
+identifier: CHEBI:83398
+label: ametoctradin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of triazolopyrimidines that is [1,2,4]triazolo[1,5-a]pyrimidin-7-amine
+  carrying additional ethyl and octyl substituents at positions 5 and 6 respectively.
+  A fungicide for the control of late blight and downey mildew on potatoes and other
+  crops including vines.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-ethyl-6-octyl[1,2,4]triazolo[1,5-a]pyrimidin-7-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BAS 650F
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BAS-650F
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LS 0115
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33860
+- CHEBI:48435
+xrefs:
+- cas:865318-97-4
+- patent:WO2011108759
+- pesticides:ametoctradin
+- ppdb:1648
+- reaxys:12394099
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CCCCCCCCc1c(CC)nc2ncnn2c1N
+  standard_inchi: InChI=1S/C15H25N5/c1-3-5-6-7-8-9-10-12-13(4-2)19-15-17-11-18-20(15)14(12)16/h11H,3-10,16H2,1-2H3
+  standard_inchi_key: GGKQIOFASHYUJZ-UHFFFAOYSA-N
+  molecular_formula: C15H25N5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 275.4
+  monoisotopic_mass: 275.211
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83398
+  source_label: ametoctradin
+  minted_identifier: antibioticmech:chebi-9a05036f38
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

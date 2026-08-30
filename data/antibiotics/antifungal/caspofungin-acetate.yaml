@@ -1,0 +1,59 @@
+identifier: CHEBI:59900
+label: caspofungin acetate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The diacetate salt of caspofungin. It is used for the treatment of invasive
+  candidiasis, and of aspergillosis in patients who are refractory to, or intolerant
+  of, other therapy.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-{(2R,6S,9S,11R,12S,14aS,15S,20S,23S,25aS)-12-[(2-aminoethyl)amino]-20-[(1R)-3-amino-1-hydroxypropyl]-23-[(1S2S)-1,2-dihydroxy-2-(4-hydroxyphenyl)ethyl]-2,11,15-trihydroxy-6-[(1R)-1-hydroxyethyl]-5,8,14,19,22,25-hexaoxotetracosahydro-1H-dipyrrolo[2,1-c:2',1'-l][1,4,7,10,13,16]hexaazacyclohenicosin-9-yl}-10,12-dimethyltetradecanamide
+    diacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4R,5S)-5-((2-aminoethyl)amino)-N2-(10,12-dimethyltetradecanoyl)-4-hydroxy-L-ornithyl-L-threonyl-trans-4-hydroxy-L-prolyl-(S)-4-hydroxy-4-(p-hydroxyphenyl)-L-threonyl-threo-3-hydroxy-L-ornithyl-trans-3-hydroxy-L-proline
+    cyclic (6-1)-peptide diacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-[(4R,5S)-5-[(2-aminoethyl)amino]-N2-(10,12-dimethyl-1-oxotetradecyl)-4-hydroxy-L-ornithine]-5-[(3R)-3-hydroxy-L-ornithine]-pneumocandin
+    B0 diacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: caspofungin diacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:59230
+- CHEBI:87113
+xrefs:
+- beilstein:9184764
+- cas:179463-17-3
+- drugbank:DB00520
+- kegg.drug:D02501
+activity_roles:
+- CHEBI:35718
+- CHEBI:86327
+chemical_structure:
+  smiles: CC(=O)O.CC(=O)O.[H][C@@]12C[C@@H](O)CN1C(=O)[C@H]([C@@H](C)O)NC(=O)[C@@]([H])(NC(=O)CCCCCCCCC(C)CC(C)CC)C[C@@H](O)[C@@H](NCCN)NC(=O)[C@@H]1[C@@H](O)CCN1C(=O)[C@H]([C@H](O)CCN)NC(=O)[C@H]([C@H](O)[C@@H](O)c1ccc(O)cc1)NC2=O
+  standard_inchi: InChI=1S/C52H88N10O15.2C2H4O2/c1-5-28(2)24-29(3)12-10-8-6-7-9-11-13-39(69)56-34-26-38(68)46(55-22-21-54)60-50(75)43-37(67)19-23-61(43)52(77)41(36(66)18-20-53)58-49(74)42(45(71)44(70)31-14-16-32(64)17-15-31)59-48(73)35-25-33(65)27-62(35)51(76)40(30(4)63)57-47(34)72;2*1-2(3)4/h14-17,28-30,33-38,40-46,55,63-68,70-71H,5-13,18-27,53-54H2,1-4H3,(H,56,69)(H,57,72)(H,58,74)(H,59,73)(H,60,75);2*1H3,(H,3,4)/t28?,29?,30-,33-,34+,35+,36-,37+,38-,40+,41+,42+,43+,44+,45+,46+;;/m1../s1
+  standard_inchi_key: OGUJBRYAAJYXQP-LLXMLGLCSA-N
+  molecular_formula: 2C2H4O2.C52H88N10O15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1213.435
+  monoisotopic_mass: 1212.68532
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59900
+  source_label: caspofungin acetate
+  minted_identifier: antibioticmech:chebi-c439a91362
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

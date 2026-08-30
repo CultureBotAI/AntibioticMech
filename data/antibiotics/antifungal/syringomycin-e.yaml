@@ -1,0 +1,48 @@
+identifier: CHEBI:77762
+label: syringomycin E
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of syringomycins that has 3-hydroxydodecanoyl as
+  the fatty acyl tail group. It is isolated from Pseudomonas syringae pv. syringae
+  and exhibits phytotoxic and antifungal properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-[(3S,6S,9Z,12S,15S,18R,21S,24R,27S)-18,21-bis(2-aminoethyl)-12-benzyl-15-(3-carbamimidamidopropyl)-3-[(1S)-2-chloro-1-hydroxyethyl]-9-ethylidene-27-{[(3R)-3-hydroxydodecanoyl]amino}-24-(hydroxymethyl)-2,5,8,11,14,17,20,23,26-nonaoxo-1-oxa-4,7,10,13,16,19,22,25-octaazacyclooctacosan-6-yl](hydroxy)acetic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-1-(N-(3-Hydroxy-1-oxododecyl)-L-serine)syringomycin A1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25061
+- CHEBI:32174
+xrefs:
+- cas:124888-22-8
+- metacyc.compound:CPD-14764
+- reaxys:5422014
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C/C=C1\NC(=O)[C@H](Cc2ccccc2)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H](CCN)NC(=O)[C@H](CCN)NC(=O)[C@@H](CO)NC(=O)[C@@H](NC(=O)C[C@H](O)CCCCCCCCC)COC(=O)[C@H]([C@H](O)CCl)NC(=O)[C@H]([C@H](O)C(=O)O)NC1=O
+  standard_inchi: InChI=1S/C53H85ClN14O17/c1-3-5-6-7-8-9-13-17-30(70)25-39(72)60-37-28-85-52(84)40(38(71)26-54)67-50(81)41(42(73)51(82)83)68-43(74)31(4-2)61-47(78)35(24-29-15-11-10-12-16-29)65-44(75)32(18-14-23-59-53(57)58)62-45(76)33(19-21-55)63-46(77)34(20-22-56)64-48(79)36(27-69)66-49(37)80/h4,10-12,15-16,30,32-38,40-42,69-71,73H,3,5-9,13-14,17-28,55-56H2,1-2H3,(H,60,72)(H,61,78)(H,62,76)(H,63,77)(H,64,79)(H,65,75)(H,66,80)(H,67,81)(H,68,74)(H,82,83)(H4,57,58,59)/b31-4-/t30-,32+,33-,34+,35+,36-,37+,38-,40+,41+,42+/m1/s1
+  standard_inchi_key: ZQVJBRJGDVZANE-MTGUCJNSSA-N
+  molecular_formula: C53H85ClN14O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1225.797
+  monoisotopic_mass: 1224.59056
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77762
+  source_label: syringomycin E
+  minted_identifier: antibioticmech:chebi-cae1bb0f23
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

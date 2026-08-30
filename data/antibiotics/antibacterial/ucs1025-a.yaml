@@ -1,0 +1,51 @@
+identifier: CHEBI:66338
+label: UCS1025 A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterotricyclic compound that incorporates a lactam and a γ-lactone
+  as part of the cyclic system which in turn is attached to a (2,4a,8a-trimethyl-octahydronaphthalen-1-yl)carbonyl
+  group at position 7. It is isolated from Acremonium sp. KY4917 and exhibits antibacterial
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2aR,7R,7aS,7bR)-7b-hydroxy-7-{[(1S,2S,4aR,8aR)-2,4a,8a-trimethyl-1,2,4a,5,6,7,8,8a-octahydronaphthalen-1-yl]carbonyl}hexahydrofuro[2,3,4-gh]pyrrolizine-2,6-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:138397
+- CHEBI:17087
+- CHEBI:24995
+- CHEBI:26878
+- CHEBI:26979
+- CHEBI:37581
+xrefs:
+- patent:EP1227097
+- patent:US6869971
+- patent:WO0129043
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]1(C(=O)[C@H]2[C@@H](C)C=C[C@@]3(C)CCCC[C@]23C)C(=O)N2CC[C@@]3([H])C(=O)O[C@]1([H])[C@@]23O'
+  standard_inchi: InChI=1S/C22H29NO5/c1-12-6-10-20(2)8-4-5-9-21(20,3)15(12)16(24)14-17-22(27)13(19(26)28-17)7-11-23(22)18(14)25/h6,10,12-15,17,27H,4-5,7-9,11H2,1-3H3/t12-,13-,14-,15+,17-,20+,21+,22+/m0/s1
+  standard_inchi_key: WOAILDKFDXKSIY-OMKDVXPQSA-N
+  molecular_formula: C22H29NO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 387.476
+  monoisotopic_mass: 387.20457
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66338
+  source_label: UCS1025 A
+  minted_identifier: antibioticmech:chebi-8dab89f5bc
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,53 @@
+identifier: CHEBI:73188
+label: 6β-({5-[(p-aminophenyl)imino]pentylidene}amino)penicillanic acid
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Penicillanic acid carrying a (p-aminophenyl)imino]pentylidene}amino substituent
+  at the 6β position. It has been used as a hapten in the production of a generic
+  monoclonal antibody for determining penicillin residues in milk.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6β-({5-[(4-aminophenyl)imino]pentylidene}amino)-2,2-dimethylpenam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-({5-[(4-aminophenyl)imino]pentylidene}amino)-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-[(p-hydroxybenzylidene)amino]penicillanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hapten 1 PAPA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hapten PAPA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17334
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H]C(CCCC([H])=N[C@@H]1C(=O)N2[C@@H](C(=O)O)C(C)(C)S[C@]12[H])=Nc1ccc(N)cc1'
+  standard_inchi: InChI=1S/C19H24N4O3S/c1-19(2)15(18(25)26)23-16(24)14(17(23)27-19)22-11-5-3-4-10-21-13-8-6-12(20)7-9-13/h6-11,14-15,17H,3-5,20H2,1-2H3,(H,25,26)/t14-,15+,17-/m1/s1
+  standard_inchi_key: BHEVULAQHTXCQV-HLLBOEOZSA-N
+  molecular_formula: C19H24N4O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 388.493
+  monoisotopic_mass: 388.15691
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:73188
+  source_label: 6β-({5-[(p-aminophenyl)imino]pentylidene}amino)penicillanic acid
+  minted_identifier: antibioticmech:chebi-1e9b4b69bd
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,48 @@
+identifier: CHEBI:143904
+label: 3-(4-methyl-1,2,3-thiadiazolyl)-6-trichloromethyl[1,2,4]triazolo[3,4-b][1,3,4]thiadizole
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A triazolothiadiazole that is 1,7a-dihydro[1,2,4]triazolo[3,4-b][1,3,4]thiadiazole
+  substituted by a 4-methyl-1,2,3-thiadiazol-5-yl group at position 3 and by a trichloromethyl
+  group at position 6. It is a fungicide with a wide spectrum of activity and inhibits
+  the enzymatic activity of pyruvate kinase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-(4-methyl-1,2,3-thiadiazol-5-yl)-6-(trichloromethyl)-1,7a-dihydro[1,2,4]triazolo[3,4-b][1,3,4]thiadiazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(4-methyl-1,2,3-thiadiazolyl)-6-trichloromethyl[1,2,4]triazolo[3,4-b][1,3,4]thiadiazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: YZK-C22
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140920
+- CHEBI:36683
+- CHEBI:38099
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: Cc1nnsc1C1=NNC2SC(C(Cl)(Cl)Cl)=NN12
+  standard_inchi: InChI=1S/C7H5Cl3N6S2/c1-2-3(18-15-11-2)4-12-13-6-16(4)14-5(17-6)7(8,9)10/h6,13H,1H3
+  standard_inchi_key: AJJFYSYXUHCPMZ-UHFFFAOYSA-N
+  molecular_formula: C7H5Cl3N6S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 343.652
+  monoisotopic_mass: 341.90827
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:143904
+  source_label: 3-(4-methyl-1,2,3-thiadiazolyl)-6-trichloromethyl[1,2,4]triazolo[3,4-b][1,3,4]thiadizole
+  minted_identifier: antibioticmech:chebi-96d80fa256
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

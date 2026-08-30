@@ -1,0 +1,86 @@
+identifier: CHEBI:29506
+label: cethromycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: 'A macrolide antibiotic which displays in vitro activity against both
+  gram-positive and gram-negative bacteria and is currently under investigation for
+  the treatment of community-acquired pneumonia. The US Food and Drug Administration
+  (FDA) have also granted orphan drug designation to cethromycin for the treatment
+  of anthrax prophylaxis, tularemia, and plague (PDB entry: <a href="https://www.ebi.ac.uk/pdbe/entry/pdb/1NWX"
+  target="_blank">1NWX</a>).'
+definition_source: ChEBI
+synonyms:
+- synonym_text: Restanza
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: cethromycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: cetromicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: céthromycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: (3aS,4R,7R,9R,10R,11R,13R,15R,15aR)-4-ethyl-3a,7,9,11,13,15-hexamethyl-2,6,8,14-tetraoxo-11-{[3-(quinolin-3-yl)prop-2-en-1-yl]oxy}tetradecahydro-2H-oxacyclotetradecino[4,3-d][1,3]oxazol-10-yl
+    3,4,6-trideoxy-3-(dimethylamino)-β-D-xylo-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: A-195773
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ABT-773
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Abbott-195773
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25105
+- CHEBI:26513
+- CHEBI:63367
+- ARO:0000000
+xrefs:
+- ARO:3007455
+- cas:205110-48-1
+- drugbank:DB06419
+- kegg.compound:C12020
+- kegg.drug:D02391
+- pdb-ccd:773
+- wikipedia.en:Cethromycin
+- chembl:CHEMBL3989904
+- pubchem.compound:447451
+activity_roles:
+- CHEBI:36047
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: '[H]C(CO[C@]1(C)C[C@@H](C)C(=O)[C@H](C)[C@H]2NC(=O)O[C@]2(C)[C@@H](CC)OC(=O)[C@H](C)C(=O)[C@H](C)[C@H]1O[C@@H]1O[C@H](C)C[C@H](N(C)C)[C@H]1O)=C([H])c1cnc2ccccc2c1'
+  standard_inchi: InChI=1S/C42H59N3O10/c1-11-32-42(8)36(44-40(50)55-42)25(4)33(46)23(2)21-41(7,51-18-14-15-28-20-29-16-12-13-17-30(29)43-22-28)37(26(5)34(47)27(6)38(49)53-32)54-39-35(48)31(45(9)10)19-24(3)52-39/h12-17,20,22-27,31-32,35-37,39,48H,11,18-19,21H2,1-10H3,(H,44,50)/t23-,24-,25+,26+,27-,31+,32-,35-,36-,37-,39+,41-,42-/m1/s1
+  standard_inchi_key: PENDGIOBPJLVBT-AMXFZXBBSA-N
+  molecular_formula: C42H59N3O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 765.945
+  monoisotopic_mass: 765.42005
+source_concepts:
+- source: ARO
+  source_id: ARO:3007455
+  source_label: cethromycin
+  minted_identifier: antibioticmech:aro-05fd3c6113
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:29506
+  source_label: cethromycin
+  minted_identifier: antibioticmech:chebi-eabf9838f5
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

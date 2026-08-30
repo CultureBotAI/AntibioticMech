@@ -1,0 +1,46 @@
+identifier: CHEBI:32279
+label: urdamycin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (1R)-1,5-anhydro-2,6-dideoxy-3-O-{(2S,5S,6S)-5-[(2,6-dideoxy-β-D-arabino-hexopyranosyl)oxy]-6-methyltetrahydro-2H-pyran-2-yl}-1-[(3R,4aR,12bS)-3,4a,8-trihydroxy-12b-{[(2S,5S,6S)-5-hydroxy-6-methyltetrahydro-2H-pyran-2-yl]oxy}-3-methyl-1,7,12-trioxo-1,2,3,4,4a,7,12,12b-octahydrobenzo[a]anthracen-9-yl]-D-arabino-hexitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kerriamycin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Urdamycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:70737
+xrefs:
+- beilstein:3584862
+- cas:98474-21-6
+- kegg.compound:C12413
+- knapsack:C00017825
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C[C@@H]1O[C@@H](O[C@@H]2C[C@H](c3ccc4c(c3O)C(=O)C3=C(C4=O)[C@@]4(O[C@H]5CC[C@H](O)[C@H](C)O5)C(=O)C[C@](C)(O)C[C@@]4(O)C=C3)O[C@H](C)[C@H]2O)CC[C@@H]1O[C@H]1C[C@@H](O)[C@H](O)[C@@H](C)O1
+  standard_inchi: InChI=1S/C43H56O17/c1-18-25(44)8-10-32(55-18)60-43-30(46)16-41(5,52)17-42(43,53)13-12-24-35(43)40(51)23-7-6-22(38(49)34(23)39(24)50)28-15-29(37(48)21(4)54-28)59-31-11-9-27(19(2)56-31)58-33-14-26(45)36(47)20(3)57-33/h6-7,12-13,18-21,25-29,31-33,36-37,44-45,47-49,52-53H,8-11,14-17H2,1-5H3/t18-,19-,20+,21+,25-,26+,27-,28+,29+,31-,32-,33-,36+,37+,41-,42-,43-/m0/s1
+  standard_inchi_key: FJSYXNOFZQFOAN-FXPMUEKOSA-N
+  molecular_formula: C43H56O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 844.904
+  monoisotopic_mass: 844.35175
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32279
+  source_label: urdamycin A
+  minted_identifier: antibioticmech:chebi-7dfc5826ea
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

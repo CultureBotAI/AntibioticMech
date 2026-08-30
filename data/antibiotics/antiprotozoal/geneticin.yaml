@@ -1,0 +1,63 @@
+identifier: CHEBI:42768
+label: geneticin
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aminoglycoside antibiotic produced by Micromonospora rhodorangea. It
+  blocks polypeptide synthesis by inhibiting the elongation step in both prokaryotic
+  and eukaryotic cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,2S,3S,4R,6S)-4,6-diamino-3-[3-deoxy-4-C-methyl-3-(methylamino)-β-L-arabinopyranosyloxy]-2-hydroxycyclohexyl
+    2-amino-2,7-dideoxy-D-glycero-α-D-gluco-heptopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: G 418
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: G418
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GENETICIN
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Geneticin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic G 418
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22507
+xrefs:
+- beilstein:1669188
+- cas:49863-47-0
+- drugbank:DB04263
+- kegg.compound:C17703
+- pdb-ccd:GET
+activity_roles:
+- CHEBI:35818
+- CHEBI:35820
+chemical_structure:
+  smiles: CN[C@@H]1[C@@H](O)[C@@H](O[C@@H]2[C@@H](O)[C@H](O[C@H]3O[C@H](C(C)O)[C@@H](O)[C@H](O)[C@H]3N)[C@@H](N)C[C@H]2N)OC[C@]1(C)O
+  standard_inchi: InChI=1S/C20H40N4O10/c1-6(25)14-11(27)10(26)9(23)18(32-14)33-15-7(21)4-8(22)16(12(15)28)34-19-13(29)17(24-3)20(2,30)5-31-19/h6-19,24-30H,4-5,21-23H2,1-3H3/t6?,7-,8+,9+,10+,11-,12-,13+,14+,15+,16-,17+,18+,19+,20-/m0/s1
+  standard_inchi_key: BRZYSWJRSDMWLG-CAXSIQPQSA-N
+  molecular_formula: C20H40N4O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 496.558
+  monoisotopic_mass: 496.27444
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:42768
+  source_label: geneticin
+  minted_identifier: antibioticmech:chebi-f6f4a5a0a0
+  role_terms:
+  - CHEBI:35818
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

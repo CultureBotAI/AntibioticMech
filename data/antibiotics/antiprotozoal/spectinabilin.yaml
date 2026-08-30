@@ -1,0 +1,59 @@
+identifier: CHEBI:142841
+label: spectinabilin
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polyketide that is deoxyspectinabilin in which the tetramethyldeca-tetraen-1-yl
+  chain attached to the 4-pyranone moiety has undergone oxidation at position 1 and
+  at the methyl group at position 3 to afford the corresponding tetrahydrofuranyl
+  moiety. Produced by Streptomyces spectabilis, it exhibits antiviral and antimalarial
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-methoxy-3,5-dimethyl-6-{(2R,4Z)-4-[(2E,4E,6E)-2,4,6-trimethyl-7-(4-nitrophenyl)hepta-2,4,6-trien-1-ylidene]tetrahydrofuran-2-yl}-4H-pyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-neoaureothin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-spectinabilin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: neoaureothin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:131906
+- CHEBI:145408
+- CHEBI:26188
+- CHEBI:26912
+- CHEBI:35716
+xrefs:
+- cas:28900-27-8
+- cas:59795-94-7
+- metacyc.compound:CPD-21806
+- wikipedia.en:Spectinabilin
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: '[H][C@]1(c2oc(OC)c(C)c(=O)c2C)C/C(=C/C(C)=C/C(C)=C/C(C)=C/c2ccc([N+](=O)[O-])cc2)CO1'
+  standard_inchi: InChI=1S/C28H31NO6/c1-17(11-18(2)13-22-7-9-24(10-8-22)29(31)32)12-19(3)14-23-15-25(34-16-23)27-20(4)26(30)21(5)28(33-6)35-27/h7-14,25H,15-16H2,1-6H3/b17-11+,18-13+,19-12+,23-14-/t25-/m1/s1
+  standard_inchi_key: IZICQJAGBLBAMJ-QDYRYYKCSA-N
+  molecular_formula: C28H31NO6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 477.557
+  monoisotopic_mass: 477.21514
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:142841
+  source_label: spectinabilin
+  minted_identifier: antibioticmech:chebi-c93c473be0
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

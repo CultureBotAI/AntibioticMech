@@ -1,0 +1,52 @@
+identifier: CHEBI:59663
+label: colistin A sodium methanesulfonate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Colistin A in which each of the primary amino groups is converted into
+  the corresponding aminomethanesulfonic acid sodium salt, commonly by treatment with
+  formaldehyde followed by sodium bisulfite.
+definition_source: ChEBI
+synonyms:
+- synonym_text: pentasodium {[(3S)-4-{[(3S,6S,9S,12S,15R,18S,21S)-3-[(1R)-1-hydroxyethyl]-12,15-bis(2-methylpropyl)-2,5,8,11,14,17,20-heptaoxo-6,9,18-tris{2-[(sulfonatomethyl)amino]ethyl}-1,4,7,10,13,16,19-heptaazacyclotricosan-21-yl]amino}-3-{[(2S,3R)-3-hydroxy-2-({(2S)-2-{[(6R)-6-methyloctanoyl]amino}-4-[(sulfonatomethyl)amino]butanoyl}amino)butanoyl]amino}-4-oxobutyl]amino}methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: colistin A sulfomethate sodium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: polymyxin E1 sodium methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: polymyxin E1 sulfomethate sodium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25903
+- CHEBI:38700
+- CHEBI:59062
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: CC[C@@H](C)CCCCC(=O)N[C@@H](CCNCS(=O)(=O)[O-])C(=O)N[C@H](C(=O)N[C@@H](CCNCS(=O)(=O)[O-])C(=O)N[C@H]1CCNC(=O)[C@H]([C@@H](C)O)NC(=O)[C@H](CCNCS(=O)(=O)[O-])NC(=O)[C@H](CCNCS(=O)(=O)[O-])NC(=O)[C@H](CC(C)C)NC(=O)[C@@H](CC(C)C)NC(=O)[C@H](CCNCS(=O)(=O)[O-])NC1=O)[C@@H](C)O.[Na+].[Na+].[Na+].[Na+].[Na+]
+  standard_inchi: InChI=1S/C58H110N16O28S5.5Na/c1-9-35(6)12-10-11-13-46(77)65-38(14-20-59-28-103(88,89)90)53(82)74-48(37(8)76)58(87)70-41(17-23-62-31-106(97,98)99)50(79)68-43-19-25-64-57(86)47(36(7)75)73-54(83)42(18-24-63-32-107(100,101)102)67-49(78)39(15-21-60-29-104(91,92)93)69-55(84)44(26-33(2)3)72-56(85)45(27-34(4)5)71-52(81)40(66-51(43)80)16-22-61-30-105(94,95)96;;;;;/h33-45,47-48,59-63,75-76H,9-32H2,1-8H3,(H,64,86)(H,65,77)(H,66,80)(H,67,78)(H,68,79)(H,69,84)(H,70,87)(H,71,81)(H,72,85)(H,73,83)(H,74,82)(H,88,89,90)(H,91,92,93)(H,94,95,96)(H,97,98,99)(H,100,101,102);;;;;/q;5*+1/p-5/t35-,36-,37-,38+,39+,40+,41+,42+,43+,44+,45-,47+,48+;;;;;/m1...../s1
+  standard_inchi_key: IQWHCHZFYPIVRV-VLLYEMIKSA-I
+  molecular_formula: C58H105N16O28S5.5Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1749.847
+  monoisotopic_mass: 1748.53762
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59663
+  source_label: colistin A sodium methanesulfonate
+  minted_identifier: antibioticmech:chebi-a357db4fb5
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

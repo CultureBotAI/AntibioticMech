@@ -1,0 +1,80 @@
+identifier: CHEBI:82615
+label: diminazene diaceturate
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An N-acetylglycinate salt resulting from the reaction of diminazene with
+  2 mol eq. of N-acetylglycine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Berenil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Beronal
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Bevenil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Ganasag
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Ganaseg
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: (triaz-1-ene-1,3-diyldi-4,1-phenylene)bis(iminomethanaminium) bis(acetamidoacetate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,3-bis(4-guanylphenyl)triazene diaceturate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,3-bis(p-amidinophenyl)triazene bis(N-acetylglycinate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,4'-(diazoamino)dibenzamidine diaceturate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,4'-diamidinodiazoaminobenzene diaceturate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: di-(4-amidinophenyl)-triazine-(N-1,3)-diaceturate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diminazene aceturate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diminazene bis(N-acetylglycinate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:82616
+xrefs:
+- cas:908-54-3
+- drugbank:DB03608
+- patent:US2838485
+- pdb-ccd:BRN
+- reaxys:3841323
+activity_roles:
+- CHEBI:36335
+chemical_structure:
+  smiles: CC(=O)NCC(=O)O.CC(=O)NCC(=O)O.N=C(N)c1ccc(N=NNc2ccc(C(=N)N)cc2)cc1
+  standard_inchi: InChI=1S/C14H15N7.2C4H7NO3/c15-13(16)9-1-5-11(6-2-9)19-21-20-12-7-3-10(4-8-12)14(17)18;2*1-3(6)5-2-4(7)8/h1-8H,(H3,15,16)(H3,17,18)(H,19,20);2*2H2,1H3,(H,5,6)(H,7,8)
+  standard_inchi_key: OKQSSSVVBOUMNZ-UHFFFAOYSA-N
+  molecular_formula: C14H15N7.2C4H7NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 515.531
+  monoisotopic_mass: 515.22408
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:82615
+  source_label: diminazene diaceturate
+  minted_identifier: antibioticmech:chebi-9fabb53953
+  role_terms:
+  - CHEBI:36335
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

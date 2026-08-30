@@ -1,0 +1,43 @@
+identifier: CHEBI:81022
+label: isonocardicin C
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monobactam that is produced by Nocardia uniformis subsp. tsuyamanensis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: O-{4-[(1R)-1-amino-2-({(3S)-1-[(R)-carboxy(4-hydroxyphenyl)methyl]-2-oxoazetidin-3-yl}amino)-2-oxoethyl]phenyl}-L-homoserine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:35692
+- CHEBI:50695
+- CHEBI:83822
+xrefs:
+- kegg.compound:C17352
+- metacyc.compound:CPD-9416
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: N[C@@H](CCOc1ccc([C@@H](N)C(=O)N[C@H]2CN([C@@H](C(=O)O)c3ccc(O)cc3)C2=O)cc1)C(=O)O
+  standard_inchi: InChI=1S/C23H26N4O8/c24-16(22(31)32)9-10-35-15-7-3-12(4-8-15)18(25)20(29)26-17-11-27(21(17)30)19(23(33)34)13-1-5-14(28)6-2-13/h1-8,16-19,28H,9-11,24-25H2,(H,26,29)(H,31,32)(H,33,34)/t16-,17-,18+,19+/m0/s1
+  standard_inchi_key: CWTCWGGPTVMMLT-INDMIFKZSA-N
+  molecular_formula: C23H26N4O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 486.481
+  monoisotopic_mass: 486.17506
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81022
+  source_label: isonocardicin C
+  minted_identifier: antibioticmech:chebi-e75969eff4
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

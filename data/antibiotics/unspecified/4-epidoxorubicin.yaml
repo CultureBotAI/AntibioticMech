@@ -1,0 +1,83 @@
+identifier: CHEBI:47898
+label: 4'-epidoxorubicin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An anthracycline that is the 4'-epi-isomer of doxorubicin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: epirubicin
+  synonym_type: INN
+  source: chebi
+- synonym_text: (1S,3S)-3,5,12-trihydroxy-3-(hydroxyacetyl)-10-methoxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracen-1-yl
+    3-amino-2,3,6-trideoxy-α-L-arabino-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4'-Epiadriamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Epiadriamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: epirubicina
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: epirubicine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: epirubicinum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pidorubicina
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pidorubicine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pidorubicinum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139590
+- CHEBI:139592
+- CHEBI:25830
+- CHEBI:35315
+- CHEBI:47779
+- CHEBI:48120
+- CHEBI:49322
+- CHEBI:63367
+xrefs:
+- cas:56420-45-2
+- drugbank:DB00445
+- drugcentral:1030
+- kegg.compound:C11230
+- kegg.drug:D07901
+- lincs.smallmolecule:LSM-2078
+- patent:DE2510866
+- patent:US4058519
+- pdb-ccd:DM6
+- reaxys:1445812
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(=O)CO)C[C@@H]3O[C@H]1C[C@H](N)[C@@H](O)[C@H](C)O1
+  standard_inchi: InChI=1S/C27H29NO11/c1-10-22(31)13(28)6-17(38-10)39-15-8-27(36,16(30)9-29)7-12-19(15)26(35)21-20(24(12)33)23(32)11-4-3-5-14(37-2)18(11)25(21)34/h3-5,10,13,15,17,22,29,31,33,35-36H,6-9,28H2,1-2H3/t10-,13-,15-,17-,22-,27-/m0/s1
+  standard_inchi_key: AOJJSUZBOXZQNB-VTZDEGQISA-N
+  molecular_formula: C27H29NO11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 543.525
+  monoisotopic_mass: 543.17406
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:47898
+  source_label: 4'-epidoxorubicin
+  minted_identifier: antibioticmech:chebi-45fa38c8cf
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

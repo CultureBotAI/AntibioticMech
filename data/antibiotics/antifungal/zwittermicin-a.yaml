@@ -1,0 +1,46 @@
+identifier: CHEBI:80056
+label: (+)-zwittermicin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The (+)-enantiomer of zwittermicin A. It is a water-soluble natural antibiotic
+  from the fermentation of the soil-borne bacterium Bacillus cereus and shows significant
+  activity against phytopathogenic fungi.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3S,4S,5S,7S,8R)-4,8-diamino-N-[(2S)-1-amino-3-(carbamoylamino)-1-oxopropan-2-yl]-2,3,5,7,9-pentahydroxynonanamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:167622
+- CHEBI:25903
+xrefs:
+- cas:155547-95-8
+- kegg.compound:C15726
+- metacyc.compound:CPD-18237
+- patent:EP1163347
+- wikipedia.en:Zwittermicin_A
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: NC(=O)NC[C@H](NC(=O)[C@H](O)[C@@H](O)[C@@H](N)[C@@H](O)C[C@H](O)[C@H](N)CO)C(N)=O
+  standard_inchi: InChI=1S/C13H28N6O8/c14-4(3-20)6(21)1-7(22)8(15)9(23)10(24)12(26)19-5(11(16)25)2-18-13(17)27/h4-10,20-24H,1-3,14-15H2,(H2,16,25)(H,19,26)(H3,17,18,27)/t4-,5+,6+,7+,8+,9+,10-/m1/s1
+  standard_inchi_key: FYIPKJHNWFVEIR-FXQWNPMTSA-N
+  molecular_formula: C13H28N6O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 396.401
+  monoisotopic_mass: 396.19686
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:80056
+  source_label: (+)-zwittermicin A
+  minted_identifier: antibioticmech:chebi-c37eba3bd7
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

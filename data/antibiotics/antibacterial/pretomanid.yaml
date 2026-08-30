@@ -1,0 +1,46 @@
+identifier: antibioticmech:aro-b4f5ca6a06
+label: pretomanid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Pretomanid is an antibiotic medication used for the treatment of multi-drug-resistant
+  tuberculosis affecting the lungs.
+definition_source: PMID:36409105
+parent_compounds:
+- ARO:3004115
+xrefs:
+- ARO:3007535
+- chembl:CHEMBL227875
+- pubchem.compound:456199
+structural_class: nitroimidazole antibiotic
+structural_class_id: ARO:3004115
+chemical_structure:
+  smiles: C1[C@@H](COC2=NC(=CN21)[N+](=O)[O-])OCC3=CC=C(C=C3)OC(F)(F)F
+  standard_inchi: InChI=1S/C14H12F3N3O5/c15-14(16,17)25-10-3-1-9(2-4-10)7-23-11-5-19-6-12(20(21)22)18-13(19)24-8-11/h1-4,6,11H,5,7-8H2/t11-/m0/s1
+  standard_inchi_key: ZLHZLMOSPGACSZ-NSHDSACASA-N
+  molecular_formula: C14H12F3N3O5
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 359.26
+  monoisotopic_mass: 359.07290498
+source_concepts:
+- source: ARO
+  source_id: ARO:3007535
+  source_label: pretomanid
+  minted_identifier: antibioticmech:aro-b4f5ca6a06
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007661
+  label: Mycobacterium tuberculosis ddn mutation conferring resistance to nitroimidazole
+    antibiotics
+  evidence:
+  - reference: ARO:3007661
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007535 (pretomanid);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

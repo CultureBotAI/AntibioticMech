@@ -1,0 +1,37 @@
+identifier: CHEBI:135136
+label: nifuroxazide
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Nifuroxazide is an oral nitrofuran antibiotic used to treat colitis and
+  diarrhea in humans and non-humans. It has recently been explored to be repurposed
+  for parasitic diseases.
+definition_source: PMID:37409934
+parent_compounds:
+- ARO:3004116
+xrefs:
+- ARO:3007655
+- chembl:CHEMBL244888
+- pubchem.compound:5337997
+structural_class: nitrofuran antibiotic
+structural_class_id: ARO:3004116
+chemical_structure:
+  smiles: O=C(N/N=C/c1ccc([N+](=O)[O-])o1)c1ccc(O)cc1
+  standard_inchi: InChI=1S/C12H9N3O5/c16-9-3-1-8(2-4-9)12(17)14-13-7-10-5-6-11(20-10)15(18)19/h1-7,16H,(H,14,17)/b13-7+
+  standard_inchi_key: YCWSUKQGVSGXJO-NTUHNPAUSA-N
+  molecular_formula: C12H9N3O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 275.22
+  monoisotopic_mass: 275.05422
+source_concepts:
+- source: ARO
+  source_id: ARO:3007655
+  source_label: nifuroxazide
+  minted_identifier: antibioticmech:aro-fe3a5b4b1b
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

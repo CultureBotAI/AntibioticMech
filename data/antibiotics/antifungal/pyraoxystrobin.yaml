@@ -1,0 +1,58 @@
+identifier: CHEBI:83202
+label: pyraoxystrobin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An enoate ester that is the methyl ester of (2E)-2-[2-({[3-(4-chlorophenyl)-1-methyl-1H-pyrazol-5-yl]oxy}methyl)phenyl]-3-methoxyprop-2-enoic
+  acid. A broad spectrum fungicide used to control a variety of diseases on rice,
+  vegetables and teas.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (2E)-2-[2-({[3-(4-chlorophenyl)-1-methyl-1H-pyrazol-5-yl]oxy}methyl)phenyl]-3-methoxyprop-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (2E)-2-(2-{[3-(4-chlorophenyl)-1-methylpyrazol-5-yl]oxymethyl}phenyl)-3-methoxyacrylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (αE)-2-[[[3-(4-chlorophenyl)-1-methyl-1H-pyrazol-5-yl]oxy]methyl]-α-(methoxymethylene)benzeneacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:26410
+- CHEBI:35618
+- CHEBI:47985
+- CHEBI:51702
+- CHEBI:83403
+- CHEBI:86484
+xrefs:
+- cas:862588-11-2
+- patent:MX2012002637
+- patent:WO2012045737
+- pesticides:pyraoxystrobin
+- ppdb:1657
+- reaxys:12746868
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CO/C=C(/C(=O)OC)c1ccccc1COc1cc(-c2ccc(Cl)cc2)nn1C
+  standard_inchi: InChI=1S/C22H21ClN2O4/c1-25-21(12-20(24-25)15-8-10-17(23)11-9-15)29-13-16-6-4-5-7-18(16)19(14-27-2)22(26)28-3/h4-12,14H,13H2,1-3H3/b19-14+
+  standard_inchi_key: URXNNPCNKVAQRA-XMHGGMMESA-N
+  molecular_formula: C22H21ClN2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 412.873
+  monoisotopic_mass: 412.11898
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83202
+  source_label: pyraoxystrobin
+  minted_identifier: antibioticmech:chebi-d8ab91633c
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

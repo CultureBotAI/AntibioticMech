@@ -1,0 +1,66 @@
+identifier: CHEBI:156450
+label: thiolutin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dithiolopyrrolone antibiotic that is 4,5-dihydro[1,2]dithiolo[4,3-b]pyrrole
+  in which the hydrogens at positions 4,5 and 6 have been replaced by methyl, oxo
+  and acetamido groups, respectively. It is a potent inhibitor of RNA polymerases,
+  inhibits the angiogenesis of human umbilical vein endothelial cells, and also inhibits
+  JAMM metalloproteases.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-(4-methyl-5-oxo-4,5-dihydro[1,2]dithiolo[4,3-b]pyrrol-6-yl)acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-acetamido-4-methyl-1,2-dithiolo[4,3-b]pyrrol-5(4H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(4,5-dihydro-4-methyl-5-oxo-1,2-dithiolo[4,3-b]pyrrol-6-yl)acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(4-methyl-5-oxodithiolo[4,3-b]pyrrol-6-yl)acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acetopyrrothin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acetopyrrothine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:156449
+- CHEBI:22160
+xrefs:
+- cas:87-11-6
+- foodb.food:FDB012539
+- hmdb:HMDB0034228
+- metacyc.compound:CPD-17934
+- reaxys:209485
+- wikipedia.en:Thiolutin
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(=O)Nc1c2sscc-2n(C)c1=O
+  standard_inchi: InChI=1S/C8H8N2O2S2/c1-4(11)9-6-7-5(3-13-14-7)10(2)8(6)12/h3H,1-2H3,(H,9,11)
+  standard_inchi_key: MHMRAFONCSQAIA-UHFFFAOYSA-N
+  molecular_formula: C8H8N2O2S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 228.298
+  monoisotopic_mass: 228.00272
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156450
+  source_label: thiolutin
+  minted_identifier: antibioticmech:chebi-4e6261f444
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

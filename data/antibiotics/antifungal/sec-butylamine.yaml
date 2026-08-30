@@ -1,0 +1,77 @@
+identifier: CHEBI:74526
+label: sec-butylamine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A primary aliphatic amine that is butane in which one hydrogen at position
+  2 is replaced by an amino group. A fumigant fungicide with a high potential for
+  bioaccumulation, it is not approved for fungicidal use in the European Union.
+definition_source: ChEBI
+synonyms:
+- synonym_text: butan-2-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-methylpropanamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-methylpropylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-AB
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-aminobutane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-butanamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-butylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: butylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: secondary butylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17062
+- CHEBI:86417
+xrefs:
+- cas:13952-84-6
+- hmdb:HMDB0032179
+- kegg.compound:C18706
+- metacyc.compound:CPD-3627
+- patent:CN101648874
+- patent:CN101648875
+- patent:CN1775736
+- patent:US2636902
+- patent:US2689868
+- ppdb:6
+- reaxys:1361345
+- wikipedia.en:Sec-Butylamine
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CCC(C)N
+  standard_inchi: InChI=1S/C4H11N/c1-3-4(2)5/h4H,3,5H2,1-2H3
+  standard_inchi_key: BHRZNVHARXXAHW-UHFFFAOYSA-N
+  molecular_formula: C4H11N
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 73.139
+  monoisotopic_mass: 73.08915
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:74526
+  source_label: sec-butylamine
+  minted_identifier: antibioticmech:chebi-7a20779de9
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

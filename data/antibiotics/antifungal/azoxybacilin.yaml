@@ -1,0 +1,48 @@
+identifier: CHEBI:65461
+label: azoxybacilin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A non-proteinogenic α-amino acid that is (2S)-2-aminobutanoic acid substituted
+  by a (Z)-methyl-NNO-azoxy moiety at position 4. It is an antibiotic isolated from
+  the culture broth of Bacillus cereus and exhibits antifungal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-2-amino-4-[(Z)-methyl-NNO-azoxy]butanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[(3S)-3-amino-4-hydroxy-4-oxobutyl]-(Z)-methylimino-oxidoazanium'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37390
+- CHEBI:83925
+xrefs:
+- cas:157998-96-4
+- reaxys:7074303
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: C/N=[N+](\[O-])CC[C@H](N)C(=O)O
+  standard_inchi: InChI=1S/C5H11N3O3/c1-7-8(11)3-2-4(6)5(9)10/h4H,2-3,6H2,1H3,(H,9,10)/b8-7-/t4-/m0/s1
+  standard_inchi_key: KFZWEFIJHQUPCM-JMRMDATBSA-N
+  molecular_formula: C5H11N3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 161.161
+  monoisotopic_mass: 161.08004
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65461
+  source_label: azoxybacilin
+  minted_identifier: antibioticmech:chebi-ef2be48ae7
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,57 @@
+identifier: CHEBI:68241
+label: platencin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid amide obtained by the formal condensation of the
+  amino group of 3-amino-2,4-dihydroxybenzoic acid with the carboxy group of the polycyclic
+  cage component. It is an antibiotic isolated from Streptomyces platensis and exhibits
+  inhibitory activity against fatty acid synthase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,4-dihydroxy-3-({3-[(4aS,8S,8aR)-8-methyl-3-methylidene-7-oxo-1,3,4,7,8,8a-hexahydro-2H-2,4a-ethanonaphthalen-8-yl]propanoyl}amino)benzoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-platencin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23778
+- CHEBI:29347
+- CHEBI:33640
+- CHEBI:3992
+- CHEBI:62733
+xrefs:
+- cas:869898-86-2
+- chemspider:20576369
+- knapsack:C00056080
+- patent:CA2770486
+- pdb-ccd:N32
+- reaxys:11140608
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12CC[C@@]3(C=CC(=O)[C@@](C)(CCC(=O)Nc4c(O)ccc(C(=O)O)c4O)[C@]3([H])C1)CC2=C'
+  standard_inchi: InChI=1S/C24H27NO6/c1-13-12-24-9-5-14(13)11-17(24)23(2,18(27)6-10-24)8-7-19(28)25-20-16(26)4-3-15(21(20)29)22(30)31/h3-4,6,10,14,17,26,29H,1,5,7-9,11-12H2,2H3,(H,25,28)(H,30,31)/t14-,17-,23-,24+/m0/s1
+  standard_inchi_key: DWUHGPPFFABTIY-RLWZQHMASA-N
+  molecular_formula: C24H27NO6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 425.481
+  monoisotopic_mass: 425.18384
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68241
+  source_label: platencin
+  minted_identifier: antibioticmech:chebi-4254659185
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

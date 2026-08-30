@@ -1,0 +1,58 @@
+identifier: CHEBI:81801
+label: flusulfamide
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfonamide resulting from the formal condensation 4-chloro-3-(trifluoromethyl)benzenesulfonic
+  acid with 2-chloro-4-nitroaniline. A fungicide, it is used to control Plasmodiophora
+  brassicae in brassicas and Polymyxa betae in sugarbeet.
+definition_source: ChEBI
+synonyms:
+- synonym_text: MTF 651
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Nebijin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 4-chloro-N-(2-chloro-4-nitrophenyl)-3-(trifluoromethyl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2',4-dichloro-α,α,α-trifluoro-4'-nitro-m-toluenesulfonanilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35358
+- CHEBI:35716
+- CHEBI:83403
+- CHEBI:83565
+- CHEBI:87021
+xrefs:
+- cas:106917-52-6
+- kegg.compound:C18521
+- pesticides:flusulfamide
+- ppdb:351
+- reaxys:11322439
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: O=[N+]([O-])c1ccc(NS(=O)(=O)c2ccc(Cl)c(C(F)(F)F)c2)c(Cl)c1
+  standard_inchi: InChI=1S/C13H7Cl2F3N2O4S/c14-10-3-2-8(6-9(10)13(16,17)18)25(23,24)19-12-4-1-7(20(21)22)5-11(12)15/h1-6,19H
+  standard_inchi_key: GNVDAZSPJWCIQZ-UHFFFAOYSA-N
+  molecular_formula: C13H7Cl2F3N2O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 415.176
+  monoisotopic_mass: 413.94557
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81801
+  source_label: flusulfamide
+  minted_identifier: antibioticmech:chebi-f260bdf09e
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

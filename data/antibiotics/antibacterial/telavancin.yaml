@@ -1,0 +1,78 @@
+identifier: CHEBI:71229
+label: telavancin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A glycopeptide that is vancomycin substituted at position N-3'' by a 2-(decylamino)ethyl
+  group and at position C-29 by a (phosphonomethyl)aminomethyl group. Used as its
+  hydrochloride salt for treatment of adults with complicated skin and skin structure
+  infections caused by bacteria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: telavancina
+  synonym_type: INN
+  source: chebi
+- synonym_text: telavancinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: télavancine
+  synonym_type: INN
+  source: chebi
+- synonym_text: N3''-[2-(decylamino)ethyl]-29-{[(phosphonomethyl)amino]methyl}vancomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24396
+- ARO:3000081
+xrefs:
+- ARO:3000488
+- cas:372151-71-8
+- drugcentral:4116
+- patent:WO2008085913
+- reaxys:9988046
+- wikipedia.en:Telavancin
+- chembl:CHEMBL507870
+- pubchem.compound:3081362
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: glycopeptide antibiotic
+structural_class_id: ARO:3000081
+chemical_structure:
+  smiles: CCCCCCCCCCNCCN[C@@]1(C)C[C@H](O[C@H]2[C@H](Oc3c4cc5cc3Oc3ccc(cc3Cl)[C@@H](O)[C@@H](NC(=O)[C@@H](CC(C)C)NC)C(=O)N[C@@H](CC(N)=O)C(=O)N[C@H]5C(=O)N[C@H]3C(=O)N[C@H](C(=O)N[C@H](C(=O)O)c5cc(O)c(CNCP(=O)(O)O)c(O)c5-c5cc3ccc5O)[C@H](O)c3ccc(c(Cl)c3)O4)O[C@H](CO)[C@@H](O)[C@@H]2O)O[C@@H](C)[C@H]1O
+  standard_inchi: InChI=1S/C80H106Cl2N11O27P/c1-7-8-9-10-11-12-13-14-21-85-22-23-87-80(5)32-57(115-37(4)71(80)103)119-70-68(102)67(101)55(34-94)118-79(70)120-69-53-28-41-29-54(69)117-52-20-17-40(27-46(52)82)65(99)63-77(109)91-61(78(110)111)43-30-50(96)44(33-86-35-121(112,113)114)66(100)58(43)42-25-38(15-18-49(42)95)59(74(106)93-63)90-75(107)60(41)89-73(105)48(31-56(83)97)88-76(108)62(92-72(104)47(84-6)24-36(2)3)64(98)39-16-19-51(116-53)45(81)26-39/h15-20,25-30,36-37,47-48,55,57,59-65,67-68,70-71,79,84-87,94-96,98-103H,7-14,21-24,31-35H2,1-6H3,(H2,83,97)(H,88,108)(H,89,105)(H,90,107)(H,91,109)(H,92,104)(H,93,106)(H,110,111)(H2,112,113,114)/t37-,47+,48-,55+,57-,59+,60+,61-,62+,63-,64+,65+,67+,68-,70+,71+,79-,80-/m0/s1
+  standard_inchi_key: ONUMZHGUFYIKPM-MXNFEBESSA-N
+  molecular_formula: C80H106Cl2N11O27P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1755.658
+  monoisotopic_mass: 1753.63743
+source_concepts:
+- source: ARO
+  source_id: ARO:3000488
+  source_label: telavancin
+  minted_identifier: antibioticmech:aro-dc00224dcc
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:71229
+  source_label: telavancin
+  minted_identifier: antibioticmech:chebi-d02efea678
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000720
+  target_label: acyl-D-alanyl-D-alanine
+  evidence:
+  - reference: ARO:3000720
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000488 (telavancin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

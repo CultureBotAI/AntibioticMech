@@ -1,0 +1,46 @@
+identifier: CHEBI:65612
+label: chaetoxanthone B
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A bridged organic heteropentacyclic compound that is 3,4,5,6-tetrahydro-2H,8H-2,6-epoxyoxocino[3,2-b]xanthen-8-one
+  substituted by a hydroxy group at position 7, a methoxy group at position 9 and
+  a methyl group at position 2. It is isolated from the marine derived fungus Chaetomium
+  and has antiprotozoal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7-hydroxy-9-methoxy-2-methyl-3,4,5,6-tetrahydro-2H,8H-2,6-epoxyoxocino[3,2-b]xanthen-8-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:35990
+- CHEBI:38164
+- CHEBI:3992
+- CHEBI:59779
+xrefs:
+- reaxys:19305736
+activity_roles:
+- CHEBI:35820
+chemical_structure:
+  smiles: COc1cccc2oc3cc4c(c(O)c3c(=O)c12)C1CCCC(C)(O4)O1
+  standard_inchi: InChI=1S/C20H18O6/c1-20-8-4-7-12(25-20)16-14(26-20)9-13-17(19(16)22)18(21)15-10(23-2)5-3-6-11(15)24-13/h3,5-6,9,12,22H,4,7-8H2,1-2H3
+  standard_inchi_key: ZUEKQPJBVORAFH-UHFFFAOYSA-N
+  molecular_formula: C20H18O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 354.358
+  monoisotopic_mass: 354.11034
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65612
+  source_label: chaetoxanthone B
+  minted_identifier: antibioticmech:chebi-c35cb19fee
+  role_terms:
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,44 @@
+identifier: CHEBI:66765
+label: pleosporone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbotricyclic compound that is 1,2,3,4-tetrahydroanthracene-9,10-dione
+  substituted by hydroxy groups at positions 1, 2, 3 and 8 and a methyl group at position
+  6. It is isolated from a pleosporalean ascomycete (MF7028), an endophytic fungus
+  from Anthyllis vulneraria and exhibits modest antibacterial activity against a number
+  of bacterial strains. Additionally it exhibits cytotoxicity against HeLa cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,2S,3S)-1,2,3,8-tetrahydroxy-6-methyl-1,2,3,4-tetrahydroanthracene-9,10-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25830
+- CHEBI:33853
+- CHEBI:35681
+- CHEBI:38032
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Cc1cc(O)c2c(c1)C(=O)C1=C(C2=O)[C@@H](O)[C@@H](O)[C@@H](O)C1
+  standard_inchi: InChI=1S/C15H14O6/c1-5-2-6-10(8(16)3-5)14(20)11-7(12(6)18)4-9(17)13(19)15(11)21/h2-3,9,13,15-17,19,21H,4H2,1H3/t9-,13-,15+/m0/s1
+  standard_inchi_key: YUSJPHSHLVVZRA-DYQSUWPFSA-N
+  molecular_formula: C15H14O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 290.271
+  monoisotopic_mass: 290.07904
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66765
+  source_label: pleosporone
+  minted_identifier: antibioticmech:chebi-591153320f
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

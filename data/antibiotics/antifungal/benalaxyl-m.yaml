@@ -1,0 +1,67 @@
+identifier: CHEBI:82779
+label: benalaxyl-M
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A methyl N-(2,6-dimethylphenyl)-N-(phenylacetyl)alaninate that is the
+  more active R-enantiomer of benalaxyl.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl N-(2,6-dimethylphenyl)-N-(phenylacetyl)-D-alaninate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (-)-R-Benalaxyl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-Benalaxyl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: IR 6141
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kiralaxyl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl N-(phenylacetyl)-N-(2,6-xylyl)-D-alaninate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:82777
+- CHEBI:83944
+- CHEBI:87013
+- CHEBI:87015
+xrefs:
+- cas:98243-83-5
+- patent:NZ575703
+- patent:US2008293707
+- patent:WO2007031283
+- patent:WO2011108751
+- pesticides:benalaxyl-m
+- ppdb:1010
+- reaxys:11327124
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+chemical_structure:
+  smiles: COC(=O)[C@@H](C)N(C(=O)Cc1ccccc1)c1c(C)cccc1C
+  standard_inchi: InChI=1S/C20H23NO3/c1-14-9-8-10-15(2)19(14)21(16(3)20(23)24-4)18(22)13-17-11-6-5-7-12-17/h5-12,16H,13H2,1-4H3/t16-/m1/s1
+  standard_inchi_key: CJPQIRJHIZUAQP-MRXNPFEDSA-N
+  molecular_formula: C20H23NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 325.408
+  monoisotopic_mass: 325.16779
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:82779
+  source_label: benalaxyl-M
+  minted_identifier: antibioticmech:chebi-f611df6e61
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

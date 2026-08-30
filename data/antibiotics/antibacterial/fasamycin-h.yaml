@@ -1,0 +1,37 @@
+identifier: antibioticmech:aro-53ea9afd3e
+label: fasamycin H
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Fasamycin congeners were named as such after they were shown to be inhibitors
+  of the bacterial fatty acid synthase (FAS) condensing enzyme FabF.
+definition_source: PMID:37327570
+parent_compounds:
+- ARO:3005171
+xrefs:
+- ARO:3007578
+- CHEBI:226609
+- pubchem.compound:156017923
+structural_class: polyketide with antibiotic activity
+structural_class_id: ARO:3005171
+chemical_structure:
+  smiles: CC1=CC(=CC(=C1C2=C3C(=CC(=C2)OC)C=C4C(=C3O)C(=O)C5=C(C4(C)C)C=C(C=C5O)O)O)OC
+  standard_inchi: InChI=1S/C29H26O7/c1-13-6-16(35-4)12-22(32)23(13)18-11-17(36-5)7-14-8-19-26(27(33)24(14)18)28(34)25-20(29(19,2)3)9-15(30)10-21(25)31/h6-12,30-33H,1-5H3
+  standard_inchi_key: MTRMGJAIETUBQO-UHFFFAOYSA-N
+  molecular_formula: C29H26O7
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 486.5
+  monoisotopic_mass: 486.16785316
+source_concepts:
+- source: ARO
+  source_id: ARO:3007578
+  source_label: fasamycin H
+  minted_identifier: antibioticmech:aro-53ea9afd3e
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

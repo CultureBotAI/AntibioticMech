@@ -1,0 +1,59 @@
+identifier: CHEBI:83345
+label: metrafenone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzophenones that is benzophenone in which one
+  of the phenyl groups is substituted by methoxy groups at positions 2, 3, and 4 and
+  by a methyl group at position 6, while the other is substituted at positions 2,
+  3, and 6 by methyl, bromine, and methoxy groups, respectively. A fungicide with
+  protectant and curative properties, it is used for the control of powdery mildew
+  in cereals and grape vines.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3-bromo-6-methoxy-2-methylphenyl)(2,3,4-trimethoxy-6-methylphenyl)methanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3'-bromo-2,3,4,6'-tetramethoxy-2',6-dimethylbenzophenone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BAS 560 02F
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: métrafénone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22726
+- CHEBI:35618
+- CHEBI:37141
+- CHEBI:87035
+xrefs:
+- cas:220899-03-6
+- pesticides:metrafenone
+- ppdb:468
+- reaxys:11343406
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: COc1cc(C)c(C(=O)c2c(OC)ccc(Br)c2C)c(OC)c1OC
+  standard_inchi: InChI=1S/C19H21BrO5/c1-10-9-14(23-4)18(24-5)19(25-6)15(10)17(21)16-11(2)12(20)7-8-13(16)22-3/h7-9H,1-6H3
+  standard_inchi_key: AMSPWOYQQAWRRM-UHFFFAOYSA-N
+  molecular_formula: C19H21BrO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 409.276
+  monoisotopic_mass: 408.05724
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83345
+  source_label: metrafenone
+  minted_identifier: antibioticmech:chebi-7126f6ff1b
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

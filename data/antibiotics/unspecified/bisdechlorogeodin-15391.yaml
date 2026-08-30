@@ -1,0 +1,44 @@
+identifier: CHEBI:15391
+label: (−)-bisdechlorogeodin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: methyl (2R)-4-hydroxy-6-methyl-4'-oxo-3H-spiro[1-benzofuran-2,1'-cyclohexa[2,5]diene]-2'-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (-)-Bisdechlorogeodin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R)-bisdechlorogeodin
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22899
+xrefs:
+- cas:59187-35-8
+- kegg.compound:C03040
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COC(=O)C1=CC(=O)C=C(OC)[C@]12Oc1cc(C)cc(O)c1C2=O
+  standard_inchi: InChI=1S/C17H14O7/c1-8-4-11(19)14-12(5-8)24-17(15(14)20)10(16(21)23-3)6-9(18)7-13(17)22-2/h4-7,19H,1-3H3/t17-/m1/s1
+  standard_inchi_key: JCMPRFCVZKOFIT-QGZVFWFLSA-N
+  molecular_formula: C17H14O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 330.292
+  monoisotopic_mass: 330.07395
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:15391
+  source_label: (−)-bisdechlorogeodin
+  minted_identifier: antibioticmech:chebi-b3d0a81e56
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

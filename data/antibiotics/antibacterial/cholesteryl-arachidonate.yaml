@@ -1,0 +1,64 @@
+identifier: CHEBI:82751
+label: cholesteryl arachidonate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cholesterol ester obtained by the formal condensation of the hydroxy
+  group in cholesterol with the carboxy group of arachidonic acid.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3β)-cholest-5-en-3-yl (5Z,8Z,11Z,14Z)-icosa-5,8,11,14-tetraenoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 20:4 Cholesteryl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CE(20:4(5Z,8Z,11Z,14Z))
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CE(20:4)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cholest-5-en-3β-yl (5Z,8Z,11Z,14Z-eicosatetraenoate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cholest-5-en-3β-yl (5Z,8Z,11Z,14Z-icosatetraenoate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cholesterol arachidonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cholesteryl (5Z,8Z,11Z,14Z)-eicosatetraenoate
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132006
+xrefs:
+- cas:604-34-2
+- hmdb:HMDB0006726
+- lipidmaps:LMST01020014
+- reaxys:2343317
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12CC=C3C[C@@H](OC(=O)CCC/C=C\C/C=C\C/C=C\C/C=C\CCCCC)CC[C@]3(C)[C@@]1([H])CC[C@@]1(C)[C@@]2([H])CC[C@]1([H])[C@H](C)CCCC(C)C'
+  standard_inchi: InChI=1S/C47H76O2/c1-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-27-45(48)49-40-32-34-46(5)39(36-40)28-29-41-43-31-30-42(38(4)26-24-25-37(2)3)47(43,6)35-33-44(41)46/h11-12,14-15,17-18,20-21,28,37-38,40-44H,7-10,13,16,19,22-27,29-36H2,1-6H3/b12-11-,15-14-,18-17-,21-20-/t38-,40+,41+,42-,43+,44+,46+,47-/m1/s1
+  standard_inchi_key: IMXSFYNMSOULQS-BEDFLICRSA-N
+  molecular_formula: C47H76O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 673.123
+  monoisotopic_mass: 672.58453
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:82751
+  source_label: cholesteryl arachidonate
+  minted_identifier: antibioticmech:chebi-2ca4594be9
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

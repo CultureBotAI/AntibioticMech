@@ -1,0 +1,94 @@
+identifier: CHEBI:48947
+label: clavulanic acid
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Antibiotic isolated from Streptomyces clavuligerus. It acts as a suicide
+  inhibitor of bacterial β-lactamase enzymes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: acide clavulanique
+  synonym_type: INN
+  source: chebi
+- synonym_text: acidum clavulanicum
+  synonym_type: INN
+  source: chebi
+- synonym_text: ácido clavulánico
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2R,3Z,5R)-3-(2-hydroxyethylidene)-7-oxo-4-oxa-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R,3Z,5R)-3-(2-HYDROXYETHYLIDENE)-7-OXO-4-OXA-1-AZABICYCLO[3.2.0]HEPTANE-2-CARBOXYLIC
+    ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (Z)-(2R,5R)-3-(2-Hydroxyethylidene)-7-oxo-4-oxa-1-azabicyclo(3.2.0)heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Clavulanate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Clavulanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Clavulansäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MM 14151
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic MM 14151
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: clavulonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:64509
+xrefs:
+- beilstein:787059
+- cas:58001-44-8
+- drugbank:DB00766
+- drugcentral:669
+- hmdb:HMDB0014904
+- kegg.compound:C06662
+- kegg.drug:D07711
+- knapsack:C00018091
+- patent:DE2517316
+- pdb-ccd:J01
+- reaxys:787059
+- vsdb:1930
+- wikipedia.en:Clavulanic_Acid
+activity_roles:
+- CHEBI:33231
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H][C@@]12CC(=O)N1[C@@H](C(=O)O)/C(=C/CO)O2'
+  standard_inchi: InChI=1S/C8H9NO5/c10-2-1-4-7(8(12)13)9-5(11)3-6(9)14-4/h1,6-7,10H,2-3H2,(H,12,13)/b4-1-/t6-,7-/m1/s1
+  standard_inchi_key: HZZVJAQRINQKSD-PBFISZAISA-N
+  molecular_formula: C8H9NO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 199.162
+  monoisotopic_mass: 199.04807
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:48947
+  source_label: clavulanic acid
+  minted_identifier: antibioticmech:chebi-e6f3165a79
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

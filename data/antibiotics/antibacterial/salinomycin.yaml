@@ -1,0 +1,37 @@
+identifier: CHEBI:80025
+label: salinomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Salinomycin is an antibacterial and coccidiostat ionophore therapeutic
+  drug.
+definition_source: PMID:37276926
+parent_compounds:
+- ARO:3005163
+xrefs:
+- ARO:3007547
+- cas:53003-10-4
+- chembl:CHEMBL1208572
+- pubchem.compound:3085092
+structural_class: ionophore with antibiotic activity
+structural_class_id: ARO:3005163
+chemical_structure:
+  smiles: '[H][C@]1([C@@H](CC)C(=O)[C@@H](C)[C@@H](O)[C@H](C)[C@]2([H])O[C@@]([H])([C@@H](CC)C(=O)O)CC[C@@H]2C)O[C@]2(C=C[C@@H](O)[C@]3(CC[C@@](C)([C@@]4([H])CC[C@](O)(CC)[C@H](C)O4)O3)O2)[C@H](C)C[C@@H]1C'
+  standard_inchi: InChI=1S/C42H70O11/c1-11-29(38(46)47)31-15-14-23(4)36(50-31)27(8)34(44)26(7)35(45)30(12-2)37-24(5)22-25(6)41(51-37)19-16-32(43)42(53-41)21-20-39(10,52-42)33-17-18-40(48,13-3)28(9)49-33/h16,19,23-34,36-37,43-44,48H,11-15,17-18,20-22H2,1-10H3,(H,46,47)/t23-,24-,25+,26-,27-,28-,29+,30-,31+,32+,33+,34+,36+,37-,39-,40+,41-,42-/m0/s1
+  standard_inchi_key: KQXDHUJYNAXLNZ-XQSDOZFQSA-N
+  molecular_formula: C42H70O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 751.011
+  monoisotopic_mass: 750.49181
+source_concepts:
+- source: ARO
+  source_id: ARO:3007547
+  source_label: salinomycin
+  minted_identifier: antibioticmech:aro-c96a61d31d
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

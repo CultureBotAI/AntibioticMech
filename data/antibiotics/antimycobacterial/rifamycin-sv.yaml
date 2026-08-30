@@ -1,0 +1,79 @@
+identifier: CHEBI:29673
+label: rifamycin SV
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of rifamycins that exhibits antibiotic and antitubercular
+  properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: rifamicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: rifamycin
+  synonym_type: INN
+  source: chebi
+- synonym_text: rifamycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: rifamycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2S,12Z,14E,16S,17S,18R,19R,20R,21S,22R,23S,24E)-5,6,9,17,19-pentahydroxy-23-methoxy-2,4,12,16,18,20,22-heptamethyl-1,11-dioxo-1,2-dihydro-2,7-(epoxypentadeca[1,11,13]trienoimino)naphtho[2,1-b]furan-21-yl
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rifamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rifamycin SV
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rifocin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rifocyn
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24995
+- CHEBI:26195
+- CHEBI:26580
+- CHEBI:38163
+- CHEBI:47622
+- CHEBI:51026
+- CHEBI:59779
+xrefs:
+- cas:6998-60-3
+- drugcentral:4817
+- kegg.compound:C12044
+- kegg.drug:D02549
+- lipidmaps:LMPK05000005
+- metacyc.compound:CPD-10236
+- reaxys:5401012
+activity_roles:
+- CHEBI:33231
+- CHEBI:33281
+chemical_structure:
+  smiles: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(cc(O)c4c3C2=O)NC(=O)/C(C)=C\C=C\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C
+  standard_inchi: InChI=1S/C37H47NO12/c1-16-11-10-12-17(2)36(46)38-23-15-24(40)26-27(32(23)44)31(43)21(6)34-28(26)35(45)37(8,50-34)48-14-13-25(47-9)18(3)33(49-22(7)39)20(5)30(42)19(4)29(16)41/h10-16,18-20,25,29-30,33,40-44H,1-9H3,(H,38,46)/b11-10+,14-13+,17-12-/t16-,18+,19+,20+,25-,29-,30+,33+,37-/m0/s1
+  standard_inchi_key: HJYYPODYNSCCOU-ODRIEIDWSA-N
+  molecular_formula: C37H47NO12
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 697.778
+  monoisotopic_mass: 697.30983
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:29673
+  source_label: rifamycin SV
+  minted_identifier: antibioticmech:chebi-927da3843b
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

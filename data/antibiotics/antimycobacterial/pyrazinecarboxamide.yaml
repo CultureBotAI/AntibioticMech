@@ -1,0 +1,184 @@
+identifier: CHEBI:45285
+label: pyrazinecarboxamide
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid amide resulting from the formal condensation of
+  the carboxy group of pyrazinoic acid (pyrazine-2-carboxylic acid) with ammonia.
+  A prodrug for pyrazinoic acid, pyrazinecarboxamide is used as part of multidrug
+  regimens for the treatment of tuberculosis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: pyrazinamida
+  synonym_type: INN
+  source: chebi
+- synonym_text: pyrazinamide
+  synonym_type: INN
+  source: chebi
+- synonym_text: pyrazinamidum
+  synonym_type: INN
+  source: chebi
+- synonym_text: pyrazine-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-carbamylpyrazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-pyrazinecarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PYRAZINE-2-CARBOXAMIDE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pyrazinamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pyrazinoic acid amide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pyrazine carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pyrazineamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:29347
+- CHEBI:38314
+- CHEBI:83628
+- ARO:3007155
+xrefs:
+- ARO:3003413
+- beilstein:112306
+- cas:98-96-4
+- drugbank:DB00339
+- drugcentral:2328
+- gmelin:279021
+- hmdb:HMDB0014483
+- kegg.compound:C01956
+- kegg.drug:D00144
+- lincs.smallmolecule:LSM-5425
+- pdb-ccd:PZA
+- reaxys:112306
+- wikipedia.en:Pyrazinamide
+- chembl:CHEMBL614
+- pubchem.compound:1046
+activity_roles:
+- CHEBI:33231
+- CHEBI:33281
+structural_class: pyrazine antibiotic
+structural_class_id: ARO:3007155
+chemical_structure:
+  smiles: NC(=O)c1cnccn1
+  standard_inchi: InChI=1S/C5H5N3O/c6-5(9)4-3-7-1-2-8-4/h1-3H,(H2,6,9)
+  standard_inchi_key: IPEHBUMCGVEMRF-UHFFFAOYSA-N
+  molecular_formula: C5H5N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 123.115
+  monoisotopic_mass: 123.04326
+source_concepts:
+- source: ARO
+  source_id: ARO:3003413
+  source_label: pyrazinamide
+  minted_identifier: antibioticmech:aro-27a9b8cfeb
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:45285
+  source_label: pyrazinecarboxamide
+  minted_identifier: antibioticmech:chebi-b8efc47dfc
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003394
+  label: Mycobacterium tuberculosis pncA mutations conferring resistance to pyrazinamide
+  evidence:
+  - reference: ARO:3003394
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004721
+  label: Mycobacterium tuberculosis rpsA mutations conferring resistance to pyrazinamide
+  evidence:
+  - reference: ARO:3004721
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004957
+  label: Mycobacterium tuberculosis clpC1 with mutation conferring resistance to pyrazinamide
+  evidence:
+  - reference: ARO:3004957
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004975
+  label: Mycobacterium tuberculosis ppsC mutations confer resistance to pyrazinamide
+  evidence:
+  - reference: ARO:3004975
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004976
+  label: Mycobacterium tuberculosis ppsD mutations confer resistance to pyrazinamide
+  evidence:
+  - reference: ARO:3004976
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004977
+  label: Mycobacterium tuberculosis gpsI with mutations conferring resistance to pyrazinamide
+  evidence:
+  - reference: ARO:3004977
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004978
+  label: Mycobacterium tuberculosis mas mutations confer resistance to pyrazinamide
+  evidence:
+  - reference: ARO:3004978
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004981
+  label: Mycobacterium tuberculosis Rv0191 mutations confer resistance to pyrazinamide
+  evidence:
+  - reference: ARO:3004981
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004984
+  label: Mycobacterium tuberculosis Rv1667 mutations confer resistance to pyrazinamide
+  evidence:
+  - reference: ARO:3004984
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004987
+  label: Mycobacterium tuberculosis Rv2731 mutations confer resistance to pyrazinamide
+  evidence:
+  - reference: ARO:3004987
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004993
+  label: Mycobacterium tuberculosis Rv3169 mutations confer resistance to pyrazinamide
+  evidence:
+  - reference: ARO:3004993
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007186
+  label: Mycobacterium tuberculosis Rv1258c mutations confer resistance to pyrazinamide,
+    isoniazid, and streptomycin
+  evidence:
+  - reference: ARO:3007186
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

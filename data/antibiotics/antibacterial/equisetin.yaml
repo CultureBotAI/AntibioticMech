@@ -1,0 +1,53 @@
+identifier: CHEBI:142135
+label: equisetin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of tetramic acids that is trichosetin in which the
+  hydrogen attached to the lactam nitrogen has been replaced by a methyl group. It
+  is produced by the filamentous fungus Fusarium heterosporum.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3Z,5S)-3-[{(1S,2R,4aS,6R,8aR)-1,6-dimethyl-2-[(1E)-prop-1-en-1-yl]-1,2,4a,5,6,7,8,8a-octahydronaphthalen-1-yl}(hydroxy)methylidene]-5-(hydroxymethyl)-1-methylpyrrolidine-2,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-equisetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-methyltrichosetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:138397
+- CHEBI:140155
+- CHEBI:15734
+- CHEBI:33823
+xrefs:
+- cas:57749-43-6
+- metacyc.compound:CPD-17992
+- patent:US3959468
+- reaxys:5773365
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@@H](C)C[C@@]1([H])C=C[C@@]([H])(/C=C/C)[C@@]2(C)/C(O)=C1\C(=O)[C@H](CO)N(C)C1=O'
+  standard_inchi: InChI=1S/C22H31NO4/c1-5-6-15-9-8-14-11-13(2)7-10-16(14)22(15,3)20(26)18-19(25)17(12-24)23(4)21(18)27/h5-6,8-9,13-17,24,26H,7,10-12H2,1-4H3/b6-5+,20-18-/t13-,14-,15-,16-,17+,22-/m1/s1
+  standard_inchi_key: QNQBPPQLRODXET-HMHJLHGTSA-N
+  molecular_formula: C22H31NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 373.493
+  monoisotopic_mass: 373.22531
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:142135
+  source_label: equisetin
+  minted_identifier: antibioticmech:chebi-675644a2ca
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

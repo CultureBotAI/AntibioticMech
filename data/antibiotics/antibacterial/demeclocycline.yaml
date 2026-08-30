@@ -1,0 +1,196 @@
+identifier: CHEBI:4392
+label: demeclocycline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Tetracycline which lacks the methyl substituent at position 7 and in which
+  the hydrogen para- to the phenolic hydroxy group is substituted by chlorine. Like
+  tetracycline, it is an antibiotic, but being excreted more slowly, effective blood
+  levels are maintained for longer. It is used (mainly as the hydrochloride) for the
+  treatment of Lyme disease, acne and bronchitis, as well as for hyponatraemia (low
+  blood sodium concentration) due to the syndrome of inappropriate antidiuretic hormone
+  (SIADH) where fluid restriction alone has been ineffective.
+definition_source: ChEBI
+synonyms:
+- synonym_text: demeclociclina
+  synonym_type: INN
+  source: chebi
+- synonym_text: demeclocyclinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (4S,4aS,5aS,6S,12aS)-7-chloro-4-(dimethylamino)-3,6,10,12,12a-pentahydroxy-1,11-dioxo-1,4,4a,5,5a,6,11,12a-octahydrotetracene-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-demethyl-7-chlorotetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-chloro-6-demethyltetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DMCT
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DMCTC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Demeclocycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[4S-(4α,4aα,5aα,6β,12aα)]-7-chloro-4-(dimethylamino)1,4,4a,5,5a,6,11,12a-octahydro-3,6,10,12,12a-pentahydroxy-1,11-dioxo-2-naphthacenecarboxamide'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: demethylchlortetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: declomycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:26895
+- ARO:3000050
+xrefs:
+- ARO:3000667
+- beilstein:2230579
+- cas:127-33-3
+- chemspider:10482117
+- drugbank:DB00618
+- drugcentral:802
+- kegg.drug:D00290
+- kegg.drug:D03680
+- patent:FR1344645
+- patent:US2878289
+- patent:US3012946
+- patent:US3019172
+- patent:US3050446
+- patent:US3154476
+- wikipedia.en:Demeclocycline
+- chembl:CHEMBL1591
+- pubchem.compound:54680690
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+structural_class: tetracycline antibiotic
+structural_class_id: ARO:3000050
+chemical_structure:
+  smiles: '[H][C@]12C[C@@]3([H])[C@H](N(C)C)C(O)=C(C(N)=O)C(=O)[C@@]3(O)C(O)=C1C(=O)c1c(O)ccc(Cl)c1[C@H]2O'
+  standard_inchi: InChI=1S/C21H21ClN2O8/c1-24(2)14-7-5-6-10(16(27)12-9(25)4-3-8(22)11(12)15(6)26)18(29)21(7,32)19(30)13(17(14)28)20(23)31/h3-4,6-7,14-15,25-26,28-29,32H,5H2,1-2H3,(H2,23,31)/t6-,7-,14-,15-,21-/m0/s1
+  standard_inchi_key: FMTDIUIBLCQGJB-SEYHBJAFSA-N
+  molecular_formula: C21H21ClN2O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 464.858
+  monoisotopic_mass: 464.09864
+source_concepts:
+- source: ARO
+  source_id: ARO:3000667
+  source_label: demeclocycline
+  minted_identifier: antibioticmech:aro-d4671f27d8
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:4392
+  source_label: demeclocycline
+  minted_identifier: antibioticmech:chebi-114c74722d
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000186
+  label: tet(M)
+  evidence:
+  - reference: ARO:3000186
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000667 (demeclocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000190
+  label: tet(O)
+  evidence:
+  - reference: ARO:3000190
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000667 (demeclocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000191
+  label: tet(Q)
+  evidence:
+  - reference: ARO:3000191
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000667 (demeclocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000192
+  label: tet(S)
+  evidence:
+  - reference: ARO:3000192
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000667 (demeclocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000193
+  label: tet(T)
+  evidence:
+  - reference: ARO:3000193
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000667 (demeclocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000194
+  label: tet(W)
+  evidence:
+  - reference: ARO:3000194
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000667 (demeclocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000195
+  label: tetB(P)
+  evidence:
+  - reference: ARO:3000195
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000667 (demeclocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000196
+  label: tet(32)
+  evidence:
+  - reference: ARO:3000196
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000667 (demeclocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000197
+  label: tet(36)
+  evidence:
+  - reference: ARO:3000197
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000667 (demeclocycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000205
+  label: tet(X)
+  evidence:
+  - reference: ARO:3000205
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000667 (demeclocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000556
+  label: tet(44)
+  evidence:
+  - reference: ARO:3000556
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000667 (demeclocycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003969
+  label: lmrP
+  evidence:
+  - reference: ARO:3003969
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000667 (demeclocycline);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000667 (demeclocycline); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

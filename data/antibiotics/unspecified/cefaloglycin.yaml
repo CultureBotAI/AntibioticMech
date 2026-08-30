@@ -1,0 +1,86 @@
+identifier: CHEBI:34613
+label: cefaloglycin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cephalosporin antibiotic containing at the 7β-position of the cephem
+  skeleton an (R)-amino(phenyl)acetamido group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Cefaloglicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: Cefaloglycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: Cefaloglycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (6R,7R)-3-(acetoxymethyl)-7-{[(2R)-2-amino-2-phenylacetyl]amino}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-acetoxymethyl-7β-[(2R)-2-amino-2-phenylacetamido]-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-(2-D-alpha-Aminophenylacetamido)cephalosporanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-(D-2-Amino-2-phenylacetamido)-3-acetoxymethyl-delta(sup3)-cephem-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-(D-alpha-Aminophenyl-acetamido)cephalosporanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CEG
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cephaloglycine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cephaoglycin acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-(-)-Cephaloglycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-Cephaloglycine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+- CHEBI:88225
+xrefs:
+- cas:3577-01-3
+- drugbank:DB00689
+- drugcentral:572
+- kegg.compound:C13440
+- kegg.drug:D01949
+- reaxys:5405868
+- wikipedia.en:Cephaloglycin
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12SCC(COC(C)=O)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)[C@H](N)c1ccccc1'
+  standard_inchi: InChI=1S/C18H19N3O6S/c1-9(22)27-7-11-8-28-17-13(16(24)21(17)14(11)18(25)26)20-15(23)12(19)10-5-3-2-4-6-10/h2-6,12-13,17H,7-8,19H2,1H3,(H,20,23)(H,25,26)/t12-,13-,17-/m1/s1
+  standard_inchi_key: FUBBGQLTSCSAON-PBFPGSCMSA-N
+  molecular_formula: C18H19N3O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 405.432
+  monoisotopic_mass: 405.09946
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:34613
+  source_label: cefaloglycin
+  minted_identifier: antibioticmech:chebi-5d2d3a8ae8
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

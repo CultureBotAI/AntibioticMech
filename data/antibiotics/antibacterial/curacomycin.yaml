@@ -1,0 +1,41 @@
+identifier: CHEBI:156426
+label: curacomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A homodetic cyclic peptide found in several Streptomyces species, consisting
+  of 3-hydroxyasparagine, L-ornithine, L-isoleucine, D-leucine, D-valine and 5-chloro-L-tryptophan
+  joined in sequence in a cyclic arrangement by peptide linkages. It exhibits antibacterial
+  properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cyclo(3-hydroxyasparaginyl-5-chloro-L-tryptophyl-D-valyl-D-leucyl-L-isoleucyl-L-ornithyl)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24613
+- CHEBI:52508
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC[C@H](C)[C@@H]1NC(=O)[C@@H](CC(C)C)NC(=O)[C@@H](C(C)C)NC(=O)[C@H](Cc2cnc3ccc(Cl)cc23)NC(=O)C(C(O)C(N)=O)NC(=O)[C@H](CCCN)NC1=O
+  standard_inchi: InChI=1S/C37H56ClN9O8/c1-7-19(6)28-36(54)42-24(9-8-12-39)32(50)47-29(30(48)31(40)49)37(55)44-26(14-20-16-41-23-11-10-21(38)15-22(20)23)34(52)45-27(18(4)5)35(53)43-25(13-17(2)3)33(51)46-28/h10-11,15-19,24-30,41,48H,7-9,12-14,39H2,1-6H3,(H2,40,49)(H,42,54)(H,43,53)(H,44,55)(H,45,52)(H,46,51)(H,47,50)/t19-,24-,25+,26-,27+,28-,29?,30?/m0/s1
+  standard_inchi_key: CUXAULQHGRSWLF-IKVCUCANSA-N
+  molecular_formula: C37H56ClN9O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 790.363
+  monoisotopic_mass: 789.39404
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156426
+  source_label: curacomycin
+  minted_identifier: antibioticmech:chebi-b0e66ee3c8
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

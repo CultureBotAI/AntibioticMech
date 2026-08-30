@@ -1,0 +1,105 @@
+identifier: antibioticmech:aro-a71ef91d49
+label: teicoplanin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Teicoplanin is a glycopeptide antibiotic used in the prophylaxis and treatment
+  of serious infections caused by Gram-positive bacteria. Teicoplanin has a unique
+  acyl-aliphatic chain, and binds to cell wall precursors to inhibit transglycosylation
+  and transpeptidation.
+definition_source: PMID:16323116
+synonyms:
+- synonym_text: targocid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: teichomycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3000081
+xrefs:
+- ARO:0000029
+- cas:61036-62-2
+- CHEBI:29687
+- chembl:CHEMBL2367892
+- pubchem.compound:16129712
+structural_class: glycopeptide antibiotic
+structural_class_id: ARO:3000081
+chemical_structure:
+  smiles: CC(C)CCCCCCCC(=O)N[C@@H]1[C@H]([C@@H]([C@H](O[C@H]1OC2=C3C=C4C=C2OC5=C(C=C(C=C5)[C@H]([C@H]6C(=O)N[C@H](C7=C(C(=CC(=C7)O)O[C@@H]8[C@H]([C@H]([C@@H]([C@H](O8)CO)O)O)O)C9=C(C=CC(=C9)[C@H](C(=O)N6)NC(=O)[C@@H]4NC(=O)[C@@H]1C2=CC(=CC(=C2)OC2=C(C=CC(=C2)[C@@H](C(=O)N[C@H](CC2=CC(=C(O3)C=C2)Cl)C(=O)N1)N)O)O)O)C(=O)O)O[C@H]1[C@@H]([C@H]([C@@H]([C@H](O1)CO)O)O)NC(=O)C)Cl)CO)O)O
+  standard_inchi: InChI=1S/C89H99Cl2N9O33/c1-34(2)9-7-5-4-6-8-10-61(109)95-69-75(114)72(111)59(32-102)130-88(69)133-79-56-26-41-27-57(79)127-53-18-14-39(24-48(53)91)78(132-87-68(93-35(3)104)74(113)71(110)58(31-101)129-87)70-85(122)99-67(86(123)124)46-29-43(106)30-55(128-89-77(116)76(115)73(112)60(33-103)131-89)62(46)45-23-38(13-15-50(45)107)64(82(119)100-70)97-84(121)66(41)98-83(120)65-40-21-42(105)28-44(22-40)125-54-25-37(12-16-51(54)108)63(92)81(118)94-49(80(117)96-65)20-36-11-17-52(126-56)47(90)19-36/h11-19,21-30,34,49,58-60,63-78,87-89,101-103,105-108,110-116H,4-10,20,31-33,92H2,1-3H3,(H,93,104)(H,94,118)(H,95,109)(H,96,117)(H,97,121)(H,98,120)(H,99,122)(H,100,119)(H,123,124)/t49-,58-,59-,60-,63+,64-,65+,66-,67-,68-,69-,70+,71-,72-,73-,74-,75-,76+,77+,78-,87+,88+,89+/m1/s1
+  standard_inchi_key: FHBQKTSCJKPYIO-OXIGXJDJSA-N
+  molecular_formula: C89H99Cl2N9O33
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1893.7
+  monoisotopic_mass: 1891.572232
+source_concepts:
+- source: ARO
+  source_id: ARO:0000029
+  source_label: teicoplanin
+  minted_identifier: antibioticmech:aro-a71ef91d49
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000236
+  label: glycopeptide resistance gene cluster VanA
+  evidence:
+  - reference: ARO:3000236
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000253
+  label: glycopeptide resistance gene cluster VanD
+  evidence:
+  - reference: ARO:3000253
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000256
+  label: glycopeptide resistance gene cluster VanM
+  evidence:
+  - reference: ARO:3000256
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3002914
+  label: vanJ
+  evidence:
+  - reference: ARO:3002914
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003722
+  label: glycopeptide resistance gene cluster VanI
+  evidence:
+  - reference: ARO:3003722
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3005021
+  label: cfr(D)
+  evidence:
+  - reference: ARO:3005021
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007187
+  label: glycopeptide resistance gene cluster vanP
+  evidence:
+  - reference: ARO:3007187
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000720
+  target_label: acyl-D-alanyl-D-alanine
+  evidence:
+  - reference: ARO:3000720
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000029 (teicoplanin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

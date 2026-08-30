@@ -1,0 +1,60 @@
+identifier: CHEBI:28327
+label: naringenin 7-O-β-D-glucoside
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A flavanone 7-O-β-D-glucoside that is (S)-naringenin substituted by a
+  β-D-glucopyranosyl moiety at position 7 via a glycosidic linkage.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-5-hydroxy-2-(4-hydroxyphenyl)-4-oxo-3,4-dihydro-2H-chromen-7-yl
+    β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-7-(β-D-glucopyranosyloxy)-2,3-dihydro-5-hydroxy-2-(4-hydroxyphenyl)-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Naringenin 7-O-beta-D-glucoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Prunin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-naringenin 7-O-β-D-glucoside
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:13637
+- CHEBI:140331
+- CHEBI:140377
+- CHEBI:38749
+- CHEBI:63367
+xrefs:
+- cas:529-55-5
+- kegg.compound:C09099
+- knapsack:C00000998
+- reaxys:66743
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C1C[C@@H](c2ccc(O)cc2)Oc2cc(O[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)cc(O)c21
+  standard_inchi: InChI=1S/C21H22O10/c22-8-16-18(26)19(27)20(28)21(31-16)29-11-5-12(24)17-13(25)7-14(30-15(17)6-11)9-1-3-10(23)4-2-9/h1-6,14,16,18-24,26-28H,7-8H2/t14-,16+,18+,19-,20+,21+/m0/s1
+  standard_inchi_key: DLIKSSGEMUFQOK-SFTVRKLSSA-N
+  molecular_formula: C21H22O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 434.397
+  monoisotopic_mass: 434.1213
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28327
+  source_label: naringenin 7-O-β-D-glucoside
+  minted_identifier: antibioticmech:chebi-e536cca9d2
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

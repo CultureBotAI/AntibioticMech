@@ -1,0 +1,55 @@
+identifier: CHEBI:66703
+label: (R)-4''-methoxydalbergione
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 1,4-benzoquinones that is p-benzoquinone substituted
+  by a methoxy group at position 2 and a 1-phenylallyl group at position 5. Isolated
+  from the heartwood of Dalbergia louveli, it exhibits antiplasmodial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-methoxy-5-[(1R)-1-phenylprop-2-en-1-yl]cyclohexa-2,5-diene-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-4-methoxydalbergione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methoxy-5-(1-phenylallyl)-4-benzoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methoxy-5-(1-phenylallyl)-p-benzoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132124
+- CHEBI:47985
+xrefs:
+- cas:28396-75-0
+- cas:4646-86-0
+- kegg.compound:C10505
+- knapsack:C00002549
+- reaxys:2054297
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: C=C[C@@H](C1=CC(=O)C(OC)=CC1=O)c1ccccc1
+  standard_inchi: InChI=1S/C16H14O3/c1-3-12(11-7-5-4-6-8-11)13-9-15(18)16(19-2)10-14(13)17/h3-10,12H,1H2,2H3/t12-/m1/s1
+  standard_inchi_key: RGSUZUQISVAJJF-GFCCVEGCSA-N
+  molecular_formula: C16H14O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 254.285
+  monoisotopic_mass: 254.09429
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66703
+  source_label: (R)-4''-methoxydalbergione
+  minted_identifier: antibioticmech:chebi-541bc9955a
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

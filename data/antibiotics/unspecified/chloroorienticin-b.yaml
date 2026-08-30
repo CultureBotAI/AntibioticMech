@@ -1,0 +1,47 @@
+identifier: CHEBI:76058
+label: chloroorienticin B
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A glycopeptide that is isolated from Amycolatopsis orientalis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,2R,18R,19R,22S,25R,28R,40S)-2-{[(2R,4S,5R,6S)-4-amino-5-hydroxy-4,6-dimethyltetrahydro-2H-pyran-2-yl]oxy}-22-(2-amino-2-oxoethyl)-5,15-dichloro-18,32,35,37-tetrahydroxy-19-{[(2R)-4-methyl-2-(methylamino)pentanoyl]amino}-20,23,26,42,44-pentaoxo-48-{[(2S,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl]oxy}-7,13-dioxa-21,24,27,41,43-pentaazaoctacyclo[26.14.2.23,6.214,17.18,12.129,33.010,25.034,39]pentaconta-3,5,8(48),9,11,14,16,29(45),30,32,34,36,38,46,49-pentadecaene-40-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24396
+- CHEBI:24533
+- CHEBI:26195
+- CHEBI:36683
+- CHEBI:37407
+- CHEBI:63367
+xrefs:
+- cas:118373-81-2
+- metacyc.compound:CPD-15748
+- reaxys:6797909
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CN[C@H](CC(C)C)C(=O)N[C@H]1C(=O)N[C@@H](CC(N)=O)C(=O)N[C@H]2C(=O)N[C@H]3C(=O)N[C@H](C(=O)N[C@H](C(=O)O)c4cc(O)cc(O)c4-c4cc3ccc4O)[C@H](O[C@H]3C[C@](C)(N)[C@@H](O)[C@H](C)O3)c3ccc(c(Cl)c3)Oc3cc2cc(c3O[C@@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@H]2O)Oc2ccc(cc2Cl)[C@H]1O
+  standard_inchi: InChI=1S/C66H75Cl2N9O24/c1-23(2)12-34(71-5)58(88)76-49-51(83)26-7-10-38(32(67)14-26)97-40-16-28-17-41(56(40)101-65-54(86)53(85)52(84)42(22-78)99-65)98-39-11-8-27(15-33(39)68)55(100-44-21-66(4,70)57(87)24(3)96-44)50-63(93)75-48(64(94)95)31-18-29(79)19-37(81)45(31)30-13-25(6-9-36(30)80)46(60(90)77-50)74-61(91)47(28)73-59(89)35(20-43(69)82)72-62(49)92/h6-11,13-19,23-24,34-35,42,44,46-55,57,65,71,78-81,83-87H,12,20-22,70H2,1-5H3,(H2,69,82)(H,72,92)(H,73,89)(H,74,91)(H,75,93)(H,76,88)(H,77,90)(H,94,95)/t24-,34+,35-,42+,44-,46+,47+,48-,49+,50-,51+,52+,53-,54+,55+,57-,65-,66-/m0/s1
+  standard_inchi_key: ATHQCOUEZPBNLP-JWYJDYCQSA-N
+  molecular_formula: C66H75Cl2N9O24
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1449.271
+  monoisotopic_mass: 1447.4302
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:76058
+  source_label: chloroorienticin B
+  minted_identifier: antibioticmech:chebi-57f177d2bb
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

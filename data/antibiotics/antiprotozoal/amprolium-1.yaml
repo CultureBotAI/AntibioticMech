@@ -1,0 +1,44 @@
+identifier: CHEBI:85266
+label: amprolium(1+)
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyridinium ion that is the cationic portion of amprolium, a veterinary
+  drug which is used for prevention of coccidiosis in poultry and cattle.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-[(4-amino-2-propylpyrimidin-5-yl)methyl]-2-methylpyridin-1-ium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: amprolium cation
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:50334
+xrefs:
+- lincs.smallmolecule:LSM-6688
+- reaxys:4149652
+activity_roles:
+- CHEBI:35818
+chemical_structure:
+  smiles: CCCc1ncc(C[n+]2ccccc2C)c(N)n1
+  standard_inchi: InChI=1S/C14H19N4/c1-3-6-13-16-9-12(14(15)17-13)10-18-8-5-4-7-11(18)2/h4-5,7-9H,3,6,10H2,1-2H3,(H2,15,16,17)/q+1
+  standard_inchi_key: IPZFPROOBOUEIG-UHFFFAOYSA-N
+  molecular_formula: C14H19N4
+  structure_source: ChEBI
+  charge: 1
+  average_mass: 243.334
+  monoisotopic_mass: 243.16042
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85266
+  source_label: amprolium(1+)
+  minted_identifier: antibioticmech:chebi-0a56b90d0e
+  role_terms:
+  - CHEBI:35818
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,67 @@
+identifier: CHEBI:5130
+label: flurbiprofen
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid that is a 2-fluoro-[1,1'-biphenyl-4-yl] moiety linked
+  to C-2 of propionic acid. A non-steroidal anti-inflammatory, analgesic and antipyretic,
+  it is used as a pre-operative anti-miotic as well as orally for arthritis or dental
+  pain.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(2-fluoro-[1,1'-biphenyl-4-yl])propanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (±)-2-fluoro-α-methyl-4-biphenylacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(2-fluorobiphenyl-4-yl)propanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-fluoro-α-methyl-(1,1'-biphenyl)-4-acetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-fluoro-4-phenylhydratropic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ansaid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Flurbiprofen
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:38679
+xrefs:
+- beilstein:2054451
+- cas:5104-49-4
+- drugbank:DB00712
+- drugcentral:1219
+- kegg.drug:D00330
+- lincs.smallmolecule:LSM-5174
+- wikipedia.en:Flurbiprofen
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C(=O)O)c1ccc(-c2ccccc2)c(F)c1
+  standard_inchi: InChI=1S/C15H13FO2/c1-10(15(17)18)12-7-8-13(14(16)9-12)11-5-3-2-4-6-11/h2-10H,1H3,(H,17,18)
+  standard_inchi_key: SYTBZMRGLBWNTM-UHFFFAOYSA-N
+  molecular_formula: C15H13FO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 244.265
+  monoisotopic_mass: 244.08996
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5130
+  source_label: flurbiprofen
+  minted_identifier: antibioticmech:chebi-f4176172a2
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

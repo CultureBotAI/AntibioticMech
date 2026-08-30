@@ -1,0 +1,99 @@
+identifier: CHEBI:3510
+label: ceftibuten
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A third-generation cephalosporin antibiotic with a [(2Z)-2-(2-amino-1,3-thiazol-4-yl)-4-carboxybut-2-enoyl]amino
+  substituent at the 7 position of the cephem skeleton. An orally-administered agent,
+  ceftibuten is used as the dihydrate to treat urinary-tract and respiratory-tract
+  infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ceftibutene
+  synonym_type: INN
+  source: chebi
+- synonym_text: ceftibuteno
+  synonym_type: INN
+  source: chebi
+- synonym_text: ceftibutenum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 7β-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-4-carboxybut-2-enoyl]amino}-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-7-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-4-carboxybut-2-enoyl]amino}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cis-ceftibuten
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CTB
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Cedax
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23066
+- CHEBI:35692
+- ARO:0000032
+xrefs:
+- ARO:3000648
+- beilstein:5892046
+- cas:97519-39-6
+- drugbank:DB01415
+- drugcentral:562
+- kegg.compound:C08117
+- kegg.drug:D00922
+- patent:CN105153198
+- patent:CN106397455
+- patent:EP136721
+- patent:US4634697
+- wikipedia.en:Ceftibuten
+- chembl:CHEMBL1605
+- pubchem.compound:5282242
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC=C(C(=O)O)N1C(=O)[C@H]2NC(=O)/C(=C\CC(=O)O)c1csc(N)n1'
+  standard_inchi: InChI=1S/C15H14N4O6S2/c16-15-17-7(5-27-15)6(1-2-9(20)21)11(22)18-10-12(23)19-8(14(24)25)3-4-26-13(10)19/h1,3,5,10,13H,2,4H2,(H2,16,17)(H,18,22)(H,20,21)(H,24,25)/b6-1-/t10-,13-/m1/s1
+  standard_inchi_key: UNJFKXSSGBWRBZ-BJCIPQKHSA-N
+  molecular_formula: C15H14N4O6S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 410.433
+  monoisotopic_mass: 410.03548
+source_concepts:
+- source: ARO
+  source_id: ARO:3000648
+  source_label: ceftibuten
+  minted_identifier: antibioticmech:aro-a01cf7a588
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3510
+  source_label: ceftibuten
+  minted_identifier: antibioticmech:chebi-6593ad56da
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000648 (ceftibuten); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

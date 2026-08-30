@@ -1,0 +1,53 @@
+identifier: CHEBI:32202
+label: tetracenomycin D3
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracenomycin that is 1-methyl-6,11-dioxo-6,11-dihydrotetracene-2-carboxylic
+  acid bearing four hydroxy substituents at positions 3, 8, 10 and 12.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,8,10,12-tetrahydroxy-1-methyl-6,11-dioxo-6,11-dihydrotetracene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetracenomycin D(3)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetracenomycin D3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:35868
+- CHEBI:48132
+- CHEBI:51286
+xrefs:
+- cas:117241-61-9
+- kegg.compound:C12368
+- knapsack:C00017937
+- reaxys:8807953
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: Cc1c(C(=O)O)c(O)cc2cc3c(c(O)c12)C(=O)c1c(O)cc(O)cc1C3=O
+  standard_inchi: InChI=1S/C20H12O8/c1-6-13-7(3-11(22)14(6)20(27)28)2-9-16(18(13)25)19(26)15-10(17(9)24)4-8(21)5-12(15)23/h2-5,21-23,25H,1H3,(H,27,28)
+  standard_inchi_key: OXCNORDLEQIUCT-UHFFFAOYSA-N
+  molecular_formula: C20H12O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 380.308
+  monoisotopic_mass: 380.05322
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32202
+  source_label: tetracenomycin D3
+  minted_identifier: antibioticmech:chebi-34513b6bfd
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

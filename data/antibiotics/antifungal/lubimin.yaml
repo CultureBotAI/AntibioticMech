@@ -1,0 +1,49 @@
+identifier: CHEBI:27774
+label: lubimin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A vetispirane sesquiterpenoid that consists of (2R,5S,6S,8S,10R)-8-hydroxy-10-methyl-2-(prop-1-en-2-yl)spiro[4.5]decane
+  bearing a formyl substituent at position 6.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,5S,6S,8S,10R)-8-hydroxy-10-methyl-2-(prop-1-en-2-yl)spiro[4.5]decane-6-carbaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R,5S,6S,8S,10R)-8-hydroxy-2-isopropenyl-10-methylspiro[4.5]decane-6-carbaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Lubimin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36755
+xrefs:
+- cas:35951-50-9
+- kegg.compound:C09700
+- knapsack:C00003163
+- reaxys:2454654
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C=C(C)[C@@H]1CC[C@]2(C1)[C@H](C)C[C@H](O)C[C@@H]2C=O
+  standard_inchi: InChI=1S/C15H24O2/c1-10(2)12-4-5-15(8-12)11(3)6-14(17)7-13(15)9-16/h9,11-14,17H,1,4-8H2,2-3H3/t11-,12-,13-,14+,15+/m1/s1
+  standard_inchi_key: CEVNHRPKRNTGKO-ZSAUSMIDSA-N
+  molecular_formula: C15H24O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 236.355
+  monoisotopic_mass: 236.17763
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:27774
+  source_label: lubimin
+  minted_identifier: antibioticmech:chebi-08f502f2c8
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

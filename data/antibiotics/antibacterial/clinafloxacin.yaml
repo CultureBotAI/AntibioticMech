@@ -1,0 +1,55 @@
+identifier: antibioticmech:aro-86221775c0
+label: clinafloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Clinafloxacin is a fluoroquinolone antibiotic and gyrase (DNA topoisomerase
+  II) inhibitor. It binds to DNA gyrase and disrupts replication by causing double-stranded
+  DNA breaks, resulting in cell death.
+definition_source: PMID:3142350
+synonyms:
+- synonym_text: CLX
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:0000001
+xrefs:
+- ARO:3004011
+- chembl:CHEMBL278255
+- pubchem.compound:60063
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: C1CC1N2C=C(C(=O)C3=CC(=C(C(=C32)Cl)N4CCC(C4)N)F)C(=O)O
+  standard_inchi: InChI=1S/C17H17ClFN3O3/c18-13-14-10(5-12(19)15(13)21-4-3-8(20)6-21)16(23)11(17(24)25)7-22(14)9-1-2-9/h5,7-9H,1-4,6,20H2,(H,24,25)
+  standard_inchi_key: QGPKADBNRMWEQR-UHFFFAOYSA-N
+  molecular_formula: C17H17ClFN3O3
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 365.8
+  monoisotopic_mass: 365.0942473
+source_concepts:
+- source: ARO
+  source_id: ARO:3004011
+  source_label: clinafloxacin
+  minted_identifier: antibioticmech:aro-86221775c0
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000733
+  target_label: fluoroquinolone sensitive gyrA
+  evidence:
+  - reference: ARO:3000733
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3004011 (clinafloxacin); database
+      assertion, not a primary citation.
+- target_id: ARO:3003261
+  target_label: fluoroquinolone sensitive gyrB
+  evidence:
+  - reference: ARO:3003261
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3004011 (clinafloxacin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

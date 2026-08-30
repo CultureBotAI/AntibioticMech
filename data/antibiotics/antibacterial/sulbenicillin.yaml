@@ -1,0 +1,64 @@
+identifier: CHEBI:9322
+label: sulbenicillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin antibiotic having a 6β-[phenyl(sulfo)acetamido] side-chain.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sulbenicilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulbenicilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulbenicillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-[phenyl(sulfo)acetamido]-2,2-dimethylpenam-3α-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-3,3-dimethyl-7-oxo-6-{[phenyl(sulfo)acetyl]amino}-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SBPC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulbenicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17334
+xrefs:
+- cas:41744-40-5
+- kegg.compound:C11170
+- kegg.drug:D08534
+- patent:DE1948943
+- patent:US3660379
+- reaxys:1186914
+- wikipedia.en:Sulbenicillin
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)C(c1ccccc1)S(=O)(=O)O'
+  standard_inchi: InChI=1S/C16H18N2O7S2/c1-16(2)11(15(21)22)18-13(20)9(14(18)26-16)17-12(19)10(27(23,24)25)8-6-4-3-5-7-8/h3-7,9-11,14H,1-2H3,(H,17,19)(H,21,22)(H,23,24,25)/t9-,10?,11+,14-/m1/s1
+  standard_inchi_key: JETQIUPBHQNHNZ-OAYJICASSA-N
+  molecular_formula: C16H18N2O7S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 414.461
+  monoisotopic_mass: 414.05554
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9322
+  source_label: sulbenicillin
+  minted_identifier: antibioticmech:chebi-4f22de0de7
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

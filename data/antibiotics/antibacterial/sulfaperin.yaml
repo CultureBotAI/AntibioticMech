@@ -1,0 +1,97 @@
+identifier: CHEBI:131722
+label: sulfaperin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A substituted aniline that is sulfanilamide in which on of the hydrogens
+  of the sulfonamide group has been replaced by a 5-methylpyrimidin-2-yl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Anastaf
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Archisulfa
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Avissul
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Chemiopen
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Demosulfan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Durisan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: sulfaperina
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfaperinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfapérin
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-amino-N-(5-methylpyrimidin-2-yl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(p-aminobenzenesulfonamido)-5-methylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(sulfanilamido)-5-methylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-amino-N-(5-methyl-2-pyrimidinyl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-methylsulfadiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-(5-methyl-2-pyrimidinyl)sulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: isosulfamerazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methylsulfadiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:39447
+- CHEBI:48975
+- CHEBI:87228
+xrefs:
+- cas:599-88-2
+- drugcentral:2522
+- kegg.drug:D07240
+- patent:US2407966
+- reaxys:249118
+- wikipedia.en:Sulfaperin
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+chemical_structure:
+  smiles: Cc1cnc(NS(=O)(=O)c2ccc(N)cc2)nc1
+  standard_inchi: InChI=1S/C11H12N4O2S/c1-8-6-13-11(14-7-8)15-18(16,17)10-4-2-9(12)3-5-10/h2-7H,12H2,1H3,(H,13,14,15)
+  standard_inchi_key: DZQVFHSCSRACSX-UHFFFAOYSA-N
+  molecular_formula: C11H12N4O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 264.31
+  monoisotopic_mass: 264.0681
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:131722
+  source_label: sulfaperin
+  minted_identifier: antibioticmech:chebi-6fd0748d17
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

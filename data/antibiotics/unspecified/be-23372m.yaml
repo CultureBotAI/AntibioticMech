@@ -1,0 +1,46 @@
+identifier: CHEBI:65473
+label: BE-23372M
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A butenolide that is furan-2(3H)-one substituted by a 3,4-dihydroxybenzylidene
+  group at position 3 and a 3,4-dihydroxyphenyl group at position 5 (the 3E stereoisomer).
+  It is isolated from the fermentation broth of the fungal strain Rhizoctonia solani
+  F23372 and has been found to possess significant tyrosine kinase inhibitory potential.
+  It also inhibits the growth of A431 human epidermoid carcinoma and MKN-7 human stomach
+  cancer cell lines.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3E)-3-(3,4-dihydroxybenzylidene)-5-(3,4-dihydroxyphenyl)furan-2(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:50523
+xrefs:
+- cas:145588-13-2
+- reaxys:6849861
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: O=C1OC(c2ccc(O)c(O)c2)=C/C1=C\c1ccc(O)c(O)c1
+  standard_inchi: InChI=1S/C17H12O6/c18-12-3-1-9(6-14(12)20)5-11-8-16(23-17(11)22)10-2-4-13(19)15(21)7-10/h1-8,18-21H/b11-5+
+  standard_inchi_key: TZBZGNPXKXHFKI-VZUCSPMQSA-N
+  molecular_formula: C17H12O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 312.277
+  monoisotopic_mass: 312.06339
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65473
+  source_label: BE-23372M
+  minted_identifier: antibioticmech:chebi-9a6da687e1
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

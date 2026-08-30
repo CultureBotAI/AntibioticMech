@@ -1,0 +1,40 @@
+identifier: CHEBI:65892
+label: exiguaflavanone B
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A trihydroxyflavanone that is (2S)-flavanone substituted by hydroxy groups
+  at positions 5, 2' and 6', a lavandulyl group at position 8 and a methoxy group
+  at position 7. Isolated from Sophora exigua and Artemisia indica, it exhibits antimalarial
+  activity.
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:38738
+- CHEBI:38739
+xrefs:
+- lipidmaps:LMPK12140112
+- reaxys:5363726
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: C=C(C)[C@H](CC=C(C)C)Cc1c(OC)cc(O)c2c1O[C@H](c1c(O)cccc1O)CC2=O
+  standard_inchi: InChI=1S/C26H30O6/c1-14(2)9-10-16(15(3)4)11-17-22(31-5)12-20(29)25-21(30)13-23(32-26(17)25)24-18(27)7-6-8-19(24)28/h6-9,12,16,23,27-29H,3,10-11,13H2,1-2,4-5H3/t16-,23+/m1/s1
+  standard_inchi_key: COKUCRXLRIRZQM-MWTRTKDXSA-N
+  molecular_formula: C26H30O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 438.52
+  monoisotopic_mass: 438.20424
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65892
+  source_label: exiguaflavanone B
+  minted_identifier: antibioticmech:chebi-6d0db85163
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

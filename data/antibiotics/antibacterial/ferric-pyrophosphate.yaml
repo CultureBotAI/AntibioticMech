@@ -1,0 +1,66 @@
+identifier: CHEBI:132767
+label: ferric pyrophosphate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An iron coordination entity composed from Fe(3+) cations and diphosphate(4−)
+  anions in a 4:3 ratio.
+definition_source: ChEBI
+synonyms:
+- synonym_text: iron(3+) diphosphate (4/3)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Iron pyrophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Iron(3+) pyrophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Iron(III) diphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Iron(III) pyrophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetrairon tris(pyrophosphate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ferric diphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: iron(3+) diphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tetrairon tris(diphosphate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33892
+xrefs:
+- cas:10058-44-3
+- reaxys:11322214
+- reaxys:28495693
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=P([O-])([O-])OP(=O)([O-])[O-].O=P([O-])([O-])OP(=O)([O-])[O-].O=P([O-])([O-])OP(=O)([O-])[O-].[Fe+3].[Fe+3].[Fe+3].[Fe+3]
+  standard_inchi: InChI=1S/4Fe.3H4O7P2/c;;;;3*1-8(2,3)7-9(4,5)6/h;;;;3*(H2,1,2,3)(H2,4,5,6)/q4*+3;;;/p-12
+  standard_inchi_key: CADNYOZXMIKYPR-UHFFFAOYSA-B
+  molecular_formula: 4Fe.3O7P2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 745.203
+  monoisotopic_mass: 745.47553
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:132767
+  source_label: ferric pyrophosphate
+  minted_identifier: antibioticmech:chebi-77c41e2a6d
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

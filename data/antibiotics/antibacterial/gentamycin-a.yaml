@@ -1,0 +1,201 @@
+identifier: CHEBI:28418
+label: gentamycin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Gentamicin A is part of a complex of broad spectrum aminoglycoside antibiotics.
+  Gentamicin inhibits protein synthesis, resulting in bacterial cell death.
+definition_source: PMID:11083623
+synonyms:
+- synonym_text: (1R,2S,3S,4R,6S)-4,6-diamino-3-[3-deoxy-3-(methylamino)-α-L-xylopyranosyloxy]-2-hydroxycyclohexyl
+    2-amino-2-deoxy-α-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Gentamicin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Gentamycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-2-amino-2-deoxy-alpha-D-glucopyranosyl-(1-4)-O-(3-deoxy-3-(methylamino)-alpha-D-xylopyranosyl-(1-6))-2-deoxy-D-streptamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Garamycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17833
+- ARO:0000016
+xrefs:
+- ARO:3004015
+- cas:13291-74-2
+- kegg.compound:C01917
+- chembl:CHEMBL7225
+- pubchem.compound:12810388
+activity_roles:
+- CHEBI:33281
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: CN[C@H]1[C@H](O)[C@H](O[C@@H]2[C@@H](O)[C@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3N)[C@@H](N)C[C@H]2N)OC[C@@H]1O
+  standard_inchi: InChI=1S/C18H36N4O10/c1-22-10-7(24)4-29-18(13(10)27)32-16-6(20)2-5(19)15(14(16)28)31-17-9(21)12(26)11(25)8(3-23)30-17/h5-18,22-28H,2-4,19-21H2,1H3/t5-,6+,7-,8+,9+,10+,11+,12+,13-,14-,15+,16-,17+,18-/m0/s1
+  standard_inchi_key: LKKVGKXCMYHKSL-LLZRLKDCSA-N
+  molecular_formula: C18H36N4O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 468.504
+  monoisotopic_mass: 468.24314
+source_concepts:
+- source: ARO
+  source_id: ARO:3004015
+  source_label: gentamicin A
+  minted_identifier: antibioticmech:aro-8ebdf2fb32
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:28418
+  source_label: gentamycin A
+  minted_identifier: antibioticmech:chebi-029f57251e
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002538
+  label: AAC(3)-IIIc
+  evidence:
+  - reference: ARO:3002538
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002597
+  label: AAC(6')-Ie-APH(2'')-Ia bifunctional protein
+  evidence:
+  - reference: ARO:3002597
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002598
+  label: ANT(3'')-II-AAC(6')-IId bifunctional protein
+  evidence:
+  - reference: ARO:3002598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002599
+  label: AAC(6')-30/AAC(6')-Ib' bifunctional protein
+  evidence:
+  - reference: ARO:3002599
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002634
+  label: APH(2'')-Ie
+  evidence:
+  - reference: ARO:3002634
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002636
+  label: APH(2'')-IIIa
+  evidence:
+  - reference: ARO:3002636
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002637
+  label: APH(2'')-IVa
+  evidence:
+  - reference: ARO:3002637
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002665
+  label: npmA
+  evidence:
+  - reference: ARO:3002665
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002666
+  label: rmtF
+  evidence:
+  - reference: ARO:3002666
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002667
+  label: rmtD
+  evidence:
+  - reference: ARO:3002667
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002668
+  label: rmtG
+  evidence:
+  - reference: ARO:3002668
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002669
+  label: APH(2'')-Ig
+  evidence:
+  - reference: ARO:3002669
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003198
+  label: rmtH
+  evidence:
+  - reference: ARO:3003198
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003688
+  label: PvrR
+  evidence:
+  - reference: ARO:3003688
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004191
+  label: APH(2'')-If
+  evidence:
+  - reference: ARO:3004191
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004677
+  label: rmtD2
+  evidence:
+  - reference: ARO:3004677
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004678
+  label: rmtE
+  evidence:
+  - reference: ARO:3004678
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004679
+  label: rmtE2
+  evidence:
+  - reference: ARO:3004679
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005061
+  label: AAC(3)-IVb
+  evidence:
+  - reference: ARO:3005061
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004015 (gentamicin
+      A); database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

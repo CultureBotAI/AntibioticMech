@@ -1,0 +1,47 @@
+identifier: CHEBI:65580
+label: caribenol A
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A terpene lactone that is 3,4,5,5a,6,7,7a,10,10a,10b-decahydro-2H-1-oxabenzo[cd]cyclopenta[h]azulen-2-one
+  substituted by a hydroxy group at position 10b and methyl groups at positions 3,
+  6, 9 and 10a. It is isolated from the West Indian gorgonian octocoral Pseudopterogorgia
+  elisabethae and exhibits antitubercular and antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S,5aR,6S,7aR,10aS,10bS)-10b-hydroxy-3,6,9,10a-tetramethyl-3,4,5,5a,6,7,7a,10,10a,10b-decahydro-2H-1-oxabenzo[cd]cyclopenta[h]azulen-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26878
+- CHEBI:37668
+- CHEBI:38163
+xrefs:
+- chemspider:21194015
+- reaxys:11167804
+activity_roles:
+- CHEBI:33231
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]12CC[C@H](C)C3=C1[C@@](O)(OC3=O)[C@@]1(C)CC(C)=C[C@@]1([H])C[C@@H]2C'
+  standard_inchi: InChI=1S/C19H26O3/c1-10-7-13-8-12(3)14-6-5-11(2)15-16(14)19(21,22-17(15)20)18(13,4)9-10/h7,11-14,21H,5-6,8-9H2,1-4H3/t11-,12-,13-,14+,18-,19+/m0/s1
+  standard_inchi_key: JHCPXISTONUFKB-UUBMZHIOSA-N
+  molecular_formula: C19H26O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 302.414
+  monoisotopic_mass: 302.18819
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65580
+  source_label: caribenol A
+  minted_identifier: antibioticmech:chebi-e0c1565436
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

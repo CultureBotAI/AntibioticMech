@@ -1,0 +1,44 @@
+identifier: CHEBI:16251
+label: deaminohydroxyblasticidin S
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: 1-{4-[3-amino-5-(N-methylcarbamimidamido)pentanamido]-2,3,4-trideoxy-β-D-erythro-hex-2-enopyranuronosyl}pyrimidine-2,4(1H,3H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Deaminohydroxyblasticidin S
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Desaminohydroxyblasticidin-S
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22905
+xrefs:
+- kegg.compound:C03860
+- pdb-ccd:BLO
+activity_roles:
+- CHEBI:25605
+chemical_structure:
+  smiles: CN(CCC(N)CC(=O)N[C@H]1C=C[C@H](n2ccc(=O)nc2=O)O[C@@H]1C(=O)O)C(=N)N
+  standard_inchi: InChI=1S/C17H25N7O6/c1-23(16(19)20)6-4-9(18)8-12(26)21-10-2-3-13(30-14(10)15(27)28)24-7-5-11(25)22-17(24)29/h2-3,5,7,9-10,13-14H,4,6,8,18H2,1H3,(H3,19,20)(H,21,26)(H,27,28)(H,22,25,29)/t9?,10-,13+,14-/m0/s1
+  standard_inchi_key: REIIQZAQCCFGIJ-LBLJTAPMSA-N
+  molecular_formula: C17H25N7O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 423.43
+  monoisotopic_mass: 423.18663
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:16251
+  source_label: deaminohydroxyblasticidin S
+  minted_identifier: antibioticmech:chebi-61e309b9e9
+  role_terms:
+  - CHEBI:25605
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

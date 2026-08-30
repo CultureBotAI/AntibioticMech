@@ -1,0 +1,56 @@
+identifier: CHEBI:141328
+label: 9-deoxy-hymatoxin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterotetracyclic compound that is isopimarane in which a hydrogen
+  at position 2 of the 13-ethyl substituent has been replaced by a (sulfooxy) group,
+  a double bond has been introduced at the 7-8 position, and the β-methyl group at
+  position 4 has been oxidised to the corrsponding carboxy group and coupled to position
+  6 to give a γ-lactone. Isolated from an avendophytic fungus, Xylaria sp. YM 311647,
+  obtained from Azadirachta indica, it shows potent inhibitory activity against C.
+  albicans and Pyricularia oryzae.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6β,13α)-18-oxo-6,18-epoxypimar-7-en-16-yl hydrogen sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-9-deoxy-hymatoxin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-9-deoxyhymatoxin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-deoxyhymatoxin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:138429
+- CHEBI:25704
+- CHEBI:35190
+- CHEBI:37581
+- CHEBI:38163
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12[C@H]3C=C4C[C@@](C)(CCOS(=O)(=O)O)CC[C@]4([H])[C@@]1(C)CCC[C@]2(C)C(=O)O3'
+  standard_inchi: InChI=1S/C20H30O6S/c1-18(9-10-25-27(22,23)24)8-5-14-13(12-18)11-15-16-19(14,2)6-4-7-20(16,3)17(21)26-15/h11,14-16H,4-10,12H2,1-3H3,(H,22,23,24)/t14-,15+,16+,18+,19+,20-/m0/s1
+  standard_inchi_key: ZRFMKYKOLFQQPF-QWFGBESBSA-N
+  molecular_formula: C20H30O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 398.521
+  monoisotopic_mass: 398.17631
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141328
+  source_label: 9-deoxy-hymatoxin A
+  minted_identifier: antibioticmech:chebi-d9cc50b7c6
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

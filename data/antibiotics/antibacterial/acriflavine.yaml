@@ -1,0 +1,204 @@
+identifier: antibioticmech:aro-1fe0873afd
+label: acriflavine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Acriflavine is a topical antiseptic. It has the form of an orange or brown
+  powder. It may be harmful in the eyes or if inhaled. Acriflavine is also used as
+  treatment for external fungal infections of aquarium fish.
+definition_source: PMID:11566977
+synonyms:
+- synonym_text: Acriflavin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Assiflavine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Bialflavina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Bioacridin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Bovoflavin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Buroflavin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Choliflavin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Euflavine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Pantonsiletten
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Xanthacridinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3005386
+xrefs:
+- ARO:0000045
+- chembl:CHEMBL5219994
+- pubchem.compound:443101
+structural_class: disinfecting agents and antiseptics
+structural_class_id: ARO:3005386
+chemical_structure:
+  smiles: C[N+]1=C2C=C(C=CC2=CC3=C1C=C(C=C3)N)N.C1=CC(=CC2=NC3=C(C=CC(=C3)N)C=C21)N.[Cl-]
+  standard_inchi: InChI=1S/C14H13N3.C13H11N3.ClH/c1-17-13-7-11(15)4-2-9(13)6-10-3-5-12(16)8-14(10)17;14-10-3-1-8-5-9-2-4-11(15)7-13(9)16-12(8)6-10;/h2-8H,1H3,(H3,15,16);1-7H,14-15H2;1H
+  standard_inchi_key: PEJLNXHANOHNSU-UHFFFAOYSA-N
+  molecular_formula: C27H25ClN6
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 469.0
+  monoisotopic_mass: 468.1829225
+source_concepts:
+- source: ARO
+  source_id: ARO:0000045
+  source_label: acriflavine
+  minted_identifier: antibioticmech:aro-1fe0873afd
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000216
+  label: acrB
+  evidence:
+  - reference: ARO:3000216
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000391
+  label: norA
+  evidence:
+  - reference: ARO:3000391
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000753
+  label: abeM
+  evidence:
+  - reference: ARO:3000753
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000799
+  label: MexGHI-OpmD
+  evidence:
+  - reference: ARO:3000799
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3001214
+  label: mdtM
+  evidence:
+  - reference: ARO:3001214
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003006
+  label: blt
+  evidence:
+  - reference: ARO:3003006
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003007
+  label: bmr
+  evidence:
+  - reference: ARO:3003007
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003029
+  label: MexVW-OprM
+  evidence:
+  - reference: ARO:3003029
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003032
+  label: MexXY-OprM
+  evidence:
+  - reference: ARO:3003032
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003374
+  label: Enterobacter aerogenes acrR with mutation conferring multidrug antibiotic
+    resistance
+  evidence:
+  - reference: ARO:3003374
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003551
+  label: emeA
+  evidence:
+  - reference: ARO:3003551
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003697
+  label: MexPQ-OpmE
+  evidence:
+  - reference: ARO:3003697
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003835
+  label: cdeA
+  evidence:
+  - reference: ARO:3003835
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003953
+  label: hmrM
+  evidence:
+  - reference: ARO:3003953
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004101
+  label: MdtNOP
+  evidence:
+  - reference: ARO:3004101
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004577
+  label: Acinetobacter baumannii AmvA
+  evidence:
+  - reference: ARO:3004577
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007011
+  label: mdeA
+  evidence:
+  - reference: ARO:3007011
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007012
+  label: sepA
+  evidence:
+  - reference: ARO:3007012
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009153
+  label: MexHI-OpmD
+  evidence:
+  - reference: ARO:3009153
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000045 (acriflavine);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

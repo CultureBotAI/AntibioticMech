@@ -1,0 +1,56 @@
+identifier: antibioticmech:aro-9fd72752cb
+label: enacyloxin IIa
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Enacyloxin IIa is structurally distinct but acts in a similar mechanism
+  to kirromycin-like elfamycins. It prohibits the transfer of the amino acid at the
+  A site to the elongating peptide chain. It is most likely that the mechanism of
+  action is that EF-Tu*GDP is locked in the EF-Tu*GTP form, and EF-Tu*GDP*aa-tRNA
+  is immobilized on the ribosome. It is an open question whether enacyloxin IIa actually
+  belongs to the kirromycin-like group of elfamycins due to their high similarity.
+definition_source: PMID:8665868
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3001242
+- chembl:CHEMBL5282611
+- pubchem.compound:6444164
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: CC/C=C/[C@H]([C@H]([C@@H](CC(=O)C(C([C@H](C)/C(=C/C=C/C=C(\C)/C=C/C=C/C(=O)O[C@@H]1C[C@H](CC[C@@H]1O)C(=O)O)/Cl)O)O)O)Cl)OC(=O)N
+  standard_inchi: InChI=1S/C33H45Cl2NO11/c1-4-5-13-26(47-33(36)45)29(35)24(38)18-25(39)31(42)30(41)20(3)22(34)12-8-6-10-19(2)11-7-9-14-28(40)46-27-17-21(32(43)44)15-16-23(27)37/h5-14,20-21,23-24,26-27,29-31,37-38,41-42H,4,15-18H2,1-3H3,(H2,36,45)(H,43,44)/b8-6+,11-7+,13-5+,14-9+,19-10+,22-12-/t20-,21+,23+,24-,26-,27-,29+,30?,31?/m1/s1
+  standard_inchi_key: IWBADCVFZDCUTN-RYDLOJRTSA-N
+  molecular_formula: C33H45Cl2NO11
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 702.6
+  monoisotopic_mass: 701.2369666
+source_concepts:
+- source: ARO
+  source_id: ARO:3001242
+  source_label: enacyloxin IIa
+  minted_identifier: antibioticmech:aro-9fd72752cb
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003370
+  label: Escherichia coli EF-Tu mutants conferring resistance to Enacyloxin IIa
+  evidence:
+  - reference: ARO:3003370
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001242 (enacyloxin
+      IIa); database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000731
+  target_label: elongation factor Tu
+  evidence:
+  - reference: ARO:3000731
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3001242 (enacyloxin IIa); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

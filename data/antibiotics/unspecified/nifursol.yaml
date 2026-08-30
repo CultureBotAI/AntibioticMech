@@ -1,0 +1,66 @@
+identifier: CHEBI:172596
+label: nifursol
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: Histomon
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Salfuride
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Sulfuride
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: nifursolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-hydroxy-3,5-dinitro-N'-[(5-nitrofuran-2-yl)methylidene]benzohydrazide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-hydroxy-3,5-dinitro-N'-((5-nitrofuran-2-yl)methylene)benzohydrazide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,5-dinitrosalicyl-(5-nitrofurfurylidene)hydrazide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,5-dinitrosalicylic acid (5-nitrofurfurylidene)hydrazide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BT06G06
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35363
+- CHEBI:39352
+- CHEBI:87230
+xrefs:
+- cas:16915-70-1
+- chemspider:7844794
+- hmdb:HMDB0031764
+- kegg.drug:D05166
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H]C(=NNC(=O)c1cc([N+](=O)[O-])cc([N+](=O)[O-])c1O)c1ccc([N+](=O)[O-])o1'
+  standard_inchi: InChI=1S/C12H7N5O9/c18-11-8(3-6(15(20)21)4-9(11)16(22)23)12(19)14-13-5-7-1-2-10(26-7)17(24)25/h1-5,18H,(H,14,19)
+  standard_inchi_key: XXUXXCZCUGIGPP-UHFFFAOYSA-N
+  molecular_formula: C12H7N5O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 365.214
+  monoisotopic_mass: 365.02438
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:172596
+  source_label: nifursol
+  minted_identifier: antibioticmech:chebi-67e5f44baa
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

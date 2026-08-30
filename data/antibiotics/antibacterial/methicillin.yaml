@@ -1,0 +1,151 @@
+identifier: CHEBI:6827
+label: methicillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin that is 6-aminopenicillanic acid in which one of the amino
+  hydrogens is replaced by a 2,6-dimethoxybenzoyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: meticilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: meticillin
+  synonym_type: INN
+  source: chebi
+- synonym_text: meticilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: meticillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-(2,6-dimethoxybenzamido)-2,2-dimethylpenam-3α-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-[(2,6-dimethoxybenzoyl)amino]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6β-(2,6-dimethoxybenzamido)penicillanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dimocillin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Metacillin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Methicillinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Methycillin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Meticilina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Meticilline
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Meticillinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Staphcillin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- CHEBI:88187
+- ARO:3000008
+xrefs:
+- ARO:0000015
+- cas:61-32-5
+- drugbank:DB01603
+- drugcentral:1744
+- kegg.compound:C07177
+- reaxys:966227
+- wikipedia.en:Meticillin
+- chembl:CHEMBL575
+- pubchem.compound:6087
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)c1c(OC)cccc1OC'
+  standard_inchi: InChI=1S/C17H20N2O6S/c1-17(2)12(16(22)23)19-14(21)11(15(19)26-17)18-13(20)10-8(24-3)6-5-7-9(10)25-4/h5-7,11-12,15H,1-4H3,(H,18,20)(H,22,23)/t11-,12+,15-/m1/s1
+  standard_inchi_key: RJQXTJLFIWVMTO-TYNCELHUSA-N
+  molecular_formula: C17H20N2O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 380.422
+  monoisotopic_mass: 380.10421
+source_concepts:
+- source: ARO
+  source_id: ARO:0000015
+  source_label: methicillin
+  minted_identifier: antibioticmech:aro-0633d1676e
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:6827
+  source_label: methicillin
+  minted_identifier: antibioticmech:chebi-fb6bb57072
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000617
+  label: mecA
+  evidence:
+  - reference: ARO:3000617
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000015 (methicillin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3001209
+  label: mecC
+  evidence:
+  - reference: ARO:3001209
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000015 (methicillin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003440
+  label: mecB
+  evidence:
+  - reference: ARO:3003440
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000015 (methicillin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003942
+  label: abcA
+  evidence:
+  - reference: ARO:3003942
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000015 (methicillin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004185
+  label: mecD
+  evidence:
+  - reference: ARO:3004185
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000015 (methicillin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000015 (methicillin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

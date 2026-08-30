@@ -1,0 +1,48 @@
+identifier: CHEBI:84328
+label: (9Z)-heptadecenoic acid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A heptadecenoic acid in which the double bond is located at the 9-10 position
+  and has Z configuration.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (9Z)-heptadec-9-enoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cis-9-heptadecenoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36001
+- CHEBI:59202
+xrefs:
+- cas:1981-50-6
+- patent:EP0690710
+- patent:US5708028
+- patent:WO9421247
+- reaxys:1726108
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCCCC/C=C\CCCCCCCC(=O)O
+  standard_inchi: InChI=1S/C17H32O2/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17(18)19/h8-9H,2-7,10-16H2,1H3,(H,18,19)/b9-8-
+  standard_inchi_key: QSBYPNXLFMSGKH-HJWRWDBZSA-N
+  molecular_formula: C17H32O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 268.441
+  monoisotopic_mass: 268.24023
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:84328
+  source_label: (9Z)-heptadecenoic acid
+  minted_identifier: antibioticmech:chebi-b4d4325f85
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

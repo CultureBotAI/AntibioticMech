@@ -1,0 +1,45 @@
+identifier: CHEBI:42452
+label: formycin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (1S)-1-(7-amino-1H-pyrazolo[4,3-d]pyrimidin-3-yl)-1,4-anhydro-D-ribitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FORMYCIN
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Formycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24088
+xrefs:
+- beilstein:624229
+- cas:6742-12-7
+- pdb-ccd:FMC
+activity_roles:
+- CHEBI:25605
+chemical_structure:
+  smiles: Nc1ncnc2c([C@@H]3O[C@H](CO)[C@@H](O)[C@H]3O)nnc12
+  standard_inchi: InChI=1S/C10H13N5O4/c11-10-6-4(12-2-13-10)5(14-15-6)9-8(18)7(17)3(1-16)19-9/h2-3,7-9,16-18H,1H2,(H,14,15)(H2,11,12,13)/t3-,7-,8-,9+/m1/s1
+  standard_inchi_key: KBHMEHLJSZMEMI-KSYZLYKTSA-N
+  molecular_formula: C10H13N5O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 267.245
+  monoisotopic_mass: 267.09675
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:42452
+  source_label: formycin A
+  minted_identifier: antibioticmech:chebi-b9c0b94498
+  role_terms:
+  - CHEBI:25605
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

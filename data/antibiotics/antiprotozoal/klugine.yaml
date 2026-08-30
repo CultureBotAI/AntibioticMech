@@ -1,0 +1,46 @@
+identifier: CHEBI:66147
+label: klugine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An isoquinoline alkaloid that is emetan substituted by methoxy groups
+  at positions 7' and 11 and hydroxy groups at positions 1', 6' and 10'. Isolated
+  from Psychotria klugii, it exhibits antileishmanial and antiplasmodial activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7',11-dimethoxyemetan-1',6',10-triol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24921
+- CHEBI:24923
+- CHEBI:26878
+- CHEBI:61692
+xrefs:
+- reaxys:9677142
+activity_roles:
+- CHEBI:64915
+- CHEBI:70868
+chemical_structure:
+  smiles: '[H][C@@]12C[C@H](C[C@@]3(O)NCCc4cc(O)c(OC)cc43)[C@@H](CC)CN1CCc1cc(O)c(OC)cc12'
+  standard_inchi: InChI=1S/C27H36N2O5/c1-4-16-15-29-8-6-17-10-23(30)25(33-2)12-20(17)22(29)9-19(16)14-27(32)21-13-26(34-3)24(31)11-18(21)5-7-28-27/h10-13,16,19,22,28,30-32H,4-9,14-15H2,1-3H3/t16-,19+,22-,27-/m0/s1
+  standard_inchi_key: IIFHKWNCTVOSKL-OKGGWNPJSA-N
+  molecular_formula: C27H36N2O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 468.594
+  monoisotopic_mass: 468.26242
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66147
+  source_label: klugine
+  minted_identifier: antibioticmech:chebi-eb8bd1b645
+  role_terms:
+  - CHEBI:64915
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,42 @@
+identifier: CHEBI:64257
+label: tunicamycin C2
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A nucleoside that is one of the homologues in the mixture that is tunicamycin,
+  characterised by a hexadec-2-enoyl fatty acyl substituent on the amino group of
+  the tunicamine moiety.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-N-[(2S,3R,4R,5R,6R)-2-{[(2R,3R,4R,5S,6R)-3-acetamido-4,5-dihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl]oxy}-6-{(2R)-2-[(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]-2-hydroxyethyl}-4,5-dihydroxytetrahydro-2H-pyran-3-yl]hexadec-2-enamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5'R)-5'-[2-acetamido-2-deoxy-α-D-glucopyranosyl-(1↔1)-2,6-dideoxy-2-(hexadec-2-enamido)-β-D-galactopyranos-6-yl]uridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33838
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]1([C@]([H])(O)C[C@H]2O[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3NC(C)=O)[C@H](NC(=O)/C=C/CCCCCCCCCCCCC)[C@@H](O)[C@H]2O)O[C@@H](n2ccc(=O)nc2=O)[C@H](O)[C@@H]1O'
+  standard_inchi: InChI=1S/C39H64N4O16/c1-3-4-5-6-7-8-9-10-11-12-13-14-15-16-25(47)41-28-32(52)29(49)23(56-38(28)59-37-27(40-21(2)45)31(51)30(50)24(20-44)57-37)19-22(46)35-33(53)34(54)36(58-35)43-18-17-26(48)42-39(43)55/h15-18,22-24,27-38,44,46,49-54H,3-14,19-20H2,1-2H3,(H,40,45)(H,41,47)(H,42,48,55)/b16-15+/t22-,23-,24-,27-,28-,29+,30-,31-,32-,33+,34-,35-,36-,37-,38+/m1/s1
+  standard_inchi_key: NKDRZEIENXWUCE-VDIUWDQWSA-N
+  molecular_formula: C39H64N4O16
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 844.953
+  monoisotopic_mass: 844.43173
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:64257
+  source_label: tunicamycin C2
+  minted_identifier: antibioticmech:chebi-98ab7fba2e
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

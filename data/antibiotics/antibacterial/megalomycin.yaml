@@ -1,0 +1,36 @@
+identifier: antibioticmech:aro-d058164b57
+label: megalomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Produced by Micromonospora megalomicia.
+definition_source: PMID:5810991
+parent_compounds:
+- ARO:0000000
+xrefs:
+- ARO:3001225
+- chembl:CHEMBL3990195
+- pubchem.compound:474871
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: CC[C@@H]1[C@@]([C@@H]([C@H](C(=O)[C@@H](C[C@@]([C@@H]([C@H]([C@@H]([C@H](C(=O)O1)C)OC2C[C@@](C([C@@H](O2)C)O)(C)O)C)OC3C([C@H](CC(O3)C)N(C)C)O)(C)OC4CC(C(C(O4)C)O)N(C)C)C)C)O)(C)O
+  standard_inchi: InChI=1S/C44H80N2O15/c1-16-30-44(11,54)37(50)23(4)33(47)21(2)19-43(10,61-31-18-29(46(14)15)34(48)26(7)56-31)39(60-41-35(49)28(45(12)13)17-22(3)55-41)24(5)36(25(6)40(52)58-30)59-32-20-42(9,53)38(51)27(8)57-32/h21-32,34-39,41,48-51,53-54H,16-20H2,1-15H3/t21-,22?,23+,24+,25-,26?,27+,28+,29?,30-,31?,32?,34?,35?,36+,37-,38?,39-,41?,42-,43-,44-/m1/s1
+  standard_inchi_key: LRWRQTMTYVZKQW-QIQQTWHTSA-N
+  molecular_formula: C44H80N2O15
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 877.1
+  monoisotopic_mass: 876.55586985
+source_concepts:
+- source: ARO
+  source_id: ARO:3001225
+  source_label: megalomycin
+  minted_identifier: antibioticmech:aro-d058164b57
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

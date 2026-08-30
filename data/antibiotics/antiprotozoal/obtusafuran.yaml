@@ -1,0 +1,47 @@
+identifier: CHEBI:66804
+label: obtusafuran
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 1-benzofurans that is 2,3-dihydro-1-benzofuran
+  substituted by a hydroxy group at position 5, a methoxy group at position 6, a methyl
+  group at position 3 and a phenyl group at position 2. Isolated from Dalbergia louveli,
+  it exhibits antiplasmodial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3R)-6-methoxy-3-methyl-2-phenyl-2,3-dihydro-1-benzofuran-5-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R,3R)-5-hydroxy-6-methoxy-3-methyl-2-phenyl-2,3-dihydrobenzofuran
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:35618
+- CHEBI:38830
+xrefs:
+- reaxys:1431004
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: COc1cc2c(cc1O)[C@@H](C)[C@H](c1ccccc1)O2
+  standard_inchi: InChI=1S/C16H16O3/c1-10-12-8-13(17)15(18-2)9-14(12)19-16(10)11-6-4-3-5-7-11/h3-10,16-17H,1-2H3/t10-,16-/m1/s1
+  standard_inchi_key: FRERFZXINXYHDY-QLJPJBMISA-N
+  molecular_formula: C16H16O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 256.301
+  monoisotopic_mass: 256.10994
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66804
+  source_label: obtusafuran
+  minted_identifier: antibioticmech:chebi-62b9ab49bf
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

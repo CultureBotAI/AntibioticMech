@@ -1,0 +1,61 @@
+identifier: CHEBI:88255
+label: nifurtoinol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An imidazolidine-2,4-dione that is hydantoin substituted at position 1
+  by a [(5-nitro-2-furyl)methylene]amino group and at position 3 by a hydroxymethyl
+  group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: nifurtoinolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 3-(hydroxymethyl)-1-{[(5-nitrofuran-2-yl)methylidene]amino}imidazolidine-2,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(Hydroxymethyl)-1-(((5-nitro-2-furanyl)methylene)amino)2,4-imidazolidinedione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(Hydroxymethyl)-1-(5-nitrofurfurylideneamino)hydantoin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hydroxymethylnitrofurantoin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24628
+- CHEBI:25558
+- CHEBI:38532
+- CHEBI:87230
+xrefs:
+- cas:1088-92-2
+- drugcentral:1930
+- kegg.drug:D07243
+- reaxys:897492
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+chemical_structure:
+  smiles: O=C1CN(/N=C/c2ccc([N+](=O)[O-])o2)C(=O)N1CO
+  standard_inchi: InChI=1S/C9H8N4O6/c14-5-11-7(15)4-12(9(11)16)10-3-6-1-2-8(19-6)13(17)18/h1-3,14H,4-5H2/b10-3+
+  standard_inchi_key: UIDWQGRXEVDFCA-XCVCLJGOSA-N
+  molecular_formula: C9H8N4O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 268.185
+  monoisotopic_mass: 268.04438
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:88255
+  source_label: nifurtoinol
+  minted_identifier: antibioticmech:chebi-c2635b935e
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

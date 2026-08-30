@@ -1,0 +1,89 @@
+identifier: CHEBI:73224
+label: allyl isothiocyanate
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An isothiocyanate with the formula CH2=CHCH2N=C=S. A colorless oil with
+  boiling point 152°C, it is responsible for the pungent taste of mustard, horseradish,
+  and wasabi.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-isothiocyanatoprop-1-ene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-propenyl isothiocyanate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-isothiocyanato-1-propene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AIT
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AITC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Allylsenfoel
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Senf oel
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: allyl isosulfocyanate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: allyl mustard oil
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: isothiocyanate d'allyle
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: isothiocyanic acid allyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: oil of mustard
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: oleum sinapis
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: volatile mustard oil
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: volatile oil of mustard
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:183102
+- CHEBI:52221
+xrefs:
+- cas:57-06-7
+- hmdb:HMDB0005843
+- kegg.compound:C19317
+- kegg.drug:D02818
+- reaxys:773748
+- wikipedia.en:Allyl_isothiocyanate
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C=CCN=C=S
+  standard_inchi: InChI=1S/C4H5NS/c1-2-3-5-4-6/h2H,1,3H2
+  standard_inchi_key: ZOJBYZNEUISWFT-UHFFFAOYSA-N
+  molecular_formula: C4H5NS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 99.158
+  monoisotopic_mass: 99.01427
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:73224
+  source_label: allyl isothiocyanate
+  minted_identifier: antibioticmech:chebi-22e5d8119b
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

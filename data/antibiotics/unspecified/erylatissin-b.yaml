@@ -1,0 +1,46 @@
+identifier: CHEBI:65864
+label: erylatissin B
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 7-hydroxyisoflavones that is isoflavone with
+  hydroxy groups at C-7 and C-3' positions and a 2,2-dimethylpyran ring fused to ring
+  B across positions C-4' and C-5'. Isolated from the stem wood of Erythrina latissima,
+  it exhibits antimicrobial and radical scavenging activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7,8'-dihydroxy-2',2'-dimethyl-2'H,4H-3,6'-bichromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '7,3''-dihydroxy-6'''',6''''-dimethyl-4'''',5''''-dehydropyrano [2'''',3'''':
+    4'',5'']isoflavone'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:55465
+xrefs:
+- reaxys:10583507
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC1(C)C=Cc2cc(-c3coc4cc(O)ccc4c3=O)cc(O)c2O1
+  standard_inchi: InChI=1S/C20H16O5/c1-20(2)6-5-11-7-12(8-16(22)19(11)25-20)15-10-24-17-9-13(21)3-4-14(17)18(15)23/h3-10,21-22H,1-2H3
+  standard_inchi_key: XOMNYGJNLZNDOL-UHFFFAOYSA-N
+  molecular_formula: C20H16O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 336.343
+  monoisotopic_mass: 336.09977
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65864
+  source_label: erylatissin B
+  minted_identifier: antibioticmech:chebi-63a2be2744
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

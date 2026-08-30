@@ -1,0 +1,51 @@
+identifier: CHEBI:51799
+label: imipenem hydrate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: imipenem
+  synonym_type: INN
+  source: chebi
+- synonym_text: (5R,6S)-6-[(1R)-1-hydroxyethyl]-3-({2-[(iminomethyl)amino]ethyl}sulfanyl)-7-oxo-1-azabicyclo[3.2.0]hept-2-ene-2-carboxylic
+    acid—water (1/1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-formimidoyl thienamycin monohydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:46633
+xrefs:
+- beilstein:8174596
+- cas:74431-23-5
+- patent:EP6639
+- patent:IE48356
+- patent:JP55009090
+- wikipedia.en:Imipenem
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H]C(=N)NCCSC1=C(C(=O)O)N2C(=O)[C@]([H])([C@@H](C)O)[C@@]2([H])C1.[H]O[H]'
+  standard_inchi: InChI=1S/C12H17N3O4S.H2O/c1-6(16)9-7-4-8(20-3-2-14-5-13)10(12(18)19)15(7)11(9)17;/h5-7,9,16H,2-4H2,1H3,(H2,13,14)(H,18,19);1H2/t6-,7-,9-;/m1./s1
+  standard_inchi_key: GSOSVVULSKVSLQ-JJVRHELESA-N
+  molecular_formula: C12H17N3O4S.H2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 317.367
+  monoisotopic_mass: 317.10454
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:51799
+  source_label: imipenem hydrate
+  minted_identifier: antibioticmech:chebi-4cabf0e4ae
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

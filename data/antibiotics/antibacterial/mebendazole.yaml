@@ -1,0 +1,46 @@
+identifier: antibioticmech:aro-adaab5b65b
+label: mebendazole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Mebendazole has a role as an antinematodal drug, a tubulin modulator,
+  and a fungal microtubule-destabilising agent.
+definition_source: PMID:35149760
+parent_compounds:
+- ARO:3009317
+xrefs:
+- ARO:3009184
+- cas:31431-39-7
+- chembl:CHEMBL685
+- pubchem.compound:4030
+structural_class: benzimidazole antifungal
+structural_class_id: ARO:3009317
+chemical_structure:
+  smiles: COC(=O)NC1=NC2=C(N1)C=C(C=C2)C(=O)C3=CC=CC=C3
+  standard_inchi: InChI=1S/C16H13N3O3/c1-22-16(21)19-15-17-12-8-7-11(9-13(12)18-15)14(20)10-5-3-2-4-6-10/h2-9H,1H3,(H2,17,18,19,21)
+  standard_inchi_key: OPXLLQIJSORQAM-UHFFFAOYSA-N
+  molecular_formula: C16H13N3O3
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 295.29
+  monoisotopic_mass: 295.09569129
+source_concepts:
+- source: ARO
+  source_id: ARO:3009184
+  source_label: mebendazole
+  minted_identifier: antibioticmech:aro-adaab5b65b
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009477
+  label: Saccharomyces cerevisiae with mutations conferring resistance to mebendazole
+  evidence:
+  - reference: ARO:3009477
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009184 (mebendazole);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

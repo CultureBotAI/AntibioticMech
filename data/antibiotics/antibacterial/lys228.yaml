@@ -1,0 +1,38 @@
+identifier: antibioticmech:aro-00a588048a
+label: LYS228
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: A monobactam with potent activity against Enterobacteriaceae. Stable to
+  metallo-B-lactamases and serine carbapenemases resulting in potency against the
+  majority of extended-spectrum B-lactamase-producing and carbapenem-resistant Enterobacteriaceae
+  strains tested.
+definition_source: PMID:30038040
+parent_compounds:
+- ARO:0000004
+xrefs:
+- ARO:3004729
+- pubchem.compound:118380292
+structural_class: monobactam
+structural_class_id: ARO:0000004
+chemical_structure:
+  smiles: C1CC1(C(=O)O)O/N=C(\C2=CSC(=N2)N)/C(=O)N[C@H]3[C@H](N(C3=O)S(=O)(=O)O)CN4CCOC4=O
+  standard_inchi: InChI=1S/C16H18N6O10S2/c17-14-18-7(6-33-14)9(20-32-16(1-2-16)13(25)26)11(23)19-10-8(5-21-3-4-31-15(21)27)22(12(10)24)34(28,29)30/h6,8,10H,1-5H2,(H2,17,18)(H,19,23)(H,25,26)(H,28,29,30)/b20-9+/t8-,10+/m1/s1
+  standard_inchi_key: FWTGYTRQUBRVDW-UWGJAOEXSA-N
+  molecular_formula: C16H18N6O10S2
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 518.5
+  monoisotopic_mass: 518.05258314
+source_concepts:
+- source: ARO
+  source_id: ARO:3004729
+  source_label: LYS228
+  minted_identifier: antibioticmech:aro-00a588048a
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

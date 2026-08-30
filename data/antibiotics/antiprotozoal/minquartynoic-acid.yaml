@@ -1,0 +1,58 @@
+identifier: CHEBI:542606
+label: minquartynoic acid
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A straight-chain, C18 polyunsaturated fatty acid having four conjugated
+  C≡C bonds at positions 9, 11, 13 and 15 as well as an (S)-hydroxy group at position
+  17.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (17S)-17-hydroxyoctadeca-9,11,13,15-tetraynoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-17-hydroxy-9,11,13,15-octadecatetraynoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-minquartynoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-minquartynoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: minquartic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140345
+- CHEBI:15904
+- CHEBI:25380
+- CHEBI:59202
+- CHEBI:59834
+xrefs:
+- cas:123154-43-8
+- reaxys:8721623
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: C[C@H](O)C#CC#CC#CC#CCCCCCCCC(=O)O
+  standard_inchi: InChI=1S/C18H20O3/c1-17(19)15-13-11-9-7-5-3-2-4-6-8-10-12-14-16-18(20)21/h17,19H,4,6,8,10,12,14,16H2,1H3,(H,20,21)/t17-/m0/s1
+  standard_inchi_key: MTWGWIOCIREVRF-KRWDZBQOSA-N
+  molecular_formula: C18H20O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 284.355
+  monoisotopic_mass: 284.14124
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:542606
+  source_label: minquartynoic acid
+  minted_identifier: antibioticmech:chebi-21b0213b4e
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

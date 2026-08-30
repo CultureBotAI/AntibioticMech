@@ -1,0 +1,86 @@
+identifier: CHEBI:28631
+label: 3-phenylpropionic acid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid that is propionic acid substituted at position 3
+  by a phenyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-phenylpropanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-Phenyl-propionic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-Phenylpropanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-Phenylpropionsäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3PP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HYDROCINNAMIC ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hydrozimtsäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phenylpropanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benzenepropanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benzenepropionic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benzylacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dihydrocinnamic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-phenylpropionic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22712
+- CHEBI:25384
+xrefs:
+- cas:501-52-0
+- drugbank:DB02024
+- ecmdb:ECMDB00764
+- gmelin:102198
+- hmdb:HMDB0000764
+- kegg.compound:C05629
+- metacyc.compound:3-PHENYLPROPIONATE
+- pdb-ccd:HCI
+- reaxys:907515
+- wikipedia.en:Phenylpropanoic_acid
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: O=C(O)CCc1ccccc1
+  standard_inchi: InChI=1S/C9H10O2/c10-9(11)7-6-8-4-2-1-3-5-8/h1-5H,6-7H2,(H,10,11)
+  standard_inchi_key: XMIIGOLPHOKFCH-UHFFFAOYSA-N
+  molecular_formula: C9H10O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 150.177
+  monoisotopic_mass: 150.06808
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28631
+  source_label: 3-phenylpropionic acid
+  minted_identifier: antibioticmech:chebi-cb4020e680
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

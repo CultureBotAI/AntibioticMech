@@ -1,0 +1,55 @@
+identifier: CHEBI:87123
+label: tulipalin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of butan-4-olides that is 3-methylidenebutan-4-olide
+  carrying an additional hydroxy substituent at position 4 (the 4R-enantiomer)
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4R)-4-hydroxy-3-methylideneoxolan-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-Tulipalin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methylene-3-hydroxy-γ-butyrolactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α-methylene-β-hydroxy-γ-butyrolactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22950
+- CHEBI:35681
+- CHEBI:51702
+xrefs:
+- cas:95529-89-8
+- knapsack:C00036320
+- metacyc.compound:CPD-18287
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: C=C1C(=O)OC[C@@H]1O
+  standard_inchi: InChI=1S/C5H6O3/c1-3-4(6)2-8-5(3)7/h4,6H,1-2H2/t4-/m0/s1
+  standard_inchi_key: BFLSLERVRLOFCX-BYPYZUCNSA-N
+  molecular_formula: C5H6O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 114.1
+  monoisotopic_mass: 114.03169
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:87123
+  source_label: tulipalin B
+  minted_identifier: antibioticmech:chebi-efaeaba690
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

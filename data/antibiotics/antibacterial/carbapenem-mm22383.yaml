@@ -1,0 +1,51 @@
+identifier: CHEBI:58998
+label: carbapenem MM22383
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbapenemcarboxylic acid having a 2-(acetamidovinyl)sulfanyl group
+  at the 2-position and an (S)-1-hydroxyethyl group at the 6-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5R,6S)-2-{[(E)-2-acetamidovinyl]sulfanyl}-6-[(1S)-1-hydroxyethyl]-2,3-didehydro-1-carbapenam-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R,6S)-3-{[(E)-2-acetamidovinyl]sulfanyl}-6-[(1S)-1-hydroxyethyl]-7-oxo-1-azabicyclo[3.2.0]hept-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MM22383
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:46634
+- CHEBI:79020
+xrefs:
+- beilstein:497581
+- cas:65322-98-7
+- kegg.compound:C17398
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H][C@]12CC(S/C=C/NC(C)=O)=C(C(=O)O)N1C(=O)[C@]2([H])[C@H](C)O'
+  standard_inchi: InChI=1S/C13H16N2O5S/c1-6(16)10-8-5-9(21-4-3-14-7(2)17)11(13(19)20)15(8)12(10)18/h3-4,6,8,10,16H,5H2,1-2H3,(H,14,17)(H,19,20)/b4-3+/t6-,8+,10+/m0/s1
+  standard_inchi_key: PRPNUZWHFGSGRV-RZFSBTTISA-N
+  molecular_formula: C13H16N2O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 312.347
+  monoisotopic_mass: 312.07799
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:58998
+  source_label: carbapenem MM22383
+  minted_identifier: antibioticmech:chebi-76365d348b
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

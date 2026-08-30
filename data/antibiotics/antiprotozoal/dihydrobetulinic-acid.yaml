@@ -1,0 +1,47 @@
+identifier: CHEBI:65485
+label: dihydrobetulinic acid
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pentacyclic triterpenoid that is lupane having a 3β-hydroxy and 28-carboxy
+  substituents. Isolated from the leaves of Syzygium claviflorum, it exhibits anti-HIV
+  and antileishmanial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3β)-3-hydroxylupan-28-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 20,29-dihydrobetulinic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25872
+- CHEBI:35868
+xrefs:
+- cas:25488-53-3
+- patent:US5679828
+- reaxys:2678211
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: '[H][C@]12CC[C@@]3([H])[C@@](C)(CC[C@@]4(C(=O)O)CC[C@@H](C(C)C)[C@@]43[H])[C@]1(C)CC[C@@]1([H])C(C)(C)[C@@H](O)CC[C@]21C'
+  standard_inchi: InChI=1S/C30H50O3/c1-18(2)19-10-15-30(25(32)33)17-16-28(6)20(24(19)30)8-9-22-27(5)13-12-23(31)26(3,4)21(27)11-14-29(22,28)7/h18-24,31H,8-17H2,1-7H3,(H,32,33)/t19-,20+,21-,22+,23-,24+,27-,28+,29+,30-/m0/s1
+  standard_inchi_key: PZXJOHSZQAEJFE-FZFNOLFKSA-N
+  molecular_formula: C30H50O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 458.727
+  monoisotopic_mass: 458.376
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65485
+  source_label: dihydrobetulinic acid
+  minted_identifier: antibioticmech:chebi-d89a7ded3b
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

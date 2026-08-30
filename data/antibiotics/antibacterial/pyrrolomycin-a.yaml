@@ -1,0 +1,73 @@
+identifier: CHEBI:156550
+label: pyrrolomycin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pyrroles that is 1H-pyrrole which is substituted
+  by chloro groups at positions 2 and 3 and by a nitro group position 4. It is the
+  simplest member of the pyrrolomycins, a family of natural products found in several
+  species of the Streptomyces genus. The compound is active against Gram-positive
+  and Gram-negative bacteria and some genera of fungi.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,3-dichloro-4-nitro-1H-pyrrole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,3-dichloro-4-nitropyrrole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SF-2080 A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SF-2080A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic SF 2080A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26455
+- CHEBI:35716
+- CHEBI:36683
+- CHEBI:86478
+- ARO:3005163
+xrefs:
+- ARO:3007616
+- cas:79763-01-2
+- chemspider:117581
+- knapsack:C00018376
+- reaxys:6195547
+- pubchem.compound:133275
+activity_roles:
+- CHEBI:33282
+structural_class: ionophore with antibiotic activity
+structural_class_id: ARO:3005163
+chemical_structure:
+  smiles: O=[N+]([O-])c1cnc(Cl)c1Cl
+  standard_inchi: InChI=1S/C4H2Cl2N2O2/c5-3-2(8(9)10)1-7-4(3)6/h1,7H
+  standard_inchi_key: CDHAYBUDIPNGGJ-UHFFFAOYSA-N
+  molecular_formula: C4H2Cl2N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 180.978
+  monoisotopic_mass: 179.94933
+source_concepts:
+- source: ARO
+  source_id: ARO:3007616
+  source_label: pyrrolomycin A
+  minted_identifier: antibioticmech:aro-7719b8066f
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:156550
+  source_label: pyrrolomycin A
+  minted_identifier: antibioticmech:chebi-1d8c0f6207
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

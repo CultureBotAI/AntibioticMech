@@ -1,0 +1,75 @@
+identifier: CHEBI:16731
+label: (E)-cinnamaldehyde
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The E (trans) stereoisomer of cinnamaldehyde, the parent of the class
+  of cinnamaldehydes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3E)-3-phenylprop-2-enal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-3-Phenyl-2-propenal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-3-Phenyl-propenal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-3-Phenylpropenal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-Cinnamaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-Cinnamic aldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-phenylvinyl aldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-phenylacrylaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cinnamaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-Cinnamic aldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:142921
+- CHEBI:23245
+xrefs:
+- bpdb:1069
+- cas:14371-10-9
+- hmdb:HMDB0003441
+- kegg.compound:C00903
+- knapsack:C00002725
+- knapsack:C00035187
+- reaxys:1071571
+- wikipedia.en:Cinnamaldehyde
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: O=C/C=C/c1ccccc1
+  standard_inchi: InChI=1S/C9H8O/c10-8-4-7-9-5-2-1-3-6-9/h1-8H/b7-4+
+  standard_inchi_key: KJPRLNWUNMBNBZ-QPJJXVBHSA-N
+  molecular_formula: C9H8O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 132.162
+  monoisotopic_mass: 132.05751
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:16731
+  source_label: (E)-cinnamaldehyde
+  minted_identifier: antibioticmech:chebi-37832f9f09
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

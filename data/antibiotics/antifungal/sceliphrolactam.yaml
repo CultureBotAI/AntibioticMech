@@ -1,0 +1,45 @@
+identifier: CHEBI:193157
+label: sceliphrolactam
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polyene macrocyclic lactam with formula C28H35NO6. It was isolated from
+  an actinomycete, Streptomyces sp. and displays antifungal activity against amphotericin
+  B-resistant Candida albicans.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3Z,5E,7E,9E,15Z,17E,19E,21E,23E)-4,11,12,13-tetrahydroxy-7,19,25-trimethylazacyclohexacosa-3,5,7,9,15,17,19,21,23-nonaene-2,14-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24995
+- CHEBI:26177
+- CHEBI:33573
+- CHEBI:33823
+- CHEBI:51689
+- CHEBI:51751
+- CHEBI:52898
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC1=C\C=C\C=C\C(C)CNC(=O)/C=C(O)/C=C/C(C)=C/C=C/C(O)C(O)C(O)C(=O)/C=C\C=C\1
+  standard_inchi: InChI=1S/C28H35NO6/c1-20-10-5-4-6-12-22(3)19-29-26(33)18-23(30)17-16-21(2)13-9-15-25(32)28(35)27(34)24(31)14-8-7-11-20/h4-18,22,25,27-28,30,32,34-35H,19H2,1-3H3,(H,29,33)/b5-4+,11-7+,12-6+,14-8-,15-9+,17-16+,20-10+,21-13+,23-18-
+  standard_inchi_key: HRAPIHJIKATMEB-GWVUBWKVSA-N
+  molecular_formula: C28H35NO6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 481.589
+  monoisotopic_mass: 481.24644
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:193157
+  source_label: sceliphrolactam
+  minted_identifier: antibioticmech:chebi-ba821fcb0b
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

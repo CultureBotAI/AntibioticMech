@@ -1,0 +1,71 @@
+identifier: CHEBI:83326
+label: tedizolid phosphate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A phosphate monoester resulting from the formal condensation of equimolar
+  amounts of phosphoric acid with the hydroxy group of tedizolid . It is a prodrug
+  of tedizolid, used for the treatment of acute bacterial skin infections caused by
+  certain susceptible bacteria, including Staphylococcus aureus (including methicillin-resistant
+  strains (MRSA) and methicillin-susceptible strains), various Streptococcus species,
+  and Enterococcus faecalis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Sivextro
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: '[(5R)-3-{3-fluoro-4-[6-(2-methyl-2H-tetrazol-5-yl)pyridin-3-yl]phenyl}-2-oxo-1,3-oxazolidin-5-yl]methyl
+    dihydrogen phosphate'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TR-701
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TR-701 FA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tedizolid phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Torezolid phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:26421
+- CHEBI:35689
+- CHEBI:37143
+- CHEBI:55374
+- CHEBI:7794
+xrefs:
+- cas:856867-55-5
+- drugcentral:4873
+- kegg.drug:D09686
+- reaxys:12031391
+- wikipedia.en:Tedizolid
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: Cn1nnc(-c2ccc(-c3ccc(N4C[C@H](COP(=O)(O)O)OC4=O)cc3F)cn2)n1
+  standard_inchi: InChI=1S/C17H16FN6O6P/c1-23-21-16(20-22-23)15-5-2-10(7-19-15)13-4-3-11(6-14(13)18)24-8-12(30-17(24)25)9-29-31(26,27)28/h2-7,12H,8-9H2,1H3,(H2,26,27,28)/t12-/m1/s1
+  standard_inchi_key: QCGUSIANLFXSGE-GFCCVEGCSA-N
+  molecular_formula: C17H16FN6O6P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 450.323
+  monoisotopic_mass: 450.0853
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83326
+  source_label: tedizolid phosphate
+  minted_identifier: antibioticmech:chebi-48321daa9b
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

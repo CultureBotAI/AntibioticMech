@@ -1,0 +1,66 @@
+identifier: CHEBI:9287
+label: streptonigrin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Complex cytotoxic antibiotic obtained from Streptomyces flocculus or S.
+  rufochronmogenus. It is used in advanced carcinoma and causes leukopenia.
+definition_source: ChEBI
+synonyms:
+- synonym_text: rufocromomicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: rufocromomycin
+  synonym_type: INN
+  source: chebi
+- synonym_text: rufocromomycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: rufocromomycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 5-amino-6-(7-amino-6-methoxy-5,8-dioxo-5,8-dihydroquinolin-2-yl)-4-(2-hydroxy-3,4-dimethoxyphenyl)-3-methylpyridine-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Amino-6-(7-amino-5,8-dihydro-6-methoxy-5,8-dioxo-2-quinolyl)-4-(2-hydroxy-3,4-dimethoxyphenyl)-3-methylpicolinic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Streptonigran
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23765
+- CHEBI:26421
+xrefs:
+- beilstein:599390
+- cas:3930-19-6
+- gmelin:1240693
+- kegg.compound:C02081
+- kegg.drug:D05931
+- knapsack:C00026485
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COC1=C(N)C(=O)c2nc(-c3nc(C(=O)O)c(C)c(-c4ccc(OC)c(OC)c4O)c3N)ccc2C1=O
+  standard_inchi: InChI=1S/C25H22N4O8/c1-9-14(10-6-8-13(35-2)23(36-3)20(10)30)15(26)19(29-17(9)25(33)34)12-7-5-11-18(28-12)22(32)16(27)24(37-4)21(11)31/h5-8,30H,26-27H2,1-4H3,(H,33,34)
+  standard_inchi_key: PVYJZLYGTZKPJE-UHFFFAOYSA-N
+  molecular_formula: C25H22N4O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 506.471
+  monoisotopic_mass: 506.14376
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9287
+  source_label: streptonigrin
+  minted_identifier: antibioticmech:chebi-3f0edfa801
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

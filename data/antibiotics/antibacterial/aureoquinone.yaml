@@ -1,0 +1,43 @@
+identifier: CHEBI:65458
+label: aureoquinone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A naphthoquinone that is 1,4-naphthoquinone substituted by hydroxy groups
+  at positions 2, 5, 7,and 8 and methyl groups at positions 3 and 6. It is isolated
+  from surface cultures of Aureobasidium and acts as a protease inhibitor.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,5,7,8-tetrahydroxy-3,6-dimethylnaphthalene-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132157
+- CHEBI:33853
+xrefs:
+- patent:DE10349512
+- reaxys:2588151
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC1=C(O)C(=O)c2c(O)c(O)c(C)c(O)c2C1=O
+  standard_inchi: InChI=1S/C12H10O6/c1-3-7(13)5-6(11(17)9(3)15)12(18)10(16)4(2)8(5)14/h13,15-17H,1-2H3
+  standard_inchi_key: REESKGYZXCEZKQ-UHFFFAOYSA-N
+  molecular_formula: C12H10O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 250.206
+  monoisotopic_mass: 250.04774
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65458
+  source_label: aureoquinone
+  minted_identifier: antibioticmech:chebi-68ffc35591
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

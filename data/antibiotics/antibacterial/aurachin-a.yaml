@@ -1,0 +1,50 @@
+identifier: CHEBI:90924
+label: aurachin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An A-type aurichin that is 1,2-dihydrofuro[2,3-c]quinoline 5-oxide which
+  is substituted at position 2 by a (6E)-10-hydroxy-2,6-dimethylundeca-2,6-dien-10-yl
+  group and at position 4 by a methyl group (relative configuration shown). Found
+  in the myxobacterium Stigmatella aurantiaca strain Sg a15.
+definition_source: ChEBI
+synonyms:
+- synonym_text: rel-(2R,5E)-6,10-dimethyl-2-[(2S)4-methyl-5-oxido-1,2-dihydrofuro[2,3-c]quinolin-2-yl]undeca-5,9-dien-2-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: aurichan-A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26508
+- CHEBI:26878
+- CHEBI:84586
+- CHEBI:90917
+xrefs:
+- cas:108354-15-0
+- metacyc.compound:CPD-15911
+- reaxys:19439470
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]1([C@@](C)(O)CC/C=C(\C)CCC=C(C)C)Cc2c(c(C)[n+]([O-])c3ccccc23)O1'
+  standard_inchi: InChI=1S/C25H33NO3/c1-17(2)10-8-11-18(3)12-9-15-25(5,27)23-16-21-20-13-6-7-14-22(20)26(28)19(4)24(21)29-23/h6-7,10,12-14,23,27H,8-9,11,15-16H2,1-5H3/b18-12+/t23-,25+/m1/s1
+  standard_inchi_key: ZEUIHPOXFICJIT-ZVWRMSPBSA-N
+  molecular_formula: C25H33NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 395.543
+  monoisotopic_mass: 395.24604
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:90924
+  source_label: aurachin A
+  minted_identifier: antibioticmech:chebi-457289f4f5
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

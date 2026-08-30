@@ -1,0 +1,57 @@
+identifier: CHEBI:6518
+label: lomefloxacin hydrochloride
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The hydrochloride salt of lomefloxacin. It is administered by mouth to
+  treat bacterial infections including bronchitis and urinary tract infections. It
+  is also used topically as eye drops for the treatment of bacterial conjunctivitis,
+  and as ear drops for the treatment of otitis externa and otitis media.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-ethyl-6,8-difluoro-7-(3-methylpiperazin-1-yl)-4-oxo-1,4-dihydroquinoline-3-carboxylic
+    acid hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (±)-1-ethyl-6,8-difluoro-1,4-dihydro-7-(3-methyl-1-piperazinyl)-4-oxo-3-quinolinecarboxylic
+    acid monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: lomefloxacin HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:98079-52-8
+- drugbank:DB00978
+- kegg.compound:C08053
+- kegg.drug:D00873
+- reaxys:7506829
+- vsdb:1901
+activity_roles:
+- CHEBI:33231
+- CHEBI:33281
+chemical_structure:
+  smiles: CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCNC(C)C3)c(F)c21.Cl
+  standard_inchi: InChI=1S/C17H19F2N3O3.ClH/c1-3-21-8-11(17(24)25)16(23)10-6-12(18)15(13(19)14(10)21)22-5-4-20-9(2)7-22;/h6,8-9,20H,3-5,7H2,1-2H3,(H,24,25);1H
+  standard_inchi_key: KXEBLAPZMOQCKO-UHFFFAOYSA-N
+  molecular_formula: C17H19F2N3O3.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 387.814
+  monoisotopic_mass: 387.11613
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6518
+  source_label: lomefloxacin hydrochloride
+  minted_identifier: antibioticmech:chebi-71862f5a78
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

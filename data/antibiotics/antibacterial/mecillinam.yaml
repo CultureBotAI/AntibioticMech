@@ -1,0 +1,93 @@
+identifier: CHEBI:51208
+label: mecillinam
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin in which the 6β substituent is [(azepan-1-yl)methylidene]amino;
+  an extended-spectrum penicillin antibiotic that binds specifically to penicillin
+  binding protein 2 (PBP2), and is only considered to be active against Gram-negative
+  bacteria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Coactin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: mecilinamo
+  synonym_type: INN
+  source: chebi
+- synonym_text: mecillinamum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-{[(azepan-1-yl)methylidene]amino}-2,2-dimethylpenam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-[(azepan-1-ylmethylidene)amino]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: amdinocillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: penicillin HX
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Selexid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Selexidin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- ARO:3000008
+xrefs:
+- ARO:3000761
+- cas:32887-01-7
+- drugbank:DB01163
+- lincs.smallmolecule:LSM-5528
+- patent:DE2055531
+- patent:US3957764
+- reaxys:1223657
+- chembl:CHEMBL530
+- pubchem.compound:36273
+activity_roles:
+- CHEBI:36047
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H]C(=N[C@@H]1C(=O)N2[C@@H](C(=O)O)C(C)(C)S[C@]12[H])N1CCCCCC1'
+  standard_inchi: InChI=1S/C15H23N3O3S/c1-15(2)11(14(20)21)18-12(19)10(13(18)22-15)16-9-17-7-5-3-4-6-8-17/h9-11,13H,3-8H2,1-2H3,(H,20,21)/t10-,11+,13-/m1/s1
+  standard_inchi_key: BWWVAEOLVKTZFQ-NTZNESFSSA-N
+  molecular_formula: C15H23N3O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 325.434
+  monoisotopic_mass: 325.14601
+source_concepts:
+- source: ARO
+  source_id: ARO:3000761
+  source_label: mecillinam
+  minted_identifier: antibioticmech:aro-ce23eb8e8c
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:51208
+  source_label: mecillinam
+  minted_identifier: antibioticmech:chebi-a5c2f56674
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000761 (mecillinam); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

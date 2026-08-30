@@ -1,0 +1,77 @@
+identifier: CHEBI:32071
+label: Prulifloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Prulifloxacin is a 6-fluoroquinolone antibiotic with a C-2 sulfur atom.
+  It is hydrolyzed by esterases to produce the active compound Ulifloxacin. The active
+  compound has broad spectrum activity against most Gram-negative bacteria. Prulifloxacin
+  displays strong bactericidal activity against Pseudomonas aeruginosa biofilms and
+  persister cells.
+definition_source: PMID:1667252
+synonyms:
+- synonym_text: Sword
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: prulifloxacine
+  synonym_type: INN
+  source: chebi
+- synonym_text: prulifloxacino
+  synonym_type: INN
+  source: chebi
+- synonym_text: NM-441
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NM441
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC-759833
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pruvel
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:86324
+- CHEBI:87211
+- ARO:0000001
+xrefs:
+- ARO:3007022
+- cas:123447-62-1
+- drugcentral:2325
+- kegg.drug:D01144
+- chembl:CHEMBL422648
+- pubchem.compound:65947
+activity_roles:
+- CHEBI:33282
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: Cc1oc(=O)oc1CN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)c2n3C(C)S2)CC1
+  standard_inchi: InChI=1S/C21H20FN3O6S/c1-10-16(31-21(29)30-10)9-23-3-5-24(6-4-23)15-8-14-12(7-13(15)22)18(26)17(20(27)28)19-25(14)11(2)32-19/h7-8,11H,3-6,9H2,1-2H3,(H,27,28)
+  standard_inchi_key: PWNMXPDKBYZCOO-UHFFFAOYSA-N
+  molecular_formula: C21H20FN3O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 461.471
+  monoisotopic_mass: 461.10568
+source_concepts:
+- source: ARO
+  source_id: ARO:3007022
+  source_label: prulifloxacin
+  minted_identifier: antibioticmech:aro-55945eb69a
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:32071
+  source_label: Prulifloxacin
+  minted_identifier: antibioticmech:chebi-819fc798a8
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

@@ -1,0 +1,126 @@
+identifier: CHEBI:3749
+label: clofazimine
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: 3-Isopropylimino-3,5-dihydro-phenazine in which the hydrogen at position
+  5 is substituted substituted by a 4-chlorophenyl group, and that at position 2 is
+  substituted by a (4-chlorophenyl)amino group. A dark red crystalline solid, clofazimine
+  is an antimycobacterial and is one of the main drugs used for the treatment of multi-bacillary
+  leprosy. However, it can cause red/brown discolouration of the skin, so other treatments
+  are often preferred in light-skinned patients.
+definition_source: ChEBI
+synonyms:
+- synonym_text: clofazimina
+  synonym_type: INN
+  source: chebi
+- synonym_text: clofaziminum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N,5-bis(4-chlorophenyl)-3-(propan-2-ylimino)-3,5-dihydrophenazin-2-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4-Chloro-phenyl)-[5-(4-chloro-phenyl)-3-isopropylimino-3,5-dihydro-phenazin-2-yl]-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(p-chloranilino)-10-(p-chlorophenyl)-2,10-dihydro-2-(isopropylimino)-phenazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(p-chloranilino)-10-(p-chlorphenyl)-2,10-dihydro-2-(isopropylimino)-phenazin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,5-bis(4-chlorophenyl)-3-(isopropylimino)-3,5-dihydrophenazin-2-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Lampren
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Lamprene
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:39201
+- CHEBI:83403
+- ARO:3000003
+xrefs:
+- ARO:3004012
+- beilstein:8168151
+- cas:2030-63-9
+- drugbank:DB00845
+- kegg.compound:C06915
+- kegg.drug:D00278
+- lincs.smallmolecule:LSM-5669
+- patent:US2948726
+- chembl:CHEMBL1292
+- pubchem.compound:2794
+activity_roles:
+- CHEBI:35816
+structural_class: antibiotic without defined classification
+structural_class_id: ARO:3000003
+chemical_structure:
+  smiles: CC(C)N=c1cc2n(-c3ccc(Cl)cc3)c3ccccc3nc-2cc1Nc1ccc(Cl)cc1
+  standard_inchi: InChI=1S/C27H22Cl2N4/c1-17(2)30-24-16-27-25(15-23(24)31-20-11-7-18(28)8-12-20)32-22-5-3-4-6-26(22)33(27)21-13-9-19(29)10-14-21/h3-17,31H,1-2H3
+  standard_inchi_key: WDQPAMHFFCXSNU-UHFFFAOYSA-N
+  molecular_formula: C27H22Cl2N4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 473.407
+  monoisotopic_mass: 472.12215
+source_concepts:
+- source: ARO
+  source_id: ARO:3004012
+  source_label: clofazimine
+  minted_identifier: antibioticmech:aro-2f5364eabc
+  role_terms:
+  - CHEBI:35816
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3749
+  source_label: clofazimine
+  minted_identifier: antibioticmech:chebi-fa5f5dc8e5
+  role_terms:
+  - CHEBI:35816
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007692
+  label: Mycobacterium tuberculosis Rv2535c with mutation conferring resistance to
+    bedaquiline
+  evidence:
+  - reference: ARO:3007692
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004012 (clofazimine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007852
+  label: Mycobacterium tuberculosis Rv0678 with mutation conferring resistance to
+    clofazimine
+  evidence:
+  - reference: ARO:3007852
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004012 (clofazimine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009335
+  label: Mycobacterium tuberculosis Rv2535c with mutation conferring resistance to
+    clofazimine
+  evidence:
+  - reference: ARO:3009335
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004012 (clofazimine);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000733
+  target_label: fluoroquinolone sensitive gyrA
+  evidence:
+  - reference: ARO:3000733
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3004012 (clofazimine); database
+      assertion, not a primary citation.
+- target_id: ARO:3003261
+  target_label: fluoroquinolone sensitive gyrB
+  evidence:
+  - reference: ARO:3003261
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3004012 (clofazimine); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

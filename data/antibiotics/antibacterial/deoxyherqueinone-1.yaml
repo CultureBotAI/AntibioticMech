@@ -1,0 +1,41 @@
+identifier: CHEBI:145874
+label: deoxyherqueinone(1−)
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A phenolate anion obtained by deprotonation of the 4-hydroxy group of
+  deoxyherqueinone. It is the major microspecies at pH 7.3.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (9R)-3,7-dihydroxy-5-methoxy-1,8,8,9-tetramethyl-6-oxo-8,9-dihydro-6H-phenaleno[1,2-b]furan-4-olate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: deoxyherqueinone
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:50525
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COC1=C([O-])c2c(O)cc(C)c3c4c(c(O)c(c23)C1=O)C(C)(C)[C@@H](C)O4
+  standard_inchi: InChI=1S/C20H20O6/c1-7-6-9(21)11-12-10(7)18-14(20(3,4)8(2)26-18)15(22)13(12)17(24)19(25-5)16(11)23/h6,8,21-23H,1-5H3/p-1/t8-/m1/s1
+  standard_inchi_key: VZWSSCQUCMSKLE-MRVPVSSYSA-M
+  molecular_formula: C20H19O6
+  structure_source: ChEBI
+  charge: -1
+  average_mass: 355.366
+  monoisotopic_mass: 355.11871
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:145874
+  source_label: deoxyherqueinone(1−)
+  minted_identifier: antibioticmech:chebi-00deeffdfe
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

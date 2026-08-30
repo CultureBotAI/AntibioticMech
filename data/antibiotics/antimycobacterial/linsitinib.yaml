@@ -1,0 +1,79 @@
+identifier: CHEBI:91402
+label: linsitinib
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An imidazopyrazine that is imidazo[1,5-a]pyrazine substituted by 2-phenylquinolin-7-yl,
+  cis-3-hydroxy-3-methylcyclobutyl, and amino groups at positions 1, 3, and 8, respectively.
+  It is dual inhibitor of the IGF-1 receptor and insulin receptor (IC50 = 35 and 75
+  nM, respectively) that was previously in clinical development for the treatment
+  of cancer and thyroid eye disease.
+definition_source: ChEBI
+synonyms:
+- synonym_text: linsitinibum
+  synonym_type: INN
+  source: chebi
+- synonym_text: cis-3-[8-amino-1-(2-phenylquinolin-7-yl)imidazo[1,5-a]pyrazin-3-yl]-1-methylcyclobutanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ASP-7487
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: OSI 906
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: OSI 906AA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: OSI-906
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: OSI-906AA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: OSI906
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cis-3-[8-amino-1-(2-phenyl-7-quinolinyl)imidazo[1,5-a]pyrazin-3-yl]-1-methylcyclobutanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:156473
+- CHEBI:22712
+- CHEBI:26513
+- CHEBI:26878
+- CHEBI:33860
+- CHEBI:37847
+xrefs:
+- cas:867160-71-2
+- drugbank:DB06075
+- hmdb:HMDB0254107
+- kegg.drug:D09925
+- lincs.smallmolecule:LSM-1135
+- patent:EP2427192
+- patent:WO2011163430
+- wikipedia.en:Linsitinib
+activity_roles:
+- CHEBI:64912
+chemical_structure:
+  smiles: '[H][C@]1(c2nc(-c3ccc4ccc(-c5ccccc5)nc4c3)c3c(N)nccn32)C[C@@](C)(O)C1'
+  standard_inchi: InChI=1S/C26H23N5O/c1-26(32)14-19(15-26)25-30-22(23-24(27)28-11-12-31(23)25)18-8-7-17-9-10-20(29-21(17)13-18)16-5-3-2-4-6-16/h2-13,19,32H,14-15H2,1H3,(H2,27,28)/t19-,26+
+  standard_inchi_key: PKCDDUHJAFVJJB-VLZXCDOPSA-N
+  molecular_formula: C26H23N5O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 421.504
+  monoisotopic_mass: 421.19026
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:91402
+  source_label: linsitinib
+  minted_identifier: antibioticmech:chebi-1e97fdac6d
+  role_terms:
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

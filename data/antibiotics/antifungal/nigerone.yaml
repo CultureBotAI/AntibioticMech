@@ -1,0 +1,46 @@
+identifier: CHEBI:145950
+label: nigerone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A biaryl resulting from the formal oxidative dimerisation of two molecules
+  of 5-hydroxy-6,8-dimethoxy-2-methyl-4H-benzo[g]chromen-4-one to form a single bond
+  linking position 10 of each moiety (the 10<a href="https://en.wikipedia.org/wiki/Axial_chirality"
+  target="_blank">Ra enantiomer</a>).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (10Ra)-5,5'-dihydroxy-6,6',8,8'-tetramethoxy-2,2'-dimethyl-4H,4'H-[10,10'-bibenzo[g]chromene]-4,4'-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:64459
+- CHEBI:64986
+xrefs:
+- cas:76069-41-5
+- foodb.food:FDB011548
+- hmdb:HMDB0033496
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1cc(OC)c2c(O)c3c(=O)cc(C)oc3c(-c3c4cc(OC)cc(OC)c4c(O)c4c(=O)cc(C)oc34)c2c1
+  standard_inchi: InChI=1S/C32H26O10/c1-13-7-19(33)27-29(35)23-17(9-15(37-3)11-21(23)39-5)25(31(27)41-13)26-18-10-16(38-4)12-22(40-6)24(18)30(36)28-20(34)8-14(2)42-32(26)28/h7-12,35-36H,1-6H3
+  standard_inchi_key: MBDIPBHBEVOYQB-UHFFFAOYSA-N
+  molecular_formula: C32H26O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 570.55
+  monoisotopic_mass: 570.1526
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:145950
+  source_label: nigerone
+  minted_identifier: antibioticmech:chebi-8575d2c194
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

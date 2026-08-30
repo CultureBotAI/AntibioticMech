@@ -1,0 +1,37 @@
+identifier: antibioticmech:aro-bf7dc59121
+label: azalomycin F
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Azalomycin F, a natural guanidyl-containing polyhydroxy macrolide produced
+  by many streptomycete strains, can target the LTA of Staphylococcus aureus.
+definition_source: PMID:38398608
+parent_compounds:
+- ARO:0000000
+xrefs:
+- ARO:3007795
+- chembl:CHEMBL2103834
+- pubchem.compound:6450216
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: CC1CCC(C(C(CC(C(/C=C/C=C(/C(=O)OC(C(/C=C/C=C(/C(CC(CC(CC(CC2CC(C(C(O2)(CC1O)O)O)O)OC(=O)CC(=O)O)O)O)O)\C)C)C(C)CCC/C=C/CCCN=C(N)N)\C)C)O)O)C)O
+  standard_inchi: InChI=1S/C55H93N3O17/c1-32-17-14-19-36(5)51(35(4)16-12-10-8-9-11-13-23-58-54(56)57)74-53(71)37(6)20-15-18-33(2)45(63)29-46(64)38(7)43(61)22-21-34(3)48(66)31-55(72)52(70)47(65)28-42(75-55)27-41(73-50(69)30-49(67)68)25-39(59)24-40(60)26-44(32)62/h8-9,14-15,17-20,33-36,38-48,51-52,59-66,70,72H,10-13,16,21-31H2,1-7H3,(H,67,68)(H4,56,57,58)/b9-8+,18-15+,19-14+,32-17+,37-20+
+  standard_inchi_key: UVUPYXTUQSCQRV-PEKXHOPKSA-N
+  molecular_formula: C55H93N3O17
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1068.3
+  monoisotopic_mass: 1067.65049851
+source_concepts:
+- source: ARO
+  source_id: ARO:3007795
+  source_label: azalomycin F
+  minted_identifier: antibioticmech:aro-bf7dc59121
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,49 @@
+identifier: CHEBI:65818
+label: dzununcanone
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracyclic triterpenoid that is 3,24-dinor-2,4-seco-friedelan-1(10),5,7-triene
+  substituted by methoxycarbonyl groups at positions 2 and 29 and an oxo group at
+  position 4. Isolated from the root bark of Hippocratea excelsa, it exhibits anti-protozoal
+  activity against Giardia intestinalis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (3R,4aR,4bS,6aR,7Z,10bS,12aS)-8-acetyl-7-(2-methoxy-2-oxoethylidene)-3,4b,6a,10b,12a-pentamethyl-1,2,3,4,4a,4b,5,6,6a,7,10b,11,12,12a-tetradecahydrochrysene-3-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,24-dinor-2,4-seco-4-oxo-friedelan-1(10),5,7-triene-2,29-dioic acid
+    dimethylester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:26893
+- CHEBI:51702
+- CHEBI:51867
+xrefs:
+- reaxys:11223004
+activity_roles:
+- CHEBI:35820
+chemical_structure:
+  smiles: '[H][C@@]12C[C@](C)(C(=O)OC)CC[C@]1(C)CC[C@]1(C)C3=CC=C(C(C)=O)/C(=C\C(=O)OC)[C@]3(C)CC[C@@]21C'
+  standard_inchi: InChI=1S/C30H42O5/c1-19(31)20-9-10-22-28(4,21(20)17-24(32)34-7)14-16-30(6)23-18-27(3,25(33)35-8)12-11-26(23,2)13-15-29(22,30)5/h9-10,17,23H,11-16,18H2,1-8H3/b21-17+/t23-,26-,27-,28+,29-,30+/m1/s1
+  standard_inchi_key: RJLTUQKBCWHJFJ-ACCWSZCWSA-N
+  molecular_formula: C30H42O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 482.661
+  monoisotopic_mass: 482.30322
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65818
+  source_label: dzununcanone
+  minted_identifier: antibioticmech:chebi-b18d99d015
+  role_terms:
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

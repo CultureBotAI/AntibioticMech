@@ -1,0 +1,84 @@
+identifier: CHEBI:34553
+label: Balofloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Balofloxacin is an 8-methoxy fluoroquinolone antibiotic. It shows potent
+  bactericidal activity and inhibits the supercoiling activity of DNA gyrase of S.
+  aureus, E. coli, and P. aeruginosa.
+definition_source: PMID:1329626
+synonyms:
+- synonym_text: balofloxacine
+  synonym_type: INN
+  source: chebi
+- synonym_text: balofloxacino
+  synonym_type: INN
+  source: chebi
+- synonym_text: Q-Roxin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: balofloxacin hydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-cyclopropyl-6-fluoro-1,4-dihydro-8-methoxy-7-(3-methylaminopiperidine-1-yl)-4-oxoquinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Q 35
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Q-35
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:26513
+- CHEBI:86324
+- ARO:0000001
+xrefs:
+- ARO:3004130
+- cas:127294-70-6
+- drugcentral:283
+- kegg.compound:C13906
+- chembl:CHEMBL1210954
+- pubchem.compound:65958
+activity_roles:
+- CHEBI:33281
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: CN[C@@H]1CCCN(c2c(F)cc3c(=O)c(C(=O)O)cn(C4CC4)c3c2OC)C1
+  standard_inchi: InChI=1S/C20H24FN3O4/c1-22-11-4-3-7-23(9-11)17-15(21)8-13-16(19(17)28-2)24(12-5-6-12)10-14(18(13)25)20(26)27/h8,10-12,22H,3-7,9H2,1-2H3,(H,26,27)/t11-/m1/s1
+  standard_inchi_key: MGQLHRYJBWGORO-LLVKDONJSA-N
+  molecular_formula: C20H24FN3O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 389.427
+  monoisotopic_mass: 389.17508
+source_concepts:
+- source: ARO
+  source_id: ARO:3004130
+  source_label: balofloxacin
+  minted_identifier: antibioticmech:aro-ea4bb6f903
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:34553
+  source_label: Balofloxacin
+  minted_identifier: antibioticmech:chebi-01b857fb5b
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004126
+  label: Escherichia coli LamB
+  evidence:
+  - reference: ARO:3004126
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004130 (balofloxacin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

@@ -1,0 +1,39 @@
+identifier: antibioticmech:aro-b2e68d25c8
+label: gepotidacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Gepotidacin is a triazaacenaphthylene bacterial type II topoisomerase
+  inhibitor used experimentally. It has been in phase III of clinical trials since
+  2019 for the treatment of gonorrhea, however gepotidacin has demonstrated antibiotic
+  activity against a variety of bacteria.
+definition_source: PMID:26729499
+parent_compounds:
+- ARO:3007164
+xrefs:
+- ARO:3007092
+- chembl:CHEMBL3317856
+- pubchem.compound:25101874
+structural_class: triazaacenaphthylene antibiotic
+structural_class_id: ARO:3007164
+chemical_structure:
+  smiles: C1CC2=CC(=NC=C2OC1)CNC3CCN(CC3)C[C@@H]4CN5C(=O)C=CC6=C5N4C(=O)C=N6
+  standard_inchi: InChI=1S/C24H28N6O3/c31-22-4-3-20-24-29(22)15-19(30(24)23(32)13-27-20)14-28-7-5-17(6-8-28)25-11-18-10-16-2-1-9-33-21(16)12-26-18/h3-4,10,12-13,17,19,25H,1-2,5-9,11,14-15H2/t19-/m1/s1
+  standard_inchi_key: PZFAZQUREQIODZ-LJQANCHMSA-N
+  molecular_formula: C24H28N6O3
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 448.5
+  monoisotopic_mass: 448.22228878
+source_concepts:
+- source: ARO
+  source_id: ARO:3007092
+  source_label: gepotidacin
+  minted_identifier: antibioticmech:aro-b2e68d25c8
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

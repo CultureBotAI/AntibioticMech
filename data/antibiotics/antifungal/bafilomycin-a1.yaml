@@ -1,0 +1,45 @@
+identifier: CHEBI:22689
+label: bafilomycin A1
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The most used of the bafilomycins, a family of toxic macrolide antibiotics
+  derived from Streptomyces griseus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3Z,5E,7R,8S,9S,11E,13E,15S,16R)-16-{(2S,3R,4S)-4-[(2R,4R,5S,6R)-2,4-dihydroxy-6-isopropyl-5-methyltetrahydro-2H-pyran-2-yl]-3-hydroxypentan-2-yl}-8-hydroxy-3,15-dimethoxy-5,7,9,11-tetramethyloxacyclohexadeca-3,5,11,13-tetraen-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25105
+- CHEBI:46942
+- CHEBI:59780
+xrefs:
+- beilstein:3640011
+- beilstein:4730699
+- cas:88899-55-2
+- reaxys:4730700
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: CO/C1=C\C(C)=C\[C@@H](C)[C@@H](O)[C@@H](C)C/C(C)=C/C=C/[C@H](OC)[C@@H]([C@@H](C)[C@@H](O)[C@H](C)[C@@]2(O)C[C@@H](O)[C@H](C)[C@@H](C(C)C)O2)OC1=O
+  standard_inchi: InChI=1S/C35H58O9/c1-19(2)32-24(7)27(36)18-35(40,44-32)26(9)31(38)25(8)33-28(41-10)14-12-13-20(3)15-22(5)30(37)23(6)16-21(4)17-29(42-11)34(39)43-33/h12-14,16-17,19,22-28,30-33,36-38,40H,15,18H2,1-11H3/b14-12+,20-13+,21-16+,29-17-/t22-,23+,24-,25-,26-,27+,28-,30-,31+,32+,33+,35+/m0/s1
+  standard_inchi_key: XDHNQDDQEHDUTM-JQWOJBOSSA-N
+  molecular_formula: C35H58O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 622.84
+  monoisotopic_mass: 622.40808
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:22689
+  source_label: bafilomycin A1
+  minted_identifier: antibioticmech:chebi-54274df466
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

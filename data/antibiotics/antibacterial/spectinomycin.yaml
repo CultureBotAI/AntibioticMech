@@ -1,0 +1,441 @@
+identifier: CHEBI:9215
+label: spectinomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyranobenzodioxin and antibiotic that is active against gram-negative
+  bacteria and used (as its dihydrochloride pentahydrate) to treat gonorrhea. It is
+  produced by the bacterium Streptomyces spectabilis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: espectinomicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: spectinomycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: spectinomycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2R,4aR,5aR,6S,7S,8R,9S,9aR,10aS)-4a,7,9-trihydroxy-2-methyl-6,8-bis(methylamino)decahydro-4H-pyrano[2,3-b][1,4]benzodioxin-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic 2233wp
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Actinospectacin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Spectam
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Togamycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Trobicin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:146295
+- CHEBI:35681
+- CHEBI:3992
+- CHEBI:50995
+- CHEBI:59770
+- CHEBI:59780
+- ARO:0000016
+xrefs:
+- ARO:0000039
+- cas:1695-77-8
+- drugbank:DB00919
+- drugcentral:2468
+- hmdb:HMDB0015055
+- kegg.compound:C02078
+- kegg.drug:D08526
+- lincs.smallmolecule:LSM-5298
+- patent:US4203903
+- patent:WO2005041984
+- pdb-ccd:SCM
+- reaxys:2171701
+- wikipedia.en:Spectinomycin
+- chembl:CHEMBL1167
+- pubchem.compound:15541
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: '[H][C@]12O[C@@H]3[C@@H](O)[C@H](NC)[C@H](O)[C@H](NC)[C@H]3O[C@@]1(O)C(=O)C[C@@H](C)O2'
+  standard_inchi: InChI=1S/C14H24N2O7/c1-5-4-6(17)14(20)13(21-5)22-12-10(19)7(15-2)9(18)8(16-3)11(12)23-14/h5,7-13,15-16,18-20H,4H2,1-3H3/t5-,7-,8+,9+,10+,11-,12-,13+,14+/m1/s1
+  standard_inchi_key: UNFWWIHTNXNPBV-WXKVUWSESA-N
+  molecular_formula: C14H24N2O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 332.353
+  monoisotopic_mass: 332.15835
+source_concepts:
+- source: ARO
+  source_id: ARO:0000039
+  source_label: spectinomycin
+  minted_identifier: antibioticmech:aro-fabbceac75
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:9215
+  source_label: spectinomycin
+  minted_identifier: antibioticmech:chebi-4692828957
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002598
+  label: ANT(3'')-II-AAC(6')-IId bifunctional protein
+  evidence:
+  - reference: ARO:3002598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002601
+  label: aadA
+  evidence:
+  - reference: ARO:3002601
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002602
+  label: aadA2
+  evidence:
+  - reference: ARO:3002602
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002603
+  label: aadA3
+  evidence:
+  - reference: ARO:3002603
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002604
+  label: aadA4
+  evidence:
+  - reference: ARO:3002604
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002605
+  label: aadA5
+  evidence:
+  - reference: ARO:3002605
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002606
+  label: aadA6
+  evidence:
+  - reference: ARO:3002606
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002607
+  label: aadA7
+  evidence:
+  - reference: ARO:3002607
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002608
+  label: aadA8
+  evidence:
+  - reference: ARO:3002608
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002609
+  label: aadA9
+  evidence:
+  - reference: ARO:3002609
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002611
+  label: aadA11
+  evidence:
+  - reference: ARO:3002611
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002612
+  label: aadA12
+  evidence:
+  - reference: ARO:3002612
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002613
+  label: aadA13
+  evidence:
+  - reference: ARO:3002613
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002614
+  label: aadA14
+  evidence:
+  - reference: ARO:3002614
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002615
+  label: aadA15
+  evidence:
+  - reference: ARO:3002615
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002616
+  label: aadA16
+  evidence:
+  - reference: ARO:3002616
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002617
+  label: aadA17
+  evidence:
+  - reference: ARO:3002617
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002618
+  label: aadA21
+  evidence:
+  - reference: ARO:3002618
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002619
+  label: aadA22
+  evidence:
+  - reference: ARO:3002619
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002620
+  label: aadA23
+  evidence:
+  - reference: ARO:3002620
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002621
+  label: aadA24
+  evidence:
+  - reference: ARO:3002621
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002622
+  label: aadA6/aadA10
+  evidence:
+  - reference: ARO:3002622
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002630
+  label: ANT(9)-Ia
+  evidence:
+  - reference: ARO:3002630
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002631
+  label: spd
+  evidence:
+  - reference: ARO:3002631
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002662
+  label: APH(9)-Ia
+  evidence:
+  - reference: ARO:3002662
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002663
+  label: APH(9)-Ib
+  evidence:
+  - reference: ARO:3002663
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003197
+  label: aadA25
+  evidence:
+  - reference: ARO:3003197
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003372
+  label: Escherichia coli 16S rRNA (rrsH) mutation conferring resistance to spectinomycin
+  evidence:
+  - reference: ARO:3003372
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003376
+  label: Escherichia coli 16S rRNA (rrsB) mutation conferring resistance to spectinomycin
+  evidence:
+  - reference: ARO:3003376
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003377
+  label: Escherichia coli 16S rRNA (rrnB) mutation conferring resistance to spectinomycin
+  evidence:
+  - reference: ARO:3003377
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003485
+  label: Chlamydophila psittaci 16S rRNA mutation conferring resistance to spectinomycin
+  evidence:
+  - reference: ARO:3003485
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003493
+  label: Pasteurella multocida 16S rRNA mutation conferring resistance to spectinomycin
+  evidence:
+  - reference: ARO:3003493
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003495
+  label: Neisseria gonorrhoeae 16S rRNA mutation conferring resistance to spectinomycin
+  evidence:
+  - reference: ARO:3003495
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003497
+  label: Neisseria meningitidis 16S rRNA mutation conferring resistance to spectinomycin
+  evidence:
+  - reference: ARO:3003497
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003502
+  label: Borreliella burgdorferi 16S rRNA mutation conferring resistance to spectinomycin
+  evidence:
+  - reference: ARO:3003502
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003512
+  label: Salmonella enterica 16S rRNA (rrsD) mutation conferring resistance to spectinomycin
+  evidence:
+  - reference: ARO:3003512
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004089
+  label: ANT(3'')-IIa
+  evidence:
+  - reference: ARO:3004089
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004090
+  label: ANT(3'')-IIb
+  evidence:
+  - reference: ARO:3004090
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004091
+  label: ANT(3'')-IIc
+  evidence:
+  - reference: ARO:3004091
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004598
+  label: Klebsiella pneumoniae KpnGH-TolC
+  evidence:
+  - reference: ARO:3004598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004682
+  label: aadA27
+  evidence:
+  - reference: ARO:3004682
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004692
+  label: aadA10
+  evidence:
+  - reference: ARO:3004692
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004704
+  label: aadA8b
+  evidence:
+  - reference: ARO:3004704
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005062
+  label: ANT(3'')-Ib
+  evidence:
+  - reference: ARO:3005062
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007401
+  label: ANT(9)-Ib
+  evidence:
+  - reference: ARO:3007401
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007515
+  label: ANT(9)-Ic
+  evidence:
+  - reference: ARO:3007515
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007527
+  label: Bacillus subtilis rpsE mutations conferring resistance to spectinomycin
+  evidence:
+  - reference: ARO:3007527
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007539
+  label: APH(9)-Ic
+  evidence:
+  - reference: ARO:3007539
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000039 (spectinomycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

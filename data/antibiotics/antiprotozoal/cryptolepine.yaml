@@ -1,0 +1,50 @@
+identifier: CHEBI:3930
+label: cryptolepine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterotetracyclic compound that is 5H-indolo[3,2-b]quinoline
+  in which the hydrogen at position N-5 is replaced by a methyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-methyl-5H-indolo[3,2-b]quinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CCRIS 9019
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38101
+- CHEBI:38163
+- CHEBI:38958
+xrefs:
+- cas:480-26-2
+- kegg.compound:C09142
+- knapsack:C00001710
+- pdb-ccd:DR1
+- reaxys:15814
+- wikipedia.en:Cryptolepine
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: Cn1c2c3ccccc3nc-2cc2ccccc21
+  standard_inchi: InChI=1S/C16H12N2/c1-18-15-9-5-2-6-11(15)10-14-16(18)12-7-3-4-8-13(12)17-14/h2-10H,1H3
+  standard_inchi_key: KURWKDDWCJELSV-UHFFFAOYSA-N
+  molecular_formula: C16H12N2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 232.286
+  monoisotopic_mass: 232.10005
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3930
+  source_label: cryptolepine
+  minted_identifier: antibioticmech:chebi-651055a305
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

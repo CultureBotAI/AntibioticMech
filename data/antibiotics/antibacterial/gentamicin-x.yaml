@@ -1,0 +1,41 @@
+identifier: antibioticmech:aro-714bb3cd2d
+label: gentamicin X
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Gentamicin X is an aminoglycoside antibiotic. It is a precursor of gentamicin
+  C and a minor component of the gentamicin antibiotic mixture.
+definition_source: PMID:25641167
+synonyms:
+- synonym_text: gentamicin X2
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:0000016
+xrefs:
+- ARO:3007376
+- chembl:CHEMBL4465498
+- pubchem.compound:15574862
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: C[C@@]1(CO[C@@H]([C@@H]([C@H]1NC)O)O[C@H]2[C@@H](C[C@@H]([C@H]([C@@H]2O)O[C@@H]3[C@@H]([C@H]([C@@H]([C@H](O3)CO)O)O)N)N)N)O
+  standard_inchi: InChI=1S/C19H38N4O10/c1-19(29)5-30-18(13(28)16(19)23-2)33-15-7(21)3-6(20)14(12(15)27)32-17-9(22)11(26)10(25)8(4-24)31-17/h6-18,23-29H,3-5,20-22H2,1-2H3/t6-,7+,8+,9+,10+,11+,12-,13+,14+,15-,16+,17+,18+,19-/m0/s1
+  standard_inchi_key: HFLKNINDVFJPQT-ZFAMMYHGSA-N
+  molecular_formula: C19H38N4O10
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 482.5
+  monoisotopic_mass: 482.25879342
+source_concepts:
+- source: ARO
+  source_id: ARO:3007376
+  source_label: gentamicin X
+  minted_identifier: antibioticmech:aro-714bb3cd2d
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

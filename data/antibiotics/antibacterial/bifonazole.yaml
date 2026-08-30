@@ -1,0 +1,36 @@
+identifier: CHEBI:78692
+label: bifonazole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Bifonazole is an antifungal compound typically used to treat skin infections.
+definition_source: PMID:27799210
+parent_compounds:
+- ARO:3007500
+xrefs:
+- ARO:3009159
+- cas:60628-96-8
+- chembl:CHEMBL277535
+- pubchem.compound:2378
+structural_class: imidazole antibiotic
+structural_class_id: ARO:3007500
+chemical_structure:
+  smiles: c1ccc(-c2ccc(C(c3ccccc3)n3ccnc3)cc2)cc1
+  standard_inchi: InChI=1S/C22H18N2/c1-3-7-18(8-4-1)19-11-13-21(14-12-19)22(24-16-15-23-17-24)20-9-5-2-6-10-20/h1-17,22H
+  standard_inchi_key: OCAPBUJLXMYKEJ-UHFFFAOYSA-N
+  molecular_formula: C22H18N2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 310.4
+  monoisotopic_mass: 310.147
+source_concepts:
+- source: ARO
+  source_id: ARO:3009159
+  source_label: bifonazole
+  minted_identifier: antibioticmech:aro-31f2dc61f7
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

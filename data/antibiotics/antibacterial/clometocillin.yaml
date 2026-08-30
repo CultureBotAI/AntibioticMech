@@ -1,0 +1,89 @@
+identifier: CHEBI:131732
+label: clometocillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin that is benzylpenicillin in which the phenylacetyl group
+  has been replaced by a (3,4-dichlorophenyl)(methoxy)acetyl group. It is a mixture
+  of epimers at the methoxy-bearing carbon.
+definition_source: ChEBI
+synonyms:
+- synonym_text: clometocilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: clometocillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: clométocilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-[2-(3,4-dichlorophenyl)(methoxy)acetamido]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,4-dichloro-α-methoxybenzylpenicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(α-methoxy-3,4-dichlorophenylacetamido)penicillanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: clometacillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: clomethacillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: penicillin 356
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17334
+- CHEBI:23697
+- CHEBI:72588
+- ARO:3000008
+xrefs:
+- ARO:3009129
+- cas:1926-49-4
+- drugcentral:699
+- kegg.drug:D07236
+- patent:US3007920
+- reaxys:13779003
+- wikipedia.en:Clometocillin
+- chembl:CHEMBL2106548
+- pubchem.compound:71807
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@]([H])(C(=O)O)N1C(=O)[C@@]2([H])NC(=O)C(OC)c1ccc(Cl)c(Cl)c1'
+  standard_inchi: InChI=1S/C17H18Cl2N2O5S/c1-17(2)12(16(24)25)21-14(23)10(15(21)27-17)20-13(22)11(26-3)7-4-5-8(18)9(19)6-7/h4-6,10-12,15H,1-3H3,(H,20,22)(H,24,25)/t10-,11?,12+,15-/m1/s1
+  standard_inchi_key: JKXQBIZCQJLVOS-GSNLGQFWSA-N
+  molecular_formula: C17H18Cl2N2O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 433.313
+  monoisotopic_mass: 432.03135
+source_concepts:
+- source: ARO
+  source_id: ARO:3009129
+  source_label: clometocillin
+  minted_identifier: antibioticmech:aro-199a103c95
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:131732
+  source_label: clometocillin
+  minted_identifier: antibioticmech:chebi-acd2cd892a
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

@@ -1,0 +1,50 @@
+identifier: CHEBI:50194
+label: pefloxacin mesylate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: Perti
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: pefloxacin mesilate
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1-ethyl-6-fluoro-7-(4-methylpiperazin-1-yl)-4-oxo-1,4-dihydroquinoline-3-carboxylic
+    acid methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pefloxacin methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38037
+xrefs:
+- beilstein:4092574
+- cas:70458-95-6
+- drugbank:DB00487
+- kegg.drug:D02307
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCN(C)CC3)cc21.CS(=O)(=O)[O-].[H+]
+  standard_inchi: InChI=1S/C17H20FN3O3.CH4O3S/c1-3-20-10-12(17(23)24)16(22)11-8-13(18)15(9-14(11)20)21-6-4-19(2)5-7-21;1-5(2,3)4/h8-10H,3-7H2,1-2H3,(H,23,24);1H3,(H,2,3,4)
+  standard_inchi_key: HQQSBEDKMRHYME-UHFFFAOYSA-N
+  molecular_formula: H.C17H20FN3O3.CH3O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 429.47
+  monoisotopic_mass: 429.13698
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:50194
+  source_label: pefloxacin mesylate
+  minted_identifier: antibioticmech:chebi-f2ca960e33
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

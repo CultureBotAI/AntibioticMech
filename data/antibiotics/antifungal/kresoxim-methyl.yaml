@@ -1,0 +1,82 @@
+identifier: CHEBI:2962
+label: kresoxim-methyl
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxylic ester that is the methyl ester of (2E)-(methoxyimino){2-[(2-methylphenoxy)methyl]phenyl}acetic
+  acid. A fungicide for the control of scab on apples and pears and other fungal diseases
+  on a wide range of crops.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (2E)-(methoxyimino){2-[(2-methylphenoxy)methyl]phenyl}acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BAS 490 F
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methyl (E)-alpha-(methoxyimino)-2-((2-methylphenoxy)methyl)benzeneacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (E)-methoxyimino[α-(o-tolyloxy)-o-tolyl]acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (αE)-α-(methoxyimino)-2-[(2-methylphenoxy)methyl]benzeneacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:35618
+- CHEBI:36816
+- CHEBI:86488
+- ARO:3009305
+xrefs:
+- ARO:3009307
+- cas:143390-89-0
+- kegg.compound:C11017
+- pesticides:kresoxim-methyl
+- ppdb:414
+- reaxys:8330581
+- chembl:CHEMBL203191
+- pubchem.compound:6112114
+activity_roles:
+- CHEBI:86328
+structural_class: strobilurin fungicide
+structural_class_id: ARO:3009305
+chemical_structure:
+  smiles: CO/N=C(/C(=O)OC)c1ccccc1COc1ccccc1C
+  standard_inchi: InChI=1S/C18H19NO4/c1-13-8-4-7-11-16(13)23-12-14-9-5-6-10-15(14)17(19-22-3)18(20)21-2/h4-11H,12H2,1-3H3/b19-17+
+  standard_inchi_key: ZOTBXTZVPHCKPN-HTXNQAPBSA-N
+  molecular_formula: C18H19NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 313.353
+  monoisotopic_mass: 313.13141
+source_concepts:
+- source: ARO
+  source_id: ARO:3009307
+  source_label: kresoxim-methyl
+  minted_identifier: antibioticmech:aro-560ad1417d
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:2962
+  source_label: kresoxim-methyl
+  minted_identifier: antibioticmech:chebi-6715ce8bf2
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009281
+  label: Colletotrichum gloeosporioides cytochrome b protein with mutations associated
+    with resistance to kresoxim-methyl
+  evidence:
+  - reference: ARO:3009281
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009307 (kresoxim-methyl);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

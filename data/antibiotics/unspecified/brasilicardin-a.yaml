@@ -1,0 +1,42 @@
+identifier: CHEBI:65513
+label: brasilicardin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diterpenoid antibiotic isolated from the culture broth of Nocardia brasiliensis
+  IFM0406. It exhibits antitumour and strong immunosuppressive activity.
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:23849
+- CHEBI:28401
+- CHEBI:33853
+- CHEBI:36054
+- CHEBI:38032
+- CHEBI:83925
+xrefs:
+- chemspider:8638849
+- reaxys:8534969
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]1(O[C@H]2[C@@H](O)[C@H](O[C@@]3([H])C[C@@]4(C)[C@@]5([H])CC=C(C)[C@@H](C[C@H](OC)[C@H](N)C(=O)O)[C@]5(C)CC[C@]4([H])C(C)(C)[C@@H]3O)O[C@@H](C)[C@@H]2OC(=O)c2cccc(O)c2)O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1NC(C)=O'
+  standard_inchi: InChI=1S/C45H68N2O16/c1-20-12-13-30-44(6,25(20)17-26(58-8)31(46)39(55)56)15-14-29-43(4,5)38(54)27(18-45(29,30)7)60-42-35(53)37(36(21(2)59-42)62-40(57)23-10-9-11-24(50)16-23)63-41-32(47-22(3)49)34(52)33(51)28(19-48)61-41/h9-12,16,21,25-38,41-42,48,50-54H,13-15,17-19,46H2,1-8H3,(H,47,49)(H,55,56)/t21-,25+,26-,27-,28+,29+,30-,31-,32+,33+,34+,35+,36-,37-,38+,41-,42-,44-,45+/m0/s1
+  standard_inchi_key: SAZHWKBRJJLWKC-YFSQLXLCSA-N
+  molecular_formula: C45H68N2O16
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 893.037
+  monoisotopic_mass: 892.45688
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65513
+  source_label: brasilicardin A
+  minted_identifier: antibioticmech:chebi-fee6b52acc
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

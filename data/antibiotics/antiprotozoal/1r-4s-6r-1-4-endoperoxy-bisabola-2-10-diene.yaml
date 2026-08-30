@@ -1,0 +1,41 @@
+identifier: CHEBI:65845
+label: 1R,4S,6R-1,4-endoperoxy-bisabola-2,10-diene
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sesquiterpenoid that is bisabola-2,10-diene substituted by a peroxy
+  group between positions 2 and 10 (the 1R,4S,6R stereoisomer). Isolated from Artemisia
+  stolonifera and Eupatorium rufescens, it exhibits antineoplastic and antiplasmodial
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,4S,7R)-5-methyl-7-[(2S)-6-methylhept-5-en-2-yl]-2,3-dioxabicyclo[2.2.2]oct-5-ene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25702
+- CHEBI:26658
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: '[H][C@]1([C@@H](C)CCC=C(C)C)C[C@@H]2OO[C@H]1C=C2C'
+  standard_inchi: InChI=1S/C15H24O2/c1-10(2)6-5-7-11(3)13-9-14-12(4)8-15(13)17-16-14/h6,8,11,13-15H,5,7,9H2,1-4H3/t11-,13+,14-,15-/m0/s1
+  standard_inchi_key: LJPSCRDRIZSODI-ATGSNQNLSA-N
+  molecular_formula: C15H24O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 236.355
+  monoisotopic_mass: 236.17763
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65845
+  source_label: 1R,4S,6R-1,4-endoperoxy-bisabola-2,10-diene
+  minted_identifier: antibioticmech:chebi-aa2b21a11b
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

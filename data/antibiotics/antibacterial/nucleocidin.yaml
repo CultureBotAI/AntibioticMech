@@ -1,0 +1,78 @@
+identifier: CHEBI:166872
+label: nucleocidin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A nucleoside antibiotic that is 5'-O-sulfamoyladenosine in which the hydrogen
+  atom at position 4' is replaced by a fluorine atom. It is a natural product synthesized
+  by several Streptomyces species. It exhibits broad spectrum antibacterial activity,
+  and also has a strong effect against Trypanosoma brucei, the protozoan parasite
+  responsible for the African sleeping sickness.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[(2S,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-2-fluoro-3,4-dihydroxyoxolan-2-yl]methyl
+    sulfamate'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4'-C-fluoroadenosine 5'-sulfamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4'-fluoro-5'-O-sulfamoyladenosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4'-fluoro-5'-O-sulphamoyladenosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: T-3018
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[(2S,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-2-fluoro-3,4-dihydroxytetrahydrofuran-2-yl]methyl
+    sulfamate'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[(2S,3S,4R,5R)-5-(6-aminopurin-9-yl)-2-fluoro-3,4-dihydroxyoxolan-2-yl]methyl
+    sulfamate'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic T-3018
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:20706
+- CHEBI:22260
+- CHEBI:23824
+- CHEBI:37143
+- CHEBI:48199
+xrefs:
+- cas:24751-69-7
+- chemspider:65250
+- metacyc.compound:CPD-12712
+- wikipedia.en:Nucleocidin
+activity_roles:
+- CHEBI:25605
+- CHEBI:33282
+- CHEBI:36335
+chemical_structure:
+  smiles: Nc1ncnc2c1ncn2[C@@H]1O[C@](F)(COS(N)(=O)=O)[C@@H](O)[C@H]1O
+  standard_inchi: InChI=1S/C10H13FN6O6S/c11-10(1-22-24(13,20)21)6(19)5(18)9(23-10)17-3-16-4-7(12)14-2-15-8(4)17/h2-3,5-6,9,18-19H,1H2,(H2,12,14,15)(H2,13,20,21)/t5-,6+,9-,10-/m1/s1
+  standard_inchi_key: LTBCQBSAWAZBDF-MLTZYSBQSA-N
+  molecular_formula: C10H13FN6O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 364.315
+  monoisotopic_mass: 364.06013
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:166872
+  source_label: nucleocidin
+  minted_identifier: antibioticmech:chebi-fce556dccd
+  role_terms:
+  - CHEBI:25605
+  - CHEBI:33282
+  - CHEBI:36335
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

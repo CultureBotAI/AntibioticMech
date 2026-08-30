@@ -1,0 +1,51 @@
+identifier: CHEBI:37908
+label: (S)-nadifloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A novel broad-spectrum anti-MRSA benzoquinolizine antibiotic effective
+  against gram-positive and gram-negative pathogens.
+definition_source: PMID:31920285
+synonyms:
+- synonym_text: (5S)-9-fluoro-8-(4-hydroxypiperidin-1-yl)-5-methyl-1-oxo-6,7-dihydro-1H,5H-pyrido[3,2,1-ij]quinoline-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:31889
+- ARO:0000001
+xrefs:
+- ARO:3005120
+- beilstein:7084299
+- pubchem.compound:9850038
+activity_roles:
+- CHEBI:33282
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: C[C@H]1CCc2c(N3CCC(O)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23
+  standard_inchi: InChI=1S/C19H21FN2O4/c1-10-2-3-12-16-13(18(24)14(19(25)26)9-22(10)16)8-15(20)17(12)21-6-4-11(23)5-7-21/h8-11,23H,2-7H2,1H3,(H,25,26)/t10-/m0/s1
+  standard_inchi_key: JYJTVFIEFKZWCJ-JTQLQIEISA-N
+  molecular_formula: C19H21FN2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 360.385
+  monoisotopic_mass: 360.14854
+source_concepts:
+- source: ARO
+  source_id: ARO:3005120
+  source_label: levonadifloxacin
+  minted_identifier: antibioticmech:aro-6c3d2579b5
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:37908
+  source_label: (S)-nadifloxacin
+  minted_identifier: antibioticmech:chebi-b0f94261f2
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

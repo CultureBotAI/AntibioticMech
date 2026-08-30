@@ -1,0 +1,55 @@
+identifier: CHEBI:156434
+label: 5-[[3-(1-phenylethoxy)-4-(2-phenylethoxy)phenyl]methylene]-4-oxo-2-thioxo-3-thiazolidineacetic
+  acid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of thiazolidinones that is 2-sulfanylidene-1,3-thiazolidin-4-one
+  in which the hydrogens at positions 3 and 5 are replaced by carboxymethyl and 3-(1-phenylethoxy)-4-(2-phenylethoxy)benzylidene
+  groups, respectively. It is an inhibitor of protein mannosyl transferase 1 (PMT1)
+  and blocks protein O-mannosylation.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '{(5Z)-4-oxo-5-[3-(1-phenylethoxy)-4-(2-phenylethoxy)benzylidene]-2-sulfanylidene-1,3-thiazolidin-3-yl}acetic
+    acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: OGT2468
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: R3A-5a
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[(5Z)-4-oxo-5-{[3-(1-phenylethoxy)-4-(2-phenylethoxy)phenyl]methylidene}-2-sulfanylidene-1,3-thiazolidin-3-yl]acetic
+    acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:35618
+- CHEBI:48891
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(Oc1cc(/C=C2\SC(=S)N(CC(=O)O)C2=O)ccc1OCCc1ccccc1)c1ccccc1
+  standard_inchi: InChI=1S/C28H25NO5S2/c1-19(22-10-6-3-7-11-22)34-24-16-21(17-25-27(32)29(18-26(30)31)28(35)36-25)12-13-23(24)33-15-14-20-8-4-2-5-9-20/h2-13,16-17,19H,14-15,18H2,1H3,(H,30,31)/b25-17-
+  standard_inchi_key: FFYJVTLTZYPAAB-UQQQWYQISA-N
+  molecular_formula: C28H25NO5S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 519.644
+  monoisotopic_mass: 519.11741
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156434
+  source_label: 5-[[3-(1-phenylethoxy)-4-(2-phenylethoxy)phenyl]methylene]-4-oxo-2-thioxo-3-thiazolidineacetic
+    acid
+  minted_identifier: antibioticmech:chebi-157931ccce
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

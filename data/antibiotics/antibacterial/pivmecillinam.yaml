@@ -1,0 +1,75 @@
+identifier: CHEBI:51210
+label: pivmecillinam
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillanic acid ester that is the [(2,2-dimethylpropanoyl)oxy]methyl
+  ester and prodrug of mecillinam.
+definition_source: ChEBI
+synonyms:
+- synonym_text: pivmecilinamo
+  synonym_type: INN
+  source: chebi
+- synonym_text: pivmecillinamum
+  synonym_type: INN
+  source: chebi
+- synonym_text: '[(2,2-dimethylpropanoyl)oxy]methyl 6β-[(azepan-1-ylmethylidene)amino]-2,2-dimethylpenam-3α-carboxylate'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[(2,2-dimethylpropanoyl)oxy]methyl (2S,5R,6R)-6-[(azepan-1-ylmethylidene)amino]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: amdinocillin pivoxil
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: amdinocillin, pivaloyloxymethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:136685
+- CHEBI:17334
+- CHEBI:51212
+- ARO:3000008
+xrefs:
+- ARO:3007529
+- beilstein:9014155
+- cas:32886-97-8
+- drugbank:DB01605
+- lincs.smallmolecule:LSM-3494
+- patent:DE2055531
+- patent:US3957764
+- chembl:CHEMBL1650818
+- pubchem.compound:115163
+activity_roles:
+- CHEBI:36047
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H]C(=N[C@@H]1C(=O)N2[C@@H](C(=O)OCOC(=O)C(C)(C)C)C(C)(C)S[C@]12[H])N1CCCCCC1'
+  standard_inchi: InChI=1S/C21H33N3O5S/c1-20(2,3)19(27)29-13-28-18(26)15-21(4,5)30-17-14(16(25)24(15)17)22-12-23-10-8-6-7-9-11-23/h12,14-15,17H,6-11,13H2,1-5H3/t14-,15+,17-/m1/s1
+  standard_inchi_key: NPGNOVNWUSPMDP-HLLBOEOZSA-N
+  molecular_formula: C21H33N3O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 439.578
+  monoisotopic_mass: 439.21409
+source_concepts:
+- source: ARO
+  source_id: ARO:3007529
+  source_label: pivmecillinam
+  minted_identifier: antibioticmech:aro-a8936e1053
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:51210
+  source_label: pivmecillinam
+  minted_identifier: antibioticmech:chebi-2fa06d03f8
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

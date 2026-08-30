@@ -1,0 +1,64 @@
+identifier: CHEBI:6601
+label: lycorine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An indolizidine alkaloid that is 3,12-didehydrogalanthan substituted by
+  hydroxy groups at positions and 2 and a methylenedioxy group across positions 9
+  and 10. Isolated from Crinum asiaticum, it has been shown to exhibit antimalarial
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 9,10-(methylenedioxy)-3,12-didehydrogalanthan-1α,2β-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-lycorine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Amarylline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Galanthidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Licorine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Lycorine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Narcissine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38511
+xrefs:
+- cas:476-28-8
+- kegg.compound:C08532
+- knapsack:C00001576
+- pdb-ccd:3KD
+- reaxys:93605
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@@]12C3=C[C@H](O)[C@@H](O)[C@@]1([H])c1cc4c(cc1CN2CC3)OCO4'
+  standard_inchi: InChI=1S/C16H17NO4/c18-11-3-8-1-2-17-6-9-4-12-13(21-7-20-12)5-10(9)14(15(8)17)16(11)19/h3-5,11,14-16,18-19H,1-2,6-7H2/t11-,14-,15+,16+/m0/s1
+  standard_inchi_key: XGVJWXAYKUHDOO-DANNLKNASA-N
+  molecular_formula: C16H17NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 287.315
+  monoisotopic_mass: 287.11576
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6601
+  source_label: lycorine
+  minted_identifier: antibioticmech:chebi-8cbea8c874
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

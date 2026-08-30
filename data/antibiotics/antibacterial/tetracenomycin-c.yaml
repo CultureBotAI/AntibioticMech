@@ -1,0 +1,67 @@
+identifier: CHEBI:9470
+label: tetracenomycin C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Tetracenomycin C is a tetracenomycin antibiotic, a methyl ester and a
+  tertiary alpha-hydroxy ketone.
+definition_source: PMID:11851469
+synonyms:
+- synonym_text: methyl (6aR,7S,10aR)-6a,7,10a,12-tetrahydroxy-3,8-dimethoxy-1-methyl-6,10,11-trioxo-6,6a,7,10,10a,11-hexahydrotetracene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetracenomycin C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:25248
+- CHEBI:48132
+- ARO:3007034
+xrefs:
+- ARO:3007035
+- beilstein:4774234
+- cas:71135-22-3
+- kegg.compound:C06801
+- pubchem.compound:73632
+activity_roles:
+- CHEBI:33281
+structural_class: tetracenomycin antibiotic
+structural_class_id: ARO:3007034
+chemical_structure:
+  smiles: COC(=O)c1c(OC)cc2cc3c(c(O)c2c1C)C(=O)[C@]1(O)C(=O)C=C(OC)[C@@H](O)[C@]1(O)C3=O
+  standard_inchi: InChI=1S/C23H20O11/c1-8-14-9(6-11(32-2)15(8)21(29)34-4)5-10-16(17(14)25)20(28)22(30)13(24)7-12(33-3)19(27)23(22,31)18(10)26/h5-7,19,25,27,30-31H,1-4H3/t19-,22-,23-/m1/s1
+  standard_inchi_key: ULHJWHCSSAEMLW-UEVCKROQSA-N
+  molecular_formula: C23H20O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 472.402
+  monoisotopic_mass: 472.10056
+source_concepts:
+- source: ARO
+  source_id: ARO:3007035
+  source_label: tetracenomycin C
+  minted_identifier: antibioticmech:aro-5f9debc758
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:9470
+  source_label: tetracenomycin C
+  minted_identifier: antibioticmech:chebi-068335cfc6
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003554
+  label: tcmA
+  evidence:
+  - reference: ARO:3003554
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007035 (tetracenomycin
+      C); database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

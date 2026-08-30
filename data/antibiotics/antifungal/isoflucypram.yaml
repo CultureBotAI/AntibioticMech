@@ -1,0 +1,70 @@
+identifier: CHEBI:228225
+label: isoflucypram
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tertiary carboxamide resulting from the formal condensation of the carboxy
+  group of 3-(difluoromethyl)-5-fluoro-1-methyl-1H-pyrazole-4-carboxylic acid with
+  the amino group of N-[5-chloro-2-(propan-2-yl)benzyl]cyclopropanamine. It is a broad
+  spectrum fungicide developed by Bayer that exhibits high efficacy against the major
+  fungal diseases of cereal crops (wheat, triticale, rye, barley and oats).
+definition_source: ChEBI
+synonyms:
+- synonym_text: Iblon
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Vimoy
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: N-[5-chloro-2-(propan-2-yl)benzyl]-N-cyclopropyl-3-(difluoromethyl)-5-fluoro-1-methyl-1H-pyrazole-4-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BCS-CN88460
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(5-chloro-2-isopropylbenzyl)-N-cyclopropyl-3-(difluoromethyl)-5-fluoro-1-methyl-1H-pyrazole-4-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[[5-chloro-2-(1-methylethyl)phenyl]methyl]-N-cyclopropyl-3-(difluoromethyl)-5-fluoro-1-methyl-1H-pyrazole-4-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-{[5-chloro-2-(propan-2-yl)phenyl]methyl}-N-cyclopropyl-3-(difluoromethyl)-5-fluoro-1-methyl-1H-pyrazole-4-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140326
+- CHEBI:26410
+- CHEBI:38805
+- CHEBI:38976
+- CHEBI:50996
+- CHEBI:51454
+- CHEBI:83403
+xrefs:
+- cas:1255734-28-1
+- pesticides:isoflucypram
+- ppdb:3180
+- reaxys:20846319
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CC(C)c1ccc(Cl)cc1CN(C(=O)c1c(C(F)F)nn(C)c1F)C1CC1
+  standard_inchi: InChI=1S/C19H21ClF3N3O/c1-10(2)14-7-4-12(20)8-11(14)9-26(13-5-6-13)19(27)15-16(17(21)22)24-25(3)18(15)23/h4,7-8,10,13,17H,5-6,9H2,1-3H3
+  standard_inchi_key: JEFUQUGZXLEHLD-UHFFFAOYSA-N
+  molecular_formula: C19H21ClF3N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 399.844
+  monoisotopic_mass: 399.13252
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:228225
+  source_label: isoflucypram
+  minted_identifier: antibioticmech:chebi-3d8bbe5859
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,71 @@
+identifier: CHEBI:81767
+label: imibenconazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of imidothioates that is the S-4-chlorobenzyl thioester
+  of N-(2,4-dichlorophenyl)-2-(1H-1,2,4-triazol-1-yl)ethanimidothioic acid. Used to
+  control a range of fungal diseases affecting fruit, vegetables, turf and ornamentals.
+  It has a low mammalian toxicity and shows a moderate level of toxicity to fish,
+  daphnia and earthworms but is relatively non-toxic to honey bees, birds and algae.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Manage
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 4-chlorobenzyl N-(2,4-dichlorophenyl)-2-(1H-1,2,4-triazol-1-yl)ethanimidothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4-chlorophenyl)methyl N-(2,4-dichlorophenyl)-1H-1,2,4-triazole-1-ethanimidothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-chlorobenzyl N-2,4-dichlorophenyl-2-(1H-1,2,4-triazol-1-yl)thioacetamidate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HF 6305
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HF 8505
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23697
+- CHEBI:35727
+- CHEBI:83403
+- CHEBI:83991
+- CHEBI:87067
+- CHEBI:87100
+xrefs:
+- cas:86598-92-7
+- kegg.compound:C18468
+- patent:CN101106903
+- patent:CN101167455
+- pesticides:imibenconazole
+- ppdb:1026
+- reaxys:11339125
+activity_roles:
+- CHEBI:77884
+- CHEBI:86328
+chemical_structure:
+  smiles: Clc1ccc(CSC(Cn2cncn2)=Nc2ccc(Cl)cc2Cl)cc1
+  standard_inchi: InChI=1S/C17H13Cl3N4S/c18-13-3-1-12(2-4-13)9-25-17(8-24-11-21-10-22-24)23-16-6-5-14(19)7-15(16)20/h1-7,10-11H,8-9H2
+  standard_inchi_key: AGKSTYPVMZODRV-UHFFFAOYSA-N
+  molecular_formula: C17H13Cl3N4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 411.745
+  monoisotopic_mass: 409.99265
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81767
+  source_label: imibenconazole
+  minted_identifier: antibioticmech:chebi-87aa4d2dab
+  role_terms:
+  - CHEBI:77884
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

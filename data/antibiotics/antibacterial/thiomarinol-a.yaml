@@ -1,0 +1,49 @@
+identifier: CHEBI:66220
+label: thiomarinol A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organosulfur heterocyclic compound produced by a marine bacterium Alteromonas
+  rava and has been shown to exhibit antibacterial activity against Gram-positive
+  and Gram-negative bacteria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5S)-1,5-anhydro-2-deoxy-2-[(2E,4R,5S)-5-hydroxy-4-methylhex-2-en-1-yl]-5-[(1R,2E)-1-hydroxy-2-methyl-4-oxo-4-({8-oxo-8-[(5-oxo-4,5-dihydro[1,2]dithiolo[4,3-b]pyrrol-6-yl)amino]octyl}oxy)but-2-en-1-yl]-L-arabinitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: thiomarinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24995
+- CHEBI:37407
+- CHEBI:38106
+- CHEBI:51702
+xrefs:
+- cas:146697-04-3
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]1([C@H](O)/C(C)=C/C(=O)OCCCCCCCC(=O)Nc2c3sscc-3nc2=O)OC[C@H](C/C=C/[C@@H](C)[C@H](C)O)[C@@H](O)[C@H]1O'
+  standard_inchi: InChI=1S/C30H44N2O9S2/c1-17(19(3)33)10-9-11-20-15-41-28(27(38)26(20)37)25(36)18(2)14-23(35)40-13-8-6-4-5-7-12-22(34)32-24-29-21(16-42-43-29)31-30(24)39/h9-10,14,16-17,19-20,25-28,33,36-38H,4-8,11-13,15H2,1-3H3,(H,31,39)(H,32,34)/b10-9+,18-14+/t17-,19+,20+,25-,26-,27-,28+/m1/s1
+  standard_inchi_key: JIEMCPGFAXNCQW-XVYZEKPJSA-N
+  molecular_formula: C30H44N2O9S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 640.821
+  monoisotopic_mass: 640.24882
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66220
+  source_label: thiomarinol A
+  minted_identifier: antibioticmech:chebi-028c82caba
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

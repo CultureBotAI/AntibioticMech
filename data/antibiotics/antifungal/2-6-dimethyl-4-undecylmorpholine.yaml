@@ -1,0 +1,43 @@
+identifier: CHEBI:83368
+label: 2,6-dimethyl-4-undecylmorpholine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of morpholines that is 2,6-dimethylmorpholine in
+  which the hydrogen attached to the nitrogen is replaced by an undecyl group. The
+  configuration at positions 2 and 6 is unknown or unspecified.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2Ξ,6Ξ)-2,6-dimethyl-4-undecylmorpholine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,6-dimethyl-N-undecylmorpholine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38785
+- CHEBI:50996
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CCCCCCCCCCCN1CC(C)OC(C)C1
+  standard_inchi: InChI=1S/C17H35NO/c1-4-5-6-7-8-9-10-11-12-13-18-14-16(2)19-17(3)15-18/h16-17H,4-15H2,1-3H3
+  standard_inchi_key: LVHAEMOCOJOUOD-UHFFFAOYSA-N
+  molecular_formula: C17H35NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 269.473
+  monoisotopic_mass: 269.27186
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83368
+  source_label: 2,6-dimethyl-4-undecylmorpholine
+  minted_identifier: antibioticmech:chebi-38796be681
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

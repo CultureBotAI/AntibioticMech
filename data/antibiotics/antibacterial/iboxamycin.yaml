@@ -1,0 +1,74 @@
+identifier: antibioticmech:aro-6d3a6e6b69
+label: iboxamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Iboxamycin is a fully synthetic lincosamide antibiotic. Like other lincosamides,
+  it selectively targets the bacterial ribosome and prevents elongation of the peptide
+  chain. Iboxamycin has been shown to be effective against bacterial strains otherwise
+  resistant to licosamide antibiotics.
+definition_source: PMID:34707295
+parent_compounds:
+- ARO:0000017
+xrefs:
+- ARO:3007636
+- pubchem.compound:156613433
+structural_class: lincosamide antibiotic
+structural_class_id: ARO:0000017
+chemical_structure:
+  smiles: C[C@@H]([C@H]([C@@H]1[C@@H]([C@@H]([C@H]([C@H](O1)SC)O)O)O)NC(=O)[C@@H]2[C@H]3[C@@H](C[C@@H](CCO3)CC(C)C)CN2)Cl
+  standard_inchi: InChI=1S/C22H39ClN2O6S/c1-10(2)7-12-5-6-30-19-13(8-12)9-24-15(19)21(29)25-14(11(3)23)20-17(27)16(26)18(28)22(31-20)32-4/h10-20,22,24,26-28H,5-9H2,1-4H3,(H,25,29)/t11-,12-,13-,14+,15-,16-,17+,18+,19+,20+,22+/m0/s1
+  standard_inchi_key: JPCLUJPDWMBCAA-SUTQZAMLSA-N
+  molecular_formula: C22H39ClN2O6S
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 495.1
+  monoisotopic_mass: 494.2217358
+source_concepts:
+- source: ARO
+  source_id: ARO:3007636
+  source_label: iboxamycin
+  minted_identifier: antibioticmech:aro-6d3a6e6b69
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004476
+  label: vmlR
+  evidence:
+  - reference: ARO:3004476
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007636 (iboxamycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007637
+  label: Clostridioides difficile cplR
+  evidence:
+  - reference: ARO:3007637
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007636 (iboxamycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007644
+  label: Clostridium perfringes cplR
+  evidence:
+  - reference: ARO:3007644
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007636 (iboxamycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007645
+  label: Clostridium sporogenes cplR
+  evidence:
+  - reference: ARO:3007645
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007636 (iboxamycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007646
+  label: Neobacillus vireti vmlR2
+  evidence:
+  - reference: ARO:3007646
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007636 (iboxamycin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

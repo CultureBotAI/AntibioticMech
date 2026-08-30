@@ -1,0 +1,41 @@
+identifier: antibioticmech:aro-12bdf3352c
+label: halolitoralin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Halolitoralin A is an alanine-rich cyclic hexapeptide. It exhibits potent
+  activity against the pathogenic fungi Candida albicans and Trichophyton mentagrophytes
+  and the gram negative bacteria Pseudomonas aeruginosa and Escherichia coli. Gram
+  negative bacteria were found to be more sensitive than gram positive bacteria. It
+  was also found to exhibit moderate anthelmintic activity against the earthworms
+  Megascoplex konkanensis and Eudrilus sp.
+definition_source: PMID:34677431
+parent_compounds:
+- ARO:3009657
+xrefs:
+- ARO:3007780
+- CHEBI:207984
+- pubchem.compound:139588131
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: CCC(C)[C@H]1C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N1)C)CC(C)C)C)CC(C)C)C
+  standard_inchi: InChI=1S/C27H48N6O6/c1-10-15(6)21-27(39)30-17(8)23(35)32-19(11-13(2)3)25(37)28-16(7)22(34)31-20(12-14(4)5)26(38)29-18(9)24(36)33-21/h13-21H,10-12H2,1-9H3,(H,28,37)(H,29,38)(H,30,39)(H,31,34)(H,32,35)(H,33,36)/t15?,16-,17-,18-,19-,20-,21-/m0/s1
+  standard_inchi_key: SXVHYPUSAGNSMU-HXZOEFROSA-N
+  molecular_formula: C27H48N6O6
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 552.7
+  monoisotopic_mass: 552.36353327
+source_concepts:
+- source: ARO
+  source_id: ARO:3007780
+  source_label: halolitoralin A
+  minted_identifier: antibioticmech:aro-12bdf3352c
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

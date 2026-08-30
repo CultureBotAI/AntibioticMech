@@ -1,0 +1,59 @@
+identifier: CHEBI:42068
+label: idarubicin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (1S,3S)-3-acetyl-3,5,12-trihydroxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracen-1-yl
+    3-amino-2,3,6-trideoxy-α-L-lyxo-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1S,3S)-3-acetyl-3,5,12-trihydroxy-6,11-dioxo-1,2,3,4,6,11-hexahydronaphthacen-1-yl
+    3-amino-2,3,6-trideoxy-α-L-lyxo-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Demethoxydaunomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Demethoxydaunorubicin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,12-Naphthacenedione, 9-acetyl-7-((3-amino-2,3,6-trideoxy-alpha-L-lyxo-hexopyranosyl)oxy)-7,8,9,10-tetrahydro-6,9,11-trihydroxy-,
+    (7S-cis)-
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35315
+- CHEBI:49322
+- CHEBI:63367
+xrefs:
+- beilstein:3641270
+- cas:58957-92-9
+- drugbank:DB01177
+- drugcentral:1414
+- lincs.smallmolecule:LSM-5769
+- wikipedia.en:Idarubicin
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(=O)[C@]1(O)Cc2c(O)c3c(c(O)c2[C@@H](O[C@H]2C[C@H](N)[C@H](O)[C@H](C)O2)C1)C(=O)c1ccccc1C3=O
+  standard_inchi: InChI=1S/C26H27NO9/c1-10-21(29)15(27)7-17(35-10)36-16-9-26(34,11(2)28)8-14-18(16)25(33)20-19(24(14)32)22(30)12-5-3-4-6-13(12)23(20)31/h3-6,10,15-17,21,29,32-34H,7-9,27H2,1-2H3/t10-,15-,16-,17-,21+,26-/m0/s1
+  standard_inchi_key: XDXDZDZNSLXDNA-TZNDIEGXSA-N
+  molecular_formula: C26H27NO9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 497.5
+  monoisotopic_mass: 497.16858
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:42068
+  source_label: idarubicin
+  minted_identifier: antibioticmech:chebi-e128c6e117
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

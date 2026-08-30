@@ -1,0 +1,37 @@
+identifier: antibioticmech:aro-96ff58856f
+label: vanillobiocin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Antibiotic similar to clorobiocin, but with vanillic acid as the acyl
+  component instead of crenelated 4-hydroxybenzoic acid.
+definition_source: PMID:15152806
+parent_compounds:
+- ARO:3000103
+xrefs:
+- ARO:3004716
+- CHEBI:197618
+- pubchem.compound:76180016
+structural_class: aminocoumarin antibiotic
+structural_class_id: ARO:3000103
+chemical_structure:
+  smiles: CC1=CC=C(N1)C(=O)OC2C(C(OC(C2OC)(C)C)OC3=C(C4=C(C=C3)C(=C(C(=O)O4)NC(=O)C5=CC(=C(C=C5)O)OC)O)Cl)O
+  standard_inchi: InChI=1S/C31H31ClN2O12/c1-13-6-9-16(33-13)28(39)45-25-23(37)30(46-31(2,3)26(25)42-5)43-18-11-8-15-22(36)21(29(40)44-24(15)20(18)32)34-27(38)14-7-10-17(35)19(12-14)41-4/h6-12,23,25-26,30,33,35-37H,1-5H3,(H,34,38)
+  standard_inchi_key: LNDDBMXOCFEELJ-UHFFFAOYSA-N
+  molecular_formula: C31H31ClN2O12
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 659.0
+  monoisotopic_mass: 658.1565521
+source_concepts:
+- source: ARO
+  source_id: ARO:3004716
+  source_label: vanillobiocin
+  minted_identifier: antibioticmech:aro-96ff58856f
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

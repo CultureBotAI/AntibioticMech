@@ -1,0 +1,70 @@
+identifier: CHEBI:81972
+label: pyrifenox
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An oxime O-ether that is the O-methyloxime of 2',4'-dichloro-2-(3-pyridyl)acetophenone.
+  A fungicide used for control of powdery mildew, scab and other fungal pathogens
+  on a range of crops.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-(2,4-Dichlorophenyl)-2-(3-pyridinyl)ethanone O-methyloxime
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2',4'-Dichloro-2-(3-pyridyl)acetophenone O-methyloxime
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ro 15-1297
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23697
+- CHEBI:26421
+- CHEBI:36816
+- ARO:3000003
+xrefs:
+- ARO:3009164
+- cas:88283-41-4
+- kegg.compound:C18804
+- patent:NZ549922
+- patent:WO2004091298
+- pesticides:pyrifenox
+- ppdb:572
+- reaxys:8321367
+- pubchem.compound:55790
+activity_roles:
+- CHEBI:77884
+- CHEBI:86328
+structural_class: antibiotic without defined classification
+structural_class_id: ARO:3000003
+chemical_structure:
+  smiles: CON=C(Cc1cccnc1)c1ccc(Cl)cc1Cl
+  standard_inchi: InChI=1S/C14H12Cl2N2O/c1-19-18-14(7-10-3-2-6-17-9-10)12-5-4-11(15)8-13(12)16/h2-6,8-9H,7H2,1H3
+  standard_inchi_key: CKPCAYZTYMHQEX-UHFFFAOYSA-N
+  molecular_formula: C14H12Cl2N2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 295.169
+  monoisotopic_mass: 294.03267
+source_concepts:
+- source: ARO
+  source_id: ARO:3009164
+  source_label: pyrifenox
+  minted_identifier: antibioticmech:aro-367d12bf19
+  role_terms:
+  - CHEBI:77884
+  - CHEBI:86328
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:81972
+  source_label: pyrifenox
+  minted_identifier: antibioticmech:chebi-c0855d6dd6
+  role_terms:
+  - CHEBI:77884
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

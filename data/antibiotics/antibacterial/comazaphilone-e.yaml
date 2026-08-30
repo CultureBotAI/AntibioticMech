@@ -1,0 +1,50 @@
+identifier: CHEBI:70014
+label: comazaphilone E
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An azaphilone that is 5,6,7,8-tetrahydro-1H-isochromene substituted by
+  a hydroxy group and a methyl group at position 7, an oxo group at position 8, a
+  prop-1-en-1-yl group at position 3 and a (3,4-dihydroxy-2-methoxy-6-methylbenzoyl)oxy
+  group at position 6. Isolated from Penicillium commune, it exhibits antibacterial
+  and antineoplastic activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: rel-(6R,7R)-7-hydroxy-7-methyl-8-oxo-3-[(1E)-prop-1-en-1-yl]-5,6,7,8-tetrahydro-1H-isochromen-6-yl
+    3,4-dihydroxy-2-methoxy-6-methylbenzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:26878
+- CHEBI:33566
+- CHEBI:35618
+- CHEBI:36054
+- CHEBI:38761
+- CHEBI:50941
+xrefs:
+- reaxys:21312867
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C/C=C/C1=CC2=C(CO1)C(=O)[C@](C)(O)[C@H](OC(=O)c1c(C)cc(O)c(O)c1OC)C2
+  standard_inchi: InChI=1S/C22H24O8/c1-5-6-13-8-12-9-16(22(3,27)20(25)14(12)10-29-13)30-21(26)17-11(2)7-15(23)18(24)19(17)28-4/h5-8,16,23-24,27H,9-10H2,1-4H3/b6-5+/t16-,22-/m1/s1
+  standard_inchi_key: VWYGBXGOGQHZHM-JBAXFHHXSA-N
+  molecular_formula: C22H24O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 416.426
+  monoisotopic_mass: 416.14712
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70014
+  source_label: comazaphilone E
+  minted_identifier: antibioticmech:chebi-790a222c84
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,51 @@
+identifier: CHEBI:8653
+label: pyocyanine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An iminium betaine that is 5-methylphenazin-5-ium which is substituted
+  at position 1 by an oxidanidyl group. An antibiotic pigment produced by Pseudomonas
+  aeruginosa.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-methylphenazin-5-ium-1-olate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pyocyanin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35285
+- CHEBI:39201
+xrefs:
+- cas:85-66-5
+- chemspider:6558
+- kegg.compound:C01748
+- metacyc.compound:CPD-12847
+- pdb-ccd:3J8
+- reaxys:11862
+- wikipedia.en:Pyocyanin
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[n+]1c2ccccc2nc2c([O-])cccc21
+  standard_inchi: InChI=1S/C13H10N2O/c1-15-10-6-3-2-5-9(10)14-13-11(15)7-4-8-12(13)16/h2-8H,1H3
+  standard_inchi_key: YNCMLFHHXWETLD-UHFFFAOYSA-N
+  molecular_formula: C13H10N2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 210.236
+  monoisotopic_mass: 210.07931
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:8653
+  source_label: pyocyanine
+  minted_identifier: antibioticmech:chebi-530c43887a
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

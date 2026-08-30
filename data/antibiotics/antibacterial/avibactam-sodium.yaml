@@ -1,0 +1,50 @@
+identifier: CHEBI:85982
+label: avibactam sodium
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic sodium salt that is the monosodium salt of avibactam. Used
+  in combination with ceftazidime pentahydrate for the treatment of complicated urinary
+  tract infections including pyelonephritis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sodium ({[(2S,5R)-2-carbamoyl-7-oxo-1,6-diazabicyclo[3.2.1]octan-6-yl]oxy}sulfonyl)oxidanide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NXL 104
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38700
+xrefs:
+- cas:1192491-61-4
+- kegg.drug:D10340
+- patent:CA2716914
+- reaxys:15577038
+- wikipedia.en:Avibactam
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: NC(=O)[C@@H]1CC[C@@H]2CN1C(=O)N2OS(=O)(=O)[O-].[Na+]
+  standard_inchi: InChI=1S/C7H11N3O6S.Na/c8-6(11)5-2-1-4-3-9(5)7(12)10(4)16-17(13,14)15;/h4-5H,1-3H2,(H2,8,11)(H,13,14,15);/q;+1/p-1/t4-,5+;/m1./s1
+  standard_inchi_key: RTCIKUMODPANKX-JBUOLDKXSA-M
+  molecular_formula: C7H10N3O6S.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 287.229
+  monoisotopic_mass: 287.0188
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85982
+  source_label: avibactam sodium
+  minted_identifier: antibioticmech:chebi-98434a656d
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

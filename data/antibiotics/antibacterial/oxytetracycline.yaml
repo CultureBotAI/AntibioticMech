@@ -1,0 +1,309 @@
+identifier: CHEBI:27701
+label: oxytetracycline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracycline used for treatment of infections caused by a variety of
+  Gram positive and Gram negative microorganisms including Mycoplasma pneumoniae,
+  Pasteurella pestis, Escherichia coli, Haemophilus influenzae (respiratory infections),
+  and Diplococcus pneumoniae.
+definition_source: ChEBI
+synonyms:
+- synonym_text: oxitetraciclina
+  synonym_type: INN
+  source: chebi
+- synonym_text: oxytetracyclinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (4S,4aR,5S,5aR,6S,12aS)-4-(dimethylamino)-3,5,6,10,12,12a-hexahydroxy-6-methyl-1,11-dioxo-1,4,4a,5,5a,6,11,12a-octahydrotetracene-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Hydroxytetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Oxyterracin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Oxyterracine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Oxytetracyclin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Oxytetracycline (anhydrous)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Oxytetracycline amphoteric
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26895
+- ARO:3000050
+xrefs:
+- ARO:3000668
+- beilstein:2686362
+- bpdb:503
+- cas:79-57-2
+- drugbank:DB00595
+- drugcentral:2041
+- gmelin:623487
+- hmdb:HMDB0014733
+- kegg.compound:C06624
+- knapsack:C00017127
+- lipidmaps:LMPK07000005
+- pesticides:oxytetracycline
+- reaxys:2714587
+- vsdb:503
+- wikipedia.en:Oxytetracycline
+- chembl:CHEMBL1517
+- pubchem.compound:54675779
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
+structural_class: tetracycline antibiotic
+structural_class_id: ARO:3000050
+chemical_structure:
+  smiles: '[H][C@@]12[C@@H](O)[C@@]3([H])C(=C(O)[C@]1(O)C(=O)C(C(N)=O)=C(O)[C@H]2N(C)C)C(=O)c1c(O)cccc1[C@@]3(C)O'
+  standard_inchi: InChI=1S/C22H24N2O9/c1-21(32)7-5-4-6-8(25)9(7)15(26)10-12(21)17(28)13-14(24(2)3)16(27)11(20(23)31)19(30)22(13,33)18(10)29/h4-6,12-14,17,25,27-29,32-33H,1-3H3,(H2,23,31)/t12-,13-,14+,17+,21-,22+/m1/s1
+  standard_inchi_key: IWVCMVBTMGNXQD-PXOLEDIWSA-N
+  molecular_formula: C22H24N2O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 460.439
+  monoisotopic_mass: 460.14818
+source_concepts:
+- source: ARO
+  source_id: ARO:3000668
+  source_label: oxytetracycline
+  minted_identifier: antibioticmech:aro-c765f0a671
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:27701
+  source_label: oxytetracycline
+  minted_identifier: antibioticmech:chebi-ae58abf0ce
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000186
+  label: tet(M)
+  evidence:
+  - reference: ARO:3000186
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000190
+  label: tet(O)
+  evidence:
+  - reference: ARO:3000190
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000191
+  label: tet(Q)
+  evidence:
+  - reference: ARO:3000191
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000192
+  label: tet(S)
+  evidence:
+  - reference: ARO:3000192
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000193
+  label: tet(T)
+  evidence:
+  - reference: ARO:3000193
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000194
+  label: tet(W)
+  evidence:
+  - reference: ARO:3000194
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000195
+  label: tetB(P)
+  evidence:
+  - reference: ARO:3000195
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000196
+  label: tet(32)
+  evidence:
+  - reference: ARO:3000196
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000197
+  label: tet(36)
+  evidence:
+  - reference: ARO:3000197
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000205
+  label: tet(X)
+  evidence:
+  - reference: ARO:3000205
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000556
+  label: tet(44)
+  evidence:
+  - reference: ARO:3000556
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3002891
+  label: Streptomyces rimosus otr(A)
+  evidence:
+  - reference: ARO:3002891
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003745
+  label: mef(C)
+  evidence:
+  - reference: ARO:3003745
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003969
+  label: lmrP
+  evidence:
+  - reference: ARO:3003969
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004441
+  label: tet(59)
+  evidence:
+  - reference: ARO:3004441
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004581
+  label: tet(48)
+  evidence:
+  - reference: ARO:3004581
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004582
+  label: tet(49)
+  evidence:
+  - reference: ARO:3004582
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004584
+  label: tet(50)
+  evidence:
+  - reference: ARO:3004584
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004586
+  label: tet(51)
+  evidence:
+  - reference: ARO:3004586
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004587
+  label: tet(52)
+  evidence:
+  - reference: ARO:3004587
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004589
+  label: tet(53)
+  evidence:
+  - reference: ARO:3004589
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004590
+  label: tet(54)
+  evidence:
+  - reference: ARO:3004590
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004591
+  label: tet(55)
+  evidence:
+  - reference: ARO:3004591
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004603
+  label: tet(56)
+  evidence:
+  - reference: ARO:3004603
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004613
+  label: tet(47)
+  evidence:
+  - reference: ARO:3004613
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004639
+  label: Corynebacterium striatum tetA
+  evidence:
+  - reference: ARO:3004639
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005056
+  label: tet(X6)
+  evidence:
+  - reference: ARO:3005056
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005057
+  label: tet(X5)
+  evidence:
+  - reference: ARO:3005057
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005166
+  label: tet(X1)
+  evidence:
+  - reference: ARO:3005166
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000668 (oxytetracycline);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

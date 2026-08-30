@@ -1,0 +1,70 @@
+identifier: CHEBI:9715
+label: triforine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of N-alkylpiperazines in which the two amino groups
+  of piperazine are replaced by 1-formamido-2,2,2-trichloroethyl groups. A fungicide
+  active against a range of diseases including powdery mildew, scab and rust.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Funginex
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: N,N'-[piperazine-1,4-diylbis(2,2,2-trichloroethane-1,1-diyl)]diformamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,4-Bis(1-formamido-2,2,2-trichloroethyl)piperazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,4-Bis(2,2,2-trichloro-1-formamidoethyl)piperazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Biformylchlorazin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N'-(1,4-Piperazinediylbis(2,2,2-trichloroethylidene))bisformamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N'-(Piperazine-1,4-diylbis((trichloromethyl)methylene))diformamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24079
+- CHEBI:36683
+- CHEBI:46845
+- CHEBI:60600
+xrefs:
+- cas:26644-46-2
+- kegg.compound:C10960
+- patent:EP0031454
+- patent:US3975527
+- pesticides:triforine
+- ppdb:669
+- reaxys:626358
+activity_roles:
+- CHEBI:77884
+- CHEBI:86328
+chemical_structure:
+  smiles: '[H]C(=O)NC(N1CCN(C(NC([H])=O)C(Cl)(Cl)Cl)CC1)C(Cl)(Cl)Cl'
+  standard_inchi: InChI=1S/C10H14Cl6N4O2/c11-9(12,13)7(17-5-21)19-1-2-20(4-3-19)8(18-6-22)10(14,15)16/h5-8H,1-4H2,(H,17,21)(H,18,22)
+  standard_inchi_key: RROQIUMZODEXOR-UHFFFAOYSA-N
+  molecular_formula: C10H14Cl6N4O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 434.966
+  monoisotopic_mass: 431.92479
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9715
+  source_label: triforine
+  minted_identifier: antibioticmech:chebi-140e97f4e4
+  role_terms:
+  - CHEBI:77884
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

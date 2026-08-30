@@ -1,0 +1,37 @@
+identifier: antibioticmech:aro-e523675af2
+label: corbomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: A glycopeptide antibiotic which binds to essential peptidoglycan hydrolases,
+  thereby preventing autolysis and cell wall remodelling.
+definition_source: PMID:32051588
+parent_compounds:
+- ARO:3000081
+xrefs:
+- ARO:3005071
+- CHEBI:221137
+- pubchem.compound:163285731
+structural_class: glycopeptide antibiotic
+structural_class_id: ARO:3000081
+chemical_structure:
+  smiles: CC(=O)NC(C1=CC=C(C=C1)O)C(=O)NC2C3=CC(=CC(=C3)OC4=C(C=CC(=C4)C5C(=O)N[C@@H]6C7=CC(=C(C(=C7)OC8=CC=C(C[C@H]9C(=O)N[C@@H](C1=C(C(=CC(=C1)O)O)C1=C(C=CC(=C1)C[C@H](C(=O)N9)NC6=O)O)C(=O)N[C@@H](C1=CC(=CC(=C1)O)O)C(=O)O)C=C8)O)C1=CC3=C(C=C1)C(=CN3)C[C@H](C(=O)N5)NC2=O)O)O
+  standard_inchi: InChI=1S/C79H66N10O22/c1-33(90)81-64(36-5-9-43(91)10-6-36)76(105)86-66-40-21-46(94)29-49(22-40)111-61-26-38(8-15-59(61)97)65-77(106)87-67-41-23-51(37-7-13-50-42(32-80-54(50)24-37)25-57(73(102)85-65)84-74(66)103)70(99)62(27-41)110-48-11-2-34(3-12-48)17-55-72(101)89-69(78(107)88-68(79(108)109)39-19-44(92)28-45(93)20-39)53-30-47(95)31-60(98)63(53)52-16-35(4-14-58(52)96)18-56(71(100)82-55)83-75(67)104/h2-16,19-24,26-32,55-57,64-69,80,91-99H,17-18,25H2,1H3,(H,81,90)(H,82,100)(H,83,104)(H,84,103)(H,85,102)(H,86,105)(H,87,106)(H,88,107)(H,89,101)(H,108,109)/t55-,56+,57+,64?,65?,66?,67+,68-,69-/m0/s1
+  standard_inchi_key: YPKFJNUZFFXJND-XFKCSEFZSA-N
+  molecular_formula: C79H66N10O22
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1507.4
+  monoisotopic_mass: 1506.43531377
+source_concepts:
+- source: ARO
+  source_id: ARO:3005071
+  source_label: corbomycin
+  minted_identifier: antibioticmech:aro-e523675af2
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

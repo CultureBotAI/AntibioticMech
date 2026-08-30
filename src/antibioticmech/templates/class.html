@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block wrapclass %} wide{% endblock %}
+{% block title %}{{ label }} — AntibioticMech{% endblock %}
+{% block content %}
+<h1>{{ label }}</h1>
+<p class="lede">{{ total }} compound records. {{ description }}</p>
+<input class="searchbox" id="q" type="search" data-index="{{ index_url }}" data-total="{{ total }}" placeholder="Filter all {{ total }} records…" aria-label="Filter records">
+<p class="meta" id="count" aria-live="polite"></p>
+<table id="tbl">
+  <caption>{{ label }} compounds</caption>
+  <thead><tr><th scope="col">Compound</th><th scope="col">Structural class</th><th scope="col">Grounding</th><th scope="col">Curation</th><th scope="col">Sources</th></tr></thead>
+  <tbody>
+  {% for r in records %}
+  <tr>
+    <td><a href="../{{ slug }}/{{ r.slug }}.html">{{ r.label }}</a></td>
+    <td class="meta">{{ r.structural_class }}</td>
+    <td><span class="pill{{ ' warn' if r.grounding != 'EXACT' else '' }}">{{ r.grounding }}</span></td>
+    <td><span class="pill{{ ' plain' if r.status == 'SEEDED' else '' }}">{{ r.status }}</span></td>
+    <td class="meta">{{ r.sources|join(', ') }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% if pager %}
+<nav class="pager" aria-label="Pages">
+  {% for pg in pager %}{% if pg.n == page %}<span class="pill plain" aria-current="page">{{ pg.n }}</span>{% else %}<a href="{{ pg.href }}">{{ pg.n }}</a>{% endif %} {% endfor %}
+</nav>
+<p class="meta">Showing {{ records|length }} of {{ total }}. The filter searches all
+{{ total }}, not just this page.</p>
+{% endif %}
+<script>
+(function () {
+  var box = document.getElementById('q'), out = document.getElementById('count');
+  var body = document.querySelector('#tbl tbody');
+  var original = body.innerHTML;
+  var index = null, pending = null;
+  var slugDir = {{ slug|tojson }};
+
+  function esc(t) {
+    return String(t).replace(/[&<>"]/g, function (c) {
+      return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c];
+    });
+  }
+  // Rows are rebuilt from the index rather than hidden in place, because the
+  // page only holds its own slice of a class that can run to 900+ records.
+  function draw(rows) {
+    body.innerHTML = rows.map(function (r) {
+      var warn = (r[3] !== 'EXACT') ? ' warn' : '';
+      var plain = (r[4] === 'SEEDED') ? ' plain' : '';
+      return '<tr><td><a href="../' + slugDir + '/' + esc(r[1]) + '.html">' + esc(r[0]) +
+             '</a></td><td class="meta">' + esc(r[2]) +
+             '</td><td><span class="pill' + warn + '">' + esc(r[3]) +
+             '</span></td><td><span class="pill' + plain + '">' + esc(r[4]) +
+             '</span></td><td class="meta">' + esc(r[5]) + '</td></tr>';
+    }).join('');
+  }
+  function apply() {
+    pending = null;
+    var raw = box.value.toLowerCase();
+    if (!raw) { body.innerHTML = original; out.textContent = ''; return; }
+    var slugged = raw.replace(/[^a-z0-9]+/g, '-');
+    var hits = index.filter(function (r) {
+      var k = (r[0] + ' ' + r[1] + ' ' + r[2] + ' ' + r[5]).toLowerCase();
+      return k.indexOf(raw) !== -1 || k.indexOf(slugged) !== -1;
+    });
+    draw(hits.slice(0, 500));
+    out.textContent = hits.length + ' of ' + box.getAttribute('data-total') +
+      ' match' + (hits.length > 500 ? ' (first 500 shown)' : '');
+  }
+  // When the page already holds every record there is nothing to fetch, and
+  // fetching would make filtering depend on a network round trip that can fail.
+  var rendered = body.querySelectorAll('tr').length;
+  if (rendered >= parseInt(box.getAttribute('data-total'), 10)) {
+    index = [].slice.call(body.querySelectorAll('tr')).map(function (tr) {
+      var td = tr.querySelectorAll('td'), a = tr.querySelector('a');
+      return [td[0].textContent, a ? a.getAttribute('href').replace(/.*\/|\.html$/g, '') : '',
+              td[1].textContent, td[2].textContent, td[3].textContent, td[4].textContent];
+    });
+  }
+
+  box.addEventListener('input', function () {
+    if (index === null) {
+      // Fetched once, on the first keystroke — a reader who only browses never
+      // pays for it.
+      out.textContent = 'loading…';
+      fetch(box.getAttribute('data-index')).then(function (r) { return r.json(); })
+        .then(function (data) { index = data; apply(); })
+        .catch(function () { out.textContent = 'filter unavailable'; });
+      return;
+    }
+    if (pending === null) { pending = requestAnimationFrame(apply); }
+  });
+})();
+</script>
+{% endblock %}

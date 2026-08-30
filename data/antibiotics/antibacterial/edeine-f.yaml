@@ -1,0 +1,60 @@
+identifier: antibioticmech:aro-43392693fd
+label: edeine F
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Edeine F is a subtype of edeine similar to edeine B with beta-tyr replaced
+  by beta-phe-beta-ala. Edeines bind to the 30S subunit to block fMet-tRNA interaction
+  at the P site, inhibiting protein synthesis and subsequent structure/function processes
+  critical for life or replication.
+definition_source: PMID:6615592
+parent_compounds:
+- ARO:3009657
+xrefs:
+- ARO:3000136
+- pubchem.compound:194407
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: C1=CC=C(C=C1)[C@@H](CN)C(=O)N([C@@H](CN)C(=O)N[C@H](CCC[C@@H]([C@@H](CC(=O)NC(=O)CNCCCNCCCCN=C(N)N)O)N)C(=O)O)C(=O)C[C@H](N)O
+  standard_inchi: InChI=1S/C34H60N12O9/c35-18-22(21-8-2-1-3-9-21)32(53)46(30(51)17-27(38)48)25(19-36)31(52)44-24(33(54)55)11-6-10-23(37)26(47)16-28(49)45-29(50)20-42-14-7-13-41-12-4-5-15-43-34(39)40/h1-3,8-9,22-27,41-42,47-48H,4-7,10-20,35-38H2,(H,44,52)(H,54,55)(H4,39,40,43)(H,45,49,50)/t22-,23+,24-,25+,26-,27-/m1/s1
+  standard_inchi_key: WMAKHNPKGVNAJY-DDURVGIBSA-N
+  molecular_formula: C34H60N12O9
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 780.9
+  monoisotopic_mass: 780.46062154
+source_concepts:
+- source: ARO
+  source_id: ARO:3000136
+  source_label: edeine F
+  minted_identifier: antibioticmech:aro-43392693fd
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003223
+  label: Escherichia coli 16S rRNA mutation conferring resistance to edeine
+  evidence:
+  - reference: ARO:3003223
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000136 (edeine F);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004063
+  label: EdeQ
+  evidence:
+  - reference: ARO:3004063
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000136 (edeine F);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000756
+  target_label: 30S ribosomal subunit P-site
+  evidence:
+  - reference: ARO:3000756
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000136 (edeine F); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

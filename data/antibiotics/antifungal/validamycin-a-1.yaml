@@ -1,0 +1,45 @@
+identifier: CHEBI:90869
+label: validamycin A(1+)
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An ammonium ion resulting from the protonation of the amino group of validamycin
+  A. The major species at pH 7.3.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,4R,5S,6S)-N-[(1S,2S,3R,4R,5R)-4-(β-D-glucopyranosyloxy)-2,3-dihydroxy-5-(hydroxymethyl)cyclohexyl]-4,5,6-trihydroxy-3-(hydroxymethyl)cyclohex-2-en-1-aminium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: validamycin A
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35274
+xrefs:
+- metacyc.compound:VALIDAMYCIN-A
+activity_roles:
+- CHEBI:33281
+- CHEBI:86328
+chemical_structure:
+  smiles: OCC1=C[C@H]([NH2+][C@H]2C[C@H](CO)[C@@H](O[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)[C@H](O)[C@H]2O)[C@H](O)[C@@H](O)[C@@H]1O
+  standard_inchi: InChI=1S/C20H35NO13/c22-3-6-1-8(12(26)15(29)11(6)25)21-9-2-7(4-23)19(17(31)13(9)27)34-20-18(32)16(30)14(28)10(5-24)33-20/h1,7-32H,2-5H2/p+1/t7-,8+,9+,10-,11-,12+,13+,14-,15+,16+,17-,18-,19-,20+/m1/s1
+  standard_inchi_key: JARYYMUOCXVXNK-CSLFJTBJSA-O
+  molecular_formula: C20H36NO13
+  structure_source: ChEBI
+  charge: 1
+  average_mass: 498.502
+  monoisotopic_mass: 498.21812
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:90869
+  source_label: validamycin A(1+)
+  minted_identifier: antibioticmech:chebi-4f66871a06
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

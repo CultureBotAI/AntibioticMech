@@ -1,0 +1,53 @@
+identifier: CHEBI:231919
+label: fluopsin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A thiocarbonyl compound that is ammonia in which the hydrogens are substituted
+  by methyl, hydroxy, and carbonothioyl groups.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-hydroxy-N-methylthioformamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-methyl-N-(thioformyl)hydroxylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-methyl-N-hydroxythioxomethylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-methyl-N-thioformylhydroxylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: thioformin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24709
+- CHEBI:50492
+xrefs:
+- cas:31335-60-1
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CN(O)C=S
+  standard_inchi: InChI=1S/C2H5NOS/c1-3(4)2-5/h2,4H,1H3
+  standard_inchi_key: LSLVHNSGLHQBDX-UHFFFAOYSA-N
+  molecular_formula: C2H5NOS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 91.135
+  monoisotopic_mass: 91.00918
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:231919
+  source_label: fluopsin
+  minted_identifier: antibioticmech:chebi-0e6afcd6c5
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

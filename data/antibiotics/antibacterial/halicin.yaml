@@ -1,0 +1,66 @@
+identifier: CHEBI:146227
+label: halicin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of thiadiazoles that is 1,3,4-thiadiazol-2-amine
+  which is substituted by a (5-nitro-1,3-thiazol-2-yl)sulfanediyl group at position
+  5. It is a <a href="https://en.wikipedia.org/wiki/C-Jun_N-terminal_kinases" target="_blank">c-Jun
+  N-terminal kinase</a> inhibitor (IC50 = 0.7uM) and exhibits antibacterial properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-[(5-nitro-1,3-thiazol-2-yl)sulfanyl]-1,3,4-thiadiazol-2-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-amino-5-[(5-nitro-2-thiazolyl)thio]-1,3,4-thiadiazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-(5-nitrothiazol-2-ylthio)-1,3,4-thiadiazol-2-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-[(5-nitro-1,3-thiazol-2-yl)thio]-1,3,4-thiadiazol-2-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SU 3327
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SU-3327
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SU3327
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:16385
+- CHEBI:35716
+- CHEBI:38099
+- CHEBI:38418
+- CHEBI:50994
+xrefs:
+- cas:40045-50-9
+- reaxys:1139980
+- wikipedia.en:Halicin
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Nc1nnc(Sc2ncc([N+](=O)[O-])s2)s1
+  standard_inchi: InChI=1S/C5H3N5O2S3/c6-3-8-9-5(14-3)15-4-7-1-2(13-4)10(11)12/h1H,(H2,6,8)
+  standard_inchi_key: NQQBNZBOOHHVQP-UHFFFAOYSA-N
+  molecular_formula: C5H3N5O2S3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 261.313
+  monoisotopic_mass: 260.94489
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:146227
+  source_label: halicin
+  minted_identifier: antibioticmech:chebi-0b01b4cdbc
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

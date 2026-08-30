@@ -1,0 +1,59 @@
+identifier: CHEBI:27965
+label: conessine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A steroid alkaloid that is con-5-enine substituted by a N,N-dimethylamino
+  group at position 3. It has been isolated from the plant species of the family Apocynaceae.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N,N-dimethylcon-5-enin-3β-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Conessine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Conessinum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Neriine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Roquessine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26767
+- CHEBI:50996
+xrefs:
+- cas:546-06-5
+- kegg.compound:C06545
+- knapsack:C00002243
+- reaxys:4702160
+- wikipedia.en:Conessine
+activity_roles:
+- CHEBI:33282
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@@]12CC=C3C[C@@H](N(C)C)CC[C@]3(C)[C@@]1([H])CC[C@]13CN(C)[C@@H](C)[C@@]1([H])CC[C@@]23[H]'
+  standard_inchi: InChI=1S/C24H40N2/c1-16-20-8-9-22-19-7-6-17-14-18(25(3)4)10-12-23(17,2)21(19)11-13-24(20,22)15-26(16)5/h6,16,18-22H,7-15H2,1-5H3/t16-,18-,19+,20+,21-,22-,23-,24-/m0/s1
+  standard_inchi_key: GPLGAQQQNWMVMM-MYAJQUOBSA-N
+  molecular_formula: C24H40N2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 356.598
+  monoisotopic_mass: 356.31915
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:27965
+  source_label: conessine
+  minted_identifier: antibioticmech:chebi-a420a7f356
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

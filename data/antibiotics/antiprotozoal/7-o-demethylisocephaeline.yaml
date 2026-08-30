@@ -1,0 +1,46 @@
+identifier: CHEBI:65740
+label: 7'-O-demethylisocephaeline
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyridoisoquinoline consisting of (1'β)-emetan substituted by hydroxy
+  groups at positions 6' and 7' and methoxy groups at positions 10 and 11. It is isolated
+  from Psychotria klugii and exhibits antileishmanial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1'β)-10,11-dimethoxyemetan-6',7'-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24921
+- CHEBI:24922
+- CHEBI:26195
+- CHEBI:35618
+- CHEBI:61692
+xrefs:
+- chemspider:9060170
+- reaxys:9674985
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: '[H][C@]1(C[C@]2([H])NCCc3cc(O)c(O)cc32)C[C@@]2([H])c3cc(OC)c(OC)cc3CCN2C[C@@H]1CC'
+  standard_inchi: InChI=1S/C27H36N2O4/c1-4-16-15-29-8-6-18-12-26(32-2)27(33-3)14-21(18)23(29)10-19(16)9-22-20-13-25(31)24(30)11-17(20)5-7-28-22/h11-14,16,19,22-23,28,30-31H,4-10,15H2,1-3H3/t16-,19-,22-,23-/m0/s1
+  standard_inchi_key: HGQNZTBYUKKJLH-CQOCVSQPSA-N
+  molecular_formula: C27H36N2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 452.595
+  monoisotopic_mass: 452.26751
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65740
+  source_label: 7'-O-demethylisocephaeline
+  minted_identifier: antibioticmech:chebi-9444344c84
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

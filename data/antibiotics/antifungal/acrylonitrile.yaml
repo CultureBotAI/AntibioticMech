@@ -1,0 +1,67 @@
+identifier: CHEBI:28217
+label: acrylonitrile
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A nitrile that is hydrogen cyanide in which the hydrogen has been replaced
+  by an ethenyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-propenenitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acrylnitril
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acrylonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acrylsäurenitril
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Propenenitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Vinyl cyanide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cyanure de vinyle
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nitrile acrylique
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134179
+- CHEBI:80291
+xrefs:
+- cas:107-13-1
+- kegg.compound:C01998
+- pdb-ccd:6AC
+- ppdb:2545
+- reaxys:605310
+- umbbd.compound:c0148
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C=CC#N
+  standard_inchi: InChI=1S/C3H3N/c1-2-3-4/h2H,1H2
+  standard_inchi_key: NLHHRLWOUZZQLW-UHFFFAOYSA-N
+  molecular_formula: C3H3N
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 53.064
+  monoisotopic_mass: 53.02655
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28217
+  source_label: acrylonitrile
+  minted_identifier: antibioticmech:chebi-2b9fd61d5f
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

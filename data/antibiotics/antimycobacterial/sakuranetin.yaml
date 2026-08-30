@@ -1,0 +1,73 @@
+identifier: CHEBI:28927
+label: sakuranetin
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A flavonoid phytoalexin that is (S)-naringenin in which the hydroxy group
+  at position 7 is replaced by a methoxy group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-5-hydroxy-2-(4-hydroxyphenyl)-7-methoxy-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-(−)-4',5-dihydroxy-7-methoxyflavanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-2,3-dihydro-5-hydroxy-2-(4-hydroxyphenyl)-7-methoxy-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4',5-dihydroxy-7-methoxyflavanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-hydroxy-2-(4-hydroxyphenyl)-7-methoxy-chroman-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Naringenin 7-methyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sakuranetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-sakuranetin
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140331
+- CHEBI:140377
+- CHEBI:38738
+- CHEBI:38749
+- CHEBI:60951
+xrefs:
+- cas:2957-21-3
+- hmdb:HMDB0030090
+- kegg.compound:C09833
+- knapsack:C00000999
+- lipidmaps:LMPK12140571
+- metacyc.compound:CPD-7079
+- pdb-ccd:SAK
+- reaxys:92466
+- wikipedia.en:Sakuranetin
+activity_roles:
+- CHEBI:64912
+chemical_structure:
+  smiles: COc1cc(O)c2c(c1)O[C@H](c1ccc(O)cc1)CC2=O
+  standard_inchi: InChI=1S/C16H14O5/c1-20-11-6-12(18)16-13(19)8-14(21-15(16)7-11)9-2-4-10(17)5-3-9/h2-7,14,17-18H,8H2,1H3/t14-/m0/s1
+  standard_inchi_key: DJOJDHGQRNZXQQ-AWEZNQCLSA-N
+  molecular_formula: C16H14O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 286.283
+  monoisotopic_mass: 286.08412
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28927
+  source_label: sakuranetin
+  minted_identifier: antibioticmech:chebi-dbc8fceedf
+  role_terms:
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

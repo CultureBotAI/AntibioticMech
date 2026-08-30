@@ -1,0 +1,936 @@
+identifier: CHEBI:28864
+label: tobramycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A amino cyclitol glycoside that is kanamycin B lacking the 3-hydroxy substituent
+  from the 2,6-diaminoglucose ring.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,2S,3R,4S,6R)-4,6-diamino-3-(2,6-diamino-2,3,6-trideoxy-α-D-ribo-hexopyranosyloxy)-2-hydroxycyclohexyl
+    3-amino-3-deoxy-α-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3'-Deoxykanamycin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nebramycin 6
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nebramycin factir 6
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-3-Amino-3-deoxy-alpha-D-glucopyranosyl-(1-4)-O-(2,6-diamino-2,3,6-trideoxy-alpha-D-ribohexopyranosyl-(1-4))-2-deoxy-D-streptamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tobracin (TN)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tobramycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tobrex (TN)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Gotabiotic
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Nebcin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Tenebrimycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Tobracin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Tobradistin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Tobramaxin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Tobramicin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Tobramitsetin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Tobramycetin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Tobrex
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:22479
+- ARO:0000016
+xrefs:
+- ARO:0000052
+- cas:32986-56-4
+- drugbank:DB00684
+- drugcentral:2684
+- kegg.compound:C00397
+- kegg.drug:D00063
+- lincs.smallmolecule:LSM-6534
+- pdb-ccd:TOY
+- reaxys:1357507
+- wikipedia.en:Tobramycin
+- chembl:CHEMBL1747
+- pubchem.compound:36294
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: NC[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](N)[C@H]3O)[C@H](N)C[C@@H]2N)[C@H](N)C[C@@H]1O
+  standard_inchi: InChI=1S/C18H37N5O9/c19-3-9-8(25)2-7(22)17(29-9)31-15-5(20)1-6(21)16(14(15)28)32-18-13(27)11(23)12(26)10(4-24)30-18/h5-18,24-28H,1-4,19-23H2/t5-,6+,7+,8-,9+,10+,11-,12+,13+,14-,15+,16-,17+,18+/m0/s1
+  standard_inchi_key: NLVFBUXFDBBNBW-PBSUHMDJSA-N
+  molecular_formula: C18H37N5O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 467.52
+  monoisotopic_mass: 467.25913
+source_concepts:
+- source: ARO
+  source_id: ARO:0000052
+  source_label: tobramycin
+  minted_identifier: antibioticmech:aro-2db7d91840
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:28864
+  source_label: tobramycin
+  minted_identifier: antibioticmech:chebi-7bce6663cd
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000230
+  label: ANT(2'')-Ia
+  evidence:
+  - reference: ARO:3000230
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000491
+  label: acrD
+  evidence:
+  - reference: ARO:3000491
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000858
+  label: armA
+  evidence:
+  - reference: ARO:3000858
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000859
+  label: rmtA
+  evidence:
+  - reference: ARO:3000859
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000860
+  label: rmtB
+  evidence:
+  - reference: ARO:3000860
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000861
+  label: rmtC
+  evidence:
+  - reference: ARO:3000861
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000862
+  label: sgm
+  evidence:
+  - reference: ARO:3000862
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002523
+  label: AAC(2')-Ia
+  evidence:
+  - reference: ARO:3002523
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002524
+  label: AAC(2')-Ib
+  evidence:
+  - reference: ARO:3002524
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002525
+  label: AAC(2')-Ic
+  evidence:
+  - reference: ARO:3002525
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002526
+  label: AAC(2')-Id
+  evidence:
+  - reference: ARO:3002526
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002527
+  label: AAC(2')-Ie
+  evidence:
+  - reference: ARO:3002527
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002533
+  label: AAC(3)-IIa
+  evidence:
+  - reference: ARO:3002533
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002534
+  label: AAC(3)-IIb
+  evidence:
+  - reference: ARO:3002534
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002535
+  label: AAC(3)-IIc
+  evidence:
+  - reference: ARO:3002535
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002536
+  label: AAC(3)-IIIa
+  evidence:
+  - reference: ARO:3002536
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002537
+  label: AAC(3)-IIIb
+  evidence:
+  - reference: ARO:3002537
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002539
+  label: AAC(3)-IVa
+  evidence:
+  - reference: ARO:3002539
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002545
+  label: AAC(6')-Ia
+  evidence:
+  - reference: ARO:3002545
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002546
+  label: AAC(6')-Ib
+  evidence:
+  - reference: ARO:3002546
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002547
+  label: AAC(6')-Ib-cr1
+  evidence:
+  - reference: ARO:3002547
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002549
+  label: AAC(6')-Ic
+  evidence:
+  - reference: ARO:3002549
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002553
+  label: AAC(6')-If
+  evidence:
+  - reference: ARO:3002553
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002554
+  label: AAC(6')-Ig
+  evidence:
+  - reference: ARO:3002554
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002555
+  label: AAC(6')-Ih
+  evidence:
+  - reference: ARO:3002555
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002556
+  label: AAC(6')-Ii
+  evidence:
+  - reference: ARO:3002556
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002557
+  label: AAC(6')-Ij
+  evidence:
+  - reference: ARO:3002557
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002558
+  label: AAC(6')-Ik
+  evidence:
+  - reference: ARO:3002558
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002559
+  label: AAC(6')-Ip
+  evidence:
+  - reference: ARO:3002559
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002560
+  label: AAC(6')-Iq
+  evidence:
+  - reference: ARO:3002560
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002561
+  label: AAC(6')-Ir
+  evidence:
+  - reference: ARO:3002561
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002562
+  label: AAC(6')-Is
+  evidence:
+  - reference: ARO:3002562
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002563
+  label: AAC(6')-Isa
+  evidence:
+  - reference: ARO:3002563
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002564
+  label: AAC(6')-It
+  evidence:
+  - reference: ARO:3002564
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002565
+  label: AAC(6')-Iu
+  evidence:
+  - reference: ARO:3002565
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002566
+  label: AAC(6')-Iv
+  evidence:
+  - reference: ARO:3002566
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002567
+  label: AAC(6')-Iw
+  evidence:
+  - reference: ARO:3002567
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002568
+  label: AAC(6')-Ix
+  evidence:
+  - reference: ARO:3002568
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002569
+  label: AAC(6')-Iy
+  evidence:
+  - reference: ARO:3002569
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002570
+  label: AAC(6')-Iz
+  evidence:
+  - reference: ARO:3002570
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002571
+  label: AAC(6')-Iaa
+  evidence:
+  - reference: ARO:3002571
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002572
+  label: AAC(6')-Iad
+  evidence:
+  - reference: ARO:3002572
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002573
+  label: AAC(6')-Iae
+  evidence:
+  - reference: ARO:3002573
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002574
+  label: AAC(6')-Iaf
+  evidence:
+  - reference: ARO:3002574
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002575
+  label: AAC(6')-Iai
+  evidence:
+  - reference: ARO:3002575
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002576
+  label: AAC(6')-Ib3
+  evidence:
+  - reference: ARO:3002576
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002577
+  label: AAC(6')-Ib4
+  evidence:
+  - reference: ARO:3002577
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002578
+  label: AAC(6')-Ib7
+  evidence:
+  - reference: ARO:3002578
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002579
+  label: AAC(6')-Ib8
+  evidence:
+  - reference: ARO:3002579
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002580
+  label: AAC(6')-Ib9
+  evidence:
+  - reference: ARO:3002580
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002581
+  label: AAC(6')-Ib10
+  evidence:
+  - reference: ARO:3002581
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002582
+  label: AAC(6')-Ib11
+  evidence:
+  - reference: ARO:3002582
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002583
+  label: AAC(6')-29a
+  evidence:
+  - reference: ARO:3002583
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002584
+  label: AAC(6')-29b
+  evidence:
+  - reference: ARO:3002584
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002585
+  label: AAC(6')-31
+  evidence:
+  - reference: ARO:3002585
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002586
+  label: AAC(6')-32
+  evidence:
+  - reference: ARO:3002586
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002587
+  label: AAC(6')-I33
+  evidence:
+  - reference: ARO:3002587
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002588
+  label: AAC(6')-I30
+  evidence:
+  - reference: ARO:3002588
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002589
+  label: AAC(6')-Iid
+  evidence:
+  - reference: ARO:3002589
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002590
+  label: AAC(6')-Iih
+  evidence:
+  - reference: ARO:3002590
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002591
+  label: AAC(6')-Ib-Suzhou
+  evidence:
+  - reference: ARO:3002591
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002592
+  label: AAC(6')-Ib-Hangzhou
+  evidence:
+  - reference: ARO:3002592
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002593
+  label: AAC(6')-Ib-SK
+  evidence:
+  - reference: ARO:3002593
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002594
+  label: AAC(6')-IIa
+  evidence:
+  - reference: ARO:3002594
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002595
+  label: AAC(6')-IIb
+  evidence:
+  - reference: ARO:3002595
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002596
+  label: AAC(6')-IIc
+  evidence:
+  - reference: ARO:3002596
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002597
+  label: AAC(6')-Ie-APH(2'')-Ia bifunctional protein
+  evidence:
+  - reference: ARO:3002597
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002598
+  label: ANT(3'')-II-AAC(6')-IId bifunctional protein
+  evidence:
+  - reference: ARO:3002598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002600
+  label: AAC(3)-Ib/AAC(6')-Ib3 bifunctional protein
+  evidence:
+  - reference: ARO:3002600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002623
+  label: ANT(4')-Ia
+  evidence:
+  - reference: ARO:3002623
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002624
+  label: ANT(4')-IIa
+  evidence:
+  - reference: ARO:3002624
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002625
+  label: ANT(4')-IIb
+  evidence:
+  - reference: ARO:3002625
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002634
+  label: APH(2'')-Ie
+  evidence:
+  - reference: ARO:3002634
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002636
+  label: APH(2'')-IIIa
+  evidence:
+  - reference: ARO:3002636
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002637
+  label: APH(2'')-IVa
+  evidence:
+  - reference: ARO:3002637
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002667
+  label: rmtD
+  evidence:
+  - reference: ARO:3002667
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002668
+  label: rmtG
+  evidence:
+  - reference: ARO:3002668
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002669
+  label: APH(2'')-Ig
+  evidence:
+  - reference: ARO:3002669
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3002981
+  label: AmrAB-OprM
+  evidence:
+  - reference: ARO:3002981
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003032
+  label: MexXY-OprM
+  evidence:
+  - reference: ARO:3003032
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003038
+  label: MexXY-OprA
+  evidence:
+  - reference: ARO:3003038
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003198
+  label: rmtH
+  evidence:
+  - reference: ARO:3003198
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003199
+  label: AAC(6')-Iak
+  evidence:
+  - reference: ARO:3003199
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003200
+  label: AAC(6')-Ian
+  evidence:
+  - reference: ARO:3003200
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003237
+  label: Mycobacteroides abscessus 16S rRNA mutation conferring resistance to tobramycin
+  evidence:
+  - reference: ARO:3003237
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003408
+  label: Escherichia coli 16S rRNA (rrsB) mutation conferring resistance to tobramycin
+  evidence:
+  - reference: ARO:3003408
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003516
+  label: Mycobacteroides chelonae 16S rRNA mutation conferring resistance to tobramycin
+  evidence:
+  - reference: ARO:3003516
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003676
+  label: AAC(6')-Ib'
+  evidence:
+  - reference: ARO:3003676
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003677
+  label: AAC(6')-Iaj
+  evidence:
+  - reference: ARO:3003677
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003688
+  label: PvrR
+  evidence:
+  - reference: ARO:3003688
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003905
+  label: ANT(4')-Ib
+  evidence:
+  - reference: ARO:3003905
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004082
+  label: AcrAD-TolC
+  evidence:
+  - reference: ARO:3004082
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004191
+  label: APH(2'')-If
+  evidence:
+  - reference: ARO:3004191
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004598
+  label: Klebsiella pneumoniae KpnGH-TolC
+  evidence:
+  - reference: ARO:3004598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004621
+  label: AAC(3)-IIe
+  evidence:
+  - reference: ARO:3004621
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004623
+  label: AAC(3)-IId
+  evidence:
+  - reference: ARO:3004623
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004629
+  label: AAC(6')-Im
+  evidence:
+  - reference: ARO:3004629
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004635
+  label: AAC(6')-Il
+  evidence:
+  - reference: ARO:3004635
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004638
+  label: AAC(6')-I-48
+  evidence:
+  - reference: ARO:3004638
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004641
+  label: AAC(6')-I-43
+  evidence:
+  - reference: ARO:3004641
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004677
+  label: rmtD2
+  evidence:
+  - reference: ARO:3004677
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3005049
+  label: CrcB
+  evidence:
+  - reference: ARO:3005049
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005061
+  label: AAC(3)-IVb
+  evidence:
+  - reference: ARO:3005061
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005085
+  label: AAC(3)-IIg
+  evidence:
+  - reference: ARO:3005085
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005112
+  label: AAC(6')-Ib-cr3
+  evidence:
+  - reference: ARO:3005112
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005114
+  label: AAC(6')-Ib-cr4
+  evidence:
+  - reference: ARO:3005114
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005115
+  label: AAC(6')-Ib-cr5
+  evidence:
+  - reference: ARO:3005115
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005116
+  label: AAC(6')-Ib-cr6
+  evidence:
+  - reference: ARO:3005116
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005117
+  label: AAC(6')-Ib-cr7
+  evidence:
+  - reference: ARO:3005117
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005118
+  label: AAC(6')-Ib-cr8
+  evidence:
+  - reference: ARO:3005118
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005119
+  label: AAC(6')-Ib-cr9
+  evidence:
+  - reference: ARO:3005119
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007204
+  label: AAC(6')-Iap
+  evidence:
+  - reference: ARO:3007204
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007456
+  label: dfrL
+  evidence:
+  - reference: ARO:3007456
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007770
+  label: aac(6')-Ib-cr10
+  evidence:
+  - reference: ARO:3007770
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007771
+  label: aac(6')-Ib-cr11
+  evidence:
+  - reference: ARO:3007771
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3009655
+  label: AAC(6')-Va
+  evidence:
+  - reference: ARO:3009655
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000052 (tobramycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

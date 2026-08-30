@@ -1,0 +1,52 @@
+identifier: CHEBI:81788
+label: cymoxanil
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of ureas that is urea in which the two nitrogen
+  atoms are substituted by an ethyl group and a 2-cyano-2-(methoxyimino)acetyl group
+  respectively. A fungicide used to control Peronosporales on a range of crops including
+  vines, hops and potatoes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-cyano-N-(ethylcarbamoyl)-2-(methoxyimino)acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(2-Cyano-2-methoxyiminoacetyl)-3-ethylurea
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18379
+- CHEBI:36816
+- CHEBI:47857
+- CHEBI:86417
+xrefs:
+- cas:57966-95-7
+- kegg.compound:C18498
+- pesticides:cymoxanil
+- ppdb:196
+- reaxys:2214017
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CCNC(=O)NC(=O)C(C#N)=NOC
+  standard_inchi: InChI=1S/C7H10N4O3/c1-3-9-7(13)10-6(12)5(4-8)11-14-2/h3H2,1-2H3,(H2,9,10,12,13)
+  standard_inchi_key: XERJKGMBORTKEO-UHFFFAOYSA-N
+  molecular_formula: C7H10N4O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 198.182
+  monoisotopic_mass: 198.07529
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81788
+  source_label: cymoxanil
+  minted_identifier: antibioticmech:chebi-885cc36012
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

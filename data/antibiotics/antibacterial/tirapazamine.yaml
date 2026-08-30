@@ -1,0 +1,55 @@
+identifier: CHEBI:78887
+label: tirapazamine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzotriazines that is 1,2,4-benzotriazine carrying
+  an amino substituent at position 3 and two oxido substituents at positions 1 and
+  4.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,2,4-benzotriazin-3-amine 1,4-dioxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-Amino-1,2,4-benzotriazine 1,4-dioxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SR 4233
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SR-4233
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33860
+- CHEBI:35580
+- CHEBI:51361
+xrefs:
+- cas:27314-97-2
+- kegg.drug:D06167
+- reaxys:179322
+- wikipedia.en:Tirapazamine
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Nc1n[n+]([O-])c2ccccc2[n+]1[O-]
+  standard_inchi: InChI=1S/C7H6N4O2/c8-7-9-11(13)6-4-2-1-3-5(6)10(7)12/h1-4H,(H2,8,9)
+  standard_inchi_key: ORYDPOVDJJZGHQ-UHFFFAOYSA-N
+  molecular_formula: C7H6N4O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 178.151
+  monoisotopic_mass: 178.04908
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:78887
+  source_label: tirapazamine
+  minted_identifier: antibioticmech:chebi-59e131c858
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

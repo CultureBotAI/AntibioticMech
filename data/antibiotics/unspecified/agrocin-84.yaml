@@ -1,0 +1,44 @@
+identifier: CHEBI:82809
+label: agrocin 84
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A nucleotide conjugate that is produced by Agrobacterium radiobacter strain
+  K-84. A 'Trojan horse' antibiotic used to control crown gall.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Agrocin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27577
+- CHEBI:47784
+- CHEBI:63367
+xrefs:
+- cas:59111-78-3
+- hmdb:HMDB0030532
+- knapsack:C00018184
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]1([C@H](O)CO)OC(OP(=O)(O)Nc2ncnc3c2ncn3[C@@H]2O[C@H](COP(=O)(O)NC(=O)[C@@H](O)[C@H](O)C(C)C)[C@@H](O)[C@H]2O)[C@H](O)[C@H]1O'
+  standard_inchi: InChI=1S/C22H36N6O17P2/c1-7(2)11(31)14(34)20(37)27-46(38,39)42-4-9-12(32)15(35)21(43-9)28-6-25-10-18(23-5-24-19(10)28)26-47(40,41)45-22-16(36)13(33)17(44-22)8(30)3-29/h5-9,11-17,21-22,29-36H,3-4H2,1-2H3,(H2,27,37,38,39)(H2,23,24,26,40,41)/t8-,9-,11-,12-,13-,14+,15-,16-,17+,21-,22?/m1/s1
+  standard_inchi_key: YNCRAYSPLQSJIP-JHNPATRKSA-N
+  molecular_formula: C22H36N6O17P2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 718.503
+  monoisotopic_mass: 718.16122
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:82809
+  source_label: agrocin 84
+  minted_identifier: antibioticmech:chebi-64c2c445fa
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

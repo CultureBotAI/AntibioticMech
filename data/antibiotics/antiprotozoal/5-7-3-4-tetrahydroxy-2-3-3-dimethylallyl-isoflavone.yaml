@@ -1,0 +1,42 @@
+identifier: CHEBI:66212
+label: 5,7,3',4'-tetrahydroxy-2'-(3,3-dimethylallyl)isoflavone
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 7-hydroxyisoflavones that is 7-hydroxyisoflavone
+  with additional hydroxy groups at positions 5, 3' and 4' and a prenyl group at position
+  2'. Isolated from the roots of Psorothamnus arborescens, it exhibits antileishmanial
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-[3,4-dihydroxy-2-(3-methylbut-2-en-1-yl)phenyl]-5,7-dihydroxy-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:55465
+xrefs:
+- reaxys:15869591
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: CC(C)=CCc1c(-c2coc3cc(O)cc(O)c3c2=O)ccc(O)c1O
+  standard_inchi: InChI=1S/C20H18O6/c1-10(2)3-4-13-12(5-6-15(22)19(13)24)14-9-26-17-8-11(21)7-16(23)18(17)20(14)25/h3,5-9,21-24H,4H2,1-2H3
+  standard_inchi_key: XIUMMQJDWWYGHD-UHFFFAOYSA-N
+  molecular_formula: C20H18O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 354.358
+  monoisotopic_mass: 354.11034
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66212
+  source_label: 5,7,3',4'-tetrahydroxy-2'-(3,3-dimethylallyl)isoflavone
+  minted_identifier: antibioticmech:chebi-2c8f32aeea
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

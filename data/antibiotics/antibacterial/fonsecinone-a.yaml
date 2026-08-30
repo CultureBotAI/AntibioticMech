@@ -1,0 +1,47 @@
+identifier: CHEBI:133759
+label: fonsecinone A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dimeric naphthopyran with formula C32H26O10, originally isolated from
+  Aspergillus niger.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-hydroxy-10-(5-hydroxy-8,10-dimethoxy-2-methyl-4-oxo-4H-naphtho[1,2-b]pyran-9-yl)-6,8-dimethoxy-2-methyl-4H-naphtho[2,3-b]pyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:35618
+- CHEBI:3992
+- CHEBI:64459
+- CHEBI:64542
+- CHEBI:76224
+xrefs:
+- cas:95152-75-3
+- knapsack:C00034519
+- reaxys:5206196
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1cc(OC)c2c(O)c3c(=O)cc(C)oc3c(-c3c(OC)cc4cc(O)c5c(=O)cc(C)oc5c4c3OC)c2c1
+  standard_inchi: InChI=1S/C32H26O10/c1-13-7-18(33)26-20(35)9-15-10-21(38-4)28(30(40-6)23(15)31(26)41-13)25-17-11-16(37-3)12-22(39-5)24(17)29(36)27-19(34)8-14(2)42-32(25)27/h7-12,35-36H,1-6H3
+  standard_inchi_key: FFNPXDMNZBCNMN-UHFFFAOYSA-N
+  molecular_formula: C32H26O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 570.55
+  monoisotopic_mass: 570.1526
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:133759
+  source_label: fonsecinone A
+  minted_identifier: antibioticmech:chebi-ef468d847f
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

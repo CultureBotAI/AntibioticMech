@@ -1,0 +1,153 @@
+identifier: CHEBI:404903
+label: ertapenem
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Meropenem in which the one of the two methyl groups attached to the amide
+  nitrogen is replaced by hydrogen while the other is replaced by a 3-carboxyphenyl
+  group. The sodium salt is used for the treatment of moderate to severe susceptible
+  infections including intra-abdominal and acute gynaecological infections, pneumonia,
+  and infections of the skin and of the urinary tract.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4R,5S,6S)-3-({(3S,5S)-5-[(3-carboxyphenyl)carbamoyl]pyrrolidin-3-yl}sulfanyl)-6-[(1R)-1-hydroxyethyl]-4-methyl-7-oxo-1-azabicyclo[3.2.0]hept-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1R,5S,6S,8R,2'S,4'S)-2-(2-(3-carboxyphenylcarbamoyl)pyrrolidin-4-ylthio)-6-(1-hydroxyethyl)-1-methylcarbapenem-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4R,5S,6S)-3-((3S,5S)-5-((3-carboxyphenyl)carbamoyl)pyrrolidin-3-ylthio)-6-((R)-1-hydroxyethyl)-4-methyl-7-oxo-1-aza-bicyclo[3.2.0]hept-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ERTAPENEM
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ERT
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Invanz
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:46634
+- CHEBI:46770
+- ARO:0000020
+xrefs:
+- ARO:0000070
+- beilstein:9025520
+- cas:153832-46-3
+- drugbank:DB00303
+- drugcentral:1046
+- kegg.drug:D07908
+- patent:US5478820
+- patent:WO9315078
+- wikipedia.en:Ertapenem
+- chembl:CHEMBL1359
+- pubchem.compound:150610
+activity_roles:
+- CHEBI:36047
+structural_class: carbapenem
+structural_class_id: ARO:0000020
+chemical_structure:
+  smiles: '[H][C@@]1(SC2=C(C(=O)O)N3C(=O)[C@]([H])([C@@H](C)O)[C@@]3([H])[C@H]2C)CN[C@]([H])(C(=O)Nc2cccc(C(=O)O)c2)C1'
+  standard_inchi: InChI=1S/C22H25N3O7S/c1-9-16-15(10(2)26)20(28)25(16)17(22(31)32)18(9)33-13-7-14(23-8-13)19(27)24-12-5-3-4-11(6-12)21(29)30/h3-6,9-10,13-16,23,26H,7-8H2,1-2H3,(H,24,27)(H,29,30)(H,31,32)/t9-,10-,13+,14+,15-,16-/m1/s1
+  standard_inchi_key: JUZNIMUFDBIJCM-ANEDZVCMSA-N
+  molecular_formula: C22H25N3O7S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 475.523
+  monoisotopic_mass: 475.14132
+source_concepts:
+- source: ARO
+  source_id: ARO:0000070
+  source_label: ertapenem
+  minted_identifier: antibioticmech:aro-ac23aaf931
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:404903
+  source_label: ertapenem
+  minted_identifier: antibioticmech:chebi-f4e1cf82ea
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000467
+  label: NDM-5
+  evidence:
+  - reference: ARO:3000467
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000070 (ertapenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000589
+  label: NDM-1
+  evidence:
+  - reference: ARO:3000589
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000070 (ertapenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001889
+  label: CTX-M-27
+  evidence:
+  - reference: ARO:3001889
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000070 (ertapenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002013
+  label: CMY-2
+  evidence:
+  - reference: ARO:3002013
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000070 (ertapenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003713
+  label: VCC-1
+  evidence:
+  - reference: ARO:3003713
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000070 (ertapenem);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003966
+  label: Klebsiella pneumoniae OmpK35
+  evidence:
+  - reference: ARO:3003966
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000070 (ertapenem);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004598
+  label: Klebsiella pneumoniae KpnGH-TolC
+  evidence:
+  - reference: ARO:3004598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000070 (ertapenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005511
+  label: VIM-63
+  evidence:
+  - reference: ARO:3005511
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000070 (ertapenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007632
+  label: FRI-11
+  evidence:
+  - reference: ARO:3007632
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000070 (ertapenem);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000070 (ertapenem); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

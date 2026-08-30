@@ -1,0 +1,51 @@
+identifier: CHEBI:81832
+label: orysastrobin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid amide obtained by formal condensation of the carboxy
+  group of (2E)-(methoxyimino){2-[(3E,5E,6E)-5-(methoxyimino)-4,6-dimethyl-2,8-dioxa-3,7-diazanona-3,6-dien-1-yl]phenyl}acetic
+  acid with the amino group of methylamine. A rice fungicide that is highly effective
+  against Magnaporthe oryzae, Pyricularia oryzae, Thanatephorus cucumeris and Rhizoctonia
+  solani.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (αE)-α-(methoxyimino)-2-[(3E,5E,6E)-5-(methoxyimino)-4,6-dimethyl-2,8-dioxa-3,7-diaza-3,6-nonadienyl]-N-methylbenzeneacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:29347
+- CHEBI:36816
+- CHEBI:60600
+- CHEBI:86487
+xrefs:
+- cas:248593-16-0
+- kegg.compound:C18560
+- patent:AU2010277748
+- pesticides:orysastrobin
+- ppdb:1142
+- reaxys:11330196
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CNC(=O)/C(=N/OC)c1ccccc1CO/N=C(C)/C(=N/OC)C(/C)=N/OC
+  standard_inchi: InChI=1S/C18H25N5O5/c1-12(20-25-4)16(22-26-5)13(2)21-28-11-14-9-7-8-10-15(14)17(23-27-6)18(24)19-3/h7-10H,11H2,1-6H3,(H,19,24)/b20-12+,21-13+,22-16+,23-17+
+  standard_inchi_key: JHIPUJPTQJYEQK-ZLHHXESBSA-N
+  molecular_formula: C18H25N5O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 391.428
+  monoisotopic_mass: 391.18557
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81832
+  source_label: orysastrobin
+  minted_identifier: antibioticmech:chebi-89d8fca90e
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,91 @@
+identifier: CHEBI:152058
+label: ethylmercuric chloride
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A highly toxic organomercury compound which is used as a fungicide for
+  treating seeds.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Ceresan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Cryptodine
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Emcon D
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Ganozan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Granosan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Granozan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: chloro(ethyl)mercury
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C2H5HgCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: EtHgCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chlorido(ethanido)mercury
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chlorido(ethyl)mercury
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chloroethylmercury
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethyl mercury chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethylmercury chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethylmercury(2+) chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethylmercury(II) chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: monoethylmercury chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23117
+- CHEBI:25706
+xrefs:
+- cas:107-27-7
+- pesticides:ethylmercury_chloride
+- reaxys:4123092
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: C[CH2][Hg][Cl]
+  standard_inchi: InChI=1S/C2H5.ClH.Hg/c1-2;;/h1H2,2H3;1H;/q;;+1/p-1
+  standard_inchi_key: QWUGXIXRFGEYBD-UHFFFAOYSA-M
+  molecular_formula: C2H5ClHg
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 265.105
+  monoisotopic_mass: 265.97862
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:152058
+  source_label: ethylmercuric chloride
+  minted_identifier: antibioticmech:chebi-6946fd9c42
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

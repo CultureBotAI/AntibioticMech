@@ -1,0 +1,52 @@
+identifier: CHEBI:34995
+label: teicoplanin A2-1
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A teicoplanin A2 that has (4Z)-dec-4-enoyl as the variable N-acyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (Z)-34-O-(2-(acetylamino)-2-deoxy-β-D-glucopyranosyl)-22,31-dichloro-7-demethyl-64-O-demethyl-19-deoxy-56-O-(2-deoxy-2-((1-oxo-4-decenyl)amino)-β-D-glucopyranosyl)-42-O-α-D-mannopyranosylristomycin
+    A aglycone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (Z)-34-O-[2-(acetamido)-2-deoxy-β-D-glucopyranosyl]-22,31-dichloro-7-demethyl-64-O-demethyl-19-deoxy-56-O-{2-deoxy-2-[(1-oxo-4-decenyl)amino]-β-D-glucopyranosyl}-42-O-α-D-mannopyranosylristomycin
+    A aglycone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Teichomycin A2 factor 1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Teicoplanin A2-1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:34994
+xrefs:
+- cas:91032-34-7
+- kegg.compound:C13587
+- reaxys:6261779
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12Cc3ccc(c(Cl)c3)Oc3cc4cc(c3N[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3OC(=O)CC/C=C\CCCCC)Oc3ccc(cc3Cl)[C@@H](O[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3NC(C)=O)[C@@H]3NC(=O)[C@H](NC(=O)[C@@H]4NC(=O)[C@@H](NC1=O)c1cc(O)cc(c1)Oc1cc(ccc1O)[C@@H](N)C(=O)N2)c1ccc(O)c(c1)-c1c(O[C@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@@H]2O)cc(O)cc1[C@@]([H])(C(=O)O)NC3=O'
+  standard_inchi: InChI=1S/C88H95Cl2N9O33/c1-3-4-5-6-7-8-9-10-60(108)131-78-75(114)72(111)57(31-100)127-85(78)99-67-55-26-40-27-56(67)126-52-18-14-38(24-47(52)90)77(132-87-68(92-34(2)103)73(112)70(109)58(32-101)129-87)69-84(121)97-66(86(122)123)45-29-42(105)30-54(128-88-76(115)74(113)71(110)59(33-102)130-88)61(45)44-23-37(13-15-49(44)106)63(81(118)98-69)95-83(120)65(40)96-82(119)64-39-21-41(104)28-43(22-39)124-53-25-36(12-16-50(53)107)62(91)80(117)93-48(79(116)94-64)20-35-11-17-51(125-55)46(89)19-35/h7-8,11-19,21-30,48,57-59,62-66,68-78,85,87-88,99-102,104-107,109-115H,3-6,9-10,20,31-33,91H2,1-2H3,(H,92,103)(H,93,117)(H,94,116)(H,95,120)(H,96,119)(H,97,121)(H,98,118)(H,122,123)/b8-7-/t48-,57-,58-,59-,62-,63-,64+,65-,66+,68-,69+,70-,71-,72-,73-,74+,75+,76+,77-,78-,85-,87+,88+/m1/s1
+  standard_inchi_key: SGSMSXWFVXNLOG-UCNABHHISA-N
+  molecular_formula: C88H95Cl2N9O33
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1877.664
+  monoisotopic_mass: 1875.54093
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:34995
+  source_label: teicoplanin A2-1
+  minted_identifier: antibioticmech:chebi-aea0833bee
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,79 @@
+identifier: CHEBI:177533
+label: itarnafloxin
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heteropentacyclic compound that is 3H-benzo[b]pyrido[3,2,1-kl]phenoxazin-3-one
+  substituted by 2-[(2S)-1-methylpyrrolidin-2-yl]ethanaminoacyl, fluoro, and 3-(pyrazin-2-yl)pyrrolidin-1-yl
+  groups at positions 2, 5 and 6, respectively. It is a G-quadruplex interactive agent,
+  previously in clinical trials for the treatment of carcinoid/neuroendocrine tumours
+  (now discontinued).
+definition_source: ChEBI
+synonyms:
+- synonym_text: itarnafloxina
+  synonym_type: INN
+  source: chebi
+- synonym_text: itarnafloxine
+  synonym_type: INN
+  source: chebi
+- synonym_text: itarnafloxinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 5-fluoro-N-{2-[(2S)-1-methylpyrrolidin-2-yl]ethyl}-3-oxo-6-[3-(pyrazin-2-yl)pyrrolidin-1-yl]-3H-benzo[b]pyrido[3,2,1-kl]phenoxazine-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-fluoro-N-(2-((S)-1-methylpyrrolidin-2-yl)ethyl)-3-oxo-6-((R)-3-(pyrazin-2-yl)pyrrolidin-1-yl)-3H-benzo[b]pyrido[3,2,1-kl]phenoxazine-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CX 3543
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CX-3543
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CX3543
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: quarfloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: quarfloxin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:25970
+- CHEBI:37143
+- CHEBI:38164
+- CHEBI:38314
+- CHEBI:46775
+xrefs:
+- cas:865311-47-3
+- chemspider:9810507
+- drugbank:DB06638
+- kegg.drug:D08981
+- patent:US20060029950
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: CN1CCC[C@H]1CCNC(=O)c1cn2c3c(c(N4CCC(c5cnccn5)C4)c(F)cc3c1=O)Oc1cc3ccccc3cc1-2
+  standard_inchi: InChI=1S/C35H33FN6O3/c1-40-13-4-7-24(40)8-10-39-35(44)26-20-42-29-15-21-5-2-3-6-22(21)16-30(29)45-34-31(42)25(33(26)43)17-27(36)32(34)41-14-9-23(19-41)28-18-37-11-12-38-28/h2-3,5-6,11-12,15-18,20,23-24H,4,7-10,13-14,19H2,1H3,(H,39,44)/t23?,24-/m0/s1
+  standard_inchi_key: WOQIDNWTQOYDLF-CGAIIQECSA-N
+  molecular_formula: C35H33FN6O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 604.686
+  monoisotopic_mass: 604.25982
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:177533
+  source_label: itarnafloxin
+  minted_identifier: antibioticmech:chebi-7b72754817
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

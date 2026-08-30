@@ -1,0 +1,56 @@
+identifier: CHEBI:82084
+label: prothiocarb
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monothiocarbamic ester that is ethanethiol in which the hydrogen attached
+  to the sulfur is replaced by a [3-(dimethylamino)propyl]carbamoyl group. Formerly
+  used (generally as the hydrochloride salt) as an agricultural fungicide, it is not
+  approved for use within the European Union.
+definition_source: ChEBI
+synonyms:
+- synonym_text: S-ethyl [3-(dimethylamino)propyl]carbamothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(3-dimethylaminopropyl)thiocarbamic acid S-ethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-ethyl (3-dimethylaminopropyl)thiocarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-ethyl N-[3-(dimethylamino)propyl]carbamothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38128
+- CHEBI:50996
+xrefs:
+- cas:19622-08-3
+- kegg.compound:C18943
+- pesticides:prothiocarb
+- ppdb:1112
+- reaxys:2078612
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CCSC(=O)NCCCN(C)C
+  standard_inchi: InChI=1S/C8H18N2OS/c1-4-12-8(11)9-6-5-7-10(2)3/h4-7H2,1-3H3,(H,9,11)
+  standard_inchi_key: YRRBXJLFCBCKNW-UHFFFAOYSA-N
+  molecular_formula: C8H18N2OS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 190.312
+  monoisotopic_mass: 190.11398
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:82084
+  source_label: prothiocarb
+  minted_identifier: antibioticmech:chebi-362a82a042
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

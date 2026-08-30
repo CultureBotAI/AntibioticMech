@@ -1,0 +1,60 @@
+identifier: CHEBI:156072
+label: propyl benzoate
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzoate ester obtained by condensation of benzoic acid and propanol.
+  It has a balsamic odor reminescent of nuts with a sweet, fruity, nut-like taste.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Benzoic acid, propyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benzoic acid n-propyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benzoic acid propyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-propyl benzenecarboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-propyl benzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: propyl benzenecarboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36054
+xrefs:
+- cas:2315-68-6
+- foodb.food:FDB008434
+- hmdb:HMDB0031761
+- metacyc.compound:CPD-19959
+- reaxys:1863771
+- wikipedia.en:Propyl_benzoate
+activity_roles:
+- CHEBI:65256
+chemical_structure:
+  smiles: CCCOC(=O)c1ccccc1
+  standard_inchi: InChI=1S/C10H12O2/c1-2-8-12-10(11)9-6-4-3-5-7-9/h3-7H,2,8H2,1H3
+  standard_inchi_key: UDEWPOVQBGFNGE-UHFFFAOYSA-N
+  molecular_formula: C10H12O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 164.204
+  monoisotopic_mass: 164.08373
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156072
+  source_label: propyl benzoate
+  minted_identifier: antibioticmech:chebi-44d05622f0
+  role_terms:
+  - CHEBI:65256
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

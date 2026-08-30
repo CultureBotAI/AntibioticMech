@@ -1,0 +1,45 @@
+identifier: CHEBI:65662
+label: 2-O-E-p-coumaroyl alphitolic acid
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pentacyclic triterpenoid that is lup-20(29)-en-28-oic acid substituted
+  by a hydroxy group at position 3 and a [(2E)-3-(4-hydroxyphenyl)prop-2-enoyl]oxy
+  group at position 2 (the 2α,3β-stereoisomer ). It has been isolated from the root
+  bark of Zizyphus jujuba and Ziziphus cambodianus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2α,3β)-3-hydroxy-2-{[(2E)-3-(4-hydroxyphenyl)prop-2-enoyl]oxy}lup-20(29)-en-28-oic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25872
+- CHEBI:35868
+- CHEBI:36087
+xrefs:
+- reaxys:10410488
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: '[H][C@]12CC[C@@]3([H])[C@@](C)(CC[C@@]4(C(=O)O)CC[C@@H](C(=C)C)[C@@]43[H])[C@]1(C)CC[C@@]1([H])C(C)(C)[C@@H](O)[C@H](OC(=O)/C=C/c3ccc(O)cc3)C[C@]21C'
+  standard_inchi: InChI=1S/C39H54O6/c1-23(2)26-16-19-39(34(43)44)21-20-37(6)27(32(26)39)13-14-30-36(5)22-28(33(42)35(3,4)29(36)17-18-38(30,37)7)45-31(41)15-10-24-8-11-25(40)12-9-24/h8-12,15,26-30,32-33,40,42H,1,13-14,16-22H2,2-7H3,(H,43,44)/b15-10+/t26-,27+,28+,29-,30+,32+,33-,36-,37+,38+,39-/m0/s1
+  standard_inchi_key: LCHMSLHVXVQJDG-GLDUGTPFSA-N
+  molecular_formula: C39H54O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 618.855
+  monoisotopic_mass: 618.39204
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65662
+  source_label: 2-O-E-p-coumaroyl alphitolic acid
+  minted_identifier: antibioticmech:chebi-caf54041e9
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

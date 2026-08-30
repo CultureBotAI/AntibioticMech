@@ -1,0 +1,55 @@
+identifier: CHEBI:146000
+label: emetine dihydrochloride hydrate
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrate that is the monohydrate of the dihydrochloride salt of emetine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-6',7',10,11-tetramethoxyemetan dihydrochloride—water (1/1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-6',7',10,11-tetramethoxyemetan dihydrochloride hydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-6',7',10,11-tetramethoxyemetan-2',5-diium dichloride—water (1/1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: emetine dihydrochloride monohydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: emetine hydrochloride hydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35505
+- CHEBI:36807
+xrefs:
+- cas:7083-71-8
+- reaxys:5216794
+activity_roles:
+- CHEBI:35820
+- CHEBI:38068
+chemical_structure:
+  smiles: Cl.Cl.O.[H][C@]1(C[C@@]2([H])NCCc3cc(OC)c(OC)cc32)C[C@@]2([H])c3cc(OC)c(OC)cc3CCN2C[C@@H]1CC
+  standard_inchi: InChI=1S/C29H40N2O4.2ClH.H2O/c1-6-18-17-31-10-8-20-14-27(33-3)29(35-5)16-23(20)25(31)12-21(18)11-24-22-15-28(34-4)26(32-2)13-19(22)7-9-30-24;;;/h13-16,18,21,24-25,30H,6-12,17H2,1-5H3;2*1H;1H2/t18-,21-,24+,25-;;;/m0.../s1
+  standard_inchi_key: IZTPMTAWOCEKKM-VXMYZLRESA-N
+  molecular_formula: C29H40N2O4.H2O.2HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 571.586
+  monoisotopic_mass: 570.26273
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:146000
+  source_label: emetine dihydrochloride hydrate
+  minted_identifier: antibioticmech:chebi-c037f39f05
+  role_terms:
+  - CHEBI:35820
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

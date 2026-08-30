@@ -1,0 +1,69 @@
+identifier: CHEBI:60822
+label: streptothricin F(3+)
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A primary aliphatic ammonium ion which is obtained from streptothricin
+  F by protonation of the guanidino and amino groups.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4S)-6-{[(2R,3R,4S,5R,6R)-5-(carbamoyloxy)-4-hydroxy-6-(hydroxymethyl)-2-{[(2E,3aS,7R,7aS)-7-hydroxy-4-oxooctahydro-2H-imidazo[4,5-c]pyridin-2-ylidene]ammonio}tetrahydro-2H-pyran-3-yl]amino}-6-oxohexane-1,4-diaminium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic S 15-1A tri-cation
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic S 15-1A(3+)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: racemomycin A tri-cation
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: racemomycin A(3+)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: streptothricin F tri-cation
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: streptothricin VI tri-cation
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: streptothricin VI(3+)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: yazumycin A tri-cation
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: yazumycin A(3+)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: streptothricin F
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:58001
+- CHEBI:60251
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12N/C(=[NH+]/[C@@H]3O[C@H](CO)[C@H](OC(N)=O)[C@@H](O)[C@H]3NC(=O)C[C@@H]([NH3+])CCC[NH3+])N[C@]1([H])[C@H](O)CNC2=O'
+  standard_inchi: InChI=1S/C19H34N8O8/c20-3-1-2-7(21)4-10(30)24-13-14(31)15(35-18(22)33)9(6-28)34-17(13)27-19-25-11-8(29)5-23-16(32)12(11)26-19/h7-9,11-15,17,28-29,31H,1-6,20-21H2,(H2,22,33)(H,23,32)(H,24,30)(H2,25,26,27)/p+3/t7-,8+,9+,11+,12-,13+,14-,15-,17+/m0/s1
+  standard_inchi_key: NRAUADCLPJTGSF-VLSXYIQESA-Q
+  molecular_formula: C19H37N8O8
+  structure_source: ChEBI
+  charge: 3
+  average_mass: 505.553
+  monoisotopic_mass: 505.27179
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:60822
+  source_label: streptothricin F(3+)
+  minted_identifier: antibioticmech:chebi-c367336526
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,65 @@
+identifier: CHEBI:81942
+label: pyrazophos
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pyrazolopyrimidines that is the ethyl ester of
+  2-[(diethoxyphosphorothioyl)oxy]-5-methylpyrazolo[1,5-a]pyrimidine-6-carboxylic
+  acid. A profungicide (by hydrolysis of the thionophosphate group to afford the corresponding
+  2-hydroxypyrazolopyrimidine fungicide), it is used to control Erysiphe, Helminthosporium
+  and Rhynchospium in cereals.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ethyl 2-[(diethoxyphosphorothioyl)oxy]-5-methylpyrazolo[1,5-a]pyrimidine-6-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(O,O-Diethylthionophosphoryl)-5-methyl-6-carbethoxy-pyrazolo-(1,5a)pyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethyl 2-((diethoxyphosphinothioyl)oxy)-5-methylpyrazolo(1,5-a)pyrimidine-6-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O,O-Diethyl O-(5-methyl-6-(ethoxycarbonyl)-pyrazolo-(1,5-a)-pyrimid-2-yl)-thionophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-6-ethoxycarbonyl-5-methylpyrazolo[1,5-a]pyrimidin-2-yl O,O-diethyl
+    phosphorothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23990
+- CHEBI:37512
+- CHEBI:38669
+xrefs:
+- cas:13457-18-6
+- kegg.compound:C18761
+- patent:EP0111747
+- pesticides:pyrazophos
+- ppdb:566
+- reaxys:577209
+activity_roles:
+- CHEBI:136645
+- CHEBI:86328
+chemical_structure:
+  smiles: CCOC(=O)c1cn2nc(OP(=S)(OCC)OCC)cc2nc1C
+  standard_inchi: InChI=1S/C14H20N3O5PS/c1-5-19-14(18)11-9-17-12(15-10(11)4)8-13(16-17)22-23(24,20-6-2)21-7-3/h8-9H,5-7H2,1-4H3
+  standard_inchi_key: JOOMJVFZQRQWKR-UHFFFAOYSA-N
+  molecular_formula: C14H20N3O5PS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 373.371
+  monoisotopic_mass: 373.08613
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81942
+  source_label: pyrazophos
+  minted_identifier: antibioticmech:chebi-5e64dfc7ae
+  role_terms:
+  - CHEBI:136645
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

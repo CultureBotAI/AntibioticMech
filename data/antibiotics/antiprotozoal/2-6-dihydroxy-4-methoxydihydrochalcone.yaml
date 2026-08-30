@@ -1,0 +1,50 @@
+identifier: CHEBI:28523
+label: 2',6'-dihydroxy-4'-methoxydihydrochalcone
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of dihydrochalcones that is dihydrochalcone substituted
+  by hydroxy groups at positions 2' and 6' and a methoxy group at position 4' respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-(2,6-dihydroxy-4-methoxyphenyl)-3-phenylpropan-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2',6'-Dihydroxy-4'-methoxydihydrochalcone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25235
+- CHEBI:26195
+- CHEBI:71230
+xrefs:
+- cas:35241-55-5
+- hmdb:HMDB0034435
+- kegg.compound:C09644
+- knapsack:C00007929
+- lipidmaps:LMPK12120511
+- reaxys:2468981
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: COc1cc(O)c(C(=O)CCc2ccccc2)c(O)c1
+  standard_inchi: InChI=1S/C16H16O4/c1-20-12-9-14(18)16(15(19)10-12)13(17)8-7-11-5-3-2-4-6-11/h2-6,9-10,18-19H,7-8H2,1H3
+  standard_inchi_key: MDMCODCJMHTFIZ-UHFFFAOYSA-N
+  molecular_formula: C16H16O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 272.3
+  monoisotopic_mass: 272.10486
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28523
+  source_label: 2',6'-dihydroxy-4'-methoxydihydrochalcone
+  minted_identifier: antibioticmech:chebi-2242852411
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

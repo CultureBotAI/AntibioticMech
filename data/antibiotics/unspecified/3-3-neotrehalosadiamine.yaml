@@ -1,0 +1,51 @@
+identifier: CHEBI:75319
+label: 3,3'-neotrehalosadiamine
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An amino disaccharide consisting of α- and β-D-kanosaminyl residues joined
+  by a (1↔1)-linkage.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-amino-3-deoxy-β-D-glucopyranosyl 3-amino-3-deoxy-α-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,3'-Diamino-3,3'-dideoxy-alpha,beta-trehalose
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-D-Glc3N-(1↔1)-α-D-Gl3N
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-D-kanosaminyl-(1↔1)-α-D-kanosamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22480
+- CHEBI:63356
+xrefs:
+- cas:104196-14-7
+- reaxys:23730595
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: N[C@@H]1[C@@H](O)[C@H](O[C@H]2O[C@H](CO)[C@@H](O)[C@H](N)[C@H]2O)O[C@H](CO)[C@H]1O
+  standard_inchi: InChI=1S/C12H24N2O9/c13-5-7(17)3(1-15)21-11(9(5)19)23-12-10(20)6(14)8(18)4(2-16)22-12/h3-12,15-20H,1-2,13-14H2/t3-,4-,5+,6+,7-,8-,9-,10-,11-,12+/m1/s1
+  standard_inchi_key: ZPEFXARQZVAHGO-DCSYEGIMSA-N
+  molecular_formula: C12H24N2O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 340.329
+  monoisotopic_mass: 340.14818
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75319
+  source_label: 3,3'-neotrehalosadiamine
+  minted_identifier: antibioticmech:chebi-b0e72c25ed
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

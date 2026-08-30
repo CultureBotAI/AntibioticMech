@@ -1,0 +1,65 @@
+identifier: CHEBI:77032
+label: bromhexine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A substituted aniline that is 2,4-dibromoaniline which is substituted
+  at position 6 by a [cyclohexyl(methyl)amino]methyl group. It is used (as the monohydrochloride
+  salt) as a mucolytic for the treatment of respiratory disorders associated with
+  productive cough (i.e. a cough characterised by the production of sputum).
+definition_source: ChEBI
+synonyms:
+- synonym_text: Fluibron
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: bromhexina
+  synonym_type: INN
+  source: chebi
+- synonym_text: bromhexinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2,4-dibromo-6-{[cyclohexyl(methyl)amino]methyl}aniline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,5-dibromo-Nα-cyclohexyl-Nα-methyltoluene-α-2-diamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-cyclohexyl-N-methyl-(2-amino-3,5-dibrombenzyl)amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37141
+- CHEBI:48975
+- CHEBI:50996
+xrefs:
+- beilstein:2216008
+- cas:3572-43-8
+- drugcentral:402
+- kegg.drug:D07542
+- lincs.smallmolecule:LSM-3048
+- patent:BE625022
+- wikipedia.en:Bromhexine
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: CN(Cc1cc(Br)cc(Br)c1N)C1CCCCC1
+  standard_inchi: InChI=1S/C14H20Br2N2/c1-18(12-5-3-2-4-6-12)9-10-7-11(15)8-13(16)14(10)17/h7-8,12H,2-6,9,17H2,1H3
+  standard_inchi_key: OJGDCBLYJGHCIH-UHFFFAOYSA-N
+  molecular_formula: C14H20Br2N2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 376.136
+  monoisotopic_mass: 373.99932
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77032
+  source_label: bromhexine
+  minted_identifier: antibioticmech:chebi-d043f800ce
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

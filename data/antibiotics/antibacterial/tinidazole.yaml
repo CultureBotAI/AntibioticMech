@@ -1,0 +1,87 @@
+identifier: CHEBI:63627
+label: tinidazole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: 1H-imidazole substituted at C-1 by a (2-ethylsulfonyl)ethyl group, at
+  C-2 by a methyl group and at C-5 by a nitro group. It is used as an antiprotozoal,
+  antibacterial agent.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-[2-(ethylsulfonyl)ethyl]-2-methyl-5-nitro-1H-imidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: timidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fasigyn
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Simplotan
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Sporinex
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Tindamax
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:24780
+- ARO:3004115
+xrefs:
+- ARO:3004026
+- drugbank:DB00911
+- drugcentral:2671
+- kegg.drug:D01426
+- lincs.smallmolecule:LSM-5948
+- patent:US3376311
+- reaxys:618182
+- wikipedia.en:Tinidazole
+- chembl:CHEMBL1220
+- pubchem.compound:5479
+activity_roles:
+- CHEBI:33282
+- CHEBI:35820
+- CHEBI:36047
+- CHEBI:38068
+- CHEBI:86327
+structural_class: nitroimidazole antibiotic
+structural_class_id: ARO:3004115
+chemical_structure:
+  smiles: CCS(=O)(=O)CCn1c([N+](=O)[O-])cnc1C
+  standard_inchi: InChI=1S/C8H13N3O4S/c1-3-16(14,15)5-4-10-7(2)9-6-8(10)11(12)13/h6H,3-5H2,1-2H3
+  standard_inchi_key: HJLSLZFTEKNLFI-UHFFFAOYSA-N
+  molecular_formula: C8H13N3O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 247.276
+  monoisotopic_mass: 247.06268
+source_concepts:
+- source: ARO
+  source_id: ARO:3004026
+  source_label: tinidazole
+  minted_identifier: antibioticmech:aro-8f1695644d
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35820
+  - CHEBI:36047
+  - CHEBI:38068
+  - CHEBI:86327
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:63627
+  source_label: tinidazole
+  minted_identifier: antibioticmech:chebi-1a293bfc81
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35820
+  - CHEBI:36047
+  - CHEBI:38068
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

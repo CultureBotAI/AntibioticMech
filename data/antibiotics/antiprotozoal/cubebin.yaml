@@ -1,0 +1,66 @@
+identifier: CHEBI:65684
+label: (−)-cubebin
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A lignan that consists of tetrahydrofuran-2-ol substituted by two 1,3-benzodioxol-5-ylmethyl
+  groups at positions 3 and 4 respectively (the 2S,3R,4R stereoisomer). It is isolated
+  from the leaves of Piper nigrum and exhibits analgesic, anti-inflammatory, antimicrobial
+  and trypanocidal activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S,3R,4R)-3,4-bis(1,3-benzodioxol-5-ylmethyl)tetrahydrofuran-2-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (8R,8'R,9S)-cubebin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,4-bis(2H-1,3-benzodioxol-5-ylmethyl)oxolan-2-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-Hydroxy-3,4:3',4'-bis(methylenedioxy)-9,9'-epoxylignan
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-cubebin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25036
+- CHEBI:35681
+- CHEBI:38131
+- CHEBI:38298
+- CHEBI:59770
+xrefs:
+- cas:18423-69-3
+- hmdb:HMDB0030682
+- kegg.compound:C10549
+- knapsack:C00002591
+- patent:EP2517705
+- patent:JP2011098968
+- reaxys:6489121
+activity_roles:
+- CHEBI:33281
+- CHEBI:36335
+chemical_structure:
+  smiles: '[H][C@]1(Cc2ccc3c(c2)OCO3)CO[C@H](O)[C@]1([H])Cc1ccc2c(c1)OCO2'
+  standard_inchi: InChI=1S/C20H20O6/c21-20-15(6-13-2-4-17-19(8-13)26-11-24-17)14(9-22-20)5-12-1-3-16-18(7-12)25-10-23-16/h1-4,7-8,14-15,20-21H,5-6,9-11H2/t14-,15+,20-/m0/s1
+  standard_inchi_key: DIYWRNLYKJKHAM-MDOVXXIYSA-N
+  molecular_formula: C20H20O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 356.374
+  monoisotopic_mass: 356.12599
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65684
+  source_label: (−)-cubebin
+  minted_identifier: antibioticmech:chebi-60d0e03199
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36335
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

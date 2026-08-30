@@ -1,0 +1,74 @@
+identifier: CHEBI:16778
+label: apigenin 7-O-β-D-glucoside
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A glycosyloxyflavone that is apigenin substituted by a β-D-glucopyranosyl
+  moiety at position 7 via a glycosidic linkage.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-hydroxy-2-(4-hydroxyphenyl)-4-oxo-4H-chromen-7-yl β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-(beta-D-Glucopyranosyloxy)-5-hydroxy-2-(4-hydroxyphenyl)-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-O-beta-D-Glucosyl-5,7,4'-trihydroxyflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Apigenin 7-O-glucoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Apigetrin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cosmetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cosmosiin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cosmosioside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: apigenin 7-O-beta-D-glucoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22798
+- CHEBI:38686
+- CHEBI:50018
+- CHEBI:63367
+xrefs:
+- cas:578-74-5
+- hmdb:HMDB0037340
+- kegg.compound:C04608
+- knapsack:C00001017
+- lincs.smallmolecule:LSM-2286
+- metacyc.compound:APIGENIN-7-O-BETA-D-GLUCOSIDE
+- reaxys:65669
+- wikipedia.en:Apigetrin
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=c1cc(-c2ccc(O)cc2)oc2cc(O[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)cc(O)c12
+  standard_inchi: InChI=1S/C21H20O10/c22-8-16-18(26)19(27)20(28)21(31-16)29-11-5-12(24)17-13(25)7-14(30-15(17)6-11)9-1-3-10(23)4-2-9/h1-7,16,18-24,26-28H,8H2/t16-,18-,19+,20-,21-/m1/s1
+  standard_inchi_key: KMOUJOKENFFTPU-QNDFHXLGSA-N
+  molecular_formula: C21H20O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 432.381
+  monoisotopic_mass: 432.10565
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:16778
+  source_label: apigenin 7-O-β-D-glucoside
+  minted_identifier: antibioticmech:chebi-b465fd6b32
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

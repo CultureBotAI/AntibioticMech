@@ -1,0 +1,70 @@
+identifier: CHEBI:3252
+label: C-1027 chromophore
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An enediyne antibiotic that has formula C43H42ClN3O13. It is a natural
+  product found in Streptomyces globisporus and exhibits antimicrobial and antineoplastic
+  properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[1R,7S,12R,13(23)E,20R]-7-amino-4-chloro-20-{[(2S,3R,4R,5S)-5-(dimethylamino)-3,4-dihydroxy-6,6-dimethyltetrahydro-2H-pyran-2-yl]oxy}-25-hydroxy-9-oxo-2,10-dioxatetracyclo[11.7.3.23,6.016,20]pentacosa-3,5,13(23),16,18,24-hexaene-14,21-diyn-12-yl
+    7-methoxy-2-methylidene-3-oxo-3,4-dihydro-2H-1,4-benzoxazine-5-carboxylate'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C 1027
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C-1027
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C1027 chromophore
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C1027 chromoprotein
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic C-1027
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: lidamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:28963
+- CHEBI:33853
+- CHEBI:35618
+- CHEBI:46969
+- CHEBI:51307
+- CHEBI:53268
+- CHEBI:83403
+xrefs:
+- cas:120177-69-7
+- chemspider:8138248
+- kegg.compound:C11438
+- patent:US7109019
+- wikipedia.en:C-1027
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]1(O[C@]23C=CC=C2C#C/C2=C\C#C[C@@]3([H])Oc3c(O)cc(cc3Cl)[C@@H](N)CC(=O)OC[C@@H]2OC(=O)c2cc(OC)cc3c2NC(=O)C(=C)O3)OC(C)(C)[C@@H](N(C)C)[C@@H](O)[C@H]1O'
+  standard_inchi: InChI=1S/C43H42ClN3O13/c1-21-39(52)46-34-26(17-25(54-6)18-30(34)56-21)40(53)57-31-20-55-33(49)19-28(45)23-15-27(44)37(29(48)16-23)58-32-11-7-9-22(31)12-13-24-10-8-14-43(24,32)60-41-36(51)35(50)38(47(4)5)42(2,3)59-41/h8-10,14-18,28,31-32,35-36,38,41,48,50-51H,1,19-20,45H2,2-6H3,(H,46,52)/b22-9+/t28-,31-,32+,35-,36+,38-,41-,43+/m0/s1
+  standard_inchi_key: DGGZCXUXASNDAC-QQNGCVSVSA-N
+  molecular_formula: C43H42ClN3O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 844.27
+  monoisotopic_mass: 843.24062
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3252
+  source_label: C-1027 chromophore
+  minted_identifier: antibioticmech:chebi-b3857f29ce
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

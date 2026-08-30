@@ -1,0 +1,56 @@
+identifier: CHEBI:83261
+label: pyribencarb
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbamate ester that is the methyl ester of (2-chloro-5-{(1E)-N-[(6-methylpyridin-2-yl)methoxy]ethanimidoyl}benzyl)carbamic
+  acid. A fungicide having excellent activity against a wide range of plant pathogenic
+  fungi, especially gray mould diseases caused by Botrytis cinerea.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (2-chloro-5-{(1E)-N-[(6-methylpyridin-2-yl)methoxy]ethanimidoyl}benzyl)carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-pyribencarb
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl N-[[2-chloro-5-[(1E)-1-[[(6-methyl-2-pyridinyl)methoxy]imino]ethyl]phenyl]methyl]carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl {2-chloro-5-[(1E)-1-(6-methyl-2-pyridylmethoxyimino)ethyl]benzyl}carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:142982
+- CHEBI:87061
+xrefs:
+- cas:799247-52-2
+- kegg.compound:C22042
+- patent:NZ593632
+- pesticides:pyribencarb
+- ppdb:3072
+- reaxys:23250906
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: COC(=O)NCc1cc(/C(C)=N/OCc2cccc(C)n2)ccc1Cl
+  standard_inchi: InChI=1S/C18H20ClN3O3/c1-12-5-4-6-16(21-12)11-25-22-13(2)14-7-8-17(19)15(9-14)10-20-18(23)24-3/h4-9H,10-11H2,1-3H3,(H,20,23)/b22-13+
+  standard_inchi_key: CRFYLQMIDWBKRT-LPYMAVHISA-N
+  molecular_formula: C18H20ClN3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 361.829
+  monoisotopic_mass: 361.11932
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83261
+  source_label: pyribencarb
+  minted_identifier: antibioticmech:chebi-69609b67ca
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

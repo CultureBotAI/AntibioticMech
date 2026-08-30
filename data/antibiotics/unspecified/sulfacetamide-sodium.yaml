@@ -1,0 +1,54 @@
+identifier: CHEBI:63858
+label: sulfacetamide sodium
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic sodium salt that is the monohydrate form of sulfacetamide sodium.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sodium acetyl[(4-aminophenyl)sulfonyl]azanide—water (1/1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium Sulfacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulphacetamide Sodium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulfacetamide sodium hydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulfacetamide sodium monohydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35505
+- CHEBI:38700
+xrefs:
+- drugbank:DB00634
+- kegg.drug:D00871
+- reaxys:6994485
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(=O)[N-]S(=O)(=O)c1ccc(N)cc1.O.[Na+]
+  standard_inchi: InChI=1S/C8H10N2O3S.Na.H2O/c1-6(11)10-14(12,13)8-4-2-7(9)3-5-8;;/h2-5H,9H2,1H3,(H,10,11);;1H2/q;+1;/p-1
+  standard_inchi_key: IHCDKJZZFOUARO-UHFFFAOYSA-M
+  molecular_formula: C8H9N2O3S.H2O.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 254.243
+  monoisotopic_mass: 254.03372
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:63858
+  source_label: sulfacetamide sodium
+  minted_identifier: antibioticmech:chebi-5259859632
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

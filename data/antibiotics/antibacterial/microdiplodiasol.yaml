@@ -1,0 +1,45 @@
+identifier: CHEBI:68283
+label: microdiplodiasol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of xanthones that is 1,2,3,4,4a,9a-hexahydro-9H-xanthen-9-one
+  substituted by hydroxy groups at positions 1, 4, 8 and 9a, a hydroxymethyl group
+  at position 6 and a methyl group at position 4a. Isolated from the endophytic fungus
+  Microdiplodia species, it exhibits antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S*,4S*,4aS*,9aR*)-1,4,8,9a-tetrahydroxy-6-(hydroxymethyl)-4a-methyl-1,2,3,4,4a,9a-hexahydro-9H-xanthen-9-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:22743
+- CHEBI:26878
+- CHEBI:33853
+- CHEBI:35681
+- CHEBI:51149
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@@]12Oc3cc(CO)cc(O)c3C(=O)[C@@]1(O)[C@@H](O)CC[C@@H]2O
+  standard_inchi: InChI=1S/C15H18O7/c1-14-10(18)2-3-11(19)15(14,21)13(20)12-8(17)4-7(6-16)5-9(12)22-14/h4-5,10-11,16-19,21H,2-3,6H2,1H3/t10-,11-,14-,15-/m0/s1
+  standard_inchi_key: SCOQIJBVVKZZHE-GVARAGBVSA-N
+  molecular_formula: C15H18O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 310.302
+  monoisotopic_mass: 310.10525
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68283
+  source_label: microdiplodiasol
+  minted_identifier: antibioticmech:chebi-d3e235dd6a
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

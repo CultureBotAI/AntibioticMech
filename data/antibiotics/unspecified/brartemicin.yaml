@@ -1,0 +1,44 @@
+identifier: CHEBI:65512
+label: brartemicin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A glycosyl glycoside derivative that consists of α,α-trehalose substituted
+  at positions 6 and 6' by O-2,4-dihydroxy-6-methylbenzoyl groups. It is isolated
+  from the culture broth of actinomycete, Nonomuraea, and has antitumor activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6-O-(2,4-dihydroxy-6-methylbenzoyl)-α-D-glucopyranosyl 6-O-(2,4-dihydroxy-6-methylbenzoyl)-α-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33572
+- CHEBI:36054
+- CHEBI:63356
+xrefs:
+- patent:CN101914118
+- reaxys:19718339
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]1(O[C@H]2O[C@H](COC(=O)c3c(C)cc(O)cc3O)[C@@H](O)[C@H](O)[C@H]2O)O[C@H](COC(=O)c2c(C)cc(O)cc2O)[C@@H](O)[C@H](O)[C@H]1O'
+  standard_inchi: InChI=1S/C28H34O17/c1-9-3-11(29)5-13(31)17(9)25(39)41-7-15-19(33)21(35)23(37)27(43-15)45-28-24(38)22(36)20(34)16(44-28)8-42-26(40)18-10(2)4-12(30)6-14(18)32/h3-6,15-16,19-24,27-38H,7-8H2,1-2H3/t15-,16-,19-,20-,21+,22+,23-,24-,27-,28-/m1/s1
+  standard_inchi_key: UZVUYEBJQAEAGM-SHSJKSAASA-N
+  molecular_formula: C28H34O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 642.563
+  monoisotopic_mass: 642.1796
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65512
+  source_label: brartemicin
+  minted_identifier: antibioticmech:chebi-44b0d86857
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

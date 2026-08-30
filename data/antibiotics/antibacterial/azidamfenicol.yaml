@@ -1,0 +1,215 @@
+identifier: CHEBI:135238
+label: azidamfenicol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Azidamfenicol is a water soluble derivative of chloramphenicol, sharing
+  the same mode of action of inhibiting peptide synthesis by interacting with the
+  23S RNA of the 50S ribosomal subunit.
+definition_source: PMID:15539072
+parent_compounds:
+- ARO:3000387
+xrefs:
+- ARO:3000382
+- cas:13838-08-9
+- chembl:CHEMBL278788
+- chembl:CHEMBL3989525
+- pubchem.compound:62858
+structural_class: phenicol antibiotic
+structural_class_id: ARO:3000387
+chemical_structure:
+  smiles: '[N-]=[N+]=NCC(=O)N[C@H](CO)[C@H](O)c1ccc([N+](=O)[O-])cc1'
+  standard_inchi: InChI=1S/C11H13N5O5/c12-15-13-5-10(18)14-9(6-17)11(19)7-1-3-8(4-2-7)16(20)21/h1-4,9,11,17,19H,5-6H2,(H,14,18)/t9-,11-/m1/s1
+  standard_inchi_key: SGRUZFCHLOFYHZ-MWLCHTKSSA-N
+  molecular_formula: C11H13N5O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 295.255
+  monoisotopic_mass: 295.09167
+source_concepts:
+- source: ARO
+  source_id: ARO:3000382
+  source_label: azidamfenicol
+  minted_identifier: antibioticmech:aro-215796a9db
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002671
+  label: Limosilactobacillus reuteri cat-TC
+  evidence:
+  - reference: ARO:3002671
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002672
+  label: Bacillus pumilus cat86
+  evidence:
+  - reference: ARO:3002672
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002674
+  label: Clostridium butyricum catB
+  evidence:
+  - reference: ARO:3002674
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002675
+  label: catB2
+  evidence:
+  - reference: ARO:3002675
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002676
+  label: catB3
+  evidence:
+  - reference: ARO:3002676
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002678
+  label: Pseudomonas aeruginosa catB6
+  evidence:
+  - reference: ARO:3002678
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002679
+  label: Pseudomonas aeruginosa catB7
+  evidence:
+  - reference: ARO:3002679
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002680
+  label: catB8
+  evidence:
+  - reference: ARO:3002680
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002681
+  label: catB9
+  evidence:
+  - reference: ARO:3002681
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002682
+  label: catD
+  evidence:
+  - reference: ARO:3002682
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002683
+  label: catA1
+  evidence:
+  - reference: ARO:3002683
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002684
+  label: catII
+  evidence:
+  - reference: ARO:3002684
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002685
+  label: catIII
+  evidence:
+  - reference: ARO:3002685
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002686
+  label: catP
+  evidence:
+  - reference: ARO:3002686
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002687
+  label: catQ
+  evidence:
+  - reference: ARO:3002687
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002688
+  label: catS
+  evidence:
+  - reference: ARO:3002688
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002689
+  label: Plasmid-encoded cat (pp-cat)
+  evidence:
+  - reference: ARO:3002689
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002814
+  label: clbA
+  evidence:
+  - reference: ARO:3002814
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002815
+  label: clbB
+  evidence:
+  - reference: ARO:3002815
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002816
+  label: clbC
+  evidence:
+  - reference: ARO:3002816
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003110
+  label: catB10
+  evidence:
+  - reference: ARO:3003110
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003441
+  label: cfrA
+  evidence:
+  - reference: ARO:3003441
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003907
+  label: cipA
+  evidence:
+  - reference: ARO:3003907
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003983
+  label: CatU
+  evidence:
+  - reference: ARO:3003983
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000382 (azidamfenicol);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000754
+  target_label: antibiotic sensitive peptidyl transferase (23S rRNA)
+  evidence:
+  - reference: ARO:3000754
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000382 (azidamfenicol); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

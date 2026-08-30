@@ -1,0 +1,65 @@
+identifier: CHEBI:81989
+label: ethirimol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aminopyrimidine that is 2-ethylaminopyrimidin-4-one carrying butyl
+  and methyl substituents at positions 5 and 6 respectively. A fungicide first marketed
+  in 1970 and used as a seed treatment for diseaases such as damping-off, it is not
+  licensed for use within the European Union.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-butyl-2-(ethylamino)-6-methylpyrimidin-4(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Ethylamino-4-methyl-5-n-butyl-6-hydroxypyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Butyl-2-(ethylamino)-6-methyl-4(1H)-pyrimidinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Butyl-2-(ethylamino)-6-methyl-4-pyrimidinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-n-Butyl-2-ethylamino-4-hydroxy-6-methylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38337
+- CHEBI:38338
+- CHEBI:50995
+- CHEBI:87207
+xrefs:
+- cas:23947-60-6
+- kegg.compound:C18828
+- patent:CN101548677
+- patent:CN101664033
+- patent:CN101669475
+- patent:DE3715705
+- pesticides:ethirimol
+- ppdb:277
+- reaxys:1572438
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CCCCc1c(C)nc(NCC)nc1=O
+  standard_inchi: InChI=1S/C11H19N3O/c1-4-6-7-9-8(3)13-11(12-5-2)14-10(9)15/h4-7H2,1-3H3,(H2,12,13,14,15)
+  standard_inchi_key: BBXXLROWFHWFQY-UHFFFAOYSA-N
+  molecular_formula: C11H19N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 209.293
+  monoisotopic_mass: 209.15281
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81989
+  source_label: ethirimol
+  minted_identifier: antibioticmech:chebi-87234a4991
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

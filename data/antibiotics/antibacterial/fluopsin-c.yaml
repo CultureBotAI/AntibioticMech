@@ -1,0 +1,65 @@
+identifier: CHEBI:222417
+label: fluopsin C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A copper coordination entity in which copper(2+) is coordinated to two
+  molar equivalents of [methanethioyl(methyl)amino]oxidanide. It is an antibiotic
+  from Pseudomonas aeruginosa.
+definition_source: ChEBI
+synonyms:
+- synonym_text: bis(N-hydroxy-κO-N-methylthioformamidato-κS)copper
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: YC 73
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: YC-73
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic YC 73
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic YC-73
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bis(N-methylthioformohydroxamato)copper
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bis(N-methylthioformohydroxamato)copper(II)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: copper(2+) bis{[methanethioyl(methyl)amino]oxidanide}
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37403
+xrefs:
+- cas:31323-25-8
+- chemspider:148058
+- patent:WO2004050095
+- patent:WO2004078179
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CN1C=[S][Cu]2([O]1)[O]N(C)C=[S]2
+  standard_inchi: InChI=1S/2C2H4NOS.Cu/c2*1-3(4)2-5;/h2*2H,1H3;/q2*-1;+2
+  standard_inchi_key: PGYZQLIUYISMJD-UHFFFAOYSA-N
+  molecular_formula: C4H8CuN2O2S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 243.8
+  monoisotopic_mass: 242.93232
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:222417
+  source_label: fluopsin C
+  minted_identifier: antibioticmech:chebi-48d1dd05fc
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

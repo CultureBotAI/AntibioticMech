@@ -1,0 +1,48 @@
+identifier: CHEBI:65976
+label: glycyrrhizol A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of coumestans that is 3,4-didehydroterocarpan substituted
+  by hydroxy groups at positions 7 and 4', a methoxy group at position 5 and prenyl
+  groups at positions 6 and 5'. Isolated from the roots of Glycyrrhiza uralensis,
+  it exhibits antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-methoxy-2,8-bis(3-methylbut-2-en-1-yl)-6H-[1]benzofuro[3,2-c]chromene-3,9-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7,4'-dihydroxy-5-methoxy-6,5'-di(3,3-dimethylallyl)-pterocarpene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:35618
+- CHEBI:72577
+xrefs:
+- reaxys:18589784
+- wikipedia.en:Glycyrrhizol
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1c(CC=C(C)C)c(O)cc2c1-c1oc3cc(O)c(CC=C(C)C)cc3c1CO2
+  standard_inchi: InChI=1S/C26H28O5/c1-14(2)6-8-16-10-18-19-13-30-23-12-21(28)17(9-7-15(3)4)25(29-5)24(23)26(19)31-22(18)11-20(16)27/h6-7,10-12,27-28H,8-9,13H2,1-5H3
+  standard_inchi_key: CBPFOSMNDISZLV-UHFFFAOYSA-N
+  molecular_formula: C26H28O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 420.505
+  monoisotopic_mass: 420.19367
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65976
+  source_label: glycyrrhizol A
+  minted_identifier: antibioticmech:chebi-0679f413ea
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

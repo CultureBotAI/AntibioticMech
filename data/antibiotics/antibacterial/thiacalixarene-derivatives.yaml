@@ -1,0 +1,35 @@
+identifier: antibioticmech:aro-13aab8b73c
+label: thiacalixarene derivatives
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Derivatives of thiacalixarene exhibit antiseptic and antibacterial activity.
+definition_source: PMID:33310546
+parent_compounds:
+- ARO:3005386
+xrefs:
+- ARO:3005174
+- pubchem.compound:335377
+structural_class: disinfecting agents and antiseptics
+structural_class_id: ARO:3005386
+chemical_structure:
+  smiles: CC(C)(C)C1=CC2=C(C(=C1)CC3=CC(=CC(=C3O)CC4=CC(=CC(=C4O)CC5=C(C(=CC(=C5)C(C)(C)C)C2)O)C(C)(C)C)C(C)(C)C)O
+  standard_inchi: InChI=1S/C44H56O4/c1-41(2,3)33-17-25-13-27-19-34(42(4,5)6)21-29(38(27)46)15-31-23-36(44(10,11)12)24-32(40(31)48)16-30-22-35(43(7,8)9)20-28(39(30)47)14-26(18-33)37(25)45/h17-24,45-48H,13-16H2,1-12H3
+  standard_inchi_key: NVKLTRSBZLYZHK-UHFFFAOYSA-N
+  molecular_formula: C44H56O4
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 648.9
+  monoisotopic_mass: 648.41786026
+source_concepts:
+- source: ARO
+  source_id: ARO:3005174
+  source_label: thiacalixarene derivatives
+  minted_identifier: antibioticmech:aro-13aab8b73c
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,45 @@
+identifier: CHEBI:65413
+label: antimycin A9
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzamide obtained by formal condensation of the carboxy group of 3-formamido-2-hydroxybenzoic
+  acid with the amino group of 3-amino-8-butyl-2,6-dimethyl-4,9-dioxo-1,5-dioxonan-7-yl
+  phenylacetate. It is a microbial metabolite isolated from Streptomyces.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 8-butyl-3-{[3-formamido-2-hydroxybenzoyl]amino}-2,6-dimethyl-4,9-dioxo-1,5-dioxonan-7-yl
+    phenylacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:145556
+- CHEBI:22702
+- CHEBI:24079
+- CHEBI:33853
+xrefs:
+- reaxys:21457547
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H]C(=O)Nc1cccc(C(=O)NC2C(=O)OC(C)C(OC(=O)Cc3ccccc3)C(CCCC)C(=O)OC2C)c1O'
+  standard_inchi: InChI=1S/C29H34N2O9/c1-4-5-12-21-26(40-23(33)15-19-10-7-6-8-11-19)18(3)39-29(37)24(17(2)38-28(21)36)31-27(35)20-13-9-14-22(25(20)34)30-16-32/h6-11,13-14,16-18,21,24,26,34H,4-5,12,15H2,1-3H3,(H,30,32)(H,31,35)
+  standard_inchi_key: NAEDADOYRYAJDM-UHFFFAOYSA-N
+  molecular_formula: C29H34N2O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 554.596
+  monoisotopic_mass: 554.22643
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65413
+  source_label: antimycin A9
+  minted_identifier: antibioticmech:chebi-1889fd6b76
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,65 @@
+identifier: CHEBI:9216
+label: spectinomycin dihydrochloride
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrochloride obtained by combining spectinomycin with two molar equivalents
+  of hydrochloric acid. An antibiotic that is active against gram-negative bacteria
+  and used (as its pentahydrate) to treat gonorrhea.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,4aR,5aR,6S,7S,8R,9S,9aR,10aS)-4a,7,9-trihydroxy-2-methyl-6,8-bis(methylamino)decahydro-4H-pyrano[2,3-b][1,4]benzodioxin-4-one
+    dihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R,4aR,5aR,6S,7S,8R,9S,9aR,10aS)-4a,7,9-trihydroxy-N,N',2-trimethyl-4-oxodecahydro-2H-pyrano[2,3-b][1,4]benzodioxine-6,8-diaminium
+    dichloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Spectinomycin HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Spectinomycin dihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Spectinomycin hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Spectinomycin hydrochloride anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:21736-83-4
+- drugbank:DB00919
+- kegg.compound:C11619
+- patent:US4203903
+- reaxys:10503301
+- wikipedia.en:Spectinomycin
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: Cl.Cl.[H][C@]12O[C@@H]3[C@@H](O)[C@H](NC)[C@H](O)[C@H](NC)[C@H]3O[C@@]1(O)C(=O)C[C@@H](C)O2
+  standard_inchi: InChI=1S/C14H24N2O7.2ClH/c1-5-4-6(17)14(20)13(21-5)22-12-10(19)7(15-2)9(18)8(16-3)11(12)23-14;;/h5,7-13,15-16,18-20H,4H2,1-3H3;2*1H/t5-,7-,8+,9+,10+,11-,12-,13+,14+;;/m1../s1
+  standard_inchi_key: FOGDPGQSHLLYIK-XYQGXRRISA-N
+  molecular_formula: C14H24N2O7.2HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 405.275
+  monoisotopic_mass: 404.11171
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9216
+  source_label: spectinomycin dihydrochloride
+  minted_identifier: antibioticmech:chebi-4c8f90a7f2
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

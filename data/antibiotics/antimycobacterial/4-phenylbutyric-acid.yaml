@@ -1,0 +1,74 @@
+identifier: CHEBI:41500
+label: 4-phenylbutyric acid
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid the structure of which is that of butyric acid substituted
+  with a phenyl group at C-4. It is a histone deacetylase inhibitor that displays
+  anticancer activity. It inhibits cell proliferation, invasion and migration and
+  induces apoptosis in glioma cells. It also inhibits protein isoprenylation, depletes
+  plasma glutamine, increases production of foetal haemoglobin through transcriptional
+  activation of the γ-globin gene and affects hPPARγ activation.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-phenylbutanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-PHENYL-BUTANOIC ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Phenyl-n-butyric acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Benzenebutyric acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PBA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: γ-Phenyl-n-butyric acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: γ-phenylbutyric acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ω-Phenylbutanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ω-phenylbutyric acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+xrefs:
+- cas:1821-12-1
+- drugcentral:24
+- hmdb:HMDB0000543
+- lincs.smallmolecule:LSM-5751
+- metacyc.compound:CPD-14367
+- pdb-ccd:CLT
+- reaxys:638180
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: O=C(O)CCCc1ccccc1
+  standard_inchi: InChI=1S/C10H12O2/c11-10(12)8-4-7-9-5-2-1-3-6-9/h1-3,5-6H,4,7-8H2,(H,11,12)
+  standard_inchi_key: OBKXEAXTFZPCHS-UHFFFAOYSA-N
+  molecular_formula: C10H12O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 164.204
+  monoisotopic_mass: 164.08373
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:41500
+  source_label: 4-phenylbutyric acid
+  minted_identifier: antibioticmech:chebi-8882367393
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

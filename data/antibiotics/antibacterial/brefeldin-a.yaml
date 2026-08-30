@@ -1,0 +1,67 @@
+identifier: CHEBI:48080
+label: brefeldin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A metabolite from Penicillium brefeldianum that exhibits a wide range
+  of antibiotic activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,2E,6S,10E,11aS,13S,14aR)-1,13-dihydroxy-6-methyl-1,6,7,8,9,11a,12,13,14,14a-decahydro-4H-cyclopenta[f]oxacyclotridecin-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Brefeldin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ascotoxin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cyanein
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: decumbin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25105
+- ARO:0000000
+xrefs:
+- ARO:3009176
+- beilstein:25191
+- beilstein:5282047
+- cas:20350-15-6
+- chembl:CHEMBL19980
+- pubchem.compound:5287620
+activity_roles:
+- CHEBI:33281
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: '[H][C@@]12C[C@@H](O)C[C@@]1([H])/C=C/CCC[C@H](C)OC(=O)/C=C/[C@H]2O'
+  standard_inchi: InChI=1S/C16H24O4/c1-11-5-3-2-4-6-12-9-13(17)10-14(12)15(18)7-8-16(19)20-11/h4,6-8,11-15,17-18H,2-3,5,9-10H2,1H3/b6-4+,8-7+/t11-,12+,13-,14+,15+/m0/s1
+  standard_inchi_key: KQNZDYYTLMIZCT-KQPMLPITSA-N
+  molecular_formula: C16H24O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 280.364
+  monoisotopic_mass: 280.16746
+source_concepts:
+- source: ARO
+  source_id: ARO:3009176
+  source_label: brefeldin A
+  minted_identifier: antibioticmech:aro-6d4094623f
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:48080
+  source_label: brefeldin A
+  minted_identifier: antibioticmech:chebi-a8acc9f977
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

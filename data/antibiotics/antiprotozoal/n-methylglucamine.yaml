@@ -1,0 +1,65 @@
+identifier: CHEBI:59732
+label: N-methylglucamine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hexosamine that is D-glucitol in which the hydroxy group at position
+  1 is substituted by the nitrogen of a methylamino group. A crystalline base, it
+  is used in preparing salts of certain acids for use as diagnostic radiopaque media,
+  while its antimonate is used as an antiprotozoal in the treatment of leishmaniasis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: meglumina
+  synonym_type: INN
+  source: chebi
+- synonym_text: meglumine
+  synonym_type: INN
+  source: chebi
+- synonym_text: megluminum
+  synonym_type: INN
+  source: chebi
+- synonym_text: méglumine
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1-deoxy-1-(methylamino)-D-glucitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-deoxy-1-methylaminosorbitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-methyl-D-glucamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24586
+- CHEBI:50995
+xrefs:
+- cas:6284-40-8
+- kegg.drug:D01796
+- lincs.smallmolecule:LSM-5424
+- reaxys:385906
+- wikipedia.en:Meglumine
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: CNC[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO
+  standard_inchi: InChI=1S/C7H17NO5/c1-8-2-4(10)6(12)7(13)5(11)3-9/h4-13H,2-3H2,1H3/t4-,5+,6+,7+/m0/s1
+  standard_inchi_key: MBBZMMPHUWSWHV-BDVNFPICSA-N
+  molecular_formula: C7H17NO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 195.215
+  monoisotopic_mass: 195.11067
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59732
+  source_label: N-methylglucamine
+  minted_identifier: antibioticmech:chebi-5c32f088b7
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

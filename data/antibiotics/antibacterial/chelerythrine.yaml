@@ -1,0 +1,52 @@
+identifier: CHEBI:78373
+label: chelerythrine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzophenanthridine alkaloid isolated from the root of Zanthoxylum simulans,
+  Chelidonium majus L., and other Papaveraceae.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,2-dimethoxy-12-methyl[1,3]benzodioxolo[5,6-c]phenanthridin-12-ium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-Dimethoxy-12-methyl(1,3)benzodioxolo(5,6-c)phenanthridinium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25697
+- CHEBI:38517
+xrefs:
+- cas:34316-15-9
+- kegg.compound:C12227
+- knapsack:C00024634
+- knapsack:C00024660
+- lincs.smallmolecule:LSM-1187
+- metacyc.compound:CPD-16782
+- pdb-ccd:CTI
+- reaxys:3915260
+- wikipedia.en:Chelerythrine
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1ccc2c(c[n+](C)c3c4cc5c(cc4ccc23)OCO5)c1OC
+  standard_inchi: InChI=1S/C21H18NO4/c1-22-10-16-13(6-7-17(23-2)21(16)24-3)14-5-4-12-8-18-19(26-11-25-18)9-15(12)20(14)22/h4-10H,11H2,1-3H3/q+1
+  standard_inchi_key: LLEJIEBFSOEYIV-UHFFFAOYSA-N
+  molecular_formula: C21H18NO4
+  structure_source: ChEBI
+  charge: 1
+  average_mass: 348.378
+  monoisotopic_mass: 348.12303
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:78373
+  source_label: chelerythrine
+  minted_identifier: antibioticmech:chebi-cd1a4e7da7
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

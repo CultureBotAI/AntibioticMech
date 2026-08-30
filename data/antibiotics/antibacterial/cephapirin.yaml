@@ -1,0 +1,107 @@
+identifier: CHEBI:554446
+label: cephapirin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cephalosporin with acetoxymethyl and 2(pyridin-4-ylsulfanyl)acetamido
+  substituents at positions 3 and 7, respectively, of the cephem skeleton. It is used
+  (as its sodium salt) as an antibiotic, being effective against gram-negative and
+  gram-positive organisms.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefapirin
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefapirina
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefapirine
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefapirinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (6R,7R)-3-acetoxymethyl-7-[(pyridin-4-ylsulfanyl)acetamido]-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-3-(acetoxymethyl)-8-oxo-7-{[(pyridin-4-ylsulfanyl)acetyl]amino}-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CEPR
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cefaprin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cephapirine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HAP
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: cefadyl
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23066
+- ARO:0000032
+xrefs:
+- ARO:3004008
+- beilstein:4031996
+- cas:21593-23-7
+- drugbank:DB01139
+- drugcentral:575
+- hmdb:HMDB0015270
+- hmdb:HMDB0030451
+- kegg.compound:C06896
+- kegg.drug:D07636
+- reaxys:4031966
+- vsdb:1845
+- wikipedia.en:Cephapirin
+- chembl:CHEMBL1599
+- pubchem.compound:30699
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(COC(C)=O)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)CSc1ccncc1'
+  standard_inchi: InChI=1S/C17H17N3O6S2/c1-9(21)26-6-10-7-28-16-13(15(23)20(16)14(10)17(24)25)19-12(22)8-27-11-2-4-18-5-3-11/h2-5,13,16H,6-8H2,1H3,(H,19,22)(H,24,25)/t13-,16-/m1/s1
+  standard_inchi_key: UQLLWWBDSUHNEB-CZUORRHYSA-N
+  molecular_formula: C17H17N3O6S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 423.472
+  monoisotopic_mass: 423.05588
+source_concepts:
+- source: ARO
+  source_id: ARO:3004008
+  source_label: cephapirin
+  minted_identifier: antibioticmech:aro-206c06dd17
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:554446
+  source_label: cephapirin
+  minted_identifier: antibioticmech:chebi-f8f3954945
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3004008 (cephapirin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

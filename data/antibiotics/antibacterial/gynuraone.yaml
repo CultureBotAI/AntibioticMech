@@ -1,0 +1,43 @@
+identifier: CHEBI:68289
+label: (−)-gynuraone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A chromanone that is 2,3-dihydro-4H-chromen-4-one substituted by hydroxy
+  groups at positions 3 and 5 and a methyl group at position 2 (the 2R,3R stereoisomer).
+  Isolated form the endophytic fungus Microdiplodia species, it exhibits antibacterial
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3R)-3,5-dihydroxy-2-methyl-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:2468
+- CHEBI:33853
+- CHEBI:35681
+- CHEBI:38763
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@H]1Oc2cccc(O)c2C(=O)[C@@H]1O
+  standard_inchi: InChI=1S/C10H10O4/c1-5-9(12)10(13)8-6(11)3-2-4-7(8)14-5/h2-5,9,11-12H,1H3/t5-,9-/m1/s1
+  standard_inchi_key: COBAEYCUCRUGRP-MLUIRONXSA-N
+  molecular_formula: C10H10O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 194.186
+  monoisotopic_mass: 194.05791
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68289
+  source_label: (−)-gynuraone
+  minted_identifier: antibioticmech:chebi-f26b7e38b7
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

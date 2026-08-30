@@ -1,0 +1,56 @@
+identifier: CHEBI:77474
+label: (9Z,12Z,15Z)-octadecatrien-1-ol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A long chain fatty primary alcohol that is octadecanol containing three
+  double bonds located at positions 9, 12 and 15.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (9Z,12Z,15Z)-octadeca-9,12,15-trien-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (9Z,12Z,15Z)-1-octadecatrienol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (9Z,12Z,15Z)-9,12,15-Octadecatrien-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (9Z,12Z,15Z)-octadecatrienyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Linolenyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:77396
+xrefs:
+- cas:506-44-5
+- patent:US4209533
+- patent:US4340628
+- patent:US4372978
+- reaxys:2101049
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC/C=C\C/C=C\C/C=C\CCCCCCCCO
+  standard_inchi: InChI=1S/C18H32O/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19/h3-4,6-7,9-10,19H,2,5,8,11-18H2,1H3/b4-3-,7-6-,10-9-
+  standard_inchi_key: IKYKEVDKGZYRMQ-PDBXOOCHSA-N
+  molecular_formula: C18H32O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 264.453
+  monoisotopic_mass: 264.24532
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77474
+  source_label: (9Z,12Z,15Z)-octadecatrien-1-ol
+  minted_identifier: antibioticmech:chebi-2d0da980dd
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

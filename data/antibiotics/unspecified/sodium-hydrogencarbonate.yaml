@@ -1,0 +1,76 @@
+identifier: CHEBI:32139
+label: sodium hydrogencarbonate
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: E 500
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E-500
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E500
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NaHCO3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Natriumhydrogenkarbonat
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium bicarbonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium hydrogencarbonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: baking soda
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bicarbonate of soda
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: carbonic acid monosodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium acid carbonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium hydrogen carbonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38700
+- CHEBI:64708
+xrefs:
+- cas:144-55-8
+- drugbank:DB01390
+- kegg.compound:C12603
+- kegg.drug:D01203
+- ppdb:2873
+- wikipedia.en:Sodium_Bicarbonate
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: O=C([O-])O.[Na+]
+  standard_inchi: InChI=1S/CH2O3.Na/c2-1(3)4;/h(H2,2,3,4);/q;+1/p-1
+  standard_inchi_key: UIIMBOGNXHQVGW-UHFFFAOYSA-M
+  molecular_formula: CHO3.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 84.006
+  monoisotopic_mass: 83.98234
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32139
+  source_label: sodium hydrogencarbonate
+  minted_identifier: antibioticmech:chebi-d54cdcf79c
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

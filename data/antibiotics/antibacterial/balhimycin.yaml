@@ -1,0 +1,43 @@
+identifier: antibioticmech:aro-7abbaadfab
+label: balhimycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Balhimycin is a vancomycin-like glycopeptide antibiotic produced by Amycolatopsis
+  balhimycina. It binds to the terminal Lys-D-Ala-D-Ala of peptidoglycan precursors.
+definition_source: PMID:11495926
+parent_compounds:
+- ARO:3000081
+xrefs:
+- ARO:3000120
+- pubchem.compound:16134543
+structural_class: glycopeptide antibiotic
+structural_class_id: ARO:3000081
+chemical_structure:
+  smiles: C[C@H]1C(=O)[C@@](C[C@@H](O1)O[C@H]2[C@H]3C(=O)N[C@@H](C4=C(C(=CC(=C4)O)O)C5=C(C=CC(=C5)[C@H](C(=O)N3)NC(=O)[C@H]6C7=CC(=C(C(=C7)OC8=C(C=C2C=C8)Cl)O[C@H]9[C@@H]([C@H]([C@@H]([C@H](O9)CO)O)O)O)OC1=C(C=C(C=C1)[C@H]([C@H](C(=O)N[C@H](C(=O)N6)CC(=O)N)NC(=O)[C@@H](CC(C)C)NC)O)Cl)O)C(=O)O)(C)N
+  standard_inchi: InChI=1S/C66H73Cl2N9O24/c1-23(2)12-34(71-5)58(88)76-49-51(83)26-7-10-38(32(67)14-26)97-40-16-28-17-41(56(40)101-65-54(86)53(85)52(84)42(22-78)99-65)98-39-11-8-27(15-33(39)68)55(100-44-21-66(4,70)57(87)24(3)96-44)50-63(93)75-48(64(94)95)31-18-29(79)19-37(81)45(31)30-13-25(6-9-36(30)80)46(60(90)77-50)74-61(91)47(28)73-59(89)35(20-43(69)82)72-62(49)92/h6-11,13-19,23-24,34-35,42,44,46-55,65,71,78-81,83-86H,12,20-22,70H2,1-5H3,(H2,69,82)(H,72,92)(H,73,89)(H,74,91)(H,75,93)(H,76,88)(H,77,90)(H,94,95)/t24-,34+,35-,42+,44-,46+,47+,48-,49+,50-,51+,52+,53-,54+,55+,65-,66-/m0/s1
+  standard_inchi_key: WKNFBFHAYANQHF-QNSRRSNQSA-N
+  molecular_formula: C66H73Cl2N9O24
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1447.2
+  monoisotopic_mass: 1445.4145496
+source_concepts:
+- source: ARO
+  source_id: ARO:3000120
+  source_label: balhimycin
+  minted_identifier: antibioticmech:aro-7abbaadfab
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000720
+  target_label: acyl-D-alanyl-D-alanine
+  evidence:
+  - reference: ARO:3000720
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000120 (balhimycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

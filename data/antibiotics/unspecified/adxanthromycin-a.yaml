@@ -1,0 +1,45 @@
+identifier: CHEBI:65371
+label: adxanthromycin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic peroxide, which is the 3-α-D-galactopyranosyl substituted derivative
+  of the dimer obtained by oxidation at the 10-hydroxy position of (10S)-3,8,10-trihydroxy-1,7,10-trimethyl-9-oxo-9,10-dihydroanthracene-2-carboxylic
+  acid. It is isolated from the fermentation broth of Streptomyces.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (10S)-10-{[(9S)-3-carboxy-2,5-dihydroxy-4,6,9-trimethyl-10-oxo-9,10-dihydroanthracen-9-yl]peroxy}-3-(α-D-galactopyranosyloxy)-8-hydroxy-1,7,10-trimethyl-9-oxo-9,10-dihydroanthracene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25702
+- CHEBI:33853
+- CHEBI:35692
+- CHEBI:46953
+- CHEBI:46955
+- CHEBI:63367
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: Cc1ccc2c(c1O)C(=O)c1c(cc(O)c(C(=O)O)c1C)[C@]2(C)OO[C@@]1(C)c2cc(O[C@H]3O[C@H](CO)[C@H](O)[C@H](O)[C@H]3O)c(C(=O)O)c(C)c2C(=O)c2c1ccc(C)c2O
+  standard_inchi: InChI=1S/C42H40O17/c1-14-7-9-18-29(31(14)45)34(48)25-16(3)27(38(52)53)22(44)11-20(25)41(18,5)58-59-42(6)19-10-8-15(2)32(46)30(19)35(49)26-17(4)28(39(54)55)23(12-21(26)42)56-40-37(51)36(50)33(47)24(13-43)57-40/h7-12,24,33,36-37,40,43-47,50-51H,13H2,1-6H3,(H,52,53)(H,54,55)/t24-,33+,36+,37-,40+,41-,42-/m1/s1
+  standard_inchi_key: JQXRWMLDLWYXKW-KWEXCAGTSA-N
+  molecular_formula: C42H40O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 816.765
+  monoisotopic_mass: 816.22655
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65371
+  source_label: adxanthromycin A
+  minted_identifier: antibioticmech:chebi-c78e08dedd
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

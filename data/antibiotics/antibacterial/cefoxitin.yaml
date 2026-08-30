@@ -1,0 +1,285 @@
+identifier: CHEBI:209807
+label: cefoxitin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A semisynthetic cephamycin antibiotic which, in addition to the methoxy
+  group at the 7α position, has 2-thienylacetamido and carbamoyloxymethyl side-groups.
+  It is resistant to β-lactamase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefoxitina
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefoxitine
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefoxitinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: ceftoxitin
+  synonym_type: INN
+  source: chebi
+- synonym_text: (6R,7S)-4-[(carbamoyloxy)methyl]-7-methoxy-8-oxo-7-[(thiophen-2-enyl)acetamido]-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-[(carbamoyloxy)methyl]-7α-methoxy-7β-[(thiophen-2-yl)acetamido]-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7S)-3-[(carbamoyloxy)methyl]-7-methoxy-8-oxo-7-[(2-thienylacetyl)amino]-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CFX
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cefoxitin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cephoxitin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rephoxitin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FOX
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Mefoxitin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: mefoxin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23066
+- CHEBI:55429
+- CHEBI:72588
+- CHEBI:88225
+- ARO:0000032
+xrefs:
+- ARO:0000008
+- beilstein:4216947
+- cas:35607-66-0
+- drugbank:DB01331
+- drugcentral:550
+- hmdb:HMDB0015426
+- kegg.compound:C06887
+- kegg.drug:D02345
+- lincs.smallmolecule:LSM-5786
+- patent:DE2129675
+- patent:DE2203653
+- patent:US4297488
+- pdb-ccd:CFX
+- reaxys:4216947
+- wikipedia.en:Cefoxitin
+- chembl:CHEMBL996
+- pubchem.compound:441199
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(COC(N)=O)=C(C(=O)O)N1C(=O)[C@]2(NC(=O)Cc1cccs1)OC'
+  standard_inchi: InChI=1S/C16H17N3O7S2/c1-25-16(18-10(20)5-9-3-2-4-27-9)13(23)19-11(12(21)22)8(6-26-15(17)24)7-28-14(16)19/h2-4,14H,5-7H2,1H3,(H2,17,24)(H,18,20)(H,21,22)/t14-,16+/m1/s1
+  standard_inchi_key: WZOZEZRFJCJXNZ-ZBFHGGJFSA-N
+  molecular_formula: C16H17N3O7S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 427.46
+  monoisotopic_mass: 427.05079
+source_concepts:
+- source: ARO
+  source_id: ARO:0000008
+  source_label: cefoxitin
+  minted_identifier: antibioticmech:aro-f8bb991f1c
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:209807
+  source_label: cefoxitin
+  minted_identifier: antibioticmech:chebi-b9a20bd574
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000467
+  label: NDM-5
+  evidence:
+  - reference: ARO:3000467
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001866
+  label: CTX-M-3
+  evidence:
+  - reference: ARO:3001866
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002013
+  label: CMY-2
+  evidence:
+  - reference: ARO:3002013
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002053
+  label: CMY-42
+  evidence:
+  - reference: ARO:3002053
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002500
+  label: PDC-3
+  evidence:
+  - reference: ARO:3002500
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002502
+  label: PDC-5
+  evidence:
+  - reference: ARO:3002502
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003001
+  label: CfxA
+  evidence:
+  - reference: ARO:3003001
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003589
+  label: NmcA
+  evidence:
+  - reference: ARO:3003589
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003966
+  label: Klebsiella pneumoniae OmpK35
+  evidence:
+  - reference: ARO:3003966
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004122
+  label: Klebsiella pneumoniae OmpK37
+  evidence:
+  - reference: ARO:3004122
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004123
+  label: Burkholderia pseudomallei Omp38
+  evidence:
+  - reference: ARO:3004123
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004128
+  label: Serratia marcescens Omp1
+  evidence:
+  - reference: ARO:3004128
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004559
+  label: CAM-1
+  evidence:
+  - reference: ARO:3004559
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005035
+  label: YRC-1
+  evidence:
+  - reference: ARO:3005035
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005111
+  label: blaS1
+  evidence:
+  - reference: ARO:3005111
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007182
+  label: blaC
+  evidence:
+  - reference: ARO:3007182
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007374
+  label: PJM-1
+  evidence:
+  - reference: ARO:3007374
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007438
+  label: LAQ-1
+  evidence:
+  - reference: ARO:3007438
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007442
+  label: SSA
+  evidence:
+  - reference: ARO:3007442
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007648
+  label: PSZ-1
+  evidence:
+  - reference: ARO:3007648
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007650
+  label: CDA-1
+  evidence:
+  - reference: ARO:3007650
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007694
+  label: AMZ-1
+  evidence:
+  - reference: ARO:3007694
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009660
+  label: Staphylococcus aureus PBP4 mutant conferring resistance to nafcillin and
+    cefoxitin
+  evidence:
+  - reference: ARO:3009660
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000008 (cefoxitin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000008 (cefoxitin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

@@ -1,0 +1,159 @@
+identifier: CHEBI:31739
+label: josamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide antibiotic produced by certain strains of Streptomyces narbonensis
+  var. josamyceticus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: josamicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: josamycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: josamycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: EN-141
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: JM
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Yl-704 A3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic yl-704 A3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: kitasamycin A3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: leucomycin A3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: leucomycin V 3-acetate 4B-(3-methylbutanoate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: leucomycin V 3-acetate 4β-(3-methylbutanoate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: turimycin A5
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17478
+- CHEBI:24400
+- CHEBI:25105
+- CHEBI:26878
+- CHEBI:47622
+- CHEBI:50996
+- CHEBI:63353
+- ARO:0000000
+xrefs:
+- ARO:3001227
+- ARO:3001221
+- cas:16846-24-5
+- drugbank:DB01321
+- drugcentral:1518
+- hmdb:HMDB0015418
+- kegg.compound:C12662
+- kegg.drug:D01235
+- knapsack:C00018736
+- pdb-ccd:JOS
+- wikipedia.en:Josamycin
+- chembl:CHEMBL224436
+- pubchem.compound:5284579
+- chembl:CHEMBL2106399
+- pubchem.compound:5282189
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: CO[C@@H]1[C@@H](O[C@@H]2O[C@H](C)[C@@H](O[C@H]3C[C@@](C)(O)[C@@H](OC(=O)CC(C)C)[C@H](C)O3)[C@H](N(C)C)[C@H]2O)[C@@H](CC=O)C[C@@H](C)[C@@H](O)/C=C/C=C/C[C@@H](C)OC(=O)C[C@H]1OC(C)=O
+  standard_inchi: InChI=1S/C42H69NO15/c1-23(2)19-32(47)56-40-27(6)53-34(22-42(40,8)50)57-37-26(5)54-41(36(49)35(37)43(9)10)58-38-29(17-18-44)20-24(3)30(46)16-14-12-13-15-25(4)52-33(48)21-31(39(38)51-11)55-28(7)45/h12-14,16,18,23-27,29-31,34-41,46,49-50H,15,17,19-22H2,1-11H3/b13-12+,16-14+/t24-,25-,26-,27+,29+,30+,31-,34+,35-,36-,37-,38+,39+,40+,41+,42-/m1/s1
+  standard_inchi_key: XJSFLOJWULLJQS-NGVXBBESSA-N
+  molecular_formula: C42H69NO15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 828.006
+  monoisotopic_mass: 827.46672
+source_concepts:
+- source: ARO
+  source_id: ARO:3001221
+  source_label: josamycin
+  minted_identifier: antibioticmech:aro-d08dacd0ee
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: ARO
+  source_id: ARO:3001227
+  source_label: kitasamycin
+  minted_identifier: antibioticmech:aro-0c5d9c9627
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:31739
+  source_label: josamycin
+  minted_identifier: antibioticmech:chebi-26637f6c9a
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3001306
+  label: ErmW
+  evidence:
+  - reference: ARO:3001306
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001221 (josamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002824
+  label: ErmV
+  evidence:
+  - reference: ARO:3002824
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001227 (kitasamycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003697
+  label: MexPQ-OpmE
+  evidence:
+  - reference: ARO:3003697
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001227 (kitasamycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004076
+  label: MuxABC-OpmB
+  evidence:
+  - reference: ARO:3004076
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001227 (kitasamycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004174
+  label: Chlamydia trachomatis 23S rRNA with mutation conferring resistance to macrolide
+    antibiotics
+  evidence:
+  - reference: ARO:3004174
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001221 (josamycin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004181
+  label: Streptococcus pneumoniae 23S rRNA mutation conferring resistance to macrolides
+    and streptogramins antibiotics
+  evidence:
+  - reference: ARO:3004181
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001221 (josamycin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

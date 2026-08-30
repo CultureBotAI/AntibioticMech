@@ -1,0 +1,41 @@
+identifier: CHEBI:65897
+label: flavaspidic acid AB
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polyphenol that is a phloroglucinol derivative isolated from the rhizomes
+  of Dryopteris crassirhizoma and has been shown to exhibit radical scavenging and
+  antibacterial activity.
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:26195
+- CHEBI:51867
+- CHEBI:55380
+- CHEBI:76224
+xrefs:
+- chemspider:23275362
+- reaxys:2067974
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCC(=O)c1c(O)c(C)c(O)c(CC2=C(O)C(C)(C)C(O)=C(C(C)=O)C2=O)c1O
+  standard_inchi: InChI=1S/C22H26O8/c1-6-7-13(24)15-17(26)9(2)16(25)11(18(15)27)8-12-19(28)14(10(3)23)21(30)22(4,5)20(12)29/h25-27,29-30H,6-8H2,1-5H3
+  standard_inchi_key: XRWVZSPWRNDJNS-UHFFFAOYSA-N
+  molecular_formula: C22H26O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 418.442
+  monoisotopic_mass: 418.16277
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65897
+  source_label: flavaspidic acid AB
+  minted_identifier: antibioticmech:chebi-12826d83b9
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

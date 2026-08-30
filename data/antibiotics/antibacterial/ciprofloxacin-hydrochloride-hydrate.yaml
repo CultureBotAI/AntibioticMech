@@ -1,0 +1,63 @@
+identifier: CHEBI:59936
+label: ciprofloxacin hydrochloride hydrate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The monohydrate form of ciprofloxacin monohydrochloride.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-cyclopropyl-6-fluoro-4-oxo-7-(piperazin-1-yl)-1,4-dihydroquinoline-3-carboxylic
+    acid hydrochloride—water (1/1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-cyclopropyl-6-fluoro-1,4-dihydro-4-oxo-7-(1-piperazinyl)-3-quinolinecarboxylic
+    acid hydrochloride hydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-cyclopropyl-6-fluoro-1,4-dihydro-4-oxo-7-(1-piperazinyl)-3-quinolinecarboxylic
+    acid hydrochloride monohydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ciprofloxacin hydrochloride monohydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ciprofloxacin hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ciprofloxacin hydrochloride monohydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ciprofloxacin monohydrochloride monohydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35505
+xrefs:
+- cas:86393-32-0
+- drugbank:DB00537
+- kegg.compound:C13993
+- kegg.drug:D02216
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: Cl.O.O=C(O)c1cn(C2CC2)c2cc(N3CCNCC3)c(F)cc2c1=O
+  standard_inchi: InChI=1S/C17H18FN3O3.ClH.H2O/c18-13-7-11-14(8-15(13)20-5-3-19-4-6-20)21(10-1-2-10)9-12(16(11)22)17(23)24;;/h7-10,19H,1-6H2,(H,23,24);1H;1H2
+  standard_inchi_key: ARPUHYJMCVWYCZ-UHFFFAOYSA-N
+  molecular_formula: C17H18FN3O3.H2O.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 385.823
+  monoisotopic_mass: 385.12046
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59936
+  source_label: ciprofloxacin hydrochloride hydrate
+  minted_identifier: antibioticmech:chebi-0ea4a4a49e
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

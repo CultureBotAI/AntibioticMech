@@ -1,0 +1,452 @@
+identifier: CHEBI:100246
+label: norfloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quinolinemonocarboxylic acid with broad-spectrum antibacterial activity
+  against most gram-negative and gram-positive bacteria. Norfloxacin is bactericidal
+  and its mode of action depends on blocking of bacterial DNA replication by binding
+  itself to an enzyme called DNA gyrase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: norfloxacine
+  synonym_type: INN
+  source: chebi
+- synonym_text: norfloxacino
+  synonym_type: INN
+  source: chebi
+- synonym_text: norfloxacinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1-ethyl-6-fluoro-4-oxo-7-(piperazin-1-yl)-1,4-dihydroquinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,4-Dihydro-1-ethyl-6-fluoro-4-oxo-7-(1-piperazinyl)-3-quinolinecarboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Ethyl-6-fluor-1,4-dihydro-4-oxo-7-(1-piperazinyl)-3-chinolincarbonsäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Ethyl-6-fluoro-1,4-dihydro-4-oxo-7-(1-piperazinyl)-3-quinolinecarboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NFLX
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23765
+- CHEBI:26512
+- CHEBI:46848
+- CHEBI:86324
+- CHEBI:87211
+- ARO:0000001
+xrefs:
+- ARO:3000662
+- cas:70458-96-7
+- drugbank:DB01059
+- drugcentral:1967
+- gmelin:1576626
+- hmdb:HMDB0015192
+- kegg.compound:C06687
+- kegg.drug:D00210
+- lincs.smallmolecule:LSM-5286
+- patent:BE863429
+- patent:DE2840910
+- patent:US4146719
+- patent:US4292317
+- reaxys:567897
+- vsdb:1831
+- wikipedia.en:Norfloxacin
+- chembl:CHEMBL9
+- pubchem.compound:4539
+activity_roles:
+- CHEBI:33282
+- CHEBI:36047
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCNCC3)cc21
+  standard_inchi: InChI=1S/C16H18FN3O3/c1-2-19-9-11(16(22)23)15(21)10-7-12(17)14(8-13(10)19)20-5-3-18-4-6-20/h7-9,18H,2-6H2,1H3,(H,22,23)
+  standard_inchi_key: OGJPXUAPXNRGGI-UHFFFAOYSA-N
+  molecular_formula: C16H18FN3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 319.336
+  monoisotopic_mass: 319.13322
+source_concepts:
+- source: ARO
+  source_id: ARO:3000662
+  source_label: norfloxacin
+  minted_identifier: antibioticmech:aro-920bf40494
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:100246
+  source_label: norfloxacin
+  minted_identifier: antibioticmech:chebi-bb2c1d2f77
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000391
+  label: norA
+  evidence:
+  - reference: ARO:3000391
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000419
+  label: quinolone resistance protein (qnr)
+  evidence:
+  - reference: ARO:3000419
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000421
+  label: norB
+  evidence:
+  - reference: ARO:3000421
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000448
+  label: QepA1
+  evidence:
+  - reference: ARO:3000448
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000753
+  label: abeM
+  evidence:
+  - reference: ARO:3000753
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000769
+  label: PatA-PatB
+  evidence:
+  - reference: ARO:3000769
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000788
+  label: MdtEF-TolC
+  evidence:
+  - reference: ARO:3000788
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000799
+  label: MexGHI-OpmD
+  evidence:
+  - reference: ARO:3000799
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3000822
+  label: pmrA
+  evidence:
+  - reference: ARO:3000822
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3001214
+  label: mdtM
+  evidence:
+  - reference: ARO:3001214
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3001216
+  label: mdtH
+  evidence:
+  - reference: ARO:3001216
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003032
+  label: MexXY-OprM
+  evidence:
+  - reference: ARO:3003032
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003038
+  label: MexXY-OprA
+  evidence:
+  - reference: ARO:3003038
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003294
+  label: Escherichia coli gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003294
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003295
+  label: Mycobacterium tuberculosis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003295
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003296
+  label: Staphylococcus aureus gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003296
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003297
+  label: Bartonella bacilliformis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003297
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003298
+  label: Mycobacterium leprae gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003298
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003304
+  label: Mycobacterium leprae gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003304
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003305
+  label: Ureaplasma urealyticum gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003305
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003306
+  label: Morganella morganii gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003306
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003307
+  label: Salmonella serovars gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003307
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003308
+  label: Escherichia coli parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003308
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003309
+  label: Ureaplasma urealyticum parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003309
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003310
+  label: Mycoplasma hominis parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003310
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003311
+  label: Streptococcus pneumoniae parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003311
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003312
+  label: Staphylococcus aureus parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003312
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003315
+  label: Staphylococcus aureus parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003315
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003316
+  label: Escherichia coli parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003316
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003317
+  label: Salmonella serovars parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003317
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003374
+  label: Enterobacter aerogenes acrR with mutation conferring multidrug antibiotic
+    resistance
+  evidence:
+  - reference: ARO:3003374
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003459
+  label: Mycobacterium tuberculosis gyrB with mutation conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003459
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003817
+  label: Acinetobacter baumannii gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003817
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003818
+  label: Acinetobacter baumannii parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003818
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003931
+  label: Capnocytophaga gingivalis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003931
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003940
+  label: Shigella flexneri gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003940
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003941
+  label: Shigella flexneri parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003941
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003953
+  label: hmrM
+  evidence:
+  - reference: ARO:3003953
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003967
+  label: lfrA
+  evidence:
+  - reference: ARO:3003967
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004070
+  label: MexEF-OprN with MvaT deletion conferring resistance to chloramphenicol and
+    norfloxacin
+  evidence:
+  - reference: ARO:3004070
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004103
+  label: QepA2
+  evidence:
+  - reference: ARO:3004103
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004379
+  label: QepA4
+  evidence:
+  - reference: ARO:3004379
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004598
+  label: Klebsiella pneumoniae KpnGH-TolC
+  evidence:
+  - reference: ARO:3004598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004667
+  label: Staphylococcus aureus norA
+  evidence:
+  - reference: ARO:3004667
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007013
+  label: sdrM
+  evidence:
+  - reference: ARO:3007013
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007053
+  label: Helicobacter pylori gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3007053
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007659
+  label: putative nickel/cobalt transporter
+  evidence:
+  - reference: ARO:3007659
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009153
+  label: MexHI-OpmD
+  evidence:
+  - reference: ARO:3009153
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000662 (norfloxacin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000733
+  target_label: fluoroquinolone sensitive gyrA
+  evidence:
+  - reference: ARO:3000733
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000662 (norfloxacin); database
+      assertion, not a primary citation.
+- target_id: ARO:3000735
+  target_label: Fluoroquinolone sensitive parC
+  evidence:
+  - reference: ARO:3000735
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000662 (norfloxacin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

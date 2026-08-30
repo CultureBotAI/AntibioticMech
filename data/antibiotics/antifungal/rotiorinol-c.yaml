@@ -1,0 +1,49 @@
+identifier: CHEBI:68786
+label: rotiorinol C
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An azaphilone that is 9,9a-dihydro-2H-furo[3,2-g]isochromen-2-one substituted
+  by an acetyl group at position 3, a hydroxy group at position 9, a 7-hydroxy-3,5-dimethylhepta-1,3-dien-1-yl
+  group at position 6 and a methyl group at position 9a. It has been isolated from
+  Chaetomium cupreum and exhibits antifungal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (9R,9aR)-3-acetyl-9-hydroxy-6-[(1E,3E,5S)-7-hydroxy-3,5-dimethylhepta-1,3-dien-1-yl]-9a-methyl-9,9a-dihydro-2H-furo[3,2-g]isochromen-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-acetyl-3-(3,5-dimethyl-1E,3E-heptadien-7-ol)-9R-hydroxy-8a(R)-methyl-7H-furo[2,3-g]-2-benzopyran-7-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:26979
+- CHEBI:37581
+- CHEBI:50941
+- CHEBI:51867
+xrefs:
+- reaxys:15840538
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(=O)C1=C2C=C3C=C(/C=C/C(C)=C/[C@@H](C)CCO)OC=C3[C@@H](O)[C@]2(C)OC1=O
+  standard_inchi: InChI=1S/C23H26O6/c1-13(9-14(2)7-8-24)5-6-17-10-16-11-19-20(15(3)25)22(27)29-23(19,4)21(26)18(16)12-28-17/h5-6,9-12,14,21,24,26H,7-8H2,1-4H3/b6-5+,13-9+/t14-,21+,23+/m0/s1
+  standard_inchi_key: KRCVYHUEUHHWKT-XOEIKTSYSA-N
+  molecular_formula: C23H26O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 398.455
+  monoisotopic_mass: 398.17294
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68786
+  source_label: rotiorinol C
+  minted_identifier: antibioticmech:chebi-3cf14247f7
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

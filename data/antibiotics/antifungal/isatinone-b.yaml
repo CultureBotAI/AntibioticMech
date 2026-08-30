@@ -1,0 +1,43 @@
+identifier: CHEBI:66088
+label: isatinone B
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An indole alkaloid isolated from Isatis costata and exhibits antifungal
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-ethylhexyl (4-{[(E)-(2-oxo-1,2-dihydro-3H-indol-3-ylidene)(phenyl)methyl]oxy}phenyl)acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24829
+- CHEBI:33308
+- CHEBI:38958
+- CHEBI:47985
+xrefs:
+- reaxys:10732684
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCC(CC)COC(=O)Cc1ccc(O/C(=C2/C(=O)Nc3ccccc32)c2ccccc2)cc1
+  standard_inchi: InChI=1S/C31H33NO4/c1-3-5-11-22(4-2)21-35-28(33)20-23-16-18-25(19-17-23)36-30(24-12-7-6-8-13-24)29-26-14-9-10-15-27(26)32-31(29)34/h6-10,12-19,22H,3-5,11,20-21H2,1-2H3,(H,32,34)/b30-29+
+  standard_inchi_key: DGWRIHOXTOJRIO-QVIHXGFCSA-N
+  molecular_formula: C31H33NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 483.608
+  monoisotopic_mass: 483.24096
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66088
+  source_label: isatinone B
+  minted_identifier: antibioticmech:chebi-f1254fb81f
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

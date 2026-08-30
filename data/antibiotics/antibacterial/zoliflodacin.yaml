@@ -1,0 +1,44 @@
+identifier: antibioticmech:aro-88c211f0f6
+label: zoliflodacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Experimental antibiotic in phase two trial for Neisseria gonorrhoeae treatment.
+definition_source: PMID:31730160
+parent_compounds:
+- ARO:3007160
+xrefs:
+- ARO:3004858
+- chembl:CHEMBL3544978
+- pubchem.compound:76685216
+structural_class: zoliflodacin-like antibiotic
+structural_class_id: ARO:3007160
+chemical_structure:
+  smiles: C[C@@H]1CN2[C@H]([C@@H](O1)C)C3(CC4=CC5=C(C(=C42)F)ON=C5N6[C@H](COC6=O)C)C(=O)NC(=O)NC3=O
+  standard_inchi: InChI=1S/C22H22FN5O7/c1-8-7-33-21(32)28(8)17-12-4-11-5-22(18(29)24-20(31)25-19(22)30)16-10(3)34-9(2)6-27(16)14(11)13(23)15(12)35-26-17/h4,8-10,16H,5-7H2,1-3H3,(H2,24,25,29,30,31)/t8-,9+,10-,16+/m0/s1
+  standard_inchi_key: ZSWMIFNWDQEXDT-ZESJGQACSA-N
+  molecular_formula: C22H22FN5O7
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 487.4
+  monoisotopic_mass: 487.15032622
+source_concepts:
+- source: ARO
+  source_id: ARO:3004858
+  source_label: zoliflodacin
+  minted_identifier: antibioticmech:aro-88c211f0f6
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3004859
+  label: Neisseria gonorrhoeae gyrB conferring resistance to zoliflodacin
+  evidence:
+  - reference: ARO:3004859
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004858 (zoliflodacin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

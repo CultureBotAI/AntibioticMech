@@ -1,0 +1,67 @@
+identifier: CHEBI:84033
+label: fosetyl-Al
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aluminium salt composed of ethyl phosphonate anions and aluminium cations
+  in a 3:1 ratio. A fungicide for various horticultural crops used to control a range
+  of diseases including Phytophthora, Pythium and Plasmopara .
+definition_source: ChEBI
+synonyms:
+- synonym_text: aluminium tris(ethyl phosphonate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Aluminium phosethyl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Aluminum tris(O-ethyl phosphonate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Aluminum tris(O-ethylphosphonate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fosetyl-aluminium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosethyl Al
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosethyl aluminum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphonic acid monoethyl ester aluminum salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35510
+xrefs:
+- cas:39148-24-8
+- patent:EP2319323
+- patent:NZ583584
+- pesticides:fosetyl-aluminium
+- ppdb:363
+- reaxys:8162646
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: '[Al+3].[H]P(=O)([O-])OCC.[H]P(=O)([O-])OCC.[H]P(=O)([O-])OCC'
+  standard_inchi: InChI=1S/3C2H7O3P.Al/c3*1-2-5-6(3)4;/h3*6H,2H2,1H3,(H,3,4);/q;;;+3/p-3
+  standard_inchi_key: ZKZMJOFIHHZSRW-UHFFFAOYSA-K
+  molecular_formula: Al.3C2H6O3P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 354.105
+  monoisotopic_mass: 353.99791
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:84033
+  source_label: fosetyl-Al
+  minted_identifier: antibioticmech:chebi-dcde5ef59f
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

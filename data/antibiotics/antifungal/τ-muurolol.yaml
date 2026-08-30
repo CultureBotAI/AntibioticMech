@@ -1,0 +1,63 @@
+identifier: CHEBI:132906
+label: (−)-Τ-muurolol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cadinane sesquiterpenoid that consists of 4-isopropyl-1,6-dimethyl-1,2,3,4,4a,7,8,8a-octahydronaphthalene
+  having a hydroxy substituent at position 1 and (1S,4S,4aR,8aS)-configuration.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,4S,4aR,8aS)-4-isopropyl-1,6-dimethyl-1,2,3,4,4a,7,8,8a-octahydronaphthalen-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-τ-muurolol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10-epi-α-muurolol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: T-Muurolol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: epi-alpha-Muurolol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: epi-α-muurolol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α-epi-muurolol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:138397
+- CHEBI:22975
+- CHEBI:26878
+- CHEBI:36785
+xrefs:
+- cas:19912-62-0
+- knapsack:C00020154
+- reaxys:2210160
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: '[H][C@]12CCC(C)=C[C@@]1([H])[C@H](C(C)C)CC[C@]2(C)O'
+  standard_inchi: InChI=1S/C15H26O/c1-10(2)12-7-8-15(4,16)14-6-5-11(3)9-13(12)14/h9-10,12-14,16H,5-8H2,1-4H3/t12-,13-,14-,15-/m0/s1
+  standard_inchi_key: LHYHMMRYTDARSZ-AJNGGQMLSA-N
+  molecular_formula: C15H26O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 222.372
+  monoisotopic_mass: 222.19837
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:132906
+  source_label: (−)-Τ-muurolol
+  minted_identifier: antibioticmech:chebi-5322ec35e6
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

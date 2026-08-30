@@ -1,0 +1,46 @@
+identifier: CHEBI:66638
+label: nothramicin
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An anthracycline antibiotic isolated from the culture broth of Nocardia
+  sp. MJ896-43F17. It exhibits significant antimycobacterial activity against several
+  drug-resistant Mycobacterium smegmatis strains.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,4,10,12-tetrahydroxy-2,7-dimethoxy-3-methyl-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracen-1-yl
+    2,3,6-trideoxy-3-(dimethylamino)-3-methylhexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35315
+- CHEBI:35618
+- CHEBI:47779
+- CHEBI:49322
+- CHEBI:50996
+xrefs:
+- cas:205752-47-2
+activity_roles:
+- CHEBI:64912
+chemical_structure:
+  smiles: COc1ccc(O)c2c1C(=O)c1cc3c(c(O)c1C2=O)C(OC1CC(C)(N(C)C)C(O)C(C)O1)C(OC)C(C)(O)C3O
+  standard_inchi: InChI=1S/C30H37NO11/c1-12-26(36)29(2,31(4)5)11-17(41-12)42-25-19-14(27(37)30(3,38)28(25)40-7)10-13-18(23(19)34)24(35)20-15(32)8-9-16(39-6)21(20)22(13)33/h8-10,12,17,25-28,32,34,36-38H,11H2,1-7H3
+  standard_inchi_key: XXHMZNPASHQZPM-UHFFFAOYSA-N
+  molecular_formula: C30H37NO11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 587.622
+  monoisotopic_mass: 587.23666
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66638
+  source_label: nothramicin
+  minted_identifier: antibioticmech:chebi-bde605eb6b
+  role_terms:
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

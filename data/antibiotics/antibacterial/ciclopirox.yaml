@@ -1,0 +1,58 @@
+identifier: CHEBI:453011
+label: ciclopirox
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclic hydroxamic acid that is 1-hydroxypyridin-2(1H)-one in which the
+  hydrogens at positions 4 and 6 are substituted by methyl and cyclohexyl groups,
+  respectively. A broad spectrum antigfungal agent, it also exhibits antibacterial
+  activity against many Gram-positive and Gram-negative bacteria, and has anti-inflammatory
+  properties. It is used a a topical treatment of fungal skin and nail infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ciclopiroxum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6-cyclohexyl-1-hydroxy-4-methylpyridin-2(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-cyclohexyl-1-hydroxy-4-methyl-2(1H)-pyridinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23445
+- CHEBI:38183
+- CHEBI:87130
+xrefs:
+- beilstein:1533423
+- cas:29342-05-0
+- drugbank:DB01188
+- drugcentral:636
+- kegg.drug:D03488
+- lincs.smallmolecule:LSM-5307
+- patent:US3883545
+- wikipedia.en:Ciclopirox
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Cc1cc(C2CCCCC2)n(O)c(=O)c1
+  standard_inchi: InChI=1S/C12H17NO2/c1-9-7-11(13(15)12(14)8-9)10-5-3-2-4-6-10/h7-8,10,15H,2-6H2,1H3
+  standard_inchi_key: SCKYRAXSEDYPSA-UHFFFAOYSA-N
+  molecular_formula: C12H17NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 207.273
+  monoisotopic_mass: 207.12593
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:453011
+  source_label: ciclopirox
+  minted_identifier: antibioticmech:chebi-fa92a2416a
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

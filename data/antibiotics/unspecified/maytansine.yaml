@@ -1,0 +1,71 @@
+identifier: CHEBI:6701
+label: maytansine
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterotetracyclic compound and 19-membered macrocyclic lactam
+  antibiotic originally isolated from the Ethiopian shrub Maytenus serrata but also
+  found in other Maytenus species. It exhibits cytotoxicity against many tumour cell
+  lines.
+definition_source: ChEBI
+synonyms:
+- synonym_text: maitansina
+  synonym_type: INN
+  source: chebi
+- synonym_text: maitansine
+  synonym_type: INN
+  source: chebi
+- synonym_text: maitansinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (4β,5β,11E,13E)-maytansine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Maytansine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 153858
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC-153858
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:32955
+- CHEBI:36683
+- CHEBI:38163
+- CHEBI:46874
+- CHEBI:82760
+xrefs:
+- cas:35846-53-8
+- kegg.compound:C10606
+- kegg.drug:D04864
+- knapsack:C00002351
+- lipidmaps:LMPK04000017
+- reaxys:5417399
+- wikipedia.en:Maytansine
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12O[C@@]1(C)[C@@H](OC(=O)[C@H](C)N(C)C(C)=O)CC(=O)N(C)c1cc(cc(OC)c1Cl)C/C(C)=C/C=C/[C@@H](OC)[C@@]1(O)C[C@]([H])(OC(=O)N1)[C@H]2C'
+  standard_inchi: InChI=1S/C34H46ClN3O10/c1-18-11-10-12-26(45-9)34(43)17-25(46-32(42)36-34)19(2)30-33(5,48-30)27(47-31(41)20(3)37(6)21(4)39)16-28(40)38(7)23-14-22(13-18)15-24(44-8)29(23)35/h10-12,14-15,19-20,25-27,30,43H,13,16-17H2,1-9H3,(H,36,42)/b12-10+,18-11+/t19-,20+,25+,26-,27+,30+,33+,34+/m1/s1
+  standard_inchi_key: WKPWGQKGSOKKOO-RSFHAFMBSA-N
+  molecular_formula: C34H46ClN3O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 692.206
+  monoisotopic_mass: 691.28717
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6701
+  source_label: maytansine
+  minted_identifier: antibioticmech:chebi-a1c260c269
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

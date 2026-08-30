@@ -1,0 +1,51 @@
+identifier: antibioticmech:aro-b0cdef0f20
+label: pirlimycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Pirlimycin is an experimental/veterinary lincosamide antibiotic. Although
+  not approved for use in humans, pirlimycin is commonly used to treat mammary gland
+  infections in cattle.
+definition_source: PMID:12584673
+synonyms:
+- synonym_text: Pirsue
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:0000017
+xrefs:
+- ARO:3007169
+- CHEBI:201427
+- chembl:CHEMBL1652611
+- pubchem.compound:157385
+structural_class: lincosamide antibiotic
+structural_class_id: ARO:0000017
+chemical_structure:
+  smiles: CC[C@@H]1CCN[C@@H](C1)C(=O)N[C@@H]([C@@H]2[C@@H]([C@@H]([C@H]([C@H](O2)SC)O)O)O)[C@H](C)Cl
+  standard_inchi: InChI=1S/C17H31ClN2O5S/c1-4-9-5-6-19-10(7-9)16(24)20-11(8(2)18)15-13(22)12(21)14(23)17(25-15)26-3/h8-15,17,19,21-23H,4-7H2,1-3H3,(H,20,24)/t8-,9+,10-,11+,12-,13+,14+,15+,17+/m0/s1
+  standard_inchi_key: HBJOXQRURQPDEX-MHXMMLMNSA-N
+  molecular_formula: C17H31ClN2O5S
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 411.0
+  monoisotopic_mass: 410.164221
+source_concepts:
+- source: ARO
+  source_id: ARO:3007169
+  source_label: pirlimycin
+  minted_identifier: antibioticmech:aro-b0cdef0f20
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002835
+  label: lnuA
+  evidence:
+  - reference: ARO:3002835
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007169 (pirlimycin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

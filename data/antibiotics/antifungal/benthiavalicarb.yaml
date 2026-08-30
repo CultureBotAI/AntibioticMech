@@ -1,0 +1,62 @@
+identifier: CHEBI:83601
+label: benthiavalicarb
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxamide resulting from the formal condensation of the carboxy group
+  of L-valine with (1R)-1-(6-fluoro-1,3-benzothiazol-2-yl)ethylamine and replacement
+  of one of the hydrogens attached to the α-amino group by a carboxy group. It is
+  the active form of the fungicide benthiavalicarb isopropyl (in which the carbamic
+  acid group has been converted to the corresponding isopropyl ester).
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[(2S)-1-{[(1R)-1-(6-fluoro-1,3-benzothiazol-2-yl)ethyl]amino}-3-methyl-1-oxobutan-2-yl]carbamic
+    acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[(1S)-1-[[[(1R)-1-(6-fluoro-2-benzothiazolyl)ethyl]amino]carbonyl]-2-methylpropyl]carbamic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[(1S)-1-{[(1R)-1-(6-fluoro-1,3-benzothiazol-2-yl)ethyl]carbamoyl}-2-methylpropyl]carbamic
+    acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benthiavalicarbe
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27267
+- CHEBI:37143
+- CHEBI:37622
+- CHEBI:37947
+- CHEBI:87029
+- CHEBI:87038
+xrefs:
+- cas:413615-35-7
+- pesticides:benthiavalicarb
+- reaxys:11327530
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CC(C)[C@H](NC(=O)O)C(=O)N[C@H](C)c1nc2ccc(F)cc2s1
+  standard_inchi: InChI=1S/C15H18FN3O3S/c1-7(2)12(19-15(21)22)13(20)17-8(3)14-18-10-5-4-9(16)6-11(10)23-14/h4-8,12,19H,1-3H3,(H,17,20)(H,21,22)/t8-,12+/m1/s1
+  standard_inchi_key: VVSLYIKSEBPRSN-PELKAZGASA-N
+  molecular_formula: C15H18FN3O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 339.392
+  monoisotopic_mass: 339.10529
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83601
+  source_label: benthiavalicarb
+  minted_identifier: antibioticmech:chebi-d6fb1c94a1
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

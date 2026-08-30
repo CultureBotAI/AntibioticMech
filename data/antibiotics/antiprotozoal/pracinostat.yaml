@@ -1,0 +1,60 @@
+identifier: CHEBI:95071
+label: pracinostat
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxamic acid that is N-hydroxyacrylamide which is substituted at
+  position 3 by a 2-butyl-1-[2-(diethylamino)ethyl]-1H-benzimidazol-5-yl group (the
+  E isomer). An orally available pan-histone deacetylase inhibitor with demonstrated
+  activity in the treatment of advanced solid tumours.
+definition_source: ChEBI
+synonyms:
+- synonym_text: pracinostatum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2E)-3-{2-butyl-1-[2-(diethylamino)ethyl]-1H-benzimidazol-5-yl}-N-hydroxyacrylamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SB 939
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SB-939
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SB939
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24650
+- CHEBI:36622
+- CHEBI:50996
+- CHEBI:78840
+xrefs:
+- cas:929016-96-6
+- drugbank:DB05223
+- lincs.smallmolecule:LSM-43290
+- wikipedia.en:Pracinostat
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: CCCCc1nc2cc(/C=C/C(=O)NO)ccc2n1CCN(CC)CC
+  standard_inchi: InChI=1S/C20H30N4O2/c1-4-7-8-19-21-17-15-16(10-12-20(25)22-26)9-11-18(17)24(19)14-13-23(5-2)6-3/h9-12,15,26H,4-8,13-14H2,1-3H3,(H,22,25)/b12-10+
+  standard_inchi_key: JHDKZFFAIZKUCU-ZRDIBKRKSA-N
+  molecular_formula: C20H30N4O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 358.486
+  monoisotopic_mass: 358.23688
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:95071
+  source_label: pracinostat
+  minted_identifier: antibioticmech:chebi-0e7df505fd
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

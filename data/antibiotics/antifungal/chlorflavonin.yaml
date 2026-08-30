@@ -1,0 +1,50 @@
+identifier: CHEBI:3613
+label: chlorflavonin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dihydroxyflavone that is flavone substituted by a chloro group at position
+  3', hydroxy groups at positions 5 and 2' and methoxy groups at positions 3, 7 band
+  8 respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(3-chloro-2-hydroxyphenyl)-5-hydroxy-3,7,8-trimethoxy-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3'-chloro-2',5-dihydroxy-3,7,8-trimethoxyflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27124
+- CHEBI:38686
+- CHEBI:83403
+xrefs:
+- cas:23363-64-6
+- kegg.compound:C10027
+- knapsack:C00001026
+- lipidmaps:LMPK12113075
+- reaxys:1300439
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1cc(O)c2c(=O)c(OC)c(-c3cccc(Cl)c3O)oc2c1OC
+  standard_inchi: InChI=1S/C18H15ClO7/c1-23-11-7-10(20)12-14(22)18(25-3)15(26-17(12)16(11)24-2)8-5-4-6-9(19)13(8)21/h4-7,20-21H,1-3H3
+  standard_inchi_key: JLSQXYITDXJTKL-UHFFFAOYSA-N
+  molecular_formula: C18H15ClO7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 378.764
+  monoisotopic_mass: 378.05063
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3613
+  source_label: chlorflavonin
+  minted_identifier: antibioticmech:chebi-216bc569fd
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

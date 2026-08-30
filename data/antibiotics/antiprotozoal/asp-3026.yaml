@@ -1,0 +1,64 @@
+identifier: CHEBI:167650
+label: ASP-3026
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of diamino-1,3,5-triazines that is 1,3,5-triazine-2,4-diamine
+  in which the amino groups at positions 2 and 4 are respectively carrying 2-methoxy-4-[4-(4-methylpiperazin-1-yl)piperidin-1-yl]phenyl
+  and 2-(propan-2-ylsulfonyl)phenyl substituents. It is a potent inhibitor of anaplastic
+  lymphoma kinase (ALK), Ack and ROS1 activity (IC50 values are 3.5, 5.8 and 8.9 nM
+  respectively) and exhibits anti-cancer properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-{2-methoxy-4-[4-(4-methylpiperazin-1-yl)piperidin-1-yl]phenyl}-N'-[2-(propan-2-ylsulfonyl)phenyl]-1,3,5-triazine-2,4-diamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-N-[2-methoxy-4-[4-(4-methylpiperazin-1-yl)piperidin-1-yl]phenyl]-4-N-(2-propan-2-ylsulfonylphenyl)-1,3,5-triazine-2,4-diamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ASP 3026
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ASP3026
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N2-[2-methoxy-4-[4-(4-methyl-1-piperazinyl)-1-piperidinyl]phenyl]-N4-[2-[(1-methylethyl)sulfonyl]phenyl]-1,3,5-triazine-2,4-diamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25235
+- CHEBI:26151
+- CHEBI:33860
+- CHEBI:35850
+- CHEBI:38170
+- CHEBI:46920
+- CHEBI:50995
+xrefs:
+- cas:1097917-15-1
+- chemspider:28424239
+- drugbank:DB12729
+- pdb-ccd:F6O
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: COc1cc(N2CCC(N3CCN(C)CC3)CC2)ccc1Nc1ncnc(Nc2ccccc2S(=O)(=O)C(C)C)n1
+  standard_inchi: InChI=1S/C29H40N8O3S/c1-21(2)41(38,39)27-8-6-5-7-25(27)33-29-31-20-30-28(34-29)32-24-10-9-23(19-26(24)40-4)36-13-11-22(12-14-36)37-17-15-35(3)16-18-37/h5-10,19-22H,11-18H2,1-4H3,(H2,30,31,32,33,34)
+  standard_inchi_key: MGGBYMDAPCCKCT-UHFFFAOYSA-N
+  molecular_formula: C29H40N8O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 580.759
+  monoisotopic_mass: 580.29441
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:167650
+  source_label: ASP-3026
+  minted_identifier: antibioticmech:chebi-48ed3b105e
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

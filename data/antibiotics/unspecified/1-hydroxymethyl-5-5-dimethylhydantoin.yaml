@@ -1,0 +1,93 @@
+identifier: CHEBI:143246
+label: 1-(hydroxymethyl)-5,5-dimethylhydantoin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An imidazolidine-2,4-dione substituted by a hydroxymethyl group at position
+  1 and two methyl groups at position 5. It is approved by the FDA for use as an adjuvant
+  in the bleaching of recycled paper and board used in food packaging, and is also
+  a decomposition product of DMDM hydantoin, a preservative and antimicrobial agent
+  used in cosmetics and personal care products.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-(hydroxymethyl)-5,5-dimethylimidazolidine-2,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5,5-dimethyl-2,4-dioxoimidazolidin-1-yl)methanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (hydroxymethyl)-5,5-dimethyl-2,4-imidazolidinedione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(hydroxymethyl)-5,5-dimethyl-2,4-imidazolidinedione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-hydroxymethyl-5,5-dimethyl-2,4-imidazolidinedione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-hydroxymethyl-5,5-dimethylhydantoin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-methylol-5,5-dimethylhydantoin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-monomethylol-5,5-dimethylhydantoin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,5-dimethyl-1-(hydroxymethyl)hydantoin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,5-dimethyl-1-(hydroxymethyl)imidazolidine-2,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,5-dimethyl-1-hydroxymethylhydantoin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MDM hydantoin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MDMH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hydroxymethyl-5,5-dimethylhydantoin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methylol dimethylhydantoin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: monomethylol dimethyl hydantoin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24628
+- CHEBI:73080
+xrefs:
+- cas:116-25-6
+- cas:27636-82-4
+- hmdb:HMDB0031670
+- pubchem.compound:67000
+- reaxys:139160
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC1(C)C(=O)NC(=O)N1CO
+  standard_inchi: InChI=1S/C6H10N2O3/c1-6(2)4(10)7-5(11)8(6)3-9/h9H,3H2,1-2H3,(H,7,10,11)
+  standard_inchi_key: SIQZJFKTROUNPI-UHFFFAOYSA-N
+  molecular_formula: C6H10N2O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 158.157
+  monoisotopic_mass: 158.06914
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:143246
+  source_label: 1-(hydroxymethyl)-5,5-dimethylhydantoin
+  minted_identifier: antibioticmech:chebi-2733fe2bab
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

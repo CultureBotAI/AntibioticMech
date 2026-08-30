@@ -1,0 +1,47 @@
+identifier: CHEBI:81799
+label: diclocymet
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diastereoisomeric mixture comprising equimolar amounts of (1R,2S)- and
+  (1R,2R)-diclocymet. A fungicide used for the control of rice blast in paddy fields.
+  It also shows some activity against paddy field insect pests including rice water
+  weevil and rice-stem borer. Diclocymet is moderately toxic to fish.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-cyano-N-[(1R)-1-(2,4-dichlorophenyl)ethyl]-3,3-dimethylbutanamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:60600
+- CHEBI:60915
+xrefs:
+- cas:139920-32-4
+- kegg.compound:C18518
+- pesticides:diclocymet
+- ppdb:2559
+- reaxys:8422721
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: C[C@@H](NC(=O)C(C#N)C(C)(C)C)c1ccc(Cl)cc1Cl
+  standard_inchi: InChI=1S/C15H18Cl2N2O/c1-9(11-6-5-10(16)7-13(11)17)19-14(20)12(8-18)15(2,3)4/h5-7,9,12H,1-4H3,(H,19,20)/t9-,12?/m1/s1
+  standard_inchi_key: YEJGPFZQLRMXOI-PKEIRNPWSA-N
+  molecular_formula: C15H18Cl2N2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 313.228
+  monoisotopic_mass: 312.07962
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81799
+  source_label: diclocymet
+  minted_identifier: antibioticmech:chebi-57864ecc4a
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

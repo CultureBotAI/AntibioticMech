@@ -1,0 +1,54 @@
+identifier: CHEBI:17098
+label: veratraldehyde
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dimethoxybenzene that is benzaldehyde substituted by methoxy groups
+  at positions 3 and 4. It is found in peppermint, ginger, raspberry, and other fruits.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,4-dimethoxybenzaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,4-Dimethoxybenzaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Veratraldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Veratric aldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22698
+- CHEBI:51681
+xrefs:
+- cas:120-14-9
+- hmdb:HMDB0032138
+- kegg.compound:C02201
+- reaxys:473899
+- wikipedia.en:Veratraldehyde
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1ccc(C=O)cc1OC
+  standard_inchi: InChI=1S/C9H10O3/c1-11-8-4-3-7(6-10)5-9(8)12-2/h3-6H,1-2H3
+  standard_inchi_key: WJUFSDZVCOTFON-UHFFFAOYSA-N
+  molecular_formula: C9H10O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 166.176
+  monoisotopic_mass: 166.06299
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17098
+  source_label: veratraldehyde
+  minted_identifier: antibioticmech:chebi-b53b263b0d
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

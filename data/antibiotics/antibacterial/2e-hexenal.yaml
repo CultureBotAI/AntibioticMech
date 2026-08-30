@@ -1,0 +1,72 @@
+identifier: CHEBI:28913
+label: (2E)-hexenal
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 2-hexenal in which the olefinic double bond has E configuration. It
+  occurs naturally in a wide range of fruits, vegetables, and spices.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-hex-2-enal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-2-Hexenal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-2-hexenal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-hex-2-enal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Hexenal, (2E)-
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-trans-hexenal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-Propylacrolein
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Leaf aldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-2-hexenal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-propyl acrolein
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-propylacrolein
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:19591
+xrefs:
+- cas:6728-26-3
+- kegg.compound:C08497
+- reaxys:1699684
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCC/C=C/C=O
+  standard_inchi: InChI=1S/C6H10O/c1-2-3-4-5-6-7/h4-6H,2-3H2,1H3/b5-4+
+  standard_inchi_key: MBDOYVRWFFCFHM-SNAWJCMRSA-N
+  molecular_formula: C6H10O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 98.145
+  monoisotopic_mass: 98.07316
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28913
+  source_label: (2E)-hexenal
+  minted_identifier: antibioticmech:chebi-19532b8301
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

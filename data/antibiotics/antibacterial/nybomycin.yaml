@@ -1,0 +1,48 @@
+identifier: antibioticmech:aro-6fbc93a42c
+label: nybomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: A heterocyclic antibiotic that targets mutant gyrA (type II topoisomerase)
+  containing an S84L substitution, counteracting acquired quinolone resistance. It
+  is effective against quinolone-resistant Gram-positive bacteria including S. aureus
+  and E. faecalis. Due to its ability to counteract quinolone resistance by targeting
+  the mutant form of the gyrA protein, it is classified as a reverse antibiotic (RA).
+definition_source: PMID:16589716
+parent_compounds:
+- ARO:3007157
+xrefs:
+- ARO:3003780
+- CHEBI:203472
+- chembl:CHEMBL1999880
+- pubchem.compound:169159
+structural_class: nybomycin-like antibiotic
+structural_class_id: ARO:3007157
+chemical_structure:
+  smiles: CC1=CC(=O)N2COC3=C2C1=CC4=C3N(C(=O)C=C4CO)C
+  standard_inchi: InChI=1S/C16H14N2O4/c1-8-3-13(21)18-7-22-16-14-11(5-10(8)15(16)18)9(6-19)4-12(20)17(14)2/h3-5,19H,6-7H2,1-2H3
+  standard_inchi_key: HKMUGCUFXWTNSP-UHFFFAOYSA-N
+  molecular_formula: C16H14N2O4
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 298.29
+  monoisotopic_mass: 298.09535693
+source_concepts:
+- source: ARO
+  source_id: ARO:3003780
+  source_label: nybomycin
+  minted_identifier: antibioticmech:aro-6fbc93a42c
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3003292
+  target_label: fluoroquinolone resistant gyrA
+  evidence:
+  - reference: ARO:3003292
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3003780 (nybomycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

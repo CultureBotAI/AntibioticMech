@@ -1,0 +1,103 @@
+identifier: CHEBI:3015
+label: benomyl
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzimidazoles that is the methyl ester of [1-(butylcarbamoyl)-1H-benzimidazol-2-yl]carbamic
+  acid. A foliar fungicide used to control a wide range of Ascomycetes and Fungi Imperfecti
+  in a wide range of crops.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl [1-(butylcarbamoyl)-1H-benzimidazol-2-yl]carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(Butylcarbamoyl)-2-benzimidazol-methylcarbamat
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(Butylcarbamoyl)-2-benzimidazolecarbamic acid, methyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(N-Butylcarbamoyl)-2-(methoxy-carboxamido)-benzimidazol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Benlate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Benomyl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methyl 1-(butylamino)carbonyl-1H-benzimidazol-2-ylcarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methyl 1-(butylcarbamoyl)-2-benzimidazolecarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methyl N-(1-butylcarbamoyl-2-benzimidazole)carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22715
+- CHEBI:23003
+- CHEBI:62733
+- CHEBI:87036
+- CHEBI:87064
+- ARO:3009317
+xrefs:
+- ARO:3009161
+- cas:17804-35-2
+- hmdb:HMDB0031767
+- kegg.compound:C10896
+- pesticides:benomyl
+- ppdb:66
+- reaxys:825455
+- wikipedia.en:Benomyl
+- chembl:CHEMBL327919
+- pubchem.compound:28780
+activity_roles:
+- CHEBI:86328
+structural_class: benzimidazole antifungal
+structural_class_id: ARO:3009317
+chemical_structure:
+  smiles: CCCCNC(=O)n1c(NC(=O)OC)nc2ccccc21
+  standard_inchi: InChI=1S/C14H18N4O3/c1-3-4-9-15-13(19)18-11-8-6-5-7-10(11)16-12(18)17-14(20)21-2/h5-8H,3-4,9H2,1-2H3,(H,15,19)(H,16,17,20)
+  standard_inchi_key: RIOXQFHNBCKOKP-UHFFFAOYSA-N
+  molecular_formula: C14H18N4O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 290.323
+  monoisotopic_mass: 290.13789
+source_concepts:
+- source: ARO
+  source_id: ARO:3009161
+  source_label: benomyl
+  minted_identifier: antibioticmech:aro-bedb50e028
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3015
+  source_label: benomyl
+  minted_identifier: antibioticmech:chebi-b4bae81658
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009469
+  label: Colletotrichum gloeosporioides beta-tubulin with mutations conferring resistance
+    against benomyl
+  evidence:
+  - reference: ARO:3009469
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009161 (benomyl);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009478
+  label: Aspergillus fumigatus beta-tubulin with mutations conferring resistance to
+    benomyl
+  evidence:
+  - reference: ARO:3009478
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009161 (benomyl);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

@@ -1,0 +1,54 @@
+identifier: CHEBI:66263
+label: 5,7,4'-trihydroxy-6,8-diprenylisoflavone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 7-hydroxyisoflavones that is genistein substituted
+  by prenyl groups at positions 6 and 8. It has been isolated from Derris scandens
+  and Glycyrrhiza uralensis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,7-dihydroxy-3-(4-hydroxyphenyl)-6,8-bis(3-methylbut-2-en-1-yl)-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6,8-diisoprenyl-5,7,4'-trihydroxyisoflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6,8-diprenylgenistein
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 8-(γ,γ-dimethylallyl)-wighteone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 8-prenylwighteone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:55465
+xrefs:
+- cas:51225-28-6
+- reaxys:1357039
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)=CCc1c(O)c(CC=C(C)C)c2occ(-c3ccc(O)cc3)c(=O)c2c1O
+  standard_inchi: InChI=1S/C25H26O5/c1-14(2)5-11-18-22(27)19(12-6-15(3)4)25-21(23(18)28)24(29)20(13-30-25)16-7-9-17(26)10-8-16/h5-10,13,26-28H,11-12H2,1-4H3
+  standard_inchi_key: UCHYSPNEUSDFQR-UHFFFAOYSA-N
+  molecular_formula: C25H26O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 406.478
+  monoisotopic_mass: 406.17802
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66263
+  source_label: 5,7,4'-trihydroxy-6,8-diprenylisoflavone
+  minted_identifier: antibioticmech:chebi-d192da87f7
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

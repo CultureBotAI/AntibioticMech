@@ -1,0 +1,66 @@
+identifier: CHEBI:36049
+label: sodium arsanilate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: sodium hydrogen (4-aminophenyl)arsonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4-aminophenyl)arsonic acid sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Arsamin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Atoxyl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: arsanilic acid sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: monosodium (4-aminophenyl)arsonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium aminarsonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium anilarsonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium hydrogen 4-aminophenylarsonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium p-aminophenylarsonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38700
+- CHEBI:50957
+xrefs:
+- beilstein:5789398
+- cas:127-85-5
+activity_roles:
+- CHEBI:36051
+chemical_structure:
+  smiles: Nc1ccc([As](=O)([O-])O)cc1.[Na+]
+  standard_inchi: InChI=1S/C6H8AsNO3.Na/c8-6-3-1-5(2-4-6)7(9,10)11;/h1-4H,8H2,(H2,9,10,11);/q;+1/p-1
+  standard_inchi_key: OUFRIWNNMFWZTM-UHFFFAOYSA-M
+  molecular_formula: C6H7AsNO3.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 239.038
+  monoisotopic_mass: 238.95396
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:36049
+  source_label: sodium arsanilate
+  minted_identifier: antibioticmech:chebi-fec551d25b
+  role_terms:
+  - CHEBI:36051
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

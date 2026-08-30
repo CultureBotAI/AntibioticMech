@@ -1,0 +1,38 @@
+identifier: CHEBI:32201
+label: tetracenomycin D1
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: 1,3,8,11-tetrahydroxy-10-methyltetracene-5,12-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48132
+- CHEBI:51286
+xrefs:
+- kegg.compound:C12376
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: Cc1cc(O)cc2cc3c(c(O)c12)C(=O)c1c(O)cc(O)cc1C3=O
+  standard_inchi: InChI=1S/C19H12O6/c1-7-2-9(20)3-8-4-11-16(18(24)14(7)8)19(25)15-12(17(11)23)5-10(21)6-13(15)22/h2-6,20-22,24H,1H3
+  standard_inchi_key: RZKZJERAFMFNMF-UHFFFAOYSA-N
+  molecular_formula: C19H12O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 336.299
+  monoisotopic_mass: 336.06339
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32201
+  source_label: tetracenomycin D1
+  minted_identifier: antibioticmech:chebi-c7ee128c94
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

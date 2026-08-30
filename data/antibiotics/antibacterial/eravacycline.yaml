@@ -1,0 +1,44 @@
+identifier: antibioticmech:aro-2d35d60097
+label: eravacycline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: A fluorocycline that acts to inhibit the bacterial ribosome.
+definition_source: PMID:23979750
+synonyms:
+- synonym_text: 7-fluoro-9-pyrrolidinoacetamido-6-demethyl-6-deoxytetracycline
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: TP-434
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3000050
+xrefs:
+- ARO:3003979
+- CHEBI:177804
+- chembl:CHEMBL1951095
+- pubchem.compound:54726192
+structural_class: tetracycline antibiotic
+structural_class_id: ARO:3000050
+chemical_structure:
+  smiles: CN(C)[C@H]1[C@@H]2C[C@@H]3CC4=C(C=C(C(=C4C(=C3C(=O)[C@@]2(C(=C(C1=O)C(=O)N)O)O)O)O)NC(=O)CN5CCCC5)F
+  standard_inchi: InChI=1S/C27H31FN4O8/c1-31(2)20-13-8-11-7-12-14(28)9-15(30-16(33)10-32-5-3-4-6-32)21(34)18(12)22(35)17(11)24(37)27(13,40)25(38)19(23(20)36)26(29)39/h9,11,13,20,34-35,38,40H,3-8,10H2,1-2H3,(H2,29,39)(H,30,33)/t11-,13-,20-,27-/m0/s1
+  standard_inchi_key: AKLMFDDQCHURPW-ISIOAQNYSA-N
+  molecular_formula: C27H31FN4O8
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 558.6
+  monoisotopic_mass: 558.21259212
+source_concepts:
+- source: ARO
+  source_id: ARO:3003979
+  source_label: eravacycline
+  minted_identifier: antibioticmech:aro-2d35d60097
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

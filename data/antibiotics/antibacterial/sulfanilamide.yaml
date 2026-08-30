@@ -1,0 +1,106 @@
+identifier: CHEBI:45373
+label: sulfanilamide
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfonamide in which the sulfamoyl functional group is attached to aniline
+  at the 4-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-aminobenzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-aminobenzene sulfonic acid amide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-azanylbenzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Prontosil album
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SULFANILAMIDE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Streptocide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-aminobenzenesulfamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-aminobenzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: para-aminobenzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulfamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulphanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35358
+- CHEBI:48975
+- CHEBI:87228
+- ARO:3000282
+xrefs:
+- ARO:3007468
+- beilstein:511852
+- cas:63-74-1
+- drugbank:DB00259
+- drugcentral:2521
+- gmelin:83068
+- hmdb:HMDB0014404
+- kegg.compound:C07458
+- kegg.drug:D08543
+- lincs.smallmolecule:LSM-6524
+- pdb-ccd:SAN
+- reaxys:511852
+- vsdb:1924
+- wikipedia.en:Sulfanilamide
+- chembl:CHEMBL21
+- pubchem.compound:5333
+activity_roles:
+- CHEBI:33282
+structural_class: sulfonamide antibiotic
+structural_class_id: ARO:3000282
+chemical_structure:
+  smiles: Nc1ccc(S(N)(=O)=O)cc1
+  standard_inchi: InChI=1S/C6H8N2O2S/c7-5-1-3-6(4-2-5)11(8,9)10/h1-4H,7H2,(H2,8,9,10)
+  standard_inchi_key: FDDDEECHVMSUSB-UHFFFAOYSA-N
+  molecular_formula: C6H8N2O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 172.209
+  monoisotopic_mass: 172.03065
+source_concepts:
+- source: ARO
+  source_id: ARO:3007468
+  source_label: sulfanilamide
+  minted_identifier: antibioticmech:aro-dba3a37e97
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:45373
+  source_label: sulfanilamide
+  minted_identifier: antibioticmech:chebi-fac7578230
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

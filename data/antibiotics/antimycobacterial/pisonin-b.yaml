@@ -1,0 +1,46 @@
+identifier: CHEBI:67359
+label: pisonin B
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of chromones that is chromone substituted by hydroxy
+  groups at positions 5 and 7, a methoxy groups at position 6 and a methyl group at
+  position 2. Isolated from Pisonia aculeata, it exhibits antitubercular activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,7-dihydroxy-6-methoxy-2-methyl-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dihydroxy-6-methoxy-2-methylchromone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23238
+- CHEBI:33572
+- CHEBI:35618
+xrefs:
+- reaxys:19718133
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: COc1c(O)cc2oc(C)cc(=O)c2c1O
+  standard_inchi: InChI=1S/C11H10O5/c1-5-3-6(12)9-8(16-5)4-7(13)11(15-2)10(9)14/h3-4,13-14H,1-2H3
+  standard_inchi_key: WXEVCWAPVMCHML-UHFFFAOYSA-N
+  molecular_formula: C11H10O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 222.196
+  monoisotopic_mass: 222.05282
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:67359
+  source_label: pisonin B
+  minted_identifier: antibioticmech:chebi-1e7f889b36
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

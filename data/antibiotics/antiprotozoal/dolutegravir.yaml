@@ -1,0 +1,55 @@
+identifier: CHEBI:76010
+label: dolutegravir
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid amide obtained by formal condensation of the carboxy
+  group of (4R,12aS)-7-hydroxy-4-methyl-6,8-dioxo-3,4,6,8,12,12a-hexahydro-2H-pyrido[1',2':4,5]pyrazino[2,1-b][1,3]oxazine-9-carboxylic
+  acid with the amino group of 2,4-difluorobenzylamine. Used (as its sodium salt)
+  for treatment of HIV-1.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4R,12aS)-N-(2,4-difluorobenzyl)-7-hydroxy-4-methyl-6,8-dioxo-3,4,6,8,12,12a-hexahydro-2H-pyrido[1',2':4,5]pyrazino[2,1-b][1,3]oxazine-9-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S/GSK1349572
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:26979
+- CHEBI:29347
+- CHEBI:38582
+xrefs:
+- cas:1051375-16-6
+- drugcentral:4805
+- kegg.drug:D10066
+- patent:EP2602260
+- patent:WO2006116764
+- pdb-ccd:DLU
+- reaxys:12732602
+- wikipedia.en:Dolutegravir
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]12Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c(O)c3C(=O)N1[C@H](C)CCO2'
+  standard_inchi: InChI=1S/C20H19F2N3O5/c1-10-4-5-30-15-9-24-8-13(17(26)18(27)16(24)20(29)25(10)15)19(28)23-7-11-2-3-12(21)6-14(11)22/h2-3,6,8,10,15,27H,4-5,7,9H2,1H3,(H,23,28)/t10-,15+/m1/s1
+  standard_inchi_key: RHWKPHLQXYSBKR-BMIGLBTASA-N
+  molecular_formula: C20H19F2N3O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 419.384
+  monoisotopic_mass: 419.12928
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:76010
+  source_label: dolutegravir
+  minted_identifier: antibioticmech:chebi-55508daaf8
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

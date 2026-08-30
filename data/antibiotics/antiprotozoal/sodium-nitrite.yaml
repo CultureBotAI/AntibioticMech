@@ -1,0 +1,55 @@
+identifier: CHEBI:78870
+label: sodium nitrite
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An inorganic sodium salt having nitrite as the counterion. Used as a food
+  preservative and antidote to cyanide poisoning.
+definition_source: ChEBI
+synonyms:
+- synonym_text: NaNO2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Natrium nitrit
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nitrite de sodium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nitrito sodico
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38702
+- CHEBI:46648
+xrefs:
+- cas:7632-00-0
+- kegg.drug:D05865
+- reaxys:906771
+- wikipedia.en:Sodium_nitrite
+activity_roles:
+- CHEBI:38068
+- CHEBI:65256
+chemical_structure:
+  smiles: O=N[O-].[Na+]
+  standard_inchi: InChI=1S/HNO2.Na/c2-1-3;/h(H,2,3);/q;+1/p-1
+  standard_inchi_key: LPXPTNMVRIOKMN-UHFFFAOYSA-M
+  molecular_formula: NO2.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 68.995
+  monoisotopic_mass: 68.98267
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:78870
+  source_label: sodium nitrite
+  minted_identifier: antibioticmech:chebi-3d78de8b5b
+  role_terms:
+  - CHEBI:38068
+  - CHEBI:65256
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

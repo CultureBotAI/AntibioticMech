@@ -1,0 +1,50 @@
+identifier: CHEBI:83297
+label: 4-dodecyl-2,6-dimethylmorpholine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of morpholines that is 2,6-dimethylmorpholine in
+  which the hydrogen attached to the nitrogen is replaced by a dodecyl group. The
+  configuration at positions 2 and 6 is unknown or unspecified.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2Ξ,6Ξ)-2,6-dimethyl-4-dodecylmorpholine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,6-dimethyl-4-dodecylmorpholine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-dodecyl-2,6-dimethylmorpholine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38785
+- CHEBI:50996
+xrefs:
+- cas:1704-28-5
+- ppdb:1128
+- reaxys:123296
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CCCCCCCCCCCCN1CC(C)OC(C)C1
+  standard_inchi: InChI=1S/C18H37NO/c1-4-5-6-7-8-9-10-11-12-13-14-19-15-17(2)20-18(3)16-19/h17-18H,4-16H2,1-3H3
+  standard_inchi_key: SBUKOHLFHYSZNG-UHFFFAOYSA-N
+  molecular_formula: C18H37NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 283.5
+  monoisotopic_mass: 283.28751
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83297
+  source_label: 4-dodecyl-2,6-dimethylmorpholine
+  minted_identifier: antibioticmech:chebi-741df7f724
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,94 @@
+identifier: CHEBI:135928
+label: doripenem
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Doripenem is a carbapenem with a broad range of activity against Gram-positive
+  and Gram-negative bacteria, and along with meropenem, it is the most active beta-lactam
+  antibiotic against Pseudomonas aeruginosa. It inhibits bacterial cell wall synthesis.
+definition_source: PMID:15047550
+synonyms:
+- synonym_text: doribax
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: doripenem hydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DOR
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:46633
+- ARO:0000020
+xrefs:
+- ARO:3000640
+- cas:148016-81-3
+- drugcentral:4149
+- hmdb:HMDB0041883
+- chembl:CHEMBL491571
+- pubchem.compound:73303
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+structural_class: carbapenem
+structural_class_id: ARO:0000020
+chemical_structure:
+  smiles: C[C@@H](O)[C@H]1C(=O)N2C(C(=O)O)=C(S[C@@H]3CN[C@H](CNS(N)(=O)=O)C3)[C@H](C)[C@H]12
+  standard_inchi: InChI=1S/C15H24N4O6S2/c1-6-11-10(7(2)20)14(21)19(11)12(15(22)23)13(6)26-9-3-8(17-5-9)4-18-27(16,24)25/h6-11,17-18,20H,3-5H2,1-2H3,(H,22,23)(H2,16,24,25)/t6-,7-,8+,9+,10-,11-/m1/s1
+  standard_inchi_key: AVAACINZEOAHHE-VFZPANTDSA-N
+  molecular_formula: C15H24N4O6S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 420.513
+  monoisotopic_mass: 420.11373
+source_concepts:
+- source: ARO
+  source_id: ARO:3000640
+  source_label: doripenem
+  minted_identifier: antibioticmech:aro-30034be90e
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:135928
+  source_label: doripenem
+  minted_identifier: antibioticmech:chebi-f6fe798d73
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003713
+  label: VCC-1
+  evidence:
+  - reference: ARO:3003713
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000640 (doripenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004559
+  label: CAM-1
+  evidence:
+  - reference: ARO:3004559
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000640 (doripenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007199
+  label: PAM-1
+  evidence:
+  - reference: ARO:3007199
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000640 (doripenem);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000640 (doripenem); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
