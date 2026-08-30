@@ -24,8 +24,8 @@ prose below are the reasoning, the queue is the list.
   No data source will close this column: a mechanism graph is authored from
   primary literature with a citation per edge (see `curation/source_queue.tsv`,
   `discovery-literature`).
-- **Extend `mode_of_action` beyond the 433 records ChEBI's roles reach.** Done
-  for those: 30 curated roles now map to `ModeOfActionEnum`. The rest have no role in the 30-role map — some bear
+- **Extend `mode_of_action` beyond the 420 records ChEBI's roles reach.** Done
+  for those: 33 curated roles now map to `ModeOfActionEnum`. The rest have no role in the 33-role map — some bear
   mechanism-naming roles that are deliberately excluded because their target is
   the host, and a few are simply unmapped. Two routes, neither cheap: ARO
   drug-class definitions, where the definition really is a mechanism claim rather

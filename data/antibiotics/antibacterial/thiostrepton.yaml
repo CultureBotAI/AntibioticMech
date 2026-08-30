@@ -65,14 +65,14 @@ source_concepts:
   minted_identifier: antibioticmech:aro-a8c48c531c
   role_terms:
   - CHEBI:36047
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:29693
   source_label: thiostrepton
   minted_identifier: antibioticmech:chebi-c0376c1060
   role_terms:
   - CHEBI:36047
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003060
@@ -93,3 +93,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T07:29:15Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

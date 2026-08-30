@@ -64,8 +64,15 @@ mode_of_action_notes: >-
   ChEBI entry, so any derived mechanism is wrong. Leave blank.
 ```
 
-Both survive `just seed-apply`. Without the marker the seeder still owns the
-field, which is what lets it correct its own past work when the map improves.
+Both survive `just seed-apply`.
+
+**The notes decide ownership, not the value.** Setting `mode_of_action` without
+writing a note leaves the field the seeder's, and the next run will replace it —
+because a bare value is indistinguishable from a hand-falsified one, and
+`verify-corpus` has to be able to tell. Any note that is not the seeder's own
+text claims the field, so prose like "mechanism unclear, the two candidate roles
+conflict, PMID:9" is honoured and preserved even without the marker; the marker
+is what additionally expresses a *veto*.
 
 ## Evidence rules
 

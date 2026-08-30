@@ -233,6 +233,13 @@ role_to_mode_of_action:
   CHEBI:24869: MEMBRANE_DISRUPTION                     # ionophore
   CHEBI:83741: CELL_MEMBRANE_SYNTHESIS_INHIBITION      # phospholipid biosynthesis inhibitor
   CHEBI:20854: ENERGY_METABOLISM_INHIBITION            # ATP synthase inhibitor (bedaquiline)
+  CHEBI:73214: ENERGY_METABOLISM_INHIBITION            # EC 3.6.3.14 — covers the BACTERIAL F1Fo
+                                                       # ATP synthase as well as the V-type, so it
+                                                       # is not eukaryote-restricted
+  CHEBI:83072: ENERGY_METABOLISM_INHIBITION            # succinate dehydrogenase — bacteria have
+                                                       # sdhABCD, so this is not eukaryote-only
+                                                       # either (3-nitropropanoic acid is the
+                                                       # classic inhibitor, and antimycobacterial)
   # --- fungal targets
   CHEBI:75282: ERGOSTEROL_PATHWAY_INHIBITION           # ergosterol biosynthesis inhibitor
   CHEBI:77884: ERGOSTEROL_PATHWAY_INHIBITION           # sterol 14alpha-demethylase (azoles)
@@ -252,9 +259,17 @@ role_to_mode_of_action:
   CHEBI:67268: VIRAL_INTEGRASE_INHIBITION              # HIV-1 integrase
   CHEBI:59886: VIRAL_ENTRY_INHIBITION                  # HIV fusion inhibitor
   CHEBI:52425: VIRAL_RELEASE_INHIBITION                # exo-alpha-sialidase (neuraminidase inhibitors)
+  CHEBI:71168: VIRAL_ASSEMBLY_INHIBITION               # HIV-1 maturation inhibitor
+  CHEBI:83799: VIRAL_ASSEMBLY_INHIBITION               # NS5A inhibitor (replication-complex assembly)
 
 # Roles whose target exists only in EUKARYOTIC microbes. Applied when the record
 # is filed ANTIFUNGAL or ANTIPROTOZOAL and ignored otherwise.
+#
+# Only the mitochondrial trio qualifies. Succinate dehydrogenase and the
+# two-sector ATPase were briefly in here and should not have been: bacteria have
+# sdhABCD, and EC 3.6.3.14 covers the bacterial F1Fo synthase that bedaquiline
+# targets. That mistake cost 3-nitropropanoic acid, an antimycobacterial, its
+# mechanism.
 #
 # A mitochondrion is a eukaryotic organelle. Mapping these unconditionally gave
 # CORM 3, myxothiazole and sodium azide an energy-metabolism mechanism on
@@ -267,11 +282,7 @@ role_to_mode_of_action:
 role_to_mode_of_action_eukaryotic:
   CHEBI:25355: ENERGY_METABOLISM_INHIBITION   # mitochondrial respiratory-chain inhibitor
   CHEBI:38499: ENERGY_METABOLISM_INHIBITION   # mitochondrial cytochrome-bc1 (QoI fungicides)
-  CHEBI:73214: ENERGY_METABOLISM_INHIBITION   # EC 3.6.3.14, the V/F-type ATPase
-  CHEBI:83072: ENERGY_METABOLISM_INHIBITION   # succinate dehydrogenase (SDHI fungicides)
   CHEBI:141153: ENERGY_METABOLISM_INHIBITION  # quinone outside inhibitor
-  CHEBI:71168: VIRAL_ASSEMBLY_INHIBITION               # HIV-1 maturation inhibitor
-  CHEBI:83799: VIRAL_ASSEMBLY_INHIBITION               # NS5A inhibitor (replication-complex assembly)
 
 # ARO drug class -> AntimicrobialClassEnum, for the classes whose NAME states a
 # target group. CARD models antifungal resistance as well as antibacterial, so

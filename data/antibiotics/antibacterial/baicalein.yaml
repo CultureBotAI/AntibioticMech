@@ -45,7 +45,7 @@ activity_roles:
 mode_of_action: VIRAL_PROTEASE_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:147285 (EC 3.4.22.69 (SARS coronavirus
   main proteinase) inhibitor). ChEBI asserts the role on the compound, but this mechanism
-  belongs to a anti-viral activity while the record is filed as ANTIBACTERIAL. Either
+  belongs to an anti-viral activity while the record is filed as ANTIBACTERIAL. Either
   the compound has both activities, or the filing is wrong — the priority table has
   put azole antifungals under ANTIBACTERIAL before now. A curator should decide which.
   Not a curator's mechanistic review.
@@ -67,13 +67,17 @@ source_concepts:
   - CHEBI:149553
   - CHEBI:33282
   - CHEBI:35718
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
 - timestamp: '2026-08-30T01:42:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T07:29:15Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

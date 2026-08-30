@@ -50,6 +50,10 @@ xrefs:
 - wikipedia.en:Clomipramine
 activity_roles:
 - CHEBI:149553
+mode_of_action: OTHER
+mode_of_action_notes: Assigned from ChEBI role CHEBI:77402 (EC 1.8.1.12 (trypanothione-disulfide
+  reductase) inhibitor). ChEBI asserts the role on the compound; the role names a
+  mechanism, not the organism it acts on. Not a curator's mechanistic review.
 chemical_structure:
   smiles: CN(C)CCCN1c2ccccc2CCc2ccc(Cl)cc21
   standard_inchi: InChI=1S/C19H23ClN2/c1-21(2)12-5-13-22-18-7-4-3-6-15(18)8-9-16-10-11-17(20)14-19(16)22/h3-4,6-7,10-11,14H,5,8-9,12-13H2,1-2H3
@@ -66,9 +70,13 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-128e1e474f
   role_terms:
   - CHEBI:149553
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:19Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

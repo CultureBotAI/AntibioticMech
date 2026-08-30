@@ -586,6 +586,10 @@ TARGET_BEARING_MODES = {
     "ERGOSTEROL_PATHWAY_INHIBITION": "ANTIFUNGAL",
     # Its only source roles are 1,3-beta-glucan synthase and chitin synthase,
     # both fungus-exclusive, even though the enum value itself is target-neutral.
+    # THIS ENTRY IS CONDITIONAL ON THAT AND MUST BE REMOVED the day a bacterial
+    # cell-wall role is mapped — penicillin-binding protein, D-Ala-D-Ala — or
+    # every beta-lactam record will be told its mechanism belongs to an
+    # antifungal activity.
     "CELL_WALL_SYNTHESIS_INHIBITION": "ANTIFUNGAL",
 }
 
@@ -599,11 +603,11 @@ def _cross_activity_note(value: str, antimicrobial_class: str | None) -> str | N
     if antimicrobial_class == "ANTIMICROBIAL_UNSPECIFIED":
         # "Two activities" would assert a second activity no source states. The
         # record simply has no target group, and this mechanism implies one.
-        return (f"ChEBI asserts the role on the compound, and the mechanism implies a "
+        return (f"ChEBI asserts the role on the compound, and the mechanism implies an "
                 f"{implied.lower().replace('anti', 'anti-')} target while the record has no "
                 f"target group stated at all — evidence a curator can use to file it, not a "
                 f"second activity. Not a curator's mechanistic review.")
-    return (f"ChEBI asserts the role on the compound, but this mechanism belongs to a "
+    return (f"ChEBI asserts the role on the compound, but this mechanism belongs to an "
             f"{implied.lower().replace('anti', 'anti-')} activity while the record is filed "
             f"as {antimicrobial_class}. Either the compound has both activities, or the "
             f"filing is wrong — the priority table has put azole antifungals under "
@@ -656,8 +660,12 @@ def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
     extra = ""
     if crossed:
         implied = sorted({TARGET_BEARING_MODES[v] for v in crossed})
-        extra = (f" Note that {', '.join(crossed)} implies a {' or '.join(i.lower() for i in implied)} "
-                 f"target while the record is filed as {antimicrobial_class}.")
+        where = ("the record has no target group stated at all"
+                 if antimicrobial_class == "ANTIMICROBIAL_UNSPECIFIED"
+                 else f"the record is filed as {antimicrobial_class}")
+        extra = (f" Note that {', '.join(crossed)} implies an "
+                 f"{' or '.join(i.lower().replace('anti', 'anti-') for i in implied)} target while "
+                 f"{where}.")
     return "MULTIPLE", (f"{MOA_NOTE_MARKER}s {cited}, which map to "
                         f"{', '.join(values)}. ChEBI asserts these roles on the compound; "
                         f"a curator should decide whether one is primary.{extra} Not a "
@@ -925,11 +933,14 @@ def _claims_mode_of_action(notes: str) -> bool:
     kind of thing that lands in a free-text note — a permanent, silent veto that
     locked the seeder out of the field for good.
     """
-    for line in str(notes or "").splitlines():
-        for sentence in line.split(". "):
-            if sentence.strip().startswith(CURATOR_NOTE_MARKER):
-                return True
-    return False
+    text = str(notes or "")
+    # These notes round-trip through YAML folded scalars (`>-`), which join
+    # source lines with a space — so a claim written on its own line arrives
+    # mid-string with no newline to find it by. Anchor on the start of the text
+    # or on a sentence boundary instead, including the separators a curator
+    # actually reaches for.
+    return bool(re.search(r"(?:^|[\n.;:!?)\]]|\s[-\u2013\u2014])\s*" + re.escape(CURATOR_NOTE_MARKER),
+                          text.strip(), re.IGNORECASE))
 
 
 def is_card_sourced(item: dict) -> bool:
@@ -962,15 +973,37 @@ def is_card_sourced(item: dict) -> bool:
     return any(CARD_NOTE_MARKER in str(e.get("notes") or "") for e in evidence)
 
 
+def curator_owns_mode_of_action(record: dict) -> bool:
+    """True when a curator has claimed `mode_of_action` on this record.
+
+    ONE definition, used by the merge, by verify-corpus and by the worklist,
+    because three copies of this question is how they drifted apart: the merge
+    honoured a curator's correction while verify-corpus still compared it
+    against a freshly derived value and reported drift no re-seed could clear.
+
+    The NOTES decide, never a bare value. A note that claims the field
+    (`CURATOR:`) wins even with the seeder's provenance sentence still in it —
+    which is exactly what the documented recipe produces, since it asks the
+    curator to append rather than delete. Any other non-seeder note also counts,
+    so prose a curator wrote is not thrown away for want of the exact token.
+    """
+    notes = str(record.get("mode_of_action_notes") or "")
+    if not notes:
+        return False
+    return _claims_mode_of_action(notes) or MOA_NOTE_MARKER not in notes
+
+
 def seeded_mode_of_action(record: dict) -> str | None:
-    """The record's mode_of_action if the SEEDER wrote it, else None.
+    """The record's mode_of_action if the SEEDER owns it, else None.
 
     The same marker device the CARD mechanism items use, so verify-corpus can
-    police the seeder's own values without reading a curator's as drift.
+    police the seeder's own values without reading a curator's as drift. A value
+    with NO notes is the seeder's — a hand-falsified mechanism with the notes
+    line deleted used to read as the curator's and freeze permanently.
     """
-    if MOA_NOTE_MARKER in str(record.get("mode_of_action_notes") or ""):
-        return record.get("mode_of_action")
-    return None
+    if curator_owns_mode_of_action(record):
+        return None
+    return record.get("mode_of_action")
 
 
 def card_sourced_view(record: dict, field: str) -> list:
@@ -999,10 +1032,7 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     # outranks it, so ownership is decided by the marker rather than by the field
     # name — the same device the CARD mechanism items use.
     existing_moa_notes = str(existing.get("mode_of_action_notes") or "")
-    curator_owns_moa = (
-        _claims_mode_of_action(existing_moa_notes)
-        or ("mode_of_action" in existing and MOA_NOTE_MARKER not in existing_moa_notes)
-    )
+    curator_owns_moa = curator_owns_mode_of_action(existing)
     if curator_owns_moa:
         # Includes the veto: a curator note with no value means the field stays
         # empty, and the seeder must not fill it back in.

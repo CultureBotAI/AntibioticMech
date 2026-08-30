@@ -224,6 +224,7 @@ def test_a_reseed_preserves_curated_work():
     curated = dict(seeded) | {
         "curation_status": "REVIEWED",
         "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+        "mode_of_action_notes": "CURATOR: confirmed against PMID:7683018",
         "causal_graphs": [{"graph_id": "g1", "nodes": [], "edges": []}],
         "evidence": [{"reference": "PMID:7683018"}],
         "curation_history": seeded["curation_history"] + [
@@ -321,6 +322,7 @@ def test_a_record_that_changes_class_keeps_its_curation(tmp_path, monkeypatch):
                              "source_label": "posaconazole",
                              "minted_identifier": "antibioticmech:chebi-1111111111"}],
         "mode_of_action": "ERGOSTEROL_PATHWAY_INHIBITION",
+        "mode_of_action_notes": "CURATOR: azole, confirmed against PMID:1",
         "causal_graphs": [{"graph_id": "g1", "nodes": [], "edges": []}],
         "curation_history": [{"timestamp": "2026-08-29T00:00:00Z", "curator": "jane",
                               "action": "REVIEWED"}],
@@ -573,8 +575,11 @@ def test_a_curators_mode_of_action_outranks_the_seeded_one():
               "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:48001 (...)",
               "curation_history": []}
 
-    curated = dict(seeded) | {"mode_of_action": "MEMBRANE_DISRUPTION",
-                              "mode_of_action_notes": "curator: acts on the envelope (PMID:1)"}
+    # The curator claims the field in the notes — a bare value does not, because
+    # a value with no notes is indistinguishable from a hand-falsified one.
+    curated = dict(seeded) | {
+        "mode_of_action": "MEMBRANE_DISRUPTION",
+        "mode_of_action_notes": "CURATOR: acts on the envelope (PMID:1)"}
     assert merge_with_existing(seeded, curated)["mode_of_action"] == "MEMBRANE_DISRUPTION"
 
     # A previously seeded value is the seeder's to correct.
@@ -690,7 +695,9 @@ def test_the_curator_marker_must_begin_a_sentence_not_merely_appear():
     seeded = dict(base) | {"mode_of_action": "VIRAL_INTEGRASE_INHIBITION",
                            "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:67268 (...)"}
 
-    mention = dict(base) | {"mode_of_action_notes": "seeded; ask a CURATOR: about this later"}
+    # A mention is not a claim, so the field stays the seeder's. Note the text
+    # itself is the seeder's to replace in that case — ownership is all-or-nothing.
+    mention = dict(base) | {"mode_of_action_notes": f"{MOA_NOTE_MARKER} X; ask a curator later"}
     assert merge_with_existing(dict(seeded), mention)["mode_of_action"] == \
         "VIRAL_INTEGRASE_INHIBITION"
 
@@ -724,3 +731,77 @@ def test_a_mitochondrial_mechanism_applies_to_fungi_and_not_to_bacteria():
     assert mode_of_action_from_roles(["CHEBI:38499"], CONF, names, "ANTIBACTERIAL") is None
     assert mode_of_action_from_roles(["CHEBI:38499"], CONF, names,
                                      "ANTIMICROBIAL_UNSPECIFIED") is None
+
+
+def test_role_maps_agree_with_the_schema_and_the_committed_inventory():
+    """The gate that would have caught a whole class of defect. conf and the
+    inventory silently desynced twice: roles moved into the eukaryotic map
+    vanished from `mechanism_role_ids` on the next extraction, and two roles
+    ADDED to the map were dead on arrival because nothing re-extracted — so a
+    fix that recovered nothing looked applied."""
+    import csv as _csv
+    import pathlib
+
+    import yaml as _yaml
+
+    root = pathlib.Path(__file__).resolve().parents[1]
+    conf = _yaml.safe_load((root / "conf" / "sources.yaml").read_text(encoding="utf-8"))
+    base = conf["role_to_mode_of_action"]
+    euk = conf.get("role_to_mode_of_action_eukaryotic", {})
+
+    schema = _yaml.safe_load(
+        (root / "src" / "antibioticmech" / "schema" / "antibioticmech.yaml").read_text())
+    allowed = set(schema["enums"]["ModeOfActionEnum"]["permissible_values"])
+    for role, value in {**base, **euk}.items():
+        assert value in allowed, f"{role} -> {value} is not a ModeOfActionEnum value"
+
+    # Disjoint, or `mapping.update(euk)` would let the conditional value win
+    # silently over the unconditional one.
+    assert not (set(base) & set(euk)), sorted(set(base) & set(euk))
+
+    with (root / "data" / "raw" / "chebi_role_names.tsv").open(newline="", encoding="utf-8") as fh:
+        named = {r["role_id"] for r in _csv.DictReader(fh, delimiter="\t")}
+    missing = sorted(set(base) | set(euk) - named)
+    assert not (set(base) | set(euk)) - named, f"mapped roles absent from the inventory: {missing}"
+
+    # And every mapped role must actually reach the inventory's mechanism column,
+    # or the map entry is inert.
+    with (root / "data" / "raw" / "chebi_antimicrobials.tsv").open(
+            newline="", encoding="utf-8") as fh:
+        seen = set()
+        for row in _csv.DictReader(fh, delimiter="\t"):
+            seen.update((row["mechanism_role_ids"] or "").split("|"))
+    inert = sorted((set(base) | set(euk)) - seen)
+    assert not inert, f"mapped roles that reach no compound — re-extract? {inert}"
+
+
+def test_ownership_is_decided_by_the_notes_not_by_a_bare_value():
+    """Three consumers ask "who owns this field?" — the merge, verify-corpus and
+    the worklist — and they drifted apart. One predicate now, and a value with
+    NO notes is the seeder's: a hand-falsified mechanism with the notes line
+    deleted used to read as the curator's and freeze permanently."""
+    from seed_from_sources import (
+        MOA_NOTE_MARKER,
+        curator_owns_mode_of_action,
+        seeded_mode_of_action,
+    )
+
+    assert not curator_owns_mode_of_action({"mode_of_action": "MEMBRANE_DISRUPTION"})
+    assert seeded_mode_of_action({"mode_of_action": "MEMBRANE_DISRUPTION"}) == "MEMBRANE_DISRUPTION"
+
+    seeded = {"mode_of_action": "X", "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:1 (...)"}
+    assert not curator_owns_mode_of_action(seeded)
+
+    # The documented recipe: keep the provenance, append the claim.
+    appended = {"mode_of_action": "Y",
+                "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:1 (...). CURATOR: fixed"}
+    assert curator_owns_mode_of_action(appended)
+    assert seeded_mode_of_action(appended) is None
+
+    # A curator's prose with no marker at all still claims the field, so it is
+    # not deleted on the next run.
+    assert curator_owns_mode_of_action({"mode_of_action_notes": "mechanism unclear, PMID:9"})
+
+    # A folded YAML scalar joins lines with a space; the claim must survive that.
+    assert curator_owns_mode_of_action(
+        {"mode_of_action_notes": f"{MOA_NOTE_MARKER} X; CURATOR: leave blank"})
