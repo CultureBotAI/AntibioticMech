@@ -571,8 +571,23 @@ def _dedupe(values):
     return out
 
 
+# A mode of action whose NAME carries a target group. When one of these lands on
+# a record filed under a different group, the two fields are describing different
+# activities of the same compound, and the record has to say so.
+TARGET_BEARING_MODES = {
+    "VIRAL_POLYMERASE_INHIBITION": "ANTIVIRAL",
+    "VIRAL_PROTEASE_INHIBITION": "ANTIVIRAL",
+    "VIRAL_INTEGRASE_INHIBITION": "ANTIVIRAL",
+    "VIRAL_ENTRY_INHIBITION": "ANTIVIRAL",
+    "VIRAL_RELEASE_INHIBITION": "ANTIVIRAL",
+    "VIRAL_ASSEMBLY_INHIBITION": "ANTIVIRAL",
+    "ERGOSTEROL_PATHWAY_INHIBITION": "ANTIFUNGAL",
+}
+
+
 def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
-                              role_names: dict[str, str]) -> tuple[str, str] | None:
+                              role_names: dict[str, str],
+                              antimicrobial_class: str | None = None) -> tuple[str, str] | None:
     """(mode_of_action, notes) from ChEBI's mechanism roles, or None.
 
     This is a RESTATEMENT, not an inference. ChEBI asserting `protein synthesis
@@ -597,10 +612,25 @@ def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
         return None
     cited = ", ".join(f"{role} ({role_names.get(role, '?')})" for role in sorted(hits))
     values = sorted(set(hits.values()))
+    tail = ("ChEBI asserts the role on the compound; the role names a mechanism, not the "
+            "organism it acts on. Not a curator's mechanistic review.")
+
     if len(values) == 1:
-        return values[0], (f"{MOA_NOTE_MARKER} {cited}. ChEBI asserts the role on the "
-                           f"compound; the role names a mechanism, not the organism it "
-                           f"acts on. Not a curator's mechanistic review.")
+        value = values[0]
+        implied = TARGET_BEARING_MODES.get(value)
+        if implied and antimicrobial_class and implied != antimicrobial_class:
+            # The two fields describe DIFFERENT activities of one compound: the
+            # class is what the record is filed under, this mechanism belongs to
+            # another activity the same compound has. Saying so is the whole
+            # difference between a useful record and a contradictory one.
+            tail = (f"ChEBI asserts the role on the compound, but this mechanism belongs to "
+                    f"its {implied.lower().replace('anti', 'anti-')} activity while the "
+                    f"record is filed as {antimicrobial_class} — one compound, two "
+                    f"activities, and this field describes the mechanism rather than the "
+                    f"filing. A curator should confirm which activity the record is about. "
+                    f"Not a curator's mechanistic review.")
+        return value, f"{MOA_NOTE_MARKER} {cited}. {tail}"
+
     return "MULTIPLE", (f"{MOA_NOTE_MARKER}s {cited}, which map to "
                         f"{', '.join(values)}. ChEBI asserts these roles on the compound; "
                         f"a curator should decide whether one is primary. Not a curator's "
@@ -668,7 +698,8 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
         record["structural_class"] = structural_class
         record["structural_class_id"] = structural_class_id
     mechanism_roles = _dedupe(r for c in group for r in c.mechanism_roles)
-    moa = mode_of_action_from_roles(mechanism_roles, conf, load_role_names())
+    moa = mode_of_action_from_roles(mechanism_roles, conf, load_role_names(),
+                                    record["antimicrobial_class"])
     if moa:
         record["mode_of_action"], record["mode_of_action_notes"] = moa
 

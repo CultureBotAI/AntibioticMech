@@ -580,3 +580,28 @@ def test_a_curators_mode_of_action_outranks_the_seeded_one():
     # A previously seeded value is the seeder's to correct.
     restated = merge_with_existing(seeded, dict(seeded))
     assert restated["mode_of_action"] == "PROTEIN_SYNTHESIS_INHIBITION"
+
+
+def test_a_mechanism_from_another_activity_says_so():
+    """`mode_of_action` and `antimicrobial_class` are orthogonal axes, and some
+    role names carry a target group inside them. A compound filed ANTIFUNGAL
+    whose ChEBI role is `HIV-1 integrase inhibitor` is not a contradiction — it
+    is one compound with two activities — but a record that states the mechanism
+    without stating that would read as a claim about how its antifungal action
+    works."""
+    from seed_from_sources import mode_of_action_from_roles
+
+    names = {"CHEBI:67268": "HIV-1 integrase inhibitor",
+             "CHEBI:48001": "protein synthesis inhibitor"}
+
+    value, notes = mode_of_action_from_roles(["CHEBI:67268"], CONF, names, "ANTIFUNGAL")
+    assert value == "VIRAL_INTEGRASE_INHIBITION"
+    assert "two activities" in notes and "ANTIFUNGAL" in notes
+
+    # On a record filed under the group the mechanism implies, no such caveat.
+    _, aligned = mode_of_action_from_roles(["CHEBI:67268"], CONF, names, "ANTIVIRAL")
+    assert "two activities" not in aligned
+
+    # A mechanism that names no target group never triggers it.
+    _, generic = mode_of_action_from_roles(["CHEBI:48001"], CONF, names, "ANTIFUNGAL")
+    assert "two activities" not in generic
