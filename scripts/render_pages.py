@@ -393,6 +393,9 @@ def build(out_dir: Path) -> None:
         encoding="utf-8",
     )
     shutil.copyfile(TEMPLATES_DIR / "style.css", out_dir / "style.css")
+    # Vendored byte-identical across all seven Mech sites: reads localStorage
+    # "mech-theme", sets data-theme before paint, injects the toggle button.
+    shutil.copyfile(TEMPLATES_DIR / "theme-toggle.js", out_dir / "theme-toggle.js")
     # Without this, Pages runs Jekyll over the site and silently drops any
     # path beginning with an underscore — a 404 rather than a visible error.
     (out_dir / ".nojekyll").write_text("", encoding="utf-8")
@@ -416,7 +419,8 @@ def build(out_dir: Path) -> None:
     # stale page forever and --check would have nothing to catch it with.
     written = {
         out_dir / "index.html", out_dir / "browse.html", out_dir / "404.html",
-        out_dir / "style.css", out_dir / ".nojekyll", out_dir / "sitemap.xml", out_dir / "robots.txt",
+        out_dir / "style.css", out_dir / "theme-toggle.js",
+        out_dir / ".nojekyll", out_dir / "sitemap.xml", out_dir / "robots.txt",
     }
     written |= {out_dir / page for page in class_pages}
     written |= {out_dir / "class" / f"{d}.json" for d in class_dirs}
