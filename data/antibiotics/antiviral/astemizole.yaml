@@ -1,0 +1,64 @@
+identifier: CHEBI:2896
+label: astemizole
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A piperidine compound having a 2-(4-methoxyphenyl)ethyl group at the 1-position
+  and an N-[(4-fluorobenzyl)benzimidazol-2-yl]amino group at the 4-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: astemizol
+  synonym_type: INN
+  source: chebi
+- synonym_text: astemizolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1-(4-fluorobenzyl)-N-{1-[2-(4-methoxyphenyl)ethyl]piperidin-4-yl}-1H-benzimidazol-2-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(p-Fluorobenzyl)-2-((1-(2-(p-methoxyphenyl)ethyl)piperid-4-yl)amino)benzimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(p-Fluorobenzyl)-2-((1-(p-methoxyphenethyl)-4-piperidyl)amino)benzimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Astemison
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22715
+- CHEBI:26151
+xrefs:
+- beilstein:4830190
+- cas:68844-77-9
+- drugbank:DB00637
+- drugcentral:249
+- kegg.compound:C06832
+- kegg.drug:D00234
+- lincs.smallmolecule:LSM-5502
+- patent:EP5318
+- patent:US4219559
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: COc1ccc(CCN2CCC(Nc3nc4ccccc4n3Cc3ccc(F)cc3)CC2)cc1
+  standard_inchi: InChI=1S/C28H31FN4O/c1-34-25-12-8-21(9-13-25)14-17-32-18-15-24(16-19-32)30-28-31-26-4-2-3-5-27(26)33(28)20-22-6-10-23(29)11-7-22/h2-13,24H,14-20H2,1H3,(H,30,31)
+  standard_inchi_key: GXDALQBWZGODGZ-UHFFFAOYSA-N
+  molecular_formula: C28H31FN4O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 458.581
+  monoisotopic_mass: 458.24819
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2896
+  source_label: astemizole
+  minted_identifier: antibioticmech:chebi-c3f48e06bc
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

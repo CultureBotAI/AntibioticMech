@@ -1,0 +1,47 @@
+identifier: CHEBI:66596
+label: lucidumoside C
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A secoiridoid glycoside isolated from Ligustrum lucidum which has been
+  shown to exhibit antioxidant activity against hemolysis of red blood cells induced
+  by free radicals.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (2S,3E,4S)-4-{2-[2-(3,4-dihydroxyphenyl)-2-ethoxyethoxy]-2-oxoethyl}-3-ethylidene-2-(β-D-glucopyranosyloxy)-3,4-dihydro-2H-pyran-5-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22798
+- CHEBI:25248
+- CHEBI:26407
+- CHEBI:33566
+- CHEBI:50274
+- CHEBI:63367
+- CHEBI:72293
+xrefs:
+- reaxys:9105607
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: '[H][C@@]1(CC(=O)OCC(OCC)c2ccc(O)c(O)c2)C(C(=O)OC)=CO[C@@H](O[C@@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@H]2O)/C1=C/C'
+  standard_inchi: InChI=1S/C27H36O14/c1-4-14-15(9-21(31)38-12-20(37-5-2)13-6-7-17(29)18(30)8-13)16(25(35)36-3)11-39-26(14)41-27-24(34)23(33)22(32)19(10-28)40-27/h4,6-8,11,15,19-20,22-24,26-30,32-34H,5,9-10,12H2,1-3H3/b14-4+/t15-,19+,20?,22+,23-,24+,26-,27-/m0/s1
+  standard_inchi_key: RDLNVCALMXCDOJ-QUVQPCEGSA-N
+  molecular_formula: C27H36O14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 584.571
+  monoisotopic_mass: 584.21051
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66596
+  source_label: lucidumoside C
+  minted_identifier: antibioticmech:chebi-0e7df601ad
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

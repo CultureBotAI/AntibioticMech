@@ -1,0 +1,42 @@
+identifier: CHEBI:66276
+label: triptonine A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sesquiterpene alkaloid with anti-HIV activity isolated from Tripterygium
+  hypoglaucum.
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:25248
+- CHEBI:26421
+- CHEBI:26657
+- CHEBI:37668
+- CHEBI:47622
+- CHEBI:63944
+xrefs:
+- cas:168009-84-5
+- reaxys:8306033
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: '[H][C@@]12[C@@H](OC(C)=O)[C@@]34O[C@@]1(C)COC(=O)c1cccnc1[C@H](C)[C@H](C)C(=O)O[C@@H]([C@H](OC(C)=O)[C@H](OC(C)=O)[C@]31COC(=O)[C@H](CC(=O)OC)C(=O)CC[C@H](C)C(=O)O[C@H]2[C@H]1OC(C)=O)[C@]4(C)O'
+  standard_inchi: InChI=1S/C45H55NO21/c1-19-13-14-28(51)27(16-29(52)58-10)41(56)60-18-44-36(63-24(6)49)32(65-38(19)53)30-34(62-23(5)48)45(44)43(9,57)35(33(61-22(4)47)37(44)64-25(7)50)66-39(54)21(3)20(2)31-26(12-11-15-46-31)40(55)59-17-42(30,8)67-45/h11-12,15,19-21,27,30,32-37,57H,13-14,16-18H2,1-10H3/t19-,20+,21-,27+,30+,32+,33-,34+,35-,36+,37-,42-,43-,44+,45-/m0/s1
+  standard_inchi_key: GHLDKPNDMMVFDQ-OFWWAFBUSA-N
+  molecular_formula: C45H55NO21
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 945.921
+  monoisotopic_mass: 945.32666
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66276
+  source_label: triptonine A
+  minted_identifier: antibioticmech:chebi-b9b24c3bd7
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

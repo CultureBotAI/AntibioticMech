@@ -1,0 +1,54 @@
+identifier: CHEBI:189704
+label: saikosaponin C
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of saikosaponins that is saikogenin E substituted
+  by a 6-deoxy-α-L-mannopyranosyl-(1→4)-[β-D-glucopyranosyl-(1→6)]-β-D-glucopyranosyl
+  group at position 3β. It is a natural product isolated from the traditional Chinese
+  herb, Radix Bupleuri and exhibits anti-HBV replication activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 16β-hydroxy-13,28-epoxyolean-11-en-3β-yl 6-deoxy-α-L-mannopyranosyl-(1→4)-[β-D-glucopyranosyl-(1→6)]-β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3β,16β)-13,28-epoxy-16-hydroxyolean-11-en-3-yl O-6-deoxy-α-L-mannopyranosyl-(1→4)-O-[β-D-glucopyranosyl-(1→6)]-β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: saikosaponin-C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:189705
+- CHEBI:35990
+- CHEBI:37407
+- CHEBI:63571
+- CHEBI:70994
+xrefs:
+- cas:20736-08-7
+- chemspider:146896
+- knapsack:C00040181
+activity_roles:
+- CHEBI:64951
+chemical_structure:
+  smiles: '[H][C@]12C=C[C@]34OC[C@@]5(CCC(C)(C)C[C@]53[H])[C@@H](O)C[C@@]4(C)[C@]1(C)CC[C@@]1([H])C(C)(C)[C@@H](O[C@@H]3O[C@H](CO[C@@H]4O[C@H](CO)[C@@H](O)[C@H](O)[C@H]4O)[C@@H](O[C@@H]4O[C@@H](C)[C@H](O)[C@@H](O)[C@H]4O)[C@H](O)[C@H]3O)CC[C@]21C'
+  standard_inchi: InChI=1S/C48H78O17/c1-22-30(51)32(53)36(57)40(61-22)65-38-24(20-59-39-35(56)33(54)31(52)23(19-49)62-39)63-41(37(58)34(38)55)64-29-11-12-44(6)25(43(29,4)5)9-13-45(7)26(44)10-14-48-27-17-42(2,3)15-16-47(27,21-60-48)28(50)18-46(45,48)8/h10,14,22-41,49-58H,9,11-13,15-21H2,1-8H3/t22-,23+,24+,25-,26+,27+,28-,29-,30-,31+,32+,33-,34+,35+,36+,37+,38+,39+,40-,41-,44-,45+,46-,47+,48-/m0/s1
+  standard_inchi_key: VJEMOEYSQDKAQF-JDRYWMLESA-N
+  molecular_formula: C48H78O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 927.135
+  monoisotopic_mass: 926.5239
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:189704
+  source_label: saikosaponin C
+  minted_identifier: antibioticmech:chebi-dca7365c3a
+  role_terms:
+  - CHEBI:64951
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

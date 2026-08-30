@@ -719,6 +719,11 @@ enums:
         description: Antifungal agents, drugs, agrochemical fungicides.
       ANTIPROTOZOAL:
         description: Antimalarial, antileishmanial, trypanocidal, coccidiostat, antitrichomonal.
+      ANTIVIRAL:
+        description: >-
+          Active against viruses, including the viral-enzyme inhibitors ChEBI
+          files under the antiviral branch (protease, reverse transcriptase,
+          integrase, polymerase, fusion and sialidase inhibitors).
       BIOCIDE:
         description: Disinfectants and antimicrobial food or cosmetic preservatives.
       ANTIMICROBIAL_UNSPECIFIED:
@@ -739,6 +744,18 @@ enums:
       CELL_MEMBRANE_SYNTHESIS_INHIBITION:
       ERGOSTEROL_PATHWAY_INHIBITION:
         description: Antifungal azoles, allylamines, polyenes acting on ergosterol or its synthesis.
+      VIRAL_POLYMERASE_INHIBITION:
+        description: >-
+          Inhibition of a viral polymerase, including reverse transcriptase and
+          RNA-dependent RNA polymerase; chain terminators belong here.
+      VIRAL_PROTEASE_INHIBITION:
+      VIRAL_INTEGRASE_INHIBITION:
+      VIRAL_ENTRY_INHIBITION:
+        description: Blocks attachment, fusion, or uncoating.
+      VIRAL_RELEASE_INHIBITION:
+        description: Blocks budding or release, e.g. neuraminidase inhibitors.
+      VIRAL_ASSEMBLY_INHIBITION:
+        description: Blocks maturation or capsid assembly.
       ENERGY_METABOLISM_INHIBITION:
       OXIDATIVE_DAMAGE:
       MULTIPLE:
@@ -752,6 +769,8 @@ enums:
       BACTERIOSTATIC:
       FUNGICIDAL:
       FUNGISTATIC:
+      VIRUCIDAL:
+      VIROSTATIC:
       CONCENTRATION_DEPENDENT:
         description: Cidal at higher concentrations, static at lower ones, per source.
       UNKNOWN:
@@ -799,6 +818,8 @@ enums:
     permissible_values:
       PROTEIN:
       PROTEIN_COMPLEX:
+      VIRAL_PROTEIN:
+        description: A virally encoded protein — protease, polymerase, integrase, envelope glycoprotein.
       RIBOSOMAL_SUBUNIT:
       NUCLEIC_ACID:
       MEMBRANE:

@@ -1,0 +1,45 @@
+identifier: CHEBI:65912
+label: FR191512
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polyphenol which is the benzoate ester obtained by formal condensation
+  of the hydroxy ester derivative produced by the successive intermolecular condensation
+  of 3 molecules of 2,4-dihydroxy-6-(2-hydroxypropyl)benzoic acid with the carboxy
+  OH of o-orsellinic acid. It is isolated from the Fungus strain no.17415 and exhibits
+  activity against the infectivity of influenza A virus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-{2-[(2-{2-[(2-{2-[(2,4-dihydroxy-6-methylbenzoyl)oxy]propyl}-4,6-dihydroxybenzoyl)oxy]propyl}-4,6-dihydroxybenzoyl)oxy]propyl}-4,6-dihydroxybenzoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:36054
+xrefs:
+- reaxys:8750768
+activity_roles:
+- CHEBI:52425
+chemical_structure:
+  smiles: Cc1cc(O)cc(O)c1C(=O)OC(C)Cc1cc(O)cc(O)c1C(=O)OC(C)Cc1cc(O)cc(O)c1C(=O)OC(C)Cc1cc(O)cc(O)c1C(=O)O
+  standard_inchi: InChI=1S/C38H38O16/c1-16-5-23(39)12-27(43)31(16)36(49)52-18(3)7-21-10-25(41)14-29(45)33(21)38(51)54-19(4)8-22-11-26(42)15-30(46)34(22)37(50)53-17(2)6-20-9-24(40)13-28(44)32(20)35(47)48/h5,9-15,17-19,39-46H,6-8H2,1-4H3,(H,47,48)
+  standard_inchi_key: HCXQIVLHUHTXGC-UHFFFAOYSA-N
+  molecular_formula: C38H38O16
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 750.706
+  monoisotopic_mass: 750.21599
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65912
+  source_label: FR191512
+  minted_identifier: antibioticmech:chebi-8484ab574a
+  role_terms:
+  - CHEBI:52425
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

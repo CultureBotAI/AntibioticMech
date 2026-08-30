@@ -1,0 +1,48 @@
+identifier: CHEBI:70659
+label: 2',4'-dihydroxy-3'-methyl-6'-methoxychalcone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of chalcones that is trans-chalcone substituted
+  by a methyl group at position 3', hydroxy groups at positions 2' and 4' and a methoxy
+  group at position 6'. Isolated from the buds of Cleistocalyx operculatus, it has
+  been shown to exhibit inhibitory effects on the viral neuraminidases from two influenza
+  viral strains, H1N1 and H9N2.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-1-(2,4-dihydroxy-6-methoxy-3-methylphenyl)-3-phenylprop-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: stercurensin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23086
+- CHEBI:25235
+- CHEBI:33572
+xrefs:
+- reaxys:4489711
+activity_roles:
+- CHEBI:52425
+chemical_structure:
+  smiles: COc1cc(O)c(C)c(O)c1C(=O)/C=C/c1ccccc1
+  standard_inchi: InChI=1S/C17H16O4/c1-11-14(19)10-15(21-2)16(17(11)20)13(18)9-8-12-6-4-3-5-7-12/h3-10,19-20H,1-2H3/b9-8+
+  standard_inchi_key: JUZVHLGKYJTCKP-CMDGGOBGSA-N
+  molecular_formula: C17H16O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 284.311
+  monoisotopic_mass: 284.10486
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70659
+  source_label: 2',4'-dihydroxy-3'-methyl-6'-methoxychalcone
+  minted_identifier: antibioticmech:chebi-7ddd1e6279
+  role_terms:
+  - CHEBI:52425
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

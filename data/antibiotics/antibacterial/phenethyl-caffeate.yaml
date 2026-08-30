@@ -34,6 +34,7 @@ xrefs:
 - reaxys:4752508
 - wikipedia.en:Caffeic_acid_phenethyl_ester
 activity_roles:
+- CHEBI:22587
 - CHEBI:33282
 chemical_structure:
   smiles: O=C(/C=C/c1ccc(O)c(O)c1)OCCc1ccccc1
@@ -50,6 +51,7 @@ source_concepts:
   source_label: phenethyl caffeate
   minted_identifier: antibioticmech:chebi-0de032f771
   role_terms:
+  - CHEBI:22587
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -57,3 +59,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

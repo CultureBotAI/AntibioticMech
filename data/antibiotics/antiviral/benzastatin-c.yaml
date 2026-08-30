@@ -1,0 +1,46 @@
+identifier: CHEBI:65483
+label: benzastatin C
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quinoline alkaloid that is 1,2,3,4-tetrahydroquinoline-6-carboxamide
+  substituted by a chloro group at position 3 and a 3,4-dimethylpent-3-en-1-yl and
+  a methoxymethyl group at position 2 (the 2R,3R stereoisomer). Isolated from the
+  culture broth of Streptomyces nitrosporeus 30643, it exhibits inhibitory potential
+  against lipid peroxidation and anti-HSV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3R)-3-chloro-2-(3,4-dimethylpent-3-en-1-yl)-2-(methoxymethyl)-1,2,3,4-tetrahydroquinoline-6-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22702
+- CHEBI:25698
+- CHEBI:26509
+- CHEBI:36683
+xrefs:
+- reaxys:7467320
+activity_roles:
+- CHEBI:64952
+chemical_structure:
+  smiles: COC[C@@]1(CCC(C)=C(C)C)Nc2ccc(C(N)=O)cc2C[C@H]1Cl
+  standard_inchi: InChI=1S/C19H27ClN2O2/c1-12(2)13(3)7-8-19(11-24-4)17(20)10-15-9-14(18(21)23)5-6-16(15)22-19/h5-6,9,17,22H,7-8,10-11H2,1-4H3,(H2,21,23)/t17-,19-/m1/s1
+  standard_inchi_key: AHGKSZXKDPGMQU-IEBWSBKVSA-N
+  molecular_formula: C19H27ClN2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 350.89
+  monoisotopic_mass: 350.17611
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65483
+  source_label: benzastatin C
+  minted_identifier: antibioticmech:chebi-b9925314ef
+  role_terms:
+  - CHEBI:64952
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

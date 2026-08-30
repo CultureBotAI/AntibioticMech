@@ -24,6 +24,7 @@ xrefs:
 activity_roles:
 - CHEBI:38068
 - CHEBI:64912
+- CHEBI:64953
 chemical_structure:
   smiles: Cc1cc(O)cc(Oc2cc(C)cc(O)c2O)c1
   standard_inchi: InChI=1S/C14H14O4/c1-8-3-10(15)7-11(4-8)18-13-6-9(2)5-12(16)14(13)17/h3-7,15-17H,1-2H3
@@ -41,9 +42,14 @@ source_concepts:
   role_terms:
   - CHEBI:38068
   - CHEBI:64912
+  - CHEBI:64953
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

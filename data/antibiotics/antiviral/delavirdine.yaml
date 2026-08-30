@@ -1,0 +1,76 @@
+identifier: CHEBI:119573
+label: delavirdine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The amide resulting from the formal condensation of 5-[(methylsulfonyl)amino]-1H-indole-2-carboxylic
+  acid and 4-amino group of 1-[3-(isopropylamino)pyridin-2-yl]piperazine, delavirdine
+  is a non-nucleoside reverse transcriptase inhibitor with activity specific for HIV-1.
+  Viral resistance emerges rapidly when delavirdine is used alone, so it is therefore
+  used (as the methanesulfonic acid salt) with other antiretrovirals for combination
+  therapy of HIV infection.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[2-({4-[3-(propan-2-ylamino)pyridin-2-yl]piperazin-1-yl}carbonyl)-1H-indol-5-yl]methanesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (N-[2-[4-[3-(1-methylethylamino)pyridin-2-yl]piperazin-1-yl]carbonyl-1H-indol-5-yl]
+    methanesulfonamide)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(3-((1-methylethyl)amino)-2-pyridinyl)-4-((5-((methylsulfonyl)amino)-1H-indol-2-yl)carbonyl)piperazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(4-(5-methanesulfonamido-1H-indol-2-ylcarbonyl)-1-piperazinyl)-N-(1-methylethyl)-3-pyridinamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Delavirdine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(2-(1-(3-(isopropylamino)pyridin-2-yl)piperazine-4-carbonyl)-1H-indol-5-yl)methanesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-{2-[4-(3-Isopropylamino-pyridin-2-yl)-piperazine-1-carbonyl]-1H-indol-5-yl}-methanesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35358
+- CHEBI:38207
+- CHEBI:46844
+- CHEBI:46921
+xrefs:
+- cas:136817-59-9
+- drugbank:DB00705
+- drugcentral:799
+- kegg.compound:C06941
+- kegg.drug:D07782
+- patent:WO9109849
+- pdb-ccd:SPP
+- reaxys:6356813
+- wikipedia.en:Delavirdine
+activity_roles:
+- CHEBI:36044
+- CHEBI:53756
+chemical_structure:
+  smiles: CC(C)Nc1cccnc1N1CCN(C(=O)c2cc3cc(NS(C)(=O)=O)ccc3n2)CC1
+  standard_inchi: InChI=1S/C22H28N6O3S/c1-15(2)24-19-5-4-8-23-21(19)27-9-11-28(12-10-27)22(29)20-14-16-13-17(26-32(3,30)31)6-7-18(16)25-20/h4-8,13-15,24-26H,9-12H2,1-3H3
+  standard_inchi_key: WHBIGIKBNXZKFE-UHFFFAOYSA-N
+  molecular_formula: C22H28N6O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 456.572
+  monoisotopic_mass: 456.19436
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:119573
+  source_label: delavirdine
+  minted_identifier: antibioticmech:chebi-10f5984ad7
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

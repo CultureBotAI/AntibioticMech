@@ -1,0 +1,88 @@
+identifier: CHEBI:2618
+label: amantadine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of adamantanes that is used as an antiviral and
+  antiparkinson drug.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Viregyt
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Virosol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: amantadina
+  synonym_type: INN
+  source: chebi
+- synonym_text: amantadinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: adamantan-1-ylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-adamantanamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-adamantylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-aminoadamantane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Amantadine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Amantidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Aminoadamantane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tricyclo[3.3.1.13,7]decan-1-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tricyclo[3.3.1.13,7]decan-1-ylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tricyclo[3.3.1.13,7]decane-1-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17062
+- CHEBI:51339
+xrefs:
+- cas:768-94-5
+- drugbank:DB00915
+- drugcentral:144
+- gmelin:27066
+- kegg.compound:C06818
+- kegg.drug:D07441
+- reaxys:2204333
+- vsdb:2961
+- wikipedia.en:Amantadine
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: NC12CC3CC(CC(C3)C1)C2
+  standard_inchi: InChI=1S/C10H17N/c11-10-4-7-1-8(5-10)3-9(2-7)6-10/h7-9H,1-6,11H2
+  standard_inchi_key: DKNWSYNQZKUICI-UHFFFAOYSA-N
+  molecular_formula: C10H17N
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 151.253
+  monoisotopic_mass: 151.1361
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2618
+  source_label: amantadine
+  minted_identifier: antibioticmech:chebi-54646ed3e1
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

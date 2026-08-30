@@ -1,0 +1,77 @@
+identifier: CHEBI:127780
+label: phosphonoformic acid
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Phosphoric acid in which one of the hydroxy groups is replaced by a carboxylic
+  acid group. It is used as the trisodium salt as an antiviral agent in the treatment
+  of cytomegalovirus retinitis (CMV retinitis, an inflamation of the retina that can
+  lead to blindness) and as an alternative to ganciclovir for AIDS patients who require
+  concurrent antiretroviral therapy but are unable to tolerate ganciclovir due to
+  haematological toxicity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: dihydroxyphosphanecarboxylic acid oxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FOSCARNET
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Foscarmet
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Foscarnet
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PHOSPHONOFORMIC ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: carboxyphosphonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: foscarnet
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: phosphonomethanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26069
+- CHEBI:33575
+- CHEBI:64708
+xrefs:
+- cas:4428-95-9
+- drugbank:DB00529
+- drugcentral:1241
+- hmdb:HMDB0014670
+- kegg.compound:C06456
+- knapsack:C00000800
+- pdb-ccd:PPF
+- reaxys:1756501
+- wikipedia.en:Foscarnet
+activity_roles:
+- CHEBI:36044
+- CHEBI:53756
+chemical_structure:
+  smiles: O=C(O)P(=O)(O)O
+  standard_inchi: InChI=1S/CH3O5P/c2-1(3)7(4,5)6/h(H,2,3)(H2,4,5,6)
+  standard_inchi_key: ZJAOAACCNHFJAH-UHFFFAOYSA-N
+  molecular_formula: CH3O5P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 126.004
+  monoisotopic_mass: 125.97181
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:127780
+  source_label: phosphonoformic acid
+  minted_identifier: antibioticmech:chebi-5600b9acae
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

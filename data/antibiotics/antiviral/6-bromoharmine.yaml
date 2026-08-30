@@ -1,0 +1,44 @@
+identifier: CHEBI:72481
+label: 6-bromoharmine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of β-carbolines that is 9H-β-carboline substituted
+  by a bromo group at position 6, a methoxy group at position 7 and a methyl group
+  at position 1. It is semisynthetic derivative of harmine and has been shown to exhibit
+  significant anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6-bromo-7-methoxy-1-methyl-9H-β-carboline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:37141
+- CHEBI:72588
+xrefs:
+- reaxys:8490488
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: COc1cc2nc3c(C)nccc3c2cc1Br
+  standard_inchi: InChI=1S/C13H11BrN2O/c1-7-13-8(3-4-15-7)9-5-10(14)12(17-2)6-11(9)16-13/h3-6,16H,1-2H3
+  standard_inchi_key: YRYJSDPQWKIQRL-UHFFFAOYSA-N
+  molecular_formula: C13H11BrN2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 291.148
+  monoisotopic_mass: 290.00548
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:72481
+  source_label: 6-bromoharmine
+  minted_identifier: antibioticmech:chebi-255c99d34c
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

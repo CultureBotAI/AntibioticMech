@@ -1,0 +1,91 @@
+identifier: CHEBI:95093
+label: omipalisib
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of quinolines that is quinoline which is substituted
+  by pyridazin-4-yl and 5-[(2,4-difluorobenzene-1-sulfonyl)amino]-6-methoxypyridin-3-yl
+  groups at positions 4 and 6, respectively. It is a highly potent inhibitor of PI3K
+  and mTOR developed by GlaxoSmithKline and was previously in human phase 1 clinical
+  trials for the treatment of idiopathic pulmonary fibrosis and solid tumors.
+definition_source: ChEBI
+synonyms:
+- synonym_text: omipalisibum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2,4-difluoro-N-{2-methoxy-5-[4-(pyridazin-4-yl)quinolin-6-yl]pyridin-3-yl}benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4-difluoro-N-[2-methoxy-5-(4-pyridazin-4-ylquinolin-6-yl)pyridin-3-yl]benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4-difluoro-N-[2-methoxy-5-[4-(4-pyridazinyl)-6-quinolinyl]-3-pyridinyl]benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4-difluoro-N-{2-methoxy-5-[4-(pyridazin-4-yl)quinolin-6-yl]pyridin-3-yl}benzene-1-sulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GSK 212
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GSK 2126458
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GSK 458
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GSK-212
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GSK-2126458
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GSK-458
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GSK212
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GSK2126458
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GSK458
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26421
+- CHEBI:26513
+- CHEBI:35358
+- CHEBI:35618
+- CHEBI:37921
+- CHEBI:38582
+xrefs:
+- cas:1086062-66-9
+- chemspider:25027388
+- drugbank:DB12703
+- kegg.drug:D10718
+- pdb-ccd:ZIG
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: COc1ncc(-c2ccc3nccc(-c4ccnnc4)c3c2)cc1NS(=O)(=O)c1ccc(F)cc1F
+  standard_inchi: InChI=1S/C25H17F2N5O3S/c1-35-25-23(32-36(33,34)24-5-3-18(26)12-21(24)27)11-17(13-29-25)15-2-4-22-20(10-15)19(7-8-28-22)16-6-9-30-31-14-16/h2-14,32H,1H3
+  standard_inchi_key: CGBJSGAELGCMKE-UHFFFAOYSA-N
+  molecular_formula: C25H17F2N5O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 505.506
+  monoisotopic_mass: 505.10202
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:95093
+  source_label: omipalisib
+  minted_identifier: antibioticmech:chebi-6a527883a6
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

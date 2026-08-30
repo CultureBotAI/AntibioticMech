@@ -1,0 +1,59 @@
+identifier: CHEBI:132152
+label: triptofordin C 2
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dihydroagarofuran sesquiterpenoid that is isolated from Tripterygium
+  wilfordii.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,4S,5R,5aS,6R,7S,9R,9aS,10R)-6,10-bis(acetyloxy)-7,9-dihydroxy-2,2,5a,9-tetramethyloctahydro-2H-3,9a-methano-1-benzoxepine-4,5-diyl
+    dibenzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (-)-Triptofordin C 2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C-2 Triptofordin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: triptofordin C-2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26878
+- CHEBI:26979
+- CHEBI:35990
+- CHEBI:36054
+- CHEBI:38104
+- CHEBI:47622
+- CHEBI:71548
+xrefs:
+- cas:111514-63-7
+- knapsack:C00013134
+- reaxys:6553794
+- wikipedia.en:Triptofordin_C-2
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: '[H][C@]12[C@H](OC(=O)c3ccccc3)[C@H](OC(=O)c3ccccc3)[C@]3(C)[C@@H](OC(C)=O)[C@@H](O)C[C@@](C)(O)[C@@]3(OC1(C)C)[C@@H]2OC(C)=O'
+  standard_inchi: InChI=1S/C33H38O11/c1-18(34)40-25-22(36)17-31(5,39)33-26(41-19(2)35)23(30(3,4)44-33)24(42-28(37)20-13-9-7-10-14-20)27(32(25,33)6)43-29(38)21-15-11-8-12-16-21/h7-16,22-27,36,39H,17H2,1-6H3/t22-,23+,24-,25-,26+,27-,31+,32-,33-/m0/s1
+  standard_inchi_key: FOIOSVGAFMLLDU-UDIRGPGZSA-N
+  molecular_formula: C33H38O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 610.656
+  monoisotopic_mass: 610.24141
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:132152
+  source_label: triptofordin C 2
+  minted_identifier: antibioticmech:chebi-fd4bbeb483
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

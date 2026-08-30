@@ -71,6 +71,7 @@ xrefs:
 - reaxys:482809
 - wikipedia.en:Chloroquine
 activity_roles:
+- CHEBI:149553
 - CHEBI:38068
 chemical_structure:
   smiles: CCN(CC)CCCC(C)Nc1ccnc2cc(Cl)ccc12
@@ -87,6 +88,7 @@ source_concepts:
   source_label: chloroquine
   minted_identifier: antibioticmech:chebi-bdf17e66d8
   role_terms:
+  - CHEBI:149553
   - CHEBI:38068
   source_version: '2026-08-29'
 curation_history:
@@ -94,3 +96,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

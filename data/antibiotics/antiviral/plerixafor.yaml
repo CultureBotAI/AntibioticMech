@@ -1,0 +1,88 @@
+identifier: CHEBI:125354
+label: plerixafor
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An azamacrocycle consisting of two cyclam rings connected by a 1,4-phenylenebis(methylene)
+  linker. It is a CXCR4 chemokine receptor antagonist and a hematopoietic stem cell
+  mobilizer. It is used in combination with grulocyte-colony stimulating factor (G-CSF)
+  to mobilize hematopoietic stem cells to the perpheral blood for collection and subsequent
+  autologous transplantation in patients with non-Hodgkin's lymphoma and multiple
+  myeloma.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Mozobil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: plerixaforum
+  synonym_type: INN
+  source: chebi
+- synonym_text: plérixafor
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1,1'-(benzene-1,4-diyldimethanediyl)bis(1,4,8,11-tetraazacyclotetradecane)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,1'-[1,4-phenylenebis(methylene)]bis(1,4,8,11-tetraazacyclotetradecane)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-[[4-(1,4,8,11-tetrazacyclotetradec-1-ylmethyl)phenyl]methyl]-1,4,8,11-tetrazacyclotetradecane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AMD 3100
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AMD-3100
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AMD3100
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: JKL 169
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: JM3100
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SDZ SID 791
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22712
+- CHEBI:37411
+- CHEBI:37949
+- CHEBI:50995
+- CHEBI:50996
+- CHEBI:52898
+xrefs:
+- cas:110078-46-1
+- drugbank:DB06809
+- drugcentral:4410
+- hmdb:HMDB0015681
+- kegg.drug:D08971
+- lincs.smallmolecule:LSM-36826
+- wikipedia.en:Plerixafor
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: c1cc(CN2CCCNCCNCCCNCC2)ccc1CN1CCCNCCNCCCNCC1
+  standard_inchi: InChI=1S/C28H54N8/c1-9-29-15-17-31-13-3-21-35(23-19-33-11-1)25-27-5-7-28(8-6-27)26-36-22-4-14-32-18-16-30-10-2-12-34-20-24-36/h5-8,29-34H,1-4,9-26H2
+  standard_inchi_key: YIQPUIGJQJDJOS-UHFFFAOYSA-N
+  molecular_formula: C28H54N8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 502.796
+  monoisotopic_mass: 502.44714
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:125354
+  source_label: plerixafor
+  minted_identifier: antibioticmech:chebi-d8f34e69af
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

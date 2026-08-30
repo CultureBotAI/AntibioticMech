@@ -1,0 +1,51 @@
+identifier: CHEBI:46414
+label: N-s-butyl-N-[(2R,3S)-3-({[(3aS,5R,6aR)-hexahydro-2H-cyclopenta[b]furan-5-yloxy]carbonyl}amino)-2-hydroxy-4-phenylbutyl]-4-(hydroxymethyl)benzenesulfonamide
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An N,N-disubstituted toluene-p-sulfonamaide, with a structure close to
+  that of darunavir. It is found to inhibit dimerization of HIV-1 protease subunits.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3aS,5R,6aR)-hexahydro-2H-cyclopenta[b]furan-5-yl {(2S,3R)-3-hydroxy-4-[{[4-(hydroxymethyl)phenyl]sulfonyl}(2-methylpropyl)amino]-1-phenylbutan-2-yl}carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3AS,5R,6AR)-HEXAHYDRO-2H-CYCLOPENTA[B]FURAN-5-YL (2S,3S)-3-HYDROXY-4-(4-(HYDROXYMETHYL)-N-ISOBUTYLPHENYLSULFONAMIDO)-1-PHENYLBUTAN-2-YLCARBAMATE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3aS,5R,6aR)-hexahydro-2H-cyclopenta[b]furan-5-yl (2S,3R)-3-hydroxy-4-(4-(hydroxymethyl)-N-isobutylphenylsulfonamido)-1-phenylbutan-2-ylcarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3aS,5R,6aR)-hexahydro-2H-cyclopenta[b]furan-5-yl {(1S,2R)-1-benzyl-2-hydroxy-3-[{[4-(hydroxymethyl)phenyl]sulfonyl}(2-methylpropyl)amino]propyl}carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:35358
+- CHEBI:47783
+xrefs:
+- pdb-ccd:GRL
+activity_roles:
+- CHEBI:35660
+chemical_structure:
+  smiles: '[H][C@@]1(OC(=O)N[C@@H](Cc2ccccc2)[C@H](O)CN(CC(C)C)S(=O)(=O)c2ccc(CO)cc2)C[C@]2([H])CCO[C@]2([H])C1'
+  standard_inchi: InChI=1S/C29H40N2O7S/c1-20(2)17-31(39(35,36)25-10-8-22(19-32)9-11-25)18-27(33)26(14-21-6-4-3-5-7-21)30-29(34)38-24-15-23-12-13-37-28(23)16-24/h3-11,20,23-24,26-28,32-33H,12-19H2,1-2H3,(H,30,34)/t23-,24+,26-,27+,28+/m0/s1
+  standard_inchi_key: VYBDPVQMILRSMK-GRXYLYAXSA-N
+  molecular_formula: C29H40N2O7S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 560.713
+  monoisotopic_mass: 560.25562
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:46414
+  source_label: N-s-butyl-N-[(2R,3S)-3-({[(3aS,5R,6aR)-hexahydro-2H-cyclopenta[b]furan-5-yloxy]carbonyl}amino)-2-hydroxy-4-phenylbutyl]-4-(hydroxymethyl)benzenesulfonamide
+  minted_identifier: antibioticmech:chebi-b986b3fb69
+  role_terms:
+  - CHEBI:35660
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

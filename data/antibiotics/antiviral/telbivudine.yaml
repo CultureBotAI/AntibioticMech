@@ -1,0 +1,74 @@
+identifier: CHEBI:63624
+label: telbivudine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyrimidine 2'-deoxyribonucleoside that is the L-enantiomer of thymine.
+  A synthetic thymidine nucleoside analogue with activity against HBV DNA polymerase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-(2-deoxy-β-L-erythro-pentofuranosyl)-5-methylpyrimidine-2,4(1H,3H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(2-deoxy-β-L-ribofuranosyl)-5-methyluracil
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2'-Deoxy-L-thymidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Beta-l-thymidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Epavudine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-DT
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-deoxythymidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-thymidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LDT
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-L-2'-deoxythymidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:19255
+xrefs:
+- cas:3424-98-4
+- drugbank:DB01265
+- drugcentral:4220
+- kegg.drug:D06675
+- reaxys:754297
+- wikipedia.en:Telbivudine
+activity_roles:
+- CHEBI:36044
+- CHEBI:59897
+chemical_structure:
+  smiles: Cc1cn([C@@H]2C[C@@H](O)[C@H](CO)O2)c(=O)nc1=O
+  standard_inchi: InChI=1S/C10H14N2O5/c1-5-3-12(10(16)11-9(5)15)8-2-6(14)7(4-13)17-8/h3,6-8,13-14H,2,4H2,1H3,(H,11,15,16)/t6-,7+,8+/m1/s1
+  standard_inchi_key: IQFYYKKMVGJFEH-CSMHCCOUSA-N
+  molecular_formula: C10H14N2O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 242.231
+  monoisotopic_mass: 242.09027
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:63624
+  source_label: telbivudine
+  minted_identifier: antibioticmech:chebi-38fd43bd7f
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:59897
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

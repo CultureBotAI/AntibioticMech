@@ -1,0 +1,90 @@
+identifier: CHEBI:3696
+label: cidofovir anhydrous
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Cytosine substituted at the 1 position by a 3-hydroxy-2-(phosphonomethoxy)propyl
+  group (S configuration). A nucleoside analogue, it is an injectable antiviral used
+  for the treatment of cytomegalovirus (CMV) retinitis in AIDS patients.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ({[(2S)-1-(4-amino-2-oxopyrimidin-1(2H)-yl)-3-hydroxypropan-2-yl]oxy}methyl)phosphonic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-(3-(4-amino-2-oxopyrimidin-1(2H)-yl)-1-hydroxypropan-2-yloxy)methylphosphonic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-1-(3-hydroxy-2-phosphonomethoxypropyl)cytosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-1-[3-hydroxy-2-(phosphonomethoxy)propyl]cytosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-1-[3-hydroxy-2-(phosphonylmethoxy)propyl]cytosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-HPMPC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(S)-[3-hydroxy-2-(phosphonomethoxy)propyl]cytosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-[(S)-3-hydroxy-2-(phosphonomethoxy)propyl]cytosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CDV
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cidofovir
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cidofovir anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[(S)-2-(4-Amino-2-oxo-2H-pyrimidin-1-yl)-1-hydroxymethyl-ethoxymethyl]-phosphonic
+    acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cidofovir
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26069
+- CHEBI:38337
+xrefs:
+- beilstein:5080484
+- cas:113852-37-2
+- drugbank:DB00369
+- drugcentral:639
+- kegg.compound:C06909
+- patent:EP253412
+- patent:US5142051
+- wikipedia.en:Cidofovir
+activity_roles:
+- CHEBI:36044
+- CHEBI:64946
+chemical_structure:
+  smiles: Nc1ccn(C[C@@H](CO)OCP(=O)(O)O)c(=O)n1
+  standard_inchi: InChI=1S/C8H14N3O6P/c9-7-1-2-11(8(13)10-7)3-6(4-12)17-5-18(14,15)16/h1-2,6,12H,3-5H2,(H2,9,10,13)(H2,14,15,16)/t6-/m0/s1
+  standard_inchi_key: VWFCHDSQECPREK-LURJTMIESA-N
+  molecular_formula: C8H14N3O6P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 279.189
+  monoisotopic_mass: 279.06202
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3696
+  source_label: cidofovir anhydrous
+  minted_identifier: antibioticmech:chebi-beb9090eff
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

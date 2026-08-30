@@ -1,0 +1,110 @@
+identifier: CHEBI:9555
+label: tioguanine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 2-aminopurine that is the 6-thiono derivative of 2-amino-1,9-dihydro-6H-purine.
+  Incorporates into DNA and inhibits synthesis. Used in the treatment of leukaemia.
+definition_source: ChEBI
+synonyms:
+- synonym_text: tioguanina
+  synonym_type: INN
+  source: chebi
+- synonym_text: tioguaninum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-amino-1,9-dihydro-6H-purine-6-thione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Amino 6MP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Amino-1,7-dihydro-6H-purine-6-thione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Amino-6-mercaptopurine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Amino-6-merkaptopurin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Amino-6-purinethiol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Aminopurin-6-thiol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Aminopurine-6(1H)-thione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Aminopurine-6-thiol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-amino-1,9-dihydropurine-6-thione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Mercapto-2-aminopurine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Mercaptoguanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-TG
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Thioguanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TG
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ThG
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Thioguanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tioguanin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-thioguanine
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:20702
+xrefs:
+- cas:154-42-7
+- drugbank:DB00352
+- drugcentral:2632
+- kegg.compound:C07648
+- kegg.drug:D08603
+- knapsack:C00018807
+- lincs.smallmolecule:LSM-6723
+- metacyc.compound:CPD-5721
+- pdb-ccd:DX4
+- reaxys:1074099
+- wikipedia.en:Thioguanine
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: Nc1nc(=S)c2ncnc2n1
+  standard_inchi: InChI=1S/C5H5N5S/c6-5-9-3-2(4(11)10-5)7-1-8-3/h1H,(H4,6,7,8,9,10,11)
+  standard_inchi_key: WYWHKKSPHMUBEB-UHFFFAOYSA-N
+  molecular_formula: C5H5N5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 167.197
+  monoisotopic_mass: 167.02657
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9555
+  source_label: tioguanine
+  minted_identifier: antibioticmech:chebi-39c1d436bc
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,50 @@
+identifier: CHEBI:69475
+label: TAN-931
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzoic acids that is benzoic acid substituted
+  by a formyl group at position 3, a hydroxy group at position 5 and a 2,6-dihydroxybenzoyl
+  group at position 4. Isolated from Penicillium purpurogenum, it exhibits antiviral
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-(2,6-dihydroxybenzoyl)-3-formyl-5-hydroxybenzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tan 931
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22698
+- CHEBI:22723
+- CHEBI:22726
+- CHEBI:33572
+xrefs:
+- cas:127448-92-4
+- patent:EP0342665
+- reaxys:21878450
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: O=Cc1cc(C(=O)O)cc(O)c1C(=O)c1c(O)cccc1O
+  standard_inchi: InChI=1S/C15H10O7/c16-6-8-4-7(15(21)22)5-11(19)12(8)14(20)13-9(17)2-1-3-10(13)18/h1-6,17-19H,(H,21,22)
+  standard_inchi_key: INVAPAXTQZQLGN-UHFFFAOYSA-N
+  molecular_formula: C15H10O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 302.238
+  monoisotopic_mass: 302.04265
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69475
+  source_label: TAN-931
+  minted_identifier: antibioticmech:chebi-14a418e0c9
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

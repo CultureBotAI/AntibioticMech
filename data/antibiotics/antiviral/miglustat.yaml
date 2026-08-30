@@ -1,0 +1,75 @@
+identifier: CHEBI:50381
+label: miglustat
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxypiperidine that is deoxynojirimycin in which the amino hydrogen
+  is replaced by a butyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Zavesca
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: miglustatum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2R,3R,4R,5S)-1-butyl-2-(hydroxymethyl)piperidine-3,4,5-triol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BuDNJ
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Butyldeoxynojirimycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(n-Butyl)deoxynojirimycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-Butylmoranoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-butyl-1-deoxynojirimycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NB-DNJ
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SC-48334
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-Butyl deoxynojirimycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26151
+- CHEBI:50996
+xrefs:
+- beilstein:5862029
+- cas:72599-27-0
+- drugbank:DB00419
+- drugcentral:1807
+- kegg.drug:D05032
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: CCCCN1C[C@H](O)[C@@H](O)[C@H](O)[C@H]1CO
+  standard_inchi: InChI=1S/C10H21NO4/c1-2-3-4-11-5-8(13)10(15)9(14)7(11)6-12/h7-10,12-15H,2-6H2,1H3/t7-,8+,9-,10-/m1/s1
+  standard_inchi_key: UQRORFVVSGFNRO-UTINFBMNSA-N
+  molecular_formula: C10H21NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 219.281
+  monoisotopic_mass: 219.14706
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:50381
+  source_label: miglustat
+  minted_identifier: antibioticmech:chebi-4d79e49e40
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

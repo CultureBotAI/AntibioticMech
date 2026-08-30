@@ -1,0 +1,43 @@
+identifier: CHEBI:149430
+label: 6-de(cyclopropylamino)-6-(2,2-dimethylazetidin-1-yl)abacavir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 2,6-diaminopurine that is an analogue of abacavir in which the cyclopropylamino
+  group at position 6 of the purine moiety is replaced by a 2,2-dimethylazetidin-1-yl
+  group. One of a series of synthesised abacavir analogues with antiviral activity
+  found to stimulate IFN-γ secretion in abacavir-responsive clones.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '{(1S,4R)-4-[2-amino-6-(2,2-dimethylazetidin-1-yl)-9H-purin-9-yl]cyclopent-2-en-1-yl}methanol'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1S,4R)-4-[2-amino-6-(2,2-dimethyl-1-azetidinyl)-9H-purin-9-yl]-2-cyclopentene-1-methanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38001
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: CC1(C)CCN1c1nc(N)nc2c1ncn2[C@H]1C=C[C@@H](CO)C1
+  standard_inchi: InChI=1S/C16H22N6O/c1-16(2)5-6-22(16)14-12-13(19-15(17)20-14)21(9-18-12)11-4-3-10(7-11)8-23/h3-4,9-11,23H,5-8H2,1-2H3,(H2,17,19,20)/t10-,11+/m1/s1
+  standard_inchi_key: AZNKZYXEUMQLIU-MNOVXSKESA-N
+  molecular_formula: C16H22N6O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 314.393
+  monoisotopic_mass: 314.18551
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:149430
+  source_label: 6-de(cyclopropylamino)-6-(2,2-dimethylazetidin-1-yl)abacavir
+  minted_identifier: antibioticmech:chebi-5bf6b0ed00
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

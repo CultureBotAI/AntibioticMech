@@ -1,0 +1,57 @@
+identifier: CHEBI:147284
+label: cinanserin hydrochloride
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The hydrochloride salt of cinanserin. It is an inhibitor of 3C-like proteinase
+  of severe acute respiratory syndrome coronavirus (SARS-Cov) and reduces virus replication
+  in vitro.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-N-(2-{[3-(dimethylamino)propyl]sulfanyl}phenyl)-3-phenylprop-2-enamide
+    hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MAPTC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SQ 10,643
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SQ 10643
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cinanserin HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:54-84-2
+- kegg.drug:D03506
+activity_roles:
+- CHEBI:149553
+- CHEBI:22587
+chemical_structure:
+  smiles: CN(C)CCCSc1ccccc1NC(=O)/C=C/c1ccccc1.Cl
+  standard_inchi: InChI=1S/C20H24N2OS.ClH/c1-22(2)15-8-16-24-19-12-7-6-11-18(19)21-20(23)14-13-17-9-4-3-5-10-17;/h3-7,9-14H,8,15-16H2,1-2H3,(H,21,23);1H/b14-13+;
+  standard_inchi_key: LXGJPDKYMJJWRB-IERUDJENSA-N
+  molecular_formula: C20H24N2OS.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 376.953
+  monoisotopic_mass: 376.13761
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:147284
+  source_label: cinanserin hydrochloride
+  minted_identifier: antibioticmech:chebi-ea22a1d078
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

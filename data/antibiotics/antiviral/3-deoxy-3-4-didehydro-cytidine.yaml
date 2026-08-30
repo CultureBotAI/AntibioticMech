@@ -1,0 +1,63 @@
+identifier: CHEBI:156331
+label: 3'-deoxy-3',4'-didehydro-cytidine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyrimidine 3'-deoxyribonucleoside that is cytidine in which the hydroxy
+  group at position 3' is replaced by a hydrogen and a double bond is introduced between
+  positions 3' and 4'. It is a metabolite of 3'-deoxy-3',4'-didehydro-CTP.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-amino-1-[(2R,3R)-3-hydroxy-5-(hydroxymethyl)-2,3-dihydrofuran-2-yl]pyrimidin-2(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3',4'-didehydro-3'-deoxycytidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-amino-1-[(2R,3R)-3-hydroxy-5-(hydroxymethyl)-2,3-dihydro-2-furanyl]-2(1H)-pyrimidinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-amino-1-[(2R,3R)-3-hydroxy-5-(hydroxymethyl)-2,3-dihydrofuran-2-yl]-2-pyrimidinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-amino-1-[(2R,3R)-3-hydroxy-5-(hydroxymethyl)-2,3-dihydrofuran-2-yl]pyrimidin-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-amino-1-[(2R,3R)-3-hydroxy-5-methylol-2,3-dihydrofuran-2-yl]pyrimidin-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ddh-cytidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ddhC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:191947
+- CHEBI:38337
+xrefs:
+- chemspider:7989048
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: Nc1ccn([C@@H]2OC(CO)=C[C@H]2O)c(=O)n1
+  standard_inchi: InChI=1S/C9H11N3O4/c10-7-1-2-12(9(15)11-7)8-6(14)3-5(4-13)16-8/h1-3,6,8,13-14H,4H2,(H2,10,11,15)/t6-,8-/m1/s1
+  standard_inchi_key: VQMYKNBUURJYAP-HTRCEHHLSA-N
+  molecular_formula: C9H11N3O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 225.204
+  monoisotopic_mass: 225.07496
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156331
+  source_label: 3'-deoxy-3',4'-didehydro-cytidine
+  minted_identifier: antibioticmech:chebi-41361bfb6b
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,49 @@
+identifier: CHEBI:63628
+label: tipranavir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyridine-2-sulfonamide substituted at C-5 by a trifluoromethyl group
+  and at the sulfonamide nitrogen by a dihydropyrone-containing m-tolyl substituent.
+  It is an HIV-1 protease inhibitor.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-(3-{(1R)-1-[(6R)-4-hydroxy-2-oxo-6-(2-phenylethyl)-6-propyl-5,6-dihydro-2H-pyran-3-yl]propyl}phenyl)-5-(trifluoromethyl)pyridine-2-sulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3'-((1R)-1-((6R)-5,6-Dihydro-4-hydroxy-2-oxo-6-phenethyl-6-propyl-2H-pyran-3-yl)propyl)-5-(trifluoromethyl)-2-pyridinesulfonanilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35358
+xrefs:
+- cas:174484-41-4
+- drugbank:DB00932
+- kegg.drug:D08605
+- reaxys:7698323
+activity_roles:
+- CHEBI:35660
+- CHEBI:36044
+chemical_structure:
+  smiles: CCC[C@@]1(CCc2ccccc2)CC(O)=C([C@H](CC)c2cccc(NS(=O)(=O)c3ccc(C(F)(F)F)cn3)c2)C(=O)O1
+  standard_inchi: InChI=1S/C31H33F3N2O5S/c1-3-16-30(17-15-21-9-6-5-7-10-21)19-26(37)28(29(38)41-30)25(4-2)22-11-8-12-24(18-22)36-42(39,40)27-14-13-23(20-35-27)31(32,33)34/h5-14,18,20,25,36-37H,3-4,15-17,19H2,1-2H3/t25-,30-/m1/s1
+  standard_inchi_key: SUJUHGSWHZTSEU-FYBSXPHGSA-N
+  molecular_formula: C31H33F3N2O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 602.675
+  monoisotopic_mass: 602.20623
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:63628
+  source_label: tipranavir
+  minted_identifier: antibioticmech:chebi-8f2c02ad82
+  role_terms:
+  - CHEBI:35660
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

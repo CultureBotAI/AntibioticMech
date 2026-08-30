@@ -1,0 +1,45 @@
+identifier: CHEBI:66543
+label: lancifodilactone G
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A triterpenoid that is a nortriterpenoid isolated from Schisandra lancifolia
+  and has been shown to exhibit anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,2aS,3S,4'S,4aS,6aS,7aR,10aR,12R,12aS,15aR,15bS)-15-hydroxy-12-(hydroxymethyl)-3,4',4a,12-tetramethyl-2a,3,3',4',4a,5,6,10,10a,12,12a,13,14,15b-tetradecahydro-4H,5'H,9H-spiro[6a,15a-epoxy-1,8,11-trioxacyclopenta[c]pentaleno[1',6':4,5,6]cycloocta[1,2-f]azulene-2,2'-furan]-4,5',9-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23824
+- CHEBI:33823
+- CHEBI:36615
+- CHEBI:37407
+- CHEBI:37581
+- CHEBI:37948
+xrefs:
+- reaxys:10138682
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: '[H][C@@]12CCC3=C(O)[C@]45O[C@@]3(CC[C@]3(C)C(=O)[C@@H](C)[C@]([H])([C@]6(C[C@H](C)C(=O)O6)O4)[C@]53[H])C[C@@]13OC(=O)C[C@@]3([H])O[C@@]2(C)CO'
+  standard_inchi: InChI=1S/C29H36O10/c1-13-10-28(37-23(13)34)19-14(2)21(32)24(3)7-8-26-11-27-16(25(4,12-30)35-17(27)9-18(31)36-27)6-5-15(26)22(33)29(38-26,39-28)20(19)24/h13-14,16-17,19-20,30,33H,5-12H2,1-4H3/t13-,14-,16-,17+,19-,20-,24-,25-,26-,27+,28-,29+/m0/s1
+  standard_inchi_key: LTHLIQFAHGGQPW-OQURKPEFSA-N
+  molecular_formula: C29H36O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 544.597
+  monoisotopic_mass: 544.23085
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66543
+  source_label: lancifodilactone G
+  minted_identifier: antibioticmech:chebi-8c2e02700e
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,75 @@
+identifier: CHEBI:3900
+label: costunolide
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A germacranolide with anthelminthic, antiparasitic and antiviral activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3aS,6E,10E,11aR)-6,10-dimethyl-3-methylene-3a,4,5,8,9,11a-hexahydrocyclodeca[b]furan-2(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-costunolide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (10S,1R)-3,7-dimethyl-11-methylene-13-oxabicyclo[8.3.0]trideca-2,6-dien-12-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3aS,6E,10E)-3-methylene-6,10-dimethyl-2,3,3aβ,4,5,8,9,11aα-octahydrocyclodeca[b]furan-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3aS,6E,10E,11aR)-6,10-dimethyl-3-methylidene-3a,4,5,8,9,11a-hexahydrocyclodeca[b]furan-2(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E,E)-6-alpha-Hydroxygermacra-1(10),4,11(13)-trien-12-oic acid gamma-lactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E,E)-germacra-1(10),4,11(13)-trien-12-oic acid, 6-alpha-hydroxy-gamma-lactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Costunlide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Costunolid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Costunolide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Costus lactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33672
+- CHEBI:73011
+xrefs:
+- cas:553-21-9
+- kegg.compound:C09382
+- knapsack:C00003240
+- patent:KR20000066932
+- reaxys:14451
+- wikipedia.en:Costunolide
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: C=C1C(=O)O[C@@H]2/C=C(\C)CC/C=C(\C)CC[C@@H]12
+  standard_inchi: InChI=1S/C15H20O2/c1-10-5-4-6-11(2)9-14-13(8-7-10)12(3)15(16)17-14/h5,9,13-14H,3-4,6-8H2,1-2H3/b10-5+,11-9+/t13-,14+/m0/s1
+  standard_inchi_key: HRYLQFBHBWLLLL-AHNJNIBGSA-N
+  molecular_formula: C15H20O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 232.323
+  monoisotopic_mass: 232.14633
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3900
+  source_label: costunolide
+  minted_identifier: antibioticmech:chebi-e08ad549d5
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

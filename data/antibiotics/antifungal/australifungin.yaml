@@ -23,6 +23,7 @@ xrefs:
 - reaxys:7226637
 activity_roles:
 - CHEBI:35718
+- CHEBI:67268
 chemical_structure:
   smiles: '[H][C@@]12[C@@H](O)C[C@@H](C)[C@@H](O)[C@@]1([H])C(=O)C(O)=C([C@H](C)CCCCCC)[C@@]2(C)C(=O)/C=C\O'
   standard_inchi: InChI=1S/C23H36O6/c1-5-6-7-8-9-13(2)18-22(29)21(28)17-19(15(25)12-14(3)20(17)27)23(18,4)16(26)10-11-24/h10-11,13-15,17,19-20,24-25,27,29H,5-9,12H2,1-4H3/b11-10-/t13-,14-,15+,17+,19-,20-,23-/m1/s1
@@ -39,9 +40,14 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-b96e16ebbb
   role_terms:
   - CHEBI:35718
+  - CHEBI:67268
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

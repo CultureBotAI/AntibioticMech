@@ -1,0 +1,59 @@
+identifier: CHEBI:88353
+label: bryostatin 1
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of bryostatins that is (17E)-2-oxooxacyclohexacos-17-ene
+  which is substituted by hydroxy groups at positions 4, 10, and 20; an acetoxy group
+  at position 8; methyl groups at positions 9, 9, 18, and 19; 2-methoxy-2-oxoethylidene
+  groups at positions 14 and 24; an (E,E)-octa-2,4-dienoyloxy group at position 21;
+  and with oxygen bridges linking positions 6 to 10, 12 to 16, and 20 to 24. It is
+  one of the most abundant member of the class of bryostatins.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,3S,5Z,7R,8E,11S,12S,13E,15S,17R,21R,23R,25S)-25-(acetyloxy)-1,11,21-trihydroxy-17-[(1R)-1-hydroxyethyl]-5,13-bis(2-methoxy-2-oxoethylidene)-10,10,26,26-tetramethyl-19-oxo-18,27,28,29-tetraoxatetracyclo[21.3.1.13,7.111,15]nonacos-8-en-12-yl
+    (2E,4E)-octa-2,4-dienoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bryostatin-1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:3200
+- CHEBI:35681
+- CHEBI:38163
+- CHEBI:47622
+- CHEBI:51702
+- CHEBI:59780
+xrefs:
+- cas:83314-01-6
+- drugbank:DB11752
+- kegg.compound:C05149
+- knapsack:C00038654
+- reaxys:4349157
+- wikipedia.en:Bryostatin
+activity_roles:
+- CHEBI:64947
+chemical_structure:
+  smiles: '[H][C@@]12C/C(=C\C(=O)OC)[C@H](OC(=O)/C=C/C=C/CCC)[C@@](O)(O1)C(C)(C)/C=C/[C@H]1C/C(=C\C(=O)OC)C[C@@H](C[C@]3(O)O[C@H](C[C@@H](O)CC(=O)O[C@@H]([C@@H](C)O)C2)C[C@H](OC(C)=O)C3(C)C)O1'
+  standard_inchi: InChI=1S/C47H68O17/c1-10-11-12-13-14-15-39(51)62-43-31(22-41(53)58-9)21-34-25-37(28(2)48)61-42(54)24-32(50)23-35-26-38(59-29(3)49)45(6,7)46(55,63-35)27-36-19-30(20-40(52)57-8)18-33(60-36)16-17-44(4,5)47(43,56)64-34/h12-17,20,22,28,32-38,43,48,50,55-56H,10-11,18-19,21,23-27H2,1-9H3/b13-12+,15-14+,17-16+,30-20+,31-22+/t28-,32-,33+,34+,35-,36+,37-,38+,43+,46+,47-/m1/s1
+  standard_inchi_key: MJQUEDHRCUIRLF-TVIXENOKSA-N
+  molecular_formula: C47H68O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 905.044
+  monoisotopic_mass: 904.44565
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:88353
+  source_label: bryostatin 1
+  minted_identifier: antibioticmech:chebi-0a76f50b36
+  role_terms:
+  - CHEBI:64947
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

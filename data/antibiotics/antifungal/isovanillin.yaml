@@ -43,6 +43,7 @@ xrefs:
 - reaxys:1073021
 - wikipedia.en:Isovanillin
 activity_roles:
+- CHEBI:35660
 - CHEBI:35718
 chemical_structure:
   smiles: '[H]C(=O)c1ccc(OC)c(O)c1'
@@ -59,6 +60,7 @@ source_concepts:
   source_label: isovanillin
   minted_identifier: antibioticmech:chebi-bd5d197fc8
   role_terms:
+  - CHEBI:35660
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -66,3 +68,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

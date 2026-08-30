@@ -1,0 +1,66 @@
+identifier: CHEBI:15417
+label: ent-kaur-16-en-19-oic acid
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An ent-kaurane diterpenoid that is ent-kauran-19-oic acid in which a double
+  bond is present at position 16(17); exhibits anticancer and anti-HIV 1 activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (-)-Kaur-16-en-19-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5β,8α,9β,10α,13α)-kaur-16-en-18-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kaur-16-en-18-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kauren-19-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kaurenic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kaurenoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ent-Kaur-16(17)-en-19-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ent-Kaurenoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36760
+xrefs:
+- cas:6730-83-2
+- kegg.compound:C11874
+- knapsack:C00000881
+- lipidmaps:LMPR0104130004
+- metacyc.compound:CPD1F-132
+- reaxys:10784819
+activity_roles:
+- CHEBI:64947
+chemical_structure:
+  smiles: '[H][C@]12CC[C@]34CC(=C)[C@H](CC[C@@]3([H])[C@]1(C)CCC[C@@]2(C)C(=O)O)C4'
+  standard_inchi: InChI=1S/C20H30O2/c1-13-11-20-10-7-15-18(2,16(20)6-5-14(13)12-20)8-4-9-19(15,3)17(21)22/h14-16H,1,4-12H2,2-3H3,(H,21,22)/t14-,15+,16+,18-,19-,20-/m1/s1
+  standard_inchi_key: NIKHGUQULKYIGE-OTCXFQBHSA-N
+  molecular_formula: C20H30O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 302.458
+  monoisotopic_mass: 302.22458
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:15417
+  source_label: ent-kaur-16-en-19-oic acid
+  minted_identifier: antibioticmech:chebi-f0bdd6e8ff
+  role_terms:
+  - CHEBI:64947
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,43 @@
+identifier: CHEBI:66011
+label: hernandonine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An oxoaporphine alkaloid isolated from Hernandia ovigera and Lindera chunii
+  and has been shown exhibit inhibitory activity against HIV-1 integrase .
+definition_source: ChEBI
+synonyms:
+- synonym_text: 11H-bis[1,3]benzodioxolo[6,5,4-de:4',5'-g]quinolin-11-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132998
+- CHEBI:38104
+- CHEBI:3992
+- CHEBI:51914
+xrefs:
+- reaxys:575709
+activity_roles:
+- CHEBI:67268
+chemical_structure:
+  smiles: O=C1c2ccc3c(c2-c2c4c(cc5ccnc1c25)OCO4)OCO3
+  standard_inchi: InChI=1S/C18H9NO5/c20-16-9-1-2-10-17(23-6-21-10)13(9)14-12-8(3-4-19-15(12)16)5-11-18(14)24-7-22-11/h1-5H,6-7H2
+  standard_inchi_key: QHFWZNALDDSHFJ-UHFFFAOYSA-N
+  molecular_formula: C18H9NO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 319.272
+  monoisotopic_mass: 319.04807
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66011
+  source_label: hernandonine
+  minted_identifier: antibioticmech:chebi-089742c749
+  role_terms:
+  - CHEBI:67268
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -39,6 +39,7 @@ xrefs:
 - pdb-ccd:3KD
 - reaxys:93605
 activity_roles:
+- CHEBI:149553
 - CHEBI:38068
 chemical_structure:
   smiles: '[H][C@@]12C3=C[C@H](O)[C@@H](O)[C@@]1([H])c1cc4c(cc1CN2CC3)OCO4'
@@ -55,6 +56,7 @@ source_concepts:
   source_label: lycorine
   minted_identifier: antibioticmech:chebi-8cbea8c874
   role_terms:
+  - CHEBI:149553
   - CHEBI:38068
   source_version: '2026-08-29'
 curation_history:
@@ -62,3 +64,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

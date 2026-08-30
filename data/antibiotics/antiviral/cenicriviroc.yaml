@@ -1,0 +1,69 @@
+identifier: CHEBI:149636
+label: cenicriviroc
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzazocines that is (5Z)-1,2,3,4-tetrahydro-1-benzazocine
+  which is substituted by a 2-methylpropyl, N-{4-[(S)-(1-propyl-1H-imidazol-5-yl)methanesulfinyl]phenyl}carboxamide
+  and 4-(2-butoxyethoxy)phenyl groups at positions 1, 5 and 8, respectively. It is
+  a potent chemokine 2 and 5 receptor antagonist currently in development for the
+  treatment of liver fibrosis in adults with nonalcoholic steatohepatitis (NASH).
+definition_source: ChEBI
+synonyms:
+- synonym_text: cenicrivirocum
+  synonym_type: INN
+  source: chebi
+- synonym_text: cénicriviroc
+  synonym_type: INN
+  source: chebi
+- synonym_text: (5E)-8-[4-(2-butoxyethoxy)phenyl]-1-(2-methylpropyl)-N-(4-{(S)-[(1-propyl-1H-imidazol-5-yl)methyl]sulfinyl}phenyl)-1,2,3,4-tetrahydro-1-benzazocine-5-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CVC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TAK-652
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TBR 652
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TBR-652
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:22063
+- CHEBI:24780
+- CHEBI:35618
+- CHEBI:39307
+- CHEBI:46786
+xrefs:
+- cas:497223-25-3
+- drugbank:DB11758
+- kegg.drug:D09878
+- wikipedia.en:Cenicriviroc
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: CCCCOCCOc1ccc(-c2ccc3c(c2)/C=C(/C(=O)Nc2ccc([S@@](=O)Cc4cncn4CCC)cc2)CCCN3CC(C)C)cc1
+  standard_inchi: InChI=1S/C41H52N4O4S/c1-5-7-22-48-23-24-49-38-15-10-32(11-16-38)33-12-19-40-35(25-33)26-34(9-8-21-44(40)28-31(3)4)41(46)43-36-13-17-39(18-14-36)50(47)29-37-27-42-30-45(37)20-6-2/h10-19,25-27,30-31H,5-9,20-24,28-29H2,1-4H3,(H,43,46)/b34-26+/t50-/m0/s1
+  standard_inchi_key: PNDKCRDVVKJPKG-WHERJAGFSA-N
+  molecular_formula: C41H52N4O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 696.958
+  monoisotopic_mass: 696.37093
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:149636
+  source_label: cenicriviroc
+  minted_identifier: antibioticmech:chebi-185bb288a0
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

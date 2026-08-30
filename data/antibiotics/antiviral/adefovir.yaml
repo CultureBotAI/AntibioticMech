@@ -1,0 +1,82 @@
+identifier: CHEBI:2469
+label: adefovir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of phosphonic acids that is methylphosphonic acid
+  in which one of the methyl hydrogens has been replaced by a 2-(6-amino-9H-purin-9-yl)ethoxy
+  group. An inhibitor of HIV-1 reverse transcriptase, the bis(t-butoxycarbonyloxymethyl)
+  ester (dipivoxil ester) prodrug is used to treat chronic hepatitis B viral infection.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '{[2-(6-amino-9H-purin-9-yl)ethoxy]methyl}phosphonic acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-(2-(Phosphonomethoxy)ethyl)adenine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-(2-Phosphonylmethoxyethyl)adenine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Adefovir
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DRG-0156
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS 0393
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS 393
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS-0393
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HSDB 8079
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(2-Phosphonylmethoxyethyl)adenine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PMEA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:20706
+- CHEBI:25698
+- CHEBI:26069
+xrefs:
+- cas:106941-25-7
+- drugbank:DB00718
+- kegg.compound:C11277
+- kegg.drug:D02768
+- pdb-ccd:5HG
+- reaxys:3561094
+- wikipedia.en:Adefovir
+activity_roles:
+- CHEBI:36044
+- CHEBI:53756
+chemical_structure:
+  smiles: Nc1ncnc2c1ncn2CCOCP(=O)(O)O
+  standard_inchi: InChI=1S/C8H12N5O4P/c9-7-6-8(11-3-10-7)13(4-12-6)1-2-17-5-18(14,15)16/h3-4H,1-2,5H2,(H2,9,10,11)(H2,14,15,16)
+  standard_inchi_key: SUPKOOSCJHTBAH-UHFFFAOYSA-N
+  molecular_formula: C8H12N5O4P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 273.189
+  monoisotopic_mass: 273.06269
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2469
+  source_label: adefovir
+  minted_identifier: antibioticmech:chebi-6c13d703a4
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

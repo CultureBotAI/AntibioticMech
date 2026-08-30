@@ -1,0 +1,52 @@
+identifier: CHEBI:66079
+label: integrastatin A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterotetracyclic compound that is 6H-6,12-epoxydibenzo[b,f]oxocin-11(12H)-one
+  substituted by hydroxy groups at positions 4, 7 and 8, a hydroxymethyl group position
+  1, methyl groups at positions 6 and 12 and methoxy groups at positions 3 and 9.
+  It is isolated as a racemate from Unidentified fungi (New mexico) and has been shown
+  to exhibit inhibitory activity against HIV-1 integrase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4,7,8-trihydroxy-1-(hydroxymethyl)-3,9-dimethoxy-6,12-dimethyl-6H-6,12-epoxydibenzo[b,f]oxocin-11(12H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: rac-4,7,8-trihydroxy-1-(hydroxymethyl)-3,9-dimethoxy-6,12-dimethyl-6H-6,12-epoxydibenzo[b,f]oxocin-11(12H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:26195
+- CHEBI:35618
+- CHEBI:35990
+- CHEBI:37407
+- CHEBI:38163
+- CHEBI:3992
+xrefs:
+- reaxys:9166117
+activity_roles:
+- CHEBI:67268
+chemical_structure:
+  smiles: COc1cc2c(c(O)c1O)C1(C)Oc3c(O)c(OC)cc(CO)c3C(C)(O1)C2=O
+  standard_inchi: InChI=1S/C20H20O9/c1-19-12-8(7-21)5-10(26-3)15(23)17(12)28-20(2,29-19)13-9(18(19)25)6-11(27-4)14(22)16(13)24/h5-6,21-24H,7H2,1-4H3
+  standard_inchi_key: LNYIJBSSELCSKA-UHFFFAOYSA-N
+  molecular_formula: C20H20O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 404.371
+  monoisotopic_mass: 404.11073
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66079
+  source_label: integrastatin A
+  minted_identifier: antibioticmech:chebi-768e7ef972
+  role_terms:
+  - CHEBI:67268
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

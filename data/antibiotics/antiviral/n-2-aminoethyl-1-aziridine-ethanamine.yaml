@@ -1,0 +1,59 @@
+identifier: CHEBI:145998
+label: N-(2-aminoethyl)-1-aziridine-ethanamine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A primary amino compound that is ethane-1,2-diamine in which the hydrogen
+  on one of the amino groups is replaced by a 2-(aziridin-1-yl)ethyl group. It is
+  a angiotensin-converting enzyme 2 (ACE2) inhibitor and a potential therapeutic agent
+  for treating SARS coronavirus infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[2-(aziridin-1-yl)ethyl]ethane-1,2-diamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(2-((2-aminoethyl)amino)ethyl)aziridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(2-aminoethyl)-1 aziridine-ethanamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(2-aminoethyl)-1-aziridineethanamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-(2-(1-aziridinyl)ethyl)-1,2-ethanediamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-[2-(aziridin-1-yl)ethyl]ethane-1,2-diamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22681
+- CHEBI:50994
+- CHEBI:50995
+xrefs:
+- cas:23435-23-6
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: NCCNCCN1CC1
+  standard_inchi: InChI=1S/C6H15N3/c7-1-2-8-3-4-9-5-6-9/h8H,1-7H2
+  standard_inchi_key: XJNAQZHMIAKQOK-UHFFFAOYSA-N
+  molecular_formula: C6H15N3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 129.207
+  monoisotopic_mass: 129.1266
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:145998
+  source_label: N-(2-aminoethyl)-1-aziridine-ethanamine
+  minted_identifier: antibioticmech:chebi-3871e25c2c
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,91 @@
+identifier: CHEBI:3049
+label: benzatropine mesylate
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The methanesulfonate salt of benzatropine. An acetylcholine receptor antagonist,
+  it is used in the treatment of Parkinson's disease, and to reduce parkinsonism and
+  akathisia side effects of antipsychotic treatments.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3-endo)-3-(diphenylmethoxy)-8-methyl-8-azabicyclo[3.2.1]octane methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3-endo)-3-(diphenylmethoxy)-8-methyl-8-azoniabicyclo[3.2.1]octane
+    methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-diphenylmethoxytropane mesylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-diphenylmethoxytropane methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3endo-benzhydryloxytropane mesylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3endo-benzhydryloxytropane methanesulphonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3α-(diphenylmethoxy)-1αH,5αH-tropane mesylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3α-(diphenylmethoxy)-1αH,5αH-tropane methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3α-(diphenylmethoxy)tropane mesylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3α-(diphenylmethoxy)tropane methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benzatropine methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benztropine mesilate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benztropine mesylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benztropine methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tropine benzohydryl ether mesylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tropine benzohydryl ether methanesulphonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38037
+xrefs:
+- beilstein:3826475
+- cas:132-17-2
+- drugbank:DB00245
+- kegg.drug:D00778
+- patent:US2595405
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CS(=O)(=O)[O-].[H][C@@]1(OC(c2ccccc2)c2ccccc2)C[C@]2([H])CC[C@]([H])(C1)[NH+]2C
+  standard_inchi: InChI=1S/C21H25NO.CH4O3S/c1-22-18-12-13-19(22)15-20(14-18)23-21(16-8-4-2-5-9-16)17-10-6-3-7-11-17;1-5(2,3)4/h2-11,18-21H,12-15H2,1H3;1H3,(H,2,3,4)/t18-,19+,20+;
+  standard_inchi_key: CPFJLLXFNPCTDW-BWSPSPBFSA-N
+  molecular_formula: C21H26NO.CH3O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 403.544
+  monoisotopic_mass: 403.18173
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3049
+  source_label: benzatropine mesylate
+  minted_identifier: antibioticmech:chebi-f93b4d3d3d
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

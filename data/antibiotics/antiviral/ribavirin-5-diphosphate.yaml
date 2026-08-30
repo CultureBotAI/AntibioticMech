@@ -1,0 +1,55 @@
+identifier: CHEBI:180481
+label: ribavirin 5'-diphosphate
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 1-ribosyltriazole that is ribavirin in which the hydroxy group at the
+  5'-position is replaced by a diphosphate group. It is the metabolite of the antiviral
+  agent ribavirin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-{5-O-[hydroxy(phosphonooxy)phosphoryl]-β-D-ribofuranosyl}-1H-1,2,4-triazole-3-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RDP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ribavirin diphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ribavirin-DP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140324
+- CHEBI:21080
+- CHEBI:29347
+- CHEBI:62733
+- CHEBI:63594
+xrefs:
+- cas:63142-70-1
+- chemspider:111258
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: NC(=O)c1ncn([C@@H]2O[C@H](COP(=O)(O)OP(=O)(O)O)[C@@H](O)[C@H]2O)n1
+  standard_inchi: InChI=1S/C8H14N4O11P2/c9-6(15)7-10-2-12(11-7)8-5(14)4(13)3(22-8)1-21-25(19,20)23-24(16,17)18/h2-5,8,13-14H,1H2,(H2,9,15)(H,19,20)(H2,16,17,18)/t3-,4-,5-,8-/m1/s1
+  standard_inchi_key: HWSPXPQHONXITJ-AFCXAGJDSA-N
+  molecular_formula: C8H14N4O11P2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 404.165
+  monoisotopic_mass: 404.01343
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:180481
+  source_label: ribavirin 5'-diphosphate
+  minted_identifier: antibioticmech:chebi-613e57b7b2
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

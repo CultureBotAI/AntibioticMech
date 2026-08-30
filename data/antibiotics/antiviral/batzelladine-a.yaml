@@ -1,0 +1,48 @@
+identifier: CHEBI:65466
+label: batzelladine A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxylic ester obtained by the formal condensation of (2aS,3S,4R,7R,8aS)-4-methyl-7-nonyl-2,2a,3,4,6,7,8,8a-octahydro-1H-5,6,8b-triazaacenaphthylene-3-carboxylic
+  acid with the hydroxy group of 4-carbamimidamidobutyl (3R)-3-(9-hydroxynonyl)-1-imino-1,2,3,5,6,7-hexahydropyrrolo[1,2-c]pyrimidine-4-carboxylate.
+  Isolated from a bright red Caribbean sponge, Batzella, it has potential anti-HIV
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 9-{(3R)-4-[(4-carbamimidamidobutoxy)carbonyl]-1-imino-1,2,3,5,6,7-hexahydropyrrolo[1,2-c]pyrimidin-3-yl}nonyl
+    (2aS,3S,4R,7R,8aS)-4-methyl-7-nonyl-2,2a,3,4,6,7,8,8a-octahydro-1H-5,6,8b-triazaacenaphthylene-3-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22315
+- CHEBI:24436
+- CHEBI:26979
+- CHEBI:33308
+- CHEBI:38670
+- CHEBI:88047
+xrefs:
+- cas:147664-18-4
+activity_roles:
+- CHEBI:64947
+chemical_structure:
+  smiles: '[H][C@]12CC[C@@]3([H])[C@@H](C(=O)OCCCCCCCCC[C@H]4NC(=N)N5CCCC5=C4C(=O)OCCCCNC(=N)N)[C@@H](C)N=C(N[C@H](CCCCCCCCC)C1)N23'
+  standard_inchi: InChI=1S/C42H73N9O4/c1-3-4-5-6-8-11-14-20-31-29-32-23-24-35-36(30(2)47-42(48-31)51(32)35)38(52)54-27-17-13-10-7-9-12-15-21-33-37(34-22-19-26-50(34)41(45)49-33)39(53)55-28-18-16-25-46-40(43)44/h30-33,35-36H,3-29H2,1-2H3,(H2,45,49)(H,47,48)(H4,43,44,46)/t30-,31-,32+,33-,35+,36+/m1/s1
+  standard_inchi_key: WZGMBJKFYVONHF-LJQXCJTBSA-N
+  molecular_formula: C42H73N9O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 768.105
+  monoisotopic_mass: 767.57855
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65466
+  source_label: batzelladine A
+  minted_identifier: antibioticmech:chebi-442d37d967
+  role_terms:
+  - CHEBI:64947
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,39 @@
+identifier: CHEBI:65996
+label: halistanol sulfate F
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic sodium salt that is the trisodium salt of halistanol sulfonic
+  acid F. Isolated from the marine sponge Pseudaxinyssa digitata, it exhibits anti-HIV
+  activity.
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:38700
+xrefs:
+- reaxys:12013883
+activity_roles:
+- CHEBI:64947
+- CHEBI:64949
+chemical_structure:
+  smiles: '[H][C@@]12C[C@H](OS(=O)(=O)[O-])[C@@]3([H])C[C@H](OS(=O)(=O)[O-])[C@@H](OS(=O)(=O)[O-])C[C@]3(C)[C@@]1([H])CC[C@@]1(C)[C@@]2([H])CC[C@]1([H])[C@H](C)CCC(C)C(C)(C)CC.[Na+].[Na+].[Na+]'
+  standard_inchi: InChI=1S/C30H54O12S3.3Na/c1-8-28(4,5)19(3)10-9-18(2)21-11-12-22-20-15-25(40-43(31,32)33)24-16-26(41-44(34,35)36)27(42-45(37,38)39)17-30(24,7)23(20)13-14-29(21,22)6;;;/h18-27H,8-17H2,1-7H3,(H,31,32,33)(H,34,35,36)(H,37,38,39);;;/q;3*+1/p-3/t18-,19?,20+,21-,22+,23+,24-,25+,26+,27+,29-,30-;;;/m1.../s1
+  standard_inchi_key: YMPFBLQGUNEWQH-FLZIPAQVSA-K
+  molecular_formula: C30H51O12S3.3Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 768.897
+  monoisotopic_mass: 768.22357
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65996
+  source_label: halistanol sulfate F
+  minted_identifier: antibioticmech:chebi-9a0ea0345d
+  role_terms:
+  - CHEBI:64947
+  - CHEBI:64949
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

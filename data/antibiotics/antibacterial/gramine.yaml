@@ -59,6 +59,7 @@ xrefs:
 - metacyc.compound:CPD-8915
 - reaxys:140521
 activity_roles:
+- CHEBI:22587
 - CHEBI:33282
 chemical_structure:
   smiles: CN(C)Cc1cnc2ccccc12
@@ -75,6 +76,7 @@ source_concepts:
   source_label: gramine
   minted_identifier: antibioticmech:chebi-b52848723e
   role_terms:
+  - CHEBI:22587
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -82,3 +84,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

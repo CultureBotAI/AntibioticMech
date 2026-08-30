@@ -22,6 +22,7 @@ xrefs:
 - patent:US5679828
 - reaxys:2678211
 activity_roles:
+- CHEBI:64946
 - CHEBI:70868
 chemical_structure:
   smiles: '[H][C@]12CC[C@@]3([H])[C@@](C)(CC[C@@]4(C(=O)O)CC[C@@H](C(C)C)[C@@]43[H])[C@]1(C)CC[C@@]1([H])C(C)(C)[C@@H](O)CC[C@]21C'
@@ -38,6 +39,7 @@ source_concepts:
   source_label: dihydrobetulinic acid
   minted_identifier: antibioticmech:chebi-d89a7ded3b
   role_terms:
+  - CHEBI:64946
   - CHEBI:70868
   source_version: '2026-08-29'
 curation_history:
@@ -45,3 +47,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

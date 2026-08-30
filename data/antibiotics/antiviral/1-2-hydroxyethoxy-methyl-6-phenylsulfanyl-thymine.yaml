@@ -1,0 +1,64 @@
+identifier: CHEBI:43060
+label: 1-[(2-hydroxyethoxy)methyl]-6-(phenylsulfanyl)thymine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyrimidone that is thymine which is substituted at positions 1 and 6
+  by a (2-hydroxyethoxy)methyl group and a phenylsulfanyl group, respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-[(2-hydroxyethoxy)methyl]-5-methyl-6-(phenylsulfanyl)pyrimidine-2,4(1H,3H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(2-HYDROXYETHYLOXYMETHYL)-6-PHENYL THIOTHYMINE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-[(2-hydroxyethoxy)methyl]-6-(phenylthio)thymine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-[(2-hydroxyethoxy)methyl]-6-phenylthiothymine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Hept
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HEPT
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HMPTT
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:35683
+- CHEBI:38337
+xrefs:
+- cas:123027-56-5
+- pdb-ccd:HEF
+- reaxys:4271052
+activity_roles:
+- CHEBI:36044
+- CHEBI:53756
+chemical_structure:
+  smiles: Cc1c(Sc2ccccc2)n(COCCO)c(=O)nc1=O
+  standard_inchi: InChI=1S/C14H16N2O4S/c1-10-12(18)15-14(19)16(9-20-8-7-17)13(10)21-11-5-3-2-4-6-11/h2-6,17H,7-9H2,1H3,(H,15,18,19)
+  standard_inchi_key: HDMHBHNRWDNNCD-UHFFFAOYSA-N
+  molecular_formula: C14H16N2O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 308.359
+  monoisotopic_mass: 308.08308
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:43060
+  source_label: 1-[(2-hydroxyethoxy)methyl]-6-(phenylsulfanyl)thymine
+  minted_identifier: antibioticmech:chebi-cff3e50e11
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

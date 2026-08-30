@@ -1,0 +1,46 @@
+identifier: CHEBI:65717
+label: cytonic acid A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzoate ester obtained by the formal condensation of the hydroxy group
+  at position 4 of 4-[(2,4-dihydroxy-6-propylbenzoyl)oxy]-2-hydroxy-6-propylbenzoic
+  acid with the carboxy group of 2,4-dihydroxy-6-pentylbenzoic acid (olivetolic acid).
+  It is isolated from the endophytic fungi Cytonaema and acts as an inhibitor of human
+  cytomegalovirus (hCMV) protease.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-({4-[(2,4-dihydroxy-6-pentylbenzoyl)oxy]-2-hydroxy-6-propylbenzoyl}oxy)-2-hydroxy-6-propylbenzoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25389
+- CHEBI:33572
+- CHEBI:36054
+xrefs:
+- reaxys:8667623
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: CCCCCc1cc(O)cc(O)c1C(=O)Oc1cc(O)c(C(=O)Oc2cc(O)c(C(=O)O)c(CCC)c2)c(CCC)c1
+  standard_inchi: InChI=1S/C32H36O10/c1-4-7-8-11-20-12-21(33)15-24(34)29(20)32(40)42-23-14-19(10-6-3)28(26(36)17-23)31(39)41-22-13-18(9-5-2)27(30(37)38)25(35)16-22/h12-17,33-36H,4-11H2,1-3H3,(H,37,38)
+  standard_inchi_key: SQZYUOYBTIOEEA-UHFFFAOYSA-N
+  molecular_formula: C32H36O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 580.63
+  monoisotopic_mass: 580.23085
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65717
+  source_label: cytonic acid A
+  minted_identifier: antibioticmech:chebi-c62e061250
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

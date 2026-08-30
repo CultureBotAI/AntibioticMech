@@ -1,0 +1,67 @@
+identifier: CHEBI:8695
+label: quercetagetin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hexahydroxyflavone that is flavone substituted by hydroxy groups at
+  positions 3, 5, 6, 7, 3' and 4' respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(3,4-dihydroxyphenyl)-3,5,6,7-tetrahydroxy-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(3,4-dihydroxyphenyl)-3,5,6,7-tetrahydroxy-4-benzopyrone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(3,4-dihydroxyphenyl)-3,5,6,7-tetrahydroxy-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,3',4',5,6,7-hexahydroxyflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,5,6,7,3',4'-hexahydroxyflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Hydroxyquercetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quercetagetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24561
+- CHEBI:28802
+xrefs:
+- cas:90-18-6
+- foodb.food:FDB011897
+- kegg.compound:C10122
+- knapsack:C00004677
+- lipidmaps:LMPK12112983
+- patent:KR20120035741
+- pdb-ccd:MYU
+- reaxys:332041
+- wikipedia.en:Quercetagetin
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: O=c1c(O)c(-c2ccc(O)c(O)c2)oc2cc(O)c(O)c(O)c12
+  standard_inchi: InChI=1S/C15H10O8/c16-6-2-1-5(3-7(6)17)15-14(22)13(21)10-9(23-15)4-8(18)11(19)12(10)20/h1-4,16-20,22H
+  standard_inchi_key: ZVOLCUVKHLEPEV-UHFFFAOYSA-N
+  molecular_formula: C15H10O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 318.237
+  monoisotopic_mass: 318.03757
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:8695
+  source_label: quercetagetin
+  minted_identifier: antibioticmech:chebi-835514c03c
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

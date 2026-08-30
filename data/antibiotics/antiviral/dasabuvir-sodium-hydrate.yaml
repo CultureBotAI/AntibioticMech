@@ -1,0 +1,51 @@
+identifier: CHEBI:85178
+label: dasabuvir sodium hydrate
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrate that is the monohydrate form of dasabuvir sodium; used in combination
+  with ombitasvir, paritaprevir and ritonavir (under the trade name Viekira Pak) for
+  treatment of chronic hepatitis C virus genotype 1 infection as well as cirrhosis
+  of the liver.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sodium {6-[3-tert-butyl-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-2-methoxyphenyl]naphthalen-2-yl}(methanesulfonyl)azanide—water
+    (1/1/1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ABT-333 sodium monohydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dasabuvir sodium monohydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35505
+xrefs:
+- cas:1456607-55-8
+- kegg.drug:D10581
+- wikipedia.en:Dasabuvir
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: COc1c(-c2ccc3cc([N-]S(C)(=O)=O)ccc3c2)cc(-n2ccc(=O)nc2=O)cc1C(C)(C)C.O.[Na+]
+  standard_inchi: InChI=1S/C26H26N3O5S.Na.H2O/c1-26(2,3)22-15-20(29-11-10-23(30)27-25(29)31)14-21(24(22)34-4)18-7-6-17-13-19(28-35(5,32)33)9-8-16(17)12-18;;/h6-15H,1-5H3,(H,27,30,31);;1H2/q-1;+1;
+  standard_inchi_key: OGXIDVVYYFRBGF-UHFFFAOYSA-N
+  molecular_formula: C26H26N3O5S.H2O.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 533.582
+  monoisotopic_mass: 533.15965
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85178
+  source_label: dasabuvir sodium hydrate
+  minted_identifier: antibioticmech:chebi-fe0dd547c4
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

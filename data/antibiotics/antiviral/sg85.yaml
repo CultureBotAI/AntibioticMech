@@ -1,0 +1,58 @@
+identifier: CHEBI:147346
+label: SG85
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A secondary carboxamide resulting from the formal condensation of the
+  carboxy group of N-[(benzyloxy)carbonyl]-O-tert-butyl-L-serine with the primary
+  amino group of ethyl (2E,4S)-5-[(3S)-2-oxopyrrolidin-3-yl]-4-(L-phenylalanylamino)pent-2-enoate.
+  It is a potent enterovirus 3C protease inhibitor with EC50 of 180 nM against enterovirus
+  71 (EV71) and 60 nM against human rhinovirus 14 in a live virus-cell-based assay.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[(benzyloxy)carbonyl]-O-tert-butyl-L-seryl-N-{(2S,3E)-5-ethoxy-5-oxo-1-[(3S)-2-oxopyrrolidin-3-yl]pent-3-en-2-yl}-L-phenylalaninamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SG 85
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SG-85
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:23990
+- CHEBI:25698
+- CHEBI:51702
+- CHEBI:74223
+- CHEBI:84135
+- CHEBI:84144
+- CHEBI:90628
+xrefs:
+- cas:1575662-24-6
+activity_roles:
+- CHEBI:149553
+- CHEBI:22587
+chemical_structure:
+  smiles: CCOC(=O)/C=C/[C@H](C[C@@H]1CCNC1=O)NC(=O)[C@H](Cc1ccccc1)NC(=O)[C@H](COC(C)(C)C)NC(=O)OCc1ccccc1
+  standard_inchi: InChI=1S/C35H46N4O8/c1-5-45-30(40)17-16-27(21-26-18-19-36-31(26)41)37-32(42)28(20-24-12-8-6-9-13-24)38-33(43)29(23-47-35(2,3)4)39-34(44)46-22-25-14-10-7-11-15-25/h6-17,26-29H,5,18-23H2,1-4H3,(H,36,41)(H,37,42)(H,38,43)(H,39,44)/b17-16+/t26-,27+,28-,29-/m0/s1
+  standard_inchi_key: CTAXDRJNQQBEIB-VCJIVHKYSA-N
+  molecular_formula: C35H46N4O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 650.773
+  monoisotopic_mass: 650.33156
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:147346
+  source_label: SG85
+  minted_identifier: antibioticmech:chebi-d909953997
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

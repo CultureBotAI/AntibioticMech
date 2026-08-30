@@ -1,0 +1,43 @@
+identifier: CHEBI:66823
+label: ophioglonin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A homoflavonoid that is isochromeno[4,3-b]chromen-7(5H)-one substituted
+  by hydroxy groups at positions 3, 4, 8 and 10. Isolated from Ophioglossum petiolatum,
+  it exhibits anti-HBV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,4,8,10-tetrahydroxyisochromeno[4,3-b]chromen-7(5H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:38163
+- CHEBI:76405
+xrefs:
+- reaxys:15768999
+activity_roles:
+- CHEBI:64951
+chemical_structure:
+  smiles: O=c1c2c(oc3cc(O)cc(O)c13)-c1ccc(O)c(O)c1CO2
+  standard_inchi: InChI=1S/C16H10O7/c17-6-3-10(19)12-11(4-6)23-15-7-1-2-9(18)13(20)8(7)5-22-16(15)14(12)21/h1-4,17-20H,5H2
+  standard_inchi_key: XUFSGVREMRKLBR-UHFFFAOYSA-N
+  molecular_formula: C16H10O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 314.249
+  monoisotopic_mass: 314.04265
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66823
+  source_label: ophioglonin
+  minted_identifier: antibioticmech:chebi-94e1bc49af
+  role_terms:
+  - CHEBI:64951
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

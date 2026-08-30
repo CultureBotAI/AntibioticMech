@@ -1,0 +1,82 @@
+identifier: CHEBI:50667
+label: mercaptopurine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of purines that is 6,7-dihydro-1H-purine carrying
+  a thione group at position 6. An adenine analogue, it is used in the treatment of
+  acute lymphocytic leukemia (ALL), chronic myeloid leukemia (CML), Crohn's disease,
+  and ulcerative colitis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Puri-Nethol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Purinethol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Mercaptopurina
+  synonym_type: INN
+  source: chebi
+- synonym_text: mercaptopurinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1,7-dihydro-6H-purine-6-thione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6 MP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-MP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Mercaptopurine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Thiohypoxanthine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Thioxopurine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Mercaptopurine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Mercapurin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26401
+xrefs:
+- cas:50-44-2
+- drugbank:DB01033
+- kegg.compound:C02380
+- kegg.drug:D04931
+- patent:US2697709
+- patent:US2721866
+- pdb-ccd:PM6
+- reaxys:132916
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: S=c1ncnc2ncnc12
+  standard_inchi: InChI=1S/C5H4N4S/c10-5-3-4(7-1-6-3)8-2-9-5/h1-2H,(H2,6,7,8,9,10)
+  standard_inchi_key: GLVAUDGFNGKCSF-UHFFFAOYSA-N
+  molecular_formula: C5H4N4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 152.182
+  monoisotopic_mass: 152.01567
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:50667
+  source_label: mercaptopurine
+  minted_identifier: antibioticmech:chebi-ebc3591b4a
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

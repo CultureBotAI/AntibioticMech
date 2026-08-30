@@ -33,6 +33,7 @@ xrefs:
 - cas:123154-43-8
 - reaxys:8721623
 activity_roles:
+- CHEBI:22587
 - CHEBI:38068
 chemical_structure:
   smiles: C[C@H](O)C#CC#CC#CC#CCCCCCCCC(=O)O
@@ -49,6 +50,7 @@ source_concepts:
   source_label: minquartynoic acid
   minted_identifier: antibioticmech:chebi-21b0213b4e
   role_terms:
+  - CHEBI:22587
   - CHEBI:38068
   source_version: '2026-08-29'
 curation_history:
@@ -56,3 +58,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

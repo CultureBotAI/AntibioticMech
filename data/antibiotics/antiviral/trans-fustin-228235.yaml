@@ -1,0 +1,55 @@
+identifier: CHEBI:228235
+label: (−)-trans-fustin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The (2S,3S)-stereoisomer of fustin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S,3S)-2-(3,4-dihydroxyphenyl)-3,7-dihydroxy-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,3S)-2-(3,4-dihydroxyphenyl)-3,7-dihydroxy-2,3-dihydro-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,3S)-3,7,3',4'-tetrahydroxyflavanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,3S)-fustin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-2,3-dihydrofisetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-fustin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:5202
+xrefs:
+- cas:17654-28-3
+- knapsack:C00008561
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: O=C1c2ccc(O)cc2O[C@@H](c2ccc(O)c(O)c2)[C@@H]1O
+  standard_inchi: InChI=1S/C15H12O6/c16-8-2-3-9-12(6-8)21-15(14(20)13(9)19)7-1-4-10(17)11(18)5-7/h1-6,14-18,20H/t14-,15+/m1/s1
+  standard_inchi_key: FNUPUYFWZXZMIE-CABCVRRESA-N
+  molecular_formula: C15H12O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 288.255
+  monoisotopic_mass: 288.06339
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:228235
+  source_label: (−)-trans-fustin
+  minted_identifier: antibioticmech:chebi-23157b0ce8
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

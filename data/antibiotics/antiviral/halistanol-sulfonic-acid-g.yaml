@@ -1,0 +1,40 @@
+identifier: CHEBI:72479
+label: halistanol sulfonic acid G
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A steroid sulfate that is 5α-ergostane substituted by sulfate groups at
+  positions 2, 3 and 6 (the (2β,3α,6α stereoisomer).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2β,3α,5α,6α)-ergostane-2,3,6-triyl tris(hydrogen sulfate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:16158
+activity_roles:
+- CHEBI:64947
+- CHEBI:64949
+chemical_structure:
+  smiles: '[H][C@@]12C[C@H](OS(=O)(=O)O)[C@@]3([H])C[C@H](OS(=O)(=O)O)[C@@H](OS(=O)(=O)O)C[C@]3(C)[C@@]1([H])CC[C@@]1(C)[C@@]2([H])CC[C@]1([H])[C@H](C)CC[C@H](C)C(C)C'
+  standard_inchi: InChI=1S/C28H50O12S3/c1-16(2)17(3)7-8-18(4)20-9-10-21-19-13-24(38-41(29,30)31)23-14-25(39-42(32,33)34)26(40-43(35,36)37)15-28(23,6)22(19)11-12-27(20,21)5/h16-26H,7-15H2,1-6H3,(H,29,30,31)(H,32,33,34)(H,35,36,37)/t17-,18+,19-,20+,21-,22-,23+,24-,25-,26-,27+,28+/m0/s1
+  standard_inchi_key: WBHAMVHLRVKJRH-VZAWWNCJSA-N
+  molecular_formula: C28H50O12S3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 674.897
+  monoisotopic_mass: 674.24644
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:72479
+  source_label: halistanol sulfonic acid G
+  minted_identifier: antibioticmech:chebi-59b7bde878
+  role_terms:
+  - CHEBI:64947
+  - CHEBI:64949
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

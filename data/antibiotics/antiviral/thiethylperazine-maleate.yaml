@@ -1,0 +1,61 @@
+identifier: CHEBI:32216
+label: thiethylperazine maleate
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: Torecan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 2-(ethylsulfanyl)-10-[3-(4-methylpiperazin-1-yl)propyl]-10H-phenothiazine
+    di[(2Z)-but-2-enedioate]
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10H-Phenothiazine, 2-(ethylthio)-10-(3-(4-methyl-1-piperazinyl)propyl)-,
+    (Z)-2-butenedioate (1:2)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(Ethylthio)-10-(3-(4-methyl-1-piperazinyl)propyl)phenothiazine dimaleate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Ethylmercapto-10-(3-(1-methyl-4-piperazinyl)propyl)phenothiazine
+    dimaleate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Thiethylperazine dimaleate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tietylperazine maleate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:50221
+xrefs:
+- beilstein:3864479
+- cas:1179-69-7
+- drugbank:DB00372
+- kegg.drug:D01130
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CCSc1ccc2c(c1)N(CCCN1CCN(C)CC1)c1ccccc1S2.O=C([O-])/C=C\C(=O)[O-].O=C([O-])/C=C\C(=O)[O-].[H+].[H+].[H+].[H+]
+  standard_inchi: InChI=1S/C22H29N3S2.2C4H4O4/c1-3-26-18-9-10-22-20(17-18)25(19-7-4-5-8-21(19)27-22)12-6-11-24-15-13-23(2)14-16-24;2*5-3(6)1-2-4(7)8/h4-5,7-10,17H,3,6,11-16H2,1-2H3;2*1-2H,(H,5,6)(H,7,8)/b;2*2-1-
+  standard_inchi_key: RVBRTNPNFYFDMZ-SPIKMXEPSA-N
+  molecular_formula: 4H.C22H29N3S2.2C4H2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 631.773
+  monoisotopic_mass: 631.20221
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32216
+  source_label: thiethylperazine maleate
+  minted_identifier: antibioticmech:chebi-efe8b3630c
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

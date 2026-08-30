@@ -62,6 +62,7 @@ xrefs:
 - chembl:CHEMBL123292
 - pubchem.compound:2900
 activity_roles:
+- CHEBI:149553
 - CHEBI:24127
 - CHEBI:33281
 - CHEBI:35718
@@ -82,6 +83,7 @@ source_concepts:
   source_label: cycloheximide
   minted_identifier: antibioticmech:aro-eb6ceb3794
   role_terms:
+  - CHEBI:149553
   - CHEBI:24127
   - CHEBI:33281
   - CHEBI:35718
@@ -91,6 +93,7 @@ source_concepts:
   source_label: cycloheximide
   minted_identifier: antibioticmech:chebi-122ccc7d98
   role_terms:
+  - CHEBI:149553
   - CHEBI:24127
   - CHEBI:33281
   - CHEBI:35718
@@ -123,6 +126,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T01:13:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T01:42:45Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

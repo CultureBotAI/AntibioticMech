@@ -1,0 +1,83 @@
+identifier: CHEBI:3649
+label: chlorpromazine hydrochloride
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The hydrochloride salt of chlorpromazine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Aminazin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Ampliactil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Chlorazin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Hibernal
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Largactil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Plegomazin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Propaphenin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Thorazine
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 3-(2-chloro-10H-phenothiazin-10-yl)-N,N-dimethylpropan-1-amine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-chloro-10-(3-(dimethylamino)propyl)phenothiazine monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-chloro-N,N-dimethyl-10H-phenothiazine-10-propanamine monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chloropromazine monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chlorpromazine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chlorpromazinium chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+- CHEBI:38093
+xrefs:
+- cas:69-09-0
+- drugbank:DB00477
+- kegg.compound:C07952
+- kegg.drug:D00789
+- reaxys:3779989
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CN(C)CCCN1c2ccccc2Sc2ccc(Cl)cc21.[Cl-].[H+]
+  standard_inchi: InChI=1S/C17H19ClN2S.ClH/c1-19(2)10-5-11-20-14-6-3-4-7-16(14)21-17-9-8-13(18)12-15(17)20;/h3-4,6-9,12H,5,10-11H2,1-2H3;1H
+  standard_inchi_key: FBSMERQALIEGJT-UHFFFAOYSA-N
+  molecular_formula: H.C17H19ClN2S.Cl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 355.334
+  monoisotopic_mass: 354.07243
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3649
+  source_label: chlorpromazine hydrochloride
+  minted_identifier: antibioticmech:chebi-af6ff3d76c
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

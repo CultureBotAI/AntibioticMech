@@ -1,0 +1,53 @@
+identifier: CHEBI:66080
+label: integrastatin B
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterotetracyclic compound that is 11,12-dihydro-6H-6,12-epoxydibenzo[b,f]oxocine
+  substituted by hydroxy groups at positions 4, 7 and 8, methoxy groups at positions
+  3 and 9, methyl groups at positions 6 and 12, an oxo group at position 11 and a
+  formyl group at position 1. It is isolated as a racemate from Ascochyta and exhibits
+  inhibitory activity against HIV-1 integrase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4,7,8-trihydroxy-3,9-dimethoxy-6,12-dimethyl-11-oxo-11,12-dihydro-6H-6,12-epoxydibenzo[b,f]oxocine-1-carbaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: rac-4,7,8-trihydroxy-3,9-dimethoxy-6,12-dimethyl-11-oxo-11,12-dihydro-6H-6,12-epoxydibenzo[b,f]oxocine-1-carbaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17478
+- CHEBI:26195
+- CHEBI:35618
+- CHEBI:35990
+- CHEBI:37407
+- CHEBI:38163
+- CHEBI:3992
+xrefs:
+- cas:324518-09-4
+- reaxys:9163563
+activity_roles:
+- CHEBI:67268
+chemical_structure:
+  smiles: COc1cc2c(c(O)c1O)C1(C)Oc3c(O)c(OC)cc(C=O)c3C(C)(O1)C2=O
+  standard_inchi: InChI=1S/C20H18O9/c1-19-12-8(7-21)5-10(26-3)15(23)17(12)28-20(2,29-19)13-9(18(19)25)6-11(27-4)14(22)16(13)24/h5-7,22-24H,1-4H3
+  standard_inchi_key: PECRJLBPKXQZDC-UHFFFAOYSA-N
+  molecular_formula: C20H18O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 402.355
+  monoisotopic_mass: 402.09508
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66080
+  source_label: integrastatin B
+  minted_identifier: antibioticmech:chebi-5561e995d4
+  role_terms:
+  - CHEBI:67268
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

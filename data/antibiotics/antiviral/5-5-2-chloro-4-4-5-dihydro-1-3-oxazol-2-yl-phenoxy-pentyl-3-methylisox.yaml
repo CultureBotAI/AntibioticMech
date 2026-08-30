@@ -1,0 +1,50 @@
+identifier: CHEBI:47727
+label: 5-{5-[2-chloro-4-(4,5-dihydro-1,3-oxazol-2-yl)phenoxy]pentyl}-3-methylisoxazole
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An isoxazole compound having a methyl substituent at the 3-position and
+  a 5-[2-chloro-4-(4,5-dihydro-1,3-oxazol-2-yl)phenoxy]pentyl substituent at the 5-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-(5-(6-Chloro-4-(4,5-dihydro-2-oxazolyl)phenoxy)pentyl)-3-methylisoxazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Win 53338
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Win-53338
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:55373
+- CHEBI:83403
+xrefs:
+- beilstein:3627109
+- cas:98033-68-2
+- kegg.compound:C06489
+- pdb-ccd:W33
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: Cc1cc(CCCCCOc2ccc(C3=NCCO3)cc2Cl)on1
+  standard_inchi: InChI=1S/C18H21ClN2O3/c1-13-11-15(24-21-13)5-3-2-4-9-22-17-7-6-14(12-16(17)19)18-20-8-10-23-18/h6-7,11-12H,2-5,8-10H2,1H3
+  standard_inchi_key: FCSKOFQQCWLGMV-UHFFFAOYSA-N
+  molecular_formula: C18H21ClN2O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 348.83
+  monoisotopic_mass: 348.12407
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:47727
+  source_label: 5-{5-[2-chloro-4-(4,5-dihydro-1,3-oxazol-2-yl)phenoxy]pentyl}-3-methylisoxazole
+  minted_identifier: antibioticmech:chebi-aaf12c7640
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,50 @@
+identifier: CHEBI:230532
+label: SMIP004
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of N-benzylacetamides that is benzene substituted
+  by acetylnitrilo, methyl, and butyl groups at positions 1, 2 and 4, respectively.
+  It is a SKP2 E3 ligase inhibitor and a selective apoptosis inducer of human prostate
+  cancer cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-(4-butyl-2-methylphenyl)acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SMIP 004
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SMIP-004
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27024
+- CHEBI:38976
+- CHEBI:51931
+xrefs:
+- cas:143360-00-3
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CCCCc1ccc(NC(C)=O)c(C)c1
+  standard_inchi: InChI=1S/C13H19NO/c1-4-5-6-12-7-8-13(10(2)9-12)14-11(3)15/h7-9H,4-6H2,1-3H3,(H,14,15)
+  standard_inchi_key: ZFVMECVBUGMWIX-UHFFFAOYSA-N
+  molecular_formula: C13H19NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 205.301
+  monoisotopic_mass: 205.14666
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:230532
+  source_label: SMIP004
+  minted_identifier: antibioticmech:chebi-65e7db080f
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

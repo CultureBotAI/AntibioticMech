@@ -1,0 +1,58 @@
+identifier: CHEBI:167176
+label: GRL-0617
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzamide resulting from the formal condensation of the carboxy group
+  of 5-amino-2-methylbenzoic acid with the amino group of (1R)-1-(naphthalen-1-yl)ethan-1-amine.
+  It is a potent noncovalent inhibitor (IC50 = 600 nM) of severe acute respiratory
+  syndrome-coronavirus papain-like protease (SARS-CoV PLpro).
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-amino-2-methyl-N-[(1R)-1-(naphthalen-1-yl)ethyl]benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-amino-2-methyl-N-[(1R)-1-(1-naphthalenyl)ethyl]benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-amino-2-methyl-N-[(R)-1-(1-naphthyl)ethyl]benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GRL 0617
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GRL0617
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:22702
+- CHEBI:25477
+- CHEBI:48975
+xrefs:
+- cas:1093070-16-6
+- pdb-ccd:TTT
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: Cc1ccc(N)cc1C(=O)N[C@H](C)c1cccc2ccccc12
+  standard_inchi: InChI=1S/C20H20N2O/c1-13-10-11-16(21)12-19(13)20(23)22-14(2)17-9-5-7-15-6-3-4-8-18(15)17/h3-12,14H,21H2,1-2H3,(H,22,23)/t14-/m1/s1
+  standard_inchi_key: UVERBUNNCOKGNZ-CQSZACIVSA-N
+  molecular_formula: C20H20N2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 304.393
+  monoisotopic_mass: 304.15756
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:167176
+  source_label: GRL-0617
+  minted_identifier: antibioticmech:chebi-c97057ae5c
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

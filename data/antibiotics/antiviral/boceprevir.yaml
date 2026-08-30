@@ -1,0 +1,71 @@
+identifier: CHEBI:68621
+label: boceprevir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A synthetic tripeptide consisting of N-(tert-butylcarbamoyl)-3-methyl-L-valyl,
+  a cyclopropyl-fused prolyl and 3-amino-4-cyclobutyl-2-oxobutanamide residues joined
+  in sequence. Used for treatment of chronic hepatitis C virus genotype 1 infection.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Victrelis
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: (1R,2S,5S)-N-(4-amino-1-cyclobutyl-3,4-dioxobutan-2-yl)-3-[N-(tert-butylcarbamoyl)-3-methyl-L-valyl]-6,6-dimethyl-3-azabicyclo[3.1.0]hexane-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SCH 503034
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:47857
+- CHEBI:47923
+xrefs:
+- cas:394730-60-0
+- drugcentral:4172
+- kegg.drug:D08876
+- patent:US2005249702
+- patent:US2006275366
+- patent:US2006276404
+- patent:US2006276406
+- patent:US2006276407
+- patent:US2006281688
+- patent:US2006281689
+- patent:US2007010431
+- patent:US2007021351
+- patent:US2007149459
+- patent:US2007287664
+- patent:WO2006130553
+- patent:WO2006130688
+- patent:WO2007092616
+- patent:WO2008073282
+- patent:WO2008076316
+- patent:WO2008079216
+- patent:WO2010117936
+- pdb-ccd:HU5
+- reaxys:10502086
+- wikipedia.en:Boceprevir
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: '[H][C@@]12[C@@H](C(=O)NC(CC3CCC3)C(=O)C(N)=O)N(C(=O)[C@@H](NC(=O)NC(C)(C)C)C(C)(C)C)C[C@]1([H])C2(C)C'
+  standard_inchi: InChI=1S/C27H45N5O5/c1-25(2,3)20(30-24(37)31-26(4,5)6)23(36)32-13-15-17(27(15,7)8)18(32)22(35)29-16(19(33)21(28)34)12-14-10-9-11-14/h14-18,20H,9-13H2,1-8H3,(H2,28,34)(H,29,35)(H2,30,31,37)/t15-,16?,17-,18-,20+/m0/s1
+  standard_inchi_key: LHHCSNFAOIFYRV-DOVBMPENSA-N
+  molecular_formula: C27H45N5O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 519.687
+  monoisotopic_mass: 519.34207
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68621
+  source_label: boceprevir
+  minted_identifier: antibioticmech:chebi-1ea347d2b3
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

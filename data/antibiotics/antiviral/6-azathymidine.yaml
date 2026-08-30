@@ -1,0 +1,62 @@
+identifier: CHEBI:131580
+label: 6-azathymidine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A N-glycosyl-1,2,4-triazine that is the 6-aza analogue of thymidine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(2-deoxy-β-D-erythro-pentofuranosyl)-6-methyl-1,2,4-triazine-3,5(2H,4H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2'-deoxy-6-azathymidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2'-deoxy-6-azathymine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(2'-Deoxy-D-ribofuranosyl)-6-methyl-as-triazine-3,5(2H,4H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(2-Deoxy-beta-D-erythro-pentofuranosyl)-6-methyl-1,2,4-triazine-3,5(2H,4H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-aza-2'-deoxythymidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-aza-2'-deoxythymine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Azathymidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48018
+- CHEBI:60783
+xrefs:
+- cas:13410-30-5
+- reaxys:30380
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: Cc1nn([C@H]2C[C@H](O)[C@@H](CO)O2)c(=O)nc1=O
+  standard_inchi: InChI=1S/C9H13N3O5/c1-4-8(15)10-9(16)12(11-4)7-2-5(14)6(3-13)17-7/h5-7,13-14H,2-3H2,1H3,(H,10,15,16)/t5-,6+,7+/m0/s1
+  standard_inchi_key: LXHOFEUVCQUXRZ-RRKCRQDMSA-N
+  molecular_formula: C9H13N3O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 243.219
+  monoisotopic_mass: 243.08552
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:131580
+  source_label: 6-azathymidine
+  minted_identifier: antibioticmech:chebi-40e8ff057b
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

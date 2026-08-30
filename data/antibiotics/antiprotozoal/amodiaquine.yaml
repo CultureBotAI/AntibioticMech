@@ -37,6 +37,7 @@ xrefs:
 - reaxys:300962
 - wikipedia.en:Amodiaquine
 activity_roles:
+- CHEBI:149553
 - CHEBI:38068
 chemical_structure:
   smiles: CCN(CC)Cc1cc(Nc2ccnc3cc(Cl)ccc23)ccc1O
@@ -53,6 +54,7 @@ source_concepts:
   source_label: amodiaquine
   minted_identifier: antibioticmech:chebi-6a126cf0f9
   role_terms:
+  - CHEBI:149553
   - CHEBI:38068
   source_version: '2026-08-29'
 curation_history:
@@ -60,3 +62,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

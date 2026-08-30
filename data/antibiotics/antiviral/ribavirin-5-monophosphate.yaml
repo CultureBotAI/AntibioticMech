@@ -1,0 +1,70 @@
+identifier: CHEBI:45490
+label: ribavirin 5'-monophosphate
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 1-ribosyltriazole that is ribavirin in which the hydroxy group at the
+  5'-position is replaced by a phosphonooxy group. It is the active metabolite of
+  the antiviral agent ribavirin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-(5-O-phosphono-β-D-ribofuranosyl)-1H-1,2,4-triazole-3-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ICN 3847
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RBV-MP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RMP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ribavirin monophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ribavirin-5'-phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ribavirin-MP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: virazole 5'-phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140324
+- CHEBI:29347
+- CHEBI:35159
+- CHEBI:62733
+- CHEBI:63594
+xrefs:
+- cas:40925-28-8
+- chemspider:90600
+- drugbank:DB14663
+- hmdb:HMDB0257208
+- pdb-ccd:RVP
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: NC(=O)c1ncn([C@@H]2O[C@H](COP(=O)(O)O)[C@@H](O)[C@H]2O)n1
+  standard_inchi: InChI=1S/C8H13N4O8P/c9-6(15)7-10-2-12(11-7)8-5(14)4(13)3(20-8)1-19-21(16,17)18/h2-5,8,13-14H,1H2,(H2,9,15)(H2,16,17,18)/t3-,4-,5-,8-/m1/s1
+  standard_inchi_key: SDWIOXKHTFOULX-AFCXAGJDSA-N
+  molecular_formula: C8H13N4O8P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 324.186
+  monoisotopic_mass: 324.0471
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:45490
+  source_label: ribavirin 5'-monophosphate
+  minted_identifier: antibioticmech:chebi-e80f6d5289
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

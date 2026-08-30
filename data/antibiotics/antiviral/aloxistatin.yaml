@@ -1,0 +1,69 @@
+identifier: CHEBI:101381
+label: aloxistatin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An L-leucine derivative that is the amide obtained by formal condensation
+  of the carboxy group of (2S,3S)-3-(ethoxycarbonyl)oxirane-2-carboxylic acid with
+  the amino group of N-(3-methylbutyl)-L-leucinamide.
+definition_source: ChEBI
+synonyms:
+- synonym_text: aloxistatina
+  synonym_type: INN
+  source: chebi
+- synonym_text: aloxistatine
+  synonym_type: INN
+  source: chebi
+- synonym_text: aloxistatinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: ethyl (2S,3S)-3-({(2S)-4-methyl-1-[(3-methylbutyl)amino]-1-oxopentan-2-yl}carbamoyl)oxirane-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E 64d
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E-64d
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E64d
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethyl (+)-(2S,3S)-2,3-epoxy-N-((S)-1-(isopentylcarbamoyl)-3-methylbutyl)succinamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Loxistatin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23990
+- CHEBI:25018
+- CHEBI:29347
+- CHEBI:32955
+xrefs:
+- cas:88321-09-9
+- reaxys:5354546
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CCOC(=O)[C@H]1O[C@@H]1C(=O)N[C@@H](CC(C)C)C(=O)NCCC(C)C
+  standard_inchi: InChI=1S/C17H30N2O5/c1-6-23-17(22)14-13(24-14)16(21)19-12(9-11(4)5)15(20)18-8-7-10(2)3/h10-14H,6-9H2,1-5H3,(H,18,20)(H,19,21)/t12-,13-,14-/m0/s1
+  standard_inchi_key: SRVFFFJZQVENJC-IHRRRGAJSA-N
+  molecular_formula: C17H30N2O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 342.436
+  monoisotopic_mass: 342.21547
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:101381
+  source_label: aloxistatin
+  minted_identifier: antibioticmech:chebi-bb168add9f
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

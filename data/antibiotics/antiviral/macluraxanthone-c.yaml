@@ -1,0 +1,46 @@
+identifier: CHEBI:66650
+label: macluraxanthone C
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of xanthones that is 9H-xanthen-9-one substituted
+  by hydroxy groups at positions 1, 3, 5 and 6, a dimethylallyl group at position
+  2 and a prenyl group at position 4. Isolated from Maclura tinctoria and Cudrania
+  tricuspidata, it exhibits anti-HIV and antineoplastic activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,3,5,6-tetrahydroxy-2-(2-methylbut-3-en-2-yl)-4-(3-methylbut-2-en-1-yl)-9H-xanthen-9-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(1,1-dimethyl-allyl)-1,3,5,6-tetrahydroxy-4-(3-methyl-but-2-enyl)-xanthen-9-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:51149
+xrefs:
+- reaxys:8735066
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: C=CC(C)(C)c1c(O)c(CC=C(C)C)c2oc3c(O)c(O)ccc3c(=O)c2c1O
+  standard_inchi: InChI=1S/C23H24O6/c1-6-23(4,5)16-18(26)13(8-7-11(2)3)21-15(20(16)28)17(25)12-9-10-14(24)19(27)22(12)29-21/h6-7,9-10,24,26-28H,1,8H2,2-5H3
+  standard_inchi_key: INSDJDFCZJWKAI-UHFFFAOYSA-N
+  molecular_formula: C23H24O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 396.439
+  monoisotopic_mass: 396.15729
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66650
+  source_label: macluraxanthone C
+  minted_identifier: antibioticmech:chebi-1869d0e9c9
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

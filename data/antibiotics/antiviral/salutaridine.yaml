@@ -1,0 +1,56 @@
+identifier: CHEBI:17225
+label: salutaridine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A morphinane alkaloid from the opium poppy, in which the 5,6,8,14-tetradehydromorphinan-7-one
+  skeleton is substituted at position 4 by a hydroxyl group, positions 3 and 6 by
+  methoxy groups and position N17 by a methyl group. An intermediate in the biosynthesis
+  of narcotic analgesics such as morphine and codeine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-hydroxy-3,6-dimethoxy-17-methyl-5,6,8,14-tetradehydromorphinan-7-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,6,8,14-Tetradehydro-4-hydroxy-3,6-dimethoxy-17-methyl-morphinan-7-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Salutaridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sinoacutine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25418
+xrefs:
+- beilstein:4788633
+- cas:1936-18-1
+- kegg.compound:C05179
+- knapsack:C00001916
+- reaxys:1630083
+- wikipedia.en:Salutaridine
+activity_roles:
+- CHEBI:64951
+chemical_structure:
+  smiles: COC1=C[C@]23CCN(C)[C@H](Cc4ccc(OC)c(O)c42)C3=CC1=O
+  standard_inchi: InChI=1S/C19H21NO4/c1-20-7-6-19-10-16(24-3)14(21)9-12(19)13(20)8-11-4-5-15(23-2)18(22)17(11)19/h4-5,9-10,13,22H,6-8H2,1-3H3/t13-,19+/m1/s1
+  standard_inchi_key: GVTRUVGBZQJVTF-YJYMSZOUSA-N
+  molecular_formula: C19H21NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 327.38
+  monoisotopic_mass: 327.14706
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17225
+  source_label: salutaridine
+  minted_identifier: antibioticmech:chebi-1dd8d5f083
+  role_terms:
+  - CHEBI:64951
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

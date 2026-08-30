@@ -34,6 +34,7 @@ xrefs:
 - metacyc.compound:CPD-21806
 - wikipedia.en:Spectinabilin
 activity_roles:
+- CHEBI:22587
 - CHEBI:64915
 chemical_structure:
   smiles: '[H][C@]1(c2oc(OC)c(C)c(=O)c2C)C/C(=C/C(C)=C/C(C)=C/C(C)=C/c2ccc([N+](=O)[O-])cc2)CO1'
@@ -50,6 +51,7 @@ source_concepts:
   source_label: spectinabilin
   minted_identifier: antibioticmech:chebi-c93c473be0
   role_terms:
+  - CHEBI:22587
   - CHEBI:64915
   source_version: '2026-08-29'
 curation_history:
@@ -57,3 +59,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

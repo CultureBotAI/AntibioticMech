@@ -93,13 +93,23 @@ antibiotic subtree is there because a bacterial resistance determinant acts on i
 
 ## Scope
 
-`conf/sources.yaml` holds the in-scope and out-of-scope ChEBI role roots. The
-antiviral branch — antiviral agent, anti-HIV, anti-HBV, anticoronaviral, the
-viral-enzyme inhibitors — is out. A virus is not a cellular microbe, and nothing
-in this mechanism model (envelope uptake, target engagement, resistance
-determinant) carries over to a compound acting on host machinery. Antibiotic
-pesticides (insecticides, acaricides, nematicides) are out for the same reason:
-their targets are metazoa.
+`conf/sources.yaml` holds the in-scope and out-of-scope ChEBI role roots. Scope
+follows ChEBI's own reading of "antimicrobial": bacteria, mycobacteria, fungi,
+protozoa **and viruses**, plus the biocides used against them. The antiviral
+branch — antiviral agent, anti-HIV, anti-HBV, anticoronaviral, and the
+viral-enzyme inhibitors ChEBI files beneath it — is in.
+
+Antivirals do sit differently in the mechanism model. The target is a viral
+protein or a step in a replication cycle rather than a structure of a
+free-living cell, and CARD's resistance determinants and drug targets do not
+apply to them at all, so an antiviral record carries no `resistance_mechanisms`
+from CARD. That is a reason for the mechanism vocabulary to cover both kinds of
+target — `ModeOfActionEnum` has the viral polymerase/protease/integrase/entry/
+release/assembly values and `TargetTypeEnum` has `VIRAL_PROTEIN` — not a reason
+to exclude the compounds.
+
+Antibiotic pesticides (insecticides, acaricides, nematicides) remain out: their
+targets are metazoa, which is a different kind of claim again.
 
 Both lists are curation decisions written where they can be changed and
 re-extracted, not assumptions buried in code.
@@ -112,10 +122,12 @@ automatically imported and not manually reviewed.
 **`relation_status_allowed: [1, 3]` governs the edges.** ChEBI stamps each
 relation row with its own status (1 CHECKED, 3 OK, 9 SUBMITTED), and the star
 rating of a compound says nothing about the review state of the `has_role` edge
-hanging off it. Admitting SUBMITTED edges is how two antiretrovirals — zidovudine
-and efavirenz — entered a corpus whose scope excludes antivirals, on the strength
-of an unreviewed `antitubercular agent` assertion. Both filters are needed;
-neither substitutes for the other.
+hanging off it. Admitting SUBMITTED edges is how zidovudine and efavirenz were once classified
+as **antitubercular**, on the strength of an unreviewed edge. Both are in the
+corpus today — antivirals are in scope — but as antivirals, on ChEBI's reviewed
+`antiviral drug` and `HIV-1 reverse transcriptase inhibitor` assertions. The
+point stands independently of scope: an unreviewed edge should not decide what a
+compound is. Both filters are needed; neither substitutes for the other.
 
 A wrong role here means a compound that is not an antimicrobial getting an
 antimicrobial record. The exception is a ChEBI entry cross-referenced by an ARO

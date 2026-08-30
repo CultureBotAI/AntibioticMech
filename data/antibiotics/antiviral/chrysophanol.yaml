@@ -1,0 +1,68 @@
+identifier: CHEBI:3687
+label: chrysophanol
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A trihydroxyanthraquinone that is chrysazin with a methyl substituent
+  at C-3. It has been isolated from Aloe vera and exhibits antiviral and anti-inflammatory
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,8-dihydroxy-3-methyl-9,10-anthraquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,8-Dihydroxy-3-methylanthraquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,8-dihydroxy-3-methyl-9,10-anthracenedione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-methylchrysazin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chrysophanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chrysophanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chrysophansäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37484
+xrefs:
+- cas:481-74-3
+- gmelin:220618
+- hmdb:HMDB0030670
+- kegg.compound:C10315
+- knapsack:C00000568
+- lincs.smallmolecule:LSM-19027
+- lipidmaps:LMPK13040006
+- metacyc.compound:CPD-8216
+- reaxys:1252300
+- wikipedia.en:Chrysophanol
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: Cc1cc(O)c2c(c1)C(=O)c1cccc(O)c1C2=O
+  standard_inchi: InChI=1S/C15H10O4/c1-7-5-9-13(11(17)6-7)15(19)12-8(14(9)18)3-2-4-10(12)16/h2-6,16-17H,1H3
+  standard_inchi_key: LQGUBLBATBMXHT-UHFFFAOYSA-N
+  molecular_formula: C15H10O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 254.241
+  monoisotopic_mass: 254.05791
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3687
+  source_label: chrysophanol
+  minted_identifier: antibioticmech:chebi-b49ce808ec
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

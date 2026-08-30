@@ -21,6 +21,7 @@ parent_compounds:
 - CHEBI:51914
 activity_roles:
 - CHEBI:33282
+- CHEBI:64947
 chemical_structure:
   smiles: '[H][C@@]12OC(C)(C)[C@]3(C/C=C(/C)C(=O)O)C[C@@]([H])(C=C4C(=O)c5c(O)c6c(c(CC=C(C)C)c5O[C@]431)OC(C)(C)C=C6)C2=O'
   standard_inchi: InChI=1S/C33H36O8/c1-16(2)8-9-20-26-19(11-12-30(4,5)39-26)24(35)22-25(36)21-14-18-15-32(13-10-17(3)29(37)38)31(6,7)41-28(23(18)34)33(21,32)40-27(20)22/h8,10-12,14,18,28,35H,9,13,15H2,1-7H3,(H,37,38)/b17-10-/t18-,28+,32+,33+/m1/s1
@@ -37,9 +38,14 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-4cb2e877f6
   role_terms:
   - CHEBI:33282
+  - CHEBI:64947
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

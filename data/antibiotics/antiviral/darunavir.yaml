@@ -1,0 +1,85 @@
+identifier: CHEBI:367163
+label: darunavir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An N,N-disubstituted benzenesulfonamide bearing an unsubstituted amino
+  group at the 4-position, used for the treatment of HIV infection. A second-generation
+  HIV protease inhibitor, darunavir was designed to form robust interactions with
+  the protease enzyme from many strains of HIV, including those from treatment-experienced
+  patients with multiple resistance mutations to other protease inhibitors.
+definition_source: ChEBI
+synonyms:
+- synonym_text: darunavirum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (3R,3aS,6aR)-hexahydrofuro[2,3-b]furan-3-yl [(2S,3R)-4-{[(4-aminophenyl)sulfonyl](2-methylpropyl)amino}-3-hydroxy-1-phenylbutan-2-yl]carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3R,3AS,6AR)-HEXAHYDROFURO[2,3-B]FURAN-3-YL(1S,2R)-3-[[(4-AMINOPHENYL)SULFONYL](ISOBUTYL)AMINO]-1-BENZYL-2-HYDROXYPROPYLCARBAMATE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3R,3aS,6aR)-hexahydrofuro[2,3-b]furan-3-yl N-((1S,2R)-1-benzyl-2-hydroxy-3-(N1-isobutylsulfanilamido)propyl)carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3R,3aS,6aR)-tetrahydro-2H-furo[2,3-b]furan-3-yl (2S,3R)-4-(4-amino-N-isobutylphenylsulfonamido)-3-hydroxy-1-phenylbutan-2-ylcarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3R,3aS,6aR)-tetrahydro-2H-furo[2,3-b]furan-3-yl (2S,3R)-4-(4-amino-N-neopentylphenylsulfonamido)-3-hydroxy-1-phenylbutan-2-ylcarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Darunavir
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-((1S,2R)-3-(((4-aminophenyl)sulfonyl)(2-methylpropyl)amino)-2-hydroxy-1-benzylpropyl)((1S,2R,5R)-4,6-dioxabicyclo(3.3.0)oct-2-yloxy)carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TMC114
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[(S)-3-[(4-Amino-benzenesulfonyl)-isobutyl-amino]-2-hydroxy-1-((R)-phenylmethyl)-propyl]-carbamic
+    acid (3R,3aS,6aR)-(hexahydro-furo[2,3-b]furan-3-yl) ester'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '{(1S,2R)-3-[(4-Amino-benzenesulfonyl)-isobutyl-amino]-1-benzyl-2-hydroxy-propyl}-carbamic
+    acid (3R,3aS,6aR)-(hexahydro-furo[2,3-b]furan-3-yl) ester'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:35358
+- CHEBI:47790
+xrefs:
+- cas:206361-99-1
+- drugbank:DB01264
+- drugcentral:4143
+- kegg.drug:D03656
+- pdb-ccd:017
+- reaxys:7960555
+- wikipedia.en:Darunavir
+activity_roles:
+- CHEBI:35660
+- CHEBI:36044
+chemical_structure:
+  smiles: '[H][C@]12OCC[C@@]1([H])[C@@H](OC(=O)N[C@@H](Cc1ccccc1)[C@H](O)CN(CC(C)C)S(=O)(=O)c1ccc(N)cc1)CO2'
+  standard_inchi: InChI=1S/C27H37N3O7S/c1-18(2)15-30(38(33,34)21-10-8-20(28)9-11-21)16-24(31)23(14-19-6-4-3-5-7-19)29-27(32)37-25-17-36-26-22(25)12-13-35-26/h3-11,18,22-26,31H,12-17,28H2,1-2H3,(H,29,32)/t22-,23-,24+,25-,26+/m0/s1
+  standard_inchi_key: CJBJHOAVZSMMDJ-HEXNFIEUSA-N
+  molecular_formula: C27H37N3O7S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 547.674
+  monoisotopic_mass: 547.23522
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:367163
+  source_label: darunavir
+  minted_identifier: antibioticmech:chebi-7eb797cb2b
+  role_terms:
+  - CHEBI:35660
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

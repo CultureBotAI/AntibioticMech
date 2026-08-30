@@ -1,0 +1,69 @@
+identifier: CHEBI:136047
+label: vaniprevir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An azamacrocyclic compound that is a hepatitis C virus (HCV) NS3/4A protease
+  inhibitor which is approved for the treatment of hepatitis C virus infections in
+  Japan.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Vanihep
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: vaniprevirum
+  synonym_type: INN
+  source: chebi
+- synonym_text: vaniprévir
+  synonym_type: INN
+  source: chebi
+- synonym_text: (5R,7S,10S)-10-tert-butyl-N-{(1R,2R)-1-[(cyclopropylsulfonyl)carbamoyl]-2-ethylcyclopropyl}-15,15-dimethyl-3,9,12-trioxo-6,7,9,10,11,12,14,15,16,17,18,19-dodecahydro-1H,5H-2,23:5,8-dimethano-4,13,2,8,11-benzodioxatriazacyclohenicosine-7(3H)-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MK 7009
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MK-7009
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MK7009
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:46770
+- CHEBI:51454
+- CHEBI:52898
+- CHEBI:90852
+xrefs:
+- cas:923590-37-8
+- chemspider:28475381
+- drugbank:DB11929
+- drugcentral:4939
+- kegg.drug:D09987
+- pdb-ccd:SU3
+- wikipedia.en:Vaniprevir
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: '[H][C@@]12CN(C(=O)[C@]([H])(C(C)(C)C)NC(=O)OCC(C)(C)CCCCc3cccc4c3CN(C4)C(=O)O1)[C@]([H])(C(=O)N[C@]1(C(=O)NS(=O)(=O)C3CC3)C[C@@]1([H])CC)C2'
+  standard_inchi: InChI=1S/C38H55N5O9S/c1-7-25-18-38(25,33(46)41-53(49,50)27-14-15-27)40-31(44)29-17-26-20-43(29)32(45)30(36(2,3)4)39-34(47)51-22-37(5,6)16-9-8-11-23-12-10-13-24-19-42(21-28(23)24)35(48)52-26/h10,12-13,25-27,29-30H,7-9,11,14-22H2,1-6H3,(H,39,47)(H,40,44)(H,41,46)/t25-,26-,29+,30-,38-/m1/s1
+  standard_inchi_key: KUQWGLQLLVFLSM-ONAXAZCASA-N
+  molecular_formula: C38H55N5O9S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 757.951
+  monoisotopic_mass: 757.37205
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:136047
+  source_label: vaniprevir
+  minted_identifier: antibioticmech:chebi-0fbb86a23c
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -27,6 +27,7 @@ xrefs:
 - pubchem.compound:24893639
 - wikipedia.en:6-Diazo-5-oxo-L-norleucine
 activity_roles:
+- CHEBI:22587
 - CHEBI:33282
 chemical_structure:
   smiles: '[N-]=[N+]=CC(=O)CC[C@H](N)C(=O)O'
@@ -43,6 +44,7 @@ source_concepts:
   source_label: 6-diazo-5-oxo-L-norleucine
   minted_identifier: antibioticmech:chebi-d532f764d2
   role_terms:
+  - CHEBI:22587
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -50,3 +52,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

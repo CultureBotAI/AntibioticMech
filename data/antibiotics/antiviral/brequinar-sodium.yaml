@@ -1,0 +1,66 @@
+identifier: CHEBI:177871
+label: brequinar sodium
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic sodium salt of brequinar.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sodium 6-fluoro-2-(2'-fluoro[biphenyl]-4-yl)-3-methylquinoline-4-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-fluoro-2-(2'-fluoro-1,1'-biphenyl-4-yl)-3-methyl-4-quinoline-carboxylic
+    acid sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DUP 785
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DUP-785
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 368390
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC-368390
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: brequinar sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium 6-fluoro-2-(2'-fluoro[1,1'-biphenyl]-4-yl)-3-methylquinoline-4-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38700
+xrefs:
+- cas:96201-88-6
+- chemspider:51421
+- drugbank:DBSALT002498
+- kegg.drug:D03154
+activity_roles:
+- CHEBI:149553
+- CHEBI:22587
+chemical_structure:
+  smiles: Cc1c(-c2ccc(-c3ccccc3F)cc2)nc2ccc(F)cc2c1C(=O)[O-].[Na+]
+  standard_inchi: InChI=1S/C23H15F2NO2.Na/c1-13-21(23(27)28)18-12-16(24)10-11-20(18)26-22(13)15-8-6-14(7-9-15)17-4-2-3-5-19(17)25;/h2-12H,1H3,(H,27,28);/q;+1/p-1
+  standard_inchi_key: PZOHOALJQOFNTB-UHFFFAOYSA-M
+  molecular_formula: C23H14F2NO2.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 397.356
+  monoisotopic_mass: 397.08903
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:177871
+  source_label: brequinar sodium
+  minted_identifier: antibioticmech:chebi-5b4f2ac15e
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

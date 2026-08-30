@@ -1,0 +1,88 @@
+identifier: CHEBI:75592
+label: L-cycloserine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 4-amino-1,2-oxazolidin-3-one that has S configuration. An antibiotic
+  isolated from Erwinia uredovora.
+definition_source: ChEBI
+synonyms:
+- synonym_text: levcicloserina
+  synonym_type: INN
+  source: chebi
+- synonym_text: levcycloserine
+  synonym_type: INN
+  source: chebi
+- synonym_text: levcycloserinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: levcyclosérine
+  synonym_type: INN
+  source: chebi
+- synonym_text: (4S)-4-amino-1,2-oxazolidin-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4S)-4-aminoisoxazolidin-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-(−)-cycloserine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-4-amino-3-isoxazolidinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-4-amino-isoxazolidin-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-4-amino-3-isoxazolidinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-4-aminoisoxazolidin-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-cycloserine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-4-aminoisoxazolidin-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-CS
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cyclo-L-serine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23503
+xrefs:
+- cas:339-72-0
+- drugbank:DB00260
+- hmdb:HMDB0014405
+- kegg.drug:D04706
+- lincs.smallmolecule:LSM-5639
+- metacyc.compound:CPD-2483
+- reaxys:80799
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: '[H][C@]1(N)CONC1=O'
+  standard_inchi: InChI=1S/C3H6N2O2/c4-2-1-7-5-3(2)6/h2H,1,4H2,(H,5,6)/t2-/m0/s1
+  standard_inchi_key: DYDCUQKUCUHJBH-REOHCLBHSA-N
+  molecular_formula: C3H6N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 102.093
+  monoisotopic_mass: 102.04293
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75592
+  source_label: L-cycloserine
+  minted_identifier: antibioticmech:chebi-49c39752a0
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

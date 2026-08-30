@@ -1,0 +1,66 @@
+identifier: CHEBI:91451
+label: CHIR-265
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzimidazoles that is 1H-benzimidazole substituted
+  by methyl, [4-(trifluoromethyl)phenyl]amino, and {2-[5-(trifluoromethyl)-1H-imidazol-2-yl]pyridin-4-yl}oxy
+  groups at positions 1, 2, and 5, respectively. It is an inhibitor of RAF kinases,
+  including the BRAF V600E mutant.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-methyl-5-({2-[5-(trifluoromethyl)-1H-imidazol-2-yl]pyridin-4-yl}oxy)-N-[4-(trifluoromethyl)phenyl]-1H-benzimidazol-2-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CHIR 265
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CHIR265
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RAF 265
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RAF-265
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RAF265
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22715
+- CHEBI:24780
+- CHEBI:26421
+- CHEBI:35618
+- CHEBI:37143
+- CHEBI:48975
+- CHEBI:83565
+xrefs:
+- cas:927880-90-8
+- lincs.smallmolecule:LSM-1207
+- patent:WO2011044072
+- pdb-ccd:55J
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: Cn1c(Nc2ccc(C(F)(F)F)cc2)nc2cc(Oc3ccnc(-c4ncc(C(F)(F)F)n4)c3)ccc21
+  standard_inchi: InChI=1S/C24H16F6N6O/c1-36-19-7-6-15(10-17(19)34-22(36)33-14-4-2-13(3-5-14)23(25,26)27)37-16-8-9-31-18(11-16)21-32-12-20(35-21)24(28,29)30/h2-12H,1H3,(H,32,35)(H,33,34)
+  standard_inchi_key: YABJJWZLRMPFSI-UHFFFAOYSA-N
+  molecular_formula: C24H16F6N6O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 518.421
+  monoisotopic_mass: 518.12898
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:91451
+  source_label: CHIR-265
+  minted_identifier: antibioticmech:chebi-87c8d0ce35
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

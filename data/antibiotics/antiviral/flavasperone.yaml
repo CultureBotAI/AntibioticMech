@@ -1,0 +1,58 @@
+identifier: CHEBI:133814
+label: flavasperone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A naphtho-γ-pyrone that is 4H-naphtho[1,2-b]pyran-4-one carrying a methyl
+  substituent at position2, a hydroxy substituent at position 5 and two methoxy substotuents
+  at positions 8 and 10. Originally isolated from Aspergillus niger.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-hydroxy-8,10-dimethoxy-2-methyl-4H-naphtho[1,2-b]pyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic TMC 256c2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Asperxanthon
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TMC 256c2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: asperxanthone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:35618
+- CHEBI:64542
+xrefs:
+- cas:3566-99-2
+- chemspider:4678011
+- hmdb:HMDB0030852
+- reaxys:280885
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: COc1cc(OC)c2c(c1)cc(O)c1c(=O)cc(C)oc12
+  standard_inchi: InChI=1S/C16H14O5/c1-8-4-11(17)15-12(18)6-9-5-10(19-2)7-13(20-3)14(9)16(15)21-8/h4-7,18H,1-3H3
+  standard_inchi_key: ARXPDHLVDOYIPX-UHFFFAOYSA-N
+  molecular_formula: C16H14O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 286.283
+  monoisotopic_mass: 286.08412
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:133814
+  source_label: flavasperone
+  minted_identifier: antibioticmech:chebi-d01cfb26e7
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

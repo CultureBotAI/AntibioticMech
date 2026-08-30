@@ -1,0 +1,48 @@
+identifier: CHEBI:69472
+label: purpurester A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 2-benzofurans that is 2-benzofuran-1(3H)-one
+  substituted by hydroxy groups at positions 5 and 6, a methoxy group at position
+  3, a methyl group at position 7 and a propyl group at position 3. It has been isolated
+  from Penicillium purpurogenum.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S)-5,6-dihydroxy-3-methoxy-7-methyl-3-propyl-2-benzofuran-1(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-5,6-dihydroxy-3-methoxy-7-methyl-3-propylisobenzofuran-1(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25698
+- CHEBI:33566
+- CHEBI:37581
+- CHEBI:38831
+xrefs:
+- reaxys:21878448
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: CCC[C@]1(OC)OC(=O)c2c1cc(O)c(O)c2C
+  standard_inchi: InChI=1S/C13H16O5/c1-4-5-13(17-3)8-6-9(14)11(15)7(2)10(8)12(16)18-13/h6,14-15H,4-5H2,1-3H3/t13-/m0/s1
+  standard_inchi_key: CHYNVNQRYJSKBG-ZDUSSCGKSA-N
+  molecular_formula: C13H16O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 252.266
+  monoisotopic_mass: 252.09977
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69472
+  source_label: purpurester A
+  minted_identifier: antibioticmech:chebi-80331ef2e8
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

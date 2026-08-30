@@ -1,0 +1,44 @@
+identifier: CHEBI:66303
+label: rhinacanthin C
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A naphthoquinone isolated from Rhinacanthus nasutus and has been shown
+  to exhibit antiviral activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-(3-hydroxy-1,4-dioxo-1,4-dihydronaphthalen-2-yl)-2,2-dimethylpropyl
+    (2E,6E)-2,6-dimethylocta-2,6-dienoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132157
+- CHEBI:33308
+- CHEBI:33823
+- CHEBI:51702
+xrefs:
+- reaxys:7391477
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: C/C=C(\C)CC/C=C(\C)C(=O)OCC(C)(C)CC1=C(O)C(=O)c2ccccc2C1=O
+  standard_inchi: InChI=1S/C25H30O5/c1-6-16(2)10-9-11-17(3)24(29)30-15-25(4,5)14-20-21(26)18-12-7-8-13-19(18)22(27)23(20)28/h6-8,11-13,28H,9-10,14-15H2,1-5H3/b16-6+,17-11+
+  standard_inchi_key: HBWJZSWEQJLURT-QIGLBIQCSA-N
+  molecular_formula: C25H30O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 410.51
+  monoisotopic_mass: 410.20932
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66303
+  source_label: rhinacanthin C
+  minted_identifier: antibioticmech:chebi-e7fb04a4cc
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

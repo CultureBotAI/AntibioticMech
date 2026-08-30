@@ -1,0 +1,84 @@
+identifier: CHEBI:63599
+label: fludarabine phosphate
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A purine arabinonucleoside monophosphate having 2-fluoroadenine as the
+  nucleobase. A prodrug, it is rapidly dephosphorylated to 2-fluoro-ara-A and then
+  phosphorylated intracellularly by deoxycytidine kinase to the active triphosphate,
+  2-fluoro-ara-ATP. Once incorporated into DNA, 2-fluoro-ara-ATP functions as a DNA
+  chain terminator. It is used for the treatment of adult patients with B-cell chronic
+  lymphocytic leukemia (CLL) who have not responded to, or whose disease has progressed
+  during, treatment with at least one standard alkylating-agent containing regimenas.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Fludara
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 2-fluoro-9-(5-O-phosphono-β-D-arabinofuranosyl)-9H-purin-6-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Fluoro-ARA AMP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Fluoroadenine arabinoside 5'-monophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2F-ara-AMP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-beta-Arabinofuranosyl-2-fluoroadenine-5'-phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-beta-D-Arabinofuranosyl-2-fluoroadenine 5'-(dihydrogen phosphate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-beta-D-Arabinofuranosyl-2-fluoroadenine 5'-monophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FAMP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fludarabine 5'-monophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fludarabine monophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37143
+- CHEBI:37514
+- CHEBI:60783
+xrefs:
+- cas:75607-67-9
+- drugbank:DB01073
+- drugcentral:1189
+- kegg.drug:D01907
+- patent:WO2010046917
+- patent:WO2010133629
+- reaxys:8167686
+- wikipedia.en:Fludarabine
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@@H]1O
+  standard_inchi: InChI=1S/C10H13FN5O7P/c11-10-14-7(12)4-8(15-10)16(2-13-4)9-6(18)5(17)3(23-9)1-22-24(19,20)21/h2-3,5-6,9,17-18H,1H2,(H2,12,14,15)(H2,19,20,21)/t3-,5-,6+,9-/m1/s1
+  standard_inchi_key: GIUYCYHIANZCFB-FJFJXFQQSA-N
+  molecular_formula: C10H13FN5O7P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 365.214
+  monoisotopic_mass: 365.05366
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:63599
+  source_label: fludarabine phosphate
+  minted_identifier: antibioticmech:chebi-2e091683c4
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

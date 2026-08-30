@@ -1,0 +1,102 @@
+identifier: CHEBI:5123
+label: fluphenazine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of phenothiazines that is 10H-phenothiazine having
+  a trifluoromethyl subsitituent at the 2-position and a 3-[4-(2-hydroxyethyl)piperazin-1-yl]propyl
+  group at the N-10 position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: fluphenazinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-(4-{3-[2-(trifluoromethyl)-10H-phenothiazin-10-yl]propyl}piperazin-1-yl)ethan-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(2-hydroxyethyl)-4-(3-(trifluoromethyl-10-phenothiazinyl)propyl)-piperazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10-(3'-(4''-(β-hydroxyethyl)-1''-piperazinyl)-propyl)-3-trifluoromethylphenothiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10-(3-(2-hydroxyethyl)piperazinopropyl)-2-(trifluoromethyl)phenothiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(4-(3-[2-(trifluoromethyl)-10H-phenothiazin-10-yl]propyl)-1-piperazinyl)ethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(trifluoromethyl)-10-(3-(1-(β-hydroxyethyl)-4-piperazinyl)propyl)phenothiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-(3-(-trifluoromethyl-10-phenothiazyl)-propyl)-1-piperazineethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-(3-(2-(trifluoromethyl)-10H-phenothiazin-10-yl)propyl)-1-piperazineethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-(3-(2-trifluoromethyl-10-phenothiazyl)-propyl)-1-piperazineethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fluorfenazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fluorophenazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fluorphenazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fluphenazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Triflumethazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: flufenazina
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37143
+- CHEBI:38093
+- CHEBI:46845
+xrefs:
+- beilstein:1189506
+- cas:69-23-8
+- drugbank:DB00623
+- drugcentral:1212
+- gmelin:1231182
+- hmdb:HMDB0014761
+- kegg.compound:C07010
+- kegg.drug:D07977
+- lincs.smallmolecule:LSM-3226
+- patent:GB829246
+- patent:GB833474
+- patent:US3058979
+- patent:US3194733
+- reaxys:61643
+- wikipedia.en:Fluphenazine
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: OCCN1CCN(CCCN2c3ccccc3Sc3ccc(C(F)(F)F)cc32)CC1
+  standard_inchi: InChI=1S/C22H26F3N3OS/c23-22(24,25)17-6-7-21-19(16-17)28(18-4-1-2-5-20(18)30-21)9-3-8-26-10-12-27(13-11-26)14-15-29/h1-2,4-7,16,29H,3,8-15H2
+  standard_inchi_key: PLDUPXSUYLZYBN-UHFFFAOYSA-N
+  molecular_formula: C22H26F3N3OS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 437.531
+  monoisotopic_mass: 437.17487
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5123
+  source_label: fluphenazine
+  minted_identifier: antibioticmech:chebi-aa19a52d7f
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

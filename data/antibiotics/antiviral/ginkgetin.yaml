@@ -1,0 +1,64 @@
+identifier: CHEBI:5353
+label: ginkgetin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A biflavonoid that is the 7,4'-dimethyl ether derivative of amentoflavone.
+  Isolated from Ginkgo biloba and Dioon, it exhibits anti-HSV-1, antineoplastic and
+  inhibitory activities towards arachidonate 5-lipoxygenase and cyclooxygenase 2.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,7-dihydroxy-8-[5-(5-hydroxy-7-methoxy-4-oxo-4H-chromen-2-yl)-2-methoxyphenyl]-2-(4-hydroxyphenyl)-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4''',5,5'',7''-tetrahydroxy-4',7-dimethoxy-(3'→8'')-biflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dihydroxy-8-(5-(5-hydroxy-7-methoxy-4-oxo-4H-1-benzopyran-2-yl)-2-methoxyphenyl)-2-(4-hydroxyphenyl)-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Amentoflavone 7,4'-dimethyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ginkgetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: amentoflavone 7,4'-dimethyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24698
+- CHEBI:25241
+- CHEBI:36820
+- CHEBI:50128
+xrefs:
+- cas:481-46-9
+- kegg.compound:C10048
+- knapsack:C00001044
+- lincs.smallmolecule:LSM-42758
+- lipidmaps:LMPK12040003
+- reaxys:381052
+activity_roles:
+- CHEBI:64953
+chemical_structure:
+  smiles: COc1cc(O)c2c(=O)cc(-c3ccc(OC)c(-c4c(O)cc(O)c5c(=O)cc(-c6ccc(O)cc6)oc45)c3)oc2c1
+  standard_inchi: InChI=1S/C32H22O10/c1-39-18-10-20(34)30-23(37)13-27(41-28(30)11-18)16-5-8-25(40-2)19(9-16)29-21(35)12-22(36)31-24(38)14-26(42-32(29)31)15-3-6-17(33)7-4-15/h3-14,33-36H,1-2H3
+  standard_inchi_key: AIFCFBUSLAEIBR-UHFFFAOYSA-N
+  molecular_formula: C32H22O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 566.518
+  monoisotopic_mass: 566.1213
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5353
+  source_label: ginkgetin
+  minted_identifier: antibioticmech:chebi-1b6891c3ef
+  role_terms:
+  - CHEBI:64953
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

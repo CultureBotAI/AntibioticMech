@@ -16,6 +16,7 @@ synonyms:
 parent_compounds:
 - CHEBI:167695
 activity_roles:
+- CHEBI:22587
 - CHEBI:33282
 chemical_structure:
   smiles: O=C1O[C@@H]2[C@@H](OC(=O)c3cc(O)c(O)c(O)c3-c3c1cc(O)c(O)c3O)[C@@H](O)O[C@@H]1COC(=O)c3cc(O)c(O)c(O)c3-c3c(O)c(O)c4oc(=O)c5c(c(O)c(O)c6oc(=O)c3c4c65)-c3c(cc(O)c(O)c3O)C(=O)O[C@@H]21
@@ -32,6 +33,7 @@ source_concepts:
   source_label: α-punicalagin
   minted_identifier: antibioticmech:chebi-d9631db058
   role_terms:
+  - CHEBI:22587
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -39,3 +41,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

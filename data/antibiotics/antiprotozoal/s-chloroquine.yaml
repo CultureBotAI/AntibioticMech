@@ -19,6 +19,7 @@ xrefs:
 - beilstein:7517230
 - cas:58175-86-3
 activity_roles:
+- CHEBI:149553
 - CHEBI:38068
 chemical_structure:
   smiles: CCN(CC)CCC[C@H](C)Nc1ccnc2cc(Cl)ccc12
@@ -35,6 +36,7 @@ source_concepts:
   source_label: (S)-chloroquine
   minted_identifier: antibioticmech:chebi-3d949d29ad
   role_terms:
+  - CHEBI:149553
   - CHEBI:38068
   source_version: '2026-08-29'
 curation_history:
@@ -42,3 +44,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

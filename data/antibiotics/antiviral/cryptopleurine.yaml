@@ -1,0 +1,55 @@
+identifier: CHEBI:3932
+label: cryptopleurine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heteropentacyclic compound that is (14aR)-11,12,13,14,14a,15-hexahydro-9H-dibenzo[f,h]pyrido[1,2-b]isoquinoline
+  substituted at positions 2, 3 and 6 by methoxy groups.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (14aR)-2,3,6-trimethoxy-11,12,13,14,14a,15-hexahydro-9H-dibenzo[f,h]pyrido[1,2-b]isoquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 11,12,13,14,14a,15-Hexahydro-2,3,6-trimethoxy-9H-phenanthro(9,10-b)quinolizine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22315
+- CHEBI:35618
+- CHEBI:38164
+- CHEBI:86322
+xrefs:
+- cas:482-22-4
+- kegg.compound:C10586
+- knapsack:C00002331
+- reaxys:1555200
+activity_roles:
+- CHEBI:22587
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12CCCCN1Cc1c(c3cc(OC)c(OC)cc3c3cc(OC)ccc13)C2'
+  standard_inchi: InChI=1S/C24H27NO3/c1-26-16-7-8-17-19(11-16)21-13-24(28-3)23(27-2)12-20(21)18-10-15-6-4-5-9-25(15)14-22(17)18/h7-8,11-13,15H,4-6,9-10,14H2,1-3H3/t15-/m1/s1
+  standard_inchi_key: RSHYSOGXGSUUIJ-OAHLLOKOSA-N
+  molecular_formula: C24H27NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 377.484
+  monoisotopic_mass: 377.19909
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3932
+  source_label: cryptopleurine
+  minted_identifier: antibioticmech:chebi-acbef1c84b
+  role_terms:
+  - CHEBI:22587
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

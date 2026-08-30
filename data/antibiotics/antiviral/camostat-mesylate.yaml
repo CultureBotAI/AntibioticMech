@@ -1,0 +1,81 @@
+identifier: CHEBI:31347
+label: camostat mesylate
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A methanesulfonate (mesylate) salt prepared from equimolar amounts of
+  camostat and methanesulfonic acid. It is a serine protease inhibitor approved and
+  marketed in Japan in 1985 for the alleviation of acute symptoms associated with
+  chronic pancreatitis. In 1994, it was approved for the treatment of postoperative
+  reflux esophagitis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: FOY 305
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: FOY-305
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: FOY305
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Foipan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Foistar
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 4-{2-[2-(dimethylamino)-2-oxoethoxy]-2-oxoethyl}phenyl 4-carbamimidamidobenzoate
+    methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N-dimethylcarbamoylmethyl 4-(4-guanidinobenzoyloxy)phenylacetate
+    methanesulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: amino{4-[(4-{2-[2-(dimethylamino)-2-oxoethoxy]-2-oxoethyl}phenoxy)carbonyl]anilino}methaniminium
+    methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: camostat mesilate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: camostat methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: camostat monomethanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38037
+xrefs:
+- cas:59721-29-8
+- chemspider:39251
+- drugbank:DBSALT002914
+- kegg.drug:D01766
+activity_roles:
+- CHEBI:149553
+- CHEBI:22587
+chemical_structure:
+  smiles: CN(C)C(=O)COC(=O)Cc1ccc(OC(=O)c2ccc(NC(=N)N)cc2)cc1.CS(=O)(=O)O
+  standard_inchi: InChI=1S/C20H22N4O5.CH4O3S/c1-24(2)17(25)12-28-18(26)11-13-3-9-16(10-4-13)29-19(27)14-5-7-15(8-6-14)23-20(21)22;1-5(2,3)4/h3-10H,11-12H2,1-2H3,(H4,21,22,23);1H3,(H,2,3,4)
+  standard_inchi_key: FSEKIHNIDBATFG-UHFFFAOYSA-N
+  molecular_formula: C20H22N4O5.CH4O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 494.526
+  monoisotopic_mass: 494.14713
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31347
+  source_label: camostat mesylate
+  minted_identifier: antibioticmech:chebi-10401a733b
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

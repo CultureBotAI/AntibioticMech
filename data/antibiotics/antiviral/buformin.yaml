@@ -1,0 +1,88 @@
+identifier: CHEBI:3209
+label: buformin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of biguanides that is biguanide substituted by a
+  butyl group at position 1. It is an antidiabetic drug with potential antitumor effect.
+definition_source: ChEBI
+synonyms:
+- synonym_text: buformina
+  synonym_type: INN
+  source: chebi
+- synonym_text: buformine
+  synonym_type: INN
+  source: chebi
+- synonym_text: buforminum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-butyltriimidodicarbonic diamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-butylbiguanide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-butyldiguanide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-butyl-N'-(diaminomethylidene)guanidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-butylimidodicarbonimidic diamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-butylbiguanide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: W 37
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: butformin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: butylbiguanide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: butyldiguanide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: glybigid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:53662
+xrefs:
+- cas:692-13-7
+- chemspider:2374
+- drugbank:DB04830
+- drugcentral:423
+- hmdb:HMDB0249431
+- kegg.compound:C07674
+- kegg.drug:D00595
+- pdb-ccd:BFR
+- reaxys:607037
+- wikipedia.en:Buformin
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: CCCCNC(=N)NC(=N)N
+  standard_inchi: InChI=1S/C6H15N5/c1-2-3-4-10-6(9)11-5(7)8/h2-4H2,1H3,(H6,7,8,9,10,11)
+  standard_inchi_key: XSEUMFJMFFMCIU-UHFFFAOYSA-N
+  molecular_formula: C6H15N5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 157.221
+  monoisotopic_mass: 157.13275
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3209
+  source_label: buformin
+  minted_identifier: antibioticmech:chebi-8393aa048c
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,58 @@
+identifier: CHEBI:65552
+label: (+)-calanolide A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterotetracyclic compound that is 11,12-dihydro-2H,6H,10H-dipyrano[2,3-f:2',3'-h]chromen-2-one
+  substituted by a hydroxy group at position 12, methyl groups at positions 6, 6,
+  10 and 11 and a propyl group at position 4 (the 10R,11S,12S stereoisomer). Isolated
+  from Calophyllum lanigerum var austrocoriaceum and Calophyllum brasiliense, it exhibits
+  potent activity against HIV-1 reverse transcriptase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (10R,11S,12S)-12-hydroxy-6,6,10,11-tetramethyl-4-propyl-11,12-dihydro-2H,6H,10H-dipyrano[2,3-f:2',3'-h]chromen-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-(10R,11S,12S)-10,11-trans-dihydro-12-hydroxy-6,6,10,11-tetramethyl-4-propyl-2H,6H-benzo[1,2-b:3,4-b':5,6-b'']tripyran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (10R,11S,12S)-11,12-dihydro-12-hydroxy-6,6,10,11-tetramethyl-4-propyl-2H,6H,10H-benzo(1,2-b:3,4-b':5,6-b'')tripyran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: calanolide A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18946
+- CHEBI:35681
+- CHEBI:37407
+- CHEBI:38163
+xrefs:
+- cas:142632-32-4
+- kegg.compound:C09147
+- knapsack:C00002454
+- reaxys:5856917
+activity_roles:
+- CHEBI:53756
+chemical_structure:
+  smiles: CCCc1cc(=O)oc2c3c(c4c(c12)OC(C)(C)C=C4)O[C@H](C)[C@@H](C)[C@@H]3O
+  standard_inchi: InChI=1S/C22H26O5/c1-6-7-13-10-15(23)26-21-16(13)20-14(8-9-22(4,5)27-20)19-17(21)18(24)11(2)12(3)25-19/h8-12,18,24H,6-7H2,1-5H3/t11-,12-,18+/m1/s1
+  standard_inchi_key: NIDRYBLTWYFCFV-FMTVUPSXSA-N
+  molecular_formula: C22H26O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 370.445
+  monoisotopic_mass: 370.17802
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65552
+  source_label: (+)-calanolide A
+  minted_identifier: antibioticmech:chebi-3ecb7c88bf
+  role_terms:
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

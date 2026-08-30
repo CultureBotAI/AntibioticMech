@@ -1,0 +1,42 @@
+identifier: CHEBI:65739
+label: O-demethylbuchenavianine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A piperidine alkaloid that consists of 5,7-dihydroxyflavone attached to
+  a 1-methylpiperindin-2-yl moiety at position 8. It is a flavonoid alkaloid isolated
+  from Buchenavia capitata, and has been shown to exhibit anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,7-dihydroxy-8-(1-methylpiperidin-2-yl)-2-phenyl-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26147
+- CHEBI:38686
+xrefs:
+- reaxys:5630398
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: CN1CCCCC1c1c(O)cc(O)c2c(=O)cc(-c3ccccc3)oc12
+  standard_inchi: InChI=1S/C21H21NO4/c1-22-10-6-5-9-14(22)19-15(23)11-16(24)20-17(25)12-18(26-21(19)20)13-7-3-2-4-8-13/h2-4,7-8,11-12,14,23-24H,5-6,9-10H2,1H3
+  standard_inchi_key: BBZGOLNDVQZCIH-UHFFFAOYSA-N
+  molecular_formula: C21H21NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 351.402
+  monoisotopic_mass: 351.14706
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65739
+  source_label: O-demethylbuchenavianine
+  minted_identifier: antibioticmech:chebi-f3aa94e4ea
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

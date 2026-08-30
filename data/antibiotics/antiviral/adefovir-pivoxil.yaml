@@ -1,0 +1,80 @@
+identifier: CHEBI:31175
+label: adefovir pivoxil
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic phosphonate that is the dipivoxil ester of adefovir. A prodrug
+  for adefovir, an HIV-1 reverse transcriptase inhibitor, adefovir pivoxil is used
+  to treat chronic hepatitis B viral infection.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ({[2-(6-amino-9H-purin-9-yl)ethoxy]methyl}phosphoryl)bis(oxymethanediyl)
+    bis(2,2-dimethylpropanoate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (((2-(6-Amino-9H-purin-9-yl)ethoxy)methyl)phosphinylidene)bis(oxymethylene)
+    2,2-dimethylpropanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-(2-((-Bis((pivaloyloxy)methoxy)phosphinyl)methoxy)ethyl)adenine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-(2-((Bis((pivaloyloxy)methoxy)phosphinyl)methoxy)ethyl)adenine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Adefovir dipivoxil
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS 0840
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS 840
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS-0840
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hepsera
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: preveon
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:20706
+- CHEBI:25698
+- CHEBI:37592
+- CHEBI:46722
+xrefs:
+- cas:142340-99-6
+- drugbank:DB00718
+- drugcentral:88
+- hmdb:HMDB0014856
+- kegg.drug:D01655
+- reaxys:29413415
+activity_roles:
+- CHEBI:36044
+- CHEBI:53756
+chemical_structure:
+  smiles: CC(C)(C)C(=O)OCOP(=O)(COCCn1cnc2c(N)ncnc21)OCOC(=O)C(C)(C)C
+  standard_inchi: InChI=1S/C20H32N5O8P/c1-19(2,3)17(26)30-11-32-34(28,33-12-31-18(27)20(4,5)6)13-29-8-7-25-10-24-14-15(21)22-9-23-16(14)25/h9-10H,7-8,11-13H2,1-6H3,(H2,21,22,23)
+  standard_inchi_key: WOZSCQDILHKSGG-UHFFFAOYSA-N
+  molecular_formula: C20H32N5O8P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 501.477
+  monoisotopic_mass: 501.19885
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31175
+  source_label: adefovir pivoxil
+  minted_identifier: antibioticmech:chebi-7111a6ace1
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

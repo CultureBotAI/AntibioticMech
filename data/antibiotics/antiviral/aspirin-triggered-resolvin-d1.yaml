@@ -1,0 +1,66 @@
+identifier: CHEBI:138179
+label: aspirin-triggered resolvin D1
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of resolvins that consists of docosa-4Z,9E,11E,13Z,15E,19Z-hexaenoic
+  acid carrying three hydroxy substituents at positions 7, 8, and 17 (the 7S,8R,17S-stereoisomer).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4Z,7S,8R,9E,11E,13Z,15E,17R,19Z)-7,8,17-trihydroxydocosa-4,9,11,13,15,19-hexaenoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4Z,7S,8R,9E,11E,13Z,15E,17R,19Z)-7,8,17-trihydroxydocosahexaenoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 17(R)-RvD1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 17(R)-resolvin D1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 17-epi-resolvin D1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7S,8R,17R-trihydroxy-4Z,9E,11E,13Z,15E,19Z-docosahexaenoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AT-Resolvin D1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AT-RvD1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132120
+- CHEBI:134396
+- CHEBI:140345
+xrefs:
+- lipidmaps:LMFA04030005
+- reaxys:24477830
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: CC/C=C\C[C@@H](O)/C=C/C=C\C=C\C=C\[C@@H](O)[C@@H](O)C/C=C\CCC(=O)O
+  standard_inchi: InChI=1S/C22H32O5/c1-2-3-9-14-19(23)15-10-6-4-5-7-11-16-20(24)21(25)17-12-8-13-18-22(26)27/h3-12,15-16,19-21,23-25H,2,13-14,17-18H2,1H3,(H,26,27)/b6-4-,7-5+,9-3-,12-8-,15-10+,16-11+/t19-,20-,21+/m1/s1
+  standard_inchi_key: OIWTWACQMDFHJG-BJEBZIPWSA-N
+  molecular_formula: C22H32O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 376.493
+  monoisotopic_mass: 376.22497
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:138179
+  source_label: aspirin-triggered resolvin D1
+  minted_identifier: antibioticmech:chebi-034c8bd194
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

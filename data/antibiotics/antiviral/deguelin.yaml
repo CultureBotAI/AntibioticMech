@@ -1,0 +1,66 @@
+identifier: CHEBI:4357
+label: deguelin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A rotenone that is 13,13a-dihydro-3H-chromeno[3,4-b]pyrano[2,3-h]chromen-7(7aH)-one
+  substituted by methoxy groups at positions 9 and 10, and by two methyl groups at
+  position 3 (the 7aS,13aS-stereoisomer). It exists in abundant quantities in the
+  bark, roots, and leaves of the Leguminosae family of plants and reported to exert
+  anti-tumour effects in various cancers.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (7aS,13aS)-9,10-dimethoxy-3,3-dimethyl-13,13a-dihydro-3H-chromeno[3,4-b]pyrano[2,3-h]chromen-7(7aH)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (7aS,13aS)-13,13a-dihydro-9,10-dimethoxy-3,3-dimethyl-3H-bis[1]benzopyrano[3,4-b:6',5'-e]pyran-7(7aH)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (7aS,13aS)-9,10-dimethoxy-3,3-dimethyl-13,13a-dihydro-3H-pyrano[2',3':7,8][1]benzopyrano[2,3-c][1]benzopyran-7(7aH)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-cis-deguelin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-deguelin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:38164
+- CHEBI:46786
+- CHEBI:72581
+xrefs:
+- cas:522-17-8
+- chemspider:97058
+- hmdb:HMDB0250941
+- kegg.compound:C10417
+- knapsack:C00002522
+- lincs.smallmolecule:LSM-3368
+- lipidmaps:LMPK12060019
+- metacyc.compound:CPD-12163
+- wikipedia.en:Deguelin
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: '[H][C@@]12COc3cc(OC)c(OC)cc3[C@]1([H])C(=O)c1ccc3c(c1O2)C=CC(C)(C)O3'
+  standard_inchi: InChI=1S/C23H22O6/c1-23(2)8-7-12-15(29-23)6-5-13-21(24)20-14-9-17(25-3)18(26-4)10-16(14)27-11-19(20)28-22(12)13/h5-10,19-20H,11H2,1-4H3/t19-,20+/m1/s1
+  standard_inchi_key: ORDAZKGHSNRHTD-UXHICEINSA-N
+  molecular_formula: C23H22O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 394.423
+  monoisotopic_mass: 394.14164
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4357
+  source_label: deguelin
+  minted_identifier: antibioticmech:chebi-e3d069886f
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

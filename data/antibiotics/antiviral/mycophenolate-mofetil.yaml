@@ -1,0 +1,69 @@
+identifier: CHEBI:8764
+label: mycophenolate mofetil
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxylic ester resulting from the formal condensation between the
+  carboxylic acid group of mycophenolic acid and the hydroxy group of 2-(morpholin-4-yl)ethanol.
+  In the liver, it is metabolised to mycophenolic acid, an immunosuppressant for which
+  it is a prodrug. It is widely used to prevent tissue rejection following organ transplants
+  as well as for the treatment of certain autoimmune diseases.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Cellcept
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 2-(morpholin-4-yl)ethyl (4E)-6-(4-hydroxy-6-methoxy-7-methyl-3-oxo-1,3-dihydro-2-benzofuran-5-yl)-4-methylhex-4-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-morpholinoethyl (E)-6-(4-hydroxy-6-methoxy-7-methyl-3-oxo-5-phthalanyl)-4-methyl-4-hexenoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MMF
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RS 61443
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: mycophenolic acid morpholinoethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25698
+- CHEBI:33308
+- CHEBI:33853
+- CHEBI:37581
+- CHEBI:50996
+xrefs:
+- cas:128794-94-5
+- drugbank:DB00688
+- drugcentral:1859
+- hmdb:HMDB0014826
+- kegg.compound:C07908
+- kegg.drug:D00752
+- reaxys:7500599
+- wikipedia.en:Mycophenolate_mofetil
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: COc1c(C)c2c(c(O)c1C/C=C(\C)CCC(=O)OCCN1CCOCC1)C(=O)OC2
+  standard_inchi: InChI=1S/C23H31NO7/c1-15(5-7-19(25)30-13-10-24-8-11-29-12-9-24)4-6-17-21(26)20-18(14-31-23(20)27)16(2)22(17)28-3/h4,26H,5-14H2,1-3H3/b15-4+
+  standard_inchi_key: RTGDFNSFWBGLEC-SYZQJQIISA-N
+  molecular_formula: C23H31NO7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 433.501
+  monoisotopic_mass: 433.21005
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:8764
+  source_label: mycophenolate mofetil
+  minted_identifier: antibioticmech:chebi-815ebc1095
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

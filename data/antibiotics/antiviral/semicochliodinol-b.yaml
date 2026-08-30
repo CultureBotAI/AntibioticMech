@@ -1,0 +1,41 @@
+identifier: CHEBI:66462
+label: semicochliodinol B
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A bisindole alkaloid that is quinone bearing hydroxy substituents at positions
+  2 and 5 and two indol-3-yl groups at positions 3 and 6, one of which is carrying
+  a prenyl group at position 6. Isolated from the culture broth of Chrysosporium merdarium,
+  it acts as an inhibitor of HIV-1 protease and EGF-R protein tyrosine kinase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,5-dihydroxy-3-(1H-indol-3-yl)-6-[6-(3-methylbut-2-en-1-yl)-1H-indol-3-yl]cyclohexa-2,5-diene-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132126
+- CHEBI:51879
+activity_roles:
+- CHEBI:35660
+chemical_structure:
+  smiles: CC(C)=CCc1ccc2c(C3=C(O)C(=O)C(c4cnc5ccccc45)=C(O)C3=O)cnc2c1
+  standard_inchi: InChI=1S/C27H22N2O4/c1-14(2)7-8-15-9-10-17-19(13-29-21(17)11-15)23-26(32)24(30)22(25(31)27(23)33)18-12-28-20-6-4-3-5-16(18)20/h3-7,9-13,28-30,33H,8H2,1-2H3
+  standard_inchi_key: JWHQWQQROAZMII-UHFFFAOYSA-N
+  molecular_formula: C27H22N2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 438.483
+  monoisotopic_mass: 438.15796
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66462
+  source_label: semicochliodinol B
+  minted_identifier: antibioticmech:chebi-25414035ea
+  role_terms:
+  - CHEBI:35660
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

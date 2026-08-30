@@ -1,0 +1,46 @@
+identifier: CHEBI:65945
+label: ganoderone A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracyclic triterpenoid that is 5α-lanosta-8,24-diene substituted by
+  a hydroxy group at position 26 and oxo groups at positions 3 and 7. Isolated from
+  the fruiting bodies of Ganoderma pfeifferi, it exhibits against herpes simplex virus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (24E)-26-hydroxylanosta-8,24-diene-3,7-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5α-lanosta-8,24-diene-26-hydroxy-3,7-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:26893
+- CHEBI:46640
+xrefs:
+- reaxys:15775259
+activity_roles:
+- CHEBI:64953
+chemical_structure:
+  smiles: '[H][C@@]12CC(=O)C3=C(CC[C@@]4(C)[C@@]3(C)CC[C@]4([H])[C@H](C)CC/C=C(\C)CO)[C@@]1(C)CCC(=O)C2(C)C'
+  standard_inchi: InChI=1S/C30H46O3/c1-19(18-31)9-8-10-20(2)21-11-16-30(7)26-22(12-15-29(21,30)6)28(5)14-13-25(33)27(3,4)24(28)17-23(26)32/h9,20-21,24,31H,8,10-18H2,1-7H3/b19-9+/t20-,21-,24+,28-,29-,30+/m1/s1
+  standard_inchi_key: SDAWCNCFVWQZDP-GOUGDUPLSA-N
+  molecular_formula: C30H46O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 454.695
+  monoisotopic_mass: 454.3447
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65945
+  source_label: ganoderone A
+  minted_identifier: antibioticmech:chebi-4034d7e2cd
+  role_terms:
+  - CHEBI:64953
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

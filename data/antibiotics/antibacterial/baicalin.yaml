@@ -49,6 +49,7 @@ xrefs:
 - reaxys:70480
 - wikipedia.en:Baicalin
 activity_roles:
+- CHEBI:149553
 - CHEBI:33282
 chemical_structure:
   smiles: O=C(O)[C@H]1O[C@@H](Oc2cc3oc(-c4ccccc4)cc(=O)c3c(O)c2O)[C@H](O)[C@@H](O)[C@@H]1O
@@ -65,6 +66,7 @@ source_concepts:
   source_label: baicalin
   minted_identifier: antibioticmech:chebi-7b4c2ae403
   role_terms:
+  - CHEBI:149553
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -72,3 +74,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

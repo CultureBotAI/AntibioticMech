@@ -1,0 +1,49 @@
+identifier: CHEBI:36798
+label: dothiepin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: 3-dibenzo[b,e]thiepin-11(6H)-ylidene-N,N-dimethylpropan-1-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-dibenzo[b,e]thiepin-11(6H)-ylidene-N,N-dimethyl-1-propanamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N-dimethyldibenzo[b,e]thiepin-Δ11(6H),γ-propylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dosulepin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38924
+xrefs:
+- beilstein:1348850
+- cas:113-53-1
+- gmelin:2031643
+- lincs.smallmolecule:LSM-3221
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: '[H]C(CCN(C)C)=C1c2ccccc2CSc2ccccc21'
+  standard_inchi: InChI=1S/C19H21NS/c1-20(2)13-7-11-17-16-9-4-3-8-15(16)14-21-19-12-6-5-10-18(17)19/h3-6,8-12H,7,13-14H2,1-2H3
+  standard_inchi_key: PHTUQLWOUWZIMZ-UHFFFAOYSA-N
+  molecular_formula: C19H21NS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 295.451
+  monoisotopic_mass: 295.13947
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:36798
+  source_label: dothiepin
+  minted_identifier: antibioticmech:chebi-cde2006fad
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

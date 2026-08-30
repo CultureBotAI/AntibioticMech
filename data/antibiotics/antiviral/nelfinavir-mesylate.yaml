@@ -1,0 +1,57 @@
+identifier: CHEBI:7497
+label: nelfinavir mesylate
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A methanesulfonate (mesylate) salt prepared from equimolar amounts of
+  nelfinavir and methanesulfonic acid. It is used for treatment of HIV and also exhibits
+  some anticancer properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Viracept
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: (3S,4aS,8aS)-3-(tert-butylcarbamoyl)-2-[(2R,3R)-2-hydroxy-3-[(3-hydroxy-2-methylbenzoyl)amino]-4-(phenylsulfanyl)butyl]decahydroisoquinolinium
+    methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3S,4aS,8aS)-N-tert-butyl-2-[(2R,3R)-2-hydroxy-3-[(3-hydroxy-2-methylbenzoyl)amino]-4-(phenylsulfanyl)butyl]decahydroisoquinoline-3-carboxamide
+    methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nelfinavir mesilate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38037
+xrefs:
+- cas:159989-65-8
+- drugbank:DB00220
+- kegg.compound:C08091
+- kegg.drug:D00899
+- reaxys:7407090
+- wikipedia.en:Nelfinavir
+activity_roles:
+- CHEBI:35660
+chemical_structure:
+  smiles: CS(=O)(=O)O.[H][C@@]12CCCC[C@]1([H])CN(C[C@@H](O)[C@H](CSc1ccccc1)NC(=O)c1cccc(O)c1C)[C@H](C(=O)NC(C)(C)C)C2
+  standard_inchi: InChI=1S/C32H45N3O4S.CH4O3S/c1-21-25(15-10-16-28(21)36)30(38)33-26(20-40-24-13-6-5-7-14-24)29(37)19-35-18-23-12-9-8-11-22(23)17-27(35)31(39)34-32(2,3)4;1-5(2,3)4/h5-7,10,13-16,22-23,26-27,29,36-37H,8-9,11-12,17-20H2,1-4H3,(H,33,38)(H,34,39);1H3,(H,2,3,4)/t22-,23+,26-,27-,29+;/m0./s1
+  standard_inchi_key: NQHXCOAXSHGTIA-SKXNDZRYSA-N
+  molecular_formula: C32H45N3O4S.CH4O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 663.903
+  monoisotopic_mass: 663.30119
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:7497
+  source_label: nelfinavir mesylate
+  minted_identifier: antibioticmech:chebi-b04d18e493
+  role_terms:
+  - CHEBI:35660
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

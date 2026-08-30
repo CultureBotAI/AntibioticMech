@@ -1,0 +1,68 @@
+identifier: CHEBI:2766
+label: aphidicolin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracyclic diterpenoid that has an tetradecahydro-8,11a-methanocyclohepta[a]naphthalene
+  skeleton with two hydroxymethyl substituents at positions 4 and 9, two methyl substituents
+  at positions 4 and 11b and two hydroxy substituents at positions 3 and 9. An antibiotic
+  with antiviral and antimitotical properties. Aphidicolin is a reversible inhibitor
+  of eukaryotic nuclear DNA replication.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,4R,4aR,6aS,8R,9R,11aS,11bS)-4,9-bis(hydroxymethyl)-4,11b-dimethyltetradecahydro-8,11a-methanocyclohepta[a]naphthalene-3,9-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3α,4α,5α,17α)-3,17-dihydroxy-4-methyl-9,15-cyclo-C,18-dinor-14,15-secoandrostane-4,17-dimethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Aphidicolin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: aphidocolin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:52557
+xrefs:
+- beilstein:4689958
+- cas:38966-21-1
+- chemspider:10280269
+- kegg.compound:C06088
+- knapsack:C00000873
+- lincs.smallmolecule:LSM-45486
+- metacyc.compound:CPD-11426
+- patent:US3761512
+- pdb-ccd:2ZE
+- reaxys:2055641
+- wikipedia.en:Aphidicolin
+activity_roles:
+- CHEBI:33281
+- CHEBI:36044
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@]3([H])[C@](C)(CC[C@@H](O)[C@@]3(C)CO)[C@]13CC[C@](O)(CO)[C@H](C2)C3'
+  standard_inchi: InChI=1S/C20H34O4/c1-17(11-21)15-4-3-13-9-14-10-19(13,7-8-20(14,24)12-22)18(15,2)6-5-16(17)23/h13-16,21-24H,3-12H2,1-2H3/t13-,14+,15-,16+,17-,18-,19-,20-/m0/s1
+  standard_inchi_key: NOFOAYPPHIUXJR-APNQCZIXSA-N
+  molecular_formula: C20H34O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 338.488
+  monoisotopic_mass: 338.24571
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2766
+  source_label: aphidicolin
+  minted_identifier: antibioticmech:chebi-78bb6a4be0
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

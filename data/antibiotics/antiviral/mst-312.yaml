@@ -1,0 +1,63 @@
+identifier: CHEBI:95003
+label: MST-312
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzamides that results from the formal condensation
+  of the two amino groups of benzene-1,3-diamine with the carboxylic acid groups of
+  two molar equivalents of 2,3-dihydroxybenzoic acid. It is telomerase inhibitor (IC50
+  = 0.67 μM in a TRAP assay) and exhibits antineoplastic activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N,N'-benzene-1,3-diylbis(2,3-dihydroxybenzamide)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MST 312
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MST312
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N'-(1,3-phenylene)bis(2,3-dihydroxybenzamide)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N'-bis(2,3-dihydroxybenzoyl)-1,3-phenylenediamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[3-[[(2,3-dihydroxyphenyl)-oxomethyl]amino]phenyl]-2,3-dihydroxybenzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: telomerase inhibitor IX
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:22702
+- CHEBI:33566
+xrefs:
+- cas:368449-04-1
+- lincs.smallmolecule:LSM-6230
+activity_roles:
+- CHEBI:59897
+chemical_structure:
+  smiles: O=C(Nc1cccc(NC(=O)c2cccc(O)c2O)c1)c1cccc(O)c1O
+  standard_inchi: InChI=1S/C20H16N2O6/c23-15-8-2-6-13(17(15)25)19(27)21-11-4-1-5-12(10-11)22-20(28)14-7-3-9-16(24)18(14)26/h1-10,23-26H,(H,21,27)(H,22,28)
+  standard_inchi_key: MIQUEZGHEJGPJB-UHFFFAOYSA-N
+  molecular_formula: C20H16N2O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 380.356
+  monoisotopic_mass: 380.10084
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:95003
+  source_label: MST-312
+  minted_identifier: antibioticmech:chebi-b6a5e7b03e
+  role_terms:
+  - CHEBI:59897
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

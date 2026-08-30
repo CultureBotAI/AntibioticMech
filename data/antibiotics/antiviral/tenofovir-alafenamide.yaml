@@ -1,0 +1,62 @@
+identifier: CHEBI:90926
+label: tenofovir alafenamide
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An L-alanine derivative that is isopropyl L-alaninate in which one of
+  the amino hydrogens is replaced by an (S)-({[(2R)-1-(6-amino-9H-purin-9-yl)propan-2-yl]oxy}methyl)(phenoxy)phosphoryl
+  group. A prodrug for tenofovir, it is used (as the fumarate salt) in combination
+  therapy for the treatment of HIV-1 infection.
+definition_source: ChEBI
+synonyms:
+- synonym_text: propan-2-yl N-[(S)-({[(2R)-1-(6-amino-9H-purin-9-yl)propan-2-yl]oxy}methyl)(phenoxy)phosphoryl]-L-alaninate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS 7340
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS-7340
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TAF
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:20706
+- CHEBI:25698
+- CHEBI:27577
+- CHEBI:35725
+- CHEBI:83943
+xrefs:
+- cas:379270-37-8
+- drugbank:DB09299
+- drugcentral:4944
+- kegg.drug:D10428
+- reaxys:8948831
+- wikipedia.en:Tenofovir_alafenamide
+activity_roles:
+- CHEBI:36044
+- CHEBI:53756
+chemical_structure:
+  smiles: CC(C)OC(=O)[C@H](C)N[P@](=O)(CO[C@H](C)Cn1cnc2c(N)ncnc21)Oc1ccccc1
+  standard_inchi: InChI=1S/C21H29N6O5P/c1-14(2)31-21(28)16(4)26-33(29,32-17-8-6-5-7-9-17)13-30-15(3)10-27-12-25-18-19(22)23-11-24-20(18)27/h5-9,11-12,14-16H,10,13H2,1-4H3,(H,26,29)(H2,22,23,24)/t15-,16+,33+/m1/s1
+  standard_inchi_key: LDEKQSIMHVQZJK-CAQYMETFSA-N
+  molecular_formula: C21H29N6O5P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 476.474
+  monoisotopic_mass: 476.1937
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:90926
+  source_label: tenofovir alafenamide
+  minted_identifier: antibioticmech:chebi-1c3df758b9
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

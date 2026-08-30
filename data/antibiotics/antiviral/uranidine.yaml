@@ -1,0 +1,54 @@
+identifier: CHEBI:195170
+label: uranidine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quinolone that is quinolin-4(1H)-one substituted by hydroxy groups at
+  positions 3, 5, and 8. It is isolated from the sponge Aplysina aerophoba.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,5,8-trihydroxyquinolin-4(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,5,8-trihydroxy-1,4-dihydroquinolin-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,5,8-trihydroxy-1,4-dihydroquinoline-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,5,8-trihydroxy-1H-quinolin-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,5,8-trihydroxy-4(1H)-quinolinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23765
+- CHEBI:38774
+xrefs:
+- cas:92264-09-0
+- knapsack:C00052425
+activity_roles:
+- CHEBI:53756
+chemical_structure:
+  smiles: O=c1c(O)cnc2c(O)ccc(O)c12
+  standard_inchi: InChI=1S/C9H7NO4/c11-4-1-2-5(12)8-7(4)9(14)6(13)3-10-8/h1-3,11-13H,(H,10,14)
+  standard_inchi_key: WXBCVQJUZIAXDB-UHFFFAOYSA-N
+  molecular_formula: C9H7NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 193.158
+  monoisotopic_mass: 193.03751
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:195170
+  source_label: uranidine
+  minted_identifier: antibioticmech:chebi-45f4077b01
+  role_terms:
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

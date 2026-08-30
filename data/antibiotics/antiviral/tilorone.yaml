@@ -1,0 +1,58 @@
+identifier: CHEBI:147347
+label: tilorone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of fluoren-9-ones that is 9H-fluoren-9-one which
+  is substituted by a 2-(diethylamino)ethoxy group at positions 2 and 7. It is an
+  interferon inducer and a selective α7 nicotinic acetylcholine receptor (α7 nAChR)
+  agonist. Its hydrochloride salt is used as an antiviral drug.
+definition_source: ChEBI
+synonyms:
+- synonym_text: tilorona
+  synonym_type: INN
+  source: chebi
+- synonym_text: tiloronum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2,7-bis[2-(diethylamino)ethoxy]-9H-fluoren-9-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,7-bis[2-(diethylamino)ethoxy]-9-fluorenone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24057
+- CHEBI:35618
+- CHEBI:46786
+- CHEBI:50996
+xrefs:
+- cas:27591-97-5
+- drugbank:DB17965
+- hmdb:HMDB0259096
+- lincs.smallmolecule:LSM-20974
+- wikipedia.en:Tilorone
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: CCN(CC)CCOc1ccc2c(c1)C(=O)c1cc(OCCN(CC)CC)ccc1-2
+  standard_inchi: InChI=1S/C25H34N2O3/c1-5-26(6-2)13-15-29-19-9-11-21-22-12-10-20(30-16-14-27(7-3)8-4)18-24(22)25(28)23(21)17-19/h9-12,17-18H,5-8,13-16H2,1-4H3
+  standard_inchi_key: MPMFCABZENCRHV-UHFFFAOYSA-N
+  molecular_formula: C25H34N2O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 410.558
+  monoisotopic_mass: 410.25694
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:147347
+  source_label: tilorone
+  minted_identifier: antibioticmech:chebi-b3d49e786c
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

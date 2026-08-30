@@ -1,0 +1,54 @@
+identifier: CHEBI:134543
+label: (R)-4-hydroxy-1-methyl-L-proline
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An L-proline derivative that is trans-4-hydroxy-L-proline in which the
+  amino hydrogen has been replaced by a methyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4R)-4-hydroxy-1-methyl-L-proline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-4-hydroxy-1-methylproline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-4-hydroxy-N-methyl-L-proline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-4-hydroxy-N-methylproline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-methyl-trans-4-hydroxy-L-proline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26456
+- CHEBI:84186
+xrefs:
+- chemspider:9943383
+- reaxys:472151
+activity_roles:
+- CHEBI:64947
+chemical_structure:
+  smiles: CN1C[C@H](O)C[C@H]1C(=O)O
+  standard_inchi: InChI=1S/C6H11NO3/c1-7-3-4(8)2-5(7)6(9)10/h4-5,8H,2-3H2,1H3,(H,9,10)/t4-,5+/m1/s1
+  standard_inchi_key: FMIPNAUMSPFTHK-UHNVWZDZSA-N
+  molecular_formula: C6H11NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 145.158
+  monoisotopic_mass: 145.07389
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:134543
+  source_label: (R)-4-hydroxy-1-methyl-L-proline
+  minted_identifier: antibioticmech:chebi-1e83c91cd4
+  role_terms:
+  - CHEBI:64947
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,44 @@
+identifier: CHEBI:70656
+label: 7-hydroxy-5-methoxy-6,8-dimethylflavone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monohydroxyflavone that is flavone substituted by a hydroxy group at
+  position 7, a methoxy group at position 5 and methyl groups at positions 6 and 8.
+  Isolated from the buds of Cleistocalyx operculatus, it has been shown to exhibit
+  inhibitory effects on the viral neuraminidases from two influenza viral strains,
+  H1N1 and H9N2.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7-hydroxy-5-methoxy-6,8-dimethyl-2-phenyl-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25401
+- CHEBI:38687
+xrefs:
+- reaxys:21040400
+activity_roles:
+- CHEBI:52425
+chemical_structure:
+  smiles: COc1c(C)c(O)c(C)c2oc(-c3ccccc3)cc(=O)c12
+  standard_inchi: InChI=1S/C18H16O4/c1-10-16(20)11(2)18-15(17(10)21-3)13(19)9-14(22-18)12-7-5-4-6-8-12/h4-9,20H,1-3H3
+  standard_inchi_key: NXIOJDXYHLKSSC-UHFFFAOYSA-N
+  molecular_formula: C18H16O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 296.322
+  monoisotopic_mass: 296.10486
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70656
+  source_label: 7-hydroxy-5-methoxy-6,8-dimethylflavone
+  minted_identifier: antibioticmech:chebi-8cb42449c7
+  role_terms:
+  - CHEBI:52425
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,63 @@
+identifier: CHEBI:83800
+label: daclatasvir hydrochloride
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrochloride obtained by combining daclatasvir with two molar equivalents
+  of hydrochloric acid. It is a potent inhibitor of nonstructural protein 5A and is
+  used for treatment of hepatitis C.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Daklinza
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: methyl [(2S)-1-{(2S)-2-[4-(4'-{2-[(2S)-1-{(2S)-2-[(methoxycarbonyl)amino]-3-methylbutanoyl}pyrrolidin-2-yl]-1H-imidazol-4-yl}biphenyl-4-yl)-1H-imidazol-2-yl]pyrrolidin-1-yl}-3-methyl-1-oxobutan-2-yl]carbamate
+    dihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BMS 790052-05
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BMS-790052-05
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Daclatasvir dihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dimethyl N,N'-(biphenyl-4,4'-diylbis(1H-imidazole-5,2-diyl-((2S)-pyrrolidine-2,1-
+    diyl)((1S)-1-(1-methylethyl)-2-oxoethane-2,1-diyl)))dicarbamate dihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:1009119-65-6
+- kegg.drug:D10105
+- reaxys:13072109
+- wikipedia.en:Daclatasvir
+activity_roles:
+- CHEBI:36044
+- CHEBI:83799
+chemical_structure:
+  smiles: COC(=O)N[C@H](C(=O)N1CCC[C@H]1c1ncc(-c2ccc(-c3ccc(-c4cnc([C@@H]5CCCN5C(=O)[C@@H](NC(=O)OC)C(C)C)n4)cc3)cc2)n1)C(C)C.Cl.Cl
+  standard_inchi: InChI=1S/C40H50N8O6.2ClH/c1-23(2)33(45-39(51)53-5)37(49)47-19-7-9-31(47)35-41-21-29(43-35)27-15-11-25(12-16-27)26-13-17-28(18-14-26)30-22-42-36(44-30)32-10-8-20-48(32)38(50)34(24(3)4)46-40(52)54-6;;/h11-18,21-24,31-34H,7-10,19-20H2,1-6H3,(H,41,43)(H,42,44)(H,45,51)(H,46,52);2*1H/t31-,32-,33-,34-;;/m0../s1
+  standard_inchi_key: BVZLLUDATICXCI-JMSCDMLISA-N
+  molecular_formula: C40H50N8O6.2HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 811.812
+  monoisotopic_mass: 810.33869
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83800
+  source_label: daclatasvir hydrochloride
+  minted_identifier: antibioticmech:chebi-ae458df3f0
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:83799
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

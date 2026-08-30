@@ -1,0 +1,44 @@
+identifier: CHEBI:68935
+label: (±)-chartaceone C
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dihydroxyflavanone that is flavanone substituted by hydroxy groups at
+  positions 5 and 7 and 6-carboxy-1-phenylhex-2-en-1-yl groups at positions 6 and
+  8 respectively. It has been isolated as a racemate from the bark of Cryptocarya
+  chartacea and exhibits inhibitory activity against dengue virus NS5 polymerase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: rac-(5E,5'E)-7,7'-(5,7-dihydroxy-4-oxo-2-phenyl-3,4-dihydro-2H-chromene-6,8-diyl)bis(7-phenylhept-5-enoic
+    acid)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35692
+- CHEBI:38749
+xrefs:
+- reaxys:22123627
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: O=C(O)CCC/C=C/C(c1ccccc1)c1c(O)c2c(c(C(/C=C/CCCC(=O)O)c3ccccc3)c1O)OC(c1ccccc1)CC2=O
+  standard_inchi: InChI=1S/C41H40O8/c42-32-26-33(29-20-10-3-11-21-29)49-41-37(31(28-18-8-2-9-19-28)23-13-5-15-25-35(45)46)39(47)36(40(48)38(32)41)30(27-16-6-1-7-17-27)22-12-4-14-24-34(43)44/h1-3,6-13,16-23,30-31,33,47-48H,4-5,14-15,24-26H2,(H,43,44)(H,45,46)/b22-12+,23-13+
+  standard_inchi_key: RGZSPQYXJSDKAN-FWSOMWAYSA-N
+  molecular_formula: C41H40O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 660.763
+  monoisotopic_mass: 660.27232
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68935
+  source_label: (±)-chartaceone C
+  minted_identifier: antibioticmech:chebi-f495f2917f
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

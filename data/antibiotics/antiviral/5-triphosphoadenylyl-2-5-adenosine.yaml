@@ -1,0 +1,40 @@
+identifier: CHEBI:140314
+label: 5'-triphosphoadenylyl-(2'→5')-adenosine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A (2'→5')-dinucleotide composed of two adenosine residues with a triphosphate
+  group at the 5' terminus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: pppA2'p5'A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:75800
+xrefs:
+- reaxys:4646833
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: Nc1ncnc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O[C@@H]2[C@H](O)[C@@H](COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O[C@H]2n2cnc3c(N)ncnc32)[C@@H](O)[C@H]1O
+  standard_inchi: InChI=1S/C20H28N10O19P4/c21-15-9-17(25-3-23-15)29(5-27-9)19-13(33)11(31)7(45-19)1-43-51(37,38)47-14-12(32)8(2-44-52(39,40)49-53(41,42)48-50(34,35)36)46-20(14)30-6-28-10-16(22)24-4-26-18(10)30/h3-8,11-14,19-20,31-33H,1-2H2,(H,37,38)(H,39,40)(H,41,42)(H2,21,23,25)(H2,22,24,26)(H2,34,35,36)/t7-,8-,11-,12-,13-,14-,19-,20-/m1/s1
+  standard_inchi_key: YHHSPPDBQDMAPZ-XPWFQUROSA-N
+  molecular_formula: C20H28N10O19P4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 836.391
+  monoisotopic_mass: 836.04827
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:140314
+  source_label: 5'-triphosphoadenylyl-(2'→5')-adenosine
+  minted_identifier: antibioticmech:chebi-f0c95e91da
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

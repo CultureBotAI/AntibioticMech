@@ -1,0 +1,74 @@
+identifier: CHEBI:75179
+label: trifluridine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyrimidine 2'-deoxyribonucleoside compound having 5-trifluoromethyluracil
+  as the nucleobase. An antiviral drug used mainly in the treatment of primary keratoconjunctivitis
+  and recurrent epithelial keratitis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Viroptic
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: trifluridina
+  synonym_type: INN
+  source: chebi
+- synonym_text: trifluridinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2'-deoxy-5-(trifluoromethyl)uridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-(Trifluoromethyl)deoxyuridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Trifluoromethyl-2-deoxyuridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Trifluoromethyldeoxyuridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Trifluorothymidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trifluorothymine deoxyriboside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:19255
+- CHEBI:37143
+- CHEBI:60783
+xrefs:
+- cas:70-00-8
+- drugbank:DB00432
+- drugcentral:2743
+- hmdb:HMDB0014576
+- kegg.drug:D00391
+- lincs.smallmolecule:LSM-5217
+- reaxys:568095
+- wikipedia.en:Trifluridine
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: O=c1nc(=O)n([C@H]2C[C@H](O)[C@@H](CO)O2)cc1C(F)(F)F
+  standard_inchi: InChI=1S/C10H11F3N2O5/c11-10(12,13)4-2-15(9(19)14-8(4)18)7-1-5(17)6(3-16)20-7/h2,5-7,16-17H,1,3H2,(H,14,18,19)/t5-,6+,7+/m0/s1
+  standard_inchi_key: VSQQQLOSPVPRAZ-RRKCRQDMSA-N
+  molecular_formula: C10H11F3N2O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 296.201
+  monoisotopic_mass: 296.06201
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75179
+  source_label: trifluridine
+  minted_identifier: antibioticmech:chebi-261a22a1ab
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

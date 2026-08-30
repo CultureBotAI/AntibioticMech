@@ -1,0 +1,58 @@
+identifier: CHEBI:73139
+label: oseltamivir acid
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclohexenecarboxylic acid that is cyclohex-1-ene-1-carboxylic acid
+  which is substituted at positions 3, 4, and 5 by pentan-3-yloxy, acetamido, and
+  amino groups, respectively (the 3R,4R,5S enantiomer). An antiviral drug, it is used
+  as the corresponding ethyl ester prodrug, oseltamivir, to slow the spread of influenza.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,4R,5S)-4-acetamido-5-amino-3-(pentan-3-yloxy)cyclohex-1-ene-1-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS 4071
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ro 64-0802
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: oseltamivir carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23483
+- CHEBI:33709
+- CHEBI:47622
+- CHEBI:50994
+xrefs:
+- cas:187227-45-8
+- reaxys:7714446
+activity_roles:
+- CHEBI:36044
+- CHEBI:52425
+chemical_structure:
+  smiles: CCC(CC)O[C@@H]1C=C(C(=O)O)C[C@H](N)[C@H]1NC(C)=O
+  standard_inchi: InChI=1S/C14H24N2O4/c1-4-10(5-2)20-12-7-9(14(18)19)6-11(15)13(12)16-8(3)17/h7,10-13H,4-6,15H2,1-3H3,(H,16,17)(H,18,19)/t11-,12+,13+/m0/s1
+  standard_inchi_key: NENPYTRHICXVCS-YNEHKIRRSA-N
+  molecular_formula: C14H24N2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 284.356
+  monoisotopic_mass: 284.17361
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:73139
+  source_label: oseltamivir acid
+  minted_identifier: antibioticmech:chebi-af2ed73a2a
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:52425
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

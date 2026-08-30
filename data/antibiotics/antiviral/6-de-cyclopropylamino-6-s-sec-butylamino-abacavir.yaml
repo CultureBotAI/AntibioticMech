@@ -1,0 +1,46 @@
+identifier: CHEBI:149438
+label: 6-de(cyclopropylamino)-6-[(S)-sec-butylamino]abacavir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 2,6-diaminopurine that is an analogue of abacavir in which the cyclopropylamino
+  group at position 6 of the purine moiety is replaced by an (S)-sec-butylamino group.
+  One of a series of synthesised abacavir analogues with antiviral activity found
+  to stimulate IFN-γ secretion in abacavir-responsive clones.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[(1S,4R)-4-{2-amino-6-[(2S)-butan-2-ylamino]-9H-purin-9-yl}cyclopent-2-en-1-yl]methanol'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1S,4R)-4-[2-amino-6-[[(1S)-1-methylpropyl]amino]-9H-purin-9-yl]-2-cyclopentene-1-methanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-de(cyclopropylamino)-6-(S-sec-butylamino)abacavir
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38001
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: CC[C@H](C)Nc1nc(N)nc2c1ncn2[C@H]1C=C[C@@H](CO)C1
+  standard_inchi: InChI=1S/C15H22N6O/c1-3-9(2)18-13-12-14(20-15(16)19-13)21(8-17-12)11-5-4-10(6-11)7-22/h4-5,8-11,22H,3,6-7H2,1-2H3,(H3,16,18,19,20)/t9-,10+,11-/m0/s1
+  standard_inchi_key: IRUQDNIRWKAXRV-AXFHLTTASA-N
+  molecular_formula: C15H22N6O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 302.382
+  monoisotopic_mass: 302.18551
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:149438
+  source_label: 6-de(cyclopropylamino)-6-[(S)-sec-butylamino]abacavir
+  minted_identifier: antibioticmech:chebi-354fdc1fc5
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,90 @@
+identifier: CHEBI:147675
+label: 5-iodo-2'-deoxyuridine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyrimidine 2'-deoxyribonucleoside compound having 5-iodouracil as the
+  nucleobase; used as an antiviral agent.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Idoxuridinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: idoxuridina
+  synonym_type: INN
+  source: chebi
+- synonym_text: idoxuridine
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2'-deoxy-5-iodouridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-5-Iodo-2'-deoxyuridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(2-Deoxy-beta-D-ribofuranosyl)-5-iodouracil
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-beta-D-2'-Deoxyribofuranosyl-5-iodouracil
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1beta-D-2'-Deoxyribofuranosyl-5-iodouracil
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2'-Deoxy-5-iodouridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Iododeoxyuridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Iodouracil deoxyriboside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: IdU
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Idoxuridin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Iododeoxyridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Iodoxuridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Joddeoxiuridin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:19255
+- CHEBI:37142
+xrefs:
+- cas:54-42-2
+- drugbank:DB03778
+- drugcentral:1417
+- lincs.smallmolecule:LSM-5836
+- reaxys:30397
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: O=c1nc(=O)n([C@H]2C[C@H](O)[C@@H](CO)O2)cc1I
+  standard_inchi: InChI=1S/C9H11IN2O5/c10-4-2-12(9(16)11-8(4)15)7-1-5(14)6(3-13)17-7/h2,5-7,13-14H,1,3H2,(H,11,15,16)/t5-,6+,7+/m0/s1
+  standard_inchi_key: XQFRJNBWHJMXHO-RRKCRQDMSA-N
+  molecular_formula: C9H11IN2O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 354.1
+  monoisotopic_mass: 353.97127
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:147675
+  source_label: 5-iodo-2'-deoxyuridine
+  minted_identifier: antibioticmech:chebi-8072294c81
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

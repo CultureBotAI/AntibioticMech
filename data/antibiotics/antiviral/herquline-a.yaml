@@ -1,0 +1,44 @@
+identifier: CHEBI:229724
+label: herquline A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (2S,5S,11R,11aR,14aR,14bS)-16-methyldodecahydro-4H-5,2-(epiminomethano)-11,7-(metheno)azacycloundecino[3,2,1-hi]indole-10,12-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: herquline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22315
+- CHEBI:38164
+- CHEBI:3992
+- CHEBI:50996
+xrefs:
+- cas:71812-08-3
+- knapsack:C00018235
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: '[H][C@@]12CC3=C[C@@]([H])(C(=O)CC3)[C@@]3([H])C(=O)CC[C@]4([H])C[C@@]([H])(CN1C)N(C2)[C@@]43[H]'
+  standard_inchi: InChI=1S/C19H26N2O2/c1-20-9-14-8-12-3-5-17(23)18-15-7-11(2-4-16(15)22)6-13(20)10-21(14)19(12)18/h7,12-15,18-19H,2-6,8-10H2,1H3/t12-,13+,14+,15+,18+,19+/m1/s1
+  standard_inchi_key: UFKNDVKQCSBIQE-OCANJJRCSA-N
+  molecular_formula: C19H26N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 314.429
+  monoisotopic_mass: 314.19943
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:229724
+  source_label: herquline A
+  minted_identifier: antibioticmech:chebi-f7dbd228a5
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

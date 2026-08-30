@@ -1,0 +1,47 @@
+identifier: CHEBI:66006
+label: harziphilone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of isochromanes that is 1,5,6,7-tetrahydro-8H-isochromen-8-one
+  substituted by hydroxy groups at positions 6 and 7, a methyl group at position 7
+  and a penta-1,3-dien-1-yl moiety at position 3. Isolated from the fermentation broth
+  of Trichoderma harzianum, it exhibits anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: rel-(6R,7R)-6,7-dihydroxy-7-methyl-3-[(1E,3E)-penta-1,3-dien-1-yl]-1,5,6,7-tetrahydro-8H-isochromen-8-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:23824
+- CHEBI:38762
+- CHEBI:51689
+- CHEBI:76224
+xrefs:
+- cas:183239-75-0
+- reaxys:7590687
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: C/C=C/C=C/C1=CC2=C(CO1)C(=O)[C@](C)(O)[C@H](O)C2
+  standard_inchi: InChI=1S/C15H18O4/c1-3-4-5-6-11-7-10-8-13(16)15(2,18)14(17)12(10)9-19-11/h3-7,13,16,18H,8-9H2,1-2H3/b4-3+,6-5+/t13-,15-/m1/s1
+  standard_inchi_key: GFTDIFRKHSPLIX-VNLWOOSYSA-N
+  molecular_formula: C15H18O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 262.305
+  monoisotopic_mass: 262.12051
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66006
+  source_label: harziphilone
+  minted_identifier: antibioticmech:chebi-2836eb12ac
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

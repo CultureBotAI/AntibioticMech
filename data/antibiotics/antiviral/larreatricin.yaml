@@ -1,0 +1,50 @@
+identifier: CHEBI:67153
+label: (+)-larreatricin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An antiviral lignan isolated from the creosote bush, Larrea tridentata,
+  which consists of a 3,4-dimethyltetrahydrofuran skeleton substituted by 4-hydroxyphenyl
+  groups at positions 2 and 5 (the 2R,3R,4S,5R stereoisomer).
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4,4'-[(2R,3R,4S,5R)-3,4-dimethyltetrahydrofuran-2,5-diyl]diphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R,3R,4S,5R)-2,5-bis(4-hydroxyphenyl)-3,4-dimethyltetrahydrofuran
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R,3R,4S,5R)-2,5-di(4-hydroxyphenyl)-3,4-dimethyltetrahydrofuran
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25036
+- CHEBI:26912
+- CHEBI:33853
+xrefs:
+- metacyc.compound:CPD-14400
+- reaxys:9411082
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: C[C@@H]1[C@H](C)[C@H](c2ccc(O)cc2)O[C@H]1c1ccc(O)cc1
+  standard_inchi: InChI=1S/C18H20O3/c1-11-12(2)18(14-5-9-16(20)10-6-14)21-17(11)13-3-7-15(19)8-4-13/h3-12,17-20H,1-2H3/t11-,12+,17-,18-/m1/s1
+  standard_inchi_key: PIBJADPEZQHMQS-FVEFGIFQSA-N
+  molecular_formula: C18H20O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 284.355
+  monoisotopic_mass: 284.14124
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:67153
+  source_label: (+)-larreatricin
+  minted_identifier: antibioticmech:chebi-9d7693930c
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

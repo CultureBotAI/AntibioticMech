@@ -1,0 +1,54 @@
+identifier: CHEBI:78039
+label: meso-tetrakis(N-methyl-4-pyridyl)porphine tetrakis(p-toluenesulfonate)
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organosulfonate salt that is the tetrakis(p-toluenesulfonate) salt
+  of meso-tetrakis(N-methyl-4-pyridyl)porphine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4,4',4'',4'''-porphyrin-5,10,15,20-tetrayltetrakis(1-methylpyridinium)
+    tetrakis(4-methylbenzenesulfonate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,10,15,20-tetrakis(N-methylpyridinium-4-yl)-21H,23H-porphine tetrakis(p-toluenesulfonate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TMPyP4 tetratosylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TMPyP4 tosylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: meso-tetrakis(N-methyl-4-pyridyl)porphine tetratosylate salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:64382
+xrefs:
+- cas:36951-72-1
+- reaxys:5237096
+activity_roles:
+- CHEBI:59897
+chemical_structure:
+  smiles: C[n+]1ccc(-c2c3ccc(n3)c(-c3cc[n+](C)cc3)c3nc(c(-c4cc[n+](C)cc4)c4ccc(n4)c(-c4cc[n+](C)cc4)c4nc2C=C4)C=C3)cc1.Cc1ccc(S(=O)(=O)[O-])cc1.Cc1ccc(S(=O)(=O)[O-])cc1.Cc1ccc(S(=O)(=O)[O-])cc1.Cc1ccc(S(=O)(=O)[O-])cc1
+  standard_inchi: InChI=1S/C44H37N8.4C7H8O3S/c1-49-21-13-29(14-22-49)41-33-5-7-35(45-33)42(30-15-23-50(2)24-16-30)37-9-11-39(47-37)44(32-19-27-52(4)28-20-32)40-12-10-38(48-40)43(36-8-6-34(41)46-36)31-17-25-51(3)26-18-31;4*1-6-2-4-7(5-3-6)11(8,9)10/h5-28H,1-4H3,(H,45,46,47,48);4*2-5H,1H3,(H,8,9,10)/q+3;;;;/p-3/b41-33-,41-34-,42-35-,42-37-,43-36-,43-38-,44-39-,44-40-;;;;
+  standard_inchi_key: AKZFRMNXBLFDNN-GVHKZQBISA-K
+  molecular_formula: C44H38N8.4C7H7O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1363.632
+  monoisotopic_mass: 1362.3683
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:78039
+  source_label: meso-tetrakis(N-methyl-4-pyridyl)porphine tetrakis(p-toluenesulfonate)
+  minted_identifier: antibioticmech:chebi-6a22939dbc
+  role_terms:
+  - CHEBI:59897
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

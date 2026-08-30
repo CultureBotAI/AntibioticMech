@@ -1,0 +1,48 @@
+identifier: CHEBI:78351
+label: amantadine sulfate
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An alkylammonium sulfate salt obtained by combining amantadine and sulfuric
+  acid in a 2:1 ratio. Used as an antiviral and antiparkinson drug.
+definition_source: ChEBI
+synonyms:
+- synonym_text: amantadine sulphate
+  synonym_type: INN
+  source: chebi
+- synonym_text: adamantan-1-amine sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Amantadine sulphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38015
+xrefs:
+- cas:31377-23-8
+- drugbank:DB00915
+- wikipedia.en:Amantadine
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: NC12CC3CC(CC(C3)C1)C2.NC12CC3CC(CC(C3)C1)C2.O=S(=O)(O)O
+  standard_inchi: InChI=1S/2C10H17N.H2O4S/c2*11-10-4-7-1-8(5-10)3-9(2-7)6-10;1-5(2,3)4/h2*7-9H,1-6,11H2;(H2,1,2,3,4)
+  standard_inchi_key: MYWTWSQFJLXGGQ-UHFFFAOYSA-N
+  molecular_formula: 2C10H17N.H2O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 400.585
+  monoisotopic_mass: 400.23958
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:78351
+  source_label: amantadine sulfate
+  minted_identifier: antibioticmech:chebi-6a6cf3037f
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

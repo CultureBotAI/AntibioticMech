@@ -1,0 +1,69 @@
+identifier: CHEBI:90531
+label: sotrastaurin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of maleimides that is maleimide which is substituted
+  at position 3 by an indol-3-yl group and at position 4 by a quinazolin-4-yl group,
+  which in turn is substituted at position 2 by a 4-methylpiperazin-1-yl group. It
+  is a potent and selective inhibitor of protein kinase C and has been investigated
+  as an immunosuppresant in renal transplant patients.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sotrastaurina
+  synonym_type: INN
+  source: chebi
+- synonym_text: sotrastaurine
+  synonym_type: INN
+  source: chebi
+- synonym_text: sotrastaurinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 3-(1H-indol-3-yl)-4-[2-(4-methylpiperazin-1-yl)quinazolin-4-yl]-1H-pyrrole-2,5-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AEB 071
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AEB-071
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AEB071
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24828
+- CHEBI:38530
+- CHEBI:46845
+- CHEBI:46848
+- CHEBI:55417
+xrefs:
+- cas:425637-18-9
+- kegg.drug:D09671
+- lincs.smallmolecule:LSM-42761
+- pdb-ccd:LW4
+- reaxys:13012870
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CN1CCN(c2nc(C3=C(c4cnc5ccccc45)C(=O)NC3=O)c3ccccc3n2)CC1
+  standard_inchi: InChI=1S/C25H22N6O2/c1-30-10-12-31(13-11-30)25-27-19-9-5-3-7-16(19)22(28-25)21-20(23(32)29-24(21)33)17-14-26-18-8-4-2-6-15(17)18/h2-9,14,26H,10-13H2,1H3,(H,29,32,33)
+  standard_inchi_key: OAVGBZOFDPFGPJ-UHFFFAOYSA-N
+  molecular_formula: C25H22N6O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 438.491
+  monoisotopic_mass: 438.18042
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:90531
+  source_label: sotrastaurin
+  minted_identifier: antibioticmech:chebi-eda223ea0e
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

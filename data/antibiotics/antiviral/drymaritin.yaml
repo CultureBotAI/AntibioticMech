@@ -1,0 +1,47 @@
+identifier: CHEBI:65813
+label: drymaritin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An indole alkaloid that is canthin-6-one substituted by a methoxy group
+  at position 4. Isolated from the whole plants of Drymaria diandra, it exhibits anti-HIV
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-methoxy-6H-indolo[3,2,1-de][1,5]naphthyridin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-methoxycanthin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38163
+- CHEBI:38958
+- CHEBI:47985
+- CHEBI:51689
+xrefs:
+- reaxys:10007683
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: COc1cc(=O)n2c3ccccc3c3ccnc1c32
+  standard_inchi: InChI=1S/C15H10N2O2/c1-19-12-8-13(18)17-11-5-3-2-4-9(11)10-6-7-16-14(12)15(10)17/h2-8H,1H3
+  standard_inchi_key: DRUBOMIDMLWOQH-UHFFFAOYSA-N
+  molecular_formula: C15H10N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 250.257
+  monoisotopic_mass: 250.07423
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65813
+  source_label: drymaritin
+  minted_identifier: antibioticmech:chebi-f47ee940ac
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

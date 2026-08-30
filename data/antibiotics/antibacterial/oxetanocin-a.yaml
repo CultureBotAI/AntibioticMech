@@ -40,6 +40,7 @@ xrefs:
 - reaxys:4297990
 activity_roles:
 - CHEBI:33282
+- CHEBI:64946
 chemical_structure:
   smiles: '[H][C@]1(CO)O[C@@]([H])(n2cnc3c(N)ncnc32)[C@@H]1CO'
   standard_inchi: InChI=1S/C10H13N5O3/c11-8-7-9(13-3-12-8)15(4-14-7)10-5(1-16)6(2-17)18-10/h3-6,10,16-17H,1-2H2,(H2,11,12,13)/t5-,6-,10-/m1/s1
@@ -56,9 +57,14 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-ef6b6fdc50
   role_terms:
   - CHEBI:33282
+  - CHEBI:64946
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

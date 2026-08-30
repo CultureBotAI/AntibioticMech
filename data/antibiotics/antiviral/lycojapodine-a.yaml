@@ -1,0 +1,47 @@
+identifier: CHEBI:66603
+label: lycojapodine A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An alkaloid isolated from the club moss Lycopodium japonicum and has been
+  shown to exhibit acetylcholinesterase inhibitory and anti-HIV-1 activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5aR,6S,8R,9aS)-8-methylhexahydro-9a,6-(epoxyethano)-1,5a-propano-1-benzazepine-5,11(2H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-lycojapodine A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22315
+- CHEBI:25000
+- CHEBI:35990
+- CHEBI:38163
+- CHEBI:3992
+xrefs:
+- reaxys:23048623
+activity_roles:
+- CHEBI:64947
+chemical_structure:
+  smiles: '[H][C@@]12CC(=O)O[C@]3(C[C@H](C)C1)N1CCCC(=O)[C@]23CCC1'
+  standard_inchi: InChI=1S/C16H23NO3/c1-11-8-12-9-14(19)20-16(10-11)15(12)5-3-7-17(16)6-2-4-13(15)18/h11-12H,2-10H2,1H3/t11-,12+,15+,16+/m1/s1
+  standard_inchi_key: QZNUIODTYIUAMN-KNPMLCFXSA-N
+  molecular_formula: C16H23NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 277.364
+  monoisotopic_mass: 277.16779
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66603
+  source_label: lycojapodine A
+  minted_identifier: antibioticmech:chebi-a143461191
+  role_terms:
+  - CHEBI:64947
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

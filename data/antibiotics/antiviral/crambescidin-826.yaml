@@ -1,0 +1,50 @@
+identifier: CHEBI:65667
+label: crambescidin 826
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heteropentacyclic guanidine alkaloid isolated from maringe
+  sponge Monanchora sp. It exhibits anti-HIV-1 and anti-HSV-1 activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 18-[(4-amino-4-oxobutyl)(3-aminopropyl)amino]-18-oxooctadecyl (2R,2a'S,3'R,4'S,6''S,7R,8a'R)-7-ethyl-6''-methyl-1',2',2a',3',3'',4,4'',5'',6'',7,8',8a'-dodecahydro-3H,6'H-dispiro[oxepine-2,7'-[5,6,8b]
+    triazaacenaphthylene-4',2''-pyran]-3'-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22315
+- CHEBI:24436
+- CHEBI:29347
+- CHEBI:33308
+- CHEBI:33599
+- CHEBI:38164
+- CHEBI:50994
+xrefs:
+- chemspider:10223863
+- reaxys:9835644
+activity_roles:
+- CHEBI:64947
+- CHEBI:64953
+chemical_structure:
+  smiles: '[H][C@]12CC[C@]3([H])[C@H](C(=O)OCCCCCCCCCCCCCCCCCC(=O)N(CCCN)CCCC(N)=O)[C@]4(CCC[C@@H](C)O4)N=C(N[C@]4(CCC=C[C@H](CC)O4)C1)N23'
+  standard_inchi: InChI=1S/C47H82N6O6/c1-3-39-25-18-19-30-46(59-39)36-38-28-29-40-43(47(31-21-24-37(2)58-47)51-45(50-46)53(38)40)44(56)57-35-20-16-14-12-10-8-6-4-5-7-9-11-13-15-17-27-42(55)52(34-23-32-48)33-22-26-41(49)54/h18,25,37-40,43H,3-17,19-24,26-36,48H2,1-2H3,(H2,49,54)(H,50,51)/t37-,38+,39+,40-,43-,46+,47-/m1/s1
+  standard_inchi_key: FIZFMEDRNMJYPL-XMXBVVCASA-N
+  molecular_formula: C47H82N6O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 827.209
+  monoisotopic_mass: 826.62958
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65667
+  source_label: crambescidin 826
+  minted_identifier: antibioticmech:chebi-9b6da81dca
+  role_terms:
+  - CHEBI:64947
+  - CHEBI:64953
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

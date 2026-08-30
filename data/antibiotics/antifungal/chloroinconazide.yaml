@@ -27,6 +27,7 @@ xrefs:
 - ppdb:3464
 - reaxys:55193976
 activity_roles:
+- CHEBI:22587
 - CHEBI:24127
 chemical_structure:
   smiles: CC1N[C@H](C(=O)N/N=C/c2ccc(Cl)cc2)Cc2c1nc1ccccc21
@@ -43,6 +44,7 @@ source_concepts:
   source_label: chloroinconazide
   minted_identifier: antibioticmech:chebi-efd4131d0a
   role_terms:
+  - CHEBI:22587
   - CHEBI:24127
   source_version: '2026-08-29'
 curation_history:
@@ -50,3 +52,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

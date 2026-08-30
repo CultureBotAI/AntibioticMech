@@ -1,0 +1,82 @@
+identifier: CHEBI:8461
+label: promethazine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tertiary amine that is a substituted phenothiazine in which the ring
+  nitrogen at position 10 is attached to C-3 of an N,N-dimethylpropan-2-amine moiety.
+definition_source: ChEBI
+synonyms:
+- synonym_text: prometazina
+  synonym_type: INN
+  source: chebi
+- synonym_text: promethazinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: prométhazine
+  synonym_type: INN
+  source: chebi
+- synonym_text: N,N-dimethyl-1-(10H-phenothiazin-10-yl)propan-2-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2-dimethylamino-2-methyl)ethyl-N-dibenzoparathiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10-(2-Dimethylaminopropyl)phenothiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10-[2-(dimethylamino)propyl]phenothiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N,α-trimethyl-10H-phenothiazine-10-ethanamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(2'-dimethylamino-2'-methyl)ethylphenothiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Promethazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: proazamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:32876
+- CHEBI:38093
+xrefs:
+- cas:60-87-7
+- drugbank:DB01069
+- drugcentral:2286
+- gmelin:337077
+- hmdb:HMDB0015202
+- kegg.compound:C07404
+- kegg.drug:D00494
+- lincs.smallmolecule:LSM-4440
+- patent:US2530451
+- patent:US2607773
+- reaxys:88554
+- wikipedia.en:Promethazine
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CC(CN1c2ccccc2Sc2ccccc21)N(C)C
+  standard_inchi: InChI=1S/C17H20N2S/c1-13(18(2)3)12-19-14-8-4-6-10-16(14)20-17-11-7-5-9-15(17)19/h4-11,13H,12H2,1-3H3
+  standard_inchi_key: PWWVAXIEGOYWEE-UHFFFAOYSA-N
+  molecular_formula: C17H20N2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 284.428
+  monoisotopic_mass: 284.13472
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:8461
+  source_label: promethazine
+  minted_identifier: antibioticmech:chebi-0f98d9cd82
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,51 @@
+identifier: CHEBI:66252
+label: topopyrone A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A naphthochromene that is 4H-naphtho[2,3-h]chromene-4,7,12-trione substituted
+  by a chloro group at position 10, hydroxy groups at positions 5, 9 and 11 and a
+  methyl group at position 2. It is isolated from a fungal strain Phoma sp.BAUA2861
+  and acts as an inhibitor of the enzyme topoisomerase I.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 10-chloro-5,9,11-trihydroxy-2-methyl-4H-naphtho[2,3-h]chromene-4,7,12-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25830
+- CHEBI:33853
+- CHEBI:36683
+- CHEBI:68504
+xrefs:
+- reaxys:8730620
+activity_roles:
+- CHEBI:22587
+- CHEBI:33281
+chemical_structure:
+  smiles: Cc1cc(=O)c2c(O)cc3c(c2o1)C(=O)c1c(cc(O)c(Cl)c1O)C3=O
+  standard_inchi: InChI=1S/C18H9ClO7/c1-5-2-8(20)13-9(21)3-7-12(18(13)26-5)16(24)11-6(15(7)23)4-10(22)14(19)17(11)25/h2-4,21-22,25H,1H3
+  standard_inchi_key: KUCMIJRMIDNZCP-UHFFFAOYSA-N
+  molecular_formula: C18H9ClO7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 372.716
+  monoisotopic_mass: 372.00368
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66252
+  source_label: topopyrone A
+  minted_identifier: antibioticmech:chebi-2972037ca5
+  role_terms:
+  - CHEBI:22587
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

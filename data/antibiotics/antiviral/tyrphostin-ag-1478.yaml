@@ -1,0 +1,55 @@
+identifier: CHEBI:75404
+label: tyrphostin AG 1478
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of quinazolines that is quinazoline substituted
+  by methoxy groups at positions 6 and 7 and a (3-chlorophenyl)nitrilo group at position
+  4. It acts as an epidermal growth factor receptor antagonist.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-(3-chlorophenyl)-6,7-dimethoxy-quinazolin-4-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AG 1478
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AG-1478
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tyrphostin AG-1478
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:38530
+- CHEBI:83403
+xrefs:
+- cas:170449-18-0
+- lincs.smallmolecule:LSM-1224
+- pdb-ccd:0TO
+- reaxys:7437034
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: COc1cc2ncnc(Nc3cccc(Cl)c3)c2cc1OC
+  standard_inchi: InChI=1S/C16H14ClN3O2/c1-21-14-7-12-13(8-15(14)22-2)18-9-19-16(12)20-11-5-3-4-10(17)6-11/h3-9H,1-2H3,(H,18,19,20)
+  standard_inchi_key: GFNNBHLJANVSQV-UHFFFAOYSA-N
+  molecular_formula: C16H14ClN3O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 315.76
+  monoisotopic_mass: 315.07745
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75404
+  source_label: tyrphostin AG 1478
+  minted_identifier: antibioticmech:chebi-48cc0bf0b4
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

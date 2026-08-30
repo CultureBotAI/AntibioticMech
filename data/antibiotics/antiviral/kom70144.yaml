@@ -1,0 +1,55 @@
+identifier: CHEBI:167314
+label: KOM70144
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzamide that is GRL-0617 in which one of the hydrogen's of the primary
+  amino group is replaced by an acetyl group. It an inhibitor of SARS-CoV and SARS-CoV-2
+  papain-like protease (PLpro) with an IC50 of 2.6 μM and 5.0 μM, respectively. It
+  also inhibits SARS-CoV and SARS-CoV-2 infection of Vero E6 cells in vitro (EC50
+  values are 13.1 and 21 μM, respectively).
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-acetamido-2-methyl-N-[(1R)-1-(naphthalen-1-yl)ethyl]benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-5-acetamido-2-methyl-N-(1-(naphthalen-1-yl)ethyl)benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-(acetylamino)-2-methyl-N-[(1R)-1-(1-naphthalenyl)ethyl]benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-N-acetylamino-2-methyl-N-[(R)-1-(1-naphthyl)ethyl]benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:22160
+- CHEBI:22702
+- CHEBI:25477
+xrefs:
+- cas:1093070-14-4
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CC(=O)Nc1ccc(C)c(C(=O)N[C@H](C)c2cccc3ccccc23)c1
+  standard_inchi: InChI=1S/C22H22N2O2/c1-14-11-12-18(24-16(3)25)13-21(14)22(26)23-15(2)19-10-6-8-17-7-4-5-9-20(17)19/h4-13,15H,1-3H3,(H,23,26)(H,24,25)/t15-/m1/s1
+  standard_inchi_key: KGPYBLOBHQLIET-OAHLLOKOSA-N
+  molecular_formula: C22H22N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 346.43
+  monoisotopic_mass: 346.16813
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:167314
+  source_label: KOM70144
+  minted_identifier: antibioticmech:chebi-88fad56b86
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -59,17 +59,18 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 | Class | Records | SEEDED | REVIEWED | With CARD mechanism evidence |
 |---|---:|---:|---:|---:|
-| ANTIBACTERIAL | 1040 | 1040 | 0 | 264 |
+| ANTIBACTERIAL | 1037 | 1037 | 0 | 264 |
 | ANTIMYCOBACTERIAL | 78 | 78 | 0 | 15 |
 | ANTIFUNGAL | 588 | 588 | 0 | 43 |
 | ANTIPROTOZOAL | 248 | 248 | 0 | 2 |
+| ANTIVIRAL | 474 | 474 | 0 | 0 |
 | BIOCIDE | 29 | 29 | 0 | 0 |
-| ANTIMICROBIAL_UNSPECIFIED | 486 | 486 | 0 | 0 |
-| **TOTAL** | **2469** | **2469** | **0** | **324** |
+| ANTIMICROBIAL_UNSPECIFIED | 469 | 469 | 0 | 0 |
+| **TOTAL** | **2923** | **2923** | **0** | **324** |
 
-Identity: **2219** records (90%) are grounded in a ChEBI term; **250** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
+Identity: **2673** records (91%) are grounded in a ChEBI term; **250** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
 
-Corroboration: **279** records carry source concepts from both ChEBI and CARD/ARO; **1888** come from ChEBI alone and **302** from CARD alone.
+Corroboration: **281** records carry source concepts from both ChEBI and CARD/ARO; **2342** come from ChEBI alone and **300** from CARD alone.
 
 Mechanism layer: **206** records carry a molecular target and **279** carry resistance determinants, both seeded from CARD; **0** carry a curated causal graph. That last number is the work.
 
@@ -118,12 +119,16 @@ so seeding, validation, rendering and the whole test suite run offline.
 | [CARD/ARO](https://card.mcmaster.ca/) | Individual antibiotic molecules, drug classes, resistance determinants, drug targets | `ARO:1000003` antibiotic molecule subtree |
 | [PubChem](https://pubchem.ncbi.nlm.nih.gov/) | Structures for ARO molecules ChEBI does not cover | Only the CIDs CARD cross-references |
 
-"Antimicrobial" in ChEBI spans viruses too. This corpus covers compounds acting
-on **cellular** microbes — bacteria, mycobacteria, fungi, protozoa — plus the
-biocides used against them. The antiviral branch is excluded by an explicit,
-revisitable decision in `conf/sources.yaml`, not by oversight: an antiviral acts
-on a non-cellular agent through host machinery, and none of the mechanism model
-here transfers to it.
+Scope follows ChEBI's own reading of "antimicrobial": compounds acting on
+bacteria, mycobacteria, fungi, protozoa **and viruses**, plus the biocides used
+against them. Antibiotic pesticides are excluded by an explicit, revisitable
+decision in `conf/sources.yaml` — insecticides, acaricides and nematicides act
+on metazoa.
+
+Antivirals sit differently in the mechanism layer: their target is a viral
+protein or a replication step, and CARD's resistance determinants do not apply,
+so an antiviral record carries no CARD mechanism evidence. The schema's
+mode-of-action and target vocabularies cover both kinds.
 
 ## What is generated, and what is curated
 

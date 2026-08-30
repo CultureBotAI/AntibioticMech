@@ -13,6 +13,7 @@ CLASS_DIRS = {
     "ANTIMYCOBACTERIAL": "antimycobacterial",
     "ANTIFUNGAL": "antifungal",
     "ANTIPROTOZOAL": "antiprotozoal",
+    "ANTIVIRAL": "antiviral",
     "BIOCIDE": "biocide",
     "ANTIMICROBIAL_UNSPECIFIED": "unspecified",
     "OTHER": "other",

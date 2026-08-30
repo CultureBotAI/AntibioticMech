@@ -1,0 +1,62 @@
+identifier: CHEBI:147281
+label: GS-441524
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A C-nucleoside analog that is (2R,3R,4S,5R)-3,4-dihydroxy-5-(hydroxymethyl)tetrahydrofuran-2-carbonitrile
+  substituted by a 4-aminopyrrolo[2,1-f][1,2,4]triazin-7-yl group at position 2. It
+  is the active metabolite of remdesivir and exhibits a broad range of inhibitory
+  activity against various RNA viruses including HCV, parainfluenza and SARS-CoV.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3R,4S,5R)-2-(4-aminopyrrolo[2,1-f][1,2,4]triazin-7-yl)-3,4-dihydroxy-5-(hydroxymethyl)tetrahydrofuran-2-carbonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: EVO 984
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: EVO-984
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: EVO984
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS 441524
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS441524
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18379
+- CHEBI:33860
+- CHEBI:37086
+- CHEBI:88341
+xrefs:
+- cas:1191237-69-0
+activity_roles:
+- CHEBI:149553
+- CHEBI:22587
+chemical_structure:
+  smiles: N#C[C@@]1(c2ccc3c(N)ncnn23)O[C@H](CO)[C@@H](O)[C@H]1O
+  standard_inchi: InChI=1S/C12H13N5O4/c13-4-12(10(20)9(19)7(3-18)21-12)8-2-1-6-11(14)15-5-16-17(6)8/h1-2,5,7,9-10,18-20H,3H2,(H2,14,15,16)/t7-,9-,10-,12+/m1/s1
+  standard_inchi_key: BRDWIEOJOWJCLU-LTGWCKQJSA-N
+  molecular_formula: C12H13N5O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 291.267
+  monoisotopic_mass: 291.09675
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:147281
+  source_label: GS-441524
+  minted_identifier: antibioticmech:chebi-da59623d98
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

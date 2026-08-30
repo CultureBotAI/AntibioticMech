@@ -1,0 +1,45 @@
+identifier: CHEBI:66302
+label: pyranojacareubin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heteropentacyclic compound that is 2H,6H,10H-dipyrano[3,2-b:2',3'-i]xanthene
+  substituted by hydroxy groups at positions 5 and 12, geminal methyl groups at positions
+  2 and 10 and an oxo group at position 6. Isolated from Calophyllum blancoi it exhibits
+  antiviral activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,12-dihydroxy-2,2,10,10-tetramethyl-2H,6H,10H-dipyrano[3,2-b:2',3'-i]xanthen-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:37407
+- CHEBI:38164
+- CHEBI:3992
+xrefs:
+- reaxys:6352609
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: CC1(C)C=Cc2c(cc3oc4c(O)c5c(cc4c(=O)c3c2O)C=CC(C)(C)O5)O1
+  standard_inchi: InChI=1S/C23H20O6/c1-22(2)8-6-12-14(28-22)10-15-16(17(12)24)18(25)13-9-11-5-7-23(3,4)29-20(11)19(26)21(13)27-15/h5-10,24,26H,1-4H3
+  standard_inchi_key: ZMJXZBDITYZMTK-UHFFFAOYSA-N
+  molecular_formula: C23H20O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 392.407
+  monoisotopic_mass: 392.12599
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66302
+  source_label: pyranojacareubin
+  minted_identifier: antibioticmech:chebi-11aafb4642
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

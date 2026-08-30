@@ -1,0 +1,51 @@
+identifier: CHEBI:421843
+label: (−)-carbovir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The (active) (−)-enantiomer of the carbocyclic analogue of 2',3'-dideoxy-2',3'-didehydroguanosine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-amino-9-[(1R,4S)-4-(hydroxymethyl)cyclopent-2-en-1-yl]-1,9-dihydro-6H-purin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1R-cis)-2-amino-1,9-dihydro-9-(4-(hydroxymethyl)-2-cyclopenten-1-yl)-6H-purin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-amino-9-[(1R,4S)-4-(hydroxymethyl)cyclopent-2-en-1-yl]-9H-purin-6-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CBV
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: carbovir
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:202940
+xrefs:
+- cas:120443-30-3
+activity_roles:
+- CHEBI:53756
+chemical_structure:
+  smiles: Nc1nc(=O)c2ncn([C@H]3C=C[C@@H](CO)C3)c2n1
+  standard_inchi: InChI=1S/C11H13N5O2/c12-11-14-9-8(10(18)15-11)13-5-16(9)7-2-1-6(3-7)4-17/h1-2,5-7,17H,3-4H2,(H3,12,14,15,18)/t6-,7+/m1/s1
+  standard_inchi_key: XSSYCIGJYCVRRK-RQJHMYQMSA-N
+  molecular_formula: C11H13N5O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 247.258
+  monoisotopic_mass: 247.10692
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:421843
+  source_label: (−)-carbovir
+  minted_identifier: antibioticmech:chebi-da9966f4ba
+  role_terms:
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

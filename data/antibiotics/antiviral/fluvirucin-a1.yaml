@@ -1,0 +1,53 @@
+identifier: CHEBI:71508
+label: fluvirucin A1
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A lactam that is 4-hydroxyazacyclotetradecan-2-one substituted by an ethyl
+  group at position 11, methyl groups at position 3 and 7 and a 3-amino-3,6-dideoxy-α-L-talopyranosyl
+  moiety at position 4 via a glycosyl linkage (the 3R,4S,7R,11S stereoisomer). It
+  is isolated from the fermentation broth of an unidentified actinomycete species
+  and exhibits potent inhibitory activity against influenza A virus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,4S,7R,11S)-11-ethyl-3,7-dimethyl-2-oxoazacyclotetradecan-4-yl
+    3-amino-3,6-dideoxy-α-L-talopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R,3S,6R,10S)-3-[(3-amino-3,6-dideoxy-α-L-talopyranosyl)-oxy]-2,6-dimethyl-10-ethyl-13-tridecanelactam
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24995
+- CHEBI:47779
+- CHEBI:51026
+activity_roles:
+- CHEBI:33281
+- CHEBI:52425
+chemical_structure:
+  smiles: '[H][C@@]1(O[C@H]2CC[C@H](C)CCC[C@H](CC)CCCNC(=O)[C@@H]2C)O[C@@H](C)[C@@H](O)[C@@H](N)[C@H]1O'
+  standard_inchi: InChI=1S/C23H44N2O5/c1-5-17-9-6-8-14(2)11-12-18(15(3)22(28)25-13-7-10-17)30-23-21(27)19(24)20(26)16(4)29-23/h14-21,23,26-27H,5-13,24H2,1-4H3,(H,25,28)/t14-,15-,16+,17+,18+,19-,20-,21-,23+/m1/s1
+  standard_inchi_key: ZRJBXPCQRSLIKK-BDPAYSQHSA-N
+  molecular_formula: C23H44N2O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 428.614
+  monoisotopic_mass: 428.32502
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:71508
+  source_label: fluvirucin A1
+  minted_identifier: antibioticmech:chebi-5aa5f1d330
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:52425
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -20,6 +20,7 @@ parent_compounds:
 xrefs:
 - reaxys:15836653
 activity_roles:
+- CHEBI:22587
 - CHEBI:33231
 chemical_structure:
   smiles: '[H][C@]1(C(=O)NCCCCNC(=O)c2ccccc2)[C@]([H])(c2ccccc2)[C@]2(c3ccc(OC)cc3)Oc3cc(OC)cc(OC)c3[C@@]1(O)[C@H]2O'
@@ -36,6 +37,7 @@ source_concepts:
   source_label: desacetylpyramidaglain D
   minted_identifier: antibioticmech:chebi-bfe778b21d
   role_terms:
+  - CHEBI:22587
   - CHEBI:33231
   source_version: '2026-08-29'
 curation_history:
@@ -43,3 +45,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

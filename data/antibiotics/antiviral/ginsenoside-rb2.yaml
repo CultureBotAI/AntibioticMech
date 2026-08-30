@@ -1,0 +1,61 @@
+identifier: CHEBI:77152
+label: ginsenoside Rb2
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A ginsenoside found in Panax ginseng that is dammarane which is substituted
+  by hydroxy groups at the 3β, 12β and 20 pro-S positions, in which the hydroxy groups
+  at positions 3 and 20 have been converted to the corresponding β-D-glucopyranosyl-(1→2)-β-D-glucopyranoside
+  and α-L-arabinopyranosyl-(1→6)-β-D-glucopyranoside respectively, and in which a
+  double bond has been introduced at the 24-25 position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3β,12β)-20-{[6-O-(α-L-arabinopyranosyl)-β-D-glucopyranosyl]oxy}-12-hydroxydammar-24-en-3-yl
+    2-O-β-D-glucopyranosyl-β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ginsenoside C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 308878
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (20S)-ginsenoside Rb2
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22798
+- CHEBI:26893
+- CHEBI:36847
+- CHEBI:63353
+- CHEBI:74978
+xrefs:
+- cas:11021-13-9
+- hmdb:HMDB0034996
+- metacyc.compound:CPD-15451
+- patent:WO2006001654
+- reaxys:4901741
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: '[H][C@]12C[C@@H](O)[C@]3([H])[C@@]([H])([C@](C)(CCC=C(C)C)O[C@@H]4O[C@H](CO[C@@H]5OC[C@H](O)[C@H](O)[C@H]5O)[C@@H](O)[C@H](O)[C@H]4O)CC[C@@]3(C)[C@]1(C)CC[C@@]1([H])C(C)(C)[C@@H](O[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)CC[C@]21C'
+  standard_inchi: InChI=1S/C53H90O22/c1-23(2)10-9-14-53(8,75-47-43(67)39(63)37(61)29(72-47)22-69-45-41(65)34(58)26(57)21-68-45)24-11-16-52(7)33(24)25(56)18-31-50(5)15-13-32(49(3,4)30(50)12-17-51(31,52)6)73-48-44(40(64)36(60)28(20-55)71-48)74-46-42(66)38(62)35(59)27(19-54)70-46/h10,24-48,54-67H,9,11-22H2,1-8H3/t24-,25+,26-,27+,28+,29+,30-,31+,32-,33-,34-,35+,36+,37+,38-,39-,40-,41+,42+,43+,44+,45-,46-,47-,48-,50-,51+,52+,53-/m0/s1
+  standard_inchi_key: NODILNFGTFIURN-GZPRDHCNSA-N
+  molecular_formula: C53H90O22
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1079.281
+  monoisotopic_mass: 1078.59237
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77152
+  source_label: ginsenoside Rb2
+  minted_identifier: antibioticmech:chebi-20df963271
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

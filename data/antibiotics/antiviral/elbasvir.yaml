@@ -1,0 +1,60 @@
+identifier: CHEBI:132967
+label: elbasvir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A complex organic heterotetracyclic compound that is a hepatitis C virus
+  nonstructural protein 5A inhibitor used in combination with grazoprevir (under the
+  brand name Zepatier) for treatment of chronic HCV genotypes 1 or 4 infection in
+  adults.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl {(2S)-1-[(2S)-2-{4-[(6S)-3-{2-[(2S)-1-{(2S)-2-[(methoxycarbonyl)amino]-3-methylbutanoyl}pyrrolidin-2-yl]-1H-imidazol-4-yl}-6-phenyl-6H-indolo[1,2-c][1,3]benzoxazin-10-yl]-1H-imidazol-2-yl}pyrrolidin-1-yl]-3-methyl-1-oxobutan-2-yl}carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MK 8742
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MK-8742
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MK8742
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:24780
+- CHEBI:36820
+- CHEBI:38163
+- CHEBI:46766
+- CHEBI:84129
+xrefs:
+- cas:1370468-36-2
+- drugcentral:5080
+- kegg.drug:D10625
+- reaxys:22434581
+- wikipedia.en:Elbasvir
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: '[H][C@@]1(c2ncc(-c3ccc4c(c3)O[C@@H](c3ccccc3)n3c-4cc4cc(-c5cnc([C@]6([H])CCCN6C(=O)[C@@H](NC(=O)OC)C(C)C)n5)ccc43)n2)CCCN1C(=O)[C@@H](NC(=O)OC)C(C)C'
+  standard_inchi: InChI=1S/C49H55N9O7/c1-27(2)41(54-48(61)63-5)45(59)56-20-10-14-37(56)43-50-25-34(52-43)30-17-19-36-32(22-30)23-39-33-18-16-31(24-40(33)65-47(58(36)39)29-12-8-7-9-13-29)35-26-51-44(53-35)38-15-11-21-57(38)46(60)42(28(3)4)55-49(62)64-6/h7-9,12-13,16-19,22-28,37-38,41-42,47H,10-11,14-15,20-21H2,1-6H3,(H,50,52)(H,51,53)(H,54,61)(H,55,62)/t37-,38-,41-,42-,47-/m0/s1
+  standard_inchi_key: BVAZQCUMNICBAQ-PZHYSIFUSA-N
+  molecular_formula: C49H55N9O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 882.035
+  monoisotopic_mass: 881.42245
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:132967
+  source_label: elbasvir
+  minted_identifier: antibioticmech:chebi-b14503a0a1
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

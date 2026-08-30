@@ -29,6 +29,7 @@ xrefs:
 - knapsack:C00003731
 - reaxys:5386394
 activity_roles:
+- CHEBI:22587
 - CHEBI:38068
 chemical_structure:
   smiles: '[H][C@]12[C@@H](O)[C@H](O)[C@]3(C)OC[C@]14[C@@]3([H])[C@@H](OC(=O)[C@H](C)CC)C(=O)O[C@]4([H])C[C@@]1([H])C(C)=CC(=O)[C@@H](O)[C@]21C'
@@ -45,6 +46,7 @@ source_concepts:
   source_label: simalikalactone D
   minted_identifier: antibioticmech:chebi-bb24eee5af
   role_terms:
+  - CHEBI:22587
   - CHEBI:38068
   source_version: '2026-08-29'
 curation_history:
@@ -52,3 +54,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

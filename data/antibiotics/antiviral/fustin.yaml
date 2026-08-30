@@ -1,0 +1,58 @@
+identifier: CHEBI:5202
+label: fustin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dihydroflavonol that is the 2,3-dihydro derivative of fisetin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(3,4-dihydroxyphenyl)-3,7-dihydroxy-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,3-dihydrofisetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(3,4-dihydroxyphenyl)-3,7-dihydroxy-2,3-dihydro-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3',4',7-trihydroxyflavanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,3',4',7-tetrahydroxyflavanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,7,3',4'-tetrahydroxyflavanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140331
+- CHEBI:2468
+- CHEBI:38742
+- CHEBI:48039
+xrefs:
+- cas:101849-13-2
+- wikipedia.en:Fustin
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: O=C1c2ccc(O)cc2OC(c2ccc(O)c(O)c2)C1O
+  standard_inchi: InChI=1S/C15H12O6/c16-8-2-3-9-12(6-8)21-15(14(20)13(9)19)7-1-4-10(17)11(18)5-7/h1-6,14-18,20H
+  standard_inchi_key: FNUPUYFWZXZMIE-UHFFFAOYSA-N
+  molecular_formula: C15H12O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 288.255
+  monoisotopic_mass: 288.06339
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5202
+  source_label: fustin
+  minted_identifier: antibioticmech:chebi-3c8027f349
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

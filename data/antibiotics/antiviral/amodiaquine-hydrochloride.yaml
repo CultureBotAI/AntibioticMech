@@ -1,0 +1,46 @@
+identifier: CHEBI:50652
+label: amodiaquine hydrochloride
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: Flavoquine
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 4-[(7-chloroquinolin-4-yl)amino]-2-[(diethylamino)methyl]phenol dihydrochloride
+    dihydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Amodiaquin dihydrochloride dihydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:6398-98-7
+- drugbank:DB00613
+- kegg.drug:D02466
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CCN(CC)Cc1cc(Nc2ccnc3cc(Cl)ccc23)ccc1O.O.O.[Cl-].[Cl-].[H+].[H+]
+  standard_inchi: InChI=1S/C20H22ClN3O.2ClH.2H2O/c1-3-24(4-2)13-14-11-16(6-8-20(14)25)23-18-9-10-22-19-12-15(21)5-7-17(18)19;;;;/h5-12,25H,3-4,13H2,1-2H3,(H,22,23);2*1H;2*1H2
+  standard_inchi_key: YVNAYSHNIILOJS-UHFFFAOYSA-N
+  molecular_formula: 2H.C20H22ClN3O.2Cl.2H2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 464.821
+  monoisotopic_mass: 463.11962
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:50652
+  source_label: amodiaquine hydrochloride
+  minted_identifier: antibioticmech:chebi-d2407fc6d2
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,55 @@
+identifier: CHEBI:85183
+label: ombitasvir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dipeptide derivative which is used which is in combination with dasabuvir
+  sodium hydrate, paritaprevir and ritonavir (under the trade name Viekira Pak) for
+  treatment of chronic hepatitis C virus genotype 1 infection as well as cirrhosis
+  of the liver.
+definition_source: ChEBI
+synonyms:
+- synonym_text: dimethyl ([(2S,5S)-1-(4-tert-butylphenyl)pyrrolidine-2,5-diyl]bis{(4,1-phenylene)carbamoyl(2S)pyrrolidine-2,1-diyl[(2S)-3-methyl-1-oxobutane-1,2-diyl]})biscarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ABT 267
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ABT-267
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:38260
+- CHEBI:46761
+- CHEBI:62733
+xrefs:
+- cas:1258226-87-7
+- drugcentral:4912
+- kegg.drug:D10576
+- reaxys:24582175
+- wikipedia.en:Ombitasvir
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: COC(=O)N[C@H](C(=O)N1CCC[C@H]1C(=O)Nc1ccc([C@@H]2CC[C@@H](c3ccc(NC(=O)[C@@H]4CCCN4C(=O)[C@@H](NC(=O)OC)C(C)C)cc3)N2c2ccc(C(C)(C)C)cc2)cc1)C(C)C
+  standard_inchi: InChI=1S/C50H67N7O8/c1-30(2)42(53-48(62)64-8)46(60)55-28-10-12-40(55)44(58)51-35-20-14-32(15-21-35)38-26-27-39(57(38)37-24-18-34(19-25-37)50(5,6)7)33-16-22-36(23-17-33)52-45(59)41-13-11-29-56(41)47(61)43(31(3)4)54-49(63)65-9/h14-25,30-31,38-43H,10-13,26-29H2,1-9H3,(H,51,58)(H,52,59)(H,53,62)(H,54,63)/t38-,39-,40-,41-,42-,43-/m0/s1
+  standard_inchi_key: PIDFDZJZLOTZTM-KHVQSSSXSA-N
+  molecular_formula: C50H67N7O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 894.127
+  monoisotopic_mass: 893.50511
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85183
+  source_label: ombitasvir
+  minted_identifier: antibioticmech:chebi-ae441d74b3
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

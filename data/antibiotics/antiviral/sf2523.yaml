@@ -1,0 +1,57 @@
+identifier: CHEBI:231676
+label: SF2523
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of thienopyrans that is 7H-thieno[3,2-b]pyran-7-one
+  substituted by 2,3-dihydro-1,4-benzodioxin-6-yl and morpholin-4-yl groups at positions
+  3 and 5, respectively. It is a dual inhibitor of PI3K and BRD4 that exhibits antineoplastic
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-(2,3-dihydro-1,4-benzodioxin-6-yl)-5-(morpholin-4-yl)-7H-thieno[3,2-b]pyran-7-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(2,3-dihydro-1,4-benzodioxin-6-yl)-5-(4-morpholinyl)-7H-thieno[3,2-b]pyran-7-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(2,3-dihydrobenzo[b][1,4]dioxin-6-yl)-5-morpholino-7H-thieno[3,2-b]pyran-7-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SF 2523
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SF-2523
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38785
+- CHEBI:48910
+- CHEBI:64096
+xrefs:
+- cas:1174428-47-7
+- pdb-ccd:82V
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: O=c1cc(N2CCOCC2)oc2c(-c3ccc4c(c3)OCCO4)csc12
+  standard_inchi: InChI=1S/C19H17NO5S/c21-14-10-17(20-3-5-22-6-4-20)25-18-13(11-26-19(14)18)12-1-2-15-16(9-12)24-8-7-23-15/h1-2,9-11H,3-8H2
+  standard_inchi_key: BYTKNUOMWLJVNQ-UHFFFAOYSA-N
+  molecular_formula: C19H17NO5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 371.414
+  monoisotopic_mass: 371.08274
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:231676
+  source_label: SF2523
+  minted_identifier: antibioticmech:chebi-43e4fdd8d7
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

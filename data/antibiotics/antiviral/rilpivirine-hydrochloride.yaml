@@ -1,0 +1,59 @@
+identifier: CHEBI:68602
+label: rilpivirine hydrochloride
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrochloride obtained by reaction of rilpivirine with one equivalent
+  of hydrochloric acid. Used for treatment of HIV.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Edurant
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 4-{[4-({4-[(E)-2-cyanoethenyl]-2,6-dimethylphenyl}amino)pyrimidin-2-yl]amino}benzonitrile
+    hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-{[4-({4-[(E)-2-cyanovinyl]-2,6-dimethylphenyl}amino)pyrimidin-2-yl]amino}benzonitrile
+    hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TMC278 hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: rilpivirine monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:700361-47-3
+- drugbank:DBSALT000152
+- kegg.drug:D09958
+- patent:WO2007147882
+activity_roles:
+- CHEBI:53756
+- CHEBI:59897
+chemical_structure:
+  smiles: Cc1cc(/C=C/C#N)cc(C)c1Nc1ccnc(Nc2ccc(C#N)cc2)n1.Cl
+  standard_inchi: InChI=1S/C22H18N6.ClH/c1-15-12-18(4-3-10-23)13-16(2)21(15)27-20-9-11-25-22(28-20)26-19-7-5-17(14-24)6-8-19;/h3-9,11-13H,1-2H3,(H2,25,26,27,28);1H/b4-3+;
+  standard_inchi_key: KZVVGZKAVZUACK-BJILWQEISA-N
+  molecular_formula: C22H18N6.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 402.889
+  monoisotopic_mass: 402.13597
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68602
+  source_label: rilpivirine hydrochloride
+  minted_identifier: antibioticmech:chebi-266b408085
+  role_terms:
+  - CHEBI:53756
+  - CHEBI:59897
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

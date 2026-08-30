@@ -32,6 +32,7 @@ xrefs:
 - cas:58175-87-4
 - pdb-ccd:CLQ
 activity_roles:
+- CHEBI:149553
 - CHEBI:38068
 chemical_structure:
   smiles: CCN(CC)CCC[C@@H](C)Nc1ccnc2cc(Cl)ccc12
@@ -48,6 +49,7 @@ source_concepts:
   source_label: (R)-chloroquine
   minted_identifier: antibioticmech:chebi-4a24f1b9c0
   role_terms:
+  - CHEBI:149553
   - CHEBI:38068
   source_version: '2026-08-29'
 curation_history:
@@ -55,3 +57,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,47 @@
+identifier: CHEBI:66402
+label: 8,8a-epoxymorellic acid
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An epoxide that is the 8,8a-epoxy derivative of morellic acid. Isolated
+  from Garcinia hanburyi it exhibits cytotoxic and anti-HIV activity..
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2Z)-4-[(2S,3aR,6S,6aR)-13-hydroxy-5,5,10,10-tetramethyl-8-(3-methylbut-2-en-1-yl)-3,14-dioxo-1a,2,3,3a-tetrahydro-10H,14H-2,6-methanofuro[3,2-g]oxireno[k]pyrano[3,2-b]xanthen-6(5H)-yl]-2-methylbut-2-enoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:32955
+- CHEBI:33640
+- CHEBI:33853
+- CHEBI:35951
+- CHEBI:3992
+- CHEBI:51914
+- CHEBI:79020
+xrefs:
+- reaxys:11109913
+activity_roles:
+- CHEBI:64947
+chemical_structure:
+  smiles: '[H][C@]12OC(C)(C)[C@]3(C/C=C(/C)C(=O)O)C[C@]([H])(C1=O)C1OC14C(=O)c1c(O)c5c(c(CC=C(C)C)c1O[C@]432)OC(C)(C)C=C5'
+  standard_inchi: InChI=1S/C33H36O9/c1-15(2)8-9-18-23-17(11-12-29(4,5)39-23)21(34)20-24(18)40-33-27-22(35)19(26-32(33,42-26)25(20)36)14-31(33,30(6,7)41-27)13-10-16(3)28(37)38/h8,10-12,19,26-27,34H,9,13-14H2,1-7H3,(H,37,38)/b16-10-/t19-,26?,27+,31+,32?,33+/m1/s1
+  standard_inchi_key: DHCUJGJZVIRMQU-ZZBIGSJJSA-N
+  molecular_formula: C33H36O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 576.642
+  monoisotopic_mass: 576.23593
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66402
+  source_label: 8,8a-epoxymorellic acid
+  minted_identifier: antibioticmech:chebi-06b3872e9c
+  role_terms:
+  - CHEBI:64947
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

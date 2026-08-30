@@ -1,0 +1,52 @@
+identifier: CHEBI:66275
+label: tripterifordin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A kaurane diterpenoid that is (5β,8α,13α)-18,20-epoxykauran-18-one substituted
+  by a hydroxy group at position 16. Isolated from the roots of Tripterygium wilfordii,
+  it exhibits anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5β,8α,13α)-16-hydroxy-18,20-epoxykauran-18-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kauran-18-oic acid, 16,20-dihydroxy-, delta-lactone,(4alpha)-
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hypodiolide A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26878
+- CHEBI:38164
+- CHEBI:49193
+- CHEBI:53666
+xrefs:
+- cas:139122-81-9
+- knapsack:C00041947
+- reaxys:8587307
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@@]3([H])[C@@](CC[C@@]4([H])[C@]35CCC[C@]4(C)C(=O)OC5)(C1)C[C@]2(C)O'
+  standard_inchi: InChI=1S/C20H30O3/c1-17-7-3-8-20(12-23-16(17)21)14(17)6-9-19-10-13(4-5-15(19)20)18(2,22)11-19/h13-15,22H,3-12H2,1-2H3/t13-,14-,15+,17+,18+,19+,20-/m1/s1
+  standard_inchi_key: KLMZPLYXGZZBCX-TYOHIEAGSA-N
+  molecular_formula: C20H30O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 318.457
+  monoisotopic_mass: 318.21949
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66275
+  source_label: tripterifordin
+  minted_identifier: antibioticmech:chebi-0c4ddaf1fa
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

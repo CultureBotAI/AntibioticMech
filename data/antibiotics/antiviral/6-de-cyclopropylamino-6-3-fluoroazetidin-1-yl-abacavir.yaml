@@ -1,0 +1,43 @@
+identifier: CHEBI:149434
+label: 6-de(cyclopropylamino)-6-(3-fluoroazetidin-1-yl)abacavir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 2,6-diaminopurine that is an analogue of abacavir in which the cyclopropylamino
+  group at position 6 of the purine moiety is replaced by a 3-fluoroazetidin-1-yl
+  group. One of a series of synthesised abacavir analogues with antiviral activity
+  found to stimulate IFN-γ secretion in abacavir-responsive clones.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '{(1S,4R)-4-[2-amino-6-(3-fluoroazetidin-1-yl)-9H-purin-9-yl]cyclopent-2-en-1-yl}methanol'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1S,4R)-4-[2-amino-6-(3-fluoro-1-azetidinyl)-9H-purin-9-yl]-2-cyclopentene-1-methanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38001
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: Nc1nc(N2CC(F)C2)c2ncn([C@H]3C=C[C@@H](CO)C3)c2n1
+  standard_inchi: InChI=1S/C14H17FN6O/c15-9-4-20(5-9)12-11-13(19-14(16)18-12)21(7-17-11)10-2-1-8(3-10)6-22/h1-2,7-10,22H,3-6H2,(H2,16,18,19)/t8-,10+/m1/s1
+  standard_inchi_key: AJAFGTUGXORIBL-SCZZXKLOSA-N
+  molecular_formula: C14H17FN6O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 304.329
+  monoisotopic_mass: 304.14479
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:149434
+  source_label: 6-de(cyclopropylamino)-6-(3-fluoroazetidin-1-yl)abacavir
+  minted_identifier: antibioticmech:chebi-b76b330d35
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

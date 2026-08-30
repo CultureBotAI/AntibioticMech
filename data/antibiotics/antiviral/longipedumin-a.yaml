@@ -1,0 +1,42 @@
+identifier: CHEBI:66591
+label: longipedumin A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A lignan isolated from the roots and stems of Kadsura longipedunculata
+  and has been shown to exhibit inhibitory activity against HIV-1 protease.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6R,7R,8R)-1-hydroxy-2,3,13-trimethoxy-6,7-dimethyl-5,6,7,8-tetrahydrobenzo[3',4']cycloocta[1',2':4,5]benzo[1,2-d][1,3]dioxol-8-yl
+    (2E)-3-phenylprop-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25036
+- CHEBI:35618
+- CHEBI:36087
+- CHEBI:38163
+activity_roles:
+- CHEBI:35660
+chemical_structure:
+  smiles: COc1cc2c(c(O)c1OC)-c1c(cc3c(c1OC)OCO3)[C@H](OC(=O)/C=C/c1ccccc1)[C@H](C)[C@H](C)C2
+  standard_inchi: InChI=1S/C31H32O8/c1-17-13-20-14-22(34-3)29(35-4)27(33)25(20)26-21(15-23-30(31(26)36-5)38-16-37-23)28(18(17)2)39-24(32)12-11-19-9-7-6-8-10-19/h6-12,14-15,17-18,28,33H,13,16H2,1-5H3/b12-11+/t17-,18-,28-/m1/s1
+  standard_inchi_key: MWCNCFCBBXKOCI-CMTGZUNTSA-N
+  molecular_formula: C31H32O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 532.589
+  monoisotopic_mass: 532.20972
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66591
+  source_label: longipedumin A
+  minted_identifier: antibioticmech:chebi-dbd63638fa
+  role_terms:
+  - CHEBI:35660
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

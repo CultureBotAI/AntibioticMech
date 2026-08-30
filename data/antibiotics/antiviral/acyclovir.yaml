@@ -1,0 +1,64 @@
+identifier: CHEBI:2453
+label: acyclovir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An oxopurine that is guanine substituted by a (2-hydroxyethoxy)methyl
+  substituent at position 9. Used in the treatment of viral infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Zovir
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: aciclovir
+  synonym_type: INN
+  source: chebi
+- synonym_text: aciclovirum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-amino-9-[(2-hydroxyethoxy)methyl]-1,9-dihydro-6H-purin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acycloguanosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:20702
+- CHEBI:25810
+xrefs:
+- cas:59277-89-3
+- drugbank:DB00787
+- drugcentral:85
+- hmdb:HMDB0014925
+- kegg.compound:C06810
+- kegg.drug:D00222
+- lincs.smallmolecule:LSM-5459
+- patent:DE2539963
+- patent:US4199574
+- pdb-ccd:AC2
+- reaxys:1219402
+- wikipedia.en:Acyclovir
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: Nc1nc(=O)c2ncn(COCCO)c2n1
+  standard_inchi: InChI=1S/C8H11N5O3/c9-8-11-6-5(7(15)12-8)10-3-13(6)4-16-2-1-14/h3,14H,1-2,4H2,(H3,9,11,12,15)
+  standard_inchi_key: MKUXAQIIEYXACX-UHFFFAOYSA-N
+  molecular_formula: C8H11N5O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 225.208
+  monoisotopic_mass: 225.08619
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2453
+  source_label: acyclovir
+  minted_identifier: antibioticmech:chebi-8aeb691cc5
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

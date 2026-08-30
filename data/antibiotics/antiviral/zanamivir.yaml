@@ -1,0 +1,74 @@
+identifier: CHEBI:50663
+label: zanamivir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: Relenza
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 5-acetamido-2,6-anhydro-4-carbamimidamido-3,4,5-trideoxy-D-glycero-D-galacto-non-2-enonic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R,3R,4S)-3-(acetylamino)-4-carbamimidamido-2-[(1R,2R)-1,2,3-trihydroxypropyl]-3,4-dihydro-2H-pyran-6-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-guanidino-2,4-dideoxy-2,3-dehydro-N-acetylneuraminic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-guanidino-Neu5Ac2en
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-(acetylamino)-2,6-anhydro-4-carbamimidamido-3,4,5-trideoxy-D-glycero-D-galacto-non-2-enonic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-acetamido-2,6-anhydro-3,4,5-trideoxy-4-guanidino-D-glycero-D-galacto-non-2-enonic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GANA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ZANAMIVIR
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24436
+xrefs:
+- beilstein:7083099
+- cas:139110-80-8
+- drugbank:DB00558
+- drugcentral:2859
+- kegg.compound:C08095
+- kegg.drug:D00902
+- patent:US5360817
+- patent:WO9116320
+- pdb-ccd:ZMR
+- wikipedia.en:Zanamivir
+activity_roles:
+- CHEBI:52425
+chemical_structure:
+  smiles: '[H][C@@]1([C@H](O)[C@H](O)CO)OC(C(=O)O)=C[C@H](NC(=N)N)[C@H]1NC(C)=O'
+  standard_inchi: InChI=1S/C12H20N4O7/c1-4(18)15-8-5(16-12(13)14)2-7(11(21)22)23-10(8)9(20)6(19)3-17/h2,5-6,8-10,17,19-20H,3H2,1H3,(H,15,18)(H,21,22)(H4,13,14,16)/t5-,6+,8+,9+,10+/m0/s1
+  standard_inchi_key: ARAIBEBZBOPLMB-UFGQHTETSA-N
+  molecular_formula: C12H20N4O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 332.313
+  monoisotopic_mass: 332.1332
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:50663
+  source_label: zanamivir
+  minted_identifier: antibioticmech:chebi-372aba6fd3
+  role_terms:
+  - CHEBI:52425
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

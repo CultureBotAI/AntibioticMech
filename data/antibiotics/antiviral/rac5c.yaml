@@ -1,0 +1,45 @@
+identifier: CHEBI:156041
+label: rac5c
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A secondary carboxamide resulting from the formal condensation of the
+  carboxy group of 1-[1-(naphthalen-1-yl)ethyl]piperidine-4-carboxylic acid with the
+  amino group of 1-(2-methoxypyridin-4-yl)methanamine. It is a SARS-CoV-2 papain-like
+  protease (PLpro) inhibitor.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[(2-methoxypyridin-4-yl)methyl]-1-[1-(naphthalen-1-yl)ethyl]piperidine-4-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:25477
+- CHEBI:26421
+- CHEBI:35618
+- CHEBI:48592
+- CHEBI:50996
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: COc1cc(CNC(=O)C2CCN(C(C)c3cccc4ccccc34)CC2)ccn1
+  standard_inchi: InChI=1S/C25H29N3O2/c1-18(22-9-5-7-20-6-3-4-8-23(20)22)28-14-11-21(12-15-28)25(29)27-17-19-10-13-26-24(16-19)30-2/h3-10,13,16,18,21H,11-12,14-15,17H2,1-2H3,(H,27,29)
+  standard_inchi_key: MMIABLSMKGWQKD-UHFFFAOYSA-N
+  molecular_formula: C25H29N3O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 403.526
+  monoisotopic_mass: 403.22598
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156041
+  source_label: rac5c
+  minted_identifier: antibioticmech:chebi-0e65490e7b
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

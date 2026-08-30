@@ -1,0 +1,47 @@
+identifier: CHEBI:66537
+label: swertifrancheside
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A ring assembly that is a dimer obtained by coupling between 1,5,8-trihydroxy-3-methoxy-9H-xanthen-9-one
+  and C-glycosylated 5,7,3',4'-tetrahydroxyflavone. Isolated from Swertia franchetiana,
+  it exhibits anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S)-1,5-anhydro-1-[2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-4-oxo-8-(1,4,8-trihydroxy-6-methoxy-9-oxo-9H-xanthen-2-yl)-4H-chromen-6-yl]-D-glucitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,5,8-trihydroxy-3-methoxy-7-(5',7',3'',4''-tetrahydroxy-6'-C-β-D-glucopyranosyl-4'-oxy-8'-flavyl)xanthone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:20857
+- CHEBI:38684
+- CHEBI:51149
+- CHEBI:64459
+xrefs:
+- cas:155740-03-7
+activity_roles:
+- CHEBI:53756
+chemical_structure:
+  smiles: COc1cc(O)c2c(=O)c3c(O)c(-c4c(O)c([C@@H]5O[C@H](CO)[C@@H](O)[C@H](O)[C@H]5O)c(O)c5c(=O)cc(-c6ccc(O)c(O)c6)oc45)cc(O)c3oc2c1
+  standard_inchi: InChI=1S/C35H28O17/c1-49-11-5-15(39)22-19(6-11)51-33-17(41)7-12(26(42)24(33)29(22)45)21-28(44)25(35-32(48)31(47)27(43)20(9-36)52-35)30(46)23-16(40)8-18(50-34(21)23)10-2-3-13(37)14(38)4-10/h2-8,20,27,31-32,35-39,41-44,46-48H,9H2,1H3/t20-,27-,31+,32-,35+/m1/s1
+  standard_inchi_key: JAANJQNFIJSRTK-KYRPIRIWSA-N
+  molecular_formula: C35H28O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 720.592
+  monoisotopic_mass: 720.13265
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66537
+  source_label: swertifrancheside
+  minted_identifier: antibioticmech:chebi-668fa35efe
+  role_terms:
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

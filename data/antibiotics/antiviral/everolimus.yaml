@@ -1,0 +1,104 @@
+identifier: CHEBI:68478
+label: everolimus
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrocyclic lactone that is rapamycin in which the hydroxy group attached
+  to the cyclohexyl moiety has been converted into the corresponding 2-hydroxyethyl
+  ether. It is an immunosuppressant and antineoplastic agent.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Afinitor
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Afinitor Disperz
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Certican
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Votubia
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Xience V
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Zortress
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: everolimusum
+  synonym_type: INN
+  source: chebi
+- synonym_text: évérolimus
+  synonym_type: INN
+  source: chebi
+- synonym_text: (3S,6R,7E,9R,10R,12R,14S,15E,17E,19E,21S,23S,26R,27R,34aS)-9,27-dihydroxy-3-{(2R)-1-[(1S,3R,4R)-4-(2-hydroxyethoxy)-3-methoxycyclohexyl]propan-2-yl}-10,21-dimethoxy-6,8,12,14,20,26-hexamethyl-9,10,12,13,14,21,22,23,24,25,26,27,32,33,34,34a-hexadecahydro-3H-23,27-epoxypyrido[2,1-c][1,4]oxazacyclohentriacontine-1,5,11,28,29(4H,6H,31H)-pentone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1R,9S,12S,15R,16E,18R,19R,21R,23S,24E,26E,28E,30S,35R)-1,18-dihydroxy-12-{(2R)-1-[(1S,3R,4R)-4-(2-hydroxyethoxy)-3-methoxycyclohexyl]propan-2-yl}-19,30-dimethoxy-15,17,21,23,29,35-hexamethyl-11,36-dioxa-4-azatricyclo[30.3.1.04,9]hexatriaconta-16,24,26,28-tetraene-2,3,10,14,20-pentone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 40-O-(2-hydroxyethyl)-rapamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 42-O-(2-hydroxyethyl)rapamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Everolimus
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RAD 001
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RAD001
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SDZ RAD
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SDZ-RAD
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:145565
+- CHEBI:15734
+- CHEBI:25698
+- CHEBI:35681
+- CHEBI:3992
+- CHEBI:59770
+xrefs:
+- cas:159351-69-6
+- chemspider:21106307
+- drugbank:DB01590
+- drugcentral:1118
+- hmdb:HMDB0015529
+- kegg.drug:D02714
+- lincs.smallmolecule:LSM-43172
+- patent:CN102138903
+- patent:RU2008143550
+- patent:WO2012066502
+- wikipedia.en:Everolimus
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: '[H][C@@]1(C[C@@H](C)[C@]2([H])CC(=O)[C@H](C)/C=C(\C)[C@@H](O)[C@@H](OC)C(=O)[C@H](C)C[C@H](C)/C=C/C=C/C=C(\C)[C@@H](OC)C[C@]3([H])CC[C@@H](C)[C@@](O)(O3)C(=O)C(=O)N3CCCC[C@@]3([H])C(=O)O2)CC[C@@H](OCCO)[C@H](OC)C1'
+  standard_inchi: InChI=1S/C53H83NO14/c1-32-16-12-11-13-17-33(2)44(63-8)30-40-21-19-38(7)53(62,68-40)50(59)51(60)54-23-15-14-18-41(54)52(61)67-45(35(4)28-39-20-22-43(66-25-24-55)46(29-39)64-9)31-42(56)34(3)27-37(6)48(58)49(65-10)47(57)36(5)26-32/h11-13,16-17,27,32,34-36,38-41,43-46,48-49,55,58,62H,14-15,18-26,28-31H2,1-10H3/b13-11+,16-12+,33-17+,37-27+/t32-,34-,35-,36-,38-,39+,40+,41+,43-,44+,45+,46-,48-,49+,53-/m1/s1
+  standard_inchi_key: HKVAMNSJSFKALM-GKUWKFKPSA-N
+  molecular_formula: C53H83NO14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 958.24
+  monoisotopic_mass: 957.58136
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68478
+  source_label: everolimus
+  minted_identifier: antibioticmech:chebi-c09f75dec7
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

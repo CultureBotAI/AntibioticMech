@@ -1,0 +1,55 @@
+identifier: CHEBI:70664
+label: (2S)-5,7-dihydroxy-6,8-dimethylflavanone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dihydroxyflavanone that is (2S)-flavanone substituted by hydroxy groups
+  at positions 5 and 7 and methyl groups at positions 6 and 8. Isolated from the buds
+  of Cleistocalyx operculatus, it has been shown to exhibit inhibitory effects on
+  the viral neuraminidases from two influenza viral strains, H1N1 and H9N2.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-5,7-dihydroxy-6,8-dimethyl-2-phenyl-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-2,3-dihydro-5,7-dihydroxy-6,8-dimethyl-2-phenyl-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-demethoxymatteucinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6,8-dimethylpinocembrin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: demethoxymatteucinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38749
+xrefs:
+- cas:56297-79-1
+- reaxys:1290952
+activity_roles:
+- CHEBI:52425
+chemical_structure:
+  smiles: Cc1c(O)c(C)c2c(c1O)C(=O)C[C@@H](c1ccccc1)O2
+  standard_inchi: InChI=1S/C17H16O4/c1-9-15(19)10(2)17-14(16(9)20)12(18)8-13(21-17)11-6-4-3-5-7-11/h3-7,13,19-20H,8H2,1-2H3/t13-/m0/s1
+  standard_inchi_key: HAIHGFWQOPJMPV-ZDUSSCGKSA-N
+  molecular_formula: C17H16O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 284.311
+  monoisotopic_mass: 284.10486
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70664
+  source_label: (2S)-5,7-dihydroxy-6,8-dimethylflavanone
+  minted_identifier: antibioticmech:chebi-29f2e13209
+  role_terms:
+  - CHEBI:52425
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,52 @@
+identifier: CHEBI:65719
+label: cytosporic acid
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid that is 3,8-dimethyl-5-oxo-1,2,3,4,4a,8a-hexahydronaphthalene-1-carboxylic
+  acid substituted by a (2R)-hexan-2-yl at position 7, a hydroxy group at position
+  6 and a 3-hydroxypropanoyl group at position 8. It is a fungal metabolite produced
+  by Cytospora with HIV-1 integrase inhibitory activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,3S,4aR,8S,8aS)-7-[(2R)-hexan-2-yl]-6-hydroxy-8-(3-hydroxypropanoyl)-3,8-dimethyl-5-oxo-1,2,3,4,4a,8a-hexahydronaphthalene-1-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1S,3S,4aR,8S,8aS) 1,2,3,4,4a,5,8,8a-octahydro-6-hydroxy-8-(3-hydroxy-1-oxopropyl)-3,8-dimethyl-7-[(1R)-1-methylpentyl]-5-oxo-1-naphthalenecarboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:142348
+- CHEBI:15734
+- CHEBI:33823
+- CHEBI:35951
+- CHEBI:3992
+- CHEBI:55380
+xrefs:
+- reaxys:9533928
+activity_roles:
+- CHEBI:67268
+chemical_structure:
+  smiles: '[H][C@@]12[C@@H](C(=O)O)C[C@@H](C)C[C@@]1([H])C(=O)C(O)=C([C@H](C)CCCC)[C@@]2(C)C(=O)CCO'
+  standard_inchi: InChI=1S/C22H34O6/c1-5-6-7-13(3)17-20(26)19(25)14-10-12(2)11-15(21(27)28)18(14)22(17,4)16(24)8-9-23/h12-15,18,23,26H,5-11H2,1-4H3,(H,27,28)/t12-,13+,14+,15-,18-,22+/m0/s1
+  standard_inchi_key: DHAUNSINPICAFU-DSGRLQPCSA-N
+  molecular_formula: C22H34O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 394.508
+  monoisotopic_mass: 394.23554
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65719
+  source_label: cytosporic acid
+  minted_identifier: antibioticmech:chebi-5a3648edfa
+  role_terms:
+  - CHEBI:67268
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
