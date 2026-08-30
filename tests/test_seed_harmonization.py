@@ -596,12 +596,83 @@ def test_a_mechanism_from_another_activity_says_so():
 
     value, notes = mode_of_action_from_roles(["CHEBI:67268"], CONF, names, "ANTIFUNGAL")
     assert value == "VIRAL_INTEGRASE_INHIBITION"
-    assert "two activities" in notes and "ANTIFUNGAL" in notes
+    assert "ANTIFUNGAL" in notes
+    # It does NOT assert two activities: the filing may simply be wrong, which
+    # has happened — the priority table has put azole antifungals under
+    # ANTIBACTERIAL. The note puts both readings to a curator.
+    assert "or the filing is wrong" in notes
 
     # On a record filed under the group the mechanism implies, no such caveat.
     _, aligned = mode_of_action_from_roles(["CHEBI:67268"], CONF, names, "ANTIVIRAL")
-    assert "two activities" not in aligned
+    assert "filing is wrong" not in aligned
 
     # A mechanism that names no target group never triggers it.
     _, generic = mode_of_action_from_roles(["CHEBI:48001"], CONF, names, "ANTIFUNGAL")
-    assert "two activities" not in generic
+    assert "filing is wrong" not in generic
+
+    # An unspecified record gets a different sentence: "two activities" would
+    # assert a second activity no source states.
+    _, unspec = mode_of_action_from_roles(["CHEBI:67268"], CONF, names,
+                                          "ANTIMICROBIAL_UNSPECIFIED")
+    assert "no target group stated" in unspec
+
+
+def test_a_curator_can_correct_a_seeded_mode_of_action_by_appending():
+    """The seeded note asks a curator to confirm the value, so appending to that
+    note is the obvious way to answer — and inferring ownership from the ABSENCE
+    of the seeder's marker meant the marker survived the append, the correction
+    was reverted and the curator's citation was deleted."""
+    from seed_from_sources import CURATOR_NOTE_MARKER, MOA_NOTE_MARKER, merge_with_existing
+
+    base = {"identifier": "CHEBI:1", "label": "x", "antimicrobial_class": "ANTIBACTERIAL",
+            "curation_status": "SEEDED", "grounding_status": "EXACT", "curation_history": []}
+    seeded = dict(base) | {"mode_of_action": "VIRAL_INTEGRASE_INHIBITION",
+                           "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:67268 (...)"}
+    corrected = dict(seeded) | {
+        "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+        "mode_of_action_notes": (f"{MOA_NOTE_MARKER} CHEBI:67268 (...). "
+                                 f"{CURATOR_NOTE_MARKER} corrected, see PMID:123"),
+    }
+    merged = merge_with_existing(dict(seeded), corrected)
+    assert merged["mode_of_action"] == "PROTEIN_SYNTHESIS_INHIBITION"
+    assert "PMID:123" in merged["mode_of_action_notes"]
+
+
+def test_a_curator_can_veto_a_mode_of_action_entirely():
+    """The only remedy for a wrong derived value, and it was impossible: a
+    deleted field failed the `"mode_of_action" in existing` test, so the seeder
+    wrote the wrong value straight back on the next run."""
+    from seed_from_sources import CURATOR_NOTE_MARKER, MOA_NOTE_MARKER, merge_with_existing
+
+    base = {"identifier": "CHEBI:1", "label": "cefdinir", "antimicrobial_class": "ANTIBACTERIAL",
+            "curation_status": "SEEDED", "grounding_status": "EXACT", "curation_history": []}
+    seeded = dict(base) | {"mode_of_action": "FOLATE_PATHWAY_INHIBITION",
+                           "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:50683 (...)"}
+    vetoed = dict(base) | {"mode_of_action_notes":
+                           f"{CURATOR_NOTE_MARKER} a cephalosporin; the derived value was wrong"}
+
+    merged = merge_with_existing(dict(seeded), vetoed)
+    assert "mode_of_action" not in merged
+    assert "derived value was wrong" in merged["mode_of_action_notes"]
+
+
+def test_a_mechanism_borrowed_from_another_compound_is_not_used():
+    """CARD points cefdinir at CHEBI:131724, which is iclaprim, a dihydrofolate
+    reductase inhibitor. Reading mechanism roles off a cross-referenced row gave
+    a cephalosporin FOLATE_PATHWAY_INHIBITION while its own CARD target, on the
+    same record, was a penicillin-binding protein."""
+    import csv as _csv
+    import pathlib
+
+    raw = pathlib.Path(__file__).resolve().parents[1] / "data" / "raw" / "chebi_antimicrobials.tsv"
+    with raw.open(newline="", encoding="utf-8") as fh:
+        rows = {r["chebi_id"]: r for r in _csv.DictReader(fh, delimiter="\t")}
+
+    # ChEBI's own cefdinir row asserts no mechanism role...
+    if "CHEBI:3485" in rows:
+        assert rows["CHEBI:3485"]["mechanism_role_ids"] == ""
+    # ...so the record must not carry one.
+    record = pathlib.Path(__file__).resolve().parents[1] / "data" / "antibiotics" / \
+        "antibacterial" / "cefdinir.yaml"
+    if record.exists():
+        assert "mode_of_action:" not in record.read_text(encoding="utf-8")

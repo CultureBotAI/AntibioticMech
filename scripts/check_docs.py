@@ -90,8 +90,10 @@ def render_block(stats: dict) -> str:
     targets = stats["mechanism"].get("molecular_targets", 0)
     resistance = stats["mechanism"].get("resistance_mechanisms", 0)
     graphs = stats["mechanism"].get("causal_graphs", 0)
+    moa = stats["mechanism"].get("mode_of_action", 0)
     lines.append(f"Mechanism layer: **{targets}** records carry a molecular target and "
                  f"**{resistance}** carry resistance determinants, both seeded from CARD; "
+                 f"**{moa}** carry a mode of action seeded from ChEBI's mechanism roles; "
                  f"**{graphs}** carry a curated causal graph. That last number is the work.")
     lines.append("")
     lines.append(END)
