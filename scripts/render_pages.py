@@ -47,18 +47,13 @@ TEMPLATES_DIR = REPO_ROOT / "src" / "antibioticmech" / "templates"
 PAGES_DIR = REPO_ROOT / "pages"
 SCHEMA_PATH = REPO_ROOT / "src" / "antibioticmech" / "schema" / "antibioticmech.yaml"
 
-# Enum value -> the directory the corpus files it under. Mirrors CLASS_DIRS in
-# scripts/seed_from_sources.py; the schema test keeps the two enumerations honest.
-CLASS_DIRS = {
-    "ANTIBACTERIAL": "antibacterial",
-    "ANTIMYCOBACTERIAL": "antimycobacterial",
-    "ANTIFUNGAL": "antifungal",
-    "ANTIPROTOZOAL": "antiprotozoal",
-    "ANTIVIRAL": "antiviral",
-    "BIOCIDE": "biocide",
-    "ANTIMICROBIAL_UNSPECIFIED": "unspecified",
-    "OTHER": "other",
-}
+# Enum value -> the directory the corpus files it under. IMPORTED, not copied:
+# the seeder owns the corpus layout, and a second copy here would drift the
+# first time a class is added — which is exactly what happened when ANTIVIRAL
+# had to be threaded through four separate enumerations by hand.
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+from seed_from_sources import CLASS_DIRS  # noqa: E402
+
 MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "MANIFEST.yaml"
 
 # Where the site is served from; the sitemap needs absolute URLs.

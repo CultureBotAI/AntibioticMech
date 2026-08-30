@@ -89,3 +89,26 @@ def test_class_hierarchy_is_declared_where_consumers_will_find_it(schema_path):
         if parent:
             assert parent in values, f"{name} is_a {parent}, which is not a value"
             assert parent != name
+
+
+def test_every_class_the_schema_declares_has_a_directory(schema_path):
+    """CLASS_DIRS decides where a record lands on disk and in the published site.
+    It used to exist in three copies — seeder, renderer, tests — and adding
+    ANTIVIRAL meant threading a new value through four separate enumerations by
+    hand. There is one copy now; this pins it to the schema so a value added to
+    the enum without a directory fails here rather than at seed time."""
+    import sys
+    from pathlib import Path
+
+    import yaml
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+    from seed_from_sources import CLASS_DIRS
+
+    declared = set(yaml.safe_load(schema_path.read_text(encoding="utf-8"))[
+        "enums"]["AntimicrobialClassEnum"]["permissible_values"])
+    assert declared == set(CLASS_DIRS), {
+        "in schema only": sorted(declared - set(CLASS_DIRS)),
+        "in CLASS_DIRS only": sorted(set(CLASS_DIRS) - declared),
+    }
+    assert len(set(CLASS_DIRS.values())) == len(CLASS_DIRS), "two classes share a directory"
