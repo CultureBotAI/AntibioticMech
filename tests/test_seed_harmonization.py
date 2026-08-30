@@ -452,3 +452,31 @@ def test_two_identifiers_never_receive_the_same_slug(tmp_path, monkeypatch):
         sfs2.assign_slugs(records | {"CHEBI:8": {"antimicrobial_class": "ANTIFUNGAL",
                                                  "label": "eight"}},
                           sfs2.read_lockfile())
+
+
+def test_an_antineoplastic_role_vetoes_the_structural_class_inference():
+    """A structural class says what a compound IS; it becomes a claim about what
+    it ACTS ON only when nothing contradicts it. Daunorubicin is an anthracycline
+    chemotherapy drug that ChEBI also files under `aminoglycoside antibiotic` —
+    true structurally, it carries a daunosamine sugar — and inferring
+    ANTIBACTERIAL from that filed a chemotherapy drug as an antibacterial.
+
+    Excluding the anthracycline class from the map was not enough: daunorubicin
+    reaches the map through the aminoglycoside ancestor instead. The veto is on
+    the role, which is the thing that speaks to target.
+    """
+    import csv as _csv
+    import pathlib
+
+    raw = pathlib.Path(__file__).resolve().parents[1] / "data" / "raw" / "chebi_antimicrobials.tsv"
+    with raw.open(newline="", encoding="utf-8") as fh:
+        rows = {r["chebi_id"]: r for r in _csv.DictReader(fh, delimiter="\t")}
+
+    # An antineoplastic carries no structural class, however aminoglycoside-shaped.
+    for chebi_id in ("CHEBI:41977", "CHEBI:31359"):   # daunorubicin, carminomycin
+        if chebi_id in rows:
+            assert rows[chebi_id]["structural_class_ids"] == "", chebi_id
+
+    # A genuine antibacterial still does.
+    if "CHEBI:9421" in rows:                          # tazobactam
+        assert rows["CHEBI:9421"]["structural_class_ids"] == "CHEBI:27933"

@@ -1,0 +1,66 @@
+identifier: CHEBI:134411
+label: N-palmitoyl-S-[2,3-bis(palmitoyloxy)propyl]-Cys-Ser-Lys-Lys-Lys-Lys
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A triacyl lipopeptide that is N-palmitoyl-Cys-Ser-Lys-Lys-Lys-Lys in which
+  the side-chain thiol hydrogen on the Cys residue has been replaced by a 2,3-bis(palmitoyloxy)propyl
+  group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: S-[2,3-bis(hexadecanoyloxy)propyl]-N-tetradecanoyl-L-cysteinyl-L-seryl-L-lysyl-L-lysyl-L-lysyl-L-lysine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-Palmitoyl-S-(2,3-bis(palmitoyloxy)propyl)cysteinyl-seryl-lysyl-lysyl-lysyl-lysine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-hexadecanoyl-S-[2,3-bis(hexadecanoyloxy)propyl]-Cys-Ser-Lys-Lys-Lys-Lys
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pam(3)-cys-ser-(lys)(4)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pam3CSK4
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tripalmitoyl-cysteinyl-seryl-lysine(4)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25061
+- CHEBI:48545
+- CHEBI:60192
+xrefs:
+- cas:112208-00-1
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CCCCCCCCCCCCCCCC(=O)OCC(CSC[C@H](NC(=O)CCCCCCCCCCCCC)C(=O)N[C@@H](CO)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](CCCCN)C(=O)O)OC(=O)CCCCCCCCCCCCCCC
+  standard_inchi: InChI=1S/C79H152N10O13S/c1-4-7-10-13-16-19-22-24-27-30-33-36-39-54-72(92)101-61-64(102-73(93)55-40-37-34-31-28-25-23-20-17-14-11-8-5-2)62-103-63-70(84-71(91)53-38-35-32-29-26-21-18-15-12-9-6-3)78(98)89-69(60-90)77(97)87-66(50-42-46-57-81)75(95)85-65(49-41-45-56-80)74(94)86-67(51-43-47-58-82)76(96)88-68(79(99)100)52-44-48-59-83/h64-70,90H,4-63,80-83H2,1-3H3,(H,84,91)(H,85,95)(H,86,94)(H,87,97)(H,88,96)(H,89,98)(H,99,100)/t64?,65-,66-,67-,68-,69-,70-/m0/s1
+  standard_inchi_key: ACYXXCRNFRQHBB-RXUNMRDHSA-N
+  molecular_formula: C79H152N10O13S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1482.209
+  monoisotopic_mass: 1481.12611
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:134411
+  source_label: N-palmitoyl-S-[2,3-bis(palmitoyloxy)propyl]-Cys-Ser-Lys-Lys-Lys-Lys
+  minted_identifier: antibioticmech:chebi-8e0540ef33
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:18Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:43:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

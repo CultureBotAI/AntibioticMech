@@ -226,6 +226,20 @@ chebi_class_to_class:
   CHEBI:26179: ANTIBACTERIAL    # polyether antibiotic
   CHEBI:26177: ANTIFUNGAL       # polyene antibiotic (amphotericin, nystatin)
 
+# Roles that VETO the structural-class inference above.
+#
+# A structural class is a fact about what a compound IS; it becomes a claim about
+# what the compound ACTS ON only when nothing better contradicts it. Daunorubicin
+# and the carminomycins are anthracycline antineoplastics that ChEBI also files
+# under `aminoglycoside antibiotic` — true structurally, since they carry a
+# daunosamine sugar — and inferring ANTIBACTERIAL from that filed a chemotherapy
+# drug as an antibacterial. Excluding the anthracycline class was not enough:
+# daunorubicin reaches the map through the aminoglycoside ancestor instead.
+#
+# So the veto is on the role, which is the thing that actually speaks to target.
+chebi_class_veto_roles:
+  - CHEBI:35610   # antineoplastic agent — and its subroles
+
 # ARO determinant lineage -> ResistanceMechanismEnum. CARD's aro.obo does not
 # link a determinant to its mechanism category directly (that association lives
 # in card.json), so the mechanism is read off the determinant's is_a lineage.

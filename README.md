@@ -59,13 +59,13 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 | Class | Records | SEEDED | REVIEWED | With CARD mechanism evidence |
 |---|---:|---:|---:|---:|
-| ANTIBACTERIAL | 1202 | 1202 | 0 | 264 |
+| ANTIBACTERIAL | 1190 | 1190 | 0 | 264 |
 | ANTIMYCOBACTERIAL | 78 | 78 | 0 | 15 |
-| ANTIFUNGAL | 592 | 592 | 0 | 43 |
+| ANTIFUNGAL | 588 | 588 | 0 | 43 |
 | ANTIPROTOZOAL | 248 | 248 | 0 | 2 |
 | ANTIVIRAL | 474 | 474 | 0 | 0 |
 | BIOCIDE | 29 | 29 | 0 | 0 |
-| ANTIMICROBIAL_UNSPECIFIED | 300 | 300 | 0 | 0 |
+| ANTIMICROBIAL_UNSPECIFIED | 316 | 316 | 0 | 0 |
 | **TOTAL** | **2923** | **2923** | **0** | **324** |
 
 Identity: **2673** records (91%) are grounded in a ChEBI term; **250** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.

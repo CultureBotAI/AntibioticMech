@@ -188,6 +188,16 @@ def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> li
     class_map = conf.get("chebi_class_to_class", {})
     class_ids = {acc2id[a] for a in class_map if a in acc2id}
 
+    # Compounds whose role vetoes the structural-class inference: an
+    # antineoplastic that happens to be an aminoglycoside by structure is not an
+    # antibacterial, and the structural class must not say so.
+    veto_seeds = [acc2id[a] for a in conf.get("chebi_class_veto_roles", []) if a in acc2id]
+    veto_roles = transitive(veto_seeds, isa_children) if veto_seeds else set()
+    veto_bearers: set[str] = set()
+    for compound, compound_roles in has_role.items():
+        if any(r in veto_roles for r in compound_roles):
+            veto_bearers |= transitive([compound], isa_children)
+
     scope = conf["role_scope"]
     out_roles = transitive([acc2id[a] for a in scope["out_of_scope"] if a in acc2id], isa_children)
     in_roles = transitive([acc2id[a] for a in scope["in_scope"] if a in acc2id], isa_children) - out_roles
@@ -261,8 +271,9 @@ def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> li
         struct = structures.get(cid, {})
         prop = props.get(cid, {})
         role_accs = sorted({compounds[r]["chebi_accession"] for r in set(roles) if r in compounds})
-        structural = sorted({compounds[a]["chebi_accession"]
-                             for a in transitive([cid], isa_parents) & class_ids})
+        structural = [] if cid in veto_bearers else sorted(
+            {compounds[a]["chebi_accession"]
+             for a in transitive([cid], isa_parents) & class_ids})
         parents = sorted({compounds[p]["chebi_accession"]
                           for p in isa_parents.get(cid, []) if p in compounds})
         rows.append({

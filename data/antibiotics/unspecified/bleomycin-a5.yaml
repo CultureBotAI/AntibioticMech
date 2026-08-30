@@ -1,0 +1,61 @@
+identifier: CHEBI:78160
+label: bleomycin A5
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of bleomycins that is used in sclerotherapy for
+  cervicofacial lymphatic malformations.
+definition_source: ChEBI
+synonyms:
+- synonym_text: BLM A5
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bleomycetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-(3-((4-Aminobutyl)amino)propyl)bleomycinamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pingyangmycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Zhengguangmycin A5
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22907
+xrefs:
+- cas:11116-32-8
+- reaxys:8386869
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: Cc1c(N)nc([C@H](CC(N)=O)NC[C@H](N)C(N)=O)nc1C(=O)N[C@H](C(=O)N[C@H](C)[C@@H](O)[C@H](C)C(=O)N[C@H](C(=O)NCCc1nc(-c2nc(C(=O)NCCCNCCCCN)cs2)cs1)[C@@H](C)O)[C@@H](O[C@@H]1O[C@@H](CO)[C@@H](O)[C@H](O)[C@@H]1O[C@H]1O[C@H](CO)[C@@H](O)[C@H](OC(N)=O)[C@@H]1O)c1cncn1
+  standard_inchi: InChI=1S/C57H89N19O21S2/c1-22-35(73-48(76-46(22)61)27(14-33(60)80)68-15-26(59)47(62)86)52(90)75-37(43(28-16-65-21-69-28)95-56-45(41(84)39(82)31(17-77)94-56)96-55-42(85)44(97-57(63)92)40(83)32(18-78)93-55)53(91)70-24(3)38(81)23(2)49(87)74-36(25(4)79)51(89)67-13-8-34-71-30(20-98-34)54-72-29(19-99-54)50(88)66-12-7-11-64-10-6-5-9-58/h16,19-21,23-27,31-32,36-45,55-56,64,68,77-79,81-85H,5-15,17-18,58-59H2,1-4H3,(H2,60,80)(H2,62,86)(H2,63,92)(H,65,69)(H,66,88)(H,67,89)(H,70,91)(H,74,87)(H,75,90)(H2,61,73,76)/t23-,24+,25+,26-,27-,31-,32+,36-,37-,38-,39+,40+,41-,42-,43-,44-,45-,55+,56-/m0/s1
+  standard_inchi_key: QYOAUOAXCQAEMW-UTXKDXHTSA-N
+  molecular_formula: C57H89N19O21S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1440.585
+  monoisotopic_mass: 1439.59218
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:78160
+  source_label: bleomycin A5
+  minted_identifier: antibioticmech:chebi-6950d153ee
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:44:01Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,59 @@
+identifier: CHEBI:66389
+label: migrastatin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 14-membered macrolide which is isolated from Streptomyces sp.MK929-43F1
+  and inhibits cell migration of human esophageal cancer EC17 cells and mouse melanona
+  B16 cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-{(5S)-5-[(2R,3Z,5R,6S,7S,8E,12E)-6-hydroxy-7-methoxy-3,5-dimethyl-14-oxooxacyclotetradeca-3,8,12-trien-2-yl]-4-oxohexyl}piperidine-2,6-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-migrastatin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25105
+- CHEBI:25698
+- CHEBI:35681
+- CHEBI:48589
+xrefs:
+- cas:314245-65-3
+- patent:JP2008273981
+- patent:US2009124662
+- patent:US7375230
+- reaxys:9238488
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]1([C@H](C)C(=O)CCCC2CC(=O)NC(=O)C2)OC(=O)/C=C/CC/C=C/[C@H](OC)[C@@H](O)[C@H](C)/C=C\1C'
+  standard_inchi: InChI=1S/C27H39NO7/c1-17-14-18(2)27(35-25(32)13-8-6-5-7-12-22(34-4)26(17)33)19(3)21(29)11-9-10-20-15-23(30)28-24(31)16-20/h7-8,12-14,17,19-20,22,26-27,33H,5-6,9-11,15-16H2,1-4H3,(H,28,30,31)/b12-7+,13-8+,18-14-/t17-,19-,22+,26+,27+/m1/s1
+  standard_inchi_key: OGYMUMAKGYYNHV-IJMHZYIBSA-N
+  molecular_formula: C27H39NO7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 489.609
+  monoisotopic_mass: 489.27265
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66389
+  source_label: migrastatin
+  minted_identifier: antibioticmech:chebi-d45b6ed797
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:43:58Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
