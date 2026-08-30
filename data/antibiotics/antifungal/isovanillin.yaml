@@ -47,8 +47,10 @@ activity_roles:
 - CHEBI:35718
 mode_of_action: VIRAL_PROTEASE_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:35660 (HIV protease inhibitor).
-  ChEBI asserts the role on the compound; the role names a mechanism, not the organism
-  it acts on. Not a curator's mechanistic review.
+  ChEBI asserts the role on the compound, but this mechanism belongs to its anti-viral
+  activity while the record is filed as ANTIFUNGAL — one compound, two activities,
+  and this field describes the mechanism rather than the filing. A curator should
+  confirm which activity the record is about. Not a curator's mechanistic review.
 chemical_structure:
   smiles: '[H]C(=O)c1ccc(OC)c(O)c1'
   standard_inchi: InChI=1S/C8H8O3/c1-11-8-3-2-6(5-9)4-7(8)10/h2-5,10H,1H3

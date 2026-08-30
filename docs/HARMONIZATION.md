@@ -135,6 +135,18 @@ Three disciplines keep it honest:
 - **Several mechanisms give `MULTIPLE`, never a silent pick.** Rifampicin carries
   both an RNA-polymerase and a protein-synthesis role; the notes name both and
   leave the primary one to a curator.
+- **A mechanism from another of the compound's activities says so.**
+  `mode_of_action` and `antimicrobial_class` are orthogonal axes, and some role
+  names carry a target group inside them: `HIV-1 integrase inhibitor` does,
+  `protein synthesis inhibitor` does not. Ten records are filed under one group
+  and carry a mechanism belonging to another — equisetin is an antibacterial that
+  is also an HIV integrase inhibitor. Both facts are true; a record stating the
+  mechanism without stating the mismatch would read as a claim about how its
+  antibacterial action works. Those notes name the discrepancy explicitly.
+
+All of it rests on reviewed edges only: of the 599 `has_role` edges into the
+mapped roles, 588 are CHECKED or OK and the 11 SUBMITTED are ignored — the same
+filter that stopped an unreviewed edge from making zidovudine an antitubercular.
 
 A curator's `mode_of_action` outranks the seeded one. Ownership is decided by a
 marker in the notes rather than by the field name, the same way CARD-seeded
