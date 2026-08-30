@@ -61,8 +61,10 @@ structural_class: fusidane antibiotic
 structural_class_id: ARO:3007153
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound; the role names a mechanism, not the organism
-  it acts on. Not a curator's mechanistic review.
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H][C@@]12[C@H](O)C[C@@]3([H])/C(=C(\CCC=C(C)C)C(=O)O)[C@@H](OC(C)=O)C[C@]3(C)[C@@]1(C)CC[C@@]1([H])[C@H](C)[C@H](O)CC[C@]21C'
   standard_inchi: InChI=1S/C31H48O6/c1-17(2)9-8-10-20(28(35)36)26-22-15-24(34)27-29(5)13-12-23(33)18(3)21(29)11-14-30(27,6)31(22,7)16-25(26)37-19(4)32/h9,18,21-25,27,33-34H,8,10-16H2,1-7H3,(H,35,36)/b26-20-/t18-,21-,22-,23+,24+,25-,27-,29-,30-,31-/m0/s1

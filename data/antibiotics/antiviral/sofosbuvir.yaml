@@ -41,8 +41,10 @@ activity_roles:
 - CHEBI:36044
 mode_of_action: VIRAL_PROTEASE_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:64924 (hepatitis C protease inhibitor).
-  ChEBI asserts the role on the compound; the role names a mechanism, not the organism
-  it acts on. Not a curator's mechanistic review.
+  ChEBI asserts the role on the compound. The role names a target specific to the
+  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CC(C)OC(=O)[C@H](C)N[P@](=O)(OC[C@H]1O[C@@H](n2ccc(=O)nc2=O)[C@](C)(F)[C@@H]1O)Oc1ccccc1
   standard_inchi: InChI=1S/C22H29FN3O9P/c1-13(2)33-19(29)14(3)25-36(31,35-15-8-6-5-7-9-15)32-12-16-18(28)22(4,23)20(34-16)26-11-10-17(27)24-21(26)30/h5-11,13-14,16,18,20,28H,12H2,1-4H3,(H,25,31)(H,24,27,30)/t14-,16+,18+,20+,22+,36-/m0/s1

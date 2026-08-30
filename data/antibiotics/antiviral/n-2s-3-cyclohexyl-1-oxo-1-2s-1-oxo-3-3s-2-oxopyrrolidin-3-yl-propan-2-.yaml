@@ -20,8 +20,10 @@ activity_roles:
 - CHEBI:149553
 mode_of_action: VIRAL_PROTEASE_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:147285 (EC 3.4.22.69 (SARS coronavirus
-  main proteinase) inhibitor). ChEBI asserts the role on the compound; the role names
-  a mechanism, not the organism it acts on. Not a curator's mechanistic review.
+  main proteinase) inhibitor). ChEBI asserts the role on the compound. The role names
+  a target specific to the microbe or virus — see mode_of_action_target_scope. Not
+  a curator's mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H]C(=O)[C@H](C[C@@H]1CCNC1=O)NC(=O)[C@H](CC1CCCCC1)NC(=O)c1cc2ccccc2n1'
   standard_inchi: InChI=1S/C25H32N4O4/c30-15-19(13-18-10-11-26-23(18)31)27-24(32)21(12-16-6-2-1-3-7-16)29-25(33)22-14-17-8-4-5-9-20(17)28-22/h4-5,8-9,14-16,18-19,21,28H,1-3,6-7,10-13H2,(H,26,31)(H,27,32)(H,29,33)/t18-,19-,21-/m0/s1

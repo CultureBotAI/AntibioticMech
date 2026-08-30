@@ -62,8 +62,10 @@ activity_roles:
 - CHEBI:36044
 mode_of_action: VIRAL_POLYMERASE_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:170010 (EC 2.7.7.48 (RNA-directed
-  RNA polymerase) inhibitor). ChEBI asserts the role on the compound; the role names
-  a mechanism, not the organism it acts on. Not a curator's mechanistic review.
+  RNA polymerase) inhibitor). ChEBI asserts the role on the compound. The role names
+  a target specific to the microbe or virus — see mode_of_action_target_scope. Not
+  a curator's mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: NC(=O)c1nc(F)cnc1O
   standard_inchi: InChI=1S/C5H4FN3O2/c6-2-1-8-5(11)3(9-2)4(7)10/h1H,(H2,7,10)(H,8,11)

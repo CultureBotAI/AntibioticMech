@@ -34,8 +34,10 @@ activity_roles:
 - CHEBI:38068
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound; the role names a mechanism, not the organism
-  it acts on. Not a curator's mechanistic review.
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: Cl.Cl.O.[H][C@]1(C[C@@]2([H])NCCc3cc(OC)c(OC)cc32)C[C@@]2([H])c3cc(OC)c(OC)cc3CCN2C[C@@H]1CC
   standard_inchi: InChI=1S/C29H40N2O4.2ClH.H2O/c1-6-18-17-31-10-8-20-14-27(33-3)29(35-5)16-23(20)25(31)12-21(18)11-24-22-15-28(34-4)26(32-2)13-19(22)7-9-30-24;;;/h13-16,18,21,24-25,30H,6-12,17H2,1-5H3;2*1H;1H2/t18-,21-,24+,25-;;;/m0.../s1

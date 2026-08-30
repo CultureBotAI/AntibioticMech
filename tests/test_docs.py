@@ -124,6 +124,8 @@ NUMERIC_CLAIMS = [
     ("NEXT_TASKS.md", "beyond the {} records ChEBI's roles reach", "moa_records"),
     ("NEXT_TASKS.md", "{} curated roles now map", "mapped_roles"),
     ("NEXT_TASKS.md", "the {}-role map", "mapped_roles"),
+    ("docs/HARMONIZATION.md", "`MICROBIAL_TARGET` ({} records)", "microbial_target"),
+    ("docs/HARMONIZATION.md", "`HOST_SHARED_TARGET` ({})", "host_shared_target"),
 ]
 
 
@@ -135,12 +137,18 @@ def _derived(repo_root):
     euk = conf.get("role_to_mode_of_action_eukaryotic") or {}
 
     moa_records = 0
+    scopes = {"MICROBIAL_TARGET": 0, "HOST_SHARED_TARGET": 0}
     for path in (repo_root / "data" / "antibiotics").rglob("*.yaml"):
         record = yaml.safe_load(path.read_text(encoding="utf-8"))
         if isinstance(record, dict) and record.get("mode_of_action"):
             moa_records += 1
+            scope = record.get("mode_of_action_target_scope")
+            if scope in scopes:
+                scopes[scope] += 1
 
-    return {"mapped_roles": len(set(base) | set(euk)), "moa_records": moa_records}
+    return {"mapped_roles": len(set(base) | set(euk)), "moa_records": moa_records,
+            "microbial_target": scopes["MICROBIAL_TARGET"],
+            "host_shared_target": scopes["HOST_SHARED_TARGET"]}
 
 
 def test_numeric_claims_in_prose_match_the_corpus(repo_root):

@@ -133,7 +133,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 {% if r.mode_of_action or r.cidality or r.clinical_status %}
 <h2>Mechanism summary</h2>
 <dl class="fields">
-  {% if r.mode_of_action %}<dt>Mode of action</dt><dd>{{ r.mode_of_action }}{% if r.mode_of_action_notes %} <span class="meta">— {{ r.mode_of_action_notes }}</span>{% endif %}</dd>{% endif %}
+  {% if r.mode_of_action %}<dt>Mode of action</dt><dd>{{ r.mode_of_action }}{% if r.mode_of_action_target_scope %} <span class="pill plain">{{ r.mode_of_action_target_scope.replace("_", " ").lower() }}</span>{% endif %}{% if r.mode_of_action_notes %} <span class="meta">— {{ r.mode_of_action_notes }}</span>{% endif %}</dd>{% endif %}
   {% if r.cidality %}<dt>Cidality</dt><dd>{{ r.cidality }}</dd>{% endif %}
   {% if r.clinical_status %}<dt>Clinical status</dt><dd>{{ r.clinical_status }}</dd>{% endif %}
 </dl>

@@ -67,8 +67,10 @@ structural_class: sulfonamide antibiotic
 structural_class_id: ARO:3000282
 mode_of_action: FOLATE_PATHWAY_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:50502 (EC 2.5.1.15 (dihydropteroate
-  synthase) inhibitor). ChEBI asserts the role on the compound; the role names a mechanism,
-  not the organism it acts on. Not a curator's mechanistic review.
+  synthase) inhibitor). ChEBI asserts the role on the compound. The role names a target
+  specific to the microbe or virus — see mode_of_action_target_scope. Not a curator's
+  mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: Cc1nnc(NS(=O)(=O)c2ccc(N)cc2)s1
   standard_inchi: InChI=1S/C9H10N4O2S2/c1-6-11-12-9(16-6)13-17(14,15)8-4-2-7(10)3-5-8/h2-5H,10H2,1H3,(H,12,13)

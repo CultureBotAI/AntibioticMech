@@ -37,8 +37,10 @@ activity_roles:
 - CHEBI:86328
 mode_of_action: ENERGY_METABOLISM_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:38499 (mitochondrial cytochrome-bc1
-  complex inhibitor). ChEBI asserts the role on the compound; the role names a mechanism,
-  not the organism it acts on. Not a curator's mechanistic review.
+  complex inhibitor). ChEBI asserts the role on the compound. The target it names
+  is one the host has too, so the mechanism is true but is not evidence of selectivity
+  — see mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CO/C=C(/C(=O)OC)c1ccccc1COc1cc(-c2ccc(Cl)cc2)nn1C
   standard_inchi: InChI=1S/C22H21ClN2O4/c1-25-21(12-20(24-25)15-8-10-17(23)11-9-15)29-13-16-6-4-5-7-18(16)19(14-27-2)22(26)28-3/h4-12,14H,13H2,1-3H3/b19-14+

@@ -68,8 +68,10 @@ activity_roles:
 - CHEBI:36047
 mode_of_action: FOLATE_PATHWAY_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:50502 (EC 2.5.1.15 (dihydropteroate
-  synthase) inhibitor). ChEBI asserts the role on the compound; the role names a mechanism,
-  not the organism it acts on. Not a curator's mechanistic review.
+  synthase) inhibitor). ChEBI asserts the role on the compound. The role names a target
+  specific to the microbe or virus — see mode_of_action_target_scope. Not a curator's
+  mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: NC(=S)NS(=O)(=O)c1ccc(N)cc1
   standard_inchi: InChI=1S/C7H9N3O2S2/c8-5-1-3-6(4-2-5)14(11,12)10-7(9)13/h1-4H,8H2,(H3,9,10,13)

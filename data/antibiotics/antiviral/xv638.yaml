@@ -38,8 +38,10 @@ activity_roles:
 - CHEBI:35660
 mode_of_action: VIRAL_PROTEASE_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:35660 (HIV protease inhibitor).
-  ChEBI asserts the role on the compound; the role names a mechanism, not the organism
-  it acts on. Not a curator's mechanistic review.
+  ChEBI asserts the role on the compound. The role names a target specific to the
+  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: O=C(Nc1nccs1)c1cccc(CN2C(=O)N(Cc3cccc(C(=O)Nc4nccs4)c3)[C@H](Cc3ccccc3)[C@H](O)[C@@H](O)[C@H]2Cc2ccccc2)c1
   standard_inchi: InChI=1S/C41H38N6O5S2/c48-35-33(23-27-9-3-1-4-10-27)46(25-29-13-7-15-31(21-29)37(50)44-39-42-17-19-53-39)41(52)47(34(36(35)49)24-28-11-5-2-6-12-28)26-30-14-8-16-32(22-30)38(51)45-40-43-18-20-54-40/h1-22,33-36,48-49H,23-26H2,(H,42,44,50)(H,43,45,51)/t33-,34-,35+,36+/m1/s1

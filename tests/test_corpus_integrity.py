@@ -303,3 +303,24 @@ def test_a_seeded_mode_of_action_is_policed_and_a_curators_is_not(repo_root):
     assert seeded_mode_of_action(curated) is None
 
     assert seeded_mode_of_action({}) is None
+
+
+def test_target_scope_accompanies_every_seeded_mechanism(records):
+    """A mechanism with no scope is the conflation this field exists to remove:
+    `PROTEIN_SYNTHESIS_INHIBITION` alone cannot tell linezolid's bacterial 50S
+    from omacetaxine's host 80S. A scope with no mechanism describes nothing.
+    """
+    VALID = {"MICROBIAL_TARGET", "HOST_SHARED_TARGET"}
+    missing, orphaned, bad = [], [], []
+    for path, record in records:
+        moa = record.get("mode_of_action")
+        scope = record.get("mode_of_action_target_scope")
+        if moa and not scope:
+            missing.append(path.name)
+        if scope and not moa:
+            orphaned.append(path.name)
+        if scope and scope not in VALID:
+            bad.append(f"{path.name}: {scope}")
+    assert missing == [], f"mechanism with no target scope: {missing[:10]}"
+    assert orphaned == [], f"target scope with no mechanism: {orphaned[:10]}"
+    assert bad == [], bad

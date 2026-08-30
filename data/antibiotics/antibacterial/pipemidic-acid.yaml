@@ -50,8 +50,10 @@ activity_roles:
 - CHEBI:36047
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:59517 (DNA synthesis inhibitor).
-  ChEBI asserts the role on the compound; the role names a mechanism, not the organism
-  it acts on. Not a curator's mechanistic review.
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CCn1cc(C(=O)O)c(=O)c2cnc(N3CCNCC3)nc21
   standard_inchi: InChI=1S/C14H17N5O3/c1-2-18-8-10(13(21)22)11(20)9-7-16-14(17-12(9)18)19-5-3-15-4-6-19/h7-8,15H,2-6H2,1H3,(H,21,22)
