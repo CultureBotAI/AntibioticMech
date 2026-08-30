@@ -1089,16 +1089,33 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
         # empty, and the seeder must not fill it back in.
         merged.pop("mode_of_action", None)
         merged.pop("mode_of_action_notes", None)
-        # The scope describes the value, so it travels with it. Leaving the
-        # seeder's scope beside a curator's corrected mechanism would attach a
-        # provenance claim to a value it was never derived from.
+        # The scope describes the value, so it travels with it — and an earlier
+        # version of this block said exactly that and then did the opposite,
+        # carrying the seeder's scope forward beside a mechanism the curator had
+        # replaced. The result asserted selectivity derived for a value no longer
+        # on the record, silently, with every gate green.
+        #
+        # Three states, and the seeder can tell them apart:
+        #   - the curator kept the seeder's mechanism: the derived scope still
+        #     describes it, so it stands;
+        #   - the curator changed it AND their scope differs from the derived
+        #     one: they set it deliberately, so it is theirs and is preserved —
+        #     silently discarding curator work is the older sin (#9);
+        #   - the curator changed it and the scope still equals the derived one:
+        #     indistinguishable from a leftover. Dropped, because a missing scope
+        #     says nothing while a wrong one makes a claim. `just worklist`
+        #     surfaces the record as owing one.
         merged.pop("mode_of_action_target_scope", None)
         if "mode_of_action" in existing:
             merged["mode_of_action"] = existing["mode_of_action"]
         if existing_moa_notes:
             merged["mode_of_action_notes"] = existing_moa_notes
-        if "mode_of_action_target_scope" in existing:
-            merged["mode_of_action_target_scope"] = existing["mode_of_action_target_scope"]
+        existing_scope = existing.get("mode_of_action_target_scope")
+        if existing_scope is not None:
+            mechanism_kept = existing.get("mode_of_action") == record.get("mode_of_action")
+            curator_set_scope = existing_scope != record.get("mode_of_action_target_scope")
+            if mechanism_kept or curator_set_scope:
+                merged["mode_of_action_target_scope"] = existing_scope
 
     # The seeder owns structure-collision todos; every other discussion is the
     # curator's and is appended after them.
