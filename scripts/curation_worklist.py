@@ -79,8 +79,10 @@ def mechanism_queue(records: list[dict]) -> list[dict]:
         # used to remove the record from the only list where a curator would
         # find it. 433 records vanished the day mode_of_action was first seeded,
         # 68 of them carrying the CARD evidence that puts them at the top.
-        if record.get("causal_graphs") or seeded_mode_of_action(record) is None and \
-                record.get("mode_of_action"):
+        curator_set_moa = (
+            seeded_mode_of_action(record) is None and record.get("mode_of_action")
+        )
+        if record.get("causal_graphs") or curator_set_moa:
             continue
         targets = len(record.get("molecular_targets") or [])
         resistance = len(record.get("resistance_mechanisms") or [])
