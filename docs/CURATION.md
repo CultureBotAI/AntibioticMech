@@ -68,10 +68,14 @@ Both survive `just seed-apply`.
 
 **`mode_of_action_target_scope` travels with the value.** It records whether the
 target belongs to the microbe (`MICROBIAL_TARGET`) or is one the host has too
-(`HOST_SHARED_TARGET`), derived from the same roles as the mechanism. Claiming
-the mechanism claims the scope: set it alongside your corrected value, and a
-veto drops it, because a scope describing a mechanism that is no longer asserted
-describes nothing. It is **not a confidence rating** — `HOST_SHARED_TARGET`
+(`HOST_SHARED_TARGET`), derived from the same roles as the mechanism.
+
+**If you change the mechanism, state the scope.** The seeder derived the scope
+for the value it wrote; once you replace that value, the scope describes
+something no longer on the record. So: annotate without changing the mechanism
+and the scope stands; change the mechanism and set a scope, and yours is kept;
+change the mechanism and leave the scope alone, and the seeder drops it rather
+than let it assert selectivity nothing derived. A veto drops it too. It is **not a confidence rating** — `HOST_SHARED_TARGET`
 covers linezolid, which is genuinely microbe-selective on a conserved ribosome,
 as well as omacetaxine, which is not. It marks where the selectivity question
 exists so that `molecular_targets` can answer it.

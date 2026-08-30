@@ -329,17 +329,22 @@ role_target_scope:
   CHEBI:59672: MICROBIAL_TARGET    # chitin synthase — fungal/insect; host lacks
   # --- virus-encoded targets
   CHEBI:53756: MICROBIAL_TARGET    # HIV-1 reverse transcriptase
-  CHEBI:59897: MICROBIAL_TARGET    # RNA-directed DNA polymerase — telomerase is a host RT,
-                                   # but the cohort is 11 nucleoside/non-nucleoside RT
-                                   # inhibitors and nothing host-directed
+  CHEBI:59886: HOST_SHARED_TARGET  # "HIV fusion inhibitor" names an EVENT, and its two
+                                   # members target opposite sides of it: enfuvirtide
+                                   # binds viral gp41, maraviroc binds HUMAN CCR5 and is
+                                   # the textbook host-directed antiviral. One role, both
+                                   # directions — the CHEBI:20854 pattern again. An
+                                   # earlier comment here conceded the CCR5 problem and
+                                   # then overrode the rule on the grounds that "the
+                                   # inhibited event is viral"; the field is named for the
+                                   # TARGET, so that was the rule being bent to fit.
   CHEBI:170010: MICROBIAL_TARGET   # RNA-directed RNA polymerase — hosts have none
   CHEBI:52629: MICROBIAL_TARGET    # retroviral ribonuclease H (an RT domain)
   CHEBI:35660: MICROBIAL_TARGET    # HIV protease
   CHEBI:147285: MICROBIAL_TARGET   # SARS coronavirus main proteinase
   CHEBI:64924: MICROBIAL_TARGET    # hepatitis C protease
   CHEBI:67268: MICROBIAL_TARGET    # HIV-1 integrase
-  CHEBI:59886: MICROBIAL_TARGET    # HIV fusion (gp41/CCR5 — CCR5 is host, but the
-                                   # inhibited event is viral entry)
+
   CHEBI:71168: MICROBIAL_TARGET    # HIV-1 maturation
   CHEBI:83799: MICROBIAL_TARGET    # NS5A — viral nonstructural protein
 
@@ -372,6 +377,17 @@ role_target_scope:
                                    # which the host has
   CHEBI:24869: HOST_SHARED_TARGET  # ionophore — collapses gradients across any membrane
   CHEBI:83741: HOST_SHARED_TARGET  # phospholipid biosynthesis — universal
+  CHEBI:59897: HOST_SHARED_TARGET  # EC 2.7.7.49 (RNA-directed DNA polymerase) — the host
+                                   # has one: telomerase. And the cohort proves it is not
+                                   # hypothetical — MST-312, whose own ChEBI definition
+                                   # reads "It is telomerase inhibitor (IC50 = 0.67 μM in
+                                   # a TRAP assay) and exhibits antineoplastic activity",
+                                   # plus TMPyP4 and its tosylate, G-quadruplex ligands.
+                                   # An earlier comment here asserted "nothing
+                                   # host-directed" in the cohort, falsified by the
+                                   # records' own definition field. The genuine RT drugs
+                                   # that also carry CHEBI:53756 keep MICROBIAL_TARGET,
+                                   # because a specific role outranks a generic one.
   CHEBI:52425: HOST_SHARED_TARGET  # exo-α-sialidase — humans have NEU1-4. The drugs of
                                    # record (oseltamivir) are selective for the viral
                                    # neuraminidase, but the EC does not say so.

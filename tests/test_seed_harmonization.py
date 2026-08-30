@@ -956,35 +956,58 @@ def test_an_unscoped_role_raises_rather_than_emitting_a_bare_mechanism():
                                   {"CHEBI:99999999": "invented"}, "ANTIBACTERIAL")
 
 
-def test_a_curator_who_claims_the_mechanism_owns_its_target_scope_too():
-    """The scope describes the value. Leaving the seeder's scope beside a
-    curator's corrected mechanism would attach a derivation to a value it was
-    never derived from — a provenance claim about work the curator did."""
+def test_a_curator_correction_never_keeps_a_scope_derived_for_another_mechanism():
+    """`merge_with_existing(record, existing)` — the FRESH SEED is the first
+    argument, the on-disk record the second. An earlier version of this test had
+    them the other way round and passed for the wrong reason, so the four states
+    below are asserted explicitly.
+
+    The scope describes the value it sits beside. An earlier merge said so in a
+    comment and then carried the seeder's scope forward onto a mechanism the
+    curator had replaced, asserting selectivity derived for a value no longer on
+    the record — silently, with every gate green.
+    """
     from seed_from_sources import merge_with_existing
 
-    seeded = {"identifier": "CHEBI:1", "label": "widgetmycin",
-              "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
-              "mode_of_action_notes": "Assigned from ChEBI role CHEBI:48001 (x).",
-              "mode_of_action_target_scope": "HOST_SHARED_TARGET",
-              "source_concepts": []}
+    fresh = {"identifier": "CHEBI:1", "label": "widgetmycin", "source_concepts": [],
+             "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+             "mode_of_action_notes": "Assigned from ChEBI role CHEBI:48001 (x).",
+             "mode_of_action_target_scope": "HOST_SHARED_TARGET"}
 
-    curated = dict(seeded,
-                   mode_of_action="MEMBRANE_DISRUPTION",
-                   mode_of_action_notes="CURATOR: reassigned after reading the primary literature.",
-                   mode_of_action_target_scope="MICROBIAL_TARGET")
+    def reseed(on_disk):
+        return merge_with_existing(dict(fresh), on_disk)
 
-    merged = merge_with_existing(curated, dict(seeded))
-    assert merged["mode_of_action"] == "MEMBRANE_DISRUPTION"
-    assert merged["mode_of_action_target_scope"] == "MICROBIAL_TARGET"
+    # 1. Curator kept the seeder's mechanism and only annotated it. The derived
+    #    scope still describes that mechanism, so it stands.
+    kept = reseed(dict(fresh, mode_of_action_notes=(
+        "Assigned from ChEBI role CHEBI:48001 (x). CURATOR: confirmed against PMID:1.")))
+    assert kept["mode_of_action"] == "PROTEIN_SYNTHESIS_INHIBITION"
+    assert kept["mode_of_action_target_scope"] == "HOST_SHARED_TARGET"
 
-    # A curator VETO (note, no value) must not leave a scope stranded behind,
-    # describing a mechanism that is no longer asserted.
-    veto = {k: v for k, v in curated.items()
-            if k not in ("mode_of_action", "mode_of_action_target_scope")}
-    veto["mode_of_action_notes"] = "CURATOR: the cited role is wrong for this compound."
-    merged_veto = merge_with_existing(veto, dict(seeded))
-    assert "mode_of_action" not in merged_veto
-    assert "mode_of_action_target_scope" not in merged_veto
+    # 2. Curator replaced the mechanism and left the scope alone. It was derived
+    #    for a value that is gone, and nothing distinguishes it from a leftover.
+    #    Dropped: a missing scope says nothing, a wrong one makes a claim.
+    stale = reseed(dict(fresh, mode_of_action="VIRAL_INTEGRASE_INHIBITION",
+                        mode_of_action_notes="CURATOR: reassigned, PMID:1."))
+    assert stale["mode_of_action"] == "VIRAL_INTEGRASE_INHIBITION"
+    assert "mode_of_action_target_scope" not in stale, stale
+
+    # 3. Curator replaced the mechanism AND set a scope that differs from the
+    #    derived one. That is deliberate, and theirs. Silently discarding
+    #    curator work is the older and worse sin.
+    owned = reseed(dict(fresh, mode_of_action="VIRAL_INTEGRASE_INHIBITION",
+                        mode_of_action_target_scope="MICROBIAL_TARGET",
+                        mode_of_action_notes="CURATOR: reassigned, PMID:1."))
+    assert owned["mode_of_action_target_scope"] == "MICROBIAL_TARGET"
+
+    # 4. Veto: a note with no value. No mechanism is asserted, so no scope may
+    #    be left behind describing one.
+    veto_disk = {k: v for k, v in fresh.items()
+                 if k not in ("mode_of_action", "mode_of_action_target_scope")}
+    veto_disk["mode_of_action_notes"] = "CURATOR: the cited role is wrong here. Leave blank."
+    veto = reseed(veto_disk)
+    assert "mode_of_action" not in veto
+    assert "mode_of_action_target_scope" not in veto
 
 
 def test_every_seeded_mechanism_note_explains_its_target_scope():
@@ -1018,3 +1041,35 @@ def test_every_seeded_mechanism_note_explains_its_target_scope():
                     else "specific to the microbe or virus")
         assert expected in notes, (roles, klass, scope, notes)
         assert notes.count("Not a curator's mechanistic review") == 1, notes
+
+
+def test_a_role_naming_a_target_the_host_also_has_is_host_shared():
+    """Two roles were assigned MICROBIAL_TARGET on inspection of the role NAME
+    and had to be corrected against the actual cohort. Both are pinned here.
+
+    `CHEBI:59886` "HIV fusion inhibitor" names an EVENT, and its two members sit
+    on opposite sides of it: enfuvirtide binds viral gp41, maraviroc binds HUMAN
+    CCR5 and is the textbook host-directed antiviral — the exact compound this
+    field was built for, on the wrong side of it.
+
+    `CHEBI:59897` is the generic EC for RNA-directed DNA polymerase, and the host
+    has one: telomerase. MST-312's own ChEBI definition names it a telomerase
+    inhibitor, so the falsifying evidence was on the record's own page.
+
+    The lesson these encode is procedural: a role's scope follows from its
+    COHORT, not from how microbe-specific its name sounds.
+    """
+    conf = _conf()
+    assert conf["role_target_scope"]["CHEBI:59886"] == "HOST_SHARED_TARGET"
+    assert conf["role_target_scope"]["CHEBI:59897"] == "HOST_SHARED_TARGET"
+
+
+def test_the_corpus_agrees_with_those_two_roles(records):
+    """The config above only matters if it reaches the records."""
+    wanted = {"maraviroc": "HOST_SHARED_TARGET",       # human CCR5
+              "MST-312": "HOST_SHARED_TARGET",         # host telomerase
+              "lamivudine": "MICROBIAL_TARGET",        # also carries CHEBI:53756, HIV-1 RT
+              "ciprofloxacin": "MICROBIAL_TARGET"}     # also carries topoisomerase IV
+    seen = {r["label"]: r.get("mode_of_action_target_scope")
+            for _p, r in records if r.get("label") in wanted}
+    assert seen == wanted, seen
