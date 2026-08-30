@@ -15,6 +15,10 @@ AntibioticMech is the antimicrobial-compound counterpart of
 [dismech](https://github.com/monarch-initiative/dismech): one YAML per entity,
 ontology-grounded, evidence-backed, schema-validated, curated incrementally.
 
+**[Browse the corpus online →](https://culturebotai.github.io/AntibioticMech/)**
+— every record, browsable by antimicrobial class, with structures, sources,
+CARD targets and resistance determinants.
+
 ## One record is one chemical structure
 
 That constraint is the design. "Macrolide antibiotic" is not a record — it is a
