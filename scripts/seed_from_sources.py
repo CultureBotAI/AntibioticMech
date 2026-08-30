@@ -768,7 +768,7 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     ]
     record_curation_event(
         record,
-        curator="seed_from_sources",
+        curator=SEEDER_CURATOR,
         action="SEEDED_FROM_SOURCES",
         changes=f"Seeded from data/raw/ inventories ({', '.join(sorted({c.source for c in group}))})",
     )
@@ -776,23 +776,34 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
 
 
 def _collapse_duplicate_events(history: list[dict]) -> list[dict]:
-    """Drop a curation event indistinguishable from the one before it.
+    """Drop a SEEDER event indistinguishable from the seeder event before it.
 
-    An append-only trail earns its keep by recording what happened. Two adjacent
-    events with the same curator, action and description record nothing a reader
-    can tell apart, and they accumulated here for a reason worth naming: a
+    An append-only trail earns its keep by recording what happened, and two
+    adjacent entries identical in curator, action and description record nothing
+    a reader can tell apart. They accumulated for a reason worth naming: a
     falsified `retrieved_on` flipped `source_version` on every record, so every
     record logged a re-seed "from updated inventories" that had not been updated.
-    Timestamps differ and are deliberately not compared — that is exactly what
-    made the duplicates look distinct.
+    Timestamps are deliberately not compared — differing timestamps are exactly
+    what made the duplicates look distinct.
+
+    STRICTLY LIMITED TO THE SEEDER'S OWN ENTRIES. A curator's history is theirs,
+    and two of their edits that happen to carry the same description are two
+    edits; silently dropping one because a machine cannot tell them apart would
+    be the audit trail lying about curation, which is worse than a duplicate.
+    Only `seed_from_sources` writes what this collapses, and only its own runs
+    can produce the indistinguishable pairs it exists to clean up.
     """
     collapsed: list[dict] = []
     for event in history:
-        if collapsed and isinstance(event, dict) and isinstance(collapsed[-1], dict):
-            same = all(event.get(k) == collapsed[-1].get(k)
-                       for k in ("curator", "action", "changes", "llm_assisted"))
-            if same:
-                continue
+        previous = collapsed[-1] if collapsed else None
+        if isinstance(event, dict) and isinstance(previous, dict) \
+                and event.get("curator") == SEEDER_CURATOR \
+                and previous.get("curator") == SEEDER_CURATOR \
+                and all(event.get(k) == previous.get(k)
+                        for k in ("action", "changes", "llm_assisted")) \
+                and set(event) <= {"timestamp", "curator", "action", "changes", "llm_assisted"} \
+                and set(previous) <= {"timestamp", "curator", "action", "changes", "llm_assisted"}:
+            continue
         collapsed.append(event)
     return collapsed
 
@@ -935,6 +946,10 @@ CARD_NOTE_MARKER = "CARD/ARO asserts"
 # The same device for mode_of_action: a seeded value says so in its notes, so a
 # re-seed can replace its own work and must leave a curator's alone.
 MOA_NOTE_MARKER = "Assigned from ChEBI role"
+
+# The curator name this script signs its own curation events with. Used to keep
+# history maintenance off anything a human wrote.
+SEEDER_CURATOR = "seed_from_sources"
 
 # ...and the curator's half of it. Ownership cannot be inferred only from the
 # ABSENCE of the seeder's marker, because the seeded note invites a curator to
@@ -1108,7 +1123,7 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
         merged["curation_history"] = history
         record_curation_event(
             merged,
-            curator="seed_from_sources",
+            curator=SEEDER_CURATOR,
             action="RESEEDED_FROM_SOURCES",
             changes="Re-seeded from updated data/raw/ inventories",
         )
