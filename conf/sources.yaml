@@ -178,6 +178,73 @@ role_to_class:
   CHEBI:65256: {class: BIOCIDE, priority: 6}             # antimicrobial food preservative
   CHEBI:172949: {class: BIOCIDE, priority: 6}            # antimicrobial cosmetic preservative
 
+# ----------------------------------------------------------------------------
+# ChEBI role -> ModeOfActionEnum.
+#
+# ChEBI asserts mechanism-shaped roles on compounds this corpus already reads,
+# through the same reviewed edges everything else uses. This map turns the ones
+# whose TARGET IS MICROBIAL into a mode of action.
+#
+# The discipline is what is NOT here. The same role space is full of
+# host-directed mechanisms that say nothing about antimicrobial action, and a
+# compound in this corpus can easily bear one: angiogenesis inhibitor (24
+# records), acetylcholinesterase inhibitor (15), proteasome inhibitor (13),
+# NF-kappaB inhibitor (12), apoptosis inhibitor (10), platelet aggregation
+# inhibitor (10), P450 inhibitor (11), muscarinic and serotonergic antagonists,
+# tyrosine kinase, COX-2, histone deacetylase, Hsp90. All are deliberately
+# unmapped: a mode of action is a claim about how the compound kills or inhibits
+# a MICROBE, and inheriting one from an unrelated pharmacology would be exactly
+# the kind of confident wrongness the gates cannot see.
+#
+# Also unmapped on purpose, for narrower reasons:
+#   CHEBI:35625 beta-lactamase inhibitor — an adjuvant mechanism against a
+#     RESISTANCE enzyme, not the compound's own antimicrobial action.
+#   CHEBI:83317 sterol biosynthesis inhibitor — the generic parent of the
+#     ergosterol term; on its own it does not distinguish fungal ergosterol from
+#     host cholesterol.
+#   CHEBI:24853 intercalator, CHEBI:38161 chelator, CHEBI:37670 protease
+#     inhibitor — too generic to name a target.
+#   CHEBI:71476 fatty acid synthase inhibitor — the EC refers to the human
+#     FAS-I complex, not bacterial FAS-II.
+# ----------------------------------------------------------------------------
+role_to_mode_of_action:
+  # --- bacterial and general cellular targets
+  CHEBI:48001: PROTEIN_SYNTHESIS_INHIBITION            # protein synthesis inhibitor
+  CHEBI:59517: NUCLEIC_ACID_SYNTHESIS_INHIBITION       # DNA synthesis inhibitor
+  CHEBI:50750: NUCLEIC_ACID_SYNTHESIS_INHIBITION       # DNA topoisomerase (ATP-hydrolysing) = gyrase
+  CHEBI:50276: NUCLEIC_ACID_SYNTHESIS_INHIBITION       # DNA topoisomerase inhibitor
+  CHEBI:53559: NUCLEIC_ACID_SYNTHESIS_INHIBITION       # topoisomerase IV inhibitor
+  CHEBI:37416: NUCLEIC_ACID_SYNTHESIS_INHIBITION       # RNA polymerase inhibitor (rifamycins)
+  CHEBI:77103: NUCLEIC_ACID_SYNTHESIS_INHIBITION       # dihydroorotate dehydrogenase — pyrimidine supply
+  CHEBI:50502: FOLATE_PATHWAY_INHIBITION               # dihydropteroate synthase (sulfonamides)
+  CHEBI:50683: FOLATE_PATHWAY_INHIBITION               # dihydrofolate reductase (trimethoprim)
+  CHEBI:24869: MEMBRANE_DISRUPTION                     # ionophore
+  CHEBI:83741: CELL_MEMBRANE_SYNTHESIS_INHIBITION      # phospholipid biosynthesis inhibitor
+  CHEBI:20854: ENERGY_METABOLISM_INHIBITION            # ATP synthase inhibitor (bedaquiline)
+  CHEBI:73214: ENERGY_METABOLISM_INHIBITION            # H+-transporting two-sector ATPase
+  CHEBI:25355: ENERGY_METABOLISM_INHIBITION            # mitochondrial respiratory-chain inhibitor
+  CHEBI:38499: ENERGY_METABOLISM_INHIBITION            # cytochrome-bc1 complex (QoI fungicides)
+  CHEBI:83072: ENERGY_METABOLISM_INHIBITION            # succinate dehydrogenase (SDHI fungicides)
+  CHEBI:141153: ENERGY_METABOLISM_INHIBITION           # quinone outside inhibitor
+  # --- fungal targets
+  CHEBI:75282: ERGOSTEROL_PATHWAY_INHIBITION           # ergosterol biosynthesis inhibitor
+  CHEBI:77884: ERGOSTEROL_PATHWAY_INHIBITION           # sterol 14alpha-demethylase (azoles)
+  CHEBI:59285: ERGOSTEROL_PATHWAY_INHIBITION           # squalene monooxygenase (allylamines)
+  CHEBI:230471: CELL_WALL_SYNTHESIS_INHIBITION         # 1,3-beta-glucan synthase (echinocandins)
+  # --- viral targets
+  CHEBI:53756: VIRAL_POLYMERASE_INHIBITION             # HIV-1 reverse transcriptase
+  CHEBI:59897: VIRAL_POLYMERASE_INHIBITION             # RNA-directed DNA polymerase
+  CHEBI:170010: VIRAL_POLYMERASE_INHIBITION            # RNA-directed RNA polymerase
+  CHEBI:52629: VIRAL_POLYMERASE_INHIBITION             # retroviral ribonuclease H (an RT domain)
+  CHEBI:35660: VIRAL_PROTEASE_INHIBITION               # HIV protease
+  CHEBI:147285: VIRAL_PROTEASE_INHIBITION              # SARS coronavirus main proteinase
+  CHEBI:64924: VIRAL_PROTEASE_INHIBITION               # hepatitis C protease
+  CHEBI:67268: VIRAL_INTEGRASE_INHIBITION              # HIV-1 integrase
+  CHEBI:59886: VIRAL_ENTRY_INHIBITION                  # HIV fusion inhibitor
+  CHEBI:52425: VIRAL_RELEASE_INHIBITION                # exo-alpha-sialidase (neuraminidase inhibitors)
+  CHEBI:71168: VIRAL_ASSEMBLY_INHIBITION               # HIV-1 maturation inhibitor
+  CHEBI:83799: VIRAL_ASSEMBLY_INHIBITION               # NS5A inhibitor (replication-complex assembly)
+
 # ARO drug class -> AntimicrobialClassEnum, for the classes whose NAME states a
 # target group. CARD models antifungal resistance as well as antibacterial, so
 # "every ARO molecule is an antibacterial" is no longer true; a curated,
