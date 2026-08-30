@@ -92,6 +92,19 @@ refused, because it would delete records the run never built.
 records the sha256 of every upstream file and every emitted inventory.
 `just provenance-check` after any change to `data/raw/`.
 
+## Skills
+
+`.claude/skills/` carries two workflows, both read-only by default:
+
+- **`review-open-issues`** — sweep and rank the whole open-issue queue against
+  the committed corpus. Its P0 tier is specific to this repository: something
+  wrong that every gate passes, which is how nineteen defects once shipped with
+  `just qc` green.
+- **`source-queue`** — triage `curation/source_queue.tsv`, the ranked list of
+  data sources this corpus might adopt.
+
+Neither closes issues, adopts sources, or edits the corpus. Those are asks.
+
 ## Adopting a data source
 
 Candidates live in `curation/source_queue.tsv`, ranked by the corpus gap they

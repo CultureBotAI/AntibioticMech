@@ -11,10 +11,27 @@ import subprocess
 import sys
 
 DOC_FILES = ["README.md", "CLAUDE.md", "pyproject.toml", "docs/HARMONIZATION.md",
-             "docs/CURATION.md", "NEXT_TASKS.md"]
+             "docs/CURATION.md", "NEXT_TASKS.md",
+             # Skills are instructions an agent will follow literally, so a
+             # command that does not exist is worse here than in prose.
+             ".claude/skills/source-queue/SKILL.md",
+             ".claude/skills/review-open-issues/SKILL.md"]
 
 SCRIPT_REF = re.compile(r"scripts/[a-z_]+\.py")
 JUST_REF = re.compile(r"just ([a-z][a-z-]*)")
+
+
+def test_every_skill_declares_the_frontmatter_the_loader_needs(repo_root):
+    """A skill with a missing name or description is invisible to the model that
+    would have used it."""
+    import yaml
+
+    for path in sorted((repo_root / ".claude" / "skills").glob("*/SKILL.md")):
+        text = path.read_text(encoding="utf-8")
+        assert text.startswith("---\n"), path
+        front = yaml.safe_load(text.split("---")[1])
+        assert front.get("name") == path.parent.name, path
+        assert front.get("description", "").strip(), path
 
 
 def test_every_referenced_script_exists(repo_root):
