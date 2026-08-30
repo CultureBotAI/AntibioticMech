@@ -1107,3 +1107,42 @@ def test_verify_corpus_catches_a_bare_scope_edit_but_not_a_claimed_one():
         seeded_note + " CURATOR: selective for the bacterial 50S."))
     # Now the curator's, and the comparison is skipped by design.
     assert curator_owns_mode_of_action(claimed) is True
+
+
+def test_a_conf_driven_mechanism_change_appends_an_audit_event():
+    """Changing the role maps rewrites records, and the trail must say so.
+
+    `mode_of_action`, its notes and its target scope are not in SEEDED_FIELDS,
+    so the `unchanged` guard did not see them: 8582e215 moved ten records'
+    scope and notes and appended no event to any of them — a trail asserting
+    nothing had happened while the data moved, which is #73's failure reached
+    by a different road.
+
+    The comparison is against the MERGED document, not the fresh derivation, so
+    a curator-owned block registers as unchanged rather than logging a re-seed
+    on every run. Both halves are asserted, because the churn is what made an
+    earlier attempt at this kind of comparison unusable.
+    """
+    from seed_from_sources import merge_with_existing
+
+    base = {"identifier": "CHEBI:1", "label": "w", "source_concepts": [],
+            "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+            "mode_of_action_notes": "Assigned from ChEBI role CHEBI:48001 (x).",
+            "mode_of_action_target_scope": "HOST_SHARED_TARGET",
+            "curation_history": [{"timestamp": "2026-01-01T00:00:00Z",
+                                  "curator": "seed_from_sources",
+                                  "action": "SEEDED_FROM_SOURCES", "changes": "Seeded"}]}
+
+    def events(fresh, on_disk):
+        return len(merge_with_existing(fresh, on_disk)["curation_history"])
+
+    # The scope alone moving is a real change to the record and is logged.
+    assert events(dict(base, mode_of_action_target_scope="MICROBIAL_TARGET"), base) == 2
+    # So is the mechanism moving.
+    assert events(dict(base, mode_of_action="MEMBRANE_DISRUPTION"), base) == 2
+    # An idempotent re-run still appends nothing.
+    assert events(dict(base), base) == 1
+    # And a curator-owned block, copied forward verbatim, is not churn.
+    curated = dict(base, mode_of_action="MEMBRANE_DISRUPTION",
+                   mode_of_action_notes="CURATOR: mine, PMID:1.")
+    assert events(dict(base), curated) == 1

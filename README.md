@@ -148,8 +148,12 @@ reproduction check.
 **Curated**: `curation/decisions.tsv` (grounding and exclusion decisions, keyed
 by a source concept's minted identifier), and the mechanism fields on a record —
 `mode_of_action`, `molecular_targets` beyond CARD's, `activity_spectrum`,
-`producer_organisms`, `causal_graphs`, `discussions`. `verify-corpus`
-deliberately does not compare those, so curation and reproducibility coexist.
+`producer_organisms`, `causal_graphs`, `discussions`. `verify-corpus` does not
+compare those, so curation and reproducibility coexist — with one exception it
+does: a `mode_of_action` still carrying the seeder's note marker is the
+seeder's, and is compared along with its notes and target scope, because a bare
+hand edit of a seeded mechanism is drift rather than curation. Writing a
+`CURATOR:` note claims the field and ends the comparison.
 
 ## Licence
 

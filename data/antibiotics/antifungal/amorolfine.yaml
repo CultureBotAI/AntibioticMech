@@ -43,10 +43,10 @@ activity_roles:
 - CHEBI:86327
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:59285 (EC 1.14.13.132 (squalene
-  monooxygenase) inhibitor). ChEBI asserts the role on the compound. The role names
-  a target specific to the microbe or virus — see mode_of_action_target_scope. Not
-  a curator's mechanistic review.
-mode_of_action_target_scope: MICROBIAL_TARGET
+  monooxygenase) inhibitor). ChEBI asserts the role on the compound. The target it
+  names is one the host has too, so the mechanism is true but is not evidence of selectivity
+  — see mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CCC(C)(C)c1ccc(CC(C)CN2C[C@@H](C)O[C@@H](C)C2)cc1
   standard_inchi: InChI=1S/C21H35NO/c1-7-21(5,6)20-10-8-19(9-11-20)12-16(2)13-22-14-17(3)23-18(4)15-22/h8-11,16-18H,7,12-15H2,1-6H3/t16?,17-,18+
@@ -75,6 +75,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:36Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T20:07:27Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

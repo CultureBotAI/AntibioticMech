@@ -214,7 +214,7 @@ classes:
           claims, and `PROTEIN_SYNTHESIS_INHIBITION` alone cannot tell
           linezolid's bacterial 50S from omacetaxine's host 80S. Derived from
           the ChEBI role, not curated: a role naming a microbe-specific target
-          (DNA gyrase, sterol 14alpha-demethylase, HIV protease) gives
+          (topoisomerase IV, dihydropteroate synthase, HIV protease) gives
           MICROBIAL_TARGET; a generic one (protein synthesis inhibitor) gives
           HOST_SHARED_TARGET. Owned together with `mode_of_action`, so a curator
           who claims that field owns this one too.
@@ -799,7 +799,10 @@ enums:
       MICROBIAL_TARGET:
         description: >-
           The ChEBI role names a target specific to the microbe or virus — DNA
-          gyrase, sterol 14alpha-demethylase, chitin synthase, HIV protease.
+          topoisomerase IV, dihydropteroate synthase, chitin synthase, HIV
+          protease. NOT DNA gyrase: ChEBI's EC 5.99.1.3 term is broader than the
+          bacterial enzyme and admits anthracyclines that poison the human one,
+          so it is scoped host-shared.
       HOST_SHARED_TARGET:
         description: >-
           The role names a target the host also has, so the mechanism is true
