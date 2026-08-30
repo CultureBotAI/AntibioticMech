@@ -49,6 +49,10 @@ activity_roles:
 - CHEBI:86328
 structural_class: aminoglycoside antibiotic
 structural_class_id: ARO:0000016
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
+  ChEBI asserts the role on the compound; the role names a mechanism, not the organism
+  it acts on. Not a curator's mechanistic review.
 chemical_structure:
   smiles: C[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O)[C@@H](O)[C@H](O)[C@@H]2O)[C@@H](N)C[C@@H]1NC(=N)C(=O)O
   standard_inchi: InChI=1S/C14H25N3O9/c1-3-5(17-12(16)13(23)24)2-4(15)14(25-3)26-11-9(21)7(19)6(18)8(20)10(11)22/h3-11,14,18-22H,2,15H2,1H3,(H2,16,17)(H,23,24)/t3-,4+,5+,6-,7+,8+,9-,10+,11+,14-/m1/s1

@@ -68,6 +68,10 @@ activity_roles:
 - CHEBI:35718
 structural_class: antibiotic without defined classification
 structural_class_id: ARO:3000003
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
+  ChEBI asserts the role on the compound; the role names a mechanism, not the organism
+  it acts on. Not a curator's mechanistic review.
 chemical_structure:
   smiles: '[H][C@@]1([C@H](O)CC2CC(=O)NC(=O)C2)C[C@@H](C)C[C@H](C)C1=O'
   standard_inchi: InChI=1S/C15H23NO4/c1-8-3-9(2)15(20)11(4-8)12(17)5-10-6-13(18)16-14(19)7-10/h8-12,17H,3-7H2,1-2H3,(H,16,18,19)/t8-,9-,11-,12+/m0/s1

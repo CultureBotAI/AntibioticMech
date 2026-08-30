@@ -46,13 +46,14 @@ CHEBI_INVENTORY = "chebi_antimicrobials.tsv"
 ARO_INVENTORY = "aro_antibiotics.tsv"
 ARO_RESISTANCE = "aro_resistance_edges.tsv"
 ARO_TARGETS = "aro_target_edges.tsv"
+CHEBI_ROLE_NAMES = "chebi_role_names.tsv"
 MANIFEST = "MANIFEST.yaml"
 
 CHEBI_COLUMNS = [
     "chebi_id", "name", "definition", "stars", "in_role_scope",
     "role_ids", "parent_ids", "smiles", "standard_inchi", "standard_inchi_key",
     "molecular_formula", "charge", "average_mass", "monoisotopic_mass",
-    "synonyms", "xrefs", "citations",
+    "synonyms", "xrefs", "citations", "mechanism_role_ids",
 ]
 
 # An accession that is not CURIE-safe cannot become an xref: the schema's CURIE
@@ -72,6 +73,7 @@ RESISTANCE_COLUMNS = [
     "antibiotic_name", "mechanism", "mechanism_source_id",
 ]
 TARGET_COLUMNS = ["target_id", "target_name", "target_definition", "antibiotic_id", "antibiotic_name"]
+ROLE_NAME_COLUMNS = ["role_id", "name", "used_for"]
 
 
 # --------------------------------------------------------------------------
@@ -145,6 +147,31 @@ def pipe(values) -> str:
 # ChEBI
 # --------------------------------------------------------------------------
 
+def role_name_rows(conf: dict, compounds: dict, acc2id: dict) -> list[dict]:
+    """Labels for every ChEBI role this repository references.
+
+    Records carry role CURIEs in `activity_roles` and nothing anywhere says what
+    they mean, so a consumer reading `CHEBI:33282` has to go and look it up. This
+    is the smallest inventory that fixes that, and it is what lets a seeded
+    mode_of_action note name the role it came from.
+    """
+    used: dict[str, set[str]] = {}
+    for accession in conf["role_scope"]["in_scope"]:
+        used.setdefault(accession, set()).add("scope")
+    for accession in conf.get("role_to_class", {}):
+        used.setdefault(accession, set()).add("class")
+    for accession in conf.get("role_to_mode_of_action", {}):
+        used.setdefault(accession, set()).add("mode_of_action")
+    rows = []
+    for accession, purposes in sorted(used.items()):
+        cid = acc2id.get(accession)
+        if cid is None:
+            continue
+        rows.append({"role_id": accession, "name": flat(compounds[cid]["name"]),
+                     "used_for": ",".join(sorted(purposes))})
+    return rows
+
+
 def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> list[dict]:
     """ChEBI compounds bearing an in-scope antimicrobial role, plus any ChEBI id
     cross-referenced by an ARO antibiotic molecule.
@@ -183,9 +210,26 @@ def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> li
             has_role[r["init_id"]].append(r["final_id"])
 
 
+    # Mechanism roles are collected separately from the antimicrobial roles that
+    # decide scope: a compound is in this corpus because of the latter, and
+    # describes its mechanism with the former. Both are read from the same
+    # reviewed has_role edges.
+    mechanism_map = conf.get("role_to_mode_of_action", {})
+    mechanism_ids = {acc2id[a] for a in mechanism_map if a in acc2id}
+
     scope = conf["role_scope"]
     out_roles = transitive([acc2id[a] for a in scope["out_of_scope"] if a in acc2id], isa_children)
     in_roles = transitive([acc2id[a] for a in scope["in_scope"] if a in acc2id], isa_children) - out_roles
+
+    # A compound inherits the mechanism roles asserted on its ancestors, the same
+    # way it inherits an antimicrobial role.
+    mechanism_of: dict[str, set[str]] = defaultdict(set)
+    for bearer, bearer_roles in has_role.items():
+        hit = {r for r in bearer_roles if r in mechanism_ids}
+        if not hit:
+            continue
+        for descendant in transitive([bearer], isa_children):
+            mechanism_of[descendant] |= hit
 
     direct = {c: [r for r in roles if r in in_roles] for c, roles in has_role.items()
               if any(r in in_roles for r in roles)}
@@ -280,8 +324,10 @@ def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> li
             # necessarily any antimicrobial claim made about it. It is committed
             # so a curator writing evidence has the starting set at hand.
             "citations": pipe(sorted(set(citations.get(cid, [])))[:10]),
+            "mechanism_role_ids": pipe(sorted(
+                compounds[r]["chebi_accession"] for r in mechanism_of.get(cid, ()))),
         })
-    return rows
+    return rows, role_name_rows(conf, compounds, acc2id)
 
 
 # --------------------------------------------------------------------------
@@ -537,7 +583,8 @@ def main() -> int:
     print(f"  {len(resistance_rows)} resistance edges, {len(target_rows)} target edges", file=sys.stderr)
 
     print("=== ChEBI ===", file=sys.stderr)
-    chebi_rows = extract_chebi(conf, offline=args.offline, aro_chebi_xrefs=aro_chebi_xrefs)
+    chebi_rows, role_names = extract_chebi(conf, offline=args.offline,
+                                           aro_chebi_xrefs=aro_chebi_xrefs)
     with_structure = sum(1 for r in chebi_rows if r["standard_inchi_key"])
     in_scope = sum(1 for r in chebi_rows if r["in_role_scope"] == "true")
     print(f"  {len(chebi_rows)} compounds ({in_scope} in role scope, "
@@ -553,6 +600,7 @@ def main() -> int:
         ARO_INVENTORY: (ARO_COLUMNS, aro_rows),
         ARO_RESISTANCE: (RESISTANCE_COLUMNS, resistance_rows),
         ARO_TARGETS: (TARGET_COLUMNS, target_rows),
+        CHEBI_ROLE_NAMES: (ROLE_NAME_COLUMNS, role_names),
     }
     written = {}
     for name, (columns, rows) in targets.items():

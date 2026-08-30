@@ -95,8 +95,8 @@ SEEDED_FIELDS = [
 # on disk, so `just seed-apply` after months of curation is a safe operation
 # rather than a way to lose all of it.
 CURATOR_FIELDS = [
-    "curation_status", "grounding_notes", "evidence", "mode_of_action",
-    "mode_of_action_notes", "cidality", "biosynthesis_origin", "clinical_status",
+    "curation_status", "grounding_notes", "evidence",
+    "cidality", "biosynthesis_origin", "clinical_status",
     "producer_organisms", "activity_spectrum", "causal_graphs", "datasets",
     "contributors",
 ]
@@ -136,6 +136,15 @@ def mint(source: str, source_id: str) -> str:
     return f"antibioticmech:{source.lower()}-{digest}"
 
 
+def load_role_names() -> dict[str, str]:
+    """Role CURIE -> label, for citing a role by name rather than by number."""
+    path = RAW_DIR / "chebi_role_names.tsv"
+    if not path.exists():
+        return {}
+    with path.open(newline="", encoding="utf-8") as fh:
+        return {r["role_id"]: r["name"] for r in csv.DictReader(fh, delimiter="\t")}
+
+
 def load_decisions() -> dict[str, dict]:
     """Curator decisions keyed by the minted identifier of one source concept."""
     if not DECISIONS_PATH.exists():
@@ -154,7 +163,7 @@ class Concept:
 
     __slots__ = ("source", "source_id", "label", "definition", "definition_refs",
                  "roles", "parents", "xrefs", "synonyms", "structure", "structural_class",
-                 "structural_class_id", "minted")
+                 "structural_class_id", "minted", "mechanism_roles")
 
     def __init__(self, source, source_id, label):
         self.source = source
@@ -169,6 +178,7 @@ class Concept:
         self.structure: dict = {}
         self.structural_class = ""
         self.structural_class_id = ""
+        self.mechanism_roles: list[str] = []
         self.minted = ""
 
 
@@ -297,6 +307,7 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
             if text and text != row["name"]:
                 concept.synonyms.append((text, SYNONYM_TYPE.get(kind, "RELATED_SYNONYM")))
         concept.structure = structure_from_chebi(row)
+        concept.mechanism_roles = split_pipe(row.get("mechanism_role_ids", ""))
         concepts.append(concept)
 
     for row in aro_rows:
@@ -318,6 +329,7 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
         # under the ARO fallback class.
         if chebi_row:
             concept.roles = split_pipe(chebi_row["role_ids"])
+            concept.mechanism_roles = split_pipe(chebi_row.get("mechanism_role_ids", ""))
         if chebi_row and chebi_row["standard_inchi_key"]:
             concept.structure = structure_from_chebi(chebi_row)
         elif row["aro_id"] in pubchem:
@@ -559,6 +571,42 @@ def _dedupe(values):
     return out
 
 
+def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
+                              role_names: dict[str, str]) -> tuple[str, str] | None:
+    """(mode_of_action, notes) from ChEBI's mechanism roles, or None.
+
+    This is a RESTATEMENT, not an inference. ChEBI asserting `protein synthesis
+    inhibitor` as a role of a compound is a direct claim about what the compound
+    does, and the map in conf/sources.yaml only translates that claim into the
+    schema's vocabulary. That is what separates it from filing on a structural
+    class, which was tried here and removed: a chemical class says what a
+    compound IS, and its members are not all active on the named target.
+
+    The residual limit is stated in the notes rather than papered over — the
+    role names a MECHANISM, not the organism it acts on. Some compounds inhibit
+    protein synthesis in eukaryotes; the mechanism claim still holds, the target
+    organism is a separate question, and `molecular_targets` is where a curator
+    answers it.
+
+    Several distinct mechanisms give MULTIPLE, with every one named in the notes,
+    rather than a silent pick.
+    """
+    mapping = conf.get("role_to_mode_of_action", {})
+    hits = {role: mapping[role] for role in mechanism_roles if role in mapping}
+    if not hits:
+        return None
+    cited = ", ".join(f"{role} ({role_names.get(role, '?')})" for role in sorted(hits))
+    values = sorted(set(hits.values()))
+    if len(values) == 1:
+        return values[0], (f"{MOA_NOTE_MARKER} {cited}. ChEBI asserts the role on the "
+                           f"compound; the role names a mechanism, not the organism it "
+                           f"acts on. Not a curator's mechanistic review.")
+    return "MULTIPLE", (f"{MOA_NOTE_MARKER}s {cited}, which map to "
+                        f"{', '.join(values)}. ChEBI asserts these roles on the compound; "
+                        f"a curator should decide whether one is primary. Not a curator's "
+                        f"mechanistic review.")
+
+
 def build_record(identifier: str, grounding_status: str, group: list[Concept],
                  conf: dict, source_version: str) -> dict:
     # ChEBI leads on identity and structure; ARO leads on class and mechanism.
@@ -619,6 +667,11 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     if structural_class:
         record["structural_class"] = structural_class
         record["structural_class_id"] = structural_class_id
+    mechanism_roles = _dedupe(r for c in group for r in c.mechanism_roles)
+    moa = mode_of_action_from_roles(mechanism_roles, conf, load_role_names())
+    if moa:
+        record["mode_of_action"], record["mode_of_action_notes"] = moa
+
     structure = next((c.structure for c in group if c.structure.get("standard_inchi")),
                      group[0].structure)
     record["chemical_structure"] = structure
@@ -777,6 +830,10 @@ def _item_aro_id(item: dict) -> str:
 # deleted legitimate curation on re-seed.
 CARD_NOTE_MARKER = "CARD/ARO asserts"
 
+# The same device for mode_of_action: a seeded value says so in its notes, so a
+# re-seed can replace its own work and must leave a curator's alone.
+MOA_NOTE_MARKER = "Assigned from ChEBI role"
+
 
 def is_card_sourced(item: dict) -> bool:
     """True when the seeder wrote this item, rather than a curator.
@@ -829,6 +886,20 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     for field in CURATOR_FIELDS:
         if field in existing:
             merged[field] = existing[field]
+
+    # mode_of_action is seeded from ChEBI's roles but a curator's judgement
+    # outranks it, so ownership is decided by the marker rather than by the field
+    # name — the same device the CARD mechanism items use.
+    curator_owns_moa = (
+        "mode_of_action" in existing
+        and MOA_NOTE_MARKER not in str(existing.get("mode_of_action_notes") or "")
+    )
+    if curator_owns_moa:
+        merged["mode_of_action"] = existing["mode_of_action"]
+        if existing.get("mode_of_action_notes"):
+            merged["mode_of_action_notes"] = existing["mode_of_action_notes"]
+        else:
+            merged.pop("mode_of_action_notes", None)
 
     # The seeder owns structure-collision todos; every other discussion is the
     # curator's and is appended after them.

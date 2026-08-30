@@ -88,8 +88,15 @@ Also establish, and write into `rationale`:
 
 - **Whether an already-adopted source closes it.** Before adding a dependency,
   check what the sources already in `conf/sources.yaml` assert and are being
-  discarded. `mode_of_action` had no candidate in this queue for a week while
-  ChEBI was asserting mechanism roles on 765 records we already read.
+  discarded. `mode_of_action` had no candidate in this queue while ChEBI was
+  asserting mechanism roles on hundreds of records we already read.
+
+  When the answer is yes, the work is **not** a new queue row: a new use of an
+  adopted source is not a new source, and `check_source_queue.py` will refuse an
+  ADOPTED row that `conf/sources.yaml` does not read as a source in its own
+  right. Record the new capability in the existing source's rationale instead.
+  That is what happened to `chebi-mechanism-roles`, which was folded into the
+  `chebi` row once it landed.
 
 A licence that cannot be reached is a result too. Record the attempt, the URLs
 tried and what blocked them, so the next pass does not repeat a failed fetch —
