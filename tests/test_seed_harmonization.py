@@ -699,3 +699,28 @@ def test_the_curator_marker_must_begin_a_sentence_not_merely_appear():
                   f"{MOA_NOTE_MARKER} X\n{CURATOR_NOTE_MARKER} wrong"):
         merged = merge_with_existing(dict(seeded), dict(base) | {"mode_of_action_notes": claim})
         assert "mode_of_action" not in merged, claim
+
+
+def test_a_mitochondrial_mechanism_applies_to_fungi_and_not_to_bacteria():
+    """A mitochondrion is a eukaryotic organelle, so the same ChEBI role is a
+    correct mechanism for a fungus and an incoherent one for a bacterium.
+
+    Mapping it unconditionally gave CORM 3, myxothiazole and sodium azide an
+    energy-metabolism mechanism on ANTIBACTERIAL records. Removing it outright
+    was the opposite error and stripped 23 antifungals of a mechanism that is
+    exactly right — the strobilurin and SDHI fungicides work by inhibiting
+    FUNGAL mitochondrial respiration.
+    """
+    from seed_from_sources import mode_of_action_from_roles
+
+    names = {"CHEBI:38499": "mitochondrial cytochrome-bc1 complex inhibitor"}
+
+    fungal = mode_of_action_from_roles(["CHEBI:38499"], CONF, names, "ANTIFUNGAL")
+    assert fungal is not None and fungal[0] == "ENERGY_METABOLISM_INHIBITION"
+
+    protozoal = mode_of_action_from_roles(["CHEBI:38499"], CONF, names, "ANTIPROTOZOAL")
+    assert protozoal is not None
+
+    assert mode_of_action_from_roles(["CHEBI:38499"], CONF, names, "ANTIBACTERIAL") is None
+    assert mode_of_action_from_roles(["CHEBI:38499"], CONF, names,
+                                     "ANTIMICROBIAL_UNSPECIFIED") is None

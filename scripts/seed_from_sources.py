@@ -632,7 +632,12 @@ def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
     Several distinct mechanisms give MULTIPLE, with every one named in the notes,
     rather than a silent pick.
     """
-    mapping = conf.get("role_to_mode_of_action", {})
+    mapping = dict(conf.get("role_to_mode_of_action", {}))
+    # Roles whose target only exists in a eukaryotic microbe. A mitochondrial
+    # mechanism is correct for a fungus and incoherent for a bacterium, so the
+    # record's target group decides whether the role says anything at all.
+    if antimicrobial_class in ("ANTIFUNGAL", "ANTIPROTOZOAL"):
+        mapping.update(conf.get("role_to_mode_of_action_eukaryotic", {}))
     hits = {role: mapping[role] for role in mechanism_roles if role in mapping}
     if not hits:
         return None

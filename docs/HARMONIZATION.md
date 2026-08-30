@@ -106,8 +106,8 @@ antibiotic subtree is there because a bacterial resistance determinant acts on i
 
 ## Mode of action
 
-`mode_of_action` is seeded from ChEBI's own mechanism roles. The map in
-`conf/sources.yaml` translates 30 of them — `protein synthesis inhibitor`,
+`mode_of_action` is seeded from ChEBI's own mechanism roles. The maps in
+`conf/sources.yaml` translate 33 of them — `protein synthesis inhibitor`,
 `sterol 14α-demethylase inhibitor`, `HIV-1 reverse transcriptase inhibitor` and
 so on — into `ModeOfActionEnum`, and 390 of 2923 records carry a value.
 
@@ -120,8 +120,15 @@ different: ChEBI asserting `protein synthesis inhibitor` of a compound is a
 direct claim about what that compound does, and the map only puts it in this
 schema's words.
 
-Four disciplines keep it honest:
+Five disciplines keep it honest:
 
+- **A role whose target only exists in a eukaryote is conditional on the target
+  group.** A mitochondrion is a eukaryotic organelle, so
+  `mitochondrial cytochrome-bc1 inhibitor` is exactly the mechanism of a
+  strobilurin fungicide and meaningless for a bacterium. Those roles apply on
+  ANTIFUNGAL and ANTIPROTOZOAL records and nowhere else — mapping them
+  unconditionally put an energy-metabolism mechanism on antibacterials, and
+  removing them outright stripped 23 antifungals of a correct one.
 - **Host-directed roles are unmapped.** The same role space holds angiogenesis,
   acetylcholinesterase, proteasome and platelet-aggregation inhibitors. A mode of
   action here is a claim about how a compound kills or inhibits a microbe, and

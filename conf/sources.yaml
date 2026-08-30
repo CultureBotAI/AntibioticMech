@@ -206,13 +206,10 @@ role_to_class:
 #     inhibitor — too generic to name a target.
 #   CHEBI:71476 fatty acid synthase inhibitor — the EC refers to the human
 #     FAS-I complex, not bacterial FAS-II.
-#   CHEBI:25355 mitochondrial respiratory-chain inhibitor, CHEBI:38499
-#     mitochondrial cytochrome-bc1 complex inhibitor, CHEBI:73214 EC 3.6.3.14
-#     (H+-transporting two-sector ATPase) — a mitochondrion is a eukaryotic
-#     organelle. These were mapped and gave CORM 3, myxothiazole and sodium
-#     azide an ENERGY_METABOLISM_INHIBITION on ANTIBACTERIAL records; bacteria
-#     have no mitochondria. Removed for exactly the reason fatty acid synthase
-#     was never added.
+#   (The three mitochondrial roles are not excluded outright — see
+#     role_to_mode_of_action_eukaryotic below. A mitochondrion is a eukaryotic
+#     organelle, so the claim is meaningless for a bacterium and correct for a
+#     fungus, which is a conditional rather than an exclusion.)
 #   CHEBI:50276 EC 5.99.1.2 (DNA topoisomerase) — ChEBI uses this EC for human
 #     topo I/II poisons; bacterial gyrase has its own term (CHEBI:50750, mapped)
 #     and topoisomerase IV another (CHEBI:53559, mapped).
@@ -236,8 +233,6 @@ role_to_mode_of_action:
   CHEBI:24869: MEMBRANE_DISRUPTION                     # ionophore
   CHEBI:83741: CELL_MEMBRANE_SYNTHESIS_INHIBITION      # phospholipid biosynthesis inhibitor
   CHEBI:20854: ENERGY_METABOLISM_INHIBITION            # ATP synthase inhibitor (bedaquiline)
-  CHEBI:83072: ENERGY_METABOLISM_INHIBITION            # succinate dehydrogenase (SDHI fungicides)
-  CHEBI:141153: ENERGY_METABOLISM_INHIBITION           # quinone outside inhibitor
   # --- fungal targets
   CHEBI:75282: ERGOSTEROL_PATHWAY_INHIBITION           # ergosterol biosynthesis inhibitor
   CHEBI:77884: ERGOSTEROL_PATHWAY_INHIBITION           # sterol 14alpha-demethylase (azoles)
@@ -257,6 +252,24 @@ role_to_mode_of_action:
   CHEBI:67268: VIRAL_INTEGRASE_INHIBITION              # HIV-1 integrase
   CHEBI:59886: VIRAL_ENTRY_INHIBITION                  # HIV fusion inhibitor
   CHEBI:52425: VIRAL_RELEASE_INHIBITION                # exo-alpha-sialidase (neuraminidase inhibitors)
+
+# Roles whose target exists only in EUKARYOTIC microbes. Applied when the record
+# is filed ANTIFUNGAL or ANTIPROTOZOAL and ignored otherwise.
+#
+# A mitochondrion is a eukaryotic organelle. Mapping these unconditionally gave
+# CORM 3, myxothiazole and sodium azide an energy-metabolism mechanism on
+# ANTIBACTERIAL records, which is meaningless — bacteria have none. Removing
+# them outright was the opposite error: it stripped the mechanism from 23
+# antifungals where it is exactly right, because the strobilurin (QoI) and SDHI
+# fungicides work by inhibiting FUNGAL mitochondrial respiration. The target
+# group decides whether the claim is even coherent, so the map is conditional
+# on it.
+role_to_mode_of_action_eukaryotic:
+  CHEBI:25355: ENERGY_METABOLISM_INHIBITION   # mitochondrial respiratory-chain inhibitor
+  CHEBI:38499: ENERGY_METABOLISM_INHIBITION   # mitochondrial cytochrome-bc1 (QoI fungicides)
+  CHEBI:73214: ENERGY_METABOLISM_INHIBITION   # EC 3.6.3.14, the V/F-type ATPase
+  CHEBI:83072: ENERGY_METABOLISM_INHIBITION   # succinate dehydrogenase (SDHI fungicides)
+  CHEBI:141153: ENERGY_METABOLISM_INHIBITION  # quinone outside inhibitor
   CHEBI:71168: VIRAL_ASSEMBLY_INHIBITION               # HIV-1 maturation inhibitor
   CHEBI:83799: VIRAL_ASSEMBLY_INHIBITION               # NS5A inhibitor (replication-complex assembly)
 
