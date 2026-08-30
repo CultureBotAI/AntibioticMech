@@ -707,6 +707,18 @@ def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
         extra = (f" Note that {', '.join(crossed)} implies an "
                  f"{' or '.join(i.lower().replace('anti', 'anti-') for i in implied)} target while "
                  f"{where}.")
+    # MULTIPLE means the seeder refused to pick a mechanism. If the contributing
+    # roles also disagree about whose target it is, picking a scope would collapse
+    # exactly what the MULTIPLE value declines to collapse — and "any microbial
+    # wins" would report selectivity for a record one of whose mechanisms is
+    # host-shared. No scope, and `just worklist --queue moa-scope` carries it
+    # until a curator names the primary mechanism; the scope follows from that.
+    if len({scope_map[role] for role in hits}) > 1:
+        scope = None
+        scope_caveat = ("The roles disagree about whose target it is, so no "
+                        "mode_of_action_target_scope is asserted until the primary "
+                        "mechanism is settled.")
+
     return "MULTIPLE", (f"{MOA_NOTE_MARKER}s {cited}, which map to "
                         f"{', '.join(values)}. ChEBI asserts these roles on the compound; "
                         f"a curator should decide whether one is primary.{extra} "
@@ -791,8 +803,10 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     moa = mode_of_action_from_roles(mechanism_roles, conf, load_role_names(),
                                     record["antimicrobial_class"])
     if moa:
-        (record["mode_of_action"], record["mode_of_action_notes"],
-         record["mode_of_action_target_scope"]) = moa
+        record["mode_of_action"], record["mode_of_action_notes"], scope = moa
+        # None where the contributing roles disagree about whose target it is.
+        if scope is not None:
+            record["mode_of_action_target_scope"] = scope
 
     structure = next((c.structure for c in group if c.structure.get("standard_inchi")),
                      group[0].structure)
