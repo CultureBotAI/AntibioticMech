@@ -29,6 +29,16 @@ end of the scaffolding pass that produced the initial 2,603-record corpus.
 
 ## Next
 
+- **Find a resistance source for the antiviral records.** CARD covers bacterial
+  and (increasingly) fungal resistance; it has nothing for viruses, so all 474
+  antiviral records carry an empty `resistance_mechanisms` while 279 antibacterial
+  records carry CARD determinants. The obvious candidates are the Stanford HIV
+  Drug Resistance Database for HIV, and the literature for HBV/HSV/influenza —
+  each would need the same treatment CARD got: a committed inventory, an explicit
+  citation on every item, and a mechanism vocabulary that says what it means.
+  Until then the asymmetry should be visible in the report rather than read as
+  "antivirals have no known resistance".
+
 - **Decide what the 364 structureless concepts are.** `just worklist
   --queue no-structure`. Each is a mixture, a class, a preparation, or a
   compound whose structure simply is not in ChEBI or PubChem. They need
