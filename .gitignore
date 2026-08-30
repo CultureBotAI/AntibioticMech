@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Generated reports — regenerate with `just report` / `just validate-all`
+reports/
+# ...except the research manifest, which is NOT regenerable. It records what
+# was actually paid for: which novel terms were researched, how long each took,
+# and which failed and why. Re-running would cost the whole batch again.
+
+# Generated from the LinkML schema by `just gen-schema`
+src/antibioticmech/schema/antibioticmech_dataclasses.py
+
+# Local overrides
+.env
+CLAUDE.local.md
+local/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# The batch runner's console log stays ignored: it is the tail a human watches,
+# and the manifest above is the durable record of the same run.
+
+downloads/
