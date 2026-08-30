@@ -480,3 +480,36 @@ def test_an_antineoplastic_role_vetoes_the_structural_class_inference():
     # A genuine antibacterial still does.
     if "CHEBI:9421" in rows:                          # tazobactam
         assert rows["CHEBI:9421"]["structural_class_ids"] == "CHEBI:27933"
+
+
+def test_the_ledger_holds_through_repeated_renames_and_a_return(tmp_path, monkeypatch):
+    """The composite-key scheme's whole contract, in sequence. Each step was
+    checked by hand once; this keeps it checked.
+
+    A renamed identifier's old slug is reserved under `identifier#slug` so it is
+    never reissued, a second rename reserves the second slug too, a departure
+    reserves the current slug under the plain key, a return reclaims that slug
+    and clears only the plain key — and a different compound whose label
+    slugifies to a retired string gets a suffixed slug instead of inheriting a
+    published URL.
+    """
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch, [("A:1", "ANTIBACTERIAL", "alpha")])
+    record = {"A:1": {"antimicrobial_class": "ANTIBACTERIAL"}}
+
+    sfs.write_lockfile(record, {"A:1": "beta"})
+    assert sfs.read_retired() == {"A:1#alpha": "alpha"}
+
+    sfs.write_lockfile(record, {"A:1": "gamma"})
+    assert set(sfs.read_retired()) == {"A:1#alpha", "A:1#beta"}
+
+    sfs.write_lockfile({}, {})
+    assert sfs.read_retired()["A:1"] == "gamma"
+
+    reclaimed = sfs.assign_slugs(record, sfs.read_lockfile())
+    assert reclaimed == {"A:1": "gamma"}
+    sfs.write_lockfile(record, reclaimed)
+    assert "A:1" not in sfs.read_retired()
+    assert set(sfs.read_retired()) == {"A:1#alpha", "A:1#beta"}
+
+    contender = record | {"B:2": {"antimicrobial_class": "ANTIFUNGAL", "label": "alpha"}}
+    assert sfs.assign_slugs(contender, sfs.read_lockfile())["B:2"] != "alpha"
