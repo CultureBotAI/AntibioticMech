@@ -39,14 +39,18 @@ source is. In order:
    `use: CURATE_ONLY` or `REFERENCE` at best — it can inform a curator, and it
    must never be seeded. This is a hard gate, not a weighting.
 
-   The repository's own licence position is **unresolved** (issue #27): `LICENSE`
-   says CC0, but every upstream source is CC BY, CC BY-SA or proprietary, and a
-   blanket CC0 dedication over CC BY content is not permitted. Until that is
-   decided, judge a candidate against the stricter reading: CC BY is acceptable
-   with attribution; CC BY-SA propagates share-alike to the whole corpus;
-   NonCommercial restricts every downstream user and is refused under either
-   outcome; proprietary is refused. Record what the licence says, not what it
-   would take to make it work.
+   The corpus's record content is **CC BY 4.0** (`LICENSE-DATA`), decided in
+   issue #27; the code is CC0. Judge a candidate against that:
+
+   - **CC BY** — acceptable. Add the source to `ATTRIBUTION.md` when adopting.
+   - **CC BY-SA** — refused for seeding. Share-alike would propagate to the whole
+     corpus and force every downstream user onto SA. `CURATE_ONLY` at best.
+   - **NonCommercial** — refused. It would restrict every downstream user, which
+     CC BY does not do.
+   - **Proprietary or bespoke terms** — refused unless the terms explicitly permit
+     redistribution and modification.
+
+   Record what the licence says, not what it would take to make it work.
 3. **Does it carry complete structures where it needs to?** A record is one
    chemical structure. A source that names compounds without structures can
    still supply mechanism or activity data keyed to compounds we already have,

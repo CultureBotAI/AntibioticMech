@@ -151,21 +151,22 @@ by a source concept's minted identifier), and the mechanism fields on a record �
 `producer_organisms`, `causal_graphs`, `discussions`. `verify-corpus`
 deliberately does not compare those, so curation and reproducibility coexist.
 
-## Licence — unresolved, and worth reading before you reuse this
+## Licence
 
-Code and curation in this repository are [CC0 1.0](LICENSE). **The record
-content is not cleanly CC0, and saying otherwise would be wrong.**
+Two licences, because the repository holds two different things.
 
-Every upstream source is CC BY, CC BY-SA, or proprietary; none is CC0. ChEBI is
-CC BY 4.0 and CARD's ontology files are CC BY 4.0, both verified against their
-own licence pages. CC BY 4.0 permits redistribution inside a mixed knowledge
-base provided attribution and the licence notice ride along — which a blanket
-CC0 dedication over the same content would prevent. So the corpus can be
-redistributed with attribution; it cannot be dedicated to the public domain by
-ingestion alone.
+**Code, schema, tests, configuration, documentation and curation decisions:
+[CC0 1.0](LICENSE).** This repository's own work, dedicated to the public domain.
 
-Resolving this is a decision for the repository owner, tracked as an open issue:
-the options are to relicense the data as CC BY 4.0 while keeping the code CC0,
-to carry per-record attribution and licence notices, or to seek waivers. Until
-then, treat record content as CC BY 4.0 and attribute ChEBI and CARD.
+**Record content — `data/antibiotics/**` and `data/raw/**`:
+[CC BY 4.0](LICENSE-DATA), attribution in [ATTRIBUTION.md](ATTRIBUTION.md).**
+It is derived from ChEBI (CC BY 4.0) and CARD's ARO (CC BY 4.0), and CC BY
+content cannot be re-dedicated to the public domain: §3(b) permits an adapter's
+licence only if it does not prevent recipients complying with the original, and
+stripping attribution does exactly that. So the corpus is redistributable —
+freely, commercially, modified — provided the attribution rides along.
+
+Attribution is per-record and machine-readable: every record's `source_concepts`
+block names the upstream concepts it came from, so a consumer taking a subset can
+derive precisely which sources that subset depends on.
 `data/raw/MANIFEST.yaml` records what was retrieved and when.
