@@ -817,32 +817,70 @@ def test_ownership_is_decided_by_the_notes_not_by_a_bare_value():
         {"mode_of_action_notes": f"{MOA_NOTE_MARKER} X; CURATOR: leave blank"})
 
 
-def test_history_collapse_never_touches_a_curators_entries():
-    """The collapse exists to clean up indistinguishable seeder events that a
-    falsified retrieval date produced on every record. It runs on every merge,
-    forever, so its blast radius matters more than its purpose.
+def test_a_genuine_reseed_always_appends_an_event():
+    """No de-duplication pass may sit on the merge path.
 
-    A curator's history is theirs. Two of their edits carrying the same
-    description are two edits, and dropping one because a machine cannot tell
-    them apart would be the audit trail lying about curation — worse than the
-    duplicate it removes. An entry carrying any field beyond the five the seeder
-    writes is also left alone, since the comparison cannot speak to it.
+    `merge_with_existing` appends a RESEEDED event only when a seeded field
+    actually moved, so the `unchanged` guard is already the duplicate
+    suppressor. Any further collapse can therefore only delete events that
+    record real changes — and `changes` is a constant string, so it cannot tell
+    two re-seeds apart. One did exactly that: it removed the events recording 13
+    genuine mechanism assignments, and would have swallowed every subsequent
+    ChEBI release the same way, leaving trails asserting nothing had happened
+    since months before the data moved (#73).
+
+    A second re-seed here carries a description identical to the first. That is
+    the shape that was being collapsed, and it must survive.
     """
-    from seed_from_sources import SEEDER_CURATOR, _collapse_duplicate_events
+    from seed_from_sources import SEEDER_CURATOR, merge_with_existing
 
-    def seeded(ts):
-        return {"timestamp": ts, "curator": SEEDER_CURATOR,
-                "action": "RESEEDED_FROM_SOURCES", "changes": "Re-seeded from updated inventories"}
+    def reseed(existing, record):
+        return merge_with_existing(existing, dict(record))
 
-    def curated(ts):
-        return {"timestamp": ts, "curator": "jane", "action": "REVIEWED",
-                "changes": "checked the structure"}
+    def concepts(version):
+        return [{"source": "CHEBI", "source_id": "CHEBI:1", "source_label": "widgetmycin",
+                 "minted_identifier": "antibioticmech:chebi-1", "source_version": version}]
 
-    assert len(_collapse_duplicate_events([seeded("t1"), seeded("t2")])) == 1
-    assert len(_collapse_duplicate_events([curated("t1"), curated("t2")])) == 2
-    assert len(_collapse_duplicate_events(
-        [seeded("t1"), dict(seeded("t2"), reviewer="someone")])) == 2
-    assert len(_collapse_duplicate_events([seeded("t1"), curated("t2"), seeded("t3")])) == 3
-    # Non-adjacent duplicates are not the target and are kept.
-    assert len(_collapse_duplicate_events([seeded("t1"), curated("t2"), seeded("t3"),
-                                           seeded("t4")])) == 3
+    base = {"identifier": "antibioticmech:chebi-1", "label": "widgetmycin",
+            "source_concepts": concepts("2026-03-01"),
+            "curation_history": [
+                {"timestamp": "2026-01-01T00:00:00Z", "curator": SEEDER_CURATOR,
+                 "action": "SEEDED_FROM_SOURCES", "changes": "Seeded from data/raw/ inventories"},
+                {"timestamp": "2026-03-01T00:00:00Z", "curator": SEEDER_CURATOR,
+                 "action": "RESEEDED_FROM_SOURCES",
+                 "changes": "Re-seeded from updated data/raw/ inventories"},
+            ]}
+
+    # A later release moves a seeded field. The trail must say so, even though
+    # the previous entry is a seeder re-seed carrying the same description.
+    moved = dict(base, source_concepts=concepts("2026-09-01"))
+    merged = reseed(base, moved)
+    assert len(merged["curation_history"]) == 3, \
+        "a genuine re-seed was swallowed as a duplicate of the one before it"
+    assert merged["curation_history"][-1]["action"] == "RESEEDED_FROM_SOURCES"
+
+    # And an idempotent re-run still appends nothing: that is the `unchanged`
+    # guard's job, and removing the collapse must not resurrect per-run churn.
+    assert len(reseed(base, dict(base))["curation_history"]) == 2
+
+
+def test_no_history_deduplication_on_the_merge_path():
+    """Guards the absence, not just the behaviour.
+
+    The defect was reintroduced once already by a fix written to clean up a
+    one-time data problem. A function that filters curation_history inside the
+    seeder is the shape to keep out, whatever it is named.
+    """
+    import ast
+    import inspect
+
+    import seed_from_sources
+
+    source = inspect.getsource(seed_from_sources)
+    banned = {"_collapse_duplicate_events", "_dedupe_history", "_collapse_history"}
+    defined = {node.name for node in ast.walk(ast.parse(source))
+               if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))}
+    assert not (banned & defined), (
+        f"{sorted(banned & defined)} is back on the seeder. An event is only "
+        "appended when a seeded field moved, so deleting one deletes a real "
+        "change (#73).")

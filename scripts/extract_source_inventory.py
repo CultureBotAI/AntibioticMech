@@ -32,7 +32,7 @@ import re
 import sys
 import urllib.request
 from collections import defaultdict
-from datetime import date
+from datetime import datetime, timezone
 from pathlib import Path
 
 import yaml
@@ -557,9 +557,23 @@ def build_manifest(conf: dict, inventories: dict[str, Path]) -> dict:
     # records and gave every one a RESEEDED_FROM_SOURCES event for an update
     # that did not occur. The files' own mtimes are the honest answer and, unlike
     # carrying the previous manifest forward, they correct a date already wrong.
+    # Resolved in UTC, not the local zone. These mtimes are 17:05-17:21 PDT,
+    # which is 00:05-00:21 the NEXT day in UTC: `date.fromtimestamp` would give
+    # a collaborator or CI runner in UTC a different `retrieved_on` from the
+    # same bytes, flip `source_version` on every record and append a re-seed
+    # event for an update that did not happen. That is #69's failure mode
+    # arriving through the timezone door. The repo already stamps every
+    # curation timestamp in UTC (curate.curation_event.now_iso).
     fetched = [(DOWNLOAD_DIR / name).stat().st_mtime
                for name in downloads if (DOWNLOAD_DIR / name).exists()]
-    retrieved_on = (date.fromtimestamp(max(fetched)) if fetched else date.today()).isoformat()
+    if not fetched:
+        # Falling back to today() would assert a retrieval that never happened,
+        # which is exactly #69. Unreachable on the normal path (download() runs
+        # first), so if it ever fires something is wrong enough to stop for.
+        raise SystemExit(
+            "No manifested download is present in downloads/; cannot date the "
+            "retrieval. Run `just download` before building the manifest.")
+    retrieved_on = datetime.fromtimestamp(max(fetched), tz=timezone.utc).date().isoformat()
 
     return {
         "retrieved_on": retrieved_on,
