@@ -912,6 +912,21 @@ MOA_NOTE_MARKER = "Assigned from ChEBI role"
 CURATOR_NOTE_MARKER = "CURATOR:"
 
 
+def _claims_mode_of_action(notes: str) -> bool:
+    """True when a curator has CLAIMED mode_of_action in these notes.
+
+    The marker must begin a sentence or a line, not merely appear somewhere in
+    the text. A bare substring test made "ask a CURATOR: about this later" — the
+    kind of thing that lands in a free-text note — a permanent, silent veto that
+    locked the seeder out of the field for good.
+    """
+    for line in str(notes or "").splitlines():
+        for sentence in line.split(". "):
+            if sentence.strip().startswith(CURATOR_NOTE_MARKER):
+                return True
+    return False
+
+
 def is_card_sourced(item: dict) -> bool:
     """True when the seeder wrote this item, rather than a curator.
 
@@ -980,7 +995,7 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     # name — the same device the CARD mechanism items use.
     existing_moa_notes = str(existing.get("mode_of_action_notes") or "")
     curator_owns_moa = (
-        CURATOR_NOTE_MARKER in existing_moa_notes
+        _claims_mode_of_action(existing_moa_notes)
         or ("mode_of_action" in existing and MOA_NOTE_MARKER not in existing_moa_notes)
     )
     if curator_owns_moa:
