@@ -368,3 +368,87 @@ def test_a_ground_decision_to_a_different_structure_is_refused():
     with pytest.raises(SystemExit) as excinfo:
         sfs_merge([concept], chebi_rows, CONF, decisions, "2026-08-29")
     assert "structures differ" in str(excinfo.value)
+
+
+def _ledger_sandbox(tmp_path, monkeypatch, paths_rows, retired_rows=()):
+    """A corpus directory with a lockfile and ledger, for the slug tests."""
+    import seed_from_sources as sfs
+
+    corpus = tmp_path / "antibiotics"
+    corpus.mkdir(parents=True)
+    monkeypatch.setattr(sfs, "CORPUS_DIR", corpus)
+    monkeypatch.setattr(sfs, "PATHS_FILE", corpus / "PATHS.tsv")
+    monkeypatch.setattr(sfs, "RETIRED_FILE", corpus / "RETIRED.tsv")
+    (corpus / "PATHS.tsv").write_text(
+        "identifier\tantimicrobial_class\tslug\n"
+        + "".join(f"{i}\t{c}\t{s}\n" for i, c, s in paths_rows), encoding="utf-8")
+    if retired_rows:
+        (corpus / "RETIRED.tsv").write_text(
+            "identifier\tslug\tretired_on\n"
+            + "".join(f"{i}\t{s}\t2026-08-29\n" for i, s in retired_rows), encoding="utf-8")
+    return sfs, corpus
+
+
+def test_a_canary_on_a_returning_compound_does_not_leave_it_in_both_ledgers(tmp_path, monkeypatch):
+    """`just seed-canary` is mandatory before every bulk write. Skipping the
+    retired-ledger reconciliation on a partial write left a re-admitted
+    identifier in PATHS.tsv and RETIRED.tsv at once, failing the corpus
+    integrity test — the same class of inconsistency `only=` was added to fix.
+    19 antivirals genuinely returned by this path."""
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch,
+                             [("CHEBI:1", "ANTIBACTERIAL", "alpha")],
+                             [("CHEBI:2", "beta")])
+    records = {"CHEBI:1": {"antimicrobial_class": "ANTIBACTERIAL"},
+               "CHEBI:2": {"antimicrobial_class": "ANTIFUNGAL"}}
+    sfs.write_lockfile(records, {"CHEBI:1": "alpha", "CHEBI:2": "beta"}, only={"CHEBI:2"})
+    assert set(sfs.read_retired()) & set(sfs.read_lockfile()) == set()
+    assert "CHEBI:2" in sfs.read_lockfile()
+
+
+def test_a_partial_run_never_retires_an_identifier_it_did_not_build(tmp_path, monkeypatch):
+    """The other half: a canary knows nothing about the records it skipped, so
+    it must not conclude they are gone."""
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch,
+                             [("CHEBI:1", "ANTIBACTERIAL", "alpha"),
+                              ("CHEBI:9", "ANTIFUNGAL", "gamma")])
+    sfs.write_lockfile({"CHEBI:1": {"antimicrobial_class": "ANTIBACTERIAL"}},
+                       {"CHEBI:1": "alpha"}, only={"CHEBI:1"})
+    assert sfs.read_retired() == {}
+    assert "CHEBI:9" in sfs.read_lockfile()
+
+
+def test_the_documented_rename_reserves_the_slug_it_frees(tmp_path, monkeypatch):
+    """CLAUDE.md instructs renaming through PATHS.tsv. Retiring only identifiers
+    that DISAPPEAR meant the freed slug never entered the ledger and was
+    available to the next compound that slugified to it — the one slug-changing
+    operation the docs prescribe was the one the ledger did not cover."""
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch,
+                             [("CHEBI:1", "ANTIBACTERIAL", "erythromycin-a")])
+    sfs.write_lockfile({"CHEBI:1": {"antimicrobial_class": "ANTIBACTERIAL"}},
+                       {"CHEBI:1": "erythromycin"})
+    assert "erythromycin-a" in set(sfs.read_retired().values())
+
+
+def test_two_identifiers_never_receive_the_same_slug(tmp_path, monkeypatch):
+    """A reclaim from the ledger did not check whether the slug had been taken
+    since. Two records in one class directory would then overwrite each other on
+    write, with the integrity test only noticing afterwards."""
+    import pytest
+
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch,
+                             [("CHEBI:9", "ANTIBACTERIAL", "beta")],
+                             [("CHEBI:2", "beta")])
+    records = {"CHEBI:9": {"antimicrobial_class": "ANTIBACTERIAL", "label": "nine"},
+               "CHEBI:2": {"antimicrobial_class": "ANTIFUNGAL", "label": "two"}}
+    assigned = sfs.assign_slugs(records, sfs.read_lockfile())
+    assert assigned["CHEBI:9"] == "beta"
+    assert assigned["CHEBI:2"] != "beta", "a taken slug must not be reclaimed"
+
+    # And a lockfile that already contains a duplicate is refused outright.
+    sfs2, _ = _ledger_sandbox(tmp_path / "second", monkeypatch,
+                              [("CHEBI:9", "ANTIBACTERIAL", "beta"),
+                               ("CHEBI:8", "ANTIFUNGAL", "beta")])
+    with pytest.raises(SystemExit, match="slug collision"):
+        sfs2.assign_slugs(records | {"CHEBI:8": {"antimicrobial_class": "ANTIFUNGAL",
+                                                 "label": "eight"}},
+                          sfs2.read_lockfile())
