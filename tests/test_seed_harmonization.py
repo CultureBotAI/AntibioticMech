@@ -676,3 +676,26 @@ def test_a_mechanism_borrowed_from_another_compound_is_not_used():
         "antibacterial" / "cefdinir.yaml"
     if record.exists():
         assert "mode_of_action:" not in record.read_text(encoding="utf-8")
+
+
+def test_the_curator_marker_must_begin_a_sentence_not_merely_appear():
+    """A bare substring test made "ask a CURATOR: about this later" — the kind of
+    thing that lands in a free-text note — a permanent, silent veto that locked
+    the seeder out of the field for good. The marker has to be a claim, not a
+    mention."""
+    from seed_from_sources import CURATOR_NOTE_MARKER, MOA_NOTE_MARKER, merge_with_existing
+
+    base = {"identifier": "CHEBI:1", "label": "x", "antimicrobial_class": "ANTIBACTERIAL",
+            "curation_status": "SEEDED", "grounding_status": "EXACT", "curation_history": []}
+    seeded = dict(base) | {"mode_of_action": "VIRAL_INTEGRASE_INHIBITION",
+                           "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:67268 (...)"}
+
+    mention = dict(base) | {"mode_of_action_notes": "seeded; ask a CURATOR: about this later"}
+    assert merge_with_existing(dict(seeded), mention)["mode_of_action"] == \
+        "VIRAL_INTEGRASE_INHIBITION"
+
+    for claim in (f"{CURATOR_NOTE_MARKER} wrong, leave blank",
+                  f"{MOA_NOTE_MARKER} X. {CURATOR_NOTE_MARKER} wrong, leave blank",
+                  f"{MOA_NOTE_MARKER} X\n{CURATOR_NOTE_MARKER} wrong"):
+        merged = merge_with_existing(dict(seeded), dict(base) | {"mode_of_action_notes": claim})
+        assert "mode_of_action" not in merged, claim
