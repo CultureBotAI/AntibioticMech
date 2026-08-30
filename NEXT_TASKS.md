@@ -26,8 +26,11 @@ prose below are the reasoning, the queue is the list.
   `discovery-literature`).
 - **Extend `mode_of_action` beyond the 416 records ChEBI's roles reach.** Done
   for those: 32 curated roles now map to `ModeOfActionEnum`. The rest have no role in the 32-role map — some bear
-  mechanism-naming roles that are deliberately excluded because their target is
-  the host, and a few are simply unmapped. Two routes, neither cheap: ARO
+  mechanism-naming roles from unrelated pharmacology (angiogenesis, proteasome,
+  platelet aggregation) that name no antimicrobial mechanism at all, and a few
+  are simply unmapped. A role whose target the host merely SHARES is no longer a
+  reason to exclude it: those are mapped and marked
+  `mode_of_action_target_scope: HOST_SHARED_TARGET`. Two routes, neither cheap: ARO
   drug-class definitions, where the definition really is a mechanism claim rather
   than a structural description (a per-class review, not a regex), and curated
   review literature per compound. Prefer the second for anything that will carry

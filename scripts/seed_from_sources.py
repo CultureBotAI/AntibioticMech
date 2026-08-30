@@ -1143,9 +1143,20 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     # The comparison covers the CARD mechanism sections too: a refresh that adds
     # determinants rewrites the file, and an audit trail that says nothing
     # happened would be worse than none.
+    #
+    # And the mode-of-action block, which is NOT in SEEDED_FIELDS. Changing the
+    # role maps in conf/sources.yaml rewrote ten records' scope and notes in
+    # 8582e215 and appended no event to any of them — the trail asserting
+    # nothing had happened while the data moved, which is #73's failure reached
+    # by a different road. Compared against MERGED rather than against the fresh
+    # derivation, so a curator-owned block (copied forward verbatim above)
+    # registers as unchanged instead of logging a re-seed on every run.
     unchanged = all(existing.get(f) == record.get(f) for f in SEEDED_FIELDS) and all(
         card_sourced_view(existing, f) == card_sourced_view(record, f)
         for f in ("molecular_targets", "resistance_mechanisms")
+    ) and all(
+        existing.get(f) == merged.get(f)
+        for f in ("mode_of_action", "mode_of_action_notes", "mode_of_action_target_scope")
     )
     if unchanged:
         # Nothing the seeder owns changed: keep the trail exactly as it is,
