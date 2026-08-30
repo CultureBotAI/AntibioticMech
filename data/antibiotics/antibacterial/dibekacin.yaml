@@ -61,6 +61,7 @@ xrefs:
 - chembl:CHEMBL560976
 - pubchem.compound:470999
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 structural_class: aminoglycoside antibiotic
 structural_class_id: ARO:0000016
@@ -79,6 +80,7 @@ source_concepts:
   source_label: dibekacin
   minted_identifier: antibioticmech:aro-ee607c0e7d
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 - source: CHEBI
@@ -86,6 +88,7 @@ source_concepts:
   source_label: dibekacin
   minted_identifier: antibioticmech:chebi-9100b2d366
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 resistance_mechanisms:
@@ -556,3 +559,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

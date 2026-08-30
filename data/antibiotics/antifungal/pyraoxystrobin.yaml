@@ -33,6 +33,7 @@ xrefs:
 - ppdb:1657
 - reaxys:12746868
 activity_roles:
+- CHEBI:35718
 - CHEBI:86328
 chemical_structure:
   smiles: CO/C=C(/C(=O)OC)c1ccccc1COc1cc(-c2ccc(Cl)cc2)nn1C
@@ -49,6 +50,7 @@ source_concepts:
   source_label: pyraoxystrobin
   minted_identifier: antibioticmech:chebi-d8ab91633c
   role_terms:
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 curation_history:
@@ -56,3 +58,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

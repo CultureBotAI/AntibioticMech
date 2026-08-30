@@ -44,6 +44,7 @@ xrefs:
 - vsdb:1841
 - wikipedia.en:Difloxacin
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 chemical_structure:
   smiles: CN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3-c2ccc(F)cc2)CC1
@@ -60,6 +61,7 @@ source_concepts:
   source_label: difloxacin
   minted_identifier: antibioticmech:chebi-412032e770
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 curation_history:
@@ -67,3 +69,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

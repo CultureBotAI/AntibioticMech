@@ -23,6 +23,7 @@ xrefs:
 - cas:57268-80-1
 - drugcentral:528
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 chemical_structure:
   smiles: '[H]C(=O)O[C@@H](C(=O)N[C@@H]1C(=O)N2C(C(=O)O)=C(CSc3nnnn3C)CS[C@]12[H])c1ccccc1'
@@ -39,6 +40,7 @@ source_concepts:
   source_label: O-formylcefamandole
   minted_identifier: antibioticmech:chebi-9b58c63d6b
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -46,3 +48,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

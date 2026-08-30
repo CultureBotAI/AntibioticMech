@@ -31,7 +31,7 @@ source_concepts:
   minted_identifier: antibioticmech:aro-929a360a08
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009216
   label: Colletotrichum truncatum cyp51a with mutations associated with resistance
     to tebuconazole
@@ -39,42 +39,42 @@ resistance_mechanisms:
   - reference: ARO:3009216
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009181 (tebuconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009403
   label: Zymoseptoria tritici Cyp51 with mutations conferring resistance to tebuconazole
   evidence:
   - reference: ARO:3009403
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009181 (tebuconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009407
   label: Ustilaginoidea virens Cyp51 with mutations conferring resistance to tebuconazole
   evidence:
   - reference: ARO:3009407
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009181 (tebuconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009486
   label: Fusarium graminearum Cyp51B with mutations conferring resistance to voriconazole
   evidence:
   - reference: ARO:3009486
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009181 (tebuconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009494
   label: Aspergillus flavus Cyp51c with mutations conferring resistance to tebuconazole
   evidence:
   - reference: ARO:3009494
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009181 (tebuconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009502
   label: Aspergillus fumigatus Cyp51a with mutations conferring resistance to tebuconazole
   evidence:
   - reference: ARO:3009502
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009181 (tebuconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009511
   label: Colletotrichum acutatum Cyp51a with mutations associated with resistance
     to tebuconazole
@@ -82,7 +82,7 @@ resistance_mechanisms:
   - reference: ARO:3009511
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009181 (tebuconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009512
   label: Fusarium graminearum Cyp51a with mutations associated with resistance to
     tebuconazole
@@ -90,14 +90,14 @@ resistance_mechanisms:
   - reference: ARO:3009512
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009181 (tebuconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009513
   label: Magnaporthe grisea Cyp51a with mutations associated with resistance to itraconazole
   evidence:
   - reference: ARO:3009513
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009181 (tebuconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009514
   label: Pyricularia graminis-tritici Cyp51a with mutations associated with resistance
     to tebuconazole
@@ -105,7 +105,7 @@ resistance_mechanisms:
   - reference: ARO:3009514
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009181 (tebuconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009515
   label: Pyricularia pennisetigena Cyp51a with mutations associated with resistance
     to tebuconazole
@@ -113,14 +113,14 @@ resistance_mechanisms:
   - reference: ARO:3009515
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009181 (tebuconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009533
   label: Phakospora pachyrhizi Cyp51 with mutations conferring resistance to tebuconazole
   evidence:
   - reference: ARO:3009533
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009181 (tebuconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009538
   label: Pyrenopeziza brassicae Cyp51 with mutations conferring resistance to tebuconazole
   evidence:
@@ -132,3 +132,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

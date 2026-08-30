@@ -31,14 +31,14 @@ source_concepts:
   minted_identifier: antibioticmech:aro-f2d5bd16ef
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3002831
   label: vgaC
   evidence:
   - reference: ARO:3002831
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001315 (valnemulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3004715
   label: vga(E) Staphylococcus cohnii
   evidence:
@@ -50,3 +50,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

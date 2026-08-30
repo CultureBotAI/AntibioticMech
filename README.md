@@ -59,17 +59,17 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 | Class | Records | SEEDED | REVIEWED | With CARD mechanism evidence |
 |---|---:|---:|---:|---:|
-| ANTIBACTERIAL | 1088 | 1088 | 0 | 250 |
-| ANTIMYCOBACTERIAL | 144 | 144 | 0 | 31 |
-| ANTIFUNGAL | 596 | 596 | 0 | 42 |
-| ANTIPROTOZOAL | 261 | 261 | 0 | 1 |
+| ANTIBACTERIAL | 1040 | 1040 | 0 | 264 |
+| ANTIMYCOBACTERIAL | 78 | 78 | 0 | 15 |
+| ANTIFUNGAL | 588 | 588 | 0 | 43 |
+| ANTIPROTOZOAL | 248 | 248 | 0 | 2 |
 | BIOCIDE | 29 | 29 | 0 | 0 |
-| ANTIMICROBIAL_UNSPECIFIED | 485 | 485 | 0 | 0 |
-| **TOTAL** | **2603** | **2603** | **0** | **324** |
+| ANTIMICROBIAL_UNSPECIFIED | 486 | 486 | 0 | 0 |
+| **TOTAL** | **2469** | **2469** | **0** | **324** |
 
-Identity: **2353** records (90%) are grounded in a ChEBI term; **250** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
+Identity: **2219** records (90%) are grounded in a ChEBI term; **250** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
 
-Corroboration: **287** records carry source concepts from both ChEBI and CARD/ARO; **2022** come from ChEBI alone and **294** from CARD alone.
+Corroboration: **279** records carry source concepts from both ChEBI and CARD/ARO; **1888** come from ChEBI alone and **302** from CARD alone.
 
 Mechanism layer: **206** records carry a molecular target and **279** carry resistance determinants, both seeded from CARD; **0** carry a curated causal graph. That last number is the work.
 
@@ -130,7 +130,15 @@ here transfers to it.
 **Generated** (never hand-edit): `data/antibiotics/**`, `data/raw/**`,
 `data/antibiotics/PATHS.tsv`, `pages/**`, and the statistics block in this
 README. `just verify-corpus` rebuilds the corpus from `data/raw/` and rejects
-drift.
+drift **in the fields the seeder owns** — identity, label, definition, synonyms,
+parents, xrefs, class, roles, structural class, structure, source concepts,
+grounding status, and the CARD-derived mechanism items.
+
+It does **not** compare curated fields, by design, or curation would make the
+check permanently red. So it will not catch a *fabricated* claim: a hand-added
+`molecular_target` citing an invented PMID, or a hand flip of `curation_status`
+to `REVIEWED`, passes every gate. Those are what review is for, not the
+reproduction check.
 
 **Curated**: `curation/decisions.tsv` (grounding and exclusion decisions, keyed
 by a source concept's minted identifier), and the mechanism fields on a record —

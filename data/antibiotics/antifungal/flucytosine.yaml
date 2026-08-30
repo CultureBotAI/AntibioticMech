@@ -57,7 +57,8 @@ xrefs:
 - chembl:CHEMBL1463
 - pubchem.compound:3366
 activity_roles:
-- CHEBI:33281
+- CHEBI:35718
+- CHEBI:86327
 structural_class: nucleoside antibiotic
 structural_class_id: ARO:3000034
 chemical_structure:
@@ -80,24 +81,26 @@ source_concepts:
   source_label: 5-fluorocytosine
   minted_identifier: antibioticmech:aro-0e2ad8e0aa
   role_terms:
-  - CHEBI:33281
+  - CHEBI:35718
+  - CHEBI:86327
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:5100
   source_label: flucytosine
   minted_identifier: antibioticmech:chebi-e46c25078c
   role_terms:
-  - CHEBI:33281
+  - CHEBI:35718
+  - CHEBI:86327
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007557
   label: Candida spp. FUR1 with mutations conferring resistance to 5-flucytosine
   evidence:
   - reference: ARO:3007557
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007559
   label: Saccharomyces spp. FUR1 with mutations conferring resistance to 5-flucytosine
   evidence:
@@ -111,7 +114,7 @@ resistance_mechanisms:
   - reference: ARO:3007568
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3007642
   label: Aspergillus spp. fcyB conferring resistance to 5-flucytosine via reduced
     permeability
@@ -119,14 +122,14 @@ resistance_mechanisms:
   - reference: ARO:3007642
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3007665
   label: Candida spp. FCY2 conferring resistance to 5-flucytosine via reduced permeability
   evidence:
   - reference: ARO:3007665
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009286
   label: Nakaseomyces glabratus Fur1 with mutations associated with resistance to
     5-fluorocytosine
@@ -134,7 +137,7 @@ resistance_mechanisms:
   - reference: ARO:3009286
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009160 (5-fluorocytosine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009629
   label: Cryptococcus neoformans USX1 UDP-xylose synthase with mutations conferring
     resistance to 5-fluorocytosine
@@ -142,7 +145,7 @@ resistance_mechanisms:
   - reference: ARO:3009629
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009633
   label: Cryptococcus neoformans Ura6 uridylate kinase with mutations conferring resistance
     to 5-fluorocytosine
@@ -155,3 +158,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

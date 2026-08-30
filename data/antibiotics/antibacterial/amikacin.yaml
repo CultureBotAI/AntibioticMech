@@ -1,0 +1,845 @@
+identifier: CHEBI:2637
+label: amikacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An amino cyclitol glycoside that is kanamycin A acylated at the N-1 position
+  by a 4-amino-2-hydroxybutyryl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: amikacina
+  synonym_type: INN
+  source: chebi
+- synonym_text: amikacine
+  synonym_type: INN
+  source: chebi
+- synonym_text: amikacinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2S)-4-amino-N-[(1R,2S,3S,4R,5S)-5-amino-2-(3-amino-3-deoxy-α-D-glucopyranosyloxy)-4-(6-amino-6-deoxy-α-D-glucopyranosyloxy)-3-hydroxycyclohexyl]-2-hydroxybutanamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-N-(L(−)-γ-amino-α-hydroxybutyryl)kanamycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Amikacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-3-amino-3-deoxy-α-D-glucopyranosyl-(1→4)-O-(6-amino-6-deoxy-α-D-glucopyranosyl-(1→6))-N3-(4-amino-L-2-hydroxybutyryl)-2-deoxy-L-streptamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AMK
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Amicacin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Amikacina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Amikacinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Amikavet
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Arikace
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Kaminax
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Lukadin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Mikavir
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: mikacin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:22390
+- CHEBI:22479
+- CHEBI:37622
+- CHEBI:47779
+- ARO:0000016
+xrefs:
+- ARO:0000013
+- cas:37517-28-5
+- drugbank:DB00479
+- drugcentral:157
+- hmdb:HMDB0014622
+- kegg.compound:C06820
+- kegg.drug:D02543
+- lincs.smallmolecule:LSM-5935
+- metacyc.compound:CPD-14197
+- patent:DE2234315
+- patent:US3781268
+- reaxys:5915117
+- wikipedia.en:Amikacin
+- chembl:CHEMBL177
+- pubchem.compound:37768
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: NCC[C@H](O)C(=O)N[C@@H]1C[C@H](N)[C@@H](O[C@H]2O[C@H](CN)[C@@H](O)[C@H](O)[C@H]2O)[C@H](O)[C@H]1O[C@H]1O[C@H](CO)[C@@H](O)[C@H](N)[C@H]1O
+  standard_inchi: InChI=1S/C22H43N5O13/c23-2-1-8(29)20(36)27-7-3-6(25)18(39-22-16(34)15(33)13(31)9(4-24)37-22)17(35)19(7)40-21-14(32)11(26)12(30)10(5-28)38-21/h6-19,21-22,28-35H,1-5,23-26H2,(H,27,36)/t6-,7+,8-,9+,10+,11-,12+,13+,14+,15-,16+,17-,18+,19-,21+,22+/m0/s1
+  standard_inchi_key: LKCWBDHBTVXHDL-RMDFUYIESA-N
+  molecular_formula: C22H43N5O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 585.608
+  monoisotopic_mass: 585.28574
+source_concepts:
+- source: ARO
+  source_id: ARO:0000013
+  source_label: amikacin
+  minted_identifier: antibioticmech:aro-78030ec7ba
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:2637
+  source_label: amikacin
+  minted_identifier: antibioticmech:chebi-cc9bb9e534
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000491
+  label: acrD
+  evidence:
+  - reference: ARO:3000491
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000858
+  label: armA
+  evidence:
+  - reference: ARO:3000858
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000859
+  label: rmtA
+  evidence:
+  - reference: ARO:3000859
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000860
+  label: rmtB
+  evidence:
+  - reference: ARO:3000860
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000861
+  label: rmtC
+  evidence:
+  - reference: ARO:3000861
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000862
+  label: sgm
+  evidence:
+  - reference: ARO:3000862
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002545
+  label: AAC(6')-Ia
+  evidence:
+  - reference: ARO:3002545
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002546
+  label: AAC(6')-Ib
+  evidence:
+  - reference: ARO:3002546
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002547
+  label: AAC(6')-Ib-cr1
+  evidence:
+  - reference: ARO:3002547
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002549
+  label: AAC(6')-Ic
+  evidence:
+  - reference: ARO:3002549
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002553
+  label: AAC(6')-If
+  evidence:
+  - reference: ARO:3002553
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002554
+  label: AAC(6')-Ig
+  evidence:
+  - reference: ARO:3002554
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002555
+  label: AAC(6')-Ih
+  evidence:
+  - reference: ARO:3002555
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002556
+  label: AAC(6')-Ii
+  evidence:
+  - reference: ARO:3002556
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002557
+  label: AAC(6')-Ij
+  evidence:
+  - reference: ARO:3002557
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002558
+  label: AAC(6')-Ik
+  evidence:
+  - reference: ARO:3002558
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002559
+  label: AAC(6')-Ip
+  evidence:
+  - reference: ARO:3002559
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002560
+  label: AAC(6')-Iq
+  evidence:
+  - reference: ARO:3002560
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002561
+  label: AAC(6')-Ir
+  evidence:
+  - reference: ARO:3002561
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002562
+  label: AAC(6')-Is
+  evidence:
+  - reference: ARO:3002562
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002563
+  label: AAC(6')-Isa
+  evidence:
+  - reference: ARO:3002563
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002564
+  label: AAC(6')-It
+  evidence:
+  - reference: ARO:3002564
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002565
+  label: AAC(6')-Iu
+  evidence:
+  - reference: ARO:3002565
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002566
+  label: AAC(6')-Iv
+  evidence:
+  - reference: ARO:3002566
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002567
+  label: AAC(6')-Iw
+  evidence:
+  - reference: ARO:3002567
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002568
+  label: AAC(6')-Ix
+  evidence:
+  - reference: ARO:3002568
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002569
+  label: AAC(6')-Iy
+  evidence:
+  - reference: ARO:3002569
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002570
+  label: AAC(6')-Iz
+  evidence:
+  - reference: ARO:3002570
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002571
+  label: AAC(6')-Iaa
+  evidence:
+  - reference: ARO:3002571
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002572
+  label: AAC(6')-Iad
+  evidence:
+  - reference: ARO:3002572
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002573
+  label: AAC(6')-Iae
+  evidence:
+  - reference: ARO:3002573
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002574
+  label: AAC(6')-Iaf
+  evidence:
+  - reference: ARO:3002574
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002575
+  label: AAC(6')-Iai
+  evidence:
+  - reference: ARO:3002575
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002576
+  label: AAC(6')-Ib3
+  evidence:
+  - reference: ARO:3002576
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002577
+  label: AAC(6')-Ib4
+  evidence:
+  - reference: ARO:3002577
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002578
+  label: AAC(6')-Ib7
+  evidence:
+  - reference: ARO:3002578
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002579
+  label: AAC(6')-Ib8
+  evidence:
+  - reference: ARO:3002579
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002580
+  label: AAC(6')-Ib9
+  evidence:
+  - reference: ARO:3002580
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002581
+  label: AAC(6')-Ib10
+  evidence:
+  - reference: ARO:3002581
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002582
+  label: AAC(6')-Ib11
+  evidence:
+  - reference: ARO:3002582
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002583
+  label: AAC(6')-29a
+  evidence:
+  - reference: ARO:3002583
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002584
+  label: AAC(6')-29b
+  evidence:
+  - reference: ARO:3002584
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002585
+  label: AAC(6')-31
+  evidence:
+  - reference: ARO:3002585
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002586
+  label: AAC(6')-32
+  evidence:
+  - reference: ARO:3002586
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002587
+  label: AAC(6')-I33
+  evidence:
+  - reference: ARO:3002587
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002588
+  label: AAC(6')-I30
+  evidence:
+  - reference: ARO:3002588
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002589
+  label: AAC(6')-Iid
+  evidence:
+  - reference: ARO:3002589
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002590
+  label: AAC(6')-Iih
+  evidence:
+  - reference: ARO:3002590
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002591
+  label: AAC(6')-Ib-Suzhou
+  evidence:
+  - reference: ARO:3002591
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002592
+  label: AAC(6')-Ib-Hangzhou
+  evidence:
+  - reference: ARO:3002592
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002593
+  label: AAC(6')-Ib-SK
+  evidence:
+  - reference: ARO:3002593
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002597
+  label: AAC(6')-Ie-APH(2'')-Ia bifunctional protein
+  evidence:
+  - reference: ARO:3002597
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002600
+  label: AAC(3)-Ib/AAC(6')-Ib3 bifunctional protein
+  evidence:
+  - reference: ARO:3002600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002623
+  label: ANT(4')-Ia
+  evidence:
+  - reference: ARO:3002623
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002624
+  label: ANT(4')-IIa
+  evidence:
+  - reference: ARO:3002624
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002625
+  label: ANT(4')-IIb
+  evidence:
+  - reference: ARO:3002625
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002634
+  label: APH(2'')-Ie
+  evidence:
+  - reference: ARO:3002634
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002636
+  label: APH(2'')-IIIa
+  evidence:
+  - reference: ARO:3002636
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002637
+  label: APH(2'')-IVa
+  evidence:
+  - reference: ARO:3002637
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002647
+  label: APH(3')-IIIa
+  evidence:
+  - reference: ARO:3002647
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002652
+  label: APH(3')-VIa
+  evidence:
+  - reference: ARO:3002652
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002653
+  label: APH(3')-VIb
+  evidence:
+  - reference: ARO:3002653
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002665
+  label: npmA
+  evidence:
+  - reference: ARO:3002665
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002667
+  label: rmtD
+  evidence:
+  - reference: ARO:3002667
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002668
+  label: rmtG
+  evidence:
+  - reference: ARO:3002668
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002669
+  label: APH(2'')-Ig
+  evidence:
+  - reference: ARO:3002669
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003032
+  label: MexXY-OprM
+  evidence:
+  - reference: ARO:3003032
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003038
+  label: MexXY-OprA
+  evidence:
+  - reference: ARO:3003038
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003198
+  label: rmtH
+  evidence:
+  - reference: ARO:3003198
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003199
+  label: AAC(6')-Iak
+  evidence:
+  - reference: ARO:3003199
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003200
+  label: AAC(6')-Ian
+  evidence:
+  - reference: ARO:3003200
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003239
+  label: Mycobacteroides abscessus 16S rRNA mutation conferring resistance to amikacin
+  evidence:
+  - reference: ARO:3003239
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003481
+  label: Mycobacterium tuberculosis 16S rRNA mutation conferring resistance to amikacin
+  evidence:
+  - reference: ARO:3003481
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003514
+  label: Mycobacteroides chelonae 16S rRNA mutation conferring resistance to amikacin
+  evidence:
+  - reference: ARO:3003514
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003676
+  label: AAC(6')-Ib'
+  evidence:
+  - reference: ARO:3003676
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003677
+  label: AAC(6')-Iaj
+  evidence:
+  - reference: ARO:3003677
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003688
+  label: PvrR
+  evidence:
+  - reference: ARO:3003688
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003905
+  label: ANT(4')-Ib
+  evidence:
+  - reference: ARO:3003905
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004082
+  label: AcrAD-TolC
+  evidence:
+  - reference: ARO:3004082
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004086
+  label: APH(3')-VIIIb
+  evidence:
+  - reference: ARO:3004086
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004087
+  label: APH(3')-IXa
+  evidence:
+  - reference: ARO:3004087
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004578
+  label: Acinetobacter baumannii AbuO
+  evidence:
+  - reference: ARO:3004578
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004629
+  label: AAC(6')-Im
+  evidence:
+  - reference: ARO:3004629
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004635
+  label: AAC(6')-Il
+  evidence:
+  - reference: ARO:3004635
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004638
+  label: AAC(6')-I-48
+  evidence:
+  - reference: ARO:3004638
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004675
+  label: aphA15
+  evidence:
+  - reference: ARO:3004675
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004677
+  label: rmtD2
+  evidence:
+  - reference: ARO:3004677
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004678
+  label: rmtE
+  evidence:
+  - reference: ARO:3004678
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004679
+  label: rmtE2
+  evidence:
+  - reference: ARO:3004679
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004680
+  label: APH(3')-VIIIa
+  evidence:
+  - reference: ARO:3004680
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005112
+  label: AAC(6')-Ib-cr3
+  evidence:
+  - reference: ARO:3005112
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005114
+  label: AAC(6')-Ib-cr4
+  evidence:
+  - reference: ARO:3005114
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005115
+  label: AAC(6')-Ib-cr5
+  evidence:
+  - reference: ARO:3005115
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005116
+  label: AAC(6')-Ib-cr6
+  evidence:
+  - reference: ARO:3005116
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005117
+  label: AAC(6')-Ib-cr7
+  evidence:
+  - reference: ARO:3005117
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005118
+  label: AAC(6')-Ib-cr8
+  evidence:
+  - reference: ARO:3005118
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005119
+  label: AAC(6')-Ib-cr9
+  evidence:
+  - reference: ARO:3005119
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007204
+  label: AAC(6')-Iap
+  evidence:
+  - reference: ARO:3007204
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007537
+  label: Mycobacterium tuberculosis 16S rRNA (rrnS) mutation conferring resistance
+    to kanamycin
+  evidence:
+  - reference: ARO:3007537
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007770
+  label: aac(6')-Ib-cr10
+  evidence:
+  - reference: ARO:3007770
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007771
+  label: aac(6')-Ib-cr11
+  evidence:
+  - reference: ARO:3007771
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009333
+  label: Mycobacterium tuberculosis eis with mutation conferring resistance to amikacin
+  evidence:
+  - reference: ARO:3009333
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000013 (amikacin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000013 (amikacin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

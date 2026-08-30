@@ -119,7 +119,7 @@ source_concepts:
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000384
   label: AcrAB-TolC
   evidence:
@@ -210,14 +210,14 @@ resistance_mechanisms:
   - reference: ARO:3003561
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000704 (cefalotin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3003966
   label: Klebsiella pneumoniae OmpK35
   evidence:
   - reference: ARO:3003966
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000704 (cefalotin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3003968
   label: Klebsiella pneumoniae OmpK36
   evidence:
@@ -320,3 +320,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

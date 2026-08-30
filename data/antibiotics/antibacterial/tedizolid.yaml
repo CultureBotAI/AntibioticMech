@@ -48,7 +48,6 @@ xrefs:
 - pubchem.compound:11234049
 activity_roles:
 - CHEBI:33281
-- CHEBI:33282
 structural_class: oxazolidinone antibiotic
 structural_class_id: ARO:3000079
 chemical_structure:
@@ -67,7 +66,6 @@ source_concepts:
   minted_identifier: antibioticmech:aro-46344a14eb
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:82717
@@ -75,10 +73,9 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-814cc284e2
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003746
   label: optrA
   evidence:
@@ -90,3 +87,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

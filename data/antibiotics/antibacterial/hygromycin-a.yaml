@@ -37,21 +37,21 @@ source_concepts:
   minted_identifier: antibioticmech:aro-0887083165
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3004476
   label: vmlR
   evidence:
   - reference: ARO:3004476
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007638 (hygromycin
       A); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007645
   label: Clostridium sporogenes cplR
   evidence:
   - reference: ARO:3007645
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007638 (hygromycin
       A); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007646
   label: Neobacillus vireti vmlR2
   evidence:
@@ -63,3 +63,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

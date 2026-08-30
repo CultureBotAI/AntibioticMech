@@ -95,6 +95,7 @@ xrefs:
 - reaxys:86403
 - wikipedia.en:Nitrofural
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 chemical_structure:
   smiles: '[H]C(=NNC(N)=O)c1ccc([N+](=O)[O-])o1'
@@ -111,6 +112,7 @@ source_concepts:
   source_label: nitrofurazone
   minted_identifier: antibioticmech:chebi-f92c354f12
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 curation_history:
@@ -118,3 +120,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

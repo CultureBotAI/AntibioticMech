@@ -50,6 +50,7 @@ xrefs:
 - chembl:CHEMBL1255800
 - pubchem.compound:10034073
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 structural_class: macrocyclic antibiotic
 structural_class_id: ARO:3001318
@@ -68,6 +69,7 @@ source_concepts:
   source_label: fidaxomicin
   minted_identifier: antibioticmech:aro-1169c528a5
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -75,6 +77,7 @@ source_concepts:
   source_label: fidaxomicin
   minted_identifier: antibioticmech:chebi-ff9b90ceb4
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 molecular_targets:
@@ -89,3 +92,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

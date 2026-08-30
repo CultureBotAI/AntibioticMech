@@ -103,42 +103,42 @@ source_concepts:
   - CHEBI:35816
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003458
   label: Mycobacterium tuberculosis ethA with mutation conferring resistance to ethionamide
   evidence:
   - reference: ARO:3003458
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003474 (ethionamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004876
   label: Mycobacterium tuberculosis inhA mutations conferring resistance to ethionamide
   evidence:
   - reference: ARO:3004876
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003474 (ethionamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004933
   label: Mycobacterium tuberculosis fabG1 mutation conferring resistance to ethionamide
   evidence:
   - reference: ARO:3004933
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003474 (ethionamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004934
   label: Mycobacterium tuberculosis mshC mutations conferring resistance to ethionamide
   evidence:
   - reference: ARO:3004934
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003474 (ethionamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004935
   label: Mycobacterium tuberculosis nudC mutations conferring resistance to ethionamide
   evidence:
   - reference: ARO:3004935
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003474 (ethionamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004955
   label: Mycobacterium tuberculosis Rv0565c mutation conferring resistance to ethionamide
   evidence:
@@ -157,3 +157,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

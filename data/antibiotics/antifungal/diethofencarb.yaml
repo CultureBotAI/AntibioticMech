@@ -38,6 +38,7 @@ xrefs:
 - chembl:CHEMBL1880404
 - pubchem.compound:91742
 activity_roles:
+- CHEBI:24127
 - CHEBI:86328
 structural_class: carbamate fungicides
 structural_class_id: ARO:3009323
@@ -56,6 +57,7 @@ source_concepts:
   source_label: diethofencarb
   minted_identifier: antibioticmech:aro-03e17c5a12
   role_terms:
+  - CHEBI:24127
   - CHEBI:86328
   source_version: '2026-08-29'
 - source: CHEBI
@@ -63,10 +65,11 @@ source_concepts:
   source_label: diethofencarb
   minted_identifier: antibioticmech:chebi-414cb8d95c
   role_terms:
+  - CHEBI:24127
   - CHEBI:86328
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009324
   label: botrytis cinerea beta-tubulin with mutations conferring resistance against
     diethofencarb
@@ -79,3 +82,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

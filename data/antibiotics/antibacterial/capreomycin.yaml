@@ -51,14 +51,14 @@ resistance_mechanisms:
   - reference: ARO:3003994
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003993 (capreomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004853
   label: Mycobacterium tuberculosis 16S rRNA mutation conferring resistance to capreomycin
   evidence:
   - reference: ARO:3004853
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003993 (capreomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004937
   label: Mycobacterium tuberculosis 23S rRNA mutation conferring resistance to capreomycin
   evidence:
@@ -72,7 +72,7 @@ resistance_mechanisms:
   - reference: ARO:3007075
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003993 (capreomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007185
   label: Mycobacterium tuberculosis Rv1258c mutations confer resistance to ethambutol
     and capreomycin
@@ -93,6 +93,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
 - timestamp: '2026-08-30T00:54:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T01:13:56Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

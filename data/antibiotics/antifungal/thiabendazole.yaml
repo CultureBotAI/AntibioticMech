@@ -72,6 +72,7 @@ xrefs:
 - chembl:CHEMBL625
 - pubchem.compound:5430
 activity_roles:
+- CHEBI:24127
 - CHEBI:86328
 structural_class: benzimidazole antifungal
 structural_class_id: ARO:3009317
@@ -95,10 +96,11 @@ source_concepts:
   source_label: thiabendazole
   minted_identifier: antibioticmech:chebi-ecc41d494a
   role_terms:
+  - CHEBI:24127
   - CHEBI:86328
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009431
   label: Fusarium graminearum beta-tubulin with mutations conferring resistance to
     thiabendazole
@@ -106,7 +108,7 @@ resistance_mechanisms:
   - reference: ARO:3009431
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009432 (thiabendazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009433
   label: Colletotrichum gloeosporioides beta tubulin with mutations conferring resistance
     to thiabendazole
@@ -114,7 +116,7 @@ resistance_mechanisms:
   - reference: ARO:3009433
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009432 (thiabendazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009473
   label: Colletotrichum musae beta-tubulin with mutations conferring resistance to
     thiabendazole
@@ -127,3 +129,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

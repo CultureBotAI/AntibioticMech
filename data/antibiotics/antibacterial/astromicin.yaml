@@ -85,6 +85,7 @@ xrefs:
 - chembl:CHEMBL3084803
 - pubchem.compound:5284517
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 structural_class: aminoglycoside antibiotic
 structural_class_id: ARO:0000016
@@ -103,6 +104,7 @@ source_concepts:
   source_label: astromicin
   minted_identifier: antibioticmech:aro-f778372b89
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 - source: CHEBI
@@ -110,6 +112,7 @@ source_concepts:
   source_label: astromicin
   minted_identifier: antibioticmech:chebi-09406857fa
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 resistance_mechanisms:
@@ -167,3 +170,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

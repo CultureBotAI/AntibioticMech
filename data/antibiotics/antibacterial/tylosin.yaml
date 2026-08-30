@@ -301,7 +301,7 @@ resistance_mechanisms:
   - reference: ARO:3002824
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3002827
   label: tlrC
   evidence:
@@ -329,7 +329,7 @@ resistance_mechanisms:
   - reference: ARO:3003991
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004133
   label: Brachyspira hyodysenteriae 23S rRNA with mutation conferring resistance to
     tylosin
@@ -337,7 +337,7 @@ resistance_mechanisms:
   - reference: ARO:3004133
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004176
   label: Mycoplasma hominis 23S rRNA with mutation conferring resistance to macrolide
     antibiotics
@@ -345,7 +345,7 @@ resistance_mechanisms:
   - reference: ARO:3004176
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000145 (tylosin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004181
   label: Streptococcus pneumoniae 23S rRNA mutation conferring resistance to macrolides
     and streptogramins antibiotics
@@ -379,3 +379,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -19,6 +19,7 @@ parent_compounds:
 xrefs:
 - reaxys:8535952
 activity_roles:
+- CHEBI:33281
 - CHEBI:35718
 chemical_structure:
   smiles: '[H][C@]12C[C@@H](O)C[C@H](OC(=O)C(CCCC)C(=O)OC)CCC[C@H](O)[C@]3([H])O[C@@]3([H])[C@H](C)[C@@]([H])([C@@H](C)[C@@H](O)[C@H](C)[C@@H](O)[C@@H](C)[C@H](C)O[C@H]3C[C@H](OC)[C@H](OC)[C@H](C)O3)OC(=O)/C=C/C[C@H](O)C[C@H](O)C[C@@H](O)CC[C@@H](C)[C@H](O)C[C@](O)(O1)[C@H](O)[C@@H](O)C2'
@@ -35,6 +36,7 @@ source_concepts:
   source_label: brasilinolide B
   minted_identifier: antibioticmech:chebi-0735d7911e
   role_terms:
+  - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -42,3 +44,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

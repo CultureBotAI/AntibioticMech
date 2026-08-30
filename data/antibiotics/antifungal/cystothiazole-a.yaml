@@ -34,6 +34,7 @@ xrefs:
 - knapsack:C00016023
 - reaxys:8161374
 activity_roles:
+- CHEBI:33281
 - CHEBI:35718
 chemical_structure:
   smiles: COC(=O)/C=C(/OC)[C@H](C)[C@H](/C=C/c1csc(-c2csc(C(C)C)n2)n1)OC
@@ -50,6 +51,7 @@ source_concepts:
   source_label: cystothiazole A
   minted_identifier: antibioticmech:chebi-5c48b085f9
   role_terms:
+  - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -57,3 +59,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -40,6 +40,8 @@ xrefs:
 - chembl:CHEMBL560579
 - pubchem.compound:43234
 activity_roles:
+- CHEBI:24127
+- CHEBI:35718
 - CHEBI:77884
 - CHEBI:86328
 structural_class: triazole antifungal
@@ -59,6 +61,8 @@ source_concepts:
   source_label: propiconazole
   minted_identifier: antibioticmech:aro-6fc190f3f3
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:77884
   - CHEBI:86328
   source_version: '2026-08-29'
@@ -67,11 +71,13 @@ source_concepts:
   source_label: propiconazole
   minted_identifier: antibioticmech:chebi-3a4cdfdad5
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:77884
   - CHEBI:86328
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009215
   label: Colletotrichum truncatum cyp51a with mutations associated with resistance
     to propiconazole
@@ -79,21 +85,21 @@ resistance_mechanisms:
   - reference: ARO:3009215
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009182 (propiconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009402
   label: Zymoseptoria tritici Cyp51 with mutations conferring resistance to propiconazole
   evidence:
   - reference: ARO:3009402
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009182 (propiconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009406
   label: Mycosphaerella fijiensis Cyp51a with mutations conferring resistance to propiconazole
   evidence:
   - reference: ARO:3009406
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009182 (propiconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009524
   label: Blumeria graminis f. sp. hordei Cyp51 with mutations associated with resistance
     to propiconazole
@@ -101,7 +107,7 @@ resistance_mechanisms:
   - reference: ARO:3009524
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009182 (propiconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009529
   label: Phaeosphaeria nodorum Cyp51 with mutations conferring resistance to propiconazole
   evidence:
@@ -113,3 +119,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -246,7 +246,7 @@ resistance_mechanisms:
   - reference: ARO:3000605
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3001214
   label: mdtM
   evidence:
@@ -302,21 +302,21 @@ resistance_mechanisms:
   - reference: ARO:3002823
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3002827
   label: tlrC
   evidence:
   - reference: ARO:3002827
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3002830
   label: vgaALC
   evidence:
   - reference: ARO:3002830
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3002831
   label: vgaC
   evidence:
@@ -365,28 +365,28 @@ resistance_mechanisms:
   - reference: ARO:3002879
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3002881
   label: lmrC
   evidence:
   - reference: ARO:3002881
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003027
   label: lmrAB Operon
   evidence:
   - reference: ARO:3003027
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003112
   label: lsaC
   evidence:
   - reference: ARO:3003112
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003206
   label: lsaE
   evidence:
@@ -400,7 +400,7 @@ resistance_mechanisms:
   - reference: ARO:3003441
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003749
   label: salA
   evidence:
@@ -435,7 +435,7 @@ resistance_mechanisms:
   - reference: ARO:3004085
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3004476
   label: vmlR
   evidence:
@@ -470,56 +470,56 @@ resistance_mechanisms:
   - reference: ARO:3004652
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004659
   label: Mef(En2)
   evidence:
   - reference: ARO:3004659
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3004715
   label: vga(E) Staphylococcus cohnii
   evidence:
   - reference: ARO:3004715
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3005121
   label: lsaD
   evidence:
   - reference: ARO:3005121
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007026
   label: salB
   evidence:
   - reference: ARO:3007026
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007027
   label: salC
   evidence:
   - reference: ARO:3007027
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007028
   label: salD
   evidence:
   - reference: ARO:3007028
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007637
   label: Clostridioides difficile cplR
   evidence:
   - reference: ARO:3007637
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000046 (lincomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007644
   label: Clostridium perfringes cplR
   evidence:
@@ -538,3 +538,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

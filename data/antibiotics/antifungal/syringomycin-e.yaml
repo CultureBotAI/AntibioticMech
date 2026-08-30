@@ -23,6 +23,7 @@ xrefs:
 - metacyc.compound:CPD-14764
 - reaxys:5422014
 activity_roles:
+- CHEBI:33281
 - CHEBI:35718
 chemical_structure:
   smiles: C/C=C1\NC(=O)[C@H](Cc2ccccc2)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H](CCN)NC(=O)[C@H](CCN)NC(=O)[C@@H](CO)NC(=O)[C@@H](NC(=O)C[C@H](O)CCCCCCCCC)COC(=O)[C@H]([C@H](O)CCl)NC(=O)[C@H]([C@H](O)C(=O)O)NC1=O
@@ -39,6 +40,7 @@ source_concepts:
   source_label: syringomycin E
   minted_identifier: antibioticmech:chebi-cae1bb0f23
   role_terms:
+  - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -46,3 +48,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

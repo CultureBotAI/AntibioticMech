@@ -27,6 +27,7 @@ xrefs:
 - cas:59456-70-1
 - reaxys:4303204
 activity_roles:
+- CHEBI:25605
 - CHEBI:35718
 chemical_structure:
   smiles: '[H][C@]1([C@H](NC(=O)[C@@H](N)[C@H](C)[C@H](O)c2ccc(O)cn2)C(=O)O)O[C@@H](n2ccc(=O)nc2=O)[C@H](O)[C@@H]1O'
@@ -43,6 +44,7 @@ source_concepts:
   source_label: nikkomycin Z
   minted_identifier: antibioticmech:chebi-af0a3b64de
   role_terms:
+  - CHEBI:25605
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -50,3 +52,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

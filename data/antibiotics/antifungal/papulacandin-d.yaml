@@ -30,6 +30,7 @@ xrefs:
 - cas:61036-49-5
 - reaxys:7239678
 activity_roles:
+- CHEBI:33281
 - CHEBI:35718
 chemical_structure:
   smiles: CC[C@H](C)CC/C=C/C=C(\C)[C@@H](O)C/C=C/C=C/C(=O)O[C@H]1[C@H](O)[C@@H](CO)O[C@]2(OCc3cc(O)cc(O)c32)[C@@H]1O
@@ -46,6 +47,7 @@ source_concepts:
   source_label: papulacandin D
   minted_identifier: antibioticmech:chebi-dff8995da7
   role_terms:
+  - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -53,3 +55,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

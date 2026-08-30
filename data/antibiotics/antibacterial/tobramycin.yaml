@@ -117,7 +117,7 @@ resistance_mechanisms:
   - reference: ARO:3000230
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000491
   label: acrD
   evidence:
@@ -656,21 +656,21 @@ resistance_mechanisms:
   - reference: ARO:3002669
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002981
   label: AmrAB-OprM
   evidence:
   - reference: ARO:3002981
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003032
   label: MexXY-OprM
   evidence:
   - reference: ARO:3003032
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003038
   label: MexXY-OprA
   evidence:
@@ -698,21 +698,21 @@ resistance_mechanisms:
   - reference: ARO:3003200
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003237
   label: Mycobacteroides abscessus 16S rRNA mutation conferring resistance to tobramycin
   evidence:
   - reference: ARO:3003237
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003408
   label: Escherichia coli 16S rRNA (rrsB) mutation conferring resistance to tobramycin
   evidence:
   - reference: ARO:3003408
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003516
   label: Mycobacteroides chelonae 16S rRNA mutation conferring resistance to tobramycin
   evidence:
@@ -747,7 +747,7 @@ resistance_mechanisms:
   - reference: ARO:3003905
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004082
   label: AcrAD-TolC
   evidence:
@@ -761,7 +761,7 @@ resistance_mechanisms:
   - reference: ARO:3004191
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004598
   label: Klebsiella pneumoniae KpnGH-TolC
   evidence:
@@ -817,7 +817,7 @@ resistance_mechanisms:
   - reference: ARO:3004677
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3005049
   label: CrcB
   evidence:
@@ -894,7 +894,7 @@ resistance_mechanisms:
   - reference: ARO:3007204
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000052 (tobramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3007456
   label: dfrL
   evidence:
@@ -934,3 +934,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

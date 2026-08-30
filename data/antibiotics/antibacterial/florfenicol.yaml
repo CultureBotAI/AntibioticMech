@@ -77,35 +77,35 @@ source_concepts:
   - CHEBI:33281
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002704
   label: fexA
   evidence:
   - reference: ARO:3002704
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002705
   label: floR
   evidence:
   - reference: ARO:3002705
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002812
   label: pp-flo
   evidence:
   - reference: ARO:3002812
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003746
   label: optrA
   evidence:
   - reference: ARO:3003746
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003963
   label: flo
   evidence:
@@ -119,14 +119,14 @@ resistance_mechanisms:
   - reference: ARO:3004146
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3004470
   label: poxtA
   evidence:
   - reference: ARO:3004470
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004572
   label: Staphylococcus aureus LmrS
   evidence:
@@ -140,14 +140,14 @@ resistance_mechanisms:
   - reference: ARO:3004599
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004666
   label: pexA
   evidence:
   - reference: ARO:3004666
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3007019
   label: fexB
   evidence:
@@ -166,3 +166,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

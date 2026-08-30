@@ -1,0 +1,383 @@
+identifier: CHEBI:63598
+label: levofloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An optically active form of ofloxacin having (S)-configuration; an inhibitor
+  of bacterial topoisomerase IV and DNA gyrase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: levofloxacine
+  synonym_type: INN
+  source: chebi
+- synonym_text: levofloxacino
+  synonym_type: INN
+  source: chebi
+- synonym_text: levofloxacinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (3S)-9-fluoro-3-methyl-10-(4-methylpiperazin-1-yl)-7-oxo-2,3-dihydro-7H-[1,4]oxazino[2,3,4-ij]quinoline-6-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (-)-Ofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3S)-(-)-9-fluoro-3-methyl-10-(4-methyl-1-piperazinyl)-7-oxo-2,3-dihydro-7H-pyrido[1,2,3-de][1,4]benzoxazine-6-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-(-)-9-fluoro-3-methyl-10-(4-methyl-1-piperazinyl)-7-oxo-2,3-dihydro-7H-pyrido[1,2,3-de][1,4]benzooxazine-6-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-9-Fluoro-2,3-dihydro-3-methyl-10-(4-methyl-1-piperazinyl)-7-oxo-7H-pyrido(1,2,3-de)-1,4-benzoxazine-6-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-ofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-ofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DR 3355
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DR-3355
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-ofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ofloxacin S-(-)-form
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-(−)-ofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Levaquin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Tavanic
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:194135
+- CHEBI:86324
+- CHEBI:87211
+- ARO:0000001
+xrefs:
+- ARO:0000071
+- cas:100986-85-4
+- drugbank:DB01137
+- drugcentral:1569
+- hmdb:HMDB0001929
+- kegg.compound:C07660
+- kegg.drug:D08120
+- lincs.smallmolecule:LSM-5270
+- pdb-ccd:LFX
+- reaxys:5385660
+- vsdb:1899
+- wikipedia.en:Levofloxacin
+- chembl:CHEMBL5315124
+- pubchem.compound:149096
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: C[C@H]1COc2c(N3CCN(C)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23
+  standard_inchi: InChI=1S/C18H20FN3O4/c1-10-9-26-17-14-11(16(23)12(18(24)25)8-22(10)14)7-13(19)15(17)21-5-3-20(2)4-6-21/h7-8,10H,3-6,9H2,1-2H3,(H,24,25)/t10-/m0/s1
+  standard_inchi_key: GSDSWSVVBLHKDQ-JTQLQIEISA-N
+  molecular_formula: C18H20FN3O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 361.373
+  monoisotopic_mass: 361.14378
+source_concepts:
+- source: ARO
+  source_id: ARO:0000071
+  source_label: levofloxacin
+  minted_identifier: antibioticmech:aro-825bdb3c2e
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:63598
+  source_label: levofloxacin
+  minted_identifier: antibioticmech:chebi-a88ec56d37
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000419
+  label: quinolone resistance protein (qnr)
+  evidence:
+  - reference: ARO:3000419
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003294
+  label: Escherichia coli gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003294
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003295
+  label: Mycobacterium tuberculosis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003295
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003296
+  label: Staphylococcus aureus gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003296
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003297
+  label: Bartonella bacilliformis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003297
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003298
+  label: Mycobacterium leprae gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003298
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003304
+  label: Mycobacterium leprae gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003304
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003305
+  label: Ureaplasma urealyticum gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003305
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003306
+  label: Morganella morganii gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003306
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003307
+  label: Salmonella serovars gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003307
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003308
+  label: Escherichia coli parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003308
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003309
+  label: Ureaplasma urealyticum parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003309
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003310
+  label: Mycoplasma hominis parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003310
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003311
+  label: Streptococcus pneumoniae parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003311
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003312
+  label: Staphylococcus aureus parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003312
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003315
+  label: Staphylococcus aureus parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003315
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003316
+  label: Escherichia coli parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003316
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003317
+  label: Salmonella serovars parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003317
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003459
+  label: Mycobacterium tuberculosis gyrB with mutation conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003459
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003684
+  label: Pseudomonas aeruginosa gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003684
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003817
+  label: Acinetobacter baumannii gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003817
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003818
+  label: Acinetobacter baumannii parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003818
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003931
+  label: Capnocytophaga gingivalis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003931
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003974
+  label: Cutibacterium acnes gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003974
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003995
+  label: Clostridioides difficile gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003995
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004378
+  label: QepA3
+  evidence:
+  - reference: ARO:3004378
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004562
+  label: Clostridioides difficile gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3004562
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004574
+  label: Acinetobacter baumannii AbaQ
+  evidence:
+  - reference: ARO:3004574
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3007051
+  label: Helicobacter pylori rpoB mutation conferring resistance to rifampicin
+  evidence:
+  - reference: ARO:3007051
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007052
+  label: Helicobacter pylori gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3007052
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007053
+  label: Helicobacter pylori gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3007053
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007473
+  label: Mycobacterium avium gyrA with mutation conferring resistance to fluoroquinolone
+  evidence:
+  - reference: ARO:3007473
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3007662
+  label: Rv1877
+  evidence:
+  - reference: ARO:3007662
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007809
+  label: Mycobacterium tuberculosis gyrA mutations conferring resistance to levofloxacin
+  evidence:
+  - reference: ARO:3007809
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007810
+  label: Mycobacterium tuberculosis gyrB mutations conferring resistance to levofloxacin
+  evidence:
+  - reference: ARO:3007810
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000071 (levofloxacin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000733
+  target_label: fluoroquinolone sensitive gyrA
+  evidence:
+  - reference: ARO:3000733
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000071 (levofloxacin); database
+      assertion, not a primary citation.
+- target_id: ARO:3000735
+  target_label: Fluoroquinolone sensitive parC
+  evidence:
+  - reference: ARO:3000735
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000071 (levofloxacin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

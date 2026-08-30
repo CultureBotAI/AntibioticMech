@@ -21,6 +21,7 @@ parent_compounds:
 - CHEBI:33853
 - CHEBI:70737
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 chemical_structure:
   smiles: CC1CC(=O)C2(O)C3=C(C=CC2(O)C1)C(=O)c1c(O)cccc1C3=O
@@ -37,6 +38,7 @@ source_concepts:
   source_label: ochracenomicin A
   minted_identifier: antibioticmech:chebi-e19f2b9d1e
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -44,3 +46,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

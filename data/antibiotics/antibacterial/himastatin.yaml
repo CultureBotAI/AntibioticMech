@@ -34,6 +34,7 @@ xrefs:
 - patent:EP0329109
 - patent:US5036010
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 chemical_structure:
   smiles: '[H][C@@]12Nc3ccc(-c4ccc5c(c4)[C@]4(O)C[C@H]6C(=O)N[C@H](C(C)C)C(=O)O[C@@H](C(C)C)C(=O)N7NC[C@H](O)C[C@@H]7C(=O)N[C@@H](CC(C)C)C(=O)N[C@H]([C@H](C)O)C(=O)N6[C@]4([H])N5)cc3[C@]1(O)C[C@H]1C(=O)N[C@H](C(C)C)C(=O)O[C@@H](C(C)C)C(=O)N3NC[C@H](O)C[C@@H]3C(=O)N[C@@H](CC(C)C)C(=O)N[C@H]([C@H](C)O)C(=O)N12'
@@ -50,6 +51,7 @@ source_concepts:
   source_label: himastatin
   minted_identifier: antibioticmech:chebi-1bf7da587c
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -57,3 +59,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

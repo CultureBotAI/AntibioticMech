@@ -53,6 +53,7 @@ xrefs:
 - chembl:CHEMBL3707254
 - pubchem.compound:6870646
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 structural_class: nitrofuran antibiotic
 structural_class_id: ARO:3004116
@@ -71,6 +72,7 @@ source_concepts:
   source_label: furazidin
   minted_identifier: antibioticmech:aro-dfdd8033b4
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -78,6 +80,7 @@ source_concepts:
   source_label: furagin
   minted_identifier: antibioticmech:chebi-f46e5b09e1
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 curation_history:
@@ -85,3 +88,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -83,7 +83,6 @@ xrefs:
 - pubchem.compound:6869
 activity_roles:
 - CHEBI:33281
-- CHEBI:33282
 structural_class: penicillin beta-lactam
 structural_class_id: ARO:3000008
 chemical_structure:
@@ -102,7 +101,6 @@ source_concepts:
   minted_identifier: antibioticmech:aro-5455d345e8
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:27446
@@ -110,7 +108,6 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-bba43ddac4
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 molecular_targets:
 - target_id: ARO:3000749
@@ -124,3 +121,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

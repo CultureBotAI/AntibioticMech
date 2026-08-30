@@ -23,6 +23,7 @@ parent_compounds:
 xrefs:
 - reaxys:8521076
 activity_roles:
+- CHEBI:33281
 - CHEBI:35718
 chemical_structure:
   smiles: CCCCC[C@@H]1CC[C@H](C)CCCCC(=O)N(C)[C@@H](Cc2ccc(OCCO)cc2)C(=O)O1
@@ -39,6 +40,7 @@ source_concepts:
   source_label: PF 1163B
   minted_identifier: antibioticmech:chebi-b03d684048
   role_terms:
+  - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -46,3 +48,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

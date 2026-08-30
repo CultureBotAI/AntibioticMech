@@ -8,37 +8,13 @@ definition: A C-8-methoxy non-fluorinated quinolone exhibiting potent antibacter
   Gram-negative, and atypical pathogens, especially methicillin-resistant Staphylococcus
   aureus.
 definition_source: PMID:22650326
-synonyms:
-- synonym_text: nemonoxacine
-  synonym_type: INN
-  source: chebi
-- synonym_text: nemonoxacino
-  synonym_type: INN
-  source: chebi
-- synonym_text: Nemonoxacin
-  synonym_type: EXACT_SYNONYM
-  source: chebi
-- synonym_text: TG 873870
-  synonym_type: EXACT_SYNONYM
-  source: chebi
-- synonym_text: TG-873870
-  synonym_type: EXACT_SYNONYM
-  source: chebi
-- synonym_text: taigexyn
-  synonym_type: EXACT_SYNONYM
-  source: chebi
 parent_compounds:
-- CHEBI:26513
 - ARO:0000001
 xrefs:
 - ARO:3004733
 - cas:378746-64-6
-- drugcentral:5079
 - chembl:CHEMBL1213456
 - pubchem.compound:11993740
-activity_roles:
-- CHEBI:33281
-- CHEBI:33282
 structural_class: fluoroquinolone antibiotic
 structural_class_id: ARO:0000001
 chemical_structure:
@@ -55,20 +31,13 @@ source_concepts:
   source_id: ARO:3004733
   source_label: nemonoxacin
   minted_identifier: antibioticmech:aro-2a44e3ab23
-  role_terms:
-  - CHEBI:33281
-  - CHEBI:33282
-  source_version: '2026-08-29'
-- source: CHEBI
-  source_id: CHEBI:136053
-  source_label: nemonoxacin
-  minted_identifier: antibioticmech:chebi-259d54bb03
-  role_terms:
-  - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

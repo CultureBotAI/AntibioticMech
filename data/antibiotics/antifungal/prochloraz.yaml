@@ -31,6 +31,8 @@ xrefs:
 - chembl:CHEMBL522782
 - pubchem.compound:73665
 activity_roles:
+- CHEBI:24127
+- CHEBI:35718
 - CHEBI:77884
 - CHEBI:86328
 structural_class: imidazole antibiotic
@@ -55,32 +57,34 @@ source_concepts:
   source_label: prochloraz
   minted_identifier: antibioticmech:chebi-d745c6a017
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:77884
   - CHEBI:86328
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3009456
   label: Candida glabrata CDR1 with mutations conferring resistance to prochloraz
   evidence:
   - reference: ARO:3009456
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009455 (prochloraz);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009457
   label: Candida glabrata ERG11 with mutations conferring resistance to prochloraz
   evidence:
   - reference: ARO:3009457
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009455 (prochloraz);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3009467
   label: Candida glabrata Yor1 with mutations conferring resistance to prochloraz
   evidence:
   - reference: ARO:3009467
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009455 (prochloraz);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009493
   label: Aspergillus flavus Cyp51c with mutations conferring resistance to prochloraz
   evidence:
@@ -92,3 +96,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

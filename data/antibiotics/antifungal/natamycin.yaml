@@ -106,7 +106,10 @@ xrefs:
 - pesticides:natamycin
 - wikipedia.en:Natamycin
 activity_roles:
+- CHEBI:33281
+- CHEBI:35718
 - CHEBI:65256
+- CHEBI:86327
 - CHEBI:86328
 chemical_structure:
   smiles: '[H][C@@]12C[C@H](O)C[C@]3(O)C[C@H](O)[C@@H](C(=O)O)[C@]([H])(C[C@@H](O[C@@H]4O[C@H](C)[C@@H](O)[C@H](N)[C@@H]4O)/C=C/C=C/C=C/C=C/C[C@@H](C)OC(=O)/C=C/[C@H]1O2)O3'
@@ -123,7 +126,10 @@ source_concepts:
   source_label: natamycin
   minted_identifier: antibioticmech:chebi-8ad2a743b5
   role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
   - CHEBI:65256
+  - CHEBI:86327
   - CHEBI:86328
   source_version: '2026-08-29'
 curation_history:
@@ -131,3 +137,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

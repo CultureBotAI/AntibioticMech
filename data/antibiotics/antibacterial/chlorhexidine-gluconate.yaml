@@ -34,9 +34,7 @@ xrefs:
 - cas:18472-51-0
 - kegg.drug:D00858
 activity_roles:
-- CHEBI:33281
 - CHEBI:33282
-- CHEBI:86327
 chemical_structure:
   smiles: N=C(NCCCCCCNC(=N)NC(=N)Nc1ccc(Cl)cc1)NC(=N)Nc1ccc(Cl)cc1.O=C(O)[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO.O=C(O)[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO
   standard_inchi: InChI=1S/C22H30Cl2N10.2C6H12O7/c23-15-5-9-17(10-6-15)31-21(27)33-19(25)29-13-3-1-2-4-14-30-20(26)34-22(28)32-18-11-7-16(24)8-12-18;2*7-1-2(8)3(9)4(10)5(11)6(12)13/h5-12H,1-4,13-14H2,(H5,25,27,29,31,33)(H5,26,28,30,32,34);2*2-5,7-11H,1H2,(H,12,13)/t;2*2-,3-,4+,5-/m.11/s1
@@ -52,12 +50,14 @@ source_concepts:
   source_label: chlorhexidine gluconate
   minted_identifier: antibioticmech:chebi-e665ed3d87
   role_terms:
-  - CHEBI:33281
   - CHEBI:33282
-  - CHEBI:86327
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

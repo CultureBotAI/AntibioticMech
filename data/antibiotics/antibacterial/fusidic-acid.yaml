@@ -56,7 +56,7 @@ xrefs:
 - chembl:CHEMBL374975
 - pubchem.compound:3000226
 activity_roles:
-- CHEBI:33282
+- CHEBI:33281
 structural_class: fusidane antibiotic
 structural_class_id: ARO:3007153
 chemical_structure:
@@ -74,17 +74,17 @@ source_concepts:
   source_label: fusidic acid
   minted_identifier: antibioticmech:aro-2c6733d01a
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:29013
   source_label: fusidic acid
   minted_identifier: antibioticmech:chebi-f32e1be199
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000773
   label: CmeABC
   evidence:
@@ -98,28 +98,28 @@ resistance_mechanisms:
   - reference: ARO:3003026
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000759 (fusidic
       acid); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003552
   label: fusB
   evidence:
   - reference: ARO:3003552
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000759 (fusidic
       acid); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003731
   label: fusD
   evidence:
   - reference: ARO:3003731
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000759 (fusidic
       acid); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003733
   label: fusC
   evidence:
   - reference: ARO:3003733
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000759 (fusidic
       acid); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003735
   label: Staphylococcus aureus fusA with mutation conferring resistance to fusidic
     acid
@@ -127,7 +127,7 @@ resistance_mechanisms:
   - reference: ARO:3003735
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000759 (fusidic
       acid); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003737
   label: Staphylococcus aureus fusE with mutation conferring resistance to fusidic
     acid
@@ -135,7 +135,7 @@ resistance_mechanisms:
   - reference: ARO:3003737
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000759 (fusidic
       acid); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3004663
   label: FusF
   evidence:
@@ -154,3 +154,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

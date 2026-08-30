@@ -65,7 +65,6 @@ xrefs:
 - pubchem.compound:1046
 activity_roles:
 - CHEBI:33231
-- CHEBI:33281
 structural_class: pyrazine antibiotic
 structural_class_id: ARO:3007155
 chemical_structure:
@@ -89,87 +88,86 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-b8efc47dfc
   role_terms:
   - CHEBI:33231
-  - CHEBI:33281
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003394
   label: Mycobacterium tuberculosis pncA mutations conferring resistance to pyrazinamide
   evidence:
   - reference: ARO:3003394
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004721
   label: Mycobacterium tuberculosis rpsA mutations conferring resistance to pyrazinamide
   evidence:
   - reference: ARO:3004721
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004957
   label: Mycobacterium tuberculosis clpC1 with mutation conferring resistance to pyrazinamide
   evidence:
   - reference: ARO:3004957
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004975
   label: Mycobacterium tuberculosis ppsC mutations confer resistance to pyrazinamide
   evidence:
   - reference: ARO:3004975
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004976
   label: Mycobacterium tuberculosis ppsD mutations confer resistance to pyrazinamide
   evidence:
   - reference: ARO:3004976
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004977
   label: Mycobacterium tuberculosis gpsI with mutations conferring resistance to pyrazinamide
   evidence:
   - reference: ARO:3004977
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004978
   label: Mycobacterium tuberculosis mas mutations confer resistance to pyrazinamide
   evidence:
   - reference: ARO:3004978
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004981
   label: Mycobacterium tuberculosis Rv0191 mutations confer resistance to pyrazinamide
   evidence:
   - reference: ARO:3004981
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004984
   label: Mycobacterium tuberculosis Rv1667 mutations confer resistance to pyrazinamide
   evidence:
   - reference: ARO:3004984
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004987
   label: Mycobacterium tuberculosis Rv2731 mutations confer resistance to pyrazinamide
   evidence:
   - reference: ARO:3004987
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004993
   label: Mycobacterium tuberculosis Rv3169 mutations confer resistance to pyrazinamide
   evidence:
   - reference: ARO:3004993
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003413 (pyrazinamide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007186
   label: Mycobacterium tuberculosis Rv1258c mutations confer resistance to pyrazinamide,
     isoniazid, and streptomycin
@@ -182,3 +180,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

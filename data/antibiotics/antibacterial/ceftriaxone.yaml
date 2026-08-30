@@ -76,6 +76,7 @@ xrefs:
 - chembl:CHEMBL161
 - pubchem.compound:5479530
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 structural_class: cephalosporin
 structural_class_id: ARO:0000032
@@ -94,6 +95,7 @@ source_concepts:
   source_label: ceftriaxone
   minted_identifier: antibioticmech:aro-f34c32c3a8
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -101,10 +103,11 @@ source_concepts:
   source_label: ceftriaxone
   minted_identifier: antibioticmech:chebi-ef2d0c9777
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000386
   label: MexAB-OprM
   evidence:
@@ -160,63 +163,63 @@ resistance_mechanisms:
   - reference: ARO:3002502
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003937
   label: Neisseria meningititis PBP2 conferring resistance to beta-lactam
   evidence:
   - reference: ARO:3003937
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3003966
   label: Klebsiella pneumoniae OmpK35
   evidence:
   - reference: ARO:3003966
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3003968
   label: Klebsiella pneumoniae OmpK36
   evidence:
   - reference: ARO:3003968
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3004128
   label: Serratia marcescens Omp1
   evidence:
   - reference: ARO:3004128
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004446
   label: Haemophilus influenzae PBP3 conferring resistance to beta-lactam antibiotics
   evidence:
   - reference: ARO:3004446
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004578
   label: Acinetobacter baumannii AbuO
   evidence:
   - reference: ARO:3004578
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004585
   label: Klebsiella pneumoniae KpnEF
   evidence:
   - reference: ARO:3004585
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004832
   label: Neisseria gonorrhoeae PBP2 conferring resistance to beta-lactam antibiotics
   evidence:
   - reference: ARO:3004832
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004835
   label: Neisseria gonorrhoeae pilQ gene conferring resistance to beta-lactam
   evidence:
@@ -258,7 +261,7 @@ resistance_mechanisms:
   - reference: ARO:3007635
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000062 (ceftriaxone);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3007678
   label: IreK
   evidence:
@@ -277,3 +280,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

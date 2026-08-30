@@ -32,6 +32,8 @@ xrefs:
 - chembl:CHEMBL1883512
 - pubchem.compound:86210
 activity_roles:
+- CHEBI:24127
+- CHEBI:35718
 - CHEBI:77884
 - CHEBI:86328
 structural_class: triazole antifungal
@@ -51,6 +53,8 @@ source_concepts:
   source_label: metconazole
   minted_identifier: antibioticmech:aro-aa9d0683ae
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:77884
   - CHEBI:86328
   source_version: '2026-08-29'
@@ -59,11 +63,13 @@ source_concepts:
   source_label: metconazole
   minted_identifier: antibioticmech:chebi-ba4eb6ff77
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:77884
   - CHEBI:86328
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009214
   label: Colletotrichum truncatum cyp51a with mutations associated with resistance
     to metconazole
@@ -71,21 +77,21 @@ resistance_mechanisms:
   - reference: ARO:3009214
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009302 (metconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3009460
   label: Zymoseptoria tritici mfs1 with mutations conferring resistance to metconazole
   evidence:
   - reference: ARO:3009460
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009302 (metconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009491
   label: Aspergillus flavus Cyp51c with mutations conferring resistance to metconazole
   evidence:
   - reference: ARO:3009491
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009302 (metconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009520
   label: Fusarium graminearum Cyp51A with mutations associated with resistance to
     metconazole
@@ -93,14 +99,14 @@ resistance_mechanisms:
   - reference: ARO:3009520
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009302 (metconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009531
   label: Phakospora pachyrhizi Cyp51 with mutations conferring resistance to metconazole
   evidence:
   - reference: ARO:3009531
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009302 (metconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009536
   label: Pyrenopeziza brassicae Cyp51 with mutations conferring resistance to metconazole
   evidence:
@@ -112,3 +118,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

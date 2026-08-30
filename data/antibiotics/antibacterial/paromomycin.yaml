@@ -119,9 +119,9 @@ xrefs:
 - chembl:CHEMBL370143
 - pubchem.compound:165580
 activity_roles:
+- CHEBI:33281
 - CHEBI:35820
 - CHEBI:36047
-- CHEBI:70868
 structural_class: aminoglycoside antibiotic
 structural_class_id: ARO:0000016
 chemical_structure:
@@ -139,18 +139,18 @@ source_concepts:
   source_label: paromomycin
   minted_identifier: antibioticmech:aro-7aea35b214
   role_terms:
+  - CHEBI:33281
   - CHEBI:35820
   - CHEBI:36047
-  - CHEBI:70868
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:7934
   source_label: paromomycin
   minted_identifier: antibioticmech:chebi-c0019b6d96
   role_terms:
+  - CHEBI:33281
   - CHEBI:35820
   - CHEBI:36047
-  - CHEBI:70868
   source_version: '2026-08-29'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_INACTIVATION
@@ -258,7 +258,7 @@ resistance_mechanisms:
   - reference: ARO:3002653
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000657 (paromomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003403
   label: Escherichia coli 16S rRNA (rrsB) mutation conferring resistance to paromomycin
   evidence:
@@ -277,3 +277,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

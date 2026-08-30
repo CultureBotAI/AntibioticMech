@@ -104,7 +104,6 @@ xrefs:
 - chembl:CHEMBL1043
 - pubchem.compound:2955
 activity_roles:
-- CHEBI:35718
 - CHEBI:35816
 - CHEBI:38068
 structural_class: sulfone antibiotic
@@ -124,7 +123,6 @@ source_concepts:
   source_label: dapsone
   minted_identifier: antibioticmech:aro-64d15320ca
   role_terms:
-  - CHEBI:35718
   - CHEBI:35816
   - CHEBI:38068
   source_version: '2026-08-29'
@@ -133,12 +131,11 @@ source_concepts:
   source_label: dapsone
   minted_identifier: antibioticmech:chebi-e4c33d0b87
   role_terms:
-  - CHEBI:35718
   - CHEBI:35816
   - CHEBI:38068
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003389
   label: Mycobacterium leprae folP with mutation conferring resistance to dapsone
   evidence:
@@ -157,3 +154,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

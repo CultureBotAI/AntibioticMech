@@ -65,8 +65,6 @@ xrefs:
 - pubchem.compound:5388906
 activity_roles:
 - CHEBI:33231
-- CHEBI:33282
-- CHEBI:35816
 structural_class: diarylquinoline antibiotic
 structural_class_id: ARO:3004491
 chemical_structure:
@@ -85,8 +83,6 @@ source_concepts:
   minted_identifier: antibioticmech:aro-147ef273d9
   role_terms:
   - CHEBI:33231
-  - CHEBI:33282
-  - CHEBI:35816
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:72292
@@ -94,18 +90,16 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-9b38ad9d40
   role_terms:
   - CHEBI:33231
-  - CHEBI:33282
-  - CHEBI:35816
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007476
   label: Mycobacterium abscessus atpE with mutation conferring resistance to bedaquiline
   evidence:
   - reference: ARO:3007476
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004492 (bedaquiline);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007674
   label: Mycobacterium tuberculosis Rv0678 with mutation conferring resistance to
     bedaquiline
@@ -113,7 +107,7 @@ resistance_mechanisms:
   - reference: ARO:3007674
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004492 (bedaquiline);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007692
   label: Mycobacterium tuberculosis Rv2535c with mutation conferring resistance to
     bedaquiline
@@ -121,7 +115,7 @@ resistance_mechanisms:
   - reference: ARO:3007692
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004492 (bedaquiline);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007854
   label: Mycobacterium tuberculosis atpE with mutation conferring resistance to bedaquiline
   evidence:
@@ -133,3 +127,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

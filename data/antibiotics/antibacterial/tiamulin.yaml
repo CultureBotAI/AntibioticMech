@@ -94,14 +94,14 @@ resistance_mechanisms:
   - reference: ARO:3002816
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3002831
   label: vgaC
   evidence:
   - reference: ARO:3002831
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3002833
   label: vgaE
   evidence:
@@ -115,7 +115,7 @@ resistance_mechanisms:
   - reference: ARO:3003441
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003749
   label: salA
   evidence:
@@ -129,7 +129,7 @@ resistance_mechanisms:
   - reference: ARO:3003907
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3004476
   label: vmlR
   evidence:
@@ -143,7 +143,7 @@ resistance_mechanisms:
   - reference: ARO:3004599
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3004715
   label: vga(E) Staphylococcus cohnii
   evidence:
@@ -157,7 +157,7 @@ resistance_mechanisms:
   - reference: ARO:3005023
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3005081
   label: Thermus thermophilus uL3 mutations conferring resistance to pleuromutilin
     antibiotics
@@ -165,49 +165,49 @@ resistance_mechanisms:
   - reference: ARO:3005081
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3005083
   label: Thermus thermophilus 23s rRNA conferring resistance to pleuromutilin antibiotics
   evidence:
   - reference: ARO:3005083
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3005121
   label: lsaD
   evidence:
   - reference: ARO:3005121
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007026
   label: salB
   evidence:
   - reference: ARO:3007026
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007027
   label: salC
   evidence:
   - reference: ARO:3007027
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007028
   label: salD
   evidence:
   - reference: ARO:3007028
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007029
   label: salE
   evidence:
   - reference: ARO:3007029
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007646
   label: Neobacillus vireti vmlR2
   evidence:
@@ -219,3 +219,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

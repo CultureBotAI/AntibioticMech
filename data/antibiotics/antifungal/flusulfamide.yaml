@@ -33,6 +33,8 @@ xrefs:
 - ppdb:351
 - reaxys:11322439
 activity_roles:
+- CHEBI:24127
+- CHEBI:35718
 - CHEBI:86328
 chemical_structure:
   smiles: O=[N+]([O-])c1ccc(NS(=O)(=O)c2ccc(Cl)c(C(F)(F)F)c2)c(Cl)c1
@@ -49,6 +51,8 @@ source_concepts:
   source_label: flusulfamide
   minted_identifier: antibioticmech:chebi-f260bdf09e
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 curation_history:
@@ -56,3 +60,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

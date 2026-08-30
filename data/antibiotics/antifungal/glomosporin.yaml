@@ -29,6 +29,7 @@ parent_compounds:
 xrefs:
 - reaxys:8672918
 activity_roles:
+- CHEBI:33281
 - CHEBI:35718
 chemical_structure:
   smiles: CCCCCCCCCCCCC(C)(O)C1CC(=O)NC(CO)C(=O)N[C@H](C)C(=O)NC(CC(=O)O)C(=O)NC(CC(N)=O)C(=O)NC(CC(N)=O)C(=O)NC(CO)C(=O)N[C@H]([C@@H](C)O)C(=O)O1
@@ -45,6 +46,7 @@ source_concepts:
   source_label: glomosporin
   minted_identifier: antibioticmech:chebi-5893003bd6
   role_terms:
+  - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -52,3 +54,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

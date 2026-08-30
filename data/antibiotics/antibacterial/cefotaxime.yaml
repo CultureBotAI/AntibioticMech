@@ -61,7 +61,7 @@ xrefs:
 - chembl:CHEMBL1730
 - pubchem.compound:5742673
 activity_roles:
-- CHEBI:33282
+- CHEBI:33281
 - CHEBI:36047
 structural_class: cephalosporin
 structural_class_id: ARO:0000032
@@ -80,7 +80,7 @@ source_concepts:
   source_label: cefotaxime
   minted_identifier: antibioticmech:aro-dc40265400
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -88,11 +88,11 @@ source_concepts:
   source_label: cefotaxime
   minted_identifier: antibioticmech:chebi-4a4bc5cba7
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000773
   label: CmeABC
   evidence:
@@ -127,21 +127,21 @@ resistance_mechanisms:
   - reference: ARO:3001818
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003942
   label: abcA
   evidence:
   - reference: ARO:3003942
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3004122
   label: Klebsiella pneumoniae OmpK37
   evidence:
   - reference: ARO:3004122
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3004128
   label: Serratia marcescens Omp1
   evidence:
@@ -155,7 +155,7 @@ resistance_mechanisms:
   - reference: ARO:3004359
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004446
   label: Haemophilus influenzae PBP3 conferring resistance to beta-lactam antibiotics
   evidence:
@@ -225,7 +225,7 @@ resistance_mechanisms:
   - reference: ARO:3007374
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000645 (cefotaxime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007531
   label: Streptococcus pyogenes PBP2x conferring resistance to beta-lactam antibiotics
   evidence:
@@ -244,3 +244,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -107,7 +107,6 @@ xrefs:
 - pubchem.compound:5327
 activity_roles:
 - CHEBI:33281
-- CHEBI:33282
 - CHEBI:36047
 structural_class: sulfonamide antibiotic
 structural_class_id: ARO:3000282
@@ -127,7 +126,6 @@ source_concepts:
   minted_identifier: antibioticmech:aro-ea37816ce5
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -136,39 +134,38 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-0baecafe50
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3000410
   label: sul1
   evidence:
   - reference: ARO:3000410
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000325 (sulfadimidine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3000412
   label: sul2
   evidence:
   - reference: ARO:3000412
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000325 (sulfadimidine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3000413
   label: sul3
   evidence:
   - reference: ARO:3000413
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000325 (sulfadimidine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003386
   label: Escherichia coli folP with mutation conferring resistance to sulfonamides
   evidence:
   - reference: ARO:3003386
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000325 (sulfadimidine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003387
   label: Streptococcus pyogenes folP with mutation conferring resistance to sulfonamides
   evidence:
@@ -187,3 +184,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

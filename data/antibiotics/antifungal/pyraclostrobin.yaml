@@ -32,6 +32,8 @@ xrefs:
 - chembl:CHEMBL519873
 - pubchem.compound:6422843
 activity_roles:
+- CHEBI:24127
+- CHEBI:35718
 - CHEBI:86328
 structural_class: strobilurin fungicide
 structural_class_id: ARO:3009305
@@ -50,6 +52,8 @@ source_concepts:
   source_label: pyraclostrobin
   minted_identifier: antibioticmech:aro-52f6a5d5ae
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 - source: CHEBI
@@ -57,10 +61,12 @@ source_concepts:
   source_label: pyraclostrobin
   minted_identifier: antibioticmech:chebi-f9c5067de2
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009278
   label: Colletotrichum gloeosporioides cytochrome b protein with mutations conferring
     resistance to pyraclostrobin
@@ -68,7 +74,7 @@ resistance_mechanisms:
   - reference: ARO:3009278
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009304 (pyraclostrobin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009479
   label: Aspergillus fumigatus beta-tubulin with mutations conferring resistance to
     pyraclostrobin
@@ -76,7 +82,7 @@ resistance_mechanisms:
   - reference: ARO:3009479
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009304 (pyraclostrobin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009548
   label: Aspergillus fumigatus Cyp51A with mutations conferring resistance to pyraclostrobin
   evidence:
@@ -88,3 +94,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

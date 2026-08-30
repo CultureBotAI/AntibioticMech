@@ -59,6 +59,8 @@ xrefs:
 - ppdb:122
 - reaxys:983249
 activity_roles:
+- CHEBI:24127
+- CHEBI:35718
 - CHEBI:86328
 chemical_structure:
   smiles: CC1=C(C(=O)Nc2ccccc2)SCCO1
@@ -75,6 +77,8 @@ source_concepts:
   source_label: carboxin
   minted_identifier: antibioticmech:chebi-ebea524080
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 curation_history:
@@ -82,3 +86,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

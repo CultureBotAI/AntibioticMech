@@ -39,6 +39,7 @@ xrefs:
 - chembl:CHEMBL203191
 - pubchem.compound:6112114
 activity_roles:
+- CHEBI:35718
 - CHEBI:86328
 structural_class: strobilurin fungicide
 structural_class_id: ARO:3009305
@@ -57,6 +58,7 @@ source_concepts:
   source_label: kresoxim-methyl
   minted_identifier: antibioticmech:aro-560ad1417d
   role_terms:
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 - source: CHEBI
@@ -64,10 +66,11 @@ source_concepts:
   source_label: kresoxim-methyl
   minted_identifier: antibioticmech:chebi-6715ce8bf2
   role_terms:
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009281
   label: Colletotrichum gloeosporioides cytochrome b protein with mutations associated
     with resistance to kresoxim-methyl
@@ -80,3 +83,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

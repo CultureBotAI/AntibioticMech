@@ -79,7 +79,7 @@ xrefs:
 - chembl:CHEMBL1435
 - pubchem.compound:33255
 activity_roles:
-- CHEBI:33282
+- CHEBI:33281
 - CHEBI:36047
 structural_class: cephalosporin
 structural_class_id: ARO:0000032
@@ -98,7 +98,7 @@ source_concepts:
   source_label: cefazolin
   minted_identifier: antibioticmech:aro-91ba49115d
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -106,7 +106,7 @@ source_concepts:
   source_label: cefazolin
   minted_identifier: antibioticmech:chebi-2803cda771
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
@@ -166,7 +166,7 @@ resistance_mechanisms:
   - reference: ARO:3003589
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000058 (cefazolin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3004114
   label: porin OmpC
   evidence:
@@ -213,3 +213,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

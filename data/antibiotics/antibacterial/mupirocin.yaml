@@ -87,28 +87,28 @@ source_concepts:
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3000510
   label: Staphylococcus aureus mupB conferring resistance to mupirocin
   evidence:
   - reference: ARO:3000510
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000554 (mupirocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3000521
   label: Staphylococcus aureus mupA conferring resistance to mupirocin
   evidence:
   - reference: ARO:3000521
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000554 (mupirocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003729
   label: Staphylococcus aureus ileS with mutation conferring resistance to mupirocin
   evidence:
   - reference: ARO:3003729
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000554 (mupirocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003730
   label: Bifidobacterium bifidum ileS conferring resistance to mupirocin
   evidence:
@@ -127,3 +127,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -187,3 +187,56 @@ def test_a_record_never_cross_references_itself(records):
     self_ref = [(p.name, r["identifier"]) for p, r in records
                 if r["identifier"] in (r.get("xrefs") or [])]
     assert self_ref == [], self_ref[:20]
+
+
+def test_activity_roles_keep_inherited_roles(records):
+    """`activity_roles` is documented as complete and unreduced. Role inheritance
+    was previously skipped for any compound that carried a role of its own,
+    which cost 455 compounds an ancestor role and misfiled three of them —
+    silently, because the corpus reproduced the wrong computation exactly.
+
+    Carvacrol is the canonical case: its own ChEBI edge is `antimicrobial agent`
+    and `antifungal agent` comes from its parent. A record holding only one of
+    the two means inheritance regressed.
+    """
+    by_id = {r["identifier"]: r for _, r in records}
+    carvacrol = by_id.get("CHEBI:3440")
+    if carvacrol is None:
+        return  # the compound left the corpus; nothing to assert here
+    roles = set(carvacrol.get("activity_roles") or [])
+    assert {"CHEBI:33281", "CHEBI:35718"} <= roles, sorted(roles)
+
+
+def test_card_seeded_items_say_they_came_from_card(records):
+    """CLAUDE.md: "A CARD-seeded item cites CARD and says so." The note is also
+    the marker that tells a re-seed which items are the seeder's, so a silent
+    change to it would start deleting curator work."""
+    unmarked = []
+    for path, record in records:
+        for field in ("molecular_targets", "resistance_mechanisms"):
+            for item in record.get(field) or []:
+                evidence = item.get("evidence") or []
+                if not evidence or not all(
+                    str(e.get("reference", "")).startswith("ARO:") for e in evidence
+                ):
+                    continue  # a curator item; not this test's business
+                if not any("CARD/ARO asserts" in str(e.get("notes") or "") for e in evidence):
+                    unmarked.append((path.name, field, item.get("label") or item.get("target_label")))
+    assert unmarked == [], unmarked[:10]
+
+
+def test_resistance_mechanisms_are_typed_where_aro_says_so(records):
+    """Eight of ten mechanism categories were unassignable while the ancestor
+    walk followed only is_a — ANTIBIOTIC_EFFLUX among them, so a consumer
+    filtering for efflux got nothing while acrB sat in the data as UNKNOWN."""
+    seen = Counter()
+    for _, record in records:
+        for item in record.get("resistance_mechanisms") or []:
+            seen[item.get("mechanism_type")] += 1
+    if not seen:
+        return
+    assert seen["ANTIBIOTIC_EFFLUX"] > 0, dict(seen)
+    assert seen["ANTIBIOTIC_TARGET_PROTECTION"] > 0, dict(seen)
+    # UNKNOWN is legitimate for a determinant ARO does not classify, but it
+    # should be the exception rather than half the corpus.
+    assert seen["UNKNOWN"] < sum(seen.values()) * 0.1, dict(seen)

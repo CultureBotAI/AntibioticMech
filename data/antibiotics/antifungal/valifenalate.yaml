@@ -32,6 +32,8 @@ xrefs:
 - ppdb:1659
 - reaxys:11327531
 activity_roles:
+- CHEBI:24127
+- CHEBI:35718
 - CHEBI:86328
 chemical_structure:
   smiles: COC(=O)CC(NC(=O)[C@@H](NC(=O)OC(C)C)C(C)C)c1ccc(Cl)cc1
@@ -48,6 +50,8 @@ source_concepts:
   source_label: valifenalate
   minted_identifier: antibioticmech:chebi-2cde3208af
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 curation_history:
@@ -55,3 +59,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

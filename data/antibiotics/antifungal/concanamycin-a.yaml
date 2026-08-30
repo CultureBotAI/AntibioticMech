@@ -21,6 +21,7 @@ xrefs:
 - cas:80890-47-7
 - kegg.compound:C15761
 activity_roles:
+- CHEBI:33281
 - CHEBI:35718
 chemical_structure:
   smiles: '[H][C@]1([C@@H](C)[C@@H](O)[C@H](C)[C@@]2(O)C[C@@H](O[C@H]3C[C@@H](O)[C@H](OC(N)=O)[C@@H](C)O3)[C@H](C)[C@@H](/C=C/C)O2)OC(=O)/C(OC)=C/C(C)=C/[C@@H](C)[C@@H](O)[C@@H](CC)[C@@H](O)[C@H](C)C/C(C)=C/C=C/[C@@H]1OC'
@@ -37,6 +38,7 @@ source_concepts:
   source_label: concanamycin A
   minted_identifier: antibioticmech:chebi-351fd4f601
   role_terms:
+  - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -44,3 +46,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

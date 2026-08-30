@@ -44,7 +44,7 @@ xrefs:
 - chembl:CHEMBL3182343
 - pubchem.compound:33478
 activity_roles:
-- CHEBI:33282
+- CHEBI:33281
 structural_class: penicillin beta-lactam
 structural_class_id: ARO:3000008
 chemical_structure:
@@ -62,17 +62,21 @@ source_concepts:
   source_label: pivampicillin
   minted_identifier: antibioticmech:aro-504542943b
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:8255
   source_label: pivampicillin
   minted_identifier: antibioticmech:chebi-96b5c6f1b8
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

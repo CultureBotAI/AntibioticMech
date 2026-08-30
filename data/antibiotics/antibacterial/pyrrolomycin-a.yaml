@@ -40,6 +40,7 @@ xrefs:
 - pubchem.compound:133275
 activity_roles:
 - CHEBI:33282
+- CHEBI:35718
 structural_class: ionophore with antibiotic activity
 structural_class_id: ARO:3005163
 chemical_structure:
@@ -58,6 +59,7 @@ source_concepts:
   minted_identifier: antibioticmech:aro-7719b8066f
   role_terms:
   - CHEBI:33282
+  - CHEBI:35718
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:156550
@@ -65,9 +67,14 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-1d8c0f6207
   role_terms:
   - CHEBI:33282
+  - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

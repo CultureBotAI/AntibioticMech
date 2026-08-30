@@ -44,6 +44,7 @@ xrefs:
 - reaxys:78250
 - wikipedia.en:Tomatine
 activity_roles:
+- CHEBI:33281
 - CHEBI:35718
 chemical_structure:
   smiles: '[H][C@@]12CC[C@]3([H])[C@]([H])(CC[C@@]4(C)[C@@]3([H])C[C@]3([H])O[C@@]5(CC[C@H](C)CN5)[C@@H](C)[C@]43[H])[C@@]1(C)CC[C@H](O[C@@H]1O[C@H](CO)[C@H](O[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O[C@@H]4OC[C@@H](O)[C@H](O)[C@H]4O)[C@H]3O[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)[C@H](O)[C@H]1O)C2'
@@ -60,6 +61,7 @@ source_concepts:
   source_label: tomatine
   minted_identifier: antibioticmech:chebi-c1a462d8b0
   role_terms:
+  - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -67,3 +69,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

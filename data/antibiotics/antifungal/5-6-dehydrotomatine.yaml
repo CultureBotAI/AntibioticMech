@@ -23,6 +23,7 @@ xrefs:
 - hmdb:HMDB0032002
 - reaxys:7902175
 activity_roles:
+- CHEBI:33281
 - CHEBI:35718
 chemical_structure:
   smiles: '[H][C@@]12CC=C3C[C@@H](O[C@@H]4O[C@H](CO)[C@H](O[C@@H]5O[C@H](CO)[C@@H](O)[C@H](O[C@@H]6OC[C@@H](O)[C@H](O)[C@H]6O)[C@H]5O[C@@H]5O[C@H](CO)[C@@H](O)[C@H](O)[C@H]5O)[C@H](O)[C@H]4O)CC[C@]3(C)[C@@]1([H])CC[C@@]1(C)[C@@]2([H])C[C@]2([H])O[C@@]3(CC[C@H](C)CN3)[C@@H](C)[C@]12[H]'
@@ -39,6 +40,7 @@ source_concepts:
   source_label: 5,6-dehydrotomatine
   minted_identifier: antibioticmech:chebi-87e2c5fc8b
   role_terms:
+  - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -46,3 +48,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

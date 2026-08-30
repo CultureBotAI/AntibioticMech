@@ -21,6 +21,7 @@ xrefs:
 - patent:WO2008142046
 - reaxys:18923823
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 chemical_structure:
   smiles: '[H][C@@]1([C@H](C)[C@H](O)/C=C(C)/C=C/C=C/C=C/C=C/C=C/C[C@H](O)/C=C(\C)CCC(=O)O)C[C@H](O)CCC[C@H](OC)C/C=C\C=C\C[C@H](C)[C@@H](O)[C@H](C)[C@@H](O)[C@H](C)[C@H](O)CC(=O)O1'
@@ -37,6 +38,7 @@ source_concepts:
   source_label: etnangien
   minted_identifier: antibioticmech:chebi-db8211faed
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -44,3 +46,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

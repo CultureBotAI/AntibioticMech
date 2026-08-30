@@ -32,49 +32,49 @@ source_concepts:
   minted_identifier: antibioticmech:aro-ac69007b2b
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3000300
   label: lsaA
   evidence:
   - reference: ARO:3000300
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001317 (pleuromutilin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003111
   label: lsaB
   evidence:
   - reference: ARO:3003111
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001317 (pleuromutilin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003112
   label: lsaC
   evidence:
   - reference: ARO:3003112
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001317 (pleuromutilin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003206
   label: lsaE
   evidence:
   - reference: ARO:3003206
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001317 (pleuromutilin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003761
   label: eatAv
   evidence:
   - reference: ARO:3003761
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001317 (pleuromutilin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003986
   label: TaeA
   evidence:
   - reference: ARO:3003986
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001317 (pleuromutilin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004159
   label: Mycoplasma gallisepticum 23S rRNA mutation conferring resistance to pleuromutilin
     antibiotics
@@ -82,7 +82,7 @@ resistance_mechanisms:
   - reference: ARO:3004159
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001317 (pleuromutilin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3004730
   label: tva(A)
   evidence:
@@ -94,3 +94,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

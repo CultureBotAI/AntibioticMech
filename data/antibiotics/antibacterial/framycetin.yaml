@@ -72,7 +72,6 @@ xrefs:
 activity_roles:
 - CHEBI:36047
 - CHEBI:33281
-- CHEBI:33282
 structural_class: aminoglycoside antibiotic
 structural_class_id: ARO:0000016
 chemical_structure:
@@ -91,7 +90,6 @@ source_concepts:
   minted_identifier: antibioticmech:aro-e0cf2a5651
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:7508
@@ -101,7 +99,7 @@ source_concepts:
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000491
   label: acrD
   evidence:
@@ -241,28 +239,28 @@ resistance_mechanisms:
   - reference: ARO:3002665
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000005 (neomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003238
   label: Mycobacteroides abscessus 16S rRNA mutation conferring resistance to neomycin
   evidence:
   - reference: ARO:3003238
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000005 (neomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003402
   label: Escherichia coli 16S rRNA (rrsB) mutation conferring resistance to neomycin
   evidence:
   - reference: ARO:3003402
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000005 (neomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003518
   label: Mycobacteroides chelonae 16S rRNA mutation conferring resistance to neomycin
   evidence:
   - reference: ARO:3003518
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000005 (neomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003544
   label: Mycolicibacterium smegmatis 16S rRNA (rrsA) mutation conferring resistance
     to neomycin
@@ -270,7 +268,7 @@ resistance_mechanisms:
   - reference: ARO:3003544
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000005 (neomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003545
   label: Mycolicibacterium smegmatis 16S rRNA (rrsB) mutation conferring resistance
     to neomycin
@@ -278,14 +276,14 @@ resistance_mechanisms:
   - reference: ARO:3003545
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000005 (neomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004077
   label: PmpM
   evidence:
   - reference: ARO:3004077
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000005 (neomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004082
   label: AcrAD-TolC
   evidence:
@@ -319,6 +317,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T00:54:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T01:13:52Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

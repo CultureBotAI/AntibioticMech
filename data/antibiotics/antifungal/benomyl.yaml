@@ -54,6 +54,7 @@ xrefs:
 - chembl:CHEMBL327919
 - pubchem.compound:28780
 activity_roles:
+- CHEBI:24127
 - CHEBI:86328
 structural_class: benzimidazole antifungal
 structural_class_id: ARO:3009317
@@ -77,10 +78,11 @@ source_concepts:
   source_label: benomyl
   minted_identifier: antibioticmech:chebi-b4bae81658
   role_terms:
+  - CHEBI:24127
   - CHEBI:86328
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009469
   label: Colletotrichum gloeosporioides beta-tubulin with mutations conferring resistance
     against benomyl
@@ -88,7 +90,7 @@ resistance_mechanisms:
   - reference: ARO:3009469
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009161 (benomyl);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009478
   label: Aspergillus fumigatus beta-tubulin with mutations conferring resistance to
     benomyl
@@ -101,3 +103,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

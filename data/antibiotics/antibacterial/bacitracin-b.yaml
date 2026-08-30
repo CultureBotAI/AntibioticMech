@@ -31,28 +31,28 @@ source_concepts:
   minted_identifier: antibioticmech:aro-d2b8d66d15
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3002986
   label: bacA
   evidence:
   - reference: ARO:3002986
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000630 (bacitracin
       B); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002987
   label: bcrA
   evidence:
   - reference: ARO:3002987
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000630 (bacitracin
       B); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002988
   label: bcrB
   evidence:
   - reference: ARO:3002988
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000630 (bacitracin
       B); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003250
   label: bcrC
   evidence:
@@ -77,3 +77,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:57Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

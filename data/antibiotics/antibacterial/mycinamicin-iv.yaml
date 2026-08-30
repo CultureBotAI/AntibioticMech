@@ -68,7 +68,7 @@ resistance_mechanisms:
   - reference: ARO:3001302
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001224 (mycinamicin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3002827
   label: tlrC
   evidence:
@@ -81,6 +81,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T00:54:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T01:13:48Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

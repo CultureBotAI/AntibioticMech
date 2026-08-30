@@ -68,6 +68,7 @@ xrefs:
 - chembl:CHEMBL70971
 - pubchem.compound:25429
 activity_roles:
+- CHEBI:24127
 - CHEBI:86328
 structural_class: benzimidazole antifungal
 structural_class_id: ARO:3009317
@@ -86,6 +87,7 @@ source_concepts:
   source_label: carbendazim
   minted_identifier: antibioticmech:aro-1153d9776c
   role_terms:
+  - CHEBI:24127
   - CHEBI:86328
   source_version: '2026-08-29'
 - source: CHEBI
@@ -93,10 +95,11 @@ source_concepts:
   source_label: carbendazim
   minted_identifier: antibioticmech:chebi-9061c38815
   role_terms:
+  - CHEBI:24127
   - CHEBI:86328
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009320
   label: Botrytis cinerea beta-tubulin with mutations conferring resistance against
     carbendazim
@@ -104,14 +107,14 @@ resistance_mechanisms:
   - reference: ARO:3009320
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009405
   label: Zymoseptoria tritici Cyp51 with mutations conferring resistance to carbendazim
   evidence:
   - reference: ARO:3009405
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009470
   label: Colletotrichum gloeosporioides beta-tubulin with mutations conferring resistance
     against carbendazim
@@ -119,7 +122,7 @@ resistance_mechanisms:
   - reference: ARO:3009470
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009474
   label: Colletotrichum siamense beta tubulin with mutations conferring resistance
     to carbendazim
@@ -127,7 +130,7 @@ resistance_mechanisms:
   - reference: ARO:3009474
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009475
   label: Colletotrichum truncatum beta tubulin with mutations conferring resistance
     to carbendazim
@@ -135,7 +138,7 @@ resistance_mechanisms:
   - reference: ARO:3009475
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009476
   label: Aspergillus fumigatus beta-tubulin with mutations conferring resistance to
     carbendazim
@@ -143,7 +146,7 @@ resistance_mechanisms:
   - reference: ARO:3009476
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009544
   label: Aspergillus fumigatus Cyp51A with mutations conferring resistance to carbendazim
   evidence:
@@ -155,3 +158,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

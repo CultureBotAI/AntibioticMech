@@ -25,7 +25,6 @@ xrefs:
 - pubchem.compound:16129712
 activity_roles:
 - CHEBI:33281
-- CHEBI:33282
 - CHEBI:36047
 structural_class: glycopeptide antibiotic
 structural_class_id: ARO:3000081
@@ -46,39 +45,38 @@ source_concepts:
   minted_identifier: antibioticmech:aro-a71ef91d49
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3000236
   label: glycopeptide resistance gene cluster VanA
   evidence:
   - reference: ARO:3000236
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3000253
   label: glycopeptide resistance gene cluster VanD
   evidence:
   - reference: ARO:3000253
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3000256
   label: glycopeptide resistance gene cluster VanM
   evidence:
   - reference: ARO:3000256
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3002914
   label: vanJ
   evidence:
   - reference: ARO:3002914
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003722
   label: glycopeptide resistance gene cluster VanI
   evidence:
@@ -92,7 +90,7 @@ resistance_mechanisms:
   - reference: ARO:3005021
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000029 (teicoplanin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007187
   label: glycopeptide resistance gene cluster vanP
   evidence:
@@ -112,6 +110,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
 - timestamp: '2026-08-30T00:54:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T01:13:56Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

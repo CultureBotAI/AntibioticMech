@@ -58,7 +58,7 @@ xrefs:
 - chembl:CHEMBL221886
 - pubchem.compound:36119
 activity_roles:
-- CHEBI:33282
+- CHEBI:33281
 structural_class: aminoglycoside antibiotic
 structural_class_id: ARO:0000016
 chemical_structure:
@@ -76,14 +76,14 @@ source_concepts:
   source_label: sisomicin
   minted_identifier: antibioticmech:aro-34e24f4116
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:9169
   source_label: sisomycin
   minted_identifier: antibioticmech:chebi-5a74b3f2b4
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   source_version: '2026-08-29'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_INACTIVATION
@@ -546,3 +546,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

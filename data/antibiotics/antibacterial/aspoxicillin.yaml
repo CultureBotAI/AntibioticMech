@@ -1,34 +1,18 @@
 identifier: CHEBI:31240
-label: Aspoxicillin
+label: aspoxicillin
 antimicrobial_class: ANTIBACTERIAL
 curation_status: SEEDED
 grounding_status: EXACT
 definition: Aspoxicillin is a broad-spectrum, semisynthetic penicillin derivative
   with antibacterial activity.
 definition_source: PMID:6833130
-synonyms:
-- synonym_text: aspoxicilina
-  synonym_type: INN
-  source: chebi
-- synonym_text: aspoxicilline
-  synonym_type: INN
-  source: chebi
-- synonym_text: Doyle
-  synonym_type: EXACT_SYNONYM
-  source: chebi
 parent_compounds:
-- CHEBI:16670
 - ARO:3000008
 xrefs:
 - ARO:3009133
 - cas:63358-49-6
-- drugcentral:248
-- kegg.compound:C13269
-- kegg.drug:D07469
 - chembl:CHEMBL1318150
 - pubchem.compound:71961
-activity_roles:
-- CHEBI:33282
 structural_class: penicillin beta-lactam
 structural_class_id: ARO:3000008
 chemical_structure:
@@ -45,18 +29,13 @@ source_concepts:
   source_id: ARO:3009133
   source_label: aspoxicillin
   minted_identifier: antibioticmech:aro-9acf5562e4
-  role_terms:
-  - CHEBI:33282
-  source_version: '2026-08-29'
-- source: CHEBI
-  source_id: CHEBI:31240
-  source_label: Aspoxicillin
-  minted_identifier: antibioticmech:chebi-ba92c5b113
-  role_terms:
-  - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

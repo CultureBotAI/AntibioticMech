@@ -51,7 +51,6 @@ xrefs:
 - chembl:CHEMBL294029
 - pubchem.compound:467825
 activity_roles:
-- CHEBI:35718
 - CHEBI:70868
 - CHEBI:86327
 structural_class: triazole antifungal
@@ -76,19 +75,18 @@ source_concepts:
   source_label: ravuconazole
   minted_identifier: antibioticmech:chebi-17acfad2b4
   role_terms:
-  - CHEBI:35718
   - CHEBI:70868
   - CHEBI:86327
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009204
   label: Aspergillus fumigatus cyp51a with mutations conferring resistance to ravuconazole
   evidence:
   - reference: ARO:3009204
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009162 (ravuconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009497
   label: Aspergillus flavus Cyp51A with mutations conferring resistance to ravuconazole
   evidence:
@@ -100,3 +98,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

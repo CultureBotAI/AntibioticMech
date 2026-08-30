@@ -38,14 +38,14 @@ source_concepts:
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000386
   label: MexAB-OprM
   evidence:
   - reference: ARO:3000386
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004024 (trimethoprim-sulfamethoxazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009290
   label: Pneumocystis jerovecii dhfr with mutations associated with resistance to
     Trimethoprim sulfamethoxazole combined with Pyrimethamine atovaquone
@@ -59,6 +59,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
 - timestamp: '2026-08-30T00:54:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T01:13:56Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

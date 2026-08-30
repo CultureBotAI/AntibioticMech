@@ -69,7 +69,7 @@ xrefs:
 - chembl:CHEMBL2106399
 - pubchem.compound:5282189
 activity_roles:
-- CHEBI:33282
+- CHEBI:33281
 - CHEBI:36047
 structural_class: macrolide antibiotic
 structural_class_id: ARO:0000000
@@ -88,7 +88,7 @@ source_concepts:
   source_label: josamycin
   minted_identifier: antibioticmech:aro-d08dacd0ee
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: ARO
@@ -96,7 +96,7 @@ source_concepts:
   source_label: kitasamycin
   minted_identifier: antibioticmech:aro-0c5d9c9627
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -104,7 +104,7 @@ source_concepts:
   source_label: josamycin
   minted_identifier: antibioticmech:chebi-26637f6c9a
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
@@ -122,21 +122,21 @@ resistance_mechanisms:
   - reference: ARO:3002824
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001227 (kitasamycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003697
   label: MexPQ-OpmE
   evidence:
   - reference: ARO:3003697
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001227 (kitasamycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004076
   label: MuxABC-OpmB
   evidence:
   - reference: ARO:3004076
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001227 (kitasamycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004174
   label: Chlamydia trachomatis 23S rRNA with mutation conferring resistance to macrolide
     antibiotics
@@ -144,7 +144,7 @@ resistance_mechanisms:
   - reference: ARO:3004174
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001221 (josamycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004181
   label: Streptococcus pneumoniae 23S rRNA mutation conferring resistance to macrolides
     and streptogramins antibiotics
@@ -157,3 +157,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -39,6 +39,7 @@ xrefs:
 - reaxys:1912585
 - wikipedia.en:Hexachlorobenzene
 activity_roles:
+- CHEBI:24127
 - CHEBI:86328
 chemical_structure:
   smiles: Clc1c(Cl)c(Cl)c(Cl)c(Cl)c1Cl
@@ -55,6 +56,7 @@ source_concepts:
   source_label: hexachlorobenzene
   minted_identifier: antibioticmech:chebi-a2ed31bd11
   role_terms:
+  - CHEBI:24127
   - CHEBI:86328
   source_version: '2026-08-29'
 curation_history:
@@ -62,3 +64,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -43,7 +43,6 @@ xrefs:
 - pubchem.compound:27200
 activity_roles:
 - CHEBI:33281
-- CHEBI:33282
 structural_class: phenicol antibiotic
 structural_class_id: ARO:3000387
 chemical_structure:
@@ -62,7 +61,6 @@ source_concepts:
   minted_identifier: antibioticmech:aro-af60808af7
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:32215
@@ -70,10 +68,9 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-ad740ea0f4
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3001328
   label: Escherichia coli mdfA
   evidence:
@@ -234,14 +231,14 @@ resistance_mechanisms:
   - reference: ARO:3003441
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003697
   label: MexPQ-OpmE
   evidence:
   - reference: ARO:3003697
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000456 (thiamphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003703
   label: MexMN-OprM
   evidence:
@@ -281,3 +278,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

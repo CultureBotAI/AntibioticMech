@@ -261,7 +261,7 @@ resistance_mechanisms:
   - reference: ARO:3004094
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000583 (pristinamycin
       IA); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004181
   label: Streptococcus pneumoniae 23S rRNA mutation conferring resistance to macrolides
     and streptogramins antibiotics
@@ -295,3 +295,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

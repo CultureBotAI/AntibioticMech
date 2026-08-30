@@ -52,6 +52,8 @@ xrefs:
 - chembl:CHEMBL1900522
 - pubchem.compound:73675
 activity_roles:
+- CHEBI:24127
+- CHEBI:35718
 - CHEBI:77884
 - CHEBI:86328
 structural_class: triazole antifungal
@@ -76,32 +78,34 @@ source_concepts:
   source_label: flusilazole
   minted_identifier: antibioticmech:chebi-7110ab8610
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:77884
   - CHEBI:86328
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009409
   label: Zymoseptoria tritici Cyp51 with mutations conferring resistance to flusilazole
   evidence:
   - reference: ARO:3009409
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009408 (flusilazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009535
   label: Pyrenopeziza brassicae Cyp51 with mutations conferring resistance to flusilazole
   evidence:
   - reference: ARO:3009535
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009408 (flusilazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009541
   label: Tapesia acuformis Cyp51 with mutations conferring resistance to flusilazole
   evidence:
   - reference: ARO:3009541
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009408 (flusilazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009542
   label: Tapesia yallundae Cyp51 with mutations conferring resistance to flusilazole
   evidence:
@@ -113,3 +117,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

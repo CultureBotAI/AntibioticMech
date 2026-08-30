@@ -34,6 +34,7 @@ xrefs:
 - kegg.compound:C06690
 - wikipedia.en:Candicidin
 activity_roles:
+- CHEBI:33281
 - CHEBI:86327
 chemical_structure:
   smiles: CC1/C=C/C=C/C=C/C=C/C=C/C=C/C=C/C(OC2O[C@H](C)[C@@H](O)[C@H](N)[C@@H]2O)CC(O)C(C(=O)O)C(O)CC(=O)CC(O)CC(O)CC(O)CC(=O)CCCC(=O)CC(=O)OC1C(C)CC(C)C(O)CC(=O)c1ccc(N)cc1
@@ -50,6 +51,7 @@ source_concepts:
   source_label: candicidin D
   minted_identifier: antibioticmech:chebi-35c3cfcb16
   role_terms:
+  - CHEBI:33281
   - CHEBI:86327
   source_version: '2026-08-29'
 curation_history:
@@ -57,3 +59,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

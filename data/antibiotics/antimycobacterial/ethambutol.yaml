@@ -65,8 +65,6 @@ xrefs:
 - pubchem.compound:14052
 activity_roles:
 - CHEBI:33231
-- CHEBI:33281
-- CHEBI:33282
 structural_class: polyamine antibiotic
 structural_class_id: ARO:3000527
 chemical_structure:
@@ -85,8 +83,6 @@ source_concepts:
   minted_identifier: antibioticmech:aro-a472e0292c
   role_terms:
   - CHEBI:33231
-  - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:4877
@@ -94,32 +90,30 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-8ef15eb8e0
   role_terms:
   - CHEBI:33231
-  - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3000235
   label: ethambutol resistant embB
   evidence:
   - reference: ARO:3000235
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3002706
   label: ethambutol resistant embC
   evidence:
   - reference: ARO:3002706
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3002876
   label: ethambutol resistant aftA
   evidence:
   - reference: ARO:3002876
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003325
   label: Mycobacterium tuberculosis variant bovis embB with mutation conferring resistance
     to ethambutol
@@ -127,105 +121,105 @@ resistance_mechanisms:
   - reference: ARO:3003325
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003326
   label: Mycobacterium tuberculosis embB with mutation conferring resistance to ethambutol
   evidence:
   - reference: ARO:3003326
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003327
   label: Mycobacterium tuberculosis embC mutant conferring resistance to ethambutol
   evidence:
   - reference: ARO:3003327
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003447
   label: ethambutol resistant iniA
   evidence:
   - reference: ARO:3003447
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003448
   label: Mycobacterium tuberculosis iniA mutant conferring resistance to ethambutol
   evidence:
   - reference: ARO:3003448
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003450
   label: Ethambutol resistant iniC
   evidence:
   - reference: ARO:3003450
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003451
   label: Mycobacterium tuberculosis iniC mutant conferring resistance to ethambutol
   evidence:
   - reference: ARO:3003451
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003452
   label: ethambutol resistant embA
   evidence:
   - reference: ARO:3003452
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003453
   label: Mycobacterium tuberculosis embA mutant conferring resistance to ethambutol
   evidence:
   - reference: ARO:3003453
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003454
   label: ethambutol resistant embR
   evidence:
   - reference: ARO:3003454
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003455
   label: Mycobacterium tuberculosis embR mutant conferring resistance to ethambutol
   evidence:
   - reference: ARO:3003455
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004135
   label: Mycobacterium tuberculosis iniB with mutation conferring resistance to ethambutol
   evidence:
   - reference: ARO:3004135
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004136
   label: Ethambutol resistant iniB
   evidence:
   - reference: ARO:3004136
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004950
   label: Mycobacterium tuberculosis ubiA mutations confer resistance to ethambutol
   evidence:
   - reference: ARO:3004950
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004951
   label: Mycobacterium tuberculosis aftA mutations confer resistance to ethambutol
   evidence:
   - reference: ARO:3004951
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000497 (ethambutol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007185
   label: Mycobacterium tuberculosis Rv1258c mutations confer resistance to ethambutol
     and capreomycin
@@ -269,3 +263,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

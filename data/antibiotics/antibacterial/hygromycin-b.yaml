@@ -86,7 +86,7 @@ resistance_mechanisms:
   - reference: ARO:3002661
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000214 (hygromycin
       B); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003539
   label: Mycolicibacterium smegmatis 16S rRNA (rrsA) mutation conferring resistance
     to hygromycin B
@@ -94,7 +94,7 @@ resistance_mechanisms:
   - reference: ARO:3003539
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000214 (hygromycin
       B); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003540
   label: Mycolicibacterium smegmatis 16S rRNA (rrsB) mutation conferring resistance
     to hygromycin B
@@ -114,3 +114,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

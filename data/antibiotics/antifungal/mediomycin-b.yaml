@@ -18,6 +18,7 @@ parent_compounds:
 xrefs:
 - reaxys:11058771
 activity_roles:
+- CHEBI:33281
 - CHEBI:35718
 chemical_structure:
   smiles: C/C(=C\C=C\C=C\CC/C=C/C(C)[C@H](O)[C@@H](C)[C@H](O)/C=C/C=C/C=C/C=C/C=C/C=C/CC(O)C(C)C(=O)C[C@H](O)C[C@H](O)/C=C/C[C@H](O)C[C@@H](O)C[C@H](O)/C=C/C[C@@H](O)C[C@H](O)/C=C/C[C@@H](O)C[C@@H](O)CCCN)C(=O)O
@@ -34,6 +35,7 @@ source_concepts:
   source_label: mediomycin B
   minted_identifier: antibioticmech:chebi-ceab96e092
   role_terms:
+  - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -41,3 +43,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

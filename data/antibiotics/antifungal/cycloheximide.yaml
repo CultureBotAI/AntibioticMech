@@ -96,14 +96,14 @@ source_concepts:
   - CHEBI:35718
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3009291
   label: Trychophyton rubrum MFS1 with mutations conferring resistance against cyclohexamide
   evidence:
   - reference: ARO:3009291
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009188 (cycloheximide);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009326
   label: Saccharomyces cerevisiae ACT1 with mutations conferring resistance to cycloheximide
   evidence:
@@ -122,3 +122,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

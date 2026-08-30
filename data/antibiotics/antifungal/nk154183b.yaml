@@ -22,6 +22,7 @@ xrefs:
 - cas:152986-49-7
 - reaxys:8182998
 activity_roles:
+- CHEBI:33281
 - CHEBI:35718
 chemical_structure:
   smiles: CCC(O)CC1CCCC2(CC3OC(=O)/C=C/C(C)(O)C(O)C(C)C(O)C(OC4CCC(N(C)C)C(C)O4)C(O)C(C)(O)CCCCC/C=C/C4CC(C)(C)OC4(O)CC(O2)C3C)O1
@@ -38,6 +39,7 @@ source_concepts:
   source_label: NK154183B
   minted_identifier: antibioticmech:chebi-d9a6e856a2
   role_terms:
+  - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -45,3 +47,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

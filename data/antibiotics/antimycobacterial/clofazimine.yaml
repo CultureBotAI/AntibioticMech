@@ -82,7 +82,7 @@ source_concepts:
   - CHEBI:35816
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007692
   label: Mycobacterium tuberculosis Rv2535c with mutation conferring resistance to
     bedaquiline
@@ -90,7 +90,7 @@ resistance_mechanisms:
   - reference: ARO:3007692
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004012 (clofazimine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007852
   label: Mycobacterium tuberculosis Rv0678 with mutation conferring resistance to
     clofazimine
@@ -98,7 +98,7 @@ resistance_mechanisms:
   - reference: ARO:3007852
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004012 (clofazimine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009335
   label: Mycobacterium tuberculosis Rv2535c with mutation conferring resistance to
     clofazimine
@@ -124,3 +124,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

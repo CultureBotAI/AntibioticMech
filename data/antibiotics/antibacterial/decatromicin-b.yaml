@@ -25,6 +25,7 @@ parent_compounds:
 - CHEBI:51026
 - CHEBI:63349
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 chemical_structure:
   smiles: '[H][C@]12C=C[C@@]3([H])C/C=C/C/C(C)=C/[C@@]4(C)C=C(C(=O)O)[C@@H](CC)C[C@]45OC(=O)C(=C5O)C(=O)[C@@]3(CC)[C@]1([H])CC[C@H](C)[C@]2([H])O[C@H]1C[C@H](O)[C@H](NC(=O)c2nc(Cl)cc2Cl)[C@@H](C)O1'
@@ -41,6 +42,7 @@ source_concepts:
   source_label: decatromicin B
   minted_identifier: antibioticmech:chebi-65fa083632
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -48,3 +50,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

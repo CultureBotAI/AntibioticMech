@@ -39,6 +39,7 @@ xrefs:
 - reaxys:3647647
 - wikipedia.en:Virginiamycin_S1
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 chemical_structure:
   smiles: '[H][C@]1(Cc2ccccc2)C(=O)N2CCC(=O)C[C@@]2([H])C(=O)N[C@@H](c2ccccc2)C(=O)O[C@H](C)[C@H](NC(=O)c2ncccc2O)C(=O)N[C@H](CC)C(=O)N2CCC[C@@]2([H])C(=O)N1C'
@@ -55,6 +56,7 @@ source_concepts:
   source_label: virginiamycin S1
   minted_identifier: antibioticmech:chebi-28279e2ba4
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 curation_history:
@@ -62,3 +64,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

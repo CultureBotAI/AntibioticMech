@@ -90,6 +90,7 @@ xrefs:
 - chembl:CHEMBL891
 - pubchem.compound:6098
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 - CHEBI:36047
 structural_class: penicillin beta-lactam
@@ -109,6 +110,7 @@ source_concepts:
   source_label: cloxacillin
   minted_identifier: antibioticmech:aro-0542d0dd3d
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
@@ -117,11 +119,12 @@ source_concepts:
   source_label: cloxacillin
   minted_identifier: antibioticmech:chebi-a59d504bdb
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000788
   label: MdtEF-TolC
   evidence:
@@ -140,3 +143,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

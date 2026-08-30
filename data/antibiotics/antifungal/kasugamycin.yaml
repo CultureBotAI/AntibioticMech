@@ -43,6 +43,9 @@ xrefs:
 - chembl:CHEMBL1631109
 - pubchem.compound:65174
 activity_roles:
+- CHEBI:24127
+- CHEBI:33281
+- CHEBI:35718
 - CHEBI:86328
 structural_class: aminoglycoside antibiotic
 structural_class_id: ARO:0000016
@@ -61,6 +64,9 @@ source_concepts:
   source_label: kasugamycin
   minted_identifier: antibioticmech:aro-939e110ffd
   role_terms:
+  - CHEBI:24127
+  - CHEBI:33281
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 - source: CHEBI
@@ -68,10 +74,13 @@ source_concepts:
   source_label: kasugamycin
   minted_identifier: antibioticmech:chebi-94c20c967b
   role_terms:
+  - CHEBI:24127
+  - CHEBI:33281
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003333
   label: Escherichia coli 16S rRNA (rrsC) mutation conferring resistance to kasugamicin
   evidence:
@@ -97,3 +106,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

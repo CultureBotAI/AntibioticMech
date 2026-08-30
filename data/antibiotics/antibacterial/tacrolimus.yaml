@@ -40,7 +40,7 @@ resistance_mechanisms:
   - reference: ARO:3009352
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009353 (tacrolimus);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3009437
   label: Candida albicans CDR1 with mutations conferring resistance to tacrolimus
   evidence:
@@ -52,3 +52,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

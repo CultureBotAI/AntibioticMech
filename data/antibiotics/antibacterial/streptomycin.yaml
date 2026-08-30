@@ -61,9 +61,12 @@ xrefs:
 - chembl:CHEMBL372795
 - pubchem.compound:19649
 activity_roles:
+- CHEBI:24127
 - CHEBI:33281
+- CHEBI:35718
 - CHEBI:36043
 - CHEBI:36047
+- CHEBI:86327
 - CHEBI:86328
 structural_class: aminoglycoside antibiotic
 structural_class_id: ARO:0000016
@@ -82,9 +85,12 @@ source_concepts:
   source_label: streptomycin
   minted_identifier: antibioticmech:aro-26f72b86a6
   role_terms:
+  - CHEBI:24127
   - CHEBI:33281
+  - CHEBI:35718
   - CHEBI:36043
   - CHEBI:36047
+  - CHEBI:86327
   - CHEBI:86328
   source_version: '2026-08-29'
 - source: CHEBI
@@ -92,9 +98,12 @@ source_concepts:
   source_label: streptomycin
   minted_identifier: antibioticmech:chebi-214ec2f677
   role_terms:
+  - CHEBI:24127
   - CHEBI:33281
+  - CHEBI:35718
   - CHEBI:36043
   - CHEBI:36047
+  - CHEBI:86327
   - CHEBI:86328
   source_version: '2026-08-29'
 resistance_mechanisms:
@@ -329,7 +338,7 @@ resistance_mechanisms:
   - reference: ARO:3002660
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003062
   label: ykkCD
   evidence:
@@ -343,21 +352,21 @@ resistance_mechanisms:
   - reference: ARO:3003197
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003395
   label: Mycobacterium tuberculosis rpsL mutations conferring resistance to streptomycin
   evidence:
   - reference: ARO:3003395
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003405
   label: Escherichia coli 16S rRNA (rrsB) mutation conferring resistance to streptomycin
   evidence:
   - reference: ARO:3003405
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003406
   label: Escherichia coli 16S rRNA (rrnB) mutation conferring resistance to streptomycin
   evidence:
@@ -378,14 +387,14 @@ resistance_mechanisms:
   - reference: ARO:3003470
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003480
   label: Mycobacterium tuberculosis 16S rRNA mutation conferring resistance to streptomycin
   evidence:
   - reference: ARO:3003480
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003541
   label: Mycolicibacterium smegmatis 16S rRNA (rrsB) mutation conferring resistance
     to streptomycin
@@ -393,7 +402,7 @@ resistance_mechanisms:
   - reference: ARO:3003541
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003978
   label: Chlamydomonas reinhardtii 16S rRNA (rrnS) mutation conferring resistance
     to streptomycin
@@ -422,35 +431,35 @@ resistance_mechanisms:
   - reference: ARO:3004091
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3004127
   label: Escherichia coli mipA
   evidence:
   - reference: ARO:3004127
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004572
   label: Staphylococcus aureus LmrS
   evidence:
   - reference: ARO:3004572
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004578
   label: Acinetobacter baumannii AbuO
   evidence:
   - reference: ARO:3004578
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004585
   label: Klebsiella pneumoniae KpnEF
   evidence:
   - reference: ARO:3004585
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004598
   label: Klebsiella pneumoniae KpnGH-TolC
   evidence:
@@ -492,21 +501,21 @@ resistance_mechanisms:
   - reference: ARO:3004704
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004965
   label: streptomycin resistant whib7
   evidence:
   - reference: ARO:3004965
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004968
   label: Mycobacterium tuberculosis whib7 mutation conferring resistance to streptomycin
   evidence:
   - reference: ARO:3004968
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004971
   label: Mycobacterium tuberculosis Rv1258c mutations confer resistance to streptomycin
   evidence:
@@ -520,7 +529,7 @@ resistance_mechanisms:
   - reference: ARO:3005062
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007186
   label: Mycobacterium tuberculosis Rv1258c mutations confer resistance to pyrazinamide,
     isoniazid, and streptomycin
@@ -528,7 +537,7 @@ resistance_mechanisms:
   - reference: ARO:3007186
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000040 (streptomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3007456
   label: dfrL
   evidence:
@@ -553,3 +562,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

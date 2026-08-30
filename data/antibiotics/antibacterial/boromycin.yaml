@@ -34,6 +34,7 @@ xrefs:
 - wikipedia.en:Boromycin
 - pubchem.compound:6436027
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 structural_class: macrolide antibiotic
 structural_class_id: ARO:0000000
@@ -52,6 +53,7 @@ source_concepts:
   source_label: boromycin
   minted_identifier: antibioticmech:aro-7f7ce7fcdf
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 - source: CHEBI
@@ -59,6 +61,7 @@ source_concepts:
   source_label: boromycin
   minted_identifier: antibioticmech:chebi-5a365cdcba
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -66,3 +69,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

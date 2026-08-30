@@ -20,6 +20,7 @@ parent_compounds:
 - CHEBI:35681
 - CHEBI:63353
 activity_roles:
+- CHEBI:33281
 - CHEBI:35718
 chemical_structure:
   smiles: '[H][C@@]1([C@H](O)COC(=O)/C=C/C=C\CCC(O)CC)O[C@@H](O[C@@]2([H])[C@H](OC(=O)/C=C/C=C/CC(O)/C=C/C=C/CCCCC)[C@@H](O)[C@H](Oc3c(O)cc(O)cc3CO)O[C@@H]2CO)[C@H](O)[C@H]1O'
@@ -36,6 +37,7 @@ source_concepts:
   source_label: furanocandin
   minted_identifier: antibioticmech:chebi-751e7551d2
   role_terms:
+  - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -43,3 +45,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

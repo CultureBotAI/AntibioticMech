@@ -8,40 +8,19 @@ definition: Oleandomycin is a 14-membered macrolide produced by Streptomyces ant
   sugar. It targets the 50S ribosomal subunit to prevent protein synthesis.
 definition_source: PMID:13425352
 synonyms:
-- synonym_text: (3R,5R,6S,7R,8R,11R,12S,13R,14S,15S)-6-hydroxy-5,7,8,11,13,15-hexamethyl-4,10-dioxo-14-[3,4,6-trideoxy-3-(dimethylamino)-β-D-xylo-hexopyranosyloxy]-1,9-dioxaspiro[2.13]hexadec-12-yl
-    2,6-dideoxy-3-O-methyl-α-L-arabino-hexopyranoside
-  synonym_type: EXACT_SYNONYM
-  source: chebi
 - synonym_text: Amimycin
   synonym_type: EXACT_SYNONYM
-  source: chebi
-- synonym_text: Landomycin
-  synonym_type: EXACT_SYNONYM
-  source: chebi
+  source: aro
 - synonym_text: Matromycin
   synonym_type: EXACT_SYNONYM
-  source: chebi
-- synonym_text: Oleandomycin
-  synonym_type: EXACT_SYNONYM
-  source: chebi
-- synonym_text: Romicil
-  synonym_type: EXACT_SYNONYM
-  source: chebi
+  source: aro
 parent_compounds:
-- CHEBI:25661
 - ARO:0000000
 xrefs:
 - ARO:3000867
-- beilstein:74476
 - cas:3922-90-5
-- drugcentral:1983
-- kegg.compound:C01946
-- lipidmaps:LMPK04000007
-- metacyc.compound:OLEANDOMYCIN
 - chembl:CHEMBL606258
 - pubchem.compound:72493
-activity_roles:
-- CHEBI:33282
 structural_class: macrolide antibiotic
 structural_class_id: ARO:0000000
 chemical_structure:
@@ -58,15 +37,6 @@ source_concepts:
   source_id: ARO:3000867
   source_label: oleandomycin
   minted_identifier: antibioticmech:aro-4ec68d2906
-  role_terms:
-  - CHEBI:33282
-  source_version: '2026-08-29'
-- source: CHEBI
-  source_id: CHEBI:16869
-  source_label: oleandomycin
-  minted_identifier: antibioticmech:chebi-7ca2e35a73
-  role_terms:
-  - CHEBI:33282
   source_version: '2026-08-29'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
@@ -265,14 +235,14 @@ resistance_mechanisms:
   - reference: ARO:3002825
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003036
   label: oleB
   evidence:
   - reference: ARO:3003036
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003748
   label: oleC
   evidence:
@@ -284,3 +254,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

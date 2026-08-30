@@ -38,14 +38,14 @@ source_concepts:
   - CHEBI:33281
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3003059
   label: tmrB
   evidence:
   - reference: ARO:3003059
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000009 (tunicamycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3004285
   label: tunicamycin resistance protein
   evidence:
@@ -58,6 +58,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
 - timestamp: '2026-08-30T00:54:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T01:13:57Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

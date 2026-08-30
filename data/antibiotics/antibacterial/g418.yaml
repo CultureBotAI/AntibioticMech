@@ -69,7 +69,7 @@ resistance_mechanisms:
   - reference: ARO:3000862
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000653 (G418); database
       assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003397
   label: Escherichia coli 16S rRNA (rrsB) mutation conferring resistance to G418
   evidence:
@@ -88,3 +88,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

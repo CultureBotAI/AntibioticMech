@@ -18,6 +18,7 @@ xrefs:
 - cas:75635-18-6
 - patent:US4189569
 activity_roles:
+- CHEBI:33281
 - CHEBI:36043
 chemical_structure:
   smiles: CO[C@@H]1CO[C@H](O[C@@H]2[C@@H](O)[C@H](O[C@H]3O[C@H](CN)C[C@H](O)[C@H]3N)[C@@H](N)C[C@H]2N)[C@H](N)[C@H]1N
@@ -34,6 +35,7 @@ source_concepts:
   source_label: seldomycin 5
   minted_identifier: antibioticmech:chebi-6594c6a6be
   role_terms:
+  - CHEBI:33281
   - CHEBI:36043
   source_version: '2026-08-29'
 curation_history:
@@ -41,3 +43,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

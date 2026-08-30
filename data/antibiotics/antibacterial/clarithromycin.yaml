@@ -85,6 +85,7 @@ xrefs:
 - chembl:CHEMBL1741
 - pubchem.compound:84029
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 structural_class: macrolide antibiotic
 structural_class_id: ARO:0000000
@@ -103,6 +104,7 @@ source_concepts:
   source_label: clarithromycin
   minted_identifier: antibioticmech:aro-5c92a4ddc8
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -110,6 +112,7 @@ source_concepts:
   source_label: clarithromycin
   minted_identifier: antibioticmech:chebi-e63133b2eb
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
@@ -309,28 +312,28 @@ resistance_mechanisms:
   - reference: ARO:3003742
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003969
   label: lmrP
   evidence:
   - reference: ARO:3003969
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004134
   label: Helicobacter pylori 23S rRNA with mutation conferring resistance to clarithromycin
   evidence:
   - reference: ARO:3004134
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004160
   label: Escherichia coli 23S rRNA with mutation conferring resistance to clarithromycin
   evidence:
   - reference: ARO:3004160
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004163
   label: Mycobacteroides abscessus 23S rRNA with mutation conferring resistance to
     clarithromycin
@@ -338,14 +341,14 @@ resistance_mechanisms:
   - reference: ARO:3004163
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004164
   label: Mycobacterium avium 23S rRNA with mutation conferring resistance to clarithromycin
   evidence:
   - reference: ARO:3004164
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004165
   label: Mycobacteroides chelonae 23S rRNA with mutation conferring resistance to
     clarithromycin
@@ -353,7 +356,7 @@ resistance_mechanisms:
   - reference: ARO:3004165
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004166
   label: Mycobacterium intracellulare 23S rRNA with mutation conferring resistance
     to clarithromycin
@@ -361,14 +364,14 @@ resistance_mechanisms:
   - reference: ARO:3004166
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004168
   label: Mycobacterium kansasii 23S rRNA with mutation conferring resistance to clarithromycin
   evidence:
   - reference: ARO:3004168
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004169
   label: Mycolicibacterium smegmatis 23S rRNA with mutation conferring resistance
     to clarithromycin
@@ -376,7 +379,7 @@ resistance_mechanisms:
   - reference: ARO:3004169
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004176
   label: Mycoplasma hominis 23S rRNA with mutation conferring resistance to macrolide
     antibiotics
@@ -384,7 +387,7 @@ resistance_mechanisms:
   - reference: ARO:3004176
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000065 (clarithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004177
   label: Mycoplasmopsis fermentans 23S rRNA with mutation conferring resistance to
     macrolide antibiotics
@@ -439,3 +442,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -72,6 +72,7 @@ xrefs:
 - chembl:CHEMBL21
 - pubchem.compound:5333
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 structural_class: sulfonamide antibiotic
 structural_class_id: ARO:3000282
@@ -90,6 +91,7 @@ source_concepts:
   source_label: sulfanilamide
   minted_identifier: antibioticmech:aro-dba3a37e97
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 - source: CHEBI
@@ -97,6 +99,7 @@ source_concepts:
   source_label: sulfanilamide
   minted_identifier: antibioticmech:chebi-fac7578230
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -104,3 +107,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

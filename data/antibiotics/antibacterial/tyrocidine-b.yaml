@@ -21,6 +21,7 @@ parent_compounds:
 xrefs:
 - reaxys:505981
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 chemical_structure:
   smiles: '[H][C@@]12CCCN1C(=O)[C@@H](Cc1ccccc1)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CCCN)NC(=O)[C@H](C(C)C)NC(=O)[C@]([H])(Cc1ccc(O)cc1)NC(=O)[C@H](CCC(N)=O)NC(=O)[C@H](CC(N)=O)NC(=O)[C@@H](Cc1ccccc1)NC(=O)[C@H](Cc1cnc3ccccc13)NC2=O'
@@ -37,6 +38,7 @@ source_concepts:
   source_label: tyrocidine B
   minted_identifier: antibioticmech:chebi-186dd5e561
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -44,3 +46,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

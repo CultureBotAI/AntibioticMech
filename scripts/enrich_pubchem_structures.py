@@ -139,7 +139,11 @@ def main() -> int:
                         help="Print the work and one example URL; make no request.")
     parser.add_argument("--only", nargs="*", default=None, metavar="ARO_ID",
                         help="Fetch only these ARO ids — the canary before the batch.")
-    parser.add_argument("--limit", type=int, help="Stop after N successful fetches.")
+    parser.add_argument("--limit", type=int,
+                        help="Stop after N successful fetches. Successive runs continue "
+                             "where the last left off.")
+    parser.add_argument("--force", action="store_true",
+                        help="Re-fetch molecules that already have a row.")
     args = parser.parse_args()
 
     conf = yaml.safe_load(CONF_PATH.read_text(encoding="utf-8"))
@@ -150,46 +154,77 @@ def main() -> int:
         missing = wanted - {w[0] for w in work}
         if missing:
             print(f"not in the no-structure worklist: {sorted(missing)}", file=sys.stderr)
-    if not work:
-        print("nothing to fetch", file=sys.stderr)
-        return 0
-
-    print(f"{len(work)} ARO molecules need a PubChem structure", file=sys.stderr)
+    # The dry run reports the FULL worklist and the URL it would call: it is the
+    # free check before the paid one, so it must describe the work rather than
+    # what happens to be left after a previous run.
     if args.dry_run:
+        if not work:
+            print("nothing to fetch", file=sys.stderr)
+            return 0
+        print(f"{len(work)} ARO molecules need a PubChem structure", file=sys.stderr)
         aro_id, name, cid = work[0]
         print(f"example: {aro_id} ({name}) CID {cid}", file=sys.stderr)
         print(request_url(conf, cid))
         return 0
 
+    existing = {r["aro_id"]: r for r in load_tsv(OUT_PATH)} if OUT_PATH.exists() else {}
+    # `--only` names specific molecules and always fetches them: a canary that
+    # skipped because a row already existed would prove nothing, which is the
+    # failure mode the canary rule is about.
+    if not args.force and not args.only:
+        already = {w[0] for w in work} & set(existing)
+        work = [w for w in work if w[0] not in existing]
+        if already:
+            print(f"{len(already)} molecules already have a row; skipping "
+                  f"(use --force to re-fetch)", file=sys.stderr)
+    if not work:
+        # An --only that matches nothing must NOT look like a successful canary:
+        # the whole point of the canary step is to prove a real call worked, and
+        # a green exit having made no request proves the opposite of that.
+        if args.only:
+            print("canary matched no work — nothing was fetched and nothing was proved",
+                  file=sys.stderr)
+            return 1
+        print("nothing to fetch", file=sys.stderr)
+        return 0
+
+    print(f"{len(work)} ARO molecules to fetch", file=sys.stderr)
+
     # Keyed by ARO id, not CID: two ARO molecules can point at the same PubChem
     # CID (a salt and its parent, say), and keying on CID would silently drop one
     # of them — the seeder looks rows up by aro_id.
-    existing = {r["aro_id"]: r for r in load_tsv(OUT_PATH)} if OUT_PATH.exists() else {}
     delay = 1.0 / float(conf["pubchem"].get("requests_per_second", 3))
     ok = failed = 0
-    for aro_id, name, cid in work:
-        try:
-            prop = fetch(request_url(conf, cid))
-        except (urllib.error.URLError, KeyError, IndexError, json.JSONDecodeError) as exc:
-            print(f"  FAILED {aro_id} CID {cid}: {exc}", file=sys.stderr)
-            failed += 1
+    try:
+        for aro_id, name, cid in work:
+            try:
+                prop = fetch(request_url(conf, cid))
+            # OSError covers the socket read timeout that json.load raises from
+            # inside the response — a bare TimeoutError, NOT a URLError, and
+            # previously fatal. Losing a whole rate-limited batch to one stalled
+            # connection is the failure this handler exists to prevent.
+            except (OSError, KeyError, IndexError, json.JSONDecodeError) as exc:
+                print(f"  FAILED {aro_id} CID {cid}: {exc}", file=sys.stderr)
+                failed += 1
+                time.sleep(delay)
+                continue
+            row = to_row(prop, aro_id, name)
+            if not row["standard_inchi_key"]:
+                print(f"  no InChIKey for {aro_id} CID {cid}; skipped", file=sys.stderr)
+                failed += 1
+                continue
+            existing[aro_id] = row
+            ok += 1
+            print(f"  {aro_id} {name}: {row['molecular_formula']} {row['standard_inchi_key']}",
+                  file=sys.stderr)
+            if args.limit and ok >= args.limit:
+                break
             time.sleep(delay)
-            continue
-        row = to_row(prop, aro_id, name)
-        if not row["standard_inchi_key"]:
-            print(f"  no InChIKey for {aro_id} CID {cid}; skipped", file=sys.stderr)
-            failed += 1
-            continue
-        existing[aro_id] = row
-        ok += 1
-        print(f"  {aro_id} {name}: {row['molecular_formula']} {row['standard_inchi_key']}",
-              file=sys.stderr)
-        if args.limit and ok >= args.limit:
-            break
-        time.sleep(delay)
-
-    write_rows(existing)
-    update_manifest()
+    finally:
+        # Every completed fetch reaches disk even if the run dies here: these
+        # calls are rate-limited and cannot be re-run for free.
+        write_rows(existing)
+        update_manifest()
     print(f"wrote {OUT_PATH.relative_to(REPO_ROOT)}: {len(existing)} rows "
           f"({ok} fetched now, {failed} failed)", file=sys.stderr)
     return 0 if ok else 1

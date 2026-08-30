@@ -81,6 +81,7 @@ xrefs:
 - chembl:CHEMBL1200544
 - pubchem.compound:27447
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 structural_class: cephalosporin
 structural_class_id: ARO:0000032
@@ -99,6 +100,7 @@ source_concepts:
   source_label: cefalexin
   minted_identifier: antibioticmech:aro-90e5cc8a68
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -106,6 +108,7 @@ source_concepts:
   source_label: cephalexin
   minted_identifier: antibioticmech:chebi-f5d0d76424
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 molecular_targets:
@@ -120,3 +123,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -207,7 +207,7 @@ resistance_mechanisms:
   - reference: ARO:3000605
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3000616
   label: mel
   evidence:
@@ -221,14 +221,14 @@ resistance_mechanisms:
   - reference: ARO:3003991
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004108
   label: Enterobacter cloacae rob
   evidence:
   - reference: ARO:3004108
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004131
   label: Escherichia coli 23S rRNA with mutation conferring resistance to erythromycin
     and telithromycin
@@ -236,7 +236,7 @@ resistance_mechanisms:
   - reference: ARO:3004131
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004176
   label: Mycoplasma hominis 23S rRNA with mutation conferring resistance to macrolide
     antibiotics
@@ -270,3 +270,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

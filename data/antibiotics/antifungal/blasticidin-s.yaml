@@ -31,7 +31,9 @@ xrefs:
 - wikipedia.en:Blasticidin_S
 activity_roles:
 - CHEBI:24127
+- CHEBI:25605
 - CHEBI:33281
+- CHEBI:35718
 chemical_structure:
   smiles: '[H][C@]1(n2ccc(N)nc2=O)C=C[C@H](NC(=O)C[C@@H](N)CCN(C)C(=N)N)[C@@]([H])(C(=O)O)O1'
   standard_inchi: InChI=1S/C17H26N8O5/c1-24(16(20)21)6-4-9(18)8-12(26)22-10-2-3-13(30-14(10)15(27)28)25-7-5-11(19)23-17(25)29/h2-3,5,7,9-10,13-14H,4,6,8,18H2,1H3,(H3,20,21)(H,22,26)(H,27,28)(H2,19,23,29)/t9-,10-,13+,14-/m0/s1
@@ -48,10 +50,16 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-fc78edf9a1
   role_terms:
   - CHEBI:24127
+  - CHEBI:25605
   - CHEBI:33281
+  - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

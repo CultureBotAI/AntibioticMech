@@ -27,6 +27,7 @@ xrefs:
 - chembl:CHEMBL1214185
 - pubchem.compound:6915744
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 structural_class: macrolide antibiotic
 structural_class_id: ARO:0000000
@@ -45,6 +46,7 @@ source_concepts:
   source_label: roxithromycin
   minted_identifier: antibioticmech:aro-016f235581
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -52,6 +54,7 @@ source_concepts:
   source_label: roxithromycin
   minted_identifier: antibioticmech:chebi-f30d420180
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
@@ -237,7 +240,7 @@ resistance_mechanisms:
   - reference: ARO:3003071
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000027 (roxithromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003969
   label: lmrP
   evidence:
@@ -263,3 +266,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

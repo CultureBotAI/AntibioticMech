@@ -26,6 +26,8 @@ xrefs:
 - ppdb:245
 - reaxys:8396839
 activity_roles:
+- CHEBI:24127
+- CHEBI:35718
 - CHEBI:86328
 chemical_structure:
   smiles: '[H]C(C(=O)N1CCOCC1)=C(c1ccc(Cl)cc1)c1ccc(OC)c(OC)c1'
@@ -42,6 +44,8 @@ source_concepts:
   source_label: dimethomorph
   minted_identifier: antibioticmech:chebi-248ccb1c40
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 curation_history:
@@ -49,3 +53,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

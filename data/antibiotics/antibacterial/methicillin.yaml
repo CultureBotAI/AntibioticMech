@@ -71,7 +71,7 @@ xrefs:
 - chembl:CHEMBL575
 - pubchem.compound:6087
 activity_roles:
-- CHEBI:33282
+- CHEBI:33281
 - CHEBI:36047
 structural_class: penicillin beta-lactam
 structural_class_id: ARO:3000008
@@ -90,7 +90,7 @@ source_concepts:
   source_label: methicillin
   minted_identifier: antibioticmech:aro-0633d1676e
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -98,39 +98,39 @@ source_concepts:
   source_label: methicillin
   minted_identifier: antibioticmech:chebi-fb6bb57072
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3000617
   label: mecA
   evidence:
   - reference: ARO:3000617
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000015 (methicillin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3001209
   label: mecC
   evidence:
   - reference: ARO:3001209
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000015 (methicillin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3003440
   label: mecB
   evidence:
   - reference: ARO:3003440
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000015 (methicillin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003942
   label: abcA
   evidence:
   - reference: ARO:3003942
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000015 (methicillin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3004185
   label: mecD
   evidence:
@@ -149,3 +149,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

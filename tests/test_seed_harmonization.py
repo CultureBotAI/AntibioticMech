@@ -189,17 +189,93 @@ def test_a_curator_added_target_survives_but_card_items_are_reseeded():
     citation is the curator's and is kept."""
     from seed_from_sources import merge_with_existing
 
-    card_item = {"target_label": "50S subunit",
-                 "evidence": [{"reference": "ARO:3000710", "notes": "database assertion"}]}
+    card_item = {"target_id": "ARO:3000710", "target_label": "50S subunit",
+                 "evidence": [{"reference": "ARO:3000710",
+                               "notes": "CARD/ARO asserts targeted_by_antibiotic ..."}]}
     curated_item = {"target_label": "23S rRNA A2058",
                     "evidence": [{"reference": "PMID:15980346"}]}
     seeded = {"identifier": "CHEBI:42355", "label": "erythromycin A",
               "antimicrobial_class": "ANTIBACTERIAL", "curation_status": "SEEDED",
               "grounding_status": "EXACT", "molecular_targets": [card_item],
               "curation_history": []}
-    existing = dict(seeded) | {"molecular_targets": [{"target_label": "stale CARD row",
-                                                     "evidence": [{"reference": "ARO:9999999"}]},
-                                                    curated_item]}
+    stale_card_item = {"target_id": "ARO:9999999", "target_label": "stale CARD row",
+                       "evidence": [{"reference": "ARO:9999999",
+                                     "notes": "CARD/ARO asserts targeted_by_antibiotic ..."}]}
+    existing = dict(seeded) | {"molecular_targets": [stale_card_item, curated_item]}
     merged = merge_with_existing(seeded, existing)
     labels = [t["target_label"] for t in merged["molecular_targets"]]
     assert labels == ["50S subunit", "23S rRNA A2058"]
+
+
+def test_a_curator_item_citing_an_aro_term_is_not_mistaken_for_seeder_output():
+    """The case the old prefix-only ownership test deleted: a curator grounds a
+    resistance mechanism in an ARO determinant CARD does not link to this
+    molecule. It cites ARO, but it is not the seeder's, and it must survive."""
+    from seed_from_sources import is_card_sourced, merge_with_existing
+
+    curator_item = {
+        "mechanism_type": "ANTIBIOTIC_EFFLUX",
+        "aro_id": "ARO:3000216",
+        "label": "acrB",
+        "evidence": [{"reference": "ARO:3000216",
+                      "notes": "curator: acrB effluxes this compound (PMID pending)"}],
+    }
+    assert not is_card_sourced(curator_item)
+    assert not is_card_sourced(curator_item, seeded_ids=set())
+
+    seeded = {"identifier": "CHEBI:42355", "label": "erythromycin A",
+              "antimicrobial_class": "ANTIBACTERIAL", "curation_status": "SEEDED",
+              "grounding_status": "EXACT", "curation_history": []}
+    merged = merge_with_existing(seeded, dict(seeded) | {"resistance_mechanisms": [curator_item]})
+    assert merged["resistance_mechanisms"] == [curator_item]
+
+
+def test_a_record_that_changes_class_keeps_its_curation(tmp_path, monkeypatch):
+    """The pipeline-level idempotence test. `merge_with_existing` was already
+    covered in isolation, but the loss happened one level up: a record whose
+    class changes moves directory, and resolving the existing file only at the
+    NEW path treated it as brand new and replaced every curated field with the
+    empty seeded shape. 57 records moved class on a single run of this repo's
+    own pipeline, so this is the live path, not a corner case.
+    """
+    import seed_from_sources as sfs
+
+    corpus = tmp_path / "antibiotics"
+    old_path = corpus / "antiprotozoal" / "posaconazole.yaml"
+    old_path.parent.mkdir(parents=True)
+    curated = {
+        "identifier": "CHEBI:64355", "label": "posaconazole",
+        "antimicrobial_class": "ANTIPROTOZOAL", "curation_status": "REVIEWED",
+        "grounding_status": "EXACT",
+        "chemical_structure": {"standard_inchi_key": "RAGOYPUPXAKGKH-XAKZXMRKSA-N"},
+        "source_concepts": [{"source": "CHEBI", "source_id": "CHEBI:64355",
+                             "source_label": "posaconazole",
+                             "minted_identifier": "antibioticmech:chebi-1111111111"}],
+        "mode_of_action": "ERGOSTEROL_PATHWAY_INHIBITION",
+        "causal_graphs": [{"graph_id": "g1", "nodes": [], "edges": []}],
+        "curation_history": [{"timestamp": "2026-08-29T00:00:00Z", "curator": "jane",
+                              "action": "REVIEWED"}],
+    }
+    old_path.write_text(yaml.safe_dump(curated, sort_keys=False), encoding="utf-8")
+
+    monkeypatch.setattr(sfs, "CORPUS_DIR", corpus)
+    monkeypatch.setattr(sfs, "PATHS_FILE", corpus / "PATHS.tsv")
+    (corpus / "PATHS.tsv").write_text(
+        "identifier\tantimicrobial_class\tslug\nCHEBI:64355\tANTIPROTOZOAL\tposaconazole\n",
+        encoding="utf-8")
+
+    reseeded = {k: curated[k] for k in ("identifier", "label", "grounding_status",
+                                        "chemical_structure", "source_concepts")}
+    reseeded["antimicrobial_class"] = "ANTIFUNGAL"     # the class moved
+    reseeded["curation_status"] = "SEEDED"
+    reseeded["curation_history"] = []
+
+    previous = sfs.read_lockfile_paths()
+    assert previous["CHEBI:64355"] == old_path
+
+    merged = sfs.merge_with_existing(
+        reseeded, yaml.safe_load(previous["CHEBI:64355"].read_text(encoding="utf-8")))
+    assert merged["antimicrobial_class"] == "ANTIFUNGAL"    # the seeded field moves
+    assert merged["curation_status"] == "REVIEWED"          # the curated ones survive
+    assert merged["mode_of_action"] == "ERGOSTEROL_PATHWAY_INHIBITION"
+    assert merged["causal_graphs"] == curated["causal_graphs"]

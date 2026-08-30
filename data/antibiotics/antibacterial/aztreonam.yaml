@@ -49,6 +49,7 @@ xrefs:
 - chembl:CHEMBL158
 - pubchem.compound:5742832
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 structural_class: monobactam
 structural_class_id: ARO:0000004
@@ -67,6 +68,7 @@ source_concepts:
   source_label: aztreonam
   minted_identifier: antibioticmech:aro-51d3653044
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -74,10 +76,11 @@ source_concepts:
   source_label: aztreonam
   minted_identifier: antibioticmech:chebi-2c259cb7a2
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000386
   label: MexAB-OprM
   evidence:
@@ -112,14 +115,14 @@ resistance_mechanisms:
   - reference: ARO:3003713
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000550 (aztreonam);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004076
   label: MuxABC-OpmB
   evidence:
   - reference: ARO:3004076
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000550 (aztreonam);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007491
   label: Pseudomonas aeruginosa ampR with mutation conferring resistance to aztreonam
   evidence:
@@ -138,3 +141,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

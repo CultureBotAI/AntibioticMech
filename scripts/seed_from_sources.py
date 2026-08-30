@@ -384,11 +384,26 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
         decision = decisions.get(concept.minted, {})
         if (decision.get("decision") or "").upper() == "EXCLUDE":
             continue
+        override = (decision.get("identifier") or "").strip()
+        # The override is consulted BEFORE the structure gate, and the grounding
+        # target lends its structure. A curator working the no-structure queue —
+        # the largest backlog, and the population GROUND exists for — would
+        # otherwise write a decision that the gate discarded before it was ever
+        # read, silently and with the concept back on the queue next run.
+        if override and not concept.structure.get("standard_inchi_key"):
+            target = chebi_rows.get(override, {})
+            if target.get("standard_inchi_key"):
+                concept.structure = structure_from_chebi(target)
+                if not concept.roles:
+                    concept.roles = split_pipe(target.get("role_ids", ""))
+            else:
+                print(f"  decision on {concept.minted} grounds {concept.label!r} to "
+                      f"{override}, which has no structure either; not written",
+                      file=sys.stderr)
         if not concept.structure.get("standard_inchi_key"):
             skipped.append(concept)
             continue
         identifier, status = resolve_identity(concept, chebi_rows)
-        override = (decision.get("identifier") or "").strip()
         if override:
             identifier, status = override, "EXACT"
         by_identity[identifier].append(concept)
@@ -603,6 +618,9 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
                 }],
             })
         records[identifier]["resistance_mechanisms"] = items
+        _SEEDED_CARD_IDS.setdefault(identifier, {})["resistance_mechanisms"] = {
+            _item_aro_id(i) for i in items
+        }
         _history_last(records[identifier])
 
     grouped = defaultdict(list)
@@ -625,6 +643,9 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
             }
             items.append(item)
         records[identifier]["molecular_targets"] = items
+        _SEEDED_CARD_IDS.setdefault(identifier, {})["molecular_targets"] = {
+            _item_aro_id(i) for i in items
+        }
         _history_last(records[identifier])
 
 
@@ -632,22 +653,50 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
 # writing
 # --------------------------------------------------------------------------
 
-def is_card_sourced(item: dict) -> bool:
-    """True when every citation on an item is a CARD/ARO database assertion.
+# Set at seed time to the (field, ARO id) pairs this run actually wrote, per
+# record. Ownership is then a fact about what the seeder produced, not a guess
+# from a citation prefix — a curator citing an ARO determinant CARD does not
+# link to this molecule was previously classified seeder-owned and deleted.
+_SEEDED_CARD_IDS: dict[str, dict[str, set[str]]] = {}
 
-    That is exactly the set the seeder writes, so it is also the set a re-seed
-    may replace. An item a curator added, or upgraded to a primary citation,
-    fails this test and is carried forward.
+
+def _item_aro_id(item: dict) -> str:
+    return str(item.get("aro_id") or item.get("target_id") or "")
+
+
+# The note every seeded mechanism item carries. It is the marker that separates
+# "the seeder wrote this" from "a curator wrote this, citing an ARO term" —
+# a distinction the citation prefix alone cannot make, and getting it wrong
+# deleted legitimate curation on re-seed.
+CARD_NOTE_MARKER = "CARD/ARO asserts"
+
+
+def is_card_sourced(item: dict, seeded_ids: set[str] | None = None) -> bool:
+    """True when the seeder wrote this item, rather than a curator.
+
+    Two independent signals, either sufficient: the ARO id is one this run
+    emitted for the record and field (exact, available while seeding), or the
+    item carries the seeder's own note marker (available to anyone reading a
+    record off disk, which is what verify-corpus does).
+
+    A curator item that cites an ARO determinant CARD does not link to this
+    molecule matches neither, and is carried forward — the case that motivated
+    replacing the old prefix-only test.
     """
+    if seeded_ids and _item_aro_id(item) in seeded_ids:
+        return True
     evidence = item.get("evidence") or []
-    return bool(evidence) and all(
-        str(e.get("reference", "")).startswith("ARO:") for e in evidence
-    )
+    if not evidence:
+        return False
+    if not all(str(e.get("reference", "")).startswith("ARO:") for e in evidence):
+        return False
+    return any(CARD_NOTE_MARKER in str(e.get("notes") or "") for e in evidence)
 
 
 def card_sourced_view(record: dict, field: str) -> list:
     """The CARD-seeded items of `field`, in seed order — what verify-corpus compares."""
-    return [item for item in (record.get(field) or []) if is_card_sourced(item)]
+    seeded_ids = _SEEDED_CARD_IDS.get(record.get("identifier", ""), {}).get(field)
+    return [item for item in (record.get(field) or []) if is_card_sourced(item, seeded_ids)]
 
 
 def merge_with_existing(record: dict, existing: dict) -> dict:
@@ -683,14 +732,23 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     # curator-upgraded ones are kept, after them.
     for field in ("molecular_targets", "resistance_mechanisms"):
         seeded_items = list(record.get(field) or [])
-        curator_items = [i for i in (existing.get(field) or []) if not is_card_sourced(i)]
+        seeded_ids = _SEEDED_CARD_IDS.get(record.get("identifier", ""), {}).get(field, set())
+        curator_items = [i for i in (existing.get(field) or [])
+                         if not is_card_sourced(i, seeded_ids)]
         if seeded_items or curator_items:
             merged[field] = seeded_items + curator_items
         else:
             merged.pop(field, None)
 
     history = list(existing.get("curation_history") or [])
-    if all(existing.get(f) == record.get(f) for f in SEEDED_FIELDS):
+    # The comparison covers the CARD mechanism sections too: a refresh that adds
+    # determinants rewrites the file, and an audit trail that says nothing
+    # happened would be worse than none.
+    unchanged = all(existing.get(f) == record.get(f) for f in SEEDED_FIELDS) and all(
+        card_sourced_view(existing, f) == card_sourced_view(record, f)
+        for f in ("molecular_targets", "resistance_mechanisms")
+    )
+    if unchanged:
         # Nothing the seeder owns changed: keep the trail exactly as it is,
         # rather than appending a new event on every run.
         merged["curation_history"] = history or record.get("curation_history", [])
@@ -711,6 +769,28 @@ def read_lockfile() -> dict[str, str]:
         return {}
     with PATHS_FILE.open(newline="", encoding="utf-8") as fh:
         return {r["identifier"]: r["slug"] for r in csv.DictReader(fh, delimiter="\t")}
+
+
+def read_lockfile_paths() -> dict[str, Path]:
+    """Identifier -> the path the record occupied at the last full seed.
+
+    A record's directory is its class, and a class can change when upstream data
+    changes — 21 records moved on one commit during this repository's own
+    scaffolding. Resolving the existing file only at the NEW path meant a moved
+    record was treated as brand new: the curated file sat unread in the old
+    directory, every curator field was replaced by the empty seeded shape, and
+    `--prune` then deleted the original. The lockfile already records the class,
+    so use it.
+    """
+    if not PATHS_FILE.exists():
+        return {}
+    out: dict[str, Path] = {}
+    with PATHS_FILE.open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            directory = CLASS_DIRS.get(row.get("antimicrobial_class", ""))
+            if directory:
+                out[row["identifier"]] = CORPUS_DIR / directory / f"{row['slug']}.yaml"
+    return out
 
 
 def write_lockfile(records: dict[str, dict], slugs: dict[str, str]) -> None:
@@ -787,14 +867,19 @@ def main() -> int:
 
     from antibioticmech.validation.write_validated import emit_antibiotic_yaml
 
-    written = unchanged = 0
+    previous_paths = read_lockfile_paths()
+    written = unchanged = moved = 0
     for identifier in selected:
         record = records[identifier]
         path = record_path(record, slugs[identifier])
-        existing_text = path.read_text(encoding="utf-8") if path.exists() else None
+        # Where this record lives NOW may not be where it lived last time: read
+        # the old location when the class moved, so curation survives the move.
+        old_path = previous_paths.get(identifier)
+        source = path if path.exists() else (old_path if old_path and old_path.exists() else None)
+        existing_text = source.read_text(encoding="utf-8") if source else None
         if existing_text is not None:
             record = merge_with_existing(record, yaml.safe_load(existing_text))
-        if existing_text is not None and not args.force and existing_text == emit_antibiotic_yaml(record):
+        if source == path and not args.force and existing_text == emit_antibiotic_yaml(record):
             unchanged += 1
             continue
         try:
@@ -803,6 +888,14 @@ def main() -> int:
         except ValidationFailedError as exc:
             print(exc.summary(), file=sys.stderr)
             return 1
+        if source is not None and source != path:
+            # The record changed class. Remove the old file here rather than
+            # leaving it for --prune: two files for one identifier is a state
+            # the integrity tests reject, and a partial run should not create it.
+            source.unlink()
+            moved += 1
+            print(f"  moved {identifier}: {source.relative_to(REPO_ROOT)} -> "
+                  f"{path.relative_to(REPO_ROOT)}", file=sys.stderr)
 
     if not args.only and not args.limit:
         write_lockfile(records, slugs)
@@ -819,7 +912,8 @@ def main() -> int:
                 shutil.rmtree(directory)
         print(f"  pruned {removed} records no longer produced", file=sys.stderr)
 
-    print(f"wrote {written} records ({unchanged} already current)", file=sys.stderr)
+    print(f"wrote {written} records ({unchanged} already current"
+          + (f", {moved} moved between classes" if moved else "") + ")", file=sys.stderr)
     return 0
 
 

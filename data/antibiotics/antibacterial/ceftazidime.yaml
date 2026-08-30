@@ -65,7 +65,6 @@ xrefs:
 - pubchem.compound:5481173
 activity_roles:
 - CHEBI:33281
-- CHEBI:33282
 - CHEBI:36047
 structural_class: cephalosporin
 structural_class_id: ARO:0000032
@@ -85,7 +84,6 @@ source_concepts:
   minted_identifier: antibioticmech:aro-dbdb90f349
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -94,11 +92,10 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-9a02501eb8
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000386
   label: MexAB-OprM
   evidence:
@@ -1463,14 +1460,14 @@ resistance_mechanisms:
   - reference: ARO:3003158
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003807
   label: Escherichia coli AcrR with mutation associated with multidrug resistance
   evidence:
   - reference: ARO:3003807
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3003966
   label: Klebsiella pneumoniae OmpK35
   evidence:
@@ -1491,7 +1488,7 @@ resistance_mechanisms:
   - reference: ARO:3004106
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3004123
   label: Burkholderia pseudomallei Omp38
   evidence:
@@ -1512,7 +1509,7 @@ resistance_mechanisms:
   - reference: ARO:3004559
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004598
   label: Klebsiella pneumoniae KpnGH-TolC
   evidence:
@@ -1785,21 +1782,21 @@ resistance_mechanisms:
   - reference: ARO:3007402
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3007420
   label: Klebsiella pneumoniae lamB with mutations conferring resistance to ceftazidime-avibactam
   evidence:
   - reference: ARO:3007420
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007421
   label: Klebsiella pneumoniae PBP3 mutants conferring resistance to ceftazidime-avibactam
   evidence:
   - reference: ARO:3007421
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007423
   label: Escherichia coli PBP3 mutants conferring resistance to beta-lactam antibiotics
   evidence:
@@ -1916,3 +1913,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

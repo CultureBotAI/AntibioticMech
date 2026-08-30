@@ -80,6 +80,7 @@ xrefs:
 - patent:US3194802
 - patent:US3478018
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 chemical_structure:
   smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)C1(N)CCCCC1'
@@ -96,6 +97,7 @@ source_concepts:
   source_label: cyclacillin
   minted_identifier: antibioticmech:chebi-45f3097f3a
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 curation_history:
@@ -103,3 +105,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

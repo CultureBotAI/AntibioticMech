@@ -27,6 +27,7 @@ xrefs:
 - ppdb:398
 - reaxys:1995978
 activity_roles:
+- CHEBI:35718
 - CHEBI:86328
 chemical_structure:
   smiles: N=C(N)NCCCCCCCCNCCCCCCCCNC(=N)N
@@ -43,6 +44,7 @@ source_concepts:
   source_label: iminoctadine
   minted_identifier: antibioticmech:chebi-e493be1866
   role_terms:
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 curation_history:
@@ -50,3 +52,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

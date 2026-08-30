@@ -96,7 +96,6 @@ xrefs:
 - pubchem.compound:6249
 activity_roles:
 - CHEBI:33281
-- CHEBI:33282
 - CHEBI:36047
 structural_class: penicillin beta-lactam
 structural_class_id: ARO:3000008
@@ -116,7 +115,6 @@ source_concepts:
   minted_identifier: antibioticmech:aro-60a0e570fd
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -125,7 +123,6 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-ae6873a4e5
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
@@ -136,14 +133,14 @@ resistance_mechanisms:
   - reference: ARO:3000014
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000384
   label: AcrAB-TolC
   evidence:
   - reference: ARO:3000384
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000386
   label: MexAB-OprM
   evidence:
@@ -248,14 +245,14 @@ resistance_mechanisms:
   - reference: ARO:3003589
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3003966
   label: Klebsiella pneumoniae OmpK35
   evidence:
   - reference: ARO:3003966
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004446
   label: Haemophilus influenzae PBP3 conferring resistance to beta-lactam antibiotics
   evidence:
@@ -297,7 +294,7 @@ resistance_mechanisms:
   - reference: ARO:3007004
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3007011
   label: mdeA
   evidence:
@@ -360,7 +357,7 @@ resistance_mechanisms:
   - reference: ARO:3007442
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007531
   label: Streptococcus pyogenes PBP2x conferring resistance to beta-lactam antibiotics
   evidence:
@@ -400,3 +397,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

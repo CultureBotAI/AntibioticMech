@@ -57,6 +57,7 @@ xrefs:
 - chembl:CHEMBL1200937
 - pubchem.compound:6323289
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 structural_class: streptogramin antibiotic
 structural_class_id: ARO:0000026
@@ -75,6 +76,7 @@ source_concepts:
   source_label: dalfopristin
   minted_identifier: antibioticmech:aro-204bbf1b11
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -82,10 +84,11 @@ source_concepts:
   source_label: dalfopristin
   minted_identifier: antibioticmech:chebi-73c4cfe8cd
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3000118
   label: vgaB
   evidence:
@@ -99,7 +102,7 @@ resistance_mechanisms:
   - reference: ARO:3000250
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3000300
   label: lsaA
   evidence:
@@ -267,7 +270,7 @@ resistance_mechanisms:
   - reference: ARO:3002816
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3002832
   label: vgaD
   evidence:
@@ -288,7 +291,7 @@ resistance_mechanisms:
   - reference: ARO:3003907
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000674 (dalfopristin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003969
   label: lmrP
   evidence:
@@ -307,3 +310,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

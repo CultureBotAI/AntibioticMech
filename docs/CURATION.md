@@ -18,6 +18,13 @@ concept, keyed by that concept's **minted identifier** — the stable
 Decisions are applied at seed time, so a decision changes the corpus only after
 `just seed-apply` — and `just verify-corpus` then proves the corpus matches.
 
+A `GROUND` decision is honoured **before** the structure gate, and the grounding
+target lends its structure to the concept. That is what makes the decision file
+useful on the no-structure queue, the largest backlog: grounding
+`ARO:3000636` to `CHEBI:18208` gives the concept ChEBI's identity *and* ChEBI's
+structure. If the target has no structure either, the seeder says so on stderr
+rather than dropping the decision silently.
+
 ## What a REVIEWED record means
 
 A record moves from `SEEDED` to `REVIEWED` when a curator has checked all of:
@@ -72,8 +79,15 @@ requirement.
   `data/antibiotics/PATHS.tsv` and re-seed; the integrity tests reject
   disagreement between filename and lockfile.
 - **Never hand-edit a seeded field.** `just verify-corpus` rebuilds the corpus
-  from `data/raw/` and fails on drift. Put source changes in the extractor and
+  from `data/raw/` and fails on drift — for the fields the seeder owns. It
+  deliberately does not police curated fields, so it cannot see a *fabricated*
+  mechanism claim; that is what review is for. Put source changes in the extractor and
   curator decisions in `decisions.tsv`.
+- **A moved record keeps its curation.** A record whose class changes moves
+  directory, and the seeder reads its previous location from `PATHS.tsv` before
+  writing, so curated fields survive the move and the old file is removed in the
+  same step. 57 records moved class on a single run of this pipeline.
+
 - **`--prune` only on a full run.** The seeder refuses `--prune` together with
   `--only` or `--limit`, because pruning against a partial build deletes records
   the run never attempted.

@@ -47,6 +47,7 @@ xrefs:
 - pubchem.compound:135398671
 activity_roles:
 - CHEBI:33231
+- CHEBI:33281
 structural_class: nonribosomal peptide antibiotics
 structural_class_id: ARO:3009657
 chemical_structure:
@@ -70,6 +71,7 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-7a13922640
   role_terms:
   - CHEBI:33231
+  - CHEBI:33281
   source_version: '2026-08-29'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_INACTIVATION
@@ -79,14 +81,14 @@ resistance_mechanisms:
   - reference: ARO:3003061
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000018 (viomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003437
   label: Mycobacterium tuberculosis 16S rRNA mutation conferring resistance to viomycin
   evidence:
   - reference: ARO:3003437
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000018 (viomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003546
   label: Mycolicibacterium smegmatis 16S rRNA (rrsA) mutation conferring resistance
     to viomycin
@@ -94,7 +96,7 @@ resistance_mechanisms:
   - reference: ARO:3003546
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000018 (viomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003547
   label: Mycolicibacterium smegmatis 16S rRNA (rrsB) mutation conferring resistance
     to viomycin
@@ -120,3 +122,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -36,7 +36,6 @@ xrefs:
 - chembl:CHEMBL376140
 - pubchem.compound:54686904
 activity_roles:
-- CHEBI:33282
 - CHEBI:36047
 structural_class: glycylcycline
 structural_class_id: ARO:0000042
@@ -55,7 +54,6 @@ source_concepts:
   source_label: tigecycline
   minted_identifier: antibioticmech:aro-ba2bb436ff
   role_terms:
-  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -63,11 +61,10 @@ source_concepts:
   source_label: tigecycline
   minted_identifier: antibioticmech:chebi-4917944044
   role_terms:
-  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000026
   label: mepA
   evidence:
@@ -81,21 +78,21 @@ resistance_mechanisms:
   - reference: ARO:3000205
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000384
   label: AcrAB-TolC
   evidence:
   - reference: ARO:3000384
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000770
   label: AdeABC
   evidence:
   - reference: ARO:3000770
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003373
   label: Klebsiella pneumoniae acrR with mutation conferring multidrug antibiotic
     resistance
@@ -103,28 +100,28 @@ resistance_mechanisms:
   - reference: ARO:3003373
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003380
   label: Klebsiella pneumoniae ramR mutants
   evidence:
   - reference: ARO:3003380
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003921
   label: oqxAB
   evidence:
   - reference: ARO:3003921
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004042
   label: Enterobacter cloacae acrA
   evidence:
   - reference: ARO:3004042
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000030 (tigecycline);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004578
   label: Acinetobacter baumannii AbuO
   evidence:
@@ -157,3 +154,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

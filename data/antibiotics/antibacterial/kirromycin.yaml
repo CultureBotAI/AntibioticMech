@@ -42,14 +42,14 @@ source_concepts:
   minted_identifier: antibioticmech:aro-8b2f0e38fa
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003359
   label: Streptomyces cinnamoneus EF-Tu mutants conferring resistance to elfamycin
   evidence:
   - reference: ARO:3003359
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001234 (kirromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003368
   label: Escherichia coli EF-Tu mutants conferring resistance to kirromycin
   evidence:
@@ -61,3 +61,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

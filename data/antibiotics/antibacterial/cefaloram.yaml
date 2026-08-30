@@ -32,6 +32,7 @@ synonyms:
 parent_compounds:
 - CHEBI:23066
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 chemical_structure:
   smiles: '[H][C@]12SCC(COC(C)=O)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)Cc1ccccc1'
@@ -48,6 +49,7 @@ source_concepts:
   source_label: cefaloram
   minted_identifier: antibioticmech:chebi-5e44d36aab
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 curation_history:
@@ -55,3 +57,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

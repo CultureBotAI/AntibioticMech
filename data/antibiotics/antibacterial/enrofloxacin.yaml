@@ -74,14 +74,14 @@ source_concepts:
   - CHEBI:33282
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003511
   label: Escherichia coli soxS with mutation conferring antibiotic resistance
   evidence:
   - reference: ARO:3003511
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007045 (enrofloxacin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007544
   label: Erysipelothrix rhusiopathiae gyrA with mutation conferring resistance to
     enrofloxacin
@@ -94,3 +94,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

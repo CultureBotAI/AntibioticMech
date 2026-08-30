@@ -58,7 +58,7 @@ xrefs:
 - chembl:CHEMBL186
 - pubchem.compound:5479537
 activity_roles:
-- CHEBI:33282
+- CHEBI:33281
 - CHEBI:36047
 structural_class: cephalosporin
 structural_class_id: ARO:0000032
@@ -77,7 +77,7 @@ source_concepts:
   source_label: cefepime
   minted_identifier: antibioticmech:aro-3c50c3a1cf
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -85,7 +85,7 @@ source_concepts:
   source_label: cefepime
   minted_identifier: antibioticmech:chebi-7ff51e1b9f
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
@@ -96,14 +96,14 @@ resistance_mechanisms:
   - reference: ARO:3001815
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000059 (cefepime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3003385
   label: Klebsiella aerogenes Omp36
   evidence:
   - reference: ARO:3003385
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000059 (cefepime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3003390
   label: Escherichia coli ompF with mutation conferring resistance to beta-lactam
     antibiotics
@@ -118,21 +118,21 @@ resistance_mechanisms:
   - reference: ARO:3003796
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000059 (cefepime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3003966
   label: Klebsiella pneumoniae OmpK35
   evidence:
   - reference: ARO:3003966
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000059 (cefepime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004141
   label: AxyXY-OprZ
   evidence:
   - reference: ARO:3004141
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000059 (cefepime);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004585
   label: Klebsiella pneumoniae KpnEF
   evidence:
@@ -193,3 +193,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

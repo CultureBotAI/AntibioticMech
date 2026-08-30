@@ -280,63 +280,63 @@ resistance_mechanisms:
   - reference: ARO:3003197
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003372
   label: Escherichia coli 16S rRNA (rrsH) mutation conferring resistance to spectinomycin
   evidence:
   - reference: ARO:3003372
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003376
   label: Escherichia coli 16S rRNA (rrsB) mutation conferring resistance to spectinomycin
   evidence:
   - reference: ARO:3003376
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003377
   label: Escherichia coli 16S rRNA (rrnB) mutation conferring resistance to spectinomycin
   evidence:
   - reference: ARO:3003377
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003485
   label: Chlamydophila psittaci 16S rRNA mutation conferring resistance to spectinomycin
   evidence:
   - reference: ARO:3003485
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003493
   label: Pasteurella multocida 16S rRNA mutation conferring resistance to spectinomycin
   evidence:
   - reference: ARO:3003493
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003495
   label: Neisseria gonorrhoeae 16S rRNA mutation conferring resistance to spectinomycin
   evidence:
   - reference: ARO:3003495
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003497
   label: Neisseria meningitidis 16S rRNA mutation conferring resistance to spectinomycin
   evidence:
   - reference: ARO:3003497
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003502
   label: Borreliella burgdorferi 16S rRNA mutation conferring resistance to spectinomycin
   evidence:
   - reference: ARO:3003502
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003512
   label: Salmonella enterica 16S rRNA (rrsD) mutation conferring resistance to spectinomycin
   evidence:
@@ -364,7 +364,7 @@ resistance_mechanisms:
   - reference: ARO:3004091
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004598
   label: Klebsiella pneumoniae KpnGH-TolC
   evidence:
@@ -413,7 +413,7 @@ resistance_mechanisms:
   - reference: ARO:3007515
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000039 (spectinomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007527
   label: Bacillus subtilis rpsE mutations conferring resistance to spectinomycin
   evidence:
@@ -439,3 +439,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

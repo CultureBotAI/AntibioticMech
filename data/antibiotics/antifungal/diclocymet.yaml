@@ -22,6 +22,8 @@ xrefs:
 - ppdb:2559
 - reaxys:8422721
 activity_roles:
+- CHEBI:24127
+- CHEBI:35718
 - CHEBI:86328
 chemical_structure:
   smiles: C[C@@H](NC(=O)C(C#N)C(C)(C)C)c1ccc(Cl)cc1Cl
@@ -38,6 +40,8 @@ source_concepts:
   source_label: diclocymet
   minted_identifier: antibioticmech:chebi-57864ecc4a
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 curation_history:
@@ -45,3 +49,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -31,6 +31,7 @@ xrefs:
 - ppdb:3072
 - reaxys:23250906
 activity_roles:
+- CHEBI:24127
 - CHEBI:86328
 chemical_structure:
   smiles: COC(=O)NCc1cc(/C(C)=N/OCc2cccc(C)n2)ccc1Cl
@@ -47,6 +48,7 @@ source_concepts:
   source_label: pyribencarb
   minted_identifier: antibioticmech:chebi-69609b67ca
   role_terms:
+  - CHEBI:24127
   - CHEBI:86328
   source_version: '2026-08-29'
 curation_history:
@@ -54,3 +56,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

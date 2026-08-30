@@ -31,35 +31,35 @@ source_concepts:
   minted_identifier: antibioticmech:aro-e44e701df2
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003301
   label: Staphylococcus aureus gyrB conferring resistance to aminocoumarin
   evidence:
   - reference: ARO:3003301
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000132 (clorobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003302
   label: Bartonella bacilliformis gyrB conferring resistance to aminocoumarin
   evidence:
   - reference: ARO:3003302
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000132 (clorobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003303
   label: Escherichia coli gyrB conferring resistance to aminocoumarin
   evidence:
   - reference: ARO:3003303
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000132 (clorobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003314
   label: Staphylococcus aureus parE conferring resistance to aminocoumarin
   evidence:
   - reference: ARO:3003314
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000132 (clorobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003318
   label: Streptomyces rishiriensis parY mutant conferring resistance to aminocoumarin
   evidence:
@@ -96,3 +96,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:57Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

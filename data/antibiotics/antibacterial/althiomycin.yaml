@@ -39,6 +39,7 @@ xrefs:
 - knapsack:C00018669
 - wikipedia.en:Althiomycin
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 chemical_structure:
   smiles: COC1=CC(=O)N(C(=O)[C@H]2CSC(C(CO)NC(=O)c3csc(/C=N/O)n3)=N2)C1
@@ -55,6 +56,7 @@ source_concepts:
   source_label: althiomycin
   minted_identifier: antibioticmech:chebi-8564797afb
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -62,3 +64,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

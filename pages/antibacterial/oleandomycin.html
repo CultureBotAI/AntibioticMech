@@ -34,7 +34,6 @@ signed off on this record yet.</p></div>
 <p><a href="http://purl.obolibrary.org/obo/ARO_0000000">macrolide antibiotic</a><code class="curie">ARO:0000000</code></p>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_25661">CHEBI:25661</a>      <code class="curie">CHEBI:25661</code></li>
   <li><a href="http://purl.obolibrary.org/obo/ARO_0000000">ARO:0000000</a>      <code class="curie">ARO:0000000</code></li>
 </ul>
 
@@ -47,28 +46,17 @@ signed off on this record yet.</p></div>
 <p class="meta">SMILES</p><pre class="struct-block">CO[C@H]1C[C@H](O[C@H]2[C@H](C)[C@@H](O[C@@H]3O[C@H](C)C[C@H](N(C)C)[C@H]3O)[C@@H](C)C[C@@]3(CO3)C(=O)[C@H](C)[C@@H](O)[C@@H](C)[C@@H](C)OC(=O)[C@@H]2C)O[C@@H](C)[C@@H]1O</pre><p class="meta">InChI</p><pre class="struct-block">InChI=1S/C35H61NO12/c1-16-14-35(15-43-35)32(40)19(4)27(37)18(3)22(7)46-33(41)21(6)31(47-26-13-25(42-11)28(38)23(8)45-26)20(5)30(16)48-34-29(39)24(36(9)10)12-17(2)44-34/h16-31,34,37-39H,12-15H2,1-11H3/t16-,17+,18-,19+,20+,21+,22+,23-,24-,25-,26-,27-,28-,29+,30-,31-,34-,35+/m0/s1</pre>
 <h2>Also called</h2>
 <ul class="plain">
-<li>(3R,5R,6S,7R,8R,11R,12S,13R,14S,15S)-6-hydroxy-5,7,8,11,13,15-hexamethyl-4,10-dioxo-14-[3,4,6-trideoxy-3-(dimethylamino)-β-D-xylo-hexopyranosyloxy]-1,9-dioxaspiro[2.13]hexadec-12-yl 2,6-dideoxy-3-O-methyl-α-L-arabino-hexopyranoside <span class="meta">(EXACT_SYNONYM)</span><span class="meta">— chebi</span></li><li>Amimycin <span class="meta">(EXACT_SYNONYM)</span><span class="meta">— chebi</span></li><li>Landomycin <span class="meta">(EXACT_SYNONYM)</span><span class="meta">— chebi</span></li><li>Matromycin <span class="meta">(EXACT_SYNONYM)</span><span class="meta">— chebi</span></li><li>Oleandomycin <span class="meta">(EXACT_SYNONYM)</span><span class="meta">— chebi</span></li><li>Romicil <span class="meta">(EXACT_SYNONYM)</span><span class="meta">— chebi</span></li></ul>
+<li>Amimycin <span class="meta">(EXACT_SYNONYM)</span><span class="meta">— aro</span></li><li>Matromycin <span class="meta">(EXACT_SYNONYM)</span><span class="meta">— aro</span></li></ul>
 
 <h2>Cross-references</h2>
 <p class="meta">Equivalent identifiers for this same structure in other resources.</p>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/ARO_3000867">ARO:3000867</a></li>
-  <li>beilstein:74476</li>
   <li><a href="https://commonchemistry.cas.org/detail?cas_rn=3922-90-5">cas:3922-90-5</a></li>
-  <li>drugcentral:1983</li>
-  <li><a href="https://www.kegg.jp/entry/C01946">kegg.compound:C01946</a></li>
-  <li>lipidmaps:LMPK04000007</li>
-  <li>metacyc.compound:OLEANDOMYCIN</li>
   <li><a href="https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL606258/">chembl:CHEMBL606258</a></li>
   <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/72493">pubchem.compound:72493</a></li>
 </ul>
 
-<h2>Activity roles</h2>
-<p class="meta">Every antimicrobial role a source asserts for this compound — the
-unreduced evidence behind its <code>antimicrobial_class</code>.</p>
-<ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/CHEBI_33282">CHEBI:33282</a>    <code class="curie">CHEBI:33282</code></li>
-</ul>
 
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
@@ -81,13 +69,6 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <td><code class="curie">ARO:3000867</code></td>
     <td>oleandomycin</td>
     <td><code class="curie">antibioticmech:aro-4ec68d2906</code></td>
-    <td class="meta">2026-08-29</td>
-  </tr>
-  <tr>
-    <td><span class="pill plain">CHEBI</span></td>
-    <td><code class="curie">CHEBI:16869</code></td>
-    <td>oleandomycin</td>
-    <td><code class="curie">antibioticmech:chebi-7ca2e35a73</code></td>
     <td class="meta">2026-08-29</td>
   </tr>
 </table>
@@ -282,19 +263,26 @@ type — expand a group to see its determinants.</p>
   </table>
 </details>
 <details class="details-group">
-  <summary>UNKNOWN <span class="pill plain">2</span></summary>
+  <summary>ANTIBIOTIC_EFFLUX <span class="pill plain">1</span></summary>
   <table>
-    <caption>UNKNOWN</caption>
+    <caption>ANTIBIOTIC_EFFLUX</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Gene families</th><th scope="col">Note</th></tr></thead>
+    <tr>
+      <td>oleC</td>
+      <td><a href="http://purl.obolibrary.org/obo/ARO_3003748">ARO:3003748</a></td>
+      <td class="meta">—</td>
+      <td class="meta">—</td>
+    </tr>
+  </table>
+</details>
+<details class="details-group">
+  <summary>ANTIBIOTIC_TARGET_PROTECTION <span class="pill plain">1</span></summary>
+  <table>
+    <caption>ANTIBIOTIC_TARGET_PROTECTION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Gene families</th><th scope="col">Note</th></tr></thead>
     <tr>
       <td>oleB</td>
       <td><a href="http://purl.obolibrary.org/obo/ARO_3003036">ARO:3003036</a></td>
-      <td class="meta">—</td>
-      <td class="meta">—</td>
-    </tr>
-    <tr>
-      <td>oleC</td>
-      <td><a href="http://purl.obolibrary.org/obo/ARO_3003748">ARO:3003748</a></td>
       <td class="meta">—</td>
       <td class="meta">—</td>
     </tr>
@@ -312,6 +300,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill plain">SEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
     <p>Seeded from data/raw/ inventories (ARO, CHEBI)</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-08-30 · seed_from_sources</span>
+    <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
 </ol>
 

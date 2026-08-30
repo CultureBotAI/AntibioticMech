@@ -1,0 +1,80 @@
+identifier: CHEBI:67121
+label: nitroxoline
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monohydroxyquinoline in which the hydroxy group is positioned at C-8
+  with a nitro group trans to it at C-5.
+definition_source: ChEBI
+synonyms:
+- synonym_text: nitroxolina
+  synonym_type: INN
+  source: chebi
+- synonym_text: nitroxolinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 5-nitroquinolin-8-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-NOK
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Nitro-8-hydroxyquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Nitro-8-oxyquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Nitro-8-quinolinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Nitrox
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5NOK
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 8-Hydroxy-5-nitroquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35716
+- CHEBI:38775
+xrefs:
+- cas:4008-48-4
+- chemspider:13863774
+- drugbank:DB01422
+- drugcentral:1954
+- kegg.drug:D07245
+- pdb-ccd:HNQ
+- wikipedia.en:Nitroxoline
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: O=[N+]([O-])c1ccc(O)c2ncccc12
+  standard_inchi: InChI=1S/C9H6N2O3/c12-8-4-3-7(11(13)14)6-2-1-5-10-9(6)8/h1-5,12H
+  standard_inchi_key: RJIWZDNTCBHXAL-UHFFFAOYSA-N
+  molecular_formula: C9H6N2O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 190.158
+  monoisotopic_mass: 190.03784
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:67121
+  source_label: nitroxoline
+  minted_identifier: antibioticmech:chebi-4d8417abe0
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

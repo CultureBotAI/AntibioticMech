@@ -73,7 +73,7 @@ source_concepts:
   - CHEBI:86327
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3007554
   label: Candida albicans CDR2 with mutations conferring resistance to azoles
   evidence:
@@ -96,7 +96,7 @@ resistance_mechanisms:
   - reference: ARO:3009270
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007507 (terbinafine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3009425
   label: fungal MDR
   evidence:
@@ -110,21 +110,21 @@ resistance_mechanisms:
   - reference: ARO:3009427
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007507 (terbinafine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3009449
   label: Microsporum canis MDR1 with mutations conferring resistance to terbinafine
   evidence:
   - reference: ARO:3009449
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007507 (terbinafine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3009450
   label: Microsporum canis MDR2 with mutations conferring resistance to terbinafine
   evidence:
   - reference: ARO:3009450
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007507 (terbinafine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3009454
   label: Microsporum canis MDR4 with mutations conferring resistance to terbinafine
   evidence:
@@ -136,3 +136,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

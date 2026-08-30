@@ -65,7 +65,7 @@ xrefs:
 - chembl:CHEMBL438
 - pubchem.compound:5325
 activity_roles:
-- CHEBI:33282
+- CHEBI:33281
 structural_class: sulfonamide antibiotic
 structural_class_id: ARO:3000282
 chemical_structure:
@@ -83,17 +83,21 @@ source_concepts:
   source_label: sulfamerazine
   minted_identifier: antibioticmech:aro-55f0ececec
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:102130
   source_label: sulfamerazine
   minted_identifier: antibioticmech:chebi-e038db9cae
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:37Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

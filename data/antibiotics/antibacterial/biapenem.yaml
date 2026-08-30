@@ -44,6 +44,7 @@ xrefs:
 - chembl:CHEMBL285347
 - pubchem.compound:71339
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 - CHEBI:36047
 structural_class: carbapenem
@@ -63,6 +64,7 @@ source_concepts:
   source_label: biapenem
   minted_identifier: antibioticmech:aro-0ecd1033c9
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
@@ -71,6 +73,7 @@ source_concepts:
   source_label: biapenem
   minted_identifier: antibioticmech:chebi-d935c29bd7
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
@@ -79,3 +82,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -13,13 +13,9 @@ synonyms:
 - synonym_text: labetaomycin
   synonym_type: EXACT_SYNONYM
   source: aro
-parent_compounds:
-- ARO:3000157
 xrefs:
 - ARO:3004295
 - pubchem.compound:102602724
-structural_class: rifamycin antibiotic
-structural_class_id: ARO:3000157
 chemical_structure:
   smiles: CC[C@H](C)[C@@H](C=O)NC(=O)[C@H](CC(=O)N)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CCCNC(=N)N)NC(=O)CNC(=O)[C@H](C(C)C)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CCC(=O)N)NC(=O)[C@H](CC(=O)O)NC(=O)[C@H](C)NC(=O)[C@H](CC1=CC=CC=C1)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CC(C)C)NC(=O)CN
   standard_inchi: InChI=1S/C82H142N30O20/c1-12-45(10)59(40-113)111-75(129)57(36-61(85)115)110-70(124)51(25-19-31-97-82(92)93)102-67(121)48(22-16-28-94-79(86)87)100-63(117)39-98-78(132)65(44(8)9)112-77(131)55(34-43(6)7)108-71(125)52(26-27-60(84)114)105-76(130)58(37-64(118)119)106-66(120)46(11)99-72(126)56(35-47-20-14-13-15-21-47)109-74(128)54(33-42(4)5)107-69(123)50(24-18-30-96-81(90)91)103-68(122)49(23-17-29-95-80(88)89)104-73(127)53(32-41(2)3)101-62(116)38-83/h13-15,20-21,40-46,48-59,65H,12,16-19,22-39,83H2,1-11H3,(H2,84,114)(H2,85,115)(H,98,132)(H,99,126)(H,100,117)(H,101,116)(H,102,121)(H,103,122)(H,104,127)(H,105,130)(H,106,120)(H,107,123)(H,108,125)(H,109,128)(H,110,124)(H,111,129)(H,112,131)(H,118,119)(H4,86,87,94)(H4,88,89,95)(H4,90,91,96)(H4,92,93,97)/t45-,46-,48-,49-,50-,51-,52-,53-,54-,55-,56-,57-,58-,59+,65-/m0/s1
@@ -41,3 +37,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -77,7 +77,6 @@ xrefs:
 - pubchem.compound:5479529
 activity_roles:
 - CHEBI:33281
-- CHEBI:33282
 structural_class: cephalosporin
 structural_class_id: ARO:0000032
 chemical_structure:
@@ -96,7 +95,6 @@ source_concepts:
   minted_identifier: antibioticmech:aro-5a4b3112fe
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:3515
@@ -104,7 +102,6 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-6baa755c24
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_INACTIVATION
@@ -189,3 +186,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

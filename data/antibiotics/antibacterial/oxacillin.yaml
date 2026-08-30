@@ -75,6 +75,7 @@ xrefs:
 - chembl:CHEMBL819
 - pubchem.compound:6196
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 - CHEBI:36047
 structural_class: penicillin beta-lactam
@@ -94,6 +95,7 @@ source_concepts:
   source_label: oxacillin
   minted_identifier: antibioticmech:aro-42474d1716
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
@@ -102,6 +104,7 @@ source_concepts:
   source_label: oxacillin
   minted_identifier: antibioticmech:chebi-1162e9b95e
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
@@ -113,14 +116,14 @@ resistance_mechanisms:
   - reference: ARO:3000017
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000056 (oxacillin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000788
   label: MdtEF-TolC
   evidence:
   - reference: ARO:3000788
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000056 (oxacillin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004639
   label: Corynebacterium striatum tetA
   evidence:
@@ -134,7 +137,7 @@ resistance_mechanisms:
   - reference: ARO:3005111
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000056 (oxacillin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3007011
   label: mdeA
   evidence:
@@ -153,3 +156,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

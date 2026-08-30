@@ -35,6 +35,7 @@ xrefs:
 - kegg.drug:D01620
 - reaxys:5366849
 activity_roles:
+- CHEBI:35718
 - CHEBI:77884
 - CHEBI:86327
 chemical_structure:
@@ -52,6 +53,7 @@ source_concepts:
   source_label: neticonazole hydrochloride
   minted_identifier: antibioticmech:chebi-cec3071225
   role_terms:
+  - CHEBI:35718
   - CHEBI:77884
   - CHEBI:86327
   source_version: '2026-08-29'
@@ -60,3 +62,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

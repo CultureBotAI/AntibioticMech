@@ -31,6 +31,7 @@ xrefs:
 - reaxys:15865423
 - wikipedia.en:Radicicol
 activity_roles:
+- CHEBI:33281
 - CHEBI:35718
 chemical_structure:
   smiles: C[C@@H]1C[C@H]2O[C@@H]2/C=C\C=C\C(=O)Cc2c(Cl)c(O)cc(O)c2C(=O)O1
@@ -47,6 +48,7 @@ source_concepts:
   source_label: radicicol
   minted_identifier: antibioticmech:chebi-133f226a13
   role_terms:
+  - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -54,3 +56,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

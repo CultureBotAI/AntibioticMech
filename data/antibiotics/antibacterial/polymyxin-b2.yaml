@@ -66,84 +66,84 @@ source_concepts:
   - CHEBI:33282
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3002985
   label: arnA
   evidence:
   - reference: ARO:3002985
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
       B); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003576
   label: eptA
   evidence:
   - reference: ARO:3003576
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
       B); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003577
   label: ugd
   evidence:
   - reference: ARO:3003577
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
       B); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003578
   label: PmrF
   evidence:
   - reference: ARO:3003578
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
       B); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003920
   label: pgpB
   evidence:
   - reference: ARO:3003920
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
       B); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004030
   label: RosAB
   evidence:
   - reference: ARO:3004030
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000626 (polymyxin
       B2); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004287
   label: lipid A phosphatase
   evidence:
   - reference: ARO:3004287
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000626 (polymyxin
       B2); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004598
   label: Klebsiella pneumoniae KpnGH-TolC
   evidence:
   - reference: ARO:3004598
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000626 (polymyxin
       B2); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3005044
   label: OmpA
   evidence:
   - reference: ARO:3005044
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
       B); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3005047
   label: eptB
   evidence:
   - reference: ARO:3005047
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
       B); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3005052
   label: LpsA
   evidence:
   - reference: ARO:3005052
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
       B); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3005059
   label: LptD
   evidence:
@@ -162,3 +162,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

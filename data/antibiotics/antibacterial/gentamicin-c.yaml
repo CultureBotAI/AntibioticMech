@@ -63,7 +63,7 @@ source_concepts:
   minted_identifier: antibioticmech:aro-6407ce57f1
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000797
   label: MexCD-OprJ
   evidence:
@@ -105,28 +105,28 @@ resistance_mechanisms:
   - reference: ARO:3000862
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
       C); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003032
   label: MexXY-OprM
   evidence:
   - reference: ARO:3003032
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
       C); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003038
   label: MexXY-OprA
   evidence:
   - reference: ARO:3003038
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
       C); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003240
   label: Mycobacteroides abscessus 16S rRNA mutation conferring resistance to gentamicin
   evidence:
   - reference: ARO:3003240
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
       C); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003396
   label: Escherichia coli 16S rRNA (rrsB) mutation conferring resistance to gentamicin
     C
@@ -134,14 +134,14 @@ resistance_mechanisms:
   - reference: ARO:3003396
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
       C); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003504
   label: Borreliella burgdorferi 16S rRNA mutation conferring resistance to gentamicin
   evidence:
   - reference: ARO:3003504
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
       C); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003517
   label: Mycobacteroides chelonae 16S rRNA mutation conferring resistance to gentamicin
     C
@@ -149,14 +149,14 @@ resistance_mechanisms:
   - reference: ARO:3003517
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
       C); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004038
   label: Pseudomonas aeruginosa emrE
   evidence:
   - reference: ARO:3004038
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
       C); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004598
   label: Klebsiella pneumoniae KpnGH-TolC
   evidence:
@@ -175,3 +175,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

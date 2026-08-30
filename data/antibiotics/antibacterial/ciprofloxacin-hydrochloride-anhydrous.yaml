@@ -42,8 +42,6 @@ xrefs:
 - cas:86483-48-9
 - drugbank:DB00537
 activity_roles:
-- CHEBI:33281
-- CHEBI:33282
 - CHEBI:36047
 chemical_structure:
   smiles: Cl.O=C(O)c1cn(C2CC2)c2cc(N3CCNCC3)c(F)cc2c1=O
@@ -60,8 +58,6 @@ source_concepts:
   source_label: ciprofloxacin hydrochloride (anhydrous)
   minted_identifier: antibioticmech:chebi-8621512d86
   role_terms:
-  - CHEBI:33281
-  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 curation_history:
@@ -69,3 +65,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -31,14 +31,14 @@ source_concepts:
   minted_identifier: antibioticmech:aro-bbcb98de5b
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3009464
   label: Zymoseptoria tritici MgAtr with mutations conferring resistance to cyproconazole
   evidence:
   - reference: ARO:3009464
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009189 (cyproconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009532
   label: Phakospora pachyrhizi Cyp51 with mutations conferring resistance to cyproconazole
   evidence:
@@ -50,3 +50,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

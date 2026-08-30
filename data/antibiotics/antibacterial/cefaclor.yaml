@@ -61,6 +61,7 @@ xrefs:
 - chembl:CHEMBL1201018
 - pubchem.compound:51039
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 structural_class: cephalosporin
 structural_class_id: ARO:0000032
@@ -79,6 +80,7 @@ source_concepts:
   source_label: cefaclor
   minted_identifier: antibioticmech:aro-05c1d0a19e
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -86,10 +88,11 @@ source_concepts:
   source_label: cefaclor
   minted_identifier: antibioticmech:chebi-cfd6d47172
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004446
   label: Haemophilus influenzae PBP3 conferring resistance to beta-lactam antibiotics
   evidence:
@@ -108,3 +111,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

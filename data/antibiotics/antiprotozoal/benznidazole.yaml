@@ -38,8 +38,6 @@ xrefs:
 - wikipedia.en:Benznidazole
 activity_roles:
 - CHEBI:35820
-- CHEBI:36335
-- CHEBI:70868
 chemical_structure:
   smiles: O=C(Cn1ccnc1[N+](=O)[O-])NCc1ccccc1
   standard_inchi: InChI=1S/C12H12N4O3/c17-11(14-8-10-4-2-1-3-5-10)9-15-7-6-13-12(15)16(18)19/h1-7H,8-9H2,(H,14,17)
@@ -56,11 +54,13 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-63888122bb
   role_terms:
   - CHEBI:35820
-  - CHEBI:36335
-  - CHEBI:70868
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

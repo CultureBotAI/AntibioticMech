@@ -59,6 +59,8 @@ xrefs:
 - chembl:CHEMBL148
 - pubchem.compound:104838
 activity_roles:
+- CHEBI:33281
+- CHEBI:33282
 - CHEBI:36047
 structural_class: carbapenem
 structural_class_id: ARO:0000020
@@ -77,6 +79,8 @@ source_concepts:
   source_label: imipenem
   minted_identifier: antibioticmech:aro-591797d15a
   role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -84,6 +88,8 @@ source_concepts:
   source_label: imipenem
   minted_identifier: antibioticmech:chebi-1f91c8b5f7
   role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
@@ -94,28 +100,28 @@ resistance_mechanisms:
   - reference: ARO:3000589
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000772
   label: AdeIJK
   evidence:
   - reference: ARO:3000772
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3003385
   label: Klebsiella aerogenes Omp36
   evidence:
   - reference: ARO:3003385
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3003686
   label: Pseudomonas aeruginosa oprD with mutation conferring resistance to imipenem
   evidence:
   - reference: ARO:3003686
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003697
   label: MexPQ-OpmE
   evidence:
@@ -129,28 +135,28 @@ resistance_mechanisms:
   - reference: ARO:3003713
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3003808
   label: carO
   evidence:
   - reference: ARO:3003808
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3003809
   label: Acinetobacter baumannii OprD conferring resistance to imipenem
   evidence:
   - reference: ARO:3003809
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3003966
   label: Klebsiella pneumoniae OmpK35
   evidence:
   - reference: ARO:3003966
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3004123
   label: Burkholderia pseudomallei Omp38
   evidence:
@@ -164,7 +170,7 @@ resistance_mechanisms:
   - reference: ARO:3004559
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004598
   label: Klebsiella pneumoniae KpnGH-TolC
   evidence:
@@ -178,7 +184,7 @@ resistance_mechanisms:
   - reference: ARO:3005015
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3005059
   label: LptD
   evidence:
@@ -267,3 +273,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

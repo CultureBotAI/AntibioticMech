@@ -32,70 +32,70 @@ source_concepts:
   minted_identifier: antibioticmech:aro-556deb5a30
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003749
   label: salA
   evidence:
   - reference: ARO:3003749
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3004476
   label: vmlR
   evidence:
   - reference: ARO:3004476
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3004715
   label: vga(E) Staphylococcus cohnii
   evidence:
   - reference: ARO:3004715
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007026
   label: salB
   evidence:
   - reference: ARO:3007026
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007027
   label: salC
   evidence:
   - reference: ARO:3007027
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007028
   label: salD
   evidence:
   - reference: ARO:3007028
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007029
   label: salE
   evidence:
   - reference: ARO:3007029
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007644
   label: Clostridium perfringes cplR
   evidence:
   - reference: ARO:3007644
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007645
   label: Clostridium sporogenes cplR
   evidence:
   - reference: ARO:3007645
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007646
   label: Neobacillus vireti vmlR2
   evidence:
@@ -107,3 +107,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -38,7 +38,9 @@ xrefs:
 - metacyc.compound:CPD-17940
 - reaxys:188430
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
+- CHEBI:35718
 chemical_structure:
   smiles: CC(=O)Nc1c2sscc-2nc1=O
   standard_inchi: InChI=1S/C7H6N2O2S2/c1-3(10)8-5-6-4(2-12-13-6)9-7(5)11/h2H,1H3,(H,8,10)(H,9,11)
@@ -54,10 +56,16 @@ source_concepts:
   source_label: holomycin
   minted_identifier: antibioticmech:chebi-0e2d1eda12
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
+  - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

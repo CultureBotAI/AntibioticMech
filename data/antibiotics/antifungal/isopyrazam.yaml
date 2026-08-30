@@ -15,6 +15,8 @@ xrefs:
 - CHEBI:83126
 - pubchem.compound:25271089
 activity_roles:
+- CHEBI:24127
+- CHEBI:35718
 - CHEBI:86328
 structural_class: fungal succinate dehydrogenase inhibitor
 structural_class_id: ARO:3009539
@@ -34,6 +36,8 @@ source_concepts:
   source_label: isopyrazam
   minted_identifier: antibioticmech:aro-5fd4e54f15
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 curation_history:
@@ -41,3 +45,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

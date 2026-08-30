@@ -23,6 +23,7 @@ xrefs:
 - patent:EP0350810
 - reaxys:11305595
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 chemical_structure:
   smiles: '[H][C@@]12CCCN1C(=O)[C@H](NC(=O)[C@@H]1CSC[C@@H](NC(=O)[C@H](C)NC(=O)[C@@H](N)[C@@H](C)CC)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](Cc3ccccc3)C(=O)N[C@@H]([C@@H](C)CC)C(=O)N1)[C@H](C)SC[C@@]([H])(C(=O)N[C@@H](C)C(=O)N[C@@H](CCCCN)C(=O)N/C(=C\C)C(=O)NCC(=O)N[C@@H]1CSC[C@@H]3NC(=O)[C@]([H])(Cc4ccc(O)cc4)NC(=O)[C@@H](CS/C=C\NC3=O)NC(=O)[C@H](CC(N)=O)NC(=O)[C@H](Cc3ccccc3)NC1=O)NC(=O)CNC2=O'
@@ -39,6 +40,7 @@ source_concepts:
   source_label: epidermin
   minted_identifier: antibioticmech:chebi-6352c2661c
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -46,3 +48,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

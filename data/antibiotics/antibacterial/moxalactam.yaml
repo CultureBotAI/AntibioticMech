@@ -55,7 +55,7 @@ xrefs:
 - chembl:CHEMBL74632
 - pubchem.compound:47499
 activity_roles:
-- CHEBI:33282
+- CHEBI:33281
 - CHEBI:36047
 structural_class: cephalosporin
 structural_class_id: ARO:0000032
@@ -74,7 +74,7 @@ source_concepts:
   source_label: moxalactam
   minted_identifier: antibioticmech:aro-5a7184ea7e
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -82,7 +82,7 @@ source_concepts:
   source_label: moxalactam
   minted_identifier: antibioticmech:chebi-516843da45
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
@@ -93,7 +93,7 @@ resistance_mechanisms:
   - reference: ARO:3001815
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004017 (moxalactam);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3004128
   label: Serratia marcescens Omp1
   evidence:
@@ -112,3 +112,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

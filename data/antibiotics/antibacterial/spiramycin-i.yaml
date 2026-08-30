@@ -239,7 +239,7 @@ resistance_mechanisms:
   - reference: ARO:3001303
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3002828
   label: srmB
   evidence:
@@ -253,14 +253,14 @@ resistance_mechanisms:
   - reference: ARO:3003908
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004098
   label: LpeAB
   evidence:
   - reference: ARO:3004098
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004170
   label: Streptococcus pneumoniae 23S rRNA with mutation conferring resistance to
     macrolide antibiotics
@@ -268,7 +268,7 @@ resistance_mechanisms:
   - reference: ARO:3004170
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004171
   label: Streptomyces ambofaciens 23S rRNA with mutation conferring resistance to
     macrolide antibiotics
@@ -276,7 +276,7 @@ resistance_mechanisms:
   - reference: ARO:3004171
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004176
   label: Mycoplasma hominis 23S rRNA with mutation conferring resistance to macrolide
     antibiotics
@@ -298,7 +298,7 @@ resistance_mechanisms:
   - reference: ARO:3004606
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3007050
   label: mreA
   evidence:
@@ -317,3 +317,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

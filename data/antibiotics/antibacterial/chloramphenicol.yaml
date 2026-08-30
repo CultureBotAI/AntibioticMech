@@ -114,7 +114,6 @@ xrefs:
 - pubchem.compound:5959
 activity_roles:
 - CHEBI:33281
-- CHEBI:33282
 - CHEBI:36047
 structural_class: phenicol antibiotic
 structural_class_id: ARO:3000387
@@ -134,7 +133,6 @@ source_concepts:
   minted_identifier: antibioticmech:aro-859fb8f49a
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -143,67 +141,66 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-9f801b8864
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000309
   label: emrD
   evidence:
   - reference: ARO:3000309
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000384
   label: AcrAB-TolC
   evidence:
   - reference: ARO:3000384
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000386
   label: MexAB-OprM
   evidence:
   - reference: ARO:3000386
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000772
   label: AdeIJK
   evidence:
   - reference: ARO:3000772
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000786
   label: MdsABC
   evidence:
   - reference: ARO:3000786
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000797
   label: MexCD-OprJ
   evidence:
   - reference: ARO:3000797
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000798
   label: MexEF-OprN
   evidence:
   - reference: ARO:3000798
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3001214
   label: mdtM
   evidence:
   - reference: ARO:3001214
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3001328
   label: Escherichia coli mdfA
   evidence:
@@ -336,56 +333,56 @@ resistance_mechanisms:
   - reference: ARO:3002689
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002690
   label: Streptomyces lividans cmlR
   evidence:
   - reference: ARO:3002690
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002691
   label: Salmonella enterica cmlA
   evidence:
   - reference: ARO:3002691
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002693
   label: cmlA1
   evidence:
   - reference: ARO:3002693
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002694
   label: cmlA4
   evidence:
   - reference: ARO:3002694
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002695
   label: cmlA5
   evidence:
   - reference: ARO:3002695
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002696
   label: cmlA6
   evidence:
   - reference: ARO:3002696
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002698
   label: cmlB
   evidence:
   - reference: ARO:3002698
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002699
   label: cmlB1
   evidence:
@@ -399,42 +396,42 @@ resistance_mechanisms:
   - reference: ARO:3002700
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002701
   label: Rhodococcus fascians cmr
   evidence:
   - reference: ARO:3002701
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002702
   label: cmrA
   evidence:
   - reference: ARO:3002702
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002703
   label: cmx
   evidence:
   - reference: ARO:3002703
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002704
   label: fexA
   evidence:
   - reference: ARO:3002704
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002705
   label: floR
   evidence:
   - reference: ARO:3002705
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002812
   label: pp-flo
   evidence:
@@ -462,35 +459,35 @@ resistance_mechanisms:
   - reference: ARO:3002816
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003007
   label: bmr
   evidence:
   - reference: ARO:3003007
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003029
   label: MexVW-OprM
   evidence:
   - reference: ARO:3003029
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003032
   label: MexXY-OprM
   evidence:
   - reference: ARO:3003032
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003054
   label: SmeDEF
   evidence:
   - reference: ARO:3003054
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003062
   label: ykkCD
   evidence:
@@ -504,7 +501,7 @@ resistance_mechanisms:
   - reference: ARO:3003110
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003374
   label: Enterobacter aerogenes acrR with mutation conferring multidrug antibiotic
     resistance
@@ -512,7 +509,7 @@ resistance_mechanisms:
   - reference: ARO:3003374
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003381
   label: Escherichia coli soxR with mutation conferring antibiotic resistance
   evidence:
@@ -526,28 +523,28 @@ resistance_mechanisms:
   - reference: ARO:3003441
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003511
   label: Escherichia coli soxS with mutation conferring antibiotic resistance
   evidence:
   - reference: ARO:3003511
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003697
   label: MexPQ-OpmE
   evidence:
   - reference: ARO:3003697
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003703
   label: MexMN-OprM
   evidence:
   - reference: ARO:3003703
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3003746
   label: optrA
   evidence:
@@ -561,7 +558,7 @@ resistance_mechanisms:
   - reference: ARO:3003907
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003963
   label: flo
   evidence:
@@ -575,7 +572,7 @@ resistance_mechanisms:
   - reference: ARO:3003983
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004066
   label: MexEF-OprN with MexT mutation conferring resistance to chloramphenicol, ciprofloxacin,
     and trimethoprim
@@ -583,7 +580,7 @@ resistance_mechanisms:
   - reference: ARO:3004066
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004068
   label: MexEF-OprN with MexS mutations conferring resistance to chloramphenicol,
     ciprofloxacin, and trimethoprim
@@ -591,7 +588,7 @@ resistance_mechanisms:
   - reference: ARO:3004068
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004070
   label: MexEF-OprN with MvaT deletion conferring resistance to chloramphenicol and
     norfloxacin
@@ -599,7 +596,7 @@ resistance_mechanisms:
   - reference: ARO:3004070
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3004128
   label: Serratia marcescens Omp1
   evidence:
@@ -613,14 +610,14 @@ resistance_mechanisms:
   - reference: ARO:3004146
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004150
   label: Escherichia coli 23S rRNA with mutation conferring resistance to chloramphenicol
   evidence:
   - reference: ARO:3004150
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004180
   label: Halobacterium halobium 23S rRNA mutation conferring resistance to chloramphenicol
   evidence:
@@ -690,14 +687,14 @@ resistance_mechanisms:
   - reference: ARO:3004460
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3004470
   label: poxtA
   evidence:
   - reference: ARO:3004470
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004572
   label: Staphylococcus aureus LmrS
   evidence:
@@ -739,21 +736,21 @@ resistance_mechanisms:
   - reference: ARO:3004660
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004665
   label: cmlA8
   evidence:
   - reference: ARO:3004665
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004666
   label: pexA
   evidence:
   - reference: ARO:3004666
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3005043
   label: cmlA9
   evidence:
@@ -772,3 +769,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

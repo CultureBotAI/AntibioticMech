@@ -32,6 +32,7 @@ xrefs:
 - knapsack:C00034441
 - reaxys:1445869
 activity_roles:
+- CHEBI:33281
 - CHEBI:38068
 chemical_structure:
   smiles: COc1cc(OC)c2c(O)c3c(=O)cc(C)oc3c(-c3c(OC)cc4cc5oc(C)cc(=O)c5c(O)c4c3OC)c2c1
@@ -48,6 +49,7 @@ source_concepts:
   source_label: aurasperone A
   minted_identifier: antibioticmech:chebi-a42739ed23
   role_terms:
+  - CHEBI:33281
   - CHEBI:38068
   source_version: '2026-08-29'
 curation_history:
@@ -55,3 +57,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

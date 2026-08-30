@@ -67,7 +67,7 @@ xrefs:
 - chembl:CHEMBL1443
 - pubchem.compound:8982
 activity_roles:
-- CHEBI:33282
+- CHEBI:33281
 - CHEBI:36047
 structural_class: penicillin beta-lactam
 structural_class_id: ARO:3000008
@@ -86,7 +86,7 @@ source_concepts:
   source_label: nafcillin
   minted_identifier: antibioticmech:aro-5a153f848b
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -94,11 +94,11 @@ source_concepts:
   source_label: nafcillin
   minted_identifier: antibioticmech:chebi-d2be08e716
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009660
   label: Staphylococcus aureus PBP4 mutant conferring resistance to nafcillin and
     cefoxitin
@@ -106,7 +106,7 @@ resistance_mechanisms:
   - reference: ARO:3009660
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004018 (nafcillin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009661
   label: Staphylococcus aureus PBP4 mutant conferring resistance to nafcillin
   evidence:
@@ -118,3 +118,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

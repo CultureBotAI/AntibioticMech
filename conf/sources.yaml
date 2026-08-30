@@ -23,6 +23,12 @@ chebi:
   # exactly where a wrong role assertion enters unreviewed. Lowering this is a
   # curation decision, not a tuning knob.
   min_stars: 3
+  # ChEBI stamps each RELATION row with its own status (1 CHECKED, 3 OK,
+  # 9 SUBMITTED). `min_stars` above governs the compound ENTRY; this governs the
+  # is_a and has_role edges, which is what actually decides whether a compound is
+  # in scope and how it is classified. Admitting SUBMITTED edges put two
+  # antiretrovirals into a corpus that excludes antivirals.
+  relation_status_allowed: [1, 3]
   homepage: https://www.ebi.ac.uk/chebi/
   license: CC BY 4.0
 

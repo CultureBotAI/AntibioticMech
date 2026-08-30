@@ -94,28 +94,28 @@ source_concepts:
   - CHEBI:33281
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3001214
   label: mdtM
   evidence:
   - reference: ARO:3001214
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000047 (puromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003007
   label: bmr
   evidence:
   - reference: ARO:3003007
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000047 (puromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003027
   label: lmrAB Operon
   evidence:
   - reference: ARO:3003027
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000047 (puromycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004101
   label: MdtNOP
   evidence:
@@ -134,3 +134,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

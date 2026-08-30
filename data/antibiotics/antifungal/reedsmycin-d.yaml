@@ -19,6 +19,7 @@ parent_compounds:
 xrefs:
 - chemspider:71048968
 activity_roles:
+- CHEBI:33281
 - CHEBI:35718
 chemical_structure:
   smiles: CCC(C)C1OC(=O)/C=C/C=C/C=C/C=C/C=C\CC(O)CC(O)CC(O)CC(O)CC(O)CC(O)CC(O)CC(O)/C=C/C1C
@@ -35,6 +36,7 @@ source_concepts:
   source_label: reedsmycin D
   minted_identifier: antibioticmech:chebi-232c5f29fc
   role_terms:
+  - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
@@ -42,3 +44,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

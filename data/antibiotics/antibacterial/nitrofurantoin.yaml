@@ -90,7 +90,6 @@ xrefs:
 - pubchem.compound:6604200
 activity_roles:
 - CHEBI:33281
-- CHEBI:33282
 - CHEBI:36047
 structural_class: nitrofuran antibiotic
 structural_class_id: ARO:3004116
@@ -110,7 +109,6 @@ source_concepts:
   minted_identifier: antibioticmech:aro-2e74497393
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -119,25 +117,24 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-4ae399c673
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003751
   label: Escherichia coli nfsA mutations conferring resistance to nitrofurantoin
   evidence:
   - reference: ARO:3003751
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000075 (nitrofurantoin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003756
   label: Escherichia coli nfsB with mutation conferring resistance to nitrofurantoin
   evidence:
   - reference: ARO:3003756
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000075 (nitrofurantoin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003921
   label: oqxAB
   evidence:
@@ -156,3 +153,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

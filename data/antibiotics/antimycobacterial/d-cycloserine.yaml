@@ -97,6 +97,7 @@ xrefs:
 - pubchem.compound:6234
 activity_roles:
 - CHEBI:33231
+- CHEBI:33281
 structural_class: cycloserine-like antibiotic
 structural_class_id: ARO:3007154
 chemical_structure:
@@ -115,6 +116,7 @@ source_concepts:
   minted_identifier: antibioticmech:aro-000a78a459
   role_terms:
   - CHEBI:33231
+  - CHEBI:33281
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:40009
@@ -122,23 +124,24 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-0c70ed4cf2
   role_terms:
   - CHEBI:33231
+  - CHEBI:33281
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004941
   label: Mycobacterium tuberculosis ddlA mutations confer resistance to cycloserine
   evidence:
   - reference: ARO:3004941
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000760 (cycloserine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004945
   label: Mycobacterium tuberculosis ald mutations confer resistance to cycloserine
   evidence:
   - reference: ARO:3004945
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000760 (cycloserine);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004947
   label: Mycobacterium tuberculosis alr with mutation conferring resistance to cycloserine
   evidence:
@@ -163,3 +166,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

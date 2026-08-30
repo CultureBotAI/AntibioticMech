@@ -27,6 +27,7 @@ xrefs:
 - cas:200625-47-4
 - reaxys:8184047
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 chemical_structure:
   smiles: '[H][C@]1(O[C@@H]2C(=O)/C(=C(/C)O)C(=O)[C@@]3(O)C(=O)c4c(O)c5c(c(C)c4C[C@@]23O)C(=O)C(OC)=CC5=O)CC[C@]([H])(O[C@H]2C[C@@](C)(O)[C@H](OC(=O)c3c(C)ccc(C)c3O)[C@H](C)O2)[C@@H](C)O1'
@@ -43,6 +44,7 @@ source_concepts:
   source_label: polyketomycin
   minted_identifier: antibioticmech:chebi-5569c64373
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -50,3 +52,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

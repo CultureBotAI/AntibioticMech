@@ -37,6 +37,8 @@ xrefs:
 - pesticides:benthiavalicarb
 - reaxys:11327530
 activity_roles:
+- CHEBI:24127
+- CHEBI:35718
 - CHEBI:86328
 chemical_structure:
   smiles: CC(C)[C@H](NC(=O)O)C(=O)N[C@H](C)c1nc2ccc(F)cc2s1
@@ -53,6 +55,8 @@ source_concepts:
   source_label: benthiavalicarb
   minted_identifier: antibioticmech:chebi-d6fb1c94a1
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 curation_history:
@@ -60,3 +64,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

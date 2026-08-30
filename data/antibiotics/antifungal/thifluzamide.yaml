@@ -41,6 +41,8 @@ xrefs:
 - ppdb:1209
 - reaxys:11004210
 activity_roles:
+- CHEBI:24127
+- CHEBI:35718
 - CHEBI:86328
 chemical_structure:
   smiles: Cc1nc(C(F)(F)F)c(C(=O)Nc2c(Br)cc(OC(F)(F)F)cc2Br)s1
@@ -57,6 +59,8 @@ source_concepts:
   source_label: thifluzamide
   minted_identifier: antibioticmech:chebi-d67250fecc
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 curation_history:
@@ -64,3 +68,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

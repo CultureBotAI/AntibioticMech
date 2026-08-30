@@ -22,6 +22,7 @@ parent_compounds:
 xrefs:
 - reaxys:9275104
 activity_roles:
+- CHEBI:33281
 - CHEBI:33282
 chemical_structure:
   smiles: C/C=C/C=C/C=C(C)/C=C/C(O)=C1\C(=O)CNC1=O
@@ -38,6 +39,7 @@ source_concepts:
   source_label: (3Z)-ravenic acid
   minted_identifier: antibioticmech:chebi-78504814d2
   role_terms:
+  - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-29'
 curation_history:
@@ -45,3 +47,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

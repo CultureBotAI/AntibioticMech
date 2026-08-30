@@ -35,6 +35,7 @@ xrefs:
 - chemspider:5020599
 - wikipedia.en:Ceftiolene
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 chemical_structure:
   smiles: '[H]C(=O)Cn1c(S/C=C/C2=C(C(=O)O)N3C(=O)[C@@H](NC(=O)/C(=N\OC)c4csc(N)n4)[C@@]3([H])SC2)nnc(=O)c1=O'
@@ -51,6 +52,7 @@ source_concepts:
   source_label: ceftiolene
   minted_identifier: antibioticmech:chebi-7ee6d648ef
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 curation_history:
@@ -58,3 +60,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

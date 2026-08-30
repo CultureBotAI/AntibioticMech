@@ -56,6 +56,7 @@ xrefs:
 - chembl:CHEMBL1201046
 - pubchem.compound:43507
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 structural_class: cephalosporin
 structural_class_id: ARO:0000032
@@ -74,6 +75,7 @@ source_concepts:
   source_label: ceforanide
   minted_identifier: antibioticmech:aro-b37864fda2
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -81,6 +83,7 @@ source_concepts:
   source_label: ceforanide
   minted_identifier: antibioticmech:chebi-b9b9d577f8
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 curation_history:
@@ -88,3 +91,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -89,6 +89,8 @@ xrefs:
 - wikipedia.en:Griseofulvin
 activity_roles:
 - CHEBI:33282
+- CHEBI:35718
+- CHEBI:86327
 chemical_structure:
   smiles: COC1=CC(=O)C[C@@H](C)[C@]12Oc1c(Cl)c(OC)cc(OC)c1C2=O
   standard_inchi: InChI=1S/C17H17ClO6/c1-8-5-9(19)6-12(23-4)17(8)16(20)13-10(21-2)7-11(22-3)14(18)15(13)24-17/h6-8H,5H2,1-4H3/t8-,17+/m1/s1
@@ -105,9 +107,15 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-42f55b6feb
   role_terms:
   - CHEBI:33282
+  - CHEBI:35718
+  - CHEBI:86327
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -44,7 +44,7 @@ xrefs:
 - chembl:CHEMBL3186538
 - pubchem.compound:5284529
 activity_roles:
-- CHEBI:33282
+- CHEBI:33281
 structural_class: cephalosporin
 structural_class_id: ARO:0000032
 chemical_structure:
@@ -62,17 +62,21 @@ source_concepts:
   source_label: cefroxadine
   minted_identifier: antibioticmech:aro-137a154cbc
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:31379
   source_label: cefroxadine
   minted_identifier: antibioticmech:chebi-32ae24ba61
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

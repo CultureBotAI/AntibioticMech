@@ -31,6 +31,8 @@ xrefs:
 - chembl:CHEMBL466426
 - pubchem.compound:86173
 activity_roles:
+- CHEBI:24127
+- CHEBI:35718
 - CHEBI:77884
 - CHEBI:86328
 structural_class: triazole antifungal
@@ -50,6 +52,8 @@ source_concepts:
   source_label: difenoconazole
   minted_identifier: antibioticmech:aro-e244a9f722
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:77884
   - CHEBI:86328
   source_version: '2026-08-29'
@@ -58,11 +62,13 @@ source_concepts:
   source_label: difenoconazole
   minted_identifier: antibioticmech:chebi-0efcbeb4da
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:77884
   - CHEBI:86328
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009210
   label: Colletotrichum truncatum cyp51a with mutations associated with resistance
     to difenoconazole
@@ -70,14 +76,14 @@ resistance_mechanisms:
   - reference: ARO:3009210
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009190 (difenoconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009489
   label: Aspergillus flavus Cyp51C with mutations conferring resistance to difenoconazole
   evidence:
   - reference: ARO:3009489
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009190 (difenoconazole);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009521
   label: Venturia inaequalis cyp51a with mutations associated with resistance to difenoconazole
   evidence:
@@ -89,3 +95,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

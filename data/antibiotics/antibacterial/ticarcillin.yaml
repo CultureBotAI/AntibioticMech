@@ -54,6 +54,7 @@ xrefs:
 - chembl:CHEMBL1449
 - pubchem.compound:36921
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 structural_class: penicillin beta-lactam
 structural_class_id: ARO:3000008
@@ -72,6 +73,7 @@ source_concepts:
   source_label: ticarcillin
   minted_identifier: antibioticmech:aro-2ab5f0633c
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -79,10 +81,11 @@ source_concepts:
   source_label: ticarcillin
   minted_identifier: antibioticmech:chebi-3a2e3987ad
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000772
   label: AdeIJK
   evidence:
@@ -138,7 +141,7 @@ resistance_mechanisms:
   - reference: ARO:3004359
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003832 (ticarcillin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004598
   label: Klebsiella pneumoniae KpnGH-TolC
   evidence:
@@ -192,3 +195,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

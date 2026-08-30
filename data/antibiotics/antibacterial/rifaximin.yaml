@@ -55,7 +55,6 @@ xrefs:
 - pubchem.compound:6436173
 activity_roles:
 - CHEBI:33281
-- CHEBI:33282
 structural_class: rifamycin antibiotic
 structural_class_id: ARO:3000157
 chemical_structure:
@@ -74,7 +73,6 @@ source_concepts:
   minted_identifier: antibioticmech:aro-f950f96b1f
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:75246
@@ -82,24 +80,23 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-ca0ee79f16
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3000245
   label: RbpA
   evidence:
   - reference: ARO:3000245
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3000248
   label: DnaA
   evidence:
   - reference: ARO:3000248
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3000261
   label: sigma factor conferring resistance to rifampin
   evidence:
@@ -120,7 +117,7 @@ resistance_mechanisms:
   - reference: ARO:3000444
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3000501
   label: rpoB2
   evidence:
@@ -141,28 +138,28 @@ resistance_mechanisms:
   - reference: ARO:3002884
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3003283
   label: Mycobacterium tuberculosis rpoB with mutations conferring resistance to rifampicin
   evidence:
   - reference: ARO:3003283
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3003284
   label: Mycobacterium leprae rpoB mutations conferring resistance to rifampicin
   evidence:
   - reference: ARO:3003284
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3003285
   label: Staphylococcus aureus rpoB mutants conferring resistance to rifampicin
   evidence:
   - reference: ARO:3003285
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3003288
   label: Escherichia coli rpoB mutants conferring resistance to rifampicin
   evidence:
@@ -176,14 +173,14 @@ resistance_mechanisms:
   - reference: ARO:3003992
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3004563
   label: Clostridioides difficile rpoB with mutation conferring resistance to rifampicin
   evidence:
   - reference: ARO:3004563
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000517 (rifaximin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007208
   label: HelR
   evidence:
@@ -209,3 +206,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -169,9 +169,12 @@ classes:
 
       chemical_structure:
         description: >-
-          The structure itself. A record without an InChIKey is not an
-          individual chemical structure and does not belong in the corpus;
-          `just verify-corpus` enforces this for seeded records.
+          The structure itself. Required, and its InChIKey with it: a record
+          without one is not an individual chemical structure and does not
+          belong in the corpus. Enforcing it here means the write gate rejects
+          such a record rather than leaving the rule to the seeder and a
+          corpus-wide test.
+        required: true
         range: ChemicalStructure
 
       biosynthesis_origin:
@@ -236,6 +239,8 @@ classes:
           Every upstream concept that resolved to this record, with its native
           identifier and label. The merge is the product: this is what shows a
           consumer that ChEBI and CARD are describing the same structure.
+          Required — a record with no attestation has no provenance at all.
+        required: true
         multivalued: true
         inlined_as_list: true
         range: SourceConcept
@@ -243,7 +248,10 @@ classes:
       grounding_status:
         description: >-
           Whether the record's identity is an ontology term or a minted CURIE,
-          and how that decision was reached.
+          and how that decision was reached. Required: "which of these is it"
+          has no sensible default, and a consumer filtering on grounding must
+          not have to treat absence as a third state.
+        required: true
         range: GroundingStatusEnum
 
       grounding_notes:
@@ -312,7 +320,10 @@ classes:
         description: Standard InChI.
         range: string
       standard_inchi_key:
-        description: Standard InChIKey (14-10-1 block form).
+        description: >-
+          Standard InChIKey (14-10-1 block form). Required: it is the identity
+          check the whole corpus is keyed on.
+        required: true
         range: string
         pattern: "^[A-Z]{14}-[A-Z]{10}-[A-Z]$"
       molecular_formula:
@@ -444,9 +455,12 @@ classes:
       accession must not be presented as an entire multisubunit complex.
     attributes:
       uniprot_id:
+        description: >-
+          UniProtKB accession, isoform suffix allowed (UniProtKB:P12345-2) —
+          an isoform is a legitimate, more precise example of a target.
         required: true
         range: string
-        pattern: "^UniProtKB:[A-Z0-9]+$"
+        pattern: "^UniProtKB:[A-Z0-9]+(-[0-9]+)?$"
       protein_label:
         required: true
         range: string
@@ -473,6 +487,21 @@ classes:
     description: >-
       One activity claim against one target organism, with the assay that
       produced it. A number without a method is not an observation.
+    rules:
+      - description: >-
+          A reported MIC must carry its units and the method that produced it.
+          Both were documented requirements enforced only by a test; expressing
+          them here means the write gate rejects a bare number.
+        preconditions:
+          slot_conditions:
+            mic_value:
+              value_presence: PRESENT
+        postconditions:
+          slot_conditions:
+            mic_units:
+              value_presence: PRESENT
+            assay:
+              value_presence: PRESENT
     attributes:
       taxon_id:
         description: NCBITaxon CURIE of the organism tested.
@@ -677,9 +706,10 @@ enums:
   AntimicrobialClassEnum:
     description: >-
       Coarse activity bucket, also the filesystem category. Assigned from the
-      source role terms; a compound asserted against several microbial groups is
-      filed under BROAD_SPECTRUM only when a source says so, not by counting
-      roles.
+      source role terms and, where CARD names a target group, from the drug
+      class; a compound asserted against several microbial groups is filed under
+      one of them by the documented priority, and `activity_roles` keeps every
+      role it bears.
     permissible_values:
       ANTIBACTERIAL:
         description: Active against bacteria (includes antibacterial drugs and agents).

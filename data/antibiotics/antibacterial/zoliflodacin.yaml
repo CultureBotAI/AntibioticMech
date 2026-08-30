@@ -30,7 +30,7 @@ source_concepts:
   minted_identifier: antibioticmech:aro-88c211f0f6
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004859
   label: Neisseria gonorrhoeae gyrB conferring resistance to zoliflodacin
   evidence:
@@ -42,3 +42,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

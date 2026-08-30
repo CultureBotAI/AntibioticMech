@@ -56,7 +56,6 @@ xrefs:
 - pubchem.compound:3767
 activity_roles:
 - CHEBI:33231
-- CHEBI:33281
 structural_class: isoniazid-like antibiotic
 structural_class_id: ARO:3007152
 chemical_structure:
@@ -75,7 +74,6 @@ source_concepts:
   minted_identifier: antibioticmech:aro-416e3ef585
   role_terms:
   - CHEBI:33231
-  - CHEBI:33281
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:6030
@@ -83,45 +81,44 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-b63c959909
   role_terms:
   - CHEBI:33231
-  - CHEBI:33281
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003392
   label: Mycobacterium tuberculosis katG mutations conferring resistance to isoniazid
   evidence:
   - reference: ARO:3003392
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003393
   label: Mycobacterium tuberculosis inhA mutations conferring resistance to isoniazid
   evidence:
   - reference: ARO:3003393
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003461
   label: Mycobacterium tuberculosis ndh with mutation conferring resistance to isoniazid
   evidence:
   - reference: ARO:3003461
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003463
   label: Mycobacterium tuberculosis kasA mutant conferring resistance to isoniazid
   evidence:
   - reference: ARO:3003463
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003778
   label: Mycolicibacterium smegmatis ndh with mutation conferring resistance to isoniazid
   evidence:
   - reference: ARO:3003778
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003779
   label: Mycobacterium tuberculosis variant bovis ndh with mutation conferring resistance
     to isoniazid
@@ -129,98 +126,98 @@ resistance_mechanisms:
   - reference: ARO:3003779
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003955
   label: efpA
   evidence:
   - reference: ARO:3003955
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004921
   label: Mycobacterium tuberculosis ahpC mutations confer resistance to isoniazid
   evidence:
   - reference: ARO:3004921
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004922
   label: Mycobacterium tuberculosis fabG1 mutations confer resistance to isoniazid
   evidence:
   - reference: ARO:3004922
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004923
   label: Mycobacterium tuberculosis furA mutations confer resistance to isoniazid
   evidence:
   - reference: ARO:3004923
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004924
   label: Mycobacterium tuberculosis inbR mutations conferring resistance to isoniazid
   evidence:
   - reference: ARO:3004924
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004925
   label: Mycobacterium tuberculosis mshA mutations conferring resistance to isoniazid
   evidence:
   - reference: ARO:3004925
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004927
   label: Mycobacterium tuberculosis mshC mutations conferring resistance to isoniazid
   evidence:
   - reference: ARO:3004927
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004928
   label: Mycobacterium tuberculosis mymA mutations conferring resistance to isoniazid
   evidence:
   - reference: ARO:3004928
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004929
   label: Mycobacterium tuberculosis mmaA3 mutations conferring resistance to isoniazid
   evidence:
   - reference: ARO:3004929
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004930
   label: Mycobacterium tuberculosis nat mutations conferring resistance to isoniazid
   evidence:
   - reference: ARO:3004930
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004931
   label: Mycobacterium tuberculosis nudC mutations conferring resistance to isoniazid
   evidence:
   - reference: ARO:3004931
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3004932
   label: Mycobacterium tuberculosis sigI mutations conferring resistance to isoniazid
   evidence:
   - reference: ARO:3004932
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3005105
   label: Mycobacterium tuberculosis ethA mutations conferring resistance to isoniazid
   evidence:
   - reference: ARO:3005105
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007186
   label: Mycobacterium tuberculosis Rv1258c mutations confer resistance to pyrazinamide,
     isoniazid, and streptomycin
@@ -228,14 +225,14 @@ resistance_mechanisms:
   - reference: ARO:3007186
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3007659
   label: putative nickel/cobalt transporter
   evidence:
   - reference: ARO:3007659
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000520 (isoniazid);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007798
   label: Mycobacterium tuberculosis iniA mutations conferring resistance to isoniazid
   evidence:
@@ -266,3 +263,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

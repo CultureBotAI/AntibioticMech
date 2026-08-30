@@ -55,8 +55,10 @@ xrefs:
 - wikipedia.en:Fumagillin
 activity_roles:
 - CHEBI:33281
+- CHEBI:35718
 - CHEBI:35820
 - CHEBI:36047
+- CHEBI:86327
 chemical_structure:
   smiles: '[H][C@]1([C@@]2(C)O[C@]2([H])CC=C(C)C)[C@H](OC)[C@H](OC(=O)/C=C/C=C/C=C/C=C/C(=O)O)CC[C@]12CO2'
   standard_inchi: InChI=1S/C26H34O7/c1-18(2)13-14-20-25(3,33-20)24-23(30-4)19(15-16-26(24)17-31-26)32-22(29)12-10-8-6-5-7-9-11-21(27)28/h5-13,19-20,23-24H,14-17H2,1-4H3,(H,27,28)/b7-5+,8-6+,11-9+,12-10+/t19-,20-,23-,24-,25+,26+/m1/s1
@@ -73,11 +75,17 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-b1d0ffa385
   role_terms:
   - CHEBI:33281
+  - CHEBI:35718
   - CHEBI:35820
   - CHEBI:36047
+  - CHEBI:86327
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

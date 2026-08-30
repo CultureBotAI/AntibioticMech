@@ -48,9 +48,10 @@ xrefs:
 - chembl:CHEMBL267345
 - pubchem.compound:5280965
 activity_roles:
-- CHEBI:33282
+- CHEBI:33281
+- CHEBI:35718
 - CHEBI:35820
-- CHEBI:70868
+- CHEBI:86327
 structural_class: polyene antifungal
 structural_class_id: ARO:3007497
 chemical_structure:
@@ -68,28 +69,30 @@ source_concepts:
   source_label: amphotericin B
   minted_identifier: antibioticmech:aro-473ef1d757
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
+  - CHEBI:35718
   - CHEBI:35820
-  - CHEBI:70868
+  - CHEBI:86327
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:2682
   source_label: amphotericin B
   minted_identifier: antibioticmech:chebi-1637b095ef
   role_terms:
-  - CHEBI:33282
+  - CHEBI:33281
+  - CHEBI:35718
   - CHEBI:35820
-  - CHEBI:70868
+  - CHEBI:86327
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009134
   label: antifungal resistance-associated MSH
   evidence:
   - reference: ARO:3009134
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007504 (amphotericin
       B); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009209
   label: Aspergillus fumigatus cyp51a with mutations conferring resistance to amphotericin
     B
@@ -97,7 +100,7 @@ resistance_mechanisms:
   - reference: ARO:3009209
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007504 (amphotericin
       B); database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009394
   label: Candida auris ERG11 lanosterol 14-alpha-demethylase with mutations conferring
     resistance against amphotericin B
@@ -110,3 +113,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

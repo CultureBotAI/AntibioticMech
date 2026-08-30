@@ -79,7 +79,6 @@ xrefs:
 - pubchem.compound:73491
 activity_roles:
 - CHEBI:33281
-- CHEBI:33282
 structural_class: phosphonic acid antibiotic
 structural_class_id: ARO:3007149
 chemical_structure:
@@ -98,7 +97,6 @@ source_concepts:
   minted_identifier: antibioticmech:aro-7af65f44e6
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 - source: CHEBI
   source_id: CHEBI:28915
@@ -106,7 +104,6 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-3102033d1f
   role_terms:
   - CHEBI:33281
-  - CHEBI:33282
   source_version: '2026-08-29'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_INACTIVATION
@@ -151,7 +148,7 @@ resistance_mechanisms:
   - reference: ARO:3000449
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3001329
   label: mdtG
   evidence:
@@ -207,84 +204,84 @@ resistance_mechanisms:
   - reference: ARO:3003210
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003775
   label: Escherichia coli murA with mutation conferring resistance to fosfomycin
   evidence:
   - reference: ARO:3003775
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003776
   label: Staphylococcus aureus murA with mutation conferring resistance to fosfomycin
   evidence:
   - reference: ARO:3003776
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003777
   label: Borreliella burgdorferi murA with mutation conferring resistance to fosfomycin
   evidence:
   - reference: ARO:3003777
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003784
   label: Mycobacterium tuberculosis intrinsic murA conferring resistance to fosfomycin
   evidence:
   - reference: ARO:3003784
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003785
   label: Chlamydia trachomatis intrinsic murA conferring resistance to fosfomycin
   evidence:
   - reference: ARO:3003785
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003889
   label: Escherichia coli GlpT with mutation conferring resistance to fosfomycin
   evidence:
   - reference: ARO:3003889
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003890
   label: Escherichia coli UhpT with mutation conferring resistance to fosfomycin
   evidence:
   - reference: ARO:3003890
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003893
   label: Escherichia coli uhpA with mutation conferring resistance to fosfomycin
   evidence:
   - reference: ARO:3003893
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003899
   label: Escherichia coli PtsI with mutation conferring resistance to fosfomycin
   evidence:
   - reference: ARO:3003899
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003900
   label: Escherichia coli cyaA with mutation conferring resistance to fosfomycin
   evidence:
   - reference: ARO:3003900
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003901
   label: Staphylococcus aureus GlpT with mutation conferring resistance to fosfomycin
   evidence:
   - reference: ARO:3003901
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003902
   label: Staphylococcus aureus UhpT with mutation conferring resistance to fosfomycin
   evidence:
@@ -305,7 +302,7 @@ resistance_mechanisms:
   - reference: ARO:3004113
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004573
   label: Acinetobacter baumannii AbaF
   evidence:
@@ -375,7 +372,7 @@ resistance_mechanisms:
   - reference: ARO:3005162
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000025 (fosfomycin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3007043
   label: msr(I)
   evidence:
@@ -457,3 +454,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

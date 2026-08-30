@@ -40,6 +40,8 @@ xrefs:
 - ppdb:645
 - reaxys:2949607
 activity_roles:
+- CHEBI:24127
+- CHEBI:35718
 - CHEBI:86328
 chemical_structure:
   smiles: Cc1ccc(N(SC(F)(Cl)Cl)S(=O)(=O)N(C)C)cc1
@@ -56,6 +58,8 @@ source_concepts:
   source_label: tolylfluanid
   minted_identifier: antibioticmech:chebi-231346e47a
   role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 curation_history:
@@ -63,3 +67,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

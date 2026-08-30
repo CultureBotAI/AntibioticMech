@@ -21,6 +21,7 @@ parent_compounds:
 - CHEBI:86478
 activity_roles:
 - CHEBI:33282
+- CHEBI:35718
 chemical_structure:
   smiles: C/C=C(\C)c1ccc(C)c(=O)o1
   standard_inchi: InChI=1S/C10H12O2/c1-4-7(2)9-6-5-8(3)10(11)12-9/h4-6H,1-3H3/b7-4+
@@ -37,9 +38,14 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-940fe69a58
   role_terms:
   - CHEBI:33282
+  - CHEBI:35718
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -64,6 +64,16 @@ enforces that the flag is present.
 What must *never* happen is a minted record duplicating a ChEBI-grounded
 structure — that is a failure of resolution, and a test fails on it.
 
+## Structural class
+
+The ARO drug class is the nearest class ancestor of the molecule. When two class
+ancestors sit at the same depth the field is left **empty** rather than resolved
+by file order: lassomycin has both `rifamycin antibiotic` and `lasso peptide
+antibiotics` as parents, and picking whichever line came first in `aro.obo`
+asserted it is a rifamycin, which it is not. The stakes rose once
+`structural_class_id` began feeding class assignment, where a wrong pick moves a
+record's directory.
+
 ## Class assignment
 
 `antimicrobial_class` decides one thing: which directory the record lives in and
@@ -94,11 +104,20 @@ their targets are metazoa.
 Both lists are curation decisions written where they can be changed and
 re-extracted, not assumptions buried in code.
 
-## Why 3-star ChEBI only
+## Two independent trust filters on ChEBI
 
-ChEBI's 2-star entries are automatically imported and not manually reviewed. An
-automatic import is exactly where a wrong role assertion enters unexamined, and a
-wrong role here means a compound that is not an antimicrobial getting an
+**`min_stars: 3` governs the compound entry.** ChEBI's 2-star entries are
+automatically imported and not manually reviewed.
+
+**`relation_status_allowed: [1, 3]` governs the edges.** ChEBI stamps each
+relation row with its own status (1 CHECKED, 3 OK, 9 SUBMITTED), and the star
+rating of a compound says nothing about the review state of the `has_role` edge
+hanging off it. Admitting SUBMITTED edges is how two antiretrovirals — zidovudine
+and efavirenz — entered a corpus whose scope excludes antivirals, on the strength
+of an unreviewed `antitubercular agent` assertion. Both filters are needed;
+neither substitutes for the other.
+
+A wrong role here means a compound that is not an antimicrobial getting an
 antimicrobial record. The exception is a ChEBI entry cross-referenced by an ARO
 molecule: CARD's assertion that the compound is an antibiotic is itself evidence,
 so the entry is admitted for its structure regardless of star rating.
@@ -111,7 +130,23 @@ onto records, each item citing the ARO term itself with a note saying plainly
 that it is a database assertion rather than a primary citation. A curator
 upgrading one to literature replaces the reference.
 
-CARD's determinant→mechanism association lives in `card.json`, not in `aro.obo`,
-so `mechanism_type` is read off the determinant's `is_a` lineage using the map in
-`conf/sources.yaml`. A determinant whose lineage matches nothing is seeded
-`UNKNOWN` and lands on the worklist — it is not guessed.
+`mechanism_type` is read off the determinant's ancestry using the map in
+`conf/sources.yaml`. The walk follows **`is_a` and `participates_in`**, because
+ARO does not link a determinant to its mechanism category by subclassing:
+`antibiotic efflux` (ARO:0010000) is not an `is_a` ancestor of anything. The link
+is carried by `participates_in` on ten determinant-family roots — efflux pump
+complex or subunit, antibiotic target protection protein, and so on. Following
+`is_a` alone made eight of the ten categories unassignable and left 2,252 of
+4,555 rows `UNKNOWN`; following both leaves 25.
+
+The walk is breadth-first with every level sorted, so the nearest classification
+wins and a determinant with two equally-near mechanism ancestors resolves the
+same way on every machine — set iteration here would make the committed
+inventory depend on `PYTHONHASHSEED`. Seven determinants (the mycobacterial
+iniA/iniB/iniC family) are genuinely ambiguous between target alteration and
+efflux; `mechanism_source_id` records which ancestor was used.
+
+A determinant whose ancestry matches nothing is seeded `UNKNOWN` and lands on
+`just worklist --queue unknown-mech`, ranked by how many records it affects — it
+is not guessed. CARD's own authoritative association lives in `card.json`, which
+this repository does not yet ingest.

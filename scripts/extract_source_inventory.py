@@ -165,7 +165,17 @@ def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> li
     isa_parents: dict[str, list[str]] = defaultdict(list)
     isa_children: dict[str, list[str]] = defaultdict(list)
     has_role: dict[str, list[str]] = defaultdict(list)
+    # ChEBI stamps each RELATION with its own review status (1 CHECKED, 3 OK,
+    # 9 SUBMITTED). `min_stars` governs the compound entry, not the edges hanging
+    # off it, so a manually curated 3-star compound can still carry an
+    # automatically submitted, unreviewed role edge — which is how two
+    # antiretrovirals (zidovudine, efavirenz) entered a corpus whose scope
+    # excludes antivirals, on the strength of a bogus `antitubercular agent`
+    # assertion. Trust the same statuses here that compounds are filtered on.
+    allowed_status = {str(s) for s in cfg.get("relation_status_allowed", [1, 3])}
     for r in tsv_gz_rows(paths["relation.tsv.gz"]):
+        if r.get("status_id") not in allowed_status:
+            continue
         if r["relation_type_id"] == "5":       # is_a
             isa_parents[r["init_id"]].append(r["final_id"])
             isa_children[r["final_id"]].append(r["init_id"])
@@ -179,11 +189,15 @@ def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> li
     direct = {c: [r for r in roles if r in in_roles] for c, roles in has_role.items()
               if any(r in in_roles for r in roles)}
     # A subclass of a compound bearing a role bears it too (ChEBI asserts the
-    # role once, on the parent). Inherited rows carry the parent's role CURIEs.
+    # role once, on the parent). Inheritance applies to EVERY descendant,
+    # including one that already carries roles of its own: a compound with a
+    # direct `antitubercular agent` edge still inherits `antibacterial agent`
+    # from its parent. Skipping those cost 455 compounds an ancestor role and
+    # misfiled three of them, while `activity_roles` claimed to be complete.
     inherited: dict[str, list[str]] = {}
     for bearer, roles in direct.items():
         for cid in transitive([bearer], isa_children):
-            if cid not in direct:
+            if cid != bearer:
                 inherited.setdefault(cid, []).extend(roles)
 
     min_stars = int(cfg.get("min_stars", 3))
@@ -313,11 +327,24 @@ def extract_aro(conf: dict, *, offline: bool):
 
     children: dict[str, list[str]] = defaultdict(list)
     parents: dict[str, list[str]] = defaultdict(list)
+    # `mechanism_parents` additionally follows participates_in. ARO does NOT
+    # link a determinant to its mechanism category by is_a — `antibiotic efflux`
+    # (ARO:0010000) is not an is_a ancestor of anything. The link is carried by
+    # participates_in on ten determinant-family roots (efflux pump complex or
+    # subunit, antibiotic target protection protein, ...). Walking is_a alone
+    # made eight of the ten mechanism categories unassignable, ANTIBIOTIC_EFFLUX
+    # among them, and left 2,252 of 4,555 rows UNKNOWN.
+    mechanism_parents: dict[str, list[str]] = defaultdict(list)
     for tid, term in terms.items():
         for entry in term.get("is_a", []):
             pid = entry.split()[0]
             children[pid].append(tid)
             parents[tid].append(pid)
+            mechanism_parents[tid].append(pid)
+        for rel in term.get("relationship", []):
+            parts = rel.split()
+            if len(parts) >= 2 and parts[0] == "participates_in":
+                mechanism_parents[tid].append(parts[1])
 
     subtree = transitive([cfg["molecule_root"]], children) - {cfg["molecule_root"]}
     marker = cfg["drug_class_marker"]
@@ -334,17 +361,25 @@ def extract_aro(conf: dict, *, offline: bool):
         xrefs = [x for x in term.get("xref", [])]
         chebi_xrefs.update(x for x in xrefs if x.startswith("CHEBI:"))
         # Nearest ancestor that IS a drug class: the molecule's structural class.
+        # A tie at the same depth is left EMPTY rather than broken by file
+        # order: lassomycin has both `rifamycin antibiotic` and `lasso peptide
+        # antibiotics` as parents, and picking whichever line came first in
+        # aro.obo asserted it is a rifamycin, which it is not. structural_class_id
+        # now also feeds class assignment, so a wrong pick moves a record.
         drug_class = ""
-        frontier, seen = list(parents.get(tid, [])), set()
+        frontier, seen = sorted(parents.get(tid, [])), set()
         while frontier:
-            pid = frontier.pop(0)
-            if pid in seen or pid not in terms:
-                continue
-            seen.add(pid)
-            if is_class(pid):
-                drug_class = pid
+            hits = sorted({pid for pid in frontier if pid in terms and is_class(pid)})
+            if hits:
+                drug_class = hits[0] if len(hits) == 1 else ""
                 break
-            frontier.extend(parents.get(pid, []))
+            nxt = []
+            for pid in frontier:
+                if pid in seen or pid not in terms:
+                    continue
+                seen.add(pid)
+                nxt.extend(parents.get(pid, []))
+            frontier = sorted(set(nxt))
         rows.append({
             "aro_id": tid,
             "name": flat(term.get("name", [""])[0]),
@@ -362,12 +397,34 @@ def extract_aro(conf: dict, *, offline: bool):
     mech_map = conf["aro_mechanism_map"]
 
     def mechanism_for(determinant: str) -> tuple[str, str]:
-        """Read a determinant's mechanism off its is_a lineage; UNKNOWN when the
-        lineage matches nothing in the map (CARD keeps the authoritative
-        determinant->mechanism association in card.json, not in aro.obo)."""
-        for ancestor in transitive([determinant], parents):
-            if ancestor in mech_map and mech_map[ancestor] != "UNKNOWN":
-                return mech_map[ancestor], ancestor
+        """Nearest mapped ancestor over is_a + participates_in; UNKNOWN if none.
+
+        Breadth-first so the NEAREST classification wins, and every level is
+        walked in sorted order so a determinant with two equally-near mechanism
+        ancestors resolves the same way on every machine and every run — a set
+        iteration here would make the committed inventory depend on
+        PYTHONHASHSEED. Seven determinants (the mycobacterial iniA/iniB/iniC
+        family) are genuinely ambiguous between target alteration and efflux;
+        `mechanism_source_id` records which ancestor was used, so a curator can
+        see the choice rather than having to reverse-engineer it.
+        """
+        seen = {determinant}
+        frontier = [determinant]
+        while frontier:
+            hits = []
+            nxt = []
+            for node in sorted(frontier):
+                for parent in sorted(mechanism_parents.get(node, ())):
+                    if parent in seen:
+                        continue
+                    seen.add(parent)
+                    nxt.append(parent)
+                    if parent in mech_map and mech_map[parent] != "UNKNOWN":
+                        hits.append((parent, mech_map[parent]))
+            if hits:
+                ancestor, mechanism = sorted(hits)[0]
+                return mechanism, ancestor
+            frontier = nxt
         return "UNKNOWN", ""
 
     resistance_rows, target_rows = [], []

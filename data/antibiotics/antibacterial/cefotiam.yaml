@@ -48,6 +48,7 @@ xrefs:
 - chembl:CHEMBL1296
 - pubchem.compound:43708
 activity_roles:
+- CHEBI:33281
 - CHEBI:36047
 structural_class: cephalosporin
 structural_class_id: ARO:0000032
@@ -66,6 +67,7 @@ source_concepts:
   source_label: cefotiam
   minted_identifier: antibioticmech:aro-dbe61f6e87
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 - source: CHEBI
@@ -73,6 +75,7 @@ source_concepts:
   source_label: cefotiam
   minted_identifier: antibioticmech:chebi-40af7c46ef
   role_terms:
+  - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-29'
 molecular_targets:
@@ -87,3 +90,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

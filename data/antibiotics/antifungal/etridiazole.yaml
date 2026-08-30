@@ -54,6 +54,7 @@ xrefs:
 - ppdb:285
 - reaxys:1074817
 activity_roles:
+- CHEBI:35718
 - CHEBI:86328
 chemical_structure:
   smiles: CCOc1nc(C(Cl)(Cl)Cl)ns1
@@ -70,6 +71,7 @@ source_concepts:
   source_label: etridiazole
   minted_identifier: antibioticmech:chebi-06f833d9b0
   role_terms:
+  - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-29'
 curation_history:
@@ -77,3 +79,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

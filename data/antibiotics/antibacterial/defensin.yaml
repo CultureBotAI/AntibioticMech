@@ -73,21 +73,21 @@ resistance_mechanisms:
   - reference: ARO:3003774
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000693 (defensin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3005044
   label: OmpA
   evidence:
   - reference: ARO:3005044
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000693 (defensin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3005051
   label: LpsB
   evidence:
   - reference: ARO:3005051
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000693 (defensin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: REDUCED_PERMEABILITY
   aro_id: ARO:3005052
   label: LpsA
   evidence:
@@ -106,3 +106,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:57Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

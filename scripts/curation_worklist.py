@@ -108,10 +108,44 @@ def minted_queue(records: list[dict]) -> list[dict]:
     return rows
 
 
+def unknown_mechanism_queue(records: list[dict]) -> list[dict]:
+    """Determinants seeded with mechanism_type UNKNOWN.
+
+    docs/HARMONIZATION.md promises these "land on the curation worklist rather
+    than being guessed" — they did not, until this queue existed. Keyed by
+    determinant rather than by record: one determinant can appear on hundreds of
+    compounds, and typing it once fixes all of them.
+    """
+    by_determinant: dict[str, dict] = {}
+    for record in records:
+        for item in record.get("resistance_mechanisms") or []:
+            if item.get("mechanism_type") != "UNKNOWN":
+                continue
+            key = item.get("aro_id") or item.get("label", "")
+            entry = by_determinant.setdefault(key, {
+                "queue": "unknown-mech",
+                "key": key,
+                "label": item.get("label", ""),
+                "source": "ARO",
+                "source_id": "",
+                "records": 0,
+            })
+            entry["records"] += 1
+    rows = []
+    for entry in by_determinant.values():
+        count = entry.pop("records")
+        entry["hint"] = f"mechanism_type UNKNOWN on {count} record(s)"
+        entry["_count"] = count
+        rows.append(entry)
+    rows.sort(key=lambda r: (-r.pop("_count"), r["label"].lower()))
+    return rows
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--queue", choices=("all", "no-structure", "mechanism", "minted"),
+    parser.add_argument("--queue",
+                        choices=("all", "no-structure", "mechanism", "minted", "unknown-mech"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
     parser.add_argument("--tsv", type=Path, help="Write every row (not just --limit) to this TSV.")
@@ -125,6 +159,8 @@ def main() -> int:
         queues["mechanism"] = mechanism_queue(records)
     if args.queue in ("all", "minted"):
         queues["minted"] = minted_queue(records)
+    if args.queue in ("all", "unknown-mech"):
+        queues["unknown-mech"] = unknown_mechanism_queue(records)
 
     for name, rows in queues.items():
         print(f"\n=== {name}: {len(rows)} item(s) ===")

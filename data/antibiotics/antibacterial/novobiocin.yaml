@@ -83,98 +83,98 @@ source_concepts:
   - CHEBI:33282
   source_version: '2026-08-29'
 resistance_mechanisms:
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000386
   label: MexAB-OprM
   evidence:
   - reference: ARO:3000386
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000768
   label: abeS
   evidence:
   - reference: ARO:3000768
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000787
   label: MdtABC-TolC
   evidence:
   - reference: ARO:3000787
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000797
   label: MexCD-OprJ
   evidence:
   - reference: ARO:3000797
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3002522
   label: novA
   evidence:
   - reference: ARO:3002522
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003301
   label: Staphylococcus aureus gyrB conferring resistance to aminocoumarin
   evidence:
   - reference: ARO:3003301
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003302
   label: Bartonella bacilliformis gyrB conferring resistance to aminocoumarin
   evidence:
   - reference: ARO:3003302
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003303
   label: Escherichia coli gyrB conferring resistance to aminocoumarin
   evidence:
   - reference: ARO:3003303
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003314
   label: Staphylococcus aureus parE conferring resistance to aminocoumarin
   evidence:
   - reference: ARO:3003314
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003318
   label: Streptomyces rishiriensis parY mutant conferring resistance to aminocoumarin
   evidence:
   - reference: ARO:3003318
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003830
   label: aminocoumarin-resistant alaS
   evidence:
   - reference: ARO:3003830
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003840
   label: aminocoumarin-resistant cysB
   evidence:
   - reference: ARO:3003840
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3004076
   label: MuxABC-OpmB
   evidence:
   - reference: ARO:3004076
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin);
       database assertion, not a primary citation.
-- mechanism_type: UNKNOWN
+- mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3005059
   label: LptD
   evidence:
@@ -211,3 +211,7 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -42,7 +42,9 @@ xrefs:
 - reaxys:8582880
 - wikipedia.en:Efinaconazole
 activity_roles:
+- CHEBI:35718
 - CHEBI:77884
+- CHEBI:86327
 chemical_structure:
   smiles: C=C1CCN([C@H](C)[C@](O)(Cn2cncn2)c2ccc(F)cc2F)CC1
   standard_inchi: InChI=1S/C18H22F2N4O/c1-13-5-7-23(8-6-13)14(2)18(25,10-24-12-21-11-22-24)16-4-3-15(19)9-17(16)20/h3-4,9,11-12,14,25H,1,5-8,10H2,2H3/t14-,18-/m1/s1
@@ -58,10 +60,16 @@ source_concepts:
   source_label: efinaconazole
   minted_identifier: antibioticmech:chebi-d56a7289d9
   role_terms:
+  - CHEBI:35718
   - CHEBI:77884
+  - CHEBI:86327
   source_version: '2026-08-29'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
