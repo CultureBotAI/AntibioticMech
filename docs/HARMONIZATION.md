@@ -107,7 +107,7 @@ antibiotic subtree is there because a bacterial resistance determinant acts on i
 ## Mode of action
 
 `mode_of_action` is seeded from ChEBI's own mechanism roles. The maps in
-`conf/sources.yaml` translate 33 of them — `protein synthesis inhibitor`,
+`conf/sources.yaml` translate 32 of them — `protein synthesis inhibitor`,
 `sterol 14α-demethylase inhibitor`, `HIV-1 reverse transcriptase inhibitor` and
 so on — into `ModeOfActionEnum`, and 416 of 2,923 records carry a value.
 

@@ -105,3 +105,65 @@ def test_no_document_quotes_a_stale_record_count(repo_root):
             if 2000 < value < 10000 and value != actual:
                 stale.append(f"{name}: {match.group(0)!r} but the corpus holds {actual}")
     assert stale == [], stale
+
+
+# Every numeric claim in prose that can be re-derived, with the derivation that
+# produces it. Keyed by the phrase as it appears, so the assertion message names
+# the exact words to edit.
+#
+# This exists because the stale-figure defect recurred FIVE times (#68 and its
+# predecessors): a commit updates one count and leaves its neighbour standing —
+# "translate 33 of them" two lines above a corrected "416". Prose is where a
+# reader forms their model of the corpus, and a wrong number there is a claim
+# the repo makes and does not keep. Gating paths and just targets never caught
+# these, because the rot is in the digits, not the identifiers.
+#
+# To add a claim: write the sentence with a {} where the number goes.
+NUMERIC_CLAIMS = [
+    ("docs/HARMONIZATION.md", "translate {} of them", "mapped_roles"),
+    ("NEXT_TASKS.md", "beyond the {} records ChEBI's roles reach", "moa_records"),
+    ("NEXT_TASKS.md", "{} curated roles now map", "mapped_roles"),
+    ("NEXT_TASKS.md", "the {}-role map", "mapped_roles"),
+]
+
+
+def _derived(repo_root):
+    import yaml
+
+    conf = yaml.safe_load((repo_root / "conf" / "sources.yaml").read_text(encoding="utf-8"))
+    base = conf.get("role_to_mode_of_action") or {}
+    euk = conf.get("role_to_mode_of_action_eukaryotic") or {}
+
+    moa_records = 0
+    for path in (repo_root / "data" / "antibiotics").rglob("*.yaml"):
+        record = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if isinstance(record, dict) and record.get("mode_of_action"):
+            moa_records += 1
+
+    return {"mapped_roles": len(set(base) | set(euk)), "moa_records": moa_records}
+
+
+def test_numeric_claims_in_prose_match_the_corpus(repo_root):
+    """Re-derives each figure from conf/ and the records themselves.
+
+    A number in prose is an assertion about the data. Deriving it here means the
+    docs cannot drift from the corpus silently: the commit that changes the map
+    or the seeding either updates the sentence or fails the gate.
+    """
+    derived = _derived(repo_root)
+    wrong, absent = [], []
+    for name, template, key in NUMERIC_CLAIMS:
+        text = (repo_root / name).read_text(encoding="utf-8")
+        expected = template.format(derived[key])
+        if expected in text:
+            continue
+        pattern = re.escape(template).replace(r"\{\}", r"(\d+)")
+        found = re.findall(pattern, text)
+        if found:
+            wrong.append(f"{name}: {template.format(found[0])!r} -> should be {expected!r}")
+        else:
+            # The sentence was reworded. That is fine, but the entry here is now
+            # dead and must be updated or dropped, or it guards nothing.
+            absent.append(f"{name}: no longer contains {template!r}")
+    assert wrong == [], wrong
+    assert absent == [], absent
