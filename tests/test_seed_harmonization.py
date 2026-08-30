@@ -695,9 +695,13 @@ def test_the_curator_marker_must_begin_a_sentence_not_merely_appear():
     seeded = dict(base) | {"mode_of_action": "VIRAL_INTEGRASE_INHIBITION",
                            "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:67268 (...)"}
 
-    # A mention is not a claim, so the field stays the seeder's. Note the text
-    # itself is the seeder's to replace in that case — ownership is all-or-nothing.
-    mention = dict(base) | {"mode_of_action_notes": f"{MOA_NOTE_MARKER} X; ask a curator later"}
+    # A mention IS the point of this test, so the token must be present and must
+    # still not claim the field. An earlier edit replaced this input with one
+    # containing no token at all, which quietly stopped exercising the boundary:
+    # the test then passed against the naive substring predicate it exists to
+    # rule out.
+    mention = dict(base) | {
+        "mode_of_action_notes": f"{MOA_NOTE_MARKER} X. Ask a CURATOR: about this later"}
     assert merge_with_existing(dict(seeded), mention)["mode_of_action"] == \
         "VIRAL_INTEGRASE_INHIBITION"
 

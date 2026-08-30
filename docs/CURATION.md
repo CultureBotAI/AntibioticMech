@@ -69,10 +69,14 @@ Both survive `just seed-apply`.
 **The notes decide ownership, not the value.** Setting `mode_of_action` without
 writing a note leaves the field the seeder's, and the next run will replace it —
 because a bare value is indistinguishable from a hand-falsified one, and
-`verify-corpus` has to be able to tell. Any note that is not the seeder's own
-text claims the field, so prose like "mechanism unclear, the two candidate roles
-conflict, PMID:9" is honoured and preserved even without the marker; the marker
-is what additionally expresses a *veto*.
+`verify-corpus` has to be able to tell.
+
+**Write the `CURATOR:` token whenever the seeder's sentence is still in the
+note.** Appending prose without it does *not* claim the field: the seeder's
+marker is still there, so the note reads as the seeder's, your correction is
+reverted on the next run and `verify-corpus` reports drift until it is. Replacing
+the note wholesale with your own prose does claim the field — but appending is
+the natural thing to do, and appending is the case that needs the token.
 
 ## Evidence rules
 
