@@ -279,3 +279,23 @@ def test_a_record_that_changes_class_keeps_its_curation(tmp_path, monkeypatch):
     assert merged["curation_status"] == "REVIEWED"          # the curated ones survive
     assert merged["mode_of_action"] == "ERGOSTEROL_PATHWAY_INHIBITION"
     assert merged["causal_graphs"] == curated["causal_graphs"]
+
+
+def test_a_ground_decision_to_a_different_structure_is_refused():
+    """A decision sets identity; it must not silently key a record to a compound
+    whose structure it does not carry. Identifier, structure and merge key are
+    three separate values in the seeder, and this path only became reachable
+    once GROUND started working on structureless concepts."""
+    import pytest
+    from seed_from_sources import merge as sfs_merge
+
+    concept = _concept("ARO:0000006", "ARO:0000006", "erythromycin",
+                       "AAAAAAAAAAAAAA-BBBBBBBBBB-C")
+    concept.source = "ARO"
+    chebi_rows = {"CHEBI:18208": {"standard_inchi_key": "JGSARLDLIJGVTE-MBNYWOFBSA-N",
+                                  "role_ids": "", "smiles": "", "standard_inchi": "",
+                                  "molecular_formula": ""}}
+    decisions = {concept.minted: {"decision": "GROUND", "identifier": "CHEBI:18208"}}
+    with pytest.raises(SystemExit) as excinfo:
+        sfs_merge([concept], chebi_rows, CONF, decisions, "2026-08-29")
+    assert "structures differ" in str(excinfo.value)

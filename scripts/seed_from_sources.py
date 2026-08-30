@@ -34,6 +34,7 @@ import re
 import shutil
 import sys
 from collections import defaultdict
+from datetime import date
 from pathlib import Path
 
 import yaml
@@ -50,6 +51,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR = REPO_ROOT / "data" / "raw"
 CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 PATHS_FILE = CORPUS_DIR / "PATHS.tsv"
+RETIRED_FILE = CORPUS_DIR / "RETIRED.tsv"
 CONF_PATH = REPO_ROOT / "conf" / "sources.yaml"
 DECISIONS_PATH = REPO_ROOT / "curation" / "decisions.tsv"
 
@@ -348,14 +350,37 @@ def slugify(label: str) -> str:
     return slug.strip("-")[:70] or "unnamed"
 
 
-def assign_slugs(records: dict[str, dict], lockfile: dict[str, str]) -> dict[str, str]:
-    """Identifier -> slug, honouring the committed lockfile.
+def read_retired() -> dict[str, str]:
+    """Identifier -> slug for records that have left the corpus.
+
+    A slug is a published URL. When a record drops out — 134 did when unreviewed
+    ChEBI relations stopped being trusted — its row leaves PATHS.tsv, and without
+    this ledger the string is free for the next compound whose label happens to
+    slugify the same way, silently repointing a published URL at a different
+    structure. The ledger keeps every retired slug reserved, and hands it back to
+    its original identifier if that compound is ever re-admitted.
+    """
+    if not RETIRED_FILE.exists():
+        return {}
+    with RETIRED_FILE.open(newline="", encoding="utf-8") as fh:
+        return {r["identifier"]: r["slug"] for r in csv.DictReader(fh, delimiter="\t")}
+
+
+def assign_slugs(records: dict[str, dict], lockfile: dict[str, str],
+                 retired: dict[str, str] | None = None) -> dict[str, str]:
+    """Identifier -> slug, honouring the committed lockfile and the retired ledger.
 
     Slugs are corpus-wide and published in URLs, so an existing assignment is
-    never silently changed here: edit PATHS.tsv and re-seed.
+    never silently changed here: edit PATHS.tsv and re-seed. A retired slug is
+    never reissued to a different compound, and a returning compound reclaims
+    the slug it had.
     """
+    retired = read_retired() if retired is None else retired
     assigned = dict(lockfile)
-    taken = set(assigned.values())
+    for identifier, slug in retired.items():
+        if identifier in records and identifier not in assigned:
+            assigned[identifier] = slug
+    taken = set(assigned.values()) | set(retired.values())
     for identifier in sorted(records):
         if identifier in assigned:
             continue
@@ -405,6 +430,20 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
             continue
         identifier, status = resolve_identity(concept, chebi_rows)
         if override:
+            # The override sets identity; it must not silently disagree with the
+            # structure the record will carry. Identifier, structure and merge
+            # key are three separate values here, and a decision that grounds a
+            # concept to CHEBI:X while the record carries a PubChem structure
+            # for something else would key a record to a compound it is not.
+            target_key = chebi_rows.get(override, {}).get("standard_inchi_key", "")
+            concept_key = concept.structure.get("standard_inchi_key", "")
+            if target_key and concept_key and target_key != concept_key:
+                raise SystemExit(
+                    f"decision on {concept.minted} grounds {concept.label!r} to {override}, "
+                    f"but their structures differ ({concept_key} vs {target_key}). "
+                    f"Fix the decision row in curation/decisions.tsv — a record must not be "
+                    f"keyed to a compound whose structure it does not carry."
+                )
             identifier, status = override, "EXACT"
         by_identity[identifier].append(concept)
         grounding[identifier] = status
@@ -793,14 +832,65 @@ def read_lockfile_paths() -> dict[str, Path]:
     return out
 
 
-def write_lockfile(records: dict[str, dict], slugs: dict[str, str]) -> None:
+def write_lockfile(records: dict[str, dict], slugs: dict[str, str],
+                   *, only: set[str] | None = None) -> None:
+    """Write PATHS.tsv, and move anything that dropped out into RETIRED.tsv.
+
+    With `only`, rows for the named identifiers are merged into the existing
+    lockfile instead of rewriting it: the canary step writes one record, and
+    leaving its slug out of PATHS.tsv left the repository failing its own
+    integrity test until a full seed ran — on a step the documentation makes
+    mandatory before every bulk write.
+    """
     PATHS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    previous = read_lockfile()
+    previous_classes = {}
+    if PATHS_FILE.exists():
+        with PATHS_FILE.open(newline="", encoding="utf-8") as fh:
+            previous_classes = {r["identifier"]: r.get("antimicrobial_class", "")
+                                for r in csv.DictReader(fh, delimiter="\t")}
+
+    if only is None:
+        rows = {i: (records[i]["antimicrobial_class"], slugs[i]) for i in records}
+    else:
+        rows = {i: (previous_classes.get(i, ""), previous[i]) for i in previous}
+        for identifier in only:
+            rows[identifier] = (records[identifier]["antimicrobial_class"], slugs[identifier])
+
     with PATHS_FILE.open("w", newline="", encoding="utf-8") as fh:
         writer = csv.writer(fh, delimiter="\t", lineterminator="\n")
         writer.writerow(["identifier", "antimicrobial_class", "slug"])
-        for identifier in sorted(records):
-            writer.writerow([identifier, records[identifier]["antimicrobial_class"],
-                             slugs[identifier]])
+        for identifier in sorted(rows):
+            writer.writerow([identifier, rows[identifier][0], rows[identifier][1]])
+
+    if only is not None:
+        return
+
+    # Anything that was in the lockfile and is not produced any more is retired,
+    # not forgotten: its slug stays reserved. A returning identifier is removed
+    # from the ledger and reclaims its slug via assign_slugs.
+    retired = read_retired()
+    retired_dates = {}
+    if RETIRED_FILE.exists():
+        with RETIRED_FILE.open(newline="", encoding="utf-8") as fh:
+            retired_dates = {r["identifier"]: r.get("retired_on", "")
+                             for r in csv.DictReader(fh, delimiter="\t")}
+    today = date.today().isoformat()
+    for identifier, slug in previous.items():
+        if identifier not in records:
+            retired.setdefault(identifier, slug)
+            retired_dates.setdefault(identifier, today)
+    for identifier in list(retired):
+        if identifier in records:
+            retired.pop(identifier)
+            retired_dates.pop(identifier, None)
+    if not retired and not RETIRED_FILE.exists():
+        return
+    with RETIRED_FILE.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.writer(fh, delimiter="\t", lineterminator="\n")
+        writer.writerow(["identifier", "slug", "retired_on"])
+        for identifier in sorted(retired):
+            writer.writerow([identifier, retired[identifier], retired_dates.get(identifier, today)])
 
 
 def record_path(record: dict, slug: str) -> Path:
@@ -899,6 +989,8 @@ def main() -> int:
 
     if not args.only and not args.limit:
         write_lockfile(records, slugs)
+    elif selected:
+        write_lockfile(records, slugs, only=set(selected))
 
     if args.prune:
         keep = {record_path(records[i], slugs[i]) for i in records}

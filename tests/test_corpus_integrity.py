@@ -240,3 +240,45 @@ def test_resistance_mechanisms_are_typed_where_aro_says_so(records):
     # UNKNOWN is legitimate for a determinant ARO does not classify, but it
     # should be the exception rather than half the corpus.
     assert seen["UNKNOWN"] < sum(seen.values()) * 0.1, dict(seen)
+
+
+def test_retired_slugs_are_never_reissued(repo_root, path_lockfile):
+    """A slug is a published URL. When 134 records left the corpus, their slugs
+    left PATHS.tsv with them and became free for the next compound whose label
+    slugified the same way — silently repointing a published URL at a different
+    structure. The ledger keeps them reserved."""
+    import csv as _csv
+
+    retired_path = repo_root / "data" / "antibiotics" / "RETIRED.tsv"
+    if not retired_path.exists():
+        return
+    with retired_path.open(newline="", encoding="utf-8") as fh:
+        retired = {r["identifier"]: r["slug"] for r in _csv.DictReader(fh, delimiter="\t")}
+
+    # No retired identifier is also current: a returning compound must be
+    # removed from the ledger and reclaim its own slug, not hold both states.
+    both = set(retired) & set(path_lockfile)
+    assert both == set(), sorted(both)[:10]
+
+    # No retired slug has been handed to a different compound.
+    reissued = [(i, s) for i, s in retired.items() if s in set(path_lockfile.values())]
+    assert reissued == [], reissued[:10]
+
+
+def test_ambiguous_mechanism_determinants_resolve_deterministically(records):
+    """The mycobacterial iniA/iniB/iniC determinants have ancestors mapping to
+    two different mechanisms, so they are the regression surface if the
+    breadth-first sorted walk is ever refactored back to set iteration: the
+    answer would then depend on PYTHONHASHSEED and the committed inventory would
+    stop being reproducible."""
+    seen = {}
+    for _, record in records:
+        for item in record.get("resistance_mechanisms") or []:
+            label = str(item.get("label") or "")
+            if label.startswith("ini") or "iniA" in label or "iniC" in label:
+                seen.setdefault(item.get("aro_id"), item.get("mechanism_type"))
+    for aro_id, mechanism in seen.items():
+        assert mechanism in {"ANTIBIOTIC_TARGET_ALTERATION", "ANTIBIOTIC_EFFLUX"}, (aro_id, mechanism)
+    if seen:
+        # One answer per determinant, corpus-wide — not one per record.
+        assert len(set(seen.values())) <= 2

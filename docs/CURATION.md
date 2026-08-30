@@ -78,6 +78,14 @@ requirement.
 - **Never rename a record file.** Slugs are published URLs. Change the row in
   `data/antibiotics/PATHS.tsv` and re-seed; the integrity tests reject
   disagreement between filename and lockfile.
+
+- **A slug that leaves the corpus stays reserved.** When a record drops out its
+  row moves to `data/antibiotics/RETIRED.tsv`, and `assign_slugs` keeps that
+  string out of circulation, so a later compound can never inherit a published
+  URL that pointed at something else. A returning identifier is removed from the
+  ledger and reclaims its own slug. 134 slugs were retired when unreviewed ChEBI
+  relations stopped being trusted; the pages they served are gone, and a
+  redirect map for them is still owed (see NEXT_TASKS.md).
 - **Never hand-edit a seeded field.** `just verify-corpus` rebuilds the corpus
   from `data/raw/` and fails on drift — for the fields the seeder owns. It
   deliberately does not police curated fields, so it cannot see a *fabricated*

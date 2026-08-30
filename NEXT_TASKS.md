@@ -54,8 +54,11 @@ end of the scaffolding pass that produced the initial 2,603-record corpus.
 - **Link `resistance_mechanisms` to CARD's real mechanism categories.** The
   determinant→mechanism association lives in `card.json`, not `aro.obo`, so most
   seeded items are `UNKNOWN`. Adding card.json as a third source would fix that.
-- **Retired-URL redirects.** HabitatMech rebuilds a redirect map from git history
-  so improving a label does not create a published 404. AntibioticMech has no
-  history yet; add it before the slugs start moving.
+- **Retired-URL redirects.** The slugs of dropped records are now reserved in
+  `data/antibiotics/RETIRED.tsv`, so no URL is ever reissued to a different
+  compound — but 134 record pages disappeared without a redirect when unreviewed
+  ChEBI relations stopped being trusted, and nothing serves those addresses.
+  HabitatMech rebuilds a redirect map from git history; this repository now has
+  the history to do the same.
 - **Cross-repo links.** A compound record should point at the TraitMech traits it
   perturbs and the MediaIngredientMech ingredients it shares structures with.
