@@ -1043,8 +1043,11 @@ def test_every_seeded_mechanism_note_explains_its_target_scope():
     for roles, klass in cases:
         _value, notes, scope = mode_of_action_from_roles(roles, conf, names, klass)
         assert "mode_of_action_target_scope" in notes, (roles, klass, notes)
-        expected = ("host has too" if scope == "HOST_SHARED_TARGET"
-                    else "specific to the microbe or virus")
+        expected = {"HOST_SHARED_TARGET": "host has too",
+                    "MICROBIAL_TARGET": "specific to the microbe or virus",
+                    # No scope is asserted when the roles disagree, and the note
+                    # has to say that rather than fall silent.
+                    None: "disagree about whose target it is"}[scope]
         assert expected in notes, (roles, klass, scope, notes)
         assert notes.count("Not a curator's mechanistic review") == 1, notes
 
@@ -1146,3 +1149,53 @@ def test_a_conf_driven_mechanism_change_appends_an_audit_event():
     curated = dict(base, mode_of_action="MEMBRANE_DISRUPTION",
                    mode_of_action_notes="CURATOR: mine, PMID:1.")
     assert events(dict(base), curated) == 1
+
+
+def test_a_multiple_mechanism_with_disagreeing_roles_asserts_no_scope():
+    """MULTIPLE means the seeder refused to pick a mechanism. If the roles also
+    disagree about whose target it is, picking a scope collapses exactly what
+    MULTIPLE declines to collapse — and "any microbial wins" would report
+    selectivity for a record one of whose mechanisms is host-shared.
+
+    Three records are affected (adefovir, adefovir pivoxil, and
+    3'-deoxy-3',4'-didehydro-cytidine). They are the only members of
+    `just worklist --queue moa-scope`, which is asserted here because the first
+    version of that queue covered only curator-owned records and would have
+    reported zero — a mitigation named in a comment that did not cover the case
+    it was named for, which is the defect in #85 repeated.
+    """
+    from seed_from_sources import mode_of_action_from_roles
+
+    conf = _conf()
+    names = {"CHEBI:59897": "RNA-directed DNA polymerase inhibitor",
+             "CHEBI:59517": "DNA synthesis inhibitor",
+             "CHEBI:53756": "HIV-1 reverse transcriptase inhibitor",
+             "CHEBI:48001": "protein synthesis inhibitor"}
+
+    # Mixed scopes: CHEBI:53756 is microbial, CHEBI:59517 host-shared.
+    value, notes, scope = mode_of_action_from_roles(
+        ["CHEBI:53756", "CHEBI:59517"], conf, names, "ANTIVIRAL")
+    assert value == "MULTIPLE"
+    assert scope is None, scope
+    assert "disagree about whose target it is" in notes
+
+    # Agreeing scopes still get one: the refusal is about disagreement, not
+    # about MULTIPLE as such.
+    _v, _n, agreed = mode_of_action_from_roles(
+        ["CHEBI:59517", "CHEBI:48001"], conf, names, "ANTIBACTERIAL")
+    assert agreed == "HOST_SHARED_TARGET", agreed
+
+
+def test_the_moa_scope_queue_actually_lists_the_records_it_claims(records):
+    """The queue is cited as the mitigation in two code comments. Assert it."""
+    import sys
+    from pathlib import Path
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+    from curation_worklist import mode_of_action_scope_queue
+
+    docs = [r for _p, r in records]
+    queued = {row["label"] for row in mode_of_action_scope_queue(docs)}
+    unscoped = {r["label"] for r in docs
+                if r.get("mode_of_action") and not r.get("mode_of_action_target_scope")}
+    assert unscoped, "no unscoped mechanisms in the corpus; this test guards nothing"
+    assert unscoped <= queued, f"unscoped but not queued: {sorted(unscoped - queued)}"

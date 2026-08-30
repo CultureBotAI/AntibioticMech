@@ -130,6 +130,10 @@ def mode_of_action_scope_queue(records: list[dict]) -> list[dict]:
     a scope that was derived for the seeder's mechanism, still sitting beside a
     curator's different one.
 
+    It also carries the MULTIPLE records whose contributing roles disagree about
+    whose target it is: the seeder asserts no scope there, because picking one
+    would collapse exactly what the MULTIPLE value declines to collapse.
+
     This queue is that loose end. It exists because a code comment once offered
     `just worklist` as the mitigation for precisely this, and no such queue
     existed — an asserted mitigation that was never built, which is the same
@@ -143,13 +147,19 @@ def mode_of_action_scope_queue(records: list[dict]) -> list[dict]:
     """
     rows = []
     for record in records:
-        if not record.get("mode_of_action") or not curator_owns_mode_of_action(record):
+        moa = record.get("mode_of_action")
+        if not moa:
             continue
         scope = record.get("mode_of_action_target_scope")
         notes = str(record.get("mode_of_action_notes") or "")
-        if not scope:
+        owned = curator_owns_mode_of_action(record)
+        if moa == "MULTIPLE" and not scope:
+            # The contributing roles disagreed about whose target it is, so the
+            # seeder asserted none. Settling the primary mechanism settles this.
+            hint = "MULTIPLE with roles of differing scope; no scope asserted"
+        elif owned and not scope:
             hint = "curator mechanism with no target scope"
-        elif MOA_NOTE_MARKER in notes:
+        elif owned and MOA_NOTE_MARKER in notes:
             hint = f"scope {scope} may still be the seeder's (its note marker remains)"
         else:
             continue
