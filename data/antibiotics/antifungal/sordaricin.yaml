@@ -1,0 +1,50 @@
+identifier: CHEBI:140259
+label: sordaricin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracyclic diterpenoid that is produced by several fungi including
+  Sordaria araneosa.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,3aR,4S,4aR,7R,7aR,8aS)-4-formyl-8a-(hydroxymethyl)-7-methyl-3-(propan-2-yl)-4,4a,5,6,7,7a,8,8a-octahydro-1,4-methano-s-indacene-3a(1H)-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (-)-Sordaricin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:17478
+- CHEBI:35990
+- CHEBI:47881
+- CHEBI:52557
+xrefs:
+- cas:51493-69-7
+- knapsack:C00034268
+- reaxys:8005741
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@@H](C)[C@@]1([H])C[C@@]1(CO)[C@]3(C(=O)O)C(C(C)C)=C[C@@]1([H])C[C@]23C=O'
+  standard_inchi: InChI=1S/C20H28O4/c1-11(2)16-6-13-7-19(10-22)15-5-4-12(3)14(15)8-18(13,9-21)20(16,19)17(23)24/h6,10-15,21H,4-5,7-9H2,1-3H3,(H,23,24)/t12-,13+,14-,15-,18+,19+,20-/m1/s1
+  standard_inchi_key: QIMCUSGGYZHVEF-VULLPXFTSA-N
+  molecular_formula: C20H28O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 332.44
+  monoisotopic_mass: 332.19876
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:140259
+  source_label: sordaricin
+  minted_identifier: antibioticmech:chebi-0b4788e61f
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

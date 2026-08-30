@@ -1,0 +1,40 @@
+identifier: CHEBI:32204
+label: tetracenomycin E
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: 10,12-dihydroxy-3,8-dimethoxy-1-methyl-6,11-dioxo-6,11-dihydrotetracene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetracenomycin E
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48132
+- CHEBI:51286
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COc1cc(O)c2c(c1)C(=O)c1cc3cc(OC)c(C(=O)O)c(C)c3c(O)c1C2=O
+  standard_inchi: InChI=1S/C22H16O8/c1-8-15-9(5-14(30-3)16(8)22(27)28)4-11-18(20(15)25)21(26)17-12(19(11)24)6-10(29-2)7-13(17)23/h4-7,23,25H,1-3H3,(H,27,28)
+  standard_inchi_key: UBGPMJPFKHUCCA-UHFFFAOYSA-N
+  molecular_formula: C22H16O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 408.362
+  monoisotopic_mass: 408.08452
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32204
+  source_label: tetracenomycin E
+  minted_identifier: antibioticmech:chebi-2113cc5060
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

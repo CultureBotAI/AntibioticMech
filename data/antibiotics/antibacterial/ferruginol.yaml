@@ -1,0 +1,54 @@
+identifier: CHEBI:78274
+label: ferruginol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An abietane diterpenoid that is abieta-8,11,13-triene substituted by a
+  hydroxy group at positions 12.
+definition_source: ChEBI
+synonyms:
+- synonym_text: abieta-8,11,13-trien-12-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 12-hydroxyabieta-8,11,13-triene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 8,11,13-abietatrien-12-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:36762
+- CHEBI:38032
+- CHEBI:64419
+xrefs:
+- cas:514-62-5
+- kegg.compound:C09092
+- knapsack:C00003426
+- metacyc.compound:CPD-16534
+- reaxys:5275000
+- wikipedia.en:Ferruginol
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12CCc3cc(C(C)C)c(O)cc3[C@@]1(C)CCCC2(C)C'
+  standard_inchi: InChI=1S/C20H30O/c1-13(2)15-11-14-7-8-18-19(3,4)9-6-10-20(18,5)16(14)12-17(15)21/h11-13,18,21H,6-10H2,1-5H3/t18-,20+/m0/s1
+  standard_inchi_key: QXNWVJOHUAQHLM-AZUAARDMSA-N
+  molecular_formula: C20H30O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 286.459
+  monoisotopic_mass: 286.22967
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:78274
+  source_label: ferruginol
+  minted_identifier: antibioticmech:chebi-d6780b7a91
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

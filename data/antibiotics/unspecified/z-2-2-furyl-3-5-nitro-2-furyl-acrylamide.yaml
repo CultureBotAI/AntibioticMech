@@ -1,0 +1,64 @@
+identifier: CHEBI:15660
+label: (Z)-2-(2-furyl)-3-(5-nitro-2-furyl)acrylamide
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of acrylamides that is acrylamide which is substituted
+  at positions 2 and 3 by 2-furyl and 5-nitro-2-furyl groups, respectively (the trans
+  isomer). Formerly used as a food preservative, it was withdrawn from the market
+  following suspicions of carcenogenicity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2Z)-2-(2-furyl)-3-(5-nitro-2-furyl)prop-2-enamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (Z)-2-(2-Furyl)-3-(5-nitro-2-furyl)acrylamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(2-Furyl)-3-(5-nitro-2-furyl)acrylamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AF 2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AF-2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Furylfuramide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140324
+- CHEBI:22216
+- CHEBI:35716
+- CHEBI:87230
+xrefs:
+- cas:3688-53-7
+- kegg.compound:C04622
+- kegg.compound:C19558
+- kegg.drug:D02528
+- wikipedia.en:Furylfuramide
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: NC(=O)/C(=C\c1ccc([N+](=O)[O-])o1)c1ccco1
+  standard_inchi: InChI=1S/C11H8N2O5/c12-11(14)8(9-2-1-5-17-9)6-7-3-4-10(18-7)13(15)16/h1-6H,(H2,12,14)/b8-6-
+  standard_inchi_key: LYAHJFZLDZDIOH-VURMDHGXSA-N
+  molecular_formula: C11H8N2O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 248.194
+  monoisotopic_mass: 248.04332
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:15660
+  source_label: (Z)-2-(2-furyl)-3-(5-nitro-2-furyl)acrylamide
+  minted_identifier: antibioticmech:chebi-02601d7fbd
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

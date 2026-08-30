@@ -1,0 +1,75 @@
+identifier: CHEBI:83220
+label: fenaminstrobin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid amide obtained by formal condensation of the carboxy
+  group of (2E)-{2-[({(E)-[(3E)-4-(2,6-dichlorophenyl)but-3-en-2-ylidene]amino}oxy)methyl]phenyl}(methoxyimino)acetic
+  acid with the amino group of methylamine. A broad-spectrum fungicide.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-2-{2-[({(E)-[(3E)-4-(2,6-dichlorophenyl)but-3-en-2-ylidene]amino}oxy)methyl]phenyl}-2-(methoxyimino)-N-methylacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2E)-2-{2-[({[(2E,3E)-4-(2,6-dichlorophenyl)but-3-en-2-ylidene]amino}oxy)methyl]phenyl}-2-(methoxyimino)-N-methylacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (alphaE)-2-((((E)-((2E)-3-(2,6-dichlorophenyl)-1-methyl-2-propen-1-ylidene)amino)oxy)methyl)-alpha-(methoxyimino)-N-methylbenzeneacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (αE)-2-[[[(E)-[(2E)-3-(2,6-dichlorophenyl)-1-methyl-2-propen-1-ylidene]amino]oxy]methyl]-α-(methoxyimino)-N-methylbenzeneacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fenaminstrobine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SYP 1620
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Xiwojunan
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23697
+- CHEBI:29347
+- CHEBI:36816
+- CHEBI:60600
+- CHEBI:78840
+- CHEBI:86487
+xrefs:
+- cas:366815-39-6
+- patent:CN101836631
+- ppdb:2614
+- reaxys:25678113
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: CNC(=O)/C(=N/OC)c1ccccc1CO/N=C(C)/C=C/c1c(Cl)cccc1Cl
+  standard_inchi: InChI=1S/C21H21Cl2N3O3/c1-14(11-12-17-18(22)9-6-10-19(17)23)25-29-13-15-7-4-5-8-16(15)20(26-28-3)21(27)24-2/h4-12H,13H2,1-3H3,(H,24,27)/b12-11+,25-14+,26-20+
+  standard_inchi_key: RBWGTZRSEOIHFD-UHUFKFKFSA-N
+  molecular_formula: C21H21Cl2N3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 434.323
+  monoisotopic_mass: 433.096
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83220
+  source_label: fenaminstrobin
+  minted_identifier: antibioticmech:chebi-512f829d5c
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

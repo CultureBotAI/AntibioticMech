@@ -1,0 +1,68 @@
+identifier: CHEBI:59607
+label: quaternium-15
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quaternary ammonium salt derived from hexamethylenetetramine; used as
+  a preservative in many cosmetics and industrial substances. Also acts as a disinfectant
+  and allergenic agent.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-[3-chloroprop-2-en-1-yl]-3,5,7-triaza-1-azoniatricyclo[3.3.1.13,7]decanium
+    chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(3-Chloroallyl)-3,5,7-triaza-1-azoniaadamantane chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(3-chloro-2-propenyl)-3,5,7-triaza-1-azoniatricyclo(3.3.1.13,7)decane
+    chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CTAC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hexamethylenetetramine chloroallyl chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methenamine 3-chloroallylochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(3-Chloroallyl)hexaminium chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: quaternium 15
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35273
+- CHEBI:36683
+xrefs:
+- beilstein:9300843
+- cas:4080-31-3
+activity_roles:
+- CHEBI:33282
+- CHEBI:48219
+chemical_structure:
+  smiles: '[Cl-].[H]C(Cl)=C([H])C[N+]12CN3CN(CN(C3)C1)C2'
+  standard_inchi: InChI=1S/C9H16ClN4.ClH/c10-2-1-3-14-7-11-4-12(8-14)6-13(5-11)9-14;/h1-2H,3-9H2;1H/q+1;/p-1
+  standard_inchi_key: UKHVLWKBNNSRRR-UHFFFAOYSA-M
+  molecular_formula: C9H16ClN4.Cl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 251.161
+  monoisotopic_mass: 250.0752
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59607
+  source_label: quaternium-15
+  minted_identifier: antibioticmech:chebi-0435a411ef
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

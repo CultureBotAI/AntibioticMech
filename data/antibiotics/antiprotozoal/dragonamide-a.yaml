@@ -1,0 +1,43 @@
+identifier: CHEBI:65584
+label: dragonamide A
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A lipopeptide consisting of a 2-methyloct-7-ynoyl moiety attached to a
+  linear tetrapeptide comprising of N-methyl-L-phenylalanyl and N-methyl-L-valine
+  units. It is isolated from a Panamanian strain of the marine cyanobacterium Lyngbya
+  majuscula and displays antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-methyl-N-[(2S)-2-methyloct-7-ynoyl]-L-valyl-N-methyl-L-valyl-N-methyl-L-valyl-Nα-methyl-L-phenylalaninamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:46895
+- CHEBI:73477
+xrefs:
+- reaxys:10226310
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: C#CCCCC[C@H](C)C(=O)N(C)[C@H](C(=O)N(C)[C@H](C(=O)N(C)[C@H](C(=O)N(C)[C@@H](Cc1ccccc1)C(N)=O)C(C)C)C(C)C)C(C)C
+  standard_inchi: InChI=1S/C37H59N5O5/c1-13-14-15-17-20-27(8)34(44)40(10)31(25(4)5)36(46)42(12)32(26(6)7)37(47)41(11)30(24(2)3)35(45)39(9)29(33(38)43)23-28-21-18-16-19-22-28/h1,16,18-19,21-22,24-27,29-32H,14-15,17,20,23H2,2-12H3,(H2,38,43)/t27-,29-,30-,31-,32-/m0/s1
+  standard_inchi_key: LFBMRFDBJDFLTN-QDNWXXHKSA-N
+  molecular_formula: C37H59N5O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 653.909
+  monoisotopic_mass: 653.45162
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65584
+  source_label: dragonamide A
+  minted_identifier: antibioticmech:chebi-e33ece668e
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

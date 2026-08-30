@@ -1,0 +1,59 @@
+identifier: CHEBI:62412
+label: phenazine-1-carboxylic acid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aromatic carboxylic acid that is phenazine substituted at C-1 with
+  a carboxy group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-Carboxylic acid phenazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Phenazinecarboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-carboxyphenazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phenazin-1-carbonsäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phenazinecarboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:33859
+- CHEBI:39201
+xrefs:
+- bpdb:3032
+- cas:2538-68-3
+- metacyc.compound:CPD-9522
+- reaxys:183818
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: O=C(O)c1cccc2nc3ccccc3nc12
+  standard_inchi: InChI=1S/C13H8N2O2/c16-13(17)8-4-3-7-11-12(8)15-10-6-2-1-5-9(10)14-11/h1-7H,(H,16,17)
+  standard_inchi_key: JGCSKOVQDXEQHI-UHFFFAOYSA-N
+  molecular_formula: C13H8N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 224.219
+  monoisotopic_mass: 224.05858
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:62412
+  source_label: phenazine-1-carboxylic acid
+  minted_identifier: antibioticmech:chebi-9de2eaca47
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

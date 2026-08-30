@@ -1,0 +1,48 @@
+identifier: CHEBI:146153
+label: ilicicolin B
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An ilicicolin that is 2,4-dihydroxy-6-methyl-benzaldehyde which is substituted
+  at position 3 by a (2E,6E)-3,7,11-trimethyldodeca-2,6,10-trien-1-yl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,4-dihydroxy-6-methyl-3-[(2E,6E)-3,7,11-trimethyldodeca-2,6,10-trien-1-yl]benzaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4-dihydroxy-6-methyl-3-((2E,6E)-3,7,11-trimethyl-2,6,10-dodecatrien-1-yl)benzaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-methyl-3-(3,7,11-trimethyl-2,6,10-dodecatrienyl)-beta-resorcylaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:146212
+- CHEBI:22698
+- CHEBI:33572
+xrefs:
+- cas:22581-07-3
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(C)=CCC/C(C)=C/CC/C(C)=C/Cc1c(O)cc(C)c(C=O)c1O
+  standard_inchi: InChI=1S/C23H32O3/c1-16(2)8-6-9-17(3)10-7-11-18(4)12-13-20-22(25)14-19(5)21(15-24)23(20)26/h8,10,12,14-15,25-26H,6-7,9,11,13H2,1-5H3/b17-10+,18-12+
+  standard_inchi_key: QAPOXOGEDXIOHD-VZRGJMDUSA-N
+  molecular_formula: C23H32O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 356.506
+  monoisotopic_mass: 356.23514
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:146153
+  source_label: ilicicolin B
+  minted_identifier: antibioticmech:chebi-2c8cd2da87
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

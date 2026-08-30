@@ -1,0 +1,46 @@
+identifier: CHEBI:65511
+label: blancoxanthone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pyranoxanthones that is 2H,6H-pyrano[3,2-b]xanthen-6-one
+  substituted by hydroxy groups at positions 5 and 10, geminal methyl groups at position
+  2 and a 2-methylbut-3-en-2-yl group at position 12. It is isolated from the roots
+  of Calophyllum blancoi and exhibits antiviral activity against coronavirus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,10-dihydroxy-2,2-dimethyl-12-(2-methylbut-3-en-2-yl)-2H,6H-pyrano[3,2-b]xanthen-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: inoxanthone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:71238
+xrefs:
+- reaxys:6826493
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: C=CC(C)(C)c1c2c(c(O)c3c(=O)c4cccc(O)c4oc13)C=CC(C)(C)O2
+  standard_inchi: InChI=1S/C23H22O5/c1-6-22(2,3)16-20-13(10-11-23(4,5)28-20)18(26)15-17(25)12-8-7-9-14(24)19(12)27-21(15)16/h6-11,24,26H,1H2,2-5H3
+  standard_inchi_key: VCRGQEOJJJBBNZ-UHFFFAOYSA-N
+  molecular_formula: C23H22O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 378.424
+  monoisotopic_mass: 378.14672
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65511
+  source_label: blancoxanthone
+  minted_identifier: antibioticmech:chebi-315ea5476f
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

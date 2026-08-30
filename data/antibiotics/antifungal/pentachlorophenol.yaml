@@ -1,0 +1,62 @@
+identifier: CHEBI:17642
+label: pentachlorophenol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A chlorophenol that is phenol substituted by 5 chloro groups.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,3,4,5,6-pentachlorophenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PCP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PENTACHLOROPHENOL
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pentachlorophenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23150
+- CHEBI:38656
+- CHEBI:83390
+- CHEBI:87034
+xrefs:
+- cas:87-86-5
+- gmelin:102794
+- hmdb:HMDB0041974
+- kegg.compound:C02575
+- knapsack:C00007496
+- lincs.smallmolecule:LSM-37108
+- metacyc.compound:PENTACHLOROPHENOL
+- pdb-ccd:PCI
+- ppdb:513
+- reaxys:1285380
+- umbbd.compound:c0326
+- wikipedia.en:Pentachlorophenol
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: Oc1c(Cl)c(Cl)c(Cl)c(Cl)c1Cl
+  standard_inchi: InChI=1S/C6HCl5O/c7-1-2(8)4(10)6(12)5(11)3(1)9/h12H
+  standard_inchi_key: IZUPBVBPLAPZRR-UHFFFAOYSA-N
+  molecular_formula: C6HCl5O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 266.338
+  monoisotopic_mass: 263.847
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17642
+  source_label: pentachlorophenol
+  minted_identifier: antibioticmech:chebi-945b0f7724
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

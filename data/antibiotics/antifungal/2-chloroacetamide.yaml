@@ -1,0 +1,68 @@
+identifier: CHEBI:234507
+label: 2-chloroacetamide
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid amide that is acetamide substituted by a chloro
+  group at position 2.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Microcide Mergal AF
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: KM 101
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: KM 101 (fungicide)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alpha-chloroacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chloracetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chloroacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α-chloroacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140324
+- CHEBI:29347
+- CHEBI:36683
+- CHEBI:83628
+xrefs:
+- cas:79-07-2
+- hmdb:HMDB0250106
+- reaxys:878191
+- wikipedia.en:Chloroacetamide
+activity_roles:
+- CHEBI:172949
+- CHEBI:24127
+- CHEBI:33281
+chemical_structure:
+  smiles: NC(=O)CCl
+  standard_inchi: InChI=1S/C2H4ClNO/c3-1-2(4)5/h1H2,(H2,4,5)
+  standard_inchi_key: VXIVSQZSERGHQP-UHFFFAOYSA-N
+  molecular_formula: C2H4ClNO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 93.513
+  monoisotopic_mass: 92.99814
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:234507
+  source_label: 2-chloroacetamide
+  minted_identifier: antibioticmech:chebi-8ce3cb7e29
+  role_terms:
+  - CHEBI:172949
+  - CHEBI:24127
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

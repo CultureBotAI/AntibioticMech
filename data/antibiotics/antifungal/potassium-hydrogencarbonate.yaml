@@ -1,0 +1,62 @@
+identifier: CHEBI:81862
+label: potassium hydrogencarbonate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A potassium salt that is the monopotassium salt of carbonic acid. It has
+  fungicidal properties and is used in organic farming for the control of powdery
+  mildew and apple scab.
+definition_source: ChEBI
+synonyms:
+- synonym_text: potassium hydrogen carbonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E501
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: KHCO3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: monopotassium carbonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: potassium acid carbonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: potassium bicarbonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24868
+- CHEBI:26218
+xrefs:
+- cas:298-14-6
+- kegg.compound:C18606
+- kegg.drug:D02077
+- ppdb:1624
+- reaxys:4535309
+- wikipedia.en:Potassium_bicarbonate
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: O=C([O-])O.[K+]
+  standard_inchi: InChI=1S/CH2O3.K/c2-1(3)4;/h(H2,2,3,4);/q;+1/p-1
+  standard_inchi_key: TYJJADVDDVDEDZ-UHFFFAOYSA-M
+  molecular_formula: CHO3.K
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 100.114
+  monoisotopic_mass: 99.95628
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81862
+  source_label: potassium hydrogencarbonate
+  minted_identifier: antibioticmech:chebi-a022181714
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

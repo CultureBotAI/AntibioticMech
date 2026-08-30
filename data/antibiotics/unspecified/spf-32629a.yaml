@@ -1,0 +1,47 @@
+identifier: CHEBI:66517
+label: SPF-32629A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxylic ester obtained by the formal condensation of the secondary
+  hydroxy group of 4-hydroxy-6-[hydroxy(phenyl)methyl]pyridin-2(1H)-one with 3-methylbutanoic
+  acid. It is isolated from the culture broth of Penicillium sp. SPF-32629 and acts
+  as an inhibitor of the enzyme chymase (EC 3.4.21.39).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4-hydroxy-6-oxo-1,6-dihydropyridin-2-yl)(phenyl)methyl 3-methylbutanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+/−)-SPF32629A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33308
+- CHEBI:38182
+- CHEBI:38183
+xrefs:
+- reaxys:18862108
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(C)CC(=O)OC(c1ccccc1)c1cc(O)cc(=O)n1
+  standard_inchi: InChI=1S/C17H19NO4/c1-11(2)8-16(21)22-17(12-6-4-3-5-7-12)14-9-13(19)10-15(20)18-14/h3-7,9-11,17H,8H2,1-2H3,(H2,18,19,20)
+  standard_inchi_key: ATDHCZKCFPIQOT-UHFFFAOYSA-N
+  molecular_formula: C17H19NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 301.342
+  monoisotopic_mass: 301.13141
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66517
+  source_label: SPF-32629A
+  minted_identifier: antibioticmech:chebi-18f86e93b9
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

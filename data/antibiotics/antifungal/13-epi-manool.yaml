@@ -1,0 +1,54 @@
+identifier: CHEBI:76944
+label: 13-epi-manool
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A labdane diterpenoid in which the labdane skeleton has double bonds at
+  positions 8(17) and 14 and carries an S-hydroxy group at position 13.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S)-3-methyl-5-[(1S,4aS,8aS)-5,5,8a-trimethyl-2-methylenedecahydronaphthalen-1-yl]pent-1-en-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (13S)-labda-8(17),14-dien-13-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (13S)-manool
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5S,9S,10S,13S)-labda-8(17),14-dien-13-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: labda-8(17),14-dien-13(S)-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26878
+- CHEBI:36770
+xrefs:
+- metacyc.compound:CPD-14029
+- reaxys:2054966
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@]1(CC[C@](C)(O)C=C)C(=C)CC[C@@]2([H])C(C)(C)CCC[C@]12C'
+  standard_inchi: InChI=1S/C20H34O/c1-7-19(5,21)14-11-16-15(2)9-10-17-18(3,4)12-8-13-20(16,17)6/h7,16-17,21H,1-2,8-14H2,3-6H3/t16-,17-,19+,20+/m0/s1
+  standard_inchi_key: CECREIRZLPLYDM-RAUXBKROSA-N
+  molecular_formula: C20H34O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 290.491
+  monoisotopic_mass: 290.26097
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:76944
+  source_label: 13-epi-manool
+  minted_identifier: antibioticmech:chebi-0a769c1a3d
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

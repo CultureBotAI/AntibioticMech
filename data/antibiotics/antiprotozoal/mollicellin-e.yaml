@@ -1,0 +1,54 @@
+identifier: CHEBI:68803
+label: mollicellin E
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of depsidones that is 11H-dibenzo[b,e][1,4]dioxepine
+  substituted by a chloro group at position 2, hydroxy groups at positions 3 and 9,
+  a methoxy group at position 8, methyl groups at positions 1 and 6, a 3-methylbut-2-enoyl
+  group at position 7, an oxo group at position 11 and a formyl group at position
+  4. Isolated from Chaetomium brasiliense, it exhibits antimalarial and cytotoxic
+  activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-chloro-3,9-dihydroxy-8-methoxy-1,6-dimethyl-7-(3-methylbut-2-enoyl)-11-oxo-11H-dibenzo[b,e][1,4]dioxepine-4-carbaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17478
+- CHEBI:26195
+- CHEBI:26979
+- CHEBI:35618
+- CHEBI:36683
+- CHEBI:51689
+- CHEBI:75939
+- CHEBI:76224
+xrefs:
+- cas:68455-10-7
+- chemspider:45523
+- hmdb:HMDB0033342
+- reaxys:19895971
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H]C(=O)c1c(O)c(Cl)c(C)c2c1Oc1c(C)c(C(=O)C=C(C)C)c(OC)c(O)c1OC2=O'
+  standard_inchi: InChI=1S/C22H19ClO8/c1-8(2)6-12(25)13-10(4)18-21(17(27)20(13)29-5)31-22(28)14-9(3)15(23)16(26)11(7-24)19(14)30-18/h6-7,26-27H,1-5H3
+  standard_inchi_key: JTGLZOMMRQOKBM-UHFFFAOYSA-N
+  molecular_formula: C22H19ClO8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 446.839
+  monoisotopic_mass: 446.07685
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68803
+  source_label: mollicellin E
+  minted_identifier: antibioticmech:chebi-41655de068
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

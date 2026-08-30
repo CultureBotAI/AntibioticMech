@@ -1,0 +1,57 @@
+identifier: CHEBI:72295
+label: bedaquiline fumarate
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A fumarate salt prepared from equimolar amounts of bedaquiline and fumaric
+  acid. It is used in combination therapy for the treatment of pulmonary multi-drug
+  resistant tuberculosis by inhibition of ATP synthase, an enzyme essential for the
+  replication of the mycobacteria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Sirturo
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: (1R,2S)-1-(6-bromo-2-methoxyquinolin-3-yl)-4-(dimethylamino)-2-(1-naphthyl)-1-phenylbutan-2-ol
+    bis[(2Z)-but-2-enedioate]
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-bromo-3-[(1R,2S)-4-(dimethylammonio)-2-hydroxy-2-(1-naphthyl)-1-phenylbutyl]-2-methoxyquinolinium
+    (2E)-but-2-enedioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: R403323
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:50921
+xrefs:
+- cas:845533-86-0
+- drugbank:DBSALT000016
+- kegg.drug:D09873
+- patent:WO2008068231
+- reaxys:18368422
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: COc1nc2ccc(Br)cc2cc1[C@@H](c1ccccc1)[C@@](O)(CCN(C)C)c1cccc2ccccc12.O=C(O)/C=C/C(=O)O
+  standard_inchi: InChI=1S/C32H31BrN2O2.C4H4O4/c1-35(2)19-18-32(36,28-15-9-13-22-10-7-8-14-26(22)28)30(23-11-5-4-6-12-23)27-21-24-20-25(33)16-17-29(24)34-31(27)37-3;5-3(6)1-2-4(7)8/h4-17,20-21,30,36H,18-19H2,1-3H3;1-2H,(H,5,6)(H,7,8)/b;2-1+/t30-,32-;/m1./s1
+  standard_inchi_key: ZLVSPMRFRHMMOY-WWCCMVHESA-N
+  molecular_formula: C32H31BrN2O2.C4H4O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 671.588
+  monoisotopic_mass: 670.16785
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:72295
+  source_label: bedaquiline fumarate
+  minted_identifier: antibioticmech:chebi-2ceef9168d
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

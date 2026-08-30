@@ -1,0 +1,97 @@
+identifier: CHEBI:149634
+label: dehydroemetine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyridoisoquinoline which was developed in response to the cardiovascular
+  toxicity associated with emetine and results from the dehydrogenation of the heterotricylic
+  ring of emetine. It is an antiprotozoal agent and displays antimalarial, antiamoebic,
+  and antileishmanial properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Dametin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Mebadin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Mebadine
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: dehidroemetina
+  synonym_type: INN
+  source: chebi
+- synonym_text: dehydroemetinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: déhydroémétine
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6',7',10,11-tetramethoxy-2,3-didehydroemetan
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-2,3-dehydroemetine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-R,S-dehydroemetine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,3-didehydro-6',7',10,11-tetramethoxyemetan
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,3-didehydroemetine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-dehydroemetine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BT 436
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ro 1-9334
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ro 1-9334/19
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ro-1-9334/19
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ro-1933419
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24922
+- CHEBI:35618
+- CHEBI:61692
+xrefs:
+- cas:4914-30-1
+- drugbank:DB13865
+- drugcentral:3129
+- kegg.compound:C07996
+- kegg.drug:D00828
+- wikipedia.en:Dehydroemetine
+activity_roles:
+- CHEBI:35820
+- CHEBI:38068
+- CHEBI:70868
+chemical_structure:
+  smiles: '[H][C@@]12CC(C[C@H]3NCCc4cc(OC)c(OC)cc43)=C(CC)CN1CCc1cc(OC)c(OC)cc12'
+  standard_inchi: InChI=1S/C29H38N2O4/c1-6-18-17-31-10-8-20-14-27(33-3)29(35-5)16-23(20)25(31)12-21(18)11-24-22-15-28(34-4)26(32-2)13-19(22)7-9-30-24/h13-16,24-25,30H,6-12,17H2,1-5H3/t24-,25+/m1/s1
+  standard_inchi_key: XXLZPUYGHQWHRN-RPBOFIJWSA-N
+  structure_source: ChEBI
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:149634
+  source_label: dehydroemetine
+  minted_identifier: antibioticmech:chebi-18a3a93b5d
+  role_terms:
+  - CHEBI:35820
+  - CHEBI:38068
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,97 @@
+identifier: CHEBI:3506
+label: cefprozil
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A semisynthetic, second-generation cephalosporin, with prop-1-enyl and
+  (R)-2-amino-2-(4-hydroxyphenyl)acetamido groups at positions 3 and 7, respectively,
+  of the cephem skeleton. It is used to treat bronchitis as well as ear, skin and
+  other bacterial infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Cefzil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: cefprozilo
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefprozilum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (6R,7R)-7-{[(2R)-2-amino-2-(4-hydroxyphenyl)acetyl]amino}-8-oxo-3-(prop-1-en-1-yl)-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cefprozil anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Brisoral
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: CPR
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23066
+- CHEBI:72588
+- ARO:0000032
+xrefs:
+- ARO:3004005
+- beilstein:8167198
+- cas:92665-29-7
+- drugbank:DB01150
+- hmdb:HMDB0015281
+- kegg.compound:C06888
+- kegg.drug:D07651
+- patent:DE3402642
+- patent:US4520022
+- wikipedia.en:Cefprozil
+- chembl:CHEMBL3301800
+- pubchem.compound:5281006
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(C=CC)=C(C(=O)O)N1C(=O)[C@@]2([H])NC(=O)[C@H](N)c1ccc(O)cc1'
+  standard_inchi: InChI=1S/C18H19N3O5S/c1-2-3-10-8-27-17-13(16(24)21(17)14(10)18(25)26)20-15(23)12(19)9-4-6-11(22)7-5-9/h2-7,12-13,17,22H,8,19H2,1H3,(H,20,23)(H,25,26)/t12-,13-,17-/m1/s1
+  standard_inchi_key: WDLWHQDACQUCJR-PBFPGSCMSA-N
+  molecular_formula: C18H19N3O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 389.433
+  monoisotopic_mass: 389.10454
+source_concepts:
+- source: ARO
+  source_id: ARO:3004005
+  source_label: cefprozil
+  minted_identifier: antibioticmech:aro-09ddcd51db
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3506
+  source_label: cefprozil
+  minted_identifier: antibioticmech:chebi-796bdcb883
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3004005 (cefprozil); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

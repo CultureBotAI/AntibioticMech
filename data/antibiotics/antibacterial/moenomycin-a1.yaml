@@ -1,0 +1,49 @@
+identifier: antibioticmech:aro-c1c0e2fcb2
+label: moenomycin A1
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Moenomycin A1 is a major component of moenomycin mixtures. It is produced
+  by Streptomyces ghanaensis, S. bambergiensis, S. ederensis, and S. geysiriensis.
+definition_source: PMID:17117848
+parent_compounds:
+- ARO:3000687
+xrefs:
+- ARO:3000697
+- chembl:CHEMBL2367578
+- pubchem.compound:15235578
+structural_class: moenomycin antibiotic
+structural_class_id: ARO:3000687
+chemical_structure:
+  smiles: C[C@@H]1[C@@H]([C@@H]([C@H]([C@@H](O1)O[C@@H]2[C@H](O[C@H]([C@@H]([C@H]2O)NC(=O)C)O[C@@H]3[C@H]([C@H]([C@H](O[C@@H]3OP(=O)(O)OC[C@H](C(=O)O)OC/C=C(/C)\CC/C=C/C(C)(C)CCC(=C)C/C=C(\C)/CCC=C(C)C)C(=O)N)O)OC(=O)N)CO[C@H]4[C@@H](C([C@H]([C@H](O4)CO)O)O)O)NC(=O)C)O)O[C@H]5[C@@H]([C@H]([C@H]([C@H](O5)C(=O)NC6=C(CCC6=O)O)O)O)O
+  standard_inchi: InChI=1S/C68H106N5O34P/c1-29(2)14-13-16-30(3)17-18-32(5)21-24-68(9,10)23-12-11-15-31(4)22-25-95-40(61(90)91)28-97-108(93,94)107-66-58(55(106-67(70)92)52(87)56(103-66)59(69)88)105-63-43(72-35(8)76)46(81)54(39(100-63)27-96-64-50(85)47(82)44(79)38(26-74)99-64)102-62-42(71-34(7)75)45(80)53(33(6)98-62)101-65-51(86)48(83)49(84)57(104-65)60(89)73-41-36(77)19-20-37(41)78/h12,14,17,22-23,33,38-40,42-58,62-66,74,77,79-87H,5,11,13,15-16,18-21,24-28H2,1-4,6-10H3,(H2,69,88)(H2,70,92)(H,71,75)(H,72,76)(H,73,89)(H,90,91)(H,93,94)/b23-12+,30-17+,31-22-/t33-,38-,39-,40-,42-,43-,44+,45-,46-,47?,48+,49-,50-,51-,52-,53+,54-,55+,56+,57+,58-,62+,63+,64-,65-,66-/m1/s1
+  standard_inchi_key: SHSXEDBTKZLLOJ-JMAOHHPVSA-N
+  molecular_formula: C68H106N5O34P
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1568.6
+  monoisotopic_mass: 1567.6456825
+source_concepts:
+- source: ARO
+  source_id: ARO:3000697
+  source_label: moenomycin A1
+  minted_identifier: antibioticmech:aro-c1c0e2fcb2
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003942
+  label: abcA
+  evidence:
+  - reference: ARO:3003942
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000697 (moenomycin
+      A1); database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:57Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

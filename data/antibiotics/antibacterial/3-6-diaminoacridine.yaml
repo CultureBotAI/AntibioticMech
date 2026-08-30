@@ -1,0 +1,85 @@
+identifier: CHEBI:8452
+label: 3,6-diaminoacridine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aminoacridine that is acridine that is substituted by amino groups
+  at positions 3 and 6. A slow-acting bacteriostat that is effective against many
+  Gram-positive bacteria (but ineffective against spores), its salts were formerly
+  used for treatment of burns and infected wounds.
+definition_source: ChEBI
+synonyms:
+- synonym_text: proflavina
+  synonym_type: INN
+  source: chebi
+- synonym_text: proflavine
+  synonym_type: INN
+  source: chebi
+- synonym_text: proflavinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: acridine-3,6-diamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,8-Diaminoacridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,6-acridinediamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Proflavin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diaminoacridine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: proflavin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:51803
+- ARO:3005386
+xrefs:
+- ARO:3007532
+- cas:92-62-6
+- drugbank:DB01123
+- drugcentral:2277
+- kegg.compound:C11181
+- pdb-ccd:PRL
+- reaxys:166050
+- wikipedia.en:Proflavine
+- chembl:CHEMBL55400
+- pubchem.compound:7099
+activity_roles:
+- CHEBI:33282
+structural_class: disinfecting agents and antiseptics
+structural_class_id: ARO:3005386
+chemical_structure:
+  smiles: Nc1ccc2cc3ccc(N)cc3nc2c1
+  standard_inchi: InChI=1S/C13H11N3/c14-10-3-1-8-5-9-2-4-11(15)7-13(9)16-12(8)6-10/h1-7H,14-15H2
+  standard_inchi_key: WDVSHHCDHLJJJR-UHFFFAOYSA-N
+  molecular_formula: C13H11N3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 209.252
+  monoisotopic_mass: 209.0953
+source_concepts:
+- source: ARO
+  source_id: ARO:3007532
+  source_label: proflavine
+  minted_identifier: antibioticmech:aro-2c724d05ff
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:8452
+  source_label: 3,6-diaminoacridine
+  minted_identifier: antibioticmech:chebi-19bcea5610
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

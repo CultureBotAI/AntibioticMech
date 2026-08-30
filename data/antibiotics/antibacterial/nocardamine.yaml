@@ -1,0 +1,45 @@
+identifier: CHEBI:50437
+label: nocardamine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Nocardamine is a cyclic trihydroxamate. It belongs to a group of microbial
+  siderophores which form complexes with iron and aluminum ions. Nocardamine was described
+  first as an antibiotic active against mycobacteria and proteus. It is produced by
+  Nocardia species, several Streptomyces species, Chromobacterium and Pseudomonas.
+definition_source: PMID:31395970
+synonyms:
+- synonym_text: Deferrioxamine E
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: nocardamin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3000053
+xrefs:
+- ARO:3007785
+- chembl:CHEMBL505734
+- pubchem.compound:161532
+structural_class: peptide antibiotic
+structural_class_id: ARO:3000053
+chemical_structure:
+  smiles: O=C1CCC(=O)N(O)CCCCCNC(=O)CCC(=O)N(O)CCCCCNC(=O)CCC(=O)N(O)CCCCCN1
+  standard_inchi: InChI=1S/C27H48N6O9/c34-22-10-14-26(38)32(41)20-8-3-6-18-30-24(36)12-15-27(39)33(42)21-9-2-5-17-29-23(35)11-13-25(37)31(40)19-7-1-4-16-28-22/h40-42H,1-21H2,(H,28,34)(H,29,35)(H,30,36)
+  standard_inchi_key: NHKCCADZVLTPPO-UHFFFAOYSA-N
+  molecular_formula: C27H48N6O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 600.714
+  monoisotopic_mass: 600.34828
+source_concepts:
+- source: ARO
+  source_id: ARO:3007785
+  source_label: nocardamine
+  minted_identifier: antibioticmech:aro-017963dba2
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

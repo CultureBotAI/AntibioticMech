@@ -1,0 +1,64 @@
+identifier: CHEBI:170007
+label: nirmatrelvir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An azabicyclohexane that is (1R,5S)-3-azabicyclo[3.1.0]hexane substituted
+  by {(1S)-1-cyano-2-[(3S)-2-oxopyrrolidin-3-yl]ethyl}aminoacyl, 3-methyl-N-(trifluoroacetyl)-L-valinamide,
+  methyl and methyl groups at positions 2S, 3, 6 and 6, respectively. It is the first
+  orally administered inhibitor of SARS-CoV-2 main protease developed by Pfizer and
+  used in combination with ritonavir for the treatment of COVID-19.
+definition_source: ChEBI
+synonyms:
+- synonym_text: nirmatrelvirum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (1R,2S,5S)-N-{(1S)-1-cyano-2-[(3S)-2-oxopyrrolidin-3-yl]ethyl}-6,6-dimethyl-3-[3-methyl-N-(trifluoroacetyl)-L-valyl]-3-azabicyclo[3.1.0]hexane-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PF 07321332
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PF-07321332
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PF07321332
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:140326
+- CHEBI:170008
+- CHEBI:18379
+- CHEBI:37143
+- CHEBI:46770
+- CHEBI:74223
+xrefs:
+- cas:2628280-40-8
+- drugbank:DB16691
+- kegg.drug:D12244
+- wikipedia.en:Nirmatrelvir
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: '[H][C@@]1(C[C@@H](C#N)NC(=O)[C@H]2N(C(=O)[C@@H](NC(=O)C(F)(F)F)C(C)(C)C)C[C@]3([H])C(C)(C)[C@]23[H])CCNC1=O'
+  standard_inchi: InChI=1S/C23H32F3N5O4/c1-21(2,3)16(30-20(35)23(24,25)26)19(34)31-10-13-14(22(13,4)5)15(31)18(33)29-12(9-27)8-11-6-7-28-17(11)32/h11-16H,6-8,10H2,1-5H3,(H,28,32)(H,29,33)(H,30,35)/t11-,12-,13-,14-,15-,16+/m0/s1
+  standard_inchi_key: LIENCHBZNNMNKG-OJFNHCPVSA-N
+  molecular_formula: C23H32F3N5O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 499.534
+  monoisotopic_mass: 499.24064
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:170007
+  source_label: nirmatrelvir
+  minted_identifier: antibioticmech:chebi-c288da7a4b
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

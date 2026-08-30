@@ -1,0 +1,43 @@
+identifier: CHEBI:66216
+label: tetrahydroxysqualene
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A triterpenoid that is squalene substituted by four hydroxy groups. It
+  is isolated from Rhus taitensis and has been shown to exhibit antimycobacterial
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6E,10E,14E,18E)-2,23-bis(hydroxymethyl)-6,10,15,19-tetramethyltetracosa-2,6,10,14,18,22-hexaene-1,24-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:33573
+- CHEBI:36615
+xrefs:
+- reaxys:19220861
+activity_roles:
+- CHEBI:64912
+chemical_structure:
+  smiles: C/C(=C\CC/C(C)=C/CC/C=C(\C)CC/C=C(\C)CCC=C(CO)CO)CCC=C(CO)CO
+  standard_inchi: InChI=1S/C30H50O4/c1-25(13-7-15-27(3)17-9-19-29(21-31)22-32)11-5-6-12-26(2)14-8-16-28(4)18-10-20-30(23-33)24-34/h11-12,15-16,19-20,31-34H,5-10,13-14,17-18,21-24H2,1-4H3/b25-11+,26-12+,27-15+,28-16+
+  standard_inchi_key: YMMHDITUHQNNKU-DKTKHUEWSA-N
+  molecular_formula: C30H50O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 474.726
+  monoisotopic_mass: 474.37091
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66216
+  source_label: tetrahydroxysqualene
+  minted_identifier: antibioticmech:chebi-5cb511ff20
+  role_terms:
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

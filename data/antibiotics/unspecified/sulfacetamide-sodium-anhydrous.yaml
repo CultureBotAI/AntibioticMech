@@ -1,0 +1,67 @@
+identifier: CHEBI:9327
+label: sulfacetamide sodium anhydrous
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic sodium salt that is the monosodium salt of sulfacetamide.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sodium acetyl[(4-aminophenyl)sulfonyl]azanide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-Sulfanilylacetamide, sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-acetylsulfanilamide sodium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-acetylsulfanilamide sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium N-sulfanilylacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium sulfacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium sulfanilylacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfacetamide sodium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulphacetamide sodium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38700
+xrefs:
+- cas:127-56-0
+- drugbank:DB00634
+- kegg.compound:C08051
+- patent:US2011223261
+- reaxys:4220398
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(=O)[N-]S(=O)(=O)c1ccc(N)cc1.[Na+]
+  standard_inchi: InChI=1S/C8H10N2O3S.Na/c1-6(11)10-14(12,13)8-4-2-7(9)3-5-8;/h2-5H,9H2,1H3,(H,10,11);/q;+1/p-1
+  standard_inchi_key: PQMSFAORUFMASU-UHFFFAOYSA-M
+  molecular_formula: C8H9N2O3S.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 236.228
+  monoisotopic_mass: 236.02316
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9327
+  source_label: sulfacetamide sodium anhydrous
+  minted_identifier: antibioticmech:chebi-c54d212bf3
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

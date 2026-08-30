@@ -1,0 +1,80 @@
+identifier: CHEBI:82721
+label: dalbavancin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A semisynthetic glycopeptide used for the treatment of acute bacterial
+  skin and skin structure infections caused or suspected to be caused by susceptible
+  isolates of designated Gram-positive microorganisms including MRSA.
+definition_source: ChEBI
+synonyms:
+- synonym_text: BI 397
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BI397
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dalbavancin B0
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Zeven
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:24396
+- CHEBI:63367
+- CHEBI:63436
+- CHEBI:72588
+- ARO:3000081
+xrefs:
+- ARO:3000466
+- cas:171500-79-1
+- drugcentral:777
+- kegg.drug:D03640
+- reaxys:9839185
+- wikipedia.en:Dalbavancin
+- chembl:CHEMBL3301669
+- pubchem.compound:23724878
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: glycopeptide antibiotic
+structural_class_id: ARO:3000081
+chemical_structure:
+  smiles: CN[C@H]1C(=O)N[C@@H]2Cc3ccc(cc3)Oc3cc4cc(c3O[C@@H]3O[C@H](C(=O)O)[C@@H](O)[C@H](O)[C@H]3NC(=O)CCCCCCCCC(C)C)Oc3ccc(cc3Cl)[C@@H](O)[C@@H]3NC(=O)[C@H](NC(=O)[C@@H]4NC(=O)[C@@H](NC2=O)c2cc(cc(O)c2Cl)Oc2cc1ccc2O)c1ccc(O)c(c1)-c1c(O[C@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@@H]2O)cc(O)cc1[C@@H](C(=O)NCCCN(C)C)NC3=O
+  standard_inchi: InChI=1S/C88H100Cl2N10O28/c1-38(2)13-10-8-6-7-9-11-14-61(106)94-70-73(109)75(111)78(86(120)121)128-87(70)127-77-58-31-43-32-59(77)124-55-24-19-42(29-50(55)89)71(107)69-85(119)98-67(80(114)92-25-12-26-100(4)5)48-33-44(102)34-57(125-88-76(112)74(110)72(108)60(37-101)126-88)62(48)47-28-40(17-22-52(47)103)65(82(116)99-69)95-83(117)66(43)96-84(118)68-49-35-46(36-54(105)63(49)90)123-56-30-41(18-23-53(56)104)64(91-3)81(115)93-51(79(113)97-68)27-39-15-20-45(122-58)21-16-39/h15-24,28-36,38,51,60,64-76,78,87-88,91,101-105,107-112H,6-14,25-27,37H2,1-5H3,(H,92,114)(H,93,115)(H,94,106)(H,95,117)(H,96,118)(H,97,113)(H,98,119)(H,99,116)(H,120,121)/t51-,60-,64-,65-,66-,67+,68+,69+,70-,71-,72-,73-,74+,75+,76+,78+,87-,88+/m1/s1
+  standard_inchi_key: KGPGQDLTDHGEGT-SZUNQUCBSA-N
+  molecular_formula: C88H100Cl2N10O28
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1816.716
+  monoisotopic_mass: 1814.60856
+source_concepts:
+- source: ARO
+  source_id: ARO:3000466
+  source_label: dalbavancin
+  minted_identifier: antibioticmech:aro-6f79fdde91
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:82721
+  source_label: dalbavancin
+  minted_identifier: antibioticmech:chebi-b318af5834
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000720
+  target_label: acyl-D-alanyl-D-alanine
+  evidence:
+  - reference: ARO:3000720
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000466 (dalbavancin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

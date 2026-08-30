@@ -1,0 +1,52 @@
+identifier: CHEBI:66627
+label: niruriside
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An O-acyl carbohydrate that consists of β-D-fructofuranosyl β-D-glucopyranoside
+  in which the hydroxy protons are replaced by acetyl and trans-cinnamoyl groups.
+  Isolated from Phyllanthus niruri, it exhibits anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-O-acetyl-3,6-bis-O-[(2E)-3-phenylprop-2-enoyl]-β-D-fructofuranosyl
+    2,4,6-tri-O-acetyl-β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alpha-D-Glucopyranoside, 1-O-acetyl-3,6-bis-O-(1-oxo-3-phenyl-2-propenyl)-beta-D-fructofuranosyl,
+    2,4,6-triacetate, (E,E)-
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-D-(1-O-acetyl-3,6-O-trans-dicinnamoyl)fructofuranosyl α-D-(2,4,6-O-triacetyl)glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36087
+- CHEBI:47622
+- CHEBI:52782
+- CHEBI:63353
+xrefs:
+- cas:173268-90-1
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: CC(=O)OC[C@H]1O[C@@H](O[C@]2(COC(C)=O)O[C@H](COC(=O)/C=C/c3ccccc3)[C@@H](O)[C@@H]2OC(=O)/C=C/c2ccccc2)[C@H](OC(C)=O)[C@@H](O)[C@@H]1OC(C)=O
+  standard_inchi: InChI=1S/C38H42O17/c1-22(39)47-20-29-34(50-24(3)41)33(46)35(51-25(4)42)37(52-29)55-38(21-49-23(2)40)36(53-31(44)18-16-27-13-9-6-10-14-27)32(45)28(54-38)19-48-30(43)17-15-26-11-7-5-8-12-26/h5-18,28-29,32-37,45-46H,19-21H2,1-4H3/b17-15+,18-16+/t28-,29-,32-,33+,34-,35-,36+,37+,38+/m1/s1
+  standard_inchi_key: KUZYDHCVYKUFKF-LPLPFJSBSA-N
+  molecular_formula: C38H42O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 770.737
+  monoisotopic_mass: 770.2422
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66627
+  source_label: niruriside
+  minted_identifier: antibioticmech:chebi-a3869664d8
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

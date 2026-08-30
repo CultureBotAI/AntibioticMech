@@ -1,0 +1,42 @@
+identifier: CHEBI:77980
+label: aclacinomycin A zwitterion
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A zwitterion obtained by transfer of a proton from the 5-hydroxy to the
+  tertiary amino group of aclacinomycin A. It is the major microspecies at pH 7.3
+  (according to Marvin v 6.2.0.).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,2R,4S)-2-ethyl-2,7-dihydroxy-1-(methoxycarbonyl)-6,11-dioxo-4-{[2,3,6-trideoxy-4-O-{2,6-dideoxy-4-O-[(2R,6S)-6-methyl-5-oxotetrahydro-2H-pyran-2-yl]-α-L-lyxo-hexopyranosyl}-3-(dimethylammonio)-α-L-lyxo-hexopyranosyl]oxy}-1,2,3,4,6,11-hexahydrotetracen-5-olate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: aclacinomycin A
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27369
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@@]1(O)C[C@H](O[C@H]2C[C@H]([NH+](C)C)[C@H](O[C@H]3C[C@H](O)[C@H](O[C@H]4CCC(=O)[C@H](C)O4)[C@H](C)O3)[C@H](C)O2)c2c(cc3c(c2[O-])C(=O)c2c(O)cccc2C3=O)[C@H]1C(=O)OC
+  standard_inchi: InChI=1S/C42H53NO15/c1-8-42(51)17-28(33-22(35(42)41(50)52-7)14-23-34(38(33)49)37(48)32-21(36(23)47)10-9-11-26(32)45)56-30-15-24(43(5)6)39(19(3)54-30)58-31-16-27(46)40(20(4)55-31)57-29-13-12-25(44)18(2)53-29/h9-11,14,18-20,24,27-31,35,39-40,45-46,49,51H,8,12-13,15-17H2,1-7H3/t18-,19-,20-,24-,27-,28-,29-,30-,31-,35-,39+,40+,42+/m0/s1
+  standard_inchi_key: USZYSDMBJDPRIF-SVEJIMAYSA-N
+  molecular_formula: C42H53NO15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 811.878
+  monoisotopic_mass: 811.34152
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77980
+  source_label: aclacinomycin A zwitterion
+  minted_identifier: antibioticmech:chebi-a490161dca
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

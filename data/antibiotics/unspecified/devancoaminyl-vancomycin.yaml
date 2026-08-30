@@ -1,0 +1,56 @@
+identifier: CHEBI:47395
+label: devancoaminyl vancomycin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A glycopeptide that is vancomycin lacking the vancoaminyl residue.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,2R,18R,19R,22S,25R,28R,40S)-22-(2-amino-2-oxoethyl)-5,15-dichloro-2,18,32,35,37-pentahydroxy-19-{[(2R)-4-methyl-2-(methylamino)pentanoyl]amino}-20,23,26,42,44-pentaoxo-48-{[(2S,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl]oxy}-7,13-dioxa-21,24,27,41,43-pentaazaoctacyclo[26.14.2.23,6.214,17.18,12.129,33.010,25.034,39]pentaconta-3,5,8(48),9,11,14,16,29(45),30,32,34,36,38,46,49-pentadecaene-40-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Desvancosaminyl Vancomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pseudovancomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: vancomycin pseudoaglycone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24396
+- CHEBI:24533
+- CHEBI:26195
+- CHEBI:36683
+- CHEBI:37407
+- CHEBI:63367
+xrefs:
+- drugbank:DB04529
+- metacyc.compound:CPD-15744
+- reaxys:7087294
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CN[C@H](CC(C)C)C(=O)N[C@H]1C(=O)N[C@@H](CC(N)=O)C(=O)N[C@H]2C(=O)N[C@H]3C(=O)N[C@H](C(=O)N[C@H](C(=O)O)c4cc(O)cc(O)c4-c4cc3ccc4O)[C@H](O)c3ccc(c(Cl)c3)Oc3cc2cc(c3O[C@@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@H]2O)Oc2ccc(cc2Cl)[C@H]1O
+  standard_inchi: InChI=1S/C59H62Cl2N8O22/c1-20(2)10-30(63-3)52(80)68-44-46(75)22-5-8-34(28(60)12-22)88-36-14-24-15-37(51(36)91-59-50(79)49(78)48(77)38(19-70)90-59)89-35-9-6-23(13-29(35)61)47(76)45-57(85)67-43(58(86)87)27-16-25(71)17-33(73)40(27)26-11-21(4-7-32(26)72)41(54(82)69-45)66-55(83)42(24)65-53(81)31(18-39(62)74)64-56(44)84/h4-9,11-17,20,30-31,38,41-50,59,63,70-73,75-79H,10,18-19H2,1-3H3,(H2,62,74)(H,64,84)(H,65,81)(H,66,83)(H,67,85)(H,68,80)(H,69,82)(H,86,87)/t30-,31+,38-,41-,42-,43+,44-,45+,46-,47-,48-,49+,50-,59+/m1/s1
+  standard_inchi_key: QCHYVJAUGVHJHX-PZIRYZLHSA-N
+  molecular_formula: C59H62Cl2N8O22
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1306.085
+  monoisotopic_mass: 1304.33557
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:47395
+  source_label: devancoaminyl vancomycin
+  minted_identifier: antibioticmech:chebi-cabe0175f2
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

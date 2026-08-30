@@ -1,0 +1,46 @@
+identifier: CHEBI:137441
+label: (E)-1-hydroxy-2-(non-1-en-1-yl)quinolin-4-one
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxylamine that is N-hydroxyquinolin-4-one in which the hydrogen
+  at position 2 has been replaced by a (1E)-non-1-en-1-yl group. It is the most active
+  agent produced by Pseudomonas aeruginosa that modulates the growth and virulence
+  of Staphylococcus aureus; the corresponding Z isomer is inactive.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-hydroxy-2-[(1E)-non-1-en-1-yl]quinolin-4(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-N-hydroxy-Δ1-2-(non-1-enyl)-4-quinolone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23765
+- CHEBI:24709
+- CHEBI:27171
+- CHEBI:78840
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCCCC/C=C/c1cc(=O)c2ccccc2n1O
+  standard_inchi: InChI=1S/C18H23NO2/c1-2-3-4-5-6-7-8-11-15-14-18(20)16-12-9-10-13-17(16)19(15)21/h8-14,21H,2-7H2,1H3/b11-8+
+  standard_inchi_key: LOUOCBKBIWBTTR-DHZHZOJOSA-N
+  molecular_formula: C18H23NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 285.387
+  monoisotopic_mass: 285.17288
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:137441
+  source_label: (E)-1-hydroxy-2-(non-1-en-1-yl)quinolin-4-one
+  minted_identifier: antibioticmech:chebi-3ea7ed25b5
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

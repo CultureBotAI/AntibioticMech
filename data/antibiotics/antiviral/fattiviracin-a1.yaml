@@ -1,0 +1,52 @@
+identifier: CHEBI:65895
+label: fattiviracin A1
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbohydrate-containing antibiotic isolated from the fermentation broth
+  of Streptomyces microflavus strain No. 2445 and exhibits antiviral activity against
+  herpes simplex virus type 1 (HSV-1), varicella-zoster virus (VZV), influenza A virus
+  and human immunodeficiency virus type 1 (HIV-1).
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:145556
+- CHEBI:22798
+- CHEBI:23007
+- CHEBI:61697
+xrefs:
+- cas:214417-77-3
+- reaxys:8186205
+activity_roles:
+- CHEBI:33281
+- CHEBI:52425
+- CHEBI:64947
+- CHEBI:64953
+chemical_structure:
+  smiles: CC(O)CCCCCCCCCCCCCCC(CCCCCCCCCCCCCC1CC(=O)OC[C@H]2O[C@@H](OC(CCCCCCCCCCCCCC(CCCCCC(C)O)O[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)CC(=O)OC[C@H]3O[C@@H](O1)[C@H](O)[C@@H](O)[C@@H]3O)[C@H](O)[C@@H](O)[C@@H]2O)O[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O
+  standard_inchi: InChI=1S/C81H150O28/c1-54(84)40-32-25-19-13-7-3-4-8-14-20-26-34-42-56(102-78-74(96)70(92)66(88)60(50-82)106-78)43-35-27-21-15-9-5-11-17-23-29-37-46-58-48-64(86)100-52-63-69(91)73(95)77(99)81(109-63)105-59(49-65(87)101-53-62-68(90)72(94)76(98)80(104-58)108-62)47-38-30-24-18-12-6-10-16-22-28-36-44-57(45-39-31-33-41-55(2)85)103-79-75(97)71(93)67(89)61(51-83)107-79/h54-63,66-85,88-99H,3-53H2,1-2H3/t54?,55?,56?,57?,58?,59?,60-,61-,62-,63-,66-,67-,68-,69-,70+,71+,72+,73+,74-,75-,76-,77-,78-,79-,80-,81-/m1/s1
+  standard_inchi_key: YQYKMOMCJFNBBQ-MJSFJGRCSA-N
+  molecular_formula: C81H150O28
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1572.063
+  monoisotopic_mass: 1571.03136
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65895
+  source_label: fattiviracin A1
+  minted_identifier: antibioticmech:chebi-f54693d70b
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:52425
+  - CHEBI:64947
+  - CHEBI:64953
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

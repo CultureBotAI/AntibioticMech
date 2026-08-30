@@ -1,0 +1,48 @@
+identifier: CHEBI:66161
+label: samaderine E
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quassinoid isolated from Quassia indica and Samadera indica and has
+  been shown to exhibit antimalarial and cytotoxic activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1β,11β,12α)-1,11,12,14-tetrahydroxy-13,20-epoxypicras-3-ene-2,16-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18946
+- CHEBI:2468
+- CHEBI:26878
+- CHEBI:33573
+- CHEBI:35681
+- CHEBI:37407
+- CHEBI:38164
+- CHEBI:51689
+- CHEBI:72485
+xrefs:
+- reaxys:6668062
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]12[C@@H](O)[C@H](O)[C@@]3(C)OC[C@]14[C@@]3(O)CC(=O)O[C@]4([H])C[C@@]1([H])C(C)=CC(=O)[C@@H](O)[C@]21C'
+  standard_inchi: InChI=1S/C20H26O8/c1-8-4-10(21)15(24)17(2)9(8)5-11-19-7-27-18(3,16(25)13(23)14(17)19)20(19,26)6-12(22)28-11/h4,9,11,13-16,23-26H,5-7H2,1-3H3/t9-,11+,13+,14+,15+,16-,17-,18+,19+,20+/m0/s1
+  standard_inchi_key: MGGPOESVKAWHRB-KZOVRTNRSA-N
+  molecular_formula: C20H26O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 394.42
+  monoisotopic_mass: 394.16277
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66161
+  source_label: samaderine E
+  minted_identifier: antibioticmech:chebi-23eba4180b
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

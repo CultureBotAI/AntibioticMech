@@ -1,0 +1,46 @@
+identifier: CHEBI:65437
+label: arisugacin C
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterotetracyclic compound that is 4,4,6a,12b-tetramethyl-1,4a,5,6,6a,12,12a,12b-octahydro-2H,11H-benzo[f]pyrano[4,3-b]chromene-3,11(4H)-dione
+  substituted at position 4a by a hydroxy and and at position 9 by 4-methoxyphenyl
+  group (the 4aS,6aR,12aR,12bR stereoisomer). Isolated from the culture broth of Penicillium,
+  it acts as a selective inhibitor of acetylcholinesterase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4aS,6aR,12aR,12bR)-4a-hydroxy-9-(4-methoxyphenyl)-4,4,6a,12b-tetramethyl-1,4a,5,6,6a,12,12a,12b-octahydro-2H,11H-benzo[f]pyrano[4,3-b]chromene-3,11(4H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18946
+- CHEBI:26878
+- CHEBI:35618
+- CHEBI:38163
+- CHEBI:3992
+xrefs:
+- reaxys:8521391
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12Cc3c(cc(-c4ccc(OC)cc4)oc3=O)O[C@]1(C)CC[C@@]1(O)C(C)(C)C(=O)CC[C@]21C'
+  standard_inchi: InChI=1S/C27H32O6/c1-24(2)22(28)10-11-25(3)21-14-18-20(33-26(21,4)12-13-27(24,25)30)15-19(32-23(18)29)16-6-8-17(31-5)9-7-16/h6-9,15,21,30H,10-14H2,1-5H3/t21-,25-,26-,27-/m1/s1
+  standard_inchi_key: XKDGQMPLQPRTCS-HHPVDLARSA-N
+  molecular_formula: C27H32O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 452.547
+  monoisotopic_mass: 452.21989
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65437
+  source_label: arisugacin C
+  minted_identifier: antibioticmech:chebi-a577e78a51
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

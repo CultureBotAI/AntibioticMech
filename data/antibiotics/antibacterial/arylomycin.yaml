@@ -1,0 +1,43 @@
+identifier: antibioticmech:aro-0cf530b2c3
+label: arylomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Arylomycins are lipopeptide antibiotics, sharing a lipohexapeptide with
+  a C-terminal tripeptide macrolide and varying by the length of its alkyl chains.
+definition_source: PMID:21545107
+parent_compounds:
+- ARO:3009657
+xrefs:
+- ARO:3000685
+- pubchem.compound:54586211
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: CCCCCCCCCCCCCCCC(=O)N(C)[C@H](CO)C(=O)N[C@H](C)C(=O)NCC(=O)N(C)[C@H]1C2=CC(=C(C=C2)O)C3=C(C=CC(=C3)C[C@H](NC(=O)[C@@H](NC1=O)C)C(=O)O)O
+  standard_inchi: InChI=1S/C46H68N6O11/c1-6-7-8-9-10-11-12-13-14-15-16-17-18-19-39(56)51(4)36(28-53)44(60)48-29(2)42(58)47-27-40(57)52(5)41-32-21-23-38(55)34(26-32)33-24-31(20-22-37(33)54)25-35(46(62)63)50-43(59)30(3)49-45(41)61/h20-24,26,29-30,35-36,41,53-55H,6-19,25,27-28H2,1-5H3,(H,47,58)(H,48,60)(H,49,61)(H,50,59)(H,62,63)/t29-,30+,35+,36-,41+/m1/s1
+  standard_inchi_key: HGWCKYGOWQEYSJ-JBWZRHCTSA-N
+  molecular_formula: C46H68N6O11
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 881.1
+  monoisotopic_mass: 880.49460701
+source_concepts:
+- source: ARO
+  source_id: ARO:3000685
+  source_label: arylomycin
+  minted_identifier: antibioticmech:aro-0cf530b2c3
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000717
+  target_label: antibiotic sensitive signal peptidase I
+  evidence:
+  - reference: ARO:3000717
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000685 (arylomycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

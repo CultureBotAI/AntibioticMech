@@ -1,0 +1,57 @@
+identifier: CHEBI:173073
+label: PF-07304814
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An indolecarboxamide resulting from the formal condensation of the carboxy
+  group of 4-methoxy-1H-indole-2-carboxylic acid with the primary amino group of N-[(2S)-3-oxo-1-[(3S)-2-oxopyrrolidin-3-yl]-4-(phosphonooxy)butan-2-yl]-L-leucinamide.
+  It is the phosphate prodrug of PF-00835231, an anticoronaviral agent.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S)-3-({N-[(4-methoxy-1H-indol-2-yl)carbonyl]-L-leucyl}amino)-2-oxo-4-[(3S)-2-oxopyrrolidin-3-yl]butyl
+    dihydrogen phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3S)-3-{[(2S)-2-{[(4-methoxy-1H-indol-2-yl)carbonyl]amino}-4-methylpentanoyl]amino}-2-oxo-4-[(3S)-2-oxopyrrolidin-3-yl]butyl
+    dihydrogen phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PF 07304814
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PF07304814
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:25018
+- CHEBI:35618
+- CHEBI:46921
+- CHEBI:74223
+- CHEBI:7794
+xrefs:
+- drugbank:DB16514
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: '[H][C@@]1(C[C@H](NC(=O)[C@H](CC(C)C)NC(=O)c2cc3c(OC)cccc3n2)C(=O)COP(=O)(O)O)CCNC1=O'
+  standard_inchi: InChI=1S/C24H33N4O9P/c1-13(2)9-18(28-24(32)19-11-15-16(26-19)5-4-6-21(15)36-3)23(31)27-17(10-14-7-8-25-22(14)30)20(29)12-37-38(33,34)35/h4-6,11,13-14,17-18,26H,7-10,12H2,1-3H3,(H,25,30)(H,27,31)(H,28,32)(H2,33,34,35)/t14-,17-,18-/m0/s1
+  standard_inchi_key: FQKALOFOWPDTED-WBAXXEDZSA-N
+  molecular_formula: C24H33N4O9P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 552.521
+  monoisotopic_mass: 552.19852
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:173073
+  source_label: PF-07304814
+  minted_identifier: antibioticmech:chebi-f45ee28350
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

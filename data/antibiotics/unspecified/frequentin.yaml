@@ -1,0 +1,41 @@
+identifier: CHEBI:30986
+label: frequentin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An antibiotic produced by Penicillium frequentans Westling.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,3R,4R)-6-[(1E,3E)-hepta-1,3-dienyl]-3,4-dihydroxy-2-oxocyclohexanecarbaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24693
+- CHEBI:49319
+xrefs:
+- beilstein:2621429
+- cas:29119-03-7
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H]C(=O)[C@@H]1C(=O)[C@H](O)[C@H](O)CC1/C=C/C=C/CCC'
+  standard_inchi: InChI=1S/C14H20O4/c1-2-3-4-5-6-7-10-8-12(16)14(18)13(17)11(10)9-15/h4-7,9-12,14,16,18H,2-3,8H2,1H3/b5-4+,7-6+/t10?,11-,12+,14+/m0/s1
+  standard_inchi_key: MHZVWXOKIRZLCJ-RVZXZRSKSA-N
+  molecular_formula: C14H20O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 252.31
+  monoisotopic_mass: 252.13616
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:30986
+  source_label: frequentin
+  minted_identifier: antibioticmech:chebi-c20c599132
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

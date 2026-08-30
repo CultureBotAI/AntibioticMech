@@ -1,0 +1,70 @@
+identifier: CHEBI:83393
+label: silthiofam
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid amide obtained by formal condensation of the carboxy
+  group from 4,5-dimethyl-2-(trimethylsilyl)thiophene-3-carboxlic acid with the amino
+  group of allylamine. A fungicide seed dressing for cereals used mainly to control
+  'take-all'.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4,5-dimethyl-N-(2-propen-1-yl)-2-(trimethylsilyl)thiophene-3-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,5-dimethyl-N-2-propen-1-yl-2-(trimethylsilyl)-3-thiophenecarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,5-dimethyl-N-2-propenyl-2-(trimethylsilyl)-3-thiophenecarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-allyl-4,5-dimethyl-2-(trimethylsilyl)thiophene-3-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Silthiopham
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25713
+- CHEBI:26961
+- CHEBI:29347
+- CHEBI:60600
+- CHEBI:78840
+xrefs:
+- cas:175217-20-6
+- patent:WO2011108759
+- pesticides:silthiofam
+- ppdb:591
+- reaxys:11343631
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: C=CCNC(=O)c1c([Si](C)(C)C)sc(C)c1C
+  standard_inchi: InChI=1S/C13H21NOSSi/c1-7-8-14-12(15)11-9(2)10(3)16-13(11)17(4,5)6/h7H,1,8H2,2-6H3,(H,14,15)
+  standard_inchi_key: MXMXHPPIGKYTAR-UHFFFAOYSA-N
+  molecular_formula: C13H21NOSSi
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 267.47
+  monoisotopic_mass: 267.11131
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83393
+  source_label: silthiofam
+  minted_identifier: antibioticmech:chebi-0be518635d
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

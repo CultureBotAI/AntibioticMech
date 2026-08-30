@@ -1,0 +1,66 @@
+identifier: CHEBI:3505
+label: cefpodoxime proxetil
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The 1-[(isopropoxycarbonyl)oxy]ethyl (proxetil) ester prodrug of cefpodoxime.
+  After swallowing, hydrolysis of the ester group occurs in the intestinal epithelium,
+  to release active cefpodoxime in the bloodstream. It is used to treat acute otitis
+  media, pharyngitis, and sinusitis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-{[(propan-2-yloxy)carbonyl]oxy}ethyl (6R,7R)-7-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino}-3-(methoxymethyl)-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-{[(propan-2-yloxy)carbonyl]oxy}ethyl 7β-[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetamido]-3-(methoxymethyl)-3,4-didehydrocepham-4-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (RS)-1-((isopropoxycarbonyl)oxy)ethyl (+)-(6R,7R)-7-(2-(2-amino-4-thiazolyl)-2-((Z)-methoxyimino)acetamido)-3-(methoxymethyl)-8-oxo-5-thia-1-azabicyclo(4.2.0)oct-2-ene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cefpodoxime 1-(isopropyloxycarbonyloxy)ethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+- CHEBI:33308
+- CHEBI:33575
+xrefs:
+- beilstein:8174918
+- cas:87239-81-4
+- drugbank:DB01416
+- drugcentral:555
+- kegg.compound:C08115
+- kegg.drug:D00920
+- patent:EP49118
+- patent:US4486425
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H][C@]12SCC(COC)=C(C(=O)OC(C)OC(=O)OC(C)C)N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1'
+  standard_inchi: InChI=1S/C21H27N5O9S2/c1-9(2)33-21(30)35-10(3)34-19(29)15-11(6-31-4)7-36-18-14(17(28)26(15)18)24-16(27)13(25-32-5)12-8-37-20(22)23-12/h8-10,14,18H,6-7H2,1-5H3,(H2,22,23)(H,24,27)/b25-13-/t10?,14-,18-/m1/s1
+  standard_inchi_key: LTINZAODLRIQIX-FBXRGJNPSA-N
+  molecular_formula: C21H27N5O9S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 557.607
+  monoisotopic_mass: 557.12502
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3505
+  source_label: cefpodoxime proxetil
+  minted_identifier: antibioticmech:chebi-cdf0858dfe
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

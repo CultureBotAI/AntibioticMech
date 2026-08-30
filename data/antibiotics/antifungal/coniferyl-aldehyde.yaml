@@ -1,0 +1,65 @@
+identifier: CHEBI:16547
+label: coniferyl aldehyde
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of cinnamaldehydes that is cinnamaldehyde substituted
+  by a hydroxy group at position 4 and a methoxy group at position 3.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-(4-hydroxy-3-methoxyphenyl)prop-2-enal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Hydroxy-3-methoxycinnamaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-hydroxy-3-methoxycinnamaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Coniferaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Coniferyl aldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ferulaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-coniferaldehyde
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134251
+- CHEBI:23245
+- CHEBI:26004
+xrefs:
+- cas:458-36-6
+- kegg.compound:C02666
+- knapsack:C00002728
+- metacyc.compound:CONIFERYL-ALDEHYDE
+- reaxys:2048208
+- wikipedia.en:Coniferyl_aldehyde
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1cc(/C=C/C=O)ccc1O
+  standard_inchi: InChI=1S/C10H10O3/c1-13-10-7-8(3-2-6-11)4-5-9(10)12/h2-7,12H,1H3/b3-2+
+  standard_inchi_key: DKZBBWMURDFHNE-NSCUHMNNSA-N
+  molecular_formula: C10H10O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 178.187
+  monoisotopic_mass: 178.06299
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:16547
+  source_label: coniferyl aldehyde
+  minted_identifier: antibioticmech:chebi-b09d9ac6dd
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

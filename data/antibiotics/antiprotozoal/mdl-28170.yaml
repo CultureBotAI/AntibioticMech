@@ -1,0 +1,97 @@
+identifier: CHEBI:82818
+label: MDL-28170
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dipeptide resulting from the formal condensation of the carboxy group
+  of N-benzyloxycarbonyl-L-valine with the amino group of L-phenylalanine aldehyde.
+  It is a potent cell-permeable inhibitor of calpain I and II, and is also a γ-secretase
+  inhibitor.
+definition_source: ChEBI
+synonyms:
+- synonym_text: benzyl [(2S)-3-methyl-1-oxo-1-{[(2S)-1-oxo-3-phenylpropan-2-yl]amino}butan-2-yl]carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cbz-Val-Phe-H
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CbzValPheH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-benzyloxycarbonyl-L-valyl-L-phenylalaninal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MDL 28,170
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MDL 28170
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MDL28170
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-CBZ-Val-Phe-al
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-benzyloxycarbonyl-L-valyl-L-phenylalaninal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-benzyloxycarbonylvalylphenylalaninal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-benzyloxycarbonylvalylphenylalanine aldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Z-Val-Phe-CHO
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Z-Val-Phe-H
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Z-Val-Phe-al
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: calpain inhibitor III
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: carbobenzoxyvalylphenylalanine aldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:17478
+- CHEBI:23003
+xrefs:
+- cas:88191-84-8
+- lincs.smallmolecule:LSM-2958
+- reaxys:6824325
+activity_roles:
+- CHEBI:149553
+- CHEBI:70868
+chemical_structure:
+  smiles: '[H]C(=O)[C@H](Cc1ccccc1)NC(=O)[C@@H](NC(=O)OCc1ccccc1)C(C)C'
+  standard_inchi: InChI=1S/C22H26N2O4/c1-16(2)20(24-22(27)28-15-18-11-7-4-8-12-18)21(26)23-19(14-25)13-17-9-5-3-6-10-17/h3-12,14,16,19-20H,13,15H2,1-2H3,(H,23,26)(H,24,27)/t19-,20-/m0/s1
+  standard_inchi_key: NGBKFLTYGSREKK-PMACEKPBSA-N
+  molecular_formula: C22H26N2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 382.46
+  monoisotopic_mass: 382.18926
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:82818
+  source_label: MDL-28170
+  minted_identifier: antibioticmech:chebi-d919fc43a4
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,70 @@
+identifier: CHEBI:86012
+label: oxetanocin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A nucleoside analogue found in Bacillus megaterium in which an adenine
+  moiety is attached to position 2 of a of an oxetane ring which is substituted at
+  positions 3 and 4 by hydroxymethyl groups.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[(2S,3R,4R)-4-(6-amino-9H-purin-9-yl)oxetane-2,3-diyl]dimethanol'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-oxetanocin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-oxetanocin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-((2'R,3'R,4'S)-3',4'-bis(hydroxymethyl)-2'-oxetanyl)adenine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-[(2R,3R,4S)-3,4-bis(hydroxymethyl)-2-oxetanyl]adenine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NK 84-0218
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: oxetanocin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:23824
+- CHEBI:38784
+- CHEBI:60783
+xrefs:
+- cas:103913-16-2
+- patent:EP0290817
+- reaxys:4297990
+activity_roles:
+- CHEBI:33282
+- CHEBI:64946
+chemical_structure:
+  smiles: '[H][C@]1(CO)O[C@@]([H])(n2cnc3c(N)ncnc32)[C@@H]1CO'
+  standard_inchi: InChI=1S/C10H13N5O3/c11-8-7-9(13-3-12-8)15(4-14-7)10-5(1-16)6(2-17)18-10/h3-6,10,16-17H,1-2H2,(H2,11,12,13)/t5-,6-,10-/m1/s1
+  standard_inchi_key: LMJVXGOFWKVXAW-OXOINMOOSA-N
+  molecular_formula: C10H13N5O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 251.246
+  monoisotopic_mass: 251.10184
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:86012
+  source_label: oxetanocin A
+  minted_identifier: antibioticmech:chebi-ef6b6fdc50
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

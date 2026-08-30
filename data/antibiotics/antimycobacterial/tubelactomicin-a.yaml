@@ -1,0 +1,49 @@
+identifier: CHEBI:66279
+label: tubelactomicin A
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 16-membered macrolide which exhibits strong and specific antimicrobial
+  activities against rapid-growing Mycobacteria including drug-resistant strains.
+  It is isolated from the culture broth of Nocardia sp.MK703-102F1
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,7Z,9R,10S,11E,13E,14aS,16aR,17R,18S,20aS,20bR)-9,17-dihydroxy-3,10,15,18,20b-pentamethyl-1-oxo-3,4,5,6,9,10,14a,16a,17,18,19,20,20a,20b-tetradecahydro-1H-naphtho[1,2-c]oxacyclohexadecine-8-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-tubelactomicin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25106
+- CHEBI:25384
+- CHEBI:35681
+xrefs:
+- reaxys:8741997
+activity_roles:
+- CHEBI:33231
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12CC[C@H](C)[C@@H](O)[C@]1([H])C=C(C)[C@]1([H])/C=C/C=C/[C@H](C)[C@@H](O)/C(C(=O)O)=C/CCC[C@@H](C)OC(=O)[C@]21C'
+  standard_inchi: InChI=1S/C29H42O6/c1-17-10-6-9-13-23-19(3)16-22-24(15-14-18(2)26(22)31)29(23,5)28(34)35-20(4)11-7-8-12-21(25(17)30)27(32)33/h6,9-10,12-13,16-18,20,22-26,30-31H,7-8,11,14-15H2,1-5H3,(H,32,33)/b10-6+,13-9+,21-12-/t17-,18-,20+,22+,23-,24-,25+,26+,29-/m0/s1
+  standard_inchi_key: LWPAZPOZBPFAAE-WSQSGNSCSA-N
+  molecular_formula: C29H42O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 486.649
+  monoisotopic_mass: 486.29814
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66279
+  source_label: tubelactomicin A
+  minted_identifier: antibioticmech:chebi-ecb5e4e728
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

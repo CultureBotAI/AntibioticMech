@@ -1,0 +1,49 @@
+identifier: CHEBI:31144
+label: 8-demethyltetracenomycin C
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of tetracenes that is tetracenomycin C in which
+  the methoxy group at position 3 is replaced by a phenolic OH.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (6aR,7S,10aR)-3,6a,7,10a,12-pentahydroxy-8-methoxy-1-methyl-6,10,11-trioxo-6,6a,7,10,10a,11-hexahydrotetracene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:25248
+- CHEBI:26195
+- CHEBI:27136
+- CHEBI:47985
+- CHEBI:48132
+- CHEBI:51689
+xrefs:
+- cas:71135-22-3
+- kegg.compound:C12379
+- metacyc.compound:CPD-16642
+- reaxys:8094719
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COC(=O)c1c(O)cc2cc3c(c(O)c2c1C)C(=O)[C@]1(O)C(=O)C=C(OC)[C@@H](O)[C@]1(O)C3=O
+  standard_inchi: InChI=1S/C22H18O11/c1-7-13-8(5-10(23)14(7)20(29)33-3)4-9-15(16(13)25)19(28)21(30)12(24)6-11(32-2)18(27)22(21,31)17(9)26/h4-6,18,23,25,27,30-31H,1-3H3/t18-,21-,22-/m1/s1
+  standard_inchi_key: DFURSAVCHZIKSU-STZQEDGTSA-N
+  molecular_formula: C22H18O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 458.375
+  monoisotopic_mass: 458.08491
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31144
+  source_label: 8-demethyltetracenomycin C
+  minted_identifier: antibioticmech:chebi-3089562312
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

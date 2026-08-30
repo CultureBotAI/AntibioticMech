@@ -1,0 +1,71 @@
+identifier: CHEBI:79736
+label: ziram
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dithiocarbamate salt that is the zinc salt of dimethyldithiocarbamic
+  acid. It is a broad-spectrum fungicide and bird and animal repellent that is also
+  used to accelerate the vulcanisation of rubber.
+definition_source: ChEBI
+synonyms:
+- synonym_text: zinc bis(dimethylcarbamodithioate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (T-4)-bis(dimethylcarbamodithioato-κS,κS')zinc
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bis(dimethylcarbamodithioato-S,S')zinc
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bis(dimethyldithiocarbamato)zinc
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bis-dimethyldithiocarbamate de zinc
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dimethyldithiocarbamate zinc salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc bis(dimethyldithiocarbamate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc bis(dimethyldithiocarbamoyl)disulphide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc bis(dimethylthiocarbamoyl)disulfide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27364
+- CHEBI:83060
+xrefs:
+- cas:137-30-4
+- kegg.compound:C15229
+- patent:US2492314
+- pesticides:ziram
+- reaxys:3707008
+- wikipedia.en:Ziram
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CN(C)C(=S)[S][Zn][S]C(=S)N(C)C
+  standard_inchi: InChI=1S/2C3H7NS2.Zn/c2*1-4(2)3(5)6;/h2*1-2H3,(H,5,6);/q;;+2/p-2
+  standard_inchi_key: DUBNHZYBDBBJHD-UHFFFAOYSA-L
+  molecular_formula: C6H12N2S4Zn
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 305.834
+  monoisotopic_mass: 303.91747
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:79736
+  source_label: ziram
+  minted_identifier: antibioticmech:chebi-b7f0654fec
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

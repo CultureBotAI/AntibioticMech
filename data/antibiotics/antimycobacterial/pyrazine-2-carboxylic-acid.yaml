@@ -1,0 +1,64 @@
+identifier: CHEBI:71311
+label: pyrazine-2-carboxylic acid
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The parent compound of the class of pyrazinecarboxylic acids, that is
+  pyrazine bearing a single carboxy substituent. The active metabolite of the antitubercular
+  drug pyrazinamide.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-Carboxypyrazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Pyrazinecarboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Paradiazinecarboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pyrazinemonocarboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pyrazinic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pyrazinoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pyrazinecarboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48345
+xrefs:
+- cas:98-97-5
+- kegg.compound:C19915
+- metacyc.compound:PYRAZINOIC-ACID
+- pdb-ccd:VGL
+- reaxys:112305
+- wikipedia.en:Pyrazinoic_acid
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: O=C(O)c1cnccn1
+  standard_inchi: InChI=1S/C5H4N2O2/c8-5(9)4-3-6-1-2-7-4/h1-3H,(H,8,9)
+  standard_inchi_key: NIPZZXUFJPQHNH-UHFFFAOYSA-N
+  molecular_formula: C5H4N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 124.099
+  monoisotopic_mass: 124.02728
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:71311
+  source_label: pyrazine-2-carboxylic acid
+  minted_identifier: antibioticmech:chebi-92a8f07dd3
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

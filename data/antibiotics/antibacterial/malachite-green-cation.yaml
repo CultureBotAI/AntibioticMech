@@ -1,0 +1,55 @@
+identifier: CHEBI:44107
+label: malachite green cation
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An iminium ion obtained by dimethylation of the imino group of 4-{[4-(dimethylamino)phenyl](phenyl)methylene}cyclohexa-2,5-dien-1-imine.
+  Used in the form of its chloride salt as a green-coloured dye.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-{[4-(dimethylamino)phenyl](phenyl)methylene}-N,N-dimethylcyclohexa-2,5-dien-1-iminium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(4-{[4-(dimethylamino)phenyl](phenyl)methylidene}cyclohexa-2,5-dien-1-ylidene)-N-methylmethanaminium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: malachite green
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: malachite green(1+)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35286
+xrefs:
+- cas:10309-95-2
+- drugbank:DB03895
+- pdb-ccd:MGR
+- reaxys:3558618
+- wikipedia.en:Malachite_green
+activity_roles:
+- CHEBI:36047
+- CHEBI:86327
+chemical_structure:
+  smiles: CN(C)c1ccc(C(=C2C=CC(=[N+](C)C)C=C2)c2ccccc2)cc1
+  standard_inchi: InChI=1S/C23H25N2/c1-24(2)21-14-10-19(11-15-21)23(18-8-6-5-7-9-18)20-12-16-22(17-13-20)25(3)4/h5-17H,1-4H3/q+1
+  standard_inchi_key: VFCNQNZNPKRXIT-UHFFFAOYSA-N
+  molecular_formula: C23H25N2
+  structure_source: ChEBI
+  charge: 1
+  average_mass: 329.467
+  monoisotopic_mass: 329.20123
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:44107
+  source_label: malachite green cation
+  minted_identifier: antibioticmech:chebi-638b1cb157
+  role_terms:
+  - CHEBI:36047
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,85 @@
+identifier: CHEBI:134722
+label: favipiravir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pyrazines that is pyrazine substituted by aminocarbonyl,
+  hydroxy and fluoro groups at positions 2, 3 and 6, respectively. It is an anti-viral
+  agent that inhibits RNA-dependent RNA polymerase of several RNA viruses and is approved
+  for the treatment of influenza in Japan.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Areplivir
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Avifavir
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Avigan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Favilavir
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Favipira
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: favipiravirum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6-fluoro-3-hydroxypyrazine-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-fluoro-3-hydroxy-2-pyrazinecarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: T 705
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: T-705
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: T705
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fapilavir
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140324
+- CHEBI:37143
+- CHEBI:71633
+xrefs:
+- cas:259793-96-9
+- chemspider:431002
+- drugbank:DB12466
+- drugcentral:4887
+- kegg.drug:D09537
+- reaxys:9697246
+- wikipedia.en:Favipiravir
+activity_roles:
+- CHEBI:149553
+- CHEBI:36044
+chemical_structure:
+  smiles: NC(=O)c1nc(F)cnc1O
+  standard_inchi: InChI=1S/C5H4FN3O2/c6-2-1-8-5(11)3(9-2)4(7)10/h1H,(H2,7,10)(H,8,11)
+  standard_inchi_key: ZCGNOVWYSGBHAU-UHFFFAOYSA-N
+  molecular_formula: C5H4FN3O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 157.104
+  monoisotopic_mass: 157.02875
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:134722
+  source_label: favipiravir
+  minted_identifier: antibioticmech:chebi-90624c9d31
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

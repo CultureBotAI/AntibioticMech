@@ -1,0 +1,88 @@
+identifier: CHEBI:5623
+label: harman
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An indole alkaloid fundamental parent with a structure of 9H-β-carboline
+  carrying a methyl substituent at C-1. It has been isolated from the bark of Sickingia
+  rubra, Symplocus racemosa, Passiflora incarnata, Peganum harmala, Banisteriopsis
+  caapi and Tribulus terrestris, as well as from tobacco smoke. It is a specific,
+  reversible inhibitor of monoamine oxidase A.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-methyl-9H-pyrido[3,4-b]indole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-methyl-2-carboline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-methyl-9H-β-carboline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-methyl-β-carboline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-methylnorharman
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Harman
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-methylpyridobindole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: aribin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: aribine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: harmane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: locuturin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: locuturine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: loturine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: passiflorin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38482
+- CHEBI:38958
+- CHEBI:61379
+xrefs:
+- cas:486-84-0
+- kegg.compound:C09209
+- knapsack:C00001736
+- lincs.smallmolecule:LSM-19989
+- reaxys:143898
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: Cc1nccc2c1nc1ccccc12
+  standard_inchi: InChI=1S/C12H10N2/c1-8-12-10(6-7-13-8)9-4-2-3-5-11(9)14-12/h2-7,14H,1H3
+  standard_inchi_key: PSFDQSOCUJVVGF-UHFFFAOYSA-N
+  molecular_formula: C12H10N2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 182.226
+  monoisotopic_mass: 182.0844
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5623
+  source_label: harman
+  minted_identifier: antibioticmech:chebi-baa72c4a34
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

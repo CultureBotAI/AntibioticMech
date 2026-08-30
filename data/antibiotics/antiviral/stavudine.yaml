@@ -1,0 +1,79 @@
+identifier: CHEBI:63581
+label: stavudine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A nucleoside analogue obtained by formal dehydration across positions
+  2 and 3 of thymidine. An inhibitor of HIV-1 reverse transcriptase
+definition_source: ChEBI
+synonyms:
+- synonym_text: estavudina
+  synonym_type: INN
+  source: chebi
+- synonym_text: stavudinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1-[(2R,5S)-5-(hydroxymethyl)-2,5-dihydrofuran-2-yl]-5-methylpyrimidine-2,4(1H,3H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(2,3-Dideoxy-beta-D-glycero-pent-2-enofuranosyl)thymine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2',3'-Didehydro-3'-deoxythimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3'-Deoxy-2'-thymidinene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: STV
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sanilvudine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Stavudine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: d4T
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:51659
+- CHEBI:60783
+xrefs:
+- cas:3056-17-5
+- drugbank:DB00649
+- drugcentral:2478
+- kegg.compound:C07312
+- kegg.drug:D00445
+- lincs.smallmolecule:LSM-5983
+- patent:EP334368
+- patent:US5130421
+- reaxys:618327
+- wikipedia.en:Stavudine
+activity_roles:
+- CHEBI:22587
+- CHEBI:59897
+chemical_structure:
+  smiles: Cc1cn([C@H]2C=C[C@@H](CO)O2)c(=O)nc1=O
+  standard_inchi: InChI=1S/C10H12N2O4/c1-6-4-12(10(15)11-9(6)14)8-3-2-7(5-13)16-8/h2-4,7-8,13H,5H2,1H3,(H,11,14,15)/t7-,8+/m0/s1
+  standard_inchi_key: XNKLLVCARDGLGL-JGVFFNPUSA-N
+  molecular_formula: C10H12N2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 224.216
+  monoisotopic_mass: 224.07971
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:63581
+  source_label: stavudine
+  minted_identifier: antibioticmech:chebi-b4d69f4518
+  role_terms:
+  - CHEBI:22587
+  - CHEBI:59897
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

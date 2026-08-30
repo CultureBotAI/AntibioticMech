@@ -1,0 +1,45 @@
+identifier: CHEBI:65943
+label: 7-O-galloyltricetiflavan
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A gallate ester obtained by the formal condensation of gallic acid with
+  the hydroxy group at position 7 of 3',4',5',5,7-pentahydroxyflavan. Isolated from
+  the leaves of Pithecellobium clypearia, it exhibits antiviral activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-hydroxy-2-(3,4,5-trihydroxyphenyl)-3,4-dihydro-2H-chromen-7-yl 3,4,5-trihydroxybenzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tricetiflavan-7-O-gallate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37576
+- CHEBI:72011
+xrefs:
+- reaxys:15869677
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: O=C(Oc1cc(O)c2c(c1)OC(c1cc(O)c(O)c(O)c1)CC2)c1cc(O)c(O)c(O)c1
+  standard_inchi: InChI=1S/C22H18O10/c23-13-7-11(31-22(30)10-5-16(26)21(29)17(27)6-10)8-19-12(13)1-2-18(32-19)9-3-14(24)20(28)15(25)4-9/h3-8,18,23-29H,1-2H2
+  standard_inchi_key: XQLJWQWRTLHKGO-UHFFFAOYSA-N
+  molecular_formula: C22H18O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 442.376
+  monoisotopic_mass: 442.09
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65943
+  source_label: 7-O-galloyltricetiflavan
+  minted_identifier: antibioticmech:chebi-c91829fe5d
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

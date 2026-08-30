@@ -1,0 +1,71 @@
+identifier: CHEBI:32079
+label: pyrrolnitrin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pyrroles carrying chloro and 3-chloro-2-nitrophenyl
+  substituents at positions 3 and 4 respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: pirrolnitrina
+  synonym_type: INN
+  source: chebi
+- synonym_text: pyrrolnitrine
+  synonym_type: INN
+  source: chebi
+- synonym_text: pyrrolnitrinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 3-chloro-4-(3-chloro-2-nitrophenyl)-1H-pyrrole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-Chloro-4-(2'-nitro-3'-chlorophenyl)pyrrole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-Chloro-4-(3-chloro-2-nitrophenyl)pyrrole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 107654
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC-107654
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22315
+- CHEBI:26455
+- CHEBI:35716
+- CHEBI:83403
+xrefs:
+- cas:1018-71-9
+- drugcentral:3513
+- kegg.compound:C12491
+- kegg.drug:D01094
+- knapsack:C00018726
+- metacyc.compound:CPD-12776
+- reaxys:1287646
+- wikipedia.en:Pyrrolnitrin
+activity_roles:
+- CHEBI:86327
+chemical_structure:
+  smiles: O=[N+]([O-])c1c(Cl)cccc1-c1cncc1Cl
+  standard_inchi: InChI=1S/C10H6Cl2N2O2/c11-8-3-1-2-6(10(8)14(15)16)7-4-13-5-9(7)12/h1-5,13H
+  standard_inchi_key: QJBZDBLBQWFTPZ-UHFFFAOYSA-N
+  molecular_formula: C10H6Cl2N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 257.076
+  monoisotopic_mass: 255.98063
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32079
+  source_label: pyrrolnitrin
+  minted_identifier: antibioticmech:chebi-1ebbfa2136
+  role_terms:
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

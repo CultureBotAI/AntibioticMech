@@ -1,0 +1,87 @@
+identifier: CHEBI:30746
+label: benzoic acid
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A compound comprising a benzene ring core carrying a carboxylic acid substituent.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Aromatic carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BENZOIC ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Benzenecarboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Benzeneformic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Benzenemethanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Benzoesäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Benzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dracylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E210
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phenylcarboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phenylformic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acide benzoïque
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22723
+xrefs:
+- cas:65-85-0
+- drugbank:DB03793
+- drugcentral:4664
+- gmelin:2946
+- hmdb:HMDB0001870
+- kegg.compound:C00180
+- kegg.compound:C00539
+- kegg.drug:D00038
+- knapsack:C00000207
+- lincs.smallmolecule:LSM-37118
+- metacyc.compound:BENZOATE
+- pdb-ccd:BEZ
+- ppdb:1475
+- reaxys:636131
+- wikipedia.en:Benzoic_Acid
+- ymdb:YMDB02301
+activity_roles:
+- CHEBI:65256
+chemical_structure:
+  smiles: O=C(O)c1ccccc1
+  standard_inchi: InChI=1S/C7H6O2/c8-7(9)6-4-2-1-3-5-6/h1-5H,(H,8,9)
+  standard_inchi_key: WPYMKLBDIGXBTP-UHFFFAOYSA-N
+  molecular_formula: C7H6O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 122.123
+  monoisotopic_mass: 122.03678
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:30746
+  source_label: benzoic acid
+  minted_identifier: antibioticmech:chebi-2ee1b2ea08
+  role_terms:
+  - CHEBI:65256
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

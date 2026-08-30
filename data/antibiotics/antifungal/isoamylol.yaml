@@ -1,0 +1,90 @@
+identifier: CHEBI:15837
+label: isoamylol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An primary alcohol that is butan-1-ol in which a hydrogen at position
+  3 has been replaced by a methyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-methylbutan-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-HYDROXY-3-METHYLBUTANE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methyl-4-butanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-Methylbutanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-methyl-1-butanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Iso-amylalkohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Isoamyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Isopentyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Isopentylalkohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alcool isoamylique
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: i-amyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: isobutylcarbinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: isopentan-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: isopentanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: primary isoamyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134179
+- CHEBI:15734
+- CHEBI:50584
+xrefs:
+- cas:123-51-3
+- drugbank:DB02296
+- gmelin:49460
+- hmdb:HMDB0006007
+- kegg.compound:C07328
+- reaxys:1718835
+- ymdb:YMDB00570
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(C)CCO
+  standard_inchi: InChI=1S/C5H12O/c1-5(2)3-4-6/h5-6H,3-4H2,1-2H3
+  standard_inchi_key: PHTQWCKDNZKARW-UHFFFAOYSA-N
+  molecular_formula: C5H12O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 88.15
+  monoisotopic_mass: 88.08882
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:15837
+  source_label: isoamylol
+  minted_identifier: antibioticmech:chebi-e411a778e0
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

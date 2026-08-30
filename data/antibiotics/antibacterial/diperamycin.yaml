@@ -1,0 +1,44 @@
+identifier: CHEBI:65799
+label: diperamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 19-membered cyclodepsipeptide that is a hexadepsipeptide isolated from
+  the fermentation broth of Streptomyces griseoaurantiacus MK393-AF2 and exhibits
+  potent inhibitory activity against various Gram-positive bacteria including Enterococcus
+  seriolicida and methicillin-resistant Staphylococcus aureus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[6,18-dihydroxy-7-(methoxymethyl)-19,22-dimethyl-5,8,11,17,20,24-hexaoxodocosahydro-13H,22H-dipyridazino[6,1-f:6',1'-o][1,4,7,10,13,16]oxapentaazacyclononadecin-23-yl]-2-(5-hexyl-2-hydroxy-6-methyltetrahydro-2H-pyran-2-yl)-2-hydroxypropanamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35213
+xrefs:
+- reaxys:8468749
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCCCC1CCC(O)(C(C)(O)C(=O)NC2C(=O)N3NCCCC3C(=O)N(O)C(COC)C(=O)NCC(=O)N3NCCCC3C(=O)N(O)C(C)C(=O)OC2C)OC1C
+  standard_inchi: InChI=1S/C38H64N8O14/c1-7-8-9-10-13-25-16-17-38(55,60-23(25)3)37(5,54)36(53)42-30-24(4)59-35(52)22(2)45(56)32(49)26-14-11-18-40-43(26)29(47)20-39-31(48)28(21-58-6)46(57)33(50)27-15-12-19-41-44(27)34(30)51/h22-28,30,40-41,54-57H,7-21H2,1-6H3,(H,39,48)(H,42,53)
+  standard_inchi_key: IHQIMVZJVJTKSV-UHFFFAOYSA-N
+  molecular_formula: C38H64N8O14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 856.972
+  monoisotopic_mass: 856.4542
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65799
+  source_label: diperamycin
+  minted_identifier: antibioticmech:chebi-70bb93cd2f
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,73 @@
+identifier: CHEBI:83113
+label: fluxapyroxad
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aromatic amide obtained by formal condensation of the carboxy group
+  of 3-(difluoromethyl)-1-methylpyrazole-4-carboxylic acid with the amino group of
+  3',4',5'-trifluorobiphenyl-2-amine. Used to control a number of cereal fungal pathogens
+  including those belonging to the Ascomycetes, Basidiomycetes and Zygomycetes families.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-(difluoromethyl)-1-methyl-N-(3',4',5'-trifluorobiphenyl-2-yl)pyrazole-4-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22888
+- CHEBI:26410
+- CHEBI:62733
+- CHEBI:83576
+- CHEBI:87015
+- ARO:3009539
+xrefs:
+- ARO:3009166
+- cas:907204-31-3
+- patent:DE102011017670
+- patent:NZ587123
+- pesticides:fluxapyroxad
+- ppdb:2002
+- reaxys:15702063
+- pubchem.compound:16095400
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+structural_class: fungal succinate dehydrogenase inhibitor
+structural_class_id: ARO:3009539
+chemical_structure:
+  smiles: Cn1cc(C(=O)Nc2ccccc2-c2cc(F)c(F)c(F)c2)c(C(F)F)n1
+  standard_inchi: InChI=1S/C18H12F5N3O/c1-26-8-11(16(25-26)17(22)23)18(27)24-14-5-3-2-4-10(14)9-6-12(19)15(21)13(20)7-9/h2-8,17H,1H3,(H,24,27)
+  standard_inchi_key: SXSGXWCSHSVPGB-UHFFFAOYSA-N
+  molecular_formula: C18H12F5N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 381.304
+  monoisotopic_mass: 381.09005
+source_concepts:
+- source: ARO
+  source_id: ARO:3009166
+  source_label: fluxapyroxad
+  minted_identifier: antibioticmech:aro-35e8c084ab
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:83113
+  source_label: fluxapyroxad
+  minted_identifier: antibioticmech:chebi-07705a36fb
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

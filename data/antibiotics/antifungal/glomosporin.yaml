@@ -1,0 +1,60 @@
+identifier: CHEBI:65975
+label: glomosporin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclodepsipeptide consisting of a 3,4-dihydroxy-4-methylhexadecanoyl
+  group attached to the amino terminus of the linear heptapeptide Ser-D-Ala-Asp-Asn-Asn-Ser-D-allo-Thr
+  which is cyclised head-to-tail via the 3-hydroxy group on the hexadecanoyl chain.
+  It is an antifungal drug isolated from the barley solid culture of the fungus Glomospora
+  sp.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[(3R,18R)-9,12-bis(2-amino-2-oxoethyl)-3-[(1R)-1-hydroxyethyl]-6,21-bis(hydroxymethyl)-25-(2-hydroxytetradecan-2-yl)-18-methyl-2,5,8,11,14,17,20,23-octaoxo-1-oxa-4,7,10,13,16,19,22-heptaazacyclopentacosan-15-yl]acetic
+    acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-[(18R)-9,12-bis(2-amino-2-oxoethyl)-3-[(1R)-1-hydroxyethyl]-6,21-bis(hydroxymethyl)-25-(2-hydroxytetradecan-2-yl)-18-methyl-2,5,8,11,14,17,20,23-octaoxo-1-oxa-4,7,10,13,16,19,22-heptazacyclopentacos-15-yl]acetic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:24995
+- CHEBI:25384
+- CHEBI:25903
+- CHEBI:26878
+- CHEBI:35213
+- CHEBI:35681
+xrefs:
+- reaxys:8672918
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCCCCCCCCCC(C)(O)C1CC(=O)NC(CO)C(=O)N[C@H](C)C(=O)NC(CC(=O)O)C(=O)NC(CC(N)=O)C(=O)NC(CC(N)=O)C(=O)NC(CO)C(=O)N[C@H]([C@@H](C)O)C(=O)O1
+  standard_inchi: InChI=1S/C42H71N9O17/c1-5-6-7-8-9-10-11-12-13-14-15-42(4,67)29-19-32(57)46-27(20-52)39(64)45-22(2)35(60)47-26(18-33(58)59)38(63)49-24(16-30(43)55)36(61)48-25(17-31(44)56)37(62)50-28(21-53)40(65)51-34(23(3)54)41(66)68-29/h22-29,34,52-54,67H,5-21H2,1-4H3,(H2,43,55)(H2,44,56)(H,45,64)(H,46,57)(H,47,60)(H,48,61)(H,49,63)(H,50,62)(H,51,65)(H,58,59)/t22-,23-,24?,25?,26?,27?,28?,29?,34-,42?/m1/s1
+  standard_inchi_key: INJLZOSCEJMAGG-ADTDQJCQSA-N
+  molecular_formula: C42H71N9O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 974.076
+  monoisotopic_mass: 973.49679
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65975
+  source_label: glomosporin
+  minted_identifier: antibioticmech:chebi-5893003bd6
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

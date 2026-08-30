@@ -1,0 +1,50 @@
+identifier: CHEBI:65650
+label: colossolactone VII
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tricyclic triterpenoid that is 3,4-seco-lanosta-8,24-diene-26,22-olide
+  3-methylester substituted by an acetoxy group at position 19 and a hydroxy group
+  at position 4. It is isolated from the fruiting bodies of the Vietnamese mushroom
+  Ganoderma colossum and displays inhibitory activity towards the enzyme HIV protease.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl 3-[(3aR,6R,7R,9bR)-6-[(acetyloxy)methyl]-7-(2-hydroxypropan-2-yl)-3a,9b-dimethyl-3-{(1S)-1-[(2R)-5-methyl-6-oxo-3,6-dihydro-2H-pyran-2-yl]ethyl}-2,3,3a,4,5,6,7,8,9,9b-decahydro-1H-cyclopenta[a]naphthalen-6-yl]propanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (22S)-3,4-seco-19-acetoxy-4-hydroxylanosta-8,24-dien-26,22-olide 3-methyl
+    ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18946
+- CHEBI:25248
+- CHEBI:26878
+- CHEBI:47622
+- CHEBI:52340
+xrefs:
+- reaxys:18836348
+activity_roles:
+- CHEBI:35660
+chemical_structure:
+  smiles: '[H][C@]1([C@@H](C)C2CC[C@@]3(C)C4=C(CC[C@]23C)[C@](CCC(=O)OC)(COC(C)=O)[C@]([H])(C(C)(C)O)CC4)CC=C(C)C(=O)O1'
+  standard_inchi: InChI=1S/C33H50O7/c1-20-9-11-26(40-29(20)36)21(2)23-13-16-32(7)24-10-12-27(30(4,5)37)33(19-39-22(3)34,18-15-28(35)38-8)25(24)14-17-31(23,32)6/h9,21,23,26-27,37H,10-19H2,1-8H3/t21-,23?,26+,27-,31+,32-,33-/m0/s1
+  standard_inchi_key: YIMPDIICGCPBOQ-BDZANIHZSA-N
+  molecular_formula: C33H50O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 558.756
+  monoisotopic_mass: 558.35565
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65650
+  source_label: colossolactone VII
+  minted_identifier: antibioticmech:chebi-59380523fe
+  role_terms:
+  - CHEBI:35660
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

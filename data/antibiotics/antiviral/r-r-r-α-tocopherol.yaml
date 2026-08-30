@@ -1,0 +1,89 @@
+identifier: CHEBI:18145
+label: (R,R,R)-α-tocopherol
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An α-tocopherol that has R,R,R configuration. The naturally occurring
+  stereoisomer of α-tocopherol, it is found particularly in sunflower and olive oils.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R)-2,5,7,8-tetramethyl-2-[(4R,8R)-4,8,12-trimethyltridecyl]-3,4-dihydro-2H-chromen-6-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-alpha-tocopherol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-α-tocopherol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R)-2,5,7,8-TETRAMETHYL-2-[(4R,8R)-4,8,12-TRIMETHYLTRIDECYL]CHROMAN-6-OL
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R)-2,5,7,8-tetramethyl-2-[(4R,8R)-4,8,12-trimethyltridecyl]-3,4-dihydro-2H-1-benzopyran-6-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R,4'R,8'R)-alpha-tocopherol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R,4'R,8'R)-α-tocopherol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (all-R)-α-tocopherol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7,8-trimethyltocol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RRR-α-tocopherol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Vitamin E
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alpha-Tocopherol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: d-α-tocopherol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22470
+xrefs:
+- beilstein:5300493
+- cas:59-02-9
+- chemspider:14265
+- drugbank:DB00163
+- drugcentral:4280
+- foodb.food:FDB000565
+- hmdb:HMDB0001893
+- kegg.compound:C02477
+- knapsack:C00007366
+- lipidmaps:LMPR02020001
+- metacyc.compound:ALPHA-TOCOPHEROL
+- pdb-ccd:VIV
+- reaxys:94012
+- wikipedia.en:Alpha-Tocopherol
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: Cc1c(C)c2c(c(C)c1O)CC[C@@](C)(CCC[C@H](C)CCC[C@H](C)CCCC(C)C)O2
+  standard_inchi: InChI=1S/C29H50O2/c1-20(2)12-9-13-21(3)14-10-15-22(4)16-11-18-29(8)19-17-26-25(7)27(30)23(5)24(6)28(26)31-29/h20-22,30H,9-19H2,1-8H3/t21-,22-,29-/m1/s1
+  standard_inchi_key: GVJHHUAWPYXKBD-IEOSBIPESA-N
+  molecular_formula: C29H50O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 430.717
+  monoisotopic_mass: 430.38108
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:18145
+  source_label: (R,R,R)-α-tocopherol
+  minted_identifier: antibioticmech:chebi-2ae3571c2a
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,63 @@
+identifier: CHEBI:39349
+label: 4,6-dinitro-o-cresol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxytoluene that is o-cresol carrying nitro substituents at positions
+  4 and 6.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-methyl-4,6-dinitrophenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4-Dinitro-6-methylphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,5-dinitro-2-hydroxytoluene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,6-Dinitro-o-cresol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-methyl-2,4-dinitrophenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antinonnin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DNOC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24751
+- CHEBI:25566
+- CHEBI:39363
+xrefs:
+- cas:534-52-1
+- kegg.compound:C18653
+- ppdb:261
+- reaxys:2054389
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: Cc1cc([N+](=O)[O-])cc([N+](=O)[O-])c1O
+  standard_inchi: InChI=1S/C7H6N2O5/c1-4-2-5(8(11)12)3-6(7(4)10)9(13)14/h2-3,10H,1H3
+  standard_inchi_key: ZXVONLUNISGICL-UHFFFAOYSA-N
+  molecular_formula: C7H6N2O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 198.134
+  monoisotopic_mass: 198.02767
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:39349
+  source_label: 4,6-dinitro-o-cresol
+  minted_identifier: antibioticmech:chebi-a0dfe1a4cd
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

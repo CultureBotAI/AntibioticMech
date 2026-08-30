@@ -1,0 +1,54 @@
+identifier: CHEBI:48267
+label: tubercidin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An N-glycosylpyrrolopyrimidine that is adenosine in which the in the 5-membered
+  ring that is not attached to the ribose moiety is replaced by a carbon. Tubercidin
+  is produced in the culture broth of Streptomyces tubericidus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7-(β-D-ribofuranosyl)-7H-pyrrolo[2,3-d]pyrimidin-4-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-Deazaadenosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sparsomycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18254
+- CHEBI:48036
+- CHEBI:86478
+xrefs:
+- beilstein:38498
+- cas:69-33-0
+- drugbank:DB03172
+- metacyc.compound:CPD-13054
+- patent:US4316957
+- pdb-ccd:TBN
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: Nc1ncnc2c1ccn2[C@@H]1O[C@H](CO)[C@@H](O)[C@H]1O
+  standard_inchi: InChI=1S/C11H14N4O4/c12-9-5-1-2-15(10(5)14-4-13-9)11-8(18)7(17)6(3-16)19-11/h1-2,4,6-8,11,16-18H,3H2,(H2,12,13,14)/t6-,7-,8-,11-/m1/s1
+  standard_inchi_key: HDZZVAMISRMYHH-KCGFPETGSA-N
+  molecular_formula: C11H14N4O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 266.257
+  monoisotopic_mass: 266.1015
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:48267
+  source_label: tubercidin
+  minted_identifier: antibioticmech:chebi-2bded3e66e
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

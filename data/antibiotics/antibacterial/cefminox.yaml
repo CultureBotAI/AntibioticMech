@@ -1,0 +1,76 @@
+identifier: CHEBI:135817
+label: cefminox
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A second-generation cephamycin antibiotic having [(1-methyl-1H-tetrazol-5-yl)sulfanyl]methyl
+  and 2-{[(2S)-2-amino-2-carboxyethyl]sulfanyl}acetamido side-groups located respectively
+  at positions 3 and 7β of the cephem nucleus. A broad-spectrum bactericide, it is
+  especially effective against Gram-negative and anaerobic bacteria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefminoxum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (7S)-7-(2-{[(2S)-2-amino-2-carboxyethyl]sulfanyl}acetamido)-7-methoxy-3-{[(1-methyl-1H-tetrazol-5-yl)sulfanyl]methyl}-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7S)-7-(2-{[(2S)-2-amino-2-carboxyethyl]sulfanyl}acetamido)-7-methoxy-3-{[(1-methyl-1H-tetrazol-5-yl)sulfanyl]methyl}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cephminox
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:35689
+- CHEBI:55429
+- ARO:0000032
+xrefs:
+- ARO:3009116
+- cas:84305-41-9
+- chemspider:64286
+- drugbank:DB09062
+- drugcentral:540
+- kegg.drug:D07642
+- wikipedia.en:Cefminox
+- chembl:CHEMBL1276342
+- pubchem.compound:71141
+activity_roles:
+- CHEBI:33281
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(CSc3nnnn3C)=C(C(=O)O)N1C(=O)[C@]2(NC(=O)CSC[C@@H](N)C(=O)O)OC'
+  standard_inchi: InChI=1S/C16H21N7O7S3/c1-22-15(19-20-21-22)33-4-7-3-32-14-16(30-2,13(29)23(14)10(7)12(27)28)18-9(24)6-31-5-8(17)11(25)26/h8,14H,3-6,17H2,1-2H3,(H,18,24)(H,25,26)(H,27,28)/t8-,14-,16+/m1/s1
+  standard_inchi_key: JSDXOWVAHXDYCU-VXSYNFHWSA-N
+  molecular_formula: C16H21N7O7S3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 519.587
+  monoisotopic_mass: 519.06646
+source_concepts:
+- source: ARO
+  source_id: ARO:3009116
+  source_label: cefminox
+  minted_identifier: antibioticmech:aro-f71a7b870a
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:135817
+  source_label: cefminox
+  minted_identifier: antibioticmech:chebi-19407ed94b
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

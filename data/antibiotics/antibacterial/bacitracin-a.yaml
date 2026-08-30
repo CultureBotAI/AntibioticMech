@@ -1,0 +1,114 @@
+identifier: CHEBI:35862
+label: bacitracin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A homodetic cyclic peptide consisting of (4R)-2-[(1S,2S)-1-amino-2-methylbutyl]-4,5-dihydro-1,3-thiazole-4-carboxylic
+  acid attached head-to-tail to L-leucyl,D-glutamyl, L-lysyl, D-ornityl, L-isoleucyl,
+  D-phenylalanyl, L-histidyl. D-aspartyl and L-asparaginyl residues coupled in sequence
+  and cyclised by condensation of the side-chain amino group of the L-lysyl residue
+  with the C-terminal carboxylic acid group. It is the major component of bacitracin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-({(4R)-2-[(1S,2S)-1-amino-2-methylbutyl]-4,5-dihydro-1,3-thiazol-4-yl}carbonyl)-L-leucyl-D-α-glutamyl-N-[(3S,6R,9S,12R,15S,18R,21S)-3-(2-amino-2-oxoethyl)-18-(3-aminopropyl)-12-benzyl-15-[(2S)-butan-2-yl]-6-(carboxymethyl)-9-(1H-imidazol-4-ylmethyl)-2,5,8,11,14,17,20-heptaoxo-1,4,7,10,13,16,19-heptaazacyclopentacosan-21-yl]-L-isoleucinamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bacitracin A2a
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bacitracin F, 1-(N-((2-(1-amino-2-methylbutyl)-4,5-dihydro-4-thiazolyl)carbonyl)-l-leucine)-
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15841
+- CHEBI:24613
+- ARO:3009657
+xrefs:
+- ARO:3000629
+- cas:22601-59-8
+- kegg.compound:C15482
+- reaxys:8969478
+- chembl:CHEMBL1790520
+- pubchem.compound:10909430
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: CC[C@H](C)[C@H](N)C1=N[C@H](C(=O)N[C@@H](CC(C)C)C(=O)N[C@H](CCC(=O)O)C(=O)N[C@H](C(=O)N[C@H]2CCCCNC(=O)[C@H](CC(N)=O)NC(=O)[C@@H](CC(=O)O)NC(=O)[C@H](Cc3cncn3)NC(=O)[C@@H](Cc3ccccc3)NC(=O)[C@H]([C@@H](C)CC)NC(=O)[C@@H](CCCN)NC2=O)[C@@H](C)CC)CS1
+  standard_inchi: InChI=1S/C66H103N17O16S/c1-9-35(6)52(69)66-81-48(32-100-66)63(97)76-43(26-34(4)5)59(93)74-42(22-23-50(85)86)58(92)83-53(36(7)10-2)64(98)75-40-20-15-16-25-71-55(89)46(29-49(68)84)78-62(96)47(30-51(87)88)79-61(95)45(28-39-31-70-33-72-39)77-60(94)44(27-38-18-13-12-14-19-38)80-65(99)54(37(8)11-3)82-57(91)41(21-17-24-67)73-56(40)90/h12-14,18-19,31,33-37,40-48,52-54H,9-11,15-17,20-30,32,67,69H2,1-8H3,(H2,68,84)(H,70,72)(H,71,89)(H,73,90)(H,74,93)(H,75,98)(H,76,97)(H,77,94)(H,78,96)(H,79,95)(H,80,99)(H,82,91)(H,83,92)(H,85,86)(H,87,88)/t35-,36-,37-,40-,41+,42+,43-,44+,45-,46-,47+,48-,52-,53-,54-/m0/s1
+  standard_inchi_key: CLKOFPXJLQSYAH-ABRJDSQDSA-N
+  molecular_formula: C66H103N17O16S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1422.72
+  monoisotopic_mass: 1421.74894
+source_concepts:
+- source: ARO
+  source_id: ARO:3000629
+  source_label: bacitracin A
+  minted_identifier: antibioticmech:aro-a443732110
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:35862
+  source_label: bacitracin A
+  minted_identifier: antibioticmech:chebi-7b971bf204
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002986
+  label: bacA
+  evidence:
+  - reference: ARO:3002986
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000629 (bacitracin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3002987
+  label: bcrA
+  evidence:
+  - reference: ARO:3002987
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000629 (bacitracin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3002988
+  label: bcrB
+  evidence:
+  - reference: ARO:3002988
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000629 (bacitracin
+      A); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003250
+  label: bcrC
+  evidence:
+  - reference: ARO:3003250
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000629 (bacitracin
+      A); database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000719
+  target_label: bacitracin sensitive isoprenyl pyrophosphate
+  evidence:
+  - reference: ARO:3000719
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000629 (bacitracin A); database
+      assertion, not a primary citation.
+- target_id: ARO:3003251
+  target_label: undecaprenyl pyrophosphate
+  evidence:
+  - reference: ARO:3003251
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000629 (bacitracin A); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

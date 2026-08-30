@@ -1,0 +1,42 @@
+identifier: CHEBI:65583
+label: dragomabin
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A lipopeptide consisting of a 2-methyloct-7-ynoyl moiety attached to a
+  linear tetrapeptide comprising of N-methyl-L-phenylalanyl, L-alanyl, N-methyl-L-alanyl
+  and Nα,O-dimethyl-L-tyrosine units. It is isolated from a Panamanian strain of the
+  marine cyanobacterium Lyngbya majuscula and displays antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-methyl-N-[(2S)-2-methyloct-7-ynoyl]-L-phenylalanyl-L-alanyl-N-methyl-L-alanyl-Nα,O-dimethyl-L-tyrosinamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:46895
+xrefs:
+- reaxys:11195402
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: C#CCCCC[C@H](C)C(=O)N(C)[C@@H](Cc1ccccc1)C(=O)N[C@@H](C)C(=O)N(C)[C@@H](C)C(=O)N(C)[C@@H](Cc1ccc(OC)cc1)C(N)=O
+  standard_inchi: InChI=1S/C37H51N5O6/c1-9-10-11-13-16-25(2)35(45)42(7)32(24-28-17-14-12-15-18-28)34(44)39-26(3)36(46)40(5)27(4)37(47)41(6)31(33(38)43)23-29-19-21-30(48-8)22-20-29/h1,12,14-15,17-22,25-27,31-32H,10-11,13,16,23-24H2,2-8H3,(H2,38,43)(H,39,44)/t25-,26-,27-,31-,32-/m0/s1
+  standard_inchi_key: JAYHQHZOWYDLDQ-PONGSQKHSA-N
+  molecular_formula: C37H51N5O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 661.844
+  monoisotopic_mass: 661.38393
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65583
+  source_label: dragomabin
+  minted_identifier: antibioticmech:chebi-c529004577
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

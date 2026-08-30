@@ -1,0 +1,77 @@
+identifier: CHEBI:75250
+label: pipemidic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyridopyrimidine that is 5-oxo-5,8-dihydropyrido[2,3-d]pyrimidine-6-carboxylic
+  acid substituted at position 2 by a piperazin-1-yl group and at position 8 by an
+  ethyl group. A synthetic broad-spectrum antibacterial, it is used for treatment
+  of gastrointestinal, biliary, and urinary infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: acide pipemidique
+  synonym_type: INN
+  source: chebi
+- synonym_text: acido pipemidico
+  synonym_type: INN
+  source: chebi
+- synonym_text: acidum pipemidicum
+  synonym_type: INN
+  source: chebi
+- synonym_text: -ethyl-5-oxo-2-(piperazin-1-yl)-5,8-dihydropyrido[2,3-d]pyrimidine-6-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,8-Dihydro-8-ethyl-5-oxo-2-(1-piperazinyl)pyrido(2,3-d)pyrimidine-6-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 8-Ethyl-5,8-dihydro-5-oxo-2-(1-piperazinyl)pyrido(2,3-d)pyrimidine-6-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:33709
+- CHEBI:38932
+- CHEBI:46848
+- CHEBI:86324
+xrefs:
+- cas:51940-44-4
+- drugcentral:2184
+- hmdb:HMDB0041989
+- kegg.drug:D08379
+- lincs.smallmolecule:LSM-5267
+- reaxys:626575
+- vsdb:1904
+- wikipedia.en:Pipemidic_acid
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: CCn1cc(C(=O)O)c(=O)c2cnc(N3CCNCC3)nc21
+  standard_inchi: InChI=1S/C14H17N5O3/c1-2-18-8-10(13(21)22)11(20)9-7-16-14(17-12(9)18)19-5-3-15-4-6-19/h7-8,15H,2-6H2,1H3,(H,21,22)
+  standard_inchi_key: JOHZPMXAZQZXHR-UHFFFAOYSA-N
+  molecular_formula: C14H17N5O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 303.322
+  monoisotopic_mass: 303.13314
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75250
+  source_label: pipemidic acid
+  minted_identifier: antibioticmech:chebi-60f1e80951
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

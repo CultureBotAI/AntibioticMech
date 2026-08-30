@@ -1,0 +1,57 @@
+identifier: CHEBI:143596
+label: ipflufenoquin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of quinolines that is quinoline substituted by a
+  methyl group, 3-fluoro-2-(2-hydroxypropan-2-yl)phenoxy group, fluoro group and fluoro
+  group at positions 2, 3, 7 and 8, respectively. It is a fungicide being developed
+  by Nippon-Soda Co. Ltd (Japan) which has stable efficacy against a wide range of
+  plant diseases, such as gray mold, scab and rice blast.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-{2-[(7,8-difluoro-2-methylquinolin-3-yl)oxy]-6-fluorophenyl}propan-2-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-[(7,8-difluoro-2-methyl-3-quinolinyl)oxy]-6-fluoro-α,α-dimethylbenzenemethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-[2-(7,8-difluoro-2-methylquinolin-3-yloxy)-6-fluorophenyl]propan-2-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NF-180
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22743
+- CHEBI:26513
+- CHEBI:35618
+- CHEBI:37143
+xrefs:
+- cas:1314008-27-9
+- pesticides:ipflufenoquin
+- reaxys:23059927
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: Cc1nc2c(F)c(F)ccc2cc1Oc1cccc(F)c1C(C)(C)O
+  standard_inchi: InChI=1S/C19H16F3NO2/c1-10-15(9-11-7-8-13(21)17(22)18(11)23-10)25-14-6-4-5-12(20)16(14)19(2,3)24/h4-9,24H,1-3H3
+  standard_inchi_key: DSXOWZNZGWXWMX-UHFFFAOYSA-N
+  molecular_formula: C19H16F3NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 347.336
+  monoisotopic_mass: 347.11331
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:143596
+  source_label: ipflufenoquin
+  minted_identifier: antibioticmech:chebi-9043ad8242
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

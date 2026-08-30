@@ -1,0 +1,43 @@
+identifier: CHEBI:68767
+label: chaetoglocin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 2-pyranones that is 2H-pyran-2-one substituted
+  by a (2Z)-1-hydroxybut-2-en-2-yl group at position 6, a hydroxymethyl group at position
+  5 and a methoxy group at position 4. It has been isolated from the solid-fermentation
+  culture of Chaetomium globosum and has been shown to exhibit antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6-[(2Z)-1-hydroxybut-2-en-2-yl]-5-(hydroxymethyl)-4-methoxy-2H-pyran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23824
+- CHEBI:75885
+xrefs:
+- reaxys:22515442
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H]/C(C)=C(\CO)c1oc(=O)cc(OC)c1CO'
+  standard_inchi: InChI=1S/C11H14O5/c1-3-7(5-12)11-8(6-13)9(15-2)4-10(14)16-11/h3-4,12-13H,5-6H2,1-2H3/b7-3-
+  standard_inchi_key: DGBMMVBFYMZWHX-CLTKARDFSA-N
+  molecular_formula: C11H14O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 226.228
+  monoisotopic_mass: 226.08412
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68767
+  source_label: chaetoglocin B
+  minted_identifier: antibioticmech:chebi-102f61eb32
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

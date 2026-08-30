@@ -1,0 +1,89 @@
+identifier: antibioticmech:aro-2c567f176b
+label: phenamacril
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Phenamacril is a novel fungicide that has narrow spectrum activity against
+  Fusarium species of fungi. It specifically blocks ATPase activity of myosin motor
+  proteins required for transport of vesicles and organelles within a cell.
+definition_source: PMID:32163521
+parent_compounds:
+- ARO:3000003
+xrefs:
+- ARO:3009383
+- pubchem.compound:66655715
+structural_class: antibiotic without defined classification
+structural_class_id: ARO:3000003
+chemical_structure:
+  smiles: CCOC(=O)C(=C(C1=CC=CC=C1)N)C#N
+  standard_inchi: InChI=1S/C12H12N2O2/c1-2-16-12(15)10(8-13)11(14)9-6-4-3-5-7-9/h3-7H,2,14H2,1H3
+  standard_inchi_key: YKRQBWKLHCEKQH-UHFFFAOYSA-N
+  molecular_formula: C12H12N2O2
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 216.24
+  monoisotopic_mass: 216.08987763
+source_concepts:
+- source: ARO
+  source_id: ARO:3009383
+  source_label: phenamacril
+  minted_identifier: antibioticmech:aro-2c567f176b
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009382
+  label: Fusarium asiaticum myosin-5 with mutations conferring resistance against
+    phenamacril
+  evidence:
+  - reference: ARO:3009382
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009383 (phenamacril);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009385
+  label: Fusarium solani myosin-5 with mutations conferring resistance against phenamacril
+  evidence:
+  - reference: ARO:3009385
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009383 (phenamacril);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009386
+  label: Fusarium fujikuroi myosin-5 with mutations conferring resistance against
+    phenamacril
+  evidence:
+  - reference: ARO:3009386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009383 (phenamacril);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009387
+  label: Fusarium incarnatum myosin-5 with mutations conferring resistance against
+    phenamacril
+  evidence:
+  - reference: ARO:3009387
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009383 (phenamacril);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009388
+  label: Fusarium graminearum myosin-5 with mutations conferring resistance against
+    phenamacril
+  evidence:
+  - reference: ARO:3009388
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009383 (phenamacril);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009389
+  label: Fusarium oxysporum f.sp. melonis myosin-5 with mutations conferring resistance
+    against phenamacril
+  evidence:
+  - reference: ARO:3009389
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009383 (phenamacril);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

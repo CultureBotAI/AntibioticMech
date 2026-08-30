@@ -1,0 +1,43 @@
+identifier: CHEBI:66065
+label: IC202A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A N-oxide isolated from Streptoalloteichus sp.1454-19. It is a siderophore
+  which exhibits immunosuppressive activity on a mixed lymphocyte culture reaction
+  (MLCR).
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-(5-aminopentyl)-N'-(5-{[4-({5-[butylidene(oxido)-λ5-azanyl]pentyl}amino)-4-oxobutanoyl](hydroxy)amino}pentyl)-N-hydroxybutanediamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24650
+- CHEBI:35580
+- CHEBI:50994
+xrefs:
+- reaxys:8378470
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H]C(CCCC)=[N+]([O-])CCCCNC(=O)CCC(=O)N(O)CCCCCNC(=O)CCC(=O)N(O)CCCCCN'
+  standard_inchi: InChI=1S/C27H52N6O7/c1-2-3-9-20-31(38)21-12-8-19-30-25(35)14-16-27(37)33(40)23-11-5-7-18-29-24(34)13-15-26(36)32(39)22-10-4-6-17-28/h20,39-40H,2-19,21-23,28H2,1H3,(H,29,34)(H,30,35)
+  standard_inchi_key: BVRULQCEMCYBAM-UHFFFAOYSA-N
+  molecular_formula: C27H52N6O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 572.748
+  monoisotopic_mass: 572.38975
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66065
+  source_label: IC202A
+  minted_identifier: antibioticmech:chebi-5d3266c9e7
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

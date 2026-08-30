@@ -1,0 +1,83 @@
+identifier: CHEBI:131715
+label: rosoxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quinolinemonocarboxylic acid that is 1,4-dihydroquinoline-3-carboxylic
+  acid that is substituted by an ethyl group at position 1 and by a pyridin-4-yl group
+  at position 7. An antibacterial drug, active against Neisseria gonorrhoeae, it has
+  been used for treating urinary tract infections and certain sexually transmitted
+  diseases.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Eradacil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: rosoxacina
+  synonym_type: INN
+  source: chebi
+- synonym_text: rosoxacine
+  synonym_type: INN
+  source: chebi
+- synonym_text: rosoxacinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1-ethyl-4-oxo-7-(pyridin-4-yl)-1,4-dihydroquinoline-3-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-ethyl-1,4-dihydro-4-oxo-7-(4-pyridyl)-3-quinolinecarboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Win 35,213
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Win 35213
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Win-35,213
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26421
+- CHEBI:26512
+- CHEBI:86324
+xrefs:
+- cas:40034-42-2
+- drugbank:DB00817
+- drugcentral:83
+- hmdb:HMDB0014955
+- kegg.drug:D02305
+- patent:DE2224090
+- patent:US3753993
+- patent:US3907808
+- reaxys:758231
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: CCn1cc(C(=O)O)c(=O)c2ccc(-c3ccncc3)cc21
+  standard_inchi: InChI=1S/C17H14N2O3/c1-2-19-10-14(17(21)22)16(20)13-4-3-12(9-15(13)19)11-5-7-18-8-6-11/h3-10H,2H2,1H3,(H,21,22)
+  standard_inchi_key: XBPZXDSZHPDXQU-UHFFFAOYSA-N
+  molecular_formula: C17H14N2O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 294.31
+  monoisotopic_mass: 294.10044
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:131715
+  source_label: rosoxacin
+  minted_identifier: antibioticmech:chebi-07bcff1ed1
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

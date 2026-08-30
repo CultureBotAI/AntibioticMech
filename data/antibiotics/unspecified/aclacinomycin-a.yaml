@@ -1,0 +1,68 @@
+identifier: CHEBI:74619
+label: aclacinomycin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An anthracycline antibiotic that is produced by Streptomyces galilaeus
+  and also has potent antineoplastic activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: aclarubicin
+  synonym_type: INN
+  source: chebi
+- synonym_text: aclarubicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: aclarubicine
+  synonym_type: INN
+  source: chebi
+- synonym_text: aclarubicinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: methyl (1R,2R,4S)-2-ethyl-2,5,7-trihydroxy-6,11-dioxo-4-{[2,3,6-trideoxy-4-O-{2,6-dideoxy-4-O-[(2R,6S)-6-methyl-5-oxotetrahydro-2H-pyran-2-yl]-α-L-lyxo-hexopyranosyl}-3-(dimethylamino)-α-L-lyxo-hexopyranosyl]oxy}-1,2,3,4,6,11-hexahydrotetracene-1-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MA 144-A1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:26188
+- CHEBI:33853
+- CHEBI:47779
+- CHEBI:48120
+- CHEBI:51286
+- CHEBI:63571
+xrefs:
+- cas:57576-44-0
+- drugcentral:80
+- kegg.compound:C18638
+- kegg.drug:D02756
+- kegg.glycan:G09914
+- metacyc.compound:CPD-12960
+- reaxys:4901152
+- wikipedia.en:Aclarubicin
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@@]1(O)C[C@H](O[C@H]2C[C@H](N(C)C)[C@H](O[C@H]3C[C@H](O)[C@H](O[C@H]4CCC(=O)[C@H](C)O4)[C@H](C)O3)[C@H](C)O2)c2c(cc3c(c2O)C(=O)c2c(O)cccc2C3=O)[C@H]1C(=O)OC
+  standard_inchi: InChI=1S/C42H53NO15/c1-8-42(51)17-28(33-22(35(42)41(50)52-7)14-23-34(38(33)49)37(48)32-21(36(23)47)10-9-11-26(32)45)56-30-15-24(43(5)6)39(19(3)54-30)58-31-16-27(46)40(20(4)55-31)57-29-13-12-25(44)18(2)53-29/h9-11,14,18-20,24,27-31,35,39-40,45-46,49,51H,8,12-13,15-17H2,1-7H3/t18-,19-,20-,24-,27-,28-,29-,30-,31-,35-,39+,40+,42+/m0/s1
+  standard_inchi_key: USZYSDMBJDPRIF-SVEJIMAYSA-N
+  molecular_formula: C42H53NO15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 811.878
+  monoisotopic_mass: 811.34152
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:74619
+  source_label: aclacinomycin A
+  minted_identifier: antibioticmech:chebi-39e38aff04
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

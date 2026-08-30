@@ -1,0 +1,84 @@
+identifier: CHEBI:35986
+label: nonan-1-ol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A nonanol that is nonane substituted by a hydroxy group at position 1.
+  It has been isolated as a component of volatile oils from plants like Hordeum vulgare.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-hydroxynonane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-nonanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FEMA 2789
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NONAN-1-OL
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nonylalkohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pelargonalkohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-nonanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-nonyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nonalol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nonyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: octyl carbinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pelargonic alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:195604
+xrefs:
+- beilstein:969213
+- cas:143-08-8
+- drugbank:DB03143
+- gmelin:406178
+- hmdb:HMDB0031265
+- kegg.compound:C14696
+- knapsack:C00030830
+- lipidmaps:LMFA05000092
+- pdb-ccd:F09
+- reaxys:969213
+- wikipedia.en:1-Nonanol
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCCCCCCO
+  standard_inchi: InChI=1S/C9H20O/c1-2-3-4-5-6-7-8-9-10/h10H,2-9H2,1H3
+  standard_inchi_key: ZWRUINPWMLAQRD-UHFFFAOYSA-N
+  molecular_formula: C9H20O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 144.258
+  monoisotopic_mass: 144.15142
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:35986
+  source_label: nonan-1-ol
+  minted_identifier: antibioticmech:chebi-3456495c46
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

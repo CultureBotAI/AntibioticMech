@@ -1,0 +1,89 @@
+identifier: CHEBI:28939
+label: N-acetyl-L-cysteine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An N-acetyl-L-amino acid that is the N-acetylated derivative of the natural
+  amino acid L-cysteine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: acetilcisteina
+  synonym_type: INN
+  source: chebi
+- synonym_text: acetylcysteinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2R)-2-acetylamino-3-sulfanylpropanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-2-acetylamino-3-mercaptopropanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-mercapturic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetylcysteine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-acetylcysteine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-α-acetamido-β-mercaptopropionic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-ACETYL-L-CYSTEINE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-acetyl-L-(+)-cysteine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-acetylcysteine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NAC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: mercapturic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:21545
+- CHEBI:22198
+- CHEBI:83824
+xrefs:
+- cas:616-91-1
+- drugbank:DB06151
+- drugcentral:66
+- gmelin:142554
+- hmdb:HMDB0001890
+- kegg.compound:C06809
+- kegg.drug:D00221
+- lincs.smallmolecule:LSM-4672
+- metacyc.compound:CPD-9175
+- pdb-ccd:SC2
+- reaxys:1724426
+- wikipedia.en:Acetylcysteine
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: CC(=O)N[C@@H](CS)C(=O)O
+  standard_inchi: InChI=1S/C5H9NO3S/c1-3(7)6-4(2-10)5(8)9/h4,10H,2H2,1H3,(H,6,7)(H,8,9)/t4-/m0/s1
+  standard_inchi_key: PWKSKIMOESPYIA-BYPYZUCNSA-N
+  molecular_formula: C5H9NO3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 163.198
+  monoisotopic_mass: 163.03031
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28939
+  source_label: N-acetyl-L-cysteine
+  minted_identifier: antibioticmech:chebi-aff5a0c12a
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

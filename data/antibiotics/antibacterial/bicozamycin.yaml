@@ -1,0 +1,109 @@
+identifier: CHEBI:60584
+label: bicozamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A commercially important azabicyclic antibiotic obtained from Streptomyces
+  sapporonensis. It inhibits the Rho protein of E. coli.
+definition_source: ChEBI
+synonyms:
+- synonym_text: bicozamicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: bicozamycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: bicozamycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: Bicozamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bicyclomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: aizumycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Aizumycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Bacfeed
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Bacteron
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Bicozamicina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Bicozamycine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Bicozamycinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:35990
+- CHEBI:38295
+- ARO:3007150
+xrefs:
+- ARO:0000055
+- cas:38129-37-2
+- kegg.compound:C11259
+- knapsack:C00018850
+- reaxys:566286
+- chembl:CHEMBL1231250
+- pubchem.compound:65807
+activity_roles:
+- CHEBI:33282
+structural_class: bicyclomycin-like antibiotic
+structural_class_id: ARO:3007150
+chemical_structure:
+  smiles: C=C1CCO[C@]2([C@@H](O)[C@@](C)(O)CO)NC(=O)[C@@]1(O)NC2=O
+  standard_inchi: InChI=1S/C12H18N2O7/c1-6-3-4-21-12(7(16)10(2,19)5-15)9(18)13-11(6,20)8(17)14-12/h7,15-16,19-20H,1,3-5H2,2H3,(H,13,18)(H,14,17)/t7-,10-,11+,12-/m0/s1
+  standard_inchi_key: WOUDXEYYJPOSNE-VKZDFBPFSA-N
+  molecular_formula: C12H18N2O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 302.283
+  monoisotopic_mass: 302.1114
+source_concepts:
+- source: ARO
+  source_id: ARO:0000055
+  source_label: bicyclomycin
+  minted_identifier: antibioticmech:aro-b86b27b1dd
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:60584
+  source_label: bicozamycin
+  minted_identifier: antibioticmech:chebi-b84bb7c116
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003801
+  label: bcr-1
+  evidence:
+  - reference: ARO:3003801
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000055 (bicyclomycin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000736
+  target_label: rho transcription terminator factor
+  evidence:
+  - reference: ARO:3000736
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000055 (bicyclomycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

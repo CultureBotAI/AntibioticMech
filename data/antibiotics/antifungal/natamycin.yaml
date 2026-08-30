@@ -1,0 +1,143 @@
+identifier: CHEBI:7488
+label: natamycin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide antibiotic that has formula C33H47NO13, produced by several
+  Streptomyces species including Streptomyces natalensis. It exhibits broad spectrum
+  antifungal activity and used in eye drops, and as a food preservative, and also
+  as a postharvest biofungicide for citrus and other fruit crops.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Delvocid
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Delvolan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Delvopos
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Mycophyt
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Myprozine
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Myuprozine
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Natacyn
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Natajen
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Natamatrix
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Natamax
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Pimafucin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Synogil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: natamicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: natamycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: natamycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (1R,3S,5R,7R,8E,12R,14E,16E,18E,20E,22R,24S,25R,26S)-22-[(3-amino-3,6-dideoxy-β-D-mannopyranosyl)oxy]-1,3,26-trihydroxy-12-methyl-10-oxo-6,11,28-trioxatricyclo[22.3.1.05,7]octacosa-8,14,16,18,20-pentaene-25-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CL 12,625
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CL 12625
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E 235
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E-235
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pimarizin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic A-5283
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pimaricin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pimaricine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tennecetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25105
+- CHEBI:26177
+- CHEBI:32955
+- CHEBI:36244
+- CHEBI:63367
+- CHEBI:87113
+xrefs:
+- bpdb:2062
+- cas:7681-93-8
+- chemspider:10468784
+- drugbank:DB00826
+- drugcentral:1885
+- foodb.food:FDB002337
+- hmdb:HMDB0014964
+- kegg.compound:C08073
+- kegg.drug:D00884
+- metacyc.compound:CPD-17213
+- pesticides:natamycin
+- wikipedia.en:Natamycin
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+- CHEBI:65256
+- CHEBI:86327
+- CHEBI:86328
+chemical_structure:
+  smiles: '[H][C@@]12C[C@H](O)C[C@]3(O)C[C@H](O)[C@@H](C(=O)O)[C@]([H])(C[C@@H](O[C@@H]4O[C@H](C)[C@@H](O)[C@H](N)[C@@H]4O)/C=C/C=C/C=C/C=C/C[C@@H](C)OC(=O)/C=C/[C@H]1O2)O3'
+  standard_inchi: InChI=1S/C33H47NO13/c1-18-10-8-6-4-3-5-7-9-11-21(45-32-30(39)28(34)29(38)19(2)44-32)15-25-27(31(40)41)22(36)17-33(42,47-25)16-20(35)14-24-23(46-24)12-13-26(37)43-18/h3-9,11-13,18-25,27-30,32,35-36,38-39,42H,10,14-17,34H2,1-2H3,(H,40,41)/b4-3+,7-5+,8-6+,11-9+,13-12+/t18-,19-,20+,21+,22+,23-,24-,25+,27-,28+,29-,30+,32+,33-/m1/s1
+  standard_inchi_key: NCXMLFZGDNKEPB-FFPOYIOWSA-N
+  molecular_formula: C33H47NO13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 665.733
+  monoisotopic_mass: 665.30474
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:7488
+  source_label: natamycin
+  minted_identifier: antibioticmech:chebi-8ad2a743b5
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  - CHEBI:65256
+  - CHEBI:86327
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

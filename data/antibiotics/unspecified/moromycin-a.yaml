@@ -1,0 +1,40 @@
+identifier: CHEBI:66403
+label: moromycin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An angucycline antibiotic that consists of a tetrangomycin skeleton linked
+  to deoxy sugars through C-glycosidic and O-glycosidic bonds at positions 9 and 3
+  respectively. It is isolated from Streptomyces sp.KY002 and exhibits cytotoxicity
+  against human lung cancer and MCF-7 human breast cancer cells.
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:20857
+- CHEBI:24400
+- CHEBI:70737
+xrefs:
+- reaxys:19172515
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]1(O[C@H]2CC[C@H](O[C@@]3(C)CC(=O)c4c(ccc5c4C(=O)c4ccc([C@H]6C[C@@]7([H])O[C@@]8([H])CC(=O)[C@H](C)O[C@@]8([H])O[C@]7([H])[C@@H](C)O6)c(O)c4C5=O)C3)O[C@H]2C)C=CC(=O)[C@H](C)O1'
+  standard_inchi: InChI=1S/C43H46O14/c1-18-26(44)10-12-33(51-18)55-29-11-13-34(52-20(29)3)57-43(5)16-22-6-7-24-36(35(22)28(46)17-43)39(48)25-9-8-23(38(47)37(25)40(24)49)30-15-31-41(21(4)50-30)56-42-32(54-31)14-27(45)19(2)53-42/h6-10,12,18-21,29-34,41-42,47H,11,13-17H2,1-5H3/t18-,19-,20-,21+,29-,30+,31+,32-,33-,34-,41+,42-,43+/m0/s1
+  standard_inchi_key: YXQYFVURWVZIMD-CZMJNFCQSA-N
+  molecular_formula: C43H46O14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 786.827
+  monoisotopic_mass: 786.28876
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66403
+  source_label: moromycin A
+  minted_identifier: antibioticmech:chebi-1eb6cfa486
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

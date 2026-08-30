@@ -1,0 +1,40 @@
+identifier: CHEBI:66250
+label: tolybyssidin B
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A homodetic cyclic peptide isolated from the culture medium of the cyanobacterium
+  Tolypothrix byssoidea.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-{3-[(2S,5S,8S,11S,14S,17S,20S,23S,26S,29S,32S,35S,38E)-32-benzyl-17-[(2S)-butan-2-yl]-38-ethylidene-5-(4-hydroxybenzyl)-14,20-bis[(1R)-1-hydroxyethyl]-8-[2-(methylsulfanyl)ethyl]-3,6,9,12,15,18,21,24,27,30,33,36,39-tridecaoxo-11,23,26,29,35-penta(propan-2-yl)-1,4,7,10,13,16,19,22,25,28,31,34,37-tridecaazacyclononatriacontan-2-yl]propyl}guanidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24613
+xrefs:
+- reaxys:8828543
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C/C=C1/NC(=O)[C@H](C(C)C)NC(=O)[C@H](Cc2ccccc2)NC(=O)[C@H](C(C)C)NC(=O)[C@H](C(C)C)NC(=O)[C@H](C(C)C)NC(=O)[C@H]([C@@H](C)O)NC(=O)[C@H]([C@@H](C)CC)NC(=O)[C@H]([C@@H](C)O)NC(=O)[C@H](C(C)C)NC(=O)[C@H](CCSC)NC(=O)[C@H](Cc2ccc(O)cc2)NC(=O)[C@H](CCCNC(=N)N)NC1=O
+  standard_inchi: InChI=1S/C72H114N16O16S/c1-17-40(13)56-69(102)88-57(41(14)89)70(103)85-55(39(11)12)67(100)84-54(38(9)10)66(99)83-52(36(5)6)65(98)80-50(33-43-23-20-19-21-24-43)63(96)82-51(35(3)4)64(97)76-46(18-2)59(92)77-47(25-22-31-75-72(73)74)60(93)79-49(34-44-26-28-45(91)29-27-44)62(95)78-48(30-32-105-16)61(94)81-53(37(7)8)68(101)87-58(42(15)90)71(104)86-56/h18-21,23-24,26-29,35-42,47-58,89-91H,17,22,25,30-34H2,1-16H3,(H,76,97)(H,77,92)(H,78,95)(H,79,93)(H,80,98)(H,81,94)(H,82,96)(H,83,99)(H,84,100)(H,85,103)(H,86,104)(H,87,101)(H,88,102)(H4,73,74,75)/b46-18+/t40-,41+,42+,47-,48-,49-,50-,51-,52-,53-,54-,55-,56-,57-,58-/m0/s1
+  standard_inchi_key: QONBOMKYCJJCSL-WPQAJTLNSA-N
+  molecular_formula: C72H114N16O16S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1491.867
+  monoisotopic_mass: 1490.83194
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66250
+  source_label: tolybyssidin B
+  minted_identifier: antibioticmech:chebi-24adab93a5
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

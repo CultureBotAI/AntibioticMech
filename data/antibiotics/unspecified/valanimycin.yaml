@@ -1,0 +1,49 @@
+identifier: CHEBI:133621
+label: valanimycin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An azoxy compound that is acrylic acid in which the olefinic hydrogen
+  at position 2 has been replaced by an isobutyl-ONN-azoxy group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-[(2-methylpropyl)-ONN-azoxy]prop-2-enoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(Isobutyl-(ONN)azoxy)acrylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-[(2-methylpropyl)-ONN-azoxy]acrylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37390
+- CHEBI:79020
+xrefs:
+- cas:101961-60-8
+- knapsack:C00017752
+- reaxys:21142834
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C=C(/N=[N+](\[O-])CC(C)C)C(=O)O
+  standard_inchi: InChI=1S/C7H12N2O3/c1-5(2)4-9(12)8-6(3)7(10)11/h5H,3-4H2,1-2H3,(H,10,11)/b9-8-
+  standard_inchi_key: DTXMRELKPKEPSO-HJWRWDBZSA-N
+  molecular_formula: C7H12N2O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 172.184
+  monoisotopic_mass: 172.08479
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:133621
+  source_label: valanimycin
+  minted_identifier: antibioticmech:chebi-cf3409f789
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

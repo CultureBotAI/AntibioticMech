@@ -1,0 +1,163 @@
+identifier: CHEBI:63845
+label: sulfacetamide
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfonamide that is sulfanilamide acylated on the sulfonamide nitrogen.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sulfacetamida
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfacetamidum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-[(4-aminophenyl)sulfonyl]acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetosulfamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N'-Acetylsulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-((p-Aminophenyl)sulfonyl)acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(p-Aminobenzenesulfonyl)acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-Acetyl-4-aminobenzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-Acetylsulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-Sulfanilylacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-Sulphanilylacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[(p-Aminophenyl)sulfonyl]acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-acetyl-4-aminophenylsulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-acetylsulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfanilazetamid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulphacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulphacetamidum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-Aminobenzenesulfonacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-Aminobenzenesulfonoacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48975
+- CHEBI:90852
+- ARO:3000282
+xrefs:
+- ARO:3000683
+- cas:144-80-9
+- drugbank:DB00634
+- drugcentral:2497
+- kegg.drug:D05947
+- lincs.smallmolecule:LSM-5374
+- reaxys:981718
+- wikipedia.en:Sulfacetamide
+- chembl:CHEMBL455
+- pubchem.compound:5320
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: sulfonamide antibiotic
+structural_class_id: ARO:3000282
+chemical_structure:
+  smiles: CC(=O)NS(=O)(=O)c1ccc(N)cc1
+  standard_inchi: InChI=1S/C8H10N2O3S/c1-6(11)10-14(12,13)8-4-2-7(9)3-5-8/h2-5H,9H2,1H3,(H,10,11)
+  standard_inchi_key: SKIVFJLNDNKQPD-UHFFFAOYSA-N
+  molecular_formula: C8H10N2O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 214.246
+  monoisotopic_mass: 214.04121
+source_concepts:
+- source: ARO
+  source_id: ARO:3000683
+  source_label: sulfacetamide
+  minted_identifier: antibioticmech:aro-ade2c19349
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:63845
+  source_label: sulfacetamide
+  minted_identifier: antibioticmech:chebi-3adba1c1cd
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3000410
+  label: sul1
+  evidence:
+  - reference: ARO:3000410
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000683 (sulfacetamide);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3000412
+  label: sul2
+  evidence:
+  - reference: ARO:3000412
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000683 (sulfacetamide);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3000413
+  label: sul3
+  evidence:
+  - reference: ARO:3000413
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000683 (sulfacetamide);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003386
+  label: Escherichia coli folP with mutation conferring resistance to sulfonamides
+  evidence:
+  - reference: ARO:3003386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000683 (sulfacetamide);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003387
+  label: Streptococcus pyogenes folP with mutation conferring resistance to sulfonamides
+  evidence:
+  - reference: ARO:3003387
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000683 (sulfacetamide);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000744
+  target_label: antibiotic sensitive dihydropteroate synthase
+  evidence:
+  - reference: ARO:3000744
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000683 (sulfacetamide); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

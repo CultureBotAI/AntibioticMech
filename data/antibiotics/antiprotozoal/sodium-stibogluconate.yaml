@@ -1,0 +1,85 @@
+identifier: CHEBI:28148
+label: sodium stibogluconate
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A D-gluconate adduct of indefinite composition containing between 30 and
+  34% of antimony(V), calculated with reference to dried and methanol-free substance.
+  It is used as a treatment for leishmaniasis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Pentostam
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: estibogluconato sodico
+  synonym_type: INN
+  source: chebi
+- synonym_text: natrii stibogluconas
+  synonym_type: INN
+  source: chebi
+- synonym_text: stibogluconate de sodium
+  synonym_type: INN
+  source: chebi
+- synonym_text: trisodium 1-{[3-carboxylato-5-(1,2-dihydroxyethyl)-1-hydroxy-2,6,7-trioxa-1λ5-stibabicyclo[2.2.1]hept-1-yl]oxy}-5-(1,2-dihydroxyethyl)-1-oxido-2,6,7-trioxa-1λ5-stibabicyclo[2.2.1]heptane-3-carboxylate—water
+    (1/9)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antimony (V) derivative of sodium gluconate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antimony sodium gluconate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Myostibin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium stibogluconate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Stibanate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Stibanose
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Stibatin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Stibinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trisodium 1-{[3-carboxylato-5-(1,2-dihydroxyethyl)-1-hydroxy-2,6,7-trioxa-1λ5-stibabicyclo[2.2.1]hept-1-yl]oxy}-5-(1,2-dihydroxyethyl)-1-oxido-2,6,7-trioxa-1λ5-stibabicyclo[2.2.1]heptane-3-carboxylate
+    nonahydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:20984
+xrefs:
+- cas:16037-91-5
+- drugbank:DB05630
+- kegg.compound:C07638
+- kegg.drug:D00582
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: O.O.O.O.O.O.O.O.O.[H][C@]1([C@H](O)CO)[O][Sb]2([O-])([O][Sb]34([OH])[O][C@@H](C(=O)[O-])[C@@]([H])([O]3)[C@@]([H])([C@H](O)CO)[O]4)[O][C@@H](C(=O)[O-])[C@@]1([H])[O]2.[Na+].[Na+].[Na+]
+  standard_inchi: InChI=1S/2C6H9O7.3Na.10H2O.2O.2Sb/c2*7-1-2(8)3(9)4(10)5(11)6(12)13;;;;;;;;;;;;;;;;;/h2*2-5,7-8H,1H2,(H,12,13);;;;10*1H2;;;;/q2*-3;3*+1;;;;;;;;;;;;-1;+3;+4/p-3/t2*2-,3-,4+,5-;;;;;;;;;;;;;;;;;/m11................./s1
+  standard_inchi_key: YQDGWZZYGYKDLR-UZVLBLASSA-K
+  molecular_formula: C12H17O17Sb2.9H2O.3Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 907.876
+  monoisotopic_mass: 905.9186
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28148
+  source_label: sodium stibogluconate
+  minted_identifier: antibioticmech:chebi-4a23525dbc
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,66 @@
+identifier: CHEBI:59177
+label: bromazine
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tertiary amino compound that is the 4-bromobenzhydryl ether of 2-(dimethylamino)ethanol.
+  An antihistamine with antimicrobial properties, it is used in the control of cutaneous
+  allergies.
+definition_source: ChEBI
+synonyms:
+- synonym_text: bromazina
+  synonym_type: INN
+  source: chebi
+- synonym_text: bromazinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-[(4-bromophenyl)(phenyl)methoxy]-N,N-dimethylethanamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(p-bromo-α-phenylbenzyloxy)-N,N-dimethylethylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bromodiphenhydramine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-(p-bromobenzhydryloxy)ethyldimethylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-dimethylaminoethyl p-bromobenzhydryl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37141
+- CHEBI:50996
+xrefs:
+- cas:118-23-0
+- drugbank:DB01237
+- drugcentral:404
+- hmdb:HMDB0015367
+- patent:US2527963
+- reaxys:2057153
+- wikipedia.en:Bromazine
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CN(C)CCOC(c1ccccc1)c1ccc(Br)cc1
+  standard_inchi: InChI=1S/C17H20BrNO/c1-19(2)12-13-20-17(14-6-4-3-5-7-14)15-8-10-16(18)11-9-15/h3-11,17H,12-13H2,1-2H3
+  standard_inchi_key: NUNIWXHYABYXKF-UHFFFAOYSA-N
+  molecular_formula: C17H20BrNO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 334.257
+  monoisotopic_mass: 333.07283
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59177
+  source_label: bromazine
+  minted_identifier: antibioticmech:chebi-0adc69edc0
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

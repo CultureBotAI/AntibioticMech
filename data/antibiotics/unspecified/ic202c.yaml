@@ -1,0 +1,43 @@
+identifier: CHEBI:66067
+label: IC202C
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aldoxime isolated from Streptoalloteichus sp.1454-19. It is a siderophore
+  which exhibits immunosuppressive activity on a mixed lymphocyte culture reaction
+  (MLCR).
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-(5-aminopentyl)-N-hydroxy-N'-{5-[hydroxy(4-{[5-(hydroxyimino)pentyl]amino}-4-oxobutanoyl)amino]pentyl}butanediamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24650
+- CHEBI:50994
+- CHEBI:82744
+xrefs:
+- reaxys:8461962
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H]C(CCCCNC(=O)CCC(=O)N(O)CCCCCNC(=O)CCC(=O)N(O)CCCCCN)=NO'
+  standard_inchi: InChI=1S/C23H44N6O7/c24-14-4-1-8-18-28(35)22(32)12-11-21(31)26-16-6-3-9-19-29(36)23(33)13-10-20(30)25-15-5-2-7-17-27-34/h17,34-36H,1-16,18-19,24H2,(H,25,30)(H,26,31)
+  standard_inchi_key: RPHCJSPQKSVBSH-UHFFFAOYSA-N
+  molecular_formula: C23H44N6O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 516.64
+  monoisotopic_mass: 516.32715
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66067
+  source_label: IC202C
+  minted_identifier: antibioticmech:chebi-02f7cfb302
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,60 @@
+identifier: CHEBI:77570
+label: tropisetron hydrochloride
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrochloride obtained by combining equimolar amounts of tropisetron
+  and hydrogen chloride.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Navoban
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: (3-endo)-8-methyl-8-azabicyclo[3.2.1]oct-3-yl 1H-indole-3-carboxylate
+    hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3-endo,8-syn)-3-[(1H-indol-3-ylcarbonyl)oxy]-8-methyl-8-azoniabicyclo[3.2.1]octane
+    chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tropisetron HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tropisetron monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:105826-92-4
+- kegg.drug:D02041
+- patent:CN101278921
+- patent:CN101444508
+- patent:CN1682721
+- reaxys:11257467
+- wikipedia.en:Tropisetron
+activity_roles:
+- CHEBI:36335
+chemical_structure:
+  smiles: Cl.[H][C@]12CC[C@]([H])(C[C@H](OC(=O)c3cnc4ccccc34)C1)N2C
+  standard_inchi: InChI=1S/C17H20N2O2.ClH/c1-19-11-6-7-12(19)9-13(8-11)21-17(20)15-10-18-16-5-3-2-4-14(15)16;/h2-5,10-13,18H,6-9H2,1H3;1H/t11-,12+,13+;
+  standard_inchi_key: XIEGSJAEZIGKSA-LUNMCBQDSA-N
+  molecular_formula: C17H20N2O2.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 320.82
+  monoisotopic_mass: 320.12916
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77570
+  source_label: tropisetron hydrochloride
+  minted_identifier: antibioticmech:chebi-44b8af4e21
+  role_terms:
+  - CHEBI:36335
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

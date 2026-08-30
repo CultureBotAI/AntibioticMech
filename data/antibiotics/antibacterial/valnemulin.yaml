@@ -1,0 +1,56 @@
+identifier: CHEBI:29705
+label: valnemulin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Two semi-synthetic pleuromutilin derivatives, tiamulin and valnemulin,
+  have been developed as antibiotics for veterinary use.
+definition_source: PMID:22070694
+parent_compounds:
+- ARO:3000670
+xrefs:
+- ARO:3001315
+- cas:101312-92-9
+- chembl:CHEMBL1688852
+- pubchem.compound:9850878
+structural_class: pleuromutilin antibiotic
+structural_class_id: ARO:3000670
+chemical_structure:
+  smiles: '[H][C@@]12C(=O)CC[C@]13CCC(C)[C@@]2(C)[C@H](OC(=O)CSC(C)(C)CNC(=O)C(N)C(C)C)C[C@@](C)(C=C)[C@@H](O)[C@@H]3C'
+  standard_inchi: InChI=1S/C31H52N2O5S/c1-10-29(8)15-22(38-23(35)16-39-28(6,7)17-33-27(37)24(32)18(2)3)30(9)19(4)11-13-31(20(5)26(29)36)14-12-21(34)25(30)31/h10,18-20,22,24-26,36H,1,11-17,32H2,2-9H3,(H,33,37)/t19?,20-,22+,24?,25-,26-,29+,30-,31-/m0/s1
+  standard_inchi_key: LLYYNOVSVPBRGV-NFQTWZMKSA-N
+  molecular_formula: C31H52N2O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 564.833
+  monoisotopic_mass: 564.35969
+source_concepts:
+- source: ARO
+  source_id: ARO:3001315
+  source_label: valnemulin
+  minted_identifier: antibioticmech:aro-f2d5bd16ef
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002831
+  label: vgaC
+  evidence:
+  - reference: ARO:3002831
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001315 (valnemulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004715
+  label: vga(E) Staphylococcus cohnii
+  evidence:
+  - reference: ARO:3004715
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001315 (valnemulin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

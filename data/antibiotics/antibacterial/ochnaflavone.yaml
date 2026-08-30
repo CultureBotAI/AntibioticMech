@@ -1,0 +1,52 @@
+identifier: CHEBI:194126
+label: ochnaflavone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A biflavonoid with an ether linkage between the B-rings of the apigenin
+  and luteolin subunits. It has been isolated from several members of the Ochnaceae
+  plant family.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-{4-[5-(5,7-dihydroxy-4-oxo-4H-chromen-2-yl)-2-hydroxyphenoxy]phenyl}-5,7-dihydroxy-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-[4-[5-(5,7-dihydroxy-4-oxochromen-2-yl)-2-hydroxyphenoxy]phenyl]-5,7-dihydroxychromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-{4-[5-(5,7-dihydroxy-4-oxo-4H-1-benzopyran-2-yl)-2-hydroxyphenoxy]phenyl}-5,7-dihydroxy-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24698
+- CHEBI:35618
+- CHEBI:50128
+xrefs:
+- cas:50276-96-5
+- chemspider:4590862
+- knapsack:C00006542
+- wikipedia.en:Ochnaflavone
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=c1cc(-c2ccc(Oc3cc(-c4cc(=O)c5c(O)cc(O)cc5o4)ccc3O)cc2)oc2cc(O)cc(O)c12
+  standard_inchi: InChI=1S/C30H18O10/c31-16-8-20(34)29-22(36)12-24(39-27(29)10-16)14-1-4-18(5-2-14)38-26-7-15(3-6-19(26)33)25-13-23(37)30-21(35)9-17(32)11-28(30)40-25/h1-13,31-35H
+  standard_inchi_key: NNPGECDACGBKDH-UHFFFAOYSA-N
+  molecular_formula: C30H18O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 538.464
+  monoisotopic_mass: 538.09
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:194126
+  source_label: ochnaflavone
+  minted_identifier: antibioticmech:chebi-95636beae2
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

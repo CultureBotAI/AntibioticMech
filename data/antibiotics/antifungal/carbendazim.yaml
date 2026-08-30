@@ -1,0 +1,164 @@
+identifier: CHEBI:3392
+label: carbendazim
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzimidazoles that is 2-aminobenzimidazole in
+  which the primary amino group is substituted by a methoxycarbonyl group. A fungicide,
+  carbendazim controls Ascomycetes, Fungi Imperfecti, and Basidiomycetes on a wide
+  variety of crops, including bananas, cereals, cotton, fruits, grapes, mushrooms,
+  ornamentals, peanuts, sugarbeet, soybeans, tobacco, and vegetables.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl 1H-benzimidazol-2-ylcarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1H-benzimidazol-2-ylcarbamic acid methyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(Methoxy-carbonylamino)-benzimidazol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(methoxycarbonylamino)-benzimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(methoxycarbonylamino)benzimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-benzimidazolecarbamic acid methyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BMC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Carbendazim
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MBC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Mecarzole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: carbendazime
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl 2-benzimidazolecarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl benzimidazol-2-ylcarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22715
+- CHEBI:23003
+- CHEBI:87036
+- CHEBI:87064
+- ARO:3009317
+xrefs:
+- ARO:3009175
+- cas:10605-21-7
+- hmdb:HMDB0031769
+- kegg.compound:C10897
+- patent:US3010968
+- pesticides:carbendazim
+- ppdb:116
+- reaxys:649044
+- wikipedia.en:Carbendazim
+- chembl:CHEMBL70971
+- pubchem.compound:25429
+activity_roles:
+- CHEBI:24127
+- CHEBI:86328
+structural_class: benzimidazole antifungal
+structural_class_id: ARO:3009317
+chemical_structure:
+  smiles: COC(=O)Nc1nc2ccccc2n1
+  standard_inchi: InChI=1S/C9H9N3O2/c1-14-9(13)12-8-10-6-4-2-3-5-7(6)11-8/h2-5H,1H3,(H2,10,11,12,13)
+  standard_inchi_key: TWFZGCMQGLPBSX-UHFFFAOYSA-N
+  molecular_formula: C9H9N3O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 191.19
+  monoisotopic_mass: 191.06948
+source_concepts:
+- source: ARO
+  source_id: ARO:3009175
+  source_label: carbendazim
+  minted_identifier: antibioticmech:aro-1153d9776c
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:86328
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3392
+  source_label: carbendazim
+  minted_identifier: antibioticmech:chebi-9061c38815
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:86328
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009320
+  label: Botrytis cinerea beta-tubulin with mutations conferring resistance against
+    carbendazim
+  evidence:
+  - reference: ARO:3009320
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009405
+  label: Zymoseptoria tritici Cyp51 with mutations conferring resistance to carbendazim
+  evidence:
+  - reference: ARO:3009405
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009470
+  label: Colletotrichum gloeosporioides beta-tubulin with mutations conferring resistance
+    against carbendazim
+  evidence:
+  - reference: ARO:3009470
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009474
+  label: Colletotrichum siamense beta tubulin with mutations conferring resistance
+    to carbendazim
+  evidence:
+  - reference: ARO:3009474
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009475
+  label: Colletotrichum truncatum beta tubulin with mutations conferring resistance
+    to carbendazim
+  evidence:
+  - reference: ARO:3009475
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009476
+  label: Aspergillus fumigatus beta-tubulin with mutations conferring resistance to
+    carbendazim
+  evidence:
+  - reference: ARO:3009476
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009544
+  label: Aspergillus fumigatus Cyp51A with mutations conferring resistance to carbendazim
+  evidence:
+  - reference: ARO:3009544
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009175 (carbendazim);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

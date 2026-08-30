@@ -1,0 +1,74 @@
+identifier: CHEBI:31575
+label: ethylparaben
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An ethyl ester resulting from the formal condensation of the carboxy group
+  of 4-hydroxybenzoic acid with ethanol,
+definition_source: ChEBI
+synonyms:
+- synonym_text: ethyl 4-hydroxybenzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-hydroxybenzoic acid ethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E-214
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E214
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethyl parahydroxybenzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethyl p-hydroxybenzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethyl paraben
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-Oxybenzoesaeureaethylester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-hydroxybenzoic acid ethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23990
+- CHEBI:85122
+xrefs:
+- cas:120-47-8
+- drugcentral:4773
+- hmdb:HMDB0032573
+- kegg.drug:D01647
+- knapsack:C00033837
+- pdb-ccd:E4B
+- reaxys:1101972
+- wikipedia.en:Ethylparaben
+activity_roles:
+- CHEBI:35718
+- CHEBI:65256
+chemical_structure:
+  smiles: CCOC(=O)c1ccc(O)cc1
+  standard_inchi: InChI=1S/C9H10O3/c1-2-12-9(11)7-3-5-8(10)6-4-7/h3-6,10H,2H2,1H3
+  standard_inchi_key: NUVBSKCKDOMJSU-UHFFFAOYSA-N
+  molecular_formula: C9H10O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 166.176
+  monoisotopic_mass: 166.06299
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31575
+  source_label: ethylparaben
+  minted_identifier: antibioticmech:chebi-b38d1685ee
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:65256
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

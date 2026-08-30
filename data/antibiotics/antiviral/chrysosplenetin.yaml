@@ -1,0 +1,52 @@
+identifier: CHEBI:3689
+label: chrysosplenetin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetramethoxyflavone that is the 3,6,7,3'-tetramethyl ether derivative
+  of quercetagetin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-hydroxy-2-(4-hydroxy-3-methoxyphenyl)-3,6,7-trimethoxy-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chrysosplenetin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quercetagetin 3,6,7,3'-tetramethyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38686
+- CHEBI:76875
+xrefs:
+- cas:603-56-5
+- kegg.compound:C10030
+- knapsack:C00004704
+- lipidmaps:LMPK12113009
+- reaxys:354967
+- wikipedia.en:Chrysosplenetin
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: COc1cc(-c2oc3cc(OC)c(OC)c(O)c3c(=O)c2OC)ccc1O
+  standard_inchi: InChI=1S/C19H18O8/c1-23-11-7-9(5-6-10(11)20)17-19(26-4)16(22)14-12(27-17)8-13(24-2)18(25-3)15(14)21/h5-8,20-21H,1-4H3
+  standard_inchi_key: NBVTYGIYKCPHQN-UHFFFAOYSA-N
+  molecular_formula: C19H18O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 374.345
+  monoisotopic_mass: 374.10017
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3689
+  source_label: chrysosplenetin
+  minted_identifier: antibioticmech:chebi-af8bd3c09d
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

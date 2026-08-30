@@ -1,0 +1,37 @@
+identifier: CHEBI:167318
+label: (Z)-tomaymycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The (Z)-isomer of tomaymycin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2Z,11R,11aS)-2-ethylidene-8-hydroxy-7,11-dimethoxy-1,2,3,10,11,11a-hexahydro-5H-pyrrolo[2,1-c][1,4]benzodiazepin-5-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:157681
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12C/C(=C/C)CN1C(=O)c1cc(OC)c(O)cc1N[C@@H]2OC'
+  standard_inchi: InChI=1S/C16H20N2O4/c1-4-9-5-12-15(22-3)17-11-7-13(19)14(21-2)6-10(11)16(20)18(12)8-9/h4,6-7,12,15,17,19H,5,8H2,1-3H3/b9-4-/t12-,15+/m0/s1
+  standard_inchi_key: UQVNRKBFAXNOGA-OHLDGCSVSA-N
+  molecular_formula: C16H20N2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 304.346
+  monoisotopic_mass: 304.14231
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:167318
+  source_label: (Z)-tomaymycin
+  minted_identifier: antibioticmech:chebi-e5f900aaee
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

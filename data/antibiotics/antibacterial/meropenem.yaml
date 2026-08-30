@@ -1,0 +1,265 @@
+identifier: CHEBI:43968
+label: meropenem
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbapenemcarboxylic acid in which the azetidine and pyrroline rings
+  carry 1-hydroxymethyl and in which the azetidine and pyrroline rings carry 1-hydroxymethyl
+  and 5-(dimethylcarbamoyl)pyrrolidin-3-ylthio substituents respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: meropenemum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (6S)-2-{[(3S,5S)-5-(dimethylcarbamoyl)pyrrolidin-3-yl]sulfanyl}-6-[(1R)-1-hydroxyethyl]-1β-methyl-2,3-didehydro-1-carbapenam-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1R,5S,6S)-2-[(3S,5S)-5-DIMETHYLAMINOCARBONYLPYRROLIDIN-3-YLTHIO]-6-[(R)-1-HYDROXYETHYL]-1-METHYLCARBAPEN-2-EM-3-CARBOXYLIC
+    ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4R,5S,6S)-3-{[(3S,5S)-5-(dimethylcarbamoyl)pyrrolidin-3-yl]thio}-6-[(1R)-1-hydroxyethyl]-4-methyl-7-oxo-1-azabicyclo[3.2.0]hept-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic SM 7338
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MEPM
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Meropenem
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: meropenem anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MER
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Meronem
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Meropen
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Meropenem anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Meropenemum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Merrem
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:16385
+- CHEBI:46634
+- CHEBI:46770
+- CHEBI:79020
+- ARO:0000020
+xrefs:
+- ARO:0000073
+- beilstein:6826115
+- cas:96036-03-2
+- drugbank:DB00760
+- drugcentral:1709
+- lincs.smallmolecule:LSM-5208
+- patent:EP126587
+- patent:US4943569
+- pdb-ccd:MER
+- wikipedia.en:Meropenem
+- chembl:CHEMBL127
+- pubchem.compound:441130
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
+structural_class: carbapenem
+structural_class_id: ARO:0000020
+chemical_structure:
+  smiles: '[H][C@]12[C@@H](C)C(S[C@@H]3CN[C@H](C(=O)N(C)C)C3)=C(C(=O)O)N1C(=O)[C@]2([H])[C@@H](C)O'
+  standard_inchi: InChI=1S/C17H25N3O5S/c1-7-12-11(8(2)21)16(23)20(12)13(17(24)25)14(7)26-9-5-10(18-6-9)15(22)19(3)4/h7-12,18,21H,5-6H2,1-4H3,(H,24,25)/t7-,8-,9+,10+,11-,12-/m1/s1
+  standard_inchi_key: DMJNNHOOLUXYBV-PQTSNVLCSA-N
+  molecular_formula: C17H25N3O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 383.47
+  monoisotopic_mass: 383.15149
+source_concepts:
+- source: ARO
+  source_id: ARO:0000073
+  source_label: meropenem
+  minted_identifier: antibioticmech:aro-57a2ae80f3
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:43968
+  source_label: meropenem
+  minted_identifier: antibioticmech:chebi-20201015ed
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000386
+  label: MexAB-OprM
+  evidence:
+  - reference: ARO:3000386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000589
+  label: NDM-1
+  evidence:
+  - reference: ARO:3000589
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003032
+  label: MexXY-OprM
+  evidence:
+  - reference: ARO:3003032
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003038
+  label: MexXY-OprA
+  evidence:
+  - reference: ARO:3003038
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003713
+  label: VCC-1
+  evidence:
+  - reference: ARO:3003713
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3003808
+  label: carO
+  evidence:
+  - reference: ARO:3003808
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004289
+  label: Vibrio cholerae varG
+  evidence:
+  - reference: ARO:3004289
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004559
+  label: CAM-1
+  evidence:
+  - reference: ARO:3004559
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004578
+  label: Acinetobacter baumannii AbuO
+  evidence:
+  - reference: ARO:3004578
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005015
+  label: VMB-1
+  evidence:
+  - reference: ARO:3005015
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005511
+  label: VIM-63
+  evidence:
+  - reference: ARO:3005511
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007118
+  label: crxA
+  evidence:
+  - reference: ARO:3007118
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007375
+  label: KPC-87
+  evidence:
+  - reference: ARO:3007375
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007402
+  label: KPC-94
+  evidence:
+  - reference: ARO:3007402
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007561
+  label: OXA-1038
+  evidence:
+  - reference: ARO:3007561
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007562
+  label: OXA-1039
+  evidence:
+  - reference: ARO:3007562
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007632
+  label: FRI-11
+  evidence:
+  - reference: ARO:3007632
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007861
+  label: DYB-1
+  evidence:
+  - reference: ARO:3007861
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3009643
+  label: VIM-92
+  evidence:
+  - reference: ARO:3009643
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3009648
+  label: OXA-1054
+  evidence:
+  - reference: ARO:3009648
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000073 (meropenem);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000073 (meropenem); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

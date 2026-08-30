@@ -1,0 +1,50 @@
+identifier: CHEBI:229666
+label: geranylgeranyl acetate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An acetate ester obtained by the formal condensation of acetic acid with
+  (E,E,E)-geranylgeraniol.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E,6E,10E)-3,7,11,15-tetramethylhexadeca-2,6,10,14-tetraen-1-yl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2E,6E,10E)-3,7,11,15-tetramethyl-2,6,10,14-hexadecatetraenyl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,7,11,15-tetramethyl-2E,6E,10E,14-hexadecatetraenyl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: all-trans-geranylgeranyl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:47622
+xrefs:
+- cas:61691-98-3
+- lipidmaps:LMFA07010351
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(=O)OC/C=C(\C)CC/C=C(\C)CC/C=C(\C)CCC=C(C)C
+  standard_inchi: InChI=1S/C22H36O2/c1-18(2)10-7-11-19(3)12-8-13-20(4)14-9-15-21(5)16-17-24-22(6)23/h10,12,14,16H,7-9,11,13,15,17H2,1-6H3/b19-12+,20-14+,21-16+
+  standard_inchi_key: NHYSRKKHKHCRGR-RFRQLJORSA-N
+  molecular_formula: C22H36O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 332.528
+  monoisotopic_mass: 332.27153
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:229666
+  source_label: geranylgeranyl acetate
+  minted_identifier: antibioticmech:chebi-75a716535a
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

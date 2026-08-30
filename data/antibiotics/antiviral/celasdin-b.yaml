@@ -1,0 +1,45 @@
+identifier: CHEBI:65605
+label: celasdin B
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pentacyclic triterpenoid that is friedelin substituted by hydroxy groups
+  at positions 16 and 28. It is isolated from the stems of Celastrus hindsii and exhibits
+  anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4R,4aS,6aS,6bR,8R,8aS,12aS,12bS,14aS,14bS)-8-hydroxy-8a-(hydroxymethyl)-4,4a,6b,11,11,12b,14a-heptamethylicosahydropicen-3(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:23824
+- CHEBI:25872
+- CHEBI:35681
+- CHEBI:36130
+xrefs:
+- reaxys:7660622
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: '[H][C@]12CC[C@]3(C)[C@@H](C)C(=O)CC[C@@]3([H])[C@]1(C)CC[C@@]1(C)[C@]3([H])CC(C)(C)CC[C@]3(CO)[C@H](O)C[C@]21C'
+  standard_inchi: InChI=1S/C30H50O3/c1-19-20(32)8-9-21-26(19,4)11-10-22-27(21,5)13-14-28(6)23-16-25(2,3)12-15-30(23,18-31)24(33)17-29(22,28)7/h19,21-24,31,33H,8-18H2,1-7H3/t19-,21+,22-,23-,24+,26+,27-,28-,29+,30+/m0/s1
+  standard_inchi_key: ZGPGTQGECMDFNI-OJEITCFUSA-N
+  molecular_formula: C30H50O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 458.727
+  monoisotopic_mass: 458.376
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65605
+  source_label: celasdin B
+  minted_identifier: antibioticmech:chebi-746a6695a5
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,68 @@
+identifier: CHEBI:81711
+label: chlorhexidine acetate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The acetate salt of chlorhexidine. It is a disinfectant used for bacterial
+  control in hospital, agricultural and domestic environments.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Nolvasan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: N,N''''-hexane-1,6-diylbis[N'-(4-chlorophenyl)triimidodicarbonic diamide]
+    acetate (1:2)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,1'-hexamethylene bis(5-(p-chlorophenyl)biguanide) diacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acetic acid--N,N''''-hexane-1,6-diylbis[N'-(4-chlorophenyl)triimidodicarbonic
+    diamide] (2/1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chlorhexidine di(acetate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chlorhexidine diacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chlorhexidine diacetate salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:59230
+xrefs:
+- cas:56-95-1
+- chemspider:7838272
+- drugbank:DBSALT001123
+- kegg.compound:C18372
+- kegg.drug:D07669
+- patent:EP2376129
+- patent:WO2012033625
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(=O)O.CC(=O)O.N=C(NCCCCCCNC(=N)NC(=N)Nc1ccc(Cl)cc1)NC(=N)Nc1ccc(Cl)cc1
+  standard_inchi: InChI=1S/C22H30Cl2N10.2C2H4O2/c23-15-5-9-17(10-6-15)31-21(27)33-19(25)29-13-3-1-2-4-14-30-20(26)34-22(28)32-18-11-7-16(24)8-12-18;2*1-2(3)4/h5-12H,1-4,13-14H2,(H5,25,27,29,31,33)(H5,26,28,30,32,34);2*1H3,(H,3,4)
+  standard_inchi_key: WDRFFJWBUDTUCA-UHFFFAOYSA-N
+  molecular_formula: C22H30Cl2N10.2C2H4O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 625.562
+  monoisotopic_mass: 624.24546
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81711
+  source_label: chlorhexidine acetate
+  minted_identifier: antibioticmech:chebi-ec15328146
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

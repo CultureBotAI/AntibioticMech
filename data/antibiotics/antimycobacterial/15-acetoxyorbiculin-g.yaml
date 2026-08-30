@@ -1,0 +1,46 @@
+identifier: CHEBI:65364
+label: 15-acetoxyorbiculin G
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dihydroagarofuran sesquiterpenoid that is the 15-acetoxy derivative
+  of orbiculin G. It is isolated from Microtropis japonica and exhibits antitubercular
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,5S,5aR,6R,7S,9R,9aS,10R)-6-(acetyloxy)-5a-[(acetyloxy)methyl]-2,2,9-trimethyloctahydro-2H-3,9a-methano-1-benzoxepine-5,7,10-triyl
+    tribenzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26979
+- CHEBI:35990
+- CHEBI:36054
+- CHEBI:37407
+- CHEBI:71548
+xrefs:
+- reaxys:18842487
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: '[H][C@]12C[C@H](OC(=O)c3ccccc3)[C@]3(COC(C)=O)[C@@H](OC(C)=O)[C@@H](OC(=O)c4ccccc4)C[C@@H](C)[C@@]3(OC1(C)C)[C@@H]2OC(=O)c1ccccc1'
+  standard_inchi: InChI=1S/C40H42O11/c1-24-21-31(48-35(43)27-15-9-6-10-16-27)34(47-26(3)42)39(23-46-25(2)41)32(49-36(44)28-17-11-7-12-18-28)22-30-33(40(24,39)51-38(30,4)5)50-37(45)29-19-13-8-14-20-29/h6-20,24,30-34H,21-23H2,1-5H3/t24-,30-,31+,32+,33-,34+,39-,40-/m1/s1
+  standard_inchi_key: YOWBCRNBOMRTPW-NPIRVHPYSA-N
+  molecular_formula: C40H42O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 698.765
+  monoisotopic_mass: 698.27271
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65364
+  source_label: 15-acetoxyorbiculin G
+  minted_identifier: antibioticmech:chebi-d8d395979b
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

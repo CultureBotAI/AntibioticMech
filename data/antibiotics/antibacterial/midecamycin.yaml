@@ -1,0 +1,36 @@
+identifier: CHEBI:31845
+label: midecamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Produced by Streptomyces mycarofaciens.
+definition_source: PMID:5581351
+parent_compounds:
+- ARO:0000000
+xrefs:
+- ARO:3001223
+- cas:35457-80-8
+- chembl:CHEMBL1908336
+- pubchem.compound:5282169
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: '[H][C@]1(O[C@H]2[C@H](N(C)C)[C@@H](O)[C@]([H])(O[C@H]3[C@@H](CC=O)C[C@@H](C)[C@@H](O)/C=C/C=C/C[C@@H](C)OC(=O)C[C@@]([H])(OC(=O)CC)[C@@H]3OC)O[C@@H]2C)C[C@@](C)(O)[C@@H](OC(=O)CC)[C@H](C)O1'
+  standard_inchi: InChI=1S/C41H67NO15/c1-11-30(45)54-29-21-32(47)51-24(4)16-14-13-15-17-28(44)23(3)20-27(18-19-43)37(38(29)50-10)57-40-35(48)34(42(8)9)36(25(5)53-40)56-33-22-41(7,49)39(26(6)52-33)55-31(46)12-2/h13-15,17,19,23-29,33-40,44,48-49H,11-12,16,18,20-22H2,1-10H3/b14-13+,17-15+/t23-,24-,25-,26+,27+,28+,29-,33+,34-,35-,36-,37+,38+,39+,40+,41-/m1/s1
+  standard_inchi_key: DMUAPQTXSSNEDD-QALJCMCCSA-N
+  molecular_formula: C41H67NO15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 813.979
+  monoisotopic_mass: 813.45107
+source_concepts:
+- source: ARO
+  source_id: ARO:3001223
+  source_label: midecamycin
+  minted_identifier: antibioticmech:aro-0d3f10e1a6
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

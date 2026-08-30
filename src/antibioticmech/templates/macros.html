@@ -1,0 +1,12 @@
+{# Shared rendering helpers. Evidence (EvidenceItem: reference/snippet/notes) shows
+   up on molecular targets, causal-graph edges and record-level claims alike, so it
+   is one macro rather than four copies of the same three-field list. #}
+{% macro evidence_list(items) %}
+{% if items %}
+<ul class="plain evidence">
+  {% for e in items %}
+  <li><span class="meta">{{ e.reference }}</span>{% if e.snippet %} — "{{ e.snippet }}"{% endif %}{% if e.notes %} <span class="meta">({{ e.notes }})</span>{% endif %}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endmacro %}

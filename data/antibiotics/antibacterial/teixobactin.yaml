@@ -1,0 +1,76 @@
+identifier: CHEBI:84192
+label: teixobactin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclodepsipeptide that is isolated from the previously unculturable
+  bacterial species Eleftheria terrae and is active against gram-positive bacteria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-methyl-D-phenylalanyl-L-isoleucyl-L-seryl-D-glutaminyl-D-alloisoleucyl-L-isoleucyl-N-{(3S,6S,9S,12R,13S)-6-{[(4S)-2-amino-4,5-dihydro-1H-imidazol-4-yl]methyl}-3-[(2S)-butan-2-yl]-9,13-dimethyl-2,5,8,11-tetraoxo-1-oxa-4,7,10-triazacyclotridecan-12-yl}-L-serinamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25903
+- CHEBI:35213
+- CHEBI:51026
+- ARO:3009657
+xrefs:
+- ARO:3003241
+- cas:1613225-53-8
+- wikipedia.en:Teixobactin
+- chembl:CHEMBL3977597
+- pubchem.compound:86341926
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: CC[C@H](C)[C@H](NC(=O)[C@@H](Cc1ccccc1)NC)C(=O)N[C@@H](CO)C(=O)N[C@H](CCC(N)=O)C(=O)N[C@@H](C(=O)N[C@H](C(=O)N[C@@H](CO)C(=O)N[C@H]1C(=O)N[C@@H](C)C(=O)N[C@@H](C[C@H]2CNC(=N)N2)C(=O)N[C@@H]([C@@H](C)CC)C(=O)O[C@H]1C)[C@@H](C)CC)[C@@H](C)CC
+  standard_inchi: InChI=1S/C58H95N15O15/c1-12-28(5)42(70-49(79)37(61-11)23-34-19-17-16-18-20-34)53(83)67-39(26-74)51(81)65-36(21-22-41(59)76)48(78)69-44(30(7)14-3)55(85)71-43(29(6)13-2)54(84)68-40(27-75)52(82)73-46-33(10)88-57(87)45(31(8)15-4)72-50(80)38(24-35-25-62-58(60)64-35)66-47(77)32(9)63-56(46)86/h16-20,28-33,35-40,42-46,61,74-75H,12-15,21-27H2,1-11H3,(H2,59,76)(H,63,86)(H,65,81)(H,66,77)(H,67,83)(H,68,84)(H,69,78)(H,70,79)(H,71,85)(H,72,80)(H,73,82)(H3,60,62,64)/t28-,29-,30-,31-,32-,33-,35-,36+,37+,38-,39-,40-,42-,43-,44+,45-,46+/m0/s1
+  standard_inchi_key: LMBFAGIMSUYTBN-MPZNNTNKSA-N
+  molecular_formula: C58H95N15O15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1242.488
+  monoisotopic_mass: 1241.71321
+source_concepts:
+- source: ARO
+  source_id: ARO:3003241
+  source_label: teixobactin
+  minted_identifier: antibioticmech:aro-e3b1b7aa20
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:84192
+  source_label: teixobactin
+  minted_identifier: antibioticmech:chebi-04a09dd833
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3003231
+  target_label: Lipid II
+  evidence:
+  - reference: ARO:3003231
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3003241 (teixobactin); database
+      assertion, not a primary citation.
+- target_id: ARO:3003232
+  target_label: Lipid III
+  evidence:
+  - reference: ARO:3003232
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3003241 (teixobactin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

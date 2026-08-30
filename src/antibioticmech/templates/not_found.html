@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Not found — AntibioticMech{% endblock %}
+{% block head %}<meta name="robots" content="noindex, follow">{% endblock %}
+{% block content %}
+<h1>No page here</h1>
+<p class="lede">
+  If you followed a link to a compound record, the address may simply be wrong —
+  this corpus has no retired-URL system yet, so a dead record link does not
+  auto-resolve anywhere.
+</p>
+<ul>
+  <li><a href="{{ root }}browse.html">Browse every compound by antimicrobial class</a></li>
+  <li><a href="{{ root }}index.html">Start from the top</a></li>
+</ul>
+<p class="meta">
+  Records are one YAML file each under <code>data/antibiotics/&lt;class&gt;/</code> in
+  the repository, and <code>data/antibiotics/PATHS.tsv</code> pins every identifier to
+  its class and filename — that is the authoritative place to look an identifier up.
+</p>
+{% endblock %}

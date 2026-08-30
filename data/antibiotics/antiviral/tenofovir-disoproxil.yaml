@@ -1,0 +1,60 @@
+identifier: CHEBI:63717
+label: tenofovir disoproxil
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic phosphonate that is the disoproxil ester of tenofovir. A prodrug
+  for tenofovir, an HIV-1 reverse transcriptase inhibitor, tenofovir disoproxil is
+  used as the fumaric acid salt in combination therapy for the treatment of HIV infection.
+definition_source: ChEBI
+synonyms:
+- synonym_text: bis({[(propan-2-yloxy)carbonyl]oxy}methyl) ({[(2R)-1-(6-amino-9H-purin-9-yl)propan-2-yl]oxy}methyl)phosphonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-((R)-2-((bis(((isopropoxycarbonyl)oxy)methoxy)phosphinyl)methoxy)propyl)adenine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PMPA prodrug
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bis(POC)PMPA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tenofovir bis(isopropyloxycarbonyloxymethyl) ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37592
+xrefs:
+- cas:201341-05-1
+- drugbank:DB00300
+- drugcentral:2593
+- patent:WO5922695
+- patent:WO9804569
+- reaxys:9018187
+activity_roles:
+- CHEBI:36044
+- CHEBI:53756
+chemical_structure:
+  smiles: CC(C)OC(=O)OCOP(=O)(CO[C@H](C)Cn1cnc2c(N)ncnc21)OCOC(=O)OC(C)C
+  standard_inchi: InChI=1S/C19H30N5O10P/c1-12(2)33-18(25)28-9-31-35(27,32-10-29-19(26)34-13(3)4)11-30-14(5)6-24-8-23-15-16(20)21-7-22-17(15)24/h7-8,12-14H,6,9-11H2,1-5H3,(H2,20,21,22)/t14-/m1/s1
+  standard_inchi_key: JFVZFKDSXNQEJW-CQSZACIVSA-N
+  molecular_formula: C19H30N5O10P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 519.448
+  monoisotopic_mass: 519.17303
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:63717
+  source_label: tenofovir disoproxil
+  minted_identifier: antibioticmech:chebi-447f69ed2b
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

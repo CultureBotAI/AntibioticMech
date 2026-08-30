@@ -1,0 +1,45 @@
+identifier: CHEBI:138243
+label: rubesanolide D
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An abietane diterpenoid found in the medicinal plant Isodon rubescens
+  that is 7α,8β-dihydroxyabiet-13-ene in which the 20-methyl group has undergone formal
+  oxidation to the corresponding carboxy group and condensed with the 8-hydroxy group
+  to give the corresponding γ-lactone. It has shown inhibitory activity against biofilm
+  formation of the dental bacterium Streptococcus mutans.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7α-hydroxy-8,20-epoxyabiet-13-en-20-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35681
+- CHEBI:36762
+- CHEBI:37581
+- CHEBI:52557
+- CHEBI:78840
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12CCC(C(C)C)=C[C@@]13OC(=O)[C@@]21CCCC(C)(C)[C@]1([H])C[C@H]3O'
+  standard_inchi: InChI=1S/C20H30O3/c1-12(2)13-6-7-14-19-9-5-8-18(3,4)15(19)10-16(21)20(14,11-13)23-17(19)22/h11-12,14-16,21H,5-10H2,1-4H3/t14-,15+,16-,19+,20-/m1/s1
+  standard_inchi_key: XAPXKNWMZURWMY-VQEGESQYSA-N
+  molecular_formula: C20H30O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 318.457
+  monoisotopic_mass: 318.21949
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:138243
+  source_label: rubesanolide D
+  minted_identifier: antibioticmech:chebi-486652d228
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

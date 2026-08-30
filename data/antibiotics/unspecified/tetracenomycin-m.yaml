@@ -1,0 +1,41 @@
+identifier: CHEBI:32208
+label: tetracenomycin M
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: 1,3,8,10,11-pentahydroxy-10-methyl-7,8,9,10-tetrahydrotetracene-5,12-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetracenomycin M
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48132
+xrefs:
+- beilstein:7778342
+- kegg.compound:C12372
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC1(O)CC(O)Cc2cc3c(c(O)c21)C(=O)c1c(O)cc(O)cc1C3=O
+  standard_inchi: InChI=1S/C19H16O7/c1-19(26)6-9(21)2-7-3-10-14(18(25)15(7)19)17(24)13-11(16(10)23)4-8(20)5-12(13)22/h3-5,9,20-22,25-26H,2,6H2,1H3
+  standard_inchi_key: WBICYHCOBLVBMM-UHFFFAOYSA-N
+  molecular_formula: C19H16O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 356.33
+  monoisotopic_mass: 356.0896
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32208
+  source_label: tetracenomycin M
+  minted_identifier: antibioticmech:chebi-abd790b67a
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,62 @@
+identifier: CHEBI:81831
+label: metominostrobin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid amide obtained by formal condensation of the carboxy
+  group of (2E)-(methoxyimino)(2-phenoxyphenyl)acetic acid with the amino group of
+  methylamine. Used for the control of Pyricularia oryzae on rice crops.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-2-(methoxyimino)-N-methyl-2-(2-phenoxyphenyl)acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (αE)-α-(methoxyimino)-N-methyl-2-phenoxybenzeneacetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:29347
+- CHEBI:35618
+- CHEBI:36816
+- CHEBI:60600
+- CHEBI:86487
+xrefs:
+- cas:133408-50-1
+- kegg.compound:C18559
+- patent:US2011160053
+- patent:WO2011076688
+- pesticides:metominostrobin
+- ppdb:1211
+- reaxys:8416845
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: CNC(=O)/C(=N/OC)c1ccccc1Oc1ccccc1
+  standard_inchi: InChI=1S/C16H16N2O3/c1-17-16(19)15(18-20-2)13-10-6-7-11-14(13)21-12-8-4-3-5-9-12/h3-11H,1-2H3,(H,17,19)/b18-15+
+  standard_inchi_key: HIIRDDUVRXCDBN-OBGWFSINSA-N
+  molecular_formula: C16H16N2O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 284.315
+  monoisotopic_mass: 284.11609
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81831
+  source_label: metominostrobin
+  minted_identifier: antibioticmech:chebi-40ff05cab5
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

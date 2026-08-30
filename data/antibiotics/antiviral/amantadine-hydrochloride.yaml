@@ -1,0 +1,67 @@
+identifier: CHEBI:2619
+label: amantadine hydrochloride
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrochloride obtained by combining amantadine and hydrochloric acid
+  in equimolar amounts.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Symmetrel
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: adamantan-1-aminium chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Adamantanamine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Adamantylamine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Aminoadamantane hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Aminoadamantene hydrochlorid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Amantadine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tricyclo[3.3.1.13,7]decan-1-aminium chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:665-66-7
+- drugbank:DB00915
+- gmelin:838463
+- kegg.compound:C07939
+- kegg.drug:D00777
+- reaxys:4198854
+- wikipedia.en:Amantadine
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: '[Cl-].[NH3+]C12CC3CC(CC(C3)C1)C2'
+  standard_inchi: InChI=1S/C10H17N.ClH/c11-10-4-7-1-8(5-10)3-9(2-7)6-10;/h7-9H,1-6,11H2;1H
+  standard_inchi_key: WOLHOYHSEKDWQH-UHFFFAOYSA-N
+  molecular_formula: C10H18N.Cl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 187.714
+  monoisotopic_mass: 187.11278
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2619
+  source_label: amantadine hydrochloride
+  minted_identifier: antibioticmech:chebi-0e7e4d7c1f
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

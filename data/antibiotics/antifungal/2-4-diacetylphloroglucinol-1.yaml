@@ -1,0 +1,42 @@
+identifier: CHEBI:140662
+label: 2,4-diacetylphloroglucinol(1−)
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A phenolate anion that is the conjugate base of 2,4-diacetylphloroglucinol,
+  obtained by deprotonation of one of the two hydroxy groups at position 1 and 5.
+  Major microspecies at pH 7.3.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,4-diacetyl-3,5-dihydroxyphenolate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4-diacetylphloroglucinol
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:50525
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(=O)c1c([O-])cc(O)c(C(C)=O)c1O
+  standard_inchi: InChI=1S/C10H10O5/c1-4(11)8-6(13)3-7(14)9(5(2)12)10(8)15/h3,13-15H,1-2H3/p-1
+  standard_inchi_key: PIFFQYJYNWXNGE-UHFFFAOYSA-M
+  molecular_formula: C10H9O5
+  structure_source: ChEBI
+  charge: -1
+  average_mass: 209.177
+  monoisotopic_mass: 209.04555
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:140662
+  source_label: 2,4-diacetylphloroglucinol(1−)
+  minted_identifier: antibioticmech:chebi-083c7eb667
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

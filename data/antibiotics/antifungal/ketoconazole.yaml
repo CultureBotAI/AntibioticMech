@@ -1,0 +1,114 @@
+identifier: antibioticmech:aro-4655b07df9
+label: ketoconazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Ketoconazole is a type of imidazole antibiotic, particularly antifungal.
+  It was one of the first available oral broad-spectrum antifungals for the treatment
+  of systemic and superficial mycoses.
+definition_source: PMID:707893
+parent_compounds:
+- ARO:3007500
+xrefs:
+- ARO:3007517
+- cas:65277-42-1
+- CHEBI:47519
+- chembl:CHEMBL157101
+- pubchem.compound:456201
+activity_roles:
+- CHEBI:35718
+- CHEBI:86327
+structural_class: imidazole antibiotic
+structural_class_id: ARO:3007500
+chemical_structure:
+  smiles: CC(=O)N1CCN(CC1)C2=CC=C(C=C2)OC[C@H]3CO[C@](O3)(CN4C=CN=C4)C5=C(C=C(C=C5)Cl)Cl
+  standard_inchi: InChI=1S/C26H28Cl2N4O4/c1-19(33)31-10-12-32(13-11-31)21-3-5-22(6-4-21)34-15-23-16-35-26(36-23,17-30-9-8-29-18-30)24-7-2-20(27)14-25(24)28/h2-9,14,18,23H,10-13,15-17H2,1H3/t23-,26-/m0/s1
+  standard_inchi_key: XMAYWYJOQHXEEK-OZXSUGGESA-N
+  molecular_formula: C26H28Cl2N4O4
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 531.4
+  monoisotopic_mass: 530.1487608
+source_concepts:
+- source: ARO
+  source_id: ARO:3007517
+  source_label: ketoconazole
+  minted_identifier: antibioticmech:aro-4655b07df9
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007666
+  label: Candida spp. cyp51A1 with mutations conferring resistance to triazoles and
+    imidazole antibiotics
+  evidence:
+  - reference: ARO:3007666
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007517 (ketoconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009256
+  label: Trychophyton rubrum Mdr3 with mutations associated with resistance to ketoconazole
+  evidence:
+  - reference: ARO:3009256
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007517 (ketoconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009263
+  label: Trychophyton rubrum Mfs1 with mutations associated with resistance to ketoconazole
+  evidence:
+  - reference: ARO:3009263
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007517 (ketoconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009426
+  label: Candida albicans ERG11 with mutations conferring resistance to ketoconazole
+  evidence:
+  - reference: ARO:3009426
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007517 (ketoconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009435
+  label: Cryptococcus neoformans AFR1 with mutations conferring resistance against
+    ketoconazole
+  evidence:
+  - reference: ARO:3009435
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007517 (ketoconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009500
+  label: Aspergillus fumigatus Cyp51a with mutations conferring resistance to ketoconazole
+  evidence:
+  - reference: ARO:3009500
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007517 (ketoconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009506
+  label: Candida albicans Cyp51a with mutations conferring resistance to ketoconazole
+  evidence:
+  - reference: ARO:3009506
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007517 (ketoconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009584
+  label: Candida tropicalis Erg11 lanosterol 14-alpha-demethylase with mutations conferring
+    resistance to ketoconazole
+  evidence:
+  - reference: ARO:3009584
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007517 (ketoconazole);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T00:54:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

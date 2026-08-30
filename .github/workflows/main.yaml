@@ -1,0 +1,56 @@
+---
+name: Build and test
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+# A second push supersedes the first; nothing waits on the older run.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  qc:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # 3.10 is the floor pyproject advertises, so it is tested rather than
+        # assumed; 3.12 is what developers run.
+        python-version: ["3.10", "3.12"]
+      fail-fast: false
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: uv sync --extra dev
+
+      # One executable definition of QC: lint, documentation statistics,
+      # raw-data provenance, tests, closed-schema validation, corpus
+      # reproduction, generated site, and the corpus report.
+      - name: Run the authoritative quality gate
+        run: uv run python scripts/run_qc.py
+
+      - name: Upload validation failures
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-failures
+          path: reports/
+          if-no-files-found: ignore

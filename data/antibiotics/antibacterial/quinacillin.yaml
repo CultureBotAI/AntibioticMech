@@ -1,0 +1,72 @@
+identifier: CHEBI:192379
+label: quinacillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A semisynthetic penicillase-resistant penicillin with antibacterial activity;
+  it binds to and inactivates penicillin-binding proteins (PBPs) located on the inner
+  membrane of the bacterial cell wall.
+definition_source: ChEBI
+synonyms:
+- synonym_text: quinacilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: quinacilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: quinacillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 3-{[(2S,5R,6R)-2-carboxy-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptan-6-yl]carbamoyl}quinoxaline-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-[(3-carboxyquinoxaline-2-carbonyl)amino]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3-carboxy-2-quinoxalinyl)penicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-carboxy-2-quinoxalinylpenicillanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(3-Carboxy-2-chinoxalinecarboxamido)-3,3-dimethyl-7-oxo-4-thia-azabicyclo(3.2.0)heptan-2-carbonsaeure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17334
+- CHEBI:38771
+xrefs:
+- cas:1596-63-0
+- wikipedia.en:Quinacillin
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)c1nc2ccccc2nc1C(=O)O'
+  standard_inchi: InChI=1S/C18H16N4O6S/c1-18(2)12(17(27)28)22-14(24)11(15(22)29-18)21-13(23)9-10(16(25)26)20-8-6-4-3-5-7(8)19-9/h3-6,11-12,15H,1-2H3,(H,21,23)(H,25,26)(H,27,28)/t11-,12+,15-/m1/s1
+  standard_inchi_key: GPMSLJIYNWBYEL-TYNCELHUSA-N
+  molecular_formula: C18H16N4O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 416.415
+  monoisotopic_mass: 416.07906
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:192379
+  source_label: quinacillin
+  minted_identifier: antibioticmech:chebi-76418de2e8
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

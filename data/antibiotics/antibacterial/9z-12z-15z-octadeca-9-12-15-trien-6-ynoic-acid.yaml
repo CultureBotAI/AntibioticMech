@@ -1,0 +1,46 @@
+identifier: CHEBI:65768
+label: (9Z,12Z,15Z)-octadeca-9,12,15-trien-6-ynoic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A trienoic fatty acid, that is octadecanoic acid containing double bonds
+  at positions 9, 12 and 15 and a triple bond at position 6. Isolated from Dicranum
+  scoparium, it exhibits antibacterial activity and inhibitory activity against arachidonate
+  15-lipoxygenase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: dicranin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15904
+- CHEBI:25380
+- CHEBI:59202
+- CHEBI:73155
+xrefs:
+- cas:61481-30-9
+- reaxys:4432637
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC/C=C\C/C=C\C/C=C\CC#CCCCCC(=O)O
+  standard_inchi: InChI=1S/C18H26O2/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18(19)20/h3-4,6-7,9-10H,2,5,8,11,14-17H2,1H3,(H,19,20)/b4-3-,7-6-,10-9-
+  standard_inchi_key: UXMMIMGEKFYPFK-PDBXOOCHSA-N
+  molecular_formula: C18H26O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 274.404
+  monoisotopic_mass: 274.19328
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65768
+  source_label: (9Z,12Z,15Z)-octadeca-9,12,15-trien-6-ynoic acid
+  minted_identifier: antibioticmech:chebi-8001a4c8c7
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

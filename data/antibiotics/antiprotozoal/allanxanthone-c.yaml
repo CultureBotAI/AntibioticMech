@@ -1,0 +1,47 @@
+identifier: CHEBI:65387
+label: allanxanthone C
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of xanthones that is 3,6,8-trihydroxy-1H-xanthene-2,9-dione
+  substituted by geminal prenyl groups at position 1 and a single prenyl group at
+  position 7. It is isolated from the stem barks of Allanblackia monticola and exhibits
+  antiplasmodial activity. It also shows weak cytotoxicity against human melanoma
+  cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,6,8-trihydroxy-1,1,7-tris(3-methylbut-2-en-1-yl)-1H-xanthene-2,9-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-hydroxyapetalinone C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:51149
+xrefs:
+- reaxys:10311273
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: CC(C)=CCc1c(O)cc2oc3c(c(=O)c2c1O)C(CC=C(C)C)(CC=C(C)C)C(=O)C(O)=C3
+  standard_inchi: InChI=1S/C28H32O6/c1-15(2)7-8-18-19(29)13-21-23(25(18)31)26(32)24-22(34-21)14-20(30)27(33)28(24,11-9-16(3)4)12-10-17(5)6/h7,9-10,13-14,29-31H,8,11-12H2,1-6H3
+  standard_inchi_key: QEJCXVUCARKGSY-UHFFFAOYSA-N
+  molecular_formula: C28H32O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 464.558
+  monoisotopic_mass: 464.21989
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65387
+  source_label: allanxanthone C
+  minted_identifier: antibioticmech:chebi-77f377358d
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

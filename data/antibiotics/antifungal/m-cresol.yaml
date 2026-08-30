@@ -1,0 +1,77 @@
+identifier: CHEBI:17231
+label: m-cresol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cresol with the methyl substituent at position 3. It is a minor urinary
+  metabolite of toluene.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-methylphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-hydroxy-3-methylbenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-Cresol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-Hydroxytoluene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: M-CRESOL
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: m-Cresol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: m-Kresol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: m-methylphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: meta-cresol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: metacresol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25399
+xrefs:
+- cas:108-39-4
+- drugbank:DB01776
+- gmelin:101411
+- hmdb:HMDB0002048
+- kegg.compound:C01467
+- kegg.drug:D04951
+- metacyc.compound:CPD-112
+- pdb-ccd:CRS
+- reaxys:506719
+- umbbd.compound:c0282
+- wikipedia.en:M-cresol
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: Cc1cccc(O)c1
+  standard_inchi: InChI=1S/C7H8O/c1-6-3-2-4-7(8)5-6/h2-5,8H,1H3
+  standard_inchi_key: RLSSMJSEOOYNOY-UHFFFAOYSA-N
+  molecular_formula: C7H8O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 108.14
+  monoisotopic_mass: 108.05751
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17231
+  source_label: m-cresol
+  minted_identifier: antibioticmech:chebi-5714ca573a
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

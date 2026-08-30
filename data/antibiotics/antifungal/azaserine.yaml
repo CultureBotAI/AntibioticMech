@@ -1,0 +1,77 @@
+identifier: CHEBI:74846
+label: azaserine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxylic ester resulting from the formal condensation of the carboxy
+  group of diazoacetic acid with the alcoholic hydroxy group of L-serine. An antibiotic
+  produced by a Streptomyces species.
+definition_source: ChEBI
+synonyms:
+- synonym_text: azaserina
+  synonym_type: INN
+  source: chebi
+- synonym_text: azaserinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: azasérine
+  synonym_type: INN
+  source: chebi
+- synonym_text: O-(diazoacetyl)-L-serine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-azaserine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-serine diazoacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-serine diazoacetate ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-β-(diazoacetoxy)alanin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-β-(diazoacetoxy)alanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33308
+- CHEBI:39444
+- CHEBI:83822
+- CHEBI:84135
+xrefs:
+- cas:115-02-6
+- kegg.compound:C19194
+- kegg.drug:D03032
+- metacyc.compound:L-AZASERINE
+- patent:US2996435
+- patent:US3030388
+- pdb-ccd:AZS
+- wikipedia.en:Azaserine
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: '[N-]=[N+]=CC(=O)OC[C@H](N)C(=O)O'
+  standard_inchi: InChI=1S/C5H7N3O4/c6-3(5(10)11)2-12-4(9)1-8-7/h1,3H,2,6H2,(H,10,11)/t3-/m0/s1
+  standard_inchi_key: MZZGOOYMKKIOOX-VKHMYHEASA-N
+  molecular_formula: C5H7N3O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 173.128
+  monoisotopic_mass: 173.04366
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:74846
+  source_label: azaserine
+  minted_identifier: antibioticmech:chebi-e4227ed326
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,56 @@
+identifier: CHEBI:133829
+label: tensyuic acid C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tensyuic acid that is tensyuic acid B in which the methyl ester group
+  has been replaced by an ethyl ester group. The (−) isomer. In contrast to (inactive)
+  tensyuic acid B, tensyuic acid C shows moderate antimicrobial activity against Bacillus
+  subtilis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2Ξ)-2-(6-ethoxy-6-oxohexyl)-3-methylenesuccinic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2Ξ)-2-(6-ethoxy-6-oxohexyl)-3-methylidenebutanedioic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-2-(6-ethoxy-6-oxohexyl)-3-methylenesuccinic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-2-(6-ethoxy-6-oxohexyl)-3-methylidenebutanedioic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-tensyuic acid C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:133873
+- CHEBI:23990
+- CHEBI:35692
+xrefs:
+- reaxys:11209668
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C=C(C(=O)O)C(CCCCCC(=O)OCC)C(=O)O
+  standard_inchi: InChI=1S/C13H20O6/c1-3-19-11(14)8-6-4-5-7-10(13(17)18)9(2)12(15)16/h10H,2-8H2,1H3,(H,15,16)(H,17,18)
+  standard_inchi_key: STUMFFBVBKIJSG-UHFFFAOYSA-N
+  molecular_formula: C13H20O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 272.297
+  monoisotopic_mass: 272.12599
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:133829
+  source_label: tensyuic acid C
+  minted_identifier: antibioticmech:chebi-1b6d0f073e
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

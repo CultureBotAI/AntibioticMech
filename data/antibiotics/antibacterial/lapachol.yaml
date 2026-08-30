@@ -1,0 +1,93 @@
+identifier: CHEBI:6377
+label: lapachol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxy-1,4-naphthoquinone that is 1,4-naphthoquinone substituted by
+  hydroxy and 3-methylbut-2-en-1-yl groups at positions 2 and 3, respectively. It
+  is a natural compound that exhibits antibacterial and anticancer properties, first
+  isolated in 1882 from the bark of Tabebuia avellanedae.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-hydroxy-3-(3-methylbut-2-en-1-yl)naphthalene-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-hydroxy-3-(3-methyl-2-buten-1-yl)-1,4-naphthalenedione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-hydroxy-3-(3-methyl-2-butenyl)-1,4-naphthalenedione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-hydroxy-3-(3-methyl-2-butenyl)-1,4-naphthoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-hydroxy-3-(3-methylbut-2-en-1-yl)-1,4-dihydronaphthalene-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bethabarra wood
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C.I. 75490
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C.I. natural yellow 16
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ipe-tobacco wood
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Lapachol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Surinam greenheart wood
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Taigu wood
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: greenhartin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: lapachol wood
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: taiguic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tecomin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132157
+- CHEBI:78840
+xrefs:
+- cas:84-79-7
+- chemspider:10770962
+- hmdb:HMDB0253978
+- kegg.compound:C10366
+- knapsack:C00002835
+- wikipedia.en:Lapachol
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)=CCC1=C(O)C(=O)c2ccccc2C1=O
+  standard_inchi: InChI=1S/C15H14O3/c1-9(2)7-8-12-13(16)10-5-3-4-6-11(10)14(17)15(12)18/h3-7,18H,8H2,1-2H3
+  standard_inchi_key: CIEYTVIYYGTCCI-UHFFFAOYSA-N
+  molecular_formula: C15H14O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 242.274
+  monoisotopic_mass: 242.09429
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6377
+  source_label: lapachol
+  minted_identifier: antibioticmech:chebi-63264ba58d
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

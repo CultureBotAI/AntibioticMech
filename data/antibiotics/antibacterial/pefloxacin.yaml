@@ -1,0 +1,263 @@
+identifier: CHEBI:50199
+label: pefloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quinolone that is 4-oxo-1,4-dihydroquinoline which is substituted at
+  positions 1, 3, 6 and 7 by ethyl, carboxy, fluorine, and 4-methylpiperazin-1-yl
+  groups, respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Labocton
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: pefloxacino
+  synonym_type: INN
+  source: chebi
+- synonym_text: pefloxacinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1-ethyl-6-fluoro-7-(4-methylpiperazin-1-yl)-4-oxo-1,4-dihydroquinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PFLX
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pefloxacine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: perfloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23765
+- CHEBI:25384
+- CHEBI:46845
+- CHEBI:46848
+- CHEBI:86324
+- CHEBI:87211
+- ARO:0000001
+xrefs:
+- ARO:3000762
+- cas:70458-92-3
+- drugbank:DB00487
+- drugcentral:2071
+- hmdb:HMDB0014630
+- kegg.drug:D02306
+- lincs.smallmolecule:LSM-5653
+- patent:DE2840910
+- patent:US4292317
+- patent:US5095112
+- reaxys:567618
+- wikipedia.en:Pefloxacin
+- chembl:CHEMBL267648
+- pubchem.compound:51081
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCN(C)CC3)cc21
+  standard_inchi: InChI=1S/C17H20FN3O3/c1-3-20-10-12(17(23)24)16(22)11-8-13(18)15(9-14(11)20)21-6-4-19(2)5-7-21/h8-10H,3-7H2,1-2H3,(H,23,24)
+  standard_inchi_key: FHFYDNQZQSQIAI-UHFFFAOYSA-N
+  molecular_formula: C17H20FN3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 333.363
+  monoisotopic_mass: 333.14887
+source_concepts:
+- source: ARO
+  source_id: ARO:3000762
+  source_label: pefloxacin
+  minted_identifier: antibioticmech:aro-e4d6a66b1b
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:50199
+  source_label: pefloxacin
+  minted_identifier: antibioticmech:chebi-0c977bad4e
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003294
+  label: Escherichia coli gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003294
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003295
+  label: Mycobacterium tuberculosis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003295
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003296
+  label: Staphylococcus aureus gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003296
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003297
+  label: Bartonella bacilliformis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003297
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003298
+  label: Mycobacterium leprae gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003298
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003304
+  label: Mycobacterium leprae gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003304
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003305
+  label: Ureaplasma urealyticum gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003305
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003306
+  label: Morganella morganii gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003306
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003307
+  label: Salmonella serovars gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003307
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003308
+  label: Escherichia coli parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003308
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003309
+  label: Ureaplasma urealyticum parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003309
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003310
+  label: Mycoplasma hominis parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003310
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003311
+  label: Streptococcus pneumoniae parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003311
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003312
+  label: Staphylococcus aureus parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003312
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003315
+  label: Staphylococcus aureus parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003315
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003316
+  label: Escherichia coli parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003316
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003317
+  label: Salmonella serovars parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003317
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003459
+  label: Mycobacterium tuberculosis gyrB with mutation conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003459
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003684
+  label: Pseudomonas aeruginosa gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003684
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003702
+  label: Pseudomonas aeruginosa parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003702
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003817
+  label: Acinetobacter baumannii gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003817
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003818
+  label: Acinetobacter baumannii parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003818
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000762 (pefloxacin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000733
+  target_label: fluoroquinolone sensitive gyrA
+  evidence:
+  - reference: ARO:3000733
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000762 (pefloxacin); database
+      assertion, not a primary citation.
+- target_id: ARO:3000735
+  target_label: Fluoroquinolone sensitive parC
+  evidence:
+  - reference: ARO:3000735
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000762 (pefloxacin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

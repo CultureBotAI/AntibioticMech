@@ -1,0 +1,81 @@
+identifier: CHEBI:82060
+label: thiophanate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of thioureas that is the diethyl ester of (1,2-phenylenedicarbamothioyl)biscarbamic
+  acid. A fungicide effective against a broad spectrum of diseases in fruit, vegetables,
+  turf and other crops including eyespot, scab, powdery mildew and grey mould.
+definition_source: ChEBI
+synonyms:
+- synonym_text: diethyl (1,2-phenylenedicarbamothioyl)biscarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-Bis(3-(ethoxycarbonyl)-2-thioureido)benzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-Bis(3-ethoxycarbonyl-2-thioureido) benzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-Di-(3-ethoxycarbonyl-2-thioureido)benzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,4'-o-Phenylenebis(ethyl 3-thioallophanate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Diethyl 4,4'-o-phenylenebis(3-thioallophanate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethyl thiophanate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Thiophanat
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diethyl N,N'-[1,2-phenylenebis(azanediylcarbonothioyl)]dicarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diethyl N,N'-[1,2-phenylenebis(iminocarbonothioyl)]bis[carbamate]
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:51276
+- CHEBI:87037
+- CHEBI:87061
+xrefs:
+- cas:23564-06-9
+- kegg.compound:C18918
+- pesticides:thiophanate
+- ppdb:2935
+- reaxys:939969
+activity_roles:
+- CHEBI:24127
+- CHEBI:86327
+chemical_structure:
+  smiles: CCOC(=O)NC(=S)Nc1ccccc1NC(=S)NC(=O)OCC
+  standard_inchi: InChI=1S/C14H18N4O4S2/c1-3-21-13(19)17-11(23)15-9-7-5-6-8-10(9)16-12(24)18-14(20)22-4-2/h5-8H,3-4H2,1-2H3,(H2,15,17,19,23)(H2,16,18,20,24)
+  standard_inchi_key: YFNCATAIYKQPOO-UHFFFAOYSA-N
+  molecular_formula: C14H18N4O4S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 370.456
+  monoisotopic_mass: 370.07695
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:82060
+  source_label: thiophanate
+  minted_identifier: antibioticmech:chebi-107ce2d44d
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

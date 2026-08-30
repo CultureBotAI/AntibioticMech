@@ -1,0 +1,46 @@
+identifier: CHEBI:66304
+label: rhinacanthin D
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxylic ester obtained by the formal condensation of 2-hydroxy-3-(3-hydroxy-2,2-dimethylpropyl)naphthalene-1,4-dione
+  with 1,3-benzodioxole-5-carboxylic acid. Isolated from Rhinacanthus nasutus, it
+  exhibits antiviral activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-(3-hydroxy-1,4-dioxo-1,4-dihydronaphthalen-2-yl)-2,2-dimethylpropyl
+    1,3-benzodioxole-5-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132157
+- CHEBI:33308
+- CHEBI:33823
+- CHEBI:38298
+xrefs:
+- cas:179461-46-2
+- reaxys:7726066
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: CC(C)(COC(=O)c1ccc2c(c1)OCO2)CC1=C(O)C(=O)c2ccccc2C1=O
+  standard_inchi: InChI=1S/C23H20O7/c1-23(2,11-28-22(27)13-7-8-17-18(9-13)30-12-29-17)10-16-19(24)14-5-3-4-6-15(14)20(25)21(16)26/h3-9,26H,10-12H2,1-2H3
+  standard_inchi_key: QWHPVCGUVBLEQF-UHFFFAOYSA-N
+  molecular_formula: C23H20O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 408.406
+  monoisotopic_mass: 408.1209
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66304
+  source_label: rhinacanthin D
+  minted_identifier: antibioticmech:chebi-a3a4835d9c
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

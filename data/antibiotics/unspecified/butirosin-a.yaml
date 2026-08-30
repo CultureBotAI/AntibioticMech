@@ -1,0 +1,49 @@
+identifier: CHEBI:65112
+label: butirosin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A butirosin that consists of neamine in which is substituted at position
+  2 by a β-D-xylofuranosyl and at position 4 by an (S)-2-hydroxy-4-aminobutyryl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-4-amino-N-[(1R,2S,3R,4R,5S)-5-amino-4-[(2,6-diamino-2,6-dideoxy-α-D-glucopyranosyl)oxy]-2-hydroxy-3-(β-D-xylofuranosyloxy)cyclohexyl]-2-hydroxybutanamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ambutyrosin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Butyrosin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:65109
+xrefs:
+- cas:34291-02-6
+- kegg.compound:C17585
+- pdb-ccd:B31
+- reaxys:1696155
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: NCC[C@H](O)C(=O)N[C@@H]1C[C@H](N)[C@@H](O[C@H]2O[C@H](CN)[C@@H](O)[C@H](O)[C@H]2N)[C@H](O[C@@H]2O[C@H](CO)[C@H](O)[C@H]2O)[C@H]1O
+  standard_inchi: InChI=1S/C21H41N5O12/c22-2-1-8(28)19(34)26-7-3-6(24)17(37-20-11(25)15(32)13(30)9(4-23)35-20)18(12(7)29)38-21-16(33)14(31)10(5-27)36-21/h6-18,20-21,27-33H,1-5,22-25H2,(H,26,34)/t6-,7+,8-,9+,10+,11+,12-,13+,14-,15+,16+,17+,18+,20+,21-/m0/s1
+  standard_inchi_key: XEQLFNPSYWZPOW-SVRMBHBBSA-N
+  molecular_formula: C21H41N5O12
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 555.582
+  monoisotopic_mass: 555.27517
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65112
+  source_label: butirosin A
+  minted_identifier: antibioticmech:chebi-f85d13c367
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

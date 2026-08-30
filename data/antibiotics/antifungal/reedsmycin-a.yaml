@@ -1,0 +1,53 @@
+identifier: CHEBI:219363
+label: reedsmycin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide isolated from the reed rhizosphere soil-derived Streptomyces
+  sp. CHQ-64.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3E,5E,7E,9E,11E,29E)-32-(butan-2-yl)-14,16,18,20,22,24,26,28-octahydroxy-31-methyloxacyclodotriaconta-3,5,7,9,11,29-hexaen-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RDM A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134396
+- CHEBI:25105
+- CHEBI:26191
+- CHEBI:48121
+- CHEBI:51702
+xrefs:
+- chemspider:71048965
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: CCC(C)C1OC(=O)/C=C/C=C/C=C/C=C/C=C/CC(O)CC(O)CC(O)CC(O)CC(O)CC(O)CC(O)CC(O)/C=C/C1C
+  standard_inchi: InChI=1S/C36H58O10/c1-4-25(2)36-26(3)16-17-28(38)19-30(40)21-32(42)23-34(44)24-33(43)22-31(41)20-29(39)18-27(37)14-12-10-8-6-5-7-9-11-13-15-35(45)46-36/h5-13,15-17,25-34,36-44H,4,14,18-24H2,1-3H3/b7-5+,8-6+,11-9+,12-10+,15-13+,17-16+
+  standard_inchi_key: XVBIZWCWDZDOMC-VNYSJGGHSA-N
+  molecular_formula: C36H58O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 650.85
+  monoisotopic_mass: 650.403
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:219363
+  source_label: reedsmycin A
+  minted_identifier: antibioticmech:chebi-8fa3e96127
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

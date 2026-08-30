@@ -1,0 +1,126 @@
+identifier: CHEBI:44368
+label: nitrofurazone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A semicarbazone resulting from the formal condensation of semicarbazide
+  with 5-nitrofuraldehyde. A broad spectrum antibacterial drug, although with little
+  activity against Pseudomonas species, it is used as a local application for burns,
+  ulcers, wounds and skin infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Alfucin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Amifur
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Chemofuran
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Furacillin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Furacin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Furacinetten
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Furacoccid
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Furaldon
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Furazol W
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Furesol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Mammex
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Mastofuran
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Monafuracin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Nifuzon
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: nitrofural
+  synonym_type: INN
+  source: chebi
+- synonym_text: nitrofuralum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-[(5-nitro-2-furyl)methylene]hydrazinecarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5-nitro-2-furfurylidenamino)urea
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(5-nitro-2-furfurylidene)semicarbazide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Nitro-2-furaldehyde semicarbazone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-nitrofuraldehyde semicarbazide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-nitrofuran-2-carbaldehyde semicarbazone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-nitrofurfural semicarbazone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:87210
+- CHEBI:87230
+xrefs:
+- cas:59-87-0
+- drugbank:DB00336
+- drugcentral:1950
+- hmdb:HMDB0014480
+- kegg.compound:C08042
+- kegg.drug:D00862
+- lincs.smallmolecule:LSM-3779
+- patent:US2416234
+- patent:US2927110
+- pdb-ccd:NFZ
+- reaxys:86403
+- wikipedia.en:Nitrofural
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H]C(=NNC(N)=O)c1ccc([N+](=O)[O-])o1'
+  standard_inchi: InChI=1S/C6H6N4O4/c7-6(11)9-8-3-4-1-2-5(14-4)10(12)13/h1-3H,(H3,7,9,11)
+  standard_inchi_key: IAIWVQXQOWNYOU-UHFFFAOYSA-N
+  molecular_formula: C6H6N4O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 198.138
+  monoisotopic_mass: 198.0389
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:44368
+  source_label: nitrofurazone
+  minted_identifier: antibioticmech:chebi-f92c354f12
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

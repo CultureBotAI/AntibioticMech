@@ -1,0 +1,78 @@
+identifier: CHEBI:32368
+label: undecanoic acid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A straight-chain, eleven-carbon saturated medium-chain fatty acid found
+  in body fluids; the most fungitoxic of the C7:0 - C18:0 fatty acid series.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-decanecarboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CH3‒[CH2]9‒COOH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hendecanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: UDA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Undekansäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hendecanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-undecanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-undecoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-undecylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: undecoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: undecylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:39418
+- CHEBI:59554
+xrefs:
+- cas:112-37-8
+- gmelin:102992
+- hmdb:HMDB0000947
+- kegg.compound:C17715
+- lipidmaps:LMFA01010011
+- pdb-ccd:11A
+- reaxys:1759287
+- wikipedia.en:Undecylic_acid
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCCCCCCCC(=O)O
+  standard_inchi: InChI=1S/C11H22O2/c1-2-3-4-5-6-7-8-9-10-11(12)13/h2-10H2,1H3,(H,12,13)
+  standard_inchi_key: ZDPHROOEEOARMN-UHFFFAOYSA-N
+  molecular_formula: C11H22O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 186.295
+  monoisotopic_mass: 186.16198
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32368
+  source_label: undecanoic acid
+  minted_identifier: antibioticmech:chebi-c785ca1022
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,44 @@
+identifier: antibioticmech:aro-e0bba9e7d3
+label: chrysomycin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Chrysomycin A (ChryA) is a benzonaphthopyranone glycoside with rapid bactericidal
+  activity that is highly active against S. aureus persisters, robustly eradicates
+  biofilms in vitro, and shows a sustainable killing efficacy in vivo. Chrysomycin
+  A belongs to the coumarin class of antibiotics which are known to bind gyrase subunit
+  B and inhibit the enzyme function.
+definition_source: PMID:37540745
+synonyms:
+- synonym_text: ChryA
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3000103
+xrefs:
+- ARO:3007679
+- CHEBI:191084
+- pubchem.compound:73468
+structural_class: aminocoumarin antibiotic
+structural_class_id: ARO:3000103
+chemical_structure:
+  smiles: C[C@@H]1[C@@H]([C@@]([C@H]([C@@H](O1)C2=C3C(=C(C=C2)O)C(=CC4=C3OC(=O)C5=C4C(=CC(=C5)C=C)OC)OC)O)(C)O)O
+  standard_inchi: InChI=1S/C28H28O9/c1-6-13-9-16-20(18(10-13)34-4)15-11-19(35-5)22-17(29)8-7-14(21(22)23(15)37-27(16)32)24-26(31)28(3,33)25(30)12(2)36-24/h6-12,24-26,29-31,33H,1H2,2-5H3/t12-,24+,25+,26+,28-/m1/s1
+  standard_inchi_key: OMDANBMKOUVKAG-WZNMFJNZSA-N
+  molecular_formula: C28H28O9
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 508.5
+  monoisotopic_mass: 508.17333247
+source_concepts:
+- source: ARO
+  source_id: ARO:3007679
+  source_label: chrysomycin A
+  minted_identifier: antibioticmech:aro-e0bba9e7d3
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

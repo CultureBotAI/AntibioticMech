@@ -1,0 +1,44 @@
+identifier: CHEBI:66030
+label: 7-hydroxy-5-hydroxymethyl-2H-benzo[1,4]thiazin-3-one
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzothiazine that is 2H-1,4-benzothiazin-3(4H)-one substituted by a
+  hydroxy and a hydroxymethyl group at positions 7 and 5 respectively. It is an antibacterial
+  agent from Ampelomyces.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7-hydroxy-5-(hydroxymethyl)-2H-1,4-benzothiazin-3(4H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22743
+- CHEBI:24995
+- CHEBI:33853
+- CHEBI:46899
+xrefs:
+- reaxys:18590033
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C1CSc2cc(O)cc(CO)c2N1
+  standard_inchi: InChI=1S/C9H9NO3S/c11-3-5-1-6(12)2-7-9(5)10-8(13)4-14-7/h1-2,11-12H,3-4H2,(H,10,13)
+  standard_inchi_key: CZXYFHNORNVRJZ-UHFFFAOYSA-N
+  molecular_formula: C9H9NO3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 211.242
+  monoisotopic_mass: 211.03031
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66030
+  source_label: 7-hydroxy-5-hydroxymethyl-2H-benzo[1,4]thiazin-3-one
+  minted_identifier: antibioticmech:chebi-1b90a10ed1
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

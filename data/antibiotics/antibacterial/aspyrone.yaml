@@ -1,0 +1,52 @@
+identifier: CHEBI:156387
+label: aspyrone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 2-pyranones that is 5,6-dihydro-2H-pyran-2-one
+  in which the hydrogens at positions 3, 5S and 6R are replaced by (2S,3S)-3-methyloxiran-2-yl,
+  hydroxy and methyl groups, respectively. It is a fungal metabolite isolated from
+  Aspergillus melleus and exhibits nematicidal, antibacterial and antifungal properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5S,6R)-5-hydroxy-6-methyl-3-[(2S,3S)-3-methyloxiran-2-yl]-5,6-dihydro-2H-pyran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26188
+- CHEBI:32955
+- CHEBI:35681
+- CHEBI:75885
+- CHEBI:86478
+xrefs:
+- cas:17398-00-4
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]1(C2=C[C@H](O)[C@@H](C)OC2=O)O[C@@]1([H])C'
+  standard_inchi: InChI=1S/C9H12O4/c1-4-7(10)3-6(9(11)13-4)8-5(2)12-8/h3-5,7-8,10H,1-2H3/t4-,5+,7+,8-/m1/s1
+  standard_inchi_key: RCAULRNMJFUWRP-HETMPLHPSA-N
+  molecular_formula: C9H12O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 184.191
+  monoisotopic_mass: 184.07356
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156387
+  source_label: aspyrone
+  minted_identifier: antibioticmech:chebi-ee352b983d
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

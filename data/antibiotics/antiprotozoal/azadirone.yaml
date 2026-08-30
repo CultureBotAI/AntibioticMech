@@ -1,0 +1,48 @@
+identifier: CHEBI:76293
+label: azadirone
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracyclic triterpenoid that is 4,4,8-trimethylandrosta-1,14-diene
+  substituted by an oxo group at position 3, an acetoxy group at position 7 and a
+  furan-3-yl group at position 17. Isolated from Azadirachta indica, it exhibits antiplasmodial
+  and antineoplastic activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5α,7α,13α,17α)-17-(furan-3-yl)-4,4,8-trimethyl-3-oxoandrosta-1,14-dien-7-yl
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24129
+- CHEBI:26893
+- CHEBI:36130
+- CHEBI:39434
+- CHEBI:47622
+xrefs:
+- cas:25279-67-8
+- reaxys:4214438
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: '[H][C@]12CC[C@]3(C)C(=CC[C@@]3([H])c3ccoc3)[C@]1(C)[C@H](OC(C)=O)C[C@@]1([H])C(C)(C)C(=O)C=C[C@]21C'
+  standard_inchi: InChI=1S/C28H36O4/c1-17(29)32-24-15-22-25(2,3)23(30)10-13-27(22,5)21-9-12-26(4)19(18-11-14-31-16-18)7-8-20(26)28(21,24)6/h8,10-11,13-14,16,19,21-22,24H,7,9,12,15H2,1-6H3/t19-,21+,22-,24+,26-,27+,28-/m0/s1
+  standard_inchi_key: XXIKKMLIDXLAIK-RFKFVWFBSA-N
+  molecular_formula: C28H36O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 436.592
+  monoisotopic_mass: 436.26136
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:76293
+  source_label: azadirone
+  minted_identifier: antibioticmech:chebi-d263ad16c9
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

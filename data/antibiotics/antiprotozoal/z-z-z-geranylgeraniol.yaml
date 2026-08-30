@@ -1,0 +1,43 @@
+identifier: CHEBI:18822
+label: (Z,Z,Z)-geranylgeraniol
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A geranylgeraniol in which all double bonds have Z- (cis-) geometry.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2Z,6Z,10Z)-3,7,11,15-tetramethylhexadeca-2,6,10,14-tetraen-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nerylnerol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24229
+xrefs:
+- lipidmaps:LMPR0104010018
+- reaxys:5745026
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: CC(C)=CCC/C(C)=C\CC/C(C)=C\CC/C(C)=C\CO
+  standard_inchi: InChI=1S/C20H34O/c1-17(2)9-6-10-18(3)11-7-12-19(4)13-8-14-20(5)15-16-21/h9,11,13,15,21H,6-8,10,12,14,16H2,1-5H3/b18-11-,19-13-,20-15-
+  standard_inchi_key: OJISWRZIEWCUBN-XBQSVVNOSA-N
+  molecular_formula: C20H34O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 290.491
+  monoisotopic_mass: 290.26097
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:18822
+  source_label: (Z,Z,Z)-geranylgeraniol
+  minted_identifier: antibioticmech:chebi-4bae1f265f
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

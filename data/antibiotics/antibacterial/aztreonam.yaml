@@ -1,0 +1,147 @@
+identifier: CHEBI:161680
+label: aztreonam
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A synthetic monocyclic β-lactam antibiotic (monobactam), used primarily
+  to treat infections caused by Gram-negative bacteria. It inhibits mucopeptide synthesis
+  in the bacterial cell wall, thereby blocking peptidoglycan crosslinking.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Azactam
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Primbactam
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: aztreonamum
+  synonym_type: INN
+  source: chebi
+- synonym_text: aztréonam
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2S,3S)-3-{(2Z)-2-(2-ammonio-1,3-thiazol-4-yl)-2-[(2-carboxypropan-2-yloxy)imino]acetamido}-2-methyl-4-oxoazetidine-1-sulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (Z,)-2-((((2-Amino-4-thiazolyl)(((2S,3S,)-2-methyl-4-oxo-1-sulfo-3-azetidinyl)carbamoyl)methylene)amino)oxy)-2-methylpropionic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AZT
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:50695
+- CHEBI:88225
+- ARO:0000004
+xrefs:
+- ARO:3000550
+- beilstein:3577211
+- cas:78110-38-0
+- drugbank:DB00355
+- drugcentral:279
+- kegg.compound:C06840
+- kegg.drug:D00240
+- patent:NL8100571
+- pdb-ccd:AZR
+- reaxys:3577211
+- wikipedia.en:Aztreonam
+- chembl:CHEMBL158
+- pubchem.compound:5742832
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: monobactam
+structural_class_id: ARO:0000004
+chemical_structure:
+  smiles: C[C@H]1[C@H](NC(=O)/C(=N\OC(C)(C)C(=O)O)c2csc([NH3+])n2)C(=O)N1S(=O)(=O)[O-]
+  standard_inchi: InChI=1S/C13H17N5O8S2/c1-5-7(10(20)18(5)28(23,24)25)16-9(19)8(6-4-27-12(14)15-6)17-26-13(2,3)11(21)22/h4-5,7H,1-3H3,(H2,14,15)(H,16,19)(H,21,22)(H,23,24,25)/b17-8-/t5-,7-/m0/s1
+  standard_inchi_key: WZPBZJONDBGPKJ-VEHQQRBSSA-N
+  molecular_formula: C13H17N5O8S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 435.44
+  monoisotopic_mass: 435.05185
+source_concepts:
+- source: ARO
+  source_id: ARO:3000550
+  source_label: aztreonam
+  minted_identifier: antibioticmech:aro-51d3653044
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:161680
+  source_label: aztreonam
+  minted_identifier: antibioticmech:chebi-2c259cb7a2
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000386
+  label: MexAB-OprM
+  evidence:
+  - reference: ARO:3000386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000550 (aztreonam);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000930
+  label: TEM-61
+  evidence:
+  - reference: ARO:3000930
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000550 (aztreonam);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001815
+  label: ACC-1
+  evidence:
+  - reference: ARO:3001815
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000550 (aztreonam);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001818
+  label: ACC-4
+  evidence:
+  - reference: ARO:3001818
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000550 (aztreonam);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003713
+  label: VCC-1
+  evidence:
+  - reference: ARO:3003713
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000550 (aztreonam);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004076
+  label: MuxABC-OpmB
+  evidence:
+  - reference: ARO:3004076
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000550 (aztreonam);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007491
+  label: Pseudomonas aeruginosa ampR with mutation conferring resistance to aztreonam
+  evidence:
+  - reference: ARO:3007491
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000550 (aztreonam);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000550 (aztreonam); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

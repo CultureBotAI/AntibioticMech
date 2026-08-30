@@ -1,0 +1,74 @@
+identifier: CHEBI:7956
+label: penciclovir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 2-aminopurines that is guanine in which the hydrogen
+  at position 9 is substituted by a 4-hydroxy-3-(hydroxymethyl)but-1-yl group. An
+  antiviral drug, it is administered topically for treatment of herpes labialis. A
+  prodrug, famciclovir, is used for oral administration.
+definition_source: ChEBI
+synonyms:
+- synonym_text: penciclovirum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-amino-9-[4-hydroxy-3-(hydroxymethyl)butyl]-1,9-dihydro-6H-purin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-(4-hydroxy-3-(hydroxymethyl)butyl)guanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-(4-hydroxy-3-hydroxymethylbut-1-yl)-guanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-[2-hydroxy-1-(hydroxymethyl)-ethoxymethyl]guanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-[4-hydroxy-3-(hydroxymethyl)but-1-yl]guanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PCV
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PE2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:20702
+- CHEBI:26287
+xrefs:
+- cas:39809-25-1
+- drugbank:DB00299
+- drugcentral:2079
+- hmdb:HMDB0014444
+- kegg.compound:C07417
+- kegg.drug:D05407
+- lincs.smallmolecule:LSM-5587
+- patent:US5075445
+- pdb-ccd:PE2
+- reaxys:4501039
+- wikipedia.en:Penciclovir
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: Nc1nc(=O)c2ncn(CCC(CO)CO)c2n1
+  standard_inchi: InChI=1S/C10H15N5O3/c11-10-13-8-7(9(18)14-10)12-5-15(8)2-1-6(3-16)4-17/h5-6,16-17H,1-4H2,(H3,11,13,14,18)
+  standard_inchi_key: JNTOCHDNEULJHD-UHFFFAOYSA-N
+  molecular_formula: C10H15N5O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 253.262
+  monoisotopic_mass: 253.11749
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:7956
+  source_label: penciclovir
+  minted_identifier: antibioticmech:chebi-d2299e6784
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

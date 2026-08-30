@@ -1,0 +1,52 @@
+identifier: CHEBI:65557
+label: callophycoic acid A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dibenzooxepine diterpenoid that is hexahydrodibenzo[b,e]oxepine with
+  an isolated double bond between positions 6a and 7 and is substituted by a bromo,
+  a carboxy, a 3E-4,8-dimethylnona-3,7-dien-1-yl and a methyl group at positions 9,
+  2, 10 and 10 respectively (the 9S,10S,10aR stereoisomer). It is isolated from the
+  Fijian red alga Callophycus serratus and exhibits antibacterial, antimalarial and
+  anticancer activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (9S,10S,10aR)-9-bromo-10-[(3E)-4,8-dimethylnona-3,7-dien-1-yl]-10-methyl-6,8,9,10,10a,11-hexahydrodibenzo[b,e]oxepine-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22723
+- CHEBI:23849
+- CHEBI:37141
+- CHEBI:37407
+- CHEBI:38926
+xrefs:
+- chemspider:23076452
+- reaxys:11167771
+activity_roles:
+- CHEBI:33282
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@@]12Cc3cc(C(=O)O)ccc3OCC1=CC[C@H](Br)[C@@]2(C)CC/C=C(\C)CCC=C(C)C'
+  standard_inchi: InChI=1S/C27H35BrO3/c1-18(2)7-5-8-19(3)9-6-14-27(4)23-16-22-15-20(26(29)30)10-12-24(22)31-17-21(23)11-13-25(27)28/h7,9-12,15,23,25H,5-6,8,13-14,16-17H2,1-4H3,(H,29,30)/b19-9+/t23-,25+,27+/m1/s1
+  standard_inchi_key: UWOQPCLHJDMFFV-FXSXARLRSA-N
+  molecular_formula: C27H35BrO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 487.478
+  monoisotopic_mass: 486.17696
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65557
+  source_label: callophycoic acid A
+  minted_identifier: antibioticmech:chebi-1a5d2ad916
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,49 @@
+identifier: CHEBI:65631
+label: ciliatamide B
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A lipopeptide that contains N-methylphenylalanine and lysine as the amino
+  acid residues linked to a octanoyl moiety via an amide linkage (the R,R stereoisomer).
+  It is isolated from the deep sea sponge Aaptos ciliata and exhibits antileishmanial
+  and moderate cytotoxicity towards HeLa cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Nα-methyl-Nα-octanoyl-N-[(3R)-2-oxoazepan-3-yl]-D-phenylalaninamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R,R)-ciliatamide B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-methyl-N-[(2R)-1-oxo-1-[[(3R)-2-oxoazepan-3-yl]amino]-3-phenylpropan-2-yl]octanamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23000
+- CHEBI:46895
+xrefs:
+- reaxys:19040123
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: CCCCCCCC(=O)N(C)[C@H](Cc1ccccc1)C(=O)N[C@@H]1CCCCNC1=O
+  standard_inchi: InChI=1S/C24H37N3O3/c1-3-4-5-6-10-16-22(28)27(2)21(18-19-13-8-7-9-14-19)24(30)26-20-15-11-12-17-25-23(20)29/h7-9,13-14,20-21H,3-6,10-12,15-18H2,1-2H3,(H,25,29)(H,26,30)/t20-,21-/m1/s1
+  standard_inchi_key: FNPKNWJUFWGJJV-NHCUHLMSSA-N
+  molecular_formula: C24H37N3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 415.578
+  monoisotopic_mass: 415.28349
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65631
+  source_label: ciliatamide B
+  minted_identifier: antibioticmech:chebi-5bee97b306
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

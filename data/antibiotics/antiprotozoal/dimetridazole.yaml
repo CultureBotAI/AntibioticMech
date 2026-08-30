@@ -1,0 +1,59 @@
+identifier: CHEBI:141155
+label: dimetridazole
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A C-nitro compound that is 5-nitroimidazole in which the hydrogens at
+  positions 1 and 2 are replaced by methyl groups. An antiprotozoal drug, it has been
+  banned by both the Government of Canada and the European Union as a livestock feed
+  additive owing to suspicions of it being carcinogenic.
+definition_source: ChEBI
+synonyms:
+- synonym_text: dimetridazol
+  synonym_type: INN
+  source: chebi
+- synonym_text: dimetridazolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: dimétridazole
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1,2-dimethyl-5-nitro-1H-imidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-Dimethyl-5-nitroimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Nitro-1,2-dimethylimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24780
+- CHEBI:35716
+xrefs:
+- patent:FR2625997
+- vsdb:1882
+activity_roles:
+- CHEBI:35820
+chemical_structure:
+  smiles: Cc1ncc([N+](=O)[O-])n1C
+  standard_inchi: InChI=1S/C5H7N3O2/c1-4-6-3-5(7(4)2)8(9)10/h3H,1-2H3
+  standard_inchi_key: IBXPYPUJPLLOIN-UHFFFAOYSA-N
+  molecular_formula: C5H7N3O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 141.13
+  monoisotopic_mass: 141.05383
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141155
+  source_label: dimetridazole
+  minted_identifier: antibioticmech:chebi-cf2a0daafe
+  role_terms:
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

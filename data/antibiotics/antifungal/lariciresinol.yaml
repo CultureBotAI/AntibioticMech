@@ -1,0 +1,53 @@
+identifier: CHEBI:67246
+label: (+)-lariciresinol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A lignan that is tetrahydrofuran substituted at positions 2, 3 and 4 by
+  4-hydroxy-3-methoxyphenyl, hydroxymethyl and 4-hydroxy-3-methoxybenzyl groups respectively
+  (the 2S,3R,4R-diastereomer).
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-[(2S,3R,4R)-4-(4-hydroxy-3-methoxybenzyl)-3-(hydroxymethyl)tetrahydrofuran-2-yl]-2-methoxyphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Lariciresinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:25036
+- CHEBI:26912
+- CHEBI:33853
+- CHEBI:35618
+xrefs:
+- cas:27003-73-2
+- cas:83327-19-9
+- kegg.compound:C10646
+- knapsack:C00000602
+- metacyc.compound:CPD-8907
+- wikipedia.en:Lariciresinol
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1cc(C[C@H]2CO[C@H](c3ccc(O)c(OC)c3)[C@H]2CO)ccc1O
+  standard_inchi: InChI=1S/C20H24O6/c1-24-18-8-12(3-5-16(18)22)7-14-11-26-20(15(14)10-21)13-4-6-17(23)19(9-13)25-2/h3-6,8-9,14-15,20-23H,7,10-11H2,1-2H3/t14-,15-,20+/m0/s1
+  standard_inchi_key: MHXCIKYXNYCMHY-AUSJPIAWSA-N
+  molecular_formula: C20H24O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 360.406
+  monoisotopic_mass: 360.15729
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:67246
+  source_label: (+)-lariciresinol
+  minted_identifier: antibioticmech:chebi-434a99ff21
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

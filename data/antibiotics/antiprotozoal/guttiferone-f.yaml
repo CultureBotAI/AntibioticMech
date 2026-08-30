@@ -1,0 +1,44 @@
+identifier: CHEBI:65991
+label: guttiferone F
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzophenones isolated from the stem bark of
+  Allanblackia stuhlmannii and has been shown to exhibit antileishmanial and anticholinesterase
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,5R,7R)-3-(3,4-dihydroxybenzoyl)-4-hydroxy-8,8-dimethyl-1,7-bis(3-methylbut-2-en-1-yl)-5-[(2R)-5-methyl-2-(prop-1-en-2-yl)hex-4-en-1-yl]bicyclo[3.3.1]non-3-ene-2,9-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22726
+- CHEBI:26195
+- CHEBI:35990
+xrefs:
+- chemspider:10282668
+- reaxys:4731414
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: C=C(C)[C@H](CC=C(C)C)C[C@@]12C[C@@H](CC=C(C)C)C(C)(C)[C@@](CC=C(C)C)(C(=O)C(C(=O)c3ccc(O)c(O)c3)=C1O)C2=O
+  standard_inchi: InChI=1S/C38H50O6/c1-22(2)11-13-27(25(7)8)20-37-21-28(15-12-23(3)4)36(9,10)38(35(37)44,18-17-24(5)6)34(43)31(33(37)42)32(41)26-14-16-29(39)30(40)19-26/h11-12,14,16-17,19,27-28,39-40,42H,7,13,15,18,20-21H2,1-6,8-10H3/t27-,28-,37-,38+/m1/s1
+  standard_inchi_key: QDKLRKZQSOQWJQ-LPEHXNHASA-N
+  molecular_formula: C38H50O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 602.812
+  monoisotopic_mass: 602.36074
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65991
+  source_label: guttiferone F
+  minted_identifier: antibioticmech:chebi-6eee618696
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

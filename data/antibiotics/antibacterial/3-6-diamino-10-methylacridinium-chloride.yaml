@@ -1,0 +1,48 @@
+identifier: CHEBI:383703
+label: 3,6-diamino-10-methylacridinium chloride
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The 10-methochloride salt of 3,6-diaminoacridine. Note that a mixture
+  of this compound with 3,6-diaminoacridine (proflavine) is known as acriflavine or
+  neutral acriflavine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: C.I. 46000
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acriflavine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trypaflavine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36094
+xrefs:
+- cas:86-40-8
+- reaxys:3579028
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[n+]1c2cc(N)ccc2cc2ccc(N)cc21.[Cl-]
+  standard_inchi: InChI=1S/C14H13N3.ClH/c1-17-13-7-11(15)4-2-9(13)6-10-3-5-12(16)8-14(10)17;/h2-8H,1H3,(H3,15,16);1H
+  standard_inchi_key: KKAJSJJFBSOMGS-UHFFFAOYSA-N
+  molecular_formula: C14H14N3.Cl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 259.74
+  monoisotopic_mass: 259.08763
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:383703
+  source_label: 3,6-diamino-10-methylacridinium chloride
+  minted_identifier: antibioticmech:chebi-263801f267
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

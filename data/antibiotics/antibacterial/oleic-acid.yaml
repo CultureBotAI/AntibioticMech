@@ -1,0 +1,63 @@
+identifier: CHEBI:16196
+label: oleic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Oleic acid is a fatty acid that occurs naturally in various animal and
+  vegetable fats and oils. Oleic acid is found to have antibacterial activity, particularly
+  in inhibiting the growth of several Gram-positive bacterial species.
+definition_source: PMID:10447892
+synonyms:
+- synonym_text: Cis-9-Octadecenoic acid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Cis-Oleic acid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Elaidoic acid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Oleate
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3003956
+xrefs:
+- ARO:3003958
+- cas:112-80-1
+- chembl:CHEMBL8659
+- pubchem.compound:445639
+structural_class: antibacterial free fatty acids
+structural_class_id: ARO:3003956
+chemical_structure:
+  smiles: CCCCCCCC/C=C\CCCCCCCC(=O)O
+  standard_inchi: InChI=1S/C18H34O2/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18(19)20/h9-10H,2-8,11-17H2,1H3,(H,19,20)/b10-9-
+  standard_inchi_key: ZQPPMHVWECSIRJ-KTKRTIGZSA-N
+  molecular_formula: C18H34O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 282.468
+  monoisotopic_mass: 282.25588
+source_concepts:
+- source: ARO
+  source_id: ARO:3003958
+  source_label: oleic acid
+  minted_identifier: antibioticmech:aro-2b4430e8b1
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003960
+  label: farAB
+  evidence:
+  - reference: ARO:3003960
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003958 (oleic acid);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

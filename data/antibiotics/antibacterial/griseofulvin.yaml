@@ -1,0 +1,121 @@
+identifier: CHEBI:27779
+label: griseofulvin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An oxaspiro compound produced by Penicillium griseofulvum. It is used
+  by mouth as an antifungal drug for infections involving the scalp, hair, nails and
+  skin that do not respond to topical treatment.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Curling factor
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Fulcin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Fulvicin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Grifulvin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Grisactin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Grisovin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Grysio
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Lamoryl
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Likuden
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Poncyl
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Spirofulvin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Sporostatin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: griseofulvina
+  synonym_type: INN
+  source: chebi
+- synonym_text: griseofulvinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: griséofulvine
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2S,6'R)-7-chloro-2',4,6-trimethoxy-6'-methyl-3H,4'H-spiro[1-benzofuran-2,1'-cyclohex[2]ene]-3,4'-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-griseofulvin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Griseofulvin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: amudane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36683
+- CHEBI:37948
+- CHEBI:38830
+- CHEBI:87113
+- CHEBI:87128
+xrefs:
+- cas:126-07-8
+- drugbank:DB00400
+- drugcentral:1331
+- kegg.compound:C06686
+- kegg.drug:D00209
+- knapsack:C00002398
+- lincs.smallmolecule:LSM-5259
+- lipidmaps:LMPK13060001
+- metacyc.compound:CPD-17786
+- patent:US3069328
+- patent:US3069329
+- ppdb:1807
+- reaxys:95226
+- vsdb:1807
+- wikipedia.en:Griseofulvin
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+- CHEBI:86327
+chemical_structure:
+  smiles: COC1=CC(=O)C[C@@H](C)[C@]12Oc1c(Cl)c(OC)cc(OC)c1C2=O
+  standard_inchi: InChI=1S/C17H17ClO6/c1-8-5-9(19)6-12(23-4)17(8)16(20)13-10(21-2)7-11(22-3)14(18)15(13)24-17/h6-8H,5H2,1-4H3/t8-,17+/m1/s1
+  standard_inchi_key: DDUHZTYCFQRHIY-RBHXEPJQSA-N
+  molecular_formula: C17H17ClO6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 352.77
+  monoisotopic_mass: 352.07137
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:27779
+  source_label: griseofulvin
+  minted_identifier: antibioticmech:chebi-42f55b6feb
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

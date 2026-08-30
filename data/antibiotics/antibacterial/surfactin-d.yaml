@@ -1,0 +1,56 @@
+identifier: CHEBI:71979
+label: surfactin D
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclodepsipeptide that is N-[(3R)-3-hydroxy-14-methylpentadecanoyl]-L-α-glutamyl-L-leucyl-D-leucyl-L-valyl-L-α-aspartyl-D-leucyl-L-leucine
+  in which the C-terminal carboxy group has been lactonised by condensation with the
+  alcoholic hydroxy group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-[(3S,6R,9S,12S,15R,18S,21S,25R)-9-(carboxymethyl)-3,6,15,18-tetraisobutyl-12-isopropyl-25-(11-methyldodecyl)-2,5,8,11,14,17,20,23-octaoxo-1-oxa-4,7,10,13,16,19,22-heptaazacyclopentacosan-21-yl]propanoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25061
+- CHEBI:35213
+- CHEBI:63944
+activity_roles:
+- CHEBI:22587
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]1(CCCCCCCCCCC(C)C)CC(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](CC(C)C)C(=O)N[C@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N[C@@H](CC(=O)O)C(=O)N[C@H](CC(C)C)C(=O)N[C@@H](CC(C)C)C(=O)O1'
+  standard_inchi: InChI=1S/C54H95N7O13/c1-31(2)21-19-17-15-13-14-16-18-20-22-37-29-44(62)55-38(23-24-45(63)64)48(67)56-39(25-32(3)4)49(68)58-41(27-34(7)8)52(71)61-47(36(11)12)53(72)59-42(30-46(65)66)51(70)57-40(26-33(5)6)50(69)60-43(28-35(9)10)54(73)74-37/h31-43,47H,13-30H2,1-12H3,(H,55,62)(H,56,67)(H,57,70)(H,58,68)(H,59,72)(H,60,69)(H,61,71)(H,63,64)(H,65,66)/t37-,38+,39+,40-,41-,42+,43+,47+/m1/s1
+  standard_inchi_key: HPBKRTWLUQRMNA-PTYDTDROSA-N
+  molecular_formula: C54H95N7O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1050.39
+  monoisotopic_mass: 1049.69879
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:71979
+  source_label: surfactin D
+  minted_identifier: antibioticmech:chebi-f950105397
+  role_terms:
+  - CHEBI:22587
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T01:42:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

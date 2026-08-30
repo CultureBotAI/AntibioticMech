@@ -1,0 +1,323 @@
+identifier: CHEBI:85260
+label: spiramycin I
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide antibiotic produced by various Streptomyces species that is
+  used to treat toxoplasmosis and various other infections of soft tissues.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[(4R,5S,6S,7R,9R,10R,11E,13E,16R)-6-{[(2S,3R,4R,5S,6R)-5-{[(2S,4R,5S,6S)-4,5-dihydroxy-4,6-dimethyloxan-2-yl]oxy}-4-(dimethylamino)-3-hydroxy-6-methyloxan-2-yl]oxy}-10-{[(2R,5S,6S)-5-(dimethylamino)-6-methyloxan-2-yl]oxy}-4-hydroxy-5-methoxy-9,16-dimethyl-2-oxo-1-oxacyclohexadeca-11,13-dien-7-yl]acetaldehyde'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Demycarosylturimycin H
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Foromacidine A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Spiramycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Spiramycin 1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Spiramycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: foromacidin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: rovamycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17478
+- CHEBI:25106
+- CHEBI:25698
+- CHEBI:50996
+- CHEBI:63353
+- ARO:0000000
+xrefs:
+- ARO:3000156
+- cas:24916-50-5
+- lipidmaps:LMPK04000005
+- metacyc.compound:CPD-13983
+- reaxys:21729639
+- chembl:CHEMBL453514
+- pubchem.compound:6419898
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: CO[C@@H]1[C@@H](O[C@@H]2O[C@H](C)[C@@H](O[C@H]3C[C@@](C)(O)[C@@H](O)[C@H](C)O3)[C@H](N(C)C)[C@H]2O)[C@@H](CC=O)C[C@@H](C)[C@@H](O[C@H]2CC[C@H](N(C)C)[C@H](C)O2)/C=C/C=C/C[C@@H](C)OC(=O)C[C@H]1O
+  standard_inchi: InChI=1S/C43H74N2O14/c1-24-21-29(19-20-46)39(59-42-37(49)36(45(9)10)38(27(4)56-42)58-35-23-43(6,51)41(50)28(5)55-35)40(52-11)31(47)22-33(48)53-25(2)15-13-12-14-16-32(24)57-34-18-17-30(44(7)8)26(3)54-34/h12-14,16,20,24-32,34-42,47,49-51H,15,17-19,21-23H2,1-11H3/b13-12+,16-14+/t24-,25-,26+,27-,28+,29+,30+,31-,32+,34+,35+,36-,37-,38-,39+,40+,41+,42+,43-/m1/s1
+  standard_inchi_key: ACTOXUHEUCPTEW-KWBWCIJSSA-N
+  molecular_formula: C43H74N2O14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 843.065
+  monoisotopic_mass: 842.51401
+source_concepts:
+- source: ARO
+  source_id: ARO:3000156
+  source_label: spiramycin
+  minted_identifier: antibioticmech:aro-3d9053be94
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:85260
+  source_label: spiramycin I
+  minted_identifier: antibioticmech:chebi-5e4ca6c63a
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000250
+  label: ErmC
+  evidence:
+  - reference: ARO:3000250
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000318
+  label: mphB
+  evidence:
+  - reference: ARO:3000318
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000319
+  label: mphC
+  evidence:
+  - reference: ARO:3000319
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000326
+  label: ErmE
+  evidence:
+  - reference: ARO:3000326
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000347
+  label: ErmA
+  evidence:
+  - reference: ARO:3000347
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000375
+  label: ErmB
+  evidence:
+  - reference: ARO:3000375
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000392
+  label: Erm(37)
+  evidence:
+  - reference: ARO:3000392
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000495
+  label: ErmD
+  evidence:
+  - reference: ARO:3000495
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000498
+  label: ErmF
+  evidence:
+  - reference: ARO:3000498
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000522
+  label: ErmG
+  evidence:
+  - reference: ARO:3000522
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000592
+  label: ErmN
+  evidence:
+  - reference: ARO:3000592
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000593
+  label: ErmQ
+  evidence:
+  - reference: ARO:3000593
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000594
+  label: ErmR
+  evidence:
+  - reference: ARO:3000594
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000595
+  label: ErmT
+  evidence:
+  - reference: ARO:3000595
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000596
+  label: ErmX
+  evidence:
+  - reference: ARO:3000596
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000599
+  label: Erm(33)
+  evidence:
+  - reference: ARO:3000599
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000600
+  label: Erm(34)
+  evidence:
+  - reference: ARO:3000600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000601
+  label: Erm(38)
+  evidence:
+  - reference: ARO:3000601
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000602
+  label: Erm(39)
+  evidence:
+  - reference: ARO:3000602
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000603
+  label: Erm(41)
+  evidence:
+  - reference: ARO:3000603
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000604
+  label: Erm(35)
+  evidence:
+  - reference: ARO:3000604
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000605
+  label: Erm(36)
+  evidence:
+  - reference: ARO:3000605
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3001303
+  label: ErmO-srmA
+  evidence:
+  - reference: ARO:3001303
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002828
+  label: srmB
+  evidence:
+  - reference: ARO:3002828
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003908
+  label: Erm(47)
+  evidence:
+  - reference: ARO:3003908
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004098
+  label: LpeAB
+  evidence:
+  - reference: ARO:3004098
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004170
+  label: Streptococcus pneumoniae 23S rRNA with mutation conferring resistance to
+    macrolide antibiotics
+  evidence:
+  - reference: ARO:3004170
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004171
+  label: Streptomyces ambofaciens 23S rRNA with mutation conferring resistance to
+    macrolide antibiotics
+  evidence:
+  - reference: ARO:3004171
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004176
+  label: Mycoplasma hominis 23S rRNA with mutation conferring resistance to macrolide
+    antibiotics
+  evidence:
+  - reference: ARO:3004176
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004605
+  label: ermZ
+  evidence:
+  - reference: ARO:3004605
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004606
+  label: erm(40)
+  evidence:
+  - reference: ARO:3004606
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3007050
+  label: mreA
+  evidence:
+  - reference: ARO:3007050
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000156 (spiramycin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000757
+  target_label: 50S ribosomal subunit P-site
+  evidence:
+  - reference: ARO:3000757
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000156 (spiramycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

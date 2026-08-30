@@ -1,0 +1,57 @@
+identifier: CHEBI:45773
+label: streptolydigin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid amide that is a broad-spectrum antibiotic produced
+  by Streptomyces lydicus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-2-{(2S,4E)-4-{(2E,4E,6R)-6-[(1R,2R,5R,6S,7R)-1,6-dimethylspiro[8,9-dioxabicyclo[3.3.1]non-3-ene-2,2'-oxiran]-7-yl]-1-hydroxy-4-methylhepta-2,4-dien-1-ylidene}-1-[(2S,5S,6S)-5-hydroxy-6-methyltetrahydro-2H-pyran-2-yl]-3,5-dioxopyrrolidin-2-yl}-N-methylpropanamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic D-45
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 3360
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:133131
+- CHEBI:21731
+- CHEBI:27171
+- CHEBI:29347
+- CHEBI:33823
+- CHEBI:35990
+- CHEBI:38275
+- CHEBI:59779
+xrefs:
+- cas:7229-50-7
+- drugbank:DB04785
+- pdb-ccd:STD
+- reaxys:9977901
+- wikipedia.en:Streptolydigin
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]1([C@H](C)/C=C(C)/C=C/C(O)=C2\C(=O)N([C@@H]3CC[C@H](O)[C@H](C)O3)[C@@]([H])([C@H](C)C(=O)NC)C2=O)O[C@@]2(C)O[C@H](C=C[C@@]23CO3)[C@@H]1C'
+  standard_inchi: InChI=1S/C32H44N2O9/c1-16(14-17(2)28-18(3)23-12-13-32(15-40-32)31(6,42-23)43-28)8-9-22(36)25-27(37)26(19(4)29(38)33-7)34(30(25)39)24-11-10-21(35)20(5)41-24/h8-9,12-14,17-21,23-24,26,28,35-36H,10-11,15H2,1-7H3,(H,33,38)/b9-8+,16-14+,25-22+/t17-,18+,19+,20+,21+,23-,24+,26+,28-,31-,32-/m1/s1
+  standard_inchi_key: KVTPRMVXYZKLIG-NCAOFHFGSA-N
+  molecular_formula: C32H44N2O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 600.709
+  monoisotopic_mass: 600.30468
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:45773
+  source_label: streptolydigin
+  minted_identifier: antibioticmech:chebi-2c1d7dfc69
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

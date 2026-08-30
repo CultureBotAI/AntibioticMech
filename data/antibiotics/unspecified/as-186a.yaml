@@ -1,0 +1,53 @@
+identifier: CHEBI:65443
+label: AS-186a
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dibenzodioxocine that is 5H,7H-dibenzo[b,g][1,5]dioxocin-5-one substituted
+  by a hydroxy group at position 11, a (1S)-1-hydroxy-3-methylbutyl group at position
+  3 and a methoxy and a methyl group at positions 4 and 9 respectively. It is isolated
+  from the culture broth of Penicillium asperosporum and acts as an acyl-CoA:cholesterol
+  acyltransferase inhibitor.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 11-hydroxy-3-[(1S)-1-hydroxy-3-methylbutyl]-4-methoxy-9-methyl-5H,7H-dibenzo[b,g][1,5]dioxocin-5-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: penicillide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: vermixocin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25000
+- CHEBI:33853
+- CHEBI:35618
+- CHEBI:35681
+- CHEBI:71064
+xrefs:
+- reaxys:4767683
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COc1c([C@@H](O)CC(C)C)ccc2c1C(=O)OCc1cc(C)cc(O)c1O2
+  standard_inchi: InChI=1S/C21H24O6/c1-11(2)7-15(22)14-5-6-17-18(20(14)25-4)21(24)26-10-13-8-12(3)9-16(23)19(13)27-17/h5-6,8-9,11,15,22-23H,7,10H2,1-4H3/t15-/m0/s1
+  standard_inchi_key: UOWGLBYIKHMCIS-HNNXBMFYSA-N
+  molecular_formula: C21H24O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 372.417
+  monoisotopic_mass: 372.15729
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65443
+  source_label: AS-186a
+  minted_identifier: antibioticmech:chebi-7c4be348d5
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

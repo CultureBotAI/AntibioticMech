@@ -1,0 +1,120 @@
+identifier: CHEBI:16976
+label: hygromycin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Hygromycin B is an aminoglycoside antibiotic used to treat different types
+  of bacterial infections. Hygromycin B works by binding to the bacterial 30S ribosomal
+  subunit, causing misreading of mRNA and leaving the bacterium unable to synthesize
+  proteins vital to its growth. Hygromycin B has also been shown to interact with
+  eukaryotic cells.
+definition_source: PMID:10103173
+synonyms:
+- synonym_text: (1R,2S,3R,5S,6R)-3-amino-2,6-dihydroxy-5-(methylamino)cyclohexyl O-6-amino-6-deoxy-L-glycero-D-galacto-heptopyranosylidene-(1→2-3)-β-D-talopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic A-396-II
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HYGROMYCIN B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hygromycin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-6-amino-6-deoxy-L-glycero-D-galacto-heptopyranosylidene-(1→2-3)-O-β-D-talopyranosyl-(1→5)-2-deoxy-N3-methyl-D-streptamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24753
+- CHEBI:71989
+- ARO:0000016
+xrefs:
+- ARO:3000214
+- beilstein:6755837
+- cas:31282-04-9
+- kegg.compound:C01925
+- pdb-ccd:HYG
+- pubchem.compound:35766
+activity_roles:
+- CHEBI:33281
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: CN[C@H]1C[C@@H](N)[C@H](O)[C@@H](O[C@@H]2O[C@H](CO)[C@H](O)[C@@H]3O[C@]4(O[C@H]23)O[C@H](C(N)CO)[C@H](O)[C@H](O)[C@H]4O)[C@@H]1O
+  standard_inchi: InChI=1S/C20H37N3O13/c1-23-7-2-5(21)9(26)15(10(7)27)33-19-17-16(11(28)8(4-25)32-19)35-20(36-17)18(31)13(30)12(29)14(34-20)6(22)3-24/h5-19,23-31H,2-4,21-22H2,1H3/t5-,6?,7+,8-,9+,10-,11+,12-,13+,14-,15-,16+,17+,18-,19+,20-/m1/s1
+  standard_inchi_key: GRRNUXAQVGOGFE-NZSRVPFOSA-N
+  molecular_formula: C20H37N3O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 527.524
+  monoisotopic_mass: 527.23264
+source_concepts:
+- source: ARO
+  source_id: ARO:3000214
+  source_label: hygromycin B
+  minted_identifier: antibioticmech:aro-2d8f3852fa
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:16976
+  source_label: hygromycin B
+  minted_identifier: antibioticmech:chebi-2d4d044d3a
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002655
+  label: APH(4)-Ia
+  evidence:
+  - reference: ARO:3002655
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000214 (hygromycin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002656
+  label: APH(4)-Ib
+  evidence:
+  - reference: ARO:3002656
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000214 (hygromycin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002661
+  label: APH(7'')-Ia
+  evidence:
+  - reference: ARO:3002661
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000214 (hygromycin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003539
+  label: Mycolicibacterium smegmatis 16S rRNA (rrsA) mutation conferring resistance
+    to hygromycin B
+  evidence:
+  - reference: ARO:3003539
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000214 (hygromycin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003540
+  label: Mycolicibacterium smegmatis 16S rRNA (rrsB) mutation conferring resistance
+    to hygromycin B
+  evidence:
+  - reference: ARO:3003540
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000214 (hygromycin
+      B); database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000214 (hygromycin B); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

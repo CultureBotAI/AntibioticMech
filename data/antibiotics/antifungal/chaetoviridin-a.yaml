@@ -1,0 +1,51 @@
+identifier: CHEBI:67610
+label: chaetoviridin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An azaphilone that is 6H-furo[2,3-h]isochromene-6,8(6aH)-dione substituted
+  by a chloro group at position 5, a 3-hydroxy-2-methylbutanoyl group at position
+  9, a methyl group at position 6a and a 3-methylpent-1-en-1yl group at position 3.
+  Isolated from Chaetomium globosum, it exhibits natifungal activity against plant
+  pathogenic fungi.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6aS)-5-chloro-9-[(2S,3R)-3-hydroxy-2-methylbutanoyl]-6a-methyl-3-[(1E,3S)-3-methylpent-1-en-1-yl]-6H-furo[2,3-h]isochromene-6,8(6aH)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26979
+- CHEBI:35681
+- CHEBI:36683
+- CHEBI:37581
+- CHEBI:50941
+- CHEBI:51689
+- CHEBI:55380
+xrefs:
+- cas:128252-98-2
+- chemspider:4953135
+- reaxys:3634068
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC[C@H](C)/C=C/C1=CC2=C(Cl)C(=O)[C@@]3(C)OC(=O)C(C(=O)[C@@H](C)[C@@H](C)O)=C3C2=CO1
+  standard_inchi: InChI=1S/C23H25ClO6/c1-6-11(2)7-8-14-9-15-16(10-29-14)18-17(20(26)12(3)13(4)25)22(28)30-23(18,5)21(27)19(15)24/h7-13,25H,6H2,1-5H3/b8-7+/t11-,12-,13+,23-/m0/s1
+  standard_inchi_key: HWSQVPGTQUYLEQ-CCBHEJLASA-N
+  molecular_formula: C23H25ClO6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 432.9
+  monoisotopic_mass: 432.13397
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:67610
+  source_label: chaetoviridin A
+  minted_identifier: antibioticmech:chebi-2ee378a511
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

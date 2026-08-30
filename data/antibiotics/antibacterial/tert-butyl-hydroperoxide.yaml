@@ -1,0 +1,66 @@
+identifier: CHEBI:64090
+label: tert-butyl hydroperoxide
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An alkyl hydroperoxide in which the alkyl group is tert-butyl. It is widely
+  used in a variety of oxidation processes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,1-Dimethylethyl hydroperoxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Hydroperoxy-2-methylpropane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dimethylethyl hydroperoxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hydroperoxyde de butyle tertiaire
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TBHP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tertiary-butyl hydroperoxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: t-Butylhydroperoxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: t-butyl hydroperoxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tert-Butylhydroperoxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:61050
+xrefs:
+- cas:75-91-2
+- reaxys:1098280
+- wikipedia.en:Tert-Butyl_hydroperoxide
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)(C)OO
+  standard_inchi: InChI=1S/C4H10O2/c1-4(2,3)6-5/h5H,1-3H3
+  standard_inchi_key: CIHOLLKRGTVIJN-UHFFFAOYSA-N
+  molecular_formula: C4H10O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 90.122
+  monoisotopic_mass: 90.06808
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:64090
+  source_label: tert-butyl hydroperoxide
+  minted_identifier: antibioticmech:chebi-4d03952fad
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

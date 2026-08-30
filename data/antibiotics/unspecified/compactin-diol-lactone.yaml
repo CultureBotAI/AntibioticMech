@@ -1,0 +1,62 @@
+identifier: CHEBI:34652
+label: compactin diol lactone
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbobicyclic compound that is ML-236C substituted by a hydroxy group
+  at position 8S. It is a fungal metabolite isolated from Penicillium citrinum and
+  exhibits anticholesteremic activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4R,6R)-4-hydroxy-6-{2-[(1S,2S,8S,8aR)-8-hydroxy-2-methyl-1,2,6,7,8,8a-hexahydronaphthalen-1-yl]ethyl}tetrahydro-2H-pyran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4R,6R)-4-hydroxy-6-{2-[(1S,2S,8S,8aR)-8-hydroxy-2-methyl-1,2,6,7,8,8a-hexahydronaphthalen-1-yl]ethyl}oxan-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic ML 236A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ML 236A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ML-236A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: desmethylmonacolin J
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:142348
+- CHEBI:26188
+- CHEBI:35681
+- CHEBI:36785
+- CHEBI:75885
+xrefs:
+- cas:58889-19-3
+- kegg.compound:C14183
+- knapsack:C00018116
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12C(=CCC[C@@H]1O)C=C[C@H](C)[C@@H]2CC[C@@H]1C[C@@H](O)CC(=O)O1'
+  standard_inchi: InChI=1S/C18H26O4/c1-11-5-6-12-3-2-4-16(20)18(12)15(11)8-7-14-9-13(19)10-17(21)22-14/h3,5-6,11,13-16,18-20H,2,4,7-10H2,1H3/t11-,13+,14+,15-,16-,18-/m0/s1
+  standard_inchi_key: WWSNTLOVYSRDEL-DZSDEGEFSA-N
+  molecular_formula: C18H26O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 306.402
+  monoisotopic_mass: 306.18311
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:34652
+  source_label: compactin diol lactone
+  minted_identifier: antibioticmech:chebi-7465bf01d1
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

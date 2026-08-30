@@ -1,0 +1,159 @@
+identifier: antibioticmech:aro-3116ad4253
+label: isepamicin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: A semi-synthetic derivative of gentamicin B (hydroxyamino propionyl genamicin
+  B). It is modified to combat microbial inactivation and has a slightly larger spectrum
+  of activity compared to other aminoglycosides, including Ser marcescens, Enterobacteria,
+  and K pneumoniae.
+definition_source: PMID:8622111
+synonyms:
+- synonym_text: isepamicine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: isepamicinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:0000016
+xrefs:
+- ARO:3000652
+- chembl:CHEMBL272080
+- pubchem.compound:3037209
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: C[C@@]1(CO[C@@H]([C@@H]([C@H]1NC)O)O[C@H]2[C@@H](C[C@@H]([C@H]([C@@H]2O)O[C@@H]3[C@@H]([C@H]([C@@H]([C@H](O3)CN)O)O)O)N)NC(=O)[C@H](CN)O)O
+  standard_inchi: InChI=1S/C22H43N5O12/c1-22(35)6-36-20(15(33)18(22)26-2)39-17-8(27-19(34)9(28)4-23)3-7(25)16(14(17)32)38-21-13(31)12(30)11(29)10(5-24)37-21/h7-18,20-21,26,28-33,35H,3-6,23-25H2,1-2H3,(H,27,34)/t7-,8+,9-,10+,11+,12-,13+,14-,15+,16+,17-,18+,20+,21+,22-/m0/s1
+  standard_inchi_key: UDIIBEDMEYAVNG-ZKFPOVNWSA-N
+  molecular_formula: C22H43N5O12
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 569.6
+  monoisotopic_mass: 569.29082182
+source_concepts:
+- source: ARO
+  source_id: ARO:3000652
+  source_label: isepamicin
+  minted_identifier: antibioticmech:aro-3116ad4253
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000858
+  label: armA
+  evidence:
+  - reference: ARO:3000858
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000652 (isepamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000859
+  label: rmtA
+  evidence:
+  - reference: ARO:3000859
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000652 (isepamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000860
+  label: rmtB
+  evidence:
+  - reference: ARO:3000860
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000652 (isepamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000861
+  label: rmtC
+  evidence:
+  - reference: ARO:3000861
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000652 (isepamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000862
+  label: sgm
+  evidence:
+  - reference: ARO:3000862
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000652 (isepamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002583
+  label: AAC(6')-29a
+  evidence:
+  - reference: ARO:3002583
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000652 (isepamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002584
+  label: AAC(6')-29b
+  evidence:
+  - reference: ARO:3002584
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000652 (isepamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002585
+  label: AAC(6')-31
+  evidence:
+  - reference: ARO:3002585
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000652 (isepamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002623
+  label: ANT(4')-Ia
+  evidence:
+  - reference: ARO:3002623
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000652 (isepamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002624
+  label: ANT(4')-IIa
+  evidence:
+  - reference: ARO:3002624
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000652 (isepamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002625
+  label: ANT(4')-IIb
+  evidence:
+  - reference: ARO:3002625
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000652 (isepamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002647
+  label: APH(3')-IIIa
+  evidence:
+  - reference: ARO:3002647
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000652 (isepamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002652
+  label: APH(3')-VIa
+  evidence:
+  - reference: ARO:3002652
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000652 (isepamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002653
+  label: APH(3')-VIb
+  evidence:
+  - reference: ARO:3002653
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000652 (isepamicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003905
+  label: ANT(4')-Ib
+  evidence:
+  - reference: ARO:3003905
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000652 (isepamicin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000652 (isepamicin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,226 @@
+identifier: antibioticmech:aro-4a4590abba
+label: griseoviridin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Griseoviridin is a streptogramin A antibiotic.
+definition_source: PMID:15700955
+parent_compounds:
+- ARO:0000026
+xrefs:
+- ARO:3000673
+- CHEBI:199588
+- pubchem.compound:6441064
+structural_class: streptogramin antibiotic
+structural_class_id: ARO:0000026
+chemical_structure:
+  smiles: C[C@@H]1C/C=C\2/C(=O)NC/C=C\C=C/[C@H](C[C@H](CC3=NC(=CO3)C(=O)N[C@H](CS2)C(=O)O1)O)O
+  standard_inchi: InChI=1S/C22H27N3O7S/c1-13-6-7-18-21(29)23-8-4-2-3-5-14(26)9-15(27)10-19-24-16(11-31-19)20(28)25-17(12-33-18)22(30)32-13/h2-5,7,11,13-15,17,26-27H,6,8-10,12H2,1H3,(H,23,29)(H,25,28)/b4-2-,5-3-,18-7-/t13-,14-,15-,17-/m1/s1
+  standard_inchi_key: UXWOXTQWVMFRSE-SXTNSRNPSA-N
+  molecular_formula: C22H27N3O7S
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 477.5
+  monoisotopic_mass: 477.15697138
+source_concepts:
+- source: ARO
+  source_id: ARO:3000673
+  source_label: griseoviridin
+  minted_identifier: antibioticmech:aro-4a4590abba
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000250
+  label: ErmC
+  evidence:
+  - reference: ARO:3000250
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000326
+  label: ErmE
+  evidence:
+  - reference: ARO:3000326
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000347
+  label: ErmA
+  evidence:
+  - reference: ARO:3000347
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000375
+  label: ErmB
+  evidence:
+  - reference: ARO:3000375
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000392
+  label: Erm(37)
+  evidence:
+  - reference: ARO:3000392
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000453
+  label: streptogramin vat acetyltransferase
+  evidence:
+  - reference: ARO:3000453
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000495
+  label: ErmD
+  evidence:
+  - reference: ARO:3000495
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000498
+  label: ErmF
+  evidence:
+  - reference: ARO:3000498
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000522
+  label: ErmG
+  evidence:
+  - reference: ARO:3000522
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000592
+  label: ErmN
+  evidence:
+  - reference: ARO:3000592
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000593
+  label: ErmQ
+  evidence:
+  - reference: ARO:3000593
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000594
+  label: ErmR
+  evidence:
+  - reference: ARO:3000594
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000595
+  label: ErmT
+  evidence:
+  - reference: ARO:3000595
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000596
+  label: ErmX
+  evidence:
+  - reference: ARO:3000596
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000599
+  label: Erm(33)
+  evidence:
+  - reference: ARO:3000599
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000600
+  label: Erm(34)
+  evidence:
+  - reference: ARO:3000600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000601
+  label: Erm(38)
+  evidence:
+  - reference: ARO:3000601
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000602
+  label: Erm(39)
+  evidence:
+  - reference: ARO:3000602
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000603
+  label: Erm(41)
+  evidence:
+  - reference: ARO:3000603
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000604
+  label: Erm(35)
+  evidence:
+  - reference: ARO:3000604
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000605
+  label: Erm(36)
+  evidence:
+  - reference: ARO:3000605
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002814
+  label: clbA
+  evidence:
+  - reference: ARO:3002814
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002815
+  label: clbB
+  evidence:
+  - reference: ARO:3002815
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002816
+  label: clbC
+  evidence:
+  - reference: ARO:3002816
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003441
+  label: cfrA
+  evidence:
+  - reference: ARO:3003441
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003907
+  label: cipA
+  evidence:
+  - reference: ARO:3003907
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000673 (griseoviridin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000754
+  target_label: antibiotic sensitive peptidyl transferase (23S rRNA)
+  evidence:
+  - reference: ARO:3000754
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000673 (griseoviridin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

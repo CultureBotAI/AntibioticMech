@@ -1,0 +1,64 @@
+identifier: CHEBI:230470
+label: rezafungin acetate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An acetate salt obtained by combining rezafungin with one molar equivalent
+  of acetic acid. It is an echinocandin antifungal indicated in patients 18 years
+  of age or older who have limited or no alternative options for the treatment of
+  candidemia and invasive candidiasis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Rezzayo
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: acetato de rezafungina
+  synonym_type: INN
+  source: chebi
+- synonym_text: acétate de rézafungine
+  synonym_type: INN
+  source: chebi
+- synonym_text: rezafungini acetas
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-{[(2R,6S,9S,11R,12R,14aS,15S,16S,20S,23S,25aS)-23-[(1S,2S)-1,2-dihydroxy-2-(4-hydroxyphenyl)ethyl]-2,11,15-trihydroxy-6,20-bis[(1R)-1-hydroxyethyl]-16-methyl-5,8,14,19,22,25-hexaoxo-9-({[4''-(pentyloxy)[1,1':4',1''-terphenyl]-4-yl]carbonyl}amino)tetracosahydro-1H-dipyrrolo[2,1-c:2',1'-l][1,4,7,10,13,16]hexaazacyclohenicosin-12-yl]oxy}-N,N,N-trimethylethanaminium
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: biafungin acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35273
+- CHEBI:57248
+- CHEBI:59230
+- CHEBI:87113
+xrefs:
+- cas:1631754-41-0
+- kegg.drug:D11198
+activity_roles:
+- CHEBI:35718
+- CHEBI:86327
+chemical_structure:
+  smiles: CC(=O)[O-].[H][C@@]12C[C@@H](O)CN1C(=O)[C@H]([C@@H](C)O)NC(=O)[C@@H](NC(=O)c1ccc(-c3ccc(-c4ccc(OCCCCC)cc4)cc3)cc1)C[C@@H](O)[C@@H](OCC[N+](C)(C)C)NC(=O)[C@]1([H])[C@@H](O)[C@@H](C)CN1C(=O)[C@H]([C@@H](C)O)NC(=O)[C@H]([C@H](O)[C@@H](O)c1ccc(O)cc1)NC2=O
+  standard_inchi: InChI=1S/C63H84N8O17.C2H4O2/c1-8-9-10-28-87-45-25-21-40(22-26-45)38-13-11-37(12-14-38)39-15-17-42(18-16-39)56(80)64-46-31-48(76)61(88-29-27-71(5,6)7)68-60(84)52-53(77)34(2)32-70(52)63(86)50(36(4)73)66-59(83)51(55(79)54(78)41-19-23-43(74)24-20-41)67-58(82)47-30-44(75)33-69(47)62(85)49(35(3)72)65-57(46)81;1-2(3)4/h11-26,34-36,44,46-55,61,72-73,75-79H,8-10,27-33H2,1-7H3,(H5-,64,65,66,67,68,74,80,81,82,83,84);1H3,(H,3,4)/t34-,35+,36+,44+,46-,47-,48+,49-,50-,51-,52-,53-,54-,55-,61+;/m0./s1
+  standard_inchi_key: MXMWJAPNUIKPGF-YOFVRWEXSA-N
+  molecular_formula: C2H3O2.C63H85N8O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1285.456
+  monoisotopic_mass: 1284.61657
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:230470
+  source_label: rezafungin acetate
+  minted_identifier: antibioticmech:chebi-ba96ce1d95
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

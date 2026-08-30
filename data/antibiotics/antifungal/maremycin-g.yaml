@@ -1,0 +1,53 @@
+identifier: CHEBI:167566
+label: maremycin G
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An indole alkaloid with formula C22H21N3O3S. It is a natural product synthesized
+  by an NRPS/PKS system in Streptomyces sp. B917 and exhibits antifungal properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5S)-1',5-dimethyl-2-[(methylsulfanyl)methyl]-7,8-dihydrospiro[cyclopenta[f]quinoxaline-6,3'-indole]-2',3,9(1'H,4H,5H)-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5S)-1',5-dimethyl-2-[(methylsulfanyl)methyl]-1',2',3,4,5,7,8,9-octahydrospiro[cyclopenta[f]quinoxaline-6,3'-
+    indole]-2',3,9-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5S)-1',5-dimethyl-2-[(methylsulfanyl)methyl]-4,5,7,8-tetrahydrospiro[cyclopenta[f]quinoxaline-6,3'-indole]-2',3,9-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24829
+- CHEBI:33599
+- CHEBI:38164
+- CHEBI:38958
+- CHEBI:3992
+- CHEBI:46846
+- CHEBI:51689
+- CHEBI:86315
+- CHEBI:86478
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CSCc1nc2c(nc1=O)[C@@H](C)C1(C(=O)N(C)c3ccccc31)C1=C2C(=O)CC1
+  standard_inchi: InChI=1S/C22H21N3O3S/c1-11-18-19(23-14(10-29-3)20(27)24-18)17-13(8-9-16(17)26)22(11)12-6-4-5-7-15(12)25(2)21(22)28/h4-7,11H,8-10H2,1-3H3,(H,24,27)/t11-,22?/m1/s1
+  standard_inchi_key: NRFFIDZDMKFXMS-FAYKFVSFSA-N
+  molecular_formula: C22H21N3O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 407.495
+  monoisotopic_mass: 407.13036
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:167566
+  source_label: maremycin G
+  minted_identifier: antibioticmech:chebi-c0ab16d690
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

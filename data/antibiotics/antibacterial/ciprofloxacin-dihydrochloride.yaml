@@ -1,0 +1,42 @@
+identifier: CHEBI:59938
+label: ciprofloxacin dihydrochloride
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The dihydrochloride salt of ciprofloxacin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-cyclopropyl-6-fluoro-4-oxo-7-(piperazin-1-yl)-1,4-dihydroquinoline-3-carboxylic
+    acid dihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-cyclopropyl-6-fluoro-1,4-dihydro-4-oxo-7-(1-piperazinyl)-3-quinolinecarboxylic
+    acid dihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: Cl.Cl.O=C(O)c1cn(C2CC2)c2cc(N3CCNCC3)c(F)cc2c1=O
+  standard_inchi: InChI=1S/C17H18FN3O3.2ClH/c18-13-7-11-14(8-15(13)20-5-3-19-4-6-20)21(10-1-2-10)9-12(16(11)22)17(23)24;;/h7-10,19H,1-6H2,(H,23,24);2*1H
+  standard_inchi_key: PWRKLYZVCZMDTC-UHFFFAOYSA-N
+  molecular_formula: C17H18FN3O3.2HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 404.269
+  monoisotopic_mass: 403.08658
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59938
+  source_label: ciprofloxacin dihydrochloride
+  minted_identifier: antibioticmech:chebi-cee61d06d1
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

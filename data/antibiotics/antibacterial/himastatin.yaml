@@ -1,0 +1,65 @@
+identifier: CHEBI:190009
+label: himastatin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dimeric cyclohexadepsipeptide with formula C72H104N14O20. It is an antibiotic
+  isolated from Streptomyces hygroscopicus and exhibits antitumor and antibacterial
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,3'R,4aR,4a'R,7S,7'S,10R,10'R,12aS,12a'S,17bR,17b'R,18aS,18a'S,21R,21'R,24S,24'S)-3,3',17b,17b'-tetrahydroxy-10,10'-bis[(1S)-1-hydroxyethyl]-7,7'-bis(2-methylpropyl)-21,21',24,24'-tetra(propan-2-yl)-2,2',3,3',4,4',4a,4a',6,6',7,7',9,9',10,10',13,13',17b,17b',18,18',18a,18a',20,20',21,21'-octacosahydro-12aH,12a'H-[16,16'-bipyridazino[6'',1'':15',16'][1,4,7,10,13,16]oxapentaazacyclooctadecino[7',6':1,5]pyrrolo[2,3-b]indole]-5,5',8,8',11,11',19,19',22,22',25,25'(1H,1'H,24H,24'H)-dodecone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BMY 40800
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BMY-40800
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BMY40800
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic BMY 40800
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25903
+- CHEBI:35213
+- CHEBI:51026
+xrefs:
+- cas:126775-74-4
+- chemspider:8031048
+- knapsack:C00028345
+- patent:EP0329109
+- patent:US5036010
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12Nc3ccc(-c4ccc5c(c4)[C@]4(O)C[C@H]6C(=O)N[C@H](C(C)C)C(=O)O[C@@H](C(C)C)C(=O)N7NC[C@H](O)C[C@@H]7C(=O)N[C@@H](CC(C)C)C(=O)N[C@H]([C@H](C)O)C(=O)N6[C@]4([H])N5)cc3[C@]1(O)C[C@H]1C(=O)N[C@H](C(C)C)C(=O)O[C@@H](C(C)C)C(=O)N3NC[C@H](O)C[C@@H]3C(=O)N[C@@H](CC(C)C)C(=O)N[C@H]([C@H](C)O)C(=O)N12'
+  standard_inchi: InChI=1S/C72H104N14O20/c1-29(2)19-45-57(91)81-53(35(13)87)63(97)83-49(61(95)79-51(31(5)6)67(101)105-55(33(9)10)65(99)85-47(59(93)75-45)23-39(89)27-73-85)25-71(103)41-21-37(15-17-43(41)77-69(71)83)38-16-18-44-42(22-38)72(104)26-50-62(96)80-52(32(7)8)68(102)106-56(34(11)12)66(100)86-48(24-40(90)28-74-86)60(94)76-46(20-30(3)4)58(92)82-54(36(14)88)64(98)84(50)70(72)78-44/h15-18,21-22,29-36,39-40,45-56,69-70,73-74,77-78,87-90,103-104H,19-20,23-28H2,1-14H3,(H,75,93)(H,76,94)(H,79,95)(H,80,96)(H,81,91)(H,82,92)/t35-,36-,39+,40+,45-,46-,47+,48+,49-,50-,51+,52+,53+,54+,55-,56-,69-,70-,71+,72+/m0/s1
+  standard_inchi_key: OZPNLJQULOIOGU-UPABGHPRSA-N
+  molecular_formula: C72H104N14O20
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1485.702
+  monoisotopic_mass: 1484.75513
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:190009
+  source_label: himastatin
+  minted_identifier: antibioticmech:chebi-1bf7da587c
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

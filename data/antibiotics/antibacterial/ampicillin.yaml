@@ -1,0 +1,403 @@
+identifier: CHEBI:28971
+label: ampicillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin in which the substituent at position 6 of the penam ring
+  is a 2-amino-2-phenylacetamido group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ampicilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: ampicilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: ampicillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-[(2R)-2-amino-2-phenylacetamido]-2,2-dimethylpenam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-{[(2R)-2-AMINO-2-PHENYLETHANOYL]AMINO}-3,3-DIMETHYL-7-OXO-4-THIA-1-AZABICYCLO[3.2.0]HEPTANE-2-CARBOXYLIC
+    ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-{[(2R)-2-amino-2-phenylacetyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,6R)-6-{[(2R)-2-amino-2-phenylethanoyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(D-(2-amino-2-phenylacetamido))-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo(3.2.0)heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ABPC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AMP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ampicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Anhydrous ampicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-(−)-6-(α-aminophenylacetamido)penicillanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-(−)-ampicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: aminobenzylpenicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ampicillin acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ampicillin anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Principen
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- CHEBI:27933
+- CHEBI:88187
+- ARO:3000008
+xrefs:
+- ARO:3000637
+- cas:69-53-4
+- drugbank:DB00415
+- drugcentral:198
+- hmdb:HMDB0014559
+- kegg.compound:C06574
+- kegg.drug:D00204
+- lincs.smallmolecule:LSM-5761
+- patent:GB902703
+- patent:US2985648
+- patent:US3157640
+- pdb-ccd:AIC
+- pdb-ccd:PN1
+- pdb:1H8S
+- reaxys:4300240
+- vsdb:1849
+- wikipedia.en:Ampicillin
+- chembl:CHEMBL174
+- pubchem.compound:6249
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)[C@H](N)c1ccccc1'
+  standard_inchi: InChI=1S/C16H19N3O4S/c1-16(2)11(15(22)23)19-13(21)10(14(19)24-16)18-12(20)9(17)8-6-4-3-5-7-8/h3-7,9-11,14H,17H2,1-2H3,(H,18,20)(H,22,23)/t9-,10-,11+,14-/m1/s1
+  standard_inchi_key: AVKUERGKIZMTKX-NJBDSQKTSA-N
+  molecular_formula: C16H19N3O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 349.412
+  monoisotopic_mass: 349.10963
+source_concepts:
+- source: ARO
+  source_id: ARO:3000637
+  source_label: ampicillin
+  minted_identifier: antibioticmech:aro-60a0e570fd
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:28971
+  source_label: ampicillin
+  minted_identifier: antibioticmech:chebi-ae6873a4e5
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000014
+  label: TEM beta-lactamase
+  evidence:
+  - reference: ARO:3000014
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000384
+  label: AcrAB-TolC
+  evidence:
+  - reference: ARO:3000384
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000386
+  label: MexAB-OprM
+  evidence:
+  - reference: ARO:3000386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000873
+  label: TEM-1
+  evidence:
+  - reference: ARO:3000873
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000900
+  label: TEM-30
+  evidence:
+  - reference: ARO:3000900
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000966
+  label: TEM-103
+  evidence:
+  - reference: ARO:3000966
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001059
+  label: SHV-1
+  evidence:
+  - reference: ARO:3001059
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001396
+  label: OXA-1
+  evidence:
+  - reference: ARO:3001396
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001397
+  label: OXA-2
+  evidence:
+  - reference: ARO:3001397
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001796
+  label: OXA-50
+  evidence:
+  - reference: ARO:3001796
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001866
+  label: CTX-M-3
+  evidence:
+  - reference: ARO:3001866
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001878
+  label: CTX-M-15
+  evidence:
+  - reference: ARO:3001878
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001889
+  label: CTX-M-27
+  evidence:
+  - reference: ARO:3001889
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002013
+  label: CMY-2
+  evidence:
+  - reference: ARO:3002013
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002500
+  label: PDC-3
+  evidence:
+  - reference: ARO:3002500
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002502
+  label: PDC-5
+  evidence:
+  - reference: ARO:3002502
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003589
+  label: NmcA
+  evidence:
+  - reference: ARO:3003589
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3003966
+  label: Klebsiella pneumoniae OmpK35
+  evidence:
+  - reference: ARO:3003966
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004446
+  label: Haemophilus influenzae PBP3 conferring resistance to beta-lactam antibiotics
+  evidence:
+  - reference: ARO:3004446
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005015
+  label: VMB-1
+  evidence:
+  - reference: ARO:3005015
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005111
+  label: blaS1
+  evidence:
+  - reference: ARO:3005111
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005511
+  label: VIM-63
+  evidence:
+  - reference: ARO:3005511
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007003
+  label: VHH-1
+  evidence:
+  - reference: ARO:3007003
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007004
+  label: VHW-1
+  evidence:
+  - reference: ARO:3007004
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3007011
+  label: mdeA
+  evidence:
+  - reference: ARO:3007011
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007062
+  label: VAM-1
+  evidence:
+  - reference: ARO:3007062
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007085
+  label: PRC-1
+  evidence:
+  - reference: ARO:3007085
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007206
+  label: KBL-1
+  evidence:
+  - reference: ARO:3007206
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007374
+  label: PJM-1
+  evidence:
+  - reference: ARO:3007374
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007435
+  label: WUS-1
+  evidence:
+  - reference: ARO:3007435
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007437
+  label: EBR-5
+  evidence:
+  - reference: ARO:3007437
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007438
+  label: LAQ-1
+  evidence:
+  - reference: ARO:3007438
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007442
+  label: SSA
+  evidence:
+  - reference: ARO:3007442
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007531
+  label: Streptococcus pyogenes PBP2x conferring resistance to beta-lactam antibiotics
+  evidence:
+  - reference: ARO:3007531
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007635
+  label: CAE-1
+  evidence:
+  - reference: ARO:3007635
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007648
+  label: PSZ-1
+  evidence:
+  - reference: ARO:3007648
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007694
+  label: AMZ-1
+  evidence:
+  - reference: ARO:3007694
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000637 (ampicillin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000637 (ampicillin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

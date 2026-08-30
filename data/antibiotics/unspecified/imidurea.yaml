@@ -1,0 +1,52 @@
+identifier: CHEBI:51805
+label: imidurea
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: Germall 115
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: N',N'''-methanediylbis{1-[3-(hydroxymethyl)-2,5-dioxoimidazolidin-4-yl]urea}
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N''-methylenebis(N'-(3-(hydroxymethyl)-2,5-dioxo-4-imidazolidinyl)urea)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: imidazolidinyl urea
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methanebis(N,N'-(5-ureido-2,4-diketotetrahydroimidazole)-N,N-dimethylol)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:47857
+xrefs:
+- beilstein:8731946
+- cas:39236-46-9
+- lincs.smallmolecule:LSM-5114
+- patent:US3248285
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: O=C(NCNC(=O)NC1C(=O)NC(=O)N1CO)NC1C(=O)NC(=O)N1CO
+  standard_inchi: InChI=1S/C11H16N8O8/c20-2-18-4(6(22)16-10(18)26)14-8(24)12-1-13-9(25)15-5-7(23)17-11(27)19(5)3-21/h4-5,20-21H,1-3H2,(H2,12,14,24)(H2,13,15,25)(H,16,22,26)(H,17,23,27)
+  standard_inchi_key: ZCTXEAQXZGPWFG-UHFFFAOYSA-N
+  molecular_formula: C11H16N8O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 388.297
+  monoisotopic_mass: 388.10911
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:51805
+  source_label: imidurea
+  minted_identifier: antibioticmech:chebi-db452267f1
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

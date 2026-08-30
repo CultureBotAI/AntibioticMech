@@ -1,0 +1,51 @@
+identifier: CHEBI:8350
+label: pradimicin B
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of prodimicins that is isolated from the cultured
+  broth of Actinomadura hibisca No. P157-2 (ATCC 53557).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R)-2-({[(5S,6S)-5-{[(2S,3R,4S,5R,6R)-3,4-dihydroxy-6-methyl-5-(methylamino)tetrahydro-2H-pyran-2-yl]oxy}-1,6,9,14-tetrahydroxy-11-methoxy-3-methyl-8,13-dioxo-5,6,8,13-tetrahydrobenzo[a]tetracen-2-yl]carbonyl}amino)propanoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26188
+- CHEBI:26195
+- CHEBI:35618
+- CHEBI:35681
+- CHEBI:63367
+- CHEBI:83230
+- CHEBI:83943
+xrefs:
+- cas:117704-66-2
+- kegg.compound:C06783
+- reaxys:4640809
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: CN[C@@H]1[C@H](O)[C@@H](O)[C@H](O[C@H]2c3cc(C)c(C(=O)N[C@H](C)C(=O)O)c(O)c3-c3c(cc4c(c3O)C(=O)c3cc(OC)cc(O)c3C4=O)[C@@H]2O)O[C@@H]1C
+  standard_inchi: InChI=1S/C35H36N2O14/c1-10-6-17-22(28(42)19(10)33(46)37-11(2)34(47)48)21-15(27(41)32(17)51-35-31(45)30(44)24(36-4)12(3)50-35)9-16-23(29(21)43)26(40)14-7-13(49-5)8-18(38)20(14)25(16)39/h6-9,11-12,24,27,30-32,35-36,38,41-45H,1-5H3,(H,37,46)(H,47,48)/t11-,12-,24+,27+,30+,31-,32+,35+/m1/s1
+  standard_inchi_key: DHQWPIXFALDZDJ-LPEZYDJLSA-N
+  molecular_formula: C35H36N2O14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 708.673
+  monoisotopic_mass: 708.21665
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:8350
+  source_label: pradimicin B
+  minted_identifier: antibioticmech:chebi-64a05ee29d
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

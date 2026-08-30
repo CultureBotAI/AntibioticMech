@@ -1,0 +1,57 @@
+identifier: CHEBI:71987
+label: curamycin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polyketide antibiotic produced by Streptomyces curacoi.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3S,4R,6S)-6-{[(2R,3aR,4R,4'R,5'S,6S,6'R,7aR)-6-{[(2S,3R,4R,5S,6R)-2-{[(2R,3S,4S,5S,6S)-6-{[(2R,3aS,3a'R,6S,6'R,7R,7'S,7aR,7a'R)-7-acetoxy-7'-acetyl-7'-hydroxy-6'-methyloctahydro-4H-2,4'-spirobi[[1,3]dioxolo[4,5-c]pyran]-6-yl]oxy}-4-hydroxy-5-methoxy-2-(methoxymethyl)tetrahydro-2H-pyran-3-yl]oxy}-3-hydroxy-5-methoxy-6-methyltetrahydro-2H-pyran-4-yl]oxy}-4'-hydroxy-4,6',7a-trimethyloctahydro-4H-spiro[1,3-dioxolo[4,5-c]pyran-2,2'-pyran]-5'-yl]oxy}-4-hydroxy-2-methyltetrahydro-2H-pyran-3-yl
+    3,5-dichloro-4-hydroxy-2-methoxy-6-methylbenzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-(1R)-4-C-acetyl-6-deoxy-2,3-O-methylene-D-galactopyranosylidene-(1-3-4)-2-O-acetyl-α-L-lyxopyranosyl
+    O-2,6-dideoxy-4-O-(3,5-dichloro-4-hydroxy-2-methoxy-6-methylbenzoyl)-β-D-arabino-hexopyranosyl-(1-4)-O-2,6-dideoxy-D-arabino-hexopyranosylidene-(1-3-4)-O-2,6-dideoxy-3-C-methyl-β-D-arabino-hexopyranosyl-(1-3)-O-6-deoxy-4-O-methyl-β-D-galactopyranosyl-(1-4)-2,6-di-O-methyl-β-D-mannopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: UNII-09Q4B44I8C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:24400
+- CHEBI:26188
+- CHEBI:33853
+- CHEBI:36683
+- CHEBI:47622
+- CHEBI:51867
+- CHEBI:59770
+- CHEBI:65212
+- CHEBI:71989
+xrefs:
+- cas:73240-30-9
+- reaxys:6495698
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12O[C@]3(O[C@H](C)[C@@](O)(C(C)=O)[C@@H]4OCO[C@H]43)O[C@@]1([H])CO[C@@H](O[C@@H]1O[C@H](COC)[C@@H](O[C@@H]3O[C@H](C)[C@H](OC)[C@H](O[C@H]4C[C@@]5(C)O[C@@]6(C[C@@H](O)[C@H](O[C@H]7C[C@@H](O)[C@H](OC(=O)c8c(C)c(Cl)c(O)c(Cl)c8OC)[C@@H](C)O7)[C@@H](C)O6)O[C@]5([H])[C@@H](C)O4)[C@H]3O)[C@H](O)[C@@H]1OC)[C@@H]2OC(C)=O'
+  standard_inchi: InChI=1S/C59H84Cl2O32/c1-20-34(45(73-12)36(61)37(66)35(20)60)52(69)85-40-21(2)78-32(14-28(40)64)83-41-23(4)88-57(15-29(41)65)92-49-24(5)79-33(16-56(49,9)93-57)84-46-39(68)53(80-22(3)42(46)72-11)86-43-30(17-71-10)82-55(47(74-13)38(43)67)87-54-48(81-27(8)63)44-31(18-75-54)90-59(91-44)51-50(76-19-77-51)58(70,25(6)62)26(7)89-59/h21-24,26,28-33,38-44,46-51,53-55,64-68,70H,14-19H2,1-13H3/t21-,22-,23-,24-,26-,28-,29-,30-,31+,32+,33+,38+,39-,40-,41-,42+,43-,44-,46-,47+,48-,49-,50-,51-,53+,54+,55+,56-,57-,58+,59-/m1/s1
+  standard_inchi_key: VVIAOPGTVSECTI-QPNFVAJLSA-N
+  molecular_formula: C59H84Cl2O32
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1376.195
+  monoisotopic_mass: 1374.43228
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:71987
+  source_label: curamycin A
+  minted_identifier: antibioticmech:chebi-8106dea815
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

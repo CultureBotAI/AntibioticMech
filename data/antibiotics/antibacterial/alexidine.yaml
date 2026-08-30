@@ -1,0 +1,60 @@
+identifier: CHEBI:53661
+label: alexidine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An amphipathic bisbiguanide with a structure consisting of two (2-ethylhexyl)guanide
+  units linked by a hexamethylene bridge.
+definition_source: ChEBI
+synonyms:
+- synonym_text: alexidina
+  synonym_type: INN
+  source: chebi
+- synonym_text: alexidinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N,N''''-hexane-1,6-diylbis[N'-(2-ethylhexyl)(imidodicarbonimidic diamide)]
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,1'-Hexamethylenebis(5-(2-ethylhexyl)biguanide)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N'-bis(2-ethylhexyl)-3,12-diimino-2,4,11,13-tetraazatetradecanediimidamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bisguadine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:53662
+xrefs:
+- cas:22573-93-9
+- drugcentral:113
+- lincs.smallmolecule:LSM-4432
+- patent:CN101624356
+- reaxys:2404807
+- wikipedia.en:Alexidine
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCC(CC)CNC(=N)NC(=N)NCCCCCCNC(=N)NC(=N)NCC(CC)CCCC
+  standard_inchi: InChI=1S/C26H56N10/c1-5-9-15-21(7-3)19-33-25(29)35-23(27)31-17-13-11-12-14-18-32-24(28)36-26(30)34-20-22(8-4)16-10-6-2/h21-22H,5-20H2,1-4H3,(H5,27,29,31,33,35)(H5,28,30,32,34,36)
+  standard_inchi_key: LFVVNPBBFUSSHL-UHFFFAOYSA-N
+  molecular_formula: C26H56N10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 508.804
+  monoisotopic_mass: 508.46894
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:53661
+  source_label: alexidine
+  minted_identifier: antibioticmech:chebi-275124c3cb
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

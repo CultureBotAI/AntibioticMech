@@ -1,0 +1,66 @@
+identifier: CHEBI:8462
+label: promethazine hydrochloride
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The hydrochloride salt of promethazine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Fenergan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Phenergan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: N,N-dimethyl-1-(10H-phenothiazin-10-yl)propan-2-amine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+-)-10-(2-(Dimethylamino)propyl)phenothiazine monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10-(2-Dimethylamino-1-propyl)phenothiazine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10-(3-Dimethylaminoisopropyl)phenothiazine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(2'-dimethylamino-2'-methyl)ethylphenothiazine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(2-dimethylaminopropyl-1)phenothiazine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: promethazine HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:58-33-3
+- drugbank:DBSALT000427
+- kegg.drug:D00480
+- reaxys:4166397
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CC(CN1c2ccccc2Sc2ccccc21)N(C)C.Cl
+  standard_inchi: InChI=1S/C17H20N2S.ClH/c1-13(18(2)3)12-19-14-8-4-6-10-16(14)20-17-11-7-5-9-15(17)19;/h4-11,13H,12H2,1-3H3;1H
+  standard_inchi_key: XXPDBLUZJRXNNZ-UHFFFAOYSA-N
+  molecular_formula: C17H20N2S.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 320.889
+  monoisotopic_mass: 320.1114
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:8462
+  source_label: promethazine hydrochloride
+  minted_identifier: antibioticmech:chebi-704dbdd41b
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

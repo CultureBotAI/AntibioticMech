@@ -1,0 +1,39 @@
+identifier: CHEBI:46345
+label: 5-Fluorouracil
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: 5-Fluorouracil (5FU) is an antimetabolite typically used as a cancer treatment
+  and is cytotoxic. It is a pyrimidine analogue inhibits thymidylate synthase which
+  halts the DNA synthesis. Its cytotoxic effects on eukaryotic cells have also allowed
+  the drug to be explored for fungal infection treatment as well.
+definition_source: PMID:20823283
+parent_compounds:
+- ARO:3007560
+xrefs:
+- ARO:3009138
+- cas:51-21-8
+- chembl:CHEMBL185
+- pubchem.compound:3385
+structural_class: pyrimidine antifungal
+structural_class_id: ARO:3007560
+chemical_structure:
+  smiles: O=c1ncc(F)c(=O)n1
+  standard_inchi: InChI=1S/C4H3FN2O2/c5-2-1-6-4(9)7-3(2)8/h1H,(H2,6,7,8,9)
+  standard_inchi_key: GHASVSINZRGABV-UHFFFAOYSA-N
+  molecular_formula: C4H3FN2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 130.078
+  monoisotopic_mass: 130.01786
+source_concepts:
+- source: ARO
+  source_id: ARO:3009138
+  source_label: 5-Fluorouracil
+  minted_identifier: antibioticmech:aro-48b83a8ef7
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:54:36Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

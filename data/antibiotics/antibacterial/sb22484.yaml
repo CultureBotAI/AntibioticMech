@@ -1,0 +1,40 @@
+identifier: antibioticmech:aro-b7537957c3
+label: SB22484
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: SB22484 antibiotics are of the same chemical group as kirromycins. SB22484
+  antibiotics are produced by Streptomyces sp. NRRL 15496. There are two SB22484 isomers
+  with the same UV absorption spectra, but differing molecular masses. These antibiotics
+  are strongly active against Neisseria species, but also show activity against Streptococci,
+  and Haemophilus influenzae.
+definition_source: PMID:2272911
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3001320
+- chembl:CHEMBL14563
+- pubchem.compound:53418992
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: COC(=O)C1CC(C1)(C2=CC=CC=C2)O
+  standard_inchi: InChI=1S/C12H14O3/c1-15-11(13)9-7-12(14,8-9)10-5-3-2-4-6-10/h2-6,9,14H,7-8H2,1H3
+  standard_inchi_key: NIOCOUPGHASQHO-UHFFFAOYSA-N
+  molecular_formula: C12H14O3
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 206.24
+  monoisotopic_mass: 206.094294304
+source_concepts:
+- source: ARO
+  source_id: ARO:3001320
+  source_label: SB22484
+  minted_identifier: antibioticmech:aro-b7537957c3
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

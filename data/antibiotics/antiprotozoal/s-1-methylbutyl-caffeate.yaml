@@ -1,0 +1,41 @@
+identifier: CHEBI:70482
+label: (S)-1'-methylbutyl caffeate
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An alkyl caffeate ester obtained by the formal condensation of trans-caffeic
+  acid with 2-pentanol. Isolated from the leaves of Piper sanguineispicum, it has
+  been shown to exhibit antileishmanial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-pentan-2-yl (2E)-3-(3,4-dihydroxyphenyl)prop-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:65331
+xrefs:
+- reaxys:21092025
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: CCC[C@H](C)OC(=O)/C=C/c1ccc(O)c(O)c1
+  standard_inchi: InChI=1S/C14H18O4/c1-3-4-10(2)18-14(17)8-6-11-5-7-12(15)13(16)9-11/h5-10,15-16H,3-4H2,1-2H3/b8-6+/t10-/m0/s1
+  standard_inchi_key: AGXDVPULWUXVDT-PCGIRMHASA-N
+  molecular_formula: C14H18O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 250.294
+  monoisotopic_mass: 250.12051
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70482
+  source_label: (S)-1'-methylbutyl caffeate
+  minted_identifier: antibioticmech:chebi-52bdfe56a8
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

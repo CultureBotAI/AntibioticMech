@@ -1,0 +1,113 @@
+identifier: antibioticmech:aro-556deb5a30
+label: retapamulin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Retapamulin is a semi-synthetic pleuromutilin antibiotic approved for
+  the treatment of skin infections.
+definition_source: PMID:17360517
+parent_compounds:
+- ARO:3000670
+xrefs:
+- ARO:3001314
+- CHEBI:166679
+- chembl:CHEMBL1658
+- pubchem.compound:6918462
+structural_class: pleuromutilin antibiotic
+structural_class_id: ARO:3000670
+chemical_structure:
+  smiles: C[C@@H]1CC[C@@]23CCC(=O)[C@H]2[C@@]1([C@@H](C[C@@]([C@H]([C@@H]3C)O)(C)C=C)OC(=O)CSC4C[C@H]5CC[C@@H](C4)N5C)C
+  standard_inchi: InChI=1S/C30H47NO4S/c1-7-28(4)16-24(35-25(33)17-36-22-14-20-8-9-21(15-22)31(20)6)29(5)18(2)10-12-30(19(3)27(28)34)13-11-23(32)26(29)30/h7,18-22,24,26-27,34H,1,8-17H2,2-6H3/t18-,19+,20-,21+,22?,24-,26+,27+,28-,29+,30+/m1/s1
+  standard_inchi_key: STZYTFJPGGDRJD-FJJJPKKESA-N
+  molecular_formula: C30H47NO4S
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 517.8
+  monoisotopic_mass: 517.32258015
+source_concepts:
+- source: ARO
+  source_id: ARO:3001314
+  source_label: retapamulin
+  minted_identifier: antibioticmech:aro-556deb5a30
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3003749
+  label: salA
+  evidence:
+  - reference: ARO:3003749
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004476
+  label: vmlR
+  evidence:
+  - reference: ARO:3004476
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004715
+  label: vga(E) Staphylococcus cohnii
+  evidence:
+  - reference: ARO:3004715
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007026
+  label: salB
+  evidence:
+  - reference: ARO:3007026
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007027
+  label: salC
+  evidence:
+  - reference: ARO:3007027
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007028
+  label: salD
+  evidence:
+  - reference: ARO:3007028
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007029
+  label: salE
+  evidence:
+  - reference: ARO:3007029
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007644
+  label: Clostridium perfringes cplR
+  evidence:
+  - reference: ARO:3007644
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007645
+  label: Clostridium sporogenes cplR
+  evidence:
+  - reference: ARO:3007645
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007646
+  label: Neobacillus vireti vmlR2
+  evidence:
+  - reference: ARO:3007646
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001314 (retapamulin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

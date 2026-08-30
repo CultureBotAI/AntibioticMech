@@ -1,0 +1,77 @@
+identifier: CHEBI:81731
+label: tolclofos-methyl
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic thiophosphate that is 2,6-dichloro-4-methylphenol in which
+  the hydrogen of the hydroxy group group has been replaced by a dimethoxyphosphorothioyl
+  group. Tolclofos-methyl is a phospholipid biosynthesis inhibitor and fungicide that
+  is used for controlling soil-borne diseases caused by Typhula incarnata, Corticium
+  rolfsii, Typhula ishikariensis, and Rhizoctonia solani.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Basilex
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Grancer
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Risolex
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Rizolex
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: O-(2,6-dichloro-4-methylphenyl) O,O-dimethyl phosphorothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-(2,6-dichloro-4-methylphenyl)phosphorothioic acid O,O-dimethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-2,6-dichloro-p-tolyl O,O-dimethyl phosphorothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-3349
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tolclofos-Me
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tolclofos-méthyl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23697
+- CHEBI:37512
+xrefs:
+- cas:57018-04-9
+- kegg.compound:C18407
+- patent:DE2501040
+- patent:GB1467561
+- pesticides:tolclofos-methyl
+- ppdb:644
+- reaxys:2136521
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: COP(=S)(OC)Oc1c(Cl)cc(C)cc1Cl
+  standard_inchi: InChI=1S/C9H11Cl2O3PS/c1-6-4-7(10)9(8(11)5-6)14-15(16,12-2)13-3/h4-5H,1-3H3
+  standard_inchi_key: OBZIQQJJIKNWNO-UHFFFAOYSA-N
+  molecular_formula: C9H11Cl2O3PS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 301.131
+  monoisotopic_mass: 299.95436
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81731
+  source_label: tolclofos-methyl
+  minted_identifier: antibioticmech:chebi-7fc74626e3
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

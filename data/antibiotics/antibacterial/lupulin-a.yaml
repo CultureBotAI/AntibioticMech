@@ -1,0 +1,44 @@
+identifier: CHEBI:66597
+label: lupulin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diterpenoid isolated from Ajuga lupulina and has been shown to exhibit
+  anti-inflammatory and antibacterial activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,2S,3R,4aR,5S,6R,8S,8aR)-8-(acetyloxy)-8a-[(acetyloxy)methyl]-3-hydroxy-5-[(2S,5R)-5-methoxyhexahydrofuro[2,3-b]furan-2-yl]-5,6-dimethyloctahydro-2H-spiro[naphthalene-1,2'-oxiran]-2-yl
+    2-methylbutanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23849
+- CHEBI:32955
+- CHEBI:47622
+- CHEBI:47790
+xrefs:
+- reaxys:8528547
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12C[C@@H](O)[C@H](OC(=O)C(C)CC)[C@]3(CO3)[C@]1(COC(C)=O)[C@@H](OC(C)=O)C[C@@H](C)[C@]2(C)[C@]1([H])CC2C[C@H](OC)OC2O1'
+  standard_inchi: InChI=1S/C30H46O11/c1-8-15(2)26(34)41-25-20(33)12-21-28(6,22-10-19-11-24(35-7)40-27(19)39-22)16(3)9-23(38-18(5)32)29(21,13-36-17(4)31)30(25)14-37-30/h15-16,19-25,27,33H,8-14H2,1-7H3/t15?,16-,19?,20-,21-,22+,23+,24-,25+,27?,28+,29+,30-/m1/s1
+  standard_inchi_key: UEZOFWAZJUOMCN-HKDNVZQMSA-N
+  molecular_formula: C30H46O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 582.687
+  monoisotopic_mass: 582.30401
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66597
+  source_label: lupulin A
+  minted_identifier: antibioticmech:chebi-5b33033102
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

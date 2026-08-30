@@ -1,0 +1,93 @@
+identifier: CHEBI:10110
+label: zidovudine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyrimidine 2',3'-dideoxyribonucleoside compound having a 3'-azido substituent
+  and thymine as the nucleobase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Retrovir
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 3'-azido-3'-deoxythymidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AZT
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Azidothymidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Zidovudin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Zidovudinum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: azidothymidine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:22680
+- CHEBI:48441
+- ARO:3000034
+xrefs:
+- ARO:3007687
+- beilstein:763034
+- cas:30516-87-1
+- drugbank:DB00495
+- drugcentral:2861
+- kegg.compound:C07210
+- kegg.drug:D00413
+- lincs.smallmolecule:LSM-5806
+- metacyc.compound:CPD-15110
+- patent:US4724232
+- pdb-ccd:AZZ
+- wikipedia.en:Zidovudine
+- chembl:CHEMBL129
+- pubchem.compound:35370
+activity_roles:
+- CHEBI:36044
+- CHEBI:53756
+structural_class: nucleoside antibiotic
+structural_class_id: ARO:3000034
+chemical_structure:
+  smiles: Cc1cn([C@H]2C[C@H](N=[N+]=[N-])[C@@H](CO)O2)c(=O)nc1=O
+  standard_inchi: InChI=1S/C10H13N5O4/c1-5-3-15(10(18)12-9(5)17)8-2-6(13-14-11)7(4-16)19-8/h3,6-8,16H,2,4H2,1H3,(H,12,17,18)/t6-,7+,8+/m0/s1
+  standard_inchi_key: HBOMLICNUCNMMY-XLPZGREQSA-N
+  molecular_formula: C10H13N5O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 267.245
+  monoisotopic_mass: 267.09675
+source_concepts:
+- source: ARO
+  source_id: ARO:3007687
+  source_label: zidovudine
+  minted_identifier: antibioticmech:aro-f3076a0cc1
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:53756
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:10110
+  source_label: zidovudine
+  minted_identifier: antibioticmech:chebi-fbb79ed8da
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:37Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T01:42:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

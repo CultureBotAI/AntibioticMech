@@ -1,0 +1,134 @@
+identifier: CHEBI:40909
+label: azoxystrobin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aryloxypyrimidine having a 4,6-diphenoxypyrimidine skeleton in which
+  one of the phenyl rings is cyano-substituted at C-2 and the other carries a 2-methoxy-1-(methoxycarbonyl)vinyl
+  substituent, also at C-2. An inhibitor of mitochondrial respiration by blocking
+  electron transfer between cytochromes b and c1, it is used widely as a fungicide
+  in agriculture.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (2E)-2-(2-{[6-(2-cyanophenoxy)pyrimidin-4-yl]oxy}phenyl)-3-methoxyprop-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (αE)-2-[[6-(2-cyanophenoxy)-4-pyrimidinyl]oxy]-α-(methoxymethylene)
+    benzeneacetic acid methyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (E)-2-[2-[6-(2-cyanophenoxy)pyrimidin-4-yloxy]phenyl]-3-methoxyacrylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18379
+- CHEBI:25248
+- CHEBI:47985
+- CHEBI:48535
+- CHEBI:51702
+- CHEBI:86484
+- ARO:3009305
+xrefs:
+- ARO:3009185
+- cas:131860-33-8
+- kegg.compound:C18558
+- patent:EP382375
+- patent:US5395837
+- pdb-ccd:AZO
+- pesticides:azoxystrobin
+- ppdb:54
+- reaxys:8350244
+- wikipedia.en:Azoxystrobin
+- chembl:CHEMBL230001
+- pubchem.compound:3034285
+activity_roles:
+- CHEBI:141153
+- CHEBI:35718
+- CHEBI:86328
+structural_class: strobilurin fungicide
+structural_class_id: ARO:3009305
+chemical_structure:
+  smiles: CO/C=C(/C(=O)OC)c1ccccc1Oc1cc(Oc2ccccc2C#N)ncn1
+  standard_inchi: InChI=1S/C22H17N3O5/c1-27-13-17(22(26)28-2)16-8-4-6-10-19(16)30-21-11-20(24-14-25-21)29-18-9-5-3-7-15(18)12-23/h3-11,13-14H,1-2H3/b17-13+
+  standard_inchi_key: WFDXOXNFNRHQEC-GHRIWEEISA-N
+  molecular_formula: C22H17N3O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 403.394
+  monoisotopic_mass: 403.11682
+source_concepts:
+- source: ARO
+  source_id: ARO:3009185
+  source_label: azoxystrobin
+  minted_identifier: antibioticmech:aro-5dac57f915
+  role_terms:
+  - CHEBI:141153
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:40909
+  source_label: azoxystrobin
+  minted_identifier: antibioticmech:chebi-c78e11ac97
+  role_terms:
+  - CHEBI:141153
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009275
+  label: Colletotrichum gloeosporioides cytochrome b protein with mutations conferring
+    resistance to azoxystrobin
+  evidence:
+  - reference: ARO:3009275
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009185 (azoxystrobin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009279
+  label: Colletotrichum siamense cytochrome b protein with mutations associated with
+    resistance to azoxystrobin
+  evidence:
+  - reference: ARO:3009279
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009185 (azoxystrobin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009280
+  label: Colletotrichum graminicola cytochrome b protein with mutations associated
+    with resistance to azoxystrobin
+  evidence:
+  - reference: ARO:3009280
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009185 (azoxystrobin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009471
+  label: Colletotrichum siamense beta-tubulin with mutations conferring resistance
+    to azoxystrobin
+  evidence:
+  - reference: ARO:3009471
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009185 (azoxystrobin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009480
+  label: Aspergillus fumigatus beta-tubulin with mutations conferring resistance to
+    azoxystrobin
+  evidence:
+  - reference: ARO:3009480
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009185 (azoxystrobin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009545
+  label: Aspergillus fumigatus Cyp51A with mutations conferring resistance to azoxystrobin
+  evidence:
+  - reference: ARO:3009545
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009185 (azoxystrobin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

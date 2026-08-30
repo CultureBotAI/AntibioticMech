@@ -1,0 +1,61 @@
+identifier: CHEBI:6088
+label: jervine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A steroid alkaloid with formula C27H39NO3. It is a natural product isolated
+  from several Veratrum species and exhibits teratogenic activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (22S,23R)-3β-hydroxy-17β-17,23-epoxyveratraman-11-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3β,23β)-17,23-epoxy-3-hydroxyveratraman-11-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 11-ketocyclopamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3β-hydroxy-17β,23β-epoxyveratraman-11-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: jervin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26767
+- CHEBI:33599
+- CHEBI:35681
+- CHEBI:50995
+- CHEBI:51914
+xrefs:
+- cas:469-59-0
+- hmdb:HMDB0253731
+- kegg.compound:C10811
+- knapsack:C00002253
+- reaxys:59109
+- wikipedia.en:Jervine
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12CC=C3C[C@@H](O)CC[C@]3(C)[C@@]1([H])C(=O)C1=C(C)[C@]3(CC[C@]12[H])O[C@]1([H])C[C@H](C)CN[C@@]1([H])[C@H]3C'
+  standard_inchi: InChI=1S/C27H39NO3/c1-14-11-21-24(28-13-14)16(3)27(31-21)10-8-19-20-6-5-17-12-18(29)7-9-26(17,4)23(20)25(30)22(19)15(27)2/h5,14,16,18-21,23-24,28-29H,6-13H2,1-4H3/t14-,16+,18-,19-,20-,21+,23+,24-,26-,27-/m0/s1
+  standard_inchi_key: CLEXYFLHGFJONT-DNMILWOZSA-N
+  molecular_formula: C27H39NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 425.613
+  monoisotopic_mass: 425.29299
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6088
+  source_label: jervine
+  minted_identifier: antibioticmech:chebi-916ce2c826
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

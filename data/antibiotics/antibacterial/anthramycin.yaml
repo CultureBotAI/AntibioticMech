@@ -1,0 +1,64 @@
+identifier: CHEBI:40699
+label: anthramycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pyrrolobenzodiazepines that is (11aS)-5,10,11,11a-tetrahydro-1H-pyrrolo[2,1-c][1,4]benzodiazepine
+  substituted at positions 2, 5, 8, 9 and 11R by a (1E)-3-amino-3-oxoprop-1-en-1-yl,
+  oxo, methyl, hydroxy and hydroxy groups, respectively. It is a natural product isolated
+  from Streptomyces refuineus subsp. thermotolerans.
+definition_source: ChEBI
+synonyms:
+- synonym_text: antramicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: antramycin
+  synonym_type: INN
+  source: chebi
+- synonym_text: antramycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: antramycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2E)-3-[(11R,11aS)-9,11-dihydroxy-8-methyl-5-oxo-5,10,11,11a-tetrahydro-1H-pyrrolo[2,1-c][1,4]benzodiazepin-2-yl]prop-2-enamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ro 5-9000
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:131437
+- CHEBI:33256
+- CHEBI:33853
+- CHEBI:51751
+xrefs:
+- cas:4803-27-4
+- kegg.drug:D02952
+- metacyc.compound:CPD-18441
+- pdb-ccd:ANT
+- wikipedia.en:Anthramycin
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12CC(/C=C/C(N)=O)=CN1C(=O)c1ccc(C)c(O)c1N[C@@H]2O'
+  standard_inchi: InChI=1S/C16H17N3O4/c1-8-2-4-10-13(14(8)21)18-15(22)11-6-9(3-5-12(17)20)7-19(11)16(10)23/h2-5,7,11,15,18,21-22H,6H2,1H3,(H2,17,20)/b5-3+/t11-,15+/m0/s1
+  standard_inchi_key: VGQOVCHZGQWAOI-YQRHFANHSA-N
+  molecular_formula: C16H17N3O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 315.329
+  monoisotopic_mass: 315.12191
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:40699
+  source_label: anthramycin
+  minted_identifier: antibioticmech:chebi-79bc47920b
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

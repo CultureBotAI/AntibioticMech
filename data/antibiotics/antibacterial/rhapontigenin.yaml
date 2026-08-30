@@ -1,0 +1,87 @@
+identifier: CHEBI:174376
+label: rhapontigenin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A stilbenol that is trans-stilbene in which one of the phenyl groups is
+  substituted by hydroxy groups at positions 3 and 5, while the other phenyl group
+  is substituted by a hydroxy group at position 3 and a methoxy group at position
+  4.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-[(E)-2-(3-hydroxy-4-methoxyphenyl)ethenyl]benzene-1,3-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-3,3',5-trihydroxy-4'-methoxystibene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,3',5-trihydroxy-4'-methoxystilbene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4'-methoxy-3,3',5-trihydroxystilbene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-[(1E)-2-(3-hydroxy-4-methoxyphenyl)ethenyl]-1,3-benzenediol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: piceatannol 4'-methyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pontigenin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: prontigenin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: protigenin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: rhapontin aglycone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: rhapontin genin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134251
+- CHEBI:26195
+- CHEBI:33572
+- CHEBI:36027
+xrefs:
+- cas:500-65-2
+- foodb.food:FDB008524
+- hmdb:HMDB0031842
+- knapsack:C00015562
+- wikipedia.en:Rhapontigenin
+activity_roles:
+- CHEBI:22587
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1ccc(/C=C/c2cc(O)cc(O)c2)cc1O
+  standard_inchi: InChI=1S/C15H14O4/c1-19-15-5-4-10(8-14(15)18)2-3-11-6-12(16)9-13(17)7-11/h2-9,16-18H,1H3/b3-2+
+  standard_inchi_key: PHMHDRYYFAYWEG-NSCUHMNNSA-N
+  molecular_formula: C15H14O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 258.273
+  monoisotopic_mass: 258.08921
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:174376
+  source_label: rhapontigenin
+  minted_identifier: antibioticmech:chebi-d0e45c3789
+  role_terms:
+  - CHEBI:22587
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

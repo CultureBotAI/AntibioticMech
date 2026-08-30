@@ -1,0 +1,81 @@
+identifier: CHEBI:173104
+label: narlaprevir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An azabicyclohexane that is (1R,5S)-6,6-dimethyl-3-azabicyclo[3.1.0]hexane
+  substituted by [(3S)-1-(cyclopropylamino)-1,2-dioxoheptan-3-yl]aminoacyl and N-({1-[(tert-butylsulfonyl)methyl]cyclohexyl}carbamoyl)-3-methyl-L-valyl
+  groups at positions 2S and 3, respectively. It is a hepatitis C virus (HCV) NS3/4A
+  serine protease inhibitor (Ki = 6 nM) that is used for the treatment of chronic
+  hepatitis C.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Arlansa
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: narlaprevirum
+  synonym_type: INN
+  source: chebi
+- synonym_text: narlaprévir
+  synonym_type: INN
+  source: chebi
+- synonym_text: (1R,2S,5S)-3-[N-({1-[(tert-butylsulfonyl)methyl]cyclohexyl}carbamoyl)-3-methyl-L-valyl]-N-[(3S)-1-(cyclopropylamino)-1,2-dioxoheptan-3-yl]-6,6-dimethyl-3-azabicyclo[3.1.0]hexane-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1R,2S,5S)-3-{(2S)-2-[({1-[(tert-butylsulfonyl)methyl]cyclohexyl}carbamoyl)amino]-3,3-dimethylbutanoyl}-N-[(3S)-1-(cyclopropylamino)-1,2-dioxoheptan-3-yl]-6,6-dimethyl-3-azabicyclo[3.1.0]hexane-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1R,2S,5S)-N-[(3S)-1-(cyclopropylamino)-1,2-dioxoheptan-3-yl]-6,6-dimethyl-3-[3-methyl-N-({1-[(2-methylpropane-2-sulfonyl)methyl]cyclohexyl}carbamoyl)-L-valyl]-3-azabicyclo[3.1.0]hexane-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SCH 900518
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SCH-900518
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SCH900518
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:140326
+- CHEBI:170008
+- CHEBI:35850
+- CHEBI:46770
+- CHEBI:47857
+- CHEBI:51454
+xrefs:
+- cas:865466-24-6
+- chemspider:10031710
+- drugbank:DB14760
+- kegg.drug:D09644
+- lincs.smallmolecule:LSM-45473
+- pdb-ccd:NNA
+- wikipedia.en:Narlaprevir
+activity_roles:
+- CHEBI:149553
+- CHEBI:36044
+chemical_structure:
+  smiles: '[H][C@@]12[C@@H](C(=O)N[C@@H](CCCC)C(=O)C(=O)NC3CC3)N(C(=O)[C@@H](NC(=O)NC3(CS(=O)(=O)C(C)(C)C)CCCCC3)C(C)(C)C)C[C@]1([H])C2(C)C'
+  standard_inchi: InChI=1S/C36H61N5O7S/c1-10-11-15-24(27(42)30(44)37-22-16-17-22)38-29(43)26-25-23(35(25,8)9)20-41(26)31(45)28(33(2,3)4)39-32(46)40-36(18-13-12-14-19-36)21-49(47,48)34(5,6)7/h22-26,28H,10-21H2,1-9H3,(H,37,44)(H,38,43)(H2,39,40,46)/t23-,24-,25-,26-,28+/m0/s1
+  standard_inchi_key: RICZEKWVNZFTNZ-LFGITCQGSA-N
+  molecular_formula: C36H61N5O7S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 707.979
+  monoisotopic_mass: 707.42917
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:173104
+  source_label: narlaprevir
+  minted_identifier: antibioticmech:chebi-0e362fec79
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,39 @@
+identifier: CHEBI:145869
+label: (S)-fluoxapiprolin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 2-[(ethanesulfonyl)amino]-5-fluoro-4-[4-methyl-5-oxo-3-(trifluoromethyl)-4,5-dihydro-1H-1,2,4-triazol-1-yl]benzene-1-carbothioamide
+  that has (S)-configuration.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-{(5S)-3-[2-(1-{[3,5-bis(difluoromethyl)-1H-pyrazol-1-yl]acetyl}piperidin-4-yl)-1,3-thiazol-4-yl]-4,5-dihydro-1,2-oxazol-5-yl}-3-chlorophenyl
+    methanesulfonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:145867
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: '[H][C@@]1(c2c(Cl)cccc2OS(C)(=O)=O)CC(c2csc(C3CCN(C(=O)Cn4nc(C(F)F)cc4C(F)F)CC3)n2)=NO1'
+  standard_inchi: InChI=1S/C25H24ClF4N5O5S2/c1-42(37,38)40-19-4-2-3-14(26)22(19)20-10-15(33-39-20)17-12-41-25(31-17)13-5-7-34(8-6-13)21(36)11-35-18(24(29)30)9-16(32-35)23(27)28/h2-4,9,12-13,20,23-24H,5-8,10-11H2,1H3/t20-/m0/s1
+  standard_inchi_key: ZEXXEODAXHSRDJ-FQEVSTJZSA-N
+  molecular_formula: C25H24ClF4N5O5S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 650.076
+  monoisotopic_mass: 649.08435
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:145869
+  source_label: (S)-fluoxapiprolin
+  minted_identifier: antibioticmech:chebi-87632ef335
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

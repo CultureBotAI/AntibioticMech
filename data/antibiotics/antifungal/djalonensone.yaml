@@ -1,0 +1,55 @@
+identifier: CHEBI:141315
+label: djalonensone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzochromenone that is alternariol in which the hydroxy group at position
+  9 has been converted into the corresponding methyl ether. A natural product found
+  in Chaetomium globosum as well as being one of the two most important compounds
+  belonging to the group of Altenaria mycotoxins.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,7-dihydroxy-9-methoxy-1-methyl-6H-benzo[c]chromen-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,7-dihydroxy-9-methoxy-1-methyl-6H-dibenzo(b,d)pyran-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AME
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alternariol monomethyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alternariol-9-methyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:64986
+xrefs:
+- cas:23452-05-3
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1cc(O)c2c(=O)oc3cc(O)cc(C)c3c2c1
+  standard_inchi: InChI=1S/C15H12O5/c1-7-3-8(16)4-12-13(7)10-5-9(19-2)6-11(17)14(10)15(18)20-12/h3-6,16-17H,1-2H3
+  standard_inchi_key: LCSDQFNUYFTXMT-UHFFFAOYSA-N
+  molecular_formula: C15H12O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 272.256
+  monoisotopic_mass: 272.06847
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141315
+  source_label: djalonensone
+  minted_identifier: antibioticmech:chebi-84bdf7b355
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

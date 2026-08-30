@@ -1,0 +1,47 @@
+identifier: CHEBI:63635
+label: valganciclovir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The L-valinyl ester of ganciclovir, into which it is rapidly converted
+  by intestinal and hepatic esterases. It is a synthetic analogue of 2'-deoxyguanosine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-[(2-amino-6-oxo-3,6-dihydro-9H-purin-9-yl)methoxy]-3-hydroxypropyl
+    L-valinate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26401
+- CHEBI:35855
+xrefs:
+- cas:175865-60-8
+- drugbank:DB01610
+- drugcentral:2801
+- kegg.drug:D02495
+- reaxys:14503833
+- wikipedia.en:Valganciclovir
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: CC(C)[C@H](N)C(=O)OCC(CO)OCn1cnc2c(=O)nc(N)nc21
+  standard_inchi: InChI=1S/C14H22N6O5/c1-7(2)9(15)13(23)24-4-8(3-21)25-6-20-5-17-10-11(20)18-14(16)19-12(10)22/h5,7-9,21H,3-4,6,15H2,1-2H3,(H3,16,18,19,22)/t8?,9-/m0/s1
+  standard_inchi_key: WPVFJKSGQUFQAP-GKAPJAKFSA-N
+  molecular_formula: C14H22N6O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 354.367
+  monoisotopic_mass: 354.16517
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:63635
+  source_label: valganciclovir
+  minted_identifier: antibioticmech:chebi-3823155bba
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

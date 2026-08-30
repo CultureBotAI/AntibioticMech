@@ -1,0 +1,63 @@
+identifier: CHEBI:74880
+label: 1-dodecylguanidine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of guanidines that is guanidine in which one of
+  the amino groups is substituted by a dodecyl group. It is used (generally as its
+  acetate salt, known as dodine) as a agrochemical fungicide.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-laurylguanidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C12-G
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dodecylguanidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: laurylguanidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-dodecylguanidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24436
+- CHEBI:86417
+xrefs:
+- cas:112-65-2
+- reaxys:637515
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: CCCCCCCCCCCCNC(=N)N
+  standard_inchi: InChI=1S/C13H29N3/c1-2-3-4-5-6-7-8-9-10-11-12-16-13(14)15/h2-12H2,1H3,(H4,14,15,16)
+  standard_inchi_key: HILAYQUKKYWPJW-UHFFFAOYSA-N
+  molecular_formula: C13H29N3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 227.396
+  monoisotopic_mass: 227.23615
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:74880
+  source_label: 1-dodecylguanidine
+  minted_identifier: antibioticmech:chebi-4e645a4f2a
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

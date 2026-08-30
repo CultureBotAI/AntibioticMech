@@ -1,0 +1,46 @@
+identifier: CHEBI:68298
+label: phomalevone B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of biphenyls that is 6,6'-dimethylbiphenyl-2,2',4,4'-tetrol
+  which has been substituted by 3,6-dihydroxy-2-methylbenzoyl groups at positions
+  3 and 3'. Isolated from the cultures of a Hawaiian isolate of the fungus Phoma species,
+  it exhibits antibacterial and antifungal activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2,2',4,4'-tetrahydroxy-6,6'-dimethylbiphenyl-3,3'-diyl)bis[(3,6-dihydroxy-2-methylphenyl)methanone]
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22888
+- CHEBI:26188
+- CHEBI:26195
+xrefs:
+- reaxys:21389533
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: Cc1c(O)ccc(O)c1C(=O)c1c(O)cc(C)c(-c2c(C)cc(O)c(C(=O)c3c(O)ccc(O)c3C)c2O)c1O
+  standard_inchi: InChI=1S/C30H26O10/c1-11-9-19(35)25(29(39)23-13(3)15(31)5-7-17(23)33)27(37)21(11)22-12(2)10-20(36)26(28(22)38)30(40)24-14(4)16(32)6-8-18(24)34/h5-10,31-38H,1-4H3
+  standard_inchi_key: QNGZXAWVLALWLX-UHFFFAOYSA-N
+  molecular_formula: C30H26O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 546.528
+  monoisotopic_mass: 546.1526
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68298
+  source_label: phomalevone B
+  minted_identifier: antibioticmech:chebi-426cd6fdab
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

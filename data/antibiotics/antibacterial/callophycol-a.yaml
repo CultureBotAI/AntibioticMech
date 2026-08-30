@@ -1,0 +1,49 @@
+identifier: CHEBI:65565
+label: callophycol A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dibromophenol that is 2,4-dibromophenol substituted at position 6 by
+  a decahydronaphthalen-1-ylmethyl group which in turn is substituted by a bromo,
+  3-bromo-4-chloro-4-methylpentyl group, two methyl groups and a methylidene group
+  at positions 6, 5, 5, 8a and 2 respectively. A diterpenoid isolated from the Fijian
+  red alga Callophycus serratus, it exhibits antibacterial, antimalarial and anticancer
+  activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,4-dibromo-6-{[(1R,4aS,5R,6R,8aS)-6-bromo-5-(3-bromo-4-chloro-4-methylpentyl)-5,8a-dimethyl-2-methylidenedecahydronaphthalen-1-yl]methyl}phenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33625
+- CHEBI:36683
+- CHEBI:36785
+xrefs:
+- chemspider:27023094
+- reaxys:11167769
+activity_roles:
+- CHEBI:33282
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]12CCC(=C)[C@@H](Cc3cc(Br)cc(Br)c3O)[C@]1(C)CC[C@@H](Br)[C@]2(C)CCC(Br)C(C)(C)Cl'
+  standard_inchi: InChI=1S/C26H35Br4ClO/c1-15-6-7-20-25(4,18(15)13-16-12-17(27)14-19(28)23(16)32)10-9-22(30)26(20,5)11-8-21(29)24(2,3)31/h12,14,18,20-22,32H,1,6-11,13H2,2-5H3/t18-,20+,21?,22-,25+,26-/m1/s1
+  standard_inchi_key: RWUQIKIJRXVZFL-ZSCBFHBVSA-N
+  molecular_formula: C26H35Br4ClO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 718.634
+  monoisotopic_mass: 713.91099
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65565
+  source_label: callophycol A
+  minted_identifier: antibioticmech:chebi-a4f7912bf6
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

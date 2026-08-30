@@ -1,0 +1,43 @@
+identifier: CHEBI:65856
+label: 5α-epoxyalantolactone
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sesquiterpene lactone that is the 5α-epoxy derivative of alantolactone.
+  Isolated from the root extracts of Inula helenium, it exhibits antimycobacterial
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1aR,2S,5aR,6aR,9aR,9bS)-2,5a-dimethyl-9-methylideneoctahydro-2H-oxireno[4,4a]naphtho[2,3-b]furan-8(9H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:32955
+- CHEBI:37667
+- CHEBI:39270
+xrefs:
+- reaxys:5031399
+activity_roles:
+- CHEBI:64912
+chemical_structure:
+  smiles: '[H][C@@]12C[C@@]3(C)CCC[C@H](C)[C@@]34O[C@H]4[C@]1([H])C(=C)C(=O)O2'
+  standard_inchi: InChI=1S/C15H20O3/c1-8-5-4-6-14(3)7-10-11(9(2)13(16)17-10)12-15(8,14)18-12/h8,10-12H,2,4-7H2,1,3H3/t8-,10+,11+,12-,14+,15-/m0/s1
+  standard_inchi_key: YIQKVCDNUFDAHB-HKKVUVRFSA-N
+  molecular_formula: C15H20O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 248.322
+  monoisotopic_mass: 248.14124
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65856
+  source_label: 5α-epoxyalantolactone
+  minted_identifier: antibioticmech:chebi-332800b909
+  role_terms:
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

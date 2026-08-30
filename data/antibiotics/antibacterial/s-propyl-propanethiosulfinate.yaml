@@ -1,0 +1,63 @@
+identifier: CHEBI:91021
+label: S-propyl propanethiosulfinate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfinic acid derivative obtained by formal condensation of propanethiosulfinic
+  acid with propanethiol.
+definition_source: ChEBI
+synonyms:
+- synonym_text: S-propyl propane-1-sulfinothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Propanesulfinothioic acid, S-propyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-Propyl 1-propanesulfinothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-propyl propane-1-thiosulfinate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dipropyl thiosulfinate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: propyl propanethiosulfinate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: propyl propylthiosulfinate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22063
+- CHEBI:37784
+xrefs:
+- cas:1948-52-3
+- hmdb:HMDB0034394
+- patent:EP2110128
+- patent:US2010035984
+- reaxys:1098798
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCSS(=O)CCC
+  standard_inchi: InChI=1S/C6H14OS2/c1-3-5-8-9(7)6-4-2/h3-6H2,1-2H3
+  standard_inchi_key: XPRZAEWSYWTDSQ-UHFFFAOYSA-N
+  molecular_formula: C6H14OS2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 166.311
+  monoisotopic_mass: 166.04861
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:91021
+  source_label: S-propyl propanethiosulfinate
+  minted_identifier: antibioticmech:chebi-c48b590ad9
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,196 @@
+identifier: CHEBI:18208
+label: benzylpenicillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin in which the substituent at position 6 of the penam ring
+  is a phenylacetamido group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: bencilpenicilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: benzylpenicillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: benzylpénicilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2,2-dimethyl-6β-(phenylacetamido)penam-3α-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-3,3-dimethyl-7-oxo-6-(phenylacetamido)-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(2-phenylacetamido)penicillanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Benzylpenicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PCG
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PENICILLIN G
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PG
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Penicillin G
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bensylpenicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benzyl benicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benzylpenicillinic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: free penicillin II
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benzopenicillin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- CHEBI:88187
+- ARO:3000008
+xrefs:
+- ARO:3000632
+- cas:61-33-6
+- drugbank:DB01053
+- drugcentral:2082
+- gmelin:781913
+- hmdb:HMDB0015186
+- kegg.compound:C05551
+- kegg.drug:D02336
+- lincs.smallmolecule:LSM-3229
+- patent:US3024169
+- pdb-ccd:PNN
+- reaxys:44740
+- wikipedia.en:Benzylpenicillin
+- chembl:CHEMBL29
+- pubchem.compound:5904
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)Cc1ccccc1'
+  standard_inchi: InChI=1S/C16H18N2O4S/c1-16(2)12(15(21)22)18-13(20)11(14(18)23-16)17-10(19)8-9-6-4-3-5-7-9/h3-7,11-12,14H,8H2,1-2H3,(H,17,19)(H,21,22)/t11-,12+,14-/m1/s1
+  standard_inchi_key: JGSARLDLIJGVTE-MBNYWOFBSA-N
+  molecular_formula: C16H18N2O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 334.397
+  monoisotopic_mass: 334.09873
+source_concepts:
+- source: ARO
+  source_id: ARO:3000632
+  source_label: benzylpenicillin
+  minted_identifier: antibioticmech:aro-558ace57e8
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:18208
+  source_label: benzylpenicillin
+  minted_identifier: antibioticmech:chebi-ac69226a2d
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3003966
+  label: Klebsiella pneumoniae OmpK35
+  evidence:
+  - reference: ARO:3003966
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000632 (benzylpenicillin);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3004123
+  label: Burkholderia pseudomallei Omp38
+  evidence:
+  - reference: ARO:3004123
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000632 (benzylpenicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004291
+  label: Rhodobacter sphaeroides ampC beta-lactamase
+  evidence:
+  - reference: ARO:3004291
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000632 (benzylpenicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004825
+  label: LAP-1
+  evidence:
+  - reference: ARO:3004825
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000632 (benzylpenicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004826
+  label: LAP-2
+  evidence:
+  - reference: ARO:3004826
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000632 (benzylpenicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007085
+  label: PRC-1
+  evidence:
+  - reference: ARO:3007085
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000632 (benzylpenicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007206
+  label: KBL-1
+  evidence:
+  - reference: ARO:3007206
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000632 (benzylpenicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007438
+  label: LAQ-1
+  evidence:
+  - reference: ARO:3007438
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000632 (benzylpenicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007648
+  label: PSZ-1
+  evidence:
+  - reference: ARO:3007648
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000632 (benzylpenicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007694
+  label: AMZ-1
+  evidence:
+  - reference: ARO:3007694
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000632 (benzylpenicillin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000632 (benzylpenicillin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

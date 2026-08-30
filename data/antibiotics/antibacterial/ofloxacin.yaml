@@ -1,0 +1,320 @@
+identifier: antibioticmech:aro-2eea3233f3
+label: ofloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Ofloxacin is a 6-fluoro, 7-piperazinyl quinolone with a methyl-substituted
+  oxazine ring. It has a broad spectrum of activity including many enterobacteria
+  and mycoplasma but most anaerobes are resistant.
+definition_source: PMID:18159374
+synonyms:
+- synonym_text: Tarivid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: floxin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:0000001
+xrefs:
+- ARO:3000663
+- cas:82419-36-1
+- CHEBI:7731
+- chembl:CHEMBL4
+- pubchem.compound:4583
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: CC1COC2=C3N1C=C(C(=O)C3=CC(=C2N4CCN(CC4)C)F)C(=O)O
+  standard_inchi: InChI=1S/C18H20FN3O4/c1-10-9-26-17-14-11(16(23)12(18(24)25)8-22(10)14)7-13(19)15(17)21-5-3-20(2)4-6-21/h7-8,10H,3-6,9H2,1-2H3,(H,24,25)
+  standard_inchi_key: GSDSWSVVBLHKDQ-UHFFFAOYSA-N
+  molecular_formula: C18H20FN3O4
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 361.4
+  monoisotopic_mass: 361.14378429
+source_concepts:
+- source: ARO
+  source_id: ARO:3000663
+  source_label: ofloxacin
+  minted_identifier: antibioticmech:aro-2eea3233f3
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000753
+  label: abeM
+  evidence:
+  - reference: ARO:3000753
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000797
+  label: MexCD-OprJ
+  evidence:
+  - reference: ARO:3000797
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003032
+  label: MexXY-OprM
+  evidence:
+  - reference: ARO:3003032
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003038
+  label: MexXY-OprA
+  evidence:
+  - reference: ARO:3003038
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003294
+  label: Escherichia coli gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003294
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003295
+  label: Mycobacterium tuberculosis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003295
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003296
+  label: Staphylococcus aureus gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003296
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003297
+  label: Bartonella bacilliformis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003297
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003298
+  label: Mycobacterium leprae gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003298
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003304
+  label: Mycobacterium leprae gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003304
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003305
+  label: Ureaplasma urealyticum gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003305
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003306
+  label: Morganella morganii gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003306
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003307
+  label: Salmonella serovars gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003307
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003308
+  label: Escherichia coli parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003308
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003309
+  label: Ureaplasma urealyticum parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003309
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003310
+  label: Mycoplasma hominis parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003310
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003311
+  label: Streptococcus pneumoniae parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003311
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003312
+  label: Staphylococcus aureus parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003312
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003315
+  label: Staphylococcus aureus parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003315
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003316
+  label: Escherichia coli parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003316
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003317
+  label: Salmonella serovars parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003317
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003459
+  label: Mycobacterium tuberculosis gyrB with mutation conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003459
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003684
+  label: Pseudomonas aeruginosa gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003684
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003702
+  label: Pseudomonas aeruginosa parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003702
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003817
+  label: Acinetobacter baumannii gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003817
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003818
+  label: Acinetobacter baumannii parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003818
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003995
+  label: Clostridioides difficile gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003995
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004378
+  label: QepA3
+  evidence:
+  - reference: ARO:3004378
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004667
+  label: Staphylococcus aureus norA
+  evidence:
+  - reference: ARO:3004667
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004918
+  label: Mycobacterium tuberculosis eccB5 conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3004918
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004919
+  label: Mycobacterium tuberculosis eccC5 conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3004919
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3007659
+  label: putative nickel/cobalt transporter
+  evidence:
+  - reference: ARO:3007659
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3007662
+  label: Rv1877
+  evidence:
+  - reference: ARO:3007662
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007807
+  label: Mycobacterium tuberculosis gyrA mutations conferring resistance to ofloxacin
+  evidence:
+  - reference: ARO:3007807
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007808
+  label: Mycobacterium tuberculosis gyrB mutations conferring resistance to ofloxacin
+  evidence:
+  - reference: ARO:3007808
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000663 (ofloxacin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000733
+  target_label: fluoroquinolone sensitive gyrA
+  evidence:
+  - reference: ARO:3000733
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000663 (ofloxacin); database
+      assertion, not a primary citation.
+- target_id: ARO:3000735
+  target_label: Fluoroquinolone sensitive parC
+  evidence:
+  - reference: ARO:3000735
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000663 (ofloxacin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T00:54:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,44 @@
+identifier: CHEBI:66544
+label: lancilactone C
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A terpene lactone isolated from the stems and roots of Kadsura lancilimba
+  and has been shown to exhibit anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-[(3R,3aR,10bR)-3a,10b-dimethyl-3-{(1S)-1-[(2S)-5-methyl-6-oxo-3,6-dihydro-2H-pyran-2-yl]ethyl}-8-(propan-2-ylidene)-1,2,3,3a,4,5,8,10b-octahydrocyclohepta[e]inden-7-yl]propanoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18946
+- CHEBI:25384
+- CHEBI:37668
+- CHEBI:52340
+xrefs:
+- cas:218915-17-4
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: '[H][C@@]1([C@@H](C)[C@@]2([H])CC[C@@]3(C)C4=C(C=C(CCC(=O)O)C(=C(C)C)C=C4)CC[C@@]32C)CC=C(C)C(=O)O1'
+  standard_inchi: InChI=1S/C30H40O4/c1-18(2)23-9-10-25-22(17-21(23)8-12-27(31)32)13-15-29(5)24(14-16-30(25,29)6)20(4)26-11-7-19(3)28(33)34-26/h7,9-10,17,20,24,26H,8,11-16H2,1-6H3,(H,31,32)/t20-,24+,26-,29+,30-/m0/s1
+  standard_inchi_key: TYAJEEFQBLTASC-NNIFVFKYSA-N
+  molecular_formula: C30H40O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 464.646
+  monoisotopic_mass: 464.29266
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66544
+  source_label: lancilactone C
+  minted_identifier: antibioticmech:chebi-f7b9da4935
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,52 @@
+identifier: CHEBI:15732
+label: phosphonoacetic acid
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of phosphonic acids that is phosphonic acid in which
+  the hydrogen attached to the phosphorous is replaced by a carboxymethyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Fosfonet
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphonoacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphonoacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:26069
+xrefs:
+- cas:4408-78-0
+- drugbank:DB02823
+- hmdb:HMDB0004110
+- kegg.compound:C05682
+- pdb-ccd:PAE
+- reaxys:1764355
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: O=C(O)CP(=O)(O)O
+  standard_inchi: InChI=1S/C2H5O5P/c3-2(4)1-8(5,6)7/h1H2,(H,3,4)(H2,5,6,7)
+  standard_inchi_key: XUYJLQHKOGNDPB-UHFFFAOYSA-N
+  molecular_formula: C2H5O5P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 140.031
+  monoisotopic_mass: 139.98746
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:15732
+  source_label: phosphonoacetic acid
+  minted_identifier: antibioticmech:chebi-64e6a7b7cb
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

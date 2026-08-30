@@ -1,0 +1,47 @@
+identifier: CHEBI:66626
+label: nigranoic acid
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracyclic triterpenoid that is 3,4-secocycloarta-4(28),24-(Z)-diene
+  substituted by carboxy groups at positions 3 and 26. Isolated from Schisandra henryi
+  and Schisandra propinqua, it exhibits cytotoxic and anti-HIV activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2Z,6R)-6-[(1R,3aS,3bS,6S,6aR,7aS,9aR)-6a-(2-carboxyethyl)-3a,9a-dimethyl-6-(prop-1-en-2-yl)dodecahydro-1H-cyclopenta[a]cyclopropa[e]naphthalen-1-yl]-2-methylhept-2-enoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,4-secocycloarta-4(28),24-(Z)-diene-3,26-dioic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26893
+- CHEBI:35692
+xrefs:
+- cas:39111-07-4
+- reaxys:2314904
+activity_roles:
+- CHEBI:53756
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@@H](C(=C)C)[C@@]3(CCC(=O)O)C[C@]31CC[C@@]1(C)[C@@]2(C)CC[C@]1([H])[C@H](C)CC/C=C(/C)C(=O)O'
+  standard_inchi: InChI=1S/C30H46O4/c1-19(2)22-10-11-24-28(6)14-12-23(20(3)8-7-9-21(4)26(33)34)27(28,5)16-17-30(24)18-29(22,30)15-13-25(31)32/h9,20,22-24H,1,7-8,10-18H2,2-6H3,(H,31,32)(H,33,34)/b21-9-/t20-,22+,23-,24+,27-,28+,29-,30+/m1/s1
+  standard_inchi_key: NJFOSFIPGRXARF-BRTULJEKSA-N
+  molecular_formula: C30H46O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 470.694
+  monoisotopic_mass: 470.33961
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66626
+  source_label: nigranoic acid
+  minted_identifier: antibioticmech:chebi-b6db7ba1b7
+  role_terms:
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

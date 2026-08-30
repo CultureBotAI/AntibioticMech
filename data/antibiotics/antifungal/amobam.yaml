@@ -1,0 +1,68 @@
+identifier: CHEBI:81754
+label: amobam
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dithiocarbamate salt resulting from the formal reaction of ethylenebis(dithiocarbamic
+  acid) with 2 mol eq. of ammonia. A water-soluble crystalline solid, it is a fungicide
+  used to protect fruit, vegetable, and field crops against a wide spectrum of fungal
+  diseases. Mixing amobam with zinc sulfate affords the fungicide zineb.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Chem-O-Bam
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: diammonium ethane-1,2-diyldicarbamodithioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: amobame
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diammonium N,N'-1,2-ethanediylbis(carbamodithioate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diammonium N,N'-ethane-1,2-diyldicarbamodithioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diammonium N-[2-[[sulfanylidene(sulfido)methyl]amino]ethyl]carbamodithioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diammonium ethylenebis(dithiocarbamate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diazanium N-[2-(sulfanidylcarbothioylamino)ethyl]carbamodithioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:47704
+- CHEBI:83060
+xrefs:
+- cas:3566-10-7
+- kegg.compound:C18449
+- pesticides:amobam
+- ppdb:2758
+- reaxys:15001983
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: S=C([S-])NCCNC(=S)[S-].[NH4+].[NH4+]
+  standard_inchi: InChI=1S/C4H8N2S4.2H3N/c7-3(8)5-1-2-6-4(9)10;;/h1-2H2,(H2,5,7,8)(H2,6,9,10);2*1H3
+  standard_inchi_key: FROZIYRKKUFAOC-UHFFFAOYSA-N
+  molecular_formula: C4H6N2S4.2H4N
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 246.452
+  monoisotopic_mass: 246.01013
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81754
+  source_label: amobam
+  minted_identifier: antibioticmech:chebi-58a9e15885
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,46 @@
+identifier: CHEBI:66186
+label: talosin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A glycosyloxyisoflavone that is genistein attached to a α-L-6-deoxy-talopyranosyl
+  residue at position 7 via a glycosidic linkage. Isolated from Kitasatospora kifunensis,
+  it exhibits antifungal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-hydroxy-3-(4-hydroxyphenyl)-4-oxo-4H-chromen-7-yl 6-deoxy-α-L-talopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: genistein-7-α-L-6-deoxy-talopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38755
+- CHEBI:63367
+- CHEBI:74630
+xrefs:
+- reaxys:11280209
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C[C@@H]1O[C@@H](Oc2cc(O)c3c(=O)c(-c4ccc(O)cc4)coc3c2)[C@H](O)[C@H](O)[C@@H]1O
+  standard_inchi: InChI=1S/C21H20O9/c1-9-17(24)19(26)20(27)21(29-9)30-12-6-14(23)16-15(7-12)28-8-13(18(16)25)10-2-4-11(22)5-3-10/h2-9,17,19-24,26-27H,1H3/t9-,17+,19+,20+,21-/m0/s1
+  standard_inchi_key: YRHHFFMCCMEVTR-GBXJYZSASA-N
+  molecular_formula: C21H20O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 416.382
+  monoisotopic_mass: 416.11073
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66186
+  source_label: talosin A
+  minted_identifier: antibioticmech:chebi-a6d91aed22
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

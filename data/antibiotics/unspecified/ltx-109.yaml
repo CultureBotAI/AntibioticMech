@@ -1,0 +1,46 @@
+identifier: CHEBI:77752
+label: LTX-109
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tripeptide that is the 2-phenylethyl amide of L-arginyl-2,5,7-tri-tert-butyl-L-tryptophyl-L-arginine
+definition_source: ChEBI
+synonyms:
+- synonym_text: L-arginyl-2,5,7-tri-tert-butyl-L-tryptophyl-N-(2-phenylethyl)-L-argininamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:29347
+- CHEBI:47923
+xrefs:
+- cas:1166254-80-3
+- patent:US2011236453
+- reaxys:21795620
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(C)(C)c1cc(C(C)(C)C)c2nc(C(C)(C)C)c(C[C@H](NC(=O)[C@@H](N)CCCNC(=N)N)C(=O)N[C@@H](CCCNC(=N)N)C(=O)NCCc3ccccc3)c2c1
+  standard_inchi: InChI=1S/C43H69N11O3/c1-41(2,3)27-23-28-29(35(43(7,8)9)54-34(28)30(24-27)42(4,5)6)25-33(53-36(55)31(44)17-13-20-50-39(45)46)38(57)52-32(18-14-21-51-40(47)48)37(56)49-22-19-26-15-11-10-12-16-26/h10-12,15-16,23-24,31-33,54H,13-14,17-22,25,44H2,1-9H3,(H,49,56)(H,52,57)(H,53,55)(H4,45,46,50)(H4,47,48,51)/t31-,32-,33-/m0/s1
+  standard_inchi_key: ZVOYWSKEBVVLGW-ZDCRTTOTSA-N
+  molecular_formula: C43H69N11O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 788.099
+  monoisotopic_mass: 787.55849
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77752
+  source_label: LTX-109
+  minted_identifier: antibioticmech:chebi-87fa307714
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

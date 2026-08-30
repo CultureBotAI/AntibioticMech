@@ -1,0 +1,72 @@
+identifier: CHEBI:59477
+label: chloroxine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monohydroxyquinoline that is quinolin-8-ol in which the hydrogens at
+  positions 5 and 7 have been substituted by chlorine. A synthetic antibacterial prepared
+  by chlorination of quinolin-8-ol, it is used for the treatment of dandruff and seborrhoeic
+  dermatitis of the scalp.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,7-dichloroquinolin-8-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dichlor-8-hydroxychinolin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dichloro-8-hydroxyquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dichloro-8-oxyquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dichloro-8-quinolinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dichlorooxine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dichloroxine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CHQ
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36683
+- CHEBI:38775
+xrefs:
+- cas:773-76-2
+- drugbank:DB01243
+- drugcentral:611
+- kegg.drug:D03472
+- lincs.smallmolecule:LSM-2371
+- reaxys:153606
+- wikipedia.en:Chloroxine
+activity_roles:
+- CHEBI:33282
+- CHEBI:86327
+chemical_structure:
+  smiles: Oc1c(Cl)cc(Cl)c2cccnc12
+  standard_inchi: InChI=1S/C9H5Cl2NO/c10-6-4-7(11)9(13)8-5(6)2-1-3-12-8/h1-4,13H
+  standard_inchi_key: WDFKMLRRRCGAKS-UHFFFAOYSA-N
+  molecular_formula: C9H5Cl2NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 214.051
+  monoisotopic_mass: 212.97482
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59477
+  source_label: chloroxine
+  minted_identifier: antibioticmech:chebi-042e1ab9f4
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

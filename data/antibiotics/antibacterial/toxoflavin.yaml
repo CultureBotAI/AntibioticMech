@@ -1,0 +1,72 @@
+identifier: CHEBI:80729
+label: toxoflavin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyrimidotriazine that is 1,6-dimethyl-1,5,6,7-tetrahydropyrimido[5,4-e][1,2,4]triazine
+  with oxo groups at positions 5 and 7.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,6-dimethylpyrimido[5,4-e][1,2,4]triazine-5,7(1H,6H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,6-dimethylpyrimido(5,4-e)-as-triazine-5,7(1H,6H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,6-dimethylpyrimido[5,4-e][1,2,4]triazine-5,7-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-methylreumycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NC72
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC67078
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PKF118-310
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: toxoflavine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: xanthothricin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: xanthotricin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:131697
+- CHEBI:36586
+xrefs:
+- cas:84-82-2
+- kegg.compound:C16789
+- metacyc.compound:CPD-21056
+- reaxys:21014
+- wikipedia.en:Toxoflavin
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Cn1ncnc2c(=O)n(C)c(=O)nc1-2
+  standard_inchi: InChI=1S/C7H7N5O2/c1-11-6(13)4-5(10-7(11)14)12(2)9-3-8-4/h3H,1-2H3
+  standard_inchi_key: SLGRAIAQIAUZAQ-UHFFFAOYSA-N
+  molecular_formula: C7H7N5O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 193.166
+  monoisotopic_mass: 193.05997
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:80729
+  source_label: toxoflavin
+  minted_identifier: antibioticmech:chebi-d147215046
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

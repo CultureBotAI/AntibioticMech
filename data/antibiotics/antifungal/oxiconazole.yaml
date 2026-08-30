@@ -1,0 +1,84 @@
+identifier: CHEBI:7825
+label: oxiconazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An oxime O-ether that is the 2,4-dichlorobenzyl ether of the oxime obtained
+  by formal condensation of hydroxylamine with the carbonyl group of acetopnenone
+  in which the phenyl group is substituted by chlorines at positions 2 and 4, and
+  in which one of the hydrogens of the methyl group is replaced by a 1H-imidazol-1-yl
+  group. An antifungal agent, it is used (generally as the nitrate salt) in creams
+  and powders for the topical treatment of fungal skin infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: oxiconazol
+  synonym_type: INN
+  source: chebi
+- synonym_text: oxiconazolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (1Z)-N-[(2,4-dichlorobenzyl)oxy]-1-(2,4-dichlorophenyl)-2-(1H-imidazol-1-yl)ethanimine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2',4'-Dichloro-2-imidazol-1-ylacetophenone (Z)-[O-(2,4-dichlorobenzyl)oxime]
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ro 13-8996
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23697
+- CHEBI:24780
+- CHEBI:36816
+- CHEBI:87069
+- CHEBI:87071
+- ARO:3007500
+xrefs:
+- ARO:3007520
+- cas:64211-45-6
+- drugbank:DB00239
+- drugcentral:3408
+- hmdb:HMDB0014384
+- kegg.compound:C08074
+- kegg.drug:D08313
+- patent:US4550175
+- reaxys:6004213
+- wikipedia.en:Oxiconazole
+- chembl:CHEMBL1262
+- pubchem.compound:5353853
+activity_roles:
+- CHEBI:35718
+- CHEBI:86327
+structural_class: imidazole antibiotic
+structural_class_id: ARO:3007500
+chemical_structure:
+  smiles: Clc1ccc(CO/N=C(\Cn2ccnc2)c2ccc(Cl)cc2Cl)c(Cl)c1
+  standard_inchi: InChI=1S/C18H13Cl4N3O/c19-13-2-1-12(16(21)7-13)10-26-24-18(9-25-6-5-23-11-25)15-4-3-14(20)8-17(15)22/h1-8,11H,9-10H2/b24-18+
+  standard_inchi_key: QRJJEGAJXVEBNE-HKOYGPOVSA-N
+  molecular_formula: C18H13Cl4N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 429.134
+  monoisotopic_mass: 426.98127
+source_concepts:
+- source: ARO
+  source_id: ARO:3007520
+  source_label: oxiconazole
+  minted_identifier: antibioticmech:aro-511831d088
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:7825
+  source_label: oxiconazole
+  minted_identifier: antibioticmech:chebi-65e420af8d
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

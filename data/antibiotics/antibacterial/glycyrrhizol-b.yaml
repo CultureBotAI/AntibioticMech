@@ -1,0 +1,47 @@
+identifier: CHEBI:65977
+label: glycyrrhizol B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heteropentacyclic compound that is 2H-pyrano[3',4',5'',6'']-pterocarpene
+  substituted by a hydroxy group at position 7, a methoxy group at position 5 and
+  geminal methyl groups at position 2''. Isolated from the roots of Glycyrrhiza uralensis,
+  it exhibits antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 12-methoxy-3,3-dimethyl-3H,7H-furo[3,2-c:5,4-f']dichromen-10-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-hydroxy-5-methoxy-2'',2''-dimethyl-2H-pyrano[3',4',5'',6'']-pterocarpene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25698
+- CHEBI:33853
+- CHEBI:38164
+xrefs:
+- reaxys:18589783
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1cc(O)cc2c1-c1oc3c4c(ccc3c1CO2)OC(C)(C)C=C4
+  standard_inchi: InChI=1S/C21H18O5/c1-21(2)7-6-13-15(26-21)5-4-12-14-10-24-17-9-11(22)8-16(23-3)18(17)20(14)25-19(12)13/h4-9,22H,10H2,1-3H3
+  standard_inchi_key: BKLGAGSBCOUJGV-UHFFFAOYSA-N
+  molecular_formula: C21H18O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 350.37
+  monoisotopic_mass: 350.11542
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65977
+  source_label: glycyrrhizol B
+  minted_identifier: antibioticmech:chebi-8e0d765f9f
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

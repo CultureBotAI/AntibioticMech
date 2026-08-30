@@ -1,0 +1,90 @@
+identifier: CHEBI:74926
+label: patulin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A furopyran and lactone that is (2H-pyran-3(6H)-ylidene)acetic acid which
+  is substituted by hydroxy groups at positions 2 and 4 and in which the hydroxy group
+  at position 4 has condensed with the carboxy group to give the corresponding bicyclic
+  lactone. A mycotoxin produced by several species of Aspergillus and Penicillium,
+  it has antibiotic properties but has been shown to be carcinogenic and mutagenic.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-hydroxy-4H-furo[3,2-c]pyran-2(6H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2,4-dihydroxy-2H-pyran-3(6H)-ylidene)acetic acid, 3,4-lactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2,4-dihydroxy-2H-pyran-3(6H)-ylidene)acetic acid-3,4-lactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,6-dihydro-4-hydroxy-2H-furo(3,2-c)pyran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PAT
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: clavacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: clavatin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: claviform
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: claviformin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: expansin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: expansine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: mycoin C3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: mycoine C3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: patuline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37581
+- CHEBI:38131
+- CHEBI:74927
+xrefs:
+- cas:149-29-1
+- hmdb:HMDB0034299
+- kegg.compound:C16748
+- knapsack:C00024000
+- patent:US2417584
+- reaxys:149675
+- wikipedia.en:Patulin
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: O=C1C=C2C(=CCOC2O)O1
+  standard_inchi: InChI=1S/C7H6O4/c8-6-3-4-5(11-6)1-2-10-7(4)9/h1,3,7,9H,2H2
+  standard_inchi_key: ZRWPUFFVAOMMNM-UHFFFAOYSA-N
+  molecular_formula: C7H6O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 154.121
+  monoisotopic_mass: 154.02661
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:74926
+  source_label: patulin
+  minted_identifier: antibioticmech:chebi-1e90a34a54
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

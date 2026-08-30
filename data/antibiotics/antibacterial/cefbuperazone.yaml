@@ -1,0 +1,75 @@
+identifier: CHEBI:135856
+label: cefbuperazone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A second-generation cephamycin antibiotic having [(1-methyl-1H-tetrazol-5-yl)sulfanyl]methyl
+  and {N-[(4-ethyl-2,3-dioxopiperazin-1-yl)carbonyl]-D-threonyl}amino side groups
+  located at positions 3 and 7β respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefbuperazona
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefbuperazonum
+  synonym_type: INN
+  source: chebi
+- synonym_text: cerbuperazone
+  synonym_type: INN
+  source: chebi
+- synonym_text: (7S)-7-({N-[(4-ethyl-2,3-dioxopiperazin-1-yl)carbonyl]-D-threonyl}amino)-7-methoxy-3-{[(1-methyl-1H-tetrazol-5-yl)sulfanyl]methyl}-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7S)-7-({N-[(4-ethyl-2,3-dioxopiperazin-1-yl)carbonyl]-D-threonyl}amino)-7-methoxy-3-{[(1-methyl-1H-tetrazol-5-yl)sulfanyl]methyl}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CBPZ
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:16670
+- CHEBI:23066
+- ARO:0000032
+xrefs:
+- ARO:3009117
+- cas:76610-84-9
+- drugcentral:3072
+- kegg.drug:D03423
+- wikipedia.en:Cefbuperazone
+- chembl:CHEMBL1908372
+- pubchem.compound:127527
+activity_roles:
+- CHEBI:33281
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@](NC(=O)N1CCN(CC)C(=O)C1=O)(C(=O)N[C@]1(OC)C(=O)N2C(C(=O)O)=C(CSc3nnnn3C)CS[C@@]21[H])[C@H](C)O'
+  standard_inchi: InChI=1S/C22H29N9O9S2/c1-5-29-6-7-30(16(35)15(29)34)20(39)23-12(10(2)32)14(33)24-22(40-4)18(38)31-13(17(36)37)11(8-41-19(22)31)9-42-21-25-26-27-28(21)3/h10,12,19,32H,5-9H2,1-4H3,(H,23,39)(H,24,33)(H,36,37)/t10-,12+,19+,22-/m0/s1
+  standard_inchi_key: SMSRCGPDNDCXFR-CYWZMYCQSA-N
+  molecular_formula: C22H29N9O9S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 627.662
+  monoisotopic_mass: 627.15297
+source_concepts:
+- source: ARO
+  source_id: ARO:3009117
+  source_label: cefbuperazone
+  minted_identifier: antibioticmech:aro-0114fb0b7e
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:135856
+  source_label: cefbuperazone
+  minted_identifier: antibioticmech:chebi-5218175f04
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

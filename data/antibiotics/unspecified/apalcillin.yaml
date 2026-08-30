@@ -1,0 +1,55 @@
+identifier: CHEBI:51691
+label: apalcillin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: apalcilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: apalcillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-{(2R)-2-[(4-hydroxy-1,5-naphthyridin-3-yl)carboxamido]-2-phenylacetamido}-2,2-dimethylpenam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-{[(2R)-2-{[(4-hydroxy-1,5-naphthyridin-3-yl)carbonyl]amino}-2-phenylacetyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: apalcilina
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17334
+- CHEBI:73540
+xrefs:
+- beilstein:6030446
+- beilstein:6494943
+- cas:63469-19-2
+- drugcentral:227
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@](NC(=O)c1cnc2cccnc2c1O)(C(=O)N[C@@H]1C(=O)N2[C@@H](C(=O)O)C(C)(C)S[C@]12[H])c1ccccc1'
+  standard_inchi: InChI=1S/C25H23N5O6S/c1-25(2)19(24(35)36)30-22(34)17(23(30)37-25)29-21(33)15(12-7-4-3-5-8-12)28-20(32)13-11-27-14-9-6-10-26-16(14)18(13)31/h3-11,15,17,19,23H,1-2H3,(H,27,31)(H,28,32)(H,29,33)(H,35,36)/t15-,17-,19+,23-/m1/s1
+  standard_inchi_key: XMQVYNAURODYCQ-SLFBBCNNSA-N
+  molecular_formula: C25H23N5O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 521.555
+  monoisotopic_mass: 521.1369
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:51691
+  source_label: apalcillin
+  minted_identifier: antibioticmech:chebi-f0159d2070
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

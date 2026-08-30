@@ -1,0 +1,43 @@
+identifier: CHEBI:31031
+label: (13S)-13-dihydrodaunorubicin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The (13S)-diastereomer of 13-dihydrodaunorubicin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,3S)-3,5,12-trihydroxy-3-[(1S)-1-hydroxyethyl]-10-methoxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracen-1-yl
+    3-amino-2,3,6-trideoxy-α-L-lyxo-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:31059
+xrefs:
+- drugcentral:4719
+- kegg.compound:C12433
+- lipidmaps:LMPK13050005
+- reaxys:6773803
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)([C@H](C)O)C[C@@H]3O[C@H]1C[C@H](N)[C@H](O)[C@H](C)O1
+  standard_inchi: InChI=1S/C27H31NO10/c1-10-22(30)14(28)7-17(37-10)38-16-9-27(35,11(2)29)8-13-19(16)26(34)21-20(24(13)32)23(31)12-5-4-6-15(36-3)18(12)25(21)33/h4-6,10-11,14,16-17,22,29-30,32,34-35H,7-9,28H2,1-3H3/t10-,11-,14-,16-,17-,22+,27-/m0/s1
+  standard_inchi_key: HJEZFVLKJYFNQW-PRFXOSGESA-N
+  molecular_formula: C27H31NO10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 529.542
+  monoisotopic_mass: 529.1948
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31031
+  source_label: (13S)-13-dihydrodaunorubicin
+  minted_identifier: antibioticmech:chebi-553e66fcf5
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

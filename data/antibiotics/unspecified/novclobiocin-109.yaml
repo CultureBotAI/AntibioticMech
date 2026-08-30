@@ -1,0 +1,46 @@
+identifier: CHEBI:132424
+label: novclobiocin 109
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxycoumarin antibiotic with formula C34H35ClN2O11, that is produced
+  by Streptomyces roseochromogenes
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,4S,5R,6S)-6-({8-chloro-4-hydroxy-3-[4-hydroxy-3-(3-methylbut-2-en-1-yl)benzamido]-2-oxo-2H-1-benzopyran-7-yl}oxy)-5-hydroxy-3-methoxy-2,2-dimethyloxan-4-yl
+    1H--pyrrole-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22702
+- CHEBI:25698
+- CHEBI:26455
+- CHEBI:33853
+- CHEBI:35313
+- CHEBI:36683
+- CHEBI:37912
+- CHEBI:63367
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CO[C@@H]1[C@@H](OC(=O)c2cccn2)[C@@H](O)[C@H](Oc2ccc3c(O)c(NC(=O)c4ccc(O)c(CC=C(C)C)c4)c(=O)oc3c2Cl)OC1(C)C
+  standard_inchi: InChI=1S/C34H35ClN2O11/c1-16(2)8-9-17-15-18(10-12-21(17)38)30(41)37-24-25(39)19-11-13-22(23(35)27(19)46-32(24)43)45-33-26(40)28(29(44-5)34(3,4)48-33)47-31(42)20-7-6-14-36-20/h6-8,10-15,26,28-29,33,36,38-40H,9H2,1-5H3,(H,37,41)/t26-,28+,29-,33-/m1/s1
+  standard_inchi_key: PKUNXGQLUGXWJB-ZQZBKPNISA-N
+  molecular_formula: C34H35ClN2O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 683.11
+  monoisotopic_mass: 682.19294
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:132424
+  source_label: novclobiocin 109
+  minted_identifier: antibioticmech:chebi-5d5d70c9d7
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

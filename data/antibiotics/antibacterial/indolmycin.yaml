@@ -1,0 +1,67 @@
+identifier: CHEBI:79394
+label: indolmycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 1,3-oxazoles that is 1,3-oxazol-4(5H)-one which
+  is substituted at the 2 and 5-pro-S positions by methylamino and [(1R)-1-(1H-indol-3-yl)ethyl]
+  groups, respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5S)-5-[(1R)-1-(1H-indol-3-yl)ethyl]-2-(methylamino)-1,3-oxazol-4(5H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1R,5S)-(−)-5-(1-indol-3-ylethyl)-2-(methylamino)-2-oxazolin-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5S,6R)-(−)-indolmycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-indolmycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PA 155 A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PA-155-A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: indolemycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24828
+- CHEBI:46812
+- CHEBI:50995
+xrefs:
+- cas:21200-24-8
+- knapsack:C00026624
+- metacyc.compound:CPD0-920
+- patent:GB862685
+- reaxys:620840
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]1([C@H](C)c2cnc3ccccc23)OC(NC)=NC1=O'
+  standard_inchi: InChI=1S/C14H15N3O2/c1-8(12-13(18)17-14(15-2)19-12)10-7-16-11-6-4-3-5-9(10)11/h3-8,12,16H,1-2H3,(H,15,17,18)/t8-,12+/m1/s1
+  standard_inchi_key: GNTVWGDQPXCYBV-PELKAZGASA-N
+  molecular_formula: C14H15N3O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 257.293
+  monoisotopic_mass: 257.11643
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:79394
+  source_label: indolmycin
+  minted_identifier: antibioticmech:chebi-e1ab3782d6
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

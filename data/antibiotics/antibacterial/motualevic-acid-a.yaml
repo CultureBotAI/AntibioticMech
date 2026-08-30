@@ -1,0 +1,46 @@
+identifier: CHEBI:66405
+label: motualevic acid A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An enamide obtained by the formal condensation of the amino group of glycine
+  with the carboxy group of 14,14-dibromotetradeca-2,13-dienoic acid (the 2E stereoisomer).
+  It is isolated from the marine sponge Siliquariaspongia sp. and exhibits antibacterial
+  properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[(2E)-14,14-dibromotetradeca-2,13-dienoyl]glycine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:16180
+- CHEBI:25384
+- CHEBI:29348
+- CHEBI:37141
+- CHEBI:51751
+xrefs:
+- reaxys:19364086
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C(O)CNC(=O)/C=C/CCCCCCCCCC=C(Br)Br
+  standard_inchi: InChI=1S/C16H25Br2NO3/c17-14(18)11-9-7-5-3-1-2-4-6-8-10-12-15(20)19-13-16(21)22/h10-12H,1-9,13H2,(H,19,20)(H,21,22)/b12-10+
+  standard_inchi_key: ZLIHRGDEFDFVOK-ZRDIBKRKSA-N
+  molecular_formula: C16H25Br2NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 439.188
+  monoisotopic_mass: 437.02012
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66405
+  source_label: motualevic acid A
+  minted_identifier: antibioticmech:chebi-d56a188bf9
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

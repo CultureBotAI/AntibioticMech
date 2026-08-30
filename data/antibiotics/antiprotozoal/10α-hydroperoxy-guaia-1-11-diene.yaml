@@ -1,0 +1,43 @@
+identifier: CHEBI:66472
+label: 10α-hydroperoxy-guaia-1,11-diene
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A guaiane sesquiterpenoid that is guaia-1,11-diene substituted by a α-hydroperoxy
+  group at position 10. Isolated from Pogostemon cablin, it exhibits trypanocidal
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,4R,7R,8aS)-1,4-dimethyl-7-(prop-1-en-2-yl)-1,2,4,5,6,7,8,8a-octahydroazulen-4-yl
+    hydroperoxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35924
+- CHEBI:36744
+xrefs:
+- reaxys:9925408
+activity_roles:
+- CHEBI:36335
+chemical_structure:
+  smiles: '[H][C@@]12C[C@H](C(=C)C)CC[C@@](C)(OO)C1=CC[C@@H]2C'
+  standard_inchi: InChI=1S/C15H24O2/c1-10(2)12-7-8-15(4,17-16)14-6-5-11(3)13(14)9-12/h6,11-13,16H,1,5,7-9H2,2-4H3/t11-,12+,13-,15+/m0/s1
+  standard_inchi_key: WVEJIBNZNZLFEF-SFDCQRBFSA-N
+  molecular_formula: C15H24O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 236.355
+  monoisotopic_mass: 236.17763
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66472
+  source_label: 10α-hydroperoxy-guaia-1,11-diene
+  minted_identifier: antibioticmech:chebi-fd5c79ce1a
+  role_terms:
+  - CHEBI:36335
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

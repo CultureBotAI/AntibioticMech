@@ -1,0 +1,53 @@
+identifier: CHEBI:37924
+label: atazanavir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A heavily substituted carbohydrazide that is an antiretroviral drug of
+  the protease inhibitor (PI) class used to treat infection of human immunodeficiency
+  virus (HIV).
+definition_source: ChEBI
+synonyms:
+- synonym_text: atazanavirum
+  synonym_type: INN
+  source: chebi
+- synonym_text: dimethyl (3S,8S,9S,12S)-9-benzyl-3,12-di-tert-butyl-8-hydroxy-4,11-dioxo-6-[4-(2-pyridyl)benzyl]-2,5,6,10,13-pentaazatetradecanedioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ATZ
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35363
+xrefs:
+- cas:198904-31-3
+- drugbank:DB01072
+- kegg.drug:D07471
+- reaxys:8101951
+- wikipedia.en:Atazanavir
+activity_roles:
+- CHEBI:35660
+- CHEBI:36044
+chemical_structure:
+  smiles: COC(=O)N[C@H](C(=O)N[C@@H](Cc1ccccc1)[C@@H](O)CN(Cc1ccc(-c2ccccn2)cc1)NC(=O)[C@@H](NC(=O)OC)C(C)(C)C)C(C)(C)C
+  standard_inchi: InChI=1S/C38H52N6O7/c1-37(2,3)31(41-35(48)50-7)33(46)40-29(22-25-14-10-9-11-15-25)30(45)24-44(43-34(47)32(38(4,5)6)42-36(49)51-8)23-26-17-19-27(20-18-26)28-16-12-13-21-39-28/h9-21,29-32,45H,22-24H2,1-8H3,(H,40,46)(H,41,48)(H,42,49)(H,43,47)/t29-,30-,31+,32+/m0/s1
+  standard_inchi_key: AXRYRYVKAWYZBR-GASGPIRDSA-N
+  molecular_formula: C38H52N6O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 704.869
+  monoisotopic_mass: 704.38975
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:37924
+  source_label: atazanavir
+  minted_identifier: antibioticmech:chebi-e0bfa8966e
+  role_terms:
+  - CHEBI:35660
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,44 @@
+identifier: CHEBI:229544
+label: durlobactam sodium
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic sodium salt that is the monosodium salt of durlobactam.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sodium ({[(1R,2S,5R)-2-carbamoyl-3-methyl-7-oxo-1,6-diazabicyclo[3.2.1]oct-3-en-6-yl]oxy}sulfonyl)oxidanide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ETX2514 sodium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38700
+xrefs:
+- cas:1467157-21-6
+- drugbank:DBSALT003190
+- kegg.drug:D11592
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: CC1=C[C@@H]2CN(C(=O)N2OS(=O)(=O)[O-])[C@@H]1C(N)=O.[Na+]
+  standard_inchi: InChI=1S/C8H11N3O6S.Na/c1-4-2-5-3-10(6(4)7(9)12)8(13)11(5)17-18(14,15)16;/h2,5-6H,3H2,1H3,(H2,9,12)(H,14,15,16);/q;+1/p-1/t5-,6+;/m1./s1
+  standard_inchi_key: WHHNOICWPZIYKI-IBTYICNHSA-M
+  molecular_formula: C8H10N3O6S.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 299.24
+  monoisotopic_mass: 299.0188
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:229544
+  source_label: durlobactam sodium
+  minted_identifier: antibioticmech:chebi-8c4b345fcd
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,55 @@
+identifier: CHEBI:229720
+label: solasodine 3-β-D-glucoside
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sterol 3-β-D-glucoside having solasodine as the sterol component.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (25R)-22α-spirosol-5-en-3β-yl β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (25R)-3β-(O-β-D-glucopyranosyl)-22α-spirosol-5-ene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3β,22α,25R)-spirosol-5-en-3-yl β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[(22R,25R)-spirosola-5-ene-3β-yl]β-D-glucopyranoside'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: solasodine 3-glucoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: γ-solamargine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37424
+- CHEBI:63367
+xrefs:
+- cas:14197-65-0
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12CC=C3C[C@@H](O[C@@H]4O[C@H](CO)[C@@H](O)[C@H](O)[C@H]4O)CC[C@]3(C)[C@@]1([H])CC[C@@]1(C)[C@@]2([H])C[C@]2([H])O[C@]3(CC[C@@H](C)CN3)[C@@H](C)[C@]12[H]'
+  standard_inchi: InChI=1S/C33H53NO7/c1-17-7-12-33(34-15-17)18(2)26-24(41-33)14-23-21-6-5-19-13-20(8-10-31(19,3)22(21)9-11-32(23,26)4)39-30-29(38)28(37)27(36)25(16-35)40-30/h5,17-18,20-30,34-38H,6-16H2,1-4H3/t17-,18+,20+,21-,22+,23+,24+,25-,26+,27-,28+,29-,30-,31+,32+,33-/m1/s1
+  standard_inchi_key: XMLLJGHZPHTUKK-GAMIEDRGSA-N
+  molecular_formula: C33H53NO7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 575.787
+  monoisotopic_mass: 575.3822
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:229720
+  source_label: solasodine 3-β-D-glucoside
+  minted_identifier: antibioticmech:chebi-3729ade0f5
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,45 @@
+identifier: CHEBI:65777
+label: 2',4'-dihydroxy-3'-(2-hydroxy benzyl)-6'-methoxy chalcone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of chalcones that is trans-chalcone substituted
+  by hydroxy groups at positions 2' and 4', 2-hydroxy benzyl group at position 3'
+  and methoxy group at position 6'. It is isolated from the aerial parts of Ellipeiopsis
+  cherrevensis and exhibits antibacterial, antimalarial and antineoplastic activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-1-[2,4-dihydroxy-3-(2-hydroxybenzyl)-6-methoxyphenyl]-3-phenylprop-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23086
+- CHEBI:33572
+xrefs:
+- reaxys:4564762
+activity_roles:
+- CHEBI:33282
+- CHEBI:38068
+chemical_structure:
+  smiles: COc1cc(O)c(Cc2ccccc2O)c(O)c1C(=O)/C=C/c1ccccc1
+  standard_inchi: InChI=1S/C23H20O5/c1-28-21-14-20(26)17(13-16-9-5-6-10-18(16)24)23(27)22(21)19(25)12-11-15-7-3-2-4-8-15/h2-12,14,24,26-27H,13H2,1H3/b12-11+
+  standard_inchi_key: IVKGLRZLTNXWKF-VAWYXSNFSA-N
+  molecular_formula: C23H20O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 376.408
+  monoisotopic_mass: 376.13107
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65777
+  source_label: 2',4'-dihydroxy-3'-(2-hydroxy benzyl)-6'-methoxy chalcone
+  minted_identifier: antibioticmech:chebi-2cc7bf5201
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

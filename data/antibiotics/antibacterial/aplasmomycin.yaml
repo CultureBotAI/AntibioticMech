@@ -1,0 +1,58 @@
+identifier: CHEBI:32617
+label: (+)-aplasmomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Aplasmomycin was isolated from a broth cultivated with a marine isolate
+  of actinomycete, and inhibits Gram-positive bacteria in vitro and Plasmodium berghei
+  in vivo. It is a natural ionophore.
+definition_source: PMID:30089869
+synonyms:
+- synonym_text: sodium [(1R,2R,5S,6R,8S,9E,12R,14S,17R,18R,19R,22S,23R,25S,26E,29R,31S,34R)-12,29-dihydroxy-1,2,18,19-tetra(hydroxy-κO)-6,13,13,17,23,30,30,34-octamethyl-4,7,21,24,35,37-hexaoxapentacyclo[29.3.1.15,8.114,18.122,25]octatriaconta-9,26-diene-3,20-dionato(4−)]borate(1−)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: aplasmomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25105
+- CHEBI:33619
+- ARO:0000000
+xrefs:
+- ARO:3007792
+- beilstein:5801225
+- cas:61230-25-9
+- pubchem.compound:23697358
+activity_roles:
+- CHEBI:33281
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: '[H][C@@]12O[B-]34O[C@]15O[C@@]([H])(CC[C@H]5C)C(C)(C)[C@H](O)C/C=C/[C@]1([H])C[C@]([H])(OC(=O)[C@]([H])(O3)[C@]3(O4)O[C@@]([H])(CC[C@H]3C)C(C)(C)[C@H](O)C/C=C/[C@]3([H])C[C@]([H])(OC2=O)[C@@H](C)O3)[C@@H](C)O1.[Na+]'
+  standard_inchi: InChI=1S/C40H60BO14.Na/c1-21-15-17-31-37(5,6)29(42)13-9-11-26-20-28(24(4)47-26)49-36(45)34-40-22(2)16-18-32(51-40)38(7,8)30(43)14-10-12-25-19-27(23(3)46-25)48-35(44)33-39(21,50-31)54-41(52-33,53-34)55-40;/h9-12,21-34,42-43H,13-20H2,1-8H3;/q-1;+1/b11-9+,12-10+;/t21-,22-,23-,24-,25-,26-,27+,28+,29-,30-,31+,32+,33+,34+,39+,40+,41?;/m1./s1
+  standard_inchi_key: GEIYDRPAWIMINR-ZDKANEFWSA-N
+  molecular_formula: C40H60BO14.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 798.708
+  monoisotopic_mass: 798.39738
+source_concepts:
+- source: ARO
+  source_id: ARO:3007792
+  source_label: aplasmomycin
+  minted_identifier: antibioticmech:aro-18a4d6bb5d
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:32617
+  source_label: (+)-aplasmomycin
+  minted_identifier: antibioticmech:chebi-1632d412e6
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

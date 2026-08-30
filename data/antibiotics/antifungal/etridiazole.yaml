@@ -1,0 +1,85 @@
+identifier: CHEBI:81761
+label: etridiazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of thiadiazoles that is 1,2,4-thiadiazole which
+  is substituted at positions 3 and 5 by trichloromethyl and ethoxy groups, respectively.
+  A fungicide, it has been used particularly for the control of Phytophthora and Pythium
+  species in soils.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Banrot
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Pansoil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Planvate
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Terracoat
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 5-ethoxy-3-(trichloromethyl)-1,2,4-thiadiazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Aethoxy-3-trichlormethyl-1,2,4-thiadiazol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-ethoxy-3-trichloromethyl-1,2,4-thiadiazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Echlomezole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: OM 2424
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Olin mathieson 2,424
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Terrazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:36683
+- CHEBI:38099
+- CHEBI:86440
+xrefs:
+- cas:2593-15-9
+- kegg.compound:C18460
+- pesticides:etridiazole
+- ppdb:285
+- reaxys:1074817
+activity_roles:
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: CCOc1nc(C(Cl)(Cl)Cl)ns1
+  standard_inchi: InChI=1S/C5H5Cl3N2OS/c1-2-11-4-9-3(10-12-4)5(6,7)8/h2H2,1H3
+  standard_inchi_key: KQTVWCSONPJJPE-UHFFFAOYSA-N
+  molecular_formula: C5H5Cl3N2OS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 247.534
+  monoisotopic_mass: 245.91882
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81761
+  source_label: etridiazole
+  minted_identifier: antibioticmech:chebi-06f833d9b0
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

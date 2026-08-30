@@ -1,0 +1,43 @@
+identifier: CHEBI:66087
+label: isatinone A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An indole alkaloid that is 1,3-dihydro-2H-indol-2-one substituted by a
+  methoxy(phenyl)methylidene group at position 3 (the 3E stereoisomer). Isolated from
+  Isatis costata, it exhibits antifungal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3E)-3-[methoxy(phenyl)methylidene]-1,3-dihydro-2H-indol-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24829
+- CHEBI:38958
+- CHEBI:47985
+xrefs:
+- reaxys:10674292
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CO/C(=C1/C(=O)Nc2ccccc21)c1ccccc1
+  standard_inchi: InChI=1S/C16H13NO2/c1-19-15(11-7-3-2-4-8-11)14-12-9-5-6-10-13(12)17-16(14)18/h2-10H,1H3,(H,17,18)/b15-14+
+  standard_inchi_key: VRJYLVZCUCQVBL-CCEZHUSRSA-N
+  molecular_formula: C16H13NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 251.285
+  monoisotopic_mass: 251.09463
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66087
+  source_label: isatinone A
+  minted_identifier: antibioticmech:chebi-5f1d494236
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

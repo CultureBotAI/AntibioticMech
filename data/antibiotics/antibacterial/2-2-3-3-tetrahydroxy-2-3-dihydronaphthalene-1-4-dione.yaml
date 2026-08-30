@@ -1,0 +1,46 @@
+identifier: CHEBI:78857
+label: 2,2,3,3-tetrahydroxy-2,3-dihydronaphthalene-1,4-dione
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A ketone hydrate that is naphthalene-1,2,3,4-tetrone in which water has
+  been added to the keto groups at positions 2 and 3. It has been used as an antiviral
+  agent in nasal ointment.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,3-dihydro-2,2,3,3-tetrahydroxy-1,4-naphthoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: oxoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: oxoline dihydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36786
+- CHEBI:63734
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C1c2ccccc2C(=O)C(O)(O)C1(O)O
+  standard_inchi: InChI=1S/C10H8O6/c11-7-5-3-1-2-4-6(5)8(12)10(15,16)9(7,13)14/h1-4,13-16H
+  standard_inchi_key: CWHBUPIYFIPPRI-UHFFFAOYSA-N
+  molecular_formula: C10H8O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 224.168
+  monoisotopic_mass: 224.03209
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:78857
+  source_label: 2,2,3,3-tetrahydroxy-2,3-dihydronaphthalene-1,4-dione
+  minted_identifier: antibioticmech:chebi-26b89eef2e
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

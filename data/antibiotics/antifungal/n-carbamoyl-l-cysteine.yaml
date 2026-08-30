@@ -1,0 +1,51 @@
+identifier: CHEBI:64855
+label: N-carbamoyl-L-cysteine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cysteine derivative that is the N-carbamoyl derivative of L-cysteine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R)-2-(carbamoylamino)-3-sulfanylpropanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-Cysteine-N-carbamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-NCC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(Aminocarbonyl)cysteine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:83824
+xrefs:
+- cas:24583-23-1
+- patent:US4272517
+- patent:US5696164
+- reaxys:13349895
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: NC(=O)N[C@@H](CS)C(=O)O
+  standard_inchi: InChI=1S/C4H8N2O3S/c5-4(9)6-2(1-10)3(7)8/h2,10H,1H2,(H,7,8)(H3,5,6,9)/t2-/m0/s1
+  standard_inchi_key: APFSAMXTZRYBKF-REOHCLBHSA-N
+  molecular_formula: C4H8N2O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 164.186
+  monoisotopic_mass: 164.02556
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:64855
+  source_label: N-carbamoyl-L-cysteine
+  minted_identifier: antibioticmech:chebi-4fb324d268
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,68 @@
+identifier: CHEBI:70718
+label: ceftaroline fosamil
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cephalosporin having [4-(1-methylpyridinium-4-yl)-1,3-thiazol-2-yl]sulfanyl
+  and {(2Z)-2-(ethoxyimino)-2-[5-(phosphonoamino)-1,2,4-thiadiazol-3-yl]acetyl}amino
+  side groups located at positions 3 and 7 respectively. The N-phospho prodrug of
+  ceftaroline, a broad-spectrum antibiotic active against methicillin-resistant Staphylococcus
+  aureus (MRSA). It is used for the treatment of adults with acute bacterial skin
+  and skin structure infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ceftarolina fosamilo
+  synonym_type: INN
+  source: chebi
+- synonym_text: ceftarolinum fosamilum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 7-({(2Z)-2-(ethoxyimino)-2-[5-(phosphonoamino)-1,2,4-thiadiazol-3-yl]acetyl}amino)-3-{[4-(1-methylpyridinium-4-yl)-1,3-thiazol-2-yl]sulfanyl}-3,4-didehydrocepham-4-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-7-({(2Z)-2-(ethoxyimino)-2-[5-(phosphonoamino)-1,2,4-thiadiazol-3-yl]acetyl}amino)-3-{[4-(1-methylpyridinium-4-yl)-1,3-thiazol-2-yl]sulfanyl}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+- CHEBI:35285
+- CHEBI:36816
+- CHEBI:37773
+- CHEBI:38099
+- CHEBI:38418
+xrefs:
+- cas:229016-73-3
+- drugcentral:4169
+- patent:MX2012003411
+- reaxys:9535806
+- wikipedia.en:Ceftaroline_fosamil
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H][C@]12SCC(Sc3nc(-c4cc[n+](C)cc4)cs3)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)/C(=N\OCC)c1nsc(NP(=O)(O)O)n1'
+  standard_inchi: InChI=1S/C22H21N8O8PS4/c1-3-38-26-13(16-25-21(43-28-16)27-39(35,36)37)17(31)24-14-18(32)30-15(20(33)34)12(9-40-19(14)30)42-22-23-11(8-41-22)10-4-6-29(2)7-5-10/h4-8,14,19H,3,9H2,1-2H3,(H4-,24,25,27,28,31,33,34,35,36,37)/b26-13-/t14-,19-/m1/s1
+  standard_inchi_key: ZCCUWMICIWSJIX-NQJJCJBVSA-N
+  molecular_formula: C22H21N8O8PS4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 684.7
+  monoisotopic_mass: 684.01028
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70718
+  source_label: ceftaroline fosamil
+  minted_identifier: antibioticmech:chebi-c2f70615e6
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

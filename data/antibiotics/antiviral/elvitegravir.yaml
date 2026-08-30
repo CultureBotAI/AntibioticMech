@@ -1,0 +1,67 @@
+identifier: CHEBI:72289
+label: elvitegravir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quinolinemonocarboxylic acid that is 7-methoxy-4-oxo-1,4-dihydroquinoline-3-carboxylic
+  acid substited at position 1 by a 1-hydroxy-3-methylbutan-2-yl group and at position
+  6 by a 3-chloro-2-fluorobenzyl group (the S-enantiomer). It is used in combination
+  therapy for the treatment of HIV-1 infection.
+definition_source: ChEBI
+synonyms:
+- synonym_text: elvitegravirum
+  synonym_type: INN
+  source: chebi
+- synonym_text: elvitégravir
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6-(3-chloro-2-fluorobenzyl)-1-[(2S)-1-hydroxy-3-methylbutan-2-yl]-7-methoxy-4-oxo-1,4-dihydroquinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS 9137
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS-9137
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23765
+- CHEBI:26512
+- CHEBI:35618
+- CHEBI:37143
+- CHEBI:83403
+xrefs:
+- cas:697761-98-1
+- drugcentral:4300
+- kegg.drug:D06677
+- lincs.smallmolecule:LSM-5647
+- patent:WO2009089263
+- patent:WO2010137032
+- patent:WO2011004389
+- reaxys:10609264
+- wikipedia.en:Elvitegravir
+activity_roles:
+- CHEBI:67268
+chemical_structure:
+  smiles: COc1cc2c(cc1Cc1cccc(Cl)c1F)c(=O)c(C(=O)O)cn2[C@H](CO)C(C)C
+  standard_inchi: InChI=1S/C23H23ClFNO5/c1-12(2)19(11-27)26-10-16(23(29)30)22(28)15-8-14(20(31-3)9-18(15)26)7-13-5-4-6-17(24)21(13)25/h4-6,8-10,12,19,27H,7,11H2,1-3H3,(H,29,30)/t19-/m1/s1
+  standard_inchi_key: JUZYLCPPVHEVSV-LJQANCHMSA-N
+  molecular_formula: C23H23ClFNO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 447.89
+  monoisotopic_mass: 447.12488
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:72289
+  source_label: elvitegravir
+  minted_identifier: antibioticmech:chebi-5b109c28b2
+  role_terms:
+  - CHEBI:67268
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

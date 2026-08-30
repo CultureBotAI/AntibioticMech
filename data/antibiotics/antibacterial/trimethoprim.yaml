@@ -1,0 +1,581 @@
+identifier: CHEBI:45924
+label: trimethoprim
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aminopyrimidine antibiotic whose structure consists of pyrimidine 2,4-diamine
+  and 1,2,3-trimethoxybenzene moieties linked by a methylene bridge.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-(3,4,5-trimethoxybenzyl)pyrimidine-2,4-diamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4-diamino-5-(3,4,5-trimethoxybenzyl)pyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-[(3,4,5-trimethoxyphenyl)methyl]-2,4-pyrimidinediamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Proloprim
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TRIMETHOPRIM
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Trimethoprim
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Trimpex
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38338
+- CHEBI:51683
+- ARO:3000171
+xrefs:
+- ARO:3000188
+- beilstein:625127
+- cas:738-70-5
+- drugbank:DB00440
+- drugcentral:2755
+- gmelin:808843
+- hmdb:HMDB0014583
+- kegg.compound:C01965
+- kegg.drug:D00145
+- lincs.smallmolecule:LSM-5246
+- pdb-ccd:TOP
+- reaxys:625127
+- vsdb:1745
+- wikipedia.en:Trimethoprim
+- chembl:CHEMBL22
+- pubchem.compound:5578
+activity_roles:
+- CHEBI:36047
+structural_class: diaminopyrimidine antibiotic
+structural_class_id: ARO:3000171
+chemical_structure:
+  smiles: COc1cc(Cc2cnc(N)nc2N)cc(OC)c1OC
+  standard_inchi: InChI=1S/C14H18N4O3/c1-19-10-5-8(6-11(20-2)12(10)21-3)4-9-7-17-14(16)18-13(9)15/h5-7H,4H2,1-3H3,(H4,15,16,17,18)
+  standard_inchi_key: IEDVJHCEMCRBQM-UHFFFAOYSA-N
+  molecular_formula: C14H18N4O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 290.323
+  monoisotopic_mass: 290.13789
+source_concepts:
+- source: ARO
+  source_id: ARO:3000188
+  source_label: trimethoprim
+  minted_identifier: antibioticmech:aro-d69e4fcac6
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:45924
+  source_label: trimethoprim
+  minted_identifier: antibioticmech:chebi-5890ed9cd7
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000386
+  label: MexAB-OprM
+  evidence:
+  - reference: ARO:3000386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000772
+  label: AdeIJK
+  evidence:
+  - reference: ARO:3000772
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000797
+  label: MexCD-OprJ
+  evidence:
+  - reference: ARO:3000797
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000798
+  label: MexEF-OprN
+  evidence:
+  - reference: ARO:3000798
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3001218
+  label: trimethoprim resistant dihydrofolate reductase dfr
+  evidence:
+  - reference: ARO:3001218
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002854
+  label: dfrA1
+  evidence:
+  - reference: ARO:3002854
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002856
+  label: dfrA24
+  evidence:
+  - reference: ARO:3002856
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002857
+  label: dfrA26
+  evidence:
+  - reference: ARO:3002857
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002858
+  label: dfrA12
+  evidence:
+  - reference: ARO:3002858
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002859
+  label: dfrA14
+  evidence:
+  - reference: ARO:3002859
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002860
+  label: dfrA17
+  evidence:
+  - reference: ARO:3002860
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002861
+  label: dfrA5
+  evidence:
+  - reference: ARO:3002861
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002862
+  label: dfrA7
+  evidence:
+  - reference: ARO:3002862
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002863
+  label: dfrA8
+  evidence:
+  - reference: ARO:3002863
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002864
+  label: dfrB1
+  evidence:
+  - reference: ARO:3002864
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002865
+  label: dfrC
+  evidence:
+  - reference: ARO:3002865
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002866
+  label: dfrD
+  evidence:
+  - reference: ARO:3002866
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002867
+  label: dfrF
+  evidence:
+  - reference: ARO:3002867
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002868
+  label: dfrG
+  evidence:
+  - reference: ARO:3002868
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002869
+  label: dfrK
+  evidence:
+  - reference: ARO:3002869
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3002875
+  label: dfrE
+  evidence:
+  - reference: ARO:3002875
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3003011
+  label: dfrA10
+  evidence:
+  - reference: ARO:3003011
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3003012
+  label: dfrA13
+  evidence:
+  - reference: ARO:3003012
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3003013
+  label: dfrA15
+  evidence:
+  - reference: ARO:3003013
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3003014
+  label: dfrA16
+  evidence:
+  - reference: ARO:3003014
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3003015
+  label: dfrA19
+  evidence:
+  - reference: ARO:3003015
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3003016
+  label: dfrA20
+  evidence:
+  - reference: ARO:3003016
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3003017
+  label: dfrA21
+  evidence:
+  - reference: ARO:3003017
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3003018
+  label: dfrA22
+  evidence:
+  - reference: ARO:3003018
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3003019
+  label: dfrA23
+  evidence:
+  - reference: ARO:3003019
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3003020
+  label: dfrA25
+  evidence:
+  - reference: ARO:3003020
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3003021
+  label: dfrB2
+  evidence:
+  - reference: ARO:3003021
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3003022
+  label: dfrB3
+  evidence:
+  - reference: ARO:3003022
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3003023
+  label: dfrB6
+  evidence:
+  - reference: ARO:3003023
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3003105
+  label: dfrA3
+  evidence:
+  - reference: ARO:3003105
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003697
+  label: MexPQ-OpmE
+  evidence:
+  - reference: ARO:3003697
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003921
+  label: oqxAB
+  evidence:
+  - reference: ARO:3003921
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004066
+  label: MexEF-OprN with MexT mutation conferring resistance to chloramphenicol, ciprofloxacin,
+    and trimethoprim
+  evidence:
+  - reference: ARO:3004066
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004068
+  label: MexEF-OprN with MexS mutations conferring resistance to chloramphenicol,
+    ciprofloxacin, and trimethoprim
+  evidence:
+  - reference: ARO:3004068
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3004498
+  label: dfrB4
+  evidence:
+  - reference: ARO:3004498
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3004547
+  label: dfrA6
+  evidence:
+  - reference: ARO:3004547
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3004548
+  label: dfrA9
+  evidence:
+  - reference: ARO:3004548
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3004549
+  label: dfrB5
+  evidence:
+  - reference: ARO:3004549
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3004550
+  label: dfrA27
+  evidence:
+  - reference: ARO:3004550
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3004551
+  label: dfrA28
+  evidence:
+  - reference: ARO:3004551
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3004552
+  label: dfrA30
+  evidence:
+  - reference: ARO:3004552
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3004554
+  label: dfrA29
+  evidence:
+  - reference: ARO:3004554
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3004555
+  label: dfrA32
+  evidence:
+  - reference: ARO:3004555
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3004556
+  label: dfrB7
+  evidence:
+  - reference: ARO:3004556
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3004568
+  label: dfrA18
+  evidence:
+  - reference: ARO:3004568
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004572
+  label: Staphylococcus aureus LmrS
+  evidence:
+  - reference: ARO:3004572
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3004640
+  label: dfrA15b
+  evidence:
+  - reference: ARO:3004640
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3004642
+  label: dfrA3b
+  evidence:
+  - reference: ARO:3004642
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3004644
+  label: dfrA6 from Proteus mirabilis
+  evidence:
+  - reference: ARO:3004644
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3004645
+  label: dfrI
+  evidence:
+  - reference: ARO:3004645
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3005084
+  label: dfrA31
+  evidence:
+  - reference: ARO:3005084
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3005164
+  label: dfrA35
+  evidence:
+  - reference: ARO:3005164
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3005334
+  label: Trimethoprim-resistant dihydrofolate reductase DfrA42
+  evidence:
+  - reference: ARO:3005334
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3005345
+  label: Trimethoprim-resistant dihydrofolate reductase DfrA43
+  evidence:
+  - reference: ARO:3005345
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3005346
+  label: DfrA34
+  evidence:
+  - reference: ARO:3005346
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3005347
+  label: DfrA37
+  evidence:
+  - reference: ARO:3005347
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3005348
+  label: DfrA36
+  evidence:
+  - reference: ARO:3005348
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3005349
+  label: DfrA38
+  evidence:
+  - reference: ARO:3005349
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3005350
+  label: DfrB9
+  evidence:
+  - reference: ARO:3005350
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3005351
+  label: DfrA39
+  evidence:
+  - reference: ARO:3005351
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3005354
+  label: dfr22
+  evidence:
+  - reference: ARO:3005354
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3007456
+  label: dfrL
+  evidence:
+  - reference: ARO:3007456
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3007489
+  label: dfrB10
+  evidence:
+  - reference: ARO:3007489
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3007490
+  label: dfrB11
+  evidence:
+  - reference: ARO:3007490
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000188 (trimethoprim);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000745
+  target_label: antibiotic sensitive dihydrofolate reductase
+  evidence:
+  - reference: ARO:3000745
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000188 (trimethoprim); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

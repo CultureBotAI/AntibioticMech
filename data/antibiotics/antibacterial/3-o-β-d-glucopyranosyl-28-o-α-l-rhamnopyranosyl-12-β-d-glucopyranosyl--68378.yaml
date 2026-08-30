@@ -1,0 +1,45 @@
+identifier: CHEBI:68378
+label: 3-O-[β-D-glucopyranosyl]-28-O-[α-L-rhamnopyranosyl-(1→2)-β-D-glucopyranosyl]arjunolic
+  acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A triterpenoid saponin that is arjunolic acid attached to a β-D-glucopyranosyl
+  residue at position 3 and a α-L-rhamnopyranosyl-(1→2)-β-D-glucopyranosyl residue
+  at position 28. Isolated from the methanolic extract of the leaves of Symplocos
+  lancifolia, it exhibits antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-O-(6-deoxy-α-L-mannopyranosyl)-1-O-[(2α,3β)-3-(β-D-glucopyranosyloxy)-2,23-dihydroxy-28-oxoolean-12-en-28-yl]-β-D-glucopyranose
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25872
+- CHEBI:61778
+xrefs:
+- reaxys:21306693
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]1(O[C@H]2[C@H](OC(=O)[C@]34CCC(C)(C)C[C@@]3([H])C3=CC[C@]5([H])[C@@]6(C)C[C@@H](O)[C@H](O[C@]7([H])O[C@H](CO)[C@@H](O)[C@H](O)[C@H]7O)[C@@](C)(CO)[C@]6([H])CC[C@@]5(C)[C@]3(C)CC4)O[C@H](CO)[C@@H](O)[C@@H]2O)O[C@@H](C)[C@H](O)[C@@H](O)[C@H]1O'
+  standard_inchi: InChI=1S/C48H78O19/c1-21-29(53)32(56)35(59)39(62-21)65-37-34(58)31(55)26(19-50)64-41(37)67-42(61)48-14-12-43(2,3)16-23(48)22-8-9-28-44(4)17-24(52)38(66-40-36(60)33(57)30(54)25(18-49)63-40)45(5,20-51)27(44)10-11-47(28,7)46(22,6)13-15-48/h8,21,23-41,49-60H,9-20H2,1-7H3/t21-,23-,24+,25+,26+,27+,28+,29-,30+,31+,32+,33-,34-,35+,36+,37+,38-,39-,40-,41-,44-,45-,46+,47+,48-/m0/s1
+  standard_inchi_key: IYMDTUUDLAHXGD-HADMNRPSSA-N
+  molecular_formula: C48H78O19
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 959.133
+  monoisotopic_mass: 958.51373
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68378
+  source_label: 3-O-[β-D-glucopyranosyl]-28-O-[α-L-rhamnopyranosyl-(1→2)-β-D-glucopyranosyl]arjunolic
+    acid
+  minted_identifier: antibioticmech:chebi-44aa2dbf5b
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,54 @@
+identifier: CHEBI:172918
+label: PF-00835231
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A primary alcohol resulting from the cleavage of the phosphate group of
+  the prodrug PF-07304814. It is an inhibitor of SARS-CoV-1 and -2 main protease (3CLpro)
+  and exhibits potent in vitro antiviral activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[(2S)-1-({(2S)-4-hydroxy-3-oxo-1-[(3S)-2-oxopyrrolidin-3-yl]butan-2-yl}amino)-4-methyl-1-oxopentan-2-yl]-4-methoxy-1H-indole-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PF 00835231
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PF00835231
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:15734
+- CHEBI:25018
+- CHEBI:35618
+- CHEBI:46921
+- CHEBI:74223
+xrefs:
+- chemspider:9736673
+- patent:WO2005113580
+- pdb-ccd:V2M
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: '[H][C@@]1(C[C@H](NC(=O)[C@H](CC(C)C)NC(=O)c2cc3c(OC)cccc3n2)C(=O)CO)CCNC1=O'
+  standard_inchi: InChI=1S/C24H32N4O6/c1-13(2)9-18(23(32)27-17(20(30)12-29)10-14-7-8-25-22(14)31)28-24(33)19-11-15-16(26-19)5-4-6-21(15)34-3/h4-6,11,13-14,17-18,26,29H,7-10,12H2,1-3H3,(H,25,31)(H,27,32)(H,28,33)/t14-,17-,18-/m0/s1
+  standard_inchi_key: QDIMHKWNHMVDJB-WBAXXEDZSA-N
+  molecular_formula: C24H32N4O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 472.542
+  monoisotopic_mass: 472.23218
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:172918
+  source_label: PF-00835231
+  minted_identifier: antibioticmech:chebi-824beeac0a
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

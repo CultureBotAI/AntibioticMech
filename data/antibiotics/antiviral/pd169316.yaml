@@ -1,0 +1,66 @@
+identifier: CHEBI:93358
+label: PD169316
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of imidazoles that is 1H-imidazole in which the
+  hydrogens at positions 2, 4, and 5 are replaced by 4-nitrophenyl, 4-fluorophenyl,
+  and pyridin-4-yl groups, respectively. It is a potent inhibitor of p38 MAP kinase
+  (IC50 = 89 nM).
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-[4-(4-fluorophenyl)-2-(4-nitrophenyl)-1H-imidazol-5-yl]pyridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(4-nitrophenyl)-4-(4-fluorophenyl)-5-(4-pyridinyl)-1H-imidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-(4-fluorophenyl)-2-(4-nitrophenyl)-5-(4-pyridyl)-1H-imidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-[5-(4-fluorophenyl)-2-(4-nitrophenyl)-1H-imidazol-4-yl]-pyridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: J1.342.800J
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PD 169316
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PD-169316
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24780
+- CHEBI:26421
+- CHEBI:35716
+- CHEBI:83575
+xrefs:
+- cas:152121-53-4
+- drugbank:DB17040
+- hmdb:HMDB0244687
+- lincs.smallmolecule:LSM-3731
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: O=[N+]([O-])c1ccc(-c2nc(-c3ccncc3)c(-c3ccc(F)cc3)n2)cc1
+  standard_inchi: InChI=1S/C20H13FN4O2/c21-16-5-1-13(2-6-16)18-19(14-9-11-22-12-10-14)24-20(23-18)15-3-7-17(8-4-15)25(26)27/h1-12H,(H,23,24)
+  standard_inchi_key: BGIYKDUASORTBB-UHFFFAOYSA-N
+  molecular_formula: C20H13FN4O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 360.348
+  monoisotopic_mass: 360.10225
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:93358
+  source_label: PD169316
+  minted_identifier: antibioticmech:chebi-15044e5ee8
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

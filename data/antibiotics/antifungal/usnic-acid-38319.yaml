@@ -1,0 +1,58 @@
+identifier: CHEBI:38319
+label: usnic acid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of dibenzofurans that is dibenzo[b,d]furan-1(9bH)-one
+  substituted by acetyl groups at positions 2 and 6, hydroxy groups at positions 3
+  and 7 and methyl groups at positions 8 and 9b.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,6-diacetyl-3,7,9-trihydroxy-8,9b-dimethyldibenzo[b,d]furan-1(9bH)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Usninsäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: usnein
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: usniacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: usninic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:38922
+- CHEBI:51867
+xrefs:
+- beilstein:346490
+- cas:125-46-2
+- reaxys:96699
+- wikipedia.en:Usnic_acid
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(=O)C1=C(O)C=C2Oc3c(C(C)=O)c(O)c(C)c(O)c3C2(C)C1=O
+  standard_inchi: InChI=1S/C18H16O7/c1-6-14(22)12(8(3)20)16-13(15(6)23)18(4)10(25-16)5-9(21)11(7(2)19)17(18)24/h5,21-23H,1-4H3
+  standard_inchi_key: WEYVVCKOOFYHRW-UHFFFAOYSA-N
+  molecular_formula: C18H16O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 344.319
+  monoisotopic_mass: 344.0896
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:38319
+  source_label: usnic acid
+  minted_identifier: antibioticmech:chebi-449feb81f3
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

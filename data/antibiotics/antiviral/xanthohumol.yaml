@@ -1,0 +1,58 @@
+identifier: CHEBI:66331
+label: xanthohumol
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of chalcones that is trans-chalcone substituted
+  by hydroxy groups at positions 4, 2' and 4', a methoxy group at position 6' and
+  a prenyl group at position 3'. Isolated from Humulus lupulus, it induces apoptosis
+  in human malignant glioblastoma cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-1-[2,4-dihydroxy-6-methoxy-3-(3-methylbut-2-en-1-yl)phenyl]-3-(4-hydroxyphenyl)prop-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2',4,4'-trihydroxy-6'-methoxy-3'-prenylchalcone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23086
+- CHEBI:26195
+- CHEBI:35618
+xrefs:
+- cas:6754-58-1
+- hmdb:HMDB0037479
+- kegg.compound:C16417
+- knapsack:C00007099
+- lipidmaps:LMPK12120294
+- metacyc.compound:CPD-7119
+- patent:EP2579862
+- patent:WO2009126320
+- reaxys:2226282
+- wikipedia.en:Xanthohumol
+activity_roles:
+- CHEBI:22587
+- CHEBI:64947
+chemical_structure:
+  smiles: COc1cc(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1
+  standard_inchi: InChI=1S/C21H22O5/c1-13(2)4-10-16-18(24)12-19(26-3)20(21(16)25)17(23)11-7-14-5-8-15(22)9-6-14/h4-9,11-12,22,24-25H,10H2,1-3H3/b11-7+
+  standard_inchi_key: ORXQGKIUCDPEAJ-YRNVUSSQSA-N
+  molecular_formula: C21H22O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 354.402
+  monoisotopic_mass: 354.14672
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66331
+  source_label: xanthohumol
+  minted_identifier: antibioticmech:chebi-c2e6e2f500
+  role_terms:
+  - CHEBI:22587
+  - CHEBI:64947
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

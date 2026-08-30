@@ -1,0 +1,68 @@
+identifier: CHEBI:9242
+label: spiroxamine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The spiroketal resulting from the formal condensation of 4-tert-butylcyclohexanone
+  with 3-[ethyl(propyl)amino]propane-1,2-diol. An inhibitor of ergosterol synthesis,
+  it is a broad spectrum agricultural fungicide used particularly against powdery
+  mildew in the production of cereals, bananas and grapes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Impulse
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Prosper
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: N-[(8-tert-butyl-1,4-dioxaspiro[4.5]dec-2-yl)methyl]-N-ethylpropan-1-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (8-tert-Butyl-1,4-dioxa-spiro[4.5]dec-2-ylmethyl)-ethyl-propyl-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 8-(1,1-dimethylethyl)-N-ethyl-N-propyl-1,4-dioxaspiro(4.5)decane-2-methanamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: KWG4168
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Spiroxamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:39430
+- CHEBI:50996
+- CHEBI:72600
+xrefs:
+- cas:118134-30-8
+- kegg.compound:C11124
+- patent:DE3735555
+- patent:US4851405
+- pesticides:spiroxamine
+- ppdb:599
+- reaxys:11342560
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CCCN(CC)CC1COC2(CCC(C(C)(C)C)CC2)O1
+  standard_inchi: InChI=1S/C18H35NO2/c1-6-12-19(7-2)13-16-14-20-18(21-16)10-8-15(9-11-18)17(3,4)5/h15-16H,6-14H2,1-5H3
+  standard_inchi_key: PUYXTUJWRLOUCW-UHFFFAOYSA-N
+  molecular_formula: C18H35NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 297.483
+  monoisotopic_mass: 297.26678
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9242
+  source_label: spiroxamine
+  minted_identifier: antibioticmech:chebi-bd0c0f239b
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

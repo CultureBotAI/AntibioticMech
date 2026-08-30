@@ -1,0 +1,49 @@
+identifier: CHEBI:52549
+label: sordarin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An antifungal metabolite of Sordaria araneosa that inhibits protein synthesis.
+  It has a tetracyclic diterpene glycoside structure.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,3aR,4S,4aR,7R,7aR,8aS)-8a-{[(6-deoxy-4-O-methyl-β-D-altropyranosyl)oxy]methyl}-4-formyl-7-methyl-3-(propan-2-yl)-4,4a,5,6,7,7a,8,8a-octahydro-1,4-methano-s-indacene-3a(1H)-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic SL-2266
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sordarin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24400
+- CHEBI:52557
+- CHEBI:63367
+xrefs:
+- cas:11076-17-8
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]1(OC[C@@]23C[C@]4([H])[C@H](C)CC[C@@]4([H])[C@@]4(C=O)C[C@]2([H])C=C(C(C)C)[C@]43C(=O)O)O[C@H](C)[C@@H](OC)[C@@H](O)[C@@H]1O'
+  standard_inchi: InChI=1S/C27H40O8/c1-13(2)19-8-16-9-25(11-28)18-7-6-14(3)17(18)10-26(16,27(19,25)24(31)32)12-34-23-21(30)20(29)22(33-5)15(4)35-23/h8,11,13-18,20-23,29-30H,6-7,9-10,12H2,1-5H3,(H,31,32)/t14-,15-,16+,17-,18-,20+,21+,22-,23-,25+,26+,27+/m1/s1
+  standard_inchi_key: OGGVRVMISBQNMQ-YPBSLCSMSA-N
+  molecular_formula: C27H40O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 492.609
+  monoisotopic_mass: 492.27232
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:52549
+  source_label: sordarin
+  minted_identifier: antibioticmech:chebi-e3754c7bd2
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

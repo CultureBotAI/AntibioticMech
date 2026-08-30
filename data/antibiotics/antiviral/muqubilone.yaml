@@ -1,0 +1,38 @@
+identifier: CHEBI:66415
+label: muqubilone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sesterterpenoid isolated from Red Sea sponge Diacarnus erythraeanus
+  and has been shown to exhibit anti-HSV-1 activity.
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:25702
+- CHEBI:26660
+- CHEBI:26872
+- CHEBI:35951
+- CHEBI:51867
+activity_roles:
+- CHEBI:64953
+chemical_structure:
+  smiles: '[H][C@@]1([C@@H](C)C(=O)O)CC[C@](C)(CC/C=C(\C)CCC(=O)C(C)(C)CCCC(C)=O)OO1'
+  standard_inchi: InChI=1S/C24H40O6/c1-17(11-12-21(26)23(4,5)14-8-10-18(2)25)9-7-15-24(6)16-13-20(29-30-24)19(3)22(27)28/h9,19-20H,7-8,10-16H2,1-6H3,(H,27,28)/b17-9+/t19-,20+,24+/m1/s1
+  standard_inchi_key: UCWHHFGTUDDROG-DNKDVBPTSA-N
+  molecular_formula: C24H40O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 424.578
+  monoisotopic_mass: 424.28249
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66415
+  source_label: muqubilone
+  minted_identifier: antibioticmech:chebi-474ef52b78
+  role_terms:
+  - CHEBI:64953
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

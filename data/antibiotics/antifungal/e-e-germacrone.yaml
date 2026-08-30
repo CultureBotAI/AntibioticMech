@@ -1,0 +1,70 @@
+identifier: CHEBI:80830
+label: (E,E)-germacrone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A germacrane sesquiterpenoid that has formula C15H22O. It is a natural
+  product found in traditional medicinal plants of the family Zingiberaceae. The compound
+  exhibits a range of pharmacological activities including anti-inflammatory, anticancer,
+  antiviral, anti-androgenic, antioxidant, antimicrobial, antifungal, neuroprotective
+  and insecticidal activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3E,7E)-3,7-dimethyl-10-(propan-2-ylidene)cyclodeca-3,7-dien-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3E,7E)-3,7-dimethyl-10-(1-methylethylidene)-3,7-cyclodecadien-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: germacron
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: germacrone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans,trans-3,7-dimethyl-10-isopropylidene-3,7-cyclodecadien-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:68588
+- CHEBI:78840
+xrefs:
+- cas:6902-91-6
+- chemspider:4940991
+- foodb.food:FDB005347
+- kegg.compound:C16966
+- knapsack:C00011728
+- reaxys:2047453
+- wikipedia.en:Germacrone
+activity_roles:
+- CHEBI:22587
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(C)=C1C/C=C(\C)CC/C=C(\C)CC1=O
+  standard_inchi: InChI=1S/C15H22O/c1-11(2)14-9-8-12(3)6-5-7-13(4)10-15(14)16/h7-8H,5-6,9-10H2,1-4H3/b12-8+,13-7+
+  standard_inchi_key: CAULGCQHVOVVRN-SWZPTJTJSA-N
+  molecular_formula: C15H22O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 218.34
+  monoisotopic_mass: 218.16707
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:80830
+  source_label: (E,E)-germacrone
+  minted_identifier: antibioticmech:chebi-aec16cc3e9
+  role_terms:
+  - CHEBI:22587
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

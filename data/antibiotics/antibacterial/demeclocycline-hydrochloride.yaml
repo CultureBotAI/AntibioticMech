@@ -1,0 +1,60 @@
+identifier: CHEBI:59725
+label: demeclocycline hydrochloride
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The hydrochloride salt of demeclocycline. A tetracycline antibiotic, it
+  is used (mainly as the hydrochloride) for the treatment of Lyme disease, acne and
+  bronchitis, as well as for hyponatraemia (low blood sodium concentration) due to
+  the syndrome of inappropriate antidiuretic hormone (SIADH) where fluid restriction
+  alone has been ineffective.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4S,4aS,5aS,6S,12aS)-7-chloro-4-(dimethylamino)-3,6,10,12,12a-pentahydroxy-1,11-dioxo-1,4,4a,5,5a,6,11,12a-octahydrotetracene-2-carboxamide
+    hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-demethyl-7-chlorotetracycline hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-chloro-6-demethyltetracycline hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[4S-(4α,4aα,5aα,6β,12aα)]-7-chloro-4-(dimethylamino)1,4,4a,5,5a,6,11,12a-octahydro-3,6,10,12,12a-pentahydroxy-1,11-dioxo-2-naphthacenecarboxamide
+    hydrochloride'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: demeclocycline HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- beilstein:5705221
+- cas:64-73-3
+- drugbank:DB00618
+- kegg.drug:D00290
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: Cl.[H][C@]12C[C@@]3([H])[C@H](N(C)C)C(O)=C(C(N)=O)C(=O)[C@@]3(O)C(O)=C1C(=O)c1c(O)ccc(Cl)c1[C@H]2O
+  standard_inchi: InChI=1S/C21H21ClN2O8.ClH/c1-24(2)14-7-5-6-10(16(27)12-9(25)4-3-8(22)11(12)15(6)26)18(29)21(7,32)19(30)13(17(14)28)20(23)31;/h3-4,6-7,14-15,25-26,28-29,32H,5H2,1-2H3,(H2,23,31);1H/t6-,7-,14-,15-,21-;/m0./s1
+  standard_inchi_key: GVSJQNRGSCOSNJ-KBHRXELFSA-N
+  molecular_formula: C21H21ClN2O8.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 501.319
+  monoisotopic_mass: 500.07532
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59725
+  source_label: demeclocycline hydrochloride
+  minted_identifier: antibioticmech:chebi-36f0ce255d
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

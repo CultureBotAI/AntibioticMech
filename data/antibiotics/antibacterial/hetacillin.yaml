@@ -1,0 +1,88 @@
+identifier: CHEBI:5683
+label: hetacillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Hetacillin is a semi-synthetic penicillin compound with bactericidal properties.
+  Hetacillin is a prodrug that is converted to ampicillin via esterases.
+definition_source: PMID:5907864
+synonyms:
+- synonym_text: hetacilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: hetacilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: hetacillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-[(4R)-2,2-dimethyl-5-oxo-4-phenylimidazolidin-1-yl]-2,2-dimethylpenam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-[(4R)-2,2-dimethyl-5-oxo-4-phenylimidazolidin-1-yl]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6β-[(4R)-2,2-dimethyl-5-oxo-4-phenylimidazolidin-1-yl]penicillanic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hetacillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17334
+- ARO:3000008
+xrefs:
+- ARO:3009132
+- beilstein:5405483
+- cas:3511-16-8
+- drugbank:DB00739
+- drugcentral:1363
+- kegg.compound:C11729
+- kegg.drug:D01074
+- patent:US3198804
+- wikipedia.en:Hetacillin
+- chembl:CHEMBL1201116
+- pubchem.compound:443387
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2N1C(=O)[C@@H](c2ccccc2)NC1(C)C'
+  standard_inchi: InChI=1S/C19H23N3O4S/c1-18(2)13(17(25)26)21-15(24)12(16(21)27-18)22-14(23)11(20-19(22,3)4)10-8-6-5-7-9-10/h5-9,11-13,16,20H,1-4H3,(H,25,26)/t11-,12-,13+,16-/m1/s1
+  standard_inchi_key: DXVUYOAEDJXBPY-NFFDBFGFSA-N
+  molecular_formula: C19H23N3O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 389.477
+  monoisotopic_mass: 389.14093
+source_concepts:
+- source: ARO
+  source_id: ARO:3009132
+  source_label: hetacillin
+  minted_identifier: antibioticmech:aro-712b258082
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:5683
+  source_label: hetacillin
+  minted_identifier: antibioticmech:chebi-d47f6da68e
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

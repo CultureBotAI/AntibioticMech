@@ -1,0 +1,43 @@
+identifier: CHEBI:52611
+label: N'-(2-hydroxybenzoyl)-2,6-dimethoxybenzohydrazide
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: 2,6-dimethoxybenzoylsalicylhydrazidate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,6-dimethoxybenzoylsalicylhydrazide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,6-dimethoxybenzoylsalicylhydrazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35363
+xrefs:
+- gmelin:2703116
+activity_roles:
+- CHEBI:52629
+chemical_structure:
+  smiles: COc1cccc(OC)c1C(=O)NNC(=O)c1ccccc1O
+  standard_inchi: InChI=1S/C16H16N2O5/c1-22-12-8-5-9-13(23-2)14(12)16(21)18-17-15(20)10-6-3-4-7-11(10)19/h3-9,19H,1-2H3,(H,17,20)(H,18,21)
+  standard_inchi_key: NHBHUPPOSSJZSN-UHFFFAOYSA-N
+  molecular_formula: C16H16N2O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 316.313
+  monoisotopic_mass: 316.10592
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:52611
+  source_label: N'-(2-hydroxybenzoyl)-2,6-dimethoxybenzohydrazide
+  minted_identifier: antibioticmech:chebi-655a18a05f
+  role_terms:
+  - CHEBI:52629
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

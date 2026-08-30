@@ -1,0 +1,54 @@
+identifier: CHEBI:66233
+label: TMC-135B
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organonitrogen heterocyclic compound that is a 21-membered macrocyclic
+  lactam substituted by a ({1-[(cyclohex-1-en-1-ylcarbonyl)amino]cyclopropyl}carbonyl)oxy
+  group at position 18. It is isolated from Streptomyces sp. TC-1190 and exhibits
+  growth inhibitory effects on a series of human tumour cell lines.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (11E,13E,15E,21Z)-20,26-dihydroxy-10-methoxy-19,21-dimethyl-3,8-dioxo-3,4,7,8,9,10,17,18,19,20,23,24-dodecahydro-2H-25,6-(metheno)[1,4]thiazino[3,2-d]azacyclotricosin-18-yl
+    1-[(cyclohex-1-en-1-ylcarbonyl)amino]cyclopropanecarboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6E,8E,10E,16Z)-15,28-Dihydroxy-5-methoxy-14,16-dimethyl-3,24-dioxo-22-thia-2,25-diazatricyclo[18.7.1.021,26]octacosa-1(28),6,8,10,16,20,26-heptaen-13-yl
+    1-[(1-cyclohexen-1-ylcarbonyl)amino]cyclopropanecarboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24995
+- CHEBI:25698
+- CHEBI:33853
+- CHEBI:35681
+- CHEBI:38101
+- CHEBI:38106
+- CHEBI:50351
+- CHEBI:51026
+xrefs:
+- reaxys:8670452
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COC1/C=C/C=C/C=C/CC(OC(=O)C2(NC(=O)C3=CCCCC3)CC2)C(C)C(O)/C(C)=C\CCc2c(O)c(cc3c2SCC(=O)N3)NC(=O)C1
+  standard_inchi: InChI=1S/C39H49N3O8S/c1-24-13-12-17-28-35(46)29(22-30-36(28)51-23-33(44)41-30)40-32(43)21-27(49-3)16-10-5-4-6-11-18-31(25(2)34(24)45)50-38(48)39(19-20-39)42-37(47)26-14-8-7-9-15-26/h4-6,10-11,13-14,16,22,25,27,31,34,45-46H,7-9,12,15,17-21,23H2,1-3H3,(H,40,43)(H,41,44)(H,42,47)/b5-4+,11-6+,16-10+,24-13-
+  standard_inchi_key: YIMYDHUFVYSTEY-WUWQZELJSA-N
+  molecular_formula: C39H49N3O8S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 719.901
+  monoisotopic_mass: 719.32404
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66233
+  source_label: TMC-135B
+  minted_identifier: antibioticmech:chebi-8f0f9fd140
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

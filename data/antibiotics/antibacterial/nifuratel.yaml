@@ -1,0 +1,41 @@
+identifier: CHEBI:135180
+label: nifuratel
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Nifuratel is a nitrofuran antibiotic already in use for parasitic infections.
+  It was effective against different serovars, including multidrug-resistant strains
+  of Salmonella Typhimurium, and in macrophages from different host species and against
+  Listeria monocytogenes and Shigella flexneri. It reduced IL-10 and STAT3 production
+  in infected macrophages which should increase the inflammatory response against
+  Salmonella.
+definition_source: PMID:37732770
+parent_compounds:
+- ARO:3004116
+xrefs:
+- ARO:3007685
+- cas:4936-47-4
+- chembl:CHEMBL514315
+- pubchem.compound:6433427
+structural_class: nitrofuran antibiotic
+structural_class_id: ARO:3004116
+chemical_structure:
+  smiles: CSCC1CN(/N=C/c2ccc([N+](=O)[O-])o2)C(=O)O1
+  standard_inchi: InChI=1S/C10H11N3O5S/c1-19-6-8-5-12(10(14)18-8)11-4-7-2-3-9(17-7)13(15)16/h2-4,8H,5-6H2,1H3/b11-4+
+  standard_inchi_key: SRQKTCXJCCHINN-NYYWCZLTSA-N
+  molecular_formula: C10H11N3O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 285.281
+  monoisotopic_mass: 285.04194
+source_concepts:
+- source: ARO
+  source_id: ARO:3007685
+  source_label: nifuratel
+  minted_identifier: antibioticmech:aro-e922a2f19e
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

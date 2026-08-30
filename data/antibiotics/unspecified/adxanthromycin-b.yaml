@@ -1,0 +1,45 @@
+identifier: CHEBI:65372
+label: adxanthromycin B
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A disaccharide derivative that is adxanthromycin A in which the galactosyl
+  moiety has an additional α-D-galactosyl residue attached at position 4. It is isolated
+  from the fermentation broth of Streptomyces.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (10S)-10-{[(9S)-3-carboxy-2,5-dihydroxy-4,6,9-trimethyl-10-oxo-9,10-dihydroanthracen-9-yl]peroxy}-3-{[4-O-(α-D-galactopyranosyl)-α-D-galactopyranosyl]oxy}-8-hydroxy-1,7,10-trimethyl-9-oxo-9,10-dihydroanthracene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24400
+- CHEBI:25702
+- CHEBI:33853
+- CHEBI:35692
+- CHEBI:46955
+- CHEBI:63353
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]1(O[C@H]2O[C@H](CO)[C@H](O)[C@H](O)[C@H]2O)[C@H](O)[C@@H](O)[C@@H](Oc2cc3c(c(C)c2C(=O)O)C(=O)c2c(ccc(C)c2O)[C@@]3(C)OO[C@@]2(C)c3cc(O)c(C(=O)O)c(C)c3C(=O)c3c2ccc(C)c3O)O[C@@H]1CO'
+  standard_inchi: InChI=1S/C48H50O22/c1-15-7-9-19-31(33(15)52)36(55)27-17(3)29(43(61)62)23(51)11-21(27)47(19,5)69-70-48(6)20-10-8-16(2)34(53)32(20)37(56)28-18(4)30(44(63)64)24(12-22(28)48)65-45-41(60)39(58)42(26(14-50)67-45)68-46-40(59)38(57)35(54)25(13-49)66-46/h7-12,25-26,35,38-42,45-46,49-54,57-60H,13-14H2,1-6H3,(H,61,62)(H,63,64)/t25-,26-,35+,38+,39-,40-,41-,42+,45+,46-,47-,48-/m1/s1
+  standard_inchi_key: MVIOXXHCLPZAAQ-UMLDZSFSSA-N
+  molecular_formula: C48H50O22
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 978.906
+  monoisotopic_mass: 978.27937
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65372
+  source_label: adxanthromycin B
+  minted_identifier: antibioticmech:chebi-866ad33ebe
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

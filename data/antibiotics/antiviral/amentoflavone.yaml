@@ -1,0 +1,59 @@
+identifier: CHEBI:2631
+label: amentoflavone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A biflavonoid that is obtained by oxidative coupling of two molecules
+  of apigenin resulting in a bond between positions C-3 of the hydroxyphenyl ring
+  and C-8 of the chromene ring. A natural product found particularly in Ginkgo biloba
+  and Hypericum perforatum.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 8-[5-(5,7-dihydroxy-4-oxo-4H-chromen-2-yl)-2-hydroxyphenyl]-5,7-dihydroxy-2-(4-hydroxyphenyl)-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3',8''-Biapigenin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 8-(5-(5,7-dihydroxy-4-oxo-4H-1-benzopyran-2-yl)-2-hydroxyphenyl)-5,7-dihydroxy-2-(4-hydroxyphenyl)-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Didemethyl-ginkgetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24698
+- CHEBI:36820
+- CHEBI:50128
+xrefs:
+- cas:1617-53-4
+- hmdb:HMDB0030832
+- kegg.compound:C10018
+- knapsack:C00001015
+- lipidmaps:LMPK12040009
+- reaxys:380244
+- wikipedia.en:Amentoflavone
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: O=c1cc(-c2ccc(O)c(-c3c(O)cc(O)c4c(=O)cc(-c5ccc(O)cc5)oc34)c2)oc2cc(O)cc(O)c12
+  standard_inchi: InChI=1S/C30H18O10/c31-15-4-1-13(2-5-15)24-12-23(38)29-21(36)10-20(35)27(30(29)40-24)17-7-14(3-6-18(17)33)25-11-22(37)28-19(34)8-16(32)9-26(28)39-25/h1-12,31-36H
+  standard_inchi_key: YUSWMAULDXZHPY-UHFFFAOYSA-N
+  molecular_formula: C30H18O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 538.464
+  monoisotopic_mass: 538.09
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2631
+  source_label: amentoflavone
+  minted_identifier: antibioticmech:chebi-9fbc3fb291
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

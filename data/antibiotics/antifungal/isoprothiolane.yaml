@@ -1,0 +1,64 @@
+identifier: CHEBI:6047
+label: isoprothiolane
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A malonate ester that is diisopropyl malonate in which the two methylene
+  hydrogens at position 2 are replaced by a 1,3-dithiolan-2-ylidene group. An insecticide
+  and fungicide used to control a range of diseases including Pyricularia oryzae,
+  Helminthosporium sigmoideum and Fusarium nivale.
+definition_source: ChEBI
+synonyms:
+- synonym_text: di(propan-2-yl) 1,3-dithiolan-2-ylidenemalonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Isoprothiolane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bis(1-methylethyl) 1,3-dithiolan-2-ylidenepropanedioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: di-isopropyl 1,3-dithiolane-2-ylidenemalonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diisopropyl 1,3-dithiolan-2-ylidenemalonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diisopropyl 2-(1,3-dithiolan-2-ylidene)malonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35725
+- CHEBI:38083
+- CHEBI:39192
+xrefs:
+- cas:50512-35-1
+- hmdb:HMDB0031779
+- kegg.compound:C11111
+- pesticides:isoprothiolane
+- ppdb:408
+- reaxys:2128528
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CC(C)OC(=O)C(C(=O)OC(C)C)=C1SCCS1
+  standard_inchi: InChI=1S/C12H18O4S2/c1-7(2)15-10(13)9(11(14)16-8(3)4)12-17-5-6-18-12/h7-8H,5-6H2,1-4H3
+  standard_inchi_key: UFHLMYOGRXOCSL-UHFFFAOYSA-N
+  molecular_formula: C12H18O4S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 290.406
+  monoisotopic_mass: 290.06465
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6047
+  source_label: isoprothiolane
+  minted_identifier: antibioticmech:chebi-f16b1280b1
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

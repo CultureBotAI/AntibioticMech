@@ -1,0 +1,68 @@
+identifier: CHEBI:144441
+label: triacsin C
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A nitroso compound that is N-undecylnitrous hydrazide carrying double
+  bonds at positions 1,2,4, and 7. It is a long-chain fatty acyl CoA synthetase inhibitor
+  and interferes with lipid metabolism by inhibiting the de novo synthesis of glycerolipids
+  and cholesterol esters.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[(1E,2E,4E,7E)-undeca-2,4,7-trien-1-ylidene]nitrous hydrazide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2E,4E,7E)-2,4,7-undecatrienal nitrosohydrazone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2E,4E,7E)-undecatrienal nitrosohydrazone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4,7-undecatrienal nitrosohydrazone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FR 900190
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: WS 1228A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: WS-1228A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nitrosohydrazone-2E,4E,7E-undecatrienal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35800
+- CHEBI:38532
+- CHEBI:78840
+xrefs:
+- cas:76896-80-5
+- lincs.smallmolecule:LSM-43284
+- metacyc.compound:CPD-14770
+- wikipedia.en:Triacsin_C
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: CCC/C=C/C/C=C/C=C/C=N/NN=O
+  standard_inchi: InChI=1S/C11H17N3O/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15/h4-5,7-11H,2-3,6H2,1H3,(H,13,15)/b5-4+,8-7+,10-9+,12-11+
+  standard_inchi_key: NKTGCVUIESDXPU-YLEPRARLSA-N
+  molecular_formula: C11H17N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 207.277
+  monoisotopic_mass: 207.13716
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:144441
+  source_label: triacsin C
+  minted_identifier: antibioticmech:chebi-c56cad9efd
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

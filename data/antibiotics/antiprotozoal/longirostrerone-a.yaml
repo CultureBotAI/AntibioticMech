@@ -1,0 +1,47 @@
+identifier: CHEBI:68980
+label: longirostrerone A
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An azaphilone that is 9,9a-dihydro-6H-furo[2,3-h]isochromene-6,8(6aH)-dione
+  substituted by a 4-hydroxy-2-methyl-6-oxocyclohexyl group at position 3, a methyl
+  group at position 6a and a 4,6,8-trimethyldeca-2,4-dienoyl group at position 9.
+  Isolated from Chaetomium longirostre, it exhibits cytotoxic and antimalarial activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6aR,9S,9aR)-3-[(1S,2S,4R)-4-hydroxy-2-methyl-6-oxocyclohexyl]-6a-methyl-9-[(2E,4E)-4,6,8-trimethyldeca-2,4-dienoyl]-9,9a-dihydro-6H-furo[2,3-h]isochromene-6,8(6aH)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(4-hydroxy-6-methyl-2-oxocyclohexyl)-18-(4,6,8-trimethyldeca-2,4-dienoyl)-(7R)-7-methyl-8,18-dihydro-7H-furo[2,3-h]isochromene-6,17-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26979
+- CHEBI:37581
+- CHEBI:50941
+xrefs:
+- reaxys:22123575
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@@]12C3=COC([C@H]4C(=O)C[C@H](O)C[C@@H]4C)=CC3=CC(=O)[C@]1(C)OC(=O)[C@@H]2C(=O)/C=C/C(C)=C/C(C)CC(C)CC'
+  standard_inchi: InChI=1S/C32H40O7/c1-7-17(2)10-19(4)11-18(3)8-9-24(34)29-30-23-16-38-26(28-20(5)12-22(33)15-25(28)35)13-21(23)14-27(36)32(30,6)39-31(29)37/h8-9,11,13-14,16-17,19-20,22,28-30,33H,7,10,12,15H2,1-6H3/b9-8+,18-11+/t17?,19?,20-,22+,28+,29+,30-,32-/m0/s1
+  standard_inchi_key: IAPUSMZQQSXGDI-QXHNIIHBSA-N
+  molecular_formula: C32H40O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 536.665
+  monoisotopic_mass: 536.2774
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68980
+  source_label: longirostrerone A
+  minted_identifier: antibioticmech:chebi-784edd1443
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

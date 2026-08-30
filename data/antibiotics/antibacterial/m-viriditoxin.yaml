@@ -1,0 +1,48 @@
+identifier: CHEBI:146007
+label: (M)-viriditoxin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dimethyl 2,2'-(9,9',10,10'-tetrahydroxy-7,7'-dimethoxy-1,1'-dioxo-3,3',4,4'-tetrahydro-[6,6'-binaphtho[2,3-c]pyran]-3,3'-diyl)diacetate
+  in which the the 3 and 3' positions (bearing the 2-methoxy-2-oxoethyl (CH2CO2Me)
+  groups) both have S configuration, while the 6 and 6' positions (where the binaphthopyran
+  units are linked) have Ra configuration (the M <a href="https://en.wikipedia.org/wiki/Atropisomer#Stereochemical_assignment"
+  target="_blank">atropisomer</a>). It has been isolated from the fungi Aspergillus
+  viridinutans and the fungus Paecilomyces variotii derived from the inner tissues
+  of the giant jellyfish Nemopilema nomurai.
+definition_source: ChEBI
+synonyms:
+- synonym_text: dimethyl 2,2'-[(3S,3'S,6Ra)-9,9',10,10'-tetrahydroxy-7,7'-dimethoxy-1,1'-dioxo-3,3',4,4'-tetrahydro-1H,1'H-[6,6'-binaphtho[2,3-c]pyran]-3,3'-diyl]diacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-viriditoxin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:146015
+xrefs:
+- cas:1381782-08-6
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COC(=O)C[C@@H]1Cc2cc3c(-c4c(OC)cc(O)c5c(O)c6c(cc45)C[C@@H](CC(=O)OC)OC6=O)c(OC)cc(O)c3c(O)c2C(=O)O1
+  standard_inchi: InChI=1S/C34H30O14/c1-43-21-11-19(35)27-17(7-13-5-15(9-23(37)45-3)47-33(41)25(13)31(27)39)29(21)30-18-8-14-6-16(10-24(38)46-4)48-34(42)26(14)32(40)28(18)20(36)12-22(30)44-2/h7-8,11-12,15-16,35-36,39-40H,5-6,9-10H2,1-4H3/t15-,16-/m0/s1
+  standard_inchi_key: GMCZVCXZGZGZPX-HOTGVXAUSA-N
+  molecular_formula: C34H30O14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 662.6
+  monoisotopic_mass: 662.16356
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:146007
+  source_label: (M)-viriditoxin
+  minted_identifier: antibioticmech:chebi-511e9c6f6c
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,64 @@
+identifier: CHEBI:132112
+label: sodium thiosulfate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An inorganic sodium salt composed of sodium and thiosulfate ions in a
+  2:1 ratio.
+definition_source: ChEBI
+synonyms:
+- synonym_text: disodium sulfurothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Disodium thiosulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium hyposulfite
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium oxide sulfide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium thiosulphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Thiosulfuric acid, disodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: anhydrous sodium thiosulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium thiosulfate (anhydrous)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38702
+xrefs:
+- cas:7772-98-7
+- foodb.food:FDB015436
+- reaxys:11323704
+- wikipedia.en:Sodium_thiosulfate
+activity_roles:
+- CHEBI:86327
+chemical_structure:
+  smiles: O=S(=O)([O-])[S-].[Na+].[Na+]
+  standard_inchi: InChI=1S/2Na.H2O3S2/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2
+  standard_inchi_key: AKHNMLFCWUSKQB-UHFFFAOYSA-L
+  molecular_formula: 2Na.O3S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 158.111
+  monoisotopic_mass: 157.90842
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:132112
+  source_label: sodium thiosulfate
+  minted_identifier: antibioticmech:chebi-e63a68a612
+  role_terms:
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

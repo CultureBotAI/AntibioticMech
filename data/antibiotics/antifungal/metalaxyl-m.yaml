@@ -1,0 +1,77 @@
+identifier: CHEBI:60607
+label: metalaxyl-M
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A methyl N-(2,6-dimethylphenyl)-N-(methoxyacetyl)alaninate that is the
+  more active R-enantiomer of metalaxyl. A systemic fungicide, it is active against
+  phytopathogens of the order Peronosporales and is used to conrtrol Pythium in a
+  number of vegetable crops.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl N-(2,6-dimethylphenyl)-N-(methoxyacetyl)-D-alaninate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-N-(2,6-dimethylphenyl)-N-(methoxyacetylamino)propionic acid methyl
+    ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-metalaxyl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-metalaxyl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: R-metalaxyl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: mefenoxam
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (R)-2-{[(2,6-dimethylphenyl)methoxyacetyl]amino} propionate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (R)-N-(2,6-dimethylphenyl)-N-(methoxyacetyl)alaninate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl N-(methoxyacetyl)-N-(2,6-xylyl)-D-alaninate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:82790
+- CHEBI:83944
+- CHEBI:87013
+- CHEBI:87015
+xrefs:
+- cas:70630-17-0
+- kegg.compound:C18626
+- patent:WO2011012493
+- pesticides:metalaxyl-m
+- ppdb:445
+- reaxys:5081553
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+chemical_structure:
+  smiles: COCC(=O)N(c1c(C)cccc1C)[C@H](C)C(=O)OC
+  standard_inchi: InChI=1S/C15H21NO4/c1-10-7-6-8-11(2)14(10)16(13(17)9-19-4)12(3)15(18)20-5/h6-8,12H,9H2,1-5H3/t12-/m1/s1
+  standard_inchi_key: ZQEIXNIJLIKNTD-GFCCVEGCSA-N
+  molecular_formula: C15H21NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 279.336
+  monoisotopic_mass: 279.14706
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:60607
+  source_label: metalaxyl-M
+  minted_identifier: antibioticmech:chebi-294c805520
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

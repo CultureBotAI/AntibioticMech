@@ -1,0 +1,61 @@
+identifier: CHEBI:81759
+label: diclomezine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyridazinone that is pyridazin-3(2H)-one which is substituted at position
+  6 by a 3,5-dichloro-4-methylphenyl group. A fugicide, it is used to treat rice sheath
+  blight caused by Rhizoctonia solani.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Monguard
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 6-(3,5-dichloro-4-methylphenyl)pyridazin-3(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(3,5-dichloro-4-methylphenyl)-3(2H)-pyridazinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(3,5-dichloro-4-methylphenyl)-3-pyridazone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(3,5-dichloro-p-tolyl)pyridazin-3(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diclomézine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23697
+- CHEBI:26414
+xrefs:
+- cas:62865-36-5
+- kegg.compound:C18458
+- pesticides:diclomezine
+- ppdb:1215
+- reaxys:884391
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: Cc1c(Cl)cc(-c2ccc(=O)nn2)cc1Cl
+  standard_inchi: InChI=1S/C11H8Cl2N2O/c1-6-8(12)4-7(5-9(6)13)10-2-3-11(16)15-14-10/h2-5H,1H3,(H,15,16)
+  standard_inchi_key: UWQMKVBQKFHLCE-UHFFFAOYSA-N
+  molecular_formula: C11H8Cl2N2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 255.104
+  monoisotopic_mass: 254.00137
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81759
+  source_label: diclomezine
+  minted_identifier: antibioticmech:chebi-aa25c1f848
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,46 @@
+identifier: CHEBI:66549
+label: lanigerol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diterpenoid of icetexane type isolated from roots of Salvia lanigera
+  and has been shown to exhibit antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4aS,11aS)-1,1-dimethyl-8-(propan-2-yl)-1,2,3,4,5,10,11,11a-octahydro-4aH-dibenzo[a,d][7]annulene-4a,7-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10,12-dihydroxy-9(10→20)-abeo 8,11,13-abietatriene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23849
+- CHEBI:26878
+- CHEBI:33853
+- CHEBI:38032
+xrefs:
+- reaxys:6062537
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12CCc3cc(C(C)C)c(O)cc3C[C@@]1(O)CCCC2(C)C'
+  standard_inchi: InChI=1S/C20H30O2/c1-13(2)16-10-14-6-7-18-19(3,4)8-5-9-20(18,22)12-15(14)11-17(16)21/h10-11,13,18,21-22H,5-9,12H2,1-4H3/t18-,20-/m0/s1
+  standard_inchi_key: UZNOTFOFROXACM-ICSRJNTNSA-N
+  molecular_formula: C20H30O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 302.458
+  monoisotopic_mass: 302.22458
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66549
+  source_label: lanigerol
+  minted_identifier: antibioticmech:chebi-05afda824a
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

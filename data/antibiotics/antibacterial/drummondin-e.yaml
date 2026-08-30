@@ -1,0 +1,50 @@
+identifier: CHEBI:65810
+label: drummondin E
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of resorcinols that is a derivative of filicinic
+  acid. Isolated from the stems and leaves of Hypericum drummondii, it exhibits antibacterial
+  activity against Gram-positive bacteria Staphylococcus aureus and Bacillus subtilis
+  and the acid fast bacterium Mycobacterium smegmatis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-acetyl-6-{3-acetyl-2,4-dihydroxy-6-[(3-methylbut-2-en-1-yl)oxy]benzyl}-3,5-dihydroxy-4-methyl-4-(3-methylbut-2-en-1-yl)cyclohexa-2,5-dien-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-drummondin E
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33572
+- CHEBI:33823
+- CHEBI:35618
+- CHEBI:51689
+- CHEBI:51867
+- CHEBI:76224
+xrefs:
+- cas:138169-54-7
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(=O)C1=C(O)C(C)(CC=C(C)C)C(O)=C(Cc2c(OCC=C(C)C)cc(O)c(C(C)=O)c2O)C1=O
+  standard_inchi: InChI=1S/C28H34O8/c1-14(2)8-10-28(7)26(34)19(25(33)23(17(6)30)27(28)35)12-18-21(36-11-9-15(3)4)13-20(31)22(16(5)29)24(18)32/h8-9,13,31-32,34-35H,10-12H2,1-7H3
+  standard_inchi_key: LACABBHUBUCHAU-UHFFFAOYSA-N
+  molecular_formula: C28H34O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 498.572
+  monoisotopic_mass: 498.22537
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65810
+  source_label: drummondin E
+  minted_identifier: antibioticmech:chebi-9b38aa8d78
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,61 @@
+identifier: CHEBI:69039
+label: rutarin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monosaccharide derivative that is β-D-glucopyranose in which the hydroxy
+  group at position 1 is substituted by a [(2S)-2-(2-hydroxypropan-2-yl)-7-oxo-2,3-dihydro-7H-furo[3,2-g][1]benzopyran-9-yl]oxy
+  group. It is a natural product found in several plant species including Ruta graveolens
+  and Citropsis articulata.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-2-(2-hydroxypropan-2-yl)-7-oxo-2,3-dihydro-7H-furo[3,2-g]chromen-9-yl
+    β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-2-(2-hydroxypropan-2-yl)-7-oxo-2,3-dihydro-7H-furo[3,2-g][1]benzopyran-9-yl
+    β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-(β-D-glucopyranosyloxy)-2,3-dihydro-2-(1-hydroxy-1-methylethyl)-7H-furo[3,2-g][1]benzopyran-7-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: campesenin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22798
+- CHEBI:26369
+- CHEBI:63367
+xrefs:
+- cas:20320-81-4
+- foodb.food:FDB002847
+- hmdb:HMDB0030884
+- kegg.compound:C09309
+- knapsack:C00002496
+activity_roles:
+- CHEBI:33282
+- CHEBI:64915
+chemical_structure:
+  smiles: CC(C)(O)[C@@H]1Cc2cc3ccc(=O)oc3c(O[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)c2O1
+  standard_inchi: InChI=1S/C20H24O10/c1-20(2,26)11-6-9-5-8-3-4-12(22)29-16(8)18(17(9)28-11)30-19-15(25)14(24)13(23)10(7-21)27-19/h3-5,10-11,13-15,19,21,23-26H,6-7H2,1-2H3/t10-,11+,13-,14+,15-,19+/m1/s1
+  standard_inchi_key: JWWFVRMFYKPZNE-VVIWCBLHSA-N
+  molecular_formula: C20H24O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 424.402
+  monoisotopic_mass: 424.13695
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69039
+  source_label: rutarin
+  minted_identifier: antibioticmech:chebi-8fe175494d
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

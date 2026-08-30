@@ -1,0 +1,39 @@
+identifier: antibioticmech:aro-f75c158ac2
+label: zabofloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: A fluoroquinolone with potent activity against Gram-positive pathogens.
+  Showed the most potent in vitro and in vivo activities against drug-resistant Streptococcus
+  pneumoniae. One of the most potent antibacterial agent against penicillin-resistant
+  S. pneumoniae in a murine systemic infection model.
+definition_source: PMID:27869677
+parent_compounds:
+- ARO:0000001
+xrefs:
+- ARO:3004731
+- chembl:CHEMBL2107811
+- pubchem.compound:54556623
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: CON=C1CN(CC12CNC2)C3=C(C=C4C(=O)C(=CN(C4=N3)C5CC5)C(=O)O)F
+  standard_inchi: InChI=1S/C19H20FN5O4/c1-29-23-14-6-24(9-19(14)7-21-8-19)17-13(20)4-11-15(26)12(18(27)28)5-25(10-2-3-10)16(11)22-17/h4-5,10,21H,2-3,6-9H2,1H3,(H,27,28)
+  standard_inchi_key: ZNPOCLHDJCAZAH-UHFFFAOYSA-N
+  molecular_formula: C19H20FN5O4
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 401.4
+  monoisotopic_mass: 401.1499323
+source_concepts:
+- source: ARO
+  source_id: ARO:3004731
+  source_label: zabofloxacin
+  minted_identifier: antibioticmech:aro-f75c158ac2
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

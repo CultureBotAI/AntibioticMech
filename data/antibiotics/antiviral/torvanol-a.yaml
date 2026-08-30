@@ -1,0 +1,42 @@
+identifier: CHEBI:66258
+label: torvanol A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic potassium salt of torvanol A hydrogen sulfate. Isolated from
+  the fruits of Solanum torvum, it exhibits antiviral activity against herpes simplex
+  virus type 1.
+definition_source: ChEBI
+synonyms:
+- synonym_text: rel-potassium (3R,4S)-3-{5-[(E)-2-carboxyethenyl]-2-hydroxy-3-methoxyphenyl}-6-methoxy-3,4-dihydro-2H-chromen-4-yl
+    sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:50394
+xrefs:
+- reaxys:9178609
+activity_roles:
+- CHEBI:64953
+chemical_structure:
+  smiles: COc1ccc2c(c1)[C@@H](OS(=O)(=O)[O-])[C@H](c1cc(/C=C/C(=O)O)cc(OC)c1O)CO2.[K+]
+  standard_inchi: InChI=1S/C20H20O10S.K/c1-27-12-4-5-16-14(9-12)20(30-31(24,25)26)15(10-29-16)13-7-11(3-6-18(21)22)8-17(28-2)19(13)23;/h3-9,15,20,23H,10H2,1-2H3,(H,21,22)(H,24,25,26);/q;+1/p-1/b6-3+;/t15-,20+;/m0./s1
+  standard_inchi_key: OYAPXMLXMKSIDT-WSCZMHPESA-M
+  molecular_formula: C20H19O10S.K
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 490.527
+  monoisotopic_mass: 490.0336
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66258
+  source_label: torvanol A
+  minted_identifier: antibioticmech:chebi-9b7cb6cc19
+  role_terms:
+  - CHEBI:64953
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

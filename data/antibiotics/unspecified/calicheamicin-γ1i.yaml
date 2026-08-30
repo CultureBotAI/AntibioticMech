@@ -1,0 +1,53 @@
+identifier: CHEBI:3319
+label: calicheamicin γ1I
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A calcheamicin in which contains 3-O-methyl-α-L-rhamnosyl, 2,6-dideoxy-4-thio-β-D-ribo-hexopyranosyl,
+  and 4-amino-4,6-dideoxy-2-O-[2,4-dideoxy-4-(ethylamino)-3-O-methyl-α-L-threo-pentopyranosyl]-α-L-idopyranose
+  units and in which the aromatic ring contains an iodo substituent.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Calicheamicin gamma(1)I
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Calichemicin gamma1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: calicheamicin gamma(1)I
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: calicheamicin gamma(1,I)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: calicheamicin γ1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37142
+- CHEBI:53268
+- CHEBI:64068
+xrefs:
+- cas:108212-75-5
+- kegg.compound:C11469
+- reaxys:9894883
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]1(O[C@@H]2O[C@H](C)[C@@H](NO[C@H]3C[C@H](O)[C@H](SC(=O)c4c(C)c(I)c(O[C@@H]5O[C@@H](C)[C@H](O)[C@@H](OC)[C@H]5O)c(OC)c4OC)[C@@H](C)O3)[C@H](O)[C@H]2O[C@H]2C[C@H](OC)[C@@H](NCC)CO2)C#C/C=C\C#C[C@]2(O)CC(=O)C(NC(=O)OC)=C1/C2=C\CSSSC'
+  standard_inchi: InChI=1S/C55H74IN3O21S4/c1-12-57-30-24-73-35(22-34(30)68-6)78-48-43(63)40(26(3)75-53(48)77-33-17-15-13-14-16-19-55(67)23-32(61)41(58-54(66)72-10)38(33)29(55)18-20-82-84-81-11)59-80-36-21-31(60)50(28(5)74-36)83-51(65)37-25(2)39(56)46(49(71-9)45(37)69-7)79-52-44(64)47(70-8)42(62)27(4)76-52/h13-14,18,26-28,30-31,33-36,40,42-44,47-48,50,52-53,57,59-60,62-64,67H,12,20-24H2,1-11H3,(H,58,66)/b14-13-,29-18+/t26-,27+,28-,30+,31+,33+,34+,35+,36+,40-,42+,43+,44-,47-,48-,50-,52+,53+,55+/m1/s1
+  standard_inchi_key: HXCHCVDVKSCDHU-PJKCJEBCSA-N
+  structure_source: ChEBI
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3319
+  source_label: calicheamicin γ1I
+  minted_identifier: antibioticmech:chebi-f2a8f654ff
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

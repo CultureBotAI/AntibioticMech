@@ -1,0 +1,55 @@
+identifier: CHEBI:75091
+label: aclacinomycin N
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An anthracycline antibiotic that is aclacinomycin A in which the keto
+  group on the trisaccharide fragment has been reduced in a stereospecific manner
+  to the corresponding alcohol.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (1R,2R,4S)-2-ethyl-2,5,7-trihydroxy-6,11-dioxo-4-{[2,3,6-trideoxy-4-O-{2,6-dideoxy-4-O-[(2S,5S,6S)-5-hydroxy-6-methyltetrahydro-2H-pyran-2-yl]-α-L-lyxo-hexopyranosyl}-3-(dimethylamino)-α-L-lyxo-hexopyranosyl]oxy}-1,2,3,4,6,11-hexahydrotetracene-1-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic MA 144N1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MA 144 N1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:26188
+- CHEBI:26878
+- CHEBI:33853
+- CHEBI:47779
+- CHEBI:48120
+- CHEBI:51286
+- CHEBI:63571
+xrefs:
+- cas:64474-88-0
+- kegg.compound:C18637
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@@]1(O)C[C@H](O[C@H]2C[C@H](N(C)C)[C@H](O[C@H]3C[C@H](O)[C@H](O[C@H]4CC[C@H](O)[C@H](C)O4)[C@H](C)O3)[C@H](C)O2)c2c(cc3c(c2O)C(=O)c2c(O)cccc2C3=O)[C@H]1C(=O)OC
+  standard_inchi: InChI=1S/C42H55NO15/c1-8-42(51)17-28(33-22(35(42)41(50)52-7)14-23-34(38(33)49)37(48)32-21(36(23)47)10-9-11-26(32)45)56-30-15-24(43(5)6)39(19(3)54-30)58-31-16-27(46)40(20(4)55-31)57-29-13-12-25(44)18(2)53-29/h9-11,14,18-20,24-25,27-31,35,39-40,44-46,49,51H,8,12-13,15-17H2,1-7H3/t18-,19-,20-,24-,25-,27-,28-,29-,30-,31-,35-,39+,40+,42+/m0/s1
+  standard_inchi_key: CPUWOKRFRYWIHK-BPPBZOKFSA-N
+  molecular_formula: C42H55NO15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 813.894
+  monoisotopic_mass: 813.35717
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75091
+  source_label: aclacinomycin N
+  minted_identifier: antibioticmech:chebi-ec4e65b0ef
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

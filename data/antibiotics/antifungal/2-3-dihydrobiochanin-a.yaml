@@ -1,0 +1,50 @@
+identifier: CHEBI:15712
+label: 2,3-dihydrobiochanin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxyisoflavanone that is the 2,3-dihydro derivative of biochanin
+  A.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,7-dihydroxy-3-(4-methoxyphenyl)-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,3-Dihydrobiochanin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dihydrobiochanin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:72739
+- CHEBI:72740
+xrefs:
+- cas:83920-62-1
+- kegg.compound:C02675
+- knapsack:C00009553
+- reaxys:1260381
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1ccc(C2COc3cc(O)cc(O)c3C2=O)cc1
+  standard_inchi: InChI=1S/C16H14O5/c1-20-11-4-2-9(3-5-11)12-8-21-14-7-10(17)6-13(18)15(14)16(12)19/h2-7,12,17-18H,8H2,1H3
+  standard_inchi_key: XPZQBSCTDLGDBP-UHFFFAOYSA-N
+  molecular_formula: C16H14O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 286.283
+  monoisotopic_mass: 286.08412
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:15712
+  source_label: 2,3-dihydrobiochanin A
+  minted_identifier: antibioticmech:chebi-68f04dc411
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

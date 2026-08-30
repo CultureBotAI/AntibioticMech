@@ -1,0 +1,85 @@
+identifier: CHEBI:83279
+label: 3-iodoprop-2-yn-1-yl butylcarbamate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbamate ester that is carbamic acid in which the nitrogen has been
+  substituted by a butyl group and in which the hydrogen of the carboxy group is replaced
+  by a 1-iodoprop-2-yn-3-yl group. A fungicide, it is used as a preservative and sapstain
+  control chemical in wood products and as a preservative in adhesives, paints, latex
+  paper coating, plastic, water-based inks, metal working fluids, textiles, and numerous
+  consumer products.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Troysan KK-108A
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Troysan polyphase anti-mildew
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Woodlife
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 3-iodo-2-propyn-1-yl N-butylcarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-iodo-2-propynyl butylcarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-iodoprop-2-ynyl butylcarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: IPBC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Iodopropynyl butylcarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: butyl-3-iodo-2-propynylcarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: iodocarb
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: iodocarbe
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:37142
+- CHEBI:73474
+- CHEBI:87061
+xrefs:
+- cas:55406-53-6
+- pesticides:iodocarb
+- wikipedia.en:Iodopropynyl_butylcarbamate
+activity_roles:
+- CHEBI:24127
+- CHEBI:86328
+chemical_structure:
+  smiles: CCCCNC(=O)OCC#CI
+  standard_inchi: InChI=1S/C8H12INO2/c1-2-3-6-10-8(11)12-7-4-5-9/h2-3,6-7H2,1H3,(H,10,11)
+  standard_inchi_key: WYVVKGNFXHOCQV-UHFFFAOYSA-N
+  molecular_formula: C8H12INO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 281.093
+  monoisotopic_mass: 280.99128
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83279
+  source_label: 3-iodoprop-2-yn-1-yl butylcarbamate
+  minted_identifier: antibioticmech:chebi-0fee1a3176
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

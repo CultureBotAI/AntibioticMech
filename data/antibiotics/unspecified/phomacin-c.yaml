@@ -1,0 +1,40 @@
+identifier: CHEBI:66748
+label: phomacin C
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cytochalasin isolated from a fungus Phoma sp. that has been shown to
+  possess potent inhibitory activity against HT-29 colonic adenocarcinoma cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S,3aR,4S,6aS,7E,10S,12S,13E,15aS)-12-hydroxy-10-(hydroxymethyl)-4,5,8-trimethyl-3-(2-methylpropyl)-3,3a,4,6a,9,10,11,12-octahydro-1H-cycloundeca[d]isoindole-1,15(2H)-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23528
+- CHEBI:26979
+- CHEBI:51026
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12[C@H](CC(C)C)NC(=O)[C@]13C(=O)/C=C/[C@@H](O)C[C@@H](CO)C/C(C)=C/[C@@]3([H])C=C(C)[C@H]2C'
+  standard_inchi: InChI=1S/C25H37NO4/c1-14(2)8-21-23-17(5)16(4)11-19-10-15(3)9-18(13-27)12-20(28)6-7-22(29)25(19,23)24(30)26-21/h6-7,10-11,14,17-21,23,27-28H,8-9,12-13H2,1-5H3,(H,26,30)/b7-6+,15-10+/t17-,18+,19+,20-,21+,23+,25-/m1/s1
+  standard_inchi_key: AQAFUDMWTUOKSI-USVVNQICSA-N
+  molecular_formula: C25H37NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 415.574
+  monoisotopic_mass: 415.27226
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66748
+  source_label: phomacin C
+  minted_identifier: antibioticmech:chebi-0a9ad0041e
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

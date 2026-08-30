@@ -1,0 +1,45 @@
+identifier: CHEBI:66593
+label: lucialdehyde B
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracyclic triterpenoid that is lanosta-8,24-dien-26-al substituted
+  by oxo groups at positions 3 and 7. Isolated from Ganoderma lucidum and Ganoderma
+  pfeifferi, it exhibits antiviral and cytotoxic activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (24E)-3,7-dioxolanosta-8,24-dien-26-al
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:131565
+- CHEBI:13601
+- CHEBI:26893
+- CHEBI:36130
+- CHEBI:47789
+xrefs:
+- reaxys:9238781
+activity_roles:
+- CHEBI:64952
+chemical_structure:
+  smiles: '[H][C@@]12CC(=O)C3=C(CC[C@@]4(C)[C@@]3(C)CC[C@]4([H])[C@H](C)CC/C=C(\C)C=O)[C@@]1(C)CCC(=O)C2(C)C'
+  standard_inchi: InChI=1S/C30H44O3/c1-19(18-31)9-8-10-20(2)21-11-16-30(7)26-22(12-15-29(21,30)6)28(5)14-13-25(33)27(3,4)24(28)17-23(26)32/h9,18,20-21,24H,8,10-17H2,1-7H3/b19-9+/t20-,21-,24+,28-,29-,30+/m1/s1
+  standard_inchi_key: KZOBOICRKKYGAQ-GOUGDUPLSA-N
+  molecular_formula: C30H44O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 452.679
+  monoisotopic_mass: 452.32905
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66593
+  source_label: lucialdehyde B
+  minted_identifier: antibioticmech:chebi-cd49471c66
+  role_terms:
+  - CHEBI:64952
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

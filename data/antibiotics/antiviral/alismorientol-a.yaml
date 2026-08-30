@@ -1,0 +1,47 @@
+identifier: CHEBI:65386
+label: alismorientol A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A guaiane sesquiterpenoid that is 1,5-cis-guaiane substituted by hydroxy
+  groups at positions 4, 6, 7 and 10. It is isolated from the rhizomes of Alisma orientale
+  and exhibits antihepatitis B activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,3aR,4S,7R,8S,8aS)-1,4-dimethyl-7-(propan-2-yl)decahydroazulene-1,4,7,8-tetrol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4α,6β,7α,10β-tetrahydroxy-1,5-cis-guaiane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26878
+- CHEBI:35681
+- CHEBI:36744
+- CHEBI:36785
+xrefs:
+- reaxys:11226985
+activity_roles:
+- CHEBI:64951
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@@](C)(O)[C@]1([H])[C@H](O)[C@](O)(C(C)C)CC[C@]2(C)O'
+  standard_inchi: InChI=1S/C15H28O4/c1-9(2)15(19)8-7-13(3,17)10-5-6-14(4,18)11(10)12(15)16/h9-12,16-19H,5-8H2,1-4H3/t10-,11+,12+,13+,14-,15-/m1/s1
+  standard_inchi_key: MAZFBCJNIUKTID-MNQBEEPXSA-N
+  molecular_formula: C15H28O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 272.385
+  monoisotopic_mass: 272.19876
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65386
+  source_label: alismorientol A
+  minted_identifier: antibioticmech:chebi-09e34640f7
+  role_terms:
+  - CHEBI:64951
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,39 @@
+identifier: antibioticmech:aro-e129595baa
+label: phenelfamycin H
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Phenelfamycin H is produced by Streptomyces albospinus strain Acta 3619.
+  Phenelfamycin G and H are isomeric and similar to phenelfamycin E and F only with
+  the addition of a hydroxyl group at position C-30. Phenelfamycin G and H have a
+  narrow antibacterial spectrum with potent activity against Cutibacterium acnes.
+definition_source: PMID:21285962
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3001323
+- CHEBI:225298
+- pubchem.compound:102306423
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: C[C@H]1[C@H]([C@H](C[C@@H](O1)O[C@H]2[C@@H](O[C@@H](C[C@H]2OC)O[C@@H]3[C@@H](O[C@H](C[C@@H]3OC)OC[C@@H](C(=O)CC/C=C/C=C(\C)/[C@H]([C@@H](C)[C@H]4C[C@@H]([C@@H](O4)/C=C/C=C/C=C/C(=O)O)O)OC)[C@@]5([C@@H]([C@@H](C([C@@H](O5)/C=C/C=C\CO)(C)C)OC(=O)CC6=CC=CC=C6)O)O)C)C)OC)O
+  standard_inchi: InChI=1S/C66H96O22/c1-39(60(79-11)40(2)49-34-47(69)48(84-49)29-21-12-13-23-31-54(70)71)25-17-14-20-28-46(68)45(66(75)63(74)64(85-55(72)33-44-26-18-15-19-27-44)65(6,7)53(88-66)30-22-16-24-32-67)38-80-56-36-51(77-9)61(42(4)82-56)87-58-37-52(78-10)62(43(5)83-58)86-57-35-50(76-8)59(73)41(3)81-57/h12-19,21-27,29-31,40-43,45,47-53,56-64,67,69,73-75H,20,28,32-38H2,1-11H3,(H,70,71)/b13-12+,17-14+,24-16-,29-21+,30-22+,31-23+,39-25+/t40-,41-,42-,43-,45-,47-,48-,49+,50-,51-,52+,53-,56+,57-,58+,59+,60+,61+,62-,63+,64-,66+/m0/s1
+  standard_inchi_key: DXDHNOMQTFKZDB-HSXFPMABSA-N
+  molecular_formula: C66H96O22
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1241.5
+  monoisotopic_mass: 1240.63932469
+source_concepts:
+- source: ARO
+  source_id: ARO:3001323
+  source_label: phenelfamycin H
+  minted_identifier: antibioticmech:aro-e129595baa
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

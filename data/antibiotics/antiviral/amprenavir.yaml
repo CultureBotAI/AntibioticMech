@@ -1,0 +1,56 @@
+identifier: CHEBI:40050
+label: amprenavir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (3S)-tetrahydrofuran-3-yl [(1S,2R)-3-{[(4-aminophenyl)sulfonyl](2-methylpropyl)amino}-1-benzyl-2-hydroxypropyl]carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3S)-Tetrahydro-3-furanyl ((1S,2R)-3-(((4-aminophenyl)sulfonyl)(2-methylpropyl)amino)-2-hydroxy-1-(phenylmethyl)propyl)carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Agenerase
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Amprenavir
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:35358
+- CHEBI:47020
+xrefs:
+- beilstein:10126027
+- cas:161814-49-9
+- drugbank:DB00701
+- drugcentral:200
+- kegg.compound:C08086
+- kegg.drug:D00894
+- wikipedia.en:Amprenavir
+activity_roles:
+- CHEBI:35660
+- CHEBI:36044
+chemical_structure:
+  smiles: CC(C)CN(C[C@@H](O)[C@H](Cc1ccccc1)NC(=O)O[C@H]1CCOC1)S(=O)(=O)c1ccc(N)cc1
+  standard_inchi: InChI=1S/C25H35N3O6S/c1-18(2)15-28(35(31,32)22-10-8-20(26)9-11-22)16-24(29)23(14-19-6-4-3-5-7-19)27-25(30)34-21-12-13-33-17-21/h3-11,18,21,23-24,29H,12-17,26H2,1-2H3,(H,27,30)/t21-,23-,24+/m0/s1
+  standard_inchi_key: YMARZQAQMVYCKC-OEMFJLHTSA-N
+  molecular_formula: C25H35N3O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 505.637
+  monoisotopic_mass: 505.22466
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:40050
+  source_label: amprenavir
+  minted_identifier: antibioticmech:chebi-618f68581b
+  role_terms:
+  - CHEBI:35660
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

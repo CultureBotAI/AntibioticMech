@@ -1,0 +1,60 @@
+identifier: CHEBI:28283
+label: capsidiol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An eremophilane sesquiterpenoid that is (+)-5-epi-aristolochene bearing
+  additional 1β- and 3α-hydroxy substituents. It is a phytoalexin produced in Nicotiana
+  and Capsicum plant species in response to pathogen attack.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,3R,4S,4aR,6R)-4,4a-dimethyl-6-(prop-1-en-2-yl)-1,2,3,4,4a,5,6,7-octahydronaphthalene-1,3-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1β,3α,4βH-eremophila-9,11-diene-1,3-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1R,3R,4S,4aR,6R)-6-isopropenyl-4,4a-dimethyl-1,2,3,4,4a,5,6,7-octahydronaphthalene-1,3-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Capsidiol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:138397
+- CHEBI:142279
+- CHEBI:36753
+xrefs:
+- beilstein:2331764
+- cas:37208-05-2
+- foodb.food:FDB014812
+- hmdb:HMDB0002352
+- kegg.compound:C09627
+- knapsack:C00003108
+- lipidmaps:LMPR0103250002
+- metacyc.compound:CPD-4661
+- wikipedia.en:Capsidiol
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C=C(C)[C@@H]1CC=C2[C@H](O)C[C@@H](O)[C@@H](C)[C@@]2(C)C1
+  standard_inchi: InChI=1S/C15H24O2/c1-9(2)11-5-6-12-14(17)7-13(16)10(3)15(12,4)8-11/h6,10-11,13-14,16-17H,1,5,7-8H2,2-4H3/t10-,11-,13-,14-,15-/m1/s1
+  standard_inchi_key: BXXSHQYDJWZXPB-OKNSCYNVSA-N
+  molecular_formula: C15H24O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 236.355
+  monoisotopic_mass: 236.17763
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28283
+  source_label: capsidiol
+  minted_identifier: antibioticmech:chebi-0aa7e315fe
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

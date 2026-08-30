@@ -1,0 +1,114 @@
+identifier: CHEBI:3614
+label: chlorhexidine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A bisbiguanide compound with a structure consisting of two (p-chlorophenyl)guanide
+  units linked by a hexamethylene bridge.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N',N'''''-hexane-1,6-diylbis[N-(4-chlorophenyl)(imidodicarbonimidic
+    diamide)]
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,1'-Hexamethylene bis(5-(p-chlorophenyl)biguanide)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chlorhexidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N'-Bis(4-chlorophenyl)-3,12-diimino-2,4,11,13-tetraazatetradecanediimidamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chlorhexidine acetate
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: chlorhexidine digluconate
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: chlorhexidine gluconate
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:53662
+- CHEBI:83403
+- ARO:3005386
+xrefs:
+- ARO:3007039
+- cas:55-56-1
+- drugbank:DB00878
+- drugcentral:597
+- kegg.compound:C06902
+- kegg.drug:D07668
+- lincs.smallmolecule:LSM-5633
+- reaxys:2826432
+- vsdb:1779
+- wikipedia.en:Chlorhexidine
+- chembl:CHEMBL790
+- pubchem.compound:9552079
+activity_roles:
+- CHEBI:33282
+structural_class: disinfecting agents and antiseptics
+structural_class_id: ARO:3005386
+chemical_structure:
+  smiles: N=C(NCCCCCCNC(=N)NC(=N)Nc1ccc(Cl)cc1)NC(=N)Nc1ccc(Cl)cc1
+  standard_inchi: InChI=1S/C22H30Cl2N10/c23-15-5-9-17(10-6-15)31-21(27)33-19(25)29-13-3-1-2-4-14-30-20(26)34-22(28)32-18-11-7-16(24)8-12-18/h5-12H,1-4,13-14H2,(H5,25,27,29,31,33)(H5,26,28,30,32,34)
+  standard_inchi_key: GHXZTYHSJHQHIJ-UHFFFAOYSA-N
+  molecular_formula: C22H30Cl2N10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 505.458
+  monoisotopic_mass: 504.2032
+source_concepts:
+- source: ARO
+  source_id: ARO:3007039
+  source_label: chlorhexidine
+  minted_identifier: antibioticmech:aro-0a95fd2950
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3614
+  source_label: chlorhexidine
+  minted_identifier: antibioticmech:chebi-0773f08e3a
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004077
+  label: PmpM
+  evidence:
+  - reference: ARO:3004077
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007039 (chlorhexidine);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004578
+  label: Acinetobacter baumannii AbuO
+  evidence:
+  - reference: ARO:3004578
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007039 (chlorhexidine);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004585
+  label: Klebsiella pneumoniae KpnEF
+  evidence:
+  - reference: ARO:3004585
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007039 (chlorhexidine);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3007669
+  label: aadT
+  evidence:
+  - reference: ARO:3007669
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007039 (chlorhexidine);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

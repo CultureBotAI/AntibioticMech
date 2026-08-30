@@ -1,0 +1,49 @@
+identifier: CHEBI:69018
+label: physalin D
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A physalin with antimalarial and antimycobacterial activities isolated
+  from Physalis angulata.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5α,6β-dihydroxy-5,6-dihydrophysalin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25000
+- CHEBI:36851
+- CHEBI:37407
+- CHEBI:38194
+- CHEBI:51689
+- CHEBI:52157
+- CHEBI:76361
+xrefs:
+- hmdb:HMDB0034353
+- reaxys:9107516
+activity_roles:
+- CHEBI:38068
+- CHEBI:64912
+chemical_structure:
+  smiles: '[H][C@@]12C[C@@H](O)[C@@]3(O)CC=CC(=O)[C@]3(C)[C@@]1([H])CC[C@@]1(O)C(=O)O[C@]3(C)[C@]14O[C@]21OC[C@@]2([H])C(=O)O[C@]3([H])C[C@@]2(C)[C@]4([H])C1=O'
+  standard_inchi: InChI=1S/C28H32O11/c1-22-10-17-24(3)28-18(22)19(31)27(39-28,36-11-14(22)20(32)37-17)13-9-16(30)25(34)7-4-5-15(29)23(25,2)12(13)6-8-26(28,35)21(33)38-24/h4-5,12-14,16-18,30,34-35H,6-11H2,1-3H3/t12-,13+,14-,16+,17+,18-,22+,23-,24-,25-,26+,27+,28-/m0/s1
+  standard_inchi_key: DUGJJSWZRHBJJK-IFSNGKJOSA-N
+  molecular_formula: C28H32O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 544.553
+  monoisotopic_mass: 544.19446
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69018
+  source_label: physalin D
+  minted_identifier: antibioticmech:chebi-89b71a3f56
+  role_terms:
+  - CHEBI:38068
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

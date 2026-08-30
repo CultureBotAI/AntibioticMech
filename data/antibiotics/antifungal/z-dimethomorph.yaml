@@ -1,0 +1,54 @@
+identifier: CHEBI:83427
+label: (Z)-dimethomorph
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An enamide resulting from the formal condensation of (2Z)-3-(4-chlorophenyl)-3-(3,4-dimethoxyphenyl)acrylic
+  acid with the amino group of morpholine. The agricultural fungicide dimethomorph
+  is a mixture of (E)- and (Z)-dimethomorph; only the Z isomer has fungicidal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2Z)-3-(4-chlorophenyl)-3-(3,4-dimethoxyphenyl)-1-(morpholin-4-yl)prop-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dimethomorph Z
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Z-Dimethomorph
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140326
+- CHEBI:35618
+- CHEBI:51751
+- CHEBI:83403
+- CHEBI:87134
+xrefs:
+- cas:113210-98-3
+- reaxys:11343579
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1ccc(/C(=C\C(=O)N2CCOCC2)c2ccc(Cl)cc2)cc1OC
+  standard_inchi: InChI=1S/C21H22ClNO4/c1-25-19-8-5-16(13-20(19)26-2)18(15-3-6-17(22)7-4-15)14-21(24)23-9-11-27-12-10-23/h3-8,13-14H,9-12H2,1-2H3/b18-14-
+  standard_inchi_key: QNBTYORWCCMPQP-JXAWBTAJSA-N
+  molecular_formula: C21H22ClNO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 387.863
+  monoisotopic_mass: 387.12374
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83427
+  source_label: (Z)-dimethomorph
+  minted_identifier: antibioticmech:chebi-d0fc84efcd
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,70 @@
+identifier: CHEBI:46416
+label: virginiamycin S1
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclodepsipeptide that is N-(3-hydroxypicolinoyl)-L-threonyl-D-α-aminobutyryl-L-prolyl-N-methyl-L-phenylalanyl-4-oxo-L-pipecoloyl-L-2-phenylglycine
+  in which the carboxy group of the 2-phenylglycine moiety has undergone formal intramolecular
+  condensation with the hydroxy group of the N-(3-hydroxypicolinoyl)-L-threonyl to
+  give the corresponding 19-membered ring lactone. It is one of the two major components
+  of the antibacterial drug virginiamycin, produced by Streptomyces virginiae, S.
+  loidensis, S. mitakaensis, S. pristina-spiralis, S. ostreogriseus, and others.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[(6R,9S,10R,13S,15aS,22S,24aS)-22-benzyl-6-ethyl-10,23-dimethyl-5,8,12,15,17,21,24-heptaoxo-13-phenyldocosahydro-12H-pyrido[2,1-f]pyrrolo[2,1-l][1,4,7,10,13,16]oxapentaazacyclononadecin-9-yl]-3-hydroxypyridine-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-((3-hydroxy-2-pyridinyl)carbonyl)-L-threonyl-D-α-aminobutyryl-L-prolyl-N-methyl-L-phenylalanyl-4-oxo-L-pipecoloyl-L-2-phenylglycine
+    ρ-lactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(3-hydroxypicolinoyl)-L-threonyl-D-α-aminobutyryl-L-prolyl-N-methyl-L-phenylalanyl-4-oxo-L-pipecoloyl-L-2-phenylglycine
+    ρ-lactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Virginiamycin S1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: virginiamycin factor S
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25105
+- CHEBI:35213
+xrefs:
+- cas:23152-29-6
+- drugbank:DB04805
+- kegg.compound:C11269
+- pdb-ccd:VRS
+- reaxys:3647647
+- wikipedia.en:Virginiamycin_S1
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H][C@]1(Cc2ccccc2)C(=O)N2CCC(=O)C[C@@]2([H])C(=O)N[C@@H](c2ccccc2)C(=O)O[C@H](C)[C@H](NC(=O)c2ncccc2O)C(=O)N[C@H](CC)C(=O)N2CCC[C@@]2([H])C(=O)N1C'
+  standard_inchi: InChI=1S/C43H49N7O10/c1-4-29-40(56)49-21-12-17-30(49)41(57)48(3)32(23-26-13-7-5-8-14-26)42(58)50-22-19-28(51)24-31(50)37(53)47-35(27-15-9-6-10-16-27)43(59)60-25(2)34(38(54)45-29)46-39(55)36-33(52)18-11-20-44-36/h5-11,13-16,18,20,25,29-32,34-35,52H,4,12,17,19,21-24H2,1-3H3,(H,45,54)(H,46,55)(H,47,53)/t25-,29-,30+,31+,32+,34+,35+/m1/s1
+  standard_inchi_key: FEPMHVLSLDOMQC-IYPFLVAKSA-N
+  molecular_formula: C43H49N7O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 823.904
+  monoisotopic_mass: 823.35409
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:46416
+  source_label: virginiamycin S1
+  minted_identifier: antibioticmech:chebi-28279e2ba4
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

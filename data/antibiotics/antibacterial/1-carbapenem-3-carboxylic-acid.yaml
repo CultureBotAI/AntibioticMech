@@ -1,0 +1,63 @@
+identifier: CHEBI:615
+label: 1-carbapenem-3-carboxylic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbapenemcarboxylic acid that is the 3-carboxy derivative of 2,3-didehydro-1-carbapenam.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,3-didehydro-1-carbapenam-3-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R)-7-oxo-1-azabicyclo[3.2.0]hept-2-ene-2-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R)-Carbapenem-3-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R)-Carbapenem-3-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Carbapen-2-em-3-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SQ 27860
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: carbapenem-3-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:46634
+- CHEBI:79020
+xrefs:
+- cas:82768-37-4
+- kegg.compound:C06669
+- metacyc.compound:CPD-9377
+- reaxys:8832318
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12CC=C(C(=O)O)N1C(=O)C2'
+  standard_inchi: InChI=1S/C7H7NO3/c9-6-3-4-1-2-5(7(10)11)8(4)6/h2,4H,1,3H2,(H,10,11)/t4-/m1/s1
+  standard_inchi_key: BSIMZHVOQZIAOY-SCSAIBSYSA-N
+  molecular_formula: C7H7NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 153.137
+  monoisotopic_mass: 153.04259
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:615
+  source_label: 1-carbapenem-3-carboxylic acid
+  minted_identifier: antibioticmech:chebi-79a511e8dd
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

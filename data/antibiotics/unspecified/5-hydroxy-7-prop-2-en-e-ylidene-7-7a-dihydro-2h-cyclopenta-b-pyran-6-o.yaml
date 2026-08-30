@@ -1,0 +1,49 @@
+identifier: CHEBI:65800
+label: 5-hydroxy-7-prop-2-en-(E)-ylidene-7,7a-dihydro- 2H-cyclopenta[b]pyran-6-one
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterobicyclic compound that is 7,7a-dihydrocyclopenta[b]pyran-6(2H)-one
+  substituted by a hydroxy group at position 5 and a prop-2-en-1-ylidene group at
+  position 7 (the E isomer). Isolated from the sponge Ulosa and ascidian Diplosoma
+  virens, it exhibits antimicrobial activity and toxicity against HCT116 cells (human
+  colorectal cancer cells) by triggering apoptotic cell death.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (7E)-5-hydroxy-7-(prop-2-en-1-ylidene)-7,7a-dihydrocyclopenta[b]pyran-6(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Diplosoma ylidene 1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27171
+- CHEBI:33823
+- CHEBI:37407
+- CHEBI:51689
+xrefs:
+- reaxys:15800346
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C=C/C=C1/C(=O)C(O)=C2C=CCOC21
+  standard_inchi: InChI=1S/C11H10O3/c1-2-4-7-9(12)10(13)8-5-3-6-14-11(7)8/h2-5,11,13H,1,6H2/b7-4-
+  standard_inchi_key: CCVQPAZRNPBPPA-DAXSKMNVSA-N
+  molecular_formula: C11H10O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 190.198
+  monoisotopic_mass: 190.06299
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65800
+  source_label: 5-hydroxy-7-prop-2-en-(E)-ylidene-7,7a-dihydro- 2H-cyclopenta[b]pyran-6-one
+  minted_identifier: antibioticmech:chebi-b5d615353b
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

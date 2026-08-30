@@ -1,0 +1,80 @@
+identifier: CHEBI:3088
+label: bilanafos
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tripeptide comprising one L-phosphinothricyl and two L-alanyl units
+  joined in sequence.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-{(2S)-2-amino-4-[hydroxy(methyl)phosphoryl]butanoyl}-L-alanyl-L-alanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-2-amino-4-(hydroxymethylphosphinyl)butanoyl-L-alanyl-L-alanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-2-amino-4-[hydroxy(methyl)phosphinoyl]butyryl-L-alanyl-L-alanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Amino-4-(methylphosphino)butyrylalanylalanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic SF 1293
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bialaphos
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bilanafos
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-phosphinothricyl-L-alanyl-L-alanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PTT
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphinothricylalanylalanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: gamma-(Hydroxymethylphosphinyl)-L-alpha-aminobutyryl-L-alanyl-L-alanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: phosphinothricin tripeptide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26044
+- CHEBI:47923
+xrefs:
+- bpdb:1169
+- cas:35597-43-4
+- kegg.compound:C06457
+- knapsack:C00000782
+- metacyc.compound:CPD-10013
+- pesticides:bilanafos
+- reaxys:6155318
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C[C@H](NC(=O)[C@H](C)NC(=O)[C@@H](N)CCP(C)(=O)O)C(=O)O
+  standard_inchi: InChI=1S/C11H22N3O6P/c1-6(9(15)14-7(2)11(17)18)13-10(16)8(12)4-5-21(3,19)20/h6-8H,4-5,12H2,1-3H3,(H,13,16)(H,14,15)(H,17,18)(H,19,20)/t6-,7-,8-/m0/s1
+  standard_inchi_key: GINJFDRNADDBIN-FXQIFTODSA-N
+  molecular_formula: C11H22N3O6P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 323.286
+  monoisotopic_mass: 323.12462
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3088
+  source_label: bilanafos
+  minted_identifier: antibioticmech:chebi-79208a8e24
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

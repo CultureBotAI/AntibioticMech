@@ -1,0 +1,42 @@
+identifier: CHEBI:65891
+label: exiguaflavanone A
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetrahydroxyflavanone that is (2S)-flavanone substituted by hydroxy
+  groups at positions 5, 7, 2' and 6' and a lavandulyl group at position 8. Isolated
+  from Sophora exigua and Artemisia indica, it exhibits antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-2-(2,6-dihydroxyphenyl)-5,7-dihydroxy-8-[(2R)-5-methyl-2-(prop-1-en-2-yl)hex-4-en-1-yl]-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38742
+xrefs:
+- lipidmaps:LMPK12140111
+- reaxys:5362663
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@@]1(c2c(O)cccc2O)CC(=O)c2c(O)cc(O)c(C[C@@H](CC=C(C)C)C(=C)C)c2O1'
+  standard_inchi: InChI=1S/C25H28O6/c1-13(2)8-9-15(14(3)4)10-16-19(28)11-20(29)24-21(30)12-22(31-25(16)24)23-17(26)6-5-7-18(23)27/h5-8,11,15,22,26-29H,3,9-10,12H2,1-2,4H3/t15-,22+/m1/s1
+  standard_inchi_key: FPUREMWTZVLZBZ-QRQCRPRQSA-N
+  molecular_formula: C25H28O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 424.493
+  monoisotopic_mass: 424.18859
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65891
+  source_label: exiguaflavanone A
+  minted_identifier: antibioticmech:chebi-b5bcf06dd9
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

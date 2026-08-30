@@ -1,0 +1,70 @@
+identifier: CHEBI:5692
+label: hexachlorobenzene
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of chlorobenzenes that is benzene in which all of
+  the hydrogens are replaced by chlorines. An agricultural fungicide introduced in
+  the mid-1940s and formerly used as a seed treatment, its use has been banned since
+  1984 under the Stockholm Convention on Persistent Organic Pollutants.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,2,3,4,5,6-hexachlorobenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HCB
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hexachlorbenzol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hexachlorobenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: perchlorobenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: phenyl perchloryl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23132
+- CHEBI:87034
+xrefs:
+- cas:118-74-1
+- gmelin:27278
+- hmdb:HMDB0032566
+- kegg.compound:C11042
+- ppdb:380
+- reaxys:1912585
+- wikipedia.en:Hexachlorobenzene
+activity_roles:
+- CHEBI:24127
+- CHEBI:86328
+chemical_structure:
+  smiles: Clc1c(Cl)c(Cl)c(Cl)c(Cl)c1Cl
+  standard_inchi: InChI=1S/C6Cl6/c7-1-2(8)4(10)6(12)5(11)3(1)9
+  standard_inchi_key: CKAPSXZOOQJIBF-UHFFFAOYSA-N
+  molecular_formula: C6Cl6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 284.784
+  monoisotopic_mass: 281.81312
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5692
+  source_label: hexachlorobenzene
+  minted_identifier: antibioticmech:chebi-a2ed31bd11
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

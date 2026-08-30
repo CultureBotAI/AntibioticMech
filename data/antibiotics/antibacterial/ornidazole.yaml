@@ -1,0 +1,97 @@
+identifier: CHEBI:75176
+label: ornidazole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A C-nitro compound that is 5-nitroimidazole in which the hydrogens at
+  positions 1 and 2 are replaced by 3-chloro-2-hydroxypropyl and methyl groups, respectively.
+  It is used in the treatment of susceptible protozoal infections and for the treatment
+  of anaerobic bacterial infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ornidazol
+  synonym_type: INN
+  source: chebi
+- synonym_text: ornidazolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1-chloro-3-(2-methyl-5-nitro-1N-imidazol-1-yl)propan-2-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(2-hydroxy-3-chloropropyl)-2-methyl-5-nitroimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(3-chloro-2-hydroxypropyl)-2-methyl-5-nitroimidazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ro 7-0207
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α-(Chlormethyl)-2-methyl-5-nitro-imidazol-1-aethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α-(chloromethyl)-2-methyl-5-nitro-1H-imidazole-1-ethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24780
+- CHEBI:35681
+- CHEBI:35716
+- CHEBI:36683
+- ARO:3004115
+xrefs:
+- ARO:3007114
+- cas:16773-42-5
+- drugcentral:1997
+- kegg.drug:D05274
+- lincs.smallmolecule:LSM-1548
+- patent:NL6606853
+- patent:US3435049
+- patent:US3493582
+- reaxys:614299
+- wikipedia.en:Ornidazole
+- chembl:CHEMBL1449676
+- pubchem.compound:28061
+activity_roles:
+- CHEBI:35820
+- CHEBI:36047
+- CHEBI:50685
+structural_class: nitroimidazole antibiotic
+structural_class_id: ARO:3004115
+chemical_structure:
+  smiles: Cc1ncc([N+](=O)[O-])n1CC(O)CCl
+  standard_inchi: InChI=1S/C7H10ClN3O3/c1-5-9-3-7(11(13)14)10(5)4-6(12)2-8/h3,6,12H,2,4H2,1H3
+  standard_inchi_key: IPWKIXLWTCNBKN-UHFFFAOYSA-N
+  molecular_formula: C7H10ClN3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 219.628
+  monoisotopic_mass: 219.04107
+source_concepts:
+- source: ARO
+  source_id: ARO:3007114
+  source_label: ornidazole
+  minted_identifier: antibioticmech:aro-91924bc338
+  role_terms:
+  - CHEBI:35820
+  - CHEBI:36047
+  - CHEBI:50685
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:75176
+  source_label: ornidazole
+  minted_identifier: antibioticmech:chebi-e9b38cb3ee
+  role_terms:
+  - CHEBI:35820
+  - CHEBI:36047
+  - CHEBI:50685
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,36 @@
+identifier: antibioticmech:aro-07e4fbc49d
+label: cadaside A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Cadasides are lipopeptides with antibiotic activity.
+definition_source: PMID:36168660
+parent_compounds:
+- ARO:3009657
+xrefs:
+- ARO:3007630
+- CHEBI:226051
+- pubchem.compound:146682091
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: CC[C@@H](C)[C@@H]1C(=O)N[C@H](C(=O)N[C@H](C(=O)N2CCC[C@H]2C(=O)NCC(=O)N[C@@H](C(=O)N[C@H](C(=O)N(CC(=O)O[C@@H]([C@@H](C(=O)N1)NC(=O)[C@H](CC3=CC=C(C=C3)O)NC(=O)[C@@H](CCC(=O)O)NC(=O)CNC(=O)[C@H](C)CNC(=O)/C=C\C=C\CCC(C)CC)C)C)C[C@H](C(=O)O)O)CCC(=O)O)[C@H](C(=O)O)O)CC(=O)O
+  standard_inchi: InChI=1S/C69H99N13O28/c1-8-34(3)15-12-10-11-13-17-47(85)70-30-36(5)58(96)71-31-48(86)73-40(22-24-50(88)89)59(97)75-42(27-38-18-20-39(83)21-19-38)61(99)79-55-37(6)110-53(94)33-81(7)66(104)44(28-46(84)68(106)107)77-60(98)41(23-25-51(90)91)74-49(87)32-72-63(101)45-16-14-26-82(45)67(105)56(57(95)69(108)109)80-62(100)43(29-52(92)93)76-64(102)54(35(4)9-2)78-65(55)103/h10-11,13,17-21,34-37,40-46,54-57,83-84,95H,8-9,12,14-16,22-33H2,1-7H3,(H,70,85)(H,71,96)(H,72,101)(H,73,86)(H,74,87)(H,75,97)(H,76,102)(H,77,98)(H,78,103)(H,79,99)(H,80,100)(H,88,89)(H,90,91)(H,92,93)(H,106,107)(H,108,109)/b11-10+,17-13-/t34?,35-,36-,37-,40-,41-,42+,43+,44+,45+,46-,54-,55+,56+,57-/m1/s1
+  standard_inchi_key: HKTPJHSXELPTFT-UBMKZYSCSA-N
+  molecular_formula: C69H99N13O28
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1558.6
+  monoisotopic_mass: 1557.67224955
+source_concepts:
+- source: ARO
+  source_id: ARO:3007630
+  source_label: cadaside A
+  minted_identifier: antibioticmech:aro-07e4fbc49d
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

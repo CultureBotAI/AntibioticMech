@@ -1,0 +1,64 @@
+identifier: CHEBI:133907
+label: hypothiocyanous acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfur oxoacid that is sulfenic acid in which the hydrogen attached
+  to the sulfur has been replaced by a cyano group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: nitrilomethane-SO-thioperoxol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (hydroxysulfanyl)formonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hypothiocyanite
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cyanosulfoxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hypocyanous acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33402
+- CHEBI:64708
+xrefs:
+- cas:63296-34-4
+- chemspider:111270
+- hmdb:HMDB0012974
+- reaxys:2958668
+activity_roles:
+- CHEBI:22587
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: N#CSO
+  standard_inchi: InChI=1S/CHNOS/c2-1-4-3/h3H
+  standard_inchi_key: ZCZCOXLLICTZAH-UHFFFAOYSA-N
+  molecular_formula: CHNOS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 75.092
+  monoisotopic_mass: 74.97788
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:133907
+  source_label: hypothiocyanous acid
+  minted_identifier: antibioticmech:chebi-ba4f04b19d
+  role_terms:
+  - CHEBI:22587
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

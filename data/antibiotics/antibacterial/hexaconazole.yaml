@@ -1,0 +1,46 @@
+identifier: CHEBI:83711
+label: hexaconazole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An agricultural fungicide that is a systemic conazole (imidazole) fungicide
+  used for the control of many seed-borne and soil-borne diseases and fungi particularly
+  Ascomycetes and Basidiomycetes. It has a broad spectrum of action, being systemic
+  with protective and curative action, but is known to disrupt membrane function.
+  It also has a role as a chelator. It is a tertiary alcohol, a member of triazoles
+  and a dichlorobenzene. In FungAMR, it was listed as having effects against Aspergillus
+  fumigatus. It is commonly used in the control of apple, coffee and peanut diseases,
+  but is also used for various other fruits and vegetables. Major consumption is in
+  Asian countries and it is used mainly for the control of rice sheath blight in China,
+  India, Vietnam, and parts of East Asia. It was introduced in the 1980s, it is not
+  approved for use within the European Union.
+definition_source: PMID:24084639
+parent_compounds:
+- ARO:3007500
+xrefs:
+- ARO:3009180
+- cas:79983-71-4
+- chembl:CHEMBL1898860
+- pubchem.compound:66461
+structural_class: imidazole antibiotic
+structural_class_id: ARO:3007500
+chemical_structure:
+  smiles: CCCCC(O)(Cn1cncn1)c1ccc(Cl)cc1Cl
+  standard_inchi: InChI=1S/C14H17Cl2N3O/c1-2-3-6-14(20,8-19-10-17-9-18-19)12-5-4-11(15)7-13(12)16/h4-5,7,9-10,20H,2-3,6,8H2,1H3
+  standard_inchi_key: STMIIPIFODONDC-UHFFFAOYSA-N
+  molecular_formula: C14H17Cl2N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 314.216
+  monoisotopic_mass: 313.07487
+source_concepts:
+- source: ARO
+  source_id: ARO:3009180
+  source_label: hexaconazole
+  minted_identifier: antibioticmech:aro-1c7f274ffa
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

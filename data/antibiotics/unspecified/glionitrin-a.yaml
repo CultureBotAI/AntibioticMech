@@ -1,0 +1,46 @@
+identifier: CHEBI:65967
+label: glionitrin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: 'A pyrazinoindole with a disulfide bridge spanning a dioxo-substituted
+  pyrazine ring. It is an antibiotic isolated from the microbial strains Sphingomonas
+  and Aspergillus fumigatus, and exhibits cytotoxic activity against four human cancer
+  cell lines: HCT-116, A549, AGS, and DU145.'
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S,10aS)-3-(hydroxymethyl)-2-methyl-7-nitro-2,3-dihydro-10H-3,10a-epidithiopyrazino[1,2-a]indole-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35489
+- CHEBI:35716
+- CHEBI:38163
+- CHEBI:64130
+xrefs:
+- cas:1116153-15-1
+- reaxys:19154490
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CN1C(=O)[C@@]23Cc4ccc([N+](=O)[O-])cc4N2C(=O)[C@]1(CO)SS3
+  standard_inchi: InChI=1S/C13H11N3O5S2/c1-14-10(18)12-5-7-2-3-8(16(20)21)4-9(7)15(12)11(19)13(14,6-17)23-22-12/h2-4,17H,5-6H2,1H3/t12-,13-/m0/s1
+  standard_inchi_key: VRFJINVAZRAFHH-STQMWFEESA-N
+  molecular_formula: C13H11N3O5S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 353.381
+  monoisotopic_mass: 353.01401
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65967
+  source_label: glionitrin A
+  minted_identifier: antibioticmech:chebi-983837d3a8
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

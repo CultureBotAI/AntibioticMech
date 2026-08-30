@@ -1,0 +1,335 @@
+identifier: antibioticmech:aro-3b4e0b6d96
+label: 5-episisomicin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: 5-episosomicin is a semisynthetic aminoglycoside antibiotic similar to
+  sisomicin.
+definition_source: PMID:697347
+synonyms:
+- synonym_text: pentisomicin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:0000016
+xrefs:
+- ARO:3007379
+- pubchem.compound:65453
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: C[C@@]1(CO[C@@H]([C@@H]([C@H]1NC)O)O[C@H]2[C@@H](C[C@@H]([C@H]([C@H]2O)O[C@@H]3[C@@H](CC=C(O3)CN)N)N)N)O
+  standard_inchi: InChI=1S/C19H37N5O7/c1-19(27)7-28-18(13(26)16(19)24-2)31-15-11(23)5-10(22)14(12(15)25)30-17-9(21)4-3-8(6-20)29-17/h3,9-18,24-27H,4-7,20-23H2,1-2H3/t9-,10+,11-,12-,13-,14-,15+,16-,17-,18-,19+/m1/s1
+  standard_inchi_key: URWAJWIAIPFPJE-VHLNBGGKSA-N
+  molecular_formula: C19H37N5O7
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 447.5
+  monoisotopic_mass: 447.26929854
+source_concepts:
+- source: ARO
+  source_id: ARO:3007379
+  source_label: 5-episisomicin
+  minted_identifier: antibioticmech:aro-3b4e0b6d96
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002536
+  label: AAC(3)-IIIa
+  evidence:
+  - reference: ARO:3002536
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002537
+  label: AAC(3)-IIIb
+  evidence:
+  - reference: ARO:3002537
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002545
+  label: AAC(6')-Ia
+  evidence:
+  - reference: ARO:3002545
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002549
+  label: AAC(6')-Ic
+  evidence:
+  - reference: ARO:3002549
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002553
+  label: AAC(6')-If
+  evidence:
+  - reference: ARO:3002553
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002554
+  label: AAC(6')-Ig
+  evidence:
+  - reference: ARO:3002554
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002555
+  label: AAC(6')-Ih
+  evidence:
+  - reference: ARO:3002555
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002556
+  label: AAC(6')-Ii
+  evidence:
+  - reference: ARO:3002556
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002557
+  label: AAC(6')-Ij
+  evidence:
+  - reference: ARO:3002557
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002558
+  label: AAC(6')-Ik
+  evidence:
+  - reference: ARO:3002558
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002559
+  label: AAC(6')-Ip
+  evidence:
+  - reference: ARO:3002559
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002560
+  label: AAC(6')-Iq
+  evidence:
+  - reference: ARO:3002560
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002561
+  label: AAC(6')-Ir
+  evidence:
+  - reference: ARO:3002561
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002562
+  label: AAC(6')-Is
+  evidence:
+  - reference: ARO:3002562
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002563
+  label: AAC(6')-Isa
+  evidence:
+  - reference: ARO:3002563
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002564
+  label: AAC(6')-It
+  evidence:
+  - reference: ARO:3002564
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002565
+  label: AAC(6')-Iu
+  evidence:
+  - reference: ARO:3002565
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002566
+  label: AAC(6')-Iv
+  evidence:
+  - reference: ARO:3002566
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002567
+  label: AAC(6')-Iw
+  evidence:
+  - reference: ARO:3002567
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002568
+  label: AAC(6')-Ix
+  evidence:
+  - reference: ARO:3002568
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002569
+  label: AAC(6')-Iy
+  evidence:
+  - reference: ARO:3002569
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002570
+  label: AAC(6')-Iz
+  evidence:
+  - reference: ARO:3002570
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002571
+  label: AAC(6')-Iaa
+  evidence:
+  - reference: ARO:3002571
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002572
+  label: AAC(6')-Iad
+  evidence:
+  - reference: ARO:3002572
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002573
+  label: AAC(6')-Iae
+  evidence:
+  - reference: ARO:3002573
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002574
+  label: AAC(6')-Iaf
+  evidence:
+  - reference: ARO:3002574
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002575
+  label: AAC(6')-Iai
+  evidence:
+  - reference: ARO:3002575
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002588
+  label: AAC(6')-I30
+  evidence:
+  - reference: ARO:3002588
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002589
+  label: AAC(6')-Iid
+  evidence:
+  - reference: ARO:3002589
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002590
+  label: AAC(6')-Iih
+  evidence:
+  - reference: ARO:3002590
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002594
+  label: AAC(6')-IIa
+  evidence:
+  - reference: ARO:3002594
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002595
+  label: AAC(6')-IIb
+  evidence:
+  - reference: ARO:3002595
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002596
+  label: AAC(6')-IIc
+  evidence:
+  - reference: ARO:3002596
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002597
+  label: AAC(6')-Ie-APH(2'')-Ia bifunctional protein
+  evidence:
+  - reference: ARO:3002597
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002598
+  label: ANT(3'')-II-AAC(6')-IId bifunctional protein
+  evidence:
+  - reference: ARO:3002598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003199
+  label: AAC(6')-Iak
+  evidence:
+  - reference: ARO:3003199
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003200
+  label: AAC(6')-Ian
+  evidence:
+  - reference: ARO:3003200
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003677
+  label: AAC(6')-Iaj
+  evidence:
+  - reference: ARO:3003677
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004629
+  label: AAC(6')-Im
+  evidence:
+  - reference: ARO:3004629
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004635
+  label: AAC(6')-Il
+  evidence:
+  - reference: ARO:3004635
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004638
+  label: AAC(6')-I-48
+  evidence:
+  - reference: ARO:3004638
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007204
+  label: AAC(6')-Iap
+  evidence:
+  - reference: ARO:3007204
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007379 (5-episisomicin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

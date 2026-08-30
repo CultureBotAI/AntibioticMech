@@ -1,0 +1,39 @@
+identifier: antibioticmech:aro-5d5ecfee72
+label: efrotomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Efrotomycin is produced by Streptomyces lactamodurans NRRL 3802. This
+  kirromycin-like antibiotic is used in animal agriculture, especially in the production
+  of swine. Generally gram negative bacteria are susceptible to efrotomycin, while
+  gram positive bacteria are resistant.
+definition_source: PMID:1590753
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3001236
+- chembl:CHEMBL2106443
+- pubchem.compound:135434844
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: CCC(C(=O)NC/C=C/C=C(\C)/C(C(C)C1C(C(C(O1)/C=C/C=C/C=C(\C)/C(=O)C2=C(C=CN(C2=O)C)O)O)O)OC)C3(C(C(C(C(O3)/C=C/C=C/C)(C)C)OC4C(C(C(C(O4)C)OC5C(C(C(C(O5)C)OC)O)OC)OC)O)O)O
+  standard_inchi: InChI=1S/C59H88N2O20/c1-15-17-19-27-39-58(8,9)53(80-56-45(67)50(74-13)49(35(7)76-56)79-57-51(75-14)44(66)48(73-12)34(6)77-57)52(68)59(71,81-39)36(16-2)54(69)60-29-23-22-25-32(4)46(72-11)33(5)47-43(65)42(64)38(78-47)26-21-18-20-24-31(3)41(63)40-37(62)28-30-61(10)55(40)70/h15,17-28,30,33-36,38-39,42-53,56-57,62,64-68,71H,16,29H2,1-14H3,(H,60,69)/b17-15+,20-18+,23-22+,26-21+,27-19+,31-24+,32-25+
+  standard_inchi_key: ASOJLQIBBYOFDE-OUYMVFBDSA-N
+  molecular_formula: C59H88N2O20
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1145.3
+  monoisotopic_mass: 1144.5930432
+source_concepts:
+- source: ARO
+  source_id: ARO:3001236
+  source_label: efrotomycin
+  minted_identifier: antibioticmech:aro-5d5ecfee72
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

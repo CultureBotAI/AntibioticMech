@@ -1,0 +1,64 @@
+identifier: CHEBI:40629
+label: AEE788
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 6-{4-[(4-ethylpiperazin-1-yl)methyl]phenyl}-N-(1-phenylethyl)-7H-pyrrolo[2,3-d]pyrimidin-4-amine
+  which adopts an R-configuration. It is a potent inhibitor of human EGFR, VEGFR and
+  HER2 receptor tyrosine kinases and exhibits anticancer and antiangiogenic activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6-{4-[(4-ethylpiperazin-1-yl)methyl]phenyl}-N-[(1R)-1-phenylethyl]-7H-pyrrolo[2,3-d]pyrimidin-4-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-{4-[(4-ethyl-1-piperazinyl)methyl]phenyl}-N-[(1R)-1-phenylethyl]-1H-pyrrolo[2,3-d]pyrimidin-4-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AEE 788
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AEE-788
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NVP-AEE-788
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NVP-AEE788
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[6-[4-[(4-ethylpiperazin-1-yl)methyl]phenyl]-7H-pyrrolo[2,3-d]pyrimidin-4-yl]-((R)-1-phenylethyl)amine'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:170005
+xrefs:
+- cas:497839-62-0
+- chemspider:8472511
+- drugbank:DB12558
+- lincs.smallmolecule:LSM-45507
+- pdb-ccd:AEE
+- wikipedia.en:AEE788
+activity_roles:
+- CHEBI:36335
+chemical_structure:
+  smiles: CCN1CCN(Cc2ccc(-c3cc4c(N[C@H](C)c5ccccc5)ncnc4n3)cc2)CC1
+  standard_inchi: InChI=1S/C27H32N6/c1-3-32-13-15-33(16-14-32)18-21-9-11-23(12-10-21)25-17-24-26(28-19-29-27(24)31-25)30-20(2)22-7-5-4-6-8-22/h4-12,17,19-20H,3,13-16,18H2,1-2H3,(H2,28,29,30,31)/t20-/m1/s1
+  standard_inchi_key: OONFNUWBHFSNBT-HXUWFJFHSA-N
+  molecular_formula: C27H32N6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 440.595
+  monoisotopic_mass: 440.26885
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:40629
+  source_label: AEE788
+  minted_identifier: antibioticmech:chebi-123bc3950e
+  role_terms:
+  - CHEBI:36335
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

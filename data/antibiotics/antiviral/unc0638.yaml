@@ -1,0 +1,68 @@
+identifier: CHEBI:95074
+label: UNC0638
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of quinazolines that is quinazoline substituted
+  by cyclohexyl, [1-(propan-2-yl)piperidin-4-yl]amino, methoxy, and 3-(pyrrolidin-1-yl)propoxy
+  groups at positions 2, 4, 6 and 7, respectively. It inhibits G9a and GLP histone
+  methyltransferase activity (IC50 = <15 nM and <20 nM, respectively).
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-cyclohexyl-6-methoxy-N-[1-(propan-2-yl)piperidin-4-yl]-7-[3-(pyrrolidin-1-yl)propoxy]quinazolin-4-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-cyclohexyl-6-methoxy-N-(1-propan-2-yl-4-piperidinyl)-7-[3-(1-pyrrolidinyl)propoxy]-4-quinazolinamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-cyclohexyl-6-methoxy-N-(1-propan-2-ylpiperidin-4-yl)-7-(3-pyrrolidin-1-ylpropoxy)quinazolin-4-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-cyclohexyl-6-methoxy-N-[1-(1-methylethyl)-4-piperidinyl]-7-[3-(1-pyrrolidinyl)propoxy]-4-quinazolinamin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-cyclohexyl-N-(1-isopropylpiperidin-4-yl)-6-methoxy-7-(3-(pyrrolidin-1-yl)propoxy)
+    quinazolin-4-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: UNC 0638
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: UNC-0638
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:38260
+- CHEBI:38530
+- CHEBI:48588
+- CHEBI:50995
+- CHEBI:50996
+xrefs:
+- cas:1255580-76-7
+- lincs.smallmolecule:LSM-6325
+- pdb-ccd:CIQ
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: COc1cc2c(NC3CCN(C(C)C)CC3)nc(C3CCCCC3)nc2cc1OCCCN1CCCC1
+  standard_inchi: InChI=1S/C30H47N5O2/c1-22(2)35-17-12-24(13-18-35)31-30-25-20-27(36-3)28(37-19-9-16-34-14-7-8-15-34)21-26(25)32-29(33-30)23-10-5-4-6-11-23/h20-24H,4-19H2,1-3H3,(H,31,32,33)
+  standard_inchi_key: QOECJCJVIMVJGX-UHFFFAOYSA-N
+  molecular_formula: C30H47N5O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 509.739
+  monoisotopic_mass: 509.37298
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:95074
+  source_label: UNC0638
+  minted_identifier: antibioticmech:chebi-2200ed912d
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

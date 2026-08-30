@@ -1,0 +1,43 @@
+identifier: CHEBI:66662
+label: 6α-malonyloxymanoyl oxide
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The malonate ester of a labdane diterpenoid. Isolated from the aerial
+  parts of Stemodia foliosa, it exhibits antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-{[(3R,4aR,6S,6aS,10aS,10bR)-3-ethenyl-3,4a,7,7,10a-pentamethyldodecahydro-1H-benzo[f]chromen-6-yl]oxy}-3-oxopropanoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36770
+- CHEBI:37407
+- CHEBI:38083
+xrefs:
+- reaxys:19154464
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12CC[C@](C)(C=C)O[C@]1(C)C[C@H](OC(=O)CC(=O)O)[C@@]1([H])C(C)(C)CCC[C@]21C'
+  standard_inchi: InChI=1S/C23H36O5/c1-7-21(4)12-9-16-22(5)11-8-10-20(2,3)19(22)15(14-23(16,6)28-21)27-18(26)13-17(24)25/h7,15-16,19H,1,8-14H2,2-6H3,(H,24,25)/t15-,16+,19-,21-,22+,23+/m0/s1
+  standard_inchi_key: JZRGFUZJIZSKTF-ALFLKXBZSA-N
+  molecular_formula: C23H36O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 392.536
+  monoisotopic_mass: 392.25627
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66662
+  source_label: 6α-malonyloxymanoyl oxide
+  minted_identifier: antibioticmech:chebi-99bfe821e3
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

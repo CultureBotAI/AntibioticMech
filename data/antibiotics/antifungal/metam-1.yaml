@@ -1,0 +1,39 @@
+identifier: CHEBI:141326
+label: metam(1−)
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dithiocarbamate anion resulting from the deprotonation of the thiol
+  group of metam.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methylcarbamodithioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:39190
+- CHEBI:84292
+activity_roles:
+- CHEBI:136645
+chemical_structure:
+  smiles: CNC(=S)[S-]
+  standard_inchi: InChI=1S/C2H5NS2/c1-3-2(4)5/h1H3,(H2,3,4,5)/p-1
+  standard_inchi_key: HYVVJDQGXFXBRZ-UHFFFAOYSA-M
+  molecular_formula: C2H4NS2
+  structure_source: ChEBI
+  charge: -1
+  average_mass: 106.195
+  monoisotopic_mass: 105.97906
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141326
+  source_label: metam(1−)
+  minted_identifier: antibioticmech:chebi-677e16c666
+  role_terms:
+  - CHEBI:136645
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

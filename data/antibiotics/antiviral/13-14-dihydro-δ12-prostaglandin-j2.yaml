@@ -1,0 +1,72 @@
+identifier: CHEBI:28130
+label: 13,14-dihydro-Δ12-prostaglandin J2
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of prostaglandins J that is prosta-5,9,12-trien-1-oic
+  acid carrying oxo and hydsroxy substituents at positions 11 and 15 respectively
+  (the 5Z,12E,15S-stereoisomer).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5Z,12E,15S)-15-hydroxy-11-oxoprosta-5,9,12-trien-1-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-Deoxy-9,10-didehydro-12,13-didehydro-13,14-dihydroprostaglandin
+    D2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-Deoxy-delta(9), delta(12)-13,14-dihydroprostaglandin D2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-Deoxy-delta(9,12)-13,14-dihydro PGD2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dddd-PGD2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: d12-PGJ2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: delta(12)-PGJ2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: delta-12-PGJ2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: delta-12-Prostaglandin J2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: δ-12-PGJ2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26346
+- CHEBI:35681
+xrefs:
+- cas:87893-54-7
+- kegg.compound:C05958
+- lipidmaps:LMFA03010020
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: CCCCC[C@H](O)C/C=C1/C(=O)C=C[C@@H]1C/C=C\CCCC(=O)O
+  standard_inchi: InChI=1S/C20H30O4/c1-2-3-6-10-17(21)13-14-18-16(12-15-19(18)22)9-7-4-5-8-11-20(23)24/h4,7,12,14-17,21H,2-3,5-6,8-11,13H2,1H3,(H,23,24)/b7-4-,18-14+/t16-,17-/m0/s1
+  standard_inchi_key: TUXFWOHFPFBNEJ-GJGHEGAFSA-N
+  molecular_formula: C20H30O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 334.456
+  monoisotopic_mass: 334.21441
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28130
+  source_label: 13,14-dihydro-Δ12-prostaglandin J2
+  minted_identifier: antibioticmech:chebi-65b56a80d4
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

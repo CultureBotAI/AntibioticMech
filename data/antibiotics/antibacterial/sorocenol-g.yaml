@@ -1,0 +1,44 @@
+identifier: CHEBI:66514
+label: sorocenol G
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heteropentacyclic compound isolated from Sorocea muriculata
+  and has been shown to exhibit antibacterial activity against methicillin-resistant
+  Staphylococcus aureus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3aS,8aR,13bR,13cS)-6-(6-hydroxy-1-benzofuran-2-yl)-8a-(5-hydroxy-2,2-dimethyl-2H-chromen-8-yl)-2-methyl-1,8a,13b,13c-tetrahydro-3aH-benzo[3,4]isochromeno[1,8-bc]chromene-4,11-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23232
+- CHEBI:33853
+- CHEBI:38164
+- CHEBI:38830
+xrefs:
+- reaxys:19203597
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12[C@@]3(c4ccc(O)c5c4OC(C)(C)C=C5)Oc4cc(O)ccc4[C@]1([H])CC(C)=C[C@]2([H])c1c(O)cc(-c2cc4ccc(O)cc4o2)cc1O3'
+  standard_inchi: InChI=1S/C39H32O8/c1-19-12-26-24-7-6-23(41)18-33(24)45-39(28-8-9-29(42)25-10-11-38(2,3)47-37(25)28)36(26)27(13-19)35-30(43)14-21(16-34(35)46-39)31-15-20-4-5-22(40)17-32(20)44-31/h4-11,13-18,26-27,36,40-43H,12H2,1-3H3/t26-,27+,36-,39-/m0/s1
+  standard_inchi_key: GOBAQYCCUYZMJY-HGLYATPPSA-N
+  molecular_formula: C39H32O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 628.677
+  monoisotopic_mass: 628.20972
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66514
+  source_label: sorocenol G
+  minted_identifier: antibioticmech:chebi-6e5d68288b
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

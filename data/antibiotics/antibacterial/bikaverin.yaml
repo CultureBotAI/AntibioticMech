@@ -1,0 +1,53 @@
+identifier: CHEBI:3096
+label: bikaverin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A organic heterotetracyclic compound that is 10H-benzo[b]xanthene-7,10,12-trione
+  substituted by hydroxy groups at positions 6 and 11, methoxy groups at positions
+  3 and 8 and a methyl group at position 1.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6,11-dihydroxy-3,8-dimethoxy-1-methyl-10H-benzo[b]xanthene-7,10,12-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Lycopersin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:35618
+- CHEBI:37407
+- CHEBI:38163
+- CHEBI:3992
+xrefs:
+- cas:33390-21-5
+- kegg.compound:C10306
+- knapsack:C00002798
+- reaxys:358013
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: COC1=CC(=O)c2c(c(O)c3oc4cc(OC)cc(C)c4c(=O)c3c2O)C1=O
+  standard_inchi: InChI=1S/C20H14O8/c1-7-4-8(26-2)5-10-12(7)17(23)15-18(24)13-9(21)6-11(27-3)16(22)14(13)19(25)20(15)28-10/h4-6,24-25H,1-3H3
+  standard_inchi_key: ZOQMSOSJEWBMHP-UHFFFAOYSA-N
+  molecular_formula: C20H14O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 382.324
+  monoisotopic_mass: 382.06887
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3096
+  source_label: bikaverin
+  minted_identifier: antibioticmech:chebi-c480cda79e
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,57 @@
+identifier: CHEBI:46735
+label: (S)-oct-1-en-3-ol
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An oct-1-en-3-ol that has S-configuration.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S)-oct-1-en-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-1-octen-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3S)-1-octen-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-(+)-1-octen-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-1-octen-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-matsutake alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:34118
+xrefs:
+- cas:24587-53-9
+- chemspider:2007013
+- drugbank:DB03025
+- reaxys:1720731
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C=C[C@@H](O)CCCCC
+  standard_inchi: InChI=1S/C8H16O/c1-3-5-6-7-8(9)4-2/h4,8-9H,2-3,5-7H2,1H3/t8-/m1/s1
+  standard_inchi_key: VSMOENVRRABVKN-MRVPVSSYSA-N
+  molecular_formula: C8H16O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 128.215
+  monoisotopic_mass: 128.12012
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:46735
+  source_label: (S)-oct-1-en-3-ol
+  minted_identifier: antibioticmech:chebi-7390da1d34
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

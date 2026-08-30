@@ -1,0 +1,1919 @@
+identifier: CHEBI:3508
+label: ceftazidime
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A third-generation cephalosporin antibiotic bearing pyridinium-1-ylmethyl
+  and {[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-{[(2-carboxypropan-2-yl)oxy]imino}acetamido
+  groups at positions 3 and 7, respectively, of the cephem skeleton.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ceftazidima
+  synonym_type: INN
+  source: chebi
+- synonym_text: ceftazidimum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 7β-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-{[(2-carboxypropan-2-yl)oxy]imino}acetyl]amino}-3-(pyridinium-1-ylmethyl)-3,4-didehydrocepham-4-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-7-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-{[(2-carboxypropan-2-yl)oxy]imino}acetyl]amino}-8-oxo-3-(pyridinium-1-ylmethyl)-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CAZ
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ceftazidime anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ceftazidim
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Ceptaz
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Fortaz
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Pentacef
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Tazicef
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Tazidime
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: caftazidime
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23066
+- CHEBI:36816
+- ARO:0000032
+xrefs:
+- ARO:0000060
+- cas:72558-82-8
+- drugbank:DB00438
+- kegg.compound:C06889
+- kegg.drug:D07654
+- patent:DE2921316
+- patent:US4258041
+- reaxys:5475149
+- wikipedia.en:Ceftazidime
+- chembl:CHEMBL44354
+- pubchem.compound:5481173
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(C[n+]3ccccc3)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)/C(=N\OC(C)(C)C(=O)O)c1csc(N)n1'
+  standard_inchi: InChI=1S/C22H22N6O7S2/c1-22(2,20(33)34)35-26-13(12-10-37-21(23)24-12)16(29)25-14-17(30)28-15(19(31)32)11(9-36-18(14)28)8-27-6-4-3-5-7-27/h3-7,10,14,18H,8-9H2,1-2H3,(H4-,23,24,25,29,31,32,33,34)/b26-13-/t14-,18-/m1/s1
+  standard_inchi_key: ORFOPKXBNMVMKC-DWVKKRMSSA-N
+  molecular_formula: C22H22N6O7S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 546.587
+  monoisotopic_mass: 546.09914
+source_concepts:
+- source: ARO
+  source_id: ARO:0000060
+  source_label: ceftazidime
+  minted_identifier: antibioticmech:aro-dbdb90f349
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3508
+  source_label: ceftazidime
+  minted_identifier: antibioticmech:chebi-9a02501eb8
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000386
+  label: MexAB-OprM
+  evidence:
+  - reference: ARO:3000386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000467
+  label: NDM-5
+  evidence:
+  - reference: ARO:3000467
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000874
+  label: TEM-2
+  evidence:
+  - reference: ARO:3000874
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000875
+  label: TEM-3
+  evidence:
+  - reference: ARO:3000875
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000876
+  label: TEM-4
+  evidence:
+  - reference: ARO:3000876
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000877
+  label: TEM-5
+  evidence:
+  - reference: ARO:3000877
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000878
+  label: TEM-6
+  evidence:
+  - reference: ARO:3000878
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000879
+  label: TEM-7
+  evidence:
+  - reference: ARO:3000879
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000880
+  label: TEM-8
+  evidence:
+  - reference: ARO:3000880
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000881
+  label: TEM-9
+  evidence:
+  - reference: ARO:3000881
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000882
+  label: TEM-10
+  evidence:
+  - reference: ARO:3000882
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000883
+  label: TEM-11
+  evidence:
+  - reference: ARO:3000883
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000884
+  label: TEM-12
+  evidence:
+  - reference: ARO:3000884
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000886
+  label: TEM-15
+  evidence:
+  - reference: ARO:3000886
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000887
+  label: TEM-16
+  evidence:
+  - reference: ARO:3000887
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000888
+  label: TEM-17
+  evidence:
+  - reference: ARO:3000888
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000890
+  label: TEM-19
+  evidence:
+  - reference: ARO:3000890
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000891
+  label: TEM-20
+  evidence:
+  - reference: ARO:3000891
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000892
+  label: TEM-21
+  evidence:
+  - reference: ARO:3000892
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000893
+  label: TEM-22
+  evidence:
+  - reference: ARO:3000893
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000894
+  label: TEM-24
+  evidence:
+  - reference: ARO:3000894
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000896
+  label: TEM-26
+  evidence:
+  - reference: ARO:3000896
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000898
+  label: TEM-28
+  evidence:
+  - reference: ARO:3000898
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000899
+  label: TEM-29
+  evidence:
+  - reference: ARO:3000899
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000901
+  label: TEM-31
+  evidence:
+  - reference: ARO:3000901
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000902
+  label: TEM-32
+  evidence:
+  - reference: ARO:3000902
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000903
+  label: TEM-33
+  evidence:
+  - reference: ARO:3000903
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000904
+  label: TEM-34
+  evidence:
+  - reference: ARO:3000904
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000905
+  label: TEM-35
+  evidence:
+  - reference: ARO:3000905
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000906
+  label: TEM-36
+  evidence:
+  - reference: ARO:3000906
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000907
+  label: TEM-37
+  evidence:
+  - reference: ARO:3000907
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000909
+  label: TEM-39
+  evidence:
+  - reference: ARO:3000909
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000910
+  label: TEM-40
+  evidence:
+  - reference: ARO:3000910
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000911
+  label: TEM-42
+  evidence:
+  - reference: ARO:3000911
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000912
+  label: TEM-43
+  evidence:
+  - reference: ARO:3000912
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000914
+  label: TEM-45
+  evidence:
+  - reference: ARO:3000914
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000916
+  label: TEM-47
+  evidence:
+  - reference: ARO:3000916
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000917
+  label: TEM-48
+  evidence:
+  - reference: ARO:3000917
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000918
+  label: TEM-49
+  evidence:
+  - reference: ARO:3000918
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000921
+  label: TEM-52
+  evidence:
+  - reference: ARO:3000921
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000922
+  label: TEM-53
+  evidence:
+  - reference: ARO:3000922
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000923
+  label: TEM-54
+  evidence:
+  - reference: ARO:3000923
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000924
+  label: TEM-55
+  evidence:
+  - reference: ARO:3000924
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000926
+  label: TEM-57
+  evidence:
+  - reference: ARO:3000926
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000927
+  label: TEM-58
+  evidence:
+  - reference: ARO:3000927
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000928
+  label: TEM-59
+  evidence:
+  - reference: ARO:3000928
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000929
+  label: TEM-60
+  evidence:
+  - reference: ARO:3000929
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000930
+  label: TEM-61
+  evidence:
+  - reference: ARO:3000930
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000931
+  label: TEM-63
+  evidence:
+  - reference: ARO:3000931
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000934
+  label: TEM-67
+  evidence:
+  - reference: ARO:3000934
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000935
+  label: TEM-68
+  evidence:
+  - reference: ARO:3000935
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000936
+  label: TEM-70
+  evidence:
+  - reference: ARO:3000936
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000937
+  label: TEM-71
+  evidence:
+  - reference: ARO:3000937
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000938
+  label: TEM-72
+  evidence:
+  - reference: ARO:3000938
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000939
+  label: TEM-73
+  evidence:
+  - reference: ARO:3000939
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000941
+  label: TEM-75
+  evidence:
+  - reference: ARO:3000941
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000942
+  label: TEM-76
+  evidence:
+  - reference: ARO:3000942
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000944
+  label: TEM-78
+  evidence:
+  - reference: ARO:3000944
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000946
+  label: TEM-79
+  evidence:
+  - reference: ARO:3000946
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000947
+  label: TEM-80
+  evidence:
+  - reference: ARO:3000947
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000948
+  label: TEM-81
+  evidence:
+  - reference: ARO:3000948
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000949
+  label: TEM-82
+  evidence:
+  - reference: ARO:3000949
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000950
+  label: TEM-83
+  evidence:
+  - reference: ARO:3000950
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000951
+  label: TEM-84
+  evidence:
+  - reference: ARO:3000951
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000952
+  label: TEM-85
+  evidence:
+  - reference: ARO:3000952
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000953
+  label: TEM-86
+  evidence:
+  - reference: ARO:3000953
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000954
+  label: TEM-87
+  evidence:
+  - reference: ARO:3000954
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000955
+  label: TEM-88
+  evidence:
+  - reference: ARO:3000955
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000956
+  label: TEM-89
+  evidence:
+  - reference: ARO:3000956
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000957
+  label: TEM-90
+  evidence:
+  - reference: ARO:3000957
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000958
+  label: TEM-91
+  evidence:
+  - reference: ARO:3000958
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000959
+  label: TEM-92
+  evidence:
+  - reference: ARO:3000959
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000960
+  label: TEM-93
+  evidence:
+  - reference: ARO:3000960
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000961
+  label: TEM-94
+  evidence:
+  - reference: ARO:3000961
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000962
+  label: TEM-95
+  evidence:
+  - reference: ARO:3000962
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000963
+  label: TEM-96
+  evidence:
+  - reference: ARO:3000963
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000964
+  label: TEM-101
+  evidence:
+  - reference: ARO:3000964
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000965
+  label: TEM-102
+  evidence:
+  - reference: ARO:3000965
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000967
+  label: TEM-104
+  evidence:
+  - reference: ARO:3000967
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000968
+  label: TEM-105
+  evidence:
+  - reference: ARO:3000968
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000969
+  label: TEM-106
+  evidence:
+  - reference: ARO:3000969
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000970
+  label: TEM-107
+  evidence:
+  - reference: ARO:3000970
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000971
+  label: TEM-108
+  evidence:
+  - reference: ARO:3000971
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000972
+  label: TEM-109
+  evidence:
+  - reference: ARO:3000972
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000973
+  label: TEM-110
+  evidence:
+  - reference: ARO:3000973
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000974
+  label: TEM-111
+  evidence:
+  - reference: ARO:3000974
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000975
+  label: TEM-112
+  evidence:
+  - reference: ARO:3000975
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000976
+  label: TEM-113
+  evidence:
+  - reference: ARO:3000976
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000977
+  label: TEM-114
+  evidence:
+  - reference: ARO:3000977
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000978
+  label: TEM-115
+  evidence:
+  - reference: ARO:3000978
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000979
+  label: TEM-116
+  evidence:
+  - reference: ARO:3000979
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000980
+  label: TEM-117
+  evidence:
+  - reference: ARO:3000980
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000981
+  label: TEM-118
+  evidence:
+  - reference: ARO:3000981
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000982
+  label: TEM-120
+  evidence:
+  - reference: ARO:3000982
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000983
+  label: TEM-121
+  evidence:
+  - reference: ARO:3000983
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000984
+  label: TEM-122
+  evidence:
+  - reference: ARO:3000984
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000985
+  label: TEM-123
+  evidence:
+  - reference: ARO:3000985
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000986
+  label: TEM-124
+  evidence:
+  - reference: ARO:3000986
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000987
+  label: TEM-125
+  evidence:
+  - reference: ARO:3000987
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000988
+  label: TEM-126
+  evidence:
+  - reference: ARO:3000988
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000989
+  label: TEM-127
+  evidence:
+  - reference: ARO:3000989
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000990
+  label: TEM-128
+  evidence:
+  - reference: ARO:3000990
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000993
+  label: TEM-129
+  evidence:
+  - reference: ARO:3000993
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000994
+  label: TEM-130
+  evidence:
+  - reference: ARO:3000994
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000995
+  label: TEM-131
+  evidence:
+  - reference: ARO:3000995
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000996
+  label: TEM-132
+  evidence:
+  - reference: ARO:3000996
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000997
+  label: TEM-133
+  evidence:
+  - reference: ARO:3000997
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000998
+  label: TEM-134
+  evidence:
+  - reference: ARO:3000998
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001000
+  label: TEM-136
+  evidence:
+  - reference: ARO:3001000
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001001
+  label: TEM-137
+  evidence:
+  - reference: ARO:3001001
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001002
+  label: TEM-138
+  evidence:
+  - reference: ARO:3001002
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001003
+  label: TEM-139
+  evidence:
+  - reference: ARO:3001003
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001004
+  label: TEM-141
+  evidence:
+  - reference: ARO:3001004
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001005
+  label: TEM-142
+  evidence:
+  - reference: ARO:3001005
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001006
+  label: TEM-143
+  evidence:
+  - reference: ARO:3001006
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001007
+  label: TEM-144
+  evidence:
+  - reference: ARO:3001007
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001012
+  label: TEM-145
+  evidence:
+  - reference: ARO:3001012
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001013
+  label: TEM-146
+  evidence:
+  - reference: ARO:3001013
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001014
+  label: TEM-147
+  evidence:
+  - reference: ARO:3001014
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001015
+  label: TEM-148
+  evidence:
+  - reference: ARO:3001015
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001016
+  label: TEM-149
+  evidence:
+  - reference: ARO:3001016
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001017
+  label: TEM-150
+  evidence:
+  - reference: ARO:3001017
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001018
+  label: TEM-151
+  evidence:
+  - reference: ARO:3001018
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001019
+  label: TEM-152
+  evidence:
+  - reference: ARO:3001019
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001020
+  label: TEM-154
+  evidence:
+  - reference: ARO:3001020
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001021
+  label: TEM-155
+  evidence:
+  - reference: ARO:3001021
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001022
+  label: TEM-156
+  evidence:
+  - reference: ARO:3001022
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001023
+  label: TEM-157
+  evidence:
+  - reference: ARO:3001023
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001024
+  label: TEM-158
+  evidence:
+  - reference: ARO:3001024
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001025
+  label: TEM-159
+  evidence:
+  - reference: ARO:3001025
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001026
+  label: TEM-160
+  evidence:
+  - reference: ARO:3001026
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001028
+  label: TEM-162
+  evidence:
+  - reference: ARO:3001028
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001029
+  label: TEM-163
+  evidence:
+  - reference: ARO:3001029
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001030
+  label: TEM-164
+  evidence:
+  - reference: ARO:3001030
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001032
+  label: TEM-166
+  evidence:
+  - reference: ARO:3001032
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001033
+  label: TEM-167
+  evidence:
+  - reference: ARO:3001033
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001034
+  label: TEM-168
+  evidence:
+  - reference: ARO:3001034
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001035
+  label: TEM-169
+  evidence:
+  - reference: ARO:3001035
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001037
+  label: TEM-171
+  evidence:
+  - reference: ARO:3001037
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001041
+  label: TEM-176
+  evidence:
+  - reference: ARO:3001041
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001042
+  label: TEM-177
+  evidence:
+  - reference: ARO:3001042
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001043
+  label: TEM-178
+  evidence:
+  - reference: ARO:3001043
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001044
+  label: TEM-181
+  evidence:
+  - reference: ARO:3001044
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001045
+  label: TEM-183
+  evidence:
+  - reference: ARO:3001045
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001046
+  label: TEM-186
+  evidence:
+  - reference: ARO:3001046
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001047
+  label: TEM-187
+  evidence:
+  - reference: ARO:3001047
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001048
+  label: TEM-188
+  evidence:
+  - reference: ARO:3001048
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001049
+  label: TEM-189
+  evidence:
+  - reference: ARO:3001049
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001050
+  label: TEM-190
+  evidence:
+  - reference: ARO:3001050
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001051
+  label: TEM-191
+  evidence:
+  - reference: ARO:3001051
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001052
+  label: TEM-192
+  evidence:
+  - reference: ARO:3001052
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001053
+  label: TEM-193
+  evidence:
+  - reference: ARO:3001053
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001054
+  label: TEM-194
+  evidence:
+  - reference: ARO:3001054
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001055
+  label: TEM-195
+  evidence:
+  - reference: ARO:3001055
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001056
+  label: TEM-197
+  evidence:
+  - reference: ARO:3001056
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001057
+  label: TEM-198
+  evidence:
+  - reference: ARO:3001057
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001058
+  label: TEM-199
+  evidence:
+  - reference: ARO:3001058
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001071
+  label: SHV-12
+  evidence:
+  - reference: ARO:3001071
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001369
+  label: TEM-153
+  evidence:
+  - reference: ARO:3001369
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001373
+  label: TEM-182
+  evidence:
+  - reference: ARO:3001373
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001374
+  label: TEM-185
+  evidence:
+  - reference: ARO:3001374
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001375
+  label: TEM-184
+  evidence:
+  - reference: ARO:3001375
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001376
+  label: TEM-196
+  evidence:
+  - reference: ARO:3001376
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001378
+  label: TEM-201
+  evidence:
+  - reference: ARO:3001378
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001382
+  label: TEM-205
+  evidence:
+  - reference: ARO:3001382
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001383
+  label: TEM-206
+  evidence:
+  - reference: ARO:3001383
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001384
+  label: TEM-207
+  evidence:
+  - reference: ARO:3001384
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001385
+  label: TEM-208
+  evidence:
+  - reference: ARO:3001385
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001386
+  label: TEM-209
+  evidence:
+  - reference: ARO:3001386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001387
+  label: TEM-210
+  evidence:
+  - reference: ARO:3001387
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001388
+  label: TEM-211
+  evidence:
+  - reference: ARO:3001388
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001389
+  label: TEM-212
+  evidence:
+  - reference: ARO:3001389
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001390
+  label: TEM-213
+  evidence:
+  - reference: ARO:3001390
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001391
+  label: TEM-214
+  evidence:
+  - reference: ARO:3001391
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001392
+  label: TEM-215
+  evidence:
+  - reference: ARO:3001392
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001393
+  label: TEM-216
+  evidence:
+  - reference: ARO:3001393
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001394
+  label: TEM-217
+  evidence:
+  - reference: ARO:3001394
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001397
+  label: OXA-2
+  evidence:
+  - reference: ARO:3001397
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001815
+  label: ACC-1
+  evidence:
+  - reference: ARO:3001815
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001816
+  label: ACC-2
+  evidence:
+  - reference: ARO:3001816
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001817
+  label: ACC-3
+  evidence:
+  - reference: ARO:3001817
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001818
+  label: ACC-4
+  evidence:
+  - reference: ARO:3001818
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001819
+  label: ACC-5
+  evidence:
+  - reference: ARO:3001819
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001866
+  label: CTX-M-3
+  evidence:
+  - reference: ARO:3001866
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001878
+  label: CTX-M-15
+  evidence:
+  - reference: ARO:3001878
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001889
+  label: CTX-M-27
+  evidence:
+  - reference: ARO:3001889
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001917
+  label: CTX-M-55
+  evidence:
+  - reference: ARO:3001917
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002013
+  label: CMY-2
+  evidence:
+  - reference: ARO:3002013
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002053
+  label: CMY-42
+  evidence:
+  - reference: ARO:3002053
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002500
+  label: PDC-3
+  evidence:
+  - reference: ARO:3002500
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002502
+  label: PDC-5
+  evidence:
+  - reference: ARO:3002502
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002508
+  label: PDC-9
+  evidence:
+  - reference: ARO:3002508
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002509
+  label: PDC-10
+  evidence:
+  - reference: ARO:3002509
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003157
+  label: TEM-219
+  evidence:
+  - reference: ARO:3003157
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003158
+  label: TEM-220
+  evidence:
+  - reference: ARO:3003158
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003807
+  label: Escherichia coli AcrR with mutation associated with multidrug resistance
+  evidence:
+  - reference: ARO:3003807
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3003966
+  label: Klebsiella pneumoniae OmpK35
+  evidence:
+  - reference: ARO:3003966
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004105
+  label: TMB-1
+  evidence:
+  - reference: ARO:3004105
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004106
+  label: TMB-2
+  evidence:
+  - reference: ARO:3004106
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3004123
+  label: Burkholderia pseudomallei Omp38
+  evidence:
+  - reference: ARO:3004123
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004359
+  label: ACI-1
+  evidence:
+  - reference: ARO:3004359
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004559
+  label: CAM-1
+  evidence:
+  - reference: ARO:3004559
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004598
+  label: Klebsiella pneumoniae KpnGH-TolC
+  evidence:
+  - reference: ARO:3004598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004856
+  label: SCO-1
+  evidence:
+  - reference: ARO:3004856
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005035
+  label: YRC-1
+  evidence:
+  - reference: ARO:3005035
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005255
+  label: TEM-224
+  evidence:
+  - reference: ARO:3005255
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005256
+  label: TEM-225
+  evidence:
+  - reference: ARO:3005256
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005257
+  label: TEM-226
+  evidence:
+  - reference: ARO:3005257
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005258
+  label: TEM-227
+  evidence:
+  - reference: ARO:3005258
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005259
+  label: TEM-228
+  evidence:
+  - reference: ARO:3005259
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005260
+  label: TEM-229
+  evidence:
+  - reference: ARO:3005260
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005261
+  label: TEM-230
+  evidence:
+  - reference: ARO:3005261
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005262
+  label: TEM-231
+  evidence:
+  - reference: ARO:3005262
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005263
+  label: TEM-232
+  evidence:
+  - reference: ARO:3005263
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005264
+  label: TEM-233
+  evidence:
+  - reference: ARO:3005264
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005265
+  label: TEM-234
+  evidence:
+  - reference: ARO:3005265
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005266
+  label: TEM-235
+  evidence:
+  - reference: ARO:3005266
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005267
+  label: TEM-236
+  evidence:
+  - reference: ARO:3005267
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005268
+  label: TEM-237
+  evidence:
+  - reference: ARO:3005268
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005269
+  label: TEM-238
+  evidence:
+  - reference: ARO:3005269
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005270
+  label: TEM-240
+  evidence:
+  - reference: ARO:3005270
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005271
+  label: TEM-241
+  evidence:
+  - reference: ARO:3005271
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005272
+  label: TEM-242
+  evidence:
+  - reference: ARO:3005272
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005273
+  label: TEM-243
+  evidence:
+  - reference: ARO:3005273
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005511
+  label: VIM-63
+  evidence:
+  - reference: ARO:3005511
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3006139
+  label: TEM-98
+  evidence:
+  - reference: ARO:3006139
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3006140
+  label: TEM-99
+  evidence:
+  - reference: ARO:3006140
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3006228
+  label: ACC-1a
+  evidence:
+  - reference: ARO:3006228
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3006229
+  label: ACC-1b
+  evidence:
+  - reference: ARO:3006229
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3006230
+  label: ACC-1c
+  evidence:
+  - reference: ARO:3006230
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3006231
+  label: ACC-1d
+  evidence:
+  - reference: ARO:3006231
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3006232
+  label: ACC-7
+  evidence:
+  - reference: ARO:3006232
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3006233
+  label: ACC-8
+  evidence:
+  - reference: ARO:3006233
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007023
+  label: NDM-33
+  evidence:
+  - reference: ARO:3007023
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007180
+  label: MAB
+  evidence:
+  - reference: ARO:3007180
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007196
+  label: KPC-123
+  evidence:
+  - reference: ARO:3007196
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007199
+  label: PAM-1
+  evidence:
+  - reference: ARO:3007199
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007200
+  label: PAM-2
+  evidence:
+  - reference: ARO:3007200
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007381
+  label: KPC-86
+  evidence:
+  - reference: ARO:3007381
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007383
+  label: KPC-95
+  evidence:
+  - reference: ARO:3007383
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007402
+  label: KPC-94
+  evidence:
+  - reference: ARO:3007402
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3007420
+  label: Klebsiella pneumoniae lamB with mutations conferring resistance to ceftazidime-avibactam
+  evidence:
+  - reference: ARO:3007420
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007421
+  label: Klebsiella pneumoniae PBP3 mutants conferring resistance to ceftazidime-avibactam
+  evidence:
+  - reference: ARO:3007421
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007423
+  label: Escherichia coli PBP3 mutants conferring resistance to beta-lactam antibiotics
+  evidence:
+  - reference: ARO:3007423
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007436
+  label: KPC-96
+  evidence:
+  - reference: ARO:3007436
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007437
+  label: EBR-5
+  evidence:
+  - reference: ARO:3007437
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007442
+  label: SSA
+  evidence:
+  - reference: ARO:3007442
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007446
+  label: KPC-100
+  evidence:
+  - reference: ARO:3007446
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007448
+  label: TEM-246
+  evidence:
+  - reference: ARO:3007448
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007449
+  label: KPC-97
+  evidence:
+  - reference: ARO:3007449
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007450
+  label: KPC-98
+  evidence:
+  - reference: ARO:3007450
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007451
+  label: TEM-247
+  evidence:
+  - reference: ARO:3007451
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007452
+  label: KPC-99
+  evidence:
+  - reference: ARO:3007452
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007453
+  label: TEM-244
+  evidence:
+  - reference: ARO:3007453
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007454
+  label: TEM-245
+  evidence:
+  - reference: ARO:3007454
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007857
+  label: KPC-134
+  evidence:
+  - reference: ARO:3007857
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007861
+  label: DYB-1
+  evidence:
+  - reference: ARO:3007861
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3009643
+  label: VIM-92
+  evidence:
+  - reference: ARO:3009643
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000060 (ceftazidime);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000060 (ceftazidime); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

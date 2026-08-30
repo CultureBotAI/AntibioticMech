@@ -1,0 +1,52 @@
+identifier: CHEBI:66559
+label: leachianone A
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A trihydroxyflavanone that is (2S)-flavanone substituted by a lavandulyl
+  group at position 8, hydroxy groups at positions 5, 7 and 4' and a methoxy group
+  at position 2'. Isolated from the roots of Sophora flavescens and Sophora leachiana,
+  it exhibits antineoplastic and antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-5,7-dihydroxy-2-(4-hydroxy-2-methoxyphenyl)-8-[(2R)-5-methyl-2-(prop-1-en-2-yl)hex-4-en-1-yl]-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-5,7,4'-trihydroxy-8-lavandulyl-2'-methoxyflavanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-5,7-dihydroxy-2-(4-hydroxy-2-methoxyphenyl)-8-[(2R)-5-methyl-2-(prop-1-en-2-yl)hex-4-en-1-yl]-3,4-dihydro-2H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140331
+- CHEBI:38738
+- CHEBI:38739
+xrefs:
+- lipidmaps:LMPK12140468
+- patent:KR20010084363
+- reaxys:8594952
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: C=C(C)[C@H](CC=C(C)C)Cc1c(O)cc(O)c2c1O[C@H](c1ccc(O)cc1OC)CC2=O
+  standard_inchi: InChI=1S/C26H30O6/c1-14(2)6-7-16(15(3)4)10-19-20(28)12-21(29)25-22(30)13-24(32-26(19)25)18-9-8-17(27)11-23(18)31-5/h6,8-9,11-12,16,24,27-29H,3,7,10,13H2,1-2,4-5H3/t16-,24+/m1/s1
+  standard_inchi_key: YLTPWCZXKJSORQ-GYCJOSAFSA-N
+  molecular_formula: C26H30O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 438.52
+  monoisotopic_mass: 438.20424
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66559
+  source_label: leachianone A
+  minted_identifier: antibioticmech:chebi-4e3826748d
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

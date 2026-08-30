@@ -1,0 +1,47 @@
+identifier: CHEBI:66577
+label: lindechunine A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An isoquinoline alkaloid that is 4,5,6,6a-tetradehydronoraporphin-7-one
+  substituted by a methylenedioxy group across positions 1 and 2, methoxy groups at
+  positions 3 and 11 and a hydroxy group at position 10. Isolated from the roots of
+  Lindera chunii, it exhibits anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 11-hydroxy-4,12-dimethoxy-8H-[1,3]benzodioxolo[6,5,4-de]benzo[g]quinolin-8-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24921
+- CHEBI:33853
+- CHEBI:35618
+- CHEBI:38104
+- CHEBI:38164
+- CHEBI:3992
+xrefs:
+- reaxys:9292933
+activity_roles:
+- CHEBI:67268
+chemical_structure:
+  smiles: COc1c(O)ccc2c1-c1c3c(c(OC)c4ccnc(c14)C2=O)OCO3
+  standard_inchi: InChI=1S/C19H13NO6/c1-23-16-9-5-6-20-14-11(9)13(18-19(16)26-7-25-18)12-8(15(14)22)3-4-10(21)17(12)24-2/h3-6,21H,7H2,1-2H3
+  standard_inchi_key: ZLFKJSKABHQLAQ-UHFFFAOYSA-N
+  molecular_formula: C19H13NO6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 351.314
+  monoisotopic_mass: 351.07429
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66577
+  source_label: lindechunine A
+  minted_identifier: antibioticmech:chebi-0a92f32593
+  role_terms:
+  - CHEBI:67268
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,44 @@
+identifier: CHEBI:65873
+label: Eunicea sesquiterpenoid 2
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A eudesmane sesquiterpenoid in which the eudesmane skeleton is substituted
+  with an α-hydroxy group at C-1 (eudesmane numbering) and a methylidene group at
+  C-4, and includes a lactone ring formed between C-12 and a β-hydroxy group at C-6.
+  It is isolated from Eunicea sp. and exhibits significant inhibitory effect upon
+  the growth of the malarial parasite Plasmodium falciparum
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S,3aS,5aS,6S,9aR,9bR)-6-hydroxy-3,5a-dimethyl-9-methylidenedecahydronaphtho[1,2-b]furan-2(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26979
+- CHEBI:35681
+- CHEBI:37581
+- CHEBI:62508
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@@]12OC(=O)[C@@H](C)[C@]1([H])CC[C@]1(C)[C@@H](O)CCC(=C)[C@@]21[H]'
+  standard_inchi: InChI=1S/C15H22O3/c1-8-4-5-11(16)15(3)7-6-10-9(2)14(17)18-13(10)12(8)15/h9-13,16H,1,4-7H2,2-3H3/t9-,10-,11-,12-,13+,15+/m0/s1
+  standard_inchi_key: JWBPWNWPEVPCMJ-JVFXBBKESA-N
+  molecular_formula: C15H22O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 250.338
+  monoisotopic_mass: 250.15689
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65873
+  source_label: Eunicea sesquiterpenoid 2
+  minted_identifier: antibioticmech:chebi-45f546652d
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

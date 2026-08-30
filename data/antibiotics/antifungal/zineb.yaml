@@ -1,0 +1,53 @@
+identifier: CHEBI:52498
+label: zineb
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polymeric complex of zinc with the ethylene bis(dithiocarbamate) anionic
+  ligand. Formerly used as an agricultural fungicide for the control of downy mildews
+  and rusts, its use is no longer permitted in the US or the EU.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[{2-[(sulfanylcarbothioyl)amino]ethyl}carbamodithioato(2−)-κ2S,S'']zinc'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc ethane-1,2-diyldicarbamodithioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33839
+- CHEBI:36566
+- CHEBI:83060
+xrefs:
+- cas:12122-67-7
+- kegg.compound:C15232
+- patent:CN1648120
+- patent:US2690448
+- pesticides:zineb
+- ppdb:683
+- reaxys:4165797
+- wikipedia.en:Zineb
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: S=C([S-])NCCNC(=S)[S-].[Zn+2]
+  standard_inchi: InChI=1S/C4H8N2S4.Zn/c7-3(8)5-1-2-6-4(9)10;/h1-2H2,(H2,5,7,8)(H2,6,9,10);/q;+2/p-2
+  standard_inchi_key: AMHNZOICSMBGDH-UHFFFAOYSA-L
+  molecular_formula: C4H6N2S4.Zn
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 275.764
+  monoisotopic_mass: 273.87052
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:52498
+  source_label: zineb
+  minted_identifier: antibioticmech:chebi-0e5bbf6f50
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

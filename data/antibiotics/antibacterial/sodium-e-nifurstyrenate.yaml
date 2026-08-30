@@ -1,0 +1,52 @@
+identifier: CHEBI:234143
+label: sodium (E)-nifurstyrenate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The organic sodium salt of (E)-nifurstyrenic acid.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sodium 4-[(E)-2-(5-nitrofuran-2-yl)ethenyl]benzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-nifurstyrenic acid sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium nifurstyrenate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium trans-nifurstyrenate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-nifurstyrenic acid sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:234123
+xrefs:
+- cas:54992-23-3
+- kegg.drug:D02538
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C([O-])c1ccc(/C=C/c2ccc([N+](=O)[O-])o2)cc1.[Na+]
+  standard_inchi: InChI=1S/C13H9NO5.Na/c15-13(16)10-4-1-9(2-5-10)3-6-11-7-8-12(19-11)14(17)18;/h1-8H,(H,15,16);/q;+1/p-1/b6-3+;
+  standard_inchi_key: FGNXRHWAZABZSZ-ZIKNSQGESA-M
+  molecular_formula: C13H8NO5.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 281.199
+  monoisotopic_mass: 281.03002
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:234143
+  source_label: sodium (E)-nifurstyrenate
+  minted_identifier: antibioticmech:chebi-b36ab19f99
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

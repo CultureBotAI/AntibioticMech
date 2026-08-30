@@ -1,0 +1,58 @@
+identifier: CHEBI:4778
+label: embelin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of dihydroxy-1,4-benzoquinones that is 2,5-dihydroxy-1,4-benzoquinone
+  which is substituted by an undecyl group at position 3. Isolated from Lysimachia
+  punctata and Embelia ribes, it exhibits antimicrobial, antineoplastic and inhibitory
+  activity towards hepatitis C protease.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,5-dihydroxy-3-undecylcyclohexa-2,5-diene-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,5-dihydroxy-3-undecyl-1,4-benzoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Embelin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: embelic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: emberine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132126
+xrefs:
+- cas:550-24-3
+- kegg.compound:C10342
+- knapsack:C00002822
+- lincs.smallmolecule:LSM-6311
+- reaxys:1885786
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CCCCCCCCCCCC1=C(O)C(=O)C=C(O)C1=O
+  standard_inchi: InChI=1S/C17H26O4/c1-2-3-4-5-6-7-8-9-10-11-13-16(20)14(18)12-15(19)17(13)21/h12,18,21H,2-11H2,1H3
+  standard_inchi_key: IRSFLDGTOHBADP-UHFFFAOYSA-N
+  molecular_formula: C17H26O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 294.391
+  monoisotopic_mass: 294.18311
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4778
+  source_label: embelin
+  minted_identifier: antibioticmech:chebi-55080d715a
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

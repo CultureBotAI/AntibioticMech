@@ -1,0 +1,84 @@
+identifier: CHEBI:52427
+label: phenethicillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin in which the substituent at position 6 of the penam ring
+  is a 2-phenoxypropanamido group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Feneticilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: Pheneticilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: Pheneticillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-(2-phenoxypropanamido)-2,2-dimethylpenam-3α-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-3,3-dimethyl-7-oxo-6-[(2-phenoxypropanoyl)amino]-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pheneticillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: penicillin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: phenoxypropylpenicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17334
+- CHEBI:88187
+- ARO:3000008
+xrefs:
+- ARO:3009127
+- cas:147-55-7
+- drugcentral:2124
+- lincs.smallmolecule:LSM-15176
+- reaxys:1091754
+- wikipedia.en:Pheneticillin
+- chembl:CHEMBL1614637
+- pubchem.compound:272833
+activity_roles:
+- CHEBI:33281
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)C(C)Oc1ccccc1'
+  standard_inchi: InChI=1S/C17H20N2O5S/c1-9(24-10-7-5-4-6-8-10)13(20)18-11-14(21)19-12(16(22)23)17(2,3)25-15(11)19/h4-9,11-12,15H,1-3H3,(H,18,20)(H,22,23)/t9?,11-,12+,15-/m1/s1
+  standard_inchi_key: NONJJLVGHLVQQM-JHXYUMNGSA-N
+  molecular_formula: C17H20N2O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 364.423
+  monoisotopic_mass: 364.10929
+source_concepts:
+- source: ARO
+  source_id: ARO:3009127
+  source_label: phenethicillin
+  minted_identifier: antibioticmech:aro-a5e8b9c97b
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:52427
+  source_label: phenethicillin
+  minted_identifier: antibioticmech:chebi-7abd3581df
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

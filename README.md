@@ -15,6 +15,10 @@ AntibioticMech is the antimicrobial-compound counterpart of
 [dismech](https://github.com/monarch-initiative/dismech): one YAML per entity,
 ontology-grounded, evidence-backed, schema-validated, curated incrementally.
 
+**[Browse the corpus online →](https://culturebotai.github.io/AntibioticMech/)**
+— every record, browsable by antimicrobial class, with structures, sources,
+CARD targets and resistance determinants.
+
 ## One record is one chemical structure
 
 That constraint is the design. "Macrolide antibiotic" is not a record — it is a
@@ -55,17 +59,18 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 | Class | Records | SEEDED | REVIEWED | With CARD mechanism evidence |
 |---|---:|---:|---:|---:|
-| ANTIBACTERIAL | 1108 | 1108 | 0 | 266 |
-| ANTIMYCOBACTERIAL | 144 | 144 | 0 | 31 |
-| ANTIFUNGAL | 575 | 575 | 0 | 25 |
-| ANTIPROTOZOAL | 262 | 262 | 0 | 2 |
+| ANTIBACTERIAL | 1037 | 1037 | 0 | 264 |
+| ANTIMYCOBACTERIAL | 78 | 78 | 0 | 15 |
+| ANTIFUNGAL | 588 | 588 | 0 | 43 |
+| ANTIPROTOZOAL | 248 | 248 | 0 | 2 |
+| ANTIVIRAL | 474 | 474 | 0 | 0 |
 | BIOCIDE | 29 | 29 | 0 | 0 |
-| ANTIMICROBIAL_UNSPECIFIED | 485 | 485 | 0 | 0 |
-| **TOTAL** | **2603** | **2603** | **0** | **324** |
+| ANTIMICROBIAL_UNSPECIFIED | 469 | 469 | 0 | 0 |
+| **TOTAL** | **2923** | **2923** | **0** | **324** |
 
-Identity: **2353** records (90%) are grounded in a ChEBI term; **250** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
+Identity: **2673** records (91%) are grounded in a ChEBI term; **250** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
 
-Corroboration: **287** records carry source concepts from both ChEBI and CARD/ARO; **2022** come from ChEBI alone and **294** from CARD alone.
+Corroboration: **281** records carry source concepts from both ChEBI and CARD/ARO; **2342** come from ChEBI alone and **300** from CARD alone.
 
 Mechanism layer: **206** records carry a molecular target and **279** carry resistance determinants, both seeded from CARD; **0** carry a curated causal graph. That last number is the work.
 
@@ -114,19 +119,31 @@ so seeding, validation, rendering and the whole test suite run offline.
 | [CARD/ARO](https://card.mcmaster.ca/) | Individual antibiotic molecules, drug classes, resistance determinants, drug targets | `ARO:1000003` antibiotic molecule subtree |
 | [PubChem](https://pubchem.ncbi.nlm.nih.gov/) | Structures for ARO molecules ChEBI does not cover | Only the CIDs CARD cross-references |
 
-"Antimicrobial" in ChEBI spans viruses too. This corpus covers compounds acting
-on **cellular** microbes — bacteria, mycobacteria, fungi, protozoa — plus the
-biocides used against them. The antiviral branch is excluded by an explicit,
-revisitable decision in `conf/sources.yaml`, not by oversight: an antiviral acts
-on a non-cellular agent through host machinery, and none of the mechanism model
-here transfers to it.
+Scope follows ChEBI's own reading of "antimicrobial": compounds acting on
+bacteria, mycobacteria, fungi, protozoa **and viruses**, plus the biocides used
+against them. Antibiotic pesticides are excluded by an explicit, revisitable
+decision in `conf/sources.yaml` — insecticides, acaricides and nematicides act
+on metazoa.
+
+Antivirals sit differently in the mechanism layer: their target is a viral
+protein or a replication step, and CARD's resistance determinants do not apply,
+so an antiviral record carries no CARD mechanism evidence. The schema's
+mode-of-action and target vocabularies cover both kinds.
 
 ## What is generated, and what is curated
 
 **Generated** (never hand-edit): `data/antibiotics/**`, `data/raw/**`,
 `data/antibiotics/PATHS.tsv`, `pages/**`, and the statistics block in this
 README. `just verify-corpus` rebuilds the corpus from `data/raw/` and rejects
-drift.
+drift **in the fields the seeder owns** — identity, label, definition, synonyms,
+parents, xrefs, class, roles, structural class, structure, source concepts,
+grounding status, and the CARD-derived mechanism items.
+
+It does **not** compare curated fields, by design, or curation would make the
+check permanently red. So it will not catch a *fabricated* claim: a hand-added
+`molecular_target` citing an invented PMID, or a hand flip of `curation_status`
+to `REVIEWED`, passes every gate. Those are what review is for, not the
+reproduction check.
 
 **Curated**: `curation/decisions.tsv` (grounding and exclusion decisions, keyed
 by a source concept's minted identifier), and the mechanism fields on a record —
@@ -136,6 +153,20 @@ deliberately does not compare those, so curation and reproducibility coexist.
 
 ## Licence
 
-Code and curated content: [CC0 1.0](LICENSE). Upstream data carries its own
-terms — ChEBI is CC BY 4.0, CARD requires attribution for academic use, and
+Two licences, because the repository holds two different things.
+
+**Code, schema, tests, configuration, documentation and curation decisions:
+[CC0 1.0](LICENSE).** This repository's own work, dedicated to the public domain.
+
+**Record content — `data/antibiotics/**` and `data/raw/**`:
+[CC BY 4.0](LICENSE-DATA), attribution in [ATTRIBUTION.md](ATTRIBUTION.md).**
+It is derived from ChEBI (CC BY 4.0) and CARD's ARO (CC BY 4.0), and CC BY
+content cannot be re-dedicated to the public domain: §3(b) permits an adapter's
+licence only if it does not prevent recipients complying with the original, and
+stripping attribution does exactly that. So the corpus is redistributable —
+freely, commercially, modified — provided the attribution rides along.
+
+Attribution is per-record and machine-readable: every record's `source_concepts`
+block names the upstream concepts it came from, so a consumer taking a subset can
+derive precisely which sources that subset depends on.
 `data/raw/MANIFEST.yaml` records what was retrieved and when.

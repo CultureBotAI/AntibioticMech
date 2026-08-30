@@ -1,0 +1,46 @@
+identifier: CHEBI:83155
+label: adenosine 5'-hexadecylphosphate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An adenosine 5'-phosphate that is the monohexadecyl ester of AMP.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5'-O-[(hexadecyloxy)(hydroxy)phosphoryl]adenosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hexadecyl 5'-adenylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hexadecyl-AMP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37021
+- CHEBI:37096
+xrefs:
+- reaxys:1198661
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: CCCCCCCCCCCCCCCCOP(=O)(O)OC[C@H]1O[C@@H](n2cnc3c(N)ncnc32)[C@H](O)[C@@H]1O
+  standard_inchi: InChI=1S/C26H46N5O7P/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-36-39(34,35)37-17-20-22(32)23(33)26(38-20)31-19-30-21-24(27)28-18-29-25(21)31/h18-20,22-23,26,32-33H,2-17H2,1H3,(H,34,35)(H2,27,28,29)/t20-,22-,23-,26-/m1/s1
+  standard_inchi_key: XNBFNPXGEIQVBJ-HUBRGWSESA-N
+  molecular_formula: C26H46N5O7P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 571.656
+  monoisotopic_mass: 571.31349
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83155
+  source_label: adenosine 5'-hexadecylphosphate
+  minted_identifier: antibioticmech:chebi-2966a0e4ed
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

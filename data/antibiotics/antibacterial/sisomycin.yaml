@@ -1,0 +1,552 @@
+identifier: CHEBI:9169
+label: sisomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Sisomicin is an aminoglycoside antibiotic used to treat different types
+  of bacterial infections. Sisomicin works by binding to the bacterial 30S ribosomal
+  subunit, causing misreading of mRNA and leaving the bacterium unable to synthesize
+  proteins vital to its growth.
+definition_source: PMID:10103173
+synonyms:
+- synonym_text: (1S,2S,3R,4S,6R)-4,6-diamino-3-[(2S,3R)-3-amino-6-(aminomethyl)-3,4-dihydro-2H-pyran-2-yloxy]-2-hydroxycyclohexyl
+    3-deoxy-4-C-methyl-3-(methylamino)-β-L-arabinopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic 6640
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dehydrogentamicin Cla
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-2,6-Diamino-2,3,4,6-tetradeoxy-alpha-D-glycero-hex-4-enopyranosyl-(1-4)-O-(3-deoxy-4-C-methyl-3-(methylamino)-beta-L-arabinopyranosyl-(1-6))-2-deoxy-D-streptamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rickamicin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sisomicin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sissomicin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic 6640
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: dehydrogentamicin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: rickamicin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: sissomicin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:22479
+- CHEBI:22507
+- CHEBI:28079
+- CHEBI:63367
+- ARO:0000016
+xrefs:
+- ARO:0000035
+- cas:32385-11-8
+- drugcentral:2447
+- kegg.compound:C00494
+- kegg.drug:D02544
+- chembl:CHEMBL221886
+- pubchem.compound:36119
+activity_roles:
+- CHEBI:33281
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: CN[C@@H]1[C@@H](O)[C@@H](O[C@@H]2[C@@H](O)[C@H](O[C@H]3OC(CN)=CC[C@H]3N)[C@@H](N)C[C@H]2N)OC[C@]1(C)O
+  standard_inchi: InChI=1S/C19H37N5O7/c1-19(27)7-28-18(13(26)16(19)24-2)31-15-11(23)5-10(22)14(12(15)25)30-17-9(21)4-3-8(6-20)29-17/h3,9-18,24-27H,4-7,20-23H2,1-2H3/t9-,10+,11-,12+,13-,14-,15+,16-,17-,18-,19+/m1/s1
+  standard_inchi_key: URWAJWIAIPFPJE-YFMIWBNJSA-N
+  molecular_formula: C19H37N5O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 447.533
+  monoisotopic_mass: 447.2693
+source_concepts:
+- source: ARO
+  source_id: ARO:0000035
+  source_label: sisomicin
+  minted_identifier: antibioticmech:aro-34e24f4116
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:9169
+  source_label: sisomycin
+  minted_identifier: antibioticmech:chebi-5a74b3f2b4
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000230
+  label: ANT(2'')-Ia
+  evidence:
+  - reference: ARO:3000230
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000858
+  label: armA
+  evidence:
+  - reference: ARO:3000858
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000859
+  label: rmtA
+  evidence:
+  - reference: ARO:3000859
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000860
+  label: rmtB
+  evidence:
+  - reference: ARO:3000860
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000861
+  label: rmtC
+  evidence:
+  - reference: ARO:3000861
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000862
+  label: sgm
+  evidence:
+  - reference: ARO:3000862
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002528
+  label: AAC(3)-Ia
+  evidence:
+  - reference: ARO:3002528
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002529
+  label: AAC(3)-Id
+  evidence:
+  - reference: ARO:3002529
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002530
+  label: AAC(3)-Ib
+  evidence:
+  - reference: ARO:3002530
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002531
+  label: AAC(3)-Ic
+  evidence:
+  - reference: ARO:3002531
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002533
+  label: AAC(3)-IIa
+  evidence:
+  - reference: ARO:3002533
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002534
+  label: AAC(3)-IIb
+  evidence:
+  - reference: ARO:3002534
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002535
+  label: AAC(3)-IIc
+  evidence:
+  - reference: ARO:3002535
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002536
+  label: AAC(3)-IIIa
+  evidence:
+  - reference: ARO:3002536
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002537
+  label: AAC(3)-IIIb
+  evidence:
+  - reference: ARO:3002537
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002539
+  label: AAC(3)-IVa
+  evidence:
+  - reference: ARO:3002539
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002540
+  label: AAC(3)-VIa
+  evidence:
+  - reference: ARO:3002540
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002545
+  label: AAC(6')-Ia
+  evidence:
+  - reference: ARO:3002545
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002549
+  label: AAC(6')-Ic
+  evidence:
+  - reference: ARO:3002549
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002553
+  label: AAC(6')-If
+  evidence:
+  - reference: ARO:3002553
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002554
+  label: AAC(6')-Ig
+  evidence:
+  - reference: ARO:3002554
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002555
+  label: AAC(6')-Ih
+  evidence:
+  - reference: ARO:3002555
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002556
+  label: AAC(6')-Ii
+  evidence:
+  - reference: ARO:3002556
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002557
+  label: AAC(6')-Ij
+  evidence:
+  - reference: ARO:3002557
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002558
+  label: AAC(6')-Ik
+  evidence:
+  - reference: ARO:3002558
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002559
+  label: AAC(6')-Ip
+  evidence:
+  - reference: ARO:3002559
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002560
+  label: AAC(6')-Iq
+  evidence:
+  - reference: ARO:3002560
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002561
+  label: AAC(6')-Ir
+  evidence:
+  - reference: ARO:3002561
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002562
+  label: AAC(6')-Is
+  evidence:
+  - reference: ARO:3002562
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002563
+  label: AAC(6')-Isa
+  evidence:
+  - reference: ARO:3002563
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002564
+  label: AAC(6')-It
+  evidence:
+  - reference: ARO:3002564
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002565
+  label: AAC(6')-Iu
+  evidence:
+  - reference: ARO:3002565
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002566
+  label: AAC(6')-Iv
+  evidence:
+  - reference: ARO:3002566
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002567
+  label: AAC(6')-Iw
+  evidence:
+  - reference: ARO:3002567
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002568
+  label: AAC(6')-Ix
+  evidence:
+  - reference: ARO:3002568
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002569
+  label: AAC(6')-Iy
+  evidence:
+  - reference: ARO:3002569
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002570
+  label: AAC(6')-Iz
+  evidence:
+  - reference: ARO:3002570
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002571
+  label: AAC(6')-Iaa
+  evidence:
+  - reference: ARO:3002571
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002572
+  label: AAC(6')-Iad
+  evidence:
+  - reference: ARO:3002572
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002573
+  label: AAC(6')-Iae
+  evidence:
+  - reference: ARO:3002573
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002574
+  label: AAC(6')-Iaf
+  evidence:
+  - reference: ARO:3002574
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002575
+  label: AAC(6')-Iai
+  evidence:
+  - reference: ARO:3002575
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002585
+  label: AAC(6')-31
+  evidence:
+  - reference: ARO:3002585
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002588
+  label: AAC(6')-I30
+  evidence:
+  - reference: ARO:3002588
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002589
+  label: AAC(6')-Iid
+  evidence:
+  - reference: ARO:3002589
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002590
+  label: AAC(6')-Iih
+  evidence:
+  - reference: ARO:3002590
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002594
+  label: AAC(6')-IIa
+  evidence:
+  - reference: ARO:3002594
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002595
+  label: AAC(6')-IIb
+  evidence:
+  - reference: ARO:3002595
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002596
+  label: AAC(6')-IIc
+  evidence:
+  - reference: ARO:3002596
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002597
+  label: AAC(6')-Ie-APH(2'')-Ia bifunctional protein
+  evidence:
+  - reference: ARO:3002597
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002598
+  label: ANT(3'')-II-AAC(6')-IId bifunctional protein
+  evidence:
+  - reference: ARO:3002598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002600
+  label: AAC(3)-Ib/AAC(6')-Ib3 bifunctional protein
+  evidence:
+  - reference: ARO:3002600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003199
+  label: AAC(6')-Iak
+  evidence:
+  - reference: ARO:3003199
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003200
+  label: AAC(6')-Ian
+  evidence:
+  - reference: ARO:3003200
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003677
+  label: AAC(6')-Iaj
+  evidence:
+  - reference: ARO:3003677
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004191
+  label: APH(2'')-If
+  evidence:
+  - reference: ARO:3004191
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004621
+  label: AAC(3)-IIe
+  evidence:
+  - reference: ARO:3004621
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004623
+  label: AAC(3)-IId
+  evidence:
+  - reference: ARO:3004623
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004629
+  label: AAC(6')-Im
+  evidence:
+  - reference: ARO:3004629
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004635
+  label: AAC(6')-Il
+  evidence:
+  - reference: ARO:3004635
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004638
+  label: AAC(6')-I-48
+  evidence:
+  - reference: ARO:3004638
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005085
+  label: AAC(3)-IIg
+  evidence:
+  - reference: ARO:3005085
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007204
+  label: AAC(6')-Iap
+  evidence:
+  - reference: ARO:3007204
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3009655
+  label: AAC(6')-Va
+  evidence:
+  - reference: ARO:3009655
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000035 (sisomicin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000035 (sisomicin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

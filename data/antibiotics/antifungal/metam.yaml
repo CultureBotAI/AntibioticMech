@@ -1,0 +1,70 @@
+identifier: CHEBI:141319
+label: metam
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of dithiocarbamic acids that is dithiocarbamic acid
+  in which a hydrogen attached to the amino group has been replaced by a methyl group.
+  It is used (most widely as the corresponding sodium salt, metam-sodium) as an agricultural
+  pesticide, mainly as a broad spectrum soil fumigant for the control of weeds, nematodes,
+  soil-borne insects and fungi.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methylcarbamodithioic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dithiokohlensaeure-methylamid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methyl-dithiocarbamidsaeure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-methyldithiocarbamic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methan
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl-dithiocarbamic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyldithiocarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyldithiocarbaminic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: métam
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:39190
+- CHEBI:78787
+xrefs:
+- cas:144-54-7
+- pesticides:metam
+- reaxys:1739002
+activity_roles:
+- CHEBI:136645
+chemical_structure:
+  smiles: CNC(=S)S
+  standard_inchi: InChI=1S/C2H5NS2/c1-3-2(4)5/h1H3,(H2,3,4,5)
+  standard_inchi_key: HYVVJDQGXFXBRZ-UHFFFAOYSA-N
+  molecular_formula: C2H5NS2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 107.203
+  monoisotopic_mass: 106.98634
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141319
+  source_label: metam
+  minted_identifier: antibioticmech:chebi-bb031231d6
+  role_terms:
+  - CHEBI:136645
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

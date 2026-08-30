@@ -1,0 +1,54 @@
+identifier: CHEBI:5722
+label: hinokinin
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A lignan that is dihydrofuran-2(3H)-one (γ-butyrolactone) substituted
+  by a 3,4-methylenedioxybenzyl group at positions 3 and 4 (the 3R,4R-diastereoisomer).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,4R)-3,4-bis(1,3-benzodioxol-5-ylmethyl)dihydrofuran-2(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3R-trans)-3,4-bis(1,3-benzodioxol-5-ylmethyl)dihydrofuran-2(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-hinokinin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hinokinin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25036
+- CHEBI:37581
+- CHEBI:38298
+xrefs:
+- cas:26543-89-5
+- kegg.compound:C10627
+- knapsack:C00002608
+- reaxys:95369
+activity_roles:
+- CHEBI:36335
+chemical_structure:
+  smiles: O=C1OC[C@H](Cc2ccc3c(c2)OCO3)[C@H]1Cc1ccc2c(c1)OCO2
+  standard_inchi: InChI=1S/C20H18O6/c21-20-15(6-13-2-4-17-19(8-13)26-11-24-17)14(9-22-20)5-12-1-3-16-18(7-12)25-10-23-16/h1-4,7-8,14-15H,5-6,9-11H2/t14-,15+/m0/s1
+  standard_inchi_key: DDWGQGZPYDSYEL-LSDHHAIUSA-N
+  molecular_formula: C20H18O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 354.358
+  monoisotopic_mass: 354.11034
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5722
+  source_label: hinokinin
+  minted_identifier: antibioticmech:chebi-d9814c7481
+  role_terms:
+  - CHEBI:36335
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

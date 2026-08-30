@@ -1,0 +1,78 @@
+identifier: CHEBI:135437
+label: cefacetrile
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Cefacetrile is a broad-spectrum first-generation cephalosporin with antibacterial
+  activity. Cefacetrile binds to and inactivates penicillin-binding proteins located
+  on the inner membrane of the bacterial cell wall causing cell lysis.
+definition_source: PMID:4661097
+synonyms:
+- synonym_text: cefacetrilo
+  synonym_type: INN
+  source: chebi
+- synonym_text: CIBA 36,278A-BA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cefacetrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Vetrimast
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cefacetrile sodium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cephacetril
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cephacetrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+- ARO:0000032
+xrefs:
+- ARO:3009112
+- cas:10206-21-0
+- drugcentral:524
+- hmdb:HMDB0015484
+- chembl:CHEMBL2110602
+- pubchem.compound:91562
+activity_roles:
+- CHEBI:33281
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(COC(C)=O)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)CC#N'
+  standard_inchi: InChI=1S/C13H13N3O6S/c1-6(17)22-4-7-5-23-12-9(15-8(18)2-3-14)11(19)16(12)10(7)13(20)21/h9,12H,2,4-5H2,1H3,(H,15,18)(H,20,21)/t9-,12-/m1/s1
+  standard_inchi_key: RRYMAQUWDLIUPV-BXKDBHETSA-N
+  molecular_formula: C13H13N3O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 339.329
+  monoisotopic_mass: 339.05251
+source_concepts:
+- source: ARO
+  source_id: ARO:3009112
+  source_label: cefacetrile
+  minted_identifier: antibioticmech:aro-d2fdce1c82
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:135437
+  source_label: cefacetrile
+  minted_identifier: antibioticmech:chebi-d67937f5d8
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

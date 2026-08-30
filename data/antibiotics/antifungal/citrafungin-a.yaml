@@ -1,0 +1,47 @@
+identifier: CHEBI:65635
+label: citrafungin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxylic ester obtained by the formal condensation of 4-carboxy group
+  of (2R)-2-hydroxy-2-{(3R,5R)-2-oxo-5-[(1E,5Z)-tetradeca-1,5-dien-1-yl]tetrahydrofuran-3-yl}butanedioic
+  acid with the hydroxy group of 3-carboxy-2,3-dideoxy-L-threo-pentaric acid. It is
+  a fungal metabolite that acts as an inhibitor of geranylgeranyltransferase type
+  I(GGTase I) of pathogenic fungal species.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-carboxy-2-O-[(3R)-3-carboxy-3-hydroxy-3-{(3R,5R)-2-oxo-5-[(1E,5Z)-tetradeca-1,5-dien-1-yl]tetrahydrofuran-3-yl}propanoyl]-3,4-dideoxy-L-threo-pentaric
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22950
+- CHEBI:33308
+- CHEBI:35742
+xrefs:
+- chemspider:9585549
+- reaxys:9682030
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@]1([C@](O)(CC(=O)O[C@@H](C(=O)O)[C@H](CC(=O)O)C(=O)O)C(=O)O)C[C@H](/C=C/CC/C=C\CCCCCCCC)OC1=O'
+  standard_inchi: InChI=1S/C28H40O13/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-18-15-20(26(36)40-18)28(39,27(37)38)17-22(31)41-23(25(34)35)19(24(32)33)16-21(29)30/h9-10,13-14,18-20,23,39H,2-8,11-12,15-17H2,1H3,(H,29,30)(H,32,33)(H,34,35)(H,37,38)/b10-9-,14-13+/t18-,19-,20-,23+,28+/m0/s1
+  standard_inchi_key: ILSZYBVYZFASML-KRZMJZBHSA-N
+  molecular_formula: C28H40O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 584.615
+  monoisotopic_mass: 584.24689
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65635
+  source_label: citrafungin A
+  minted_identifier: antibioticmech:chebi-35820f00fb
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

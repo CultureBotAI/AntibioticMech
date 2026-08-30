@@ -1,0 +1,58 @@
+identifier: CHEBI:132106
+label: sodium propionate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic sodium salt comprising equal numbers of sodium and propionate
+  ions.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sodium propanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E281
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Natriumpropionat
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Propanoic acid, sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Propionic acid sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium propionate anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38700
+xrefs:
+- cas:137-40-6
+- kegg.drug:D08440
+- reaxys:3566934
+- wikipedia.en:Sodium_propionate
+activity_roles:
+- CHEBI:86327
+chemical_structure:
+  smiles: CCC(=O)[O-].[Na+]
+  standard_inchi: InChI=1S/C3H6O2.Na/c1-2-3(4)5;/h2H2,1H3,(H,4,5);/q;+1/p-1
+  standard_inchi_key: JXKPEJDQGNYQSM-UHFFFAOYSA-M
+  molecular_formula: C3H5O2.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 96.061
+  monoisotopic_mass: 96.01872
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:132106
+  source_label: sodium propionate
+  minted_identifier: antibioticmech:chebi-edf0e33b67
+  role_terms:
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,48 @@
+identifier: CHEBI:195253
+label: 5-hydroxy-3-methylfuran-2(5H)-one
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A butenolide that is furan-2(5H)-one substituted by a methyl group at
+  position 3 and a hydroxy group at position 4.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-hydroxy-4-methyl-2H-furan-5-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-hydroxy-3-methyl-2(5H)-furanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-hydroxy-3-methyl-2,5-dihydrofuran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134396
+- CHEBI:50523
+xrefs:
+- cas:931-23-7
+- reaxys:1280983
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: CC1=CC(O)OC1=O
+  standard_inchi: InChI=1S/C5H6O3/c1-3-2-4(6)8-5(3)7/h2,4,6H,1H3
+  standard_inchi_key: HQIZYPQNJWENRT-UHFFFAOYSA-N
+  molecular_formula: C5H6O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 114.1
+  monoisotopic_mass: 114.03169
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:195253
+  source_label: 5-hydroxy-3-methylfuran-2(5H)-one
+  minted_identifier: antibioticmech:chebi-70d67f75c2
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

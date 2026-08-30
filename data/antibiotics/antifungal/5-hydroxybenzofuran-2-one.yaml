@@ -1,0 +1,54 @@
+identifier: CHEBI:141343
+label: 5-hydroxybenzofuran-2-one
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 1-benzofurans that is 1-benzofuran-2(3H)-one
+  substituted by a hydroxy group at position 5.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-hydroxy-1-benzofuran-2(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,3-dihydro-5-hydroxybenzofuran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-hydroxy-2(3H)-benzofuranone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-hydroxy-2-coumaranone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: homogentisic acid γ-lactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33854
+- CHEBI:38830
+xrefs:
+- cas:2688-48-4
+- reaxys:128621
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: O=C1Cc2cc(O)ccc2O1
+  standard_inchi: InChI=1S/C8H6O3/c9-6-1-2-7-5(3-6)4-8(10)11-7/h1-3,9H,4H2
+  standard_inchi_key: POUITAHNNRJWMA-UHFFFAOYSA-N
+  molecular_formula: C8H6O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 150.133
+  monoisotopic_mass: 150.03169
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141343
+  source_label: 5-hydroxybenzofuran-2-one
+  minted_identifier: antibioticmech:chebi-a18737c543
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

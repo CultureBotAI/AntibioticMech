@@ -1,0 +1,53 @@
+identifier: CHEBI:29702
+label: undecylprodigiosin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of tripyrroles that is 1H-pyrrole substituted by
+  (4'-methoxy-1H,5'H-[2,2'-bipyrrol]-5'-ylidene)methyl and undecyl groups at positions
+  2 and 5, respectively. It is a pigment produced by Stveptomyces coelicolor.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5'Z)-4'-methoxy-5'-[(5-undecyl-1H-pyrrol-2-yl)methylidene]-1H,5'H-2,2'-bipyrrole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: undecylprodiginin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: undecylprodiginine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22315
+- CHEBI:35618
+- CHEBI:36317
+xrefs:
+- cas:52340-48-4
+- chemspider:10481061
+- kegg.compound:C12023
+- knapsack:C00018818
+- wikipedia.en:Undecylprodigiosin
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCCCCCCCCc1ccc(/C=C2\N=C(c3cccn3)C=C2OC)n1
+  standard_inchi: InChI=1S/C25H35N3O/c1-3-4-5-6-7-8-9-10-11-13-20-15-16-21(27-20)18-24-25(29-2)19-23(28-24)22-14-12-17-26-22/h12,14-19,26-27H,3-11,13H2,1-2H3/b24-18-
+  standard_inchi_key: HIYSWASSDOXZLC-MOHJPFBDSA-N
+  molecular_formula: C25H35N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 393.575
+  monoisotopic_mass: 393.27801
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:29702
+  source_label: undecylprodigiosin
+  minted_identifier: antibioticmech:chebi-0f97774328
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

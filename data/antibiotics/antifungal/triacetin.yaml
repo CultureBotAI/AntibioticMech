@@ -1,0 +1,101 @@
+identifier: CHEBI:9661
+label: triacetin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A triglyceride obtained by acetylation of the three hydroxy groups of
+  glycerol. It has fungistatic properties (based on release of acetic acid) and has
+  been used in the topical treatment of minor dermatophyte infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Enzactin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: triacetina
+  synonym_type: INN
+  source: chebi
+- synonym_text: triacetine
+  synonym_type: INN
+  source: chebi
+- synonym_text: triacetinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: propane-1,2,3-triyl triacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2,3-Propanetriol triacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2,3-Propanetriyl triacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2,3-triacetoxypropane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2,3-triacetylglycerol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(Acetyloxy)-1-[(acetyloxy)methyl]ethyl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E 1518
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E-1518
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E1518
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glycerol triacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glyceryl triacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Triacetyl glycerin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Triacetyl glycerine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Triacetylglycerol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: glycerin triacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17855
+xrefs:
+- cas:102-76-1
+- drugcentral:3624
+- hmdb:HMDB0029592
+- kegg.drug:D00384
+- lipidmaps:LMGL03012615
+- reaxys:1792353
+- wikipedia.en:Triacetin
+activity_roles:
+- CHEBI:86327
+chemical_structure:
+  smiles: CC(=O)OCC(COC(C)=O)OC(C)=O
+  standard_inchi: InChI=1S/C9H14O6/c1-6(10)13-4-9(15-8(3)12)5-14-7(2)11/h9H,4-5H2,1-3H3
+  standard_inchi_key: URAYPUMNDPQOKB-UHFFFAOYSA-N
+  molecular_formula: C9H14O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 218.205
+  monoisotopic_mass: 218.07904
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9661
+  source_label: triacetin
+  minted_identifier: antibioticmech:chebi-d520d001a5
+  role_terms:
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

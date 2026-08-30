@@ -1,0 +1,44 @@
+identifier: CHEBI:67364
+label: pisonivanone
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A trihydroxyflavanone that is (2S)-flavanone substituted by hydroxy groups
+  at positions 5, 7 and 2' and a methyl group at position 8. Isolated from Pisonia
+  aculeata, it exhibits antitubercular activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-5,7-dihydroxy-2-(2-hydroxyphenyl)-8-methyl-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-5,7,2'-trihydroxy-8-methylflavanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38739
+xrefs:
+- reaxys:21559749
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: Cc1c(O)cc(O)c2c1O[C@H](c1ccccc1O)CC2=O
+  standard_inchi: InChI=1S/C16H14O5/c1-8-11(18)6-12(19)15-13(20)7-14(21-16(8)15)9-4-2-3-5-10(9)17/h2-6,14,17-19H,7H2,1H3/t14-/m0/s1
+  standard_inchi_key: SEHDRAXGPBPQKE-AWEZNQCLSA-N
+  molecular_formula: C16H14O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 286.283
+  monoisotopic_mass: 286.08412
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:67364
+  source_label: pisonivanone
+  minted_identifier: antibioticmech:chebi-b85ab95268
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

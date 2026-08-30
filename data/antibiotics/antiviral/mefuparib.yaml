@@ -1,0 +1,51 @@
+identifier: CHEBI:167905
+label: mefuparib
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 1-benzofurans that is 1-benzofuran substituted
+  by 4-[(methylamino)methyl]phenyl, fluoro and aminocarbonyl groups at positions 2,
+  5, and 7, respectively. It is a potent inhibitor of poly(ADP-ribose) polymerases
+  PARP1 and PARP2 (IC50 of 3.2 nM and 1.9 nM, respectively). The compound exhibits
+  anti-cancer properties and has also shown promising antiviral activity against the
+  virus that causes COVID-19.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-fluoro-2-{4-[(methylamino)methyl]phenyl}-1-benzofuran-7-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CVL-218 free base
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140324
+- CHEBI:37143
+- CHEBI:38830
+- CHEBI:50995
+xrefs:
+- cas:1392502-82-7
+- drugcentral:5378
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CNCc1ccc(-c2cc3cc(F)cc(C(N)=O)c3o2)cc1
+  standard_inchi: InChI=1S/C17H15FN2O2/c1-20-9-10-2-4-11(5-3-10)15-7-12-6-13(18)8-14(17(19)21)16(12)22-15/h2-8,20H,9H2,1H3,(H2,19,21)
+  standard_inchi_key: ROBJKLPZIPNAMV-UHFFFAOYSA-N
+  molecular_formula: C17H15FN2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 298.317
+  monoisotopic_mass: 298.11176
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:167905
+  source_label: mefuparib
+  minted_identifier: antibioticmech:chebi-c8ba779904
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

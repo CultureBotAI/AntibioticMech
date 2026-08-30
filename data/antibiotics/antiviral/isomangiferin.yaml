@@ -1,0 +1,48 @@
+identifier: CHEBI:80840
+label: isomangiferin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of xanthones that is 9H-xanthen-9-one substituted
+  by hydroxy groups at positions 1, 3, 6 and 7 and a 1,5-anhydro-D-glucitol moiety
+  at position 1.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S)-1,5-anhydro-1-(1,3,6,7-tetrahydroxy-9-oxo-9H-xanthen-4-yl)-D-glucitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:20857
+- CHEBI:26195
+- CHEBI:51149
+xrefs:
+- cas:24699-16-9
+- hmdb:HMDB0029477
+- kegg.compound:C16979
+- knapsack:C00041015
+- patent:US2011046077
+- reaxys:1444367
+activity_roles:
+- CHEBI:64953
+chemical_structure:
+  smiles: O=c1c2cc(O)c(O)cc2oc2c([C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)c(O)cc(O)c12
+  standard_inchi: InChI=1S/C19H18O11/c20-4-11-15(26)16(27)17(28)19(30-11)13-9(24)2-8(23)12-14(25)5-1-6(21)7(22)3-10(5)29-18(12)13/h1-3,11,15-17,19-24,26-28H,4H2/t11-,15-,16+,17-,19+/m1/s1
+  standard_inchi_key: CDYBOKJASDEORM-HBVDJMOISA-N
+  molecular_formula: C19H18O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 422.342
+  monoisotopic_mass: 422.08491
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:80840
+  source_label: isomangiferin
+  minted_identifier: antibioticmech:chebi-98418416ee
+  role_terms:
+  - CHEBI:64953
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

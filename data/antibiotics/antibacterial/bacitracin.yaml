@@ -1,0 +1,91 @@
+identifier: antibioticmech:aro-736d7660a3
+label: bacitracin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Bacitracin is a mixture of related cyclic polypeptides produced by organisms
+  of the licheniformis group of Bacillus subtilis var Tracy. Bacitracin interferes
+  with the dephosphorylation of the C55-isoprenyl pyrophosphate, a molecule which
+  carries the building blocks of the peptidoglycan bacterial cell wall outside of
+  the inner membrane.
+definition_source: PMID:8389741
+synonyms:
+- synonym_text: Altracin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Ayfivin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: BACiiM
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Baciguent
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Baciquent
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Citracin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Fortracin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Penitracin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Topitracin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Zutracin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3009657
+xrefs:
+- ARO:0000041
+- pubchem.compound:57402735
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: CC[C@H](C)[C@H]1C(=O)N[C@@H](C(=O)N[C@H](C(=O)N[C@@H](C(=O)N[C@H](C(=O)NCCCC[C@@H](C(=O)N[C@@H](C(=O)N1)CCCN)NC(=O)[C@H]([C@@H](C)CC)NC(=O)[C@@H](CCC(=O)[O-])NC(=O)[C@H](CC(C)C)NC(=O)C2CN=C(S2)C(C(C)CC)N)CC(=O)N)CC(=O)[O-])CC3=CN=CN3)CC4=CC=CC=C4.[Zn+2]
+  standard_inchi: InChI=1S/C66H103N17O16S.Zn/c1-9-35(6)52(69)66-72-32-48(100-66)63(97)80-43(26-34(4)5)59(93)75-42(22-23-50(85)86)58(92)83-53(36(7)10-2)64(98)76-40-20-15-16-25-71-55(89)46(29-49(68)84)78-62(96)47(30-51(87)88)79-61(95)45(28-39-31-70-33-73-39)77-60(94)44(27-38-18-13-12-14-19-38)81-65(99)54(37(8)11-3)82-57(91)41(21-17-24-67)74-56(40)90;/h12-14,18-19,31,33-37,40-48,52-54H,9-11,15-17,20-30,32,67,69H2,1-8H3,(H2,68,84)(H,70,73)(H,71,89)(H,74,90)(H,75,93)(H,76,98)(H,77,94)(H,78,96)(H,79,95)(H,80,97)(H,81,99)(H,82,91)(H,83,92)(H,85,86)(H,87,88);/q;+2/p-2/t35?,36-,37-,40-,41+,42+,43-,44+,45-,46-,47+,48?,52?,53-,54-;/m0./s1
+  standard_inchi_key: NKULICGUDKGGRL-FCHFGNCGSA-L
+  molecular_formula: C66H101N17O16SZn
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1486.1
+  monoisotopic_mass: 1483.662433
+source_concepts:
+- source: ARO
+  source_id: ARO:0000041
+  source_label: bacitracin
+  minted_identifier: antibioticmech:aro-736d7660a3
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003984
+  label: BahA
+  evidence:
+  - reference: ARO:3003984
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000041 (bacitracin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000719
+  target_label: bacitracin sensitive isoprenyl pyrophosphate
+  evidence:
+  - reference: ARO:3000719
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000041 (bacitracin); database
+      assertion, not a primary citation.
+- target_id: ARO:3003251
+  target_label: undecaprenyl pyrophosphate
+  evidence:
+  - reference: ARO:3003251
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000041 (bacitracin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

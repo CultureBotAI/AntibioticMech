@@ -1,0 +1,553 @@
+identifier: CHEBI:3745
+label: clindamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbohydrate-containing antibiotic that is the semisynthetic derivative
+  of lincomycin, a natural antibiotic.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl 7-chloro-6,7,8-trideoxy-6-{[(4R)-1-methyl-4-propyl-L-prolyl]amino}-1-thio-L-threo-α-D-galacto-octopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7(S)-chloro-7-deoxylincomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-CDL
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-deoxy-7(S)-chlorolincomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cleocin (TN)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Clindamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methyl 7-chloro-6,7,8-trideoxy-6-(1-methyl-trans-4-propyl-L-2-pyrrolidinecarboxamido)-1-thio-L-threo-alpha-D-galacto-octopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CLI
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Chlolincocin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Chlorlincocin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Cleocin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Clindamicina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Clindamycine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Clindamycinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Clinimycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Sobelin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23007
+- CHEBI:35275
+- CHEBI:36683
+- CHEBI:46770
+- CHEBI:72588
+- ARO:0000017
+xrefs:
+- ARO:0000066
+- cas:18323-44-9
+- drugbank:DB01190
+- drugcentral:678
+- hmdb:HMDB0015321
+- kegg.compound:C06914
+- kegg.drug:D00277
+- pdb-ccd:CLY
+- reaxys:5624049
+- wikipedia.en:Clindamycin
+- chembl:CHEMBL1753
+- pubchem.compound:446598
+activity_roles:
+- CHEBI:33281
+structural_class: lincosamide antibiotic
+structural_class_id: ARO:0000017
+chemical_structure:
+  smiles: '[H][C@]1([C@H](NC(=O)[C@@H]2C[C@@H](CCC)CN2C)[C@H](C)Cl)O[C@H](SC)[C@H](O)[C@@H](O)[C@H]1O'
+  standard_inchi: InChI=1S/C18H33ClN2O5S/c1-5-6-10-7-11(21(3)8-10)17(25)20-12(9(2)19)16-14(23)13(22)15(24)18(26-16)27-4/h9-16,18,22-24H,5-8H2,1-4H3,(H,20,25)/t9-,10+,11-,12+,13-,14+,15+,16+,18+/m0/s1
+  standard_inchi_key: KDLRVYVGXIQJDK-AWPVFWJPSA-N
+  structure_source: ChEBI
+source_concepts:
+- source: ARO
+  source_id: ARO:0000066
+  source_label: clindamycin
+  minted_identifier: antibioticmech:aro-11403b4da5
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3745
+  source_label: clindamycin
+  minted_identifier: antibioticmech:chebi-9aa5cc907d
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000250
+  label: ErmC
+  evidence:
+  - reference: ARO:3000250
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000300
+  label: lsaA
+  evidence:
+  - reference: ARO:3000300
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000326
+  label: ErmE
+  evidence:
+  - reference: ARO:3000326
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000347
+  label: ErmA
+  evidence:
+  - reference: ARO:3000347
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000375
+  label: ErmB
+  evidence:
+  - reference: ARO:3000375
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000392
+  label: Erm(37)
+  evidence:
+  - reference: ARO:3000392
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000495
+  label: ErmD
+  evidence:
+  - reference: ARO:3000495
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000498
+  label: ErmF
+  evidence:
+  - reference: ARO:3000498
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000522
+  label: ErmG
+  evidence:
+  - reference: ARO:3000522
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000592
+  label: ErmN
+  evidence:
+  - reference: ARO:3000592
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000593
+  label: ErmQ
+  evidence:
+  - reference: ARO:3000593
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000594
+  label: ErmR
+  evidence:
+  - reference: ARO:3000594
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000595
+  label: ErmT
+  evidence:
+  - reference: ARO:3000595
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000596
+  label: ErmX
+  evidence:
+  - reference: ARO:3000596
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000599
+  label: Erm(33)
+  evidence:
+  - reference: ARO:3000599
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000600
+  label: Erm(34)
+  evidence:
+  - reference: ARO:3000600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000601
+  label: Erm(38)
+  evidence:
+  - reference: ARO:3000601
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000602
+  label: Erm(39)
+  evidence:
+  - reference: ARO:3000602
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000603
+  label: Erm(41)
+  evidence:
+  - reference: ARO:3000603
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000604
+  label: Erm(35)
+  evidence:
+  - reference: ARO:3000604
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000605
+  label: Erm(36)
+  evidence:
+  - reference: ARO:3000605
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002814
+  label: clbA
+  evidence:
+  - reference: ARO:3002814
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002815
+  label: clbB
+  evidence:
+  - reference: ARO:3002815
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002816
+  label: clbC
+  evidence:
+  - reference: ARO:3002816
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002829
+  label: vgaA
+  evidence:
+  - reference: ARO:3002829
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002830
+  label: vgaALC
+  evidence:
+  - reference: ARO:3002830
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002831
+  label: vgaC
+  evidence:
+  - reference: ARO:3002831
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002833
+  label: vgaE
+  evidence:
+  - reference: ARO:3002833
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002836
+  label: lnuB
+  evidence:
+  - reference: ARO:3002836
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002838
+  label: lnuD
+  evidence:
+  - reference: ARO:3002838
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002839
+  label: lnuF
+  evidence:
+  - reference: ARO:3002839
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002881
+  label: lmrC
+  evidence:
+  - reference: ARO:3002881
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003106
+  label: Erm(42)
+  evidence:
+  - reference: ARO:3003106
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3003111
+  label: lsaB
+  evidence:
+  - reference: ARO:3003111
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3003112
+  label: lsaC
+  evidence:
+  - reference: ARO:3003112
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003205
+  label: Erm(43)
+  evidence:
+  - reference: ARO:3003205
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003441
+  label: cfrA
+  evidence:
+  - reference: ARO:3003441
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3003749
+  label: salA
+  evidence:
+  - reference: ARO:3003749
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003907
+  label: cipA
+  evidence:
+  - reference: ARO:3003907
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003908
+  label: Erm(47)
+  evidence:
+  - reference: ARO:3003908
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003971
+  label: Erm(44)v
+  evidence:
+  - reference: ARO:3003971
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003982
+  label: LlmA 23S ribosomal RNA methyltransferase
+  evidence:
+  - reference: ARO:3003982
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004094
+  label: Erm(48)
+  evidence:
+  - reference: ARO:3004094
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004149
+  label: Escherichia coli 23S rRNA with mutation conferring resistance to clindamycin
+  evidence:
+  - reference: ARO:3004149
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004595
+  label: erm(45)
+  evidence:
+  - reference: ARO:3004595
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004599
+  label: clcD
+  evidence:
+  - reference: ARO:3004599
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004600
+  label: LnuH
+  evidence:
+  - reference: ARO:3004600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004606
+  label: erm(40)
+  evidence:
+  - reference: ARO:3004606
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004626
+  label: Erm(49)
+  evidence:
+  - reference: ARO:3004626
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004649
+  label: cfr(B)
+  evidence:
+  - reference: ARO:3004649
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004654
+  label: Clostridioides difficile 23S rRNA with mutation conferring resistance to
+    erythromycin and clindamycin
+  evidence:
+  - reference: ARO:3004654
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004715
+  label: vga(E) Staphylococcus cohnii
+  evidence:
+  - reference: ARO:3004715
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3005121
+  label: lsaD
+  evidence:
+  - reference: ARO:3005121
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007026
+  label: salB
+  evidence:
+  - reference: ARO:3007026
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007027
+  label: salC
+  evidence:
+  - reference: ARO:3007027
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007032
+  label: Erm(50)
+  evidence:
+  - reference: ARO:3007032
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007033
+  label: Erm(51)
+  evidence:
+  - reference: ARO:3007033
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007041
+  label: Erm(52)
+  evidence:
+  - reference: ARO:3007041
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007637
+  label: Clostridioides difficile cplR
+  evidence:
+  - reference: ARO:3007637
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007644
+  label: Clostridium perfringes cplR
+  evidence:
+  - reference: ARO:3007644
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007645
+  label: Clostridium sporogenes cplR
+  evidence:
+  - reference: ARO:3007645
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007654
+  label: erm(56)
+  evidence:
+  - reference: ARO:3007654
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000066 (clindamycin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000754
+  target_label: antibiotic sensitive peptidyl transferase (23S rRNA)
+  evidence:
+  - reference: ARO:3000754
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000066 (clindamycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

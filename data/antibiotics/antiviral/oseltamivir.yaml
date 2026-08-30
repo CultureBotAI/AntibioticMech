@@ -1,0 +1,85 @@
+identifier: CHEBI:7798
+label: oseltamivir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclohexenecarboxylate ester that is the ethyl ester of oseltamivir
+  acid. An antiviral prodrug (it is hydrolysed to the active free carboxylic acid
+  in the liver), it is used to slow the spread of influenza.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Agucort
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Tamiflu
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: oseltamivirum
+  synonym_type: INN
+  source: chebi
+- synonym_text: oséltamivir
+  synonym_type: INN
+  source: chebi
+- synonym_text: ethyl (3R,4R,5S)-4-acetamido-5-amino-3-(pentan-3-yloxy)cyclohex-1-ene-1-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-oseltamivir
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Cyclohexene-1-carboxylic acid, 4-(acetylamino)-5-amino-3-(1-ethylpropoxy)-,
+    ethyl ester, (3R-(3α,4β,5α))-
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethyl (3R,4R,5S)-4-acetamido-5-amino-3-(1-ethylpropoxy)-1-cyclohexene-1-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS-4104
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HSDB 7433
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Oseltamivir
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22160
+- CHEBI:37529
+- CHEBI:46668
+- CHEBI:50994
+xrefs:
+- cas:196618-13-0
+- drugbank:DB00198
+- drugcentral:2001
+- hmdb:HMDB0014343
+- kegg.compound:C08092
+- kegg.drug:D08306
+- patent:US5763483
+- reaxys:8003908
+- wikipedia.en:Oseltamivir
+activity_roles:
+- CHEBI:36044
+- CHEBI:52425
+chemical_structure:
+  smiles: CCOC(=O)C1=C[C@@H](OC(CC)CC)[C@H](NC(C)=O)[C@@H](N)C1
+  standard_inchi: InChI=1S/C16H28N2O4/c1-5-12(6-2)22-14-9-11(16(20)21-7-3)8-13(17)15(14)18-10(4)19/h9,12-15H,5-8,17H2,1-4H3,(H,18,19)/t13-,14+,15+/m0/s1
+  standard_inchi_key: VSZGPKBBMSAYNT-RRFJBIMHSA-N
+  molecular_formula: C16H28N2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 312.41
+  monoisotopic_mass: 312.20491
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:7798
+  source_label: oseltamivir
+  minted_identifier: antibioticmech:chebi-919445f944
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:52425
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

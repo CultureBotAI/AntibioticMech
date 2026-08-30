@@ -1,0 +1,68 @@
+identifier: CHEBI:2638
+label: amikacin disulfate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aminoglycoside sulfate salt obtained by combining amikacin with two
+  molar equivalents of sulfuric acid.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Amikan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Amikin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: (2S)-4-amino-N-[(1R,2S,3S,4R,5S)-5-amino-2-(3-amino-3-deoxy-α-D-glucopyranosyloxy)-4-(6-amino-6-deoxy-α-D-glucopyranosyloxy)-3-hydroxycyclohexyl]-2-hydroxybutanamide
+    disulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Amikacin sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-3-amino-3-deoxy-α-D-glucopyranosyl-(1→4)-O-(6-amino-6-deoxy-α-D-glucopyranosyl-(1→6))-N3-(4-amino-L-2-hydroxybutyryl)-2-deoxy-L-streptamine
+    sulfate (1:2)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pierami
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: amikacin bis(sulphate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: amikacin disulphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38012
+xrefs:
+- cas:39831-55-5
+- drugbank:DB00479
+- kegg.drug:D00865
+- reaxys:6172633
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: NCC[C@H](O)C(=O)N[C@@H]1C[C@H](N)[C@@H](O[C@H]2O[C@H](CN)[C@@H](O)[C@H](O)[C@H]2O)[C@H](O)[C@H]1O[C@H]1O[C@H](CO)[C@@H](O)[C@H](N)[C@H]1O.O=S(=O)(O)O.O=S(=O)(O)O
+  standard_inchi: InChI=1S/C22H43N5O13.2H2O4S/c23-2-1-8(29)20(36)27-7-3-6(25)18(39-22-16(34)15(33)13(31)9(4-24)37-22)17(35)19(7)40-21-14(32)11(26)12(30)10(5-28)38-21;2*1-5(2,3)4/h6-19,21-22,28-35H,1-5,23-26H2,(H,27,36);2*(H2,1,2,3,4)/t6-,7+,8-,9+,10+,11-,12+,13+,14+,15-,16+,17-,18+,19-,21+,22+;;/m0../s1
+  standard_inchi_key: FXKSEJFHKVNEFI-GCZBSULCSA-N
+  molecular_formula: C22H43N5O13.2H2O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 781.766
+  monoisotopic_mass: 781.2205
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2638
+  source_label: amikacin disulfate
+  minted_identifier: antibioticmech:chebi-cd54fab909
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

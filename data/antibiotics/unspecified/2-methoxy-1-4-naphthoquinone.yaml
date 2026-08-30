@@ -1,0 +1,45 @@
+identifier: CHEBI:69522
+label: 2-methoxy-1,4-naphthoquinone
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A naphthoquinone that is naphthalene-1,4-dione substituted by a methoxy
+  group at position 2. It has been isolated from the roots of Rubia yunnanensis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-methoxynaphthalene-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Methoxy-p-naphthoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132142
+- CHEBI:47985
+xrefs:
+- cas:2348-82-5
+- reaxys:2046314
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COC1=CC(=O)c2ccccc2C1=O
+  standard_inchi: InChI=1S/C11H8O3/c1-14-10-6-9(12)7-4-2-3-5-8(7)11(10)13/h2-6H,1H3
+  standard_inchi_key: OBGBGHKYJAOXRR-UHFFFAOYSA-N
+  molecular_formula: C11H8O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 188.182
+  monoisotopic_mass: 188.04734
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69522
+  source_label: 2-methoxy-1,4-naphthoquinone
+  minted_identifier: antibioticmech:chebi-cc09e3c83f
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

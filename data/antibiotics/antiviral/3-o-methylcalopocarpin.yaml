@@ -1,0 +1,51 @@
+identifier: CHEBI:66369
+label: 3-O-methylcalopocarpin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pterocarpans that is (6aR,11aR)-pterocarpan substituted
+  by a hydroxy group at position 9, a methoxy group at position 3 and a prenyl group
+  at position 2. Isolated from Erythrina glauca and Erythrina burttii, it exhibits
+  anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6aR,11aR)-3-methoxy-2-(3-methylbut-2-en-1-yl)-6a,11a-dihydro-6H-[1]benzofuro[3,2-c]chromen-9-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-hydroxy-3-methoxy-2-prenylpterocarpan
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Orientanol B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26377
+- CHEBI:33853
+- CHEBI:35618
+xrefs:
+- hmdb:HMDB0031633
+- reaxys:7945641
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: '[H][C@@]12COc3cc(OC)c(CC=C(C)C)cc3[C@]1([H])Oc1cc(O)ccc12'
+  standard_inchi: InChI=1S/C21H22O4/c1-12(2)4-5-13-8-16-19(10-18(13)23-3)24-11-17-15-7-6-14(22)9-20(15)25-21(16)17/h4,6-10,17,21-22H,5,11H2,1-3H3/t17-,21-/m0/s1
+  standard_inchi_key: FZFGGNNUYSILSL-UWJYYQICSA-N
+  molecular_formula: C21H22O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 338.403
+  monoisotopic_mass: 338.15181
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66369
+  source_label: 3-O-methylcalopocarpin
+  minted_identifier: antibioticmech:chebi-943cefbbe2
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,56 @@
+identifier: CHEBI:50209
+label: sophoraflavanone G
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetrahydroxyflavanone having a structure of naringenin bearing an additional
+  hydroxyl substituent at position 2' as well as a (2R)-5-methyl-2-(prop-1-en-2-yl)hex-4-en-1-yl
+  (lavandulyl) substituent at position 8'.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-2-(2,4-dihydroxyphenyl)-5,7-dihydroxy-8-[(2R)-5-methyl-2-(prop-1-en-2-yl)hex-4-en-1-yl]-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-5,7,2',4'-tetrahydroxy-8-lavandulylflavanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: vexibinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140331
+- CHEBI:140377
+- CHEBI:38742
+xrefs:
+- cas:97938-30-2
+- kegg.compound:C18053
+- lipidmaps:LMPK12140467
+- metacyc.compound:CPD-9441
+- reaxys:8594725
+- wikipedia.en:Sophoraflavanone_G
+activity_roles:
+- CHEBI:33281
+- CHEBI:38068
+chemical_structure:
+  smiles: C=C(C)[C@H](CC=C(C)C)Cc1c(O)cc(O)c2c1O[C@H](c1ccc(O)cc1O)CC2=O
+  standard_inchi: InChI=1S/C25H28O6/c1-13(2)5-6-15(14(3)4)9-18-20(28)11-21(29)24-22(30)12-23(31-25(18)24)17-8-7-16(26)10-19(17)27/h5,7-8,10-11,15,23,26-29H,3,6,9,12H2,1-2,4H3/t15-,23+/m1/s1
+  standard_inchi_key: XRYVAQQLDYTHCL-CMJOXMDJSA-N
+  molecular_formula: C25H28O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 424.493
+  monoisotopic_mass: 424.18859
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:50209
+  source_label: sophoraflavanone G
+  minted_identifier: antibioticmech:chebi-36f20978d4
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

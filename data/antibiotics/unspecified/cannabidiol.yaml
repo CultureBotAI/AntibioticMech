@@ -1,0 +1,71 @@
+identifier: CHEBI:69478
+label: cannabidiol
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An cannabinoid that is cyclohexene which is substituted by a methyl group
+  at position 1, a 2,6-dihydroxy-4-pentylphenyl group at position 3, and a prop-1-en-2-yl
+  group at position 4.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cannabidiolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (1'R,2'R)-5'-methyl-4-pentyl-2'-(prop-1-en-2-yl)-1',2',3',4'-tetrahydrobiphenyl-2,6-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-CBD
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-cannabidiol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-trans-2-p-mentha-1,8-dien-3-yl-5-pentylresorcinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-trans-cannabidiol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Δ1(2)-trans-cannabidiol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33572
+- CHEBI:67196
+- CHEBI:78840
+xrefs:
+- cas:13956-29-1
+- drugbank:DB09061
+- drugcentral:5288
+- kegg.compound:C07578
+- knapsack:C00002641
+- lipidmaps:LMPK13120001
+- metacyc.compound:CPD-7173
+- patent:US2304669
+- pdb-ccd:P0T
+- reaxys:2222023
+- wikipedia.en:Cannabidiol
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]1(C(=C)C)CCC(C)=C[C@H]1c1c(O)cc(CCCCC)cc1O'
+  standard_inchi: InChI=1S/C21H30O2/c1-5-6-7-8-16-12-19(22)21(20(23)13-16)18-11-15(4)9-10-17(18)14(2)3/h11-13,17-18,22-23H,2,5-10H2,1,3-4H3/t17-,18+/m0/s1
+  standard_inchi_key: QHMBSVQNZZTUGM-ZWKOTPCHSA-N
+  molecular_formula: C21H30O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 314.469
+  monoisotopic_mass: 314.22458
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69478
+  source_label: cannabidiol
+  minted_identifier: antibioticmech:chebi-a82c4f5576
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,63 @@
+identifier: CHEBI:66093
+label: isocomplestatin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A heterodetic cyclic peptide which is a atropisomer of complestatin. It
+  is isolated from the culture broth of Streptomyces and has anti-HIV-1 activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R)-({[(17R,20R,23R,26R,29S)-20,26-bis(3,5-dichloro-4-hydroxyphenyl)-17-{[(3,5-dichloro-4-hydroxyphenyl)(oxo)acetyl]amino}-37-hydroxy-28-methyl-18,21,24,27-tetraoxo-2-oxa-13,19,22,25,28-pentaazahexacyclo[29.2.2.13,7.18,12.05,23.011,15]heptatriaconta-1(33),3(37),4,6,8(36),9,11,14,31,34-decaen-29-yl]carbonyl}amino)(4-hydroxyphenyl)acetic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24533
+- CHEBI:26195
+- CHEBI:27171
+- CHEBI:36683
+- CHEBI:37407
+- ARO:3000081
+xrefs:
+- ARO:3005070
+- chemspider:10213850
+- reaxys:7913183
+- chembl:CHEMBL506605
+- pubchem.compound:16134403
+activity_roles:
+- CHEBI:67268
+structural_class: glycopeptide antibiotic
+structural_class_id: ARO:3000081
+chemical_structure:
+  smiles: CN1C(=O)[C@@H](c2cc(Cl)c(O)c(Cl)c2)NC(=O)[C@@H]2NC(=O)[C@@H](c3cc(Cl)c(O)c(Cl)c3)NC(=O)[C@H](NC(=O)C(=O)c3cc(Cl)c(O)c(Cl)c3)Cc3cnc4cc(ccc34)-c3cc2cc(c3O)Oc2ccc(cc2)C[C@H]1C(=O)N[C@@H](C(=O)O)c1ccc(O)cc1
+  standard_inchi: InChI=1S/C61H45Cl6N7O15/c1-74-44(56(82)73-49(61(87)88)25-4-7-32(75)8-5-25)12-24-2-9-33(10-3-24)89-45-22-27-13-35(51(45)77)26-6-11-34-31(23-68-42(34)20-26)21-43(69-59(85)50(76)30-18-40(66)54(80)41(67)19-30)55(81)70-47(28-14-36(62)52(78)37(63)15-28)57(83)71-46(27)58(84)72-48(60(74)86)29-16-38(64)53(79)39(65)17-29/h2-11,13-20,22-23,43-44,46-49,68,75,77-80H,12,21H2,1H3,(H,69,85)(H,70,81)(H,71,83)(H,72,84)(H,73,82)(H,87,88)/t43-,44+,46-,47-,48-,49-/m1/s1
+  standard_inchi_key: JJGZGELTZPACID-OTLJHNKQSA-N
+  molecular_formula: C61H45Cl6N7O15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1328.783
+  monoisotopic_mass: 1325.11048
+source_concepts:
+- source: ARO
+  source_id: ARO:3005070
+  source_label: complestatin
+  minted_identifier: antibioticmech:aro-f0d2c0b4fc
+  role_terms:
+  - CHEBI:67268
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:66093
+  source_label: isocomplestatin
+  minted_identifier: antibioticmech:chebi-4fe2a0c8f9
+  role_terms:
+  - CHEBI:67268
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:42:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

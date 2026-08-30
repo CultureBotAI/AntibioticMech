@@ -1,0 +1,67 @@
+identifier: CHEBI:145667
+label: fluopimomide
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzamide resulting from the formal condensation of the carboxy group
+  of 2,3,5,6-tetrafluoro-4-methoxybenzoic acid with the amino group of 1-[3-chloro-5-(trifluoromethyl)pyridin-2-yl]methanamine.
+  It is a benzamide fungicide, synthesized by Shandong Sino-Agri United Biotechnology
+  Co., Ltd (China). Used for the control of cucumber and grape downy mildew, phytophthora
+  capsici, litchi downy blight, potato late blight, rice sheath blight, and cotton
+  rhizoctonia solani.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Kanuozi
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: N-{[3-chloro-5-(trifluoromethyl)pyridin-2-yl]methyl}-2,3,5,6-tetrafluoro-4-methoxybenzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[[3-chloro-5-(trifluoromethyl)-2-pyridinyl]methyl]-2,3,5,6-tetrafluoro-4-methoxybenzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-{[3-chloro-5-(trifluoromethyl)-2-pyridyl]methyl}-2,3,5,6-tetrafluoro-4-methoxybenzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22702
+- CHEBI:25235
+- CHEBI:37143
+- CHEBI:39172
+- CHEBI:87022
+xrefs:
+- cas:1309859-39-9
+- pesticides:fluopimomide
+- reaxys:30171563
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: COc1c(F)c(F)c(C(=O)NCc2ncc(C(F)(F)F)cc2Cl)c(F)c1F
+  standard_inchi: InChI=1S/C15H8ClF7N2O2/c1-27-13-11(19)9(17)8(10(18)12(13)20)14(26)25-4-7-6(16)2-5(3-24-7)15(21,22)23/h2-3H,4H2,1H3,(H,25,26)
+  standard_inchi_key: DNJKFZQFTZJKDK-UHFFFAOYSA-N
+  molecular_formula: C15H8ClF7N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 416.68
+  monoisotopic_mass: 416.01625
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:145667
+  source_label: fluopimomide
+  minted_identifier: antibioticmech:chebi-6b18dc9d24
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,241 @@
+identifier: CHEBI:9763
+label: trovafloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 1,8-naphthyridine derivative that is 4-oxo-1,4-dihydro-1,8-naphthyridine-3-carboxylic
+  acid bearing additional 2,4-difluorophenyl, fluoro and 6-amino-3-azabicyclo[3.1.0]hex-3-yl
+  substituents at positions 1, 6 and 7 respectively. A broad-spectrum antibiotic that
+  was withdrawn from the market due to risk of liver failure.
+definition_source: ChEBI
+synonyms:
+- synonym_text: trovafloxacine
+  synonym_type: INN
+  source: chebi
+- synonym_text: trovafloxacino
+  synonym_type: INN
+  source: chebi
+- synonym_text: trovafloxacinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 7-[(1R,5S,6s)-6-amino-3-azabicyclo[3.1.0]hex-3-yl]-1-(2,4-difluorophenyl)-6-fluoro-4-oxo-1,4-dihydro-1,8-naphthyridine-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Trovan
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: alatrofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:25384
+- CHEBI:33709
+- CHEBI:38295
+- CHEBI:38582
+- CHEBI:50994
+- CHEBI:50996
+- CHEBI:73537
+- CHEBI:86324
+- CHEBI:87211
+- ARO:0000001
+xrefs:
+- ARO:3000664
+- cas:147059-72-1
+- drugbank:DB00685
+- drugcentral:2777
+- hmdb:HMDB0014823
+- kegg.compound:C07664
+- kegg.drug:D08654
+- reaxys:8172628
+- wikipedia.en:Trovafloxacin
+- chembl:CHEMBL428
+- pubchem.compound:62959
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: '[H][C@@]12CN(c3nc4c(cc3F)c(=O)c(C(=O)O)cn4-c3ccc(F)cc3F)C[C@]1([H])[C@H]2N'
+  standard_inchi: InChI=1S/C20H15F3N4O3/c21-8-1-2-15(13(22)3-8)27-7-12(20(29)30)17(28)9-4-14(23)19(25-18(9)27)26-5-10-11(6-26)16(10)24/h1-4,7,10-11,16H,5-6,24H2,(H,29,30)/t10-,11+,16+
+  standard_inchi_key: WVPSKSLAZQPAKQ-CDMJZVDBSA-N
+  molecular_formula: C20H15F3N4O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 416.359
+  monoisotopic_mass: 416.10963
+source_concepts:
+- source: ARO
+  source_id: ARO:3000664
+  source_label: trovafloxacin
+  minted_identifier: antibioticmech:aro-71ef7d9a7c
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:9763
+  source_label: trovafloxacin
+  minted_identifier: antibioticmech:chebi-8c83ad84a5
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003294
+  label: Escherichia coli gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003294
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003295
+  label: Mycobacterium tuberculosis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003295
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003296
+  label: Staphylococcus aureus gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003296
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003297
+  label: Bartonella bacilliformis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003297
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003298
+  label: Mycobacterium leprae gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003298
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003304
+  label: Mycobacterium leprae gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003304
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003305
+  label: Ureaplasma urealyticum gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003305
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003306
+  label: Morganella morganii gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003306
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003307
+  label: Salmonella serovars gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003307
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003308
+  label: Escherichia coli parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003308
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003309
+  label: Ureaplasma urealyticum parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003309
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003310
+  label: Mycoplasma hominis parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003310
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003311
+  label: Streptococcus pneumoniae parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003311
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003312
+  label: Staphylococcus aureus parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003312
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003315
+  label: Staphylococcus aureus parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003315
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003316
+  label: Escherichia coli parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003316
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003317
+  label: Salmonella serovars parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003317
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003459
+  label: Mycobacterium tuberculosis gyrB with mutation conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003459
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003817
+  label: Acinetobacter baumannii gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003817
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003818
+  label: Acinetobacter baumannii parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003818
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000733
+  target_label: fluoroquinolone sensitive gyrA
+  evidence:
+  - reference: ARO:3000733
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000664 (trovafloxacin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

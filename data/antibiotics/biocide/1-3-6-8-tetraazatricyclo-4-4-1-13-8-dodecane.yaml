@@ -1,0 +1,69 @@
+identifier: CHEBI:140779
+label: 1,3,6,8-tetraazatricyclo[4,4,1,13,8]dodecane
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An adamanzane which contains four one-carbon chains and two two-carbon
+  chains linking the nitrogens thus forming a cage structure.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Dezant
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 1,3,6,8-tetraazatricyclo[4.4.1.13,8]dodecane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,6,3,8-dimethan-tetra-aza-cyclodecane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,6,3,8-dimethano-1,3,6,8-tetraazacyclodecane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,6,3,8-diméthano-tétra-aza-cyclodécane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TATD
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TTD
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[14.22]adz'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tetraazatricyclododecane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140780
+xrefs:
+- cas:51-46-7
+- chemspider:59511
+- patent:RU2273495
+- patent:US4113932
+- patent:WO2008002199
+- reaxys:2765
+activity_roles:
+- CHEBI:48219
+chemical_structure:
+  smiles: C1CN2CN3CCN(CN1C3)C2
+  standard_inchi: InChI=1S/C8H16N4/c1-2-10-7-11-3-4-12(8-10)6-9(1)5-11/h1-8H2
+  standard_inchi_key: YHNNUDUEGSHVGJ-UHFFFAOYSA-N
+  molecular_formula: C8H16N4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 168.244
+  monoisotopic_mass: 168.1375
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:140779
+  source_label: 1,3,6,8-tetraazatricyclo[4,4,1,13,8]dodecane
+  minted_identifier: antibioticmech:chebi-1b1682dff4
+  role_terms:
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

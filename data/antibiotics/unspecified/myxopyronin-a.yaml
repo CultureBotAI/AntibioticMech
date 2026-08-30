@@ -1,0 +1,40 @@
+identifier: CHEBI:51033
+label: myxopyronin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: methyl [(1E,5R)-5-{3-[(2E,4E)-2,5-dimethylocta-2,4-dienoyl]-4-hydroxy-2-oxo-2H-pyran-6-yl}hex-1-en-1-yl]carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:25807
+- CHEBI:75885
+xrefs:
+- beilstein:5313303
+- cas:88192-98-7
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CCC/C(C)=C/C=C(\C)C(=O)c1c(O)cc(C(C)CC/C=C/NC(=O)OC)oc1=O
+  standard_inchi: InChI=1S/C23H31NO6/c1-6-9-15(2)11-12-17(4)21(26)20-18(25)14-19(30-22(20)27)16(3)10-7-8-13-24-23(28)29-5/h8,11-14,16,25H,6-7,9-10H2,1-5H3,(H,24,28)/b13-8+,15-11+,17-12+
+  standard_inchi_key: UQFNCSLGZUJVQP-IDWZVPEXSA-N
+  molecular_formula: C23H31NO6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 417.502
+  monoisotopic_mass: 417.21514
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:51033
+  source_label: myxopyronin A
+  minted_identifier: antibioticmech:chebi-0175fea0d5
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,59 @@
+identifier: CHEBI:233566
+label: NCX-4040
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzoate ester resulting from the formal condensation of the carboxy
+  group of acetylsalicylic acid with the hydroxy group of (4-hydroxyphenyl)methyl
+  nitrate. It is a nitric oxide donor.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-[(nitrooxy)methyl]phenyl 2-(acetyloxy)benzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(acetyloxy)benzoic acid 4-(nitroxymethyl)phenyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NCX 4040
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NCX4040
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NO-aspirin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[4-(nitrooxymethyl)phenyl] 2-acetyloxybenzoate'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140310
+- CHEBI:35715
+- CHEBI:36054
+xrefs:
+- cas:287118-97-2
+- hmdb:HMDB0255675
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(=O)Oc1ccccc1C(=O)Oc1ccc(CO[N+](=O)[O-])cc1
+  standard_inchi: InChI=1S/C16H13NO7/c1-11(18)23-15-5-3-2-4-14(15)16(19)24-13-8-6-12(7-9-13)10-22-17(20)21/h2-9H,10H2,1H3
+  standard_inchi_key: CTHNKWFUDCMLIQ-UHFFFAOYSA-N
+  molecular_formula: C16H13NO7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 331.28
+  monoisotopic_mass: 331.0692
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:233566
+  source_label: NCX-4040
+  minted_identifier: antibioticmech:chebi-40b8ee56e6
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

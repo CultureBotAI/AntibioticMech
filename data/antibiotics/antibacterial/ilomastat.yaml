@@ -1,0 +1,64 @@
+identifier: CHEBI:137236
+label: ilomastat
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An N-acyl-amino acid obtained by formal condensation of the carboxy group
+  of (2R)-2-[2-(hydroxyamino)-2-oxoethyl]-4-methylpentanoic acid with the amino group
+  of N-methyl-L-tryptophanamide. A cell permeable broad-spectrum matrix metalloproteinase
+  (MMP) inhibitor
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R)-N4-hydroxy-N1-[(2S)-3-(1H-indol-3-yl)-1-(methylamino)-1-oxopropan-2-yl]-2-(2-methylpropyl)butanediamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CS 610
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GM 6001
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GM-6001
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GM6001
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: galardin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24650
+- CHEBI:47994
+- CHEBI:51569
+xrefs:
+- cas:142880-36-2
+- kegg.drug:D03793
+- lincs.smallmolecule:LSM-3143
+- pdb-ccd:GM6
+- reaxys:7982373
+- wikipedia.en:Ilomastat
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CNC(=O)[C@H](Cc1cnc2ccccc12)NC(=O)[C@@H](CC(=O)NO)CC(C)C
+  standard_inchi: InChI=1S/C20H28N4O4/c1-12(2)8-13(10-18(25)24-28)19(26)23-17(20(27)21-3)9-14-11-22-16-7-5-4-6-15(14)16/h4-7,11-13,17,22,28H,8-10H2,1-3H3,(H,21,27)(H,23,26)(H,24,25)/t13-,17+/m1/s1
+  standard_inchi_key: NITYDPDXAAFEIT-DYVFJYSZSA-N
+  molecular_formula: C20H28N4O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 388.468
+  monoisotopic_mass: 388.21106
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:137236
+  source_label: ilomastat
+  minted_identifier: antibioticmech:chebi-a8eb58f227
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,104 @@
+identifier: CHEBI:3493
+label: cefoperazone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A semi-synthetic parenteral cephalosporin with a tetrazolyl moiety that
+  confers beta-lactamase resistance.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefoperazono
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefoperazonum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (6R,7R)-7-{[(2R)-2-{[(4-ethyl-2,3-dioxopiperazin-1-yl)carbonyl]amino}-2-(4-hydroxyphenyl)acetyl]amino}-3-{[(1-methyl-1H-tetrazol-5-yl)sulfanyl]methyl}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7β-{[(2R)-2-{[(4-ethyl-2,3-dioxopiperazin-1-yl)carbonyl]amino}-2-(4-hydroxyphenyl)acetyl]amino}-3-[(1-methyl-1H-tetrazol-5-yl)sulfanyl]methyl-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-7-((R)-2-(4-Ethyl-2,3-dioxo-1-piperazinylcarboxamido)-2-(4-hydroxyphenyl)acetamido)-3-((1-methyl-1H-tetrazol-5-yl)thiomethyl)-8-oxo-5-thia-1-azabicyclo(4.2.0)oct-2-en-2-carbonsaeure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-7-[[2-[(4-ethyl-2,3-dioxopiperazine-1-carbonyl)amino]-2-(4-hydroxyphenyl)acetyl]amino]-3-[(1-methyltetrazol-5-yl)sulfanylmethyl]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CPZ
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cefoperazone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cefobid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cefoperazon
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CFP
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: cefoperazine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23066
+- ARO:0000032
+xrefs:
+- ARO:3004003
+- cas:62893-19-0
+- drugbank:DB01329
+- drugcentral:543
+- kegg.compound:C06883
+- kegg.drug:D07645
+- lincs.smallmolecule:LSM-15520
+- reaxys:6050252
+- vsdb:1836
+- wikipedia.en:Cefoperazone
+- chembl:CHEMBL507674
+- pubchem.compound:44187
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(CSc3nnnn3C)=C(C(=O)O)N1C(=O)[C@@]2([H])NC(=O)[C@H](NC(=O)N1CCN(CC)C(=O)C1=O)c1ccc(O)cc1'
+  standard_inchi: InChI=1S/C25H27N9O8S2/c1-3-32-8-9-33(21(39)20(32)38)24(42)27-15(12-4-6-14(35)7-5-12)18(36)26-16-19(37)34-17(23(40)41)13(10-43-22(16)34)11-44-25-28-29-30-31(25)2/h4-7,15-16,22,35H,3,8-11H2,1-2H3,(H,26,36)(H,27,42)(H,40,41)/t15-,16-,22-/m1/s1
+  standard_inchi_key: GCFBRXLSHGKWDP-XCGNWRKASA-N
+  molecular_formula: C25H27N9O8S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 645.68
+  monoisotopic_mass: 645.1424
+source_concepts:
+- source: ARO
+  source_id: ARO:3004003
+  source_label: cefoperazone
+  minted_identifier: antibioticmech:aro-88d96c67b3
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3493
+  source_label: cefoperazone
+  minted_identifier: antibioticmech:chebi-eeffe1207b
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

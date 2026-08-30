@@ -1,0 +1,64 @@
+identifier: CHEBI:75568
+label: 1-monolinolein
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 1-monoglyceride that has octadecadienoyl (linoleoyl) as the acyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,3-dihydroxypropyl (9Z,12Z)-octadeca-9,12-dienoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Linoleoylglycerol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Linoleylglycerol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,3-Dihydroxypropyl linoleate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glycerol 1-monolinolate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alpha-Glyceryl linoleate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: monolinolein
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: octadeca-9,12-dienoic acid-(2,3-dihydroxy-propyl ester)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(9Z,12Z-octadecadienoyl)-glycerol
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134131
+xrefs:
+- cas:2277-28-3
+- reaxys:1802720
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: CCCCC/C=C\C/C=C\CCCCCCCC(=O)OCC(O)CO
+  standard_inchi: InChI=1S/C21H38O4/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-21(24)25-19-20(23)18-22/h6-7,9-10,20,22-23H,2-5,8,11-19H2,1H3/b7-6-,10-9-
+  standard_inchi_key: WECGLUPZRHILCT-HZJYTTRNSA-N
+  molecular_formula: C21H38O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 354.531
+  monoisotopic_mass: 354.27701
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75568
+  source_label: 1-monolinolein
+  minted_identifier: antibioticmech:chebi-f9317e0cac
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

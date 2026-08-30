@@ -1,0 +1,46 @@
+identifier: CHEBI:65863
+label: erylatissin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 7-hydroxyisoflavones in which isoflavone is substituted
+  by hydroxy groups at the 7 and 3' positions, a methoxy group at the 4' position
+  and a prenyl group at position 5'. Isolated from the stem wood of Erythrina latissima,
+  it exhibits antimicrobial and radical scavenging activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7-hydroxy-3-[3-hydroxy-4-methoxy-5-(3-methylbut-2-en-1-yl)phenyl]-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7,3'-dihydroxy-4'-methoxy-5'-(γ,γ-dimethylallyl)isoflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:133959
+- CHEBI:55465
+xrefs:
+- reaxys:10587410
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COc1c(O)cc(-c2coc3cc(O)ccc3c2=O)cc1CC=C(C)C
+  standard_inchi: InChI=1S/C21H20O5/c1-12(2)4-5-13-8-14(9-18(23)21(13)25-3)17-11-26-19-10-15(22)6-7-16(19)20(17)24/h4,6-11,22-23H,5H2,1-3H3
+  standard_inchi_key: CEXYMYPXHMUTTJ-UHFFFAOYSA-N
+  molecular_formula: C21H20O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 352.386
+  monoisotopic_mass: 352.13107
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65863
+  source_label: erylatissin A
+  minted_identifier: antibioticmech:chebi-db2dfa5226
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

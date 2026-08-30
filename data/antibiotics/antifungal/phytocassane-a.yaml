@@ -1,0 +1,55 @@
+identifier: CHEBI:72664
+label: (+)-phytocassane A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A phytocassane that is ent-podocarp-12-ene-3,11-dione carrying additional
+  hydroxy, vinyl and methyl substituents at the 2α, 13 and 14 positions, respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2α-hydroxy-14β-methyl-13-vinyl-5β,8α,9β,10α-podocarp-12-ene-3,11-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2α,5β,8α,9β,10α,14β)-2-hydroxy-14-methyl-13-vinylpodocarp-12-ene-3,11-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3R,4aR,4bR,8S,8aR,10aS)-3-hydroxy-1,1,4a,8-tetramethyl-7-vinyl-1,3,4,4a,4b,8,8a,9,10,10a-decahydrophenanthrene-2,5-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ent-2β-hydroxy-12,15-cassadiene-3,11-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: phytocassane A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139395
+- CHEBI:2468
+- CHEBI:46640
+xrefs:
+- metacyc.compound:CPD-7094
+- reaxys:8509348
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12C(=O)C=C(C=C)[C@@H](C)[C@@]1([H])CC[C@]1([H])C(C)(C)C(=O)[C@H](O)C[C@@]21C'
+  standard_inchi: InChI=1S/C20H28O3/c1-6-12-9-14(21)17-13(11(12)2)7-8-16-19(3,4)18(23)15(22)10-20(16,17)5/h6,9,11,13,15-17,22H,1,7-8,10H2,2-5H3/t11-,13-,15-,16-,17+,20-/m1/s1
+  standard_inchi_key: XVEOIKIXOSKAFL-BJASISCMSA-N
+  molecular_formula: C20H28O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 316.441
+  monoisotopic_mass: 316.20384
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:72664
+  source_label: (+)-phytocassane A
+  minted_identifier: antibioticmech:chebi-5e9cdedec9
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,79 @@
+identifier: CHEBI:35817
+label: roxarsone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organoarsonic acid where the organyl group is 4-hydroxy-3-nitrophenyl.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-Nitro
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Ren-O-Sal
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: roxarson
+  synonym_type: INN
+  source: chebi
+- synonym_text: roxarsonum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (4-hydroxy-3-nitrophenyl)arsonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-nitro-1-hydroxybenzene-4-arsonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-nitro-4-hydroxybenzenearsonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-nitro-4-hydroxyphenylarsonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-hydroxy-3-nitrobenzenearsonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-hydroxy-3-nitrophenylarsonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC-2101
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22638
+- CHEBI:86421
+xrefs:
+- cas:121-19-7
+- gmelin:1221211
+- lincs.smallmolecule:LSM-5383
+- patent:DE224953
+- patent:GB226255
+- reaxys:1976533
+- vsdb:3003
+- wikipedia.en:Roxarsone
+activity_roles:
+- CHEBI:35818
+- CHEBI:36047
+chemical_structure:
+  smiles: O=[N+]([O-])c1cc([As](=O)(O)O)ccc1O
+  standard_inchi: InChI=1S/C6H6AsNO6/c9-6-2-1-4(7(10,11)12)3-5(6)8(13)14/h1-3,9H,(H2,10,11,12)
+  standard_inchi_key: XMVJITFPVVRMHC-UHFFFAOYSA-N
+  molecular_formula: C6H6AsNO6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 263.037
+  monoisotopic_mass: 262.94111
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:35817
+  source_label: roxarsone
+  minted_identifier: antibioticmech:chebi-956840a83d
+  role_terms:
+  - CHEBI:35818
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

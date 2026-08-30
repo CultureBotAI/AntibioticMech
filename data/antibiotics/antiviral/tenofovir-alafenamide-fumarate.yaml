@@ -1,0 +1,64 @@
+identifier: CHEBI:90923
+label: tenofovir alafenamide fumarate
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A fumarate salt prepared from tenofovir alafenamide by reaction of one
+  molecule of fumaric acid for every two molecules of tenofovir alafenamide. A prodrug
+  for tenofovir, it is used in combination therapy for the treatment of HIV-1 infection.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Vemlidy
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: bis{9-[(2R,5S,7E)-2,7,10-trimethyl-5,8-dioxo-5-phenoxy-3,9-dioxa-6-aza-5λ5-phosphaundecan-1-yl]-9H-purin-6-aminium}
+    (2E)-but-2-enedioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bis{propan-2-yl N-[(S)-({[(2R)-1-(6-amino-9H-purin-9-yl)propan-2-yl]oxy}methyl)(phenoxy)phosphoryl]-L-alaninate}
+    (2E)-but-2-enedioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GS-7340-03
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TAF
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tenofovir alafenamide hemifumarate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:50921
+xrefs:
+- cas:1392275-56-7
+- drugbank:DB09299
+- kegg.drug:D10605
+- reaxys:23336042
+- wikipedia.en:Tenofovir_alafenamide
+activity_roles:
+- CHEBI:36044
+- CHEBI:53756
+chemical_structure:
+  smiles: CC(C)OC(=O)[C@H](C)N[P@](=O)(CO[C@H](C)Cn1cnc2c(N)ncnc21)Oc1ccccc1.CC(C)OC(=O)[C@H](C)N[P@](=O)(CO[C@H](C)Cn1cnc2c(N)ncnc21)Oc1ccccc1.O=C(O)/C=C/C(=O)O
+  standard_inchi: InChI=1S/2C21H29N6O5P.C4H4O4/c2*1-14(2)31-21(28)16(4)26-33(29,32-17-8-6-5-7-9-17)13-30-15(3)10-27-12-25-18-19(22)23-11-24-20(18)27;5-3(6)1-2-4(7)8/h2*5-9,11-12,14-16H,10,13H2,1-4H3,(H,26,29)(H2,22,23,24);1-2H,(H,5,6)(H,7,8)/b;;2-1+/t2*15-,16+,33+;/m11./s1
+  standard_inchi_key: SVUJNSGGPUCLQZ-FQQAACOVSA-N
+  molecular_formula: 2C21H29N6O5P.C4H4O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1069.02
+  monoisotopic_mass: 1068.39837
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:90923
+  source_label: tenofovir alafenamide fumarate
+  minted_identifier: antibioticmech:chebi-2fa87a92c0
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

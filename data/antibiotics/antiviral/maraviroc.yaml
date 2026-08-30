@@ -1,0 +1,54 @@
+identifier: CHEBI:63608
+label: maraviroc
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid amide obtained by formal condensation of the carboxy
+  group of 4,4-difluorocyclohexanecarboxylic acid and the primary amino group of (1S)-3-[(3-exo)-3-(3-isopropyl-5-methyl-4H-1,2,4-triazol-4-yl)-8-azabicyclo[3.2.1]oct-8-yl]-1-phenylpropylamine.
+  An antiretroviral drug, it prevents the interaction of HIV-1 gp120 and chemokine
+  receptor 5 (CCR5) necessary for CCR5-tropic HIV-1 to enter cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: maravirocum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4,4-difluoro-N-{(1S)-3-[(3-exo)-3-(3-isopropyl-5-methyl-4H-1,2,4-triazol-4-yl)-8-azabicyclo[3.2.1]oct-8-yl]-1-phenylpropyl}cyclohexanecarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:29347
+- CHEBI:35727
+- CHEBI:37143
+- CHEBI:38295
+xrefs:
+- cas:376348-65-1
+- drugbank:DB04835
+- kegg.drug:D06670
+- reaxys:10131963
+- wikipedia.en:Maraviroc
+activity_roles:
+- CHEBI:36044
+- CHEBI:59886
+chemical_structure:
+  smiles: Cc1nnc(C(C)C)n1[C@@H]1C[C@H]2CC[C@@H](C1)N2CC[C@H](NC(=O)C1CCC(F)(F)CC1)c1ccccc1
+  standard_inchi: InChI=1S/C29H41F2N5O/c1-19(2)27-34-33-20(3)36(27)25-17-23-9-10-24(18-25)35(23)16-13-26(21-7-5-4-6-8-21)32-28(37)22-11-14-29(30,31)15-12-22/h4-8,19,22-26H,9-18H2,1-3H3,(H,32,37)/t23-,24+,25-,26-/m0/s1
+  standard_inchi_key: GSNHKUDZZFZSJB-QYOOZWMWSA-N
+  molecular_formula: C29H41F2N5O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 513.677
+  monoisotopic_mass: 513.32792
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:63608
+  source_label: maraviroc
+  minted_identifier: antibioticmech:chebi-010364b166
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:59886
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

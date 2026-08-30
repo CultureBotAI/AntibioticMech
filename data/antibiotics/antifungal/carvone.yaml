@@ -1,0 +1,90 @@
+identifier: CHEBI:15399
+label: (+)-carvone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carvone having (S) configuration.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4S)-p-mentha-1(6),8-dien-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5S)-2-methyl-5-(prop-1-en-2-yl)cyclohex-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-(4S)-carvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-(S)-Carvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-Carvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5S)-2-methyl-5-(1-methylethenyl)-2-cyclohexen-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-(+)-carvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-(+)-p-mentha-6,8-dien-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-2-methyl-5-(1-methylethenyl)-2-cyclohexen-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-2-methyl-5-(1-methylvinyl)cyclohex-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-5-isopropenyl-2-methylcyclohex-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Carvol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Carvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: d-(+)-carvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: d-carvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-carvone
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38265
+xrefs:
+- beilstein:3588498
+- beilstein:6767373
+- cas:2244-16-8
+- gmelin:637294
+- kegg.compound:C11383
+- knapsack:C00010891
+- reaxys:2042970
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C=C(C)[C@H]1CC=C(C)C(=O)C1
+  standard_inchi: InChI=1S/C10H14O/c1-7(2)9-5-4-8(3)10(11)6-9/h4,9H,1,5-6H2,2-3H3/t9-/m0/s1
+  standard_inchi_key: ULDHMXUKGWMISQ-VIFPVBQESA-N
+  molecular_formula: C10H14O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 150.221
+  monoisotopic_mass: 150.10447
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:15399
+  source_label: (+)-carvone
+  minted_identifier: antibioticmech:chebi-b48b01e65c
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

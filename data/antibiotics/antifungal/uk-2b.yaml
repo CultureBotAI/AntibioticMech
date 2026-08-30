@@ -1,0 +1,49 @@
+identifier: CHEBI:66340
+label: UK-2B
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A lactone which is 9-methyl-1,5-dioxonane-2,6-dione substituted by a benzyl
+  group at position 8, a [(3-hydroxy-4-methoxypyridine-2-yl)carbonyl]amino group at
+  position 3 and a (2-methylbut-2-enoyl)oxy group at position 7. It is isolated from
+  the mycelia cake of Streptomyces sp. 517-02 and exhibits potent antifungal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 8-benzyl-3-[(3-hydroxy-4-methoxypyridine-2-carbonyl)amino]-6-methyl-4,9-dioxo-1,5-dioxonan-7-yl
+    (2E)-2-methylbut-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25000
+- CHEBI:29347
+- CHEBI:35618
+- CHEBI:38182
+- CHEBI:62733
+xrefs:
+- reaxys:7611502
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: C/C=C(\C)C(=O)OC1C(C)OC(=O)C(NC(=O)c2nccc(OC)c2O)COC(=O)C1Cc1ccccc1
+  standard_inchi: InChI=1S/C27H30N2O9/c1-5-15(2)25(32)38-23-16(3)37-27(34)19(29-24(31)21-22(30)20(35-4)11-12-28-21)14-36-26(33)18(23)13-17-9-7-6-8-10-17/h5-12,16,18-19,23,30H,13-14H2,1-4H3,(H,29,31)/b15-5+
+  standard_inchi_key: NRCFYQYMBDTOBT-PJQLUOCWSA-N
+  molecular_formula: C27H30N2O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 526.542
+  monoisotopic_mass: 526.19513
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66340
+  source_label: UK-2B
+  minted_identifier: antibioticmech:chebi-6df4538487
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

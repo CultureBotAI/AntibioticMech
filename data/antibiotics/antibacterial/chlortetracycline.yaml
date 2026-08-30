@@ -1,0 +1,206 @@
+identifier: CHEBI:27644
+label: chlortetracycline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of tetracyclines with formula C22H23ClN2O8 isolated
+  from Streptomyces aureofaciens.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Aueromycin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: chlortetracyclinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: chlortétracycline
+  synonym_type: INN
+  source: chebi
+- synonym_text: clortetraciclina
+  synonym_type: INN
+  source: chebi
+- synonym_text: (4S,4aS,5aS,6S,12aS)-7-chloro-4-(dimethylamino)-3,6,10,12,12a-pentahydroxy-6-methyl-1,11-dioxo-1,4,4a,5,5a,6,11,12a-octahydrotetracene-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-Chlorotetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Aureomycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Eremomycine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:139592
+- CHEBI:26878
+- CHEBI:26895
+- CHEBI:29347
+- CHEBI:50996
+- CHEBI:83403
+- ARO:3000050
+xrefs:
+- ARO:3000528
+- cas:57-62-5
+- drugcentral:624
+- hmdb:HMDB0014401
+- kegg.compound:C06571
+- kegg.drug:D07689
+- lipidmaps:LMPK07000004
+- patent:US2482055
+- pdb-ccd:CTC
+- chembl:CHEMBL404520
+- pubchem.compound:54675777
+activity_roles:
+- CHEBI:35820
+- CHEBI:36047
+structural_class: tetracycline antibiotic
+structural_class_id: ARO:3000050
+chemical_structure:
+  smiles: '[H][C@]12C[C@@]3([H])[C@H](N(C)C)C(O)=C(C(N)=O)C(=O)[C@@]3(O)C(O)=C1C(=O)c1c(O)ccc(Cl)c1[C@@]2(C)O'
+  standard_inchi: InChI=1S/C22H23ClN2O8/c1-21(32)7-6-8-15(25(2)3)17(28)13(20(24)31)19(30)22(8,33)18(29)11(7)16(27)12-10(26)5-4-9(23)14(12)21/h4-5,7-8,15,26,28-29,32-33H,6H2,1-3H3,(H2,24,31)/t7-,8-,15-,21-,22-/m0/s1
+  standard_inchi_key: CYDMQBQPVICBEU-XRNKAMNCSA-N
+  molecular_formula: C22H23ClN2O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 478.885
+  monoisotopic_mass: 478.11429
+source_concepts:
+- source: ARO
+  source_id: ARO:3000528
+  source_label: chlortetracycline
+  minted_identifier: antibioticmech:aro-c48086099a
+  role_terms:
+  - CHEBI:35820
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:27644
+  source_label: chlortetracycline
+  minted_identifier: antibioticmech:chebi-fe26d2566d
+  role_terms:
+  - CHEBI:35820
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000186
+  label: tet(M)
+  evidence:
+  - reference: ARO:3000186
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000190
+  label: tet(O)
+  evidence:
+  - reference: ARO:3000190
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000191
+  label: tet(Q)
+  evidence:
+  - reference: ARO:3000191
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000192
+  label: tet(S)
+  evidence:
+  - reference: ARO:3000192
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000193
+  label: tet(T)
+  evidence:
+  - reference: ARO:3000193
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000194
+  label: tet(W)
+  evidence:
+  - reference: ARO:3000194
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000195
+  label: tetB(P)
+  evidence:
+  - reference: ARO:3000195
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000196
+  label: tet(32)
+  evidence:
+  - reference: ARO:3000196
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000197
+  label: tet(36)
+  evidence:
+  - reference: ARO:3000197
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000205
+  label: tet(X)
+  evidence:
+  - reference: ARO:3000205
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000556
+  label: tet(44)
+  evidence:
+  - reference: ARO:3000556
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003969
+  label: lmrP
+  evidence:
+  - reference: ARO:3003969
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3004126
+  label: Escherichia coli LamB
+  evidence:
+  - reference: ARO:3004126
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004441
+  label: tet(59)
+  evidence:
+  - reference: ARO:3004441
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004442
+  label: tet(W/N/W)
+  evidence:
+  - reference: ARO:3004442
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000528 (chlortetracycline);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

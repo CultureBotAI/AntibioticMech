@@ -1,0 +1,37 @@
+identifier: antibioticmech:aro-de2f58b0cc
+label: arborcandin C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: This compound inhibits 1,3-beta-glucan synthase in fungi (primarily yeasts),
+  which is a major compound of cell wall synthesis.
+definition_source: PMID:11132955
+parent_compounds:
+- ARO:3007496
+xrefs:
+- ARO:3009172
+- CHEBI:217490
+- pubchem.compound:9941831
+structural_class: echinocandin antibiotic
+structural_class_id: ARO:3007496
+chemical_structure:
+  smiles: CCCCCCCCCC(CCC1C(=O)NCC(=O)NCCC(=O)NC(C(=O)NC(C(=O)NC(C(=O)NC(C(=O)NC(C(=O)NC(C(=O)NC(C(=O)N1)C(C)O)C(C)O)CC(C(=O)N)O)C)CC(=O)N)CC(=O)N)CCCCCCCC(CCCCCC)O)O
+  standard_inchi: InChI=1S/C59H105N13O18/c1-6-8-10-12-13-15-20-24-38(76)26-27-40-53(84)64-33-48(81)63-29-28-47(80)66-39(25-21-17-14-16-19-23-37(75)22-18-11-9-7-2)54(85)69-43(32-46(61)79)56(87)70-42(31-45(60)78)55(86)65-34(3)52(83)68-41(30-44(77)51(62)82)57(88)71-50(36(5)74)59(90)72-49(35(4)73)58(89)67-40/h34-44,49-50,73-77H,6-33H2,1-5H3,(H2,60,78)(H2,61,79)(H2,62,82)(H,63,81)(H,64,84)(H,65,86)(H,66,80)(H,67,89)(H,68,83)(H,69,85)(H,70,87)(H,71,88)(H,72,90)
+  standard_inchi_key: AHATVKJRQUTSJV-UHFFFAOYSA-N
+  molecular_formula: C59H105N13O18
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1284.5
+  monoisotopic_mass: 1283.77005355
+source_concepts:
+- source: ARO
+  source_id: ARO:3009172
+  source_label: arborcandin C
+  minted_identifier: antibioticmech:aro-de2f58b0cc
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

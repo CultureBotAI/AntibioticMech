@@ -1,0 +1,88 @@
+identifier: CHEBI:3089
+label: biapenem
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbapenem antibiotic in which the azetidine and pyrroline rings carry
+  1-hydroxymethyl and pyrazolo[1,2-a][1,2,4]triazolium-6-ylthio substituents respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6S)-2-(6,7-dihydro-5H-pyrazolo[1,2-a][1,2,4]triazol-4-ium-6-ylsulfanyl)-6-[(1R)-1-hydroxyethyl]-1β-methyl-2,3-didehydro-1-carbapenam-3-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4R,5S,6S)-3-(6,7-dihydro-5H-pyrazolo[1,2-a][1,2,4]triazol-4-ium-6-ylthio)-6-[(1R)-1-hydroxyethyl]-4-methyl-7-oxo-1-azabicyclo[3.2.0]hept-2-ene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BIPM
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Biapenem
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Biapenern
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Bipenem
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Omegacin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:16385
+- CHEBI:46633
+- CHEBI:50752
+- ARO:0000020
+xrefs:
+- ARO:3007083
+- beilstein:5835582
+- beilstein:7394875
+- cas:120410-24-4
+- drugcentral:365
+- kegg.compound:C11268
+- kegg.drug:D01057
+- chembl:CHEMBL285347
+- pubchem.compound:71339
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
+structural_class: carbapenem
+structural_class_id: ARO:0000020
+chemical_structure:
+  smiles: '[H][C@]12[C@@H](C)C(SC3Cn4cnc[n+]4C3)=C(C(=O)[O-])N1C(=O)[C@]2([H])[C@@H](C)O'
+  standard_inchi: InChI=1S/C15H18N4O4S/c1-7-11-10(8(2)20)14(21)19(11)12(15(22)23)13(7)24-9-3-17-5-16-6-18(17)4-9/h5-11,20H,3-4H2,1-2H3/t7-,8-,10-,11-/m1/s1
+  standard_inchi_key: MRMBZHPJVKCOMA-YJFSRANCSA-N
+  molecular_formula: C15H18N4O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 350.4
+  monoisotopic_mass: 350.10488
+source_concepts:
+- source: ARO
+  source_id: ARO:3007083
+  source_label: biapenem
+  minted_identifier: antibioticmech:aro-0ecd1033c9
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3089
+  source_label: biapenem
+  minted_identifier: antibioticmech:chebi-d935c29bd7
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

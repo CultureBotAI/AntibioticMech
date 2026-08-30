@@ -1,0 +1,44 @@
+identifier: CHEBI:141338
+label: sporothriolide
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A furofuran that is (3aR,6aR)-hexahydrofuro[3,4-b]furan substituted by
+  an oxo group at positions 2 and 4, methylene group at position 3 and by an hexyl
+  group at position 6. It is a metabolite isolated from several species of fungi.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3aS,6R,6aR)-6-hexyl-3-methylenetetrahydrofuro[3,4-b]furan-2,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37581
+- CHEBI:47790
+xrefs:
+- cas:154799-92-5
+- knapsack:C00016931
+- reaxys:6808451
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@]12C(=C)C(=O)O[C@@]1([H])[C@@]([H])(CCCCCC)OC2=O'
+  standard_inchi: InChI=1S/C13H18O4/c1-3-4-5-6-7-9-11-10(13(15)16-9)8(2)12(14)17-11/h9-11H,2-7H2,1H3/t9-,10+,11+/m1/s1
+  standard_inchi_key: AENZSPQGLJVLND-VWYCJHECSA-N
+  molecular_formula: C13H18O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 238.283
+  monoisotopic_mass: 238.12051
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141338
+  source_label: sporothriolide
+  minted_identifier: antibioticmech:chebi-8f78b2a4cf
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

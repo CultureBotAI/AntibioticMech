@@ -1,0 +1,63 @@
+identifier: CHEBI:31889
+label: nadifloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: 9-fluoro-8-(4-hydroxypiperidin-1-yl)-5-methyl-1-oxo-6,7-dihydro-1H,5H-pyrido[3,2,1-ij]quinoline-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acuatim
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NDFX
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nadifloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: OPC-7251
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38921
+- CHEBI:48585
+- CHEBI:48590
+- CHEBI:86324
+xrefs:
+- beilstein:4212500
+- cas:124858-35-1
+- drugcentral:1864
+- kegg.drug:D01147
+- lincs.smallmolecule:LSM-5007
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: CC1CCc2c(N3CCC(O)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23
+  standard_inchi: InChI=1S/C19H21FN2O4/c1-10-2-3-12-16-13(18(24)14(19(25)26)9-22(10)16)8-15(20)17(12)21-6-4-11(23)5-7-21/h8-11,23H,2-7H2,1H3,(H,25,26)
+  standard_inchi_key: JYJTVFIEFKZWCJ-UHFFFAOYSA-N
+  molecular_formula: C19H21FN2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 360.385
+  monoisotopic_mass: 360.14854
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31889
+  source_label: nadifloxacin
+  minted_identifier: antibioticmech:chebi-fc3535c693
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,73 @@
+identifier: CHEBI:85202
+label: peramivir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of guanidines that is used (as its trihydrate) for
+  the treatment of acute uncomplicated influenza in patients 18 years and older who
+  have been symptomatic for no more than two days.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,2S,3R,4R)-3-[(1S)-1-acetamido-2-ethylbutyl]-4-carbamimidamido-2-hydroxycyclopentane-1-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(1'-acetylamino-2'-ethyl)butyl-4-((aminoimino)methyl)amino-2-hydroxycyclopentane-1-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BCX 1812
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BCX-1812
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BCX1812
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RWJ 270201
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RWJ-270201
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RWJ270201
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22160
+- CHEBI:23495
+- CHEBI:24436
+- CHEBI:35969
+xrefs:
+- cas:330600-85-6
+- drugcentral:4823
+- pdb-ccd:BCZ
+- reaxys:9011170
+- wikipedia.en:Peramivir
+activity_roles:
+- CHEBI:36044
+- CHEBI:52425
+chemical_structure:
+  smiles: '[H][C@@]1([C@@H](NC(C)=O)C(CC)CC)[C@H](O)[C@@H](C(=O)O)C[C@H]1NC(=N)N'
+  standard_inchi: InChI=1S/C15H28N4O4/c1-4-8(5-2)12(18-7(3)20)11-10(19-15(16)17)6-9(13(11)21)14(22)23/h8-13,21H,4-6H2,1-3H3,(H,18,20)(H,22,23)(H4,16,17,19)/t9-,10+,11+,12-,13+/m0/s1
+  standard_inchi_key: XRQDFNLINLXZLB-CKIKVBCHSA-N
+  molecular_formula: C15H28N4O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 328.413
+  monoisotopic_mass: 328.21106
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85202
+  source_label: peramivir
+  minted_identifier: antibioticmech:chebi-3f3272c43c
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:52425
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

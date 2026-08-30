@@ -1,0 +1,93 @@
+identifier: CHEBI:9620
+label: tolnaftate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monothiocarbamic ester that is the methyl(3-tolyl)carbamothioate ester
+  of 2-naphthol. A synthetic anti-fungal agent used to treat jock itch, athlete's
+  foot and ringworm.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Separin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Tinactin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: tolnaftato
+  synonym_type: INN
+  source: chebi
+- synonym_text: tolnaftatum
+  synonym_type: INN
+  source: chebi
+- synonym_text: O-2-naphthyl methyl(3-methylphenyl)carbamothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Naphthyl N-methyl-N-(3-tolyl)thionocarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methyl (3-methylphenyl)carbamothioic acid O-2-naphthalenyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-methyl-N-(3-methylphenyl)-1-(naphthalen-2-yloxy)methanethioamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-2-Naphthyl m,N-dimethylthiocarbanilate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tolnaphthate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: m,N-Dimethylthiocarbanilic acid O-2-naphthyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38128
+- ARO:3000003
+xrefs:
+- ARO:3009174
+- cas:2398-96-1
+- drugbank:DB00525
+- drugcentral:3617
+- hmdb:HMDB0005005
+- kegg.drug:D00381
+- lincs.smallmolecule:LSM-5554
+- patent:US2010035939
+- patent:WO2010037089
+- reaxys:2752620
+- wikipedia.en:Tolnaftate
+- chembl:CHEMBL83668
+- pubchem.compound:5510
+activity_roles:
+- CHEBI:86327
+structural_class: antibiotic without defined classification
+structural_class_id: ARO:3000003
+chemical_structure:
+  smiles: Cc1cccc(N(C)C(=S)Oc2ccc3ccccc3c2)c1
+  standard_inchi: InChI=1S/C19H17NOS/c1-14-6-5-9-17(12-14)20(2)19(22)21-18-11-10-15-7-3-4-8-16(15)13-18/h3-13H,1-2H3
+  standard_inchi_key: FUSNMLFNXJSCDI-UHFFFAOYSA-N
+  molecular_formula: C19H17NOS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 307.418
+  monoisotopic_mass: 307.10309
+source_concepts:
+- source: ARO
+  source_id: ARO:3009174
+  source_label: tolnaftate
+  minted_identifier: antibioticmech:aro-49498c70e7
+  role_terms:
+  - CHEBI:86327
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:9620
+  source_label: tolnaftate
+  minted_identifier: antibioticmech:chebi-f071b8f586
+  role_terms:
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

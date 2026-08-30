@@ -1,0 +1,75 @@
+identifier: CHEBI:38729
+label: naled
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An dialkyl phosphate resulting from the formal condensation of the acidic
+  hydroxy group of dimethyl hydrogen phosphate with the alcoholic hydroxy group of
+  1,2-dibromo-2,2-dichloroethanol. An organophosphate insecticide, it is no longer
+  approved for use within the European Union.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Bromex
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Dibrom
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Ortho-Dibrom
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 1,2-dibromo-2,2-dichloroethyl dimethyl phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O,O-dimethyl O-2,2-dichloro-1,2-dibromoethyl phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-(1,2-dibromo-2,2-dichloroethyl)-O,O-dimethyl phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dimethyl-1,2-dibromo-2,2-dichloroethyl phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: phosphoric acid, 1,2-dibromo-2,2-dichloroethyl dimethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:16648
+- CHEBI:25708
+- CHEBI:36683
+- CHEBI:37141
+xrefs:
+- beilstein:2049930
+- cas:300-76-5
+- kegg.compound:C18749
+- patent:GB855157
+- patent:US2971882
+- pesticides:naled
+- ppdb:480
+- wikipedia.en:Naled
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: COP(=O)(OC)OC(Br)C(Cl)(Cl)Br
+  standard_inchi: InChI=1S/C4H7Br2Cl2O4P/c1-10-13(9,11-2)12-3(5)4(6,7)8/h3H,1-2H3
+  standard_inchi_key: BUYMVQAILCEWRR-UHFFFAOYSA-N
+  molecular_formula: C4H7Br2Cl2O4P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 380.784
+  monoisotopic_mass: 377.78257
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:38729
+  source_label: naled
+  minted_identifier: antibioticmech:chebi-f89e83e4a9
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

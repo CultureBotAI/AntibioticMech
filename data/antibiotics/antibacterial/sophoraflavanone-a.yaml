@@ -1,0 +1,47 @@
+identifier: CHEBI:70023
+label: sophoraflavanone A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A trihydroxyflavanone that is (S)-naringenin substituted by a geranyl
+  group at position 8. Isolated from Macaranga bicolor, it exhibits antibacterial
+  and antineoplastic activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-8-[(2E)-3,7-dimethylocta-2,6-dien-1-yl]-5,7-dihydroxy-2-(4-hydroxyphenyl)-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 8-geranylnaringenin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140331
+- CHEBI:140377
+- CHEBI:38739
+xrefs:
+- lipidmaps:LMPK12140286
+- reaxys:5641290
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)=CCC/C(C)=C/Cc1c(O)cc(O)c2c1O[C@H](c1ccc(O)cc1)CC2=O
+  standard_inchi: InChI=1S/C25H28O5/c1-15(2)5-4-6-16(3)7-12-19-20(27)13-21(28)24-22(29)14-23(30-25(19)24)17-8-10-18(26)11-9-17/h5,7-11,13,23,26-28H,4,6,12,14H2,1-3H3/b16-7+/t23-/m0/s1
+  standard_inchi_key: GOAUTULGLLBZSR-YLLUOSTHSA-N
+  molecular_formula: C25H28O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 408.494
+  monoisotopic_mass: 408.19367
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70023
+  source_label: sophoraflavanone A
+  minted_identifier: antibioticmech:chebi-d93965e4cf
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

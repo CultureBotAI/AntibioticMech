@@ -1,0 +1,35 @@
+identifier: antibioticmech:aro-6e963f402b
+label: dihydromocimycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Dihydromocimycin is produced by Streptomyces ramocissimus CBS190.69.
+definition_source: PMID:2272911
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3001248
+- pubchem.compound:54679334
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: CC[C@H](C(=O)NC/C=C/C=C(\C)/[C@H]([C@@H](C)[C@H]1[C@H]([C@H]([C@H](O1)/C=C/C=C/C=C(\C)/C(=C\2/C(=O)C=CNC2=O)/O)O)O)OC)[C@@]3([C@@H]([C@@H](C([C@@H](O3)/C=C/C=C/C)(C)C)O)O)O
+  standard_inchi: InChI=1S/C43H60N2O12/c1-9-11-13-21-31-42(6,7)38(50)39(51)43(54,57-31)28(10-2)40(52)44-23-17-16-19-26(4)36(55-8)27(5)37-35(49)34(48)30(56-37)20-15-12-14-18-25(3)33(47)32-29(46)22-24-45-41(32)53/h9,11-22,24,27-28,30-31,34-39,47-51,54H,10,23H2,1-8H3,(H,44,52)(H,45,53)/b11-9+,14-12+,17-16+,20-15+,21-13+,25-18+,26-19+,33-32+/t27-,28-,30-,31+,34+,35+,36-,37+,38+,39-,43-/m1/s1
+  standard_inchi_key: LWXUPCAADQWXRE-UPMFUDSQSA-N
+  molecular_formula: C43H60N2O12
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 796.9
+  monoisotopic_mass: 796.41462535
+source_concepts:
+- source: ARO
+  source_id: ARO:3001248
+  source_label: dihydromocimycin
+  minted_identifier: antibioticmech:aro-6e963f402b
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

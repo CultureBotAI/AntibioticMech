@@ -1,0 +1,91 @@
+identifier: CHEBI:90284
+label: pirazofurin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A C-glycosyl compound that is 4-hydroxy-1H-pyrazole-5-carboxamide in which
+  the hydrogen at position 3 has been replaced by a β-D-ribofuranosyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: pirazofurina
+  synonym_type: INN
+  source: chebi
+- synonym_text: pirazofurine
+  synonym_type: INN
+  source: chebi
+- synonym_text: pirazofurinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (1S)-1,4-anhydro-1-(5-carbamoyl-4-hydroxy-1H-pyrazol-3-yl)-D-ribitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(β-D-ribofuranosyl)-4-hydroxypyrazole-5-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-β-D-ribofuranosyl-4-hydroxypyrazole-5-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-hydroxy-3-(β-D-ribofuranosyl)-1H-pyrazole-5-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-hydroxy-3-β-D-ribofuranosyl-1H-pyrazole-5-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-hydroxy-3-β-D-ribofuranosylpyrazole-5-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '47599'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic A 23813
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PF
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PZF
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: compound 47599
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pyrazofurin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pyrazomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-pyrazomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:20857
+- CHEBI:26410
+xrefs:
+- cas:30868-30-5
+- kegg.drug:D05658
+- reaxys:827736
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: NC(=O)c1nnc([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c1O
+  standard_inchi: InChI=1S/C9H13N3O6/c10-9(17)4-6(15)3(11-12-4)8-7(16)5(14)2(1-13)18-8/h2,5,7-8,13-16H,1H2,(H2,10,17)(H,11,12)/t2-,5-,7-,8+/m1/s1
+  standard_inchi_key: XESARGFCSKSFID-FLLFQEBCSA-N
+  molecular_formula: C9H13N3O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 259.218
+  monoisotopic_mass: 259.08044
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:90284
+  source_label: pirazofurin
+  minted_identifier: antibioticmech:chebi-049b7252b6
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

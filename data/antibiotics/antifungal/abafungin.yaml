@@ -1,0 +1,63 @@
+identifier: CHEBI:76005
+label: abafungin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of guanidines that is tetrahydropyrimidin-2(1H)-imine
+  in which the hydrogen of the imino group is replaced by a thiazol-2-yl group which
+  in turn is substituted by a 2-(2,4-dimethylphenoxy)phenyl group at position 4. It
+  has been used for the topical treatment of fungal nail infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Abasol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: abafungina
+  synonym_type: INN
+  source: chebi
+- synonym_text: abafungine
+  synonym_type: INN
+  source: chebi
+- synonym_text: abafunginum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-{4-[2-(2,4-dimethylphenoxy)phenyl]-1,3-thiazol-2-yl}tetrahydropyrimidin-2(1H)-imine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24436
+- CHEBI:35618
+- CHEBI:38418
+xrefs:
+- cas:129639-79-8
+- patent:CN101372486
+- patent:CN101396363
+- patent:CN101845044
+- patent:CN1969874
+- patent:WO2009043307
+- reaxys:11337934
+- wikipedia.en:Abafungin
+activity_roles:
+- CHEBI:86327
+chemical_structure:
+  smiles: Cc1ccc(Oc2ccccc2-c2csc(N=C3NCCCN3)n2)c(C)c1
+  standard_inchi: InChI=1S/C21H22N4OS/c1-14-8-9-18(15(2)12-14)26-19-7-4-3-6-16(19)17-13-27-21(24-17)25-20-22-10-5-11-23-20/h3-4,6-9,12-13H,5,10-11H2,1-2H3,(H2,22,23,24,25)
+  standard_inchi_key: TYBHXIFFPVFXQW-UHFFFAOYSA-N
+  molecular_formula: C21H22N4OS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 378.501
+  monoisotopic_mass: 378.15143
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:76005
+  source_label: abafungin
+  minted_identifier: antibioticmech:chebi-571ec8f7d9
+  role_terms:
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,47 @@
+identifier: CHEBI:17695
+label: casbene
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diterpene comprising bicyclo[12.1.0]pentadeca-2,6,10-triene having three
+  methyl substituents located at the 3-, 7- and 11-positions as well as gem-dimethyl
+  groups at the 15-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E,6E,10E)-3,7,11,15,15-pentamethylbicyclo[12.1.0]pentadeca-2,6,10-triene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Casbene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35190
+xrefs:
+- kegg.compound:C01414
+- knapsack:C00000864
+- lipidmaps:LMPR0104290001
+- reaxys:5269179
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C/C1=C\CC/C(C)=C/C2C(CC/C(C)=C/CC1)C2(C)C
+  standard_inchi: InChI=1S/C20H32/c1-15-8-6-10-16(2)12-13-18-19(20(18,4)5)14-17(3)11-7-9-15/h9-10,14,18-19H,6-8,11-13H2,1-5H3/b15-9+,16-10+,17-14+
+  standard_inchi_key: ZJMVJDFTNPZVMB-QOCMWZQCSA-N
+  molecular_formula: C20H32
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 272.476
+  monoisotopic_mass: 272.2504
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17695
+  source_label: casbene
+  minted_identifier: antibioticmech:chebi-a6968dac75
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

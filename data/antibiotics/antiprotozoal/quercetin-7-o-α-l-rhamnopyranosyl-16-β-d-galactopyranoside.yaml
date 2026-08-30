@@ -1,0 +1,40 @@
+identifier: CHEBI:70147
+label: quercetin-7-O-[α-L-rhamnopyranosyl(1→6)-β-D-galactopyranoside]
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quercetin O-glycoside that consists of quercetin substituted by a α-L-rhamnopyranosyl(1→6)-β-D-galactopyranosyl
+  residue at position 7 via a glycosidic linkage. Isolated from Grevillea, it exhibits
+  antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(3,4-dihydroxyphenyl)-3,5-dihydroxy-4-oxo-4H-chromen-7-yl 6-O-(6-deoxy-α-L-mannopyranosyl)-β-D-galactopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:63353
+- CHEBI:76424
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: C[C@@H]1O[C@@H](OC[C@H]2O[C@@H](Oc3cc(O)c4c(=O)c(O)c(-c5ccc(O)c(O)c5)oc4c3)[C@H](O)[C@@H](O)[C@H]2O)[C@H](O)[C@H](O)[C@H]1O
+  standard_inchi: InChI=1S/C27H30O16/c1-8-17(31)20(34)23(37)26(40-8)39-7-15-18(32)21(35)24(38)27(43-15)41-10-5-13(30)16-14(6-10)42-25(22(36)19(16)33)9-2-3-11(28)12(29)4-9/h2-6,8,15,17-18,20-21,23-24,26-32,34-38H,7H2,1H3/t8-,15+,17-,18-,20+,21-,23+,24+,26+,27+/m0/s1
+  standard_inchi_key: IVTMALDHFAHOGL-GJRUVZIXSA-N
+  molecular_formula: C27H30O16
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 610.521
+  monoisotopic_mass: 610.15338
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70147
+  source_label: quercetin-7-O-[α-L-rhamnopyranosyl(1→6)-β-D-galactopyranoside]
+  minted_identifier: antibioticmech:chebi-683da64bab
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

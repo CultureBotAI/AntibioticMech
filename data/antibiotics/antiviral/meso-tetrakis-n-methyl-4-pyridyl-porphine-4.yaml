@@ -1,0 +1,84 @@
+identifier: CHEBI:37447
+label: meso-tetrakis(N-methyl-4-pyridyl)porphine(4+)
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic cation that is porphyrin bearing four 1-methylpyridinium-4-yl
+  groups at the 5-, 10-, 15- and 20-positions.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4,4',4'',4'''-porphyrin-5,10,15,20-tetrayltetrakis(1-methylpyridinium)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,10,15,20-tetrakis(1-methylpyridinium-4-yl)porphyrin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4,4',4'',4'''-(21H,23H)-Porphine-5,10,15,20-tetrayl)tetrakis(1-methylpyridinium)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,10,15,20-tetrakis(N-methylpyridinium-4-yl)-21H,23H-porphine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Mesotetra(4-N-methylpyridyl)porphine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TMPYP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TMPyP4
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetra(4-N-methylpyridyl)porphine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetrakis(4-N-methylpyridyl)porphine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetrakis(N-methyl-4-pyridino)porphine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: meso-Tetra(4-N-methylpyridyl)porphine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: meso-Tetrakis(2-N-methylpyridyl)porphine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: meso-Tetrakis(N-methyl-4-pyridinium)phenyl porphyrin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: meso-tetrakis(N-methyl-4-pyridyl)porphine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tetra(4-N-methylpyridyl)porphine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25697
+xrefs:
+- cas:38673-65-3
+- gmelin:87183
+- reaxys:3586693
+activity_roles:
+- CHEBI:59897
+chemical_structure:
+  smiles: C[n+]1ccc(-c2c3ccc(n3)c(-c3cc[n+](C)cc3)c3nc(c(-c4cc[n+](C)cc4)c4ccc(n4)c(-c4cc[n+](C)cc4)c4nc2C=C4)C=C3)cc1
+  standard_inchi: InChI=1S/C44H37N8/c1-49-21-13-29(14-22-49)41-33-5-7-35(45-33)42(30-15-23-50(2)24-16-30)37-9-11-39(47-37)44(32-19-27-52(4)28-20-32)40-12-10-38(48-40)43(36-8-6-34(41)46-36)31-17-25-51(3)26-18-31/h5-28H,1-4H3,(H,45,46,47,48)/q+3/p+1/b41-33-,41-34-,42-35-,42-37-,43-36-,43-38-,44-39-,44-40-
+  standard_inchi_key: ABCGFHPGHXSVKI-LWQDQPMZSA-O
+  molecular_formula: C44H38N8
+  structure_source: ChEBI
+  charge: 4
+  average_mass: 678.844
+  monoisotopic_mass: 678.31975
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:37447
+  source_label: meso-tetrakis(N-methyl-4-pyridyl)porphine(4+)
+  minted_identifier: antibioticmech:chebi-b0cfcac099
+  role_terms:
+  - CHEBI:59897
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

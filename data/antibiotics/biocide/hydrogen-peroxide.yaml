@@ -1,0 +1,87 @@
+identifier: CHEBI:16240
+label: hydrogen peroxide
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An inorganic peroxide consisting of two hydroxy groups joined by a covalent
+  oxygen-oxygen single bond.
+definition_source: ChEBI
+synonyms:
+- synonym_text: bis(hydridooxygen)(O—O)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dihydrogen peroxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dihydrogen(peroxide)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dioxidane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: H2O2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HOOH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HYDROGEN PEROXIDE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hydrogen peroxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Oxydol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[OH(OH)]'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dihydrogen dioxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: perhydrol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24837
+- CHEBI:26523
+xrefs:
+- cas:7722-84-1
+- drugcentral:3281
+- gmelin:509
+- hmdb:HMDB0003125
+- kegg.compound:C00027
+- kegg.drug:D00008
+- metacyc.compound:HYDROGEN-PEROXIDE
+- molbase:932
+- pdb-ccd:PEO
+- ppdb:387
+- reaxys:3587191
+- wikipedia.en:Hydrogen_peroxide
+activity_roles:
+- CHEBI:33281
+- CHEBI:48219
+chemical_structure:
+  smiles: '[H]OO[H]'
+  standard_inchi: InChI=1S/H2O2/c1-2/h1-2H
+  standard_inchi_key: MHAJPDPJQMAIIY-UHFFFAOYSA-N
+  molecular_formula: H2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 34.014
+  monoisotopic_mass: 34.00548
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:16240
+  source_label: hydrogen peroxide
+  minted_identifier: antibioticmech:chebi-b4cb37a12a
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

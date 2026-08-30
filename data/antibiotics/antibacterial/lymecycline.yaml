@@ -1,0 +1,79 @@
+identifier: CHEBI:59040
+label: lymecycline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracycline-based broad-spectrum antibiotic. It is approximately 5000
+  times more soluble than tetracycline base and is unique amongst tetracyclines in
+  that it is absorbed by the "active transport" process across the intestinal wall.
+definition_source: ChEBI
+synonyms:
+- synonym_text: limeciclina
+  synonym_type: INN
+  source: chebi
+- synonym_text: lymecyclinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N6-[({[(4S,4aS,5aS,6S,12aS)-4-(dimethylamino)-3,6,10,12,12a-pentahydroxy-6-methyl-1,11-dioxo-1,4,4a,5,5a,6,11,12a-octahydrotetracen-2-yl]carbonyl}amino)methyl]-L-lysine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-N-(5-Amino-5-carboxypentylaminomethyl)-4-dimethylamino-1,4,4a,5,5a,6,11,12a-octahydro-3,6,10,12,12a-pentahydroxy-6-methyl-1,11-dioxonaphthacene-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-Lysinomethyltetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N2-(((+)-5-Amino-5-carboxypentylamino)methyl)tetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N6-((4-(Dimethylamino)-1,4,4a,5,5a,6,11,12a-octahydro-3,6,10,12,12a-pentahydroxy-6-methyl-1,11-dioxo-2-naphthacenecarboxamido)methyl)lysine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetracycline-L-methylene lysine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetracycline-L-methylenelysine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:26895
+xrefs:
+- cas:992-21-2
+- drugbank:DB00256
+- drugcentral:1619
+- kegg.drug:D06884
+- reaxys:15428429
+- wikipedia.en:Lymecycline
+activity_roles:
+- CHEBI:33281
+- CHEBI:35820
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H][C@]12C[C@@]3([H])[C@H](N(C)C)C(O)=C(C(=O)NCNCCCC[C@H](N)C(=O)O)C(=O)[C@@]3(O)C(O)=C1C(=O)c1c(O)cccc1[C@@]2(C)O'
+  standard_inchi: InChI=1S/C29H38N4O10/c1-28(42)13-7-6-9-17(34)18(13)22(35)19-14(28)11-15-21(33(2)3)23(36)20(25(38)29(15,43)24(19)37)26(39)32-12-31-10-5-4-8-16(30)27(40)41/h6-7,9,14-16,21,31,34,36-37,42-43H,4-5,8,10-12,30H2,1-3H3,(H,32,39)(H,40,41)/t14-,15-,16-,21-,28+,29-/m0/s1
+  standard_inchi_key: AHEVKYYGXVEWNO-UEPZRUIBSA-N
+  molecular_formula: C29H38N4O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 602.641
+  monoisotopic_mass: 602.25879
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59040
+  source_label: lymecycline
+  minted_identifier: antibioticmech:chebi-e541d8a7b8
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35820
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

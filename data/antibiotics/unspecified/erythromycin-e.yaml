@@ -1,0 +1,45 @@
+identifier: CHEBI:28239
+label: erythromycin E
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (2S,4'R,4aR,5'S,6'S,7R,8S,9R,10R,12R,14R,15R,16S,16aS)-7-ethyl-5',8,9,14-tetrahydroxy-4'-methoxy-4',6',8,10,12,14,16-heptamethyl-15-[3,4,6-trideoxy-3-(dimethylamino)-β-D-xylo-hexopyranosyloxy]hexadecahydro-5H,11H-spiro[1,3-dioxino[5,4-c]oxacyclotetradecine-2,2'-pyran]-5,11-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1'',16-epoxyerythromycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Erythromycin E
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48923
+- CHEBI:71989
+xrefs:
+- cas:41451-91-6
+- kegg.compound:C06634
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@H]1OC(=O)[C@@H]2CO[C@@]3(C[C@@](C)(OC)[C@@H](O)[C@H](C)O3)O[C@H]2[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@@H](C)C(=O)[C@H](C)[C@@H](O)[C@]1(C)O
+  standard_inchi: InChI=1S/C37H65NO14/c1-13-25-36(9,45)29(41)20(4)26(39)18(2)15-34(7,44)31(50-33-27(40)24(38(10)11)14-19(3)48-33)21(5)28-23(32(43)49-25)16-47-37(52-28)17-35(8,46-12)30(42)22(6)51-37/h18-25,27-31,33,40-42,44-45H,13-17H2,1-12H3/t18-,19-,20+,21+,22+,23-,24+,25-,27-,28+,29-,30+,31-,33+,34-,35-,36-,37-/m1/s1
+  standard_inchi_key: PRUSTPADOGZAML-LMXGZOGMSA-N
+  molecular_formula: C37H65NO14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 747.92
+  monoisotopic_mass: 747.44051
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28239
+  source_label: erythromycin E
+  minted_identifier: antibioticmech:chebi-8a74bb32ac
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

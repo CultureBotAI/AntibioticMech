@@ -1,0 +1,140 @@
+identifier: CHEBI:17939
+label: puromycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aminonucleoside antibiotic, derived from the Streptomyces alboniger
+  bacterium, that causes premature chain termination during translation taking place
+  in the ribosome.
+definition_source: ChEBI
+synonyms:
+- synonym_text: puromicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: puromycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: puromycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 3'-deoxy-N,N-dimethyl-3'-(O-methyl-L-tyrosinamido)adenosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-3'-((2-Amino-3-(4-methoxyphenyl)-1-oxopropyl)amino)-3'-deoxy-N,N-dimethyladenosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3'-(L-alpha-Amino-p-methoxyhydrocinnamamido)-3'-deoxy-N,N-dimethyladenosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3'-[[(2S)-2-amino-3-(4-methoxyphenyl)-1-oxopropyl]amino]-3'-deoxy-N,N-diemthyladenosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-{3-deoxy-3-[(O-methyl-L-tyrosyl)amino]-β-D-xylofuranosyl}-N,N-dimethyl-9H-purin-6-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Achromycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Puromycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Puromycin dihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Puromycin hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Stylomycin dihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:26404
+- ARO:3000034
+xrefs:
+- ARO:0000047
+- cas:53-79-2
+- drugbank:DB08437
+- kegg.compound:C01610
+- kegg.drug:D05653
+- knapsack:C00001507
+- lincs.smallmolecule:LSM-2788
+- reaxys:70234
+- wikipedia.en:Puromycin
+- chembl:CHEMBL469912
+- pubchem.compound:439530
+activity_roles:
+- CHEBI:25605
+- CHEBI:33281
+structural_class: nucleoside antibiotic
+structural_class_id: ARO:3000034
+chemical_structure:
+  smiles: COc1ccc(C[C@H](N)C(=O)N[C@H]2[C@@H](O)[C@H](n3cnc4c(N(C)C)ncnc43)O[C@@H]2CO)cc1
+  standard_inchi: InChI=1S/C22H29N7O5/c1-28(2)19-17-20(25-10-24-19)29(11-26-17)22-18(31)16(15(9-30)34-22)27-21(32)14(23)8-12-4-6-13(33-3)7-5-12/h4-7,10-11,14-16,18,22,30-31H,8-9,23H2,1-3H3,(H,27,32)/t14-,15+,16+,18+,22+/m0/s1
+  standard_inchi_key: RXWNCPJZOCPEPQ-NVWDDTSBSA-N
+  molecular_formula: C22H29N7O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 471.518
+  monoisotopic_mass: 471.22302
+source_concepts:
+- source: ARO
+  source_id: ARO:0000047
+  source_label: puromycin
+  minted_identifier: antibioticmech:aro-332ca24429
+  role_terms:
+  - CHEBI:25605
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:17939
+  source_label: puromycin
+  minted_identifier: antibioticmech:chebi-70c879b2c4
+  role_terms:
+  - CHEBI:25605
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3001214
+  label: mdtM
+  evidence:
+  - reference: ARO:3001214
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000047 (puromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003007
+  label: bmr
+  evidence:
+  - reference: ARO:3003007
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000047 (puromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003027
+  label: lmrAB Operon
+  evidence:
+  - reference: ARO:3003027
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000047 (puromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004101
+  label: MdtNOP
+  evidence:
+  - reference: ARO:3004101
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000047 (puromycin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000756
+  target_label: 30S ribosomal subunit P-site
+  evidence:
+  - reference: ARO:3000756
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000047 (puromycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

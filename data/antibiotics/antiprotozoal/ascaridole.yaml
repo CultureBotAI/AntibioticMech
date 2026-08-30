@@ -1,0 +1,65 @@
+identifier: CHEBI:2866
+label: ascaridole
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A p-menthane monoterpenoid that is p-menth-2-ene with a peroxy group across
+  position 1 to 4.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-methyl-1-(propan-2-yl)-2,3-dioxabicyclo[2.2.2]oct-5-ene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,4-epidioxy-p-menth-2-ene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,4-peroxido-p-menthene-2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,4-peroxy-p-menth-2-ene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-isopropyl-4-methyl-2,3-dioxabicyclo[2.2.2]oct-5-ene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-methyl-4-(1-methylethyl)-2,3-dioxabicyclo[2.2.2]oct-5-ene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ascaridole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25186
+- CHEBI:25702
+- CHEBI:27171
+xrefs:
+- cas:512-85-6
+- hmdb:HMDB0035766
+- kegg.compound:C09836
+- knapsack:C00003027
+- reaxys:121382
+- wikipedia.en:Ascaridole
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: CC(C)C12C=CC(C)(CC1)OO2
+  standard_inchi: InChI=1S/C10H16O2/c1-8(2)10-6-4-9(3,5-7-10)11-12-10/h4,6,8H,5,7H2,1-3H3
+  standard_inchi_key: MGYMHQJELJYRQS-UHFFFAOYSA-N
+  molecular_formula: C10H16O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 168.236
+  monoisotopic_mass: 168.11503
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2866
+  source_label: ascaridole
+  minted_identifier: antibioticmech:chebi-54e616707c
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

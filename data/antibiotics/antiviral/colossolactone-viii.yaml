@@ -1,0 +1,51 @@
+identifier: CHEBI:65651
+label: colossolactone VIII
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracyclic triterpenoid that is A,B-dihomo-19-nor-4-oxalanosta-1,8,19,24-tetraen-26,22-olide
+  substituted by an acetoxy group at position 15, a hydroxy group at position 23 and
+  an oxo group at position 3 (the 22S, 23R stereoisomer). It is isolated from the
+  fruiting bodies of the Vietnamese mushroom Ganoderma colossum and displays inhibitory
+  activity towards the enzyme HIV protease.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,3R,3aR,11aR,13bR)-3-{(1S)-1-[(2S,3R)-3-hydroxy-5-methyl-6-oxo-3,6-dihydro-2H-pyran-2-yl]ethyl}-3a,11,11,13b-tetramethyl-9-oxo-1,2,3,3a,4,5,9,11,11a,12,13,13b-dodecahydroindeno[5',4':4,5]cyclohepta[1,2-c]oxepin-1-yl
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (22S, 23R)-A,B-dihomo-19-nor-15-β-acetoxy-23-hydroxy-4-oxa-3-oxolanosta-1,8,19,24-tetraen-26,22-olide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18946
+- CHEBI:26893
+- CHEBI:35681
+- CHEBI:47622
+- CHEBI:50239
+xrefs:
+- reaxys:18836345
+activity_roles:
+- CHEBI:35660
+chemical_structure:
+  smiles: '[H][C@@]1([C@@H](C)[C@@]2([H])C[C@@H](OC(C)=O)[C@@]3(C)C4=C(C=C5C=CC(=O)OC(C)(C)[C@]5([H])CC4)CC[C@]23C)OC(=O)C(C)=C[C@H]1O'
+  standard_inchi: InChI=1S/C32H42O7/c1-17-14-25(34)28(38-29(17)36)18(2)24-16-26(37-19(3)33)32(7)23-10-9-22-20(8-11-27(35)39-30(22,4)5)15-21(23)12-13-31(24,32)6/h8,11,14-15,18,22,24-26,28,34H,9-10,12-13,16H2,1-7H3/t18-,22+,24+,25+,26+,28-,31+,32+/m0/s1
+  standard_inchi_key: XNFBOJFRJTXMJL-OZXCYFAESA-N
+  molecular_formula: C32H42O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 538.681
+  monoisotopic_mass: 538.29305
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65651
+  source_label: colossolactone VIII
+  minted_identifier: antibioticmech:chebi-b7be2c1131
+  role_terms:
+  - CHEBI:35660
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

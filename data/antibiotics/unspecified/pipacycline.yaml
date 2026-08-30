@@ -1,0 +1,59 @@
+identifier: CHEBI:75262
+label: pipacycline
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Tetracycline in which a hydrogen attached to the amide nitrogen is substituted
+  by a 4-[(2-hydroxyethyl)piperazin-1-yl]methyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: pipaciclina
+  synonym_type: INN
+  source: chebi
+- synonym_text: pipacyclinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (4S,4aS,5aS,6S,12aS)-4-(dimethylamino)-3,6,10,12,12a-pentahydroxy-N-{[4-(2-hydroxyethyl)piperazin-1-yl]methyl}-6-methyl-1,11-dioxo-1,4,4a,5,5a,6,11,12a-octahydrotetracene-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-((4-(2-Hydroxyethyl)-1-piperazinyl)methyl)tetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(4-(beta-Hydroxyethyl)diethylenediamino-1-methyl)tetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: mepicycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:26895
+- CHEBI:46845
+xrefs:
+- cas:1110-80-1
+- patent:EA012203
+- reaxys:1614440
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12C[C@@]3([H])[C@H](N(C)C)C(O)=C(C(=O)NCN4CCN(CCO)CC4)C(=O)[C@@]3(O)C(O)=C1C(=O)c1c(O)cccc1[C@@]2(C)O'
+  standard_inchi: InChI=1S/C29H38N4O9/c1-28(41)15-5-4-6-18(35)19(15)23(36)20-16(28)13-17-22(31(2)3)24(37)21(26(39)29(17,42)25(20)38)27(40)30-14-33-9-7-32(8-10-33)11-12-34/h4-6,16-17,22,34-35,37-38,41-42H,7-14H2,1-3H3,(H,30,40)/t16-,17-,22-,28+,29-/m0/s1
+  standard_inchi_key: XATZHCXBMKRRDO-REHNUXHNSA-N
+  molecular_formula: C29H38N4O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 586.642
+  monoisotopic_mass: 586.26388
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75262
+  source_label: pipacycline
+  minted_identifier: antibioticmech:chebi-c75210c70b
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

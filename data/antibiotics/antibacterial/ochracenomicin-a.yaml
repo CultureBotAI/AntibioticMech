@@ -1,0 +1,52 @@
+identifier: CHEBI:66807
+label: ochracenomicin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An angucycline antibiotic that is 3,4,4a,12b-tetrahydrotetraphene-1,7,12(2H)-trione
+  substituted by hydroxy groups at positions 4a, 8 and 12b and a methyl group at position
+  3. It is isolated from the culture broth of Amycolatopsis sp.MJ950-89F4 and exhibits
+  a broad spectrum of antibacterial potential.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4a,8,12b-trihydroxy-3-methyl-3,4,4a,12b-tetrahydrotetraphene-1,7,12(2H)-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4a,8,12b-trihydroxy-3-methyl-3,4-dihydro-2H-benzo[a]anthracene-1,7,12-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:25830
+- CHEBI:33853
+- CHEBI:70737
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: CC1CC(=O)C2(O)C3=C(C=CC2(O)C1)C(=O)c1c(O)cccc1C3=O
+  standard_inchi: InChI=1S/C19H16O6/c1-9-7-13(21)19(25)15-11(5-6-18(19,24)8-9)16(22)14-10(17(15)23)3-2-4-12(14)20/h2-6,9,20,24-25H,7-8H2,1H3
+  standard_inchi_key: HRKDTQUJICJRIH-UHFFFAOYSA-N
+  molecular_formula: C19H16O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 340.331
+  monoisotopic_mass: 340.09469
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66807
+  source_label: ochracenomicin A
+  minted_identifier: antibioticmech:chebi-e19f2b9d1e
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

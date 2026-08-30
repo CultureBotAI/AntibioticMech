@@ -1,0 +1,102 @@
+identifier: CHEBI:3638
+label: chloroquine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aminoquinoline that is quinoline which is substituted at position 4
+  by a [5-(diethylamino)pentan-2-yl]amino group at at position 7 by chlorine. It is
+  used for the treatment of malaria, hepatic amoebiasis, lupus erythematosus, light-sensitive
+  skin eruptions, and rheumatoid arthritis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Aralen
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Artrichin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Bemaphate
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Capquin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Nivaquine B
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Resoquine
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Reumachlor
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Sanoquin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: chloroquinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: cloroquina
+  synonym_type: INN
+  source: chebi
+- synonym_text: N4-(7-chloroquinolin-4-yl)-N1,N1-diethylpentane-1,4-diamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chlorochin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chloroquine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N4-(7-chloro-4-quinolinyl)-N1,N1-diethyl-1,4-pentanediamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36683
+- CHEBI:36709
+- CHEBI:50995
+- CHEBI:50996
+xrefs:
+- cas:54-05-7
+- drugbank:DB00608
+- drugcentral:607
+- gmelin:781126
+- hmdb:HMDB0014746
+- kegg.compound:C07625
+- kegg.drug:D02366
+- lincs.smallmolecule:LSM-1901
+- patent:DE683692
+- patent:US2233970
+- pdb-ccd:CLQ
+- reaxys:482809
+- wikipedia.en:Chloroquine
+activity_roles:
+- CHEBI:149553
+- CHEBI:38068
+chemical_structure:
+  smiles: CCN(CC)CCCC(C)Nc1ccnc2cc(Cl)ccc12
+  standard_inchi: InChI=1S/C18H26ClN3/c1-4-22(5-2)12-6-7-14(3)21-17-10-11-20-18-13-15(19)8-9-16(17)18/h8-11,13-14H,4-7,12H2,1-3H3,(H,20,21)
+  standard_inchi_key: WHTVZRBIWZFKQO-UHFFFAOYSA-N
+  molecular_formula: C18H26ClN3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 319.88
+  monoisotopic_mass: 319.18153
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3638
+  source_label: chloroquine
+  minted_identifier: antibioticmech:chebi-bdf17e66d8
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

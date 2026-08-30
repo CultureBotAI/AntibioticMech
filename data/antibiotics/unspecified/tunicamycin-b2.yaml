@@ -1,0 +1,50 @@
+identifier: CHEBI:64250
+label: tunicamycin B2
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A nucleoside that is one of the homologues in the mixture that is tunicamycin,
+  characterised by a 13-methyltetradec-2-enoyl fatty acyl substituent on the amino
+  group of the tunicamine moiety.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-N-[(2S,3R,4R,5R,6R)-2-{[(2R,3R,4R,5S,6R)-3-acetamido-4,5-dihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl]oxy}-6-{(2R)-2-[(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]-2-hydroxyethyl}-4,5-dihydroxytetrahydro-2H-pyran-3-yl]-13-methyltetradec-2-enamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5'R)-5'-[2-acetamido-2-deoxy-α-D-glucopyranosyl-(1↔1)-2,6-dideoxy-2-(13-methyltetradec-2-enamido)-β-D-galactopyranos-6-yl]uridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tunicamycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tunicamycin V
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33838
+xrefs:
+- reaxys:5711197
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]1([C@]([H])(O)C[C@H]2O[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3NC(C)=O)[C@H](NC(=O)/C=C/CCCCCCCCCC(C)C)[C@@H](O)[C@H]2O)O[C@@H](n2ccc(=O)nc2=O)[C@H](O)[C@@H]1O'
+  standard_inchi: InChI=1S/C38H62N4O16/c1-19(2)13-11-9-7-5-4-6-8-10-12-14-24(46)40-27-31(51)28(48)22(55-37(27)58-36-26(39-20(3)44)30(50)29(49)23(18-43)56-36)17-21(45)34-32(52)33(53)35(57-34)42-16-15-25(47)41-38(42)54/h12,14-16,19,21-23,26-37,43,45,48-53H,4-11,13,17-18H2,1-3H3,(H,39,44)(H,40,46)(H,41,47,54)/b14-12+/t21-,22-,23-,26-,27-,28+,29-,30-,31-,32+,33-,34-,35-,36-,37+/m1/s1
+  standard_inchi_key: MEYZYGMYMLNUHJ-DIRMKAHISA-N
+  molecular_formula: C38H62N4O16
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 830.926
+  monoisotopic_mass: 830.41608
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:64250
+  source_label: tunicamycin B2
+  minted_identifier: antibioticmech:chebi-17b775ffb2
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

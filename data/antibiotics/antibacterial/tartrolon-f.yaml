@@ -1,0 +1,38 @@
+identifier: antibioticmech:aro-4b163fa344
+label: tartrolon F
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Tartrolons are a group of boron-containing (excluding tartrolon A) macrolide
+  antibiotics discovered in 1994 from the culture broth of the myxobacterium Sorangium
+  cellulosum.
+definition_source: PMID:7532644
+parent_compounds:
+- ARO:0000000
+xrefs:
+- ARO:3007790
+- CHEBI:212069
+- pubchem.compound:138320073
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: C[C@@H]1CC[C@H]2CC(C[C@H](CC/C=C/C=C\CC[C@@H](OC(=O)C([C@]3([C@@H](CC[C@H](O3)CC(=O)C[C@H](CC/C=C/C=C\CC[C@@H](OC(=O)C([C@@]1(O2)O)O)C)O)C)O)O)C)O)O
+  standard_inchi: InChI=1S/C44H70O14/c1-29-21-23-37-27-35(47)25-33(45)19-15-11-8-6-10-14-18-32(4)56-42(52)40(50)44(54)30(2)22-24-38(58-44)28-36(48)26-34(46)20-16-12-7-5-9-13-17-31(3)55-41(51)39(49)43(29,53)57-37/h5-12,29-35,37-40,45-47,49-50,53-54H,13-28H2,1-4H3/b9-5-,10-6-,11-8+,12-7+/t29-,30-,31+,32+,33+,34+,35?,37+,38+,39?,40?,43-,44-/m1/s1
+  standard_inchi_key: QZOYYXRCNOZKAN-NSHSNTAOSA-N
+  molecular_formula: C44H70O14
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 823.0
+  monoisotopic_mass: 822.4765569
+source_concepts:
+- source: ARO
+  source_id: ARO:3007790
+  source_label: tartrolon F
+  minted_identifier: antibioticmech:aro-4b163fa344
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

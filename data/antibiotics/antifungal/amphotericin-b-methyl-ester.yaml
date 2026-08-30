@@ -1,0 +1,51 @@
+identifier: CHEBI:277842
+label: amphotericin B methyl ester
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The methyl ester of amphotericin B.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (1R,3S,5R,6R,9R,11R,15S,16R,17R,18S,19E,21E,23E,25E,27E,29E,31E,33R,35S,36R,37S)-33-[(3-amino-3,6-dideoxy-β-D-mannopyranosyl)oxy]-1,3,5,6,9,11,17,37-octahydroxy-15,16,18-trimethyl-13-oxo-14,39-dioxabicyclo[33.3.1]nonatriaconta-19,21,23,25,27,29,31-heptaene-36-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AME
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Amphotericin B Me Ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methylamphotericin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25106
+- CHEBI:25248
+- CHEBI:63367
+xrefs:
+- cas:36148-89-7
+- reaxys:6264916
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@]12C[C@@H](O[C@@H]3O[C@H](C)[C@@H](O)[C@H](N)[C@@H]3O)/C=C/C=C/C=C/C=C/C=C/C=C/C=C/[C@H](C)[C@@H](O)[C@@H](C)[C@H](C)OC(=O)C[C@H](O)C[C@H](O)CC[C@@H](O)[C@H](O)C[C@H](O)C[C@](O)(C[C@H](O)[C@H]1C(=O)OC)O2'
+  standard_inchi: InChI=1S/C48H75NO17/c1-28-18-16-14-12-10-8-6-7-9-11-13-15-17-19-35(65-47-45(59)42(49)44(58)31(4)64-47)25-39-41(46(60)62-5)38(55)27-48(61,66-39)26-34(52)23-37(54)36(53)21-20-32(50)22-33(51)24-40(56)63-30(3)29(2)43(28)57/h6-19,28-39,41-45,47,50-55,57-59,61H,20-27,49H2,1-5H3/b7-6+,10-8+,11-9+,14-12+,15-13+,18-16+,19-17+/t28-,29-,30-,31+,32+,33+,34-,35-,36+,37+,38-,39-,41+,42-,43+,44+,45-,47-,48+/m0/s1
+  standard_inchi_key: UAZIZEMIKKIBCA-TYVGYKFWSA-N
+  molecular_formula: C48H75NO17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 938.118
+  monoisotopic_mass: 937.5035
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:277842
+  source_label: amphotericin B methyl ester
+  minted_identifier: antibioticmech:chebi-71045a6f14
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

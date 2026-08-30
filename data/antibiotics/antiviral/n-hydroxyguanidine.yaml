@@ -1,0 +1,55 @@
+identifier: CHEBI:43089
+label: N-hydroxyguanidine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of guanidines that is guanidine in which one of
+  the hydrogens attached to the nitrogen at position 1 is substituted by a hydroxy
+  group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-hydroxyguanidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N''-hydroxyguanidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-hydroxy-guanidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hydroxyguanidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24436
+- CHEBI:64708
+xrefs:
+- cas:13115-21-4
+- drugbank:DB03770
+- kegg.compound:C22626
+- pdb-ccd:HGU
+- reaxys:1741719
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: N=C(N)NO
+  standard_inchi: InChI=1S/CH5N3O/c2-1(3)4-5/h5H,(H4,2,3,4)
+  standard_inchi_key: WFBHRSAKANVBKH-UHFFFAOYSA-N
+  molecular_formula: CH5N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 75.071
+  monoisotopic_mass: 75.04326
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:43089
+  source_label: N-hydroxyguanidine
+  minted_identifier: antibioticmech:chebi-c59faad6bd
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

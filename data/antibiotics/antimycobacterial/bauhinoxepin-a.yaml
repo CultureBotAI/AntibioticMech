@@ -1,0 +1,44 @@
+identifier: CHEBI:65468
+label: bauhinoxepin A
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterotetracyclic compound that is 3H-chromeno[6,5-b][1]benzoxepine
+  substituted by geminal methyl groups at position 3, a single methyl group at position
+  5 and hydroxy groups at positions 6 and 11. It is isolated from the roots of Bauhinia
+  saccocalyx and exhibits antimycobacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,3,5-trimethyl-3H-chromeno[6,5-b][1]benzoxepine-6,11-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:37407
+- CHEBI:38163
+xrefs:
+- reaxys:9794360
+activity_roles:
+- CHEBI:64912
+chemical_structure:
+  smiles: Cc1c(O)c2c(c3c1OC(C)(C)C=C3)C=Cc1c(O)cccc1O2
+  standard_inchi: InChI=1S/C20H18O4/c1-11-17(22)19-12(13-9-10-20(2,3)24-18(11)13)7-8-14-15(21)5-4-6-16(14)23-19/h4-10,21-22H,1-3H3
+  standard_inchi_key: BQFBLGBPUARBGM-UHFFFAOYSA-N
+  molecular_formula: C20H18O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 322.36
+  monoisotopic_mass: 322.12051
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65468
+  source_label: bauhinoxepin A
+  minted_identifier: antibioticmech:chebi-7279b4761b
+  role_terms:
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

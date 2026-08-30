@@ -1,0 +1,83 @@
+identifier: CHEBI:46577
+label: dextrofloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The (R)-enantiomer of ofloxacin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R)-9-fluoro-3-methyl-10-(4-methylpiperazin-1-yl)-7-oxo-2,3-dihydro-7H-[1,4]oxazino[2,3,4-ij]quinoline-6-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-ofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-(+)-ofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-ofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-levofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-ofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DR 3354
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DR-3354
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DR3354
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: R-(+)-ofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: R-ofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dextrofloxacine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:194135
+- CHEBI:86324
+- CHEBI:87211
+xrefs:
+- cas:100986-86-5
+- drugbank:DB03034
+- pdb-ccd:XED
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: C[C@@H]1COc2c(N3CCN(C)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23
+  standard_inchi: InChI=1S/C18H20FN3O4/c1-10-9-26-17-14-11(16(23)12(18(24)25)8-22(10)14)7-13(19)15(17)21-5-3-20(2)4-6-21/h7-8,10H,3-6,9H2,1-2H3,(H,24,25)/t10-/m1/s1
+  standard_inchi_key: GSDSWSVVBLHKDQ-SNVBAGLBSA-N
+  molecular_formula: C18H20FN3O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 361.373
+  monoisotopic_mass: 361.14378
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:46577
+  source_label: dextrofloxacin
+  minted_identifier: antibioticmech:chebi-82f364a39d
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

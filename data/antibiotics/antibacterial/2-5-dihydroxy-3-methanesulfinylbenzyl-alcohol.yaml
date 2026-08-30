@@ -1,0 +1,44 @@
+identifier: CHEBI:65779
+label: 2,5-dihydroxy-3-methanesulfinylbenzyl alcohol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzyl alcohol with hydroxy substituents at positions 2 and 5 and a
+  methanesulfinyl group at position 3. It is a fungal secondary metabolite from Ampelomyces
+  sp. SC0307 and has antibacterial activity against Escherichia coli, Pseudomonas
+  aeruginosa and Proteus vulgaris.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(hydroxymethyl)-6-(methylsulfinyl)benzene-1,4-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22063
+- CHEBI:22743
+- CHEBI:24646
+xrefs:
+- reaxys:18590032
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CS(=O)c1cc(O)cc(CO)c1O
+  standard_inchi: InChI=1S/C8H10O4S/c1-13(12)7-3-6(10)2-5(4-9)8(7)11/h2-3,9-11H,4H2,1H3
+  standard_inchi_key: NADRVFUNXRGAII-UHFFFAOYSA-N
+  molecular_formula: C8H10O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 202.231
+  monoisotopic_mass: 202.02998
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65779
+  source_label: 2,5-dihydroxy-3-methanesulfinylbenzyl alcohol
+  minted_identifier: antibioticmech:chebi-a105a20e17
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

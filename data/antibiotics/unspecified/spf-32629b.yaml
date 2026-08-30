@@ -1,0 +1,44 @@
+identifier: CHEBI:66518
+label: SPF-32629B
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxylic ester obtained by the formal condensation of the benzylic
+  hydroxy group of 4-hydroxy-6-[hydroxy(phenyl)methyl]-2-oxo-1,2-dihydropyridine-3-carboxylic
+  acid with 3-methylbutanoic acid. It is isolated from the culture broth of Penicillium
+  sp. SPF-32629 and acts as an inhibitor of the enzyme chymase (EC 3.4.21.39).
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-hydroxy-6-{[(3-methylbutanoyl)oxy](phenyl)methyl}-2-oxo-1,2-dihydropyridine-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:33308
+- CHEBI:38182
+- CHEBI:38183
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(C)CC(=O)OC(c1ccccc1)c1cc(O)c(C(=O)O)c(=O)n1
+  standard_inchi: InChI=1S/C18H19NO6/c1-10(2)8-14(21)25-16(11-6-4-3-5-7-11)12-9-13(20)15(18(23)24)17(22)19-12/h3-7,9-10,16H,8H2,1-2H3,(H,23,24)(H2,19,20,22)
+  standard_inchi_key: RQSUJBPFSUWQSA-UHFFFAOYSA-N
+  molecular_formula: C18H19NO6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 345.351
+  monoisotopic_mass: 345.12124
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66518
+  source_label: SPF-32629B
+  minted_identifier: antibioticmech:chebi-69d761fa8d
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

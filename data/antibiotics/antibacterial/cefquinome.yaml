@@ -1,0 +1,38 @@
+identifier: antibioticmech:aro-ac9a833c42
+label: cefquinome
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Cefquinome is a fourth-generation cephalosporin with pharmacological and
+  antibacterial properties valuable in the treatment of coliform mastitis and other
+  infections.
+definition_source: PMID:37280708
+parent_compounds:
+- ARO:0000032
+xrefs:
+- ARO:3007571
+- chembl:CHEMBL1631107
+- pubchem.compound:5464355
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: CO/N=C(/C1=CSC(=N1)N)\C(=O)N[C@H]2[C@@H]3N(C2=O)C(=C(CS3)C[N+]4=CC=CC5=C4CCCC5)C(=O)[O-]
+  standard_inchi: InChI=1S/C23H24N6O5S2/c1-34-27-16(14-11-36-23(24)25-14)19(30)26-17-20(31)29-18(22(32)33)13(10-35-21(17)29)9-28-8-4-6-12-5-2-3-7-15(12)28/h4,6,8,11,17,21H,2-3,5,7,9-10H2,1H3,(H3-,24,25,26,30,32,33)/b27-16-/t17-,21-/m1/s1
+  standard_inchi_key: YWKJNRNSJKEFMK-PQFQYKRASA-N
+  molecular_formula: C23H24N6O5S2
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 528.6
+  monoisotopic_mass: 528.12496023
+source_concepts:
+- source: ARO
+  source_id: ARO:3007571
+  source_label: cefquinome
+  minted_identifier: antibioticmech:aro-ac9a833c42
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

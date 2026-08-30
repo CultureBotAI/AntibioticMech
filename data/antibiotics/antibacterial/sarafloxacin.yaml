@@ -1,0 +1,38 @@
+identifier: antibioticmech:aro-26cedd2720
+label: sarafloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Sarafloxacin is used for treatment and control of bacterial infections
+  in poultry caused by Escherichia coli and Salmonella spp. It was removed from the
+  market by manufacturers in 2001.
+definition_source: PMID:37250042
+parent_compounds:
+- ARO:0000001
+xrefs:
+- ARO:3007611
+- chembl:CHEMBL37858
+- pubchem.compound:56208
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: C1CN(CCN1)C2=C(C=C3C(=C2)N(C=C(C3=O)C(=O)O)C4=CC=C(C=C4)F)F
+  standard_inchi: InChI=1S/C20H17F2N3O3/c21-12-1-3-13(4-2-12)25-11-15(20(27)28)19(26)14-9-16(22)18(10-17(14)25)24-7-5-23-6-8-24/h1-4,9-11,23H,5-8H2,(H,27,28)
+  standard_inchi_key: XBHBWNFJWIASRO-UHFFFAOYSA-N
+  molecular_formula: C20H17F2N3O3
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 385.4
+  monoisotopic_mass: 385.12379774
+source_concepts:
+- source: ARO
+  source_id: ARO:3007611
+  source_label: sarafloxacin
+  minted_identifier: antibioticmech:aro-26cedd2720
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

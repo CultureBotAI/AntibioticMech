@@ -1,0 +1,68 @@
+identifier: CHEBI:31900
+label: neticonazole hydrochloride
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrochloride resulting from the formal reaction of equimolar amounts
+  of neticonazole and hydrogen chloride. An inhibitor of P450-dependent C-14α-demethylation
+  of lanosterol (preventing conversion to ergosterol and inhibiting cell wall synthesis
+  in fungi), it is used in Japan as an antifungal drug for the treatment of superficial
+  skin infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-{(E)-2-(methylthio)-1-[2-(pentyloxy)phenyl]vinyl}-1H-imidazol-3-ium
+    chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-{(E)-2-(methylthio)-1-[2-(pentyloxy)phenyl]vinyl}-1H-imidazole hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-{(E)-2-(methylsulfanyl)-1-[2-(pentyloxy)phenyl]vinyl}-1H-imidazol-3-ium
+    chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-{(E)-2-(methylsulfanyl)-1-[2-(pentyloxy)phenyl]vinyl}-1H-imidazole
+    hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+- CHEBI:87069
+- CHEBI:87071
+xrefs:
+- cas:130773-02-3
+- drugcentral:1902
+- kegg.drug:D01620
+- reaxys:5366849
+activity_roles:
+- CHEBI:35718
+- CHEBI:77884
+- CHEBI:86327
+chemical_structure:
+  smiles: CCCCCOc1ccccc1/C(=C\SC)n1ccnc1.Cl
+  standard_inchi: InChI=1S/C17H22N2OS.ClH/c1-3-4-7-12-20-17-9-6-5-8-15(17)16(13-21-2)19-11-10-18-14-19;/h5-6,8-11,13-14H,3-4,7,12H2,1-2H3;1H/b16-13+;
+  standard_inchi_key: HAHMABKERDVYCH-ZUQRMPMESA-N
+  molecular_formula: C17H22N2OS.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 338.904
+  monoisotopic_mass: 338.12196
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31900
+  source_label: neticonazole hydrochloride
+  minted_identifier: antibioticmech:chebi-cec3071225
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:77884
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

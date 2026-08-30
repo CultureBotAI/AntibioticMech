@@ -1,0 +1,46 @@
+identifier: CHEBI:65638
+label: CJ-01
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sesquiterpenoid that is 4,4a,7,8,8a,9-hexahydronaphtho[2,3-b]furan substituted
+  by methyl groups at positions 3, 5 and 8a and an oxo group at position 9 (the 4aS,8aS
+  stereoisomer). It is isolated from the methanol extract of the whole plant of Chloranthus
+  japonicus and acts as a chitin synthase inhibitor. CJ-01 also shows antifungal activity
+  against various human and phytophathogenic fungi.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4aS,8aS)-3,5,8a-trimethyl-4a,7,8,8a-tetrahydronaphtho[2,3-b]furan-9(4H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26658
+- CHEBI:26979
+- CHEBI:36130
+- CHEBI:37407
+- CHEBI:51689
+- CHEBI:76224
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12Cc3c(C)coc3C(=O)[C@@]1(C)CCC=C2C'
+  standard_inchi: InChI=1S/C15H18O2/c1-9-5-4-6-15(3)12(9)7-11-10(2)8-17-13(11)14(15)16/h5,8,12H,4,6-7H2,1-3H3/t12-,15-/m0/s1
+  standard_inchi_key: PJUXIGJXLKHONL-WFASDCNBSA-N
+  molecular_formula: C15H18O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 230.307
+  monoisotopic_mass: 230.13068
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65638
+  source_label: CJ-01
+  minted_identifier: antibioticmech:chebi-be9268c0a2
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

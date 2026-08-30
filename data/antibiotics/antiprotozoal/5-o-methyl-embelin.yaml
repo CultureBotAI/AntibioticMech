@@ -1,0 +1,49 @@
+identifier: CHEBI:65842
+label: 5-O-methyl embelin
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of monohydroxy-1,4-benzoquinones that is embelin
+  in which the hydroxy group at position 5 is replaced by a methoxy group. Isolated
+  from Lysimachia punctata and Embelia ribes, it exhibits antileishmanial activity
+  as well as inhibitory activity towards hepatitis C protease.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-hydroxy-5-methoxy-3-undecylcyclohexa-2,5-diene-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-hydroxy-5-methoxy-3-undecyl-1,4-benzoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:47985
+- CHEBI:67273
+xrefs:
+- cas:56005-10-8
+- kegg.compound:C10373
+- knapsack:C00002842
+- reaxys:2469036
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: CCCCCCCCCCCC1=C(O)C(=O)C=C(OC)C1=O
+  standard_inchi: InChI=1S/C18H28O4/c1-3-4-5-6-7-8-9-10-11-12-14-17(20)15(19)13-16(22-2)18(14)21/h13,20H,3-12H2,1-2H3
+  standard_inchi_key: KHBJLRRAMCJZLZ-UHFFFAOYSA-N
+  molecular_formula: C18H28O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 308.418
+  monoisotopic_mass: 308.19876
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65842
+  source_label: 5-O-methyl embelin
+  minted_identifier: antibioticmech:chebi-d4efa0e58a
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

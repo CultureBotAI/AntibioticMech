@@ -1,0 +1,72 @@
+identifier: CHEBI:231944
+label: bifemetstrobin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A biphenyl that is 1,1'-biphenyl substituted by [(1Z)-1,3-dimethoxy-3-oxoprop-1-en-2-yl]oxy
+  and methyl groups at positions 3 and 4, respectively. It is a fungicide from Sumitomo
+  Chemical Co., Ltd.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (2Z)-3-methoxy-2-[(4-methyl[biphenyl]-3-yl)oxy]prop-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S 2326
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-2326
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S2326
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bifémétstrobine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (2Z)-3-methoxy-2-[(4-methyl[1,1'-biphenyl]-3-yl)oxy]-2-propenoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (2Z)-3-methoxy-2-[(4-methyl[1,1'-biphenyl]-3-yl)oxy]prop-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (2Z)-3-methoxy-2-[(4-methylbiphenyl-3-yl)oxy]acrylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl (2Z)-3-methoxy-2-[(4-methylbiphenyl-3-yl)oxy]prop-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22888
+- CHEBI:25248
+- CHEBI:27024
+- CHEBI:35618
+- CHEBI:47985
+- CHEBI:51702
+xrefs:
+- cas:2454319-63-0
+- pesticides:bifemetstrobin
+- reaxys:38272783
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: CO/C=C(\Oc1cc(-c2ccccc2)ccc1C)C(=O)OC
+  standard_inchi: InChI=1S/C18H18O4/c1-13-9-10-15(14-7-5-4-6-8-14)11-16(13)22-17(12-20-2)18(19)21-3/h4-12H,1-3H3/b17-12-
+  standard_inchi_key: IWSICNFCWDNIOY-ATVHPVEESA-N
+  molecular_formula: C18H18O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 298.338
+  monoisotopic_mass: 298.12051
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:231944
+  source_label: bifemetstrobin
+  minted_identifier: antibioticmech:chebi-d7263c50ac
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

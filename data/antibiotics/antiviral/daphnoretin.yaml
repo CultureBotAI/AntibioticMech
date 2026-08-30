@@ -1,0 +1,48 @@
+identifier: CHEBI:4324
+label: daphnoretin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of coumarins that is coumarin substituted by a hydroxy
+  group at position 7, a methoxy group at position 6 and a (2-oxo-2H-chromen-7-yl)oxy
+  group at position 3.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7-hydroxy-6-methoxy-3-[(2-oxo-2H-chromen-7-yl)oxy]-2H-chromen-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Daphnoretin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:37912
+xrefs:
+- cas:2034-69-7
+- kegg.compound:C09216
+- knapsack:C00002463
+- reaxys:1299325
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: COc1cc2cc(Oc3ccc4ccc(=O)oc4c3)c(=O)oc2cc1O
+  standard_inchi: InChI=1S/C19H12O7/c1-23-16-6-11-7-17(19(22)26-15(11)9-13(16)20)24-12-4-2-10-3-5-18(21)25-14(10)8-12/h2-9,20H,1H3
+  standard_inchi_key: JRHMMVBOTXEHGJ-UHFFFAOYSA-N
+  molecular_formula: C19H12O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 352.298
+  monoisotopic_mass: 352.0583
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4324
+  source_label: daphnoretin
+  minted_identifier: antibioticmech:chebi-8694217149
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

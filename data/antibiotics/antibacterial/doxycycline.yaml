@@ -1,0 +1,248 @@
+identifier: CHEBI:50845
+label: doxycycline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Tetracycline in which the 5β-hydrogen is replaced by a hydroxy group,
+  while the 6α-hydroxy group is replaced by hydrogen. A semi-synthetic tetracycline
+  antibiotic, it is used to inhibit bacterial protein synthesis and treat non-gonococcal
+  urethritis and cervicitis, exacerbations of bronchitis in patients with chronic
+  obstructive pulmonary disease (COPD), and adult periodontitis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Jenacyclin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Supracyclin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Vibramycin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: doxiciclina
+  synonym_type: INN
+  source: chebi
+- synonym_text: doxycyclinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (4S,4aR,5S,5aR,6R,12aS)-4-(dimethylamino)-3,5,10,12,12a-pentahydroxy-6-methyl-1,11-dioxo-1,4,4a,5,5a,6,11,12a-octahydrotetracene-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4S,4AR,5S,5AR,6R,12AS)-4-(DIMETHYLAMINO)-3,5,10,12,12A-PENTAHYDROXY-6-METHYL-1,11-DIOXO-1,4,4A,5,5A,6,11,12A-OCTAHYDROTETRACENE-2-CARBOXAMIDE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-hydroxy-α-6-deoxytetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6α-deoxy-5-oxytetracycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Doxycyclin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Doxycycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: doxycycline (anhydrous)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Azudoxat
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Deoxymykoin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Doxiciclina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Doxitard
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Doxycyclinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Doxytetracycline
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Vibramycine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Vibravenos
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:26895
+- ARO:3000050
+xrefs:
+- ARO:0000069
+- cas:564-25-0
+- chemspider:10469369
+- drugbank:DB00254
+- drugcentral:961
+- hmdb:HMDB0014399
+- kegg.compound:C06973
+- kegg.drug:D07876
+- knapsack:C00017127
+- lipidmaps:LMPK07000001
+- metacyc.compound:CPD-19256
+- patent:US3019260
+- patent:US3200149
+- pdb-ccd:DXT
+- reaxys:3041790
+- vsdb:1840
+- wikipedia.en:Doxycycline
+- chembl:CHEMBL1200699
+- pubchem.compound:54671203
+activity_roles:
+- CHEBI:36047
+- CHEBI:38068
+structural_class: tetracycline antibiotic
+structural_class_id: ARO:3000050
+chemical_structure:
+  smiles: '[H][C@@]12C(=C(O)[C@]3(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@]3([H])[C@H]1O)C(=O)c1c(O)cccc1[C@@H]2C'
+  standard_inchi: InChI=1S/C22H24N2O8/c1-7-8-5-4-6-9(25)11(8)16(26)12-10(7)17(27)14-15(24(2)3)18(28)13(21(23)31)20(30)22(14,32)19(12)29/h4-7,10,14-15,17,25,27-29,32H,1-3H3,(H2,23,31)/t7-,10+,14+,15-,17-,22-/m0/s1
+  standard_inchi_key: JBIWCJUYHHGXTC-AKNGSSGZSA-N
+  molecular_formula: C22H24N2O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 444.44
+  monoisotopic_mass: 444.15327
+source_concepts:
+- source: ARO
+  source_id: ARO:0000069
+  source_label: doxycycline
+  minted_identifier: antibioticmech:aro-854cc68fcb
+  role_terms:
+  - CHEBI:36047
+  - CHEBI:38068
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:50845
+  source_label: doxycycline
+  minted_identifier: antibioticmech:chebi-7394cb23df
+  role_terms:
+  - CHEBI:36047
+  - CHEBI:38068
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000186
+  label: tet(M)
+  evidence:
+  - reference: ARO:3000186
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000069 (doxycycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000190
+  label: tet(O)
+  evidence:
+  - reference: ARO:3000190
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000069 (doxycycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000191
+  label: tet(Q)
+  evidence:
+  - reference: ARO:3000191
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000069 (doxycycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000192
+  label: tet(S)
+  evidence:
+  - reference: ARO:3000192
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000069 (doxycycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000193
+  label: tet(T)
+  evidence:
+  - reference: ARO:3000193
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000069 (doxycycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000194
+  label: tet(W)
+  evidence:
+  - reference: ARO:3000194
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000069 (doxycycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000195
+  label: tetB(P)
+  evidence:
+  - reference: ARO:3000195
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000069 (doxycycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000196
+  label: tet(32)
+  evidence:
+  - reference: ARO:3000196
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000069 (doxycycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000197
+  label: tet(36)
+  evidence:
+  - reference: ARO:3000197
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000069 (doxycycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000205
+  label: tet(X)
+  evidence:
+  - reference: ARO:3000205
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000069 (doxycycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000556
+  label: tet(44)
+  evidence:
+  - reference: ARO:3000556
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000069 (doxycycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004470
+  label: poxtA
+  evidence:
+  - reference: ARO:3004470
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000069 (doxycycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004576
+  label: tet(61)
+  evidence:
+  - reference: ARO:3004576
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000069 (doxycycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3007493
+  label: tet(63)
+  evidence:
+  - reference: ARO:3007493
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000069 (doxycycline);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3007494
+  label: tet(64)
+  evidence:
+  - reference: ARO:3007494
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000069 (doxycycline);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000069 (doxycycline); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

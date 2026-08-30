@@ -1,0 +1,44 @@
+identifier: CHEBI:65817
+label: dysoxyhainanin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pentacyclic triterpenoid with a rearranged oleanane skeleton isolated
+  from the whole plants of Dysoxylum hainanense. It exhibits antibacterial activity
+  against Gram-positive bacteria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1Z,3aR,5aR,5bS,7aS,10R,11aR,13aS,13bR)-1-[(formylamino)methylidene]-3,3,5a,5b,7a,10,13b-heptamethyl-2-oxo-2,3,3a,4,5,5a,5b,6,7,7a,8,9,10,11,11a,13,13a,13b-octadecahydro-1H-cyclopenta[a]chrysene-10-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24079
+- CHEBI:25872
+- CHEBI:35871
+xrefs:
+- reaxys:19175393
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12CC=C3[C@]4([H])C[C@](C)(C(=O)O)CC[C@]4(C)CC[C@@]3(C)[C@]1(C)CC[C@@]1([H])C(C)(C)C(=O)/C(=C\NC=O)[C@]21C'
+  standard_inchi: InChI=1S/C31H45NO4/c1-26(2)22-10-11-30(6)23(31(22,7)21(24(26)34)17-32-18-33)9-8-19-20-16-28(4,25(35)36)13-12-27(20,3)14-15-29(19,30)5/h8,17-18,20,22-23H,9-16H2,1-7H3,(H,32,33)(H,35,36)/b21-17+/t20-,22-,23-,27+,28+,29+,30+,31-/m0/s1
+  standard_inchi_key: ZZTXYUVDEDOUDW-XYNNUCQCSA-N
+  molecular_formula: C31H45NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 495.704
+  monoisotopic_mass: 495.33486
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65817
+  source_label: dysoxyhainanin A
+  minted_identifier: antibioticmech:chebi-3ed8d167fc
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

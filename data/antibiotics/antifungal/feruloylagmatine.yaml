@@ -1,0 +1,50 @@
+identifier: CHEBI:75544
+label: feruloylagmatine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of cinnamamides obtained by formal condensation
+  of the carboxy group of ferulic acid with the amino group of agmatine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-N-(4-carbamimidamidobutyl)-3-(4-hydroxy-3-methoxyphenyl)prop-2-enamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(trans-4'-hydroxy-3'-methoxycinnamoylamino)-4-guanidinobutane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-trans-Feruloylagmatine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22315
+- CHEBI:86091
+xrefs:
+- hmdb:HMDB0037107
+- kegg.compound:C18325
+- metacyc.compound:CPD-12236
+- reaxys:7650492
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1cc(/C=C/C(=O)NCCCCNC(=N)N)ccc1O
+  standard_inchi: InChI=1S/C15H22N4O3/c1-22-13-10-11(4-6-12(13)20)5-7-14(21)18-8-2-3-9-19-15(16)17/h4-7,10,20H,2-3,8-9H2,1H3,(H,18,21)(H4,16,17,19)/b7-5+
+  standard_inchi_key: UBMDAKWARMURDL-FNORWQNLSA-N
+  molecular_formula: C15H22N4O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 306.366
+  monoisotopic_mass: 306.16919
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75544
+  source_label: feruloylagmatine
+  minted_identifier: antibioticmech:chebi-670b2d4be9
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

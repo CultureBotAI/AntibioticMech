@@ -1,0 +1,64 @@
+identifier: CHEBI:50924
+label: sorafenib
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of phenylureas that is urea in which one of the
+  nitrogens is substituted by a 4-chloro-3-trifluorophenyl group while the other is
+  substituted by a phenyl group which, in turn, is substituted at the para position
+  by a [2-(methylcarbamoyl)pyridin-4-yl]oxy group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sorafenibum
+  synonym_type: INN
+  source: chebi
+- synonym_text: sorafénib
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-[4-({[4-chloro-3-(trifluoromethyl)phenyl]carbamoyl}amino)phenoxy]-N-methylpyridine-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-(4-((((4-Chloro-3-(trifluoromethyl)phenyl)amino)carbonyl)amino)phenoxy)-N-methyl-2-pyridinecarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(4-Chloro-3-(trifluoromethyl)phenyl)-N'-(4-(2-(N-methylcarbamoyl)-4-pyridyloxy)phenyl)urea
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134043
+- CHEBI:25529
+- CHEBI:35618
+- CHEBI:83403
+- CHEBI:83565
+xrefs:
+- cas:284461-73-0
+- drugbank:DB00398
+- drugcentral:2459
+- kegg.drug:D08524
+- lincs.smallmolecule:LSM-1008
+- pdb-ccd:BAX
+- wikipedia.en:Sorafenib
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1
+  standard_inchi: InChI=1S/C21H16ClF3N4O3/c1-26-19(30)18-11-15(8-9-27-18)32-14-5-2-12(3-6-14)28-20(31)29-13-4-7-17(22)16(10-13)21(23,24)25/h2-11H,1H3,(H,26,30)(H2,28,29,31)
+  standard_inchi_key: MLDQJTXFUGDVEO-UHFFFAOYSA-N
+  molecular_formula: C21H16ClF3N4O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 464.831
+  monoisotopic_mass: 464.0863
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:50924
+  source_label: sorafenib
+  minted_identifier: antibioticmech:chebi-8153ea49a3
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

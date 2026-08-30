@@ -1,0 +1,37 @@
+identifier: CHEBI:69494
+label: sphaeropsidin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Sphaeropsidin A is a tetracyclic pimarane diterpene, first isolated as
+  the main phytotoxin produced by Diplodia cupressir, the causal agent of a severe
+  canker disease of Italian cypress, Cupressus sempervirens L.
+definition_source: PMID:38131643
+parent_compounds:
+- ARO:3005172
+xrefs:
+- ARO:3007757
+- chembl:CHEMBL1834675
+- pubchem.compound:51361447
+structural_class: terpene with antibiotic activity
+structural_class_id: ARO:3005172
+chemical_structure:
+  smiles: '[H][C@]12C(C)(C)CCC[C@@]13C(=O)O[C@]2(O)C(=O)C1=C[C@@](C)(C=C)CC[C@@]13O'
+  standard_inchi: InChI=1S/C20H26O5/c1-5-17(4)9-10-19(23)12(11-17)13(21)20(24)14-16(2,3)7-6-8-18(14,19)15(22)25-20/h5,11,14,23-24H,1,6-10H2,2-4H3/t14-,17-,18-,19+,20+/m0/s1
+  standard_inchi_key: FEKFUWWVNCCROX-SQWSIXGCSA-N
+  molecular_formula: C20H26O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 346.423
+  monoisotopic_mass: 346.17802
+source_concepts:
+- source: ARO
+  source_id: ARO:3007757
+  source_label: sphaeropsidin A
+  minted_identifier: antibioticmech:aro-e079af4278
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

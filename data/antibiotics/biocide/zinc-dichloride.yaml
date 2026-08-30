@@ -1,0 +1,70 @@
+identifier: CHEBI:49976
+label: zinc dichloride
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A compound of zinc and chloride ions in the ratio 1:2. It exists in four
+  crystalline forms, in each of which the Zn2+ ions are trigonal planar coordinated
+  to four chloride ions.
+definition_source: ChEBI
+synonyms:
+- synonym_text: zinc(2+) chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc(II) chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Zinkchlorid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ZnCl2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: butter of zinc
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chlorure de zinc
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dichlorozinc
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc chloride, anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27364
+- CHEBI:36093
+xrefs:
+- cas:7646-85-7
+- gmelin:430396
+- kegg.drug:D02058
+- molbase:1125
+- wikipedia.en:Zinc_Chloride
+activity_roles:
+- CHEBI:48219
+chemical_structure:
+  smiles: '[Cl-].[Cl-].[Zn+2]'
+  standard_inchi: InChI=1S/2ClH.Zn/h2*1H;/q;;+2/p-2
+  standard_inchi_key: JIAARYAFYJHUJI-UHFFFAOYSA-L
+  molecular_formula: 2Cl.Zn
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 136.296
+  monoisotopic_mass: 133.86685
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:49976
+  source_label: zinc dichloride
+  minted_identifier: antibioticmech:chebi-4567813f04
+  role_terms:
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

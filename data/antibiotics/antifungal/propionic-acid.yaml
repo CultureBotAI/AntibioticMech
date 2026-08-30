@@ -1,0 +1,97 @@
+identifier: CHEBI:30768
+label: propionic acid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A short-chain saturated fatty acid comprising ethane attached to the carbon
+  of a carboxy group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: propanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CH3‒CH2‒COOH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PROPANOIC ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Propanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Propionic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Propionsäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acide propanoïque
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acide propionique
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: carboxyethane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethanecarboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethylformic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: metacetonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methylacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: propioic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: propoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pseudoacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26607
+- CHEBI:26666
+xrefs:
+- beilstein:506071
+- cas:79-09-4
+- drugbank:DB03766
+- gmelin:1821
+- kegg.compound:C00163
+- kegg.drug:D02310
+- lipidmaps:LMFA01010003
+- pdb-ccd:PPI
+- ppdb:1341
+activity_roles:
+- CHEBI:86327
+chemical_structure:
+  smiles: CCC(=O)O
+  standard_inchi: InChI=1S/C3H6O2/c1-2-3(4)5/h2H2,1H3,(H,4,5)
+  standard_inchi_key: XBDQKXXYIPTUBI-UHFFFAOYSA-N
+  molecular_formula: C3H6O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 74.079
+  monoisotopic_mass: 74.03678
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:30768
+  source_label: propionic acid
+  minted_identifier: antibioticmech:chebi-d0fb298f07
+  role_terms:
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,60 @@
+identifier: CHEBI:98
+label: (S)-linalool
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The (S)-enantiomer of linalool.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S)-3,7-dimethylocta-1,6-dien-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-Linalool
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3S)-3,7-dimethyl-1,6-octadien-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3S)-Linalool
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-(+)-Linalool
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-3,7-dimethyl-1,6-octadien-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-Linalol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17580
+xrefs:
+- beilstein:1721486
+- cas:126-90-9
+- kegg.compound:C11389
+- knapsack:C00010301
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C=C[C@@](C)(O)CCC=C(C)C
+  standard_inchi: InChI=1S/C10H18O/c1-5-10(4,11)8-6-7-9(2)3/h5,7,11H,1,6,8H2,2-4H3/t10-/m1/s1
+  standard_inchi_key: CDOSHBSSFJOMGT-SNVBAGLBSA-N
+  molecular_formula: C10H18O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 154.253
+  monoisotopic_mass: 154.13577
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:98
+  source_label: (S)-linalool
+  minted_identifier: antibioticmech:chebi-45d3a71ff9
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

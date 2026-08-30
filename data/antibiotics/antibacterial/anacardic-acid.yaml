@@ -1,0 +1,81 @@
+identifier: CHEBI:2696
+label: anacardic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxybenzoic acid that is salicylic acid substituted by a pentadecyl
+  group at position 6. It is a major component of cashew nut shell liquid and exhibits
+  an extensive range of bioactivities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-hydroxy-6-pentadecylbenzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (15:0)-anacardic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-hydroxy-2-carboxy-3-pentadecylbenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 22:0-anacardic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(pentadecyl)salicylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-pentadecyl-2-hydroxybenzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-pentadecylsalicylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cyclogallipharic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ginkgolic acid C15:0
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hydroginkgolic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24676
+- CHEBI:35868
+xrefs:
+- cas:16611-84-0
+- chemspider:146579
+- foodb.food:FDB000869
+- hmdb:HMDB0029683
+- kegg.compound:C10759
+- knapsack:C00002635
+- lincs.smallmolecule:LSM-6320
+activity_roles:
+- CHEBI:149553
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCCCCCCCCCCCCc1cccc(O)c1C(=O)O
+  standard_inchi: InChI=1S/C22H36O3/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-16-19-17-15-18-20(23)21(19)22(24)25/h15,17-18,23H,2-14,16H2,1H3,(H,24,25)
+  standard_inchi_key: ADFWQBGTDJIESE-UHFFFAOYSA-N
+  molecular_formula: C22H36O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 348.527
+  monoisotopic_mass: 348.26645
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2696
+  source_label: anacardic acid
+  minted_identifier: antibioticmech:chebi-06dc8f677a
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

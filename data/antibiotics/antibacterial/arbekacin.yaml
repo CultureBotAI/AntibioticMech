@@ -1,0 +1,151 @@
+identifier: CHEBI:37922
+label: arbekacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A kanamycin that is kanamycin B bearing an N-(2S)-4-amino-2-hydroxybutyryl
+  group on the aminocyclitol ring.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-4-amino-N-[(1R,2S,3S,4R,5S)-5-amino-2-(3-amino-3-deoxy-α-D-glucopyranosyloxy)-4-(2,6-diamino-2,3,4,6-tetradeoxy-α-D-erythro-hexopyranosyloxy)-3-hydroxycyclohexyl]-2-hydroxybutanamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ABK
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: habekacin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: haberacin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:24951
+- CHEBI:47779
+- ARO:0000016
+xrefs:
+- ARO:3000654
+- cas:51025-85-5
+- drugbank:DB06696
+- drugcentral:235
+- kegg.drug:D07462
+- patent:DE2350169
+- patent:EP2199280
+- patent:US4107424
+- reaxys:5895351
+- chembl:CHEMBL426926
+- pubchem.compound:68682
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: NCC[C@H](O)C(=O)N[C@@H]1C[C@H](N)[C@@H](O[C@H]2O[C@H](CN)CC[C@H]2N)[C@H](O)[C@H]1O[C@H]1O[C@H](CO)[C@@H](O)[C@H](N)[C@H]1O
+  standard_inchi: InChI=1S/C22H44N6O10/c23-4-3-12(30)20(34)28-11-5-10(26)18(37-21-9(25)2-1-8(6-24)35-21)17(33)19(11)38-22-16(32)14(27)15(31)13(7-29)36-22/h8-19,21-22,29-33H,1-7,23-27H2,(H,28,34)/t8-,9+,10-,11+,12-,13+,14-,15+,16+,17-,18+,19-,21+,22+/m0/s1
+  standard_inchi_key: MKKYBZZTJQGVCD-XTCKQBCOSA-N
+  molecular_formula: C22H44N6O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 552.626
+  monoisotopic_mass: 552.31189
+source_concepts:
+- source: ARO
+  source_id: ARO:3000654
+  source_label: arbekacin
+  minted_identifier: antibioticmech:aro-0a5f8f9f83
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:37922
+  source_label: arbekacin
+  minted_identifier: antibioticmech:chebi-48c937767e
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000858
+  label: armA
+  evidence:
+  - reference: ARO:3000858
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000654 (arbekacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000859
+  label: rmtA
+  evidence:
+  - reference: ARO:3000859
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000654 (arbekacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000860
+  label: rmtB
+  evidence:
+  - reference: ARO:3000860
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000654 (arbekacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000861
+  label: rmtC
+  evidence:
+  - reference: ARO:3000861
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000654 (arbekacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000862
+  label: sgm
+  evidence:
+  - reference: ARO:3000862
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000654 (arbekacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002667
+  label: rmtD
+  evidence:
+  - reference: ARO:3002667
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000654 (arbekacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002668
+  label: rmtG
+  evidence:
+  - reference: ARO:3002668
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000654 (arbekacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003038
+  label: MexXY-OprA
+  evidence:
+  - reference: ARO:3003038
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000654 (arbekacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003198
+  label: rmtH
+  evidence:
+  - reference: ARO:3003198
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000654 (arbekacin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000654 (arbekacin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,52 @@
+identifier: CHEBI:145818
+label: mupirocin calcium (anhydrous)
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The anhydrous form of the calcium salt of mupirocin. The dihydrate form
+  is used as an antibacterial drug for the treatment of skin infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: calcium bis[9-({(2E)-4-[(2S,3R,4R,5S)-3,4-dihydroxy-5-({(2S,3S)-3-[(2S,3S)-3-hydroxybutan-2-yl]oxiran-2-yl}methyl)tetrahydro-2H-pyran-2-yl]-3-methylbut-2-enoyl}oxy)nonanoate]
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: calcium mupirocin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: mupirocin calcium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: mupirocin calcium anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: mupirocin calcium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:51031
+xrefs:
+- cas:104486-81-9
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: '[Ca+2].[H][C@@]1([C@@H](C)[C@H](C)O)O[C@@]1([H])C[C@H]1CO[C@@H](C/C(C)=C/C(=O)OCCCCCCCCC(=O)[O-])[C@H](O)[C@@H]1O.[H][C@@]1([C@@H](C)[C@H](C)O)O[C@@]1([H])C[C@H]1CO[C@@H](C/C(C)=C/C(=O)OCCCCCCCCC(=O)[O-])[C@H](O)[C@@H]1O'
+  standard_inchi: InChI=1S/2C26H44O9.Ca/c2*1-16(13-23(30)33-11-9-7-5-4-6-8-10-22(28)29)12-20-25(32)24(31)19(15-34-20)14-21-26(35-21)17(2)18(3)27;/h2*13,17-21,24-27,31-32H,4-12,14-15H2,1-3H3,(H,28,29);/q;;+2/p-2/b2*16-13+;/t2*17-,18-,19-,20-,21-,24+,25-,26-;/m00./s1
+  standard_inchi_key: HAXVBVDETFUQGV-LNQHITRNSA-L
+  molecular_formula: 2C26H43O9.Ca
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1039.32
+  monoisotopic_mass: 1038.54401
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:145818
+  source_label: mupirocin calcium (anhydrous)
+  minted_identifier: antibioticmech:chebi-bb17812933
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

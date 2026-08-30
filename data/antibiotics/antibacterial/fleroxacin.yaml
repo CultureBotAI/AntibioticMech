@@ -1,0 +1,107 @@
+identifier: CHEBI:31810
+label: fleroxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A fluoroquinolone antibiotic that is 4-oxo-1,4-dihydroquinoline which
+  is substituted at positions 1, 3, 6, 7 and 8 by 2-fluoroethyl, carboxy, fluoro,
+  4-methylpiperazin-1-yl and fluoro groups, respectively. It is active against many
+  Gram-positive and Gram-negative bacteria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6,8-difluoro-1-(2-fluoroethyl)-7-(4-methylpiperazin-1-yl)-4-oxo-1,4-dihydroquinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6,8-difluoro-1-(2-fluoroethyl)-1,4-dihydro-7-(4-methyl-1-piperazinyl)-4-oxo-3-quinolinecarboxylic
+    acid-
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fleroxacine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fleroxacino
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fleroxacinum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Megalocin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Quinodis
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:25384
+- CHEBI:26513
+- CHEBI:38582
+- CHEBI:46845
+- CHEBI:87211
+- ARO:0000001
+xrefs:
+- ARO:3004013
+- cas:79660-72-3
+- drugbank:DB04576
+- drugcentral:1177
+- kegg.compound:C13179
+- kegg.drug:D01716
+- lincs.smallmolecule:LSM-6633
+- patent:US4398029
+- reaxys:4300996
+- wikipedia.en:Fleroxacin
+- chembl:CHEMBL6273
+- pubchem.compound:3357
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: CN1CCN(c2c(F)cc3c(=O)c(C(=O)O)cn(CCF)c3c2F)CC1
+  standard_inchi: InChI=1S/C17H18F3N3O3/c1-21-4-6-22(7-5-21)15-12(19)8-10-14(13(15)20)23(3-2-18)9-11(16(10)24)17(25)26/h8-9H,2-7H2,1H3,(H,25,26)
+  standard_inchi_key: XBJBPGROQZJDOJ-UHFFFAOYSA-N
+  molecular_formula: C17H18F3N3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 369.343
+  monoisotopic_mass: 369.13003
+source_concepts:
+- source: ARO
+  source_id: ARO:3004013
+  source_label: fleroxacin
+  minted_identifier: antibioticmech:aro-8f29f0a6d7
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:31810
+  source_label: fleroxacin
+  minted_identifier: antibioticmech:chebi-0aae8b0219
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000733
+  target_label: fluoroquinolone sensitive gyrA
+  evidence:
+  - reference: ARO:3000733
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3004013 (fleroxacin); database
+      assertion, not a primary citation.
+- target_id: ARO:3003261
+  target_label: fluoroquinolone sensitive gyrB
+  evidence:
+  - reference: ARO:3003261
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3004013 (fleroxacin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

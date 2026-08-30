@@ -1,0 +1,93 @@
+identifier: CHEBI:87393
+label: hexan-1-ol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A primary alcohol that is hexane substituted by a hydroxy group at position
+  1.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-hexanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-hexyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-hydroxyhexane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C6 alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Caproic alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alcohol C-6
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alcohol(C6)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: amylcarbinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: caproyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hexanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hexanol-(1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: hexyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-hexan-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-hexanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-hexyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pentylcarbinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:143552
+- CHEBI:15734
+xrefs:
+- cas:111-27-3
+- foodb.food:FDB008072
+- hmdb:HMDB0012971
+- knapsack:C00000358
+- metacyc.compound:HEXANOL-CMPD
+- pdb-ccd:HE2
+- reaxys:969167
+- wikipedia.en:1-Hexanol
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCCCO
+  standard_inchi: InChI=1S/C6H14O/c1-2-3-4-5-6-7/h7H,2-6H2,1H3
+  standard_inchi_key: ZSIAUFGUXNUGDI-UHFFFAOYSA-N
+  molecular_formula: C6H14O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 102.177
+  monoisotopic_mass: 102.10447
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:87393
+  source_label: hexan-1-ol
+  minted_identifier: antibioticmech:chebi-e20a00db05
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

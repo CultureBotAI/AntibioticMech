@@ -1,0 +1,439 @@
+identifier: CHEBI:46081
+label: fluconazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of triazoles that is propan-2-ol substituted at
+  position 1 and 3 by 1H-1,2,4-triazol-1-yl groups and at position 2 by a 2,4-difluorophenyl
+  group. It is an antifungal drug used for the treatment of mucosal candidiasis and
+  for systemic infections including systemic candidiasis, coccidioidomycosis, and
+  cryptococcosis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Biozole
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Diflucan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Triflucan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: fluconazol
+  synonym_type: INN
+  source: chebi
+- synonym_text: fluconazolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-(2,4-difluorophenyl)-1,3-bis-(1H-1,2,4-triazol-1-yl)propan-2-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4-difluoro-α,α-bis(1H-1,2,4-triazol-1-ylmethyl)benzyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(2,4-DIFLUOROPHENYL)-1,3-DI(1H-1,2,4-TRIAZOL-1-YL)PROPAN-2-OL
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Elazor
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26878
+- CHEBI:38582
+- CHEBI:87071
+- CHEBI:87101
+- ARO:3007499
+xrefs:
+- ARO:3007508
+- beilstein:4269710
+- cas:86386-73-4
+- drugbank:DB00196
+- drugcentral:1187
+- hmdb:HMDB0014342
+- kegg.drug:D00322
+- lincs.smallmolecule:LSM-2106
+- patent:GB2099818
+- patent:US4404216
+- pdb-ccd:TPF
+- reaxys:7311650
+- wikipedia.en:Fluconazole
+- chembl:CHEMBL106
+- pubchem.compound:3365
+activity_roles:
+- CHEBI:35718
+- CHEBI:86327
+structural_class: triazole antifungal
+structural_class_id: ARO:3007499
+chemical_structure:
+  smiles: OC(Cn1cncn1)(Cn1cncn1)c1ccc(F)cc1F
+  standard_inchi: InChI=1S/C13H12F2N6O/c14-10-1-2-11(12(15)3-10)13(22,4-20-8-16-6-18-20)5-21-9-17-7-19-21/h1-3,6-9,22H,4-5H2
+  standard_inchi_key: RFHAOTPXVQNOHP-UHFFFAOYSA-N
+  molecular_formula: C13H12F2N6O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 306.276
+  monoisotopic_mass: 306.10407
+source_concepts:
+- source: ARO
+  source_id: ARO:3007508
+  source_label: fluconazole
+  minted_identifier: antibioticmech:aro-77ffa56cc7
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:46081
+  source_label: fluconazole
+  minted_identifier: antibioticmech:chebi-83d44cb0ba
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007524
+  label: Candida spp. ERG11 with mutations conferring resistance to azole antibiotics
+  evidence:
+  - reference: ARO:3007524
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007551
+  label: Candida spp. Upc2 with mutations conferring resistance to azole antibiotics
+  evidence:
+  - reference: ARO:3007551
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3007553
+  label: Candida albicans CDR1 with mutations conferring resistance to antifungals
+  evidence:
+  - reference: ARO:3007553
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3007554
+  label: Candida albicans CDR2 with mutations conferring resistance to azoles
+  evidence:
+  - reference: ARO:3007554
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3007566
+  label: Cryptococcus spp. AFR1
+  evidence:
+  - reference: ARO:3007566
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007666
+  label: Candida spp. cyp51A1 with mutations conferring resistance to triazoles and
+    imidazole antibiotics
+  evidence:
+  - reference: ARO:3007666
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009134
+  label: antifungal resistance-associated MSH
+  evidence:
+  - reference: ARO:3009134
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009213
+  label: Candida auris ERG11 lanosterol 14-alpha-demethylase with mutations conferring
+    resistance to fluconazole
+  evidence:
+  - reference: ARO:3009213
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009222
+  label: Candida parapsilosis Erg11 lanosterol 14-alpha-demethylase with mutations
+    associated with resistance to fluconazole
+  evidence:
+  - reference: ARO:3009222
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009224
+  label: Histoplasma capsulatum Erg11 lanosterol 14-alpha-demethylase with mutations
+    conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009224
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009226
+  label: Candida tropicalis Erg11 lanosterol 14-alpha-demethylase with mutations conferring
+    resistance to fluconazole
+  evidence:
+  - reference: ARO:3009226
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009228
+  label: Cryptococcus neoformans Erg11 lanosterol 14-alpha-demethylase with mutations
+    conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009228
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009239
+  label: Candida albicans mrr2 with mutations associated with resistance to fluconazole
+  evidence:
+  - reference: ARO:3009239
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009241
+  label: Candida albicans TAC1 with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009241
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009242
+  label: Candida parapsilosis Erg3 C-5 sterol desaturase with mutations conferring
+    resistance to fluconazole
+  evidence:
+  - reference: ARO:3009242
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009250
+  label: Trychophyton rubrum Mdr1 with mutations associated with resistance to fluconazole
+  evidence:
+  - reference: ARO:3009250
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009254
+  label: Trychophyton rubrum Mdr3 with mutations associated with resistance to fluconazole
+  evidence:
+  - reference: ARO:3009254
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009261
+  label: Trychophyton rubrum Mfs1 with mutations associated with resistance to fluconazole
+  evidence:
+  - reference: ARO:3009261
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009266
+  label: Trychophyton rubrum Mfs2 with mutations associated with resistance to fluconazole
+  evidence:
+  - reference: ARO:3009266
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009343
+  label: Cryptococcus neoformans AFR1 with mutations conferring resistance against
+    fluconazole
+  evidence:
+  - reference: ARO:3009343
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009379
+  label: Cryptococcus neoformans AIF1 mutations conferring resistance against fluconazole
+  evidence:
+  - reference: ARO:3009379
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009396
+  label: Pichia kudriavzevii ERG11 lanosterol 14-alpha-demethylase with mutations
+    conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009396
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009397
+  label: Candida glabrata ERG11 lanosterol 14-alpha-demethylase with mutations conferring
+    resistance to fluconazole
+  evidence:
+  - reference: ARO:3009397
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009412
+  label: Candida glabrata FKS2 with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009412
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009414
+  label: Candida albicans Erg11 with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009414
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009422
+  label: Candida glabrata FKS1 with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009422
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009425
+  label: fungal MDR
+  evidence:
+  - reference: ARO:3009425
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009436
+  label: Candida albicans CDR1 with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009436
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009438
+  label: Candida glabrata CDR1 with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009438
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009442
+  label: Candida tropicalis CDR1 with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009442
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009443
+  label: Debaryomyces hansenii CDR1 with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009443
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009444
+  label: Candida albicans CDR2 with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009444
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009447
+  label: Candida albicans MDR1 with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009447
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009462
+  label: Cryptococcus neoformans PDR5 with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009462
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009468
+  label: Candida glabrata Yor1 with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009468
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009504
+  label: Candida albicans Cyp51a with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009504
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009519
+  label: Aspergillus fumigatus Cyp51A with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009519
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009523
+  label: Candida albicans Cyp51 with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009523
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009528
+  label: Histoplasma capsulatum Cyp51 with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009528
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009559
+  label: Candida albicans FKS1 beta-1,3-glucan with mutations conferring resistance
+    to fluconazole
+  evidence:
+  - reference: ARO:3009559
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009578
+  label: Candida dubliniensis ERG11 lanosterol 14-alpha-demethylase with mutations
+    conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009578
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009579
+  label: Candida orthopsilosis ERG11 lanosterol 14-alpha-demethylase with mutations
+    conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009579
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009588
+  label: Saccharomyces cerevisiae ERG11 lanosterol 14-alpha-demethylase with mutations
+    conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009588
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009611
+  label: Candida parapsilosis FSK1 beta-1,3-glucan synthase with mutations associated
+    with resistance to fluconazole
+  evidence:
+  - reference: ARO:3009611
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009637
+  label: Candida albicans Upc2 with mutations conferring resistance to fluconazole
+  evidence:
+  - reference: ARO:3009637
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009638
+  label: antifungal susceptible Upc2
+  evidence:
+  - reference: ARO:3009638
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007508 (fluconazole);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:54:36Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,42 @@
+identifier: antibioticmech:aro-1286e26ebd
+label: formicin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Formicin is a two-component broad-spectrum lantibiotic produced by Bacillus
+  paralicheniformis APC 1576, exhibiting antimicrobial activity against several Gram-positive
+  species, including Staphylococcus aureus, Clostridioides difficile and Listeria
+  monocytogenes.
+definition_source: PMID:27450592
+parent_compounds:
+- ARO:3009656
+xrefs:
+- ARO:3003904
+- cas:50667-69-1
+- CHEBI:192837
+- chembl:CHEMBL471524
+- pubchem.compound:69365
+structural_class: ribosomally synthesized and post-translationally modified peptide
+  antibiotics
+structural_class_id: ARO:3009656
+chemical_structure:
+  smiles: CC(=O)NCO
+  standard_inchi: InChI=1S/C3H7NO2/c1-3(6)4-2-5/h5H,2H2,1H3,(H,4,6)
+  standard_inchi_key: HWJHZLJIIWOTGZ-UHFFFAOYSA-N
+  molecular_formula: C3H7NO2
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 89.09
+  monoisotopic_mass: 89.047678466
+source_concepts:
+- source: ARO
+  source_id: ARO:3003904
+  source_label: formicin
+  minted_identifier: antibioticmech:aro-1286e26ebd
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

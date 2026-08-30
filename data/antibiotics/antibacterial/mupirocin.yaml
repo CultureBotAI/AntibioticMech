@@ -1,0 +1,133 @@
+identifier: CHEBI:7025
+label: mupirocin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An α,β-unsaturated ester resulting from the formal condensation of the
+  alcoholic hydroxy group of 9-hydroxynonanoic acid with the carboxy group of (2E)-4-[(2S)-tetrahydro-2H-pyran-2-yl]-3-methylbut-2-enoic
+  acid in which the tetrahydropyranyl ring is substituted at positions 3 and 4 by
+  hydroxy groups and at position 5 by a {(2S,3S)-3-[(2S,3S)-3-hydroxybutan-2-yl]oxiran-2-yl}methyl
+  group. Originally isolated from the Gram-negative bacterium Pseudomonas fluorescens,
+  it is used as a topical antibiotic for the treatment of Gram-positive bacterial
+  infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Bactroban
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Centany
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: mupirocina
+  synonym_type: INN
+  source: chebi
+- synonym_text: mupirocine
+  synonym_type: INN
+  source: chebi
+- synonym_text: mupirocinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 9-({(2E)-4-[(2S,3R,4R,5S)-3,4-dihydroxy-5-({(2S,3S)-3-[(2S,3S)-3-hydroxybutan-2-yl]oxiran-2-yl}methyl)tetrahydro-2H-pyran-2-yl]-3-methylbut-2-enoyl}oxy)nonanoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pseudomonic acid A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pseudomonic acid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:25384
+- CHEBI:27136
+- CHEBI:32955
+- CHEBI:35681
+- CHEBI:46942
+- CHEBI:51737
+- ARO:3007151
+xrefs:
+- ARO:3000554
+- cas:12650-69-0
+- drugbank:DB00410
+- drugcentral:1857
+- hmdb:HMDB0014554
+- kegg.drug:D01076
+- patent:DE2227739
+- patent:US3977943
+- patent:US4071536
+- wikipedia.en:Mupirocin
+- chembl:CHEMBL719
+- pubchem.compound:446596
+activity_roles:
+- CHEBI:36047
+structural_class: mupirocin-like antibiotic
+structural_class_id: ARO:3007151
+chemical_structure:
+  smiles: '[H][C@@]1([C@@H](C)[C@H](C)O)O[C@@]1([H])C[C@H]1CO[C@@H](C/C(C)=C/C(=O)OCCCCCCCCC(=O)O)[C@H](O)[C@@H]1O'
+  standard_inchi: InChI=1S/C26H44O9/c1-16(13-23(30)33-11-9-7-5-4-6-8-10-22(28)29)12-20-25(32)24(31)19(15-34-20)14-21-26(35-21)17(2)18(3)27/h13,17-21,24-27,31-32H,4-12,14-15H2,1-3H3,(H,28,29)/b16-13+/t17-,18-,19-,20-,21-,24+,25-,26-/m0/s1
+  standard_inchi_key: MINDHVHHQZYEEK-HBBNESRFSA-N
+  molecular_formula: C26H44O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 500.629
+  monoisotopic_mass: 500.29853
+source_concepts:
+- source: ARO
+  source_id: ARO:3000554
+  source_label: mupirocin
+  minted_identifier: antibioticmech:aro-3b020d3551
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:7025
+  source_label: mupirocin
+  minted_identifier: antibioticmech:chebi-47d25852a8
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000510
+  label: Staphylococcus aureus mupB conferring resistance to mupirocin
+  evidence:
+  - reference: ARO:3000510
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000554 (mupirocin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000521
+  label: Staphylococcus aureus mupA conferring resistance to mupirocin
+  evidence:
+  - reference: ARO:3000521
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000554 (mupirocin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003729
+  label: Staphylococcus aureus ileS with mutation conferring resistance to mupirocin
+  evidence:
+  - reference: ARO:3003729
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000554 (mupirocin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003730
+  label: Bifidobacterium bifidum ileS conferring resistance to mupirocin
+  evidence:
+  - reference: ARO:3003730
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000554 (mupirocin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000732
+  target_label: antibiotic sensitive Isoleucyl-tRNA transferase
+  evidence:
+  - reference: ARO:3000732
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000554 (mupirocin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

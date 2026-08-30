@@ -1,0 +1,54 @@
+identifier: CHEBI:136532
+label: 8-azahypoxanthine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A triazolopyrimidine that consists of 1,4-dihydro-7H-[1,2,3]triazolo[4,5-d]pyrimidine
+  bearing an oxo substituent at position 7.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,4-dihydro-7H-[1,2,3]triazolo[4,5-d]pyrimidin-7-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1H-1,2,3-triazolo(4,5-d)pyrimidin-7-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-hydroxy-1,2,3,4,6-pentaazaindene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 8-azaHx
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: azahypoxanthine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48435
+- CHEBI:67142
+xrefs:
+- cas:2683-90-1
+- reaxys:513873
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: O=c1ncnc2nnnc12
+  standard_inchi: InChI=1S/C4H3N5O/c10-4-2-3(5-1-6-4)8-9-7-2/h1H,(H2,5,6,7,8,9,10)
+  standard_inchi_key: OEEYCNOOAHGFHL-UHFFFAOYSA-N
+  molecular_formula: C4H3N5O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 137.102
+  monoisotopic_mass: 137.03376
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:136532
+  source_label: 8-azahypoxanthine
+  minted_identifier: antibioticmech:chebi-8d9401bee2
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,71 @@
+identifier: CHEBI:68595
+label: telaprevir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An oligopeptide consisting of N-(pyrazin-2-ylcarbonyl)cyclohexylalanyl,
+  3-methylvalyl, octahydrocyclopenta[c]pyrrole-1-carboxy, and 3-amino-N-cyclopropyl-2-oxohexanamide
+  residues joined in sequence. Used for treatment of chronic hepatitis C virus genotype
+  1 infection.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Incivek
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: (1S,3aR,6aS)-2-[(2S)-2-({(2S)-2-cyclohexyl-2-[(pyrazin-2-ylcarbonyl)amino]acetyl}amino)-3,3-dimethylbutanoyl]-N-[(3S)-1-(cyclopropylamino)-1,2-dioxohexan-3-yl]octahydrocyclopenta[c]pyrrole-1-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1S,3aR,6aS)-(2S)-2-cyclohexyl-N-(pyrazinylcarbonyl)glycyl-3-methyl-L-valyl-N-((1S)-1-((cyclopropylamino)oxoacetyl)butyl)octahydrocyclopenta(c)pyrrole-1-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: VX 950
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: VX-950
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25676
+- CHEBI:38296
+- CHEBI:38314
+- CHEBI:51454
+xrefs:
+- cas:402957-28-2
+- drugcentral:4173
+- hmdb:HMDB0015616
+- kegg.drug:D09012
+- patent:US2005197301
+- patent:US2006252698
+- patent:US2006276405
+- patent:US2006276407
+- patent:US2006281688
+- patent:US2007087973
+- patent:WO2005025517
+- patent:WO2006127289
+- patent:WO2011103932
+- reaxys:10511882
+- wikipedia.en:Telaprevir
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: '[H][C@@]12CCC[C@]1([H])[C@@H](C(=O)N[C@@H](CCC)C(=O)C(=O)NC1CC1)N(C(=O)[C@@H](NC(=O)[C@@H](NC(=O)c1cnccn1)C1CCCCC1)C(C)(C)C)C2'
+  standard_inchi: InChI=1S/C36H53N7O6/c1-5-10-25(29(44)34(48)39-23-15-16-23)40-33(47)28-24-14-9-13-22(24)20-43(28)35(49)30(36(2,3)4)42-32(46)27(21-11-7-6-8-12-21)41-31(45)26-19-37-17-18-38-26/h17-19,21-25,27-28,30H,5-16,20H2,1-4H3,(H,39,48)(H,40,47)(H,41,45)(H,42,46)/t22-,24-,25-,27-,28-,30+/m0/s1
+  standard_inchi_key: BBAWEDCPNXPBQM-GDEBMMAJSA-N
+  molecular_formula: C36H53N7O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 679.863
+  monoisotopic_mass: 679.40573
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68595
+  source_label: telaprevir
+  minted_identifier: antibioticmech:chebi-6b81a4a85a
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,60 @@
+identifier: CHEBI:86431
+label: sodium fluorophosphate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Sodium fluorophosphate, commonly abbreviated MFP, is an inorganic compound
+  with the chemical formula Na2PO3F. Typical for a salt, MFP is odourless, colourless,
+  and water-soluble. This salt is an ingredient in toothpastes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: disodium phosphorofluoridate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphorofluoridic acid, disodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium phosphorofluoridate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: disodium fluorophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: disodium monofluorophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium monofluorophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24838
+- CHEBI:38702
+xrefs:
+- cas:10163-15-2
+- kegg.drug:D05864
+- reaxys:11335196
+- wikipedia.en:Sodium_monofluorophosphate
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=P([O-])([O-])F.[Na+].[Na+]
+  standard_inchi: InChI=1S/FH2O3P.2Na/c1-5(2,3)4;;/h(H2,2,3,4);;/q;2*+1/p-2
+  standard_inchi_key: BFDWBSRJQZPEEB-UHFFFAOYSA-L
+  molecular_formula: FO3P.2Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 143.949
+  monoisotopic_mass: 143.93645
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:86431
+  source_label: sodium fluorophosphate
+  minted_identifier: antibioticmech:chebi-1ccd1245c9
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

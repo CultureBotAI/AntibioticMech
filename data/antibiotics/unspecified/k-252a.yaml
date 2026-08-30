@@ -1,0 +1,57 @@
+identifier: CHEBI:43616
+label: K-252a
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A organic heterooctacyclic compound that is a potent inhibitor of protein
+  kinase C and is isolated from Nocardiopsis sp K-252a
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (5S,6R,8R)-6-hydroxy-5-methyl-13-oxo-5,6,7,8,14,15-hexahydro-13H-5,8-epoxy-4b,8a,14-triazadibenzo[b,h]cycloocta[1,2,3,4-jkl]cyclopenta[e]-as-indacene-6-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic K 252a
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic SF 2370
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: K252a
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SF 2370
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:35990
+- CHEBI:38165
+- CHEBI:74222
+xrefs:
+- cas:99533-80-9
+- pdb-ccd:KSA
+- reaxys:7419675
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COC(=O)[C@@]1(O)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+  standard_inchi: InChI=1S/C27H21N3O5/c1-26-27(33,25(32)34-2)11-18(35-26)29-16-9-5-3-7-13(16)20-21-15(12-28-24(21)31)19-14-8-4-6-10-17(14)30(26)23(19)22(20)29/h3-10,18,33H,11-12H2,1-2H3,(H,28,31)/t18-,26+,27+/m1/s1
+  standard_inchi_key: KOZFSFOOLUUIGY-SOLYNIJKSA-N
+  molecular_formula: C27H21N3O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 467.481
+  monoisotopic_mass: 467.14812
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:43616
+  source_label: K-252a
+  minted_identifier: antibioticmech:chebi-d7b8098215
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

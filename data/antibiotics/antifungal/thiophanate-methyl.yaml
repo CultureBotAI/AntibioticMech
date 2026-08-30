@@ -1,0 +1,84 @@
+identifier: CHEBI:35014
+label: thiophanate-methyl
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of thioureas that is the dimethyl ester of (1,2-phenylenedicarbamothioyl)biscarbamic
+  acid. A fungicide effective against a broad spectrum of diseases in fruit, vegetables,
+  turf and other crops including eyespot, scab, powdery mildew and grey mould.
+definition_source: ChEBI
+synonyms:
+- synonym_text: dimethyl (1,2-phenylenedicarbamothioyl)biscarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-Bis(3-(methoxycarbonyl)-2-thioureido)benzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-Bis(methoxycarbonylthioureido)benzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-Di-(3-methoxycarbonyl-2-thioureido)benzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methyl thiophanate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methylthiofanate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methylthiophanate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dimethyl 4,4'-(o-phenylene)bis(3-thioallophanate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dimethyl N,N'-[1,2-phenylenebis(azanediylcarbonothioyl)]dicarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dimethyl N,N'-[1,2-phenylenebis(iminocarbonothioyl)]bis[carbamate]
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: o-Bis(3-methoxycarbonyl-2-thioureido)benzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:51276
+- CHEBI:87037
+- CHEBI:87061
+xrefs:
+- cas:23564-05-8
+- kegg.compound:C14432
+- pesticides:thiophanate-methyl
+- ppdb:640
+- reaxys:937942
+activity_roles:
+- CHEBI:24127
+- CHEBI:86328
+chemical_structure:
+  smiles: COC(=O)NC(=S)Nc1ccccc1NC(=S)NC(=O)OC
+  standard_inchi: InChI=1S/C12H14N4O4S2/c1-19-11(17)15-9(21)13-7-5-3-4-6-8(7)14-10(22)16-12(18)20-2/h3-6H,1-2H3,(H2,13,15,17,21)(H2,14,16,18,22)
+  standard_inchi_key: QGHREAKMXXNCOA-UHFFFAOYSA-N
+  molecular_formula: C12H14N4O4S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 342.402
+  monoisotopic_mass: 342.04565
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:35014
+  source_label: thiophanate-methyl
+  minted_identifier: antibioticmech:chebi-71052c7731
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

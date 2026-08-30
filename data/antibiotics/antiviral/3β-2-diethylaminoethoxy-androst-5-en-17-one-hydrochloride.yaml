@@ -1,0 +1,67 @@
+identifier: CHEBI:190404
+label: 3β-(2-diethylaminoethoxy)androst-5-en-17-one hydrochloride
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrochloride obtained by reaction of 3β-(2-diethylaminoethoxy)androst-5-en-17-one
+  with one equivalent of hydrochloric acid. It is a cholesterol synthesis and transport
+  inhibitor.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3β-[2-(diethylamino)ethoxy]androst-5-en-17-one hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3β)-3-[2-(diethylamino)ethoxy]androst-5-en-17-one hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3β-(2-diethylaminoethoxy)androst-5-en-17-one HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N-diethyl-2-[(17-oxoandrost-5-en-3β-yl)oxy]ethanaminium chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: U 18,666A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: U 18666A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: U-18,666A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: U-18666A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: U18666A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:3039-71-2
+- chemspider:8129692
+- patent:WO2010083445
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: Cl.[H][C@@]12CC=C3C[C@@H](OCCN(CC)CC)CC[C@]3(C)[C@@]1([H])CC[C@]1(C)C(=O)CC[C@@]21[H]
+  standard_inchi: InChI=1S/C25H41NO2.ClH/c1-5-26(6-2)15-16-28-19-11-13-24(3)18(17-19)7-8-20-21-9-10-23(27)25(21,4)14-12-22(20)24;/h7,19-22H,5-6,8-17H2,1-4H3;1H/t19-,20-,21-,22-,24-,25-;/m0./s1
+  standard_inchi_key: GZFYZYBWLCYBMI-MYZJJQSMSA-N
+  molecular_formula: C25H41NO2.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 424.069
+  monoisotopic_mass: 423.29041
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:190404
+  source_label: 3β-(2-diethylaminoethoxy)androst-5-en-17-one hydrochloride
+  minted_identifier: antibioticmech:chebi-11e0a10943
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

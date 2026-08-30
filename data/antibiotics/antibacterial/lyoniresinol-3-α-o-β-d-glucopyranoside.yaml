@@ -1,0 +1,57 @@
+identifier: CHEBI:66606
+label: (+)-lyoniresinol-3-α-O-β-D-glucopyranoside
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A lignan that is (+)-lyoniresinol substituted by a β-D-glucopyranosyl
+  moiety at position 3 via a glycosidic linkage. Isolated from the root barks of Stemmadenia
+  minima and Lycium chinense, it exhibits antimicrobial activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[(1S,2R,3R)-7-hydroxy-1-(4-hydroxy-3,5-dimethoxyphenyl)-3-(hydroxymethyl)-6,8-dimethoxy-1,2,3,4-tetrahydronaphthalen-2-yl]methyl
+    β-D-glucopyranoside'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-lyoniresinol 9'-O-β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pteleifoside G
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:22798
+- CHEBI:25036
+- CHEBI:26195
+- CHEBI:36786
+- CHEBI:51681
+- CHEBI:63367
+xrefs:
+- hmdb:HMDB0038922
+- reaxys:6168345
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1cc([C@H]2c3c(cc(OC)c(O)c3OC)C[C@@H](CO)[C@@H]2CO[C@@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@H]2O)cc(OC)c1O
+  standard_inchi: InChI=1S/C28H38O13/c1-36-16-7-13(8-17(37-2)22(16)31)20-15(11-40-28-26(35)25(34)23(32)19(10-30)41-28)14(9-29)5-12-6-18(38-3)24(33)27(39-4)21(12)20/h6-8,14-15,19-20,23,25-26,28-35H,5,9-11H2,1-4H3/t14-,15-,19+,20+,23+,25-,26+,28+/m0/s1
+  standard_inchi_key: PQQRNPDHSJDAGV-HQSXISOASA-N
+  molecular_formula: C28H38O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 582.599
+  monoisotopic_mass: 582.23124
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66606
+  source_label: (+)-lyoniresinol-3-α-O-β-D-glucopyranoside
+  minted_identifier: antibioticmech:chebi-2e7bb9fa53
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

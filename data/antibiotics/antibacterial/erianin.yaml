@@ -1,0 +1,58 @@
+identifier: CHEBI:233659
+label: erianin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diphenylethane that is 1,2-dihydrostilbene substituted by a hydroxy
+  group at position 3 and by methoxy groups at positions 4, 3', 4', and 5'. It is
+  isolated from Dendrobium species.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-methoxy-5-[2-(3,4,5-trimethoxyphenyl)ethyl]phenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methoxy-5-(3,4,5-trimethoxyphenethyl)phenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methoxy-5-[2-(3,4,5-trimethoxy-phenyl)-ethyl]-phenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-hydroxy-4,3',4',5'-tetramethoxybibenzyl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 613744
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:51571
+- CHEBI:51683
+xrefs:
+- cas:95041-90-0
+- hmdb:HMDB0251918
+- knapsack:C00015428
+- pdb-ccd:W4F
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1ccc(CCc2cc(OC)c(OC)c(OC)c2)cc1O
+  standard_inchi: InChI=1S/C18H22O5/c1-20-15-8-7-12(9-14(15)19)5-6-13-10-16(21-2)18(23-4)17(11-13)22-3/h7-11,19H,5-6H2,1-4H3
+  standard_inchi_key: UXDFUVFNIAJEGM-UHFFFAOYSA-N
+  molecular_formula: C18H22O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 318.369
+  monoisotopic_mass: 318.14672
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:233659
+  source_label: erianin
+  minted_identifier: antibioticmech:chebi-ae225b7143
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,99 @@
+identifier: CHEBI:47278
+label: brivudine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyrimidine 2'-deoxyribonucleoside that is 2'-deoxyuridine in which the
+  hydrogen at position 5 of the uracil ring is substituted by a 2-bromoethenyl group.
+  It is an antiviral drug used for the treatment of herpes zoster (shingles).
+definition_source: ChEBI
+synonyms:
+- synonym_text: Brivir
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Mevir
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Zostex
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: brivudina
+  synonym_type: INN
+  source: chebi
+- synonym_text: brivudinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 5-[(E)-2-bromoethenyl]-2'-deoxyuridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-5-(2-bromovinyl)-2'-deoxyuridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-5-(2-bromovinyl)deoxyuridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-[(1E)-2-bromoethenyl]-2'-deoxyuridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-[(E)-2-bromoethenyl]-1-[(2R,4S,5R)-4-hydroxy-5-(hydroxymethyl)oxolan-2-yl]pyrimidine-2,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-bromovinyldeoxyuridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BVDU
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BVdU
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RP 101
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RP-101
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RP101
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: brivudin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bromovinyldeoxyuridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:19255
+- CHEBI:37141
+xrefs:
+- cas:69304-47-8
+- drugbank:DB03312
+- drugcentral:397
+- kegg.drug:D07249
+- patent:CN101066987
+- pdb-ccd:BVD
+- wikipedia.en:Brivudine
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: O=c1nc(=O)n([C@H]2C[C@H](O)[C@@H](CO)O2)cc1/C=C/Br
+  standard_inchi: InChI=1S/C11H13BrN2O5/c12-2-1-6-4-14(11(18)13-10(6)17)9-3-7(16)8(5-15)19-9/h1-2,4,7-9,15-16H,3,5H2,(H,13,17,18)/b2-1+/t7-,8+,9+/m0/s1
+  standard_inchi_key: ODZBBRURCPAEIQ-PIXDULNESA-N
+  molecular_formula: C11H13BrN2O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 333.138
+  monoisotopic_mass: 332.00078
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:47278
+  source_label: brivudine
+  minted_identifier: antibioticmech:chebi-7fab7a9368
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

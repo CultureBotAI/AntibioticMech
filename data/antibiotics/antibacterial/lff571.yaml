@@ -1,0 +1,57 @@
+identifier: antibioticmech:aro-9abc576b69
+label: LFF571
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: LFF571 is a novel semi-synthetic thiopeptide antibiotic derived from GE2270.
+  It has been shown to possess potent in vitro and in vivo activity against Gram-positive
+  bacteria. It is hypothesized that it a translation inhibitor leading to cell death.
+definition_source: PMID:22644023
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3003414
+- chembl:CHEMBL2063705
+- pubchem.compound:42638236
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: CC1=C2C(=O)N[C@H](C3=NC(=C(S3)COC)C(=O)NCC(=O)N[C@H](C4=NC(=CS4)C5=NC(=CS5)C6=C(C=CC(=N6)C7=NC(=CS7)N(CCCCC(=O)O)C(=O)OC8CCC(CC8)C(=O)O)C9=NC(=CS9)C(=O)N[C@H](C(=N2)S1)CC(=O)NC)[C@H](C1=CC=CC=C1)O)C(C)C
+  standard_inchi: InChI=1S/C60H63N13O13S6/c1-28(2)44-58-72-47(39(92-58)23-85-5)51(80)62-22-42(75)69-48(49(78)30-11-7-6-8-12-30)57-67-38(26-89-57)55-65-36(24-88-55)46-33(53-66-37(25-87-53)50(79)64-35(21-41(74)61-4)56-71-45(29(3)91-56)52(81)70-44)18-19-34(63-46)54-68-40(27-90-54)73(20-10-9-13-43(76)77)60(84)86-32-16-14-31(15-17-32)59(82)83/h6-8,11-12,18-19,24-28,31-32,35,44,48-49,78H,9-10,13-17,20-23H2,1-5H3,(H,61,74)(H,62,80)(H,64,79)(H,69,75)(H,70,81)(H,76,77)(H,82,83)/t31?,32?,35-,44-,48-,49-/m0/s1
+  standard_inchi_key: GNLYKLDXQZHYTR-QWSGWXDSSA-N
+  molecular_formula: C60H63N13O13S6
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1366.6
+  monoisotopic_mass: 1365.29925616
+source_concepts:
+- source: ARO
+  source_id: ARO:3003414
+  source_label: LFF571
+  minted_identifier: antibioticmech:aro-9abc576b69
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003357
+  label: Clostridioides difficile EF-Tu mutants conferring resistance to elfamycin
+  evidence:
+  - reference: ARO:3003357
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003414 (LFF571);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000731
+  target_label: elongation factor Tu
+  evidence:
+  - reference: ARO:3000731
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3003414 (LFF571); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

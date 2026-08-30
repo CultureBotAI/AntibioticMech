@@ -1,0 +1,53 @@
+identifier: CHEBI:77795
+label: (S)-temafloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: 1-(2,4-difluorophenyl)-6-fluoro-7-(3-methylpiperazin-1-yl)-4-oxo-1,4-dihydroquinoline-3-carboxylic
+  acid that has S configuration.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-(2,4-difluorophenyl)-6-fluoro-7-[(3S)-3-methylpiperazin-1-yl]-4-oxo-1,4-dihydroquinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-(−)-temafloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-temafloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:77796
+xrefs:
+- reaxys:4301727
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: C[C@H]1CN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3-c2ccc(F)cc2F)CCN1
+  standard_inchi: InChI=1S/C21H18F3N3O3/c1-11-9-26(5-4-25-11)19-8-18-13(7-16(19)24)20(28)14(21(29)30)10-27(18)17-3-2-12(22)6-15(17)23/h2-3,6-8,10-11,25H,4-5,9H2,1H3,(H,29,30)/t11-/m0/s1
+  standard_inchi_key: QKDHBVNJCZBTMR-NSHDSACASA-N
+  molecular_formula: C21H18F3N3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 417.387
+  monoisotopic_mass: 417.13003
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77795
+  source_label: (S)-temafloxacin
+  minted_identifier: antibioticmech:chebi-28f1f00ad0
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

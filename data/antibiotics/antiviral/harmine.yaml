@@ -1,0 +1,71 @@
+identifier: CHEBI:28121
+label: harmine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A harmala alkaloid in which the harman skeleton is methoxy-substituted
+  at C-7.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7-methoxy-1-methyl-9H-pyrido[3,4-b]indole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Methoxyharman
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-methoxy-1-methyl-9H-β-carboline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Banisterine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Harmine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Leucoharmine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Telepathine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Yageine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Yajeine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:61379
+xrefs:
+- cas:442-51-3
+- drugbank:DB07919
+- kegg.compound:C06538
+- knapsack:C00001737
+- lincs.smallmolecule:LSM-5451
+- pdb-ccd:HRM
+- reaxys:178813
+- wikipedia.en:Harmine
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: COc1ccc2c(c1)nc1c(C)nccc12
+  standard_inchi: InChI=1S/C13H12N2O/c1-8-13-11(5-6-14-8)10-4-3-9(16-2)7-12(10)15-13/h3-7,15H,1-2H3
+  standard_inchi_key: BXNJHAXVSOCGBA-UHFFFAOYSA-N
+  molecular_formula: C13H12N2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 212.252
+  monoisotopic_mass: 212.09496
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28121
+  source_label: harmine
+  minted_identifier: antibioticmech:chebi-bca471eba6
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

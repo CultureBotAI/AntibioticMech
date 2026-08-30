@@ -1,0 +1,123 @@
+identifier: CHEBI:81922
+label: flusilazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organosilicon compound that is dimethylsilane in which the hydrogens
+  attached to the silicon are replaced by p-fluorophenyl groups and a hydrogen attached
+  to one of the methyl groups is replaced by a 1H-1,2,4-triazol-1-yl group. It is
+  a broad-sepctrum fungicide used to protect a variety of crops.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Nustar
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 1-{[bis(4-fluorophenyl)(methyl)silyl]methyl}-1H-1,2,4-triazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-[[bis(4-fluorophenyl)methylsilyl]methyl]-1H-1,2,4-triazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DPX-H 6573
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bis(4-fluorophenyl)(methyl)(1H-1,2,4-triazol-1-ylmethyl)silane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: di(4-fluorophenyl)(1,2,4-triazole-2-ylmethyl)methylsilane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: flusilazol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25713
+- CHEBI:35727
+- CHEBI:83575
+- CHEBI:87067
+- CHEBI:87100
+- ARO:3007499
+xrefs:
+- ARO:3009408
+- cas:85509-19-9
+- cas:96827-34-8
+- hmdb:HMDB0039815
+- kegg.compound:C18733
+- patent:EP68813
+- patent:US4510136
+- pesticides:flusilazole
+- ppdb:350
+- reaxys:5824097
+- wikipedia.en:Flusilazole
+- chembl:CHEMBL1900522
+- pubchem.compound:73675
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:77884
+- CHEBI:86328
+structural_class: triazole antifungal
+structural_class_id: ARO:3007499
+chemical_structure:
+  smiles: C[Si](Cn1cncn1)(c1ccc(F)cc1)c1ccc(F)cc1
+  standard_inchi: InChI=1S/C16H15F2N3Si/c1-22(12-21-11-19-10-20-21,15-6-2-13(17)3-7-15)16-8-4-14(18)5-9-16/h2-11H,12H2,1H3
+  standard_inchi_key: FQKUGOMFVDPBIZ-UHFFFAOYSA-N
+  molecular_formula: C16H15F2N3Si
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 315.399
+  monoisotopic_mass: 315.10033
+source_concepts:
+- source: ARO
+  source_id: ARO:3009408
+  source_label: flusilazole
+  minted_identifier: antibioticmech:aro-88092e6731
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:81922
+  source_label: flusilazole
+  minted_identifier: antibioticmech:chebi-7110ab8610
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:77884
+  - CHEBI:86328
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009409
+  label: Zymoseptoria tritici Cyp51 with mutations conferring resistance to flusilazole
+  evidence:
+  - reference: ARO:3009409
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009408 (flusilazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009535
+  label: Pyrenopeziza brassicae Cyp51 with mutations conferring resistance to flusilazole
+  evidence:
+  - reference: ARO:3009535
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009408 (flusilazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009541
+  label: Tapesia acuformis Cyp51 with mutations conferring resistance to flusilazole
+  evidence:
+  - reference: ARO:3009541
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009408 (flusilazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009542
+  label: Tapesia yallundae Cyp51 with mutations conferring resistance to flusilazole
+  evidence:
+  - reference: ARO:3009542
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009408 (flusilazole);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

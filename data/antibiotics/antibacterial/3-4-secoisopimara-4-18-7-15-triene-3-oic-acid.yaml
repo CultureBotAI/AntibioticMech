@@ -1,0 +1,43 @@
+identifier: CHEBI:66459
+label: 3,4-secoisopimara-4(18),7,15-triene-3-oic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diterpenoid of the class of secoisopimarane isolated from Salvia cinnabarina
+  and has been shown to exhibit antispasmodic, hypotensive and antibacterial activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-[(1S,2S,6S,8aS)-6-ethenyl-1,6-dimethyl-2-(prop-1-en-2-yl)-1,2,3,5,6,7,8,8a-octahydronaphthalen-1-yl]propanoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23849
+- CHEBI:25384
+- CHEBI:36785
+xrefs:
+- reaxys:22892163
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12CC[C@](C)(C=C)CC1=CC[C@@H](C(=C)C)[C@]2(C)CCC(=O)O'
+  standard_inchi: InChI=1S/C20H30O2/c1-6-19(4)11-9-17-15(13-19)7-8-16(14(2)3)20(17,5)12-10-18(21)22/h6-7,16-17H,1-2,8-13H2,3-5H3,(H,21,22)/t16-,17-,19-,20-/m0/s1
+  standard_inchi_key: XQZUWQQUDZZOHA-ZULIPRJHSA-N
+  molecular_formula: C20H30O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 302.458
+  monoisotopic_mass: 302.22458
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66459
+  source_label: 3,4-secoisopimara-4(18),7,15-triene-3-oic acid
+  minted_identifier: antibioticmech:chebi-bc4a7ec761
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

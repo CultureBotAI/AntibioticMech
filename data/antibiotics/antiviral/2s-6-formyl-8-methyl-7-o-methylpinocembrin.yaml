@@ -1,0 +1,45 @@
+identifier: CHEBI:70660
+label: (2S)-6-formyl-8-methyl-7-O-methylpinocembrin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monohydroxyflavanone that is (2S)-flavanone substituted by a hydroxy
+  group at position 5, a methoxy group at position 7, a methyl group at position 8
+  and a formyl group at position 6. Isolated from the buds of Cleistocalyx operculatus,
+  it has been shown to exhibit inhibitory effects on the viral neuraminidases from
+  two influenza viral strains, H1N1 and H9N2.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-5-hydroxy-7-methoxy-8-methyl-4-oxo-2-phenyl-3,4-dihydro-2H-chromene-6-carbaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17478
+- CHEBI:38738
+- CHEBI:38748
+xrefs:
+- reaxys:5449075
+activity_roles:
+- CHEBI:52425
+chemical_structure:
+  smiles: COc1c(C)c2c(c(O)c1C=O)C(=O)C[C@@H](c1ccccc1)O2
+  standard_inchi: InChI=1S/C18H16O5/c1-10-17(22-2)12(9-19)16(21)15-13(20)8-14(23-18(10)15)11-6-4-3-5-7-11/h3-7,9,14,21H,8H2,1-2H3/t14-/m0/s1
+  standard_inchi_key: HGTSZOYDQGUVER-AWEZNQCLSA-N
+  molecular_formula: C18H16O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 312.321
+  monoisotopic_mass: 312.09977
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70660
+  source_label: (2S)-6-formyl-8-methyl-7-O-methylpinocembrin
+  minted_identifier: antibioticmech:chebi-4ed58a85ad
+  role_terms:
+  - CHEBI:52425
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,58 @@
+identifier: CHEBI:167666
+label: N-ethyl-1-deoxynojirimycin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxypiperidine that is duvoglustat in which the amino hydrogen is
+  replaced by an ethyl group. It is an inhibitor of α-glucosidase, an agonist of the
+  glucose sensor SGLT3 and exhibits anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3R,4R,5S)-1-ethyl-2-(hydroxymethyl)piperidine-3,4,5-triol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R,3R,4R,5S)-1-ethyl-2-(hydroxymethyl)-3,4,5-piperidinetriol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: EtDNJ
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-ethyl-DNJ
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-ethyldeoxynojirimycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-ethylmoranoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48590
+- CHEBI:50996
+xrefs:
+- cas:72458-42-5
+- chemspider:397723
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: CCN1C[C@H](O)[C@@H](O)[C@H](O)[C@H]1CO
+  standard_inchi: InChI=1S/C8H17NO4/c1-2-9-3-6(11)8(13)7(12)5(9)4-10/h5-8,10-13H,2-4H2,1H3/t5-,6+,7-,8-/m1/s1
+  standard_inchi_key: DAYOICKCVBMUPS-ULAWRXDQSA-N
+  molecular_formula: C8H17NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 191.227
+  monoisotopic_mass: 191.11576
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:167666
+  source_label: N-ethyl-1-deoxynojirimycin
+  minted_identifier: antibioticmech:chebi-ef7d0e91d7
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

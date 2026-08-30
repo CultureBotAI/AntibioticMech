@@ -1,0 +1,38 @@
+identifier: antibioticmech:aro-148ae939a4
+label: azamulin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Azamulin is a semi-synthetic pleuromutilin derivative that failed Stage
+  1 clinical trials due to poor bioavailability.
+definition_source: PMID:14709627
+parent_compounds:
+- ARO:3000670
+xrefs:
+- ARO:3001316
+- CHEBI:201468
+- chembl:CHEMBL2103760
+- pubchem.compound:16072188
+structural_class: pleuromutilin antibiotic
+structural_class_id: ARO:3000670
+chemical_structure:
+  smiles: CC[C@@]1(C[C@H]([C@@]2([C@@H](CC[C@@]3([C@H]2C(=O)CC3)[C@H]([C@@H]1O)C)C)C)OC(=O)CSC4=NNC(=N4)N)C
+  standard_inchi: InChI=1S/C24H38N4O4S/c1-6-22(4)11-16(32-17(30)12-33-21-26-20(25)27-28-21)23(5)13(2)7-9-24(14(3)19(22)31)10-8-15(29)18(23)24/h13-14,16,18-19,31H,6-12H2,1-5H3,(H3,25,26,27,28)/t13-,14+,16-,18+,19+,22-,23+,24+/m1/s1
+  standard_inchi_key: FMHQJXGMLMSMLC-WBUYAQKGSA-N
+  molecular_formula: C24H38N4O4S
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 478.6
+  monoisotopic_mass: 478.26137688
+source_concepts:
+- source: ARO
+  source_id: ARO:3001316
+  source_label: azamulin
+  minted_identifier: antibioticmech:aro-148ae939a4
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

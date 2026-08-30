@@ -1,0 +1,40 @@
+identifier: antibioticmech:aro-43b735a15d
+label: narasin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Narasin is polyether ionophore antibiotic. It is a derivative of salinomycin
+  with an additional methyl group. Narasin is produced by fermentation of a strain
+  of Streptomyces aureofaciens.
+definition_source: PMID:37119567
+parent_compounds:
+- ARO:3005163
+xrefs:
+- ARO:3007471
+- cas:55134-13-9
+- CHEBI:183815
+- chembl:CHEMBL2104423
+- pubchem.compound:65452
+structural_class: ionophore with antibiotic activity
+structural_class_id: ARO:3005163
+chemical_structure:
+  smiles: CC[C@H]([C@H]1[C@H](C[C@@H]([C@@H](O1)[C@@H](C)[C@@H]([C@H](C)C(=O)[C@H](CC)[C@@H]2[C@H](C[C@H]([C@]3(O2)C=C[C@H]([C@@]4(O3)CC[C@@](O4)(C)[C@H]5CC[C@@]([C@@H](O5)C)(CC)O)O)C)C)O)C)C)C(=O)O
+  standard_inchi: InChI=1S/C43H72O11/c1-12-30(35(46)27(8)34(45)28(9)36-23(4)21-24(5)37(51-36)31(13-2)39(47)48)38-25(6)22-26(7)42(52-38)18-15-32(44)43(54-42)20-19-40(11,53-43)33-16-17-41(49,14-3)29(10)50-33/h15,18,23-34,36-38,44-45,49H,12-14,16-17,19-22H2,1-11H3,(H,47,48)/t23-,24-,25-,26+,27-,28-,29-,30-,31+,32+,33+,34+,36+,37+,38-,40-,41+,42-,43-/m0/s1
+  standard_inchi_key: VHKXXVVRRDYCIK-CWCPJSEDSA-N
+  molecular_formula: C43H72O11
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 765.0
+  monoisotopic_mass: 764.50746311
+source_concepts:
+- source: ARO
+  source_id: ARO:3007471
+  source_label: narasin
+  minted_identifier: antibioticmech:aro-43b735a15d
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

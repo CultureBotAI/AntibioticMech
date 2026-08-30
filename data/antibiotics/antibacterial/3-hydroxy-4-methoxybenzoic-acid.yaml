@@ -1,0 +1,52 @@
+identifier: CHEBI:63798
+label: 3-hydroxy-4-methoxybenzoic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A methoxybenzoic acid that is 4-methoxybenzoic acid bearing a hydroxy
+  substituent at position 3.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-Hydroxyanisic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-hydroxy-p-anisic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acide isovanillique
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Isovanillic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25238
+- CHEBI:25389
+xrefs:
+- cas:645-08-9
+- hmdb:HMDB0060003
+- reaxys:2208365
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1ccc(C(=O)O)cc1O
+  standard_inchi: InChI=1S/C8H8O4/c1-12-7-3-2-5(8(10)11)4-6(7)9/h2-4,9H,1H3,(H,10,11)
+  standard_inchi_key: LBKFGYZQBSGRHY-UHFFFAOYSA-N
+  molecular_formula: C8H8O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 168.148
+  monoisotopic_mass: 168.04226
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:63798
+  source_label: 3-hydroxy-4-methoxybenzoic acid
+  minted_identifier: antibioticmech:chebi-0bd73e8a28
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

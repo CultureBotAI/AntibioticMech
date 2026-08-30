@@ -1,0 +1,119 @@
+identifier: CHEBI:2682
+label: amphotericin B
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide antibiotic used to treat potentially life-threatening fungal
+  infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: amfotericina B
+  synonym_type: INN
+  source: chebi
+- synonym_text: amphotericine B
+  synonym_type: INN
+  source: chebi
+- synonym_text: amphotericinum B
+  synonym_type: INN
+  source: chebi
+- synonym_text: (1R,3S,5R,6R,9R,11R,15S,16R,17R,18S,19E,21E,23E,25E,27E,29E,31E,33R,35S,36R,37S)-33-[(3-amino-3,6-dideoxy-β-D-mannopyranosyl)oxy]-1,3,5,6,9,11,17,37-octahydroxy-15,16,18-trimethyl-13-oxo-14,39-dioxabicyclo[33.3.1]nonatriaconta-19,21,23,25,27,29,31-heptaene-36-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AMPH-B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Amphotericine B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Liposomal Amphotericin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25105
+- CHEBI:26177
+- CHEBI:87113
+- ARO:3007497
+xrefs:
+- ARO:3007504
+- cas:1397-89-3
+- drugbank:DB00681
+- drugcentral:197
+- kegg.compound:C06573
+- kegg.drug:D00203
+- lipidmaps:LMPK06000002
+- patent:US2908611
+- reaxys:4645978
+- wikipedia.en:Amphotericin_B
+- chembl:CHEMBL267345
+- pubchem.compound:5280965
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+- CHEBI:35820
+- CHEBI:86327
+structural_class: polyene antifungal
+structural_class_id: ARO:3007497
+chemical_structure:
+  smiles: '[H][C@]12C[C@@H](O[C@@H]3O[C@H](C)[C@@H](O)[C@H](N)[C@@H]3O)/C=C/C=C/C=C/C=C/C=C/C=C/C=C/[C@H](C)[C@@H](O)[C@@H](C)[C@H](C)OC(=O)C[C@H](O)C[C@H](O)CC[C@@H](O)[C@H](O)C[C@H](O)C[C@](O)(C[C@H](O)[C@H]1C(=O)O)O2'
+  standard_inchi: InChI=1S/C47H73NO17/c1-27-17-15-13-11-9-7-5-6-8-10-12-14-16-18-34(64-46-44(58)41(48)43(57)30(4)63-46)24-38-40(45(59)60)37(54)26-47(61,65-38)25-33(51)22-36(53)35(52)20-19-31(49)21-32(50)23-39(55)62-29(3)28(2)42(27)56/h5-18,27-38,40-44,46,49-54,56-58,61H,19-26,48H2,1-4H3,(H,59,60)/b6-5+,9-7+,10-8+,13-11+,14-12+,17-15+,18-16+/t27-,28-,29-,30+,31+,32+,33-,34-,35+,36+,37-,38-,40+,41-,42+,43+,44-,46-,47+/m0/s1
+  standard_inchi_key: APKFDSVGJQXUKY-INPOYWNPSA-N
+  molecular_formula: C47H73NO17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 924.091
+  monoisotopic_mass: 923.48785
+source_concepts:
+- source: ARO
+  source_id: ARO:3007504
+  source_label: amphotericin B
+  minted_identifier: antibioticmech:aro-473ef1d757
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  - CHEBI:35820
+  - CHEBI:86327
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:2682
+  source_label: amphotericin B
+  minted_identifier: antibioticmech:chebi-1637b095ef
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  - CHEBI:35820
+  - CHEBI:86327
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009134
+  label: antifungal resistance-associated MSH
+  evidence:
+  - reference: ARO:3009134
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007504 (amphotericin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009209
+  label: Aspergillus fumigatus cyp51a with mutations conferring resistance to amphotericin
+    B
+  evidence:
+  - reference: ARO:3009209
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007504 (amphotericin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009394
+  label: Candida auris ERG11 lanosterol 14-alpha-demethylase with mutations conferring
+    resistance against amphotericin B
+  evidence:
+  - reference: ARO:3009394
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007504 (amphotericin
+      B); database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:54:36Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,46 @@
+identifier: CHEBI:69094
+label: licoricone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxyisoflavone which is isoflavone substituted by hydroxy groups
+  at positions 7 and 6', methoxy groups at positions 2' and 4' and a prenyl group
+  at position 3'. It has been isolated from Glycyrrhiza uralensis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7-hydroxy-3-[6-hydroxy-2,4-dimethoxy-3-(3-methylbut-2-en-1-yl)phenyl]-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:133959
+- CHEBI:38755
+xrefs:
+- cas:51847-92-8
+- hmdb:HMDB0029515
+- kegg.compound:C17765
+- lipidmaps:LMPK12050069
+- reaxys:1356854
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1cc(O)c(-c2coc3cc(O)ccc3c2=O)c(OC)c1CC=C(C)C
+  standard_inchi: InChI=1S/C22H22O6/c1-12(2)5-7-15-18(26-3)10-17(24)20(22(15)27-4)16-11-28-19-9-13(23)6-8-14(19)21(16)25/h5-6,8-11,23-24H,7H2,1-4H3
+  standard_inchi_key: GGWMNTNDTRKETA-UHFFFAOYSA-N
+  molecular_formula: C22H22O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 382.412
+  monoisotopic_mass: 382.14164
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69094
+  source_label: licoricone
+  minted_identifier: antibioticmech:chebi-9c7355ce7f
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

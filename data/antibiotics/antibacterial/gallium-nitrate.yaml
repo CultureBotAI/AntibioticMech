@@ -1,0 +1,60 @@
+identifier: CHEBI:231505
+label: gallium nitrate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The inorganic nitrate salt of gallium.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Ganite
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: gallium trinitrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ga(NO3)3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: gallium nitrate anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: gallium(III) nitrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nitric acid gallium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nitric acid, gallium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:231548
+- CHEBI:51084
+xrefs:
+- cas:13494-90-1
+- drugbank:DB05260
+- wikipedia.en:Gallium_nitrate
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=[N+]([O-])[O-].O=[N+]([O-])[O-].O=[N+]([O-])[O-].[Ga+3]
+  standard_inchi: InChI=1S/Ga.3NO3/c;3*2-1(3)4/q+3;3*-1
+  standard_inchi_key: CHPZKNULDCNCBW-UHFFFAOYSA-N
+  molecular_formula: Ga.3NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 255.735
+  monoisotopic_mass: 254.88903
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:231505
+  source_label: gallium nitrate
+  minted_identifier: antibioticmech:chebi-4fbee93df9
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

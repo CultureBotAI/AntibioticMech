@@ -1,0 +1,44 @@
+identifier: CHEBI:65942
+label: 5-galloylquercetin-3-O-α-L-arabinofuranoside
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quercetin O-glucoside in which quercetin is attached to a α-L-arabinofuranosyl
+  group at position 3 via a glycosidic linkage while the hydroxy group at position
+  5 is replaced by a galloyl group. Isolated from the young leaves of Calycolpus warscewiczianus,
+  it exhibits activity against a chloroquine-resistant strain of Plasmodium falciparum.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(3,4-dihydroxyphenyl)-7-hydroxy-4-oxo-5-(3,4,5-trihydroxybenzoyl)-4H-chromen-3-yl
+    α-L-arabinofuranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27116
+- CHEBI:37572
+- CHEBI:50018
+- CHEBI:63367
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: O=C(c1cc(O)c(O)c(O)c1)c1cc(O)cc2oc(-c3ccc(O)c(O)c3)c(O[C@@H]3O[C@@H](CO)[C@H](O)[C@H]3O)c(=O)c12
+  standard_inchi: InChI=1S/C27H22O14/c28-8-18-22(36)24(38)27(40-18)41-26-23(37)19-12(20(34)10-4-15(32)21(35)16(33)5-10)6-11(29)7-17(19)39-25(26)9-1-2-13(30)14(31)3-9/h1-7,18,22,24,27-33,35-36,38H,8H2/t18-,22-,24+,27-/m0/s1
+  standard_inchi_key: GUMSRJAIAPTKAF-CSEOLDMBSA-N
+  molecular_formula: C27H22O14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 570.459
+  monoisotopic_mass: 570.10096
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65942
+  source_label: 5-galloylquercetin-3-O-α-L-arabinofuranoside
+  minted_identifier: antibioticmech:chebi-c98c117508
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

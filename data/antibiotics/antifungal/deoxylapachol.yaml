@@ -1,0 +1,58 @@
+identifier: CHEBI:4414
+label: deoxylapachol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 1,4-naphthoquinones that is 1,4-naphthoquinone
+  substituted by a 3-methylbut-2-en-1-yl group at position 2.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(3-methylbut-2-en-1-yl)naphthalene-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(3-methyl-2-buten-1-yl)-1,4-naphthalenedione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(3-methyl-2-butenyl)-1,4-naphthoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(3-methyl-2-butenyl)naphthalene-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: desoxylapachol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-prenyl-1,4-naphthoquinone
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132142
+- CHEBI:78840
+xrefs:
+- cas:3568-90-9
+- kegg.compound:C10325
+- knapsack:C00002813
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(C)=CCC1=CC(=O)c2ccccc2C1=O
+  standard_inchi: InChI=1S/C15H14O2/c1-10(2)7-8-11-9-14(16)12-5-3-4-6-13(12)15(11)17/h3-7,9H,8H2,1-2H3
+  standard_inchi_key: OSDFYZPKJKRCRR-UHFFFAOYSA-N
+  molecular_formula: C15H14O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 226.275
+  monoisotopic_mass: 226.09938
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4414
+  source_label: deoxylapachol
+  minted_identifier: antibioticmech:chebi-4467555563
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,225 @@
+identifier: CHEBI:44137
+label: tiamulin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbotricyclic compound that is pleuromutilin in which the hydroxyacetate
+  group is replaced by a 2-{[2-(diethylamino)ethyl]sulfanyl}acetate group. An antibacterial
+  drug, tiamulin is used in veterinary medicine (generally as its hydrogen fumarate
+  salt) for the treatment of swine dysentery caused by Serpulina hyodysenteriae.
+definition_source: ChEBI
+synonyms:
+- synonym_text: tiamulina
+  synonym_type: INN
+  source: chebi
+- synonym_text: tiamuline
+  synonym_type: INN
+  source: chebi
+- synonym_text: tiamulinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (3aS,4R,5S,6S,8R,9R,9aR,10R)-5-hydroxy-4,6,9,10-tetramethyl-1-oxo-6-vinyldecahydro-3a,9-propanocyclopenta[8]annulen-8-yl
+    {[2-(diethylamino)ethyl]sulfanyl}acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:16385
+- CHEBI:33308
+- CHEBI:35681
+- CHEBI:38032
+- CHEBI:3992
+- CHEBI:50996
+- CHEBI:52557
+- CHEBI:72588
+- ARO:3000670
+xrefs:
+- ARO:3000671
+- cas:55297-95-5
+- kegg.compound:C12065
+- kegg.drug:D06127
+- patent:DE2248237
+- patent:US3919290
+- pdb-ccd:MUL
+- reaxys:7348837
+- wikipedia.en:Tiamulin
+- chembl:CHEMBL1234521
+- pubchem.compound:656958
+activity_roles:
+- CHEBI:36047
+structural_class: pleuromutilin antibiotic
+structural_class_id: ARO:3000670
+chemical_structure:
+  smiles: '[H][C@@]12C(=O)CC[C@]13CC[C@@]([H])(C)[C@@]2(C)[C@H](OC(=O)CSCCN(CC)CC)C[C@@](C)(C=C)[C@@H](O)[C@@H]3C'
+  standard_inchi: InChI=1S/C28H47NO4S/c1-8-26(6)17-22(33-23(31)18-34-16-15-29(9-2)10-3)27(7)19(4)11-13-28(20(5)25(26)32)14-12-21(30)24(27)28/h8,19-20,22,24-25,32H,1,9-18H2,2-7H3/t19-,20+,22-,24+,25+,26-,27+,28+/m1/s1
+  standard_inchi_key: UURAUHCOJAIIRQ-QGLSALSOSA-N
+  molecular_formula: C28H47NO4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 493.754
+  monoisotopic_mass: 493.32258
+source_concepts:
+- source: ARO
+  source_id: ARO:3000671
+  source_label: tiamulin
+  minted_identifier: antibioticmech:aro-3cd7dfcc47
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:44137
+  source_label: tiamulin
+  minted_identifier: antibioticmech:chebi-9d414fbd6e
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002814
+  label: clbA
+  evidence:
+  - reference: ARO:3002814
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002815
+  label: clbB
+  evidence:
+  - reference: ARO:3002815
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002816
+  label: clbC
+  evidence:
+  - reference: ARO:3002816
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002831
+  label: vgaC
+  evidence:
+  - reference: ARO:3002831
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002833
+  label: vgaE
+  evidence:
+  - reference: ARO:3002833
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003441
+  label: cfrA
+  evidence:
+  - reference: ARO:3003441
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3003749
+  label: salA
+  evidence:
+  - reference: ARO:3003749
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003907
+  label: cipA
+  evidence:
+  - reference: ARO:3003907
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004476
+  label: vmlR
+  evidence:
+  - reference: ARO:3004476
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004599
+  label: clcD
+  evidence:
+  - reference: ARO:3004599
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004715
+  label: vga(E) Staphylococcus cohnii
+  evidence:
+  - reference: ARO:3004715
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3005023
+  label: cfrE
+  evidence:
+  - reference: ARO:3005023
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3005081
+  label: Thermus thermophilus uL3 mutations conferring resistance to pleuromutilin
+    antibiotics
+  evidence:
+  - reference: ARO:3005081
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3005083
+  label: Thermus thermophilus 23s rRNA conferring resistance to pleuromutilin antibiotics
+  evidence:
+  - reference: ARO:3005083
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3005121
+  label: lsaD
+  evidence:
+  - reference: ARO:3005121
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007026
+  label: salB
+  evidence:
+  - reference: ARO:3007026
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007027
+  label: salC
+  evidence:
+  - reference: ARO:3007027
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007028
+  label: salD
+  evidence:
+  - reference: ARO:3007028
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007029
+  label: salE
+  evidence:
+  - reference: ARO:3007029
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007646
+  label: Neobacillus vireti vmlR2
+  evidence:
+  - reference: ARO:3007646
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000671 (tiamulin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

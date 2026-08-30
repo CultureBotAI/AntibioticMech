@@ -1,0 +1,51 @@
+identifier: CHEBI:66401
+label: morellic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dioxo monocarboxylic acid derived from morellin by oxidation of the
+  aldehyde group to the corresponding carboxy group. Isolated from Garcinia morella
+  and Garcinia hanburyi, it exhibits antineoplastic, antibacterial and anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2Z)-4-[(1R,3aS,5S,14aS)-8-hydroxy-3,3,11,11-tetramethyl-13-(3-methylbut-2-en-1-yl)-7,15-dioxo-5,7-dihydro-3H,11H-1,5-methanofuro[3,4-g]pyrano[3,2-b]xanthen-3a(4H)-yl]-2-methylbut-2-enoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33640
+- CHEBI:33853
+- CHEBI:35951
+- CHEBI:37407
+- CHEBI:3992
+- CHEBI:51914
+activity_roles:
+- CHEBI:33282
+- CHEBI:64947
+chemical_structure:
+  smiles: '[H][C@@]12OC(C)(C)[C@]3(C/C=C(/C)C(=O)O)C[C@@]([H])(C=C4C(=O)c5c(O)c6c(c(CC=C(C)C)c5O[C@]431)OC(C)(C)C=C6)C2=O'
+  standard_inchi: InChI=1S/C33H36O8/c1-16(2)8-9-20-26-19(11-12-30(4,5)39-26)24(35)22-25(36)21-14-18-15-32(13-10-17(3)29(37)38)31(6,7)41-28(23(18)34)33(21,32)40-27(20)22/h8,10-12,14,18,28,35H,9,13,15H2,1-7H3,(H,37,38)/b17-10-/t18-,28+,32+,33+/m1/s1
+  standard_inchi_key: ITPZQGLNWWAFMF-FXQQNLISSA-N
+  molecular_formula: C33H36O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 560.643
+  monoisotopic_mass: 560.24102
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66401
+  source_label: morellic acid
+  minted_identifier: antibioticmech:chebi-4cb2e877f6
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:64947
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,217 @@
+identifier: CHEBI:45257
+label: ribostamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An amino cyclitol glycoside that is 4,6-diaminocyclohexane-1,2,3-triol
+  having a 2,6-diamino-2,6-dideoxy-α-D-glucosyl residue attached at position 1 and
+  a β-D-ribosyl residue attached at position 2. It is an antibiotic produced by Streptomyces
+  ribosidificus (formerly S. thermoflavus).
+definition_source: ChEBI
+synonyms:
+- synonym_text: ribostamicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: ribostamycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: ribostamycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (1R,2R,3R,4R,6S)-4,6-diamino-3-hydroxy-2-(β-D-ribofuranosyloxy)cyclohexyl
+    2,6-diamino-2,6-dideoxy-α-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RIBOSTAMYCIN
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SF-733
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Vistamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic SF 733
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ribostamycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dekamycin IV
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: hetangmycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: ribastamin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: vistamycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: xylostatin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:22479
+- CHEBI:22507
+- ARO:0000016
+xrefs:
+- ARO:0000021
+- cas:25546-65-0
+- drugbank:DB03615
+- drugcentral:3526
+- kegg.compound:C01759
+- kegg.drug:D08478
+- knapsack:C00018782
+- metacyc.compound:CPD-14143
+- patent:DE1814735
+- patent:US3661892
+- patent:US3799842
+- pdb-ccd:RIO
+- reaxys:1357280
+- wikipedia.en:Ribostamycin
+- chembl:CHEMBL221572
+- pubchem.compound:33042
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: '[H][C@@]1(O[C@@H]2[C@@H](O)[C@H](N)C[C@H](N)[C@H]2O[C@H]2O[C@H](CN)[C@@H](O)[C@H](O)[C@H]2N)O[C@H](CO)[C@@H](O)[C@H]1O'
+  standard_inchi: InChI=1S/C17H34N4O10/c18-2-6-10(24)12(26)8(21)16(28-6)30-14-5(20)1-4(19)9(23)15(14)31-17-13(27)11(25)7(3-22)29-17/h4-17,22-27H,1-3,18-21H2/t4-,5+,6-,7-,8-,9+,10-,11-,12-,13-,14-,15-,16-,17+/m1/s1
+  standard_inchi_key: NSKGQURZWSPSBC-VVPCINPTSA-N
+  molecular_formula: C17H34N4O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 454.477
+  monoisotopic_mass: 454.22749
+source_concepts:
+- source: ARO
+  source_id: ARO:0000021
+  source_label: ribostamycin
+  minted_identifier: antibioticmech:aro-ce5183caf1
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:45257
+  source_label: ribostamycin
+  minted_identifier: antibioticmech:chebi-9ae06cba97
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002641
+  label: APH(3')-Ia
+  evidence:
+  - reference: ARO:3002641
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000021 (ribostamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002642
+  label: APH(3')-Ib
+  evidence:
+  - reference: ARO:3002642
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000021 (ribostamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002644
+  label: APH(3')-IIa
+  evidence:
+  - reference: ARO:3002644
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000021 (ribostamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002645
+  label: APH(3')-IIb
+  evidence:
+  - reference: ARO:3002645
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000021 (ribostamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002646
+  label: APH(3')-IIc
+  evidence:
+  - reference: ARO:3002646
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000021 (ribostamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002647
+  label: APH(3')-IIIa
+  evidence:
+  - reference: ARO:3002647
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000021 (ribostamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002648
+  label: APH(3')-IVa
+  evidence:
+  - reference: ARO:3002648
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000021 (ribostamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002649
+  label: APH(3')-Va
+  evidence:
+  - reference: ARO:3002649
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000021 (ribostamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002650
+  label: APH(3')-Vb
+  evidence:
+  - reference: ARO:3002650
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000021 (ribostamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002651
+  label: APH(3')-Vc
+  evidence:
+  - reference: ARO:3002651
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000021 (ribostamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002652
+  label: APH(3')-VIa
+  evidence:
+  - reference: ARO:3002652
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000021 (ribostamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002653
+  label: APH(3')-VIb
+  evidence:
+  - reference: ARO:3002653
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000021 (ribostamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002665
+  label: npmA
+  evidence:
+  - reference: ARO:3002665
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000021 (ribostamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3009655
+  label: AAC(6')-Va
+  evidence:
+  - reference: ARO:3009655
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000021 (ribostamycin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000021 (ribostamycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

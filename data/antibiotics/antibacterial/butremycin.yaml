@@ -1,0 +1,43 @@
+identifier: CHEBI:152570
+label: butremycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polyketide macrolactam containing a tetramic acid (pyrrolidine-2,4-dione)
+  ring system. It is the 3-hydroxyl derivative of ikarugamycin and isolated from Micromonospora
+  sp. K310.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3R,3aS,5aR,5bS,7Z,13R,14S,19E,20aS,21aR,21bR)-3-ethyl-13,22-dihydroxy-2-methyl-2,3,3a,5a,5b,6,10,11,12,13,14,15,20a,21,21a,21b-hexadecahydro-1H-14,17-(metheno)-as-indaceno[3,2-k][1,6]diazacycloheptadecine-9,16,18(17H)-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24995
+- CHEBI:26188
+- CHEBI:38164
+- CHEBI:51689
+- CHEBI:52898
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12C=C[C@@]3([H])[C@H](CC)[C@H](C)C[C@]3([H])[C@@]1([H])C[C@@]1([H])/C=C/C(=O)C3=C(O)[C@@]([H])(NC3=O)[C@H](O)CCNC(=O)/C=C\C[C@]21[H]'
+  standard_inchi: InChI=1S/C29H38N2O5/c1-3-17-15(2)13-21-19(17)8-9-20-18-5-4-6-25(34)30-12-11-24(33)27-28(35)26(29(36)31-27)23(32)10-7-16(18)14-22(20)21/h4,6-10,15-22,24,27,33,35H,3,5,11-14H2,1-2H3,(H,30,34)(H,31,36)/b6-4-,10-7+/t15-,16-,17-,18+,19+,20-,21+,22+,24-,27+/m1/s1
+  standard_inchi_key: IJOMIIDEKGZJJF-KSCHHOEWSA-N
+  molecular_formula: C29H38N2O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 494.632
+  monoisotopic_mass: 494.27807
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:152570
+  source_label: butremycin
+  minted_identifier: antibioticmech:chebi-de0a5acd68
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

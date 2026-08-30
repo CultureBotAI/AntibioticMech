@@ -1,0 +1,66 @@
+identifier: CHEBI:51788
+label: faropenem
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Faropenem is an orally active beta-lactam antibiotic belonging to the
+  penem group.
+definition_source: PMID:12615878
+synonyms:
+- synonym_text: 6-(1-hydroxyethyl)-2-[(2R)-tetrahydrofuran-2-yl]-2,3-didehydropenam-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R)-6-(1-hydroxyethyl)-7-oxo-3-[(2R)-tetrahydrofuran-2-yl]-4-thia-1-azabicyclo[3.2.0]hept-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26912
+- CHEBI:35996
+- ARO:0000032
+xrefs:
+- ARO:3003707
+- chembl:CHEMBL556262
+- pubchem.compound:65894
+activity_roles:
+- CHEBI:33281
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]1(C2=C(C(=O)O)N3C(=O)C(C(C)O)[C@@]3([H])S2)CCCO1'
+  standard_inchi: InChI=1S/C12H15NO5S/c1-5(14)7-10(15)13-8(12(16)17)9(19-11(7)13)6-3-2-4-18-6/h5-7,11,14H,2-4H2,1H3,(H,16,17)/t5?,6-,7?,11-/m1/s1
+  standard_inchi_key: HGGAKXAHAYOLDJ-YZJVMBJSSA-N
+  molecular_formula: C12H15NO5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 285.321
+  monoisotopic_mass: 285.06709
+source_concepts:
+- source: ARO
+  source_id: ARO:3003707
+  source_label: faropenem
+  minted_identifier: antibioticmech:aro-8752c3cd08
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:51788
+  source_label: faropenem
+  minted_identifier: antibioticmech:chebi-986fff1193
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005511
+  label: VIM-63
+  evidence:
+  - reference: ARO:3005511
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003707 (faropenem);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

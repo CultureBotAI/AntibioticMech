@@ -1,0 +1,59 @@
+identifier: CHEBI:27744
+label: glyphosate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A phosphonic acid resulting from the formal oxidative coupling of the
+  methyl group of methylphosphonic acid with the amino group of glycine. It is one
+  of the most commonly used herbicides worldwide, and the only one to target the enzyme
+  5-enolpyruvyl-3-shikimate phosphate synthase (EPSPS).
+definition_source: ChEBI
+synonyms:
+- synonym_text: Roundup
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: N-(phosphonomethyl)glycine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glyphosate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24373
+- CHEBI:44976
+xrefs:
+- beilstein:2045054
+- cas:1071-83-6
+- drugbank:DB04539
+- gmelin:279222
+- kegg.compound:C01705
+- pdb-ccd:GPF
+- pdb-ccd:GPJ
+- pesticides:glyphosate
+- ppdb:373
+- umbbd.compound:c0134
+- wikipedia.en:Glyphosate
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: O=C(O)CNCP(=O)(O)O
+  standard_inchi: InChI=1S/C3H8NO5P/c5-3(6)1-4-2-10(7,8)9/h4H,1-2H2,(H,5,6)(H2,7,8,9)
+  standard_inchi_key: XDDAORKBJWWYJS-UHFFFAOYSA-N
+  molecular_formula: C3H8NO5P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 169.073
+  monoisotopic_mass: 169.01401
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:27744
+  source_label: glyphosate
+  minted_identifier: antibioticmech:chebi-d901d002bc
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,44 @@
+identifier: CHEBI:65541
+label: caesalpinin F
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracyclic diterpenoid isolated from the seed kernels of Caesalpinia
+  crista that has been found to exhibit antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (4aR,5S,6aR,7S,11aS,11bR)-5-(acetyloxy)-4a-hydroxy-4,4,11b-trimethyl-1-oxo-1,2,3,4,4a,5,6,6a,7,11,11a,11b-dodecahydrophenanthro[3,2-b]furan-7-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:26878
+- CHEBI:37407
+- CHEBI:47622
+- CHEBI:52557
+xrefs:
+- reaxys:10726765
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]12Cc3occc3[C@@H](C(=O)OC)[C@]1([H])C[C@H](OC(C)=O)[C@@]1(O)C(C)(C)CCC(=O)[C@]21C'
+  standard_inchi: InChI=1S/C23H30O7/c1-12(24)30-18-10-14-15(11-16-13(7-9-29-16)19(14)20(26)28-5)22(4)17(25)6-8-21(2,3)23(18,22)27/h7,9,14-15,18-19,27H,6,8,10-11H2,1-5H3/t14-,15+,18+,19-,22+,23-/m1/s1
+  standard_inchi_key: FGVVZVPAVGZHMX-SHLUOHGRSA-N
+  molecular_formula: C23H30O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 418.486
+  monoisotopic_mass: 418.19915
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65541
+  source_label: caesalpinin F
+  minted_identifier: antibioticmech:chebi-af97581dd9
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

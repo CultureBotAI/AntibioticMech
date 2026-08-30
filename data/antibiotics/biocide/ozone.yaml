@@ -1,0 +1,69 @@
+identifier: CHEBI:25812
+label: ozone
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An elemental molecule with formula O3. An explosive, pale blue gas (b.p.
+  −112°C) that has a characteristic, pungent odour, it is continuously produced in
+  the upper atmosphere by the action of solar ultraviolet radiation on atmospheric
+  oxygen. It is an antimicrobial agent used in the production of bottled water, as
+  well as in the treatment of meat, poultry and other foodstuffs.
+definition_source: ChEBI
+synonyms:
+- synonym_text: trioxygen
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ozon
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Trisauerstoff
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[OO2]'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ozono
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trioxygène
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:138675
+- CHEBI:25362
+- CHEBI:26523
+- CHEBI:33265
+xrefs:
+- cas:10028-15-6
+- gmelin:1101
+- hmdb:HMDB0035409
+- molbase:931
+- reaxys:4921393
+- wikipedia.en:Ozone
+activity_roles:
+- CHEBI:48219
+chemical_structure:
+  smiles: O=[O+][O-]
+  standard_inchi: InChI=1S/O3/c1-3-2
+  standard_inchi_key: CBENFWSGALASAD-UHFFFAOYSA-N
+  molecular_formula: O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 47.997
+  monoisotopic_mass: 47.98474
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:25812
+  source_label: ozone
+  minted_identifier: antibioticmech:chebi-2056022d89
+  role_terms:
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

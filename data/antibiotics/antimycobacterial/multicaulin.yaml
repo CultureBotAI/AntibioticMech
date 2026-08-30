@@ -1,0 +1,50 @@
+identifier: CHEBI:66407
+label: multicaulin
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diterpenoid that is phenanthrene substituted by a methoxy group at position
+  6, methyl groups at position 1 and 2 and an isopropyl group at position 7. A norabietane
+  derivative, it is isolated from the roots of Salvia multicaulis and exhibits antitubercular
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6-methoxy-1,2-dimethyl-7-(propan-2-yl)phenanthrene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 12-methoxy-abieta-1,3,5(10),6,8,11,13-heptaene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7,8-dimethyl-2-(propan-2-yl)phenanthren-3-yl methyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23849
+- CHEBI:25961
+- CHEBI:35618
+xrefs:
+- reaxys:7874294
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: COc1cc2c(ccc3c(C)c(C)ccc32)cc1C(C)C
+  standard_inchi: InChI=1S/C20H22O/c1-12(2)18-10-15-7-9-16-14(4)13(3)6-8-17(16)19(15)11-20(18)21-5/h6-12H,1-5H3
+  standard_inchi_key: QSZDTCGHFRXGFB-UHFFFAOYSA-N
+  molecular_formula: C20H22O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 278.395
+  monoisotopic_mass: 278.16707
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66407
+  source_label: multicaulin
+  minted_identifier: antibioticmech:chebi-63d2284ab4
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,40 @@
+identifier: antibioticmech:aro-d5fecb3190
+label: oncocin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: The small proline-rich antimicrobial peptide, oncocin, selectively targets
+  Gram-negative bacteria through special transporters such as SmbA to enter cytoplasm.
+  It presents low toxicity to mammalian cells, because they cannot effectively penetrate
+  the mammalian cellular membrane or they are internalized through an endocytotic
+  process to minimize interaction with cytosolic ribosomes.
+definition_source: PMID:29256010
+parent_compounds:
+- ARO:3000053
+xrefs:
+- ARO:3007748
+- chembl:CHEMBL1083466
+- pubchem.compound:46889826
+structural_class: peptide antibiotic
+structural_class_id: ARO:3000053
+chemical_structure:
+  smiles: CC[C@H](C)[C@@H](C(=O)N[C@@H](CC1=CC=C(C=C1)O)C(=O)N[C@@H](CC(=O)N)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H]2CCCN2C(=O)[C@@H]3CCCN3C(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H]4CCCN4C(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H]5CCCN5C(=O)[C@H](CC(C)C)NC(=O)[C@H](CC6=CC=C(C=C6)O)NC(=O)[C@@H]7CCCN7C(=O)[C@@H]8CCCN8C(=O)[C@H](CCCCN)NC(=O)[C@H](CC(=O)O)NC(=O)[C@H](C(C)C)N
+  standard_inchi: InChI=1S/C109H177N37O24/c1-7-60(6)85(98(164)138-72(55-62-35-39-64(148)40-36-62)89(155)135-73(56-82(111)149)91(157)129-65(86(113)152)22-10-42-124-105(114)115)140-88(154)67(24-12-44-126-107(118)119)130-87(153)66(23-11-43-125-106(116)117)131-93(159)78-29-17-49-143(78)103(169)81-32-20-52-146(81)101(167)70(26-14-46-128-109(122)123)134-94(160)76-27-15-47-141(76)99(165)69(25-13-45-127-108(120)121)133-95(161)77-28-16-48-142(77)102(168)75(53-58(2)3)139-90(156)71(54-61-33-37-63(147)38-34-61)136-96(162)79-30-18-50-144(79)104(170)80-31-19-51-145(80)100(166)68(21-8-9-41-110)132-92(158)74(57-83(150)151)137-97(163)84(112)59(4)5/h33-40,58-60,65-81,84-85,147-148H,7-32,41-57,110,112H2,1-6H3,(H2,111,149)(H2,113,152)(H,129,157)(H,130,153)(H,131,159)(H,132,158)(H,133,161)(H,134,160)(H,135,155)(H,136,162)(H,137,163)(H,138,164)(H,139,156)(H,140,154)(H,150,151)(H4,114,115,124)(H4,116,117,125)(H4,118,119,126)(H4,120,121,127)(H4,122,123,128)/t60-,65-,66-,67-,68-,69-,70-,71-,72-,73-,74-,75-,76-,77-,78-,79-,80-,81-,84-,85-/m0/s1
+  standard_inchi_key: LFHRGUYKUBKTMG-BSRMMMFRSA-N
+  molecular_formula: C109H177N37O24
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 2389.8
+  monoisotopic_mass: 2388.3767197
+source_concepts:
+- source: ARO
+  source_id: ARO:3007748
+  source_label: oncocin
+  minted_identifier: antibioticmech:aro-d5fecb3190
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

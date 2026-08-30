@@ -1,0 +1,210 @@
+# Upstream sources for the committed inventories in data/raw/.
+#
+# The inventories are the reproducible inputs to seeding: `just seed-apply`
+# reads only data/raw/, never the network. Re-extraction is needed only when
+# ChEBI or CARD publish a new release.
+
+chebi:
+  name: ChEBI
+  description: >-
+    Chemical Entities of Biological Interest. Compounds bearing an antimicrobial
+    role, with the structures and computed properties ChEBI publishes for them.
+  flat_files_base: https://ftp.ebi.ac.uk/pub/databases/chebi/flat_files/
+  files:
+    - compounds.tsv.gz
+    - relation.tsv.gz
+    - structures.tsv.gz
+    - chemical_data.tsv.gz
+    - database_accession.tsv.gz
+    - source.tsv.gz
+    - names.tsv.gz
+  # 3-star entries are manually curated by the ChEBI team; 2-star entries are
+  # automatically imported and are NOT seeded, because an automatic import is
+  # exactly where a wrong role assertion enters unreviewed. Lowering this is a
+  # curation decision, not a tuning knob.
+  min_stars: 3
+  # ChEBI stamps each RELATION row with its own status (1 CHECKED, 3 OK,
+  # 9 SUBMITTED). `min_stars` above governs the compound ENTRY; this governs the
+  # is_a and has_role edges, which is what actually decides whether a compound is
+  # in scope and how it is classified. Admitting SUBMITTED edges put two
+  # antiretrovirals into a corpus that excludes antivirals.
+  relation_status_allowed: [1, 3]
+  homepage: https://www.ebi.ac.uk/chebi/
+  license: CC BY 4.0
+
+aro:
+  name: CARD Antibiotic Resistance Ontology
+  description: >-
+    The antibiotic molecule subtree of ARO, plus the resistance determinants and
+    drug targets CARD links to those molecules.
+  url: https://purl.obolibrary.org/obo/aro.obo
+  molecule_root: ARO:1000003          # antibiotic molecule
+  mechanism_root: ARO:1000002         # mechanism of antibiotic resistance
+  # An ARO term carrying this property_value is a drug class, not an individual
+  # molecule. Classes become `structural_class` / `parent_compounds`, never records.
+  drug_class_marker: classified_as_drug_class
+  homepage: https://card.mcmaster.ca/
+  # The ONTOLOGY files (aro.obo, aro.owl) are CC BY 4.0 — verified against the
+  # arpcard/aro LICENSE, GitHub's spdx_id, the OBO Foundry registry and CARD's
+  # own download page. This is the only CARD file the pipeline reads.
+  # card.json is NOT this licence: it carries restrictive McMaster terms that
+  # prohibit reproduction by commercial organizations without written
+  # permission and require the materials be used unmodified. Do not add it to
+  # `files` without resolving that first (curation/source_queue.tsv, card-json).
+  license: CC BY 4.0 (aro.obo; card.json is separately restricted)
+
+pubchem:
+  name: PubChem
+  description: >-
+    Structure fallback for ARO molecules that carry no ChEBI cross-reference.
+    Network step; canary one CID before the batch (`just extract-pubchem-canary`).
+  rest_base: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/
+  properties:
+    - MolecularFormula
+    - MolecularWeight
+    - MonoisotopicMass
+    - Charge
+    - SMILES
+    - InChI
+    - InChIKey
+  # PubChem asks for <=5 requests/second; we stay well under.
+  requests_per_second: 3
+
+# ----------------------------------------------------------------------------
+# Role scope — which ChEBI roles put a compound in this corpus.
+#
+# "Antimicrobial" in ChEBI spans viruses as well as cellular microbes, and this
+# corpus follows it: bacteria, mycobacteria, fungi, protozoa, viruses, and the
+# biocides used against them are all in scope.
+#
+# Antivirals do sit differently in the mechanism model — the target is a viral
+# protein or a step in a replication cycle rather than a structure of a free-
+# living cell, and CARD's resistance determinants do not apply to them. That is
+# a reason for the mechanism vocabulary to cover both (see ModeOfActionEnum and
+# TargetTypeEnum in the schema), not a reason to exclude the compounds.
+#
+# Antibiotic pesticides remain OUT: insecticides, acaricides and nematicides
+# act on metazoa, which is a different kind of target altogether.
+#
+# Change scope by moving a root between the two lists and re-extracting.
+# ----------------------------------------------------------------------------
+role_scope:
+  in_scope:
+    - CHEBI:33281   # antimicrobial agent (generic)
+    - CHEBI:36043   # antimicrobial drug
+    - CHEBI:33282   # antibacterial agent
+    - CHEBI:35718   # antifungal agent
+    - CHEBI:35820   # antiprotozoal drug
+    - CHEBI:48219   # disinfectant
+    - CHEBI:65256   # antimicrobial food preservative
+    - CHEBI:172949  # antimicrobial cosmetic preservative
+    - CHEBI:22309   # alicyclic antibiotics
+    - CHEBI:22311   # aliphatic antibiotics
+    - CHEBI:22476   # amino acid derivative antibiotics
+    - CHEBI:25605   # nucleoside antibiotic
+    - CHEBI:26083   # phosphorus containing antibiotics
+    - CHEBI:140190  # calcium-dependent antibiotics
+    - CHEBI:22587   # antiviral agent — and its whole subtree (anti-HIV, anti-HBV, ...)
+  out_of_scope:
+    - CHEBI:39215   # antibiotic pesticide — insecticides/acaricides/nematicides act on metazoa
+
+# Role CURIE -> AntimicrobialClassEnum, for the single class a record is filed
+# under. Many compounds bear several roles (tetracycline is antibacterial,
+# antifungal AND antiprotozoal in ChEBI); `activity_roles` keeps all of them
+# unreduced, and this table only decides the filing.
+#
+# Lower `priority` wins. The order is not "most specific term" but "most
+# specific TARGET GROUP, bacteria first": ANTIMYCOBACTERIAL is a narrower claim
+# than ANTIBACTERIAL and beats it, and antibacterial activity outranks the
+# others because a bacterial claim is the one this corpus is consumed for.
+# Filing tetracycline under ANTIFUNGAL because "antifungal" sorted first would
+# be a reporting artefact, not a fact about tetracycline.
+role_to_class:
+  CHEBI:33231: {class: ANTIMYCOBACTERIAL, priority: 1}   # antitubercular agent
+  CHEBI:64912: {class: ANTIMYCOBACTERIAL, priority: 1}   # antimycobacterial drug
+  CHEBI:35816: {class: ANTIMYCOBACTERIAL, priority: 1}   # leprostatic drug
+  CHEBI:35718: {class: ANTIFUNGAL, priority: 3}          # antifungal agent
+  CHEBI:86327: {class: ANTIFUNGAL, priority: 3}          # antifungal drug
+  CHEBI:86328: {class: ANTIFUNGAL, priority: 3}          # antifungal agrochemical
+  CHEBI:24127: {class: ANTIFUNGAL, priority: 3}          # fungicide
+  CHEBI:136645: {class: ANTIFUNGAL, priority: 3}         # profungicide
+  CHEBI:141153: {class: ANTIFUNGAL, priority: 3}         # quinone outside inhibitor
+  CHEBI:83734: {class: ANTIFUNGAL, priority: 3}          # sterol demethylation inhibitor
+  CHEBI:77884: {class: ANTIFUNGAL, priority: 3}          # sterol 14alpha-demethylase inhibitor
+  CHEBI:35820: {class: ANTIPROTOZOAL, priority: 4}       # antiprotozoal drug
+  CHEBI:38068: {class: ANTIPROTOZOAL, priority: 4}       # antimalarial
+  CHEBI:64915: {class: ANTIPROTOZOAL, priority: 4}       # antiplasmodial drug
+  CHEBI:70868: {class: ANTIPROTOZOAL, priority: 4}       # antileishmanial agent
+  CHEBI:36335: {class: ANTIPROTOZOAL, priority: 4}       # trypanocidal drug
+  CHEBI:35818: {class: ANTIPROTOZOAL, priority: 4}       # coccidiostat
+  CHEBI:50685: {class: ANTIPROTOZOAL, priority: 4}       # antitrichomonal drug
+  CHEBI:33282: {class: ANTIBACTERIAL, priority: 2}       # antibacterial agent
+  CHEBI:36047: {class: ANTIBACTERIAL, priority: 2}       # antibacterial drug
+  CHEBI:36050: {class: ANTIBACTERIAL, priority: 2}       # antitreponemal drug
+  CHEBI:36051: {class: ANTIBACTERIAL, priority: 2}       # antisyphilitic drug
+  CHEBI:73911: {class: ANTIBACTERIAL, priority: 2}       # vibriostatic agent
+  # Antiviral roles, including the viral-enzyme-inhibitor terms ChEBI files
+  # under the antiviral branch. Priority 5: when a compound is asserted against
+  # both a cellular microbe and a virus, the cellular claim decides the filing,
+  # because that is what this corpus is primarily consumed for — and
+  # `activity_roles` keeps the antiviral role either way.
+  CHEBI:22587: {class: ANTIVIRAL, priority: 5}           # antiviral agent
+  CHEBI:36044: {class: ANTIVIRAL, priority: 5}           # antiviral drug
+  CHEBI:149553: {class: ANTIVIRAL, priority: 5}          # anticoronaviral agent
+  CHEBI:64946: {class: ANTIVIRAL, priority: 5}           # anti-HIV agent
+  CHEBI:64947: {class: ANTIVIRAL, priority: 5}           # anti-HIV-1 agent
+  CHEBI:64949: {class: ANTIVIRAL, priority: 5}           # anti-HIV-2 agent
+  CHEBI:64951: {class: ANTIVIRAL, priority: 5}           # anti-HBV agent
+  CHEBI:64952: {class: ANTIVIRAL, priority: 5}           # anti-HSV agent
+  CHEBI:64953: {class: ANTIVIRAL, priority: 5}           # anti-HSV-1 agent
+  CHEBI:64954: {class: ANTIVIRAL, priority: 5}           # anti-HSV-2 agent
+  CHEBI:35660: {class: ANTIVIRAL, priority: 5}           # HIV protease inhibitor
+  CHEBI:53756: {class: ANTIVIRAL, priority: 5}           # HIV-1 reverse transcriptase inhibitor
+  CHEBI:59886: {class: ANTIVIRAL, priority: 5}           # HIV fusion inhibitor
+  CHEBI:67268: {class: ANTIVIRAL, priority: 5}           # HIV-1 integrase inhibitor
+  CHEBI:71168: {class: ANTIVIRAL, priority: 5}           # HIV-1 maturation inhibitor
+  CHEBI:83799: {class: ANTIVIRAL, priority: 5}           # nonstructural protein 5A inhibitor
+  CHEBI:59897: {class: ANTIVIRAL, priority: 5}           # RNA-directed DNA polymerase inhibitor
+  CHEBI:52629: {class: ANTIVIRAL, priority: 5}           # retroviral ribonuclease H inhibitor
+  CHEBI:52425: {class: ANTIVIRAL, priority: 5}           # exo-alpha-sialidase inhibitor
+  CHEBI:48219: {class: BIOCIDE, priority: 6}             # disinfectant
+  CHEBI:65256: {class: BIOCIDE, priority: 6}             # antimicrobial food preservative
+  CHEBI:172949: {class: BIOCIDE, priority: 6}            # antimicrobial cosmetic preservative
+
+# ARO drug class -> AntimicrobialClassEnum, for the classes whose NAME states a
+# target group. CARD models antifungal resistance as well as antibacterial, so
+# "every ARO molecule is an antibacterial" is no longer true; a curated,
+# compound-specific drug class is stronger evidence than ChEBI's generic role
+# tags, and this map is consulted before them.
+#
+# Classes whose names do not state a group are deliberately absent.
+# "imidazole antibiotic" and "nitroimidazole antibiotic" each cover both
+# antibacterials and antifungals, and inferring the target group from the
+# chemistry is exactly the guess this repository should not make; those
+# compounds fall through to their ChEBI roles.
+aro_class_to_class:
+  ARO:3007497: ANTIFUNGAL   # polyene antifungal
+  ARO:3007498: ANTIFUNGAL   # allylamine antifungal
+  ARO:3007499: ANTIFUNGAL   # triazole antifungal
+  ARO:3007560: ANTIFUNGAL   # pyrimidine antifungal
+  ARO:3009305: ANTIFUNGAL   # strobilurin fungicide
+  ARO:3009317: ANTIFUNGAL   # benzimidazole antifungal
+  ARO:3009323: ANTIFUNGAL   # carbamate fungicides
+  ARO:3009539: ANTIFUNGAL   # fungal succinate dehydrogenase inhibitor
+
+# ARO determinant lineage -> ResistanceMechanismEnum. CARD's aro.obo does not
+# link a determinant to its mechanism category directly (that association lives
+# in card.json), so the mechanism is read off the determinant's is_a lineage.
+# A determinant whose lineage matches nothing here is seeded as UNKNOWN and
+# lands on the curation worklist rather than being guessed.
+aro_mechanism_map:
+  ARO:0001001: ANTIBIOTIC_TARGET_ALTERATION
+  ARO:0001002: ANTIBIOTIC_TARGET_REPLACEMENT
+  ARO:0001003: ANTIBIOTIC_TARGET_PROTECTION
+  ARO:0001004: ANTIBIOTIC_INACTIVATION
+  ARO:0010000: ANTIBIOTIC_EFFLUX
+  ARO:3000244: REDUCED_PERMEABILITY
+  ARO:3007609: ANTIBIOTIC_TARGET_ALTERATION
+  ARO:3000519: ANTIBIOTIC_TARGET_ALTERATION      # antibiotic target modifying enzyme
+  ARO:3000557: ANTIBIOTIC_INACTIVATION           # antibiotic inactivation enzyme
+  ARO:3000000: UNKNOWN                           # determinant of antibiotic resistance (root)

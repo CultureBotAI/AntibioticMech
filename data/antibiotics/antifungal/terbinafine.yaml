@@ -1,0 +1,142 @@
+identifier: CHEBI:9448
+label: terbinafine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tertiary amine that is N-methyl-1-naphthalenemethylamine in which the
+  amino hydrogen is replaced by a 3-(tertbutylethynyl)allyl group. An antifungal agent
+  administered orally (generally as the hydrochloride salt) for the treatment of skin
+  and nail infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: terbinafina
+  synonym_type: INN
+  source: chebi
+- synonym_text: terbinafinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2E)-N,6,6-trimethyl-N-(1-naphthylmethyl)hept-2-en-4-yn-1-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-N-(6,6-Dimethyl-2-hepten-4-ynyl)-N-methyl-1-naphthalene methanamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-N-(6,6-Dimethyl-2-hepten-4-ynyl)-N-methyl-1-naphthalenemethylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25477
+- CHEBI:32876
+- CHEBI:59831
+- CHEBI:73474
+- CHEBI:87127
+- ARO:3007498
+xrefs:
+- ARO:3007507
+- cas:91161-71-6
+- drugbank:DB00857
+- drugcentral:2597
+- hmdb:HMDB0014995
+- kegg.compound:C08079
+- kegg.drug:D02375
+- metacyc.compound:CPD-10571
+- reaxys:4256376
+- wikipedia.en:Terbinafine
+- chembl:CHEMBL822
+- pubchem.compound:1549008
+activity_roles:
+- CHEBI:86327
+structural_class: allylamine antifungal
+structural_class_id: ARO:3007498
+chemical_structure:
+  smiles: CN(C/C=C/C#CC(C)(C)C)Cc1cccc2ccccc12
+  standard_inchi: InChI=1S/C21H25N/c1-21(2,3)15-8-5-9-16-22(4)17-19-13-10-12-18-11-6-7-14-20(18)19/h5-7,9-14H,16-17H2,1-4H3/b9-5+
+  standard_inchi_key: DOMXUEMWDBAQBQ-WEVVVXLNSA-N
+  molecular_formula: C21H25N
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 291.438
+  monoisotopic_mass: 291.1987
+source_concepts:
+- source: ARO
+  source_id: ARO:3007507
+  source_label: terbinafine
+  minted_identifier: antibioticmech:aro-7b45a31503
+  role_terms:
+  - CHEBI:86327
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:9448
+  source_label: terbinafine
+  minted_identifier: antibioticmech:chebi-b78967d26d
+  role_terms:
+  - CHEBI:86327
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3007554
+  label: Candida albicans CDR2 with mutations conferring resistance to azoles
+  evidence:
+  - reference: ARO:3007554
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007507 (terbinafine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009269
+  label: Arthroderma vanbreuseghemii squalene epoxidase enzyme with mutations associated
+    with resistance to terbinafine
+  evidence:
+  - reference: ARO:3009269
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007507 (terbinafine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009270
+  label: Trychophyton rubrum squalene epoxidase enzyme with mutations associated with
+    resistance to terbinafine
+  evidence:
+  - reference: ARO:3009270
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007507 (terbinafine);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009425
+  label: fungal MDR
+  evidence:
+  - reference: ARO:3009425
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007507 (terbinafine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3009427
+  label: Candida albicans TAC1 with mutations conferring resistance to terbinafine
+  evidence:
+  - reference: ARO:3009427
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007507 (terbinafine);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009449
+  label: Microsporum canis MDR1 with mutations conferring resistance to terbinafine
+  evidence:
+  - reference: ARO:3009449
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007507 (terbinafine);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009450
+  label: Microsporum canis MDR2 with mutations conferring resistance to terbinafine
+  evidence:
+  - reference: ARO:3009450
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007507 (terbinafine);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3009454
+  label: Microsporum canis MDR4 with mutations conferring resistance to terbinafine
+  evidence:
+  - reference: ARO:3009454
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007507 (terbinafine);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

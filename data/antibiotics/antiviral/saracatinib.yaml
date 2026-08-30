@@ -1,0 +1,80 @@
+identifier: CHEBI:47458
+label: saracatinib
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of quinazolines that is quinazoline substituted
+  by (5-chloro-2H-1,3-benzodioxol-4-yl)amino, (oxan-4-yl)oxy and 2-(4-methylpiperazin-1-yl)ethoxy
+  groups at positions 4, 5 and 7, respectively. It is a dual inhibitor of the tyrosine
+  kinases c-Src and Abl (IC50 = 2.7 and 30 nM, respectively). Saracatinib was originally
+  developed by AstraZeneca for the treatment of cancer but in 2019 it was granted
+  orphan drug designation by the US Food and Drug Administration for the treatment
+  of idiopathic pulmonary fibrosis (IPF), a type of lung disease that results in scarring
+  (fibrosis) of the lungs.
+definition_source: ChEBI
+synonyms:
+- synonym_text: saracatinibum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-(5-chloro-1,3-benzodioxol-4-yl)-7-[2-(4-methylpiperazin-1-yl)ethoxy]-5-(tetrahydro-2H-pyran-4-yloxy)quinazolin-4-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AZ-10353926
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AZD 0530
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AZD-0530
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AZD0530
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(5-chloro-1,3-benzodioxol-4-yl)-7-[2-(4-methyl-1-piperazinyl)ethoxy]-5-[(tetrahydro-2H-pyran-4-yl)oxy]-4-quinazolinamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(5-chloro-2H-1,3-benzodioxol-4-yl)-7-[2-(4-methylpiperazin-1-yl)ethoxy]-5-[(oxan-4-yl)oxy]quinazolin-4-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:36683
+- CHEBI:38298
+- CHEBI:38530
+- CHEBI:46786
+- CHEBI:46920
+- CHEBI:46942
+- CHEBI:50995
+xrefs:
+- cas:379231-04-6
+- chemspider:8477917
+- drugbank:DB11805
+- kegg.drug:D09664
+- lincs.smallmolecule:LSM-1032
+- pdb-ccd:H8H
+- wikipedia.en:Saracatinib
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CN1CCN(CCOc2cc(OC3CCOCC3)c3c(Nc4c(Cl)ccc5c4OCO5)ncnc3c2)CC1
+  standard_inchi: InChI=1S/C27H32ClN5O5/c1-32-6-8-33(9-7-32)10-13-35-19-14-21-24(23(15-19)38-18-4-11-34-12-5-18)27(30-16-29-21)31-25-20(28)2-3-22-26(25)37-17-36-22/h2-3,14-16,18H,4-13,17H2,1H3,(H,29,30,31)
+  standard_inchi_key: OUKYUETWWIPKQR-UHFFFAOYSA-N
+  molecular_formula: C27H32ClN5O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 542.036
+  monoisotopic_mass: 541.2092
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:47458
+  source_label: saracatinib
+  minted_identifier: antibioticmech:chebi-112898a370
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

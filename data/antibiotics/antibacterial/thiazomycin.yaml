@@ -1,0 +1,37 @@
+identifier: CHEBI:66219
+label: thiazomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A heterodetic cyclic peptide isolated from Amycolatopsis fastidiosa.
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:24533
+xrefs:
+- reaxys:12681378
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]1(O[C@@H]2C(=O)OCc3cccc4c3c3c(n4O)C(=O)OC[C@@H]4NC(=O)c5csc(n5)[C@@H](NC(=O)c5csc(n5)/C(=C(/C)OC)NC(=O)[C@H]([C@@H](C)O)NC(=O)c5csc(n5)-c5cc(O)c(-c6nc(C(=O)NC(=C)C(N)=O)cs6)nc5-c5csc4n5)[C@@H]2OC3)C[C@]2(C)OCN(C)[C@]2([H])[C@H](C)O1'
+  standard_inchi: InChI=1S/C61H58N14O18S5/c1-22(48(62)78)63-49(79)31-18-97-57(68-31)42-36(77)11-27-41(70-42)30-16-95-55(65-30)29-15-90-59(84)44-28-14-88-45(46(60(85)89-13-26-9-8-10-35(38(26)28)75(44)86)93-37-12-61(5)47(25(4)92-37)74(6)21-91-61)43(58-69-32(19-98-58)50(80)64-29)73-52(82)34-20-96-56(67-34)40(24(3)87-7)72-53(83)39(23(2)76)71-51(81)33-17-94-54(27)66-33/h8-11,16-20,23,25,29,37,39,43,45-47,76-77,86H,1,12-15,21H2,2-7H3,(H2,62,78)(H,63,79)(H,64,80)(H,71,81)(H,72,83)(H,73,82)/b40-24+/t23-,25+,29+,37+,39+,43+,45+,46+,47-,61+/m1/s1
+  standard_inchi_key: GYOHFSLEKIIJMU-UMNFMQIXSA-N
+  molecular_formula: C61H58N14O18S5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1435.55
+  monoisotopic_mass: 1434.26571
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66219
+  source_label: thiazomycin
+  minted_identifier: antibioticmech:chebi-ad2bef7888
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

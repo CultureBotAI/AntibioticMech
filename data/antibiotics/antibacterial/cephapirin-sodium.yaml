@@ -1,0 +1,72 @@
+identifier: CHEBI:3545
+label: cephapirin sodium
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The sodium salt of cephapirin. A first-generation cephalosporin antibiotic,
+  it is effective against gram-negative and gram-positive organisms. Being more resistant
+  to β-lactamases than penicillins, it is effective agains most staphylococci, though
+  not methicillin-resistant staphylococci.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sodium (6R,7R)-3-[(acetyloxy)methyl]-8-oxo-7-{[(pyridin-4-ylsulfanyl)acetyl]amino}-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cefapirin sodium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cephapirin sodium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sodium cefapirin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: monosodium (6R,7R)-3-(hydroxymethyl)-8-oxo-7-(2-(4-pyridylthio)acetamido)-5-thia-1-azabicyclo(4.2.0)oct-2-ene-2-carboxylate
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium 7-(pyrid-4-ylthioacetamido)cephalosporanate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+- CHEBI:38700
+xrefs:
+- beilstein:4900637
+- cas:24356-60-3
+- drugbank:DB01139
+- kegg.compound:C08101
+- kegg.drug:D00908
+- patent:US3422100
+- patent:US3503967
+- patent:US3578661
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H][C@]12SCC(COC(C)=O)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)CSc1ccncc1.[Na+]'
+  standard_inchi: InChI=1S/C17H17N3O6S2.Na/c1-9(21)26-6-10-7-28-16-13(15(23)20(16)14(10)17(24)25)19-12(22)8-27-11-2-4-18-5-3-11;/h2-5,13,16H,6-8H2,1H3,(H,19,22)(H,24,25);/q;+1/p-1/t13-,16-;/m1./s1
+  standard_inchi_key: VGEOUKPOQQEQSX-OALZAMAHSA-M
+  molecular_formula: C17H16N3O6S2.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 445.454
+  monoisotopic_mass: 445.03782
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3545
+  source_label: cephapirin sodium
+  minted_identifier: antibioticmech:chebi-de1b30d07e
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

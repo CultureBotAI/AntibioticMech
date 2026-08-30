@@ -1,0 +1,45 @@
+identifier: CHEBI:134107
+label: CHIR-090
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An L-threonine derivative obtained by formal condensation of the carboxy
+  group of 4-({4-[(morpholin-4-yl)methyl]phenyl}ethynyl)benzoic acid with the amino
+  group of N-hydroxy-L-threoninamide.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[(2S,3R)-3-hydroxy-1-(hydroxyamino)-1-oxobutan-2-yl]-4-({4-[(morpholin-4-yl)methyl]phenyl}ethynyl)benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22702
+- CHEBI:24650
+- CHEBI:38785
+- CHEBI:73474
+- CHEBI:84189
+xrefs:
+- reaxys:18777591
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C[C@@H](O)[C@H](NC(=O)c1ccc(C#Cc2ccc(CN3CCOCC3)cc2)cc1)C(=O)NO
+  standard_inchi: InChI=1S/C24H27N3O5/c1-17(28)22(24(30)26-31)25-23(29)21-10-8-19(9-11-21)3-2-18-4-6-20(7-5-18)16-27-12-14-32-15-13-27/h4-11,17,22,28,31H,12-16H2,1H3,(H,25,29)(H,26,30)/t17-,22+/m1/s1
+  standard_inchi_key: FQYBTYFKOHPWQT-VGSWGCGISA-N
+  molecular_formula: C24H27N3O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 437.496
+  monoisotopic_mass: 437.19507
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:134107
+  source_label: CHIR-090
+  minted_identifier: antibioticmech:chebi-6da0985f25
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

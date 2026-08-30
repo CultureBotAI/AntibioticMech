@@ -1,0 +1,46 @@
+identifier: CHEBI:218817
+label: 4-[(3,4,5-tribromo-1H-pyrrol-2-yl)methyl]phenol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pyrroles that is 1H-pyrrole substituted by 4-hydroxybenzyl,
+  bromo, bromo and bromo groups at positions 2, 3, 4 and 5, respectively. It is a
+  natural product isolated from the bacterium Pseudoalteromonas strain J010.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4'-((3,4,5-tribromo-1H-pyrrol-2-yl)methyl)phenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26455
+- CHEBI:37141
+xrefs:
+- chemspider:32675069
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Oc1ccc(Cc2nc(Br)c(Br)c2Br)cc1
+  standard_inchi: InChI=1S/C11H8Br3NO/c12-9-8(15-11(14)10(9)13)5-6-1-3-7(16)4-2-6/h1-4,15-16H,5H2
+  standard_inchi_key: WFENRQKTALRFAD-UHFFFAOYSA-N
+  molecular_formula: C11H8Br3NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 409.903
+  monoisotopic_mass: 406.8156
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:218817
+  source_label: 4-[(3,4,5-tribromo-1H-pyrrol-2-yl)methyl]phenol
+  minted_identifier: antibioticmech:chebi-33d078838b
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

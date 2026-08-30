@@ -1,0 +1,48 @@
+identifier: CHEBI:65877
+label: Eunicea sesquiterpenoid 7
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sesquiterpenoid that is a carboxylic ester obtained by the formal condensation
+  of the 6-hydroxy group of cyclodec-4-en-1-one which is also substituted by an acetyl,
+  a methyl and a methylidene group at positions 7, 4 and 10 respectively with the
+  carboxy group of pent-2-enoic acid substituted with a hydroxy and a methyl group
+  at position 4. It is an antiplasmodial drug isolated from a Caribbean gorgonian
+  coral Eunicea sp.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,2E,10R)-10-acetyl-3-methyl-7-methylidene-6-oxocyclodec-2-en-1-yl
+    (2E)-4-hydroxy-4-methylpent-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26658
+- CHEBI:26878
+- CHEBI:33308
+- CHEBI:3992
+xrefs:
+- reaxys:15769483
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: C=C1CC[C@@H](C(C)=O)[C@@H](OC(=O)/C=C/C(C)(C)O)/C=C(\C)CCC1=O
+  standard_inchi: InChI=1S/C20H28O5/c1-13-6-9-17(22)14(2)7-8-16(15(3)21)18(12-13)25-19(23)10-11-20(4,5)24/h10-12,16,18,24H,2,6-9H2,1,3-5H3/b11-10+,13-12+/t16-,18-/m0/s1
+  standard_inchi_key: WNLDPFSWPBREOU-SURQFZOFSA-N
+  molecular_formula: C20H28O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 348.439
+  monoisotopic_mass: 348.19367
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65877
+  source_label: Eunicea sesquiterpenoid 7
+  minted_identifier: antibioticmech:chebi-65bcae8faa
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

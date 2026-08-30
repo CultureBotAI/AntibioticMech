@@ -1,0 +1,52 @@
+identifier: CHEBI:60070
+label: ertapenem sodium
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The monosodium salt of ertapenem. It is used for the treatment of moderate
+  to severe susceptible infections including intra-abdominal and acute gynaecological
+  infections, pneumonia, and infections of the skin and of the urinary tract. It is
+  more stable to renal dehydropeptidase I tham imipenem, and so unlike imipenem, its
+  use with cilastatin, which inhibits the enzyme, is not required.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sodium (4R,5S,6S)-3-({(3S,5S)-5-[(3-carboxylatophenyl)carbamoyl]pyrrolidinium-3-yl}sulfanyl)-6-[(1R)-1-hydroxyethyl]-4-methyl-7-oxo-1-azabicyclo[3.2.0]hept-2-ene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium (4R,5S,6S)-3-({(3S,5S)-5-[(m-carboxylatophenyl)carbamoyl]pyrrolidinium-3-yl}sulfanyl)-6-[(1R)-1-hydroxyethyl]-4-methyl-7-oxo-1-azabicyclo[3.2.0]hept-2-ene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium (4R,5S,6S)-3-({(3S,5S)-5-[(m-carboxyphenyl)carbamoyl]-3-pyrrolidinyl}thio)-6-[(1R)-1-hydroxyethyl]-4-methyl-7-oxo-1-azabicyclo[3.2.0]hept-2-ene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38700
+xrefs:
+- beilstein:8182202
+- cas:153773-82-1
+- drugbank:DB00303
+- kegg.drug:D04049
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H][C@@]1(SC2=C(C(=O)[O-])N3C(=O)[C@]([H])([C@@H](C)O)[C@@]3([H])[C@H]2C)C[NH2+][C@]([H])(C(=O)Nc2cccc(C(=O)[O-])c2)C1.[Na+]'
+  standard_inchi: InChI=1S/C22H25N3O7S.Na/c1-9-16-15(10(2)26)20(28)25(16)17(22(31)32)18(9)33-13-7-14(23-8-13)19(27)24-12-5-3-4-11(6-12)21(29)30;/h3-6,9-10,13-16,23,26H,7-8H2,1-2H3,(H,24,27)(H,29,30)(H,31,32);/q;+1/p-1/t9-,10-,13+,14+,15-,16-;/m1./s1
+  standard_inchi_key: ZXNAQFZBWUNWJM-HRXMHBOMSA-M
+  molecular_formula: C22H24N3O7S.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 497.505
+  monoisotopic_mass: 497.12327
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:60070
+  source_label: ertapenem sodium
+  minted_identifier: antibioticmech:chebi-d12c1196ba
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

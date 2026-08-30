@@ -1,0 +1,82 @@
+identifier: CHEBI:59213
+label: cefpiramide
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A third-generation cephalosporin antibiotic with [(1-methyl-1H-tetrazol-5-yl)sulfanyl]methyl
+  and (R)-2-{[(4-hydroxy-6-methylpyridin-3-yl)carbonyl]amino}-2-(4-hydroxyphenyl)acetamido
+  groups at positions 3 and 7, respectively, of the cephem skeleton. It has a broad
+  spectrum of antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefpiramido
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefpiramidum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (6R,7R)-7-{[(2R)-2-{[(4-hydroxy-6-methylpyridin-3-yl)carbonyl]amino}-2-(4-hydroxyphenyl)acetyl]amino}-3-{[(1-methyl-1H-tetrazol-5-yl)sulfanyl]methyl}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7β-[(2R)-2-{[(4-hydroxy-6-methylpyridin-3-yl)carbonyl]amino}-2-(4-hydroxyphenyl)acetamido]-3-{[(1-methyl-1H-tetrazol-5-yl)sulfanyl]methyl}-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+- CHEBI:33575
+- ARO:0000032
+xrefs:
+- ARO:3009120
+- beilstein:8179314
+- cas:70797-11-4
+- drugbank:DB00430
+- drugcentral:552
+- kegg.drug:D03428
+- patent:BE833063
+- patent:US4156724
+- patent:US4160087
+- wikipedia.en:Cefpiramide
+- chembl:CHEMBL1201204
+- pubchem.compound:636405
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(CSc3nnnn3C)=C(C(=O)O)N1C(=O)[C@@]2([H])NC(=O)[C@H](NC(=O)c1cnc(C)cc1O)c1ccc(O)cc1'
+  standard_inchi: InChI=1S/C25H24N8O7S2/c1-11-7-16(35)15(8-26-11)20(36)27-17(12-3-5-14(34)6-4-12)21(37)28-18-22(38)33-19(24(39)40)13(9-41-23(18)33)10-42-25-29-30-31-32(25)2/h3-8,17-18,23,34H,9-10H2,1-2H3,(H,26,35)(H,27,36)(H,28,37)(H,39,40)/t17-,18-,23-/m1/s1
+  standard_inchi_key: PWAUCHMQEXVFJR-PMAPCBKXSA-N
+  molecular_formula: C25H24N8O7S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 612.65
+  monoisotopic_mass: 612.12094
+source_concepts:
+- source: ARO
+  source_id: ARO:3009120
+  source_label: cefpiramide
+  minted_identifier: antibioticmech:aro-e2916216d5
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:59213
+  source_label: cefpiramide
+  minted_identifier: antibioticmech:chebi-2647d196d3
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

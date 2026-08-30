@@ -1,0 +1,48 @@
+identifier: CHEBI:141316
+label: rhizopycnolide A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzochromene that is benzo[c]chromen-6-one which is substituted by
+  hydroxy groups at positions 1, 4 and 7, methoxy groups at positions 3 and 9, a methyl
+  group at position 1, and a 2-carboxy-2-hydroxyethyl group at position 4, and in
+  which the carboxy group has undergone condensation with the 4-hydroxy group to afford
+  the corresponding spirocyclic lactone. It is active against the pathogenic bacteria
+  Agrobacterium tumefaciens, Bacillus subtilis, Pseudomonas lachrymans, Ralstonia
+  solanacearum, Staphylococcus hemolyticus, and Xanthomonas vesicatoria, with MIC
+  values in the range 25-100 μg/mL.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,3R,4S,4'R)-1,4',7-trihydroxy-3,9-dimethoxy-1-methyl-2,3,3',4'-tetrahydro-1H,5'H,6H-spiro[benzo[c]chromene-4,2'-furan]-5',6-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26878
+- CHEBI:35681
+- CHEBI:37581
+- CHEBI:37948
+- CHEBI:38920
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1cc(O)c2c(=O)oc3c(c2c1)[C@@](C)(O)C[C@@H](OC)[C@@]31C[C@@H](O)C(=O)O1
+  standard_inchi: InChI=1S/C19H20O9/c1-18(24)7-12(26-3)19(6-11(21)16(22)28-19)15-14(18)9-4-8(25-2)5-10(20)13(9)17(23)27-15/h4-5,11-12,20-21,24H,6-7H2,1-3H3/t11-,12-,18+,19+/m1/s1
+  standard_inchi_key: DXDVGVFRBGQXNB-WPZAJUNFSA-N
+  molecular_formula: C19H20O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 392.36
+  monoisotopic_mass: 392.11073
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141316
+  source_label: rhizopycnolide A
+  minted_identifier: antibioticmech:chebi-da1ec738b6
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

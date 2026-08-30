@@ -1,0 +1,276 @@
+identifier: CHEBI:29688
+label: telithromycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Telithromycin is a semi-synthetic derivative of erythromycin. It is a
+  14-membered macrolide and is the first ketolide antibiotic to be used in clinics.
+  Telithromycin binds the 50S subunit of the bacterial ribosome to inhibit protein
+  synthesis.
+definition_source: PMID:15700954
+synonyms:
+- synonym_text: HMR-3647
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: HMR3647
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Ketek
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Levviax
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:0000000
+xrefs:
+- ARO:0000057
+- cas:191114-48-4
+- chembl:CHEMBL1136
+- pubchem.compound:3002190
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: '[H][C@]1(C)C(=O)O[C@H](CC)[C@@]2(C)OC(=O)N(CCCCn3cnc(-c4cccnc4)c3)[C@]2([H])[C@@H](C)C(=O)[C@H](C)C[C@@](C)(OC)[C@H](O[C@]2([H])O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@@H](C)C1=O'
+  standard_inchi: InChI=1S/C43H65N5O10/c1-12-33-43(8)37(48(41(53)58-43)19-14-13-18-47-23-31(45-24-47)30-16-15-17-44-22-30)27(4)34(49)25(2)21-42(7,54-11)38(28(5)35(50)29(6)39(52)56-33)57-40-36(51)32(46(9)10)20-26(3)55-40/h15-17,22-29,32-33,36-38,40,51H,12-14,18-21H2,1-11H3/t25-,26-,27+,28+,29-,32+,33-,36-,37-,38-,40+,42-,43-/m1/s1
+  standard_inchi_key: LJVAJPDWBABPEJ-PNUFFHFMSA-N
+  molecular_formula: C43H65N5O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 812.018
+  monoisotopic_mass: 811.47314
+source_concepts:
+- source: ARO
+  source_id: ARO:0000057
+  source_label: telithromycin
+  minted_identifier: antibioticmech:aro-4e703afb24
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000250
+  label: ErmC
+  evidence:
+  - reference: ARO:3000250
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000316
+  label: mphA
+  evidence:
+  - reference: ARO:3000316
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000318
+  label: mphB
+  evidence:
+  - reference: ARO:3000318
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000319
+  label: mphC
+  evidence:
+  - reference: ARO:3000319
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000326
+  label: ErmE
+  evidence:
+  - reference: ARO:3000326
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000347
+  label: ErmA
+  evidence:
+  - reference: ARO:3000347
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000375
+  label: ErmB
+  evidence:
+  - reference: ARO:3000375
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000392
+  label: Erm(37)
+  evidence:
+  - reference: ARO:3000392
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000495
+  label: ErmD
+  evidence:
+  - reference: ARO:3000495
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000498
+  label: ErmF
+  evidence:
+  - reference: ARO:3000498
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000522
+  label: ErmG
+  evidence:
+  - reference: ARO:3000522
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000592
+  label: ErmN
+  evidence:
+  - reference: ARO:3000592
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000593
+  label: ErmQ
+  evidence:
+  - reference: ARO:3000593
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000594
+  label: ErmR
+  evidence:
+  - reference: ARO:3000594
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000595
+  label: ErmT
+  evidence:
+  - reference: ARO:3000595
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000596
+  label: ErmX
+  evidence:
+  - reference: ARO:3000596
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000599
+  label: Erm(33)
+  evidence:
+  - reference: ARO:3000599
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000600
+  label: Erm(34)
+  evidence:
+  - reference: ARO:3000600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000601
+  label: Erm(38)
+  evidence:
+  - reference: ARO:3000601
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000602
+  label: Erm(39)
+  evidence:
+  - reference: ARO:3000602
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000603
+  label: Erm(41)
+  evidence:
+  - reference: ARO:3000603
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000604
+  label: Erm(35)
+  evidence:
+  - reference: ARO:3000604
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000605
+  label: Erm(36)
+  evidence:
+  - reference: ARO:3000605
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000616
+  label: mel
+  evidence:
+  - reference: ARO:3000616
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003991
+  label: mphI
+  evidence:
+  - reference: ARO:3003991
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004108
+  label: Enterobacter cloacae rob
+  evidence:
+  - reference: ARO:3004108
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004131
+  label: Escherichia coli 23S rRNA with mutation conferring resistance to erythromycin
+    and telithromycin
+  evidence:
+  - reference: ARO:3004131
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004176
+  label: Mycoplasma hominis 23S rRNA with mutation conferring resistance to macrolide
+    antibiotics
+  evidence:
+  - reference: ARO:3004176
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004541
+  label: mphK
+  evidence:
+  - reference: ARO:3004541
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004544
+  label: mphJ
+  evidence:
+  - reference: ARO:3004544
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000057 (telithromycin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000757
+  target_label: 50S ribosomal subunit P-site
+  evidence:
+  - reference: ARO:3000757
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000057 (telithromycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

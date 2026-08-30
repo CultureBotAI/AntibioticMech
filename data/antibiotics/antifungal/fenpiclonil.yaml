@@ -1,0 +1,59 @@
+identifier: CHEBI:34759
+label: fenpiclonil
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pyrroles carrying cyano and 2,3-dichlorophenyl
+  substituents at positions 3 and 4 respectively. A fungicide used mainly to control
+  seed-borne pathogens in cereal crops.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-(2,3-dichlorophenyl)-1H-pyrrole-3-carbonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(2,3-Dichlorophenyl)-4-cyanopyrrole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-(2,3-Dichlorophenyl)pyrrole-3-carbonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Cyano-3-(2,3-dichlorophenyl)pyrrole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CGA 142705
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18379
+- CHEBI:23697
+- CHEBI:26455
+xrefs:
+- cas:74738-17-3
+- kegg.compound:C14268
+- pesticides:fenpiclonil
+- ppdb:305
+- reaxys:5433281
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: N#Cc1cncc1-c1cccc(Cl)c1Cl
+  standard_inchi: InChI=1S/C11H6Cl2N2/c12-10-3-1-2-8(11(10)13)9-6-15-5-7(9)4-14/h1-3,5-6,15H
+  standard_inchi_key: FKLFBQCQQYDUAM-UHFFFAOYSA-N
+  molecular_formula: C11H6Cl2N2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 237.089
+  monoisotopic_mass: 235.9908
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:34759
+  source_label: fenpiclonil
+  minted_identifier: antibioticmech:chebi-22dea59017
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

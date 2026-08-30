@@ -1,0 +1,45 @@
+identifier: CHEBI:66262
+label: trierixin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 21-membered macrocycle isolated from the fermentation broth of Streptomyces
+  sp.AC654. It exhibits antineoplastic activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6E,8E,10E,16Z)-15,22,24-trihydroxy-5-methoxy-14,16-dimethyl-23-(methylsulfanyl)-3-oxo-2-azabicyclo[18.3.1]tetracosa-1(24),6,8,10,16,20,22-heptaen-13-yl
+    N-(cyclohexylcarbonyl)alaninate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24646
+- CHEBI:24995
+- CHEBI:25698
+- CHEBI:33308
+- CHEBI:35681
+- CHEBI:35683
+- CHEBI:51026
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COC1/C=C/C=C/C=C/CC(OC(=O)C(C)NC(=O)C2CCCCC2)C(C)C(O)/C(C)=C\CCc2cc(O)c(SC)c(c2O)NC(=O)C1
+  standard_inchi: InChI=1S/C37H52N2O8S/c1-23-15-14-18-27-21-29(40)35(48-5)32(34(27)43)39-31(41)22-28(46-4)19-12-7-6-8-13-20-30(24(2)33(23)42)47-37(45)25(3)38-36(44)26-16-10-9-11-17-26/h6-8,12-13,15,19,21,24-26,28,30,33,40,42-43H,9-11,14,16-18,20,22H2,1-5H3,(H,38,44)(H,39,41)/b7-6+,13-8+,19-12+,23-15-
+  standard_inchi_key: JYAJEGBJMODZBK-GTRHLNJYSA-N
+  molecular_formula: C37H52N2O8S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 684.896
+  monoisotopic_mass: 684.34444
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66262
+  source_label: trierixin
+  minted_identifier: antibioticmech:chebi-01fa3e7f9d
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

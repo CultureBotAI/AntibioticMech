@@ -1,0 +1,43 @@
+identifier: CHEBI:66281
+label: TMC-89A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An epoxide that is oxiran-2-ylmethanol which is acylated at position 2
+  by an N-[(2R)-3-amino-2-methyl-3-oxopropanoyl]-L-threonyl-L-threonylleucinyl group.
+  It is a proteasome inhibitor isolated from Streptomyces sp. TC 1087.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[(2R)-3-amino-2-methyl-3-oxopropanoyl]-L-threonyl-N-{1-[2-(hydroxymethyl)oxiran-2-yl]-4-methyl-1-oxopentan-2-yl}-L-threoninamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:17087
+- CHEBI:32955
+- CHEBI:35681
+- CHEBI:35779
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(C)CC(NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@H](C)C(N)=O)[C@@H](C)O)[C@@H](C)O)C(=O)C1(CO)CO1
+  standard_inchi: InChI=1S/C21H36N4O9/c1-9(2)6-13(16(29)21(7-26)8-34-21)23-19(32)14(11(4)27)25-20(33)15(12(5)28)24-18(31)10(3)17(22)30/h9-15,26-28H,6-8H2,1-5H3,(H2,22,30)(H,23,32)(H,24,31)(H,25,33)/t10-,11-,12-,13?,14+,15+,21?/m1/s1
+  standard_inchi_key: SCVCWUHUBWSKHS-CRHDNEEASA-N
+  molecular_formula: C21H36N4O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 488.538
+  monoisotopic_mass: 488.24823
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66281
+  source_label: TMC-89A
+  minted_identifier: antibioticmech:chebi-191b44b726
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

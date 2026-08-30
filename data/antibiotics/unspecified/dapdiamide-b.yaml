@@ -1,0 +1,44 @@
+identifier: CHEBI:85332
+label: dapdiamide B
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the family of dapdiamides consisting of alanylisoleucine,
+  in which one of the methyl hydrogens of alanine is replaced by a fumaramoyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-{[(2E)-4-amino-4-oxobut-2-enoyl]amino}-L-alanyl-L-isoleucine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140324
+- CHEBI:140325
+- CHEBI:51751
+- CHEBI:85331
+xrefs:
+- metacyc.compound:CPD-17540
+- reaxys:20499539
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@H](C)[C@H](NC(=O)[C@@H](N)CNC(=O)/C=C/C(N)=O)C(=O)O
+  standard_inchi: InChI=1S/C13H22N4O5/c1-3-7(2)11(13(21)22)17-12(20)8(14)6-16-10(19)5-4-9(15)18/h4-5,7-8,11H,3,6,14H2,1-2H3,(H2,15,18)(H,16,19)(H,17,20)(H,21,22)/b5-4+/t7-,8-,11-/m0/s1
+  standard_inchi_key: WSFQKSIBZODGPB-RWWNVWANSA-N
+  molecular_formula: C13H22N4O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 314.342
+  monoisotopic_mass: 314.15902
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85332
+  source_label: dapdiamide B
+  minted_identifier: antibioticmech:chebi-cfb3987a14
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

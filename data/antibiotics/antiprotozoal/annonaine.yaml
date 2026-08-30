@@ -1,0 +1,55 @@
+identifier: CHEBI:76
+label: (−)-annonaine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aporphine alkaloid that exhibits anti-cancer, trypanocidal and antiplasmodial
+  activites.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (7aR)-6,7,7a,8-tetrahydro-5H-[1,3]benzodioxolo[6,5,4-de]benzo[g]quinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (-)-Annonaine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Anonaine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134209
+- CHEBI:38104
+- CHEBI:38164
+xrefs:
+- cas:1862-41-5
+- hmdb:HMDB0030348
+- kegg.compound:C09339
+- knapsack:C00001807
+- knapsack:C00027281
+- reaxys:90236
+activity_roles:
+- CHEBI:36335
+- CHEBI:64915
+chemical_structure:
+  smiles: '[H][C@@]12Cc3ccccc3-c3c4c(cc(c31)CCN2)OCO4'
+  standard_inchi: InChI=1S/C17H15NO2/c1-2-4-12-10(3-1)7-13-15-11(5-6-18-13)8-14-17(16(12)15)20-9-19-14/h1-4,8,13,18H,5-7,9H2/t13-/m1/s1
+  standard_inchi_key: VZTUKBKUWSHDFM-CYBMUJFWSA-N
+  molecular_formula: C17H15NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 265.312
+  monoisotopic_mass: 265.11028
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:76
+  source_label: (−)-annonaine
+  minted_identifier: antibioticmech:chebi-e3d5322349
+  role_terms:
+  - CHEBI:36335
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

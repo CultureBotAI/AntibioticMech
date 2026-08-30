@@ -1,0 +1,86 @@
+identifier: CHEBI:32034
+label: potassium bitartrate
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic potassium salt of L-tartaric acid. It is a by-product of winemaking
+  and occurs naturally in grapes, the major fruit used to produce wine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Faccla
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Faccula
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Faecla
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Faecula
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: potassium (2R,3R)-3-carboxy-2,3-dihydroxypropanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acid potassium tartrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cream of tartar
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: monopotassium tartrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: potassium L-bitartrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: potassium L-tartrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: potassium acid tartrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: potassium hydrogen tartrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tartar
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tartar cream
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tartaric acid monopotassium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:50394
+xrefs:
+- cas:868-14-4
+- drugbank:DB11107
+- foodb.food:FDB016908
+- kegg.drug:D01561
+- wikipedia.en:Potassium_bitartrate
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: O=C([O-])[C@H](O)[C@@H](O)C(=O)O.[K+]
+  standard_inchi: InChI=1S/C4H6O6.K/c5-1(3(7)8)2(6)4(9)10;/h1-2,5-6H,(H,7,8)(H,9,10);/q;+1/p-1/t1-,2-;/m1./s1
+  standard_inchi_key: KYKNRZGSIGMXFH-ZVGUSBNCSA-M
+  molecular_formula: C4H5O6.K
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 188.176
+  monoisotopic_mass: 187.97232
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32034
+  source_label: potassium bitartrate
+  minted_identifier: antibioticmech:chebi-b9c43bd422
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

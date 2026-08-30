@@ -1,0 +1,75 @@
+identifier: CHEBI:81936
+label: octhilinone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 1,2-thiazole that is 1,2-thiazol-3-one substituted
+  on the nitrogen (position 2) by an octyl group. A fungicide and antibacterial agent,
+  it is used for treatment of canker and other fungal and bacterial diseases in fruit
+  trees. It is no longer approved for use within the European Union.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-octyl-1,2-thiazol-3(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Octyl-3(2H)-isothiazolone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Octyl-3-isothiazolinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Octyl-3-isothiazolone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Octyl-3-isothioazolone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Octyl-4-isothiazolin-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-n-Octyl-4-isothiazolin-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-octyl-2H-isothiazol-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Octyl-3(2H)-isothiazolone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Octyl-4-isothiazol-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48902
+xrefs:
+- cas:26530-20-1
+- kegg.compound:C18752
+- pesticides:octhilinone
+- ppdb:489
+- reaxys:1211137
+activity_roles:
+- CHEBI:33282
+- CHEBI:86328
+chemical_structure:
+  smiles: CCCCCCCCn1sccc1=O
+  standard_inchi: InChI=1S/C11H19NOS/c1-2-3-4-5-6-7-9-12-11(13)8-10-14-12/h8,10H,2-7,9H2,1H3
+  standard_inchi_key: JPMIIZHYYWMHDT-UHFFFAOYSA-N
+  molecular_formula: C11H19NOS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 213.346
+  monoisotopic_mass: 213.11874
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81936
+  source_label: octhilinone
+  minted_identifier: antibioticmech:chebi-b15099cf7b
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

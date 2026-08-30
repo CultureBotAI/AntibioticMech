@@ -1,0 +1,52 @@
+identifier: CHEBI:72622
+label: papulacandin C
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A papulacandin that is papulacandin A in which the (2E,4E)-deca-2,4-dienoyl
+  chain at the O-(6') position is replaced by a (2E,4E,6E)-8-hydroxydeca-2,4,6-trienoyl
+  chain. It is a carbohydrate-containing antibiotic from the deuteromycetous fungus
+  Papularia sphaerosperma which shows potent antifungal activity against Candida albicans.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,3'R,4'R,5'R,6'R)-3',5,7-trihydroxy-5'-({6-O-[(2E,4E,6E)-8-hydroxydeca-2,4,6-trienoyl]-β-D-galactopyranosyl}oxy)-6'-(hydroxymethyl)-3',4',5',6'-tetrahydro-3H-spiro[2-benzofuran-1,2'-pyran]-4'-yl
+    (2E,4E,7S,8E,10E,14S)-7-hydroxy-8,14-dimethylhexadeca-2,4,8,10-tetraenoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: papulacandin-C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26979
+- CHEBI:63353
+- CHEBI:72596
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: CCC(O)/C=C/C=C/C=C/C(=O)OC[C@H]1O[C@@H](O[C@H]2[C@H](OC(=O)/C=C/C=C/C[C@H](O)/C(C)=C/C=C/CC[C@@H](C)CC)[C@@H](O)[C@@]3(OCc4cc(O)cc(O)c43)O[C@@H]2CO)[C@H](O)[C@@H](O)[C@H]1O
+  standard_inchi: InChI=1S/C47H64O17/c1-5-28(3)17-11-9-12-18-29(4)33(51)20-14-10-16-22-38(54)62-44-43(35(25-48)64-47(45(44)58)39-30(26-60-47)23-32(50)24-34(39)52)63-46-42(57)41(56)40(55)36(61-46)27-59-37(53)21-15-8-7-13-19-31(49)6-2/h7-10,12-16,18-19,21-24,28,31,33,35-36,40-46,48-52,55-58H,5-6,11,17,20,25-27H2,1-4H3/b8-7+,12-9+,14-10+,19-13+,21-15+,22-16+,29-18+/t28-,31?,33-,35+,36+,40-,41-,42+,43+,44-,45+,46-,47-/m0/s1
+  standard_inchi_key: UJLFRJFJTPPIOK-JPWNLYTBSA-N
+  molecular_formula: C47H64O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 901.012
+  monoisotopic_mass: 900.41435
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:72622
+  source_label: papulacandin C
+  minted_identifier: antibioticmech:chebi-9d4c44a32d
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

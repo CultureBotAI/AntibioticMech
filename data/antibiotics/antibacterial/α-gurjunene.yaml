@@ -1,0 +1,46 @@
+identifier: CHEBI:61699
+label: (−)-α-gurjunene
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbotricyclic compound and sesquiterpene that is 1a,2,3,4,4a,5,6,7b-octahydro-1H-cyclopropa[e]azulene
+  which is substituted by methyl groups at positions 1, 1, 4 and 7 (the 1aR,4R,4aR,7bS-
+  diastereoisomer). It has been isolated from several plant species such as Anaphalis
+  nubigena and Jatropha ribifolia.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1aR,4R,4aR,7bS)-1,1,4,7-tetramethyl-1a,2,3,4,4a,5,6,7b-octahydro-1H-cyclopropa[e]azulene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35189
+- CHEBI:38032
+xrefs:
+- cas:489-40-7
+- kegg.compound:C19734
+- metacyc.compound:CPD-12891
+- reaxys:1939514
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12CCC(C)=C1[C@]1([H])C(C)(C)[C@]1([H])CC[C@H]2C'
+  standard_inchi: InChI=1S/C15H24/c1-9-6-8-12-14(15(12,3)4)13-10(2)5-7-11(9)13/h9,11-12,14H,5-8H2,1-4H3/t9-,11-,12-,14-/m1/s1
+  standard_inchi_key: SPCXZDDGSGTVAW-XIDUGBJDSA-N
+  molecular_formula: C15H24
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 204.357
+  monoisotopic_mass: 204.1878
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:61699
+  source_label: (−)-α-gurjunene
+  minted_identifier: antibioticmech:chebi-670bdceaad
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

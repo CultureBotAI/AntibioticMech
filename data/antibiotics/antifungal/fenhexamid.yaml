@@ -1,0 +1,76 @@
+identifier: CHEBI:81853
+label: fenhexamid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aromatic amide resulting from the formal condensation of the carboxy
+  group of 1-methylcyclohexanecarboxylic acid with the amino group of 4-amino-2,3-dichlorophenol.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Teldor
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: N-(2,3-dichloro-4-hydroxyphenyl)-1-methylcyclohexanecarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2',3'-dichloro-4'-hydroxy-1-methylcyclohexanecarboxanilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: KBR 2738
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: KBR-2738
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(2,3-dichloro-4-hydroxyphenyl)-1-methylcyclohexane-1-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fenhexamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23697
+- CHEBI:29347
+- CHEBI:33853
+- CHEBI:62733
+- CHEBI:87015
+xrefs:
+- cas:126833-17-8
+- kegg.compound:C18593
+- patent:EP339418
+- patent:US5059623
+- pesticides:fenhexamid
+- ppdb:298
+- reaxys:8996658
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: CC1(C(=O)Nc2ccc(O)c(Cl)c2Cl)CCCCC1
+  standard_inchi: InChI=1S/C14H17Cl2NO2/c1-14(7-3-2-4-8-14)13(19)17-9-5-6-10(18)12(16)11(9)15/h5-6,18H,2-4,7-8H2,1H3,(H,17,19)
+  standard_inchi_key: VDLGAVXLJYLFDH-UHFFFAOYSA-N
+  molecular_formula: C14H17Cl2NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 302.201
+  monoisotopic_mass: 301.06363
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81853
+  source_label: fenhexamid
+  minted_identifier: antibioticmech:chebi-9d6f34f885
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

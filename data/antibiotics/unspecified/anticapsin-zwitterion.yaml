@@ -1,0 +1,44 @@
+identifier: CHEBI:84310
+label: anticapsin zwitterion
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An L-α-amino acid zwitterion obtained by transfer of a proton from the
+  carboxy to the amino group of anticapsin; major species at pH 7.3.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-2-azaniumyl-3-[(1R,2S,6R)-5-oxo-7-oxabicyclo[4.1.0]hept-2-yl]propanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-anticapsin zwitterion
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: L-anticapsin
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:59869
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[NH3+][C@@H](C[C@@H]1CCC(=O)[C@@H]2O[C@H]12)C(=O)[O-]'
+  standard_inchi: InChI=1S/C9H13NO4/c10-5(9(12)13)3-4-1-2-6(11)8-7(4)14-8/h4-5,7-8H,1-3,10H2,(H,12,13)/t4-,5-,7+,8-/m0/s1
+  standard_inchi_key: KHVZXXWDPSCGEK-MGVQOFIGSA-N
+  molecular_formula: C9H13NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 199.206
+  monoisotopic_mass: 199.08446
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:84310
+  source_label: anticapsin zwitterion
+  minted_identifier: antibioticmech:chebi-fb65724ec1
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

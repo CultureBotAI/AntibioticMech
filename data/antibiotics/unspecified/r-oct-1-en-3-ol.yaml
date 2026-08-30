@@ -1,0 +1,72 @@
+identifier: CHEBI:39932
+label: (R)-oct-1-en-3-ol
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An oct-1-en-3-ol that has R-configuration.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R)-oct-1-en-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3R)-(−)-oct-1-en-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3R)-1-octen-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-(−)-1-octen-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-(−)-oct-1-en-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-1-octen-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-matsutake alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-1-octen-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-matsutakeol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FEMA 4492
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:34118
+xrefs:
+- cas:3687-48-7
+- chemspider:5360388
+- foodb.food:FDB003350
+- hmdb:HMDB0031299
+- lipidmaps:LMFA05000093
+- pdb-ccd:3OL
+- reaxys:1720732
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C=C[C@H](O)CCCCC
+  standard_inchi: InChI=1S/C8H16O/c1-3-5-6-7-8(9)4-2/h4,8-9H,2-3,5-7H2,1H3/t8-/m0/s1
+  standard_inchi_key: VSMOENVRRABVKN-QMMMGPOBSA-N
+  molecular_formula: C8H16O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 128.215
+  monoisotopic_mass: 128.12012
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:39932
+  source_label: (R)-oct-1-en-3-ol
+  minted_identifier: antibioticmech:chebi-fcb465dfd4
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

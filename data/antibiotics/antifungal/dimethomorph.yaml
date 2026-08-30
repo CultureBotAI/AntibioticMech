@@ -1,0 +1,59 @@
+identifier: CHEBI:81848
+label: dimethomorph
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A mixture of (E)- and (Z)-dimethomorph in an unspecified ratio. It is
+  used as a systemic fungicide used on vines, potatoes, and greenhouse crops; only
+  the Z isomer has fungicidal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2Ξ)-3-(4-chlorophenyl)-3-(3,4-dimethoxyphenyl)-1-(morpholin-4-yl)prop-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-(3-(4-chlorophenyl)-3-(3,4-dimethoxyphenyl)-1-oxo-2-propenyl)morpholine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:60004
+- CHEBI:87134
+xrefs:
+- cas:110488-70-5
+- kegg.compound:C18583
+- patent:EP294907
+- patent:US4933449
+- pesticides:dimethomorph
+- ppdb:245
+- reaxys:8396839
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: '[H]C(C(=O)N1CCOCC1)=C(c1ccc(Cl)cc1)c1ccc(OC)c(OC)c1'
+  standard_inchi: InChI=1S/C21H22ClNO4/c1-25-19-8-5-16(13-20(19)26-2)18(15-3-6-17(22)7-4-15)14-21(24)23-9-11-27-12-10-23/h3-8,13-14H,9-12H2,1-2H3
+  standard_inchi_key: QNBTYORWCCMPQP-UHFFFAOYSA-N
+  molecular_formula: C21H22ClNO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 387.863
+  monoisotopic_mass: 387.12374
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81848
+  source_label: dimethomorph
+  minted_identifier: antibioticmech:chebi-248ccb1c40
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

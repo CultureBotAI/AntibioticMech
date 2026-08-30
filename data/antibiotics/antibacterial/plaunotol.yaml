@@ -1,0 +1,59 @@
+identifier: CHEBI:32023
+label: plaunotol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diterpenoid that is geranylgeraniol carrying an additional hydroxy substituent
+  at position 18.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2Z,6E)-2-[(3E)-4,8-dimethylnona-3,7-dien-1-yl]-6-methylocta-2,6-diene-1,8-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E,Z,E)-7-Hydroxymethyl-3,11,15-trimethyl-2,6,10,14-hexadecatetraen-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 18-Hydroxygeranylgeraniol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kelnac
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Plaunotolum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:23849
+xrefs:
+- cas:64218-02-6
+- drugcentral:2222
+- kegg.compound:C13273
+- kegg.drug:D01803
+- metacyc.compound:CPD-11423
+- patent:US4059641
+- reaxys:2217548
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)=CCC/C(C)=C/CC/C(=C/CC/C(C)=C/CO)CO
+  standard_inchi: InChI=1S/C20H34O2/c1-17(2)8-5-9-18(3)10-6-12-20(16-22)13-7-11-19(4)14-15-21/h8,10,13-14,21-22H,5-7,9,11-12,15-16H2,1-4H3/b18-10+,19-14+,20-13-
+  standard_inchi_key: SUWYPNNPLSRNPS-UNTSEYQFSA-N
+  molecular_formula: C20H34O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 306.49
+  monoisotopic_mass: 306.25588
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32023
+  source_label: plaunotol
+  minted_identifier: antibioticmech:chebi-c418f1671a
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

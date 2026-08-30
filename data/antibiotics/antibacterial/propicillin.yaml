@@ -1,0 +1,83 @@
+identifier: CHEBI:52429
+label: propicillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Propicillin is an orally taken penicillin derivative that has high absorption
+  but poor activity.
+definition_source: PMID:3588519
+synonyms:
+- synonym_text: propicilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: propicillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-(2-phenoxybutanamido)-2,2-dimethylpenam-3α-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-3,3-dimethyl-7-oxo-6-[(2-phenoxybutanoyl)amino]-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: propicilline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: levopropicillin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- ARO:3000008
+xrefs:
+- ARO:3000634
+- beilstein:1092883
+- cas:551-27-9
+- drugcentral:2297
+- patent:GB877120
+- chembl:CHEMBL2105612
+- pubchem.compound:92879
+activity_roles:
+- CHEBI:33281
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)C(CC)Oc1ccccc1'
+  standard_inchi: InChI=1S/C18H22N2O5S/c1-4-11(25-10-8-6-5-7-9-10)14(21)19-12-15(22)20-13(17(23)24)18(2,3)26-16(12)20/h5-9,11-13,16H,4H2,1-3H3,(H,19,21)(H,23,24)/t11?,12-,13+,16-/m1/s1
+  standard_inchi_key: HOCWPKXKMNXINF-XQERAMJGSA-N
+  molecular_formula: C18H22N2O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 378.45
+  monoisotopic_mass: 378.12494
+source_concepts:
+- source: ARO
+  source_id: ARO:3000634
+  source_label: propicillin
+  minted_identifier: antibioticmech:aro-db1c06f534
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:52429
+  source_label: propicillin
+  minted_identifier: antibioticmech:chebi-bfe1b52b7f
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000634 (propicillin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,279 @@
+identifier: CHEBI:471744
+label: imipenem
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A broad-spectrum, intravenous β-lactam antibiotic of the carbapenem subgroup.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5R,6S)-6-[(1R)-1-hydroxyethyl]-3-({2-[(iminomethyl)amino]ethyl}sulfanyl)-7-oxo-1-azabicyclo[3.2.0]hept-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R,6S)-3-((2-(Formimidoylamino)ethyl)thio)-6-((R)-1-hydroxyethyl)-7-oxo-1-azabicyclo(3.2.0)hept-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R,6S)-3-(2-Formimidoylamino-ethylsulfanyl)-6-((R)-1-hydroxy-ethyl)-7-oxo-1-aza-bicyclo[3.2.0]hept-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R,6S)-6-((R)-1-Hydroxyethyl)-3-(2-(iminomethylamino)ethylthio)-7-oxo-1-azabicyclo(3.2.0)hept-2-ene-2-carbonsaeure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Imipenem
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Imipenem anhydrous
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-formimidoyl thienamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-formimidoylthienamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: imipenemum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: IMI
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:46633
+- CHEBI:88225
+- ARO:0000020
+xrefs:
+- ARO:3000170
+- beilstein:434624
+- cas:64221-86-9
+- drugbank:DB01598
+- drugcentral:1426
+- kegg.compound:C06665
+- kegg.drug:D04515
+- lincs.smallmolecule:LSM-6568
+- patent:BE848545
+- patent:US4194047
+- reaxys:434624
+- wikipedia.en:Imipenem
+- chembl:CHEMBL148
+- pubchem.compound:104838
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
+structural_class: carbapenem
+structural_class_id: ARO:0000020
+chemical_structure:
+  smiles: '[H]C(=N)NCCSC1=C(C(=O)O)N2C(=O)[C@]([H])([C@@H](C)O)[C@@]2([H])C1'
+  standard_inchi: InChI=1S/C12H17N3O4S/c1-6(16)9-7-4-8(20-3-2-14-5-13)10(12(18)19)15(7)11(9)17/h5-7,9,16H,2-4H2,1H3,(H2,13,14)(H,18,19)/t6-,7-,9-/m1/s1
+  standard_inchi_key: ZSKVGTPCRGIANV-ZXFLCMHBSA-N
+  molecular_formula: C12H17N3O4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 299.352
+  monoisotopic_mass: 299.09398
+source_concepts:
+- source: ARO
+  source_id: ARO:3000170
+  source_label: imipenem
+  minted_identifier: antibioticmech:aro-591797d15a
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:471744
+  source_label: imipenem
+  minted_identifier: antibioticmech:chebi-1f91c8b5f7
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000589
+  label: NDM-1
+  evidence:
+  - reference: ARO:3000589
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000772
+  label: AdeIJK
+  evidence:
+  - reference: ARO:3000772
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3003385
+  label: Klebsiella aerogenes Omp36
+  evidence:
+  - reference: ARO:3003385
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3003686
+  label: Pseudomonas aeruginosa oprD with mutation conferring resistance to imipenem
+  evidence:
+  - reference: ARO:3003686
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003697
+  label: MexPQ-OpmE
+  evidence:
+  - reference: ARO:3003697
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003713
+  label: VCC-1
+  evidence:
+  - reference: ARO:3003713
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3003808
+  label: carO
+  evidence:
+  - reference: ARO:3003808
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3003809
+  label: Acinetobacter baumannii OprD conferring resistance to imipenem
+  evidence:
+  - reference: ARO:3003809
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3003966
+  label: Klebsiella pneumoniae OmpK35
+  evidence:
+  - reference: ARO:3003966
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3004123
+  label: Burkholderia pseudomallei Omp38
+  evidence:
+  - reference: ARO:3004123
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004559
+  label: CAM-1
+  evidence:
+  - reference: ARO:3004559
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004598
+  label: Klebsiella pneumoniae KpnGH-TolC
+  evidence:
+  - reference: ARO:3004598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005015
+  label: VMB-1
+  evidence:
+  - reference: ARO:3005015
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3005059
+  label: LptD
+  evidence:
+  - reference: ARO:3005059
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005511
+  label: VIM-63
+  evidence:
+  - reference: ARO:3005511
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007005
+  label: YEM-1
+  evidence:
+  - reference: ARO:3007005
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007023
+  label: NDM-33
+  evidence:
+  - reference: ARO:3007023
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007118
+  label: crxA
+  evidence:
+  - reference: ARO:3007118
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007374
+  label: PJM-1
+  evidence:
+  - reference: ARO:3007374
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007375
+  label: KPC-87
+  evidence:
+  - reference: ARO:3007375
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007435
+  label: WUS-1
+  evidence:
+  - reference: ARO:3007435
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007632
+  label: FRI-11
+  evidence:
+  - reference: ARO:3007632
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3009643
+  label: VIM-92
+  evidence:
+  - reference: ARO:3009643
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3009648
+  label: OXA-1054
+  evidence:
+  - reference: ARO:3009648
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000170 (imipenem);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000170 (imipenem); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

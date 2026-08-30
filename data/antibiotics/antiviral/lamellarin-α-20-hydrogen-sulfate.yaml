@@ -1,0 +1,41 @@
+identifier: CHEBI:72792
+label: lamellarin α 20-hydrogen sulfate
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A heterocyclyl sulfate that acts as a HIV-1 integrase inhibitor.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 14-(3-hydroxy-4-methoxyphenyl)-2,11,12-trimethoxy-6-oxo-6H-chromeno[4',3':4,5]pyrrolo[2,1-a]isoquinolin-3-yl
+    hydrogen sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134251
+- CHEBI:18946
+- CHEBI:22315
+- CHEBI:37839
+activity_roles:
+- CHEBI:67268
+chemical_structure:
+  smiles: COc1ccc(-c2c3c4cc(OC)c(OS(=O)(=O)O)cc4oc(=O)c3n3ccc4cc(OC)c(OC)cc4c23)cc1O
+  standard_inchi: InChI=1S/C29H23NO11S/c1-36-19-6-5-15(9-18(19)31)25-26-17-12-23(39-4)24(41-42(33,34)35)13-20(17)40-29(32)28(26)30-8-7-14-10-21(37-2)22(38-3)11-16(14)27(25)30/h5-13,31H,1-4H3,(H,33,34,35)
+  standard_inchi_key: JMOHRMCZYHDLSW-UHFFFAOYSA-N
+  molecular_formula: C29H23NO11S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 593.566
+  monoisotopic_mass: 593.09918
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:72792
+  source_label: lamellarin α 20-hydrogen sulfate
+  minted_identifier: antibioticmech:chebi-a4ceedd7a2
+  role_terms:
+  - CHEBI:67268
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

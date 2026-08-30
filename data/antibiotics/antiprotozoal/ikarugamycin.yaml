@@ -1,0 +1,50 @@
+identifier: CHEBI:75276
+label: ikarugamycin
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polyketide macrolactam containing a tetramic acid (pyrrolidine-2,4-dione)
+  ring system. It is isolated from Streptomyces as an antibiotic with antiprotozoal
+  and cytotoxic activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3R,3aS,5aR,5bS,7Z,14S,19E,20aS,21aR,21bR)-3-ethyl-22-hydroxy-2-methyl-2,3,3a,5a,5b,6,10,11,12,13,14,15,20a,21,21a,21b-hexadecahydro-1H-14,17-(metheno)-as-indaceno[3,2-k][1,6]diazacycloheptadecine-9,16,18(17H)-trione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24995
+- CHEBI:26188
+- CHEBI:38164
+- CHEBI:51689
+- CHEBI:52898
+xrefs:
+- cas:36531-78-9
+- knapsack:C00018842
+- patent:GB2120098
+- reaxys:771794
+activity_roles:
+- CHEBI:33281
+- CHEBI:35820
+chemical_structure:
+  smiles: '[H][C@]12C=C[C@@]3([H])[C@H](CC)[C@H](C)C[C@]3([H])[C@@]1([H])C[C@@]1([H])/C=C/C(=O)C3=C(O)[C@]([H])(CCCNC(=O)/C=C\C[C@]21[H])NC3=O'
+  standard_inchi: InChI=1S/C29H38N2O4/c1-3-18-16(2)14-22-20(18)10-11-21-19-6-4-8-26(33)30-13-5-7-24-28(34)27(29(35)31-24)25(32)12-9-17(19)15-23(21)22/h4,8-12,16-24,34H,3,5-7,13-15H2,1-2H3,(H,30,33)(H,31,35)/b8-4-,12-9+/t16-,17-,18-,19+,20+,21-,22+,23+,24+/m1/s1
+  standard_inchi_key: WSUGGLXIPUHOSG-QOMLVTEJSA-N
+  molecular_formula: C29H38N2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 478.633
+  monoisotopic_mass: 478.28316
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75276
+  source_label: ikarugamycin
+  minted_identifier: antibioticmech:chebi-9c0d3e16f4
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

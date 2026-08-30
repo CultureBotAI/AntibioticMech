@@ -1,0 +1,73 @@
+identifier: CHEBI:180654
+label: N4-hydroxycytidine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A nucleoside analogue that is cytidine which carries a hydroxy group at
+  the N4-positon. It has broad-spectrum antiviral activity against influenza, SARS-CoV
+  , SARS-CoV-2 and MERS-CoV.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-hydroxy-3,4-dihydrocytidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-[(2R,3R,4S,5R)-3,4-dihydroxy-5-(hydroxymethyl)tetrahydrofuran-2-yl]-4-(hydroxyimino)-3,4-dihydropyrimidin-2(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-N-hydroxycytidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-oxime uridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: EIDD 1931
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: EIDD-1931
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N(4)-hydroxycytidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-hydroxycytidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NHC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-D-N4-hydroxycytidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24983
+- CHEBI:60783
+xrefs:
+- cas:3258-02-4
+- chemspider:170635
+- drugbank:DB15660
+activity_roles:
+- CHEBI:149553
+- CHEBI:22587
+chemical_structure:
+  smiles: O=c1nc(=NO)ccn1[C@@H]1O[C@H](CO)[C@@H](O)[C@H]1O
+  standard_inchi: InChI=1S/C9H13N3O6/c13-3-4-6(14)7(15)8(18-4)12-2-1-5(11-17)10-9(12)16/h1-2,4,6-8,13-15,17H,3H2,(H,10,11,16)/t4-,6-,7-,8-/m1/s1
+  standard_inchi_key: XCUAIINAJCDIPM-XVFCMESISA-N
+  molecular_formula: C9H13N3O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 259.218
+  monoisotopic_mass: 259.08044
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:180654
+  source_label: N4-hydroxycytidine
+  minted_identifier: antibioticmech:chebi-82bc2fb6e2
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

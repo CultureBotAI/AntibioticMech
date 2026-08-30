@@ -1,0 +1,72 @@
+identifier: CHEBI:83606
+label: fenticonazole nitrate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A racemate comprising equimolar amounts of (R)- and (S)-fenticonazole
+  nitrate. Used for the treatment of vaginal candidiasis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Lomexin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: rac-1-[2-(2,4-dichlorophenyl)-2-{[4-(phenylsulfanyl)benzyl]oxy}ethyl]-1H-imidazole
+    nitrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+-)-1-(2,4-Dichloro-beta-((p-(phenylthio)benzyl)oxy)phenethyl)imidazole
+    mononitrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alpha-(2,4-Dichlorophenyl)-beta,N-imidazolylethyl-4-phenylthiobenzyl
+    ether nitrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fenticonazole mononitrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:60911
+- CHEBI:87069
+- CHEBI:87071
+xrefs:
+- cas:73151-29-8
+- kegg.drug:D02583
+- patent:CN101288661
+- patent:CN101313904
+- patent:CN101474168
+- patent:CN101863808
+- reaxys:6564060
+- wikipedia.en:Fenticonazole
+activity_roles:
+- CHEBI:35718
+- CHEBI:36047
+- CHEBI:86327
+chemical_structure:
+  smiles: Clc1ccc(C(Cn2ccnc2)OCc2ccc(Sc3ccccc3)cc2)c(Cl)c1.O=[N+]([O-])O
+  standard_inchi: InChI=1S/C24H20Cl2N2OS.HNO3/c25-19-8-11-22(23(26)14-19)24(15-28-13-12-27-17-28)29-16-18-6-9-21(10-7-18)30-20-4-2-1-3-5-20;2-1(3)4/h1-14,17,24H,15-16H2;(H,2,3,4)
+  standard_inchi_key: FJNRUWDGCVDXLU-UHFFFAOYSA-N
+  molecular_formula: C24H20Cl2N2OS.HNO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 518.422
+  monoisotopic_mass: 517.06298
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83606
+  source_label: fenticonazole nitrate
+  minted_identifier: antibioticmech:chebi-aacddd8ee7
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:36047
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

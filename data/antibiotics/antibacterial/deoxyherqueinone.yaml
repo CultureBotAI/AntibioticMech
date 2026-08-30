@@ -1,0 +1,54 @@
+identifier: CHEBI:145901
+label: deoxyherqueinone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterotetracyclic compound that is 8,9-dihydro-4H-phenaleno[1,2-b]furan
+  substituted by methyl groups at positions 1,8,8 and 9R, hydroxy groups at positions
+  3,4 and 7, methoxy group at position 5 and oxo group at position 6. It is isolated
+  from the soil fungus, Penicillium herquei.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (9R)-3,4,7-trihydroxy-5-methoxy-1,8,8,9-tetramethyl-8,9-dihydro-6H-phenaleno[1,2-b]furan-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-deoxyherqueinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (9R)-8,9-dihydro-3,4,7-trihydroxy-5-methoxy-1,8,8,9-tetramethyl-6H-phenaleno[1,2-b]furan-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-8,9-dihydro-3,4,7-trihydroxy-5-methoxy-1,8,8,9-tetramethyl-6H-phenaleno[1,2-b]furan-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26188
+- CHEBI:33853
+- CHEBI:38163
+- CHEBI:51689
+xrefs:
+- cas:20887-73-4
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COC1=C(O)c2c(O)cc(C)c3c4c(c(O)c(c23)C1=O)C(C)(C)[C@@H](C)O4
+  standard_inchi: InChI=1S/C20H20O6/c1-7-6-9(21)11-12-10(7)18-14(20(3,4)8(2)26-18)15(22)13(12)17(24)19(25-5)16(11)23/h6,8,21-23H,1-5H3/t8-/m1/s1
+  standard_inchi_key: VZWSSCQUCMSKLE-MRVPVSSYSA-N
+  molecular_formula: C20H20O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 356.374
+  monoisotopic_mass: 356.12599
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:145901
+  source_label: deoxyherqueinone
+  minted_identifier: antibioticmech:chebi-ee64a2f94d
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

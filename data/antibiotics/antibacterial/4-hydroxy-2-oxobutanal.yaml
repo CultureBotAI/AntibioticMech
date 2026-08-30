@@ -1,0 +1,50 @@
+identifier: CHEBI:144586
+label: 4-hydroxy-2-oxobutanal
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 2-oxo aldehyde that is 4-hydroxybutanal carrying an oxo group at position
+  2. It is a degradation product of vitamin C.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-deoxythreosone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-hydroxy-1,2-butanedione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-hydroxy-2-ketobutyraldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-hydroxy-2-oxobutyraldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27659
+- CHEBI:55380
+xrefs:
+- cas:28119-61-1
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H]C(=O)C(=O)CCO'
+  standard_inchi: InChI=1S/C4H6O3/c5-2-1-4(7)3-6/h3,5H,1-2H2
+  standard_inchi_key: CUSSNCHZLYDUPJ-UHFFFAOYSA-N
+  molecular_formula: C4H6O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 102.089
+  monoisotopic_mass: 102.03169
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:144586
+  source_label: 4-hydroxy-2-oxobutanal
+  minted_identifier: antibioticmech:chebi-60da6f242a
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

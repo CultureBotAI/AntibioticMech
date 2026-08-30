@@ -1,0 +1,132 @@
+identifier: CHEBI:5195
+label: furazolidone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of oxazolidines that is 1,3-oxazolidin-2-one in
+  which the hydrogen attached to the nitrogen is replaced by an N-{[(5-nitro-2-furyl)methylene]amino}
+  group. It has antibacterial and antiprotozoal properties, and is used in the treatment
+  of giardiasis and cholera.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Furazolidona
+  synonym_type: INN
+  source: chebi
+- synonym_text: Furazolidonum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 3-{[(5-nitro-2-furyl)methylene]amino}-1,3-oxazolidin-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(5'-Nitrofurfuralamino)-2-oxazolidone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-[(5-Nitrofurfurylidene)amino]-2-oxazolidinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-[(5-Nitrofurfurylidene)amino]-2-oxazolidone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-[(5-Nitrofurylidene)amino]-2-oxazolidone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-{[(5-Nitro-2-furanyl)methylene]amino}-2-oxazolidinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Nitro-N-(2-oxo-3-oxazolidinyl)-2-furanmethanimine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FZL
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Furazolidone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Furoxone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(5-Nitro-2-furfurylidene)-3-amino-2-oxazolidone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(5-Nitro-2-furfurylidene)-3-aminooxazolidine-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nitrofurazolidone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nitrofurazolidonum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: furazolidine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: furoxone
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: nitrofurazolidone
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:38329
+- CHEBI:87230
+- ARO:3004116
+xrefs:
+- ARO:3000688
+- cas:67-45-8
+- drugbank:DB00614
+- drugcentral:1257
+- hmdb:HMDB0014752
+- kegg.compound:C07999
+- kegg.drug:D00830
+- lincs.smallmolecule:LSM-6543
+- patent:GB735136
+- patent:US2742462
+- patent:US2759931
+- patent:US2927110
+- reaxys:384794
+- wikipedia.en:Furazolidone
+- chembl:CHEMBL1103
+- pubchem.compound:5323714
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+- CHEBI:50685
+structural_class: nitrofuran antibiotic
+structural_class_id: ARO:3004116
+chemical_structure:
+  smiles: '[H]C(=NN1CCOC1=O)c1ccc([N+](=O)[O-])o1'
+  standard_inchi: InChI=1S/C8H7N3O5/c12-8-10(3-4-15-8)9-5-6-1-2-7(16-6)11(13)14/h1-2,5H,3-4H2
+  standard_inchi_key: PLHJDBGFXBMTGZ-UHFFFAOYSA-N
+  molecular_formula: C8H7N3O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 225.16
+  monoisotopic_mass: 225.03857
+source_concepts:
+- source: ARO
+  source_id: ARO:3000688
+  source_label: furazolidone
+  minted_identifier: antibioticmech:aro-f1250d6591
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  - CHEBI:50685
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:5195
+  source_label: furazolidone
+  minted_identifier: antibioticmech:chebi-75d9ff26dd
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  - CHEBI:50685
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

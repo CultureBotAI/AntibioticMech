@@ -1,0 +1,56 @@
+identifier: CHEBI:156289
+label: decanoyl-L-Arg-L-Val-L-Lys-L-Arg-chloromethylketone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetrapeptide consisting of N-decanoyl-L-arginine, L-valine, L-lysine,
+  and L-arginine joined in sequence by peptide linkages and in which the carboxy group
+  at the C-terminus is substituted by a chloroacetyl group. It is a furin inhibitor
+  that has antiviral activity against Chikungunya virus, Zika virus and Japanese encephalitis
+  virus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N2-decanoyl-L-arginyl-L-valyl-N-[(3S)-6-carbamimidamido-1-chloro-2-oxohexan-3-yl]-L-lysinamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N2-(1-oxodecyl)-L-arginyl-L-valyl-N-[(1S)-4-[(aminoiminomethyl)amino]-1-(2-chloroacetyl)butyl]-L-lysinamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dec-RVKR-cmk
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: decanoyl-Arg-Val-Lys-Arg-chloromethylketone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: decanoyl-RVKR-CMK
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36683
+- CHEBI:48030
+xrefs:
+- cas:150113-99-8
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: CCCCCCCCCC(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@H](C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](CCCNC(=N)N)C(=O)CCl)C(C)C
+  standard_inchi: InChI=1S/C34H66ClN11O5/c1-4-5-6-7-8-9-10-18-28(48)43-25(17-14-21-42-34(39)40)31(50)46-29(23(2)3)32(51)45-26(15-11-12-19-36)30(49)44-24(27(47)22-35)16-13-20-41-33(37)38/h23-26,29H,4-22,36H2,1-3H3,(H,43,48)(H,44,49)(H,45,51)(H,46,50)(H4,37,38,41)(H4,39,40,42)/t24-,25-,26-,29-/m0/s1
+  standard_inchi_key: NHBJTTGFHCHQHS-VZTVMPNDSA-N
+  molecular_formula: C34H66ClN11O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 744.427
+  monoisotopic_mass: 743.49369
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156289
+  source_label: decanoyl-L-Arg-L-Val-L-Lys-L-Arg-chloromethylketone
+  minted_identifier: antibioticmech:chebi-5b8a0c5e47
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,103 @@
+identifier: CHEBI:34393
+label: 4-chloro-3,5-dimethylphenol
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of phenols that is 3,5-xylenol which is substituted
+  at position 4 by chlorine. It is bactericidal against most Gram-positive bacteria
+  but less effective against Staphylococci and Gram-negative bacteria, and often inactive
+  against Pseudomonas species. It is ineffective against bacterial spores.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Benzytol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Dettol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: chloroxylenol
+  synonym_type: INN
+  source: chebi
+- synonym_text: chloroxylenolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: chloroxylénol
+  synonym_type: INN
+  source: chebi
+- synonym_text: cloroxilenol
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-Chloro-m-xylenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-chloro-5-hydroxy-1,3-dimethylbenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-chloro-5-hydroxy-m-xylene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,5-dimethyl-4-chlorophenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-chloro-1-hydroxy-3,5-dimethylbenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-chloro-m-xylenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PCMX
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chloro-xylenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-chloro-3,5-xylenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-chloro-m-xylenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: parachlorometaxylenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: parametaxylenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:83403
+xrefs:
+- cas:88-04-0
+- drugcentral:3094
+- kegg.compound:C14715
+- kegg.drug:D03473
+- lincs.smallmolecule:LSM-19962
+- patent:US2350677
+- ppdb:1615
+- reaxys:1862539
+- vsdb:1615
+- wikipedia.en:Chloroxylenol
+activity_roles:
+- CHEBI:48219
+chemical_structure:
+  smiles: Cc1cc(O)cc(C)c1Cl
+  standard_inchi: InChI=1S/C8H9ClO/c1-5-3-7(10)4-6(2)8(5)9/h3-4,10H,1-2H3
+  standard_inchi_key: OSDLLIBGSJNGJE-UHFFFAOYSA-N
+  molecular_formula: C8H9ClO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 156.612
+  monoisotopic_mass: 156.03419
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:34393
+  source_label: 4-chloro-3,5-dimethylphenol
+  minted_identifier: antibioticmech:chebi-ea52ac090b
+  role_terms:
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

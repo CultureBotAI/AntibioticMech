@@ -1,0 +1,60 @@
+identifier: CHEBI:28600
+label: farnesol
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A farnesane sesquiterpenoid that is dodeca-2,6,10-triene substituted by
+  methyl groups at positions 3, 7 and 11 and a hydroxy group at position 1.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,7,11-trimethyldodeca-2,6,10-trien-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,7,11-trimethyl-2,6,10-dodecatrien-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,7,11-trimethyl-2,6,10-dodecatrienol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Farnesol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: farnesyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:26199
+- CHEBI:36757
+xrefs:
+- cas:4602-84-0
+- drugbank:DB02509
+- hmdb:HMDB0004305
+- kegg.compound:C01493
+- knapsack:C00003132
+- lincs.smallmolecule:LSM-5398
+- reaxys:1763926
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H]C(CO)=C(C)CCC([H])=C(C)CCC=C(C)C'
+  standard_inchi: InChI=1S/C15H26O/c1-13(2)7-5-8-14(3)9-6-10-15(4)11-12-16/h7,9,11,16H,5-6,8,10,12H2,1-4H3
+  standard_inchi_key: CRDAMVZIKSXKFV-UHFFFAOYSA-N
+  molecular_formula: C15H26O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 222.372
+  monoisotopic_mass: 222.19837
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28600
+  source_label: farnesol
+  minted_identifier: antibioticmech:chebi-a4578e8349
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

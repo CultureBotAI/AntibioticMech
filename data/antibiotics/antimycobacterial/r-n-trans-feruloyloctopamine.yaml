@@ -1,0 +1,53 @@
+identifier: CHEBI:67373
+label: (R)-N-trans-feruloyloctopamine
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of cinnamamides that is an enamide obtained by the
+  formal condensation of the amino group of (R)-octopamine with the carboxy group
+  of ferulic acid. Isolated from Pisonia aculeata, it exhibits antitubercular activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-N-[(2R)-2-hydroxy-2-(4-hydroxyphenyl)ethyl]-3-(4-hydroxy-3-methoxyphenyl)prop-2-enamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,E)-N-[2-hydroxy-2-(4-hydroxyphenyl)ethyl]ferulamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-[2-(R)-hydroxy-2-(4-hydroxy-phenyl)ethyl]-3-(4-hydroxy-3-methoxy-phenyl)acrylamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-N-[(E)-feruloyl]octopamine
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:23247
+- CHEBI:25235
+- CHEBI:33853
+xrefs:
+- reaxys:9579371
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: COc1cc(/C=C/C(=O)NC[C@H](O)c2ccc(O)cc2)ccc1O
+  standard_inchi: InChI=1S/C18H19NO5/c1-24-17-10-12(2-8-15(17)21)3-9-18(23)19-11-16(22)13-4-6-14(20)7-5-13/h2-10,16,20-22H,11H2,1H3,(H,19,23)/b9-3+/t16-/m0/s1
+  standard_inchi_key: VJSCHQMOTSXAKB-CFZDNBDDSA-N
+  molecular_formula: C18H19NO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 329.352
+  monoisotopic_mass: 329.12632
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:67373
+  source_label: (R)-N-trans-feruloyloctopamine
+  minted_identifier: antibioticmech:chebi-323b67c54c
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

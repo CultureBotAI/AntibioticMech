@@ -1,0 +1,62 @@
+identifier: CHEBI:31325
+label: butenafine hydrochloride
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The hydrochloride salt of butenafine. An inhibitor of squalene epoxidase,
+  an enzyme responsible for the creation of sterols needed in fungal cell membranes,
+  it is used for treatment of dermatological fungal infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-(4-tert-butylphenyl)-N-methyl-N-(naphthalen-1-ylmethyl)methanamine
+    hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4-tert-butylphenyl)-N-methyl-N-(naphthalen-1-ylmethyl)methanaminium
+    chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-tert-butylbenzyl(methyl)(1-naphthalenemethyl)amine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Butenafine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(p-tert-butylbenzyl)-N-methyl-1-naphthalenemethylamine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: butenafine HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+- CHEBI:47704
+xrefs:
+- cas:101827-46-7
+- drugbank:DB01091
+- kegg.compound:C12490
+- kegg.drug:D01093
+activity_roles:
+- CHEBI:86327
+chemical_structure:
+  smiles: CN(Cc1ccc(C(C)(C)C)cc1)Cc1cccc2ccccc12.Cl
+  standard_inchi: InChI=1S/C23H27N.ClH/c1-23(2,3)21-14-12-18(13-15-21)16-24(4)17-20-10-7-9-19-8-5-6-11-22(19)20;/h5-15H,16-17H2,1-4H3;1H
+  standard_inchi_key: LJBSAUIFGPSHCN-UHFFFAOYSA-N
+  molecular_formula: C23H27N.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 353.937
+  monoisotopic_mass: 353.19103
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31325
+  source_label: butenafine hydrochloride
+  minted_identifier: antibioticmech:chebi-d222043752
+  role_terms:
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

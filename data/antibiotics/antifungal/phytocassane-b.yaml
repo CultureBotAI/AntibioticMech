@@ -1,0 +1,54 @@
+identifier: CHEBI:72666
+label: (+)-phytocassane B
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A phytocassane that is (+)-phytocassane C which has been substituted with
+  an additional hydroxy group at the 2α position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1α,2α,3α-trihydroxy-14β-methyl-13-vinyl-5β,8α,9β,10α,14β-podocarp-12-en-11-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1S,4aR,4bR,5R,6S,7S,8aR,10aR)-2-ethenyl-5,6,7-trihydroxy-1,4b,8,8-tetramethyl-4a,4b,5,6,7,8,8a,9,10,10a-decahydrophenanthren-4(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1S,4aR,4bR,5R,6S,7S,8aR,10aR)-5,6,7-trihydroxy-1,4b,8,8-tetramethyl-2-vinyl-4a,4b,5,6,7,8,8a,9,10,10a-decahydrophenanthren-4(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1α,2α,3α,5β,8α,9β,10α,14β)-1,2,3-trihydroxy-14-methyl-13-vinylpodocarp-12-en-11-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: phytocassane B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139395
+- CHEBI:27136
+xrefs:
+- hmdb:HMDB0041055
+- reaxys:15793552
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12C(=O)C=C(C=C)[C@@H](C)[C@@]1([H])CC[C@]1([H])C(C)(C)[C@H](O)[C@H](O)[C@H](O)[C@@]21C'
+  standard_inchi: InChI=1S/C20H30O4/c1-6-11-9-13(21)15-12(10(11)2)7-8-14-19(3,4)17(23)16(22)18(24)20(14,15)5/h6,9-10,12,14-18,22-24H,1,7-8H2,2-5H3/t10-,12-,14-,15+,16+,17-,18+,20-/m1/s1
+  standard_inchi_key: XFRCVLKGZMPUFQ-SUIMNPQMSA-N
+  molecular_formula: C20H30O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 334.456
+  monoisotopic_mass: 334.21441
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:72666
+  source_label: (+)-phytocassane B
+  minted_identifier: antibioticmech:chebi-2739542c86
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,44 @@
+identifier: CHEBI:65385
+label: alisiaquinol
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heteropentacyclic compound comprising (2aS,5aR,8aR,8bS)-8a-hydroxy-2a,5a-dimethyldecahydro-8H-naphtho[1,8-bc]furan-8-one
+  ortho-fused to C-6 and C-7 of naphthalene-1,4-diol. An antiplasmodial drug isolated
+  from New Caledonian deep water sponge.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3aS,5aR,12bS,12cS)-5a,8,11-trihydroxy-3a,12b-dimethyl-1,2,3,3a,4,5a,12b,12c-octahydro-6H-tetrapheno[5,4-bc]furan-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:38164
+- CHEBI:3992
+- CHEBI:59780
+xrefs:
+- reaxys:19205151
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: '[H][C@@]12[C@]3(C)CCC[C@]1(C)c1cc4c(O)ccc(O)c4cc1C(=O)[C@]2(O)OC3'
+  standard_inchi: InChI=1S/C21H22O5/c1-19-6-3-7-20(2)14-9-12-11(15(22)4-5-16(12)23)8-13(14)17(24)21(25,18(19)20)26-10-19/h4-5,8-9,18,22-23,25H,3,6-7,10H2,1-2H3/t18-,19-,20-,21+/m1/s1
+  standard_inchi_key: OBXVUUWPKYYYBL-NCYKPQTJSA-N
+  molecular_formula: C21H22O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 354.402
+  monoisotopic_mass: 354.14672
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65385
+  source_label: alisiaquinol
+  minted_identifier: antibioticmech:chebi-5bc6192066
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

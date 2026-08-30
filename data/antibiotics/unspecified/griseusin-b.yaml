@@ -1,0 +1,39 @@
+identifier: CHEBI:48200
+label: griseusin B
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: '[(1R,3S,3''S,4''R,6''R)-4''-acetoxy-3'',9-dihydroxy-6''-methyl-5,10-dioxo-3,3'',4,4'',5,5'',6'',10-octahydrospiro[naphtho[2,3-c]pyran-1,2''-pyran]-3-yl]acetic
+    acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25830
+- CHEBI:48129
+xrefs:
+- beilstein:5184599
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(=O)O[C@@H]1C[C@@H](C)O[C@]2(O[C@H](CC(=O)O)CC3=C2C(=O)c2c(O)cccc2C3=O)[C@H]1O
+  standard_inchi: InChI=1S/C22H22O10/c1-9-6-15(30-10(2)23)21(29)22(31-9)18-13(7-11(32-22)8-16(25)26)19(27)12-4-3-5-14(24)17(12)20(18)28/h3-5,9,11,15,21,24,29H,6-8H2,1-2H3,(H,25,26)/t9-,11+,15-,21+,22-/m1/s1
+  standard_inchi_key: ZALAFWZWSLVCID-VXUQJGMHSA-N
+  molecular_formula: C22H22O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 446.408
+  monoisotopic_mass: 446.1213
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:48200
+  source_label: griseusin B
+  minted_identifier: antibioticmech:chebi-a3d0782433
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

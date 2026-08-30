@@ -1,0 +1,39 @@
+identifier: CHEBI:66048
+label: 2'-hydroxyneobavaisoflavanone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxyisoflavanone that is 2,3-dihydroneobavaisoflavone with an additional
+  hydroxy group at position 2'. Isolated from Erythrina lysistemon, it exhibits anti-HIV
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-[2,4-dihydroxy-3-(3-methylbut-2-en-1-yl)phenyl]-7-hydroxy-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:72739
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: CC(C)=CCc1c(O)ccc(C2COc3cc(O)ccc3C2=O)c1O
+  standard_inchi: InChI=1S/C20H20O5/c1-11(2)3-5-14-17(22)8-7-13(19(14)23)16-10-25-18-9-12(21)4-6-15(18)20(16)24/h3-4,6-9,16,21-23H,5,10H2,1-2H3
+  standard_inchi_key: LNXMEHXPWCVVID-UHFFFAOYSA-N
+  molecular_formula: C20H20O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 340.375
+  monoisotopic_mass: 340.13107
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66048
+  source_label: 2'-hydroxyneobavaisoflavanone
+  minted_identifier: antibioticmech:chebi-e678cfc3fb
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

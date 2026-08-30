@@ -1,0 +1,80 @@
+identifier: CHEBI:134606
+label: toyocamycin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An N-glycosylpyrrolopyrimidine that is tubercidin in which the hydrogen
+  at position 5 of the pyrrolopyrimidine moiety has been replaced by a cyano group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-amino-7-β-D-ribofuranosyl-7H-pyrrolo[2,3-d]pyrimidine-5-carbonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-amino-5-cyano-7-(D-ribofuranosyl)-7H-pyrrolo(2,3-d)pyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-deaza-7-cyanoadenosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: A-399-Y4
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ahygroscopin-B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic 1037
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic A-399-Y4
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic E212
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E-212
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Siromycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Uramycin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Vengicide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cyanotubericidin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18254
+- CHEBI:18379
+- CHEBI:48036
+- CHEBI:86478
+xrefs:
+- cas:606-58-6
+- reaxys:48454
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: N#Cc1cn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c2ncnc(N)c12
+  standard_inchi: InChI=1S/C12H13N5O4/c13-1-5-2-17(11-7(5)10(14)15-4-16-11)12-9(20)8(19)6(3-18)21-12/h2,4,6,8-9,12,18-20H,3H2,(H2,14,15,16)/t6-,8-,9-,12-/m1/s1
+  standard_inchi_key: XOKJUSAYZUAMGJ-WOUKDFQISA-N
+  molecular_formula: C12H13N5O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 291.267
+  monoisotopic_mass: 291.09675
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:134606
+  source_label: toyocamycin
+  minted_identifier: antibioticmech:chebi-92dfd4b4e6
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

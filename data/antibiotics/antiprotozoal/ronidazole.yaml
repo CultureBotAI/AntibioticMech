@@ -1,0 +1,59 @@
+identifier: CHEBI:141154
+label: ronidazole
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbamate ester that is 5-nitroimidazole in which the hydrogens at positions
+  1 and 2 are replaced by methyl and (carbamoyloxy)methyl groups, respectively. An
+  antiprotozoal agent, it is used in veterinary medicine for the treatment of histomoniasis
+  and swine dysentery.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ronidazol
+  synonym_type: INN
+  source: chebi
+- synonym_text: ronidazolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (1-methyl-5-nitro-1H-imidazol-2-yl)methyl carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-methyl-5-nitro-1H-imidazole-2-methanol carbamate ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: carbamic acid (1-methyl-5-nitro-2-imidazolyl)methyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:24780
+- CHEBI:35716
+xrefs:
+- cas:7681-76-7
+- kegg.drug:D05752
+- vsdb:2406
+- wikipedia.en:Ronidazole
+activity_roles:
+- CHEBI:35820
+chemical_structure:
+  smiles: Cn1c([N+](=O)[O-])cnc1COC(N)=O
+  standard_inchi: InChI=1S/C6H8N4O4/c1-9-4(3-14-6(7)11)8-2-5(9)10(12)13/h2H,3H2,1H3,(H2,7,11)
+  standard_inchi_key: PQFRTXSWDXZRRS-UHFFFAOYSA-N
+  molecular_formula: C6H8N4O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 200.154
+  monoisotopic_mass: 200.05455
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141154
+  source_label: ronidazole
+  minted_identifier: antibioticmech:chebi-9381fe51b0
+  role_terms:
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

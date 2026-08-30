@@ -1,0 +1,61 @@
+identifier: CHEBI:44485
+label: N-ethylmaleimide
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of maleimides that is the N-ethyl derivative of
+  maleimide.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-ethyl-1H-pyrrole-2,5-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethylmaleimide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-ETHYLMALEIMIDE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-Ethylmaleimide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NEM
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:55417
+xrefs:
+- beilstein:112448
+- cas:128-53-0
+- drugbank:DB02967
+- gmelin:405614
+- kegg.compound:C02441
+- lincs.smallmolecule:LSM-4219
+- metacyc.compound:N-ETHYLMALEIMIDE
+- pdb-ccd:NEQ
+- reaxys:112448
+- wikipedia.en:N-Ethylmaleimide
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CCN1C(=O)C=CC1=O
+  standard_inchi: InChI=1S/C6H7NO2/c1-2-7-5(8)3-4-6(7)9/h3-4H,2H2,1H3
+  standard_inchi_key: HDFGOPSGAURCEO-UHFFFAOYSA-N
+  molecular_formula: C6H7NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 125.127
+  monoisotopic_mass: 125.04768
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:44485
+  source_label: N-ethylmaleimide
+  minted_identifier: antibioticmech:chebi-4068eac1e3
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

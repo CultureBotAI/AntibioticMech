@@ -1,0 +1,49 @@
+identifier: CHEBI:65537
+label: (R)-7-butyl-6,8-dihydroxy-3-[(3E)-pent-3-en-1-yl]-3,4-dihydroisochromen-1-one
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An isochromane that is 3,4-dihydroisocoumarin with a butyl substituent
+  at position 7, hydroxy substituents at positions 6 and 8 and a 3E-pent-3-en-1-yl
+  group at position 3. It is isolated from an endophytic fungus, Geotrichum.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R)-7-butyl-6,8-dihydroxy-3-[(3E)-pent-3-en-1-yl]-3,4-dihydro-1H-isochromen-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-butyl-6,8-dihydroxy-3(R)-pent-11-enylisochroman-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:38762
+xrefs:
+- reaxys:9582012
+activity_roles:
+- CHEBI:33231
+- CHEBI:35718
+- CHEBI:38068
+chemical_structure:
+  smiles: C/C=C/CC[C@@H]1Cc2cc(O)c(CCCC)c(O)c2C(=O)O1
+  standard_inchi: InChI=1S/C18H24O4/c1-3-5-7-8-13-10-12-11-15(19)14(9-6-4-2)17(20)16(12)18(21)22-13/h3,5,11,13,19-20H,4,6-10H2,1-2H3/b5-3+/t13-/m1/s1
+  standard_inchi_key: RNIKQZXKWIZFHL-MASHWEEQSA-N
+  molecular_formula: C18H24O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 304.386
+  monoisotopic_mass: 304.16746
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65537
+  source_label: (R)-7-butyl-6,8-dihydroxy-3-[(3E)-pent-3-en-1-yl]-3,4-dihydroisochromen-1-one
+  minted_identifier: antibioticmech:chebi-5f6f042c05
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:35718
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

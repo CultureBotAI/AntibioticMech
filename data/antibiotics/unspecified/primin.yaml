@@ -1,0 +1,58 @@
+identifier: CHEBI:8413
+label: primin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 1,4-benzoquinone having a methoxy substituent at the 2-position and
+  a pentyl substituent at the 6-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-methoxy-6-pentyl-1,4-benzoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methoxy-6-n-pentyl-1,4-benzoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methoxy-6-n-pentyl-p-benzoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methoxy-6-pentyl-2,5-cyclohexadiene-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methoxy-6-pentylcyclohexa-2,5-diene-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Primin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132124
+xrefs:
+- cas:15121-94-5
+- kegg.compound:C10390
+- knapsack:C00002854
+- reaxys:1961495
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CCCCCC1=CC(=O)C=C(OC)C1=O
+  standard_inchi: InChI=1S/C12H16O3/c1-3-4-5-6-9-7-10(13)8-11(15-2)12(9)14/h7-8H,3-6H2,1-2H3
+  standard_inchi_key: WLWIMKWZMGJRBS-UHFFFAOYSA-N
+  molecular_formula: C12H16O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 208.257
+  monoisotopic_mass: 208.10994
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:8413
+  source_label: primin
+  minted_identifier: antibioticmech:chebi-516c0d6cb2
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,52 @@
+identifier: CHEBI:27494
+label: sophoraisoflavanone A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxyisoflavanone that is isoflavanone substituted by hydroxy groups
+  at positions 5, 7 and 4', a methoxy substituent at position 2' and a prenyl group
+  at position 3'.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,7-dihydroxy-3-[4-hydroxy-2-methoxy-3-(3-methylbut-2-en-1-yl)phenyl]-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dihydroxy-3-[4-hydroxy-2-methoxy-3-(3-methylbut-2-en-1-yl)phenyl]-2,3-dihydro-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sophoraisoflavanone A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:72739
+- CHEBI:72740
+xrefs:
+- cas:69573-59-7
+- kegg.compound:C10530
+- knapsack:C00002573
+- lipidmaps:LMPK12050480
+- reaxys:1667139
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COc1c(C2COc3cc(O)cc(O)c3C2=O)ccc(O)c1CC=C(C)C
+  standard_inchi: InChI=1S/C21H22O6/c1-11(2)4-5-14-16(23)7-6-13(21(14)26-3)15-10-27-18-9-12(22)8-17(24)19(18)20(15)25/h4,6-9,15,22-24H,5,10H2,1-3H3
+  standard_inchi_key: AALISTBXLBQUEH-UHFFFAOYSA-N
+  molecular_formula: C21H22O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 370.401
+  monoisotopic_mass: 370.14164
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:27494
+  source_label: sophoraisoflavanone A
+  minted_identifier: antibioticmech:chebi-15df24775d
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

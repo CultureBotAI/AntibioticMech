@@ -1,0 +1,65 @@
+identifier: CHEBI:47617
+label: 4,5,6,7-tetrachloro-2-benzofuran-1(3H)-one
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 2-benzofurans that is 2-benzofuran-1(3H)-one
+  in which all or the hydrogens attached to the benzene ring are replaced by chlorines.
+  A fungicide used for the control of rice blast, it is not approved for use within
+  the European Union.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Rabcide
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 4,5,6,7-tetrachloro-1(3H)-isobenzofuranone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,5,6,7-tetrachlorophthalide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bayer 96610
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: KF-32
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fthalide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26888
+- CHEBI:27171
+- CHEBI:28831
+- CHEBI:37581
+xrefs:
+- cas:27355-22-2
+- kegg.compound:C18611
+- pdb-ccd:PHH
+- pesticides:phthalide
+- ppdb:1212
+- reaxys:182477
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: O=C1OCc2c(Cl)c(Cl)c(Cl)c(Cl)c21
+  standard_inchi: InChI=1S/C8H2Cl4O2/c9-4-2-1-14-8(13)3(2)5(10)7(12)6(4)11/h1H2
+  standard_inchi_key: NMWKWBPNKPGATC-UHFFFAOYSA-N
+  molecular_formula: C8H2Cl4O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 271.914
+  monoisotopic_mass: 269.88089
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:47617
+  source_label: 4,5,6,7-tetrachloro-2-benzofuran-1(3H)-one
+  minted_identifier: antibioticmech:chebi-3aa6425b48
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,45 @@
+identifier: CHEBI:66265
+label: 2,2',4'-trihydroxy-6'-methoxy-3',5'-dimethylchalcone
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of chalcones that is 3',5'-dimethylchalcone substituted
+  by hydroxy groups at positions 2, 2' and 4' and a methoxy group at position 6'.
+  Isolated from Psorothamnus polydenius, it exhibits antiparasitic activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-1-(2,4-dihydroxy-6-methoxy-3,5-dimethylphenyl)-3-(2-hydroxyphenyl)prop-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23086
+- CHEBI:25235
+- CHEBI:26195
+xrefs:
+- reaxys:10194818
+activity_roles:
+- CHEBI:36335
+- CHEBI:70868
+chemical_structure:
+  smiles: COc1c(C)c(O)c(C)c(O)c1C(=O)/C=C/c1ccccc1O
+  standard_inchi: InChI=1S/C18H18O5/c1-10-16(21)11(2)18(23-3)15(17(10)22)14(20)9-8-12-6-4-5-7-13(12)19/h4-9,19,21-22H,1-3H3/b9-8+
+  standard_inchi_key: SPWBEELZNSXNME-CMDGGOBGSA-N
+  molecular_formula: C18H18O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 314.337
+  monoisotopic_mass: 314.11542
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66265
+  source_label: 2,2',4'-trihydroxy-6'-methoxy-3',5'-dimethylchalcone
+  minted_identifier: antibioticmech:chebi-2600a3293e
+  role_terms:
+  - CHEBI:36335
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

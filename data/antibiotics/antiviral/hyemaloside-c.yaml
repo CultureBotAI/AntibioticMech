@@ -1,0 +1,44 @@
+identifier: CHEBI:66052
+label: hyemaloside C
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A β-D-glucoside compound having a a hexahydroxydiphenoyl (HHDP) group
+  bridging over positions 4 and 6, galloyl groups at positions 2 and 3 and a 4-hydroxyphenyl
+  substituent at the 1-position. Isolated from Eugenia hyemalis, it exhibits inhibitory
+  activity against HIV-1.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (11aR,13S,14R,15S,15aR)-2,3,4,5,6,7-hexahydroxy-13-(4-hydroxyphenoxy)-9,17-dioxo-9,11,11a,13,14,15,15a,17-octahydrodibenzo[g,i]pyrano[3,2-b][1,5]dioxacycloundecine-14,15-diyl
+    bis(3,4,5-trihydroxybenzoate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22798
+- CHEBI:37576
+xrefs:
+- reaxys:19205164
+activity_roles:
+- CHEBI:52629
+chemical_structure:
+  smiles: O=C(O[C@@H]1[C@@H](OC(=O)c2cc(O)c(O)c(O)c2)[C@H](Oc2ccc(O)cc2)O[C@@H]2COC(=O)c3cc(O)c(O)c(O)c3-c3c(cc(O)c(O)c3O)C(=O)O[C@@H]12)c1cc(O)c(O)c(O)c1
+  standard_inchi: InChI=1S/C40H30O23/c41-14-1-3-15(4-2-14)59-40-35(63-37(55)13-7-20(44)28(49)21(45)8-13)34(62-36(54)12-5-18(42)27(48)19(43)6-12)33-24(60-40)11-58-38(56)16-9-22(46)29(50)31(52)25(16)26-17(39(57)61-33)10-23(47)30(51)32(26)53/h1-10,24,33-35,40-53H,11H2/t24-,33-,34+,35-,40-/m1/s1
+  standard_inchi_key: BIUWKTLZFMHRQE-RYQQTUIDSA-N
+  molecular_formula: C40H30O23
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 878.657
+  monoisotopic_mass: 878.11779
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66052
+  source_label: hyemaloside C
+  minted_identifier: antibioticmech:chebi-5a00e061c0
+  role_terms:
+  - CHEBI:52629
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

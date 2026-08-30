@@ -1,0 +1,44 @@
+identifier: CHEBI:69196
+label: brazilein
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A organic heterotetracyclic compound that is a red pigment obtained from
+  the wood of Caesalpinia echinata (Brazil-wood) or Caesalpinia sappan (sappan-wood).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6aS)-3,6a,10-trihydroxy-6a,7-dihydrobenzo[b]indeno[1,2-d]pyran-9(6H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26878
+- CHEBI:33823
+- CHEBI:33853
+- CHEBI:38163
+- CHEBI:52404
+xrefs:
+- reaxys:8071909
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C1C=C2C[C@@]3(O)COc4cc(O)ccc4C3=C2C=C1O
+  standard_inchi: InChI=1S/C16H12O5/c17-9-1-2-10-14(4-9)21-7-16(20)6-8-3-12(18)13(19)5-11(8)15(10)16/h1-5,17,19-20H,6-7H2/t16-/m1/s1
+  standard_inchi_key: MLWIYODOURBGPI-MRXNPFEDSA-N
+  molecular_formula: C16H12O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 284.267
+  monoisotopic_mass: 284.06847
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69196
+  source_label: brazilein
+  minted_identifier: antibioticmech:chebi-3fc194434e
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

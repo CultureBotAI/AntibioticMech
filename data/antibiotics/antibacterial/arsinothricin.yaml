@@ -1,0 +1,39 @@
+identifier: antibioticmech:aro-d03e1e5b82
+label: arsinothricin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Arsinothricin is a natural product synthesized by the rhizosphere bacterium
+  Burkholderia gladioli GSRB05 and is a broad-spectrum antibiotic effective against
+  human pathogens such as carbapenem-resistant Enterobacter cloacae. It is a non-proteogenic
+  amino acid and glutamate mimetic that inhibits bacterial glutamine synthetase.
+definition_source: PMID:36785875
+parent_compounds:
+- ARO:3000551
+xrefs:
+- ARO:3007534
+- CHEBI:220158
+- pubchem.compound:170988177
+structural_class: organoarsenic antibiotic
+structural_class_id: ARO:3000551
+chemical_structure:
+  smiles: C[As](=O)(CCC(C(=O)O)N)O
+  standard_inchi: InChI=1S/C5H12AsNO4/c1-6(10,11)3-2-4(7)5(8)9/h4H,2-3,7H2,1H3,(H,8,9)(H,10,11)
+  standard_inchi_key: CXTQPLOKUBDLTK-UHFFFAOYSA-N
+  molecular_formula: C5H12AsNO4
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 225.07
+  monoisotopic_mass: 224.998227
+source_concepts:
+- source: ARO
+  source_id: ARO:3007534
+  source_label: arsinothricin
+  minted_identifier: antibioticmech:aro-d03e1e5b82
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,45 @@
+identifier: CHEBI:149679
+label: N-(tert-butoxycarbonyl)-L-seryl-L-valyl-N-{(2S,3E)-5-ethoxy-5-oxo-1-[(3S)-2-oxopyrrolidin-3-yl]pent-3-en-2-yl}-L-leucinamide
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tripeptide that is L-seryl-L-valyl-L-leucine in which the amino group
+  at the N-terminal is substituted by a tert-butoxycarbonyl group and the carboxy
+  group at the C-terminal is substituted by a {(2S,3E)-5-ethoxy-5-oxo-1-[(3S)-2-oxopyrrolidin-3-yl]pent-3-en-2-yl}amino
+  group. It is a 3C-like protease inhibitor of MERS-CoV and SARS-CoV.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ethyl (6S,9S,12S,15S,16E)-6-(hydroxymethyl)-2,2-dimethyl-12-(2-methylpropyl)-4,7,10,13-tetraoxo-15-{[(3S)-2-oxopyrrolidin-3-yl]methyl}-9-(propan-2-yl)-3-oxa-5,8,11,14-tetraazaoctadec-16-en-18-oate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:140402
+- CHEBI:23990
+- CHEBI:47923
+- CHEBI:51702
+- CHEBI:74223
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CCOC(=O)/C=C/[C@H](C[C@@H]1CCNC1=O)NC(=O)[C@H](CC(C)C)NC(=O)[C@@H](NC(=O)[C@H](CO)NC(=O)OC(C)(C)C)C(C)C
+  standard_inchi: InChI=1S/C30H51N5O9/c1-9-43-23(37)11-10-20(15-19-12-13-31-25(19)38)32-26(39)21(14-17(2)3)33-28(41)24(18(4)5)35-27(40)22(16-36)34-29(42)44-30(6,7)8/h10-11,17-22,24,36H,9,12-16H2,1-8H3,(H,31,38)(H,32,39)(H,33,41)(H,34,42)(H,35,40)/b11-10+/t19-,20+,21-,22-,24-/m0/s1
+  standard_inchi_key: JQGRQEJSWFZWOD-IDAOPYDCSA-N
+  molecular_formula: C30H51N5O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 625.764
+  monoisotopic_mass: 625.36868
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:149679
+  source_label: N-(tert-butoxycarbonyl)-L-seryl-L-valyl-N-{(2S,3E)-5-ethoxy-5-oxo-1-[(3S)-2-oxopyrrolidin-3-yl]pent-3-en-2-yl}-L-leucinamide
+  minted_identifier: antibioticmech:chebi-f6d401518a
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

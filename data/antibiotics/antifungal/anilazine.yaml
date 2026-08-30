@@ -1,0 +1,92 @@
+identifier: CHEBI:82076
+label: anilazine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of triazenes that is dichlorotriazene in which the
+  hydrogen is replaced by an o-chloroanilino group. A fungicide formerly used to control
+  leaf spots and downy mildew, it is no longer approved for use within the European
+  Union.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Aniyaline
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Dairene
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Dyrene
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Kemate
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Triasym
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Triasyn
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Zinochlor
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 4,6-dichloro-N-(2-chlorophenyl)-1,3,5-triazin-2-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (o-chloroanilino)dichlorotriazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4-dichloro-6-(2-chloroanilino)-1,3,5-triazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4-dichloro-6-(o-chloroanilino)-s-triazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(2-Chloranilin)-4,6-dichlor-1,3,5-triazin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-chloro-N-(4,6-dichloro-1,3,5-triazin-2-yl)aniline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: anilazin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38102
+- CHEBI:38656
+- CHEBI:50995
+- CHEBI:83403
+xrefs:
+- cas:101-05-3
+- kegg.compound:C18935
+- patent:US2720480
+- patent:US2820032
+- patent:US3074946
+- pesticides:anilazine
+- ppdb:39
+- reaxys:223133
+- wikipedia.en:Anilazine
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: Clc1nc(Cl)nc(Nc2ccccc2Cl)n1
+  standard_inchi: InChI=1S/C9H5Cl3N4/c10-5-3-1-2-4-6(5)13-9-15-7(11)14-8(12)16-9/h1-4H,(H,13,14,15,16)
+  standard_inchi_key: IMHBYKMAHXWHRP-UHFFFAOYSA-N
+  molecular_formula: C9H5Cl3N4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 275.526
+  monoisotopic_mass: 273.95798
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:82076
+  source_label: anilazine
+  minted_identifier: antibioticmech:chebi-5d8652b7ec
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

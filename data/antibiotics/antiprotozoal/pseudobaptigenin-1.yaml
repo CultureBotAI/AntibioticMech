@@ -1,0 +1,42 @@
+identifier: CHEBI:78327
+label: pseudobaptigenin(1−)
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A flavonoid oxoanion that is the conjugate base of pseudobaptigenin, obtained
+  by deprotonation of the hydroxy group. It is the major microspecies at pH 7.3 (according
+  to Marvin v 6.2.0.).
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-(1,3-benzodioxol-5-yl)-4-oxo-4H-chromen-7-olate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pseudobaptigenin
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:60038
+activity_roles:
+- CHEBI:35820
+chemical_structure:
+  smiles: O=c1c(-c2ccc3c(c2)OCO3)coc2cc([O-])ccc12
+  standard_inchi: InChI=1S/C16H10O5/c17-10-2-3-11-14(6-10)19-7-12(16(11)18)9-1-4-13-15(5-9)21-8-20-13/h1-7,17H,8H2/p-1
+  standard_inchi_key: KNJNBKINYHZUGC-UHFFFAOYSA-M
+  molecular_formula: C16H9O5
+  structure_source: ChEBI
+  charge: -1
+  average_mass: 281.243
+  monoisotopic_mass: 281.04555
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:78327
+  source_label: pseudobaptigenin(1−)
+  minted_identifier: antibioticmech:chebi-ae9df02d38
+  role_terms:
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

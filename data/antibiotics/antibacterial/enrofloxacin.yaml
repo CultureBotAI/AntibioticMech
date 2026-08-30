@@ -1,0 +1,100 @@
+identifier: CHEBI:35720
+label: enrofloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quinolinemonocarboxylic acid that is 1,4-dihydroquinoline-3-carboxylic
+  acid substituted by an oxo group at position 4, a fluoro group at position 6, a
+  cyclopropyl group at position 1 and a 4-ethylpiperazin-1-yl group at position 7.
+  It is a veterinary antibacterial agent used for the treatment of pets.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-cyclopropyl-7-(4-ethylpiperazin-1-yl)-6-fluoro-4-oxo-1,4-dihydroquinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Baytril
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Enrofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23765
+- CHEBI:26512
+- CHEBI:37143
+- CHEBI:46845
+- CHEBI:46848
+- CHEBI:51454
+- ARO:0000001
+xrefs:
+- ARO:3007045
+- cas:93106-60-6
+- drugcentral:1017
+- hmdb:HMDB0029861
+- kegg.drug:D02473
+- lincs.smallmolecule:LSM-3709
+- patent:KR20130080422
+- patent:RU2491922
+- patent:US4659603
+- reaxys:5307824
+- vsdb:1762
+- wikipedia.en:Enrofloxacin
+- chembl:CHEMBL15511
+- pubchem.compound:71188
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: CCN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3C2CC2)CC1
+  standard_inchi: InChI=1S/C19H22FN3O3/c1-2-21-5-7-22(8-6-21)17-10-16-13(9-15(17)20)18(24)14(19(25)26)11-23(16)12-3-4-12/h9-12H,2-8H2,1H3,(H,25,26)
+  standard_inchi_key: SPFYMRJSYKOXGV-UHFFFAOYSA-N
+  molecular_formula: C19H22FN3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 359.401
+  monoisotopic_mass: 359.16452
+source_concepts:
+- source: ARO
+  source_id: ARO:3007045
+  source_label: enrofloxacin
+  minted_identifier: antibioticmech:aro-f5c25c7c0e
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:35720
+  source_label: enrofloxacin
+  minted_identifier: antibioticmech:chebi-fa07c19aba
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003511
+  label: Escherichia coli soxS with mutation conferring antibiotic resistance
+  evidence:
+  - reference: ARO:3003511
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007045 (enrofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007544
+  label: Erysipelothrix rhusiopathiae gyrA with mutation conferring resistance to
+    enrofloxacin
+  evidence:
+  - reference: ARO:3007544
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007045 (enrofloxacin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

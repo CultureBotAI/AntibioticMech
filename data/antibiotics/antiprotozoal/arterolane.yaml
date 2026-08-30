@@ -1,0 +1,70 @@
+identifier: CHEBI:136054
+label: arterolane
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An oxaspiro compound that is dispiro[cyclohexane-1,3'-[1,2,4]trioxolane-5',2''-tricyclo[3.3.1.13,7]decane]
+  substituted by a 2-[(2-amino-2-methylpropyl)amino]-2-oxoethyl group at position
+  4s. Its maleic acid salt is used as an antimalarial drug in combination with piperaquine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: arterolano
+  synonym_type: INN
+  source: chebi
+- synonym_text: arterolanum
+  synonym_type: INN
+  source: chebi
+- synonym_text: artérolane
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-(2-amino-2-methylpropyl)-2-[(1s,4s)-dispiro[cyclohexane-1,3'-[1,2,4]trioxolane-5',2''-tricyclo[3.3.1.13,7]decan]-4-yl]acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: OZ 277
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: OZ277
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RBx-11160
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RBx11160
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:155930
+- CHEBI:37948
+- CHEBI:50994
+- CHEBI:51339
+xrefs:
+- cas:664338-39-0
+- drugcentral:5090
+- wikipedia.en:Arterolane
+activity_roles:
+- CHEBI:38068
+- CHEBI:64915
+chemical_structure:
+  smiles: '[H][C@]1(CC(=O)NCC(C)(C)N)CC[C@]2(CC1)OOC1(O2)C2CC3CC(C2)CC1C3'
+  standard_inchi: InChI=1S/C22H36N2O4/c1-20(2,23)13-24-19(25)12-14-3-5-21(6-4-14)26-22(28-27-21)17-8-15-7-16(10-17)11-18(22)9-15/h14-18H,3-13,23H2,1-2H3,(H,24,25)/t14-,15?,16?,17?,18?,21+,22?
+  standard_inchi_key: VXYZBLXGCYNIHP-MMNSZCNZSA-N
+  molecular_formula: C22H36N2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 392.54
+  monoisotopic_mass: 392.26751
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:136054
+  source_label: arterolane
+  minted_identifier: antibioticmech:chebi-3720024d6b
+  role_terms:
+  - CHEBI:38068
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

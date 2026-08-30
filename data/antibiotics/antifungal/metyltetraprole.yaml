@@ -1,0 +1,62 @@
+identifier: CHEBI:141152
+label: metyltetraprole
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of tetrazoles that is 1-methyl-4-phenyltetrazole
+  in which the phenyl group has been substituted at positions 2 and 3 by [1-(p-chlorophenyl)-1H-pyrazol-3-yl]oxy}methyl
+  and methyl groups, respectively. A quinone outside inhibitor, it is a fungicide
+  that can be used to control a broad range of diseases, including Septoria leaf blotch
+  in wheat.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Pavecto
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 1-[2-({[1-(4-chlorophenyl)-1H-pyrazol-3-yl]oxy}methyl)-3-methylphenyl]-4-methyl-1,4-dihydro-5H-tetrazol-5-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(2-{[1-(4-chlorophenyl)-1H-pyrazol-3-yl]oxymethyl}-3-methylphenyl)-1,4-dihydro-4-methyl-5H-tetrazol-5-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-[2-[[[1-(4-chlorophenyl)-1H-pyrazol-3-yl]oxy]methyl]-3-methylphenyl]-1,4-dihydro-4-methyl-5H-tetrazol-5-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: métyltétraprole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35689
+- CHEBI:38601
+- CHEBI:83403
+xrefs:
+- cas:1472649-01-6
+- pesticides:metyltetraprole
+- reaxys:24085463
+- wikipedia.en:Metyltetraprole
+activity_roles:
+- CHEBI:141153
+- CHEBI:86328
+chemical_structure:
+  smiles: Cc1cccc(-n2nnn(C)c2=O)c1COc1ccn(-c2ccc(Cl)cc2)n1
+  standard_inchi: InChI=1S/C19H17ClN6O2/c1-13-4-3-5-17(26-19(27)24(2)22-23-26)16(13)12-28-18-10-11-25(21-18)15-8-6-14(20)7-9-15/h3-11H,12H2,1-2H3
+  standard_inchi_key: XUQQRGKFXLAPNV-UHFFFAOYSA-N
+  molecular_formula: C19H17ClN6O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 396.838
+  monoisotopic_mass: 396.11015
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141152
+  source_label: metyltetraprole
+  minted_identifier: antibioticmech:chebi-869c7db036
+  role_terms:
+  - CHEBI:141153
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

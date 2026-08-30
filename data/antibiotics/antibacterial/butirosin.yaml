@@ -1,0 +1,105 @@
+identifier: antibioticmech:aro-63094b52cf
+label: butirosin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Butirosin is an aminoglycoside antibiotic used to treat different types
+  of bacterial infections. Butirosin works by binding to the bacterial 30S ribosomal
+  subunit, causing misreading of mRNA and leaving the bacterium unable to synthesize
+  proteins vital to its growth.
+definition_source: PMID:10103173
+synonyms:
+- synonym_text: ambutyrosin sulfate
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: butirosin sulphate
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:0000016
+xrefs:
+- ARO:0000024
+- cas:12772-35-9
+- CHEBI:65109
+- chembl:CHEMBL3549904
+- pubchem.compound:72393
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: C1[C@@H]([C@H]([C@@H]([C@H]([C@@H]1NC(=O)[C@@H](CCN)O)O)O[C@@H]2[C@@H]([C@@H]([C@H](O2)CO)O)O)O[C@@H]3[C@@H]([C@H]([C@@H]([C@H](O3)CN)O)O)N)N
+  standard_inchi: InChI=1S/C21H41N5O12/c22-2-1-8(28)19(34)26-7-3-6(24)17(37-20-11(25)15(32)13(30)9(4-23)35-20)18(12(7)29)38-21-16(33)14(31)10(5-27)36-21/h6-18,20-21,27-33H,1-5,22-25H2,(H,26,34)/t6-,7+,8+,9+,10+,11+,12-,13+,14+,15+,16+,17+,18+,20+,21+/m0/s1
+  standard_inchi_key: XEQLFNPSYWZPOW-NUOYRARPSA-N
+  molecular_formula: C21H41N5O12
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 555.6
+  monoisotopic_mass: 555.27517176
+source_concepts:
+- source: ARO
+  source_id: ARO:0000024
+  source_label: butirosin
+  minted_identifier: antibioticmech:aro-63094b52cf
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002644
+  label: APH(3')-IIa
+  evidence:
+  - reference: ARO:3002644
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000024 (butirosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002645
+  label: APH(3')-IIb
+  evidence:
+  - reference: ARO:3002645
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000024 (butirosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002646
+  label: APH(3')-IIc
+  evidence:
+  - reference: ARO:3002646
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000024 (butirosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002647
+  label: APH(3')-IIIa
+  evidence:
+  - reference: ARO:3002647
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000024 (butirosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002648
+  label: APH(3')-IVa
+  evidence:
+  - reference: ARO:3002648
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000024 (butirosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002652
+  label: APH(3')-VIa
+  evidence:
+  - reference: ARO:3002652
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000024 (butirosin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002653
+  label: APH(3')-VIb
+  evidence:
+  - reference: ARO:3002653
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000024 (butirosin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000024 (butirosin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

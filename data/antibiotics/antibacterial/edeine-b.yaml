@@ -1,0 +1,67 @@
+identifier: antibioticmech:aro-d075cb1991
+label: edeine B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Edeine B is a subtype of the peptide antibiotic edeine, composed of beta-tyr,
+  beta-ser, diaminopropionic acid, diaminohydroxyazelaic acid, glycine, and guanylspermidine.
+  Edeine B is a mixture of edeine B1 and its inactive isomer, edeine B2. Edeines bind
+  to the 30S subunit to block fMet-tRNA interaction at the P site, inhibiting protein
+  synthesis and subsequent structure/function processes critical for life or replication.
+  Edeine B has also been shown to inhibit septation and cause filamentous morphology,
+  also leading to cell death.
+definition_source: PMID:4984939
+parent_compounds:
+- ARO:3009657
+xrefs:
+- ARO:3000134
+- pubchem.compound:446232
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: C1=CC(=CC=C1[C@H](CC(=O)NC[C@@H](C(=O)N[C@@H](CN)C(=O)N[C@H](CCC[C@@H]([C@@H](CC(=O)NCC(=O)NCCCNCCCCC(=N)N)O)N)C(=O)O)O)N)O
+  standard_inchi: InChI=1S/C34H59N11O10/c35-17-25(45-33(53)27(48)18-42-29(49)15-23(37)20-8-10-21(46)11-9-20)32(52)44-24(34(54)55)6-3-5-22(36)26(47)16-30(50)43-19-31(51)41-14-4-13-40-12-2-1-7-28(38)39/h8-11,22-27,40,46-48H,1-7,12-19,35-37H2,(H3,38,39)(H,41,51)(H,42,49)(H,43,50)(H,44,52)(H,45,53)(H,54,55)/t22-,23-,24+,25-,26+,27-/m0/s1
+  standard_inchi_key: WEPSNLBXXUYQJF-LQXCWRENSA-N
+  molecular_formula: C34H59N11O10
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 781.9
+  monoisotopic_mass: 781.44463712
+source_concepts:
+- source: ARO
+  source_id: ARO:3000134
+  source_label: edeine B
+  minted_identifier: antibioticmech:aro-d075cb1991
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003223
+  label: Escherichia coli 16S rRNA mutation conferring resistance to edeine
+  evidence:
+  - reference: ARO:3003223
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000134 (edeine B);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004063
+  label: EdeQ
+  evidence:
+  - reference: ARO:3004063
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000134 (edeine B);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000756
+  target_label: 30S ribosomal subunit P-site
+  evidence:
+  - reference: ARO:3000756
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000134 (edeine B); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:57Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

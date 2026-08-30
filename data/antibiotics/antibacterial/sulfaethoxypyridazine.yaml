@@ -1,0 +1,54 @@
+identifier: CHEBI:145407
+label: sulfaethoxypyridazine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfonamide consisting of 6-ethoxypyridazine with a 4-aminobenzenesulfonamido
+  group at the 3-position. Generally licensed for veterinary use only against bacterial
+  infections, such as fowl cholera and salmonella infection.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-amino-N-(6-ethoxypyridazin-3-yl)benzene-1-sulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-amino-N-(6-ethoxy-3-pyridazinyl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-amino-N-(6-ethoxypyridazin-3-yl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-(6-ethoxy-3-pyridazinyl)sulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-(6-ethoxypyridazin-3-yl)sulphanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35358
+xrefs:
+- cas:963-14-4
+- drugbank:DB11462
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCOc1ccc(NS(=O)(=O)c2ccc(N)cc2)nn1
+  standard_inchi: InChI=1S/C12H14N4O3S/c1-2-19-12-8-7-11(14-15-12)16-20(17,18)10-5-3-9(13)4-6-10/h3-8H,2,13H2,1H3,(H,14,16)
+  standard_inchi_key: FFJIWWBSBCOKLS-UHFFFAOYSA-N
+  molecular_formula: C12H14N4O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 294.336
+  monoisotopic_mass: 294.07866
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:145407
+  source_label: sulfaethoxypyridazine
+  minted_identifier: antibioticmech:chebi-c01f167271
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,52 @@
+identifier: CHEBI:73167
+label: concanamycin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A concanamycin in which the lactone ring contains 4 double bonds and is
+  substituted by 4 methyl groups, 2 hydroxy groups, 2 methoxy groups and an ethyl
+  group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5R)-3-O-(4-O-carbamoyl-2,6-dideoxy-β-D-arabino-hexopyranosyl)-2,4-dideoxy-1-C-{(2S,3R,4S)-4-[(2R,3S,4E,6E,9R,10S,11S,12R,13R,14E,16Z)-11-ethyl-10,12-dihydroxy-3,17-dimethoxy-7,9,13,15-tetramethyl-18-oxooxacyclooctadeca-4,6,14,16-tetraen-2-yl]-3-hydroxypentan-2-yl}-4-methyl-5-[(1E)-prop-1-en-1-yl]-α-D-threo-pentopyranose
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: folimycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:73195
+xrefs:
+- cas:80890-47-7
+- kegg.compound:C15761
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@]1([C@@H](C)[C@@H](O)[C@H](C)[C@@]2(O)C[C@@H](O[C@H]3C[C@@H](O)[C@H](OC(N)=O)[C@@H](C)O3)[C@H](C)[C@@H](/C=C/C)O2)OC(=O)/C(OC)=C/C(C)=C/[C@@H](C)[C@@H](O)[C@@H](CC)[C@@H](O)[C@H](C)C/C(C)=C/C=C/[C@@H]1OC'
+  standard_inchi: InChI=1S/C46H75NO14/c1-13-16-34-28(7)37(58-38-22-33(48)43(31(10)57-38)60-45(47)53)23-46(54,61-34)30(9)41(51)29(8)42-35(55-11)18-15-17-24(3)19-26(5)39(49)32(14-2)40(50)27(6)20-25(4)21-36(56-12)44(52)59-42/h13,15-18,20-21,26-35,37-43,48-51,54H,14,19,22-23H2,1-12H3,(H2,47,53)/b16-13+,18-15+,24-17+,25-20+,36-21-/t26-,27-,28-,29+,30+,31-,32+,33-,34-,35+,37-,38+,39+,40-,41-,42-,43-,46-/m1/s1
+  standard_inchi_key: DJZCTUVALDDONK-HQMSUKCRSA-N
+  molecular_formula: C46H75NO14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 866.099
+  monoisotopic_mass: 865.51876
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:73167
+  source_label: concanamycin A
+  minted_identifier: antibioticmech:chebi-351fd4f601
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

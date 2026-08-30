@@ -1,0 +1,68 @@
+identifier: CHEBI:5262
+label: galangin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 7-hydroxyflavonol with additional hydroxy groups at positions 3 and
+  5 respectively; a growth inhibitor of breast tumor cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,5,7-trihydroxy-2-phenyl-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,5,7-Trihydroxyflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,5,7-triOH-flavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,5,7-trihydroxy-2-phenyl-4H-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Galangin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: norizalpinin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: teptochrysin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27116
+- CHEBI:52267
+xrefs:
+- cas:548-83-4
+- hmdb:HMDB0029521
+- kegg.compound:C10044
+- knapsack:C00004533
+- lipidmaps:LMPK12111653
+- metacyc.compound:CPD-13502
+- patent:CN101810812
+- patent:KR20090124397
+- reaxys:272179
+- wikipedia.en:Galangin
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: O=c1c(O)c(-c2ccccc2)oc2cc(O)cc(O)c12
+  standard_inchi: InChI=1S/C15H10O5/c16-9-6-10(17)12-11(7-9)20-15(14(19)13(12)18)8-4-2-1-3-5-8/h1-7,16-17,19H
+  standard_inchi_key: VCCRNZQBSJXYJD-UHFFFAOYSA-N
+  molecular_formula: C15H10O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 270.24
+  monoisotopic_mass: 270.05282
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5262
+  source_label: galangin
+  minted_identifier: antibioticmech:chebi-f2df8c917b
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

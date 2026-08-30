@@ -1,0 +1,46 @@
+identifier: CHEBI:66148
+label: komaroviquinone
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracyclic diterpenoid isolated from Dracocephalum komarovii and has
+  been shown to exhibit trypanocidal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4aS,10S,11aS)-10-hydroxy-7-methoxy-1,1-dimethyl-8-(propan-2-yl)-1,2,3,4,5,10,11,11a-octahydro-4a,10-epoxydibenzo[a,d][7]annulene-6,9-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-komaroviquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25830
+- CHEBI:35990
+- CHEBI:38131
+- CHEBI:52557
+xrefs:
+- reaxys:9438711
+activity_roles:
+- CHEBI:36335
+chemical_structure:
+  smiles: '[H][C@@]12C[C@]3(O)O[C@@]1(CCCC2(C)C)CC1=C3C(=O)C(C(C)C)=C(OC)C1=O'
+  standard_inchi: InChI=1S/C21H28O5/c1-11(2)14-17(23)15-12(16(22)18(14)25-5)9-20-8-6-7-19(3,4)13(20)10-21(15,24)26-20/h11,13,24H,6-10H2,1-5H3/t13-,20-,21-/m0/s1
+  standard_inchi_key: DUWHKUPNNGPNFK-ZEWGMFERSA-N
+  molecular_formula: C21H28O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 360.45
+  monoisotopic_mass: 360.19367
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66148
+  source_label: komaroviquinone
+  minted_identifier: antibioticmech:chebi-d706f8936c
+  role_terms:
+  - CHEBI:36335
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,1466 @@
+identifier: CHEBI:100241
+label: ciprofloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quinolone that is quinolin-4(1H)-one bearing cyclopropyl, carboxylic
+  acid, fluoro and piperazin-1-yl substituents at positions 1, 3, 6 and 7, respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ciprofloxacine
+  synonym_type: INN
+  source: chebi
+- synonym_text: ciprofloxacino
+  synonym_type: INN
+  source: chebi
+- synonym_text: ciprofloxacinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1-cyclopropyl-6-fluoro-4-oxo-7-(piperazin-1-yl)-1,4-dihydroquinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-CYCLOPROPYL-6-FLUORO-4-OXO-7-PIPERAZIN-1-YL-1,4-DIHYDROQUINOLINE-3-CARBOXYLIC
+    ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Cyclopropyl-6-fluoro-4-oxo-7-piperazin-1-yl-1,4-dihydro-quinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Cyclopropyl-6-fluoro-7-(4-methyl-piperazin-1-yl)-4-oxo-1,4-dihydro-quinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-cyclopropyl-6-fluoro-1,4-dihydro-4-oxo-7-(1-piperazinyl)-3-quinolinecarboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-cyclopropyl-6-fluoro-4-oxo-7-piperazin-1-ylquinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-cyclopropyl-6-fluoro-7-hexahydro-1-pyrazinyl-4-oxo-1,4-dihydro-3-quinolinecarboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ciprofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CIP
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Cipro
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Ciprobay
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Ciproxan
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23765
+- CHEBI:26512
+- CHEBI:36709
+- CHEBI:46848
+- CHEBI:51454
+- CHEBI:86324
+- CHEBI:87211
+- ARO:0000001
+xrefs:
+- ARO:0000036
+- cas:85721-33-1
+- drugbank:DB00537
+- drugcentral:659
+- hmdb:HMDB0014677
+- kegg.compound:C05349
+- kegg.drug:D00186
+- lincs.smallmolecule:LSM-5226
+- patent:DE3142854
+- patent:US4670444
+- pdb-ccd:CPF
+- reaxys:3568352
+- vsdb:1763
+- wikipedia.en:Ciprofloxacin
+- chembl:CHEMBL8
+- pubchem.compound:2764
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: fluoroquinolone antibiotic
+structural_class_id: ARO:0000001
+chemical_structure:
+  smiles: O=C(O)c1cn(C2CC2)c2cc(N3CCNCC3)c(F)cc2c1=O
+  standard_inchi: InChI=1S/C17H18FN3O3/c18-13-7-11-14(8-15(13)20-5-3-19-4-6-20)21(10-1-2-10)9-12(16(11)22)17(23)24/h7-10,19H,1-6H2,(H,23,24)
+  standard_inchi_key: MYSWGUAQZAJSOK-UHFFFAOYSA-N
+  molecular_formula: C17H18FN3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 331.347
+  monoisotopic_mass: 331.13322
+source_concepts:
+- source: ARO
+  source_id: ARO:0000036
+  source_label: ciprofloxacin
+  minted_identifier: antibioticmech:aro-29d35653c5
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:100241
+  source_label: ciprofloxacin
+  minted_identifier: antibioticmech:chebi-8eedbf19c6
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000386
+  label: MexAB-OprM
+  evidence:
+  - reference: ARO:3000386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000391
+  label: norA
+  evidence:
+  - reference: ARO:3000391
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000419
+  label: quinolone resistance protein (qnr)
+  evidence:
+  - reference: ARO:3000419
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000421
+  label: norB
+  evidence:
+  - reference: ARO:3000421
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000448
+  label: QepA1
+  evidence:
+  - reference: ARO:3000448
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000753
+  label: abeM
+  evidence:
+  - reference: ARO:3000753
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000769
+  label: PatA-PatB
+  evidence:
+  - reference: ARO:3000769
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000822
+  label: pmrA
+  evidence:
+  - reference: ARO:3000822
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3001327
+  label: MdtK
+  evidence:
+  - reference: ARO:3001327
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002547
+  label: AAC(6')-Ib-cr1
+  evidence:
+  - reference: ARO:3002547
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002707
+  label: QnrA1
+  evidence:
+  - reference: ARO:3002707
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002708
+  label: QnrA2
+  evidence:
+  - reference: ARO:3002708
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002709
+  label: QnrA3
+  evidence:
+  - reference: ARO:3002709
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002710
+  label: QnrA4
+  evidence:
+  - reference: ARO:3002710
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002711
+  label: QnrA5
+  evidence:
+  - reference: ARO:3002711
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002712
+  label: QnrA6
+  evidence:
+  - reference: ARO:3002712
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002713
+  label: QnrA7
+  evidence:
+  - reference: ARO:3002713
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002714
+  label: QnrB1
+  evidence:
+  - reference: ARO:3002714
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002715
+  label: QnrB2
+  evidence:
+  - reference: ARO:3002715
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002716
+  label: QnrB3
+  evidence:
+  - reference: ARO:3002716
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002718
+  label: QnrB4
+  evidence:
+  - reference: ARO:3002718
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002719
+  label: QnrB5
+  evidence:
+  - reference: ARO:3002719
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002720
+  label: QnrB6
+  evidence:
+  - reference: ARO:3002720
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002721
+  label: QnrB7
+  evidence:
+  - reference: ARO:3002721
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002722
+  label: QnrB8
+  evidence:
+  - reference: ARO:3002722
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002723
+  label: QnrB9
+  evidence:
+  - reference: ARO:3002723
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002724
+  label: QnrB10
+  evidence:
+  - reference: ARO:3002724
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002725
+  label: QnrB11
+  evidence:
+  - reference: ARO:3002725
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002726
+  label: QnrB12
+  evidence:
+  - reference: ARO:3002726
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002727
+  label: QnrB13
+  evidence:
+  - reference: ARO:3002727
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002728
+  label: QnrB14
+  evidence:
+  - reference: ARO:3002728
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002730
+  label: QnrB15
+  evidence:
+  - reference: ARO:3002730
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002731
+  label: QnrB16
+  evidence:
+  - reference: ARO:3002731
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002732
+  label: QnrB17
+  evidence:
+  - reference: ARO:3002732
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002733
+  label: QnrB18
+  evidence:
+  - reference: ARO:3002733
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002734
+  label: QnrB19
+  evidence:
+  - reference: ARO:3002734
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002735
+  label: QnrB20
+  evidence:
+  - reference: ARO:3002735
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002736
+  label: QnrB21
+  evidence:
+  - reference: ARO:3002736
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002737
+  label: QnrB22
+  evidence:
+  - reference: ARO:3002737
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002738
+  label: QnrB23
+  evidence:
+  - reference: ARO:3002738
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002739
+  label: QnrB24
+  evidence:
+  - reference: ARO:3002739
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002740
+  label: QnrB25
+  evidence:
+  - reference: ARO:3002740
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002741
+  label: QnrB26
+  evidence:
+  - reference: ARO:3002741
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002742
+  label: QnrB27
+  evidence:
+  - reference: ARO:3002742
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002743
+  label: QnrB28
+  evidence:
+  - reference: ARO:3002743
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002744
+  label: QnrB29
+  evidence:
+  - reference: ARO:3002744
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002745
+  label: QnrB30
+  evidence:
+  - reference: ARO:3002745
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002746
+  label: QnrB31
+  evidence:
+  - reference: ARO:3002746
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002747
+  label: QnrB32
+  evidence:
+  - reference: ARO:3002747
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002748
+  label: QnrB33
+  evidence:
+  - reference: ARO:3002748
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002749
+  label: QnrB34
+  evidence:
+  - reference: ARO:3002749
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002750
+  label: QnrB35
+  evidence:
+  - reference: ARO:3002750
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002751
+  label: QnrB36
+  evidence:
+  - reference: ARO:3002751
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002752
+  label: QnrB37
+  evidence:
+  - reference: ARO:3002752
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002753
+  label: QnrB38
+  evidence:
+  - reference: ARO:3002753
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002755
+  label: QnrB40
+  evidence:
+  - reference: ARO:3002755
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002756
+  label: QnrB41
+  evidence:
+  - reference: ARO:3002756
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002757
+  label: QnrB42
+  evidence:
+  - reference: ARO:3002757
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002758
+  label: QnrB43
+  evidence:
+  - reference: ARO:3002758
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002759
+  label: QnrB44
+  evidence:
+  - reference: ARO:3002759
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002760
+  label: QnrB45
+  evidence:
+  - reference: ARO:3002760
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002761
+  label: QnrB46
+  evidence:
+  - reference: ARO:3002761
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002762
+  label: QnrB47
+  evidence:
+  - reference: ARO:3002762
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002763
+  label: QnrB48
+  evidence:
+  - reference: ARO:3002763
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002764
+  label: QnrB49
+  evidence:
+  - reference: ARO:3002764
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002765
+  label: QnrB50
+  evidence:
+  - reference: ARO:3002765
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002767
+  label: QnrB54
+  evidence:
+  - reference: ARO:3002767
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002768
+  label: QnrB55
+  evidence:
+  - reference: ARO:3002768
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002769
+  label: QnrB56
+  evidence:
+  - reference: ARO:3002769
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002770
+  label: QnrB57
+  evidence:
+  - reference: ARO:3002770
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002771
+  label: QnrB58
+  evidence:
+  - reference: ARO:3002771
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002772
+  label: QnrB59
+  evidence:
+  - reference: ARO:3002772
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002773
+  label: QnrB60
+  evidence:
+  - reference: ARO:3002773
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002774
+  label: QnrB61
+  evidence:
+  - reference: ARO:3002774
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002775
+  label: QnrB62
+  evidence:
+  - reference: ARO:3002775
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002776
+  label: QnrB64
+  evidence:
+  - reference: ARO:3002776
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002777
+  label: QnrB65
+  evidence:
+  - reference: ARO:3002777
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002778
+  label: QnrB66
+  evidence:
+  - reference: ARO:3002778
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002779
+  label: QnrB67
+  evidence:
+  - reference: ARO:3002779
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002780
+  label: QnrB68
+  evidence:
+  - reference: ARO:3002780
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002781
+  label: QnrB69
+  evidence:
+  - reference: ARO:3002781
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002782
+  label: QnrB70
+  evidence:
+  - reference: ARO:3002782
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002783
+  label: QnrB71
+  evidence:
+  - reference: ARO:3002783
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002784
+  label: QnrB72
+  evidence:
+  - reference: ARO:3002784
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002785
+  label: QnrB73
+  evidence:
+  - reference: ARO:3002785
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002786
+  label: QnrB74
+  evidence:
+  - reference: ARO:3002786
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002787
+  label: QnrC
+  evidence:
+  - reference: ARO:3002787
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002788
+  label: QnrD1
+  evidence:
+  - reference: ARO:3002788
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002789
+  label: QnrD2
+  evidence:
+  - reference: ARO:3002789
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002790
+  label: QnrS1
+  evidence:
+  - reference: ARO:3002790
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002791
+  label: QnrS2
+  evidence:
+  - reference: ARO:3002791
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002792
+  label: QnrS3
+  evidence:
+  - reference: ARO:3002792
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002793
+  label: QnrS4
+  evidence:
+  - reference: ARO:3002793
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002794
+  label: QnrS5
+  evidence:
+  - reference: ARO:3002794
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002795
+  label: QnrS6
+  evidence:
+  - reference: ARO:3002795
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002796
+  label: QnrS7
+  evidence:
+  - reference: ARO:3002796
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002797
+  label: QnrS8
+  evidence:
+  - reference: ARO:3002797
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002798
+  label: QnrS9
+  evidence:
+  - reference: ARO:3002798
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002799
+  label: QnrVC1
+  evidence:
+  - reference: ARO:3002799
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002800
+  label: QnrVC3
+  evidence:
+  - reference: ARO:3002800
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002801
+  label: QnrVC4
+  evidence:
+  - reference: ARO:3002801
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002802
+  label: QnrVC5
+  evidence:
+  - reference: ARO:3002802
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002803
+  label: QnrVC6
+  evidence:
+  - reference: ARO:3002803
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003032
+  label: MexXY-OprM
+  evidence:
+  - reference: ARO:3003032
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3003035
+  label: mfpA
+  evidence:
+  - reference: ARO:3003035
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003038
+  label: MexXY-OprA
+  evidence:
+  - reference: ARO:3003038
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3003193
+  label: QnrVC7
+  evidence:
+  - reference: ARO:3003193
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003209
+  label: fosA5
+  evidence:
+  - reference: ARO:3003209
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003294
+  label: Escherichia coli gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003294
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003295
+  label: Mycobacterium tuberculosis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003295
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003296
+  label: Staphylococcus aureus gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003296
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003297
+  label: Bartonella bacilliformis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003297
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003298
+  label: Mycobacterium leprae gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003298
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003304
+  label: Mycobacterium leprae gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003304
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003305
+  label: Ureaplasma urealyticum gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003305
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003306
+  label: Morganella morganii gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003306
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003307
+  label: Salmonella serovars gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003307
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003308
+  label: Escherichia coli parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003308
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003309
+  label: Ureaplasma urealyticum parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003309
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003310
+  label: Mycoplasma hominis parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003310
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003311
+  label: Streptococcus pneumoniae parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003311
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003312
+  label: Staphylococcus aureus parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003312
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003315
+  label: Staphylococcus aureus parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003315
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003316
+  label: Escherichia coli parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003316
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003317
+  label: Salmonella serovars parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003317
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003374
+  label: Enterobacter aerogenes acrR with mutation conferring multidrug antibiotic
+    resistance
+  evidence:
+  - reference: ARO:3003374
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003378
+  label: Escherichia coli MarR with mutation associated with multidrug resistance
+  evidence:
+  - reference: ARO:3003378
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003379
+  label: Salmonella enterica ramR mutants
+  evidence:
+  - reference: ARO:3003379
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003381
+  label: Escherichia coli soxR with mutation conferring antibiotic resistance
+  evidence:
+  - reference: ARO:3003381
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003382
+  label: Salmonella enterica soxR with mutation conferring antibiotic resistance
+  evidence:
+  - reference: ARO:3003382
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003383
+  label: Salmonella serovars soxS with mutation conferring antibiotic resistance
+  evidence:
+  - reference: ARO:3003383
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003511
+  label: Escherichia coli soxS with mutation conferring antibiotic resistance
+  evidence:
+  - reference: ARO:3003511
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003684
+  label: Pseudomonas aeruginosa gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003684
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003685
+  label: Pseudomonas aeruginosa parE conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003685
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003702
+  label: Pseudomonas aeruginosa parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003702
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003789
+  label: Campylobacter jejuni gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003789
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003807
+  label: Escherichia coli AcrR with mutation associated with multidrug resistance
+  evidence:
+  - reference: ARO:3003807
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003817
+  label: Acinetobacter baumannii gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003817
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003818
+  label: Acinetobacter baumannii parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003818
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3003844
+  label: mfd
+  evidence:
+  - reference: ARO:3003844
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003921
+  label: oqxAB
+  evidence:
+  - reference: ARO:3003921
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003924
+  label: Haemophilus parainfluenzae gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003924
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003925
+  label: Haemophilus parainfluenzae parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003925
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003926
+  label: Salmonella enterica gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003926
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003928
+  label: Neisseria gonorrhoeae gyrA with mutations conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003928
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003929
+  label: Neisseria gonorrhoeae parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003929
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003931
+  label: Capnocytophaga gingivalis gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003931
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003939
+  label: Salmonella enterica parC conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003939
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003947
+  label: EfrAB
+  evidence:
+  - reference: ARO:3003947
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003964
+  label: hp1181
+  evidence:
+  - reference: ARO:3003964
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003965
+  label: hp1184
+  evidence:
+  - reference: ARO:3003965
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003967
+  label: lfrA
+  evidence:
+  - reference: ARO:3003967
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003974
+  label: Cutibacterium acnes gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003974
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003995
+  label: Clostridioides difficile gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3003995
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004041
+  label: Klebsiella pneumoniae acrA
+  evidence:
+  - reference: ARO:3004041
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004066
+  label: MexEF-OprN with MexT mutation conferring resistance to chloramphenicol, ciprofloxacin,
+    and trimethoprim
+  evidence:
+  - reference: ARO:3004066
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004068
+  label: MexEF-OprN with MexS mutations conferring resistance to chloramphenicol,
+    ciprofloxacin, and trimethoprim
+  evidence:
+  - reference: ARO:3004068
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004083
+  label: AcrEF-TolC confers resistance to ciprofloxacin
+  evidence:
+  - reference: ARO:3004083
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004103
+  label: QepA2
+  evidence:
+  - reference: ARO:3004103
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3004126
+  label: Escherichia coli LamB
+  evidence:
+  - reference: ARO:3004126
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3004128
+  label: Serratia marcescens Omp1
+  evidence:
+  - reference: ARO:3004128
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004378
+  label: QepA3
+  evidence:
+  - reference: ARO:3004378
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004379
+  label: QepA4
+  evidence:
+  - reference: ARO:3004379
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004562
+  label: Clostridioides difficile gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3004562
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004598
+  label: Klebsiella pneumoniae KpnGH-TolC
+  evidence:
+  - reference: ARO:3004598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004622
+  label: QnrS10
+  evidence:
+  - reference: ARO:3004622
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004624
+  label: QnrS11
+  evidence:
+  - reference: ARO:3004624
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004625
+  label: QnrS12
+  evidence:
+  - reference: ARO:3004625
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004627
+  label: QnrS15
+  evidence:
+  - reference: ARO:3004627
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004636
+  label: qnrE1
+  evidence:
+  - reference: ARO:3004636
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004637
+  label: qnrE2
+  evidence:
+  - reference: ARO:3004637
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004667
+  label: Staphylococcus aureus norA
+  evidence:
+  - reference: ARO:3004667
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004860
+  label: Burkholderia dolosa gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3004860
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3005007
+  label: QnrVC2
+  evidence:
+  - reference: ARO:3005007
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005112
+  label: AAC(6')-Ib-cr3
+  evidence:
+  - reference: ARO:3005112
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005114
+  label: AAC(6')-Ib-cr4
+  evidence:
+  - reference: ARO:3005114
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005115
+  label: AAC(6')-Ib-cr5
+  evidence:
+  - reference: ARO:3005115
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005116
+  label: AAC(6')-Ib-cr6
+  evidence:
+  - reference: ARO:3005116
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005117
+  label: AAC(6')-Ib-cr7
+  evidence:
+  - reference: ARO:3005117
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005118
+  label: AAC(6')-Ib-cr8
+  evidence:
+  - reference: ARO:3005118
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005119
+  label: AAC(6')-Ib-cr9
+  evidence:
+  - reference: ARO:3005119
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3007011
+  label: mdeA
+  evidence:
+  - reference: ARO:3007011
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007473
+  label: Mycobacterium avium gyrA with mutation conferring resistance to fluoroquinolone
+  evidence:
+  - reference: ARO:3007473
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3007509
+  label: Shigella flexneri acrA
+  evidence:
+  - reference: ARO:3007509
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007751
+  label: Salmonella isangi gyrA conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3007751
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007752
+  label: Salmonella isangi gyrB conferring resistance to fluoroquinolones
+  evidence:
+  - reference: ARO:3007752
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007770
+  label: aac(6')-Ib-cr10
+  evidence:
+  - reference: ARO:3007770
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007771
+  label: aac(6')-Ib-cr11
+  evidence:
+  - reference: ARO:3007771
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000036 (ciprofloxacin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000733
+  target_label: fluoroquinolone sensitive gyrA
+  evidence:
+  - reference: ARO:3000733
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000036 (ciprofloxacin); database
+      assertion, not a primary citation.
+- target_id: ARO:3000735
+  target_label: Fluoroquinolone sensitive parC
+  evidence:
+  - reference: ARO:3000735
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000036 (ciprofloxacin); database
+      assertion, not a primary citation.
+- target_id: ARO:3003261
+  target_label: fluoroquinolone sensitive gyrB
+  evidence:
+  - reference: ARO:3003261
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000036 (ciprofloxacin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:37Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

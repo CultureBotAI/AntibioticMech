@@ -1,0 +1,77 @@
+identifier: CHEBI:9997
+label: pristinamycin IIA
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide that is (together with pristinamycin IA) a component of pristinamycin,
+  an oral streptogramin antibiotic produced by Streptomyces pristinaespiralis. Pristinamycin
+  exhibits bactericidal activity against Gram positive organisms including methicillin-resistant
+  Staphylococcus aureus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,4R,5E,10E,12E,14S)-14-hydroxy-3-isopropyl-4,12-dimethyl-8,9,14,15,24,25-hexahydro-1H,3H,22H-21,18-(azeno)pyrrolo[2,1-c][1,8,4,19]dioxadiazacyclotetracosine-1,7,16,22(4H,17H)-tetrone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Mikamycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ostreogrycin a
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Streptogramin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Virginiamycin M1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Virginiamycin factor M1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:140326
+- CHEBI:23763
+- CHEBI:24995
+- CHEBI:25105
+- CHEBI:25106
+- CHEBI:35681
+- CHEBI:3992
+- CHEBI:46812
+- CHEBI:51751
+xrefs:
+- cas:21411-53-0
+- drugbank:DB01669
+- kegg.compound:C11299
+- pdb-ccd:VIR
+- reaxys:71867
+- wikipedia.en:Pristinamycin_IIA
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: CC1=C\[C@@H](O)CC(=O)Cc2nc(co2)C(=O)N2CCC=C2C(=O)O[C@H](C(C)C)[C@H](C)/C=C/C(=O)NC\C=C\1
+  standard_inchi: InChI=1S/C28H35N3O7/c1-17(2)26-19(4)9-10-24(34)29-11-5-7-18(3)13-20(32)14-21(33)15-25-30-22(16-37-25)27(35)31-12-6-8-23(31)28(36)38-26/h5,7-10,13,16-17,19-20,26,32H,6,11-12,14-15H2,1-4H3,(H,29,34)/b7-5+,10-9+,18-13+/t19-,20-,26-/m1/s1
+  standard_inchi_key: DAIKHDNSXMZDCU-FQTGFAPKSA-N
+  molecular_formula: C28H35N3O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 525.602
+  monoisotopic_mass: 525.2475
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9997
+  source_label: pristinamycin IIA
+  minted_identifier: antibioticmech:chebi-af0dfa17a3
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

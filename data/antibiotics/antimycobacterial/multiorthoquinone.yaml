@@ -1,0 +1,48 @@
+identifier: CHEBI:66409
+label: multiorthoquinone
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diterpenoid that is phenanthrene-3,4-dione substituted by a methoxy
+  group at position 6, a methyl groups at positions 7 and 8 and an isopropyl group
+  at position 2. A norabietane derivative, it is isolated from Salvia multicaulis
+  and exhibits antitubercular activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6-methoxy-7,8-dimethyl-2-propan-2-ylphenanthrene-3,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methoxy-11,12-dioxoabieta-1,3,5(10),6,8,13-hexaene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23849
+- CHEBI:25622
+- CHEBI:25961
+- CHEBI:35618
+xrefs:
+- reaxys:7876459
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: COc1cc2c3c(ccc2c(C)c1C)C=C(C(C)C)C(=O)C3=O
+  standard_inchi: InChI=1S/C20H20O3/c1-10(2)15-8-13-6-7-14-11(3)12(4)17(23-5)9-16(14)18(13)20(22)19(15)21/h6-10H,1-5H3
+  standard_inchi_key: YJIHLYMLQOIPEU-UHFFFAOYSA-N
+  molecular_formula: C20H20O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 308.377
+  monoisotopic_mass: 308.14124
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66409
+  source_label: multiorthoquinone
+  minted_identifier: antibioticmech:chebi-1eb227bcc4
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

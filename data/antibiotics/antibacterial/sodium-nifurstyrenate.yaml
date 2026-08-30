@@ -1,0 +1,54 @@
+identifier: CHEBI:234123
+label: sodium nifurstyrenate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The organic sodium salt of nifurstyrenic acid. It is an antibacterial
+  agent which has been used in Japan for the prevention and treatment of bacterial
+  infections in fish.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sodium 4-[2-(5-nitrofuran-2-yl)ethenyl]benzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-[2-(5-nitro-2-furyl)vinyl]benzoic acid sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSA-Na
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nifurstyrenic acid sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nifurstyrenic acid, sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-(5-nitro-2-furyl)-p-carboxystyrene sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38700
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H]C(=Cc1ccc([N+](=O)[O-])o1)c1ccc(C(=O)[O-])cc1.[Na+]'
+  standard_inchi: InChI=1S/C13H9NO5.Na/c15-13(16)10-4-1-9(2-5-10)3-6-11-7-8-12(19-11)14(17)18;/h1-8H,(H,15,16);/q;+1/p-1
+  standard_inchi_key: FGNXRHWAZABZSZ-UHFFFAOYSA-M
+  molecular_formula: C13H8NO5.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 281.199
+  monoisotopic_mass: 281.03002
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:234123
+  source_label: sodium nifurstyrenate
+  minted_identifier: antibioticmech:chebi-eb8778e9b7
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

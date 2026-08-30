@@ -1,0 +1,53 @@
+identifier: CHEBI:83518
+label: 4,5-dichloro-2-n-octyl-3(2H)-isothiazolone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 1,2-thiazole that is 1,2-thiazol-3(2H)-one substituted by chloro groups
+  at positions 4 and 5 and an octyl group at position 2. It is used as a fungicide.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4,5-dichloro-2-octyl-1,2-thiazol-3(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DCOIT
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kathon 930
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dichlorooctylisothiazolinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36683
+- CHEBI:48902
+xrefs:
+- cas:64359-81-5
+- patent:NZ524752
+- patent:US2010256204
+- reaxys:1110842
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: CCCCCCCCn1sc(Cl)c(Cl)c1=O
+  standard_inchi: InChI=1S/C11H17Cl2NOS/c1-2-3-4-5-6-7-8-14-11(15)9(12)10(13)16-14/h2-8H2,1H3
+  standard_inchi_key: PORQOHRXAJJKGK-UHFFFAOYSA-N
+  molecular_formula: C11H17Cl2NOS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 282.236
+  monoisotopic_mass: 281.04079
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83518
+  source_label: 4,5-dichloro-2-n-octyl-3(2H)-isothiazolone
+  minted_identifier: antibioticmech:chebi-a3b2edafb5
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

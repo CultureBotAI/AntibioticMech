@@ -1,0 +1,62 @@
+identifier: CHEBI:32096
+label: rhodomycin D
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An anthracycline that is aklavinone having a 3-amino-2,3,6-trideoxy-α-L-lyxo-hexopyranosyl
+  residue attached at position 4 via a glycosidic linkage.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (1R,2R,4S)-4-[(3-amino-2,3,6-trideoxy-α-L-lyxo-hexopyranosyl)oxy]-2-ethyl-2,5,7,12-tetrahydroxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracene-1-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Hydroxy-10-methoxycarbonyl-13-deoxocarminomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-O-(3-Amino-2,3,6-trideoxy-alpha-hexopyranosyl)-epsilon-isorhodomycinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rhodomycin D
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: rhodomycinone D
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:25830
+- CHEBI:35315
+- CHEBI:47779
+- CHEBI:49322
+- CHEBI:51286
+- CHEBI:63367
+xrefs:
+- cas:117016-15-6
+- kegg.compound:C12426
+- metacyc.compound:CPD-15730
+- patent:KR20090092481
+- reaxys:4222916
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@@]1(O)C[C@H](O[C@H]2C[C@H](N)[C@H](O)[C@H](C)O2)c2c(O)c3c(c(O)c2[C@H]1C(=O)OC)C(=O)c1cccc(O)c1C3=O
+  standard_inchi: InChI=1S/C28H31NO11/c1-4-28(37)9-14(40-15-8-12(29)22(31)10(2)39-15)17-18(21(28)27(36)38-3)26(35)19-20(25(17)34)24(33)16-11(23(19)32)6-5-7-13(16)30/h5-7,10,12,14-15,21-22,30-31,34-35,37H,4,8-9,29H2,1-3H3/t10-,12-,14-,15-,21-,22+,28+/m0/s1
+  standard_inchi_key: CADJZGPRUYOSGU-QWWLYEKJSA-N
+  molecular_formula: C28H31NO11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 557.552
+  monoisotopic_mass: 557.18971
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32096
+  source_label: rhodomycin D
+  minted_identifier: antibioticmech:chebi-7ca36390fd
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

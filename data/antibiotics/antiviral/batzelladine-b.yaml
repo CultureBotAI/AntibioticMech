@@ -1,0 +1,53 @@
+identifier: CHEBI:65467
+label: batzelladine B
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxylic ester obtained by the formal condensation of (2aR,7R,8aS)-7-heptyl-4-methyl-2,2a,6,7,8,8a-hexahydro-1H-5,6,8b-triazaacenaphthylene-3-carboxylic
+  acid with the hydroxy group of 4-carbamimidamidobutyl 3-(9-hydroxynonyl)-1-imino-1,2,3,5,6,7-hexahydropyrrolo[1,2-c]pyrimidine-4-carboxylate.
+  Isolated from a bright red Caribbean sponge, Batzella, it has potential anti-HIV
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 9-{4-[(4-carbamimidamidobutoxy)carbonyl]-1-imino-1,2,3,5,6,7-hexahydropyrrolo[1,2-c]pyrimidin-3-yl}nonyl
+    (2aR,7R,8aS)-7-heptyl-4-methyl-2,2a,6,7,8,8a-hexahydro-1H-5,6,8b-triazaacenaphthylene-3-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1H-5,6,8b-Triazaacenaphthylene-3-carboxylic acid, 7-heptyl-2,2a,6,7,8,8a-hexahydro-4-methyl-,
+    9-(4-((4-((aminoiminomethyl)amino)butoxy)carbonyl)-1,2,3,5,6,7-hexahydro-1-iminopyrrolo(1,2-c)pyrimidin-3-yl)nonyl
+    ester, (7S)-
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22315
+- CHEBI:24436
+- CHEBI:26979
+- CHEBI:33308
+- CHEBI:38670
+- CHEBI:88047
+xrefs:
+- cas:161503-23-7
+activity_roles:
+- CHEBI:64947
+chemical_structure:
+  smiles: '[H][C@]12CC[C@]3([H])C(C(=O)OCCCCCCCCCC4NC(=N)N5CCCC5=C4C(=O)OCCCCNC(=N)N)=C(C)N=C(N[C@H](CCCCCCC)C1)N23'
+  standard_inchi: InChI=1S/C40H67N9O4/c1-3-4-5-9-12-18-29-27-30-21-22-33-34(28(2)45-40(46-29)49(30)33)36(50)52-25-15-11-8-6-7-10-13-19-31-35(32-20-17-24-48(32)39(43)47-31)37(51)53-26-16-14-23-44-38(41)42/h29-31,33H,3-27H2,1-2H3,(H2,43,47)(H,45,46)(H4,41,42,44)/t29-,30+,31?,33-/m1/s1
+  standard_inchi_key: CFRXQGXKLCOKGG-BNKKYZKKSA-N
+  molecular_formula: C40H67N9O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 738.035
+  monoisotopic_mass: 737.5316
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65467
+  source_label: batzelladine B
+  minted_identifier: antibioticmech:chebi-e1c2c2848b
+  role_terms:
+  - CHEBI:64947
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

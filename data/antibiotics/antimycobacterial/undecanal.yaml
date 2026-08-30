@@ -1,0 +1,60 @@
+identifier: CHEBI:46202
+label: undecanal
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A saturated fatty aldehyde formally arising from reduction of the carboxylic
+  acid group of undecanoic acid. It is a component of essential oils from citrus plants
+  like Citrus reticulata.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Undecanaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Undecylaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Undecylic aldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-Undecanal
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: undecyl aldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:12834
+- CHEBI:133249
+- CHEBI:142621
+xrefs:
+- cas:112-44-7
+- hmdb:HMDB0030941
+- lipidmaps:LMFA06000064
+- pdb-ccd:UNA
+- reaxys:1753213
+- wikipedia.en:Undecanal
+activity_roles:
+- CHEBI:64912
+chemical_structure:
+  smiles: '[H]C(=O)CCCCCCCCCC'
+  standard_inchi: InChI=1S/C11H22O/c1-2-3-4-5-6-7-8-9-10-11-12/h11H,2-10H2,1H3
+  standard_inchi_key: KMPQYAYAQWNLME-UHFFFAOYSA-N
+  molecular_formula: C11H22O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 170.296
+  monoisotopic_mass: 170.16707
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:46202
+  source_label: undecanal
+  minted_identifier: antibioticmech:chebi-5ac4340f1d
+  role_terms:
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

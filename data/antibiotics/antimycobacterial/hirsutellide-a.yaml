@@ -1,0 +1,44 @@
+identifier: CHEBI:66016
+label: hirsutellide A
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclodepsipeptide isolated from the cell extract of the entomopathogenic
+  fungus Hirsutella kobayasii BCC 1660 and exhibits antimycobacterial and antimalarial
+  activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6S,9R,15S,18R)-9,18-dibenzyl-6,15-di[(2R)-butan-2-yl]-4,13-dimethyl-1,10-dioxa-4,7,13,16-tetraazacyclooctadecane-2,5,8,11,14,17-hexone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35213
+- CHEBI:51026
+xrefs:
+- reaxys:9309812
+activity_roles:
+- CHEBI:38068
+- CHEBI:64912
+chemical_structure:
+  smiles: '[H][C@@]1([C@H](C)CC)NC(=O)[C@@H](Cc2ccccc2)OC(=O)CN(C)C(=O)[C@]([H])([C@H](C)CC)NC(=O)[C@@H](Cc2ccccc2)OC(=O)CN(C)C1=O'
+  standard_inchi: InChI=1S/C36H48N4O8/c1-7-23(3)31-35(45)39(5)21-29(41)48-28(20-26-17-13-10-14-18-26)34(44)38-32(24(4)8-2)36(46)40(6)22-30(42)47-27(33(43)37-31)19-25-15-11-9-12-16-25/h9-18,23-24,27-28,31-32H,7-8,19-22H2,1-6H3,(H,37,43)(H,38,44)/t23-,24-,27-,28-,31+,32+/m1/s1
+  standard_inchi_key: PMRINUPHTRWJOC-BZPSDGNJSA-N
+  molecular_formula: C36H48N4O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 664.8
+  monoisotopic_mass: 664.34721
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66016
+  source_label: hirsutellide A
+  minted_identifier: antibioticmech:chebi-f5334f694a
+  role_terms:
+  - CHEBI:38068
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

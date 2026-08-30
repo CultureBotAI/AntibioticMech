@@ -1,0 +1,56 @@
+identifier: CHEBI:28411
+label: allicin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: S-allyl prop-2-ene-1-sulfinothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Propene-1-sulfinothioic acid S-2-propenyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Allicin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: thio-2-propene-1-sulfinic acid S-allyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22063
+- CHEBI:86494
+xrefs:
+- beilstein:1752823
+- cas:539-86-6
+- kegg.compound:C07600
+- knapsack:C00001242
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: C=CCSS(=O)CC=C
+  standard_inchi: InChI=1S/C6H10OS2/c1-3-5-8-9(7)6-4-2/h3-4H,1-2,5-6H2
+  standard_inchi_key: JDLKFOPOAOFWQN-UHFFFAOYSA-N
+  molecular_formula: C6H10OS2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 162.279
+  monoisotopic_mass: 162.01731
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28411
+  source_label: allicin
+  minted_identifier: antibioticmech:chebi-278ab7efc8
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,51 @@
+identifier: CHEBI:5385
+label: gliotoxin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyrazinoindole with a disulfide bridge spanning a dioxo-substituted
+  pyrazine ring; mycotoxin produced by several species of fungi.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,5aS,6S,10aR)-6-hydroxy-3-(hydroxymethyl)-2-methyl-2,3,6,10-tetrahydro-5aH-3,10a-epidithiopyrazino[1,2-a]indole-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Aspergillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35489
+- CHEBI:38163
+- CHEBI:46761
+- CHEBI:64130
+xrefs:
+- cas:67-99-2
+- kegg.compound:C10595
+- knapsack:C00002340
+- ppdb:2793
+- reaxys:50675
+- wikipedia.en:Gliotoxin
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@]12C(=CC=C[C@@H]1O)C[C@]13SS[C@](CO)(C(=O)N21)N(C)C3=O'
+  standard_inchi: InChI=1S/C13H14N2O4S2/c1-14-10(18)12-5-7-3-2-4-8(17)9(7)15(12)11(19)13(14,6-16)21-20-12/h2-4,8-9,16-17H,5-6H2,1H3/t8-,9-,12+,13+/m0/s1
+  standard_inchi_key: FIVPIPIDMRVLAY-RBJBARPLSA-N
+  molecular_formula: C13H14N2O4S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 326.399
+  monoisotopic_mass: 326.0395
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5385
+  source_label: gliotoxin
+  minted_identifier: antibioticmech:chebi-10e4f030da
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

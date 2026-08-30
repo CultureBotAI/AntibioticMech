@@ -1,0 +1,57 @@
+identifier: CHEBI:31647
+label: gemcitabine hydrochloride
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 2'-deoxycytidine hydrochloriode having geminal fluoro substituents in
+  the 2'-position. An inhibitor of ribonucleotide reductase, gemcitabine hydrochloride
+  is used in the treatment of various carcinomas, including non-small cell lung cancer,
+  pancreatic cancer, bladder cancer and breast cancer.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2'-deoxy-2',2'-difluorocytidine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2',2'-Difluorodeoxycytidine monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2'-Deoxy-2',2'-difluorocytidine monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Gemcitabine HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+- CHEBI:37143
+xrefs:
+- beilstein:5386970
+- cas:122111-03-9
+- drugbank:DB00441
+- kegg.drug:D01155
+activity_roles:
+- CHEBI:149553
+- CHEBI:36044
+chemical_structure:
+  smiles: Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1.[Cl-].[H+]
+  standard_inchi: InChI=1S/C9H11F2N3O4.ClH/c10-9(11)6(16)4(3-15)18-7(9)14-2-1-5(12)13-8(14)17;/h1-2,4,6-7,15-16H,3H2,(H2,12,13,17);1H/t4-,6-,7-;/m1./s1
+  standard_inchi_key: OKKDEIYWILRZIA-OSZBKLCCSA-N
+  molecular_formula: H.C9H11F2N3O4.Cl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 299.661
+  monoisotopic_mass: 299.04844
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31647
+  source_label: gemcitabine hydrochloride
+  minted_identifier: antibioticmech:chebi-6f679a84e5
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

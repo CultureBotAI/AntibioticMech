@@ -1,0 +1,41 @@
+identifier: antibioticmech:aro-2c3e119979
+label: dragmacidin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Spongosorites has yielded a bis-indole alkaloid which we have named dragmacidin
+  G. Dragmacidin G is the first in this series of compounds to have a pyrazine ring
+  linking the two indole rings. It also has a rare N-(2-mercaptoethyl)-guanidine side
+  chain. Dragmacidin G shows a broad spectrum of biological activity including inhibition
+  of methicillin-resistant Staphylococcus aureus, Mycobacterium tuberculosis, Plasmodium
+  falciparum, and a panel of pancreatic cancer cell lines.
+definition_source: PMID:28085024
+parent_compounds:
+- ARO:3007773
+xrefs:
+- ARO:3007775
+- chembl:CHEMBL4159271
+- pubchem.compound:14467479
+structural_class: bis-indole alkaloid with antibiotic activity
+structural_class_id: ARO:3007773
+chemical_structure:
+  smiles: CN1CC(N(CC1C2=CNC3=C2C=CC(=C3)Br)C)C4=CNC5=C4C=CC(=C5)Br
+  standard_inchi: InChI=1S/C22H22Br2N4/c1-27-11-22(18-10-26-20-8-14(24)4-6-16(18)20)28(2)12-21(27)17-9-25-19-7-13(23)3-5-15(17)19/h3-10,21-22,25-26H,11-12H2,1-2H3
+  standard_inchi_key: GRBPIEOBAMGKFD-UHFFFAOYSA-N
+  molecular_formula: C22H22Br2N4
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 502.2
+  monoisotopic_mass: 500.02112
+source_concepts:
+- source: ARO
+  source_id: ARO:3007775
+  source_label: dragmacidin B
+  minted_identifier: antibioticmech:aro-2c3e119979
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

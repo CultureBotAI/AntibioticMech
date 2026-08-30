@@ -1,0 +1,40 @@
+identifier: antibioticmech:aro-53b7643d5c
+label: zosurabalpin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Zosurabalpin is a macrocyclic peptide (MCP) antibiotic with potent antibacterial
+  activity against Carbapenem-resistant Acinetobacter baumannii. The mechanism of
+  action involves blocking the transport of bacterial lipopolysaccharide from the
+  inner membrane to its destination on the outer membrane, through inhibition of the
+  LptB2FGC complex.
+definition_source: PMID:38453528
+parent_compounds:
+- ARO:3000053
+xrefs:
+- ARO:3007784
+- chembl:CHEMBL5314563
+- pubchem.compound:148636827
+structural_class: peptide antibiotic
+structural_class_id: ARO:3000053
+chemical_structure:
+  smiles: CN1[C@H](C(=O)NCC2=C(C=CC=C2SC3=C(CN[C@H](C(=O)N[C@H](C1=O)CCCCN)CCCN)C=CC=N3)C4=CC=C(C=C4)C(=O)O)CC5=CNC6=CC=CC=C65
+  standard_inchi: InChI=1S/C43H50N8O5S/c1-51-37(23-30-25-47-34-12-3-2-10-32(30)34)40(53)49-26-33-31(27-16-18-28(19-17-27)43(55)56)11-6-15-38(33)57-41-29(9-8-22-46-41)24-48-35(14-7-21-45)39(52)50-36(42(51)54)13-4-5-20-44/h2-3,6,8-12,15-19,22,25,35-37,47-48H,4-5,7,13-14,20-21,23-24,26,44-45H2,1H3,(H,49,53)(H,50,52)(H,55,56)/t35-,36-,37-/m0/s1
+  standard_inchi_key: NJFUXFYUHIHHOJ-FSEITFBQSA-N
+  molecular_formula: C43H50N8O5S
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 791.0
+  monoisotopic_mass: 790.3624879
+source_concepts:
+- source: ARO
+  source_id: ARO:3007784
+  source_label: zosurabalpin
+  minted_identifier: antibioticmech:aro-53b7643d5c
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

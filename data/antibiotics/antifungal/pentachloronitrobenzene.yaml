@@ -1,0 +1,121 @@
+identifier: CHEBI:34908
+label: pentachloronitrobenzene
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A C-nitro compound that is nitrobenzene in which every hydrogen has been
+  replaced by a chlorine. A fungicide used on a variety of crops, including cotton,
+  rice and seed grains, it is no longer approved for use within the European Union.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Avicol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Batrilex
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Botrilex
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Brassicol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Earthcide
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Fartox
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Folosan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Fungiclor
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Pentagen
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Phomasan
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Terrachlor
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Terraclor
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Terrafun
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Tilcarex
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 1,2,3,4,5-pentachloro-6-nitrobenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,3,4,5,6-pentachloronitrobenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PCNB
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PKhNC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pentachlornitrobenzol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Pentachloronitrobenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Quintozene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nitropentachlorobenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pentachlornitrobenzol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35716
+- CHEBI:83390
+- CHEBI:87034
+xrefs:
+- cas:82-68-8
+- kegg.compound:C14338
+- patent:US7629159
+- pesticides:quintozene
+- ppdb:581
+- reaxys:1914324
+- wikipedia.en:Pentachloronitrobenzene
+activity_roles:
+- CHEBI:24127
+- CHEBI:86328
+chemical_structure:
+  smiles: O=[N+]([O-])c1c(Cl)c(Cl)c(Cl)c(Cl)c1Cl
+  standard_inchi: InChI=1S/C6Cl5NO2/c7-1-2(8)4(10)6(12(13)14)5(11)3(1)9
+  standard_inchi_key: LKPLKUMXSAEKID-UHFFFAOYSA-N
+  molecular_formula: C6Cl5NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 295.336
+  monoisotopic_mass: 292.83717
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:34908
+  source_label: pentachloronitrobenzene
+  minted_identifier: antibioticmech:chebi-26457fddf9
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

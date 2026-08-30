@@ -1,0 +1,52 @@
+identifier: antibioticmech:aro-b799d457ed
+label: nystatin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Nystatin is an antibiotic, particularly antifungal, derived from polyene.
+  Nystatin is fungistatic in vitro against Candida albicans and certain other yeast-like
+  fungi.
+definition_source: PMID:4919155
+parent_compounds:
+- ARO:3007497
+xrefs:
+- ARO:3007505
+- cas:1400-61-9
+- CHEBI:7660
+- chembl:CHEMBL450895
+- pubchem.compound:6433272
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+- CHEBI:86327
+structural_class: polyene antifungal
+structural_class_id: ARO:3007497
+chemical_structure:
+  smiles: C[C@H]1/C=C/C=C/CC/C=C/C=C/C=C/C=C/C(CC2C(C(C[C@](O2)(CC(C(CCC(CC(CC(CC(=O)O[C@H]([C@@H]([C@@H]1O)C)C)O)O)O)O)O)O)O)C(=O)O)O[C@@H]3[C@H]([C@H]([C@@H]([C@H](O3)C)O)N)O
+  standard_inchi: InChI=1S/C47H75NO17/c1-27-17-15-13-11-9-7-5-6-8-10-12-14-16-18-34(64-46-44(58)41(48)43(57)30(4)63-46)24-38-40(45(59)60)37(54)26-47(61,65-38)25-36(53)35(52)20-19-31(49)21-32(50)22-33(51)23-39(55)62-29(3)28(2)42(27)56/h5-6,8,10-18,27-38,40-44,46,49-54,56-58,61H,7,9,19-26,48H2,1-4H3,(H,59,60)/b6-5+,10-8+,13-11+,14-12+,17-15+,18-16+/t27-,28-,29-,30+,31?,32?,33?,34?,35?,36?,37?,38?,40?,41-,42+,43+,44-,46+,47+/m0/s1
+  standard_inchi_key: VQOXZBDYSJBXMA-RKEBNKJGSA-N
+  molecular_formula: C47H75NO17
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 926.1
+  monoisotopic_mass: 925.50349992
+source_concepts:
+- source: ARO
+  source_id: ARO:3007505
+  source_label: nystatin
+  minted_identifier: antibioticmech:aro-b799d457ed
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:54:36Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

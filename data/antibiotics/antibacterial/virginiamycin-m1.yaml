@@ -1,0 +1,409 @@
+identifier: antibioticmech:aro-88dda0e2d9
+label: virginiamycin M1
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Virginiamycin M1 is a streptogramin A antibiotic.
+definition_source: PMID:15700955
+synonyms:
+- synonym_text: Pristinamycin IIA
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Pristinamycin IIB
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Virginiamycin IIB
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:0000026
+xrefs:
+- ARO:3000669
+- chembl:CHEMBL1236670
+- pubchem.compound:46936184
+structural_class: streptogramin antibiotic
+structural_class_id: ARO:0000026
+chemical_structure:
+  smiles: C[C@@H]1/C=C\C(=O)NC/C=C\C(=C/[C@H](CC(=O)CC2=NC(=CO2)C(=O)N3CCC=C3C(=O)O[C@H]1C(C)C)O)\C
+  standard_inchi: InChI=1S/C28H35N3O7/c1-17(2)26-19(4)9-10-24(34)29-11-5-7-18(3)13-20(32)14-21(33)15-25-30-22(16-37-25)27(35)31-12-6-8-23(31)28(36)38-26/h5,7-10,13,16-17,19-20,26,32H,6,11-12,14-15H2,1-4H3,(H,29,34)/b7-5-,10-9-,18-13-/t19-,20-,26+/m1/s1
+  standard_inchi_key: DAIKHDNSXMZDCU-ZFPSYPIXSA-N
+  molecular_formula: C28H35N3O7
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 525.6
+  monoisotopic_mass: 525.24750046
+source_concepts:
+- source: ARO
+  source_id: ARO:3000669
+  source_label: virginiamycin M1
+  minted_identifier: antibioticmech:aro-88dda0e2d9
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000118
+  label: vgaB
+  evidence:
+  - reference: ARO:3000118
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000250
+  label: ErmC
+  evidence:
+  - reference: ARO:3000250
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000326
+  label: ErmE
+  evidence:
+  - reference: ARO:3000326
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000347
+  label: ErmA
+  evidence:
+  - reference: ARO:3000347
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000375
+  label: ErmB
+  evidence:
+  - reference: ARO:3000375
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000392
+  label: Erm(37)
+  evidence:
+  - reference: ARO:3000392
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000453
+  label: streptogramin vat acetyltransferase
+  evidence:
+  - reference: ARO:3000453
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000495
+  label: ErmD
+  evidence:
+  - reference: ARO:3000495
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000498
+  label: ErmF
+  evidence:
+  - reference: ARO:3000498
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000522
+  label: ErmG
+  evidence:
+  - reference: ARO:3000522
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000592
+  label: ErmN
+  evidence:
+  - reference: ARO:3000592
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000593
+  label: ErmQ
+  evidence:
+  - reference: ARO:3000593
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000594
+  label: ErmR
+  evidence:
+  - reference: ARO:3000594
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000595
+  label: ErmT
+  evidence:
+  - reference: ARO:3000595
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000596
+  label: ErmX
+  evidence:
+  - reference: ARO:3000596
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000599
+  label: Erm(33)
+  evidence:
+  - reference: ARO:3000599
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000600
+  label: Erm(34)
+  evidence:
+  - reference: ARO:3000600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000601
+  label: Erm(38)
+  evidence:
+  - reference: ARO:3000601
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000602
+  label: Erm(39)
+  evidence:
+  - reference: ARO:3000602
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000603
+  label: Erm(41)
+  evidence:
+  - reference: ARO:3000603
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000604
+  label: Erm(35)
+  evidence:
+  - reference: ARO:3000604
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000605
+  label: Erm(36)
+  evidence:
+  - reference: ARO:3000605
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002814
+  label: clbA
+  evidence:
+  - reference: ARO:3002814
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002815
+  label: clbB
+  evidence:
+  - reference: ARO:3002815
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002816
+  label: clbC
+  evidence:
+  - reference: ARO:3002816
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002829
+  label: vgaA
+  evidence:
+  - reference: ARO:3002829
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002830
+  label: vgaALC
+  evidence:
+  - reference: ARO:3002830
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002831
+  label: vgaC
+  evidence:
+  - reference: ARO:3002831
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3002833
+  label: vgaE
+  evidence:
+  - reference: ARO:3002833
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002840
+  label: vatA
+  evidence:
+  - reference: ARO:3002840
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002841
+  label: vatB
+  evidence:
+  - reference: ARO:3002841
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002842
+  label: vatC
+  evidence:
+  - reference: ARO:3002842
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002843
+  label: vatD
+  evidence:
+  - reference: ARO:3002843
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002844
+  label: vatE
+  evidence:
+  - reference: ARO:3002844
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002845
+  label: vatH
+  evidence:
+  - reference: ARO:3002845
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003441
+  label: cfrA
+  evidence:
+  - reference: ARO:3003441
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003744
+  label: vatF
+  evidence:
+  - reference: ARO:3003744
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3003749
+  label: salA
+  evidence:
+  - reference: ARO:3003749
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003907
+  label: cipA
+  evidence:
+  - reference: ARO:3003907
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003987
+  label: VatI
+  evidence:
+  - reference: ARO:3003987
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004181
+  label: Streptococcus pneumoniae 23S rRNA mutation conferring resistance to macrolides
+    and streptogramins antibiotics
+  evidence:
+  - reference: ARO:3004181
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004476
+  label: vmlR
+  evidence:
+  - reference: ARO:3004476
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004715
+  label: vga(E) Staphylococcus cohnii
+  evidence:
+  - reference: ARO:3004715
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3005121
+  label: lsaD
+  evidence:
+  - reference: ARO:3005121
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007026
+  label: salB
+  evidence:
+  - reference: ARO:3007026
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007027
+  label: salC
+  evidence:
+  - reference: ARO:3007027
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007028
+  label: salD
+  evidence:
+  - reference: ARO:3007028
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007637
+  label: Clostridioides difficile cplR
+  evidence:
+  - reference: ARO:3007637
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007644
+  label: Clostridium perfringes cplR
+  evidence:
+  - reference: ARO:3007644
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3007646
+  label: Neobacillus vireti vmlR2
+  evidence:
+  - reference: ARO:3007646
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000669 (virginiamycin
+      M1); database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000754
+  target_label: antibiotic sensitive peptidyl transferase (23S rRNA)
+  evidence:
+  - reference: ARO:3000754
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000669 (virginiamycin M1);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

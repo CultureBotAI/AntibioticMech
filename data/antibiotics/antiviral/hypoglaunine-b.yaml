@@ -1,0 +1,47 @@
+identifier: CHEBI:66060
+label: hypoglaunine B
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sesquiterpene alkaloid that is a macrolide incorporating a substituted
+  pyridine and dihydroagarofuran moieties. Isolated from root barks of Tripterygium
+  hypoglaucum, it exhibits anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,5,7,8,11-pentaacetoxy-2-furanoyl-4-hydroxy-3,15[2'-hydroxy-2',3'-dimethyl-3'-(3''-carboxy-4''-pyridyl)-propanoic
+    acid]dicarbolactone-dihydroagarofuran
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25106
+- CHEBI:26416
+- CHEBI:26657
+- CHEBI:47622
+- CHEBI:50856
+- CHEBI:71548
+xrefs:
+- reaxys:8105725
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: '[H][C@@]12[C@@H](OC(C)=O)[C@@]34O[C@@]1(C)COC(=O)c1cnccc1C(C)C(C)(O)C(=O)O[C@@]([H])([C@H](OC(=O)c1ccco1)[C@H](OC(C)=O)[C@@]3(COC(C)=O)[C@H](OC(C)=O)[C@@H]2OC(C)=O)[C@]4(C)O'
+  standard_inchi: InChI=1S/C41H47NO20/c1-18-24-12-13-42-15-25(24)34(48)55-16-37(7)27-28(56-20(3)44)32(58-22(5)46)40(17-54-19(2)43)33(59-23(6)47)29(60-35(49)26-11-10-14-53-26)31(61-36(50)38(18,8)51)39(9,52)41(40,62-37)30(27)57-21(4)45/h10-15,18,27-33,51-52H,16-17H2,1-9H3/t18?,27-,28-,29+,30-,31+,32-,33+,37+,38?,39+,40-,41+/m1/s1
+  standard_inchi_key: JXQXTWWCCNHEQZ-PEWXIWONSA-N
+  molecular_formula: C41H47NO20
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 873.814
+  monoisotopic_mass: 873.26914
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66060
+  source_label: hypoglaunine B
+  minted_identifier: antibioticmech:chebi-6f7538af3e
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

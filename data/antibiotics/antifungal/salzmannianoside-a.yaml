@@ -1,0 +1,46 @@
+identifier: CHEBI:66157
+label: salzmannianoside A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A triterpenoid saponin that consists of gypsogenin attached to a α-L-rhamnopyranosyl-(1→2)-[β-D-glucopyranosyl-(1→4)]-α-L-arabinopyranosyl]
+  residue at position 3 via a glycosidic linkage. Isolated from Serjania salzmanniana,
+  it exhibits antifungal and molluscicidal activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3β)-3-{[6-deoxy-α-L-mannopyranosyl-(1→2)-[β-D-glucopyranosyl-(1→4)]-α-L-arabinopyranosyl]oxy}-23-oxoolean-12-en-28-oic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-O-{[β-D-glucopyranosyl-(1→4)]-[α-L-rhamnopyranosyl-(1→2)]-α-L-arabinopyranosyl}gypsogenin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:25872
+- CHEBI:61778
+- CHEBI:63571
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]1(O[C@@H]2[C@@H](O)[C@@]([H])(O[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)CO[C@@]2([H])O[C@H]2CC[C@]3(C)[C@@]4([H])CC=C5[C@]6([H])CC(C)(C)CC[C@]6(C(=O)O)CC[C@@]5(C)[C@]4(C)CC[C@@]3([H])[C@]2(C)C=O)O[C@@H](C)[C@H](O)[C@@H](O)[C@H]1O'
+  standard_inchi: InChI=1S/C47H74O17/c1-22-30(50)33(53)35(55)38(60-22)64-37-32(52)26(62-39-36(56)34(54)31(51)25(19-48)61-39)20-59-40(37)63-29-11-12-43(4)27(44(29,5)21-49)10-13-46(7)28(43)9-8-23-24-18-42(2,3)14-16-47(24,41(57)58)17-15-45(23,46)6/h8,21-22,24-40,48,50-56H,9-20H2,1-7H3,(H,57,58)/t22-,24-,25+,26-,27+,28+,29-,30-,31+,32-,33+,34-,35+,36+,37+,38-,39-,40-,43-,44-,45+,46+,47-/m0/s1
+  standard_inchi_key: SKHHYJVYSRMYHD-YDIXZRNLSA-N
+  molecular_formula: C47H74O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 911.092
+  monoisotopic_mass: 910.4926
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66157
+  source_label: salzmannianoside A
+  minted_identifier: antibioticmech:chebi-d3a8ff69cb
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

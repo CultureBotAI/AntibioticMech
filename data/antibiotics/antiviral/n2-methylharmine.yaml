@@ -1,0 +1,48 @@
+identifier: CHEBI:66005
+label: N2-methylharmine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of β-carbolines that is 9H-β-carboline substituted
+  by a methoxy group at position 7 and methyl groups at positions 1 and 2. It is a
+  semisynthetic derivative of harmine and has been shown to exhibit significant anti-HIV
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7-methoxy-1,2-dimethyl-2H-β-carboline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-methoxy-1,2-dimethyl-2H-pyrido[3,4-b]indole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:60834
+- CHEBI:72588
+xrefs:
+- cas:6519-18-2
+- reaxys:15521
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: COc1ccc2c3ccn(C)c(C)c-3nc2c1
+  standard_inchi: InChI=1S/C14H14N2O/c1-9-14-12(6-7-16(9)2)11-5-4-10(17-3)8-13(11)15-14/h4-8H,1-3H3
+  standard_inchi_key: SNPOLGTUMADPOR-UHFFFAOYSA-N
+  molecular_formula: C14H14N2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 226.279
+  monoisotopic_mass: 226.11061
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66005
+  source_label: N2-methylharmine
+  minted_identifier: antibioticmech:chebi-75dc625ca2
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

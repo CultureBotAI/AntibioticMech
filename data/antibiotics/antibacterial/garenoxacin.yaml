@@ -1,0 +1,77 @@
+identifier: CHEBI:131716
+label: garenoxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quinolinemonocarboxylic acid that is 1,4-dihydroquinoline-3-carboxylic
+  acid that is substituted by a cyclopropyl group at position 1, an oxo group at position
+  4, a (1R)-1-methyl-2,3-dihydro-1H-isoindol-5-yl group at position 7, and a difluoromethoxy
+  group at position 8.
+definition_source: ChEBI
+synonyms:
+- synonym_text: garenoxacino
+  synonym_type: INN
+  source: chebi
+- synonym_text: garenoxacinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: garénoxacine
+  synonym_type: INN
+  source: chebi
+- synonym_text: BMS 284756
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BMS-284756
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BMS284756
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: T 3811
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: T-3811
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24897
+- CHEBI:26512
+- CHEBI:35618
+- CHEBI:37143
+- CHEBI:51454
+- CHEBI:86324
+xrefs:
+- cas:194804-75-6
+- drugcentral:4053
+- reaxys:8878492
+- wikipedia.en:Garenoxacin
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: C[C@H]1NCc2cc(-c3ccc4c(=O)c(C(=O)O)cn(C5CC5)c4c3OC(F)F)ccc21
+  standard_inchi: InChI=1S/C23H20F2N2O4/c1-11-15-5-2-12(8-13(15)9-26-11)16-6-7-17-19(21(16)31-23(24)25)27(14-3-4-14)10-18(20(17)28)22(29)30/h2,5-8,10-11,14,23,26H,3-4,9H2,1H3,(H,29,30)/t11-/m1/s1
+  standard_inchi_key: NJDRXTDGYFKORP-LLVKDONJSA-N
+  molecular_formula: C23H20F2N2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 426.419
+  monoisotopic_mass: 426.13911
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:131716
+  source_label: garenoxacin
+  minted_identifier: antibioticmech:chebi-d7e2450b6a
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

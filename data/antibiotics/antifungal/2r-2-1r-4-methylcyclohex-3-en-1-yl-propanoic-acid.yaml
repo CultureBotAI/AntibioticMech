@@ -1,0 +1,46 @@
+identifier: CHEBI:141292
+label: (2R)-2-[(1R)-4-methylcyclohex-3-en-1-yl]propanoic acid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid that is propionic acid which is substituted at position
+  2 by a 4-methylcyclohex-3-en-1-yl group (the R,R stereoisomer). A secondary metabolite
+  with antifungal activity obtained from the endophytic fungus Pestalotiopsis foedan,
+  obtained from the branch of the upriver orange mangrove, Bruguiera sexangula.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (+)-(4R,8R)-Δ1-p-menthen-9-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R)-2-[(1R)-4-methylcyclohex-3-en-1-yl]propionic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:25409
+xrefs:
+- reaxys:7014122
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC1=CC[C@H]([C@@H](C)C(=O)O)CC1
+  standard_inchi: InChI=1S/C10H16O2/c1-7-3-5-9(6-4-7)8(2)10(11)12/h3,8-9H,4-6H2,1-2H3,(H,11,12)/t8-,9+/m1/s1
+  standard_inchi_key: QOGOGJNRMJOCKH-BDAKNGLRSA-N
+  molecular_formula: C10H16O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 168.236
+  monoisotopic_mass: 168.11503
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141292
+  source_label: (2R)-2-[(1R)-4-methylcyclohex-3-en-1-yl]propanoic acid
+  minted_identifier: antibioticmech:chebi-bca084b3a0
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

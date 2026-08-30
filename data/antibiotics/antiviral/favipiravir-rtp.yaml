@@ -1,0 +1,66 @@
+identifier: CHEBI:170009
+label: favipiravir-RTP
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A nuceloside analogue in which the nucleobase is favipiravir. It is a
+  RNA-dependent RNA polymerase inhibitor which exhibits anti-influenza and anti-coronaviral
+  activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6-fluoro-4-[5-O-(hydroxy{[hydroxy(phosphonooxy)phosphoryl]oxy}phosphoryl)-β-D-ribofuranosyl]-3-oxo-3,4-dihydropyrazine-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-fluoro-3,4-dihydro-4-(5-O-(hydroxy((hydroxy(phosphonooxy)phosphinyl)oxy)phosphinyl)-β-D-ribofuranosyl)-3-oxo-2-pyrazinecarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: T-705 RTP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: T-705 ribosyl triphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: T-705-4-ribofuranosyl-5'-triphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: T-705RTP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: favipiravir riboside triphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140324
+- CHEBI:167376
+- CHEBI:37143
+- CHEBI:60783
+- CHEBI:62894
+xrefs:
+- cas:740790-94-7
+- pdb-ccd:GE6
+activity_roles:
+- CHEBI:149553
+- CHEBI:36044
+chemical_structure:
+  smiles: NC(=O)c1nc(F)cn([C@@H]2O[C@H](COP(=O)(O)OP(=O)(O)OP(=O)(O)O)[C@@H](O)[C@H]2O)c1=O
+  standard_inchi: InChI=1S/C10H15FN3O15P3/c11-4-1-14(9(18)5(13-4)8(12)17)10-7(16)6(15)3(27-10)2-26-31(22,23)29-32(24,25)28-30(19,20)21/h1,3,6-7,10,15-16H,2H2,(H2,12,17)(H,22,23)(H,24,25)(H2,19,20,21)/t3-,6-,7-,10-/m1/s1
+  standard_inchi_key: UUKPXXBDUCDZDA-KAFVXXCXSA-N
+  molecular_formula: C10H15FN3O15P3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 529.156
+  monoisotopic_mass: 528.97
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:170009
+  source_label: favipiravir-RTP
+  minted_identifier: antibioticmech:chebi-1a84f4f03d
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

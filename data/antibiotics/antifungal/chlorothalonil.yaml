@@ -1,0 +1,86 @@
+identifier: CHEBI:3639
+label: chlorothalonil
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dinitrile that is benzene-1,3-dicarbonitrile substituted by four chloro
+  groups. A non-systemic fungicide first introduced in the 1960s, it is used to control
+  a range of diseases in a wide variety of crops.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Daconil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 2,4,5,6-tetrachlorobenzene-1,3-dicarbonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,3-Dicyanotetrachlorobenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4,5,6-Tetrachloro-3-cyanobenzonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chlorothalonil
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: TPN
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetrachloroisophthalonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: m-TCPN
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: m-Tetrachlorophthalonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: meta-TCPN
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: meta-Tetrachlorophthalodinitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26888
+- CHEBI:51308
+- CHEBI:87034
+xrefs:
+- cas:1897-45-6
+- kegg.compound:C11037
+- patent:US3290353
+- patent:US3652637
+- pesticides:chlorothalonil
+- ppdb:150
+- reaxys:1978326
+- wikipedia.en:Chlorothalonil
+activity_roles:
+- CHEBI:24127
+- CHEBI:86328
+chemical_structure:
+  smiles: N#Cc1c(Cl)c(Cl)c(Cl)c(C#N)c1Cl
+  standard_inchi: InChI=1S/C8Cl4N2/c9-5-3(1-13)6(10)8(12)7(11)4(5)2-14
+  standard_inchi_key: CRQQGFGUEAVUIL-UHFFFAOYSA-N
+  molecular_formula: C8Cl4N2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 265.914
+  monoisotopic_mass: 263.88156
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3639
+  source_label: chlorothalonil
+  minted_identifier: antibioticmech:chebi-be5dca20ed
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

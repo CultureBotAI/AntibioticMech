@@ -1,0 +1,45 @@
+identifier: CHEBI:17711
+label: nocardicin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: O-{4-[(1Z)-2-{(3S)-1-[(R)-carboxy(4-hydroxyphenyl)methyl]-2-oxoazetidin-3-ylamino}-N-hydroxy-2-oxoethanimidoyl]phenyl}-D-homoserine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nocardicin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:16733
+- CHEBI:25572
+- CHEBI:35692
+- CHEBI:84133
+xrefs:
+- cas:39391-39-4
+- kegg.compound:C01941
+- knapsack:C00018088
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: N[C@H](CCOc1ccc(/C(=N/O)C(=O)N[C@H]2CN([C@@H](C(=O)O)c3ccc(O)cc3)C2=O)cc1)C(=O)O
+  standard_inchi: InChI=1S/C23H24N4O9/c24-16(22(31)32)9-10-36-15-7-3-12(4-8-15)18(26-35)20(29)25-17-11-27(21(17)30)19(23(33)34)13-1-5-14(28)6-2-13/h1-8,16-17,19,28,35H,9-11,24H2,(H,25,29)(H,31,32)(H,33,34)/b26-18-/t16-,17+,19-/m1/s1
+  standard_inchi_key: CTNZOGJNVIFEBA-UPSUJEDGSA-N
+  molecular_formula: C23H24N4O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 500.464
+  monoisotopic_mass: 500.15433
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17711
+  source_label: nocardicin A
+  minted_identifier: antibioticmech:chebi-954dba48f9
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

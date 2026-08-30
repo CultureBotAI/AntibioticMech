@@ -1,0 +1,48 @@
+identifier: CHEBI:133876
+label: S-acetylglutathione
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An S-acylglutathione in which the S-acyl group is specified as acetyl.
+definition_source: ChEBI
+synonyms:
+- synonym_text: L-γ-glutamyl-S-acetyl-L-cysteinylglycine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-acetyl-glutathione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acetylglutathione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18126
+xrefs:
+- cas:3054-47-5
+- patent:EP1154784
+- patent:WO0050060
+- reaxys:1717301
+activity_roles:
+- CHEBI:64953
+chemical_structure:
+  smiles: CC(=O)SC[C@H](NC(=O)CC[C@H](N)C(=O)O)C(=O)NCC(=O)O
+  standard_inchi: InChI=1S/C12H19N3O7S/c1-6(16)23-5-8(11(20)14-4-10(18)19)15-9(17)3-2-7(13)12(21)22/h7-8H,2-5,13H2,1H3,(H,14,20)(H,15,17)(H,18,19)(H,21,22)/t7-,8-/m0/s1
+  standard_inchi_key: FVRWSIPJNWXCEO-YUMQZZPRSA-N
+  molecular_formula: C12H19N3O7S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 349.365
+  monoisotopic_mass: 349.09437
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:133876
+  source_label: S-acetylglutathione
+  minted_identifier: antibioticmech:chebi-d54b3d5036
+  role_terms:
+  - CHEBI:64953
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

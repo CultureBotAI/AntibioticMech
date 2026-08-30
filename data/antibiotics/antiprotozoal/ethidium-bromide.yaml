@@ -1,0 +1,62 @@
+identifier: CHEBI:4883
+label: ethidium bromide
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The organic bromide salt of ethidium.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,8-diamino-5-ethyl-6-phenylphenanthridinium bromide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,7-diamino-10-ethyl-9-phenylphenanthridinium bromide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,7-diamino-9-phenyl-10-ethylphenanthridinium bromide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dromilac
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: EtBr
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethidium bromide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Homidium bromide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48369
+xrefs:
+- beilstein:3642536
+- cas:1239-45-8
+- chemspider:14034
+- kegg.compound:C11161
+- metacyc.compound:CPD-22916
+- wikipedia.en:Ethidium_bromide
+activity_roles:
+- CHEBI:36335
+chemical_structure:
+  smiles: CC[n+]1c(-c2ccccc2)c2cc(N)ccc2c2ccc(N)cc21.[Br-]
+  standard_inchi: InChI=1S/C21H19N3.BrH/c1-2-24-20-13-16(23)9-11-18(20)17-10-8-15(22)12-19(17)21(24)14-6-4-3-5-7-14;/h3-13,23H,2,22H2,1H3;1H
+  standard_inchi_key: ZMMJGEGLRURXTF-UHFFFAOYSA-N
+  molecular_formula: Br.C21H20N3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 394.316
+  monoisotopic_mass: 393.08406
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4883
+  source_label: ethidium bromide
+  minted_identifier: antibioticmech:chebi-5c27639e3a
+  role_terms:
+  - CHEBI:36335
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

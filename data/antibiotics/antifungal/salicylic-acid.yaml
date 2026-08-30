@@ -1,0 +1,71 @@
+identifier: CHEBI:16914
+label: salicylic acid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monohydroxybenzoic acid that is benzoic acid with a hydroxy group at
+  the ortho position. It is obtained from the bark of the white willow and wintergreen
+  leaves.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-hydroxybenzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-HYDROXYBENZOIC ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-carboxyphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Salicylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: o-Hydroxybenzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: o-carboxyphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: o-hydroxybenzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25389
+xrefs:
+- cas:69-72-7
+- drugbank:DB00936
+- drugcentral:2416
+- gmelin:3418
+- hmdb:HMDB0001895
+- kegg.compound:C00805
+- kegg.drug:D00097
+- knapsack:C00000206
+- lincs.smallmolecule:LSM-4763
+- metacyc.compound:CPD-110
+- pdb-ccd:SAL
+- reaxys:774890
+- wikipedia.en:Salicylic_Acid
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: O=C(O)c1ccccc1O
+  standard_inchi: InChI=1S/C7H6O3/c8-6-4-2-1-3-5(6)7(9)10/h1-4,8H,(H,9,10)
+  standard_inchi_key: YGSDEFSMJLZEOE-UHFFFAOYSA-N
+  molecular_formula: C7H6O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 138.122
+  monoisotopic_mass: 138.03169
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:16914
+  source_label: salicylic acid
+  minted_identifier: antibioticmech:chebi-339163f7d0
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

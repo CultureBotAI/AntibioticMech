@@ -1,0 +1,57 @@
+identifier: CHEBI:7489
+label: neamine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: 2-Deoxy-D-streptamine glycosylated at the 4-oxygen with a 6-amino-α-D-glucosaminyl
+  group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,2R,3S,4R,6S)-4,6-diamino-2,3-dihydroxycyclohexyl 2,6-diamino-2,6-dideoxy-α-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-desoxy-4-O-(2,6-diamino-2,6-didesoxy-α-D-glucopyranosyl)-D-streptamin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-O-(2,6-diamino-2,6-dideoxy-α-D-glucopyranosyl)-2-deoxy-D-streptamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Neamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Neomycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:47779
+- CHEBI:53628
+xrefs:
+- cas:3947-65-7
+- drugbank:DB04808
+- kegg.compound:C01441
+- pdb-ccd:XXX
+- reaxys:26714
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: NC[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O)[C@H](N)C[C@@H]2N)[C@H](N)[C@@H](O)[C@@H]1O
+  standard_inchi: InChI=1S/C12H26N4O6/c13-2-5-8(18)9(19)6(16)12(21-5)22-11-4(15)1-3(14)7(17)10(11)20/h3-12,17-20H,1-2,13-16H2/t3-,4+,5-,6-,7+,8-,9-,10-,11-,12-/m1/s1
+  standard_inchi_key: SYJXFKPQNSDJLI-HKEUSBCWSA-N
+  molecular_formula: C12H26N4O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 322.362
+  monoisotopic_mass: 322.18523
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:7489
+  source_label: neamine
+  minted_identifier: antibioticmech:chebi-59ac71328b
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

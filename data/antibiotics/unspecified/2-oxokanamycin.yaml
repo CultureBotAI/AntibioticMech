@@ -1,0 +1,46 @@
+identifier: CHEBI:72769
+label: 2'-oxokanamycin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A kanamycin obtained by dehydrogenation at position 2' of kanamycin A.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,2R,3R,4S,6R)-4,6-diamino-3-[(6-amino-6-deoxy-α-D-arabino-hexopyranosyl-2-ulose)oxy]-2-hydroxycyclohexyl
+    3-amino-3-deoxy-α-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2'-dehydrokanamycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2'-ketokanamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24951
+xrefs:
+- reaxys:22604553
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: NC[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](N)[C@H]3O)[C@H](N)C[C@@H]2N)C(=O)[C@@H](O)[C@@H]1O
+  standard_inchi: InChI=1S/C18H34N4O11/c19-2-6-10(25)12(27)13(28)18(30-6)33-16-5(21)1-4(20)15(14(16)29)32-17-11(26)8(22)9(24)7(3-23)31-17/h4-12,14-18,23-27,29H,1-3,19-22H2/t4-,5+,6-,7-,8+,9-,10-,11-,12+,14-,15+,16-,17-,18-/m1/s1
+  standard_inchi_key: FQALWUBUOWECTR-WSWRBCCJSA-N
+  molecular_formula: C18H34N4O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 482.487
+  monoisotopic_mass: 482.22241
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:72769
+  source_label: 2'-oxokanamycin
+  minted_identifier: antibioticmech:chebi-bba5914076
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

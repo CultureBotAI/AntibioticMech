@@ -1,0 +1,46 @@
+identifier: CHEBI:141332
+label: guignardone N
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A meroterpenoid found in Guignardia and Fusarium species and shown to
+  exhibit inhibitory activity against Candida albicans growth.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,4R,6aS,7R,9aR)-7-[(2S)-1,2-dihydroxypropan-2-yl]-4-hydroxy-9a-methyl-3,4,6,6a,7,8,9,9a-octahydro-1,4-methanocyclopenta[5,6]pyrano[2,3-c]oxepin-5(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:15734
+- CHEBI:26878
+- CHEBI:27136
+- CHEBI:33822
+- CHEBI:38163
+- CHEBI:64419
+xrefs:
+- reaxys:28851661
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12CC3=C(O[C@]1(C)CC[C@@]2([H])[C@](C)(O)CO)[C@@H]1C[C@@](O)(CO1)C3=O'
+  standard_inchi: InChI=1S/C17H24O6/c1-15(20,7-18)10-3-4-16(2)11(10)5-9-13(23-16)12-6-17(21,8-22-12)14(9)19/h10-12,18,20-21H,3-8H2,1-2H3/t10-,11+,12+,15-,16-,17-/m1/s1
+  standard_inchi_key: OPYPWMGWBUCOSQ-RZNLEFLGSA-N
+  molecular_formula: C17H24O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 324.373
+  monoisotopic_mass: 324.15729
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141332
+  source_label: guignardone N
+  minted_identifier: antibioticmech:chebi-c7f2c5e536
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

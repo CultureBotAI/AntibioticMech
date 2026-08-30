@@ -1,0 +1,56 @@
+identifier: CHEBI:192702
+label: ladanein
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dimethoxyflavone that is scutellarein in which the hydroxy groups at
+  positions 4' and 7 are replaced by methoxy groups. It is an effective anti-HCV agent.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,6-dihydroxy-7-methoxy-2-(4-methoxyphenyl)-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4',7-dimethylscutellarein
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,6-dihydroxy-7,4'-dimethoxyflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,6-dihydroxy-7-methoxy-2-(4-methoxyphenyl)-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BJ486K
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23798
+- CHEBI:38686
+xrefs:
+- cas:10176-71-3
+- knapsack:C00003839
+- lipidmaps:LMPK12111165
+- metacyc.compound:CPD-15632
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: COc1ccc(-c2cc(=O)c3c(O)c(O)c(OC)cc3o2)cc1
+  standard_inchi: InChI=1S/C17H14O6/c1-21-10-5-3-9(4-6-10)12-7-11(18)15-13(23-12)8-14(22-2)16(19)17(15)20/h3-8,19-20H,1-2H3
+  standard_inchi_key: UUQJTIHOVGMQIH-UHFFFAOYSA-N
+  molecular_formula: C17H14O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 314.293
+  monoisotopic_mass: 314.07904
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:192702
+  source_label: ladanein
+  minted_identifier: antibioticmech:chebi-ec1cf91897
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

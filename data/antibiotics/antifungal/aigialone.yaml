@@ -1,0 +1,52 @@
+identifier: CHEBI:141361
+label: aigialone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A furopyran that is 5,6-dihydro-4H-furo[2,3-b]pyran-3(2H)-one which is
+  substituted by hydroxy groups at positions 4 and 5, methyl groups at positions 2
+  and 5, and a heptyl group at position 6 (the 2R,4R,5S,6R stereoisomer). Isolated
+  from the mangrove fungus Aigialus parvus BCC 5311 and from <a href="https://en.wikipedia.org/wiki/Phaeoacremonium"
+  target="_blank">Phaeoacremonium</a> sp., an endophytic fungus from <a href="https://en.wikipedia.org/wiki/Senna_spectabilis"
+  target="_blank">Senna spectabilis</a>.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,4R,5S,6R)-6-heptyl-4,5-dihydroxy-2,5-dimethyl-5,6-dihydro-4H-furo[2,3-b]pyran-3(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-aigialone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:145408
+- CHEBI:26878
+- CHEBI:35681
+- CHEBI:3992
+- CHEBI:74927
+xrefs:
+- cas:666735-72-4
+- knapsack:C00043254
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCCCC[C@H]1OC2=C(C(=O)[C@@H](C)O2)[C@@H](O)[C@]1(C)O
+  standard_inchi: InChI=1S/C16H26O5/c1-4-5-6-7-8-9-11-16(3,19)14(18)12-13(17)10(2)20-15(12)21-11/h10-11,14,18-19H,4-9H2,1-3H3/t10-,11-,14-,16-/m1/s1
+  standard_inchi_key: YVCGKKHYXVEPMA-MMYVAXCBSA-N
+  molecular_formula: C16H26O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 298.379
+  monoisotopic_mass: 298.17802
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141361
+  source_label: aigialone
+  minted_identifier: antibioticmech:chebi-06923518dd
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

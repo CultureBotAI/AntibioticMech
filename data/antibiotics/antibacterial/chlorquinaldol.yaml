@@ -1,0 +1,74 @@
+identifier: CHEBI:74500
+label: chlorquinaldol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monohydroxyquinoline that is quinolin-8-ol which is substituted by a
+  methyl group at position 2 and by chlorine at positions 5 and 7. An antifungal and
+  antibacterial, it was formerly used for topical treatment of skin conditions and
+  vaginal infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: chlorquinaldolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: clorquinaldol
+  synonym_type: INN
+  source: chebi
+- synonym_text: 5,7-dichloro-2-methylquinolin-8-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-methyl-5,7-dichloro-8-hydroxyquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dichloro-2-methyl-8-hydroxyquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dichloro-2-methyl-8-quinolinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dichloro-8-hydroxy-2-methylquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dichloro-8-hydroxyquinaldine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dichloro-8-quinaldinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36683
+- CHEBI:38775
+xrefs:
+- cas:72-80-0
+- drugcentral:3095
+- kegg.drug:D07208
+- patent:US2411670
+- reaxys:156683
+- wikipedia.en:Chlorquinaldol
+activity_roles:
+- CHEBI:35820
+- CHEBI:36047
+chemical_structure:
+  smiles: Cc1ccc2c(Cl)cc(Cl)c(O)c2n1
+  standard_inchi: InChI=1S/C10H7Cl2NO/c1-5-2-3-6-7(11)4-8(12)10(14)9(6)13-5/h2-4,14H,1H3
+  standard_inchi_key: GPTXWRGISTZRIO-UHFFFAOYSA-N
+  molecular_formula: C10H7Cl2NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 228.078
+  monoisotopic_mass: 226.99047
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:74500
+  source_label: chlorquinaldol
+  minted_identifier: antibioticmech:chebi-f6d4549415
+  role_terms:
+  - CHEBI:35820
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

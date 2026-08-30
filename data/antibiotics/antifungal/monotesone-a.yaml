@@ -1,0 +1,49 @@
+identifier: CHEBI:66400
+label: monotesone A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A trihydroxyflavanone that is (2S)-flavanone substituted by hydroxy groups
+  at positions 5, 7 and 3' and a prenyloxy group at position 4'. Isolated from Monotes
+  engleri, it exhibits antifungal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-5,7-dihydroxy-2-{3-hydroxy-4-[(3-methylbut-2-en-1-yl)oxy]phenyl}-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-2,3-dihydro-5,7-dihydroxy-2-[3-hydroxy-4-[(3-methylbut-2-enyl)oxy]phenyl]-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7,3'-trihydroxy-4'-O-prenylflavanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38739
+- CHEBI:48024
+xrefs:
+- lipidmaps:LMPK12140406
+- reaxys:8011731
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(C)=CCOc1ccc([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)cc1O
+  standard_inchi: InChI=1S/C20H20O6/c1-11(2)5-6-25-17-4-3-12(7-14(17)22)18-10-16(24)20-15(23)8-13(21)9-19(20)26-18/h3-5,7-9,18,21-23H,6,10H2,1-2H3/t18-/m0/s1
+  standard_inchi_key: UIFXCAYUHZVWHR-SFHVURJKSA-N
+  molecular_formula: C20H20O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 356.374
+  monoisotopic_mass: 356.12599
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66400
+  source_label: monotesone A
+  minted_identifier: antibioticmech:chebi-c3abcd4eb3
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

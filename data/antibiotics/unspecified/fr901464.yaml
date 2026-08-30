@@ -1,0 +1,48 @@
+identifier: CHEBI:65915
+label: FR901464
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A spiro-epoxide with potent anticancer activity that lowers the mRNA levels
+  of oncogenes and tumour supressor genes. It is isolated from Pseudomonas sp. no.2663.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S,3Z)-5-{[(2R,3R,5S,6S)-6-{(2E,4E)-5-[(3R,4R,5R,7S)-4,7-dihydroxy-7-methyl-1,6-dioxaspiro[2.5]oct-5-yl]-3-methylpenta-2,4-dien-1-yl}-2,5-dimethyltetrahydro-2H-pyran-3-yl]amino}-5-oxopent-3-en-2-yl
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:133131
+- CHEBI:26407
+- CHEBI:29347
+- CHEBI:47622
+- CHEBI:59780
+xrefs:
+- cas:146478-72-0
+- patent:US2011086909
+- patent:WO2009031999
+- reaxys:8176008
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(=O)O[C@@H](C)/C=C\C(=O)N[C@@H]1C[C@H](C)[C@H](C/C=C(C)/C=C/[C@H]2O[C@](C)(O)C[C@@]3(CO3)[C@@H]2O)O[C@@H]1C
+  standard_inchi: InChI=1S/C27H41NO8/c1-16(8-11-23-25(31)27(15-33-27)14-26(6,32)36-23)7-10-22-17(2)13-21(19(4)35-22)28-24(30)12-9-18(3)34-20(5)29/h7-9,11-12,17-19,21-23,25,31-32H,10,13-15H2,1-6H3,(H,28,30)/b11-8+,12-9-,16-7+/t17-,18-,19+,21+,22-,23+,25+,26-,27+/m0/s1
+  standard_inchi_key: PJKVJJDQXZARCA-QHYZBLTGSA-N
+  molecular_formula: C27H41NO8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 507.624
+  monoisotopic_mass: 507.28322
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65915
+  source_label: FR901464
+  minted_identifier: antibioticmech:chebi-0116b998f7
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

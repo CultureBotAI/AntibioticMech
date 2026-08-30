@@ -1,0 +1,46 @@
+identifier: CHEBI:52086
+label: glyceollin III
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzofuropyranochromene that is 1,2-dihydro-6H-[1]benzofuro[3,2-c]furo[3,2-g]chromene
+  substituted at positions 6a and 9 by hydroxy groups and at position 2 by a prop-1-en-2-yl
+  group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S,6aS,11aS)-2-(prop-1-en-2-yl)-1,2-dihydro-6H-[1]benzofuro[3,2-c]furo[3,2-g]chromene-6a,9(11aH)-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:52130
+xrefs:
+- cas:61080-23-7
+- kegg.compound:C15511
+- knapsack:C00009685
+- patent:WO2012006750
+- reaxys:1268819
+- wikipedia.en:Glyceollin_III
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12Oc3cc(O)ccc3[C@]1(O)COc1cc3c(cc12)C[C@@H](C(=C)C)O3'
+  standard_inchi: InChI=1S/C20H18O5/c1-10(2)15-6-11-5-13-17(8-16(11)24-15)23-9-20(22)14-4-3-12(21)7-18(14)25-19(13)20/h3-5,7-8,15,19,21-22H,1,6,9H2,2H3/t15-,19-,20+/m0/s1
+  standard_inchi_key: MIYTVBARXCVVHZ-RYGJVYDSSA-N
+  molecular_formula: C20H18O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 338.359
+  monoisotopic_mass: 338.11542
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:52086
+  source_label: glyceollin III
+  minted_identifier: antibioticmech:chebi-99cd2b3ecf
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

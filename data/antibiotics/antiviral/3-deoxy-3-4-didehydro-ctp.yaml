@@ -1,0 +1,62 @@
+identifier: CHEBI:156336
+label: 3'-deoxy-3',4'-didehydro-CTP
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic triphosphate resulting from the formal condensation of the
+  5'-hydroxy group of 3'-deoxy-3',4'-didehydro-cytidine with triphosphoric acid. It
+  is a chain terminator for RNA-dependent RNA polymerases.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ({[({[(4R,5R)-5-(4-amino-2-oxo-1,2-dihydropyrimidin-1-yl)-4-hydroxy-4,5-dihydrofuran-2-yl]methoxy}(hydroxy)phosphoryl)oxy](hydroxy)phosphoryl}oxy)phosphonic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3'-deoxy-3',4'-didehydro-cytidine triphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3'-deoxy-3',4'-didehydro-cytidine-5'-triphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[[(2R,3R)-2-(4-amino-2-oxopyrimidin-1-yl)-3-hydroxy-2,3-dihydrofuran-5-yl]methoxy-hydroxyphosphoryl]
+    phosphono hydrogen phosphate'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ddh-CTP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ddhC-triphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ddhCTP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38337
+- CHEBI:62894
+xrefs:
+- chemspider:107448068
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: Nc1ccn([C@@H]2OC(COP(=O)(O)OP(=O)(O)OP(=O)(O)O)=C[C@H]2O)c(=O)n1
+  standard_inchi: InChI=1S/C9H14N3O13P3/c10-7-1-2-12(9(14)11-7)8-6(13)3-5(23-8)4-22-27(18,19)25-28(20,21)24-26(15,16)17/h1-3,6,8,13H,4H2,(H,18,19)(H,20,21)(H2,10,11,14)(H2,15,16,17)/t6-,8-/m1/s1
+  standard_inchi_key: DGUQXKKDZHTKIE-HTRCEHHLSA-N
+  molecular_formula: C9H14N3O13P3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 465.141
+  monoisotopic_mass: 464.97395
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156336
+  source_label: 3'-deoxy-3',4'-didehydro-CTP
+  minted_identifier: antibioticmech:chebi-45db2cb2e4
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

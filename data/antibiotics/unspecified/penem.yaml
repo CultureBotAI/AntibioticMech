@@ -1,0 +1,41 @@
+identifier: CHEBI:35994
+label: penem
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterobicyclic compound that consists of (5R)-4-thia-1-azabicyclo[3.2.0]hept-2-ene
+  bearing a 7-keto substituent. The parent of the class of penems.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,3-didehydropenam
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R)-4-thia-1-azabicyclo[3.2.0]hept-2-en-7-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35996
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12CC(=O)N1C=CS2'
+  standard_inchi: InChI=1S/C5H5NOS/c7-4-3-5-6(4)1-2-8-5/h1-2,5H,3H2/t5-/m1/s1
+  standard_inchi_key: HHXMXAQDOUCLDN-RXMQYKEDSA-N
+  molecular_formula: C5H5NOS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 127.168
+  monoisotopic_mass: 127.00918
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:35994
+  source_label: penem
+  minted_identifier: antibioticmech:chebi-30bc998759
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,143 @@
+identifier: CHEBI:9331
+label: sulfamethizole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfonamide consisting of a 1,3,4-thiadiazole nucleus with a methyl
+  substituent at C-5 and a 4-aminobenzenesulfonamido group at C-2.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Rufol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: sulfamethizolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfametizol
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfaméthizol
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-amino-N-(5-methyl-1,3,4-thiadiazol-2-yl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfamethizole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulfamethylthiadiazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulphamethazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulphamethiozole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Urolucosil
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: sulfamethizol
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: sulphamethizole
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:35358
+- CHEBI:38099
+- CHEBI:87228
+- ARO:3000282
+xrefs:
+- ARO:3000699
+- cas:144-82-1
+- drugbank:DB00576
+- drugcentral:2512
+- kegg.compound:C08050
+- kegg.drug:D00870
+- lincs.smallmolecule:LSM-5455
+- patent:US2447702
+- reaxys:255002
+- wikipedia.en:Sulfamethizole
+- chembl:CHEMBL1191
+- pubchem.compound:5328
+activity_roles:
+- CHEBI:33281
+structural_class: sulfonamide antibiotic
+structural_class_id: ARO:3000282
+chemical_structure:
+  smiles: Cc1nnc(NS(=O)(=O)c2ccc(N)cc2)s1
+  standard_inchi: InChI=1S/C9H10N4O2S2/c1-6-11-12-9(16-6)13-17(14,15)8-4-2-7(10)3-5-8/h2-5H,10H2,1H3,(H,12,13)
+  standard_inchi_key: VACCAVUAMIDAGB-UHFFFAOYSA-N
+  molecular_formula: C9H10N4O2S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 270.339
+  monoisotopic_mass: 270.02452
+source_concepts:
+- source: ARO
+  source_id: ARO:3000699
+  source_label: sulfamethizole
+  minted_identifier: antibioticmech:aro-c36c766b6e
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:9331
+  source_label: sulfamethizole
+  minted_identifier: antibioticmech:chebi-7edf5cc5fa
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3000410
+  label: sul1
+  evidence:
+  - reference: ARO:3000410
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000699 (sulfamethizole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3000412
+  label: sul2
+  evidence:
+  - reference: ARO:3000412
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000699 (sulfamethizole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3000413
+  label: sul3
+  evidence:
+  - reference: ARO:3000413
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000699 (sulfamethizole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003386
+  label: Escherichia coli folP with mutation conferring resistance to sulfonamides
+  evidence:
+  - reference: ARO:3003386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000699 (sulfamethizole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003387
+  label: Streptococcus pyogenes folP with mutation conferring resistance to sulfonamides
+  evidence:
+  - reference: ARO:3003387
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000699 (sulfamethizole);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000744
+  target_label: antibiotic sensitive dihydropteroate synthase
+  evidence:
+  - reference: ARO:3000744
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000699 (sulfamethizole); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

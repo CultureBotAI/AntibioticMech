@@ -1,0 +1,66 @@
+identifier: CHEBI:81960
+label: dodemorph
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of morpholines that is 2,6-dimethylmorpholine in
+  which the hydrogen attached to the nitrogen is replaced by a cyclododecyl group.
+  It is a fungicide used for the control of powdery mildew, particularly in rose culture.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Doazine
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Meltatox
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 4-cyclododecyl-2,6-dimethylmorpholine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dodémorphe
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:50996
+- CHEBI:51026
+- CHEBI:87134
+xrefs:
+- cas:1593-77-7
+- kegg.compound:C18786
+- patent:BE614214
+- patent:US3686399
+- pesticides:dodemorph
+- ppdb:262
+- reaxys:511312
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: CC1CN(C2CCCCCCCCCCC2)CC(C)O1
+  standard_inchi: InChI=1S/C18H35NO/c1-16-14-19(15-17(2)20-16)18-12-10-8-6-4-3-5-7-9-11-13-18/h16-18H,3-15H2,1-2H3
+  standard_inchi_key: JMXKCYUTURMERF-UHFFFAOYSA-N
+  molecular_formula: C18H35NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 281.484
+  monoisotopic_mass: 281.27186
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81960
+  source_label: dodemorph
+  minted_identifier: antibioticmech:chebi-5ca9afeaae
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

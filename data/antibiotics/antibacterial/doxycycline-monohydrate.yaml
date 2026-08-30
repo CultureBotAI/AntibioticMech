@@ -1,0 +1,51 @@
+identifier: CHEBI:60648
+label: doxycycline monohydrate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The monohydrate form of doxycycline. A semi-synthetic tetracycline antibiotic,
+  it is used to inhibit bacterial protein synthesis and treat non-gonococcal urethritis
+  and cervicitis, exacerbations of bronchitis in patients with chronic obstructive
+  pulmonary disease (COPD), and adult periodontitis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: doxycycline
+  synonym_type: INN
+  source: chebi
+- synonym_text: (4S,4aR,5S,5aR,6R,12aS)-4-(dimethylamino)-3,5,10,12,12a-pentahydroxy-6-methyl-1,11-dioxo-1,4,4a,5,5a,6,11,12a-octahydrotetracene-2-carboxamide—water
+    (1/1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: doxycycline hydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35505
+xrefs:
+- cas:17086-28-1
+- drugbank:DB00254
+- kegg.drug:D00307
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: O.[H][C@@]12C(=C(O)[C@]3(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@]3([H])[C@H]1O)C(=O)c1c(O)cccc1[C@@H]2C
+  standard_inchi: InChI=1S/C22H24N2O8.H2O/c1-7-8-5-4-6-9(25)11(8)16(26)12-10(7)17(27)14-15(24(2)3)18(28)13(21(23)31)20(30)22(14,32)19(12)29;/h4-7,10,14-15,17,25,27-29,32H,1-3H3,(H2,23,31);1H2/t7-,10+,14+,15-,17-,22-;/m0./s1
+  standard_inchi_key: XQTWDDCIUJNLTR-CVHRZJFOSA-N
+  molecular_formula: C22H24N2O8.H2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 462.455
+  monoisotopic_mass: 462.16383
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:60648
+  source_label: doxycycline monohydrate
+  minted_identifier: antibioticmech:chebi-a6008d2f3e
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

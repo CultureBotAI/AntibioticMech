@@ -1,0 +1,58 @@
+identifier: CHEBI:149660
+label: atromentin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of dihydroxy-1,4-benzoquinones that is 2,5-dihydroxycyclohexa-2,5-diene-1,4-dione
+  which is substituted by a 4-hydroxyphenyl group at positions 3 and 6. It is a mushroom
+  pigment isolated from several fungi species and acts as a smooth muscle stimulant,
+  and exhibits anticoagulant, antibacterial and antineoplastic properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3',4,4'',6'-tetrahydroxy[1,1':4',1''-terphenyl]-2',5'-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 14,23,26,34-tetrahydroxy[11,21:24,31-terphenyl]-22,25-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,5-dihydroxy-3,6-bis(4-hydroxyphenyl)-1,4-benzoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,5-dihydroxy-3,6-bis(4-hydroxyphenyl)cyclohexa-2,5-diene-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,5-dihydroxy-3,6-bis(p-hydroxyphenyl)-p-benzoquinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132126
+- CHEBI:26195
+xrefs:
+- cas:519-67-5
+- knapsack:C00036784
+- metacyc.compound:CPD-14619
+- wikipedia.en:Atromentin
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C1C(O)=C(c2ccc(O)cc2)C(=O)C(O)=C1c1ccc(O)cc1
+  standard_inchi: InChI=1S/C18H12O6/c19-11-5-1-9(2-6-11)13-15(21)17(23)14(18(24)16(13)22)10-3-7-12(20)8-4-10/h1-8,19-21,24H
+  standard_inchi_key: FKQQKMGWCJGUCS-UHFFFAOYSA-N
+  molecular_formula: C18H12O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 324.288
+  monoisotopic_mass: 324.06339
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:149660
+  source_label: atromentin
+  minted_identifier: antibioticmech:chebi-b2949e4148
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

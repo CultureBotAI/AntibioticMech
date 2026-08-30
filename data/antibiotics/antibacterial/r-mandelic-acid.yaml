@@ -1,0 +1,83 @@
+identifier: CHEBI:17656
+label: (R)-mandelic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The (R)-enantiomer of mandelic acid.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R)-hydroxy(phenyl)acetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2R)-2-hydroxy-2-phenylacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-2-Hydroxy-2-phenylacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-MANDELIC ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-Mandelic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-Mandelsäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-α-hydroxybenzeneacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-α-hydroxyphenylacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-(R)-mandelic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-mandelic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-α-hydroxyphenylacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D(−)-mandelic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-2-phenylglycolic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: D-mandelic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35825
+xrefs:
+- cas:611-71-2
+- gmelin:69018
+- kegg.compound:C01983
+- metacyc.compound:CPD-121
+- pdb-ccd:RMN
+- reaxys:2691094
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C(O)[C@H](O)c1ccccc1
+  standard_inchi: InChI=1S/C8H8O3/c9-7(8(10)11)6-4-2-1-3-5-6/h1-5,7,9H,(H,10,11)/t7-/m1/s1
+  standard_inchi_key: IWYDHOAUDWTVEP-SSDOTTSWSA-N
+  molecular_formula: C8H8O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 152.149
+  monoisotopic_mass: 152.04734
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17656
+  source_label: (R)-mandelic acid
+  minted_identifier: antibioticmech:chebi-828a74eef9
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

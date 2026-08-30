@@ -1,0 +1,58 @@
+identifier: CHEBI:42053
+label: nemorubicin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (1S,3S)-3,5,12-trihydroxy-3-(hydroxyacetyl)-10-methoxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracen-1-yl
+    2,3,6-trideoxy-3-[(2S)-2-methoxymorpholin-4-yl]-α-L-lyxo-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1S,3S)-3-Glycoloyl-1,2,3,4,6,11-hexahydro-3,5,12-trihydroxy-10-methoxy-6,11-dioxo-1-naphthacenyl
+    2,3,6-trideoxy-3-((S)-2-methoxymorpholino)-alpha-L-lyxo-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3'-DESAMINO-3'-(2-METHOXY-4-MORPHOLINYL)-DOXORUBICIN
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3'-deamino-3'-(2-methoxymorpholin-4-yl)doxorubicin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methoxymorpholino-doxorubicin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methoxymorpholinyl doxorubicin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139590
+- CHEBI:139592
+- CHEBI:38785
+- CHEBI:49322
+xrefs:
+- cas:108852-90-0
+- pdb-ccd:DMM
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(=O)CO)C[C@@H]3O[C@H]1C[C@H](N2CCO[C@H](OC)C2)[C@H](O)[C@H](C)O1
+  standard_inchi: InChI=1S/C32H37NO13/c1-14-27(36)17(33-7-8-44-22(12-33)43-3)9-21(45-14)46-19-11-32(41,20(35)13-34)10-16-24(19)31(40)26-25(29(16)38)28(37)15-5-4-6-18(42-2)23(15)30(26)39/h4-6,14,17,19,21-22,27,34,36,38,40-41H,7-13H2,1-3H3/t14-,17-,19-,21-,22-,27+,32-/m0/s1
+  standard_inchi_key: CTMCWCONSULRHO-UHQPFXKFSA-N
+  molecular_formula: C32H37NO13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 643.642
+  monoisotopic_mass: 643.22649
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:42053
+  source_label: nemorubicin
+  minted_identifier: antibioticmech:chebi-ccd8544cb6
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

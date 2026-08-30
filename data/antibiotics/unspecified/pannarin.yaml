@@ -1,0 +1,51 @@
+identifier: CHEBI:144185
+label: pannarin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of depsidones that is 11H-dibenzo[b,e][1,4]dioxepine
+  substituted by methyl groups at positions 1,6 and 9, chloro group at position 2,
+  hydroxy group at position 3, formyl group at position 4, methoxy group at position
+  8 and an oxo group at position 11. It is a lichen metabolite isolated from several
+  Psoroma species.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-chloro-3-hydroxy-8-methoxy-1,6,9-trimethyl-11-oxo-11H-dibenzo[b,e][1,4]dioxepine-4-carbaldehyde
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: pannarine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17478
+- CHEBI:26979
+- CHEBI:33853
+- CHEBI:35618
+- CHEBI:36683
+- CHEBI:75939
+xrefs:
+- cas:55609-84-2
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H]C(=O)c1c(O)c(Cl)c(C)c2c1Oc1c(C)cc(OC)c(C)c1OC2=O'
+  standard_inchi: InChI=1S/C18H15ClO6/c1-7-5-11(23-4)8(2)16-15(7)24-17-10(6-20)14(21)13(19)9(3)12(17)18(22)25-16/h5-6,21H,1-4H3
+  standard_inchi_key: LVGKNESDSKGROR-UHFFFAOYSA-N
+  molecular_formula: C18H15ClO6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 362.765
+  monoisotopic_mass: 362.05572
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:144185
+  source_label: pannarin
+  minted_identifier: antibioticmech:chebi-f0a7068e02
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

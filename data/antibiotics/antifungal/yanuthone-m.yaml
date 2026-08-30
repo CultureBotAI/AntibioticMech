@@ -1,0 +1,49 @@
+identifier: CHEBI:133036
+label: yanuthone M
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A class I yanuthone that is yanuthone K in which the double bond at the
+  terminal end of the farnesyl substituent has undergone hydration to afford the corresponding
+  tertiary alcohol. Isolated from the filamentous fungus Aspergillus niger, it shows
+  antifungal activity towards the pathogenic yeast Candida albicans (IC50 = 77.5 ±3.7
+  μM).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,6R)-6-[(2E,6E)-11-hydroxy-3,7,11-trimethyldodeca-2,6-dien-1-yl]-3-methyl-5-oxo-7-oxabicyclo[4.1.0]hept-3-en-2-yl
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: yanuthone-M
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:133075
+- CHEBI:32876
+- CHEBI:47622
+xrefs:
+- reaxys:27991881
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(=O)OC1C(C)=CC(=O)[C@]2(C/C=C(\C)CC/C=C(\C)CCCC(C)(C)O)O[C@H]12
+  standard_inchi: InChI=1S/C24H36O5/c1-16(11-8-13-23(5,6)27)9-7-10-17(2)12-14-24-20(26)15-18(3)21(22(24)29-24)28-19(4)25/h9,12,15,21-22,27H,7-8,10-11,13-14H2,1-6H3/b16-9+,17-12+/t21?,22-,24+/m1/s1
+  standard_inchi_key: UDCFQVYVEMPFKM-CTPBMWBYSA-N
+  molecular_formula: C24H36O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 404.547
+  monoisotopic_mass: 404.25627
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:133036
+  source_label: yanuthone M
+  minted_identifier: antibioticmech:chebi-949f491f65
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

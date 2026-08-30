@@ -1,0 +1,41 @@
+identifier: CHEBI:41872
+label: dequalinium
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quinolinium ion comprising decane in which one methyl hydrogen at each
+  end of the molecule has been replaced by a 4-amino-2-methylquinolin-1-yl group.
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:52837
+xrefs:
+- cas:6707-58-0
+- drugcentral:4376
+- lincs.smallmolecule:LSM-5846
+- pdb-ccd:DEQ
+- reaxys:3741219
+- wikipedia.en:Dequalinium
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: Cc1cc(N)c2ccccc2[n+]1CCCCCCCCCC[n+]1c(C)cc(N)c2ccccc21
+  standard_inchi: InChI=1S/C30H38N4/c1-23-21-27(31)25-15-9-11-17-29(25)33(23)19-13-7-5-3-4-6-8-14-20-34-24(2)22-28(32)26-16-10-12-18-30(26)34/h9-12,15-18,21-22,31-32H,3-8,13-14,19-20H2,1-2H3/p+2
+  standard_inchi_key: PCSWXVJAIHCTMO-UHFFFAOYSA-P
+  molecular_formula: C30H40N4
+  structure_source: ChEBI
+  charge: 2
+  average_mass: 456.678
+  monoisotopic_mass: 456.3242
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:41872
+  source_label: dequalinium
+  minted_identifier: antibioticmech:chebi-618285b7e3
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

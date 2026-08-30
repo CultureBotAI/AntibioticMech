@@ -1,0 +1,62 @@
+identifier: CHEBI:5373
+label: (S)-glaucine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aporphine alkaloid that is (S)-1,2,9,10-tetrahydroxy-6-methyl-5,6,6a,7-tetrahydro-4H-dibenzo[de,g]quinoline
+  in which the four phenolic hydrogens have been replaced by methyl groups.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6aS)-1,2,9,10-tetramethoxy-6-methyl-5,6,6a,7-tetrahydro-4H-dibenzo[de,g]quinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2,9,10-Tetramethoxy-6a-alpha-aporphine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Boldine dimethyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glaucine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-(+)-Glaucine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: d-Glaucine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134209
+- CHEBI:38163
+- CHEBI:46774
+- CHEBI:50996
+xrefs:
+- cas:475-81-0
+- kegg.compound:C09446
+- kegg.drug:D08014
+- knapsack:C00001861
+- reaxys:95206
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12Cc3cc(OC)c(OC)cc3-c3c(OC)c(OC)cc(c31)CCN2C'
+  standard_inchi: InChI=1S/C21H25NO4/c1-22-7-6-12-9-18(25-4)21(26-5)20-14-11-17(24-3)16(23-2)10-13(14)8-15(22)19(12)20/h9-11,15H,6-8H2,1-5H3/t15-/m0/s1
+  standard_inchi_key: RUZIUYOSRDWYQF-HNNXBMFYSA-N
+  molecular_formula: C21H25NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 355.434
+  monoisotopic_mass: 355.17836
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5373
+  source_label: (S)-glaucine
+  minted_identifier: antibioticmech:chebi-f9b3f51006
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

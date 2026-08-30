@@ -1,0 +1,45 @@
+identifier: CHEBI:15715
+label: streptomycin 3''-phosphate
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A streptomycin phosphate having the phosphate group placed at the 3''-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[2-deoxy-2-(methylamino)-3-O-phosphono-α-L-glucopyranosyl]-(1→2)-[5-deoxy-3-C-formyl-α-L-lyxofuranosyl]-(1→4)-{N'',N''''''-[(1,3,5/2,4,6)-2,4,5,6-tetrahydroxycyclohexane-1,3-diyl]diguanidine}'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Streptomycin 3''-phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: streptomycin 3''-(dihydrogen phosphate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26787
+xrefs:
+- kegg.compound:C03731
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H]C(=O)[C@@]1(O)[C@H](C)O[C@@H](O[C@H]2[C@H](O)[C@@H](O)[C@H](NC(=N)N)[C@@H](O)[C@@H]2NC(=N)N)[C@@H]1O[C@@H]1O[C@@H](CO)[C@H](O)[C@@H](OP(=O)(O)O)[C@@H]1NC'
+  standard_inchi: InChI=1S/C21H40N7O15P/c1-5-21(35,4-30)16(42-17-9(26-2)15(43-44(36,37)38)10(31)6(3-29)40-17)18(39-5)41-14-8(28-20(24)25)11(32)7(27-19(22)23)12(33)13(14)34/h4-18,26,29,31-35H,3H2,1-2H3,(H4,22,23,27)(H4,24,25,28)(H2,36,37,38)/t5-,6-,7+,8-,9-,10-,11+,12-,13+,14+,15-,16-,17-,18-,21+/m0/s1
+  standard_inchi_key: BFUAJTIVTIKBSB-GOUKQLAUSA-N
+  molecular_formula: C21H40N7O15P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 661.559
+  monoisotopic_mass: 661.232
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:15715
+  source_label: streptomycin 3''-phosphate
+  minted_identifier: antibioticmech:chebi-c50d2ce3bf
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

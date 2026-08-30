@@ -1,0 +1,36 @@
+identifier: antibioticmech:aro-1a019a94dc
+label: tylvalosin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Tylvalosin is indicated for the control of porcine proliferative enteropathy
+  associated with Lawsonia intracellularis infection in groups of swine.
+definition_source: PMID:34729086
+parent_compounds:
+- ARO:0000000
+xrefs:
+- ARO:3007796
+- pubchem.compound:6441094
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: CC[C@@H]1[C@H](/C=C(/C=C/C(=O)[C@@H](C[C@@H]([C@@H]([C@H]([C@@H](CC(=O)O1)OC(=O)C)C)O[C@H]2[C@@H]([C@H]([C@@H]([C@H](O2)C)O[C@H]3C[C@@]([C@H]([C@@H](O3)C)OC(=O)CC(C)C)(C)O)N(C)C)O)CC=O)C)\C)CO[C@H]4[C@@H]([C@@H]([C@@H]([C@H](O4)C)O)OC)OC
+  standard_inchi: InChI=1S/C53H87NO19/c1-16-38-36(26-65-52-49(64-15)48(63-14)44(60)31(7)67-52)22-28(4)17-18-37(57)29(5)23-35(19-20-55)46(30(6)39(69-34(10)56)24-41(59)70-38)73-51-45(61)43(54(12)13)47(32(8)68-51)72-42-25-53(11,62)50(33(9)66-42)71-40(58)21-27(2)3/h17-18,20,22,27,29-33,35-36,38-39,42-52,60-62H,16,19,21,23-26H2,1-15H3/b18-17+,28-22+/t29-,30+,31-,32-,33+,35+,36-,38-,39-,42+,43-,44-,45-,46-,47-,48-,49-,50+,51+,52-,53-/m1/s1
+  standard_inchi_key: KCJJINQANFZSAM-HZDSEHBESA-N
+  molecular_formula: C53H87NO19
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1042.3
+  monoisotopic_mass: 1041.58722955
+source_concepts:
+- source: ARO
+  source_id: ARO:3007796
+  source_label: tylvalosin
+  minted_identifier: antibioticmech:aro-1a019a94dc
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

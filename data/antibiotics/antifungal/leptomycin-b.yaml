@@ -1,0 +1,62 @@
+identifier: CHEBI:52646
+label: leptomycin B
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A leptomycin having a (2E,10E,12E,16Z,18E)-double bond configuration as
+  well as an ethyl substituent at position 17.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E,5S,6R,7S,9R,10E,12E,15R,16Z,18E)-17-ethyl-6-hydroxy-3,5,7,9,11,15-hexamethyl-19-[(2S,3S)-3-methyl-6-oxo-3,6-dihydro-2H-pyran-2-yl]-8-oxononadeca-2,10,12,16,18-pentaenoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ATS 1287B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic CI 940
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic CL 1957A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic PD 114720
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LMB
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic ATS 1287B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140345
+- CHEBI:52651
+xrefs:
+- beilstein:7958583
+- cas:87081-35-4
+- reaxys:8299374
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCC(=C/[C@H](C)C/C=C/C(C)=C/[C@@H](C)C(=O)[C@@H](C)[C@H](O)[C@@H](C)C/C(C)=C/C(=O)O)/C=C/[C@@H]1OC(=O)C=C[C@@H]1C
+  standard_inchi: InChI=1S/C33H48O6/c1-9-28(14-15-29-24(5)13-16-31(36)39-29)19-22(3)12-10-11-21(2)17-25(6)32(37)27(8)33(38)26(7)18-23(4)20-30(34)35/h10-11,13-17,19-20,22,24-27,29,33,38H,9,12,18H2,1-8H3,(H,34,35)/b11-10+,15-14+,21-17+,23-20+,28-19-/t22-,24+,25-,26+,27-,29+,33-/m1/s1
+  standard_inchi_key: YACHGFWEQXFSBS-XYERBDPFSA-N
+  molecular_formula: C33H48O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 540.741
+  monoisotopic_mass: 540.34509
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:52646
+  source_label: leptomycin B
+  minted_identifier: antibioticmech:chebi-64cd22735d
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

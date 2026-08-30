@@ -1,0 +1,45 @@
+identifier: CHEBI:68297
+label: phomalevone A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A biaryl that is 5,5',10a,10a'-tetrahydro-9H,9'H-2,2'-bixanthene-9,9'-dione
+  substituted by hydroxy groups at positions 1, 1', 5, 5', 8 and 8' and methyl groups
+  at positions 3, 3', 10a and 10a'. Isolated from the cultures of a Hawaiian isolate
+  of the fungus Phoma species, it exhibits antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5S,5'S,10aR,10a'R)-1,1',5,5',8,8'-hexahydroxy-3,3',10a,10a'-tetramethyl-5,5',10a,10a'-tetrahydro-9H,9'H-2,2'-bixanthene-9,9'-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26188
+- CHEBI:26195
+- CHEBI:51149
+- CHEBI:64459
+xrefs:
+- reaxys:21389531
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Cc1cc2c(c(O)c1-c1c(C)cc3c(c1O)C(=O)C1=C(O)C=C[C@H](O)[C@]1(C)O3)C(=O)C1=C(O)C=C[C@H](O)[C@]1(C)O2
+  standard_inchi: InChI=1S/C30H26O10/c1-11-9-15-21(27(37)23-13(31)5-7-17(33)29(23,3)39-15)25(35)19(11)20-12(2)10-16-22(26(20)36)28(38)24-14(32)6-8-18(34)30(24,4)40-16/h5-10,17-18,31-36H,1-4H3/t17-,18-,29-,30-/m0/s1
+  standard_inchi_key: KMDRWTGFZLUZEY-NEUGYGHLSA-N
+  molecular_formula: C30H26O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 546.528
+  monoisotopic_mass: 546.1526
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68297
+  source_label: phomalevone A
+  minted_identifier: antibioticmech:chebi-998472b8a7
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

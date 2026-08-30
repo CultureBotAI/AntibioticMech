@@ -1,0 +1,47 @@
+identifier: CHEBI:66766
+label: PM-94128
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A a monocarboxylic acid amide obtained by the formal condensation of the
+  amino group of 3-[(1S)-1-amino-3-methylbutyl]-8-hydroxy-3,4-dihydro-1H-isochromen-1-one
+  with the carboxy group of 4-amino-2,3-dihydroxy-6-methylheptanoic acid (the 2S,3S,4S
+  stereoisomer). It is isolated from the culture broth of Bacillus sp.PhM-PHD-090
+  and exhibits potent antitumour activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S,3S,4S)-4-amino-2,3-dihydroxy-N-{(1S)-1-[(3S)-8-hydroxy-1-oxo-3,4-dihydro-1H-isochromen-3-yl]-3-methylbutyl}-6-methylheptanamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:29347
+- CHEBI:33853
+- CHEBI:35681
+- CHEBI:38758
+- CHEBI:50994
+xrefs:
+- reaxys:9592808
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]1([C@H](CC(C)C)NC(=O)[C@@H](O)[C@@H](O)[C@@H](N)CC(C)C)Cc2cccc(O)c2C(=O)O1'
+  standard_inchi: InChI=1S/C22H34N2O6/c1-11(2)8-14(23)19(26)20(27)21(28)24-15(9-12(3)4)17-10-13-6-5-7-16(25)18(13)22(29)30-17/h5-7,11-12,14-15,17,19-20,25-27H,8-10,23H2,1-4H3,(H,24,28)/t14-,15-,17-,19-,20-/m0/s1
+  standard_inchi_key: ZGMSHKBULLTJHQ-UHBFJLORSA-N
+  molecular_formula: C22H34N2O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 422.522
+  monoisotopic_mass: 422.24169
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66766
+  source_label: PM-94128
+  minted_identifier: antibioticmech:chebi-a3e8016099
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

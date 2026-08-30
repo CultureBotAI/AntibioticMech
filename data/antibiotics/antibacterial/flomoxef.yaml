@@ -1,0 +1,91 @@
+identifier: CHEBI:135813
+label: flomoxef
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A second-generation oxacephem antibiotic in which the oxazine ring is
+  substituted at C-3 with a hydroxyethyl-substituted tetrazolylthiomethyl group and
+  the azetidinone ring carries 7α-methoxy and 7β-{2-[(difluoromethyl)thiomethyl]acetamido}
+  substituents.
+definition_source: ChEBI
+synonyms:
+- synonym_text: flomoxefum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (6R,7R)-7-{2-[(difluoromethyl)sulfanyl]acetamido}-3-({[1-(2-hydroxyethyl)-1H-tetrazol-5-yl]sulfanyl}methyl)-7-methoxy-8-oxo-5-oxa-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FMOX
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25558
+- CHEBI:51569
+- CHEBI:55506
+- ARO:0000032
+xrefs:
+- ARO:3004014
+- cas:99665-00-6
+- drugbank:DB11935
+- drugcentral:1179
+- kegg.drug:D07963
+- reaxys:6993219
+- wikipedia.en:Flomoxef
+- chembl:CHEMBL15413
+- pubchem.compound:65864
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12OCC(CSc3nnnn3CCO)=C(C(=O)O)N1C(=O)[C@]2(NC(=O)CSC(F)F)OC'
+  standard_inchi: InChI=1S/C15H18F2N6O7S2/c1-29-15(18-8(25)6-31-13(16)17)11(28)23-9(10(26)27)7(4-30-12(15)23)5-32-14-19-20-21-22(14)2-3-24/h12-13,24H,2-6H2,1H3,(H,18,25)(H,26,27)/t12-,15+/m1/s1
+  standard_inchi_key: UHRBTBZOWWGKMK-DOMZBBRYSA-N
+  molecular_formula: C15H18F2N6O7S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 496.474
+  monoisotopic_mass: 496.06465
+source_concepts:
+- source: ARO
+  source_id: ARO:3004014
+  source_label: flomoxef
+  minted_identifier: antibioticmech:aro-f53229539a
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:135813
+  source_label: flomoxef
+  minted_identifier: antibioticmech:chebi-7f6c22d723
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001815
+  label: ACC-1
+  evidence:
+  - reference: ARO:3001815
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004014 (flomoxef);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003001
+  label: CfxA
+  evidence:
+  - reference: ARO:3003001
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004014 (flomoxef);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

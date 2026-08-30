@@ -1,0 +1,99 @@
+identifier: CHEBI:30813
+label: decanoic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A C10, straight-chain saturated fatty acid.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-nonanecarboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '10:0'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C10:0
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CH3‒[CH2]8‒COOH
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DECANOIC ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Decanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Decanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Decylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dekansäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kaprinsäure
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: capric acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: caprinic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: decoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-Capric acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-decanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-decoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-decylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:39418
+- CHEBI:59554
+xrefs:
+- beilstein:1754556
+- cas:334-48-5
+- drugbank:DB03600
+- ecmdb:ECMDB21204
+- gmelin:69184
+- hmdb:HMDB0000511
+- kegg.compound:C01571
+- knapsack:C00001213
+- lipidmaps:LMFA01010010
+- metacyc.compound:CPD-3617
+- pdb-ccd:DKA
+- ymdb:YMDB00677
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCCCCCCC(=O)O
+  standard_inchi: InChI=1S/C10H20O2/c1-2-3-4-5-6-7-8-9-10(11)12/h2-9H2,1H3,(H,11,12)
+  standard_inchi_key: GHVNFZFCNZKVNT-UHFFFAOYSA-N
+  molecular_formula: C10H20O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 172.268
+  monoisotopic_mass: 172.14633
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:30813
+  source_label: decanoic acid
+  minted_identifier: antibioticmech:chebi-69212525d5
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

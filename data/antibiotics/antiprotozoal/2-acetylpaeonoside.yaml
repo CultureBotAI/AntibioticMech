@@ -1,0 +1,44 @@
+identifier: CHEBI:67929
+label: 2''-acetylpaeonoside
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A kaempferol O-glucoside that is the 2''-acetyl derivative of kaempferol-3-O-β-D-glucopyranosyl-7-O-β-D-glucopyranoside
+  (paeonoside). Isolated from Delphinium staphisagria, it exhibits trypanocidal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7-(β-D-glucopyranosyloxy)-5-hydroxy-2-(4-hydroxyphenyl)-4-oxo-4H-chromen-3-yl
+    2-O-acetyl-β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22798
+- CHEBI:38686
+- CHEBI:47622
+- CHEBI:64634
+xrefs:
+- reaxys:1338924
+activity_roles:
+- CHEBI:36335
+chemical_structure:
+  smiles: CC(=O)O[C@H]1[C@H](Oc2c(-c3ccc(O)cc3)oc3cc(O[C@@H]4O[C@H](CO)[C@@H](O)[C@H](O)[C@H]4O)cc(O)c3c2=O)O[C@H](CO)[C@@H](O)[C@@H]1O
+  standard_inchi: InChI=1S/C29H32O17/c1-10(32)41-27-23(39)20(36)17(9-31)45-29(27)46-26-21(37)18-14(34)6-13(42-28-24(40)22(38)19(35)16(8-30)44-28)7-15(18)43-25(26)11-2-4-12(33)5-3-11/h2-7,16-17,19-20,22-24,27-31,33-36,38-40H,8-9H2,1H3/t16-,17-,19-,20-,22+,23+,24-,27-,28-,29+/m1/s1
+  standard_inchi_key: UNCGSIXTLZAFKK-RXRZWAIISA-N
+  molecular_formula: C29H32O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 652.558
+  monoisotopic_mass: 652.16395
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:67929
+  source_label: 2''-acetylpaeonoside
+  minted_identifier: antibioticmech:chebi-13cb6bf4c1
+  role_terms:
+  - CHEBI:36335
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

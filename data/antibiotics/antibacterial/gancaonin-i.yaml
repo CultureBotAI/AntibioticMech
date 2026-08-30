@@ -1,0 +1,47 @@
+identifier: CHEBI:69099
+label: gancaonin I
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of 1-benzofurans which consists of 1-benzofuran
+  substituted by methoxy groups at positions 4 and 6, a prenyl group at position 5
+  and a 2,4-dihydroxyphenyl group at position 2. It has been isolated from Glycyrrhiza
+  uralensis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-[4,6-dimethoxy-5-(3-methylbut-2-en-1-yl)-1-benzofuran-2-yl]benzene-1,3-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33572
+- CHEBI:35618
+- CHEBI:38830
+xrefs:
+- cas:126716-36-7
+- hmdb:HMDB0038756
+- lipidmaps:LMPK12160046
+- reaxys:3630169
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1cc2oc(-c3ccc(O)cc3O)cc2c(OC)c1CC=C(C)C
+  standard_inchi: InChI=1S/C21H22O5/c1-12(2)5-7-15-18(24-3)11-20-16(21(15)25-4)10-19(26-20)14-8-6-13(22)9-17(14)23/h5-6,8-11,22-23H,7H2,1-4H3
+  standard_inchi_key: DKVBYQAVNNRVNN-UHFFFAOYSA-N
+  molecular_formula: C21H22O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 354.402
+  monoisotopic_mass: 354.14672
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69099
+  source_label: gancaonin I
+  minted_identifier: antibioticmech:chebi-fdb0cebc4c
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

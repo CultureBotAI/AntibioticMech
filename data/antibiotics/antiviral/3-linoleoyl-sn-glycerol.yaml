@@ -1,0 +1,52 @@
+identifier: CHEBI:75563
+label: 3-linoleoyl-sn-glycerol
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 3-acyl-sn-glycerol that is the R-enantiomer of 1-monolinolein.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R)-2,3-dihydroxypropyl (9Z,12Z)-octadeca-9,12-dienoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-1-monolinolein
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(9Z,12Z)-octadecadienoyl-sn-glycerol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MG (0:0/0:0/18:2(n-6))
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sn-3-monolinoleoylglycerol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:64760
+- CHEBI:75568
+xrefs:
+- reaxys:6589758
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: CCCCC/C=C\C/C=C\CCCCCCCC(=O)OC[C@H](O)CO
+  standard_inchi: InChI=1S/C21H38O4/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-21(24)25-19-20(23)18-22/h6-7,9-10,20,22-23H,2-5,8,11-19H2,1H3/b7-6-,10-9-/t20-/m1/s1
+  standard_inchi_key: WECGLUPZRHILCT-KKFOGOCZSA-N
+  molecular_formula: C21H38O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 354.531
+  monoisotopic_mass: 354.27701
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75563
+  source_label: 3-linoleoyl-sn-glycerol
+  minted_identifier: antibioticmech:chebi-133f37c4b9
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

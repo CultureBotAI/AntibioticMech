@@ -1,0 +1,59 @@
+identifier: CHEBI:31742
+label: kaempferol 3-O-β-D-galactoside
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A β-D-galactoside compound with a 4',5,7-trihydroxychromen-3-yl group
+  at the anomeric position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,7-dihydroxy-2-(4-hydroxyphenyl)-4-oxo-4H-chromen-3-yl β-D-galactopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kaempferol 3-O-beta-D-galactoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Trifolin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Trifolioside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27116
+- CHEBI:28034
+- CHEBI:50018
+- CHEBI:63367
+xrefs:
+- cas:23627-87-4
+- hmdb:HMDB0030864
+- kegg.compound:C12626
+- knapsack:C00005137
+- lipidmaps:LMPK12111663
+- metacyc.compound:CPD-7260
+- reaxys:1359975
+- wikipedia.en:Trifolin
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: O=c1c(O[C@@H]2O[C@H](CO)[C@H](O)[C@H](O)[C@H]2O)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12
+  standard_inchi: InChI=1S/C21H20O11/c22-7-13-15(26)17(28)18(29)21(31-13)32-20-16(27)14-11(25)5-10(24)6-12(14)30-19(20)8-1-3-9(23)4-2-8/h1-6,13,15,17-18,21-26,28-29H,7H2/t13-,15+,17+,18-,21+/m1/s1
+  standard_inchi_key: JPUKWEQWGBDDQB-DTGCRPNFSA-N
+  molecular_formula: C21H20O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 448.38
+  monoisotopic_mass: 448.10056
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31742
+  source_label: kaempferol 3-O-β-D-galactoside
+  minted_identifier: antibioticmech:chebi-1ff915048e
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

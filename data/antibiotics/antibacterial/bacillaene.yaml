@@ -1,0 +1,47 @@
+identifier: CHEBI:71623
+label: bacillaene
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polyene antibiotic obtained from Bacillus subtilis 168 that is active
+  against a broad spectrum of bacteria. It is notoriously unstable.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3E,5E,7Z)-8-({(4Z,6Z,8E,10E,12Z,14E)-3-hydroxy-16-[(2-hydroxy-4-methylpentanoyl)amino]-4,9-dimethylhexadeca-4,6,8,10,12,14-hexaenoyl}amino)-2-methylnona-3,5,7-trienoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26177
+- CHEBI:26188
+- CHEBI:29347
+- CHEBI:35681
+- CHEBI:47989
+xrefs:
+- reaxys:11289554
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: C/C(=C/C=C/C=C/C(C)C(=O)O)NC(=O)CC(O)/C(C)=C\C=C/C=C(C)/C=C/C=C\C=C\CNC(=O)C(O)CC(C)C
+  standard_inchi: InChI=1S/C34H48N2O6/c1-25(2)23-31(38)33(40)35-22-16-9-7-8-11-17-26(3)18-14-15-19-27(4)30(37)24-32(39)36-29(6)21-13-10-12-20-28(5)34(41)42/h7-21,25,28,30-31,37-38H,22-24H2,1-6H3,(H,35,40)(H,36,39)(H,41,42)/b8-7-,13-10+,15-14-,16-9+,17-11+,20-12+,26-18+,27-19-,29-21-
+  standard_inchi_key: KDQMRYTZELJKOB-MAHROAIDSA-N
+  molecular_formula: C34H48N2O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 580.766
+  monoisotopic_mass: 580.35124
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:71623
+  source_label: bacillaene
+  minted_identifier: antibioticmech:chebi-b87a08fc39
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

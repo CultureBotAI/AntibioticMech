@@ -1,0 +1,39 @@
+identifier: antibioticmech:aro-7c2372afa7
+label: mutanobactin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Mutanobactin is produced by a polyketide synthase-nonribosomal peptide
+  synthetase hybrid system encoded by the mub locus. Mutanobactin-producing S. mutans
+  inhibits planktonic and biofilm growth of E. faecalis and is active against other
+  Enterococcus species and Staphylococcus aureus.
+definition_source: PMID:37745448
+parent_compounds:
+- ARO:3000053
+xrefs:
+- ARO:3007686
+- CHEBI:212062
+- pubchem.compound:49850903
+structural_class: peptide antibiotic
+structural_class_id: ARO:3000053
+chemical_structure:
+  smiles: CCCCCCCCCC(=O)C1C2CNC(=O)C(CS2)NC(=O)[C@@H](NC(=O)[C@@H]3CCCN3C(=O)[C@H](NC(=O)[C@@H](NC1=O)CC(C)C)C)C(C)C
+  standard_inchi: InChI=1S/C36H60N6O7S/c1-7-8-9-10-11-12-13-16-27(43)29-28-19-37-31(44)25(20-50-28)40-35(48)30(22(4)5)41-33(46)26-15-14-17-42(26)36(49)23(6)38-32(45)24(18-21(2)3)39-34(29)47/h21-26,28-30H,7-20H2,1-6H3,(H,37,44)(H,38,45)(H,39,47)(H,40,48)(H,41,46)/t23-,24+,25?,26+,28?,29?,30+/m1/s1
+  standard_inchi_key: WDKYFUSPNIQGDO-IBCSGKGJSA-N
+  molecular_formula: C36H60N6O7S
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 721.0
+  monoisotopic_mass: 720.42441945
+source_concepts:
+- source: ARO
+  source_id: ARO:3007686
+  source_label: mutanobactin
+  minted_identifier: antibioticmech:aro-7c2372afa7
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

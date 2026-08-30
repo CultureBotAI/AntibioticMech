@@ -1,0 +1,44 @@
+identifier: CHEBI:65540
+label: caesalpinin D
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diterpenoid lactone isolated from the seed kernels of Caesalpinia crista
+  that has been found to exhibit antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3bS,5aR,6S,6aR,10S,10aS,10bS,10cR)-6a-hydroxy-7,7,10a-trimethyl-4-oxo-3b,5a,6,6a,7,8,9,10,10a,10b,10c,11-dodecahydro-4H-phenanthro[3,2-b:10,1-b'c']difuran-6,10-diyl
+    diacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26878
+- CHEBI:37407
+- CHEBI:47622
+- CHEBI:49193
+xrefs:
+- reaxys:10734902
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@@]12Cc3occc3[C@@]3([H])C(=O)O[C@@]([H])([C@H](OC(C)=O)[C@@]4(O)C(C)(C)CC[C@H](OC(C)=O)[C@]14C)[C@]23[H]'
+  standard_inchi: InChI=1S/C24H30O8/c1-11(25)30-16-6-8-22(3,4)24(28)20(31-12(2)26)19-18-14(23(16,24)5)10-15-13(7-9-29-15)17(18)21(27)32-19/h7,9,14,16-20,28H,6,8,10H2,1-5H3/t14-,16-,17+,18+,19+,20-,23-,24+/m0/s1
+  standard_inchi_key: QAYOIGPJKWWLOT-WXRFRXGMSA-N
+  molecular_formula: C24H30O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 446.496
+  monoisotopic_mass: 446.19407
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65540
+  source_label: caesalpinin D
+  minted_identifier: antibioticmech:chebi-b60a5b3057
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

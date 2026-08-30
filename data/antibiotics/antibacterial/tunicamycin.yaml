@@ -1,0 +1,67 @@
+identifier: antibioticmech:aro-be005cca98
+label: tunicamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Tunicamycin is mixture of homologous nucleoside antibiotics that block
+  the reaction of UDP-N-acetylglucosamine and dolichyl phosphate in the first step
+  of glycoprotein synthesis.
+definition_source: PMID:1624425
+parent_compounds:
+- ARO:3000034
+xrefs:
+- ARO:0000009
+- cas:11089-65-9
+- CHEBI:29699
+- chembl:CHEMBL505513
+- pubchem.compound:5354023
+activity_roles:
+- CHEBI:33281
+structural_class: nucleoside antibiotic
+structural_class_id: ARO:3000034
+chemical_structure:
+  smiles: CC(C)CCCCCCCC/C=C/C(=O)NC1C(C(C(OC1OC2C(C(C(C(O2)CO)O)O)NC(=O)C)CC(C3C(C(C(O3)N4C=CC(=O)NC4=O)O)O)O)O)O
+  standard_inchi: InChI=1S/C37H60N4O16/c1-18(2)12-10-8-6-4-5-7-9-11-13-23(45)39-26-30(50)27(47)21(54-36(26)57-35-25(38-19(3)43)29(49)28(48)22(17-42)55-35)16-20(44)33-31(51)32(52)34(56-33)41-15-14-24(46)40-37(41)53/h11,13-15,18,20-22,25-36,42,44,47-52H,4-10,12,16-17H2,1-3H3,(H,38,43)(H,39,45)(H,40,46,53)/b13-11+
+  standard_inchi_key: YJQCOFNZVFGCAF-ACCUITESSA-N
+  molecular_formula: C37H60N4O16
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 816.9
+  monoisotopic_mass: 816.40043184
+source_concepts:
+- source: ARO
+  source_id: ARO:0000009
+  source_label: tunicamycin
+  minted_identifier: antibioticmech:aro-be005cca98
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3003059
+  label: tmrB
+  evidence:
+  - reference: ARO:3003059
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000009 (tunicamycin);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3004285
+  label: tunicamycin resistance protein
+  evidence:
+  - reference: ARO:3004285
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000009 (tunicamycin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T00:54:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T01:13:57Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,41 @@
+identifier: CHEBI:65753
+label: 3,5-di-O-acetyl-1-O-[(5β,8α,9β,10α)-18-oxokaur-16-en-18-yl]-β-L-arabinofuranose
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An ent-kaurane diterpenoid that is ent-kaur-16-en-18-oic acid substituted
+  by a β-L-3',5'-diacetoxy-arabinofuranosyl moiety at position 18 via a glycosidic
+  linkage. It is isolated from the whole herb of Sagittaria pygmaea and exhibits antibacterial
+  activity against the oral pathogens.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 18-β-L-3',5'-diacetoxy-arabinofuranosyl-ent-kaur-16-ene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36760
+- CHEBI:47622
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12CC[C@]34CC(=C)[C@H](CC[C@@]3([H])[C@]1(C)CCC[C@@]2(C)C(=O)O[C@H]1O[C@@H](COC(C)=O)[C@H](OC(C)=O)[C@H]1O)C4'
+  standard_inchi: InChI=1S/C29H42O8/c1-16-13-29-12-9-21-27(4,22(29)8-7-19(16)14-29)10-6-11-28(21,5)26(33)37-25-23(32)24(35-18(3)31)20(36-25)15-34-17(2)30/h19-25,32H,1,6-15H2,2-5H3/t19?,20-,21-,22-,23+,24-,25+,27+,28+,29+/m0/s1
+  standard_inchi_key: NDNXVUYCJZMRRS-ABRNDMKOSA-N
+  molecular_formula: C29H42O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 518.647
+  monoisotopic_mass: 518.28797
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65753
+  source_label: 3,5-di-O-acetyl-1-O-[(5β,8α,9β,10α)-18-oxokaur-16-en-18-yl]-β-L-arabinofuranose
+  minted_identifier: antibioticmech:chebi-19e345b19d
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

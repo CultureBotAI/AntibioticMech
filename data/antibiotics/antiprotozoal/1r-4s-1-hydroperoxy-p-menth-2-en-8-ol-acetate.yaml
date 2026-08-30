@@ -1,0 +1,43 @@
+identifier: CHEBI:66035
+label: (1R,4S)-1-hydroperoxy-p-menth-2-en-8-ol acetate
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A p-menthane monoterpenoid that is p-menth-2-ene substituted by a hydroperoxy
+  group at position 1 and an acetyloxy group at position 8 (the 1R,4S stereoisomer).
+  Isolated from the leaves of Laurus nobilis, it exhibits trypanocidal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-[(1S,4R)-4-hydroperoxy-4-methylcyclohex-2-en-1-yl]propan-2-yl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25186
+- CHEBI:35924
+- CHEBI:47622
+xrefs:
+- reaxys:9260434
+activity_roles:
+- CHEBI:36335
+chemical_structure:
+  smiles: CC(=O)OC(C)(C)[C@@H]1C=C[C@](C)(OO)CC1
+  standard_inchi: InChI=1S/C12H20O4/c1-9(13)15-11(2,3)10-5-7-12(4,16-14)8-6-10/h5,7,10,14H,6,8H2,1-4H3/t10-,12+/m1/s1
+  standard_inchi_key: VIUQTXYGNHOJBD-PWSUYJOCSA-N
+  molecular_formula: C12H20O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 228.288
+  monoisotopic_mass: 228.13616
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66035
+  source_label: (1R,4S)-1-hydroperoxy-p-menth-2-en-8-ol acetate
+  minted_identifier: antibioticmech:chebi-119523e84a
+  role_terms:
+  - CHEBI:36335
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

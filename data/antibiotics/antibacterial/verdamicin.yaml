@@ -1,0 +1,36 @@
+identifier: antibioticmech:aro-e52262d6b8
+label: verdamicin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: A gentamicin-group aminoglycoside isolated from Micromonospora.
+definition_source: PMID:1137376
+parent_compounds:
+- ARO:0000016
+xrefs:
+- ARO:3001294
+- chembl:CHEMBL1276546
+- pubchem.compound:512877
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: C[C@@H](C1=CC[C@H]([C@H](O1)O[C@@H]2[C@H](C[C@H]([C@@H]([C@H]2O)O[C@@H]3[C@@H]([C@H]([C@@](CO3)(C)O)NC)O)N)N)N)N
+  standard_inchi: InChI=1S/C20H39N5O7/c1-8(21)12-5-4-9(22)18(30-12)31-15-10(23)6-11(24)16(13(15)26)32-19-14(27)17(25-3)20(2,28)7-29-19/h5,8-11,13-19,25-28H,4,6-7,21-24H2,1-3H3/t8-,9+,10-,11+,13-,14+,15+,16-,17+,18+,19+,20-/m0/s1
+  standard_inchi_key: XUSXOPRDIDWMFO-CTMSJIKGSA-N
+  molecular_formula: C20H39N5O7
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 461.6
+  monoisotopic_mass: 461.2849486
+source_concepts:
+- source: ARO
+  source_id: ARO:3001294
+  source_label: verdamicin
+  minted_identifier: antibioticmech:aro-e52262d6b8
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

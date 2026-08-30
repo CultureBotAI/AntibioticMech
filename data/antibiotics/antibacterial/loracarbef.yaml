@@ -1,0 +1,90 @@
+identifier: CHEBI:47544
+label: loracarbef
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A synthetic "carba" analogue of cefaclor, with carbon replacing sulfur
+  at position 1. Used to treat a wide range of infections caused by both gram-positive
+  and gram-negative bacteria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: loracarbefum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (6R,7S)-7-{[(2R)-2-amino-2-phenylacetyl]amino}-3-chloro-8-oxo-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7β-[(2R)-2-amino-2-phenylacetyl]nitrilo-3-chloro-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LORACABEF
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Lorabid
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Loracarbefum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:55504
+- ARO:0000032
+xrefs:
+- ARO:3004016
+- cas:76470-66-1
+- drugbank:DB00447
+- drugcentral:1603
+- hmdb:HMDB0014590
+- kegg.drug:D08143
+- lincs.smallmolecule:LSM-5429
+- patent:EP14476
+- patent:US4708956
+- pdb-ccd:LOR
+- reaxys:3631282
+- chembl:CHEMBL1200610
+- pubchem.compound:5284585
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: N[C@@H](C(=O)N[C@@H]1C(=O)N2C(C(=O)O)=C(Cl)CC[C@H]12)c1ccccc1
+  standard_inchi: InChI=1S/C16H16ClN3O4/c17-9-6-7-10-12(15(22)20(10)13(9)16(23)24)19-14(21)11(18)8-4-2-1-3-5-8/h1-5,10-12H,6-7,18H2,(H,19,21)(H,23,24)/t10-,11-,12+/m1/s1
+  standard_inchi_key: JAPHQRWPEGVNBT-UTUOFQBUSA-N
+  molecular_formula: C16H16ClN3O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 349.774
+  monoisotopic_mass: 349.08293
+source_concepts:
+- source: ARO
+  source_id: ARO:3004016
+  source_label: loracarbef
+  minted_identifier: antibioticmech:aro-fdbaf42415
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:47544
+  source_label: loracarbef
+  minted_identifier: antibioticmech:chebi-21d4c566e7
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3004016 (loracarbef); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

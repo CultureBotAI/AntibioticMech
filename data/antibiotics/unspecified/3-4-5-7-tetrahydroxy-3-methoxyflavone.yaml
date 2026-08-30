@@ -1,0 +1,60 @@
+identifier: CHEBI:16860
+label: 3',4',5,7-tetrahydroxy-3-methoxyflavone
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetrahydroxyflavone having the 4-hydroxy groups located at the 3'- 4'-
+  5- and 7-positions as well as a methoxy group at the 2-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-3-methoxy-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-3-methoxy-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3',4',5,7-Tetrahydroxy-3-methoxyflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-Methoxy-5,7,3',4'-tetrahydroxyflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-O-Methylquercetin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-methoxy-5,7,3',4'-tetrahydroxyflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25401
+- CHEBI:38684
+xrefs:
+- cas:1486-70-0
+- kegg.compound:C04443
+- knapsack:C00004632
+- metacyc.compound:3457-TETRAHYDROXY-3-METHOXYFLAVONE
+- reaxys:324509
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COc1c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c2c1=O
+  standard_inchi: InChI=1S/C16H12O7/c1-22-16-14(21)13-11(20)5-8(17)6-12(13)23-15(16)7-2-3-9(18)10(19)4-7/h2-6,17-20H,1H3
+  standard_inchi_key: WEPBGSIAWZTEJR-UHFFFAOYSA-N
+  molecular_formula: C16H12O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 316.265
+  monoisotopic_mass: 316.0583
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:16860
+  source_label: 3',4',5,7-tetrahydroxy-3-methoxyflavone
+  minted_identifier: antibioticmech:chebi-3b3f8cfdb0
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

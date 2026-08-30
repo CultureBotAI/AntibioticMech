@@ -1,0 +1,49 @@
+identifier: CHEBI:65562
+label: callophycoic acid F
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterobicyclic compound that is 2,5-dihydro-1-benzoxepine-7-carboxylic
+  acid substituted by a (3E,7E)-4,8,12-trimethyltrideca-3,7,11-trien-1-yl group at
+  position 3. It is isolated from the Fijian red alga Callophycus serratus and exhibits
+  antibacterial, antimalarial and anticancer activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-[(3E,7E)-4,8,12-trimethyltrideca-3,7,11-trien-1-yl]-2,5-dihydro-1-benzoxepine-7-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22723
+- CHEBI:23849
+- CHEBI:27171
+- CHEBI:37407
+xrefs:
+- chemspider:23076458
+- reaxys:11167776
+activity_roles:
+- CHEBI:33282
+- CHEBI:38068
+chemical_structure:
+  smiles: CC(C)=CCC/C(C)=C/CC/C(C)=C/CCC1=CCc2cc(C(=O)O)ccc2OC1
+  standard_inchi: InChI=1S/C27H36O3/c1-20(2)8-5-9-21(3)10-6-11-22(4)12-7-13-23-14-15-24-18-25(27(28)29)16-17-26(24)30-19-23/h8,10,12,14,16-18H,5-7,9,11,13,15,19H2,1-4H3,(H,28,29)/b21-10+,22-12+
+  standard_inchi_key: URXNJUNXUWLMAY-KZVLYIKRSA-N
+  molecular_formula: C27H36O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 408.582
+  monoisotopic_mass: 408.26645
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65562
+  source_label: callophycoic acid F
+  minted_identifier: antibioticmech:chebi-4a0ce8a102
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

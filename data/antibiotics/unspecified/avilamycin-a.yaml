@@ -1,0 +1,53 @@
+identifier: CHEBI:85646
+label: avilamycin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An oligosaccharide derivative that is produced by Streptomyces viridochromogenes
+  and exhibits antibiotic properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3S,4R,6S)-6-{[(3aR,4R,4'R,5'S,6S,6'R,7aR)-6-{[(2S,3R,4R,5S,6R)-2-{[(2R,3S,4S,5S,6S)-6-({(2R,3aS,3a'R,6S,6'R,7R,7'S,7aR,7a'R)-7'-acetyl-7'-hydroxy-6'-methyl-7-[(2-methylpropanoyl)oxy]octahydro-2'H,4H-2,4'-spirobi[[1,3]dioxolo[4,5-c]pyran]-6-yl}oxy)-4-hydroxy-5-methoxy-2-(methoxymethyl)oxan-3-yl]oxy}-3-hydroxy-5-methoxy-6-methyloxan-4-yl]oxy}-4'-hydroxy-4,6',7a-trimethyltetrahydro-4H-spiro[1,3-dioxolo[4,5-c]pyran-2,2'-oxan]-5'-yl]oxy}-4-hydroxy-2-methyloxan-3-yl
+    3,5-dichloro-4-hydroxy-2-methoxy-6-methylbenzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: A-23575
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:23697
+- CHEBI:33853
+- CHEBI:36054
+- CHEBI:37948
+- CHEBI:59770
+- CHEBI:63563
+- CHEBI:71989
+xrefs:
+- cas:69787-79-7
+- metacyc.compound:CPD-13154
+- reaxys:6473612
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12OCO[C@@]1([H])[C@](O)(C(C)=O)[C@@H](C)O[C@]21O[C@@]2([H])[C@@H](OC(=O)C(C)C)[C@H](O[C@@H]3O[C@H](COC)[C@@H](O[C@@H]4O[C@H](C)[C@H](OC)[C@H](O[C@H]5C[C@@]6(C)OC7(C[C@@H](O)[C@H](O[C@H]8C[C@@H](O)[C@H](OC(=O)c9c(C)c(Cl)c(O)c(Cl)c9OC)[C@@H](C)O8)[C@@H](C)O7)O[C@]6([H])[C@@H](C)O5)[C@H]4O)[C@H](O)[C@@H]3OC)OC[C@]2([H])O1'
+  standard_inchi: InChI=1S/C61H88Cl2O32/c1-21(2)53(70)87-49-45-32(92-61(93-45)52-51(78-20-79-52)60(72,27(8)64)28(9)91-61)19-77-56(49)89-57-48(76-14)39(68)44(31(83-57)18-73-11)88-55-40(69)47(43(74-12)24(5)82-55)85-34-17-58(10)50(26(7)81-34)94-59(95-58)16-30(66)42(25(6)90-59)84-33-15-29(65)41(23(4)80-33)86-54(71)35-22(3)36(62)38(67)37(63)46(35)75-13/h21,23-26,28-34,39-45,47-52,55-57,65-69,72H,15-20H2,1-14H3/t23-,24-,25-,26-,28-,29-,30-,31-,32+,33+,34+,39+,40-,41-,42-,43+,44-,45-,47-,48+,49-,50-,51-,52-,55+,56+,57+,58-,59?,60+,61-/m1/s1
+  standard_inchi_key: XIRGHRXBGGPPKY-FCNCREMHSA-N
+  molecular_formula: C61H88Cl2O32
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1404.249
+  monoisotopic_mass: 1402.46358
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85646
+  source_label: avilamycin A
+  minted_identifier: antibioticmech:chebi-6a97380f1f
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

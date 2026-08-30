@@ -1,0 +1,47 @@
+identifier: CHEBI:65944
+label: 7,4'-di-O-galloyltricetiflavan
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diester obtained by the formal condensation of gallic acid with the
+  hydroxy groups at positions 7 and 4' of 3',4',5',5,7-pentahydroxyflavan. Isolated
+  from the leaves of Pithecellobium clypearia, it exhibits antiviral activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,6-dihydroxy-4-{5-hydroxy-7-[(3,4,5-trihydroxybenzoyl)oxy]-3,4-dihydro-2H-chromen-2-yl}phenyl
+    3,4,5-trihydroxybenzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tricetiflavan-7,4'-di-O-gallate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37576
+- CHEBI:51307
+- CHEBI:72012
+xrefs:
+- reaxys:15869678
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: O=C(Oc1cc(O)c2c(c1)OC(c1cc(O)c(OC(=O)c3cc(O)c(O)c(O)c3)c(O)c1)CC2)c1cc(O)c(O)c(O)c1
+  standard_inchi: InChI=1S/C29H22O14/c30-16-9-14(41-28(39)12-5-17(31)25(37)18(32)6-12)10-24-15(16)1-2-23(42-24)11-3-21(35)27(22(36)4-11)43-29(40)13-7-19(33)26(38)20(34)8-13/h3-10,23,30-38H,1-2H2
+  standard_inchi_key: LRBYDVJXPROTLX-UHFFFAOYSA-N
+  molecular_formula: C29H22O14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 594.481
+  monoisotopic_mass: 594.10096
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65944
+  source_label: 7,4'-di-O-galloyltricetiflavan
+  minted_identifier: antibioticmech:chebi-c9f7328b9d
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

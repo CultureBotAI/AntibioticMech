@@ -1,0 +1,46 @@
+identifier: CHEBI:68285
+label: (−)-microdiplodiasolol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of xanthones that is 4a,9a-dihydro-1H-xanthene-2,9-dione
+  substituted by hydroxy groups at positions 1, 8 and 9a, a methoxy group at position
+  4 and methyl groups at positions 4a and 6 (the 1S,4aS,9aS stereoisomer). Isolated
+  from Microdiplodia species, it exhibits antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,4aS,9aS)-1,8,9a-trihydroxy-4-methoxy-4a,6-dimethyl-4a,9a-dihydro-1H-xanthene-2,9-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:2468
+- CHEBI:33853
+- CHEBI:47985
+- CHEBI:51149
+xrefs:
+- reaxys:21389528
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COC1=CC(=O)[C@@H](O)[C@@]2(O)C(=O)c3c(O)cc(C)cc3O[C@]12C
+  standard_inchi: InChI=1S/C16H16O7/c1-7-4-8(17)12-10(5-7)23-15(2)11(22-3)6-9(18)13(19)16(15,21)14(12)20/h4-6,13,17,19,21H,1-3H3/t13-,15-,16-/m1/s1
+  standard_inchi_key: SIUXYUWNLUKHJD-FVQBIDKESA-N
+  molecular_formula: C16H16O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 320.297
+  monoisotopic_mass: 320.0896
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68285
+  source_label: (−)-microdiplodiasolol
+  minted_identifier: antibioticmech:chebi-311918d269
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

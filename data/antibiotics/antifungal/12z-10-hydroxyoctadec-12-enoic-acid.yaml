@@ -1,0 +1,63 @@
+identifier: CHEBI:192538
+label: (12Z)-10-hydroxyoctadec-12-enoic acid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An octadecenoic acid that is (12Z)-octadec-12-enoic acid substituted by
+  a hydroxy group at position 10. It is a metabolite of linoleic acid produced by
+  the gut lactic acid bacterium Lactobacillus plantarum.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (12Z)-10-hydroxy-12-octadecenoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (12Z)-10-hydroxyoctadecenoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (Z)-10-hydroxy-12-octadecenoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (Z)-10-hydroxyoctadec-12-enoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10-HOE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10-hydroxy-12(Z)-octadecenoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10-hydroxy-12Z-octadecenoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10-hydroxy-cis-12-octadecenoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 12(Z)-10-HOME
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:131869
+- CHEBI:25634
+xrefs:
+- chemspider:57451003
+- lipidmaps:LMFA02000345
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCC/C=C\CC(O)CCCCCCCCC(=O)O
+  standard_inchi: InChI=1S/C18H34O3/c1-2-3-4-5-8-11-14-17(19)15-12-9-6-7-10-13-16-18(20)21/h8,11,17,19H,2-7,9-10,12-16H2,1H3,(H,20,21)/b11-8-
+  standard_inchi_key: WVYIZGMCLSGZGG-FLIBITNWSA-N
+  structure_source: ChEBI
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:192538
+  source_label: (12Z)-10-hydroxyoctadec-12-enoic acid
+  minted_identifier: antibioticmech:chebi-5cf71806e4
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,47 @@
+identifier: CHEBI:146309
+label: 3-methylorsellinic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dihydroxybenzoic acid that is o-orsellinic acid in which the hydrogen
+  at position 3 is substituted by a methyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,4-dihydroxy-3,6-dimethylbenzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,6-dimethyl-2,4-dihydroxybenzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-orcinolcarboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23778
+- CHEBI:33572
+xrefs:
+- cas:4707-46-4
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Cc1cc(O)c(C)c(O)c1C(=O)O
+  standard_inchi: InChI=1S/C9H10O4/c1-4-3-6(10)5(2)8(11)7(4)9(12)13/h3,10-11H,1-2H3,(H,12,13)
+  standard_inchi_key: VHNLJRRECIZZPX-UHFFFAOYSA-N
+  molecular_formula: C9H10O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 182.175
+  monoisotopic_mass: 182.05791
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:146309
+  source_label: 3-methylorsellinic acid
+  minted_identifier: antibioticmech:chebi-41a5693328
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

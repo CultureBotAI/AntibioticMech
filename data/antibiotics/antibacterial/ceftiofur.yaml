@@ -1,0 +1,60 @@
+identifier: CHEBI:31383
+label: ceftiofur
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Ceftiofur is a third-generation broad spectrum cephalosporin and beta-lactam
+  antibiotic predominantly used in veterinary medicine. It causes cell lysis by disrupting
+  peptidoglycan cross-linkage and cell wall formation by binding to PBPs.
+definition_source: PMID:3631686
+synonyms:
+- synonym_text: Excenel
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Naxcel
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:0000032
+xrefs:
+- ARO:3004006
+- cas:104010-37-9
+- chembl:CHEMBL222913
+- pubchem.compound:6328657
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(CSC(=O)c3ccco3)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1.[Na+]'
+  standard_inchi: InChI=1S/C19H17N5O7S3.Na/c1-30-23-11(9-7-34-19(20)21-9)14(25)22-12-15(26)24-13(17(27)28)8(5-32-16(12)24)6-33-18(29)10-3-2-4-31-10;/h2-4,7,12,16H,5-6H2,1H3,(H2,20,21)(H,22,25)(H,27,28);/q;+1/p-1/b23-11-;/t12-,16-;/m1./s1
+  standard_inchi_key: RFLHUYUQCKHUKS-JUODUXDSSA-M
+  molecular_formula: C19H16N5O7S3.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 545.556
+  monoisotopic_mass: 545.01096
+source_concepts:
+- source: ARO
+  source_id: ARO:3004006
+  source_label: ceftiofur
+  minted_identifier: antibioticmech:aro-0ad6dfa51b
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007437
+  label: EBR-5
+  evidence:
+  - reference: ARO:3007437
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004006 (ceftiofur);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3004006 (ceftiofur); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

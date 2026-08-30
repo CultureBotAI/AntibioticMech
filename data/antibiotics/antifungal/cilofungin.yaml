@@ -1,0 +1,65 @@
+identifier: CHEBI:315019
+label: cilofungin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclic hexapeptide echinocandin antibiotic isolated from Aspergillus
+  spp. By inhibiting the conversion of lanosterol to ergosterol, it invades a fungus'
+  ability to synthesize cell walls. A modified form of echinocandin B, it is an antimycotic
+  agent against Candida albicans.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cilofungina
+  synonym_type: INN
+  source: chebi
+- synonym_text: cilofungine
+  synonym_type: INN
+  source: chebi
+- synonym_text: cilofunginum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 5.1:6-anhydro{(4R,5R)-4,5-dihydroxy-N2-[4-(octyloxy)benzoyl]-L-ornithyl-L-threonyl-(4R)-4-hydroxy-L-prolyl-(4S)-4-hydroxy-4-(4-hydroxyphenyl)-L-threonyl-L-threonyl-(3S,4S)-3-hydroxy-4-methyl-L-proline}
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-{(2R,6S,9S,11R,12R,14aS,15S,16S,20S,23S,25aS)-23-[(1S,2S)-1,2-dihydroxy-2-(4-hydroxyphenyl)ethyl]-2,11,12,15-tetrahydroxy-6,20-bis[(1R)-1-hydroxyethyl]-16-methyl-5,8,14,19,22,25-hexaoxotetracosahydro-1H-dipyrrolo[2,1-c:2',1'-l][1,4,7,10,13,16]hexaazacyclohenicosin-9-yl}-4-(octyloxy)benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LY-121019
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LY121019
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:57248
+- CHEBI:87113
+xrefs:
+- cas:79404-91-4
+- reaxys:7164873
+- wikipedia.en:Cilofungin
+activity_roles:
+- CHEBI:35718
+- CHEBI:86327
+chemical_structure:
+  smiles: CCCCCCCCOc1ccc(C(=O)N[C@H]2C[C@@H](O)[C@@H](O)NC(=O)[C@@H]3[C@@H](O)[C@@H](C)CN3C(=O)[C@H]([C@@H](C)O)NC(=O)[C@H]([C@H](O)[C@@H](O)c3ccc(O)cc3)NC(=O)[C@@H]3C[C@@H](O)CN3C(=O)[C@H]([C@@H](C)O)NC2=O)cc1
+  standard_inchi: InChI=1S/C49H71N7O17/c1-5-6-7-8-9-10-19-73-31-17-13-28(14-18-31)42(65)50-32-21-34(61)45(68)54-47(70)38-39(62)24(2)22-56(38)49(72)36(26(4)58)52-46(69)37(41(64)40(63)27-11-15-29(59)16-12-27)53-44(67)33-20-30(60)23-55(33)48(71)35(25(3)57)51-43(32)66/h11-18,24-26,30,32-41,45,57-64,68H,5-10,19-23H2,1-4H3,(H,50,65)(H,51,66)(H,52,69)(H,53,67)(H,54,70)/t24-,25+,26+,30+,32-,33-,34+,35-,36-,37-,38-,39-,40-,41-,45+/m0/s1
+  standard_inchi_key: ZKZKCEAHVFVZDJ-MTUMARHDSA-N
+  molecular_formula: C49H71N7O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1030.139
+  monoisotopic_mass: 1029.49064
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:315019
+  source_label: cilofungin
+  minted_identifier: antibioticmech:chebi-128207ae77
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

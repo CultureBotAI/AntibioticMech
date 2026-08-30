@@ -1,0 +1,52 @@
+identifier: CHEBI:65401
+label: ambiguine I
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An ambiguine that consists of a 5,5,7,10,10-pentamethyl-4,5,5a,6a,6b,7,8,9,9a,10-decahydro-10dH-6-oxa-4-azacyclopropa[6,7]cyclohepta[1,2,3,4-mno]aceanthrylen-10d-ol
+  skeleton with an ethenyl substituent at position 7 and an isocyano group at position
+  6b (the 5aS,6aR,6bR,7R,9aR,10dR stereoisomer). An antimicrobial agent isolated from
+  the cyanobacterium strain Fischerella.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5aS,6aR,6bR,7R,9aR,10dR)-7-ethenyl-6b-isocyano-5,5,7,10,10-pentamethyl-4,5,5a,6a,6b,7,8,9,9a,10-decahydro-10dH-6-oxa-4-azacyclopropa[6,7]cyclohepta[1,2,3,4-mno]aceanthrylen-10d-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ambiguine I isonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:141618
+- CHEBI:26878
+- CHEBI:32955
+- CHEBI:35353
+- CHEBI:51914
+xrefs:
+- chemspider:17214461
+- reaxys:18851758
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@]12O[C@@]1([H])C(C)(C)c1nc3cccc4c3c1[C@@]1(O)[C@@]2([N+]#[C-])[C@@](C)(C=C)CC[C@]1([H])C4(C)C'
+  standard_inchi: InChI=1S/C26H30N2O2/c1-8-24(6)13-12-16-22(2,3)14-10-9-11-15-17(14)18-19(28-15)23(4,5)20-21(30-20)26(24,27-7)25(16,18)29/h8-11,16,20-21,28-29H,1,12-13H2,2-6H3/t16-,20-,21+,24+,25-,26+/m1/s1
+  standard_inchi_key: RVIIZRJMWFSNER-LJCLWVHTSA-N
+  molecular_formula: C26H30N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 402.538
+  monoisotopic_mass: 402.23073
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65401
+  source_label: ambiguine I
+  minted_identifier: antibioticmech:chebi-5ad026b5ee
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

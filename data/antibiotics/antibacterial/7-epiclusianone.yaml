@@ -1,0 +1,47 @@
+identifier: CHEBI:65850
+label: 7-epiclusianone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An enone that is a tetraprenyl benzophenone derivative isolated from Rheedia
+  gardneriana and Garcinia brasiliensis. It exhibits anti-allergic, antibacterial,
+  trypanocidal and vasodilating activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,5R,7S)-3-benzoyl-4-hydroxy-6,6-dimethyl-1,5,7-tris(3-methylbut-2-en-1-yl)bicyclo[3.3.1]non-3-ene-2,9-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33823
+- CHEBI:35990
+- CHEBI:51689
+- CHEBI:76224
+xrefs:
+- patent:CN101293821
+- reaxys:8088873
+activity_roles:
+- CHEBI:33282
+- CHEBI:36335
+chemical_structure:
+  smiles: CC(C)=CC[C@H]1C[C@@]2(CC=C(C)C)C(=O)C(C(=O)c3ccccc3)=C(O)[C@](CC=C(C)C)(C2=O)C1(C)C
+  standard_inchi: InChI=1S/C33H42O4/c1-21(2)14-15-25-20-32(18-16-22(3)4)28(35)26(27(34)24-12-10-9-11-13-24)29(36)33(30(32)37,31(25,7)8)19-17-23(5)6/h9-14,16-17,25,36H,15,18-20H2,1-8H3/t25-,32-,33+/m0/s1
+  standard_inchi_key: LTDDHUQIMJCFPX-DZMJNENTSA-N
+  molecular_formula: C33H42O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 502.695
+  monoisotopic_mass: 502.30831
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65850
+  source_label: 7-epiclusianone
+  minted_identifier: antibioticmech:chebi-ab28071348
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:36335
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

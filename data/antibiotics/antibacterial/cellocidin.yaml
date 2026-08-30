@@ -1,0 +1,73 @@
+identifier: CHEBI:51763
+label: cellocidin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dicarboxylic acid diamide resulting from the formal condensation of
+  both of the carboxy groups of butynedioic acid with ammonia. An antibacterial agent
+  produced by Streptomyces chibaensis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: but-2-ynediamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-butynediamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetylendicarbonsäureamid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetylene dicarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetylenedicarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetylenedicarboxylic acid diamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Aquamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Lenamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Renamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140324
+- CHEBI:35779
+- CHEBI:51752
+xrefs:
+- cas:543-21-5
+- knapsack:C00018677
+- pesticides:cellocidin
+- reaxys:1756134
+- wikipedia.en:Cellocidin
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: NC(=O)C#CC(N)=O
+  standard_inchi: InChI=1S/C4H4N2O2/c5-3(7)1-2-4(6)8/h(H2,5,7)(H2,6,8)
+  standard_inchi_key: JBTGHKUTYAMZEZ-UHFFFAOYSA-N
+  molecular_formula: C4H4N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 112.088
+  monoisotopic_mass: 112.02728
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:51763
+  source_label: cellocidin
+  minted_identifier: antibioticmech:chebi-ae024db0c3
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

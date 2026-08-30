@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Browse — AntibioticMech{% endblock %}
+{% block content %}
+<h1>Browse</h1>
+<p class="lede">{{ stats.total }} compound records across {{ classes|length }} antimicrobial classes.</p>
+<table>
+  <caption>Antimicrobial classes</caption>
+  <thead><tr><th scope="col">Class</th><th scope="col" class="num">Records</th><th scope="col" class="num">Grounded</th><th scope="col">What it holds</th></tr></thead>
+  {% for c in classes %}
+  <tr>
+    <td><a href="class/{{ c.slug }}.html">{{ c.label }}</a></td>
+    <td class="num">{{ c.count }}</td>
+    <td class="num">{{ c.grounded }}</td>
+    <td class="meta">{{ c.description }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

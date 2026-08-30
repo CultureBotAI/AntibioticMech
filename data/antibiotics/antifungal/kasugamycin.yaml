@@ -1,0 +1,112 @@
+identifier: CHEBI:81419
+label: kasugamycin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An amino cyclitol glycoside that is isolated from Streptomyces kasugaensis
+  and exhibits antibiotic and fungicidal properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,2R,3S,4R,5S,6S)-2,3,4,5,6-pentahydroxycyclohexyl 2-amino-4-{[carboxy(imino)methyl]amino}-2,3,4,6-tetradeoxy-α-D-arabino-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-O-[2-amino-4-[(carboxyiminomethyl)amino]-2,3,4,6-tetradeoxy-α-D-arabino-hexopyranosyl]-D-chiro-inositol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kasumin 2L
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kasumin L
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: kasugamicin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:22479
+- CHEBI:22507
+- CHEBI:35359
+- CHEBI:63367
+- CHEBI:87114
+- ARO:0000016
+xrefs:
+- ARO:3001296
+- bpdb:2195
+- cas:6980-18-3
+- kegg.compound:C17968
+- knapsack:C00018722
+- pdb-ccd:KSG
+- pesticides:kasugamycin
+- ppdb:2195
+- reaxys:1403823
+- wikipedia.en:Kasugamycin
+- chembl:CHEMBL1631109
+- pubchem.compound:65174
+activity_roles:
+- CHEBI:24127
+- CHEBI:33281
+- CHEBI:35718
+- CHEBI:86328
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: C[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O)[C@@H](O)[C@H](O)[C@@H]2O)[C@@H](N)C[C@@H]1NC(=N)C(=O)O
+  standard_inchi: InChI=1S/C14H25N3O9/c1-3-5(17-12(16)13(23)24)2-4(15)14(25-3)26-11-9(21)7(19)6(18)8(20)10(11)22/h3-11,14,18-22H,2,15H2,1H3,(H2,16,17)(H,23,24)/t3-,4+,5+,6-,7+,8+,9-,10+,11+,14-/m1/s1
+  standard_inchi_key: PVTHJAPFENJVNC-MHRBZPPQSA-N
+  molecular_formula: C14H25N3O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 379.366
+  monoisotopic_mass: 379.15908
+source_concepts:
+- source: ARO
+  source_id: ARO:3001296
+  source_label: kasugamycin
+  minted_identifier: antibioticmech:aro-939e110ffd
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:33281
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:81419
+  source_label: kasugamycin
+  minted_identifier: antibioticmech:chebi-94c20c967b
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:33281
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003333
+  label: Escherichia coli 16S rRNA (rrsC) mutation conferring resistance to kasugamicin
+  evidence:
+  - reference: ARO:3003333
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001296 (kasugamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003988
+  label: AAC(2')-IIb
+  evidence:
+  - reference: ARO:3003988
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001296 (kasugamycin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004628
+  label: AAC(2')-IIa
+  evidence:
+  - reference: ARO:3004628
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001296 (kasugamycin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

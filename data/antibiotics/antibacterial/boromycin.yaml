@@ -1,0 +1,82 @@
+identifier: CHEBI:77880
+label: boromycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A boron-containing macrolide antibiotic that is isolated from Streptomyces
+  antibioticus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[(2R)-1-{(1R)-1-[(1R,2R,5S,6R,8R,12R,14S,17R,18R,19R,22S,24Z,28S,30S,33R)-12,28-dihydroxy-1,2,18,19-tetra(hydroxy-κO)-6,13,13,17,29,29,33-heptamethyl-3,20-dioxo-4,7,21,34,35-pentaoxatetracyclo[28.3.1.15,8.114,18]hexatriacont-24-en-22-yl]ethoxy}-3-methyl-1-oxobutan-2-aminiumato(4−)]boron'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ETH 28829
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:145556
+- CHEBI:25105
+- CHEBI:27369
+- CHEBI:37948
+- CHEBI:38278
+- ARO:0000000
+xrefs:
+- ARO:3007793
+- cas:34524-20-4
+- patent:EP0002893
+- patent:GB2012167
+- patent:US3864479
+- patent:US4102997
+- patent:US4225593
+- reaxys:15307145
+- reaxys:4651427
+- reaxys:4651428
+- wikipedia.en:Boromycin
+- pubchem.compound:6436027
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:64946
+structural_class: macrolide antibiotic
+structural_class_id: ARO:0000000
+chemical_structure:
+  smiles: CC(C)[C@@H]([NH3+])C(=O)O[C@H](C)[C@@H]1C/C=C\CC[C@H](O)C(C)(C)[C@@H]2CC[C@@H](C)[C@]3(O2)O[B-]24O[C@@H](C(=O)O1)[C@@]1(O[C@@H](CC[C@H]1C)C(C)(C)[C@H](O)CCC[C@@H]1C[C@H](OC(=O)[C@@H]3O2)[C@@H](C)O1)O4
+  standard_inchi: InChI=1S/C45H73BNO15/c1-24(2)36(47)39(50)54-27(5)30-16-12-11-13-17-32(48)42(7,8)34-21-19-26(4)45(57-34)38-41(52)56-31-23-29(53-28(31)6)15-14-18-33(49)43(9,10)35-22-20-25(3)44(58-35)37(40(51)55-30)59-46(60-38,61-44)62-45/h11-12,24-38,48-49H,13-23,47H2,1-10H3/q-1/p+1/b12-11-/t25-,26-,27-,28-,29-,30+,31+,32+,33-,34+,35+,36-,37+,38+,44+,45+,46?/m1/s1
+  standard_inchi_key: OOBFYEMEQCZLJL-IIWQOWOFSA-O
+  molecular_formula: C45H74BNO15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 879.891
+  monoisotopic_mass: 879.51515
+source_concepts:
+- source: ARO
+  source_id: ARO:3007793
+  source_label: boromycin
+  minted_identifier: antibioticmech:aro-7f7ce7fcdf
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:64946
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:77880
+  source_label: boromycin
+  minted_identifier: antibioticmech:chebi-5a365cdcba
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T01:42:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

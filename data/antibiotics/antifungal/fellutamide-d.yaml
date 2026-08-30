@@ -1,0 +1,39 @@
+identifier: CHEBI:69205
+label: fellutamide D
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dicarboxylic acid diamide isolated from the fungus Metulocladosporiella
+  and has been shown to exhibit antifungal activity.
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:17478
+- CHEBI:23824
+- CHEBI:35681
+- CHEBI:35779
+xrefs:
+- reaxys:21871415
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCCCCCCCC[C@@H](O)CC(=O)N[C@@H](CC(N)=O)C(=O)NC(C(=O)NC(C=O)CC(C)C)[C@H](O)CC(N)=O
+  standard_inchi: InChI=1S/C29H53N5O8/c1-4-5-6-7-8-9-10-11-12-13-21(36)15-26(40)33-22(16-24(30)38)28(41)34-27(23(37)17-25(31)39)29(42)32-20(18-35)14-19(2)3/h18-23,27,36-37H,4-17H2,1-3H3,(H2,30,38)(H2,31,39)(H,32,42)(H,33,40)(H,34,41)/t20?,21-,22+,23-,27?/m1/s1
+  standard_inchi_key: GTUJBZDZEFIEQV-MRCGXDCXSA-N
+  molecular_formula: C29H53N5O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 599.77
+  monoisotopic_mass: 599.38941
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69205
+  source_label: fellutamide D
+  minted_identifier: antibioticmech:chebi-ad14db8dab
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

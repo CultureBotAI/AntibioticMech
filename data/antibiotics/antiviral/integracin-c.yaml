@@ -1,0 +1,43 @@
+identifier: CHEBI:66078
+label: integracin C
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzoate ester obtained by the formal condensation of the hydroxy group
+  of 5-(8-hydroxyundecyl)benzene-1,3-diol with 4,6-dihydroxy benzoic acid which is
+  also substituted by a undec-7-en-1-yl group at position 6. It is isolated from Cytonaema
+  sp. and has anti-HIV-1 activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 11-(3,5-dihydroxyphenyl)undecan-4-yl 2,4-dihydroxy-6-[(7E)-undec-7-en-1-yl]benzoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33572
+- CHEBI:36054
+xrefs:
+- reaxys:9106460
+activity_roles:
+- CHEBI:67268
+chemical_structure:
+  smiles: CCC/C=C/CCCCCCc1cc(O)cc(O)c1C(=O)OC(CCC)CCCCCCCc1cc(O)cc(O)c1
+  standard_inchi: InChI=1S/C35H52O6/c1-3-5-6-7-8-9-10-13-16-20-28-24-31(38)26-33(39)34(28)35(40)41-32(18-4-2)21-17-14-11-12-15-19-27-22-29(36)25-30(37)23-27/h6-7,22-26,32,36-39H,3-5,8-21H2,1-2H3/b7-6+
+  standard_inchi_key: LYMWNVVWPGMTHS-VOTSOKGWSA-N
+  molecular_formula: C35H52O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 568.795
+  monoisotopic_mass: 568.37639
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66078
+  source_label: integracin C
+  minted_identifier: antibioticmech:chebi-26ea415573
+  role_terms:
+  - CHEBI:67268
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

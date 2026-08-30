@@ -1,0 +1,44 @@
+identifier: antibioticmech:aro-2b2f71621c
+label: klebsazolicin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Klebsazolicin is a peptide antibiotic encoded by and identified from the
+  genome of Klebsiella pneumoniae. Klebsazolicin is a ribosomally synthesized and
+  post-translationally modified peptide with antibiotic activity against gram-negative
+  bacteria. Klebsazolicin inhibits ribosomal protein synthesis through binding and
+  thus blocking peptide access.
+definition_source: PMID:28846667
+synonyms:
+- synonym_text: KLB
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3009656
+xrefs:
+- ARO:3009315
+- pubchem.compound:146684557
+structural_class: ribosomally synthesized and post-translationally modified peptide
+  antibiotics
+structural_class_id: ARO:3009656
+chemical_structure:
+  smiles: C[C@H]([C@@H](C(=O)NCC(=O)NCC(=O)N[C@@H](CC(C)C)C(=O)NCC(=O)O)NC(=O)C1=CSC(=N1)[C@H](CC(=O)N)NC(=O)[C@H](C)NC(=O)[C@H](CO)NC(=O)[C@H](C)NC(=O)C2=COC(=N2)[C@H](CC(=O)N)NC(=O)[C@H](CO)NC(=O)C3=CSC(=N3)[C@H](CO)NC(=O)[C@H](C)NC(=O)C4=CSC(=N4)[C@H](CC(=O)N)NC(=O)CNC(=O)C5CCCN5C(=O)[C@H](CO)NC6=N[C@H](C(=O)N[C@H]6CCC(=O)N)CO)O
+  standard_inchi: InChI=1S/C76H107N27O30S3/c1-29(2)12-35(62(122)84-19-56(117)118)88-54(115)17-81-53(114)16-83-71(131)57(33(6)109)102-69(129)47-28-135-74(100-47)38(15-52(80)113)94-59(119)30(3)85-63(123)40(21-105)95-60(120)31(4)86-66(126)44-25-133-72(98-44)36(13-50(78)111)93-65(125)41(22-106)96-68(128)46-27-136-75(101-46)42(23-107)97-61(121)32(5)87-67(127)45-26-134-73(99-45)37(14-51(79)112)89-55(116)18-82-70(130)48-8-7-11-103(48)76(132)43(24-108)91-58-34(9-10-49(77)110)92-64(124)39(20-104)90-58/h25-43,48,57,104-109H,7-24H2,1-6H3,(H2,77,110)(H2,78,111)(H2,79,112)(H2,80,113)(H,81,114)(H,82,130)(H,83,131)(H,84,122)(H,85,123)(H,86,126)(H,87,127)(H,88,115)(H,89,116)(H,90,91)(H,92,124)(H,93,125)(H,94,119)(H,95,120)(H,96,128)(H,97,121)(H,102,129)(H,117,118)/t30-,31-,32-,33+,34-,35-,36-,37-,38-,39-,40-,41-,42-,43-,48?,57-/m0/s1
+  standard_inchi_key: RSVIJELKMXTPMI-CKSXXEILSA-N
+  molecular_formula: C76H107N27O30S3
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1975.0
+  monoisotopic_mass: 1973.6839286
+source_concepts:
+- source: ARO
+  source_id: ARO:3009315
+  source_label: klebsazolicin
+  minted_identifier: antibioticmech:aro-2b2f71621c
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,62 @@
+identifier: CHEBI:167557
+label: cannabichromenic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A chromenol that is 2H-chromene substituted by methyl, 2-methylpent-2-en-5-yl,
+  hydroxy, carboxy and pentyl groups at positions 2,2,5,6 and 7, respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-hydroxy-2-methyl-2-(4-methylpent-3-en-1-yl)-7-pentyl-2H-chromene-6-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-cannabichromenic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-hydroxy-2-methyl-2-(4-methylpent-3-en-1-yl)-7-pentyl-2H-1-benzopyran-6-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-hydroxy-2-methyl-2-(4-methylpent-3-enyl)-7-pentylchromene-6-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CBCA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35868
+- CHEBI:39436
+- CHEBI:67196
+- CHEBI:78840
+xrefs:
+- cas:20408-52-0
+- chemspider:2341420
+- knapsack:C00053033
+- patent:GB2459125
+- patent:WO2009125198
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCCc1cc2c(c(O)c1C(=O)O)C=CC(C)(CCC=C(C)C)O2
+  standard_inchi: InChI=1S/C22H30O4/c1-5-6-7-10-16-14-18-17(20(23)19(16)21(24)25)11-13-22(4,26-18)12-8-9-15(2)3/h9,11,13-14,23H,5-8,10,12H2,1-4H3,(H,24,25)
+  standard_inchi_key: HRHJHXJQMNWQTF-UHFFFAOYSA-N
+  molecular_formula: C22H30O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 358.478
+  monoisotopic_mass: 358.21441
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:167557
+  source_label: cannabichromenic acid
+  minted_identifier: antibioticmech:chebi-05ba1bc768
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

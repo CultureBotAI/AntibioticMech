@@ -1,0 +1,101 @@
+identifier: CHEBI:4511
+label: dicloxacillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin that is 6-aminopenicillanic acid in which one of the amino
+  hydrogens is replaced by a 3-(2,6-dichlorophenyl)-5-methyl-1,2-oxazol-4-yl]formyl
+  group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: dicloxacilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: dicloxacilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: dicloxacillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-{[3-(2,6-dichlorophenyl)-5-methyl-1,2-oxazol-4-yl]carboxamido}-2,2-dimethylpenam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-({[3-(2,6-dichlorophenyl)-5-methyl-1,2-oxazol-4-yl]carbonyl}amino)-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dicloxacillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dicloxacilin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: dicloxacycline
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- CHEBI:23697
+- ARO:3000008
+xrefs:
+- ARO:3000635
+- cas:3116-76-5
+- drugbank:DB00485
+- drugcentral:866
+- kegg.compound:C06950
+- kegg.drug:D02348
+- lincs.smallmolecule:LSM-5234
+- patent:GB978299
+- patent:US3239507
+- reaxys:1233662
+- wikipedia.en:Dicloxacillin
+- chembl:CHEMBL893
+- pubchem.compound:18381
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)c1c(-c2c(Cl)cccc2Cl)noc1C'
+  standard_inchi: InChI=1S/C19H17Cl2N3O5S/c1-7-10(12(23-29-7)11-8(20)5-4-6-9(11)21)15(25)22-13-16(26)24-14(18(27)28)19(2,3)30-17(13)24/h4-6,13-14,17H,1-3H3,(H,22,25)(H,27,28)/t13-,14+,17-/m1/s1
+  standard_inchi_key: YFAGHNZHGGCZAX-JKIFEVAISA-N
+  molecular_formula: C19H17Cl2N3O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 470.334
+  monoisotopic_mass: 469.0266
+source_concepts:
+- source: ARO
+  source_id: ARO:3000635
+  source_label: dicloxacillin
+  minted_identifier: antibioticmech:aro-7779c97592
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:4511
+  source_label: dicloxacillin
+  minted_identifier: antibioticmech:chebi-d4aab6fee7
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000635 (dicloxacillin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,71 @@
+identifier: CHEBI:156451
+label: holomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dithiolopyrrolone antibiotic that is 4,5-dihydro[1,2]dithiolo[4,3-b]pyrrole
+  in which the hydrogens at positions 5 and 6 have been replaced by oxo and acetamido
+  groups, respectively. It is an inhibitor of DNA-dependent RNA polymerase, and exhibits
+  antibacterial and antitumour properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-(5-oxo-4,5-dihydro[1,2]dithiolo[4,3-b]pyrrol-6-yl)acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(acetylamino)-1,2-dithiolo[4,3-b]pyrrol-5(4H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-acetamido-1,2-dithiolo[4,3-b]pyrrol-5(4H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(4,5-dihydro-5-oxo-1,2-dithiolo-[4,3-b]pyrrol-6-yl)acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(5-oxo-4H-dithiolo[4,3-b]pyrrol-6-yl)acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-demethylthiolutin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-{5-oxo-4H,5H-[1,2]dithiolo[4,3-b]pyrrol-6-yl}acetamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:156449
+- CHEBI:22160
+xrefs:
+- cas:488-04-0
+- metacyc.compound:CPD-17940
+- reaxys:188430
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(=O)Nc1c2sscc-2nc1=O
+  standard_inchi: InChI=1S/C7H6N2O2S2/c1-3(10)8-5-6-4(2-12-13-6)9-7(5)11/h2H,1H3,(H,8,10)(H,9,11)
+  standard_inchi_key: HBUNPJGMNVQSBX-UHFFFAOYSA-N
+  molecular_formula: C7H6N2O2S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 214.271
+  monoisotopic_mass: 213.98707
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156451
+  source_label: holomycin
+  minted_identifier: antibioticmech:chebi-0e2d1eda12
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,47 @@
+identifier: CHEBI:132442
+label: chondrochloren B
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monocarboxylic acid amide with formula C28H42ClNO7, that is produced
+  by Chondromyces crocatus and exhibits antibiotic properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3R,4R,5E,8S,9S,10R)-N-[(Z)-2-(3-chloro-4-hydroxyphenyl)ethenyl]-2-ethoxy-3,9-dihydroxy-4-methoxy-6,8,10-trimethyl-7-oxotetradec-5-enamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23824
+- CHEBI:25698
+- CHEBI:29347
+- CHEBI:33853
+- CHEBI:35681
+- CHEBI:51689
+- CHEBI:83403
+xrefs:
+- metacyc.compound:CPD-18433
+- reaxys:9531850
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CCCC[C@@H](C)[C@H](O)[C@H](C)C(=O)/C(C)=C/[C@@H](OC)[C@@H](O)[C@@H](OCC)C(=O)N/C=C\c1ccc(O)c(Cl)c1
+  standard_inchi: InChI=1S/C28H42ClNO7/c1-7-9-10-17(3)24(32)19(5)25(33)18(4)15-23(36-6)26(34)27(37-8-2)28(35)30-14-13-20-11-12-22(31)21(29)16-20/h11-17,19,23-24,26-27,31-32,34H,7-10H2,1-6H3,(H,30,35)/b14-13-,18-15+/t17-,19+,23-,24+,26-,27-/m1/s1
+  standard_inchi_key: BIBQKWSSQXEIHK-IRFDLBBPSA-N
+  molecular_formula: C28H42ClNO7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 540.097
+  monoisotopic_mass: 539.26498
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:132442
+  source_label: chondrochloren B
+  minted_identifier: antibioticmech:chebi-424549266c
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

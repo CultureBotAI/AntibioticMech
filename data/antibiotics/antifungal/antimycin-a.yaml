@@ -1,0 +1,62 @@
+identifier: CHEBI:2762
+label: antimycin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A nine-membered bis-lactone having methyl substituents at the 2- and 6-positions,
+  an n-hexyl substituent at the 8-position, an acyloxy substituent at the 7-position
+  and an aroylamido substituent at the 3-position. It is produced by Streptomyces
+  bacteria and has found commercial use as a fish poison.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3S,6S,7R,8R)-3-[(3-formamido-2-hydroxybenzoyl)amino]-8-hexyl-2,6-dimethyl-4,9-dioxo-1,5-dioxonan-7-yl
+    3-methylbutanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antimycin A1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antipiricullin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fintrol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Virosin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antimycin A1b
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:145556
+- CHEBI:22702
+- CHEBI:24079
+- CHEBI:33853
+xrefs:
+- beilstein:72665
+- cas:1397-94-0
+- cas:642-15-9
+- kegg.compound:C11339
+- metacyc.compound:CPD-5744
+- pdb-ccd:AY1
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H]C(=O)Nc1cccc(C(=O)N[C@@H]2C(=O)O[C@@H](C)[C@H](OC(=O)CC(C)C)[C@@H](CCCCCC)C(=O)O[C@@H]2C)c1O'
+  standard_inchi: InChI=1S/C28H40N2O9/c1-6-7-8-9-11-20-25(39-22(32)14-16(2)3)18(5)38-28(36)23(17(4)37-27(20)35)30-26(34)19-12-10-13-21(24(19)33)29-15-31/h10,12-13,15-18,20,23,25,33H,6-9,11,14H2,1-5H3,(H,29,31)(H,30,34)/t17-,18+,20-,23+,25+/m1/s1
+  standard_inchi_key: UIFFUZWRFRDZJC-SBOOETFBSA-N
+  structure_source: ChEBI
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2762
+  source_label: antimycin A
+  minted_identifier: antibioticmech:chebi-2f92a93e11
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,45 @@
+identifier: CHEBI:65655
+label: complestatin A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A heterodetic cyclic peptide that is chloropeptin II in which the indole
+  moiety is oxidised to the corresponding 2-oxindole. It is a HIV-1 integrase inhibitor
+  isolated from Streptomyces.
+definition_source: ChEBI
+synonyms:
+- synonym_text: neuroprotectin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24533
+- CHEBI:24828
+- CHEBI:26195
+- CHEBI:36683
+- CHEBI:37407
+xrefs:
+- reaxys:8894875
+activity_roles:
+- CHEBI:67268
+chemical_structure:
+  smiles: '[H][C@@]12NC(=O)[C@@H](c3cc(Cl)c(O)c(Cl)c3)NC(=O)[C@H](NC(=O)C(=O)c3cc(Cl)c(O)c(Cl)c3)CC3C(=O)Nc4cc(ccc43)-c3cc1cc(c3O)Oc1ccc(cc1)C[C@@]([H])(C(=O)N[C@@H](C(=O)O)c1ccc(O)cc1)N(C)C(=O)[C@@H](c1cc(Cl)c(O)c(Cl)c1)NC2=O'
+  standard_inchi: InChI=1S/C61H45Cl6N7O16/c1-74-43(56(83)73-48(61(88)89)24-4-7-30(75)8-5-24)12-23-2-9-31(10-3-23)90-44-21-26-13-33(50(44)77)25-6-11-32-34(54(81)68-41(32)20-25)22-42(69-59(86)49(76)29-18-39(66)53(80)40(67)19-29)55(82)70-46(27-14-35(62)51(78)36(63)15-27)57(84)71-45(26)58(85)72-47(60(74)87)28-16-37(64)52(79)38(65)17-28/h2-11,13-21,34,42-43,45-48,75,77-80H,12,22H2,1H3,(H,68,81)(H,69,86)(H,70,82)(H,71,84)(H,72,85)(H,73,83)(H,88,89)/t34?,42-,43+,45-,46-,47-,48-/m1/s1
+  standard_inchi_key: ZFUGTFLRENMBAG-HYTWXIRXSA-N
+  molecular_formula: C61H45Cl6N7O16
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1344.782
+  monoisotopic_mass: 1341.10539
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65655
+  source_label: complestatin A
+  minted_identifier: antibioticmech:chebi-1c8a3b5ec5
+  role_terms:
+  - CHEBI:67268
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

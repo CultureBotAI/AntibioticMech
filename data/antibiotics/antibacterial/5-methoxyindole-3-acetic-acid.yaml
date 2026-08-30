@@ -1,0 +1,57 @@
+identifier: CHEBI:28281
+label: 5-methoxyindole-3-acetic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of indole-3-acetic acids in which the hydrogen at
+  position 5 of indole-3-acetic acid has been replaced by a methoxy group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(5-methoxy-1H-indol-3-yl)acetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(5-methoxy-1H-indol-3-yl)ethanoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(5-methoxyindole-3-yl)acetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Methoxyindol-3-ylacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Methoxyindoleacetic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24803
+- CHEBI:35618
+xrefs:
+- cas:3471-31-6
+- hmdb:HMDB0004096
+- kegg.compound:C05660
+- metacyc.compound:CPD-12020
+- reaxys:187161
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1ccc2ncc(CC(=O)O)c2c1
+  standard_inchi: InChI=1S/C11H11NO3/c1-15-8-2-3-10-9(5-8)7(6-12-10)4-11(13)14/h2-3,5-6,12H,4H2,1H3,(H,13,14)
+  standard_inchi_key: COCNDHOPIHDTHK-UHFFFAOYSA-N
+  molecular_formula: C11H11NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 205.213
+  monoisotopic_mass: 205.07389
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28281
+  source_label: 5-methoxyindole-3-acetic acid
+  minted_identifier: antibioticmech:chebi-1e2e30fb2e
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

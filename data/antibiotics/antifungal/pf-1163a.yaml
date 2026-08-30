@@ -1,0 +1,55 @@
+identifier: CHEBI:66740
+label: PF 1163A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide antibiotic that is 4,10-dimethyl-1-oxa-4-azacyclotridecane-2,5-dione
+  substituted by a 4-(2-hydroxyethoxy)benzyl group at position 3 and a (2R)-2-hydroxypentyl
+  group at position 13 (the 3S,10R,13S stereoisomer). It is isolated from Penicillium
+  sp.PF1163 and exhibits antifungal activity against the pathogenic fungal strain
+  Candida albicans TIMM1768.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S,10R,13S)-3-[4-(2-hydroxyethoxy)benzyl]-13-[(2S)-2-hydroxypentyl]-4,10-dimethyl-1-oxa-4-azacyclotridecane-2,5-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-PF 1163A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24995
+- CHEBI:25105
+- CHEBI:35618
+- CHEBI:35681
+xrefs:
+- reaxys:8523092
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: CCC[C@H](O)C[C@@H]1CC[C@H](C)CCCCC(=O)N(C)[C@@H](Cc2ccc(OCCO)cc2)C(=O)O1
+  standard_inchi: InChI=1S/C27H43NO6/c1-4-7-22(30)19-24-13-10-20(2)8-5-6-9-26(31)28(3)25(27(32)34-24)18-21-11-14-23(15-12-21)33-17-16-29/h11-12,14-15,20,22,24-25,29-30H,4-10,13,16-19H2,1-3H3/t20-,22+,24+,25+/m1/s1
+  standard_inchi_key: SDBGPLZSWIQIOV-VQPAQMSKSA-N
+  molecular_formula: C27H43NO6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 477.642
+  monoisotopic_mass: 477.30904
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66740
+  source_label: PF 1163A
+  minted_identifier: antibioticmech:chebi-ed1a4e3011
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

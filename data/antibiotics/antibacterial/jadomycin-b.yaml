@@ -1,0 +1,49 @@
+identifier: CHEBI:31738
+label: jadomycin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A jadomycin that is jadomycin A in which the phenolic hydroxy group at
+  position 12 has been converted to the corresponding 2,6-dideoxy-α-L-ribo-hexopyranoside,
+  isolated from Streptomyces venezuelae. It exists as a diastereoisomeric mixture
+  consisting of both 3aS and 3aR isomers.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S)-1-[(2S)-butan-2-yl]-7-hydroxy-5-methyl-2,8,13-trioxo-1,2,8,13-tetrahydro-3aH-benzo[b][1,3]oxazolo[3,2-f]phenanthridin-12-yl
+    2,6-dideoxy-α-L-ribo-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24400
+- CHEBI:38164
+- CHEBI:48217
+xrefs:
+- cas:149633-99-8
+- kegg.compound:C12395
+- knapsack:C00016835
+- metacyc.compound:CPD-12934
+- reaxys:9745667
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H]C12OC(=O)[C@]([H])([C@@H](C)CC)N1C1=C(C(=O)c3cccc(O[C@H]4C[C@@H](O)[C@@H](O)[C@H](C)O4)c3C1=O)c1c(O)cc(C)cc12'
+  standard_inchi: InChI=1S/C30H31NO9/c1-5-13(3)24-30(37)40-29-16-9-12(2)10-17(32)21(16)23-25(31(24)29)28(36)22-15(27(23)35)7-6-8-19(22)39-20-11-18(33)26(34)14(4)38-20/h6-10,13-14,18,20,24,26,29,32-34H,5,11H2,1-4H3/t13-,14-,18+,20-,24-,26-,29?/m0/s1
+  standard_inchi_key: BSBSCJRAEMDCHC-LVOPHWFOSA-N
+  molecular_formula: C30H31NO9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 549.576
+  monoisotopic_mass: 549.19988
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31738
+  source_label: jadomycin B
+  minted_identifier: antibioticmech:chebi-1ed9e4cded
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

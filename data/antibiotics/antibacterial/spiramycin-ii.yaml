@@ -1,0 +1,70 @@
+identifier: CHEBI:31168
+label: spiramycin II
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide antibiotic produced by various Streptomyces species.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4R,5S,6S,7R,9R,10R,11E,13E,16R)-6-{[(2S,3R,4R,5S,6R)-5-{[(2S,4R,5S,6S)-4,5-dihydroxy-4,6-dimethyloxan-2-yl]oxy}-4-(dimethylamino)-3-hydroxy-6-methyloxan-2-yl]oxy}-10-{[(2R,5S,6S)-5-(dimethylamino)-6-methyloxan-2-yl]oxy}-5-methoxy-9,16-dimethyl-2-oxo-7-(2-oxoethyl)-1-oxacyclohexadeca-11,13-dien-4-yl
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetylspiramycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetylspiramycinum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Foromacidin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Foromacidine B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Spiramycin 2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Spiramycin B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17478
+- CHEBI:25106
+- CHEBI:25698
+- CHEBI:47622
+- CHEBI:50996
+- CHEBI:63353
+xrefs:
+- cas:24916-51-6
+- kegg.compound:C12891
+- kegg.drug:D02420
+- lipidmaps:LMPK05000002
+- patent:WO2011147316
+- reaxys:25081792
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: CO[C@@H]1[C@@H](O[C@@H]2O[C@H](C)[C@@H](O[C@H]3C[C@@](C)(O)[C@@H](O)[C@H](C)O3)[C@H](N(C)C)[C@H]2O)[C@@H](CC=O)C[C@@H](C)[C@@H](O[C@H]2CC[C@H](N(C)C)[C@H](C)O2)/C=C/C=C/C[C@@H](C)OC(=O)C[C@H]1OC(C)=O
+  standard_inchi: InChI=1S/C45H76N2O15/c1-25-22-31(20-21-48)41(62-44-39(51)38(47(10)11)40(28(4)58-44)61-37-24-45(7,53)43(52)29(5)57-37)42(54-12)34(59-30(6)49)23-35(50)55-26(2)16-14-13-15-17-33(25)60-36-19-18-32(46(8)9)27(3)56-36/h13-15,17,21,25-29,31-34,36-44,51-53H,16,18-20,22-24H2,1-12H3/b14-13+,17-15+/t25-,26-,27+,28-,29+,31+,32+,33+,34-,36+,37+,38-,39-,40-,41+,42+,43+,44+,45-/m1/s1
+  standard_inchi_key: ZPCCSZFPOXBNDL-RSMXASMKSA-N
+  molecular_formula: C45H76N2O15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 885.102
+  monoisotopic_mass: 884.52457
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31168
+  source_label: spiramycin II
+  minted_identifier: antibioticmech:chebi-40f3e1da12
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

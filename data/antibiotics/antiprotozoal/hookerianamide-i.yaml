@@ -1,0 +1,46 @@
+identifier: CHEBI:66021
+label: hookerianamide I
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A steroid alkaloid that is 5α-pregnane substituted by a N-methylamino
+  group at position 20 and a β-N-methylbenzamido group at position 3. Isolated from
+  Sarcococca hookeriana, it exhibits antiplasmodial activity and inhibitory activity
+  against cholinesterase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-methyl-N-[(3β,5α,20S)-20-(methylamino)pregnan-3-yl]benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 20(N-methylamino)-3β-(N-methylbenzamido)-5α-pregnane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22702
+- CHEBI:26767
+xrefs:
+- reaxys:18885921
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@]3([H])[C@]([H])(CC[C@@]4(C)[C@@]3([H])CC[C@]4([H])[C@H](C)NC)[C@@]1(C)CC[C@H](N(C)C(=O)c1ccccc1)C2'
+  standard_inchi: InChI=1S/C30H46N2O/c1-20(31-4)25-13-14-26-24-12-11-22-19-23(32(5)28(33)21-9-7-6-8-10-21)15-17-29(22,2)27(24)16-18-30(25,26)3/h6-10,20,22-27,31H,11-19H2,1-5H3/t20-,22-,23-,24-,25+,26-,27-,29-,30+/m0/s1
+  standard_inchi_key: NISGMKNSSUMSSN-IBWRYCSWSA-N
+  molecular_formula: C30H46N2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 450.711
+  monoisotopic_mass: 450.36101
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66021
+  source_label: hookerianamide I
+  minted_identifier: antibioticmech:chebi-708c9efd84
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

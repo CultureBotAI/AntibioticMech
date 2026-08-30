@@ -1,0 +1,56 @@
+identifier: CHEBI:85412
+label: mitomycin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the family of mitomycins that exhibits antibiotic and antitumour
+  properties as well as a high level of toxicity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[(1aS,8S,8aR,8bS)-6,8a-dimethoxy-5-methyl-4,7-dioxo-1,1a,2,4,7,8,8a,8b-octahydroazireno[2'',3'':3,4]pyrrolo[1,2-a]indol-8-yl]methyl
+    carbamate'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HSDB 3418
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 75986
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: mitomycin-A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25357
+- CHEBI:25698
+xrefs:
+- cas:4055-39-4
+- hmdb:HMDB0254761
+- kegg.compound:C21161
+- knapsack:C00018665
+- metacyc.compound:CPD-17519
+- reaxys:3633130
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12N[C@@]1([H])CN1C3=C(C(=O)C(OC)=C(C)C3=O)[C@@H](COC(N)=O)[C@]12OC'
+  standard_inchi: InChI=1S/C16H19N3O6/c1-6-11(20)10-9(12(21)13(6)23-2)7(5-25-15(17)22)16(24-3)14-8(18-14)4-19(10)16/h7-8,14,18H,4-5H2,1-3H3,(H2,17,22)/t7-,8+,14+,16-/m1/s1
+  standard_inchi_key: HYFMSAFINFJTFH-NGSRAFSJSA-N
+  molecular_formula: C16H19N3O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 349.343
+  monoisotopic_mass: 349.12739
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85412
+  source_label: mitomycin A
+  minted_identifier: antibioticmech:chebi-cbf83ddace
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

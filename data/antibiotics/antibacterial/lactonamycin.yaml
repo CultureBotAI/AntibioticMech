@@ -1,0 +1,46 @@
+identifier: CHEBI:66553
+label: lactonamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterohexacyclic compound isolated from the culture broth of
+  Streptomyces rishiriensis. It is an antibiotic with antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3aS,5aS,14aR)-9,13-dihydroxy-5a-{[(2S,5S,6S)-5-hydroxy-6-methyltetrahydro-2H-pyran-2-yl]oxy}-3a-methoxy-11-methyl-3,3a,11,12-tetrahydro-2H,5H-furo[2'',3'':4',5']furo[3',4':6,7]naphtho[2,3-e]isoindole-2,6,10,14(5aH)-tetrone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:37581
+- CHEBI:51914
+- CHEBI:63349
+xrefs:
+- cas:182234-02-2
+- reaxys:8378497
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]1(O[C@@]23CO[C@@]4(OC)CC(=O)O[C@]42C(=O)c2c(cc4cc(O)c5c(c4c2O)CN(C)C5=O)C3=O)CC[C@H](O)[C@H](C)O1'
+  standard_inchi: InChI=1S/C28H27NO12/c1-11-15(30)4-5-18(39-11)41-26-10-38-27(37-3)8-17(32)40-28(26,27)24(35)21-13(23(26)34)6-12-7-16(31)20-14(19(12)22(21)33)9-29(2)25(20)36/h6-7,11,15,18,30-31,33H,4-5,8-10H2,1-3H3/t11-,15-,18-,26+,27-,28-/m0/s1
+  standard_inchi_key: XFQJOLWXLJXJSV-VUAGTGNDSA-N
+  molecular_formula: C28H27NO12
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 569.519
+  monoisotopic_mass: 569.15333
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66553
+  source_label: lactonamycin
+  minted_identifier: antibioticmech:chebi-e108cc8554
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,66 @@
+identifier: CHEBI:166564
+label: N-methyl-1-deoxynojirimycin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxypiperidine that is duvoglustat in which the amino hydrogen is
+  replaced by a methyl group. It is an inhibitor of α-glucosidase, an agonist of the
+  glucose sensor SGLT3 and exhibits anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3R,4R,5S)-2-(hydroxymethyl)-1-methylpiperidine-3,4,5-triol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MOR-14
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MeDNJ
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-methyl-DNJ
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-methyl-duvoglustat
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-methyldeoxynojirimycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-methyldesoxynojirimycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26147
+- CHEBI:48590
+- CHEBI:50996
+xrefs:
+- cas:69567-10-8
+- chemspider:83403
+- foodb.food:FDB014032
+- hmdb:HMDB0035360
+- knapsack:C00051703
+- reaxys:1524564
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: CN1C[C@H](O)[C@@H](O)[C@H](O)[C@H]1CO
+  standard_inchi: InChI=1S/C7H15NO4/c1-8-2-5(10)7(12)6(11)4(8)3-9/h4-7,9-12H,2-3H2,1H3/t4-,5+,6-,7-/m1/s1
+  standard_inchi_key: AAKDPDFZMNYDLR-XZBKPIIZSA-N
+  molecular_formula: C7H15NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 177.2
+  monoisotopic_mass: 177.10011
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:166564
+  source_label: N-methyl-1-deoxynojirimycin
+  minted_identifier: antibioticmech:chebi-b0be707d92
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,45 @@
+identifier: CHEBI:66440
+label: scleropyric acid
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A straight-chain fatty acid that is heptadecanoic acid with a terminal
+  double bond and a triple bond at position 12. Isolated from the twigs of Scleropyrum
+  wallichianum, it exhibits antimycobacterial and antiplasmodial activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: heptadec-16-en-12-ynoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15904
+- CHEBI:25380
+- CHEBI:59202
+xrefs:
+- reaxys:10185191
+activity_roles:
+- CHEBI:64912
+- CHEBI:64915
+chemical_structure:
+  smiles: C=CCCC#CCCCCCCCCCCC(=O)O
+  standard_inchi: InChI=1S/C17H28O2/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17(18)19/h2H,1,3-4,7-16H2,(H,18,19)
+  standard_inchi_key: PZTFGAULNIGNTB-UHFFFAOYSA-N
+  molecular_formula: C17H28O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 264.409
+  monoisotopic_mass: 264.20893
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66440
+  source_label: scleropyric acid
+  minted_identifier: antibioticmech:chebi-7c417c3297
+  role_terms:
+  - CHEBI:64912
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

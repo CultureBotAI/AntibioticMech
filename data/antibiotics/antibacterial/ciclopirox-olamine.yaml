@@ -1,0 +1,76 @@
+identifier: CHEBI:31398
+label: ciclopirox olamine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The ethanolamine salt of ciclopirox. A broad spectrum antigfungal agent,
+  it also exhibits antibacterial activity against many Gram-positive and Gram-negative
+  bacteria, and has anti-inflammatory properties. It is used a a topical treatment
+  of fungal skin and nail infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Batrafen
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Brumixol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Loprox
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Micoxolamina
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Mycoster
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 2-hydroxyethanaminium 6-cyclohexyl-4-methyl-2-oxopyridin-1(2H)-olate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HOE 296
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HOE-296
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ciclopirox ethanolamine salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:46850
+- CHEBI:87130
+xrefs:
+- beilstein:6494273
+- cas:41621-49-2
+- drugbank:DBSALT001147
+- kegg.drug:D01364
+activity_roles:
+- CHEBI:33282
+- CHEBI:86327
+chemical_structure:
+  smiles: Cc1cc(C2CCCCC2)n([O-])c(=O)c1.[NH3+]CCO
+  standard_inchi: InChI=1S/C12H16NO2.C2H7NO/c1-9-7-11(13(15)12(14)8-9)10-5-3-2-4-6-10;3-1-2-4/h7-8,10H,2-6H2,1H3;4H,1-3H2/q-1;/p+1
+  standard_inchi_key: HKUKJIQHPXYJTP-UHFFFAOYSA-O
+  molecular_formula: C12H16NO2.C2H8NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 268.357
+  monoisotopic_mass: 268.17869
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31398
+  source_label: ciclopirox olamine
+  minted_identifier: antibioticmech:chebi-cb9ca5a581
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

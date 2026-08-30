@@ -1,0 +1,65 @@
+identifier: CHEBI:10101
+label: zalcitabine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyrimidine 2',3'-dideoxyribonucleoside compound having cytosine as the
+  nucleobase.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2',3'-dideoxycytidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2',3'-Dideoxycytidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-amino-1-[(2R,5S)-5-(hydroxymethyl)tetrahydrofuran-2-yl]pyrimidin-2(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DDC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DDCYD
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dideoxycytidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48441
+xrefs:
+- cas:7481-89-2
+- drugbank:DB00943
+- drugcentral:2856
+- hmdb:HMDB0015078
+- kegg.compound:C07207
+- kegg.drug:D00412
+- lincs.smallmolecule:LSM-5915
+- reaxys:654956
+- wikipedia.en:Zalcitabine
+activity_roles:
+- CHEBI:36044
+- CHEBI:53756
+chemical_structure:
+  smiles: Nc1ccn([C@H]2CC[C@@H](CO)O2)c(=O)n1
+  standard_inchi: InChI=1S/C9H13N3O3/c10-7-3-4-12(9(14)11-7)8-2-1-6(5-13)15-8/h3-4,6,8,13H,1-2,5H2,(H2,10,11,14)/t6-,8+/m0/s1
+  standard_inchi_key: WREGKURFCTUGRC-POYBYMJQSA-N
+  molecular_formula: C9H13N3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 211.221
+  monoisotopic_mass: 211.09569
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:10101
+  source_label: zalcitabine
+  minted_identifier: antibioticmech:chebi-ff34da3c97
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

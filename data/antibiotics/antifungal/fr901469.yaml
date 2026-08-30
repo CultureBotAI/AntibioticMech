@@ -1,0 +1,45 @@
+identifier: CHEBI:68660
+label: FR901469
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 40-membered macrocyclic cyclodepsipeptide that consists of a 3-hydroxypalmitoyl
+  moiety linked to a peptide sequence of 12 amino acids and cyclised head-to-tail.
+  It is isolated from an unidentified Fungus and exhibits antifungal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-[(2R,6S,9S,12R,15R,19R,22S,25R,31S,33aS,34S,39S,42R,44aS)-22-(3-aminopropyl)-2,34-dihydroxy-9-(4-hydroxybenzyl)-15,25,39,42-tetrakis[(1R)-1-hydroxyethyl]-12-methyl-5,8,11,14,17,21,24,27,30,33,38,41,44-tridecaoxo-6-(propan-2-yl)-19-tridecyltetracontahydro-1H,5H,21H-dipyrrolo[2,1-:o2',1'-x][1,4,7,10,13,16,19,22,25,28,31,34,37]oxadodecaazacyclotetracontin-22-yl]propan-1-aminium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:35213
+- CHEBI:38260
+- CHEBI:51026
+xrefs:
+- cas:174778-71-3
+- reaxys:8756051
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCCCCCCCCCC[C@@H]1CC(=O)N[C@H]([C@@H](C)O)C(=O)N[C@H](C)C(=O)N[C@@H](Cc2ccc(O)cc2)C(=O)N[C@@H](C(C)C)C(=O)N2C[C@H](O)C[C@H]2C(=O)N[C@H]([C@@H](C)O)C(=O)N[C@@H]([C@@H](C)O)C(=O)N2CC[C@H](O)[C@H]2C(=O)N[C@@H]([C@H](O)CC(N)=O)C(=O)NCC(=O)N[C@H]([C@@H](C)O)C(=O)N[C@@H](CCCN)C(=O)O1
+  standard_inchi: InChI=1S/C71H116N14O23/c1-9-10-11-12-13-14-15-16-17-18-19-21-45-32-52(95)78-55(38(5)86)65(101)75-37(4)61(97)77-47(30-42-23-25-43(90)26-24-42)62(98)80-54(36(2)3)69(105)85-35-44(91)31-48(85)63(99)81-57(40(7)88)67(103)82-58(41(8)89)70(106)84-29-27-49(92)60(84)68(104)83-59(50(93)33-51(73)94)64(100)74-34-53(96)79-56(39(6)87)66(102)76-46(22-20-28-72)71(107)108-45/h23-26,36-41,44-50,54-60,86-93H,9-22,27-35,72H2,1-8H3,(H2,73,94)(H,74,100)(H,75,101)(H,76,102)(H,77,97)(H,78,95)(H,79,96)(H,80,98)(H,81,99)(H,82,103)(H,83,104)/t37-,38-,39-,40-,41-,44-,45-,46+,47+,48+,49+,50-,54+,55-,56-,57-,58+,59+,60+/m1/s1
+  standard_inchi_key: LTLDDYQPSWDOBJ-UNEDFBIISA-N
+  molecular_formula: C71H116N14O23
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1533.784
+  monoisotopic_mass: 1532.83378
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68660
+  source_label: FR901469
+  minted_identifier: antibioticmech:chebi-9cada52044
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

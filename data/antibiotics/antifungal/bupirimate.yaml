@@ -1,0 +1,77 @@
+identifier: CHEBI:81952
+label: bupirimate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of aminopyrimidines that is 2-ethylaminopyrimidine
+  carrying methyl, butyl and dimethylaminosulfooxy substituents at posiitons 4, 5
+  and 6 respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-butyl-2-(ethylamino)-6-methylpyrimidin-4-yl dimethylsulfamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Äthylamino-5-butyl-4-yl-dimethylsulfamat
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Butyl-2-(ethylamino)-6-methyl-4-pyrimidinyl dimethylsulfamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Butyl-2-ethylamino-6-methylpyrimidin-4-yl dimethylsulphamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dimethylsulfamic acid 5-butyl-2-(ethylamino)-6-methyl-4-pyrimidinyl
+    ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38338
+- CHEBI:48199
+- CHEBI:50995
+- CHEBI:87207
+xrefs:
+- cas:41483-43-6
+- kegg.compound:C18776
+- patent:CN101617658
+- patent:CN101632364
+- patent:CN101632374
+- patent:CN101647442
+- patent:CN101647443
+- patent:DE3441674
+- patent:GB2112287
+- pesticides:bupirimate
+- ppdb:99
+- reaxys:758056
+- wikipedia.en:Bupirimate
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: CCCCc1c(C)nc(NCC)nc1OS(=O)(=O)N(C)C
+  standard_inchi: InChI=1S/C13H24N4O3S/c1-6-8-9-11-10(3)15-13(14-7-2)16-12(11)20-21(18,19)17(4)5/h6-9H2,1-5H3,(H,14,15,16)
+  standard_inchi_key: DSKJPMWIHSOYEA-UHFFFAOYSA-N
+  molecular_formula: C13H24N4O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 316.427
+  monoisotopic_mass: 316.15691
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81952
+  source_label: bupirimate
+  minted_identifier: antibioticmech:chebi-9ddc34f8ce
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

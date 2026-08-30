@@ -1,0 +1,61 @@
+identifier: CHEBI:83305
+label: oritavancin bisphosphate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A phosphate salt obtained by combining oritavancin with two molar equivalents
+  of phosphoric acid. Used for the treatment of acute bacterial skin and skin structure
+  infections caused or suspected to be caused by susceptible isolates of designated
+  Gram-positive microorganisms.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Orbactiv
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: (4''R)-22-O-(3-amino-2,3,6-trideoxy-3-C-methyl-alpha-L-arabino-hexopyranosyl)-N3''-((4'-chloro(1,1'-biphenyl)-4-yl)methyl)vancomycin
+    phosphate(1:2)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LY 333328 diphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LY333328 diphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Oritavancin diphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: oritavancin phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37853
+xrefs:
+- cas:192564-14-0
+- kegg.drug:D05271
+- reaxys:18507222
+- wikipedia.en:Oritavancin
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: CN[C@H](CC(C)C)C(=O)N[C@H]1C(=O)N[C@@H](CC(N)=O)C(=O)N[C@H]2C(=O)N[C@H]3C(=O)N[C@H](C(=O)N[C@H](C(=O)O)c4cc(O)cc(O)c4-c4cc3ccc4O)[C@H](O[C@H]3C[C@](C)(N)[C@@H](O)[C@H](C)O3)c3ccc(c(Cl)c3)Oc3cc2cc(c3O[C@@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@H]2O[C@H]2C[C@](C)(NCc3ccc(-c4ccc(Cl)cc4)cc3)[C@@H](O)[C@H](C)O2)Oc2ccc(cc2Cl)[C@H]1O.O=P(O)(O)O.O=P(O)(O)O
+  standard_inchi: InChI=1S/C86H97Cl3N10O26.2H3O4P/c1-35(2)22-51(92-7)77(110)98-67-69(105)42-15-20-55(49(88)24-42)120-57-26-44-27-58(73(57)125-84-74(71(107)70(106)59(34-100)122-84)124-62-32-86(6,76(109)37(4)119-62)93-33-38-8-10-39(11-9-38)40-12-17-45(87)18-13-40)121-56-21-16-43(25-50(56)89)72(123-61-31-85(5,91)75(108)36(3)118-61)68-82(115)97-66(83(116)117)48-28-46(101)29-54(103)63(48)47-23-41(14-19-53(47)102)64(79(112)99-68)96-80(113)65(44)95-78(111)52(30-60(90)104)94-81(67)114;2*1-5(2,3)4/h8-21,23-29,35-37,51-52,59,61-62,64-72,74-76,84,92-93,100-103,105-109H,22,30-34,91H2,1-7H3,(H2,90,104)(H,94,114)(H,95,111)(H,96,113)(H,97,115)(H,98,110)(H,99,112)(H,116,117);2*(H3,1,2,3,4)/t36-,37-,51+,52-,59+,61-,62-,64+,65+,66-,67+,68-,69+,70+,71-,72+,74+,75-,76-,84-,85-,86-;;/m0../s1
+  standard_inchi_key: PWTROOMOPLCZHB-BHYQHFGMSA-N
+  molecular_formula: C86H97Cl3N10O26.2H3O4P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1989.113
+  monoisotopic_mass: 1986.5179
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83305
+  source_label: oritavancin bisphosphate
+  minted_identifier: antibioticmech:chebi-674326d204
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

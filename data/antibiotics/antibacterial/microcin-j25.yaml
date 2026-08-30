@@ -1,0 +1,57 @@
+identifier: antibioticmech:aro-0a1c492c45
+label: microcin J25
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Microcin J25 is a peptide antibiotic that inhibits transcription by bacterial
+  RNA polymerase. MccJ25 is produced by Escherichia coli strains that harbor a plasmid-borne
+  antibiotic-synthesis and antibiotic-export cassette, consisting of a gene for MccJ25
+  precursor (a 58 residue linear peptide), two genes for factors that process MccJ25
+  precursor into MccJ25, and one gene for export of MccJ25.
+definition_source: PMID:15200952
+synonyms:
+- synonym_text: MccJ25
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3009658
+xrefs:
+- ARO:3003951
+- CHEBI:203056
+- chembl:CHEMBL1945674
+- pubchem.compound:139584748
+structural_class: lasso peptide antibiotics
+structural_class_id: ARO:3009658
+chemical_structure:
+  smiles: CCC(C)C1C(=O)NCC(=O)NC(C(=O)N2CCCC2C(=O)NC(C(=O)NC(C(=O)NC(C(=O)NC(C(=O)NCC(=O)NCC(=O)NCC(=O)NC(C(=O)NCC(=O)NC(C(=O)NC(C(=O)N3CCCC3C(=O)NC(C(=O)NC(C(=O)NC(C(=O)NC(C(=O)NCC(=O)N1)C(C)C)CC4=CC=CC=C4)CC5=CC=C(C=C5)O)CCC(=O)O)C(C)C)CC6=CN=CN6)C)CC7=CC=C(C=C7)O)CC8=CC=CC=C8)CO)C(C)CC)C(C)O
+  standard_inchi: InChI=1S/C101H139N23O27/c1-11-55(7)84-98(148)108-50-80(134)119-86(58(10)126)101(151)124-38-20-26-74(124)96(146)122-85(56(8)12-2)99(149)117-72(51-125)94(144)116-68(39-59-21-15-13-16-22-59)90(140)113-67(41-61-27-31-64(127)32-28-61)88(138)106-46-76(130)103-45-75(129)104-47-77(131)110-57(9)87(137)105-48-78(132)111-71(43-63-44-102-52-109-63)93(143)121-83(54(5)6)100(150)123-37-19-25-73(123)95(145)112-66(35-36-81(135)136)89(139)114-69(42-62-29-33-65(128)34-30-62)91(141)115-70(40-60-23-17-14-18-24-60)92(142)120-82(53(3)4)97(147)107-49-79(133)118-84/h13-18,21-24,27-34,44,52-58,66-74,82-86,125-128H,11-12,19-20,25-26,35-43,45-51H2,1-10H3,(H,102,109)(H,103,130)(H,104,129)(H,105,137)(H,106,138)(H,107,147)(H,108,148)(H,110,131)(H,111,132)(H,112,145)(H,113,140)(H,114,139)(H,115,141)(H,116,144)(H,117,149)(H,118,133)(H,119,134)(H,120,142)(H,121,143)(H,122,146)(H,135,136)
+  standard_inchi_key: TVZWTTNULXZYTK-UHFFFAOYSA-N
+  molecular_formula: C101H139N23O27
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 2107.3
+  monoisotopic_mass: 2106.0210763
+source_concepts:
+- source: ARO
+  source_id: ARO:3003951
+  source_label: microcin J25
+  minted_identifier: antibioticmech:aro-0a1c492c45
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003952
+  label: YojI
+  evidence:
+  - reference: ARO:3003952
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003951 (microcin
+      J25); database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

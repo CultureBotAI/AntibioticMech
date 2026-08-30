@@ -1,0 +1,81 @@
+identifier: CHEBI:146142
+label: 3,4'-dimethylkaempferol
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dimethoxyflavone that is kaempferol in which the hydroxy groups at position
+  3 and 4' have been replaced by methoxy groups. It is a component of bee glue and
+  isolated from several plant species including Tanacetum microphyllum.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,7-dihydroxy-3-methoxy-2-(4-methoxyphenyl)-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,4'-O-dimethylkaempferol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,4'-dimethoxy-5,7-dihydroxyflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,4'-dimethoxychrysin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,4'-dimethoxykaempferol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dihydroxy-3,4'-dimethoxyflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dihydroxy-3-methoxy-2-(4-methoxyphenyl)-4-benzopyrone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dihydroxy-3-methoxy-2-(4-methoxyphenyl)-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,7-dihydroxy-3-methoxy-2-(4-methoxyphenyl)chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ermanin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: kaempferol 3,4'-di-O-methyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: kaempferol 3,4'-dimethyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: kaempferol-3,4'-dimethylether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23798
+- CHEBI:38686
+xrefs:
+- cas:20869-95-8
+- lipidmaps:LMPK12112697
+- metacyc.compound:CPD-14952
+- wikipedia.en:Ermanin
+activity_roles:
+- CHEBI:64912
+chemical_structure:
+  smiles: COc1ccc(-c2oc3cc(O)cc(O)c3c(=O)c2OC)cc1
+  standard_inchi: InChI=1S/C17H14O6/c1-21-11-5-3-9(4-6-11)16-17(22-2)15(20)14-12(19)7-10(18)8-13(14)23-16/h3-8,18-19H,1-2H3
+  standard_inchi_key: RJCJVIFSIXKSAH-UHFFFAOYSA-N
+  molecular_formula: C17H14O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 314.293
+  monoisotopic_mass: 314.07904
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:146142
+  source_label: 3,4'-dimethylkaempferol
+  minted_identifier: antibioticmech:chebi-3b28eec2fc
+  role_terms:
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

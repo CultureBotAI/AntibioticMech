@@ -1,0 +1,54 @@
+identifier: CHEBI:15906
+label: demethylmacrocin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide antibiotic that is tylonolide having mono- and diglycosyl
+  moieties attached to two of its hydroxy groups..
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2'''-O-Demethyllactenocin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Demethylmacrocin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[(2R,3R,4E,6E,9R,11R,12S,13S,14R)-12-[3,6-dideoxy-4-O-(2,6-dideoxy-3-C-methyl-α-L-ribo-hexopyranosyl)-3-(dimethylamino)-β-D-glucopyranosyloxy]-2-ethyl-14-hydroxy-5,9,13-trimethyl-8,16-dioxo-11-(2-oxoethyl)oxacyclohexadeca-4,6-dien-3-yl]methyl
+    6-deoxy-β-D-allopyranoside'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17478
+- CHEBI:25022
+- CHEBI:25105
+- CHEBI:51689
+- CHEBI:63353
+- CHEBI:63367
+xrefs:
+- kegg.compound:C02400
+- knapsack:C00018437
+- metacyc.compound:DEMETHYLMACROCIN
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@H]1OC(=O)C[C@@H](O)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)[C@@H](O[C@H]3C[C@@](C)(O)[C@@H](O)[C@H](C)O3)[C@H](N(C)C)[C@H]2O)[C@@H](CC=O)C[C@@H](C)C(=O)/C=C/C(C)=C/[C@@H]1CO[C@@H]1O[C@H](C)[C@@H](O)[C@@H](O)[C@H]1O
+  standard_inchi: InChI=1S/C44H73NO17/c1-11-31-28(20-56-42-38(53)37(52)35(50)24(5)58-42)16-21(2)12-13-29(47)22(3)17-27(14-15-46)39(23(4)30(48)18-32(49)60-31)62-43-36(51)34(45(9)10)40(25(6)59-43)61-33-19-44(8,55)41(54)26(7)57-33/h12-13,15-16,22-28,30-31,33-43,48,50-55H,11,14,17-20H2,1-10H3/b13-12+,21-16+/t22-,23+,24-,25-,26+,27+,28-,30-,31-,33+,34-,35-,36-,37-,38-,39-,40-,41+,42-,43+,44-/m1/s1
+  standard_inchi_key: ALZAOGATQMXJKX-UQRCBBHQSA-N
+  molecular_formula: C44H73NO17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 888.058
+  monoisotopic_mass: 887.48785
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:15906
+  source_label: demethylmacrocin
+  minted_identifier: antibioticmech:chebi-c954517449
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

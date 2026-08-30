@@ -1,0 +1,55 @@
+identifier: CHEBI:31505
+label: dioncophylline C
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An isoquinoline alkaloid that is the biaryl resulting from substitution
+  of the hydrogen at the 5-position of (1R,3R)-1,3-dimethyl-1,2,3,4-tetrahydroisoquinolin-8-ol
+  by a 5-hydroxy-4-methoxy-2-methylnaphthalen-1-yl group. It is a naphthylisoquinoline
+  alkaloid isolated from the roots and stem barks of Triphyophyllum peltatum and exhibits
+  antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,3R)-5-(5-hydroxy-4-methoxy-2-methylnaphthalen-1-yl)-1,3-dimethyl-1,2,3,4-tetrahydroisoquinolin-8-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dioncophylline C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24921
+- CHEBI:24922
+- CHEBI:25324
+- CHEBI:25392
+- CHEBI:35618
+- CHEBI:48851
+- CHEBI:64459
+xrefs:
+- kegg.compound:C12337
+- reaxys:5883382
+activity_roles:
+- CHEBI:38068
+- CHEBI:64915
+chemical_structure:
+  smiles: COc1cc(C)c(-c2ccc(O)c3c2C[C@@H](C)N[C@@H]3C)c2cccc(O)c12
+  standard_inchi: InChI=1S/C23H25NO3/c1-12-10-20(27-4)23-16(6-5-7-18(23)25)21(12)15-8-9-19(26)22-14(3)24-13(2)11-17(15)22/h5-10,13-14,24-26H,11H2,1-4H3/t13-,14-/m1/s1
+  standard_inchi_key: NALOMJPIDNQZKW-ZIAGYGMSSA-N
+  molecular_formula: C23H25NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 363.457
+  monoisotopic_mass: 363.18344
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31505
+  source_label: dioncophylline C
+  minted_identifier: antibioticmech:chebi-8da3c3871d
+  role_terms:
+  - CHEBI:38068
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

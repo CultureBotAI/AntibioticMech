@@ -1,0 +1,80 @@
+identifier: CHEBI:7451
+label: naftifine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tertiary amine in which the nitrogen is substituted by methyl, α-naphthylmethyl,
+  and (1E)-cinnamyl groups. It is used (usually as its hydrochloride salt) for the
+  treatment of fungal skin infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: naftifina
+  synonym_type: INN
+  source: chebi
+- synonym_text: naftifinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2E)-N-methyl-N-(1-naphthylmethyl)-3-phenylprop-2-en-1-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-N-cinnamyl-N-methyl-1-naphthalenemethylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: naftifin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-N-cinnamyl-N-methyl-(1-naphthylmethyl)amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25477
+- CHEBI:32876
+- CHEBI:87127
+- ARO:3007498
+xrefs:
+- ARO:3007506
+- cas:65472-88-0
+- drugbank:DB00735
+- drugcentral:1872
+- hmdb:HMDB0014873
+- kegg.compound:C08071
+- kegg.drug:D08245
+- patent:BE853976
+- patent:US4282251
+- reaxys:2983617
+- wikipedia.en:Naftifine
+- chembl:CHEMBL626
+- pubchem.compound:47641
+activity_roles:
+- CHEBI:86327
+structural_class: allylamine antifungal
+structural_class_id: ARO:3007498
+chemical_structure:
+  smiles: CN(C/C=C/c1ccccc1)Cc1cccc2ccccc12
+  standard_inchi: InChI=1S/C21H21N/c1-22(16-8-11-18-9-3-2-4-10-18)17-20-14-7-13-19-12-5-6-15-21(19)20/h2-15H,16-17H2,1H3/b11-8+
+  standard_inchi_key: OZGNYLLQHRPOBR-DHZHZOJOSA-N
+  molecular_formula: C21H21N
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 287.406
+  monoisotopic_mass: 287.1674
+source_concepts:
+- source: ARO
+  source_id: ARO:3007506
+  source_label: naftifine
+  minted_identifier: antibioticmech:aro-a83456ba03
+  role_terms:
+  - CHEBI:86327
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:7451
+  source_label: naftifine
+  minted_identifier: antibioticmech:chebi-86e1c7d6c5
+  role_terms:
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

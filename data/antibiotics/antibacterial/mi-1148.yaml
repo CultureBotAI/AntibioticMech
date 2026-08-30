@@ -1,0 +1,70 @@
+identifier: CHEBI:167663
+label: MI-1148
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tripeptide comprising of L-arginine, 3-methyl-L-valine and L-arginine
+  joined in sequence by peptide linkages and in which the amino terminus is substituted
+  by a [4-(carbamimidamidomethyl)phenyl]acetyl group and the carboxy terminus is substituted
+  by a (4-carbamimidoylbenzyl)amino group. It is a highly potent inhibitor of furin
+  endoprotease (Ki = 5.5 pM) that has anti-infectious activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N2-{[4-(carbamimidamidomethyl)phenyl]acetyl}-L-arginyl-3-methyl-L-valyl-N-(4-carbamimidoylbenzyl)-L-argininamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-5-carbamimidamido-2-{[(2S)-2-{[(2S)-5-carbamimidamido-2-{2-[4-(carbamimidamidomethyl)phenyl]acetamido}pentanoyl]amino}-3,3-dimethylbutanoyl]amino}-N-(4-carbamimidoylbenzyl)pentanamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-(guanidinomethyl)phenylacetyl-Arg-Tle-Arg-4-amidinobenzylamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-guanidinomethyl-Phac-Arg-Tle-Arg-4-amba
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-guanidinomethyl-phenylacteyl-Arg-Tle-Arg-4-amidinobenzylamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MI 1148
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MI1148
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N2-{[4-(carbamimidamidomethyl)phenyl]acetyl}-L-arginyl-3-methyl-L-valyl-N-[(4-carbamimidoylphenyl)methyl]-L-argininamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:47923
+xrefs:
+- chemspider:35033268
+activity_roles:
+- CHEBI:22587
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)(C)[C@H](NC(=O)[C@H](CCCNC(=N)N)NC(=O)Cc1ccc(CNC(=N)N)cc1)C(=O)N[C@@H](CCCNC(=N)N)C(=O)NCc1ccc(C(=N)N)cc1
+  standard_inchi: InChI=1S/C36H57N15O4/c1-36(2,3)28(32(55)50-25(6-4-16-45-33(39)40)30(53)47-19-23-12-14-24(15-13-23)29(37)38)51-31(54)26(7-5-17-46-34(41)42)49-27(52)18-21-8-10-22(11-9-21)20-48-35(43)44/h8-15,25-26,28H,4-7,16-20H2,1-3H3,(H3,37,38)(H,47,53)(H,49,52)(H,50,55)(H,51,54)(H4,39,40,45)(H4,41,42,46)(H4,43,44,48)/t25-,26-,28+/m0/s1
+  standard_inchi_key: HXVPWVPTVOOCMV-UNCTUWKVSA-N
+  molecular_formula: C36H57N15O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 763.953
+  monoisotopic_mass: 763.4718
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:167663
+  source_label: MI-1148
+  minted_identifier: antibioticmech:chebi-c03510474c
+  role_terms:
+  - CHEBI:22587
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

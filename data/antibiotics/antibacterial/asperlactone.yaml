@@ -1,0 +1,55 @@
+identifier: CHEBI:156386
+label: asperlactone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of butenolides that is furan-2(5H)-one substituted
+  by (2S,3S)-3-methyloxiran-2-yl and (1S)-1-hydroxyethyl group at positions 3 and
+  5R, respectively. It is a secondary metabolite isolated from Aspergillus ochraceus
+  that exhibits antifungal and antibacterial properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5R)-5-[(1S)-1-hydroxyethyl]-3-[(2S,3S)-3-methyloxiran-2-yl]furan-2(5H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5R-[(1S)-1-hydroxyethyl]-3-[(2S,3S)-3-methyl-2-oxiranyl]-2(5H)-furanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26188
+- CHEBI:32955
+- CHEBI:35681
+- CHEBI:50523
+- CHEBI:86478
+xrefs:
+- cas:76375-62-7
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@]1([C@H](C)O)C=C([C@@H]2O[C@H]2C)C(=O)O1'
+  standard_inchi: InChI=1S/C9H12O4/c1-4(10)7-3-6(9(11)13-7)8-5(2)12-8/h3-5,7-8,10H,1-2H3/t4-,5-,7+,8+/m0/s1
+  standard_inchi_key: VMLNPJDEXLLCQG-DGCAKLBHSA-N
+  molecular_formula: C9H12O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 184.191
+  monoisotopic_mass: 184.07356
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156386
+  source_label: asperlactone
+  minted_identifier: antibioticmech:chebi-40deacf6c8
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

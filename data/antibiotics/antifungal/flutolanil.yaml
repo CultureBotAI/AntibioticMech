@@ -1,0 +1,83 @@
+identifier: CHEBI:81792
+label: flutolanil
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzamides, obtained by formal condensation of
+  the carboxy group of 2-(trifluoromethyl)benzoic acid with the amino group of 3-(ispropyloxy)aniline.
+  A fungicide used to control a range of pathogens especially Rhizoctonia spp. on
+  rice, turf and other crops.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Moncut
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: N-[3-(propan-2-yloxy)phenyl]-2-(trifluoromethyl)benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3'-isopropoxy-2-trifloromethylbenzoic acid anilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(3-(1-Methylethoxy)phenyl)-2-(trifluoromethyl)benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(3-isopropoxyphenyl)-2-(trifluoromethyl)benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NNF-136
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: alpha,alpha,alpha-Trifluoro-3'-isopropoxy-o-toluanilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: o-trifluoromethyl-m'-isopropoxybenzoic anilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α,α,α-trifluoro-3'-isopropoxy-o-toluanilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22702
+- CHEBI:35618
+- CHEBI:83565
+- CHEBI:87018
+xrefs:
+- cas:66332-96-5
+- kegg.compound:C18502
+- metacyc.compound:CPD-15890
+- pdb-ccd:FTN
+- pesticides:flutolanil
+- ppdb:352
+- reaxys:2163858
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: CC(C)Oc1cccc(NC(=O)c2ccccc2C(F)(F)F)c1
+  standard_inchi: InChI=1S/C17H16F3NO2/c1-11(2)23-13-7-5-6-12(10-13)21-16(22)14-8-3-4-9-15(14)17(18,19)20/h3-11H,1-2H3,(H,21,22)
+  standard_inchi_key: PTCGDEVVHUXTMP-UHFFFAOYSA-N
+  molecular_formula: C17H16F3NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 323.314
+  monoisotopic_mass: 323.11331
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81792
+  source_label: flutolanil
+  minted_identifier: antibioticmech:chebi-96cf27e977
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

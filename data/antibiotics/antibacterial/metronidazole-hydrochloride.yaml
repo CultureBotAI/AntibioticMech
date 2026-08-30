@@ -1,0 +1,59 @@
+identifier: CHEBI:50687
+label: metronidazole hydrochloride
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrochloride salt resulting from the mixture of equimolar amounts of
+  metronidazole and hydrogen chloride.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Flagyl
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 2-(2-methyl-5-nitro-1H-imidazol-1-yl)ethanol hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Methyl-5-nitroimidazole-1-ethanol hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Methyl-5-nitroimidazole-1-ethanol monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Metronidazole HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:69198-10-3
+- drugbank:DB00916
+- kegg.drug:D05016
+- reaxys:11001903
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+- CHEBI:50685
+chemical_structure:
+  smiles: Cc1ncc([N+](=O)[O-])n1CCO.Cl
+  standard_inchi: InChI=1S/C6H9N3O3.ClH/c1-5-7-4-6(9(11)12)8(5)2-3-10;/h4,10H,2-3H2,1H3;1H
+  standard_inchi_key: FPTPAIQTXYFGJC-UHFFFAOYSA-N
+  molecular_formula: C6H9N3O3.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 207.617
+  monoisotopic_mass: 207.04107
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:50687
+  source_label: metronidazole hydrochloride
+  minted_identifier: antibioticmech:chebi-936beab01f
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  - CHEBI:50685
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

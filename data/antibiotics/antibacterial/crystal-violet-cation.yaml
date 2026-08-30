@@ -1,0 +1,63 @@
+identifier: CHEBI:77181
+label: crystal violet cation
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An iminium ion that is malachite green cation in which the hydrogen at
+  the para- psition of the monosubstituted phenyl group is replaced by a dimethylamino
+  group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-{bis[4-(dimethylamino)phenyl]methylene}-N,N-dimethylcyclohexa-2,5-dien-1-iminium
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: crystal violet carbocation
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: crystal violet ion(1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: crystal violet(1+)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: gentian violet carbocation
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: gentian violet cation
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: gentian violet(1+)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35286
+xrefs:
+- cas:7438-46-2
+- drugcentral:4138
+- reaxys:1892148
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: CN(C)c1ccc(C(=C2C=CC(=[N+](C)C)C=C2)c2ccc(N(C)C)cc2)cc1
+  standard_inchi: InChI=1S/C25H30N3/c1-26(2)22-13-7-19(8-14-22)25(20-9-15-23(16-10-20)27(3)4)21-11-17-24(18-12-21)28(5)6/h7-18H,1-6H3/q+1
+  standard_inchi_key: LGLFFNDHMLKUMI-UHFFFAOYSA-N
+  molecular_formula: C25H30N3
+  structure_source: ChEBI
+  charge: 1
+  average_mass: 372.536
+  monoisotopic_mass: 372.24342
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77181
+  source_label: crystal violet cation
+  minted_identifier: antibioticmech:chebi-823be5d47e
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

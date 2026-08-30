@@ -1,0 +1,57 @@
+identifier: CHEBI:141380
+label: indanomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An indene that is (3aS,7aR)-2,3,3a,4,5,7a-hexahydro-1H-indene which is
+  substituted at the 2-pro-R position by a 1H-pyrrol-2-ylcarbonyl group, at the 9-pro-S
+  position by an ethyl group, and at the 5-pro-R position by a hexa-1,3-dineyl group
+  in which position 4 has been substituted by a (2R,3S,6R)-6-[(1R)-1-carboxyethyl]-3-methyltetrahydropyran-2-yl
+  group. It exhibits activity against Gram-positive bacteria as well as antihypertensive
+  and antitumour. It also functions as an effective growth promoter for ruminants.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R)-2-[(2R,5S,6R)-6-{(3E,5E)-6-[(1S,3aR,4S,5S,7aS)-1-ethyl-4-(1H-pyrrol-2-ylcarbonyl)-2,3,3a,4,5,7a-hexahydro-1H-inden-5-yl]hexa-3,5-dien-3-yl}-5-methyltetrahydro-2H-pyran-2-yl]propanoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-X-14547A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: X-14547A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic X 14547A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:37910
+- CHEBI:46942
+- CHEBI:76224
+xrefs:
+- knapsack:C00016347
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@H](CC)[C@@]1([H])C=C[C@@]([H])(/C=C/C=C(\CC)[C@]1([H])O[C@@]([H])([C@@H](C)C(=O)O)CC[C@@H]1C)[C@@]2([H])C(=O)c1cccn1'
+  standard_inchi: InChI=1S/C31H43NO4/c1-5-21-13-16-25-24(21)15-14-23(28(25)29(33)26-11-8-18-32-26)10-7-9-22(6-2)30-19(3)12-17-27(36-30)20(4)31(34)35/h7-11,14-15,18-21,23-25,27-28,30,32H,5-6,12-13,16-17H2,1-4H3,(H,34,35)/b10-7+,22-9+/t19-,20+,21-,23+,24+,25+,27+,28+,30+/m0/s1
+  standard_inchi_key: BAIPOTOKPGDCHA-MWBHXQFBSA-N
+  molecular_formula: C31H43NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 493.688
+  monoisotopic_mass: 493.31921
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141380
+  source_label: indanomycin
+  minted_identifier: antibioticmech:chebi-5ecef97a21
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

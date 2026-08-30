@@ -1,0 +1,62 @@
+identifier: CHEBI:92257
+label: IKK16
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 1-benzothiophene substituted by a 2-{4-[4-(pyrrolidin-1-yl)piperidine-1-carbonyl]anilino}pyrimidin-4-yl
+  group at position 2. It is an IκB kinase (IKK) inhibitor.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4-{[4-(1-benzothiophen-2-yl)pyrimidin-2-yl]amino}phenyl)[4-(pyrrolidin-1-yl)piperidin-1-yl]methanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: IKK 16
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: IKK Inhibitor VII
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: IKK-16
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[4-[[4-(1-benzothiophen-2-yl)-2-pyrimidinyl]amino]phenyl]-[4-(1-pyrrolidinyl)-1-piperidinyl]methanone'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[4-[[4-(1-benzothiophen-2-yl)pyrimidin-2-yl]amino]phenyl]-(4-pyrrolidin-1-ylpiperidin-1-yl)methanone'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22702
+- CHEBI:38260
+- CHEBI:38338
+- CHEBI:38836
+- CHEBI:48591
+- CHEBI:50995
+xrefs:
+- cas:873225-46-8
+- lincs.smallmolecule:LSM-2309
+- pdb-ccd:V17
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: O=C(c1ccc(Nc2nccc(-c3cc4ccccc4s3)n2)cc1)N1CCC(N2CCCC2)CC1
+  standard_inchi: InChI=1S/C28H29N5OS/c34-27(33-17-12-23(13-18-33)32-15-3-4-16-32)20-7-9-22(10-8-20)30-28-29-14-11-24(31-28)26-19-21-5-1-2-6-25(21)35-26/h1-2,5-11,14,19,23H,3-4,12-13,15-18H2,(H,29,30,31)
+  standard_inchi_key: BWZJBXAPRCVCKQ-UHFFFAOYSA-N
+  molecular_formula: C28H29N5OS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 483.641
+  monoisotopic_mass: 483.20928
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:92257
+  source_label: IKK16
+  minted_identifier: antibioticmech:chebi-23a90d1f3e
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

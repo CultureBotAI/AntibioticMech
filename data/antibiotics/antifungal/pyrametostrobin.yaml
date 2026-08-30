@@ -1,0 +1,63 @@
+identifier: CHEBI:83212
+label: pyrametostrobin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbamate ester that is the methyl ester of (2-{[(1,4-dimethyl-3-phenyl-1H-pyrazol-5-yl)oxy]methyl}phenyl)methoxycarbamic
+  acid. A fungicide that is active against powdery mildew and other diseases.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (2-{[(1,4-dimethyl-3-phenyl-1H-pyrazol-5-yl)oxy]methyl}phenyl)methoxycarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl 2-[(1,4-dimethyl-3-phenylpyrazol-5-yl)oxymethyl]-N-methoxycarbanilate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl N-[2-[[(1,4-dimethyl-3-phenyl-1H-pyrazol-5-yl)oxy]methyl]phenyl]-O-methoxycarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:26410
+- CHEBI:35618
+- CHEBI:86485
+- CHEBI:87066
+xrefs:
+- cas:915410-70-7
+- patent:MX2012002637
+- patent:WO2011039104
+- pesticides:pyrametostrobin
+- ppdb:1656
+- reaxys:13062826
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: COC(=O)N(OC)c1ccccc1COc1c(C)c(-c2ccccc2)nn1C
+  standard_inchi: InChI=1S/C21H23N3O4/c1-15-19(16-10-6-5-7-11-16)22-23(2)20(15)28-14-17-12-8-9-13-18(17)24(27-4)21(25)26-3/h5-13H,14H2,1-4H3
+  standard_inchi_key: DWTVBEZBWMDXIY-UHFFFAOYSA-N
+  molecular_formula: C21H23N3O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 381.432
+  monoisotopic_mass: 381.16886
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83212
+  source_label: pyrametostrobin
+  minted_identifier: antibioticmech:chebi-0ce035baab
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

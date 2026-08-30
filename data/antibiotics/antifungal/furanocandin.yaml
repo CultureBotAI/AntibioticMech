@@ -1,0 +1,51 @@
+identifier: CHEBI:65933
+label: furanocandin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbohydrate-containing antibiotic isolated from the fermentation broth
+  of Trichothecium sp. It exhibits marked antifungal activity against the Candida
+  species.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,4-dihydroxy-6-(hydroxymethyl)phenyl 4-O-{6-O-[(2E,4Z)-8-hydroxydeca-2,4-dienoyl]-β-D-galactofuranosyl}-3-O-[(2E,4E,8E,10E)-7-hydroxyhexadeca-2,4,8,10-tetraenoyl]-β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22743
+- CHEBI:23007
+- CHEBI:24400
+- CHEBI:33308
+- CHEBI:33572
+- CHEBI:35681
+- CHEBI:63353
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]1([C@H](O)COC(=O)/C=C/C=C\CCC(O)CC)O[C@@H](O[C@@]2([H])[C@H](OC(=O)/C=C/C=C/CC(O)/C=C/C=C/CCCCC)[C@@H](O)[C@H](Oc3c(O)cc(O)cc3CO)O[C@@H]2CO)[C@H](O)[C@H]1O'
+  standard_inchi: InChI=1S/C45H64O18/c1-3-5-6-7-8-9-14-19-30(49)20-15-12-17-22-36(54)60-43-39(57)45(61-40-28(25-46)23-31(50)24-32(40)51)59-34(26-47)42(43)63-44-38(56)37(55)41(62-44)33(52)27-58-35(53)21-16-11-10-13-18-29(48)4-2/h8-12,14-17,19,21-24,29-30,33-34,37-39,41-52,55-57H,3-7,13,18,20,25-27H2,1-2H3/b9-8+,11-10-,15-12+,19-14+,21-16+,22-17+/t29?,30?,33-,34-,37-,38-,39-,41+,42-,43-,44+,45+/m1/s1
+  standard_inchi_key: YMDCFNDLUOCAGK-WTKRVALCSA-N
+  molecular_formula: C45H64O18
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 892.989
+  monoisotopic_mass: 892.40927
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65933
+  source_label: furanocandin
+  minted_identifier: antibioticmech:chebi-751e7551d2
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

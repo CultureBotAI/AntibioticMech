@@ -1,0 +1,50 @@
+identifier: antibioticmech:aro-8218cfc5a1
+label: pactamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Antibiotic produced by Streptomyces pactum, considered a universal translation
+  inhibitor.
+definition_source: PMID:9398510
+parent_compounds:
+- ARO:3007158
+xrefs:
+- ARO:3003975
+- CHEBI:198890
+- chembl:CHEMBL458512
+- pubchem.compound:5289124
+structural_class: pactamycin-like antibiotic
+structural_class_id: ARO:3007158
+chemical_structure:
+  smiles: CC1=C(C(=CC=C1)O)C(=O)OC[C@]2([C@H]([C@@H]([C@]([C@@]2(C)O)([C@H](C)O)NC(=O)N(C)C)N)NC3=CC=CC(=C3)C(=O)C)O
+  standard_inchi: InChI=1S/C28H38N4O8/c1-15-9-7-12-20(35)21(15)24(36)40-14-27(39)23(30-19-11-8-10-18(13-19)16(2)33)22(29)28(17(3)34,26(27,4)38)31-25(37)32(5)6/h7-13,17,22-23,30,34-35,38-39H,14,29H2,1-6H3,(H,31,37)/t17-,22-,23-,26-,27+,28-/m0/s1
+  standard_inchi_key: WVIUOSJLUCTGFK-JUJPXXQGSA-N
+  molecular_formula: C28H38N4O8
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 558.6
+  monoisotopic_mass: 558.26896418
+source_concepts:
+- source: ARO
+  source_id: ARO:3003975
+  source_label: pactamycin
+  minted_identifier: antibioticmech:aro-8218cfc5a1
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003977
+  label: Halobacterium salinarum 16S rRNA mutation conferring resistance to pactamycin
+  evidence:
+  - reference: ARO:3003977
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003975 (pactamycin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

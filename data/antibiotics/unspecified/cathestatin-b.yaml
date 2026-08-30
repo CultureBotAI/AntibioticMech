@@ -1,0 +1,47 @@
+identifier: CHEBI:65600
+label: cathestatin B
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxamide obtained by the formal condensation of the carboxylic group
+  of oxirane-2,3-dicarboxylic acid with the amino group of N-(4-aminobutyl)-L-tyrosinamide
+  (the 2S,3S stereoisomer). An antibiotic isolated from the fermentation broth of
+  Penicillium citrinum, it acts as a potent inhibitor of cysteine protease.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S,3S)-3-{[(2S)-1-[(4-aminobutyl)amino]-3-(4-hydroxyphenyl)-1-oxopropan-2-yl]carbamoyl}oxirane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:32955
+- CHEBI:33853
+- CHEBI:35735
+- CHEBI:50994
+xrefs:
+- reaxys:7231119
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: NCCCCNC(=O)[C@H](Cc1ccc(O)cc1)NC(=O)[C@H]1O[C@@H]1C(=O)O
+  standard_inchi: InChI=1S/C17H23N3O6/c18-7-1-2-8-19-15(22)12(9-10-3-5-11(21)6-4-10)20-16(23)13-14(26-13)17(24)25/h3-6,12-14,21H,1-2,7-9,18H2,(H,19,22)(H,20,23)(H,24,25)/t12-,13-,14-/m0/s1
+  standard_inchi_key: JAJMETBQBCMJSZ-IHRRRGAJSA-N
+  molecular_formula: C17H23N3O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 365.386
+  monoisotopic_mass: 365.15869
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65600
+  source_label: cathestatin B
+  minted_identifier: antibioticmech:chebi-52d70f9d85
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

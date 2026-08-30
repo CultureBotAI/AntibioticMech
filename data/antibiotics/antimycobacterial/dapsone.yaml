@@ -1,0 +1,160 @@
+identifier: CHEBI:4325
+label: dapsone
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfone that is diphenylsulfone in which the hydrogen atom at the 4
+  position of each of the phenyl groups is substituted by an amino group. It is active
+  against a wide range of bacteria, but is mainly employed for its actions against
+  Mycobacterium leprae, being used as part of multidrug regimens in the treatment
+  of all forms of leprosy.
+definition_source: ChEBI
+synonyms:
+- synonym_text: dapsona
+  synonym_type: INN
+  source: chebi
+- synonym_text: dapsonum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4,4'-sulfonyldianiline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,1'-sulfonylbis(4-aminobenzene)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,4'-Sulfonylbisbenzenamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,4'-dapsone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,4'-diaminodiphenyl sulfone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,4'-sulfonylbisaniline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-(4-amino-benzenesulfonyl)-phenylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-(4-aminophenylsulfonyl)aniline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-(4-aminophenylsulfonyl)benzenamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-aminophenyl sulfone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bis(p-aminophenyl) sulfone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DADPS
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DAPSONE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DDS
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DIAPHENYLSULFONE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dapsone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Diaphenylsulfone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bis(4-aminophenyl)sulfone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p,p'-diaminodiphenyl sulfone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p,p-sulphonylbisbenzamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p,p-sulphonylbisbenzenamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-aminophenyl sulfone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diaminodiphenyl sulfone
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:35850
+- CHEBI:48975
+- ARO:3003401
+xrefs:
+- ARO:3003412
+- cas:80-08-0
+- drugbank:DB00250
+- drugcentral:782
+- hmdb:HMDB0014395
+- kegg.compound:C07666
+- kegg.drug:D00592
+- lincs.smallmolecule:LSM-5714
+- patent:FR829926
+- reaxys:788055
+- wikipedia.en:Dapsone
+- chembl:CHEMBL1043
+- pubchem.compound:2955
+activity_roles:
+- CHEBI:35816
+- CHEBI:38068
+structural_class: sulfone antibiotic
+structural_class_id: ARO:3003401
+chemical_structure:
+  smiles: Nc1ccc(S(=O)(=O)c2ccc(N)cc2)cc1
+  standard_inchi: InChI=1S/C12H12N2O2S/c13-9-1-5-11(6-2-9)17(15,16)12-7-3-10(14)4-8-12/h1-8H,13-14H2
+  standard_inchi_key: MQJKPEGWNLWLTK-UHFFFAOYSA-N
+  molecular_formula: C12H12N2O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 248.307
+  monoisotopic_mass: 248.06195
+source_concepts:
+- source: ARO
+  source_id: ARO:3003412
+  source_label: dapsone
+  minted_identifier: antibioticmech:aro-64d15320ca
+  role_terms:
+  - CHEBI:35816
+  - CHEBI:38068
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:4325
+  source_label: dapsone
+  minted_identifier: antibioticmech:chebi-e4c33d0b87
+  role_terms:
+  - CHEBI:35816
+  - CHEBI:38068
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003389
+  label: Mycobacterium leprae folP with mutation conferring resistance to dapsone
+  evidence:
+  - reference: ARO:3003389
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003412 (dapsone);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000744
+  target_label: antibiotic sensitive dihydropteroate synthase
+  evidence:
+  - reference: ARO:3000744
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3003412 (dapsone); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,52 @@
+identifier: CHEBI:65529
+label: bruceolide
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quassinoid isolated from Brucea javanica and Brucea sumatrana and has
+  been shown to exhibit antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (11β,12α,15β)-3,11,12,15-tetrahydroxy-2,16-dioxo-13,20-epoxypicras-3-en-21-oate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Picras-3-en-21-oic acid, 13,20-epoxy-3,11,12,15-tetrahydroxy-2,16-dioxo-,
+    methyl ester,(11beta,12alpha,15beta)-
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18946
+- CHEBI:25248
+- CHEBI:33573
+- CHEBI:33823
+- CHEBI:37407
+- CHEBI:38164
+- CHEBI:51689
+- CHEBI:72485
+xrefs:
+- cas:25514-28-7
+- reaxys:4601028
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]12[C@@H](O)[C@H](O)[C@@]3(C(=O)OC)OC[C@]14[C@@]3([H])[C@@H](O)C(=O)O[C@]4([H])C[C@@]1([H])C(C)=C(O)C(=O)C[C@]21C'
+  standard_inchi: InChI=1S/C21H26O10/c1-7-8-4-10-20-6-30-21(18(28)29-3,15(20)13(25)17(27)31-10)16(26)12(24)14(20)19(8,2)5-9(22)11(7)23/h8,10,12-16,23-26H,4-6H2,1-3H3/t8-,10+,12+,13+,14+,15+,16-,19-,20+,21-/m0/s1
+  standard_inchi_key: YLWQKYSDNGHLAO-PWRINDRCSA-N
+  molecular_formula: C21H26O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 438.429
+  monoisotopic_mass: 438.1526
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65529
+  source_label: bruceolide
+  minted_identifier: antibioticmech:chebi-069a15e8ce
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

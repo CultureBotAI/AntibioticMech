@@ -1,0 +1,38 @@
+identifier: CHEBI:83265
+label: papuamide B
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclodepsipeptide that is isolated from Papua New Guinea collections
+  of the marine sponges Theonella mirabilis and Theonella swinhoei. It exhbits anti-HIV-1
+  activity and cytotoxicity against some human cancer cell lines.
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:26878
+- CHEBI:35213
+- CHEBI:35681
+- CHEBI:78840
+activity_roles:
+- CHEBI:64947
+chemical_structure:
+  smiles: CC[C@@H](C)/C=C(C)/C=C\[C@@H](O)[C@](C)(O)C(=O)NCC(=O)N[C@@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H]1C(=O)N[C@H](COC)C(=O)NCC(=O)N[C@@H](C)C(=O)N[C@@H]([C@@H](C)O)C(=O)N[C@H]([C@H](OC)c2ccc(O)cc2)C(=O)N2CCCC[C@H]2C(=O)O[C@@H]1C(C)C)[C@@H](C)[C@@H](C)C(N)=O)[C@H](C)N)[C@@H](C)O
+  standard_inchi: InChI=1S/C65H103N13O21/c1-15-31(4)26-32(5)19-24-43(82)65(12,96)64(95)69-28-45(84)72-48(37(10)79)59(90)74-47(35(8)66)58(89)73-46(33(6)34(7)54(67)85)57(88)76-50-52(30(2)3)99-63(94)42-18-16-17-25-78(42)62(93)51(53(98-14)39-20-22-40(81)23-21-39)77-60(91)49(38(11)80)75-55(86)36(9)70-44(83)27-68-56(87)41(29-97-13)71-61(50)92/h19-24,26,30-31,33-38,41-43,46-53,79-82,96H,15-18,25,27-29,66H2,1-14H3,(H2,67,85)(H,68,87)(H,69,95)(H,70,83)(H,71,92)(H,72,84)(H,73,89)(H,74,90)(H,75,86)(H,76,88)(H,77,91)/b24-19-,32-26+/t31-,33+,34-,35+,36+,37-,38-,41-,42+,43-,46+,47+,48-,49+,50-,51-,52-,53-,65+/m1/s1
+  standard_inchi_key: HQVFHDUBRNXXHV-LZHJWXOHSA-N
+  molecular_formula: C65H103N13O21
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1402.609
+  monoisotopic_mass: 1401.73915
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83265
+  source_label: papuamide B
+  minted_identifier: antibioticmech:chebi-82eac698f0
+  role_terms:
+  - CHEBI:64947
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

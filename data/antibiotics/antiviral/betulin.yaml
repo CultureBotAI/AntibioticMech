@@ -1,0 +1,58 @@
+identifier: CHEBI:3086
+label: betulin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pentacyclic triterpenoid that is lupane having a double bond at position
+  20(29) as well as 3β-hydroxy and 28-hydroxymethyl substituents.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3β)-lup-20(29)-ene-3,28-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Betuline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Betulinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Betulol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Trochol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23824
+- CHEBI:25872
+xrefs:
+- cas:473-98-3
+- hmdb:HMDB0036838
+- kegg.compound:C08618
+- knapsack:C00003740
+- reaxys:2064515
+- wikipedia.en:Betulin
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: '[H][C@]12CC[C@@]3([H])[C@@](C)(CC[C@@]4(CO)CC[C@@H](C(=C)C)[C@@]43[H])[C@]1(C)CC[C@@]1([H])C(C)(C)[C@@H](O)CC[C@]21C'
+  standard_inchi: InChI=1S/C30H50O2/c1-19(2)20-10-15-30(18-31)17-16-28(6)21(25(20)30)8-9-23-27(5)13-12-24(32)26(3,4)22(27)11-14-29(23,28)7/h20-25,31-32H,1,8-18H2,2-7H3/t20-,21+,22-,23+,24-,25+,27-,28+,29+,30+/m0/s1
+  standard_inchi_key: FVWJYYTZTCVBKE-ROUWMTJPSA-N
+  molecular_formula: C30H50O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 442.728
+  monoisotopic_mass: 442.38108
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3086
+  source_label: betulin
+  minted_identifier: antibioticmech:chebi-b08624cdaa
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

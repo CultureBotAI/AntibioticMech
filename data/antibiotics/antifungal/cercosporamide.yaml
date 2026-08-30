@@ -1,0 +1,50 @@
+identifier: CHEBI:78696
+label: cercosporamide
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of dibenzofurans that is a potent broad spectrum
+  antifungal agent isolated from the fungus Cercosporidium henningsii.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (9aS)-8-acetyl-1,3,7-trihydroxy-9a-methyl-9-oxo-9,9a-dihydrodibenzo[b,d]furan-4-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:29347
+- CHEBI:38922
+- CHEBI:51867
+xrefs:
+- cas:131436-22-1
+- patent:CN101292039
+- patent:EP1914313
+- patent:JP2008214336
+- patent:KR20080033345
+- patent:US2010152467
+- patent:WO2007018194
+- reaxys:5485233
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(=O)C1=C(O)C=C2Oc3c(C(N)=O)c(O)cc(O)c3[C@]2(C)C1=O
+  standard_inchi: InChI=1S/C16H13NO7/c1-5(18)10-7(20)4-9-16(2,14(10)22)12-8(21)3-6(19)11(15(17)23)13(12)24-9/h3-4,19-21H,1-2H3,(H2,17,23)/t16-/m1/s1
+  standard_inchi_key: GEWLYFZWVLXQME-MRXNPFEDSA-N
+  molecular_formula: C16H13NO7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 331.28
+  monoisotopic_mass: 331.0692
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:78696
+  source_label: cercosporamide
+  minted_identifier: antibioticmech:chebi-cb5cf2e301
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

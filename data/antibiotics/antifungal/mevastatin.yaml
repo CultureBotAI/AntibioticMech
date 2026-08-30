@@ -1,0 +1,82 @@
+identifier: CHEBI:34848
+label: mevastatin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxylic ester that is pravastatin that is lacking the allylic hydroxy
+  group. A hydroxymethylglutaryl-CoA reductase inhibitor (statin) isolated from Penicillium
+  citrinum and from Penicillium brevicompactum, its clinical use as a lipid-regulating
+  drug ceased following reports of toxicity in animals.
+definition_source: ChEBI
+synonyms:
+- synonym_text: mevastatina
+  synonym_type: INN
+  source: chebi
+- synonym_text: mevastatinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: mévastatine
+  synonym_type: INN
+  source: chebi
+- synonym_text: (1S,7S,8S,8aR)-8-{2-[(2R,4R)-4-hydroxy-6-oxotetrahydro-2H-pyran-2-yl]ethyl}-7-methyl-1,2,3,7,8,8a-hexahydronaphthalen-1-yl
+    (2S)-2-methylbutanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CS 500
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Compactin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ML 236 B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ML-236B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Mevastatin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic ML 236B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:142348
+- CHEBI:26188
+- CHEBI:33308
+- CHEBI:75885
+- CHEBI:87632
+xrefs:
+- cas:73573-88-3
+- drugbank:DB06693
+- kegg.compound:C13963
+- knapsack:C00000564
+- lincs.smallmolecule:LSM-4123
+- patent:DE2524355
+- patent:US3983140
+- reaxys:3630717
+- wikipedia.en:Mevastatin
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12C(=CCC[C@@H]1OC(=O)[C@@H](C)CC)C=C[C@H](C)[C@@H]2CC[C@@H]1C[C@@H](O)CC(=O)O1'
+  standard_inchi: InChI=1S/C23H34O5/c1-4-14(2)23(26)28-20-7-5-6-16-9-8-15(3)19(22(16)20)11-10-18-12-17(24)13-21(25)27-18/h6,8-9,14-15,17-20,22,24H,4-5,7,10-13H2,1-3H3/t14-,15-,17+,18+,19-,20-,22-/m0/s1
+  standard_inchi_key: AJLFOPYRIVGYMJ-INTXDZFKSA-N
+  molecular_formula: C23H34O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 390.52
+  monoisotopic_mass: 390.24062
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:34848
+  source_label: mevastatin
+  minted_identifier: antibioticmech:chebi-625ae5155a
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

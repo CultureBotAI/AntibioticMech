@@ -1,0 +1,52 @@
+identifier: CHEBI:67280
+label: azadiradione
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracyclic triterpenoid that is 4,4,8-trimethylandrosta-1,14-diene
+  substituted by oxo groups at positions 3 and 16, an acetoxy group at position 7
+  and a furan-3-yl group at position 17. Isolated from Azadirachta indica, it exhibits
+  antimycobacterial and anti-inflammatory activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5α,7α,13α,17α)-17-(furan-3-yl)-4,4,8-trimethyl-3,16-dioxoandrosta-1,14-dien-7-yl
+    acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 24-Nor-5alpha,13alpha,17alpha-chola-1,14,20,22-tetraene-3,16-dione,
+    21,23-epoxy-7alpha-hydroxy-4,4,8-trimethyl-,acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24129
+- CHEBI:26893
+- CHEBI:36130
+- CHEBI:39434
+- CHEBI:47622
+xrefs:
+- cas:26241-51-0
+- reaxys:5858436
+activity_roles:
+- CHEBI:64912
+chemical_structure:
+  smiles: '[H][C@]12CC[C@]3(C)C(=CC(=O)[C@@]3([H])c3ccoc3)[C@]1(C)[C@H](OC(C)=O)C[C@@]1([H])C(C)(C)C(=O)C=C[C@]21C'
+  standard_inchi: InChI=1S/C28H34O5/c1-16(29)33-23-14-20-25(2,3)22(31)8-11-26(20,4)19-7-10-27(5)21(28(19,23)6)13-18(30)24(27)17-9-12-32-15-17/h8-9,11-13,15,19-20,23-24H,7,10,14H2,1-6H3/t19-,20+,23-,24-,26-,27-,28-/m1/s1
+  standard_inchi_key: KWAMDQVQFVBEAU-HMWIRDDCSA-N
+  molecular_formula: C28H34O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 450.575
+  monoisotopic_mass: 450.24062
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:67280
+  source_label: azadiradione
+  minted_identifier: antibioticmech:chebi-91e49f1b53
+  role_terms:
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,58 @@
+identifier: CHEBI:81485
+label: osthenol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxycoumarin that is umbelliferone in which the hydrogen at position
+  8 has been replaced by a prenyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7-hydroxy--2H-1-benzopyran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-hydroxy-8-(3-methyl-but-2-enyl)coumarin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-hydroxy-8-prenylcoumarin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 8-(3-methylbut-2-en-1-yl)umbelliferone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 8-prenylumbelliferone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37912
+xrefs:
+- cas:484-14-0
+- hmdb:HMDB0034130
+- kegg.compound:C18080
+- knapsack:C00030900
+- metacyc.compound:CPD-9838
+- patent:CN101362768
+- reaxys:190526
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(C)=CCc1c(O)ccc2ccc(=O)oc12
+  standard_inchi: InChI=1S/C14H14O3/c1-9(2)3-6-11-12(15)7-4-10-5-8-13(16)17-14(10)11/h3-5,7-8,15H,6H2,1-2H3
+  standard_inchi_key: RAKJVIPCCGXHHS-UHFFFAOYSA-N
+  molecular_formula: C14H14O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 230.263
+  monoisotopic_mass: 230.09429
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81485
+  source_label: osthenol
+  minted_identifier: antibioticmech:chebi-a1dde81fe1
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

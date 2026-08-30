@@ -1,0 +1,53 @@
+identifier: antibioticmech:aro-ae576e4688
+label: BAL30072
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: BAL30072 is a monocyclic beta-lactam antibiotic belonging to the sulfactams.
+  BAL30072 was found to trigger the spheroplasting and lysis of Escherichia coli rather
+  than the formation of extensive filaments.
+definition_source: PMID:23449829
+parent_compounds:
+- ARO:0000004
+xrefs:
+- ARO:3003821
+- chembl:CHEMBL1256967
+- pubchem.compound:52942440
+structural_class: monobactam
+structural_class_id: ARO:0000004
+chemical_structure:
+  smiles: CC1([C@@H](C(=O)N1OS(=O)(=O)O)NC(=O)/C(=N\OCC2=CC(=O)C(=CN2O)O)/C3=CSC(=N3)N)C
+  standard_inchi: InChI=1S/C16H18N6O10S2/c1-16(2)12(14(26)22(16)32-34(28,29)30)19-13(25)11(8-6-33-15(17)18-8)20-31-5-7-3-9(23)10(24)4-21(7)27/h3-4,6,12,24,27H,5H2,1-2H3,(H2,17,18)(H,19,25)(H,28,29,30)/b20-11-/t12-/m1/s1
+  standard_inchi_key: KLFSEZJCLYBFKQ-WXYNYTDUSA-N
+  molecular_formula: C16H18N6O10S2
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 518.5
+  monoisotopic_mass: 518.05258314
+source_concepts:
+- source: ARO
+  source_id: ARO:3003821
+  source_label: BAL30072
+  minted_identifier: antibioticmech:aro-ae576e4688
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001419
+  label: OXA-24
+  evidence:
+  - reference: ARO:3001419
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003821 (BAL30072);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001612
+  label: OXA-51
+  evidence:
+  - reference: ARO:3001612
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003821 (BAL30072);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

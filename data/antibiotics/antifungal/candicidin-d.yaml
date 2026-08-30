@@ -1,0 +1,65 @@
+identifier: CHEBI:3349
+label: candicidin D
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 38-membered ring lactone containing seven (E)-double bonds between positions
+  22 and 35 and substituted by hydroxy groups at positions 9, 11, 13, 17 and 19, oxo
+  groups at positions 3, 7 and 15, a carboxy group at position 18, a 3-amino-3,6-dideoxymannopyranosyloxy
+  group at position 21, a methyl group at position 36 and a 7-(4-aminophenyl)-5-hydroxy-4-methyl-7-oxoheptan-2-yl
+  group at position 37. It is the major component of candicidin, a mixture of antifungal
+  heptaene macrolides obtained from a strain of Streptomyces griseus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (23E,25E,27E,29E,31E,33E,35E)-22-[(3-amino-3,6-dideoxy-D-mannopyranosyl)oxy]-38-[7-(4-aminophenyl)-5-hydroxy-4-methyl-7-oxoheptan-2-yl]-10,12,14,18,20-pentahydroxy-37-methyl-2,4,8,16-tetraoxooxacyclooctatriaconta-23,25,27,29,31,33,35-heptaene-19-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Candicidin D
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: candicidin D1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: levorin A2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25105
+- CHEBI:26177
+xrefs:
+- beilstein:9183661
+- cas:39372-30-0
+- drugbank:DB01152
+- kegg.compound:C06690
+- wikipedia.en:Candicidin
+activity_roles:
+- CHEBI:33281
+- CHEBI:86327
+chemical_structure:
+  smiles: CC1/C=C/C=C/C=C/C=C/C=C/C=C/C=C/C(OC2O[C@H](C)[C@@H](O)[C@H](N)[C@@H]2O)CC(O)C(C(=O)O)C(O)CC(=O)CC(O)CC(O)CC(O)CC(=O)CCCC(=O)CC(=O)OC1C(C)CC(C)C(O)CC(=O)c1ccc(N)cc1
+  standard_inchi: InChI=1S/C59H84N2O18/c1-35-18-15-13-11-9-7-5-6-8-10-12-14-16-21-47(78-59-56(74)54(61)55(73)38(4)77-59)33-51(71)53(58(75)76)50(70)31-46(67)30-45(66)29-44(65)28-43(64)27-41(62)19-17-20-42(63)32-52(72)79-57(35)37(3)26-36(2)48(68)34-49(69)39-22-24-40(60)25-23-39/h5-16,18,21-25,35-38,43-45,47-48,50-51,53-57,59,64-66,68,70-71,73-74H,17,19-20,26-34,60-61H2,1-4H3,(H,75,76)/b6-5+,9-7+,10-8+,13-11+,14-12+,18-15+,21-16+/t35?,36?,37?,38-,43?,44?,45?,47?,48?,50?,51?,53?,54+,55-,56+,57?,59?/m1/s1
+  standard_inchi_key: OPGSFDUODIJJGF-JBUZINEHSA-N
+  molecular_formula: C59H84N2O18
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1109.317
+  monoisotopic_mass: 1108.57191
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3349
+  source_label: candicidin D
+  minted_identifier: antibioticmech:chebi-35c3cfcb16
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,48 @@
+identifier: CHEBI:85005
+label: anticapsin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An alanine derivative that is L-alanine bearing a 5-oxo-7-oxabicyclo[4.1.0]hept-2-yl
+  substituent at position 3.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-[(1R,2S,6R)-5-oxo-7-oxabicyclo[4.1.0]hept-2-yl]-L-alanine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 177854
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:32955
+- CHEBI:36132
+- CHEBI:83822
+- CHEBI:83943
+xrefs:
+- cas:28978-07-6
+- knapsack:C00018799
+- reaxys:6370535
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: N[C@@H](C[C@@H]1CCC(=O)[C@@H]2O[C@H]12)C(=O)O
+  standard_inchi: InChI=1S/C9H13NO4/c10-5(9(12)13)3-4-1-2-6(11)8-7(4)14-8/h4-5,7-8H,1-3,10H2,(H,12,13)/t4-,5-,7+,8-/m0/s1
+  standard_inchi_key: KHVZXXWDPSCGEK-MGVQOFIGSA-N
+  molecular_formula: C9H13NO4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 199.206
+  monoisotopic_mass: 199.08446
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85005
+  source_label: anticapsin
+  minted_identifier: antibioticmech:chebi-7c003fa2d2
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

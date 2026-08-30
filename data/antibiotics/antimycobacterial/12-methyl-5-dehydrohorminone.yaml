@@ -1,0 +1,47 @@
+identifier: CHEBI:66364
+label: 12-methyl-5-dehydrohorminone
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An abietane diterpenoid that is 5-dehydrohorminone in which the hydroxy
+  group at position 12 is replaced by a methoxy group. Isolated from the roots of
+  Salvia multicaulis, it exhibits antitubercular activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (7α)-7-hydroxy-12-methoxyabieta-5,8,12-triene-11,14-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4bS,10R)-10-hydroxy-3-methoxy-4b,8,8-trimethyl-2-propan-2-yl-5,6,7,10-tetrahydrophenanthrene-1,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25830
+- CHEBI:35681
+- CHEBI:36762
+- CHEBI:47985
+xrefs:
+- reaxys:7885990
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: COC1=C(C(C)C)C(=O)C2=C(C1=O)[C@@]1(C)CCCC(C)(C)C1=C[C@H]2O
+  standard_inchi: InChI=1S/C21H28O4/c1-11(2)14-17(23)15-12(22)10-13-20(3,4)8-7-9-21(13,5)16(15)18(24)19(14)25-6/h10-12,22H,7-9H2,1-6H3/t12-,21+/m1/s1
+  standard_inchi_key: RUONQJYGQKYSSL-GTJPDFRWSA-N
+  molecular_formula: C21H28O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 344.451
+  monoisotopic_mass: 344.19876
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66364
+  source_label: 12-methyl-5-dehydrohorminone
+  minted_identifier: antibioticmech:chebi-6d91d4d2fc
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

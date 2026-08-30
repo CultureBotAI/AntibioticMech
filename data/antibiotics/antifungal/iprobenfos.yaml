@@ -1,0 +1,73 @@
+identifier: CHEBI:79737
+label: iprobenfos
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic thiophosphate that is the S-benzyl O,O-diisopropyl ester of
+  phosphorothioic acid. Used as a rice fungicide to control leaf and ear blast, stem
+  rot and sheath blight.
+definition_source: ChEBI
+synonyms:
+- synonym_text: S-benzyl O,O-dipropan-2-yl phosphorothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Kitazin P
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O,O-Bis(1-methylethyl) S-(phenylmethyl)phosphorothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O,O-DIIsopropyl S-benzyl thiophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O,O-Diisopropyl S-benzyl phosphorothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphorothioic acid, S-benzyl O,O-diisopropyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-Benzyl O,O-diisopropyl phosphorothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-Benzyl O,O-diisopropyl thiophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-Benzyl diisopropyl phosphorothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37512
+xrefs:
+- cas:26087-47-8
+- hmdb:HMDB0031768
+- kegg.compound:C15230
+- patent:CN101569313
+- patent:CN101647467
+- patent:CN1930986
+- pesticides:iprobenfos
+- ppdb:1207
+- reaxys:1974687
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CC(C)OP(=O)(OC(C)C)SCc1ccccc1
+  standard_inchi: InChI=1S/C13H21O3PS/c1-11(2)15-17(14,16-12(3)4)18-10-13-8-6-5-7-9-13/h5-9,11-12H,10H2,1-4H3
+  standard_inchi_key: FCOAHACKGGIURQ-UHFFFAOYSA-N
+  molecular_formula: C13H21O3PS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 288.349
+  monoisotopic_mass: 288.0949
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:79737
+  source_label: iprobenfos
+  minted_identifier: antibioticmech:chebi-2d8c969f06
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

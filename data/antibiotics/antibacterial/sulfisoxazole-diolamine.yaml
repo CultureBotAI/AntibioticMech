@@ -1,0 +1,53 @@
+identifier: CHEBI:88263
+label: sulfisoxazole diolamine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organoammonium salt obtained by combining equimolar amounts of sulfisoxazole
+  and diethanolamine. It has antibiotic activity against a wide range of gram-negative
+  and gram-positive organisms.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-amino-N-(3,4-dimethyl-1,2-oxazol-5-yl)benzene-1-sulfonamide--2,2'-azanediyldi(ethan-1-ol)
+    (1/1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfafurazol 2,2'-imidodiethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfafurazole diolamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulfisoxazole diethanolamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:46850
+xrefs:
+- cas:4299-60-9
+- kegg.drug:D05957
+- reaxys:14856872
+activity_roles:
+- CHEBI:36047
+chemical_structure:
+  smiles: Cc1noc(NS(=O)(=O)c2ccc(N)cc2)c1C.OCCNCCO
+  standard_inchi: InChI=1S/C11H13N3O3S.C4H11NO2/c1-7-8(2)13-17-11(7)14-18(15,16)10-5-3-9(12)4-6-10;6-3-1-5-2-4-7/h3-6,14H,12H2,1-2H3;5-7H,1-4H2
+  standard_inchi_key: FEPTXVIRMZIGFY-UHFFFAOYSA-N
+  molecular_formula: C11H13N3O3S.C4H11NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 372.447
+  monoisotopic_mass: 372.14674
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:88263
+  source_label: sulfisoxazole diolamine
+  minted_identifier: antibioticmech:chebi-6baa7df085
+  role_terms:
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

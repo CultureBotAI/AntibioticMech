@@ -1,0 +1,47 @@
+identifier: CHEBI:77735
+label: ossamycin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide antibiotic that was originally isolated from the culture broths
+  of Streptomyces hygroscopicus var. ossamyceticus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3aS,4E,6'R,11R,12R,13S,14R,15R,16S,17R,18E,22S,24R,26S,27aS,28R)-13-{[(2S,5S,6S)-5-(dimethylamino)-6-methyltetrahydro-2H-pyran-2-yl]oxy}-11,12,14,16,17,27a-hexahydroxy-6'-[(2R)-2-hydroxybutyl]-2,2,11,15,17,28-hexamethyl-2,3,3',3a,4',5',6,6',7,8,9,10,11,12,13,14,15,16,17,22,23,26,27,27a-tetracosahydro-20H-spiro[22,26-methanofuro[2,3-h][1,5]dioxacyclohexacosine-24,2'-pyran]-20-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25105
+- CHEBI:26878
+- CHEBI:35681
+- CHEBI:38163
+- CHEBI:59780
+- CHEBI:72600
+xrefs:
+- cas:11015-84-2
+- patent:US3271253
+- reaxys:7510041
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12/C=C/CCCCC[C@@](C)(O)[C@H](O)[C@@H](O[C@H]3CC[C@H](N(C)C)[C@H](C)O3)[C@H](O)[C@@H](C)[C@H](O)[C@](C)(O)/C=C/C(=O)O[C@H]3C[C@@]4(CCC[C@H](C[C@H](O)CC)O4)O[C@@H](C[C@]1(O)OC(C)(C)C2)[C@H]3C'
+  standard_inchi: InChI=1S/C49H85NO14/c1-11-34(51)26-35-19-17-24-48(62-35)28-37-30(2)38(63-48)29-49(58)33(27-45(5,6)64-49)18-15-13-12-14-16-23-46(7,56)44(55)42(61-40-21-20-36(50(9)10)32(4)59-40)41(53)31(3)43(54)47(8,57)25-22-39(52)60-37/h15,18,22,25,30-38,40-44,51,53-58H,11-14,16-17,19-21,23-24,26-29H2,1-10H3/b18-15+,25-22+/t30-,31+,32-,33+,34+,35+,36-,37-,38-,40-,41+,42-,43-,44+,46+,47+,48+,49-/m0/s1
+  standard_inchi_key: XGECDDPXIKFBTE-AUFVQPSPSA-N
+  molecular_formula: C49H85NO14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 912.212
+  monoisotopic_mass: 911.59701
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77735
+  source_label: ossamycin
+  minted_identifier: antibioticmech:chebi-8993f717fd
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

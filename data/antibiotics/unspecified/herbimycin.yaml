@@ -1,0 +1,53 @@
+identifier: CHEBI:5674
+label: herbimycin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 19-membered macrocyle incorporating a benzoquinone ring and a lactam
+  functionality. It is an ansamycin antibiotic that induces apoptosis and displays
+  antitumour effects.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4E,6Z,8S,9S,10E,12S,13R,14S,16S,17R)-8,13,14,17-tetramethoxy-4,10,12,16-tetramethyl-3,20,22-trioxo-2-azabicyclo[16.3.1]docosa-1(21),4,6,10,18-pentaen-9-yl
+    carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic Tan 420F
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Herbimycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:132124
+- CHEBI:24995
+- CHEBI:51026
+xrefs:
+- cas:70563-58-5
+- kegg.compound:C11225
+- reaxys:4834067
+- wikipedia.en:Herbimycin
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CO[C@H]1[C@@H](OC)C[C@H](C)[C@@H](OC)C2=CC(=O)C=C(NC(=O)/C(C)=C/C=C\[C@H](OC)[C@@H](OC(N)=O)/C(C)=C/[C@@H]1C)C2=O
+  standard_inchi: InChI=1S/C30H42N2O9/c1-16-10-9-11-23(37-5)28(41-30(31)36)18(3)12-17(2)27(40-8)24(38-6)13-19(4)26(39-7)21-14-20(33)15-22(25(21)34)32-29(16)35/h9-12,14-15,17,19,23-24,26-28H,13H2,1-8H3,(H2,31,36)(H,32,35)/b11-9-,16-10+,18-12+/t17-,19-,23-,24-,26+,27+,28-/m0/s1
+  standard_inchi_key: MCAHMSDENAOJFZ-BVXDHVRPSA-N
+  molecular_formula: C30H42N2O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 574.671
+  monoisotopic_mass: 574.28903
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5674
+  source_label: herbimycin
+  minted_identifier: antibioticmech:chebi-b0691ecbea
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

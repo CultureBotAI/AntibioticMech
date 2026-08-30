@@ -1,0 +1,78 @@
+identifier: CHEBI:94677
+label: sulfabenzamide
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfonamide containing a benzamido substituent on nitrogen. An antibacterial/antimicrobial,
+  it is often used in conjunction with sulfathiazole and sulfacetamide as a topical,
+  intravaginal antibacterial preparation.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sulfabenzamida
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfabenzamidum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-(4-aminobenzene-1-sulfonyl)benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(4-aminophenyl)sulfonylbenzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-benzoylsulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulfabenzamid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulfabenzid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulfabenzide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulfabenzoylamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22712
+- CHEBI:35358
+- CHEBI:87228
+xrefs:
+- cas:127-71-9
+- drugcentral:3558
+- lincs.smallmolecule:LSM-5698
+- wikipedia.en:Sulfabenzamide
+activity_roles:
+- CHEBI:33281
+- CHEBI:36043
+- CHEBI:36047
+chemical_structure:
+  smiles: Nc1ccc(S(=O)(=O)NC(=O)c2ccccc2)cc1
+  standard_inchi: InChI=1S/C13H12N2O3S/c14-11-6-8-12(9-7-11)19(17,18)15-13(16)10-4-2-1-3-5-10/h1-9H,14H2,(H,15,16)
+  standard_inchi_key: PBCZLFBEBARBBI-UHFFFAOYSA-N
+  molecular_formula: C13H12N2O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 276.317
+  monoisotopic_mass: 276.05686
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:94677
+  source_label: sulfabenzamide
+  minted_identifier: antibioticmech:chebi-b0c14e7839
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36043
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

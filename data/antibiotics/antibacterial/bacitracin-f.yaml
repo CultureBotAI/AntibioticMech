@@ -1,0 +1,83 @@
+identifier: antibioticmech:aro-fb45bd17a5
+label: bacitracin F
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Bacitracin F is a component of bacitracin, an antibiotic mixture that
+  interferes with bacterial cell wall synthesis. It is formed when the thiazoline
+  ring of bacitracin A is oxidatively deaminated.
+definition_source: PMID:6752975
+parent_compounds:
+- ARO:3009657
+xrefs:
+- ARO:3000631
+- pubchem.compound:3082210
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: CCC(C)C1C(=O)NC(C(=O)NC(C(=O)NC(C(=O)NC(C(=O)NCCCCC(C(=O)NC(C(=O)N1)CCCN)NC(=O)C(C(C)CC)NC(=O)C(CCC(=O)O)NC(=O)C(CC(C)C)NC(=O)C2=CSC(=N2)C(=O)C(C)CC)CC(=O)N)CC(=O)O)CC3=CN=CN3)CC4=CC=CC=C4
+  standard_inchi: InChI=1S/C66H98N16O17S/c1-9-35(6)52(82-58(92)42(22-23-50(84)85)73-59(93)43(26-34(4)5)75-63(97)48-32-100-66(80-48)54(88)37(8)11-3)64(98)74-40-20-15-16-25-70-55(89)46(29-49(68)83)77-62(96)47(30-51(86)87)78-61(95)45(28-39-31-69-33-71-39)76-60(94)44(27-38-18-13-12-14-19-38)79-65(99)53(36(7)10-2)81-57(91)41(21-17-24-67)72-56(40)90/h12-14,18-19,31-37,40-47,52-53H,9-11,15-17,20-30,67H2,1-8H3,(H2,68,83)(H,69,71)(H,70,89)(H,72,90)(H,73,93)(H,74,98)(H,75,97)(H,76,94)(H,77,96)(H,78,95)(H,79,99)(H,81,91)(H,82,92)(H,84,85)(H,86,87)
+  standard_inchi_key: FCLQHQCOKGKLHR-UHFFFAOYSA-N
+  molecular_formula: C66H98N16O17S
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1419.6
+  monoisotopic_mass: 1418.70165689
+source_concepts:
+- source: ARO
+  source_id: ARO:3000631
+  source_label: bacitracin F
+  minted_identifier: antibioticmech:aro-fb45bd17a5
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002986
+  label: bacA
+  evidence:
+  - reference: ARO:3002986
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000631 (bacitracin
+      F); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3002987
+  label: bcrA
+  evidence:
+  - reference: ARO:3002987
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000631 (bacitracin
+      F); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3002988
+  label: bcrB
+  evidence:
+  - reference: ARO:3002988
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000631 (bacitracin
+      F); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003250
+  label: bcrC
+  evidence:
+  - reference: ARO:3003250
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000631 (bacitracin
+      F); database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000719
+  target_label: bacitracin sensitive isoprenyl pyrophosphate
+  evidence:
+  - reference: ARO:3000719
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000631 (bacitracin F); database
+      assertion, not a primary citation.
+- target_id: ARO:3003251
+  target_label: undecaprenyl pyrophosphate
+  evidence:
+  - reference: ARO:3003251
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000631 (bacitracin F); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:57Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,49 @@
+identifier: CHEBI:83823
+label: pyrisoxazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A diastereoisomeric mixture of (3R,5S)- and (3R,5R)-pyrisoxazole. A novel
+  isomeric fungicide primarily used for control of control tomato botrytis and also
+  for fungal diseases of wheat and other crops.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-[(3R)-5-(4-chlorophenyl)-2,3-dimethyl-1,2-oxazolidin-3-yl]pyridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dingjunezuo
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:60915
+xrefs:
+- cas:847749-37-5
+- pesticides:pyrisoxazole
+- ppdb:2616
+- reaxys:28750612
+activity_roles:
+- CHEBI:77884
+- CHEBI:86328
+chemical_structure:
+  smiles: CN1OC(c2ccc(Cl)cc2)C[C@]1(C)c1cccnc1
+  standard_inchi: InChI=1S/C16H17ClN2O/c1-16(13-4-3-9-18-11-13)10-15(20-19(16)2)12-5-7-14(17)8-6-12/h3-9,11,15H,10H2,1-2H3/t15?,16-/m1/s1
+  standard_inchi_key: DHTJFQWHCVTNRY-OEMAIJDKSA-N
+  molecular_formula: C16H17ClN2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 288.778
+  monoisotopic_mass: 288.10294
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83823
+  source_label: pyrisoxazole
+  minted_identifier: antibioticmech:chebi-01ffe69377
+  role_terms:
+  - CHEBI:77884
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

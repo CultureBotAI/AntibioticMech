@@ -1,0 +1,46 @@
+identifier: CHEBI:66136
+label: kalimantacin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A fatty acid derivative isolated from the fermentation broth of Alcaligenes
+  sp. YL-02632S. It is an antibiotic with antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E,10E,12E)-20-{[3-(carbamoyloxy)-2-methylbutanoyl]amino}-19-hydroxy-3,5,15-trimethyl-7-methylidene-17-oxoicosa-2,10,12-trienoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:23003
+- CHEBI:61697
+- CHEBI:79020
+xrefs:
+- reaxys:21369092
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: C=C(CC/C=C/C=C/CC(C)CC(=O)CC(O)CNC(=O)C(C)C(C)OC(N)=O)CC(C)C/C(C)=C/C(=O)O
+  standard_inchi: InChI=1S/C30H48N2O7/c1-20(14-22(3)15-23(4)17-28(35)36)12-10-8-7-9-11-13-21(2)16-26(33)18-27(34)19-32-29(37)24(5)25(6)39-30(31)38/h7-9,11,17,21-22,24-25,27,34H,1,10,12-16,18-19H2,2-6H3,(H2,31,38)(H,32,37)(H,35,36)/b8-7+,11-9+,23-17+
+  standard_inchi_key: GENAAYFYLGYPIQ-FFPWVZAVSA-N
+  molecular_formula: C30H48N2O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 548.721
+  monoisotopic_mass: 548.34615
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66136
+  source_label: kalimantacin B
+  minted_identifier: antibioticmech:chebi-ed08a01104
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,92 @@
+identifier: CHEBI:3405
+label: carboxin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An anilide obtained by formal condensation of the amino group of aniline
+  with the carboxy group of 2-methyl-5,6-dihydro-1,4-oxathiine-3-carboxylic acid.
+  A fungicide for control of bunts and smuts that is normally used as a seed treatment.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-methyl-N-phenyl-5,6-dihydro-1,4-oxathiine-3-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,3-Dihydro-5-carboxanilido-6-methyl-1,4-oxathiin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,3-Dihydro-6-methyl-1,4-oxathiin-5-carboxanilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,3-Dihydro-6-methyl-5-phenylcarbamoyl-1,4-oxathiin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,6-Dihydro-2-methyl-1,4-oxathiin-3-carboxanilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,6-Dihydro-2-methyl-3-carboxanilido-1,4-oxathiin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,6-Dihydro-2-methyl-N-phenyl-1,4-oxathiin-3-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Carboxanilido-2,3-dihydro-6-methyl-1,4-oxathiin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Carbathiin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Carboxine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: oxatin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:13248
+- CHEBI:140325
+- CHEBI:38104
+- CHEBI:38106
+- CHEBI:51751
+- CHEBI:87015
+xrefs:
+- cas:5234-68-4
+- kegg.compound:C11255
+- lincs.smallmolecule:LSM-25660
+- metacyc.compound:CPD0-1366
+- patent:EP0042182
+- pdb-ccd:CBE
+- pesticides:carboxin
+- ppdb:122
+- reaxys:983249
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: CC1=C(C(=O)Nc2ccccc2)SCCO1
+  standard_inchi: InChI=1S/C12H13NO2S/c1-9-11(16-8-7-15-9)12(14)13-10-5-3-2-4-6-10/h2-6H,7-8H2,1H3,(H,13,14)
+  standard_inchi_key: GYSSRZJIHXQEHQ-UHFFFAOYSA-N
+  molecular_formula: C12H13NO2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 235.308
+  monoisotopic_mass: 235.0667
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3405
+  source_label: carboxin
+  minted_identifier: antibioticmech:chebi-ebea524080
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

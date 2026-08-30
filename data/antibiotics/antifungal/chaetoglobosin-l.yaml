@@ -1,0 +1,44 @@
+identifier: CHEBI:68775
+label: chaetoglobosin L
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrocycle isolated from Chaetomium globosum and has been shown to exhibit
+  antifungal and cytotoxic activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (10Z,12E)-3,4-dihydroxy-5,8,10,11,17-pentamethyl-7-oxo-18,19-dioxatricyclo[12.3.1.12,5]nonadeca-1,3,10,12,14,16-hexaene-6-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33823
+- CHEBI:35871
+- CHEBI:37407
+- CHEBI:51026
+xrefs:
+- reaxys:22559057
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC1=CC=C2/C=C/C(C)=C(/C)CC(C)C(=O)C(C(=O)O)C3(C)O/C(=C/1O2)C(O)=C3O
+  standard_inchi: InChI=1S/C23H26O7/c1-11-6-8-15-9-7-12(2)19(29-15)20-18(25)21(26)23(5,30-20)16(22(27)28)17(24)14(4)10-13(11)3/h6-9,14,16,25-26H,10H2,1-5H3,(H,27,28)/b8-6+,13-11-,20-19-
+  standard_inchi_key: PBKVAXUNUBEUPO-OSHWNDANSA-N
+  molecular_formula: C23H26O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 414.454
+  monoisotopic_mass: 414.16785
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68775
+  source_label: chaetoglobosin L
+  minted_identifier: antibioticmech:chebi-96194d71d8
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,50 @@
+identifier: CHEBI:85265
+label: amprolium
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic chloride salt having 1-[(4-amino-2-propylpyrimidin-5-yl)methyl]-2-methylpyridin-1-ium
+  as the counterion. Used for prevention of coccidiosis in poultry and cattle.
+definition_source: ChEBI
+synonyms:
+- synonym_text: amprolio
+  synonym_type: INN
+  source: chebi
+- synonym_text: 1-[(4-amino-2-propylpyrimidin-5-yl)methyl]-2-methylpyridin-1-ium chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-((4-Amino-2-propyl-5-pyrimidinyl)methyl)-2-picolinium chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36094
+- CHEBI:38188
+xrefs:
+- cas:121-25-5
+- kegg.drug:D02928
+- reaxys:13196286
+- wikipedia.en:Amprolium
+activity_roles:
+- CHEBI:35818
+chemical_structure:
+  smiles: CCCc1ncc(C[n+]2ccccc2C)c(N)n1.[Cl-]
+  standard_inchi: InChI=1S/C14H19N4.ClH/c1-3-6-13-16-9-12(14(15)17-13)10-18-8-5-4-7-11(18)2;/h4-5,7-9H,3,6,10H2,1-2H3,(H2,15,16,17);1H/q+1;/p-1
+  standard_inchi_key: LCTXBFGHZLGBNU-UHFFFAOYSA-M
+  molecular_formula: C14H19N4.Cl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 278.787
+  monoisotopic_mass: 278.12982
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85265
+  source_label: amprolium
+  minted_identifier: antibioticmech:chebi-a3e79fb429
+  role_terms:
+  - CHEBI:35818
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

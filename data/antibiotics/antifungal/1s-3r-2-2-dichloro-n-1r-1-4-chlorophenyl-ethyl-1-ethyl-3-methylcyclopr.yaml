@@ -1,0 +1,43 @@
+identifier: CHEBI:47351
+label: (1S,3R)-2,2-dichloro-N-[(1R)-1-(4-chlorophenyl)ethyl]-1-ethyl-3-methylcyclopropanecarboxamide
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: ((1RS,3SR)-2,2-DICHLORO-N-[(R)-1-(4-CHLOROPHENYL)ETHYL]-1-ETHYL-3-METHYLCYCLOPROPANECARBOXAMIDE
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:3434
+- CHEBI:83403
+xrefs:
+- beilstein:8332858
+- pdb-ccd:CRP
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: CC[C@@]1(C(=O)N[C@H](C)c2ccc(Cl)cc2)[C@@H](C)C1(Cl)Cl
+  standard_inchi: InChI=1S/C15H18Cl3NO/c1-4-14(10(3)15(14,17)18)13(20)19-9(2)11-5-7-12(16)8-6-11/h5-10H,4H2,1-3H3,(H,19,20)/t9-,10-,14+/m1/s1
+  standard_inchi_key: RXDMAYSSBPYBFW-RULNRJAQSA-N
+  molecular_formula: C15H18Cl3NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 334.674
+  monoisotopic_mass: 333.0454
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:47351
+  source_label: (1S,3R)-2,2-dichloro-N-[(1R)-1-(4-chlorophenyl)ethyl]-1-ethyl-3-methylcyclopropanecarboxamide
+  minted_identifier: antibioticmech:chebi-209a36f543
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

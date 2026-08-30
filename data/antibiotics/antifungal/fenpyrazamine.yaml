@@ -1,0 +1,61 @@
+identifier: CHEBI:83327
+label: fenpyrazamine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyrazolone that is pyazol-3-one which is substituted at positions 2,
+  4, and 5 by isopropyl, o-methylphenyl, and amino groups, respectively, and in which
+  the hydrogen attached to the nitrogen at position 1 is replaced by an S-allyl carbothioate
+  moiety. A fungicide, it is used for the control of Botrytis in the greenhouse cultivation
+  of tomatoes, peppers, and cucumbers.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Botrycide
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: S-allyl 5-amino-2-isopropyl-4-(2-methylphenyl)-3-oxo-2,3-dihydro-1H-pyrazole-1-carbothioat
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-amino-2-isopropyl-3-oxo-4-o-tolyl-2,3-dihydropyrazole-1-thiocarboxylic
+    acid S-allyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-2-propen-1-yl 5-amino-2,3-dihydro-2-(1-methylethyl)-4-(2-methylphenyl)-3-oxo-1H-pyrazole-1-carbothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: S-allyl 5-amino-2,3-dihydro-2-isopropyl-3-oxo-4-(o-tolyl)pyrazole-1-carbothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:50994
+- CHEBI:51277
+- CHEBI:83328
+xrefs:
+- cas:473798-59-3
+- pesticides:fenpyrazamine
+- ppdb:2010
+- reaxys:12610944
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: C=CCSC(=O)n1c(N)c(-c2ccccc2C)c(=O)n1C(C)C
+  standard_inchi: InChI=1S/C17H21N3O2S/c1-5-10-23-17(22)20-15(18)14(16(21)19(20)11(2)3)13-9-7-6-8-12(13)4/h5-9,11H,1,10,18H2,2-4H3
+  standard_inchi_key: UTOHZQYBSYOOGC-UHFFFAOYSA-N
+  molecular_formula: C17H21N3O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 331.441
+  monoisotopic_mass: 331.13545
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83327
+  source_label: fenpyrazamine
+  minted_identifier: antibioticmech:chebi-cb1f19ca86
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

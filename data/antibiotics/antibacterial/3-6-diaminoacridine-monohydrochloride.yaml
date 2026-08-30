@@ -1,0 +1,62 @@
+identifier: CHEBI:74718
+label: 3,6-diaminoacridine monohydrochloride
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrochloride resulting from the reaction of equimolar amounts of 3,6-diaminoacridine
+  and hydrogen chloride.
+definition_source: ChEBI
+synonyms:
+- synonym_text: acridine-3,6-diamine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,6-diaminoacridine HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,6-diaminoacridine.HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,6-diaminoacridinium chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: proflavine HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: proflavine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: proflavine monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: proflavine.HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:952-23-8
+- reaxys:4023620
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Cl.Nc1ccc2cc3ccc(N)cc3nc2c1
+  standard_inchi: InChI=1S/C13H11N3.ClH/c14-10-3-1-8-5-9-2-4-11(15)7-13(9)16-12(8)6-10;/h1-7H,14-15H2;1H
+  standard_inchi_key: PBBGTVBGXBUVLT-UHFFFAOYSA-N
+  molecular_formula: C13H11N3.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 245.713
+  monoisotopic_mass: 245.07198
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:74718
+  source_label: 3,6-diaminoacridine monohydrochloride
+  minted_identifier: antibioticmech:chebi-df3c334d4a
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

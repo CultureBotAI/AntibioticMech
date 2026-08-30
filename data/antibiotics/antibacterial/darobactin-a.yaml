@@ -1,0 +1,38 @@
+identifier: antibioticmech:aro-93dd2d4732
+label: darobactin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Darobactin A, isolated from Photorhabdus bacteria, contains a macrocyclic
+  peptide-based ring system and exhibits selective antibiotic activity against Gram-negative
+  pathogens in both in vitro and animal infection models and functions.
+definition_source: PMID:35926121
+parent_compounds:
+- ARO:3009656
+xrefs:
+- ARO:3007478
+- pubchem.compound:155899183
+structural_class: ribosomally synthesized and post-translationally modified peptide
+  antibiotics
+structural_class_id: ARO:3009656
+chemical_structure:
+  smiles: C1[C@@H](C(=O)N[C@H](C(=O)N[C@H]2[C@@H](C3=CNC4=C3C=CC(=C4)[C@@H]([C@H](NC(=O)[C@@H](NC2=O)CO)C(=O)N[C@@H](CO)C(=O)N[C@@H](CC5=CC=CC=C5)C(=O)O)CCCN)OC6=CC=CC7=C6NC=C71)CC(=O)N)N
+  standard_inchi: InChI=1S/C47H55N11O12/c48-13-5-9-25-23-11-12-27-28(19-51-30(27)16-23)40-39(58-42(63)31(17-36(50)61)53-41(62)29(49)15-24-18-52-37-26(24)8-4-10-35(37)70-40)46(67)56-34(21-60)44(65)57-38(25)45(66)55-33(20-59)43(64)54-32(47(68)69)14-22-6-2-1-3-7-22/h1-4,6-8,10-12,16,18-19,25,29,31-34,38-40,51-52,59-60H,5,9,13-15,17,20-21,48-49H2,(H2,50,61)(H,53,62)(H,54,64)(H,55,66)(H,56,67)(H,57,65)(H,58,63)(H,68,69)/t25-,29-,31-,32-,33-,34-,38-,39-,40+/m0/s1
+  standard_inchi_key: HRMCRRLPTVSYHJ-KUDSBEMESA-N
+  molecular_formula: C47H55N11O12
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 966.0
+  monoisotopic_mass: 965.40316623
+source_concepts:
+- source: ARO
+  source_id: ARO:3007478
+  source_label: darobactin A
+  minted_identifier: antibioticmech:aro-93dd2d4732
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

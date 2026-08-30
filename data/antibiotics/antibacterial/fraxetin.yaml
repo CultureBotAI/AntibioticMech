@@ -1,0 +1,54 @@
+identifier: CHEBI:5169
+label: fraxetin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxycoumarin that is 6-methoxycoumarin in which the hydrogens at
+  positions 7 and 8 have been replaced by hydroxy groups.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 7,8-dihydroxy-6-methoxy-2H-chromen-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7,8-dihydroxy-6-methoxy-2-benzopyrone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7,8-dihydroxy-6-methoxycoumarin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:37912
+xrefs:
+- cas:574-84-5
+- kegg.compound:C09265
+- knapsack:C00002473
+- lincs.smallmolecule:LSM-3712
+- reaxys:198796
+- wikipedia.en:Fraxetin
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1cc2ccc(=O)oc2c(O)c1O
+  standard_inchi: InChI=1S/C10H8O5/c1-14-6-4-5-2-3-7(11)15-10(5)9(13)8(6)12/h2-4,12-13H,1H3
+  standard_inchi_key: HAVWRBANWNTOJX-UHFFFAOYSA-N
+  molecular_formula: C10H8O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 208.169
+  monoisotopic_mass: 208.03717
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5169
+  source_label: fraxetin
+  minted_identifier: antibioticmech:chebi-db67366adb
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

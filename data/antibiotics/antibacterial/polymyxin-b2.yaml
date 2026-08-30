@@ -1,0 +1,168 @@
+identifier: CHEBI:59063
+label: polymyxin B2
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polymyxin having a 6-methylheptanoyl group at the amino terminus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4,10-anhydro[N-(6-methylheptanoyl)-L-2,4-diaminobutanoyl-L-threonyl-L-2,4-diaminobutanoyl-L-2,4-diaminobutanoyl-L-2,4-diaminobutanoyl-D-phenylalanyl-L-leucyl-L-2,4-diaminobutanoyl-L-2,4-diaminobutanoyl-L-threonine]
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:59062
+- ARO:3009657
+xrefs:
+- ARO:3000626
+- ARO:3000454
+- beilstein:8185631
+- cas:1404-26-8
+- kegg.compound:C11612
+- kegg.drug:D08401
+- lipidmaps:LMPK14000008
+- CHEBI:8309
+- chembl:CHEMBL3989738
+- chembl:CHEMBL5314354
+- pubchem.compound:49800004
+- chembl:CHEMBL1088938
+- pubchem.compound:11982455
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: CC(C)CCCCC(=O)N[C@@H](CCN)C(=O)N[C@H](C(=O)N[C@@H](CCN)C(=O)N[C@H]1CCNC(=O)[C@H]([C@@H](C)O)NC(=O)[C@H](CCN)NC(=O)[C@H](CCN)NC(=O)[C@H](CC(C)C)NC(=O)[C@@H](Cc2ccccc2)NC(=O)[C@H](CCN)NC1=O)[C@@H](C)O
+  standard_inchi: InChI=1S/C55H96N16O13/c1-30(2)12-10-11-15-43(74)62-35(16-22-56)50(79)71-45(33(6)73)55(84)67-38(19-25-59)47(76)66-40-21-27-61-54(83)44(32(5)72)70-51(80)39(20-26-60)64-46(75)36(17-23-57)65-52(81)41(28-31(3)4)68-53(82)42(29-34-13-8-7-9-14-34)69-48(77)37(18-24-58)63-49(40)78/h7-9,13-14,30-33,35-42,44-45,72-73H,10-12,15-29,56-60H2,1-6H3,(H,61,83)(H,62,74)(H,63,78)(H,64,75)(H,65,81)(H,66,76)(H,67,84)(H,68,82)(H,69,77)(H,70,80)(H,71,79)/t32-,33-,35+,36+,37+,38+,39+,40+,41+,42-,44+,45+/m1/s1
+  standard_inchi_key: SGPYLFWAQBAXCZ-RUDZPDEXSA-N
+  molecular_formula: C55H96N16O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1189.472
+  monoisotopic_mass: 1188.73428
+source_concepts:
+- source: ARO
+  source_id: ARO:3000454
+  source_label: polymyxin B
+  minted_identifier: antibioticmech:aro-d8879a0dcb
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: ARO
+  source_id: ARO:3000626
+  source_label: polymyxin B2
+  minted_identifier: antibioticmech:aro-78e2c4a4e1
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:59063
+  source_label: polymyxin B2
+  minted_identifier: antibioticmech:chebi-dfddaf53e3
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3002985
+  label: arnA
+  evidence:
+  - reference: ARO:3002985
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003576
+  label: eptA
+  evidence:
+  - reference: ARO:3003576
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003577
+  label: ugd
+  evidence:
+  - reference: ARO:3003577
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003578
+  label: PmrF
+  evidence:
+  - reference: ARO:3003578
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003920
+  label: pgpB
+  evidence:
+  - reference: ARO:3003920
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004030
+  label: RosAB
+  evidence:
+  - reference: ARO:3004030
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000626 (polymyxin
+      B2); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004287
+  label: lipid A phosphatase
+  evidence:
+  - reference: ARO:3004287
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000626 (polymyxin
+      B2); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004598
+  label: Klebsiella pneumoniae KpnGH-TolC
+  evidence:
+  - reference: ARO:3004598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000626 (polymyxin
+      B2); database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3005044
+  label: OmpA
+  evidence:
+  - reference: ARO:3005044
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3005047
+  label: eptB
+  evidence:
+  - reference: ARO:3005047
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
+      B); database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3005052
+  label: LpsA
+  evidence:
+  - reference: ARO:3005052
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3005059
+  label: LptD
+  evidence:
+  - reference: ARO:3005059
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000454 (polymyxin
+      B); database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000710
+  target_label: cell membrane component targeted by antibiotic
+  evidence:
+  - reference: ARO:3000710
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000626 (polymyxin B2); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

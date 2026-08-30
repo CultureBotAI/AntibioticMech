@@ -1,0 +1,52 @@
+identifier: CHEBI:66629
+label: NK154183A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 24-membered macrolide antibiotic isolated from the fermentation broth
+  of Streptomyces sp.NK154183. It exhibits antifungal and antitumour activity against
+  the human colon adenocarcinoma.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4E,18E)-11,12,13,14,16,17,27a-heptahydroxy-6'-(2-hydroxybutyl)-2,2,11,15,17,28-hexamethyl-2,3,3',3a,4',5',6,6',7,8,9,10,11,12,13,14,15,16,17,22,23,26,27,27a-tetracosahydro-20H-spiro[22,26-methanofuro[2,3-h][1,5]dioxacyclohexacosine-24,2'-pyran]-20-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25105
+- CHEBI:26878
+- CHEBI:35681
+- CHEBI:59780
+- CHEBI:72600
+xrefs:
+- cas:152986-47-5
+- reaxys:8181910
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: CCC(O)CC1CCCC2(CC3OC(=O)/C=C/C(C)(O)C(O)C(C)C(O)C(O)C(O)C(C)(O)CCCCC/C=C/C4CC(C)(C)OC4(O)CC(O2)C3C)O1
+  standard_inchi: InChI=1S/C41H70O13/c1-8-28(42)21-29-16-14-19-40(52-29)23-30-25(2)31(53-40)24-41(50)27(22-37(4,5)54-41)15-12-10-9-11-13-18-38(6,48)36(47)34(45)33(44)26(3)35(46)39(7,49)20-17-32(43)51-30/h12,15,17,20,25-31,33-36,42,44-50H,8-11,13-14,16,18-19,21-24H2,1-7H3/b15-12+,20-17+
+  standard_inchi_key: ZACXIZMUUXGJHL-QTBZMJKBSA-N
+  molecular_formula: C41H70O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 770.998
+  monoisotopic_mass: 770.48164
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66629
+  source_label: NK154183A
+  minted_identifier: antibioticmech:chebi-de5d6d8d48
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

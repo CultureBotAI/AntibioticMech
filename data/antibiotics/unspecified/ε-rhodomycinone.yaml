@@ -1,0 +1,59 @@
+identifier: CHEBI:75291
+label: ε-rhodomycinone
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxylic ester that is the methyl ester of (1R,2R,4S)-2-ethyl-2,4,5,7,12-pentahydroxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracene-1-carboxylic
+  acid.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (1R,2R,4S)-2-ethyl-2,4,5,7,12-pentahydroxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracene-1-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E-Rhodomycinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 196524
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rhodomycinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: epsilon-Rhodomycinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:26195
+- CHEBI:35294
+- CHEBI:48132
+- CHEBI:51286
+xrefs:
+- cas:21288-60-8
+- kegg.compound:C12425
+- metacyc.compound:CPD-13972
+- reaxys:2194693
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@@]1(O)C[C@H](O)c2c(O)c3c(c(O)c2[C@H]1C(=O)OC)C(=O)c1cccc(O)c1C3=O
+  standard_inchi: InChI=1S/C22H20O9/c1-3-22(30)7-10(24)12-13(16(22)21(29)31-2)20(28)14-15(19(12)27)18(26)11-8(17(14)25)5-4-6-9(11)23/h4-6,10,16,23-24,27-28,30H,3,7H2,1-2H3/t10-,16-,22+/m0/s1
+  standard_inchi_key: PYFOXRACBORDCT-GOSXWKPOSA-N
+  molecular_formula: C22H20O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 428.393
+  monoisotopic_mass: 428.11073
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75291
+  source_label: ε-rhodomycinone
+  minted_identifier: antibioticmech:chebi-6b998211c9
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,80 @@
+identifier: CHEBI:77323
+label: ethoxyquin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quinoline that is 1,2-dihydroquinoline bearing three methyl substituents
+  at position 2, 2 and 4 as well as an ethoxy substituent at position 6.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6-ethoxy-2,2,4-trimethyl-1,2-dihydroquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-Dihydro-2,2,4-trimethyl-6-ethoxyquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-Dihydro-6-ethoxy-2,2,4-trimethylquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-dihydro-2,2,4-trimethyl-6-quinolyl ethyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,2,4-Trimethyl-6-ethoxy-1,2-dihydroquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Ethoxy-1,2-dihydro-2,2,4-trimethylquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E 324
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E324
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethoxyquine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ethyl 2,2,4-trimethyl-1,2-dihydro-6-quinolinyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethyl 2,2,4-trimethyl-1,2-dihydro-6-quinolyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26513
+- CHEBI:35618
+xrefs:
+- cas:91-53-2
+- foodb.food:FDB019147
+- hmdb:HMDB0039531
+- lincs.smallmolecule:LSM-5670
+- patent:WO2011028128
+- pesticides:ethoxyquin
+- ppdb:280
+- reaxys:158223
+- vsdb:280
+- wikipedia.en:Ethoxyquin
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CCOc1ccc2c(c1)C(C)=CC(C)(C)N2
+  standard_inchi: InChI=1S/C14H19NO/c1-5-16-11-6-7-13-12(8-11)10(2)9-14(3,4)15-13/h6-9,15H,5H2,1-4H3
+  standard_inchi_key: DECIPOUIJURFOJ-UHFFFAOYSA-N
+  molecular_formula: C14H19NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 217.312
+  monoisotopic_mass: 217.14666
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77323
+  source_label: ethoxyquin
+  minted_identifier: antibioticmech:chebi-278808c514
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

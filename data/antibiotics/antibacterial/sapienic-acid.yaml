@@ -1,0 +1,58 @@
+identifier: CHEBI:76244
+label: sapienic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hexadecenoic acid in which the double bond is located at position 6
+  (the Z-geoisomer). A major component of human sebaceous lipids that is involved
+  in skin self-sterilisation and atopic dermatitis amelioration.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6Z)-hexadec-6-enoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 16:1omega10
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6Z-hexadecenoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cis-6-Hexadecenoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24548
+xrefs:
+- cas:17004-51-2
+- lipidmaps:LMFA01030267
+- metacyc.compound:CPD-14393
+- patent:EP0996438
+- patent:US4036991
+- patent:US6589520
+- patent:WO9856371
+- reaxys:9641382
+- wikipedia.en:Sapienic_acid
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCCCCCC/C=C\CCCCC(=O)O
+  standard_inchi: InChI=1S/C16H30O2/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16(17)18/h10-11H,2-9,12-15H2,1H3,(H,17,18)/b11-10-
+  standard_inchi_key: NNNVXFKZMRGJPM-KHPPLWFESA-N
+  molecular_formula: C16H30O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 254.414
+  monoisotopic_mass: 254.22458
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:76244
+  source_label: sapienic acid
+  minted_identifier: antibioticmech:chebi-2921fd6676
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

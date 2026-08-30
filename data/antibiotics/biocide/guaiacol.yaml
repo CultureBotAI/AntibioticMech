@@ -1,0 +1,68 @@
+identifier: CHEBI:28591
+label: guaiacol
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monomethoxybenzene that consists of phenol with a methoxy substituent
+  at the ortho position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-methoxyphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Hydroxy-2-methoxybenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Hydroxyanisole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Catechol monomethyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Guaiacol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: o-Methoxyphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134251
+xrefs:
+- cas:90-05-1
+- drugcentral:1334
+- hmdb:HMDB0001398
+- kegg.compound:C01502
+- kegg.compound:C15572
+- kegg.drug:D00117
+- knapsack:C00002654
+- knapsack:C00029459
+- lincs.smallmolecule:LSM-6001
+- metacyc.compound:CPD-400
+- patent:RU94026717
+- pdb-ccd:JZ3
+- reaxys:508112
+- wikipedia.en:Guaiacol
+activity_roles:
+- CHEBI:48219
+chemical_structure:
+  smiles: COc1ccccc1O
+  standard_inchi: InChI=1S/C7H8O2/c1-9-7-5-3-2-4-6(7)8/h2-5,8H,1H3
+  standard_inchi_key: LHGVFZTZFXWLCP-UHFFFAOYSA-N
+  molecular_formula: C7H8O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 124.139
+  monoisotopic_mass: 124.05243
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28591
+  source_label: guaiacol
+  minted_identifier: antibioticmech:chebi-b83f87282d
+  role_terms:
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

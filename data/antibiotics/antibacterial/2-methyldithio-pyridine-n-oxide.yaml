@@ -1,0 +1,43 @@
+identifier: CHEBI:66373
+label: 2-(methyldithio)pyridine-N-oxide
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyridine alkaloid that is pyridine N-oxide substituted by a methyldisulfanyl
+  group at position 2. Isolated from Allium stipitatum, it exhibits antibacterial
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(methyldisulfanyl)pyridine 1-oxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26416
+- CHEBI:35489
+- CHEBI:38189
+xrefs:
+- reaxys:19619270
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CSSc1cccc[n+]1[O-]
+  standard_inchi: InChI=1S/C6H7NOS2/c1-9-10-6-4-2-3-5-7(6)8/h2-5H,1H3
+  standard_inchi_key: XKLCDAACRKRTLY-UHFFFAOYSA-N
+  molecular_formula: C6H7NOS2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 173.262
+  monoisotopic_mass: 172.99691
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66373
+  source_label: 2-(methyldithio)pyridine-N-oxide
+  minted_identifier: antibioticmech:chebi-bb1f8e6e58
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

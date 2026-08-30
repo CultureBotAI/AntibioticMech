@@ -1,0 +1,46 @@
+identifier: antibioticmech:aro-9aee56c696
+label: avoparcin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Avoparcin is a glycopeptide antibiotic that is an analog of vancomycin.
+  It was formally used to treat animals, but has since been banned because of its
+  selection for vancomycin-resistant enterococci.
+definition_source: PMID:2532132
+parent_compounds:
+- ARO:3000081
+xrefs:
+- ARO:3000767
+- CHEBI:221101
+- chembl:CHEMBL2108224
+- pubchem.compound:16132294
+structural_class: glycopeptide antibiotic
+structural_class_id: ARO:3000081
+chemical_structure:
+  smiles: C[C@H]1[C@@H]([C@@H](C[C@@H](O1)O[C@H]2[C@H]3C(=O)N[C@@H](C4=C(C(=CC(=C4)O)O)C5=C(C=CC(=C5)[C@H](C(=O)N3)NC(=O)[C@H]6C7=CC(=C(C(=C7)OC8=C(C=C2C=C8)Cl)O[C@H]9C([C@H]([C@@H]([C@H](O9)CO)O)O)O[C@H]1C[C@H]([C@H]([C@@H](O1)C)O)N)OC1=CC=C(C=C1)[C@H]([C@H](C(=O)N[C@H](C(=O)N6)C1=CC=C(C=C1)O)NC(=O)[C@@H](C1=CC=C(C=C1)O[C@H]1[C@@H]([C@@H]([C@H]([C@@H](O1)C)O)O)O)NC)O)O)C(=O)O)N)O
+  standard_inchi: InChI=1S/C83H92ClN9O31/c1-30-64(99)46(85)27-54(115-30)122-72-37-12-20-50(45(84)22-37)120-52-24-38-23-51(73(52)124-83-74(70(105)68(103)53(29-94)121-83)123-55-28-47(86)65(100)31(2)116-55)118-41-17-9-35(10-18-41)67(102)62(92-75(107)57(87-4)33-7-15-42(16-8-33)119-82-71(106)69(104)66(101)32(3)117-82)79(111)88-58(34-5-13-39(95)14-6-34)76(108)90-60(38)78(110)89-59-36-11-19-48(97)43(21-36)56-44(25-40(96)26-49(56)98)61(81(113)114)91-80(112)63(72)93-77(59)109/h5-26,30-32,46-47,53-55,57-72,74,82-83,87,94-106H,27-29,85-86H2,1-4H3,(H,88,111)(H,89,110)(H,90,108)(H,91,112)(H,92,107)(H,93,109)(H,113,114)/t30-,31-,32-,46+,47+,53+,54-,55-,57+,58-,59+,60+,61-,62+,63-,64-,65-,66-,67+,68+,69+,70-,71+,72+,74?,82-,83-/m0/s1
+  standard_inchi_key: OTKPPUXRIADSGD-PPRNARJGSA-N
+  molecular_formula: C83H92ClN9O31
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1747.1
+  monoisotopic_mass: 1745.5587749
+source_concepts:
+- source: ARO
+  source_id: ARO:3000767
+  source_label: avoparcin
+  minted_identifier: antibioticmech:aro-9aee56c696
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000720
+  target_label: acyl-D-alanyl-D-alanine
+  evidence:
+  - reference: ARO:3000720
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000767 (avoparcin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

@@ -1,0 +1,41 @@
+identifier: CHEBI:66495
+label: YM-47142
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 18-membered cyclodepsipeptide isolated from the culture broth of Flexibacter.
+  It exhibits potent inhibitory activity against human leukocyte elastase (EC 6.5.1.1.).
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-(3-methylbutanoyl)-L-phenylalanyl-N-[(3R,6S,9S,14S,17S,18R)-6-(2-amino-2-oxoethyl)-3,18-dimethyl-9,14-bis(2-methylpropyl)-2,5,8,11,12,13,16-heptaoxo-1-oxa-4,7,10,15-tetraazacyclooctadecan-17-yl]-L-threoninamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35213
+- CHEBI:51026
+xrefs:
+- reaxys:7461361
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]1(NC(=O)[C@@H](NC(=O)[C@H](Cc2ccccc2)NC(=O)CC(C)C)[C@@H](C)O)C(=O)N[C@@H](CC(C)C)C(=O)C(=O)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CC(N)=O)C(=O)N[C@H](C)C(=O)O[C@@H]1C'
+  standard_inchi: InChI=1S/C43H64N8O13/c1-20(2)15-27-35(55)36(56)42(62)49-28(16-21(3)4)38(58)48-30(19-31(44)53)37(57)45-23(7)43(63)64-25(9)34(41(61)47-27)51-40(60)33(24(8)52)50-39(59)29(46-32(54)17-22(5)6)18-26-13-11-10-12-14-26/h10-14,20-25,27-30,33-34,52H,15-19H2,1-9H3,(H2,44,53)(H,45,57)(H,46,54)(H,47,61)(H,48,58)(H,49,62)(H,50,59)(H,51,60)/t23-,24-,25-,27+,28+,29+,30+,33+,34+/m1/s1
+  standard_inchi_key: WDOYVAJHZHVZQI-KNFAUAPHSA-N
+  molecular_formula: C43H64N8O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 901.028
+  monoisotopic_mass: 900.45928
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66495
+  source_label: YM-47142
+  minted_identifier: antibioticmech:chebi-5fee26886c
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

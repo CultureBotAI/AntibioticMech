@@ -1,0 +1,85 @@
+identifier: CHEBI:27666
+label: actinomycin D
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Dactinomycin, also known as Actinomycin D, is a cyclic peptide antibiotic
+  that interacts with DNA to inhibit RNA synthesis.
+definition_source: PMID:2410919
+synonyms:
+- synonym_text: 2-amino-4,6-dimethyl-3-oxo-1-N,9-N-bis-[(18aS)-10c,14,17-trimethyl-5,8,12,15,18-pentaoxo-6c,13t-di(propan-2-yl)-18ar-hexadecahydro-1H-pyrrolo[2,1-i][1,4,7,10,13]oxatetraazacyclohexadecin-9c-yl]-3H-phenoxazine-1,9-dicarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-amino-N,N'-bis(hexadecahydro-2,5,9-trimethyl-6,13-bis(1-methylethyl)-1,4,7,11,14-pentaoxo-1H-pyrrolo(2,1-i)(1,4,7,10,13)oxatetra-azacyclohexadecin-10-yl)-4,6-dimethyl-3-oxo-3H-phenoxazine-1,9-dicarboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ActD
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Actinomycin D
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dactinomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: actinomycin C1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: actinomycin IV
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15369
+- ARO:3009657
+xrefs:
+- ARO:3000696
+- beilstein:4173766
+- cas:50-76-0
+- drugbank:DB00970
+- drugcentral:774
+- kegg.compound:C06770
+- kegg.drug:D00214
+- lincs.smallmolecule:LSM-5783
+- wikipedia.en:Dactinomycin
+- chembl:CHEMBL1554
+- pubchem.compound:457193
+activity_roles:
+- CHEBI:33281
+structural_class: nonribosomal peptide antibiotics
+structural_class_id: ARO:3009657
+chemical_structure:
+  smiles: '[H][C@@]12CCCN1C(=O)[C@@H](C(C)C)NC(=O)[C@@H](NC(=O)c1c3nc4c(C(=O)N[C@@H]5C(=O)N[C@H](C(C)C)C(=O)N6CCC[C@@]6([H])C(=O)N(C)CC(=O)N(C)[C@@H](C(C)C)C(=O)O[C@@H]5C)ccc(C)c4oc-3c(C)c(=O)c1N)[C@@H](C)OC(=O)[C@H](C(C)C)N(C)C(=O)CN(C)C2=O'
+  standard_inchi: InChI=1S/C62H86N12O16/c1-27(2)42-59(84)73-23-17-19-36(73)57(82)69(13)25-38(75)71(15)48(29(5)6)61(86)88-33(11)44(55(80)65-42)67-53(78)35-22-21-31(9)51-46(35)64-47-40(41(63)50(77)32(10)52(47)90-51)54(79)68-45-34(12)89-62(87)49(30(7)8)72(16)39(76)26-70(14)58(83)37-20-18-24-74(37)60(85)43(28(3)4)66-56(45)81/h21-22,27-30,33-34,36-37,42-45,48-49H,17-20,23-26,63H2,1-16H3,(H,65,80)(H,66,81)(H,67,78)(H,68,79)/t33-,34-,36+,37+,42-,43-,44+,45+,48+,49+/m1/s1
+  standard_inchi_key: RJURFGZVJUQBHK-IIXSONLDSA-N
+  molecular_formula: C62H86N12O16
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1255.438
+  monoisotopic_mass: 1254.62847
+source_concepts:
+- source: ARO
+  source_id: ARO:3000696
+  source_label: dactinomycin
+  minted_identifier: antibioticmech:aro-54f32ec9d8
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:27666
+  source_label: actinomycin D
+  minted_identifier: antibioticmech:chebi-2f20e696b0
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000741
+  target_label: transcription complex DNA
+  evidence:
+  - reference: ARO:3000741
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000696 (dactinomycin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

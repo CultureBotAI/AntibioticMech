@@ -1,0 +1,76 @@
+identifier: CHEBI:582124
+label: myriocin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An amino acid-based antibiotic derived from certain thermophilic fungi;
+  acts as a potent inhibitor of serine palmitoyltransferase, the first step in sphingosine
+  biosynthesis. Myriocin also possesses immunosuppressant activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S,3R,4R,6E)-2-amino-3,4-dihydroxy-2-(hydroxymethyl)-14-oxoicos-6-enoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,3R,4R)-(E)-2-amino-3,4-dihydroxy-2-hydroxymethyl-14-oxoeicos-6-enoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,3R,4R,6E)-2-amino-3,4-dihydroxy-2-(hydroxymethyl)-14-oxo-6-eicosenoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ISP-1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ISP-I
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic ISP-1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic ISP-I
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: thermozymocidin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35785
+- CHEBI:35868
+- CHEBI:59755
+- CHEBI:83925
+xrefs:
+- cas:35891-70-4
+- kegg.compound:C19914
+- knapsack:C00016936
+- lipidmaps:LMFA01060203
+- pdb-ccd:VRP
+- reaxys:5113331
+- wikipedia.en:Myriocin
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCCCC(=O)CCCCCC/C=C/C[C@@H](O)[C@H](O)[C@@](N)(CO)C(=O)O
+  standard_inchi: InChI=1S/C21H39NO6/c1-2-3-4-10-13-17(24)14-11-8-6-5-7-9-12-15-18(25)19(26)21(22,16-23)20(27)28/h9,12,18-19,23,25-26H,2-8,10-11,13-16,22H2,1H3,(H,27,28)/b12-9+/t18-,19+,21+/m1/s1
+  standard_inchi_key: ZZIKIHCNFWXKDY-GNTQXERDSA-N
+  molecular_formula: C21H39NO6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 401.544
+  monoisotopic_mass: 401.27774
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:582124
+  source_label: myriocin
+  minted_identifier: antibioticmech:chebi-5019c40aa1
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

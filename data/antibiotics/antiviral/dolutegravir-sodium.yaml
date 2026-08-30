@@ -1,0 +1,52 @@
+identifier: CHEBI:76007
+label: dolutegravir sodium
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic sodium salt that is the monosodium salt of dolutegravir. Used
+  for treatment of HIV-1.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Tivicay
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: sodium (4R,12aS)-9-[(2,4-difluorobenzyl)carbamoyl]-4-methyl-6,8-dioxo-3,4,6,8,12,12a-hexahydro-2H-pyrido[1',2':4,5]pyrazino[2,1-b][1,3]oxazin-7-olate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GSK 1349572A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GSK1349572A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38700
+xrefs:
+- cas:1051375-19-9
+- kegg.drug:D10113
+- reaxys:20386344
+- wikipedia.en:Dolutegravir
+activity_roles:
+- CHEBI:67268
+chemical_structure:
+  smiles: '[H][C@]12Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c([O-])c3C(=O)N1[C@H](C)CCO2.[Na+]'
+  standard_inchi: InChI=1S/C20H19F2N3O5.Na/c1-10-4-5-30-15-9-24-8-13(17(26)18(27)16(24)20(29)25(10)15)19(28)23-7-11-2-3-12(21)6-14(11)22;/h2-3,6,8,10,15,27H,4-5,7,9H2,1H3,(H,23,28);/q;+1/p-1/t10-,15+;/m1./s1
+  standard_inchi_key: UGWJRRXTMKRYNK-VSLILLSYSA-M
+  molecular_formula: C20H18F2N3O5.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 441.366
+  monoisotopic_mass: 441.11122
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:76007
+  source_label: dolutegravir sodium
+  minted_identifier: antibioticmech:chebi-82b7f49f9a
+  role_terms:
+  - CHEBI:67268
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

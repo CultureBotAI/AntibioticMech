@@ -1,0 +1,53 @@
+identifier: CHEBI:193597
+label: ARS-1620
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A qinazoline derivative carrying chloro and fluoro substituents at positions
+  6 and 8 respectively, a 2-fluoro-6-hydroxyphenyl group at position 7, and a 4-(prop-2-enoyl)piperazin-1-yl
+  group at position 4. A potent, selective, and orally bioavailable covalent KRAS-G12C
+  inhibitor, it inhibits the protein coding gene KRAS (Kirsten rat sarcoma virus)
+  with high potency in cells and animals.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-{4-[(7Sa)-6-chloro-8-fluoro-7-(2-fluoro-6-hydroxyphenyl)quinazolin-4-yl]piperazin-1-yl}prop-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-1-{4-[6-chloro-8-fluoro-7-(2-fluoro-6-hydroxyphenyl)quinazolin-4-yl]
+    piperazin-1-yl}propan-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-[4-[(7S)-6-chloro-8-fluoro-7-[(1S)-2-fluoro-6-hydroxyphenyl]-4-quinazolinyl]-1-piperazinyl]-2-propen-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ARS 1620
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38530
+xrefs:
+- pdb-ccd:91S
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: C=CC(=O)N1CCN(c2ncnc3c(F)c(-c4c(O)cccc4F)c(Cl)cc23)CC1
+  standard_inchi: InChI=1S/C21H17ClF2N4O2/c1-2-16(30)27-6-8-28(9-7-27)21-12-10-13(22)17(19(24)20(12)25-11-26-21)18-14(23)4-3-5-15(18)29/h2-5,10-11,29H,1,6-9H2
+  standard_inchi_key: ZRPZPNYZFSJUPA-UHFFFAOYSA-N
+  molecular_formula: C21H17ClF2N4O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 430.842
+  monoisotopic_mass: 430.10081
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:193597
+  source_label: ARS-1620
+  minted_identifier: antibioticmech:chebi-4e2a374245
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

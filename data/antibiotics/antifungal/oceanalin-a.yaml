@@ -1,0 +1,44 @@
+identifier: CHEBI:66806
+label: oceanalin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A glycosphingolipid isolated from a marine sponge Oceanapia sp. that exhibits
+  antifungal activity against fluconazole-resistant yeast Candida glabrata with an
+  MIC value of 30 μg/ml.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,3R,16E)-2-amino-25-(6,7-dihydroxy-1,2,3,4-tetrahydroisoquinolin-1-yl)-18-methoxypentacos-16-en-3-yl
+    β-D-galactopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24402
+- CHEBI:25698
+- CHEBI:26507
+xrefs:
+- reaxys:10143112
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]1(O[C@H](CCCCCCCCCCCC/C=C/C(CCCCCCCC2NCCc3cc(O)c(O)cc32)OC)[C@@H](C)N)O[C@H](CO)[C@H](O)[C@H](O)[C@H]1O'
+  standard_inchi: InChI=1S/C41H72N2O9/c1-29(42)36(51-41-40(49)39(48)38(47)37(28-44)52-41)23-19-15-10-8-6-4-3-5-7-9-12-16-20-31(50-2)21-17-13-11-14-18-22-33-32-27-35(46)34(45)26-30(32)24-25-43-33/h16,20,26-27,29,31,33,36-41,43-49H,3-15,17-19,21-25,28,42H2,1-2H3/b20-16+/t29-,31?,33?,36-,37-,38+,39+,40-,41-/m1/s1
+  standard_inchi_key: HIPXPNHGBRGNFB-WWQAAKFXSA-N
+  molecular_formula: C41H72N2O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 737.032
+  monoisotopic_mass: 736.52378
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66806
+  source_label: oceanalin A
+  minted_identifier: antibioticmech:chebi-5a573c02f2
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

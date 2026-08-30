@@ -1,0 +1,92 @@
+identifier: CHEBI:15400
+label: (−)-carvone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carvone having (R) configuration.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4R)-p-mentha-1(6),8-dien-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R)-2-methyl-5-(prop-1-en-2-yl)cyclohex-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (-)-Carvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4R)-Carvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R)-2-methyl-5-(1-methylethenyl)-2-cyclohexen-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-(−)-carvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-2-methyl-5-(1-methylethenyl)-2-cyclohexen-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-5-isopropenyl-2-methylcyclohex-2-en-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-(4R)-carvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-(R)-carvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-p-mentha-6,8-dien-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: l-1-methyl-4-isopropenyl-6-cyclohexen-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: l-carvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: l-p-mentha-1(6),8-dien-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: levo-carvone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-carvone
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38265
+xrefs:
+- beilstein:3588497
+- cas:6485-40-1
+- gmelin:83213
+- kegg.compound:C01767
+- knapsack:C00000807
+- lipidmaps:LMPR0102090007
+- ppdb:125
+- reaxys:2206714
+- umbbd.compound:c0627
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C=C(C)[C@@H]1CC=C(C)C(=O)C1
+  standard_inchi: InChI=1S/C10H14O/c1-7(2)9-5-4-8(3)10(11)6-9/h4,9H,1,5-6H2,2-3H3/t9-/m1/s1
+  standard_inchi_key: ULDHMXUKGWMISQ-SECBINFHSA-N
+  molecular_formula: C10H14O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 150.221
+  monoisotopic_mass: 150.10447
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:15400
+  source_label: (−)-carvone
+  minted_identifier: antibioticmech:chebi-4d4e9598a2
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

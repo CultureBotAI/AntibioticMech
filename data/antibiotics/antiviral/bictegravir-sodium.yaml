@@ -1,0 +1,43 @@
+identifier: CHEBI:172961
+label: bictegravir sodium
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic sodium salt that is the monosodium salt of bictegravir. Used
+  for treatment of HIV-1.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sodium (2R,5S,13aR)-7,9-dioxo-10-[(2,4,6-trifluorobenzyl)carbamoyl]-2,3,4,5,7,9,13,13a-octahydro-2,5-methanopyrido[1',2':4,5]pyrazino[2,1-b][1,3]oxazepin-8-olate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38700
+xrefs:
+- cas:1807988-02-8
+- chemspider:48772870
+- drugbank:DBSALT002077
+- kegg.drug:D10910
+activity_roles:
+- CHEBI:67268
+chemical_structure:
+  smiles: '[H][C@@]12CC[C@@]([H])(C1)N1C(=O)c3c([O-])c(=O)c(C(=O)NCc4c(F)cc(F)cc4F)cn3C[C@@]1([H])O2.[Na+]'
+  standard_inchi: InChI=1S/C21H18F3N3O5.Na/c22-9-3-14(23)12(15(24)4-9)6-25-20(30)13-7-26-8-16-27(10-1-2-11(5-10)32-16)21(31)17(26)19(29)18(13)28;/h3-4,7,10-11,16,29H,1-2,5-6,8H2,(H,25,30);/q;+1/p-1/t10-,11+,16+;/m0./s1
+  standard_inchi_key: WJNFBIVCQMPPJC-FQYDJHLKSA-M
+  molecular_formula: C21H17F3N3O5.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 471.367
+  monoisotopic_mass: 471.1018
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:172961
+  source_label: bictegravir sodium
+  minted_identifier: antibioticmech:chebi-a59565cdea
+  role_terms:
+  - CHEBI:67268
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,58 @@
+identifier: CHEBI:228238
+label: chloroinconazide
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (1RS,3S)-N'-[(E)-(4-chlorobenzylidene)]-2,3,4,9-tetrahydro-1-methyl-1H-pyrido[3,4-b]indole-3-carbohydrazide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1Ξ,3S)-N'-[(E)-(4-chlorophenyl)methylidene]-1-methyl-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indole-3-carbohydrazide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3S)-2,3,4,9-tetrahydro-1-methyl-1H-pyrido[3,4-b]indole-3-carboxylic
+    acid (2E)-2-[(4-chlorophenyl)methylene]hydrazide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3S)-N'-[(E)-(4-chlorophenyl)methylidene]-1-methyl-2,3,4,9-tetrahydro-1H-β-carboline-3-carbohydrazide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35363
+- CHEBI:60834
+- CHEBI:83403
+xrefs:
+- cas:2442449-10-5
+- pesticides:chloroinconazide
+- ppdb:3464
+- reaxys:55193976
+activity_roles:
+- CHEBI:22587
+- CHEBI:24127
+chemical_structure:
+  smiles: CC1N[C@H](C(=O)N/N=C/c2ccc(Cl)cc2)Cc2c1nc1ccccc21
+  standard_inchi: InChI=1S/C20H19ClN4O/c1-12-19-16(15-4-2-3-5-17(15)24-19)10-18(23-12)20(26)25-22-11-13-6-8-14(21)9-7-13/h2-9,11-12,18,23-24H,10H2,1H3,(H,25,26)/b22-11+/t12?,18-/m0/s1
+  standard_inchi_key: KMNVHTXBKWKMBA-KMRULJOSSA-N
+  molecular_formula: C20H19ClN4O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 366.852
+  monoisotopic_mass: 366.12474
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:228238
+  source_label: chloroinconazide
+  minted_identifier: antibioticmech:chebi-efd4131d0a
+  role_terms:
+  - CHEBI:22587
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

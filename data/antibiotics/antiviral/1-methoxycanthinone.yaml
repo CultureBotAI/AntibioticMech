@@ -1,0 +1,45 @@
+identifier: CHEBI:66700
+label: 1-methoxycanthinone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An indole alkaloid that is the 1-methoxy derivative of canthinone. Isolated
+  from Ailanthus altissima and Leitneria floridana, it exhibits anti-HIV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-methoxy-6H-indolo[3,2,1-de][1,5]naphthyridin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-methoxycanthin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:38163
+- CHEBI:38958
+xrefs:
+- reaxys:668854
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: COc1cnc2ccc(=O)n3c4ccccc4c1c23
+  standard_inchi: InChI=1S/C15H10N2O2/c1-19-12-8-16-10-6-7-13(18)17-11-5-3-2-4-9(11)14(12)15(10)17/h2-8H,1H3
+  standard_inchi_key: LEPXKGXTXIACRO-UHFFFAOYSA-N
+  molecular_formula: C15H10N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 250.257
+  monoisotopic_mass: 250.07423
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66700
+  source_label: 1-methoxycanthinone
+  minted_identifier: antibioticmech:chebi-106be79f45
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

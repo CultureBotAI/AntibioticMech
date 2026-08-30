@@ -1,0 +1,45 @@
+identifier: CHEBI:46742
+label: Nutlin-3
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: rel-4-{[(4R,5S)-4,5-bis(4-chlorophenyl)-2-{2-[(propan-2-yl)oxy]-4-methoxyphenyl}-4,5-dihydro-1H-imidazol-1-yl]carbonyl}piperazin-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cis-4-{[4,5-bis(4-chlorophenyl)-2-(2-isopropoxy-4-methoxyphenyl)-4,5-dihydroimidazol-1-yl]carbonyl}piperazin-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nutlin 3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:46741
+- CHEBI:46846
+xrefs:
+- beilstein:10243211
+- cas:548472-68-0
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: COc1ccc(C2=N[C@H](c3ccc(Cl)cc3)[C@H](c3ccc(Cl)cc3)N2C(=O)N2CCNC(=O)C2)c(OC(C)C)c1
+  standard_inchi: InChI=1S/C30H30Cl2N4O4/c1-18(2)40-25-16-23(39-3)12-13-24(25)29-34-27(19-4-8-21(31)9-5-19)28(20-6-10-22(32)11-7-20)36(29)30(38)35-15-14-33-26(37)17-35/h4-13,16,18,27-28H,14-15,17H2,1-3H3,(H,33,37)/t27-,28+/m1/s1
+  standard_inchi_key: BDUHCSBCVGXTJM-IZLXSDGUSA-N
+  molecular_formula: C30H30Cl2N4O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 581.5
+  monoisotopic_mass: 580.16441
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:46742
+  source_label: Nutlin-3
+  minted_identifier: antibioticmech:chebi-0d59278870
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

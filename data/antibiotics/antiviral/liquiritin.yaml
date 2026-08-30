@@ -1,0 +1,74 @@
+identifier: CHEBI:80845
+label: liquiritin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A flavanone glycoside that is liquiritigenin attached to a β-D-glucopyranosyl
+  residue at position 4' via a glycosidic linkage.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-[(2S)-7-hydroxy-4-oxo-3,4-dihydro-2H-1-benzopyran-2-yl]phenyl β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4',7-dihydroxyflavanone 4'-(β-D-glucopyranoside)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4'-O-β-D-glucopyranosyl-7-hydroxyflavan-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-hydroxyflavanone 4'-O-glucoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-hydroxyflavanone 4'-O-β-D-glucoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: likviritin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: liquiritigenin 4'-O-β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: liquiritigenin-4'-β-D-glucoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: liquiritoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22798
+- CHEBI:38748
+- CHEBI:63367
+- CHEBI:72730
+xrefs:
+- cas:551-15-5
+- hmdb:HMDB0029520
+- kegg.compound:C16989
+- knapsack:C00008193
+- lipidmaps:LMPK12140021
+- metacyc.compound:CPD-21623
+- reaxys:61653
+- wikipedia.en:Liquiritin
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: O=C1C[C@@H](c2ccc(O[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)cc2)Oc2cc(O)ccc21
+  standard_inchi: InChI=1S/C21H22O9/c22-9-17-18(25)19(26)20(27)21(30-17)28-12-4-1-10(2-5-12)15-8-14(24)13-6-3-11(23)7-16(13)29-15/h1-7,15,17-23,25-27H,8-9H2/t15-,17+,18+,19-,20+,21+/m0/s1
+  standard_inchi_key: DEMKZLAVQYISIA-ZRWXNEIDSA-N
+  molecular_formula: C21H22O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 418.398
+  monoisotopic_mass: 418.12638
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:80845
+  source_label: liquiritin
+  minted_identifier: antibioticmech:chebi-71c84b4200
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,45 @@
+identifier: CHEBI:68859
+label: arugosin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dibenzooxepine that is dibenzo[b,e]oxepin-11(6H)-one substituted by
+  hydroxy groups at positions 1, 6 and 10, a methyl group at position 8, a prenyl
+  group at position 4 and a prenyloxy group at position 7. Isolated from Aspergillus,
+  it exhibits antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1,6,10-trihydroxy-8-methyl-4-(3-methylbut-2-en-1-yl)-7-[(3-methylbut-2-en-1-yl)oxy]dibenzo[b,e]oxepin-11(6H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:38131
+- CHEBI:38926
+- CHEBI:3992
+xrefs:
+- reaxys:2025561
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)=CCOc1c(C)cc(O)c2c1C(O)Oc1c(CC=C(C)C)ccc(O)c1C2=O
+  standard_inchi: InChI=1S/C25H28O6/c1-13(2)6-7-16-8-9-17(26)20-22(28)19-18(27)12-15(5)23(30-11-10-14(3)4)21(19)25(29)31-24(16)20/h6,8-10,12,25-27,29H,7,11H2,1-5H3
+  standard_inchi_key: WKCOWVOAMWLTDQ-UHFFFAOYSA-N
+  molecular_formula: C25H28O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 424.493
+  monoisotopic_mass: 424.18859
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68859
+  source_label: arugosin B
+  minted_identifier: antibioticmech:chebi-9d788d11dd
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

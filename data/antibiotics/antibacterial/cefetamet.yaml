@@ -1,0 +1,76 @@
+identifier: CHEBI:135629
+label: cefetamet
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cephalosporin compound having methyl and [(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino
+  side-groups; a cephalosporin antibiotic active against Neisseria gonorrhoeae.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefetametum
+  synonym_type: INN
+  source: chebi
+- synonym_text: céfétamet
+  synonym_type: INN
+  source: chebi
+- synonym_text: 3-methyl-7β-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino}-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-7-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino}-3-methyl-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: deacetoxycefotaxime
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FET
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23066
+- ARO:0000032
+xrefs:
+- ARO:3004000
+- drugcentral:3074
+- kegg.drug:D03424
+- reaxys:967151
+- chembl:CHEMBL2103764
+- pubchem.compound:5487888
+activity_roles:
+- CHEBI:33281
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(C)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1'
+  standard_inchi: InChI=1S/C14H15N5O5S2/c1-5-3-25-12-8(11(21)19(12)9(5)13(22)23)17-10(20)7(18-24-2)6-4-26-14(15)16-6/h4,8,12H,3H2,1-2H3,(H2,15,16)(H,17,20)(H,22,23)/b18-7-/t8-,12-/m1/s1
+  standard_inchi_key: MQLRYUCJDNBWMV-GHXIOONMSA-N
+  molecular_formula: C14H15N5O5S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 397.438
+  monoisotopic_mass: 397.05146
+source_concepts:
+- source: ARO
+  source_id: ARO:3004000
+  source_label: cefetamet
+  minted_identifier: antibioticmech:aro-ead6b0296a
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:135629
+  source_label: cefetamet
+  minted_identifier: antibioticmech:chebi-01e6e14b88
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

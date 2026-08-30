@@ -1,0 +1,67 @@
+identifier: CHEBI:7524
+label: nerolidol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A farnesane sesquiterpenoid that is dodeca-1,6,10-triene which carries
+  methyl groups at positions 3, 7 and 11 and a hydroxy group at position 3. It is
+  a natural product that is present in various flowers and plants with a floral odor.
+  Chemically, it exists in two geometric isomers, trans and cis forms. It is widely
+  used in cosmetics (e.g. shampoos and perfumes), in non-cosmetic products (e.g. detergents
+  and cleansers) and also as a food flavoring agent.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Stirrup
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 3,7,11-trimethyldodeca-1,6,10-trien-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,7,11-trimethyl-1,6,10-dodecatrien-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-hydroxy-3,7,11-trimethyl-1,6,10-dodecatriene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FEMA 2772
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nerolidol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134179
+- CHEBI:134397
+- CHEBI:36757
+xrefs:
+- cas:7212-44-4
+- chemspider:8549
+- foodb.food:FDB014378
+- hmdb:HMDB0035662
+- knapsack:C00003166
+- reaxys:1724135
+- wikipedia.en:Nerolidol
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H]C(CCC(C)(O)C=C)=C(C)CCC=C(C)C'
+  standard_inchi: InChI=1S/C15H26O/c1-6-15(5,16)12-8-11-14(4)10-7-9-13(2)3/h6,9,11,16H,1,7-8,10,12H2,2-5H3
+  standard_inchi_key: FQTLCLSUCSAZDY-UHFFFAOYSA-N
+  molecular_formula: C15H26O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 222.372
+  monoisotopic_mass: 222.19837
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:7524
+  source_label: nerolidol
+  minted_identifier: antibioticmech:chebi-c626d1936c
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

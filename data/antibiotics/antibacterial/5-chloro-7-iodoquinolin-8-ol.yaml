@@ -1,0 +1,93 @@
+identifier: CHEBI:74460
+label: 5-chloro-7-iodoquinolin-8-ol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monohydroxyquinoline that is quinolin-8-ol in which the hydrogens at
+  positions 5 and 7 are replaced by chlorine and iodine, respectively. It has antibacterial
+  and atifungal properties, and is used in creams for the treatment of skin infections.
+  It has also been investigated as a chelator of copper and zinc ions for the possible
+  treatment of Alzheimer's disease.
+definition_source: ChEBI
+synonyms:
+- synonym_text: clioquinol
+  synonym_type: INN
+  source: chebi
+- synonym_text: clioquinolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 5-Chlor-7-jod-8-hydroxy-chinolin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-chloro-7-iodo-8-hydroxyquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-chloro-7-iodo-8-quinolinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-chloro-8-hydroxy-7-iodoquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-iodo-5-chloro-8-hydroxyquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-iodo-5-chloroxine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chloroiodoquin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: iodochlorhydroxyquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: iodochlorohydroxyquin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: iodochloroxyquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36683
+- CHEBI:37142
+- CHEBI:38775
+xrefs:
+- cas:130-26-7
+- drugbank:DB04815
+- drugcentral:681
+- kegg.drug:D03538
+- lincs.smallmolecule:LSM-2186
+- patent:DE117767
+- patent:US641491
+- pdb-ccd:CQL
+- reaxys:153637
+- wikipedia.en:Clioquinol
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:35718
+- CHEBI:35820
+chemical_structure:
+  smiles: Oc1c(I)cc(Cl)c2cccnc12
+  standard_inchi: InChI=1S/C9H5ClINO/c10-6-4-7(11)9(13)8-5(6)2-1-3-12-8/h1-4,13H
+  standard_inchi_key: QCDFBFJGMNKBDO-UHFFFAOYSA-N
+  molecular_formula: C9H5ClINO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 305.502
+  monoisotopic_mass: 304.91044
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:74460
+  source_label: 5-chloro-7-iodoquinolin-8-ol
+  minted_identifier: antibioticmech:chebi-781dacc9d8
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:35718
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

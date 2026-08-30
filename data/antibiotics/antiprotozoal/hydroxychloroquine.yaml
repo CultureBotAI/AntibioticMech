@@ -1,0 +1,105 @@
+identifier: CHEBI:5801
+label: hydroxychloroquine
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aminoquinoline that is chloroquine in which one of the N-ethyl groups
+  is hydroxylated at position 2. An antimalarial with properties similar to chloroquine
+  that acts against erythrocytic forms of malarial parasites, it is mainly used as
+  the sulfate salt for the treatment of lupus erythematosus, rheumatoid arthritis,
+  and light-sensitive skin eruptions.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Polirreumin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: hidroxicloroquina
+  synonym_type: INN
+  source: chebi
+- synonym_text: hydroxychloroquinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-[{4-[(7-chloroquinolin-4-yl)amino]pentyl}(ethyl)amino]ethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (±)-hydroxychloroquine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-((4-((7-chloro-4-quinolyl)amino)pentyl)ethylamino)ethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(N-(4-(7-chlor-4-chinolylamino)-4-methylbutyl)ethylamino)ethanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-chloro-4-(4-(N-ethyl-N-β-hydroxyethylamino)-1-methylbutylamino)quinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-chloro-4-(4-(ethyl(2-hydroxyethyl)amino)-1-methylbutylamino)quinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-chloro-4-[4-(N-ethyl-N-β-hydroxyethylamino)-1-methylbutylamino]quinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-chloro-4-[5-(N-ethyl-N-2-hydroxyethylamino)-2-pentyl]aminoquinoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC4375
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: oxichlorochine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: oxichloroquine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:36683
+- CHEBI:36709
+- CHEBI:50995
+- CHEBI:50996
+xrefs:
+- cas:118-42-3
+- drugbank:DB01611
+- drugcentral:1395
+- hmdb:HMDB0015549
+- kegg.compound:C07043
+- kegg.drug:D08050
+- lincs.smallmolecule:LSM-5193
+- patent:US2546658
+- reaxys:253894
+- wikipedia.en:Hydroxychloroquine
+activity_roles:
+- CHEBI:149553
+- CHEBI:38068
+chemical_structure:
+  smiles: CCN(CCO)CCCC(C)Nc1ccnc2cc(Cl)ccc12
+  standard_inchi: InChI=1S/C18H26ClN3O/c1-3-22(11-12-23)10-4-5-14(2)21-17-8-9-20-18-13-15(19)6-7-16(17)18/h6-9,13-14,23H,3-5,10-12H2,1-2H3,(H,20,21)
+  standard_inchi_key: XXSMGPRMXLTPCZ-UHFFFAOYSA-N
+  molecular_formula: C18H26ClN3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 335.879
+  monoisotopic_mass: 335.17644
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5801
+  source_label: hydroxychloroquine
+  minted_identifier: antibioticmech:chebi-a04a1e3f85
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T01:42:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

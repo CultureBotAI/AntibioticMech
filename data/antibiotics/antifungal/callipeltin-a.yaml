@@ -1,0 +1,52 @@
+identifier: CHEBI:65556
+label: callipeltin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 10-membered cyclodepsipeptide containing four amino acids in the L-
+  configuration, Ala, Leu, Thr (2 residues); one (Arg) in the D-configuration; two
+  N-methyl amino acids, N-MeAla and N-MeGln; a methoxy tyrosine, a 3, 4-dimethyl-L-glutamine,
+  and a 4-amino-7-guanidino-2,3 dihydroxypentanoic acid (AGDHE), formally derived
+  from L-Arg. It is obtained from the shallow water sponge Callipelta and has been
+  found to show activity against HIV virus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S,4R)-N1-[(3S,6R,9S,12S,15R,18S,21S,22R)-9-(3-amino-3-oxopropyl)-15-(3-carbamimidamidopropyl)-18-[(1R)-1-hydroxyethyl]-6-[(R)-(4-hydroxyphenyl)(methoxy)methyl]-3,4,10,22-tetramethyl-12-(2-methylpropyl)-2,5,8,11,14,17,20-heptaoxo-1-oxa-4,7,10,13,16,19-hexaazacyclodocosan-21-yl]-N2-[(2R,3R,4S)-7-carbamimidamido-2,3-dihydroxy-4-({N-[(2R,3R,4R)-3-hydroxy-2,4,6-trimethylheptanoyl]-D-alanyl}amino)heptanoyl]-3,4-dimethyl-L-glutamamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24436
+- CHEBI:25000
+- CHEBI:25676
+- CHEBI:33853
+- CHEBI:35213
+activity_roles:
+- CHEBI:35718
+- CHEBI:64947
+chemical_structure:
+  smiles: '[H][C@]1([C@H](OC)c2ccc(O)cc2)NC(=O)[C@H](CCC(N)=O)N(C)C(=O)[C@H](CC(C)C)NC(=O)[C@@H](CCCNC(=N)N)NC(=O)[C@]([H])([C@@H](C)O)NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@H](O)[C@H](O)[C@H](CCCNC(=N)N)NC(=O)[C@@H](C)NC(=O)[C@H](C)[C@H](O)[C@H](C)CC(C)C)[C@@H](C)[C@@H](C)C(N)=O)[C@@H](C)OC(=O)[C@H](C)N(C)C1=O'
+  standard_inchi: InChI=1S/C68H116N18O20/c1-30(2)28-32(5)51(90)35(8)56(94)77-36(9)57(95)78-42(18-16-26-75-67(71)72)52(91)53(92)63(101)81-47(33(6)34(7)55(70)93)60(98)83-49-39(12)106-66(104)37(10)85(13)65(103)50(54(105-15)40-20-22-41(88)23-21-40)84-59(97)45(24-25-46(69)89)86(14)64(102)44(29-31(3)4)80-58(96)43(19-17-27-76-68(73)74)79-61(99)48(38(11)87)82-62(49)100/h20-23,30-39,42-45,47-54,87-88,90-92H,16-19,24-29H2,1-15H3,(H2,69,89)(H2,70,93)(H,77,94)(H,78,95)(H,79,99)(H,80,96)(H,81,101)(H,82,100)(H,83,98)(H,84,97)(H4,71,72,75)(H4,73,74,76)/t32-,33+,34-,35-,36-,37+,38-,39-,42+,43-,44+,45+,47+,48+,49+,50-,51-,52-,53-,54-/m1/s1
+  standard_inchi_key: UDTRUOCOOZKCCT-QVVVRIHHSA-N
+  molecular_formula: C68H116N18O20
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1505.782
+  monoisotopic_mass: 1504.86133
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65556
+  source_label: callipeltin A
+  minted_identifier: antibioticmech:chebi-fedf1ba3c6
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:64947
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

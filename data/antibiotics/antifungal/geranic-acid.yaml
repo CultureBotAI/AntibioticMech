@@ -1,0 +1,76 @@
+identifier: CHEBI:67264
+label: geranic acid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polyunsaturated fatty acid that is octa-2,6-dienoic acid bearing two
+  methyl substituents at positions 3 and 7 (the 2E-isomer).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E)-3,7-dimethylocta-2,6-dienoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-3,7-dimethylocta-2,6-dienoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,7-Dimethyl-2E,6-octadienoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,7-Dimethylocta-2,6-dienoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Geranilyc acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Geranoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-3,7-dimethyl-2,6-octadien-1-oic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-geranic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans-geranoic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25409
+- CHEBI:26208
+- CHEBI:62499
+- CHEBI:79020
+xrefs:
+- cas:459-80-3
+- cas:4698-08-2
+- hmdb:HMDB0036103
+- kegg.compound:C16461
+- lipidmaps:LMFA01030784
+- metacyc.compound:CPD-7618
+- patent:US2008161397
+- patent:US2012014883
+- reaxys:1705144
+- wikipedia.en:Geranic_acid
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(C)=CCC/C(C)=C/C(=O)O
+  standard_inchi: InChI=1S/C10H16O2/c1-8(2)5-4-6-9(3)7-10(11)12/h5,7H,4,6H2,1-3H3,(H,11,12)/b9-7+
+  standard_inchi_key: ZHYZQXUYZJNEHD-VQHVLOKHSA-N
+  molecular_formula: C10H16O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 168.236
+  monoisotopic_mass: 168.11503
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:67264
+  source_label: geranic acid
+  minted_identifier: antibioticmech:chebi-d324444dfe
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

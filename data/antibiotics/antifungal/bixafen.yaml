@@ -1,0 +1,77 @@
+identifier: CHEBI:83106
+label: bixafen
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aromatic amide obtained by formal condensation of the carboxy group
+  of 3-(difluoromethyl)-1-methylpyrazole-4-carboxylic acid with the amino group of
+  3',4'-dichloro-5-fluorobiphenyl-2-amine. A fungicide for use in cereals for key
+  stem and leaf disease control including strobilurin-resistant septoria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-(3',4'-dichloro-5-fluoro[1,1'-biphenyl]-2-yl)-3-(difluoromethyl)-1-methyl-1H-pyrazole-4-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(3',4'-dichloro-5-fluorobiphenyl-2-yl)-3-(difluoromethyl)-1-methyl-1H-pyrazole-4-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(3',4'-dichloro-5-fluorobiphenyl-2-yl)-3-(difluoromethyl)-1-methylpyrazole-4-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(3,4-dichloro-5-fluorobiphenyl-2-yl)-3-(difluoromethyl)-1-methylpyrazole-4-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: bixafène
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22888
+- CHEBI:23697
+- CHEBI:26410
+- CHEBI:37143
+- CHEBI:62733
+- CHEBI:87015
+xrefs:
+- cas:581809-46-3
+- patent:EP2039771
+- patent:EP2071953
+- patent:EP2255626
+- patent:US2010324101
+- patent:WO2010136139
+- patent:WO2011073103
+- patent:WO2012020777
+- pesticides:bixafen
+- ppdb:1250
+- reaxys:11332859
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: Cn1cc(C(=O)Nc2ccc(F)cc2-c2ccc(Cl)c(Cl)c2)c(C(F)F)n1
+  standard_inchi: InChI=1S/C18H12Cl2F3N3O/c1-26-8-12(16(25-26)17(22)23)18(27)24-15-5-3-10(21)7-11(15)9-2-4-13(19)14(20)6-9/h2-8,17H,1H3,(H,24,27)
+  standard_inchi_key: LDLMOOXUCMHBMZ-UHFFFAOYSA-N
+  molecular_formula: C18H12Cl2F3N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 414.214
+  monoisotopic_mass: 413.03095
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83106
+  source_label: bixafen
+  minted_identifier: antibioticmech:chebi-2a2c1ae186
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

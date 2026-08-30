@@ -1,0 +1,45 @@
+identifier: CHEBI:66247
+label: TMC-95C
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 17-membered macrocyclic lactam that incorporates a phenol and a substituted
+  indole moiety. It includes a S-hydroxy group at position 11 and a (3-methyl-2-oxopentanoyl)amino
+  group at position 18 with a S-methyl group. It acts as a proteasome inhibitor and
+  is isolated from Apiospora montagnei Sacc. TC 1093, isolated from a soil sample.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (10S,11S,12S,15S,18S)-15-(2-amino-2-oxoethyl)-10,11,23-trihydroxy-18-{[(3S)-3-methyl-2-oxopentanoyl]amino}-9,14,17-trioxo-N-[(1Z)-prop-1-en-1-yl]-8,13,16-triazatetracyclo[18.3.1.02,7.06,10]tetracosa-1(24),2,4,6,20,22-hexaene-12-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24828
+- CHEBI:24995
+- CHEBI:26878
+- CHEBI:33853
+- CHEBI:35681
+- CHEBI:51026
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C/C=C\NC(=O)[C@H]1NC(=O)[C@H](CC(N)=O)NC(=O)[C@@H](NC(=O)C(=O)[C@@H](C)CC)Cc2ccc(O)c(c2)-c2cccc3c2NC(=O)[C@@]3(O)[C@H]1O
+  standard_inchi: InChI=1S/C33H38N6O10/c1-4-11-35-30(46)25-27(43)33(49)19-8-6-7-17(24(19)39-32(33)48)18-12-16(9-10-22(18)40)13-20(37-31(47)26(42)15(3)5-2)28(44)36-21(14-23(34)41)29(45)38-25/h4,6-12,15,20-21,25,27,40,43,49H,5,13-14H2,1-3H3,(H2,34,41)(H,35,46)(H,36,44)(H,37,47)(H,38,45)(H,39,48)/b11-4-/t15-,20-,21-,25-,27-,33-/m0/s1
+  standard_inchi_key: ZIAXNZCTODBCKW-QDRDEZGCSA-N
+  molecular_formula: C33H38N6O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 678.699
+  monoisotopic_mass: 678.26494
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66247
+  source_label: TMC-95C
+  minted_identifier: antibioticmech:chebi-8e1d221c6b
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

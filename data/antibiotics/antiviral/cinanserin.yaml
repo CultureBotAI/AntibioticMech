@@ -1,0 +1,57 @@
+identifier: CHEBI:145999
+label: cinanserin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aryl sulfide that is (2E)-3-phenyl-N-(2-sulfanylphenyl)prop-2-enamide
+  in which the hydrogen of the thiol group is substituted by a 3-(dimethylamino)propyl
+  group. It is a 5-hydroxytryptamine receptor antagonist and an inhibitor of SARS-CoV
+  replication.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cinanserina
+  synonym_type: INN
+  source: chebi
+- synonym_text: cinanserinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: cinansérine
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2E)-N-(2-{[3-(dimethylamino)propyl]sulfanyl}phenyl)-3-phenylprop-2-enamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:23247
+- CHEBI:35683
+- CHEBI:50996
+xrefs:
+- cas:1166-34-3
+- wikipedia.en:Cinanserin
+activity_roles:
+- CHEBI:149553
+- CHEBI:22587
+chemical_structure:
+  smiles: CN(C)CCCSc1ccccc1NC(=O)/C=C/c1ccccc1
+  standard_inchi: InChI=1S/C20H24N2OS/c1-22(2)15-8-16-24-19-12-7-6-11-18(19)21-20(23)14-13-17-9-4-3-5-10-17/h3-7,9-14H,8,15-16H2,1-2H3,(H,21,23)/b14-13+
+  standard_inchi_key: RSUVYMGADVXGOU-BUHFOSPRSA-N
+  molecular_formula: C20H24N2OS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 340.492
+  monoisotopic_mass: 340.16093
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:145999
+  source_label: cinanserin
+  minted_identifier: antibioticmech:chebi-026e5e019b
+  role_terms:
+  - CHEBI:149553
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,62 @@
+identifier: CHEBI:85627
+label: picarbutrazox
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An oxime O-ether that is the (Z)-oxime derivative of 1-methyl-1H-tetrazol-5-yl
+  phenyl ketone in which the hydrogen of the hydroxy group has been replaced by the
+  N-tert-butoxycarbonyl derivative of a [6-(Boc-amino)pyridin-2-yl]methyl group. It
+  is a novel fungicide developed for use on cereals.
+definition_source: ChEBI
+synonyms:
+- synonym_text: tert-butyl {6-[({(Z)-[(1-methyl-1H-tetrazol-5-yl)(phenyl)methylene]amino}oxy)methyl]pyridin-2-yl}carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,1-dimethylethyl N-[6-[[[(Z)-[(1-methyl-1H-tetrazol-5-yl)phenylmethylene]amino]oxy]methyl]-2-pyridinyl]carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tert-butyl (6-{[(Z)-(1-methyl-1H-5-tetrazolyl)(phenyl)methylene]aminooxymethyl}-2-pyridyl)carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:26421
+- CHEBI:35689
+- CHEBI:36816
+- CHEBI:87061
+xrefs:
+- cas:500207-04-5
+- patent:EP2687088
+- pesticides:picarbutrazox
+- ppdb:2667
+- reaxys:11888660
+activity_roles:
+- CHEBI:24127
+- CHEBI:86328
+chemical_structure:
+  smiles: Cn1nnnc1/C(=N\OCc1cccc(NC(=O)OC(C)(C)C)n1)c1ccccc1
+  standard_inchi: InChI=1S/C20H23N7O3/c1-20(2,3)30-19(28)22-16-12-8-11-15(21-16)13-29-24-17(14-9-6-5-7-10-14)18-23-25-26-27(18)4/h5-12H,13H2,1-4H3,(H,21,22,28)/b24-17-
+  standard_inchi_key: URHWNXDZOULUHC-ULJHMMPZSA-N
+  molecular_formula: C20H23N7O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 409.45
+  monoisotopic_mass: 409.18624
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85627
+  source_label: picarbutrazox
+  minted_identifier: antibioticmech:chebi-18bdd5906e
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

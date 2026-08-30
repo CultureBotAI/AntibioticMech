@@ -1,0 +1,44 @@
+identifier: CHEBI:59671
+label: colistimethate B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Colistin B in which each of the primary amino groups is converted into
+  the corresponding aminomethanesulfonic acid, commonly by the action of formaldehyde
+  followed by sodium bisulfite.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '{[(3S)-4-{[(3S,6S,9S,12S,15R,18S,21S)-3-[(1R)-1-hydroxyethyl]-12,15-bis(2-methylpropyl)-2,5,8,11,14,17,20-heptaoxo-6,9,18-tris{2-[(sulfomethyl)amino]ethyl}-1,4,7,10,13,16,19-heptaazacyclotricosan-21-yl]amino}-3-{[(2S,3R)-3-hydroxy-2-({(2S)-2-[(6-methylheptanoyl)amino]-4-[(sulfomethyl)amino]butanoyl}amino)butanoyl]amino}-4-oxobutyl]amino}methanesulfonic
+    acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25903
+- CHEBI:37793
+- CHEBI:59062
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)CCCCC(=O)N[C@@H](CCNCS(=O)(=O)O)C(=O)N[C@H](C(=O)N[C@@H](CCNCS(=O)(=O)O)C(=O)N[C@H]1CCNC(=O)[C@H]([C@@H](C)O)NC(=O)[C@H](CCNCS(=O)(=O)O)NC(=O)[C@H](CCNCS(=O)(=O)O)NC(=O)[C@H](CC(C)C)NC(=O)[C@@H](CC(C)C)NC(=O)[C@H](CCNCS(=O)(=O)O)NC1=O)[C@@H](C)O
+  standard_inchi: InChI=1S/C57H108N16O28S5/c1-32(2)11-9-10-12-45(76)64-37(13-19-58-27-102(87,88)89)52(81)73-47(36(8)75)57(86)69-40(16-22-61-30-105(96,97)98)49(78)67-42-18-24-63-56(85)46(35(7)74)72-53(82)41(17-23-62-31-106(99,100)101)66-48(77)38(14-20-59-28-103(90,91)92)68-54(83)43(25-33(3)4)71-55(84)44(26-34(5)6)70-51(80)39(65-50(42)79)15-21-60-29-104(93,94)95/h32-44,46-47,58-62,74-75H,9-31H2,1-8H3,(H,63,85)(H,64,76)(H,65,79)(H,66,77)(H,67,78)(H,68,83)(H,69,86)(H,70,80)(H,71,84)(H,72,82)(H,73,81)(H,87,88,89)(H,90,91,92)(H,93,94,95)(H,96,97,98)(H,99,100,101)/t35-,36-,37+,38+,39+,40+,41+,42+,43+,44-,46+,47+/m1/s1
+  standard_inchi_key: DFSJNVZGJOIDRT-BJISPZADSA-N
+  molecular_formula: C57H108N16O28S5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1625.91
+  monoisotopic_mass: 1624.61225
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59671
+  source_label: colistimethate B
+  minted_identifier: antibioticmech:chebi-233f370abf
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

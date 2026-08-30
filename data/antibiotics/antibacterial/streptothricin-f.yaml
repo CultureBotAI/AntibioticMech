@@ -1,0 +1,121 @@
+identifier: CHEBI:60821
+label: streptothricin F
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A streptothricin in which the peptide side-chain consists of a single
+  unit of β-lysine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-O-carbamoyl-2-deoxy-2-{[(3S)-3,6-diaminohexanoyl]amino}-N-[(3aS,7R,7aS)-7-hydroxy-4-oxooctahydro-2H-imidazo[4,5-c]pyridin-2-ylidene]-β-D-gulopyranosylamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: antibiotic S 15-1A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: racemomycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: streptothricin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: streptothricin VI
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: yazumycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nourseothricin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: racemomycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: yazumycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:26789
+- ARO:3000034
+xrefs:
+- ARO:0000012
+- cas:3808-42-2
+- reaxys:6031385
+- chembl:CHEMBL1801945
+- pubchem.compound:475825
+activity_roles:
+- CHEBI:33281
+structural_class: nucleoside antibiotic
+structural_class_id: ARO:3000034
+chemical_structure:
+  smiles: '[H][C@]12N/C(=N/[C@@H]3O[C@H](CO)[C@H](OC(N)=O)[C@@H](O)[C@H]3NC(=O)C[C@@H](N)CCCN)N[C@]1([H])[C@H](O)CNC2=O'
+  standard_inchi: InChI=1S/C19H34N8O8/c20-3-1-2-7(21)4-10(30)24-13-14(31)15(35-18(22)33)9(6-28)34-17(13)27-19-25-11-8(29)5-23-16(32)12(11)26-19/h7-9,11-15,17,28-29,31H,1-6,20-21H2,(H2,22,33)(H,23,32)(H,24,30)(H2,25,26,27)/t7-,8+,9+,11+,12-,13+,14-,15-,17+/m0/s1
+  standard_inchi_key: NRAUADCLPJTGSF-VLSXYIQESA-N
+  molecular_formula: C19H34N8O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 502.529
+  monoisotopic_mass: 502.24996
+source_concepts:
+- source: ARO
+  source_id: ARO:0000012
+  source_label: streptothricin
+  minted_identifier: antibioticmech:aro-ede1146b16
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:60821
+  source_label: streptothricin F
+  minted_identifier: antibioticmech:chebi-c4e9f9eac8
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002895
+  label: SAT-2
+  evidence:
+  - reference: ARO:3002895
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000012 (streptothricin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002897
+  label: SAT-4
+  evidence:
+  - reference: ARO:3002897
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000012 (streptothricin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002898
+  label: SAT-3
+  evidence:
+  - reference: ARO:3002898
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000012 (streptothricin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3004699
+  label: sta
+  evidence:
+  - reference: ARO:3004699
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000012 (streptothricin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005045
+  label: SatA
+  evidence:
+  - reference: ARO:3005045
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000012 (streptothricin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000012 (streptothricin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

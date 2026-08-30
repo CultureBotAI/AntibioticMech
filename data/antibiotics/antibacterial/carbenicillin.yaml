@@ -1,0 +1,163 @@
+identifier: CHEBI:3393
+label: carbenicillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin antibiotic having a 6β-2-carboxy-2-phenylacetamido side-chain.
+definition_source: ChEBI
+synonyms:
+- synonym_text: carbenicilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: carbenicilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: carbenicillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-(2-carboxy-2-phenylacetamido)-2,2-dimethylpenam-3α-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-{[carboxy(phenyl)acetyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CBPC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(2-carboxy-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo(3.2.0)hept-6-yl)-2-phenylmalonamic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: carboxybenzylpenicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α-carboxybenzylpencillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: α-phenyl(carboxymethylpenicillin)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Anabactyl
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: CAR
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Carbecin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Carbenicilina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Carbenicillina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Carbenicilline
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Carbenicillinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Geopen
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Microcillin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Pyopen
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- CHEBI:88187
+- ARO:3000008
+xrefs:
+- ARO:0000043
+- cas:4697-36-3
+- drugbank:DB00578
+- drugcentral:492
+- hmdb:HMDB0014717
+- kegg.compound:C06869
+- kegg.drug:D07614
+- patent:US3142673
+- reaxys:1230663
+- wikipedia.en:Carbenicillin
+- chembl:CHEMBL1214
+- pubchem.compound:20824
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)C(C(=O)O)c1ccccc1'
+  standard_inchi: InChI=1S/C17H18N2O6S/c1-17(2)11(16(24)25)19-13(21)10(14(19)26-17)18-12(20)9(15(22)23)8-6-4-3-5-7-8/h3-7,9-11,14H,1-2H3,(H,18,20)(H,22,23)(H,24,25)/t9?,10-,11+,14-/m1/s1
+  standard_inchi_key: FPPNZSSZRUTDAP-UWFZAAFLSA-N
+  molecular_formula: C17H18N2O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 378.406
+  monoisotopic_mass: 378.08856
+source_concepts:
+- source: ARO
+  source_id: ARO:0000043
+  source_label: carbenicillin
+  minted_identifier: antibioticmech:aro-dbf9d624bc
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3393
+  source_label: carbenicillin
+  minted_identifier: antibioticmech:chebi-14f03d0274
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3003688
+  label: PvrR
+  evidence:
+  - reference: ARO:3003688
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000043 (carbenicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004578
+  label: Acinetobacter baumannii AbuO
+  evidence:
+  - reference: ARO:3004578
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000043 (carbenicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005111
+  label: blaS1
+  evidence:
+  - reference: ARO:3005111
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000043 (carbenicillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3007435
+  label: WUS-1
+  evidence:
+  - reference: ARO:3007435
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000043 (carbenicillin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000043 (carbenicillin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

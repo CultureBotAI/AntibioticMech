@@ -1,0 +1,118 @@
+identifier: CHEBI:599928
+label: moxalactam
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A broad-spectrum oxacephem antibiotic in which the oxazine ring is substituted
+  with a tetrazolylthiomethyl group and the azetidinone ring carries methoxy and 2-carboxy-2-(4-hydroxyphenyl)acetamido
+  substituents.
+definition_source: ChEBI
+synonyms:
+- synonym_text: latamoxef
+  synonym_type: INN
+  source: chebi
+- synonym_text: latamoxefum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (6R,7R)-7-{[carboxy(4-hydroxyphenyl)acetyl]amino}-7-methoxy-3-{[(1-methyl-1H-tetrazol-5-yl)sulfanyl]methyl}-8-oxo-5-oxa-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: LMOX
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Lamoxactam
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Latamoxef
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Moxalactam
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Oxa-cephem
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: festamoxin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+- CHEBI:55506
+- ARO:0000032
+xrefs:
+- ARO:3004017
+- cas:64952-97-2
+- drugbank:DB04570
+- drugcentral:1851
+- hmdb:HMDB0015574
+- kegg.compound:C07231
+- kegg.drug:D08109
+- patent:DE2713370
+- patent:US413486
+- pdb-ccd:MXL
+- reaxys:4222777
+- chembl:CHEMBL74632
+- pubchem.compound:47499
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12OCC(CSc3nnnn3C)=C(C(=O)O)N1C(=O)[C@]2(NC(=O)C(C(=O)O)c1ccc(O)cc1)OC'
+  standard_inchi: InChI=1S/C20H20N6O9S/c1-25-19(22-23-24-25)36-8-10-7-35-18-20(34-2,17(33)26(18)13(10)16(31)32)21-14(28)12(15(29)30)9-3-5-11(27)6-4-9/h3-6,12,18,27H,7-8H2,1-2H3,(H,21,28)(H,29,30)(H,31,32)/t12?,18-,20+/m1/s1
+  standard_inchi_key: JWCSIUVGFCSJCK-CAVRMKNVSA-N
+  molecular_formula: C20H20N6O9S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 520.48
+  monoisotopic_mass: 520.10125
+source_concepts:
+- source: ARO
+  source_id: ARO:3004017
+  source_label: moxalactam
+  minted_identifier: antibioticmech:aro-5a7184ea7e
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:599928
+  source_label: moxalactam
+  minted_identifier: antibioticmech:chebi-516843da45
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001815
+  label: ACC-1
+  evidence:
+  - reference: ARO:3001815
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004017 (moxalactam);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3004128
+  label: Serratia marcescens Omp1
+  evidence:
+  - reference: ARO:3004128
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004017 (moxalactam);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3004017 (moxalactam); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

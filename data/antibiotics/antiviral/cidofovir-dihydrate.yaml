@@ -1,0 +1,63 @@
+identifier: CHEBI:59495
+label: cidofovir dihydrate
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The dihydrate of the anhydrous form of cidofovir. A nucleoside analogue,
+  it is an injectable antiviral used for the treatment of cytomegalovirus (CMV) retinitis
+  in AIDS patients.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cidofovir
+  synonym_type: INN
+  source: chebi
+- synonym_text: ({[(2S)-1-(4-amino-2-oxopyrimidin-1(2H)-yl)-3-hydroxypropan-2-yl]oxy}methyl)phosphonic
+    acid—water (1/2)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (((S)-2-(4-amino-2-oxo-1(2H)-pyrimidinyl)-1-(hydroxymethyl)ethoxy)methyl)phosphonic
+    acid, dihydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ({[(2S)-1-(4-amino-2-oxopyrimidin-1(2H)-yl)-3-hydroxypropan-2-yl]oxy}methyl)phosphonic
+    acid dihydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-((S)-3-hydroxy-2-(phosphonomethoxy)propyl)cytosine dihydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cidofovir hydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35505
+xrefs:
+- cas:149394-66-1
+- drugbank:DB00369
+- kegg.drug:D00273
+- patent:EP253412
+- patent:US5142051
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: Nc1ccn(C[C@@H](CO)OCP(=O)(O)O)c(=O)n1.O.O
+  standard_inchi: InChI=1S/C8H14N3O6P.2H2O/c9-7-1-2-11(8(13)10-7)3-6(4-12)17-5-18(14,15)16;;/h1-2,6,12H,3-5H2,(H2,9,10,13)(H2,14,15,16);2*1H2/t6-;;/m0../s1
+  standard_inchi_key: FPKARFMSZDBYQF-ILKKLZGPSA-N
+  molecular_formula: C8H14N3O6P.2H2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 315.219
+  monoisotopic_mass: 315.08315
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59495
+  source_label: cidofovir dihydrate
+  minted_identifier: antibioticmech:chebi-ec48af6480
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

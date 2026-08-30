@@ -1,0 +1,52 @@
+identifier: CHEBI:3363
+label: canthin-6-one
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An indole alkaloid that is 6H-indolo[3,2,1-de][1,5]naphthyridine substituted
+  by an oxo group at position 6.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6H-indolo[3,2,1-de][1,5]naphthyridin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6H-Indolo(3,2,1-de)(1,5)naphthyridin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Canthin-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38163
+- CHEBI:38958
+- CHEBI:51689
+xrefs:
+- cas:479-43-6
+- kegg.compound:C09098
+- knapsack:C00001701
+- patent:US2011059977
+- reaxys:181378
+activity_roles:
+- CHEBI:64912
+chemical_structure:
+  smiles: O=c1ccc2nccc3c4ccccc4n1c23
+  standard_inchi: InChI=1S/C14H8N2O/c17-13-6-5-11-14-10(7-8-15-11)9-3-1-2-4-12(9)16(13)14/h1-8H
+  standard_inchi_key: ZERVJPYNQLONEK-UHFFFAOYSA-N
+  molecular_formula: C14H8N2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 220.231
+  monoisotopic_mass: 220.06366
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3363
+  source_label: canthin-6-one
+  minted_identifier: antibioticmech:chebi-44a5e4f904
+  role_terms:
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

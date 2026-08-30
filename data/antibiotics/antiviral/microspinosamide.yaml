@@ -1,0 +1,41 @@
+identifier: CHEBI:66388
+label: microspinosamide
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclodepsipeptide isolated from the marine sponge Sidonops microspinosa
+  and has been shown to exhibit anti-HIV-1 activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-formyl-D-alanyl-4-bromo-β-hydroxyphenylalanyl-L-prolyl-3-methyl-D-valyl-3-methyl-L-isoleucyl-D-tryptophyl-L-arginyl-N-[(3R,6R,7S,10S,13R,18aS)-10-(3-amino-3-oxopropyl)-3-(carboxymethyl)-6,9-dimethyl-1,4,8,11,14-pentaoxo-13-(propan-2-yl)hexadecahydro-6H-pyrrolo[2,1-f][1,4,7,10,13]oxatetraazacyclohexadecin-7-yl]-3-sulfo-D-alaninamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33551
+- CHEBI:35213
+xrefs:
+- reaxys:8825233
+activity_roles:
+- CHEBI:64947
+chemical_structure:
+  smiles: CCC(C)(C)[C@H](NC(=O)[C@H](NC(=O)[C@@H]1CCCN1C(=O)C(NC(=O)[C@@H](C)NC=O)C(O)c1ccc(Br)cc1)C(C)(C)C)C(=O)N[C@H](Cc1cnc2ccccc12)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@H](CS(=O)(=O)O)C(=O)N[C@@H]1C(=O)N(C)[C@@H](CCC(N)=O)C(=O)N[C@H](C(C)C)C(=O)N2CCC[C@H]2C(=O)N[C@H](CC(=O)O)C(=O)O[C@@H]1C
+  standard_inchi: InChI=1S/C75H109BrN18O22S/c1-12-75(9,10)59(91-67(107)58(74(6,7)8)90-66(106)51-22-17-31-94(51)71(111)56(89-60(100)38(4)82-36-95)57(99)40-23-25-42(76)26-24-40)68(108)84-46(32-41-34-81-44-19-14-13-18-43(41)44)62(102)83-45(20-15-29-80-73(78)79)61(101)86-48(35-117(113,114)115)63(103)88-55-39(5)116-72(112)47(33-53(97)98)85-65(105)50-21-16-30-93(50)70(110)54(37(2)3)87-64(104)49(27-28-52(77)96)92(11)69(55)109/h13-14,18-19,23-26,34,36-39,45-51,54-59,81,99H,12,15-17,20-22,27-33,35H2,1-11H3,(H2,77,96)(H,82,95)(H,83,102)(H,84,108)(H,85,105)(H,86,101)(H,87,104)(H,88,103)(H,89,100)(H,90,106)(H,91,107)(H,97,98)(H4,78,79,80)(H,113,114,115)/t38-,39-,45+,46-,47-,48-,49+,50+,51+,54-,55+,56?,57?,58+,59-/m1/s1
+  standard_inchi_key: GUGALNGMVNRENE-DPOFQXJLSA-N
+  molecular_formula: C75H109BrN18O22S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1726.772
+  monoisotopic_mass: 1724.68679
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66388
+  source_label: microspinosamide
+  minted_identifier: antibioticmech:chebi-775efd20d3
+  role_terms:
+  - CHEBI:64947
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

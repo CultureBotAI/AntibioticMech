@@ -1,0 +1,71 @@
+identifier: CHEBI:83911
+label: diniconazole-M
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A (1E)-1-(2,4-dichlorophenyl)-4,4-dimethyl-2-(1,2,4-triazol-1-yl)pent-1-en-3-ol
+  that is the active R-enantiomer of diniconazole. A fungicide used to control a range
+  of diseases including mildew, bunts and smuts.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1E,3R)-1-(2,4-dichlorophenyl)-4,4-dimethyl-2-(1H-1,2,4-triazol-1-yl)pent-1-en-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-(R)-1-(2,4-dichlorophenyl)-4,4-dimethyl-2-(1H-1,2,4-triazol-1-yl)pent-1-en-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R)-diniconazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-diniconazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: R-(−)-diniconazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diniconazole (−)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:83909
+- CHEBI:86323
+- CHEBI:87067
+xrefs:
+- cas:83657-18-5
+- pesticides:diniconazole-m
+- ppdb:2907
+- reaxys:7381524
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:77884
+- CHEBI:86328
+chemical_structure:
+  smiles: CC(C)(C)[C@@H](O)/C(=C\c1ccc(Cl)cc1Cl)n1cncn1
+  standard_inchi: InChI=1S/C15H17Cl2N3O/c1-15(2,3)14(21)13(20-9-18-8-19-20)6-10-4-5-11(16)7-12(10)17/h4-9,14,21H,1-3H3/b13-6+/t14-/m0/s1
+  standard_inchi_key: FBOUIAKEJMZPQG-BLXFFLACSA-N
+  molecular_formula: C15H17Cl2N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 326.227
+  monoisotopic_mass: 325.07487
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83911
+  source_label: diniconazole-M
+  minted_identifier: antibioticmech:chebi-9a8f9b9409
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:77884
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

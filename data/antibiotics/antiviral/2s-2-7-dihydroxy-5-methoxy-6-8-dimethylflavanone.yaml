@@ -1,0 +1,45 @@
+identifier: CHEBI:70654
+label: (2S)-2,7-dihydroxy-5-methoxy-6,8-dimethylflavanone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dihydroxyflavanon that is (2S)-flavanone substituted by hydroxy groups
+  at positions 2 and 7, a methoxy group at position 5 and methyl groups at positions
+  6 and 8. Isolated from the buds of Cleistocalyx operculatus, it has been shown to
+  exhibit inhibitory effects on the viral neuraminidases from two influenza viral
+  strains, H1N1 and H9N2.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-2,7-dihydroxy-5-methoxy-6,8-dimethyl-2-phenyl-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:141992
+- CHEBI:38738
+- CHEBI:38749
+xrefs:
+- reaxys:21040402
+activity_roles:
+- CHEBI:52425
+chemical_structure:
+  smiles: COc1c(C)c(O)c(C)c2c1C(=O)C[C@@](O)(c1ccccc1)O2
+  standard_inchi: InChI=1S/C18H18O5/c1-10-15(20)11(2)17-14(16(10)22-3)13(19)9-18(21,23-17)12-7-5-4-6-8-12/h4-8,20-21H,9H2,1-3H3/t18-/m0/s1
+  standard_inchi_key: BIMVXOYXXZYVJF-SFHVURJKSA-N
+  molecular_formula: C18H18O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 314.337
+  monoisotopic_mass: 314.11542
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70654
+  source_label: (2S)-2,7-dihydroxy-5-methoxy-6,8-dimethylflavanone
+  minted_identifier: antibioticmech:chebi-d262a1595d
+  role_terms:
+  - CHEBI:52425
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

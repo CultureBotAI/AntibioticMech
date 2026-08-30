@@ -1,0 +1,47 @@
+identifier: CHEBI:66365
+label: 12-methyl-5-dehydroacetylhorminone
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An abietane diterpenoid that is the acetate ester of 12-methyl-5-dehydrohorminone.
+  Isolated from the roots of Salvia multicaulis, it exhibits antitubercular activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (7α)-12-methoxy-11,14-dioxoabieta-5,8,12-trien-7-yl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[(4aS,9R)-6-methoxy-1,1,4a-trimethyl-5,8-dioxo-7-propan-2-yl-2,3,4,9-tetrahydrophenanthren-9-yl]
+    acetate'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25830
+- CHEBI:36762
+- CHEBI:47622
+- CHEBI:47985
+xrefs:
+- reaxys:7890385
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: COC1=C(C(C)C)C(=O)C2=C(C1=O)[C@@]1(C)CCCC(C)(C)C1=C[C@H]2OC(C)=O
+  standard_inchi: InChI=1S/C23H30O5/c1-12(2)16-19(25)17-14(28-13(3)24)11-15-22(4,5)9-8-10-23(15,6)18(17)20(26)21(16)27-7/h11-12,14H,8-10H2,1-7H3/t14-,23+/m1/s1
+  standard_inchi_key: KRHKKRFFQDNBIN-FATZIPQQSA-N
+  molecular_formula: C23H30O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 386.488
+  monoisotopic_mass: 386.20932
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66365
+  source_label: 12-methyl-5-dehydroacetylhorminone
+  minted_identifier: antibioticmech:chebi-878402104f
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

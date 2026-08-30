@@ -1,0 +1,44 @@
+identifier: CHEBI:141354
+label: 5-hydroxy-8-methoxy-4-phenylisoquinolin-1(2H)-one
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An isoquinolinol that is 5-hydroxyisoquinolin-1(2H)-one which has been
+  substituted at positions 4 and 8 by phenyl and methoxy groups, respectively. Isolated
+  from the fermentation of an endophytic fungus Penicillium sp. R22 in Nerium indicum.
+  It displayed weak antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 8-methoxy-4-phenylisoquinoline-1,5-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-hydroxy-8-methoxy-4-phenyl-2H-isoquinolin-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24923
+- CHEBI:35618
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1ccc(O)c2c(-c3ccccc3)cnc(=O)c12
+  standard_inchi: InChI=1S/C16H13NO3/c1-20-13-8-7-12(18)14-11(9-17-16(19)15(13)14)10-5-3-2-4-6-10/h2-9,18H,1H3,(H,17,19)
+  standard_inchi_key: ZOITXTLCKPXXHV-UHFFFAOYSA-N
+  molecular_formula: C16H13NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 267.284
+  monoisotopic_mass: 267.08954
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:141354
+  source_label: 5-hydroxy-8-methoxy-4-phenylisoquinolin-1(2H)-one
+  minted_identifier: antibioticmech:chebi-5f4f301e80
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,42 @@
+identifier: CHEBI:66360
+label: vinylamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 15-membered cyclodepsipeptide isolated from Streptomyces sp.M1982-63F1.
+  It exhibits moderate activity against Gram-positive bacteria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,6S,9E)-14-(2-hydroxyethyl)-3-isopropyl-6-methyl-11-methylene-15-(octan-2-yl)-1-oxa-4,7,12-triazacyclopentadec-9-ene-2,5,8,13-tetrone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:35213
+- CHEBI:51026
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: C=C1/C=C/C(=O)N[C@@H](C)C(=O)N[C@H](C(C)C)C(=O)OC(C(C)CCCCCC)C(CCO)C(=O)N1
+  standard_inchi: InChI=1S/C26H43N3O6/c1-7-8-9-10-11-17(4)23-20(14-15-30)25(33)27-18(5)12-13-21(31)28-19(6)24(32)29-22(16(2)3)26(34)35-23/h12-13,16-17,19-20,22-23,30H,5,7-11,14-15H2,1-4,6H3,(H,27,33)(H,28,31)(H,29,32)/b13-12+/t17?,19-,20?,22+,23?/m0/s1
+  standard_inchi_key: ONGSLGFACDWAIV-OIXFFAKGSA-N
+  molecular_formula: C26H43N3O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 493.645
+  monoisotopic_mass: 493.31519
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66360
+  source_label: vinylamycin
+  minted_identifier: antibioticmech:chebi-e10f291104
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,51 @@
+identifier: CHEBI:5371
+label: glaucarubinone
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quassinoid with formula C25H34O10. It is a natural product isolated
+  from several plant species and exhibits anti-cancer and anti-malarial properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1β,11α,12α-trihydroxy-2,16-dioxo-11,20-epoxypicras-3-en-15β-yl (2S)-2-hydroxy-2-methylbutanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-glaucarubinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:2468
+- CHEBI:33308
+- CHEBI:33573
+- CHEBI:38164
+- CHEBI:72485
+xrefs:
+- cas:1259-86-5
+- chemspider:390388
+- kegg.compound:C08763
+- knapsack:C00003711
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@@]12[C@@H](OC(=O)[C@@](C)(O)CC)C(=O)O[C@]3([H])C[C@@]4([H])C(C)=CC(=O)[C@@H](O)[C@]4(C)[C@]4([H])[C@]13CO[C@@]4(O)[C@H](O)[C@@H]2C'
+  standard_inchi: InChI=1S/C25H34O10/c1-6-22(4,31)21(30)35-16-15-11(3)17(27)25(32)20-23(5)12(10(2)7-13(26)18(23)28)8-14(34-19(16)29)24(15,20)9-33-25/h7,11-12,14-18,20,27-28,31-32H,6,8-9H2,1-5H3/t11-,12+,14-,15-,16-,17-,18-,20-,22+,23-,24+,25+/m1/s1
+  standard_inchi_key: WRBGCYVAJRRQKP-STDAJNJZSA-N
+  molecular_formula: C25H34O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 494.537
+  monoisotopic_mass: 494.2152
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5371
+  source_label: glaucarubinone
+  minted_identifier: antibioticmech:chebi-9180536fa6
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

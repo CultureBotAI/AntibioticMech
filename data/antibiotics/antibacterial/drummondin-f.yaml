@@ -1,0 +1,49 @@
+identifier: CHEBI:65811
+label: drummondin F
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A benzenetriol that is a derivative of filicinic acid. Isolated from the
+  stems and leaves of Hypericum drummondii, it exhibits antibacterial activity against
+  Gram-positive bacteria Staphylococcus aureus and Bacillus subtilis and the acid
+  fast bacterium Mycobacterium smegmatis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-acetyl-6-[3-acetyl-2,4,6-trihydroxy-5-(3-methylbut-2-en-1-yl)benzyl]-3,5-dihydroxy-4-methyl-4-(3-methylbut-2-en-1-yl)cyclohexa-2,5-dien-1-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-drummondin F
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22707
+- CHEBI:33823
+- CHEBI:51689
+- CHEBI:51867
+- CHEBI:76224
+xrefs:
+- cas:122127-73-5
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(=O)C1=C(O)C(C)(CC=C(C)C)C(O)=C(Cc2c(O)c(CC=C(C)C)c(O)c(C(C)=O)c2O)C1=O
+  standard_inchi: InChI=1S/C28H34O8/c1-13(2)8-9-17-22(31)18(24(33)20(15(5)29)23(17)32)12-19-25(34)21(16(6)30)27(36)28(7,26(19)35)11-10-14(3)4/h8,10,31-33,35-36H,9,11-12H2,1-7H3
+  standard_inchi_key: WWTZMJRKACJQRR-UHFFFAOYSA-N
+  molecular_formula: C28H34O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 498.572
+  monoisotopic_mass: 498.22537
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65811
+  source_label: drummondin F
+  minted_identifier: antibioticmech:chebi-59dc255185
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,52 @@
+identifier: CHEBI:63716
+label: tenofovir hydrate
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrate that is the monohydrate form of anhydrous tenovir.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ({[(2R)-1-(6-amino-9H-purin-9-yl)propan-2-yl]oxy}methyl)phosphonic
+    acid—water (1/1)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tenofovir
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tenofovir monohydrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tenofovir.H2O
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35505
+xrefs:
+- cas:206184-49-8
+- kegg.drug:D06074
+activity_roles:
+- CHEBI:36044
+- CHEBI:53756
+chemical_structure:
+  smiles: C[C@H](Cn1cnc2c(N)ncnc21)OCP(=O)(O)O.O
+  standard_inchi: InChI=1S/C9H14N5O4P.H2O/c1-6(18-5-19(15,16)17)2-14-4-13-7-8(10)11-3-12-9(7)14;/h3-4,6H,2,5H2,1H3,(H2,10,11,12)(H2,15,16,17);1H2/t6-;/m1./s1
+  standard_inchi_key: PINIEAOMWQJGBW-FYZOBXCZSA-N
+  molecular_formula: C9H14N5O4P.H2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 305.231
+  monoisotopic_mass: 305.08891
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:63716
+  source_label: tenofovir hydrate
+  minted_identifier: antibioticmech:chebi-f610b7ade5
+  role_terms:
+  - CHEBI:36044
+  - CHEBI:53756
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

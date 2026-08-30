@@ -1,0 +1,46 @@
+identifier: CHEBI:66612
+label: isonordoperoxide
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sesquiterpenoid that is 1,4,5,6,7,8-hexahydro-4,7-epidioxyazulen-3(2H)-one
+  substituted by a hydroxy group at position 8, methyl groups at positions 1 and 4
+  and an isopropyl group at position 7 (the (1R,4R,7S,8S stereoisomer). Isolated from
+  Nardostachys chinensis, it exhibits antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1R,4S,7S,8S)-8-hydroxy-1,4-dimethyl-7-(propan-2-yl)-1,4,5,6,7,8-hexahydro-4,7-epidioxyazulen-3(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25702
+- CHEBI:26658
+- CHEBI:35681
+- CHEBI:38096
+- CHEBI:51689
+xrefs:
+- reaxys:8039842
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: CC(C)[C@]12CC[C@](C)(OO1)C1=C([C@H](C)CC1=O)[C@@H]2O
+  standard_inchi: InChI=1S/C15H22O4/c1-8(2)15-6-5-14(4,18-19-15)12-10(16)7-9(3)11(12)13(15)17/h8-9,13,17H,5-7H2,1-4H3/t9-,13+,14+,15+/m1/s1
+  standard_inchi_key: BDBRZURCDWHOCK-GBALPHGKSA-N
+  molecular_formula: C15H22O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 266.337
+  monoisotopic_mass: 266.15181
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66612
+  source_label: isonordoperoxide
+  minted_identifier: antibioticmech:chebi-cecee13134
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

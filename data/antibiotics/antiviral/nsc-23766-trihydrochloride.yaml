@@ -1,0 +1,51 @@
+identifier: CHEBI:144949
+label: NSC 23766 trihydrochloride
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrochloride resulting from the formal reaction of NSC 23766 with 3
+  mol eq. of hydrogen chloride. An inhibitor of the signalling G-protein known as
+  RAC1 (Ras-related C3 botulinum toxin substrate 1).
+definition_source: ChEBI
+synonyms:
+- synonym_text: N6-(2-{[5-(diethylamino)pentan-2-yl]amino}-6-methylpyrimidin-4-yl)-2-methylquinoline-4,6-diamine
+    trihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 23766·3HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC-23766·3HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC23766·3HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:1177865-17-6
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: CCN(CC)CCCC(C)Nc1nc(C)cc(Nc2ccc3nc(C)cc(N)c3c2)n1.Cl.Cl.Cl
+  standard_inchi: InChI=1S/C24H35N7.3ClH/c1-6-31(7-2)12-8-9-16(3)27-24-28-18(5)14-23(30-24)29-19-10-11-22-20(15-19)21(25)13-17(4)26-22;;;/h10-11,13-16H,6-9,12H2,1-5H3,(H2,25,26)(H2,27,28,29,30);3*1H
+  standard_inchi_key: CPUHORIUXPQCHW-UHFFFAOYSA-N
+  molecular_formula: C24H35N7.3HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 530.976
+  monoisotopic_mass: 529.22543
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:144949
+  source_label: NSC 23766 trihydrochloride
+  minted_identifier: antibioticmech:chebi-c6d1a16b56
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

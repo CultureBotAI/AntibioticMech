@@ -1,0 +1,102 @@
+identifier: antibioticmech:aro-e44e701df2
+label: clorobiocin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Clorobiocin is an aminocoumarin antibiotic produced by Streptomyces roseochromogenes,
+  and binds DNA gyrase subunit B to inhibit ATP-dependent DNA supercoiling.
+definition_source: PMID:6154685
+parent_compounds:
+- ARO:3000103
+xrefs:
+- ARO:3000132
+- chembl:CHEMBL303984
+- pubchem.compound:54706138
+structural_class: aminocoumarin antibiotic
+structural_class_id: ARO:3000103
+chemical_structure:
+  smiles: CC1=CC=C(N1)C(=O)O[C@H]2[C@H]([C@@H](OC([C@@H]2OC)(C)C)OC3=C(C4=C(C=C3)C(=C(C(=O)O4)NC(=O)C5=CC(=C(C=C5)O)CC=C(C)C)O)Cl)O
+  standard_inchi: InChI=1S/C35H37ClN2O11/c1-16(2)7-9-18-15-19(10-13-22(18)39)31(42)38-25-26(40)20-11-14-23(24(36)28(20)47-33(25)44)46-34-27(41)29(30(45-6)35(4,5)49-34)48-32(43)21-12-8-17(3)37-21/h7-8,10-15,27,29-30,34,37,39-41H,9H2,1-6H3,(H,38,42)/t27-,29+,30-,34-/m1/s1
+  standard_inchi_key: FJAQNRBDVKIIKK-LFLQOBSNSA-N
+  molecular_formula: C35H37ClN2O11
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 697.1
+  monoisotopic_mass: 696.2085877
+source_concepts:
+- source: ARO
+  source_id: ARO:3000132
+  source_label: clorobiocin
+  minted_identifier: antibioticmech:aro-e44e701df2
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003301
+  label: Staphylococcus aureus gyrB conferring resistance to aminocoumarin
+  evidence:
+  - reference: ARO:3003301
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000132 (clorobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003302
+  label: Bartonella bacilliformis gyrB conferring resistance to aminocoumarin
+  evidence:
+  - reference: ARO:3003302
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000132 (clorobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003303
+  label: Escherichia coli gyrB conferring resistance to aminocoumarin
+  evidence:
+  - reference: ARO:3003303
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000132 (clorobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003314
+  label: Staphylococcus aureus parE conferring resistance to aminocoumarin
+  evidence:
+  - reference: ARO:3003314
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000132 (clorobiocin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003318
+  label: Streptomyces rishiriensis parY mutant conferring resistance to aminocoumarin
+  evidence:
+  - reference: ARO:3003318
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000132 (clorobiocin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000023
+  target_label: aminocoumarin sensitive parE
+  evidence:
+  - reference: ARO:3000023
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000132 (clorobiocin); database
+      assertion, not a primary citation.
+- target_id: ARO:3000734
+  target_label: antibiotic sensitive DNA topoisomerase subunit gyrB
+  evidence:
+  - reference: ARO:3000734
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000132 (clorobiocin); database
+      assertion, not a primary citation.
+- target_id: ARO:3003253
+  target_label: aminocoumarin sensitive parY
+  evidence:
+  - reference: ARO:3003253
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000132 (clorobiocin); database
+      assertion, not a primary citation.
+- target_id: ARO:3003260
+  target_label: aminocoumarin sensitive gyrB
+  evidence:
+  - reference: ARO:3003260
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000132 (clorobiocin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:57Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,64 @@
+identifier: CHEBI:7858
+label: oxycarboxin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An anilide obtained by formal condensation of the amino group of aniline
+  with the carboxy group of 2-methyl-5,6-dihydro-4,4-dioxo-1,4-oxathiine-3-carboxylic
+  acid. A fungicide for the control of rust diseases on ornamentals, cereals and nursery
+  trees as well as fairy rings on turf.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-methyl-N-phenyl-5,6-dihydro-1,4-oxathiine-3-carboxamide 4,4-dioxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,6-Dihydro-2-methyl-N-phenyl-1,4-oxathiin-3-carboxamide 4,4-dioxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dihydro-2-methyl-1,4-oxathiin-3-carboxanilide 4,4-dioxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:13248
+- CHEBI:35850
+- CHEBI:38104
+- CHEBI:38106
+- CHEBI:87015
+xrefs:
+- cas:5259-88-1
+- kegg.compound:C10956
+- pesticides:oxycarboxin
+- ppdb:500
+- reaxys:1432554
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: CC1=C(C(=O)Nc2ccccc2)S(=O)(=O)CCO1
+  standard_inchi: InChI=1S/C12H13NO4S/c1-9-11(18(15,16)8-7-17-9)12(14)13-10-5-3-2-4-6-10/h2-6H,7-8H2,1H3,(H,13,14)
+  standard_inchi_key: AMEKQAFGQBKLKX-UHFFFAOYSA-N
+  molecular_formula: C12H13NO4S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 267.306
+  monoisotopic_mass: 267.05653
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:7858
+  source_label: oxycarboxin
+  minted_identifier: antibioticmech:chebi-d0bbe15e87
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

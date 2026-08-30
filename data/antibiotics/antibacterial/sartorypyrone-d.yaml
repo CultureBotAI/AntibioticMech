@@ -1,0 +1,42 @@
+identifier: CHEBI:201384
+label: sartorypyrone D
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A meroterpenoid with formula C26H38O4. It is a fungal metabolite produced
+  by Neosartorya fischeri FO-5897.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-hydroxy-3-{(2E,6E)-9-[(1R,3S)-3-hydroxy-2,2-dimethyl-6-methylidenecyclohexyl]-3,7-dimethylnona-2,6-dien-1-yl}-6-methyl-2H-pyran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-hydroxy-3-[(2E,6E)-9-[(1R,3S)-3-hydroxy-2,2-dimethyl-6-methylidenecyclohexyl]-3,7-dimethylnona-2,6-dienyl]-6-methylpyran-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:64419
+- CHEBI:74818
+- CHEBI:75885
+- CHEBI:78840
+xrefs:
+- chemspider:109107930
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]1(CC/C(C)=C/CC/C(C)=C/Cc2c(O)cc(C)oc2=O)C(=C)CC[C@H](O)C1(C)C'
+  standard_inchi: InChI=1S/C26H38O4/c1-17(10-13-21-23(27)16-20(4)30-25(21)29)8-7-9-18(2)11-14-22-19(3)12-15-24(28)26(22,5)6/h9-10,16,22,24,27-28H,3,7-8,11-15H2,1-2,4-6H3/b17-10+,18-9+/t22-,24+/m1/s1
+  standard_inchi_key: YFZBONHCMBXFDD-JVRYRRRMSA-N
+  structure_source: ChEBI
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:201384
+  source_label: sartorypyrone D
+  minted_identifier: antibioticmech:chebi-ed2c8bf5b0
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

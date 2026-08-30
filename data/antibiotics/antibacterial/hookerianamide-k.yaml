@@ -1,0 +1,47 @@
+identifier: CHEBI:66023
+label: hookerianamide K
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A steroid alkaloid that is pregn-4,14-diene substituted by N-dimethylamino
+  groups at positions 3 and 20 (the 3β,20S stereoisomer). Isolated from Sarcococca
+  hookeriana, it exhibits antileishmanial and antibacterial activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3β,20S)-N3,N3,N20,N20-tetramethylpregna-4,14-diene-3,20-diamine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (20S)-20-(N-dimethylamino)-3β-(N-dimethylamino)-pregn-4,14-diene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26767
+- CHEBI:50996
+xrefs:
+- reaxys:18885919
+activity_roles:
+- CHEBI:33282
+- CHEBI:70868
+chemical_structure:
+  smiles: '[H][C@]12CC[C@@]3(C)C(=CC[C@]3([H])[C@H](C)N(C)C)[C@]1([H])CCC1=C[C@@H](N(C)C)CC[C@@]12C'
+  standard_inchi: InChI=1S/C25H42N2/c1-17(26(4)5)21-10-11-22-20-9-8-18-16-19(27(6)7)12-14-24(18,2)23(20)13-15-25(21,22)3/h11,16-17,19-21,23H,8-10,12-15H2,1-7H3/t17-,19-,20-,21+,23-,24-,25+/m0/s1
+  standard_inchi_key: JLDLXPZTQHZTBT-JYNQZMPESA-N
+  molecular_formula: C25H42N2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 370.625
+  monoisotopic_mass: 370.3348
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66023
+  source_label: hookerianamide K
+  minted_identifier: antibioticmech:chebi-c5b65cd77c
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

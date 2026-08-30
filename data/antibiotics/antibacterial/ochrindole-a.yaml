@@ -1,0 +1,50 @@
+identifier: CHEBI:167043
+label: ochrindole A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A bisindole alkaloid that is phenol bearing a 3,3-dimethylallyl group
+  at position 4, two methoxy groups at positions 3 and 6, and two indol-3-yl groups
+  at positions 2 and 5. It is a natural product isolated from the sclerotia of Aspergillus
+  orbraceus, with moderate activity against some insects, as well as Gram-positive
+  bacteria.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,5-di(1H-indol-3-yl)-3,6-dimethoxy-4-(3-methylbut-2-en-1-yl)phenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,5-bis(1H-indol-3-yl)-3,6-dimethoxy-4-(3-methylbut-2-enyl)phenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24828
+- CHEBI:33853
+- CHEBI:51681
+- CHEBI:51879
+- CHEBI:78840
+xrefs:
+- cas:157414-83-0
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1c(CC=C(C)C)c(-c2cnc3ccccc23)c(OC)c(O)c1-c1cnc2ccccc12
+  standard_inchi: InChI=1S/C29H28N2O3/c1-17(2)13-14-20-25(21-15-30-23-11-7-5-9-18(21)23)29(34-4)27(32)26(28(20)33-3)22-16-31-24-12-8-6-10-19(22)24/h5-13,15-16,30-32H,14H2,1-4H3
+  standard_inchi_key: YVQFFNCNPFQQKW-UHFFFAOYSA-N
+  molecular_formula: C29H28N2O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 452.554
+  monoisotopic_mass: 452.20999
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:167043
+  source_label: ochrindole A
+  minted_identifier: antibioticmech:chebi-3ac47365ed
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

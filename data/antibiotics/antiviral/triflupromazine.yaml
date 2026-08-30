@@ -1,0 +1,69 @@
+identifier: CHEBI:9711
+label: triflupromazine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of phenothiazines that is 10H-phenothiazine having
+  a trifluoromethyl subsitituent at the 2-position and a 3-(dimethylamino)propyl group
+  at the N-10 position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: triflupromazina
+  synonym_type: INN
+  source: chebi
+- synonym_text: triflupromazinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N,N-dimethyl-3-[2-(trifluoromethyl)-10H-phenothiazin-10-yl]propan-1-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10-(3-(Dimethylamino)propyl)-2-(trifluoromethyl)phenothiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(Trifluoromethyl)promazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Trifluoromethyl-10-(gamma-dimethylaminopropyl)phenothiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trifluopromazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:32876
+- CHEBI:37143
+- CHEBI:38093
+xrefs:
+- cas:146-54-3
+- drugbank:DB00508
+- drugcentral:2742
+- hmdb:HMDB0014650
+- kegg.drug:D00390
+- lincs.smallmolecule:LSM-3421
+- patent:GB813861
+- reaxys:335308
+- wikipedia.en:Triflupromazine
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CN(C)CCCN1c2ccccc2Sc2ccc(C(F)(F)F)cc21
+  standard_inchi: InChI=1S/C18H19F3N2S/c1-22(2)10-5-11-23-14-6-3-4-7-16(14)24-17-9-8-13(12-15(17)23)18(19,20)21/h3-4,6-9,12H,5,10-11H2,1-2H3
+  standard_inchi_key: XSCGXQMFQXDFCW-UHFFFAOYSA-N
+  molecular_formula: C18H19F3N2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 352.425
+  monoisotopic_mass: 352.1221
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9711
+  source_label: triflupromazine
+  minted_identifier: antibioticmech:chebi-e741047427
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

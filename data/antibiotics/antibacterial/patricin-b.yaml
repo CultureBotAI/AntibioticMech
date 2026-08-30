@@ -1,0 +1,218 @@
+identifier: antibioticmech:aro-0aefa62f74
+label: patricin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Patricin B is a streptogramin B antibiotic.
+definition_source: PMID:15700955
+parent_compounds:
+- ARO:0000026
+xrefs:
+- ARO:3000681
+- pubchem.compound:13041217
+structural_class: streptogramin antibiotic
+structural_class_id: ARO:0000026
+chemical_structure:
+  smiles: CC[C@@H]1C(=O)N2CCC[C@H]2C(=O)N([C@H](C(=O)N3CCC[C@H]3C(=O)N[C@H](C(=O)O[C@@H]([C@@H](C(=O)N1)NC(=O)C4=C(C=CC=N4)O)C)C5=CC=CC=C5)CC6=CC=CC=C6)C
+  standard_inchi: InChI=1S/C42H49N7O9/c1-4-28-39(54)49-23-13-19-30(49)40(55)47(3)31(24-26-14-7-5-8-15-26)41(56)48-22-12-18-29(48)36(51)46-34(27-16-9-6-10-17-27)42(57)58-25(2)33(37(52)44-28)45-38(53)35-32(50)20-11-21-43-35/h5-11,14-17,20-21,25,28-31,33-34,50H,4,12-13,18-19,22-24H2,1-3H3,(H,44,52)(H,45,53)(H,46,51)/t25-,28-,29+,30+,31+,33+,34+/m1/s1
+  standard_inchi_key: HASLPZZCXDUQET-OTXZUHDPSA-N
+  molecular_formula: C42H49N7O9
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 795.9
+  monoisotopic_mass: 795.35917617
+source_concepts:
+- source: ARO
+  source_id: ARO:3000681
+  source_label: patricin B
+  minted_identifier: antibioticmech:aro-0aefa62f74
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000250
+  label: ErmC
+  evidence:
+  - reference: ARO:3000250
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000326
+  label: ErmE
+  evidence:
+  - reference: ARO:3000326
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000347
+  label: ErmA
+  evidence:
+  - reference: ARO:3000347
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000375
+  label: ErmB
+  evidence:
+  - reference: ARO:3000375
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000392
+  label: Erm(37)
+  evidence:
+  - reference: ARO:3000392
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000495
+  label: ErmD
+  evidence:
+  - reference: ARO:3000495
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000498
+  label: ErmF
+  evidence:
+  - reference: ARO:3000498
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000522
+  label: ErmG
+  evidence:
+  - reference: ARO:3000522
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000592
+  label: ErmN
+  evidence:
+  - reference: ARO:3000592
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000593
+  label: ErmQ
+  evidence:
+  - reference: ARO:3000593
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000594
+  label: ErmR
+  evidence:
+  - reference: ARO:3000594
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000595
+  label: ErmT
+  evidence:
+  - reference: ARO:3000595
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000596
+  label: ErmX
+  evidence:
+  - reference: ARO:3000596
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000599
+  label: Erm(33)
+  evidence:
+  - reference: ARO:3000599
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000600
+  label: Erm(34)
+  evidence:
+  - reference: ARO:3000600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000601
+  label: Erm(38)
+  evidence:
+  - reference: ARO:3000601
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000602
+  label: Erm(39)
+  evidence:
+  - reference: ARO:3000602
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000603
+  label: Erm(41)
+  evidence:
+  - reference: ARO:3000603
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000604
+  label: Erm(35)
+  evidence:
+  - reference: ARO:3000604
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000605
+  label: Erm(36)
+  evidence:
+  - reference: ARO:3000605
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001307
+  label: vgbA
+  evidence:
+  - reference: ARO:3001307
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001308
+  label: vgbB
+  evidence:
+  - reference: ARO:3001308
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3003990
+  label: vgbC
+  evidence:
+  - reference: ARO:3003990
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000681 (patricin
+      B); database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000754
+  target_label: antibiotic sensitive peptidyl transferase (23S rRNA)
+  evidence:
+  - reference: ARO:3000754
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000681 (patricin B); database
+      assertion, not a primary citation.
+discussions:
+- discussion_id: structure-collision-HASLPZZCXDUQET-OTXZUHDPSA-N
+  prompt: patricin B shares InChIKey HASLPZZCXDUQET-OTXZUHDPSA-N with patricin A,
+    but the sources name them as different compounds. Which record does this structure
+    belong to?
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - chemical_structure
+  rationale: Both structures come from PubChem CIDs cross-referenced by CARD. Identical
+    structures under different names mean at least one cross-reference is wrong upstream;
+    the seeder cannot tell which, so it flags rather than merges.
+  posed_by: seed_from_sources
+  notes: 'twin record(s): antibioticmech:aro-2ea67cad76'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

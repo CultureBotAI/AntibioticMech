@@ -1,0 +1,62 @@
+identifier: CHEBI:131196
+label: OSU-03012
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pyrazoles that is N-[4-(pyrazol-1-yl)phenyl]glycinamide
+  in which the pyrazole ring is substituted at positions 3 and 5 by trifluoromethyl
+  and phenanthrene-2-yl groups respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-{4-[5-(phenanthren-2-yl)-3-(trifluoromethyl)-1H-pyrazol-1-yl]phenyl}glycinamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AR 12
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AR-12
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: OSU 03012
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PDK1 inhibitor AR-12
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24373
+- CHEBI:25961
+- CHEBI:26410
+- CHEBI:37143
+- CHEBI:62733
+- CHEBI:87113
+xrefs:
+- cas:742112-33-0
+- reaxys:11001693
+- wikipedia.en:OSU-03012
+activity_roles:
+- CHEBI:35718
+- CHEBI:86327
+chemical_structure:
+  smiles: NCC(=O)Nc1ccc(-n2nc(C(F)(F)F)cc2-c2ccc3c(ccc4ccccc43)c2)cc1
+  standard_inchi: InChI=1S/C26H19F3N4O/c27-26(28,29)24-14-23(33(32-24)20-10-8-19(9-11-20)31-25(34)15-30)18-7-12-22-17(13-18)6-5-16-3-1-2-4-21(16)22/h1-14H,15,30H2,(H,31,34)
+  standard_inchi_key: YULUCECVQOCQFQ-UHFFFAOYSA-N
+  molecular_formula: C26H19F3N4O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 460.459
+  monoisotopic_mass: 460.1511
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:131196
+  source_label: OSU-03012
+  minted_identifier: antibioticmech:chebi-928ce5530f
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

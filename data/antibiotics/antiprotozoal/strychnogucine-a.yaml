@@ -1,0 +1,41 @@
+identifier: CHEBI:66528
+label: strychnogucine A
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A bisindole alkaloid with a strychnine substructure isolated from the
+  roots of Strychnos icaja and has been shown to exhibit antiplasmodial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (11α)-11-[(2R,3aR,11bS,12S,13aS,14E)-14-ethylidene-9-oxo-2,3,10,12,13,13a-hexahydro-9H,11bH-1,12-ethanopyrido[1,2,3-lm]pyrrolo[2,3-d]carbazol-2-yl]strychnidin-10-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36820
+- CHEBI:51879
+xrefs:
+- reaxys:8820459
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: '[H][C@]12OCC=C3CN4CC[C@]56c7ccccc7N(C(=O)[C@@]1([H])[C@@]1([H])C[C@@]78c9ccccc9N9C(=O)CC=C([C@@]%10([H])C[C@]7([H])N1C/C%10=C/C)[C@]98[H])[C@@]5([H])[C@@]2([H])[C@@]3([H])C[C@]46[H]'
+  standard_inchi: InChI=1S/C42H42N4O3/c1-2-22-21-44-31(19-42-28-8-4-5-9-29(28)45-34(47)12-11-24(38(42)45)25(22)17-33(42)44)36-37-35-26-18-32-41(14-15-43(32)20-23(26)13-16-49-37)27-7-3-6-10-30(27)46(39(35)41)40(36)48/h2-11,13,25-26,31-33,35-39H,12,14-21H2,1H3/b22-2-/t25-,26-,31+,32-,33-,35-,36-,37+,38-,39-,41+,42+/m0/s1
+  standard_inchi_key: PXWJNFJRUYWQOX-DSNAYJLUSA-N
+  molecular_formula: C42H42N4O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 650.823
+  monoisotopic_mass: 650.32569
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66528
+  source_label: strychnogucine A
+  minted_identifier: antibioticmech:chebi-ef612b0444
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,66 @@
+identifier: CHEBI:45578
+label: ribavirin 5'-triphosphate
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 1-ribosyltriazole that is ribavirin in which the hydroxy group at the
+  5'-position is replaced by a triphosphate group. It is the active metabolite of
+  the antiviral agent ribavirin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-[5-O-(hydroxy{[hydroxy(phosphonooxy)phosphoryl]oxy}phosphoryl)-β-D-ribofuranosyl]-1H-1,2,4-triazole-3-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-β-D-ribofuranosyl-1,2,4-triazole-3-carboxamide-5'-triphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RBV-TP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: RTP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ribavirin triphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ribavirin-TP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: virazole 5'-triphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140324
+- CHEBI:26563
+- CHEBI:29347
+- CHEBI:62733
+- CHEBI:63594
+xrefs:
+- cas:63142-71-2
+- chemspider:108908
+- hmdb:HMDB0257207
+- pdb-ccd:RTP
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: NC(=O)c1ncn([C@@H]2O[C@H](COP(=O)(O)OP(=O)(O)OP(=O)(O)O)[C@@H](O)[C@H]2O)n1
+  standard_inchi: InChI=1S/C8H15N4O14P3/c9-6(15)7-10-2-12(11-7)8-5(14)4(13)3(24-8)1-23-28(19,20)26-29(21,22)25-27(16,17)18/h2-5,8,13-14H,1H2,(H2,9,15)(H,19,20)(H,21,22)(H2,16,17,18)/t3-,4-,5-,8-/m1/s1
+  standard_inchi_key: MMJOCKKLRMRSEQ-AFCXAGJDSA-N
+  molecular_formula: C8H15N4O14P3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 484.144
+  monoisotopic_mass: 483.97976
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:45578
+  source_label: ribavirin 5'-triphosphate
+  minted_identifier: antibioticmech:chebi-970b487d3b
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

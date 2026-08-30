@@ -1,0 +1,44 @@
+identifier: CHEBI:66027
+label: (5R)-5-hydroxy-7-(4''-hydroxy-3''-methoxyphenyl)-1-phenyl-3-heptanone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A β-hydroxy ketone that is (5R)-5-hydroxyheptan-3-one substituted by a
+  phenyl group at position 1 and a 4-hydroxy-3-methoxyphenyl moiety at position 7.
+  Isolated from Alpinia officinarum, it exhibits antiviral activity against influenza
+  virus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5R)-5-hydroxy-7-(4-hydroxy-3-methoxyphenyl)-1-phenylheptan-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134251
+- CHEBI:55380
+xrefs:
+- cas:68622-73-1
+- reaxys:5761856
+activity_roles:
+- CHEBI:52425
+chemical_structure:
+  smiles: COc1cc(CC[C@@H](O)CC(=O)CCc2ccccc2)ccc1O
+  standard_inchi: InChI=1S/C20H24O4/c1-24-20-13-16(9-12-19(20)23)8-11-18(22)14-17(21)10-7-15-5-3-2-4-6-15/h2-6,9,12-13,18,22-23H,7-8,10-11,14H2,1H3/t18-/m1/s1
+  standard_inchi_key: JHJPDDBIHSFERA-GOSISDBHSA-N
+  molecular_formula: C20H24O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 328.408
+  monoisotopic_mass: 328.16746
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66027
+  source_label: (5R)-5-hydroxy-7-(4''-hydroxy-3''-methoxyphenyl)-1-phenyl-3-heptanone
+  minted_identifier: antibioticmech:chebi-d457318742
+  role_terms:
+  - CHEBI:52425
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

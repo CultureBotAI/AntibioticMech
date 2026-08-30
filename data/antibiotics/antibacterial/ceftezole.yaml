@@ -1,0 +1,84 @@
+identifier: CHEBI:135716
+label: ceftezole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A first-generation cephalosporin antibiotic having (1,3,4-thiadiazol-2-ylsulfanyl)methyl
+  and [2-(1H-tetrazol-1-yl)acetamido side groups located at positions 3 and 7 respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ceftezol
+  synonym_type: INN
+  source: chebi
+- synonym_text: ceftezolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: ceftézole
+  synonym_type: INN
+  source: chebi
+- synonym_text: 7-[2-(1H-tetrazol-1-yl)acetamido]-3-[(1,3,4-thiadiazol-2-ylsulfanyl)methyl]-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-8-oxo-7-[2-(1H-tetrazol-1-yl)acetamido]-3-[(1,3,4-thiadiazol-2-ylsulfanyl)methyl]-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: demethyl cefazolin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: demethylcefazolin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cephtezole
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23066
+- CHEBI:38099
+- ARO:0000032
+xrefs:
+- ARO:3009114
+- cas:26973-24-0
+- patent:CN101544659
+- reaxys:4046849
+- wikipedia.en:Ceftezole
+- chembl:CHEMBL1697829
+- pubchem.compound:65755
+activity_roles:
+- CHEBI:33281
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(CSc3nncs3)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)Cn1cnnn1'
+  standard_inchi: InChI=1S/C13H12N8O4S3/c22-7(1-20-4-14-18-19-20)16-8-10(23)21-9(12(24)25)6(2-26-11(8)21)3-27-13-17-15-5-28-13/h4-5,8,11H,1-3H2,(H,16,22)(H,24,25)/t8-,11-/m1/s1
+  standard_inchi_key: DZMVCVMFETWNIU-LDYMZIIASA-N
+  molecular_formula: C13H12N8O4S3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 440.492
+  monoisotopic_mass: 440.01436
+source_concepts:
+- source: ARO
+  source_id: ARO:3009114
+  source_label: ceftezole
+  minted_identifier: antibioticmech:aro-d6a690cedc
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:135716
+  source_label: ceftezole
+  minted_identifier: antibioticmech:chebi-44d81795f5
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

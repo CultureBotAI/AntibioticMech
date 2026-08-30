@@ -1,0 +1,41 @@
+identifier: CHEBI:31240
+label: aspoxicillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Aspoxicillin is a broad-spectrum, semisynthetic penicillin derivative
+  with antibacterial activity.
+definition_source: PMID:6833130
+parent_compounds:
+- ARO:3000008
+xrefs:
+- ARO:3009133
+- cas:63358-49-6
+- chembl:CHEMBL1318150
+- pubchem.compound:71961
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)[C@H](NC(=O)[C@H](N)CC(=O)NC)c1ccc(O)cc1'
+  standard_inchi: InChI=1S/C21H27N5O7S/c1-21(2)15(20(32)33)26-18(31)14(19(26)34-21)25-17(30)13(9-4-6-10(27)7-5-9)24-16(29)11(22)8-12(28)23-3/h4-7,11,13-15,19,27H,8,22H2,1-3H3,(H,23,28)(H,24,29)(H,25,30)(H,32,33)/t11-,13-,14-,15+,19-/m1/s1
+  standard_inchi_key: BHELIUBJHYAEDK-OAIUPTLZSA-N
+  molecular_formula: C21H27N5O7S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 493.542
+  monoisotopic_mass: 493.16312
+source_concepts:
+- source: ARO
+  source_id: ARO:3009133
+  source_label: aspoxicillin
+  minted_identifier: antibioticmech:aro-9acf5562e4
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

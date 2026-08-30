@@ -1,0 +1,52 @@
+identifier: CHEBI:74723
+label: 3,6-diaminoacridine dihydrochloride
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrochloride resulting from the reaction of 3,6-diaminoacridine with
+  2 mol eq. of hydrogen chloride.
+definition_source: ChEBI
+synonyms:
+- synonym_text: acridine-3,6-diamine dihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,6-diaminoacridinium chloride hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-amino-6-ammonioacridinium dichloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: proflavin.2HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: proflavine dihydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:531-73-7
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Cl.Cl.Nc1ccc2cc3ccc(N)cc3nc2c1
+  standard_inchi: InChI=1S/C13H11N3.2ClH/c14-10-3-1-8-5-9-2-4-11(15)7-13(9)16-12(8)6-10;;/h1-7H,14-15H2;2*1H
+  standard_inchi_key: YHIHFKAEJAVELI-UHFFFAOYSA-N
+  molecular_formula: C13H11N3.2HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 282.174
+  monoisotopic_mass: 281.04865
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:74723
+  source_label: 3,6-diaminoacridine dihydrochloride
+  minted_identifier: antibioticmech:chebi-e457b20e3d
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

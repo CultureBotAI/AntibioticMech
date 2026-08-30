@@ -1,0 +1,43 @@
+identifier: CHEBI:140174
+label: malacidin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A homodetic cyclic peptide that is malacidin A in which the (2E,4Z)-8-methylnona-2,4-dienoyl
+  group has been replaced by a (2E,4Z)-8-methyldeca-2,4-dienoyl group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-[(2S)-3-amino-2-({3-methyl-N-[(2E,4Z)-8-methyldeca-2,4-dienoyl]-L-α-aspartyl}amino)butanoyl]-D-valyl-L-lysyl-3-hydroxy-L-α-aspartyl-L-α-aspartylglycyl-3-methyl-D-α-aspartyl-L-valyl-(4R)-4-methyl-L-proline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24613
+- CHEBI:46895
+xrefs:
+- wikipedia.en:Malacidin
+activity_roles:
+- CHEBI:140190
+- CHEBI:33282
+chemical_structure:
+  smiles: CCC(C)CC/C=C\C=C\C(=O)N[C@H](C(=O)N[C@@H]1C(=O)N[C@H](C(C)C)C(=O)N[C@@H](CCCCN)C(=O)N[C@@H](C(O)C(=O)O)C(=O)N[C@@H](CC(=O)O)C(=O)NCC(=O)N[C@H](C(C)C(=O)O)C(=O)N[C@@H](C(C)C)C(=O)N2C[C@H](C)C[C@H]2C(=O)NC1C)C(C)C(=O)O
+  standard_inchi: InChI=1S/C57H90N12O20/c1-11-28(6)18-14-12-13-15-20-36(70)63-41(30(8)55(84)85)51(80)67-43-32(10)60-48(77)35-22-29(7)25-69(35)54(83)40(27(4)5)66-50(79)42(31(9)56(86)87)64-37(71)24-59-46(75)34(23-38(72)73)62-53(82)44(45(74)57(88)89)68-47(76)33(19-16-17-21-58)61-49(78)39(26(2)3)65-52(43)81/h12-13,15,20,26-35,39-45,74H,11,14,16-19,21-25,58H2,1-10H3,(H,59,75)(H,60,77)(H,61,78)(H,62,82)(H,63,70)(H,64,71)(H,65,81)(H,66,79)(H,67,80)(H,68,76)(H,72,73)(H,84,85)(H,86,87)(H,88,89)/b13-12-,20-15+/t28?,29-,30?,31?,32?,33+,34+,35+,39-,40+,41+,42-,43+,44+,45?/m1/s1
+  standard_inchi_key: SMTCDPMWINUUKC-AVBBYWJWSA-N
+  molecular_formula: C57H90N12O20
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1263.411
+  monoisotopic_mass: 1262.63943
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:140174
+  source_label: malacidin B
+  minted_identifier: antibioticmech:chebi-5bb13c4bd6
+  role_terms:
+  - CHEBI:140190
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,66 @@
+identifier: CHEBI:3755
+label: clomipramine hydrochloride
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrochloride resulting from the reaction of equimolar amounts of clomipramine
+  and hydrogen chloride. One of the more sedating tricyclic antidepressants, it is
+  used for the treatment of depression as well as obsessive-compulsive disorder and
+  phobias.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Anafranil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: 3-(3-chloro-10,11-dihydro-5H-dibenzo[b,f]azepin-5-yl)-N,N-dimethylpropan-1-amine
+    hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(3-chloro-10,11-dihydro-5H-dibenzo[b,f]azepin-5-yl)-N,N-dimethylpropan-1-aminium
+    chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-chloroimipramine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chloroimipramine monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: clomipramine HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: clomipramine monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:17321-77-6
+- drugbank:DB01242
+- kegg.drug:D00811
+- reaxys:4168494
+- vsdb:1812
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CN(C)CCCN1c2ccccc2CCc2ccc(Cl)cc21.Cl
+  standard_inchi: InChI=1S/C19H23ClN2.ClH/c1-21(2)12-5-13-22-18-7-4-3-6-15(18)8-9-16-10-11-17(20)14-19(16)22;/h3-4,6-7,10-11,14H,5,8-9,12-13H2,1-2H3;1H
+  standard_inchi_key: WIMWMKZEIBHDTH-UHFFFAOYSA-N
+  molecular_formula: C19H23ClN2.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 351.321
+  monoisotopic_mass: 350.13165
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3755
+  source_label: clomipramine hydrochloride
+  minted_identifier: antibioticmech:chebi-e8856719f3
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

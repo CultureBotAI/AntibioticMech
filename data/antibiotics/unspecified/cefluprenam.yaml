@@ -1,0 +1,57 @@
+identifier: CHEBI:3488
+label: cefluprenam
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A fourth-generation cephalosporin antibiotic having (1E)-3-[(2-amino-2-oxoethyl)(ethyl)methylazaniumyl]prop-1-en-1-yl
+  and {(2Z)-2-(5-amino-1,2,4-thiadiazol-3-yl)-2-[(fluoromethoxy)imino]acetyl}amino
+  side groups located at positions 3 and 7 respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefluprenamum
+  synonym_type: INN
+  source: chebi
+- synonym_text: céfluprénam
+  synonym_type: INN
+  source: chebi
+- synonym_text: 7-({(2Z)-2-(5-amino-1,2,4-thiadiazol-3-yl)-2-[(fluoromethoxy)imino]acetyl}amino)-3-[(1E)-3-[(2-amino-2-oxoethyl)(ethyl)methylazaniumyl]prop-1-en-1-yl]-3,4-didehydrocepham-4-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-3-{(1E)-3-[(2-amino-2-oxoethyl)(ethyl)methylazaniumyl]prop-1-en-1-yl}-7-({(2Z)-2-(5-amino-1,2,4-thiadiazol-3-yl)-2-[(fluoromethoxy)imino]acetyl}amino)-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic E 1077
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+- CHEBI:38099
+xrefs:
+- cas:116853-25-9
+- kegg.drug:D01054
+- patent:US5994340
+- wikipedia.en:Cefluprenam
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12SCC(/C=C/C[N+](C)(CC)CC(N)=O)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)/C(=N\OCF)c1nsc(N)n1'
+  standard_inchi: InChI=1S/C20H25FN8O6S2/c1-3-29(2,7-11(22)30)6-4-5-10-8-36-18-13(17(32)28(18)14(10)19(33)34)24-16(31)12(26-35-9-21)15-25-20(23)37-27-15/h4-5,13,18H,3,6-9H2,1-2H3,(H5-,22,23,24,25,27,30,31,33,34)/b5-4+,26-12-/t13-,18-,29?/m1/s1
+  standard_inchi_key: XAKKNLNAJBNLPC-MAYKBZFQSA-N
+  molecular_formula: C20H25FN8O6S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 556.602
+  monoisotopic_mass: 556.13225
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3488
+  source_label: cefluprenam
+  minted_identifier: antibioticmech:chebi-f72f3f158c
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

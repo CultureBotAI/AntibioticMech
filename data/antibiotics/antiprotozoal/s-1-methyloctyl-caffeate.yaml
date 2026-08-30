@@ -1,0 +1,41 @@
+identifier: CHEBI:70484
+label: (S)-1'-methyloctyl caffeate
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An alkyl caffeate ester obtained by the formal condensation of trans-caffeic
+  acid with nonan-2-ol. Isolated from the leaves of Piper sanguineispicum, it has
+  been shown to exhibit antileishmanial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-nonan-2-yl (2E)-3-(3,4-dihydroxyphenyl)prop-2-enoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:65331
+xrefs:
+- reaxys:21092027
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: CCCCCCC[C@H](C)OC(=O)/C=C/c1ccc(O)c(O)c1
+  standard_inchi: InChI=1S/C18H26O4/c1-3-4-5-6-7-8-14(2)22-18(21)12-10-15-9-11-16(19)17(20)13-15/h9-14,19-20H,3-8H2,1-2H3/b12-10+/t14-/m0/s1
+  standard_inchi_key: DEXGFPWDAXJBTA-WONIAPNHSA-N
+  molecular_formula: C18H26O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 306.402
+  monoisotopic_mass: 306.18311
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:70484
+  source_label: (S)-1'-methyloctyl caffeate
+  minted_identifier: antibioticmech:chebi-4fdb2f2426
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

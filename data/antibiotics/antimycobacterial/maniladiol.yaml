@@ -1,0 +1,57 @@
+identifier: CHEBI:138945
+label: maniladiol
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pentacyclic triterpenoid that is olean-12-ene in which the hydrogens
+  at the 3β and 16β positions have been replaced by hydroxy groups.
+definition_source: ChEBI
+synonyms:
+- synonym_text: olean-12-ene-3β,16β-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3beta,16beta)-Olean-12-ene-3,16-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3β,16β)-olean-12-ene-3,16-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 16β-hydroxy-β-amyrin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3beta,16beta-Dihydroxyolean-12-ene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23824
+- CHEBI:25872
+xrefs:
+- cas:595-17-5
+- hmdb:HMDB0034550
+- knapsack:C00019525
+- metacyc.compound:CPD-16621
+- reaxys:3222504
+activity_roles:
+- CHEBI:33231
+chemical_structure:
+  smiles: '[H][C@]12CC=C3[C@]4([H])CC(C)(C)CC[C@]4(C)[C@@H](O)C[C@@]3(C)[C@]1(C)CC[C@@]1([H])C(C)(C)[C@@H](O)CC[C@]21C'
+  standard_inchi: InChI=1S/C30H50O2/c1-25(2)15-16-27(5)20(17-25)19-9-10-22-28(6)13-12-23(31)26(3,4)21(28)11-14-29(22,7)30(19,8)18-24(27)32/h9,20-24,31-32H,10-18H2,1-8H3/t20-,21-,22+,23-,24-,27-,28-,29+,30+/m0/s1
+  standard_inchi_key: VLRYIIPJIVGFIV-QQSFYHFXSA-N
+  molecular_formula: C30H50O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 442.728
+  monoisotopic_mass: 442.38108
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:138945
+  source_label: maniladiol
+  minted_identifier: antibioticmech:chebi-0149740b25
+  role_terms:
+  - CHEBI:33231
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

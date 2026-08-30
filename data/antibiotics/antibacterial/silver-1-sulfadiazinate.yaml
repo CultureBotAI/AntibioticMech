@@ -1,0 +1,64 @@
+identifier: CHEBI:9142
+label: silver(1+) sulfadiazinate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: silver(1+) [(4-aminophenyl)sulfonyl](pyrimidin-2-yl)azanide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Flamazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Silvadene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Silver sulfadiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfadiazine silver salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: silver sulfadiazinate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: silver sulphadiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33968
+- CHEBI:38116
+- CHEBI:39447
+xrefs:
+- cas:22199-08-2
+- drugbank:DB05245
+- gmelin:288660
+- kegg.drug:D00433
+- reaxys:924042
+- wikipedia.en:Silver_sulfadiazine
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: Nc1ccc(S(=O)(=O)[N-]c2ncccn2)cc1.[Ag+]
+  standard_inchi: InChI=1S/C10H9N4O2S.Ag/c11-8-2-4-9(5-3-8)17(15,16)14-10-12-6-1-7-13-10;/h1-7H,11H2;/q-1;+1
+  standard_inchi_key: UEJSSZHHYBHCEL-UHFFFAOYSA-N
+  molecular_formula: Ag.C10H9N4O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 357.143
+  monoisotopic_mass: 355.94972
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9142
+  source_label: silver(1+) sulfadiazinate
+  minted_identifier: antibioticmech:chebi-e94ae83f17
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

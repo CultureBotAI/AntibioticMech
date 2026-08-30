@@ -1,0 +1,45 @@
+identifier: CHEBI:143030
+label: 3-(phenethylamino)-butan-2-one
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A methyl ketone that is 2-phenylethan-1-amine in which one of the hydrogen's
+  of the amino group is substituted by a 3-oxobutan-2-yl group. It is a volatile organic
+  compound produced by the skin bacterium, S.schleiferi.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-[(2-phenylethyl)amino]butan-2-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: schleiferon A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134179
+- CHEBI:22712
+- CHEBI:50995
+- CHEBI:51867
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(=O)C(C)NCCc1ccccc1
+  standard_inchi: InChI=1S/C12H17NO/c1-10(11(2)14)13-9-8-12-6-4-3-5-7-12/h3-7,10,13H,8-9H2,1-2H3
+  standard_inchi_key: WGOUDWYOCIOVMG-UHFFFAOYSA-N
+  molecular_formula: C12H17NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 191.274
+  monoisotopic_mass: 191.13101
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:143030
+  source_label: 3-(phenethylamino)-butan-2-one
+  minted_identifier: antibioticmech:chebi-8a03842ee6
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

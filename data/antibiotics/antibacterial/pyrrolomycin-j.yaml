@@ -1,0 +1,37 @@
+identifier: antibioticmech:aro-6235078efd
+label: pyrrolomycin J
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Pyrrolomycins are protonophores with antibiotic activity.
+definition_source: PMID:36171648
+parent_compounds:
+- ARO:3005163
+xrefs:
+- ARO:3007628
+- CHEBI:206255
+- chembl:CHEMBL451925
+- pubchem.compound:11337778
+structural_class: ionophore with antibiotic activity
+structural_class_id: ARO:3005163
+chemical_structure:
+  smiles: COC1=C(C=C(C=C1Cl)Cl)C(=O)C2=C(C(=C(N2)Cl)Cl)Cl
+  standard_inchi: InChI=1S/C12H6Cl5NO2/c1-20-11-5(2-4(13)3-6(11)14)10(19)9-7(15)8(16)12(17)18-9/h2-3,18H,1H3
+  standard_inchi_key: OPEUDILCTNZYOP-UHFFFAOYSA-N
+  molecular_formula: C12H6Cl5NO2
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 373.4
+  monoisotopic_mass: 370.884117
+source_concepts:
+- source: ARO
+  source_id: ARO:3007628
+  source_label: pyrrolomycin J
+  minted_identifier: antibioticmech:aro-6235078efd
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

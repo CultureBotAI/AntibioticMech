@@ -1,0 +1,79 @@
+identifier: CHEBI:7519
+label: trans-cis-nepetalactone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclopentapyran that is (4aS,7aS)-1,4a,5,6,7,7a-hexahydrocyclopenta[c]pyran
+  substituted at position 1 by an oxo group and at positions 4 and 7 by methyl groups,
+  respectively (the 4aS,7S,7aS-diastereomer). An iridoid monoterpenoid isolated from
+  several Nepeta plant species. It exhibits potent repellant activity against house
+  dust mites and mosquitoes.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4aS,7S,7aS)-4,7-dimethyl-5,6,7,7a-tetrahydrocyclopenta[c]pyran-1(4aH)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-(4aS,7S,7aS)-nepetalactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-trans,cis-nepetalactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4aS,7S,7aS)-nepetalactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4aα,7α,7aβ)-5,6,7,7a-tetrahydro-4,7-dimethylcyclopenta[c]pyran-1(4aH)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4aα,7α,7aβ-nepetalactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: E,Z-nepetalactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: epinepetalactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: isonepetalactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nepetalactone trans-cis-form
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: trans,cis-nepetalactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38606
+- CHEBI:50563
+xrefs:
+- cas:17257-15-7
+- kegg.compound:C09792
+- knapsack:C00003092
+- lipidmaps:LMPR0102070014
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12C(=O)OC=C(C)[C@@]1([H])CC[C@@H]2C'
+  standard_inchi: InChI=1S/C10H14O2/c1-6-3-4-8-7(2)5-12-10(11)9(6)8/h5-6,8-9H,3-4H2,1-2H3/t6-,8+,9-/m0/s1
+  standard_inchi_key: ZDKZHVNKFOXMND-ZQARSLAVSA-N
+  molecular_formula: C10H14O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 166.22
+  monoisotopic_mass: 166.09938
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:7519
+  source_label: trans-cis-nepetalactone
+  minted_identifier: antibioticmech:chebi-16270fd5b0
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

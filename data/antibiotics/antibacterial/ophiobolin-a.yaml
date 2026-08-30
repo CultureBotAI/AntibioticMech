@@ -1,0 +1,38 @@
+identifier: CHEBI:7777
+label: ophiobolin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Ophiobolin A is a sesterterpene which was initially isolated as fungal
+  phytotoxins and subsequently shown to possess other biological activities, including
+  anticancer activities.
+definition_source: PMID:38131643
+parent_compounds:
+- ARO:3005172
+xrefs:
+- ARO:3007756
+- cas:4611-05-6
+- chembl:CHEMBL522808
+- pubchem.compound:5281387
+structural_class: terpene with antibiotic activity
+structural_class_id: ARO:3005172
+chemical_structure:
+  smiles: '[H][C@@]12C/C=C(/C=O)[C@@]3([H])C(=O)C[C@@](C)(O)[C@@]3([H])C[C@@]1(C)CC[C@@]21O[C@@]([H])(C=C(C)C)C[C@@H]1C'
+  standard_inchi: InChI=1S/C25H36O4/c1-15(2)10-18-11-16(3)25(29-18)9-8-23(4)12-19-22(20(27)13-24(19,5)28)17(14-26)6-7-21(23)25/h6,10,14,16,18-19,21-22,28H,7-9,11-13H2,1-5H3/b17-6-/t16-,18-,19-,21+,22+,23+,24+,25-/m0/s1
+  standard_inchi_key: MWYYLZRWWNBROW-BDZRSQQBSA-N
+  molecular_formula: C25H36O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 400.559
+  monoisotopic_mass: 400.26136
+source_concepts:
+- source: ARO
+  source_id: ARO:3007756
+  source_label: ophiobolin A
+  minted_identifier: antibioticmech:aro-b831ebba96
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

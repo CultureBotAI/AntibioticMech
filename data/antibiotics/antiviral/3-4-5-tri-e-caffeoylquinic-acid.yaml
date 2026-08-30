@@ -1,0 +1,52 @@
+identifier: CHEBI:233499
+label: 3,4,5-tri-(E)-caffeoylquinic acid
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 3,4,5-tricaffeoylquinic acid in which the double bonds adopt (E)-configuration.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,3R,4S,5R)-3,4,5-tris{[(2E)-3-(3,4-dihydroxyphenyl)prop-2-enoyl]oxy}-1-hydroxycyclohexanecarboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1α,3R,4α,5R)-3,4,5-Tris[[(2E)-3-(3,4-dihydroxyphenyl)-1-oxo-2-propen-1-yl]oxy]-1-hydroxycyclohexanecarboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (E)-3,4,5-tricaffeoylquinic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,4,5-tri-trans-caffeoylquinic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:233498
+xrefs:
+- cas:86632-03-3
+activity_roles:
+- CHEBI:22587
+- CHEBI:64946
+chemical_structure:
+  smiles: O=C(/C=C/c1ccc(O)c(O)c1)O[C@@H]1C[C@](O)(C(=O)O)C[C@@H](OC(=O)/C=C/c2ccc(O)c(O)c2)[C@H]1OC(=O)/C=C/c1ccc(O)c(O)c1
+  standard_inchi: InChI=1S/C34H30O15/c35-21-7-1-18(13-24(21)38)4-10-29(41)47-27-16-34(46,33(44)45)17-28(48-30(42)11-5-19-2-8-22(36)25(39)14-19)32(27)49-31(43)12-6-20-3-9-23(37)26(40)15-20/h1-15,27-28,32,35-40,46H,16-17H2,(H,44,45)/b10-4+,11-5+,12-6+/t27-,28-,32-,34+/m1/s1
+  standard_inchi_key: OAFXTKGAKYAFSI-YOWOTECTSA-N
+  molecular_formula: C34H30O15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 678.599
+  monoisotopic_mass: 678.15847
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:233499
+  source_label: 3,4,5-tri-(E)-caffeoylquinic acid
+  minted_identifier: antibioticmech:chebi-5cfe702e30
+  role_terms:
+  - CHEBI:22587
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

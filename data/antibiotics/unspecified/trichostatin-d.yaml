@@ -1,0 +1,38 @@
+identifier: CHEBI:39160
+label: trichostatin D
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: 1-O-({(2E,4E,6R)-7-[4-(dimethylamino)phenyl]-4,6-dimethyl-7-oxohepta-2,4-dienoyl}amino)-α-D-glucopyranose
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:39146
+- CHEBI:51476
+xrefs:
+- beilstein:8657680
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(/C=C/C(=O)NO[C@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O)=C\[C@@H](C)C(=O)c1ccc(N(C)C)cc1
+  standard_inchi: InChI=1S/C23H32N2O8/c1-13(11-14(2)19(28)15-6-8-16(9-7-15)25(3)4)5-10-18(27)24-33-23-22(31)21(30)20(29)17(12-26)32-23/h5-11,14,17,20-23,26,29-31H,12H2,1-4H3,(H,24,27)/b10-5+,13-11+/t14-,17-,20-,21+,22-,23-/m1/s1
+  standard_inchi_key: YECWTLGLNDDPGE-YPBJGXFISA-N
+  molecular_formula: C23H32N2O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 464.515
+  monoisotopic_mass: 464.21587
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:39160
+  source_label: trichostatin D
+  minted_identifier: antibioticmech:chebi-91dec951dd
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

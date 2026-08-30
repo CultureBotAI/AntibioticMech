@@ -1,0 +1,52 @@
+identifier: CHEBI:65470
+label: bauhinoxepin F
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dibenzooxepine that is 10,11-dihydrodibenzo[b,f]oxepine substituted
+  by methoxy groups at positions 6 and 9, methyl group at position 7 and hydroxy groups
+  at positions 1 and 8 respectively. It is isolated from the root extract of Bauhinia
+  purpurea and exhibits antimalarial, antimycobacterial, antifungal, anti-inflammatory
+  and cytotoxic activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6,9-dimethoxy-7-methyl-10,11-dihydrodibenzo[b,f]oxepine-1,8-diol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,6-dihydro-3,7-dihydroxy-1,4-methoxy-2-methyldibenz[b,f]oxepin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:35618
+- CHEBI:38926
+xrefs:
+- reaxys:11175323
+activity_roles:
+- CHEBI:35718
+- CHEBI:38068
+- CHEBI:64912
+chemical_structure:
+  smiles: COc1c(O)c(C)c(OC)c2c1CCc1c(O)cccc1O2
+  standard_inchi: InChI=1S/C17H18O5/c1-9-14(19)16(21-3)11-8-7-10-12(18)5-4-6-13(10)22-17(11)15(9)20-2/h4-6,18-19H,7-8H2,1-3H3
+  standard_inchi_key: XVMLDDFWHNGJME-UHFFFAOYSA-N
+  molecular_formula: C17H18O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 302.326
+  monoisotopic_mass: 302.11542
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65470
+  source_label: bauhinoxepin F
+  minted_identifier: antibioticmech:chebi-be9f18199d
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:38068
+  - CHEBI:64912
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

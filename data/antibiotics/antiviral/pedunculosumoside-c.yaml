@@ -1,0 +1,48 @@
+identifier: CHEBI:67875
+label: pedunculosumoside C
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A homoflavonoid glycoside that is 5'-prenylophioglonol attached to 2-O-β-D-glucopyranosyl-β-D-glucopyranosyl
+  residue at position 7 via glycosidic linkage. It has been isolated from the whole
+  plant of Ophioglossum pedunculosum and exhibits anti-HBV activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-[3,4-dihydroxy-5-(3-methylbut-2-en-1-yl)phenyl]-5-hydroxy-3-(hydroxymethyl)-4-oxo-4H-chromen-7-yl
+    2-O-β-D-glucopyranosyl-β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5'-(3-methyl-2-buten-1-yl)ophioglonol 7-O-β-D-glucopyranosyl-(1→2)-β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22798
+- CHEBI:63353
+- CHEBI:76404
+- CHEBI:76405
+xrefs:
+- reaxys:21523326
+activity_roles:
+- CHEBI:64951
+chemical_structure:
+  smiles: '[H][C@@]1(O[C@H]2[C@H](Oc3cc(O)c4c(=O)c(CO)c(-c5cc(O)c(O)c(CC=C(C)C)c5)oc4c3)O[C@H](CO)[C@@H](O)[C@@H]2O)O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O'
+  standard_inchi: InChI=1S/C33H40O17/c1-12(2)3-4-13-5-14(6-18(38)23(13)39)30-16(9-34)24(40)22-17(37)7-15(8-19(22)47-30)46-33-31(28(44)26(42)21(11-36)49-33)50-32-29(45)27(43)25(41)20(10-35)48-32/h3,5-8,20-21,25-29,31-39,41-45H,4,9-11H2,1-2H3/t20-,21-,25-,26-,27+,28+,29-,31-,32+,33-/m1/s1
+  standard_inchi_key: ZDGISMQFYIDRSP-KZGGGLRYSA-N
+  molecular_formula: C33H40O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 708.666
+  monoisotopic_mass: 708.22655
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:67875
+  source_label: pedunculosumoside C
+  minted_identifier: antibioticmech:chebi-b30cf66bae
+  role_terms:
+  - CHEBI:64951
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

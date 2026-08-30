@@ -1,0 +1,49 @@
+identifier: CHEBI:17704
+label: aspulvinone E
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 4-hydroxy-5-(4-hydroxybenzylidene)-3-(4-hydroxyphenyl)furan-2(5H)-one
+  in which the double bond adopts a Z-configuration. It is a marine metabolite isolated
+  from the fungus Aspergillus terreus and exhibits antiviral activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5Z)-4-hydroxy-5-(4-hydroxybenzylidene)-3-(4-hydroxyphenyl)furan-2(5H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5Z)-4-hydroxy-3-(4-hydroxyphenyl)-5-[(4-hydroxyphenyl)methylidene]furan-2(5H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Aspulvinone E
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:155902
+- CHEBI:22669
+xrefs:
+- cas:49637-60-7
+- kegg.compound:C02006
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: O=C1O/C(=C\c2ccc(O)cc2)C(O)=C1c1ccc(O)cc1
+  standard_inchi: InChI=1S/C17H12O5/c18-12-5-1-10(2-6-12)9-14-16(20)15(17(21)22-14)11-3-7-13(19)8-4-11/h1-9,18-20H/b14-9-
+  standard_inchi_key: BNNVVTQUWNGKPH-ZROIWOOFSA-N
+  molecular_formula: C17H12O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 296.278
+  monoisotopic_mass: 296.06847
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17704
+  source_label: aspulvinone E
+  minted_identifier: antibioticmech:chebi-fe0bdcf760
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

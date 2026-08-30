@@ -1,0 +1,59 @@
+identifier: CHEBI:65408
+label: andrographolide
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A labdane diterpenoid isolated from the leaves and roots of Andrographis
+  paniculata that exhibits anti-HIV, anti-inflammatory and antineoplastic properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3E,4S)-4-hydroxy-3-{2-[(1R,4aS,5R,6R,8aS)-6-hydroxy-5-(hydroxymethyl)-5,8a-dimethyl-2-methylidenedecahydronaphthalen-1-yl]ethylidene}dihydrofuran-2(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1R-(1-α(E(S)),4aβ,5α,6α,8aα))-3-(2-(decahydro-6-hydroxy-5-(hydroxymethyl)-5,8a-dimethyl-2-methylene-1-naphthalenyl)ethylidene)dihydro-4-hydroxy-2(3H)-furanone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-(2-(decahydro-6-hydroxy-5-(hydroxymethyl)-5,8a-dimethyl-2-methylenenaphthyl)ethylidene)dihydro-4-hydroxyfuran-2(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3α,14,15,18-tetrahydroxy-5b,9bH,10a-labda-8(20),12-dien-16-oic acid
+    γ-Lactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:35681
+- CHEBI:36770
+- CHEBI:36785
+- CHEBI:37581
+xrefs:
+- cas:5508-58-7
+- kegg.compound:C20214
+- patent:CN102397273
+- patent:EP2411004
+- reaxys:5609598
+- wikipedia.en:Andrographolide
+activity_roles:
+- CHEBI:64946
+chemical_structure:
+  smiles: '[H][C@]12CCC(=C)[C@@H](C/C=C3/C(=O)OC[C@H]3O)[C@]1(C)CC[C@@H](O)[C@@]2(C)CO'
+  standard_inchi: InChI=1S/C20H30O5/c1-12-4-7-16-19(2,9-8-17(23)20(16,3)11-21)14(12)6-5-13-15(22)10-25-18(13)24/h5,14-17,21-23H,1,4,6-11H2,2-3H3/b13-5+/t14-,15-,16+,17-,19+,20+/m1/s1
+  standard_inchi_key: BOJKULTULYSRAS-OTESTREVSA-N
+  molecular_formula: C20H30O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 350.455
+  monoisotopic_mass: 350.20932
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65408
+  source_label: andrographolide
+  minted_identifier: antibioticmech:chebi-d73229c762
+  role_terms:
+  - CHEBI:64946
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,47 @@
+identifier: CHEBI:66140
+label: karalicin
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pentitol derivative that is 3-O-acetyl-1-deoxypentitol substituted by
+  a 4-methoxyphenyl group at position 1. Isolated from the fermentation broth of Pseudomonas
+  fluorescens and Pseudomonas putida, it exhibits anti-HSV-1 activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-O-acetyl-1-deoxy-1-(4-methoxyphenyl)pentitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[1,2,4-trihydroxy-5-(4-methoxyphenyl)pentan-3-yl] acetate'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25235
+- CHEBI:27136
+- CHEBI:47622
+- CHEBI:63434
+xrefs:
+- reaxys:7816467
+activity_roles:
+- CHEBI:64953
+chemical_structure:
+  smiles: COc1ccc(CC(O)C(OC(C)=O)C(O)CO)cc1
+  standard_inchi: InChI=1S/C14H20O6/c1-9(16)20-14(13(18)8-15)12(17)7-10-3-5-11(19-2)6-4-10/h3-6,12-15,17-18H,7-8H2,1-2H3
+  standard_inchi_key: JATBUOZGJQJSGA-UHFFFAOYSA-N
+  molecular_formula: C14H20O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 284.308
+  monoisotopic_mass: 284.12599
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66140
+  source_label: karalicin
+  minted_identifier: antibioticmech:chebi-8588964c7a
+  role_terms:
+  - CHEBI:64953
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,96 @@
+identifier: CHEBI:81900
+label: bromuconazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of oxolanes carrying 1,2,4-triazol-ylmethyl and
+  2,4-dichlorophenyl substituents at position 2 as well as a bromo substituent at
+  position 4. A foliar applied conazole fungicide for a range of crops including cereals,
+  fruit, vegetables and vines.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,5-anhydro-4-bromo-1,3,4-trideoxy-2-(2,4-dichlorophenyl)-1-(1H-1,2,4-triazol-1-yl)pentitol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-((4-Bromo-2-(2,4-dichlorophenyl)tetrahydro-2-furanyl)methyl)-1H-1,2,4-triazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23697
+- CHEBI:26912
+- CHEBI:35727
+- CHEBI:37141
+- CHEBI:87067
+- CHEBI:87100
+- ARO:3007499
+xrefs:
+- ARO:3009187
+- cas:116255-48-2
+- kegg.compound:C18704
+- patent:EP258161
+- pesticides:bromuconazole
+- ppdb:97
+- reaxys:8393967
+- chembl:CHEMBL271579
+- pubchem.compound:3444
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:77884
+- CHEBI:86328
+structural_class: triazole antifungal
+structural_class_id: ARO:3007499
+chemical_structure:
+  smiles: Clc1ccc(C2(Cn3cncn3)CC(Br)CO2)c(Cl)c1
+  standard_inchi: InChI=1S/C13H12BrCl2N3O/c14-9-4-13(20-5-9,6-19-8-17-7-18-19)11-2-1-10(15)3-12(11)16/h1-3,7-9H,4-6H2
+  standard_inchi_key: HJJVPARKXDDIQD-UHFFFAOYSA-N
+  molecular_formula: C13H12BrCl2N3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 377.069
+  monoisotopic_mass: 374.95408
+source_concepts:
+- source: ARO
+  source_id: ARO:3009187
+  source_label: bromuconazole
+  minted_identifier: antibioticmech:aro-2d2f07f8f0
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:77884
+  - CHEBI:86328
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:81900
+  source_label: bromuconazole
+  minted_identifier: antibioticmech:chebi-2b6a9241db
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:77884
+  - CHEBI:86328
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009487
+  label: Aspergillus flavus Cyp51C with mutations conferring resistance to bromuconazole
+  evidence:
+  - reference: ARO:3009487
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009187 (bromuconazole);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009488
+  label: Aspergillus flavus Cyp51C with mutations conferring resistance to epoxiconazole
+  evidence:
+  - reference: ARO:3009488
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009187 (bromuconazole);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

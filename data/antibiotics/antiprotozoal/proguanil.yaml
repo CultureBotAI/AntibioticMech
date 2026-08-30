@@ -1,0 +1,68 @@
+identifier: CHEBI:8455
+label: proguanil
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A biguanide compound which has isopropyl and p-chlorophenyl substituents
+  on the terminal N atoms. A prophylactic antimalarial drug, it works by inhibiting
+  the enzyme dihydrofolate reductase, which is involved in the reproduction of the
+  malaria parasites Plasmodium falciparum and P. vivax within the red blood cells.
+definition_source: ChEBI
+synonyms:
+- synonym_text: proguanilum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-(4-chlorophenyl)-N'-(propan-2-yl)imidodicarbonimidic diamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(p-chlorophenyl)-5-isopropylbiguanide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chlorguanide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Chloroguanide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-(4-Chlorophenyl)-N'-(isopropyl)-imidodicarbonimidic diamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:53662
+- CHEBI:83403
+xrefs:
+- cas:500-92-5
+- drugbank:DB01131
+- drugcentral:2282
+- hmdb:HMDB0015263
+- kegg.compound:C07631
+- kegg.drug:D08428
+- lincs.smallmolecule:LSM-2618
+- reaxys:2811599
+- wikipedia.en:Proguanil
+activity_roles:
+- CHEBI:35820
+- CHEBI:38068
+chemical_structure:
+  smiles: CC(C)NC(=N)NC(=N)Nc1ccc(Cl)cc1
+  standard_inchi: InChI=1S/C11H16ClN5/c1-7(2)15-10(13)17-11(14)16-9-5-3-8(12)4-6-9/h3-7H,1-2H3,(H5,13,14,15,16,17)
+  standard_inchi_key: SSOLNOMRVKKSON-UHFFFAOYSA-N
+  molecular_formula: C11H16ClN5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 253.737
+  monoisotopic_mass: 253.10942
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:8455
+  source_label: proguanil
+  minted_identifier: antibioticmech:chebi-9cfb8eda6a
+  role_terms:
+  - CHEBI:35820
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

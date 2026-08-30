@@ -1,0 +1,75 @@
+identifier: CHEBI:4537
+label: difloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quinolone that is pefloxacin in which the ethyl group at position 1
+  of the quinolone has been replaced by a p-fluorophenyl group. A broad-spectrum antibiotic
+  effective against both Gram-positive and Gram-negative bacteria, it is used (usually
+  as the monohydrochloride salt) for the treatment of bacterial infections in dogs.
+definition_source: ChEBI
+synonyms:
+- synonym_text: difloxacine
+  synonym_type: INN
+  source: chebi
+- synonym_text: difloxacino
+  synonym_type: INN
+  source: chebi
+- synonym_text: difloxacinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6-fluoro-1-(4-fluorophenyl)-7-(4-methylpiperazin-1-yl)-4-oxo-1,4-dihydroquinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-fluoro-1-(4-fluorophenyl)-7-(4-methyl-1-piperazinyl)-4-oxo-1,4-dihydro-3-quinolinecarboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23765
+- CHEBI:25384
+- CHEBI:46845
+- CHEBI:46848
+- CHEBI:83575
+- CHEBI:86324
+- CHEBI:87211
+xrefs:
+- cas:98106-17-3
+- kegg.compound:C11234
+- kegg.drug:D07828
+- patent:EP131839
+- patent:US4730000
+- reaxys:5835542
+- vsdb:1841
+- wikipedia.en:Difloxacin
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+chemical_structure:
+  smiles: CN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3-c2ccc(F)cc2)CC1
+  standard_inchi: InChI=1S/C21H19F2N3O3/c1-24-6-8-25(9-7-24)19-11-18-15(10-17(19)23)20(27)16(21(28)29)12-26(18)14-4-2-13(22)3-5-14/h2-5,10-12H,6-9H2,1H3,(H,28,29)
+  standard_inchi_key: NOCJXYPHIIZEHN-UHFFFAOYSA-N
+  molecular_formula: C21H19F2N3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 399.397
+  monoisotopic_mass: 399.13945
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4537
+  source_label: difloxacin
+  minted_identifier: antibioticmech:chebi-412032e770
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

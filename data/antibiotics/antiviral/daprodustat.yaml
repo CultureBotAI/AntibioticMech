@@ -1,0 +1,69 @@
+identifier: CHEBI:229223
+label: daprodustat
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of barbiturates that is barbituric acid substituted
+  by cyclohexyl groups at positions 1 and 3, and by a (carboxymethyl)aminocarbonyl
+  group at position 5. It is an inhibitor of hypoxia-inducible factor prolyl hydroxylase
+  developed by GlaxoSmithKline for the treatment of anaemia in patients with chronic
+  kidney disease.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Jesduvroq
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: daprodustatum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-[(1,3-dicyclohexyl-2,4,6-trioxohexahydropyrimidin-5-yl)carbonyl]glycine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GSK 1278863
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GSK-1278863
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: GSK1278863
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '{[(1,3-dicyclohexyl-2,4,6-trioxohexahydropyrimidin-5-yl)carbonyl]amino}acetic
+    acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:16180
+- CHEBI:22693
+- CHEBI:35871
+xrefs:
+- cas:960539-70-2
+- drugbank:DB11682
+- hmdb:HMDB0250863
+- kegg.drug:D10874
+- wikipedia.en:Daprodustat
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: O=C(O)CNC(=O)C1C(=O)N(C2CCCCC2)C(=O)N(C2CCCCC2)C1=O
+  standard_inchi: InChI=1S/C19H27N3O6/c23-14(24)11-20-16(25)15-17(26)21(12-7-3-1-4-8-12)19(28)22(18(15)27)13-9-5-2-6-10-13/h12-13,15H,1-11H2,(H,20,25)(H,23,24)
+  standard_inchi_key: RUEYEZADQJCKGV-UHFFFAOYSA-N
+  molecular_formula: C19H27N3O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 393.44
+  monoisotopic_mass: 393.18999
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:229223
+  source_label: daprodustat
+  minted_identifier: antibioticmech:chebi-4e985a16ff
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

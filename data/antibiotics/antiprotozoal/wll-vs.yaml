@@ -1,0 +1,44 @@
+identifier: CHEBI:91210
+label: WLL-vs
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dipeptide that is L-tryptophyl-L-leucinamide in which the N-terminal
+  amino group has been converted to the corresponding (morpholin-4-yl)acetamide and
+  in which one of the hydrogens attached to the nitrogen of the C-terminal amide has
+  been replaced by a (1E)-5-methyl-1-(methylsulfonyl)hex-1-en-3-yl group. It is a
+  selective proteasome inhibitor.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-(morpholin-4-ylacetyl)-L-tryptophyl-N-[(1E,3S)-5-methyl-1-(methylsulfonyl)hex-1-en-3-yl]-L-leucinamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24828
+- CHEBI:35850
+- CHEBI:38785
+- CHEBI:46761
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: CC(C)C[C@@H](/C=C/S(C)(=O)=O)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](Cc1cnc2ccccc12)NC(=O)CN1CCOCC1
+  standard_inchi: InChI=1S/C31H47N5O6S/c1-21(2)16-24(10-15-43(5,40)41)33-30(38)27(17-22(3)4)35-31(39)28(34-29(37)20-36-11-13-42-14-12-36)18-23-19-32-26-9-7-6-8-25(23)26/h6-10,15,19,21-22,24,27-28,32H,11-14,16-18,20H2,1-5H3,(H,33,38)(H,34,37)(H,35,39)/b15-10+/t24-,27+,28+/m1/s1
+  standard_inchi_key: DKBAFRHAWTVKAD-ODGLJRBPSA-N
+  molecular_formula: C31H47N5O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 617.813
+  monoisotopic_mass: 617.32471
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:91210
+  source_label: WLL-vs
+  minted_identifier: antibioticmech:chebi-e3f56ea40d
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

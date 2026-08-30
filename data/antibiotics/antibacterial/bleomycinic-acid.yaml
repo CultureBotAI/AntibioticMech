@@ -1,0 +1,62 @@
+identifier: antibioticmech:aro-3cfb065f35
+label: bleomycinic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Bleomycinic acid is a glycopeptide antibiotic produced by Streptomyces
+  verticillus taken as a mixture of bleomycins. It induces stand breaks in bacterial
+  nucleic acids.
+definition_source: PMID:15700963
+parent_compounds:
+- ARO:3000081
+xrefs:
+- ARO:3000690
+- pubchem.compound:2410
+structural_class: glycopeptide antibiotic
+structural_class_id: ARO:3000081
+chemical_structure:
+  smiles: CC1=C(N=C(N=C1N)C(CC(=O)N)NCC(C(=O)N)N)C(=O)NC(C(C2=CN=CN2)OC3C(C(C(C(O3)CO)O)O)OC4C(C(C(C(O4)CO)O)OC(=O)N)O)C(=O)NC(C)C(C(C)C(=O)NC(C(C)O)C(=O)NCCC5=NC(=CS5)C6=NC(=CS6)C(=O)O)O
+  standard_inchi: InChI=1S/C50H72N16O22S2/c1-15-28(63-41(66-39(15)53)20(7-26(52)70)58-8-19(51)40(54)76)44(79)65-30(36(21-9-56-14-59-21)86-49-38(34(74)32(72)24(10-67)85-49)87-48-35(75)37(88-50(55)83)33(73)25(11-68)84-48)45(80)60-17(3)31(71)16(2)42(77)64-29(18(4)69)43(78)57-6-5-27-61-22(12-89-27)46-62-23(13-90-46)47(81)82/h9,12-14,16-20,24-25,29-38,48-49,58,67-69,71-75H,5-8,10-11,51H2,1-4H3,(H2,52,70)(H2,54,76)(H2,55,83)(H,56,59)(H,57,78)(H,60,80)(H,64,77)(H,65,79)(H,81,82)(H2,53,63,66)
+  standard_inchi_key: MRNLLBXPSWMYCK-UHFFFAOYSA-N
+  molecular_formula: C50H72N16O22S2
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 1313.3
+  monoisotopic_mass: 1312.44485034
+source_concepts:
+- source: ARO
+  source_id: ARO:3000690
+  source_label: bleomycinic acid
+  minted_identifier: antibioticmech:aro-3cfb065f35
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001205
+  label: BRP(MBL)
+  evidence:
+  - reference: ARO:3001205
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000690 (bleomycinic
+      acid); database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000738
+  target_label: deoxyribonucleic acid
+  evidence:
+  - reference: ARO:3000738
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000690 (bleomycinic acid);
+      database assertion, not a primary citation.
+- target_id: ARO:3000740
+  target_label: ribonucleic acid
+  evidence:
+  - reference: ARO:3000740
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000690 (bleomycinic acid);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,173 @@
+identifier: CHEBI:55346
+label: anidulafungin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A semisynthetic echinocandin anti-fungal drug. It is active against Aspergillus
+  and Candida species and is used for the treatment of invasive candidiasis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Eraxis
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: anidulafungina
+  synonym_type: INN
+  source: chebi
+- synonym_text: anidulafungine
+  synonym_type: INN
+  source: chebi
+- synonym_text: anidulafunginum
+  synonym_type: INN
+  source: chebi
+- synonym_text: N-{(2R,6S,9S,11R,12R,14aS,15S,16S,20S,23S,25aS)-23-[(1S,2S)-1,2-dihydroxy-2-(4-hydroxyphenyl)ethyl]-2,11,12,15-tetrahydroxy-6,20-bis[(1R)-1-hydroxyethyl]-16-methyl-5,8,14,19,22,25-hexaoxotetracosahydro-1H-dipyrrolo[2,1-c:2',1'-l][1,4,7,10,13,16]hexaazacyclohenicosin-9-yl}-4''-(pentyloxy)-1,1':4',1''-terphenyl-4-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24533
+- CHEBI:52898
+- CHEBI:57248
+- CHEBI:72588
+- CHEBI:87113
+- ARO:3007496
+xrefs:
+- ARO:3007503
+- cas:166663-25-8
+- drugbank:DB00362
+- kegg.drug:D03211
+- reaxys:7408417
+- wikipedia.en:Anidulafungin
+- chembl:CHEMBL264241
+- pubchem.compound:166548
+activity_roles:
+- CHEBI:35718
+- CHEBI:86327
+structural_class: echinocandin antibiotic
+structural_class_id: ARO:3007496
+chemical_structure:
+  smiles: '[H][C@@]1([C@@H](C)O)NC(=O)[C@H]([C@H](O)[C@@H](O)c2ccc(O)cc2)NC(=O)[C@@H]2C[C@@H](O)CN2C(=O)[C@H]([C@@H](C)O)NC(=O)[C@@H](NC(=O)c2ccc(-c3ccc(-c4ccc(OCCCCC)cc4)cc3)cc2)C[C@@H](O)[C@@H](O)NC(=O)[C@@H]2[C@@H](O)[C@@H](C)CN2C1=O'
+  standard_inchi: InChI=1S/C58H73N7O17/c1-5-6-7-24-82-40-22-18-35(19-23-40)33-10-8-32(9-11-33)34-12-14-37(15-13-34)51(74)59-41-26-43(70)54(77)63-56(79)47-48(71)29(2)27-65(47)58(81)45(31(4)67)61-55(78)46(50(73)49(72)36-16-20-38(68)21-17-36)62-53(76)42-25-39(69)28-64(42)57(80)44(30(3)66)60-52(41)75/h8-23,29-31,39,41-50,54,66-73,77H,5-7,24-28H2,1-4H3,(H,59,74)(H,60,75)(H,61,78)(H,62,76)(H,63,79)/t29-,30+,31+,39+,41-,42-,43+,44-,45-,46-,47-,48-,49-,50-,54+/m0/s1
+  standard_inchi_key: JHVAMHSQVVQIOT-MFAJLEFUSA-N
+  molecular_formula: C58H73N7O17
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1140.254
+  monoisotopic_mass: 1139.50629
+source_concepts:
+- source: ARO
+  source_id: ARO:3007503
+  source_label: anidulafungin
+  minted_identifier: antibioticmech:aro-f30e065178
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:55346
+  source_label: anidulafungin
+  minted_identifier: antibioticmech:chebi-4eac20bab5
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009207
+  label: Candida glabrata FKS2 with mutations conferring resistance to anidulafungin
+  evidence:
+  - reference: ARO:3009207
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007503 (anidulafungin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009233
+  label: Candida glabrata FKS1 with mutations conferring resistance to anidulafungin
+  evidence:
+  - reference: ARO:3009233
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007503 (anidulafungin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009247
+  label: Candida parapsilosis Erg3 with mutations conferring resistance to anidulafungin
+  evidence:
+  - reference: ARO:3009247
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007503 (anidulafungin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009287
+  label: Pichia kudriavzevii Fks1 beta-1,3-glucan synthase with mutations associated
+    with resistance to anidulafungin
+  evidence:
+  - reference: ARO:3009287
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007503 (anidulafungin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009417
+  label: Candida albicans FKS1 with mutations conferring resistance to anidulafungin
+  evidence:
+  - reference: ARO:3009417
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007503 (anidulafungin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009419
+  label: Candida auris FKS1 beta-1,3-glucan synthase with mutations conferring resistance
+    to anidulafungin
+  evidence:
+  - reference: ARO:3009419
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007503 (anidulafungin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009423
+  label: Saccharomyces cerevisiae FKS1 beta-1,3-D-glucan synthase with mutations conferring
+    resistance to anidulafungin
+  evidence:
+  - reference: ARO:3009423
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007503 (anidulafungin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009560
+  label: Candida dubliniensis FKS1 beta-1,3-glucan synthase with mutations conferring
+    resistance to anidulafungin
+  evidence:
+  - reference: ARO:3009560
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007503 (anidulafungin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009594
+  label: Candida metapsilosis FKS1 beta-1,3-glucan with mutations conferring resistance
+    to anidulafungin
+  evidence:
+  - reference: ARO:3009594
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007503 (anidulafungin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009597
+  label: Candida parapsilosis FSK1 beta-1,3-D-glucan synthase with mutations associated
+    with resistance to anidulafungin
+  evidence:
+  - reference: ARO:3009597
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007503 (anidulafungin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009600
+  label: Candida tropicalis FKS1 beta-1,3-glucan synthase with mutations conferring
+    resistance to anidulafungin
+  evidence:
+  - reference: ARO:3009600
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007503 (anidulafungin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009604
+  label: Kluyveromyces marxianus FKS1 beta-1,3-glucan synthase with mutations conferring
+    resistance to anidulafungin
+  evidence:
+  - reference: ARO:3009604
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007503 (anidulafungin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

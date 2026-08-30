@@ -1,0 +1,46 @@
+identifier: CHEBI:65630
+label: ciliatamide A
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A lipopeptide that contains N-methylphenylalanine and lysine as the amino
+  acid residues linked to a dec-9-enoyl moiety via an amide linkage (the R,R stereoisomer).
+  It is isolated from the deep sea sponge Aaptos ciliata and exhibits antileishmanial
+  activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N-methyl-N-[(2R)-1-oxo-1-{[(3R)-2-oxoazepan-3-yl]amino}-3-phenylpropan-2-yl]dec-9-enamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (R,R)-ciliatamide A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23000
+- CHEBI:46895
+xrefs:
+- reaxys:19040133
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: C=CCCCCCCCC(=O)N(C)[C@H](Cc1ccccc1)C(=O)N[C@@H]1CCCCNC1=O
+  standard_inchi: InChI=1S/C26H39N3O3/c1-3-4-5-6-7-8-12-18-24(30)29(2)23(20-21-15-10-9-11-16-21)26(32)28-22-17-13-14-19-27-25(22)31/h3,9-11,15-16,22-23H,1,4-8,12-14,17-20H2,2H3,(H,27,31)(H,28,32)/t22-,23-/m1/s1
+  standard_inchi_key: UNVIKJZRLTXMOH-DHIUTWEWSA-N
+  molecular_formula: C26H39N3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 441.616
+  monoisotopic_mass: 441.29914
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65630
+  source_label: ciliatamide A
+  minted_identifier: antibioticmech:chebi-3978688efe
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

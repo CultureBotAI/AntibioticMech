@@ -1,0 +1,50 @@
+identifier: CHEBI:66750
+label: phomoxanthone B
+antimicrobial_class: ANTIMYCOBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of xanthones that is a dimer isolated from Phomopsis.
+  It exhibits cytotoxic, antimalarial and antitubercular activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5R*,5'R*,6R*,6'R*,10aR*,10a'R*)-10a,10a'-bis[(acetyloxy)methyl]-1,1',8,8'-tetrahydroxy-6,6'-dimethyl-9,9'-dioxo-5,5',7,7',9,9',10a,10a'-octahydro-6H,6'H-2,4'-bixanthene-5,5'-diyl
+    diacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: rel-[(5R,5'R,6R,6'R,10aR,10a'R)-5,5'-diacetoxy-1,1',8,8'-tetrahydroxy-6,6'-dimethyl-9,9'-dioxo-5,5',6,6',7,7',9,9'-octahydro-10aH,10a'H-2,4'-bixanthene-10a,10a'-diyl]bis(methylene)
+    diacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33853
+- CHEBI:47622
+- CHEBI:51149
+- CHEBI:64459
+xrefs:
+- reaxys:8966507
+activity_roles:
+- CHEBI:33231
+- CHEBI:38068
+chemical_structure:
+  smiles: CC(=O)OC[C@]12Oc3ccc(-c4ccc(O)c5c4O[C@@]4(COC(C)=O)C(=C(O)C[C@@H](C)[C@H]4OC(C)=O)C5=O)c(O)c3C(=O)C1=C(O)C[C@@H](C)[C@H]2OC(C)=O
+  standard_inchi: InChI=1S/C38H38O16/c1-15-11-25(45)30-33(48)28-26(53-37(30,13-49-17(3)39)35(15)51-19(5)41)10-8-21(31(28)46)22-7-9-23(43)27-32(47)29-24(44)12-16(2)36(52-20(6)42)38(29,54-34(22)27)14-50-18(4)40/h7-10,15-16,35-36,43-46H,11-14H2,1-6H3/t15-,16-,35-,36-,37+,38+/m1/s1
+  standard_inchi_key: RAKGKFLUJPUROQ-ACMZUNAXSA-N
+  molecular_formula: C38H38O16
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 750.706
+  monoisotopic_mass: 750.21599
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66750
+  source_label: phomoxanthone B
+  minted_identifier: antibioticmech:chebi-d23379e368
+  role_terms:
+  - CHEBI:33231
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

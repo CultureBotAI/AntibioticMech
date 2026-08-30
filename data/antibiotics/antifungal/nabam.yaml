@@ -1,0 +1,89 @@
+identifier: CHEBI:81934
+label: nabam
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dithiocarbamate salt that is the disodium salt of ethylenebis(dithiocarbamic
+  acid). A fungicide, algicide and bactericide used on various crops including on
+  cotton, capsicums, onions and rice crops, it is considered to be a carcinogen, so
+  is not licensed for use within the European Union. Mixing nabam with zinc sulfate
+  affords the fungicide zineb.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Dithane A-40
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Parzate
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Spring-bak
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: disodium ethane-1,2-diyldicarbamodithioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,2-ethanediylbiscarbamodithioic acid disodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Di-natrium-aethylenbisdithiocarbamat
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dinatrium-(N,N'-aethylen-bis(dithiocarbamat))
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N'-ethylene bis(dithiocarbamate de sodium)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: disodium N,N'-1,2-ethanediylbis(carbamodithioate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: disodium N,N'-ethane-1,2-diyldicarbamodithioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: disodium ethylene-1,2-bisdithiocarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: disodium ethylenebis(dithiocarbamate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nabame
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium ethylenebis(dithiocarbamate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38700
+- CHEBI:83060
+xrefs:
+- cas:142-59-6
+- hmdb:HMDB0031224
+- kegg.compound:C18748
+- patent:US1504404
+- patent:US2317765
+- pesticides:nabam
+- ppdb:479
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: S=C([S-])NCCNC(=S)[S-].[Na+].[Na+]
+  standard_inchi: InChI=1S/C4H8N2S4.2Na/c7-3(8)5-1-2-6-4(9)10;;/h1-2H2,(H2,5,7,8)(H2,6,9,10);;/q;2*+1/p-2
+  standard_inchi_key: UQJQVUOTMVCFHX-UHFFFAOYSA-L
+  molecular_formula: C4H6N2S4.2Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 256.354
+  monoisotopic_mass: 255.92092
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81934
+  source_label: nabam
+  minted_identifier: antibioticmech:chebi-58eb45e704
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

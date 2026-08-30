@@ -1,0 +1,54 @@
+identifier: CHEBI:53654
+label: O-formylcefamandole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cephalosporin compound having (R)-O-formylmandelamido and N-methylthiotetrazole
+  side groups. It is used (as the sodium salt) as a progrug for cefamandole.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6β-[(2R)-2-(formyloxy)-2-phenylacetamido]-3-{[(1-methyl-1H-tetrazol-5-yl)sulfanyl]methyl}ceph-3-em-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-7-{[(2R)-2-(formyloxy)-2-phenylacetyl]amino}-3-{[(1-methyl-1H-tetrazol-5-yl)sulfanyl]methyl}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+- CHEBI:52343
+xrefs:
+- beilstein:5406414
+- cas:57268-80-1
+- drugcentral:528
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H]C(=O)O[C@@H](C(=O)N[C@@H]1C(=O)N2C(C(=O)O)=C(CSc3nnnn3C)CS[C@]12[H])c1ccccc1'
+  standard_inchi: InChI=1S/C19H18N6O6S2/c1-24-19(21-22-23-24)33-8-11-7-32-17-12(16(28)25(17)13(11)18(29)30)20-15(27)14(31-9-26)10-5-3-2-4-6-10/h2-6,9,12,14,17H,7-8H2,1H3,(H,20,27)(H,29,30)/t12-,14-,17-/m1/s1
+  standard_inchi_key: RRJHESVQVSRQEX-SUYBPPKGSA-N
+  molecular_formula: C19H18N6O6S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 490.523
+  monoisotopic_mass: 490.07292
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:53654
+  source_label: O-formylcefamandole
+  minted_identifier: antibioticmech:chebi-9b58c63d6b
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

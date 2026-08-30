@@ -1,0 +1,152 @@
+identifier: CHEBI:3907
+label: coumermycin A1
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxycoumarin antibiotic that is obtained from Streptomyces rishiriensis
+  and exhibits potent antibacterial and anticancer activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: coumamycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: coumamycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: cumamicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: (3-methyl-1H-pyrrole-2,4-diyl)bis[carbonylimino(4-hydroxy-8-methyl-2-oxo-2H-chromene-3,7-diyl)oxy(2R,3R,4S,5R)-3-hydroxy-5-methoxy-6,6-dimethyltetrahydro-2H-pyran-2,4-diyl]
+    bis(5-methyl-1H-pyrrole-2-carboxylate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Coumermycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 107412
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Notomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Notomycin A1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sugordomycin D-1a
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23403
+- CHEBI:24400
+- CHEBI:26455
+- CHEBI:38064
+- CHEBI:62733
+- ARO:3000103
+xrefs:
+- ARO:3000150
+- cas:4434-05-3
+- kegg.compound:C05073
+- kegg.drug:D02333
+- knapsack:C00002461
+- reaxys:5230975
+- wikipedia.en:Coumermycin_A1
+- chembl:CHEMBL389471
+- pubchem.compound:54675768
+activity_roles:
+- CHEBI:33281
+structural_class: aminocoumarin antibiotic
+structural_class_id: ARO:3000103
+chemical_structure:
+  smiles: CO[C@@H]1[C@@H](OC(=O)c2ccc(C)n2)[C@@H](O)[C@H](Oc2ccc3c(O)c(NC(=O)c4cnc(C(=O)Nc5c(O)c6ccc(O[C@@H]7OC(C)(C)[C@H](OC)[C@@H](OC(=O)c8ccc(C)n8)[C@H]7O)c(C)c6oc5=O)c4C)c(=O)oc3c2C)OC1(C)C
+  standard_inchi: InChI=1S/C55H59N5O20/c1-21-12-16-29(57-21)48(67)77-42-38(63)52(79-54(6,7)44(42)71-10)73-31-18-14-26-36(61)34(50(69)75-40(26)24(31)4)59-46(65)28-20-56-33(23(28)3)47(66)60-35-37(62)27-15-19-32(25(5)41(27)76-51(35)70)74-53-39(64)43(45(72-11)55(8,9)80-53)78-49(68)30-17-13-22(2)58-30/h12-20,38-39,42-45,52-53,56-58,61-64H,1-11H3,(H,59,65)(H,60,66)/t38-,39-,42+,43+,44-,45-,52-,53-/m1/s1
+  standard_inchi_key: WTIJXIZOODAMJT-DHFGXMAYSA-N
+  molecular_formula: C55H59N5O20
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1110.092
+  monoisotopic_mass: 1109.37534
+source_concepts:
+- source: ARO
+  source_id: ARO:3000150
+  source_label: coumermycin A1
+  minted_identifier: antibioticmech:aro-cc3947c3d9
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:3907
+  source_label: coumermycin A1
+  minted_identifier: antibioticmech:chebi-977895c932
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003301
+  label: Staphylococcus aureus gyrB conferring resistance to aminocoumarin
+  evidence:
+  - reference: ARO:3003301
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000150 (coumermycin
+      A1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003302
+  label: Bartonella bacilliformis gyrB conferring resistance to aminocoumarin
+  evidence:
+  - reference: ARO:3003302
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000150 (coumermycin
+      A1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003303
+  label: Escherichia coli gyrB conferring resistance to aminocoumarin
+  evidence:
+  - reference: ARO:3003303
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000150 (coumermycin
+      A1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003314
+  label: Staphylococcus aureus parE conferring resistance to aminocoumarin
+  evidence:
+  - reference: ARO:3003314
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000150 (coumermycin
+      A1); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003318
+  label: Streptomyces rishiriensis parY mutant conferring resistance to aminocoumarin
+  evidence:
+  - reference: ARO:3003318
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000150 (coumermycin
+      A1); database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000023
+  target_label: aminocoumarin sensitive parE
+  evidence:
+  - reference: ARO:3000023
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000150 (coumermycin A1); database
+      assertion, not a primary citation.
+- target_id: ARO:3000734
+  target_label: antibiotic sensitive DNA topoisomerase subunit gyrB
+  evidence:
+  - reference: ARO:3000734
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000150 (coumermycin A1); database
+      assertion, not a primary citation.
+- target_id: ARO:3003253
+  target_label: aminocoumarin sensitive parY
+  evidence:
+  - reference: ARO:3003253
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000150 (coumermycin A1); database
+      assertion, not a primary citation.
+- target_id: ARO:3003260
+  target_label: aminocoumarin sensitive gyrB
+  evidence:
+  - reference: ARO:3003260
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000150 (coumermycin A1); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

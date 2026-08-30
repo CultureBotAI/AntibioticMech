@@ -1,0 +1,181 @@
+identifier: antibioticmech:aro-6407ce57f1
+label: gentamicin C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Gentamicin C is a mixture of gentamicin C1, gentamicin C1a, and gentamicin
+  C2 (these differ in substituents at position C6'). Gentamicin works by binding to
+  the bacterial 30S ribosomal subunit, causing misreading of mRNA and leaving the
+  bacterium unable to synthesize proteins vital to its growth.
+definition_source: PMID:8385262
+synonyms:
+- synonym_text: Cidomycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Garamycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Gentacycol
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Gentamicins
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Gentamycinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Gentavet
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Gentocin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Refobacin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Uromycine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:0000016
+xrefs:
+- ARO:0000014
+- cas:11097-82-8
+- CHEBI:75616
+- chembl:CHEMBL384124
+- pubchem.compound:3084091
+structural_class: aminoglycoside antibiotic
+structural_class_id: ARO:0000016
+chemical_structure:
+  smiles: C[C@@]1(CO[C@@H]([C@H]([C@H]1NC)O)O[C@H]2[C@@H](C[C@@H]([C@H]([C@H]2O)O[C@@H]3[C@@H](CC[C@H](O3)CN)N)N)N)O
+  standard_inchi: InChI=1S/C19H39N5O7/c1-19(27)7-28-18(13(26)16(19)24-2)31-15-11(23)5-10(22)14(12(15)25)30-17-9(21)4-3-8(6-20)29-17/h8-18,24-27H,3-7,20-23H2,1-2H3/t8-,9+,10-,11+,12+,13-,14+,15-,16+,17+,18+,19-/m0/s1
+  standard_inchi_key: VEGXETMJINRLTH-ALRICIOSSA-N
+  molecular_formula: C19H39N5O7
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 449.5
+  monoisotopic_mass: 449.2849486
+source_concepts:
+- source: ARO
+  source_id: ARO:0000014
+  source_label: gentamicin C
+  minted_identifier: antibioticmech:aro-6407ce57f1
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000797
+  label: MexCD-OprJ
+  evidence:
+  - reference: ARO:3000797
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
+      C); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000858
+  label: armA
+  evidence:
+  - reference: ARO:3000858
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
+      C); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000859
+  label: rmtA
+  evidence:
+  - reference: ARO:3000859
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
+      C); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000860
+  label: rmtB
+  evidence:
+  - reference: ARO:3000860
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
+      C); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000861
+  label: rmtC
+  evidence:
+  - reference: ARO:3000861
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
+      C); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000862
+  label: sgm
+  evidence:
+  - reference: ARO:3000862
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
+      C); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003032
+  label: MexXY-OprM
+  evidence:
+  - reference: ARO:3003032
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
+      C); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003038
+  label: MexXY-OprA
+  evidence:
+  - reference: ARO:3003038
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
+      C); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003240
+  label: Mycobacteroides abscessus 16S rRNA mutation conferring resistance to gentamicin
+  evidence:
+  - reference: ARO:3003240
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
+      C); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003396
+  label: Escherichia coli 16S rRNA (rrsB) mutation conferring resistance to gentamicin
+    C
+  evidence:
+  - reference: ARO:3003396
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
+      C); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003504
+  label: Borreliella burgdorferi 16S rRNA mutation conferring resistance to gentamicin
+  evidence:
+  - reference: ARO:3003504
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
+      C); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003517
+  label: Mycobacteroides chelonae 16S rRNA mutation conferring resistance to gentamicin
+    C
+  evidence:
+  - reference: ARO:3003517
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
+      C); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004038
+  label: Pseudomonas aeruginosa emrE
+  evidence:
+  - reference: ARO:3004038
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
+      C); database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004598
+  label: Klebsiella pneumoniae KpnGH-TolC
+  evidence:
+  - reference: ARO:3004598
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000014 (gentamicin
+      C); database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000755
+  target_label: antibiotic sensitive 16S rRNA
+  evidence:
+  - reference: ARO:3000755
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000014 (gentamicin C); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

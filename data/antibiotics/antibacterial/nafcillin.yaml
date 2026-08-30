@@ -1,0 +1,124 @@
+identifier: CHEBI:7447
+label: nafcillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin in which the substituent at position 6 of the penam ring
+  is a (2-ethoxy-1-naphthoyl)amino group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: nafcilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: nafcilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: nafcillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-(2-ethoxynaphthalene-1-carboxamido)-2,2-dimethylpenam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2-ethoxy-1-naphthalenyl)penicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2-ethoxy-1-naphthyl)penicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-[(2-ethoxy-1-naphthoyl)amino]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-[(2-ethoxynaphthalene-1-carbonyl)amino]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-{[(2-ethoxynaphthalen-1-yl)carbonyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(2-ethoxy-1-naphthamido)penicillanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: naphcillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nafcil
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- CHEBI:88187
+- ARO:3000008
+xrefs:
+- ARO:3004018
+- cas:147-52-4
+- drugbank:DB00607
+- drugcentral:1869
+- kegg.compound:C07250
+- kegg.drug:D08242
+- lincs.smallmolecule:LSM-2402
+- patent:GB880400
+- patent:US3157639
+- patent:US3506645
+- reaxys:5405727
+- wikipedia.en:Nafcillin
+- chembl:CHEMBL1443
+- pubchem.compound:8982
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)c1c(OCC)ccc2ccccc12'
+  standard_inchi: InChI=1S/C21H22N2O5S/c1-4-28-13-10-9-11-7-5-6-8-12(11)14(13)17(24)22-15-18(25)23-16(20(26)27)21(2,3)29-19(15)23/h5-10,15-16,19H,4H2,1-3H3,(H,22,24)(H,26,27)/t15-,16+,19-/m1/s1
+  standard_inchi_key: GPXLMGHLHQJAGZ-JTDSTZFVSA-N
+  molecular_formula: C21H22N2O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 414.483
+  monoisotopic_mass: 414.12494
+source_concepts:
+- source: ARO
+  source_id: ARO:3004018
+  source_label: nafcillin
+  minted_identifier: antibioticmech:aro-5a153f848b
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:7447
+  source_label: nafcillin
+  minted_identifier: antibioticmech:chebi-d2be08e716
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009660
+  label: Staphylococcus aureus PBP4 mutant conferring resistance to nafcillin and
+    cefoxitin
+  evidence:
+  - reference: ARO:3009660
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004018 (nafcillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009661
+  label: Staphylococcus aureus PBP4 mutant conferring resistance to nafcillin
+  evidence:
+  - reference: ARO:3009661
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3004018 (nafcillin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

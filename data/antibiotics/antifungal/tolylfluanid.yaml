@@ -1,0 +1,73 @@
+identifier: CHEBI:75182
+label: tolylfluanid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of sulfamides that is dichlofluanid in which the
+  hydrogen at the para position of the phenyl group is replaced by a methyl group.
+  A fungicide first marketed in 1971 and used in the cultivation of fruit and vegetables,
+  as well as in wood preservatives, it is no longer approved for use in the European
+  Union.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Euparen Multi
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: N-{[dichloro(fluoro)methyl]sulfanyl}-N',N'-dimethyl-N-(4-methylphenyl)sulfuric
+    diamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,1-Dichloro-N-((dimethylamino)sulfonyl)-1-fluoro-N-(4-methylphenyl)methanesulfenamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dichloro-N-((dimethylamino)sulphonyl)fluoro-N-(p-tolyl)methanesulphenamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tolylfluanide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36683
+- CHEBI:37143
+- CHEBI:51871
+- CHEBI:87026
+xrefs:
+- cas:731-27-1
+- kegg.compound:C18899
+- patent:EP1527683
+- patent:US2011195946
+- pesticides:tolylfluanid
+- ppdb:645
+- reaxys:2949607
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: Cc1ccc(N(SC(F)(Cl)Cl)S(=O)(=O)N(C)C)cc1
+  standard_inchi: InChI=1S/C10H13Cl2FN2O2S2/c1-8-4-6-9(7-5-8)15(18-10(11,12)13)19(16,17)14(2)3/h4-7H,1-3H3
+  standard_inchi_key: HYVWIQDYBVKITD-UHFFFAOYSA-N
+  molecular_formula: C10H13Cl2FN2O2S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 347.264
+  monoisotopic_mass: 345.97795
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:75182
+  source_label: tolylfluanid
+  minted_identifier: antibioticmech:chebi-231346e47a
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

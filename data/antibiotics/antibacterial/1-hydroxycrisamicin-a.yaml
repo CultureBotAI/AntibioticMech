@@ -1,0 +1,45 @@
+identifier: CHEBI:66042
+label: 1-hydroxycrisamicin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterotetracyclic compound isolated from the culture broth
+  of Micromonospora sp. SA-246. It exhibits potent antibacterial activity against
+  several Gram-positive bacterial strains.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3aS,3a'S,5S,5'S,11bS,11b'S)-5,10,10'-trihydroxy-5,5'-dimethyl-3,3',3a,3a',5,5',11b,11b'-octahydro-2H,2'H-8,8'-bibenzo[g]furo[3,2-c]isochromene-2,2',6,6',11,11'-hexone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25830
+- CHEBI:33822
+- CHEBI:37407
+- CHEBI:37581
+- CHEBI:38163
+xrefs:
+- reaxys:8180397
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12OC(=O)C[C@]1([H])O[C@@H](C)C1=C2C(=O)c2c(O)cc(-c3cc(O)c4c(c3)C(=O)C3=C(C4=O)[C@]4([H])OC(=O)C[C@]4([H])O[C@]3(C)O)cc2C1=O'
+  standard_inchi: InChI=1S/C32H22O13/c1-9-20-23(30-16(42-9)7-18(35)43-30)28(39)21-12(26(20)37)3-10(5-14(21)33)11-4-13-22(15(34)6-11)29(40)24-25(27(13)38)32(2,41)45-17-8-19(36)44-31(17)24/h3-6,9,16-17,30-31,33-34,41H,7-8H2,1-2H3/t9-,16-,17-,30+,31+,32-/m0/s1
+  standard_inchi_key: RGOCVNGEBMGCNA-WIDQCZIUSA-N
+  molecular_formula: C32H22O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 614.515
+  monoisotopic_mass: 614.10604
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66042
+  source_label: 1-hydroxycrisamicin A
+  minted_identifier: antibioticmech:chebi-29bdc403ae
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

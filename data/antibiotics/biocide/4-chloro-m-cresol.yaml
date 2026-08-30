@@ -1,0 +1,72 @@
+identifier: CHEBI:34395
+label: 4-chloro-m-cresol
+antimicrobial_class: BIOCIDE
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydroxytoluene that is 3-methylphenol which is substituted by a chlorine
+  at position 4. A <a href="https://en.wikipedia.org/wiki/Ryanodine_receptor" target="_blank">ryanodine
+  receptor</a> agonist.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-chloro-3-methylphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-chloro-2-methyl-4-hydroxybenzene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-chloro-5-hydroxytoluene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-methyl-4-chlorophenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-chloro-5-methylphenol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-chloro-3-hydroxytoluene
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-chloro-m-cresol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-chlorocresol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: para-chloro-meta-cresol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24751
+- CHEBI:83403
+xrefs:
+- cas:59-50-7
+- kegg.compound:C14331
+- kegg.drug:D03468
+- pdb-ccd:43M
+- wikipedia.en:P-Chlorocresol
+activity_roles:
+- CHEBI:33281
+- CHEBI:48219
+chemical_structure:
+  smiles: Cc1cc(O)ccc1Cl
+  standard_inchi: InChI=1S/C7H7ClO/c1-5-4-6(9)2-3-7(5)8/h2-4,9H,1H3
+  standard_inchi_key: CFKMVGJGLGKFKI-UHFFFAOYSA-N
+  molecular_formula: C7H7ClO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 142.585
+  monoisotopic_mass: 142.01854
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:34395
+  source_label: 4-chloro-m-cresol
+  minted_identifier: antibioticmech:chebi-fbeea9670e
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:48219
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

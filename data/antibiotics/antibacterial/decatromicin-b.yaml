@@ -1,0 +1,56 @@
+identifier: CHEBI:65729
+label: decatromicin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbohydrate-containing antibiotic isolated from Actinomadura sp. MK73-NF4.
+  It specifically inhibits the growth of gram-positive bacteria including multi-drug
+  resistant strains such as Staphylococcus aureus MS9610 and menthicilin-resistant
+  S.aureus (MRSA).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3S,4S,4aS,6aR,8E,11E,12aS,15S,16aS,20aR,20bR)-15,20a-diethyl-21-hydroxy-3,11,12a-trimethyl-18,20-dioxo-4-[(2,4,6-trideoxy-4-{[(3,5-dichloro-1H-pyrrol-2-yl)carbonyl]amino}-β-D-ribo-hexopyranosyl)oxy]-1,2,3,4,4a,6a,7,10,12a,15,16,20,20a,20b-tetradecahydro-16a,19-(metheno)benzo[b]naphtho[2,1-j]oxacyclotetradecine-14(18H)-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23007
+- CHEBI:25384
+- CHEBI:26455
+- CHEBI:32988
+- CHEBI:33823
+- CHEBI:36683
+- CHEBI:37581
+- CHEBI:37948
+- CHEBI:51026
+- CHEBI:63349
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12C=C[C@@]3([H])C/C=C/C/C(C)=C/[C@@]4(C)C=C(C(=O)O)[C@@H](CC)C[C@]45OC(=O)C(=C5O)C(=O)[C@@]3(CC)[C@]1([H])CC[C@H](C)[C@]2([H])O[C@H]1C[C@H](O)[C@H](NC(=O)c2nc(Cl)cc2Cl)[C@@H](C)O1'
+  standard_inchi: InChI=1S/C45H56Cl2N2O10/c1-7-25-20-45-39(52)34(42(56)59-45)38(51)44(8-2)26(12-10-9-11-22(3)19-43(45,6)21-28(25)41(54)55)14-15-27-29(44)16-13-23(4)37(27)58-33-18-31(50)35(24(5)57-33)49-40(53)36-30(46)17-32(47)48-36/h9-10,14-15,17,19,21,23-27,29,31,33,35,37,48,50,52H,7-8,11-13,16,18,20H2,1-6H3,(H,49,53)(H,54,55)/b10-9+,22-19+/t23-,24+,25-,26+,27-,29+,31-,33-,35+,37-,43-,44+,45+/m0/s1
+  standard_inchi_key: OKYWSSBYCHUWKT-ZJOLZETKSA-N
+  molecular_formula: C45H56Cl2N2O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 855.853
+  monoisotopic_mass: 854.3312
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65729
+  source_label: decatromicin B
+  minted_identifier: antibioticmech:chebi-65fa083632
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

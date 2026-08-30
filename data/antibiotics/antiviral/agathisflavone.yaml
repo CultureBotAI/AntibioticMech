@@ -1,0 +1,57 @@
+identifier: CHEBI:2512
+label: agathisflavone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A biflavonoid that is obtained by oxidative coupling of two molecules
+  of apigenin resulting in a bond between positions C-6 and C-8 of the two chromene
+  rings.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,5',7,7'-tetrahydroxy-2,2'-bis(4-hydroxyphenyl)-6,8'-bichromene-4,4'-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5,5',7,7'-tetrahydroxy-2,2'-bis(4-hydroxyphenyl)-(6,8'-bi-4H-1-benzopyran)-4,4'-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6,8''-Biapigenin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Agathisflavone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24698
+- CHEBI:50128
+- CHEBI:64459
+xrefs:
+- cas:28441-98-7
+- kegg.compound:C10017
+- knapsack:C00001014
+- patent:US2002068757
+- patent:WO9700679
+- reaxys:1415839
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: O=c1cc(-c2ccc(O)cc2)oc2cc(O)c(-c3c(O)cc(O)c4c(=O)cc(-c5ccc(O)cc5)oc34)c(O)c12
+  standard_inchi: InChI=1S/C30H18O10/c31-15-5-1-13(2-6-15)22-11-20(36)26-24(39-22)12-21(37)27(29(26)38)28-18(34)9-17(33)25-19(35)10-23(40-30(25)28)14-3-7-16(32)8-4-14/h1-12,31-34,37-38H
+  standard_inchi_key: BACLASYRJRZXMY-UHFFFAOYSA-N
+  molecular_formula: C30H18O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 538.464
+  monoisotopic_mass: 538.09
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2512
+  source_label: agathisflavone
+  minted_identifier: antibioticmech:chebi-d5ad8d582f
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

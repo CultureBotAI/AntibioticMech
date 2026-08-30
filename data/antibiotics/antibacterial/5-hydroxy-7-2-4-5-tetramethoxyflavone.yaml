@@ -1,0 +1,45 @@
+identifier: CHEBI:66040
+label: 5-hydroxy-7,2',4',5'-tetramethoxyflavone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monohydroxyflavone that is flavone with a hydroxy substituent at position
+  5 and methoxy groups at positions 7, 2', 4' and 5'. Isolated from Calliandra californica,
+  it exhibits antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-hydroxy-7-methoxy-2-(2,4,5-trimethoxyphenyl)-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-hydroxy-7-methoxy-2-(2,4,5-trimethoxyphenyl)-4H-1-benzopyran-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38687
+- CHEBI:76875
+xrefs:
+- reaxys:7313462
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1cc(O)c2c(=O)cc(-c3cc(OC)c(OC)cc3OC)oc2c1
+  standard_inchi: InChI=1S/C19H18O7/c1-22-10-5-12(20)19-13(21)8-15(26-18(19)6-10)11-7-16(24-3)17(25-4)9-14(11)23-2/h5-9,20H,1-4H3
+  standard_inchi_key: JZIWGWPCBNNLJD-UHFFFAOYSA-N
+  molecular_formula: C19H18O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 358.346
+  monoisotopic_mass: 358.10525
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66040
+  source_label: 5-hydroxy-7,2',4',5'-tetramethoxyflavone
+  minted_identifier: antibioticmech:chebi-a29c438029
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

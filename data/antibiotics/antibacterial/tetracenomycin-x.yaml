@@ -1,0 +1,58 @@
+identifier: CHEBI:32209
+label: tetracenomycin X
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Tetracenomycin X is a tetracenomycin antibiotic, a methyl ester and a
+  tertiary alpha-hydroxy ketone.
+definition_source: PMID:32601485
+synonyms:
+- synonym_text: methyl (6aR,10aR)-6a,12-dihydroxy-3,8,10a-trimethoxy-1-methyl-6,7,10,11-tetraoxo-6,6a,7,10,10a,11-hexahydrotetracene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tetracenomycin X
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:25248
+- CHEBI:48132
+- ARO:3007034
+xrefs:
+- ARO:3007036
+- cas:121245-07-6
+- kegg.compound:C12380
+- pubchem.compound:129395
+activity_roles:
+- CHEBI:33281
+structural_class: tetracenomycin antibiotic
+structural_class_id: ARO:3007034
+chemical_structure:
+  smiles: COC(=O)c1c(OC)cc2cc3c(c(O)c2c1C)C(=O)[C@]1(OC)C(=O)C=C(OC)C(=O)[C@]1(O)C3=O
+  standard_inchi: InChI=1S/C24H20O11/c1-9-15-10(7-12(32-2)16(9)22(30)34-4)6-11-17(18(15)26)21(29)24(35-5)14(25)8-13(33-3)20(28)23(24,31)19(11)27/h6-8,26,31H,1-5H3/t23-,24-/m1/s1
+  standard_inchi_key: CCDBRFCICQZPPE-DNQXCXABSA-N
+  molecular_formula: C24H20O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 484.413
+  monoisotopic_mass: 484.10056
+source_concepts:
+- source: ARO
+  source_id: ARO:3007036
+  source_label: tetracenomycin X
+  minted_identifier: antibioticmech:aro-78e3eb33d0
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:32209
+  source_label: tetracenomycin X
+  minted_identifier: antibioticmech:chebi-dedb4de9ba
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)

@@ -1,0 +1,60 @@
+identifier: CHEBI:66486
+label: simalikalactone D
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quassinoid isolated from Quassia amara and Quassia africana. It has
+  been shown to exhibit antimalarial, cytotoxic and antiviral activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1β,11β,12α,15βb)-1,11,12-trihydroxy-2,16-dioxo-13,20-epoxypicras-3-en-15-yl
+    (2R)-2-methylbutanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (+)-simalikalactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18946
+- CHEBI:2468
+- CHEBI:27136
+- CHEBI:35681
+- CHEBI:37407
+- CHEBI:38164
+- CHEBI:51689
+- CHEBI:72485
+xrefs:
+- cas:35321-80-3
+- kegg.compound:C08783
+- knapsack:C00003731
+- reaxys:5386394
+activity_roles:
+- CHEBI:22587
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]12[C@@H](O)[C@H](O)[C@]3(C)OC[C@]14[C@@]3([H])[C@@H](OC(=O)[C@H](C)CC)C(=O)O[C@]4([H])C[C@@]1([H])C(C)=CC(=O)[C@@H](O)[C@]21C'
+  standard_inchi: InChI=1S/C25H34O9/c1-6-10(2)21(30)34-16-18-24(5)20(29)15(27)17-23(4)12(11(3)7-13(26)19(23)28)8-14(33-22(16)31)25(17,18)9-32-24/h7,10,12,14-20,27-29H,6,8-9H2,1-5H3/t10-,12+,14-,15-,16-,17-,18+,19-,20+,23+,24-,25-/m1/s1
+  standard_inchi_key: OKIKYYZNNZCZRX-ZPUVFWQWSA-N
+  molecular_formula: C25H34O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 478.538
+  monoisotopic_mass: 478.22028
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66486
+  source_label: simalikalactone D
+  minted_identifier: antibioticmech:chebi-bb24eee5af
+  role_terms:
+  - CHEBI:22587
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,44 @@
+identifier: CHEBI:66095
+label: 20-epi-isoiguesterinol
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pentacyclic triterpenoid that is a bisnortriterpene isolated from Salacia
+  madagascariensis and exhibits antileishmanial and antileukemic activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6bS,8aR,11S,12aR,12bS,14aR)-3-hydroxy-11-(hydroxymethyl)-4,6b,8a,12b,14a-pentamethyl-7,8,8a,9,10,11,12,12a,12b,13,14,14a-dodecahydropicen-2(6bH)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:25872
+- CHEBI:33823
+- CHEBI:51689
+- CHEBI:52404
+xrefs:
+- reaxys:15768954
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: '[H][C@@]12C[C@@H](CO)CC[C@]1(C)CC[C@]1(C)C3=CC=C4C(=CC(=O)C(O)=C4C)[C@]3(C)CC[C@@]21C'
+  standard_inchi: InChI=1S/C28H38O3/c1-17-19-6-7-22-26(3,20(19)15-21(30)24(17)31)11-13-28(5)23-14-18(16-29)8-9-25(23,2)10-12-27(22,28)4/h6-7,15,18,23,29,31H,8-14,16H2,1-5H3/t18-,23+,25+,26-,27+,28-/m0/s1
+  standard_inchi_key: RRKSDDREVOXSJD-TXARQUJHSA-N
+  molecular_formula: C28H38O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 422.609
+  monoisotopic_mass: 422.2821
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66095
+  source_label: 20-epi-isoiguesterinol
+  minted_identifier: antibioticmech:chebi-8c9ee85909
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

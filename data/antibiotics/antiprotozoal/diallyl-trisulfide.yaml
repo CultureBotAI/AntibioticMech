@@ -1,0 +1,57 @@
+identifier: CHEBI:78492
+label: diallyl trisulfide
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic trisulfide that is trisulfane in which both of the hydrogens
+  are replaced by allyl groups. A component of the essential oil of garlic and a major
+  component of the traditional Chinese medicine allitridium, it exhibits antifungal,
+  antitumour and antioxidant activity
+definition_source: ChEBI
+synonyms:
+- synonym_text: diallyltrisulfane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (CH2=CHCH2S)2S
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DATS
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: allyl trisulfide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: di-2-propenyl trisulfide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:78493
+xrefs:
+- cas:2050-87-5
+- hmdb:HMDB0031154
+- reaxys:1745734
+- wikipedia.en:Diallyl_trisulfide
+activity_roles:
+- CHEBI:35820
+chemical_structure:
+  smiles: C=CCSSSCC=C
+  standard_inchi: InChI=1S/C6H10S3/c1-3-5-7-9-8-6-4-2/h3-4H,1-2,5-6H2
+  standard_inchi_key: UBAXRAHSPKWNCX-UHFFFAOYSA-N
+  molecular_formula: C6H10S3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 178.347
+  monoisotopic_mass: 177.99446
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:78492
+  source_label: diallyl trisulfide
+  minted_identifier: antibioticmech:chebi-c8ebc030bb
+  role_terms:
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

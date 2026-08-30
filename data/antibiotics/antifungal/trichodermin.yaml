@@ -1,0 +1,48 @@
+identifier: CHEBI:9688
+label: trichodermin
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tetracyclic spiroepoxide which acts as an antifungal and protein synthesis
+  inhibitor.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4β,12R)-12,13-epoxytrichothec-9-en-4-yl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 12,13-Epoxytrichothec-9-en-4-ol acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:32955
+- CHEBI:38163
+xrefs:
+- beilstein:6868411
+- cas:4682-50-2
+- kegg.compound:C09741
+- knapsack:C00003195
+- patent:NL302527
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12C=C(C)CC[C@]1(C)[C@@]1(C)[C@H](OC(C)=O)C[C@@]([H])(O2)[C@]12CO2'
+  standard_inchi: InChI=1S/C17H24O4/c1-10-5-6-15(3)12(7-10)21-14-8-13(20-11(2)18)16(15,4)17(14)9-19-17/h7,12-14H,5-6,8-9H2,1-4H3/t12-,13-,14-,15+,16-,17-/m1/s1
+  standard_inchi_key: HNEGCRMUYSKRRR-NWHWRWDZSA-N
+  molecular_formula: C17H24O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 292.375
+  monoisotopic_mass: 292.16746
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9688
+  source_label: trichodermin
+  minted_identifier: antibioticmech:chebi-060eb9e9fc
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

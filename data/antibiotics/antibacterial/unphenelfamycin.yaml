@@ -1,0 +1,41 @@
+identifier: antibioticmech:aro-890fe891a5
+label: unphenelfamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Unphenelfamycin was isolated from two environmental isolates called AB999F-80
+  and AB1047T-33. They were both identified as Streptomyces violaceoniger strains.
+  Both these strains were found to produce phenelfamycins A-F and unphenelfamycin.
+  Unphenelfamycin has a monosaccaride moeity and lacks the phenacetyl moeity present
+  in the other phenelfamycins. All phenelfamycins were selected due to their activity
+  against anaerobic bacteria, especially Clostridioides difficile.
+definition_source: PMID:2921230
+parent_compounds:
+- ARO:3001219
+xrefs:
+- ARO:3001257
+- CHEBI:222022
+- pubchem.compound:6443942
+structural_class: elfamycin antibiotic
+structural_class_id: ARO:3001219
+chemical_structure:
+  smiles: C/C=C/C=C/C1C(C(C(C(O1)(C(COC2CC(OC(C2O)C)OC)C(=O)NC/C=C/C=C(\C)/C(C(C)C3CC(C(O3)/C=C/C=C/C=C/C(=O)O)O)OC)O)O)O)(C)C
+  standard_inchi: InChI=1S/C43H65NO14/c1-9-10-13-20-34-42(5,6)39(49)40(50)43(52,58-34)29(25-55-33-24-36(53-7)56-28(4)37(33)48)41(51)44-22-17-16-18-26(2)38(54-8)27(3)32-23-30(45)31(57-32)19-14-11-12-15-21-35(46)47/h9-21,27-34,36-40,45,48-50,52H,22-25H2,1-8H3,(H,44,51)(H,46,47)/b10-9+,12-11+,17-16+,19-14+,20-13+,21-15+,26-18+
+  standard_inchi_key: HNIKNQLZTDKDEB-JVSQKCCUSA-N
+  molecular_formula: C43H65NO14
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 820.0
+  monoisotopic_mass: 819.44050575
+source_concepts:
+- source: ARO
+  source_id: ARO:3001257
+  source_label: unphenelfamycin
+  minted_identifier: antibioticmech:aro-890fe891a5
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)

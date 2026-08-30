@@ -1,0 +1,59 @@
+identifier: CHEBI:155904
+label: (+)-albicanol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A drimane-type sesquiterpenoid orginally isolated from the liverwort Diplophyllum
+  albicans. It exhibits fish antifeedant, antifungal and antineoplastic activities.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[(1S,4aS,8aS)-5,5,8a-trimethyl-2-methylidenedecahydronaphthalen-1-yl]methanol'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1S,4aα)-decahydro-5,5,8aβ-trimethyl-2-methylenenaphthalene-1-methanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4aα)-2-methylene-5,5,8aβ-trimethyldecalin-1β-methanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4aα)-decahydro-5,5,8aβ-trimethyl-2-methylenenaphthalene-1β-methanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (8aS)-albicanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: albicanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:134362
+- CHEBI:15734
+- CHEBI:26658
+- CHEBI:36785
+xrefs:
+- cas:54632-04-1
+- knapsack:C00020283
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12CCC(=C)[C@H](CO)[C@@]1(C)CCCC2(C)C'
+  standard_inchi: InChI=1S/C15H26O/c1-11-6-7-13-14(2,3)8-5-9-15(13,4)12(11)10-16/h12-13,16H,1,5-10H2,2-4H3/t12-,13-,15+/m0/s1
+  standard_inchi_key: ZPTSRWNMMWXEHX-KCQAQPDRSA-N
+  molecular_formula: C15H26O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 222.372
+  monoisotopic_mass: 222.19837
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:155904
+  source_label: (+)-albicanol
+  minted_identifier: antibioticmech:chebi-bbbdca00b8
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

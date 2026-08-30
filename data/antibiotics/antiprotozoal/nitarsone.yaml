@@ -1,0 +1,71 @@
+identifier: CHEBI:62629
+label: nitarsone
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organoarsonic acid where the organyl group is 4-nitrophenyl.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Histostat
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: nitarson
+  synonym_type: INN
+  source: chebi
+- synonym_text: nitarsonum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (4-nitrophenyl)arsonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (p-nitrophenyl)arsonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-O2C6H4AsO3H2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-nitrobenzenearsonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-nitrophenylarsonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-nitrobenzenearsonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-nitrophenylarsonic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22638
+- CHEBI:35716
+xrefs:
+- cas:98-72-6
+- kegg.drug:D05175
+- patent:US2653160
+- reaxys:2939908
+- vsdb:2984
+activity_roles:
+- CHEBI:35820
+chemical_structure:
+  smiles: O=[N+]([O-])c1ccc([As](=O)(O)O)cc1
+  standard_inchi: InChI=1S/C6H6AsNO5/c9-7(10,11)5-1-3-6(4-2-5)8(12)13/h1-4H,(H2,9,10,11)
+  standard_inchi_key: FUUFQLXAIUOWML-UHFFFAOYSA-N
+  molecular_formula: C6H6AsNO5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 247.038
+  monoisotopic_mass: 246.94619
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:62629
+  source_label: nitarsone
+  minted_identifier: antibioticmech:chebi-45ba288471
+  role_terms:
+  - CHEBI:35820
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

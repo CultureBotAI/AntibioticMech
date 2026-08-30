@@ -1,0 +1,67 @@
+identifier: CHEBI:81732
+label: benthiavalicarb-isopropyl
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbamate ester that is the isopropyl ester of benthiavalicarb. It is
+  used as an agricultural fungicide.
+definition_source: ChEBI
+synonyms:
+- synonym_text: isopropyl [(2S)-1-{[(1R)-1-(6-fluoro-1,3-benzothiazol-2-yl)ethyl]amino}-3-methyl-1-oxobutan-2-yl]carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-methylethyl ((1S)-1-((((1R)-1-(6-fluoro-2-benzothiazolyl)ethyl)amino)carbonyl)-2-methylpropyl)carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: benthiavalicarb isopropyl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: isopropyl ((S)-1-{((1R)-1-(6-fluoro-1,3-benzothiazol-2-yl)ethyl)carbamoyl}-2-methylpropyl)carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:23003
+- CHEBI:27267
+- CHEBI:37143
+- CHEBI:37947
+- CHEBI:87029
+- CHEBI:87038
+- CHEBI:87061
+xrefs:
+- cas:177406-68-7
+- kegg.compound:C18415
+- ppdb:2172
+- reaxys:11343403
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: CC(C)OC(=O)N[C@H](C(=O)N[C@H](C)c1nc2ccc(F)cc2s1)C(C)C
+  standard_inchi: InChI=1S/C18H24FN3O3S/c1-9(2)15(22-18(24)25-10(3)4)16(23)20-11(5)17-21-13-7-6-12(19)8-14(13)26-17/h6-11,15H,1-5H3,(H,20,23)(H,22,24)/t11-,15+/m1/s1
+  standard_inchi_key: USRKFGIXLGKMKU-ABAIWWIYSA-N
+  molecular_formula: C18H24FN3O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 381.473
+  monoisotopic_mass: 381.15224
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81732
+  source_label: benthiavalicarb-isopropyl
+  minted_identifier: antibioticmech:chebi-584ac382bd
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

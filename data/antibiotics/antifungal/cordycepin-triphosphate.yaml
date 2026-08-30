@@ -1,0 +1,51 @@
+identifier: CHEBI:52316
+label: cordycepin triphosphate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: 3'-deoxyadenosine 5'-(tetrahydrogen triphosphate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3'-Deoxyadenosine 5'-triphosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CoTP
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37045
+xrefs:
+- beilstein:1235318
+- cas:73-04-1
+- drugbank:DB01860
+activity_roles:
+- CHEBI:22587
+- CHEBI:35718
+chemical_structure:
+  smiles: Nc1ncnc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)OP(=O)(O)OP(=O)(O)O)C[C@H]1O
+  standard_inchi: InChI=1S/C10H16N5O12P3/c11-8-7-9(13-3-12-8)15(4-14-7)10-6(16)1-5(25-10)2-24-29(20,21)27-30(22,23)26-28(17,18)19/h3-6,10,16H,1-2H2,(H,20,21)(H,22,23)(H2,11,12,13)(H2,17,18,19)/t5-,6+,10+/m0/s1
+  standard_inchi_key: NLIHPCYXRYQPSD-BAJZRUMYSA-N
+  molecular_formula: C10H16N5O12P3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 491.183
+  monoisotopic_mass: 491.00083
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:52316
+  source_label: cordycepin triphosphate
+  minted_identifier: antibioticmech:chebi-1f9f644061
+  role_terms:
+  - CHEBI:22587
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:42:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

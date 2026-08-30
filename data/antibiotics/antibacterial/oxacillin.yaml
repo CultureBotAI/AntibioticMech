@@ -1,0 +1,162 @@
+identifier: CHEBI:7809
+label: oxacillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin antibiotic carrying a 5-methyl-3-phenylisoxazole-4-carboxamide
+  group at position 6β.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,2-dimethyl-6β-(5-methyl-3-phenyl-1,2-oxazole-4-carboxamido)penam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-3,3-dimethyl-6-{[(5-methyl-3-phenylisoxazol-4-yl)carbonyl]amino}-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5-methyl-3-phenyl-4-isoxazolyl)penicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-methyl-3-phenyl-4-isoxazolyl-penicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6β-(5-methyl-3-phenylisoxazol-4-yl)penicillanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Oxacillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: oxazocillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MPI-penicillin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Ossacillina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Oxacilina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Oxacilline
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Oxacillinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Oxazocillin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Oxazocilline
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Prostaphlin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Prostaphlyn
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- ARO:3000008
+xrefs:
+- ARO:0000056
+- cas:66-79-5
+- drugbank:DB00713
+- drugcentral:2006
+- hmdb:HMDB0014851
+- kegg.compound:C07334
+- kegg.drug:D08307
+- lincs.smallmolecule:LSM-6005
+- patent:US2996501
+- reaxys:1093589
+- wikipedia.en:Oxacillin
+- chembl:CHEMBL819
+- pubchem.compound:6196
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+- CHEBI:36047
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)c1c(-c2ccccc2)noc1C'
+  standard_inchi: InChI=1S/C19H19N3O5S/c1-9-11(12(21-27-9)10-7-5-4-6-8-10)15(23)20-13-16(24)22-14(18(25)26)19(2,3)28-17(13)22/h4-8,13-14,17H,1-3H3,(H,20,23)(H,25,26)/t13-,14+,17-/m1/s1
+  standard_inchi_key: UWYHMGVUTGAWSP-JKIFEVAISA-N
+  molecular_formula: C19H19N3O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 401.444
+  monoisotopic_mass: 401.10454
+source_concepts:
+- source: ARO
+  source_id: ARO:0000056
+  source_label: oxacillin
+  minted_identifier: antibioticmech:aro-42474d1716
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:7809
+  source_label: oxacillin
+  minted_identifier: antibioticmech:chebi-1162e9b95e
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3000017
+  label: OXA beta-lactamase
+  evidence:
+  - reference: ARO:3000017
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000056 (oxacillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3000788
+  label: MdtEF-TolC
+  evidence:
+  - reference: ARO:3000788
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000056 (oxacillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3004639
+  label: Corynebacterium striatum tetA
+  evidence:
+  - reference: ARO:3004639
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000056 (oxacillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005111
+  label: blaS1
+  evidence:
+  - reference: ARO:3005111
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000056 (oxacillin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3007011
+  label: mdeA
+  evidence:
+  - reference: ARO:3007011
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000056 (oxacillin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000056 (oxacillin); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

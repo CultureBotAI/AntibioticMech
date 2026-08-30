@@ -1,0 +1,54 @@
+identifier: CHEBI:194484
+label: flavocillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin in which the substituent at position 6 of the penam ring
+  is a [3-(4-oxo-4H-chromen-2-yl)benzoyl]nitrilo group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5R,6R)-3,3-dimethyl-7-oxo-6-[3-(4-oxo-4H-chromen-2-yl)benzamido]-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R,6R)-3,3-dimethyl-7-oxo-6-[3-(4-oxo-4H-1-benzopyran-2-yl)benzamido]-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:17334
+- CHEBI:22712
+- CHEBI:24043
+xrefs:
+- patent:WO2019155266
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)C(C(=O)O)N1C(=O)[C@H]2NC(=O)c1cccc(-c2cc(=O)c3ccccc3o2)c1'
+  standard_inchi: InChI=1S/C24H20N2O6S/c1-24(2)19(23(30)31)26-21(29)18(22(26)33-24)25-20(28)13-7-5-6-12(10-13)17-11-15(27)14-8-3-4-9-16(14)32-17/h3-11,18-19,22H,1-2H3,(H,25,28)(H,30,31)/t18-,19?,22-/m1/s1
+  standard_inchi_key: FBFNOKWBJGHOGZ-LROQTYINSA-N
+  molecular_formula: C24H20N2O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 464.499
+  monoisotopic_mass: 464.10421
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:194484
+  source_label: flavocillin
+  minted_identifier: antibioticmech:chebi-3192cb728f
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

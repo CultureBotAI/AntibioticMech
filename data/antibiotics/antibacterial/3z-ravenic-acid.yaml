@@ -1,0 +1,53 @@
+identifier: CHEBI:66291
+label: (3Z)-ravenic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of pyrrolidin-2-ones that is pyrrolidine-2,4-dione
+  substituted at position 3 by a deca-2,4,6,8-tetraen-1-ylidene group which in turn
+  is substituted by a hydroxy and methyl substituents at positions 1 and 4 respectively.
+  It is an antibiotic isolated from Penicillium sp.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3Z)-3-[(2E,4E,6E,8E)-1-hydroxy-4-methyldeca-2,4,6,8-tetraen-1-ylidene]pyrrolidine-2,4-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ravenic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26177
+- CHEBI:33823
+- CHEBI:74223
+xrefs:
+- reaxys:9275104
+activity_roles:
+- CHEBI:33281
+- CHEBI:33282
+chemical_structure:
+  smiles: C/C=C/C=C/C=C(C)/C=C/C(O)=C1\C(=O)CNC1=O
+  standard_inchi: InChI=1S/C15H17NO3/c1-3-4-5-6-7-11(2)8-9-12(17)14-13(18)10-16-15(14)19/h3-9,17H,10H2,1-2H3,(H,16,19)/b4-3+,6-5+,9-8+,11-7+,14-12-
+  standard_inchi_key: JJFGJQNWIJPCAN-AJOOJNDDSA-N
+  molecular_formula: C15H17NO3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 259.305
+  monoisotopic_mass: 259.12084
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66291
+  source_label: (3Z)-ravenic acid
+  minted_identifier: antibioticmech:chebi-78504814d2
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

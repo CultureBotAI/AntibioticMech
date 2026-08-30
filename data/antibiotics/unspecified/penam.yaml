@@ -1,0 +1,48 @@
+identifier: CHEBI:35991
+label: penam
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Compound comprising a beta-lactam ring fused to a saturated 5-membered
+  ring containing one sulfur atom.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (5R)-4-thia-1-azabicyclo[3.2.0]heptan-7-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: clavam
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: clavams
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35507
+- CHEBI:35992
+xrefs:
+- beilstein:4374479
+- wikipedia.en:Clavam
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12CC(=O)N1CCS2'
+  standard_inchi: InChI=1S/C5H7NOS/c7-4-3-5-6(4)1-2-8-5/h5H,1-3H2/t5-/m1/s1
+  standard_inchi_key: WSHJJCPTKWSMRR-RXMQYKEDSA-N
+  molecular_formula: C5H7NOS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 129.184
+  monoisotopic_mass: 129.02483
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:35991
+  source_label: penam
+  minted_identifier: antibioticmech:chebi-cb4d9602ed
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

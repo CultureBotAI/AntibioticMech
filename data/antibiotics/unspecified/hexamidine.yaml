@@ -1,0 +1,61 @@
+identifier: CHEBI:87184
+label: hexamidine
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polyether that is the bis(4-guanidinophenyl) ether of hexane-1,6-diol.
+definition_source: ChEBI
+synonyms:
+- synonym_text: hexamidina
+  synonym_type: INN
+  source: chebi
+- synonym_text: hexamidinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4,4'-[hexane-1,6-diylbis(oxy)]di(benzene-1-carboximidamide)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,4'-(1,6-Hexanediylbis(oxy))bis-benzenecarboximidamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,4'-(Hexamethylenedioxy)dibenzamidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24436
+- CHEBI:35618
+- CHEBI:46774
+xrefs:
+- cas:3811-75-4
+- drugbank:DB03808
+- drugcentral:3275
+- kegg.drug:D07206
+- patent:EP93186
+- patent:GB507565
+- pdb-ccd:DID
+- reaxys:2599985
+- wikipedia.en:Hexamidine
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: N=C(N)c1ccc(OCCCCCCOc2ccc(C(=N)N)cc2)cc1
+  standard_inchi: InChI=1S/C20H26N4O2/c21-19(22)15-5-9-17(10-6-15)25-13-3-1-2-4-14-26-18-11-7-16(8-12-18)20(23)24/h5-12H,1-4,13-14H2,(H3,21,22)(H3,23,24)
+  standard_inchi_key: OQLKNTOKMBVBKV-UHFFFAOYSA-N
+  molecular_formula: C20H26N4O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 354.454
+  monoisotopic_mass: 354.20558
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:87184
+  source_label: hexamidine
+  minted_identifier: antibioticmech:chebi-d8c0062266
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,48 @@
+identifier: CHEBI:85416
+label: mitomycin B
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the family of mitomycins that exhibits antibiotic and antitumour
+  properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: '[(1aS,8R,8aR,8bS)-8a-hydroxy-6-methoxy-1,5-dimethyl-4,7-dioxo-1,1a,2,4,7,8,8a,8b-octahydroazireno[2'',3'':3,4]pyrrolo[1,2-a]indol-8-yl]methyl
+    carbamate'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: HSDB 3419
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25357
+- CHEBI:25698
+xrefs:
+- cas:4055-40-7
+- knapsack:C00018664
+- metacyc.compound:CPD-17521
+- reaxys:4721893
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12N(C)[C@@]1([H])CN1C3=C(C(=O)C(OC)=C(C)C3=O)[C@H](COC(N)=O)[C@]12O'
+  standard_inchi: InChI=1S/C16H19N3O6/c1-6-11(20)10-9(12(21)13(6)24-3)7(5-25-15(17)22)16(23)14-8(18(14)2)4-19(10)16/h7-8,14,23H,4-5H2,1-3H3,(H2,17,22)/t7-,8-,14-,16+,18?/m0/s1
+  standard_inchi_key: UZUUQCBCWDBYCG-DQRAMIIBSA-N
+  molecular_formula: C16H19N3O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 349.343
+  monoisotopic_mass: 349.12739
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85416
+  source_label: mitomycin B
+  minted_identifier: antibioticmech:chebi-b5111b6f09
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

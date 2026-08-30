@@ -1,0 +1,87 @@
+identifier: CHEBI:4893
+label: ethyl acetoacetate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An ethyl ester resulting from the formal condensation of the carboxy group
+  of acetoacetic acid with ethanol.
+definition_source: ChEBI
+synonyms:
+- synonym_text: ethyl 3-oxobutanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-ethoxybutane-1,3-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-ketobutyric acid ethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-oxobutanoic acid ethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-oxobutyric acid ethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acetoacetic acid ethyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: active acetyl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diacetic ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethyl 3-oxidanylidenebutanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethyl 3-oxobutyrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethyl acetyl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethyl acetylacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethyl acetylacetonate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ethyl β-ketobutyrate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23990
+xrefs:
+- cas:141-97-9
+- chemspider:13865426
+- foodb.food:FDB003241
+- hmdb:HMDB0031216
+- kegg.compound:C03500
+- metacyc.compound:ETHYL-ACETOACETATE
+- pdb-ccd:EAC
+- reaxys:385838
+- wikipedia.en:Ethyl_acetoacetate
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCOC(=O)CC(C)=O
+  standard_inchi: InChI=1S/C6H10O3/c1-3-9-6(8)4-5(2)7/h3-4H2,1-2H3
+  standard_inchi_key: XYIBRDXRRQCHLP-UHFFFAOYSA-N
+  molecular_formula: C6H10O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 130.143
+  monoisotopic_mass: 130.06299
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4893
+  source_label: ethyl acetoacetate
+  minted_identifier: antibioticmech:chebi-323580a4e0
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

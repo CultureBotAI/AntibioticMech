@@ -1,0 +1,49 @@
+identifier: CHEBI:66688
+label: mediomycin B
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polyene antibiotic isolated from Streptomyces mediocidicus ATCC23936
+  and has been shown to exhibit a broad spectrum of antifungal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2E,4E,6E,10E,13S,14S,15R,16E,18E,20E,22E,24E,26E,33R,35S,36E,39S,41R,43S,44E,47R,49S,50E,53R,55S)-58-amino-13,15,29,33,35,39,41,43,47,49,53,55-dodecahydroxy-2,12,14,30-tetramethyl-31-oxooctapentaconta-2,4,6,10,16,18,20,22,24,26,36,44,50-tridecaenoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26177
+- CHEBI:33709
+- CHEBI:50994
+xrefs:
+- reaxys:11058771
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: C/C(=C\C=C\C=C\CC/C=C/C(C)[C@H](O)[C@@H](C)[C@H](O)/C=C/C=C/C=C/C=C/C=C/C=C/CC(O)C(C)C(=O)C[C@H](O)C[C@H](O)/C=C/C[C@H](O)C[C@@H](O)C[C@H](O)/C=C/C[C@@H](O)C[C@H](O)/C=C/C[C@@H](O)C[C@@H](O)CCCN)C(=O)O
+  standard_inchi: InChI=1S/C62H97NO15/c1-45(27-19-15-11-10-12-16-20-28-46(2)62(77)78)61(76)48(4)59(74)37-22-18-14-9-7-5-6-8-13-17-21-36-58(73)47(3)60(75)44-57(72)43-54(69)34-25-33-53(68)42-56(71)41-52(67)32-24-31-50(65)39-49(64)29-23-30-51(66)40-55(70)35-26-38-63/h5-10,12-14,16-25,27-29,32,34,37,45,47-59,61,64-74,76H,11,15,26,30-31,33,35-36,38-44,63H2,1-4H3,(H,77,78)/b6-5+,9-7+,12-10+,13-8+,18-14+,20-16+,21-17+,27-19+,29-23+,32-24+,34-25+,37-22+,46-28+/t45?,47?,48-,49+,50+,51+,52+,53-,54+,55-,56-,57+,58?,59+,61-/m0/s1
+  standard_inchi_key: NVVJCDZZKMPNHL-LMFUHVRBSA-N
+  molecular_formula: C62H97NO15
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1096.45
+  monoisotopic_mass: 1095.68582
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66688
+  source_label: mediomycin B
+  minted_identifier: antibioticmech:chebi-ceab96e092
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

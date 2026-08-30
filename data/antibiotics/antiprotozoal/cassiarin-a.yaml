@@ -1,0 +1,46 @@
+identifier: CHEBI:65596
+label: cassiarin A
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An isoquinoline alkaloid that is pyrano[2,3,4-ij]isoquinoline substituted
+  by a hydroxy group at position 8 and methyl groups at positions 2 and 5. It is isolated
+  from the leaves of Cassia siamea and exhibits antiplasmodial activity against Plasmodium
+  falciparum.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2,5-dimethylpyrano[2,3,4-ij]isoquinolin-8-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24921
+- CHEBI:24922
+- CHEBI:26979
+- CHEBI:33853
+- CHEBI:37407
+xrefs:
+- reaxys:11166745
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: CC1=Cc2nc(C)cc3cc(O)cc(c23)O1
+  standard_inchi: InChI=1S/C13H11NO2/c1-7-3-9-5-10(15)6-12-13(9)11(14-7)4-8(2)16-12/h3-6,15H,1-2H3
+  standard_inchi_key: PEFIRMBVFBVVGZ-UHFFFAOYSA-N
+  molecular_formula: C13H11NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 213.236
+  monoisotopic_mass: 213.07898
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65596
+  source_label: cassiarin A
+  minted_identifier: antibioticmech:chebi-c12113cc43
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

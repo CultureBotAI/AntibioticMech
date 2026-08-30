@@ -1,0 +1,63 @@
+identifier: CHEBI:83213
+label: triclopyricarb
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carbamate ester that is the methyl ester of methoxy(2-{[(3,5,6-trichloropyridin-2-yl)oxy]methyl}phenyl)carbamic
+  acid. A methoxycarbanilate fungicide used on rice and other crops.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl methoxy(2-{[(3,5,6-trichloropyridin-2-yl)oxy]methyl}phenyl)carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methyl N-methoxy-N-(2-(((3,5,6-trichloro-2-pyridinyl)oxy)methyl)phenyl)carbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl N-methoxy-2-(3,5,6-trichloro-2-pyridyloxymethyl)carbanilate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23003
+- CHEBI:35618
+- CHEBI:39173
+- CHEBI:86485
+- CHEBI:87066
+xrefs:
+- cas:902760-40-1
+- patent:WO2012025472
+- patent:WO2012045737
+- pesticides:triclopyricarb
+- ppdb:2615
+- reaxys:12982989
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: COC(=O)N(OC)c1ccccc1COc1nc(Cl)c(Cl)cc1Cl
+  standard_inchi: InChI=1S/C15H13Cl3N2O4/c1-22-15(21)20(23-2)12-6-4-3-5-9(12)8-24-14-11(17)7-10(16)13(18)19-14/h3-7H,8H2,1-2H3
+  standard_inchi_key: QFNFRZHOXWNWAQ-UHFFFAOYSA-N
+  molecular_formula: C15H13Cl3N2O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 391.638
+  monoisotopic_mass: 389.99409
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:83213
+  source_label: triclopyricarb
+  minted_identifier: antibioticmech:chebi-4efd143696
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

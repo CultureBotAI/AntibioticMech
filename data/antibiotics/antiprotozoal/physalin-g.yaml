@@ -1,0 +1,40 @@
+identifier: CHEBI:69020
+label: physalin G
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A physalin with antimalarial activity isolated from Physalis angulata.
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:25000
+- CHEBI:36850
+- CHEBI:51689
+- CHEBI:52157
+- CHEBI:76361
+xrefs:
+- hmdb:HMDB0034340
+- reaxys:7260700
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@@]12C[C@H](O)C3=CC=CC(=O)[C@]3(C)[C@@]1([H])CC[C@@]1(O)C(=O)O[C@]3(C)[C@]14O[C@]21OC[C@@]2([H])C(=O)O[C@]3([H])C[C@@]2(C)[C@]4([H])C1=O'
+  standard_inchi: InChI=1S/C28H30O10/c1-23-10-18-25(3)28-19(23)20(31)27(38-28,35-11-15(23)21(32)36-18)14-9-16(29)13-5-4-6-17(30)24(13,2)12(14)7-8-26(28,34)22(33)37-25/h4-6,12,14-16,18-19,29,34H,7-11H2,1-3H3/t12-,14+,15-,16-,18+,19-,23+,24+,25-,26+,27+,28-/m0/s1
+  standard_inchi_key: CGVBSJOSWAZUIF-IOMVKLDJSA-N
+  molecular_formula: C28H30O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 526.538
+  monoisotopic_mass: 526.1839
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:69020
+  source_label: physalin G
+  minted_identifier: antibioticmech:chebi-70e4c0673e
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

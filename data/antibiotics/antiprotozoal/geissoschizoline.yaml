@@ -1,0 +1,48 @@
+identifier: CHEBI:5283
+label: geissoschizoline
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An indole alkaloid that is (16α)-curan substituted by a hydroxy group
+  at position 17.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (16α)-curan-17-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Geissoschizoline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:38164
+- CHEBI:38958
+xrefs:
+- cas:18397-07-4
+- kegg.compound:C09197
+- knapsack:C00001731
+- reaxys:35796
+activity_roles:
+- CHEBI:64915
+chemical_structure:
+  smiles: '[H][C@@]12C[C@]3([H])N(CC[C@@]34c3ccccc3N[C@@]4([H])[C@H]1CO)C[C@H]2CC'
+  standard_inchi: InChI=1S/C19H26N2O/c1-2-12-10-21-8-7-19-15-5-3-4-6-16(15)20-18(19)14(11-22)13(12)9-17(19)21/h3-6,12-14,17-18,20,22H,2,7-11H2,1H3/t12-,13+,14+,17+,18+,19-/m1/s1
+  standard_inchi_key: FAQGZHFLASTWAV-RWANUPMISA-N
+  molecular_formula: C19H26N2O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 298.43
+  monoisotopic_mass: 298.20451
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5283
+  source_label: geissoschizoline
+  minted_identifier: antibioticmech:chebi-66d6caa709
+  role_terms:
+  - CHEBI:64915
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

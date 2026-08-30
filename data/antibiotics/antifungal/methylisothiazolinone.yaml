@@ -1,0 +1,58 @@
+identifier: CHEBI:53620
+label: methylisothiazolinone
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 1,2-thazole that is 4-isothiazolin-3-one bearing a methyl group on the
+  nitrogen atom. It is a powerful biocide and preservative and is the minor active
+  ingredient in the commercial product KathonTM.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-methyl-1,2-thiazol-3(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Methyl-3(2H)-isothiazolone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Methyl-4-isothiazolin-3-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MI
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: MIT
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:48902
+xrefs:
+- cas:2682-20-4
+- patent:EP2289335
+- reaxys:606203
+- wikipedia.en:Methylisothiazolinone
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: Cn1sccc1=O
+  standard_inchi: InChI=1S/C4H5NOS/c1-5-4(6)2-3-7-5/h2-3H,1H3
+  standard_inchi_key: BEGLCMHJXHIJLR-UHFFFAOYSA-N
+  molecular_formula: C4H5NOS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 115.157
+  monoisotopic_mass: 115.00918
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:53620
+  source_label: methylisothiazolinone
+  minted_identifier: antibioticmech:chebi-ba9c8ac6ab
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

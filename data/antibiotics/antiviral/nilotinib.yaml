@@ -1,0 +1,57 @@
+identifier: CHEBI:52172
+label: nilotinib
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: nilotinibum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-methyl-N-[3-(4-methyl-1H-imidazol-1-yl)-5-(trifluoromethyl)phenyl]-3-[(4-pyridin-3-ylpyrimidin-2-yl)amino]benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AMN 107
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: AMN107
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:24780
+- CHEBI:26421
+- CHEBI:39447
+- CHEBI:50995
+- CHEBI:83565
+xrefs:
+- cas:641571-10-0
+- drugbank:DB04868
+- drugcentral:1932
+- kegg.drug:D08953
+- lincs.smallmolecule:LSM-1099
+- pdb-ccd:NIL
+- wikipedia.en:Nilotinib
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: Cc1cn(-c2cc(NC(=O)c3ccc(C)c(Nc4nccc(-c5cccnc5)n4)c3)cc(C(F)(F)F)c2)cn1
+  standard_inchi: InChI=1S/C28H22F3N7O/c1-17-5-6-19(10-25(17)37-27-33-9-7-24(36-27)20-4-3-8-32-14-20)26(39)35-22-11-21(28(29,30)31)12-23(13-22)38-15-18(2)34-16-38/h3-16H,1-2H3,(H,35,39)(H,33,36,37)
+  standard_inchi_key: HHZIURLSWUIHRB-UHFFFAOYSA-N
+  molecular_formula: C28H22F3N7O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 529.526
+  monoisotopic_mass: 529.18379
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:52172
+  source_label: nilotinib
+  minted_identifier: antibioticmech:chebi-767ca2f2a0
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

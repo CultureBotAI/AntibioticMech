@@ -1,0 +1,51 @@
+identifier: CHEBI:59649
+label: amorolfine hydrochloride
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A hydrochloride resulting from the formal reacton of equimolar amounts
+  of hydrogen chloride and amorolfine. An inhibitor of the action of squalene monooxygenase,
+  Δ14 reductase and D7-D8 isomerase and an antifungal agent, it is used for the topical
+  treatment of fungal nail and skin infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R,6S)-2,6-dimethyl-4-{2-methyl-3-[4-(2-methylbutan-2-yl)phenyl]propyl}morpholine
+    hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: meso-2,6-dimethyl-4-{2-methyl-3-[4-(2-methylbutan-2-yl)phenyl]propyl}morpholine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+- CHEBI:87135
+xrefs:
+- beilstein:9364702
+- cas:78613-38-4
+- kegg.drug:D01720
+activity_roles:
+- CHEBI:35718
+- CHEBI:86327
+chemical_structure:
+  smiles: CCC(C)(C)c1ccc(CC(C)CN2C[C@@H](C)O[C@@H](C)C2)cc1.Cl
+  standard_inchi: InChI=1S/C21H35NO.ClH/c1-7-21(5,6)20-10-8-19(9-11-20)12-16(2)13-22-14-17(3)23-18(4)15-22;/h8-11,16-18H,7,12-15H2,1-6H3;1H/t16?,17-,18+;
+  standard_inchi_key: XZKWIPVTHGWDCF-KUZYQSSXSA-N
+  molecular_formula: C21H35NO.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 353.978
+  monoisotopic_mass: 353.24854
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59649
+  source_label: amorolfine hydrochloride
+  minted_identifier: antibioticmech:chebi-7dde5ec6f7
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

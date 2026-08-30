@@ -1,0 +1,62 @@
+identifier: CHEBI:9712
+label: triflupromazine hydrochloride
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: N,N-dimethyl-3-[2-(trifluoromethyl)-10H-phenothiazin-10-yl]propan-1-amine
+    hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10-(3-(Dimethylamino)propyl)-2-(trifluoromethyl)phenothiazine monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 10-(3-Dimethylaminopropyl)-2-(trifluoromethyl)phenothiazine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fluopromazine monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Trifluopromazine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Triflupromazine HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Triflupromazine hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Triflupromazine monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- beilstein:3801519
+- cas:1098-60-8
+- drugbank:DB00508
+- kegg.drug:D00800
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CN(C)CCCN1c2ccccc2Sc2ccc(C(F)(F)F)cc21.[Cl-].[H+]
+  standard_inchi: InChI=1S/C18H19F3N2S.ClH/c1-22(2)10-5-11-23-14-6-3-4-7-16(14)24-17-9-8-13(12-15(17)23)18(19,20)21;/h3-4,6-9,12H,5,10-11H2,1-2H3;1H
+  standard_inchi_key: FTNWXGFYRHWUKG-UHFFFAOYSA-N
+  molecular_formula: H.C18H19F3N2S.Cl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 388.886
+  monoisotopic_mass: 388.09878
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9712
+  source_label: triflupromazine hydrochloride
+  minted_identifier: antibioticmech:chebi-15270fdf42
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

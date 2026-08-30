@@ -1,0 +1,63 @@
+identifier: CHEBI:66639
+label: NP-101A
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of benzamides that is benzamide substituted by an
+  acetylamino group at position 2. It is an antibiotic isolated from Streptomyces
+  aurantiogriseus and has been shown to exhibit antifungal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-(acetylamino)benzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2'-carbamoylacetanilide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-acetamidobenzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetanilide, 2'-carbamoyl- (6CI,8CI)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-acetyl-anthranilic acid amide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-acetylanthranilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: o-acetamidobenzamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22160
+- CHEBI:22702
+xrefs:
+- cas:33809-77-7
+- reaxys:2210851
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(=O)Nc1ccccc1C(N)=O
+  standard_inchi: InChI=1S/C9H10N2O2/c1-6(12)11-8-5-3-2-4-7(8)9(10)13/h2-5H,1H3,(H2,10,13)(H,11,12)
+  standard_inchi_key: WFKPHYKFAOXUTI-UHFFFAOYSA-N
+  molecular_formula: C9H10N2O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 178.191
+  monoisotopic_mass: 178.07423
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66639
+  source_label: NP-101A
+  minted_identifier: antibioticmech:chebi-f80bb08208
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

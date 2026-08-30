@@ -1,0 +1,100 @@
+identifier: CHEBI:8269
+label: pleuromutilin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Pleuromutilin is a natural product antibiotic produced by Clitopilus passeckerianus.
+  Related antibiotics of clinical significance, such as tiamulin and retapamulin,
+  are semi-synthetic derivatives of this compound.
+definition_source: PMID:23589420
+parent_compounds:
+- ARO:3000670
+xrefs:
+- ARO:3001317
+- cas:125-65-5
+- chembl:CHEMBL3989485
+- pubchem.compound:31326
+structural_class: pleuromutilin antibiotic
+structural_class_id: ARO:3000670
+chemical_structure:
+  smiles: '[H][C@@]12C(=O)CC[C@]13CCC(C)[C@@]2(C)[C@H](OC(=O)CO)C[C@@](C)(C=C)[C@@H](O)[C@@H]3C'
+  standard_inchi: InChI=1S/C22H34O5/c1-6-20(4)11-16(27-17(25)12-23)21(5)13(2)7-9-22(14(3)19(20)26)10-8-15(24)18(21)22/h6,13-14,16,18-19,23,26H,1,7-12H2,2-5H3/t13?,14-,16+,18-,19-,20+,21-,22-/m0/s1
+  standard_inchi_key: ZRZNJUXESFHSIO-ZXVYJXQESA-N
+  molecular_formula: C22H34O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 378.509
+  monoisotopic_mass: 378.24062
+source_concepts:
+- source: ARO
+  source_id: ARO:3001317
+  source_label: pleuromutilin
+  minted_identifier: antibioticmech:aro-ac69007b2b
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3000300
+  label: lsaA
+  evidence:
+  - reference: ARO:3000300
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001317 (pleuromutilin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3003111
+  label: lsaB
+  evidence:
+  - reference: ARO:3003111
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001317 (pleuromutilin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3003112
+  label: lsaC
+  evidence:
+  - reference: ARO:3003112
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001317 (pleuromutilin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3003206
+  label: lsaE
+  evidence:
+  - reference: ARO:3003206
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001317 (pleuromutilin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3003761
+  label: eatAv
+  evidence:
+  - reference: ARO:3003761
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001317 (pleuromutilin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003986
+  label: TaeA
+  evidence:
+  - reference: ARO:3003986
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001317 (pleuromutilin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004159
+  label: Mycoplasma gallisepticum 23S rRNA mutation conferring resistance to pleuromutilin
+    antibiotics
+  evidence:
+  - reference: ARO:3004159
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001317 (pleuromutilin);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
+  aro_id: ARO:3004730
+  label: tva(A)
+  evidence:
+  - reference: ARO:3004730
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001317 (pleuromutilin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,42 @@
+identifier: CHEBI:66555
+label: laurinterol
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sesquiterpenoid isolated from Laurencia intermedia and Aplysia kurodai
+  and has been found to exhibit antibacterial activity,
+definition_source: ChEBI
+parent_compounds:
+- CHEBI:26658
+- CHEBI:33853
+- CHEBI:37141
+xrefs:
+- cas:10539-87-4
+- kegg.compound:C17136
+- patent:JP8245359
+- patent:WO2009048195
+- reaxys:1880118
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12CC[C@@](C)(c3cc(Br)c(C)cc3O)[C@@]1(C)C2'
+  standard_inchi: InChI=1S/C15H19BrO/c1-9-6-13(17)11(7-12(9)16)14(2)5-4-10-8-15(10,14)3/h6-7,10,17H,4-5,8H2,1-3H3/t10-,14+,15+/m1/s1
+  standard_inchi_key: UGGAHNIITODSKB-ONERCXAPSA-N
+  molecular_formula: C15H19BrO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 295.22
+  monoisotopic_mass: 294.06193
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66555
+  source_label: laurinterol
+  minted_identifier: antibioticmech:chebi-d4401b2e20
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

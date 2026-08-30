@@ -1,0 +1,48 @@
+identifier: CHEBI:2980
+label: 5,6,7-trimethoxyflavone
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A trimethoxyflavone that is the 5,6,7-trimethyl ether derivative of baicalein.
+  It has been isolated from the plant Callicarpa japonica and has been shown to exhibit
+  antiviral activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5,6,7-trimethoxy-2-phenyl-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Baicalein 5,6,7-trimethyl ether
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27124
+xrefs:
+- cas:973-67-1
+- kegg.compound:C10024
+- knapsack:C00003808
+- lipidmaps:LMPK12111100
+- reaxys:300583
+activity_roles:
+- CHEBI:64953
+chemical_structure:
+  smiles: COc1cc2oc(-c3ccccc3)cc(=O)c2c(OC)c1OC
+  standard_inchi: InChI=1S/C18H16O5/c1-20-15-10-14-16(18(22-3)17(15)21-2)12(19)9-13(23-14)11-7-5-4-6-8-11/h4-10H,1-3H3
+  standard_inchi_key: HJNJAUYFFFOFBW-UHFFFAOYSA-N
+  molecular_formula: C18H16O5
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 312.321
+  monoisotopic_mass: 312.09977
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:2980
+  source_label: 5,6,7-trimethoxyflavone
+  minted_identifier: antibioticmech:chebi-a7cca12489
+  role_terms:
+  - CHEBI:64953
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,91 @@
+identifier: CHEBI:48635
+label: fumagillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A meroterpenoid resulting from the formal condensation of the hydroxy
+  group of fumagillol with the carboxylic acid group of (all-E)-deca-2,4,6,8-tetraenedioic
+  acid. Originally isolated from the fungus Aspergillus fumigatus, it is used for
+  the control of Nosema infection in honey bees.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Fugillin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Fumidil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: fumagilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: fumagilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: fumagillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2E,4E,6E,8E)-10-({(3R,4S,5S,6R)-5-methoxy-4-[(2R,3R)-2-methyl-3-(3-methylbut-2-en-1-yl)oxiran-2-yl]-1-oxaspiro[2.5]oct-6-yl}oxy)-10-oxodeca-2,4,6,8-tetraenoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4,6,8-decatetraenedioic acid, 4-(1,2-epoxy-1,5-dimethyl-4-hexenyl)-5-methoxy-1-oxaspiro(2,5)oct-6-yl
+    ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fumagillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:133131
+- CHEBI:25807
+- CHEBI:33308
+- CHEBI:36244
+- CHEBI:64419
+- CHEBI:87113
+xrefs:
+- cas:23110-15-8
+- drugbank:DB02640
+- drugcentral:3253
+- kegg.compound:C09668
+- knapsack:C00003133
+- lipidmaps:LMPR0103060003
+- patent:US2652356
+- patent:US2803586
+- reaxys:5360220
+- wikipedia.en:Fumagillin
+activity_roles:
+- CHEBI:33281
+- CHEBI:35718
+- CHEBI:35820
+- CHEBI:36047
+- CHEBI:86327
+chemical_structure:
+  smiles: '[H][C@]1([C@@]2(C)O[C@]2([H])CC=C(C)C)[C@H](OC)[C@H](OC(=O)/C=C/C=C/C=C/C=C/C(=O)O)CC[C@]12CO2'
+  standard_inchi: InChI=1S/C26H34O7/c1-18(2)13-14-20-25(3,33-20)24-23(30-4)19(15-16-26(24)17-31-26)32-22(29)12-10-8-6-5-7-9-11-21(27)28/h5-13,19-20,23-24H,14-17H2,1-4H3,(H,27,28)/b7-5+,8-6+,11-9+,12-10+/t19-,20-,23-,24-,25+,26+/m1/s1
+  standard_inchi_key: NGGMYCMLYOUNGM-CSDLUJIJSA-N
+  molecular_formula: C26H34O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 458.551
+  monoisotopic_mass: 458.23045
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:48635
+  source_label: fumagillin
+  minted_identifier: antibioticmech:chebi-b1d0ffa385
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35718
+  - CHEBI:35820
+  - CHEBI:36047
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

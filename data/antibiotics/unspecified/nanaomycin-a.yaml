@@ -1,0 +1,69 @@
+identifier: CHEBI:48202
+label: nanaomycin A
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A pyranonaphthoquinone antibiotic from strain OS-3966 of Streptomyces
+  rosa var. notoensis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Nanafrocin
+  synonym_type: INN
+  source: chebi
+- synonym_text: Nanafrocine
+  synonym_type: INN
+  source: chebi
+- synonym_text: Nanafrocinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: '[(1S,3R)-9-hydroxy-1-methyl-5,10-dioxo-3,4,5,10-tetrahydro-1H-benzo[g]isochromen-3-yl]acetic
+    acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1S,3R)-Nanaomycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nanomycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Rosanomycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[(1S,3R)-9-hydroxy-1-methyl-5,10-dioxo-3,4,5,10-tetrahydro-1H-naphtho[2,3-c]pyran-3-yl]acetic
+    acid'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:25807
+- CHEBI:25830
+- CHEBI:48129
+xrefs:
+- beilstein:7182745
+- cas:52934-83-5
+- kegg.compound:C10377
+- knapsack:C00002845
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C[C@@H]1O[C@@H](CC(=O)O)CC2=C1C(=O)c1c(O)cccc1C2=O
+  standard_inchi: InChI=1S/C16H14O6/c1-7-13-10(5-8(22-7)6-12(18)19)15(20)9-3-2-4-11(17)14(9)16(13)21/h2-4,7-8,17H,5-6H2,1H3,(H,18,19)/t7-,8+/m0/s1
+  standard_inchi_key: ZCJHPTKRISJQTN-JGVFFNPUSA-N
+  molecular_formula: C16H14O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 302.282
+  monoisotopic_mass: 302.07904
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:48202
+  source_label: nanaomycin A
+  minted_identifier: antibioticmech:chebi-589e411cad
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

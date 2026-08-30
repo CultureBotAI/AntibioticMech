@@ -1,0 +1,153 @@
+identifier: CHEBI:472657
+label: cefixime
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A third-generation cephalosporin antibiotic bearing vinyl and (2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-[(carboxymethoxy)imino]acetamido
+  groups at positions 3 and 7, respectively, of the cephem skeleton. It is used in
+  the treatment of gonorrhoea, tonsilitis, pharyngitis, bronchitis, and urinary tract
+  infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefixima
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefiximum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 7β-{(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-[(carboxymethoxy)imino]acetamido}-3-ethenyl-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-7-({(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-[(carboxymethoxy)imino]acetyl}amino)-3-ethenyl-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-cefixim
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CFM
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: necopen
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:23066
+- ARO:0000032
+xrefs:
+- ARO:3000646
+- beilstein:6025058
+- cas:79350-37-1
+- drugbank:DB00671
+- drugcentral:537
+- kegg.compound:C06881
+- kegg.drug:D00258
+- patent:EP30630
+- patent:US4409214
+- chembl:CHEMBL1541
+- pubchem.compound:5362065
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: cephalosporin
+structural_class_id: ARO:0000032
+chemical_structure:
+  smiles: '[H][C@]12SCC(C=C)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)/C(=N\OCC(=O)O)c1csc(N)n1'
+  standard_inchi: InChI=1S/C16H15N5O7S2/c1-2-6-4-29-14-10(13(25)21(14)11(6)15(26)27)19-12(24)9(20-28-3-8(22)23)7-5-30-16(17)18-7/h2,5,10,14H,1,3-4H2,(H2,17,18)(H,19,24)(H,22,23)(H,26,27)/b20-9-/t10-,14-/m1/s1
+  standard_inchi_key: OKBVVJOGVLARMR-QSWIMTSFSA-N
+  molecular_formula: C16H15N5O7S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 453.458
+  monoisotopic_mass: 453.04129
+source_concepts:
+- source: ARO
+  source_id: ARO:3000646
+  source_label: cefixime
+  minted_identifier: antibioticmech:aro-6fbe9bca14
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:472657
+  source_label: cefixime
+  minted_identifier: antibioticmech:chebi-1371a3fd71
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:36047
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001866
+  label: CTX-M-3
+  evidence:
+  - reference: ARO:3001866
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000646 (cefixime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3001889
+  label: CTX-M-27
+  evidence:
+  - reference: ARO:3001889
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000646 (cefixime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002013
+  label: CMY-2
+  evidence:
+  - reference: ARO:3002013
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000646 (cefixime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002500
+  label: PDC-3
+  evidence:
+  - reference: ARO:3002500
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000646 (cefixime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3002502
+  label: PDC-5
+  evidence:
+  - reference: ARO:3002502
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000646 (cefixime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003937
+  label: Neisseria meningititis PBP2 conferring resistance to beta-lactam
+  evidence:
+  - reference: ARO:3003937
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000646 (cefixime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3004832
+  label: Neisseria gonorrhoeae PBP2 conferring resistance to beta-lactam antibiotics
+  evidence:
+  - reference: ARO:3004832
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000646 (cefixime);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  aro_id: ARO:3005111
+  label: blaS1
+  evidence:
+  - reference: ARO:3005111
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000646 (cefixime);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000646 (cefixime); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

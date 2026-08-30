@@ -1,0 +1,46 @@
+identifier: CHEBI:65532
+label: 3,15-di-O-acetylbruceolide
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A quassinoid that is the 3,15-di-O-acetyl derivative of bruceolide. It
+  has been isolated from Brucea javanica and Brucea sumatrana.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl (11β,12α,15β)-3,15-bis(acetyloxy)-11,12-dihydroxy-2,16-dioxo-13,20-epoxypicras-3-en-21-oate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:18946
+- CHEBI:23824
+- CHEBI:25248
+- CHEBI:33823
+- CHEBI:37407
+- CHEBI:38164
+- CHEBI:47622
+- CHEBI:51689
+- CHEBI:72485
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: '[H][C@]12[C@@H](O)[C@H](O)[C@]3(C(=O)OC)OC[C@]14[C@@]3([H])[C@@H](OC(C)=O)C(=O)O[C@]4([H])C[C@@]1([H])C(C)=C(OC(C)=O)C(=O)C[C@]21C'
+  standard_inchi: InChI=1S/C25H30O12/c1-9-12-6-14-24-8-34-25(22(32)33-5,19(24)17(21(31)37-14)36-11(3)27)20(30)15(29)18(24)23(12,4)7-13(28)16(9)35-10(2)26/h12,14-15,17-20,29-30H,6-8H2,1-5H3/t12-,14+,15+,17+,18+,19+,20-,23-,24+,25+/m0/s1
+  standard_inchi_key: ZDBJNNBVIRSCJN-LFVFYYESSA-N
+  molecular_formula: C25H30O12
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 522.503
+  monoisotopic_mass: 522.17373
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65532
+  source_label: 3,15-di-O-acetylbruceolide
+  minted_identifier: antibioticmech:chebi-32fed36ffe
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

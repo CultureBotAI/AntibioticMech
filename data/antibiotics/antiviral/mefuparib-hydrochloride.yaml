@@ -1,0 +1,69 @@
+identifier: CHEBI:167899
+label: mefuparib hydrochloride
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The hydrochloride salt of mefuparib. It is a potent poly(ADP-ribose) polymerase
+  inhibitor which exhibits strong anticancer activity and also inhibits SARS-CoV-2
+  in cell culture.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-fluoro-2-{4-[(methylamino)methyl]phenyl}-1-benzofuran-7-carboxamide
+    hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-fluoro-2-(4-((methylamino)methyl)phenyl)benzofuran-7-carboxamide
+    hydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-fluoro-2-{4-[(methylamino)methyl]phenyl}-1-benzofuran-7-carboxamide—hydrogen
+    chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CVL 218
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CVL-218
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CVL218
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[4-(7-carbamoyl-5-fluoro-1-benzofuran-2-yl)phenyl]-N-methylmethanaminium
+    chloride'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: mefuparib HCl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: mefuparib monohydrochloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36807
+xrefs:
+- cas:1449746-00-2
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: CNCc1ccc(-c2cc3cc(F)cc(C(N)=O)c3o2)cc1.Cl
+  standard_inchi: InChI=1S/C17H15FN2O2.ClH/c1-20-9-10-2-4-11(5-3-10)15-7-12-6-13(18)8-14(17(19)21)16(12)22-15;/h2-8,20H,9H2,1H3,(H2,19,21);1H
+  standard_inchi_key: GPFWTAVHQKERKY-UHFFFAOYSA-N
+  molecular_formula: C17H15FN2O2.HCl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 334.778
+  monoisotopic_mass: 334.08843
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:167899
+  source_label: mefuparib hydrochloride
+  minted_identifier: antibioticmech:chebi-5fbec2fe8d
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

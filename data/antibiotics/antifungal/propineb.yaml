@@ -1,0 +1,82 @@
+identifier: CHEBI:81755
+label: propineb
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polymeric complex of zinc with the propylene 1,2-bis(dithiocarbamate)
+  anionic ligand. A fungicide, it is used to control a wide range of fungal diseases,
+  including downy mildew, brown rot, black rot, red fire, leaf spot, and blight in
+  crops such as grapes, tomatoes, potatoes, berries, citrus, rice and tea.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Airone
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Antracol
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Taifen
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: BAY 46131
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bayer 46131
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methylzineb
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: mezineb
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: polymeric zinc propylenebis(dithiocarbamate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: propinebe
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc 1,2-propylene bisdithiocarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: zinc propylene bisdithiocarbamate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:33839
+- CHEBI:36566
+- CHEBI:83060
+xrefs:
+- cas:12071-83-9
+- kegg.compound:C18450
+- patent:BE611960
+- patent:BE628114
+- patent:EP2421371
+- patent:IT611046
+- patent:US2011269832
+- pesticides:propineb
+- reaxys:12976494
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CC(CNC(=S)[S-])NC(=S)[S-].[Zn+2]
+  standard_inchi: InChI=1S/C5H10N2S4.Zn/c1-3(7-5(10)11)2-6-4(8)9;/h3H,2H2,1H3,(H2,6,8,9)(H2,7,10,11);/q;+2/p-2
+  standard_inchi_key: KKMLIVYBGSAJPM-UHFFFAOYSA-L
+  molecular_formula: C5H8N2S4.Zn
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 289.791
+  monoisotopic_mass: 287.88617
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81755
+  source_label: propineb
+  minted_identifier: antibioticmech:chebi-1a5f428191
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,70 @@
+identifier: CHEBI:231816
+label: CT3
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of isoindoles that is 2,3-dihydro-1H-isoindole substituted
+  by (3-cyano-1H-1,2,4-triazol-1-yl)acetyl and 5-fluoro-2-(trifluoromethyl)pyridin-3-yl
+  groups at positions 2 and 5, respectively. It inhibits Trypanosoma cruzi topoisomerase
+  II and eradicates Trypanosoma cruzi in a mouse model of Chagas disease.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-(2-{5-[5-fluoro-2-(trifluoromethyl)pyridin-3-yl]-1,3-dihydro-2H-isoindol-2-yl}-2-oxoethyl)-1H-1,2,4-triazole-3-carbonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-(2-{5-[5-fluoro-2-(trifluoromethyl)pyridin-3-yl]isoindolin-2-yl}-2-oxoethyl)-1H-1,2,4-triazole-3-carbonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-[2-[5-[5-fluoro-2-(trifluoromethyl)-3-pyridinyl]-1,3-dihydro-2H-isoindol-2-yl]-2-oxoethyl]-1H-1,2,4-triazole-3-carbonitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CT 3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CT-3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: compound CT3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cyanotriazole 3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: topoisomerase II inhibitor 16
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17087
+- CHEBI:18379
+- CHEBI:24897
+- CHEBI:26421
+- CHEBI:35727
+- CHEBI:37143
+xrefs:
+- cas:2403729-27-9
+- chemspider:128942099
+- reaxys:35502681
+activity_roles:
+- CHEBI:36335
+chemical_structure:
+  smiles: N#Cc1ncn(CC(=O)N2Cc3ccc(-c4cc(F)cnc4C(F)(F)F)cc3C2)n1
+  standard_inchi: InChI=1S/C19H12F4N6O/c20-14-4-15(18(25-6-14)19(21,22)23)11-1-2-12-7-28(8-13(12)3-11)17(30)9-29-10-26-16(5-24)27-29/h1-4,6,10H,7-9H2
+  standard_inchi_key: JDTWUDDOSHJEIZ-UHFFFAOYSA-N
+  molecular_formula: C19H12F4N6O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 416.338
+  monoisotopic_mass: 416.10087
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:231816
+  source_label: CT3
+  minted_identifier: antibioticmech:chebi-6f38640940
+  role_terms:
+  - CHEBI:36335
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

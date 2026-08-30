@@ -1,0 +1,76 @@
+identifier: CHEBI:4974
+label: famciclovir
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: 2-Amino-9H-purine in which the hydrogen at position 9 is substituted by
+  a 4-acetoxy-3-(acetoxymethyl)but-1-yl group. A prodrug of the antiviral penciclovir,
+  it is used for the treatment of acute herpes zoster (shingles), for the treatment
+  or suppression of recurrent genital herpes in immunocompetent patients and for the
+  treatment of recurrent mucocutaneous herpes simplex infections in HIV infected patients.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Famvir
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: famciclovirum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2-[(acetyloxy)methyl]-4-(2-amino-9H-purin-9-yl)butyl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(2-(2-amino-9H-purin-9-yl)ethyl)-1,3-propanediol diacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 9-[4-acetoxy-3-(acetoxymethyl)but-1-yl]-2-aminopurine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BRL-42810
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FAMCICLOVIR
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: FCV
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: acetic acid 2-acetoxymethyl-4-(2-amino-purin-9-yl)-butyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:20702
+- CHEBI:47622
+xrefs:
+- cas:104227-87-4
+- drugbank:DB00426
+- drugcentral:1128
+- hmdb:HMDB0014570
+- kegg.drug:D00317
+- lincs.smallmolecule:LSM-2990
+- patent:US5246937
+- reaxys:4208403
+- wikipedia.en:Famciclovir
+activity_roles:
+- CHEBI:36044
+chemical_structure:
+  smiles: CC(=O)OCC(CCn1cnc2cnc(N)nc21)COC(C)=O
+  standard_inchi: InChI=1S/C14H19N5O4/c1-9(20)22-6-11(7-23-10(2)21)3-4-19-8-17-12-5-16-14(15)18-13(12)19/h5,8,11H,3-4,6-7H2,1-2H3,(H2,15,16,18)
+  standard_inchi_key: GGXKWVWZWMLJEH-UHFFFAOYSA-N
+  molecular_formula: C14H19N5O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 321.337
+  monoisotopic_mass: 321.1437
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:4974
+  source_label: famciclovir
+  minted_identifier: antibioticmech:chebi-f75b655152
+  role_terms:
+  - CHEBI:36044
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

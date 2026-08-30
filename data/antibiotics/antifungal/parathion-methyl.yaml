@@ -1,0 +1,67 @@
+identifier: CHEBI:38746
+label: parathion-methyl
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A C-nitro compound that is 4-nitrophenol substituted by a (dimethoxyphosphorothioyl)oxy
+  group at position 4.
+definition_source: ChEBI
+synonyms:
+- synonym_text: O,O-dimethyl O-(4-nitrophenyl) phosphorothioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dimethyl p-nitrophenyl thiophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dimethyl parathion
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methyl parathion
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methylparathion
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O,O-Dimethyl O-(p-nitrophenyl) thionophosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphorothioic acid, O,O-dimethyl O-(4-nitrophenyl) ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phosphorothioic acid, o,o-dimethyl-o-p-nitrophenyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25715
+- CHEBI:35716
+- CHEBI:37512
+xrefs:
+- beilstein:1914724
+- cas:298-00-0
+- kegg.compound:C14228
+- pesticides:parathion-methyl
+- ppdb:507
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COP(=S)(OC)Oc1ccc([N+](=O)[O-])cc1
+  standard_inchi: InChI=1S/C8H10NO5PS/c1-12-15(16,13-2)14-8-5-3-7(4-6-8)9(10)11/h3-6H,1-2H3
+  standard_inchi_key: RLBIQVVOMOPOHC-UHFFFAOYSA-N
+  molecular_formula: C8H10NO5PS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 263.211
+  monoisotopic_mass: 263.00173
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:38746
+  source_label: parathion-methyl
+  minted_identifier: antibioticmech:chebi-ca337d723a
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

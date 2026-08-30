@@ -1,0 +1,46 @@
+identifier: CHEBI:66267
+label: 5,7,3'-trihydroxy-4',5'-(2'''',2''''-dimethylpyran)-8,2'-di(3-methyl-2-butenyl)-(2S)-flavanone
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An extended flavonoid that consists of (2S)-flavanone substituted by hydroxy
+  groups at positions 5, 7 and 3', prenyl groups at positions 8 and 2' and a gem-dimethyl
+  pyran ring fused across positions 4' and 5'. Isolated from Dendrolobium lanceolatum,
+  it exhibits antimalarial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S)-5,7,8'-trihydroxy-2',2'-dimethyl-7',8-bis(3-methylbut-2-en-1-yl)-2,3-dihydro-2'H,4H-2,6'-bichromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-5,7,8'-trihydroxy-2',2'-dimethyl-7',8-bis(3-methyl-2-butenyl)-[2,6'-bi-2H-1-benzopyran]-4(3H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:38739
+- CHEBI:71037
+xrefs:
+- reaxys:10044719
+activity_roles:
+- CHEBI:38068
+chemical_structure:
+  smiles: CC(C)=CCc1c([C@@H]2CC(=O)c3c(O)cc(O)c(CC=C(C)C)c3O2)cc2c(c1O)OC(C)(C)C=C2
+  standard_inchi: InChI=1S/C30H34O6/c1-16(2)7-9-19-21(13-18-11-12-30(5,6)36-28(18)27(19)34)25-15-24(33)26-23(32)14-22(31)20(29(26)35-25)10-8-17(3)4/h7-8,11-14,25,31-32,34H,9-10,15H2,1-6H3/t25-/m0/s1
+  standard_inchi_key: WHMJSNMIIPVCHC-VWLOTQADSA-N
+  molecular_formula: C30H34O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 490.596
+  monoisotopic_mass: 490.23554
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66267
+  source_label: 5,7,3'-trihydroxy-4',5'-(2'''',2''''-dimethylpyran)-8,2'-di(3-methyl-2-butenyl)-(2S)-flavanone
+  minted_identifier: antibioticmech:chebi-f383d6b49e
+  role_terms:
+  - CHEBI:38068
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

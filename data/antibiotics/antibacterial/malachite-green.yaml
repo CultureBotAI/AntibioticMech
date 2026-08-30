@@ -1,0 +1,83 @@
+identifier: CHEBI:72449
+label: malachite green
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic chloride salt that is the monochloride salt of malachite green
+  cation. Used as a green-coloured dye, as a counter-stain in histology, and for its
+  anti-fungal properties in aquaculture.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 4-{[4-(dimethylamino)phenyl](phenyl)methylene}-N,N-dimethylcyclohexa-2,5-dien-1-iminium
+    chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4-(4-Dimethylaminobenzhydriylidene)cyclohexa-2,5-dienylidene)dimethylammonium
+    chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4-(alpha-(4-Dimethylamino)phenyl)benzylidene)cyclohexa-2,5-dien-1-ylidene
+    dimethylammonium chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Basic Green 4
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C.I. 42000
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: C.I. Basic Green 4
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CI 42000
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CI Basic Green 4
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: diamond green B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: malachite green chloride
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: malachite green chloride salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: victoria green B
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:36094
+xrefs:
+- cas:569-64-2
+- kegg.compound:C18367
+- patent:WO2008063374
+- reaxys:3580148
+- wikipedia.en:Malachite_green
+activity_roles:
+- CHEBI:33282
+- CHEBI:86327
+chemical_structure:
+  smiles: CN(C)c1ccc(C(=C2C=CC(=[N+](C)C)C=C2)c2ccccc2)cc1.[Cl-]
+  standard_inchi: InChI=1S/C23H25N2.ClH/c1-24(2)21-14-10-19(11-15-21)23(18-8-6-5-7-9-18)20-12-16-22(17-13-20)25(3)4;/h5-17H,1-4H3;1H/q+1;/p-1
+  standard_inchi_key: FDZZZRQASAIRJF-UHFFFAOYSA-M
+  molecular_formula: C23H25N2.Cl
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 364.92
+  monoisotopic_mass: 364.17063
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:72449
+  source_label: malachite green
+  minted_identifier: antibioticmech:chebi-e98e11ae15
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:86327
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

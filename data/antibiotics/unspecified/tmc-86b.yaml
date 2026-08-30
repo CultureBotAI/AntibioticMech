@@ -1,0 +1,44 @@
+identifier: CHEBI:66243
+label: TMC-86B
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An epoxide that is oxiran-2-ylmethanol which is acylated at position 2
+  by N-(6-hydroxy-6-methylheptanoyl)-L-seryl-4-methylidenenorvalinyl group. It is
+  a proteasome inhibitor isolated from Streptomyces.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 6-hydroxy-N-[(2S)-3-hydroxy-1-({1-[2-(hydroxymethyl)oxiran-2-yl]-4-methyl-1-oxopent-4-en-2-yl}amino)-1-oxopropan-2-yl]-6-methylheptanamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:17087
+- CHEBI:29347
+- CHEBI:32955
+xrefs:
+- reaxys:8518741
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C=C(C)CC(NC(=O)[C@H](CO)NC(=O)CCCCC(C)(C)O)C(=O)C1(CO)CO1
+  standard_inchi: InChI=1S/C20H34N2O7/c1-13(2)9-14(17(26)20(11-24)12-29-20)22-18(27)15(10-23)21-16(25)7-5-6-8-19(3,4)28/h14-15,23-24,28H,1,5-12H2,2-4H3,(H,21,25)(H,22,27)/t14?,15-,20?/m0/s1
+  standard_inchi_key: UUYGJEDLSUBYHW-CHWWFWEZSA-N
+  molecular_formula: C20H34N2O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 414.499
+  monoisotopic_mass: 414.2366
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66243
+  source_label: TMC-86B
+  minted_identifier: antibioticmech:chebi-8df10e3b62
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

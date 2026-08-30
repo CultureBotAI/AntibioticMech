@@ -1,0 +1,65 @@
+identifier: CHEBI:81846
+label: amisulbrom
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of bromoindoles that is 3-bromo-6-fluoro-2-methylindole
+  substituted at position 1 by a 1-(dimethylsulfamyl)-1,2,4-triazole-3-sulfonyl group.
+  A fungicide for use on potatoes to control late blight (Phytophthora infestans)
+  and downy mildew [Plasmopara viticola). It has a low mammalian toxicity but it is
+  considered to be a reproduction toxicant, is moderately toxic to birds and honey
+  bees but poses a greater risk to aquatic species and earthworms.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3-[(3-bromo-6-fluoro-2-methyl-1H-indol-1-yl)sulfonyl]-N,N-dimethyl-1H-1,2,4-triazole-1-sulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35358
+- CHEBI:35727
+- CHEBI:37143
+- CHEBI:51871
+- CHEBI:52514
+- CHEBI:87027
+- CHEBI:87100
+xrefs:
+- cas:348635-87-0
+- kegg.compound:C18581
+- patent:US2012071531
+- patent:WO2011108758
+- patent:WO2012011287
+- pesticides:amisulbrom
+- ppdb:1137
+- reaxys:11328670
+activity_roles:
+- CHEBI:24127
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: Cc1c(Br)c2ccc(F)cc2n1S(=O)(=O)c1ncn(S(=O)(=O)N(C)C)n1
+  standard_inchi: InChI=1S/C13H13BrFN5O4S2/c1-8-12(14)10-5-4-9(15)6-11(10)20(8)25(21,22)13-16-7-19(17-13)26(23,24)18(2)3/h4-7H,1-3H3
+  standard_inchi_key: BREATYVWRHIPIY-UHFFFAOYSA-N
+  molecular_formula: C13H13BrFN5O4S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 466.314
+  monoisotopic_mass: 464.95764
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81846
+  source_label: amisulbrom
+  minted_identifier: antibioticmech:chebi-350bf4dd5b
+  role_terms:
+  - CHEBI:24127
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

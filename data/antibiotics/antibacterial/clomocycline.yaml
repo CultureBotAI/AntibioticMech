@@ -1,0 +1,64 @@
+identifier: CHEBI:59589
+label: clomocycline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Tetracycline in which the hydrogen at position 7 is substituted by chlorine
+  and a hydrogen attached to the amide nitrogen is substituted by a hydroxymethyl
+  group. A tetracyline antibiotic, it is used to treat acne, urinary tract infections,
+  gum disease, and other bacterial infections such as gonorrhoea and chlamydia.
+definition_source: ChEBI
+synonyms:
+- synonym_text: clomocyclina
+  synonym_type: INN
+  source: chebi
+- synonym_text: clomocyclinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: (4S,4aS,5aS,6S,12aS)-7-chloro-4-(dimethylamino)-3,6,10,12,12a-pentahydroxy-N-(hydroxymethyl)-6-methyl-1,11-dioxo-1,4,4a,5,5a,6,11,12a-octahydrotetracene-2-carboxamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: chlormethylenecycline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139592
+- CHEBI:26895
+xrefs:
+- cas:1181-54-0
+- drugbank:DB00453
+- drugcentral:702
+- kegg.drug:D06885
+- patent:BE628142
+activity_roles:
+- CHEBI:33281
+- CHEBI:35820
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H][C@]12C[C@@]3([H])[C@H](N(C)C)C(O)=C(C(=O)NCO)C(=O)[C@@]3(O)C(O)=C1C(=O)c1c(O)ccc(Cl)c1[C@@]2(C)O'
+  standard_inchi: InChI=1S/C23H25ClN2O9/c1-22(34)8-6-9-16(26(2)3)18(30)14(21(33)25-7-27)20(32)23(9,35)19(31)12(8)17(29)13-11(28)5-4-10(24)15(13)22/h4-5,8-9,16,27-28,30-31,34-35H,6-7H2,1-3H3,(H,25,33)/t8-,9-,16-,22-,23-/m0/s1
+  standard_inchi_key: GJGDLRSSCNAKGL-KMVLDZISSA-N
+  molecular_formula: C23H25ClN2O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 508.911
+  monoisotopic_mass: 508.12486
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:59589
+  source_label: clomocycline
+  minted_identifier: antibioticmech:chebi-a2094d22ac
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35820
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -1,0 +1,43 @@
+identifier: CHEBI:68284
+label: (+)-microdiplodiasone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterobicyclic compound that is 2,3-dihydro-4H-chromen-4-one
+  substituted by hydroxy groups at positions 5 and 7, a methyl group at position 2
+  and a 5-oxotetrahydrofuran-2-yl group at position 2. Isolated from the endophytic
+  fungus Microdiplodia species, it exhibits antibacterial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R)-5,7-dihydroxy-2-methyl-2-[(2R)-5-oxotetrahydrofuran-2-yl]-2,3-dihydro-4H-chromen-4-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22950
+- CHEBI:27171
+- CHEBI:33572
+- CHEBI:38763
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]1([C@@]2(C)CC(=O)c3c(O)cc(O)cc3O2)CCC(=O)O1'
+  standard_inchi: InChI=1S/C14H14O6/c1-14(11-2-3-12(18)19-11)6-9(17)13-8(16)4-7(15)5-10(13)20-14/h4-5,11,15-16H,2-3,6H2,1H3/t11-,14-/m1/s1
+  standard_inchi_key: KYUNATJAFQPBJE-BXUZGUMPSA-N
+  molecular_formula: C14H14O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 278.26
+  monoisotopic_mass: 278.07904
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:68284
+  source_label: (+)-microdiplodiasone
+  minted_identifier: antibioticmech:chebi-5c8a6fb66d
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

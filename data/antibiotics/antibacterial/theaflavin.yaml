@@ -1,0 +1,64 @@
+identifier: CHEBI:136609
+label: theaflavin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A biflavonoid that is 3,4,5-trihydroxybenzocyclohepten-6-one which is
+  substituted at positions 1 and 8 by (2R,3R)-3,5,7-trihydroxy-3,4-dihydro-2H-chromen-2-yl
+  groups. It is the main red pigment in black tea.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,4,5-trihydroxy-1,8-bis[(2R,3R)-3,5,7-trihydroxy-3,4-dihydro-2H-chromen-2-yl]-6H-benzocyclohepten-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (−)-theaflavin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,8-bis((2R,3R)-3,5,7-trihydroxy-2H-1-benzopyran-2-yl)-3,4,6-trihydroxy-5H-benzocyclohepten-5-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1,8-bis(3-α,5,7-trihydroxy-2-α-chromanyl)-5H-benzocyclohepten-5-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,4,5-trihydroxy-1,8-bis[(2R,3R)-3,5,7-trihydroxy-3,4-dihydro-2H-chromen-2-yl]-6H-benzo[7]annulen-6-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: theaflavine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26195
+- CHEBI:50128
+xrefs:
+- cas:4670-05-7
+- chemspider:102754
+- foodb.food:FDB012511
+- hmdb:HMDB0005788
+- knapsack:C00009348
+- patent:KR20080052675
+- reaxys:25497520
+- wikipedia.en:Theaflavin
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]1(c2cc(=O)c(O)c3c(O)c(O)cc([C@@]4([H])Oc5cc(O)cc(O)c5C[C@H]4O)c3c2)Oc2cc(O)cc(O)c2C[C@H]1O'
+  standard_inchi: InChI=1S/C29H24O12/c30-11-3-17(32)15-8-21(36)28(40-23(15)5-11)10-1-13-14(7-20(35)27(39)25(13)26(38)19(34)2-10)29-22(37)9-16-18(33)4-12(31)6-24(16)41-29/h1-7,21-22,28-33,35-37,39H,8-9H2,(H,34,38)/t21-,22-,28-,29-/m1/s1
+  standard_inchi_key: IPMYMEWFZKHGAX-ZKSIBHASSA-N
+  molecular_formula: C29H24O12
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 564.499
+  monoisotopic_mass: 564.12678
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:136609
+  source_label: theaflavin
+  minted_identifier: antibioticmech:chebi-55f9eed3ec
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

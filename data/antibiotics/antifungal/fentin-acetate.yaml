@@ -1,0 +1,96 @@
+identifier: CHEBI:81918
+label: fentin acetate
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organotin compound that is the O-acetyl derivative of triphenyltin
+  hydroxide. A fungicide used to control blights on potatoes, leaf spot diseases on
+  sugar beet and anthracnose on beans.
+definition_source: ChEBI
+synonyms:
+- synonym_text: acetoxy(triphenyl)stannane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (Acetyloxy)triphenylstannane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetatotriphenylstannane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetic acid, triphenylstannyl ester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetoxy-triphenyl-stannan
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetoxytriphenylstannane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Acetoxytriphenyltin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Fentin azetat
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phentin acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Phentinoacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Tin triphenyl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Triphenyl-zinnacetat
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Triphenylaceto stannane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Triphenylstannium acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Triphenyltin acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Triphenyltin(IV) acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: triphenylstannyl acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25717
+- CHEBI:47622
+xrefs:
+- cas:900-95-8
+- hmdb:HMDB0031789
+- kegg.compound:C18728
+- patent:GB2262037
+- ppdb:311
+- reaxys:3819297
+- wikipedia.en:Fentin_acetate
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: CC(=O)[O][Sn]([c]1ccccc1)([c]1ccccc1)[c]1ccccc1
+  standard_inchi: InChI=1S/3C6H5.C2H4O2.Sn/c3*1-2-4-6-5-3-1;1-2(3)4;/h3*1-5H;1H3,(H,3,4);/q;;;;+1/p-1
+  standard_inchi_key: WDQNIWFZKXZFAY-UHFFFAOYSA-M
+  molecular_formula: C20H18O2Sn
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 409.073
+  monoisotopic_mass: 410.03287
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:81918
+  source_label: fentin acetate
+  minted_identifier: antibioticmech:chebi-af2125caea
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

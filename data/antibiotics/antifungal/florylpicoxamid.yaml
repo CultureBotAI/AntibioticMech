@@ -1,0 +1,75 @@
+identifier: CHEBI:156432
+label: florylpicoxamid
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A carboxylic ester resulting from the formal condensation of the carboxy
+  group of N-{[3-(acetyloxy)-4-methoxypyridin-2-yl]carbonyl}-L-alanine with the hydroxy
+  group of (2S)-1,1-bis(4-fluorophenyl)propan-2-ol. It is a fungicide introduced by
+  Dow AgroSciences for the control of a wide variety of pathogens such as Septoria
+  spp, Powdery Mildews, Botrytis spp, and others in cereals, vines, fruits, nuts and
+  vegetables.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Adavelt
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: (2S)-1,1-bis(4-fluorophenyl)propan-2-yl N-{[3-(acetyloxy)-4-methoxypyridin-2-yl]carbonyl}-L-alaninate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1S)-2,2-bis(4-fluorophenyl)-1-methylethyl N-[(3-acetoxy-4-methoxy-2-pyridyl)carbonyl]-L-alaninate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (1S)-2,2-bis(4-fluorophenyl)-1-methylethyl N-[[3-(acetyloxy)-4-methoxy-2-pyridinyl]carbonyl]-L-alaninat
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S)-1,1-bis(4-fluorophenyl)propan-2-yl (2S)-2-({[3-(acetyloxy)-4-methoxypyridin-2-yl]carbonyl}amino)propanoate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (S)-1,1-bis(4-fluorophenyl)propan-2-yl (3-acetoxy-4-methoxypicolinoyl)-L-alaninate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: X12485659
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: XDE-659
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: XR-659
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:140325
+- CHEBI:25529
+- CHEBI:33308
+- CHEBI:35618
+- CHEBI:47622
+- CHEBI:83575
+- CHEBI:83943
+xrefs:
+- cas:1961312-55-9
+- pesticides:florylpicoxamid
+activity_roles:
+- CHEBI:24127
+chemical_structure:
+  smiles: COc1ccnc(C(=O)N[C@@H](C)C(=O)O[C@@H](C)C(c2ccc(F)cc2)c2ccc(F)cc2)c1OC(C)=O
+  standard_inchi: InChI=1S/C27H26F2N2O6/c1-15(31-26(33)24-25(37-17(3)32)22(35-4)13-14-30-24)27(34)36-16(2)23(18-5-9-20(28)10-6-18)19-7-11-21(29)12-8-19/h5-16,23H,1-4H3,(H,31,33)/t15-,16-/m0/s1
+  standard_inchi_key: ATZHVIVDMUCBEY-HOTGVXAUSA-N
+  molecular_formula: C27H26F2N2O6
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 512.509
+  monoisotopic_mass: 512.17589
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156432
+  source_label: florylpicoxamid
+  minted_identifier: antibioticmech:chebi-715e955ecc
+  role_terms:
+  - CHEBI:24127
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

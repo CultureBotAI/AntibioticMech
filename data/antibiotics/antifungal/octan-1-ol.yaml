@@ -1,0 +1,70 @@
+identifier: CHEBI:16188
+label: octan-1-ol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An octanol carrying the hydroxy group at position 1.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-Octanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-Oktanol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-hydroxyoctane
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: OCTAN-1-OL
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: capryl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: caprylic alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-heptyl carbinol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-octan-1-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: primary octyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:15734
+- CHEBI:37868
+xrefs:
+- cas:111-87-5
+- gmelin:82528
+- kegg.compound:C00756
+- knapsack:C00001264
+- pdb-ccd:OC9
+- reaxys:1697461
+- umbbd.compound:c0045
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: CCCCCCCCO
+  standard_inchi: InChI=1S/C8H18O/c1-2-3-4-5-6-7-8-9/h9H,2-8H2,1H3
+  standard_inchi_key: KBPLFHHGFOOTCA-UHFFFAOYSA-N
+  molecular_formula: C8H18O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 130.231
+  monoisotopic_mass: 130.13577
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:16188
+  source_label: octan-1-ol
+  minted_identifier: antibioticmech:chebi-aef527d95e
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,127 @@
+identifier: CHEBI:27446
+label: phenoxymethylpenicillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A penicillin compound having a 6β-(phenoxyacetyl)amino side-chain.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Fenospen
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: V-Cillin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: fenoximetilpenicilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: phenoxymethylpenicillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: phénoxyméthylpénicilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: 2,2-dimethyl-6β-[(phenoxyacetyl)amino]penam-3α-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,3-dimethyl-6β-[(phenoxyacetyl)amino]penam-2α-carboxylic acid (PIN)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-3,3-DIMETHYL-7-OXO-6-(2-PHENOXYACETAMIDO)-4-THIA-1- AZABICYCLO(3.2.0)HEPTANE-2-CARBOXYLIC
+    ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-3,3-dimethyl-7-oxo-6-[(phenoxyacetyl)amino]-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-phenoxyacetamidopenicillanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Oracillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: PV
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Penicillin V
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: penicillin phenoxymethyl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: phenoxomethylpenicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: phenoxymethylenepenicillinic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: penicillin V
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: phenomycilline
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: phenopenicillin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:17334
+- CHEBI:88187
+- ARO:3000008
+xrefs:
+- ARO:3000633
+- cas:87-08-1
+- drugbank:DB00417
+- drugcentral:2083
+- kegg.compound:C08126
+- kegg.drug:D05411
+- pdb-ccd:PNV
+- reaxys:96259
+- wikipedia.en:Phenoxymethylpenicillin
+- chembl:CHEMBL615
+- pubchem.compound:6869
+activity_roles:
+- CHEBI:33281
+structural_class: penicillin beta-lactam
+structural_class_id: ARO:3000008
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)COc1ccccc1'
+  standard_inchi: InChI=1S/C16H18N2O5S/c1-16(2)12(15(21)22)18-13(20)11(14(18)24-16)17-10(19)8-23-9-6-4-3-5-7-9/h3-7,11-12,14H,8H2,1-2H3,(H,17,19)(H,21,22)/t11-,12+,14-/m1/s1
+  standard_inchi_key: BPLBGHOLXOTWMN-MBNYWOFBSA-N
+  molecular_formula: C16H18N2O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 350.396
+  monoisotopic_mass: 350.09364
+source_concepts:
+- source: ARO
+  source_id: ARO:3000633
+  source_label: phenoxymethylpenicillin
+  minted_identifier: antibioticmech:aro-5455d345e8
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+- source: CHEBI
+  source_id: CHEBI:27446
+  source_label: phenoxymethylpenicillin
+  minted_identifier: antibioticmech:chebi-bba43ddac4
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+molecular_targets:
+- target_id: ARO:3000749
+  target_label: beta-lactam sensitive penicillin-binding protein
+  evidence:
+  - reference: ARO:3000749
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000633 (phenoxymethylpenicillin);
+      database assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

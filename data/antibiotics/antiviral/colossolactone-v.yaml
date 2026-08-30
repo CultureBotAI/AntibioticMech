@@ -1,0 +1,51 @@
+identifier: CHEBI:65649
+label: colossolactone V
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A tricyclic triterpenoid that is 3,4-secolanosta-8,24-diene-3,26-dioic
+  acid 3-methylester substituted by acetoxy groups at positions 19 and 22 and a hydroxy
+  group at position 4. It is isolated from the fruiting bodies of the Vietnamese mushroom
+  Ganoderma colossum and displays inhibitory activity towards the enzyme HIV protease.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2Z,5R,6S)-5-(acetyloxy)-6-[(3R,3aR,6R,7R,9bR)-6-[(acetyloxy)methyl]-7-(2-hydroxypropan-2-yl)-6-(3-methoxy-3-oxopropyl)-3a,9b-dimethyl-2,3,3a,4,5,6,7,8,9,9b-decahydro-1H-cyclopenta[a]naphthalen-3-yl]-2-methylhept-2-enoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (22R)-3,4-seco-19,22-diacetoxy-4-hydroxylanosta-8,24(Z)-dien-3,26-dioic
+    acid 3-methylester
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:26878
+- CHEBI:36244
+- CHEBI:47622
+- CHEBI:52340
+xrefs:
+- reaxys:18836351
+activity_roles:
+- CHEBI:35660
+chemical_structure:
+  smiles: '[H][C@@]1(C(C)(C)O)CCC2=C(CC[C@@]3(C)[C@@]2(C)CC[C@]3([H])[C@H](C)[C@@H](C/C=C(/C)C(=O)O)OC(C)=O)[C@]1(CCC(=O)OC)COC(C)=O'
+  standard_inchi: InChI=1S/C35H54O9/c1-21(31(39)40)10-12-28(44-24(4)37)22(2)25-14-17-34(8)26-11-13-29(32(5,6)41)35(20-43-23(3)36,19-16-30(38)42-9)27(26)15-18-33(25,34)7/h10,22,25,28-29,41H,11-20H2,1-9H3,(H,39,40)/b21-10-/t22-,25+,28+,29-,33+,34-,35-/m0/s1
+  standard_inchi_key: NAIJFFZGPGRMSV-SGTCUYSDSA-N
+  molecular_formula: C35H54O9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 618.808
+  monoisotopic_mass: 618.37678
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65649
+  source_label: colossolactone V
+  minted_identifier: antibioticmech:chebi-e378787ad4
+  role_terms:
+  - CHEBI:35660
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

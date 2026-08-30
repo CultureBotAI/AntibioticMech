@@ -1,0 +1,95 @@
+identifier: CHEBI:74889
+label: 1-dodecylguanidine acetate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An acetate salt resulting from the reaction of equimolar amounts of 1-dodecylguanidine
+  and acetic acid. It is used as a fungicide to control black spot and foliar diseases
+  on apples, pears, peaches, nectarines and strawberries.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (dodecylamino)(imino)methanaminium acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-dodecylguanidinium acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-Dodecylguanidineacetat
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: aceto de N-dodecilguanidina
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: amino(dodecylamino)methaniminium acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dodecylguanidine acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dodecylguanidine monoacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dodine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: dodine acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: laurylguanidine acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-dodecylguanidine acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-dodecylguanidine monoacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-dodecylguanidinium acetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: n-dodecylguanidinium monoacetate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:59230
+- CHEBI:86417
+xrefs:
+- cas:2439-10-3
+- kegg.compound:C18723
+- patent:US2867562
+- patent:US2921881
+- pesticides:dodine
+- ppdb:263
+- reaxys:6546960
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+- CHEBI:86328
+chemical_structure:
+  smiles: CC(=O)O.CCCCCCCCCCCCNC(=N)N
+  standard_inchi: InChI=1S/C13H29N3.C2H4O2/c1-2-3-4-5-6-7-8-9-10-11-12-16-13(14)15;1-2(3)4/h2-12H2,1H3,(H4,14,15,16);1H3,(H,3,4)
+  standard_inchi_key: YIKWKLYQRFRGPM-UHFFFAOYSA-N
+  molecular_formula: C13H29N3.C2H4O2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 287.448
+  monoisotopic_mass: 287.25728
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:74889
+  source_label: 1-dodecylguanidine acetate
+  minted_identifier: antibioticmech:chebi-ebebb7bbfb
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

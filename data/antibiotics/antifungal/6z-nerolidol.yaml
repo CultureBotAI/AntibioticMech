@@ -1,0 +1,53 @@
+identifier: CHEBI:173119
+label: (6Z)-nerolidol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A nerolidol in which the double bond at position 6 adopts a cis-configuration.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6Z)-3,7,11-trimethyldodeca-1,6,10-trien-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (Z)-3,7,11-trimethyldodeca-1,6,10-trien-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (Z)-nerolidol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cis-nerolidol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nerolidol cis-form
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:7524
+xrefs:
+- cas:3790-78-1
+- chemspider:4478283
+- knapsack:C00034757
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C=CC(C)(O)CC/C=C(/C)CCC=C(C)C
+  standard_inchi: InChI=1S/C15H26O/c1-6-15(5,16)12-8-11-14(4)10-7-9-13(2)3/h6,9,11,16H,1,7-8,10,12H2,2-5H3/b14-11-
+  standard_inchi_key: FQTLCLSUCSAZDY-KAMYIIQDSA-N
+  molecular_formula: C15H26O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 222.372
+  monoisotopic_mass: 222.19837
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:173119
+  source_label: (6Z)-nerolidol
+  minted_identifier: antibioticmech:chebi-db184426bb
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

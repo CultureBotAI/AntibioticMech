@@ -1,0 +1,66 @@
+identifier: CHEBI:17580
+label: linalool
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A monoterpenoid that is octa-1,6-diene substituted by methyl groups at
+  positions 3 and 7 and a hydroxy group at position 3. It has been isolated from plants
+  like Ocimum canum.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 3,7-dimethylocta-1,6-dien-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,6-dimethylocta-2,7-dien-6-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3,7-Dimethylocta-1,6-dien-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Linalool
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: linalyl alcohol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-linalool
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25409
+- CHEBI:26878
+xrefs:
+- bpdb:2150
+- cas:78-70-6
+- gmelin:406448
+- hmdb:HMDB0036100
+- kegg.compound:C03985
+- knapsack:C00003047
+- lipidmaps:LMPR0102010004
+- reaxys:1362385
+- vsdb:2150
+- wikipedia.en:Linalool
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C=CC(C)(O)CCC=C(C)C
+  standard_inchi: InChI=1S/C10H18O/c1-5-10(4,11)8-6-7-9(2)3/h5,7,11H,1,6,8H2,2-4H3
+  standard_inchi_key: CDOSHBSSFJOMGT-UHFFFAOYSA-N
+  molecular_formula: C10H18O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 154.253
+  monoisotopic_mass: 154.13577
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:17580
+  source_label: linalool
+  minted_identifier: antibioticmech:chebi-0954b0da18
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,45 @@
+identifier: CHEBI:65534
+label: 22α-methoxy-3-β-O-{β-D-Xylp(1→3)-[β-D-Glcp-(1→2)]-β-D-Glcp-(1→4)-β-D-Glcp}-furost-3β,26-diol
+  26-O-β-D-Glcp
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A steroid saponin that consists of (3β,22R)-22-methoxyfurostan-3,26-diol
+  attached to a β-D-glucopyranosyl residue at position 26 and a β-D-glucopyranosyl-(1→2)-[β-D-xylopyranosyl-(1→3)]-β-D-glucopyranosyl-(1→4)-β-D-glucopyranosyl
+  residue at position 3 via a glycosidic linkage. Isolated from Brunfelsia grandiflora,
+  it exhibits antileishmanial activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3β,22R)-26-(β-D-glucopyranosyloxy)-22-methoxyfurostan-3-yl β-D-glucopyranosyl-(1→2)-[β-D-xylopyranosyl-(1→3)]-β-D-glucopyranosyl-(1→4)-β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 26-O-β-D-glucopyranosyl 22α-methoxyfurost-3β,26-diol 3-O-β-D-xylopyranosyl(1→3)-{β-D-glucopyranosyl(1→2)}-β-D-glucopyranosyl(1→4)-β-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:61655
+activity_roles:
+- CHEBI:70868
+chemical_structure:
+  smiles: '[H][C@@]12CCC3C[C@@H](O[C@@H]4O[C@H](CO)[C@@H](O[C@@H]5O[C@H](CO)[C@@H](O)[C@H](O[C@@H]6OC[C@@H](O)[C@H](O)[C@H]6O)[C@H]5O[C@@H]5O[C@H](CO)[C@@H](O)[C@H](O)[C@H]5O)[C@H](O)[C@H]4O)CC[C@]3(C)[C@@]1([H])CC[C@@]1(C)[C@@]2([H])C[C@]2([H])O[C@@](CCC(C)CO[C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)(OC)[C@@H](C)[C@]12[H]'
+  standard_inchi: InChI=1S/C57H96O28/c1-22(20-75-50-44(71)40(67)37(64)31(16-58)78-50)8-13-57(74-5)23(2)35-30(85-57)15-28-26-7-6-24-14-25(9-11-55(24,3)27(26)10-12-56(28,35)4)77-52-46(73)42(69)47(34(19-61)81-52)82-54-49(84-53-45(72)41(68)38(65)32(17-59)79-53)48(39(66)33(18-60)80-54)83-51-43(70)36(63)29(62)21-76-51/h22-54,58-73H,6-21H2,1-5H3/t22?,23-,24?,25-,26+,27-,28-,29+,30-,31+,32+,33+,34+,35-,36-,37+,38+,39+,40-,41-,42+,43+,44+,45+,46+,47+,48-,49+,50+,51-,52+,53-,54-,55-,56-,57+/m0/s1
+  standard_inchi_key: QOKZNLCOQRNCTQ-XFBOQIBUSA-N
+  molecular_formula: C57H96O28
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1229.367
+  monoisotopic_mass: 1228.60881
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:65534
+  source_label: 22α-methoxy-3-β-O-{β-D-Xylp(1→3)-[β-D-Glcp-(1→2)]-β-D-Glcp-(1→4)-β-D-Glcp}-furost-3β,26-diol
+    26-O-β-D-Glcp
+  minted_identifier: antibioticmech:chebi-2419f592cd
+  role_terms:
+  - CHEBI:70868
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

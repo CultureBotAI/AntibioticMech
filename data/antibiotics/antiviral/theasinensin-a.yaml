@@ -1,0 +1,55 @@
+identifier: CHEBI:9518
+label: theasinensin A
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A biflavonoid that is obtained by coupling of two molecules of (−)-epigallocatechin
+  3-gallate resulting in a bond between positions C-2 of the hydroxyphenyl ring. It
+  is a natural product found in oolong tea.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (4,4',5,5',6,6'-hexahydroxy[biphenyl]-2,2'-diyl)bis[(2R,3R)-5,7-dihydroxy-3,4-dihydro-2H-chromene-2,3-diyl]
+    bis(3,4,5-trihydroxybenzoate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (4,4',5,5',6,6'-hexahydroxy[1,1'-biphenyl]-2,2'-diyl)bis{[(2R,3R)-5,7-dihydroxy-3,4-dihydro-2H-1-benzopyran-2,3-diyl]}
+    bis(3,4,5-trihydroxybenzoate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26267
+- CHEBI:37576
+- CHEBI:50128
+xrefs:
+- cas:89064-31-3
+- chemspider:390965
+- foodb.food:FDB018261
+- hmdb:HMDB0038360
+- kegg.compound:C09972
+- knapsack:C00001010
+- lipidmaps:LMPK12030006
+- wikipedia.en:Theasinensin_A
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: O=C(O[C@@H]1Cc2c(O)cc(O)cc2O[C@@H]1c1cc(O)c(O)c(O)c1-c1c([C@H]2Oc3cc(O)cc(O)c3C[C@H]2OC(=O)c2cc(O)c(O)c(O)c2)cc(O)c(O)c1O)c1cc(O)c(O)c(O)c1
+  standard_inchi: InChI=1S/C44H34O22/c45-15-5-21(47)17-11-31(65-43(61)13-1-23(49)35(55)24(50)2-13)41(63-29(17)7-15)19-9-27(53)37(57)39(59)33(19)34-20(10-28(54)38(58)40(34)60)42-32(12-18-22(48)6-16(46)8-30(18)64-42)66-44(62)14-3-25(51)36(56)26(52)4-14/h1-10,31-32,41-42,45-60H,11-12H2/t31-,32-,41-,42-/m1/s1
+  standard_inchi_key: YUULFXAQUWEYNP-GXAWFILRSA-N
+  molecular_formula: C44H34O22
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 914.734
+  monoisotopic_mass: 914.15417
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9518
+  source_label: theasinensin A
+  minted_identifier: antibioticmech:chebi-cbf6053187
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

@@ -1,0 +1,79 @@
+identifier: CHEBI:6838
+label: methotrimeprazine
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of phenothiazines that is 10H-phenothiazine substituted
+  by a (2R)-3-(dimethylamino)-2-methylpropyl group and a methoxy group at positions
+  10 and 2 respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: levomepromazina
+  synonym_type: INN
+  source: chebi
+- synonym_text: levomepromazine
+  synonym_type: INN
+  source: chebi
+- synonym_text: levomepromazinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: lévomépromazine
+  synonym_type: INN
+  source: chebi
+- synonym_text: (2R)-3-(2-methoxy-10H-phenothiazin-10-yl)-N,N,2-trimethylpropan-1-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (-)-(2R)-3-(2-methoxy-10H-phenothiazin-10-yl)-N,N,2-trimethylpropan-1-amine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (-)-10-(3-(Dimethylamino)-2-methylpropyl)-2-methoxyphenothiazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Methoxytrimeprazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Levomepromazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Methotrimeprazine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:32876
+- CHEBI:38093
+xrefs:
+- cas:60-99-1
+- drugbank:DB01403
+- drugcentral:1752
+- hmdb:HMDB0015474
+- kegg.compound:C07192
+- kegg.drug:D00403
+- kegg.drug:D06474
+- lincs.smallmolecule:LSM-2778
+- patent:US2837518
+- reaxys:92434
+- wikipedia.en:Levomepromazine
+activity_roles:
+- CHEBI:149553
+chemical_structure:
+  smiles: COc1ccc2c(c1)N(C[C@H](C)CN(C)C)c1ccccc1S2
+  standard_inchi: InChI=1S/C19H24N2OS/c1-14(12-20(2)3)13-21-16-7-5-6-8-18(16)23-19-10-9-15(22-4)11-17(19)21/h5-11,14H,12-13H2,1-4H3/t14-/m1/s1
+  standard_inchi_key: VRQVVMDWGGWHTJ-CQSZACIVSA-N
+  molecular_formula: C19H24N2OS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 328.481
+  monoisotopic_mass: 328.16093
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:6838
+  source_label: methotrimeprazine
+  minted_identifier: antibioticmech:chebi-7198be7765
+  role_terms:
+  - CHEBI:149553
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

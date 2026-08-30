@@ -1,0 +1,42 @@
+identifier: CHEBI:66632
+label: NK372135B
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A dinitrile that is butanedinitrile substituted by 4-methoxybenzyl and
+  3,4-dimethoxybenzylidene groups at positions 3 and 2 respectively. Isolated from
+  the culture broth of the fungus Neosartorya fischeri, it exhibits antifungal activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2Z)-2-(3,4-dimethoxybenzylidene)-3-(4-methoxybenzyl)butanedinitrile
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:51308
+- CHEBI:51683
+xrefs:
+- reaxys:7145532
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: COc1ccc(CC(C#N)/C(C#N)=C/c2ccc(OC)c(OC)c2)cc1
+  standard_inchi: InChI=1S/C21H20N2O3/c1-24-19-7-4-15(5-8-19)10-17(13-22)18(14-23)11-16-6-9-20(25-2)21(12-16)26-3/h4-9,11-12,17H,10H2,1-3H3/b18-11+
+  standard_inchi_key: KGCCITMWQZHGKS-WOJGMQOQSA-N
+  molecular_formula: C21H20N2O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 348.402
+  monoisotopic_mass: 348.14739
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:66632
+  source_label: NK372135B
+  minted_identifier: antibioticmech:chebi-bda93c343f
+  role_terms:
+  - CHEBI:35718
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

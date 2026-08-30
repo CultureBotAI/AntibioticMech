@@ -1,0 +1,47 @@
+identifier: CHEBI:156315
+label: erdasporine C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterohexacyclic compound that is 6,7,12,13-tetrahydro-5H-indolo[2,3-a]pyrrolo[3,4-c]carbazole
+  in which the hydrogens at positions 5 and 7 are substituted by a methoxycarbonyl
+  and oxo groups, respectively. It is synthesized by a gene cluster found in environmental
+  DNA and exhibits cytotoxic activity against human HCT116 cancer cells and Staphylococcus
+  aureus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: methyl 7-oxo-6,7,12,13-tetrahydro-5H-indolo[2,3-a]pyrrolo[3,4-c]carbazole-5-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: methyl 14-oxo-3,13,23-triazahexacyclo[14.7.0.02,10.04,9.011,15.017,22]tricosa-1,4,6,8,10,15,17,19,21-nonaene-12-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25248
+- CHEBI:37697
+- CHEBI:50995
+- CHEBI:51914
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COC(=O)C1NC(=O)c2c1c1c3ccccc3nc1c1nc3ccccc3c21
+  standard_inchi: InChI=1S/C22H15N3O3/c1-28-22(27)20-16-14-10-6-2-4-8-12(10)23-18(14)19-15(17(16)21(26)25-20)11-7-3-5-9-13(11)24-19/h2-9,20,23-24H,1H3,(H,25,26)
+  standard_inchi_key: DOZODIABNANYHJ-UHFFFAOYSA-N
+  molecular_formula: C22H15N3O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 369.38
+  monoisotopic_mass: 369.11134
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156315
+  source_label: erdasporine C
+  minted_identifier: antibioticmech:chebi-3e580d5e40
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

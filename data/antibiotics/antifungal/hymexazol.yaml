@@ -1,0 +1,77 @@
+identifier: CHEBI:5827
+label: hymexazol
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A member of the class of isoxazoles carrying hydroxy and methyl substituents
+  at positions 3 and 5 respectively. It is used worldwide as a systemic soil and seed
+  fungicide for the control of diseases caused by Fusarium, Aphanomyces, Pythium,
+  and Corticium spp. in rice, sugarbeet, fodderbeet, vegetables, cucurbits, and ornamentals.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 5-methyl-1,2-oxazol-3(2H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-Hydroxy-5-methylisoxazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Methyl-3(2H)-isoxazolone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Methyl-3-hydroxyisoxazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Methylisoxazol-3-ol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: F 319
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: F-319
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hydroxyisoxazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Hymexazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NSC 217971
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SF-6505
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:55373
+- CHEBI:74818
+xrefs:
+- cas:10004-44-1
+- kegg.compound:C11103
+- pesticides:hymexazol
+- ppdb:388
+- reaxys:606046
+activity_roles:
+- CHEBI:86328
+chemical_structure:
+  smiles: Cc1cc(O)no1
+  standard_inchi: InChI=1S/C4H5NO2/c1-3-2-4(6)5-7-3/h2H,1H3,(H,5,6)
+  standard_inchi_key: KGVPNLBXJKTABS-UHFFFAOYSA-N
+  molecular_formula: C4H5NO2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 99.089
+  monoisotopic_mass: 99.03203
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:5827
+  source_label: hymexazol
+  minted_identifier: antibioticmech:chebi-2cea421749
+  role_terms:
+  - CHEBI:86328
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

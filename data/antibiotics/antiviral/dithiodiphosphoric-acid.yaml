@@ -1,0 +1,37 @@
+identifier: CHEBI:38947
+label: dithiodiphosphoric acid
+antimicrobial_class: ANTIVIRAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: bis(thiopyrophosphoric acid)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26079
+xrefs:
+- cas:36558-41-5
+activity_roles:
+- CHEBI:22587
+chemical_structure:
+  smiles: OP(O)(=S)OP(O)(O)=S
+  standard_inchi: InChI=1S/H4O5P2S2/c1-6(2,8)5-7(3,4)9/h(H2,1,2,8)(H2,3,4,9)
+  standard_inchi_key: CIFZCCWGXMYJEU-UHFFFAOYSA-N
+  molecular_formula: H4O5P2S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 210.109
+  monoisotopic_mass: 209.89754
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:38947
+  source_label: dithiodiphosphoric acid
+  minted_identifier: antibioticmech:chebi-d22ad4bd01
+  role_terms:
+  - CHEBI:22587
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T01:42:41Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)

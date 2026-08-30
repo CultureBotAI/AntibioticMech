@@ -1,0 +1,89 @@
+identifier: CHEBI:9334
+label: sulfasalazine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: Sulfasalazine is a derivative of the early sulfonamide sulfapyridine (salicylazosulfapyridine).
+  It was developed to increase water solubility and is taken orally for ulcerative
+  colitis.
+definition_source: PMID:22555
+synonyms:
+- synonym_text: salicylazosulfapyridine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3000282
+xrefs:
+- ARO:3000698
+- cas:599-79-1
+- chembl:CHEMBL421
+- pubchem.compound:5339
+structural_class: sulfonamide antibiotic
+structural_class_id: ARO:3000282
+chemical_structure:
+  smiles: O=C(O)c1cc(/N=N/c2ccc(S(=O)(=O)Nc3ccccn3)cc2)ccc1O
+  standard_inchi: InChI=1S/C18H14N4O5S/c23-16-9-6-13(11-15(16)18(24)25)21-20-12-4-7-14(8-5-12)28(26,27)22-17-3-1-2-10-19-17/h1-11,23H,(H,19,22)(H,24,25)/b21-20+
+  standard_inchi_key: NCEXYHBECQHGNR-QZQOTICOSA-N
+  molecular_formula: C18H14N4O5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 398.4
+  monoisotopic_mass: 398.06849
+source_concepts:
+- source: ARO
+  source_id: ARO:3000698
+  source_label: sulfasalazine
+  minted_identifier: antibioticmech:aro-5ef94be97c
+  source_version: '2026-08-29'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3000410
+  label: sul1
+  evidence:
+  - reference: ARO:3000410
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000698 (sulfasalazine);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3000412
+  label: sul2
+  evidence:
+  - reference: ARO:3000412
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000698 (sulfasalazine);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  aro_id: ARO:3000413
+  label: sul3
+  evidence:
+  - reference: ARO:3000413
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000698 (sulfasalazine);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003386
+  label: Escherichia coli folP with mutation conferring resistance to sulfonamides
+  evidence:
+  - reference: ARO:3003386
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000698 (sulfasalazine);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3003387
+  label: Streptococcus pyogenes folP with mutation conferring resistance to sulfonamides
+  evidence:
+  - reference: ARO:3003387
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000698 (sulfasalazine);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000744
+  target_label: antibiotic sensitive dihydropteroate synthase
+  evidence:
+  - reference: ARO:3000744
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000698 (sulfasalazine); database
+      assertion, not a primary citation.
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
+- timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

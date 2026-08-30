@@ -1,0 +1,50 @@
+identifier: CHEBI:77932
+label: tetracycline zwitterion
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A zwitterion obtained by transfer of a proton from the 2-hydroxy group
+  to the 1-amino group of tetracycline. It is the major microspecies at pH 7.3 (according
+  to Marvin v 6.2.0.).
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,4aS,11S,11aS,12aS)-3-carbamoyl-1-(dimethylazaniumyl)-4a,5,7,11-tetrahydroxy-11-methyl-4,6-dioxo-1,4,4a,6,11,11a,12,12a-octahydrotetracen-2-olate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: tetracycline
+  synonym_type: RELATED_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27369
+activity_roles:
+- CHEBI:33281
+- CHEBI:35820
+- CHEBI:36047
+chemical_structure:
+  smiles: '[H][C@]12C[C@@]3([H])[C@H]([NH+](C)C)C([O-])=C(C(N)=O)C(=O)[C@@]3(O)C(O)=C1C(=O)c1c(O)cccc1[C@@]2(C)O'
+  standard_inchi: InChI=1S/C22H24N2O8/c1-21(31)8-5-4-6-11(25)12(8)16(26)13-9(21)7-10-15(24(2)3)17(27)14(20(23)30)19(29)22(10,32)18(13)28/h4-6,9-10,15,25,27-28,31-32H,7H2,1-3H3,(H2,23,30)/t9-,10-,15-,21+,22-/m0/s1
+  standard_inchi_key: OFVLGDICTFRJMM-WESIUVDSSA-N
+  molecular_formula: C22H24N2O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 444.44
+  monoisotopic_mass: 444.15327
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77932
+  source_label: tetracycline zwitterion
+  minted_identifier: antibioticmech:chebi-0fc74a383a
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:35820
+  - CHEBI:36047
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

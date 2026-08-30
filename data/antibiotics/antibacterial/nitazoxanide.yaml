@@ -1,0 +1,48 @@
+identifier: antibioticmech:aro-f198f10971
+label: nitazoxanide
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: MINTED
+definition: Nitazoxanide is a thiazolide antiparatasitic and antiviral drug that has
+  demonstrated antibacterial activity against Helicobacter pylori. It is well tolerated
+  and exhibits a synergistic effect with other antibiotics, such as clarithromycin.
+definition_source: PMID:35587063
+synonyms:
+- synonym_text: Alinia
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Nizonide
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: nitazoxamide
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- ARO:3007177
+xrefs:
+- ARO:3007178
+- chembl:CHEMBL1401
+- pubchem.compound:41684
+structural_class: thiazolide antibiotic
+structural_class_id: ARO:3007177
+chemical_structure:
+  smiles: CC(=O)OC1=CC=CC=C1C(=O)NC2=NC=C(S2)[N+](=O)[O-]
+  standard_inchi: InChI=1S/C12H9N3O5S/c1-7(16)20-9-5-3-2-4-8(9)11(17)14-12-13-6-10(21-12)15(18)19/h2-6H,1H3,(H,13,14,17)
+  standard_inchi_key: YQNQNVDNTFHQSW-UHFFFAOYSA-N
+  molecular_formula: C12H9N3O5S
+  structure_source: PubChem
+  retrieved_on: '2026-08-29'
+  charge: 0
+  average_mass: 307.28
+  monoisotopic_mass: 307.02629157
+source_concepts:
+- source: ARO
+  source_id: ARO:3007178
+  source_label: nitazoxanide
+  minted_identifier: antibioticmech:aro-f198f10971
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO)
