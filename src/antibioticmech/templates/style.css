@@ -16,6 +16,10 @@
   --page: #E4DED3;
   --bg: #ffffff;
   --fg: #1a1d21;
+  /* Aliases the vendored theme-toggle.js themes its button from; without them
+     it falls back to a hard-coded white button, invisible in dark mode. */
+  --card: #ffffff;
+  --ink: #1a1d21;
   --muted: #54606d;
   --line: rgba(0,0,0,.12);
   --accent: #96601F;
@@ -34,6 +38,8 @@
     --page: #17150f;
     --bg: #211e16;
     --fg: #f0ece0;
+    --card: #211e16;
+    --ink: #f0ece0;
     --muted: #b0a992;
     --line: #332e22;
     --accent: #d9a94a;
@@ -49,6 +55,8 @@
   --page: #17150f;
   --bg: #211e16;
   --fg: #f0ece0;
+  --card: #211e16;
+  --ink: #f0ece0;
   --muted: #b0a992;
   --line: #332e22;
   --accent: #d9a94a;
