@@ -1,0 +1,43 @@
+identifier: CHEBI:38009
+label: 3'',6'-di-N-acetylkanamycin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (1S,2R,3R,4S,6R)-3-(6-acetamido-6-deoxy-α-D-glucopyranosyloxy)-4,6-diamino-2-hydroxycyclohexyl
+    3-acetamido-3-deoxy-α-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:28500
+- CHEBI:28725
+xrefs:
+- beilstein:4624473
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC(=O)NC[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](NC(C)=O)[C@H]3O)[C@H](N)C[C@@H]2N)[C@H](O)[C@@H](O)[C@@H]1O
+  standard_inchi: InChI=1S/C22H40N4O13/c1-6(28)25-4-10-14(31)16(33)17(34)22(36-10)39-20-9(24)3-8(23)19(18(20)35)38-21-15(32)12(26-7(2)29)13(30)11(5-27)37-21/h8-22,27,30-35H,3-5,23-24H2,1-2H3,(H,25,28)(H,26,29)/t8-,9+,10-,11-,12+,13-,14-,15-,16+,17-,18-,19+,20-,21-,22-/m1/s1
+  standard_inchi_key: HUAYXMGRIABALH-CHOMWAFYSA-N
+  molecular_formula: C22H40N4O13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 568.577
+  monoisotopic_mass: 568.25919
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:38009
+  source_label: 3'',6'-di-N-acetylkanamycin A
+  minted_identifier: antibioticmech:chebi-85a090aaf3
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:23Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

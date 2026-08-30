@@ -1,0 +1,107 @@
+identifier: CHEBI:31555
+label: erythromycin ethylsuccinate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A erythromycin derivative that is erythromycin A in which the hydroxy
+  group at position 3R is substituted by a (4-ethoxy-4-oxobutanoyl)oxy group. It is
+  used for the treatment of a wide variety of bacterial infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: E-Mycin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: E-Mycin E
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: E.E.S
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: E.E.S 200
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: E.E.S 400
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: EES
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: EryPed
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Erythroped
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Pediamycin
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: Wyamycin E
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: (2S,3R,4S,6R)-4-(dimethylamino)-2-{[(3R,4S,5S,6R,7R,9R,11R,12R,13S,14R)-14-ethyl-7,12,13-trihydroxy-4-{[(2R,4R,5S,6S)-5-hydroxy-4-methoxy-4,6-dimethyltetrahydro-2H-pyran-2-yl]oxy}-3,5,7,9,11,13-hexamethyl-2,10-dioxo-1-oxacyclotetradecan-6-yl]oxy}-6-methyltetrahydro-2H-pyran-3-yl
+    ethyl butanedioate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: erythrocin ethyl succinate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: erythromycin 2'-(ethyl butanedioate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: erythromycin 2'-(ethyl succinate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: erythromycin ethyl succinate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: erythromycin mono(ethyl succinate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: erythromycin, mono(ethyl succinate) (ester)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: succinic acid, ethyl ester, monoester with erythromycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23990
+- CHEBI:36181
+- CHEBI:3992
+- CHEBI:48924
+xrefs:
+- cas:1264-62-6
+- drugcentral:1051
+- kegg.compound:C12796
+- kegg.drug:D01361
+- lincs.smallmolecule:LSM-3144
+- lipidmaps:LMPK05000001
+- patent:CN1602887
+- reaxys:77638
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CCOC(=O)CCC(=O)O[C@H]1[C@H](O[C@@H]2[C@@H](C)[C@H](O[C@H]3C[C@@](C)(OC)[C@@H](O)[C@H](C)O3)[C@@H](C)C(=O)O[C@H](CC)[C@@](C)(O)[C@H](O)[C@@H](C)C(=O)[C@H](C)C[C@@]2(C)O)O[C@H](C)C[C@@H]1N(C)C
+  standard_inchi: InChI=1S/C43H75NO16/c1-15-29-43(11,52)36(48)24(5)33(47)22(3)20-41(9,51)38(25(6)34(26(7)39(50)57-29)59-32-21-42(10,53-14)37(49)27(8)56-32)60-40-35(28(44(12)13)19-23(4)55-40)58-31(46)18-17-30(45)54-16-2/h22-29,32,34-38,40,48-49,51-52H,15-21H2,1-14H3/t22-,23-,24+,25+,26-,27+,28+,29-,32+,34+,35-,36-,37+,38-,40+,41-,42-,43-/m1/s1
+  standard_inchi_key: NSYZCCDSJNWWJL-YXOIYICCSA-N
+  molecular_formula: C43H75NO16
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 862.064
+  monoisotopic_mass: 861.50859
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31555
+  source_label: erythromycin ethylsuccinate
+  minted_identifier: antibioticmech:chebi-8b44f71824
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:22Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

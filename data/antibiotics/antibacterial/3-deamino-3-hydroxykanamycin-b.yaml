@@ -1,0 +1,55 @@
+identifier: CHEBI:72990
+label: 3''-deamino-3''-hydroxykanamycin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A kanamycin that is kanamycin B in which the 3''-amino group has been
+  replaced by a hydroxy group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,2S,3R,4S,6R)-4,6-diamino-3-[(2,6-diamino-2,6-dideoxy-α-D-glucopyranosyl)oxy]-2-hydroxycyclohexyl
+    α-D-glucopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: NK 1012-1
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Nebramycin III
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: nebramycin factor 3
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24951
+xrefs:
+- cas:31077-70-0
+- reaxys:1694161
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: NC[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)[C@H](N)C[C@@H]2N)[C@H](N)[C@@H](O)[C@@H]1O
+  standard_inchi: InChI=1S/C18H36N4O11/c19-2-6-9(24)11(26)8(22)17(30-6)32-15-4(20)1-5(21)16(14(15)29)33-18-13(28)12(27)10(25)7(3-23)31-18/h4-18,23-29H,1-3,19-22H2/t4-,5+,6+,7+,8+,9+,10+,11+,12-,13+,14-,15+,16-,17+,18+/m0/s1
+  standard_inchi_key: MOWMHIINUAQFMU-DNBVWFFRSA-N
+  molecular_formula: C18H36N4O11
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 484.503
+  monoisotopic_mass: 484.23806
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:72990
+  source_label: 3''-deamino-3''-hydroxykanamycin B
+  minted_identifier: antibioticmech:chebi-fe70d6f339
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:29Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

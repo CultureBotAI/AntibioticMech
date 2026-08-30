@@ -1,0 +1,71 @@
+identifier: CHEBI:52015
+label: carindacillin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: carindacilina
+  synonym_type: INN
+  source: chebi
+- synonym_text: carindacilline
+  synonym_type: INN
+  source: chebi
+- synonym_text: carindacillinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 6β-[3-(2,3-dihydro-1H-inden-5-yloxy)-3-oxo-2-phenylpropanamido]-2,2-dimethylpenam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (2S,5R,6R)-6-{[3-(2,3-dihydro-1H-inden-5-yloxy)-3-oxo-2-phenylpropanoyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6β-{2-[(2,3-dihydro-1H-inden-5-yloxy)carbonyl]-2-phenylacetamido}-2,2-dimethylpenam-3α-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: carbenicillin indanyl
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: indanyl carbenicillin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:17334
+xrefs:
+- beilstein:5406175
+- cas:35531-88-5
+- drugcentral:508
+- kegg.drug:D07621
+- patent:DE1959569
+- patent:US3557090
+- patent:US3574189
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)C(C(=O)Oc1ccc2c(c1)CCC2)c1ccccc1'
+  standard_inchi: InChI=1S/C26H26N2O6S/c1-26(2)20(24(31)32)28-22(30)19(23(28)35-26)27-21(29)18(15-7-4-3-5-8-15)25(33)34-17-12-11-14-9-6-10-16(14)13-17/h3-5,7-8,11-13,18-20,23H,6,9-10H2,1-2H3,(H,27,29)(H,31,32)/t18?,19-,20+,23-/m1/s1
+  standard_inchi_key: JIRBAUWICKGBFE-MNRDOXJOSA-N
+  molecular_formula: C26H26N2O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 494.569
+  monoisotopic_mass: 494.15116
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:52015
+  source_label: carindacillin
+  minted_identifier: antibioticmech:chebi-8f185a6ee4
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

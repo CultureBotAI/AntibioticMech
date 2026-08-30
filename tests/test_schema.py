@@ -71,3 +71,21 @@ def test_corpus_uses_only_declared_enum_values(schema_path, records):
                 if value is not None and value not in allowed:
                     problems.append(f"{path.name}: {field}={value!r}")
     assert not problems, problems[:20]
+
+
+def test_class_hierarchy_is_declared_where_consumers_will_find_it(schema_path):
+    """Mycobacteria are bacteria, so ANTIMYCOBACTERIAL is a subclass of
+    ANTIBACTERIAL — but filing is exclusive and picks the narrower claim, so
+    those records are NOT also under antibacterial. A consumer asking "what acts
+    on bacteria?" has to take both, and the only honest place to say so is the
+    schema. The generated site derives its cross-links from here."""
+    import yaml
+
+    values = yaml.safe_load(schema_path.read_text(encoding="utf-8"))[
+        "enums"]["AntimicrobialClassEnum"]["permissible_values"]
+    assert (values["ANTIMYCOBACTERIAL"] or {}).get("is_a") == "ANTIBACTERIAL"
+    for name, body in values.items():
+        parent = (body or {}).get("is_a")
+        if parent:
+            assert parent in values, f"{name} is_a {parent}, which is not a value"
+            assert parent != name

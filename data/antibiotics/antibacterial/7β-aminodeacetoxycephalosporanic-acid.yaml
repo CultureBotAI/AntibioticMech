@@ -1,0 +1,86 @@
+identifier: CHEBI:64984
+label: 7β-aminodeacetoxycephalosporanic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cephem monocarboxylic acid derivative having a structure based on cephalosporanic
+  acid, deacetoxylated and carrying a 7β-amino group.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6R,7R)-7-amino-3-methyl-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-methyl-7-amino-Δ3-cephem-4-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-methyl-7-aminoceph-3-em-4-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-methyl-7β-amino-Δ3-cephem-4-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 3-methyl-7β-aminoceph-3-em-4-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-ADCA
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-Aminodesacetoxycephalosporanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-amino-3-methyl-3-cephem-4-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-amino-3-methyl-Δ3-cephem-4-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-amino-3-methylceph-3-em-4-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-aminodeacetoxycephalosporanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7β-amino-3-methyl-3-cephem-4-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7β-amino-3-methyl-Δ3-cephem-4-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7β-amino-3-methylceph-3-em-4-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+- CHEBI:25384
+xrefs:
+- cas:22252-43-3
+- reaxys:1078249
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12SCC(C)=C(C(=O)O)N1C(=O)[C@H]2N'
+  standard_inchi: InChI=1S/C8H10N2O3S/c1-3-2-14-7-4(9)6(11)10(7)5(3)8(12)13/h4,7H,2,9H2,1H3,(H,12,13)/t4-,7-/m1/s1
+  standard_inchi_key: NVIAYEIXYQCDAN-CLZZGJSISA-N
+  molecular_formula: C8H10N2O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 214.246
+  monoisotopic_mass: 214.04121
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:64984
+  source_label: 7β-aminodeacetoxycephalosporanic acid
+  minted_identifier: antibioticmech:chebi-966174d2a0
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:27Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

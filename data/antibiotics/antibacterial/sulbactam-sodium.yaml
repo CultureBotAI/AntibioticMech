@@ -1,0 +1,80 @@
+identifier: CHEBI:157785
+label: sulbactam sodium
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The organic sodium salt of sulbactam.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sodium (2S,5R)-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate
+    4,4-dioxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CP 45899-2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CP-45899-2
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CP-458992
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: CP458992
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: penicillanic acid 1,1-dioxide sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium 1,1-dioxypenicillanate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium penicillanate 1,1-dioxide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sodium sulbactam
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulbactam sodium salt
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:27933
+- CHEBI:38700
+xrefs:
+- cas:69388-84-7
+- chemspider:571120
+- drugbank:DBSALT001310
+- kegg.compound:C14001
+- kegg.drug:D02223
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12CC(=O)N1[C@@H](C(=O)[O-])C(C)(C)S2(=O)=O.[Na+]'
+  standard_inchi: InChI=1S/C8H11NO5S.Na/c1-8(2)6(7(11)12)9-4(10)3-5(9)15(8,13)14;/h5-6H,3H2,1-2H3,(H,11,12);/q;+1/p-1/t5-,6+;/m1./s1
+  standard_inchi_key: NKZMPZCWBSWAOX-IBTYICNHSA-M
+  molecular_formula: C8H10NO5S.Na
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 255.227
+  monoisotopic_mass: 255.01774
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:157785
+  source_label: sulbactam sodium
+  minted_identifier: antibioticmech:chebi-2868c443f9
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:06:19Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

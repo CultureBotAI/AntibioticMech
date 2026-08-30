@@ -144,10 +144,17 @@ role_to_class:
   CHEBI:36051: {class: ANTIBACTERIAL, priority: 2}       # antisyphilitic drug
   CHEBI:73911: {class: ANTIBACTERIAL, priority: 2}       # vibriostatic agent
   # Antiviral roles, including the viral-enzyme-inhibitor terms ChEBI files
-  # under the antiviral branch. Priority 5: when a compound is asserted against
-  # both a cellular microbe and a virus, the cellular claim decides the filing,
-  # because that is what this corpus is primarily consumed for — and
-  # `activity_roles` keeps the antiviral role either way.
+  # under the antiviral branch. Priority 5 puts them below the antibacterial,
+  # antimycobacterial, antifungal and antiprotozoal claims — a compound asserted
+  # against both a cellular microbe and a virus files under the cellular claim,
+  # because that is what this corpus is primarily consumed for.
+  #
+  # It does NOT sit below BIOCIDE, which is now 6. A disinfectant role is a
+  # cellular claim, so on the sentence above it should win; in practice a biocide
+  # role is the least specific thing a source can say about a compound, and a
+  # named antiviral target is more informative. Exactly one in-scope compound
+  # carries both (CHEBI:31264 benzethonium chloride) and it is decided at
+  # priority 2 by `antibacterial agent`, so nothing turns on this today.
   CHEBI:22587: {class: ANTIVIRAL, priority: 5}           # antiviral agent
   CHEBI:36044: {class: ANTIVIRAL, priority: 5}           # antiviral drug
   CHEBI:149553: {class: ANTIVIRAL, priority: 5}          # anticoronaviral agent
@@ -191,6 +198,33 @@ aro_class_to_class:
   ARO:3009317: ANTIFUNGAL   # benzimidazole antifungal
   ARO:3009323: ANTIFUNGAL   # carbamate fungicides
   ARO:3009539: ANTIFUNGAL   # fungal succinate dehydrogenase inhibitor
+
+# ----------------------------------------------------------------------------
+# ChEBI structural class -> AntimicrobialClassEnum.
+#
+# Consulted after the ARO drug class and after the roles, before falling through
+# to ANTIMICROBIAL_UNSPECIFIED. It exists because trusting only reviewed relation
+# edges — correct in itself — left 20 unambiguous antibacterials with nothing but
+# the generic `antimicrobial agent` role and therefore no target group at all:
+# tazobactam, sulbactam, kanamycin B, sulfathiazole, troleandomycin and friends
+# were filed as "target group unknown", which is weaker than what ChEBI says
+# about them.
+#
+# Only classes whose NAME states a target group are listed. ChEBI's chemistry
+# buckets — heterocyclic antibiotic, organonitrogen heterocyclic antibiotic,
+# carbohydrate-containing antibiotic, carbocyclic antibiotic — are deliberately
+# absent: they describe a ring system, not what the compound acts on. So are
+# anthracycline and enediyne antibiotics, whose members are predominantly
+# antineoplastic rather than antibacterial.
+chebi_class_to_class:
+  CHEBI:27933: ANTIBACTERIAL    # beta-lactam antibiotic
+  CHEBI:22507: ANTIBACTERIAL    # aminoglycoside antibiotic
+  CHEBI:25105: ANTIBACTERIAL    # macrolide antibiotic
+  CHEBI:87228: ANTIBACTERIAL    # sulfonamide antibiotic
+  CHEBI:86324: ANTIBACTERIAL    # quinolone antibiotic
+  CHEBI:25903: ANTIBACTERIAL    # peptide antibiotic
+  CHEBI:26179: ANTIBACTERIAL    # polyether antibiotic
+  CHEBI:26177: ANTIFUNGAL       # polyene antibiotic (amphotericin, nystatin)
 
 # ARO determinant lineage -> ResistanceMechanismEnum. CARD's aro.obo does not
 # link a determinant to its mechanism category directly (that association lives

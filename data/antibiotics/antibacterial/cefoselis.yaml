@@ -1,0 +1,71 @@
+identifier: CHEBI:3496
+label: cefoselis
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cephalosporin compound having [2-(2-hydroxyethyl)-3-imino-2,3-dihydro-1H-pyrazol-1-yl]methyl
+  and [(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino side groups
+  located at positions 3 and 7 respectively. A 4th generation broad-spectrum cephalosporin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefoselisum
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefoselís
+  synonym_type: INN
+  source: chebi
+- synonym_text: céfosélis
+  synonym_type: INN
+  source: chebi
+- synonym_text: 7-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino}-3-{[2-(2-hydroxyethyl)-3-imino-2,3-dihydro-1H-pyrazol-1-yl]methyl}-3,4-didehydrocepham-4-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-7-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino}-3-{[2-(2-hydroxyethyl)-3-imino-2,3-dihydro-1H-pyrazol-1-yl]methyl}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cefoselis
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: wincef
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+- CHEBI:26410
+- CHEBI:38418
+xrefs:
+- cas:122841-10-5
+- drugcentral:545
+- kegg.compound:C11210
+- kegg.drug:D07646
+- wikipedia.en:Cefoselis
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12SCC(Cn3ccc(=N)n3CCO)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1'
+  standard_inchi: InChI=1S/C19H22N8O6S2/c1-33-24-12(10-8-35-19(21)22-10)15(29)23-13-16(30)27-14(18(31)32)9(7-34-17(13)27)6-25-3-2-11(20)26(25)4-5-28/h2-3,8,13,17,20,28H,4-7H2,1H3,(H2,21,22)(H,23,29)(H,31,32)/b20-11?,24-12-/t13-,17-/m1/s1
+  standard_inchi_key: ZINFAXPQMLDEEJ-GFVOIPPFSA-N
+  molecular_formula: C19H22N8O6S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 522.569
+  monoisotopic_mass: 522.11037
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3496
+  source_label: cefoselis
+  minted_identifier: antibioticmech:chebi-2f9aa81da1
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:23Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

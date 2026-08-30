@@ -1,0 +1,110 @@
+identifier: CHEBI:132842
+label: sulfapyridine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfonamide consisting of pyridine with a 4-aminobenzenesulfonamido
+  group at the 2-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sulfapiridina
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfapyridinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-amino-N-(pyridin-2-yl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(p-Aminobenzenesulphonamido)pyridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Sulfanilamidopyridin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Sulfanilamidopyridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Sulfanilylaminopyridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-Sulfapyridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-(2-Pyridinylsulfonyl)aniline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Amino-N,2-pyridinylbenzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Amino-N-pyridin-2-yl-benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-[(2-Pyridylamino)sulfonyl]aniline
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-2-Pyridylsulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-2-Pyridylsulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-Pyridylsulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Solfapiridina
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulphapyridine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26421
+- CHEBI:35358
+- CHEBI:48975
+- CHEBI:87228
+xrefs:
+- cas:144-83-2
+- drugbank:DB00891
+- drugcentral:2524
+- gmelin:219135
+- hmdb:HMDB0015028
+- kegg.drug:D02434
+- lincs.smallmolecule:LSM-5531
+- patent:GB512145
+- patent:US2275354
+- reaxys:222065
+- vsdb:1922
+- wikipedia.en:Sulfapyridine
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1
+  standard_inchi: InChI=1S/C11H11N3O2S/c12-9-4-6-10(7-5-9)17(15,16)14-11-3-1-2-8-13-11/h1-8H,12H2,(H,13,14)
+  standard_inchi_key: GECHUMIMRBOMGK-UHFFFAOYSA-N
+  molecular_formula: C11H11N3O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 249.295
+  monoisotopic_mass: 249.0572
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:132842
+  source_label: sulfapyridine
+  minted_identifier: antibioticmech:chebi-2240eaee2e
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:06:18Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

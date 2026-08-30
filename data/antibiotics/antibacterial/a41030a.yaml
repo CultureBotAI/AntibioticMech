@@ -1,0 +1,60 @@
+identifier: CHEBI:77036
+label: A41030A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclic peptide antibiotic that is A47934 lacking the O-sulfo group;
+  it is produced by a strain of Streptomyces toyocaensis.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,2R,19S,22R,34S,37R,40R,52R)-22-amino-5,15,43-trichloro-2,26,31,44,47,49,64-heptahydroxy-21,35,38,54,56,59-hexaoxo-7,13,28-trioxa-20,36,39,53,55,58-hexaazaundecacyclo[38.14.2.23,6.214,17.219,34.18,12.123,27.129,33.141,45.010,37.046,51]hexahexaconta-3,5,8(64),9,11,14,16,23(61),24,26,29(60),30,32,41(57),42,44,46,48,50,62,65-henicosaene-52-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-Demethyl-64-O-demethyl-19-deoxy-22,31,45-trichlororistomycin A aglycone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic A 41030A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: desulfo-A47394
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24533
+- CHEBI:25903
+- CHEBI:26195
+- CHEBI:36683
+- CHEBI:37407
+xrefs:
+- cas:89139-41-3
+- metacyc.compound:CPD-15751
+- reaxys:5489276
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: N[C@H]1C(=O)N[C@H]2Cc3ccc(c(Cl)c3)Oc3cc4cc(c3O)Oc3ccc(cc3Cl)[C@@H](O)[C@@H]3NC(=O)[C@H](NC(=O)[C@@H]4NC(=O)[C@@H](NC2=O)c2cc(O)cc(c2)Oc2cc1ccc2O)c1cc(Cl)c(O)c(c1)-c1c(O)cc(O)cc1[C@H](C(=O)O)NC3=O
+  standard_inchi: InChI=1S/C58H44Cl3N7O18/c59-31-7-20-1-5-37(31)85-40-15-25-16-41(51(40)75)86-38-6-3-22(12-32(38)60)49(73)48-57(81)67-47(58(82)83)29-18-27(70)19-36(72)42(29)30-11-24(13-33(61)50(30)74)45(56(80)68-48)65-55(79)46(25)66-54(78)44-23-9-26(69)17-28(10-23)84-39-14-21(2-4-35(39)71)43(62)53(77)63-34(8-20)52(76)64-44/h1-7,9-19,34,43-49,69-75H,8,62H2,(H,63,77)(H,64,76)(H,65,79)(H,66,78)(H,67,81)(H,68,80)(H,82,83)/t34-,43+,44-,45+,46+,47+,48-,49+/m0/s1
+  standard_inchi_key: KJTFTWQSEBLIPM-RIZHWKQXSA-N
+  molecular_formula: C58H44Cl3N7O18
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1233.38
+  monoisotopic_mass: 1231.18084
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77036
+  source_label: A41030A
+  minted_identifier: antibioticmech:chebi-840554bbd9
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

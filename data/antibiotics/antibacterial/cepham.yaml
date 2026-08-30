@@ -1,0 +1,46 @@
+identifier: CHEBI:35993
+label: cepham
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organic heterobicyclic compound that consists of (6R)-5-thia-1-azabicyclo[4.2.0]octane
+  bearing an 8-keto substituent. The parent of the class of cephams.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6R)-5-thia-1-azabicyclo[4.2.0]octan-8-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35507
+- CHEBI:35995
+- CHEBI:38419
+xrefs:
+- reaxys:13265235
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12CC(=O)N1CCCS2'
+  standard_inchi: InChI=1S/C6H9NOS/c8-5-4-6-7(5)2-1-3-9-6/h6H,1-4H2/t6-/m1/s1
+  standard_inchi_key: QHTOIDKCEPKVCM-ZCFIWIBFSA-N
+  molecular_formula: C6H9NOS
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 143.211
+  monoisotopic_mass: 143.04048
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:35993
+  source_label: cepham
+  minted_identifier: antibioticmech:chebi-4ea189ef84
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:23Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

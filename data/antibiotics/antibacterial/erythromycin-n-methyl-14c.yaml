@@ -1,0 +1,62 @@
+identifier: CHEBI:145339
+label: erythromycin-[N-methyl-14C]
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A 14C-modified compound that is erythromycin A in which one of the methyl
+  groups of the dimethylnitrilo group has a 14C label. It is used in a breath test
+  to detect liver cytochrome P450 enzyme (CYP3A4) activity in humans.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,4S,5S,6R,7R,9R,11R,12R,13S,14R)-14-ethyl-7,12,13-trihydroxy-4-[(2R,4R,5S,6S)-5-hydroxy-4-methoxy-4,6-dimethyloxan-2-yl]oxy-6-[(2S,3R,4S,6R)-3-hydroxy-6-methyl-4-[methyl((114C)methyl)amino]oxan-2-yl]oxy-3,5,7,9,11,13-hexamethyl-oxacyclotetradecane-2,10-dione
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 14C-N-methyl-erythromycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[14C-N-methyl]-erythromycin'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[N-methyl-14C]-erythromycin'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: '[N-methyl-14C]erythromycin'
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: erythromycin N-methyl C-14
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:139542
+- CHEBI:3992
+- CHEBI:48923
+xrefs:
+- cas:92530-59-1
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)[14CH3])[C@H]2O)[C@](C)(O)C[C@@H](C)C(=O)[C@H](C)[C@@H](O)[C@]1(C)O
+  standard_inchi: InChI=1S/C37H67NO13/c1-14-25-37(10,45)30(41)20(4)27(39)18(2)16-35(8,44)32(51-34-28(40)24(38(11)12)15-19(3)47-34)21(5)29(22(6)33(43)49-25)50-26-17-36(9,46-13)31(42)23(7)48-26/h18-26,28-32,34,40-42,44-45H,14-17H2,1-13H3/t18-,19-,20+,21+,22-,23+,24+,25-,26+,28-,29+,30-,31+,32-,34+,35-,36-,37-/m1/s1/i11+2
+  standard_inchi_key: ULGZDMOVFRHVEP-RFAHSBMDSA-N
+  molecular_formula: C36[14C]H67NO13
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 735.929
+  monoisotopic_mass: 735.46448
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:145339
+  source_label: erythromycin-[N-methyl-14C]
+  minted_identifier: antibioticmech:chebi-b5a6a21d52
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:19Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

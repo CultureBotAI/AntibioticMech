@@ -714,7 +714,13 @@ enums:
       ANTIBACTERIAL:
         description: Active against bacteria (includes antibacterial drugs and agents).
       ANTIMYCOBACTERIAL:
-        description: Antitubercular, antimycobacterial and leprostatic agents.
+        description: >-
+          Antitubercular, antimycobacterial and leprostatic agents. A SUBCLASS
+          of ANTIBACTERIAL — mycobacteria are bacteria — so a consumer asking
+          "which compounds act on bacteria?" must take ANTIBACTERIAL and
+          ANTIMYCOBACTERIAL together. Filing is exclusive and picks the
+          narrower claim, so these records are not also under ANTIBACTERIAL.
+        is_a: ANTIBACTERIAL
       ANTIFUNGAL:
         description: Antifungal agents, drugs, agrochemical fungicides.
       ANTIPROTOZOAL:

@@ -1,0 +1,44 @@
+identifier: CHEBI:51795
+label: 6α-[(R)-1-hydroxyethyl]-2-[(R)-tetrahydrofuran-2-yl]pen-2-em-3-carboxylate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: 6α-[(1R)-1-hydroxyethyl]-2-[(2R)-tetrahydrofuran-2-yl]-2,3-didehydropenam-3-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (5R,6S)-6-[(1R)-1-hydroxyethyl]-7-oxo-3-[(2R)-tetrahydrofuran-2-yl]-4-thia-1-azabicyclo[3.2.0]hept-2-ene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:51791
+xrefs:
+- beilstein:4299226
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]1(C2=C(C(=O)[O-])N3C(=O)[C@]([H])([C@@H](C)O)[C@@]3([H])S2)CCCO1'
+  standard_inchi: InChI=1S/C12H15NO5S/c1-5(14)7-10(15)13-8(12(16)17)9(19-11(7)13)6-3-2-4-18-6/h5-7,11,14H,2-4H2,1H3,(H,16,17)/p-1/t5-,6-,7+,11-/m1/s1
+  standard_inchi_key: HGGAKXAHAYOLDJ-FHZUQPTBSA-M
+  molecular_formula: C12H14NO5S
+  structure_source: ChEBI
+  charge: -1
+  average_mass: 284.313
+  monoisotopic_mass: 284.05982
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:51795
+  source_label: 6α-[(R)-1-hydroxyethyl]-2-[(R)-tetrahydrofuran-2-yl]pen-2-em-3-carboxylate
+  minted_identifier: antibioticmech:chebi-7c46b988da
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

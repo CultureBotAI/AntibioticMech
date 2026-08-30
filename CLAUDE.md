@@ -98,8 +98,8 @@ records the sha256 of every upstream file and every emitted inventory.
 
 - **`review-open-issues`** — sweep and rank the whole open-issue queue against
   the committed corpus. Its P0 tier is specific to this repository: something
-  wrong that every gate passes, which is how nineteen defects once shipped with
-  `just qc` green.
+  wrong that every gate passes, which is how 25 defects were once found across two review
+  passes, every one of them with `just qc` green.
 - **`source-queue`** — triage `curation/source_queue.tsv`, the ranked list of
   data sources this corpus might adopt.
 

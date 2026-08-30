@@ -62,7 +62,7 @@ prose below are the reasoning, the queue is the list.
   Until then the asymmetry should be visible in the report rather than read as
   "antivirals have no known resistance".
 
-- **Decide what the 364 structureless concepts are.** `just worklist
+- **Decide what the 371 structureless concepts are.** `just worklist
   --queue no-structure`. Each is a mixture, a class, a preparation, or a
   compound whose structure simply is not in ChEBI or PubChem. They need
   `EXCLUDE` decisions with rationale, or a structure.
@@ -97,8 +97,9 @@ prose below are the reasoning, the queue is the list.
   accuracy-and-provenance improvement rather than a coverage gap.
 - **Retired-URL redirects.** The slugs of dropped records are now reserved in
   `data/antibiotics/RETIRED.tsv`, so no URL is ever reissued to a different
-  compound — but 134 record pages disappeared without a redirect when unreviewed
+  compound — but 115 record pages disappeared without a redirect when unreviewed
   ChEBI relations stopped being trusted, and nothing serves those addresses.
+  (134 left at first; 19 came back when antivirals entered scope.)
   HabitatMech rebuilds a redirect map from git history; this repository now has
   the history to do the same.
 - **Cross-repo links.** A compound record should point at the TraitMech traits it

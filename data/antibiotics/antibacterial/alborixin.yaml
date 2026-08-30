@@ -1,0 +1,53 @@
+identifier: CHEBI:77940
+label: alborixin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A polyether antibiotic that is isolated from cultures of a strain of Streptomyces
+  albus.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2R)-2-[(2S,3S,5R,6S)-6-{(2R,3S)-3-[(2R,5S,6R)-6-({(2R,3S,5R,6R)-6-[(R)-{(2S,2'R,3'R,5S,5'S)-5'-[(2R,5R,6S)-6-ethyl-5-hydroxy-5-methyltetrahydro-2H-pyran-2-yl]-2'-hydroxy-2,3',5'-trimethyloctahydro-2,2'-bifuran-5-yl}(hydroxy)methyl]-6-hydroxy-3,5-dimethyltetrahydro-2H-pyran-2-yl}methyl)-6-hydroxy-5-methyltetrahydro-2H-pyran-2-yl]-2-hydroxybutyl}-3,5-dimethyltetrahydro-2H-pyran-2-yl]propanoic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic S 14750A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:26179
+- CHEBI:26912
+- CHEBI:59780
+xrefs:
+- cas:57760-36-8
+- patent:US4933364
+- reaxys:6262683
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]1([C@@H](C)C(=O)O)O[C@@H](C[C@@H](O)[C@H](C)[C@@]2([H])CC[C@H](C)[C@@](O)(C[C@H]3O[C@@](O)([C@H](O)[C@]4([H])CC[C@@](C)([C@]5(O)O[C@](C)([C@@]6([H])CC[C@@](C)(O)[C@H](CC)O6)C[C@H]5C)O4)[C@H](C)C[C@@H]3C)O2)[C@H](C)C[C@@H]1C'
+  standard_inchi: InChI=1S/C48H84O14/c1-13-38-43(10,53)18-17-39(58-38)44(11)23-30(7)48(56,62-44)45(12)19-16-35(59-45)41(50)47(55)29(6)21-26(3)37(61-47)24-46(54)28(5)14-15-34(60-46)31(8)33(49)22-36-25(2)20-27(4)40(57-36)32(9)42(51)52/h25-41,49-50,53-56H,13-24H2,1-12H3,(H,51,52)/t25-,26+,27+,28+,29-,30-,31+,32-,33-,34-,35+,36+,37-,38+,39-,40+,41-,43-,44+,45+,46-,47-,48-/m1/s1
+  standard_inchi_key: WWDHGOLBPBWCNJ-GXXSWWTOSA-N
+  molecular_formula: C48H84O14
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 885.186
+  monoisotopic_mass: 884.58611
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77940
+  source_label: alborixin
+  minted_identifier: antibioticmech:chebi-749f2e7e7c
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

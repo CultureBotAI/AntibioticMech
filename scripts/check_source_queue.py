@@ -13,9 +13,12 @@ This checks the claims that are checkable:
   * ADOPTED means adopted: the source appears in conf/sources.yaml, its
     redistribution terms have been verified, and it carries a verification date
   * conversely, every source the pipeline actually reads has an ADOPTED row
-  * nothing is SEED-able while its redistribution terms are UNVERIFIED or
-    RESTRICTED — the corpus is CC0, and that promise is only as good as the
-    weakest source in it
+  * nothing is SEED-able under terms the corpus's own licence cannot carry.
+    Record content is CC BY 4.0 (see LICENSE-DATA): attribution rides along, and
+    downstream users are not further restricted. So share-alike would propagate
+    an obligation CC BY does not impose, and NonCommercial would restrict users
+    CC BY does not restrict — both are refused for seeding, as are bespoke
+    restrictive terms and terms nobody has checked
 
     python scripts/check_source_queue.py
 """
@@ -38,7 +41,19 @@ COLUMNS = ["source_id", "name", "closes_gap", "use", "structures", "redistributi
 
 USE = {"SEED", "CURATE_ONLY", "REFERENCE"}
 STRUCTURES = {"COMPLETE", "PARTIAL", "NONE", "UNVERIFIED"}
-REDISTRIBUTION = {"CC0_OK", "ATTRIBUTION", "RESTRICTED", "UNVERIFIED"}
+# Distinct values, because the gate has to tell them apart. Recording a CC BY-SA
+# source honestly as ATTRIBUTION used to let it through: share-alike IS
+# attribution plus an obligation, and the extra obligation is the whole problem.
+REDISTRIBUTION = {"CC0_OK", "ATTRIBUTION", "SHARE_ALIKE", "NON_COMMERCIAL",
+                  "RESTRICTED", "UNVERIFIED"}
+
+# Terms a CC BY 4.0 corpus cannot seed from.
+UNSEEDABLE = {
+    "SHARE_ALIKE": "share-alike would propagate an obligation CC BY does not impose",
+    "NON_COMMERCIAL": "NonCommercial would restrict downstream users CC BY does not restrict",
+    "RESTRICTED": "the terms do not permit redistribution",
+    "UNVERIFIED": "the terms have not been checked",
+}
 ACCESS = {"BULK", "API", "BOTH", "MANUAL", "UNVERIFIED"}
 STATUS = {"CANDIDATE", "EVALUATING", "ADOPTED", "REJECTED", "BLOCKED"}
 
@@ -113,10 +128,19 @@ def main() -> int:
             if not row["verified_on"].startswith("20"):
                 problems.append(f"{sid}: ADOPTED without a verification date")
 
-        # The CC0 promise is only as strong as the weakest thing seeded into it.
+        # The corpus's own licence is only as strong as the weakest thing seeded
+        # into it, so an ADOPTED seed source must carry terms CC BY 4.0 can pass on.
         if row["use"] == "SEED" and row["status"] == "ADOPTED" \
-                and row["redistribution"] == "RESTRICTED":
-            problems.append(f"{sid}: seeded into a CC0 corpus under restrictive terms")
+                and row["redistribution"] in UNSEEDABLE:
+            problems.append(f"{sid}: adopted as a SEED source but "
+                            f"{UNSEEDABLE[row['redistribution']]}")
+
+        # A determination has to rest on something. BLOCKED on terms, like
+        # ADOPTED, is a licence claim and carries a date.
+        if row["status"] == "BLOCKED" and row["redistribution"] in UNSEEDABLE \
+                and row["redistribution"] != "UNVERIFIED" \
+                and not row["verified_on"].startswith("20"):
+            problems.append(f"{sid}: BLOCKED on licence terms with no verification date")
 
     adopted = {r["source_id"] for r in rows if r["status"] == "ADOPTED"}
     for source in sorted(pipeline_sources - adopted):

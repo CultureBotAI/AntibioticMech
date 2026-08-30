@@ -52,7 +52,7 @@ CHEBI_COLUMNS = [
     "chebi_id", "name", "definition", "stars", "in_role_scope",
     "role_ids", "parent_ids", "smiles", "standard_inchi", "standard_inchi_key",
     "molecular_formula", "charge", "average_mass", "monoisotopic_mass",
-    "synonyms", "xrefs", "citations",
+    "synonyms", "xrefs", "citations", "structural_class_ids",
 ]
 
 # An accession that is not CURIE-safe cannot become an xref: the schema's CURIE
@@ -182,6 +182,12 @@ def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> li
         elif r["relation_type_id"] == "4":     # has_role
             has_role[r["init_id"]].append(r["final_id"])
 
+    # Structural-class ancestors the seeder can file on when no role names a
+    # target group. Collected here rather than in the seeder because only the
+    # extractor holds the is_a graph.
+    class_map = conf.get("chebi_class_to_class", {})
+    class_ids = {acc2id[a] for a in class_map if a in acc2id}
+
     scope = conf["role_scope"]
     out_roles = transitive([acc2id[a] for a in scope["out_of_scope"] if a in acc2id], isa_children)
     in_roles = transitive([acc2id[a] for a in scope["in_scope"] if a in acc2id], isa_children) - out_roles
@@ -255,6 +261,8 @@ def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> li
         struct = structures.get(cid, {})
         prop = props.get(cid, {})
         role_accs = sorted({compounds[r]["chebi_accession"] for r in set(roles) if r in compounds})
+        structural = sorted({compounds[a]["chebi_accession"]
+                             for a in transitive([cid], isa_parents) & class_ids})
         parents = sorted({compounds[p]["chebi_accession"]
                           for p in isa_parents.get(cid, []) if p in compounds})
         rows.append({
@@ -279,6 +287,7 @@ def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> li
             # necessarily any antimicrobial claim made about it. It is committed
             # so a curator writing evidence has the starting set at hand.
             "citations": pipe(sorted(set(citations.get(cid, [])))[:10]),
+            "structural_class_ids": pipe(structural),
         })
     return rows
 

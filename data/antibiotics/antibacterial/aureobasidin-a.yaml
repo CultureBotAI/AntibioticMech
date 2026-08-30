@@ -1,0 +1,59 @@
+identifier: CHEBI:61739
+label: aureobasidin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclodepsipeptide antibiotic, which is isolated from the filamentous
+  fungus Aureobasidium pullulans R106 and is toxic to yeast at low concentrations
+  (0.1-0.5 ug/ml).
+definition_source: ChEBI
+synonyms:
+- synonym_text: basifungin
+  synonym_type: INN
+  source: chebi
+- synonym_text: (3R,6S,9S,12S,15S,21S,24S,29aS)-21,24-dibenzyl-15-[(2R)-butan-2-yl]-9-isobutyl-6,12,18-triisopropyl-5,11,23-trimethyl-3-[(2R)-3-methylbutan-2-yl]octadecahydro-1H,15H-pyrrolo[1,2-m][1,4,7,10,13,16,19,22,25]oxaoctaazacycloheptacosine-1,4,7,10,13,16,19,22,25-nonone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (3S,6S,9S,12S,15S,18S,21S,24R,27S)-12,24-bis[(2R)-butan-2-yl]-15-(2-hydroxypropan-2-yl)-4,10,16,22-tetramethyl-18-(2-methylpropyl)-3,6-bis(phenylmethyl)-9,21-di(propan-2-yl)-13-oxa-1,4,7,10,16,19,22,25-octazabicyclo[25.3.0]triacontane-2,5,8,11,14,17,20,23,26-nonone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Antibiotic R106I
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N-((2R,3R)-2-hydroxy-3-methylvaleryl)-N-methyl-L-valyl-L-phenylalanyl-N-methyl-L-phenylalanyl-L-prolyl-L-
+    alloisoleucyl-N-methyl-L-valyl-L-leucyl-3-hydroxy-N-methyl- L-valine α1-lactone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25903
+- CHEBI:35213
+xrefs:
+- cas:127785-64-2
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@@H](C)[C@@H]1OC(=O)[C@H](C(C)C)N(C)C(=O)[C@H](CC(C)C)NC(=O)[C@H](C(C)C)N(C)C(=O)[C@@H]([C@H](C)C(C)C)NC(=O)[C@@H]2CCCN2C(=O)[C@H](Cc2ccccc2)N(C)C(=O)[C@H](Cc2ccccc2)NC(=O)C(C(C)C)NC1=O
+  standard_inchi: InChI=1S/C60H92N8O10/c1-17-39(12)51-55(72)63-47(36(6)7)53(70)61-44(32-41-25-20-18-21-26-41)56(73)65(14)46(33-42-27-22-19-23-28-42)58(75)68-30-24-29-45(68)52(69)64-48(40(13)35(4)5)59(76)66(15)49(37(8)9)54(71)62-43(31-34(2)3)57(74)67(16)50(38(10)11)60(77)78-51/h18-23,25-28,34-40,43-51H,17,24,29-33H2,1-16H3,(H,61,70)(H,62,71)(H,63,72)(H,64,69)/t39-,40-,43+,44+,45+,46+,47?,48-,49+,50+,51+/m1/s1
+  standard_inchi_key: YHSKJPXGXIYLHB-OTNPUQRPSA-N
+  molecular_formula: C60H92N8O10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1085.442
+  monoisotopic_mass: 1084.69364
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:61739
+  source_label: aureobasidin A
+  minted_identifier: antibioticmech:chebi-2733aa2277
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:26Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

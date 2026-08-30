@@ -1,0 +1,58 @@
+identifier: CHEBI:15776
+label: cephalosporin C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cephalosporin antibiotic carrying a 3-acetoxymethyl substituent and
+  a 6-oxo-N6-L-lysino group at position 7.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (6R,7R)-3-[(acetyloxy)methyl]-7-{[(5R)-5-amino-5-carboxypentanoyl]amino}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-(5-Amino-5-carboxyvaleramido)cephalosporanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cephalosporin C
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+xrefs:
+- cas:61-24-5
+- drugbank:DB03313
+- hmdb:HMDB0060450
+- kegg.compound:C00916
+- metacyc.compound:CSC
+- pdb-ccd:CSC
+- reaxys:65348
+- wikipedia.en:Cephalosporin_C
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12SCC(COC(C)=O)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)CCC[C@@H](N)C(=O)O'
+  standard_inchi: InChI=1S/C16H21N3O8S/c1-7(20)27-5-8-6-28-14-11(13(22)19(14)12(8)16(25)26)18-10(21)4-2-3-9(17)15(23)24/h9,11,14H,2-6,17H2,1H3,(H,18,21)(H,23,24)(H,25,26)/t9-,11-,14-/m1/s1
+  standard_inchi_key: HOKIDJSKDBPKTQ-GLXFQSAKSA-N
+  molecular_formula: C16H21N3O8S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 415.424
+  monoisotopic_mass: 415.10494
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:15776
+  source_label: cephalosporin C
+  minted_identifier: antibioticmech:chebi-37271dfbef
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:19Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

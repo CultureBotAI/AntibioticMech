@@ -118,12 +118,81 @@ def test_an_exclude_decision_removes_a_concept_entirely():
     assert records == {} and skipped == []
 
 
+def _chebi_row(inchikey, roles=""):
+    return {"standard_inchi_key": inchikey, "role_ids": roles, "smiles": "",
+            "standard_inchi": "", "molecular_formula": "", "charge": "",
+            "average_mass": "", "monoisotopic_mass": ""}
+
+
 def test_a_curator_identifier_override_wins():
-    concept = _concept("ARO", "ARO:0000018", "viomycin", "GXFAIFRPOKBQRV-GHXCTMGLSA-N")
+    key = "GXFAIFRPOKBQRV-GHXCTMGLSA-N"
+    concept = _concept("ARO", "ARO:0000018", "viomycin", key)
     decisions = {concept.minted: {"decision": "GROUND", "identifier": "CHEBI:9727"}}
-    records, _ = merge([concept], {}, CONF, decisions, "2026-08-29")
+    records, _ = merge([concept], {"CHEBI:9727": _chebi_row(key)}, CONF, decisions, "2026-08-29")
     assert list(records) == ["CHEBI:9727"]
     assert records["CHEBI:9727"]["grounding_status"] == "EXACT"
+
+
+def test_a_ground_decision_to_an_unknown_chebi_id_is_refused():
+    """A typo in a decision row would otherwise mint a record keyed to a
+    compound that does not exist, with grounding_status EXACT."""
+    import pytest
+
+    concept = _concept("ARO", "ARO:0000018", "viomycin", "GXFAIFRPOKBQRV-GHXCTMGLSA-N")
+    decisions = {concept.minted: {"decision": "GROUND", "identifier": "CHEBI:4235700"}}
+    with pytest.raises(SystemExit, match="not a ChEBI entry"):
+        merge([concept], {"CHEBI:42355": _chebi_row("AAAAAAAAAAAAAA-BBBBBBBBBB-C")},
+              CONF, decisions, "2026-08-29")
+
+
+def test_a_ground_decision_to_a_structureless_class_term_is_refused():
+    """CHEBI:48923 "erythromycin" is a class over erythromycins A-E with no
+    structure of its own. A record is one chemical structure and a drug class is
+    never a record, so grounding to one must fail loudly."""
+    import pytest
+
+    concept = _concept("ARO", "ARO:0000006", "erythromycin", "ULGZDMOVFRHVEP-RWJQBGPGSA-N")
+    decisions = {concept.minted: {"decision": "GROUND", "identifier": "CHEBI:48923"}}
+    with pytest.raises(SystemExit, match="no structure of its own"):
+        merge([concept], {"CHEBI:48923": _chebi_row("")}, CONF, decisions, "2026-08-29")
+
+
+def test_a_ground_decision_that_would_split_a_structure_is_refused():
+    """The InChIKey fold only folds MINTED into EXACT, so an override creating a
+    second grounded record for a structure another record already carries would
+    pass every gate — including the collision flagger, which looks only at
+    all-MINTED groups."""
+    import pytest
+
+    key = "ULGZDMOVFRHVEP-RWJQBGPGSA-N"
+    existing = _concept("CHEBI", "CHEBI:42355", "erythromycin A", key)
+    diverted = _concept("ARO", "ARO:0000006", "erythromycin", key)
+    rows = {"CHEBI:42355": _chebi_row(key), "CHEBI:99999": _chebi_row(key)}
+    decisions = {diverted.minted: {"decision": "GROUND", "identifier": "CHEBI:99999"}}
+    with pytest.raises(SystemExit, match="split one structure"):
+        merge([existing, diverted], rows, CONF, decisions, "2026-08-29")
+
+
+def test_a_curator_literature_upgrade_survives_a_reseed():
+    """docs/HARMONIZATION.md tells a curator to replace a CARD item's ARO
+    reference with a primary citation. An ownership rule keyed on the ARO id
+    classified that upgraded item as the seeder's and reverted it."""
+    from seed_from_sources import is_card_sourced, merge_with_existing
+
+    upgraded = {
+        "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION",
+        "aro_id": "ARO:3000375",
+        "label": "ermB",
+        "evidence": [{"reference": "PMID:15980346", "notes": "curator: primary source"}],
+    }
+    assert not is_card_sourced(upgraded)
+    assert not is_card_sourced(upgraded, seeded_ids={"ARO:3000375"})
+
+    seeded = {"identifier": "CHEBI:42355", "label": "erythromycin A",
+              "antimicrobial_class": "ANTIBACTERIAL", "curation_status": "SEEDED",
+              "grounding_status": "EXACT", "curation_history": []}
+    merged = merge_with_existing(seeded, dict(seeded) | {"resistance_mechanisms": [upgraded]})
+    assert merged["resistance_mechanisms"] == [upgraded]
 
 
 def test_slugs_are_url_safe_and_stable():

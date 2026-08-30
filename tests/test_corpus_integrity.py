@@ -244,8 +244,8 @@ def test_resistance_mechanisms_are_typed_where_aro_says_so(records):
 
 
 def test_retired_slugs_are_never_reissued(repo_root, path_lockfile):
-    """A slug is a published URL. When 134 records left the corpus, their slugs
-    left PATHS.tsv with them and became free for the next compound whose label
+    """A slug is a published URL. When records leave the corpus their slugs
+    leave PATHS.tsv with them and became free for the next compound whose label
     slugified the same way — silently repointing a published URL at a different
     structure. The ledger keeps them reserved."""
     import csv as _csv

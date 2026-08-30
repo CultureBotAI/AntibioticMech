@@ -1,0 +1,54 @@
+identifier: CHEBI:90941
+label: sibiromycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aminoglycoside antibiotic produced by Streptosporangium sibiricum that
+  also exhibits antitumour properties.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (11R,11aS)-9,11-dihydroxy-8-methyl-5-oxo-2-[(1E)-prop-1-en-1-yl]-5,10,11,11a-tetrahydro-1H-pyrrolo[2,1-][1,4]benzodiazepin-7-yl
+    4,6-dideoxy-3-C-methyl-4-(methylamino)-α-L-mannopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sybiromycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:131437
+- CHEBI:22507
+- CHEBI:33853
+- CHEBI:73080
+xrefs:
+- cas:12684-33-2
+- knapsack:C00018852
+- metacyc.compound:CPD-18442
+- reaxys:14751112
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12CC(/C=C/C)=CN1C(=O)c1cc(O[C@@H]3O[C@@H](C)[C@H](NC)[C@@](C)(O)[C@H]3O)c(C)c(O)c1N[C@@H]2O'
+  standard_inchi: InChI=1S/C24H33N3O7/c1-6-7-13-8-15-21(30)26-17-14(22(31)27(15)10-13)9-16(11(2)18(17)28)34-23-20(29)24(4,32)19(25-5)12(3)33-23/h6-7,9-10,12,15,19-21,23,25-26,28-30,32H,8H2,1-5H3/b7-6+/t12-,15-,19-,20-,21+,23-,24+/m0/s1
+  standard_inchi_key: RAGFPHFDFVNLCG-INYQBOQCSA-N
+  molecular_formula: C24H33N3O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 475.542
+  monoisotopic_mass: 475.23185
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:90941
+  source_label: sibiromycin
+  minted_identifier: antibioticmech:chebi-bc5cff9398
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

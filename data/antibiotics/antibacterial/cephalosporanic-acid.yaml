@@ -1,0 +1,40 @@
+identifier: CHEBI:23064
+label: cephalosporanic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (6R)-3-[(acetyloxy)methyl]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12CC(=O)N1C(C(=O)O)=C(COC(C)=O)CS2'
+  standard_inchi: InChI=1S/C10H11NO5S/c1-5(12)16-3-6-4-17-8-2-7(13)11(8)9(6)10(14)15/h8H,2-4H2,1H3,(H,14,15)/t8-/m1/s1
+  standard_inchi_key: YGBFLZPYDUKSPT-MRVPVSSYSA-N
+  molecular_formula: C10H11NO5S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 257.267
+  monoisotopic_mass: 257.03579
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:23064
+  source_label: cephalosporanic acid
+  minted_identifier: antibioticmech:chebi-078ffdaa93
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:20Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

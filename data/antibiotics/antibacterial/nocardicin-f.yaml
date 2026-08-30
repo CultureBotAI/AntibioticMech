@@ -1,0 +1,45 @@
+identifier: CHEBI:33012
+label: nocardicin F
+antimicrobial_class: ANTIBACTERIAL
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (2R)-{(3S)-3-[(2E)-2-(hydroxyimino)-2-(4-hydroxyphenyl)acetamido]-2-oxoazetidin-1-yl}(4-hydroxyphenyl)acetic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25384
+- CHEBI:25572
+xrefs:
+- beilstein:3598527
+- cas:63598-46-9
+- kegg.compound:C17354
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: O=C(N[C@H]1CN([C@@H](C(=O)O)c2ccc(O)cc2)C1=O)/C(=N/O)c1ccc(O)cc1
+  standard_inchi: InChI=1S/C19H17N3O7/c23-12-5-1-10(2-6-12)15(21-29)17(25)20-14-9-22(18(14)26)16(19(27)28)11-3-7-13(24)8-4-11/h1-8,14,16,23-24,29H,9H2,(H,20,25)(H,27,28)/b21-15+/t14-,16+/m0/s1
+  standard_inchi_key: NMMOYDKOFASOBV-ORWLQXDRSA-N
+  molecular_formula: C19H17N3O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 399.359
+  monoisotopic_mass: 399.10665
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:33012
+  source_label: nocardicin F
+  minted_identifier: antibioticmech:chebi-00e0c8bc76
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:22Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
