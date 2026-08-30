@@ -815,3 +815,34 @@ def test_ownership_is_decided_by_the_notes_not_by_a_bare_value():
     # A folded YAML scalar joins lines with a space; the claim must survive that.
     assert curator_owns_mode_of_action(
         {"mode_of_action_notes": f"{MOA_NOTE_MARKER} X; CURATOR: leave blank"})
+
+
+def test_history_collapse_never_touches_a_curators_entries():
+    """The collapse exists to clean up indistinguishable seeder events that a
+    falsified retrieval date produced on every record. It runs on every merge,
+    forever, so its blast radius matters more than its purpose.
+
+    A curator's history is theirs. Two of their edits carrying the same
+    description are two edits, and dropping one because a machine cannot tell
+    them apart would be the audit trail lying about curation — worse than the
+    duplicate it removes. An entry carrying any field beyond the five the seeder
+    writes is also left alone, since the comparison cannot speak to it.
+    """
+    from seed_from_sources import SEEDER_CURATOR, _collapse_duplicate_events
+
+    def seeded(ts):
+        return {"timestamp": ts, "curator": SEEDER_CURATOR,
+                "action": "RESEEDED_FROM_SOURCES", "changes": "Re-seeded from updated inventories"}
+
+    def curated(ts):
+        return {"timestamp": ts, "curator": "jane", "action": "REVIEWED",
+                "changes": "checked the structure"}
+
+    assert len(_collapse_duplicate_events([seeded("t1"), seeded("t2")])) == 1
+    assert len(_collapse_duplicate_events([curated("t1"), curated("t2")])) == 2
+    assert len(_collapse_duplicate_events(
+        [seeded("t1"), dict(seeded("t2"), reviewer="someone")])) == 2
+    assert len(_collapse_duplicate_events([seeded("t1"), curated("t2"), seeded("t3")])) == 3
+    # Non-adjacent duplicates are not the target and are kept.
+    assert len(_collapse_duplicate_events([seeded("t1"), curated("t2"), seeded("t3"),
+                                           seeded("t4")])) == 3
