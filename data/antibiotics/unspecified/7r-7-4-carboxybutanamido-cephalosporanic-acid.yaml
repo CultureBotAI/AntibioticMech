@@ -1,0 +1,67 @@
+identifier: CHEBI:41425
+label: (7R)-7-(4-carboxybutanamido)cephalosporanic acid
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (6R,7R)-3-[(acetyloxy)methyl]-7-(4-carboxybutanamido)-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (7R)-7-(4-Carboxybutanamido)cephalosporanate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7-Glutarylaminocephalosporanate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 7BETA-(4CARBOXYBUTANAMIDO) CEPHALOSPORANIC ACID
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Gl-7-Aca
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glutaryl-7-aca
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Glutaryl-7-aminocephalosporanic acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+xrefs:
+- beilstein:1183847
+- cas:27920-90-7
+- kegg.compound:C15666
+- pdb-ccd:CEN
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12SCC(COC(C)=O)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)CCCC(=O)O'
+  standard_inchi: InChI=1S/C15H18N2O8S/c1-7(18)25-5-8-6-26-14-11(13(22)17(14)12(8)15(23)24)16-9(19)3-2-4-10(20)21/h11,14H,2-6H2,1H3,(H,16,19)(H,20,21)(H,23,24)/t11-,14-/m1/s1
+  standard_inchi_key: IXUSDMGLUJZNFO-BXUZGUMPSA-N
+  molecular_formula: C15H18N2O8S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 386.382
+  monoisotopic_mass: 386.07839
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:41425
+  source_label: (7R)-7-(4-carboxybutanamido)cephalosporanic acid
+  minted_identifier: antibioticmech:chebi-fe620cfd4f
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:24Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:52:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

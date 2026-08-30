@@ -1,0 +1,61 @@
+identifier: CHEBI:87399
+label: UK 63598
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A cyclodepsipeptide antibiotic that is isolated from Streptomyces sp.
+  SNA15896 and also exhibits antitumour activity.
+definition_source: ChEBI
+synonyms:
+- synonym_text: N,N'-[(1S,1'R,2S,2''S,8'R,11'S,14'R,17'S,21'R,24'S,27'R)-2,2'',3',11',13',16',24',26'-octamethyl-27'-(methylsulfanyl)-2',5',9',12',15',18',22',25'-octaoxo-6',19'-dioxa-28'-thia-3',10',13',16',23',26'-hexaazadispiro[cyclopropane-1,4'-bicyclo[12.12.3]nonacosane-17',1''-cyclopropane]-8',21'-diyl]bis(3-hydroxyquinoline-2-carboxamide)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: SW-163D
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: UK 63,598
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:24533
+- CHEBI:25903
+- CHEBI:35213
+- CHEBI:38774
+- CHEBI:59794
+xrefs:
+- cas:120796-23-8
+- kegg.compound:C15764
+- knapsack:C00017659
+- reaxys:11250489
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12C(=O)N(C)[C@]3(C[C@@H]3C)C(=O)OC[C@@H](NC(=O)c3nc4ccccc4cc3O)C(=O)N[C@@H](C)C(=O)N(C)[C@@H](CS[C@H]1SC)C(=O)N(C)[C@]1(C[C@@H]1C)C(=O)OC[C@@H](NC(=O)c1nc3ccccc3cc1O)C(=O)N[C@@H](C)C(=O)N2C'
+  standard_inchi: InChI=1S/C53H62N10O14S2/c1-25-20-52(25)50(74)76-22-34(59-44(69)39-37(65)19-30-15-11-13-17-32(30)57-39)42(67)55-28(4)46(71)61(6)40-48(73)63(8)53(21-26(53)2)51(75)77-23-33(58-43(68)38-36(64)18-29-14-10-12-16-31(29)56-38)41(66)54-27(3)45(70)60(5)35(47(72)62(52)7)24-79-49(40)78-9/h10-19,25-28,33-35,40,49,64-65H,20-24H2,1-9H3,(H,54,66)(H,55,67)(H,58,68)(H,59,69)/t25-,26-,27-,28-,33+,34+,35-,40+,49+,52-,53-/m0/s1
+  standard_inchi_key: HBQDLHJADJTNRK-LIXMYSHJSA-N
+  molecular_formula: C53H62N10O14S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 1127.269
+  monoisotopic_mass: 1126.38884
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:87399
+  source_label: UK 63598
+  minted_identifier: antibioticmech:chebi-436cc7e90c
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:52:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

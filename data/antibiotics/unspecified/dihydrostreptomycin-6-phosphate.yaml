@@ -1,0 +1,56 @@
+identifier: CHEBI:16505
+label: dihydrostreptomycin 6-phosphate
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: The 6-O-phospho derivative of dihydrostreptomycin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,2R,3S,4S,5R,6S)-2,4-bis(carbamimidamido)-5-{5-deoxy-2-O-[2-deoxy-2-(methylamino)-α-L-glucopyranosyl]-3-C-(hydroxymethyl)-α-L-lyxofuranosyloxy}-3,6-dihydroxycyclohexyl
+    dihydrogen phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dihydrostreptomycin 6-phosphate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: O-2-deoxy-2-(methylamino)-alpha-L-glucopyranosyl-(1-2)-O-5-deoxy-3-C-(hydroxymethyl)-alpha-L-lyxofuranosyl-(1-4)-N,N'-bis(aminoiminomethyl)-D-streptamine-6-(dihydrogen
+    phosphate)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26787
+xrefs:
+- cas:33014-54-9
+- kegg.compound:C01221
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CN[C@@H]1[C@H](O[C@H]2[C@H](O[C@H]3[C@H](O)[C@@H](OP(=O)(O)O)[C@H](NC(=N)N)[C@@H](O)[C@@H]3NC(=N)N)O[C@@H](C)[C@]2(O)CO)O[C@@H](CO)[C@H](O)[C@H]1O
+  standard_inchi: InChI=1S/C21H42N7O15P/c1-5-21(35,4-30)16(42-17-9(26-2)12(33)10(31)6(3-29)40-17)18(39-5)41-14-7(27-19(22)23)11(32)8(28-20(24)25)15(13(14)34)43-44(36,37)38/h5-18,26,29-35H,3-4H2,1-2H3,(H4,22,23,27)(H4,24,25,28)(H2,36,37,38)/t5-,6-,7-,8+,9-,10-,11-,12-,13-,14+,15-,16-,17-,18-,21+/m0/s1
+  standard_inchi_key: DCRWHJGCOKPJBN-TWBNDLJKSA-N
+  molecular_formula: C21H42N7O15P
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 663.575
+  monoisotopic_mass: 663.24765
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:16505
+  source_label: dihydrostreptomycin 6-phosphate
+  minted_identifier: antibioticmech:chebi-7c88681511
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:19Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:52:21Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

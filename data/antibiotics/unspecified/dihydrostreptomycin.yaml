@@ -1,0 +1,60 @@
+identifier: CHEBI:38291
+label: dihydrostreptomycin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: 1,1'-[(1R,2R,3S,4R,5R,6S)-4-({5-deoxy-2-O-[2-deoxy-2-(methylamino)-α-L-glucopyranosyl]-3-C-(hydroxymethyl)-α-L-lyxofuranosyl}oxy)-2,5,6-trihydroxycyclohexane-1,3-diyl]diguanidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DHMS
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: DST
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Dihydrostreptomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N,N'''-[(1R,2R,3S,4R,5R,6S)-4-({5-deoxy-2-O-[2-deoxy-2-(methylamino)-α-L-glucopyranosyl]-3-C-(hydroxymethyl)-α-L-lyxofuranosyl}oxy)-2,5,6-trihydroxycyclohexane-1,3-diyl]diguanidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:26788
+xrefs:
+- beilstein:73785
+- cas:128-46-1
+- kegg.compound:C01023
+- kegg.drug:D07840
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CN[C@@H]1[C@H](O[C@H]2[C@H](O[C@H]3[C@H](O)[C@@H](O)[C@H](NC(=N)N)[C@@H](O)[C@@H]3NC(=N)N)O[C@@H](C)[C@]2(O)CO)O[C@@H](CO)[C@H](O)[C@H]1O
+  standard_inchi: InChI=1S/C21H41N7O12/c1-5-21(36,4-30)16(40-17-9(26-2)13(34)10(31)6(3-29)38-17)18(37-5)39-15-8(28-20(24)25)11(32)7(27-19(22)23)12(33)14(15)35/h5-18,26,29-36H,3-4H2,1-2H3,(H4,22,23,27)(H4,24,25,28)/t5-,6-,7+,8-,9-,10-,11+,12-,13-,14+,15+,16-,17-,18-,21+/m0/s1
+  standard_inchi_key: ASXBYYWOLISCLQ-HZYVHMACSA-N
+  molecular_formula: C21H41N7O12
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 583.596
+  monoisotopic_mass: 583.28132
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:38291
+  source_label: dihydrostreptomycin
+  minted_identifier: antibioticmech:chebi-7d3cbba034
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:23Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:52:24Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

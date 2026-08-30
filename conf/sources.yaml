@@ -200,45 +200,35 @@ aro_class_to_class:
   ARO:3009539: ANTIFUNGAL   # fungal succinate dehydrogenase inhibitor
 
 # ----------------------------------------------------------------------------
-# ChEBI structural class -> AntimicrobialClassEnum.
+# ChEBI structural class -> AntimicrobialClassEnum: TRIED, AND REMOVED.
 #
-# Consulted after the ARO drug class and after the roles, before falling through
-# to ANTIMICROBIAL_UNSPECIFIED. It exists because trusting only reviewed relation
-# edges — correct in itself — left 20 unambiguous antibacterials with nothing but
-# the generic `antimicrobial agent` role and therefore no target group at all:
-# tazobactam, sulbactam, kanamycin B, sulfathiazole, troleandomycin and friends
-# were filed as "target group unknown", which is weaker than what ChEBI says
-# about them.
+# The idea was to recover a target group for the ~20 compounds whose only
+# reviewed ChEBI role is the generic `antimicrobial agent`, by filing on a
+# structural class whose NAME states a target group — `beta-lactam antibiotic`,
+# `aminoglycoside antibiotic`. It re-filed 169 records and about 25 of them
+# wrongly, because the premise is false: a ChEBI class that names a target group
+# is still a CHEMICAL class, and its members are not all active on that target.
 #
-# Only classes whose NAME states a target group are listed. ChEBI's chemistry
-# buckets — heterocyclic antibiotic, organonitrogen heterocyclic antibiotic,
-# carbohydrate-containing antibiotic, carbocyclic antibiotic — are deliberately
-# absent: they describe a ring system, not what the compound acts on. So are
-# anthracycline and enediyne antibiotics, whose members are predominantly
-# antineoplastic rather than antibacterial.
-chebi_class_to_class:
-  CHEBI:27933: ANTIBACTERIAL    # beta-lactam antibiotic
-  CHEBI:22507: ANTIBACTERIAL    # aminoglycoside antibiotic
-  CHEBI:25105: ANTIBACTERIAL    # macrolide antibiotic
-  CHEBI:87228: ANTIBACTERIAL    # sulfonamide antibiotic
-  CHEBI:86324: ANTIBACTERIAL    # quinolone antibiotic
-  CHEBI:25903: ANTIBACTERIAL    # peptide antibiotic
-  CHEBI:26179: ANTIBACTERIAL    # polyether antibiotic
-  CHEBI:26177: ANTIFUNGAL       # polyene antibiotic (amphotericin, nystatin)
-
-# Roles that VETO the structural-class inference above.
+# It filed anthracycline chemotherapy drugs (daunorubicin, the carminomycins) as
+# antibacterial through the aminoglycoside door; spinosyn A and D, the active
+# ingredients of an insecticide this corpus explicitly excludes; aureobasidin A,
+# an antifungal, through `peptide antibiotic`; trichlormethiazide, a diuretic,
+# through `sulfonamide antibiotic`; a shelf of antitumour macrolides; and — most
+# plainly — the bare ring scaffolds `penam`, `penem`, `cepham` and
+# `azetidin-2-one`, which are ring systems with no activity to have.
 #
-# A structural class is a fact about what a compound IS; it becomes a claim about
-# what the compound ACTS ON only when nothing better contradicts it. Daunorubicin
-# and the carminomycins are anthracycline antineoplastics that ChEBI also files
-# under `aminoglycoside antibiotic` — true structurally, since they carry a
-# daunosamine sugar — and inferring ANTIBACTERIAL from that filed a chemotherapy
-# drug as an antibacterial. Excluding the anthracycline class was not enough:
-# daunorubicin reaches the map through the aminoglycoside ancestor instead.
+# A veto on the antineoplastic role fixed one family and left the rest, which is
+# the shape of a rule that cannot be patched into correctness. Corroborating
+# against CARD would have excluded every wrong case — and also every right one:
+# none of the 169 has an ARO concept.
 #
-# So the veto is on the role, which is the thing that actually speaks to target.
-chebi_class_veto_roles:
-  - CHEBI:35610   # antineoplastic agent — and its subroles
+# So those compounds keep ANTIMICROBIAL_UNSPECIFIED, which is what the reviewed
+# sources actually say. "Weaker than what is knowable" is not the same as wrong,
+# and this corpus would rather say less than assert more than its sources do.
+# The principled fix is a source that states the target group directly — ATC
+# codes, where J01 IS "antibacterials for systemic use" — which is already in
+# curation/source_queue.tsv as `atc-aware`. See issue #38.
+# ----------------------------------------------------------------------------
 
 # ARO determinant lineage -> ResistanceMechanismEnum. CARD's aro.obo does not
 # link a determinant to its mechanism category directly (that association lives

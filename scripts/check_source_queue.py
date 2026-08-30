@@ -13,7 +13,10 @@ This checks the claims that are checkable:
   * ADOPTED means adopted: the source appears in conf/sources.yaml, its
     redistribution terms have been verified, and it carries a verification date
   * conversely, every source the pipeline actually reads has an ADOPTED row
-  * nothing is SEED-able under terms the corpus's own licence cannot carry.
+  * an ADOPTED seed source carries terms the corpus's own licence can pass on.
+    This is a tripwire AT ADOPTION, not a ban on candidates: a CANDIDATE row may
+    sit at `use: SEED` with UNVERIFIED terms for as long as it takes to check
+    them, and nine do. What it stops is adopting one without checking.
     Record content is CC BY 4.0 (see LICENSE-DATA): attribution rides along, and
     downstream users are not further restricted. So share-alike would propagate
     an obligation CC BY does not impose, and NonCommercial would restrict users
@@ -41,9 +44,12 @@ COLUMNS = ["source_id", "name", "closes_gap", "use", "structures", "redistributi
 
 USE = {"SEED", "CURATE_ONLY", "REFERENCE"}
 STRUCTURES = {"COMPLETE", "PARTIAL", "NONE", "UNVERIFIED"}
-# Distinct values, because the gate has to tell them apart. Recording a CC BY-SA
-# source honestly as ATTRIBUTION used to let it through: share-alike IS
-# attribution plus an obligation, and the extra obligation is the whole problem.
+# Distinct values, because the gate has to tell them apart. Share-alike IS
+# attribution plus an obligation, so a CC BY-SA source recorded honestly as
+# ATTRIBUTION would read as acceptable, and the extra obligation is the whole
+# problem. (No source was actually let through on that route — the two affected
+# rows are CURATE_ONLY candidates the gate never applied to — but the enum could
+# not express the distinction a reader was being told it enforced.)
 REDISTRIBUTION = {"CC0_OK", "ATTRIBUTION", "SHARE_ALIKE", "NON_COMMERCIAL",
                   "RESTRICTED", "UNVERIFIED"}
 

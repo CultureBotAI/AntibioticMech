@@ -1,0 +1,54 @@
+identifier: CHEBI:85614
+label: neopikromycin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A macrolide antibiotic that is an intermediate in the biosynthesis of
+  pikromycin by Streptomyces venezuelae.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,5R,6S,7S,9R,11E,13R,14S)-14-[(1R)-1-hydroxyethyl]-3,5,7,9,13-pentamethyl-2,4,10-trioxo-1-oxacyclotetradec-11-en-6-yl
+    3,4,6-trideoxy-3-(dimethylamino)-β-D-xylo-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25105
+- CHEBI:26188
+- CHEBI:51689
+- CHEBI:63367
+xrefs:
+- kegg.compound:C20739
+- metacyc.compound:CPD-15997
+- reaxys:19420106
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]1([C@@H](C)O)OC(=O)[C@H](C)C(=O)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@@H](C)C[C@@H](C)C(=O)/C=C/[C@H]1C'
+  standard_inchi: InChI=1S/C28H47NO8/c1-14-10-11-22(31)15(2)12-16(3)25(37-28-24(33)21(29(8)9)13-17(4)35-28)18(5)23(32)19(6)27(34)36-26(14)20(7)30/h10-11,14-21,24-26,28,30,33H,12-13H2,1-9H3/b11-10+/t14-,15-,16+,17-,18+,19-,20-,21+,24-,25+,26+,28+/m1/s1
+  standard_inchi_key: SXXXXTQMWPXIES-VJNSTPMQSA-N
+  molecular_formula: C28H47NO8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 525.683
+  monoisotopic_mass: 525.33017
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:85614
+  source_label: neopikromycin
+  minted_identifier: antibioticmech:chebi-d1f753a4df
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:52:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

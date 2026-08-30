@@ -1,0 +1,63 @@
+identifier: CHEBI:31057
+label: 13-deoxydaunorubicin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An aminoglycoside antibiotic that is (1S,3S)-3-ethyl-3,5,12-trihydroxy-10-methoxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracene
+  having a 3-amino-2,3,6-trideoxy-α-L-lyxo-hexopyranosyl residue attached at position
+  1 via a glycosidic linkage.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (1S,3S)-3-ethyl-3,5,12-trihydroxy-10-methoxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracen-1-yl
+    3-amino-2,3,6-trideoxy-α-L-lyxo-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Feudomycin A
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:22507
+- CHEBI:25830
+- CHEBI:35315
+- CHEBI:48120
+- CHEBI:63367
+xrefs:
+- cas:79466-09-4
+- kegg.compound:C12429
+- knapsack:C00018343
+- lipidmaps:LMPK13050003
+- patent:RU2233165
+- patent:US2006100421
+- reaxys:9029983
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CC[C@]1(O)Cc2c(O)c3c(c(O)c2[C@@H](O[C@H]2C[C@H](N)[C@H](O)[C@H](C)O2)C1)C(=O)c1c(OC)cccc1C3=O
+  standard_inchi: InChI=1S/C27H31NO9/c1-4-27(34)9-13-19(16(10-27)37-17-8-14(28)22(29)11(2)36-17)26(33)21-20(24(13)31)23(30)12-6-5-7-15(35-3)18(12)25(21)32/h5-7,11,14,16-17,22,29,31,33-34H,4,8-10,28H2,1-3H3/t11-,14-,16-,17-,22+,27-/m0/s1
+  standard_inchi_key: XAMIMZAWZUSOPA-JIGXQNLBSA-N
+  molecular_formula: C27H31NO9
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 513.543
+  monoisotopic_mass: 513.19988
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:31057
+  source_label: 13-deoxydaunorubicin
+  minted_identifier: antibioticmech:chebi-5545c84fa8
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:22Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:52:23Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

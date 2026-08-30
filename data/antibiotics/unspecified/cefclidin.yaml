@@ -1,0 +1,71 @@
+identifier: CHEBI:3484
+label: cefclidin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A fourth-generation cephalosporin antibiotic having (4-carbamoyl-1-azoniabicyclo[2.2.2]octan-1-yl)methyl
+  and [(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino side groups
+  located at positions 3 and 7 respectively.
+definition_source: ChEBI
+synonyms:
+- synonym_text: cefclidina
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefclidine
+  synonym_type: INN
+  source: chebi
+- synonym_text: cefclidinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 7-{[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetyl]amino}-3-[(4-carbamoyl-1-azoniabicyclo[2.2.2]octan-1-yl)methyl]-3,4-didehydrocepham-4-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (6R,7R)-7-{[(2Z)-2-(5-amino-1,2,4-thiadiazol-3-yl)-2-(methoxyimino)acetyl]amino}-3-[(4-carbamoyl-1-azoniabicyclo[2.2.2]octan-1-yl)methyl]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Cefclidin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: cefaclidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23066
+- CHEBI:38099
+xrefs:
+- cas:105239-91-6
+- kegg.compound:C11202
+- reaxys:6472271
+- wikipedia.en:Cefclidin
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@]12SCC(C[N+]34CCC(C(N)=O)(CC3)CC4)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1nsc(N)n1'
+  standard_inchi: InChI=1S/C21H26N8O6S2/c1-35-26-11(14-25-20(23)37-27-14)15(30)24-12-16(31)28-13(18(32)33)10(9-36-17(12)28)8-29-5-2-21(3-6-29,4-7-29)19(22)34/h12,17H,2-9H2,1H3,(H5-,22,23,24,25,27,30,32,33,34)/b26-11-/t12-,17-,21?,29?/m1/s1
+  standard_inchi_key: JUVHVMCKLDZLGN-TVNFHGJBSA-N
+  molecular_formula: C21H26N8O6S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 550.623
+  monoisotopic_mass: 550.14167
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:3484
+  source_label: cefclidin
+  minted_identifier: antibioticmech:chebi-5921882c92
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:23Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:52:24Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

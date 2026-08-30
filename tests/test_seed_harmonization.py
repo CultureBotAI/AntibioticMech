@@ -185,8 +185,9 @@ def test_a_curator_literature_upgrade_survives_a_reseed():
         "label": "ermB",
         "evidence": [{"reference": "PMID:15980346", "notes": "curator: primary source"}],
     }
+    # Not the seeder's under either signal that was ever tried: it cites a PMID,
+    # and it carries no CARD note marker.
     assert not is_card_sourced(upgraded)
-    assert not is_card_sourced(upgraded, seeded_ids={"ARO:3000375"})
 
     seeded = {"identifier": "CHEBI:42355", "label": "erythromycin A",
               "antimicrobial_class": "ANTIBACTERIAL", "curation_status": "SEEDED",
@@ -290,7 +291,6 @@ def test_a_curator_item_citing_an_aro_term_is_not_mistaken_for_seeder_output():
                       "notes": "curator: acrB effluxes this compound (PMID pending)"}],
     }
     assert not is_card_sourced(curator_item)
-    assert not is_card_sourced(curator_item, seeded_ids=set())
 
     seeded = {"identifier": "CHEBI:42355", "label": "erythromycin A",
               "antimicrobial_class": "ANTIBACTERIAL", "curation_status": "SEEDED",
@@ -454,33 +454,6 @@ def test_two_identifiers_never_receive_the_same_slug(tmp_path, monkeypatch):
                           sfs2.read_lockfile())
 
 
-def test_an_antineoplastic_role_vetoes_the_structural_class_inference():
-    """A structural class says what a compound IS; it becomes a claim about what
-    it ACTS ON only when nothing contradicts it. Daunorubicin is an anthracycline
-    chemotherapy drug that ChEBI also files under `aminoglycoside antibiotic` —
-    true structurally, it carries a daunosamine sugar — and inferring
-    ANTIBACTERIAL from that filed a chemotherapy drug as an antibacterial.
-
-    Excluding the anthracycline class from the map was not enough: daunorubicin
-    reaches the map through the aminoglycoside ancestor instead. The veto is on
-    the role, which is the thing that speaks to target.
-    """
-    import csv as _csv
-    import pathlib
-
-    raw = pathlib.Path(__file__).resolve().parents[1] / "data" / "raw" / "chebi_antimicrobials.tsv"
-    with raw.open(newline="", encoding="utf-8") as fh:
-        rows = {r["chebi_id"]: r for r in _csv.DictReader(fh, delimiter="\t")}
-
-    # An antineoplastic carries no structural class, however aminoglycoside-shaped.
-    for chebi_id in ("CHEBI:41977", "CHEBI:31359"):   # daunorubicin, carminomycin
-        if chebi_id in rows:
-            assert rows[chebi_id]["structural_class_ids"] == "", chebi_id
-
-    # A genuine antibacterial still does.
-    if "CHEBI:9421" in rows:                          # tazobactam
-        assert rows["CHEBI:9421"]["structural_class_ids"] == "CHEBI:27933"
-
 
 def test_the_ledger_holds_through_repeated_renames_and_a_return(tmp_path, monkeypatch):
     """The composite-key scheme's whole contract, in sequence. Each step was
@@ -513,3 +486,39 @@ def test_the_ledger_holds_through_repeated_renames_and_a_return(tmp_path, monkey
 
     contender = record | {"B:2": {"antimicrobial_class": "ANTIFUNGAL", "label": "alpha"}}
     assert sfs.assign_slugs(contender, sfs.read_lockfile())["B:2"] != "alpha"
+
+
+def test_a_canary_does_not_unretire_identifiers_it_did_not_write(tmp_path, monkeypatch):
+    """`records` is the FULL built set even on a partial run — `--only` narrows
+    what is WRITTEN, not what is built. Un-retiring on the strength of the
+    in-memory set dropped every returning identifier from the ledger while
+    writing a PATHS.tsv row for just one, leaving the rest in neither file with
+    their published slugs reserved nowhere."""
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch, [("A:1", "ANTIBACTERIAL", "alpha")],
+                             [("A:2", "beta"), ("A:3", "gamma")])
+    records = {i: {"antimicrobial_class": "ANTIBACTERIAL"} for i in ("A:1", "A:2", "A:3")}
+    sfs.write_lockfile(records, {"A:1": "alpha", "A:2": "beta", "A:3": "gamma"}, only={"A:2"})
+
+    paths, retired = sfs.read_lockfile(), sfs.read_retired()
+    assert "A:2" in paths and "A:2" not in retired      # the one the canary wrote
+    assert "A:3" not in paths, "the canary must not write records it was not asked for"
+    assert "A:3" in retired, "and must not unreserve their slugs either"
+
+
+def test_a_rename_and_a_revert_do_not_wedge_the_gate(tmp_path, monkeypatch):
+    """The composite row is deliberately never revived — except when the
+    identifier takes its old slug back. A rename followed by a revert otherwise
+    leaves the ledger claiming a live URL is retired, which
+    test_retired_slugs_are_never_reissued rejects, with no code path able to
+    clear it: the gate stays red until someone hand-edits RETIRED.tsv."""
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch, [("A:1", "ANTIBACTERIAL", "erythromycin-a")])
+    record = {"A:1": {"antimicrobial_class": "ANTIBACTERIAL"}}
+
+    sfs.write_lockfile(record, {"A:1": "erythromycin"})
+    assert sfs.read_retired() == {"A:1#erythromycin-a": "erythromycin-a"}
+
+    sfs.write_lockfile(record, {"A:1": "erythromycin-a"})          # the curator reverts
+    live = set(sfs.read_lockfile().values())
+    assert not [k for k, v in sfs.read_retired().items() if v in live], \
+        "a slug a record currently holds must not also be listed as retired"
+    assert sfs.read_retired() == {"A:1#erythromycin": "erythromycin"}

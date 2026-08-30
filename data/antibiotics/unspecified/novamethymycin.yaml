@@ -1,0 +1,52 @@
+identifier: CHEBI:77652
+label: novamethymycin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A twelve-membered macrolide antibiotic that is biosynthesised by Streptomyces
+  venezuelae.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (3R,4S,5S,7R,9E,11R,12S)-11-hydroxy-12-[(1R)-1-hydroxyethyl]-3,5,7,11-tetramethyl-2,8-dioxooxacyclododec-9-en-4-yl
+    3,4,6-trideoxy-3-(dimethylamino)-β-D-xylo-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:25105
+- CHEBI:51689
+- CHEBI:63367
+xrefs:
+- metacyc.compound:CPD-15998
+- reaxys:8953976
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: C[C@@H]1C[C@H](N(C)C)[C@@H](O)[C@H](O[C@H]2[C@@H](C)C[C@@H](C)C(=O)/C=C/[C@](C)(O)[C@@H]([C@@H](C)O)OC(=O)[C@@H]2C)O1
+  standard_inchi: InChI=1S/C25H43NO8/c1-13-11-14(2)21(33-24-20(29)18(26(7)8)12-15(3)32-24)16(4)23(30)34-22(17(5)27)25(6,31)10-9-19(13)28/h9-10,13-18,20-22,24,27,29,31H,11-12H2,1-8H3/b10-9+/t13-,14+,15-,16-,17-,18+,20-,21+,22-,24+,25+/m1/s1
+  standard_inchi_key: HYJMTIGQCJGKFQ-CGNAQTDSSA-N
+  molecular_formula: C25H43NO8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 485.618
+  monoisotopic_mass: 485.29887
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:77652
+  source_label: novamethymycin
+  minted_identifier: antibioticmech:chebi-e2c53da580
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:52:31Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

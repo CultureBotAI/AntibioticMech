@@ -1,0 +1,56 @@
+identifier: CHEBI:327119
+label: azetidin-2-one
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An unsubstituted β-lactam compound.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 2-Azetidinone
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Propiolactam
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: β-Propiolactam
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35627
+- CHEBI:88225
+xrefs:
+- cas:930-21-2
+- gmelin:719474
+- reaxys:104563
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: O=C1CCN1
+  standard_inchi: InChI=1S/C3H5NO/c5-3-1-2-4-3/h1-2H2,(H,4,5)
+  standard_inchi_key: MNFORVFSTILPAW-UHFFFAOYSA-N
+  molecular_formula: C3H5NO
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 71.079
+  monoisotopic_mass: 71.03711
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:327119
+  source_label: azetidin-2-one
+  minted_identifier: antibioticmech:chebi-06a1ce4ca6
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:22Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:52:24Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

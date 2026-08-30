@@ -1,0 +1,94 @@
+identifier: CHEBI:55548
+label: sulfamoxole
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfonamide antibiotic in which 4-aminobenzenesulfonic acid and 4,5-dimethyl-1,3-oxazol-2-amine
+  have combined to form the sulfonamide bond.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sulfamoxol
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfamoxolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-amino-N-(4,5-dimethyl-1,3-oxazol-2-yl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(p-Aminobenzenesulfonamido)-4,5-dimethyloxazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2-(p-Aminobenzolsulfonamido)-4,5-dimethyloxazol
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4,5-Dimethyl-2-sulfanilamidooxazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Amino-N-(4,5-dimethyl-2-oxazolyl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N(sup 1)-(4,5-Dimethyl-2-oxazolyl)sulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-(4,5-Dimethyl-2-oxazolyl)sulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Oxasulfa
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfadimethyloxazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulphamoxole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: p-Aminobenzenesulfonyl-2-amino-4,5-dimethyloxazole
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35358
+- CHEBI:35790
+- CHEBI:87228
+xrefs:
+- beilstein:248434
+- cas:729-99-7
+- drugbank:DB08798
+- drugcentral:2520
+- kegg.drug:D02516
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: Cc1nc(NS(=O)(=O)c2ccc(N)cc2)oc1C
+  standard_inchi: InChI=1S/C11H13N3O3S/c1-7-8(2)17-11(13-7)14-18(15,16)10-5-3-9(12)4-6-10/h3-6H,12H2,1-2H3,(H,13,14)
+  standard_inchi_key: CYFLXLSBHQBMFT-UHFFFAOYSA-N
+  molecular_formula: C11H13N3O3S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 267.31
+  monoisotopic_mass: 267.06776
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:55548
+  source_label: sulfamoxole
+  minted_identifier: antibioticmech:chebi-0354d39b59
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:06:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:52:26Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

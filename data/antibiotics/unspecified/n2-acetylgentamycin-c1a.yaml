@@ -1,0 +1,49 @@
+identifier: CHEBI:28147
+label: N2'-acetylgentamycin C1a
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+synonyms:
+- synonym_text: (1R,2S,3S,4R,6S)-4,6-diamino-3-[3-deoxy-4-C-methyl-3-(methylamino)-β-L-arabinopyranosyloxy]-2-hydroxycyclohexyl
+    2-acetamido-6-amino-2,3,4,6-tetradeoxy-α-D-erythro-hexopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N2'-Acetylgentamicin C1a
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:21805
+xrefs:
+- kegg.compound:C03524
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: CN[C@@H]1[C@@H](O)[C@@H](O[C@@H]2[C@@H](O)[C@H](O[C@H]3O[C@H](CN)CC[C@H]3NC(C)=O)[C@@H](N)C[C@H]2N)OC[C@]1(C)O
+  standard_inchi: InChI=1S/C21H41N5O8/c1-9(27)26-13-5-4-10(7-22)32-19(13)33-16-11(23)6-12(24)17(14(16)28)34-20-15(29)18(25-3)21(2,30)8-31-20/h10-20,25,28-30H,4-8,22-24H2,1-3H3,(H,26,27)/t10-,11-,12+,13+,14-,15+,16+,17-,18+,19+,20+,21-/m0/s1
+  standard_inchi_key: RLGSXXMFPPOROB-JOYMZIHVSA-N
+  molecular_formula: C21H41N5O8
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 491.586
+  monoisotopic_mass: 491.29551
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:28147
+  source_label: N2'-acetylgentamycin C1a
+  minted_identifier: antibioticmech:chebi-f2d851781e
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:21Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:52:22Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

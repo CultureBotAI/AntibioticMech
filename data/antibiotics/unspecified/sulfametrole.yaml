@@ -1,0 +1,64 @@
+identifier: CHEBI:88258
+label: sulfametrole
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfonamide obtained by formal condensation of the sulfo group of 4-aminobenzenesulfonic
+  acid with the amino group of 4-methoxy-1,2,5-thiadiazol-3-amine.
+definition_source: ChEBI
+synonyms:
+- synonym_text: sulfametrol
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfametrolum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-amino-N-(4-methoxy-1,2,5-thiadiazol-3-yl)benzene-1-sulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-(4-Methoxy-1,2,5-thiadiazol-3-yl)sulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35618
+- CHEBI:38099
+- CHEBI:48975
+- CHEBI:87228
+xrefs:
+- cas:32909-92-5
+- drugcentral:2518
+- kegg.drug:D08541
+- reaxys:813310
+- wikipedia.en:Sulfametrole
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: COc1nsnc1NS(=O)(=O)c1ccc(N)cc1
+  standard_inchi: InChI=1S/C9H10N4O3S2/c1-16-9-8(11-17-12-9)13-18(14,15)7-4-2-6(10)3-5-7/h2-5H,10H2,1H3,(H,11,13)
+  standard_inchi_key: IZOYMGQQVNAMHS-UHFFFAOYSA-N
+  molecular_formula: C9H10N4O3S2
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 286.338
+  monoisotopic_mass: 286.01943
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:88258
+  source_label: sulfametrole
+  minted_identifier: antibioticmech:chebi-f2f9c98194
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:52:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

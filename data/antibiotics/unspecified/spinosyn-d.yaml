@@ -1,0 +1,73 @@
+identifier: CHEBI:9232
+label: spinosyn D
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A spinosyn in which the sugar amino and hydroxy groups are globally methylated
+  with an additional methyl substituent attached to the tetracyclic skeleton. One
+  of the two active ingredients of spinosad.
+definition_source: ChEBI
+synonyms:
+- synonym_text: (2S,3aR,5aS,5bS,9S,13S,14R,16aS,16bS)-13-{[(2R,5S,6R)-5-(dimethylamino)-6-methyltetrahydro-2H-pyran-2-yl]oxy}-9-ethyl-4,14-dimethyl-7,15-dioxo-2,3,3a,5a,5b,6,7,9,10,11,12,13,14,15,16a,16b-hexadecahydro-1H-as-indaceno[3,2-d]oxacyclododecin-2-yl
+    6-deoxy-2,3,4-tri-O-methyl-α-L-mannopyranoside
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: A 83543D
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Spinosad factor D
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Spinosyn D
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:39207
+- CHEBI:39210
+xrefs:
+- cas:131929-63-0
+- kegg.compound:C11056
+- patent:EP1252820
+- patent:EP1380209
+- patent:US2003026822
+- patent:US2003087838
+- patent:US2004048813
+- patent:US2004109883
+- patent:US2010298137
+- patent:US6727228
+- patent:US7030095
+- patent:WO2006127322
+- reaxys:8181763
+- wikipedia.en:Spinosad
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: '[H][C@@]12C=C3C(=O)[C@H](C)[C@@H](O[C@H]4CC[C@H](N(C)C)[C@@H](C)O4)CCC[C@H](CC)OC(=O)C[C@@]3([H])[C@]1([H])C=C(C)[C@]1([H])C[C@@H](O[C@@H]3O[C@@H](C)[C@H](OC)[C@@H](OC)[C@H]3OC)C[C@@]21[H]'
+  standard_inchi: InChI=1S/C42H67NO10/c1-11-26-13-12-14-35(53-37-16-15-34(43(6)7)24(4)49-37)23(3)38(45)33-20-31-29(32(33)21-36(44)51-26)17-22(2)28-18-27(19-30(28)31)52-42-41(48-10)40(47-9)39(46-8)25(5)50-42/h17,20,23-32,34-35,37,39-42H,11-16,18-19,21H2,1-10H3/t23-,24-,25+,26+,27-,28+,29-,30-,31-,32+,34+,35+,37+,39+,40-,41-,42+/m1/s1
+  standard_inchi_key: RDECBWLKMPEKPM-PSCJHHPTSA-N
+  molecular_formula: C42H67NO10
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 745.995
+  monoisotopic_mass: 745.4765
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:9232
+  source_label: spinosyn D
+  minted_identifier: antibioticmech:chebi-64d9be82fe
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:52:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

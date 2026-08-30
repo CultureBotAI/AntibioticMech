@@ -154,7 +154,7 @@ class Concept:
 
     __slots__ = ("source", "source_id", "label", "definition", "definition_refs",
                  "roles", "parents", "xrefs", "synonyms", "structure", "structural_class",
-                 "structural_class_id", "minted", "chebi_class_ids")
+                 "structural_class_id", "minted")
 
     def __init__(self, source, source_id, label):
         self.source = source
@@ -169,7 +169,6 @@ class Concept:
         self.structure: dict = {}
         self.structural_class = ""
         self.structural_class_id = ""
-        self.chebi_class_ids: list[str] = []
         self.minted = ""
 
 
@@ -233,8 +232,7 @@ def structure_from_pubchem(row: dict) -> dict:
 
 
 def classify(roles: list[str], conf: dict, from_aro: bool,
-             aro_class_ids: tuple[str, ...] = (),
-             chebi_class_ids: tuple[str, ...] = ()) -> str:
+             aro_class_ids: tuple[str, ...] = ()) -> str:
     """Assign the filesystem/reporting class.
 
     Order of evidence, strongest first:
@@ -246,15 +244,15 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
        value filed both as antibacterials.
     2. **ChEBI roles**, by the priority table in conf/sources.yaml (narrower
        target group first, bacteria before fungi and protozoa).
-    3. **A ChEBI structural class that names a target group** — "beta-lactam
-       antibiotic", "aminoglycoside antibiotic". Weaker than a role, because it
-       describes what the compound IS rather than what it acts on, so it is
-       consulted only when no role names a group. It exists because trusting
-       only reviewed relation edges left 20 unambiguous antibacterials —
-       tazobactam, kanamycin B, sulfathiazole — with nothing but the generic
-       `antimicrobial agent` role and therefore no target group at all.
-    4. **The ARO fallback**, ANTIBACTERIAL — for a CARD molecule with no ChEBI
+    3. **The ARO fallback**, ANTIBACTERIAL — for a CARD molecule with no ChEBI
        role and no group-naming drug class.
+
+    A fourth step, filing on a ChEBI structural class whose name states a target
+    group, was tried and removed: a chemical class is not a target claim, and it
+    filed chemotherapy drugs, an insecticide and bare ring scaffolds as
+    antibacterial. See conf/sources.yaml. Compounds whose only reviewed role is
+    the generic `antimicrobial agent` keep ANTIMICROBIAL_UNSPECIFIED, which is
+    what the sources say.
 
     Classes whose names do not state a group are absent from the map on purpose;
     see conf/sources.yaml.
@@ -272,11 +270,6 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
             best = entry
     if best:
         return best["class"]
-
-    chebi_map = conf.get("chebi_class_to_class", {})
-    for class_id in chebi_class_ids:
-        if class_id in chebi_map:
-            return chebi_map[class_id]
 
     if from_aro:
         return "ANTIBACTERIAL"
@@ -304,7 +297,6 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
             if text and text != row["name"]:
                 concept.synonyms.append((text, SYNONYM_TYPE.get(kind, "RELATED_SYNONYM")))
         concept.structure = structure_from_chebi(row)
-        concept.chebi_class_ids = split_pipe(row.get("structural_class_ids", ""))
         concepts.append(concept)
 
     for row in aro_rows:
@@ -326,7 +318,6 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
         # under the ARO fallback class.
         if chebi_row:
             concept.roles = split_pipe(chebi_row["role_ids"])
-            concept.chebi_class_ids = split_pipe(chebi_row.get("structural_class_ids", ""))
         if chebi_row and chebi_row["standard_inchi_key"]:
             concept.structure = structure_from_chebi(chebi_row)
         elif row["aro_id"] in pubchem:
@@ -475,7 +466,21 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
             # class term through in silence.
             target = chebi_rows.get(override)
             concept_key = concept.structure.get("standard_inchi_key", "")
-            if override.startswith("CHEBI:"):
+            if not override.startswith("CHEBI:"):
+                # Only ChEBI targets can be checked: chebi_rows is the only
+                # inventory carrying an identifier-to-structure mapping. An
+                # unvalidatable override is refused rather than trusted — it
+                # would stamp grounding_status EXACT against a target nothing
+                # confirmed exists, on a path where the disagreement between
+                # identifier and structure is not merely unchecked but
+                # uncheckable.
+                raise SystemExit(
+                    f"decision on {concept.minted} grounds {concept.label!r} to {override}, "
+                    f"which is not a ChEBI CURIE. Grounding targets must be ChEBI entries, "
+                    f"because that is the only inventory this repository can check a "
+                    f"structure against."
+                )
+            if True:
                 if target is None:
                     raise SystemExit(
                         f"decision on {concept.minted} grounds {concept.label!r} to {override}, "
@@ -590,7 +595,6 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
         "antimicrobial_class": classify(
             roles, conf, from_aro=bool(aro),
             aro_class_ids=tuple(c.structural_class_id for c in aro if c.structural_class_id),
-            chebi_class_ids=tuple(_dedupe(i for c in group for i in c.chebi_class_ids)),
         ),
         "curation_status": "SEEDED",
         "grounding_status": grounding_status,
@@ -732,9 +736,6 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
                 }],
             })
         records[identifier]["resistance_mechanisms"] = items
-        _SEEDED_CARD_IDS.setdefault(identifier, {})["resistance_mechanisms"] = {
-            _item_aro_id(i) for i in items
-        }
         _history_last(records[identifier])
 
     grouped = defaultdict(list)
@@ -757,9 +758,6 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
             }
             items.append(item)
         records[identifier]["molecular_targets"] = items
-        _SEEDED_CARD_IDS.setdefault(identifier, {})["molecular_targets"] = {
-            _item_aro_id(i) for i in items
-        }
         _history_last(records[identifier])
 
 
@@ -767,11 +765,6 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
 # writing
 # --------------------------------------------------------------------------
 
-# Set at seed time to the (field, ARO id) pairs this run actually wrote, per
-# record. Ownership is then a fact about what the seeder produced, not a guess
-# from a citation prefix — a curator citing an ARO determinant CARD does not
-# link to this molecule was previously classified seeder-owned and deleted.
-_SEEDED_CARD_IDS: dict[str, dict[str, set[str]]] = {}
 
 
 def _item_aro_id(item: dict) -> str:
@@ -785,17 +778,22 @@ def _item_aro_id(item: dict) -> str:
 CARD_NOTE_MARKER = "CARD/ARO asserts"
 
 
-def is_card_sourced(item: dict, seeded_ids: set[str] | None = None) -> bool:
+def is_card_sourced(item: dict) -> bool:
     """True when the seeder wrote this item, rather than a curator.
 
-    Two independent signals, either sufficient: the ARO id is one this run
-    emitted for the record and field (exact, available while seeding), or the
-    item carries the seeder's own note marker (available to anyone reading a
-    record off disk, which is what verify-corpus does).
+    One signal: the item cites only ARO terms AND carries the seeder's own note
+    marker. Both halves are needed. The prefix alone deleted a curator's item
+    that cited an ARO determinant CARD does not link to this molecule; the ARO
+    id alone — a second signal tried and removed — deleted a curator's upgrade
+    of a seeded item to a primary citation, which is the workflow
+    docs/HARMONIZATION.md prescribes.
 
-    A curator item that cites an ARO determinant CARD does not link to this
-    molecule matches neither, and is carried forward — the case that motivated
-    replacing the old prefix-only test.
+    Deliberate consequence: an item carrying an emitted ARO id but NOT the
+    marker reads as the curator's and is kept. A record seeded before the marker
+    existed, or one whose notes were reformatted, would therefore survive a
+    re-seed and be emitted twice. No such record exists — verify-corpus is green
+    — and preserving a curator's work is the error worth making in this
+    direction.
     """
     evidence = item.get("evidence") or []
     if not evidence:
@@ -807,17 +805,12 @@ def is_card_sourced(item: dict, seeded_ids: set[str] | None = None) -> bool:
     # the seeder's and reverted it on the next re-seed.
     if not all(str(e.get("reference", "")).startswith("ARO:") for e in evidence):
         return False
-    # An item carrying the marker but an id this run did not emit is a stale
-    # seeded row and is still the seeder's to drop, so the marker alone answers
-    # ownership; `seeded_ids` is accepted for callers that want to log the
-    # narrower question but never widens the answer.
     return any(CARD_NOTE_MARKER in str(e.get("notes") or "") for e in evidence)
 
 
 def card_sourced_view(record: dict, field: str) -> list:
     """The CARD-seeded items of `field`, in seed order — what verify-corpus compares."""
-    seeded_ids = _SEEDED_CARD_IDS.get(record.get("identifier", ""), {}).get(field)
-    return [item for item in (record.get(field) or []) if is_card_sourced(item, seeded_ids)]
+    return [item for item in (record.get(field) or []) if is_card_sourced(item)]
 
 
 def merge_with_existing(record: dict, existing: dict) -> dict:
@@ -853,9 +846,7 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     # curator-upgraded ones are kept, after them.
     for field in ("molecular_targets", "resistance_mechanisms"):
         seeded_items = list(record.get(field) or [])
-        seeded_ids = _SEEDED_CARD_IDS.get(record.get("identifier", ""), {}).get(field, set())
-        curator_items = [i for i in (existing.get(field) or [])
-                         if not is_card_sourced(i, seeded_ids)]
+        curator_items = [i for i in (existing.get(field) or []) if not is_card_sourced(i)]
         if seeded_items or curator_items:
             merged[field] = seeded_items + curator_items
         else:
@@ -976,10 +967,28 @@ def write_lockfile(records: dict[str, dict], slugs: dict[str, str],
             retired_dates.setdefault(f"{identifier}#{slug}", today)
     for identifier in list(retired):
         if "#" in identifier:
-            continue  # a retired slug of a still-present identifier; never revived
-        if identifier in records:
-            retired.pop(identifier)
-            retired_dates.pop(identifier, None)
+            # A slug this identifier used to hold. It stays reserved unless the
+            # identifier has taken it back — see below.
+            owner, _, old_slug = identifier.partition("#")
+            if owner in rows and rows[owner][1] == old_slug:
+                # The identifier returned to a slug it previously gave up (a
+                # rename, then a revert). Keeping the row would make the ledger
+                # claim a live URL is retired, which is what
+                # test_retired_slugs_are_never_reissued rejects — and no code
+                # path could clear it, so the gate would stay red forever.
+                retired.pop(identifier)
+                retired_dates.pop(identifier, None)
+            continue
+        if identifier not in records:
+            continue
+        if only is not None and identifier not in only:
+            # A partial run builds every record in memory but WRITES only the
+            # named ones. Un-retiring on the strength of the in-memory set would
+            # drop an identifier from the ledger without adding it to PATHS.tsv,
+            # leaving it in neither file and its published slug reserved nowhere.
+            continue
+        retired.pop(identifier)
+        retired_dates.pop(identifier, None)
     if not retired and not RETIRED_FILE.exists():
         return
     with RETIRED_FILE.open("w", newline="", encoding="utf-8") as fh:

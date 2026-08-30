@@ -1,0 +1,75 @@
+identifier: CHEBI:192798
+label: sulfociprofloxacin
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organosulfonic acid that is ciprofloxacin carrying a sulfo group at
+  position 4 of the piperazine ring. It is a metabolite of ciprofloxacin.
+definition_source: ChEBI
+synonyms:
+- synonym_text: 1-cyclopropyl-6-fluoro-4-oxo-7-(4-sulfopiperazin-1-yl)-1,4-dihydroquinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 1-cyclopropyl-6-fluoro-1,4-dihydro-4-oxo-7-(4-sulfopiperazino)-3-quinolinecarboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: BAY-s-9435
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bay s 9435
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bay-s 9435
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: ciprofloxacin piperazinyl-N4-sulfate
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: sulfo-ciprofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:23765
+- CHEBI:26512
+- CHEBI:33551
+- CHEBI:46848
+- CHEBI:51454
+- CHEBI:86324
+- CHEBI:87211
+xrefs:
+- cas:105093-21-8
+- hmdb:HMDB0242136
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: O=C(O)c1cn(C2CC2)c2cc(N3CCN(S(=O)(=O)O)CC3)c(F)cc2c1=O
+  standard_inchi: InChI=1S/C17H18FN3O6S/c18-13-7-11-14(21(10-1-2-10)9-12(16(11)22)17(23)24)8-15(13)19-3-5-20(6-4-19)28(25,26)27/h7-10H,1-6H2,(H,23,24)(H,25,26,27)
+  standard_inchi_key: SDLYZOYQWKDWJG-UHFFFAOYSA-N
+  molecular_formula: C17H18FN3O6S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 411.411
+  monoisotopic_mass: 411.09003
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:192798
+  source_label: sulfociprofloxacin
+  minted_identifier: antibioticmech:chebi-ada070c241
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T05:06:20Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:52:21Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

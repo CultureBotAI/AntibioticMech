@@ -1,0 +1,112 @@
+identifier: CHEBI:32166
+label: sulfisomidine
+antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
+curation_status: SEEDED
+grounding_status: EXACT
+definition: A sulfonamide consisting of pyrimidine having methyl substituents at the
+  2- and 6-positions and a 4-aminobenzenesulfonamido group at the 4-position.
+definition_source: ChEBI
+synonyms:
+- synonym_text: solfisomidina
+  synonym_type: INN
+  source: chebi
+- synonym_text: sulfaisodimidinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-amino-N-(2,6-dimethylpyrimidin-4-yl)benzenesulfonamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (p-Aminobenzolsulfonyl)-4-amino-2,6-dimethylpyrimidin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: (p-Aminobenzolsulfonyl)-4-amino-2,6-dimethylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,4-Dimethyl-6-sulfanilamidopyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 2,6-Dimethyl-4-sulfanilamidopyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Sulfa-2,6-dimethylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 4-Sulfanilamido-2,6-dimethylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(4-Aminobenzenesulfonamido)-2,4-dimethylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(p-Aminobenzenesulfonamido)-2,4-dimethylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-(p-Aminobenzenesulfonyl)amino-2,4-dimethylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6-Sulfanilamido-2,4-dimethylpyrimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: N1-(2,6-Dimethyl-4-pyrimidinyl)sulfanilamide
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfaisodimidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfasomidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulfisomidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Sulphasomidine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:35358
+- CHEBI:39447
+- CHEBI:87228
+xrefs:
+- beilstein:261305
+- cas:515-64-0
+- drugcentral:2526
+- kegg.drug:D01526
+- patent:FR886009
+- patent:US2351333
+- patent:US2386852
+- patent:US2429184
+activity_roles:
+- CHEBI:33281
+chemical_structure:
+  smiles: Cc1cc(NS(=O)(=O)c2ccc(N)cc2)nc(C)n1
+  standard_inchi: InChI=1S/C12H14N4O2S/c1-8-7-12(15-9(2)14-8)16-19(17,18)11-5-3-10(13)4-6-11/h3-7H,13H2,1-2H3,(H,14,15,16)
+  standard_inchi_key: YZMCKZRAOLZXAZ-UHFFFAOYSA-N
+  molecular_formula: C12H14N4O2S
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 278.337
+  monoisotopic_mass: 278.08375
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:32166
+  source_label: sulfisomidine
+  minted_identifier: antibioticmech:chebi-592d4a605e
+  role_terms:
+  - CHEBI:33281
+  source_version: '2026-08-29'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:06:22Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T05:52:23Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
