@@ -489,7 +489,12 @@ def test_the_ledger_holds_through_repeated_renames_and_a_return(tmp_path, monkey
 
 
 def test_a_canary_does_not_unretire_identifiers_it_did_not_write(tmp_path, monkeypatch):
-    """`records` is the FULL built set even on a partial run — `--only` narrows
+    """Both ledger defects were invisible to a green suite because every existing
+    test exercised the INSIDE of the `--only` set. This one and
+    `test_a_rename_and_a_revert_do_not_wedge_the_gate` hold that line only as
+    long as they keep testing the outside of it — keep A:3 unnamed by `only`.
+
+    `records` is the FULL built set even on a partial run — `--only` narrows
     what is WRITTEN, not what is built. Un-retiring on the strength of the
     in-memory set dropped every returning identifier from the ledger while
     writing a PATHS.tsv row for just one, leaving the rest in neither file with
