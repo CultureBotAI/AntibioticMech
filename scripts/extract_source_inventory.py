@@ -534,7 +534,7 @@ def _row_count(path: Path) -> int:
 
 
 def build_manifest(conf: dict, inventories: dict[str, Path]) -> dict:
-    downloads = {}
+    downloads: dict[str, dict] = {}
     for name in conf["chebi"]["files"]:
         p = DOWNLOAD_DIR / name
         if p.exists():
@@ -550,8 +550,19 @@ def build_manifest(conf: dict, inventories: dict[str, Path]) -> dict:
             "bytes": aro.stat().st_size,
             "sha256": sha256_of(aro),
         }
+    # When the upstream files were actually FETCHED, not when this script last
+    # ran. `download()` reuses a cached file without re-fetching, so stamping
+    # today unconditionally claimed a retrieval that never happened — and
+    # because `source_version` is a seeded field, that flipped on all 2923
+    # records and gave every one a RESEEDED_FROM_SOURCES event for an update
+    # that did not occur. The files' own mtimes are the honest answer and, unlike
+    # carrying the previous manifest forward, they correct a date already wrong.
+    fetched = [(DOWNLOAD_DIR / name).stat().st_mtime
+               for name in downloads if (DOWNLOAD_DIR / name).exists()]
+    retrieved_on = (date.fromtimestamp(max(fetched)) if fetched else date.today()).isoformat()
+
     return {
-        "retrieved_on": date.today().isoformat(),
+        "retrieved_on": retrieved_on,
         "generated_by": "scripts/extract_source_inventory.py",
         "sources": {
             "chebi": {"homepage": conf["chebi"]["homepage"], "license": conf["chebi"]["license"],

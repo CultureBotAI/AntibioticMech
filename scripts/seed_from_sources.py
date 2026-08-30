@@ -775,6 +775,28 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     return record
 
 
+def _collapse_duplicate_events(history: list[dict]) -> list[dict]:
+    """Drop a curation event indistinguishable from the one before it.
+
+    An append-only trail earns its keep by recording what happened. Two adjacent
+    events with the same curator, action and description record nothing a reader
+    can tell apart, and they accumulated here for a reason worth naming: a
+    falsified `retrieved_on` flipped `source_version` on every record, so every
+    record logged a re-seed "from updated inventories" that had not been updated.
+    Timestamps differ and are deliberately not compared — that is exactly what
+    made the duplicates look distinct.
+    """
+    collapsed: list[dict] = []
+    for event in history:
+        if collapsed and isinstance(event, dict) and isinstance(collapsed[-1], dict):
+            same = all(event.get(k) == collapsed[-1].get(k)
+                       for k in ("curator", "action", "changes", "llm_assisted"))
+            if same:
+                continue
+        collapsed.append(event)
+    return collapsed
+
+
 def _history_last(record: dict) -> None:
     """Keep curation_history at the end of the emitted YAML.
 
@@ -939,8 +961,13 @@ def _claims_mode_of_action(notes: str) -> bool:
     # mid-string with no newline to find it by. Anchor on the start of the text
     # or on a sentence boundary instead, including the separators a curator
     # actually reaches for.
-    return bool(re.search(r"(?:^|[\n.;:!?)\]]|\s[-\u2013\u2014])\s*" + re.escape(CURATOR_NOTE_MARKER),
-                          text.strip(), re.IGNORECASE))
+    # Case-SENSITIVE and literal: `docs/CURATION.md` documents the exact token,
+    # and matching case-insensitively made an ordinary signature line —
+    # ". curator: jane" — silently claim the field. The boundary class covers
+    # the separators a curator actually types, including a comma, a quote and a
+    # dash with or without a leading space.
+    return bool(re.search(r"""(?:^|[\n.,;:!?)\]"'\u2013\u2014-])\s*""" + re.escape(CURATOR_NOTE_MARKER),
+                          text.strip()))
 
 
 def is_card_sourced(item: dict) -> bool:
@@ -1085,6 +1112,8 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
             action="RESEEDED_FROM_SOURCES",
             changes="Re-seeded from updated data/raw/ inventories",
         )
+    merged["curation_history"] = _collapse_duplicate_events(
+        merged.get("curation_history") or [])
     _history_last(merged)
     return merged
 

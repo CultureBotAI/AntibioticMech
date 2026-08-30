@@ -72,7 +72,7 @@ Identity: **2673** records (91%) are grounded in a ChEBI term; **250** keep a mi
 
 Corroboration: **281** records carry source concepts from both ChEBI and CARD/ARO; **2342** come from ChEBI alone and **300** from CARD alone.
 
-Mechanism layer: **206** records carry a molecular target and **279** carry resistance determinants, both seeded from CARD; **420** carry a mode of action seeded from ChEBI's mechanism roles; **0** carry a curated causal graph. That last number is the work.
+Mechanism layer: **206** records carry a molecular target and **279** carry resistance determinants, both seeded from CARD; **416** carry a mode of action seeded from ChEBI's mechanism roles; **0** carry a curated causal graph. That last number is the work.
 
 <!-- END GENERATED CORPUS STATS -->
 
