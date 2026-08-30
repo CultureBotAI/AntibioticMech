@@ -27,14 +27,18 @@ def test_every_referenced_script_exists(repo_root):
     assert missing == set(), sorted(missing)
 
 
+# A recipe header: a name, optional parameters, then a colon at end of line.
+# `:=` (a variable assignment) and `set …` are excluded, or `just corpus` would
+# look like a valid target because `corpus := "data/antibiotics"` exists.
+RECIPE = re.compile(r"^([a-z][a-z0-9-]*)(?:\s+[^:=\n]*)?:(?!=)\s*$", re.MULTILINE)
+
+
 def test_every_referenced_just_target_exists(repo_root):
-    """`just --list` is the authority on what the justfile offers."""
-    listed = subprocess.run(["just", "--summary"], cwd=repo_root,
-                            capture_output=True, text=True)
-    if listed.returncode != 0:
-        import pytest
-        pytest.skip("just is not installed")
-    targets = set(listed.stdout.split())
+    """Parsed from the justfile rather than from `just --summary`: CI runners do
+    not have `just` installed, and a test that needs a tool the gate does not
+    install is a test that fails for the wrong reason."""
+    justfile = (repo_root / "justfile").read_text(encoding="utf-8")
+    targets = set(RECIPE.findall(justfile))
     missing = set()
     for name in DOC_FILES:
         for ref in JUST_REF.findall((repo_root / name).read_text(encoding="utf-8")):
