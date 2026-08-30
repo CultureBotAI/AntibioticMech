@@ -278,3 +278,28 @@ def test_ambiguous_mechanism_determinants_resolve_deterministically(records):
     if seen:
         # One answer per determinant, corpus-wide — not one per record.
         assert len(set(seen.values())) <= 2
+
+
+def test_a_seeded_mode_of_action_is_policed_and_a_curators_is_not(repo_root):
+    """`mode_of_action` is both seeded and curator-overridable, so verify-corpus
+    keys the comparison on what the ON-DISK value claims: a value carrying the
+    seeder's note marker must be what the seeder produces, a curator's own value
+    carries none and is theirs to set.
+
+    Without this, a hand-edit falsifying a seeded mechanism passed every gate —
+    the field was in neither SEEDED_FIELDS nor the CARD views.
+    """
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from seed_from_sources import MOA_NOTE_MARKER, seeded_mode_of_action
+
+    seeded = {"mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+              "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:48001 (...)"}
+    assert seeded_mode_of_action(seeded) == "PROTEIN_SYNTHESIS_INHIBITION"
+
+    curated = {"mode_of_action": "MEMBRANE_DISRUPTION",
+               "mode_of_action_notes": "curator: acts on the envelope (PMID:1)"}
+    assert seeded_mode_of_action(curated) is None
+
+    assert seeded_mode_of_action({}) is None

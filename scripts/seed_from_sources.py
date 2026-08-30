@@ -896,6 +896,17 @@ def is_card_sourced(item: dict) -> bool:
     return any(CARD_NOTE_MARKER in str(e.get("notes") or "") for e in evidence)
 
 
+def seeded_mode_of_action(record: dict) -> str | None:
+    """The record's mode_of_action if the SEEDER wrote it, else None.
+
+    The same marker device the CARD mechanism items use, so verify-corpus can
+    police the seeder's own values without reading a curator's as drift.
+    """
+    if MOA_NOTE_MARKER in str(record.get("mode_of_action_notes") or ""):
+        return record.get("mode_of_action")
+    return None
+
+
 def card_sourced_view(record: dict, field: str) -> list:
     """The CARD-seeded items of `field`, in seed order — what verify-corpus compares."""
     return [item for item in (record.get(field) or []) if is_card_sourced(item)]

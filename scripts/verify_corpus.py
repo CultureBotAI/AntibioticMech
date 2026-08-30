@@ -43,6 +43,7 @@ from seed_from_sources import (  # noqa: E402
     merge,
     read_lockfile,
     record_path,
+    seeded_mode_of_action,
 )
 
 # The seeded field list is imported from the seeder so there is one definition
@@ -97,6 +98,16 @@ def main() -> int:
         for field in CARD_FIELDS:
             if card_sourced_view(want, field) != card_sourced_view(actual, field):
                 drifted.append((path, field))
+        # mode_of_action the same way: a value that CLAIMS to be seeded — it
+        # carries the seeder's note marker — must be what the seeder produces.
+        # A curator's own value carries no marker and is theirs to set, so the
+        # comparison is keyed on the on-disk side. Without this a hand-edit
+        # falsifying a seeded mechanism passed every gate. As with the CARD
+        # items, a curator can always take ownership by rewriting the notes;
+        # that is a deliberate escape hatch, not a hole.
+        on_disk_moa = seeded_mode_of_action(actual)
+        if on_disk_moa is not None and on_disk_moa != seeded_mode_of_action(want):
+            drifted.append((path, "mode_of_action"))
 
     unlocked = sorted(set(expected) - set(lockfile))
     stale_lock = sorted(set(lockfile) - set(expected))
