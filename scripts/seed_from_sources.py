@@ -35,6 +35,7 @@ import shutil
 import sys
 from collections import defaultdict
 from datetime import date
+from functools import lru_cache
 from pathlib import Path
 
 import yaml
@@ -136,6 +137,7 @@ def mint(source: str, source_id: str) -> str:
     return f"antibioticmech:{source.lower()}-{digest}"
 
 
+@lru_cache(maxsize=1)
 def load_role_names() -> dict[str, str]:
     """Role CURIE -> label, for citing a role by name rather than by number."""
     path = RAW_DIR / "chebi_role_names.tsv"
@@ -582,7 +584,31 @@ TARGET_BEARING_MODES = {
     "VIRAL_RELEASE_INHIBITION": "ANTIVIRAL",
     "VIRAL_ASSEMBLY_INHIBITION": "ANTIVIRAL",
     "ERGOSTEROL_PATHWAY_INHIBITION": "ANTIFUNGAL",
+    # Its only source roles are 1,3-beta-glucan synthase and chitin synthase,
+    # both fungus-exclusive, even though the enum value itself is target-neutral.
+    "CELL_WALL_SYNTHESIS_INHIBITION": "ANTIFUNGAL",
 }
+
+
+def _cross_activity_note(value: str, antimicrobial_class: str | None) -> str | None:
+    """The caveat for a mechanism that belongs to another of the compound's
+    activities — or to an activity no source has named."""
+    implied = TARGET_BEARING_MODES.get(value)
+    if not implied or not antimicrobial_class or implied == antimicrobial_class:
+        return None
+    if antimicrobial_class == "ANTIMICROBIAL_UNSPECIFIED":
+        # "Two activities" would assert a second activity no source states. The
+        # record simply has no target group, and this mechanism implies one.
+        return (f"ChEBI asserts the role on the compound, and the mechanism implies a "
+                f"{implied.lower().replace('anti', 'anti-')} target while the record has no "
+                f"target group stated at all — evidence a curator can use to file it, not a "
+                f"second activity. Not a curator's mechanistic review.")
+    return (f"ChEBI asserts the role on the compound, but this mechanism belongs to a "
+            f"{implied.lower().replace('anti', 'anti-')} activity while the record is filed "
+            f"as {antimicrobial_class}. Either the compound has both activities, or the "
+            f"filing is wrong — the priority table has put azole antifungals under "
+            f"ANTIBACTERIAL before now. A curator should decide which. Not a curator's "
+            f"mechanistic review.")
 
 
 def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
@@ -617,24 +643,20 @@ def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
 
     if len(values) == 1:
         value = values[0]
-        implied = TARGET_BEARING_MODES.get(value)
-        if implied and antimicrobial_class and implied != antimicrobial_class:
-            # The two fields describe DIFFERENT activities of one compound: the
-            # class is what the record is filed under, this mechanism belongs to
-            # another activity the same compound has. Saying so is the whole
-            # difference between a useful record and a contradictory one.
-            tail = (f"ChEBI asserts the role on the compound, but this mechanism belongs to "
-                    f"its {implied.lower().replace('anti', 'anti-')} activity while the "
-                    f"record is filed as {antimicrobial_class} — one compound, two "
-                    f"activities, and this field describes the mechanism rather than the "
-                    f"filing. A curator should confirm which activity the record is about. "
-                    f"Not a curator's mechanistic review.")
-        return value, f"{MOA_NOTE_MARKER} {cited}. {tail}"
+        return value, f"{MOA_NOTE_MARKER} {cited}. {_cross_activity_note(value, antimicrobial_class) or tail}"
 
+    # The MULTIPLE branch needs the caveat too: a record can carry several
+    # mechanisms and still have one of them belong to another activity.
+    crossed = [v for v in values if _cross_activity_note(v, antimicrobial_class)]
+    extra = ""
+    if crossed:
+        implied = sorted({TARGET_BEARING_MODES[v] for v in crossed})
+        extra = (f" Note that {', '.join(crossed)} implies a {' or '.join(i.lower() for i in implied)} "
+                 f"target while the record is filed as {antimicrobial_class}.")
     return "MULTIPLE", (f"{MOA_NOTE_MARKER}s {cited}, which map to "
                         f"{', '.join(values)}. ChEBI asserts these roles on the compound; "
-                        f"a curator should decide whether one is primary. Not a curator's "
-                        f"mechanistic review.")
+                        f"a curator should decide whether one is primary.{extra} Not a "
+                        f"curator's mechanistic review.")
 
 
 def build_record(identifier: str, grounding_status: str, group: list[Concept],
@@ -697,7 +719,21 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     if structural_class:
         record["structural_class"] = structural_class
         record["structural_class_id"] = structural_class_id
-    mechanism_roles = _dedupe(r for c in group for r in c.mechanism_roles)
+    # When a ChEBI concept merged into this record, IT is the authority on the
+    # compound's mechanism roles. A CARD cross-reference to some OTHER ChEBI id
+    # is then either redundant or wrong, and wrong happens: CARD points cefdinir
+    # at CHEBI:131724, which is iclaprim, a dihydrofolate reductase inhibitor.
+    # Reading roles off that row gave a cephalosporin FOLATE_PATHWAY_INHIBITION
+    # while its own CARD target, eleven lines below, was a penicillin-binding
+    # protein — a record contradicting itself on its face.
+    #
+    # Only a record with no ChEBI concept at all falls back to the cross-
+    # referenced row, which is what keeps econazole, ketoconazole and miconazole
+    # working: their ChEBI entries carry the roles but no structure, so they
+    # never become concepts of their own.
+    chebi_mechanism = _dedupe(r for c in chebi for r in c.mechanism_roles)
+    mechanism_roles = chebi_mechanism if chebi else _dedupe(
+        r for c in group for r in c.mechanism_roles)
     moa = mode_of_action_from_roles(mechanism_roles, conf, load_role_names(),
                                     record["antimicrobial_class"])
     if moa:
@@ -865,6 +901,16 @@ CARD_NOTE_MARKER = "CARD/ARO asserts"
 # re-seed can replace its own work and must leave a curator's alone.
 MOA_NOTE_MARKER = "Assigned from ChEBI role"
 
+# ...and the curator's half of it. Ownership cannot be inferred only from the
+# ABSENCE of the seeder's marker, because the seeded note invites a curator to
+# edit the very field that decides ownership: appending to it left the marker in
+# place and the correction was reverted on the next re-seed, citation and all.
+# A curator writes this prefix to claim the field, and it also lets them VETO —
+# a record carrying the claim with no mode_of_action means "no mechanism should
+# be seeded here", which is the only remedy for a wrong derived value and was
+# previously impossible to express.
+CURATOR_NOTE_MARKER = "CURATOR:"
+
 
 def is_card_sourced(item: dict) -> bool:
     """True when the seeder wrote this item, rather than a curator.
@@ -932,16 +978,20 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     # mode_of_action is seeded from ChEBI's roles but a curator's judgement
     # outranks it, so ownership is decided by the marker rather than by the field
     # name — the same device the CARD mechanism items use.
+    existing_moa_notes = str(existing.get("mode_of_action_notes") or "")
     curator_owns_moa = (
-        "mode_of_action" in existing
-        and MOA_NOTE_MARKER not in str(existing.get("mode_of_action_notes") or "")
+        CURATOR_NOTE_MARKER in existing_moa_notes
+        or ("mode_of_action" in existing and MOA_NOTE_MARKER not in existing_moa_notes)
     )
     if curator_owns_moa:
-        merged["mode_of_action"] = existing["mode_of_action"]
-        if existing.get("mode_of_action_notes"):
-            merged["mode_of_action_notes"] = existing["mode_of_action_notes"]
-        else:
-            merged.pop("mode_of_action_notes", None)
+        # Includes the veto: a curator note with no value means the field stays
+        # empty, and the seeder must not fill it back in.
+        merged.pop("mode_of_action", None)
+        merged.pop("mode_of_action_notes", None)
+        if "mode_of_action" in existing:
+            merged["mode_of_action"] = existing["mode_of_action"]
+        if existing_moa_notes:
+            merged["mode_of_action_notes"] = existing_moa_notes
 
     # The seeder owns structure-collision todos; every other discussion is the
     # curator's and is appended after them.

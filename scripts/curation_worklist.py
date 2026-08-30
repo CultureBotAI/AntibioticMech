@@ -38,6 +38,7 @@ from seed_from_sources import (  # noqa: E402
     build_concepts,
     load_decisions,
     merge,
+    seeded_mode_of_action,
 )
 
 CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
@@ -73,7 +74,13 @@ def corpus_records() -> list[dict]:
 def mechanism_queue(records: list[dict]) -> list[dict]:
     rows = []
     for record in records:
-        if record.get("causal_graphs") or record.get("mode_of_action"):
+        # A SEEDED mode_of_action does not retire a record from this queue: its
+        # own note asks a curator to confirm the value, and writing that note
+        # used to remove the record from the only list where a curator would
+        # find it. 433 records vanished the day mode_of_action was first seeded,
+        # 68 of them carrying the CARD evidence that puts them at the top.
+        if record.get("causal_graphs") or seeded_mode_of_action(record) is None and \
+                record.get("mode_of_action"):
             continue
         targets = len(record.get("molecular_targets") or [])
         resistance = len(record.get("resistance_mechanisms") or [])

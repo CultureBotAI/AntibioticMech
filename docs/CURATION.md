@@ -42,6 +42,31 @@ A record moves from `SEEDED` to `REVIEWED` when a curator has checked all of:
 A record with a curated `causal_graph` is the goal state, not the entry
 requirement.
 
+## Correcting or vetoing a seeded mode of action
+
+`mode_of_action` is seeded from ChEBI's mechanism roles, and its note names the
+role it came from. To take the field over, write a note beginning `CURATOR:`.
+
+```yaml
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: >-
+  Assigned from ChEBI role CHEBI:67268 (...). CURATOR: corrected — the integrase
+  role belongs to this compound's antiviral activity, PMID:123.
+```
+
+The same marker with **no** `mode_of_action` is a veto: it says no mechanism
+should be seeded here, and the seeder will leave the field empty rather than
+writing its own value back.
+
+```yaml
+mode_of_action_notes: >-
+  CURATOR: cefdinir is a cephalosporin. CARD cross-references it to an unrelated
+  ChEBI entry, so any derived mechanism is wrong. Leave blank.
+```
+
+Both survive `just seed-apply`. Without the marker the seeder still owns the
+field, which is what lets it correct its own past work when the map improves.
+
 ## Evidence rules
 
 - `AntibioticRecord.evidence` is **optional**: a seeded record inherits

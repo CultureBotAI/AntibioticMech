@@ -206,7 +206,12 @@ classes:
         range: ModeOfActionEnum
 
       mode_of_action_notes:
-        description: Curator rationale for the mode-of-action assignment.
+        description: >-
+          Provenance and rationale for `mode_of_action`, and the field that
+          decides who owns it. A seeded value names the ChEBI role it came from;
+          a curator claims the field — to correct a value, or to veto one by
+          leaving `mode_of_action` empty — by writing a note beginning `CURATOR:`.
+          See docs/HARMONIZATION.md.
         range: string
 
       cidality:

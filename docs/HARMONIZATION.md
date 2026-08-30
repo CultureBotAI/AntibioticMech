@@ -107,9 +107,9 @@ antibiotic subtree is there because a bacterial resistance determinant acts on i
 ## Mode of action
 
 `mode_of_action` is seeded from ChEBI's own mechanism roles. The map in
-`conf/sources.yaml` translates 33 of them — `protein synthesis inhibitor`,
+`conf/sources.yaml` translates 30 of them — `protein synthesis inhibitor`,
 `sterol 14α-demethylase inhibitor`, `HIV-1 reverse transcriptase inhibitor` and
-so on — into `ModeOfActionEnum`, and 433 of 2,923 records carry a value.
+so on — into `ModeOfActionEnum`, and 390 of 2923 records carry a value.
 
 This is a **restatement**, not an inference, and the distinction matters because
 the alternative was tried here and failed. Filing a record on a ChEBI structural
@@ -120,7 +120,7 @@ different: ChEBI asserting `protein synthesis inhibitor` of a compound is a
 direct claim about what that compound does, and the map only puts it in this
 schema's words.
 
-Three disciplines keep it honest:
+Four disciplines keep it honest:
 
 - **Host-directed roles are unmapped.** The same role space holds angiogenesis,
   acetylcholinesterase, proteasome and platelet-aggregation inhibitors. A mode of
