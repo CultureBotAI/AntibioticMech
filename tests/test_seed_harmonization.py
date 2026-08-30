@@ -1073,3 +1073,31 @@ def test_the_corpus_agrees_with_those_two_roles(records):
     seen = {r["label"]: r.get("mode_of_action_target_scope")
             for _p, r in records if r.get("label") in wanted}
     assert seen == wanted, seen
+
+
+def test_verify_corpus_catches_a_bare_scope_edit_but_not_a_claimed_one():
+    """Pins BOTH halves of the guarantee, because a commit message on this
+    branch claimed the stronger one (#83).
+
+    Flipping a scope and leaving the notes alone is drift and is caught.
+    Flipping it and appending a `CURATOR:` sentence claims the field, and the
+    whole mechanism block stops being compared — deliberate, the same escape
+    hatch `mode_of_action` has, but it is NOT "a hand edit cannot assert
+    selectivity". Asserting the limit here means the next person to describe
+    this guard has to describe it correctly.
+    """
+    from seed_from_sources import curator_owns_mode_of_action
+
+    seeded_note = ("Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor). "
+                   "ChEBI asserts the role on the compound. Not a curator's mechanistic review.")
+
+    bare = {"mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+            "mode_of_action_notes": seeded_note,
+            "mode_of_action_target_scope": "MICROBIAL_TARGET"}
+    # Still the seeder's, so verify-corpus compares the scope and reports drift.
+    assert curator_owns_mode_of_action(bare) is False
+
+    claimed = dict(bare, mode_of_action_notes=(
+        seeded_note + " CURATOR: selective for the bacterial 50S."))
+    # Now the curator's, and the comparison is skipped by design.
+    assert curator_owns_mode_of_action(claimed) is True

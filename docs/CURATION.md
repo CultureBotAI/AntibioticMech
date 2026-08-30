@@ -70,6 +70,11 @@ Both survive `just seed-apply`.
 target belongs to the microbe (`MICROBIAL_TARGET`) or is one the host has too
 (`HOST_SHARED_TARGET`), derived from the same roles as the mechanism.
 
+Claiming the mechanism claims the scope, and `verify-corpus` stops comparing
+both from then on — so a `CURATOR:` note is the only thing standing between a
+hand edit and a selectivity claim the sources never made. Write one only when
+you mean it.
+
 **If you change the mechanism, state the scope.** The seeder derived the scope
 for the value it wrote; once you replace that value, the scope describes
 something no longer on the record. So: annotate without changing the mechanism
