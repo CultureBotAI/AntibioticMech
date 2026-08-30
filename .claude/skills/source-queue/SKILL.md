@@ -35,9 +35,18 @@ source is. In order:
    exist but cover a minority, and antiviral records have no resistance source
    at all. A source that fills an empty column is worth more than one that
    thickens a full one.
-2. **Can we redistribute it?** The corpus is CC0. A source we cannot
-   redistribute is `use: CURATE_ONLY` or `REFERENCE` at best — it can inform a
-   curator, and it must never be seeded. This is a hard gate, not a weighting.
+2. **Can we redistribute it?** A source we cannot redistribute is
+   `use: CURATE_ONLY` or `REFERENCE` at best — it can inform a curator, and it
+   must never be seeded. This is a hard gate, not a weighting.
+
+   The repository's own licence position is **unresolved** (issue #27): `LICENSE`
+   says CC0, but every upstream source is CC BY, CC BY-SA or proprietary, and a
+   blanket CC0 dedication over CC BY content is not permitted. Until that is
+   decided, judge a candidate against the stricter reading: CC BY is acceptable
+   with attribution; CC BY-SA propagates share-alike to the whole corpus;
+   NonCommercial restricts every downstream user and is refused under either
+   outcome; proprietary is refused. Record what the licence says, not what it
+   would take to make it work.
 3. **Does it carry complete structures where it needs to?** A record is one
    chemical structure. A source that names compounds without structures can
    still supply mechanism or activity data keyed to compounds we already have,
@@ -72,6 +81,15 @@ Also establish, and write into `rationale`:
   class terms modelled as if they were compounds, unreviewed auto-generated
   assertions presented identically to curated ones, salts conflated with parent
   compounds, and activity values with no assay attached.
+
+- **Whether an already-adopted source closes it.** Before adding a dependency,
+  check what the sources already in `conf/sources.yaml` assert and are being
+  discarded. `mode_of_action` had no candidate in this queue for a week while
+  ChEBI was asserting mechanism roles on 765 records we already read.
+
+A licence that cannot be reached is a result too. Record the attempt, the URLs
+tried and what blocked them, so the next pass does not repeat a failed fetch —
+Stanford HIVdb renders its terms client-side and returns nothing to a fetcher.
 
 ## Folding in a research report
 
