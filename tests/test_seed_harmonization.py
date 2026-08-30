@@ -761,8 +761,14 @@ def test_role_maps_agree_with_the_schema_and_the_committed_inventory():
 
     with (root / "data" / "raw" / "chebi_role_names.tsv").open(newline="", encoding="utf-8") as fh:
         named = {r["role_id"] for r in _csv.DictReader(fh, delimiter="\t")}
-    missing = sorted(set(base) | set(euk) - named)
-    assert not (set(base) | set(euk)) - named, f"mapped roles absent from the inventory: {missing}"
+    # Parenthesised deliberately: `-` binds tighter than `|`, so
+    # `set(base) | set(euk) - named` is `base | (euk - named)` and would report
+    # every base role as missing. That is the third precedence bug found in this
+    # repository, after check_source_queue's source detection and the worklist's
+    # skip condition, so it gets a name rather than a clever expression.
+    mapped = set(base) | set(euk)
+    missing = sorted(mapped - named)
+    assert not missing, f"mapped roles absent from the role-name inventory: {missing}"
 
     # And every mapped role must actually reach the inventory's mechanism column,
     # or the map entry is inert.
