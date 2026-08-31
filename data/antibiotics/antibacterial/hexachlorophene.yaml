@@ -172,6 +172,206 @@ source_concepts:
   - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-30'
+molecular_targets:
+- target_label: Replicase polyprotein 1a
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:2901879
+  taxon_label: Severe acute respiratory syndrome coronavirus
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: KI
+    original_value: '4000'
+    qualifier: EQ
+    value: 4000.0
+    unit: nM
+    assay_name: Determination of kinetic parameters and the Ki of effective compounds
+      using the FRET peptide
+    assay_description: Kinetic parameters were obtained using various concentrations
+      of FRET peptide in the fluorescent assay. The maximal velocity (Vmax) and Michaelis
+      Menten constant (Km) were calculated from the Eadie Hofstee plot. If the type
+      of inhibitionwas found to be competitive using a Lineweaver Burk double reciprocal
+      plot, then the inhibitory constant (Ki) for 3CLpro was estimated using the equation:Ki
+      = IC50/(1+[substrate]/Km).Plots were performed, and kinetic parameters were
+      calculated, using Prism software (Graphpad Software, San Diego, CA).
+    bindingdb_reactant_set_id: '844294'
+    bindingdb_entry_assay_id: '8809_1'
+    bindingdb_monomer_id: '31712'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:15950190
+  evidence:
+  - reference: PMID:15950190
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0C6U8
+    protein_label: Replicase polyprotein 1a
+    taxon_id: NCBITaxon:2901879
+    taxon_label: Severe acute respiratory syndrome coronavirus
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
+- target_label: Replicase polyprotein 1ab
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:2697049
+  taxon_label: Severe acute respiratory syndrome coronavirus 2
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: IC50
+    original_value: '21520'
+    qualifier: EQ
+    value: 21520.0
+    unit: nM
+    assay_name: 3CLpro enzyme assay
+    assay_description: The 3CLpro enzyme assay was developed in 384-well black, medium
+      binding microplates (Greiner Bio-One, Monroe, NC, USA) with a total volume of
+      20 μL and then miniaturized to 1536-well format. In 384-well plate format, 10
+      μL enzyme in reaction buffer was added into each well, followed by the addition
+      of 10 μL substrate. Fluorescent intensity was measured at different time points
+      on a PHERAstar FSX plate reader (BMG Labtech, Cary, NC, USA) with Ex=340 nm/Em=460
+      nm after the addition of substrate. The experiment was conducted at both room
+      temperature (RT) and 37 °C.Steady-state kinetic parameters were evaluated using
+      50 nM 3CLpro and different concentrations of substrate. In brief, 10 μL/well
+      enzyme was added into 384-well plate. The reaction was then initialized by adding
+      the substrate solutions at different concentrations. The substrate stock solution
+      was serially diluted 1:2 to obtain seven concentrations. The final concentrations
+      used in this test were 160, 80, 40, 20, 10, 5, and 2.5 μM. The fluorescent intensity
+      was measured at 5, 10, 15, and 30 min.
+    bindingdb_reactant_set_id: '844363'
+    bindingdb_entry_assay_id: '8814_1'
+    bindingdb_monomer_id: '31712'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:32803196
+  - measurement_type: EC50
+    original_value: '790'
+    qualifier: EQ
+    value: 790.0
+    unit: nM
+    assay_name: SARS-CoV-2 CPE assay
+    assay_description: SARS-CoV-2 CPE assay was conducted at Southern Research Institute
+      (Birmingham, AL) as described in previous reports30, 31. In brief, high ACE2
+      expressing Vero E6 cells were inoculated with SARS-CoV-2 (USA_WA1/2020) at 0.002
+      M.O.I. After infection of 72 h at 37 °C and 5% CO2, the cell viability was examined
+      with CellTiter-Glo ATP content assay kit (Promega, Madison, WI, USA). CPE raw
+      data were normalized to non-infected cells and virus infected cells only which
+      were set as 100% efficacy and 0 efficacy, respectively. In addition, the compound
+      cytotoxicity was evaluated in the same cells by measuring ATP content in the
+      absence of virus.
+    bindingdb_reactant_set_id: '844364'
+    bindingdb_entry_assay_id: '8814_2'
+    bindingdb_monomer_id: '31712'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:32803196
+  - measurement_type: IC50
+    original_value: '900'
+    qualifier: EQ
+    value: 900.0
+    unit: nM
+    assay_name: DRC analysis by immunofluorescence
+    assay_description: 'Ten-point DRCs were generated for each drug. Vero cells were
+      seeded at 1.2 × 104 cells per well in DMEM, supplemented with 2% FBS and 1×
+      antibiotic-antimycotic solution (Gibco), in black, 384-well μClear plates (Greiner
+      Bio-One) 24 h prior to the experiment. Ten-point DRCs were generated, with compound
+      concentrations ranging from 0.1 to 50 μM. For the viral infections, plates were
+      transferred into the BSL3 containment facility and SARS-CoV-2 was added at a
+      multiplicity of infection (MOI) of 0.0125. The cells were fixed at 24 hours
+      postinfection (hpi) with 4% PFA and analyzed by immunofluorescence. The acquired
+      images were analyzed using in-house software to quantify cell numbers and infection
+      ratios, and antiviral activity was normalized to positive (mock) and negative
+      (0.5% DMSO) controls in each assay plate. DRCs were fitted by sigmoidal dose-response
+      models, with the following equation: Y = bottom + (top − bottom)/[1 + (IC50/X)Hillslope],
+      using XLfit 4 software or Prism7. IC50 values were calculated from the normalized
+      activity data set-fitted curves. All IC50 and 50% cytotoxic concentration (CC50)
+      values were measured in duplicate, and the quality of each assay was controlled
+      by Z -factor and the coefficient of variation in percent (%CV).'
+    bindingdb_reactant_set_id: '874414'
+    bindingdb_entry_assay_id: '8945_1'
+    bindingdb_monomer_id: '31712'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:32366720
+  - measurement_type: IC50
+    original_value: '21520'
+    qualifier: EQ
+    value: 21520.0
+    unit: nM
+    assay_name: Various Assay
+    assay_description: This is a review article.  Please point to the original journal.
+    bindingdb_reactant_set_id: '1074182'
+    bindingdb_entry_assay_id: '10079_1'
+    bindingdb_monomer_id: '31712'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:34798775
+  evidence:
+  - reference: PMID:32803196
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  - reference: PMID:32366720
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  - reference: PMID:34798775
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0DTD1
+    protein_label: Replicase polyprotein 1ab
+    taxon_id: NCBITaxon:2697049
+    taxon_label: Severe acute respiratory syndrome coronavirus 2
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
+- target_label: Replicase polyprotein 1ab
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:2901879
+  taxon_label: Severe acute respiratory syndrome coronavirus
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: IC50
+    original_value: '13700'
+    qualifier: EQ
+    value: 13700.0
+    unit: nM
+    assay_name: Various Assay
+    assay_description: This is a review article.  Please point to the original journal.
+    bindingdb_reactant_set_id: '1074119'
+    bindingdb_entry_assay_id: '10079_1'
+    bindingdb_monomer_id: '31712'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:34798775
+  evidence:
+  - reference: PMID:34798775
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0C6X7
+    protein_label: Replicase polyprotein 1ab
+    taxon_id: NCBITaxon:2901879
+    taxon_label: Severe acute respiratory syndrome coronavirus
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -402,6 +602,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:19:04Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

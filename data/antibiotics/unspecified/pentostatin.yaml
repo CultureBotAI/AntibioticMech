@@ -87,6 +87,81 @@ source_concepts:
   role_terms:
   - CHEBI:25605
   source_version: '2026-08-30'
+molecular_targets:
+- target_label: Adenosine deaminase
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:1890
+  taxon_label: Streptomyces antibioticus
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: KI
+    original_value: '2.1'
+    qualifier: EQ
+    value: 2.1
+    unit: nM
+    assay_name: In Vitro ADA Activity Assay
+    assay_description: For the ADA activity assay, a reaction comprising 50 mM potassium
+      phosphate buffer (pH 7.2), 0.1 mM Ara-A or adenosine, and 20 mg ADA was conducted
+      at 30 °C for 30 min. Reactions were terminated by the addition of an equivalent
+      volume of methanol, followed by centrifugation to get rid of protein. The reactions
+      were analyzed by HPLC (Shimadzu LC-20A), equipped with a reversephase C18 column
+      (Inertsil ODS-3, 4.63250 mm, 5 mm), at the elution gradient of 5%-20% methanol:0.15%
+      trifluoroacetic acid (TFA; HPLC grade) for 10 min, then the ratio of 20% methanol:0.15%
+      TFA was continued until 30 min. The elution was monitored by a DAD at 260 nm
+      with a flow rate of 0.5 mL/min. Assays were measured at ten different concentrations
+      of substrate (adenosine, Ara-A) ranging from 10 to 100 mM in 50 mM potassium
+      phosphate (pH 7.2) at 30 °C, and the assays were repeated at least three times.
+      The inhibitory activity of PTN was assayed by adding differentconcentrations
+      (final concentrations 1, 2, and 5 nM) to the reaction mixture described above.
+    bindingdb_reactant_set_id: '390254'
+    bindingdb_entry_assay_id: '7900_1'
+    bindingdb_monomer_id: '223291'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:28111097
+  - measurement_type: KI
+    original_value: '1'
+    qualifier: EQ
+    value: 1.0
+    unit: nM
+    assay_name: In Vitro ADA Activity Assay
+    assay_description: For the ADA activity assay, a reaction comprising 50 mM potassium
+      phosphate buffer (pH 7.2), 0.1 mM Ara-A or adenosine, and 20 mg ADA was conducted
+      at 30 °C for 30 min. Reactions were terminated by the addition of an equivalent
+      volume of methanol, followed by centrifugation to get rid of protein. The reactions
+      were analyzed by HPLC (Shimadzu LC-20A), equipped with a reversephase C18 column
+      (Inertsil ODS-3, 4.63250 mm, 5 mm), at the elution gradient of 5%-20% methanol:0.15%
+      trifluoroacetic acid (TFA; HPLC grade) for 10 min, then the ratio of 20% methanol:0.15%
+      TFA was continued until 30 min. The elution was monitored by a DAD at 260 nm
+      with a flow rate of 0.5 mL/min. Assays were measured at ten different concentrations
+      of substrate (adenosine, Ara-A) ranging from 10 to 100 mM in 50 mM potassium
+      phosphate (pH 7.2) at 30 °C, and the assays were repeated at least three times.
+      The inhibitory activity of PTN was assayed by adding differentconcentrations
+      (final concentrations 1, 2, and 5 nM) to the reaction mixture described above.
+    bindingdb_reactant_set_id: '390255'
+    bindingdb_entry_assay_id: '7900_1'
+    bindingdb_monomer_id: '223291'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:28111097
+  evidence:
+  - reference: PMID:28111097
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A1S5RQP7
+    protein_label: Adenosine deaminase
+    taxon_id: NCBITaxon:1890
+    taxon_label: Streptomyces antibioticus
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -170,6 +245,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:22Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:18:57Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

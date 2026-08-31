@@ -54,6 +54,103 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   source_version: '2026-08-30'
+molecular_targets:
+- target_label: 3-hydroxyacyl-[acyl-carrier-protein] dehydratase FabZ
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:263
+  taxon_label: Francisella tularensis
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: IC50
+    original_value: '7.7e+3'
+    qualifier: EQ
+    value: 7700.0
+    unit: nM
+    assay_name: FabZ Inhibition Assay
+    assay_description: The enzymatic activities of FtFabZ and YpFabZ were determined
+      via the reportedspectrophotometric method using the substrate analogue crotonoyl-CoA.7
+      Initial reaction velocities were determined by monitoring the decreasing absorbance
+      at 280 nm, resulting from the conversion of crotonoyl-CoA to beta-hydroxybutyryl-CoA.
+      The conversion of hydroxybutyryl-CoA to crotonoyl-CoA was not used in our assay.
+      An extinction coefficient of 3600 s-1 cm-1, corresponding to the hydration of
+      the enoyl double bond, was used to convert absorbance readings to substrate
+      concentrations.20 Reactions were performed using a Beckman-Coulter DU730 UV/vis
+      spectrophotometer. Reaction volumes of 100 uL were prepared in a buffer solution
+      consisting of 2.0 ug of FtFabZ or 0.5 ug of YpFabZ, 20 mM Tris, pH 7.0. Allreactions
+      were performed at 25 C. Inhibition reactions for IC50 calculations wereperformed
+      under similar conditions with a fixed concentration of 100 uM crotonoyl-CoA.
+    bindingdb_reactant_set_id: '327927'
+    bindingdb_entry_assay_id: '7209_1'
+    bindingdb_monomer_id: '50214969'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:26818694
+  evidence:
+  - reference: PMID:26818694
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A0E3A638
+    protein_label: 3-hydroxyacyl-[acyl-carrier-protein] dehydratase FabZ
+    taxon_id: NCBITaxon:263
+    taxon_label: Francisella tularensis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
+- target_label: 3-hydroxyacyl-[acyl-carrier-protein] dehydratase FabZ [1-175]
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:632
+  taxon_label: Yersinia pestis
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: IC50
+    original_value: '6.1e+3'
+    qualifier: EQ
+    value: 6100.0
+    unit: nM
+    assay_name: FabZ Inhibition Assay
+    assay_description: The enzymatic activities of FtFabZ and YpFabZ were determined
+      via the reportedspectrophotometric method using the substrate analogue crotonoyl-CoA.7
+      Initial reaction velocities were determined by monitoring the decreasing absorbance
+      at 280 nm, resulting from the conversion of crotonoyl-CoA to beta-hydroxybutyryl-CoA.
+      The conversion of hydroxybutyryl-CoA to crotonoyl-CoA was not used in our assay.
+      An extinction coefficient of 3600 s-1 cm-1, corresponding to the hydration of
+      the enoyl double bond, was used to convert absorbance readings to substrate
+      concentrations.20 Reactions were performed using a Beckman-Coulter DU730 UV/vis
+      spectrophotometer. Reaction volumes of 100 uL were prepared in a buffer solution
+      consisting of 2.0 ug of FtFabZ or 0.5 ug of YpFabZ, 20 mM Tris, pH 7.0. Allreactions
+      were performed at 25 C. Inhibition reactions for IC50 calculations wereperformed
+      under similar conditions with a fixed concentration of 100 uM crotonoyl-CoA.
+    bindingdb_reactant_set_id: '327923'
+    bindingdb_entry_assay_id: '7209_1'
+    bindingdb_monomer_id: '50214969'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:26818694
+  evidence:
+  - reference: PMID:26818694
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:B1JQH1
+    protein_label: 3-hydroxyacyl-[acyl-carrier-protein] dehydratase FabZ
+    taxon_id: NCBITaxon:632
+    taxon_label: Yersinia pestis
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -64,6 +161,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:19:08Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

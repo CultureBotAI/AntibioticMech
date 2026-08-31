@@ -105,10 +105,206 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
-<h3>antibiotic sensitive dihydrofolate reductase <span class="pill plain">PROTEIN</span> <span class="pill"></span></h3>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000745">ARO:3000745</a></p><p class="meta"> Evidence status: . Source:   (retrieved ).</p>
+<h3>antibiotic sensitive dihydrofolate reductase <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000745">ARO:3000745</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. Dihydrofolate reductase is asserted as the inhibited enzyme. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
   <li><span class="meta">ARO:3000745</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000188 (trimethoprim); database assertion, not a primary citation.)</span></li>
+</ul>
+
+<h3>Dihydrofolate reductase <span class="pill plain">PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">BindingDB quantitative measurement in the named target organism; source assay descriptions and identifiers are retained per measurement. Evidence status: PRIMARY_EVIDENCE. Source: BINDINGDB 2026-09 (retrieved 2026-08-31).</p>
+<p><em>Staphylococcus aureus</em> <code class="curie">NCBITaxon:1280</code></p><table>
+  <caption>Quantitative measurements</caption>
+  <thead><tr><th scope="col">Type</th><th scope="col">Reported value</th><th scope="col">Assay</th><th scope="col">BindingDB IDs</th><th scope="col">Reference</th></tr></thead>
+  <tr>
+    <td>IC50</td>
+    <td>7 nM</td>
+    <td><strong>Enzyme Inhibition Assay</strong><br><span class="meta">Activity was measured as a change in absorbance over time at a wavelength of 340 nm (A340), so as to monitor the disappearance of NADPH. After incubation of the enzyme with test compound and NADPH for 2 min, the reaction was initiated with the addition of DHF and the A340 was plotted over the course of 1.5 min. Six different concentrations of  compound were utilized in the assays to determine the IC50.</span></td>
+    <td><code class="curie">RSID 32331</code><br><code class="curie">assay 2206_1</code><br><code class="curie">monomer 18069</code></td>
+    <td><code class="curie">PMID:14623005</code></td>
+  </tr>
+  <tr>
+    <td>IC50</td>
+    <td>23 nM</td>
+    <td><strong>DHFR Inhibition Assay</strong><br><span class="meta">IC50 values were determined following a standard method that has been described previously (Reeve et al., 2014, 2016).</span></td>
+    <td><code class="curie">RSID 372397</code><br><code class="curie">assay 7681_1</code><br><code class="curie">monomer 18069</code></td>
+    <td><code class="curie">PMID:27939900</code></td>
+  </tr>
+  <tr>
+    <td>IC50</td>
+    <td>3.80e+5 nM</td>
+    <td><strong>DHFR Inhibition Assay</strong><br><span class="meta">IC50 values were determined following a standard method that has been described previously (Reeve et al., 2014, 2016).</span></td>
+    <td><code class="curie">RSID 372406</code><br><code class="curie">assay 7681_1</code><br><code class="curie">monomer 18069</code></td>
+    <td><code class="curie">PMID:27939900</code></td>
+  </tr>
+</table>
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Dihydrofolate reductase <code class="curie">UniProtKB:P0A017</code></td>
+    <td>—</td>
+    <td><em>Staphylococcus aureus</em></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+  <tr>
+    <td>Dihydrofolate reductase <code class="curie">UniProtKB:Q4H3Y3</code></td>
+    <td>—</td>
+    <td><em>Staphylococcus aureus</em></td>
+    <td><span class="pill plain">UNREVIEWED</span></td>
+  </tr>
+</table>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:14623005</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
+  <li><span class="meta">PMID:27939900</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
+</ul>
+
+<h3>Dihydrofolate reductase <span class="pill plain">PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">BindingDB quantitative measurement in the named target organism; source assay descriptions and identifiers are retained per measurement. Evidence status: PRIMARY_EVIDENCE. Source: BINDINGDB 2026-09 (retrieved 2026-08-31).</p>
+<p><em>Bacillus anthracis</em> <code class="curie">NCBITaxon:1392</code></p><table>
+  <caption>Quantitative measurements</caption>
+  <thead><tr><th scope="col">Type</th><th scope="col">Reported value</th><th scope="col">Assay</th><th scope="col">BindingDB IDs</th><th scope="col">Reference</th></tr></thead>
+  <tr>
+    <td>IC50</td>
+    <td>77300 nM</td>
+    <td><strong>Enzyme Inhibition Assay</strong><br><span class="meta">Activity was measured as a change in absorbance over time at a wavelength of 340 nm (A340), so as to monitor the disappearance of NADPH. After incubation of the enzyme with test compound and NADPH for 3 min, the reaction was initiated with the addition of DHF and the A340 was plotted over the course of  3 min. Six different concentrations of  compound were utilized in the assays to determine the IC50.</span></td>
+    <td><code class="curie">RSID 32320</code><br><code class="curie">assay 2205_1</code><br><code class="curie">monomer 18069</code></td>
+    <td><code class="curie">PMID:15561838</code></td>
+  </tr>
+  <tr>
+    <td>IC50</td>
+    <td>71000 nM</td>
+    <td><strong>Enzyme Inhibition Assay</strong><br><span class="meta">Enzyme activity assays were performed by monitoring the rate of enzyme-dependent NADPH oxidation at an absorbance of 340 nm over several minutes. All enzyme assays were performed with a single, limiting concentration of enzyme and saturating concentrations of NADPH and dihydrofolate. IC50 values were calculated as the average of three independent experiments.</span></td>
+    <td><code class="curie">RSID 48413</code><br><code class="curie">assay 2975_1</code><br><code class="curie">monomer 18069</code></td>
+    <td><code class="curie">PMID:19007108</code></td>
+  </tr>
+</table>
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Dihydrofolate reductase <code class="curie">UniProtKB:Q81R22</code></td>
+    <td>—</td>
+    <td><em>Bacillus anthracis</em></td>
+    <td><span class="pill plain">UNREVIEWED</span></td>
+  </tr>
+</table>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:15561838</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
+  <li><span class="meta">PMID:19007108</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
+</ul>
+
+<h3>Dihydrofolate reductase <span class="pill plain">PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">BindingDB quantitative measurement in the named target organism; source assay descriptions and identifiers are retained per measurement. Evidence status: PRIMARY_EVIDENCE. Source: BINDINGDB 2026-09 (retrieved 2026-08-31).</p>
+<p><em>Mycobacterium avium</em> <code class="curie">NCBITaxon:1764</code></p><table>
+  <caption>Quantitative measurements</caption>
+  <thead><tr><th scope="col">Type</th><th scope="col">Reported value</th><th scope="col">Assay</th><th scope="col">BindingDB IDs</th><th scope="col">Reference</th></tr></thead>
+  <tr>
+    <td>IC50</td>
+    <td>5750 nM</td>
+    <td><strong>Enzyme Inhibition Assay</strong><br><span class="meta">Activity was measured as a change in absorbance over time at a wavelength of 340 nm (A340), so as to monitor the disappearance of NADPH. After incubation of the enzyme with test compound and NADPH for 3 min, the reaction was initiated with the addition of DHF and the A340 was plotted over the course of  3 min. Six different concentrations of  compound were utilized in the assays to determine the IC50.</span></td>
+    <td><code class="curie">RSID 32322</code><br><code class="curie">assay 2205_1</code><br><code class="curie">monomer 18069</code></td>
+    <td><code class="curie">PMID:15561838</code></td>
+  </tr>
+  <tr>
+    <td>IC50</td>
+    <td>300 nM</td>
+    <td><strong>Determination of IC50</strong><br><span class="meta">Dihydrofolate reductase was assayed with no inhibitor and with a series of concentrations of inhibitors to allow for a range of inhibition from 10 to 90%. At least three concentrations were required for calculation. Semilogarithmic plots of the data showed a normal sigmoidal plot for most inhibitors. These plots were converted to straight lines by converting percent inhibition to probit values which were plotted versus the log of the drug concentration. The data were fit by least-squares linear regression. The 50% inhibitory concentration (IC50) is the concentration at which the probit value is 5.0.</span></td>
+    <td><code class="curie">RSID 32561</code><br><code class="curie">assay 2221_1</code><br><code class="curie">monomer 18069</code></td>
+    <td><code class="curie">PMID:15974594</code></td>
+  </tr>
+  <tr>
+    <td>IC50</td>
+    <td>300 nM</td>
+    <td><strong>Dihydrofolate Reductase (DHFR) Assay</strong><br><span class="meta">Enzymatic activities were determined by monitoring the oxidation of NADPH at 340 nm using a 96-well microtiter plate reading spectrophotometer.</span></td>
+    <td><code class="curie">RSID 32711</code><br><code class="curie">assay 2225_1</code><br><code class="curie">monomer 18069</code></td>
+    <td><code class="curie">PMID:17552508</code></td>
+  </tr>
+</table>
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Dihydrofolate reductase <code class="curie">UniProtKB:O30463</code></td>
+    <td>—</td>
+    <td><em>Mycobacterium avium</em></td>
+    <td><span class="pill plain">UNREVIEWED</span></td>
+  </tr>
+</table>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:15561838</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
+  <li><span class="meta">PMID:15974594</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
+  <li><span class="meta">PMID:17552508</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
+</ul>
+
+<h3>Dihydrofolate reductase <span class="pill plain">PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">BindingDB quantitative measurement in the named target organism; source assay descriptions and identifiers are retained per measurement. Evidence status: PRIMARY_EVIDENCE. Source: BINDINGDB 2026-09 (retrieved 2026-08-31).</p>
+<p><em>Pneumocystis carinii</em> <code class="curie">NCBITaxon:4754</code></p><table>
+  <caption>Quantitative measurements</caption>
+  <thead><tr><th scope="col">Type</th><th scope="col">Reported value</th><th scope="col">Assay</th><th scope="col">BindingDB IDs</th><th scope="col">Reference</th></tr></thead>
+  <tr>
+    <td>IC50</td>
+    <td>43000 nM</td>
+    <td><strong>Enzyme Inhibition Assay</strong><br><span class="meta">Activity was measured as a change in absorbance over time at a wavelength of 340 nm (A340), so as to monitor the disappearance of NADPH. After incubation of the enzyme with test compound and NADPH for 2 min, the reaction was initiated with the addition of DHF and the A340 was plotted over the course of 1.5 min. Six different concentrations of  compound were utilized in the assays to determine the IC50.</span></td>
+    <td><code class="curie">RSID 32335</code><br><code class="curie">assay 2206_1</code><br><code class="curie">monomer 18069</code></td>
+    <td><code class="curie">PMID:14623005</code></td>
+  </tr>
+  <tr>
+    <td>IC50</td>
+    <td>13000 nM</td>
+    <td><strong>Determination of IC50</strong><br><span class="meta">Dihydrofolate reductase was assayed with no inhibitor and with a series of concentrations of inhibitors to allow for a range of inhibition from 10 to 90%. At least three concentrations were required for calculation. Semilogarithmic plots of the data showed a normal sigmoidal plot for most inhibitors. These plots were converted to straight lines by converting percent inhibition to probit values which were plotted versus the log of the drug concentration. The data were fit by least-squares linear regression. The 50% inhibitory concentration (IC50) is the concentration at which the probit value is 5.0.</span></td>
+    <td><code class="curie">RSID 32515</code><br><code class="curie">assay 2221_1</code><br><code class="curie">monomer 18069</code></td>
+    <td><code class="curie">PMID:15974594</code></td>
+  </tr>
+  <tr>
+    <td>IC50</td>
+    <td>12000 nM</td>
+    <td><strong>Dihydrofolate Reductase (DHFR) Assay</strong><br><span class="meta">Enzymatic activities were determined by monitoring the oxidation of NADPH at 340 nm using a 96-well microtiter plate reading spectrophotometer.</span></td>
+    <td><code class="curie">RSID 32665</code><br><code class="curie">assay 2225_1</code><br><code class="curie">monomer 18069</code></td>
+    <td><code class="curie">PMID:17552508</code></td>
+  </tr>
+</table>
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Dihydrofolate reductase <code class="curie">UniProtKB:P16184</code></td>
+    <td>—</td>
+    <td><em>Pneumocystis carinii</em></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:14623005</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
+  <li><span class="meta">PMID:15974594</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
+  <li><span class="meta">PMID:17552508</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
+</ul>
+
+<h3>Dihydrofolate reductase type 1 from Tn4003 <span class="pill plain">PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">BindingDB quantitative measurement in the named target organism; source assay descriptions and identifiers are retained per measurement. Evidence status: PRIMARY_EVIDENCE. Source: BINDINGDB 2026-09 (retrieved 2026-08-31).</p>
+<p><em>Staphylococcus aureus</em> <code class="curie">NCBITaxon:1280</code></p><table>
+  <caption>Quantitative measurements</caption>
+  <thead><tr><th scope="col">Type</th><th scope="col">Reported value</th><th scope="col">Assay</th><th scope="col">BindingDB IDs</th><th scope="col">Reference</th></tr></thead>
+  <tr>
+    <td>IC50</td>
+    <td>1.51e+4 nM</td>
+    <td><strong>DHFR Inhibition Assay</strong><br><span class="meta">IC50 values were determined following a standard method that has been described previously (Reeve et al., 2014, 2016).</span></td>
+    <td><code class="curie">RSID 372415</code><br><code class="curie">assay 7681_1</code><br><code class="curie">monomer 18069</code></td>
+    <td><code class="curie">PMID:27939900</code></td>
+  </tr>
+</table>
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Dihydrofolate reductase type 1 from Tn4003 <code class="curie">UniProtKB:P13955</code></td>
+    <td>—</td>
+    <td><em>Staphylococcus aureus</em></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:27939900</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
 </ul>
 
 
@@ -571,6 +767,11 @@ type — expand a group to see its determinants.</p>
   <li>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
+    <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
   <li>

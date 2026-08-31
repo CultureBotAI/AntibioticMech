@@ -65,6 +65,47 @@ source_concepts:
   role_terms:
   - CHEBI:36335
   source_version: '2026-08-30'
+molecular_targets:
+- target_label: DNA primase
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:1392
+  taxon_label: Bacillus anthracis
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: IC50
+    original_value: '8.2e+3'
+    qualifier: EQ
+    value: 8200.0
+    unit: nM
+    assay_name: Quatitative Inhibition Analysis Assay
+    assay_description: The reaction mixture contained DNA (1.25 uM or as specified),
+      NTP (110 uM or as specified), 50 mM NaCl, 150 mM potassium glutamate, buffer
+      [20 mM CAPS (pH 8.8) or as specified], and divalent metals (2 mM Mn2+ and 1
+      mM Mg2+). The assay was performed in 96-well plates with 4 uM Ba DnaG.
+    bindingdb_reactant_set_id: '246981'
+    bindingdb_entry_assay_id: '6265_1'
+    bindingdb_monomer_id: '50336799'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:24004110
+  evidence:
+  - reference: PMID:24004110
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A6L8PXB3
+    protein_label: DNA primase
+    taxon_id: NCBITaxon:1392
+    taxon_label: Bacillus anthracis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -75,6 +116,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:19:02Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

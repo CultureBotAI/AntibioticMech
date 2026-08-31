@@ -41,6 +41,201 @@ source_concepts:
   role_terms:
   - CHEBI:149553
   source_version: '2026-08-30'
+molecular_targets:
+- target_label: Replicase polyprotein 1ab
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:2697049
+  taxon_label: Severe acute respiratory syndrome coronavirus 2
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: IC50
+    original_value: '12600'
+    qualifier: EQ
+    value: 12600.0
+    unit: nM
+    assay_name: RapidFire MPro inhibition assay
+    assay_description: The assay was performed according to the published procedure.
+      Briefly, compounds were seeded into assay-ready plates (Greiner 384PP, cat#
+      781280) using an ECHO 650T dispenser and DMSO was back-filled for a uniform
+      concentration in assay plates (DMSO concentration < 1%, final volume = 500 nL.).
+      A 15 uM enzyme stock solution is prepared in 20 mM HEPES, pH 7.5 and 300 mM
+      NaCl, and subsequently diluted to a working solution of 300 nM Mpro in assay
+      buffer (20 mM HEPES, pH 7.5 and 50 mM NaCl) before the addition of 25 uL to
+      each well using a Multidrop Combi (Thermo Scientific). After a quick centrifugation
+      step (1000 rpm, 15 s) the plate is incubated for 15 min at room temperature.
+      The reaction is initiated with the addition of 25 uL of 4 uM 11-mer (TSAVLQSGFRK-NH2,
+      initially custom synthesized by the Schofield group, GLBiochem, used until March
+      2021), or 10 uM 37-mer (ALNDFSNSGSDVLYQPPQTSITSAVLQSGFRKMAFPS-NH2, GLBiochem,
+      used after March 2021), dissolved in assay buffer. After centrifugation (1000
+      rpm, 14 s) the reaction is incubated for 10 min (11-mer) or 5 min (37-mer) at
+      room temperature before quenching with 10 % formic acid. The reactions are analysed
+      with MS using RapidFire (RF) 365 high-throughput sampling robot (Agilent) connected
+      to an iFunnel Agilent 6550 accurate mass quadrupole time-of-flight (Q-TOF) mass
+      spectrometer using electrospray. All compounds are triaged by testing the %
+      inhibition at 5 and 50 uM final concentration. Dose response curves uses an
+      11-point range of 100--0.0017 uM inhibitor concentrations. RapidFire integrator
+      software (Agilent) was used to extract the charged states from the total ion
+      chromatogram data followed by peak integration. For the 11-mer peptide the m/z
+      (+1) charge states of both the substrate (1191.67 Da) and cleaved N-terminal
+      product TSAVLQ (617.34 Da) were used and the 37-mer peptide the m/z (+2) charge
+      states of the substrate (3960.94 Da) and m/z (+1) of the cleaved C-terminal
+      product SGFRKMAFPS (1125.57 Da). Percentage conversion (product peak integral
+      / (product peak integral + substrate peak integral))*100) and percentage inhibitions
+      were calculated and normalised against DMSO control with deduction of any background
+      signal in Microsoft Excel. IC50s were calculated using Levenberg Marquardt algorithm
+      used to fit a restrained Hill equation to the dose-response data with both GraphPad
+      PRISM and CDD.
+    bindingdb_reactant_set_id: '1033211'
+    bindingdb_entry_assay_id: '9877_1'
+    bindingdb_monomer_id: '429461'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: DOI:10.1101/2020.10.29.339317
+  - measurement_type: IC50
+    original_value: '1630'
+    qualifier: EQ
+    value: 1630.0
+    unit: nM
+    assay_name: Fluorescence MPro inhibition assay
+    assay_description: Compounds were seeded into assay-ready plates (Greiner 384
+      low volume, cat 784900) using an Echo 555 acoustic dispenser, and DMSO was back-filled
+      for a uniform concentration in assay plates (DMSO concentration maximum 1%)
+      Screening assays were performed in duplicate at 20uM and 50uM. Hits of greater
+      than 50% inhibition at 50uM were confirmed by dose response assays. Dose response
+      assays were performed in 12 point dilutions of 2-fold, typically beginning at
+      100uM. Highly active compounds were repeated in a similar fashion at lower concentrations
+      beginning at 10uM or 1uM. Reagents for Mpro assay were dispensed into the assay
+      plate in 10ul volumes for a final volume of 20uL. Final reaction concentrations
+      were 20mM HEPES pH7.3, 1.0mM TCEP, 50mM NaCl, 0.01% Tween-20, 10% glycerol,
+      5nM Mpro, 375nM fluorogenic peptide substrate ([5-FAM]-AVLQSGFR-[Lys(Dabcyl)]-K-amide).
+      Mpro was pre-incubated for 15 minutes at room temperature with compound before
+      addition of substrate and a further 30 minute incubation. Protease reaction
+      was measured in a BMG Pherastar FS with a 480/520 ex/em filter set. Raw data
+      was mapped and normalized to high (Protease with DMSO) and low (No Protease)
+      controls using Genedata Screener software. Normalized data was then uploaded
+      to CDD Vault (Collaborative Drug Discovery). Dose response curves were generated
+      for IC50 using nonlinear regression with the Levenberg Marquardt algorithm with
+      minimum inhibition = 0% and maximum inhibition = 100%.
+    bindingdb_reactant_set_id: '1033212'
+    bindingdb_entry_assay_id: '9877_2'
+    bindingdb_monomer_id: '429461'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: DOI:10.1101/2020.10.29.339317
+  - measurement_type: IC50
+    original_value: '1630'
+    qualifier: EQ
+    value: 1630.0
+    unit: nM
+    assay_name: Fluorescence Mpro inhibition assay (S1)
+    assay_description: Compounds were seeded into assay-ready plates (Greiner 384
+      low volume, cat. no. 784900) using an Echo 555 acoustic dispenser, and dimethyl
+      sulfoxide (DMSO) was back-filled for a uniform concentration in assay plates
+      (DMSO concentration maximum 1%) Screening assays were performed in duplicate
+      at 20 μM and 50 μM. Hits of greater than 50% inhibition at 50 μM were confirmed
+      by dose response assays. Dose response assays were performed in 12-point dilutions
+      of twofold, typically beginning at 100 μM. Highly active compounds were repeated
+      in a similar fashion at lower concentrations beginning at 10 μM or 1 μM. Reagents
+      for Mpro assay were dispensed into the assay plate in 10 μl volumes for a final
+      volume of 20 μl.Final reaction concentrations were 20 mM HEPES pH 7.3, 1.0 mM
+      TCEP, 50 mM NaCl, 0.01% Tween-20, 10% glycerol, 5 nM Mpro, 375 nM fluorogenic
+      peptide substrate ([5-FAM]-AVLQSGFR-[Lys(Dabcyl)]-K-amide). Mpro was pre-incubated
+      for 15 min at room temperature with compound before addition of substrate and
+      a further 30-min incubation. Protease reaction was measured in a BMG Pherastar
+      FS with a 480/520 excitation/emission filter set. Raw data were mapped and normalized
+      to high (Protease with DMSO) and low (No Protease) controls using Genedata Screener
+      software. Normalized data were then uploaded to CDD Vault (Collaborative Drug
+      Discovery). Dose response curves were generated for IC50 using nonlinear regression
+      with the Levenberg Marquardt algorithm with minimum inhibition = 0% and maximum
+      inhibition = 100%.The assay was calibrated at different enzyme concentrations
+      to confirm linearity and response of protease activity, as well as optimization
+      of buffer components for most stable and reproducible assay conditions. Substrate
+      concentration was chosen after titration to minimize saturation of signal in
+      the plate reader while obtaining a satisfactory and robust dynamic range of
+      typically five- to sixfold over control without enzyme. We used low substrate
+      concentrations of the bright FRET peptide to avoid inner filter effect (60)
+      and to bias toward detection of competitive inhibitors (61). As positive control,
+      under our assay condition, nirmatrelvir has IC50 of 2.6 nM.
+    bindingdb_reactant_set_id: '1334692'
+    bindingdb_entry_assay_id: '11549_3'
+    bindingdb_monomer_id: '429461'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:37943932
+  evidence:
+  - reference: DOI:10.1101/2020.10.29.339317
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  - reference: PMID:37943932
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0DTD1
+    protein_label: Replicase polyprotein 1ab
+    taxon_id: NCBITaxon:2697049
+    taxon_label: Severe acute respiratory syndrome coronavirus 2
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
+- target_label: Replicase polyprotein 1ab
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:2901879
+  taxon_label: Severe acute respiratory syndrome coronavirus
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: IC50
+    original_value: '2900'
+    qualifier: EQ
+    value: 2900.0
+    unit: nM
+    assay_name: No assay is provided
+    assay_description: This is a review article.
+    bindingdb_reactant_set_id: '868895'
+    bindingdb_entry_assay_id: '8918_1'
+    bindingdb_monomer_id: '429461'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:32852058
+  - measurement_type: IC50
+    original_value: '2900'
+    qualifier: EQ
+    value: 2900.0
+    unit: nM
+    assay_name: Various Assay
+    assay_description: This is a review article.  Please point to the original journal.
+    bindingdb_reactant_set_id: '1073859'
+    bindingdb_entry_assay_id: '10079_1'
+    bindingdb_monomer_id: '429461'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:34798775
+  evidence:
+  - reference: PMID:32852058
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  - reference: PMID:34798775
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0C6X7
+    protein_label: Replicase polyprotein 1ab
+    taxon_id: NCBITaxon:2901879
+    taxon_label: Severe acute respiratory syndrome coronavirus
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -51,6 +246,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:18:54Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

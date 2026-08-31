@@ -630,6 +630,10 @@ classes:
         description: BindingDB assay text; unavailable context must be explicit.
         required: true
         range: string
+      assay_name:
+        description: BindingDB's name for the assay protocol.
+        required: true
+        range: string
       bindingdb_reactant_set_id:
         required: true
         range: string

@@ -106,10 +106,43 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
-<h3>fluoroquinolone sensitive gyrA <span class="pill plain">PROTEIN</span> <span class="pill"></span></h3>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000733">ARO:3000733</a></p><p class="meta"> Evidence status: . Source:   (retrieved ).</p>
+<h3>fluoroquinolone sensitive gyrA <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000733">ARO:3000733</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO explicitly describes ligand binding to gyrase subunit A. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
   <li><span class="meta">ARO:3000733</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000661 (nalidixic acid); database assertion, not a primary citation.)</span></li>
+</ul>
+
+<h3>DNA topoisomerase 4 subunit A [V210L]/B <span class="pill plain">PROTEIN_COMPLEX</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">BindingDB quantitative measurement in the named target organism; source assay descriptions and identifiers are retained per measurement. Evidence status: PRIMARY_EVIDENCE. Source: BINDINGDB 2026-09 (retrieved 2026-08-31).</p>
+<p><em>Bacillus subtilis</em> <code class="curie">NCBITaxon:1423</code></p><table>
+  <caption>Quantitative measurements</caption>
+  <thead><tr><th scope="col">Type</th><th scope="col">Reported value</th><th scope="col">Assay</th><th scope="col">BindingDB IDs</th><th scope="col">Reference</th></tr></thead>
+  <tr>
+    <td>IC50</td>
+    <td>1090000 nM</td>
+    <td><strong>DNA Topoisomerase IV Assay</strong><br><span class="meta">The 50% inhibitory concentration (IC50) is defined as the concentration of compound that inhibits the decatenation of kinetoplast DNA by 50%.</span></td>
+    <td><code class="curie">RSID 39230</code><br><code class="curie">assay 2532_2</code><br><code class="curie">monomer 21691</code></td>
+    <td><code class="curie">PMID:17074800</code></td>
+  </tr>
+</table>
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>DNA topoisomerase 4 subunit A <code class="curie">UniProtKB:Q45066</code></td>
+    <td>—</td>
+    <td><em>Bacillus subtilis</em></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+  <tr>
+    <td>DNA topoisomerase 4 subunit B <code class="curie">UniProtKB:Q59192</code></td>
+    <td>—</td>
+    <td><em>Bacillus subtilis</em></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:17074800</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
 </ul>
 
 
@@ -382,6 +415,11 @@ type — expand a group to see its determinants.</p>
   <li>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
+    <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
   <li>

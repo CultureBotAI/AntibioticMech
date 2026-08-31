@@ -211,7 +211,17 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
         {
             "target_label": t.get("target_label", ""),
             "target_type": t.get("target_type"),
+            "target_relation": t.get("target_relation"),
             "target_id": resolve_curie(t["target_id"], index, root) if t.get("target_id") else None,
+            "taxon_id": t.get("taxon_id"),
+            "taxon_label": t.get("taxon_label"),
+            "strain": t.get("strain"),
+            "experimental_context": t.get("experimental_context"),
+            "evidence_status": t.get("evidence_status"),
+            "source": t.get("source"),
+            "source_version": t.get("source_version"),
+            "source_retrieved_on": t.get("source_retrieved_on"),
+            "measurements": t.get("measurements") or [],
             "protein_examples": t.get("protein_examples") or [],
             "evidence": t.get("evidence") or [],
         }

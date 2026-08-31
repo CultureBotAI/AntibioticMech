@@ -103,6 +103,49 @@ resistance_mechanisms:
   - reference: ARO:3007669
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007039 (chlorhexidine);
       database assertion, not a primary citation.
+molecular_targets:
+- target_label: Acetyltransferase, GNAT family
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:1392
+  taxon_label: Bacillus anthracis
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: IC50
+    original_value: '1.4e+4'
+    qualifier: EQ
+    value: 14000.0
+    unit: nM
+    assay_name: Eis Ban Inhibition Assay
+    assay_description: Briefly, reactions (200 μL) contained compounds 1−3 dissolved
+      in Tris-HCl buffer (50 mM, pH 8.0, 10% DMSO) with a 5-fold serial dilution,
+      Eis_Ban enzyme (0.25 μM), and NEO (100 μM), AcCoA (0.5 mM), and DTNB (2 mM).
+      Reagents were added in a stepwise manner, allowing the enzyme to incubate with
+      the inhibitor and NEO, and the reactions were initiated with the AcCoA in solution
+      with DTNB. The reactions were monitored as described for the kinetic analysis.
+    bindingdb_reactant_set_id: '293339'
+    bindingdb_entry_assay_id: '6801_1'
+    bindingdb_monomer_id: '152706'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:25928210
+  evidence:
+  - reference: PMID:25928210
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A3P1UAV8
+    protein_label: Acetyltransferase, GNAT family
+    taxon_id: NCBITaxon:1392
+    taxon_label: Bacillus anthracis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -113,6 +156,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:19:00Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

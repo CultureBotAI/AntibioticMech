@@ -51,6 +51,99 @@ source_concepts:
   role_terms:
   - CHEBI:22587
   source_version: '2026-08-30'
+molecular_targets:
+- target_label: DNA primase
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:1392
+  taxon_label: Bacillus anthracis
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: IC50
+    original_value: '7.1e+3'
+    qualifier: EQ
+    value: 7100.0
+    unit: nM
+    assay_name: Quatitative Inhibition Analysis Assay
+    assay_description: The reaction mixture contained DNA (1.25 uM or as specified),
+      NTP (110 uM or as specified), 50 mM NaCl, 150 mM potassium glutamate, buffer
+      [20 mM CAPS (pH 8.8) or as specified], and divalent metals (2 mM Mn2+ and 1
+      mM Mg2+). The assay was performed in 96-well plates with 4 uM Ba DnaG.
+    bindingdb_reactant_set_id: '246975'
+    bindingdb_entry_assay_id: '6265_1'
+    bindingdb_monomer_id: '50364890'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:24004110
+  evidence:
+  - reference: PMID:24004110
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A6L8PXB3
+    protein_label: DNA primase
+    taxon_id: NCBITaxon:1392
+    taxon_label: Bacillus anthracis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
+- target_label: Replicase polyprotein 1ab
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:2697049
+  taxon_label: Severe acute respiratory syndrome coronavirus 2
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: IC50
+    original_value: '4090'
+    qualifier: EQ
+    value: 4090.0
+    unit: nM
+    assay_name: DRC analysis by immunofluorescence
+    assay_description: 'Ten-point DRCs were generated for each drug. Vero cells were
+      seeded at 1.2 × 104 cells per well in DMEM, supplemented with 2% FBS and 1×
+      antibiotic-antimycotic solution (Gibco), in black, 384-well μClear plates (Greiner
+      Bio-One) 24 h prior to the experiment. Ten-point DRCs were generated, with compound
+      concentrations ranging from 0.1 to 50 μM. For the viral infections, plates were
+      transferred into the BSL3 containment facility and SARS-CoV-2 was added at a
+      multiplicity of infection (MOI) of 0.0125. The cells were fixed at 24 hours
+      postinfection (hpi) with 4% PFA and analyzed by immunofluorescence. The acquired
+      images were analyzed using in-house software to quantify cell numbers and infection
+      ratios, and antiviral activity was normalized to positive (mock) and negative
+      (0.5% DMSO) controls in each assay plate. DRCs were fitted by sigmoidal dose-response
+      models, with the following equation: Y = bottom + (top − bottom)/[1 + (IC50/X)Hillslope],
+      using XLfit 4 software or Prism7. IC50 values were calculated from the normalized
+      activity data set-fitted curves. All IC50 and 50% cytotoxic concentration (CC50)
+      values were measured in duplicate, and the quality of each assay was controlled
+      by Z -factor and the coefficient of variation in percent (%CV).'
+    bindingdb_reactant_set_id: '874400'
+    bindingdb_entry_assay_id: '8945_1'
+    bindingdb_monomer_id: '50364890'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:32366720
+  evidence:
+  - reference: PMID:32366720
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0DTD1
+    protein_label: Replicase polyprotein 1ab
+    taxon_id: NCBITaxon:2697049
+    taxon_label: Severe acute respiratory syndrome coronavirus 2
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -61,6 +154,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:18:54Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

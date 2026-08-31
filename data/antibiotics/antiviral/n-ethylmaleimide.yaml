@@ -54,6 +54,47 @@ source_concepts:
   role_terms:
   - CHEBI:149553
   source_version: '2026-08-30'
+molecular_targets:
+- target_label: Genome polyprotein
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:3052230
+  taxon_label: Orthohepacivirus hominis
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: IC50
+    original_value: '5.30e+5'
+    qualifier: EQ
+    value: 530000.0
+    unit: nM
+    assay_name: EMSA
+    assay_description: Binding assays containing 25 mM MOPS pH 7.5, 1.25 mM MgCl2,
+      20 nM Cy5-dT15, and 200 nM NS3h_1b were incubated 5 min at RT. Following addition
+      of indicated concentrations of ebselen, the binding reactions were incubated
+      another 5 min at 23 C.
+    bindingdb_reactant_set_id: '251955'
+    bindingdb_entry_assay_id: '6323_1'
+    bindingdb_monomer_id: '50220832'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:25126694
+  evidence:
+  - reference: PMID:25126694
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:A3EZJ3
+    protein_label: Genome polyprotein
+    taxon_id: NCBITaxon:3052230
+    taxon_label: Orthohepacivirus hominis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -64,6 +105,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:19:02Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

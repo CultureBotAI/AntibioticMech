@@ -30,6 +30,7 @@ import argparse
 import contextlib
 import csv
 import hashlib
+import json
 import re
 import shutil
 import sys
@@ -1017,6 +1018,128 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
         _history_last(records[identifier])
 
 
+BINDINGDB_TARGET_SOURCE = "BINDINGDB"
+
+
+def is_bindingdb_sourced_target(item: dict) -> bool:
+    """True only for a target assertion owned by the BindingDB extractor."""
+    return item.get("source") == BINDINGDB_TARGET_SOURCE
+
+
+def bindingdb_sourced_target_view(record: dict) -> list[dict]:
+    """The reproducible BindingDB slice of a record's target assertions."""
+    return [
+        item
+        for item in (record.get("molecular_targets") or [])
+        if is_bindingdb_sourced_target(item)
+    ]
+
+
+def attach_bindingdb_targets(records: dict[str, dict]) -> Counter:
+    """Attach quantitative BindingDB assertions from the committed inventory."""
+    rows = load_tsv(RAW_DIR / "bindingdb_target_measurements.tsv")
+    by_key: dict[str, list[str]] = defaultdict(list)
+    for identifier, record in records.items():
+        by_key[record["chemical_structure"]["standard_inchi_key"]].append(identifier)
+
+    grouped: dict[tuple[str, str, str, str], list[dict]] = defaultdict(list)
+    counts: Counter = Counter()
+    for row in rows:
+        if row.get("curation_source") != "Curated from the literature by BindingDB":
+            raise ValueError("BindingDB inventory contains a non-BindingDB-curated row")
+        matches = by_key.get(row["standard_inchi_key"], [])
+        if len(matches) != 1:
+            counts["ambiguous_or_missing_identity"] += 1
+            continue
+        identifier = matches[0]
+        key = (identifier, row["target_name"], row["taxon_id"], row["target_relation"])
+        grouped[key].append(row)
+        counts["matched_measurements"] += 1
+
+    assertions_by_record: dict[str, list[dict]] = defaultdict(list)
+    for (identifier, target_name, taxon_id, relation), matched_rows in sorted(grouped.items()):
+        types = {row["target_type"] for row in matched_rows}
+        labels = {row["taxon_label"] for row in matched_rows}
+        versions = {row["source_version"] for row in matched_rows}
+        dates = {row["source_retrieved_on"] for row in matched_rows}
+        if any(len(values) != 1 for values in (types, labels, versions, dates)):
+            raise ValueError(
+                f"inconsistent BindingDB target group for {identifier}/{target_name}/{taxon_id}"
+            )
+
+        measurements = []
+        proteins: dict[str, dict] = {}
+        evidence: dict[str, dict] = {}
+        for row in sorted(
+            matched_rows,
+            key=lambda value: (
+                int(value["bindingdb_reactant_set_id"]),
+                value["measurement_type"],
+            ),
+        ):
+            measurements.append({
+                "measurement_type": row["measurement_type"],
+                "original_value": row["original_value"],
+                "qualifier": row["qualifier"],
+                "value": float(row["value"]),
+                "unit": row["unit"],
+                "assay_name": row["assay_name"],
+                "assay_description": row["assay_description"],
+                "bindingdb_reactant_set_id": row["bindingdb_reactant_set_id"],
+                "bindingdb_entry_assay_id": row["bindingdb_entry_assay_id"],
+                "bindingdb_monomer_id": row["bindingdb_monomer_id"],
+                "source_version": row["source_version"],
+                "source_retrieved_on": row["source_retrieved_on"],
+                "reference": row["reference"],
+            })
+            evidence.setdefault(row["reference"], {
+                "reference": row["reference"],
+                "notes": (
+                    "BindingDB literature-curated quantitative target measurement; "
+                    "source value, assay text, reaction-set ID, and target organism retained."
+                ),
+            })
+            for protein in json.loads(row["protein_examples_json"]):
+                accession = protein["accession"]
+                proteins.setdefault(accession, {
+                    "uniprot_id": f"UniProtKB:{accession}",
+                    "protein_label": protein["label"],
+                    "taxon_id": f"NCBITaxon:{taxon_id}",
+                    "taxon_label": next(iter(labels)),
+                    "entry_status": protein["entry_status"],
+                    "retrieved_on": next(iter(dates)),
+                    "role": f"BindingDB target chain {protein['chain']}",
+                })
+
+        assertion = {
+            "target_label": target_name,
+            "target_type": next(iter(types)),
+            "target_relation": relation,
+            "taxon_id": f"NCBITaxon:{taxon_id}",
+            "taxon_label": next(iter(labels)),
+            "experimental_context": (
+                "BindingDB quantitative measurement in the named target organism; "
+                "source assay descriptions and identifiers are retained per measurement."
+            ),
+            "evidence_status": "PRIMARY_EVIDENCE",
+            "source": BINDINGDB_TARGET_SOURCE,
+            "source_version": next(iter(versions)),
+            "source_retrieved_on": next(iter(dates)),
+            "measurements": measurements,
+            "evidence": list(evidence.values()),
+        }
+        if proteins:
+            assertion["protein_examples"] = list(proteins.values())
+        assertions_by_record[identifier].append(assertion)
+        counts["matched_target_assertions"] += 1
+
+    for identifier, assertions in assertions_by_record.items():
+        records[identifier].setdefault("molecular_targets", []).extend(assertions)
+        _history_last(records[identifier])
+        counts["matched_records"] += 1
+    return counts
+
+
 MIBIG_PRODUCER_SOURCE = "MIBIG"
 
 
@@ -1401,11 +1524,16 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     else:
         merged.pop("discussions", None)
 
-    # CARD-derived mechanism items are re-seeded; curator-added or
-    # curator-upgraded ones are kept, after them.
+    # CARD-derived mechanism items and BindingDB target assertions are
+    # re-seeded; curator-added or curator-upgraded ones are kept, after them.
     for field in ("molecular_targets", "resistance_mechanisms"):
         seeded_items = list(record.get(field) or [])
-        curator_items = [i for i in (existing.get(field) or []) if not is_card_sourced(i)]
+        curator_items = [
+            item
+            for item in (existing.get(field) or [])
+            if not is_card_sourced(item)
+            and not (field == "molecular_targets" and is_bindingdb_sourced_target(item))
+        ]
         if seeded_items or curator_items:
             merged[field] = seeded_items + curator_items
         else:
@@ -1426,6 +1554,8 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     unchanged = all(existing.get(f) == record.get(f) for f in SEEDED_FIELDS) and all(
         card_sourced_view(existing, f) == card_sourced_view(record, f)
         for f in ("molecular_targets", "resistance_mechanisms")
+    ) and (
+        bindingdb_sourced_target_view(existing) == bindingdb_sourced_target_view(record)
     ) and (
         mibig_sourced_producer_view(existing) == mibig_sourced_producer_view(record)
     ) and (
@@ -1613,6 +1743,7 @@ def main() -> int:
     decisions = load_decisions()
     records, skipped = merge(concepts, chebi_rows, conf, decisions, source_version)
     attach_aro_mechanism(records, source_version)
+    bindingdb_counts = attach_bindingdb_targets(records)
     mibig_counts = attach_mibig_producers(
         records,
         str(manifest.get("sources", {}).get("mibig", {}).get("version", "")),
@@ -1632,6 +1763,14 @@ def main() -> int:
     if flagged:
         print(f"  {flagged} records flagged with a structure-collision discussion",
               file=sys.stderr)
+    print(
+        "  BindingDB targets: "
+        f"measurements={bindingdb_counts['matched_measurements']} "
+        f"assertions={bindingdb_counts['matched_target_assertions']} "
+        f"records={bindingdb_counts['matched_records']} "
+        f"ambiguous_or_missing={bindingdb_counts['ambiguous_or_missing_identity']}",
+        file=sys.stderr,
+    )
     print(
         "  MIBiG producers: "
         f"matched={mibig_counts['matched']} "

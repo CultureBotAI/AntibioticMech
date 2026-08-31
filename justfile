@@ -44,6 +44,14 @@ extract-fda-dry *args:
 evaluate-bindingdb *args:
     uv run --extra chemical-map python scripts/evaluate_bindingdb_targets.py {{args}}
 
+# Extract BindingDB-curated quantitative targets. All four pinned archives are
+# explicit arguments so a release refresh cannot silently mix versions.
+extract-bindingdb *args:
+    uv run --extra chemical-map python scripts/extract_bindingdb_targets.py {{args}}
+
+extract-bindingdb-dry *args:
+    uv run --extra chemical-map python scripts/extract_bindingdb_targets.py --dry-run {{args}}
+
 # Free check: print the PubChem URL for the first molecule needing a structure
 extract-pubchem-dry:
     uv run python scripts/enrich_pubchem_structures.py --dry-run

@@ -88,6 +88,44 @@ source_concepts:
   - CHEBI:48219
   - CHEBI:86327
   source_version: '2026-08-30'
+molecular_targets:
+- target_label: Replicase polyprotein 1ab
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:2901879
+  taxon_label: Severe acute respiratory syndrome coronavirus
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: KI
+    original_value: '2400'
+    qualifier: EQ
+    value: 2400.0
+    unit: nM
+    assay_name: Various Assay
+    assay_description: This is a review article.  Please point to the original journal.
+    bindingdb_reactant_set_id: '1073838'
+    bindingdb_entry_assay_id: '10079_1'
+    bindingdb_monomer_id: '512713'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:34798775
+  evidence:
+  - reference: PMID:34798775
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0C6X7
+    protein_label: Replicase polyprotein 1ab
+    taxon_id: NCBITaxon:2901879
+    taxon_label: Severe acute respiratory syndrome coronavirus
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -98,6 +136,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:19:13Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

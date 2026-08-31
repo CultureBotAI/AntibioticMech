@@ -114,6 +114,21 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 {% if t.target_id %}<p class="meta">{% if t.target_id.href %}<a href="{{ t.target_id.href }}">{{ t.target_id.id }}</a>{% else %}<code class="curie">{{ t.target_id.id }}</code>{% endif %}</p>{% endif %}
 <p class="meta">{{ t.experimental_context }} Evidence status: {{ t.evidence_status }}. Source: {{ t.source }} {{ t.source_version }} (retrieved {{ t.source_retrieved_on }}).</p>
 {% if t.taxon_label %}<p><em>{{ t.taxon_label }}</em>{% if t.taxon_id %} <code class="curie">{{ t.taxon_id }}</code>{% endif %}{% if t.strain %}; strain {{ t.strain }}{% endif %}</p>{% endif %}
+{% if t.measurements %}
+<table>
+  <caption>Quantitative measurements</caption>
+  <thead><tr><th scope="col">Type</th><th scope="col">Reported value</th><th scope="col">Assay</th><th scope="col">BindingDB IDs</th><th scope="col">Reference</th></tr></thead>
+  {% for m in t.measurements %}
+  <tr>
+    <td>{{ m.measurement_type }}</td>
+    <td>{{ m.original_value }} {{ m.unit }}</td>
+    <td><strong>{{ m.assay_name }}</strong><br><span class="meta">{{ m.assay_description }}</span></td>
+    <td><code class="curie">RSID {{ m.bindingdb_reactant_set_id }}</code><br><code class="curie">assay {{ m.bindingdb_entry_assay_id }}</code><br><code class="curie">monomer {{ m.bindingdb_monomer_id }}</code></td>
+    <td><code class="curie">{{ m.reference }}</code></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endif %}
 {% if t.protein_examples %}
 <table>
   <caption>Organism-specific examples</caption>

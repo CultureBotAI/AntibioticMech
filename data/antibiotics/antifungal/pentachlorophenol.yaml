@@ -55,6 +55,45 @@ source_concepts:
   role_terms:
   - CHEBI:24127
   source_version: '2026-08-30'
+molecular_targets:
+- target_label: Pentachlorophenol 4-monooxygenase
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:46429
+  taxon_label: Sphingobium chlorophenolicum
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: KD
+    original_value: <50
+    qualifier: LT
+    value: 50.0
+    unit: nM
+    assay_name: Spectroscopic Assay
+    assay_description: Formation of the hydroxylated product and depletion of NADPH
+      were measured following ethyl acetate extraction of the reaction mixture.
+    bindingdb_reactant_set_id: '201225'
+    bindingdb_entry_assay_id: '5706_1'
+    bindingdb_monomer_id: '92749'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:22482720
+  evidence:
+  - reference: PMID:22482720
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:P42535
+    protein_label: Pentachlorophenol 4-monooxygenase
+    taxon_id: NCBITaxon:46429
+    taxon_label: Sphingobium chlorophenolicum
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -65,6 +104,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:27Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:18:55Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
