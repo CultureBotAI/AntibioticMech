@@ -50,6 +50,11 @@ COMMANDS = [
         "A schema-valid hand edit is still invalid unless the corpus reproduces from data/raw/.",
     ),
     (
+        "chemical map",
+        [sys.executable, "scripts/generate_chemical_map.py", "--check"],
+        "The committed structure-only map must cover the corpus and retain its quality contract.",
+    ),
+    (
         "generated site",
         [sys.executable, "scripts/render_pages.py", "--check"],
         "The committed, published site must not drift from the corpus that generated it.",

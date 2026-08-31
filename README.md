@@ -88,10 +88,42 @@ just seed-apply                    # write the corpus
 just qc                            # every local and CI quality gate
 just report                        # corpus, grounding and curation statistics
 just worklist                      # what curation owes, ranked
+just chemical-map                 # regenerate the structure-only map + site
+just chemical-map-check           # verify the committed map without writing
 ```
 
 Nothing above touches the network. The inventories in `data/raw/` are committed,
 so seeding, validation, rendering and the whole test suite run offline.
+
+## Chemical structure map
+
+The generated site includes a
+**[Chemical structure map](https://culturebotai.github.io/AntibioticMech/pages/chemical-map.html)**
+covering all 2,923 records. Its coordinates and nearest neighbors use only the
+exact stored chemical structure:
+
+```text
+distance = 0.90 × (1 - Tanimoto(chiral Morgan count radius 2))
+         + 0.10 × (1 - Tanimoto(chiral Morgan count radius 4))
+```
+
+UMAP projects the complete precomputed distance matrix with
+`n_neighbors=15`, `min_dist=0.05`, and `random_state=42`. Labels,
+antimicrobial classes, mechanisms, targets, and curation metadata can filter or
+color the view but never affect fingerprints, distance, neighbors, or position.
+Local neighborhoods are the meaningful part of the projection; axes and
+map-wide spacing are not quantitative chemical distances.
+
+The build parses stored SMILES first and falls back to the record's standard
+InChI when required. It preserves charge, stereochemistry, counterions, and
+fragments rather than silently neutralizing or desalting a structure. The
+committed artifact records parser provenance, dependency/configuration
+versions, quality metrics, duplicate InChIKey groups, and multi-fragment counts.
+
+`just chemical-map-check` performs the fast CI staleness and quality check.
+`just chemical-map-recompute-check` additionally reruns the full exact
+fingerprint, pairwise-distance, and UMAP build and requires byte-identical
+output in the pinned local environment.
 
 ## Schema
 
@@ -135,8 +167,10 @@ mode-of-action and target vocabularies cover both kinds.
 ## What is generated, and what is curated
 
 **Generated** (never hand-edit): `data/antibiotics/**`, `data/raw/**`,
-`data/antibiotics/PATHS.tsv`, `pages/**`, and the statistics block in this
-README. `just verify-corpus` rebuilds the corpus from `data/raw/` and rejects
+`data/antibiotics/PATHS.tsv`,
+`data/embeddings/chemical-structure-map.json`, `pages/**`, and the
+statistics block in this README. `just verify-corpus` rebuilds the corpus from
+`data/raw/` and rejects
 drift **in the fields the seeder owns** — identity, label, definition, synonyms,
 parents, xrefs, class, roles, structural class, structure, source concepts,
 grounding status, and the CARD-derived mechanism items.

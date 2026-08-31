@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chemical structure map — AntibioticMech</title>
+<meta name="description" content="Explore all AntibioticMech records by exact molecular-structure similarity using chiral Morgan fingerprints and a fixed UMAP projection.">
+<link rel="stylesheet" href="style.css">
+<script defer src="chemical-map.js"></script></head>
+<body>
+<div class="wrap map-page-wrap">
+<header class="site">
+  <a class="brand" href="index.html">AntibioticMech</a>
+  <nav>
+    <a href="index.html">Overview</a>
+    <a href="browse.html">Browse</a>
+    <a href="map.html">Map</a>
+    <a href="chemical-map.html">Chemical map</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+  </nav>
+</header>
+<main id="chemical-map" data-source="data/chemical-structure-map.json">
+  <h1>Chemical structure map</h1>
+  <p class="lede">
+    This view places 2923 records using <strong>chemical structure
+    only</strong>: chiral Morgan count fingerprints and Tanimoto distance,
+    projected to two dimensions with UMAP. Labels, antimicrobial classes,
+    mechanisms, targets, and curation fields can color or filter the view, but
+    they do not affect position.
+  </p>
+
+  <div class="note">
+    <p>
+      Read local neighborhoods, not the axes or global spacing. UMAP preserves
+      nearby structure better than map-wide distance. Current full-corpus
+      trustworthiness@10 is 0.972
+      and 2D neighbor overlap@10 is
+      0.501.
+      Multi-fragment structures are retained exactly as their records define
+      them and are visibly marked.
+    </p>
+  </div>
+
+  <div class="map-controls" aria-label="Chemical map controls">
+    <label>
+      Find a compound
+      <input id="map-search" type="search" autocomplete="off"
+             placeholder="Name, synonym, or identifier">
+    </label>
+    <label>
+      Show class
+      <select id="map-class">
+        <option value="">All antimicrobial classes</option>
+      </select>
+    </label>
+    <label>
+      Color points by
+      <select id="map-color">
+        <option value="class">Antimicrobial class</option>
+        <option value="input">Structure input</option>
+        <option value="fragments">Single vs multi-fragment</option>
+      </select>
+    </label>
+    <button id="map-reset" type="button">Reset</button>
+  </div>
+
+  <div id="map-status" class="map-status" role="status" aria-live="polite">
+    Loading chemical map…
+  </div>
+  <div id="map-legend" class="map-legend" aria-label="Map legend"></div>
+
+  <div class="chemical-map-layout">
+    <div class="map-stage">
+      <canvas id="map-canvas" width="960" height="620"
+              aria-label="Interactive plot of compounds by chemical structure">
+        The interactive plot requires Canvas support. Use the search results
+        and selected-neighbor list beside it to explore the same records.
+      </canvas>
+      <div id="map-tooltip" class="map-tooltip" hidden></div>
+    </div>
+
+    <aside class="map-details" aria-label="Selected compound">
+      <div id="map-selection">
+        <h2>Select a compound</h2>
+        <p>Search by name or select a point to inspect its structural neighbors.</p>
+      </div>
+      <div>
+        <h2>Search results</h2>
+        <ol id="map-results" class="map-results">
+          <li>Enter a name, synonym, or identifier.</li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+
+  <details class="map-method">
+    <summary>Method and provenance</summary>
+    <p>
+      Model <code>morgan-count-chiral-r2_0.90-r4_0.10+tanimoto+umap-precomputed-n15-d0.05-c2-rs42</code>. The generator parses stored SMILES
+      first and falls back to standard InChI when RDKit rejects the stored
+      SMILES. This build used that fallback for
+      176 records and retained
+      202 multi-fragment records.
+      All 189 detected stereoisomer pairs have
+      nonzero model distance.
+    </p>
+    <p>
+      Distance is 90% radius-2 and 10% radius-4 chiral Morgan count-fingerprint
+      Tanimoto distance. Coordinates are generated with
+      <code>UMAP(metric=precomputed, n_neighbors=15, min_dist=0.05,
+      random_state=42)</code>. A corpus or model-version change can move every
+      point.
+    </p>
+  </details>
+</main>
+<footer class="site">
+  <p>
+    Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
+  </p>
+  <p>
+    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    Identity, structure and cross-references come from ChEBI and CARD's own data;
+    the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
+    <code>causal_graphs</code> — is curated incrementally. Treat any record marked
+    <span class="pill plain">SEEDED</span> as a starting point, not a fully
+    reviewed claim. <a href="index.html">Current review counts</a>.
+  </p>
+</footer>
+</div>
+</body>
+</html>

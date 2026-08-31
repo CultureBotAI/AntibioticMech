@@ -39,13 +39,13 @@ jobs:
         run: uv python install ${{ matrix.python-version }}
 
       - name: Install dependencies
-        run: uv sync --extra dev
+        run: uv sync --extra dev --extra chemical-map
 
       # One executable definition of QC: lint, documentation statistics,
       # raw-data provenance, tests, closed-schema validation, corpus
       # reproduction, generated site, and the corpus report.
       - name: Run the authoritative quality gate
-        run: uv run python scripts/run_qc.py
+        run: uv run --extra chemical-map python scripts/run_qc.py
 
       - name: Upload validation failures
         if: failure()

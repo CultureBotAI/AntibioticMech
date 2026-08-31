@@ -10,7 +10,7 @@ default:
 
 # Install package + dev tools
 install:
-    uv sync --extra dev
+    uv sync --extra dev --extra chemical-map
 
 # Generate Pydantic classes from the LinkML schema
 gen-schema:
@@ -96,6 +96,19 @@ render *args:
 render-check:
     uv run python scripts/render_pages.py --check
 
+# Recompute the exact structure-only chemical embedding, then publish it.
+chemical-map:
+    uv run --extra chemical-map python scripts/generate_chemical_map.py
+    uv run python scripts/render_pages.py
+
+# Fast deterministic staleness, coverage, and scientific-quality check.
+chemical-map-check:
+    uv run --extra chemical-map python scripts/generate_chemical_map.py --check
+
+# Expensive local reproducibility audit: rerun fingerprints, distances, and UMAP.
+chemical-map-recompute-check:
+    uv run --extra chemical-map python scripts/generate_chemical_map.py --check --recompute
+
 # Verify every committed inventory is covered by MANIFEST.yaml and matches it
 provenance-check:
     uv run python scripts/check_provenance.py
@@ -156,4 +169,4 @@ embed-map *args:
 
 # The authoritative quality gate used both locally and in CI.
 qc:
-    uv run python scripts/run_qc.py
+    uv run --extra chemical-map python scripts/run_qc.py

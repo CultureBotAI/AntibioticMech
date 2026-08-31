@@ -65,6 +65,15 @@ dev = [
 research = [
     "deep-research-client[cyberian]>=0.2.12; python_version >= '3.12'",
 ]
+# Reproducible, CPU-only build dependencies for the generated chemical map.
+# These are not needed to consume the library or browse the committed site.
+chemical-map = [
+    "numpy==2.2.6",
+    "rdkit==2026.3.5",
+    "scikit-learn==1.7.2",
+    "scipy==1.15.3",
+    "umap-learn==0.5.12",
+]
 
 [project.urls]
 Homepage = "https://github.com/CultureBotAI/AntibioticMech"

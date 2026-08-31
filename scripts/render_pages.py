@@ -46,6 +46,7 @@ CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 TEMPLATES_DIR = REPO_ROOT / "src" / "antibioticmech" / "templates"
 PAGES_DIR = REPO_ROOT / "pages"
 SCHEMA_PATH = REPO_ROOT / "src" / "antibioticmech" / "schema" / "antibioticmech.yaml"
+CHEMICAL_MAP_ARTIFACT = REPO_ROOT / "data" / "embeddings" / "chemical-structure-map.json"
 
 # Enum value -> the directory the corpus files it under. IMPORTED, not copied:
 # the seeder owns the corpus layout, and a second copy here would drift the
@@ -131,6 +132,32 @@ def load_records() -> list[tuple[Path, dict]]:
         if isinstance(doc, dict):
             out.append((path, doc))
     return out
+
+
+def load_chemical_map(record_ids: set[str]) -> dict:
+    try:
+        artifact = json.loads(CHEMICAL_MAP_ARTIFACT.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        raise SystemExit(
+            f"missing {CHEMICAL_MAP_ARTIFACT.relative_to(REPO_ROOT)}; "
+            "regenerate with `just chemical-map`"
+        ) from None
+    except json.JSONDecodeError as error:
+        raise SystemExit(f"{CHEMICAL_MAP_ARTIFACT}: invalid JSON: {error}") from error
+    rows = artifact.get("records") if isinstance(artifact, dict) else None
+    if not isinstance(rows, list):
+        raise SystemExit(f"{CHEMICAL_MAP_ARTIFACT}: records must be a list")
+    map_ids = {
+        row.get("identifier")
+        for row in rows
+        if isinstance(row, dict) and isinstance(row.get("identifier"), str)
+    }
+    if map_ids != record_ids or len(rows) != len(record_ids):
+        raise SystemExit(
+            f"{CHEMICAL_MAP_ARTIFACT}: identifiers do not match the live corpus; "
+            "regenerate with `just chemical-map`"
+        )
+    return artifact
 
 
 def extracted_at() -> str:
@@ -257,6 +284,7 @@ def class_hierarchy() -> dict[str, list[str]]:
 
 def build(out_dir: Path) -> None:
     records = load_records()
+    chemical_map = load_chemical_map({doc["identifier"] for _, doc in records})
     if not records:
         raise SystemExit(f"no records under {CORPUS_DIR}; run `just seed-apply` first")
 
@@ -293,6 +321,7 @@ def build(out_dir: Path) -> None:
     for class_dir in class_dirs:
         (out_dir / class_dir).mkdir(exist_ok=True)
     (out_dir / "class").mkdir(exist_ok=True)
+    (out_dir / "data").mkdir(exist_ok=True)
 
     # Corpus-wide stats need a full pass before the footer of the FIRST record
     # page can be rendered — reading the fields straight off `doc` here, not
@@ -494,16 +523,30 @@ def build(out_dir: Path) -> None:
                 .replace("\u2029", "\\u2029"), root=""),
             encoding="utf-8")
 
+    (out_dir / "chemical-map.html").write_text(
+        env.get_template("chemical_map.html").render(
+            stats=stats,
+            quality=chemical_map["quality"],
+            model_version=chemical_map["model_version"],
+            root="",
+        ),
+        encoding="utf-8",
+    )
     (out_dir / "404.html").write_text(
         env.get_template("not_found.html").render(root="", stats=stats),
         encoding="utf-8",
     )
     shutil.copyfile(TEMPLATES_DIR / "style.css", out_dir / "style.css")
+    shutil.copyfile(TEMPLATES_DIR / "chemical_map.js", out_dir / "chemical-map.js")
+    shutil.copyfile(
+        CHEMICAL_MAP_ARTIFACT,
+        out_dir / "data" / "chemical-structure-map.json",
+    )
     # Without this, Pages runs Jekyll over the site and silently drops any
     # path beginning with an underscore — a 404 rather than a visible error.
     (out_dir / ".nojekyll").write_text("", encoding="utf-8")
 
-    listed = ["index.html", "browse.html", "404.html"] + class_pages
+    listed = ["index.html", "browse.html", "chemical-map.html", "404.html"] + class_pages
     listed += [f"{path.parent.name}/{path.stem}.html" for path, _ in records]
     urls = "\n".join(f"  <url><loc>{SITE_BASE}{page}</loc></url>" for page in listed)
     (out_dir / "sitemap.xml").write_text(
@@ -521,8 +564,10 @@ def build(out_dir: Path) -> None:
     # shrinks and shifts, not just grows; without this, pages/ keeps serving a
     # stale page forever and --check would have nothing to catch it with.
     written = {
-        out_dir / "index.html", out_dir / "browse.html", out_dir / "404.html",
-        out_dir / "style.css", out_dir / ".nojekyll", out_dir / "sitemap.xml", out_dir / "robots.txt",
+        out_dir / "index.html", out_dir / "browse.html", out_dir / "chemical-map.html",
+        out_dir / "chemical-map.js", out_dir / "data" / "chemical-structure-map.json",
+        out_dir / "404.html", out_dir / "style.css", out_dir / ".nojekyll",
+        out_dir / "sitemap.xml", out_dir / "robots.txt",
     }
     if map_rendered:
         written.add(out_dir / "map.html")
