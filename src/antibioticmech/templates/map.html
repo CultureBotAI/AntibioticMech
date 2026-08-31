@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Corpus map · AntibioticMech{% endblock %}
+{% block content %}
+<h1>Corpus map</h1>
+<p class="lede">{{ map.n }} compounds projected from their record text into two dimensions
+({{ map.method|upper }} over {{ map.model }}).</p>
+
+<p class="meta">Proximity means <strong>described similarly</strong> — same class, structural
+family, mechanism and asserted roles — not structurally similar. These are text embeddings of
+what the corpus says about a compound; SMILES and InChI are deliberately excluded, because a
+sentence model reads them as noise. A chemical-similarity map is a different artifact.</p>
+
+<div id="map-controls">
+  {% for c in map.classes %}
+  <button class="pill plain legend" data-class="{{ loop.index0 }}"
+          style="--dot: var(--cls{{ loop.index0 }})" aria-pressed="true">{{ c.replace("_", " ")|lower }}</button>
+  {% endfor %}
+</div>
+<figure>
+  <canvas id="corpus-map" width="900" height="620" role="img"
+          aria-label="Scatter plot of {{ map.n }} compounds, coloured by antimicrobial class."></canvas>
+  <figcaption class="meta" id="map-hover">Hover a point for its name; click to open the record.</figcaption>
+</figure>
+
+<script id="map-data" type="application/json">{{ map_json|safe }}</script>
+<script>
+(function () {
+  var data = JSON.parse(document.getElementById("map-data").textContent);
+  var cv = document.getElementById("corpus-map"), cx = cv.getContext("2d");
+  var hover = document.getElementById("map-hover");
+  var css = getComputedStyle(document.documentElement);
+  var colors = data.classes.map(function (_, i) {
+    return css.getPropertyValue("--cls" + i).trim() || "#888";
+  });
+  var on = data.classes.map(function () { return true; });
+  var pad = 24, W = cv.width, H = cv.height;
+  function px(p) { return [pad + p[0] * (W - 2 * pad), pad + (1 - p[1]) * (H - 2 * pad)]; }
+  function draw() {
+    cx.clearRect(0, 0, W, H);
+    data.points.forEach(function (p) {
+      if (!on[p[2]]) return;
+      var q = px(p);
+      cx.fillStyle = colors[p[2]];
+      cx.globalAlpha = 0.72;
+      cx.beginPath(); cx.arc(q[0], q[1], 2.6, 0, 6.2832); cx.fill();
+    });
+    cx.globalAlpha = 1;
+  }
+  function nearest(mx, my) {
+    var best = null, bd = 144;
+    data.points.forEach(function (p) {
+      if (!on[p[2]]) return;
+      var q = px(p), d = (q[0] - mx) * (q[0] - mx) + (q[1] - my) * (q[1] - my);
+      if (d < bd) { bd = d; best = p; }
+    });
+    return best;
+  }
+  cv.addEventListener("mousemove", function (e) {
+    var r = cv.getBoundingClientRect();
+    var p = nearest((e.clientX - r.left) * (W / r.width), (e.clientY - r.top) * (H / r.height));
+    hover.textContent = p ? p[4] + " — " + data.classes[p[2]].replace(/_/g, " ").toLowerCase()
+                          : "Hover a point for its name; click to open the record.";
+    cv.style.cursor = p ? "pointer" : "default";
+  });
+  cv.addEventListener("click", function (e) {
+    var r = cv.getBoundingClientRect();
+    var p = nearest((e.clientX - r.left) * (W / r.width), (e.clientY - r.top) * (H / r.height));
+    if (p && data.hrefs[p[3]]) window.location = data.hrefs[p[3]];
+  });
+  document.querySelectorAll("#map-controls .legend").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var i = +b.dataset.class;
+      on[i] = !on[i];
+      b.setAttribute("aria-pressed", String(on[i]));
+      b.classList.toggle("off", !on[i]);
+      draw();
+    });
+  });
+  draw();
+})();
+</script>
+{% endblock %}
