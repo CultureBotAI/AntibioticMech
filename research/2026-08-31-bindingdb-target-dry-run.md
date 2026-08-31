@@ -1,8 +1,8 @@
 # BindingDB-curated target evaluation
 
-Date: 2026-08-31  
-Issue: #103  
-BindingDB release: 2026-09, updated 2026-08-30  
+Date: 2026-08-31
+Issue: #103
+BindingDB release: 2026-09, updated 2026-08-30
 NCBI taxonomy snapshot: 2026-08-31
 
 ## Sources

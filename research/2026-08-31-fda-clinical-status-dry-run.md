@@ -1,8 +1,8 @@
 # Drugs@FDA + GSRS clinical-status import audit
 
-Date: 2026-08-31  
-Issue: #105  
-Drugs@FDA snapshot: 2026-08-28  
+Date: 2026-08-31
+Issue: #105
+Drugs@FDA snapshot: 2026-08-28
 FDA UNII / GSRS snapshot: 2026-08-31
 
 ## Sources and captured artifacts

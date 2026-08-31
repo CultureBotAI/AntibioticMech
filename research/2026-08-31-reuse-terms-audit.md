@@ -1,6 +1,6 @@
 # Reuse-terms audit for measured antimicrobial data
 
-Date: 2026-08-31  
+Date: 2026-08-31
 Issue: #106
 
 ## Outcome

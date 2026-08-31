@@ -1,6 +1,6 @@
 # BindingDB-curated target evaluation plan
 
-Date: 2026-08-31  
+Date: 2026-08-31
 Issue: #103
 
 ## Decision boundary

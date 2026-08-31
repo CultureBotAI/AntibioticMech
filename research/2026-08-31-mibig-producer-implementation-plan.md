@@ -1,6 +1,6 @@
 # Reviewed MIBiG producer import plan
 
-Date: 2026-08-31  
+Date: 2026-08-31
 Issue: #104
 
 ## Decision

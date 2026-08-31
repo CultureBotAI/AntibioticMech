@@ -1,6 +1,6 @@
 # Drugs@FDA + GSRS clinical-status implementation plan
 
-Date: 2026-08-31  
+Date: 2026-08-31
 Issue: #105
 
 ## Decision
@@ -37,4 +37,3 @@ inherits another substance's approval.
 5. Regenerate records/site/docs and pass `just qc`, then conduct an adversarial
    review of combination, tentative-approval, discontinued, salt, and prodrug
    handling.
-

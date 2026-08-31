@@ -1,8 +1,8 @@
 # MIBiG producer import dry run
 
-Date: 2026-08-31  
-Issue: #104  
-Release: MIBiG 4.0.1, Zenodo record 14835872  
+Date: 2026-08-31
+Issue: #104
+Release: MIBiG 4.0.1, Zenodo record 14835872
 Archive SHA-256: `d02a387c7d62f8e54d7bcdc03984301e513ce56c1782ecbc9ce957a76039444f`
 
 Command:

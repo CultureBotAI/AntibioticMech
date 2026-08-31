@@ -1,7 +1,7 @@
 # Reuse-permission outreach drafts
 
-Date drafted: 2026-08-31  
-Issue: #106  
+Date drafted: 2026-08-31
+Issue: #106
 Status: **NOT SENT — no authenticated mail channel is available in this workspace**
 
 These requests deliberately identify the exact data scope and ask separately
