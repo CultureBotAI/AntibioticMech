@@ -30,10 +30,10 @@ activity_roles:
 - CHEBI:35718
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:75282 (ergosterol biosynthesis
-  inhibitor). ChEBI asserts the role on the compound. The role names a target specific
-  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
-  review.
-mode_of_action_target_scope: MICROBIAL_TARGET
+  inhibitor). ChEBI asserts the role on the compound. The target it names is one the
+  host has too, so the mechanism is true but is not evidence of selectivity — see
+  mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H][C@@]12CC[C@]([H])([C@H](C)CCC(=C)C(C)C)[C@@]1(C)C[C@@H](O)[C@@]13C[C@@]14C(=O)C[C@H](O)[C@@](C)(C(=O)O)[C@]4([H])C(=O)C[C@]23O'
   standard_inchi: InChI=1S/C30H44O7/c1-15(2)16(3)7-8-17(4)18-9-10-20-26(18,5)13-23(34)29-14-28(29)22(33)11-21(32)27(6,25(35)36)24(28)19(31)12-30(20,29)37/h15,17-18,20-21,23-24,32,34,37H,3,7-14H2,1-2,4-6H3,(H,35,36)/t17-,18-,20-,21+,23-,24+,26-,27-,28+,29+,30+/m1/s1
@@ -61,6 +61,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T04:10:39Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

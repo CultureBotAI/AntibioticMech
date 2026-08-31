@@ -43,9 +43,11 @@ mode_of_action: MULTIPLE
 mode_of_action_notes: Assigned from ChEBI roles CHEBI:170010 (EC 2.7.7.48 (RNA-directed
   RNA polymerase) inhibitor), CHEBI:48001 (protein synthesis inhibitor), which map
   to PROTEIN_SYNTHESIS_INHIBITION, VIRAL_POLYMERASE_INHIBITION. ChEBI asserts these
-  roles on the compound; a curator should decide whether one is primary. The roles
-  disagree about whose target it is, so no mode_of_action_target_scope is asserted
-  until the primary mechanism is settled. Not a curator's mechanistic review.
+  roles on the compound; a curator should decide whether one is primary. The role
+  names a target specific to the microbe or virus — see mode_of_action_target_scope.
+  The contributing roles differ on whose target it is, so settling the primary mechanism
+  may change mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: Nc1ccn([C@@H]2OC(CO)=C[C@H]2O)c(=O)n1
   standard_inchi: InChI=1S/C9H11N3O4/c10-7-1-2-12(9(15)11-7)8-6(14)3-5(4-13)16-8/h1-3,6,8,13-14H,4H2,(H2,10,11,15)/t6-,8-/m1/s1
@@ -77,6 +79,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T20:12:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T04:10:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

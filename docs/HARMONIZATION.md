@@ -142,8 +142,8 @@ Five disciplines keep it honest:
   it would make the corpus unable to express a real drug class. But
   `PROTEIN_SYNTHESIS_INHIBITION` alone cannot tell linezolid's bacterial 50S
   from omacetaxine's host 80S, so `mode_of_action_target_scope` says which:
-  `MICROBIAL_TARGET` (217 records) when a contributing role names a target the
-  host lacks, `HOST_SHARED_TARGET` (196) when none does. Presence is the rule
+  `MICROBIAL_TARGET` (177 records) when a contributing role names a target the
+  host lacks, `HOST_SHARED_TARGET` (239) when none does. Presence is the rule
   and a role's cohort is evidence about presence, not a second rule — reading it
   the other way made trimethoprim host-shared for a host enzyme while terbinafine
   was microbial for one. It is **not a
@@ -155,14 +155,21 @@ Five disciplines keep it honest:
   copies the block forward untouched rather than guessing — `just worklist
   --queue moa-scope` is where an unsettled scope shows up.
 
-  A specific role outranks a generic one, because it identifies the target the
-  generic role only gestures at. Ciprofloxacin carries `topoisomerase IV
-  inhibitor` *and* `DNA synthesis inhibitor` and is `MICROBIAL_TARGET`; reading
-  it the other way put the most selective antibacterial class there is on the
-  wrong side of the filter. The split runs inside a single combination drug:
-  sulfamethoxazole is `MICROBIAL_TARGET` because the host has no dihydropteroate
-  synthase, trimethoprim is `HOST_SHARED_TARGET` because the host's
-  dihydrofolate reductase is methotrexate's target.
+  The aggregate is by ANY: a record is `MICROBIAL_TARGET` when any contributing
+  role names a target the host lacks, which is what makes it a usable filter —
+  ciprofloxacin carries `topoisomerase IV inhibitor` alongside the generic `DNA
+  synthesis inhibitor`, and reading it the other way would put the most
+  selective antibacterial class there is on the wrong side. (This was once
+  described as "a specific role outranks a generic one". That was never the
+  rule, only a coincidence of that example; the azoles showed the generic role
+  winning over the specific one under the same sentence.)
+
+  The split runs inside a single combination drug: sulfamethoxazole is
+  `MICROBIAL_TARGET` because the host has no dihydropteroate synthase,
+  trimethoprim is `HOST_SHARED_TARGET` because the host's dihydrofolate
+  reductase is methotrexate's target. And it does *not* split a drug class:
+  every sterol-pathway antifungal is host-shared, because an azole's target is
+  CYP51 and the host has CYP51. Their selectivity is affinity, not absence.
 - **Several mechanisms give `MULTIPLE`, never a silent pick.** Rifampicin carries
   both an RNA-polymerase and a protein-synthesis role; the notes name both and
   leave the primary one to a curator.

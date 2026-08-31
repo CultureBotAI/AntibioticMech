@@ -40,9 +40,10 @@ structural_class_id: ARO:3007499
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:75282 (ergosterol biosynthesis
   inhibitor), CHEBI:77884 (EC 1.14.13.70 (sterol 14α-demethylase) inhibitor). ChEBI
-  asserts the role on the compound. The role names a target specific to the microbe
-  or virus — see mode_of_action_target_scope. Not a curator's mechanistic review.
-mode_of_action_target_scope: MICROBIAL_TARGET
+  asserts the role on the compound. The target it names is one the host has too, so
+  the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CC1COC(Cn2cncn2)(c2ccc(Oc3ccc(Cl)cc3)cc2Cl)O1
   standard_inchi: InChI=1S/C19H17Cl2N3O3/c1-13-9-25-19(27-13,10-24-12-22-11-23-24)17-7-6-16(8-18(17)21)26-15-4-2-14(20)3-5-15/h2-8,11-13H,9-10H2,1H3
@@ -106,6 +107,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T04:10:35Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
