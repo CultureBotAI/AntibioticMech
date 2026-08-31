@@ -323,3 +323,107 @@ def test_a_subclass_row_is_placed_and_labelled_under_its_own_parent(repo_root):
                 f'"counted in the row above" note points at {order[order.index(child) - 1]}')
             assert f"subclass of {parent}" in texts[child].lower(), (
                 f"{page}: {child}'s row does not say it is a subclass in its text")
+
+
+# Files scanned for numeric claims about the corpus. Not only .md: the stale
+# "33 roles / 433 records" that prompted this lived in a TSV, and the registry
+# above covers six markdown files by name, so anything outside them was
+# unguarded — including the file a curator reads to choose the next data source.
+CLAIM_FILES = ["README.md", "NEXT_TASKS.md", "CLAUDE.md", "docs/HARMONIZATION.md",
+               "docs/CURATION.md", "ATTRIBUTION.md", "curation/source_queue.tsv"]
+
+# A number followed by a corpus noun. Deliberately narrow: this is a tripwire for
+# claims about how much the corpus holds, not a general numeral checker.
+CLAIM_SHAPE = r"(?<![\d,.])(\d[\d,]{1,6})\s+(?:of\s+the\s+\d[\d,]*\s+)?" \
+              r"(?:records?|roles?|compounds?|structures?|concepts?)"
+
+# Claims that are NOT statements about the corpus as it stands, each with the
+# reason it is exempt. A bare allowlist of numbers would go stale silently; these
+# are matched as whole phrases so a changed sentence stops being exempt.
+CLAIM_EXEMPTIONS = {
+    # Narrative about something that HAPPENED, not a current quantity.
+    "115 record pages disappeared": "history: a past incident, not a live count",
+    "57 records moved class on a single run": "history: one pipeline run's delta",
+}
+
+
+def test_no_unregistered_numeric_claim_about_the_corpus(repo_root):
+    """A tripwire for figures nobody registered.
+
+    `NUMERIC_CLAIMS` only catches a claim someone remembered to add to it, which
+    is exactly how `curation/source_queue.tsv` came to say the map covers "33
+    roles" giving "433 records a mode of action" while the corpus held 32 and
+    417 — in the file a curator reads to choose the next data source, unguarded
+    because the registry lists markdown by name.
+
+    This asserts the complement: every number-plus-corpus-noun in the scanned
+    files must equal something the corpus can actually produce, or be exempt
+    with a stated reason. A new unregistered figure fails until someone corrects
+    it or says why it is not a corpus claim.
+    """
+    import re
+    import sys
+
+    import yaml
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    sys.path.insert(0, str(repo_root / "src"))
+
+    records = [yaml.safe_load(p.read_text(encoding="utf-8"))
+               for p in (repo_root / "data" / "antibiotics").rglob("*.yaml")]
+    conf = yaml.safe_load((repo_root / "conf" / "sources.yaml").read_text(encoding="utf-8"))
+
+    from collections import Counter
+    classes = Counter(r["antimicrobial_class"] for r in records)
+    scopes = Counter(r.get("mode_of_action_target_scope")
+                     for r in records if r.get("mode_of_action"))
+
+    derivable = {len(records), len(classes)}
+    derivable |= set(classes.values()) | set(scopes.values())
+    derivable.add(sum(1 for r in records if r.get("mode_of_action")))
+    derivable.add(len(set(conf["role_to_mode_of_action"])
+                      | set(conf["role_to_mode_of_action_eukaryotic"])))
+    for field in ("molecular_targets", "resistance_mechanisms", "producer_organisms",
+                  "activity_spectrum", "causal_graphs", "evidence", "discussions"):
+        derivable.add(sum(1 for r in records if r.get(field)))
+    for status in ("EXACT", "MINTED"):
+        derivable.add(sum(1 for r in records if r.get("grounding_status") == status))
+    # Records carrying CARD-SOURCED mechanism evidence — the README's own
+    # definition, which is narrower than "has any mechanism item".
+    card_marker = "CARD/ARO asserts"
+
+    def card_sourced(record):
+        for field in ("molecular_targets", "resistance_mechanisms"):
+            for item in (record.get(field) or []):
+                for evidence in (item.get("evidence") or []):
+                    if card_marker in str(evidence.get("notes") or ""):
+                        return True
+        return False
+
+    derivable.add(sum(1 for r in records if card_sourced(r)))
+    derivable.add(sum(1 for r in records
+                      if r.get("molecular_targets") or r.get("resistance_mechanisms")))
+    derivable.add(sum(1 for r in records
+                      if "belongs to an" in str(r.get("mode_of_action_notes") or "")))
+    # Inventory sizes, and the structureless concepts the worklist reports.
+    for name in ("aro_antibiotics", "chebi_antimicrobials", "chebi_role_names"):
+        path = repo_root / "data" / "raw" / f"{name}.tsv"
+        if path.exists():
+            derivable.add(sum(1 for _ in path.open(encoding="utf-8")) - 1)
+    from curation_worklist import no_structure_queue
+    derivable.add(len(no_structure_queue()))
+
+    unregistered = []
+    for name in CLAIM_FILES:
+        path = repo_root / name
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for match in re.finditer(CLAIM_SHAPE, text):
+            phrase = re.sub(r"\s+", " ", match.group(0))
+            if any(ex in phrase or phrase in ex for ex in CLAIM_EXEMPTIONS):
+                continue
+            value = int(match.group(1).replace(",", ""))
+            if value not in derivable:
+                unregistered.append(f"{name}: {phrase!r} — no derived quantity equals {value}")
+    assert unregistered == [], unregistered
