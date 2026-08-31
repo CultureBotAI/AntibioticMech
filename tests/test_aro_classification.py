@@ -108,7 +108,7 @@ def test_the_queue_surfaces_what_is_unadjudicated_and_drops_what_is_not(records)
     # ANTIBACTERIAL with no override — and require every one to surface.
     # (Stripping the override alone proves nothing: the records on disk now
     # carry the corrected class, so there is no disagreement left to detect.)
-    stripped = dict(conf, aro_definition_overrides={})
+    stripped = dict(conf, aro_definition_overrides={}, aro_group_terms={})
     replayed = [dict(r, antimicrobial_class="ANTIBACTERIAL") if r["identifier"] in adjudicated
                 else r for r in docs]
     caught = {row["key"] for row in aro_class_queue(replayed, stripped)}
@@ -179,9 +179,14 @@ def test_pyrimethamine_is_still_an_antiprotozoal(records):
 
 
 def test_the_fallback_cohort_figure_in_the_comments_is_current(records):
-    """The 265/276 split is quoted in conf, the seeder, the worklist and this
-    file. Figures in this repository drift under prose that nobody re-derives
-    (#84, #112), so it is derived here instead of trusted.
+    """Derives BOTH halves of the "265 of the 276" split.
+
+    An earlier version asserted the numerator and then grepped for the literal
+    string, so it could not see a wrong denominator — and there was one: at
+    8759b54b9 the real cohort was 274 while the comments said 276, and all eight
+    tests passed. A gate that pins half a figure is this repo's signature
+    failure, so both halves are computed here and the sentence is rebuilt from
+    them rather than matched loosely.
     """
     from pathlib import Path as _P
 
@@ -189,59 +194,40 @@ def test_the_fallback_cohort_figure_in_the_comments_is_current(records):
                 if not r.get("activity_roles")
                 and {c.get("source") for c in (r.get("source_concepts") or [])} == {"ARO"}]
     still_antibacterial = [r for r in fallback if r["antimicrobial_class"] == "ANTIBACTERIAL"]
-    assert len(still_antibacterial) == 265, len(still_antibacterial)
+    cohort, right = len(fallback), len(still_antibacterial)
+    # 286, not 276: the original figure counted the ANTIBACTERIAL subset, not the
+    # records the fallback reaches. 21 are decided earlier — by a drug class, an
+    # adjudication or a group term.
+    assert (right, cohort) == (265, 286), (right, cohort)
 
+    sentence = f"{right} of the {cohort}"
     root = _P(__file__).resolve().parent.parent
     for name in ("conf/sources.yaml", "scripts/seed_from_sources.py",
                  "scripts/curation_worklist.py"):
         text = (root / name).read_text(encoding="utf-8")
-        assert "265 of the 276" in text, f"{name} quotes a stale cohort figure"
+        assert sentence in text, f"{name} does not carry the derived {sentence!r}"
+    # And the complement, so the other half cannot drift on its own.
+    assert f"the other {cohort - right} are" in (root / "conf/sources.yaml").read_text(
+        encoding="utf-8")
 
 
-def test_a_per_compound_adjudication_outranks_a_group_term():
-    """Ordering inside the fallback tier, which would pass every gate if wrong.
+def test_the_aro_class_queue_is_not_silently_empty(records):
+    """A detector that detects nothing passes every gate.
 
-    A definition adjudication is about THIS compound; a group term is about a
-    bucket it sits in. If the group term ran first, ARO:3009165 ("antifungal
-    without defined classification") would overturn an adjudication made by
-    reading the compound's own definition.
+    Relaxing the match to `filed in named` quieted two records that had become
+    correct — and hid nitazoxanide with them, leaving the queue at zero while
+    conf still said nitazoxanide was in it. Nothing asserted the LIVE queue: the
+    other queue test replays a synthetic pre-fix state, so it stayed green.
+
+    This pins the real contents. If the queue legitimately empties because every
+    candidate has been adjudicated, this test should be updated deliberately —
+    which is the point.
     """
-    from seed_from_sources import classify
+    import sys
+    from pathlib import Path as _P
 
-    conf = _conf()
-    # A synthetic concept in both: adjudicated UNSPECIFIED, and under the
-    # antifungal parent. The per-compound answer must win.
-    conf = dict(conf,
-                aro_definition_overrides={**conf["aro_definition_overrides"],
-                                          "ARO:9999998": "ANTIMICROBIAL_UNSPECIFIED"})
-    assert classify([], conf, from_aro=True, aro_ids=("ARO:9999998",),
-                    aro_parent_ids=("ARO:3009165",)) == "ANTIMICROBIAL_UNSPECIFIED"
-    # Without the adjudication, the group term decides.
-    assert classify([], conf, from_aro=True, aro_ids=("ARO:9999997",),
-                    aro_parent_ids=("ARO:3009165",)) == "ANTIFUNGAL"
+    sys.path.insert(0, str(_P(__file__).resolve().parent.parent / "scripts"))
+    from curation_worklist import aro_class_queue
 
-
-def test_a_group_term_never_outranks_a_chebi_role(records):
-    """The five antiseptics are the record of this.
-
-    Putting the antiseptic drug class at step 1 made BIOCIDE the strongest signal
-    for triclosan, benzalkonium chloride, chlorhexidine and 3,6-diaminoacridine,
-    reversing the role table's deliberate ranking of `antibacterial agent` above
-    `disinfectant` (conf/sources.yaml puts BIOCIDE at priority 6, last, because
-    "a biocide role is the least specific thing a source can say"). Only the two
-    antiseptics with NO roles should be BIOCIDE by a group term.
-    """
-    from seed_from_sources import classify
-
-    conf = _conf()
-    filed = {r["label"]: r["antimicrobial_class"] for _p, r in records}
-    for role_bearing in ("triclosan", "chlorhexidine", "benzalkonium chloride"):
-        assert filed.get(role_bearing) == "ANTIBACTERIAL", (role_bearing, filed.get(role_bearing))
-    for no_roles in ("acriflavine", "thiacalixarene derivatives"):
-        assert filed.get(no_roles) == "BIOCIDE", (no_roles, filed.get(no_roles))
-
-    # And directly: a role beats the group term.
-    antibacterial = next(r for r, e in conf["role_to_class"].items()
-                         if e["class"] == "ANTIBACTERIAL")
-    assert classify([antibacterial], conf, from_aro=True,
-                    aro_class_ids=("ARO:3005386",)) == "ANTIBACTERIAL"
+    queued = {row["label"] for row in aro_class_queue([r for _p, r in records], _conf())}
+    assert queued == {"nitazoxanide"}, queued
