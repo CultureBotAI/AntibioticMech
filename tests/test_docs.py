@@ -126,6 +126,11 @@ NUMERIC_CLAIMS = [
     ("NEXT_TASKS.md", "the {}-role map", "mapped_roles"),
     ("docs/HARMONIZATION.md", "`MICROBIAL_TARGET` ({} records)", "microbial_target"),
     ("docs/HARMONIZATION.md", "`HOST_SHARED_TARGET` ({})", "host_shared_target"),
+    # The file a curator reads to choose the next data source. Registered here,
+    # not left to the tripwire below: only this table checks that a figure is
+    # right FOR ITS CLAIM rather than merely equal to some quantity somewhere.
+    ("curation/source_queue.tsv", "maps {} of them", "mapped_roles"),
+    ("curation/source_queue.tsv", "giving {} records a mode of action", "moa_records"),
 ]
 
 
@@ -327,15 +332,22 @@ def test_a_subclass_row_is_placed_and_labelled_under_its_own_parent(repo_root):
 
 # Files scanned for numeric claims about the corpus. Not only .md: the stale
 # "33 roles / 433 records" that prompted this lived in a TSV, and the registry
-# above covers six markdown files by name, so anything outside them was
-# unguarded — including the file a curator reads to choose the next data source.
+# above is six ENTRIES across two distinct files — so the hole was wider than
+# "six markdown files" suggested, and included the file a curator reads to
+# choose the next data source.
 CLAIM_FILES = ["README.md", "NEXT_TASKS.md", "CLAUDE.md", "docs/HARMONIZATION.md",
                "docs/CURATION.md", "ATTRIBUTION.md", "curation/source_queue.tsv"]
 
 # A number followed by a corpus noun. Deliberately narrow: this is a tripwire for
 # claims about how much the corpus holds, not a general numeral checker.
-CLAIM_SHAPE = r"(?<![\d,.])(\d[\d,]{1,6})\s+(?:of\s+the\s+\d[\d,]*\s+)?" \
-              r"(?:records?|roles?|compounds?|structures?|concepts?)"
+CLAIM_SHAPE = (
+    r"(?<![\d,.])(\d[\d,]{1,6})\s+"
+    # "32 of them", "265 of the 286 records" — the original stale figure had no
+    # noun after the number at all, so requiring one let half the defect this
+    # test was written for re-land undetected.
+    r"(?:of\s+(?:them\b|the\s+\d[\d,]*\s+)|"
+    r"(?:records?|roles?|compounds?|structures?|concepts?)\b)"
+)
 
 # Claims that are NOT statements about the corpus as it stands, each with the
 # reason it is exempt. A bare allowlist of numbers would go stale silently; these
@@ -358,8 +370,16 @@ def test_no_unregistered_numeric_claim_about_the_corpus(repo_root):
 
     This asserts the complement: every number-plus-corpus-noun in the scanned
     files must equal something the corpus can actually produce, or be exempt
-    with a stated reason. A new unregistered figure fails until someone corrects
-    it or says why it is not a corpus claim.
+    with a stated reason.
+
+    WHAT IT CANNOT DO, stated because the first version of this docstring
+    oversold it. Membership is tested against the UNION of the derived
+    quantities, so a wrong figure that happens to equal an unrelated one passes:
+    "giving 2,923 records a mode of action" is wrong and would survive, because
+    2,923 is the record total. This is a TRIPWIRE for figures that match nothing,
+    not a verifier. Checking a figure against the quantity its sentence actually
+    asserts needs NUMERIC_CLAIMS above, which is why the two source_queue claims
+    are registered there rather than left to this.
     """
     import re
     import sys
@@ -381,8 +401,8 @@ def test_no_unregistered_numeric_claim_about_the_corpus(repo_root):
     derivable = {len(records), len(classes)}
     derivable |= set(classes.values()) | set(scopes.values())
     derivable.add(sum(1 for r in records if r.get("mode_of_action")))
-    derivable.add(len(set(conf["role_to_mode_of_action"])
-                      | set(conf["role_to_mode_of_action_eukaryotic"])))
+    derivable.add(len(set(conf.get("role_to_mode_of_action") or {})
+                      | set(conf.get("role_to_mode_of_action_eukaryotic") or {})))
     for field in ("molecular_targets", "resistance_mechanisms", "producer_organisms",
                   "activity_spectrum", "causal_graphs", "evidence", "discussions"):
         derivable.add(sum(1 for r in records if r.get(field)))
@@ -405,25 +425,47 @@ def test_no_unregistered_numeric_claim_about_the_corpus(repo_root):
                       if r.get("molecular_targets") or r.get("resistance_mechanisms")))
     derivable.add(sum(1 for r in records
                       if "belongs to an" in str(r.get("mode_of_action_notes") or "")))
+    # Records in a class that carry no general antibacterial role — the
+    # "76 of the 78" claim about antimycobacterials.
+    for klass in classes:
+        derivable.add(sum(1 for r in records if r["antimicrobial_class"] == klass
+                          and "CHEBI:33282" not in (r.get("activity_roles") or [])))
     # Inventory sizes, and the structureless concepts the worklist reports.
-    for name in ("aro_antibiotics", "chebi_antimicrobials", "chebi_role_names"):
+    for name in ("aro_antibiotics", "chebi_antimicrobials", "chebi_role_names",
+                 "aro_resistance_edges", "aro_target_edges"):
         path = repo_root / "data" / "raw" / f"{name}.tsv"
         if path.exists():
             derivable.add(sum(1 for _ in path.open(encoding="utf-8")) - 1)
     from curation_worklist import no_structure_queue
     derivable.add(len(no_structure_queue()))
 
-    unregistered = []
+    unregistered: list[str] = []
+    used_exemptions: set[str] = set()
     for name in CLAIM_FILES:
         path = repo_root / name
         if not path.exists():
             continue
         text = path.read_text(encoding="utf-8")
         for match in re.finditer(CLAIM_SHAPE, text):
-            phrase = re.sub(r"\s+", " ", match.group(0))
-            if any(ex in phrase or phrase in ex for ex in CLAIM_EXEMPTIONS):
+            # The surrounding line, so an exemption is tied to ITS sentence. The
+            # first version compared only the matched "57 records", so
+            # `phrase in ex` exempted that number in ANY sentence in ANY scanned
+            # file — the opposite of the phrase-matching it claimed.
+            line_start = text.rfind("\n", 0, match.start()) + 1
+            line_end = text.find("\n", match.end())
+            line = re.sub(r"\s+", " ", text[line_start:line_end if line_end != -1 else None])
+            if any(ex in line for ex in CLAIM_EXEMPTIONS):
+                used_exemptions.update(ex for ex in CLAIM_EXEMPTIONS if ex in line)
                 continue
             value = int(match.group(1).replace(",", ""))
             if value not in derivable:
-                unregistered.append(f"{name}: {phrase!r} — no derived quantity equals {value}")
+                phrase = re.sub(r"\s+", " ", match.group(0))
+                unregistered.append(
+                    f"{name}: {phrase!r} in {line.strip()[:90]!r} — "
+                    f"no derived quantity equals {value}")
     assert unregistered == [], unregistered
+
+    # A dead exemption is a rule nobody can see is gone, the way a dead
+    # NUMERIC_CLAIMS row would be.
+    dead = sorted(set(CLAIM_EXEMPTIONS) - used_exemptions)
+    assert dead == [], f"exemptions that match nothing any more: {dead}"

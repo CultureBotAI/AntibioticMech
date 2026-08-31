@@ -80,7 +80,9 @@ def mechanism_queue(records: list[dict]) -> list[dict]:
         # own note asks a curator to confirm the value, and writing that note
         # used to remove the record from the only list where a curator would
         # find it. 433 records vanished the day mode_of_action was first seeded,
-        # 68 of them carrying the CARD evidence that puts them at the top.
+        # 68 of them carrying the CARD evidence that puts them at the top. Both
+        # figures are HISTORICAL — the count on the day it happened, not a live
+        # one; the role map has narrowed since.
         # A curator who has claimed the field has decided, whether they set a
         # value or vetoed one. Requiring a value here left a documented veto in
         # the queue forever with no way out — and re-introduced the divergence
