@@ -112,6 +112,21 @@ docs-check:
 test *args:
     uv run pytest {{args}}
 
+# Deep research for one compound. Dry-run by default; pass --apply for one
+# real canary after `just deep-research-canary <provider>`.
+research-antibiotic provider target *args="":
+    uv run python scripts/research_antibiotic.py \
+      --provider {{provider}} --target {{target}} {{args}}
+
+research-entity provider target *args="":
+    @just research-antibiotic {{provider}} {{target}} {{args}}
+
+# Non-billing configuration/capability checks.
+deep-research-canary provider="all" *args="":
+    uv run python scripts/deep_research_contract.py {{provider}} \
+      --client-command "uvx --python 3.12 --prerelease=allow --from deep-research-client[cyberian] deep-research-client" \
+      {{args}}
+
 # Lint
 lint *args:
     uv run ruff check {{args}} .
