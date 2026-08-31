@@ -40,6 +40,10 @@ extract-fda *args:
 extract-fda-dry *args:
     uv run --extra chemical-map python scripts/extract_fda_clinical_status.py --dry-run {{args}}
 
+# Evaluate BindingDB's curated-only article export without writing target claims.
+evaluate-bindingdb *args:
+    uv run --extra chemical-map python scripts/evaluate_bindingdb_targets.py {{args}}
+
 # Free check: print the PubChem URL for the first molecule needing a structure
 extract-pubchem-dry:
     uv run python scripts/enrich_pubchem_structures.py --dry-run
