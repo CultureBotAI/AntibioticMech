@@ -136,5 +136,24 @@ lint-fix:
     uv run ruff check --fix .
 
 # The authoritative quality gate used both locally and in CI.
+# Show the documents that WOULD be embedded, and their size distribution. Free.
+embed-dry:
+    python3 scripts/embed_records.py --dry-run
+
+# Embed ONE small batch end to end — the canary before the full run.
+embed-canary *args:
+    python3 scripts/embed_records.py --limit 20 {{args}}
+
+# Text-embed every record with a local model (needs the `embed` extra and runs
+# on system python, so torch stays out of the core install). ~2 min for the
+# corpus on Apple-Silicon MPS. Writes data/embeddings/ (vectors gitignored).
+embed *args:
+    python3 scripts/embed_records.py {{args}}
+
+# Project the embeddings to 2-D -> data/embeddings/corpus_map.json (committed).
+# Run `just render` afterwards to rebuild pages/map.html from it.
+embed-map *args:
+    python3 scripts/embed_map.py {{args}}
+
 qc:
     uv run python scripts/run_qc.py

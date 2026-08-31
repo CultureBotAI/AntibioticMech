@@ -274,3 +274,34 @@ A determinant whose ancestry matches nothing is seeded `UNKNOWN` and lands on
 `just worklist --queue unknown-mech`, ranked by how many records it affects — it
 is not guessed. CARD's own authoritative association lives in `card.json`, which
 this repository does not yet ingest.
+
+## The corpus map
+
+`just embed` turns each record into a 1024-d vector with a local model
+(BAAI/bge-large-en-v1.5, no API and no per-record cost), and `just embed-map`
+projects those to two dimensions for the site's [corpus map](../pages/map.html).
+
+**It embeds the annotation, not the chemistry.** Proximity means "described
+similarly" — same class, structural family, mechanism, asserted roles — not
+"structurally similar". SMILES and InChI are deliberately excluded: a sentence
+model reads them as gibberish long enough to dominate every document. So is the
+seeded `mode_of_action_notes`, which is near-identical across hundreds of records
+by design and would manufacture one enormous false cluster of "records carrying a
+seeded mechanism"; the mechanism *value* goes in, its boilerplate does not. The
+full include/exclude list is in `scripts/embed_records.py` and asserted by
+`tests/test_embeddings.py`.
+
+That makes it a map of the corpus's own descriptions, which is what makes it
+useful for curation: an outlier is usually a record whose annotation is thin or
+inconsistent with its neighbours, and a cluster spanning two classes is worth
+looking at.
+
+It separates the classes without being told them — 81% of a compound's ten
+nearest neighbours share its class, against a 23% baseline for the class sizes.
+The exception is instructive: `ANTIMYCOBACTERIAL` scores 41%, because a further
+40% of its neighbours are `ANTIBACTERIAL`. The embedding recovers, from text
+alone, the subclass relationship the schema declares — mycobacteria are
+bacteria.
+
+A chemical-similarity map is a different artifact and would need molecular
+fingerprints or a chemical language model rather than a text encoder.

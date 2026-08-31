@@ -1,0 +1,121 @@
+"""The embedding artifacts, checked without needing the embedding stack.
+
+`torch` and `sentence-transformers` are an optional extra and the recipes run on
+system python, so nothing here imports them. What IS checkable is the part that
+decides the embedding's quality — which fields go into a document — and whether
+the committed map agrees with the corpus it claims to describe.
+"""
+
+from __future__ import annotations
+
+import json
+import sys
+from pathlib import Path
+
+import pytest
+import yaml
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+
+MAP_PATH = REPO_ROOT / "data" / "embeddings" / "corpus_map.json"
+
+
+def test_the_document_omits_every_field_the_audit_says_it_omits():
+    """The include/exclude list IS the embedding's design, so it is asserted
+    rather than described.
+
+    SMILES and InChI would be tokenized as gibberish long enough to dominate
+    every document; the mode-of-action NOTE is near-identical across hundreds of
+    records by design, and would manufacture one huge false cluster of "records
+    that carry a seeded mechanism" while drowning the real signal. The mechanism
+    VALUE belongs in the document; its boilerplate does not.
+    """
+    from embed_records import build_document
+
+    record = {
+        "identifier": "CHEBI:1", "label": "widgetmycin",
+        "antimicrobial_class": "ANTIBACTERIAL",
+        "definition": "A widget antibiotic.",
+        "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "HOST_SHARED_TARGET",
+        "mode_of_action_notes": "Assigned from ChEBI role CHEBI:48001 (protein synthesis "
+                               "inhibitor). Not a curator's mechanistic review.",
+        "curation_status": "SEEDED", "grounding_status": "EXACT",
+        "chemical_structure": {
+            "smiles": "CC(=O)NC[C@H]1CN(c2ccc(N3CCOCC3)c(F)c2)C(=O)O1",
+            "standard_inchi": "InChI=1S/C16H20FN3O4/c1-11(21)18-9-13-10-20(16(23)24-13)",
+            "standard_inchi_key": "TYZROVQLWOKYKF-ZDUSSCGKSA-N",
+            "molecular_formula": "C16H20FN3O4", "average_mass": 337.35, "charge": 0,
+        },
+    }
+    doc = build_document(record, {"CHEBI:48001": "protein synthesis inhibitor"})
+
+    assert "widgetmycin" in doc
+    assert "A widget antibiotic" in doc
+    assert "protein synthesis inhibition" in doc          # the VALUE is in
+    assert "host shared target" in doc
+
+    for leaked in ("CC(=O)NC[C@H]1CN", "InChI=1S", "TYZROVQLWOKYKF", "C16H20FN3O4",
+                   "337.35", "SEEDED", "EXACT"):
+        assert leaked not in doc, f"{leaked!r} leaked into the embedded document"
+    # The boilerplate specifically, not merely the note field's absence.
+    assert "Not a curator's mechanistic review" not in doc
+    assert "Assigned from ChEBI role" not in doc
+
+
+def test_a_document_never_collapses_to_nothing():
+    """A record with almost no annotation must still embed as something
+    identifiable, or it lands at an arbitrary point and reads as a real
+    neighbour of whatever is nearby."""
+    from embed_records import build_document
+
+    doc = build_document({"identifier": "antibioticmech:aro-abc", "label": "MK-3118",
+                          "antimicrobial_class": "ANTIFUNGAL"}, {})
+    assert "MK-3118" in doc and "antifungal" in doc
+    assert len(doc) > 20
+
+
+@pytest.mark.skipif(not MAP_PATH.exists(), reason="corpus_map.json not built")
+def test_the_committed_map_matches_the_corpus_it_describes():
+    """pages/map.html is generated from this file, so a map that has drifted
+    from the corpus publishes points for records that no longer exist."""
+    payload = json.loads(MAP_PATH.read_text(encoding="utf-8"))
+    points = payload["points"]
+
+    identifiers = set()
+    classes_present = set()
+    for path in (REPO_ROOT / "data" / "antibiotics").rglob("*.yaml"):
+        record = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if isinstance(record, dict) and record.get("identifier"):
+            identifiers.add(str(record["identifier"]))
+            classes_present.add(record.get("antimicrobial_class"))
+
+    assert payload["n"] == len(points)
+    mapped = {p[3] for p in points}
+    assert mapped - identifiers == set(), sorted(mapped - identifiers)[:5]
+    assert identifiers - mapped == set(), sorted(identifiers - mapped)[:5]
+    assert set(payload["classes"]) <= classes_present | {"UNKNOWN"}
+
+    for x, y, cls, _identifier, _label in points:
+        assert 0.0 <= x <= 1.0 and 0.0 <= y <= 1.0, (x, y)
+        assert 0 <= cls < len(payload["classes"])
+
+
+@pytest.mark.skipif(not MAP_PATH.exists(), reason="corpus_map.json not built")
+def test_every_map_point_links_to_a_page_that_exists():
+    """The map's whole use is clicking through to a record. A stale href is a
+    404 the site's own link checking would not see, because the hrefs live
+    inside a JSON blob rather than in markup."""
+    page = REPO_ROOT / "pages" / "map.html"
+    if not page.exists():
+        pytest.skip("pages/map.html not rendered")
+    import re
+
+    blob = re.search(r'<script id="map-data"[^>]*>(.*?)</script>',
+                     page.read_text(encoding="utf-8"), re.S).group(1)
+    payload = json.loads(blob)
+    hrefs = payload["hrefs"]
+    assert len(hrefs) == payload["n"], (len(hrefs), payload["n"])
+    missing = [h for h in hrefs.values() if not (REPO_ROOT / "pages" / h).exists()]
+    assert missing == [], missing[:5]

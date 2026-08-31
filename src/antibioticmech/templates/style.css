@@ -198,6 +198,23 @@ caption {
 .pager a { background: var(--code-bg); }
 
 /* A subclass row sits under its parent: mycobacteria are bacteria. The indent
-   is the only thing distinguishing an included count from an additional one. */
+   is decoration — the row text names the parent, because an indent conveys
+   nothing to a screen reader and is wrong the moment the sort order changes. */
 tr.subclass td:first-child { padding-left: 1.6rem; }
 .tree { color: var(--muted); }
+/* Corpus-map palette. One custom property per class index, read by the canvas
+   so the legend swatch and the point can never disagree. Chosen to stay
+   distinguishable under the common forms of colour blindness. */
+:root {
+  --cls0: #3f7fbf; --cls1: #d1651a; --cls2: #2f8f5b; --cls3: #a24bb5;
+  --cls4: #b3852a; --cls5: #b3364a; --cls6: #4c6a86; --cls7: #6d6d6d;
+}
+#map-controls { display: flex; flex-wrap: wrap; gap: .4rem; margin: .8rem 0; }
+#map-controls .legend { cursor: pointer; border: 1px solid transparent; }
+#map-controls .legend::before {
+  content: ""; display: inline-block; width: .6rem; height: .6rem;
+  border-radius: 50%; background: var(--dot); margin-right: .35rem;
+}
+#map-controls .legend.off { opacity: .4; text-decoration: line-through; }
+#corpus-map { max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+figure { margin: 0; }

@@ -331,6 +331,7 @@ def build(out_dir: Path) -> None:
     ]
 
     by_class: dict[str, list[dict]] = defaultdict(list)
+    href_by_identifier: dict[str, str] = {}
     for path, doc in records:
         class_dir = path.parent.name
         sources = sorted({c["source"] for c in (doc.get("source_concepts") or [])})
@@ -341,6 +342,7 @@ def build(out_dir: Path) -> None:
             encoding="utf-8",
         )
 
+        href_by_identifier[str(doc.get("identifier"))] = f"{class_dir}/{path.stem}.html"
         by_class[class_dir].append(
             {
                 "label": doc["label"],
@@ -470,6 +472,28 @@ def build(out_dir: Path) -> None:
         env.get_template("browse.html").render(stats=stats, classes=classes, root=""),
         encoding="utf-8",
     )
+    # The corpus map, when its JSON has been built. Committed and small, so the
+    # page renders identically for anyone; absent only in a checkout where
+    # `just embed-map` has never run, and skipped rather than half-drawn.
+    map_path = REPO_ROOT / "data" / "embeddings" / "corpus_map.json"
+    map_rendered = map_path.exists()
+    if map_rendered:
+        corpus_map = json.loads(map_path.read_text(encoding="utf-8"))
+        # The browser needs record URLs; it must not have to guess a slug.
+        corpus_map["hrefs"] = {p[3]: href_by_identifier[p[3]]
+                               for p in corpus_map["points"]
+                               if p[3] in href_by_identifier}
+        (out_dir / "map.html").write_text(
+            env.get_template("map.html").render(
+                stats=stats, map=corpus_map,
+                # Escaped for embedding in a <script> block: a label containing
+                # "</script>" would otherwise end the element early. The template
+                # marks this |safe, so the escaping has to happen here.
+                map_json=json.dumps(corpus_map, separators=(",", ":"))
+                .replace("<", "\\u003c").replace("\u2028", "\\u2028")
+                .replace("\u2029", "\\u2029"), root=""),
+            encoding="utf-8")
+
     (out_dir / "404.html").write_text(
         env.get_template("not_found.html").render(root="", stats=stats),
         encoding="utf-8",
@@ -500,6 +524,8 @@ def build(out_dir: Path) -> None:
         out_dir / "index.html", out_dir / "browse.html", out_dir / "404.html",
         out_dir / "style.css", out_dir / ".nojekyll", out_dir / "sitemap.xml", out_dir / "robots.txt",
     }
+    if map_rendered:
+        written.add(out_dir / "map.html")
     written |= {out_dir / page for page in class_pages}
     written |= {out_dir / "class" / f"{d}.json" for d in class_dirs}
     written |= {out_dir / path.parent.name / f"{path.stem}.html" for path, _ in records}
