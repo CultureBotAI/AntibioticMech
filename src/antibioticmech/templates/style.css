@@ -20,6 +20,7 @@
      it falls back to a hard-coded white button, invisible in dark mode. */
   --card: #ffffff;
   --ink: #1a1d21;
+  --danger: #a61b1b;
   --muted: #54606d;
   --line: rgba(0,0,0,.12);
   --accent: #96601F;
@@ -45,6 +46,7 @@
     --accent: #d9a94a;
     --accent-soft: #2b2417;
     --code-bg: #1e1b14;
+    --danger: #f08a86;
     --warn: #e0b361;
     --warn-soft: #2a2113;
   }
@@ -62,6 +64,7 @@
   --accent: #d9a94a;
   --accent-soft: #2b2417;
   --code-bg: #1e1b14;
+  --danger: #f08a86;
   --warn: #e0b361;
   --warn-soft: #2a2113;
 }
@@ -316,16 +319,16 @@ th { background: var(--pastel-a); }
 .map-controls input,
 .map-controls select,
 .map-controls button {
-  background: white;
-  border: 1px solid #9ca3af;
+  background: var(--bg);
+  border: 1px solid var(--line);
   border-radius: .35rem;
-  color: #17202a;
+  color: var(--fg);
   font: inherit;
   min-height: 2.65rem;
   padding: .45rem .55rem;
 }
 .map-controls button {
-  background: #17202a;
+  background: var(--accent);
   color: var(--bg);
   cursor: pointer;
   font-weight: 700;
@@ -334,7 +337,7 @@ th { background: var(--pastel-a); }
   font-size: .9rem;
   margin: .6rem 0;
 }
-.map-status.error { color: #a61b1b; font-weight: 700; }
+.map-status.error { color: var(--danger); font-weight: 700; }
 .map-legend {
   display: flex;
   flex-wrap: wrap;
@@ -361,8 +364,8 @@ th { background: var(--pastel-a); }
   position: relative;
 }
 #map-canvas {
-  background: #fbfaf7;
-  border: 1px solid #c9c2b5;
+  background: var(--bg);
+  border: 1px solid var(--line);
   border-radius: .45rem;
   display: block;
   height: 620px;
@@ -410,7 +413,7 @@ th { background: var(--pastel-a); }
 .map-neighbor-select {
   background: none;
   border: 0;
-  color: #245a8d;
+  color: var(--accent);
   cursor: pointer;
   font: inherit;
   padding: 0;
@@ -419,7 +422,7 @@ th { background: var(--pastel-a); }
 }
 .map-results span,
 .map-neighbors span {
-  color: #667085;
+  color: var(--muted);
   display: block;
   font-size: .72rem;
 }
