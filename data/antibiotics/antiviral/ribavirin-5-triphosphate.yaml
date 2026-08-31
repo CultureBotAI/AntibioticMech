@@ -42,6 +42,12 @@ xrefs:
 - pdb-ccd:RTP
 activity_roles:
 - CHEBI:22587
+mode_of_action: VIRAL_POLYMERASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:170010 (EC 2.7.7.48 (RNA-directed
+  RNA polymerase) inhibitor). ChEBI asserts the role on the compound. The role names
+  a target specific to the microbe or virus — see mode_of_action_target_scope. Not
+  a curator's mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: NC(=O)c1ncn([C@@H]2O[C@H](COP(=O)(O)OP(=O)(O)OP(=O)(O)O)[C@@H](O)[C@H]2O)n1
   standard_inchi: InChI=1S/C8H15N4O14P3/c9-6(15)7-10-2-12(11-7)8-5(14)4(13)3(24-8)1-23-28(19,20)26-29(21,22)25-27(16,17)18/h2-5,8,13-14H,1H2,(H2,9,15)(H,19,20)(H,21,22)(H2,16,17,18)/t3-,4-,5-,8-/m1/s1
@@ -58,9 +64,17 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-970b487d3b
   role_terms:
   - CHEBI:22587
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:18Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

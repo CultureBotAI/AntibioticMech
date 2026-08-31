@@ -36,6 +36,12 @@ xrefs:
 activity_roles:
 - CHEBI:35660
 - CHEBI:36044
+mode_of_action: VIRAL_PROTEASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:35660 (HIV protease inhibitor).
+  ChEBI asserts the role on the compound. The role names a target specific to the
+  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CC(C)c1nc(CN(C)C(=O)N[C@H](C(=O)N[C@@H](Cc2ccccc2)C[C@H](O)[C@H](Cc2ccccc2)NC(=O)OCc2cncs2)C(C)C)cs1
   standard_inchi: InChI=1S/C37H48N6O5S2/c1-24(2)33(42-36(46)43(5)20-29-22-49-35(40-29)25(3)4)34(45)39-28(16-26-12-8-6-9-13-26)18-32(44)31(17-27-14-10-7-11-15-27)41-37(47)48-21-30-19-38-23-50-30/h6-15,19,22-25,28,31-33,44H,16-18,20-21H2,1-5H3,(H,39,45)(H,41,47)(H,42,46)/t28-,31-,32-,33-/m0/s1
@@ -53,9 +59,279 @@ source_concepts:
   role_terms:
   - CHEBI:35660
   - CHEBI:36044
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020659
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: ABBVIE
+  drug_name: NORVIR
+  ingredient_name: RITONAVIR
+  substance_id: UNII:O3J8G9O825
+  approval_date: '1996-03-01'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '101'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020659
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020680
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: ABBOTT
+  drug_name: NORVIR
+  ingredient_name: RITONAVIR
+  substance_id: UNII:O3J8G9O825
+  approval_date: '1996-03-01'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '101'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020680
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020945
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: ABBVIE
+  drug_name: NORVIR
+  ingredient_name: RITONAVIR
+  substance_id: UNII:O3J8G9O825
+  approval_date: '1999-06-29'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '101'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020945
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '022417'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: ABBVIE
+  drug_name: NORVIR
+  ingredient_name: RITONAVIR
+  substance_id: UNII:O3J8G9O825
+  approval_date: '2010-02-10'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '101'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022417
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '202573'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: CIPLA
+  drug_name: RITONAVIR
+  ingredient_name: RITONAVIR
+  substance_id: UNII:O3J8G9O825
+  approval_date: '2015-01-15'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '101'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=202573
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '203759'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: CIPLA
+  drug_name: RITONAVIR
+  ingredient_name: RITONAVIR
+  substance_id: UNII:O3J8G9O825
+  approval_date: '2022-05-10'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '101'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=203759
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '204587'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: HETERO LABS LTD III
+  drug_name: RITONAVIR
+  ingredient_name: RITONAVIR
+  substance_id: UNII:O3J8G9O825
+  approval_date: '2018-09-17'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '101'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=204587
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '205024'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: QUAGEN
+  drug_name: RITONAVIR
+  ingredient_name: RITONAVIR
+  substance_id: UNII:O3J8G9O825
+  approval_date: '2024-02-16'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '101'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=205024
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '205801'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: HIKMA
+  drug_name: RITONAVIR
+  ingredient_name: RITONAVIR
+  substance_id: UNII:O3J8G9O825
+  approval_date: '2020-12-03'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '101'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=205801
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '206614'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: AUROBINDO PHARMA LTD
+  drug_name: RITONAVIR
+  ingredient_name: RITONAVIR
+  substance_id: UNII:O3J8G9O825
+  approval_date: '2018-09-17'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '101'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206614
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '208890'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: AMNEAL
+  drug_name: RITONAVIR
+  ingredient_name: RITONAVIR
+  substance_id: UNII:O3J8G9O825
+  approval_date: '2018-09-17'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '101'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208890
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '209512'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: ABBVIE
+  drug_name: NORVIR
+  ingredient_name: RITONAVIR
+  substance_id: UNII:O3J8G9O825
+  approval_date: '2017-06-07'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '101'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=209512
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:18Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

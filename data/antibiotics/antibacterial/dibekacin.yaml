@@ -65,6 +65,12 @@ activity_roles:
 - CHEBI:33282
 structural_class: aminoglycoside antibiotic
 structural_class_id: ARO:0000016
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: NC[C@@H]1CC[C@@H](N)[C@@H](O[C@H]2[C@H](O)[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](N)[C@H]3O)[C@H](N)C[C@@H]2N)O1
   standard_inchi: InChI=1S/C18H37N5O8/c19-4-6-1-2-7(20)17(28-6)30-15-8(21)3-9(22)16(14(15)27)31-18-13(26)11(23)12(25)10(5-24)29-18/h6-18,24-27H,1-5,19-23H2/t6-,7+,8-,9+,10+,11-,12+,13+,14-,15+,16-,17+,18+/m0/s1
@@ -82,7 +88,7 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   - CHEBI:33282
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:37945
   source_label: dibekacin
@@ -90,7 +96,7 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   - CHEBI:33282
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_INACTIVATION
   aro_id: ARO:3000230
@@ -560,6 +566,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:32Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

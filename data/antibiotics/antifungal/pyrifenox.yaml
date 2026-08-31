@@ -37,6 +37,12 @@ activity_roles:
 - CHEBI:86328
 structural_class: antibiotic without defined classification
 structural_class_id: ARO:3000003
+mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:77884 (EC 1.14.13.70 (sterol
+  14α-demethylase) inhibitor). ChEBI asserts the role on the compound. The target
+  it names is one the host has too, so the mechanism is true but is not evidence of
+  selectivity — see mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CON=C(Cc1cccnc1)c1ccc(Cl)cc1Cl
   standard_inchi: InChI=1S/C14H12Cl2N2O/c1-19-18-14(7-10-3-2-6-17-9-10)12-5-4-11(15)8-13(12)16/h2-6,8-9H,7H2,1H3
@@ -54,7 +60,7 @@ source_concepts:
   role_terms:
   - CHEBI:77884
   - CHEBI:86328
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:81972
   source_label: pyrifenox
@@ -62,9 +68,21 @@ source_concepts:
   role_terms:
   - CHEBI:77884
   - CHEBI:86328
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T07:29:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T20:07:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

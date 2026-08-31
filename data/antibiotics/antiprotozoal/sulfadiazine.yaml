@@ -73,6 +73,12 @@ activity_roles:
 - CHEBI:35820
 structural_class: sulfonamide antibiotic
 structural_class_id: ARO:3000282
+mode_of_action: FOLATE_PATHWAY_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:50502 (EC 2.5.1.15 (dihydropteroate
+  synthase) inhibitor). ChEBI asserts the role on the compound. The role names a target
+  specific to the microbe or virus — see mode_of_action_target_scope. Not a curator's
+  mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: Nc1ccc(S(=O)(=O)Nc2ncccn2)cc1
   standard_inchi: InChI=1S/C10H10N4O2S/c11-8-2-4-9(5-3-8)17(15,16)14-10-12-6-1-7-13-10/h1-7H,11H2,(H,12,13,14)
@@ -91,7 +97,7 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:35818
   - CHEBI:35820
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:9328
   source_label: sulfadiazine
@@ -100,7 +106,7 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:35818
   - CHEBI:35820
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3000410
@@ -144,12 +150,110 @@ molecular_targets:
   - reference: ARO:3000744
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000324 (sulfadiazine); database
       assertion, not a primary citation.
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '004054'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: LEDERLE
+  drug_name: SULFADIAZINE
+  ingredient_name: SULFADIAZINE
+  substance_id: UNII:0N7609K889
+  approval_date: '1941-08-11'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '54'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=004054
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '004122'
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: LILLY
+  drug_name: SULFADIAZINE
+  ingredient_name: SULFADIAZINE
+  substance_id: UNII:0N7609K889
+  approval_date: '1941-08-26'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '54'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=004122
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 040091
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: EPIC PHARMA LLC
+  drug_name: SULFADIAZINE
+  ingredient_name: SULFADIAZINE
+  substance_id: UNII:0N7609K889
+  approval_date: '1994-07-29'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '54'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=040091
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 080084
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: CHARTWELL MOLECULAR
+  drug_name: SULFADIAZINE
+  ingredient_name: SULFADIAZINE
+  substance_id: UNII:0N7609K889
+  approval_date: '1978-07-05'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '54'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=080084
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:17:05Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:40Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

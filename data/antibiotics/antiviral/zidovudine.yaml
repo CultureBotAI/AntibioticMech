@@ -52,6 +52,12 @@ activity_roles:
 - CHEBI:53756
 structural_class: nucleoside antibiotic
 structural_class_id: ARO:3000034
+mode_of_action: VIRAL_POLYMERASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:53756 (HIV-1 reverse transcriptase
+  inhibitor). ChEBI asserts the role on the compound. The role names a target specific
+  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: Cc1cn([C@H]2C[C@H](N=[N+]=[N-])[C@@H](CO)O2)c(=O)nc1=O
   standard_inchi: InChI=1S/C10H13N5O4/c1-5-3-15(10(18)12-9(5)17)8-2-6(13-14-11)7(4-16)19-8/h3,6-8,16H,2,4H2,1H3,(H,12,17,18)/t6-,7+,8+/m0/s1
@@ -69,7 +75,7 @@ source_concepts:
   role_terms:
   - CHEBI:36044
   - CHEBI:53756
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:10110
   source_label: zidovudine
@@ -77,7 +83,408 @@ source_concepts:
   role_terms:
   - CHEBI:36044
   - CHEBI:53756
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 019655
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: VIIV HLTHCARE
+  drug_name: RETROVIR
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '1987-03-19'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019655
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 019910
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: VIIV HLTHCARE
+  drug_name: RETROVIR
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '1989-09-28'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019910
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 019951
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: VIIV HLTHCARE
+  drug_name: RETROVIR
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '1990-02-02'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019951
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020518
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: VIIV HLTHCARE
+  drug_name: RETROVIR
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '1995-12-19'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020518
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020518
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: VIIV HLTHCARE
+  drug_name: RETROVIR
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '1995-12-19'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020518
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 022294
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: AUROBINDO PHARMA
+  drug_name: ZIDOVUDINE
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '2009-07-23'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022294
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 076844
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: HIKMA
+  drug_name: ZIDOVUDINE
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '2005-09-19'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=076844
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '077267'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: AUROBINDO
+  drug_name: ZIDOVUDINE
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '2005-09-19'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=077267
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 077268
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: AUROBINDO
+  drug_name: ZIDOVUDINE
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '2005-09-19'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=077268
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 077981
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: CIPLA LTD
+  drug_name: ZIDOVUDINE
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '2008-06-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=077981
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 078128
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: AUROBINDO PHARMA LTD
+  drug_name: ZIDOVUDINE
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '2006-03-27'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=078128
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 078349
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: CIPLA LTD
+  drug_name: ZIDOVUDINE
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '2007-05-23'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=078349
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 078922
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: PHARMOBEDIENT
+  drug_name: ZIDOVUDINE
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '2008-02-14'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=078922
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 090092
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: HETERO LABS LTD III
+  drug_name: ZIDOVUDINE
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '2008-04-25'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090092
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 090561
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: CIPLA
+  drug_name: ZIDOVUDINE
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '2010-10-27'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090561
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 091457
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: AM REGENT
+  drug_name: ZIDOVUDINE
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '2010-05-06'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=091457
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '200732'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: PHARMOBEDIENT
+  drug_name: ZIDOVUDINE
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '2011-02-23'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=200732
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '202058'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: HEC PHARM
+  drug_name: ZIDOVUDINE
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '2011-10-07'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=202058
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '204538'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: LIAONING CHENGDA
+  drug_name: ZIDOVUDINE
+  ingredient_name: ZIDOVUDINE
+  substance_id: UNII:4B9XT59T7S
+  approval_date: '2013-11-26'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '79'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=204538
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -87,7 +494,15 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
-- timestamp: '2026-08-30T01:42:42Z'
+- timestamp: '2026-08-30T09:02:23Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:18Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

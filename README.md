@@ -59,8 +59,8 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 | Class | Records | SEEDED | REVIEWED | With CARD mechanism evidence |
 |---|---:|---:|---:|---:|
-| ANTIBACTERIAL | 1037 | 1037 | 0 | 264 |
-| ANTIMYCOBACTERIAL | 78 | 78 | 0 | 15 |
+| ANTIBACTERIAL *(incl. subclasses)* | 1115 | 1115 | 0 | 279 |
+| &nbsp;&nbsp;↳ ANTIMYCOBACTERIAL *(subclass of ANTIBACTERIAL)* | 78 | 78 | 0 | 15 |
 | ANTIFUNGAL | 588 | 588 | 0 | 43 |
 | ANTIPROTOZOAL | 248 | 248 | 0 | 2 |
 | ANTIVIRAL | 474 | 474 | 0 | 0 |
@@ -68,11 +68,13 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 | ANTIMICROBIAL_UNSPECIFIED | 469 | 469 | 0 | 0 |
 | **TOTAL** | **2923** | **2923** | **0** | **324** |
 
+A row marked *(subclass of X)* is already counted in X's own row — mycobacteria are bacteria, and filing is exclusive, so a compound filed ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each record once, so the Records column does not sum to it.
+
 Identity: **2673** records (91%) are grounded in a ChEBI term; **250** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
 
 Corroboration: **281** records carry source concepts from both ChEBI and CARD/ARO; **2342** come from ChEBI alone and **300** from CARD alone.
 
-Mechanism layer: **206** records carry a molecular target and **279** carry resistance determinants, both seeded from CARD; **0** carry a curated causal graph. That last number is the work.
+Mechanism layer: **206** records carry a molecular target and **279** carry resistance determinants, both seeded from CARD; **416** carry a mode of action seeded from ChEBI's mechanism roles; **0** carry a curated causal graph. That last number is the work.
 
 <!-- END GENERATED CORPUS STATS -->
 
@@ -86,10 +88,42 @@ just seed-apply                    # write the corpus
 just qc                            # every local and CI quality gate
 just report                        # corpus, grounding and curation statistics
 just worklist                      # what curation owes, ranked
+just chemical-map                 # regenerate the structure-only map + site
+just chemical-map-check           # verify the committed map without writing
 ```
 
 Nothing above touches the network. The inventories in `data/raw/` are committed,
 so seeding, validation, rendering and the whole test suite run offline.
+
+## Chemical structure map
+
+The generated site includes a
+**[Chemical structure map](https://culturebotai.github.io/AntibioticMech/pages/chemical-map.html)**
+covering all 2,923 records. Its coordinates and nearest neighbors use only the
+exact stored chemical structure:
+
+```text
+distance = 0.90 × (1 - Tanimoto(chiral Morgan count radius 2))
+         + 0.10 × (1 - Tanimoto(chiral Morgan count radius 4))
+```
+
+UMAP projects the complete precomputed distance matrix with
+`n_neighbors=15`, `min_dist=0.05`, and `random_state=42`. Labels,
+antimicrobial classes, mechanisms, targets, and curation metadata can filter or
+color the view but never affect fingerprints, distance, neighbors, or position.
+Local neighborhoods are the meaningful part of the projection; axes and
+map-wide spacing are not quantitative chemical distances.
+
+The build parses stored SMILES first and falls back to the record's standard
+InChI when required. It preserves charge, stereochemistry, counterions, and
+fragments rather than silently neutralizing or desalting a structure. The
+committed artifact records parser provenance, dependency/configuration
+versions, quality metrics, duplicate InChIKey groups, and multi-fragment counts.
+
+`just chemical-map-check` performs the fast CI staleness and quality check.
+`just chemical-map-recompute-check` additionally reruns the full exact
+fingerprint, pairwise-distance, and UMAP build and requires byte-identical
+output in the pinned local environment.
 
 ## Schema
 
@@ -133,8 +167,10 @@ mode-of-action and target vocabularies cover both kinds.
 ## What is generated, and what is curated
 
 **Generated** (never hand-edit): `data/antibiotics/**`, `data/raw/**`,
-`data/antibiotics/PATHS.tsv`, `pages/**`, and the statistics block in this
-README. `just verify-corpus` rebuilds the corpus from `data/raw/` and rejects
+`data/antibiotics/PATHS.tsv`,
+`data/embeddings/chemical-structure-map.json`, `pages/**`, and the
+statistics block in this README. `just verify-corpus` rebuilds the corpus from
+`data/raw/` and rejects
 drift **in the fields the seeder owns** — identity, label, definition, synonyms,
 parents, xrefs, class, roles, structural class, structure, source concepts,
 grounding status, and the CARD-derived mechanism items.
@@ -148,8 +184,14 @@ reproduction check.
 **Curated**: `curation/decisions.tsv` (grounding and exclusion decisions, keyed
 by a source concept's minted identifier), and the mechanism fields on a record —
 `mode_of_action`, `molecular_targets` beyond CARD's, `activity_spectrum`,
-`producer_organisms`, `causal_graphs`, `discussions`. `verify-corpus`
-deliberately does not compare those, so curation and reproducibility coexist.
+`producer_organisms` beyond the MIBiG-marked slice, `causal_graphs`,
+`discussions`. `verify-corpus` does not compare those, so curation and
+reproducibility coexist — with three exceptions: MIBiG-marked producer
+assertions and Drugs@FDA-marked clinical assertions are compared to their
+committed inventories, and a `mode_of_action` still carrying the seeder's note marker is the
+seeder's, and is compared along with its notes and target scope, because a bare
+hand edit of a seeded mechanism is drift rather than curation. Writing a
+`CURATOR:` note claims the field and ends the comparison.
 
 ## Licence
 

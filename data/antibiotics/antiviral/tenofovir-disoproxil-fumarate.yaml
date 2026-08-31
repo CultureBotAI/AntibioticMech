@@ -35,6 +35,12 @@ xrefs:
 activity_roles:
 - CHEBI:36044
 - CHEBI:53756
+mode_of_action: VIRAL_POLYMERASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:53756 (HIV-1 reverse transcriptase
+  inhibitor). ChEBI asserts the role on the compound. The role names a target specific
+  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CC(C)OC(=O)OCOP(=O)(CO[C@H](C)Cn1cnc2c(N)ncnc21)OCOC(=O)OC(C)C.O=C(O)/C=C/C(=O)O
   standard_inchi: InChI=1S/C19H30N5O10P.C4H4O4/c1-12(2)33-18(25)28-9-31-35(27,32-10-29-19(26)34-13(3)4)11-30-14(5)6-24-8-23-15-16(20)21-7-22-17(15)24;5-3(6)1-2-4(7)8/h7-8,12-14H,6,9-11H2,1-5H3,(H2,20,21,22);1-2H,(H,5,6)(H,7,8)/b;2-1+/t14-;/m1./s1
@@ -52,9 +58,636 @@ source_concepts:
   role_terms:
   - CHEBI:36044
   - CHEBI:53756
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '021356'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: GILEAD SCIENCES INC
+  drug_name: VIREAD
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2001-10-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021356
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '021356'
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: GILEAD SCIENCES INC
+  drug_name: VIREAD
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2001-10-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021356
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '021356'
+  application_type: NDA
+  product_number: '003'
+  sponsor_name: GILEAD SCIENCES INC
+  drug_name: VIREAD
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2001-10-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021356
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '021356'
+  application_type: NDA
+  product_number: '004'
+  sponsor_name: GILEAD SCIENCES INC
+  drug_name: VIREAD
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2001-10-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021356
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '022577'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: GILEAD SCIENCES INC
+  drug_name: VIREAD
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2012-01-18'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022577
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 078800
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: CIPLA
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-01-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=078800
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 079071
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: PHARMOBEDIENT
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2024-02-29'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=079071
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 090636
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: HETERO LABS LTD III
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-01-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090636
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 090647
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: AUROBINDO PHARMA
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-01-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090647
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 090647
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: AUROBINDO PHARMA
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-01-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090647
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 090647
+  application_type: ANDA
+  product_number: '003'
+  sponsor_name: AUROBINDO PHARMA
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-01-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090647
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 090647
+  application_type: ANDA
+  product_number: '004'
+  sponsor_name: AUROBINDO PHARMA
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-01-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090647
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 090742
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: STRIDES PHARMA
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-01-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090742
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 091612
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: TEVA PHARMS USA
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2015-03-18'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=091612
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 091612
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: TEVA PHARMS USA
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2015-03-18'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=091612
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 091612
+  application_type: ANDA
+  product_number: '003'
+  sponsor_name: TEVA PHARMS USA
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2015-03-18'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=091612
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 091612
+  application_type: ANDA
+  product_number: '004'
+  sponsor_name: TEVA PHARMS USA
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2015-03-18'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=091612
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '203232'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: MACLEODS PHARMS
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-01-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=203232
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '206157'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: MICRO LABS
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2025-12-18'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206157
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '206481'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: CHARTWELL
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-07-31'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206481
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '206569'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: PHARMOBEDIENT
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-11-27'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206569
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '206569'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: PHARMOBEDIENT
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-11-27'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206569
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '206569'
+  application_type: ANDA
+  product_number: '003'
+  sponsor_name: PHARMOBEDIENT
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-11-27'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206569
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '206569'
+  application_type: ANDA
+  product_number: '004'
+  sponsor_name: PHARMOBEDIENT
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-11-27'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206569
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '209498'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: QILU
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-03-02'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=209498
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '209498'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: QILU
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-03-02'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=209498
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '209498'
+  application_type: ANDA
+  product_number: '003'
+  sponsor_name: QILU
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-03-02'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=209498
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '209550'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: CHARTWELL RX
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2018-02-26'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=209550
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '211337'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: REYOUNG
+  drug_name: TENOFOVIR DISOPROXIL FUMARATE
+  ingredient_name: TENOFOVIR DISOPROXIL FUMARATE
+  substance_id: UNII:OTT9J7900I
+  approval_date: '2023-03-02'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '67'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211337
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:21Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:36Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:58Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

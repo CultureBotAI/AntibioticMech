@@ -93,7 +93,7 @@ source_concepts:
   role_terms:
   - CHEBI:33231
   - CHEBI:35816
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:4885
   source_label: ethionamide
@@ -101,7 +101,7 @@ source_concepts:
   role_terms:
   - CHEBI:33231
   - CHEBI:35816
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003458
@@ -152,12 +152,47 @@ molecular_targets:
   - reference: ARO:3003475
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3003474 (ethionamide); database
       assertion, not a primary citation.
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '013026'
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: WYETH PHARMS
+  drug_name: TRECATOR
+  ingredient_name: ETHIONAMIDE
+  substance_id: UNII:OAY8ORS3CQ
+  approval_date: '1965-04-30'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '68'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=013026
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:29Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

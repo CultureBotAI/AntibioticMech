@@ -56,6 +56,12 @@ activity_roles:
 - CHEBI:33282
 structural_class: sulfonamide antibiotic
 structural_class_id: ARO:3000282
+mode_of_action: FOLATE_PATHWAY_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:50502 (EC 2.5.1.15 (dihydropteroate
+  synthase) inhibitor). ChEBI asserts the role on the compound. The role names a target
+  specific to the microbe or virus — see mode_of_action_target_scope. Not a curator's
+  mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: Cc1cc(NS(=O)(=O)c2ccc(N)cc2)no1
   standard_inchi: InChI=1S/C10H11N3O3S/c1-7-6-10(12-16-7)13-17(14,15)9-4-2-8(11)3-5-9/h2-6H,11H2,1H3,(H,12,13)
@@ -73,7 +79,7 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   - CHEBI:33282
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:9332
   source_label: sulfamethoxazole
@@ -81,7 +87,7 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   - CHEBI:33282
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   aro_id: ARO:3000410
@@ -146,12 +152,131 @@ molecular_targets:
   - reference: ARO:3000744
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000329 (sulfamethoxazole);
       database assertion, not a primary citation.
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '012715'
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: ROCHE
+  drug_name: GANTANOL
+  ingredient_name: SULFAMETHOXAZOLE
+  substance_id: UNII:JE42381TNV
+  approval_date: '1965-08-25'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '81'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=012715
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '012715'
+  application_type: NDA
+  product_number: '003'
+  sponsor_name: ROCHE
+  drug_name: GANTANOL-DS
+  ingredient_name: SULFAMETHOXAZOLE
+  substance_id: UNII:JE42381TNV
+  approval_date: '1965-08-25'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '81'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=012715
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '013664'
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: ROCHE
+  drug_name: GANTANOL
+  ingredient_name: SULFAMETHOXAZOLE
+  substance_id: UNII:JE42381TNV
+  approval_date: '1965-07-01'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '81'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=013664
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 085844
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: RISING
+  drug_name: SULFAMETHOXAZOLE
+  ingredient_name: SULFAMETHOXAZOLE
+  substance_id: UNII:JE42381TNV
+  approval_date: '1978-03-23'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '81'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=085844
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 087189
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: BARR
+  drug_name: SULFAMETHOXAZOLE
+  ingredient_name: SULFAMETHOXAZOLE
+  substance_id: UNII:JE42381TNV
+  approval_date: '1983-07-25'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '81'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=087189
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:17:05Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:40Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

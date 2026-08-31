@@ -133,10 +133,29 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 {% if r.mode_of_action or r.cidality or r.clinical_status %}
 <h2>Mechanism summary</h2>
 <dl class="fields">
-  {% if r.mode_of_action %}<dt>Mode of action</dt><dd>{{ r.mode_of_action }}{% if r.mode_of_action_notes %} <span class="meta">— {{ r.mode_of_action_notes }}</span>{% endif %}</dd>{% endif %}
+  {% if r.mode_of_action %}<dt>Mode of action</dt><dd>{{ r.mode_of_action }}{% if r.mode_of_action_target_scope %} <span class="pill plain">{{ r.mode_of_action_target_scope.replace("_", " ").lower() }}</span>{% endif %}{% if r.mode_of_action_notes %} <span class="meta">— {{ r.mode_of_action_notes }}</span>{% endif %}</dd>{% endif %}
   {% if r.cidality %}<dt>Cidality</dt><dd>{{ r.cidality }}</dd>{% endif %}
   {% if r.clinical_status %}<dt>Clinical status</dt><dd>{{ r.clinical_status }}</dd>{% endif %}
 </dl>
+{% endif %}
+
+{% if r.clinical_status_assertions %}
+<h2>Regulatory status evidence</h2>
+<p class="meta">Product-level regulatory assertions; identity and status retain separate sources.</p>
+<table>
+  <caption>Regulatory status evidence</caption>
+  <thead><tr><th scope="col">Application / product</th><th scope="col">Status</th><th scope="col">Ingredient</th><th scope="col">Approval date</th><th scope="col">Marketing</th><th scope="col">Sources</th></tr></thead>
+  {% for c in r.clinical_status_assertions %}
+  <tr>
+    <td><a href="{{ c.reference }}">{{ c.application_type }} {{ c.application_number }} / {{ c.product_number }}</a><br><span class="meta">{{ c.drug_name }}{% if c.sponsor_name %}; {{ c.sponsor_name }}{% endif %}</span></td>
+    <td>{{ c.status }}<br><span class="meta">{{ c.jurisdiction }}</span></td>
+    <td>{{ c.ingredient_name }}<br><code class="curie">{{ c.substance_id }}</code></td>
+    <td>{{ c.approval_date }}</td>
+    <td>{{ c.marketing_status }}{% if c.currently_marketed %}; currently marketed{% endif %}</td>
+    <td class="meta">{{ c.source }} {{ c.source_version }} (retrieved {{ c.source_retrieved_on }})<br>{{ c.identity_source }} {{ c.identity_source_version }} (record {{ c.identity_record_version }}, retrieved {{ c.identity_retrieved_on }})</td>
+  </tr>
+  {% endfor %}
+</table>
 {% endif %}
 
 {% if r.activity_spectrum %}
@@ -187,11 +206,13 @@ type — expand a group to see its determinants.</p>
 <p class="meta">Organisms that biosynthesize this compound.</p>
 <table>
   <caption>Producer organisms</caption>
-  <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Note</th><th scope="col">Reference</th></tr></thead>
+  <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Source</th><th scope="col">Quality</th><th scope="col">Note</th><th scope="col">Reference</th></tr></thead>
   {% for p in r.producer_organisms %}
   <tr>
     <td><em>{{ p.taxon_label }}</em> <code class="curie">{{ p.taxon_id }}</code></td>
     <td>{{ p.biosynthetic_gene_cluster or '—' }}</td>
+    <td class="meta">{{ p.source or '—' }}{% if p.source_version %} {{ p.source_version }}{% endif %}{% if p.source_record_version %} (entry {{ p.source_record_version }}){% endif %}{% if p.reviewed %}; reviewed{% endif %}</td>
+    <td class="meta">{{ p.source_quality or '—' }}</td>
     <td class="meta">{{ p.note or '—' }}</td>
     <td class="meta">{{ p.reference or '—' }}</td>
   </tr>

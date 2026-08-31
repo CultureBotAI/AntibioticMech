@@ -56,6 +56,12 @@ activity_roles:
 - CHEBI:86327
 structural_class: antibiotic without defined classification
 structural_class_id: ARO:3000003
+mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:59285 (EC 1.14.13.132 (squalene
+  monooxygenase) inhibitor). ChEBI asserts the role on the compound. The target it
+  names is one the host has too, so the mechanism is true but is not evidence of selectivity
+  — see mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CN(Cc1ccc(C(C)(C)C)cc1)Cc1cccc2ccccc12
   standard_inchi: InChI=1S/C23H27N/c1-23(2,3)21-14-12-18(13-15-21)16-24(4)17-20-10-7-9-19-8-5-6-11-22(19)20/h5-15H,16-17H2,1-4H3
@@ -72,16 +78,28 @@ source_concepts:
   minted_identifier: antibioticmech:aro-e73f50f1ef
   role_terms:
   - CHEBI:86327
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:3238
   source_label: butenafine
   minted_identifier: antibioticmech:chebi-a19fbfa560
   role_terms:
   - CHEBI:86327
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T07:29:16Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:31Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T20:07:24Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

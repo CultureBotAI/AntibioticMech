@@ -58,6 +58,12 @@ activity_roles:
 - CHEBI:36047
 structural_class: fluoroquinolone antibiotic
 structural_class_id: ARO:0000001
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:59517 (DNA synthesis inhibitor).
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCN(C)CC3)cc21
   standard_inchi: InChI=1S/C17H20FN3O3/c1-3-20-10-12(17(23)24)16(22)11-8-13(18)15(9-14(11)20)21-6-4-19(2)5-7-21/h8-10H,3-7H2,1-2H3,(H,23,24)
@@ -75,7 +81,7 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   - CHEBI:36047
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:50199
   source_label: pefloxacin
@@ -83,7 +89,7 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   - CHEBI:36047
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003294
@@ -258,6 +264,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:34Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -48,6 +48,12 @@ xrefs:
 activity_roles:
 - CHEBI:33281
 - CHEBI:36047
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:59517 (DNA synthesis inhibitor).
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CCn1cc(C(=O)O)c(=O)c2cnc(N3CCNCC3)nc21
   standard_inchi: InChI=1S/C14H17N5O3/c1-2-18-8-10(13(21)22)11(20)9-7-16-14(17-12(9)18)19-5-3-15-4-6-19/h7-8,15H,2-6H2,1H3,(H,21,22)
@@ -65,13 +71,17 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   - CHEBI:36047
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
 - timestamp: '2026-08-30T01:13:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:42Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -26,6 +26,12 @@ xrefs:
 activity_roles:
 - CHEBI:22587
 - CHEBI:33281
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H][C@]12CCCCN1Cc1c(c3cc(OC)c(OC)cc3c3cc(OC)ccc13)C2'
   standard_inchi: InChI=1S/C24H27NO3/c1-26-16-7-8-17-19(11-16)21-13-24(28-3)23(27-2)12-20(21)18-10-15-6-4-5-9-25(15)14-22(17)18/h7-8,11-13,15H,4-6,9-10,14H2,1-3H3/t15-/m1/s1
@@ -43,13 +49,17 @@ source_concepts:
   role_terms:
   - CHEBI:22587
   - CHEBI:33281
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
 - timestamp: '2026-08-30T01:42:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:32Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -268,3 +268,200 @@ th { background: var(--pastel-a); }
   html { scroll-behavior: auto; }
   * { transition: none !important; animation: none !important; }
 }
+
+/* ---- Chemical structure map (added on main while this branch was open) ----
+   Reworked onto the brand tokens. The originals named --paper-2 and --ink
+   with hardcoded light fallbacks; neither token exists in this stylesheet,
+   so every rule would have silently used a near-white that is invisible
+   against the dark theme this branch adds. */
+/* Chemical structure map */
+.feature-link {
+  align-items: center;
+  background: var(--pastel-a);
+  border: 1px solid var(--line);
+  border-radius: .7rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin: 2rem 0;
+  padding: 1.1rem 1.3rem;
+}
+.feature-link h2 { margin-top: 0; }
+.feature-link p { margin-bottom: 0; max-width: 48rem; }
+.button-link {
+  background: var(--accent);
+  border-radius: .35rem;
+  color: var(--bg);
+  display: inline-block;
+  flex: none;
+  font-weight: 700;
+  padding: .65rem .85rem;
+  text-decoration: none;
+}
+.button-link:hover { color: var(--bg); }
+.map-page-wrap { max-width: 92rem; }
+.map-controls {
+  align-items: end;
+  display: grid;
+  gap: .8rem;
+  grid-template-columns: minmax(14rem, 2fr) minmax(12rem, 1fr) minmax(12rem, 1fr) auto;
+  margin: 1.4rem 0 .8rem;
+}
+.map-controls label {
+  display: grid;
+  font-size: .84rem;
+  font-weight: 700;
+  gap: .25rem;
+}
+.map-controls input,
+.map-controls select,
+.map-controls button {
+  background: white;
+  border: 1px solid #9ca3af;
+  border-radius: .35rem;
+  color: #17202a;
+  font: inherit;
+  min-height: 2.65rem;
+  padding: .45rem .55rem;
+}
+.map-controls button {
+  background: #17202a;
+  color: var(--bg);
+  cursor: pointer;
+  font-weight: 700;
+}
+.map-status {
+  font-size: .9rem;
+  margin: .6rem 0;
+}
+.map-status.error { color: #a61b1b; font-weight: 700; }
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .75rem;
+  gap: .35rem .8rem;
+  margin: .45rem 0 .8rem;
+  min-height: 1.4rem;
+}
+.map-legend span { align-items: center; display: inline-flex; gap: .3rem; }
+.map-legend i {
+  border: 1px solid rgb(0 0 0 / .25);
+  border-radius: 50%;
+  display: inline-block;
+  height: .65rem;
+  width: .65rem;
+}
+.chemical-map-layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 3fr) minmax(18rem, 1fr);
+}
+.map-stage {
+  min-width: 0;
+  position: relative;
+}
+#map-canvas {
+  background: #fbfaf7;
+  border: 1px solid #c9c2b5;
+  border-radius: .45rem;
+  display: block;
+  height: 620px;
+  width: 100%;
+}
+.map-tooltip {
+  background: rgb(23 32 42 / .94);
+  border-radius: .3rem;
+  color: var(--bg);
+  font-size: .75rem;
+  max-width: 18rem;
+  padding: .35rem .5rem;
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+}
+.map-details {
+  align-content: start;
+  display: grid;
+  gap: 1rem;
+  max-height: 620px;
+  overflow: auto;
+}
+.map-details > div {
+  border: 1px solid #d8d0c2;
+  border-radius: .45rem;
+  padding: .75rem;
+}
+.map-details h2 { font-size: 1.05rem; margin: 0 0 .45rem; }
+.map-details h3 { font-size: .9rem; margin: 1rem 0 .35rem; }
+.map-details code {
+  display: block;
+  font-size: .72rem;
+  max-height: 6rem;
+  overflow-wrap: anywhere;
+  overflow-y: auto;
+  padding: .45rem;
+}
+.map-badges { display: flex; flex-wrap: wrap; gap: .3rem; }
+.map-results,
+.map-neighbors { margin: 0; padding-left: 1.4rem; }
+.map-results li,
+.map-neighbors li { margin: .25rem 0; }
+.map-results button,
+.map-neighbor-select {
+  background: none;
+  border: 0;
+  color: #245a8d;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-align: left;
+  text-decoration: underline;
+}
+.map-results span,
+.map-neighbors span {
+  color: #667085;
+  display: block;
+  font-size: .72rem;
+}
+.map-method { margin-top: 1.2rem; }
+.map-method summary { cursor: pointer; font-weight: 700; }
+@media (max-width: 850px) {
+  .map-controls { grid-template-columns: 1fr 1fr; }
+  .chemical-map-layout { grid-template-columns: 1fr; }
+  .map-details { max-height: none; }
+  #map-canvas { height: 520px; }
+}
+@media (max-width: 560px) {
+  .feature-link { align-items: stretch; flex-direction: column; gap: .8rem; }
+  .map-controls { grid-template-columns: 1fr; }
+  #map-canvas { height: 440px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #map-canvas { scroll-behavior: auto; }
+}
+
+
+/* main's base rules are NOT re-appended here: every selector in that block
+   was already defined above, and re-declaring them last let main's blue
+   dark palette (--accent: #7fb3e0) win over this branch's gold pastel one. */
+/* A subclass row sits under its parent: mycobacteria are bacteria. The indent
+   is decoration — the row text names the parent, because an indent conveys
+   nothing to a screen reader and is wrong the moment the sort order changes. */
+tr.subclass td:first-child { padding-left: 1.6rem; }
+.tree { color: var(--muted); }
+/* Corpus-map palette. One custom property per class index, read by the canvas
+   so the legend swatch and the point can never disagree. Chosen to stay
+   distinguishable under the common forms of colour blindness. */
+:root {
+  --cls0: #3f7fbf; --cls1: #d1651a; --cls2: #2f8f5b; --cls3: #a24bb5;
+  --cls4: #b3852a; --cls5: #b3364a; --cls6: #4c6a86; --cls7: #6d6d6d;
+}
+#map-controls { display: flex; flex-wrap: wrap; gap: .4rem; margin: .8rem 0; }
+#map-controls .legend { cursor: pointer; border: 1px solid transparent; }
+#map-controls .legend::before {
+  content: ""; display: inline-block; width: .6rem; height: .6rem;
+  border-radius: 50%; background: var(--dot); margin-right: .35rem;
+}
+#map-controls .legend.off { opacity: .4; text-decoration: line-through; }
+#corpus-map { max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+figure { margin: 0; }

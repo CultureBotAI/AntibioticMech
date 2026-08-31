@@ -24,6 +24,12 @@ xrefs:
 - reaxys:4489711
 activity_roles:
 - CHEBI:52425
+mode_of_action: VIRAL_RELEASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:52425 (EC 3.2.1.18 (exo-α-sialidase)
+  inhibitor). ChEBI asserts the role on the compound. The target it names is one the
+  host has too, so the mechanism is true but is not evidence of selectivity — see
+  mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: COc1cc(O)c(C)c(O)c1C(=O)/C=C/c1ccccc1
   standard_inchi: InChI=1S/C17H16O4/c1-11-14(19)10-15(21-2)16(17(11)20)13(18)9-8-12-6-4-3-5-7-12/h3-10,19-20H,1-2H3/b9-8+
@@ -40,9 +46,17 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-7ddd1e6279
   role_terms:
   - CHEBI:52425
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

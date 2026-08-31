@@ -36,6 +36,7 @@ from seed_from_sources import (  # noqa: E402
     CONF_PATH,
     RAW_DIR,
     build_concepts,
+    curator_owns_mode_of_action,
     load_decisions,
     merge,
 )
@@ -73,7 +74,17 @@ def corpus_records() -> list[dict]:
 def mechanism_queue(records: list[dict]) -> list[dict]:
     rows = []
     for record in records:
-        if record.get("causal_graphs") or record.get("mode_of_action"):
+        # A SEEDED mode_of_action does not retire a record from this queue: its
+        # own note asks a curator to confirm the value, and writing that note
+        # used to remove the record from the only list where a curator would
+        # find it. 433 records vanished the day mode_of_action was first seeded,
+        # 68 of them carrying the CARD evidence that puts them at the top.
+        # A curator who has claimed the field has decided, whether they set a
+        # value or vetoed one. Requiring a value here left a documented veto in
+        # the queue forever with no way out — and re-introduced the divergence
+        # the single ownership predicate exists to prevent.
+        curator_set_moa = curator_owns_mode_of_action(record)
+        if record.get("causal_graphs") or curator_set_moa:
             continue
         targets = len(record.get("molecular_targets") or [])
         resistance = len(record.get("resistance_mechanisms") or [])
@@ -103,6 +114,79 @@ def minted_queue(records: list[dict]) -> list[dict]:
             "source": "+".join(sorted({c["source"] for c in record.get("source_concepts", [])})),
             "source_id": ",".join(c["source_id"] for c in record.get("source_concepts", [])),
             "hint": "no ChEBI cross-reference with a structure; needs a ChEBI id or a reason",
+        })
+    rows.sort(key=lambda r: r["label"].lower())
+    return rows
+
+
+def seeded_mechanism_view() -> dict[str, dict]:
+    """identifier -> the mechanism block the seeder derives right now.
+
+    The queue below cannot tell a curator's scope from a leftover by looking at
+    the record, because both are just a value. It can tell them apart by asking
+    the seeder what IT would derive, which is the only thing that makes the
+    distinction knowable.
+    """
+    conf = yaml.safe_load(CONF_PATH.read_text(encoding="utf-8"))
+    manifest = yaml.safe_load((RAW_DIR / "MANIFEST.yaml").read_text(encoding="utf-8"))
+    concepts, chebi_rows = build_concepts(conf)
+    derived, _ = merge(concepts, chebi_rows, conf, load_decisions(),
+                       manifest.get("retrieved_on", ""))
+    return {ident: {"mode_of_action": rec.get("mode_of_action"),
+                    "mode_of_action_target_scope": rec.get("mode_of_action_target_scope")}
+            for ident, rec in derived.items()}
+
+
+def mode_of_action_scope_queue(records: list[dict],
+                               derived: dict[str, dict] | None = None) -> list[dict]:
+    """Curator-owned mechanisms whose target scope has not been settled.
+
+    The scope describes the mechanism it sits beside, and the seeder derives it
+    from the ChEBI roles. Once a curator claims `mode_of_action`, the seeder can
+    no longer derive a scope for their value and must not guess — it copies the
+    block forward verbatim. That leaves one loose end: a scope derived for the
+    seeder's mechanism, still sitting beside a curator's different one.
+
+    This queue is that loose end, and it is COMPARED AGAINST THE DERIVATION
+    rather than sniffed from the note text. An earlier version keyed on "the
+    seeder's note marker is still present", which missed the case it existed for
+    entirely — a curator who REPLACES the note (a state `curator_owns_mode_of_
+    action` explicitly supports) and changes the mechanism matched neither of
+    its signals — while queueing forever a curator who merely appended
+    `CURATOR: confirmed` without changing anything, whose derived scope is
+    perfectly valid and who had no way to clear the row.
+
+    Three cases, in order:
+      - no scope beside a curator's mechanism: owed outright;
+      - the curator changed the mechanism and the scope is still exactly what
+        the seeder derives: indistinguishable from a leftover, so it is asked
+        about rather than trusted or deleted;
+      - anything else: settled, and not queued.
+    """
+    if derived is None:
+        derived = seeded_mechanism_view()
+    rows = []
+    for record in records:
+        moa = record.get("mode_of_action")
+        if not moa or not curator_owns_mode_of_action(record):
+            continue
+        scope = record.get("mode_of_action_target_scope")
+        seeded = derived.get(record.get("identifier"), {})
+        if not scope:
+            hint = "curator mechanism with no target scope"
+        elif (seeded.get("mode_of_action") != moa
+              and seeded.get("mode_of_action_target_scope") == scope):
+            hint = (f"scope {scope} is what the seeder derives for "
+                    f"{seeded.get('mode_of_action')}, not for {moa}")
+        else:
+            continue
+        rows.append({
+            "queue": "moa-scope",
+            "key": record["identifier"],
+            "label": record["label"],
+            "source": "+".join(sorted({c["source"] for c in record.get("source_concepts", [])})),
+            "source_id": moa,
+            "hint": hint,
         })
     rows.sort(key=lambda r: r["label"].lower())
     return rows
@@ -145,7 +229,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--queue",
-                        choices=("all", "no-structure", "mechanism", "minted", "unknown-mech"),
+                        choices=("all", "no-structure", "mechanism", "minted", "unknown-mech",
+                                 "moa-scope"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
     parser.add_argument("--tsv", type=Path, help="Write every row (not just --limit) to this TSV.")
@@ -161,6 +246,8 @@ def main() -> int:
         queues["minted"] = minted_queue(records)
     if args.queue in ("all", "unknown-mech"):
         queues["unknown-mech"] = unknown_mechanism_queue(records)
+    if args.queue in ("all", "moa-scope"):
+        queues["moa-scope"] = mode_of_action_scope_queue(records)
 
     for name, rows in queues.items():
         print(f"\n=== {name}: {len(rows)} item(s) ===")

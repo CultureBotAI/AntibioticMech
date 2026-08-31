@@ -1,0 +1,124 @@
+{
+  "audit_date": "2026-08-30",
+  "corpus_commit": "c93b3e40",
+  "record_count": 2923,
+  "rdkit_version": "2026.03.5",
+  "structure_coverage": {
+    "smiles": 2747,
+    "inchi_fallback": 176,
+    "failed": 0,
+    "multi_fragment_records": 202,
+    "heavy_atom_quantiles": [2.0, 20.0, 28.0, 40.0, 84.0, 339.0],
+    "stereoisomer_pairs": 189
+  },
+  "evaluation_anchors": {
+    "structural_class": 569,
+    "parent_compound": 2911,
+    "repeated_chiral_bemis_murcko_scaffold": 1520
+  },
+  "selected": {
+    "name": "Morgan-chiral-sparse-count-r2-0.90-r4-0.10",
+    "distance": "0.90 * (1 - Tanimoto(r2)) + 0.10 * (1 - Tanimoto(r4))",
+    "structural_class_precision_at_10": 0.4432337434,
+    "parent_overlap_precision_at_10": 0.4077980076,
+    "scaffold_precision_at_10": 0.3230263158,
+    "stereoisomer_zero_distance_fraction": 0.0,
+    "stereoisomer_median_distance": 0.1401588768,
+    "projection": {
+      "method": "UMAP",
+      "metric": "precomputed",
+      "n_neighbors": 15,
+      "min_dist": 0.05,
+      "random_state": 42,
+      "trustworthiness_at_10": 0.9704994662,
+      "neighbor_overlap_at_10": 0.4970236059
+    },
+    "fingerprint_seconds": 0.227,
+    "pairwise_distance_seconds": 11.923
+  },
+  "comparators": [
+    {
+      "name": "Morgan-chiral-r2-sparse-count",
+      "structural_class_precision_at_10": 0.4425307557,
+      "parent_overlap_precision_at_10": 0.4072140158,
+      "scaffold_precision_at_10": 0.3223684211,
+      "stereoisomer_zero_distance_fraction": 0.0370370370,
+      "projection_trustworthiness_at_10": 0.9718689823,
+      "projection_neighbor_overlap_at_10": 0.5003079028,
+      "fingerprint_seconds": 0.096
+    },
+    {
+      "name": "Morgan-chiral-r4-sparse-count",
+      "structural_class_precision_at_10": 0.4386643234,
+      "parent_overlap_precision_at_10": 0.4038818276,
+      "scaffold_precision_at_10": 0.3230921053,
+      "stereoisomer_zero_distance_fraction": 0.0,
+      "projection_trustworthiness_at_10": 0.9687259788,
+      "projection_neighbor_overlap_at_10": 0.4920971605,
+      "fingerprint_seconds": 0.128
+    },
+    {
+      "name": "Morgan-chiral-r2-2048-bit",
+      "structural_class_precision_at_10": 0.4365553603,
+      "parent_overlap_precision_at_10": 0.4157334249,
+      "scaffold_precision_at_10": 0.3157236842,
+      "stereoisomer_zero_distance_fraction": 0.0423280423,
+      "projection_trustworthiness_at_10": 0.9606245130,
+      "projection_neighbor_overlap_at_10": 0.4892918235,
+      "fingerprint_seconds": 0.523
+    },
+    {
+      "name": "IBM-MoLFormer-XL-both-10pct-pooler",
+      "structural_class_precision_at_10": 0.4214411248,
+      "parent_overlap_precision_at_10": 0.3965647544,
+      "scaffold_precision_at_10": 0.2738157895,
+      "stereoisomer_zero_distance_fraction": 0.0,
+      "stereoisomer_median_distance": 0.0075686574,
+      "projection_trustworthiness_at_10": 0.9680022262,
+      "projection_neighbor_overlap_at_10": 0.4687991789,
+      "embedding_seconds": 192.721,
+      "records_over_published_training_limit_202_tokens": 58,
+      "random_smiles_same_structure_cosine": {
+        "minimum": 0.0062735067,
+        "p05": 0.6350478530,
+        "median": 0.8045136929,
+        "mean": 0.7920434475
+      }
+    },
+    {
+      "name": "AtomPair-chiral-count",
+      "structural_class_precision_at_10": 0.4184534271,
+      "parent_overlap_precision_at_10": 0.3763655101,
+      "scaffold_precision_at_10": 0.3120394737,
+      "stereoisomer_zero_distance_fraction": 0.2592592593,
+      "projection_trustworthiness_at_10": 0.9658916842,
+      "projection_neighbor_overlap_at_10": 0.4951419774,
+      "fingerprint_seconds": 0.343
+    },
+    {
+      "name": "TopologicalTorsion-chiral-count",
+      "structural_class_precision_at_10": 0.3964850615,
+      "parent_overlap_precision_at_10": 0.3594641017,
+      "scaffold_precision_at_10": 0.3150657895,
+      "stereoisomer_zero_distance_fraction": 0.2592592593,
+      "projection_trustworthiness_at_10": 0.9383165566,
+      "projection_neighbor_overlap_at_10": 0.4565514882,
+      "fingerprint_seconds": 0.343
+    },
+    {
+      "name": "MAP4-achiral-r2-2048-minhash-set",
+      "structural_class_precision_at_10": 0.2738137083,
+      "parent_overlap_precision_at_10": 0.2236001374,
+      "scaffold_precision_at_10": 0.2484210526,
+      "stereoisomer_zero_distance_fraction": 0.5132275132,
+      "projection_trustworthiness_at_10": 0.7964050056,
+      "projection_neighbor_overlap_at_10": 0.2303797468,
+      "fingerprint_seconds": 40.683
+    }
+  ],
+  "notes": [
+    "The internal labels are chemical proxies, not a human similarity gold standard.",
+    "Antimicrobial-class purity was excluded from model selection because it is biological rather than structural.",
+    "Feature and distance times are local Apple arm64 wall-clock measurements and exclude YAML parsing."
+  ]
+}

@@ -32,7 +32,7 @@ import re
 import sys
 import urllib.request
 from collections import defaultdict
-from datetime import date
+from datetime import datetime, timezone
 from pathlib import Path
 
 import yaml
@@ -46,13 +46,14 @@ CHEBI_INVENTORY = "chebi_antimicrobials.tsv"
 ARO_INVENTORY = "aro_antibiotics.tsv"
 ARO_RESISTANCE = "aro_resistance_edges.tsv"
 ARO_TARGETS = "aro_target_edges.tsv"
+CHEBI_ROLE_NAMES = "chebi_role_names.tsv"
 MANIFEST = "MANIFEST.yaml"
 
 CHEBI_COLUMNS = [
     "chebi_id", "name", "definition", "stars", "in_role_scope",
     "role_ids", "parent_ids", "smiles", "standard_inchi", "standard_inchi_key",
     "molecular_formula", "charge", "average_mass", "monoisotopic_mass",
-    "synonyms", "xrefs", "citations",
+    "synonyms", "xrefs", "citations", "mechanism_role_ids",
 ]
 
 # An accession that is not CURIE-safe cannot become an xref: the schema's CURIE
@@ -72,6 +73,7 @@ RESISTANCE_COLUMNS = [
     "antibiotic_name", "mechanism", "mechanism_source_id",
 ]
 TARGET_COLUMNS = ["target_id", "target_name", "target_definition", "antibiotic_id", "antibiotic_name"]
+ROLE_NAME_COLUMNS = ["role_id", "name", "used_for"]
 
 
 # --------------------------------------------------------------------------
@@ -145,6 +147,32 @@ def pipe(values) -> str:
 # ChEBI
 # --------------------------------------------------------------------------
 
+def role_name_rows(conf: dict, compounds: dict, acc2id: dict) -> list[dict]:
+    """Labels for every ChEBI role this repository references.
+
+    Records carry role CURIEs in `activity_roles` and nothing anywhere says what
+    they mean, so a consumer reading `CHEBI:33282` has to go and look it up. This
+    is the smallest inventory that fixes that, and it is what lets a seeded
+    mode_of_action note name the role it came from.
+    """
+    used: dict[str, set[str]] = {}
+    for accession in conf["role_scope"]["in_scope"]:
+        used.setdefault(accession, set()).add("scope")
+    for accession in conf.get("role_to_class", {}):
+        used.setdefault(accession, set()).add("class")
+    for accession in {**conf.get("role_to_mode_of_action", {}),
+                      **conf.get("role_to_mode_of_action_eukaryotic", {})}:
+        used.setdefault(accession, set()).add("mode_of_action")
+    rows = []
+    for accession, purposes in sorted(used.items()):
+        cid = acc2id.get(accession)
+        if cid is None:
+            continue
+        rows.append({"role_id": accession, "name": flat(compounds[cid]["name"]),
+                     "used_for": ",".join(sorted(purposes))})
+    return rows
+
+
 def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> list[dict]:
     """ChEBI compounds bearing an in-scope antimicrobial role, plus any ChEBI id
     cross-referenced by an ARO antibiotic molecule.
@@ -182,9 +210,32 @@ def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> li
         elif r["relation_type_id"] == "4":     # has_role
             has_role[r["init_id"]].append(r["final_id"])
 
+
+    # Mechanism roles are collected separately from the antimicrobial roles that
+    # decide scope: a compound is in this corpus because of the latter, and
+    # describes its mechanism with the former. Both are read from the same
+    # reviewed has_role edges.
+    # BOTH maps. Reading only the unconditional one desynced conf from the
+    # committed inventory: roles moved into the eukaryotic map vanished from
+    # mechanism_role_ids on the next extraction, and roles added to it never
+    # arrived at all — which made a role addition inert while looking applied.
+    mechanism_map = {**conf.get("role_to_mode_of_action", {}),
+                     **conf.get("role_to_mode_of_action_eukaryotic", {})}
+    mechanism_ids = {acc2id[a] for a in mechanism_map if a in acc2id}
+
     scope = conf["role_scope"]
     out_roles = transitive([acc2id[a] for a in scope["out_of_scope"] if a in acc2id], isa_children)
     in_roles = transitive([acc2id[a] for a in scope["in_scope"] if a in acc2id], isa_children) - out_roles
+
+    # A compound inherits the mechanism roles asserted on its ancestors, the same
+    # way it inherits an antimicrobial role.
+    mechanism_of: dict[str, set[str]] = defaultdict(set)
+    for bearer, bearer_roles in has_role.items():
+        hit = {r for r in bearer_roles if r in mechanism_ids}
+        if not hit:
+            continue
+        for descendant in transitive([bearer], isa_children):
+            mechanism_of[descendant] |= hit
 
     direct = {c: [r for r in roles if r in in_roles] for c, roles in has_role.items()
               if any(r in in_roles for r in roles)}
@@ -279,8 +330,10 @@ def extract_chebi(conf: dict, *, offline: bool, aro_chebi_xrefs: set[str]) -> li
             # necessarily any antimicrobial claim made about it. It is committed
             # so a curator writing evidence has the starting set at hand.
             "citations": pipe(sorted(set(citations.get(cid, [])))[:10]),
+            "mechanism_role_ids": pipe(sorted(
+                compounds[r]["chebi_accession"] for r in mechanism_of.get(cid, ()))),
         })
-    return rows
+    return rows, role_name_rows(conf, compounds, acc2id)
 
 
 # --------------------------------------------------------------------------
@@ -481,7 +534,7 @@ def _row_count(path: Path) -> int:
 
 
 def build_manifest(conf: dict, inventories: dict[str, Path]) -> dict:
-    downloads = {}
+    downloads: dict[str, dict] = {}
     for name in conf["chebi"]["files"]:
         p = DOWNLOAD_DIR / name
         if p.exists():
@@ -497,8 +550,33 @@ def build_manifest(conf: dict, inventories: dict[str, Path]) -> dict:
             "bytes": aro.stat().st_size,
             "sha256": sha256_of(aro),
         }
+    # When the upstream files were actually FETCHED, not when this script last
+    # ran. `download()` reuses a cached file without re-fetching, so stamping
+    # today unconditionally claimed a retrieval that never happened — and
+    # because `source_version` is a seeded field, that flipped on all 2923
+    # records and gave every one a RESEEDED_FROM_SOURCES event for an update
+    # that did not occur. The files' own mtimes are the honest answer and, unlike
+    # carrying the previous manifest forward, they correct a date already wrong.
+    # Resolved in UTC, not the local zone. These mtimes are 17:05-17:21 PDT,
+    # which is 00:05-00:21 the NEXT day in UTC: `date.fromtimestamp` would give
+    # a collaborator or CI runner in UTC a different `retrieved_on` from the
+    # same bytes, flip `source_version` on every record and append a re-seed
+    # event for an update that did not happen. That is #69's failure mode
+    # arriving through the timezone door. The repo already stamps every
+    # curation timestamp in UTC (curate.curation_event.now_iso).
+    fetched = [(DOWNLOAD_DIR / name).stat().st_mtime
+               for name in downloads if (DOWNLOAD_DIR / name).exists()]
+    if not fetched:
+        # Falling back to today() would assert a retrieval that never happened,
+        # which is exactly #69. Unreachable on the normal path (download() runs
+        # first), so if it ever fires something is wrong enough to stop for.
+        raise SystemExit(
+            "No manifested download is present in downloads/; cannot date the "
+            "retrieval. Run `just download` before building the manifest.")
+    retrieved_on = datetime.fromtimestamp(max(fetched), tz=timezone.utc).date().isoformat()
+
     return {
-        "retrieved_on": date.today().isoformat(),
+        "retrieved_on": retrieved_on,
         "generated_by": "scripts/extract_source_inventory.py",
         "sources": {
             "chebi": {"homepage": conf["chebi"]["homepage"], "license": conf["chebi"]["license"],
@@ -536,7 +614,8 @@ def main() -> int:
     print(f"  {len(resistance_rows)} resistance edges, {len(target_rows)} target edges", file=sys.stderr)
 
     print("=== ChEBI ===", file=sys.stderr)
-    chebi_rows = extract_chebi(conf, offline=args.offline, aro_chebi_xrefs=aro_chebi_xrefs)
+    chebi_rows, role_names = extract_chebi(conf, offline=args.offline,
+                                           aro_chebi_xrefs=aro_chebi_xrefs)
     with_structure = sum(1 for r in chebi_rows if r["standard_inchi_key"])
     in_scope = sum(1 for r in chebi_rows if r["in_role_scope"] == "true")
     print(f"  {len(chebi_rows)} compounds ({in_scope} in role scope, "
@@ -552,6 +631,7 @@ def main() -> int:
         ARO_INVENTORY: (ARO_COLUMNS, aro_rows),
         ARO_RESISTANCE: (RESISTANCE_COLUMNS, resistance_rows),
         ARO_TARGETS: (TARGET_COLUMNS, target_rows),
+        CHEBI_ROLE_NAMES: (ROLE_NAME_COLUMNS, role_names),
     }
     written = {}
     for name, (columns, rows) in targets.items():
@@ -561,14 +641,32 @@ def main() -> int:
         print(f"  wrote {path.relative_to(REPO_ROOT)} ({len(rows)} rows)", file=sys.stderr)
 
     manifest = build_manifest(conf, written)
-    # pubchem_structures.tsv is written by a later, network-dependent step; carry
-    # its recorded hash forward rather than dropping provenance on re-extraction.
+    # Inventories written by independent extractors are carried forward rather
+    # than dropping their provenance on a ChEBI/ARO refresh.
     old_path = RAW_DIR / MANIFEST
     if old_path.exists():
         previous = yaml.safe_load(old_path.read_text(encoding="utf-8")) or {}
-        carried = previous.get("inventories", {}).get("pubchem_structures.tsv")
-        if carried and (RAW_DIR / "pubchem_structures.tsv").exists():
-            manifest["inventories"]["pubchem_structures.tsv"] = carried
+        for name in (
+            "pubchem_structures.tsv",
+            "mibig_producers.tsv",
+            "fda_clinical_status.tsv",
+        ):
+            carried = previous.get("inventories", {}).get(name)
+            if carried and (RAW_DIR / name).exists():
+                manifest["inventories"][name] = carried
+        for name in ("mibig", "fda_drugsfda", "fda_gsrs"):
+            carried = previous.get("sources", {}).get(name)
+            if carried:
+                manifest["sources"][name] = carried
+        for name in (
+            "mibig_json_4.0.tar.gz",
+            "drugsatfda.zip",
+            "other-unii-0001-of-0001.json.zip",
+            "fda_gsrs_candidates.jsonl",
+        ):
+            carried = previous.get("downloads", {}).get(name)
+            if carried:
+                manifest["downloads"][name] = carried
     (RAW_DIR / MANIFEST).write_text(
         yaml.safe_dump(manifest, sort_keys=False, allow_unicode=True), encoding="utf-8")
     print(f"  wrote {(RAW_DIR / MANIFEST).relative_to(REPO_ROOT)}", file=sys.stderr)

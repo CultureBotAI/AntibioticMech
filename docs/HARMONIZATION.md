@@ -19,7 +19,7 @@ key on:
 | `CHEBI:48923` erythromycin | A ChEBI *class* over erythromycins A–E |
 | `ARO:0000000` macrolide antibiotic | A drug class — `structural_class`, not a record |
 
-The 364 concepts in that position are not lost: `just worklist` lists them, and
+The 371 concepts in that position are not lost: `just worklist` lists them, and
 each needs either a structure or an `EXCLUDE` decision.
 
 ## Identity resolution
@@ -104,6 +104,105 @@ tetracycline.
 An ARO concept with no ChEBI role is `ANTIBACTERIAL`: every molecule in CARD's
 antibiotic subtree is there because a bacterial resistance determinant acts on it.
 
+**`ANTIMYCOBACTERIAL` is a subclass of `ANTIBACTERIAL`, and the counts say so.**
+Mycobacteria are bacteria, but filing is exclusive and picks the narrower claim,
+so those 78 records are not also filed `ANTIBACTERIAL`. Any count answering
+"which compounds act on bacteria?" has to add them back: it is **1115**, not the
+1037 filed directly. `just report`, the README table and the site all derive
+this from the schema's enum `is_a` through one shared helper
+(`seed_from_sources.class_parents`), so a hierarchy the schema declares cannot
+be one only the site honours. 76 of the 78 carry no general antibacterial role
+at all — their only bacterial evidence is `antitubercular`,
+`antimycobacterial` or `leprostatic` — which is why the class stays a filing value rather than
+being collapsed: it is a more specific true claim, and `activity_roles` would
+be the only place it survived.
+
+## Mode of action
+
+`mode_of_action` is seeded from ChEBI's own mechanism roles. The maps in
+`conf/sources.yaml` translate 32 of them — `protein synthesis inhibitor`,
+`sterol 14α-demethylase inhibitor`, `HIV-1 reverse transcriptase inhibitor` and
+so on — into `ModeOfActionEnum`, and 416 of 2,923 records carry a value.
+
+This is a **restatement**, not an inference, and the distinction matters because
+the alternative was tried here and failed. Filing a record on a ChEBI structural
+class whose name states a target group asserted activity for chemotherapy drugs,
+an insecticide and bare ring scaffolds, because a chemical class says what a
+compound IS and its members are not all active on the named target. A role is
+different: ChEBI asserting `protein synthesis inhibitor` of a compound is a
+direct claim about what that compound does, and the map only puts it in this
+schema's words.
+
+Five disciplines keep it honest:
+
+- **A role whose target only exists in a eukaryote is conditional on the target
+  group.** A mitochondrion is a eukaryotic organelle, so
+  `mitochondrial cytochrome-bc1 inhibitor` is exactly the mechanism of a
+  strobilurin fungicide and meaningless for a bacterium. Those roles apply on
+  ANTIFUNGAL and ANTIPROTOZOAL records and nowhere else — mapping them
+  unconditionally put an energy-metabolism mechanism on antibacterials, and
+  removing them outright stripped 23 antifungals of a correct one.
+- **Host-directed roles are unmapped.** The same role space holds angiogenesis,
+  acetylcholinesterase, proteasome and platelet-aggregation inhibitors. A mode of
+  action here is a claim about how a compound kills or inhibits a microbe, and
+  inheriting one from unrelated pharmacology is the confident wrongness the gates
+  cannot see.
+- **Whose target it is, is recorded rather than hedged.**
+  `mode_of_action` means *the mechanism by which the compound exerts its
+  antimicrobial effect*. That does **not** require a microbe-specific target: a
+  host-directed antiviral inhibits the host translation the virus depends on,
+  and a virus has no ribosome of its own. Suppressing those would not be rigour;
+  it would make the corpus unable to express a real drug class. But
+  `PROTEIN_SYNTHESIS_INHIBITION` alone cannot tell linezolid's bacterial 50S
+  from omacetaxine's host 80S, so `mode_of_action_target_scope` says which:
+  `MICROBIAL_TARGET` (177 records) when a contributing role names a target the
+  host lacks, `HOST_SHARED_TARGET` (239) when none does. Presence is the rule
+  and a role's cohort is evidence about presence, not a second rule — reading it
+  the other way made trimethoprim host-shared for a host enzyme while terbinafine
+  was microbial for one. It is **not a
+  confidence rating** — both mark true mechanisms, and the host-shared value
+  covers microbe-selective drugs acting on a conserved machine as well as
+  genuinely host-directed ones. It marks where the selectivity question exists;
+  `molecular_targets` is where a curator answers it. Once a curator claims
+  `mode_of_action`, the seeder can no longer derive a scope for their value and
+  copies the block forward untouched rather than guessing — `just worklist
+  --queue moa-scope` is where an unsettled scope shows up.
+
+  The aggregate is by ANY: a record is `MICROBIAL_TARGET` when any contributing
+  role names a target the host lacks, which is what makes it a usable filter —
+  ciprofloxacin carries `topoisomerase IV inhibitor` alongside the generic `DNA
+  synthesis inhibitor`, and reading it the other way would put the most
+  selective antibacterial class there is on the wrong side. (This was once
+  described as "a specific role outranks a generic one". That was never the
+  rule, only a coincidence of that example; the azoles showed the generic role
+  winning over the specific one under the same sentence.)
+
+  The split runs inside a single combination drug: sulfamethoxazole is
+  `MICROBIAL_TARGET` because the host has no dihydropteroate synthase,
+  trimethoprim is `HOST_SHARED_TARGET` because the host's dihydrofolate
+  reductase is methotrexate's target. And it does *not* split a drug class:
+  every sterol-pathway antifungal is host-shared, because an azole's target is
+  CYP51 and the host has CYP51. Their selectivity is affinity, not absence.
+- **Several mechanisms give `MULTIPLE`, never a silent pick.** Rifampicin carries
+  both an RNA-polymerase and a protein-synthesis role; the notes name both and
+  leave the primary one to a curator.
+- **A mechanism from another of the compound's activities says so.**
+  `mode_of_action` and `antimicrobial_class` are orthogonal axes, and some role
+  names carry a target group inside them: `HIV-1 integrase inhibitor` does,
+  `protein synthesis inhibitor` does not. 11 records are filed under one group
+  and carry a mechanism belonging to another — equisetin is an antibacterial that
+  is also an HIV integrase inhibitor. Both facts are true; a record stating the
+  mechanism without stating the mismatch would read as a claim about how its
+  antibacterial action works. Those notes name the discrepancy explicitly.
+
+All of it rests on reviewed edges only: of the 572 `has_role` edges into the
+mapped roles, 562 are CHECKED or OK and the 10 SUBMITTED are ignored — the same
+filter that stopped an unreviewed edge from making zidovudine an antitubercular.
+
+A curator's `mode_of_action` outranks the seeded one. Ownership is decided by a
+marker in the notes rather than by the field name, the same way CARD-seeded
+mechanism items work.
+
 ## Scope
 
 `conf/sources.yaml` holds the in-scope and out-of-scope ChEBI role roots. Scope
@@ -175,3 +274,55 @@ A determinant whose ancestry matches nothing is seeded `UNKNOWN` and lands on
 `just worklist --queue unknown-mech`, ranked by how many records it affects — it
 is not guessed. CARD's own authoritative association lives in `card.json`, which
 this repository does not yet ingest.
+
+## The corpus map
+
+`just embed` turns each record into a 1024-d vector with a local model
+(BAAI/bge-large-en-v1.5, no API and no per-record cost), and `just embed-map`
+projects those to two dimensions for the site's [corpus map](../pages/map.html).
+
+**It embeds the annotation, not the chemistry.** Proximity means "described
+similarly" — same class, structural family, mechanism, asserted roles — not
+"structurally similar". SMILES and InChI are deliberately excluded: a sentence
+model reads them as gibberish long enough to dominate every document. So is the
+seeded `mode_of_action_notes`, which is near-identical across hundreds of records
+by design and would manufacture one enormous false cluster of "records carrying a
+seeded mechanism"; the mechanism *value* goes in, its boilerplate does not. The
+full include/exclude list is in `scripts/embed_records.py` and asserted by
+`tests/test_embeddings.py`.
+
+That makes it a map of the corpus's own descriptions, which is what makes it
+useful for curation: an outlier is usually a record whose annotation is thin or
+inconsistent with its neighbours, and a cluster spanning two classes is worth
+looking at.
+
+It separates the classes without being told them: in the raw 1024-d embedding
+**83%** of a compound's ten nearest neighbours share its class, against a **23%**
+baseline for these class sizes. That is the encoder's number, and it is the one
+this section is entitled to — the 2-D map scores higher (86%) only because
+PaCMAP tightens neighbourhoods by construction, so that figure belongs on the
+map page describing what a reader of it sees, not here describing the
+embedding.
+
+The exception is instructive. In the raw embedding `ANTIMYCOBACTERIAL` scores
+51%, with a further 28% of its neighbours in `ANTIBACTERIAL`. The encoder
+recovers, from text alone, the subclass relationship the schema declares —
+mycobacteria are bacteria.
+
+Field order and length both mattered. 94 documents once exceeded the model's
+512-token window, and the tail of those was silently dropped — with synonyms
+emitted early, vancomycin kept a list of trade names and lost its resistance
+determinants. Mechanism, roles and targets now come before the definition, and
+synonyms are chosen by their DECLARED TYPE rather than by guessing from the
+string — INN, then brand name, then related, then the exact-synonym residue
+under a 60-character ceiling. They were 42% of all corpus tokens and the long
+ones are systematic names: precisely the "gibberish of a length that would
+dominate every document" that excludes SMILES, readmitted through a different
+key. Ranking by type left the clustering unchanged (83.4% to 83.3%); it is done
+because `synonym_type` states the answer that a shape heuristic could only
+guess, and because vancomycin now carries "Vancocin" rather than a fragment of
+its IUPAC name. **No
+document now exceeds the window at all** (median 174 tokens, longest 503).
+
+A chemical-similarity map is a different artifact and would need molecular
+fingerprints or a chemical language model rather than a text encoder.

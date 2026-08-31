@@ -56,6 +56,12 @@ activity_roles:
 - CHEBI:36047
 structural_class: macrolide antibiotic
 structural_class_id: ARO:0000000
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CCCN1C[C@H](C)[C@@H](O)[C@](C)(O)[C@@H](CC)OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@H]1C
   standard_inchi: InChI=1S/C40H76N2O12/c1-15-17-42-21-22(3)33(44)40(11,48)29(16-2)52-36(46)26(7)32(53-30-20-39(10,49-14)34(45)27(8)51-30)25(6)35(38(9,47)19-23(42)4)54-37-31(43)28(41(12)13)18-24(5)50-37/h22-35,37,43-45,47-48H,15-21H2,1-14H3/t22-,23+,24+,25-,26+,27-,28-,29+,30-,31+,32-,33+,34-,35+,37-,38+,39+,40+/m0/s1
@@ -73,7 +79,7 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   - CHEBI:36047
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:195437
   source_label: gamithromycin
@@ -81,13 +87,17 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   - CHEBI:36047
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T01:13:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:27Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

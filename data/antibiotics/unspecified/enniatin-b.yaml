@@ -19,6 +19,12 @@ xrefs:
 - reaxys:75191
 activity_roles:
 - CHEBI:33281
+mode_of_action: MEMBRANE_DISRUPTION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:24869 (ionophore). ChEBI asserts
+  the role on the compound. The target it names is one the host has too, so the mechanism
+  is true but is not evidence of selectivity — see mode_of_action_target_scope. Not
+  a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CC(C)[C@H]1C(=O)O[C@H](C(C)C)C(=O)N(C)[C@@H](C(C)C)C(=O)O[C@H](C(C)C)C(=O)N(C)[C@@H](C(C)C)C(=O)O[C@H](C(C)C)C(=O)N1C
   standard_inchi: InChI=1S/C33H57N3O9/c1-16(2)22-31(40)43-26(20(9)10)29(38)35(14)24(18(5)6)33(42)45-27(21(11)12)30(39)36(15)23(17(3)4)32(41)44-25(19(7)8)28(37)34(22)13/h16-27H,1-15H3/t22-,23-,24-,25+,26+,27+/m0/s1
@@ -35,9 +41,17 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-df855394e0
   role_terms:
   - CHEBI:33281
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:21Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:37Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

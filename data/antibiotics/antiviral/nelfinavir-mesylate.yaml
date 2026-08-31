@@ -33,6 +33,12 @@ xrefs:
 - wikipedia.en:Nelfinavir
 activity_roles:
 - CHEBI:35660
+mode_of_action: VIRAL_PROTEASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:35660 (HIV protease inhibitor).
+  ChEBI asserts the role on the compound. The role names a target specific to the
+  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CS(=O)(=O)O.[H][C@@]12CCCC[C@]1([H])CN(C[C@@H](O)[C@H](CSc1ccccc1)NC(=O)c1cccc(O)c1C)[C@H](C(=O)NC(C)(C)C)C2
   standard_inchi: InChI=1S/C32H45N3O4S.CH4O3S/c1-21-25(15-10-16-28(21)36)30(38)33-26(20-40-24-13-6-5-7-14-24)29(37)19-35-18-23-12-9-8-11-22(23)17-27(35)31(39)34-32(2,3)4;1-5(2,3)4/h5-7,10,13-16,22-23,26-27,29,36-37H,8-9,11-12,17-20H2,1-4H3,(H,33,38)(H,34,39);1H3,(H,2,3,4)/t22-,23+,26-,27-,29+;/m0./s1
@@ -49,9 +55,90 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-b04d18e493
   role_terms:
   - CHEBI:35660
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020778
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: AGOURON PHARMS
+  drug_name: VIRACEPT
+  ingredient_name: NELFINAVIR MESYLATE
+  substance_id: UNII:98D603VP8V
+  approval_date: '1997-03-14'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '30'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020778
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020779
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: AGOURON PHARMS
+  drug_name: VIRACEPT
+  ingredient_name: NELFINAVIR MESYLATE
+  substance_id: UNII:98D603VP8V
+  approval_date: '1997-03-14'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '30'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020779
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '021503'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: AGOURON PHARMS
+  drug_name: VIRACEPT
+  ingredient_name: NELFINAVIR MESYLATE
+  substance_id: UNII:98D603VP8V
+  approval_date: '2003-04-30'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '30'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021503
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:26Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:17:02Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:36Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

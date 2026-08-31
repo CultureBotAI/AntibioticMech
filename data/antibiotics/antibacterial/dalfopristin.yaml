@@ -61,6 +61,12 @@ activity_roles:
 - CHEBI:36047
 structural_class: streptogramin antibiotic
 structural_class_id: ARO:0000026
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H][C@@]12C(=O)O[C@H](C(C)C)[C@H](C)/C=C/C(=O)NC/C=C/C(C)=C/[C@@H](O)CC(=O)Cc3nc(co3)C(=O)N1CC[C@H]2S(=O)(=O)CCN(CC)CC'
   standard_inchi: InChI=1S/C34H50N4O9S/c1-7-37(8-2)16-17-48(44,45)28-13-15-38-31(28)34(43)47-32(22(3)4)24(6)11-12-29(41)35-14-9-10-23(5)18-25(39)19-26(40)20-30-36-27(21-46-30)33(38)42/h9-12,18,21-22,24-25,28,31-32,39H,7-8,13-17,19-20H2,1-6H3,(H,35,41)/b10-9+,12-11+,23-18+/t24-,25-,28-,31-,32-/m1/s1
@@ -78,7 +84,7 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   - CHEBI:36047
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:4309
   source_label: dalfopristin
@@ -86,7 +92,7 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   - CHEBI:36047
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3000118
@@ -311,6 +317,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T01:13:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:33Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

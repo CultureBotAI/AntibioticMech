@@ -7,12 +7,16 @@
   <caption>Antimicrobial classes</caption>
   <thead><tr><th scope="col">Class</th><th scope="col" class="num">Records</th><th scope="col" class="num">Grounded</th><th scope="col">What it holds</th></tr></thead>
   {% for c in classes %}
-  <tr>
-    <td><a href="class/{{ c.slug }}.html">{{ c.label }}</a></td>
-    <td class="num">{{ c.count }}</td>
+  <tr{% if c.is_narrower %} class="subclass"{% endif %}>
+    <td>{% if c.is_narrower %}<span class="tree" aria-hidden="true">&#8627;</span> {% endif %}<a href="class/{{ c.slug }}.html">{{ c.label }}</a>{% if c.is_narrower %} <span class="meta">subclass of {{ c.parent_label|lower }}, counted in it</span>{% elif c.broader_of %} <span class="meta">incl. subclasses</span>{% endif %}</td>
+    <td class="num">{{ c.count_inclusive if c.broader_of else c.count }}</td>
     <td class="num">{{ c.grounded }}</td>
     <td class="meta">{{ c.description }}</td>
   </tr>
   {% endfor %}
 </table>
+<p class="meta">A row marked <em>subclass of X</em> is already counted in X's own row —
+mycobacteria are bacteria, and filing is exclusive, so a compound filed antimycobacterial
+is not filed antibacterial as well. Each record is counted once in the {{ stats.total }}
+total, so this column sums to more than it.</p>
 {% endblock %}

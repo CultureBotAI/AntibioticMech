@@ -53,6 +53,12 @@ activity_roles:
 - CHEBI:86327
 structural_class: triazole antifungal
 structural_class_id: ARO:3007499
+mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:75282 (ergosterol biosynthesis
+  inhibitor). ChEBI asserts the role on the compound. The target it names is one the
+  host has too, so the mechanism is true but is not evidence of selectivity — see
+  mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CCC(C)n1ncn(-c2ccc(N3CCN(c4ccc(OC[C@H]5CO[C@](Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O
   standard_inchi: InChI=1S/C35H38Cl2N8O4/c1-3-25(2)45-34(46)44(24-40-45)29-7-5-27(6-8-29)41-14-16-42(17-15-41)28-9-11-30(12-10-28)47-19-31-20-48-35(49-31,21-43-23-38-22-39-43)32-13-4-26(36)18-33(32)37/h4-13,18,22-25,31H,3,14-17,19-21H2,1-2H3/t25?,31-,35-/m0/s1
@@ -70,7 +76,7 @@ source_concepts:
   role_terms:
   - CHEBI:35718
   - CHEBI:86327
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:6076
   source_label: itraconazole
@@ -78,7 +84,7 @@ source_concepts:
   role_terms:
   - CHEBI:35718
   - CHEBI:86327
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3007524
@@ -336,12 +342,450 @@ resistance_mechanisms:
   - reference: ARO:3009618
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007511 (itraconazole);
       database assertion, not a primary citation.
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020083
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: JANSSEN PHARMS
+  drug_name: SPORANOX
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '1992-09-11'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020083
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '020657'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: JANSSEN PHARMS
+  drug_name: SPORANOX
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '1997-02-21'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020657
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020694
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: JANSSEN PHARMA
+  drug_name: SPORANOX
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '1996-12-06'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020694
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020966
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: JANSSEN PHARMS
+  drug_name: SPORANOX
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '1999-03-30'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020966
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 022484
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: SEBELA IRELAND LTD
+  drug_name: ONMEL
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2010-04-29'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022484
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '076104'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: SANDOZ
+  drug_name: ITRACONAZOLE
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2004-05-28'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=076104
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '200463'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: MYLAN PHARMS INC
+  drug_name: ITRACONAZOLE
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2012-07-20'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=200463
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '203445'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: JUBILANT GENERICS
+  drug_name: ITRACONAZOLE
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2017-02-23'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=203445
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '204672'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: ZYDUS PHARMS
+  drug_name: ITRACONAZOLE
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2017-09-19'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=204672
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '205080'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: AMNEAL PHARMS
+  drug_name: ITRACONAZOLE
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2016-09-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=205080
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '205573'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: AMNEAL PHARMS
+  drug_name: ITRACONAZOLE
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2015-10-30'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=205573
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '205724'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: RISING
+  drug_name: ITRACONAZOLE
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2016-12-13'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=205724
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '205991'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: ACCORD HLTHCARE
+  drug_name: ITRACONAZOLE
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2016-05-26'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=205991
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '206410'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: STRIDES PHARMA
+  drug_name: ITRACONAZOLE
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2019-07-02'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206410
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '206741'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: ALEMBIC
+  drug_name: ITRACONAZOLE
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2016-12-13'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206741
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '208481'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: APOTEX
+  drug_name: ITRACONAZOLE
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2019-08-02'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208481
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '208591'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: ALKEM LABS LTD
+  drug_name: ITRACONAZOLE
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2017-06-12'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208591
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '208901'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: MAYNE PHARMA
+  drug_name: TOLSURA
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2018-12-11'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208901
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '209460'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: TORRENT
+  drug_name: ITRACONAZOLE
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2018-08-24'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=209460
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '212239'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: ANNORA PHARMA
+  drug_name: ITRACONAZOLE
+  ingredient_name: ITRACONAZOLE
+  substance_id: UNII:304NUG5GF4
+  approval_date: '2020-09-01'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '74'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212239
 curation_history:
 - timestamp: '2026-08-30T00:54:36Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T01:13:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:36Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T04:10:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:58Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:31Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

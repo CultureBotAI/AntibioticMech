@@ -3,21 +3,16 @@
 from __future__ import annotations
 
 import re
+import sys
 from collections import Counter, defaultdict
+from pathlib import Path
 
 CURIE = re.compile(r"^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$")
 INCHIKEY = re.compile(r"^[A-Z]{14}-[A-Z]{10}-[A-Z]$")
 
-CLASS_DIRS = {
-    "ANTIBACTERIAL": "antibacterial",
-    "ANTIMYCOBACTERIAL": "antimycobacterial",
-    "ANTIFUNGAL": "antifungal",
-    "ANTIPROTOZOAL": "antiprotozoal",
-    "ANTIVIRAL": "antiviral",
-    "BIOCIDE": "biocide",
-    "ANTIMICROBIAL_UNSPECIFIED": "unspecified",
-    "OTHER": "other",
-}
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+
+from seed_from_sources import CLASS_DIRS  # noqa: E402
 
 
 def test_identifiers_are_unique(records):
@@ -143,6 +138,28 @@ def test_mechanistic_claims_carry_evidence(records):
     assert unsupported == [], unsupported[:20]
 
 
+def test_mibig_producers_are_reviewed_and_fully_provenanced(records):
+    """Every imported producer is a reviewed, versioned MIBiG+BGC assertion."""
+    problems = []
+    for path, record in records:
+        for producer in record.get("producer_organisms") or []:
+            if producer.get("source") != "MIBIG":
+                continue
+            required = (
+                "taxon_id",
+                "taxon_label",
+                "biosynthetic_gene_cluster",
+                "source_version",
+                "source_record_version",
+                "source_quality",
+                "reference",
+            )
+            missing = [field for field in required if not producer.get(field)]
+            if missing or producer.get("reviewed") is not True:
+                problems.append((path.name, missing, producer.get("reviewed")))
+    assert problems == [], problems[:20]
+
+
 def test_causal_graph_edges_reference_declared_nodes(records):
     dangling = []
     for path, record in records:
@@ -244,8 +261,8 @@ def test_resistance_mechanisms_are_typed_where_aro_says_so(records):
 
 
 def test_retired_slugs_are_never_reissued(repo_root, path_lockfile):
-    """A slug is a published URL. When 134 records left the corpus, their slugs
-    left PATHS.tsv with them and became free for the next compound whose label
+    """A slug is a published URL. When records leave the corpus their slugs
+    leave PATHS.tsv with them and became free for the next compound whose label
     slugified the same way — silently repointing a published URL at a different
     structure. The ledger keeps them reserved."""
     import csv as _csv
@@ -283,3 +300,59 @@ def test_ambiguous_mechanism_determinants_resolve_deterministically(records):
     if seen:
         # One answer per determinant, corpus-wide — not one per record.
         assert len(set(seen.values())) <= 2
+
+
+def test_a_seeded_mode_of_action_is_policed_and_a_curators_is_not(repo_root):
+    """`mode_of_action` is both seeded and curator-overridable, so verify-corpus
+    keys the comparison on what the ON-DISK value claims: a value carrying the
+    seeder's note marker must be what the seeder produces, a curator's own value
+    carries none and is theirs to set.
+
+    Without this, a hand-edit falsifying a seeded mechanism passed every gate —
+    the field was in neither SEEDED_FIELDS nor the CARD views.
+    """
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from seed_from_sources import MOA_NOTE_MARKER, seeded_mode_of_action
+
+    seeded = {"mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+              "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:48001 (...)"}
+    assert seeded_mode_of_action(seeded) == "PROTEIN_SYNTHESIS_INHIBITION"
+
+    curated = {"mode_of_action": "MEMBRANE_DISRUPTION",
+               "mode_of_action_notes": "curator: acts on the envelope (PMID:1)"}
+    assert seeded_mode_of_action(curated) is None
+
+    assert seeded_mode_of_action({}) is None
+
+
+def test_target_scope_accompanies_every_seeded_mechanism(records):
+    """A SEEDED mechanism with no scope is the conflation this field removes:
+    `PROTEIN_SYNTHESIS_INHIBITION` alone cannot tell linezolid's bacterial 50S
+    from omacetaxine's host 80S. A scope with no mechanism describes nothing,
+    whoever set it.
+
+    Scoped to seeder-owned mechanisms deliberately. Once a curator claims
+    `mode_of_action`, the seeder cannot derive a scope for their value and must
+    not guess, so a curator's mechanism may legitimately carry none — it is
+    curation work, and `just worklist --queue moa-scope` is where it is owed.
+    Requiring one here made the merge emit a state this gate rejected, turning
+    `just qc` red on a curator who had done nothing wrong.
+    """
+    from seed_from_sources import curator_owns_mode_of_action
+
+    VALID = {"MICROBIAL_TARGET", "HOST_SHARED_TARGET"}
+    missing, orphaned, bad = [], [], []
+    for path, record in records:
+        moa = record.get("mode_of_action")
+        scope = record.get("mode_of_action_target_scope")
+        if moa and not scope and not curator_owns_mode_of_action(record):
+            missing.append(path.name)
+        if scope and not moa:
+            orphaned.append(path.name)
+        if scope and scope not in VALID:
+            bad.append(f"{path.name}: {scope}")
+    assert missing == [], f"seeded mechanism with no target scope: {missing[:10]}"
+    assert orphaned == [], f"target scope with no mechanism: {orphaned[:10]}"
+    assert bad == [], bad

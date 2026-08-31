@@ -15,6 +15,8 @@
   <nav>
     <a href="index.html">Overview</a>
     <a href="browse.html">Browse</a>
+    <a href="map.html">Map</a>
+    <a href="chemical-map.html">Chemical map</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
   </nav>
 </header>
@@ -24,22 +26,22 @@
   <caption>Antimicrobial classes</caption>
   <thead><tr><th scope="col">Class</th><th scope="col" class="num">Records</th><th scope="col" class="num">Grounded</th><th scope="col">What it holds</th></tr></thead>
   <tr>
-    <td><a href="class/antibacterial.html">Antibacterial</a></td>
-    <td class="num">1037</td>
-    <td class="num">798</td>
+    <td><a href="class/antibacterial.html">Antibacterial</a> <span class="meta">incl. subclasses</span></td>
+    <td class="num">1115</td>
+    <td class="num">876</td>
     <td class="meta">Active against bacteria — antibacterial drugs and agents.</td>
+  </tr>
+  <tr class="subclass">
+    <td><span class="tree" aria-hidden="true">&#8627;</span> <a href="class/antimycobacterial.html">Antimycobacterial</a> <span class="meta">subclass of antibacterial, counted in it</span></td>
+    <td class="num">78</td>
+    <td class="num">78</td>
+    <td class="meta">Antitubercular, antimycobacterial and leprostatic agents.</td>
   </tr>
   <tr>
     <td><a href="class/antifungal.html">Antifungal</a></td>
     <td class="num">588</td>
     <td class="num">577</td>
     <td class="meta">Antifungal agents, drugs and agrochemical fungicides.</td>
-  </tr>
-  <tr>
-    <td><a href="class/antimycobacterial.html">Antimycobacterial</a></td>
-    <td class="num">78</td>
-    <td class="num">78</td>
-    <td class="meta">Antitubercular, antimycobacterial and leprostatic agents.</td>
   </tr>
   <tr>
     <td><a href="class/antiprotozoal.html">Antiprotozoal</a></td>
@@ -66,10 +68,14 @@
     <td class="meta">Asserted as an antimicrobial agent without a named microbial target group, or in scope by curation but fitting no other class.</td>
   </tr>
 </table>
+<p class="meta">A row marked <em>subclass of X</em> is already counted in X's own row —
+mycobacteria are bacteria, and filing is exclusive, so a compound filed antimycobacterial
+is not filed antibacterial as well. Each record is counted once in the 2923
+total, so this column sums to more than it.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-29. CC0-1.0.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. CC0-1.0.
   </p>
   <p>
     <strong>Most of this corpus is machine-generated and unreviewed.</strong>

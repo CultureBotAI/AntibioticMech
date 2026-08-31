@@ -40,6 +40,12 @@ xrefs:
 - wikipedia.en:Carbonyl_cyanide_m-chlorophenyl_hydrazone
 activity_roles:
 - CHEBI:33282
+mode_of_action: MEMBRANE_DISRUPTION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:24869 (ionophore). ChEBI asserts
+  the role on the compound. The target it names is one the host has too, so the mechanism
+  is true but is not evidence of selectivity — see mode_of_action_target_scope. Not
+  a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: N#CC(C#N)=NNc1cccc(Cl)c1
   standard_inchi: InChI=1S/C9H5ClN4/c10-7-2-1-3-8(4-7)13-14-9(5-11)6-12/h1-4,13H
@@ -56,9 +62,17 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-113ef9695e
   role_terms:
   - CHEBI:33282
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:16Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:31Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

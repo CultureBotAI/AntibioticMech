@@ -31,6 +31,12 @@ xrefs:
 activity_roles:
 - CHEBI:35660
 - CHEBI:36044
+mode_of_action: VIRAL_PROTEASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:35660 (HIV protease inhibitor).
+  ChEBI asserts the role on the compound. The role names a target specific to the
+  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CC(C)CN(C[C@@H](O)[C@H](Cc1ccccc1)NC(=O)O[C@H]1CCOC1)S(=O)(=O)c1ccc(N)cc1
   standard_inchi: InChI=1S/C25H35N3O6S/c1-18(2)15-28(35(31,32)22-10-8-20(26)9-11-22)16-24(29)23(14-19-6-4-3-5-7-19)27-25(30)34-21-12-13-33-17-21/h3-11,18,21,23-24,29H,12-17,26H2,1-2H3,(H,27,30)/t21-,23-,24+/m0/s1
@@ -48,9 +54,90 @@ source_concepts:
   role_terms:
   - CHEBI:35660
   - CHEBI:36044
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '021007'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: GLAXOSMITHKLINE
+  drug_name: AGENERASE
+  ingredient_name: AMPRENAVIR
+  substance_id: UNII:5S0W860XNR
+  approval_date: '1999-04-15'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '41'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021007
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '021007'
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: GLAXOSMITHKLINE
+  drug_name: AGENERASE
+  ingredient_name: AMPRENAVIR
+  substance_id: UNII:5S0W860XNR
+  approval_date: '1999-04-15'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '41'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021007
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 021039
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: GLAXOSMITHKLINE
+  drug_name: AGENERASE
+  ingredient_name: AMPRENAVIR
+  substance_id: UNII:5S0W860XNR
+  approval_date: '1999-04-15'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '41'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021039
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:17Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:27Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

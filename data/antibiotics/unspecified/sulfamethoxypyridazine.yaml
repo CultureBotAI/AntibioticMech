@@ -78,6 +78,12 @@ xrefs:
 - reaxys:277076
 activity_roles:
 - CHEBI:33281
+mode_of_action: FOLATE_PATHWAY_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:50502 (EC 2.5.1.15 (dihydropteroate
+  synthase) inhibitor). ChEBI asserts the role on the compound. The role names a target
+  specific to the microbe or virus — see mode_of_action_target_scope. Not a curator's
+  mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: COc1ccc(NS(=O)(=O)c2ccc(N)cc2)nn1
   standard_inchi: InChI=1S/C11H12N4O3S/c1-18-11-7-6-10(13-14-11)15-19(16,17)9-4-2-8(12)3-5-9/h2-7H,12H2,1H3,(H,13,15)
@@ -94,13 +100,17 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-14c04df882
   role_terms:
   - CHEBI:33281
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
 - timestamp: '2026-08-30T01:13:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:23Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

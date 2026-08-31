@@ -63,6 +63,12 @@ xrefs:
 activity_roles:
 - CHEBI:36044
 - CHEBI:53756
+mode_of_action: VIRAL_POLYMERASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:53756 (HIV-1 reverse transcriptase
+  inhibitor). ChEBI asserts the role on the compound. The role names a target specific
+  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: Nc1nc(=O)n([C@@H]2CS[C@H](CO)O2)cc1F
   standard_inchi: InChI=1S/C8H10FN3O3S/c9-4-1-12(8(14)11-7(4)10)5-3-16-6(2-13)15-5/h1,5-6,13H,2-3H2,(H2,10,11,14)/t5-,6+/m0/s1
@@ -80,9 +86,132 @@ source_concepts:
   role_terms:
   - CHEBI:36044
   - CHEBI:53756
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '021500'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: GILEAD
+  drug_name: EMTRIVA
+  ingredient_name: EMTRICITABINE
+  substance_id: UNII:G70B4ETF4S
+  approval_date: '2003-07-02'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '76'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021500
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 021896
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: GILEAD
+  drug_name: EMTRIVA
+  ingredient_name: EMTRICITABINE
+  substance_id: UNII:G70B4ETF4S
+  approval_date: '2005-09-28'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '76'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021896
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 021896
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: GILEAD
+  drug_name: EMTRIVA
+  ingredient_name: EMTRICITABINE
+  substance_id: UNII:G70B4ETF4S
+  approval_date: '2005-09-28'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '76'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021896
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 079188
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: AUROBINDO PHARMA LTD
+  drug_name: EMTRICITABINE
+  ingredient_name: EMTRICITABINE
+  substance_id: UNII:G70B4ETF4S
+  approval_date: '2023-03-15'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '76'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=079188
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 091168
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: CIPLA
+  drug_name: EMTRICITABINE
+  ingredient_name: EMTRICITABINE
+  substance_id: UNII:G70B4ETF4S
+  approval_date: '2018-07-02'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '76'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=091168
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:15Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:23Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

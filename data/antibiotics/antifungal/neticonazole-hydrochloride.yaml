@@ -38,6 +38,13 @@ activity_roles:
 - CHEBI:35718
 - CHEBI:77884
 - CHEBI:86327
+mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:75282 (ergosterol biosynthesis
+  inhibitor), CHEBI:77884 (EC 1.14.13.70 (sterol 14α-demethylase) inhibitor). ChEBI
+  asserts the role on the compound. The target it names is one the host has too, so
+  the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CCCCCOc1ccccc1/C(=C\SC)n1ccnc1.Cl
   standard_inchi: InChI=1S/C17H22N2OS.ClH/c1-3-4-7-12-20-17-9-6-5-8-15(17)16(13-21-2)19-11-10-18-14-19;/h5-6,8-11,13-14H,3-4,7,12H2,1-2H3;1H/b16-13+;
@@ -56,13 +63,21 @@ source_concepts:
   - CHEBI:35718
   - CHEBI:77884
   - CHEBI:86327
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
 - timestamp: '2026-08-30T01:13:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T04:10:21Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

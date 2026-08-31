@@ -24,6 +24,12 @@ xrefs:
 activity_roles:
 - CHEBI:35660
 - CHEBI:36044
+mode_of_action: VIRAL_PROTEASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:35660 (HIV protease inhibitor).
+  ChEBI asserts the role on the compound. The role names a target specific to the
+  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CCC[C@@]1(CCc2ccccc2)CC(O)=C([C@H](CC)c2cccc(NS(=O)(=O)c3ccc(C(F)(F)F)cn3)c2)C(=O)O1
   standard_inchi: InChI=1S/C31H33F3N2O5S/c1-3-16-30(17-15-21-9-6-5-7-10-21)19-26(37)28(29(38)41-30)25(4-2)22-11-8-12-24(18-22)36-42(39,40)27-14-13-23(20-35-27)31(32,33)34/h5-14,18,20,25,36-37H,3-4,15-17,19H2,1-2H3/t25-,30-/m1/s1
@@ -41,9 +47,90 @@ source_concepts:
   role_terms:
   - CHEBI:35660
   - CHEBI:36044
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 021814
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: BOEHRINGER INGELHEIM
+  drug_name: APTIVUS
+  ingredient_name: TIPRANAVIR
+  substance_id: UNII:ZZT404XD09
+  approval_date: '2005-06-22'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '41'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021814
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 021822
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: BOEHRINGER INGELHEIM
+  drug_name: APTIVUS
+  ingredient_name: TIPRANAVIR
+  substance_id: UNII:ZZT404XD09
+  approval_date: '2008-06-23'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '41'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021822
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 022292
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: BOEHRINGER INGELHEIM
+  drug_name: APTIVUS
+  ingredient_name: TIPRANAVIR
+  substance_id: UNII:ZZT404XD09
+  approval_date: '2008-06-23'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '41'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022292
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:21Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:36Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:58Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

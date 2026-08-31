@@ -45,6 +45,12 @@ xrefs:
 - wikipedia.en:Tedizolid
 activity_roles:
 - CHEBI:33281
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: Cn1nnc(-c2ccc(-c3ccc(N4C[C@H](COP(=O)(O)O)OC4=O)cc3F)cn2)n1
   standard_inchi: InChI=1S/C17H16FN6O6P/c1-23-21-16(20-22-23)15-5-2-10(7-19-15)13-4-3-11(6-14(13)18)24-8-12(30-17(24)25)9-29-31(26,27)28/h2-7,12H,8-9H2,1H3,(H2,26,27,28)/t12-/m1/s1
@@ -61,13 +67,69 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-48321daa9b
   role_terms:
   - CHEBI:33281
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '205435'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: CUBIST PHARMS LLC
+  drug_name: SIVEXTRO
+  ingredient_name: TEDIZOLID PHOSPHATE
+  substance_id: UNII:O7DRJ6R4DW
+  approval_date: '2014-06-20'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '27'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=205435
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '205436'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: CUBIST PHARMS LLC
+  drug_name: SIVEXTRO
+  ingredient_name: TEDIZOLID PHOSPHATE
+  substance_id: UNII:O7DRJ6R4DW
+  approval_date: '2014-06-20'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '27'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=205436
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
 - timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:17:04Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:38Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

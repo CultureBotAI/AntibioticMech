@@ -48,6 +48,12 @@ activity_roles:
 - CHEBI:86327
 structural_class: allylamine antifungal
 structural_class_id: ARO:3007498
+mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:59285 (EC 1.14.13.132 (squalene
+  monooxygenase) inhibitor). ChEBI asserts the role on the compound. The target it
+  names is one the host has too, so the mechanism is true but is not evidence of selectivity
+  — see mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CN(C/C=C/C#CC(C)(C)C)Cc1cccc2ccccc12
   standard_inchi: InChI=1S/C21H25N/c1-21(2,3)15-8-5-9-16-22(4)17-19-13-10-12-18-11-6-7-14-20(18)19/h5-7,9-14H,16-17H2,1-4H3/b9-5+
@@ -64,14 +70,14 @@ source_concepts:
   minted_identifier: antibioticmech:aro-7b45a31503
   role_terms:
   - CHEBI:86327
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:9448
   source_label: terbinafine
   minted_identifier: antibioticmech:chebi-b78967d26d
   role_terms:
   - CHEBI:86327
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3007554
@@ -131,12 +137,72 @@ resistance_mechanisms:
   - reference: ARO:3009454
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007507 (terbinafine);
       database assertion, not a primary citation.
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020846
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: KARO HLTHCARE
+  drug_name: LAMISIL
+  ingredient_name: TERBINAFINE
+  substance_id: UNII:G7RIW8S0XP
+  approval_date: '1998-04-29'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '36'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020846
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 021958
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: KARO HLTHCARE
+  drug_name: LAMISIL AT
+  ingredient_name: TERBINAFINE
+  substance_id: UNII:G7RIW8S0XP
+  approval_date: '2006-07-24'
+  submission_status: AP
+  marketing_status: Over-the-counter
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '36'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021958
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T01:13:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T20:06:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:17:05Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:40Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

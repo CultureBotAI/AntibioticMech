@@ -33,6 +33,12 @@ xrefs:
 - reaxys:10657796
 activity_roles:
 - CHEBI:35718
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: OB1OCc2cc(F)ccc21
   standard_inchi: InChI=1S/C7H6BFO2/c9-6-1-2-7-5(3-6)4-11-8(7)10/h1-3,10H,4H2
@@ -49,9 +55,237 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-518b811db5
   role_terms:
   - CHEBI:35718
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '204427'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: ANACOR PHARMS INC
+  drug_name: KERYDIN
+  ingredient_name: TAVABOROLE
+  substance_id: UNII:K124A4EUQ3
+  approval_date: '2014-07-07'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '42'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=204427
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '211297'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: ENCUBE
+  drug_name: TAVABOROLE
+  ingredient_name: TAVABOROLE
+  substance_id: UNII:K124A4EUQ3
+  approval_date: '2020-10-13'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '42'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211297
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '211848'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: PADAGIS US
+  drug_name: TAVABOROLE
+  ingredient_name: TAVABOROLE
+  substance_id: UNII:K124A4EUQ3
+  approval_date: '2020-10-13'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '42'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211848
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '211963'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: CHARTWELL RX
+  drug_name: TAVABOROLE
+  ingredient_name: TAVABOROLE
+  substance_id: UNII:K124A4EUQ3
+  approval_date: '2021-02-03'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '42'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211963
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '212168'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: LUPIN
+  drug_name: TAVABOROLE
+  ingredient_name: TAVABOROLE
+  substance_id: UNII:K124A4EUQ3
+  approval_date: '2021-02-08'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '42'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212168
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '212188'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: ALEMBIC
+  drug_name: TAVABOROLE
+  ingredient_name: TAVABOROLE
+  substance_id: UNII:K124A4EUQ3
+  approval_date: '2020-10-21'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '42'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212188
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '212215'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: SUN PHARMA CANADA
+  drug_name: TAVABOROLE
+  ingredient_name: TAVABOROLE
+  substance_id: UNII:K124A4EUQ3
+  approval_date: '2021-05-07'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '42'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212215
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '212224'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: CIPLA
+  drug_name: TAVABOROLE
+  ingredient_name: TAVABOROLE
+  substance_id: UNII:K124A4EUQ3
+  approval_date: '2021-02-09'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '42'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212224
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '212256'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: AMNEAL
+  drug_name: TAVABOROLE
+  ingredient_name: TAVABOROLE
+  substance_id: UNII:K124A4EUQ3
+  approval_date: '2020-11-25'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '42'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212256
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '212294'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: ZYDUS LIFESCIENCES
+  drug_name: TAVABOROLE
+  ingredient_name: TAVABOROLE
+  substance_id: UNII:K124A4EUQ3
+  approval_date: '2023-04-10'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '42'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212294
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:27Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:17:03Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:37Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

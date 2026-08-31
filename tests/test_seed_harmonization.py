@@ -118,12 +118,82 @@ def test_an_exclude_decision_removes_a_concept_entirely():
     assert records == {} and skipped == []
 
 
+def _chebi_row(inchikey, roles=""):
+    return {"standard_inchi_key": inchikey, "role_ids": roles, "smiles": "",
+            "standard_inchi": "", "molecular_formula": "", "charge": "",
+            "average_mass": "", "monoisotopic_mass": ""}
+
+
 def test_a_curator_identifier_override_wins():
-    concept = _concept("ARO", "ARO:0000018", "viomycin", "GXFAIFRPOKBQRV-GHXCTMGLSA-N")
+    key = "GXFAIFRPOKBQRV-GHXCTMGLSA-N"
+    concept = _concept("ARO", "ARO:0000018", "viomycin", key)
     decisions = {concept.minted: {"decision": "GROUND", "identifier": "CHEBI:9727"}}
-    records, _ = merge([concept], {}, CONF, decisions, "2026-08-29")
+    records, _ = merge([concept], {"CHEBI:9727": _chebi_row(key)}, CONF, decisions, "2026-08-29")
     assert list(records) == ["CHEBI:9727"]
     assert records["CHEBI:9727"]["grounding_status"] == "EXACT"
+
+
+def test_a_ground_decision_to_an_unknown_chebi_id_is_refused():
+    """A typo in a decision row would otherwise mint a record keyed to a
+    compound that does not exist, with grounding_status EXACT."""
+    import pytest
+
+    concept = _concept("ARO", "ARO:0000018", "viomycin", "GXFAIFRPOKBQRV-GHXCTMGLSA-N")
+    decisions = {concept.minted: {"decision": "GROUND", "identifier": "CHEBI:4235700"}}
+    with pytest.raises(SystemExit, match="not a ChEBI entry"):
+        merge([concept], {"CHEBI:42355": _chebi_row("AAAAAAAAAAAAAA-BBBBBBBBBB-C")},
+              CONF, decisions, "2026-08-29")
+
+
+def test_a_ground_decision_to_a_structureless_class_term_is_refused():
+    """CHEBI:48923 "erythromycin" is a class over erythromycins A-E with no
+    structure of its own. A record is one chemical structure and a drug class is
+    never a record, so grounding to one must fail loudly."""
+    import pytest
+
+    concept = _concept("ARO", "ARO:0000006", "erythromycin", "ULGZDMOVFRHVEP-RWJQBGPGSA-N")
+    decisions = {concept.minted: {"decision": "GROUND", "identifier": "CHEBI:48923"}}
+    with pytest.raises(SystemExit, match="no structure of its own"):
+        merge([concept], {"CHEBI:48923": _chebi_row("")}, CONF, decisions, "2026-08-29")
+
+
+def test_a_ground_decision_that_would_split_a_structure_is_refused():
+    """The InChIKey fold only folds MINTED into EXACT, so an override creating a
+    second grounded record for a structure another record already carries would
+    pass every gate — including the collision flagger, which looks only at
+    all-MINTED groups."""
+    import pytest
+
+    key = "ULGZDMOVFRHVEP-RWJQBGPGSA-N"
+    existing = _concept("CHEBI", "CHEBI:42355", "erythromycin A", key)
+    diverted = _concept("ARO", "ARO:0000006", "erythromycin", key)
+    rows = {"CHEBI:42355": _chebi_row(key), "CHEBI:99999": _chebi_row(key)}
+    decisions = {diverted.minted: {"decision": "GROUND", "identifier": "CHEBI:99999"}}
+    with pytest.raises(SystemExit, match="split one structure"):
+        merge([existing, diverted], rows, CONF, decisions, "2026-08-29")
+
+
+def test_a_curator_literature_upgrade_survives_a_reseed():
+    """docs/HARMONIZATION.md tells a curator to replace a CARD item's ARO
+    reference with a primary citation. An ownership rule keyed on the ARO id
+    classified that upgraded item as the seeder's and reverted it."""
+    from seed_from_sources import is_card_sourced, merge_with_existing
+
+    upgraded = {
+        "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION",
+        "aro_id": "ARO:3000375",
+        "label": "ermB",
+        "evidence": [{"reference": "PMID:15980346", "notes": "curator: primary source"}],
+    }
+    # Not the seeder's under either signal that was ever tried: it cites a PMID,
+    # and it carries no CARD note marker.
+    assert not is_card_sourced(upgraded)
+
+    seeded = {"identifier": "CHEBI:42355", "label": "erythromycin A",
+              "antimicrobial_class": "ANTIBACTERIAL", "curation_status": "SEEDED",
+              "grounding_status": "EXACT", "curation_history": []}
+    merged = merge_with_existing(seeded, dict(seeded) | {"resistance_mechanisms": [upgraded]})
+    assert merged["resistance_mechanisms"] == [upgraded]
 
 
 def test_slugs_are_url_safe_and_stable():
@@ -154,6 +224,7 @@ def test_a_reseed_preserves_curated_work():
     curated = dict(seeded) | {
         "curation_status": "REVIEWED",
         "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+        "mode_of_action_notes": "CURATOR: confirmed against PMID:7683018",
         "causal_graphs": [{"graph_id": "g1", "nodes": [], "edges": []}],
         "evidence": [{"reference": "PMID:7683018"}],
         "curation_history": seeded["curation_history"] + [
@@ -221,7 +292,6 @@ def test_a_curator_item_citing_an_aro_term_is_not_mistaken_for_seeder_output():
                       "notes": "curator: acrB effluxes this compound (PMID pending)"}],
     }
     assert not is_card_sourced(curator_item)
-    assert not is_card_sourced(curator_item, seeded_ids=set())
 
     seeded = {"identifier": "CHEBI:42355", "label": "erythromycin A",
               "antimicrobial_class": "ANTIBACTERIAL", "curation_status": "SEEDED",
@@ -252,6 +322,7 @@ def test_a_record_that_changes_class_keeps_its_curation(tmp_path, monkeypatch):
                              "source_label": "posaconazole",
                              "minted_identifier": "antibioticmech:chebi-1111111111"}],
         "mode_of_action": "ERGOSTEROL_PATHWAY_INHIBITION",
+        "mode_of_action_notes": "CURATOR: azole, confirmed against PMID:1",
         "causal_graphs": [{"graph_id": "g1", "nodes": [], "edges": []}],
         "curation_history": [{"timestamp": "2026-08-29T00:00:00Z", "curator": "jane",
                               "action": "REVIEWED"}],
@@ -299,3 +370,870 @@ def test_a_ground_decision_to_a_different_structure_is_refused():
     with pytest.raises(SystemExit) as excinfo:
         sfs_merge([concept], chebi_rows, CONF, decisions, "2026-08-29")
     assert "structures differ" in str(excinfo.value)
+
+
+def _ledger_sandbox(tmp_path, monkeypatch, paths_rows, retired_rows=()):
+    """A corpus directory with a lockfile and ledger, for the slug tests."""
+    import seed_from_sources as sfs
+
+    corpus = tmp_path / "antibiotics"
+    corpus.mkdir(parents=True)
+    monkeypatch.setattr(sfs, "CORPUS_DIR", corpus)
+    monkeypatch.setattr(sfs, "PATHS_FILE", corpus / "PATHS.tsv")
+    monkeypatch.setattr(sfs, "RETIRED_FILE", corpus / "RETIRED.tsv")
+    (corpus / "PATHS.tsv").write_text(
+        "identifier\tantimicrobial_class\tslug\n"
+        + "".join(f"{i}\t{c}\t{s}\n" for i, c, s in paths_rows), encoding="utf-8")
+    if retired_rows:
+        (corpus / "RETIRED.tsv").write_text(
+            "identifier\tslug\tretired_on\n"
+            + "".join(f"{i}\t{s}\t2026-08-29\n" for i, s in retired_rows), encoding="utf-8")
+    return sfs, corpus
+
+
+def test_a_canary_on_a_returning_compound_does_not_leave_it_in_both_ledgers(tmp_path, monkeypatch):
+    """`just seed-canary` is mandatory before every bulk write. Skipping the
+    retired-ledger reconciliation on a partial write left a re-admitted
+    identifier in PATHS.tsv and RETIRED.tsv at once, failing the corpus
+    integrity test — the same class of inconsistency `only=` was added to fix.
+    19 antivirals genuinely returned by this path."""
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch,
+                             [("CHEBI:1", "ANTIBACTERIAL", "alpha")],
+                             [("CHEBI:2", "beta")])
+    records = {"CHEBI:1": {"antimicrobial_class": "ANTIBACTERIAL"},
+               "CHEBI:2": {"antimicrobial_class": "ANTIFUNGAL"}}
+    sfs.write_lockfile(records, {"CHEBI:1": "alpha", "CHEBI:2": "beta"}, only={"CHEBI:2"})
+    assert set(sfs.read_retired()) & set(sfs.read_lockfile()) == set()
+    assert "CHEBI:2" in sfs.read_lockfile()
+
+
+def test_a_partial_run_never_retires_an_identifier_it_did_not_build(tmp_path, monkeypatch):
+    """The other half: a canary knows nothing about the records it skipped, so
+    it must not conclude they are gone."""
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch,
+                             [("CHEBI:1", "ANTIBACTERIAL", "alpha"),
+                              ("CHEBI:9", "ANTIFUNGAL", "gamma")])
+    sfs.write_lockfile({"CHEBI:1": {"antimicrobial_class": "ANTIBACTERIAL"}},
+                       {"CHEBI:1": "alpha"}, only={"CHEBI:1"})
+    assert sfs.read_retired() == {}
+    assert "CHEBI:9" in sfs.read_lockfile()
+
+
+def test_the_documented_rename_reserves_the_slug_it_frees(tmp_path, monkeypatch):
+    """CLAUDE.md instructs renaming through PATHS.tsv. Retiring only identifiers
+    that DISAPPEAR meant the freed slug never entered the ledger and was
+    available to the next compound that slugified to it — the one slug-changing
+    operation the docs prescribe was the one the ledger did not cover."""
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch,
+                             [("CHEBI:1", "ANTIBACTERIAL", "erythromycin-a")])
+    sfs.write_lockfile({"CHEBI:1": {"antimicrobial_class": "ANTIBACTERIAL"}},
+                       {"CHEBI:1": "erythromycin"})
+    assert "erythromycin-a" in set(sfs.read_retired().values())
+
+
+def test_two_identifiers_never_receive_the_same_slug(tmp_path, monkeypatch):
+    """A reclaim from the ledger did not check whether the slug had been taken
+    since. Two records in one class directory would then overwrite each other on
+    write, with the integrity test only noticing afterwards."""
+    import pytest
+
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch,
+                             [("CHEBI:9", "ANTIBACTERIAL", "beta")],
+                             [("CHEBI:2", "beta")])
+    records = {"CHEBI:9": {"antimicrobial_class": "ANTIBACTERIAL", "label": "nine"},
+               "CHEBI:2": {"antimicrobial_class": "ANTIFUNGAL", "label": "two"}}
+    assigned = sfs.assign_slugs(records, sfs.read_lockfile())
+    assert assigned["CHEBI:9"] == "beta"
+    assert assigned["CHEBI:2"] != "beta", "a taken slug must not be reclaimed"
+
+    # And a lockfile that already contains a duplicate is refused outright.
+    sfs2, _ = _ledger_sandbox(tmp_path / "second", monkeypatch,
+                              [("CHEBI:9", "ANTIBACTERIAL", "beta"),
+                               ("CHEBI:8", "ANTIFUNGAL", "beta")])
+    with pytest.raises(SystemExit, match="slug collision"):
+        sfs2.assign_slugs(records | {"CHEBI:8": {"antimicrobial_class": "ANTIFUNGAL",
+                                                 "label": "eight"}},
+                          sfs2.read_lockfile())
+
+
+def test_the_ledger_holds_through_repeated_renames_and_a_return(tmp_path, monkeypatch):
+    """The composite-key scheme's whole contract, in sequence. Each step was
+    checked by hand once; this keeps it checked.
+
+    A renamed identifier's old slug is reserved under `identifier#slug` so it is
+    never reissued, a second rename reserves the second slug too, a departure
+    reserves the current slug under the plain key, a return reclaims that slug
+    and clears only the plain key — and a different compound whose label
+    slugifies to a retired string gets a suffixed slug instead of inheriting a
+    published URL.
+    """
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch, [("A:1", "ANTIBACTERIAL", "alpha")])
+    record = {"A:1": {"antimicrobial_class": "ANTIBACTERIAL"}}
+
+    sfs.write_lockfile(record, {"A:1": "beta"})
+    assert sfs.read_retired() == {"A:1#alpha": "alpha"}
+
+    sfs.write_lockfile(record, {"A:1": "gamma"})
+    assert set(sfs.read_retired()) == {"A:1#alpha", "A:1#beta"}
+
+    sfs.write_lockfile({}, {})
+    assert sfs.read_retired()["A:1"] == "gamma"
+
+    reclaimed = sfs.assign_slugs(record, sfs.read_lockfile())
+    assert reclaimed == {"A:1": "gamma"}
+    sfs.write_lockfile(record, reclaimed)
+    assert "A:1" not in sfs.read_retired()
+    assert set(sfs.read_retired()) == {"A:1#alpha", "A:1#beta"}
+
+    contender = record | {"B:2": {"antimicrobial_class": "ANTIFUNGAL", "label": "alpha"}}
+    assert sfs.assign_slugs(contender, sfs.read_lockfile())["B:2"] != "alpha"
+
+
+def test_a_canary_does_not_unretire_identifiers_it_did_not_write(tmp_path, monkeypatch):
+    """Both ledger defects were invisible to a green suite because every existing
+    test exercised the INSIDE of the `--only` set. This one and
+    `test_a_rename_and_a_revert_do_not_wedge_the_gate` hold that line only as
+    long as they keep testing the outside of it — keep A:3 unnamed by `only`.
+
+    `records` is the FULL built set even on a partial run — `--only` narrows
+    what is WRITTEN, not what is built. Un-retiring on the strength of the
+    in-memory set dropped every returning identifier from the ledger while
+    writing a PATHS.tsv row for just one, leaving the rest in neither file with
+    their published slugs reserved nowhere."""
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch, [("A:1", "ANTIBACTERIAL", "alpha")],
+                             [("A:2", "beta"), ("A:3", "gamma")])
+    records = {i: {"antimicrobial_class": "ANTIBACTERIAL"} for i in ("A:1", "A:2", "A:3")}
+    sfs.write_lockfile(records, {"A:1": "alpha", "A:2": "beta", "A:3": "gamma"}, only={"A:2"})
+
+    paths, retired = sfs.read_lockfile(), sfs.read_retired()
+    assert "A:2" in paths and "A:2" not in retired      # the one the canary wrote
+    assert "A:3" not in paths, "the canary must not write records it was not asked for"
+    assert "A:3" in retired, "and must not unreserve their slugs either"
+
+
+def test_a_rename_and_a_revert_do_not_wedge_the_gate(tmp_path, monkeypatch):
+    """The composite row is deliberately never revived — except when the
+    identifier takes its old slug back. A rename followed by a revert otherwise
+    leaves the ledger claiming a live URL is retired, which
+    test_retired_slugs_are_never_reissued rejects, with no code path able to
+    clear it: the gate stays red until someone hand-edits RETIRED.tsv."""
+    sfs, _ = _ledger_sandbox(tmp_path, monkeypatch, [("A:1", "ANTIBACTERIAL", "erythromycin-a")])
+    record = {"A:1": {"antimicrobial_class": "ANTIBACTERIAL"}}
+
+    sfs.write_lockfile(record, {"A:1": "erythromycin"})
+    assert sfs.read_retired() == {"A:1#erythromycin-a": "erythromycin-a"}
+
+    sfs.write_lockfile(record, {"A:1": "erythromycin-a"})          # the curator reverts
+    live = set(sfs.read_lockfile().values())
+    assert not [k for k, v in sfs.read_retired().items() if v in live], \
+        "a slug a record currently holds must not also be listed as retired"
+    assert sfs.read_retired() == {"A:1#erythromycin": "erythromycin"}
+
+
+def test_mode_of_action_restates_a_chebi_role_rather_than_inferring_one():
+    """The distinction that makes this safe where the structural-class map was
+    not: ChEBI asserting `protein synthesis inhibitor` as a ROLE is a direct
+    claim about what the compound does. The map only translates that claim into
+    the schema's vocabulary."""
+    from seed_from_sources import mode_of_action_from_roles
+
+    names = {"CHEBI:48001": "protein synthesis inhibitor",
+             "CHEBI:37416": "EC 2.7.7.6 (RNA polymerase) inhibitor"}
+    value, notes, scope = mode_of_action_from_roles(["CHEBI:48001"], CONF, names)
+    assert value == "PROTEIN_SYNTHESIS_INHIBITION"
+    assert "CHEBI:48001" in notes and "protein synthesis inhibitor" in notes
+    # The limit is stated, not papered over — and it is stated SPECIFICALLY.
+    # This caveat used to be one sentence identical on every seeded record,
+    # which carries no signal precisely because it is uniform (#60). It now
+    # names which way this record leans, and the field carries it as data.
+    assert "the host has too" in notes
+    assert "not evidence of selectivity" in notes
+    assert scope == "HOST_SHARED_TARGET"
+
+    assert mode_of_action_from_roles([], CONF, names) is None
+    assert mode_of_action_from_roles(["CHEBI:99999999"], CONF, names) is None
+
+
+def test_several_mechanisms_give_MULTIPLE_with_all_of_them_named():
+    """Rifampicin carries both an RNA-polymerase and a protein-synthesis role in
+    ChEBI. Picking one silently would assert a primary mechanism no source
+    states; MULTIPLE with both named leaves that to a curator."""
+    from seed_from_sources import mode_of_action_from_roles
+
+    names = {"CHEBI:48001": "protein synthesis inhibitor",
+             "CHEBI:37416": "EC 2.7.7.6 (RNA polymerase) inhibitor"}
+    value, notes, _ = mode_of_action_from_roles(["CHEBI:37416", "CHEBI:48001"], CONF, names)
+    assert value == "MULTIPLE"
+    assert "PROTEIN_SYNTHESIS_INHIBITION" in notes
+    assert "NUCLEIC_ACID_SYNTHESIS_INHIBITION" in notes
+
+
+def test_a_curators_mode_of_action_outranks_the_seeded_one():
+    """Seeded values carry a marker and a re-seed may replace them; a curator's
+    value carries none and must survive, the same device the CARD items use."""
+    from seed_from_sources import MOA_NOTE_MARKER, merge_with_existing
+
+    seeded = {"identifier": "CHEBI:1", "label": "x", "antimicrobial_class": "ANTIBACTERIAL",
+              "curation_status": "SEEDED", "grounding_status": "EXACT",
+              "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+              "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:48001 (...)",
+              "curation_history": []}
+
+    # The curator claims the field in the notes — a bare value does not, because
+    # a value with no notes is indistinguishable from a hand-falsified one.
+    curated = dict(seeded) | {
+        "mode_of_action": "MEMBRANE_DISRUPTION",
+        "mode_of_action_notes": "CURATOR: acts on the envelope (PMID:1)"}
+    assert merge_with_existing(seeded, curated)["mode_of_action"] == "MEMBRANE_DISRUPTION"
+
+    # A previously seeded value is the seeder's to correct.
+    restated = merge_with_existing(seeded, dict(seeded))
+    assert restated["mode_of_action"] == "PROTEIN_SYNTHESIS_INHIBITION"
+
+
+def test_a_mechanism_from_another_activity_says_so():
+    """`mode_of_action` and `antimicrobial_class` are orthogonal axes, and some
+    role names carry a target group inside them. A compound filed ANTIFUNGAL
+    whose ChEBI role is `HIV-1 integrase inhibitor` is not a contradiction — it
+    is one compound with two activities — but a record that states the mechanism
+    without stating that would read as a claim about how its antifungal action
+    works."""
+    from seed_from_sources import mode_of_action_from_roles
+
+    names = {"CHEBI:67268": "HIV-1 integrase inhibitor",
+             "CHEBI:48001": "protein synthesis inhibitor"}
+
+    value, notes, _ = mode_of_action_from_roles(["CHEBI:67268"], CONF, names, "ANTIFUNGAL")
+    assert value == "VIRAL_INTEGRASE_INHIBITION"
+    assert "ANTIFUNGAL" in notes
+    # It does NOT assert two activities: the filing may simply be wrong, which
+    # has happened — the priority table has put azole antifungals under
+    # ANTIBACTERIAL. The note puts both readings to a curator.
+    assert "or the filing is wrong" in notes
+
+    # On a record filed under the group the mechanism implies, no such caveat.
+    _, aligned, _scope = mode_of_action_from_roles(["CHEBI:67268"], CONF, names, "ANTIVIRAL")
+    assert "filing is wrong" not in aligned
+
+    # A mechanism that names no target group never triggers it.
+    _, generic, _scope = mode_of_action_from_roles(["CHEBI:48001"], CONF, names, "ANTIFUNGAL")
+    assert "filing is wrong" not in generic
+
+    # An unspecified record gets a different sentence: "two activities" would
+    # assert a second activity no source states.
+    _, unspec, _scope = mode_of_action_from_roles(["CHEBI:67268"], CONF, names,
+                                          "ANTIMICROBIAL_UNSPECIFIED")
+    assert "no target group stated" in unspec
+
+
+def test_a_curator_can_correct_a_seeded_mode_of_action_by_appending():
+    """The seeded note asks a curator to confirm the value, so appending to that
+    note is the obvious way to answer — and inferring ownership from the ABSENCE
+    of the seeder's marker meant the marker survived the append, the correction
+    was reverted and the curator's citation was deleted."""
+    from seed_from_sources import CURATOR_NOTE_MARKER, MOA_NOTE_MARKER, merge_with_existing
+
+    base = {"identifier": "CHEBI:1", "label": "x", "antimicrobial_class": "ANTIBACTERIAL",
+            "curation_status": "SEEDED", "grounding_status": "EXACT", "curation_history": []}
+    seeded = dict(base) | {"mode_of_action": "VIRAL_INTEGRASE_INHIBITION",
+                           "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:67268 (...)"}
+    corrected = dict(seeded) | {
+        "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+        "mode_of_action_notes": (f"{MOA_NOTE_MARKER} CHEBI:67268 (...). "
+                                 f"{CURATOR_NOTE_MARKER} corrected, see PMID:123"),
+    }
+    merged = merge_with_existing(dict(seeded), corrected)
+    assert merged["mode_of_action"] == "PROTEIN_SYNTHESIS_INHIBITION"
+    assert "PMID:123" in merged["mode_of_action_notes"]
+
+
+def test_a_curator_can_veto_a_mode_of_action_entirely():
+    """The only remedy for a wrong derived value, and it was impossible: a
+    deleted field failed the `"mode_of_action" in existing` test, so the seeder
+    wrote the wrong value straight back on the next run."""
+    from seed_from_sources import CURATOR_NOTE_MARKER, MOA_NOTE_MARKER, merge_with_existing
+
+    base = {"identifier": "CHEBI:1", "label": "cefdinir", "antimicrobial_class": "ANTIBACTERIAL",
+            "curation_status": "SEEDED", "grounding_status": "EXACT", "curation_history": []}
+    seeded = dict(base) | {"mode_of_action": "FOLATE_PATHWAY_INHIBITION",
+                           "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:50683 (...)"}
+    vetoed = dict(base) | {"mode_of_action_notes":
+                           f"{CURATOR_NOTE_MARKER} a cephalosporin; the derived value was wrong"}
+
+    merged = merge_with_existing(dict(seeded), vetoed)
+    assert "mode_of_action" not in merged
+    assert "derived value was wrong" in merged["mode_of_action_notes"]
+
+
+def test_a_mechanism_borrowed_from_another_compound_is_not_used():
+    """CARD points cefdinir at CHEBI:131724, which is iclaprim, a dihydrofolate
+    reductase inhibitor. Reading mechanism roles off a cross-referenced row gave
+    a cephalosporin FOLATE_PATHWAY_INHIBITION while its own CARD target, on the
+    same record, was a penicillin-binding protein."""
+    import csv as _csv
+    import pathlib
+
+    raw = pathlib.Path(__file__).resolve().parents[1] / "data" / "raw" / "chebi_antimicrobials.tsv"
+    with raw.open(newline="", encoding="utf-8") as fh:
+        rows = {r["chebi_id"]: r for r in _csv.DictReader(fh, delimiter="\t")}
+
+    # ChEBI's own cefdinir row asserts no mechanism role...
+    if "CHEBI:3485" in rows:
+        assert rows["CHEBI:3485"]["mechanism_role_ids"] == ""
+    # ...so the record must not carry one.
+    record = pathlib.Path(__file__).resolve().parents[1] / "data" / "antibiotics" / \
+        "antibacterial" / "cefdinir.yaml"
+    if record.exists():
+        assert "mode_of_action:" not in record.read_text(encoding="utf-8")
+
+
+def test_the_curator_marker_must_begin_a_sentence_not_merely_appear():
+    """A bare substring test made "ask a CURATOR: about this later" — the kind of
+    thing that lands in a free-text note — a permanent, silent veto that locked
+    the seeder out of the field for good. The marker has to be a claim, not a
+    mention."""
+    from seed_from_sources import CURATOR_NOTE_MARKER, MOA_NOTE_MARKER, merge_with_existing
+
+    base = {"identifier": "CHEBI:1", "label": "x", "antimicrobial_class": "ANTIBACTERIAL",
+            "curation_status": "SEEDED", "grounding_status": "EXACT", "curation_history": []}
+    seeded = dict(base) | {"mode_of_action": "VIRAL_INTEGRASE_INHIBITION",
+                           "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:67268 (...)"}
+
+    # A mention IS the point of this test, so the token must be present and must
+    # still not claim the field. An earlier edit replaced this input with one
+    # containing no token at all, which quietly stopped exercising the boundary:
+    # the test then passed against the naive substring predicate it exists to
+    # rule out.
+    mention = dict(base) | {
+        "mode_of_action_notes": f"{MOA_NOTE_MARKER} X. Ask a CURATOR: about this later"}
+    assert merge_with_existing(dict(seeded), mention)["mode_of_action"] == \
+        "VIRAL_INTEGRASE_INHIBITION"
+
+    for claim in (f"{CURATOR_NOTE_MARKER} wrong, leave blank",
+                  f"{MOA_NOTE_MARKER} X. {CURATOR_NOTE_MARKER} wrong, leave blank",
+                  f"{MOA_NOTE_MARKER} X\n{CURATOR_NOTE_MARKER} wrong"):
+        merged = merge_with_existing(dict(seeded), dict(base) | {"mode_of_action_notes": claim})
+        assert "mode_of_action" not in merged, claim
+
+
+def test_a_mitochondrial_mechanism_applies_to_fungi_and_not_to_bacteria():
+    """A mitochondrion is a eukaryotic organelle, so the same ChEBI role is a
+    correct mechanism for a fungus and an incoherent one for a bacterium.
+
+    Mapping it unconditionally gave CORM 3, myxothiazole and sodium azide an
+    energy-metabolism mechanism on ANTIBACTERIAL records. Removing it outright
+    was the opposite error and stripped 23 antifungals of a mechanism that is
+    exactly right — the strobilurin and SDHI fungicides work by inhibiting
+    FUNGAL mitochondrial respiration.
+    """
+    from seed_from_sources import mode_of_action_from_roles
+
+    names = {"CHEBI:38499": "mitochondrial cytochrome-bc1 complex inhibitor"}
+
+    fungal = mode_of_action_from_roles(["CHEBI:38499"], CONF, names, "ANTIFUNGAL")
+    assert fungal is not None and fungal[0] == "ENERGY_METABOLISM_INHIBITION"
+
+    protozoal = mode_of_action_from_roles(["CHEBI:38499"], CONF, names, "ANTIPROTOZOAL")
+    assert protozoal is not None
+
+    assert mode_of_action_from_roles(["CHEBI:38499"], CONF, names, "ANTIBACTERIAL") is None
+    assert mode_of_action_from_roles(["CHEBI:38499"], CONF, names,
+                                     "ANTIMICROBIAL_UNSPECIFIED") is None
+
+
+def test_role_maps_agree_with_the_schema_and_the_committed_inventory():
+    """The gate that would have caught a whole class of defect. conf and the
+    inventory silently desynced twice: roles moved into the eukaryotic map
+    vanished from `mechanism_role_ids` on the next extraction, and two roles
+    ADDED to the map were dead on arrival because nothing re-extracted — so a
+    fix that recovered nothing looked applied."""
+    import csv as _csv
+    import pathlib
+
+    import yaml as _yaml
+
+    root = pathlib.Path(__file__).resolve().parents[1]
+    conf = _yaml.safe_load((root / "conf" / "sources.yaml").read_text(encoding="utf-8"))
+    base = conf["role_to_mode_of_action"]
+    euk = conf.get("role_to_mode_of_action_eukaryotic", {})
+
+    schema = _yaml.safe_load(
+        (root / "src" / "antibioticmech" / "schema" / "antibioticmech.yaml").read_text())
+    allowed = set(schema["enums"]["ModeOfActionEnum"]["permissible_values"])
+    for role, value in {**base, **euk}.items():
+        assert value in allowed, f"{role} -> {value} is not a ModeOfActionEnum value"
+
+    # Disjoint, or `mapping.update(euk)` would let the conditional value win
+    # silently over the unconditional one.
+    assert not (set(base) & set(euk)), sorted(set(base) & set(euk))
+
+    with (root / "data" / "raw" / "chebi_role_names.tsv").open(newline="", encoding="utf-8") as fh:
+        named = {r["role_id"] for r in _csv.DictReader(fh, delimiter="\t")}
+    # Parenthesised deliberately: `-` binds tighter than `|`, so
+    # `set(base) | set(euk) - named` is `base | (euk - named)` and would report
+    # every base role as missing. That is the third precedence bug found in this
+    # repository, after check_source_queue's source detection and the worklist's
+    # skip condition, so it gets a name rather than a clever expression.
+    mapped = set(base) | set(euk)
+    missing = sorted(mapped - named)
+    assert not missing, f"mapped roles absent from the role-name inventory: {missing}"
+
+    # And every mapped role must actually reach the inventory's mechanism column,
+    # or the map entry is inert.
+    with (root / "data" / "raw" / "chebi_antimicrobials.tsv").open(
+            newline="", encoding="utf-8") as fh:
+        seen = set()
+        for row in _csv.DictReader(fh, delimiter="\t"):
+            seen.update((row["mechanism_role_ids"] or "").split("|"))
+    inert = sorted((set(base) | set(euk)) - seen)
+    assert not inert, f"mapped roles that reach no compound — re-extract? {inert}"
+
+
+def test_ownership_is_decided_by_the_notes_not_by_a_bare_value():
+    """Three consumers ask "who owns this field?" — the merge, verify-corpus and
+    the worklist — and they drifted apart. One predicate now, and a value with
+    NO notes is the seeder's: a hand-falsified mechanism with the notes line
+    deleted used to read as the curator's and freeze permanently."""
+    from seed_from_sources import (
+        MOA_NOTE_MARKER,
+        curator_owns_mode_of_action,
+        seeded_mode_of_action,
+    )
+
+    assert not curator_owns_mode_of_action({"mode_of_action": "MEMBRANE_DISRUPTION"})
+    assert seeded_mode_of_action({"mode_of_action": "MEMBRANE_DISRUPTION"}) == "MEMBRANE_DISRUPTION"
+
+    seeded = {"mode_of_action": "X", "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:1 (...)"}
+    assert not curator_owns_mode_of_action(seeded)
+
+    # The documented recipe: keep the provenance, append the claim.
+    appended = {"mode_of_action": "Y",
+                "mode_of_action_notes": f"{MOA_NOTE_MARKER} CHEBI:1 (...). CURATOR: fixed"}
+    assert curator_owns_mode_of_action(appended)
+    assert seeded_mode_of_action(appended) is None
+
+    # A curator's prose with no marker at all still claims the field, so it is
+    # not deleted on the next run.
+    assert curator_owns_mode_of_action({"mode_of_action_notes": "mechanism unclear, PMID:9"})
+
+    # A folded YAML scalar joins lines with a space; the claim must survive that.
+    assert curator_owns_mode_of_action(
+        {"mode_of_action_notes": f"{MOA_NOTE_MARKER} X; CURATOR: leave blank"})
+
+
+def test_a_genuine_reseed_always_appends_an_event():
+    """No de-duplication pass may sit on the merge path.
+
+    `merge_with_existing` appends a RESEEDED event only when a seeded field
+    actually moved, so the `unchanged` guard is already the duplicate
+    suppressor. Any further collapse can therefore only delete events that
+    record real changes — and `changes` is a constant string, so it cannot tell
+    two re-seeds apart. One did exactly that: it removed the events recording 13
+    genuine mechanism assignments, and would have swallowed every subsequent
+    ChEBI release the same way, leaving trails asserting nothing had happened
+    since months before the data moved (#73).
+
+    A second re-seed here carries a description identical to the first. That is
+    the shape that was being collapsed, and it must survive.
+    """
+    from seed_from_sources import SEEDER_CURATOR, merge_with_existing
+
+    def reseed(existing, record):
+        return merge_with_existing(existing, dict(record))
+
+    def concepts(version):
+        return [{"source": "CHEBI", "source_id": "CHEBI:1", "source_label": "widgetmycin",
+                 "minted_identifier": "antibioticmech:chebi-1", "source_version": version}]
+
+    base = {"identifier": "antibioticmech:chebi-1", "label": "widgetmycin",
+            "source_concepts": concepts("2026-03-01"),
+            "curation_history": [
+                {"timestamp": "2026-01-01T00:00:00Z", "curator": SEEDER_CURATOR,
+                 "action": "SEEDED_FROM_SOURCES", "changes": "Seeded from data/raw/ inventories"},
+                {"timestamp": "2026-03-01T00:00:00Z", "curator": SEEDER_CURATOR,
+                 "action": "RESEEDED_FROM_SOURCES",
+                 "changes": "Re-seeded from updated data/raw/ inventories"},
+            ]}
+
+    # A later release moves a seeded field. The trail must say so, even though
+    # the previous entry is a seeder re-seed carrying the same description.
+    moved = dict(base, source_concepts=concepts("2026-09-01"))
+    merged = reseed(base, moved)
+    assert len(merged["curation_history"]) == 3, \
+        "a genuine re-seed was swallowed as a duplicate of the one before it"
+    assert merged["curation_history"][-1]["action"] == "RESEEDED_FROM_SOURCES"
+
+    # And an idempotent re-run still appends nothing: that is the `unchanged`
+    # guard's job, and removing the collapse must not resurrect per-run churn.
+    assert len(reseed(base, dict(base))["curation_history"]) == 2
+
+
+def test_no_history_deduplication_on_the_merge_path():
+    """Guards the absence, not just the behaviour.
+
+    The defect was reintroduced once already by a fix written to clean up a
+    one-time data problem. A function that filters curation_history inside the
+    seeder is the shape to keep out, whatever it is named.
+    """
+    import ast
+    import inspect
+
+    import seed_from_sources
+
+    source = inspect.getsource(seed_from_sources)
+    banned = {"_collapse_duplicate_events", "_dedupe_history", "_collapse_history"}
+    defined = {node.name for node in ast.walk(ast.parse(source))
+               if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))}
+    assert not (banned & defined), (
+        f"{sorted(banned & defined)} is back on the seeder. An event is only "
+        "appended when a seeded field moved, so deleting one deletes a real "
+        "change (#73).")
+
+
+def _conf():
+    from pathlib import Path
+
+    import yaml
+    root = Path(__file__).resolve().parent.parent
+    return yaml.safe_load((root / "conf" / "sources.yaml").read_text(encoding="utf-8"))
+
+
+def test_every_mapped_role_declares_a_target_scope():
+    """A role that maps to a mechanism but has no scope would emit a mechanism
+    with no statement of whose target it is. The seeder raises rather than
+    guessing, and this catches it at the config rather than mid-run."""
+    conf = _conf()
+    mapped = set(conf["role_to_mode_of_action"]) | set(conf["role_to_mode_of_action_eukaryotic"])
+    scoped = set(conf["role_target_scope"])
+    assert mapped - scoped == set(), f"mapped but unscoped: {sorted(mapped - scoped)}"
+    assert scoped - mapped == set(), f"scoped but unmapped (dead entry): {sorted(scoped - mapped)}"
+    assert set(conf["role_target_scope"].values()) <= {"MICROBIAL_TARGET", "HOST_SHARED_TARGET"}
+
+
+def test_a_specific_role_outranks_a_generic_one_for_target_scope():
+    """Ciprofloxacin is the case that decides the rule.
+
+    It carries `topoisomerase IV inhibitor` — a target bacteria have and the
+    host does not — AND the generic `DNA synthesis inhibitor`. Taking the
+    host-shared reading whenever any role is generic put the most selective
+    antibacterial class there is on the wrong side of the filter this field
+    exists to support. A specific role subsumes a generic one.
+    """
+    from seed_from_sources import mode_of_action_from_roles
+
+    conf = _conf()
+    names = {"CHEBI:53559": "topoisomerase IV inhibitor",
+             "CHEBI:59517": "DNA synthesis inhibitor",
+             "CHEBI:48001": "protein synthesis inhibitor"}
+
+    both = mode_of_action_from_roles(["CHEBI:59517", "CHEBI:53559"], conf, names, "ANTIBACTERIAL")
+    assert both[2] == "MICROBIAL_TARGET", both
+
+    # Order must not matter.
+    assert mode_of_action_from_roles(
+        ["CHEBI:53559", "CHEBI:59517"], conf, names, "ANTIBACTERIAL")[2] == "MICROBIAL_TARGET"
+
+    # Only generic roles: nothing names a microbe-specific target, so the
+    # question of selectivity is open and the flag says so.
+    only_generic = mode_of_action_from_roles(["CHEBI:48001"], conf, names, "ANTIVIRAL")
+    assert only_generic[2] == "HOST_SHARED_TARGET", only_generic
+    assert "host has too" in only_generic[1], only_generic[1]
+
+
+def test_an_unscoped_role_raises_rather_than_emitting_a_bare_mechanism():
+    """Adding a role to the mechanism map and forgetting the scope map is the
+    obvious way to reintroduce the conflation this field removes. Silently
+    defaulting would assert the safe-looking value; the seeder refuses."""
+    import pytest
+    from seed_from_sources import mode_of_action_from_roles
+
+    conf = _conf()
+    conf = dict(conf, role_to_mode_of_action=dict(conf["role_to_mode_of_action"],
+                                                  **{"CHEBI:99999999": "MEMBRANE_DISRUPTION"}))
+    with pytest.raises(KeyError, match="role_target_scope"):
+        mode_of_action_from_roles(["CHEBI:99999999"], conf,
+                                  {"CHEBI:99999999": "invented"}, "ANTIBACTERIAL")
+
+
+def test_a_curator_owns_the_whole_mechanism_block_including_its_scope():
+    """`merge_with_existing(record, existing)` — FRESH SEED first, on-disk
+    second. An earlier version of this test had them reversed and passed for the
+    wrong reason.
+
+    The seeder cannot tell a curator's scope from a leftover by looking at it,
+    so it does not guess: the curator's mechanism, notes and scope are copied
+    forward verbatim, a chosen omission included. An earlier attempt DID guess —
+    dropping the scope when the mechanism changed but the scope did not — and
+    was worse three ways: it deleted a deliberate choice whenever the curator
+    picked the value the seeder happened to derive (a two-value enum, so about
+    half the time); it produced a mechanism-with-no-scope that the corpus gate
+    forbade, so the merge emitted what the gate rejected; and it cited a
+    `just worklist` queue that did not exist.
+
+    A veto is the exception: with no mechanism asserted there is nothing for a
+    scope to describe, so it goes regardless of who set it.
+    """
+    from seed_from_sources import merge_with_existing
+
+    fresh = {"identifier": "CHEBI:1", "label": "widgetmycin", "source_concepts": [],
+             "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+             "mode_of_action_notes": "Assigned from ChEBI role CHEBI:48001 (x).",
+             "mode_of_action_target_scope": "HOST_SHARED_TARGET"}
+    note = "CURATOR: reassigned after literature review, PMID:1."
+
+    def reseed(on_disk):
+        return merge_with_existing(dict(fresh), on_disk)
+
+    # Curator set a scope differing from the derived one: theirs, kept.
+    a = reseed(dict(fresh, mode_of_action="VIRAL_INTEGRASE_INHIBITION",
+                    mode_of_action_target_scope="MICROBIAL_TARGET", mode_of_action_notes=note))
+    assert a["mode_of_action_target_scope"] == "MICROBIAL_TARGET"
+
+    # Curator's scope HAPPENS to equal the derived one. Still theirs. This is
+    # the case the previous heuristic destroyed.
+    b = reseed(dict(fresh, mode_of_action="MEMBRANE_DISRUPTION",
+                    mode_of_action_target_scope="HOST_SHARED_TARGET", mode_of_action_notes=note))
+    assert b["mode_of_action"] == "MEMBRANE_DISRUPTION"
+    assert b["mode_of_action_target_scope"] == "HOST_SHARED_TARGET"
+
+    # Curator omitted the scope. The omission is carried forward, not filled in;
+    # `just worklist --queue moa-scope` surfaces it as work owed.
+    c = dict(fresh, mode_of_action="VIRAL_INTEGRASE_INHIBITION", mode_of_action_notes=note)
+    del c["mode_of_action_target_scope"]
+    assert "mode_of_action_target_scope" not in reseed(c)
+
+    # Annotated without changing the mechanism: the derived scope still stands.
+    d = reseed(dict(fresh, mode_of_action_notes=(
+        "Assigned from ChEBI role CHEBI:48001 (x). CURATOR: confirmed against PMID:1.")))
+    assert d["mode_of_action_target_scope"] == "HOST_SHARED_TARGET"
+
+    # Veto, with a scope of either provenance left on disk: nothing to describe.
+    for stranded in ("HOST_SHARED_TARGET", "MICROBIAL_TARGET"):
+        v = dict(fresh, mode_of_action_target_scope=stranded,
+                 mode_of_action_notes="CURATOR: the cited role is wrong here. Leave blank.")
+        del v["mode_of_action"]
+        out = reseed(v)
+        assert "mode_of_action" not in out
+        assert "mode_of_action_target_scope" not in out, stranded
+
+
+def test_every_seeded_mechanism_note_explains_its_target_scope():
+    """The scope caveat is appended to the cross-activity note, not swapped for
+    it.
+
+    Making it the fallback left 18 records — every cross-activity and every
+    MULTIPLE one — carrying a scope value with no prose saying what it meant.
+    That is the uniform-note problem (#60) inverted: the records most in need of
+    a caveat were exactly the ones that lost it. The closing sentence has one
+    owner so appending cannot duplicate it.
+    """
+    from seed_from_sources import mode_of_action_from_roles
+
+    conf = _conf()
+    names = {"CHEBI:67268": "HIV-1 integrase inhibitor",
+             "CHEBI:48001": "protein synthesis inhibitor",
+             "CHEBI:37416": "EC 2.7.7.6 (RNA polymerase) inhibitor"}
+
+    cases = [
+        (["CHEBI:48001"], "ANTIBACTERIAL"),                 # plain
+        (["CHEBI:67268"], "ANTIBACTERIAL"),                 # cross-activity
+        (["CHEBI:67268"], "ANTIMICROBIAL_UNSPECIFIED"),     # cross-activity, no group
+        (["CHEBI:37416", "CHEBI:48001"], "ANTIBACTERIAL"),  # MULTIPLE
+        (["CHEBI:67268", "CHEBI:48001"], "ANTIBACTERIAL"),  # MULTIPLE + cross-activity
+    ]
+    for roles, klass in cases:
+        _value, notes, scope = mode_of_action_from_roles(roles, conf, names, klass)
+        assert "mode_of_action_target_scope" in notes, (roles, klass, notes)
+        expected = {"HOST_SHARED_TARGET": "host has too",
+                    "MICROBIAL_TARGET": "specific to the microbe or virus",
+                    # No scope is asserted when the roles disagree, and the note
+                    # has to say that rather than fall silent.
+                    None: "disagree about whose target it is"}[scope]
+        assert expected in notes, (roles, klass, scope, notes)
+        assert notes.count("Not a curator's mechanistic review") == 1, notes
+
+
+def test_a_role_naming_a_target_the_host_also_has_is_host_shared():
+    """Two roles were assigned MICROBIAL_TARGET on inspection of the role NAME
+    and had to be corrected against the actual cohort. Both are pinned here.
+
+    `CHEBI:59886` "HIV fusion inhibitor" names an EVENT, and its two members sit
+    on opposite sides of it: enfuvirtide binds viral gp41, maraviroc binds HUMAN
+    CCR5 and is the textbook host-directed antiviral — the exact compound this
+    field was built for, on the wrong side of it.
+
+    `CHEBI:59897` is the generic EC for RNA-directed DNA polymerase, and the host
+    has one: telomerase. MST-312's own ChEBI definition names it a telomerase
+    inhibitor, so the falsifying evidence was on the record's own page.
+
+    The lesson these encode is procedural: a role's scope follows from its
+    COHORT, not from how microbe-specific its name sounds.
+    """
+    conf = _conf()
+    assert conf["role_target_scope"]["CHEBI:59886"] == "HOST_SHARED_TARGET"
+    assert conf["role_target_scope"]["CHEBI:59897"] == "HOST_SHARED_TARGET"
+
+
+def test_the_corpus_agrees_with_those_two_roles(records):
+    """The config above only matters if it reaches the records."""
+    wanted = {"maraviroc": "HOST_SHARED_TARGET",       # human CCR5
+              "MST-312": "HOST_SHARED_TARGET",         # host telomerase
+              "lamivudine": "MICROBIAL_TARGET",        # also carries CHEBI:53756, HIV-1 RT
+              "ciprofloxacin": "MICROBIAL_TARGET"}     # also carries topoisomerase IV
+    seen = {r["label"]: r.get("mode_of_action_target_scope")
+            for _p, r in records if r.get("label") in wanted}
+    assert seen == wanted, seen
+
+
+def test_verify_corpus_catches_a_bare_scope_edit_but_not_a_claimed_one():
+    """Pins BOTH halves of the guarantee, because a commit message on this
+    branch claimed the stronger one (#83).
+
+    Flipping a scope and leaving the notes alone is drift and is caught.
+    Flipping it and appending a `CURATOR:` sentence claims the field, and the
+    whole mechanism block stops being compared — deliberate, the same escape
+    hatch `mode_of_action` has, but it is NOT "a hand edit cannot assert
+    selectivity". Asserting the limit here means the next person to describe
+    this guard has to describe it correctly.
+    """
+    from seed_from_sources import curator_owns_mode_of_action
+
+    seeded_note = ("Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor). "
+                   "ChEBI asserts the role on the compound. Not a curator's mechanistic review.")
+
+    bare = {"mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+            "mode_of_action_notes": seeded_note,
+            "mode_of_action_target_scope": "MICROBIAL_TARGET"}
+    # Still the seeder's, so verify-corpus compares the scope and reports drift.
+    assert curator_owns_mode_of_action(bare) is False
+
+    claimed = dict(bare, mode_of_action_notes=(
+        seeded_note + " CURATOR: selective for the bacterial 50S."))
+    # Now the curator's, and the comparison is skipped by design.
+    assert curator_owns_mode_of_action(claimed) is True
+
+
+def test_a_conf_driven_mechanism_change_appends_an_audit_event():
+    """Changing the role maps rewrites records, and the trail must say so.
+
+    `mode_of_action`, its notes and its target scope are not in SEEDED_FIELDS,
+    so the `unchanged` guard did not see them: 8582e215 moved ten records'
+    scope and notes and appended no event to any of them — a trail asserting
+    nothing had happened while the data moved, which is #73's failure reached
+    by a different road.
+
+    The comparison is against the MERGED document, not the fresh derivation, so
+    a curator-owned block registers as unchanged rather than logging a re-seed
+    on every run. Both halves are asserted, because the churn is what made an
+    earlier attempt at this kind of comparison unusable.
+    """
+    from seed_from_sources import merge_with_existing
+
+    base = {"identifier": "CHEBI:1", "label": "w", "source_concepts": [],
+            "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+            "mode_of_action_notes": "Assigned from ChEBI role CHEBI:48001 (x).",
+            "mode_of_action_target_scope": "HOST_SHARED_TARGET",
+            "curation_history": [{"timestamp": "2026-01-01T00:00:00Z",
+                                  "curator": "seed_from_sources",
+                                  "action": "SEEDED_FROM_SOURCES", "changes": "Seeded"}]}
+
+    def events(fresh, on_disk):
+        return len(merge_with_existing(fresh, on_disk)["curation_history"])
+
+    # The scope alone moving is a real change to the record and is logged.
+    assert events(dict(base, mode_of_action_target_scope="MICROBIAL_TARGET"), base) == 2
+    # So is the mechanism moving.
+    assert events(dict(base, mode_of_action="MEMBRANE_DISRUPTION"), base) == 2
+    # An idempotent re-run still appends nothing.
+    assert events(dict(base), base) == 1
+    # And a curator-owned block, copied forward verbatim, is not churn.
+    curated = dict(base, mode_of_action="MEMBRANE_DISRUPTION",
+                   mode_of_action_notes="CURATOR: mine, PMID:1.")
+    assert events(dict(base), curated) == 1
+
+
+def test_the_same_role_shape_gets_the_same_scope_whether_or_not_MULTIPLE():
+    """Scope is a question about ROLES, so identical role shapes must answer it
+    identically.
+
+    A MULTIPLE branch that withheld the scope made adefovir (a specific role
+    plus a generic one) assert nothing while ciprofloxacin (a specific role plus
+    the SAME generic one) asserted MICROBIAL_TARGET — the answer flipping only
+    because the two mechanism values happened to collide in one case. The
+    aggregate "does this act on anything the host lacks?" is answerable either
+    way, and the disagreement is reported in the note instead.
+    """
+    from seed_from_sources import mode_of_action_from_roles
+
+    conf = _conf()
+    names = {"CHEBI:53756": "HIV-1 reverse transcriptase inhibitor",
+             "CHEBI:59517": "DNA synthesis inhibitor",
+             "CHEBI:53559": "topoisomerase IV inhibitor"}
+
+    adefovir = mode_of_action_from_roles(["CHEBI:53756", "CHEBI:59517"], conf, names, "ANTIVIRAL")
+    cipro = mode_of_action_from_roles(["CHEBI:53559", "CHEBI:59517"], conf, names, "ANTIBACTERIAL")
+    assert adefovir[0] == "MULTIPLE" and cipro[0] != "MULTIPLE"
+    assert adefovir[2] == cipro[2] == "MICROBIAL_TARGET", (adefovir[2], cipro[2])
+
+    # The disagreement is said out loud, since settling the primary mechanism
+    # can move the scope.
+    assert "differ on whose target it is" in adefovir[1]
+    assert "differ on whose target it is" not in cipro[1]
+
+
+def test_the_moa_scope_queue_lists_every_state_it_claims_to():
+    """Each branch is exercised by a CONSTRUCTED record, not by corpus state.
+
+    The first version of this test asserted only that the corpus's unscoped
+    records were queued. Every such record happened to be MULTIPLE, so both
+    curator branches could be deleted outright and it still passed — a guard
+    that never touched the code it guarded. Each case below fails if its branch
+    is removed.
+    """
+    import sys
+    from pathlib import Path as _Path
+    sys.path.insert(0, str(_Path(__file__).resolve().parent.parent / "scripts"))
+    from curation_worklist import mode_of_action_scope_queue
+
+    derived = {"CHEBI:1": {"mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+                           "mode_of_action_target_scope": "HOST_SHARED_TARGET"}}
+
+    def rec(**kw):
+        base = {"identifier": "CHEBI:1", "label": "widgetmycin",
+                "source_concepts": [{"source": "CHEBI"}]}
+        base.update(kw)
+        return base
+
+    def queued(record):
+        return mode_of_action_scope_queue([record], derived=derived)
+
+    # The case the queue exists for, and the one the note-marker version missed:
+    # the curator REPLACED the seeder's note, so no marker remains, and changed
+    # the mechanism, leaving the derived scope stranded beside it.
+    replaced = rec(mode_of_action="VIRAL_INTEGRASE_INHIBITION",
+                   mode_of_action_notes="Reassigned after literature review, PMID:1.",
+                   mode_of_action_target_scope="HOST_SHARED_TARGET")
+    assert queued(replaced), "the stranded-scope case is unsurfaced"
+
+    # A curator mechanism with no scope at all is owed one.
+    assert queued(rec(mode_of_action="MEMBRANE_DISRUPTION",
+                      mode_of_action_notes="CURATOR: mine."))
+
+    # Settled, and must NOT be queued: the curator set a scope of their own...
+    assert not queued(rec(mode_of_action="VIRAL_INTEGRASE_INHIBITION",
+                          mode_of_action_notes="CURATOR: mine.",
+                          mode_of_action_target_scope="MICROBIAL_TARGET"))
+
+    # ...and the curator who followed docs/CURATION.md and merely APPENDED a
+    # confirmation without changing the mechanism. The derived scope still
+    # describes that mechanism. An earlier version queued them forever with no
+    # action that could clear the row.
+    assert not queued(rec(mode_of_action="PROTEIN_SYNTHESIS_INHIBITION",
+                          mode_of_action_notes=("Assigned from ChEBI role CHEBI:48001 (x). "
+                                                "CURATOR: confirmed against PMID:1."),
+                          mode_of_action_target_scope="HOST_SHARED_TARGET"))
+
+    # A purely seeded record is not curation work.
+    assert not queued(rec(mode_of_action="PROTEIN_SYNTHESIS_INHIBITION",
+                          mode_of_action_notes="Assigned from ChEBI role CHEBI:48001 (x).",
+                          mode_of_action_target_scope="HOST_SHARED_TARGET"))

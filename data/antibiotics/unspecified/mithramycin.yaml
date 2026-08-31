@@ -48,6 +48,12 @@ xrefs:
 - wikipedia.en:Plicamycin
 activity_roles:
 - CHEBI:33281
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:37416 (EC 2.7.7.6 (RNA polymerase)
+  inhibitor). ChEBI asserts the role on the compound. The target it names is one the
+  host has too, so the mechanism is true but is not evidence of selectivity — see
+  mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H][C@@]1([C@H](OC)C(=O)[C@@H](O)[C@@H](C)O)Cc2cc3cc(O[C@H]4C[C@@H](O[C@H]5C[C@@H](O)[C@H](O)[C@@H](C)O5)[C@H](O)[C@@H](C)O4)c(C)c(O)c3c(O)c2C(=O)[C@H]1O[C@H]1C[C@@H](O[C@H]2C[C@@H](O[C@H]3C[C@](C)(O)[C@H](O)[C@@H](C)O3)[C@@H](O)[C@@H](C)O2)[C@H](O)[C@@H](C)O1'
   standard_inchi: InChI=1S/C52H76O24/c1-18-29(72-34-14-30(43(58)21(4)68-34)73-33-13-28(54)42(57)20(3)67-33)12-26-10-25-11-27(49(66-9)48(63)41(56)19(2)53)50(47(62)39(25)46(61)38(26)40(18)55)76-36-16-31(44(59)23(6)70-36)74-35-15-32(45(60)22(5)69-35)75-37-17-52(8,65)51(64)24(7)71-37/h10,12,19-24,27-28,30-37,41-45,49-51,53-61,64-65H,11,13-17H2,1-9H3/t19-,20-,21-,22-,23-,24-,27+,28-,30-,31-,32-,33+,34+,35+,36+,37+,41+,42-,43-,44-,45+,49+,50+,51-,52+/m1/s1
@@ -64,9 +70,48 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-d3784a5b98
   role_terms:
   - CHEBI:33281
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 050109
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: PFIZER
+  drug_name: MITHRACIN
+  ingredient_name: PLICAMYCIN
+  substance_id: UNII:NIJ123W41V
+  approval_date: '1970-05-05'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '17'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=050109
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:15Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:24Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -60,6 +60,12 @@ xrefs:
 - wikipedia.en:Fludarabine
 activity_roles:
 - CHEBI:22587
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:59517 (DNA synthesis inhibitor).
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@@H]1O
   standard_inchi: InChI=1S/C10H13FN5O7P/c11-10-14-7(12)4-8(15-10)16(2-13-4)9-6(18)5(17)3(23-9)1-22-24(19,20)21/h2-3,5-6,9,17-18H,1H2,(H2,12,14,15)(H2,19,20,21)/t3-,5-,6+,9-/m1/s1
@@ -76,9 +82,321 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-2e091683c4
   role_terms:
   - CHEBI:22587
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020038
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: GENZYME CORP
+  drug_name: FLUDARA
+  ingredient_name: FLUDARABINE PHOSPHATE
+  substance_id: UNII:1X9VK9O1SC
+  approval_date: '1991-04-18'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020038
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '022137'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: CAPLIN ONE LABS
+  drug_name: FLUDARABINE PHOSPHATE
+  ingredient_name: FLUDARABINE PHOSPHATE
+  substance_id: UNII:1X9VK9O1SC
+  approval_date: '2007-09-21'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022137
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '022273'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: SANOFI AVENTIS US
+  drug_name: OFORTA
+  ingredient_name: FLUDARABINE PHOSPHATE
+  substance_id: UNII:1X9VK9O1SC
+  approval_date: '2008-12-18'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022273
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 076349
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: HIKMA
+  drug_name: FLUDARABINE PHOSPHATE
+  ingredient_name: FLUDARABINE PHOSPHATE
+  substance_id: UNII:1X9VK9O1SC
+  approval_date: '2003-08-28'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=076349
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '076661'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: SAGENT PHARMS INC
+  drug_name: FLUDARABINE PHOSPHATE
+  ingredient_name: FLUDARABINE PHOSPHATE
+  substance_id: UNII:1X9VK9O1SC
+  approval_date: '2004-04-28'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=076661
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 077790
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: HOSPIRA
+  drug_name: FLUDARABINE PHOSPHATE
+  ingredient_name: FLUDARABINE PHOSPHATE
+  substance_id: UNII:1X9VK9O1SC
+  approval_date: '2007-04-06'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=077790
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 078393
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: FRESENIUS KABI USA
+  drug_name: FLUDARABINE PHOSPHATE
+  ingredient_name: FLUDARABINE PHOSPHATE
+  substance_id: UNII:1X9VK9O1SC
+  approval_date: '2007-10-15'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=078393
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 078544
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: FRESENIUS KABI USA
+  drug_name: FLUDARABINE PHOSPHATE
+  ingredient_name: FLUDARABINE PHOSPHATE
+  substance_id: UNII:1X9VK9O1SC
+  approval_date: '2007-10-15'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=078544
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 078610
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: ACTAVIS TOTOWA
+  drug_name: FLUDARABINE PHOSPHATE
+  ingredient_name: FLUDARABINE PHOSPHATE
+  substance_id: UNII:1X9VK9O1SC
+  approval_date: '2009-02-11'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=078610
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 090724
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: AREVA PHARMS
+  drug_name: FLUDARABINE PHOSPHATE
+  ingredient_name: FLUDARABINE PHOSPHATE
+  substance_id: UNII:1X9VK9O1SC
+  approval_date: '2010-09-27'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090724
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '200647'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: EXTROVIS
+  drug_name: FLUDARABINE PHOSPHATE
+  ingredient_name: FLUDARABINE PHOSPHATE
+  substance_id: UNII:1X9VK9O1SC
+  approval_date: '2011-12-21'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=200647
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '200648'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: RISING
+  drug_name: FLUDARABINE PHOSPHATE
+  ingredient_name: FLUDARABINE PHOSPHATE
+  substance_id: UNII:1X9VK9O1SC
+  approval_date: '2012-10-16'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=200648
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '203738'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: ACTAVIS LLC
+  drug_name: FLUDARABINE PHOSPHATE
+  ingredient_name: FLUDARABINE PHOSPHATE
+  substance_id: UNII:1X9VK9O1SC
+  approval_date: '2017-02-28'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=203738
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '220196'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: HISUN PHARM HANGZHOU
+  drug_name: FLUDARABINE PHOSPHATE
+  ingredient_name: FLUDARABINE PHOSPHATE
+  substance_id: UNII:1X9VK9O1SC
+  approval_date: '2026-07-23'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220196
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:21Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:36Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:58Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

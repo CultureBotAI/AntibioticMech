@@ -32,6 +32,12 @@ xrefs:
 - kegg.compound:C17167
 activity_roles:
 - CHEBI:22587
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H][C@]12c3nc4cc(Br)c(O)cc4c3CCN1OCSC[C@H]2N'
   standard_inchi: InChI=1S/C14H16BrN3O2S/c15-9-4-11-8(3-12(9)19)7-1-2-18-14(13(7)17-11)10(16)5-21-6-20-18/h3-4,10,14,17,19H,1-2,5-6,16H2/t10-,14+/m1/s1
@@ -48,9 +54,17 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-3322b0184b
   role_terms:
   - CHEBI:22587
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:27Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

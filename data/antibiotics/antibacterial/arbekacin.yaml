@@ -41,6 +41,12 @@ activity_roles:
 - CHEBI:36047
 structural_class: aminoglycoside antibiotic
 structural_class_id: ARO:0000016
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: NCC[C@H](O)C(=O)N[C@@H]1C[C@H](N)[C@@H](O[C@H]2O[C@H](CN)CC[C@H]2N)[C@H](O)[C@H]1O[C@H]1O[C@H](CO)[C@@H](O)[C@H](N)[C@H]1O
   standard_inchi: InChI=1S/C22H44N6O10/c23-4-3-12(30)20(34)28-11-5-10(26)18(37-21-9(25)2-1-8(6-24)35-21)17(33)19(11)38-22-16(32)14(27)15(31)13(7-29)36-22/h8-19,21-22,29-33H,1-7,23-27H2,(H,28,34)/t8-,9+,10-,11+,12-,13+,14-,15+,16+,17-,18+,19-,21+,22+/m0/s1
@@ -59,7 +65,7 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:33282
   - CHEBI:36047
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:37922
   source_label: arbekacin
@@ -68,7 +74,7 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:33282
   - CHEBI:36047
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3000858
@@ -146,6 +152,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T01:13:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:32Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

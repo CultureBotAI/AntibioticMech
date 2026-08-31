@@ -38,9 +38,33 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-7ac03b0a9e
   role_terms:
   - CHEBI:33281
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+producer_organisms:
+- taxon_id: NCBITaxon:1928
+  taxon_label: Streptomyces rochei NBRC 12908
+  biosynthetic_gene_cluster: BGC0000432
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '6'
+  source_quality: questionable
+  reviewed: true
+  note: MIBiG active entry with a non-placeholder expert reviewer; compound 'streptothricin
+    D' joined by exact Standard InChIKey.
+  reference: PMID:22820420
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:21Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:36Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T17:53:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

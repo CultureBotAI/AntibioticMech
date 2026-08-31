@@ -46,6 +46,12 @@ xrefs:
 - patent:US2011015413
 activity_roles:
 - CHEBI:36047
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: O.O.[Ca+2].[H][C@@]1([C@@H](C)[C@H](C)O)O[C@@]1([H])C[C@H]1CO[C@@H](C/C(C)=C/C(=O)OCCCCCCCCC(=O)[O-])[C@H](O)[C@@H]1O.[H][C@@]1([C@@H](C)[C@H](C)O)O[C@@]1([H])C[C@H]1CO[C@@H](C/C(C)=C/C(=O)OCCCCCCCCC(=O)[O-])[C@H](O)[C@@H]1O
   standard_inchi: InChI=1S/2C26H44O9.Ca.2H2O/c2*1-16(13-23(30)33-11-9-7-5-4-6-8-10-22(28)29)12-20-25(32)24(31)19(15-34-20)14-21-26(35-21)17(2)18(3)27;;;/h2*13,17-21,24-27,31-32H,4-12,14-15H2,1-3H3,(H,28,29);;2*1H2/q;;+2;;/p-2/b2*16-13+;;;/t2*17-,18-,19-,20-,21-,24+,25-,26-;;;/m00.../s1
@@ -62,9 +68,195 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-2eae54dfcc
   role_terms:
   - CHEBI:36047
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '050703'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: GLAXOSMITHKLINE
+  drug_name: BACTROBAN
+  ingredient_name: MUPIROCIN CALCIUM
+  substance_id: UNII:RG38I2P540
+  approval_date: '1995-09-18'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=050703
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '050746'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: GLAXOSMITHKLINE
+  drug_name: BACTROBAN
+  ingredient_name: MUPIROCIN CALCIUM
+  substance_id: UNII:RG38I2P540
+  approval_date: '1997-12-11'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=050746
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '201587'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: GLENMARK PHARMS
+  drug_name: MUPIROCIN
+  ingredient_name: MUPIROCIN CALCIUM
+  substance_id: UNII:RG38I2P540
+  approval_date: '2013-01-24'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=201587
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '207116'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: SUN PHARMA CANADA
+  drug_name: MUPIROCIN
+  ingredient_name: MUPIROCIN CALCIUM
+  substance_id: UNII:RG38I2P540
+  approval_date: '2020-04-27'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=207116
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '212465'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: PADAGIS ISRAEL
+  drug_name: MUPIROCIN
+  ingredient_name: MUPIROCIN CALCIUM
+  substance_id: UNII:RG38I2P540
+  approval_date: '2022-08-03'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212465
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '213053'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: ALEMBIC
+  drug_name: MUPIROCIN
+  ingredient_name: MUPIROCIN CALCIUM
+  substance_id: UNII:RG38I2P540
+  approval_date: '2021-11-16'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213053
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '213076'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: ENCUBE
+  drug_name: MUPIROCIN
+  ingredient_name: MUPIROCIN CALCIUM
+  substance_id: UNII:RG38I2P540
+  approval_date: '2021-08-31'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213076
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '214811'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: AMNEAL
+  drug_name: MUPIROCIN
+  ingredient_name: MUPIROCIN CALCIUM
+  substance_id: UNII:RG38I2P540
+  approval_date: '2022-11-15'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '31'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=214811
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:16Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:31Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

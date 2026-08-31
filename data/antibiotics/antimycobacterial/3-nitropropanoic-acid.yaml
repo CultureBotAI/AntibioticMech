@@ -34,6 +34,12 @@ xrefs:
 - pdb-ccd:3NP
 activity_roles:
 - CHEBI:64912
+mode_of_action: ENERGY_METABOLISM_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:83072 (EC 1.3.5.1 [succinate
+  dehydrogenase (quinone)] inhibitor). ChEBI asserts the role on the compound. The
+  target it names is one the host has too, so the mechanism is true but is not evidence
+  of selectivity — see mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: O=C(O)CC[N+](=O)[O-]
   standard_inchi: InChI=1S/C3H5NO4/c5-3(6)1-2-4(7)8/h1-2H2,(H,5,6)
@@ -50,9 +56,17 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-f37462aae1
   role_terms:
   - CHEBI:64912
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:11Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:26Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

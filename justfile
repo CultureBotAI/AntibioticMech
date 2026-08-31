@@ -10,7 +10,7 @@ default:
 
 # Install package + dev tools
 install:
-    uv sync --extra dev
+    uv sync --extra dev --extra chemical-map
 
 # Generate Pydantic classes from the LinkML schema
 gen-schema:
@@ -24,6 +24,25 @@ extract-inventory-dry:
 # the inventories are committed, so seeding, validation and tests all run offline.
 extract-inventory *args:
     uv run python scripts/extract_source_inventory.py {{args}}
+
+# Extract reviewed MIBiG producer/BGC assertions. RDKit converts upstream
+# SMILES to the Standard InChIKey used for the exact corpus join.
+extract-mibig *args:
+    uv run --extra chemical-map python scripts/extract_mibig_producers.py {{args}}
+
+extract-mibig-dry *args:
+    uv run --extra chemical-map python scripts/extract_mibig_producers.py --dry-run {{args}}
+
+# Join Drugs@FDA regulatory tables to exact GSRS/UNII structures.
+extract-fda *args:
+    uv run --extra chemical-map python scripts/extract_fda_clinical_status.py {{args}}
+
+extract-fda-dry *args:
+    uv run --extra chemical-map python scripts/extract_fda_clinical_status.py --dry-run {{args}}
+
+# Evaluate BindingDB's curated-only article export without writing target claims.
+evaluate-bindingdb *args:
+    uv run --extra chemical-map python scripts/evaluate_bindingdb_targets.py {{args}}
 
 # Free check: print the PubChem URL for the first molecule needing a structure
 extract-pubchem-dry:
@@ -96,6 +115,19 @@ render *args:
 render-check:
     uv run python scripts/render_pages.py --check
 
+# Recompute the exact structure-only chemical embedding, then publish it.
+chemical-map:
+    uv run --extra chemical-map python scripts/generate_chemical_map.py
+    uv run python scripts/render_pages.py
+
+# Fast deterministic staleness, coverage, and scientific-quality check.
+chemical-map-check:
+    uv run --extra chemical-map python scripts/generate_chemical_map.py --check
+
+# Expensive local reproducibility audit: rerun fingerprints, distances, and UMAP.
+chemical-map-recompute-check:
+    uv run --extra chemical-map python scripts/generate_chemical_map.py --check --recompute
+
 # Verify every committed inventory is covered by MANIFEST.yaml and matches it
 provenance-check:
     uv run python scripts/check_provenance.py
@@ -112,6 +144,21 @@ docs-check:
 test *args:
     uv run pytest {{args}}
 
+# Deep research for one compound. Dry-run by default; pass --apply for one
+# real canary after `just deep-research-canary <provider>`.
+research-antibiotic provider target *args="":
+    uv run python scripts/research_antibiotic.py \
+      --provider {{provider}} --target {{target}} {{args}}
+
+research-entity provider target *args="":
+    @just research-antibiotic {{provider}} {{target}} {{args}}
+
+# Non-billing configuration/capability checks.
+deep-research-canary provider="all" *args="":
+    uv run python scripts/deep_research_contract.py {{provider}} \
+      --client-command "uvx --python 3.12 --prerelease=allow --from deep-research-client[cyberian] deep-research-client" \
+      {{args}}
+
 # Lint
 lint *args:
     uv run ruff check {{args}} .
@@ -120,6 +167,25 @@ lint *args:
 lint-fix:
     uv run ruff check --fix .
 
+# Show the documents that WOULD be embedded, and their size distribution. Free.
+embed-dry:
+    python3 scripts/embed_records.py --dry-run
+
+# Embed ONE small batch end to end — the canary before the full run.
+embed-canary *args:
+    python3 scripts/embed_records.py --limit 20 {{args}}
+
+# Text-embed every record with a local model (needs the `embed` extra and runs
+# on system python, so torch stays out of the core install). ~2 min for the
+# corpus on Apple-Silicon MPS. Writes data/embeddings/ (vectors gitignored).
+embed *args:
+    python3 scripts/embed_records.py {{args}}
+
+# Project the embeddings to 2-D -> data/embeddings/corpus_map.json (committed).
+# Run `just render` afterwards to rebuild pages/map.html from it.
+embed-map *args:
+    python3 scripts/embed_map.py {{args}}
+
 # The authoritative quality gate used both locally and in CI.
 qc:
-    uv run python scripts/run_qc.py
+    uv run --extra chemical-map python scripts/run_qc.py

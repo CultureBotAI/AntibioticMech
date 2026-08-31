@@ -38,6 +38,13 @@ activity_roles:
 - CHEBI:24127
 - CHEBI:35718
 - CHEBI:86328
+mode_of_action: ENERGY_METABOLISM_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:141153 (quinone outside inhibitor),
+  CHEBI:38499 (mitochondrial cytochrome-bc1 complex inhibitor). ChEBI asserts the
+  role on the compound. The target it names is one the host has too, so the mechanism
+  is true but is not evidence of selectivity — see mode_of_action_target_scope. Not
+  a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CSC1=N[C@@](C)(c2ccccc2)C(=O)N1Nc1ccccc1
   standard_inchi: InChI=1S/C17H17N3OS/c1-17(13-9-5-3-6-10-13)15(21)20(16(18-17)22-2)19-14-11-7-4-8-12-14/h3-12,19H,1-2H3/t17-/m0/s1
@@ -57,13 +64,17 @@ source_concepts:
   - CHEBI:24127
   - CHEBI:35718
   - CHEBI:86328
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
 - timestamp: '2026-08-30T01:13:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:44Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

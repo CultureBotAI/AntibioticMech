@@ -55,14 +55,14 @@ source_concepts:
   minted_identifier: antibioticmech:aro-ba2bb436ff
   role_terms:
   - CHEBI:36047
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:149836
   source_label: tigecycline
   minted_identifier: antibioticmech:chebi-4917944044
   role_terms:
   - CHEBI:36047
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000026
@@ -149,12 +149,215 @@ molecular_targets:
   - reference: ARO:3000755
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000030 (tigecycline); database
       assertion, not a primary citation.
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 021821
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: PF PRISM CV
+  drug_name: TYGACIL
+  ingredient_name: TIGECYCLINE
+  substance_id: UNII:70JE2N95KR
+  approval_date: '2005-06-15'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '51'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021821
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 091620
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: SANDOZ
+  drug_name: TIGECYCLINE
+  ingredient_name: TIGECYCLINE
+  substance_id: UNII:70JE2N95KR
+  approval_date: '2015-05-27'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '51'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=091620
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '204439'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: APOTEX
+  drug_name: TIGECYCLINE
+  ingredient_name: TIGECYCLINE
+  substance_id: UNII:70JE2N95KR
+  approval_date: '2018-12-21'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '51'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=204439
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '205645'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: FRESENIUS KABI USA
+  drug_name: TIGECYCLINE
+  ingredient_name: TIGECYCLINE
+  substance_id: UNII:70JE2N95KR
+  approval_date: '2016-12-01'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '51'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=205645
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '205722'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: XELLIA PHARMS APS
+  drug_name: TIGECYCLINE
+  ingredient_name: TIGECYCLINE
+  substance_id: UNII:70JE2N95KR
+  approval_date: '2019-10-18'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '51'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=205722
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '206335'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: EUGIA PHARMA
+  drug_name: TIGECYCLINE
+  ingredient_name: TIGECYCLINE
+  substance_id: UNII:70JE2N95KR
+  approval_date: '2019-06-11'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '51'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206335
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '208744'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: ACCORD HLTHCARE INC
+  drug_name: TIGECYCLINE
+  ingredient_name: TIGECYCLINE
+  substance_id: UNII:70JE2N95KR
+  approval_date: '2018-01-18'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '51'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208744
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '211158'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: AMNEAL
+  drug_name: TIGECYCLINE
+  ingredient_name: TIGECYCLINE
+  substance_id: UNII:70JE2N95KR
+  approval_date: '2018-08-02'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '51'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211158
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '214020'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: MEITHEAL
+  drug_name: TIGECYCLINE
+  ingredient_name: TIGECYCLINE
+  substance_id: UNII:70JE2N95KR
+  approval_date: '2021-05-13'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '51'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=214020
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T01:13:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:19Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

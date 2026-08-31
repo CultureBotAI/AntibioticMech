@@ -26,6 +26,12 @@ xrefs:
 - reaxys:18836348
 activity_roles:
 - CHEBI:35660
+mode_of_action: VIRAL_PROTEASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:35660 (HIV protease inhibitor).
+  ChEBI asserts the role on the compound. The role names a target specific to the
+  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@]1([C@@H](C)C2CC[C@@]3(C)C4=C(CC[C@]23C)[C@](CCC(=O)OC)(COC(C)=O)[C@]([H])(C(C)(C)O)CC4)CC=C(C)C(=O)O1'
   standard_inchi: InChI=1S/C33H50O7/c1-20-9-11-26(40-29(20)36)21(2)23-13-16-32(7)24-10-12-27(30(4,5)37)33(19-39-22(3)34,18-15-28(35)38-8)25(24)14-17-31(23,32)6/h9,21,23,26-27,37H,10-19H2,1-8H3/t21-,23?,26+,27-,31+,32-,33-/m0/s1
@@ -42,9 +48,17 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-59380523fe
   role_terms:
   - CHEBI:35660
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:22Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:37Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

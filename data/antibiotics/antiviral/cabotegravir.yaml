@@ -67,6 +67,12 @@ xrefs:
 - wikipedia.en:Cabotegravir
 activity_roles:
 - CHEBI:67268
+mode_of_action: VIRAL_INTEGRASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:67268 (HIV-1 integrase inhibitor).
+  ChEBI asserts the role on the compound. The role names a target specific to the
+  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@@]12Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c(O)c3C(=O)N1[C@@H](C)CO2'
   standard_inchi: InChI=1S/C19H17F2N3O5/c1-9-8-29-14-7-23-6-12(16(25)17(26)15(23)19(28)24(9)14)18(27)22-5-10-2-3-11(20)4-13(10)21/h2-4,6,9,14,26H,5,7-8H2,1H3,(H,22,27)/t9-,14+/m0/s1
@@ -83,9 +89,48 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-517db1789a
   role_terms:
   - CHEBI:67268
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '215499'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: VIIV HLTHCARE
+  drug_name: APRETUDE
+  ingredient_name: CABOTEGRAVIR
+  substance_id: UNII:HMH0132Z1Q
+  approval_date: '2021-12-20'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '35'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215499
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:12Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:27Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:20Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

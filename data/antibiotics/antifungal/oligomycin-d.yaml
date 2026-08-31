@@ -50,6 +50,13 @@ xrefs:
 activity_roles:
 - CHEBI:33281
 - CHEBI:35718
+mode_of_action: ENERGY_METABOLISM_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:20854 (ATP synthase inhibitor),
+  CHEBI:73214 (EC 3.6.3.14 (H+-transporting two-sector ATPase) inhibitor). ChEBI asserts
+  the role on the compound. The target it names is one the host has too, so the mechanism
+  is true but is not evidence of selectivity — see mode_of_action_target_scope. Not
+  a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CC[C@H]1/C=C/C=C/C[C@@H](C)[C@H](O)[C@@](C)(O)C(=O)[C@@H](C)[C@H](O)[C@@H](C)C(=O)[C@@H](C)[C@H](O)[C@@H](C)/C=C/C(=O)O[C@H]2C[C@@]3(CC[C@H](C)[C@H](C[C@@H](C)O)O3)O[C@@H](CC1)[C@H]2C
   standard_inchi: InChI=1S/C44H72O11/c1-11-33-16-14-12-13-15-27(4)41(50)43(10,52)42(51)32(9)40(49)31(8)39(48)30(7)38(47)26(3)17-20-37(46)53-36-24-44(54-34(19-18-33)29(36)6)22-21-25(2)35(55-44)23-28(5)45/h12-14,16-17,20,25-36,38,40-41,45,47,49-50,52H,11,15,18-19,21-24H2,1-10H3/b13-12+,16-14+,20-17+/t25-,26-,27+,28+,29+,30-,31-,32-,33-,34-,35-,36-,38+,40+,41-,43+,44-/m0/s1
@@ -67,9 +74,17 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   - CHEBI:35718
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:27Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

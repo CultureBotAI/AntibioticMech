@@ -30,6 +30,12 @@ xrefs:
 activity_roles:
 - CHEBI:35660
 - CHEBI:36044
+mode_of_action: VIRAL_PROTEASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:35660 (HIV protease inhibitor).
+  ChEBI asserts the role on the compound. The role names a target specific to the
+  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@@]12CCCC[C@]1([H])CN(C[C@@H](O)[C@H](Cc1ccccc1)NC(=O)[C@H](CC(N)=O)NC(=O)c1ccc3ccccc3n1)[C@H](C(=O)NC(C)(C)C)C2'
   standard_inchi: InChI=1S/C38H50N6O5/c1-38(2,3)43-37(49)32-20-26-14-7-8-15-27(26)22-44(32)23-33(45)30(19-24-11-5-4-6-12-24)41-36(48)31(21-34(39)46)42-35(47)29-18-17-25-13-9-10-16-28(25)40-29/h4-6,9-13,16-18,26-27,30-33,45H,7-8,14-15,19-23H2,1-3H3,(H2,39,46)(H,41,48)(H,42,47)(H,43,49)/t26-,27+,30-,31-,32-,33+/m0/s1
@@ -47,9 +53,48 @@ source_concepts:
   role_terms:
   - CHEBI:35660
   - CHEBI:36044
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020828
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: HOFFMANN LA ROCHE
+  drug_name: FORTOVASE
+  ingredient_name: SAQUINAVIR
+  substance_id: UNII:L3JE09KZ2F
+  approval_date: '1997-11-07'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '42'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020828
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:21Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:36Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:58Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

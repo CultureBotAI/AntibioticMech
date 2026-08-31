@@ -28,6 +28,12 @@ xrefs:
 - wikipedia.en:Dolutegravir
 activity_roles:
 - CHEBI:67268
+mode_of_action: VIRAL_INTEGRASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:67268 (HIV-1 integrase inhibitor).
+  ChEBI asserts the role on the compound. The role names a target specific to the
+  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@]12Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c([O-])c3C(=O)N1[C@H](C)CCO2.[Na+]'
   standard_inchi: InChI=1S/C20H19F2N3O5.Na/c1-10-4-5-30-15-9-24-8-13(17(26)18(27)16(24)20(29)25(10)15)19(28)23-7-11-2-3-12(21)6-14(11)22;/h2-3,6,8,10,15,27H,4-5,7,9H2,1H3,(H,23,28);/q;+1/p-1/t10-,15+;/m1./s1
@@ -44,9 +50,111 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-82b7f49f9a
   role_terms:
   - CHEBI:67268
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '204790'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: VIIV HLTHCARE
+  drug_name: TIVICAY
+  ingredient_name: DOLUTEGRAVIR SODIUM
+  substance_id: UNII:1Q1V9V5WYQ
+  approval_date: '2013-08-12'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '59'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=204790
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '204790'
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: VIIV HLTHCARE
+  drug_name: TIVICAY
+  ingredient_name: DOLUTEGRAVIR SODIUM
+  substance_id: UNII:1Q1V9V5WYQ
+  approval_date: '2013-08-12'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '59'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=204790
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '204790'
+  application_type: NDA
+  product_number: '003'
+  sponsor_name: VIIV HLTHCARE
+  drug_name: TIVICAY
+  ingredient_name: DOLUTEGRAVIR SODIUM
+  substance_id: UNII:1Q1V9V5WYQ
+  approval_date: '2013-08-12'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '59'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=204790
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '213983'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: VIIV HLTHCARE
+  drug_name: TIVICAY PD
+  ingredient_name: DOLUTEGRAVIR SODIUM
+  substance_id: UNII:1Q1V9V5WYQ
+  approval_date: '2020-06-12'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '59'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213983
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:27Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:17:02Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:37Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

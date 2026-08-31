@@ -66,6 +66,12 @@ xrefs:
 - reaxys:30397
 activity_roles:
 - CHEBI:36044
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:59517 (DNA synthesis inhibitor).
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: O=c1nc(=O)n([C@H]2C[C@H](O)[C@@H](CO)O2)cc1I
   standard_inchi: InChI=1S/C9H11IN2O5/c10-4-2-12(9(16)11-8(4)15)7-1-5(14)6(3-13)17-7/h2,5-7,13-14H,1,3H2,(H,11,15,16)/t5-,6+,7+/m0/s1
@@ -82,9 +88,111 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-8072294c81
   role_terms:
   - CHEBI:36044
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 013934
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: GLAXOSMITHKLINE
+  drug_name: STOXIL
+  ingredient_name: IDOXURIDINE
+  substance_id: UNII:LGP81V5245
+  approval_date: '1964-04-06'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '32'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=013934
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 013935
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: ALLERGAN
+  drug_name: HERPLEX
+  ingredient_name: IDOXURIDINE
+  substance_id: UNII:LGP81V5245
+  approval_date: '1963-06-11'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '32'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=013935
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 014169
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: ALCON
+  drug_name: DENDRID
+  ingredient_name: IDOXURIDINE
+  substance_id: UNII:LGP81V5245
+  approval_date: '1963-06-28'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '32'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=014169
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 015868
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: GLAXOSMITHKLINE
+  drug_name: STOXIL
+  ingredient_name: IDOXURIDINE
+  substance_id: UNII:LGP81V5245
+  approval_date: '1967-09-02'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '32'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=015868
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:10Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:19Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -37,6 +37,12 @@ activity_roles:
 - CHEBI:86328
 structural_class: strobilurin fungicide
 structural_class_id: ARO:3009305
+mode_of_action: ENERGY_METABOLISM_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:38499 (mitochondrial cytochrome-bc1
+  complex inhibitor). ChEBI asserts the role on the compound. The target it names
+  is one the host has too, so the mechanism is true but is not evidence of selectivity
+  — see mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: COC(=O)N(OC)c1ccccc1COc1ccn(-c2ccc(Cl)cc2)n1
   standard_inchi: InChI=1S/C19H18ClN3O4/c1-25-19(24)23(26-2)17-6-4-3-5-14(17)13-27-18-11-12-22(21-18)16-9-7-15(20)8-10-16/h3-12H,13H2,1-2H3
@@ -55,7 +61,7 @@ source_concepts:
   - CHEBI:24127
   - CHEBI:35718
   - CHEBI:86328
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:78780
   source_label: pyraclostrobin
@@ -64,7 +70,7 @@ source_concepts:
   - CHEBI:24127
   - CHEBI:35718
   - CHEBI:86328
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009278
@@ -95,6 +101,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T01:13:53Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:43Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

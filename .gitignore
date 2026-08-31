@@ -37,3 +37,11 @@ local/
 # and the manifest above is the durable record of the same run.
 
 downloads/
+
+# Embedding vectors: large, rebuildable with `just embed`, and not needed to
+# render the site. data/embeddings/corpus_map.json IS committed — pages/map.html
+# is generated from it, so a checkout without it would render a different site.
+data/embeddings/*.npy
+data/embeddings/ids.json
+data/embeddings/records.json
+data/embeddings/meta.json

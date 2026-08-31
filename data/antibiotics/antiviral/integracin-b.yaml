@@ -20,6 +20,12 @@ xrefs:
 - reaxys:22818305
 activity_roles:
 - CHEBI:67268
+mode_of_action: VIRAL_INTEGRASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:67268 (HIV-1 integrase inhibitor).
+  ChEBI asserts the role on the compound. The role names a target specific to the
+  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CCC[C@@H](O)CCCCCCCc1cc(O)cc(O)c1C(=O)O[C@H](CCC)CCCCCCCc1cc(O)cc(O)c1
   standard_inchi: InChI=1S/C35H54O7/c1-3-15-28(36)19-13-9-6-8-12-18-27-23-31(39)25-33(40)34(27)35(41)42-32(16-4-2)20-14-10-5-7-11-17-26-21-29(37)24-30(38)22-26/h21-25,28,32,36-40H,3-20H2,1-2H3/t28-,32-/m1/s1
@@ -36,9 +42,17 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-7d71bc476f
   role_terms:
   - CHEBI:67268
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:23Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

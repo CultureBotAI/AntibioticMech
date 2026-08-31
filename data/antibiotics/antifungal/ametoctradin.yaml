@@ -32,6 +32,12 @@ xrefs:
 - reaxys:12394099
 activity_roles:
 - CHEBI:86328
+mode_of_action: ENERGY_METABOLISM_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:38499 (mitochondrial cytochrome-bc1
+  complex inhibitor). ChEBI asserts the role on the compound. The target it names
+  is one the host has too, so the mechanism is true but is not evidence of selectivity
+  — see mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CCCCCCCCc1c(CC)nc2ncnn2c1N
   standard_inchi: InChI=1S/C15H25N5/c1-3-5-6-7-8-9-10-12-13(4-2)19-15-17-11-18-20(15)14(12)16/h11H,3-10,16H2,1-2H3
@@ -48,9 +54,17 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-9a05036f38
   role_terms:
   - CHEBI:86328
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

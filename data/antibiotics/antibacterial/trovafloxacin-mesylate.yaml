@@ -41,6 +41,12 @@ xrefs:
 activity_roles:
 - CHEBI:33281
 - CHEBI:36047
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:53559 (topoisomerase IV inhibitor),
+  CHEBI:59517 (DNA synthesis inhibitor). ChEBI asserts the role on the compound. The
+  role names a target specific to the microbe or virus — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CS(=O)(=O)O.[H][C@@]12CN(c3nc4c(cc3F)c(=O)c(C(=O)O)cn4-c3ccc(F)cc3F)C[C@]1([H])[C@H]2N
   standard_inchi: InChI=1S/C20H15F3N4O3.CH4O3S/c21-8-1-2-15(13(22)3-8)27-7-12(20(29)30)17(28)9-4-14(23)19(25-18(9)27)26-5-10-11(6-26)16(10)24;1-5(2,3)4/h1-4,7,10-11,16H,5-6,24H2,(H,29,30);1H3,(H,2,3,4)/t10-,11+,16+;
@@ -58,9 +64,69 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   - CHEBI:36047
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020759
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: PFIZER
+  drug_name: TROVAN
+  ingredient_name: TROVAFLOXACIN MESYLATE
+  substance_id: UNII:0P1LKO80WN
+  approval_date: '1997-12-18'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '18'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020759
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020759
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: PFIZER
+  drug_name: TROVAN
+  ingredient_name: TROVAFLOXACIN MESYLATE
+  substance_id: UNII:0P1LKO80WN
+  approval_date: '1997-12-18'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '18'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020759
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:27Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:17:03Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:37Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

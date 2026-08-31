@@ -42,6 +42,62 @@ A record moves from `SEEDED` to `REVIEWED` when a curator has checked all of:
 A record with a curated `causal_graph` is the goal state, not the entry
 requirement.
 
+## Correcting or vetoing a seeded mode of action
+
+`mode_of_action` is seeded from ChEBI's mechanism roles, and its note names the
+role it came from. To take the field over, write a note beginning `CURATOR:`.
+
+```yaml
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: >-
+  Assigned from ChEBI role CHEBI:67268 (...). CURATOR: corrected — the integrase
+  role belongs to this compound's antiviral activity, PMID:123.
+```
+
+The same marker with **no** `mode_of_action` is a veto: it says no mechanism
+should be seeded here, and the seeder will leave the field empty rather than
+writing its own value back.
+
+```yaml
+mode_of_action_notes: >-
+  CURATOR: cefdinir is a cephalosporin. CARD cross-references it to an unrelated
+  ChEBI entry, so any derived mechanism is wrong. Leave blank.
+```
+
+Both survive `just seed-apply`.
+
+**`mode_of_action_target_scope` travels with the value.** It records whether the
+target belongs to the microbe (`MICROBIAL_TARGET`) or is one the host has too
+(`HOST_SHARED_TARGET`), derived from the same roles as the mechanism.
+
+Claiming the mechanism claims the scope, and `verify-corpus` stops comparing
+both from then on — so a `CURATOR:` note is the only thing standing between a
+hand edit and a selectivity claim the sources never made. Write one only when
+you mean it.
+
+**If you change the mechanism, state the scope.** The seeder derived the scope
+for the value it wrote; once you replace that value, the scope describes
+something no longer on the record — and the seeder cannot tell your scope from
+its own leftover, so it does not guess. It copies your whole block forward
+verbatim, an omitted scope included. `just worklist --queue moa-scope` lists the
+records where that is still owed. A veto is the exception: with no mechanism
+asserted there is nothing for a scope to describe, so it is dropped. It is **not a confidence rating** — `HOST_SHARED_TARGET`
+covers linezolid, which is genuinely microbe-selective on a conserved ribosome,
+as well as omacetaxine, which is not. It marks where the selectivity question
+exists so that `molecular_targets` can answer it.
+
+**The notes decide ownership, not the value.** Setting `mode_of_action` without
+writing a note leaves the field the seeder's, and the next run will replace it —
+because a bare value is indistinguishable from a hand-falsified one, and
+`verify-corpus` has to be able to tell.
+
+**Write the `CURATOR:` token whenever the seeder's sentence is still in the
+note.** Appending prose without it does *not* claim the field: the seeder's
+marker is still there, so the note reads as the seeder's, your correction is
+reverted on the next run and `verify-corpus` reports drift until it is. Replacing
+the note wholesale with your own prose does claim the field — but appending is
+the natural thing to do, and appending is the case that needs the token.
+
 ## Evidence rules
 
 - `AntibioticRecord.evidence` is **optional**: a seeded record inherits
@@ -84,7 +140,8 @@ requirement.
   string out of circulation, so a later compound can never inherit a published
   URL that pointed at something else. A returning identifier is removed from the
   ledger and reclaims its own slug. 134 slugs were retired when unreviewed ChEBI
-  relations stopped being trusted; the pages they served are gone, and a
+  relations stopped being trusted, 19 of which returned when antivirals entered
+  scope, leaving 115; the pages they served are gone, and a
   redirect map for them is still owed (see NEXT_TASKS.md).
 - **Never hand-edit a seeded field.** `just verify-corpus` rebuilds the corpus
   from `data/raw/` and fails on drift — for the fields the seeder owns. It

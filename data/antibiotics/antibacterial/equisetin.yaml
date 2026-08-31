@@ -30,6 +30,15 @@ xrefs:
 activity_roles:
 - CHEBI:33282
 - CHEBI:67268
+mode_of_action: VIRAL_INTEGRASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:67268 (HIV-1 integrase inhibitor).
+  ChEBI asserts the role on the compound, but this mechanism belongs to an anti-viral
+  activity while the record is filed as ANTIBACTERIAL. Either the compound has both
+  activities, or the filing is wrong — the priority table has put azole antifungals
+  under ANTIBACTERIAL before now. A curator should decide which. The role names a
+  target specific to the microbe or virus — see mode_of_action_target_scope. Not a
+  curator's mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@@]12CC[C@@H](C)C[C@@]1([H])C=C[C@@]([H])(/C=C/C)[C@@]2(C)/C(O)=C1\C(=O)[C@H](CO)N(C)C1=O'
   standard_inchi: InChI=1S/C22H31NO4/c1-5-6-15-9-8-14-11-13(2)7-10-16(14)22(15,3)20(26)18-19(25)17(12-24)23(4)21(18)27/h5-6,8-9,13-17,24,26H,7,10-12H2,1-4H3/b6-5+,20-18-/t13-,14-,15-,16-,17+,22-/m1/s1
@@ -47,13 +56,21 @@ source_concepts:
   role_terms:
   - CHEBI:33282
   - CHEBI:67268
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
 - timestamp: '2026-08-30T01:42:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T07:29:10Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:25Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

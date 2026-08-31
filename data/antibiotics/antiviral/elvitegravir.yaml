@@ -43,6 +43,12 @@ xrefs:
 - wikipedia.en:Elvitegravir
 activity_roles:
 - CHEBI:67268
+mode_of_action: VIRAL_INTEGRASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:67268 (HIV-1 integrase inhibitor).
+  ChEBI asserts the role on the compound. The role names a target specific to the
+  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: COc1cc2c(cc1Cc1cccc(Cl)c1F)c(=O)c(C(=O)O)cn2[C@H](CO)C(C)C
   standard_inchi: InChI=1S/C23H23ClFNO5/c1-12(2)19(11-27)26-10-16(23(29)30)22(28)15-8-14(20(31-3)9-18(15)26)7-13-5-4-6-17(24)21(13)25/h4-6,8-10,12,19,27H,7,11H2,1-3H3,(H,29,30)/t19-/m1/s1
@@ -59,9 +65,69 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-5b109c28b2
   role_terms:
   - CHEBI:67268
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '203093'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: GILEAD SCIENCES INC
+  drug_name: VITEKTA
+  ingredient_name: ELVITEGRAVIR
+  substance_id: UNII:4GDQ854U53
+  approval_date: '2014-09-24'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '53'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=203093
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '203093'
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: GILEAD SCIENCES INC
+  drug_name: VITEKTA
+  ingredient_name: ELVITEGRAVIR
+  substance_id: UNII:4GDQ854U53
+  approval_date: '2014-09-24'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '53'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=203093
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:26Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:17:02Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:36Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

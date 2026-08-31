@@ -57,6 +57,15 @@ xrefs:
 activity_roles:
 - CHEBI:36044
 - CHEBI:53756
+mode_of_action: MULTIPLE
+mode_of_action_notes: Assigned from ChEBI roles CHEBI:53756 (HIV-1 reverse transcriptase
+  inhibitor), CHEBI:59517 (DNA synthesis inhibitor), which map to NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+  VIRAL_POLYMERASE_INHIBITION. ChEBI asserts these roles on the compound; a curator
+  should decide whether one is primary. The role names a target specific to the microbe
+  or virus — see mode_of_action_target_scope. The contributing roles differ on whose
+  target it is, so settling the primary mechanism may change mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: Nc1ncnc2c1ncn2CCOCP(=O)(O)O
   standard_inchi: InChI=1S/C8H12N5O4P/c9-7-6-8(11-3-10-7)13(4-12-6)1-2-17-5-18(14,15)16/h3-4H,1-2,5H2,(H2,9,10,11)(H2,14,15,16)
@@ -74,9 +83,25 @@ source_concepts:
   role_terms:
   - CHEBI:36044
   - CHEBI:53756
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:13Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T20:12:22Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T04:10:19Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

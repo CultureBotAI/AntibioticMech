@@ -97,6 +97,15 @@
        record&rsquo;s activity places it in, not its structural family.</p>
   </div>
   <div class="card">
+      <div class="actions">
+        <a class="btn" href="chemical-map.html">Open the chemical map</a>
+      </div>
+      <h2>Chemical map</h2>
+      <p>All {{ stats.total }} records placed by chiral molecular fingerprint
+         alone &mdash; no labels, mechanisms or prose in the coordinates. Search
+         a compound and inspect its nearest structural neighbours.</p>
+    </div>
+  <div class="card">
     <div class="actions">
       <a class="btn" href="https://github.com/CultureBotAI/AntibioticMech">GitHub</a>
     </div>
@@ -122,9 +131,9 @@
   <caption>Records per antimicrobial class</caption>
   <thead><tr><th scope="col">Class</th><th scope="col" class="num">Records</th><th scope="col"><span class="visually-hidden">Share</span></th></tr></thead>
   {% for c in classes %}
-  <tr>
-    <td><a href="class/{{ c.slug }}.html">{{ c.label }}</a></td>
-    <td class="num">{{ c.count }}</td>
+  <tr{% if c.is_narrower %} class="subclass"{% endif %}>
+    <td>{% if c.is_narrower %}<span class="tree" aria-hidden="true">&#8627;</span> {% endif %}<a href="class/{{ c.slug }}.html">{{ c.label }}</a>{% if c.is_narrower %} <span class="meta">subclass of {{ c.parent_label|lower }}</span>{% elif c.broader_of %} <span class="meta">incl. subclasses</span>{% endif %}</td>
+    <td class="num">{{ c.count_inclusive if c.broader_of else c.count }}</td>
     <td><div class="bar"><span style="width:{{ c.pct }}%"></span></div></td>
   </tr>
   {% endfor %}

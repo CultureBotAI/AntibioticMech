@@ -12,10 +12,14 @@ on disk.
 
 Exit status is 1 on any drift. The seeded fields are the ones compared; curated
 fields a seeder never writes (causal_graphs, activity_spectrum, producer_organisms,
-mode_of_action, clinical_status, discussions, datasets, curator evidence, and
-curation_history beyond the seed event) are deliberately NOT compared, so
-curation is possible without the check going permanently red. Those fields are
-covered by validation and by tests/test_corpus_integrity.py instead.
+clinical_status, discussions, datasets, curator evidence, and curation_history
+beyond the seed event) are deliberately NOT compared, so curation is possible
+without the check going permanently red. Those fields are covered by validation
+and by tests/test_corpus_integrity.py instead.
+
+`mode_of_action` is NOT one of them. The seeder writes it from ChEBI's mechanism
+roles, and it IS compared — together with its notes — for as long as the notes
+leave it the seeder's. See `curator_owns_mode_of_action` for who owns what.
 """
 
 from __future__ import annotations
@@ -36,13 +40,19 @@ from seed_from_sources import (  # noqa: E402
     SEEDED_FIELDS,
     assign_slugs,
     attach_aro_mechanism,
+    attach_fda_clinical_status,
+    attach_mibig_producers,
     build_concepts,
     card_sourced_view,
+    curator_owns_mode_of_action,
+    fda_sourced_clinical_view,
     flag_structure_collisions,
     load_decisions,
     merge,
+    mibig_sourced_producer_view,
     read_lockfile,
     record_path,
+    seeded_mode_of_action,
 )
 
 # The seeded field list is imported from the seeder so there is one definition
@@ -62,6 +72,11 @@ def rebuild() -> dict[str, dict]:
     records, _ = merge(concepts, chebi_rows, conf, load_decisions(),
                        manifest.get("retrieved_on", ""))
     attach_aro_mechanism(records, manifest.get("retrieved_on", ""))
+    attach_mibig_producers(
+        records,
+        str(manifest.get("sources", {}).get("mibig", {}).get("version", "")),
+    )
+    attach_fda_clinical_status(records)
     flag_structure_collisions(records, manifest.get("retrieved_on", ""))
     return records
 
@@ -97,6 +112,50 @@ def main() -> int:
         for field in CARD_FIELDS:
             if card_sourced_view(want, field) != card_sourced_view(actual, field):
                 drifted.append((path, field))
+        if mibig_sourced_producer_view(want) != mibig_sourced_producer_view(actual):
+            drifted.append((path, "producer_organisms"))
+        if fda_sourced_clinical_view(want) != fda_sourced_clinical_view(actual):
+            drifted.append((path, "clinical_status_assertions"))
+        actual_clinical = actual.get("clinical_status_assertions") or []
+        if (
+            any(item.get("source") == "DRUGS_AT_FDA" for item in actual_clinical)
+            and not any(item.get("source") != "DRUGS_AT_FDA" for item in actual_clinical)
+            and actual.get("clinical_status") != want.get("clinical_status")
+        ):
+            drifted.append((path, "clinical_status"))
+        # mode_of_action the same way: a value that CLAIMS to be seeded — it
+        # carries the seeder's note marker — must be what the seeder produces.
+        # A curator's own value carries no marker and is theirs to set, so the
+        # comparison is keyed on the on-disk side. Without this a hand-edit
+        # falsifying a seeded mechanism passed every gate. As with the CARD
+        # items, a curator can always take ownership by rewriting the notes;
+        # that is a deliberate escape hatch, not a hole.
+        if not curator_owns_mode_of_action(actual):
+            if seeded_mode_of_action(actual) != seeded_mode_of_action(want):
+                drifted.append((path, "mode_of_action"))
+            # The note carries the provenance and the cross-activity caveat,
+            # which this PR argues is the difference between a useful record and
+            # a contradictory one. Uncompared, it could be deleted or its cited
+            # role swapped with nothing noticing.
+            if actual.get("mode_of_action_notes") != want.get("mode_of_action_notes"):
+                drifted.append((path, "mode_of_action_notes"))
+            # The target scope is derived from the same roles as the value, so a
+            # hand edit that flipped HOST_SHARED_TARGET to MICROBIAL_TARGET would
+            # assert selectivity the sources never claimed — the exact failure
+            # this field exists to prevent, committed through the field itself.
+            #
+            # WHAT THIS DOES AND DOES NOT CATCH. It catches a bare edit: flip
+            # linezolid's scope and leave the notes alone and this reports drift.
+            # It does NOT catch an edit that also claims the field — append one
+            # `CURATOR:` sentence and the whole block above is skipped, exit 0.
+            # That is the same escape hatch `mode_of_action` has, and it is
+            # deliberate: a curator's judgement outranks a ChEBI role. But it
+            # means the guarantee is "a hand edit that does not claim the field",
+            # not "a hand edit". A commit message on this branch said the latter,
+            # which was wrong — see #83.
+            if (actual.get("mode_of_action_target_scope")
+                    != want.get("mode_of_action_target_scope")):
+                drifted.append((path, "mode_of_action_target_scope"))
 
     unlocked = sorted(set(expected) - set(lockfile))
     stale_lock = sorted(set(lockfile) - set(expected))

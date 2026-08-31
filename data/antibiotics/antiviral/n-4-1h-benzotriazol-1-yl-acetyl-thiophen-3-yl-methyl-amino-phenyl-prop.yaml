@@ -18,6 +18,12 @@ xrefs:
 - pdb-ccd:R30
 activity_roles:
 - CHEBI:149553
+mode_of_action: VIRAL_PROTEASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:147285 (EC 3.4.22.69 (SARS coronavirus
+  main proteinase) inhibitor). ChEBI asserts the role on the compound. The role names
+  a target specific to the microbe or virus — see mode_of_action_target_scope. Not
+  a curator's mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CCC(=O)Nc1ccc(N(Cc2ccsc2)C(=O)Cn2nnc3ccccc32)cc1
   standard_inchi: InChI=1S/C22H21N5O2S/c1-2-21(28)23-17-7-9-18(10-8-17)26(13-16-11-12-30-15-16)22(29)14-27-20-6-4-3-5-19(20)24-25-27/h3-12,15H,2,13-14H2,1H3,(H,23,28)
@@ -34,9 +40,17 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-0454fe0cfb
   role_terms:
   - CHEBI:149553
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:10Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

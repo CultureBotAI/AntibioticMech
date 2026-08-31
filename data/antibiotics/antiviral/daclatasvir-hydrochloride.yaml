@@ -38,6 +38,12 @@ xrefs:
 activity_roles:
 - CHEBI:36044
 - CHEBI:83799
+mode_of_action: VIRAL_ASSEMBLY_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:83799 (nonstructural protein
+  5A inhibitor). ChEBI asserts the role on the compound. The role names a target specific
+  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: COC(=O)N[C@H](C(=O)N1CCC[C@H]1c1ncc(-c2ccc(-c3ccc(-c4cnc([C@@H]5CCCN5C(=O)[C@@H](NC(=O)OC)C(C)C)n4)cc3)cc2)n1)C(C)C.Cl.Cl
   standard_inchi: InChI=1S/C40H50N8O6.2ClH/c1-23(2)33(45-39(51)53-5)37(49)47-19-7-9-31(47)35-41-21-29(43-35)27-15-11-25(12-16-27)26-13-17-28(18-14-26)30-22-42-36(44-30)32-10-8-20-48(32)38(50)34(24(3)4)46-40(52)54-6;;/h11-18,21-24,31-34H,7-10,19-20H2,1-6H3,(H,41,43)(H,42,44)(H,45,51)(H,46,52);2*1H/t31-,32-,33-,34-;;/m0../s1
@@ -55,9 +61,17 @@ source_concepts:
   role_terms:
   - CHEBI:36044
   - CHEBI:83799
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:29Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

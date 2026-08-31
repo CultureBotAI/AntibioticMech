@@ -19,6 +19,12 @@ xrefs:
 - gmelin:2703116
 activity_roles:
 - CHEBI:52629
+mode_of_action: VIRAL_POLYMERASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:52629 (EC 3.1.26.13 (retroviral
+  ribonuclease H) inhibitor). ChEBI asserts the role on the compound. The role names
+  a target specific to the microbe or virus — see mode_of_action_target_scope. Not
+  a curator's mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: COc1cccc(OC)c1C(=O)NNC(=O)c1ccccc1O
   standard_inchi: InChI=1S/C16H16N2O5/c1-22-12-8-5-9-13(23-2)14(12)16(21)18-17-15(20)10-6-3-4-7-11(10)19/h3-9,19H,1-2H3,(H,17,20)(H,18,21)
@@ -35,9 +41,17 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-655a18a05f
   role_terms:
   - CHEBI:52629
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:19Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:35Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

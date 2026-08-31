@@ -43,20 +43,36 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+# Local text-embedding stack (scripts/embed_*.py). Heavy (torch), deliberately
+# out of the core install: the recipes run on system python, and neither `just
+# qc` nor the site build needs it. Declared so the versions are recorded.
+embed = [
+    "sentence-transformers>=3.0",
+    "numpy>=1.26",
+    "pacmap>=0.7",
+    "umap-learn>=0.5",
+]
+
 dev = [
     "pytest>=7.4",
     "pytest-cov>=4.1",
     "ruff>=0.4",
 ]
-# Reserved for the model-assisted research path described in NEXT_TASKS.md,
-# which is not implemented yet — nothing in the repository imports this today.
-# When it lands, only that script will need the client, and only when actually
-# calling a provider: extraction, seeding, validation, rendering and the whole
-# test suite must keep running without it, the same separation data/raw/ has
-# from the upstream ChEBI and CARD releases. Pinned to 3.12+ to match TraitMech
-# and HabitatMech, which share the client and the conventions.
+# Optional model-assisted research lane used only by research_antibiotic.py.
+# Extraction, seeding, validation, rendering, and tests remain independent.
+# Python 3.12+ matches the client's floor; the runner defaults to an isolated
+# uvx environment so the main project environment is not rebuilt.
 research = [
-    "deep-research-client[cyberian]>=0.2.4; python_version >= '3.12'",
+    "deep-research-client[cyberian]>=0.2.12; python_version >= '3.12'",
+]
+# Reproducible, CPU-only build dependencies for the generated chemical map.
+# These are not needed to consume the library or browse the committed site.
+chemical-map = [
+    "numpy==2.2.6",
+    "rdkit==2026.3.5",
+    "scikit-learn==1.7.2",
+    "scipy==1.15.3",
+    "umap-learn==0.5.12",
 ]
 
 [project.urls]

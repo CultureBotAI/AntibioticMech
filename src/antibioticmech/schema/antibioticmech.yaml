@@ -205,8 +205,30 @@ classes:
           and `causal_graphs`.
         range: ModeOfActionEnum
 
+      mode_of_action_target_scope:
+        description: >-
+          Whether the target `mode_of_action` names belongs to the microbe or is
+          shared with the host. Both are legitimate antimicrobial mechanisms —
+          a host-directed antiviral inhibits host translation the virus depends
+          on, and a virus has no ribosome of its own — but they are different
+          claims, and `PROTEIN_SYNTHESIS_INHIBITION` alone cannot tell
+          linezolid's bacterial 50S from omacetaxine's host 80S. Derived from
+          the ChEBI role, not curated: a role naming a microbe-specific target
+          (topoisomerase IV, dihydropteroate synthase, HIV protease) gives
+          MICROBIAL_TARGET; a generic one (protein synthesis inhibitor) gives
+          HOST_SHARED_TARGET. Owned together with `mode_of_action`, so a curator
+          who claims that field owns this one too — and may legitimately leave
+          this one empty, since the seeder cannot derive a scope for a value it
+          did not derive. `just worklist --queue moa-scope` lists those.
+        range: ModeOfActionTargetScopeEnum
+
       mode_of_action_notes:
-        description: Curator rationale for the mode-of-action assignment.
+        description: >-
+          Provenance and rationale for `mode_of_action`, and the field that
+          decides who owns it. A seeded value names the ChEBI role it came from;
+          a curator claims the field — to correct a value, or to veto one by
+          leaving `mode_of_action` empty — by writing a note beginning `CURATOR:`.
+          See docs/HARMONIZATION.md.
         range: string
 
       cidality:
@@ -233,6 +255,14 @@ classes:
       clinical_status:
         description: Regulatory / use status, where a source states it.
         range: ClinicalStatusEnum
+
+      clinical_status_assertions:
+        description: >-
+          Jurisdiction- and product-specific evidence behind clinical_status.
+          Substance identity and regulatory status retain separate provenance.
+        multivalued: true
+        inlined_as_list: true
+        range: ClinicalStatusAssertion
 
       source_concepts:
         description: >-
@@ -410,10 +440,92 @@ classes:
         description: MIBiG accession for the BGC, where one is characterized.
         range: string
         pattern: "^BGC[0-9]{7}$"
+      source:
+        description: Upstream resource asserting this producer relationship.
+        range: string
+      source_version:
+        description: Release version of the upstream resource used for this assertion.
+        range: string
+      source_record_version:
+        description: Version of the individual upstream record, when versioned separately.
+        range: string
+      source_quality:
+        description: Quality label assigned by the upstream resource.
+        range: string
+      reviewed:
+        description: Whether the upstream entry passed the declared review filter.
+        range: boolean
       note:
         range: string
       reference:
         description: PMID:..., DOI:..., or an opaque URL.
+        range: string
+
+  ClinicalStatusAssertion:
+    description: A regulator's status for one substance-containing drug product.
+    attributes:
+      status:
+        required: true
+        range: ClinicalStatusEnum
+      jurisdiction:
+        required: true
+        range: string
+      application_number:
+        required: true
+        range: string
+        pattern: "^[0-9]{6}$"
+      application_type:
+        range: string
+      product_number:
+        required: true
+        range: string
+      sponsor_name:
+        range: string
+      drug_name:
+        range: string
+      ingredient_name:
+        required: true
+        range: string
+      substance_id:
+        description: FDA UNII used to retrieve the GSRS identity record.
+        required: true
+        range: string
+        pattern: "^UNII:[A-Z0-9]+$"
+      approval_date:
+        required: true
+        range: date
+      submission_status:
+        required: true
+        range: string
+      marketing_status:
+        required: true
+        range: string
+      currently_marketed:
+        required: true
+        range: boolean
+      source:
+        required: true
+        range: string
+      source_version:
+        required: true
+        range: string
+      source_retrieved_on:
+        required: true
+        range: date
+      identity_source:
+        required: true
+        range: string
+      identity_source_version:
+        required: true
+        range: string
+      identity_retrieved_on:
+        required: true
+        range: date
+      identity_record_version:
+        required: true
+        range: string
+      reference:
+        required: true
         range: string
 
   MolecularTarget:
@@ -714,7 +826,13 @@ enums:
       ANTIBACTERIAL:
         description: Active against bacteria (includes antibacterial drugs and agents).
       ANTIMYCOBACTERIAL:
-        description: Antitubercular, antimycobacterial and leprostatic agents.
+        description: >-
+          Antitubercular, antimycobacterial and leprostatic agents. A SUBCLASS
+          of ANTIBACTERIAL — mycobacteria are bacteria — so a consumer asking
+          "which compounds act on bacteria?" must take ANTIBACTERIAL and
+          ANTIMYCOBACTERIAL together. Filing is exclusive and picks the
+          narrower claim, so these records are not also under ANTIBACTERIAL.
+        is_a: ANTIBACTERIAL
       ANTIFUNGAL:
         description: Antifungal agents, drugs, agrochemical fungicides.
       ANTIPROTOZOAL:
@@ -762,6 +880,29 @@ enums:
         description: Several mechanisms are documented and none is primary.
       OTHER:
       UNKNOWN:
+
+  ModeOfActionTargetScopeEnum:
+    description: >-
+      Whether the target named by `mode_of_action` is the microbe's own or one
+      it shares with the host. Not a confidence rating: both values mark true
+      mechanisms, and the distinction is what lets a consumer filter for
+      microbe-selective agents without discarding host-directed ones.
+    permissible_values:
+      MICROBIAL_TARGET:
+        description: >-
+          The ChEBI role names a target specific to the microbe or virus — DNA
+          topoisomerase IV, dihydropteroate synthase, chitin synthase, HIV
+          protease. NOT DNA gyrase: ChEBI's EC 5.99.1.3 term is broader than the
+          bacterial enzyme and admits anthracyclines that poison the human one,
+          so it is scoped host-shared.
+      HOST_SHARED_TARGET:
+        description: >-
+          The role names a target the host also has, so the mechanism is true
+          but not evidence of selectivity. Covers both microbe-selective drugs
+          acting on a conserved machine (linezolid on the bacterial ribosome)
+          and genuinely host-directed ones (omacetaxine on host translation).
+          Which of the two applies is a curation question this flag does not
+          answer; it marks where that question exists.
 
   CidalityEnum:
     permissible_values:

@@ -29,6 +29,12 @@ xrefs:
 - wikipedia.en:Indinavir
 activity_roles:
 - CHEBI:35660
+mode_of_action: VIRAL_PROTEASE_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:35660 (HIV protease inhibitor).
+  ChEBI asserts the role on the compound. The role names a target specific to the
+  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CC(C)(C)NC(=O)[C@@H]1CN(Cc2cccnc2)CCN1C[C@@H](O)C[C@@H](Cc1ccccc1)C(=O)N[C@H]1c2ccccc2C[C@H]1O
   standard_inchi: InChI=1S/C36H47N5O4/c1-36(2,3)39-35(45)31-24-40(22-26-12-9-15-37-21-26)16-17-41(31)23-29(42)19-28(18-25-10-5-4-6-11-25)34(44)38-33-30-14-8-7-13-27(30)20-32(33)43/h4-15,21,28-29,31-33,42-43H,16-20,22-24H2,1-3H3,(H,38,44)(H,39,45)/t28-,29+,31+,32-,33+/m1/s1
@@ -45,9 +51,17 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-8060606f4d
   role_terms:
   - CHEBI:35660
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:18Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -43,6 +43,12 @@ activity_roles:
 - CHEBI:86327
 structural_class: echinocandin antibiotic
 structural_class_id: ARO:3007496
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:230471 (EC 2.4.1.34 (1,3-β-glucan
+  synthase) inhibitor). ChEBI asserts the role on the compound. The role names a target
+  specific to the microbe or virus — see mode_of_action_target_scope. Not a curator's
+  mechanistic review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@@]1([C@@H](C)O)NC(=O)[C@H]([C@H](O)[C@@H](O)c2ccc(O)cc2)NC(=O)[C@@H]2C[C@@H](O)CN2C(=O)[C@H]([C@@H](C)O)NC(=O)[C@@H](NC(=O)c2ccc(-c3ccc(-c4ccc(OCCCCC)cc4)cc3)cc2)C[C@@H](O)[C@@H](O)NC(=O)[C@@H]2[C@@H](O)[C@@H](C)CN2C1=O'
   standard_inchi: InChI=1S/C58H73N7O17/c1-5-6-7-24-82-40-22-18-35(19-23-40)33-10-8-32(9-11-33)34-12-14-37(15-13-34)51(74)59-41-26-43(70)54(77)63-56(79)47-48(71)29(2)27-65(47)58(81)45(31(4)67)61-55(78)46(50(73)49(72)36-16-20-38(68)21-17-36)62-53(76)42-25-39(69)28-64(42)57(80)44(30(3)66)60-52(41)75/h8-23,29-31,39,41-50,54,66-73,77H,5-7,24-28H2,1-4H3,(H,59,74)(H,60,75)(H,61,78)(H,62,76)(H,63,79)/t29-,30+,31+,39+,41-,42-,43+,44-,45-,46-,47-,48-,49-,50-,54+/m0/s1
@@ -60,7 +66,7 @@ source_concepts:
   role_terms:
   - CHEBI:35718
   - CHEBI:86327
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 - source: CHEBI
   source_id: CHEBI:55346
   source_label: anidulafungin
@@ -68,7 +74,7 @@ source_concepts:
   role_terms:
   - CHEBI:35718
   - CHEBI:86327
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3009207
@@ -162,12 +168,89 @@ resistance_mechanisms:
   - reference: ARO:3009604
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007503 (anidulafungin);
       database assertion, not a primary citation.
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '021632'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: VICURON HOLDINGS
+  drug_name: ERAXIS
+  ingredient_name: ANIDULAFUNGIN
+  substance_id: UNII:9HLM53094I
+  approval_date: '2006-02-17'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '26'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021632
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '021632'
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: VICURON HOLDINGS
+  drug_name: ERAXIS
+  ingredient_name: ANIDULAFUNGIN
+  substance_id: UNII:9HLM53094I
+  approval_date: '2006-02-17'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '26'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021632
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 021948
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: PFIZER
+  drug_name: ERAXIS
+  ingredient_name: ANIDULAFUNGIN
+  substance_id: UNII:9HLM53094I
+  approval_date: '2006-02-17'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '26'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021948
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (ARO, CHEBI)
 - timestamp: '2026-08-30T01:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:35Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:57Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:30Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

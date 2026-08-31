@@ -45,6 +45,16 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 TEMPLATES_DIR = REPO_ROOT / "src" / "antibioticmech" / "templates"
 PAGES_DIR = REPO_ROOT / "pages"
+SCHEMA_PATH = REPO_ROOT / "src" / "antibioticmech" / "schema" / "antibioticmech.yaml"
+CHEMICAL_MAP_ARTIFACT = REPO_ROOT / "data" / "embeddings" / "chemical-structure-map.json"
+
+# Enum value -> the directory the corpus files it under. IMPORTED, not copied:
+# the seeder owns the corpus layout, and a second copy here would drift the
+# first time a class is added — which is exactly what happened when ANTIVIRAL
+# had to be threaded through four separate enumerations by hand.
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+from seed_from_sources import CLASS_DIRS, class_parents, rollup_by_class  # noqa: E402
+
 MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "MANIFEST.yaml"
 
 # Where the site is served from; the sitemap needs absolute URLs.
@@ -122,6 +132,32 @@ def load_records() -> list[tuple[Path, dict]]:
         if isinstance(doc, dict):
             out.append((path, doc))
     return out
+
+
+def load_chemical_map(record_ids: set[str]) -> dict:
+    try:
+        artifact = json.loads(CHEMICAL_MAP_ARTIFACT.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        raise SystemExit(
+            f"missing {CHEMICAL_MAP_ARTIFACT.relative_to(REPO_ROOT)}; "
+            "regenerate with `just chemical-map`"
+        ) from None
+    except json.JSONDecodeError as error:
+        raise SystemExit(f"{CHEMICAL_MAP_ARTIFACT}: invalid JSON: {error}") from error
+    rows = artifact.get("records") if isinstance(artifact, dict) else None
+    if not isinstance(rows, list):
+        raise SystemExit(f"{CHEMICAL_MAP_ARTIFACT}: records must be a list")
+    map_ids = {
+        row.get("identifier")
+        for row in rows
+        if isinstance(row, dict) and isinstance(row.get("identifier"), str)
+    }
+    if map_ids != record_ids or len(rows) != len(record_ids):
+        raise SystemExit(
+            f"{CHEMICAL_MAP_ARTIFACT}: identifiers do not match the live corpus; "
+            "regenerate with `just chemical-map`"
+        )
+    return artifact
 
 
 def extracted_at() -> str:
@@ -216,6 +252,7 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
         "molecular_targets": molecular_targets,
         "mode_of_action": doc.get("mode_of_action"),
         "mode_of_action_notes": doc.get("mode_of_action_notes"),
+        "mode_of_action_target_scope": doc.get("mode_of_action_target_scope"),
         "cidality": doc.get("cidality"),
         "clinical_status": doc.get("clinical_status"),
         "activity_spectrum": doc.get("activity_spectrum") or [],
@@ -231,8 +268,23 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
     }
 
 
+def class_hierarchy() -> dict[str, list[str]]:
+    """Parent class dir -> narrower class dirs.
+
+    A thin dir-slug view of `seed_from_sources.class_parents()`, which reads the
+    schema's enum `is_a`. One copy of the hierarchy, shared with `just report`
+    and the README block, because a hierarchy only the site honours is not one.
+    """
+    out: dict[str, list[str]] = {}
+    for child, parent in class_parents().items():
+        if parent in CLASS_DIRS and child in CLASS_DIRS:
+            out.setdefault(CLASS_DIRS[parent], []).append(CLASS_DIRS[child])
+    return out
+
+
 def build(out_dir: Path) -> None:
     records = load_records()
+    chemical_map = load_chemical_map({doc["identifier"] for _, doc in records})
     if not records:
         raise SystemExit(f"no records under {CORPUS_DIR}; run `just seed-apply` first")
 
@@ -269,6 +321,7 @@ def build(out_dir: Path) -> None:
     for class_dir in class_dirs:
         (out_dir / class_dir).mkdir(exist_ok=True)
     (out_dir / "class").mkdir(exist_ok=True)
+    (out_dir / "data").mkdir(exist_ok=True)
 
     # Corpus-wide stats need a full pass before the footer of the FIRST record
     # page can be rendered — reading the fields straight off `doc` here, not
@@ -307,6 +360,7 @@ def build(out_dir: Path) -> None:
     ]
 
     by_class: dict[str, list[dict]] = defaultdict(list)
+    href_by_identifier: dict[str, str] = {}
     for path, doc in records:
         class_dir = path.parent.name
         sources = sorted({c["source"] for c in (doc.get("source_concepts") or [])})
@@ -317,6 +371,7 @@ def build(out_dir: Path) -> None:
             encoding="utf-8",
         )
 
+        href_by_identifier[str(doc.get("identifier"))] = f"{class_dir}/{path.stem}.html"
         by_class[class_dir].append(
             {
                 "label": doc["label"],
@@ -328,18 +383,74 @@ def build(out_dir: Path) -> None:
             }
         )
 
+    # Filing is exclusive but the classes are not disjoint: mycobacteria are
+    # bacteria, so antimycobacterial records ARE antibacterial ones and a reader
+    # on the antibacterial page would otherwise never learn that 78 more sit one
+    # click away. Read from the schema so the site cannot disagree with it.
+    narrower = class_hierarchy()
+
+    # A subclass must sit immediately after ITS OWN parent. Sorted by directory
+    # name, "antimycobacterial" landed after "antifungal", so the indented row
+    # and the note saying it is "already counted in the row above it" pointed at
+    # the wrong row — the page asserted antimycobacterial were antifungals.
+    ordered: list[str] = []
+    for class_dir in class_dirs:
+        if any(class_dir in kids for kids in narrower.values()):
+            continue                       # placed with its parent, below
+        ordered.append(class_dir)
+        ordered.extend(child for child in narrower.get(class_dir, [])
+                       if child in class_dirs)
+    # Anything whose parent has no records of its own still has to appear.
+    ordered.extend(c for c in class_dirs if c not in ordered)
+
+    parent_of = {child: parent for parent, kids in narrower.items() for child in kids}
+
+    # rollup_by_class keys on ENUM names; the site works in directory slugs.
+    # Passing slugs straight in silently rolled nothing up and showed 1037 where
+    # 1115 belongs — the very number this change exists to correct.
+    enum_of_dir = {d: e for e, d in CLASS_DIRS.items()}
+
+    def rolled(per_dir: dict[str, int]) -> dict[str, int]:
+        by_enum = rollup_by_class({enum_of_dir[d]: n for d, n in per_dir.items()
+                                   if d in enum_of_dir})
+        return {d: by_enum.get(enum_of_dir[d], n) for d, n in per_dir.items()}
+
+    inclusive = rolled({d: len(by_class[d]) for d in class_dirs})
+    grounded_incl = rolled({d: sum(1 for i in by_class[d] if i["grounding"] == "EXACT")
+                            for d in class_dirs})
+
     classes = []
     class_pages: list[str] = []
-    for class_dir in class_dirs:
+    for class_dir in ordered:
         items = by_class[class_dir]
         classes.append(
             {
                 "label": CLASS_LABEL.get(class_dir, class_dir.replace("-", " ").title()),
                 "slug": class_dir,
                 "count": len(items),
-                "pct": round(100 * len(items) / total),
-                "grounded": sum(1 for i in items if i["grounding"] == "EXACT"),
+                "count_inclusive": inclusive.get(class_dir, len(items)),
+                "broader_of": bool(narrower.get(class_dir)),
+                "is_narrower": class_dir in parent_of,
+                # Named in the row text, not conveyed by an indent alone: a
+                # screen reader hears an ordinary row, and the indent is a lie
+                # the moment the sort order changes.
+                "parent_label": CLASS_LABEL.get(parent_of.get(class_dir, ""),
+                                                (parent_of.get(class_dir) or "").title()),
+                # Every derived figure follows the count actually DISPLAYED. A
+                # parent showing 1115 with a bar drawn from 1037, or an
+                # inclusive count beside an exclusive "grounded", is the same
+                # class of error this commit exists to fix, one column over.
+                "pct": round(100 * inclusive.get(class_dir, len(items)) / total),
+                "grounded": grounded_incl.get(class_dir, 0),
                 "description": CLASS_BLURB.get(class_dir, ""),
+                "narrower": [
+                    {"slug": child, "label": CLASS_LABEL.get(child, child.title()),
+                     "count": len(by_class.get(child, []))}
+                    for child in narrower.get(class_dir, []) if by_class.get(child)
+                ],
+                "broader": next(
+                    ({"slug": parent, "label": CLASS_LABEL.get(parent, parent.title())}
+                     for parent, kids in narrower.items() if class_dir in kids), None),
             }
         )
         ordered = sorted(items, key=lambda r: r["label"])
@@ -355,6 +466,8 @@ def build(out_dir: Path) -> None:
                     label=CLASS_LABEL.get(class_dir, class_dir.replace("-", " ").title()),
                     slug=class_dir,
                     description=CLASS_BLURB.get(class_dir, ""),
+                    narrower=[c for c in classes if c["slug"] == class_dir][0]["narrower"],
+                    broader=[c for c in classes if c["slug"] == class_dir][0]["broader"],
                     records=chunk,
                     total=len(ordered),
                     page=n,
@@ -388,6 +501,37 @@ def build(out_dir: Path) -> None:
         env.get_template("browse.html").render(stats=stats, classes=classes, root=""),
         encoding="utf-8",
     )
+    # The corpus map, when its JSON has been built. Committed and small, so the
+    # page renders identically for anyone; absent only in a checkout where
+    # `just embed-map` has never run, and skipped rather than half-drawn.
+    map_path = REPO_ROOT / "data" / "embeddings" / "corpus_map.json"
+    map_rendered = map_path.exists()
+    if map_rendered:
+        corpus_map = json.loads(map_path.read_text(encoding="utf-8"))
+        # The browser needs record URLs; it must not have to guess a slug.
+        corpus_map["hrefs"] = {p[3]: href_by_identifier[p[3]]
+                               for p in corpus_map["points"]
+                               if p[3] in href_by_identifier}
+        (out_dir / "map.html").write_text(
+            env.get_template("map.html").render(
+                stats=stats, map=corpus_map,
+                # Escaped for embedding in a <script> block: a label containing
+                # "</script>" would otherwise end the element early. The template
+                # marks this |safe, so the escaping has to happen here.
+                map_json=json.dumps(corpus_map, separators=(",", ":"))
+                .replace("<", "\\u003c").replace("\u2028", "\\u2028")
+                .replace("\u2029", "\\u2029"), root=""),
+            encoding="utf-8")
+
+    (out_dir / "chemical-map.html").write_text(
+        env.get_template("chemical_map.html").render(
+            stats=stats,
+            quality=chemical_map["quality"],
+            model_version=chemical_map["model_version"],
+            root="",
+        ),
+        encoding="utf-8",
+    )
     (out_dir / "404.html").write_text(
         env.get_template("not_found.html").render(root="", stats=stats),
         encoding="utf-8",
@@ -396,11 +540,16 @@ def build(out_dir: Path) -> None:
     # Vendored byte-identical across all seven Mech sites: reads localStorage
     # "mech-theme", sets data-theme before paint, injects the toggle button.
     shutil.copyfile(TEMPLATES_DIR / "theme-toggle.js", out_dir / "theme-toggle.js")
+    shutil.copyfile(TEMPLATES_DIR / "chemical_map.js", out_dir / "chemical-map.js")
+    shutil.copyfile(
+        CHEMICAL_MAP_ARTIFACT,
+        out_dir / "data" / "chemical-structure-map.json",
+    )
     # Without this, Pages runs Jekyll over the site and silently drops any
     # path beginning with an underscore — a 404 rather than a visible error.
     (out_dir / ".nojekyll").write_text("", encoding="utf-8")
 
-    listed = ["index.html", "browse.html", "404.html"] + class_pages
+    listed = ["index.html", "browse.html", "chemical-map.html", "404.html"] + class_pages
     listed += [f"{path.parent.name}/{path.stem}.html" for path, _ in records]
     urls = "\n".join(f"  <url><loc>{SITE_BASE}{page}</loc></url>" for page in listed)
     (out_dir / "sitemap.xml").write_text(
@@ -418,10 +567,14 @@ def build(out_dir: Path) -> None:
     # shrinks and shifts, not just grows; without this, pages/ keeps serving a
     # stale page forever and --check would have nothing to catch it with.
     written = {
-        out_dir / "index.html", out_dir / "browse.html", out_dir / "404.html",
-        out_dir / "style.css", out_dir / "theme-toggle.js",
-        out_dir / ".nojekyll", out_dir / "sitemap.xml", out_dir / "robots.txt",
+        out_dir / "index.html", out_dir / "browse.html", out_dir / "chemical-map.html",
+        out_dir / "chemical-map.js", out_dir / "data" / "chemical-structure-map.json",
+        out_dir / "404.html", out_dir / "style.css", out_dir / "theme-toggle.js",
+        out_dir / ".nojekyll",
+        out_dir / "sitemap.xml", out_dir / "robots.txt",
     }
+    if map_rendered:
+        written.add(out_dir / "map.html")
     written |= {out_dir / page for page in class_pages}
     written |= {out_dir / "class" / f"{d}.json" for d in class_dirs}
     written |= {out_dir / path.parent.name / f"{path.stem}.html" for path, _ in records}

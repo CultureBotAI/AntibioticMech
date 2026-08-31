@@ -22,6 +22,12 @@ parent_compounds:
 - CHEBI:76224
 activity_roles:
 - CHEBI:35718
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:59672 (EC 2.4.1.16 (chitin synthase)
+  inhibitor). ChEBI asserts the role on the compound. The role names a target specific
+  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
+  review.
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@@]12Cc3c(C)coc3C(=O)[C@@]1(C)CCC=C2C'
   standard_inchi: InChI=1S/C15H18O2/c1-9-5-4-6-15(3)12(9)7-11-10(2)8-17-13(11)14(15)16/h5,8,12H,4,6-7H2,1-3H3/t12-,15-/m0/s1
@@ -38,9 +44,17 @@ source_concepts:
   minted_identifier: antibioticmech:chebi-be9268c0a2
   role_terms:
   - CHEBI:35718
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:22Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:37Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

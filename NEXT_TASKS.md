@@ -24,19 +24,17 @@ prose below are the reasoning, the queue is the list.
   No data source will close this column: a mechanism graph is authored from
   primary literature with a citation per edge (see `curation/source_queue.tsv`,
   `discovery-literature`).
-- **Seed `mode_of_action` from ChEBI's mechanism roles.** The top of the source
-  queue, and the cheapest close available: ChEBI already asserts mechanism-shaped
-  roles on 765 of the 2,623 ChEBI-sourced records through reviewed edges —
-  protein synthesis inhibitor, DNA synthesis inhibitor, sterol 14α-demethylase
-  inhibitor, dihydropteroate synthase inhibitor, topoisomerase, HIV
-  RT/integrase/protease, sialidase. Same source, same licence, same extraction
-  path. Needs a curated role→`ModeOfActionEnum` allowlist, not a regex: the same
-  role space also holds angiogenesis and platelet-aggregation inhibitors, which
-  are host-directed and irrelevant here.
-
-  A second pass could add ARO drug-class definitions as a citation source where
-  the definition really is a mechanism claim rather than a structural
-  description — but that is a per-class review, and the ChEBI roles come first.
+- **Extend `mode_of_action` beyond the 416 records ChEBI's roles reach.** Done
+  for those: 32 curated roles now map to `ModeOfActionEnum`. The rest have no role in the 32-role map — some bear
+  mechanism-naming roles from unrelated pharmacology (angiogenesis, proteasome,
+  platelet aggregation) that name no antimicrobial mechanism at all, and a few
+  are simply unmapped. A role whose target the host merely SHARES is no longer a
+  reason to exclude it: those are mapped and marked
+  `mode_of_action_target_scope: HOST_SHARED_TARGET`. Two routes, neither cheap: ARO
+  drug-class definitions, where the definition really is a mechanism claim rather
+  than a structural description (a per-class review, not a regex), and curated
+  review literature per compound. Prefer the second for anything that will carry
+  a causal graph anyway.
 - **Ground the 250 minted records.** `just worklist --queue minted`. Most are
   CARD molecules with a PubChem structure and no ChEBI entry; some deserve a
   ChEBI term request.
@@ -62,7 +60,7 @@ prose below are the reasoning, the queue is the list.
   Until then the asymmetry should be visible in the report rather than read as
   "antivirals have no known resistance".
 
-- **Decide what the 364 structureless concepts are.** `just worklist
+- **Decide what the 371 structureless concepts are.** `just worklist
   --queue no-structure`. Each is a mixture, a class, a preparation, or a
   compound whose structure simply is not in ChEBI or PubChem. They need
   `EXCLUDE` decisions with rationale, or a structure.
@@ -97,8 +95,9 @@ prose below are the reasoning, the queue is the list.
   accuracy-and-provenance improvement rather than a coverage gap.
 - **Retired-URL redirects.** The slugs of dropped records are now reserved in
   `data/antibiotics/RETIRED.tsv`, so no URL is ever reissued to a different
-  compound — but 134 record pages disappeared without a redirect when unreviewed
+  compound — but 115 record pages disappeared without a redirect when unreviewed
   ChEBI relations stopped being trusted, and nothing serves those addresses.
+  (134 left at first; 19 came back when antivirals entered scope.)
   HabitatMech rebuilds a redirect map from git history; this repository now has
   the history to do the same.
 - **Cross-repo links.** A compound record should point at the TraitMech traits it

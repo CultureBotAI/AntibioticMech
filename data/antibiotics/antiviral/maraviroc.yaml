@@ -29,6 +29,12 @@ xrefs:
 activity_roles:
 - CHEBI:36044
 - CHEBI:59886
+mode_of_action: VIRAL_ENTRY_INHIBITION
+mode_of_action_notes: Assigned from ChEBI role CHEBI:59886 (HIV fusion inhibitor).
+  ChEBI asserts the role on the compound. The target it names is one the host has
+  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
+  Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: Cc1nnc(C(C)C)n1[C@@H]1C[C@H]2CC[C@@H](C1)N2CC[C@H](NC(=O)C1CCC(F)(F)CC1)c1ccccc1
   standard_inchi: InChI=1S/C29H41F2N5O/c1-19(2)27-34-33-20(3)36(27)25-17-23-9-10-24(18-25)35(23)16-13-26(21-7-5-4-6-8-21)32-28(37)22-11-14-29(30,31)15-12-22/h4-8,19,22-26H,9-18H2,1-3H3,(H,32,37)/t23-,24+,25-,26-/m0/s1
@@ -46,9 +52,300 @@ source_concepts:
   role_terms:
   - CHEBI:36044
   - CHEBI:59886
-  source_version: '2026-08-29'
+  source_version: '2026-08-30'
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 022128
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: VIIV HLTHCARE
+  drug_name: SELZENTRY
+  ingredient_name: MARAVIROC
+  substance_id: UNII:MD6P741W8A
+  approval_date: '2007-08-06'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '138'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022128
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 022128
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: VIIV HLTHCARE
+  drug_name: SELZENTRY
+  ingredient_name: MARAVIROC
+  substance_id: UNII:MD6P741W8A
+  approval_date: '2007-08-06'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '138'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022128
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 022128
+  application_type: NDA
+  product_number: '003'
+  sponsor_name: VIIV HLTHCARE
+  drug_name: SELZENTRY
+  ingredient_name: MARAVIROC
+  substance_id: UNII:MD6P741W8A
+  approval_date: '2007-08-06'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '138'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022128
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 022128
+  application_type: NDA
+  product_number: '004'
+  sponsor_name: VIIV HLTHCARE
+  drug_name: SELZENTRY
+  ingredient_name: MARAVIROC
+  substance_id: UNII:MD6P741W8A
+  approval_date: '2007-08-06'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '138'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022128
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '203347'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: HETERO LABS LTD III
+  drug_name: MARAVIROC
+  ingredient_name: MARAVIROC
+  substance_id: UNII:MD6P741W8A
+  approval_date: '2022-02-07'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '138'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=203347
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '203347'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: HETERO LABS LTD III
+  drug_name: MARAVIROC
+  ingredient_name: MARAVIROC
+  substance_id: UNII:MD6P741W8A
+  approval_date: '2022-02-07'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '138'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=203347
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '208984'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: VIIV HLTHCARE
+  drug_name: SELZENTRY
+  ingredient_name: MARAVIROC
+  substance_id: UNII:MD6P741W8A
+  approval_date: '2016-11-04'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '138'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208984
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '216143'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: RHODES PHARMS
+  drug_name: MARAVIROC
+  ingredient_name: MARAVIROC
+  substance_id: UNII:MD6P741W8A
+  approval_date: '2025-11-04'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '138'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=216143
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '216143'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: RHODES PHARMS
+  drug_name: MARAVIROC
+  ingredient_name: MARAVIROC
+  substance_id: UNII:MD6P741W8A
+  approval_date: '2025-11-04'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '138'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=216143
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '217114'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: I 3 PHARMS
+  drug_name: MARAVIROC
+  ingredient_name: MARAVIROC
+  substance_id: UNII:MD6P741W8A
+  approval_date: '2023-08-17'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '138'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217114
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '217114'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: I 3 PHARMS
+  drug_name: MARAVIROC
+  ingredient_name: MARAVIROC
+  substance_id: UNII:MD6P741W8A
+  approval_date: '2023-08-17'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '138'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217114
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '217880'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: NAVINTA LLC
+  drug_name: MARAVIROC
+  ingredient_name: MARAVIROC
+  substance_id: UNII:MD6P741W8A
+  approval_date: '2025-05-13'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '138'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217880
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '217880'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: NAVINTA LLC
+  drug_name: MARAVIROC
+  ingredient_name: MARAVIROC
+  substance_id: UNII:MD6P741W8A
+  approval_date: '2025-05-13'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '138'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217880
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: Seeded from data/raw/ inventories (CHEBI)
+- timestamp: '2026-08-30T07:29:21Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:36Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:58Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
