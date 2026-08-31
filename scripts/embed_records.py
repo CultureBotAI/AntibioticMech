@@ -75,6 +75,17 @@ def humanize(value: str) -> str:
 
 
 def build_document(record: dict, names: dict[str, str]) -> str:
+    """One document per record, ordered MOST DISCRIMINATIVE FIRST.
+
+    The model's window is 512 tokens and 94 of 2,923 documents exceed it, so the
+    tail of those is silently dropped. Order therefore decides what survives.
+    Mechanism, roles and targets — short, and the fields that actually separate
+    one antibiotic from another — go before the definition; synonyms and
+    identifiers, which are verbose and weakly semantic, go last and are the
+    first things truncation takes. An earlier ordering put synonyms ahead of
+    mechanism, so vancomycin (1,065 tokens) kept a long list of trade names and
+    lost its resistance determinants.
+    """
     parts: list[str] = [str(record.get("label") or record.get("identifier"))]
 
     klass = humanize(record.get("antimicrobial_class", ""))
@@ -82,13 +93,6 @@ def build_document(record: dict, names: dict[str, str]) -> str:
         parts.append(f"{klass} agent")
     if record.get("structural_class"):
         parts.append(str(record["structural_class"]))
-    if record.get("definition"):
-        parts.append(str(record["definition"]))
-
-    synonyms = [str(s.get("synonym_text")) for s in (record.get("synonyms") or [])
-                if s.get("synonym_text")]
-    if synonyms:
-        parts.append("also known as " + ", ".join(synonyms[:8]))
 
     # The mechanism VALUE and its scope, never the boilerplate note.
     if record.get("mode_of_action"):
@@ -110,9 +114,18 @@ def build_document(record: dict, names: dict[str, str]) -> str:
     if resistance:
         parts.append("resistance: " + ", ".join(resistance[:6]))
 
+    if record.get("definition"):
+        parts.append(str(record["definition"]))
+
+    synonyms = [str(s.get("synonym_text")) for s in (record.get("synonyms") or [])
+                if s.get("synonym_text")]
+    if synonyms:
+        parts.append("also known as " + ", ".join(synonyms[:6]))
+
     # Identifiers are opaque one at a time, but their SHARED tokens cluster
     # records from the same ChEBI subtree or the same ARO drug class, which is
-    # real structure rather than noise.
+    # real structure rather than noise. Last: weakest signal per token, so they
+    # are what truncation should take first.
     ground = [str(record.get("identifier"))]
     ground += [str(p) for p in (record.get("parent_compounds") or [])]
     ground += [str(x) for x in (record.get("xrefs") or [])]

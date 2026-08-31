@@ -296,12 +296,18 @@ useful for curation: an outlier is usually a record whose annotation is thin or
 inconsistent with its neighbours, and a cluster spanning two classes is worth
 looking at.
 
-It separates the classes without being told them — 81% of a compound's ten
+It separates the classes without being told them — 88% of a compound's ten
 nearest neighbours share its class, against a 23% baseline for the class sizes.
-The exception is instructive: `ANTIMYCOBACTERIAL` scores 41%, because a further
-40% of its neighbours are `ANTIBACTERIAL`. The embedding recovers, from text
-alone, the subclass relationship the schema declares — mycobacteria are
-bacteria.
+The exception is instructive: `ANTIMYCOBACTERIAL` scores 52%, with a further 36%
+of its neighbours in `ANTIBACTERIAL`. The embedding recovers, from text alone,
+the subclass relationship the schema declares — mycobacteria are bacteria.
+
+Field ORDER matters, because 78 documents exceed the model's 512-token window
+and the tail of those is silently dropped. Mechanism, roles and targets are
+therefore emitted before the definition, and synonyms and identifiers last:
+they are verbose, weakly semantic, and the right thing to lose. Ordering
+synonyms earlier cost 6 points of neighbour purity and made vancomycin's
+resistance determinants the part that fell off the end.
 
 A chemical-similarity map is a different artifact and would need molecular
 fingerprints or a chemical language model rather than a text encoder.
