@@ -547,6 +547,9 @@ def build(out_dir: Path) -> None:
         encoding="utf-8",
     )
     shutil.copyfile(TEMPLATES_DIR / "style.css", out_dir / "style.css")
+    # Vendored byte-identical across all seven Mech sites: reads localStorage
+    # "mech-theme", sets data-theme before paint, injects the toggle button.
+    shutil.copyfile(TEMPLATES_DIR / "theme-toggle.js", out_dir / "theme-toggle.js")
     shutil.copyfile(TEMPLATES_DIR / "chemical_map.js", out_dir / "chemical-map.js")
     shutil.copyfile(
         CHEMICAL_MAP_ARTIFACT,
@@ -576,7 +579,8 @@ def build(out_dir: Path) -> None:
     written = {
         out_dir / "index.html", out_dir / "browse.html", out_dir / "chemical-map.html",
         out_dir / "chemical-map.js", out_dir / "data" / "chemical-structure-map.json",
-        out_dir / "404.html", out_dir / "style.css", out_dir / ".nojekyll",
+        out_dir / "404.html", out_dir / "style.css", out_dir / "theme-toggle.js",
+        out_dir / ".nojekyll",
         out_dir / "sitemap.xml", out_dir / "robots.txt",
     }
     if map_rendered:
