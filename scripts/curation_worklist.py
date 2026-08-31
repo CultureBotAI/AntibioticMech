@@ -291,6 +291,43 @@ def aro_class_queue(records: list[dict], conf: dict | None = None) -> list[dict]
     return rows
 
 
+def xref_unverified_queue(records: list[dict]) -> list[dict]:
+    """Chemical-identity xrefs the corpus asserts but cannot check.
+
+    An xref means THE SAME STRUCTURE. The seeder enforces that wherever both
+    structures are known — polymyxin B2 listed CHEBI:8309, which is polymyxin B1
+    with a different InChIKey, and that is now dropped. But most referenced ChEBI
+    terms have no structure in the committed inventory, so most such xrefs are
+    kept UNCHECKED.
+
+    Keeping them is the right call: dropping a source assertion because we cannot
+    verify it is a worse error than carrying one we have not verified. What is
+    not acceptable is carrying it silently, which is what this queue fixes.
+
+    Keyed by record, since one record may carry several.
+    """
+    with (RAW_DIR / "chebi_antimicrobials.tsv").open(encoding="utf-8") as fh:
+        known = {row["chebi_id"]: row.get("standard_inchi_key") or ""
+                 for row in csv.DictReader(fh, delimiter="\t")}
+    rows = []
+    for record in records:
+        unchecked = [x for x in (record.get("xrefs") or [])
+                     if x.startswith("CHEBI:") and not known.get(x)]
+        if not unchecked:
+            continue
+        rows.append({
+            "queue": "xref-unverified",
+            "key": record["identifier"],
+            "label": record["label"],
+            "source": "+".join(sorted({c["source"] for c in record.get("source_concepts", [])})),
+            "source_id": unchecked[0],
+            "hint": (f"{len(unchecked)} ChEBI xref(s) with no structure in the inventory; "
+                     "same-structure unverified"),
+        })
+    rows.sort(key=lambda r: (-int(r["hint"].split()[0]), r["label"].lower()))
+    return rows
+
+
 def unknown_mechanism_queue(records: list[dict]) -> list[dict]:
     """Determinants seeded with mechanism_type UNKNOWN.
 
@@ -359,7 +396,8 @@ def main() -> int:
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--queue",
                         choices=("all", "no-structure", "mechanism", "minted", "unknown-mech",
-                                 "moa-scope", "target-evidence", "aro-class"),
+                                 "moa-scope", "target-evidence", "aro-class",
+                                 "xref-unverified"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
     parser.add_argument("--tsv", type=Path, help="Write every row (not just --limit) to this TSV.")
@@ -379,6 +417,8 @@ def main() -> int:
         queues["moa-scope"] = mode_of_action_scope_queue(records)
     if args.queue in ("all", "aro-class"):
         queues["aro-class"] = aro_class_queue(records)
+    if args.queue in ("all", "xref-unverified"):
+        queues["xref-unverified"] = xref_unverified_queue(records)
     if args.queue in ("all", "target-evidence"):
         queues["target-evidence"] = target_evidence_queue(records)
     if args.queue in ("all", "aro-class"):

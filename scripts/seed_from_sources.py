@@ -126,9 +126,17 @@ XREF_PREFIX = {
     "ChEMBL": "chembl",
     "CAS": "cas",
     "CHEBI": "CHEBI",
-    "PDB": "pdb",
     "ARO": "ARO",
 }
+
+# Namespaces that do NOT identify a chemical structure, and so cannot mean "the
+# same structure" — the contract `xrefs` states in docs/CURATION.md and the
+# schema. A PDB accession identifies a macromolecular STRUCTURE ENTRY: 1H8S is an
+# anti-ampicillin antibody complex and 1Q3W a human GSK3beta-alsterpaullone
+# complex, so listing them as chemical equivalents of ampicillin and
+# alsterpaullone asserts something no source claims. `pdb-ccd` is different — it
+# identifies a ligand chemical component — and stays.
+NON_STRUCTURE_XREF_PREFIXES = {"pdb", "PDB"}
 CURIE_LOCAL = re.compile(r"^[A-Za-z0-9._-]+$")
 BIOREGISTRY_PREFIX = re.compile(r"^[a-z][a-z0-9._-]*$")
 
@@ -541,6 +549,11 @@ def assign_slugs(records: dict[str, dict], lockfile: dict[str, str],
 def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
           decisions: dict[str, dict], source_version: str) -> tuple[dict[str, dict], list[Concept]]:
     """Group concepts into records. Returns (records, skipped-for-no-structure)."""
+    # InChIKey per ChEBI id, from the committed inventory. The same-structure
+    # gate on xrefs uses it; a ChEBI term with no structure here is simply not
+    # comparable, and its xrefs are kept and queued rather than dropped.
+    chebi_keys = {cid: row["standard_inchi_key"]
+                  for cid, row in chebi_rows.items() if row.get("standard_inchi_key")}
     by_identity: dict[str, list[Concept]] = defaultdict(list)
     grounding: dict[str, str] = {}
     skipped: list[Concept] = []
@@ -659,7 +672,7 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
     records: dict[str, dict] = {}
     for identifier, group in by_identity.items():
         records[identifier] = build_record(identifier, grounding[identifier], group,
-                                           conf, source_version)
+                                           conf, source_version, chebi_keys)
     return records, skipped
 
 
@@ -825,7 +838,13 @@ def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
 
 
 def build_record(identifier: str, grounding_status: str, group: list[Concept],
-                 conf: dict, source_version: str) -> dict:
+                 conf: dict, source_version: str,
+                 chebi_keys: dict[str, str] | None = None) -> dict:
+    # InChIKey per ChEBI id, for the same-structure gate on xrefs below. Empty
+    # when the caller has none: the gate then keeps every xref it cannot compare,
+    # which is the behaviour it has for the majority anyway.
+    chebi_keys = chebi_keys or {}
+
     # ChEBI leads on identity and structure; ARO leads on class and mechanism.
     chebi = [c for c in group if c.source == "CHEBI"]
     aro = [c for c in group if c.source == "ARO"]
@@ -879,8 +898,6 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     for concept in aro:
         xrefs.insert(0, concept.source_id)
     xrefs = _dedupe(xrefs)
-    if xrefs:
-        record["xrefs"] = xrefs
     if roles:
         record["activity_roles"] = roles
     if structural_class:
@@ -910,6 +927,37 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     structure = next((c.structure for c in group if c.structure.get("standard_inchi")),
                      group[0].structure)
     record["chemical_structure"] = structure
+
+    # An xref means THE SAME STRUCTURE — the contract docs/CURATION.md and the
+    # schema both state. Three ways a source xref does not, all of which reached
+    # the corpus before this gate existed:
+    #
+    #   1. It identifies something that is not a structure at all. A PDB
+    #      accession is a macromolecular ENTRY: ampicillin carried pdb:1H8S, an
+    #      anti-ampicillin ANTIBODY complex, and alsterpaullone carried pdb:1Q3W,
+    #      a human GSK3beta complex.
+    #   2. Its structure is known and DIFFERENT. polymyxin B2 carried CHEBI:8309,
+    #      which is polymyxin B1 — a different InChIKey. That is the "a salt,
+    #      conjugate or stereoisomer is a different record" rule inverted.
+    #   3. It is a strictly BROADER class, which belongs in `parent_compounds`.
+    #      Erythromycin A, lividomycin A and mycinamicin IV each carried one
+    #      identifier in BOTH fields, which cannot both be true.
+    #
+    # Where the structure cannot be compared — most referenced ChEBI terms have
+    # no structure in the committed inventory — the xref is KEPT and surfaced on
+    # `just worklist --queue xref-unverified`. Dropping it would discard a source
+    # assertion on the grounds that we cannot check it, which is a different and
+    # worse error than keeping one we have not checked.
+    own_key = (structure or {}).get("standard_inchi_key")
+    broader = set(parents)
+    record["xrefs"] = [
+        x for x in xrefs
+        if x.split(":", 1)[0] not in NON_STRUCTURE_XREF_PREFIXES
+        and x not in broader
+        and not (own_key and chebi_keys.get(x) and chebi_keys[x] != own_key)
+    ]
+    if not record["xrefs"]:
+        record.pop("xrefs")
     record["source_concepts"] = [
         {
             "source": c.source,

@@ -131,6 +131,20 @@ the natural thing to do, and appending is the case that needs the token.
 - **Canary before a bulk write.** `just seed` (dry run), then
   `just seed-canary <IDENTIFIER>`, then read the file that was written — not just
   the exit code — before `just seed-apply`.
+**An xref means the same structure, and the seeder now enforces it.** Three
+kinds of source cross-reference are dropped rather than copied: a namespace that
+does not identify a structure at all (a `pdb:` accession is a macromolecular
+entry — ampicillin carried `pdb:1H8S`, an anti-ampicillin *antibody* complex);
+one whose structure is known and different (polymyxin B2 carried `CHEBI:8309`,
+which is polymyxin B1); and one already listed in `parent_compounds`, which
+means strictly broader and cannot also mean the same. `pdb-ccd` stays — it
+identifies a ligand chemical component.
+
+Where the structure cannot be compared, the xref is **kept** and listed by
+`just worklist --queue xref-unverified`. Dropping a source assertion because we
+cannot check it would be a worse error than carrying one unchecked; carrying it
+silently was the error.
+
 - **Never rename a record file.** Slugs are published URLs. Change the row in
   `data/antibiotics/PATHS.tsv` and re-seed; the integrity tests reject
   disagreement between filename and lockfile.
