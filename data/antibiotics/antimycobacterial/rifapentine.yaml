@@ -174,6 +174,50 @@ molecular_targets:
   - reference: ARO:3000737
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000534 (rifapentine); database
       assertion, not a primary citation.
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '021024'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: SANOFI AVENTIS US
+  drug_name: PRIFTIN
+  ingredient_name: RIFAPENTINE
+  substance_id: UNII:XJM390A33U
+  approval_date: '1998-06-22'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '41'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021024
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '217042'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: MACLEODS PHARMS
+  drug_name: RIFAPENTINE
+  ingredient_name: RIFAPENTINE
+  substance_id: UNII:XJM390A33U
+  approval_date: '2026-06-23'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '41'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217042
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -184,6 +228,14 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:28Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

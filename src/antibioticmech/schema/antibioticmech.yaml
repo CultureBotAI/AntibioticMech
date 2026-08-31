@@ -256,6 +256,14 @@ classes:
         description: Regulatory / use status, where a source states it.
         range: ClinicalStatusEnum
 
+      clinical_status_assertions:
+        description: >-
+          Jurisdiction- and product-specific evidence behind clinical_status.
+          Substance identity and regulatory status retain separate provenance.
+        multivalued: true
+        inlined_as_list: true
+        range: ClinicalStatusAssertion
+
       source_concepts:
         description: >-
           Every upstream concept that resolved to this record, with its native
@@ -432,10 +440,92 @@ classes:
         description: MIBiG accession for the BGC, where one is characterized.
         range: string
         pattern: "^BGC[0-9]{7}$"
+      source:
+        description: Upstream resource asserting this producer relationship.
+        range: string
+      source_version:
+        description: Release version of the upstream resource used for this assertion.
+        range: string
+      source_record_version:
+        description: Version of the individual upstream record, when versioned separately.
+        range: string
+      source_quality:
+        description: Quality label assigned by the upstream resource.
+        range: string
+      reviewed:
+        description: Whether the upstream entry passed the declared review filter.
+        range: boolean
       note:
         range: string
       reference:
         description: PMID:..., DOI:..., or an opaque URL.
+        range: string
+
+  ClinicalStatusAssertion:
+    description: A regulator's status for one substance-containing drug product.
+    attributes:
+      status:
+        required: true
+        range: ClinicalStatusEnum
+      jurisdiction:
+        required: true
+        range: string
+      application_number:
+        required: true
+        range: string
+        pattern: "^[0-9]{6}$"
+      application_type:
+        range: string
+      product_number:
+        required: true
+        range: string
+      sponsor_name:
+        range: string
+      drug_name:
+        range: string
+      ingredient_name:
+        required: true
+        range: string
+      substance_id:
+        description: FDA UNII used to retrieve the GSRS identity record.
+        required: true
+        range: string
+        pattern: "^UNII:[A-Z0-9]+$"
+      approval_date:
+        required: true
+        range: date
+      submission_status:
+        required: true
+        range: string
+      marketing_status:
+        required: true
+        range: string
+      currently_marketed:
+        required: true
+        range: boolean
+      source:
+        required: true
+        range: string
+      source_version:
+        required: true
+        range: string
+      source_retrieved_on:
+        required: true
+        range: date
+      identity_source:
+        required: true
+        range: string
+      identity_source_version:
+        required: true
+        range: string
+      identity_retrieved_on:
+        required: true
+        range: date
+      identity_record_version:
+        required: true
+        range: string
+      reference:
+        required: true
         range: string
 
   MolecularTarget:

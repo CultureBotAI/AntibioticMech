@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}Chemical structure map — AntibioticMech{% endblock %}
+{% block description %}Explore all AntibioticMech records by exact molecular-structure similarity using chiral Morgan fingerprints and a fixed UMAP projection.{% endblock %}
+{% block head %}<script defer src="chemical-map.js"></script>{% endblock %}
+{% block wrapclass %} map-page-wrap{% endblock %}
+{% block content %}
+<main id="chemical-map" data-source="data/chemical-structure-map.json">
+  <h1>Chemical structure map</h1>
+  <p class="lede">
+    This view places {{ stats.total }} records using <strong>chemical structure
+    only</strong>: chiral Morgan count fingerprints and Tanimoto distance,
+    projected to two dimensions with UMAP. Labels, antimicrobial classes,
+    mechanisms, targets, and curation fields can color or filter the view, but
+    they do not affect position.
+  </p>
+
+  <div class="note">
+    <p>
+      Read local neighborhoods, not the axes or global spacing. UMAP preserves
+      nearby structure better than map-wide distance. Current full-corpus
+      trustworthiness@10 is {{ "%.3f"|format(quality.trustworthiness_at_10) }}
+      and 2D neighbor overlap@10 is
+      {{ "%.3f"|format(quality.neighbor_overlap_at_10) }}.
+      Multi-fragment structures are retained exactly as their records define
+      them and are visibly marked.
+    </p>
+  </div>
+
+  <div class="map-controls" aria-label="Chemical map controls">
+    <label>
+      Find a compound
+      <input id="map-search" type="search" autocomplete="off"
+             placeholder="Name, synonym, or identifier">
+    </label>
+    <label>
+      Show class
+      <select id="map-class">
+        <option value="">All antimicrobial classes</option>
+      </select>
+    </label>
+    <label>
+      Color points by
+      <select id="map-color">
+        <option value="class">Antimicrobial class</option>
+        <option value="input">Structure input</option>
+        <option value="fragments">Single vs multi-fragment</option>
+      </select>
+    </label>
+    <button id="map-reset" type="button">Reset</button>
+  </div>
+
+  <div id="map-status" class="map-status" role="status" aria-live="polite">
+    Loading chemical map…
+  </div>
+  <div id="map-legend" class="map-legend" aria-label="Map legend"></div>
+
+  <div class="chemical-map-layout">
+    <div class="map-stage">
+      <canvas id="map-canvas" width="960" height="620"
+              aria-label="Interactive plot of compounds by chemical structure">
+        The interactive plot requires Canvas support. Use the search results
+        and selected-neighbor list beside it to explore the same records.
+      </canvas>
+      <div id="map-tooltip" class="map-tooltip" hidden></div>
+    </div>
+
+    <aside class="map-details" aria-label="Selected compound">
+      <div id="map-selection">
+        <h2>Select a compound</h2>
+        <p>Search by name or select a point to inspect its structural neighbors.</p>
+      </div>
+      <div>
+        <h2>Search results</h2>
+        <ol id="map-results" class="map-results">
+          <li>Enter a name, synonym, or identifier.</li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+
+  <details class="map-method">
+    <summary>Method and provenance</summary>
+    <p>
+      Model <code>{{ model_version }}</code>. The generator parses stored SMILES
+      first and falls back to standard InChI when RDKit rejects the stored
+      SMILES. This build used that fallback for
+      {{ quality.inchi_fallback_count }} records and retained
+      {{ quality.multifragment_count }} multi-fragment records.
+      All {{ quality.stereoisomer_pair_count }} detected stereoisomer pairs have
+      nonzero model distance.
+    </p>
+    <p>
+      Distance is 90% radius-2 and 10% radius-4 chiral Morgan count-fingerprint
+      Tanimoto distance. Coordinates are generated with
+      <code>UMAP(metric=precomputed, n_neighbors=15, min_dist=0.05,
+      random_state=42)</code>. A corpus or model-version change can move every
+      point.
+    </p>
+  </details>
+</main>
+{% endblock %}

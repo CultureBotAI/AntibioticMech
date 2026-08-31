@@ -237,6 +237,41 @@ molecular_targets:
   - reference: ARO:3000720
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000028 (vancomycin); database
       assertion, not a primary citation.
+producer_organisms:
+- taxon_id: NCBITaxon:1156913
+  taxon_label: Amycolatopsis orientalis HCCB10007 (ATCC43491)
+  biosynthetic_gene_cluster: BGC0000455
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '6'
+  source_quality: questionable
+  reviewed: true
+  note: MIBiG active entry with a non-placeholder expert reviewer; compound 'vancomycin'
+    joined by exact Standard InChIKey.
+  reference: DOI:10.1021/ja00361a029
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '213895'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: HIKMA
+  drug_name: VANCOMYCIN
+  ingredient_name: VANCOMYCIN
+  substance_id: UNII:6Q205EH1VU
+  approval_date: '2021-08-26'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '43'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213895
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -247,6 +282,18 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:29Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T17:53:21Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:22Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

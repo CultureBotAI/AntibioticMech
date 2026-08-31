@@ -101,6 +101,50 @@ resistance_mechanisms:
   - reference: ARO:3009501
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007518 (miconazole);
       database assertion, not a primary citation.
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 018040
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: JANSSEN PHARMA
+  drug_name: MONISTAT
+  ingredient_name: MICONAZOLE
+  substance_id: UNII:7NNO0D7S5M
+  approval_date: '1978-10-04'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '59'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=018040
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '022404'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: GALT PHARMS
+  drug_name: ORAVIG
+  ingredient_name: MICONAZOLE
+  substance_id: UNII:7NNO0D7S5M
+  approval_date: '2010-04-16'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '59'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022404
 curation_history:
 - timestamp: '2026-08-30T00:54:36Z'
   curator: seed_from_sources
@@ -115,6 +159,14 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T04:10:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:17:06Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:40Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
