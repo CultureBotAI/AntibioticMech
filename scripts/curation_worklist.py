@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import re
 import sys
 from pathlib import Path
 
@@ -194,6 +195,64 @@ def mode_of_action_scope_queue(records: list[dict],
     return rows
 
 
+# Words in a CARD definition that name a target group. Used ONLY to surface
+# candidates for a curator; never to classify. "fungal" matches ophiobolin A's
+# "isolated as fungal phytotoxins", where the fungus is the SOURCE and not the
+# target — the pattern cannot tell those apart, which is precisely why the
+# adjudication lives in conf/sources.yaml as a curated map.
+DEFINITION_GROUP_HINTS = {
+    "ANTIFUNGAL": r"\bfungicid|\bantifungal|\bfungal\b|\byeast\b|\bmildew\b",
+    "ANTIVIRAL": r"\bantiviral\b|\bvirus(es)?\b|\bviral\b",
+    "ANTIPROTOZOAL": r"\bantiprotozoal\b|\bmalaria|\bprotozoa|\bleishman|\btrypanosom",
+    "ANTIBACTERIAL": r"\bantibacterial\b|\bbacteri(a|al|um)\b",
+}
+
+
+def aro_class_queue(records: list[dict], conf: dict | None = None) -> list[dict]:
+    """ARO-fallback records whose own definition names another target group.
+
+    A molecule in CARD's antibiotic subtree is there for a bacterial reason, so
+    the fallback files it ANTIBACTERIAL — right for 266 of the 276 records it
+    reaches. For the rest CARD's own definition says otherwise, and until this
+    queue existed nothing surfaced them: triflumizole sat under ANTIBACTERIAL
+    while its ChEBI-grounded twin sat under ANTIFUNGAL, one compound in two
+    classes, with every gate green.
+
+    Adjudicated records drop off, because `aro_definition_overrides` decides
+    them. What remains is a curator's question, and a record that CANNOT be
+    adjudicated from the definition still belongs here rather than nowhere.
+    """
+    if conf is None:
+        conf = yaml.safe_load(CONF_PATH.read_text(encoding="utf-8"))
+    overrides = conf.get("aro_definition_overrides", {})
+    rows = []
+    for record in records:
+        if record.get("activity_roles"):
+            continue                                   # a ChEBI role decided it
+        concepts = record.get("source_concepts") or []
+        if {c.get("source") for c in concepts} != {"ARO"}:
+            continue                                   # not the fallback's doing
+        aro_ids = [c.get("source_id") for c in concepts]
+        if any(a in overrides for a in aro_ids):
+            continue                                   # a curator has decided
+        definition = str(record.get("definition") or "").lower()
+        named = sorted(group for group, pattern in DEFINITION_GROUP_HINTS.items()
+                       if re.search(pattern, definition))
+        filed = record.get("antimicrobial_class")
+        if not named or named == [filed]:
+            continue
+        rows.append({
+            "queue": "aro-class",
+            "key": record["identifier"],
+            "label": record["label"],
+            "source": "ARO",
+            "source_id": next((a for a in aro_ids if a), ""),
+            "hint": f"filed {filed}; CARD's definition names {', '.join(named)}",
+        })
+    rows.sort(key=lambda r: r["label"].lower())
+    return rows
+
+
 def unknown_mechanism_queue(records: list[dict]) -> list[dict]:
     """Determinants seeded with mechanism_type UNKNOWN.
 
@@ -262,7 +321,7 @@ def main() -> int:
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--queue",
                         choices=("all", "no-structure", "mechanism", "minted", "unknown-mech",
-                                 "moa-scope", "target-evidence"),
+                                 "moa-scope", "target-evidence", "aro-class"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
     parser.add_argument("--tsv", type=Path, help="Write every row (not just --limit) to this TSV.")
@@ -280,8 +339,12 @@ def main() -> int:
         queues["unknown-mech"] = unknown_mechanism_queue(records)
     if args.queue in ("all", "moa-scope"):
         queues["moa-scope"] = mode_of_action_scope_queue(records)
+    if args.queue in ("all", "aro-class"):
+        queues["aro-class"] = aro_class_queue(records)
     if args.queue in ("all", "target-evidence"):
         queues["target-evidence"] = target_evidence_queue(records)
+    if args.queue in ("all", "aro-class"):
+        queues["aro-class"] = aro_class_queue(records)
 
     for name, rows in queues.items():
         print(f"\n=== {name}: {len(rows)} item(s) ===")

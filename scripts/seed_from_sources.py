@@ -294,7 +294,8 @@ def structure_from_pubchem(row: dict) -> dict:
 
 
 def classify(roles: list[str], conf: dict, from_aro: bool,
-             aro_class_ids: tuple[str, ...] = ()) -> str:
+             aro_class_ids: tuple[str, ...] = (),
+             aro_ids: tuple[str, ...] = ()) -> str:
     """Assign the filesystem/reporting class.
 
     Order of evidence, strongest first:
@@ -306,8 +307,21 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
        value filed both as antibacterials.
     2. **ChEBI roles**, by the priority table in conf/sources.yaml (narrower
        target group first, bacteria before fungi and protozoa).
-    3. **The ARO fallback**, ANTIBACTERIAL — for a CARD molecule with no ChEBI
-       role and no group-naming drug class.
+    3. **A curated adjudication of CARD's own definition**, for the handful of
+       ARO concepts the blanket fallback would misfile. `aro_definition_overrides`
+       in conf/sources.yaml; each entry quotes the phrase it rests on. The
+       fallback is right for 266 of the 276 records it reaches, and CARD's
+       definition says outright that it is wrong for the rest — triflumizole
+       "used as a fungicide" was filed ANTIBACTERIAL while its own ChEBI-grounded
+       twin was ANTIFUNGAL, so one compound sat under two classes.
+    4. **The ARO fallback**, ANTIBACTERIAL — for a CARD molecule with no ChEBI
+       role, no group-naming drug class and no adjudication.
+
+    Step 3 is a CURATED MAP, not a text rule, and the distinction is the whole
+    point: a regex for "fungal" flags ophiobolin A, whose definition reads
+    "isolated as fungal phytotoxins" — a fungal PRODUCT with no antimicrobial
+    target claim. The pattern cannot tell a target from a source, so it only
+    surfaces candidates on `just worklist --queue aro-class`.
 
     A fourth step, filing on a ChEBI structural class whose name states a target
     group, was tried and removed: a chemical class is not a target claim, and it
@@ -334,6 +348,10 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
         return best["class"]
 
     if from_aro:
+        overrides = conf.get("aro_definition_overrides", {})
+        for aro_id in aro_ids:
+            if aro_id in overrides:
+                return overrides[aro_id]
         return "ANTIBACTERIAL"
     return "ANTIMICROBIAL_UNSPECIFIED"
 
@@ -811,6 +829,7 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
         "antimicrobial_class": classify(
             roles, conf, from_aro=bool(aro),
             aro_class_ids=tuple(c.structural_class_id for c in aro if c.structural_class_id),
+            aro_ids=tuple(c.source_id for c in aro if c.source_id),
         ),
         "curation_status": "SEEDED",
         "grounding_status": grounding_status,

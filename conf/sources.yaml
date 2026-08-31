@@ -507,6 +507,53 @@ aro_class_to_class:
   ARO:3009323: ANTIFUNGAL   # carbamate fungicides
   ARO:3009539: ANTIFUNGAL   # fungal succinate dehydrogenase inhibitor
 
+# ARO concept -> AntimicrobialClassEnum, adjudicated from CARD's OWN definition
+# where the blanket ARO fallback would otherwise file the record ANTIBACTERIAL.
+#
+# WHY THIS IS A CURATED LIST AND NOT A TEXT RULE. The fallback exists because a
+# molecule in CARD's antibiotic subtree is there for a bacterial reason, and for
+# 266 of the 276 records it reaches that is right. For 10 it is not, and CARD's
+# own definition says so. But a regex over definitions is exactly the inference
+# this repository removed in #47: scanning for "fungal" flags OPHIOBOLIN A,
+# whose definition reads "isolated as fungal phytotoxins" — produced BY a
+# fungus, no antimicrobial target claim at all. The pattern cannot tell a target
+# from a source. So the pattern only SURFACES candidates, on
+# `just worklist --queue aro-class`, and a curator decides here.
+#
+# Each entry quotes the phrase it rests on.
+aro_definition_overrides:
+  # --- the definition calls the compound a fungicide or antifungal outright
+  ARO:3009159: ANTIFUNGAL   # bifonazole "is an antifungal compound"
+  ARO:3007758: ANTIFUNGAL   # fengycin "antifungal lipopeptide ... used as an
+                            # agricultural fungicide"
+  ARO:3009180: ANTIFUNGAL   # hexaconazole "An agricultural fungicide"
+  ARO:3009383: ANTIFUNGAL   # phenamacril "is a novel fungicide"
+  ARO:3009169: ANTIFUNGAL   # triflumizole "used as a fungicide". Its
+                            # ChEBI-grounded twin CHEBI:81784 is already
+                            # ANTIFUNGAL, so the corpus held one compound under
+                            # two classes.
+
+  # --- an antiseptic, which is what BIOCIDE means
+  ARO:0000045: BIOCIDE      # acriflavine "is a topical antiseptic"; the
+                            # antifungal use is secondary and veterinary
+
+  # --- no target group the definition supports. ANTIBACTERIAL asserts one the
+  # source never made, and ANTIFUNGAL would assert one the pattern only seemed
+  # to find. UNSPECIFIED is what the source actually says.
+  ARO:3007756: ANTIMICROBIAL_UNSPECIFIED  # ophiobolin A "isolated as fungal
+                            # phytotoxins" — a fungal PRODUCT, not an antifungal
+  ARO:3009178: ANTIMICROBIAL_UNSPECIFIED  # diamide "primarily used as an
+                            # insecticide", with only "some anti-fungal
+                            # properties" claimed
+  ARO:3009353: ANTIMICROBIAL_UNSPECIFIED  # tacrolimus "is an immunosuppressive
+                            # agent"; antifungal use is "explored", not settled
+
+  # nitazoxanide (ARO:3007178) is deliberately ABSENT: its definition states
+  # "demonstrated antibacterial activity against Helicobacter pylori", so the
+  # fallback's ANTIBACTERIAL is supported. It is flagged by the queue because
+  # the definition also names antiviral activity; that is a second activity, not
+  # a misfiling.
+
 # ----------------------------------------------------------------------------
 # ChEBI structural class -> AntimicrobialClassEnum: TRIED, AND REMOVED.
 #
