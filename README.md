@@ -59,13 +59,13 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 | Class | Records | SEEDED | REVIEWED | With CARD mechanism evidence |
 |---|---:|---:|---:|---:|
-| ANTIBACTERIAL *(incl. subclasses)* | 1115 | 1115 | 0 | 287 |
+| ANTIBACTERIAL *(incl. subclasses)* | 1106 | 1106 | 0 | 283 |
 | &nbsp;&nbsp;↳ ANTIMYCOBACTERIAL *(subclass of ANTIBACTERIAL)* | 78 | 78 | 0 | 15 |
-| ANTIFUNGAL | 588 | 588 | 0 | 47 |
+| ANTIFUNGAL | 593 | 593 | 0 | 49 |
 | ANTIPROTOZOAL | 248 | 248 | 0 | 5 |
 | ANTIVIRAL | 474 | 474 | 0 | 21 |
-| BIOCIDE | 29 | 29 | 0 | 1 |
-| ANTIMICROBIAL_UNSPECIFIED | 469 | 469 | 0 | 2 |
+| BIOCIDE | 30 | 30 | 0 | 2 |
+| ANTIMICROBIAL_UNSPECIFIED | 472 | 472 | 0 | 3 |
 | **TOTAL** | **2923** | **2923** | **0** | **363** |
 
 A row marked *(subclass of X)* is already counted in X's own row — mycobacteria are bacteria, and filing is exclusive, so a compound filed ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each record once, so the Records column does not sum to it.
