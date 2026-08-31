@@ -20,6 +20,11 @@ from pathlib import Path
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT / "src"))
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+
+from seed_from_sources import class_parents, rollup_by_class  # noqa: E402
+
 CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 README = REPO_ROOT / "README.md"
 
@@ -64,17 +69,49 @@ def render_block(stats: dict) -> str:
     lines = [START, ""]
     lines.append("| Class | Records | SEEDED | REVIEWED | With CARD mechanism evidence |")
     lines.append("|---|---:|---:|---:|---:|")
+    # Filing is exclusive, so a subclass's records are not also under its parent.
+    # The parent row therefore carries the INCLUSIVE total and the subclass is
+    # indented beneath it; otherwise the table answers "acts on bacteria?" with
+    # the wrong number. Hierarchy comes from the schema, not from this list.
+    parents = class_parents()
+    counts = {c: stats["by_class"].get(c, 0) for c in CLASS_ORDER}
+    inclusive = rollup_by_class(counts)
+    # EVERY column rolls up, not just Records. Leaving SEEDED, REVIEWED and the
+    # CARD-evidence count exclusive made the parent row read as 78 unseeded
+    # records and understated its evidence by 15 — the same defect as a bar
+    # drawn from the wrong number, in the columns next to it.
+    seeded = rollup_by_class({c: stats["status_by_class"].get(c, Counter())["SEEDED"]
+                              for c in CLASS_ORDER})
+    reviewed = rollup_by_class({c: stats["status_by_class"].get(c, Counter())["REVIEWED"]
+                                for c in CLASS_ORDER})
+    card_incl = rollup_by_class({c: stats["card_evidence_by_class"].get(c, 0)
+                                 for c in CLASS_ORDER})
     for cls in CLASS_ORDER:
-        count = stats["by_class"].get(cls, 0)
-        if not count:
+        # A parent with no records of its OWN is still printed when a subclass
+        # has some; otherwise those records vanish from the table entirely and
+        # the indented row dangles under the header.
+        if not counts[cls] and not inclusive.get(cls):
             continue
-        per = stats["status_by_class"].get(cls, Counter())
-        lines.append(f"| {cls} | {count} | {per['SEEDED']} | {per['REVIEWED']} | "
-                     f"{stats['card_evidence_by_class'].get(cls, 0)} |")
+        if cls in parents:
+            label = f"&nbsp;&nbsp;↳ {cls} *(subclass of {parents[cls]})*"
+            shown, s_, r_, c_ = (counts[cls], stats["status_by_class"].get(cls, Counter())["SEEDED"],
+                                 stats["status_by_class"].get(cls, Counter())["REVIEWED"],
+                                 stats["card_evidence_by_class"].get(cls, 0))
+        else:
+            has_kids = inclusive[cls] != counts[cls]
+            label = f"{cls} *(incl. subclasses)*" if has_kids else cls
+            shown, s_, r_, c_ = (inclusive[cls], seeded[cls], reviewed[cls], card_incl[cls])
+        lines.append(f"| {label} | {shown} | {s_} | {r_} | {c_} |")
     lines.append(f"| **TOTAL** | **{total}** | "
                  f"**{sum(c['SEEDED'] for c in stats['status_by_class'].values())}** | "
                  f"**{sum(c['REVIEWED'] for c in stats['status_by_class'].values())}** | "
                  f"**{sum(stats['card_evidence_by_class'].values())}** |")
+    if any(c in parents for c in CLASS_ORDER if stats["by_class"].get(c)):
+        lines.append("")
+        lines.append("An indented row is a **subclass**, already counted in the row above it — "
+                     "mycobacteria are bacteria, and filing is exclusive, so a compound filed "
+                     "ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each "
+                     "record once, so the Records column does not sum to it.")
     lines.append("")
     exact = stats["grounding"].get("EXACT", 0)
     minted = stats["grounding"].get("MINTED", 0)

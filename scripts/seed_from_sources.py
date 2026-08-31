@@ -54,6 +54,7 @@ CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 PATHS_FILE = CORPUS_DIR / "PATHS.tsv"
 RETIRED_FILE = CORPUS_DIR / "RETIRED.tsv"
 CONF_PATH = REPO_ROOT / "conf" / "sources.yaml"
+SCHEMA_PATH = REPO_ROOT / "src" / "antibioticmech" / "schema" / "antibioticmech.yaml"
 DECISIONS_PATH = REPO_ROOT / "curation" / "decisions.tsv"
 
 CLASS_DIRS = {
@@ -66,6 +67,45 @@ CLASS_DIRS = {
     "ANTIMICROBIAL_UNSPECIFIED": "unspecified",
     "OTHER": "other",
 }
+
+def class_parents() -> dict[str, str]:
+    """Narrower class -> broader class, read from the schema's enum `is_a`.
+
+    LinkML lets a permissible value declare `is_a`, and AntimicrobialClassEnum
+    uses it to say ANTIMYCOBACTERIAL is a kind of ANTIBACTERIAL — mycobacteria
+    are bacteria.
+
+    ONE COPY, because a declared hierarchy that only the site honours is not a
+    hierarchy. Filing is exclusive and picks the narrower claim, so an
+    antimycobacterial record is NOT also under ANTIBACTERIAL; every count that
+    answers "which compounds act on bacteria?" therefore has to add the
+    subclasses back, and until it does the corpus reports 1037 for a true 1115.
+    The site, `just report` and the README block all read this.
+    """
+    schema = yaml.safe_load(SCHEMA_PATH.read_text(encoding="utf-8"))
+    values = schema["enums"]["AntimicrobialClassEnum"]["permissible_values"]
+    return {name: (body or {}).get("is_a")
+            for name, body in values.items() if (body or {}).get("is_a")}
+
+
+def rollup_by_class(counts: dict[str, int]) -> dict[str, int]:
+    """Per-class counts with every subclass added into its ancestors.
+
+    Returns totals INCLUSIVE of subclasses; the caller keeps the raw counts for
+    the "directly filed" line. Walks to the root, so a future two-level
+    hierarchy needs no change here.
+    """
+    parents = class_parents()
+    out = dict(counts)
+    for cls, n in counts.items():
+        seen = set()
+        parent = parents.get(cls)
+        while parent and parent not in seen:
+            seen.add(parent)
+            out[parent] = out.get(parent, 0) + n
+            parent = parents.get(parent)
+    return out
+
 
 # ARO writes its own cross-reference prefixes; ChEBI's are already bioregistry
 # prefixes and pass through unchanged. Anything not listed and not already

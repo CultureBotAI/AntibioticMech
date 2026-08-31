@@ -104,6 +104,19 @@ tetracycline.
 An ARO concept with no ChEBI role is `ANTIBACTERIAL`: every molecule in CARD's
 antibiotic subtree is there because a bacterial resistance determinant acts on it.
 
+**`ANTIMYCOBACTERIAL` is a subclass of `ANTIBACTERIAL`, and the counts say so.**
+Mycobacteria are bacteria, but filing is exclusive and picks the narrower claim,
+so those 78 records are not also filed `ANTIBACTERIAL`. Any count answering
+"which compounds act on bacteria?" has to add them back: it is **1115**, not the
+1037 filed directly. `just report`, the README table and the site all derive
+this from the schema's enum `is_a` through one shared helper
+(`seed_from_sources.class_parents`), so a hierarchy the schema declares cannot
+be one only the site honours. 76 of the 78 carry no general antibacterial role
+at all — their only bacterial evidence is `antitubercular` or
+`antimycobacterial` — which is why the class stays a filing value rather than
+being collapsed: it is a more specific true claim, and `activity_roles` would
+be the only place it survived.
+
 ## Mode of action
 
 `mode_of_action` is seeded from ChEBI's own mechanism roles. The maps in

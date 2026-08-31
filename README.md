@@ -59,14 +59,16 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 | Class | Records | SEEDED | REVIEWED | With CARD mechanism evidence |
 |---|---:|---:|---:|---:|
-| ANTIBACTERIAL | 1037 | 1037 | 0 | 264 |
-| ANTIMYCOBACTERIAL | 78 | 78 | 0 | 15 |
+| ANTIBACTERIAL *(incl. subclasses)* | 1115 | 1115 | 0 | 279 |
+| &nbsp;&nbsp;↳ ANTIMYCOBACTERIAL *(subclass of ANTIBACTERIAL)* | 78 | 78 | 0 | 15 |
 | ANTIFUNGAL | 588 | 588 | 0 | 43 |
 | ANTIPROTOZOAL | 248 | 248 | 0 | 2 |
 | ANTIVIRAL | 474 | 474 | 0 | 0 |
 | BIOCIDE | 29 | 29 | 0 | 0 |
 | ANTIMICROBIAL_UNSPECIFIED | 469 | 469 | 0 | 0 |
 | **TOTAL** | **2923** | **2923** | **0** | **324** |
+
+An indented row is a **subclass**, already counted in the row above it — mycobacteria are bacteria, and filing is exclusive, so a compound filed ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each record once, so the Records column does not sum to it.
 
 Identity: **2673** records (91%) are grounded in a ChEBI term; **250** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
 

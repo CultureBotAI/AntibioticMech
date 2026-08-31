@@ -52,7 +52,7 @@ SCHEMA_PATH = REPO_ROOT / "src" / "antibioticmech" / "schema" / "antibioticmech.
 # first time a class is added — which is exactly what happened when ANTIVIRAL
 # had to be threaded through four separate enumerations by hand.
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
-from seed_from_sources import CLASS_DIRS  # noqa: E402
+from seed_from_sources import CLASS_DIRS, class_parents, rollup_by_class  # noqa: E402
 
 MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "MANIFEST.yaml"
 
@@ -242,22 +242,16 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
 
 
 def class_hierarchy() -> dict[str, list[str]]:
-    """Parent class dir -> narrower class dirs, read from the schema's enum.
+    """Parent class dir -> narrower class dirs.
 
-    LinkML lets a permissible value declare `is_a`, and AntimicrobialClassEnum
-    uses it to say ANTIMYCOBACTERIAL is a kind of ANTIBACTERIAL — mycobacteria
-    are bacteria. Filing is exclusive and picks the narrower claim, so those
-    records are NOT also under antibacterial, and a reader on the antibacterial
-    page would otherwise never learn that 78 more sit one click away. Deriving
-    the site's cross-links from the schema means the two cannot drift apart.
+    A thin dir-slug view of `seed_from_sources.class_parents()`, which reads the
+    schema's enum `is_a`. One copy of the hierarchy, shared with `just report`
+    and the README block, because a hierarchy only the site honours is not one.
     """
-    schema = yaml.safe_load(SCHEMA_PATH.read_text(encoding="utf-8"))
-    values = schema["enums"]["AntimicrobialClassEnum"]["permissible_values"]
     out: dict[str, list[str]] = {}
-    for name, body in values.items():
-        parent = (body or {}).get("is_a")
-        if parent and parent in CLASS_DIRS and name in CLASS_DIRS:
-            out.setdefault(CLASS_DIRS[parent], []).append(CLASS_DIRS[name])
+    for child, parent in class_parents().items():
+        if parent in CLASS_DIRS and child in CLASS_DIRS:
+            out.setdefault(CLASS_DIRS[parent], []).append(CLASS_DIRS[child])
     return out
 
 
@@ -364,17 +358,59 @@ def build(out_dir: Path) -> None:
     # click away. Read from the schema so the site cannot disagree with it.
     narrower = class_hierarchy()
 
+    # A subclass must sit immediately after ITS OWN parent. Sorted by directory
+    # name, "antimycobacterial" landed after "antifungal", so the indented row
+    # and the note saying it is "already counted in the row above it" pointed at
+    # the wrong row — the page asserted antimycobacterial were antifungals.
+    ordered: list[str] = []
+    for class_dir in class_dirs:
+        if any(class_dir in kids for kids in narrower.values()):
+            continue                       # placed with its parent, below
+        ordered.append(class_dir)
+        ordered.extend(child for child in narrower.get(class_dir, [])
+                       if child in class_dirs)
+    # Anything whose parent has no records of its own still has to appear.
+    ordered.extend(c for c in class_dirs if c not in ordered)
+
+    parent_of = {child: parent for parent, kids in narrower.items() for child in kids}
+
+    # rollup_by_class keys on ENUM names; the site works in directory slugs.
+    # Passing slugs straight in silently rolled nothing up and showed 1037 where
+    # 1115 belongs — the very number this change exists to correct.
+    enum_of_dir = {d: e for e, d in CLASS_DIRS.items()}
+
+    def rolled(per_dir: dict[str, int]) -> dict[str, int]:
+        by_enum = rollup_by_class({enum_of_dir[d]: n for d, n in per_dir.items()
+                                   if d in enum_of_dir})
+        return {d: by_enum.get(enum_of_dir[d], n) for d, n in per_dir.items()}
+
+    inclusive = rolled({d: len(by_class[d]) for d in class_dirs})
+    grounded_incl = rolled({d: sum(1 for i in by_class[d] if i["grounding"] == "EXACT")
+                            for d in class_dirs})
+
     classes = []
     class_pages: list[str] = []
-    for class_dir in class_dirs:
+    for class_dir in ordered:
         items = by_class[class_dir]
         classes.append(
             {
                 "label": CLASS_LABEL.get(class_dir, class_dir.replace("-", " ").title()),
                 "slug": class_dir,
                 "count": len(items),
-                "pct": round(100 * len(items) / total),
-                "grounded": sum(1 for i in items if i["grounding"] == "EXACT"),
+                "count_inclusive": inclusive.get(class_dir, len(items)),
+                "broader_of": bool(narrower.get(class_dir)),
+                "is_narrower": class_dir in parent_of,
+                # Named in the row text, not conveyed by an indent alone: a
+                # screen reader hears an ordinary row, and the indent is a lie
+                # the moment the sort order changes.
+                "parent_label": CLASS_LABEL.get(parent_of.get(class_dir, ""),
+                                                (parent_of.get(class_dir) or "").title()),
+                # Every derived figure follows the count actually DISPLAYED. A
+                # parent showing 1115 with a bar drawn from 1037, or an
+                # inclusive count beside an exclusive "grounded", is the same
+                # class of error this commit exists to fix, one column over.
+                "pct": round(100 * inclusive.get(class_dir, len(items)) / total),
+                "grounded": grounded_incl.get(class_dir, 0),
                 "description": CLASS_BLURB.get(class_dir, ""),
                 "narrower": [
                     {"slug": child, "label": CLASS_LABEL.get(child, child.title()),

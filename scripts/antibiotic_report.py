@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -19,6 +20,11 @@ import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
+
+sys.path.insert(0, str(REPO_ROOT / "src"))
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+
+from seed_from_sources import class_parents, rollup_by_class  # noqa: E402
 
 
 def load_corpus() -> list[tuple[Path, dict]]:
@@ -83,10 +89,41 @@ def print_report(stats: dict) -> None:
     total = stats["total"]
     print(f"AntibioticMech corpus: {total} records\n")
 
+    # Inclusive of subclasses. Filing is exclusive — an antimycobacterial record
+    # is not also under ANTIBACTERIAL — so a flat listing answered "which
+    # compounds act on bacteria?" with 1037 when the true figure is 1115. The
+    # hierarchy is declared in the schema; this makes it govern the count.
+    parents = class_parents()
+    inclusive = rollup_by_class(dict(stats["by_class"]))
+    children: dict[str, list[str]] = {}
+    for child, parent in parents.items():
+        children.setdefault(parent, []).append(child)
+
     print("Records per antimicrobial class")
-    for name, count in stats["by_class"].most_common():
-        statuses = ", ".join(f"{k} {v}" for k, v in sorted(stats["class_status"][name].items()))
-        print(f"  {name:26s} {count:>6d}   ({statuses})")
+    # Iterate the classes that have records PLUS their ancestors. A parent with
+    # no records of its own was absent from by_class, so its child was skipped
+    # as "printed under its parent" and the parent never printed — the records
+    # disappeared from the listing altogether.
+    listed = set(stats["by_class"])
+    for cls in list(listed):
+        parent = parents.get(cls)
+        while parent:
+            listed.add(parent)
+            parent = parents.get(parent)
+    order = sorted(listed, key=lambda c: (-inclusive.get(c, 0), c))
+    for name in order:
+        if name in parents:            # printed under its parent
+            continue
+        kids = [k for k in children.get(name, []) if stats["by_class"].get(k)]
+        statuses = ", ".join(f"{k} {v}" for k, v in sorted(stats["class_status"][name].items())) \
+            or "none filed directly"
+        if kids:
+            print(f"  {name:26s} {inclusive[name]:>6d}   (incl. subclasses)")
+            for kid in sorted(kids, key=lambda k: -stats["by_class"][k]):
+                print(f"    └ {kid:24s}{stats['by_class'][kid]:>5d}")
+            print(f"    {'(directly filed)':24s}  {stats['by_class'][name]:>5d}   ({statuses})")
+        else:
+            print(f"  {name:26s} {stats['by_class'][name]:>6d}   ({statuses})")
 
     print("\nCuration status")
     for name, count in stats["by_status"].most_common():

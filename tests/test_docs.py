@@ -175,3 +175,151 @@ def test_numeric_claims_in_prose_match_the_corpus(repo_root):
             absent.append(f"{name}: no longer contains {template!r}")
     assert wrong == [], wrong
     assert absent == [], absent
+
+
+def test_the_declared_class_hierarchy_governs_every_count(repo_root):
+    """A hierarchy only the site honours is not a hierarchy.
+
+    `AntimicrobialClassEnum` declares `ANTIMYCOBACTERIAL is_a ANTIBACTERIAL` —
+    mycobacteria are bacteria — while filing is exclusive, so those records are
+    NOT also under ANTIBACTERIAL. Every count that answers "which compounds act
+    on bacteria?" therefore has to add the subclass back. Before this, the
+    report and the README both said 1037 for a true 1115, and only the site's
+    cross-links knew better.
+
+    Asserts the roll-up itself, and that the two generated surfaces show it.
+    """
+    import subprocess
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    sys.path.insert(0, str(repo_root / "src"))
+    from seed_from_sources import class_parents, rollup_by_class
+
+    parents = class_parents()
+    assert parents, "the schema declares no class hierarchy; this test guards nothing"
+
+    import yaml
+    counts: dict[str, int] = {}
+    for path in (repo_root / "data" / "antibiotics").rglob("*.yaml"):
+        record = yaml.safe_load(path.read_text(encoding="utf-8"))
+        cls = record.get("antimicrobial_class")
+        if cls:
+            counts[cls] = counts.get(cls, 0) + 1
+
+    inclusive = rollup_by_class(counts)
+    for child, parent in parents.items():
+        if not counts.get(child):
+            continue
+        assert inclusive[parent] == counts[parent] + counts[child], (child, parent)
+
+        # `just report` must print the inclusive figure, not the filed one.
+        out = subprocess.run([sys.executable, str(repo_root / "scripts" / "antibiotic_report.py")],
+                             capture_output=True, text=True, cwd=repo_root).stdout
+        assert f"{parent:26s} {inclusive[parent]:>6d}   (incl. subclasses)" in out, out[:600]
+
+        # The README table must carry it too, with the subclass marked as included.
+        readme = (repo_root / "README.md").read_text(encoding="utf-8")
+        assert f"| {parent} *(incl. subclasses)* | {inclusive[parent]} |" in readme
+        assert f"↳ {child}" in readme and f"subclass of {parent}" in readme
+        # every column rolls up, not only Records
+        assert f"| {inclusive[parent]} | {inclusive[parent]} |" in readme, (
+            "the SEEDED column did not roll up with Records")
+        assert "already counted in the row above it" in readme
+
+
+def test_every_derived_figure_follows_the_count_it_sits_beside(repo_root):
+    """Compares each figure against a value derived INDEPENDENTLY from the
+    corpus, not against a relation the bug already satisfies.
+
+    The first version asserted only `grounded <= records`. The defect it was
+    written for was 798 grounded beside 1115 records — and 798 <= 1115, so it
+    passed with the bug reintroduced. A guard has to know the right answer, not
+    merely a property the wrong answer also has.
+    """
+    import re
+    import sys
+
+    import yaml
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    sys.path.insert(0, str(repo_root / "src"))
+    from seed_from_sources import CLASS_DIRS, rollup_by_class
+
+    counts: dict[str, int] = {}
+    grounded: dict[str, int] = {}
+    for path in (repo_root / "data" / "antibiotics").rglob("*.yaml"):
+        record = yaml.safe_load(path.read_text(encoding="utf-8"))
+        cls = record.get("antimicrobial_class")
+        if not cls:
+            continue
+        counts[cls] = counts.get(cls, 0) + 1
+        if record.get("grounding_status") == "EXACT":
+            grounded[cls] = grounded.get(cls, 0) + 1
+
+    total = sum(counts.values())
+    inclusive = rollup_by_class(counts)
+    grounded_incl = rollup_by_class({c: grounded.get(c, 0) for c in counts})
+    dir_of = {d: e for e, d in CLASS_DIRS.items()}
+
+    def rows(page):
+        html = (repo_root / "pages" / f"{page}.html").read_text(encoding="utf-8")
+        for row in re.findall(r"<tr[^>]*>.*?</tr>", html, re.S):
+            slug = re.search(r"class/([a-z-]+)\.html", row)
+            if not slug:
+                continue
+            yield slug.group(1), [int(n) for n in
+                                  re.findall(r'class="num">(\d+)</td>', row)], row
+
+    seen = 0
+    for slug, nums, row in rows("index"):
+        expected = inclusive[dir_of[slug]]
+        assert nums[0] == expected, f"index {slug}: shows {nums[0]}, corpus says {expected}"
+        bar = re.search(r"width:(\d+)%", row)
+        assert bar and int(bar.group(1)) == round(100 * expected / total), (slug, row[:120])
+        seen += 1
+    assert seen >= 2, "index listed no classes; this test guards nothing"
+
+    for slug, nums, _row in rows("browse"):
+        enum = dir_of[slug]
+        assert nums[0] == inclusive[enum], f"browse {slug} records"
+        assert nums[1] == grounded_incl[enum], (
+            f"browse {slug} grounded: shows {nums[1]}, corpus says {grounded_incl[enum]}")
+
+
+def test_a_subclass_row_is_placed_and_labelled_under_its_own_parent(repo_root):
+    """Sorted by directory name, the indented row landed after "antifungal", so
+    the note saying it is "already counted in the row above it" pointed at the
+    wrong row — the page asserted antimycobacterials were antifungals.
+
+    Also asserts the relationship is in the row TEXT. An indent plus an
+    aria-hidden glyph conveys nothing to a screen reader, and is wrong the
+    moment the order changes again.
+    """
+    import re
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    sys.path.insert(0, str(repo_root / "src"))
+    from seed_from_sources import CLASS_DIRS, class_parents
+
+    parents = {CLASS_DIRS[c]: CLASS_DIRS[p] for c, p in class_parents().items()
+               if c in CLASS_DIRS and p in CLASS_DIRS}
+    assert parents, "no hierarchy declared; this test guards nothing"
+
+    for page in ("index", "browse"):
+        html = (repo_root / "pages" / page).with_suffix(".html").read_text(encoding="utf-8")
+        order, texts = [], {}
+        for row in re.findall(r"<tr[^>]*>.*?</tr>", html, re.S):
+            slug = re.search(r"class/([a-z-]+)\.html", row)
+            if slug:
+                order.append(slug.group(1))
+                texts[slug.group(1)] = row
+        for child, parent in parents.items():
+            if child not in order or parent not in order:
+                continue
+            assert order.index(child) == order.index(parent) + 1, (
+                f"{page}: {child} is not immediately after {parent} — the "
+                f'"counted in the row above" note points at {order[order.index(child) - 1]}')
+            assert f"subclass of {parent}" in texts[child].lower(), (
+                f"{page}: {child}'s row does not say it is a subclass in its text")
