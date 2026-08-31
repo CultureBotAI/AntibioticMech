@@ -196,3 +196,8 @@ caption {
 .pager { margin: 1rem 0; display: flex; gap: .4rem; flex-wrap: wrap; }
 .pager a, .pager span { padding: .15rem .5rem; border-radius: 4px; }
 .pager a { background: var(--code-bg); }
+
+/* A subclass row sits under its parent: mycobacteria are bacteria. The indent
+   is the only thing distinguishing an included count from an additional one. */
+tr.subclass td:first-child { padding-left: 1.6rem; }
+.tree { color: var(--muted); }

@@ -24,13 +24,18 @@
   <caption>Records per antimicrobial class</caption>
   <thead><tr><th scope="col">Class</th><th scope="col" class="num">Records</th><th scope="col"><span class="visually-hidden">Share</span></th></tr></thead>
   {% for c in classes %}
-  <tr>
-    <td><a href="class/{{ c.slug }}.html">{{ c.label }}</a></td>
-    <td class="num">{{ c.count }}</td>
+  <tr{% if c.is_narrower %} class="subclass"{% endif %}>
+    <td>{% if c.is_narrower %}<span class="tree" aria-hidden="true">&#8627;</span> {% endif %}<a href="class/{{ c.slug }}.html">{{ c.label }}</a>{% if c.is_narrower %} <span class="meta">subclass of {{ c.parent_label|lower }}</span>{% elif c.broader_of %} <span class="meta">incl. subclasses</span>{% endif %}</td>
+    <td class="num">{{ c.count_inclusive if c.broader_of else c.count }}</td>
     <td><div class="bar"><span style="width:{{ c.pct }}%"></span></div></td>
   </tr>
   {% endfor %}
 </table>
+{% if classes | selectattr("is_narrower") | list %}
+<p class="meta">A subclass row is already counted in its parent's, so this column
+sums to more than the {{ stats.total }} records: mycobacteria are bacteria, and filing
+is exclusive.</p>
+{% endif %}
 
 <h2>Identity grounding</h2>
 <p>
