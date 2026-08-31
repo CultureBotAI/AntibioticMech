@@ -201,3 +201,45 @@ def test_systematic_names_are_kept_out_of_the_documents():
         "compound with 2,2'-[(1,2-dihydroxyethylidene)]bis",
     ):
         assert is_systematic_name(drop), drop
+
+
+def test_synonyms_are_chosen_by_declared_type_before_shape():
+    """`synonym_type` states what a shape heuristic could only guess.
+
+    INN and BRAND_NAME are bounded at 30 characters across all 13,050 synonyms
+    in the corpus, so they can be taken whole; EXACT_SYNONYM runs to 828 and
+    holds the systematic names. Ranking by type puts the real names first and
+    leaves the heuristic to break ties inside the residue.
+
+    Not a wholesale exclusion of EXACT_SYNONYM: 8,356 of its 11,296 entries are
+    ordinary common names, and only 556 of 2,923 records carry any INN or
+    BRAND_NAME at all, so dropping the type would discard most of the signal
+    for most records.
+    """
+    from embed_records import pick_synonyms
+
+    entries = [
+        {"synonym_type": "EXACT_SYNONYM",
+         "synonym_text": "(3S,6R,7R,11R,23S,26S,30aS,36R,38aR)-44-[2-O-(3-amino-2,3,6-trideoxy)]"},
+        {"synonym_type": "EXACT_SYNONYM", "synonym_text": "vancomicina"},
+        {"synonym_type": "BRAND_NAME", "synonym_text": "Vancocin"},
+        {"synonym_type": "INN", "synonym_text": "vancomycin"},
+    ]
+    picked = pick_synonyms(entries)
+    assert picked[0] == "vancomycin", picked      # INN first
+    assert picked[1] == "Vancocin", picked        # then brand
+    assert "vancomicina" in picked                # ordinary common name survives
+    assert not any(p.startswith("(3S,6R") for p in picked), picked
+
+
+def test_the_corpus_synonym_selection_keeps_real_names_and_drops_iupac():
+    """Against real records, not a fixture: vancomycin used to contribute a
+    fragment of its IUPAC name and now contributes its INN and brand names."""
+    from embed_records import load_corpus
+
+    _ids, docs, meta = load_corpus()
+    doc = docs[[m["label"] for m in meta].index("vancomycin")]
+    assert "also known as" in doc
+    tail = doc.split("also known as ")[1]
+    assert "Vancocin" in tail, tail[:120]
+    assert "(3S," not in tail and "[2-O-" not in tail, tail[:160]

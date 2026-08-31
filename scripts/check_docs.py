@@ -108,7 +108,7 @@ def render_block(stats: dict) -> str:
                  f"**{sum(stats['card_evidence_by_class'].values())}** |")
     if any(c in parents for c in CLASS_ORDER if stats["by_class"].get(c)):
         lines.append("")
-        lines.append("An indented row is a **subclass**, already counted in the row above it — "
+        lines.append("A row marked *(subclass of X)* is already counted in X's own row — "
                      "mycobacteria are bacteria, and filing is exclusive, so a compound filed "
                      "ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each "
                      "record once, so the Records column does not sum to it.")

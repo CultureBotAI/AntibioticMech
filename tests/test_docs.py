@@ -225,7 +225,7 @@ def test_the_declared_class_hierarchy_governs_every_count(repo_root):
         # every column rolls up, not only Records
         assert f"| {inclusive[parent]} | {inclusive[parent]} |" in readme, (
             "the SEEDED column did not roll up with Records")
-        assert "already counted in the row above it" in readme
+        assert "already counted in X's own row" in readme
 
 
 def test_every_derived_figure_follows_the_count_it_sits_beside(repo_root):

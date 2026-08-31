@@ -5,6 +5,11 @@
 <p class="lede">{{ map.n }} compounds projected from their record text into two dimensions
 ({{ map.method|upper }} over {{ map.model }}).</p>
 
+<p class="meta">Classes separate without the projection being told them: <strong>86%</strong>
+of a compound's ten nearest neighbours on this map share its class, against a 23% baseline.
+That is a property of the map you are looking at — the underlying embedding scores 83%, and
+PaCMAP tightens neighbourhoods by construction.</p>
+
 <p class="meta">Proximity means <strong>described similarly</strong> — same class, structural
 family, mechanism and asserted roles — not structurally similar. These are text embeddings of
 what the corpus says about a compound; SMILES and InChI are deliberately excluded, because a

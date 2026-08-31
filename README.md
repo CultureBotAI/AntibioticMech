@@ -68,7 +68,7 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 | ANTIMICROBIAL_UNSPECIFIED | 469 | 469 | 0 | 0 |
 | **TOTAL** | **2923** | **2923** | **0** | **324** |
 
-An indented row is a **subclass**, already counted in the row above it — mycobacteria are bacteria, and filing is exclusive, so a compound filed ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each record once, so the Records column does not sum to it.
+A row marked *(subclass of X)* is already counted in X's own row — mycobacteria are bacteria, and filing is exclusive, so a compound filed ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each record once, so the Records column does not sum to it.
 
 Identity: **2673** records (91%) are grounded in a ChEBI term; **250** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
 
