@@ -112,8 +112,8 @@ so those 78 records are not also filed `ANTIBACTERIAL`. Any count answering
 this from the schema's enum `is_a` through one shared helper
 (`seed_from_sources.class_parents`), so a hierarchy the schema declares cannot
 be one only the site honours. 76 of the 78 carry no general antibacterial role
-at all — their only bacterial evidence is `antitubercular` or
-`antimycobacterial` — which is why the class stays a filing value rather than
+at all — their only bacterial evidence is `antitubercular`,
+`antimycobacterial` or `leprostatic` — which is why the class stays a filing value rather than
 being collapsed: it is a more specific true claim, and `activity_roles` would
 be the only place it survived.
 
@@ -296,11 +296,13 @@ useful for curation: an outlier is usually a record whose annotation is thin or
 inconsistent with its neighbours, and a cluster spanning two classes is worth
 looking at.
 
-It separates the classes without being told them. Two figures, because they
-measure different stages and conflating them credits the encoder for the
-projector's work: in the raw 1024-d embedding **83%** of a compound's ten nearest
-neighbours share its class; in the 2-D map, where PaCMAP tightens neighbourhoods
-by construction, **87%**. The baseline for these class sizes is 23%.
+It separates the classes without being told them: in the raw 1024-d embedding
+**83%** of a compound's ten nearest neighbours share its class, against a **23%**
+baseline for these class sizes. That is the encoder's number, and it is the one
+this section is entitled to — the 2-D map scores higher (86%) only because
+PaCMAP tightens neighbourhoods by construction, so that figure belongs on the
+map page describing what a reader of it sees, not here describing the
+embedding.
 
 The exception is instructive. In the raw embedding `ANTIMYCOBACTERIAL` scores
 51%, with a further 28% of its neighbours in `ANTIBACTERIAL`. The encoder
@@ -311,9 +313,15 @@ Field order and length both mattered. 94 documents once exceeded the model's
 512-token window, and the tail of those was silently dropped — with synonyms
 emitted early, vancomycin kept a list of trade names and lost its resistance
 determinants. Mechanism, roles and targets now come before the definition, and
-systematic IUPAC synonyms are dropped outright: they were 42% of all corpus
-tokens and are precisely the "gibberish of a length that would dominate every
-document" that excludes SMILES, readmitted through a different key. **No
+synonyms are chosen by their DECLARED TYPE rather than by guessing from the
+string — INN, then brand name, then related, then the exact-synonym residue
+under a 60-character ceiling. They were 42% of all corpus tokens and the long
+ones are systematic names: precisely the "gibberish of a length that would
+dominate every document" that excludes SMILES, readmitted through a different
+key. Ranking by type left the clustering unchanged (83.4% to 83.3%); it is done
+because `synonym_type` states the answer that a shape heuristic could only
+guess, and because vancomycin now carries "Vancocin" rather than a fragment of
+its IUPAC name. **No
 document now exceeds the window at all** (median 174 tokens, longest 503).
 
 A chemical-similarity map is a different artifact and would need molecular

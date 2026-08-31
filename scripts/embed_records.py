@@ -69,25 +69,60 @@ def role_names() -> dict[str, str]:
         return {r["role_id"]: r.get("name", "") for r in csv.DictReader(fh, delimiter="\t")}
 
 
+# Synonym types, best first. This is DECLARED METADATA and beats guessing from
+# the string: INN and BRAND_NAME are bounded at 30 characters by construction
+# (measured across all 13,050 synonyms), so they can be taken whole, while
+# EXACT_SYNONYM runs to 828 characters and holds the systematic names.
+SYNONYM_RANK = {"INN": 0, "BRAND_NAME": 1, "RELATED_SYNONYM": 2, "EXACT_SYNONYM": 3}
+
+# Character ceiling applied to the EXACT_SYNONYM residue only. 60 keeps every
+# INN, BRAND_NAME and RELATED_SYNONYM by construction and cuts the IUPAC tail.
+SYNONYM_CHAR_CEILING = 60
+
+
 def is_systematic_name(text: str) -> bool:
     """True for an IUPAC-style systematic name rather than a usable synonym.
 
-    Synonyms were 42% of all corpus tokens, and the long ones are full
-    systematic names — "(3S,6R,7R,11R,23S,26S,30aS,36R,38aR)-44-[2-O-(3-amino-
-    2,...)]..." — which is exactly the "gibberish of a length that would
-    dominate every document" given as the reason for excluding SMILES and InChI.
-    Excluding it from `chemical_structure` and readmitting it through `synonyms`
-    would be the same mistake wearing a different key.
+    The TIEBREAK, not the rule. Synonyms were 42% of all corpus tokens and the
+    long ones are full systematic names — exactly the "gibberish of a length
+    that would dominate every document" that excludes SMILES and InChI,
+    readmitted through a different key. But shape-guessing is the weakest
+    available signal: `synonym_type` says it outright, and a cross-tabulation
+    showed this heuristic firing 2,941 times with 2,940 of them EXACT_SYNONYM
+    and never once on an INN or BRAND_NAME. So type decides first and this only
+    breaks ties inside the EXACT_SYNONYM residue.
 
-    Trade and common names (Vancocin, vancomicina) are short and mostly letters;
-    systematic names are long and dense in digits, brackets and locants. The
-    test is deliberately conservative — a name has to be BOTH long and dense to
-    be dropped, so an ordinary chemical word survives.
+    Deliberately conservative: a name must be BOTH long and dense in digits,
+    brackets and locants, so ordinary chemical words survive.
     """
     if len(text) < 40:
         return False
     dense = sum(ch.isdigit() or ch in "[](){},-" for ch in text)
     return dense / len(text) > 0.18
+
+
+def pick_synonyms(entries: list[dict], limit: int = 6) -> list[str]:
+    """Best synonyms first, by declared type and then by shape.
+
+    Only 556 of 2,923 records carry any INN or BRAND_NAME, so type-ranking alone
+    would leave 2,090 records drawing from EXACT_SYNONYM unfiltered; and 8,356 of
+    the 11,296 EXACT_SYNONYM entries are ordinary common names, so discarding the
+    type wholesale would throw away most of the real signal. Rank, then filter
+    the residue.
+    """
+    ranked = sorted(
+        ((SYNONYM_RANK.get(str(e.get("synonym_type")), len(SYNONYM_RANK)),
+          str(e.get("synonym_text"))) for e in entries if e.get("synonym_text")),
+        key=lambda pair: pair[0])
+    out: list[str] = []
+    for rank, text in ranked:
+        if rank >= SYNONYM_RANK["EXACT_SYNONYM"] and (
+                len(text) > SYNONYM_CHAR_CEILING or is_systematic_name(text)):
+            continue
+        out.append(text)
+        if len(out) >= limit:
+            break
+    return out
 
 
 def humanize(value: str) -> str:
@@ -142,8 +177,7 @@ def build_document(record: dict, names: dict[str, str]) -> str:
     if record.get("definition"):
         parts.append(str(record["definition"]))
 
-    synonyms = [str(s.get("synonym_text")) for s in (record.get("synonyms") or [])
-                if s.get("synonym_text") and not is_systematic_name(str(s["synonym_text"]))]
+    synonyms = pick_synonyms(record.get("synonyms") or [])
     if synonyms:
         parts.append("also known as " + ", ".join(synonyms[:6]))
 

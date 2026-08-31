@@ -32,9 +32,10 @@
   {% endfor %}
 </table>
 {% if classes | selectattr("is_narrower") | list %}
-<p class="meta">A subclass row is already counted in its parent's, so this column
-sums to more than the {{ stats.total }} records: mycobacteria are bacteria, and filing
-is exclusive.</p>
+<p class="meta">A row marked <em>subclass of X</em> is already counted in X's own row, so
+this column — and the bars — sum to more than the {{ stats.total }} records: mycobacteria
+are bacteria, and filing is exclusive. The bars are per-row shares of the whole corpus,
+not a partition of it.</p>
 {% endif %}
 
 <h2>Identity grounding</h2>

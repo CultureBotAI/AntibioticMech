@@ -98,9 +98,17 @@ def rollup_by_class(counts: dict[str, int]) -> dict[str, int]:
     parents = class_parents()
     out = dict(counts)
     for cls, n in counts.items():
-        seen = set()
+        # `seen` stops a malformed is_a from hanging, but it does not stop it
+        # DOUBLE-COUNTING: a self-loop A->A, or a 2-cycle A->B->A, adds n to a
+        # class already credited with it. Unreachable from today's schema, and
+        # a silently wrong total is worse than a loud failure.
+        seen = {cls}
         parent = parents.get(cls)
-        while parent and parent not in seen:
+        while parent:
+            if parent in seen:
+                raise ValueError(
+                    f"AntimicrobialClassEnum has a cycle in is_a through {parent!r}; "
+                    "a class cannot be its own ancestor")
             seen.add(parent)
             out[parent] = out.get(parent, 0) + n
             parent = parents.get(parent)
