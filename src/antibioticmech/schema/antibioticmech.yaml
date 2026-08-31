@@ -432,6 +432,21 @@ classes:
         description: MIBiG accession for the BGC, where one is characterized.
         range: string
         pattern: "^BGC[0-9]{7}$"
+      source:
+        description: Upstream resource asserting this producer relationship.
+        range: string
+      source_version:
+        description: Release version of the upstream resource used for this assertion.
+        range: string
+      source_record_version:
+        description: Version of the individual upstream record, when versioned separately.
+        range: string
+      source_quality:
+        description: Quality label assigned by the upstream resource.
+        range: string
+      reviewed:
+        description: Whether the upstream entry passed the declared review filter.
+        range: boolean
       note:
         range: string
       reference:

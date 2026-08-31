@@ -237,6 +237,18 @@ molecular_targets:
   - reference: ARO:3000720
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000028 (vancomycin); database
       assertion, not a primary citation.
+producer_organisms:
+- taxon_id: NCBITaxon:1156913
+  taxon_label: Amycolatopsis orientalis HCCB10007 (ATCC43491)
+  biosynthetic_gene_cluster: BGC0000455
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '6'
+  source_quality: questionable
+  reviewed: true
+  note: MIBiG active entry with a non-placeholder expert reviewer; compound 'vancomycin'
+    joined by exact Standard InChIKey.
+  reference: DOI:10.1021/ja00361a029
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -247,6 +259,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:29Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T17:53:21Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

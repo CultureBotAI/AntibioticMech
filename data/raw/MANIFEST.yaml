@@ -9,6 +9,11 @@ sources:
     homepage: https://card.mcmaster.ca/
     license: CC BY 4.0 (aro.obo; card.json is separately restricted)
     molecule_root: ARO:1000003
+  mibig:
+    homepage: https://mibig.secondarymetabolites.org/
+    license: CC BY 4.0
+    version: 4.0.1
+    review_policy: active entry with a non-placeholder changelog reviewer
 downloads:
   compounds.tsv.gz:
     url: https://ftp.ebi.ac.uk/pub/databases/chebi/flat_files/compounds.tsv.gz
@@ -42,6 +47,10 @@ downloads:
     url: https://purl.obolibrary.org/obo/aro.obo
     bytes: 3318162
     sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+  mibig_json_4.0.tar.gz:
+    url: https://zenodo.org/records/14835872/files/mibig_json_4.0.tar.gz?download=1
+    bytes: 10004480
+    sha256: d02a387c7d62f8e54d7bcdc03984301e513ce56c1782ecbc9ce957a76039444f
 inventories:
   aro_antibiotics.tsv:
     rows: 644
@@ -68,3 +77,8 @@ inventories:
     bytes: 158742
     sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
     source: PubChem PUG REST (scripts/enrich_pubchem_structures.py)
+  mibig_producers.tsv:
+    rows: 43
+    bytes: 29899
+    sha256: 696a6f3f47ced15d166eebf53acbe7f33891e22ecab74af0cece9565438e85fa
+    source: MIBiG 4.0.1 reviewed active entries

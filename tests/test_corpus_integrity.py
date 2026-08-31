@@ -138,6 +138,28 @@ def test_mechanistic_claims_carry_evidence(records):
     assert unsupported == [], unsupported[:20]
 
 
+def test_mibig_producers_are_reviewed_and_fully_provenanced(records):
+    """Every imported producer is a reviewed, versioned MIBiG+BGC assertion."""
+    problems = []
+    for path, record in records:
+        for producer in record.get("producer_organisms") or []:
+            if producer.get("source") != "MIBIG":
+                continue
+            required = (
+                "taxon_id",
+                "taxon_label",
+                "biosynthetic_gene_cluster",
+                "source_version",
+                "source_record_version",
+                "source_quality",
+                "reference",
+            )
+            missing = [field for field in required if not producer.get(field)]
+            if missing or producer.get("reviewed") is not True:
+                problems.append((path.name, missing, producer.get("reviewed")))
+    assert problems == [], problems[:20]
+
+
 def test_causal_graph_edges_reference_declared_nodes(records):
     dangling = []
     for path, record in records:

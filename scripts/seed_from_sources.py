@@ -33,7 +33,7 @@ import hashlib
 import re
 import shutil
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import date
 from functools import lru_cache
 from pathlib import Path
@@ -146,7 +146,7 @@ SEEDED_FIELDS = [
 CURATOR_FIELDS = [
     "curation_status", "grounding_notes", "evidence",
     "cidality", "biosynthesis_origin", "clinical_status",
-    "producer_organisms", "activity_spectrum", "causal_graphs", "datasets",
+    "activity_spectrum", "causal_graphs", "datasets",
     "contributors",
 ]
 
@@ -996,6 +996,87 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
         _history_last(records[identifier])
 
 
+MIBIG_PRODUCER_SOURCE = "MIBIG"
+
+
+def is_mibig_sourced_producer(item: dict) -> bool:
+    """True only for a producer assertion owned by the MIBiG extractor."""
+    return item.get("source") == MIBIG_PRODUCER_SOURCE
+
+
+def mibig_sourced_producer_view(record: dict) -> list[dict]:
+    """The reproducible MIBiG slice of a record's producer assertions."""
+    return [
+        item
+        for item in (record.get("producer_organisms") or [])
+        if is_mibig_sourced_producer(item)
+    ]
+
+
+def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Counter:
+    """Attach reviewed MIBiG producer/BGC evidence by exact Standard InChIKey.
+
+    Names, database cross-references, and connectivity-only matches are never
+    identity evidence here. An inventory row with incomplete potential stereo,
+    or a key shared by multiple corpus records, is counted and skipped.
+    """
+    rows = load_tsv(RAW_DIR / "mibig_producers.tsv")
+    by_key: dict[str, list[str]] = defaultdict(list)
+    for identifier, record in records.items():
+        key = record["chemical_structure"]["standard_inchi_key"]
+        by_key[key].append(identifier)
+
+    grouped: dict[str, list[dict]] = defaultdict(list)
+    counts: Counter = Counter()
+    for row in rows:
+        if row.get("reviewed") != "true":
+            counts["rejected_not_reviewed"] += 1
+            continue
+        if row.get("stereo_complete") != "true":
+            counts["ambiguous_stereochemistry"] += 1
+            continue
+        matches = by_key.get(row.get("standard_inchi_key", ""), [])
+        if not matches:
+            counts["out_of_scope"] += 1
+            continue
+        if len(matches) != 1:
+            counts["ambiguous_corpus_identity"] += 1
+            continue
+        grouped[matches[0]].append(row)
+        counts["matched"] += 1
+
+    for identifier, matched_rows in sorted(grouped.items()):
+        items = []
+        seen = set()
+        for row in sorted(
+            matched_rows,
+            key=lambda value: (value["mibig_accession"], value["compound_index"]),
+        ):
+            key = (row["mibig_accession"], row["taxon_id"])
+            if key in seen:
+                continue
+            seen.add(key)
+            items.append({
+                "taxon_id": f"NCBITaxon:{row['taxon_id']}",
+                "taxon_label": row["taxon_label"],
+                "biosynthetic_gene_cluster": row["mibig_accession"],
+                "source": MIBIG_PRODUCER_SOURCE,
+                "source_version": release_version,
+                "source_record_version": row["entry_version"],
+                "source_quality": row["entry_quality"],
+                "reviewed": True,
+                "note": (
+                    "MIBiG active entry with a non-placeholder expert reviewer; "
+                    f"compound {row['compound_name']!r} joined by exact Standard InChIKey."
+                ),
+                "reference": row["primary_reference"],
+            })
+        if items:
+            records[identifier]["producer_organisms"] = items
+            _history_last(records[identifier])
+    return counts
+
+
 # --------------------------------------------------------------------------
 # writing
 # --------------------------------------------------------------------------
@@ -1139,6 +1220,20 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
         if field in existing:
             merged[field] = existing[field]
 
+    # MIBiG owns only the assertions explicitly marked with its source. A fresh
+    # extraction replaces that slice while hand-curated producers survive after
+    # it, including curator entries that happen to cite a MIBiG accession.
+    seeded_producers = list(record.get("producer_organisms") or [])
+    curator_producers = [
+        item
+        for item in (existing.get("producer_organisms") or [])
+        if not is_mibig_sourced_producer(item)
+    ]
+    if seeded_producers or curator_producers:
+        merged["producer_organisms"] = seeded_producers + curator_producers
+    else:
+        merged.pop("producer_organisms", None)
+
     # mode_of_action is seeded from ChEBI's roles but a curator's judgement
     # outranks it, so ownership is decided by the marker rather than by the field
     # name — the same device the CARD mechanism items use.
@@ -1214,6 +1309,8 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     unchanged = all(existing.get(f) == record.get(f) for f in SEEDED_FIELDS) and all(
         card_sourced_view(existing, f) == card_sourced_view(record, f)
         for f in ("molecular_targets", "resistance_mechanisms")
+    ) and (
+        mibig_sourced_producer_view(existing) == mibig_sourced_producer_view(record)
     ) and all(
         existing.get(f) == merged.get(f)
         for f in ("mode_of_action", "mode_of_action_notes", "mode_of_action_target_scope")
@@ -1395,6 +1492,10 @@ def main() -> int:
     decisions = load_decisions()
     records, skipped = merge(concepts, chebi_rows, conf, decisions, source_version)
     attach_aro_mechanism(records, source_version)
+    mibig_counts = attach_mibig_producers(
+        records,
+        str(manifest.get("sources", {}).get("mibig", {}).get("version", "")),
+    )
     flagged = flag_structure_collisions(records, source_version)
 
     by_class: dict[str, int] = defaultdict(int)
@@ -1409,6 +1510,13 @@ def main() -> int:
     if flagged:
         print(f"  {flagged} records flagged with a structure-collision discussion",
               file=sys.stderr)
+    print(
+        "  MIBiG producers: "
+        f"matched={mibig_counts['matched']} "
+        f"ambiguous={mibig_counts['ambiguous_stereochemistry'] + mibig_counts['ambiguous_corpus_identity']} "
+        f"out_of_scope={mibig_counts['out_of_scope']}",
+        file=sys.stderr,
+    )
     for name, count in sorted(by_class.items(), key=lambda kv: -kv[1]):
         print(f"    {name:26s} {count:>6d}", file=sys.stderr)
 

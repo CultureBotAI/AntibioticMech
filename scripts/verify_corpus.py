@@ -40,12 +40,14 @@ from seed_from_sources import (  # noqa: E402
     SEEDED_FIELDS,
     assign_slugs,
     attach_aro_mechanism,
+    attach_mibig_producers,
     build_concepts,
     card_sourced_view,
     curator_owns_mode_of_action,
     flag_structure_collisions,
     load_decisions,
     merge,
+    mibig_sourced_producer_view,
     read_lockfile,
     record_path,
     seeded_mode_of_action,
@@ -68,6 +70,10 @@ def rebuild() -> dict[str, dict]:
     records, _ = merge(concepts, chebi_rows, conf, load_decisions(),
                        manifest.get("retrieved_on", ""))
     attach_aro_mechanism(records, manifest.get("retrieved_on", ""))
+    attach_mibig_producers(
+        records,
+        str(manifest.get("sources", {}).get("mibig", {}).get("version", "")),
+    )
     flag_structure_collisions(records, manifest.get("retrieved_on", ""))
     return records
 
@@ -103,6 +109,8 @@ def main() -> int:
         for field in CARD_FIELDS:
             if card_sourced_view(want, field) != card_sourced_view(actual, field):
                 drifted.append((path, field))
+        if mibig_sourced_producer_view(want) != mibig_sourced_producer_view(actual):
+            drifted.append((path, "producer_organisms"))
         # mode_of_action the same way: a value that CLAIMS to be seeded — it
         # carries the seeder's note marker — must be what the seeder produces.
         # A curator's own value carries no marker and is theirs to set, so the

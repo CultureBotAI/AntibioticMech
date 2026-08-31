@@ -641,14 +641,23 @@ def main() -> int:
         print(f"  wrote {path.relative_to(REPO_ROOT)} ({len(rows)} rows)", file=sys.stderr)
 
     manifest = build_manifest(conf, written)
-    # pubchem_structures.tsv is written by a later, network-dependent step; carry
-    # its recorded hash forward rather than dropping provenance on re-extraction.
+    # Inventories written by independent extractors are carried forward rather
+    # than dropping their provenance on a ChEBI/ARO refresh.
     old_path = RAW_DIR / MANIFEST
     if old_path.exists():
         previous = yaml.safe_load(old_path.read_text(encoding="utf-8")) or {}
-        carried = previous.get("inventories", {}).get("pubchem_structures.tsv")
-        if carried and (RAW_DIR / "pubchem_structures.tsv").exists():
-            manifest["inventories"]["pubchem_structures.tsv"] = carried
+        for name in ("pubchem_structures.tsv", "mibig_producers.tsv"):
+            carried = previous.get("inventories", {}).get(name)
+            if carried and (RAW_DIR / name).exists():
+                manifest["inventories"][name] = carried
+        for name in ("mibig",):
+            carried = previous.get("sources", {}).get(name)
+            if carried:
+                manifest["sources"][name] = carried
+        for name in ("mibig_json_4.0.tar.gz",):
+            carried = previous.get("downloads", {}).get(name)
+            if carried:
+                manifest["downloads"][name] = carried
     (RAW_DIR / MANIFEST).write_text(
         yaml.safe_dump(manifest, sort_keys=False, allow_unicode=True), encoding="utf-8")
     print(f"  wrote {(RAW_DIR / MANIFEST).relative_to(REPO_ROOT)}", file=sys.stderr)

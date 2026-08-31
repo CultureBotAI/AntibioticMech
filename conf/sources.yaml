@@ -70,6 +70,21 @@ pubchem:
   # PubChem asks for <=5 requests/second; we stay well under.
   requests_per_second: 3
 
+mibig:
+  name: Minimum Information about a Biosynthetic Gene Cluster
+  description: >-
+    Reviewed producer-organism and biosynthetic-gene-cluster assertions. The
+    first import accepts only active entries with a non-placeholder changelog
+    reviewer and joins compounds to the corpus by exact Standard InChIKey.
+  homepage: https://mibig.secondarymetabolites.org/
+  archive_url: https://zenodo.org/records/14835872/files/mibig_json_4.0.tar.gz?download=1
+  archive_name: mibig_json_4.0.tar.gz
+  version: 4.0.1
+  license: CC BY 4.0
+  # Used by MIBiG for automated migrations and legacy submissions. It is not
+  # evidence that an expert reviewed the entry.
+  reviewer_placeholder: AAAAAAAAAAAAAAAAAAAAAAAA
+
 # ----------------------------------------------------------------------------
 # Role scope — which ChEBI roles put a compound in this corpus.
 #
