@@ -649,13 +649,18 @@ def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
     values = sorted(set(hits.values()))
 
     # Whose target is it? MICROBIAL_TARGET if ANY contributing role names a
-    # microbe-specific target, because a specific role subsumes a generic one:
-    # ciprofloxacin carries `topoisomerase IV inhibitor` (bacteria-only) AND the
-    # generic `DNA synthesis inhibitor`, and the first identifies the target the
-    # second only gestures at. Marking it host-shared would put the most
-    # selective antibacterial class there is on the wrong side of the filter
-    # this field exists to support. HOST_SHARED_TARGET therefore means the
-    # record has NO role naming a microbe-specific target.
+    # target the host lacks; HOST_SHARED_TARGET when none does. The question the
+    # aggregate answers is "does this compound act on anything the host does not
+    # have?", which is what makes it a usable filter: ciprofloxacin carries
+    # `topoisomerase IV inhibitor` (bacteria-only) alongside the generic `DNA
+    # synthesis inhibitor`, and marking it host-shared would put the most
+    # selective antibacterial class there is on the wrong side of that filter.
+    #
+    # This was previously described as "a specific role outranks a generic one".
+    # That was not the rule, only a coincidence of the ciprofloxacin case where
+    # the specific role was also the microbial one. The azoles proved it: the
+    # GENERIC pathway role beat the SPECIFIC enzyme role there, the same
+    # sentence run backwards. The rule is presence, aggregated by ANY.
     #
     # `mode_of_action` means the mechanism of the ANTIMICROBIAL effect, and that
     # does not require a microbe-specific target: a host-directed antiviral
@@ -697,6 +702,13 @@ def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
 
     # The MULTIPLE branch needs the caveat too: a record can carry several
     # mechanisms and still have one of them belong to another activity.
+    # Worth saying when the mechanisms sit on different sides of the host line:
+    # the aggregate is still the honest answer to "acts on anything the host
+    # lacks?", but a reader deciding which mechanism is primary needs to know
+    # the choice moves the scope too.
+    disagree = ("" if len({scope_map[role] for role in hits}) == 1 else
+                " The contributing roles differ on whose target it is, so settling the "
+                "primary mechanism may change mode_of_action_target_scope.")
     crossed = [v for v in values if _cross_activity_note(v, antimicrobial_class)]
     extra = ""
     if crossed:
@@ -707,22 +719,10 @@ def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
         extra = (f" Note that {', '.join(crossed)} implies an "
                  f"{' or '.join(i.lower().replace('anti', 'anti-') for i in implied)} target while "
                  f"{where}.")
-    # MULTIPLE means the seeder refused to pick a mechanism. If the contributing
-    # roles also disagree about whose target it is, picking a scope would collapse
-    # exactly what the MULTIPLE value declines to collapse — and "any microbial
-    # wins" would report selectivity for a record one of whose mechanisms is
-    # host-shared. No scope, and `just worklist --queue moa-scope` carries it
-    # until a curator names the primary mechanism; the scope follows from that.
-    if len({scope_map[role] for role in hits}) > 1:
-        scope = None
-        scope_caveat = ("The roles disagree about whose target it is, so no "
-                        "mode_of_action_target_scope is asserted until the primary "
-                        "mechanism is settled.")
-
     return "MULTIPLE", (f"{MOA_NOTE_MARKER}s {cited}, which map to "
                         f"{', '.join(values)}. ChEBI asserts these roles on the compound; "
                         f"a curator should decide whether one is primary.{extra} "
-                        f"{scope_caveat} Not a curator's mechanistic review."), scope
+                        f"{scope_caveat}{disagree} Not a curator's mechanistic review."), scope
 
 
 def build_record(identifier: str, grounding_status: str, group: list[Concept],
@@ -803,10 +803,8 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     moa = mode_of_action_from_roles(mechanism_roles, conf, load_role_names(),
                                     record["antimicrobial_class"])
     if moa:
-        record["mode_of_action"], record["mode_of_action_notes"], scope = moa
-        # None where the contributing roles disagree about whose target it is.
-        if scope is not None:
-            record["mode_of_action_target_scope"] = scope
+        (record["mode_of_action"], record["mode_of_action_notes"],
+         record["mode_of_action_target_scope"]) = moa
 
     structure = next((c.structure for c in group if c.structure.get("standard_inchi")),
                      group[0].structure)

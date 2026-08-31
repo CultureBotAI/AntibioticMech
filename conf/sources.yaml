@@ -321,8 +321,19 @@ role_target_scope:
   CHEBI:50502: MICROBIAL_TARGET    # dihydropteroate synthase — humans take up folate
                                    # rather than synthesising it, which is why
                                    # sulfonamides are selective at all
-  CHEBI:75282: MICROBIAL_TARGET    # ergosterol biosynthesis — the pathway product is
-                                   # fungal; the host makes cholesterol
+  CHEBI:75282: HOST_SHARED_TARGET  # ergosterol biosynthesis — the PRODUCT is fungal, but
+                                   # this field is about the TARGET, and an azole's target
+                                   # is CYP51, which the host has. Every enzyme of this
+                                   # pathway scoped in this file (CHEBI:77884 CYP51,
+                                   # CHEBI:59285 SQLE) is host-shared, so calling the
+                                   # pathway microbial split one drug class in two:
+                                   # fluconazole and voriconazole read MICROBIAL_TARGET
+                                   # while flutrimazole and triforine read
+                                   # HOST_SHARED_TARGET — same enzyme, same mechanism
+                                   # value, opposite selectivity claim, decided only by
+                                   # which role tag ChEBI happened to attach. Keeping it
+                                   # microbial was the outcome-preserving reasoning M3
+                                   # was supposed to have removed.
   CHEBI:230471: MICROBIAL_TARGET   # 1,3-β-glucan synthase — fungal cell wall; host lacks
   CHEBI:59672: MICROBIAL_TARGET    # chitin synthase — fungal/insect; host lacks
   # --- virus-encoded targets
@@ -387,9 +398,14 @@ role_target_scope:
                                    # really is absent from the host, which is the honest
                                    # reason the class is selective.
   CHEBI:59285: HOST_SHARED_TARGET  # squalene monooxygenase — the host has SQLE. Costs
-                                   # the allylamines (terbinafine, naftifine, butenafine,
-                                   # amorolfine) their MICROBIAL_TARGET, correctly:
-                                   # their selectivity is affinity, not absence.
+                                   # terbinafine and naftifine (allylamines) their
+                                   # MICROBIAL_TARGET, correctly: their selectivity is
+                                   # affinity, not absence. ChEBI also tags butenafine
+                                   # (a benzylamine) and amorolfine (a morpholine acting
+                                   # on ERG24/ERG2, not squalene epoxidase) with this
+                                   # role; calling all four "the allylamines" was wrong,
+                                   # and in a file whose decisions rest on cohorts a
+                                   # misdescribed cohort is a defect in the record.
   CHEBI:24869: HOST_SHARED_TARGET  # ionophore — collapses gradients across any membrane
   CHEBI:83741: HOST_SHARED_TARGET  # phospholipid biosynthesis — universal
   CHEBI:59897: HOST_SHARED_TARGET  # EC 2.7.7.49 (RNA-directed DNA polymerase) — the host

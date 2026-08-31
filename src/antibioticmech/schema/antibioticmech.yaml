@@ -217,7 +217,9 @@ classes:
           (topoisomerase IV, dihydropteroate synthase, HIV protease) gives
           MICROBIAL_TARGET; a generic one (protein synthesis inhibitor) gives
           HOST_SHARED_TARGET. Owned together with `mode_of_action`, so a curator
-          who claims that field owns this one too.
+          who claims that field owns this one too — and may legitimately leave
+          this one empty, since the seeder cannot derive a scope for a value it
+          did not derive. `just worklist --queue moa-scope` lists those.
         range: ModeOfActionTargetScopeEnum
 
       mode_of_action_notes:

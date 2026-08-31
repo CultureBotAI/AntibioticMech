@@ -21,10 +21,10 @@ structural_class: imidazole antibiotic
 structural_class_id: ARO:3007500
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:75282 (ergosterol biosynthesis
-  inhibitor). ChEBI asserts the role on the compound. The role names a target specific
-  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
-  review.
-mode_of_action_target_scope: MICROBIAL_TARGET
+  inhibitor). ChEBI asserts the role on the compound. The target it names is one the
+  host has too, so the mechanism is true but is not evidence of selectivity — see
+  mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: C1=CC(=C(C=C1Cl)Cl)COC(CN2C=CN=C2)C3=C(C=C(C=C3)Cl)Cl
   standard_inchi: InChI=1S/C18H14Cl4N2O/c19-13-2-1-12(16(21)7-13)10-25-18(9-24-6-5-23-11-24)15-4-3-14(20)8-17(15)22/h1-8,11,18H,9-10H2
@@ -111,6 +111,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T04:10:42Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

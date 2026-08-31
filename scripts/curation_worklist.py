@@ -34,7 +34,6 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from seed_from_sources import (  # noqa: E402
     CONF_PATH,
-    MOA_NOTE_MARKER,
     RAW_DIR,
     build_concepts,
     curator_owns_mode_of_action,
@@ -120,47 +119,65 @@ def minted_queue(records: list[dict]) -> list[dict]:
     return rows
 
 
-def mode_of_action_scope_queue(records: list[dict]) -> list[dict]:
+def seeded_mechanism_view() -> dict[str, dict]:
+    """identifier -> the mechanism block the seeder derives right now.
+
+    The queue below cannot tell a curator's scope from a leftover by looking at
+    the record, because both are just a value. It can tell them apart by asking
+    the seeder what IT would derive, which is the only thing that makes the
+    distinction knowable.
+    """
+    conf = yaml.safe_load(CONF_PATH.read_text(encoding="utf-8"))
+    manifest = yaml.safe_load((RAW_DIR / "MANIFEST.yaml").read_text(encoding="utf-8"))
+    concepts, chebi_rows = build_concepts(conf)
+    derived, _ = merge(concepts, chebi_rows, conf, load_decisions(),
+                       manifest.get("retrieved_on", ""))
+    return {ident: {"mode_of_action": rec.get("mode_of_action"),
+                    "mode_of_action_target_scope": rec.get("mode_of_action_target_scope")}
+            for ident, rec in derived.items()}
+
+
+def mode_of_action_scope_queue(records: list[dict],
+                               derived: dict[str, dict] | None = None) -> list[dict]:
     """Curator-owned mechanisms whose target scope has not been settled.
 
     The scope describes the mechanism it sits beside, and the seeder derives it
     from the ChEBI roles. Once a curator claims `mode_of_action`, the seeder can
     no longer derive a scope for their value and must not guess — it copies the
-    block forward verbatim. That is correct, and it leaves exactly one loose end:
-    a scope that was derived for the seeder's mechanism, still sitting beside a
-    curator's different one.
+    block forward verbatim. That leaves one loose end: a scope derived for the
+    seeder's mechanism, still sitting beside a curator's different one.
 
-    It also carries the MULTIPLE records whose contributing roles disagree about
-    whose target it is: the seeder asserts no scope there, because picking one
-    would collapse exactly what the MULTIPLE value declines to collapse.
+    This queue is that loose end, and it is COMPARED AGAINST THE DERIVATION
+    rather than sniffed from the note text. An earlier version keyed on "the
+    seeder's note marker is still present", which missed the case it existed for
+    entirely — a curator who REPLACES the note (a state `curator_owns_mode_of_
+    action` explicitly supports) and changes the mechanism matched neither of
+    its signals — while queueing forever a curator who merely appended
+    `CURATOR: confirmed` without changing anything, whose derived scope is
+    perfectly valid and who had no way to clear the row.
 
-    This queue is that loose end. It exists because a code comment once offered
-    `just worklist` as the mitigation for precisely this, and no such queue
-    existed — an asserted mitigation that was never built, which is the same
-    defect class as a role map that silently did nothing.
-
-    Two signals, both cheap and both honest about what they mean:
-      - no scope at all beside a curator's mechanism;
-      - the seeder's own note marker still in the notes, meaning the curator
-        appended to the seeder's sentence rather than replacing it, so the scope
-        beside it is very likely still the seeder's and unreviewed.
+    Three cases, in order:
+      - no scope beside a curator's mechanism: owed outright;
+      - the curator changed the mechanism and the scope is still exactly what
+        the seeder derives: indistinguishable from a leftover, so it is asked
+        about rather than trusted or deleted;
+      - anything else: settled, and not queued.
     """
+    if derived is None:
+        derived = seeded_mechanism_view()
     rows = []
     for record in records:
         moa = record.get("mode_of_action")
-        if not moa:
+        if not moa or not curator_owns_mode_of_action(record):
             continue
         scope = record.get("mode_of_action_target_scope")
-        notes = str(record.get("mode_of_action_notes") or "")
-        owned = curator_owns_mode_of_action(record)
-        if moa == "MULTIPLE" and not scope:
-            # The contributing roles disagreed about whose target it is, so the
-            # seeder asserted none. Settling the primary mechanism settles this.
-            hint = "MULTIPLE with roles of differing scope; no scope asserted"
-        elif owned and not scope:
+        seeded = derived.get(record.get("identifier"), {})
+        if not scope:
             hint = "curator mechanism with no target scope"
-        elif owned and MOA_NOTE_MARKER in notes:
-            hint = f"scope {scope} may still be the seeder's (its note marker remains)"
+        elif (seeded.get("mode_of_action") != moa
+              and seeded.get("mode_of_action_target_scope") == scope):
+            hint = (f"scope {scope} is what the seeder derives for "
+                    f"{seeded.get('mode_of_action')}, not for {moa}")
         else:
             continue
         rows.append({
@@ -168,7 +185,7 @@ def mode_of_action_scope_queue(records: list[dict]) -> list[dict]:
             "key": record["identifier"],
             "label": record["label"],
             "source": "+".join(sorted({c["source"] for c in record.get("source_concepts", [])})),
-            "source_id": record.get("mode_of_action", ""),
+            "source_id": moa,
             "hint": hint,
         })
     rows.sort(key=lambda r: r["label"].lower())

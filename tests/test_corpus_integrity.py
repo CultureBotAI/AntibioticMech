@@ -325,11 +325,7 @@ def test_target_scope_accompanies_every_seeded_mechanism(records):
     for path, record in records:
         moa = record.get("mode_of_action")
         scope = record.get("mode_of_action_target_scope")
-        # MULTIPLE is exempt: when the contributing roles disagree about whose
-        # target it is, asserting one would collapse exactly what MULTIPLE
-        # declines to collapse. `just worklist --queue moa-scope` carries it.
-        if (moa and moa != "MULTIPLE" and not scope
-                and not curator_owns_mode_of_action(record)):
+        if moa and not scope and not curator_owns_mode_of_action(record):
             missing.append(path.name)
         if scope and not moa:
             orphaned.append(path.name)

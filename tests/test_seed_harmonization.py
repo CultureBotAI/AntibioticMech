@@ -456,7 +456,6 @@ def test_two_identifiers_never_receive_the_same_slug(tmp_path, monkeypatch):
                           sfs2.read_lockfile())
 
 
-
 def test_the_ledger_holds_through_repeated_renames_and_a_return(tmp_path, monkeypatch):
     """The composite-key scheme's whole contract, in sequence. Each step was
     checked by hand once; this keeps it checked.
@@ -1016,6 +1015,8 @@ def test_a_curator_owns_the_whole_mechanism_block_including_its_scope():
         out = reseed(v)
         assert "mode_of_action" not in out
         assert "mode_of_action_target_scope" not in out, stranded
+
+
 def test_every_seeded_mechanism_note_explains_its_target_scope():
     """The scope caveat is appended to the cross-activity note, not swapped for
     it.
@@ -1151,51 +1152,88 @@ def test_a_conf_driven_mechanism_change_appends_an_audit_event():
     assert events(dict(base), curated) == 1
 
 
-def test_a_multiple_mechanism_with_disagreeing_roles_asserts_no_scope():
-    """MULTIPLE means the seeder refused to pick a mechanism. If the roles also
-    disagree about whose target it is, picking a scope collapses exactly what
-    MULTIPLE declines to collapse — and "any microbial wins" would report
-    selectivity for a record one of whose mechanisms is host-shared.
+def test_the_same_role_shape_gets_the_same_scope_whether_or_not_MULTIPLE():
+    """Scope is a question about ROLES, so identical role shapes must answer it
+    identically.
 
-    Three records are affected (adefovir, adefovir pivoxil, and
-    3'-deoxy-3',4'-didehydro-cytidine). They are the only members of
-    `just worklist --queue moa-scope`, which is asserted here because the first
-    version of that queue covered only curator-owned records and would have
-    reported zero — a mitigation named in a comment that did not cover the case
-    it was named for, which is the defect in #85 repeated.
+    A MULTIPLE branch that withheld the scope made adefovir (a specific role
+    plus a generic one) assert nothing while ciprofloxacin (a specific role plus
+    the SAME generic one) asserted MICROBIAL_TARGET — the answer flipping only
+    because the two mechanism values happened to collide in one case. The
+    aggregate "does this act on anything the host lacks?" is answerable either
+    way, and the disagreement is reported in the note instead.
     """
     from seed_from_sources import mode_of_action_from_roles
 
     conf = _conf()
-    names = {"CHEBI:59897": "RNA-directed DNA polymerase inhibitor",
+    names = {"CHEBI:53756": "HIV-1 reverse transcriptase inhibitor",
              "CHEBI:59517": "DNA synthesis inhibitor",
-             "CHEBI:53756": "HIV-1 reverse transcriptase inhibitor",
-             "CHEBI:48001": "protein synthesis inhibitor"}
+             "CHEBI:53559": "topoisomerase IV inhibitor"}
 
-    # Mixed scopes: CHEBI:53756 is microbial, CHEBI:59517 host-shared.
-    value, notes, scope = mode_of_action_from_roles(
-        ["CHEBI:53756", "CHEBI:59517"], conf, names, "ANTIVIRAL")
-    assert value == "MULTIPLE"
-    assert scope is None, scope
-    assert "disagree about whose target it is" in notes
+    adefovir = mode_of_action_from_roles(["CHEBI:53756", "CHEBI:59517"], conf, names, "ANTIVIRAL")
+    cipro = mode_of_action_from_roles(["CHEBI:53559", "CHEBI:59517"], conf, names, "ANTIBACTERIAL")
+    assert adefovir[0] == "MULTIPLE" and cipro[0] != "MULTIPLE"
+    assert adefovir[2] == cipro[2] == "MICROBIAL_TARGET", (adefovir[2], cipro[2])
 
-    # Agreeing scopes still get one: the refusal is about disagreement, not
-    # about MULTIPLE as such.
-    _v, _n, agreed = mode_of_action_from_roles(
-        ["CHEBI:59517", "CHEBI:48001"], conf, names, "ANTIBACTERIAL")
-    assert agreed == "HOST_SHARED_TARGET", agreed
+    # The disagreement is said out loud, since settling the primary mechanism
+    # can move the scope.
+    assert "differ on whose target it is" in adefovir[1]
+    assert "differ on whose target it is" not in cipro[1]
 
 
-def test_the_moa_scope_queue_actually_lists_the_records_it_claims(records):
-    """The queue is cited as the mitigation in two code comments. Assert it."""
+def test_the_moa_scope_queue_lists_every_state_it_claims_to():
+    """Each branch is exercised by a CONSTRUCTED record, not by corpus state.
+
+    The first version of this test asserted only that the corpus's unscoped
+    records were queued. Every such record happened to be MULTIPLE, so both
+    curator branches could be deleted outright and it still passed — a guard
+    that never touched the code it guarded. Each case below fails if its branch
+    is removed.
+    """
     import sys
-    from pathlib import Path
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+    from pathlib import Path as _Path
+    sys.path.insert(0, str(_Path(__file__).resolve().parent.parent / "scripts"))
     from curation_worklist import mode_of_action_scope_queue
 
-    docs = [r for _p, r in records]
-    queued = {row["label"] for row in mode_of_action_scope_queue(docs)}
-    unscoped = {r["label"] for r in docs
-                if r.get("mode_of_action") and not r.get("mode_of_action_target_scope")}
-    assert unscoped, "no unscoped mechanisms in the corpus; this test guards nothing"
-    assert unscoped <= queued, f"unscoped but not queued: {sorted(unscoped - queued)}"
+    derived = {"CHEBI:1": {"mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+                           "mode_of_action_target_scope": "HOST_SHARED_TARGET"}}
+
+    def rec(**kw):
+        base = {"identifier": "CHEBI:1", "label": "widgetmycin",
+                "source_concepts": [{"source": "CHEBI"}]}
+        base.update(kw)
+        return base
+
+    def queued(record):
+        return mode_of_action_scope_queue([record], derived=derived)
+
+    # The case the queue exists for, and the one the note-marker version missed:
+    # the curator REPLACED the seeder's note, so no marker remains, and changed
+    # the mechanism, leaving the derived scope stranded beside it.
+    replaced = rec(mode_of_action="VIRAL_INTEGRASE_INHIBITION",
+                   mode_of_action_notes="Reassigned after literature review, PMID:1.",
+                   mode_of_action_target_scope="HOST_SHARED_TARGET")
+    assert queued(replaced), "the stranded-scope case is unsurfaced"
+
+    # A curator mechanism with no scope at all is owed one.
+    assert queued(rec(mode_of_action="MEMBRANE_DISRUPTION",
+                      mode_of_action_notes="CURATOR: mine."))
+
+    # Settled, and must NOT be queued: the curator set a scope of their own...
+    assert not queued(rec(mode_of_action="VIRAL_INTEGRASE_INHIBITION",
+                          mode_of_action_notes="CURATOR: mine.",
+                          mode_of_action_target_scope="MICROBIAL_TARGET"))
+
+    # ...and the curator who followed docs/CURATION.md and merely APPENDED a
+    # confirmation without changing the mechanism. The derived scope still
+    # describes that mechanism. An earlier version queued them forever with no
+    # action that could clear the row.
+    assert not queued(rec(mode_of_action="PROTEIN_SYNTHESIS_INHIBITION",
+                          mode_of_action_notes=("Assigned from ChEBI role CHEBI:48001 (x). "
+                                                "CURATOR: confirmed against PMID:1."),
+                          mode_of_action_target_scope="HOST_SHARED_TARGET"))
+
+    # A purely seeded record is not curation work.
+    assert not queued(rec(mode_of_action="PROTEIN_SYNTHESIS_INHIBITION",
+                          mode_of_action_notes="Assigned from ChEBI role CHEBI:48001 (x).",
+                          mode_of_action_target_scope="HOST_SHARED_TARGET"))
