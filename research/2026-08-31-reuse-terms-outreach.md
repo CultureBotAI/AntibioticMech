@@ -1,0 +1,78 @@
+# Reuse-permission outreach drafts
+
+Date drafted: 2026-08-31  
+Issue: #106  
+Status: **NOT SENT — no authenticated mail channel is available in this workspace**
+
+These requests deliberately identify the exact data scope and ask separately
+about access, modification, commercial redistribution, attribution, and
+third-party content. A reply should be archived verbatim with its date and
+sender before any source is marked adopted.
+
+## BV-BRC — `help@bv-brc.org`
+
+Subject: Reuse terms for laboratory-method BV-BRC AMR phenotype rows
+
+We maintain AntibioticMech, a publicly redistributed CC BY 4.0 corpus of
+chemical structures and evidence. We are evaluating only BV-BRC AMR phenotype
+or `genome_amr` rows whose evidence is `Laboratory Method`; we will exclude all
+computational predictions and classifier outputs.
+
+Could you confirm whether those API/download rows may be (1) programmatically
+downloaded, (2) filtered, normalized, joined to chemical and taxonomic
+identifiers, and otherwise modified, and (3) redistributed in a corpus that
+permits commercial reuse? Please state the applicable licence, required
+attribution/citation, version or retrieval-date requirements, and whether any
+fields or contributing sources have different terms. If a machine-readable
+licence or terms URL exists, please provide it.
+
+## BacDive — official contact form, category Content/Web services
+
+Subject: Confirm CC BY 4.0 scope for BacDive susceptibility API/bulk rows
+
+The current BacDive site footer links its Copyright & License statement to CC
+BY 4.0. We are evaluating strain-level antibiotic susceptibility fields for a
+CC BY 4.0 corpus.
+
+Could you confirm that CC BY 4.0 covers susceptibility data returned through
+the BacDive API and any bulk/download mechanism, including permission to
+filter, normalize, join to external chemical/taxonomic identifiers, and
+redistribute modified rows for commercial and non-commercial use? Please also
+state the required attribution/citation, database version/retrieval-date
+requirements, and any third-party fields excluded from that licence.
+
+## CO-ADD — `info@co-add.org`
+
+Subject: Request for a separately licensed CO-ADD antimicrobial screening distribution
+
+We maintain AntibioticMech, a CC BY 4.0 corpus of chemical structures and
+evidence. CO-ADD screening results in ChEMBL are useful but remain under
+ChEMBL's CC BY-SA 3.0 terms, while the CO-ADD website copyright page prohibits
+systematic download and redistribution without permission.
+
+Does CO-ADD offer an independent machine-readable distribution containing
+compound identity, organism/strain, assay, concentration or MIC, units, medium,
+detection method, result, and citation? If so, may we programmatically obtain,
+filter/normalize/modify, and commercially redistribute derived observation rows
+under CC BY 4.0 or another non-restrictive licence? Please identify the exact
+dataset scope, licence, attribution/citation, version/retrieval requirements,
+and any depositor or third-party restrictions. We are not asking to relicense
+the ChEMBL copy.
+
+## Stanford HIVDB — `hivdbteam@lists.stanford.edu`
+
+Subject: Reuse terms for Stanford HIVDB resistance data
+
+We maintain AntibioticMech, a publicly redistributed CC BY 4.0 corpus. We are
+evaluating HIVDB download/API data describing HIV drug-resistance mutations,
+drug susceptibility/interpretation evidence, algorithm/database version, and
+primary references. We would scope any use to HIV and preserve record-level
+provenance.
+
+Could you confirm whether these database rows may be programmatically
+downloaded, filtered/normalized/modified, joined to drug and mutation
+identifiers, and redistributed in a corpus permitting commercial reuse? Please
+state the applicable data licence, exact covered endpoints/downloads, required
+attribution/citation, version/retrieval-date requirements, and any third-party
+fields with separate terms. We have found GPL terms for the public CMS code but
+do not assume they license the resistance database itself.
