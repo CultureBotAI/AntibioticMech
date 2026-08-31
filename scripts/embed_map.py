@@ -99,8 +99,12 @@ def main() -> int:
                        index[m.get("class") or "UNKNOWN"], identifier,
                        m.get("label") or identifier])
 
-    model = json.loads((EMB / "meta.json").read_text(encoding="utf-8")).get("model", "")
+    emb_meta = json.loads((EMB / "meta.json").read_text(encoding="utf-8"))
+    model = emb_meta.get("model", "")
     payload = {"method": args.method, "model": model, "n": len(points),
+               # Carried through so a committed map can be checked against the
+               # corpus without the embedding stack installed.
+               "corpus_fingerprint": emb_meta.get("corpus_fingerprint"),
                "classes": classes, "generated_from": "scripts/embed_map.py",
                "points": points}
     if explained:

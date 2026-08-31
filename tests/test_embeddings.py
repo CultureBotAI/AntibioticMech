@@ -119,3 +119,28 @@ def test_every_map_point_links_to_a_page_that_exists():
     assert len(hrefs) == payload["n"], (len(hrefs), payload["n"])
     missing = [h for h in hrefs.values() if not (REPO_ROOT / "pages" / h).exists()]
     assert missing == [], missing[:5]
+
+
+@pytest.mark.skipif(not MAP_PATH.exists(), reason="corpus_map.json not built")
+def test_the_committed_map_is_not_stale_against_the_corpus():
+    """Recomputes the embedded documents and compares their fingerprint.
+
+    The identifier check above passes even when every document's TEXT has
+    changed, which is the realistic drift: this map was built before a PR that
+    moved `mode_of_action_target_scope` on dozens of records, and the scope is
+    part of the embedded document. Nothing could tell.
+
+    `build_document` is pure python, so this runs without torch — which is the
+    only reason the check exists in CI at all. Rebuild with
+    `just embed && just embed-map && just render`.
+    """
+    from embed_records import corpus_fingerprint, load_corpus
+
+    payload = json.loads(MAP_PATH.read_text(encoding="utf-8"))
+    recorded = payload.get("corpus_fingerprint")
+    assert recorded, "map carries no corpus_fingerprint; rebuild it"
+
+    _ids, docs, _meta = load_corpus()
+    assert recorded == corpus_fingerprint(docs), (
+        "data/embeddings/corpus_map.json was built from different record text than "
+        "the corpus now holds. Rebuild: just embed && just embed-map && just render")
