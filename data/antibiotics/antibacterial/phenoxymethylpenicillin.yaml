@@ -112,6 +112,15 @@ source_concepts:
 molecular_targets:
 - target_id: ARO:3000749
   target_label: beta-lactam sensitive penicillin-binding protein
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. Penicillin-binding proteins are asserted as inhibited
+    transpeptidases.
+  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3000749
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000633 (phenoxymethylpenicillin);
@@ -126,6 +135,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:00:02Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

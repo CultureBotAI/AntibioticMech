@@ -543,7 +543,53 @@ classes:
         range: string
       target_type:
         description: What kind of entity the target is.
+        required: true
         range: TargetTypeEnum
+      target_relation:
+        description: >-
+          The experimentally or curatorially supported role of this entity in
+          the compound response. A database target edge is not automatically a
+          direct binding claim.
+        required: true
+        range: TargetRelationEnum
+      taxon_id:
+        description: Organism in which this target assertion was evaluated.
+        range: string
+        pattern: "^NCBITaxon:[0-9]+$"
+      taxon_label:
+        description: Source organism label for this assertion.
+        range: string
+      strain:
+        description: Strain or isolate, when reported by the source.
+        range: string
+      experimental_context:
+        description: >-
+          Assay or database context supporting this target-role assertion;
+          absence of an organism or strain must be stated here rather than
+          silently generalized.
+        required: true
+        range: string
+      evidence_status:
+        description: Whether primary evidence is present or explicitly queued.
+        required: true
+        range: TargetEvidenceStatusEnum
+      source:
+        description: Upstream source owning this assertion slice.
+        required: true
+        range: string
+      source_version:
+        description: Version of the upstream source.
+        required: true
+        range: string
+      source_retrieved_on:
+        description: Date the source snapshot was retrieved.
+        required: true
+        range: date
+      measurements:
+        description: Quantitative target measurements supporting this assertion.
+        multivalued: true
+        inlined_as_list: true
+        range: TargetMeasurement
       protein_examples:
         description: >-
           Organism-specific UniProt entries illustrating a taxon-agnostic
@@ -559,6 +605,57 @@ classes:
         multivalued: true
         inlined_as_list: true
         range: EvidenceItem
+
+  TargetMeasurement:
+    description: A source-reported quantitative compound-target measurement.
+    attributes:
+      measurement_type:
+        required: true
+        range: TargetMeasurementTypeEnum
+      original_value:
+        description: Unmodified value text, including any qualifier.
+        required: true
+        range: string
+      qualifier:
+        required: true
+        range: MeasurementQualifierEnum
+      value:
+        description: Numeric portion parsed from original_value.
+        required: true
+        range: float
+      unit:
+        required: true
+        range: string
+      assay_description:
+        description: BindingDB assay text; unavailable context must be explicit.
+        required: true
+        range: string
+      assay_name:
+        description: BindingDB's name for the assay protocol.
+        required: true
+        range: string
+      bindingdb_reactant_set_id:
+        required: true
+        range: string
+        pattern: "^[0-9]+$"
+      bindingdb_entry_assay_id:
+        description: BindingDB EntryID_AssayID used to resolve assay text.
+        required: true
+        range: string
+        pattern: "^[0-9]+_[0-9]+$"
+      bindingdb_monomer_id:
+        required: true
+        range: string
+        pattern: "^[0-9]+$"
+      source_version:
+        required: true
+        range: string
+      source_retrieved_on:
+        required: true
+        range: date
+      reference:
+        required: true
+        range: string
 
   ProteinExample:
     description: >-
@@ -968,6 +1065,48 @@ enums:
       METABOLIC_PATHWAY:
       BIOLOGICAL_PROCESS:
       OTHER:
+
+  TargetRelationEnum:
+    permissible_values:
+      DIRECT_BINDING_TARGET:
+        description: Direct physical binding is supported or asserted.
+      MEASURED_TARGET_ASSOCIATION:
+        description: >-
+          A target-associated potency or effect was measured, but direct
+          binding is not established by the measurement type alone.
+      ATTACKED_COMPONENT:
+        description: A chemical structure, membrane, nucleic acid, or cell-wall component attacked by the compound.
+      REQUIRED_UPTAKE_OR_ACTIVATION_FACTOR:
+        description: A factor required to import or activate the compound rather than its direct target.
+      SUSCEPTIBILITY_DETERMINANT:
+        description: A gene or component whose state changes susceptibility without proving direct binding.
+      RESISTANCE_DETERMINANT:
+        description: A determinant whose alteration confers resistance.
+      DOWNSTREAM_AFFECTED_PROCESS:
+        description: A process affected downstream of the primary interaction.
+
+  TargetEvidenceStatusEnum:
+    permissible_values:
+      PRIMARY_EVIDENCE:
+      PRIMARY_EVIDENCE_NEEDED:
+        description: Database assertion is retained and queued for a primary citation.
+      DATABASE_ASSERTION_ONLY:
+
+  TargetMeasurementTypeEnum:
+    permissible_values:
+      KI:
+      KD:
+      IC50:
+      EC50:
+
+  MeasurementQualifierEnum:
+    permissible_values:
+      LT:
+      LE:
+      EQ:
+      GE:
+      GT:
+      APPROX:
 
   SourceEnum:
     description: Upstream resources harmonized into this corpus.

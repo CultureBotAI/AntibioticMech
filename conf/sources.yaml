@@ -108,6 +108,25 @@ fda_gsrs:
   cache_name: fda_gsrs_candidates.jsonl
   license: United States government public data; GSRS materials Apache-2.0
 
+bindingdb:
+  name: BindingDB
+  description: >-
+    Quantitative compound-target measurements curated directly from primary
+    articles by BindingDB. Rows imported from ChEMBL or other providers are
+    rejected by their row-level Curation/DataSource marker.
+  homepage: https://www.bindingdb.org/
+  license: CC BY 4.0 for BindingDB-curated records
+  version: 2026-09
+  articles_archive_url: https://www.bindingdb.org/rwd/bind/downloads/BindingDB_BindingDB_Articles_202609_tsv.zip
+  articles_archive_name: BindingDB_BindingDB_Articles_202609_tsv.zip
+  assays_archive_url: https://www.bindingdb.org/rwd/bind/downloads/BindingDB_Assays_202609_tsv.zip
+  assays_archive_name: BindingDB_Assays_202609_tsv.zip
+  reactant_assays_archive_url: https://www.bindingdb.org/rwd/bind/downloads/BindingDB_rsid_eaids_202609_tsv.zip
+  reactant_assays_archive_name: BindingDB_rsid_eaids_202609_tsv.zip
+  taxdump_archive_url: https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip
+  taxdump_archive_name: taxdmp-2026-08-31.zip
+  row_policy: Curated from the literature by BindingDB
+
 # ----------------------------------------------------------------------------
 # Role scope — which ChEBI roles put a compound in this corpus.
 #

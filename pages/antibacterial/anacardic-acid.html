@@ -85,6 +85,43 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+<h2>Molecular targets</h2>
+<p class="meta">The molecular entity or process this compound acts on. Each target
+carries evidence — this is a mechanistic claim, not a classification.</p>
+<h3>Replicase polyprotein 1ab <span class="pill plain">VIRAL_PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">BindingDB quantitative measurement in the named target organism; source assay descriptions and identifiers are retained per measurement. Evidence status: PRIMARY_EVIDENCE. Source: BINDINGDB 2026-09 (retrieved 2026-08-31).</p>
+<p><em>Severe acute respiratory syndrome coronavirus 2</em> <code class="curie">NCBITaxon:2697049</code></p><table>
+  <caption>Quantitative measurements</caption>
+  <thead><tr><th scope="col">Type</th><th scope="col">Reported value</th><th scope="col">Assay</th><th scope="col">BindingDB IDs</th><th scope="col">Reference</th></tr></thead>
+  <tr>
+    <td>IC50</td>
+    <td>11040 nM</td>
+    <td><strong>3CLpro enzyme assay</strong><br><span class="meta">The 3CLpro enzyme assay was developed in 384-well black, medium binding microplates (Greiner Bio-One, Monroe, NC, USA) with a total volume of 20 μL and then miniaturized to 1536-well format. In 384-well plate format, 10 μL enzyme in reaction buffer was added into each well, followed by the addition of 10 μL substrate. Fluorescent intensity was measured at different time points on a PHERAstar FSX plate reader (BMG Labtech, Cary, NC, USA) with Ex=340 nm/Em=460 nm after the addition of substrate. The experiment was conducted at both room temperature (RT) and 37 °C.Steady-state kinetic parameters were evaluated using 50 nM 3CLpro and different concentrations of substrate. In brief, 10 μL/well enzyme was added into 384-well plate. The reaction was then initialized by adding the substrate solutions at different concentrations. The substrate stock solution was serially diluted 1:2 to obtain seven concentrations. The final concentrations used in this test were 160, 80, 40, 20, 10, 5, and 2.5 μM. The fluorescent intensity was measured at 5, 10, 15, and 30 min.</span></td>
+    <td><code class="curie">RSID 844353</code><br><code class="curie">assay 8814_1</code><br><code class="curie">monomer 50240436</code></td>
+    <td><code class="curie">PMID:32803196</code></td>
+  </tr>
+  <tr>
+    <td>EC50</td>
+    <td>3980 nM</td>
+    <td><strong>SARS-CoV-2 CPE assay</strong><br><span class="meta">SARS-CoV-2 CPE assay was conducted at Southern Research Institute (Birmingham, AL) as described in previous reports30, 31. In brief, high ACE2 expressing Vero E6 cells were inoculated with SARS-CoV-2 (USA_WA1/2020) at 0.002 M.O.I. After infection of 72 h at 37 °C and 5% CO2, the cell viability was examined with CellTiter-Glo ATP content assay kit (Promega, Madison, WI, USA). CPE raw data were normalized to non-infected cells and virus infected cells only which were set as 100% efficacy and 0 efficacy, respectively. In addition, the compound cytotoxicity was evaluated in the same cells by measuring ATP content in the absence of virus.</span></td>
+    <td><code class="curie">RSID 844354</code><br><code class="curie">assay 8814_2</code><br><code class="curie">monomer 50240436</code></td>
+    <td><code class="curie">PMID:32803196</code></td>
+  </tr>
+</table>
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Replicase polyprotein 1ab <code class="curie">UniProtKB:P0DTD1</code></td>
+    <td>—</td>
+    <td><em>Severe acute respiratory syndrome coronavirus 2</em></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:32803196</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
@@ -118,6 +155,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   <li>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
+    <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
 </ol>

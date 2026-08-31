@@ -38,6 +38,7 @@ def test_taxonomy_filter_requires_an_explicit_microbial_root():
 
 def test_uniprot_accessions_remain_examples_not_target_identity():
     row = {
+        "Ligand InChI Key": "LFQSCWFLJHTTHZ-UHFFFAOYSA-N",
         "BindingDB Reactant_set_id": "7",
         "BindingDB MonomerID": "8",
         "Target Name": "example enzyme",

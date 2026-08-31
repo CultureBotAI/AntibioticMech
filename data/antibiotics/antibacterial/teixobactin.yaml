@@ -55,12 +55,30 @@ source_concepts:
 molecular_targets:
 - target_id: ARO:3003231
   target_label: Lipid II
+  target_type: CELL_WALL_COMPONENT
+  target_relation: ATTACKED_COMPONENT
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. Lipid II is a cell-wall precursor bound or attacked by
+    antibiotics.
+  evidence_status: DATABASE_ASSERTION_ONLY
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3003231
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3003241 (teixobactin); database
       assertion, not a primary citation.
 - target_id: ARO:3003232
   target_label: Lipid III
+  target_type: CELL_WALL_COMPONENT
+  target_relation: ATTACKED_COMPONENT
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. Lipid III is a wall-teichoic-acid precursor rather than
+    a protein.
+  evidence_status: DATABASE_ASSERTION_ONLY
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3003232
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3003241 (teixobactin); database
@@ -75,6 +93,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:00:19Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

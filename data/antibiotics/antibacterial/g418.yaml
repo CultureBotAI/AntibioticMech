@@ -79,6 +79,14 @@ resistance_mechanisms:
 molecular_targets:
 - target_id: ARO:3000755
   target_label: antibiotic sensitive 16S rRNA
+  target_type: NUCLEIC_ACID
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. 16S rRNA is asserted as the target.
+  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3000755
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000653 (G418); database assertion,
@@ -93,6 +101,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:00:21Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

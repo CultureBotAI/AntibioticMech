@@ -40,8 +40,10 @@ from seed_from_sources import (  # noqa: E402
     SEEDED_FIELDS,
     assign_slugs,
     attach_aro_mechanism,
+    attach_bindingdb_targets,
     attach_fda_clinical_status,
     attach_mibig_producers,
+    bindingdb_sourced_target_view,
     build_concepts,
     card_sourced_view,
     curator_owns_mode_of_action,
@@ -72,6 +74,7 @@ def rebuild() -> dict[str, dict]:
     records, _ = merge(concepts, chebi_rows, conf, load_decisions(),
                        manifest.get("retrieved_on", ""))
     attach_aro_mechanism(records, manifest.get("retrieved_on", ""))
+    attach_bindingdb_targets(records)
     attach_mibig_producers(
         records,
         str(manifest.get("sources", {}).get("mibig", {}).get("version", "")),
@@ -112,6 +115,8 @@ def main() -> int:
         for field in CARD_FIELDS:
             if card_sourced_view(want, field) != card_sourced_view(actual, field):
                 drifted.append((path, field))
+        if bindingdb_sourced_target_view(want) != bindingdb_sourced_target_view(actual):
+            drifted.append((path, "molecular_targets"))
         if mibig_sourced_producer_view(want) != mibig_sourced_producer_view(actual):
             drifted.append((path, "producer_organisms"))
         if fda_sourced_clinical_view(want) != fda_sourced_clinical_view(actual):

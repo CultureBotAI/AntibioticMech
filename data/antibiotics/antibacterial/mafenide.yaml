@@ -78,10 +78,105 @@ resistance_mechanisms:
 molecular_targets:
 - target_id: ARO:3000744
   target_label: antibiotic sensitive dihydropteroate synthase
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. Dihydropteroate synthase is asserted as the inhibited
+    enzyme.
+  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3000744
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000684 (mafenide); database
       assertion, not a primary citation.
+- target_label: Carbonic anhydrase
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:1310114
+  taxon_label: Mycobacterium tuberculosis CAS/NITR204
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: KI
+    original_value: '7330'
+    qualifier: EQ
+    value: 7330.0
+    unit: nM
+    assay_name: CA Inhibition Assay
+    assay_description: An Applied Photophysics stopped-flow instrument has been used
+      for assaying the CA-catalyzed CO2 hydration activity. Phenol red has been used
+      as indicator, working at the absorbance maximum of 557 nm. The inhibition constants
+      were obtained by nonlinear least-squares methods. The IC50 was obtained by using
+      curve-fitting algorithm, and Ki values were calculated by using the Cheng-Prusoff
+      equation. The catalytic activity of these enzymes was calculated from Lineweaver-Burk
+      plots, and represent the mean from at least three different determinations.
+    bindingdb_reactant_set_id: '53332'
+    bindingdb_entry_assay_id: '3201_1'
+    bindingdb_monomer_id: '10860'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:19338333
+  evidence:
+  - reference: PMID:19338333
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:R4ML78
+    protein_label: Carbonic anhydrase
+    taxon_id: NCBITaxon:1310114
+    taxon_label: Mycobacterium tuberculosis CAS/NITR204
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
+- target_label: Carbonic anhydrase
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:5207
+  taxon_label: Cryptococcus neoformans
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: KI
+    original_value: '18490'
+    qualifier: EQ
+    value: 18490.0
+    unit: nM
+    assay_name: CA Inhibition Assay
+    assay_description: An Applied Photophysics stopped-flow instrument has been used
+      for assaying the CA-catalyzed CO2 hydration activity. Phenol red has been used
+      as indicator, working at the absorbance maximum of 557 nm. The inhibition constants
+      were obtained by nonlinear least-squares methods. The IC50 was obtained by using
+      curve-fitting algorithm, and Ki values were calculated by using the Cheng-Prusoff
+      equation. The catalytic activity of these enzymes was calculated from Lineweaver-Burk
+      plots, and represent the mean from at least three different determinations.
+    bindingdb_reactant_set_id: '60913'
+    bindingdb_entry_assay_id: '3445_1'
+    bindingdb_monomer_id: '10860'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:19450983
+  evidence:
+  - reference: PMID:19450983
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q3I4V7
+    protein_label: Carbonic anhydrase
+    taxon_id: NCBITaxon:5207
+    taxon_label: Cryptococcus neoformans
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -92,6 +187,14 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:00:14Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:19:08Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -108,9 +108,64 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
-<h3>antibiotic sensitive enoyl-acyl carrier reductase</h3>
-<p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000872">ARO:3000872</a></p><ul class="plain evidence">
+<h3>antibiotic sensitive enoyl-acyl carrier reductase <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000872">ARO:3000872</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. Enoyl-ACP reductase is asserted as the blocked enzyme. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
+<ul class="plain evidence">
   <li><span class="meta">ARO:3000872</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000870 (triclosan); database assertion, not a primary citation.)</span></li>
+</ul>
+
+<h3>Replicase polyprotein 1ab <span class="pill plain">VIRAL_PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">BindingDB quantitative measurement in the named target organism; source assay descriptions and identifiers are retained per measurement. Evidence status: PRIMARY_EVIDENCE. Source: BINDINGDB 2026-09 (retrieved 2026-08-31).</p>
+<p><em>Severe acute respiratory syndrome coronavirus</em> <code class="curie">NCBITaxon:2901879</code></p><table>
+  <caption>Quantitative measurements</caption>
+  <thead><tr><th scope="col">Type</th><th scope="col">Reported value</th><th scope="col">Assay</th><th scope="col">BindingDB IDs</th><th scope="col">Reference</th></tr></thead>
+  <tr>
+    <td>IC50</td>
+    <td>75000 nM</td>
+    <td><strong>Various Assay</strong><br><span class="meta">This is a review article.  Please point to the original journal.</span></td>
+    <td><code class="curie">RSID 1074309</code><br><code class="curie">assay 10079_1</code><br><code class="curie">monomer 8726</code></td>
+    <td><code class="curie">PMID:34798775</code></td>
+  </tr>
+</table>
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Replicase polyprotein 1ab <code class="curie">UniProtKB:P0C6X7</code></td>
+    <td>—</td>
+    <td><em>Severe acute respiratory syndrome coronavirus</em></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:34798775</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
+</ul>
+
+<h3>Trans-2-enoyl-ACP reductase II <span class="pill plain">PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">BindingDB quantitative measurement in the named target organism; source assay descriptions and identifiers are retained per measurement. Evidence status: PRIMARY_EVIDENCE. Source: BINDINGDB 2026-09 (retrieved 2026-08-31).</p>
+<p><em>Streptococcus pneumoniae</em> <code class="curie">NCBITaxon:1313</code></p><table>
+  <caption>Quantitative measurements</caption>
+  <thead><tr><th scope="col">Type</th><th scope="col">Reported value</th><th scope="col">Assay</th><th scope="col">BindingDB IDs</th><th scope="col">Reference</th></tr></thead>
+  <tr>
+    <td>IC50</td>
+    <td>&gt;30000 nM</td>
+    <td><strong>Enzyme Inhibition Assay</strong><br><span class="meta">Assays were carried out in half-area, 96-well microtiter plates. Compounds were evaluated in assay mixtures containing components specific for each enzyme. Inhibitors were varied over the range 0.01-10 uM. The consumption of NAD(P)H was monitored for 20 min at 30 °C by following the change in absorbance at 340 nm. IC50 values were estimated from a fit of the initial velocities to a standard equation. Triclosan was included in all assays as a positive control.</span></td>
+    <td><code class="curie">RSID 14752</code><br><code class="curie">assay 1080_1</code><br><code class="curie">monomer 8726</code></td>
+    <td><code class="curie">PMID:12699381</code></td>
+  </tr>
+</table>
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Probable nitronate monooxygenase <code class="curie">UniProtKB:Q9FBC5</code></td>
+    <td>—</td>
+    <td><em>Streptococcus pneumoniae</em></td>
+    <td><span class="pill plain">UNREVIEWED</span></td>
+  </tr>
+</table>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:12699381</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
 </ul>
 
 
@@ -219,6 +274,16 @@ type — expand a group to see its determinants.</p>
   <li>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
+    <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-08-31 · seed_from_sources</span>
+    <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
 </ol>

@@ -348,28 +348,78 @@ resistance_mechanisms:
 molecular_targets:
 - target_id: ARO:3003275
   target_label: Daptomycin sensitive cardiolipin synthetase
+  target_type: PROTEIN
+  target_relation: SUSCEPTIBILITY_DETERMINANT
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. ARO cites cls mutations conferring daptomycin resistance;
+    this does not prove direct binding.
+  evidence_status: DATABASE_ASSERTION_ONLY
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3003275
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000068 (daptomycin); database
       assertion, not a primary citation.
 - target_id: ARO:3003278
   target_label: daptomycin sensitive beta-subunit of RNA polymerase (rpoB)
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. ARO describes RNA-synthesis failure downstream of daptomycin
+    membrane depolarization, not rpoB binding.
+  evidence_status: DATABASE_ASSERTION_ONLY
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3003278
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000068 (daptomycin); database
       assertion, not a primary citation.
 - target_id: ARO:3003280
   target_label: antibiotic sensitive mprF
+  target_type: PROTEIN
+  target_relation: SUSCEPTIBILITY_DETERMINANT
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. ARO describes mprF membrane-charge effects and resistance
+    mutations, not direct binding.
+  evidence_status: DATABASE_ASSERTION_ONLY
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3003280
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000068 (daptomycin); database
       assertion, not a primary citation.
 - target_id: ARO:3003281
   target_label: antibiotic sensitive pgsA
+  target_type: PROTEIN
+  target_relation: SUSCEPTIBILITY_DETERMINANT
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. ARO associates pgsA with membrane phospholipid state;
+    direct daptomycin binding is not established.
+  evidence_status: DATABASE_ASSERTION_ONLY
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3003281
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000068 (daptomycin); database
       assertion, not a primary citation.
+- target_label: phosphatidylglycerol-rich bacterial membrane
+  target_type: MEMBRANE
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: Biophysical and cellular study of the calcium-dependent daptomycin-
+    phosphatidylglycerol complex and selective uptake into bacterial membranes; no
+    single organism or strain is generalized from the membrane models.
+  evidence_status: PRIMARY_EVIDENCE
+  source: CURATOR
+  source_version: '2026-08-31'
+  source_retrieved_on: '2026-08-31'
+  evidence:
+  - reference: PMID:40455071
+    notes: Primary evidence for stable phosphatidylglycerol complex formation and
+      selective bacterial-membrane uptake.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -380,6 +430,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:36Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:59:10Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

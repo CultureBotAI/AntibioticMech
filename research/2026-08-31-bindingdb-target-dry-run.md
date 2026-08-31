@@ -1,5 +1,9 @@
 # BindingDB-curated target evaluation
 
+> Superseded on 2026-08-31 by the implemented, writing import audited in
+> [2026-08-31-bindingdb-target-import.md](2026-08-31-bindingdb-target-import.md).
+> The counts below remain the pre-implementation evaluation record.
+
 Date: 2026-08-31
 Issue: #103
 BindingDB release: 2026-09, updated 2026-08-30

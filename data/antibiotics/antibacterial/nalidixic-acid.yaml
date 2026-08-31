@@ -360,10 +360,64 @@ resistance_mechanisms:
 molecular_targets:
 - target_id: ARO:3000733
   target_label: fluoroquinolone sensitive gyrA
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. ARO explicitly describes ligand binding to gyrase subunit
+    A.
+  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3000733
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000661 (nalidixic acid); database
       assertion, not a primary citation.
+- target_label: DNA topoisomerase 4 subunit A [V210L]/B
+  target_type: PROTEIN_COMPLEX
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: IC50
+    original_value: '1090000'
+    qualifier: EQ
+    value: 1090000.0
+    unit: nM
+    assay_name: DNA Topoisomerase IV Assay
+    assay_description: The 50% inhibitory concentration (IC50) is defined as the concentration
+      of compound that inhibits the decatenation of kinetoplast DNA by 50%.
+    bindingdb_reactant_set_id: '39230'
+    bindingdb_entry_assay_id: '2532_2'
+    bindingdb_monomer_id: '21691'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:17074800
+  evidence:
+  - reference: PMID:17074800
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q45066
+    protein_label: DNA topoisomerase 4 subunit A
+    taxon_id: NCBITaxon:1423
+    taxon_label: Bacillus subtilis
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
+  - uniprot_id: UniProtKB:Q59192
+    protein_label: DNA topoisomerase 4 subunit B
+    taxon_id: NCBITaxon:1423
+    taxon_label: Bacillus subtilis
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 2
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -594,6 +648,14 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:17Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:59:58Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:18:52Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

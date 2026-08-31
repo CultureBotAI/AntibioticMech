@@ -102,6 +102,148 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-30'
+molecular_targets:
+- target_label: Carbonic anhydrase
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:1310114
+  taxon_label: Mycobacterium tuberculosis CAS/NITR204
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: KI
+    original_value: '7110'
+    qualifier: EQ
+    value: 7110.0
+    unit: nM
+    assay_name: CA Inhibition Assay
+    assay_description: An Applied Photophysics stopped-flow instrument has been used
+      for assaying the CA-catalyzed CO2 hydration activity. Phenol red has been used
+      as indicator, working at the absorbance maximum of 557 nm. The inhibition constants
+      were obtained by nonlinear least-squares methods. The IC50 was obtained by using
+      curve-fitting algorithm, and Ki values were calculated by using the Cheng-Prusoff
+      equation. The catalytic activity of these enzymes was calculated from Lineweaver-Burk
+      plots, and represent the mean from at least three different determinations.
+    bindingdb_reactant_set_id: '53329'
+    bindingdb_entry_assay_id: '3201_1'
+    bindingdb_monomer_id: '10857'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:19338333
+  evidence:
+  - reference: PMID:19338333
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:R4ML78
+    protein_label: Carbonic anhydrase
+    taxon_id: NCBITaxon:1310114
+    taxon_label: Mycobacterium tuberculosis CAS/NITR204
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
+- target_label: Carbonic anhydrase
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:5207
+  taxon_label: Cryptococcus neoformans
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: KI
+    original_value: '765'
+    qualifier: EQ
+    value: 765.0
+    unit: nM
+    assay_name: CA Inhibition Assay
+    assay_description: An Applied Photophysics stopped-flow instrument has been used
+      for assaying the CA-catalyzed CO2 hydration activity. Phenol red has been used
+      as indicator, working at the absorbance maximum of 557 nm. The inhibition constants
+      were obtained by nonlinear least-squares methods. The IC50 was obtained by using
+      curve-fitting algorithm, and Ki values were calculated by using the Cheng-Prusoff
+      equation. The catalytic activity of these enzymes was calculated from Lineweaver-Burk
+      plots, and represent the mean from at least three different determinations.
+    bindingdb_reactant_set_id: '60910'
+    bindingdb_entry_assay_id: '3445_1'
+    bindingdb_monomer_id: '10857'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:19450983
+  evidence:
+  - reference: PMID:19450983
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q3I4V7
+    protein_label: Carbonic anhydrase
+    taxon_id: NCBITaxon:5207
+    taxon_label: Cryptococcus neoformans
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
+- target_label: Siderophore-binding protein
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:1773
+  taxon_label: Mycobacterium tuberculosis
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: KI
+    original_value: '7.11e+3'
+    qualifier: EQ
+    value: 7110.0
+    unit: nM
+    assay_name: CA Inhibition Assay
+    assay_description: An Applied Photophysics stopped-flow instrument has been used
+      for assaying the CA-catalyzed CO2 hydration activity [Khalifah et al., J. Biol.
+      Chem., 246:2561-2573]. Phenol red (at a concentration of 0.2 mM)has been used
+      as indicator, working at the absorbance maximum of 557 nm with 10-20 mM Hepes
+      (pH 7.5, for α-CAs) or TRIS (pH 8.3 for β-CAs) as buffers, and20 mM Na2SO4 (for
+      α-CAs) or 20 mM NaCl for β-CAs (for maintaining constant the ionic strength),
+      following the initial rates of the CA-catalyzed CO2 hydration reaction for a
+      period of 10-100 s. The CO2 concentrations ranged from 1.7 to 17 mM for the
+      determination of the kinetic parameters and inhibition constants. For each inhibitor,
+      at least six traces of the initial 5-10% of the reaction have been used for
+      determining the initial velocity. The uncatalyzed rates were determined in the
+      same manner and subtracted from the total observed rates. Stock solutions of
+      inhibitor (10 mM) were prepared in distilled deionized water and dilutions up
+      to 0.01 nM were done thereafter with distilled-deionized water. Inhibitor andenzyme
+      solutions were preincubated together for 15 min at room temperature prior to
+      assay in order to allow for the formation of the E-I complex. The inhibition
+      constants were obtained by non-linear least-squares methods using PRISM 3, whereas
+      the kinetic parameters for the uninhibited enzymes from Lineweaver-Burk plots,as
+      reported earlier.
+    bindingdb_reactant_set_id: '417609'
+    bindingdb_entry_assay_id: '8291_1'
+    bindingdb_monomer_id: '10857'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:22299588
+  evidence:
+  - reference: PMID:22299588
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A045J7I4
+    protein_label: Siderophore-binding protein
+    taxon_id: NCBITaxon:1773
+    taxon_label: Mycobacterium tuberculosis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -185,6 +327,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:19:02Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

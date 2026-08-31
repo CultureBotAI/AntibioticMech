@@ -75,6 +75,204 @@ source_concepts:
   - CHEBI:33282
   - CHEBI:35718
   source_version: '2026-08-30'
+molecular_targets:
+- target_label: Genome polyprotein
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:3052230
+  taxon_label: Orthohepacivirus hominis
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: IC50
+    original_value: '1.4e+3'
+    qualifier: EQ
+    value: 1400.0
+    unit: nM
+    assay_name: EMSA
+    assay_description: Binding assays containing 25 mM MOPS pH 7.5, 1.25 mM MgCl2,
+      20 nM Cy5-dT15, and 200 nM NS3h_1b were incubated 5 min at RT. Following addition
+      of indicated concentrations of ebselen, the binding reactions were incubated
+      another 5 min at 23 C.
+    bindingdb_reactant_set_id: '251939'
+    bindingdb_entry_assay_id: '6323_1'
+    bindingdb_monomer_id: '34233'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:25126694
+  evidence:
+  - reference: PMID:25126694
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:A3EZJ3
+    protein_label: Genome polyprotein
+    taxon_id: NCBITaxon:3052230
+    taxon_label: Orthohepacivirus hominis
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
+- target_label: Replicase polyprotein 1ab
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:2697049
+  taxon_label: Severe acute respiratory syndrome coronavirus 2
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: IC50
+    original_value: '670'
+    qualifier: EQ
+    value: 670.0
+    unit: nM
+    assay_name: high-throughput activity assay
+    assay_description: Recombinant SARS-CoV-2 Mpro with native N and C termini was
+      expressed in Escherichia coli, and subsequently purified (Extended Data Fig.
+      1a, b). The molecular mass of SARS-CoV-2 Mpro as determined by mass spectroscopy
+      is 33797.0 Da, consistent with its theoretical molecular mass of 33796.8 Da.
+      To characterize the enzymatic activity of SARS-CoV-2 Mpro and to carry out high-throughput
+      screening of inhibitors, we developed a fluorescence resonance energy transfer
+      assay. To do this, we designed and synthesized the fluorescently labelled substrate
+      Mca AVLQ↓SGFRK(Dnp)K, derived from the N-terminal autocleavage sequence of the
+      viral protease, for time-dependent kinetic analysis (Extended Data Fig. 1e).
+      The catalytic efficiency (kcat/Km) for SARS-CoV-2 Mpro was measured to be 28,500
+      M−1 s−1, which is slightly higher than that for SARS-CoV Mpro (kcat/Km = 26,500
+      M−1 s−1)10 and more than 30-fold higher than that of human rhinovirus 3C protease
+      (kcat/Km = 920 M−1 s−1).
+    bindingdb_reactant_set_id: '840120'
+    bindingdb_entry_assay_id: '8774_1'
+    bindingdb_monomer_id: '34233'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:32272481
+  - measurement_type: IC50
+    original_value: '670'
+    qualifier: EQ
+    value: 670.0
+    unit: nM
+    assay_name: No assay is provided
+    assay_description: This is a review article.
+    bindingdb_reactant_set_id: '868915'
+    bindingdb_entry_assay_id: '8918_1'
+    bindingdb_monomer_id: '34233'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:32852058
+  - measurement_type: EC50
+    original_value: '4670'
+    qualifier: EQ
+    value: 4670.0
+    unit: nM
+    assay_name: No assay is provided
+    assay_description: This is a review article.
+    bindingdb_reactant_set_id: '868916'
+    bindingdb_entry_assay_id: '8918_1'
+    bindingdb_monomer_id: '34233'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:32852058
+  - measurement_type: IC50
+    original_value: '80'
+    qualifier: EQ
+    value: 80.0
+    unit: nM
+    assay_name: Hit profiling assay without DTT
+    assay_description: Primary assay principle based on quenched FRET peptide substrate
+      of SARS-CoV-2 3CL-Pro (lhs). Inhibiting compounds reduce fluorescence signal
+      relative to DMSO controls. Hit profiling using X-ray. Substrate turnover was
+      directly proportional to enzyme concentrations up to 60 nM and assay incubation
+      times up to 15 minutes post substrate addition.
+    bindingdb_reactant_set_id: '902201'
+    bindingdb_entry_assay_id: '9114_1'
+    bindingdb_monomer_id: '34233'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: DOI:10.1101/2020.12.16.422677
+  - measurement_type: IC50
+    original_value: '30'
+    qualifier: EQ
+    value: 30.0
+    unit: nM
+    assay_name: Hit profiling assay without DTT
+    assay_description: Primary assay principle based on quenched FRET peptide substrate
+      of SARS-CoV-2 3CL-Pro (lhs). Inhibiting compounds reduce fluorescence signal
+      relative to DMSO controls. Hit profiling using X-ray. Substrate turnover was
+      directly proportional to enzyme concentrations up to 60 nM and assay incubation
+      times up to 15 minutes post substrate addition.
+    bindingdb_reactant_set_id: '902202'
+    bindingdb_entry_assay_id: '9114_1'
+    bindingdb_monomer_id: '34233'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: DOI:10.1101/2020.12.16.422677
+  - measurement_type: IC50
+    original_value: '520'
+    qualifier: EQ
+    value: 520.0
+    unit: nM
+    assay_name: Various Assay
+    assay_description: This is a review article.  Please point to the original journal.
+    bindingdb_reactant_set_id: '1073669'
+    bindingdb_entry_assay_id: '10079_1'
+    bindingdb_monomer_id: '34233'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:34798775
+  - measurement_type: EC50
+    original_value: '4670'
+    qualifier: EQ
+    value: 4670.0
+    unit: nM
+    assay_name: Various Assay
+    assay_description: This is a review article.  Please point to the original journal.
+    bindingdb_reactant_set_id: '1073726'
+    bindingdb_entry_assay_id: '10079_1'
+    bindingdb_monomer_id: '34233'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:34798775
+  - measurement_type: IC50
+    original_value: '670'
+    qualifier: EQ
+    value: 670.0
+    unit: nM
+    assay_name: Various Assay
+    assay_description: This is a review article.  Please point to the original journal.
+    bindingdb_reactant_set_id: '1073727'
+    bindingdb_entry_assay_id: '10079_1'
+    bindingdb_monomer_id: '34233'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:34798775
+  evidence:
+  - reference: PMID:32272481
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  - reference: PMID:32852058
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  - reference: DOI:10.1101/2020.12.16.422677
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  - reference: PMID:34798775
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0DTD1
+    protein_label: Replicase polyprotein 1ab
+    taxon_id: NCBITaxon:2697049
+    taxon_label: Severe acute respiratory syndrome coronavirus 2
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -89,6 +287,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:19:10Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

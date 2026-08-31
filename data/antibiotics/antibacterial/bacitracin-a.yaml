@@ -93,12 +93,29 @@ resistance_mechanisms:
 molecular_targets:
 - target_id: ARO:3000719
   target_label: bacitracin sensitive isoprenyl pyrophosphate
+  target_type: CELL_WALL_COMPONENT
+  target_relation: ATTACKED_COMPONENT
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. Isoprenyl pyrophosphate is a cell-wall carrier intermediate
+    rather than a protein.
+  evidence_status: DATABASE_ASSERTION_ONLY
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3000719
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000629 (bacitracin A); database
       assertion, not a primary citation.
 - target_id: ARO:3003251
   target_label: undecaprenyl pyrophosphate
+  target_type: CELL_WALL_COMPONENT
+  target_relation: ATTACKED_COMPONENT
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. Undecaprenyl pyrophosphate is a cell-wall carrier intermediate.
+  evidence_status: DATABASE_ASSERTION_ONLY
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3003251
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000629 (bacitracin A); database
@@ -113,6 +130,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:00:06Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -238,6 +238,15 @@ resistance_mechanisms:
 molecular_targets:
 - target_id: ARO:3000742
   target_label: anaerobe DNA
+  target_type: NUCLEIC_ACID
+  target_relation: ATTACKED_COMPONENT
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. Activated nitroimidazole intermediates attack DNA in
+    anaerobic context.
+  evidence_status: DATABASE_ASSERTION_ONLY
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3000742
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000689 (metronidazole); database
@@ -2425,6 +2434,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:35Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:00:16Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

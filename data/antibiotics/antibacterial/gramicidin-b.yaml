@@ -34,6 +34,15 @@ source_concepts:
 molecular_targets:
 - target_id: ARO:3000710
   target_label: cell membrane component targeted by antibiotic
+  target_type: MEMBRANE
+  target_relation: ATTACKED_COMPONENT
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. ARO describes interaction with membrane phospholipids
+    and loss of membrane integrity.
+  evidence_status: DATABASE_ASSERTION_ONLY
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3000710
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000223 (gramicidin B); database
@@ -48,6 +57,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:00:22Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

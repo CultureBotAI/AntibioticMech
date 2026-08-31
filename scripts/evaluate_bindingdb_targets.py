@@ -86,21 +86,43 @@ def compact_candidate(row: dict[str, str], identifier: str) -> dict:
         for field in MEASUREMENT_FIELDS
         if row.get(field, "").strip()
     }
-    accessions = []
+    proteins = []
     for chain in range(1, 21):
         for status in ("SwissProt", "TrEMBL"):
             value = row.get(f"UniProt ({status}) Primary ID of Target Chain {chain}", "")
-            accessions.extend(part.strip() for part in value.split(",") if part.strip())
+            name_kind = "Recommended" if status == "SwissProt" else "Submitted"
+            label = row.get(f"UniProt ({status}) {name_kind} Name of Target Chain {chain}", "").strip()
+            for accession in (part.strip() for part in value.split(",") if part.strip()):
+                proteins.append({
+                    "accession": accession,
+                    "label": label or row["Target Name"].strip(),
+                    "entry_status": "REVIEWED" if status == "SwissProt" else "UNREVIEWED",
+                    "chain": chain,
+                })
+    # Swiss-Prot is visited first and must win if an accession is redundantly
+    # present in both source columns; a dict comprehension would let the later
+    # TrEMBL row downgrade REVIEWED to UNREVIEWED.
+    by_accession = {}
+    for protein in proteins:
+        by_accession.setdefault(protein["accession"], protein)
+    proteins = sorted(
+        by_accession.values(),
+        key=lambda protein: (protein["chain"], protein["accession"]),
+    )
     return {
         "identifier": identifier,
+        "standard_inchi_key": row["Ligand InChI Key"].strip(),
         "bindingdb_reactant_set_id": row["BindingDB Reactant_set_id"].strip(),
         "bindingdb_monomer_id": row["BindingDB MonomerID"].strip(),
         "target_name": row["Target Name"].strip(),
         "organism": row["Target Source Organism According to Curator or DataSource"].strip(),
         "reference": primary_reference(row),
         "measurements": measurements,
-        "uniprot_accessions": sorted(set(accessions)),
+        "protein_examples": proteins,
+        "uniprot_accessions": [protein["accession"] for protein in proteins],
         "chain_count": row["Number of Protein Chains in Target (>1 implies a multichain complex)"].strip(),
+        "article_doi": row.get("Article DOI", "").strip(),
+        "pmid": row.get("PMID", "").strip(),
     }
 
 
@@ -147,7 +169,9 @@ def normalized_taxon_name(value: str) -> str:
     return " ".join(value.casefold().split())
 
 
-def resolve_taxa(taxdump: Path, names: set[str]) -> tuple[dict[str, set[int]], array]:
+def resolve_taxa(
+    taxdump: Path, names: set[str]
+) -> tuple[dict[str, set[int]], dict[int, str], array]:
     wanted = {normalized_taxon_name(name) for name in names if name}
     resolved: dict[str, set[int]] = defaultdict(set)
     parents = array("I", [0])
@@ -161,6 +185,17 @@ def resolve_taxa(taxdump: Path, names: set[str]) -> tuple[dict[str, set[int]], a
             name_class = parts[3].replace("\t|\n", "").strip()
             if name in wanted and name_class in {"scientific name", "synonym", "equivalent name"}:
                 resolved[name].add(taxid)
+    selected_taxids = {taxid for taxids in resolved.values() for taxid in taxids}
+    scientific_names = {}
+    with zipfile.ZipFile(taxdump) as archive, archive.open("names.dmp") as binary:
+        for raw in binary:
+            parts = raw.decode("utf-8", errors="replace").split("\t|\t")
+            if len(parts) < 4:
+                continue
+            taxid = int(parts[0].strip())
+            name_class = parts[3].replace("\t|\n", "").strip()
+            if taxid in selected_taxids and name_class == "scientific name":
+                scientific_names[taxid] = parts[1].strip()
     with zipfile.ZipFile(taxdump) as archive, archive.open("nodes.dmp") as binary:
         for raw in binary:
             parts = raw.split(b"\t|\t", 2)
@@ -169,7 +204,7 @@ def resolve_taxa(taxdump: Path, names: set[str]) -> tuple[dict[str, set[int]], a
             if taxid >= len(parents):
                 parents.extend([0] * (taxid + 1 - len(parents)))
             parents[taxid] = parent
-    return resolved, parents
+    return resolved, scientific_names, parents
 
 
 def microbial_root(taxid: int, parents: array) -> str:
@@ -186,7 +221,9 @@ def microbial_root(taxid: int, parents: array) -> str:
 
 
 def classify_candidates(candidates: list[dict], taxdump: Path) -> tuple[list[dict], Counter]:
-    resolved, parents = resolve_taxa(taxdump, {row["organism"] for row in candidates})
+    resolved, scientific_names, parents = resolve_taxa(
+        taxdump, {row["organism"] for row in candidates}
+    )
     accepted = []
     counts: Counter = Counter()
     for candidate in candidates:
@@ -199,7 +236,11 @@ def classify_candidates(candidates: list[dict], taxdump: Path) -> tuple[list[dic
         if not root:
             counts["rejected_nonmicrobial_target"] += 1
             continue
-        accepted.append(candidate | {"taxon_id": taxid, "microbial_root": root})
+        accepted.append(candidate | {
+            "taxon_id": taxid,
+            "taxon_label": scientific_names.get(taxid, candidate["organism"]),
+            "microbial_root": root,
+        })
         counts["accepted_measurement_rows"] += 1
         counts[f"accepted_root:{root}"] += 1
     return accepted, counts
@@ -230,7 +271,7 @@ def summarize(archive_path: Path, taxdump: Path) -> dict:
         "accepted_record_target_taxon_pairs": len(pairs),
         "accepted_measurement_types": dict(sorted(measurements.items())),
         "examples": examples,
-        "write_decision": "NO_WRITE_PENDING_ISSUE_93",
+        "write_decision": "EVALUATION_ONLY_SEE_EXTRACT_BINDINGDB_TARGETS",
     }
 
 

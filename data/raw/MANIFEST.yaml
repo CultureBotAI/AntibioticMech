@@ -26,6 +26,12 @@ sources:
     unii_version: '2026-08-31'
     retrieved_on: '2026-08-31'
     use: identity only
+  bindingdb:
+    homepage: https://www.bindingdb.org/
+    license: CC BY 4.0 for BindingDB-curated records
+    version: 2026-09
+    retrieved_on: '2026-08-31'
+    row_policy: Curated from the literature by BindingDB
 downloads:
   compounds.tsv.gz:
     url: https://ftp.ebi.ac.uk/pub/databases/chebi/flat_files/compounds.tsv.gz
@@ -75,6 +81,22 @@ downloads:
     url: https://api.fda.gov/other/substance.json (batched UNII queries)
     bytes: 423415
     sha256: 504ea6edce6e242a6b21ffa8293398fcb6006c2765632292aafcab683c1f4b1f
+  BindingDB_BindingDB_Articles_202609_tsv.zip:
+    url: https://www.bindingdb.org/rwd/bind/downloads/BindingDB_BindingDB_Articles_202609_tsv.zip
+    bytes: 18272073
+    sha256: 1203194f366623ae9b4caee34f2477d412ebddbda267593df9d1d92d0c66fb74
+  BindingDB_Assays_202609_tsv.zip:
+    url: https://www.bindingdb.org/rwd/bind/downloads/BindingDB_Assays_202609_tsv.zip
+    bytes: 10095267
+    sha256: b9949b6271de7a3d2e4269498fffc9a5374b0e45d72202c4c347d798876b345e
+  BindingDB_rsid_eaids_202609_tsv.zip:
+    url: https://www.bindingdb.org/rwd/bind/downloads/BindingDB_rsid_eaids_202609_tsv.zip
+    bytes: 7541165
+    sha256: 0c967f8a34ab21d766a5e9ca327a02ad45970321f691816f1d27109ef79c7cf9
+  taxdmp-2026-08-31.zip:
+    url: https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip
+    bytes: 78637355
+    sha256: 5b007816d5808387b577724b8da2d835ec7db0d5f5554035997c4019941f1944
 inventories:
   aro_antibiotics.tsv:
     rows: 644
@@ -111,3 +133,8 @@ inventories:
     bytes: 660793
     sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
     source: Drugs@FDA regulatory facts joined to GSRS/UNII exact structures
+  bindingdb_target_measurements.tsv:
+    rows: 177
+    bytes: 133120
+    sha256: faccfe5634f467801aeb256e6560af09d193cdb53bdbf29dea195c9c0488c480
+    source: BindingDB literature-curated rows with assay and NCBI Taxonomy joins

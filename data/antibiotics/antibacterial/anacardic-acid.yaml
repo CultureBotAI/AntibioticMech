@@ -79,6 +79,78 @@ source_concepts:
   - CHEBI:149553
   - CHEBI:33282
   source_version: '2026-08-30'
+molecular_targets:
+- target_label: Replicase polyprotein 1ab
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:2697049
+  taxon_label: Severe acute respiratory syndrome coronavirus 2
+  experimental_context: BindingDB quantitative measurement in the named target organism;
+    source assay descriptions and identifiers are retained per measurement.
+  evidence_status: PRIMARY_EVIDENCE
+  source: BINDINGDB
+  source_version: 2026-09
+  source_retrieved_on: '2026-08-31'
+  measurements:
+  - measurement_type: IC50
+    original_value: '11040'
+    qualifier: EQ
+    value: 11040.0
+    unit: nM
+    assay_name: 3CLpro enzyme assay
+    assay_description: The 3CLpro enzyme assay was developed in 384-well black, medium
+      binding microplates (Greiner Bio-One, Monroe, NC, USA) with a total volume of
+      20 μL and then miniaturized to 1536-well format. In 384-well plate format, 10
+      μL enzyme in reaction buffer was added into each well, followed by the addition
+      of 10 μL substrate. Fluorescent intensity was measured at different time points
+      on a PHERAstar FSX plate reader (BMG Labtech, Cary, NC, USA) with Ex=340 nm/Em=460
+      nm after the addition of substrate. The experiment was conducted at both room
+      temperature (RT) and 37 °C.Steady-state kinetic parameters were evaluated using
+      50 nM 3CLpro and different concentrations of substrate. In brief, 10 μL/well
+      enzyme was added into 384-well plate. The reaction was then initialized by adding
+      the substrate solutions at different concentrations. The substrate stock solution
+      was serially diluted 1:2 to obtain seven concentrations. The final concentrations
+      used in this test were 160, 80, 40, 20, 10, 5, and 2.5 μM. The fluorescent intensity
+      was measured at 5, 10, 15, and 30 min.
+    bindingdb_reactant_set_id: '844353'
+    bindingdb_entry_assay_id: '8814_1'
+    bindingdb_monomer_id: '50240436'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:32803196
+  - measurement_type: EC50
+    original_value: '3980'
+    qualifier: EQ
+    value: 3980.0
+    unit: nM
+    assay_name: SARS-CoV-2 CPE assay
+    assay_description: SARS-CoV-2 CPE assay was conducted at Southern Research Institute
+      (Birmingham, AL) as described in previous reports30, 31. In brief, high ACE2
+      expressing Vero E6 cells were inoculated with SARS-CoV-2 (USA_WA1/2020) at 0.002
+      M.O.I. After infection of 72 h at 37 °C and 5% CO2, the cell viability was examined
+      with CellTiter-Glo ATP content assay kit (Promega, Madison, WI, USA). CPE raw
+      data were normalized to non-infected cells and virus infected cells only which
+      were set as 100% efficacy and 0 efficacy, respectively. In addition, the compound
+      cytotoxicity was evaluated in the same cells by measuring ATP content in the
+      absence of virus.
+    bindingdb_reactant_set_id: '844354'
+    bindingdb_entry_assay_id: '8814_2'
+    bindingdb_monomer_id: '50240436'
+    source_version: 2026-09
+    source_retrieved_on: '2026-08-31'
+    reference: PMID:32803196
+  evidence:
+  - reference: PMID:32803196
+    notes: BindingDB literature-curated quantitative target measurement; source value,
+      assay text, reaction-set ID, and target organism retained.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0DTD1
+    protein_label: Replicase polyprotein 1ab
+    taxon_id: NCBITaxon:2697049
+    taxon_label: Severe acute respiratory syndrome coronavirus 2
+    entry_status: REVIEWED
+    retrieved_on: '2026-08-31'
+    role: BindingDB target chain 1
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -93,6 +165,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:18:57Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
