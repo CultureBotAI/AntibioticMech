@@ -306,29 +306,27 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
     Order of evidence, strongest first:
 
     1. **A CARD drug class whose name states a target group** — "triazole
-       antifungal", "disinfecting agents and antiseptics". Compound-specific and
-       curated, so it outranks a generic role tag: ChEBI gives fluconazole and
-       amphotericin B an `antibacterial agent` role, and taking that at face
-       value filed both as antibacterials.
+       antifungal", "polyene antifungal". Compound-specific and curated, so it
+       outranks a generic role tag: ChEBI gives fluconazole and amphotericin B an
+       `antibacterial agent` role, and taking that at face value filed both as
+       antibacterials.
     2. **ChEBI roles**, by the priority table in conf/sources.yaml (narrower
        target group first, bacteria before fungi and protozoa).
-    3. **A curated adjudication of CARD's own definition** — per-compound, so it
-       comes before any bucket the compound sits in.
-    4. **A group-naming CARD term**, for the handful of
-       ARO concepts the blanket fallback would misfile. `aro_definition_overrides`
-       in conf/sources.yaml; each entry quotes the phrase it rests on. The
-       fallback is right for 265 of the 276 records it reaches, and CARD's
-       definition says outright that it is wrong for the rest — triflumizole
-       "used as a fungicide" was filed ANTIBACTERIAL while its own ChEBI-grounded
-       twin was ANTIFUNGAL, so one compound sat under two classes.
-       — a drug class ("disinfecting agents and antiseptics") or a parent
-       ("antifungal without defined classification"), matched at this tier and
-       not at step 1. Above the roles the antifungal parent refiled
-       pyrimethamine, an antimalarial, and the antiseptic class made BIOCIDE
-       outrank an antibacterial role for five compounds, reversing a priority
-       conf/sources.yaml argues for explicitly.
+    3. **A curated adjudication of CARD's own definition**
+       (`aro_definition_overrides`), for the ARO concepts the blanket fallback
+       would misfile; each entry quotes the phrase it rests on. Per-compound, so
+       it comes before any bucket the compound sits in. Triflumizole, "used as a
+       fungicide", was filed ANTIBACTERIAL while its own ChEBI-grounded twin was
+       ANTIFUNGAL, so one compound sat under two classes.
+    4. **A group-naming CARD term** (`aro_group_terms`) — a drug class
+       ("disinfecting agents and antiseptics") or a parent ("antifungal without
+       defined classification"), matched at this tier and NOT at step 1. Above
+       the roles, the antifungal parent refiled pyrimethamine, an antimalarial,
+       and the antiseptic class made BIOCIDE outrank an antibacterial role for
+       five compounds — reversing a priority conf/sources.yaml argues for
+       explicitly. A default, never an override.
     5. **The ARO fallback**, ANTIBACTERIAL — for a CARD molecule with none of
-       the above.
+       the above. Right for 265 of the 286 records it reaches.
 
     Step 3 is a CURATED MAP, not a text rule, and the distinction is the whole
     point: a regex for "fungal" flags ophiobolin A, whose definition reads
@@ -349,7 +347,7 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
     # Drug class before parents: the more specific term wins when both are
     # mapped. A ChEBI role still outranks both, which is what keeps pyrimethamine
     # ANTIPROTOZOAL despite CARD filing it under an antifungal parent.
-    class_map = conf.get("aro_class_to_class", {})
+    class_map = conf.get("aro_class_to_class") or {}
     for term in aro_class_ids:
         if term in class_map:
             return class_map[term]
@@ -370,7 +368,7 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
         # adjudication made by reading the compound's own definition — an
         # ordering that would pass every gate while quietly outranking the more
         # specific evidence.
-        overrides = conf.get("aro_definition_overrides", {})
+        overrides = conf.get("aro_definition_overrides") or {}
         for aro_id in aro_ids:
             if aro_id in overrides:
                 return overrides[aro_id]
@@ -380,7 +378,7 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
         # antimalarial, and the antiseptic drug class made BIOCIDE outrank the
         # antibacterial role for five compounds — reversing a priority this conf
         # argues for explicitly.
-        group_terms = conf.get("aro_group_terms", {})
+        group_terms = conf.get("aro_group_terms") or {}
         for term in (*aro_class_ids, *aro_parent_ids):
             if term in group_terms:
                 return group_terms[term]

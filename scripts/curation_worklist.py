@@ -216,7 +216,7 @@ def aro_class_queue(records: list[dict], conf: dict | None = None) -> list[dict]
     """ARO-fallback records whose own definition names another target group.
 
     A molecule in CARD's antibiotic subtree is there for a bacterial reason, so
-    the fallback files it ANTIBACTERIAL — right for 265 of the 276 records it
+    the fallback files it ANTIBACTERIAL — right for 265 of the 286 records it
     reaches. For the rest CARD's own definition says otherwise, and until this
     queue existed nothing surfaced them: triflumizole sat under ANTIBACTERIAL
     while its ChEBI-grounded twin sat under ANTIFUNGAL, one compound in two
@@ -267,12 +267,15 @@ def aro_class_queue(records: list[dict], conf: dict | None = None) -> list[dict]
         named = sorted(group for group, pattern in DEFINITION_GROUP_HINTS.items()
                        if re.search(pattern, text))
         filed = record.get("antimicrobial_class")
-        # Flag only when the filing is NOT among the groups CARD names. Testing
-        # for an exact single-group match instead kept acriflavine and
-        # thiacalixarene derivatives in the queue after they were correctly
-        # filed BIOCIDE, because their text names a second group too — a queue
-        # that lists correct records is one a curator learns to ignore.
-        if not named or filed in named:
+        # Flag unless the source names EXACTLY the group the record is filed
+        # under. `filed in named` was tried, to quiet acriflavine and
+        # thiacalixarene derivatives once they were correctly BIOCIDE — but the
+        # group-term skip above already covers those two, and the relaxation's
+        # only remaining effect was to hide nitazoxanide and, with it, every
+        # future record whose source names its filed group AND another. A record
+        # described as "an antifungal with weak antibacterial activity" and filed
+        # ANTIBACTERIAL is the triflumizole shape this queue exists to catch.
+        if not named or named == [filed]:
             continue
         rows.append({
             "queue": "aro-class",

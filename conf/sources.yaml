@@ -538,10 +538,24 @@ aro_group_terms:
                             # classification". Decides myxothiazole, whose
                             # definition is pure mechanism ("inhibitor of the
                             # mitochondrial cytochrome bc1 complex") and names no
-                            # group, plus diamide and tacrolimus. 9 of its 12
-                            # children are independently ANTIFUNGAL through their
-                            # own ChEBI roles, which is what makes it trustworthy
-                            # where no role exists.
+                            # group, and phenamacril, "a novel fungicide".
+                            #
+                            # A WEAK DEFAULT, and it is at step 4 for that reason.
+                            # The term's own definition reads "Antifungal
+                            # compounds with multiple applications and usages,
+                            # including antimalarial, anti-cancer, anti-protist,
+                            # etc. Often include ambiguous drug family
+                            # classification" — it hedges explicitly, in prose no
+                            # step reads. An earlier note here argued "CARD's
+                            # hierarchy does not hedge where its prose does";
+                            # that was a rationalisation, and it moved tacrolimus
+                            # and diamide off the UNSPECIFIED they belonged at.
+                            # Both are adjudicated above.
+                            #
+                            # 7 of the 12 children are independently ANTIFUNGAL
+                            # through their own ChEBI roles and one, pyrimethamine,
+                            # is ANTIPROTOZOAL — the bucket is genuinely mixed,
+                            # which is why it may only default and never override.
   ARO:3005386: BIOCIDE      # a DRUG CLASS, "disinfecting agents and antiseptics".
                             # Reaches only acriflavine and thiacalixarene
                             # derivatives, which carry no roles; triclosan,
@@ -553,7 +567,8 @@ aro_group_terms:
 #
 # WHY THIS IS A CURATED LIST AND NOT A TEXT RULE. The fallback exists because a
 # molecule in CARD's antibiotic subtree is there for a bacterial reason, and for
-# 265 of the 276 records it reaches that is right. For 11 it is not, and CARD's
+# 265 of the 286 records with no ChEBI role that is right; the other 21 are
+# decided earlier by a drug class, an adjudication or a group term. CARD's
 # own definition says so. But a regex over definitions is exactly the inference
 # this repository removed in #47: scanning for "fungal" flags OPHIOBOLIN A,
 # whose definition reads "isolated as fungal phytotoxins" — produced BY a
@@ -571,6 +586,12 @@ aro_definition_overrides:
                             # ChEBI-grounded twin CHEBI:81784 is already
                             # ANTIFUNGAL, so the corpus held one compound under
                             # two classes.
+  ARO:3009353: ANTIMICROBIAL_UNSPECIFIED  # tacrolimus "is an immunosuppressive
+                            # agent"; the antifungal use "has been explored", which
+                            # is not a target claim
+  ARO:3009178: ANTIMICROBIAL_UNSPECIFIED  # diamide "primarily used as an
+                            # insecticide", with "some anti-fungal properties"
+                            # attributed second-hand to FungAMR
   ARO:3007756: ANTIMICROBIAL_UNSPECIFIED  # ophiobolin A "isolated as fungal
                             # phytotoxins" — a fungal PRODUCT, not an antifungal.
                             # Its parent is a chemical class, so no structural
