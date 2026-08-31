@@ -497,7 +497,16 @@ role_target_scope:
 # antibacterials and antifungals, and inferring the target group from the
 # chemistry is exactly the guess this repository should not make; those
 # compounds fall through to their ChEBI roles.
+# The concept's DRUG CLASS. Compound-specific and curated, so it outranks a
+# ChEBI role — see the note above. Parents are a weaker signal and live in
+# aro_parent_to_class below, at lower precedence.
 aro_class_to_class:
+  ARO:3005386: BIOCIDE      # "disinfecting agents and antiseptics" — the drug
+                            # class acriflavine was hand-overridden for. As a map
+                            # row it also decides thiacalixarene derivatives, and
+                            # leaves triclosan, benzalkonium chloride,
+                            # chlorhexidine and proflavine untouched because their
+                            # ChEBI roles outrank it.
   ARO:3007497: ANTIFUNGAL   # polyene antifungal
   ARO:3007498: ANTIFUNGAL   # allylamine antifungal
   ARO:3007499: ANTIFUNGAL   # triazole antifungal
@@ -507,12 +516,35 @@ aro_class_to_class:
   ARO:3009323: ANTIFUNGAL   # carbamate fungicides
   ARO:3009539: ANTIFUNGAL   # fungal succinate dehydrogenase inhibitor
 
+# ARO PARENT term -> AntimicrobialClassEnum, consulted AFTER ChEBI roles and
+# before the blanket ANTIBACTERIAL fallback.
+#
+# WHY LOWER PRECEDENCE THAN A DRUG CLASS. A drug class is a compound-specific
+# curatorial act. A parent in a "without defined classification" bucket is a
+# filing convenience, and CARD gets it wrong: PYRIMETHAMINE, an antimalarial,
+# sits under "antifungal without defined classification". Putting this map at
+# step 1 refiled pyrimethamine ANTIFUNGAL and overrode its correct ChEBI
+# antiprotozoal role — the #47 error in a new place, trusting a hierarchy term
+# over curated evidence. Below the roles it fixes the records with no roles and
+# touches nothing that has them.
+#
+# The term is trustworthy at this precedence because 9 of ARO:3009165's 12
+# children are independently ANTIFUNGAL through their own ChEBI roles. The
+# parent agrees with the evidence wherever evidence exists; it is only consulted
+# where none does.
+aro_parent_to_class:
+  ARO:3009165: ANTIFUNGAL   # "antifungal without defined classification".
+                            # Decides myxothiazole, whose definition is pure
+                            # mechanism ("inhibitor of the mitochondrial
+                            # cytochrome bc1 complex") and names no group, plus
+                            # phenamacril, diamide and tacrolimus.
+
 # ARO concept -> AntimicrobialClassEnum, adjudicated from CARD's OWN definition
 # where the blanket ARO fallback would otherwise file the record ANTIBACTERIAL.
 #
 # WHY THIS IS A CURATED LIST AND NOT A TEXT RULE. The fallback exists because a
 # molecule in CARD's antibiotic subtree is there for a bacterial reason, and for
-# 266 of the 276 records it reaches that is right. For 10 it is not, and CARD's
+# 265 of the 276 records it reaches that is right. For 11 it is not, and CARD's
 # own definition says so. But a regex over definitions is exactly the inference
 # this repository removed in #47: scanning for "fungal" flags OPHIOBOLIN A,
 # whose definition reads "isolated as fungal phytotoxins" — produced BY a
@@ -522,37 +554,36 @@ aro_class_to_class:
 #
 # Each entry quotes the phrase it rests on.
 aro_definition_overrides:
-  # --- the definition calls the compound a fungicide or antifungal outright
   ARO:3009159: ANTIFUNGAL   # bifonazole "is an antifungal compound"
   ARO:3007758: ANTIFUNGAL   # fengycin "antifungal lipopeptide ... used as an
                             # agricultural fungicide"
   ARO:3009180: ANTIFUNGAL   # hexaconazole "An agricultural fungicide"
-  ARO:3009383: ANTIFUNGAL   # phenamacril "is a novel fungicide"
   ARO:3009169: ANTIFUNGAL   # triflumizole "used as a fungicide". Its
                             # ChEBI-grounded twin CHEBI:81784 is already
                             # ANTIFUNGAL, so the corpus held one compound under
                             # two classes.
-
-  # --- an antiseptic, which is what BIOCIDE means
-  ARO:0000045: BIOCIDE      # acriflavine "is a topical antiseptic"; the
-                            # antifungal use is secondary and veterinary
-
-  # --- no target group the definition supports. ANTIBACTERIAL asserts one the
-  # source never made, and ANTIFUNGAL would assert one the pattern only seemed
-  # to find. UNSPECIFIED is what the source actually says.
   ARO:3007756: ANTIMICROBIAL_UNSPECIFIED  # ophiobolin A "isolated as fungal
-                            # phytotoxins" — a fungal PRODUCT, not an antifungal
-  ARO:3009178: ANTIMICROBIAL_UNSPECIFIED  # diamide "primarily used as an
-                            # insecticide", with only "some anti-fungal
-                            # properties" claimed
-  ARO:3009353: ANTIMICROBIAL_UNSPECIFIED  # tacrolimus "is an immunosuppressive
-                            # agent"; antifungal use is "explored", not settled
+                            # phytotoxins" — a fungal PRODUCT, not an antifungal.
+                            # Its parent is a chemical class, so no structural
+                            # term contradicts the fallback and only a reading of
+                            # the definition can.
 
-  # nitazoxanide (ARO:3007178) is deliberately ABSENT: its definition states
+  # DELIBERATELY ABSENT, because a structural term now decides them and a hand
+  # override would be a second answer to the same question:
+  #   acriflavine, thiacalixarene derivatives  -> BIOCIDE via ARO:3005386
+  #   phenamacril, diamide, tacrolimus,        -> ANTIFUNGAL via ARO:3009165
+  #     myxothiazole
+  # diamide and tacrolimus were briefly filed ANTIMICROBIAL_UNSPECIFIED here on
+  # the grounds that their definitions hedge ("some anti-fungal properties",
+  # "explored for"). CARD's hierarchy does not hedge: it places both under
+  # "antifungal without defined classification". Reading only the prose
+  # under-read the source.
+  #
+  # nitazoxanide (ARO:3007178) is also absent: its definition states
   # "demonstrated antibacterial activity against Helicobacter pylori", so the
-  # fallback's ANTIBACTERIAL is supported. It is flagged by the queue because
-  # the definition also names antiviral activity; that is a second activity, not
-  # a misfiling.
+  # fallback's ANTIBACTERIAL is supported. It stays in the queue because the
+  # definition also names antiviral activity — a second activity, not a
+  # misfiling.
 
 # ----------------------------------------------------------------------------
 # ChEBI structural class -> AntimicrobialClassEnum: TRIED, AND REMOVED.
