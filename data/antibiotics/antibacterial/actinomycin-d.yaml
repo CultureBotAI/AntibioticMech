@@ -74,6 +74,15 @@ source_concepts:
 molecular_targets:
 - target_id: ARO:3000741
   target_label: transcription complex DNA
+  target_type: NUCLEIC_ACID
+  target_relation: ATTACKED_COMPONENT
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. ARO describes exposed DNA bases in the transcription
+    complex.
+  evidence_status: DATABASE_ASSERTION_ONLY
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3000741
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000696 (dactinomycin); database
@@ -245,6 +254,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:22Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:00:02Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

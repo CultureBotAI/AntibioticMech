@@ -50,6 +50,7 @@ from antibioticmech.validation.write_validated import (  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR = REPO_ROOT / "data" / "raw"
+ARO_TARGET_ROLES_PATH = REPO_ROOT / "conf" / "aro_target_roles.tsv"
 CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 PATHS_FILE = CORPUS_DIR / "PATHS.tsv"
 RETIRED_FILE = CORPUS_DIR / "RETIRED.tsv"
@@ -950,6 +951,12 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
 
     resistance = load_tsv(RAW_DIR / "aro_resistance_edges.tsv")
     targets = load_tsv(RAW_DIR / "aro_target_edges.tsv")
+    target_roles = {row["target_id"]: row for row in load_tsv(ARO_TARGET_ROLES_PATH)}
+    target_ids = {row["target_id"] for row in targets}
+    if target_ids != set(target_roles):
+        missing = sorted(target_ids - set(target_roles))
+        stale = sorted(set(target_roles) - target_ids)
+        raise ValueError(f"ARO target-role map drift: missing={missing}, stale={stale}")
 
     grouped: dict[str, list[dict]] = defaultdict(list)
     for row in resistance:
@@ -981,9 +988,23 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
     for identifier, rows in grouped.items():
         items = []
         for row in sorted(rows, key=lambda r: r["target_id"]):
+            role = target_roles[row["target_id"]]
+            direct = role["target_relation"] == "DIRECT_BINDING_TARGET"
             item = {
                 "target_id": row["target_id"],
                 "target_label": row["target_name"],
+                "target_type": role["target_type"],
+                "target_relation": role["target_relation"],
+                "experimental_context": (
+                    "CARD/ARO database assertion; target organism, strain, and assay "
+                    "are not specified. " + role["rationale"]
+                ),
+                "evidence_status": (
+                    "PRIMARY_EVIDENCE_NEEDED" if direct else "DATABASE_ASSERTION_ONLY"
+                ),
+                "source": "CARD_ARO",
+                "source_version": source_version,
+                "source_retrieved_on": source_version,
                 "evidence": [{
                     "reference": row["target_id"],
                     "notes": ("CARD/ARO asserts targeted_by_antibiotic "

@@ -230,30 +230,71 @@ resistance_mechanisms:
 molecular_targets:
 - target_id: ARO:3000725
   target_label: antibiotic sensitive aftA
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. AftA is asserted as the antibiotic-sensitive enzyme.
+  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3000725
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database
       assertion, not a primary citation.
 - target_id: ARO:3000763
   target_label: antibiotic sensitive embC
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. EmbC is asserted as the antibiotic-sensitive enzyme.
+  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3000763
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database
       assertion, not a primary citation.
 - target_id: ARO:3000764
   target_label: antibiotic sensitive embA
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. EmbA is asserted as the antibiotic-sensitive enzyme.
+  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3000764
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database
       assertion, not a primary citation.
 - target_id: ARO:3000765
   target_label: antibiotic sensitive embB
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. EmbB is asserted as the antibiotic-sensitive enzyme.
+  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3000765
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database
       assertion, not a primary citation.
 - target_id: ARO:3003473
   target_label: Antibiotic sensitive embR
+  target_type: PROTEIN
+  target_relation: SUSCEPTIBILITY_DETERMINANT
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. ARO states only that wild-type embR is antibiotic-sensitive;
+    direct binding is not asserted.
+  evidence_status: DATABASE_ASSERTION_ONLY
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3003473
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database
@@ -268,6 +309,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:00:09Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

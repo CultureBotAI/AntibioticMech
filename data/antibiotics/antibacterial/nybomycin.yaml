@@ -37,6 +37,15 @@ source_concepts:
 molecular_targets:
 - target_id: ARO:3003292
   target_label: fluoroquinolone resistant gyrA
+  target_type: PROTEIN
+  target_relation: RESISTANCE_DETERMINANT
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. The ARO term is explicitly fluoroquinolone-resistant
+    gyrA with resistance-conferring mutations.
+  evidence_status: DATABASE_ASSERTION_ONLY
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3003292
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3003780 (nybomycin); database
@@ -51,6 +60,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:00:21Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

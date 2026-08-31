@@ -110,8 +110,10 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
 {% for t in r.molecular_targets %}
-<h3>{{ t.target_label }}{% if t.target_type %} <span class="pill plain">{{ t.target_type }}</span>{% endif %}</h3>
+<h3>{{ t.target_label }} <span class="pill plain">{{ t.target_type }}</span> <span class="pill">{{ t.target_relation }}</span></h3>
 {% if t.target_id %}<p class="meta">{% if t.target_id.href %}<a href="{{ t.target_id.href }}">{{ t.target_id.id }}</a>{% else %}<code class="curie">{{ t.target_id.id }}</code>{% endif %}</p>{% endif %}
+<p class="meta">{{ t.experimental_context }} Evidence status: {{ t.evidence_status }}. Source: {{ t.source }} {{ t.source_version }} (retrieved {{ t.source_retrieved_on }}).</p>
+{% if t.taxon_label %}<p><em>{{ t.taxon_label }}</em>{% if t.taxon_id %} <code class="curie">{{ t.taxon_id }}</code>{% endif %}{% if t.strain %}; strain {{ t.strain }}{% endif %}</p>{% endif %}
 {% if t.protein_examples %}
 <table>
   <caption>Organism-specific examples</caption>

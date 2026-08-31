@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """The curation backlog, ranked so a curator can start at the top.
 
-Three queues, each answering a different question:
+Six queues, each answering a different question:
 
   no-structure  Source concepts that never became records because no source
                 gives them a structure. Each needs a structure or an EXCLUDE
@@ -10,6 +10,8 @@ Three queues, each answering a different question:
                 causal graph — the mechanism layer this repository exists for.
   minted        Records whose identity is a minted CURIE. Each needs either a
                 defensible ontology identity or a recorded reason it has none.
+  target-evidence
+                Database-asserted direct targets still lacking a primary citation.
 
     python scripts/curation_worklist.py                 # all three, top 25 each
     python scripts/curation_worklist.py --queue minted --limit 100
@@ -225,12 +227,42 @@ def unknown_mechanism_queue(records: list[dict]) -> list[dict]:
     return rows
 
 
+def target_evidence_queue(records: list[dict]) -> list[dict]:
+    """Database-only direct-target assertions awaiting primary evidence."""
+    grouped: dict[str, dict] = {}
+    for record in records:
+        for target in record.get("molecular_targets") or []:
+            if target.get("evidence_status") != "PRIMARY_EVIDENCE_NEEDED":
+                continue
+            key = target.get("target_id") or target.get("target_label", "")
+            row = grouped.setdefault(key, {
+                "queue": "target-evidence",
+                "key": key,
+                "label": target.get("target_label", ""),
+                "source": target.get("source", ""),
+                "source_id": target.get("target_relation", ""),
+                "records": 0,
+            })
+            row["records"] += 1
+    rows = []
+    for row in grouped.values():
+        count = row.pop("records")
+        row["hint"] = (
+            f"database direct-target assertion on {count} record(s); "
+            "primary citation needed"
+        )
+        row["_count"] = count
+        rows.append(row)
+    rows.sort(key=lambda row: (-row.pop("_count"), row["label"].lower()))
+    return rows
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--queue",
                         choices=("all", "no-structure", "mechanism", "minted", "unknown-mech",
-                                 "moa-scope"),
+                                 "moa-scope", "target-evidence"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
     parser.add_argument("--tsv", type=Path, help="Write every row (not just --limit) to this TSV.")
@@ -248,6 +280,8 @@ def main() -> int:
         queues["unknown-mech"] = unknown_mechanism_queue(records)
     if args.queue in ("all", "moa-scope"):
         queues["moa-scope"] = mode_of_action_scope_queue(records)
+    if args.queue in ("all", "target-evidence"):
+        queues["target-evidence"] = target_evidence_queue(records)
 
     for name, rows in queues.items():
         print(f"\n=== {name}: {len(rows)} item(s) ===")

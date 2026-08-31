@@ -151,12 +151,30 @@ resistance_mechanisms:
 molecular_targets:
 - target_id: ARO:3000722
   target_label: cycloserine sensitive alr
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. Alanine racemase is asserted as the cycloserine-sensitive
+    enzyme.
+  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3000722
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000760 (cycloserine); database
       assertion, not a primary citation.
 - target_id: ARO:3000723
   target_label: cycloserine sensitive D-alanine synthetase
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. D-alanine ligase is asserted as the cycloserine-sensitive
+    enzyme.
+  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
   evidence:
   - reference: ARO:3000723
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000760 (cycloserine); database
@@ -202,6 +220,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:26Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:00:07Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
