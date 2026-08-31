@@ -40,6 +40,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -123,6 +124,19 @@ def build_document(record: dict, names: dict[str, str]) -> str:
     return ". ".join(p.rstrip().rstrip(".") for p in parts if p and p.strip())
 
 
+def corpus_fingerprint(docs: list[str]) -> str:
+    """A hash of the embedded DOCUMENTS, not of the record files.
+
+    Vectors and the map derive from these strings, so this is what decides
+    whether a committed map still describes the corpus. It is recomputed by
+    `tests/test_embeddings.py` in pure python — no torch — which is the only
+    reason staleness is detectable in CI at all. A corpus edit that does not
+    change any embedded field (a curation_status flip, say) correctly leaves it
+    alone; one that changes a definition or a mechanism does not.
+    """
+    return hashlib.sha256("\x1f".join(docs).encode("utf-8")).hexdigest()[:16]
+
+
 def load_corpus() -> tuple[list[str], list[str], list[dict]]:
     """(ids, documents, light metadata) in a stable identifier order."""
     names = role_names()
@@ -187,6 +201,7 @@ def main() -> int:
     (OUT / "meta.json").write_text(json.dumps({
         "model": args.model, "dim": int(vectors.shape[1]), "count": len(ids),
         "normalized": True, "excluded_fields": list(EXCLUDED),
+        "corpus_fingerprint": corpus_fingerprint(docs),
     }, indent=2), encoding="utf-8")
     print(f"wrote {vectors.shape[0]:,} x {vectors.shape[1]} vectors to "
           f"{OUT.relative_to(REPO_ROOT)}/")
