@@ -14,6 +14,18 @@ sources:
     license: CC BY 4.0
     version: 4.0.1
     review_policy: active entry with a non-placeholder changelog reviewer
+  fda_drugsfda:
+    homepage: https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files
+    license: United States government public-domain data
+    version: '2026-08-28'
+    retrieved_on: '2026-08-31'
+    jurisdiction: US-FDA
+  fda_gsrs:
+    homepage: https://gsrs.ncats.nih.gov/
+    license: United States government public data; GSRS materials Apache-2.0
+    unii_version: '2026-08-31'
+    retrieved_on: '2026-08-31'
+    use: identity only
 downloads:
   compounds.tsv.gz:
     url: https://ftp.ebi.ac.uk/pub/databases/chebi/flat_files/compounds.tsv.gz
@@ -51,6 +63,18 @@ downloads:
     url: https://zenodo.org/records/14835872/files/mibig_json_4.0.tar.gz?download=1
     bytes: 10004480
     sha256: d02a387c7d62f8e54d7bcdc03984301e513ce56c1782ecbc9ce957a76039444f
+  drugsatfda.zip:
+    url: https://www.fda.gov/media/89850/download?attachment=
+    bytes: 6074677
+    sha256: 2e639056285235b63b4071dfb90f4f4f505a19f66d1f6b790b03e3b7bce9e143
+  other-unii.json.zip:
+    url: https://download.open.fda.gov/other/unii/other-unii-0001-of-0001.json.zip
+    bytes: 3648667
+    sha256: edb1c477e0ac90a7b6fc440f5666ab7450b7f912d832a728c813488cdf1508bf
+  fda_gsrs_candidates.jsonl:
+    url: https://api.fda.gov/other/substance.json (batched UNII queries)
+    bytes: 423415
+    sha256: 504ea6edce6e242a6b21ffa8293398fcb6006c2765632292aafcab683c1f4b1f
 inventories:
   aro_antibiotics.tsv:
     rows: 644
@@ -82,3 +106,8 @@ inventories:
     bytes: 29899
     sha256: 696a6f3f47ced15d166eebf53acbe7f33891e22ecab74af0cece9565438e85fa
     source: MIBiG 4.0.1 reviewed active entries
+  fda_clinical_status.tsv:
+    rows: 3703
+    bytes: 660793
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    source: Drugs@FDA regulatory facts joined to GSRS/UNII exact structures

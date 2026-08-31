@@ -145,7 +145,7 @@ SEEDED_FIELDS = [
 # rather than a way to lose all of it.
 CURATOR_FIELDS = [
     "curation_status", "grounding_notes", "evidence",
-    "cidality", "biosynthesis_origin", "clinical_status",
+    "cidality", "biosynthesis_origin",
     "activity_spectrum", "causal_graphs", "datasets",
     "contributors",
 ]
@@ -1077,6 +1077,83 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
     return counts
 
 
+FDA_CLINICAL_SOURCE = "DRUGS_AT_FDA"
+
+
+def is_fda_sourced_clinical_assertion(item: dict) -> bool:
+    return item.get("source") == FDA_CLINICAL_SOURCE
+
+
+def fda_sourced_clinical_view(record: dict) -> list[dict]:
+    return [
+        item
+        for item in (record.get("clinical_status_assertions") or [])
+        if is_fda_sourced_clinical_assertion(item)
+    ]
+
+
+def attach_fda_clinical_status(records: dict[str, dict]) -> Counter:
+    """Attach approved Drugs@FDA products after the extractor's exact GSRS join."""
+    rows = load_tsv(RAW_DIR / "fda_clinical_status.tsv")
+    by_key: dict[str, list[str]] = defaultdict(list)
+    for identifier, record in records.items():
+        by_key[record["chemical_structure"]["standard_inchi_key"]].append(identifier)
+
+    grouped: dict[str, list[dict]] = defaultdict(list)
+    counts: Counter = Counter()
+    for row in rows:
+        matches = by_key.get(row["standard_inchi_key"], [])
+        if len(matches) != 1:
+            counts["ambiguous_or_missing"] += 1
+            continue
+        grouped[matches[0]].append(row)
+        counts["matched_products"] += 1
+
+    base_url = "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm"
+    for identifier, matched_rows in sorted(grouped.items()):
+        assertions = []
+        seen = set()
+        for row in sorted(
+            matched_rows,
+            key=lambda value: (value["application_number"], value["product_number"]),
+        ):
+            key = (row["application_number"], row["product_number"])
+            if key in seen:
+                continue
+            seen.add(key)
+            assertions.append({
+                "status": "APPROVED",
+                "jurisdiction": "US-FDA",
+                "application_number": row["application_number"],
+                "application_type": row["application_type"],
+                "product_number": row["product_number"],
+                "sponsor_name": row["sponsor_name"],
+                "drug_name": row["drug_name"],
+                "ingredient_name": row["ingredient_name"],
+                "substance_id": f"UNII:{row['unii']}",
+                "approval_date": row["approval_date"],
+                "submission_status": row["submission_status"],
+                "marketing_status": row["marketing_status"],
+                "currently_marketed": row["currently_marketed"] == "true",
+                "source": FDA_CLINICAL_SOURCE,
+                "source_version": row["drugsfda_version"],
+                "source_retrieved_on": row["drugsfda_retrieved_on"],
+                "identity_source": "FDA_GSRS",
+                "identity_source_version": row["unii_version"],
+                "identity_retrieved_on": row["gsrs_retrieved_on"],
+                "identity_record_version": row["gsrs_record_version"],
+                "reference": (
+                    f"{base_url}?event=overview.process&ApplNo={row['application_number']}"
+                ),
+            })
+        if assertions:
+            records[identifier]["clinical_status"] = "APPROVED"
+            records[identifier]["clinical_status_assertions"] = assertions
+            _history_last(records[identifier])
+            counts["matched_records"] += 1
+    return counts
+
+
 # --------------------------------------------------------------------------
 # writing
 # --------------------------------------------------------------------------
@@ -1234,6 +1311,25 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     else:
         merged.pop("producer_organisms", None)
 
+    seeded_clinical = list(record.get("clinical_status_assertions") or [])
+    existing_clinical = list(existing.get("clinical_status_assertions") or [])
+    curator_clinical = [
+        item for item in existing_clinical if not is_fda_sourced_clinical_assertion(item)
+    ]
+    existing_had_fda = any(is_fda_sourced_clinical_assertion(item) for item in existing_clinical)
+    curator_owns_clinical = "clinical_status" in existing and (
+        bool(curator_clinical) or not existing_had_fda
+    )
+    if seeded_clinical or curator_clinical:
+        merged["clinical_status_assertions"] = seeded_clinical + curator_clinical
+    else:
+        merged.pop("clinical_status_assertions", None)
+    if curator_owns_clinical:
+        if "clinical_status" in existing:
+            merged["clinical_status"] = existing["clinical_status"]
+        else:
+            merged.pop("clinical_status", None)
+
     # mode_of_action is seeded from ChEBI's roles but a curator's judgement
     # outranks it, so ownership is decided by the marker rather than by the field
     # name — the same device the CARD mechanism items use.
@@ -1311,6 +1407,10 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
         for f in ("molecular_targets", "resistance_mechanisms")
     ) and (
         mibig_sourced_producer_view(existing) == mibig_sourced_producer_view(record)
+    ) and (
+        fda_sourced_clinical_view(existing) == fda_sourced_clinical_view(record)
+    ) and (
+        curator_owns_clinical or existing.get("clinical_status") == merged.get("clinical_status")
     ) and all(
         existing.get(f) == merged.get(f)
         for f in ("mode_of_action", "mode_of_action_notes", "mode_of_action_target_scope")
@@ -1496,6 +1596,7 @@ def main() -> int:
         records,
         str(manifest.get("sources", {}).get("mibig", {}).get("version", "")),
     )
+    fda_counts = attach_fda_clinical_status(records)
     flagged = flag_structure_collisions(records, source_version)
 
     by_class: dict[str, int] = defaultdict(int)
@@ -1515,6 +1616,12 @@ def main() -> int:
         f"matched={mibig_counts['matched']} "
         f"ambiguous={mibig_counts['ambiguous_stereochemistry'] + mibig_counts['ambiguous_corpus_identity']} "
         f"out_of_scope={mibig_counts['out_of_scope']}",
+        file=sys.stderr,
+    )
+    print(
+        "  Drugs@FDA status: "
+        f"products={fda_counts['matched_products']} records={fda_counts['matched_records']} "
+        f"ambiguous_or_missing={fda_counts['ambiguous_or_missing']}",
         file=sys.stderr,
     )
     for name, count in sorted(by_class.items(), key=lambda kv: -kv[1]):

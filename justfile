@@ -33,6 +33,13 @@ extract-mibig *args:
 extract-mibig-dry *args:
     uv run --extra chemical-map python scripts/extract_mibig_producers.py --dry-run {{args}}
 
+# Join Drugs@FDA regulatory tables to exact GSRS/UNII structures.
+extract-fda *args:
+    uv run --extra chemical-map python scripts/extract_fda_clinical_status.py {{args}}
+
+extract-fda-dry *args:
+    uv run --extra chemical-map python scripts/extract_fda_clinical_status.py --dry-run {{args}}
+
 # Free check: print the PubChem URL for the first molecule needing a structure
 extract-pubchem-dry:
     uv run python scripts/enrich_pubchem_structures.py --dry-run

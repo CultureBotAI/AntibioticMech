@@ -137,6 +137,50 @@ resistance_mechanisms:
   - reference: ARO:3009454
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007507 (terbinafine);
       database assertion, not a primary citation.
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 020846
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: KARO HLTHCARE
+  drug_name: LAMISIL
+  ingredient_name: TERBINAFINE
+  substance_id: UNII:G7RIW8S0XP
+  approval_date: '1998-04-29'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '36'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020846
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 021958
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: KARO HLTHCARE
+  drug_name: LAMISIL AT
+  ingredient_name: TERBINAFINE
+  substance_id: UNII:G7RIW8S0XP
+  approval_date: '2006-07-24'
+  submission_status: AP
+  marketing_status: Over-the-counter
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '36'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021958
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -151,6 +195,14 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T20:06:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:17:05Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:40Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

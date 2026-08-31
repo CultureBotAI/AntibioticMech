@@ -241,6 +241,29 @@ molecular_targets:
   - reference: ARO:3000757
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000176 (dirithromycin); database
       assertion, not a primary citation.
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 050678
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: LILLY RES LABS
+  drug_name: DYNABAC
+  ingredient_name: DIRITHROMYCIN
+  substance_id: UNII:1801D76STL
+  approval_date: '1995-06-19'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '29'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=050678
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -251,6 +274,14 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:29Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

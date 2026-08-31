@@ -186,9 +186,9 @@ by a source concept's minted identifier), and the mechanism fields on a record �
 `mode_of_action`, `molecular_targets` beyond CARD's, `activity_spectrum`,
 `producer_organisms` beyond the MIBiG-marked slice, `causal_graphs`,
 `discussions`. `verify-corpus` does not compare those, so curation and
-reproducibility coexist — with two exceptions: MIBiG-marked producer assertions
-are compared to their committed inventory, and a `mode_of_action` still carrying
-the seeder's note marker is the
+reproducibility coexist — with three exceptions: MIBiG-marked producer
+assertions and Drugs@FDA-marked clinical assertions are compared to their
+committed inventories, and a `mode_of_action` still carrying the seeder's note marker is the
 seeder's, and is compared along with its notes and target scope, because a bare
 hand edit of a seeded mechanism is drift rather than curation. Writing a
 `CURATOR:` note claims the field and ends the comparison.

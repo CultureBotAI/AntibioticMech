@@ -85,6 +85,29 @@ mibig:
   # evidence that an expert reviewed the entry.
   reviewer_placeholder: AAAAAAAAAAAAAAAAAAAAAAAA
 
+fda_drugsfda:
+  name: Drugs@FDA
+  description: >-
+    United States human-drug application, product, submission, and marketing
+    status data. Regulatory facts come only from this archive.
+  homepage: https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files
+  archive_url: https://www.fda.gov/media/89850/download?attachment=
+  archive_name: drugsatfda.zip
+  jurisdiction: US-FDA
+  license: United States government public-domain data
+
+fda_gsrs:
+  name: FDA GSRS / UNII
+  description: >-
+    Substance identity crosswalk only. The UNII list selects a candidate and a
+    GSRS chemical structure must exactly match the corpus Standard InChIKey.
+  homepage: https://gsrs.ncats.nih.gov/
+  unii_archive_url: https://download.open.fda.gov/other/unii/other-unii-0001-of-0001.json.zip
+  unii_archive_name: other-unii-0001-of-0001.json.zip
+  substance_api: https://api.fda.gov/other/substance.json
+  cache_name: fda_gsrs_candidates.jsonl
+  license: United States government public data; GSRS materials Apache-2.0
+
 # ----------------------------------------------------------------------------
 # Role scope — which ChEBI roles put a compound in this corpus.
 #

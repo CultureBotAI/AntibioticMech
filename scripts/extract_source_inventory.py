@@ -646,15 +646,24 @@ def main() -> int:
     old_path = RAW_DIR / MANIFEST
     if old_path.exists():
         previous = yaml.safe_load(old_path.read_text(encoding="utf-8")) or {}
-        for name in ("pubchem_structures.tsv", "mibig_producers.tsv"):
+        for name in (
+            "pubchem_structures.tsv",
+            "mibig_producers.tsv",
+            "fda_clinical_status.tsv",
+        ):
             carried = previous.get("inventories", {}).get(name)
             if carried and (RAW_DIR / name).exists():
                 manifest["inventories"][name] = carried
-        for name in ("mibig",):
+        for name in ("mibig", "fda_drugsfda", "fda_gsrs"):
             carried = previous.get("sources", {}).get(name)
             if carried:
                 manifest["sources"][name] = carried
-        for name in ("mibig_json_4.0.tar.gz",):
+        for name in (
+            "mibig_json_4.0.tar.gz",
+            "drugsatfda.zip",
+            "other-unii-0001-of-0001.json.zip",
+            "fda_gsrs_candidates.jsonl",
+        ):
             carried = previous.get("downloads", {}).get(name)
             if carried:
                 manifest["downloads"][name] = carried

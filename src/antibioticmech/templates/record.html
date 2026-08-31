@@ -139,6 +139,25 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 </dl>
 {% endif %}
 
+{% if r.clinical_status_assertions %}
+<h2>Regulatory status evidence</h2>
+<p class="meta">Product-level regulatory assertions; identity and status retain separate sources.</p>
+<table>
+  <caption>Regulatory status evidence</caption>
+  <thead><tr><th scope="col">Application / product</th><th scope="col">Status</th><th scope="col">Ingredient</th><th scope="col">Approval date</th><th scope="col">Marketing</th><th scope="col">Sources</th></tr></thead>
+  {% for c in r.clinical_status_assertions %}
+  <tr>
+    <td><a href="{{ c.reference }}">{{ c.application_type }} {{ c.application_number }} / {{ c.product_number }}</a><br><span class="meta">{{ c.drug_name }}{% if c.sponsor_name %}; {{ c.sponsor_name }}{% endif %}</span></td>
+    <td>{{ c.status }}<br><span class="meta">{{ c.jurisdiction }}</span></td>
+    <td>{{ c.ingredient_name }}<br><code class="curie">{{ c.substance_id }}</code></td>
+    <td>{{ c.approval_date }}</td>
+    <td>{{ c.marketing_status }}{% if c.currently_marketed %}; currently marketed{% endif %}</td>
+    <td class="meta">{{ c.source }} {{ c.source_version }} (retrieved {{ c.source_retrieved_on }})<br>{{ c.identity_source }} {{ c.identity_source_version }} (record {{ c.identity_record_version }}, retrieved {{ c.identity_retrieved_on }})</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endif %}
+
 {% if r.activity_spectrum %}
 <h2>Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number

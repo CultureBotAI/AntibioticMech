@@ -161,6 +161,29 @@ molecular_targets:
   - reference: ARO:3000723
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000760 (cycloserine); database
       assertion, not a primary citation.
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 060593
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: SANALUZ
+  drug_name: SEROMYCIN
+  ingredient_name: CYCLOSERINE
+  substance_id: UNII:95IK5KI84Z
+  approval_date: '1964-06-29'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '51'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=060593
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -171,6 +194,14 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:26Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
