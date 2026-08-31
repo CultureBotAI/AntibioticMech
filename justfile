@@ -135,7 +135,6 @@ lint *args:
 lint-fix:
     uv run ruff check --fix .
 
-# The authoritative quality gate used both locally and in CI.
 # Show the documents that WOULD be embedded, and their size distribution. Free.
 embed-dry:
     python3 scripts/embed_records.py --dry-run
@@ -155,5 +154,6 @@ embed *args:
 embed-map *args:
     python3 scripts/embed_map.py {{args}}
 
+# The authoritative quality gate used both locally and in CI.
 qc:
     uv run python scripts/run_qc.py

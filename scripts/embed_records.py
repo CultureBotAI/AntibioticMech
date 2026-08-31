@@ -69,6 +69,27 @@ def role_names() -> dict[str, str]:
         return {r["role_id"]: r.get("name", "") for r in csv.DictReader(fh, delimiter="\t")}
 
 
+def is_systematic_name(text: str) -> bool:
+    """True for an IUPAC-style systematic name rather than a usable synonym.
+
+    Synonyms were 42% of all corpus tokens, and the long ones are full
+    systematic names — "(3S,6R,7R,11R,23S,26S,30aS,36R,38aR)-44-[2-O-(3-amino-
+    2,...)]..." — which is exactly the "gibberish of a length that would
+    dominate every document" given as the reason for excluding SMILES and InChI.
+    Excluding it from `chemical_structure` and readmitting it through `synonyms`
+    would be the same mistake wearing a different key.
+
+    Trade and common names (Vancocin, vancomicina) are short and mostly letters;
+    systematic names are long and dense in digits, brackets and locants. The
+    test is deliberately conservative — a name has to be BOTH long and dense to
+    be dropped, so an ordinary chemical word survives.
+    """
+    if len(text) < 40:
+        return False
+    dense = sum(ch.isdigit() or ch in "[](){},-" for ch in text)
+    return dense / len(text) > 0.18
+
+
 def humanize(value: str) -> str:
     """ANTIMICROBIAL_UNSPECIFIED -> 'antimicrobial unspecified'."""
     return (value or "").replace("_", " ").lower()
@@ -105,8 +126,12 @@ def build_document(record: dict, names: dict[str, str]) -> str:
     if roles:
         parts.append("roles: " + ", ".join(roles[:10]))
 
-    targets = [str(t.get("label")) for t in (record.get("molecular_targets") or [])
-               if t.get("label")]
+    # `target_label`, not `label` — the schema slot is target_label and reading
+    # the wrong key silently dropped all 249 target entries on 206 records while
+    # every gate stayed green. resistance_mechanisms really does use `label`,
+    # which is why only this one broke.
+    targets = [str(t.get("target_label")) for t in (record.get("molecular_targets") or [])
+               if t.get("target_label")]
     if targets:
         parts.append("targets: " + ", ".join(targets[:6]))
     resistance = [str(t.get("label")) for t in (record.get("resistance_mechanisms") or [])
@@ -118,7 +143,7 @@ def build_document(record: dict, names: dict[str, str]) -> str:
         parts.append(str(record["definition"]))
 
     synonyms = [str(s.get("synonym_text")) for s in (record.get("synonyms") or [])
-                if s.get("synonym_text")]
+                if s.get("synonym_text") and not is_systematic_name(str(s["synonym_text"]))]
     if synonyms:
         parts.append("also known as " + ", ".join(synonyms[:6]))
 

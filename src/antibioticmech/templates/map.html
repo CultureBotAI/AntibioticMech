@@ -16,11 +16,22 @@ sentence model reads them as noise. A chemical-similarity map is a different art
           style="--dot: var(--cls{{ loop.index0 }})" aria-pressed="true">{{ c.replace("_", " ")|lower }}</button>
   {% endfor %}
 </div>
+<noscript>
+  <p class="meta"><strong>The map needs JavaScript.</strong> Every compound it shows is
+  also reachable without it, from <a href="{{ root }}browse.html">Browse</a> and the
+  per-class pages.</p>
+</noscript>
 <figure>
   <canvas id="corpus-map" width="900" height="620" role="img"
           aria-label="Scatter plot of {{ map.n }} compounds, coloured by antimicrobial class."></canvas>
   <figcaption class="meta" id="map-hover">Hover a point for its name; click to open the record.</figcaption>
 </figure>
+<p class="meta">The scatter is a <strong>visual aid, and mouse-driven</strong>: its points are
+canvas pixels, not focusable links, so it is not navigable by keyboard or screen reader.
+Nothing is only available here — every compound has a record page reachable from
+<a href="{{ root }}browse.html">Browse</a>, and the per-class pages list the same records
+in text. Said plainly rather than implied, because a scatter that is the sole route to
+some records would be an accessibility failure rather than a limitation.</p>
 
 <script id="map-data" type="application/json">{{ map_json|safe }}</script>
 <script>
