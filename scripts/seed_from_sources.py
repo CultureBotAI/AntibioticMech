@@ -215,7 +215,7 @@ class Concept:
 
     __slots__ = ("source", "source_id", "label", "definition", "definition_refs",
                  "roles", "parents", "xrefs", "synonyms", "structure", "structural_class",
-                 "structural_class_id", "minted", "mechanism_roles")
+                 "structural_class_id", "minted", "mechanism_roles", "aro_parents")
 
     def __init__(self, source, source_id, label):
         self.source = source
@@ -225,6 +225,10 @@ class Concept:
         self.definition_refs: list[str] = []
         self.roles: list[str] = []
         self.parents: list[str] = []
+        # ARO's own parent_ids column. Kept apart from `parents`, which feeds the
+        # record's `parent_compounds` and for an ARO concept means its drug class;
+        # these are classification terms, not broader compounds.
+        self.aro_parents: list[str] = []
         self.xrefs: list[str] = []
         self.synonyms: list[tuple[str, str]] = []
         self.structure: dict = {}
@@ -295,29 +299,35 @@ def structure_from_pubchem(row: dict) -> dict:
 
 def classify(roles: list[str], conf: dict, from_aro: bool,
              aro_class_ids: tuple[str, ...] = (),
-             aro_ids: tuple[str, ...] = ()) -> str:
+             aro_ids: tuple[str, ...] = (),
+             aro_parent_ids: tuple[str, ...] = ()) -> str:
     """Assign the filesystem/reporting class.
 
     Order of evidence, strongest first:
 
     1. **A CARD drug class whose name states a target group** — "triazole
-       antifungal", "polyene antifungal". That is a curated, compound-specific
-       classification and outranks a generic role tag: ChEBI gives fluconazole
-       and amphotericin B an `antibacterial agent` role, and taking that at face
+       antifungal", "disinfecting agents and antiseptics". Compound-specific and
+       curated, so it outranks a generic role tag: ChEBI gives fluconazole and
+       amphotericin B an `antibacterial agent` role, and taking that at face
        value filed both as antibacterials.
     2. **ChEBI roles**, by the priority table in conf/sources.yaml (narrower
        target group first, bacteria before fungi and protozoa).
-    3. **A curated adjudication of CARD's own definition**, for the handful of
+    3. **A CARD PARENT whose name states a target group** — "antifungal without
+       defined classification". Deliberately BELOW the roles: it is a filing
+       convenience rather than a curatorial act, and CARD files pyrimethamine, an
+       antimalarial, under that antifungal parent. Above the roles it overrode a
+       correct antiprotozoal role.
+    4. **A curated adjudication of CARD's own definition**, for the handful of
        ARO concepts the blanket fallback would misfile. `aro_definition_overrides`
        in conf/sources.yaml; each entry quotes the phrase it rests on. The
-       fallback is right for 266 of the 276 records it reaches, and CARD's
+       fallback is right for 265 of the 276 records it reaches, and CARD's
        definition says outright that it is wrong for the rest — triflumizole
        "used as a fungicide" was filed ANTIBACTERIAL while its own ChEBI-grounded
        twin was ANTIFUNGAL, so one compound sat under two classes.
-    4. **The ARO fallback**, ANTIBACTERIAL — for a CARD molecule with no ChEBI
-       role, no group-naming drug class and no adjudication.
+    5. **The ARO fallback**, ANTIBACTERIAL — for a CARD molecule with none of
+       the above.
 
-    Step 3 is a CURATED MAP, not a text rule, and the distinction is the whole
+    Step 4 is a CURATED MAP, not a text rule, and the distinction is the whole
     point: a regex for "fungal" flags ophiobolin A, whose definition reads
     "isolated as fungal phytotoxins" — a fungal PRODUCT with no antimicrobial
     target claim. The pattern cannot tell a target from a source, so it only
@@ -333,10 +343,13 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
     Classes whose names do not state a group are absent from the map on purpose;
     see conf/sources.yaml.
     """
+    # Drug class before parents: the more specific term wins when both are
+    # mapped. A ChEBI role still outranks both, which is what keeps pyrimethamine
+    # ANTIPROTOZOAL despite CARD filing it under an antifungal parent.
     class_map = conf.get("aro_class_to_class", {})
-    for class_id in aro_class_ids:
-        if class_id in class_map:
-            return class_map[class_id]
+    for term in aro_class_ids:
+        if term in class_map:
+            return class_map[term]
 
     mapping = conf["role_to_class"]
     best = None
@@ -348,6 +361,13 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
         return best["class"]
 
     if from_aro:
+        # A parent term, below the roles on purpose: CARD files pyrimethamine, an
+        # antimalarial, under "antifungal without defined classification", and at
+        # step 1 this map overrode its correct antiprotozoal role.
+        parent_map = conf.get("aro_parent_to_class", {})
+        for term in aro_parent_ids:
+            if term in parent_map:
+                return parent_map[term]
         overrides = conf.get("aro_definition_overrides", {})
         for aro_id in aro_ids:
             if aro_id in overrides:
@@ -390,6 +410,7 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
         concept.structural_class_id = row["drug_class_id"]
         if row["drug_class_id"]:
             concept.parents = [row["drug_class_id"]]
+        concept.aro_parents = split_pipe(row["parent_ids"])
         chebi_id = next((x for x in split_pipe(row["xrefs"]) if x.startswith("CHEBI:")), "")
         chebi_row = chebi_rows.get(chebi_id)
         # Roles and structure are independent facts about the cross-referenced
@@ -830,6 +851,7 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
             roles, conf, from_aro=bool(aro),
             aro_class_ids=tuple(c.structural_class_id for c in aro if c.structural_class_id),
             aro_ids=tuple(c.source_id for c in aro if c.source_id),
+            aro_parent_ids=tuple(p for c in aro for p in (c.aro_parents or [])),
         ),
         "curation_status": "SEEDED",
         "grounding_status": grounding_status,

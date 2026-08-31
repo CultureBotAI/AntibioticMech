@@ -205,6 +205,10 @@ DEFINITION_GROUP_HINTS = {
     "ANTIVIRAL": r"\bantiviral\b|\bvirus(es)?\b|\bviral\b",
     "ANTIPROTOZOAL": r"\bantiprotozoal\b|\bmalaria|\bprotozoa|\bleishman|\btrypanosom",
     "ANTIBACTERIAL": r"\bantibacterial\b|\bbacteri(a|al|um)\b",
+    # Without this the queue could never surface an antiseptic: acriflavine only
+    # appeared because its definition happens to mention fungal infections in
+    # aquarium fish, and thiacalixarene derivatives never appeared at all.
+    "BIOCIDE": r"\bantiseptic|\bdisinfect|\bpreservative\b|\bsanitis|\bsanitiz",
 }
 
 
@@ -212,7 +216,7 @@ def aro_class_queue(records: list[dict], conf: dict | None = None) -> list[dict]
     """ARO-fallback records whose own definition names another target group.
 
     A molecule in CARD's antibiotic subtree is there for a bacterial reason, so
-    the fallback files it ANTIBACTERIAL — right for 266 of the 276 records it
+    the fallback files it ANTIBACTERIAL — right for 265 of the 276 records it
     reaches. For the rest CARD's own definition says otherwise, and until this
     queue existed nothing surfaced them: triflumizole sat under ANTIBACTERIAL
     while its ChEBI-grounded twin sat under ANTIFUNGAL, one compound in two
@@ -225,6 +229,20 @@ def aro_class_queue(records: list[dict], conf: dict | None = None) -> list[dict]
     if conf is None:
         conf = yaml.safe_load(CONF_PATH.read_text(encoding="utf-8"))
     overrides = conf.get("aro_definition_overrides", {})
+    parent_map = conf.get("aro_parent_to_class", {})
+
+    # aro_id -> the names of its parents, so the queue can see a group stated in
+    # the hierarchy rather than in prose.
+    aro_parent_labels: dict[str, str] = {}
+    aro_parent_ids: dict[str, tuple[str, ...]] = {}
+    with (RAW_DIR / "aro_antibiotics.tsv").open(encoding="utf-8") as fh:
+        aro_rows = list(csv.DictReader(fh, delimiter="\t"))
+    names = {r["aro_id"]: r["name"] for r in aro_rows}
+    for r in aro_rows:
+        parents = tuple(p for p in (r.get("parent_ids") or "").split("|") if p)
+        aro_parent_ids[r["aro_id"]] = parents
+        aro_parent_labels[r["aro_id"]] = " ".join(names.get(p, "") for p in parents)
+
     rows = []
     for record in records:
         if record.get("activity_roles"):
@@ -235,11 +253,24 @@ def aro_class_queue(records: list[dict], conf: dict | None = None) -> list[dict]
         aro_ids = [c.get("source_id") for c in concepts]
         if any(a in overrides for a in aro_ids):
             continue                                   # a curator has decided
-        definition = str(record.get("definition") or "").lower()
+        if any(p in parent_map for a in aro_ids
+               for p in aro_parent_ids.get(a, ())):
+            continue                                   # a mapped parent decided
+        # Definition AND the labels of the concept's ARO parents. Reading only
+        # the definition hid myxothiazole, whose definition is pure mechanism
+        # ("inhibitor of the mitochondrial cytochrome bc1 complex") while its
+        # parent is named "antifungal without defined classification".
+        text = str(record.get("definition") or "").lower()
+        text += " " + " ".join(aro_parent_labels.get(a, "") for a in aro_ids).lower()
         named = sorted(group for group, pattern in DEFINITION_GROUP_HINTS.items()
-                       if re.search(pattern, definition))
+                       if re.search(pattern, text))
         filed = record.get("antimicrobial_class")
-        if not named or named == [filed]:
+        # Flag only when the filing is NOT among the groups CARD names. Testing
+        # for an exact single-group match instead kept acriflavine and
+        # thiacalixarene derivatives in the queue after they were correctly
+        # filed BIOCIDE, because their text names a second group too — a queue
+        # that lists correct records is one a curator learns to ignore.
+        if not named or filed in named:
             continue
         rows.append({
             "queue": "aro-class",
