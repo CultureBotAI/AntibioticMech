@@ -129,9 +129,9 @@ def test_each_classification_mechanism_is_load_bearing():
 
     conf = _conf()
     empty_overrides = dict(conf, aro_definition_overrides={})
-    empty_parents = dict(conf, aro_parent_to_class={})
-    no_biocide = dict(conf, aro_class_to_class={
-        k: v for k, v in conf["aro_class_to_class"].items() if k != "ARO:3005386"})
+    empty_parents = dict(conf, aro_group_terms={})
+    no_biocide = dict(conf, aro_group_terms={
+        k: v for k, v in conf["aro_group_terms"].items() if k != "ARO:3005386"})
 
     # The definition override decides triflumizole (ARO:3009169); without it the
     # blanket fallback files it ANTIBACTERIAL, contradicting CHEBI:81784.
@@ -139,7 +139,7 @@ def test_each_classification_mechanism_is_load_bearing():
     assert classify([], empty_overrides, from_aro=True,
                     aro_ids=("ARO:3009169",)) == "ANTIBACTERIAL"
 
-    # The parent map decides myxothiazole (parent ARO:3009165), whose definition
+    # The group term decides myxothiazole (parent ARO:3009165), whose definition
     # is pure mechanism and names no group at all.
     assert classify([], conf, from_aro=True, aro_ids=("ARO:3009170",),
                     aro_parent_ids=("ARO:3009165",)) == "ANTIFUNGAL"
@@ -196,3 +196,52 @@ def test_the_fallback_cohort_figure_in_the_comments_is_current(records):
                  "scripts/curation_worklist.py"):
         text = (root / name).read_text(encoding="utf-8")
         assert "265 of the 276" in text, f"{name} quotes a stale cohort figure"
+
+
+def test_a_per_compound_adjudication_outranks_a_group_term():
+    """Ordering inside the fallback tier, which would pass every gate if wrong.
+
+    A definition adjudication is about THIS compound; a group term is about a
+    bucket it sits in. If the group term ran first, ARO:3009165 ("antifungal
+    without defined classification") would overturn an adjudication made by
+    reading the compound's own definition.
+    """
+    from seed_from_sources import classify
+
+    conf = _conf()
+    # A synthetic concept in both: adjudicated UNSPECIFIED, and under the
+    # antifungal parent. The per-compound answer must win.
+    conf = dict(conf,
+                aro_definition_overrides={**conf["aro_definition_overrides"],
+                                          "ARO:9999998": "ANTIMICROBIAL_UNSPECIFIED"})
+    assert classify([], conf, from_aro=True, aro_ids=("ARO:9999998",),
+                    aro_parent_ids=("ARO:3009165",)) == "ANTIMICROBIAL_UNSPECIFIED"
+    # Without the adjudication, the group term decides.
+    assert classify([], conf, from_aro=True, aro_ids=("ARO:9999997",),
+                    aro_parent_ids=("ARO:3009165",)) == "ANTIFUNGAL"
+
+
+def test_a_group_term_never_outranks_a_chebi_role(records):
+    """The five antiseptics are the record of this.
+
+    Putting the antiseptic drug class at step 1 made BIOCIDE the strongest signal
+    for triclosan, benzalkonium chloride, chlorhexidine and 3,6-diaminoacridine,
+    reversing the role table's deliberate ranking of `antibacterial agent` above
+    `disinfectant` (conf/sources.yaml puts BIOCIDE at priority 6, last, because
+    "a biocide role is the least specific thing a source can say"). Only the two
+    antiseptics with NO roles should be BIOCIDE by a group term.
+    """
+    from seed_from_sources import classify
+
+    conf = _conf()
+    filed = {r["label"]: r["antimicrobial_class"] for _p, r in records}
+    for role_bearing in ("triclosan", "chlorhexidine", "benzalkonium chloride"):
+        assert filed.get(role_bearing) == "ANTIBACTERIAL", (role_bearing, filed.get(role_bearing))
+    for no_roles in ("acriflavine", "thiacalixarene derivatives"):
+        assert filed.get(no_roles) == "BIOCIDE", (no_roles, filed.get(no_roles))
+
+    # And directly: a role beats the group term.
+    antibacterial = next(r for r, e in conf["role_to_class"].items()
+                         if e["class"] == "ANTIBACTERIAL")
+    assert classify([antibacterial], conf, from_aro=True,
+                    aro_class_ids=("ARO:3005386",)) == "ANTIBACTERIAL"

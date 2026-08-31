@@ -312,22 +312,25 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
        value filed both as antibacterials.
     2. **ChEBI roles**, by the priority table in conf/sources.yaml (narrower
        target group first, bacteria before fungi and protozoa).
-    3. **A CARD PARENT whose name states a target group** — "antifungal without
-       defined classification". Deliberately BELOW the roles: it is a filing
-       convenience rather than a curatorial act, and CARD files pyrimethamine, an
-       antimalarial, under that antifungal parent. Above the roles it overrode a
-       correct antiprotozoal role.
-    4. **A curated adjudication of CARD's own definition**, for the handful of
+    3. **A curated adjudication of CARD's own definition** — per-compound, so it
+       comes before any bucket the compound sits in.
+    4. **A group-naming CARD term**, for the handful of
        ARO concepts the blanket fallback would misfile. `aro_definition_overrides`
        in conf/sources.yaml; each entry quotes the phrase it rests on. The
        fallback is right for 265 of the 276 records it reaches, and CARD's
        definition says outright that it is wrong for the rest — triflumizole
        "used as a fungicide" was filed ANTIBACTERIAL while its own ChEBI-grounded
        twin was ANTIFUNGAL, so one compound sat under two classes.
+       — a drug class ("disinfecting agents and antiseptics") or a parent
+       ("antifungal without defined classification"), matched at this tier and
+       not at step 1. Above the roles the antifungal parent refiled
+       pyrimethamine, an antimalarial, and the antiseptic class made BIOCIDE
+       outrank an antibacterial role for five compounds, reversing a priority
+       conf/sources.yaml argues for explicitly.
     5. **The ARO fallback**, ANTIBACTERIAL — for a CARD molecule with none of
        the above.
 
-    Step 4 is a CURATED MAP, not a text rule, and the distinction is the whole
+    Step 3 is a CURATED MAP, not a text rule, and the distinction is the whole
     point: a regex for "fungal" flags ophiobolin A, whose definition reads
     "isolated as fungal phytotoxins" — a fungal PRODUCT with no antimicrobial
     target claim. The pattern cannot tell a target from a source, so it only
@@ -361,17 +364,26 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
         return best["class"]
 
     if from_aro:
-        # A parent term, below the roles on purpose: CARD files pyrimethamine, an
-        # antimalarial, under "antifungal without defined classification", and at
-        # step 1 this map overrode its correct antiprotozoal role.
-        parent_map = conf.get("aro_parent_to_class", {})
-        for term in aro_parent_ids:
-            if term in parent_map:
-                return parent_map[term]
+        # PER-COMPOUND FIRST. A definition adjudication is about this compound; a
+        # group term is about a bucket it sits in. Reversing these would let
+        # ARO:3009165 ("antifungal without defined classification") overturn an
+        # adjudication made by reading the compound's own definition — an
+        # ordering that would pass every gate while quietly outranking the more
+        # specific evidence.
         overrides = conf.get("aro_definition_overrides", {})
         for aro_id in aro_ids:
             if aro_id in overrides:
                 return overrides[aro_id]
+
+        # Then a group-naming ARO term, drug class or parent. Below the roles on
+        # purpose: at step 1 the antifungal parent refiled pyrimethamine, an
+        # antimalarial, and the antiseptic drug class made BIOCIDE outrank the
+        # antibacterial role for five compounds — reversing a priority this conf
+        # argues for explicitly.
+        group_terms = conf.get("aro_group_terms", {})
+        for term in (*aro_class_ids, *aro_parent_ids):
+            if term in group_terms:
+                return group_terms[term]
         return "ANTIBACTERIAL"
     return "ANTIMICROBIAL_UNSPECIFIED"
 

@@ -229,18 +229,20 @@ def aro_class_queue(records: list[dict], conf: dict | None = None) -> list[dict]
     if conf is None:
         conf = yaml.safe_load(CONF_PATH.read_text(encoding="utf-8"))
     overrides = conf.get("aro_definition_overrides", {})
-    parent_map = conf.get("aro_parent_to_class", {})
+    group_terms = conf.get("aro_group_terms", {})
 
     # aro_id -> the names of its parents, so the queue can see a group stated in
     # the hierarchy rather than in prose.
     aro_parent_labels: dict[str, str] = {}
     aro_parent_ids: dict[str, tuple[str, ...]] = {}
+    aro_drug_class: dict[str, str] = {}
     with (RAW_DIR / "aro_antibiotics.tsv").open(encoding="utf-8") as fh:
         aro_rows = list(csv.DictReader(fh, delimiter="\t"))
     names = {r["aro_id"]: r["name"] for r in aro_rows}
     for r in aro_rows:
         parents = tuple(p for p in (r.get("parent_ids") or "").split("|") if p)
         aro_parent_ids[r["aro_id"]] = parents
+        aro_drug_class[r["aro_id"]] = r.get("drug_class_id") or ""
         aro_parent_labels[r["aro_id"]] = " ".join(names.get(p, "") for p in parents)
 
     rows = []
@@ -253,9 +255,9 @@ def aro_class_queue(records: list[dict], conf: dict | None = None) -> list[dict]
         aro_ids = [c.get("source_id") for c in concepts]
         if any(a in overrides for a in aro_ids):
             continue                                   # a curator has decided
-        if any(p in parent_map for a in aro_ids
-               for p in aro_parent_ids.get(a, ())):
-            continue                                   # a mapped parent decided
+        if any(t in group_terms for a in aro_ids
+               for t in (*aro_parent_ids.get(a, ()), aro_drug_class.get(a, ""))):
+            continue                                   # a mapped group term decided
         # Definition AND the labels of the concept's ARO parents. Reading only
         # the definition hid myxothiazole, whose definition is pure mechanism
         # ("inhibitor of the mitochondrial cytochrome bc1 complex") while its

@@ -499,14 +499,8 @@ role_target_scope:
 # compounds fall through to their ChEBI roles.
 # The concept's DRUG CLASS. Compound-specific and curated, so it outranks a
 # ChEBI role — see the note above. Parents are a weaker signal and live in
-# aro_parent_to_class below, at lower precedence.
+# aro_group_terms below, at the fallback tier.
 aro_class_to_class:
-  ARO:3005386: BIOCIDE      # "disinfecting agents and antiseptics" — the drug
-                            # class acriflavine was hand-overridden for. As a map
-                            # row it also decides thiacalixarene derivatives, and
-                            # leaves triclosan, benzalkonium chloride,
-                            # chlorhexidine and proflavine untouched because their
-                            # ChEBI roles outrank it.
   ARO:3007497: ANTIFUNGAL   # polyene antifungal
   ARO:3007498: ANTIFUNGAL   # allylamine antifungal
   ARO:3007499: ANTIFUNGAL   # triazole antifungal
@@ -516,28 +510,43 @@ aro_class_to_class:
   ARO:3009323: ANTIFUNGAL   # carbamate fungicides
   ARO:3009539: ANTIFUNGAL   # fungal succinate dehydrogenase inhibitor
 
-# ARO PARENT term -> AntimicrobialClassEnum, consulted AFTER ChEBI roles and
-# before the blanket ANTIBACTERIAL fallback.
+# ARO GROUP-NAMING TERM -> AntimicrobialClassEnum. Matched against a concept's
+# drug class OR any of its parents, and consulted at the FALLBACK TIER: after
+# ChEBI roles, after the per-compound definition adjudications, and only for
+# records none of those reach.
 #
-# WHY LOWER PRECEDENCE THAN A DRUG CLASS. A drug class is a compound-specific
-# curatorial act. A parent in a "without defined classification" bucket is a
-# filing convenience, and CARD gets it wrong: PYRIMETHAMINE, an antimalarial,
-# sits under "antifungal without defined classification". Putting this map at
-# step 1 refiled pyrimethamine ANTIFUNGAL and overrode its correct ChEBI
-# antiprotozoal role — the #47 error in a new place, trusting a hierarchy term
-# over curated evidence. Below the roles it fixes the records with no roles and
-# touches nothing that has them.
+# WHY NOT AT STEP 1, WITH THE OTHER DRUG CLASSES. Because it would silently
+# reverse a decision this file already argued out. BIOCIDE is priority 6,
+# deliberately last, on the grounds that "a biocide role is the least specific
+# thing a source can say about a compound" — and benzalkonium chloride carries
+# both CHEBI:48219 (disinfectant) and CHEBI:33282 (antibacterial agent), with the
+# role table ranking the antibacterial claim higher on purpose. Putting
+# ARO:3005386 at step 1 made BIOCIDE the STRONGEST signal for five compounds and
+# falsified the note beside that priority saying nothing turns on it today.
 #
-# The term is trustworthy at this precedence because 9 of ARO:3009165's 12
-# children are independently ANTIFUNGAL through their own ChEBI roles. The
-# parent agrees with the evidence wherever evidence exists; it is only consulted
-# where none does.
-aro_parent_to_class:
-  ARO:3009165: ANTIFUNGAL   # "antifungal without defined classification".
-                            # Decides myxothiazole, whose definition is pure
-                            # mechanism ("inhibitor of the mitochondrial
-                            # cytochrome bc1 complex") and names no group, plus
-                            # phenamacril, diamide and tacrolimus.
+# The same trap on the other side: ARO:3009165 is a "without defined
+# classification" wastebasket, and at step 1 it refiled PYRIMETHAMINE, an
+# antimalarial, as ANTIFUNGAL over its correct ChEBI role.
+#
+# At the fallback tier both terms decide only records with no evidence at all,
+# which is exactly what they are good for.
+#
+# Whether triclosan and chlorhexidine SHOULD be BIOCIDE is a real question about
+# ChEBI role priority, not something to settle as a side effect here. See #123.
+aro_group_terms:
+  ARO:3009165: ANTIFUNGAL   # a PARENT, "antifungal without defined
+                            # classification". Decides myxothiazole, whose
+                            # definition is pure mechanism ("inhibitor of the
+                            # mitochondrial cytochrome bc1 complex") and names no
+                            # group, plus diamide and tacrolimus. 9 of its 12
+                            # children are independently ANTIFUNGAL through their
+                            # own ChEBI roles, which is what makes it trustworthy
+                            # where no role exists.
+  ARO:3005386: BIOCIDE      # a DRUG CLASS, "disinfecting agents and antiseptics".
+                            # Reaches only acriflavine and thiacalixarene
+                            # derivatives, which carry no roles; triclosan,
+                            # benzalkonium chloride, chlorhexidine and proflavine
+                            # keep the class their ChEBI roles give them.
 
 # ARO concept -> AntimicrobialClassEnum, adjudicated from CARD's OWN definition
 # where the blanket ARO fallback would otherwise file the record ANTIBACTERIAL.
