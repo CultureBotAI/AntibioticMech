@@ -144,3 +144,60 @@ def test_the_committed_map_is_not_stale_against_the_corpus():
     assert recorded == corpus_fingerprint(docs), (
         "data/embeddings/corpus_map.json was built from different record text than "
         "the corpus now holds. Rebuild: just embed && just embed-map && just render")
+
+
+def test_molecular_targets_reach_the_documents_of_real_records():
+    """Asserted against the CORPUS, not a fixture I wrote to pass.
+
+    The builder read `t["label"]` while the schema slot is `target_label`, so
+    all 249 target entries on 206 records were silently dropped and the `[:6]`
+    cap was dead code — with every gate green, the module docstring, the commit
+    message and the docs all claiming targets were embedded. The synthetic
+    record in the exclusion test carried no `molecular_targets` at all, so no
+    test could see it.
+
+    A fixture can only test the keys I already believed in. This walks the real
+    records and fails if a field that EXISTS in the corpus never reaches a
+    document.
+    """
+    import yaml
+    from embed_records import build_document, load_corpus, role_names
+
+    corpus = (REPO_ROOT / "data" / "antibiotics")
+    with_targets = []
+    for path in corpus.rglob("*.yaml"):
+        record = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if record.get("molecular_targets"):
+            with_targets.append(record)
+    assert with_targets, "no record has molecular_targets; this test guards nothing"
+
+    names = role_names()
+    sample = with_targets[0]
+    label = sample["molecular_targets"][0]["target_label"]
+    assert label in build_document(sample, names), (
+        f"{sample['identifier']} has molecular_targets but {label!r} is absent "
+        "from its embedded document")
+
+    _ids, docs, _meta = load_corpus()
+    embedded = sum(1 for d in docs if "targets:" in d)
+    assert embedded == len(with_targets), (embedded, len(with_targets))
+
+
+def test_systematic_names_are_kept_out_of_the_documents():
+    """Synonyms were 42% of all corpus tokens, and the long ones are full IUPAC
+    names — the same "gibberish of a length that would dominate every document"
+    given as the reason for excluding SMILES, readmitted through a different
+    key. The filter is conservative: a name must be BOTH long and dense in
+    digits, brackets and locants to be dropped."""
+    from embed_records import is_systematic_name
+
+    for keep in ("Vancocin", "vancomicina", "nalidixic acid", "penicillin G",
+                 "4-aminosalicylic acid", "beta-lactam antibiotic"):
+        assert not is_systematic_name(keep), keep
+
+    for drop in (
+        "(3S,6R,7R,11R,23S,26S,30aS,36R,38aR)-44-[2-O-(3-amino-2,3,6-trideoxy)]-oxacyclo",
+        "1-ethyl-7-methyl-4-oxo-1,4-dihydro-1,8-naphthyridine-3-carboxylic acid, "
+        "compound with 2,2'-[(1,2-dihydroxyethylidene)]bis",
+    ):
+        assert is_systematic_name(drop), drop

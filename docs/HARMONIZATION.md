@@ -296,18 +296,25 @@ useful for curation: an outlier is usually a record whose annotation is thin or
 inconsistent with its neighbours, and a cluster spanning two classes is worth
 looking at.
 
-It separates the classes without being told them — 88% of a compound's ten
-nearest neighbours share its class, against a 23% baseline for the class sizes.
-The exception is instructive: `ANTIMYCOBACTERIAL` scores 52%, with a further 36%
-of its neighbours in `ANTIBACTERIAL`. The embedding recovers, from text alone,
-the subclass relationship the schema declares — mycobacteria are bacteria.
+It separates the classes without being told them. Two figures, because they
+measure different stages and conflating them credits the encoder for the
+projector's work: in the raw 1024-d embedding **83%** of a compound's ten nearest
+neighbours share its class; in the 2-D map, where PaCMAP tightens neighbourhoods
+by construction, **87%**. The baseline for these class sizes is 23%.
 
-Field ORDER matters, because 78 documents exceed the model's 512-token window
-and the tail of those is silently dropped. Mechanism, roles and targets are
-therefore emitted before the definition, and synonyms and identifiers last:
-they are verbose, weakly semantic, and the right thing to lose. Ordering
-synonyms earlier cost 6 points of neighbour purity and made vancomycin's
-resistance determinants the part that fell off the end.
+The exception is instructive. In the raw embedding `ANTIMYCOBACTERIAL` scores
+51%, with a further 28% of its neighbours in `ANTIBACTERIAL`. The encoder
+recovers, from text alone, the subclass relationship the schema declares —
+mycobacteria are bacteria.
+
+Field order and length both mattered. 94 documents once exceeded the model's
+512-token window, and the tail of those was silently dropped — with synonyms
+emitted early, vancomycin kept a list of trade names and lost its resistance
+determinants. Mechanism, roles and targets now come before the definition, and
+systematic IUPAC synonyms are dropped outright: they were 42% of all corpus
+tokens and are precisely the "gibberish of a length that would dominate every
+document" that excludes SMILES, readmitted through a different key. **No
+document now exceeds the window at all** (median 174 tokens, longest 503).
 
 A chemical-similarity map is a different artifact and would need molecular
 fingerprints or a chemical language model rather than a text encoder.
