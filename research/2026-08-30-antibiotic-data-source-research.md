@@ -210,9 +210,12 @@ bioactivity resource reviewed and includes CO-ADD screening as source ID 40,
 but share-alike is incompatible with redistributing derived record content only
 under this corpus's CC BY 4.0 licence. It may be consulted by curators or stored
 in a separately licensed sidecar. CO-ADD's own
-[program site](https://www.co-add.org/) describes screening against five bacteria
-and two fungi, but no independent machine-readable data licence was found; the
-ChEMBL copy remains share-alike unless CO-ADD grants different terms directly.
+[download site](https://db.co-add.org/downloads/) provides r03.02-2020 bulk CSV
+files for single-concentration and dose-response screening, but the archive has
+no licence file and the program site's copyright terms prohibit systematic
+download/storage and reproduction without written permission. The official
+bulk is therefore blocked pending a direct grant; the ChEMBL copy remains
+share-alike regardless of any separate grant for CO-ADD's files.
 
 #### DrugCentral
 
@@ -333,7 +336,7 @@ an upstream licence.
 | RCSB PDB | compound-target structures | API + bulk | CC0 | structural evidence only |
 | AMRFinderPlus | AMR genes/mutations | bulk | public domain | coverage audit/reference |
 | LOTUS | structure-organism-reference occurrences | Wikidata/bulk | CC0 | follow MIBiG; do not infer production |
-| ChEMBL/CO-ADD | assay-attached activity | bulk + API | CC BY-SA 3.0 | sidecar/reference only |
+| ChEMBL/CO-ADD | assay-attached activity | ChEMBL bulk/API; CO-ADD bulk CSV | ChEMBL CC BY-SA 3.0; CO-ADD site restrictions and no archive licence | sidecar/reference only; direct CO-ADD bulk blocked pending written grant |
 | DrugCentral | approval/targets/indications | bulk | CC BY-SA 4.0 | sidecar/reference only |
 | WHO AWaRe | stewardship classification | document/table | CC BY-NC-SA 3.0 IGO | sidecar/reference only |
 | WHO ATC/DDD | therapeutic classification | index/files | terms not verified | verify separately |
