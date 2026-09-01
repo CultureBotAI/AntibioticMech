@@ -7,7 +7,8 @@ def test_reuse_outreach_distinguishes_sent_requests_from_pending_drafts(repo_roo
     text = (repo_root / "research" / "2026-08-31-reuse-terms-outreach.md").read_text()
     assert "BV-BRC-API #204" in text
     assert "hivdb/sierra #40" in text
-    assert text.count("Not sent.") == 2
+    assert "| BacDive | Not sent |" in text
+    assert "| CO-ADD | Not sent |" in text
     assert "no authenticated mail channel" in text
     assert "remain unverified" in text
 
