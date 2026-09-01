@@ -302,8 +302,8 @@ the judgement to a curator.
 ## Producer organisms
 
 `producer_organisms` is the corpus's largest empty axis: 3 records of 2,911 carry
-one, all from the MIBiG import. The signal is sitting in the definitions — 999
-records with none use a phrase that may introduce a producer, and 801 of those
+one, all from the MIBiG import. The signal is sitting in the definitions — 998
+records with none use a phrase that may introduce a producer, and 797 of those
 are followed by a binomial.
 
 **That is a queue, not an extraction.** A taxon in a definition may be the
