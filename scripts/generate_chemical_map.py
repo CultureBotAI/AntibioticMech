@@ -90,7 +90,7 @@ def main(argv: list[str] | None = None) -> int:
             return 0
 
         started = time.perf_counter()
-        artifact = build_artifact(records, REPO_ROOT)
+        artifact = build_artifact(records)
         content = serialize_artifact(artifact)
         elapsed = time.perf_counter() - started
         if args.check:

@@ -12,7 +12,6 @@ import csv
 import hashlib
 import importlib.metadata
 import json
-import subprocess
 import sys
 from collections import defaultdict
 from collections.abc import Iterable
@@ -30,7 +29,7 @@ MODEL_VERSION = (
     "morgan-count-chiral-r2_0.90-r4_0.10+tanimoto"
     "+umap-precomputed-n15-d0.05-c2-rs42"
 )
-ARTIFACT_SCHEMA_VERSION = 1
+ARTIFACT_SCHEMA_VERSION = 2
 
 
 class StructureEmbeddingError(ValueError):
@@ -363,22 +362,23 @@ def display_hash(records: list[StructureRecord]) -> str:
     return _sha256(payload)
 
 
+def corpus_fingerprint(records: list[StructureRecord]) -> str:
+    """Hash the normalized corpus inputs from which the artifact is built.
+
+    Unlike a commit SHA, this fingerprint remains valid after rebases and also
+    describes uncommitted inputs accurately.  Model configuration and runtime
+    dependencies remain the separate concern of ``input_hash`` and
+    ``structure_hash``.
+    """
+
+    return _sha256([asdict(record) for record in records])
+
+
 def _sha256(payload: Any) -> str:
     encoded = json.dumps(
         payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")
     ).encode()
     return hashlib.sha256(encoded).hexdigest()
-
-
-def _corpus_commit(repo_root: Path) -> str:
-    completed = subprocess.run(
-        ["git", "log", "-1", "--format=%H", "--", "data/antibiotics"],
-        cwd=repo_root,
-        check=True,
-        capture_output=True,
-        text=True,
-    )
-    return completed.stdout.strip()
 
 
 def _duplicate_groups(parsed: list[ParsedStructure]) -> list[list[str]]:
@@ -416,7 +416,6 @@ def _stereoisomer_audit(
 
 def build_artifact(
     records: list[StructureRecord],
-    repo_root: Path,
     config: EmbeddingConfig = DEFAULT_CONFIG,
 ) -> dict[str, Any]:
     """Run the complete exact model and return its deterministic artifact."""
@@ -506,7 +505,7 @@ def build_artifact(
     return {
         "schema_version": ARTIFACT_SCHEMA_VERSION,
         "model_version": MODEL_VERSION,
-        "generated_from_commit": _corpus_commit(repo_root),
+        "corpus_fingerprint": corpus_fingerprint(records),
         "input_hash": _sha256(
             {"structure_hash": structure_digest, "display_hash": display_digest}
         ),
@@ -542,6 +541,7 @@ def expected_artifact_metadata(
     return {
         "schema_version": ARTIFACT_SCHEMA_VERSION,
         "model_version": MODEL_VERSION,
+        "corpus_fingerprint": corpus_fingerprint(records),
         "input_hash": _sha256(
             {"structure_hash": structure_digest, "display_hash": display_digest}
         ),
