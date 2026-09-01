@@ -138,9 +138,13 @@ entry — ampicillin carried `pdb:1H8S`, an anti-ampicillin *antibody* complex);
 one whose structure is known and different (polymyxin B2 carried `CHEBI:8309`,
 which is polymyxin B1); and one already listed in `parent_compounds`, which
 means strictly broader and cannot also mean the same. `pdb-ccd` stays — it
-identifies a ligand chemical component. `patent:` and `wikipedia.en` go for the
-same reason as `pdb:`: a patent covers a class of compounds and an article
-covers a topic, so neither names a structure.
+identifies a ligand chemical component. `patent:` and `wikipedia.en` fail the same test — a patent covers a class of
+compounds and an article covers a topic — but are **kept**, because dropping
+them cost more than it fixed: 96% and 97% of those accessions map to exactly one
+structure in this corpus, so removing ~1,800 links would have fixed 57 false
+equivalences and left 7 records with no cross-references at all. Issue #92 asked
+for such identifiers to be *moved* rather than deleted, and the destination is a
+schema decision not yet taken (#136).
 
 **One caveat the field cannot escape.** Some namespaces identify a *drug* rather
 than a molecule — `drugbank:DB00639` legitimately covers butoconazole, its

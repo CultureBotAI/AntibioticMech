@@ -106,20 +106,35 @@ def test_the_gate_is_load_bearing():
     assert normalize_xref("pdb-ccd:AMP") == "pdb-ccd:AMP"
 
 
-def test_a_document_namespace_is_not_a_chemical_xref(records):
-    """A patent covers a CLASS of compounds and a Wikipedia article covers a
-    topic; neither identifies a structure.
+def test_document_namespaces_are_named_even_though_they_are_kept(records):
+    """A patent covers a CLASS and an article covers a topic, so neither
+    identifies a structure — and both are kept anyway.
 
-    `patent:WO2011108759` sat on both ametoctradin and silthiofam — two
-    unrelated fungicides — which is the opposite of what an xref asserts. Same
-    argument that removed `pdb:`, applied to the namespaces where it also holds.
+    Dropping them was tried and reverted, because measuring said the remedy cost
+    more than the defect: 96% of the 700 `wikipedia.en` accessions and 97% of the
+    1,022 `patent` accessions map to exactly ONE structure here, so removing
+    ~1,800 links would have fixed 57 false equivalences and left 7 records with
+    no cross-references at all. #92 asked for such identifiers to be MOVED, and
+    the destination is a schema decision not yet taken (#136).
+
+    So the test asserts the honest state: the namespaces are NAMED, and they are
+    still present. A future PR that moves them should change this test
+    deliberately rather than find it already green.
     """
-    from seed_from_sources import NON_STRUCTURE_XREF_PREFIXES
+    from seed_from_sources import DOCUMENT_XREF_PREFIXES, NON_STRUCTURE_XREF_PREFIXES
 
-    assert {"patent", "wikipedia.en", "pdb"} <= NON_STRUCTURE_XREF_PREFIXES
+    assert {"patent", "wikipedia.en"} == DOCUMENT_XREF_PREFIXES
+    # Named, but NOT dropped — the two sets are deliberately disjoint.
+    assert not (DOCUMENT_XREF_PREFIXES & NON_STRUCTURE_XREF_PREFIXES)
+
+    present = {x.split(":", 1)[0] for _p, r in records for x in (r.get("xrefs") or [])}
+    assert present >= DOCUMENT_XREF_PREFIXES, "they were dropped without updating this test"
+
+    # `pdb:` really is dropped: a macromolecular entry is not a compound at all,
+    # which is a stronger claim than "this identifier is coarse".
+    assert "pdb" in NON_STRUCTURE_XREF_PREFIXES
     offenders = [f"{p.name}: {x}" for p, r in records
-                 for x in (r.get("xrefs") or [])
-                 if x.split(":", 1)[0] in ("patent", "wikipedia.en", "pdb")]
+                 for x in (r.get("xrefs") or []) if x.split(":", 1)[0].lower() == "pdb"]
     assert offenders == [], offenders[:8]
 
 
@@ -127,9 +142,9 @@ def test_drug_granularity_namespaces_are_named_rather_than_pretended_about(recor
     """`xrefs` cannot be read as "one accession, one structure", and saying so is
     better than implying otherwise.
 
-    `drugbank:DB00639` legitimately covers butoconazole, butoconazole nitrate and
-    both enantiomers: DrugBank identifies a DRUG. Those accessions are kept
-    because they are useful, but the exception is declared in the seeder rather
+    `drugbank:DB00639` legitimately covers butoconazole, butoconazole nitrate
+    and both enantiomers: DrugBank identifies a DRUG. Those accessions are kept
+    because they are useful, and the exception is declared in the seeder rather
     than left for a consumer to discover.
     """
     from seed_from_sources import DRUG_GRANULARITY_XREF_PREFIXES
@@ -137,9 +152,8 @@ def test_drug_granularity_namespaces_are_named_rather_than_pretended_about(recor
     # The constant is a DECLARATION, not a code path — the same-structure gate
     # only compares ChEBI ids, so nothing reads it at seed time. That makes it
     # exactly the kind of comment-shaped constant that drifts into fiction, so
-    # it is checked against the corpus: every prefix named here must really
-    # span several structures, or the declaration is claiming a problem that
-    # does not exist.
+    # it is checked against the corpus: every prefix named must really span
+    # several structures, or it is claiming a problem that does not exist.
     spans = collections.defaultdict(set)
     for _p, record in records:
         key = (record.get("chemical_structure") or {}).get("standard_inchi_key")
@@ -148,16 +162,14 @@ def test_drug_granularity_namespaces_are_named_rather_than_pretended_about(recor
         for xref in (record.get("xrefs") or []):
             spans[xref].add(key)
     multi_prefixes = {x.split(":", 1)[0] for x, keys in spans.items() if len(keys) > 1}
-    unfounded = {p for p in DRUG_GRANULARITY_XREF_PREFIXES if p in
-                 {x.split(":", 1)[0] for x in spans} and p not in multi_prefixes}
+    seen = {x.split(":", 1)[0] for x in spans}
+    unfounded = {p for p in DRUG_GRANULARITY_XREF_PREFIXES
+                 if p in seen and p not in multi_prefixes}
     assert unfounded == set(), (
         f"declared as drug-granularity but never spans two structures: {sorted(unfounded)}")
     assert "drugbank" in DRUG_GRANULARITY_XREF_PREFIXES
 
+    # Nothing claiming to be structure-exact may span several structures.
     multi = {x for x, keys in spans.items() if len(keys) > 1}
-    # Every remaining multi-structure accession must be in a namespace we have
-    # declared works at drug granularity, or in one whose semantics we have not
-    # yet settled — never in a namespace claiming to be structure-exact.
-    undeclared = {x for x in multi
-                  if x.split(":", 1)[0] in ("pdb", "patent", "wikipedia.en")}
+    undeclared = {x for x in multi if x.split(":", 1)[0] == "pdb"}
     assert undeclared == set(), sorted(undeclared)[:8]
