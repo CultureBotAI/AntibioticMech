@@ -334,7 +334,7 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
        five compounds — reversing a priority conf/sources.yaml argues for
        explicitly. A default, never an override.
     5. **The ARO fallback**, ANTIBACTERIAL — for a CARD molecule with none of
-       the above. Right for 265 of the 286 records it reaches.
+       the above. Right for 257 of the 278 records it reaches.
 
     Step 3 is a CURATED MAP, not a text rule, and the distinction is the whole
     point: a regex for "fungal" flags ophiobolin A, whose definition reads

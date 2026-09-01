@@ -17,14 +17,14 @@ prose below are the reasoning, the queue is the list.
 
 ## Now
 
-- **Curate the first mechanism graphs.** 0 of 2,923 records carry a
-  `causal_graph`; that number is the point of the repository. Start with the 324
+- **Curate the first mechanism graphs.** 0 of 2,911 records carry a
+  `causal_graph`; that number is the point of the repository. Start with the 319
   records that already have CARD target or resistance evidence to build on —
   `just worklist --queue mechanism` ranks them by how much evidence is waiting.
   No data source will close this column: a mechanism graph is authored from
   primary literature with a citation per edge (see `curation/source_queue.tsv`,
   `discovery-literature`).
-- **Extend `mode_of_action` beyond the 417 records ChEBI's roles reach.** Done
+- **Extend `mode_of_action` beyond the 416 records ChEBI's roles reach.** Done
   for those: 32 curated roles now map to `ModeOfActionEnum`. The rest have no role in the 32-role map — some bear
   mechanism-naming roles from unrelated pharmacology (angiogenesis, proteasome,
   platelet aggregation) that name no antimicrobial mechanism at all, and a few

@@ -122,7 +122,7 @@ be the only place it survived.
 `mode_of_action` is seeded from ChEBI's own mechanism roles. The maps in
 `conf/sources.yaml` translate 32 of them — `protein synthesis inhibitor`,
 `sterol 14α-demethylase inhibitor`, `HIV-1 reverse transcriptase inhibitor` and
-so on — into `ModeOfActionEnum`, and 416 of 2,923 records carry a value.
+so on — into `ModeOfActionEnum`, and 416 of 2,911 records carry a value.
 
 This is a **restatement**, not an inference, and the distinction matters because
 the alternative was tried here and failed. Filing a record on a ChEBI structural
@@ -155,7 +155,7 @@ Five disciplines keep it honest:
   it would make the corpus unable to express a real drug class. But
   `PROTEIN_SYNTHESIS_INHIBITION` alone cannot tell linezolid's bacterial 50S
   from omacetaxine's host 80S, so `mode_of_action_target_scope` says which:
-  `MICROBIAL_TARGET` (177 records) when a contributing role names a target the
+  `MICROBIAL_TARGET` (176 records) when a contributing role names a target the
   host lacks, `HOST_SHARED_TARGET` (240) when none does. Presence is the rule
   and a role's cohort is evidence about presence, not a second rule — reading it
   the other way made trimethoprim host-shared for a host enzyme while terbinafine
@@ -274,6 +274,31 @@ A determinant whose ancestry matches nothing is seeded `UNKNOWN` and lands on
 `just worklist --queue unknown-mech`, ranked by how many records it affects — it
 is not guessed. CARD's own authoritative association lives in `card.json`, which
 this repository does not yet ingest.
+
+## Mixtures and combination products
+
+A record is one chemical structure, so a fixed-dose combination is not a record.
+That was documented and unenforced: a content-bearing InChIKey was taken as proof
+that a source concept denotes one chemical, and
+`trimethoprim-sulfamethoxazole` — whose own definition calls it "an antibiotic
+cocktail" — carried two disconnected drug components and passed every gate.
+
+Twelve are now excluded in `curation/decisions.tsv`, each with the reason: ten
+fixed-dose combinations (the beta-lactam/inhibitor pairs, quinupristin-dalfopristin,
+Kaletra) and two congener mixtures (capreomycin IA/IB, ganefromycin alpha/beta).
+An `EXCLUDE` keeps the source concept and its provenance in `data/raw/` and on
+`just worklist`; only the chemical record goes, and its slug is retired in
+`RETIRED.tsv`.
+
+**No structural rule separates a combination from a salt**, which is why this is
+curated rather than computed. Salts are multi-fragment too and belong in the
+corpus. Two *identical* large fragments are a stoichiometric salt — mupirocin
+calcium is two mupirocins and a calcium — so those are not even candidates. But
+formal charge decides nothing either: clavulanate is drawn as an anion in a
+genuine combination, while tosylate is drawn neutral in a genuine salt, so the
+heuristic misclassifies in both directions. `just worklist --queue
+multi-component` lists what has two or more distinct large fragments and leaves
+the judgement to a curator.
 
 ## The corpus map
 

@@ -48,7 +48,7 @@ honoured, all with every check passing. So: run the gates, and then check the
 "the corpus asserts the right thing".
 
 **3. Figures drift fast, and issues quote figures.**
-The corpus went 2,603 → 2,469 → 2,923 records inside one working session, as a
+The corpus went 2,603 → 2,469 → 2,911 records inside one working session, as a
 trust filter tightened and a scope decision widened. An issue quoting a record
 count, a class breakdown or a coverage percentage may be describing a corpus
 that no longer exists. Re-derive every number before repeating it, and say so
