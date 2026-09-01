@@ -158,7 +158,12 @@ DOCUMENT_XREF_PREFIXES = {"patent", "wikipedia.en"}
 # — drugbank:DB00639 covers butoconazole, butoconazole nitrate and both
 # enantiomers. Kept for their utility, and named so the exception is declared
 # rather than discovered. See #134.
-DRUG_GRANULARITY_XREF_PREFIXES = {"drugbank", "kegg.drug", "drugcentral", "unii"}
+# `unii` was here and is not: the corpus contains ZERO unii xrefs, so declaring
+# a granularity exception for it was speculation dressed as documentation, and
+# the grounding check skipped it silently because a prefix that never appears
+# cannot be shown to span anything. If UNII xrefs arrive and do span structures,
+# the undeclared-namespace assertion catches them then, which is the right time.
+DRUG_GRANULARITY_XREF_PREFIXES = {"drugbank", "kegg.drug", "drugcentral"}
 
 # Namespaces that are SUPPOSED to be structure-exact and, in this corpus, are
 # not. Named because the alternative was a test that could not see them: an
