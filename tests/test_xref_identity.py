@@ -171,6 +171,16 @@ def test_drug_granularity_namespaces_are_named_rather_than_pretended_about(recor
                  if p in seen and p not in multi_prefixes}
     assert unfounded == set(), (
         f"declared as drug-granularity but never spans two structures: {sorted(unfounded)}")
+
+    # And a prefix the corpus does not contain AT ALL cannot be grounded either
+    # way, so declaring one is speculation the check would skip in silence.
+    # `unii` was declared and had zero occurrences. If such a namespace arrives
+    # later and really does span structures, the undeclared assertion below
+    # catches it then — which is the right moment to declare it.
+    absent = {p for p in DRUG_GRANULARITY_XREF_PREFIXES if p not in seen}
+    assert absent == set(), (
+        f"declared as drug-granularity but absent from the corpus, so unverifiable: "
+        f"{sorted(absent)}")
     assert "drugbank" in DRUG_GRANULARITY_XREF_PREFIXES
 
     # Nothing in a namespace we have NOT accounted for may span several
