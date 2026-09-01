@@ -136,7 +136,22 @@ XREF_PREFIX = {
 # complex, so listing them as chemical equivalents of ampicillin and
 # alsterpaullone asserts something no source claims. `pdb-ccd` is different — it
 # identifies a ligand chemical component — and stays.
-NON_STRUCTURE_XREF_PREFIXES = {"pdb", "PDB"}
+NON_STRUCTURE_XREF_PREFIXES = {
+    "pdb", "PDB",        # a macromolecular structure ENTRY (1H8S is an antibody complex)
+    "patent",            # a DOCUMENT. patent:WO2011108759 sits on ametoctradin AND
+                         # silthiofam, two unrelated fungicides — a patent covers a
+                         # class, which is the opposite of "the same structure".
+    "wikipedia.en",      # an ARTICLE about a topic, frequently a drug rather than a
+                         # structure: one article covers a compound and its salts.
+}
+
+# Namespaces that identify a DRUG rather than an exact structure, so one accession
+# legitimately spans a parent compound and its salts and stereoisomers —
+# drugbank:DB00639 covers butoconazole, butoconazole nitrate and both enantiomers.
+# Kept, because they are useful and the corpus has always carried them, but they
+# are the reason `xrefs` cannot be read as "one accession, one structure". See
+# the issue linked from docs/CURATION.md.
+DRUG_GRANULARITY_XREF_PREFIXES = {"drugbank", "kegg.drug", "drugcentral", "unii"}
 CURIE_LOCAL = re.compile(r"^[A-Za-z0-9._-]+$")
 BIOREGISTRY_PREFIX = re.compile(r"^[a-z][a-z0-9._-]*$")
 

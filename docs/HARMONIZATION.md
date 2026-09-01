@@ -287,8 +287,12 @@ Twelve are now excluded in `curation/decisions.tsv`, each with the reason: ten
 fixed-dose combinations (the beta-lactam/inhibitor pairs, quinupristin-dalfopristin,
 Kaletra) and two congener mixtures (capreomycin IA/IB, ganefromycin alpha/beta).
 An `EXCLUDE` keeps the source concept and its provenance in `data/raw/` and on
-`just worklist`; only the chemical record goes, and its slug is retired in
-`RETIRED.tsv`.
+`just worklist --queue excluded`, which lists every exclusion with its reason;
+only the chemical record goes, and its slug is retired in `RETIRED.tsv`. That
+queue exists because the claim was made before it was true: `merge()` returns on
+an EXCLUDE before the concept reaches the skipped list, so the twelve
+disappeared from the backlog entirely — capreomycin, a WHO essential TB drug
+with seven CARD resistance edges, among them.
 
 **No structural rule separates a combination from a salt**, which is why this is
 curated rather than computed. Salts are multi-fragment too and belong in the

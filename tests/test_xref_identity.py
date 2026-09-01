@@ -103,3 +103,51 @@ def test_the_gate_is_load_bearing():
     assert normalize_xref("PDB:1H8S") is None
     # ...while pdb-ccd still does, being a ligand chemical component.
     assert normalize_xref("pdb-ccd:AMP") == "pdb-ccd:AMP"
+
+
+def test_a_document_namespace_is_not_a_chemical_xref(records):
+    """A patent covers a CLASS of compounds and a Wikipedia article covers a
+    topic; neither identifies a structure.
+
+    `patent:WO2011108759` sat on both ametoctradin and silthiofam — two
+    unrelated fungicides — which is the opposite of what an xref asserts. Same
+    argument that removed `pdb:`, applied to the namespaces where it also holds.
+    """
+    from seed_from_sources import NON_STRUCTURE_XREF_PREFIXES
+
+    assert {"patent", "wikipedia.en", "pdb"} <= NON_STRUCTURE_XREF_PREFIXES
+    offenders = [f"{p.name}: {x}" for p, r in records
+                 for x in (r.get("xrefs") or [])
+                 if x.split(":", 1)[0] in ("patent", "wikipedia.en", "pdb")]
+    assert offenders == [], offenders[:8]
+
+
+def test_drug_granularity_namespaces_are_named_rather_than_pretended_about(records):
+    """`xrefs` cannot be read as "one accession, one structure", and saying so is
+    better than implying otherwise.
+
+    `drugbank:DB00639` legitimately covers butoconazole, butoconazole nitrate and
+    both enantiomers: DrugBank identifies a DRUG. Those accessions are kept
+    because they are useful, but the exception is declared in the seeder rather
+    than left for a consumer to discover.
+    """
+    import collections
+
+    from seed_from_sources import DRUG_GRANULARITY_XREF_PREFIXES
+
+    assert "drugbank" in DRUG_GRANULARITY_XREF_PREFIXES
+
+    spanning = collections.defaultdict(set)
+    for _p, record in records:
+        key = (record.get("chemical_structure") or {}).get("standard_inchi_key")
+        if not key:
+            continue
+        for xref in (record.get("xrefs") or []):
+            spanning[xref].add(key)
+    multi = {x for x, keys in spanning.items() if len(keys) > 1}
+    # Every remaining multi-structure accession must be in a namespace we have
+    # declared works at drug granularity, or in one whose semantics we have not
+    # yet settled — never in a namespace claiming to be structure-exact.
+    undeclared = {x for x in multi
+                  if x.split(":", 1)[0] in ("pdb", "patent", "wikipedia.en")}
+    assert undeclared == set(), sorted(undeclared)[:8]

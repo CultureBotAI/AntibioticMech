@@ -37,6 +37,7 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from seed_from_sources import (  # noqa: E402
     CONF_PATH,
+    DECISIONS_PATH,
     RAW_DIR,
     build_concepts,
     curator_owns_mode_of_action,
@@ -435,6 +436,42 @@ def producer_candidate_queue(records: list[dict]) -> list[dict]:
     return rows
 
 
+def excluded_queue() -> list[dict]:
+    """Source concepts a curator excluded, with the reason.
+
+    An EXCLUDE removes the chemical record but not the fact that the concept
+    exists upstream. Twelve combination products and mixtures were excluded in
+    #90, and every one of those decision rows — plus the docs and the commit
+    message, fourteen assertions in all — said the concept "stays on
+    `just worklist`". It did not: `merge()` returns on EXCLUDE before the
+    concept reaches `skipped`, which is the only input `no_structure_queue`
+    reads, so capreomycin — a WHO essential TB drug with 7 CARD resistance
+    edges — left the backlog with no trace outside data/raw/.
+
+    This queue is that claim made true. It reads the decisions file directly, so
+    it cannot drift from what was actually decided, and it carries the rationale
+    so a reader sees WHY rather than only THAT.
+    """
+    if not DECISIONS_PATH.exists():
+        return []
+    with DECISIONS_PATH.open(newline="", encoding="utf-8") as fh:
+        rows = [r for r in csv.DictReader(fh, delimiter="\t")
+                if (r.get("decision") or "").upper() == "EXCLUDE"]
+    out = []
+    for row in rows:
+        rationale = (row.get("rationale") or "").strip()
+        out.append({
+            "queue": "excluded",
+            "key": row.get("minted_identifier", ""),
+            "label": row.get("source_label", ""),
+            "source": row.get("source", ""),
+            "source_id": row.get("source_id", ""),
+            "hint": (rationale[:110] + "…") if len(rationale) > 110 else rationale,
+        })
+    out.sort(key=lambda r: r["label"].lower())
+    return out
+
+
 def unknown_mechanism_queue(records: list[dict]) -> list[dict]:
     """Determinants seeded with mechanism_type UNKNOWN.
 
@@ -505,7 +542,7 @@ def main() -> int:
                         choices=("all", "no-structure", "mechanism", "minted", "unknown-mech",
                                  "moa-scope", "target-evidence", "aro-class",
                                  "xref-unverified", "multi-component",
-                                 "producer-candidate"),
+                                 "producer-candidate", "excluded"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
     parser.add_argument("--tsv", type=Path, help="Write every row (not just --limit) to this TSV.")
@@ -531,6 +568,8 @@ def main() -> int:
         queues["multi-component"] = multi_component_queue(records)
     if args.queue in ("all", "producer-candidate"):
         queues["producer-candidate"] = producer_candidate_queue(records)
+    if args.queue in ("all", "excluded"):
+        queues["excluded"] = excluded_queue()
     if args.queue in ("all", "target-evidence"):
         queues["target-evidence"] = target_evidence_queue(records)
 

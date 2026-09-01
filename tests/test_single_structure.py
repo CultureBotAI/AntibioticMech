@@ -110,3 +110,39 @@ def test_the_detector_would_have_caught_the_record_that_started_this():
     }
     assert [row["label"] for row in multi_component_queue([cocktail])] == \
         ["trimethoprim-sulfamethoxazole"]
+
+
+def test_an_excluded_concept_stays_visible(records):
+    """The claim made twelve times before it was true.
+
+    Every EXCLUDE row, the docs and the commit message all said the concept
+    "stays on `just worklist`". It did not: `merge()` returns on EXCLUDE before
+    the concept reaches `skipped`, the only input `no_structure_queue` reads, so
+    capreomycin — a WHO essential TB drug with seven CARD resistance edges — left
+    the backlog with no trace outside data/raw/.
+
+    Asserting the queue's CONTENTS, not merely that it runs, because an empty
+    queue would satisfy a weaker check while the concepts stayed invisible.
+    """
+    import csv as _csv
+    import sys as _sys
+    from pathlib import Path as _P
+
+    _sys.path.insert(0, str(_P(__file__).resolve().parent.parent / "scripts"))
+    from curation_worklist import excluded_queue
+
+    with (REPO_ROOT / "curation" / "decisions.tsv").open(encoding="utf-8") as fh:
+        decided = {r["source_label"] for r in _csv.DictReader(fh, delimiter="\t")
+                   if (r.get("decision") or "").upper() == "EXCLUDE"}
+    assert decided, "no exclusions; this test guards nothing"
+
+    listed = {row["label"] for row in excluded_queue()}
+    assert listed == decided, sorted(decided ^ listed)
+    assert "capreomycin" in listed
+
+    # And each row carries WHY, not merely THAT.
+    assert all(row["hint"].strip() for row in excluded_queue())
+
+    # The records really are gone from the corpus, so the queue is the only
+    # place they appear — which is exactly why it has to exist.
+    assert not (decided & {r["label"] for _p, r in records})
