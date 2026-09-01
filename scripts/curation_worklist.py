@@ -218,7 +218,7 @@ def aro_class_queue(records: list[dict], conf: dict | None = None) -> list[dict]
     """ARO-fallback records whose own definition names another target group.
 
     A molecule in CARD's antibiotic subtree is there for a bacterial reason, so
-    the fallback files it ANTIBACTERIAL — right for 265 of the 286 records it
+    the fallback files it ANTIBACTERIAL — right for 257 of the 278 records it
     reaches. For the rest CARD's own definition says otherwise, and until this
     queue existed nothing surfaced them: triflumizole sat under ANTIBACTERIAL
     while its ChEBI-grounded twin sat under ANTIFUNGAL, one compound in two
@@ -325,6 +325,47 @@ def xref_unverified_queue(records: list[dict]) -> list[dict]:
                      "same-structure unverified"),
         })
     rows.sort(key=lambda r: (-int(r["hint"].split()[0]), r["label"].lower()))
+# Heavy-atom-ish count for one SMILES fragment. Crude on purpose: it only has to
+# tell a counter-ion from a drug, not compute a formula.
+_HEAVY = re.compile(r"\[[^\]]+\]|Cl|Br|[BCNOPSFIbcnops]")
+
+
+def multi_component_queue(records: list[dict]) -> list[dict]:
+    """Records whose structure has two or more DISTINCT large fragments.
+
+    A record IS one chemical structure, and docs/HARMONIZATION.md excludes
+    mixtures and combination products — but a content-bearing InChIKey was taken
+    as proof that a source concept denotes one chemical, so
+    trimethoprim-sulfamethoxazole, whose own definition calls it "an antibiotic
+    cocktail", passed every gate.
+
+    NO STRUCTURAL RULE SEPARATES THESE CLEANLY, which is why this only surfaces
+    candidates. Salts are multi-fragment too and are legitimate records; two
+    IDENTICAL large fragments are a 2:1 salt (mupirocin calcium), so those are
+    not listed. Formal charge does not decide it either: clavulanate is drawn as
+    an anion in a genuine COMBINATION, while tosylate is drawn neutral in a
+    genuine SALT — the heuristic misclassifies both ways. A curator adjudicates
+    in curation/decisions.tsv, and an EXCLUDE there removes the record so this
+    queue stops listing it.
+    """
+    rows = []
+    for record in records:
+        smiles = (record.get("chemical_structure") or {}).get("smiles") or ""
+        if "." not in smiles:
+            continue
+        large = [f for f in smiles.split(".") if len(_HEAVY.findall(f)) >= 10]
+        distinct = sorted(set(large))
+        if len(distinct) < 2:
+            continue                       # one drug, or a stoichiometric salt
+        rows.append({
+            "queue": "multi-component",
+            "key": record["identifier"],
+            "label": record["label"],
+            "source": "+".join(sorted({c["source"] for c in record.get("source_concepts", [])})),
+            "source_id": record.get("structural_class", ""),
+            "hint": f"{len(distinct)} distinct large fragments; mixture or salt?",
+        })
+    rows.sort(key=lambda r: r["label"].lower())
     return rows
 
 
@@ -397,7 +438,7 @@ def main() -> int:
     parser.add_argument("--queue",
                         choices=("all", "no-structure", "mechanism", "minted", "unknown-mech",
                                  "moa-scope", "target-evidence", "aro-class",
-                                 "xref-unverified"),
+                                 "xref-unverified", "multi-component"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
     parser.add_argument("--tsv", type=Path, help="Write every row (not just --limit) to this TSV.")
@@ -419,10 +460,10 @@ def main() -> int:
         queues["aro-class"] = aro_class_queue(records)
     if args.queue in ("all", "xref-unverified"):
         queues["xref-unverified"] = xref_unverified_queue(records)
+    if args.queue in ("all", "multi-component"):
+        queues["multi-component"] = multi_component_queue(records)
     if args.queue in ("all", "target-evidence"):
         queues["target-evidence"] = target_evidence_queue(records)
-    if args.queue in ("all", "aro-class"):
-        queues["aro-class"] = aro_class_queue(records)
 
     for name, rows in queues.items():
         print(f"\n=== {name}: {len(rows)} item(s) ===")

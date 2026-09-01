@@ -195,10 +195,9 @@ def test_the_fallback_cohort_figure_in_the_comments_is_current(records):
                 and {c.get("source") for c in (r.get("source_concepts") or [])} == {"ARO"}]
     still_antibacterial = [r for r in fallback if r["antimicrobial_class"] == "ANTIBACTERIAL"]
     cohort, right = len(fallback), len(still_antibacterial)
-    # 286, not 276: the original figure counted the ANTIBACTERIAL subset, not the
-    # records the fallback reaches. 21 are decided earlier — by a drug class, an
-    # adjudication or a group term.
-    assert (right, cohort) == (265, 286), (right, cohort)
+    # Not the ANTIBACTERIAL subset: the records the fallback REACHES. The rest
+    # are decided earlier — by a drug class, an adjudication or a group term.
+    assert (right, cohort) == (257, 278), (right, cohort)
 
     sentence = f"{right} of the {cohort}"
     root = _P(__file__).resolve().parent.parent
