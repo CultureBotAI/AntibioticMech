@@ -22,4 +22,16 @@ def test_reuse_audit_keeps_unverified_sources_out_of_adopted_state(repo_root):
     assert by_id["stanford-hivdb"][8] == "CANDIDATE"
     assert by_id["stanford-hivdb"][5] == "UNVERIFIED"
     assert by_id["co-add"][8] == "BLOCKED"
+    assert by_id["co-add"][10] == "https://db.co-add.org/downloads/"
+    assert "archive contains no README or licence" in by_id["co-add"][11]
+    assert "REQUEST DRAFTED, NOT SENT" in by_id["co-add"][11]
     assert by_id["bacdive"][5] == "ATTRIBUTION"
+
+
+def test_coadd_audit_records_distribution_without_implying_reuse_permission(repo_root):
+    audit = (repo_root / "research" / "2026-08-31-reuse-terms-audit.md").read_text()
+    outreach = (repo_root / "research" / "2026-08-31-reuse-terms-outreach.md").read_text()
+    assert "https://db.co-add.org/downloads/" in audit
+    assert "6334cce7f9c9857099d28170f331899fd225a99c14582467fe46b3f299ef8149" in audit
+    assert "Archive inspection found no README, licence, or attribution file" in audit
+    assert "CO-ADD_r03.02-2020_CSV.zip" in outreach

@@ -70,20 +70,23 @@ Not sent. CO-ADD exposes an email address but no official public issue tracker;
 this workspace has no authenticated mail channel. The request remains ready for
 a maintainer.
 
-Subject: Request for a separately licensed CO-ADD antimicrobial screening distribution
+Subject: Reuse terms for CO-ADD r03.02-2020 bulk screening data
 
 We maintain AntibioticMech, a CC BY 4.0 corpus of chemical structures and
 evidence. CO-ADD screening results in ChEMBL are useful but remain under
 ChEMBL's CC BY-SA 3.0 terms, while the CO-ADD website copyright page prohibits
-systematic download and redistribution without permission.
+systematic download and redistribution without permission. We found CO-ADD's
+official public download page and its `CO-ADD_r03.02-2020_CSV.zip` archive,
+which contains inhibition and dose-response CSV files but no licence or
+attribution file.
 
-Does CO-ADD offer an independent machine-readable distribution containing
-compound identity, organism/strain, assay, concentration or MIC, units, medium,
-detection method, result, and citation? If so, may we programmatically obtain,
-filter/normalize/modify, and commercially redistribute derived observation rows
-under CC BY 4.0 or another non-restrictive licence? Please identify the exact
-dataset scope, licence, attribution/citation, version/retrieval requirements,
-and any depositor or third-party restrictions. We are not asking to relicense
+May we programmatically obtain, filter, normalize, join to external identifiers,
+and commercially redistribute derived observation rows from that archive under
+CC BY 4.0 or another non-restrictive licence? Please confirm whether the grant
+covers both `CO-ADD_InhibitionData_r03_01-02-2020_CSV.csv` and
+`CO-ADD_DoseResponseData_r03_01-02-2020_CSV.csv`, and identify the required
+attribution/citation, version or retrieval-date requirements, and any depositor
+or third-party fields excluded from the grant. We are not asking to relicense
 the ChEMBL copy.
 
 ## Stanford HIVDB — `hivdbteam@lists.stanford.edu`

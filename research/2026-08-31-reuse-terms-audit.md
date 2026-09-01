@@ -7,17 +7,18 @@ Issue: #106
 
 No measured activity or antiviral-resistance data were imported. BacDive now
 has a visible CC BY 4.0 site licence compatible with this corpus, but a scoped
-confirmation for API/bulk susceptibility rows is still prudent. CO-ADD's own
-website terms are restrictive and block systematic redistribution. BV-BRC and
-Stanford HIVDB expose useful data and software, but no verified data-reuse grant
-covering the requested rows was found.
+confirmation for API/bulk susceptibility rows is still prudent. CO-ADD exposes
+an official public bulk CSV distribution, but its archive contains no licence
+and the program website's terms block systematic redistribution without prior
+written permission. BV-BRC and Stanford HIVDB expose useful data and software,
+but no verified data-reuse grant covering the requested rows was found.
 
 | Source | Exact data scope | Verified public position | Corpus decision |
 |---|---|---|---|
-| BV-BRC | `genome_amr` / AMR phenotype rows where `evidence` is exactly `Laboratory Method`; exclude computational prediction/classifier rows | Website, privacy policy, docs, and API-code licence do not state data redistribution rights | UNVERIFIED; request drafted; no import |
-| BacDive | Strain-level antibiotic susceptibility fields exposed by pages/API/bulk access | Current BacDive footer links its Copyright & License statement directly to CC BY 4.0 | Compatible with attribution; scope confirmation drafted; no import in #106 |
-| CO-ADD | Independent machine-readable screening results with compound identity, organism/strain, assay, concentration/MIC, units, medium, detection method, and citation | Site material is personal/non-commercial only; systematic download/storage and reproduction require written permission. ChEMBL copy is CC BY-SA 3.0 | BLOCKED absent a separate grant/distribution |
-| Stanford HIVDB | Download/API resistance mutations, drug-susceptibility interpretation/evidence, version and references | No database-data reuse grant found; CMS GPL is not assumed to license database contents | UNVERIFIED; request drafted; no import |
+| BV-BRC | `genome_amr` / AMR phenotype rows where `evidence` is exactly `Laboratory Method`; exclude computational prediction/classifier rows | Website, privacy policy, docs, and API-code licence do not state data redistribution rights | UNVERIFIED; official tracker request open; no import |
+| BacDive | Strain-level antibiotic susceptibility fields exposed by pages/API/bulk access | Current BacDive footer links its Copyright & License statement directly to CC BY 4.0 | Compatible with attribution; official scope-confirmation request open; no import in #106 |
+| CO-ADD | Official r03.02-2020 bulk CSV: inhibition and dose-response rows with compound identity/SMILES, project/library, assay, organism/strain, concentration or response, and units | Public download exists, but the archive has no licence; site material is personal/non-commercial only, and systematic download/storage and reproduction require written permission. ChEMBL copy is CC BY-SA 3.0 | BLOCKED absent a written grant covering the official bulk files and derivatives |
+| Stanford HIVDB | Download/API resistance mutations, drug-susceptibility interpretation/evidence, version and references | No database-data reuse grant found; CMS GPL is not assumed to license database contents | UNVERIFIED; official tracker request open; no import |
 
 ## Evidence inspected
 
@@ -32,6 +33,9 @@ covering the requested rows was found.
 - The official `BV-BRC/BV-BRC-API` repository is MIT-licensed. That licence
   covers API software; it is not evidence that returned third-party or curated
   data may be modified and commercially redistributed.
+- The scoped request is open as
+  [BV-BRC-API #204](https://github.com/BV-BRC/BV-BRC-API/issues/204); no response
+  had been posted when rechecked on 2026-08-31.
 
 ### BacDive
 
@@ -42,6 +46,9 @@ covering the requested rows was found.
 - [BacDive contact form](https://bacdive.dsmz.de/contact) provides explicit
   Content and Web services categories for a scoped confirmation. SHA-256:
   `39bbded9ff40585476a4607eb27de1c2fa3c032b5173c2b7eaa16f5a217557da`.
+- The scoped request is open as
+  [LeibnizDSMZ/bacdive-api #1](https://github.com/LeibnizDSMZ/bacdive-api/issues/1);
+  no response had been posted when rechecked on 2026-08-31.
 
 ### CO-ADD
 
@@ -53,9 +60,23 @@ covering the requested rows was found.
   `8a4a48b73adca5b43c75844a8ea47a836c5bd4bc41ac4da7174863f77d6c3d8a`.
 - The same page directs copyright enquiries to `info@co-add.org`. The public
   contact page supplies that address and a University of Queensland contact.
+- [CO-ADD Downloads](https://db.co-add.org/downloads/) provides an official
+  r03.02-2020 complete CSV archive plus separate single-concentration and
+  dose-response archives. The complete archive was still downloadable on
+  2026-08-31 (HTTP 200, `application/zip`, last modified 2020-02-25) and had
+  SHA-256
+  `6334cce7f9c9857099d28170f331899fd225a99c14582467fe46b3f299ef8149`.
+  It contains exactly two CSV files: 802,919 lines of inhibition data and
+  42,210 lines of dose-response data, including headers. Fields include
+  CO-ADD ID, compound code/name, SMILES, project/library, assay, organism,
+  strain, replicate count, concentration or dose-response value, units, and
+  response. Archive inspection found no README, licence, or attribution file.
+- Availability of a download button is not a redistribution grant. Nothing in
+  the archive overrides the program site's prohibition on systematic download,
+  storage, reproduction, or transmission without written permission.
 - CO-ADD rows distributed through ChEMBL remain under ChEMBL's CC BY-SA 3.0
-  terms; the public CO-ADD pages do not identify a separately licensed bulk
-  dataset.
+  terms. A direct grant for CO-ADD's own r03.02-2020 files would not relicense
+  the ChEMBL copy.
 
 ### Stanford HIVDB
 
@@ -66,6 +87,9 @@ covering the requested rows was found.
   content under GPL-3.0 and names `hivdbteam@lists.stanford.edu` as a support
   contact. GPL licensing of CMS code/content is not treated as a licence to
   redistribute the resistance database.
+- The scoped request is open as
+  [hivdb/sierra #40](https://github.com/hivdb/sierra/issues/40); no response had
+  been posted when rechecked on 2026-08-31.
 
 ## Legal/semantic guardrails
 
@@ -76,10 +100,14 @@ covering the requested rows was found.
 - Source-specific attribution and version/retrieval requirements must remain
   attached to imported observations.
 - BV-BRC predictions must never be mislabeled laboratory measurements.
-- A CO-ADD grant must apply to an independent distribution; it cannot erase
+- A CO-ADD grant must name the official r03.02-2020 bulk files (or a newer
+  independent distribution), permitted transformations, commercial
+  redistribution, attribution, and third-party exclusions. It cannot erase
   ChEMBL's share-alike terms from the ChEMBL copy.
 - HIVDB interpretations or mutation evidence must not be inferred to apply to
   non-HIV viruses.
 
-The ready-to-send requests are archived separately. They are drafts, not proof
-of contact or permission; `curation/source_queue.tsv` records `response: none`.
+The requests and their transmission state are archived separately. BV-BRC,
+BacDive, and Stanford HIVDB requests are open in official GitHub trackers with
+responses pending. The CO-ADD request is still an unsent email draft; none of
+these requests is proof of permission.
