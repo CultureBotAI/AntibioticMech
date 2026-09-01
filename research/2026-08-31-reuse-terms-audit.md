@@ -60,6 +60,12 @@ but no verified data-reuse grant covering the requested rows was found.
   `8a4a48b73adca5b43c75844a8ea47a836c5bd4bc41ac4da7174863f77d6c3d8a`.
 - The same page directs copyright enquiries to `info@co-add.org`. The public
   contact page supplies that address and a University of Queensland contact.
+- The [official CO-ADD contact form](https://co-add.org/?q=content/contact)
+  requires a name, return email address, and Google image reCAPTCHA. Its
+  retrieved HTML had SHA-256
+  `834a80fd00eb816dd63a9ca1005905d03c5cb3ef88a1a96c18c7c2ecd02139ae`.
+  This workspace cannot provide an authenticated sender or complete the human
+  challenge, so the archived request was not submitted through the form.
 - [CO-ADD Downloads](https://db.co-add.org/downloads/) provides an official
   r03.02-2020 complete CSV archive plus separate single-concentration and
   dose-response archives. The complete archive was still downloadable on
@@ -109,5 +115,5 @@ but no verified data-reuse grant covering the requested rows was found.
 
 The requests and their transmission state are archived separately. BV-BRC,
 BacDive, and Stanford HIVDB requests are open in official GitHub trackers with
-responses pending. The CO-ADD request is still an unsent email draft; none of
-these requests is proof of permission.
+responses pending. The CO-ADD request is still an unsent email/form draft; none
+of these requests is proof of permission.
