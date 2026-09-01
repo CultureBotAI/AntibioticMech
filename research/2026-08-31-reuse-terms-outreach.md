@@ -1,15 +1,32 @@
-# Reuse-permission outreach drafts
+# Reuse-permission outreach
 
 Date drafted: 2026-08-31
 Issue: #106
-Status: **NOT SENT — no authenticated mail channel is available in this workspace**
+Status: **PARTIALLY SENT — two official GitHub requests open; two email/form requests pending**
 
 These requests deliberately identify the exact data scope and ask separately
 about access, modification, commercial redistribution, attribution, and
 third-party content. A reply should be archived verbatim with its date and
 sender before any source is marked adopted.
 
+## Request log
+
+| Source | Sent on | Channel | Request | Response |
+| --- | --- | --- | --- | --- |
+| BV-BRC | 2026-08-31 | Official API GitHub tracker | [BV-BRC-API #204](https://github.com/BV-BRC/BV-BRC-API/issues/204) | Pending |
+| Stanford HIVDB | 2026-08-31 | Official Sierra GitHub tracker | [hivdb/sierra #40](https://github.com/hivdb/sierra/issues/40) | Pending |
+| BacDive | Not sent | Official CAPTCHA-protected contact form | Draft below | No authenticated/form-capable channel in this workspace |
+| CO-ADD | Not sent | `info@co-add.org` | Draft below | No authenticated mail channel in this workspace |
+
+The two GitHub requests were posted by the authenticated repository maintainer
+account and link back to AntibioticMech issue #106. Opening a public request does
+not change a source's reuse determination: BV-BRC and HIVDB remain unverified
+until an authorized maintainer answers the precise data-content question.
+
 ## BV-BRC — `help@bv-brc.org`
+
+Sent through the official BV-BRC API issue tracker as
+[BV-BRC-API #204](https://github.com/BV-BRC/BV-BRC-API/issues/204); response pending.
 
 Subject: Reuse terms for laboratory-method BV-BRC AMR phenotype rows
 
@@ -28,6 +45,9 @@ licence or terms URL exists, please provide it.
 
 ## BacDive — official contact form, category Content/Web services
 
+Not sent. The official form requires sender details and an image CAPTCHA, which
+this workspace cannot complete. The request remains ready for a maintainer.
+
 Subject: Confirm CC BY 4.0 scope for BacDive susceptibility API/bulk rows
 
 The current BacDive site footer links its Copyright & License statement to CC
@@ -42,6 +62,10 @@ state the required attribution/citation, database version/retrieval-date
 requirements, and any third-party fields excluded from that licence.
 
 ## CO-ADD — `info@co-add.org`
+
+Not sent. CO-ADD exposes an email address but no official public issue tracker;
+this workspace has no authenticated mail channel. The request remains ready for
+a maintainer.
 
 Subject: Request for a separately licensed CO-ADD antimicrobial screening distribution
 
@@ -60,6 +84,9 @@ and any depositor or third-party restrictions. We are not asking to relicense
 the ChEMBL copy.
 
 ## Stanford HIVDB — `hivdbteam@lists.stanford.edu`
+
+Sent through the official Sierra issue tracker as
+[hivdb/sierra #40](https://github.com/hivdb/sierra/issues/40); response pending.
 
 Subject: Reuse terms for Stanford HIVDB resistance data
 
