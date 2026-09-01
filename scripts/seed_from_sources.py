@@ -136,21 +136,28 @@ XREF_PREFIX = {
 # complex, so listing them as chemical equivalents of ampicillin and
 # alsterpaullone asserts something no source claims. `pdb-ccd` is different — it
 # identifies a ligand chemical component — and stays.
-NON_STRUCTURE_XREF_PREFIXES = {
-    "pdb", "PDB",        # a macromolecular structure ENTRY (1H8S is an antibody complex)
-    "patent",            # a DOCUMENT. patent:WO2011108759 sits on ametoctradin AND
-                         # silthiofam, two unrelated fungicides — a patent covers a
-                         # class, which is the opposite of "the same structure".
-    "wikipedia.en",      # an ARTICLE about a topic, frequently a drug rather than a
-                         # structure: one article covers a compound and its salts.
-}
+NON_STRUCTURE_XREF_PREFIXES = {"pdb", "PDB"}
 
-# Namespaces that identify a DRUG rather than an exact structure, so one accession
-# legitimately spans a parent compound and its salts and stereoisomers —
-# drugbank:DB00639 covers butoconazole, butoconazole nitrate and both enantiomers.
-# Kept, because they are useful and the corpus has always carried them, but they
-# are the reason `xrefs` cannot be read as "one accession, one structure". See
-# the issue linked from docs/CURATION.md.
+# Namespaces whose accessions are DOCUMENTS or ARTICLES rather than structure
+# identifiers — a patent covers a class of compounds, an encyclopedia article
+# covers a topic. By the argument that removed `pdb:`, they do not belong in a
+# field defined as "the same structure", and patent:WO2011108759 really does sit
+# on ametoctradin and silthiofam, two unrelated fungicides.
+#
+# THEY ARE KEPT ANYWAY, for now, because dropping them was the wrong remedy and
+# measuring said so: 96% of the 700 wikipedia.en accessions and 97% of the 1,022
+# patent accessions map to exactly ONE structure in this corpus, so removing
+# 1,800 useful links would have cost 57 false equivalences — and left 7 records
+# with no cross-references at all. Issue #92 asked for such identifiers to be
+# MOVED out of chemical xrefs, not deleted, and the destination is a schema
+# decision this repository has not taken. See #136.
+DOCUMENT_XREF_PREFIXES = {"patent", "wikipedia.en"}
+
+# Namespaces that identify a DRUG rather than an exact structure, so one
+# accession legitimately spans a parent compound and its salts and stereoisomers
+# — drugbank:DB00639 covers butoconazole, butoconazole nitrate and both
+# enantiomers. Kept for their utility, and named so the exception is declared
+# rather than discovered. See #134.
 DRUG_GRANULARITY_XREF_PREFIXES = {"drugbank", "kegg.drug", "drugcentral", "unii"}
 CURIE_LOCAL = re.compile(r"^[A-Za-z0-9._-]+$")
 BIOREGISTRY_PREFIX = re.compile(r"^[a-z][a-z0-9._-]*$")
