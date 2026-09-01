@@ -325,6 +325,9 @@ def xref_unverified_queue(records: list[dict]) -> list[dict]:
                      "same-structure unverified"),
         })
     rows.sort(key=lambda r: (-int(r["hint"].split()[0]), r["label"].lower()))
+    return rows
+
+
 # Heavy-atom-ish count for one SMILES fragment. Crude on purpose: it only has to
 # tell a counter-ion from a drug, not compute a formula.
 _HEAVY = re.compile(r"\[[^\]]+\]|Cl|Br|[BCNOPSFIbcnops]")
