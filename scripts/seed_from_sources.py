@@ -117,6 +117,64 @@ def rollup_by_class(counts: dict[str, int]) -> dict[str, int]:
     return out
 
 
+def class_count_rows(counts: dict[str, int]) -> list[dict[str, str | int]]:
+    """Return parent-first rows with explicit direct and inclusive counts."""
+
+    parents = class_parents()
+    inclusive = rollup_by_class(counts)
+    listed = {name for name, count in counts.items() if count}
+    for name in list(listed):
+        parent = parents.get(name)
+        while parent:
+            listed.add(parent)
+            parent = parents.get(parent)
+
+    children: dict[str, list[str]] = defaultdict(list)
+    for child, parent in parents.items():
+        if child in listed:
+            children[parent].append(child)
+
+    rows: list[dict[str, str | int]] = []
+
+    def visit(name: str) -> None:
+        rows.append(
+            {
+                "antimicrobial_class": name,
+                "parent_class": parents.get(name, ""),
+                "records_direct": counts.get(name, 0),
+                "records_including_subclasses": inclusive.get(name, 0),
+            }
+        )
+        for child in sorted(
+            children.get(name, []),
+            key=lambda value: (-inclusive.get(value, 0), value),
+        ):
+            visit(child)
+
+    roots = [name for name in listed if not parents.get(name)]
+    for root in sorted(roots, key=lambda value: (-inclusive.get(value, 0), value)):
+        visit(root)
+    return rows
+
+
+def format_class_count_rows(counts: dict[str, int]) -> list[str]:
+    """Render hierarchy-aware dry-run rows without relying on indentation."""
+
+    lines = []
+    for row in class_count_rows(counts):
+        relation = (
+            f"; subclass of {row['parent_class']}; included in parent total"
+            if row["parent_class"]
+            else ""
+        )
+        lines.append(
+            f"    {row['antimicrobial_class']:26s} "
+            f"inclusive={row['records_including_subclasses']:>6d} "
+            f"direct={row['records_direct']:>6d}{relation}"
+        )
+    return lines
+
+
 # ARO writes its own cross-reference prefixes; ChEBI's are already bioregistry
 # prefixes and pass through unchanged. Anything not listed and not already
 # lowercase-bioregistry-shaped is dropped rather than guessed — an unregistered
@@ -1928,8 +1986,9 @@ def main() -> int:
         f"ambiguous_or_missing={fda_counts['ambiguous_or_missing']}",
         file=sys.stderr,
     )
-    for name, count in sorted(by_class.items(), key=lambda kv: -kv[1]):
-        print(f"    {name:26s} {count:>6d}", file=sys.stderr)
+    print("  Per-class records (inclusive and directly filed):", file=sys.stderr)
+    for line in format_class_count_rows(dict(by_class)):
+        print(line, file=sys.stderr)
 
     if not args.apply:
         print("\ndry run: nothing written. Use --apply (after `just seed-canary`).", file=sys.stderr)

@@ -24,7 +24,7 @@ CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 sys.path.insert(0, str(REPO_ROOT / "src"))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from seed_from_sources import class_parents, rollup_by_class  # noqa: E402
+from seed_from_sources import class_count_rows, class_parents, rollup_by_class  # noqa: E402
 
 
 def load_corpus() -> list[tuple[Path, dict]]:
@@ -153,6 +153,51 @@ def print_report(stats: dict) -> None:
         print(f"  {field:26s} {count:>6d}   {count / total:6.1%}")
 
 
+def write_class_tsv(stats: dict, path: Path) -> None:
+    """Write hierarchy-aware direct and inclusive class/status counts."""
+
+    status_names = ("SEEDED", "REVIEWED", "DEPRECATED")
+    inclusive_status = {
+        status: rollup_by_class(
+            {
+                name: stats["class_status"][name][status]
+                for name in stats["by_class"]
+            }
+        )
+        for status in status_names
+    }
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.writer(fh, delimiter="\t", lineterminator="\n")
+        header = [
+            "antimicrobial_class",
+            "parent_class",
+            "records_direct",
+            "records_including_subclasses",
+        ]
+        for status in status_names:
+            header.extend(
+                (f"{status.lower()}_direct", f"{status.lower()}_including_subclasses")
+            )
+        writer.writerow(header)
+        for row in class_count_rows(dict(stats["by_class"])):
+            name = str(row["antimicrobial_class"])
+            values: list[str | int] = [
+                name,
+                row["parent_class"],
+                row["records_direct"],
+                row["records_including_subclasses"],
+            ]
+            for status in status_names:
+                values.extend(
+                    (
+                        stats["class_status"][name][status],
+                        inclusive_status[status].get(name, 0),
+                    )
+                )
+            writer.writerow(values)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -167,13 +212,7 @@ def main() -> int:
     print_report(stats)
 
     if args.tsv:
-        args.tsv.parent.mkdir(parents=True, exist_ok=True)
-        with args.tsv.open("w", newline="", encoding="utf-8") as fh:
-            writer = csv.writer(fh, delimiter="\t", lineterminator="\n")
-            writer.writerow(["antimicrobial_class", "records", "seeded", "reviewed", "deprecated"])
-            for name, count in sorted(stats["by_class"].items()):
-                per = stats["class_status"][name]
-                writer.writerow([name, count, per["SEEDED"], per["REVIEWED"], per["DEPRECATED"]])
+        write_class_tsv(stats, args.tsv)
         print(f"\nwrote {args.tsv}")
     return 0
 
