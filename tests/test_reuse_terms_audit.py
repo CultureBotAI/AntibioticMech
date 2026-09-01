@@ -1,12 +1,15 @@
-"""The reuse audit must never imply that an unsent draft granted permission."""
+"""Outreach state must match sent requests without implying permission."""
 
 from __future__ import annotations
 
 
-def test_reuse_outreach_is_explicitly_unsent(repo_root):
+def test_reuse_outreach_distinguishes_sent_requests_from_pending_drafts(repo_root):
     text = (repo_root / "research" / "2026-08-31-reuse-terms-outreach.md").read_text()
-    assert "NOT SENT" in text
+    assert "BV-BRC-API #204" in text
+    assert "hivdb/sierra #40" in text
+    assert text.count("Not sent.") == 2
     assert "no authenticated mail channel" in text
+    assert "remain unverified" in text
 
 
 def test_reuse_audit_keeps_unverified_sources_out_of_adopted_state(repo_root):
