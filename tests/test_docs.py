@@ -233,6 +233,54 @@ def test_the_declared_class_hierarchy_governs_every_count(repo_root):
         assert "already counted in X's own row" in readme
 
 
+def test_seed_and_tsv_class_rows_label_hierarchy_and_count_scope(repo_root, tmp_path):
+    import csv
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from antibiotic_report import load_corpus, summarize, write_class_tsv
+    from seed_from_sources import class_count_rows, format_class_count_rows
+
+    counts = {
+        "ANTIBACTERIAL": 2,
+        "ANTIMYCOBACTERIAL": 1,
+        "ANTIFUNGAL": 3,
+    }
+    rows = class_count_rows(counts)
+    antibacterial = next(
+        row for row in rows if row["antimicrobial_class"] == "ANTIBACTERIAL"
+    )
+    narrower = next(
+        row for row in rows if row["antimicrobial_class"] == "ANTIMYCOBACTERIAL"
+    )
+    assert antibacterial["records_direct"] == 2
+    assert antibacterial["records_including_subclasses"] == 3
+    assert narrower["parent_class"] == "ANTIBACTERIAL"
+    assert rows.index(narrower) == rows.index(antibacterial) + 1
+    rendered = "\n".join(format_class_count_rows(counts))
+    assert "inclusive=     3 direct=     2" in rendered
+    assert "subclass of ANTIBACTERIAL; included in parent total" in rendered
+
+    destination = tmp_path / "classes.tsv"
+    stats = summarize(load_corpus())
+    write_class_tsv(stats, destination)
+    with destination.open(encoding="utf-8", newline="") as stream:
+        tsv_rows = {
+            row["antimicrobial_class"]: row
+            for row in csv.DictReader(stream, delimiter="\t")
+        }
+    parent = tsv_rows["ANTIBACTERIAL"]
+    child = tsv_rows["ANTIMYCOBACTERIAL"]
+    assert parent["parent_class"] == ""
+    assert child["parent_class"] == "ANTIBACTERIAL"
+    assert int(parent["records_direct"]) + int(child["records_direct"]) == int(
+        parent["records_including_subclasses"]
+    )
+    assert int(parent["seeded_direct"]) + int(child["seeded_direct"]) == int(
+        parent["seeded_including_subclasses"]
+    )
+
+
 def test_every_derived_figure_follows_the_count_it_sits_beside(repo_root):
     """Compares each figure against a value derived INDEPENDENTLY from the
     corpus, not against a relation the bug already satisfies.
