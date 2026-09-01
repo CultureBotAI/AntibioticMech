@@ -436,6 +436,15 @@ classes:
         description: Scientific name of the producing organism.
         required: true
         range: string
+      strain:
+        description: >-
+          Strain designation, when the source names one. Kept separate from
+          `taxon_label` because a producer claim is frequently strain-specific —
+          MIBiG records "Streptomyces rochei NBRC 12908", and a consumer asking
+          "which species produce this?" should not have to parse a collection
+          number out of a species name. Absent when the source names only a
+          species.
+        range: string
       biosynthetic_gene_cluster:
         description: MIBiG accession for the BGC, where one is characterized.
         range: string

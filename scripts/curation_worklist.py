@@ -372,6 +372,69 @@ def multi_component_queue(records: list[dict]) -> list[dict]:
     return rows
 
 
+# Phrases that may introduce a producing organism, and what each ACTUALLY
+# claims. The distinction is the point: "produced by" is a biosynthesis claim,
+# while "isolated from" says only where the compound was found — which is often
+# the producer and sometimes not, as when a marine natural product is isolated
+# from a sponge and made by its symbiont. The queue reports which phrase matched
+# so a curator sees the difference rather than inheriting a guess.
+PRODUCER_PHRASES = [
+    ("produced by", r"\bproduced by\b", "biosynthesis stated"),
+    ("metabolite of", r"\bmetabolite (?:from|of)\b", "biosynthesis stated"),
+    ("from the", r"\bfrom the (?:bacterium|fungus|actinomycete|mould|mold)\b",
+     "biosynthesis stated"),
+    ("isolated from", r"\bisolated from\b", "SOURCE only — may not be the producer"),
+    ("obtained from", r"\bobtained from\b", "SOURCE only — may not be the producer"),
+    ("derived from", r"\bderived from\b", "ambiguous — may be chemical derivation"),
+]
+_BINOMIAL = re.compile(r"\b([A-Z][a-z]{3,})\s+([a-z]{3,})\b")
+
+
+def producer_candidate_queue(records: list[dict]) -> list[dict]:
+    """Records whose definition names a possible producing organism.
+
+    `producer_organisms` is the corpus's largest empty axis, and the signal is
+    sitting in the definitions — 999 records with no producer use a phrase that
+    may introduce one, 801 of them followed by a binomial (#94).
+
+    NOT AN EXTRACTION. A taxon in a definition may be the producer, the isolation
+    source, an expression host, a susceptible organism, or a taxon mentioned for
+    some other reason entirely; "derived from" is often chemical derivation, not
+    biology. So this queue carries the matched PHRASE, what that phrase actually
+    claims, and the candidate binomial, and asserts nothing. A curator writes the
+    `ProducerOrganism` with its own citation, which is what the field requires.
+
+    Ranked biosynthesis-stated first: those are the ones a curator can settle
+    from the definition alone.
+    """
+    rows = []
+    for record in records:
+        if record.get("producer_organisms"):
+            continue
+        definition = record.get("definition") or ""
+        for label, pattern, claim in PRODUCER_PHRASES:
+            match = re.search(pattern, definition, re.I)
+            if not match:
+                continue
+            tail = definition[match.end():match.end() + 90]
+            binomial = _BINOMIAL.search(tail)
+            candidate = f"{binomial.group(1)} {binomial.group(2)}" if binomial else "(no binomial)"
+            rows.append({
+                "queue": "producer-candidate",
+                "key": record["identifier"],
+                "label": record["label"],
+                "source": "+".join(sorted({c["source"]
+                                           for c in record.get("source_concepts", [])})),
+                "source_id": candidate,
+                "hint": f'{candidate} — "{label}", {claim}',
+            })
+            break
+    rows.sort(key=lambda r: (0 if "biosynthesis stated" in r["hint"] else
+                             1 if "SOURCE only" in r["hint"] else 2,
+                             r["source_id"] == "(no binomial)", r["label"].lower()))
+    return rows
+
+
 def unknown_mechanism_queue(records: list[dict]) -> list[dict]:
     """Determinants seeded with mechanism_type UNKNOWN.
 
@@ -441,7 +504,8 @@ def main() -> int:
     parser.add_argument("--queue",
                         choices=("all", "no-structure", "mechanism", "minted", "unknown-mech",
                                  "moa-scope", "target-evidence", "aro-class",
-                                 "xref-unverified", "multi-component"),
+                                 "xref-unverified", "multi-component",
+                                 "producer-candidate"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
     parser.add_argument("--tsv", type=Path, help="Write every row (not just --limit) to this TSV.")
@@ -465,6 +529,8 @@ def main() -> int:
         queues["xref-unverified"] = xref_unverified_queue(records)
     if args.queue in ("all", "multi-component"):
         queues["multi-component"] = multi_component_queue(records)
+    if args.queue in ("all", "producer-candidate"):
+        queues["producer-candidate"] = producer_candidate_queue(records)
     if args.queue in ("all", "target-evidence"):
         queues["target-evidence"] = target_evidence_queue(records)
 

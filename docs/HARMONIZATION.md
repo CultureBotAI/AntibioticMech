@@ -299,6 +299,31 @@ genuine combination, while tosylate is drawn neutral in a genuine salt, so the
 heuristic misclassifies in both directions. `just worklist --queue
 multi-component` lists what has two or more distinct large fragments and leaves
 the judgement to a curator.
+## Producer organisms
+
+`producer_organisms` is the corpus's largest empty axis: 3 records of 2,911 carry
+one, all from the MIBiG import. The signal is sitting in the definitions — 999
+records with none use a phrase that may introduce a producer, and 801 of those
+are followed by a binomial.
+
+**That is a queue, not an extraction.** A taxon in a definition may be the
+producer, the isolation source, an expression host, a susceptible organism, or
+mentioned for a reason that is not biological at all — "derived from" is often
+chemical derivation. `just worklist --queue producer-candidate` reports the
+matched phrase, WHAT THAT PHRASE CLAIMS, and the candidate binomial, and asserts
+nothing:
+
+- *produced by*, *metabolite of* — biosynthesis stated, and a curator can often
+  settle these from the definition alone. These sort first.
+- *isolated from*, *obtained from* — **source only**. Frequently the producer and
+  sometimes not: a marine natural product isolated from a sponge may be made by
+  its symbiont.
+- *derived from* — ambiguous, and often chemical rather than biological.
+
+A curator writes the `ProducerOrganism` with its own citation, which is what the
+field requires. `strain` is separate from `taxon_label` because a producer claim
+is frequently strain-specific and a consumer asking "which species produce this?"
+should not have to parse a collection number out of a species name.
 
 ## The corpus map
 
