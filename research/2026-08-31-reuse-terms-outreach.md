@@ -2,7 +2,7 @@
 
 Date drafted: 2026-08-31
 Issue: #106
-Status: **PARTIALLY SENT — two official GitHub requests open; two email/form requests pending**
+Status: **PARTIALLY SENT — three official GitHub requests open; one email request pending**
 
 These requests deliberately identify the exact data scope and ask separately
 about access, modification, commercial redistribution, attribution, and
@@ -15,13 +15,14 @@ sender before any source is marked adopted.
 | --- | --- | --- | --- | --- |
 | BV-BRC | 2026-08-31 | Official API GitHub tracker | [BV-BRC-API #204](https://github.com/BV-BRC/BV-BRC-API/issues/204) | Pending |
 | Stanford HIVDB | 2026-08-31 | Official Sierra GitHub tracker | [hivdb/sierra #40](https://github.com/hivdb/sierra/issues/40) | Pending |
-| BacDive | Not sent | Official CAPTCHA-protected contact form | Draft below | No authenticated/form-capable channel in this workspace |
+| BacDive | 2026-08-31 | Official BacDive API GitHub tracker | [LeibnizDSMZ/bacdive-api #1](https://github.com/LeibnizDSMZ/bacdive-api/issues/1) | Pending |
 | CO-ADD | Not sent | `info@co-add.org` | Draft below | No authenticated mail channel in this workspace |
 
-The two GitHub requests were posted by the authenticated repository maintainer
+The three GitHub requests were posted by the authenticated repository maintainer
 account and link back to AntibioticMech issue #106. Opening a public request does
-not change a source's reuse determination: BV-BRC and HIVDB remain unverified
-until an authorized maintainer answers the precise data-content question.
+not change a source's reuse determination: BV-BRC and HIVDB remain unverified,
+and BacDive remains a candidate, until authorized maintainers answer the precise
+data-content questions.
 
 ## BV-BRC — `help@bv-brc.org`
 
@@ -43,10 +44,12 @@ attribution/citation, version or retrieval-date requirements, and whether any
 fields or contributing sources have different terms. If a machine-readable
 licence or terms URL exists, please provide it.
 
-## BacDive — official contact form, category Content/Web services
+## BacDive — official BacDive API GitHub tracker
 
-Not sent. The official form requires sender details and an image CAPTCHA, which
-this workspace cannot complete. The request remains ready for a maintainer.
+Sent through the official BacDive API issue tracker as
+[LeibnizDSMZ/bacdive-api #1](https://github.com/LeibnizDSMZ/bacdive-api/issues/1);
+response pending. The issue distinguishes the API client's MIT software licence
+from the data-content terms that require confirmation.
 
 Subject: Confirm CC BY 4.0 scope for BacDive susceptibility API/bulk rows
 

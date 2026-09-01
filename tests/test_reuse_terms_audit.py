@@ -3,11 +3,12 @@
 from __future__ import annotations
 
 
-def test_reuse_outreach_distinguishes_sent_requests_from_pending_drafts(repo_root):
+def test_reuse_outreach_distinguishes_sent_requests_from_pending_draft(repo_root):
     text = (repo_root / "research" / "2026-08-31-reuse-terms-outreach.md").read_text()
     assert "BV-BRC-API #204" in text
     assert "hivdb/sierra #40" in text
-    assert "| BacDive | Not sent |" in text
+    assert "LeibnizDSMZ/bacdive-api #1" in text
+    assert "| BacDive | 2026-08-31 | Official BacDive API GitHub tracker |" in text
     assert "| CO-ADD | Not sent |" in text
     assert "no authenticated mail channel" in text
     assert "remain unverified" in text
