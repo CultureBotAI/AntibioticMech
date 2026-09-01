@@ -151,9 +151,9 @@ The canonical generated artifact will be
 
 ```json
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "model_version": "morgan-count-chiral-r2_0.90-r4_0.10+tanimoto+umap-precomputed-n15-d0.05-c2-rs42",
-  "generated_from_commit": "...",
+  "corpus_fingerprint": "...",
   "input_hash": "...",
   "record_count": 2923,
   "versions": {
@@ -200,11 +200,14 @@ If profiling shows fingerprint caching is useful, put a versioned cache under
 an ignored `.cache/chemical-map/` directory and never make correctness depend
 on its presence.
 
-`input_hash` will be SHA-256 over canonical JSON containing the sorted
-identifier, stored SMILES, standard InChI, model configuration, and dependency
-versions. Labels and every non-structure field are excluded. The artifact
-writer will use sorted keys, stable record ordering, compact separators, one
-terminal newline, and fixed float formatting so `--check` can byte-compare.
+`corpus_fingerprint` is SHA-256 over the normalized source records used by the
+artifact. Unlike a commit SHA, it survives rebases and describes uncommitted
+inputs accurately. `input_hash` will be SHA-256 over canonical JSON containing
+the sorted identifier, stored SMILES, standard InChI, model configuration, and
+dependency versions. Labels and every non-structure field are excluded. The
+artifact writer will use sorted keys, stable record ordering, compact
+separators, one terminal newline, and fixed float formatting so `--check` can
+byte-compare.
 
 ## Repository changes
 

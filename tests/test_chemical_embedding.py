@@ -13,6 +13,7 @@ from antibioticmech.chemical_embedding import (
     EmbeddingConfig,
     StructureEmbeddingError,
     StructureRecord,
+    corpus_fingerprint,
     dependency_versions,
     display_hash,
     expected_artifact_metadata,
@@ -151,6 +152,7 @@ def test_nonstructure_metadata_does_not_change_structure_hash():
         [edited], EmbeddingConfig(), versions
     )
     assert display_hash([original]) != display_hash([edited])
+    assert corpus_fingerprint([original]) != corpus_fingerprint([edited])
 
 
 def test_artifact_validation_checks_hashes_coverage_and_quality():
@@ -170,9 +172,11 @@ def test_artifact_validation_checks_hashes_coverage_and_quality():
 
     assert validate_artifact(artifact, records) == []
 
+    artifact["corpus_fingerprint"] = "stale"
     artifact["records"] = []
     artifact["quality"]["neighbor_overlap_at_10"] = 0.1
     assert validate_artifact(artifact, records) == [
+        "corpus_fingerprint is stale",
         "artifact identifiers do not exactly match PATHS.tsv order",
         "neighbor_overlap_at_10 is below 0.45",
     ]
