@@ -9,6 +9,7 @@ identifiers listed in both `xrefs` and `parent_compounds` at once.
 
 from __future__ import annotations
 
+import collections
 import csv
 import sys
 from pathlib import Path
@@ -131,20 +132,29 @@ def test_drug_granularity_namespaces_are_named_rather_than_pretended_about(recor
     because they are useful, but the exception is declared in the seeder rather
     than left for a consumer to discover.
     """
-    import collections
-
     from seed_from_sources import DRUG_GRANULARITY_XREF_PREFIXES
 
-    assert "drugbank" in DRUG_GRANULARITY_XREF_PREFIXES
-
-    spanning = collections.defaultdict(set)
+    # The constant is a DECLARATION, not a code path — the same-structure gate
+    # only compares ChEBI ids, so nothing reads it at seed time. That makes it
+    # exactly the kind of comment-shaped constant that drifts into fiction, so
+    # it is checked against the corpus: every prefix named here must really
+    # span several structures, or the declaration is claiming a problem that
+    # does not exist.
+    spans = collections.defaultdict(set)
     for _p, record in records:
         key = (record.get("chemical_structure") or {}).get("standard_inchi_key")
         if not key:
             continue
         for xref in (record.get("xrefs") or []):
-            spanning[xref].add(key)
-    multi = {x for x, keys in spanning.items() if len(keys) > 1}
+            spans[xref].add(key)
+    multi_prefixes = {x.split(":", 1)[0] for x, keys in spans.items() if len(keys) > 1}
+    unfounded = {p for p in DRUG_GRANULARITY_XREF_PREFIXES if p in
+                 {x.split(":", 1)[0] for x in spans} and p not in multi_prefixes}
+    assert unfounded == set(), (
+        f"declared as drug-granularity but never spans two structures: {sorted(unfounded)}")
+    assert "drugbank" in DRUG_GRANULARITY_XREF_PREFIXES
+
+    multi = {x for x, keys in spans.items() if len(keys) > 1}
     # Every remaining multi-structure accession must be in a namespace we have
     # declared works at drug granularity, or in one whose semantics we have not
     # yet settled — never in a namespace claiming to be structure-exact.
