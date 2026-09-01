@@ -111,8 +111,8 @@ def test_document_namespaces_are_named_even_though_they_are_kept(records):
     identifies a structure — and both are kept anyway.
 
     Dropping them was tried and reverted, because measuring said the remedy cost
-    more than the defect: 96% of the 700 `wikipedia.en` accessions and 97% of the
-    1,022 `patent` accessions map to exactly ONE structure here, so removing
+    more than the defect: 96% of the 709 `wikipedia.en` accessions and 97% of the
+    1,027 `patent` accessions map to exactly ONE structure here, so removing
     ~1,800 links would have fixed 57 false equivalences and left 7 records with
     no cross-references at all. #92 asked for such identifiers to be MOVED, and
     the destination is a schema decision not yet taken (#136).
@@ -147,7 +147,11 @@ def test_drug_granularity_namespaces_are_named_rather_than_pretended_about(recor
     because they are useful, and the exception is declared in the seeder rather
     than left for a consumer to discover.
     """
-    from seed_from_sources import DRUG_GRANULARITY_XREF_PREFIXES
+    from seed_from_sources import (
+        DOCUMENT_XREF_PREFIXES,
+        DRUG_GRANULARITY_XREF_PREFIXES,
+        KNOWN_COARSE_XREF_PREFIXES,
+    )
 
     # The constant is a DECLARATION, not a code path — the same-structure gate
     # only compares ChEBI ids, so nothing reads it at seed time. That makes it
@@ -169,7 +173,21 @@ def test_drug_granularity_namespaces_are_named_rather_than_pretended_about(recor
         f"declared as drug-granularity but never spans two structures: {sorted(unfounded)}")
     assert "drugbank" in DRUG_GRANULARITY_XREF_PREFIXES
 
-    # Nothing claiming to be structure-exact may span several structures.
+    # Nothing in a namespace we have NOT accounted for may span several
+    # structures. The first version of this filtered on ("pdb", "patent",
+    # "wikipedia.en") — exactly the prefixes the test above asserts are absent
+    # or accounted for — so the set was empty by construction and the assertion
+    # could never fail. Replacing it with `pass` left 7 tests passing.
+    #
+    # Blind to 22 real ones: chembl:CHEMBL134561 is asserted to be both cefdinir
+    # and iclaprim, pdb-ccd:CLQ both chloroquine and its (R)-enantiomer.
+    # `pdb-ccd` was kept in #92 precisely because it identifies a chemical
+    # component, so those are the same defect that PR fixed, surviving under a
+    # test that said it could not.
     multi = {x for x, keys in spans.items() if len(keys) > 1}
-    undeclared = {x for x in multi if x.split(":", 1)[0] == "pdb"}
-    assert undeclared == set(), sorted(undeclared)[:8]
+    accounted = (DRUG_GRANULARITY_XREF_PREFIXES | DOCUMENT_XREF_PREFIXES
+                 | KNOWN_COARSE_XREF_PREFIXES)
+    undeclared = {x for x in multi if x.split(":", 1)[0] not in accounted}
+    assert undeclared == set(), (
+        f"{len(undeclared)} accession(s) in namespaces claiming to be "
+        f"structure-exact span several structures: {sorted(undeclared)[:6]}")
