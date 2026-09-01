@@ -2,7 +2,7 @@
 
 Date drafted: 2026-08-31
 Issue: #106
-Status: **PARTIALLY SENT — three official GitHub requests open; one email request pending**
+Status: **PARTIALLY SENT — three official GitHub requests open; one email/form request pending**
 
 These requests deliberately identify the exact data scope and ask separately
 about access, modification, commercial redistribution, attribution, and
@@ -16,7 +16,7 @@ sender before any source is marked adopted.
 | BV-BRC | 2026-08-31 | Official API GitHub tracker | [BV-BRC-API #204](https://github.com/BV-BRC/BV-BRC-API/issues/204) | Pending |
 | Stanford HIVDB | 2026-08-31 | Official Sierra GitHub tracker | [hivdb/sierra #40](https://github.com/hivdb/sierra/issues/40) | Pending |
 | BacDive | 2026-08-31 | Official BacDive API GitHub tracker | [LeibnizDSMZ/bacdive-api #1](https://github.com/LeibnizDSMZ/bacdive-api/issues/1) | Pending |
-| CO-ADD | Not sent | `info@co-add.org` | Draft below | No authenticated mail channel in this workspace |
+| CO-ADD | Not sent | `info@co-add.org` or official CAPTCHA-protected contact form | Draft below | No authenticated mail/form-capable channel in this workspace |
 
 The three GitHub requests were posted by the authenticated repository maintainer
 account and link back to AntibioticMech issue #106. Opening a public request does
@@ -66,9 +66,11 @@ requirements, and any third-party fields excluded from that licence.
 
 ## CO-ADD — `info@co-add.org`
 
-Not sent. CO-ADD exposes an email address but no official public issue tracker;
-this workspace has no authenticated mail channel. The request remains ready for
-a maintainer.
+Not sent. CO-ADD exposes an email address and an official contact form, but no
+public issue tracker. The form requires a real name, return email address, and
+Google image reCAPTCHA; this workspace has neither an authenticated mail sender
+nor a human CAPTCHA-capable form channel. The request remains ready for a
+maintainer.
 
 Subject: Reuse terms for CO-ADD r03.02-2020 bulk screening data
 
