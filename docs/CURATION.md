@@ -140,8 +140,8 @@ which is polymyxin B1); and one already listed in `parent_compounds`, which
 means strictly broader and cannot also mean the same. `pdb-ccd` stays — it
 identifies a ligand chemical component. `patent:` and `wikipedia.en` fail the same test — a patent covers a class of
 compounds and an article covers a topic — but are **kept**, because dropping
-them cost more than it fixed: 96% and 97% of those accessions map to exactly one
-structure in this corpus, so removing ~1,800 links would have fixed 57 false
+them cost more than it fixed: 97% of the 1,027 `patent` accessions and 96% of the 709 `wikipedia.en`
+accessions map to exactly one structure in this corpus, so removing ~1,800 links would have fixed 57 false
 equivalences and left 7 records with no cross-references at all. Issue #92 asked
 for such identifiers to be *moved* rather than deleted, and the destination is a
 schema decision not yet taken (#136).

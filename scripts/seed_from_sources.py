@@ -145,7 +145,7 @@ NON_STRUCTURE_XREF_PREFIXES = {"pdb", "PDB"}
 # on ametoctradin and silthiofam, two unrelated fungicides.
 #
 # THEY ARE KEPT ANYWAY, for now, because dropping them was the wrong remedy and
-# measuring said so: 96% of the 700 wikipedia.en accessions and 97% of the 1,022
+# measuring said so: 96% of the 709 wikipedia.en accessions and 97% of the 1,027
 # patent accessions map to exactly ONE structure in this corpus, so removing
 # 1,800 useful links would have cost 57 false equivalences — and left 7 records
 # with no cross-references at all. Issue #92 asked for such identifiers to be
@@ -159,6 +159,24 @@ DOCUMENT_XREF_PREFIXES = {"patent", "wikipedia.en"}
 # enantiomers. Kept for their utility, and named so the exception is declared
 # rather than discovered. See #134.
 DRUG_GRANULARITY_XREF_PREFIXES = {"drugbank", "kegg.drug", "drugcentral", "unii"}
+
+# Namespaces that are SUPPOSED to be structure-exact and, in this corpus, are
+# not. Named because the alternative was a test that could not see them: an
+# earlier version checked only the namespaces already known to be coarse, so it
+# was empty by construction and passed while 22 accessions contradicted it.
+#
+#   chembl:CHEMBL134561   asserted to be both cefdinir and iclaprim — and see
+#                         #133, where iclaprim's own identity is wrong
+#   pdb-ccd:CLQ           chloroquine and its (R)-enantiomer
+#   pdb-ccd:BRN           diminazene and its diaceturate salt
+#   cas (7), metacyc.compound (5), hmdb (3), knapsack (3)
+#
+# These are NOT a granularity convention like DrugBank's; a CAS number is meant
+# to name one substance. Each is either an upstream error or a salt/parent pair
+# the source treats as one. Listed so the count cannot grow unnoticed, and filed
+# as #137 rather than resolved by silently widening the exception.
+KNOWN_COARSE_XREF_PREFIXES = {"cas", "metacyc.compound", "hmdb", "knapsack",
+                              "pdb-ccd", "chembl"}
 CURIE_LOCAL = re.compile(r"^[A-Za-z0-9._-]+$")
 BIOREGISTRY_PREFIX = re.compile(r"^[a-z][a-z0-9._-]*$")
 

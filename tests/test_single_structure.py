@@ -148,8 +148,18 @@ def test_an_excluded_concept_stays_visible(records):
     assert listed == decided, sorted(decided ^ listed)
     assert "capreomycin" in listed
 
-    # And each row carries WHY, not merely THAT.
-    assert all(row["hint"].strip() for row in excluded_queue())
+    # And each row carries a DISTINGUISHABLE why, not merely a non-empty one.
+    # `assert all(hint.strip())` passed happily while all twelve rows read
+    # identically: every rationale began with the same 110-character shared
+    # justification, and the hint is truncated at 110, so the clause that says
+    # WHICH mixture this is was cut from every row — in the console and in the
+    # TSV. The queue's whole purpose is to carry the reason.
+    hints = [row["hint"] for row in excluded_queue()]
+    assert all(h.strip() for h in hints)
+    kinds = {h.split(".")[0] for h in hints}
+    assert len(kinds) >= 3, (
+        f"all {len(hints)} rows share {len(kinds)} distinct opening clause(s); "
+        "the distinguishing part is being truncated away")
 
     # The records really are gone from the corpus, so the queue is the only
     # place they appear — which is exactly why it has to exist.
