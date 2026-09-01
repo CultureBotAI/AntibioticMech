@@ -436,8 +436,13 @@ def test_no_unregistered_numeric_claim_about_the_corpus(repo_root):
         path = repo_root / "data" / "raw" / f"{name}.tsv"
         if path.exists():
             derivable.add(sum(1 for _ in path.open(encoding="utf-8")) - 1)
-    from curation_worklist import no_structure_queue
+    from curation_worklist import no_structure_queue, producer_candidate_queue
     derivable.add(len(no_structure_queue()))
+    # The producer-candidate queue's size, quoted in docs/HARMONIZATION.md.
+    derivable.add(len(producer_candidate_queue(records)))
+    # ...and the subset whose phrase is followed by a parseable binomial.
+    derivable.add(sum(1 for row in producer_candidate_queue(records)
+                      if "(no binomial)" not in row["hint"]))
 
     unregistered: list[str] = []
     used_exemptions: set[str] = set()
