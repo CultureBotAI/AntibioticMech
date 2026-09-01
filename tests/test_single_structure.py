@@ -53,6 +53,14 @@ def test_every_exclusion_states_a_reason_and_names_a_real_concept():
         assert row.get("rationale", "").strip(), row["minted_identifier"]
         assert row.get("curator", "").strip(), row["minted_identifier"]
         assert row.get("source_id", "").strip(), row["minted_identifier"]
+        # `source_label` too: the excluded queue prints it, and a blank one is a
+        # row a curator cannot act on. The queue tolerates the omission without
+        # crashing, which is exactly why the gate has to catch it here.
+        assert row.get("source_label", "").strip(), row["minted_identifier"]
+        # And the decision must be written as the seeder reads it — merge()
+        # upper-cases before comparing, so a lowercase "exclude" works there,
+        # but a mixed corpus of spellings is a trap for the next reader.
+        assert row["decision"] == "EXCLUDE", (row["minted_identifier"], row["decision"])
 
 
 def test_a_stoichiometric_salt_is_still_a_record(records):
