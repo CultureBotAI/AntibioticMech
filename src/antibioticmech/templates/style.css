@@ -376,9 +376,14 @@ th { background: var(--pastel-a); }
   width: 100%;
 }
 .map-tooltip {
+  /* The tooltip paints its OWN dark background, so its text cannot be keyed to
+     the page's. `color: var(--bg)` gave white-on-dark in light mode and
+     #211e16-on-#17202a in dark mode — a contrast ratio of 1.01:1, which renders
+     as a visible box with no readable text. Both colours are fixed here because
+     both belong to this component, not to the theme. */
   background: rgb(23 32 42 / .94);
   border-radius: .3rem;
-  color: var(--bg);
+  color: #f4f6f8;
   font-size: .75rem;
   max-width: 18rem;
   padding: .35rem .5rem;
