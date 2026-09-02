@@ -58,17 +58,38 @@ def test_no_component_paints_its_own_background_and_borrows_the_theme_for_text()
     assert offenders == [], offenders
 
 
-def test_the_map_tooltip_is_readable_in_both_themes():
-    """The specific pair that broke, checked as a number rather than a rule.
+def _token_block(css: str, header: str) -> dict[str, str]:
+    start = css.index(header)
+    body = css[start + len(header):css.index("}", start)]
+    return dict(re.findall(r"(--[\w-]+)\s*:\s*([^;]+);", body))
+
+
+def test_the_map_tooltip_is_readable_in_every_theme_block():
+    """The specific pair that broke, resolved through the tokens and checked as
+    a NUMBER in each theme block.
 
     4.5:1 is the WCAG AA threshold for body text. The broken pairing scored
-    1.01:1 in dark mode and 16.45:1 in light, so a rule-shaped test that only
-    looked at one theme would have passed.
+    1.01:1 in dark and 16.45:1 in light, so any check that looked at one theme
+    would have passed — which is how it shipped.
+
+    Reading the tokens rather than a literal also means this keeps working after
+    the stylesheet contract required the colours to be tokenised, and it fails
+    if a future theme block gives the tooltip a different surface.
     """
     css = STYLESHEET.read_text(encoding="utf-8")
-    tooltip = next(body for sel, body in _rules(css) if sel == ".map-tooltip")
-    text = re.search(r"color\s*:\s*(#[0-9a-fA-F]{3,8})", tooltip)
-    assert text, "the tooltip's text colour is no longer a literal; re-check both themes"
-    # Its background is an rgb() with alpha over the page; the opaque base is
-    # what the text sits on.
-    assert contrast(text.group(1), "#17202a") >= 4.5, contrast(text.group(1), "#17202a")
+    blocks = [":root {", ':root:not([data-theme="light"]) {', ':root[data-theme="dark"] {']
+    checked = 0
+    for header in blocks:
+        if header not in css:
+            continue
+        tokens = _token_block(css, header)
+        fg, bg = tokens.get("--tooltip-fg"), tokens.get("--tooltip-bg")
+        assert fg and bg, f"{header} does not declare both tooltip tokens"
+        # The surface is rgb() with alpha; its opaque base is what text sits on.
+        rgb = re.search(r"rgb\(\s*(\d+)\s+(\d+)\s+(\d+)", bg)
+        assert rgb, f"{header}: --tooltip-bg is no longer an rgb() literal"
+        base = "#" + "".join(f"{int(g):02x}" for g in rgb.groups())
+        ratio = contrast(fg.strip(), base)
+        assert ratio >= 4.5, f"{header}: tooltip text on its own surface is {ratio:.2f}:1"
+        checked += 1
+    assert checked >= 2, "expected the light block and at least one dark block"

@@ -8,6 +8,12 @@
    not. */
 
 :root {
+  /* Tooltip surface. Identical in both themes ON PURPOSE: the tooltip
+     paints its own dark ground, so its text must not follow the page.
+     Keying it to --bg gave 1.01:1 in dark mode. */
+  --tooltip-bg: rgb(23 32 42 / .94);
+  --tooltip-fg: #f4f6f8;
+
   color-scheme: light dark;
   /* Brand pastel pair: gold (A) + sand (B), ochre accent. --page is the tinted
      page ground; --bg stays the white content surface tables and cards sit on.
@@ -38,6 +44,12 @@
    reader has explicitly chosen light, and by the toggle's data-theme. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+  /* Tooltip surface. Identical in both themes ON PURPOSE: the tooltip
+     paints its own dark ground, so its text must not follow the page.
+     Keying it to --bg gave 1.01:1 in dark mode. */
+  --tooltip-bg: rgb(23 32 42 / .94);
+  --tooltip-fg: #f4f6f8;
+
     --pastel-a: #2a2519;
     --pastel-b: #17150f;
     --page: #17150f;
@@ -56,6 +68,12 @@
   }
 }
 :root[data-theme="dark"] {
+  /* Tooltip surface. Identical in both themes ON PURPOSE: the tooltip
+     paints its own dark ground, so its text must not follow the page.
+     Keying it to --bg gave 1.01:1 in dark mode. */
+  --tooltip-bg: rgb(23 32 42 / .94);
+  --tooltip-fg: #f4f6f8;
+
   --pastel-a: #2a2519;
   --pastel-b: #17150f;
   --page: #17150f;
@@ -381,9 +399,9 @@ th { background: var(--pastel-a); }
      #211e16-on-#17202a in dark mode — a contrast ratio of 1.01:1, which renders
      as a visible box with no readable text. Both colours are fixed here because
      both belong to this component, not to the theme. */
-  background: rgb(23 32 42 / .94);
+  background: var(--tooltip-bg);
   border-radius: .3rem;
-  color: #f4f6f8;
+  color: var(--tooltip-fg);
   font-size: .75rem;
   max-width: 18rem;
   padding: .35rem .5rem;
