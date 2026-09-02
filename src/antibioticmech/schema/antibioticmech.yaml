@@ -49,6 +49,8 @@ prefixes:
   NCBIfam: https://www.ncbi.nlm.nih.gov/genome/annotation_prok/evidence/
   ComplexPortal: https://www.ebi.ac.uk/complexportal/complex/
   UniProtKB: https://www.uniprot.org/uniprotkb/
+  PDB: https://www.rcsb.org/structure/
+  EMDB: https://www.ebi.ac.uk/emdb/entry/
   # Provenance
   PMID: http://www.ncbi.nlm.nih.gov/pubmed/
   DOI: https://doi.org/
@@ -243,6 +245,20 @@ classes:
         multivalued: true
         inlined_as_list: true
         range: ActivityObservation
+
+      structural_observations:
+        description: >-
+          Determined macromolecular structures involving this compound. A PDB
+          entry is a MACROMOLECULAR assembly, not a chemical identity: it says a
+          structure was solved, and says nothing on its own about whether the
+          protein in it is an antimicrobial target. Three such accessions had
+          been sitting in chemical `xrefs`, where they asserted same-structure
+          equivalence with an antibody complex and a human kinase complex.
+          Keep distinct from a `pdb-ccd` xref, which identifies the LIGAND
+          chemical component and is chemical identity metadata (#95).
+        multivalued: true
+        inlined_as_list: true
+        range: StructuralObservation
 
       resistance_mechanisms:
         description: >-
@@ -614,6 +630,121 @@ classes:
         multivalued: true
         inlined_as_list: true
         range: EvidenceItem
+
+  StructuralObservation:
+    description: >-
+      One determined macromolecular structure containing this compound, with
+      what the structure actually shows.
+
+      The central field is `relevance`. A solved complex is not evidence of an
+      antimicrobial target until someone says what the macromolecule IS:
+      PDB:1H8S is an ANTIBODY raised against ampicillin, and PDB:1Q3W is human
+      GSK3-beta with alsterpaullone. Both were carried as chemical `xrefs`,
+      which asserts same-structure equivalence — a claim neither supports.
+      Emitting them here as UNREVIEWED preserves the source assertion without
+      inheriting a mechanistic reading of it.
+    rules:
+      - description: >-
+          A structure presented as a target complex must carry a citation. This
+          is the same rule MolecularTarget follows: a mechanistic assertion
+          needs primary evidence, and an accession is not a citation.
+        preconditions:
+          slot_conditions:
+            relevance:
+              equals_string: TARGET_COMPLEX
+        postconditions:
+          slot_conditions:
+            evidence:
+              value_presence: PRESENT
+      - description: >-
+          A resolution figure is meaningless without the method that produced
+          it, and methods that do not yield one must not appear to.
+        preconditions:
+          slot_conditions:
+            resolution_angstroms:
+              value_presence: PRESENT
+        postconditions:
+          slot_conditions:
+            method:
+              value_presence: PRESENT
+    attributes:
+      structure_id:
+        description: PDB or EMDB accession as a CURIE (PDB:1H8S, EMDB:EMD-1234).
+        required: true
+        range: string
+        pattern: "^(PDB:[0-9][A-Za-z0-9]{3}|EMDB:EMD-[0-9]{4,5})$"
+      relevance:
+        description: What the macromolecule in this structure is, for this compound.
+        required: true
+        range: StructuralRelevanceEnum
+      method:
+        description: Experimental method that produced the structure.
+        range: StructuralMethodEnum
+      resolution_angstroms:
+        description: Reported resolution in angstroms. Absent for NMR and predicted models.
+        range: float
+      biological_assembly:
+        description: Assembly the deposition designates as biological (e.g. "dimer").
+        range: string
+      target_label:
+        description: Macromolecule in the structure, as the deposition names it.
+        range: string
+      target_id:
+        description: >-
+          CURIE for the macromolecule where one is established (UniProtKB, GO,
+          InterPro, ComplexPortal). Left absent rather than guessed.
+        range: curie
+      chains:
+        description: Chain identifiers carrying the target, when the source names them.
+        multivalued: true
+        range: string
+      taxon_id:
+        description: Source organism of the macromolecule.
+        range: string
+        pattern: "^NCBITaxon:[0-9]+$"
+      taxon_label:
+        range: string
+      ligand_component:
+        description: >-
+          PDB chemical component (pdb-ccd) for the bound ligand. Distinct from
+          `structure_id`: the component is chemical identity, the accession is a
+          macromolecular assembly.
+        range: string
+        pattern: "^pdb-ccd:[A-Za-z0-9]{1,5}$"
+      ligand_matches_record:
+        description: >-
+          Whether the bound ligand is this record's exact structure. False for a
+          salt, a fragment, a covalent adduct or a close analogue — a structure
+          of a RELATED compound is still informative and must not be presented
+          as a structure of this one.
+        range: boolean
+      binding_site_residues:
+        description: Residues the source identifies as contacting the ligand.
+        multivalued: true
+        range: string
+      conformational_note:
+        description: Conformational state or condition the deposition reports.
+        range: string
+      evidence_status:
+        description: Whether primary evidence is present or explicitly queued.
+        required: true
+        range: TargetEvidenceStatusEnum
+      evidence:
+        description: >-
+          Primary-source support, typically the structure's own publication as a
+          DOI or PMID.
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
+      source:
+        description: Upstream resource that asserted this compound-structure link.
+        required: true
+        range: string
+      source_version:
+        range: string
+      retrieved_on:
+        description: Date the assertion's snapshot was retrieved.
+        range: date
 
   TargetMeasurement:
     description: A source-reported quantitative compound-target measurement.
@@ -1100,6 +1231,52 @@ enums:
       PRIMARY_EVIDENCE_NEEDED:
         description: Database assertion is retained and queued for a primary citation.
       DATABASE_ASSERTION_ONLY:
+
+  StructuralMethodEnum:
+    permissible_values:
+      X_RAY_DIFFRACTION:
+      ELECTRON_MICROSCOPY:
+        description: Single-particle cryo-EM or cryo-ET.
+      SOLUTION_NMR:
+      SOLID_STATE_NMR:
+      NEUTRON_DIFFRACTION:
+      PREDICTED_MODEL:
+        description: A computed model (AlphaFold and similar), not an experiment.
+      OTHER:
+
+  StructuralRelevanceEnum:
+    description: >-
+      What the macromolecule is, relative to this compound's antimicrobial
+      activity. The distinction the corpus lacked: a solved complex is not a
+      target claim.
+    permissible_values:
+      TARGET_COMPLEX:
+        description: >-
+          The compound bound to a macromolecule that is an antimicrobial target.
+          Requires a citation.
+      APO_TARGET:
+        description: The target without the compound bound.
+      HOST_PROTEIN_COMPLEX:
+        description: >-
+          Bound to a HOST macromolecule — informative for selectivity or
+          off-target effects, and not an antimicrobial target. PDB:1Q3W is
+          alsterpaullone in human GSK3-beta.
+      ANTIBODY_COMPLEX:
+        description: >-
+          Bound by an antibody raised against the compound. PDB:1H8S is an
+          anti-ampicillin Fab, which says nothing about ampicillin's target.
+      CARRIER_OR_TRANSPORT_COMPLEX:
+        description: Bound to a transporter, efflux pump or carrier protein.
+      RESISTANCE_ENZYME_COMPLEX:
+        description: >-
+          Bound to an enzyme that degrades or modifies the compound — a
+          beta-lactamase, say. Mechanistically the opposite of a target.
+      NOT_RELEVANT:
+        description: Reviewed and found to say nothing about this compound's activity.
+      UNREVIEWED:
+        description: >-
+          Carried from a source without a curator establishing what the
+          macromolecule is. The honest default for a migrated xref.
 
   TargetMeasurementTypeEnum:
     permissible_values:

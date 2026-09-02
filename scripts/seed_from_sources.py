@@ -194,6 +194,13 @@ XREF_PREFIX = {
 # complex, so listing them as chemical equivalents of ampicillin and
 # alsterpaullone asserts something no source claims. `pdb-ccd` is different — it
 # identifies a ligand chemical component — and stays.
+#
+# They are no longer DISCARDED, which was the same "moved, not deleted" mistake
+# #136 records for patent and wikipedia.en xrefs. They now go to
+# `structural_observations`, where a PDB accession means what it actually means:
+# a macromolecular structure was solved containing this compound. What the
+# macromolecule IS stays UNREVIEWED until a curator says so, because that is the
+# claim the xref was silently making and could not support (#95).
 NON_STRUCTURE_XREF_PREFIXES = {"pdb", "PDB"}
 
 # Namespaces whose accessions are DOCUMENTS or ARTICLES rather than structure
@@ -646,6 +653,52 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
 # needs no state from a seeder run, so nothing is accumulated here: a module-level
 # list that is written and never read is a decoy pointing at the wrong mechanism
 # (#169).
+
+
+def structural_observations(group: list, source_version: str,
+                            retrieved_on: str) -> list[dict]:
+    """PDB accessions a source attached to this compound, as what they are.
+
+    Migrated rather than dropped, and deliberately NOT classified: `relevance`
+    is UNREVIEWED and `evidence_status` says a primary citation is needed. The
+    method, resolution and publication are not in any committed inventory — they
+    need RCSB, which is a networked fetch this offline step does not make. So the
+    record says a structure exists and says nothing it cannot support.
+    """
+    out: list[dict] = []
+    seen: set[str] = set()
+    for concept in group:
+        for xref in concept.xrefs:
+            namespace, _, accession = xref.partition(":")
+            if namespace.lower() != "pdb" or not accession:
+                continue
+            structure_id = f"PDB:{accession.upper()}"
+            if structure_id in seen:
+                continue
+            seen.add(structure_id)
+            out.append({
+                "structure_id": structure_id,
+                "relevance": "UNREVIEWED",
+                "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+                "source": concept.source,
+                "source_version": source_version,
+                **({"retrieved_on": retrieved_on} if retrieved_on else {}),
+            })
+    return sorted(out, key=lambda item: item["structure_id"])
+
+
+def seeded_structural_view(record: dict) -> set[str]:
+    """The structure accessions the seeder owns, ignoring curated judgement.
+
+    NOT in SEEDED_FIELDS, deliberately. The seeder emits every observation as
+    UNREVIEWED, and a curator establishing that PDB:1H8S is an ANTIBODY_COMPLEX
+    is the entire point of the field — an exact comparison would make the first
+    correct curation look like drift. What must reproduce is WHICH structures are
+    asserted and by whom: an accession cannot be invented by hand, and a seeded
+    one cannot quietly disappear.
+    """
+    return {f"{item.get('structure_id')}|{item.get('source')}"
+            for item in (record.get("structural_observations") or [])}
 
 
 def _cas_numbers(raw: str) -> set[str]:
@@ -1195,6 +1248,9 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     ]
     if not record["xrefs"]:
         record.pop("xrefs")
+    observations = structural_observations(group, source_version, source_version)
+    if observations:
+        record["structural_observations"] = observations
     record["source_concepts"] = [
         {
             "source": c.source,

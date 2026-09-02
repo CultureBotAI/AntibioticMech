@@ -57,6 +57,7 @@ from seed_from_sources import (  # noqa: E402
     read_lockfile,
     record_path,
     seeded_mode_of_action,
+    seeded_structural_view,
 )
 
 # The seeded field list is imported from the seeder so there is one definition
@@ -126,6 +127,9 @@ def main() -> int:
             drifted.append((path, "producer_organisms"))
         if fda_sourced_clinical_view(want) != fda_sourced_clinical_view(actual):
             drifted.append((path, "clinical_status_assertions"))
+        # Which structures are asserted, not what a curator concluded about them.
+        if seeded_structural_view(want) != seeded_structural_view(actual):
+            drifted.append((path, "structural_observations"))
         actual_clinical = actual.get("clinical_status_assertions") or []
         if (
             any(item.get("source") == "DRUGS_AT_FDA" for item in actual_clinical)
