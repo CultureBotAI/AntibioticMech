@@ -12,15 +12,22 @@ reproduced the original defect with 208/208 green. A guard on the shape of a
 declaration cannot survive the declaration being rewritten.
 
 So this resolves each RULE the way a browser does — through the cascade, per
-theme — and checks the number. That is the only formulation the defect cannot
-walk out of.
+theme, per media condition — and checks the number. That is the only formulation
+the defect cannot walk out of.
+
+WHAT A RULE RENDERS ON IS NOT IN ITS SELECTOR. Three things had to stop being
+inferred from selector text before the masthead's 3.11:1 nav became visible: the
+background can be on an ANCESTOR, it can be a GRADIENT with several stops, and
+the theme a rule belongs to can live in its `@media` CONDITION rather than in a
+`:root[...]` prefix an author is free not to write. Conditions are carried here,
+never re-derived from the selector.
 """
 
 from __future__ import annotations
 
-import colorsys  # noqa: F401  (kept for future palette work)
 import re
 from pathlib import Path
+from typing import NamedTuple
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 STYLESHEET = REPO_ROOT / "src" / "antibioticmech" / "templates" / "style.css"
@@ -29,6 +36,27 @@ RENDERED = REPO_ROOT / "pages" / "style.css"
 AA_BODY_TEXT = 4.5
 
 DARK_BLOCKS = (':root:not([data-theme="light"])', ':root[data-theme="dark"]')
+
+
+class Rule(NamedTuple):
+    """A style rule plus the `@media` conditions it is nested inside.
+
+    The conditions are the point. Flattening `@media` and keeping only the
+    selector loses whatever applicability lived in the condition — which is
+    where a theme lives when the author did not also write a `:root[...]`
+    prefix, and where a viewport restriction ALWAYS lives.
+    """
+
+    selector: str
+    body: str
+    media: tuple[str, ...] = ()
+
+
+class Surface(NamedTuple):
+    """A colour text can land on, and the condition under which it does."""
+
+    colour: str
+    when: str = ""
 
 
 def _relative_luminance(colour: str) -> float:
@@ -43,28 +71,19 @@ def contrast(a: str, b: str) -> float:
     return (max(la, lb) + 0.05) / (min(la, lb) + 0.05)
 
 
-def _rules(css: str) -> list[tuple[str, str]]:
-    """Every style rule, with `@media` blocks flattened to top level.
+def _rules(css: str, conditions: tuple[str, ...] = ()) -> list[Rule]:
+    """Every style rule, with its enclosing `@media` conditions attached.
 
     The previous split-on-`}` version merged an at-rule's opener into its first
     nested selector and left the rest looking like top-level rules, so all but
-    the first rule of every `@media` block was invisible to the sweep. Nothing
-    colour-bearing lived there, but a responsive override would have landed in
-    the gap silently.
-
-    Flattening a `prefers-color-scheme: dark` block would DISCARD the one thing
-    that makes its rules dark, so the condition is carried into the selector.
-    Every such rule in this stylesheet already writes the `:root:not(...)`
-    prefix itself, but nothing requires that: a bare `.card { background: … }`
-    inside the media block is legal, and without this it would be read as a
-    light-theme rule and judged against the wrong palette.
+    the first rule of every `@media` block was invisible — including the whole
+    `prefers-color-scheme: dark` token block, which meant the OS-preference
+    theme was never read at all.
     """
     css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
-    out: list[tuple[str, str]] = []
-    depth, start, header = 0, 0, ""
-    i = 0
-    while i < len(css):
-        ch = css[i]
+    out: list[Rule] = []
+    depth, start, header, body_start = 0, 0, "", 0
+    for i, ch in enumerate(css):
         if ch == "{":
             if depth == 0:
                 header = css[start:i].strip()
@@ -75,18 +94,10 @@ def _rules(css: str) -> list[tuple[str, str]]:
             if depth == 0:
                 body = css[body_start:i]
                 if header.startswith("@"):
-                    nested = _rules(body)
-                    if "prefers-color-scheme" in header and "dark" in header:
-                        nested = [
-                            (sel if sel.startswith(DARK_BLOCKS)
-                             else f'{DARK_BLOCKS[0]} {sel}', nested_body)
-                            for sel, nested_body in nested
-                        ]
-                    out.extend(nested)
+                    out.extend(_rules(body, conditions + (header,)))
                 else:
-                    out.append((header, body))
+                    out.append(Rule(header, body, conditions))
                 start = i + 1
-        i += 1
     return out
 
 
@@ -97,16 +108,47 @@ def _compounds(selector: str) -> list[str]:
     return [p for p in COMBINATORS.split(selector.strip()) if p]
 
 
-def _tokens(rules, headers) -> dict[str, str]:
-    """Every declaration from EVERY matching block, in source order.
+def _theme_of(rule: Rule) -> str | None:
+    """The theme a rule is restricted to, or None when it renders in both.
+
+    Checked in the condition FIRST. `@media (prefers-color-scheme: dark) { .card
+    { background: #111 } }` is legal, renders only in dark, and carries no
+    prefix to read. Reading the selector alone classified it light and measured
+    light text against a dark surface — spurious failures, while the real light
+    background went unchecked because the conditional one shadowed it.
+    """
+    for condition in rule.media:
+        if "prefers-color-scheme" in condition:
+            return "dark" if "dark" in condition else "light"
+    return "dark" if rule.selector.startswith(DARK_BLOCKS) else None
+
+
+def _viewport(rule: Rule) -> str:
+    """The viewport conditions a rule is restricted to, '' when unconditional.
+
+    A background behind `@media (max-width: 850px)` is real, but only below
+    850px. Treating it as unconditional both invents failures at widths where it
+    never paints and hides the unconditional background it appears to replace.
+    Both surfaces are checked; this labels which is which.
+    """
+    return " and ".join(c for c in rule.media if "width" in c)
+
+
+def _applies_in(rule: Rule, theme: str) -> bool:
+    restricted = _theme_of(rule)
+    return restricted is None or restricted == theme
+
+
+def _tokens(rules: list[Rule], headers, theme: str) -> dict[str, str]:
+    """Every token from EVERY matching block that renders in `theme`.
 
     `:root` is opened twice in this stylesheet, and reading only the first let a
     later redefinition win the cascade unseen.
     """
     out: dict[str, str] = {}
-    for selector, body in rules:
-        if selector in headers:
-            out.update(dict(re.findall(r"(--[\w-]+)\s*:\s*([^;]+);", body)))
+    for rule in rules:
+        if rule.selector in headers and _applies_in(rule, theme):
+            out.update(dict(re.findall(r"(--[\w-]+)\s*:\s*([^;]+);", rule.body)))
     return out
 
 
@@ -154,6 +196,10 @@ def _declaration(body: str, prop: str) -> str | None:
     return found.group(1) if found else None
 
 
+def _background(rule: Rule, tokens) -> list[str]:
+    return _colour_stops(_declaration(rule.body, "background(?:-color)?"), tokens)
+
+
 def _is_token_block(selector: str) -> bool:
     """A block that only declares tokens — `:root`, or a bare theme block.
 
@@ -164,72 +210,73 @@ def _is_token_block(selector: str) -> bool:
     return len(_compounds(selector)) == 1 and selector.startswith(":root")
 
 
-def _applies_in(selector: str, theme: str) -> bool:
-    """A dark-block-scoped rule renders in dark mode only."""
-    return theme == "dark" or not selector.startswith(DARK_BLOCKS)
-
-
 def _themes():
     rules = _rules(STYLESHEET.read_text(encoding="utf-8"))
-    light = _tokens(rules, {":root"})
-    dark = {**light, **_tokens(rules, set(DARK_BLOCKS))}
+    light = _tokens(rules, {":root"}, "light")
+    dark = {**_tokens(rules, {":root"}, "dark"),
+            **_tokens(rules, set(DARK_BLOCKS), "dark")}
     return rules, {"light": light, "dark": dark}
 
 
-def _ancestor_backgrounds(selector: str, rules, tokens, theme: str) -> list[str]:
-    """The background painted by the nearest ancestor that paints one.
+def _ancestor_surfaces(selector: str, rules, tokens, theme: str) -> list[Surface]:
+    """What the nearest painting ancestor puts behind this text.
 
     `header.site nav a` sets a colour and no background, so it was measured
     against the page — a surface it never renders on. It actually sits on
     `.wrap > header.site`, whose gradient both dark blocks override with a
     literal. That is the pattern this file exists to ban, one layer up.
+
+    Every applicable variant is returned, not just the last: an unconditional
+    background and a narrow-viewport override are both real, at different
+    widths.
     """
-    ancestors = _compounds(selector)[:-1]
-    for ancestor in reversed(ancestors):          # nearest ancestor wins
-        hits: list[tuple[str, list[str]]] = []
-        for other_sel, other_body in rules:
-            parts = _compounds(other_sel)
-            if not parts or parts[-1] != ancestor:
+    for ancestor in reversed(_compounds(selector)[:-1]):   # nearest ancestor wins
+        unconditional: list[Surface] = []
+        themed: list[Surface] = []
+        responsive: list[Surface] = []
+        for rule in rules:
+            parts = _compounds(rule.selector)
+            if not parts or parts[-1] != ancestor or not _applies_in(rule, theme):
                 continue
-            rule_theme = "dark" if other_sel.startswith(DARK_BLOCKS) else "light"
-            if rule_theme == "dark" and theme != "dark":
+            stops = _background(rule, tokens)
+            if not stops:
                 continue
-            stops = _colour_stops(_declaration(other_body, "background(?:-color)?"), tokens)
-            if stops:
-                hits.append((rule_theme, stops))
-        if hits:
-            # A dark-block rule overrides the base rule it restates.
-            dark = [stops for rule_theme, stops in hits if rule_theme == "dark"]
-            if theme == "dark" and dark:
-                return dark[-1]
-            return hits[-1][1]
+            when = _viewport(rule)
+            if when:
+                responsive.extend(Surface(stop, when) for stop in stops)
+            elif _theme_of(rule) == theme:
+                themed = [Surface(stop) for stop in stops]
+            else:
+                unconditional = [Surface(stop) for stop in stops]
+        base = themed or unconditional          # a themed rule overrides the base it restates
+        if base or responsive:
+            return base + responsive
     return []
 
 
-def _backgrounds_for(selector, body, rules, tokens, theme) -> list[str]:
+def _surfaces_for(rule: Rule, rules, tokens, theme: str) -> list[Surface]:
     """Own background, else the base selector's, else an ancestor's, else the page.
 
-    Returns every surface the text can land on, because a gradient is several.
-    `.button-link:hover` sets only `color`; its background comes from
-    `.button-link`. Resolving that to the page background invented a 1.34:1
-    failure that does not exist on screen.
+    Returns every surface the text can land on, because a gradient is several
+    and a responsive override is another. `.button-link:hover` sets only
+    `color`; its background comes from `.button-link`. Resolving that to the
+    page background invented a 1.34:1 failure that does not exist on screen.
     """
-    own = _colour_stops(_declaration(body, "background(?:-color)?"), tokens)
+    own = _background(rule, tokens)
     if own:
-        return own
-    base = re.sub(r"::?[a-z-]+(\([^)]*\))?", "", selector).strip()
-    if base and base != selector:
-        for other_sel, other_body in rules:
-            if other_sel == base:
-                inherited = _colour_stops(
-                    _declaration(other_body, "background(?:-color)?"), tokens)
+        return [Surface(stop) for stop in own]
+    base = re.sub(r"::?[a-z-]+(\([^)]*\))?", "", rule.selector).strip()
+    if base and base != rule.selector:
+        for other in rules:
+            if other.selector == base and _applies_in(other, theme):
+                inherited = _background(other, tokens)
                 if inherited:
-                    return inherited
-    ancestral = _ancestor_backgrounds(selector, rules, tokens, theme)
+                    return [Surface(stop) for stop in inherited]
+    ancestral = _ancestor_surfaces(rule.selector, rules, tokens, theme)
     if ancestral:
         return ancestral
     page = _resolve(tokens.get("--page") or tokens.get("--bg"), tokens)
-    return [page] if page else []
+    return [Surface(page)] if page else []
 
 
 def test_every_rule_renders_readable_text_in_both_themes():
@@ -241,23 +288,25 @@ def test_every_rule_renders_readable_text_in_both_themes():
     """
     rules, themes = _themes()
     failures = []
-    for selector, body in rules:
-        if _is_token_block(selector) or selector.startswith(("@", "body")):
+    for rule in rules:
+        if _is_token_block(rule.selector) or rule.selector.startswith(("@", "body")):
             continue
-        text_decl = _declaration(body, "color")
+        text_decl = _declaration(rule.body, "color")
         if not text_decl:
             continue
         for theme, tokens in themes.items():
-            if not _applies_in(selector, theme):
+            if not _applies_in(rule, theme):
                 continue
             text = _resolve(text_decl, tokens)
             if not text:
                 continue
-            for back in _backgrounds_for(selector, body, rules, tokens, theme):
-                ratio = contrast(text, back)
+            for surface in _surfaces_for(rule, rules, tokens, theme):
+                ratio = contrast(text, surface.colour)
                 if ratio < AA_BODY_TEXT:
+                    where = f" under {surface.when}" if surface.when else ""
                     failures.append(
-                        f"{selector} [{theme}] {text} on {back} = {ratio:.2f}:1")
+                        f"{rule.selector} [{theme}] {text} on "
+                        f"{surface.colour}{where} = {ratio:.2f}:1")
     assert failures == [], failures
 
 
@@ -270,15 +319,14 @@ def test_the_map_tooltip_specifically_survives_a_rewrite():
     that quietly drops the tooltip from the general sweep should still fail here.
     """
     rules, themes = _themes()
-    tooltip = [(s, b) for s, b in rules if s == ".map-tooltip"]
+    tooltip = [r for r in rules if r.selector == ".map-tooltip"]
     assert tooltip, ".map-tooltip is gone; if it was renamed, rename it here too"
-    selector, body = tooltip[0]
     for theme, tokens in themes.items():
-        text = _resolve(_declaration(body, "color"), tokens)
-        backs = _backgrounds_for(selector, body, rules, tokens, theme)
-        assert text and backs, f"{theme}: tooltip colours no longer resolve"
-        for back in backs:
-            ratio = contrast(text, back)
+        text = _resolve(_declaration(tooltip[0].body, "color"), tokens)
+        surfaces = _surfaces_for(tooltip[0], rules, tokens, theme)
+        assert text and surfaces, f"{theme}: tooltip colours no longer resolve"
+        for surface in surfaces:
+            ratio = contrast(text, surface.colour)
             assert ratio >= AA_BODY_TEXT, (
                 f"{theme}: tooltip text is {ratio:.2f}:1 on its own surface")
 
@@ -295,20 +343,42 @@ def test_the_masthead_nav_is_readable_on_its_gradient():
     every position along it.
     """
     rules, themes = _themes()
-    nav = [(s, b) for s, b in rules if s == "header.site nav a"]
+    nav = [r for r in rules if r.selector == "header.site nav a"]
     assert nav, "header.site nav a is gone; if it was renamed, rename it here too"
-    selector, body = nav[0]
     for theme, tokens in themes.items():
-        text = _resolve(_declaration(body, "color"), tokens)
-        stops = _backgrounds_for(selector, body, rules, tokens, theme)
+        text = _resolve(_declaration(nav[0].body, "color"), tokens)
+        surfaces = _surfaces_for(nav[0], rules, tokens, theme)
         assert text, f"{theme}: nav colour no longer resolves"
-        assert len(stops) == 2, (
-            f"{theme}: expected the masthead's two gradient stops, got {stops}. "
+        assert len(surfaces) == 2, (
+            f"{theme}: expected the masthead's two gradient stops, got {surfaces}. "
             "Measuring the nav against the page background is the bug in #156.")
-        for stop in stops:
-            ratio = contrast(text, stop)
+        for surface in surfaces:
+            ratio = contrast(text, surface.colour)
             assert ratio >= AA_BODY_TEXT, (
-                f"{theme}: masthead nav is {ratio:.2f}:1 on gradient stop {stop}")
+                f"{theme}: masthead nav is {ratio:.2f}:1 on gradient stop {surface.colour}")
+
+
+def test_a_media_condition_is_carried_not_inferred_from_the_selector():
+    """A rule's theme and its viewport range live in the condition, not the name.
+
+    Both forms below are legal and render identically to the ones this
+    stylesheet uses; it simply happens to write the prefix. Re-deriving theme
+    from selector text classified the first as light and measured light text on
+    a dark surface, while the light background it appeared to replace went
+    unchecked.
+    """
+    dark_by_condition = _rules(
+        "@media (prefers-color-scheme: dark) { .card { background: #111; } }")
+    assert _theme_of(dark_by_condition[0]) == "dark"
+    assert not _applies_in(dark_by_condition[0], "light")
+
+    narrow = _rules("@media (max-width: 850px) { .card { background: #17150f; } }")
+    assert _viewport(narrow[0]) == "@media (max-width: 850px)"
+    assert _applies_in(narrow[0], "light") and _applies_in(narrow[0], "dark"), (
+        "a viewport query restricts width, not theme")
+
+    plain = _rules(".card { background: #fff; }")
+    assert _theme_of(plain[0]) is None and _viewport(plain[0]) == ""
 
 
 def test_the_rendered_stylesheet_matches_the_template():
