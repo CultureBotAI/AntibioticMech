@@ -1,7 +1,7 @@
 identifier: CHEBI:134107
 label: CHIR-090
 antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An L-threonine derivative obtained by formal condensation of the carboxy
   group of 4-({4-[(morpholin-4-yl)methyl]phenyl}ethynyl)benzoic acid with the amino
@@ -19,6 +19,12 @@ parent_compounds:
 - CHEBI:84189
 activity_roles:
 - CHEBI:33281
+mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
+mode_of_action_notes: 'CURATOR: PMID:21171638 measured slow, tight CHIR-090 inhibition
+  of Yersinia enterocolitica LpxC and determined a 1.79-angstrom inhibitor-enzyme
+  structure. Its hydroxamate chelates the active-site zinc and its tail occupies the
+  hydrophobic tunnel, blocking the first committed step in lipid A biosynthesis.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: C[C@@H](O)[C@H](NC(=O)c1ccc(C#Cc2ccc(CN3CCOCC3)cc2)cc1)C(=O)NO
   standard_inchi: InChI=1S/C24H27N3O5/c1-17(28)22(24(30)26-31)25-23(29)21-10-8-19(9-11-21)3-2-18-4-6-20(7-5-18)16-27-12-14-32-15-13-27/h4-11,17,22,28,31H,12-16H2,1H3,(H,25,29)(H,26,30)/t17-,22+/m1/s1
@@ -28,6 +34,22 @@ chemical_structure:
   charge: 0
   average_mass: 437.496
   monoisotopic_mass: 437.19507
+molecular_targets:
+- target_label: UDP-3-O-acyl-N-acetylglucosamine deacetylase (LpxC)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:630
+  taxon_label: Yersinia enterocolitica
+  experimental_context: A 1.79-angstrom Y. enterocolitica LpxC cocrystal and kinetic
+    analysis showed zinc chelation and two-step slow, tight binding.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2010-12
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:21171638
+    notes: Primary CHIR-090-bound LpxC structural, kinetic, and antibacterial study
+      (DOI:10.1021/bi101622a).
 xrefs:
 - reaxys:18777591
 source_concepts:
@@ -38,6 +60,9 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:21171638
+  notes: Primary CHIR-090 LpxC cocrystal and mechanism study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -51,3 +76,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T23:13:03Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, antibiotic role, and unspecified
+    filing class; added lipid-A-biosynthesis inhibition and the directly bound bacterial
+    LpxC target.
+  llm_assisted: true
