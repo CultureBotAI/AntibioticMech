@@ -444,6 +444,48 @@ def test_a_media_condition_is_evaluated_not_read_off_the_selector():
     assert all(_holds(plain, state) for state in _states([plain]))
 
 
+def test_a_conditional_surface_is_credited_only_where_it_applies():
+    """A `min-width` background must count in the states it covers, and only those.
+
+    Both directions, because either alone is satisfied by a checker that simply
+    DROPS min-width rules. The first is the masking shape — text whose only
+    ancestor surface sits behind the query, so it falls back to the page below
+    the breakpoint and is unreadable there while being fine above it. The second
+    is its inverse, readable on the page and broken on the conditional surface.
+    One fails narrow, one fails wide, from the same breakpoint. A checker that
+    ignored the query would fail the first for the wrong reason and would not
+    fail the second at all.
+
+    The `edge - 1` width is what makes the first land on the boundary rather
+    than at whatever enumerated width happens to sit below it.
+    """
+    css = """
+    :root { --page: #E4DED3; }
+    .masked .text { color: #E4DED3; }
+    .inverse .text2 { color: #1a1d21; }
+    @media (min-width: 900px) {
+      .masked { background: #17150f; }
+      .inverse { background: #17150f; }
+    }
+    """
+    rules = _rules(css)
+    assert 899 in {state.width for state in _states(rules)}, (
+        "the state just inside a boundary is where a conditional surface's "
+        "absence shows; enumerating only the breakpoint itself would miss it")
+
+    def pair(selector, width):
+        tokens, styles = _cascade(rules, State(False, None, width))
+        text = _resolve(styles[selector]["color"], tokens)
+        return contrast(text, _surface(selector, tokens, styles)[0])
+
+    assert pair(".masked .text", 899) < AA_BODY_TEXT, "masked: falls back to the page"
+    assert pair(".masked .text", 900) >= AA_BODY_TEXT, "masked: the surface applies here"
+    assert pair(".inverse .text2", 899) >= AA_BODY_TEXT, "inverse: the page is fine"
+    assert pair(".inverse .text2", 900) < AA_BODY_TEXT, (
+        "inverse: the conditional surface must be consulted where it applies, "
+        "not dropped")
+
+
 def test_the_rendered_stylesheet_matches_the_template():
     """A fix that never reaches pages/ leaves the live site broken while every
     other test passes, because they all read the template."""
