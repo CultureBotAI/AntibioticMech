@@ -1,7 +1,7 @@
 identifier: CHEBI:27641
 label: cycloheximide
 antimicrobial_class: ANTIFUNGAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A dicarboximide that is 4-(2-hydroxyethyl)piperidine-2,6-dione in which
   one of the hydrogens attached to the carbon bearing the hydroxy group is replaced
@@ -55,10 +55,9 @@ activity_roles:
 structural_class: antibiotic without defined classification
 structural_class_id: ARO:3000003
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:25209664 reports high-resolution structures of
+  Saccharomyces cerevisiae 80S ribosomes with cycloheximide and kinetic experiments
+  supporting inhibition of eukaryotic translation elongation.'
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H][C@@]1([C@H](O)CC2CC(=O)NC(=O)C2)C[C@@H](C)C[C@H](C)C1=O'
@@ -104,6 +103,9 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:25209664
+  notes: Primary eukaryotic-ribosome structural mechanism study.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3009291
@@ -146,6 +148,21 @@ molecular_targets:
   - reference: ARO:3000729
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3009188 (cycloheximide); database
       assertion, not a primary citation.
+- target_label: eukaryotic 80S ribosome
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  experimental_context: High-resolution inhibitor-ribosome X-ray structures directly
+    located cycloheximide at an mRNA/tRNA-associated site; kinetic experiments supported
+    its translation-elongation model.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2014-09
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:25209664
+    notes: Primary cycloheximide-80S structural and kinetic study (DOI:10.1038/nature13737).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -167,3 +184,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T22:25:47Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, roles, and filing class; curator-confirmed
+    eukaryotic protein-synthesis inhibition and added a primary-evidence 80S target
+    while preserving the imported CARD target.
+  llm_assisted: true

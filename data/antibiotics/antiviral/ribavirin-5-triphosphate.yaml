@@ -1,7 +1,7 @@
 identifier: CHEBI:45578
 label: ribavirin 5'-triphosphate
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A 1-ribosyltriazole that is ribavirin in which the hydroxy group at the
   5'-position is replaced by a triphosphate group. It is the active metabolite of
@@ -37,11 +37,13 @@ parent_compounds:
 - CHEBI:63594
 activity_roles:
 - CHEBI:22587
-mode_of_action: VIRAL_POLYMERASE_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:170010 (EC 2.7.7.48 (RNA-directed
-  RNA polymerase) inhibitor). ChEBI asserts the role on the compound. The role names
-  a target specific to the microbe or virus — see mode_of_action_target_scope. Not
-  a curator's mechanistic review.
+mode_of_action: MULTIPLE
+mode_of_action_notes: 'CURATOR: the exact triphosphate has more than one experimentally
+  supported viral-enzyme interaction. PMID:15152003 directly structures competitive
+  binding to dengue NS5 2''-O-methyltransferase; PMID:11833782 measures inhibition
+  of HCV NTPase/helicase; and PMID:12606760 tests ribavirin nucleotides against HCV
+  polymerase. The prior polymerase-only seed was therefore too narrow. Published eIF4E
+  results conflict and are kept as an open controversy rather than asserted as a target.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: NC(=O)c1ncn([C@@H]2O[C@H](COP(=O)(O)OP(=O)(O)OP(=O)(O)O)[C@@H](O)[C@H]2O)n1
@@ -52,6 +54,45 @@ chemical_structure:
   charge: 0
   average_mass: 484.144
   monoisotopic_mass: 483.97976
+molecular_targets:
+- target_label: dengue virus NS5 mRNA 2'-O-methyltransferase domain
+  target_type: VIRAL_PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: Enzyme assays showed competitive inhibition with GTP, and
+    a 2.6-angstrom ternary cocrystal directly located ribavirin 5'-triphosphate in
+    the viral NS5 methyltransferase domain.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2004-05
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:15152003
+    notes: Primary enzyme-inhibition and ternary-cocrystal study (DOI:10.1074/jbc.m400460200).
+- target_label: hepatitis C virus NTPase/helicase
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: Biochemical unwinding kinetics measured a reduced helicase
+    turnover number; the inspected report did not establish a compound-bound structure.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: '2001'
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:11833782
+    notes: Primary HCV helicase unwinding-kinetics study.
+- target_label: hepatitis C virus RNA-dependent RNA polymerase
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: In-vitro initiation and elongation assays compared ribavirin
+    triphosphate and ribose-modified analogues against HCV RNA polymerase; no compound-polymerase
+    cocrystal was reported.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2003-03
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:12606760
+    notes: Primary HCV polymerase initiation/elongation and analogue-activation study.
 xrefs:
 - cas:63142-71-2
 - chemspider:108908
@@ -65,6 +106,36 @@ source_concepts:
   role_terms:
   - CHEBI:22587
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:15152003
+  notes: Primary dengue NS5 methyltransferase cocrystal study.
+- reference: PMID:11833782
+  notes: Primary HCV helicase kinetics study.
+- reference: PMID:12606760
+  notes: Primary HCV polymerase and activation study.
+discussions:
+- discussion_id: ribavirin-triphosphate-eif4e-binding-conflict
+  prompt: Does ribavirin 5'-triphosphate bind eIF4E with physiologically relevant
+    affinity and inhibit cap-dependent translation?
+  kind: CONTROVERSY
+  status: OPEN
+  attaches_to:
+  - mode_of_action
+  - molecular_targets
+  rationale: PMID:16131589 reported weak binding and no eIF4E-specific translation
+    inhibition in vitro, whereas PMID:23583375 reported concentration-dependent NMR
+    evidence for a higher-affinity complex. Resolving the assay-dependent discrepancy
+    would determine whether a host target belongs in the curated mechanism.
+  evidence:
+  - reference: PMID:16131589
+    supports: REFUTE
+    explanation: Primary biochemical study arguing against functional cap mimicry
+      in vitro.
+  - reference: PMID:23583375
+    supports: SUPPORT
+    explanation: Primary NMR study reporting concentration-dependent eIF4E binding.
+  posed_by: codex
+  posed_date: '2026-09-02'
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -78,3 +149,11 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T22:26:25Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, and antiviral class; corrected
+    the polymerase-only mechanism to MULTIPLE, added three viral-enzyme targets with
+    primary evidence, and documented the unresolved eIF4E binding controversy without
+    asserting it as fact.
+  llm_assisted: true

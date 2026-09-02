@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:81419</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_81419">resolve</a>  <span class="sep">·</span><a href="../class/antifungal.html">ANTIFUNGAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>An amino cyclitol glycoside that is isolated from Streptomyces kasugaensis and exhibits antibiotic and fungicidal properties.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_0000016">aminoglycoside antibiotic</a><code class="curie">ARO:0000016</code></p>
@@ -105,10 +102,20 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+<h2>Molecular targets</h2>
+<p class="meta">The molecular entity or process this compound acts on. Each target
+carries evidence — this is a mechanistic claim, not a classification.</p>
+<h3>30S ribosomal subunit mRNA channel <span class="pill plain">RIBOSOMAL_SUBUNIT</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">X-ray structures of kasugamycin with the E. coli 70S ribosome and with the 30S subunit directly located two drug-binding sites; paired biochemical experiments tested effects on initiation. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2006-09 (retrieved 2026-09-02).</p>
+<p><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></p><ul class="plain evidence">
+  <li><span class="meta">PMID:16998486</span> <span class="meta">(Primary 3.5-angstrom E. coli 70S cocrystal and biochemical study.)</span></li>
+  <li><span class="meta">PMID:16998488</span> <span class="meta">(Primary 30S structural and translation-initiation study.)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor). ChEBI asserts the role on the compound. The target it names is one the host has too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd></dl>
+<dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— CURATOR: PMID:16998486 and PMID:16998488 independently report kasugamycin-bound ribosome structures and biochemical analyses. The drug occupies the 30S mRNA path near the P/E-site junction, perturbs the mRNA-tRNA codon-anticodon interaction, and inhibits canonical translation initiation.</span></dd></dl>
 
 
 
@@ -153,6 +160,12 @@ type — expand a group to see its determinants.</p>
 
 
 
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:16998486</span> <span class="meta">(Primary ribosome cocrystal study.)</span></li>
+  <li><span class="meta">PMID:16998488</span> <span class="meta">(Primary structural and biochemical mechanism study.)</span></li>
+</ul>
+
 
 <h2>Curation history</h2>
 <ol class="events">
@@ -170,6 +183,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI identity, structure, roles, and filing class; curator-confirmed protein-synthesis inhibition and added the directly bound bacterial 30S mRNA-channel target with two primary studies.</p>
   </li>
 </ol>
 

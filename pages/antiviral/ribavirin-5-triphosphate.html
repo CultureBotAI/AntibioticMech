@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:45578</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_45578">resolve</a>  <span class="sep">·</span><a href="../class/antiviral.html">ANTIVIRAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A 1-ribosyltriazole that is ribavirin in which the hydroxy group at the 5&#39;-position is replaced by a triphosphate group. It is the active metabolite of the antiviral agent ribavirin.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
@@ -85,17 +82,53 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+<h2>Molecular targets</h2>
+<p class="meta">The molecular entity or process this compound acts on. Each target
+carries evidence — this is a mechanistic claim, not a classification.</p>
+<h3>dengue virus NS5 mRNA 2&#39;-O-methyltransferase domain <span class="pill plain">VIRAL_PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">Enzyme assays showed competitive inhibition with GTP, and a 2.6-angstrom ternary cocrystal directly located ribavirin 5&#39;-triphosphate in the viral NS5 methyltransferase domain. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2004-05 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:15152003</span> <span class="meta">(Primary enzyme-inhibition and ternary-cocrystal study (DOI:10.1074/jbc.m400460200).)</span></li>
+</ul>
+
+<h3>hepatitis C virus NTPase/helicase <span class="pill plain">VIRAL_PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">Biochemical unwinding kinetics measured a reduced helicase turnover number; the inspected report did not establish a compound-bound structure. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2001 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:11833782</span> <span class="meta">(Primary HCV helicase unwinding-kinetics study.)</span></li>
+</ul>
+
+<h3>hepatitis C virus RNA-dependent RNA polymerase <span class="pill plain">VIRAL_PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">In-vitro initiation and elongation assays compared ribavirin triphosphate and ribose-modified analogues against HCV RNA polymerase; no compound-polymerase cocrystal was reported. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2003-03 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:12606760</span> <span class="meta">(Primary HCV polymerase initiation/elongation and analogue-activation study.)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>VIRAL_POLYMERASE_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— Assigned from ChEBI role CHEBI:170010 (EC 2.7.7.48 (RNA-directed RNA polymerase) inhibitor). ChEBI asserts the role on the compound. The role names a target specific to the microbe or virus — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd></dl>
+<dt>Mode of action</dt><dd>MULTIPLE <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: the exact triphosphate has more than one experimentally supported viral-enzyme interaction. PMID:15152003 directly structures competitive binding to dengue NS5 2&#39;-O-methyltransferase; PMID:11833782 measures inhibition of HCV NTPase/helicase; and PMID:12606760 tests ribavirin nucleotides against HCV polymerase. The prior polymerase-only seed was therefore too narrow. Published eIF4E results conflict and are kept as an open controversy rather than asserted as a target.</span></dd></dl>
 
 
 
 
 
 
+<h2>Discussions</h2>
+<p class="meta">Open questions, knowledge gaps and curation todos attached to this
+compound.</p>
+<div class="note">
+  <p><span class="pill plain">CONTROVERSY</span>
+  <span class="pill">OPEN</span></p>
+  <p>Does ribavirin 5&#39;-triphosphate bind eIF4E with physiologically relevant affinity and inhibit cap-dependent translation?</p>
+<p class="meta">PMID:16131589 reported weak binding and no eIF4E-specific translation inhibition in vitro, whereas PMID:23583375 reported concentration-dependent NMR evidence for a higher-affinity complex. Resolving the assay-dependent discrepancy would determine whether a host target belongs in the curated mechanism.</p><p class="meta">Attached to: mode_of_action, molecular_targets</p></div>
 
+
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:15152003</span> <span class="meta">(Primary dengue NS5 methyltransferase cocrystal study.)</span></li>
+  <li><span class="meta">PMID:11833782</span> <span class="meta">(Primary HCV helicase kinetics study.)</span></li>
+  <li><span class="meta">PMID:12606760</span> <span class="meta">(Primary HCV polymerase and activation study.)</span></li>
+</ul>
 
 
 <h2>Curation history</h2>
@@ -114,6 +147,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI identity, structure, and antiviral class; corrected the polymerase-only mechanism to MULTIPLE, added three viral-enzyme targets with primary evidence, and documented the unresolved eIF4E binding controversy without asserting it as fact.</p>
   </li>
 </ol>
 

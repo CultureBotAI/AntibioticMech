@@ -1,7 +1,7 @@
 identifier: CHEBI:232062
 label: exophillic acid
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A monosaccharide derivative that is 4-(2,4-dihydroxy-6-nonylbenzoyloxy)-2-hydroxy-6-nonylbenzoic
   acid in which the hydroxy group at position 2 is replaced by a β-D-glucopyranosyloxy
@@ -24,6 +24,13 @@ parent_compounds:
 - CHEBI:63367
 activity_roles:
 - CHEBI:64951
+mode_of_action: MULTIPLE
+mode_of_action_notes: 'CURATOR: exophillic acid has two compound-specific antiviral
+  mechanisms in different systems. PMID:15015729 measured inhibition of HIV-1 integrase
+  strand transfer (IC50 68 micromolar), whereas PMID:35458494 found that it interacts
+  with host NTCP and blocks preS1-mediated attachment and entry of HBV and HDV without
+  affecting intracellular HBV replication. The mixed viral and host targets make a
+  single target-scope value inappropriate.'
 chemical_structure:
   smiles: CCCCCCCCCc1cc(OC(=O)c2c(CCCCCCCCC)cc(O)cc2O[C@@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@H]2O)cc(O)c1C(=O)O
   standard_inchi: InChI=1S/C38H56O12/c1-3-5-7-9-11-13-15-17-24-19-26(40)21-29(49-38-35(44)34(43)33(42)30(23-39)50-38)32(24)37(47)48-27-20-25(31(36(45)46)28(41)22-27)18-16-14-12-10-8-6-4-2/h19-22,30,33-35,38-44H,3-18,23H2,1-2H3,(H,45,46)/t30-,33-,34+,35-,38-/m1/s1
@@ -33,6 +40,32 @@ chemical_structure:
   charge: 0
   average_mass: 704.854
   monoisotopic_mass: 704.37718
+molecular_targets:
+- target_label: HIV-1 integrase strand-transfer activity
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: An in-vitro HIV-1 integrase strand-transfer assay measured
+    an IC50 of 68 micromolar; direct compound binding was not established.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2003-12
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:15015729
+    notes: Primary isolation, structure-elucidation, and HIV-1 integrase assay study.
+- target_label: sodium taurocholate cotransporting polypeptide (NTCP)
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: Primary human hepatocyte infection, preS1 attachment, bile-acid
+    uptake, and compound-NTCP interaction assays implicated this host HBV/HDV receptor;
+    the abstract does not establish a cocrystal.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2022-04
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:35458494
+    notes: Primary HBV/HDV entry and host-receptor mechanism study (DOI:10.3390/v14040764).
 xrefs:
 - cas:676565-22-3
 - knapsack:C00015027
@@ -44,6 +77,11 @@ source_concepts:
   role_terms:
   - CHEBI:64951
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:15015729
+  notes: Primary isolation and HIV-1 integrase assay report.
+- reference: PMID:35458494
+  notes: Primary HBV/HDV entry mechanism study.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -57,3 +95,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T22:31:05Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, and antiviral class; added the
+    distinct HIV-integrase and host-NTCP entry mechanisms, used MULTIPLE for their
+    coexistence, and deliberately omitted a misleading single scope.
+  llm_assisted: true

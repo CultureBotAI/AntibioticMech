@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:82699</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_82699">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A semisynthetic glycopeptide used (as its bisphosphate salt) for the treatment of acute bacterial skin and skin structure infections caused or suspected to be caused by susceptible isolates of designated Gram-positive microorganisms including MRSA.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000081">glycopeptide antibiotic</a><code class="curie">ARO:3000081</code></p>
@@ -112,6 +109,16 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta">ARO:3000726</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000189 (oritavancin); database assertion, not a primary citation.)</span></li>
 </ul>
 
+<h3>peptidoglycan D-Ala-D-Ala termini and pentaglycyl bridges <span class="pill plain">CELL_WALL_COMPONENT</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">Solid-state NMR on selectively labeled intact cells established cell-wall binding and compared transglycosylation and transpeptidation inhibition. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2008-01 (retrieved 2026-09-02).</p>
+<p><em>Staphylococcus aureus</em> <code class="curie">NCBITaxon:1280</code></p><ul class="plain evidence">
+  <li><span class="meta">PMID:18258256</span> <span class="meta">(Primary intact-cell solid-state NMR mechanism study (DOI:10.1016/j.jmb.2008.01.031).)</span></li>
+</ul>
+
+
+<h2>Mechanism summary</h2>
+<dl class="fields">
+<dt>Mode of action</dt><dd>CELL_WALL_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: whole-cell solid-state NMR in PMID:18258256 showed that oritavancin binds Staphylococcus aureus peptidoglycan through the D-Ala-D-Ala stem terminus and pentaglycyl bridge. The same study measured inhibition of both transglycosylation and transpeptidation, supporting a dual cell-wall-biosynthesis mechanism.</span></dd></dl>
 
 
 
@@ -120,6 +127,10 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:18258256</span> <span class="meta">(Primary compound-specific dual cell-wall mechanism study.)</span></li>
+</ul>
 
 
 <h2>Curation history</h2>
@@ -143,6 +154,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI identity, structure, antibacterial class, and roles; added the dual cell-wall-synthesis mechanism and primary NMR support beside the two preserved CARD cell-wall assertions.</p>
   </li>
 </ol>
 

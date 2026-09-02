@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:27641</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_27641">resolve</a>  <span class="sep">·</span><a href="../class/antifungal.html">ANTIFUNGAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A dicarboximide that is 4-(2-hydroxyethyl)piperidine-2,6-dione in which one of the hydrogens attached to the carbon bearing the hydroxy group is replaced by a 3,5-dimethyl-2-oxocyclohexyl group. It is an antibiotic produced by the bacterium Streptomyces griseus.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000003">antibiotic without defined classification</a><code class="curie">ARO:3000003</code></p>
@@ -116,10 +113,16 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta">ARO:3000729</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3009188 (cycloheximide); database assertion, not a primary citation.)</span></li>
 </ul>
 
+<h3>eukaryotic 80S ribosome <span class="pill plain">PROTEIN_COMPLEX</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">High-resolution inhibitor-ribosome X-ray structures directly located cycloheximide at an mRNA/tRNA-associated site; kinetic experiments supported its translation-elongation model. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2014-09 (retrieved 2026-09-02).</p>
+<p><em>Saccharomyces cerevisiae</em> <code class="curie">NCBITaxon:4932</code></p><ul class="plain evidence">
+  <li><span class="meta">PMID:25209664</span> <span class="meta">(Primary cycloheximide-80S structural and kinetic study (DOI:10.1038/nature13737).)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor). ChEBI asserts the role on the compound. The target it names is one the host has too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd></dl>
+<dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— CURATOR: PMID:25209664 reports high-resolution structures of Saccharomyces cerevisiae 80S ribosomes with cycloheximide and kinetic experiments supporting inhibition of eukaryotic translation elongation.</span></dd></dl>
 
 
 
@@ -171,6 +174,11 @@ type — expand a group to see its determinants.</p>
 
 
 
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:25209664</span> <span class="meta">(Primary eukaryotic-ribosome structural mechanism study.)</span></li>
+</ul>
+
 
 <h2>Curation history</h2>
 <ol class="events">
@@ -198,6 +206,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-09-02 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI identity, structure, roles, and filing class; curator-confirmed eukaryotic protein-synthesis inhibition and added a primary-evidence 80S target while preserving the imported CARD target.</p>
   </li>
 </ol>
 

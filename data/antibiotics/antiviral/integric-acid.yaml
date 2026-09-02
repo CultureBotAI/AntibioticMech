@@ -1,7 +1,7 @@
 identifier: CHEBI:66081
 label: integric acid
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An eremophilane sesquiterpenoid with anti-HIV-1 activity. It is isolated
   from Xylaria sp. MF6254.
@@ -21,10 +21,10 @@ parent_compounds:
 activity_roles:
 - CHEBI:67268
 mode_of_action: VIRAL_INTEGRASE_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:67268 (HIV-1 integrase inhibitor).
-  ChEBI asserts the role on the compound. The role names a target specific to the
-  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
-  review.
+mode_of_action_notes: 'CURATOR: PMID:10335400 identified integric acid in biochemical
+  screens of HIV-1 integrase 3''-processing, strand-transfer, disintegration, stable-complex,
+  and pre-integration-complex reactions. PMID:10698443 confirmed integrase inhibition
+  and reported separate structure-activity requirements for strand transfer and 3''-processing.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: C=C(C=O)[C@@H]1C[C@@]2(C)C(=CC1=O)[C@H](OC(=O)/C(C)=C/[C@@H](C)CCCC)CC[C@@H]2C(=O)O
@@ -35,6 +35,22 @@ chemical_structure:
   charge: 0
   average_mass: 430.541
   monoisotopic_mass: 430.23554
+molecular_targets:
+- target_label: HIV-1 integrase catalytic activities
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: Biochemical assays tested full-length and catalytic-core integrase,
+    stable complexes, and pre-integration complexes; compound-bound structure or direct
+    binding was not reported in the inspected abstracts.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1999-03; 2000-02
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:10335400
+    notes: Primary discovery and multi-assay integrase-inhibition study.
+  - reference: PMID:10698443
+    notes: Primary integric-acid analogue and integrase structure-activity study.
 xrefs:
 - reaxys:19897595
 source_concepts:
@@ -45,6 +61,11 @@ source_concepts:
   role_terms:
   - CHEBI:67268
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:10335400
+  notes: Primary HIV-1 integrase inhibitor discovery study.
+- reference: PMID:10698443
+  notes: Primary integric-acid structure-activity study.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -58,3 +79,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T22:31:12Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, and antiviral class; curator-confirmed
+    HIV-1 integrase inhibition and added the measured viral target with two primary
+    biochemical studies.
+  llm_assisted: true
