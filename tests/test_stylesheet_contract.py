@@ -24,7 +24,11 @@ RULE_SELECTOR = re.compile(r"(?m)^([^\s@/}][^{]*)\{")
 VAR_WITH_FALLBACK = re.compile(r"var\(\s*(--[\w-]+)\s*,\s*([^)]+)\)")
 COLOUR_LITERAL = re.compile(
     r"(?m)^\s*(?:color|background|background-color)\s*:\s*"
-    r"(#[0-9a-fA-F]{3,8}|white|black)\s*;"
+    # rgb()/hsl() too. Matching only hex is how `.map-tooltip` kept a literal
+    # `background: rgb(23 32 42 / .94)` beside a tokenised `color: var(--bg)` —
+    # the exact 1.01:1 pairing this test's docstring describes, surviving the
+    # test that describes it.
+    r"(#[0-9a-fA-F]{3,8}|white|black|rgba?\([^;]*\)|hsla?\([^;]*\))\s*;"
 )
 
 
