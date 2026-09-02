@@ -86,12 +86,17 @@ def main(argv: list[str] | None = None, *, environ: dict[str, str] | None = None
             until=args.until,
             limit=args.limit,
         )
-        publications = search_publications(adapters, request)
+        outcome = search_publications(adapters, request)
     except (ConfigurationError, PublicationSearchError, ValueError) as error:
         print(f"publication search failed: {error}", file=sys.stderr)
         return 1
+    for provider, error in outcome.provider_errors.items():
+        print(f"{provider} search failed: {error}", file=sys.stderr)
     for message in skipped:
         print(f"skipped {message}", file=sys.stderr)
+    if not outcome.succeeded_providers:
+        return 1
+    publications = outcome.publications
     rendered = "".join(json.dumps(item.as_dict(), ensure_ascii=False) + "\n" for item in publications)
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)

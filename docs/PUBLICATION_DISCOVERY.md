@@ -49,3 +49,8 @@ or API-key request rate, and Semantic Scholar pagination is paced to its
 documented introductory key rate. A Google Scholar request uses one SerpAPI
 search for each results page, so larger limits can consume multiple paid API
 searches.
+
+Provider failures are isolated. If one selected API is throttled or offline,
+successful results from the others are still emitted and the failed provider
+is reported on standard error. The command exits nonzero when every selected
+provider fails.

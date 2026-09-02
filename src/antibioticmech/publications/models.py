@@ -61,6 +61,15 @@ class Publication:
         return asdict(self)
 
 
+@dataclass(slots=True)
+class PublicationSearchOutcome:
+    """Successful provider results plus isolated, observable provider errors."""
+
+    publications: list[Publication]
+    succeeded_providers: list[str]
+    provider_errors: dict[str, str]
+
+
 class PublicationAdapter(Protocol):
     """Interface implemented by each publication provider."""
 

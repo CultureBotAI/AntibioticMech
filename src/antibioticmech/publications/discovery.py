@@ -5,7 +5,13 @@ from __future__ import annotations
 import re
 from collections.abc import Iterable, Sequence
 
-from .models import Publication, PublicationAdapter, SearchRequest
+from .models import (
+    Publication,
+    PublicationAdapter,
+    PublicationSearchError,
+    PublicationSearchOutcome,
+    SearchRequest,
+)
 
 
 def _normalized_title(value: str) -> str:
@@ -19,7 +25,7 @@ def _identity_keys(publication: Publication) -> list[tuple[str, str]]:
     if publication.pmid:
         keys.append(("pmid", publication.pmid))
     title = _normalized_title(publication.title)
-    if title:
+    if title and publication.year is not None:
         keys.append(("title_year", f"{title}:{publication.year or ''}"))
     return keys
 
@@ -91,9 +97,21 @@ def deduplicate_publications(publications: Iterable[Publication]) -> list[Public
 
 def search_publications(
     adapters: Sequence[PublicationAdapter], request: SearchRequest
-) -> list[Publication]:
-    """Search each configured provider and return a deduplicated candidate list."""
+) -> PublicationSearchOutcome:
+    """Search providers independently and retain successful partial results."""
+    if not adapters:
+        raise ValueError("at least one publication adapter is required")
     results = []
+    succeeded = []
+    errors = {}
     for adapter in adapters:
-        results.extend(adapter.search(request))
-    return deduplicate_publications(results)
+        try:
+            results.extend(adapter.search(request))
+            succeeded.append(adapter.provider)
+        except PublicationSearchError as error:
+            errors[adapter.provider] = str(error)
+    return PublicationSearchOutcome(
+        publications=deduplicate_publications(results),
+        succeeded_providers=succeeded,
+        provider_errors=errors,
+    )

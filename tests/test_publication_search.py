@@ -10,13 +10,15 @@ import pytest
 from antibioticmech.publications import (
     GoogleScholarAdapter,
     Publication,
+    PublicationSearchOutcome,
     PubMedAdapter,
     SearchRequest,
     SemanticScholarAdapter,
     deduplicate_publications,
+    search_publications,
 )
 from antibioticmech.publications.google_scholar import SEARCH_URL as GOOGLE_URL
-from antibioticmech.publications.models import ConfigurationError
+from antibioticmech.publications.models import ConfigurationError, PublicationSearchError
 from antibioticmech.publications.pubmed import EUTILS
 from antibioticmech.publications.semantic_scholar import SEARCH_URL as SEMANTIC_URL
 from scripts import search_publications as cli
@@ -33,6 +35,18 @@ class FakeTransport:
     def get(self, url, *, params, headers=None):
         self.calls.append((url, dict(params), dict(headers or {})))
         return self.responses.pop(0)
+
+
+class StubAdapter:
+    def __init__(self, provider, *, papers=None, error=None):
+        self.provider = provider
+        self.papers = papers or []
+        self.error = error
+
+    def search(self, request):
+        if self.error:
+            raise self.error
+        return self.papers
 
 
 def test_search_request_rejects_unbounded_or_reversed_input():
@@ -227,13 +241,41 @@ def test_conflicting_dois_are_not_merged_by_title_and_year():
     assert len(deduplicate_publications([left, right])) == 2
 
 
+def test_title_fallback_requires_a_known_matching_year():
+    unknown_left = Publication(title="A generic title", providers=["a"])
+    unknown_right = Publication(title="A generic title", providers=["b"])
+    assert len(deduplicate_publications([unknown_left, unknown_right])) == 2
+
+    known_left = Publication(title="A generic title", providers=["a"], year=2026)
+    known_right = Publication(title="A generic title", providers=["b"], year=2026)
+    assert len(deduplicate_publications([known_left, known_right])) == 1
+
+
+def test_multi_provider_search_retains_partial_results_and_structured_errors():
+    candidate = Publication(title="Candidate", providers=["pubmed"], pmid="42")
+    outcome = search_publications(
+        [
+            StubAdapter("pubmed", papers=[candidate]),
+            StubAdapter("semantic_scholar", error=PublicationSearchError("HTTP 429")),
+        ],
+        SearchRequest(limit=1),
+    )
+    assert outcome.publications == [candidate]
+    assert outcome.succeeded_providers == ["pubmed"]
+    assert outcome.provider_errors == {"semantic_scholar": "HTTP 429"}
+
+
 def test_cli_default_uses_only_nonbilling_public_apis(capsys, monkeypatch):
     captured = {}
 
     def fake_search(adapters, request):
         captured["providers"] = [adapter.provider for adapter in adapters]
         captured["request"] = request
-        return [Publication(title="Candidate paper", providers=["pubmed"], pmid="42")]
+        return PublicationSearchOutcome(
+            publications=[Publication(title="Candidate paper", providers=["pubmed"], pmid="42")],
+            succeeded_providers=["pubmed", "semantic_scholar"],
+            provider_errors={},
+        )
 
     monkeypatch.setattr(cli, "search_publications", fake_search)
     assert cli.main(["--limit", "2"], environ={}) == 0
@@ -245,7 +287,11 @@ def test_cli_default_uses_only_nonbilling_public_apis(capsys, monkeypatch):
 
 
 def test_cli_explicit_all_skips_unconfigured_google(capsys, monkeypatch):
-    monkeypatch.setattr(cli, "search_publications", lambda adapters, request: [])
+    monkeypatch.setattr(
+        cli,
+        "search_publications",
+        lambda adapters, request: PublicationSearchOutcome([], ["pubmed"], {}),
+    )
     assert cli.main(["--provider", "all", "--limit", "1"], environ={}) == 0
     assert "skipped google-scholar" in capsys.readouterr().err
 
@@ -253,3 +299,17 @@ def test_cli_explicit_all_skips_unconfigured_google(capsys, monkeypatch):
 def test_cli_explicit_google_provider_requires_key(capsys):
     assert cli.main(["--provider", "google-scholar"], environ={}) == 1
     assert "SERPAPI_API_KEY" in capsys.readouterr().err
+
+
+def test_cli_reports_total_provider_failure(capsys, monkeypatch):
+    monkeypatch.setattr(
+        cli,
+        "search_publications",
+        lambda adapters, request: PublicationSearchOutcome(
+            [], [], {"pubmed": "offline", "semantic_scholar": "HTTP 429"}
+        ),
+    )
+    assert cli.main(["--limit", "1"], environ={}) == 1
+    error = capsys.readouterr().err
+    assert "pubmed search failed: offline" in error
+    assert "semantic_scholar search failed: HTTP 429" in error
