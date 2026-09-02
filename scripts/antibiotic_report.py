@@ -42,6 +42,7 @@ def summarize(records: list[tuple[Path, dict]]) -> dict:
     source_combo = Counter()
     structure_fields = Counter()
     mechanism = Counter()
+    structures = Counter()
     class_status: dict[str, Counter] = defaultdict(Counter)
 
     for _, record in records:
@@ -71,8 +72,17 @@ def summarize(records: list[tuple[Path, dict]]) -> dict:
             mechanism["activity_spectrum"] += 1
         if record.get("producer_organisms"):
             mechanism["producer_organisms"] += 1
+        for item in record.get("structural_observations") or []:
+            structures["total"] += 1
+            if item.get("relevance") not in (None, "UNREVIEWED"):
+                structures["reviewed"] += 1
+            if item.get("relevance") == "TARGET_COMPLEX":
+                structures["target_complexes"] += 1
+        if record.get("structural_observations"):
+            mechanism["structural_observations"] += 1
 
     return {
+        "structures": structures,
         "total": len(records),
         "by_class": by_class,
         "by_status": by_status,
@@ -148,9 +158,18 @@ def print_report(stats: dict) -> None:
 
     print("\nMechanism layer — what curation still owes")
     for field in ("molecular_targets", "resistance_mechanisms", "mode_of_action",
-                  "causal_graphs", "activity_spectrum", "producer_organisms"):
+                  "causal_graphs", "activity_spectrum", "producer_organisms",
+                  "structural_observations"):
         count = stats["mechanism"][field]
         print(f"  {field:26s} {count:>6d}   {count / total:6.1%}")
+
+    # A structure is only mechanistic evidence once someone says what the
+    # macromolecule is; counting accessions alone would overstate the axis.
+    structures = stats["structures"]
+    if structures["total"]:
+        print(f"    of {structures['total']} structure(s): "
+              f"{structures['reviewed']} reviewed, "
+              f"{structures['target_complexes']} established as target complexes")
 
 
 def write_class_tsv(stats: dict, path: Path) -> None:

@@ -512,6 +512,34 @@ def crossref_conflict_queue() -> list[dict]:
     return out
 
 
+def structure_unreviewed_queue(records: list[dict]) -> list[dict]:
+    """Structures carried from a source that nobody has classified.
+
+    The seeder cannot say what the macromolecule in a PDB entry is, so it emits
+    UNREVIEWED and queues the question. Two of the three in the corpus are known
+    NOT to be target complexes — PDB:1H8S is an anti-ampicillin antibody and
+    PDB:1Q3W is human GSK3-beta — which is exactly why they must not sit in the
+    corpus looking like structural evidence for a target (#95).
+    """
+    out = []
+    for record in records:
+        for item in record.get("structural_observations") or []:
+            if item.get("relevance") not in (None, "UNREVIEWED"):
+                continue
+            out.append({
+                "queue": "structure-unreviewed",
+                "key": item.get("structure_id", ""),
+                "label": record.get("label", ""),
+                "source": item.get("source", ""),
+                "source_id": record.get("identifier", ""),
+                "hint": (f"{item.get('structure_id')} carried from "
+                         f"{item.get('source')}; what the macromolecule is, and "
+                         "whether it is a target, is unestablished"),
+            })
+    out.sort(key=lambda r: (r["label"].lower(), r["key"]))
+    return out
+
+
 def unknown_mechanism_queue(records: list[dict]) -> list[dict]:
     """Determinants seeded with mechanism_type UNKNOWN.
 
@@ -583,7 +611,7 @@ def main() -> int:
                                  "moa-scope", "target-evidence", "aro-class",
                                  "xref-unverified", "multi-component",
                                  "producer-candidate", "excluded",
-                                 "crossref-conflict"),
+                                 "crossref-conflict", "structure-unreviewed"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
     parser.add_argument("--tsv", type=Path, help="Write every row (not just --limit) to this TSV.")
@@ -613,6 +641,8 @@ def main() -> int:
         queues["excluded"] = excluded_queue()
     if args.queue in ("all", "crossref-conflict"):
         queues["crossref-conflict"] = crossref_conflict_queue()
+    if args.queue in ("all", "structure-unreviewed"):
+        queues["structure-unreviewed"] = structure_unreviewed_queue(records)
     if args.queue in ("all", "target-evidence"):
         queues["target-evidence"] = target_evidence_queue(records)
 
