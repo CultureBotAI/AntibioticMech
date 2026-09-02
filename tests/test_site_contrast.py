@@ -125,8 +125,22 @@ def _compounds(selector: str) -> list[str]:
     return [p for p in COMBINATORS.split(selector.strip()) if p]
 
 
+ROOT_FONT_PX = 16
+
+
 def _px(value: str) -> float:
-    return float(re.sub(r"[^0-9.]", "", value))
+    """A CSS length in pixels, or a loud failure.
+
+    Stripping non-digits read `40rem` as 40px — a sixteenth of its real width.
+    That is silent twice over: the rule is judged not to apply where a browser
+    applies it, and `_states` enumerates 39/40/41 instead of either side of the
+    real boundary, so the coverage simply is not there and nothing says so.
+    """
+    match = re.fullmatch(r"\s*([0-9.]+)\s*(px|r?em)?\s*", value)
+    if not match:
+        raise ValueError(f"unrecognised length in a media query: {value!r}")
+    amount = float(match.group(1))
+    return amount * ROOT_FONT_PX if match.group(2) in ("rem", "em") else amount
 
 
 def _holds(rule: Rule, state: State) -> bool:
@@ -192,6 +206,45 @@ def _resolve(value: str | None, tokens: dict[str, str], depth: int = 0) -> str |
     return None
 
 
+def _alpha(value: str | None, tokens: dict[str, str], depth: int = 0) -> float:
+    """The alpha of a colour value, following var() chains. 1.0 when opaque."""
+    value = (value or "").strip()
+    chained = re.fullmatch(r"var\((--[\w-]+)\)", value)
+    if chained and depth < 6:
+        return _alpha(tokens.get(chained.group(1)), tokens, depth + 1)
+    slashed = re.match(r"rgba?\([^)]*?/\s*([0-9.]+%?)\s*\)", value)
+    if slashed:
+        raw = slashed.group(1)
+        return float(raw.rstrip("%")) / (100 if raw.endswith("%") else 1)
+    commaed = re.match(r"rgba\(\s*[\d.]+\s*,\s*[\d.]+\s*,\s*[\d.]+\s*,\s*([0-9.]+)", value)
+    return float(commaed.group(1)) if commaed else 1.0
+
+
+def _over(colour: str, backdrop: str, alpha: float) -> str:
+    top = [int(colour.lstrip("#")[i:i + 2], 16) for i in (0, 2, 4)]
+    under = [int(backdrop.lstrip("#")[i:i + 2], 16) for i in (0, 2, 4)]
+    return "#" + "".join(f"{round(alpha * t + (1 - alpha) * u):02x}"
+                         for t, u in zip(top, under, strict=True))
+
+
+def _bound(colour: str, alpha: float) -> list[str]:
+    """What a translucent surface can actually render as.
+
+    Alpha was discarded, so `rgb(23 32 42 / .94)` — the tooltip's own background,
+    over a map canvas whose pixels CSS cannot know — was measured as if opaque.
+    A number that is close to the rendered one is still not it, and reporting
+    those is the habit this whole file exists to break (#161).
+
+    The backdrop is unknowable, but the result is not unbounded: it lies between
+    the colour composited over white and over black. Requiring the ratio to hold
+    at both ends holds it for every backdrop. Text alpha is NOT modelled — a
+    translucent glyph over an unknown backdrop has no such clean bound, and
+    nothing here uses one.
+    """
+    return [colour] if alpha >= 1 else [_over(colour, "#ffffff", alpha),
+                                        _over(colour, "#000000", alpha)]
+
+
 def _colour_stops(value: str | None, tokens: dict[str, str]) -> list[str]:
     """Every colour a background declaration can paint.
 
@@ -204,17 +257,40 @@ def _colour_stops(value: str | None, tokens: dict[str, str]) -> list[str]:
         return []
     flat = _resolve(value, tokens)
     if flat:
-        return [flat]
+        return _bound(flat, _alpha(value, tokens))
     if "gradient(" not in value:
         return []
-    return [c for c in (_resolve(piece, tokens) for piece in
-                        re.findall(r"var\(--[\w-]+\)|#[0-9a-fA-F]{3,8}\b|rgba?\([^)]*\)", value))
-            if c]
+    stops = []
+    for piece in re.findall(r"var\(--[\w-]+\)|#[0-9a-fA-F]{3,8}\b|rgba?\([^)]*\)", value):
+        resolved = _resolve(piece, tokens)
+        if resolved:
+            stops.extend(_bound(resolved, _alpha(piece, tokens)))
+    return stops
 
 
 def _declaration(body: str, prop: str) -> str | None:
     found = re.search(rf"(?:^|;)\s*{prop}\s*:\s*([^;]+)", body)
     return found.group(1) if found else None
+
+
+SPECIFIC = re.compile(r"#[\w-]+|\.[\w-]+|\[[^\]]*\]|:[\w-]+")
+
+
+def _specificity(selector: str) -> int:
+    """How hard a selector competes, near enough for this stylesheet.
+
+    Source order alone decides only among EQUAL specificity.
+    `:root[data-theme="dark"]` beats a plain `:root` declared after it, so
+    resolving by position let a later low-specificity block override a dark one.
+    That direction masks: a good value in the later block hid a broken value in
+    the dark block, reproducing the original tooltip defect at 1.01:1 while
+    every test passed (#158).
+
+    Ids, classes, attributes and pseudo-classes are counted together rather than
+    in CSS's three tiers. Full specificity would need a real selector parser and
+    would not change any verdict here.
+    """
+    return len(SPECIFIC.findall(re.sub(r"::[\w-]+", "", selector)))
 
 
 def _key(selector: str) -> str:
@@ -242,18 +318,25 @@ def _cascade(rules: list[Rule], state: State):
     declaration, which is what source order means for equal specificity. There
     is nothing left to cross-pair.
     """
+    token_wins: dict[str, tuple[int, int]] = {}
+    style_wins: dict[tuple[str, str], tuple[int, int]] = {}
     tokens: dict[str, str] = {}
     styles: dict[str, dict[str, str]] = {}
-    for rule in rules:
+    for position, rule in enumerate(rules):
         if not _holds(rule, state):
             continue
+        rank = (_specificity(rule.selector), position)
         key = _key(rule.selector)
         if _is_token_block(key):
-            tokens.update(dict(re.findall(r"(--[\w-]+)\s*:\s*([^;]+);", rule.body)))
+            for name, value in re.findall(r"(--[\w-]+)\s*:\s*([^;]+);", rule.body):
+                if rank >= token_wins.get(name, (-1, -1)):
+                    token_wins[name] = rank
+                    tokens[name] = value
             continue
         for prop, name in (("color", "color"), ("background(?:-color)?", "background")):
             value = _declaration(rule.body, prop)
-            if value:
+            if value and rank >= style_wins.get((key, name), (-1, -1)):
+                style_wins[(key, name)] = rank
                 styles.setdefault(key, {})[name] = value
     return tokens, styles
 
@@ -289,14 +372,12 @@ def _surface(key: str, tokens, styles) -> list[str]:
     return [page] if page else []
 
 
-def _failures():
-    rules = _rules(STYLESHEET.read_text(encoding="utf-8"))
+def _failures(css: str | None = None):
+    rules = _rules(css if css is not None else STYLESHEET.read_text(encoding="utf-8"))
     seen, out = set(), []
     for state in _states(rules):
         tokens, styles = _cascade(rules, state)
         for key, declarations in styles.items():
-            if key.startswith(("@", "body")):
-                continue
             text = _resolve(declarations.get("color"), tokens)
             if not text:
                 continue
@@ -361,6 +442,10 @@ def test_the_masthead_nav_is_readable_on_the_surface_it_inherits():
         tokens, _ = _cascade(_rules(STYLESHEET.read_text(encoding="utf-8")), state)
         page = _resolve(tokens.get("--page") or tokens.get("--bg"), tokens)
         assert text and surfaces, f"{state}: nav colours no longer resolve"
+        # Not `page not in surfaces`: the light gradient's own second stop IS
+        # --page (--pastel-b is the same sand), so the nav legitimately renders
+        # on that colour at one end. What must not happen is resolving to the
+        # page ALONE, which is the fallback that means no ancestor was found.
         assert surfaces != [page], (
             f"{state}: the nav resolved to the page background. It renders on the "
             "masthead, and measuring it against the page is the bug in #156.")
@@ -484,6 +569,95 @@ def test_a_conditional_surface_is_credited_only_where_it_applies():
     assert pair(".inverse .text2", 900) < AA_BODY_TEXT, (
         "inverse: the conditional surface must be consulted where it applies, "
         "not dropped")
+
+
+def test_the_sweep_covers_body_and_selectors_that_merely_start_with_it():
+    """`body` was skipped outright, and so was anything sharing its first letters.
+
+    It is the one selector that must never be skipped: it sets the page's
+    default pair, which every element inheriting from it renders in. The guard
+    was also a prefix match where an exact match was meant, so `body .card`,
+    `body.wide` and even `bodyguard .x` were dropped with no drop in reported
+    coverage (#160).
+    """
+    css = """
+    :root { --page: #E4DED3; --fg: #1a1d21; }
+    body { background: var(--page); color: #E4DED3; }
+    body .card { background: #ffffff; color: #f4f6f8; }
+    body.wide { background: #ffffff; color: #fdfdfd; }
+    """
+    reported = " ".join(_failures(css))
+    for selector in ("body", "body .card", "body.wide"):
+        assert selector in reported, f"{selector} is not being swept: {reported}"
+
+
+def test_specificity_outranks_source_order():
+    """A later declaration wins only among EQUAL specificity.
+
+    `:root[data-theme="dark"]` beats a plain `:root` declared after it. Resolving
+    by position alone let the later block win, and that direction MASKS: a good
+    value in the later block hid a broken one in the dark block, reproducing the
+    original tooltip defect at 1.01:1 with every test green (#158).
+    """
+    css = """
+    :root { --page: #ffffff; --fg: #1a1d21; }
+    :root[data-theme="dark"] { --page: #17202a; --fg: #211e16; }
+    :root { --fg: #f0ece0; }
+    .x { color: var(--fg); }
+    """
+    tokens, styles = _cascade(_rules(css), State(False, "dark", WIDEST))
+    text = _resolve(styles[".x"]["color"], tokens)
+    assert text == "#211e16", (
+        "the dark block is more specific and wins despite being declared first; "
+        "taking the later value hides whatever the dark block actually renders")
+    assert contrast(text, _surface(".x", tokens, styles)[0]) < AA_BODY_TEXT
+
+    assert _specificity(':root[data-theme="dark"]') > _specificity(":root")
+    assert _specificity(".a.b") > _specificity(".a")
+
+
+def test_a_rem_breakpoint_is_converted_not_stripped():
+    """`40rem` is 640px, not 40px.
+
+    Stripping non-digits was silent twice: the rule was judged not to apply
+    where a browser applies it, and `_states` enumerated 39/40/41 rather than
+    either side of the real boundary, so the coverage was absent with nothing
+    saying so (#159).
+    """
+    assert _px("40rem") == 640 and _px("850px") == 850 and _px("40em") == 640
+
+    rule = _rules("@media (max-width: 40rem) { .a { color: #000; } }")[0]
+    assert _holds(rule, State(False, None, 600))
+    assert not _holds(rule, State(False, None, 641))
+    assert {639, 640, 641} <= {state.width for state in _states([rule])}
+
+    try:
+        _px("40vw")
+    except ValueError:
+        return
+    raise AssertionError("an unmodelled unit must fail loudly, not yield a number")
+
+
+def test_a_translucent_surface_is_bounded_not_treated_as_opaque():
+    """Alpha is real; discarding it reports a number the page never renders.
+
+    The backdrop of `rgb(23 32 42 / .94)` is a map canvas CSS cannot know, but
+    the composite is bounded by that colour over white and over black. Requiring
+    the ratio at both ends holds it for any backdrop (#161).
+    """
+    assert _alpha("rgb(23 32 42 / .94)", {}) == 0.94
+    assert _alpha("rgba(0, 0, 0, .12)", {}) == 0.12
+    assert _alpha("#17202a", {}) == 1.0
+
+    bounds = _colour_stops("rgb(23 32 42 / .94)", {})
+    assert bounds == ["#252d37", "#161e27"], bounds
+    assert bounds[0] != "#17202a", (
+        "treating the translucent surface as opaque is the thing being fixed")
+    assert _colour_stops("#17202a", {}) == ["#17202a"], "opaque colours stay single"
+
+    half = _colour_stops("rgb(128 128 128 / .5)", {})
+    assert contrast("#767676", half[0]) < AA_BODY_TEXT, (
+        "a pair that fails over one extreme must fail, not be averaged away")
 
 
 def test_the_rendered_stylesheet_matches_the_template():
