@@ -43,6 +43,7 @@ from seed_from_sources import (  # noqa: E402
     attach_bindingdb_targets,
     attach_fda_clinical_status,
     attach_mibig_producers,
+    attach_phibase_resistance,
     bindingdb_sourced_target_view,
     build_concepts,
     card_sourced_view,
@@ -52,6 +53,7 @@ from seed_from_sources import (  # noqa: E402
     load_decisions,
     merge,
     mibig_sourced_producer_view,
+    phibase_sourced_resistance_view,
     read_lockfile,
     record_path,
     seeded_mode_of_action,
@@ -74,6 +76,7 @@ def rebuild() -> dict[str, dict]:
     records, _ = merge(concepts, chebi_rows, conf, load_decisions(),
                        manifest.get("retrieved_on", ""))
     attach_aro_mechanism(records, manifest.get("retrieved_on", ""))
+    attach_phibase_resistance(records)
     attach_bindingdb_targets(records)
     attach_mibig_producers(
         records,
@@ -115,6 +118,8 @@ def main() -> int:
         for field in CARD_FIELDS:
             if card_sourced_view(want, field) != card_sourced_view(actual, field):
                 drifted.append((path, field))
+        if phibase_sourced_resistance_view(want) != phibase_sourced_resistance_view(actual):
+            drifted.append((path, "resistance_mechanisms"))
         if bindingdb_sourced_target_view(want) != bindingdb_sourced_target_view(actual):
             drifted.append((path, "molecular_targets"))
         if mibig_sourced_producer_view(want) != mibig_sourced_producer_view(actual):

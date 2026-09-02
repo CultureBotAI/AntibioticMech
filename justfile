@@ -52,6 +52,25 @@ extract-bindingdb *args:
 extract-bindingdb-dry *args:
     uv run --extra chemical-map python scripts/extract_bindingdb_targets.py --dry-run {{args}}
 
+# Extract ChEBI-grounded PHI-base gene--antimicrobial resistance observations.
+extract-phibase *args:
+    uv run python scripts/extract_phibase_amr.py {{args}}
+
+extract-phibase-dry *args:
+    uv run python scripts/extract_phibase_amr.py --dry-run {{args}}
+
+# Evaluate CRyPTIC phenotypes without attaching name-only drug codes to records.
+evaluate-cryptic *args:
+    uv run --extra source-ingest python scripts/evaluate_cryptic_activity.py {{args}}
+
+# Compare AMRFinderPlus families/classes with the committed ARO resistance slice.
+evaluate-amrfinder *args:
+    uv run python scripts/evaluate_amrfinderplus.py {{args}}
+
+# Find exact-ligand PDB entries that overlap established BindingDB UniProt targets.
+evaluate-rcsb-pdb *args:
+    uv run python scripts/evaluate_rcsb_pdb.py {{args}}
+
 # Free check: print the PubChem URL for the first molecule needing a structure
 extract-pubchem-dry:
     uv run python scripts/enrich_pubchem_structures.py --dry-run
@@ -160,6 +179,12 @@ research-antibiotic provider target *args="":
 
 research-entity provider target *args="":
     @just research-antibiotic {{provider}} {{target}} {{args}}
+
+# Search publication APIs for candidate reports of newly discovered antibiotics.
+# PubMed and Semantic Scholar work without keys at their public limits;
+# Google Scholar uses SerpAPI and requires SERPAPI_API_KEY.
+search-publications *args:
+    uv run python scripts/search_publications.py {{args}}
 
 # Non-billing configuration/capability checks.
 deep-research-canary provider="all" *args="":

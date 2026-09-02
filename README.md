@@ -57,16 +57,16 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 <!-- BEGIN GENERATED CORPUS STATS -->
 
-| Class | Records | SEEDED | REVIEWED | With CARD mechanism evidence |
+| Class | Records | SEEDED | REVIEWED | With resistance evidence |
 |---|---:|---:|---:|---:|
-| ANTIBACTERIAL *(incl. subclasses)* | 1093 | 1093 | 0 | 278 |
+| ANTIBACTERIAL *(incl. subclasses)* | 1093 | 1093 | 0 | 279 |
 | &nbsp;&nbsp;↳ ANTIMYCOBACTERIAL *(subclass of ANTIBACTERIAL)* | 78 | 78 | 0 | 15 |
-| ANTIFUNGAL | 594 | 594 | 0 | 49 |
+| ANTIFUNGAL | 594 | 594 | 0 | 55 |
 | ANTIPROTOZOAL | 248 | 248 | 0 | 5 |
 | ANTIVIRAL | 473 | 473 | 0 | 21 |
-| BIOCIDE | 31 | 31 | 0 | 2 |
+| BIOCIDE | 31 | 31 | 0 | 3 |
 | ANTIMICROBIAL_UNSPECIFIED | 472 | 472 | 0 | 3 |
-| **TOTAL** | **2911** | **2911** | **0** | **358** |
+| **TOTAL** | **2911** | **2911** | **0** | **366** |
 
 A row marked *(subclass of X)* is already counted in X's own row — mycobacteria are bacteria, and filing is exclusive, so a compound filed ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each record once, so the Records column does not sum to it.
 
@@ -74,7 +74,7 @@ Identity: **2671** records (92%) are grounded in a ChEBI term; **240** keep a mi
 
 Corroboration: **281** records carry source concepts from both ChEBI and CARD/ARO; **2341** come from ChEBI alone and **289** from CARD alone.
 
-Mechanism layer: **246** records carry a molecular target and **274** carry resistance determinants, both seeded from CARD; **416** carry a mode of action seeded from ChEBI's mechanism roles; **0** carry a curated causal graph. That last number is the work.
+Mechanism layer: **246** records carry a molecular target and **282** carry resistance determinants or associations seeded from CARD and PHI-base; **416** carry a mode of action seeded from ChEBI's mechanism roles; **0** carry a curated causal graph. That last number is the work.
 
 <!-- END GENERATED CORPUS STATS -->
 

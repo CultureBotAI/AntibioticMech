@@ -137,6 +137,41 @@ resistance_mechanisms:
   - reference: ARO:3009454
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007507 (terbinafine);
       database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  label: ErgA(F389L) (amino acid mutation) [Ectopic] associated with resistance to
+    terbinafine
+  note: PHI-base antimicrobial_interaction PHIG:6409; E9R5G2; Aspergillus fumigatus
+    strain ATCC 13073 (NCBITaxon:746128); phenotype PHIPO:0000387; evidence code Cell
+    growth assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved
+    2026-09-01. This is a curated gene-alteration/chemical resistance association,
+    not evidence for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:16801438
+    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
+      identifier, pathogen, strain, alteration, and phenotype retained.
+- mechanism_type: UNKNOWN
+  label: erg1+ (wild type) [Overexpression] associated with resistance to terbinafine
+  note: PHI-base antimicrobial_interaction PHIG:6409; E9R5G2; Aspergillus fumigatus
+    strain AF293.1 (NCBITaxon:746128); phenotype PHIPO:0000387; evidence code Cell
+    growth assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved
+    2026-09-01. This is a curated gene-alteration/chemical resistance association,
+    not evidence for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:15215099
+    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
+      identifier, pathogen, strain, alteration, and phenotype retained.
+- mechanism_type: UNKNOWN
+  label: cox10 transformant(W004-cox10(R243Q)) (transformant) [Not assayed] associated
+    with resistance to terbinafine
+  note: PHI-base antimicrobial_interaction PHIG:8689; B0Y628; Aspergillus fumigatus
+    strain A1160C (NCBITaxon:746128); phenotype PHIPO:0000387; evidence code Cell
+    growth assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved
+    2026-09-01. This is a curated gene-alteration/chemical resistance association,
+    not evidence for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:27799210
+    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
+      identifier, pathogen, strain, alteration, and phenotype retained.
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -203,6 +238,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T04:31:32Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
