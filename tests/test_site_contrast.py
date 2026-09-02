@@ -51,6 +51,13 @@ def _rules(css: str) -> list[tuple[str, str]]:
     the first rule of every `@media` block was invisible to the sweep. Nothing
     colour-bearing lived there, but a responsive override would have landed in
     the gap silently.
+
+    Flattening a `prefers-color-scheme: dark` block would DISCARD the one thing
+    that makes its rules dark, so the condition is carried into the selector.
+    Every such rule in this stylesheet already writes the `:root:not(...)`
+    prefix itself, but nothing requires that: a bare `.card { background: … }`
+    inside the media block is legal, and without this it would be read as a
+    light-theme rule and judged against the wrong palette.
     """
     css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
     out: list[tuple[str, str]] = []
@@ -68,7 +75,14 @@ def _rules(css: str) -> list[tuple[str, str]]:
             if depth == 0:
                 body = css[body_start:i]
                 if header.startswith("@"):
-                    out.extend(_rules(body))
+                    nested = _rules(body)
+                    if "prefers-color-scheme" in header and "dark" in header:
+                        nested = [
+                            (sel if sel.startswith(DARK_BLOCKS)
+                             else f'{DARK_BLOCKS[0]} {sel}', nested_body)
+                            for sel, nested_body in nested
+                        ]
+                    out.extend(nested)
                 else:
                     out.append((header, body))
                 start = i + 1
