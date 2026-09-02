@@ -553,6 +553,7 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
         concept.mechanism_roles = split_pipe(row.get("mechanism_role_ids", ""))
         concepts.append(concept)
 
+    refused: list[tuple[str, str]] = []
     for row in aro_rows:
         concept = Concept("ARO", row["aro_id"], row["name"])
         concept.definition = row["definition"]
@@ -568,15 +569,21 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
         chebi_row = chebi_rows.get(chebi_id)
         conflict = crossref_conflict(row, chebi_row) if chebi_row else ""
         if conflict:
-            CROSSREF_CONFLICTS.append({
-                "aro_id": row["aro_id"], "aro_name": row["name"],
-                "chebi_id": chebi_id, "chebi_name": chebi_row["name"], "reason": conflict,
-            })
+            refused.append((row["aro_id"], conflict))
             # Not trusted, so it grants nothing: no roles, no structure, and --
             # by dropping the xref -- no EXACT grounding either, since
             # resolve_identity reads the same list.
+            #
+            # `chebi_id` comes from the RAW inventory row while concept.xrefs
+            # holds normalized values, so comparing them directly coupled this
+            # to normalize_xref happening to leave ChEBI ids alone. It does
+            # today; nothing enforced it, and if that changed the drop became a
+            # silent no-op that re-granted EXACT grounding to the very entry the
+            # gate had just refused (#168). Both sides are normalized here.
+            refused_xref = normalize_xref(chebi_id)
             chebi_row = None
-            concept.xrefs = [x for x in concept.xrefs if x != chebi_id]
+            concept.xrefs = [x for x in concept.xrefs
+                             if normalize_xref(x) != refused_xref]
         # Roles and structure are independent facts about the cross-referenced
         # ChEBI entry. ChEBI can hold a compound with an antimicrobial role and
         # no default structure (miconazole, ketoconazole); reading the roles only
@@ -590,6 +597,16 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
         elif row["aro_id"] in pubchem:
             concept.structure = structure_from_pubchem(pubchem[row["aro_id"]])
         concepts.append(concept)
+
+    if refused:
+        # A refusal can remove a record from the corpus. Every other consequential
+        # decision in the run summary is counted; this one was silent, so a new
+        # upstream conflict would drop a record during a routine re-seed with
+        # nothing saying why (#170).
+        print(f"  {len(refused)} CARD cross-reference(s) refused as self-contradictory "
+              "(see `just worklist --queue crossref-conflict`)", file=sys.stderr)
+        for aro_id, reason in refused:
+            print(f"    {aro_id}: {reason}", file=sys.stderr)
 
     for concept in concepts:
         concept.minted = mint(concept.source, concept.source_id)
@@ -625,8 +642,10 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
 # trusted for roles, structure or identity, and the concept falls back to
 # PubChem enrichment and a minted identifier -- which is what CARD alone can
 # support. The pair is surfaced on `just worklist --queue crossref-conflict`
-# rather than dropped silently.
-CROSSREF_CONFLICTS: list[dict] = []
+# rather than dropped silently. That queue recomputes from the inventories and
+# needs no state from a seeder run, so nothing is accumulated here: a module-level
+# list that is written and never read is a decoy pointing at the wrong mechanism
+# (#169).
 
 
 def _cas_numbers(raw: str) -> set[str]:

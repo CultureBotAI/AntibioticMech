@@ -1348,7 +1348,14 @@ def test_the_seeder_actually_refuses_the_iclaprim_crossref():
     assert iclaprim, "ARO:3000337 left the inventory; re-point this test"
     concept = iclaprim[0]
 
-    assert "CHEBI:31724" not in concept.xrefs, (
+    # Asserted under normalization rather than against a raw literal. The drop
+    # compares a raw inventory string with a normalized list, and a literal here
+    # would move in lockstep with any normalization change instead of catching
+    # it (#168).
+    from seed_from_sources import normalize_xref
+    refused = normalize_xref("CHEBI:31724")
+    assert refused is not None, "normalize_xref no longer accepts ChEBI ids"
+    assert all(normalize_xref(x) != refused for x in concept.xrefs), (
         "the untrusted cross-reference is still published as an xref")
     assert not concept.structure.get("standard_inchi_key"), (
         "the refused link still handed over Isoaminile citrate's structure")
