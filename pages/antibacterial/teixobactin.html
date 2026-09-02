@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:84192</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_84192">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A cyclodepsipeptide that is isolated from the previously unculturable bacterial species Eleftheria terrae and is active against gram-positive bacteria.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3009657">nonribosomal peptide antibiotics</a><code class="curie">ARO:3009657</code></p>
@@ -109,6 +106,16 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta">ARO:3003232</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3003241 (teixobactin); database assertion, not a primary citation.)</span></li>
 </ul>
 
+<h3>conserved pyrophosphate-sugar motif of lipid II and lipid III <span class="pill plain">CELL_WALL_COMPONENT</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">Compound-specific cell-wall precursor assays identified binding to the conserved motif shared by lipid II and lipid III; the primary report did not resolve a protein target. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2015-01 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:25561178</span> <span class="meta">(Primary teixobactin discovery and cell-wall-precursor target study (DOI:10.1038/nature14098).)</span></li>
+</ul>
+
+
+<h2>Mechanism summary</h2>
+<dl class="fields">
+<dt>Mode of action</dt><dd>CELL_WALL_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: PMID:25561178 reported that teixobactin inhibits cell-wall synthesis by binding a conserved motif of the peptidoglycan precursor lipid II and the wall-teichoic-acid precursor lipid III. The study obtained no resistant Staphylococcus aureus or Mycobacterium tuberculosis mutants under its selection conditions; this is not a claim that resistance cannot arise.</span></dd></dl>
 
 
 
@@ -117,6 +124,10 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:25561178</span> <span class="meta">(Primary teixobactin discovery, mechanism, and resistance-selection study.)</span></li>
+</ul>
 
 
 <h2>Curation history</h2>
@@ -140,6 +151,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI identity, structure, roles, and antibacterial class; curator-confirmed cell-wall-synthesis inhibition and added primary binding evidence for the lipid II/lipid III motif beside two preserved CARD assertions.</p>
   </li>
 </ol>
 

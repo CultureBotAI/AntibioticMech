@@ -1,7 +1,7 @@
 identifier: CHEBI:85984
 label: avibactam
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A member of the class of azabicycloalkanes that is (2S,5R)-7-oxo-1,6-diazabicyclo[3.2.1]octane-2-carboxamide
   in which the amino hydrogen at position 6 is replaced by a sulfooxy group. Used
@@ -26,6 +26,13 @@ parent_compounds:
 activity_roles:
 - CHEBI:33281
 - CHEBI:36047
+mode_of_action: OTHER
+mode_of_action_notes: 'CURATOR: PMID:25406838 resolved covalent avibactam complexes
+  with the class D beta-lactamases OXA-24 and OXA-48 and explained the inhibitor''s
+  selectivity and unusually slow reversibility. Avibactam restores partner beta-lactam
+  activity by inhibiting resistance enzymes rather than by directly inhibiting bacterial
+  cell-wall synthesis itself.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: NC(=O)[C@@H]1CC[C@@H]2CN1C(=O)N2OS(=O)(=O)O
   standard_inchi: InChI=1S/C7H11N3O6S/c8-6(11)5-2-1-4-3-9(5)7(12)10(4)16-17(13,14)15/h4-5H,1-3H2,(H2,8,11)(H,13,14,15)/t4-,5+/m1/s1
@@ -35,6 +42,20 @@ chemical_structure:
   charge: 0
   average_mass: 265.247
   monoisotopic_mass: 265.03686
+molecular_targets:
+- target_label: class D OXA beta-lactamases
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: X-ray structures of OXA-24 and OXA-48 captured covalent inhibited
+    states and, together with kinetic analysis, explained selective, slowly reversible
+    beta-lactamase inhibition.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2014-12
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:25406838
+    notes: Primary avibactam-bound OXA-24/OXA-48 structural and kinetic study (DOI:10.1021/cb500703p).
 xrefs:
 - cas:1192500-31-4
 - drugcentral:4946
@@ -49,6 +70,9 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:25406838
+  notes: Primary class D beta-lactamase inhibition and cocrystal study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -62,3 +86,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T22:58:08Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact neutral avibactam ChEBI identity distinct from its sodium
+    form, structure, roles, and antibacterial filing class; added the resistance-enzyme
+    mechanism and directly bound OXA beta-lactamase target.
+  llm_assisted: true

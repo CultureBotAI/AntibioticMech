@@ -1,7 +1,7 @@
 identifier: CHEBI:132967
 label: elbasvir
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A complex organic heterotetracyclic compound that is a hepatitis C virus
   nonstructural protein 5A inhibitor used in combination with grazoprevir (under the
@@ -30,6 +30,13 @@ parent_compounds:
 - CHEBI:84129
 activity_roles:
 - CHEBI:36044
+mode_of_action: OTHER
+mode_of_action_notes: 'CURATOR: PMID:24127258 identified MK-8742 (elbasvir) as a hepatitis
+  C virus NS5A inhibitor with activity across genotype replicons. PMID:26303801 mapped
+  reduced susceptibility to NS5A substitutions at positions 30, 31, and 93. These
+  functional studies identify NS5A but do not establish a compound-bound NS5A structure
+  or direct binding.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@@]1(c2ncc(-c3ccc4c(c3)O[C@@H](c3ccccc3)n3c-4cc4cc(-c5cnc([C@]6([H])CCCN6C(=O)[C@@H](NC(=O)OC)C(C)C)n5)ccc43)n2)CCCN1C(=O)[C@@H](NC(=O)OC)C(C)C'
   standard_inchi: InChI=1S/C49H55N9O7/c1-27(2)41(54-48(61)63-5)45(59)56-20-10-14-37(56)43-50-25-34(52-43)30-17-19-36-32(22-30)23-39-33-18-16-31(24-40(33)65-47(58(36)39)29-12-8-7-9-13-29)35-26-51-44(53-35)38-15-11-21-57(38)46(60)42(28(3)4)55-49(62)64-6/h7-9,12-13,16-19,22-28,37-38,41-42,47H,10-11,14-15,20-21H2,1-6H3,(H,50,52)(H,51,53)(H,54,61)(H,55,62)/t37-,38-,41-,42-,47-/m0/s1
@@ -39,6 +46,22 @@ chemical_structure:
   charge: 0
   average_mass: 882.035
   monoisotopic_mass: 881.42245
+molecular_targets:
+- target_label: hepatitis C virus nonstructural protein 5A (NS5A)
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: HCV genotype replicons and NS5A resistance substitutions established
+    a functional target association; no direct binding assay or compound-bound structure
+    was reported in the inspected sources.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2013-10; 2015-08
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:24127258
+    notes: Primary MK-8742 discovery and HCV replicon study (DOI:10.1002/cmdc.201300343).
+  - reference: PMID:26303801
+    notes: Primary genotype-replicon and resistance-substitution study (DOI:10.1128/AAC.01390-15).
 xrefs:
 - cas:1370468-36-2
 - drugcentral:5080
@@ -53,6 +76,22 @@ source_concepts:
   role_terms:
   - CHEBI:36044
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:24127258
+  notes: Primary elbasvir discovery and NS5A-inhibitor study.
+- reference: PMID:26303801
+  notes: Primary elbasvir resistance-characterization study.
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: HCV NS5A substitutions at positions 30, 31, and 93
+  gene_families:
+  - HCV NS5A
+  note: Genotype replicons and sequencing after elbasvir exposure identified substitutions
+    at NS5A positions 30, 31, and 93 that produced substantial losses of susceptibility,
+    with genotype-dependent effects.
+  evidence:
+  - reference: PMID:26303801
+    notes: Primary elbasvir resistance-selection, replicon, and sequencing study.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -66,3 +105,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T22:53:22Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, and antiviral class; added a
+    curator-owned NS5A-inhibitor mechanism, evidence-calibrated functional target
+    association, and NS5A target-alteration resistance.
+  llm_assisted: true

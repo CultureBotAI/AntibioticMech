@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:68621</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_68621">resolve</a>  <span class="sep">·</span><a href="../class/antiviral.html">ANTIVIRAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A synthetic tripeptide consisting of N-(tert-butylcarbamoyl)-3-methyl-L-valyl, a cyclopropyl-fused prolyl and 3-amino-4-cyclobutyl-2-oxobutanamide residues joined in sequence. Used for treatment of chronic hepatitis C virus genotype 1 infection.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
@@ -102,17 +99,50 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+<h2>Molecular targets</h2>
+<p class="meta">The molecular entity or process this compound acts on. Each target
+carries evidence — this is a mechanistic claim, not a classification.</p>
+<h3>hepatitis C virus NS3/4A serine protease <span class="pill plain">VIRAL_PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">Protease assays, HCV replicons, and resistance selection associated boceprevir activity with NS3/4A; a compound-bound structure was not used to classify this item as direct binding. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2007-12; 2009-11 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:18201776</span> <span class="meta">(Primary SCH 503034 HCV NS3/4A target and resistance study (DOI:10.1016/j.antiviral.2007.11.010).)</span></li>
+  <li><span class="meta">PMID:20004570</span> <span class="meta">(Primary boceprevir-series NS3 protease structure-activity study (DOI:10.1016/j.bmcl.2009.11.094).)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>VIRAL_PROTEASE_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— Assigned from ChEBI role CHEBI:64924 (hepatitis C protease inhibitor). ChEBI asserts the role on the compound. The role names a target specific to the microbe or virus — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
+<dt>Mode of action</dt><dd>VIRAL_PROTEASE_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: PMID:18201776 tested SCH 503034 (boceprevir) against hepatitis C virus NS3/4A protease and selected NS3 resistance substitutions at V36, T54, R155, A156, and V170. PMID:20004570 further measured boceprevir-series inhibition of the NS3 protease. The inspected reports support enzyme inhibition but not a direct-binding classification.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
+
+
+
+<h2>Resistance mechanisms</h2>
+<p class="meta">1 known routes by which microbes
+resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
+type — expand a group to see its determinants.</p>
+<details class="details-group" open>
+  <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">1</span></summary>
+  <table>
+    <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Gene families</th><th scope="col">Note</th></tr></thead>
+    <tr>
+      <td>HCV NS3 V36, T54, R155, A156, and V170 resistance-associated substitutions</td>
+      <td>—</td>
+      <td class="meta">HCV NS3 serine protease</td>
+      <td class="meta">Replicon selection and susceptibility testing identified substitutions at these NS3 positions during boceprevir exposure; effects differed by substitution, with A156 substitutions producing the largest losses.</td>
+    </tr>
+  </table>
+</details>
 
 
 
 
 
-
-
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:18201776</span> <span class="meta">(Primary boceprevir target and resistance study.)</span></li>
+  <li><span class="meta">PMID:20004570</span> <span class="meta">(Primary boceprevir-series NS3 protease study.)</span></li>
+</ul>
 
 
 <h2>Curation history</h2>
@@ -141,6 +171,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI grounding, recorded structure including its source stereochemical limitation, antiviral class, and FDA assertion; replaced the seeded mechanism note with primary evidence and added the NS3/4A target plus target-alteration resistance.</p>
   </li>
 </ol>
 

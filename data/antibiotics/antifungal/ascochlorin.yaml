@@ -1,7 +1,7 @@
 identifier: CHEBI:156219
 label: ascochlorin
 antimicrobial_class: ANTIFUNGAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A dihydroxybenzaldehyde that is 2,4-dihydroxybenzaldehyde which is substituted
   by a (1E,3E)-3-methyl-1-[(1R,2R,6R)-1,2,6-trimethyl-3-oxocyclohexyl]penta-1,3-dien-5-yl
@@ -39,6 +39,13 @@ parent_compounds:
 activity_roles:
 - CHEBI:35718
 - CHEBI:35820
+mode_of_action: ENERGY_METABOLISM_INHIBITION
+mode_of_action_notes: 'CURATOR: PMID:20025846 measured ascochlorin inhibition of fungal,
+  bacterial, and mammalian cytochrome bc1 complexes and resolved ascochlorin at both
+  the Qi and Qo sites of chicken mitochondrial bc1. The combined kinetic, spectroscopic,
+  and crystallographic evidence supports dual-site respiratory-chain inhibition and
+  also shows that the target is host-shared.'
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H]C(=O)c1c(C)c(Cl)c(O)c(C/C=C(C)/C=C/[C@@]2(C)[C@H](C)CCC(=O)[C@@H]2C)c1O'
   standard_inchi: InChI=1S/C23H29ClO4/c1-13(10-11-23(5)14(2)7-9-19(26)16(23)4)6-8-17-21(27)18(12-25)15(3)20(24)22(17)28/h6,10-12,14,16,27-28H,7-9H2,1-5H3/b11-10+,13-6+/t14-,16+,23+/m1/s1
@@ -48,6 +55,20 @@ chemical_structure:
   charge: 0
   average_mass: 404.934
   monoisotopic_mass: 404.17544
+molecular_targets:
+- target_label: cytochrome bc1 complex Qi and Qo ubiquinone sites
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: Electron-transport assays used Pichia anomala mitochondria
+    and purified bacterial and bovine complexes; EPR/kinetic experiments and a chicken
+    bc1 crystal structure established occupation of both Qi and Qo sites.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2009-12
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:20025846
+    notes: Primary multi-system cytochrome-bc1 inhibition and cocrystal study (DOI:10.1016/j.bbabio.2009.12.003).
 xrefs:
 - cas:26166-39-2
 - knapsack:C00018754
@@ -61,6 +82,9 @@ source_concepts:
   - CHEBI:35718
   - CHEBI:35820
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:20025846
+  notes: Primary ascochlorin dual-site cytochrome-bc1 mechanism study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -74,3 +98,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T22:58:05Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, antifungal/antiprotozoal roles,
+    and antifungal filing class; added dual-site respiratory-chain inhibition and
+    direct cytochrome-bc1 target evidence with host-shared scope.
+  llm_assisted: true
