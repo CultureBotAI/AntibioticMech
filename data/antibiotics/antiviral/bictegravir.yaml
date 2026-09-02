@@ -1,7 +1,7 @@
 identifier: CHEBI:172943
 label: bictegravir
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A monocarboxylic acid amide obtained by formal condensation of the carboxy
   group of (2R,5S,13aR)-8-hydroxy-7,9-dioxo-2,3,4,5,7,9,13,13a-octahydro-2,5-methanopyrido[1',2':4,5]pyrazino[2,1-b][1,3]oxazepine-10-carboxylic
@@ -33,10 +33,10 @@ parent_compounds:
 activity_roles:
 - CHEBI:67268
 mode_of_action: VIRAL_INTEGRASE_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:67268 (HIV-1 integrase inhibitor).
-  ChEBI asserts the role on the compound. The role names a target specific to the
-  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
-  review.
+mode_of_action_notes: 'CURATOR: PMID:27645238 measured inhibition of HIV-1 integrase
+  strand transfer (IC50 7.5 +/- 0.3 nM), inhibition of viral integration in cells,
+  and nanomolar antiviral activity. This establishes a target-associated integrase
+  mechanism but is not represented as a direct physical-binding measurement.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@@]12CC[C@@]([H])(C1)N1C(=O)c3c(O)c(=O)c(C(=O)NCc4c(F)cc(F)cc4F)cn3C[C@@]1([H])O2'
@@ -47,6 +47,21 @@ chemical_structure:
   charge: 0
   average_mass: 449.385
   monoisotopic_mass: 449.11986
+molecular_targets:
+- target_label: HIV-1 integrase strand-transfer activity
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: Biochemical strand-transfer inhibition and cellular HIV-1
+    integration assays; the abstract reports an IC50 of 7.5 +/- 0.3 nM for strand-transfer
+    activity.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2016-11
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:27645238
+    notes: Primary compound-specific biochemical, cellular, activity, and resistance-profile
+      study.
 xrefs:
 - cas:1611493-60-7
 - chemspider:44208822
@@ -62,6 +77,20 @@ source_concepts:
   role_terms:
   - CHEBI:67268
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:27645238
+  notes: Primary mechanism, antiviral-activity, and in-vitro resistance-profile study.
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: HIV-1 integrase M50I/R263K substitutions
+  gene_families:
+  - HIV-1 integrase
+  note: The dual integrase substitutions were selected during in-vitro dose escalation
+    and produced 2.8-fold reduced bictegravir susceptibility relative to wild-type
+    virus.
+  evidence:
+  - reference: PMID:27645238
+    notes: Primary in-vitro selection and phenotypic-susceptibility study.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -75,3 +104,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:47:17Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, and antiviral class; curator-confirmed
+    HIV-1 integrase strand-transfer inhibition and added the measured target association
+    and selected target-alteration resistance with primary evidence.
+  llm_assisted: true

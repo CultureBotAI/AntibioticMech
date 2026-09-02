@@ -1,7 +1,7 @@
 identifier: CHEBI:173104
 label: narlaprevir
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An azabicyclohexane that is (1R,5S)-6,6-dimethyl-3-azabicyclo[3.1.0]hexane
   substituted by [(3S)-1-(cyclopropylamino)-1,2-dioxoheptan-3-yl]aminoacyl and N-({1-[(tert-butylsulfonyl)methyl]cyclohexyl}carbamoyl)-3-methyl-L-valyl
@@ -49,10 +49,10 @@ activity_roles:
 - CHEBI:149553
 - CHEBI:36044
 mode_of_action: VIRAL_PROTEASE_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:147285 (EC 3.4.22.69 (SARS coronavirus
-  main proteinase) inhibitor), CHEBI:64924 (hepatitis C protease inhibitor). ChEBI
-  asserts the role on the compound. The role names a target specific to the microbe
-  or virus — see mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:24900178 reports the compound-specific discovery
+  and potency optimization of narlaprevir as an HCV NS3 serine-protease inhibitor.
+  PMID:24168257 identified NS3 resistance-associated substitutions during treatment
+  and measured a smaller viral-load decline in participants carrying them.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@@]12[C@@H](C(=O)N[C@@H](CCCC)C(=O)C(=O)NC3CC3)N(C(=O)[C@@H](NC(=O)NC3(CS(=O)(=O)C(C)(C)C)CCCCC3)C(C)(C)C)C[C@]1([H])C2(C)C'
@@ -63,6 +63,20 @@ chemical_structure:
   charge: 0
   average_mass: 707.979
   monoisotopic_mass: 707.42917
+molecular_targets:
+- target_label: hepatitis C virus NS3/4A serine protease
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: Compound-discovery enzyme-potency and antiviral optimization;
+    the inspected abstract identifies the target but does not establish a direct compound-bound
+    structure.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2010-02
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:24900178
+    notes: Primary medicinal-chemistry discovery and target-potency report.
 xrefs:
 - cas:865466-24-6
 - chemspider:10031710
@@ -80,6 +94,22 @@ source_concepts:
   - CHEBI:149553
   - CHEBI:36044
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:24900178
+  notes: Primary narlaprevir discovery and HCV NS3 target study.
+- reference: PMID:24168257
+  notes: Primary longitudinal clinical viral-sequence and resistance study.
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: HCV NS3 V36, T54, R155, and A156 resistance-associated substitutions
+  gene_families:
+  - HCV NS3 serine protease
+  note: Longitudinal clonal sequencing detected substitutions at these NS3 positions
+    during narlaprevir exposure; participants with detected substitutions had a smaller
+    viral-load decline, and R155K persisted in two participants for 3.1 years.
+  evidence:
+  - reference: PMID:24168257
+    notes: Primary treatment-exposure, clonal-sequencing, and viral-load study.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -93,3 +123,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:50:59Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, and antiviral class; replaced
+    the mixed SARS/HCV seed rationale with narlaprevir-specific HCV NS3/4A evidence
+    and added target-alteration resistance observed during treatment.
+  llm_assisted: true

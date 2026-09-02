@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:65484</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_65484">resolve</a>  <span class="sep">·</span><a href="../class/antiviral.html">ANTIVIRAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A pentacyclic triterpenoid obtained by the formal condensation of 2,2-dimethylsuccinic acid with the 3-hydroxy group of betulinic acid. It is isolated from the Chinese herb Syzygium claviflorum. The first in the class of HIV-1 maturation inhibitors to be studied in humans, bevirimat was identified as a potent HIV drug candidate and several clinical trials were conducted, but development into a new drug was plagued by numerous resistance-related problems.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
@@ -82,17 +79,50 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+<h2>Molecular targets</h2>
+<p class="meta">The molecular entity or process this compound acts on. Each target
+carries evidence — this is a mechanistic claim, not a classification.</p>
+<h3>HIV-1 Gag CA-SP1 cleavage-site region in immature particles <span class="pill plain">VIRAL_PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">Photoaffinity bevirimat analog crosslinking in immature virus-like particles and mass spectrometry mapped interactions at or near CA-SP1 and in the major homology region. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2011-12 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:22151792</span> <span class="meta">(Primary direct-interaction mapping study in immature Gag particles.)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>VIRAL_ASSEMBLY_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— Assigned from ChEBI role CHEBI:71168 (HIV-1 maturation inhibitor). ChEBI asserts the role on the compound. The role names a target specific to the microbe or virus — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd></dl>
+<dt>Mode of action</dt><dd>VIRAL_ASSEMBLY_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: PMID:22151792 used bevirimat photoaffinity analogs and mass spectrometry to demonstrate direct binding in immature HIV-1 Gag at or near the CA-SP1 cleavage site. This blocks the final protease-mediated Gag cleavage and produces immature, noninfectious particles; it does not inhibit the viral protease active site.</span></dd></dl>
+
+
+
+<h2>Resistance mechanisms</h2>
+<p class="meta">1 known routes by which microbes
+resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
+type — expand a group to see its determinants.</p>
+<details class="details-group" open>
+  <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">1</span></summary>
+  <table>
+    <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Gene families</th><th scope="col">Note</th></tr></thead>
+    <tr>
+      <td>HIV-1 Gag CA-SP1 cleavage-site substitutions</td>
+      <td>—</td>
+      <td class="meta">HIV-1 Gag CA-SP1</td>
+      <td class="meta">Resistance substitutions cluster at or near the CA-SP1 cleavage site. SP1-A1V remained robustly replicative under bevirimat, while SP1-V7A caused high-level resistance and V7M or T8 deletion caused intermediate resistance.</td>
+    </tr>
+  </table>
+</details>
 
 
 
 
 
-
-
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:22151792</span> <span class="meta">(Primary direct-target and maturation-mechanism study.)</span></li>
+  <li><span class="meta">PMID:19279107</span> <span class="meta">(Primary in-vitro resistance-evolution study.)</span></li>
+  <li><span class="meta">PMID:20406463</span> <span class="meta">(Primary CA-SP1 polymorphism and susceptibility study.)</span></li>
+</ul>
 
 
 <h2>Curation history</h2>
@@ -111,6 +141,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI identity, structure, and antiviral class; added direct HIV-1 Gag CA-SP1 binding, the maturation mechanism, and compound-specific target-alteration resistance evidence.</p>
   </li>
 </ol>
 

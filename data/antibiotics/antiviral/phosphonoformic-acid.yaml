@@ -1,7 +1,7 @@
 identifier: CHEBI:127780
 label: phosphonoformic acid
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: Phosphoric acid in which one of the hydroxy groups is replaced by a carboxylic
   acid group. It is used as the trisodium salt as an antiviral agent in the treatment
@@ -43,10 +43,11 @@ activity_roles:
 - CHEBI:36044
 - CHEBI:53756
 mode_of_action: VIRAL_POLYMERASE_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:53756 (HIV-1 reverse transcriptase
-  inhibitor). ChEBI asserts the role on the compound. The role names a target specific
-  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
-  review.
+mode_of_action_notes: 'CURATOR: PMID:21566148 visualized phosphonoformic acid in the
+  active site of an engineered family-B DNA polymerase carrying human cytomegalovirus
+  UL54 elements. It supports pyrophosphate mimicry and trapping of an untranslocated
+  closed polymerase state, while the structure itself is a UL54-sensitive chimera
+  rather than native UL54.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: O=C(O)P(=O)(O)O
@@ -57,6 +58,22 @@ chemical_structure:
   charge: 0
   average_mass: 126.004
   monoisotopic_mass: 125.97181
+molecular_targets:
+- target_label: viral family-B DNA polymerase active site
+  target_type: VIRAL_PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: Crystal structures used a bacteriophage RB69 polymerase engineered
+    with variable elements from human cytomegalovirus UL54. The compound was resolved
+    in the active site; this is a mechanistic model for UL54 inhibition, not a native-UL54
+    structure.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2011-05
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:21566148
+    notes: Primary structural and biochemical mechanism study with an explicit chimeric-polymerase
+      limitation.
 xrefs:
 - cas:4428-95-9
 - drugbank:DB00529
@@ -76,6 +93,9 @@ source_concepts:
   - CHEBI:36044
   - CHEBI:53756
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:21566148
+  notes: Primary polymerase active-site structure and inhibition-mechanism study.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -89,3 +109,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:47:14Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, and antiviral class; curator-confirmed
+    viral polymerase inhibition and added a directly observed active-site target with
+    the chimeric-model limitation.
+  llm_assisted: true

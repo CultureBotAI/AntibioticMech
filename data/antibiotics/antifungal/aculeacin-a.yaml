@@ -1,7 +1,7 @@
 identifier: CHEBI:2450
 label: aculeacin A
 antimicrobial_class: ANTIFUNGAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A lipopeptide that is isolated from Aspergillus aculeatus and exhibits
   antifungal activity.
@@ -19,6 +19,14 @@ parent_compounds:
 activity_roles:
 - CHEBI:33281
 - CHEBI:35718
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_notes: 'CURATOR: PMID:324960 showed reduced incorporation of glucose
+  into Saccharomyces cerevisiae cell-wall glucan, and PMID:7042671 showed preferential
+  inhibition of alkali-insoluble glucan and beta-1,3-glucan synthesis from UDP-glucose
+  in Candida albicans and S. cerevisiae extracts. These experiments support fungal
+  cell-wall synthesis inhibition without establishing direct binding to a defined
+  synthase subunit.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CCCCCCCCCCCCCCCC(=O)N[C@H]1C[C@@H](O)[C@@H](O)NC(=O)[C@@H]2[C@@H](O)[C@@H](C)CN2C(=O)[C@H]([C@H](O)CC(N)=O)NC(=O)[C@H]([C@H](O)[C@@H](O)c2ccc(O)cc2)NC(=O)[C@@H]2C[C@@H](O)CN2C(=O)[C@H]([C@@H](C)O)NC1=O
   standard_inchi: InChI=1S/C51H82N8O17/c1-4-5-6-7-8-9-10-11-12-13-14-15-16-17-37(66)53-32-23-35(64)47(72)57-49(74)41-42(67)27(2)25-59(41)51(76)39(34(63)24-36(52)65)55-48(73)40(44(69)43(68)29-18-20-30(61)21-19-29)56-46(71)33-22-31(62)26-58(33)50(75)38(28(3)60)54-45(32)70/h18-21,27-28,31-35,38-44,47,60-64,67-69,72H,4-17,22-26H2,1-3H3,(H2,52,65)(H,53,66)(H,54,70)(H,55,73)(H,56,71)(H,57,74)/t27-,28+,31+,32-,33-,34+,35+,38-,39-,40-,41-,42-,43-,44-,47+/m0/s1
@@ -28,6 +36,32 @@ chemical_structure:
   charge: 0
   average_mass: 1079.256
   monoisotopic_mass: 1078.57979
+biosynthesis_origin: NATURAL_PRODUCT
+producer_organisms:
+- taxon_id: NCBITaxon:5053
+  taxon_label: Aspergillus aculeatus
+  strain: M-4214
+  source: PRIMARY_LITERATURE
+  note: Aculeacin A was isolated from the mycelial cake and chemically characterized;
+    the paper does not report a biosynthetic gene cluster.
+  reference: PMID:324959
+molecular_targets:
+- target_label: beta-1,3-glucan synthase reaction
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: Whole-cell and cell-free experiments in Saccharomyces cerevisiae
+    and Candida albicans measured reduced cell-wall glucan synthesis. No direct binding
+    to a molecularly defined glucan-synthase subunit was established.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1977-04; 1982-02
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:324960
+    notes: Primary whole-cell mechanism study in S. cerevisiae.
+  - reference: PMID:7042671
+    notes: Primary whole-cell and cell-free mechanism study in C. albicans and S.
+      cerevisiae.
 xrefs:
 - cas:58814-86-1
 - kegg.compound:C01776
@@ -43,6 +77,14 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:324959
+  notes: Primary isolation, chemical characterization, producer, and antifungal-spectrum
+    report.
+- reference: PMID:324960
+  notes: Primary fungal cell-wall mode-of-action study.
+- reference: PMID:7042671
+  notes: Primary beta-glucan-synthesis mechanism study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -56,3 +98,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:47:10Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, and antifungal class; added primary-evidence
+    fungal cell-wall/beta-glucan mechanism, the reported Aspergillus aculeatus M-4214
+    producer, and record evidence.
+  llm_assisted: true

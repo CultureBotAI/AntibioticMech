@@ -305,10 +305,10 @@ multi-component` lists what has two or more distinct large fragments and leaves
 the judgement to a curator.
 ## Producer organisms
 
-`producer_organisms` is the corpus's largest empty axis: 4 records of 2,911 carry
-one, three from the MIBiG import and one from primary-literature curation. The
-signal is sitting in the definitions — 997
-records with none use a phrase that may introduce a producer, and 797 of those
+`producer_organisms` is the corpus's largest empty axis: 6 records of 2,911 carry
+one, three from the MIBiG import and three from primary-literature curation. The
+signal is sitting in the definitions — 995
+records with none use a phrase that may introduce a producer, and 795 of those
 are followed by a binomial.
 
 **That is a queue, not an extraction.** A taxon in a definition may be the

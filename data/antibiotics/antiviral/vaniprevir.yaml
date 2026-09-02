@@ -1,7 +1,7 @@
 identifier: CHEBI:136047
 label: vaniprevir
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An azamacrocyclic compound that is a hepatitis C virus (HCV) NS3/4A protease
   inhibitor which is approved for the treatment of hepatitis C virus infections in
@@ -38,10 +38,11 @@ parent_compounds:
 activity_roles:
 - CHEBI:36044
 mode_of_action: VIRAL_PROTEASE_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:64924 (hepatitis C protease inhibitor).
-  ChEBI asserts the role on the compound. The role names a target specific to the
-  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
-  review.
+mode_of_action_notes: 'CURATOR: PMID:19841155 measured subnanomolar inhibition of
+  HCV genotype 1a and 1b NS3/4A proteases by MK-7009 (vaniprevir), plus potent HCV
+  replicon activity and selectivity against human proteases. PMID:23747481 confirmed
+  antiviral activity in people with genotype 1 infection and identified resistance-associated
+  NS3 variants.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@@]12CN(C(=O)[C@]([H])(C(C)(C)C)NC(=O)OCC(C)(C)CCCCc3cccc4c3CN(C4)C(=O)O1)[C@]([H])(C(=O)N[C@]1(C(=O)NS(=O)(=O)C3CC3)C[C@@]1([H])CC)C2'
@@ -52,6 +53,20 @@ chemical_structure:
   charge: 0
   average_mass: 757.951
   monoisotopic_mass: 757.37205
+molecular_targets:
+- target_label: hepatitis C virus NS3/4A protease
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: Purified genotype 1a, 1b, 2a, and 2b protease inhibition and
+    cell-based HCV replicon assays; no compound-bound structure was reported in the
+    inspected abstract.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2009-10
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:19841155
+    notes: Primary compound-specific enzyme, replicon, and selectivity study.
 xrefs:
 - cas:923590-37-8
 - chemspider:28475381
@@ -68,6 +83,21 @@ source_concepts:
   role_terms:
   - CHEBI:36044
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:19841155
+  notes: Primary preclinical target and activity study.
+- reference: PMID:23747481
+  notes: Primary short-course clinical antiviral and resistance study.
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: HCV NS3 R155 and D168 resistance-associated variants
+  gene_families:
+  - HCV NS3/4A protease
+  note: Variants at NS3 positions R155 and D168 were identified after eight days of
+    vaniprevir monotherapy in participants with HCV genotype 1a infection.
+  evidence:
+  - reference: PMID:23747481
+    notes: Primary randomized dose-ranging monotherapy study.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -81,3 +111,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:54:27Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, and antiviral class; added compound-specific
+    HCV NS3/4A inhibition, the measured viral target, and treatment-emergent target-alteration
+    resistance evidence.
+  llm_assisted: true

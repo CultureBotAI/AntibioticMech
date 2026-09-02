@@ -1,7 +1,7 @@
 identifier: CHEBI:15353
 label: blasticidin S
 antimicrobial_class: ANTIFUNGAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A blasticidin that is an antibiotic obtained from Streptomyces griseochromogene.
 definition_source: ChEBI
@@ -24,10 +24,12 @@ activity_roles:
 - CHEBI:33281
 - CHEBI:35718
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:23824292 determined a 3.4-A structure of blasticidin
+  S bound to a 70S-tRNA ribosome complex and used biochemical and single-molecule
+  FRET assays to show stabilization of a deformed P-site tRNA, strongly inhibiting
+  release-factor hydrolysis and more weakly inhibiting peptide-bond formation. The
+  HOST_SHARED_TARGET scope is retained because the paper reports inhibition in bacteria
+  and eukaryotes.'
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H][C@]1(n2ccc(N)nc2=O)C=C[C@H](NC(=O)C[C@@H](N)CCN(C)C(=N)N)[C@@]([H])(C(=O)O)O1'
@@ -38,6 +40,27 @@ chemical_structure:
   charge: 0
   average_mass: 422.446
   monoisotopic_mass: 422.20262
+biosynthesis_origin: NATURAL_PRODUCT
+producer_organisms:
+- taxon_id: NCBITaxon:68214
+  taxon_label: Streptomyces griseochromogenes
+  source: PRIMARY_LITERATURE
+  note: The blasticidin S biosynthesis cluster was cloned from this species and heterologously
+    expressed in Streptomyces lividans.
+  reference: PMID:12964155
+molecular_targets:
+- target_label: 70S ribosome P-site tRNA complex
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: A 3.4-A compound-ribosome crystal structure, biochemical assays,
+    and single-molecule FRET showed stabilization of a deformed P-site tRNA conformation.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2013-07
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:23824292
+    notes: Primary compound-ribosome structure and translation-mechanism study.
 xrefs:
 - cas:2079-00-7
 - hmdb:HMDB0030452
@@ -60,6 +83,11 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:12964155
+  notes: Primary biosynthetic-cluster and producer study.
+- reference: PMID:23824292
+  notes: Primary ribosome structure and translation-mechanism study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -73,3 +101,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:50:54Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, antifungal filing class, and
+    activity roles; added the direct 70S-tRNA ribosome target, translation mechanism,
+    natural-product origin, and documented producer.
+  llm_assisted: true

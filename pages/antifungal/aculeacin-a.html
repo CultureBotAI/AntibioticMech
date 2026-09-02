@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:2450</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_2450">resolve</a>  <span class="sep">·</span><a href="../class/antifungal.html">ANTIFUNGAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A lipopeptide that is isolated from Aspergillus aculeatus and exhibits antifungal activity.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
@@ -84,14 +81,48 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+<h2>Molecular targets</h2>
+<p class="meta">The molecular entity or process this compound acts on. Each target
+carries evidence — this is a mechanistic claim, not a classification.</p>
+<h3>beta-1,3-glucan synthase reaction <span class="pill plain">BIOLOGICAL_PROCESS</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">Whole-cell and cell-free experiments in Saccharomyces cerevisiae and Candida albicans measured reduced cell-wall glucan synthesis. No direct binding to a molecularly defined glucan-synthase subunit was established. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 1977-04; 1982-02 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:324960</span> <span class="meta">(Primary whole-cell mechanism study in S. cerevisiae.)</span></li>
+  <li><span class="meta">PMID:7042671</span> <span class="meta">(Primary whole-cell and cell-free mechanism study in C. albicans and S. cerevisiae.)</span></li>
+</ul>
+
+
+<h2>Mechanism summary</h2>
+<dl class="fields">
+<dt>Mode of action</dt><dd>CELL_WALL_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: PMID:324960 showed reduced incorporation of glucose into Saccharomyces cerevisiae cell-wall glucan, and PMID:7042671 showed preferential inhibition of alkali-insoluble glucan and beta-1,3-glucan synthesis from UDP-glucose in Candida albicans and S. cerevisiae extracts. These experiments support fungal cell-wall synthesis inhibition without establishing direct binding to a defined synthase subunit.</span></dd></dl>
 
 
 
 
+<h2>Producer organisms</h2>
+<p class="meta">Organisms that biosynthesize this compound.</p>
+<table>
+  <caption>Producer organisms</caption>
+  <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Source</th><th scope="col">Quality</th><th scope="col">Note</th><th scope="col">Reference</th></tr></thead>
+  <tr>
+    <td><em>Aspergillus aculeatus</em> <code class="curie">NCBITaxon:5053</code></td>
+    <td>—</td>
+    <td class="meta">PRIMARY_LITERATURE</td>
+    <td class="meta">—</td>
+    <td class="meta">Aculeacin A was isolated from the mycelial cake and chemically characterized; the paper does not report a biosynthetic gene cluster.</td>
+    <td class="meta">PMID:324959</td>
+  </tr>
+</table>
 
 
 
 
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:324959</span> <span class="meta">(Primary isolation, chemical characterization, producer, and antifungal-spectrum report.)</span></li>
+  <li><span class="meta">PMID:324960</span> <span class="meta">(Primary fungal cell-wall mode-of-action study.)</span></li>
+  <li><span class="meta">PMID:7042671</span> <span class="meta">(Primary beta-glucan-synthesis mechanism study.)</span></li>
+</ul>
 
 
 <h2>Curation history</h2>
@@ -110,6 +141,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI identity, structure, and antifungal class; added primary-evidence fungal cell-wall/beta-glucan mechanism, the reported Aspergillus aculeatus M-4214 producer, and record evidence.</p>
   </li>
 </ol>
 

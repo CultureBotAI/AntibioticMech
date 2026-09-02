@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:147346</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_147346">resolve</a>  <span class="sep">·</span><a href="../class/antiviral.html">ANTIVIRAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A secondary carboxamide resulting from the formal condensation of the carboxy group of N-[(benzyloxy)carbonyl]-O-tert-butyl-L-serine with the primary amino group of ethyl (2E,4S)-5-[(3S)-2-oxopyrrolidin-3-yl]-4-(L-phenylalanylamino)pent-2-enoate. It is a potent enterovirus 3C protease inhibitor with EC50 of 180 nM against enterovirus 71 (EV71) and 60 nM against human rhinovirus 14 in a live virus-cell-based assay.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
@@ -86,17 +83,51 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+<h2>Molecular targets</h2>
+<p class="meta">The molecular entity or process this compound acts on. Each target
+carries evidence — this is a mechanistic claim, not a classification.</p>
+<h3>picornavirus 3C protease <span class="pill plain">VIRAL_PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">Structure-guided inhibitor design included crystal structures of inhibitor complexes and inhibition of purified enterovirus 68 3C protease. SG85 was the most potent compound and also blocked enterovirus and rhinovirus replication. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2013-02 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:23388726</span> <span class="meta">(Primary structural, biochemical, and infected-cell study.)</span></li>
+  <li><span class="meta">PMID:26055377</span> <span class="meta">(Primary rhinovirus study; reverse genetics placed both required low-level-resistance substitutions in 3C protease.)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>VIRAL_PROTEASE_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— Assigned from ChEBI role CHEBI:147285 (EC 3.4.22.69 (SARS coronavirus main proteinase) inhibitor). ChEBI asserts the role on the compound. The role names a target specific to the microbe or virus — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd></dl>
+<dt>Mode of action</dt><dd>VIRAL_PROTEASE_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: PMID:23388726 reports structure-guided design, crystal structures of inhibitor complexes with enterovirus 68 3C protease, purified-protease inhibition, and SG85 activity against multiple picornaviruses. PMID:26055377 independently linked SG85 resistance substitutions to rhinovirus 3C protease by reverse genetics.</span></dd></dl>
+
+
+
+<h2>Resistance mechanisms</h2>
+<p class="meta">1 known routes by which microbes
+resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
+type — expand a group to see its determinants.</p>
+<details class="details-group" open>
+  <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">1</span></summary>
+  <table>
+    <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Gene families</th><th scope="col">Note</th></tr></thead>
+    <tr>
+      <td>rhinovirus 3C protease S127G and T143A substitutions</td>
+      <td>—</td>
+      <td class="meta">picornavirus 3C protease</td>
+      <td class="meta">Both substitutions were required for the low-level SG85 resistance phenotype selected in vitro and confirmed by reverse genetics.</td>
+    </tr>
+  </table>
+</details>
 
 
 
 
 
-
-
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:23388726</span> <span class="meta">(Primary SG85 design, target, and antiviral-activity study.)</span></li>
+  <li><span class="meta">PMID:25199773</span> <span class="meta">(Primary in-vitro activity study across 21 enterovirus 71 strains or isolates.)</span></li>
+  <li><span class="meta">PMID:26055377</span> <span class="meta">(Primary rhinovirus activity and target-linked resistance study.)</span></li>
+</ul>
 
 
 <h2>Curation history</h2>
@@ -115,6 +146,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI identity, structure, and antiviral class; replaced the mismatched SARS-coronavirus role rationale with compound-specific picornavirus 3C-protease evidence, added the target, and captured target-alteration resistance demonstrated by reverse genetics.</p>
   </li>
 </ol>
 
