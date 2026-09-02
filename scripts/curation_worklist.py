@@ -219,7 +219,7 @@ def aro_class_queue(records: list[dict], conf: dict | None = None) -> list[dict]
     """ARO-fallback records whose own definition names another target group.
 
     A molecule in CARD's antibiotic subtree is there for a bacterial reason, so
-    the fallback files it ANTIBACTERIAL — right for 257 of the 278 records it
+    the fallback files it ANTIBACTERIAL — right for 255 of the 276 records it
     reaches. For the rest CARD's own definition says otherwise, and until this
     queue existed nothing surfaced them: triflumizole sat under ANTIBACTERIAL
     while its ChEBI-grounded twin sat under ANTIFUNGAL, one compound in two
@@ -472,6 +472,46 @@ def excluded_queue() -> list[dict]:
     return out
 
 
+def crossref_conflict_queue() -> list[dict]:
+    """CARD->ChEBI links the seeder refused to trust, and why.
+
+    A refused cross-reference costs the concept its roles, its structure and its
+    EXACT grounding, which is a large silent consequence for a link a curator
+    never sees. `ARO:3000337 iclaprim -> CHEBI:31724 Isoaminile citrate` is the
+    link the gate was built for (#133); the record it produced published one
+    compound's name over another's structure, grounded EXACT, with every gate
+    green.
+
+    Recomputed from the committed inventories rather than read from seeder state,
+    so it reports what the sources say today rather than what some run happened
+    to observe.
+    """
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from seed_from_sources import RAW_DIR, crossref_conflict, load_tsv
+
+    chebi = {row["chebi_id"]: row for row in load_tsv(RAW_DIR / "chebi_antimicrobials.tsv")}
+    out = []
+    for row in load_tsv(RAW_DIR / "aro_antibiotics.tsv"):
+        chebi_id = next((x for x in (row.get("xrefs") or "").split("|")
+                         if x.startswith("CHEBI:")), "")
+        target = chebi.get(chebi_id)
+        if not target:
+            continue
+        reason = crossref_conflict(row, target)
+        if reason:
+            out.append({
+                "queue": "crossref-conflict",
+                "key": row["aro_id"],
+                "label": row["name"],
+                "source": "ARO",
+                "source_id": row["aro_id"],
+                "hint": reason,
+            })
+    out.sort(key=lambda r: r["label"].lower())
+    return out
+
+
 def unknown_mechanism_queue(records: list[dict]) -> list[dict]:
     """Determinants seeded with mechanism_type UNKNOWN.
 
@@ -542,7 +582,8 @@ def main() -> int:
                         choices=("all", "no-structure", "mechanism", "minted", "unknown-mech",
                                  "moa-scope", "target-evidence", "aro-class",
                                  "xref-unverified", "multi-component",
-                                 "producer-candidate", "excluded"),
+                                 "producer-candidate", "excluded",
+                                 "crossref-conflict"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
     parser.add_argument("--tsv", type=Path, help="Write every row (not just --limit) to this TSV.")
@@ -570,6 +611,8 @@ def main() -> int:
         queues["producer-candidate"] = producer_candidate_queue(records)
     if args.queue in ("all", "excluded"):
         queues["excluded"] = excluded_queue()
+    if args.queue in ("all", "crossref-conflict"):
+        queues["crossref-conflict"] = crossref_conflict_queue()
     if args.queue in ("all", "target-evidence"):
         queues["target-evidence"] = target_evidence_queue(records)
 

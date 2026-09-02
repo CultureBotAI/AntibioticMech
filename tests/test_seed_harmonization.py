@@ -1237,3 +1237,158 @@ def test_the_moa_scope_queue_lists_every_state_it_claims_to():
     assert not queued(rec(mode_of_action="PROTEIN_SYNTHESIS_INHIBITION",
                           mode_of_action_notes="Assigned from ChEBI role CHEBI:48001 (x).",
                           mode_of_action_target_scope="HOST_SHARED_TARGET"))
+
+
+# --------------------------------------------------------------------------
+# CARD -> ChEBI cross-reference trust (#133, #162, #163)
+# --------------------------------------------------------------------------
+
+def _aro(name, cas, chebi_id="CHEBI:1"):
+    xrefs = "|".join(filter(None, (f"CAS:{cas}" if cas else "", chebi_id)))
+    return {"aro_id": "ARO:1", "name": name, "xrefs": xrefs}
+
+
+def _chebi(name, cas, chebi_id="CHEBI:1"):
+    return {"chebi_id": chebi_id, "name": name, "xrefs": f"cas:{cas}"}
+
+
+def test_a_crossref_is_refused_only_when_two_identifiers_disagree():
+    """Name OR CAS alone is not evidence; both together is.
+
+    Measured against the committed inventories: name disagreement alone matches
+    29 links and nearly all are legitimate (rifampin/rifampicin, systematic vs
+    common names); CAS disagreement alone matches 2, one being cycloheximide
+    where both rows mean the same compound under different registrations. The
+    intersection is exactly one link — the iclaprim/Isoaminile citrate defect
+    this gate exists for.
+    """
+    from seed_from_sources import crossref_conflict
+
+    # The defect: different names AND different registry numbers.
+    assert crossref_conflict(_aro("iclaprim", "192314-93-5"),
+                             _chebi("Isoaminile citrate", "28416-66-2"))
+
+    # Same compound, different registrations — cycloheximide. Must stay quiet,
+    # or the gate deletes a correct antifungal record.
+    assert not crossref_conflict(_aro("cycloheximide", "4630-75-5"),
+                                 _chebi("cycloheximide", "66-81-9"))
+
+    # Different names, same registry number — a synonym pair. Quiet.
+    assert not crossref_conflict(_aro("rifampin", "13292-46-1"),
+                                 _chebi("rifampicin", "13292-46-1"))
+
+    # Containment, not equality: naming at different precision is not conflict.
+    assert not crossref_conflict(_aro("polymyxin B", "1404-26-8"),
+                                 _chebi("polymyxin B1", "4135-11-9"))
+
+    # One side missing a CAS leaves only one signal, which is not enough. This
+    # is the azimycin/dexamethasone case (#162), which the gate cannot reach and
+    # which a curator decision handles instead.
+    assert not crossref_conflict(_aro("azimycin", ""),
+                                 _chebi("dexamethasone", "50-02-2"))
+
+    # A bare "CAS:" with no number is not a CAS.
+    assert not crossref_conflict({"aro_id": "ARO:1", "name": "azimycin",
+                                  "xrefs": "CAS:|CHEBI:1"},
+                                 _chebi("dexamethasone", "50-02-2"))
+
+
+def test_the_refused_crossref_grants_nothing(tmp_path):
+    """A refused link must cost roles, structure AND EXACT grounding.
+
+    Dropping only the structure would leave the record grounded to the wrong
+    ChEBI id; dropping only the identity would leave someone else's roles on it.
+    """
+    from seed_from_sources import Concept, resolve_identity
+
+    concept = Concept("ARO", "ARO:3000337", "iclaprim")
+    concept.xrefs = ["CHEBI:31724", "cas:192314-93-5"]
+    rows = {"CHEBI:31724": {"standard_inchi_key": "ZXASMEUEMIIBDZ-UHFFFAOYSA-N"}}
+    assert resolve_identity(concept, rows) == ("CHEBI:31724", "EXACT")
+
+    # What the gate does: remove the untrusted xref. Identity must then mint.
+    concept.xrefs = [x for x in concept.xrefs if x != "CHEBI:31724"]
+    identifier, grounding = resolve_identity(concept, rows)
+    assert grounding == "MINTED" and identifier == concept.minted
+
+
+def test_sources_disagreeing_on_a_single_substance_identifier_withhold_it():
+    """CARD gave cefdinir iclaprim's CAS; publishing both asserts they are one."""
+    from seed_from_sources import Concept, contested_xrefs
+
+    grounded = Concept("CHEBI", "CHEBI:3485", "cefdinir")
+    grounded.xrefs = ["cas:91832-40-5"]
+    offered = Concept("ARO", "ARO:3000650", "cefdinir")
+    offered.xrefs = ["cas:192314-93-5", "kegg.drug:D00917"]
+
+    contested = contested_xrefs([grounded, offered])
+    assert contested == {"cas:192314-93-5"}, contested
+    assert "cas:91832-40-5" not in contested, "ChEBI leads on identity"
+    assert "kegg.drug:D00917" not in contested, "only single-substance namespaces"
+
+    # Agreement is not conflict.
+    offered.xrefs = ["cas:91832-40-5"]
+    assert contested_xrefs([grounded, offered]) == set()
+
+
+def test_the_seeder_actually_refuses_the_iclaprim_crossref():
+    """The WIRING, not the helper.
+
+    The first version of this asserted what `resolve_identity` does once the
+    xref has been removed by hand — which is a statement about a list, not about
+    the seeder. Deleting the line that removes it left every test green. This
+    runs `build_concepts` and reads the concept the pipeline actually produces.
+    """
+    import yaml as _yaml
+    from seed_from_sources import CONF_PATH, build_concepts, resolve_identity
+
+    conf = _yaml.safe_load(CONF_PATH.read_text(encoding="utf-8"))
+    concepts, chebi_rows = build_concepts(conf)
+    iclaprim = [c for c in concepts if c.source_id == "ARO:3000337"]
+    assert iclaprim, "ARO:3000337 left the inventory; re-point this test"
+    concept = iclaprim[0]
+
+    assert "CHEBI:31724" not in concept.xrefs, (
+        "the untrusted cross-reference is still published as an xref")
+    assert not concept.structure.get("standard_inchi_key"), (
+        "the refused link still handed over Isoaminile citrate's structure")
+    assert not concept.roles, "the refused link still handed over its roles"
+    assert resolve_identity(concept, chebi_rows)[1] == "MINTED", (
+        "the refused link still grounds the concept EXACT to the wrong entry")
+
+
+def test_build_record_withholds_a_contested_identifier():
+    """The WIRING for `contested_xrefs`, which was also asserted only in isolation."""
+    import yaml as _yaml
+    from seed_from_sources import CONF_PATH, Concept, build_record
+
+    conf = _yaml.safe_load(CONF_PATH.read_text(encoding="utf-8"))
+    grounded = Concept("CHEBI", "CHEBI:3485", "cefdinir")
+    grounded.xrefs = ["cas:91832-40-5"]
+    grounded.structure = {"standard_inchi_key": "RTXOFQZKPXMALH-GHXIOONMSA-N",
+                          "standard_inchi": "InChI=1S/x"}
+    offered = Concept("ARO", "ARO:3000650", "cefdinir")
+    offered.xrefs = ["cas:192314-93-5"]
+
+    record = build_record("CHEBI:3485", "EXACT", [grounded, offered], conf, "2026-09-02")
+    assert "cas:91832-40-5" in record["xrefs"]
+    assert "cas:192314-93-5" not in record["xrefs"], (
+        "a CAS the sources disagree about was published as an equivalence")
+
+
+def test_the_corpus_no_longer_carries_the_two_false_records():
+    """The records #133 and #162 describe, pinned by structure not by filename."""
+    import glob
+
+    import yaml
+
+    root = Path(__file__).resolve().parents[1]
+    for path in glob.glob(str(root / "data" / "antibiotics" / "**" / "*.yaml"),
+                          recursive=True):
+        record = yaml.safe_load(Path(path).read_text(encoding="utf-8"))
+        key = (record.get("chemical_structure") or {}).get("standard_inchi_key")
+        # Isoaminile citrate's structure must not be published under any label.
+        assert key != "ZXASMEUEMIIBDZ-UHFFFAOYSA-N", (
+            f"{path} carries Isoaminile citrate's structure (#133)")
+        assert record["identifier"] != "CHEBI:41879", (
+            f"{path} is dexamethasone, a corticosteroid (#162)")

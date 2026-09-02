@@ -44,9 +44,11 @@ def test_every_card_target_has_relation_type_context_and_ownership(records):
             if missing:
                 problems.append((path.name, target.get("target_label"), missing))
     assert problems == [], problems[:20]
-    # Three inventory edges collapse during record harmonization, matching the
-    # pre-audit corpus count recorded in issue #93.
-    assert sum(counts.values()) == 249
+    # Three inventory edges collapse during record harmonization; the count in
+    # issue #93 was 249, and is 248 since iclaprim's record was withdrawn (#133)
+    # — CARD's cross-reference put that DHFR target on Isoaminile citrate's
+    # structure, so the edge had nothing true to attach to.
+    assert sum(counts.values()) == 248
     assert counts["SUSCEPTIBILITY_DETERMINANT"] > 0
     assert counts["RESISTANCE_DETERMINANT"] > 0
     assert counts["REQUIRED_UPTAKE_OR_ACTIVATION_FACTOR"] > 0

@@ -223,6 +223,38 @@ DOCUMENT_XREF_PREFIXES = {"patent", "wikipedia.en"}
 # the undeclared-namespace assertion catches them then, which is the right time.
 DRUG_GRANULARITY_XREF_PREFIXES = {"drugbank", "kegg.drug", "drugcentral"}
 
+# Namespaces where one value identifies one substance, so two sources offering
+# DIFFERENT values for the same record contradict each other. CARD gave cefdinir
+# iclaprim's CAS and ChEMBL id verbatim (#163) -- a copy-paste in the upstream
+# row, published here as a same-substance claim between a cephalosporin and a
+# diaminopyrimidine. Publishing both values asserts they are one compound.
+#
+# The contested value is WITHHELD, not adjudicated: ChEBI leads on identity here
+# (the same rule the record's own identifier follows), so the ARO-supplied value
+# is the one held back and surfaced for a curator. Four records are affected and
+# only cefdinir's is an upstream error -- cycloheximide and framycetin carry
+# genuine alternate registrations for the same compound. Withholding is right in
+# all three cases for the same reason: the corpus should not publish an
+# equivalence its own sources disagree about.
+CONTESTABLE_XREF_PREFIXES = {"cas", "chembl"}
+
+
+def contested_xrefs(group: list) -> set[str]:
+    """Values in a single-substance namespace that the sources disagree about."""
+    by_namespace: dict[str, dict[str, set[str]]] = {}
+    for concept in group:
+        for xref in concept.xrefs:
+            namespace = xref.split(":", 1)[0].lower()
+            if namespace in CONTESTABLE_XREF_PREFIXES:
+                by_namespace.setdefault(namespace, {}).setdefault(concept.source, set()).add(xref)
+    contested: set[str] = set()
+    for per_source in by_namespace.values():
+        grounding = per_source.get("CHEBI", set())
+        offered = per_source.get("ARO", set())
+        if grounding and offered and not (grounding & offered):
+            contested |= offered
+    return contested
+
 # Namespaces that are SUPPOSED to be structure-exact and, in this corpus, are
 # not. Named because the alternative was a test that could not see them: an
 # earlier version checked only the namespaces already known to be coarse, so it
@@ -437,7 +469,7 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
        five compounds — reversing a priority conf/sources.yaml argues for
        explicitly. A default, never an override.
     5. **The ARO fallback**, ANTIBACTERIAL — for a CARD molecule with none of
-       the above. Right for 257 of the 278 records it reaches.
+       the above. Right for 255 of the 276 records it reaches.
 
     Step 3 is a CURATED MAP, not a text rule, and the distinction is the whole
     point: a regex for "fungal" flags ophiobolin A, whose definition reads
@@ -534,6 +566,17 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
         concept.aro_parents = split_pipe(row["parent_ids"])
         chebi_id = next((x for x in split_pipe(row["xrefs"]) if x.startswith("CHEBI:")), "")
         chebi_row = chebi_rows.get(chebi_id)
+        conflict = crossref_conflict(row, chebi_row) if chebi_row else ""
+        if conflict:
+            CROSSREF_CONFLICTS.append({
+                "aro_id": row["aro_id"], "aro_name": row["name"],
+                "chebi_id": chebi_id, "chebi_name": chebi_row["name"], "reason": conflict,
+            })
+            # Not trusted, so it grants nothing: no roles, no structure, and --
+            # by dropping the xref -- no EXACT grounding either, since
+            # resolve_identity reads the same list.
+            chebi_row = None
+            concept.xrefs = [x for x in concept.xrefs if x != chebi_id]
         # Roles and structure are independent facts about the cross-referenced
         # ChEBI entry. ChEBI can hold a compound with an antimicrobial role and
         # no default structure (miconazole, ketoconazole); reading the roles only
@@ -551,6 +594,76 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
     for concept in concepts:
         concept.minted = mint(concept.source, concept.source_id)
     return concepts, chebi_rows
+
+
+# --------------------------------------------------------------------------
+# CARD -> ChEBI cross-reference trust
+# --------------------------------------------------------------------------
+
+# An ARO row's CHEBI xref grants that ChEBI entry's roles, its structure AND
+# EXACT identity to the ARO concept. Nothing asked whether the two rows describe
+# the same substance, and CARD's do not always: ARO:3000337 "iclaprim" points at
+# CHEBI:31724 "Isoaminile citrate", a 2-star entry ChEBI gives no antimicrobial
+# role. The corpus published iclaprim's name over isoaminile citrate's structure,
+# grounded EXACT, and every gate passed because the corpus faithfully reproduced
+# a wrong input (#133).
+#
+# The gate is TWO INDEPENDENT IDENTIFIERS DISAGREEING. Either signal alone is
+# useless here, measured against the committed inventories:
+#
+#   name disagreement alone  29 links, and nearly all are legitimate --
+#                            rifampin/rifampicin, cefalexin/cephalexin,
+#                            dactinomycin/actinomycin D, and systematic names
+#                            such as hexaconazole / 2-(2,4-dichlorophenyl)-...
+#   CAS disagreement alone    2 links, one of which is cycloheximide, where both
+#                            rows mean the same compound and merely carry
+#                            different registrations
+#   BOTH                      1 link: iclaprim. No false positives.
+#
+# So a conflict is not "these look different" but "the two things CARD says
+# about this compound contradict each other". The cross-reference is then not
+# trusted for roles, structure or identity, and the concept falls back to
+# PubChem enrichment and a minted identifier -- which is what CARD alone can
+# support. The pair is surfaced on `just worklist --queue crossref-conflict`
+# rather than dropped silently.
+CROSSREF_CONFLICTS: list[dict] = []
+
+
+def _cas_numbers(raw: str) -> set[str]:
+    """CAS values, ignoring empty ones.
+
+    A bare `CAS:` with no number yielded {""} — a truthy set holding nothing,
+    which made "this row has a CAS" true and could fire the gate against a row
+    that supplies no registry number at all.
+    """
+    return {value for value in (v.split(":", 1)[1] for v in split_pipe(raw or "")
+                                if v.split(":", 1)[0].lower() == "cas") if value.strip()}
+
+
+def _comparable_name(label: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", (label or "").lower())
+
+
+def crossref_conflict(aro_row: dict, chebi_row: dict) -> str:
+    """Why CARD's link to this ChEBI entry cannot be trusted, or "" when it can.
+
+    Containment, not equality, decides the name test: "polymyxin B" against
+    "polymyxin B1" and "gentamicin A" against "gentamycin A" are the same
+    compound named at different precision, and flagging those would be noise.
+    """
+    aro_name = _comparable_name(aro_row.get("name"))
+    chebi_name = _comparable_name(chebi_row.get("name"))
+    if not (aro_name and chebi_name) or aro_name in chebi_name or chebi_name in aro_name:
+        return ""
+    aro_cas = _cas_numbers(aro_row.get("xrefs"))
+    chebi_cas = _cas_numbers(chebi_row.get("xrefs"))
+    if not (aro_cas and chebi_cas) or (aro_cas & chebi_cas):
+        return ""
+    return (f"CARD links {aro_row['aro_id']} ({aro_row['name']}) to "
+            f"{chebi_row['chebi_id']} ({chebi_row['name']}), but the names differ "
+            f"and the CAS numbers disagree "
+            f"({sorted(aro_cas)[0]} vs {sorted(chebi_cas)[0]}). "
+            "Cross-reference not trusted for roles, structure or identity.")
 
 
 def resolve_identity(concept: Concept, chebi_rows: dict[str, dict]) -> tuple[str, str]:
@@ -1053,10 +1166,12 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     # worse error than keeping one we have not checked.
     own_key = (structure or {}).get("standard_inchi_key")
     broader = set(parents)
+    contested = contested_xrefs(group)
     record["xrefs"] = [
         x for x in xrefs
         if x.split(":", 1)[0] not in NON_STRUCTURE_XREF_PREFIXES
         and x not in broader
+        and x not in contested
         and not (own_key and chebi_keys.get(x) and chebi_keys[x] != own_key)
     ]
     if not record["xrefs"]:
