@@ -94,7 +94,7 @@ records the sha256 of every upstream file and every emitted inventory.
 
 ## Skills
 
-`.claude/skills/` carries two workflows, both read-only by default:
+`.claude/skills/` carries three repository-specific workflows:
 
 - **`review-open-issues`** — sweep and rank the whole open-issue queue against
   the committed corpus. Its P0 tier is specific to this repository: something
@@ -102,8 +102,15 @@ records the sha256 of every upstream file and every emitted inventory.
   passes, every one of them with `just qc` green.
 - **`source-queue`** — triage `curation/source_queue.tsv`, the ranked list of
   data sources this corpus might adopt.
+- **`curate-yaml-record`** — review and, when explicitly asked, improve one
+  antibiotic YAML record by checking identity and scientific claims, adding
+  claim-level evidence, assessing completeness, and resolving supportable gaps.
+  It writes records only through the validated curation-event path.
 
-Neither closes issues, adopts sources, or edits the corpus. Those are asks.
+The issue and source-queue workflows do not close issues, adopt sources, or edit
+the corpus. The record-curation workflow is read-only for an audit request and
+may edit the named record only when the user asks to curate or improve it. None
+of the skills sends messages or mutates GitHub without explicit authorization.
 
 ## Adopting a data source
 
