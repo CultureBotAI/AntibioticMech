@@ -180,6 +180,65 @@ def test_the_seeder_migrates_a_pdb_xref_and_classifies_nothing():
     assert "pdb-ccd:AIC" in record["xrefs"]
 
 
+def test_a_curator_addition_does_not_break_reproduction():
+    """The field's whole purpose is curation, and the first curated item broke it.
+
+    `seeded_structural_view` compared EVERY observation, so adding one made
+    `just verify-corpus` fail and stay failing — the defect #65 records, in a new
+    field. It now compares only the slice the seeder writes, the same way
+    card_sourced_view and mibig_sourced_producer_view do (#173).
+    """
+    from seed_from_sources import seeded_structural_view
+
+    seeded = {"structural_observations": [
+        {"structure_id": "PDB:1H8S", "source": "CHEBI"}]}
+    curated = {"structural_observations": [
+        # a curator classified the seeded one ...
+        {"structure_id": "PDB:1H8S", "source": "CHEBI", "relevance": "ANTIBODY_COMPLEX"},
+        # ... and added their own
+        {"structure_id": "PDB:9XYZ", "source": "curator", "relevance": "TARGET_COMPLEX"}]}
+    assert seeded_structural_view(seeded) == seeded_structural_view(curated)
+
+    # But a seeded observation may not vanish, and one may not be forged under
+    # the seeder's provenance.
+    deleted = {"structural_observations": []}
+    assert seeded_structural_view(seeded) != seeded_structural_view(deleted)
+    forged = {"structural_observations": [
+        {"structure_id": "PDB:1H8S", "source": "CHEBI"},
+        {"structure_id": "PDB:9XYZ", "source": "CHEBI"}]}
+    assert seeded_structural_view(seeded) != seeded_structural_view(forged)
+
+
+def test_a_malformed_accession_is_skipped_not_emitted():
+    """One bad upstream xref must not cost a whole record.
+
+    write_validated_antibiotic validates the entire record, so emitting a
+    malformed `structure_id` made an otherwise good compound unwritable (#174).
+    """
+    from seed_from_sources import (
+        MALFORMED_STRUCTURE_IDS,
+        STRUCTURE_ID_PATTERN,
+        Concept,
+        structural_observations,
+    )
+
+    MALFORMED_STRUCTURE_IDS.clear()
+    concept = Concept("CHEBI", "CHEBI:1", "x")
+    concept.xrefs = ["pdb:NOTANID", "pdb:12", "pdb:1h8s"]
+    emitted = structural_observations([concept], "v", "d")
+    assert [o["structure_id"] for o in emitted] == ["PDB:1H8S"], emitted
+    assert len(MALFORMED_STRUCTURE_IDS) == 2, MALFORMED_STRUCTURE_IDS
+
+    # The migration and the schema must enforce the SAME shape, or a value the
+    # migration accepts is one the write gate rejects.
+    schema = yaml.safe_load(
+        (REPO_ROOT / "src" / "antibioticmech" / "schema" / "antibioticmech.yaml"
+         ).read_text(encoding="utf-8"))
+    declared = schema["classes"]["StructuralObservation"]["attributes"]["structure_id"]["pattern"]
+    assert declared == STRUCTURE_ID_PATTERN, (
+        f"schema says {declared!r}, migration uses {STRUCTURE_ID_PATTERN!r}")
+
+
 def test_pdb_ccd_xrefs_are_untouched():
     """The migration must not have swept up chemical identity metadata."""
     count = sum(1 for record in _records()
