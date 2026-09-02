@@ -1,7 +1,7 @@
 identifier: CHEBI:32209
 label: tetracenomycin X
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: Tetracenomycin X is a tetracenomycin antibiotic, a methyl ester and a
   tertiary alpha-hydroxy ketone.
@@ -22,6 +22,12 @@ activity_roles:
 - CHEBI:33281
 structural_class: tetracenomycin antibiotic
 structural_class_id: ARO:3007034
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: 'CURATOR: PMID:32601485 showed that tetracenomycin X binds in
+  the polypeptide exit tunnel of the bacterial large ribosomal subunit and blocks
+  translation after short oligopeptides are made. The same study reported that the
+  compound does not induce DNA damage, correcting the previously proposed mechanism.'
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: COC(=O)c1c(OC)cc2cc3c(c(O)c2c1C)C(=O)[C@]1(OC)C(=O)C=C(OC)C(=O)[C@]1(O)C3=O
   standard_inchi: InChI=1S/C24H20O11/c1-9-15-10(7-12(32-2)16(9)22(30)34-4)6-11-17(18(15)26)21(29)24(35-5)14(25)8-13(33-3)20(28)23(24,31)19(11)27/h6-8,26,31H,1-5H3/t23-,24-/m1/s1
@@ -31,6 +37,22 @@ chemical_structure:
   charge: 0
   average_mass: 484.413
   monoisotopic_mass: 484.10056
+molecular_targets:
+- target_label: polypeptide exit tunnel of the bacterial 50S ribosomal subunit
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: Compound-specific translation assays and structural analysis
+    localized binding beside the macrolide site, at the 23S rRNA U1782-U2586 noncanonical
+    base pair. The abstract does not state the structural model organism, so no taxon
+    is asserted.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2020-10
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:32601485
+    notes: Primary compound-specific biochemical and structural study; distinguishes
+      the large-subunit exit-tunnel target from the small subunit and from DNA damage.
 xrefs:
 - ARO:3007036
 - cas:121245-07-6
@@ -51,6 +73,9 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:32601485
+  notes: Primary experimental mechanism, target, and structure study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -64,3 +89,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:12:50Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified identity, structure, and antibacterial class; added the primary-evidence
+    bacterial 50S exit-tunnel target and corrected the mechanism from the historical
+    DNA-damage proposal to translation inhibition.
+  llm_assisted: true

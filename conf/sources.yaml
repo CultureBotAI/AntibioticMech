@@ -629,6 +629,13 @@ aro_definition_overrides:
   # definition also names antiviral activity — a second activity, not a
   # misfiling.
 
+# Source-record synonym assertions that are chemically false for the record's
+# exact structure. These are scoped to one source concept and survive inventory
+# refreshes; they do not globally ban the name from its correct compound.
+synonym_exclusions:
+  ARO:3003958:
+    - Elaidoic acid  # CHEBI:27997 is trans-(9E); oleic acid CHEBI:16196 is cis-(9Z).
+
 # ----------------------------------------------------------------------------
 # ChEBI structural class -> AntimicrobialClassEnum: TRIED, AND REMOVED.
 #

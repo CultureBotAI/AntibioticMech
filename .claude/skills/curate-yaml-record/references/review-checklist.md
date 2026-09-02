@@ -76,7 +76,7 @@ assert doc["identifier"] == "<expected CURIE>"
 
 record_curation_event(
     doc,
-    curator="claude",
+    curator="<actual agent identifier>",
     action="RECORD_CURATED",
     changes="Describe the exact evidence-backed changes and unresolved gaps.",
     llm_assisted=True,
@@ -103,3 +103,7 @@ write and do not append an event.
 A complete causal graph is a goal, not a prerequisite. Conversely, a long list
 of citations does not compensate for an unresolved identity conflict. Leave the
 record `SEEDED` or `PROPOSED` and report blockers whenever a gate is unmet.
+
+For a multi-record request, regenerate `curation/record_review_queue.tsv` after
+each batch. The queue must contain every record that is neither `REVIEWED` nor
+`DEPRECATED`; it is a checkpoint, not evidence that any listed claim was read.

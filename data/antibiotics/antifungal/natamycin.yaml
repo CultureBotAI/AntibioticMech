@@ -1,7 +1,7 @@
 identifier: CHEBI:7488
 label: natamycin
 antimicrobial_class: ANTIFUNGAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A macrolide antibiotic that has formula C33H47NO13, produced by several
   Streptomyces species including Streptomyces natalensis. It exhibits broad spectrum
@@ -98,6 +98,12 @@ activity_roles:
 - CHEBI:65256
 - CHEBI:86327
 - CHEBI:86328
+mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
+mode_of_action_notes: 'CURATOR: PMID:18165687 established specific binding to ergosterol
+  in model membranes and a sterol-dependent block of fungal growth. Under growth-inhibiting
+  conditions natamycin did not permeabilize yeast or ergosterol-containing model membranes,
+  so this record does not assign the pore-forming mechanism of other polyenes.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@@]12C[C@H](O)C[C@]3(O)C[C@H](O)[C@@H](C(=O)O)[C@]([H])(C[C@@H](O[C@@H]4O[C@H](C)[C@@H](O)[C@H](N)[C@@H]4O)/C=C/C=C/C=C/C=C/C[C@@H](C)OC(=O)/C=C/[C@H]1O2)O3'
   standard_inchi: InChI=1S/C33H47NO13/c1-18-10-8-6-4-3-5-7-9-11-21(45-32-30(39)28(34)29(38)19(2)44-32)15-25-27(31(40)41)22(36)17-33(42,47-25)16-20(35)14-24-23(46-24)12-13-26(37)43-18/h3-9,11-13,18-25,27-30,32,35-36,38-39,42H,10,14-17,34H2,1-2H3,(H,40,41)/b4-3+,7-5+,8-6+,11-9+,13-12+/t18-,19-,20+,21+,22+,23-,24-,25+,27-,28+,29-,30+,32+,33-/m1/s1
@@ -107,6 +113,22 @@ chemical_structure:
   charge: 0
   average_mass: 665.733
   monoisotopic_mass: 665.30474
+molecular_targets:
+- target_id: CHEBI:16933
+  target_label: ergosterol in the fungal plasma membrane
+  target_type: MEMBRANE
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: Direct binding and isothermal titration calorimetry in ergosterol-containing
+    model membranes, complemented by yeast sterol-biosynthesis mutants and membrane-permeability
+    assays.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2008-04
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:18165687
+    notes: Compound-specific binding and growth study; supports ergosterol binding
+      but not membrane permeabilization.
 xrefs:
 - bpdb:2062
 - cas:7681-93-8
@@ -132,6 +154,9 @@ source_concepts:
   - CHEBI:86327
   - CHEBI:86328
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:18165687
+  notes: Primary experimental mode-of-action and target study.
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -176,3 +201,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:11:51Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified the ChEBI-grounded identity, structure, and antifungal class;
+    added the primary-evidence ergosterol target and a curator-owned mode of action
+    that explicitly excludes membrane permeabilization.
+  llm_assisted: true

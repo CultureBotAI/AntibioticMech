@@ -1,7 +1,7 @@
 identifier: CHEBI:17351
 label: linoleic acid
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: Linoleic acid is a polyunsaturated omega-6 fatty acid. Linoleic acid has
   been found to have antibacterial activity, particularly in inhibiting the growth
@@ -21,6 +21,22 @@ parent_compounds:
 - ARO:3003956
 structural_class: antibacterial free fatty acids
 structural_class_id: ARO:3003956
+mode_of_action: MEMBRANE_DISRUPTION
+mode_of_action_notes: 'CURATOR: PMID:93615 linked growth inhibition of Staphylococcus
+  aureus NCTC 8325 to increased bacterial-membrane permeability and supported a surfactant
+  action of free linoleic acid. The record does not generalize that single-strain
+  mechanism to every bacterium.'
+mode_of_action_target_scope: HOST_SHARED_TARGET
+activity_spectrum:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  strain: NCTC 8325
+  activity: ACTIVE
+  assay: Growth inhibition accompanied by a bacterial-membrane permeability increase;
+    the abstract does not report an MIC.
+  evidence:
+  - reference: PMID:93615
+    notes: Primary compound-specific growth and membrane study.
 chemical_structure:
   smiles: CCCCC/C=C\C/C=C\CCCCCCCC(=O)O
   standard_inchi: InChI=1S/C18H32O2/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18(19)20/h6-7,9-10H,2-5,8,11-17H2,1H3,(H,19,20)/b7-6-,10-9-
@@ -30,6 +46,24 @@ chemical_structure:
   charge: 0
   average_mass: 280.452
   monoisotopic_mass: 280.24023
+molecular_targets:
+- target_label: bacterial cytoplasmic membrane
+  target_type: MEMBRANE
+  target_relation: ATTACKED_COMPONENT
+  taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  strain: NCTC 8325
+  experimental_context: Growth, radiolabel incorporation, lipid uptake, glycerol-auxotroph,
+    and permeability experiments associated free linoleic acid with a surfactant effect
+    on the bacterial membrane.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1979-08
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:93615
+    notes: Primary compound- and strain-specific study; supports membrane attack without
+      claiming a protein-binding target.
 xrefs:
 - ARO:3003959
 - cas:60-33-3
@@ -41,6 +75,13 @@ source_concepts:
   source_label: linoleic acid
   minted_identifier: antibioticmech:aro-36bd42c165
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:93615
+  notes: Primary antibacterial mechanism and activity study.
+- reference: PMID:10925024
+  notes: Primary antibacterial activity study of isolated linoleic acid.
+- reference: PMID:10447892
+  notes: Primary study supporting farAB-mediated fatty-acid efflux resistance.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003960
@@ -62,3 +103,11 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:14:02Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified the exact ChEBI structure and ARO antibacterial classification;
+    added a strain-scoped membrane-disruption mechanism, molecular component, and
+    qualitative activity observation; checked primary support for the existing farAB
+    resistance assertion.
+  llm_assisted: true

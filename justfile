@@ -123,6 +123,11 @@ verify-corpus *args:
 worklist *args:
     uv run python scripts/curation_worklist.py {{args}}
 
+# Every unsigned record, ordered by its next evidence-review gate. The TSV is
+# a restartable checkpoint; literature references in it are discovery leads.
+review-queue *args:
+    uv run python scripts/curation_worklist.py --queue review-readiness {{args}}
+
 # The prioritized data-source queue: what to adopt next, and what is still
 # unverified about it. `.claude/skills/source-queue` triages it.
 source-queue:

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """The curation backlog, ranked so a curator can start at the top.
 
-Six queues, each answering a different question:
+Queues answer distinct curation questions. In particular:
 
   no-structure  Source concepts that never became records because no source
                 gives them a structure. Each needs a structure or an EXCLUDE
@@ -12,6 +12,10 @@ Six queues, each answering a different question:
                 defensible ontology identity or a recorded reason it has none.
   target-evidence
                 Database-asserted direct targets still lacking a primary citation.
+  review-readiness
+                Every record without curator sign-off, grouped by the next
+                scientific review gate. Source citations are literature leads,
+                never treated as reviewed evidence automatically.
 
     python scripts/curation_worklist.py                 # all three, top 25 each
     python scripts/curation_worklist.py --queue minted --limit 100
@@ -394,9 +398,8 @@ _BINOMIAL = re.compile(r"\b([A-Z][a-z]{3,})\s+([a-z]{3,})\b")
 def producer_candidate_queue(records: list[dict]) -> list[dict]:
     """Records whose definition names a possible producing organism.
 
-    `producer_organisms` is the corpus's largest empty axis, and the signal is
-    sitting in the definitions — 999 records with no producer use a phrase that
-    may introduce one, 801 of them followed by a binomial (#94).
+    `producer_organisms` is the corpus's largest empty axis, and many records
+    with no producer use a definition phrase that may introduce one.
 
     NOT AN EXTRACTION. A taxon in a definition may be the producer, the isolation
     source, an expression host, a susceptible organism, or a taxon mentioned for
@@ -535,6 +538,115 @@ def target_evidence_queue(records: list[dict]) -> list[dict]:
     return rows
 
 
+def source_literature_leads() -> dict[tuple[str, str], tuple[str, ...]]:
+    """Return source-record citations that may help a curator find evidence.
+
+    These are discovery leads only. ChEBI citations and ARO definition
+    references may support a related analogue, a class, or only background
+    context, so their presence never advances a record's curation status.
+    """
+    specs = (
+        (RAW_DIR / "chebi_antimicrobials.tsv", "CHEBI", "chebi_id", "citations"),
+        (RAW_DIR / "aro_antibiotics.tsv", "ARO", "aro_id", "definition_refs"),
+    )
+    leads: dict[tuple[str, str], tuple[str, ...]] = {}
+    for path, source, id_column, citation_column in specs:
+        with path.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh, delimiter="\t"):
+                refs = tuple(dict.fromkeys(
+                    ref for ref in (row.get(citation_column) or "").split("|")
+                    if ref.startswith(("PMID:", "DOI:"))
+                ))
+                leads[(source, row[id_column])] = refs
+    return leads
+
+
+def review_readiness_queue(
+    records: list[dict],
+    source_refs: dict[tuple[str, str], tuple[str, ...]] | None = None,
+) -> list[dict]:
+    """List every unsigned record and the next evidence gate it owes.
+
+    This is deliberately a readiness queue, not an automatic reviewer. It uses
+    only machine-observable state to decide what a human or agent should inspect
+    next. In particular, an EXACT ChEBI identity and source PMIDs do not prove
+    that the structure or mechanism has been checked.
+    """
+    if source_refs is None:
+        source_refs = source_literature_leads()
+
+    priorities = {
+        "SIGNOFF_REVIEW": 0,
+        "TARGET_EVIDENCE_REVIEW": 1,
+        "MECHANISM_REVIEW": 2,
+        "STRUCTURE_REVIEW": 3,
+        "IDENTITY_REVIEW": 4,
+    }
+    rows = []
+    for record in records:
+        status = record.get("curation_status")
+        if status in {"REVIEWED", "DEPRECATED"}:
+            continue
+
+        grounding = record.get("grounding_status")
+        structure = record.get("chemical_structure") or {}
+        has_structure = all(structure.get(field) for field in (
+            "smiles", "standard_inchi", "standard_inchi_key", "molecular_formula"
+        ))
+        targets = record.get("molecular_targets") or []
+        target_evidence_needed = sum(
+            target.get("evidence_status") == "PRIMARY_EVIDENCE_NEEDED"
+            for target in targets
+        )
+
+        if grounding != "EXACT":
+            readiness = "IDENTITY_REVIEW"
+            blocker = f"grounding is {grounding or 'unset'}"
+        elif not has_structure:
+            readiness = "STRUCTURE_REVIEW"
+            blocker = "one or more canonical structure fields are absent"
+        elif not record.get("mode_of_action") or not curator_owns_mode_of_action(record):
+            readiness = "MECHANISM_REVIEW"
+            blocker = (
+                "mechanism is absent" if not record.get("mode_of_action")
+                else "mechanism is source-seeded and not curator-checked"
+            )
+        elif target_evidence_needed:
+            readiness = "TARGET_EVIDENCE_REVIEW"
+            blocker = f"{target_evidence_needed} target assertion(s) need primary evidence"
+        else:
+            readiness = "SIGNOFF_REVIEW"
+            blocker = "machine-observable gates pass; scientific sign-off still required"
+
+        leads = tuple(dict.fromkeys(
+            ref
+            for concept in record.get("source_concepts") or []
+            for ref in source_refs.get((concept.get("source", ""),
+                                        concept.get("source_id", "")), ())
+        ))
+        sources = "+".join(sorted({
+            concept.get("source", "")
+            for concept in record.get("source_concepts") or []
+            if concept.get("source")
+        }))
+        evidence_count = len(record.get("evidence") or [])
+        rows.append({
+            "queue": "review-readiness",
+            "key": record["identifier"],
+            "label": record["label"],
+            "source": sources,
+            "source_id": "|".join(leads[:5]),
+            "hint": (
+                f"{readiness}: {blocker}; {len(leads)} source literature lead(s), "
+                f"{evidence_count} record evidence item(s), {len(targets)} target(s)"
+            ),
+            "_priority": priorities[readiness],
+        })
+
+    rows.sort(key=lambda row: (row.pop("_priority"), row["label"].lower(), row["key"]))
+    return rows
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -542,7 +654,7 @@ def main() -> int:
                         choices=("all", "no-structure", "mechanism", "minted", "unknown-mech",
                                  "moa-scope", "target-evidence", "aro-class",
                                  "xref-unverified", "multi-component",
-                                 "producer-candidate", "excluded"),
+                                 "producer-candidate", "excluded", "review-readiness"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
     parser.add_argument("--tsv", type=Path, help="Write every row (not just --limit) to this TSV.")
@@ -572,6 +684,8 @@ def main() -> int:
         queues["excluded"] = excluded_queue()
     if args.queue in ("all", "target-evidence"):
         queues["target-evidence"] = target_evidence_queue(records)
+    if args.queue in ("all", "review-readiness"):
+        queues["review-readiness"] = review_readiness_queue(records)
 
     for name, rows in queues.items():
         print(f"\n=== {name}: {len(rows)} item(s) ===")

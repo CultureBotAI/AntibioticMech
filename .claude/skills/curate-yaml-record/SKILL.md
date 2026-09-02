@@ -69,6 +69,18 @@ Inspect relevant worklist entries, especially `mechanism`, `moa-scope`,
 `producer-candidate`. A green gate establishes structural consistency, not
 scientific truth.
 
+For a bulk request, still review records one at a time. Generate the exhaustive
+checkpoint with:
+
+```bash
+just review-queue --limit 0 --tsv curation/record_review_queue.tsv
+```
+
+Remove a row only by actually moving its record to `REVIEWED` or `DEPRECATED`;
+the queue is derived state. Its source references are discovery leads, not
+claim evidence, and readiness labels are triage rather than scientific
+sign-off.
+
 ### 2. Verify identity and structure first
 
 Do not research a mechanism until the record is known to denote the intended
@@ -107,7 +119,7 @@ direct binding or causation.
 Use the repository adapters for candidate discovery when useful:
 
 ```bash
-env -u NCBI_EMAIL just search-publications \
+env -u NCBI_EMAIL uv run python scripts/search_publications.py \
   --provider pubmed --provider semantic-scholar \
   --query '<compound names plus the claim being checked>' \
   --limit 20 --output /tmp/antibioticmech-publications.jsonl
@@ -152,9 +164,10 @@ fields, use a narrowly scoped temporary or checked-in Python mutator that:
 5. writes with `write_validated_antibiotic` from
    `antibioticmech.validation.write_validated`.
 
-Do not append a history event when the document is otherwise unchanged. Use
-`curator="claude"` when no curator identity was supplied; never attribute an
-agent's judgement to the user.
+Do not append a history event when the document is otherwise unchanged. Use the
+actual agent identifier (`claude` in Claude Code, `codex` in Codex) when no
+human curator identity was supplied; never attribute an agent's judgement to
+the user.
 
 `mode_of_action`, its target scope, and its notes are one claim. When taking
 ownership from the seeder, follow `docs/CURATION.md`: retain or replace the

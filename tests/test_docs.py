@@ -142,15 +142,19 @@ def _derived(repo_root):
     base = conf.get("role_to_mode_of_action") or {}
     euk = conf.get("role_to_mode_of_action_eukaryotic") or {}
 
-    moa_records = 0
-    scopes = {"MICROBIAL_TARGET": 0, "HOST_SHARED_TARGET": 0}
-    for path in (repo_root / "data" / "antibiotics").rglob("*.yaml"):
-        record = yaml.safe_load(path.read_text(encoding="utf-8"))
-        if isinstance(record, dict) and record.get("mode_of_action"):
-            moa_records += 1
-            scope = record.get("mode_of_action_target_scope")
-            if scope in scopes:
-                scopes[scope] += 1
+    # These prose claims describe the reach of ChEBI's role map, not the total
+    # after curators add mechanisms. Rebuild the source-derived view so signing
+    # off a record does not rewrite the historical/source-coverage count.
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from curation_worklist import seeded_mechanism_view
+
+    seeded = seeded_mechanism_view()
+    moa_records = sum(bool(item.get("mode_of_action")) for item in seeded.values())
+    scopes = {
+        scope: sum(item.get("mode_of_action_target_scope") == scope
+                   for item in seeded.values())
+        for scope in ("MICROBIAL_TARGET", "HOST_SHARED_TARGET")
+    }
 
     return {"mapped_roles": len(set(base) | set(euk)), "moa_records": moa_records,
             "microbial_target": scopes["MICROBIAL_TARGET"],
@@ -207,13 +211,21 @@ def test_the_declared_class_hierarchy_governs_every_count(repo_root):
 
     import yaml
     counts: dict[str, int] = {}
+    seeded_counts: dict[str, int] = {}
+    reviewed_counts: dict[str, int] = {}
     for path in (repo_root / "data" / "antibiotics").rglob("*.yaml"):
         record = yaml.safe_load(path.read_text(encoding="utf-8"))
         cls = record.get("antimicrobial_class")
         if cls:
             counts[cls] = counts.get(cls, 0) + 1
+            if record.get("curation_status") == "SEEDED":
+                seeded_counts[cls] = seeded_counts.get(cls, 0) + 1
+            if record.get("curation_status") == "REVIEWED":
+                reviewed_counts[cls] = reviewed_counts.get(cls, 0) + 1
 
     inclusive = rollup_by_class(counts)
+    seeded_inclusive = rollup_by_class(seeded_counts)
+    reviewed_inclusive = rollup_by_class(reviewed_counts)
     for child, parent in parents.items():
         if not counts.get(child):
             continue
@@ -229,8 +241,11 @@ def test_the_declared_class_hierarchy_governs_every_count(repo_root):
         assert f"| {parent} *(incl. subclasses)* | {inclusive[parent]} |" in readme
         assert f"↳ {child}" in readme and f"subclass of {parent}" in readme
         # every column rolls up, not only Records
-        assert f"| {inclusive[parent]} | {inclusive[parent]} |" in readme, (
-            "the SEEDED column did not roll up with Records")
+        expected_columns = (
+            f"| {inclusive[parent]} | {seeded_inclusive[parent]} | "
+            f"{reviewed_inclusive[parent]} |"
+        )
+        assert expected_columns in readme, "the status columns did not roll up with Records"
         assert "already counted in X's own row" in readme
 
 
@@ -450,6 +465,12 @@ def test_no_unregistered_numeric_claim_about_the_corpus(repo_root):
     derivable = {len(records), len(classes)}
     derivable |= set(classes.values()) | set(scopes.values())
     derivable.add(sum(1 for r in records if r.get("mode_of_action")))
+    from curation_worklist import seeded_mechanism_view
+    seeded_view = seeded_mechanism_view()
+    derivable.add(sum(bool(item.get("mode_of_action")) for item in seeded_view.values()))
+    for scope in ("MICROBIAL_TARGET", "HOST_SHARED_TARGET"):
+        derivable.add(sum(item.get("mode_of_action_target_scope") == scope
+                          for item in seeded_view.values()))
     derivable.add(len(set(conf.get("role_to_mode_of_action") or {})
                       | set(conf.get("role_to_mode_of_action_eukaryotic") or {})))
     for field in ("molecular_targets", "resistance_mechanisms", "producer_organisms",
@@ -523,3 +544,16 @@ def test_no_unregistered_numeric_claim_about_the_corpus(repo_root):
     # NUMERIC_CLAIMS row would be.
     dead = sorted(set(CLAIM_EXEMPTIONS) - used_exemptions)
     assert dead == [], f"exemptions that match nothing any more: {dead}"
+
+
+def test_generated_corpus_stats_name_the_counts_they_compute(repo_root):
+    """Curated targets must not be mislabeled as resistance evidence."""
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from check_docs import corpus_stats, render_block
+
+    block = render_block(corpus_stats())
+    assert "With target or resistance evidence" in block
+    assert "With resistance evidence" not in block
+    assert "seeded or curator-reviewed mode of action" in block

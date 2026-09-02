@@ -1,7 +1,7 @@
 identifier: CHEBI:157683
 label: althiomycin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A peptide antibiotic isolated from soil and enteric bacteria. It is a
   protein synthesis inhibitor which exhibits antibacterial activity against both Gram-positive
@@ -37,11 +37,29 @@ activity_roles:
 - CHEBI:33281
 - CHEBI:33282
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
-mode_of_action_target_scope: HOST_SHARED_TARGET
+mode_of_action_notes: 'CURATOR: Confirmed against PMID:4917791 in intact-cell and
+  cell-free Escherichia coli B assays. Althiomycin inhibited bacterial protein synthesis
+  and the puromycin reaction without inhibiting aminoacyl-tRNA synthesis or aminoacyl-tRNA
+  binding to ribosomes. The microbial scope replaces the generic role-derived HOST_SHARED_TARGET
+  value.'
+mode_of_action_target_scope: MICROBIAL_TARGET
+activity_spectrum:
+- taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  activity: ACTIVE
+  assay: Growth inhibition by the diffusible product of Serratia marcescens Db10;
+    althiomycin identity confirmed by chromatographic and spectroscopic analysis.
+  evidence:
+  - reference: PMID:23028578
+    notes: Compound-specific producer knockout and analytical-identification study.
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  activity: ACTIVE
+  assay: Growth inhibition by the diffusible product of Serratia marcescens Db10;
+    althiomycin identity confirmed by chromatographic and spectroscopic analysis.
+  evidence:
+  - reference: PMID:23028578
+    notes: Compound-specific producer knockout and analytical-identification study.
 chemical_structure:
   smiles: COC1=CC(=O)N(C(=O)[C@H]2CSC(C(CO)NC(=O)c3csc(/C=N/O)n3)=N2)C1
   standard_inchi: InChI=1S/C16H17N5O6S2/c1-27-8-2-13(23)21(4-8)16(25)11-7-29-15(20-11)9(5-22)19-14(24)10-6-28-12(18-10)3-17-26/h2-3,6,9,11,22,26H,4-5,7H2,1H3,(H,19,24)/b17-3+/t9?,11-/m1/s1
@@ -51,6 +69,43 @@ chemical_structure:
   charge: 0
   average_mass: 439.475
   monoisotopic_mass: 439.06203
+biosynthesis_origin: NATURAL_PRODUCT
+producer_organisms:
+- taxon_id: NCBITaxon:34
+  taxon_label: Myxococcus xanthus
+  strain: DK897
+  biosynthetic_gene_cluster: BGC0000955
+  source: PRIMARY_LITERATURE_AND_MIBIG
+  note: The althiomycin NRPS-PKS cluster was identified by gene inactivation; MIBiG
+    BGC0000955 links the characterized cluster.
+  reference: PMID:21626639
+- taxon_id: NCBITaxon:615
+  taxon_label: Serratia marcescens
+  strain: Db10
+  source: PRIMARY_LITERATURE
+  note: Chromatographic and spectroscopic analysis identified althiomycin, and disruption
+    of the alb cluster eliminated production.
+  reference: PMID:23028578
+molecular_targets:
+- target_label: bacterial ribosomal peptidyl-transferase reaction
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: B
+  experimental_context: Intact-cell and cell-free protein-synthesis assays; the puromycin
+    reaction was inhibited while aminoacyl-tRNA synthesis and aminoacyl-tRNA binding
+    to ribosomes were not.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1970-06
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:4917791
+    snippet: In the cell-free system althiomycin was confirmed to inhibit protein
+      synthesis.
+    notes: Compound-specific experimental study; supports a ribosomal translation
+      effect, not a direct-binding claim.
 xrefs:
 - cas:12656-40-5
 - chemspider:4576669
@@ -65,6 +120,18 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:13513511
+  notes: Primary discovery, production, and antibacterial-activity report.
+- reference: PMID:1150528
+  notes: Primary chemical-structure determination.
+- reference: PMID:4917791
+  notes: Primary experimental mode-of-action study.
+- reference: PMID:21626639
+  notes: Primary biosynthetic-gene-cluster study in Myxococcus xanthus DK897.
+- reference: PMID:23028578
+  notes: Primary producer, biosynthesis, and activity study in Serratia marcescens
+    Db10.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -78,3 +145,11 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T20:56:10Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified ChEBI identity and structure; confirmed protein-synthesis mechanism
+    and corrected target scope with PMID:4917791; added a primary-evidence molecular
+    process target, two producer assertions, two qualitative activity observations,
+    and record-level evidence.
+  llm_assisted: true

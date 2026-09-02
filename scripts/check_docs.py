@@ -41,7 +41,7 @@ def corpus_stats() -> dict:
     grounding: Counter = Counter()
     sources: Counter = Counter()
     mechanism: Counter = Counter()
-    card_evidence_by_class: Counter = Counter()
+    target_or_resistance_by_class: Counter = Counter()
 
     total = 0
     for path in sorted(CORPUS_DIR.rglob("*.yaml")):
@@ -58,16 +58,16 @@ def corpus_stats() -> dict:
             if record.get(field):
                 mechanism[field] += 1
         if record.get("molecular_targets") or record.get("resistance_mechanisms"):
-            card_evidence_by_class[cls] += 1
+            target_or_resistance_by_class[cls] += 1
     return {"total": total, "by_class": by_class, "status_by_class": status_by_class,
             "grounding": grounding, "sources": sources, "mechanism": mechanism,
-            "card_evidence_by_class": card_evidence_by_class}
+            "target_or_resistance_by_class": target_or_resistance_by_class}
 
 
 def render_block(stats: dict) -> str:
     total = stats["total"]
     lines = [START, ""]
-    lines.append("| Class | Records | SEEDED | REVIEWED | With resistance evidence |")
+    lines.append("| Class | Records | SEEDED | REVIEWED | With target or resistance evidence |")
     lines.append("|---|---:|---:|---:|---:|")
     # Filing is exclusive, so a subclass's records are not also under its parent.
     # The parent row therefore carries the INCLUSIVE total and the subclass is
@@ -77,15 +77,16 @@ def render_block(stats: dict) -> str:
     counts = {c: stats["by_class"].get(c, 0) for c in CLASS_ORDER}
     inclusive = rollup_by_class(counts)
     # EVERY column rolls up, not just Records. Leaving SEEDED, REVIEWED and the
-    # CARD-evidence count exclusive made the parent row read as 78 unseeded
-    # records and understated its evidence by 15 — the same defect as a bar
-    # drawn from the wrong number, in the columns next to it.
+    # Evidence-count exclusivity made the parent row read as 78 unseeded
+    # records and understated target-or-resistance coverage by 15 — the same
+    # defect as a bar drawn from the wrong number, in the columns next to it.
     seeded = rollup_by_class({c: stats["status_by_class"].get(c, Counter())["SEEDED"]
                               for c in CLASS_ORDER})
     reviewed = rollup_by_class({c: stats["status_by_class"].get(c, Counter())["REVIEWED"]
                                 for c in CLASS_ORDER})
-    card_incl = rollup_by_class({c: stats["card_evidence_by_class"].get(c, 0)
-                                 for c in CLASS_ORDER})
+    evidence_incl = rollup_by_class({
+        c: stats["target_or_resistance_by_class"].get(c, 0) for c in CLASS_ORDER
+    })
     for cls in CLASS_ORDER:
         # A parent with no records of its OWN is still printed when a subclass
         # has some; otherwise those records vanish from the table entirely and
@@ -96,16 +97,16 @@ def render_block(stats: dict) -> str:
             label = f"&nbsp;&nbsp;↳ {cls} *(subclass of {parents[cls]})*"
             shown, s_, r_, c_ = (counts[cls], stats["status_by_class"].get(cls, Counter())["SEEDED"],
                                  stats["status_by_class"].get(cls, Counter())["REVIEWED"],
-                                 stats["card_evidence_by_class"].get(cls, 0))
+                                 stats["target_or_resistance_by_class"].get(cls, 0))
         else:
             has_kids = inclusive[cls] != counts[cls]
             label = f"{cls} *(incl. subclasses)*" if has_kids else cls
-            shown, s_, r_, c_ = (inclusive[cls], seeded[cls], reviewed[cls], card_incl[cls])
+            shown, s_, r_, c_ = (inclusive[cls], seeded[cls], reviewed[cls], evidence_incl[cls])
         lines.append(f"| {label} | {shown} | {s_} | {r_} | {c_} |")
     lines.append(f"| **TOTAL** | **{total}** | "
                  f"**{sum(c['SEEDED'] for c in stats['status_by_class'].values())}** | "
                  f"**{sum(c['REVIEWED'] for c in stats['status_by_class'].values())}** | "
-                 f"**{sum(stats['card_evidence_by_class'].values())}** |")
+                 f"**{sum(stats['target_or_resistance_by_class'].values())}** |")
     if any(c in parents for c in CLASS_ORDER if stats["by_class"].get(c)):
         lines.append("")
         lines.append("A row marked *(subclass of X)* is already counted in X's own row — "
@@ -131,7 +132,7 @@ def render_block(stats: dict) -> str:
     lines.append(f"Mechanism layer: **{targets}** records carry a molecular target and "
                  f"**{resistance}** carry resistance determinants or associations seeded "
                  "from CARD and PHI-base; "
-                 f"**{moa}** carry a mode of action seeded from ChEBI's mechanism roles; "
+                 f"**{moa}** carry a seeded or curator-reviewed mode of action; "
                  f"**{graphs}** carry a curated causal graph. That last number is the work.")
     lines.append("")
     lines.append(END)

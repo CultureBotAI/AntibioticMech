@@ -305,8 +305,9 @@ multi-component` lists what has two or more distinct large fragments and leaves
 the judgement to a curator.
 ## Producer organisms
 
-`producer_organisms` is the corpus's largest empty axis: 3 records of 2,911 carry
-one, all from the MIBiG import. The signal is sitting in the definitions — 998
+`producer_organisms` is the corpus's largest empty axis: 4 records of 2,911 carry
+one, three from the MIBiG import and one from primary-literature curation. The
+signal is sitting in the definitions — 997
 records with none use a phrase that may introduce a producer, and 797 of those
 are followed by a binomial.
 

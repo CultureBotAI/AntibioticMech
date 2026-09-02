@@ -967,10 +967,16 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
                 definition_source = "ChEBI"
             break
 
+    # Upstream exact-synonym lists occasionally contain a different chemical
+    # identity. Keep those adjudications in configuration so a re-extraction
+    # cannot silently restore the bad identity assertion.
+    synonym_exclusions = conf.get("synonym_exclusions") or {}
     synonyms = []
     seen_syn = {primary.label}
     for concept in group:
         for text, kind in concept.synonyms:
+            if text in synonym_exclusions.get(concept.source_id, []):
+                continue
             if text not in seen_syn:
                 seen_syn.add(text)
                 synonyms.append({"synonym_text": text, "synonym_type": kind,

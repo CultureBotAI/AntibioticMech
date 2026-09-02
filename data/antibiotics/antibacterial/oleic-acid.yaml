@@ -1,7 +1,7 @@
 identifier: CHEBI:16196
 label: oleic acid
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: Oleic acid is a fatty acid that occurs naturally in various animal and
   vegetable fats and oils. Oleic acid is found to have antibacterial activity, particularly
@@ -14,9 +14,6 @@ synonyms:
 - synonym_text: Cis-Oleic acid
   synonym_type: EXACT_SYNONYM
   source: aro
-- synonym_text: Elaidoic acid
-  synonym_type: EXACT_SYNONYM
-  source: aro
 - synonym_text: Oleate
   synonym_type: EXACT_SYNONYM
   source: aro
@@ -24,6 +21,21 @@ parent_compounds:
 - ARO:3003956
 structural_class: antibacterial free fatty acids
 structural_class_id: ARO:3003956
+mode_of_action: MEMBRANE_DISRUPTION
+mode_of_action_notes: 'CURATOR: PMID:393631 found rapid killing of an M type 6 group
+  A streptococcus, loss of intracellular uridine label, ultrastructural surface damage,
+  and loss of membrane integrity after oleic-acid exposure. The record keeps this
+  mechanism scoped to that experiment.'
+mode_of_action_target_scope: HOST_SHARED_TARGET
+activity_spectrum:
+- taxon_label: group A Streptococcus
+  strain: M type 6 strain
+  activity: ACTIVE
+  assay: 'Viable-count time course: 500 micrograms/mL oleic acid reduced viable counts
+    by four orders of magnitude within five minutes.'
+  evidence:
+  - reference: PMID:393631
+    notes: Primary compound- and strain-specific killing experiment.
 chemical_structure:
   smiles: CCCCCCCC/C=C\CCCCCCCC(=O)O
   standard_inchi: InChI=1S/C18H34O2/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18(19)20/h9-10H,2-8,11-17H2,1H3,(H,19,20)/b10-9-
@@ -33,6 +45,23 @@ chemical_structure:
   charge: 0
   average_mass: 282.468
   monoisotopic_mass: 282.25588
+molecular_targets:
+- target_label: group A streptococcal cytoplasmic membrane
+  target_type: MEMBRANE
+  target_relation: ATTACKED_COMPONENT
+  taxon_label: group A Streptococcus
+  strain: M type 6 strain
+  experimental_context: Viable counts, radiolabel release and uptake, and electron
+    microscopy supported loss of membrane integrity; the abstract does not identify
+    the strain to species or collection accession.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1979-12
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:393631
+    notes: Primary mechanism study; supports membrane attack and does not imply a
+      protein-binding target.
 xrefs:
 - ARO:3003958
 - cas:112-80-1
@@ -44,6 +73,13 @@ source_concepts:
   source_label: oleic acid
   minted_identifier: antibioticmech:aro-2b4430e8b1
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:393631
+  notes: Primary bactericidal mechanism and activity study.
+- reference: PMID:10925024
+  notes: Primary antibacterial activity study of isolated oleic acid.
+- reference: PMID:10447892
+  notes: Primary study supporting farAB-mediated fatty-acid efflux resistance.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003960
@@ -65,3 +101,15 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:15:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:16:27Z'
+  curator: codex
+  action: REVIEWED
+  changes: Removed the false ARO synonym Elaidoic acid through a source-scoped seeder
+    override after verifying it is the trans isomer; verified the remaining identity,
+    structure, and class; added strain-scoped membrane mechanism, target, activity,
+    and primary literature evidence.
+  llm_assisted: true
