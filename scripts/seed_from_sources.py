@@ -1220,6 +1220,85 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
         _history_last(records[identifier])
 
 
+PHIBASE_NOTE_MARKER = "PHI-base antimicrobial_interaction"
+
+
+def is_phibase_sourced_resistance(item: dict) -> bool:
+    """True only for a resistance association owned by the PHI-base lane."""
+    return PHIBASE_NOTE_MARKER in str(item.get("note") or "")
+
+
+def phibase_sourced_resistance_view(record: dict) -> list[dict]:
+    return [
+        item
+        for item in (record.get("resistance_mechanisms") or [])
+        if is_phibase_sourced_resistance(item)
+    ]
+
+
+def attach_phibase_resistance(records: dict[str, dict]) -> Counter:
+    """Attach ChEBI-grounded PHI-base resistance associations.
+
+    The source supports an alteration--chemical resistance phenotype but does
+    not necessarily establish a biochemical route.  Consequently every row is
+    typed ``UNKNOWN`` and described as an association rather than promoted to
+    target alteration, efflux, or another mechanism category.
+    """
+    rows = load_tsv(RAW_DIR / "phibase_amr.tsv")
+    counts: Counter = Counter()
+    grouped: dict[str, list[dict]] = defaultdict(list)
+    for row in rows:
+        record = records.get(row["identifier"])
+        if record is None:
+            counts["missing_identifier"] += 1
+            continue
+        if record["chemical_structure"]["standard_inchi_key"] != row["standard_inchi_key"]:
+            counts["identity_drift"] += 1
+            continue
+        grouped[row["identifier"]].append(row)
+        counts["matched_associations"] += 1
+
+    for identifier, matched_rows in sorted(grouped.items()):
+        items = []
+        seen = set()
+        for row in matched_rows:
+            key = (
+                row["phig_id"], row["taxon_id"], row["strain_taxon_id"],
+                row["strain_label"], row["modification"], row["phenotype_id"], row["pmid"],
+            )
+            if key in seen:
+                counts["duplicate_rows"] += 1
+                continue
+            seen.add(key)
+            pathogen = row["taxon_label"]
+            if row["strain_label"]:
+                pathogen += f" strain {row['strain_label']}"
+            protein = row["protein_accession"] or row["phig_id"]
+            items.append({
+                "mechanism_type": "UNKNOWN",
+                "label": f"{row['modification']} associated with {row['phenotype_label']}",
+                "note": (
+                    f"{PHIBASE_NOTE_MARKER} {row['phig_id']}; {protein}; "
+                    f"{pathogen} (NCBITaxon:{row['taxon_id']}); "
+                    f"phenotype {row['phenotype_id']}; evidence code {row['evidence_code']}; "
+                    f"source commit {row['source_commit']}, retrieved {row['source_retrieved_on']}. "
+                    "This is a curated gene-alteration/chemical resistance association, "
+                    "not evidence for a specific biochemical resistance mechanism."
+                ),
+                "evidence": [{
+                    "reference": f"PMID:{row['pmid']}",
+                    "notes": (
+                        "PHI-base primary-literature antimicrobial interaction; exact ChEBI "
+                        "chemical identifier, pathogen, strain, alteration, and phenotype retained."
+                    ),
+                }],
+            })
+        records[identifier].setdefault("resistance_mechanisms", []).extend(items)
+        _history_last(records[identifier])
+        counts["matched_records"] += 1
+    return counts
+
+
 BINDINGDB_TARGET_SOURCE = "BINDINGDB"
 
 
@@ -1726,7 +1805,7 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     else:
         merged.pop("discussions", None)
 
-    # CARD-derived mechanism items and BindingDB target assertions are
+    # Source-derived mechanism items and BindingDB target assertions are
     # re-seeded; curator-added or curator-upgraded ones are kept, after them.
     for field in ("molecular_targets", "resistance_mechanisms"):
         seeded_items = list(record.get(field) or [])
@@ -1734,6 +1813,7 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
             item
             for item in (existing.get(field) or [])
             if not is_card_sourced(item)
+            and not (field == "resistance_mechanisms" and is_phibase_sourced_resistance(item))
             and not (field == "molecular_targets" and is_bindingdb_sourced_target(item))
         ]
         if seeded_items or curator_items:
@@ -1758,6 +1838,8 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
         for f in ("molecular_targets", "resistance_mechanisms")
     ) and (
         bindingdb_sourced_target_view(existing) == bindingdb_sourced_target_view(record)
+    ) and (
+        phibase_sourced_resistance_view(existing) == phibase_sourced_resistance_view(record)
     ) and (
         mibig_sourced_producer_view(existing) == mibig_sourced_producer_view(record)
     ) and (
@@ -1945,6 +2027,7 @@ def main() -> int:
     decisions = load_decisions()
     records, skipped = merge(concepts, chebi_rows, conf, decisions, source_version)
     attach_aro_mechanism(records, source_version)
+    phibase_counts = attach_phibase_resistance(records)
     bindingdb_counts = attach_bindingdb_targets(records)
     mibig_counts = attach_mibig_producers(
         records,
@@ -1965,6 +2048,13 @@ def main() -> int:
     if flagged:
         print(f"  {flagged} records flagged with a structure-collision discussion",
               file=sys.stderr)
+    print(
+        "  PHI-base resistance: "
+        f"associations={phibase_counts['matched_associations']} "
+        f"records={phibase_counts['matched_records']} "
+        f"identity_drift={phibase_counts['identity_drift']}",
+        file=sys.stderr,
+    )
     print(
         "  BindingDB targets: "
         f"measurements={bindingdb_counts['matched_measurements']} "

@@ -121,6 +121,17 @@ resistance_mechanisms:
   - reference: ARO:3009529
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009182 (propiconazole);
       database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  label: CYP51Bdelta (deletion) associated with resistance to propiconazole
+  note: PHI-base antimicrobial_interaction PHIG:733; L2FD62; Colletotrichum gloeosporioides
+    strain JS67 (NCBITaxon:690256); phenotype PHIPO:0000682; evidence code Cell growth
+    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
+    This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:32569396
+    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
+      identifier, pathogen, strain, alteration, and phenotype retained.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -135,6 +146,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T04:10:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T04:31:30Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

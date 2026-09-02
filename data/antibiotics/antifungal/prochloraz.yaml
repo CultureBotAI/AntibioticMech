@@ -98,6 +98,41 @@ resistance_mechanisms:
   - reference: ARO:3009493
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009455 (prochloraz);
       database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  label: FgCYP51A(D243N) (amino acid mutation) [Overexpression] associated with resistance
+    to prochloraz
+  note: PHI-base antimicrobial_interaction PHIG:7751; I1RJR2; Fusarium graminearum
+    strain 2021 (NCBITaxon:5518); phenotype PHIPO:0000528; evidence code Cell growth
+    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
+    This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:30497711
+    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
+      identifier, pathogen, strain, alteration, and phenotype retained.
+- mechanism_type: UNKNOWN
+  label: FgCYP51A(E103Q, V157L) (amino acid mutation) [Overexpression] associated
+    with resistance to prochloraz
+  note: PHI-base antimicrobial_interaction PHIG:7751; I1RJR2; Fusarium graminearum
+    strain BM50 (NCBITaxon:5518); phenotype PHIPO:0000528; evidence code Cell growth
+    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
+    This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:30497711
+    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
+      identifier, pathogen, strain, alteration, and phenotype retained.
+- mechanism_type: UNKNOWN
+  label: CYP51Adelta (deletion) associated with resistance to prochloraz
+  note: PHI-base antimicrobial_interaction PHIG:734; L2FQR9; Colletotrichum gloeosporioides
+    strain JS67 (NCBITaxon:690256); phenotype PHIPO:0000528; evidence code Cell growth
+    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
+    This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:32569396
+    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
+      identifier, pathogen, strain, alteration, and phenotype retained.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -112,6 +147,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T04:10:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T04:31:30Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

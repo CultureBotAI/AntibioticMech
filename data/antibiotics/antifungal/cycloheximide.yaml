@@ -119,6 +119,17 @@ resistance_mechanisms:
   - reference: ARO:3009326
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009188 (cycloheximide);
       database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  label: STS1+ (wild type) [Overexpression] associated with resistance to cycloheximide
+  note: PHI-base antimicrobial_interaction PHIG:1805; P38637; Saccharomyces cerevisiae
+    strain YPH501 (NCBITaxon:4932); phenotype PHIPO:0000544; evidence code Cell growth
+    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
+    This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:8307980
+    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
+      identifier, pathogen, strain, alteration, and phenotype retained.
 molecular_targets:
 - target_id: ARO:3000729
   target_label: ribosomal complex
@@ -149,6 +160,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:02Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T04:31:13Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

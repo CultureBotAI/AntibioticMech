@@ -32,6 +32,13 @@ sources:
     version: 2026-09
     retrieved_on: '2026-08-31'
     row_policy: Curated from the literature by BindingDB
+  phibase:
+    homepage: https://phi5.phi-base.org/
+    license: CC BY 4.0
+    version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+    retrieved_on: '2026-09-01'
+    row_policy: ChEBI-grounded antimicrobial_interaction with resistance PHIPO and
+      PMID
 downloads:
   compounds.tsv.gz:
     url: https://ftp.ebi.ac.uk/pub/databases/chebi/flat_files/compounds.tsv.gz
@@ -97,6 +104,14 @@ downloads:
     url: https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip
     bytes: 78637355
     sha256: 5b007816d5808387b577724b8da2d835ec7db0d5f5554035997c4019941f1944
+  phibase_amr_export.csv:
+    url: https://raw.githubusercontent.com/PHI-base/data/62e6a87a49397cba6ceb211b254d7ac8e5d09ff8/ensembl/phibase_amr_export.csv
+    bytes: 60472
+    sha256: f9e706594747a4c4d1d66e9d1e3e23d6a837da4ca0673fe18d562eae9ebccdf5
+  phipo.csv:
+    url: https://raw.githubusercontent.com/PHI-base/phibase-pipeline/bdaf084c971366084badabee96bd65da2ee84ae9/src/phibase_pipeline/data/phipo.csv
+    bytes: 63236
+    sha256: 0bb2d1f960058af67f2f291537b962abee312889fa80ad999ffa9d057107ca65
 inventories:
   aro_antibiotics.tsv:
     rows: 644
@@ -138,3 +153,8 @@ inventories:
     bytes: 133120
     sha256: faccfe5634f467801aeb256e6560af09d193cdb53bdbf29dea195c9c0488c480
     source: BindingDB literature-curated rows with assay and NCBI Taxonomy joins
+  phibase_amr.tsv:
+    rows: 217
+    bytes: 65088
+    sha256: 3fa60cf6c8d7ee3505e8760faa4373d2258335d6a19a7f5292638eab82851e5e
+    source: PHI-base ChEBI-grounded gene-antimicrobial resistance interactions

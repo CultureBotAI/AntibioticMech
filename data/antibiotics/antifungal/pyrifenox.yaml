@@ -69,6 +69,30 @@ source_concepts:
   - CHEBI:77884
   - CHEBI:86328
   source_version: '2026-08-30'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  label: CYP51 transformant(LC2-CYP51promoter(5x126bp tandem repeat)::CYP51) (transformant)
+    [Overexpression] associated with resistance to pyrifenox
+  note: PHI-base antimicrobial_interaction PHIG:9164; Q9P340; Penicillium digitatum
+    strain PD5 (NCBITaxon:36651); phenotype PHIPO:0001348; evidence code Cell growth
+    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
+    This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:10919801
+    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
+      identifier, pathogen, strain, alteration, and phenotype retained.
+- mechanism_type: UNKNOWN
+  label: CYP51+ (wild type) [Overexpression] associated with resistance to pyrifenox
+  note: PHI-base antimicrobial_interaction PHIG:9164; Q9P340; Penicillium digitatum
+    strain PD5 (NCBITaxon:36651); phenotype PHIPO:0001348; evidence code Cell growth
+    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
+    This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:10919801
+    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
+      identifier, pathogen, strain, alteration, and phenotype retained.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -83,6 +107,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T20:07:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T04:31:29Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

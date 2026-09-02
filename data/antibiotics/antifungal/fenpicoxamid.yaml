@@ -54,6 +54,31 @@ source_concepts:
   - CHEBI:24127
   - CHEBI:35718
   source_version: '2026-08-30'
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  label: CytB(G37V) (amino acid mutation) [Not assayed] associated with resistance
+    to fenpicoxamid
+  note: PHI-base antimicrobial_interaction PHIG:954; Q6X9S4; Zymoseptoria tritici
+    strain IPO323 (NCBITaxon:1047171); phenotype PHIPO:0001291; evidence code Cell
+    growth assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved
+    2026-09-01. This is a curated gene-alteration/chemical resistance association,
+    not evidence for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:34490974
+    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
+      identifier, pathogen, strain, alteration, and phenotype retained.
+- mechanism_type: UNKNOWN
+  label: CytB(G37V) (amino acid mutation) [Not assayed] associated with resistance
+    to fenpicoxamid
+  note: PHI-base antimicrobial_interaction PHIG:954; Q6X9S4; Zymoseptoria tritici
+    strain 37-16 (NCBITaxon:1047171); phenotype PHIPO:0001291; evidence code Cell
+    growth assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved
+    2026-09-01. This is a curated gene-alteration/chemical resistance association,
+    not evidence for a specific biochemical resistance mechanism.
+  evidence:
+  - reference: PMID:34490974
+    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
+      identifier, pathogen, strain, alteration, and phenotype retained.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -64,6 +89,14 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:24Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T04:31:09Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T04:41:35Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

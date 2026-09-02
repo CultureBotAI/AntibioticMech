@@ -67,7 +67,7 @@ def corpus_stats() -> dict:
 def render_block(stats: dict) -> str:
     total = stats["total"]
     lines = [START, ""]
-    lines.append("| Class | Records | SEEDED | REVIEWED | With CARD mechanism evidence |")
+    lines.append("| Class | Records | SEEDED | REVIEWED | With resistance evidence |")
     lines.append("|---|---:|---:|---:|---:|")
     # Filing is exclusive, so a subclass's records are not also under its parent.
     # The parent row therefore carries the INCLUSIVE total and the subclass is
@@ -129,7 +129,8 @@ def render_block(stats: dict) -> str:
     graphs = stats["mechanism"].get("causal_graphs", 0)
     moa = stats["mechanism"].get("mode_of_action", 0)
     lines.append(f"Mechanism layer: **{targets}** records carry a molecular target and "
-                 f"**{resistance}** carry resistance determinants, both seeded from CARD; "
+                 f"**{resistance}** carry resistance determinants or associations seeded "
+                 "from CARD and PHI-base; "
                  f"**{moa}** carry a mode of action seeded from ChEBI's mechanism roles; "
                  f"**{graphs}** carry a curated causal graph. That last number is the work.")
     lines.append("")

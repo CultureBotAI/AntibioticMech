@@ -127,6 +127,20 @@ bindingdb:
   taxdump_archive_name: taxdmp-2026-08-31.zip
   row_policy: Curated from the literature by BindingDB
 
+phibase:
+  name: PHI-base
+  description: >-
+    Curated pathogen gene--antimicrobial interactions whose chemical is
+    identified by ChEBI and whose phenotype is a chemical-specific resistance
+    term. The import preserves the alteration and primary PMID but deliberately
+    leaves the biochemical resistance mechanism UNKNOWN.
+  homepage: https://phi5.phi-base.org/
+  license: CC BY 4.0
+  commit: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  retrieved_on: '2026-09-01'
+  amr_export_url: https://raw.githubusercontent.com/PHI-base/data/62e6a87a49397cba6ceb211b254d7ac8e5d09ff8/ensembl/phibase_amr_export.csv
+  phenotype_vocabulary_url: https://raw.githubusercontent.com/PHI-base/phibase-pipeline/bdaf084c971366084badabee96bd65da2ee84ae9/src/phibase_pipeline/data/phipo.csv
+
 # ----------------------------------------------------------------------------
 # Role scope — which ChEBI roles put a compound in this corpus.
 #
