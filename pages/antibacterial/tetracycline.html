@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:27902</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_27902">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A broad-spectrum polyketide antibiotic produced by the Streptomyces genus of actinobacteria.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000050">tetracycline antibiotic</a><code class="curie">ARO:3000050</code></p>
@@ -118,10 +115,16 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta">ARO:3000755</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000051 (tetracycline); database assertion, not a primary citation.)</span></li>
 </ul>
 
+<h3>30S ribosomal subunit <span class="pill plain">RIBOSOMAL_SUBUNIT</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">Atomic structures of antibiotic-30S complexes directly localized tetracycline at discrete small-subunit binding sites and supported the functional mechanism. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2000-12 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:11163189</span> <span class="meta">(Primary tetracycline-bound 30S structural mechanism study (DOI:10.1016/S0092-8674(00)00216-6).)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor). ChEBI asserts the role on the compound. The target it names is one the host has too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd></dl>
+<dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— CURATOR: PMID:11163189 determined the atomic structure of tetracycline bound at discrete sites on the bacterial 30S ribosomal subunit. The observed drug-ribosome interactions support inhibition of aminoacyl-tRNA delivery and therefore bacterial protein synthesis.</span></dd></dl>
 
 
 
@@ -879,6 +882,11 @@ type — expand a group to see its determinants.</p>
 
 
 
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:11163189</span> <span class="meta">(Primary exact-tetracycline 30S ribosome structural mechanism study.)</span></li>
+</ul>
+
 
 <h2>Curation history</h2>
 <ol class="events">
@@ -901,6 +909,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI/CARD identity, structure, roles, class, and provenance of 116 retained CARD resistance assertions; curator-confirmed protein synthesis inhibition and added the directly bound 30S target.</p>
   </li>
 </ol>
 

@@ -1,7 +1,7 @@
 identifier: CHEBI:17698
 label: chloramphenicol
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An organochlorine compound that is dichloro-substituted acetamide containing
   a nitrobenzene ring, an amide bond and two alcohol functions.
@@ -94,10 +94,11 @@ activity_roles:
 structural_class: phenicol antibiotic
 structural_class_id: ARO:3000387
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:20876128 resolved chloramphenicol on the Escherichia
+  coli ribosome at approximately 3.3-3.4 angstrom resolution, directly defining its
+  binding near the 50S peptidyl-transferase center. The study also showed why archaeal
+  or other bacterial ribosome structures cannot always be transferred without species-specific
+  qualification.'
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: O=C(N[C@H](CO)[C@H](O)c1ccc([N+](=O)[O-])cc1)C(Cl)Cl
@@ -149,6 +150,9 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:20876128
+  notes: Primary exact-chloramphenicol E. coli ribosome structural study.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000309
@@ -779,6 +783,21 @@ molecular_targets:
   - reference: ARO:3000754
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
+- target_label: 50S ribosomal peptidyl-transferase center
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  experimental_context: An approximately 3.3-3.4-angstrom E. coli ribosome cocrystal
+    directly localized chloramphenicol near the peptidyl-transferase center and resolved
+    species-specific contacts.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2010-09
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:20876128
+    notes: Primary chloramphenicol-bound E. coli ribosome structure (DOI:10.1073/pnas.1007988107).
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -1100,3 +1119,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T23:30:24Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI/CARD identity, structure, roles, class, retained FDA
+    status, and the provenance of 87 CARD resistance assertions; curator-confirmed
+    protein-synthesis inhibition and added the directly bound E. coli 50S target.
+  llm_assisted: true

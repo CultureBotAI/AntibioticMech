@@ -1,7 +1,7 @@
 identifier: CHEBI:27902
 label: tetracycline
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A broad-spectrum polyketide antibiotic produced by the Streptomyces genus
   of actinobacteria.
@@ -87,10 +87,10 @@ activity_roles:
 structural_class: tetracycline antibiotic
 structural_class_id: ARO:3000050
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:11163189 determined the atomic structure of tetracycline
+  bound at discrete sites on the bacterial 30S ribosomal subunit. The observed drug-ribosome
+  interactions support inhibition of aminoacyl-tRNA delivery and therefore bacterial
+  protein synthesis.'
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H][C@]12C[C@@]3([H])[C@H](N(C)C)C(O)=C(C(N)=O)C(=O)[C@@]3(O)C(O)=C1C(=O)c1c(O)cccc1[C@@]2(C)O'
@@ -141,6 +141,9 @@ source_concepts:
   - CHEBI:35820
   - CHEBI:36047
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:11163189
+  notes: Primary exact-tetracycline 30S ribosome structural mechanism study.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000165
@@ -970,6 +973,19 @@ molecular_targets:
   - reference: ARO:3000755
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000051 (tetracycline); database
       assertion, not a primary citation.
+- target_label: 30S ribosomal subunit
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: Atomic structures of antibiotic-30S complexes directly localized
+    tetracycline at discrete small-subunit binding sites and supported the functional
+    mechanism.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2000-12
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:11163189
+    notes: Primary tetracycline-bound 30S structural mechanism study (DOI:10.1016/S0092-8674(00)00216-6).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -987,3 +1003,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T23:30:28Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI/CARD identity, structure, roles, class, and provenance
+    of 116 retained CARD resistance assertions; curator-confirmed protein synthesis
+    inhibition and added the directly bound 30S target.
+  llm_assisted: true

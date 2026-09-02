@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:44504</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_44504">resolve</a>  <span class="sep">·</span><a href="../class/unspecified.html">ANTIMICROBIAL_UNSPECIFIED</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>An anthracycline antibiotic isolated from Streptomyces nogalater. It is a DNA intercalator and exhibits anticancer properties.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
@@ -90,6 +87,19 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+<h2>Molecular targets</h2>
+<p class="meta">The molecular entity or process this compound acts on. Each target
+carries evidence — this is a mechanistic claim, not a classification.</p>
+<h3>double-stranded DNA <span class="pill plain">NUCLEIC_ACID</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">An X-ray structure of nogalamycin with a self-complementary DNA hexamer showed terminal-CpG intercalation, two-strand/two-groove contacts, and large departures from B-DNA geometry. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 1991-02 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:1991116</span> <span class="meta">(Primary nogalamycin-DNA cocrystal study (DOI:10.1021/bi00219a029).)</span></li>
+</ul>
+
+
+<h2>Mechanism summary</h2>
+<dl class="fields">
+<dt>Mode of action</dt><dd>NUCLEIC_ACID_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— CURATOR: PMID:1991116 resolved nogalamycin intercalated at terminal CpG steps of a DNA hexamer. The drug contacts both strands in both grooves and causes substantial base-pair and backbone distortions; the observed hydrogen bonds did not establish sequence-specific binding.</span></dd></dl>
 
 
 
@@ -98,6 +108,10 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 
 
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:1991116</span> <span class="meta">(Primary exact-nogalamycin DNA intercalation structure.)</span></li>
+</ul>
 
 
 <h2>Curation history</h2>
@@ -116,6 +130,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI identity, structure, antibiotic role, and unspecified filing class; added nucleic-acid synthesis inhibition and directly observed, non-sequence-specific DNA intercalation.</p>
   </li>
 </ol>
 

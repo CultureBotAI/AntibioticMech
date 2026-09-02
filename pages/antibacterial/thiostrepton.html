@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:29693</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_29693">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A heterodetic cyclic peptide, in which the cyclisation step involves a formal lactonisation between the carboxy group of a quinaldic acid-based residue and a secondary alcohol. An antibiotic that inhibits bacterial protein synthesis. Also acts as an antitumor agent.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3009656">ribosomally synthesized and post-translationally modified peptide antibiotics</a><code class="curie">ARO:3009656</code></p>
@@ -107,10 +104,16 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta">ARO:3000757</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000686 (thiostrepton); database assertion, not a primary citation.)</span></li>
 </ul>
 
+<h3>70S ribosome GTPase-associated center <span class="pill plain">RIBOSOMAL_SUBUNIT</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">70S binding and GTP-hydrolysis assays showed loss of stable EF-G and EF4 engagement at 0.15 micromolar thiostrepton; no compound-bound structure was reported in this study. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2011-09 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:21908407</span> <span class="meta">(Primary 70S-factor binding, GTPase, truncation, and footprinting study (DOI:10.1093/nar/gkr623).)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor). ChEBI asserts the role on the compound. The target it names is one the host has too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd></dl>
+<dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— CURATOR: PMID:21908407 measured thiostrepton inhibition of stable 70S binding and ribosome-dependent GTP hydrolysis for elongation factors EF-G and EF4. A truncated EF-G lacking domains IV and V remained active and thiostrepton-insensitive, supporting disruption of factor-ribosome engagement rather than direct inhibition of the soluble factors.</span></dd></dl>
 
 
 
@@ -136,6 +139,11 @@ type — expand a group to see its determinants.</p>
 
 
 
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:21908407</span> <span class="meta">(Primary thiostrepton 70S-factor binding and GTPase mechanism study.)</span></li>
+</ul>
+
 
 <h2>Curation history</h2>
 <ol class="events">
@@ -158,6 +166,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI/CARD identity, structure, roles, class, and retained CARD target/resistance provenance; curator-confirmed protein-synthesis inhibition and added the measured ribosomal GTPase-center association.</p>
   </li>
 </ol>
 
