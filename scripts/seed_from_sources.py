@@ -655,6 +655,21 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
 # (#169).
 
 
+# The accession shape the schema enforces on StructuralObservation.structure_id.
+# Defined once and asserted equal to the schema's pattern by a test, so the
+# migration and the validator cannot drift apart (#174).
+STRUCTURE_ID_PATTERN = r"^(PDB:[0-9][A-Za-z0-9]{3}|EMDB:EMD-[0-9]{4,5})$"
+
+# Read by the run summary and CLEARED at the start of every merge. A
+# module-level list that is written and never read, or never reset, is the
+# defect #169 records; this one is both read and reset, deliberately.
+MALFORMED_STRUCTURE_IDS: list[tuple[str, str]] = []
+
+# Sources the seeder itself writes structural observations for. Anything else on
+# a record belongs to a curator and is not the seeder's to reproduce (#173).
+SEEDER_STRUCTURE_SOURCES = {"CHEBI", "ARO"}
+
+
 def structural_observations(group: list, source_version: str,
                             retrieved_on: str) -> list[dict]:
     """PDB accessions a source attached to this compound, as what they are.
@@ -673,6 +688,13 @@ def structural_observations(group: list, source_version: str,
             if namespace.lower() != "pdb" or not accession:
                 continue
             structure_id = f"PDB:{accession.upper()}"
+            if not re.fullmatch(STRUCTURE_ID_PATTERN, structure_id):
+                # Skipped, not emitted. write_validated_antibiotic validates the
+                # WHOLE record, so one malformed upstream accession would make an
+                # otherwise good compound unwritable — a whole record lost to a
+                # source typo (#174).
+                MALFORMED_STRUCTURE_IDS.append((concept.source_id, xref))
+                continue
             if structure_id in seen:
                 continue
             seen.add(structure_id)
@@ -698,7 +720,8 @@ def seeded_structural_view(record: dict) -> set[str]:
     one cannot quietly disappear.
     """
     return {f"{item.get('structure_id')}|{item.get('source')}"
-            for item in (record.get("structural_observations") or [])}
+            for item in (record.get("structural_observations") or [])
+            if item.get("source") in SEEDER_STRUCTURE_SOURCES}
 
 
 def _cas_numbers(raw: str) -> set[str]:
@@ -837,6 +860,7 @@ def assign_slugs(records: dict[str, dict], lockfile: dict[str, str],
 def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
           decisions: dict[str, dict], source_version: str) -> tuple[dict[str, dict], list[Concept]]:
     """Group concepts into records. Returns (records, skipped-for-no-structure)."""
+    MALFORMED_STRUCTURE_IDS.clear()
     # InChIKey per ChEBI id, from the committed inventory. The same-structure
     # gate on xrefs uses it; a ChEBI term with no structure here is simply not
     # comparable, and its xrefs are kept and queued rather than dropped.
@@ -2233,6 +2257,11 @@ def main() -> int:
 
     print(f"{len(concepts)} source concepts -> {len(records)} records", file=sys.stderr)
     print(f"  {merged} records carry more than one source concept", file=sys.stderr)
+    if MALFORMED_STRUCTURE_IDS:
+        print(f"  {len(MALFORMED_STRUCTURE_IDS)} malformed structure accession(s) "
+              "skipped (not a PDB/EMDB accession):", file=sys.stderr)
+        for source_id, xref in MALFORMED_STRUCTURE_IDS:
+            print(f"    {source_id}: {xref}", file=sys.stderr)
     print(f"  {len(skipped)} concepts have no structure and are not written "
           f"(see `just worklist`)", file=sys.stderr)
     if flagged:
