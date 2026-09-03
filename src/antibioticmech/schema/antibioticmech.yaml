@@ -34,6 +34,7 @@ prefixes:
   RO: http://purl.obolibrary.org/obo/RO_
   IAO: http://purl.obolibrary.org/obo/IAO_
   NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
+  PHIPO: http://purl.obolibrary.org/obo/PHIPO_
   # Chemistry and drug registries
   pubchem.compound: https://pubchem.ncbi.nlm.nih.gov/compound/
   CHEMBL.COMPOUND: https://www.ebi.ac.uk/chembl/compound_report_card/
@@ -992,7 +993,8 @@ classes:
         range: string
       protein_accession:
         description: >-
-          UniProtKB accession of the altered protein.
+          UniProtKB accession of the altered protein, in the same notation as
+          `ProteinExample.uniprot_id` so the two can be joined.
 
           This is the mirror image of the rule on `MolecularTarget`, where an
           accession is explicitly NOT the target identity: a target should be a
@@ -1001,6 +1003,7 @@ classes:
           the accession is the most precise honest identifier for it. The
           asymmetry is deliberate, not an oversight.
         range: string
+        pattern: "^UniProtKB:[A-Z0-9]+(-[0-9]+)?$"
       gene_id:
         description: Source gene identifier for the altered locus, where given.
         range: string
@@ -1013,7 +1016,12 @@ classes:
       assay:
         description: >-
           The method behind the phenotype call (e.g. "Cell growth assay").
-          Without it the claim is an assertion rather than an observation.
+
+          Optional, deliberately. `ActivityObservation` REQUIRES its assay via a
+          rule, because a MIC without a method is a number pretending to be a
+          measurement. A resistance association is not that: a curator recording
+          an allele from a paper that never states its method should be able to,
+          and saying so is more honest than an empty string satisfying a gate.
         range: string
       source:
         description: >-

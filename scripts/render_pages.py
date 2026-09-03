@@ -121,6 +121,9 @@ XREF_URL_TEMPLATES = {
     "cas": "https://commonchemistry.cas.org/detail?cas_rn={}",
     "kegg.compound": "https://www.kegg.jp/entry/{}",
     "kegg.drug": "https://www.kegg.jp/entry/{}",
+    "NCBITaxon": "http://purl.obolibrary.org/obo/NCBITaxon_{}",
+    "PHIPO": "http://purl.obolibrary.org/obo/PHIPO_{}",
+    "UniProtKB": "https://www.uniprot.org/uniprotkb/{}",
 }
 
 
@@ -198,10 +201,22 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
                 "gene_families": m.get("gene_families") or [],
                 # Organismal context (#94). A route-level CARD determinant has
                 # none of this; a PHI-base allele association is defined by it.
+                #
+                # Each CURIE is resolved beside the thing it denotes. Printing
+                # "strain PH-1 NCBITaxon:5518" put a strain designation next to
+                # a SPECIES id and re-asserted on the page the confusion the
+                # record had just stopped asserting (#179).
                 "taxon_label": m.get("taxon_label"),
-                "taxon_id": m.get("taxon_id"),
+                "taxon_id": (resolve_curie(m["taxon_id"], index, root)
+                             if m.get("taxon_id") else None),
                 "strain": m.get("strain"),
-                "protein_accession": m.get("protein_accession"),
+                "strain_taxon_id": (resolve_curie(m["strain_taxon_id"], index, root)
+                                    if m.get("strain_taxon_id") else None),
+                "protein_accession": (resolve_curie(m["protein_accession"], index, root)
+                                      if m.get("protein_accession") else None),
+                "phenotype_id": (resolve_curie(m["phenotype_id"], index, root)
+                                 if m.get("phenotype_id") else None),
+                "gene_id": m.get("gene_id"),
                 "assay": m.get("assay"),
                 "note": m.get("note"),
                 "evidence": m.get("evidence") or [],
