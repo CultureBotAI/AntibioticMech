@@ -1,7 +1,7 @@
 identifier: CHEBI:17076
 label: streptomycin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A amino cyclitol glycoside that consists of streptidine having a disaccharyl
   moiety attached at the 4-position. The parent of the streptomycin class
@@ -56,10 +56,11 @@ activity_roles:
 structural_class: aminoglycoside antibiotic
 structural_class_id: ARO:0000016
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:23322043 resolved streptomycin at the Thermus
+  thermophilus 30S decoding center with cognate or near-cognate anticodon-stem-loop
+  and mRNA substrates. Streptomycin distorts 16S-rRNA bases including A1492 and A1493,
+  destabilizing cognate while stabilizing near-cognate decoding and thereby promoting
+  genetic-code misreading.'
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CN[C@@H]1[C@H](O[C@H]2[C@H](O[C@H]3[C@H](O)[C@@H](O)[C@H](NC(=N)N)[C@@H](O)[C@@H]3NC(=N)N)O[C@@H](C)[C@]2(O)C=O)O[C@@H](CO)[C@H](O)[C@H]1O
@@ -112,6 +113,9 @@ source_concepts:
   - CHEBI:86327
   - CHEBI:86328
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:23322043
+  notes: Primary exact-streptomycin 30S structure and decoding-fidelity study.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_INACTIVATION
   aro_id: ARO:3002598
@@ -580,6 +584,21 @@ molecular_targets:
   - reference: ARO:3003431
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000040 (streptomycin); database
       assertion, not a primary citation.
+- target_label: 30S ribosomal decoding center
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:274
+  taxon_label: Thermus thermophilus
+  experimental_context: Streptomycin-bound T. thermophilus 30S structures with mRNA
+    and cognate or near-cognate anticodon-stem loops directly showed local 16S-rRNA
+    distortion and altered substrate recognition.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: '2013'
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:23322043
+    notes: Primary streptomycin-bound 30S decoding and misreading study (DOI:10.1038/ncomms2346).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -597,3 +616,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:42:34Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI/CARD identity, structure, roles, class, FDA provenance,
+    and 62 retained CARD resistance assertions; curator-confirmed protein-synthesis
+    inhibition and added the directly observed 30S decoding-center mechanism.
+  llm_assisted: true

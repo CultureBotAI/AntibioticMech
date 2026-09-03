@@ -1,7 +1,7 @@
 identifier: CHEBI:7025
 label: mupirocin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An α,β-unsaturated ester resulting from the formal condensation of the
   alcoholic hydroxy group of 9-hydroxynonanoic acid with the carboxy group of (2E)-4-[(2S)-tetrahydro-2H-pyran-2-yl]-3-methylbut-2-enoic
@@ -50,10 +50,10 @@ activity_roles:
 structural_class: mupirocin-like antibiotic
 structural_class_id: ARO:3007151
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:10446055 resolved mupirocin in a 2.2-angstrom
+  Staphylococcus aureus isoleucyl-tRNA synthetase (IleRS)-tRNA(Ile) complex. The structure
+  directly supports inhibition of IleRS and hence isoleucyl-tRNA production; the paper
+  focused on tRNA editing geometry rather than reporting an enzyme inhibition constant.'
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H][C@@]1([C@@H](C)[C@H](C)O)O[C@@]1([H])C[C@H]1CO[C@@H](C/C(C)=C/C(=O)OCCCCCCCCC(=O)O)[C@H](O)[C@@H]1O'
@@ -92,6 +92,9 @@ source_concepts:
   role_terms:
   - CHEBI:36047
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:10446055
+  notes: Primary exact-mupirocin IleRS-tRNA(Ile) cocrystal study.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3000510
@@ -137,6 +140,20 @@ molecular_targets:
   - reference: ARO:3000732
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000554 (mupirocin); database
       assertion, not a primary citation.
+- target_label: isoleucyl-tRNA synthetase-tRNA(Ile) complex
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  experimental_context: A 2.2-angstrom S. aureus IleRS-tRNA(Ile)-mupirocin crystal
+    structure directly observed the antibiotic-bound aminoacyl-tRNA-synthetase complex.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1999-08
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:10446055
+    notes: Primary mupirocin-bound S. aureus IleRS-tRNA(Ile) structure.
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -332,3 +349,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:42:28Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI/CARD identity, structure, antibiotic role, class,
+    FDA provenance, and retained CARD target/resistance assertions; curator-confirmed
+    protein-synthesis inhibition and added the directly bound IleRS-tRNA complex.
+  llm_assisted: true

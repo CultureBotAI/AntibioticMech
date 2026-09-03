@@ -1,7 +1,7 @@
 identifier: CHEBI:28077
 label: rifampicin
 antimicrobial_class: ANTIMYCOBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A member of the class of rifamycins that is a a semisynthetic antibiotic
   derived from Amycolatopsis rifamycinica (previously known as Amycolatopsis mediterranei
@@ -46,14 +46,12 @@ activity_roles:
 - CHEBI:35816
 structural_class: rifamycin antibiotic
 structural_class_id: ARO:3000157
-mode_of_action: MULTIPLE
-mode_of_action_notes: Assigned from ChEBI roles CHEBI:37416 (EC 2.7.7.6 (RNA polymerase)
-  inhibitor), CHEBI:48001 (protein synthesis inhibitor), CHEBI:59517 (DNA synthesis
-  inhibitor), which map to NUCLEIC_ACID_SYNTHESIS_INHIBITION, PROTEIN_SYNTHESIS_INHIBITION.
-  ChEBI asserts these roles on the compound; a curator should decide whether one is
-  primary. The target it names is one the host has too, so the mechanism is true but
-  is not evidence of selectivity — see mode_of_action_target_scope. Not a curator's
-  mechanistic review.
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_notes: 'CURATOR: PMID:11290327 resolved rifampicin bound to Thermus
+  aquaticus core RNA polymerase. It occupies a beta-subunit pocket in the DNA/RNA
+  channel more than 12 angstrom from the active site and sterically blocks extension
+  once nascent RNA reaches two to three nucleotides. This primary transcription mechanism
+  replaces the source-seeded MULTIPLE bucket.'
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C)CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\C=C\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C
@@ -95,6 +93,10 @@ source_concepts:
   - CHEBI:33231
   - CHEBI:35816
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:11290327
+  notes: Primary exact-rifampicin bacterial RNA-polymerase cocrystal and biochemical
+    study.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3000245
@@ -391,6 +393,21 @@ molecular_targets:
   - reference: ARO:3000737
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000169 (rifampin); database
       assertion, not a primary citation.
+- target_label: bacterial RNA polymerase beta-subunit channel
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:271
+  taxon_label: Thermus aquaticus
+  experimental_context: A T. aquaticus core-RNAP cocrystal directly localized rifampicin
+    in the beta-subunit DNA/RNA channel, where biochemical results support steric
+    occlusion of transcripts after two to three nucleotides.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2001-03
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:11290327
+    notes: Primary rifampicin-bound bacterial RNAP structural mechanism study (DOI:10.1016/S0092-8674(01)00286-0).
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -859,3 +876,11 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:42:37Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI/CARD rifampicin/rifampin identity, structure, roles,
+    antimycobacterial class, FDA provenance, and retained CARD assertions; replaced
+    the ambiguous seeded MULTIPLE mode with transcription inhibition and added the
+    directly bound RNAP complex.
+  llm_assisted: true

@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:7934</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_7934">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>An amino cyclitol glycoside that is the 1-O-(2-amino-2-deoxy-α-D-glucopyranoside) and the 3-O-(2,6-diamino-2,6-dideoxy-β-L-idopyranosyl)-β-D-ribofuranoside of 4,6-diamino-2,3-dihydroxycyclohexane (the 1R,2R,3S,4R,6S diastereoisomer). It is obtained from various Streptomyces species. A broad-spectrum antibiotic, it is used (generally as the sulfate salt) for the treatment of acute and chronic intestinal protozoal infections, but is not effective for extraintestinal protozoal infections. It is also used as a therapeutic against visceral leishmaniasis.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_0000016">aminoglycoside antibiotic</a><code class="curie">ARO:0000016</code></p>
@@ -110,7 +107,16 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta">ARO:3000755</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000657 (paromomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 
+<h3>16S-rRNA decoding A-site oligonucleotide <span class="pill plain">NUCLEIC_ACID</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">A 2.5-angstrom complex directly observed paromomycin bound to an RNA construct containing two E. coli decoding A sites, with extensive direct and water-mediated contacts; this was not a whole-ribosome structure. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2001-08 (retrieved 2026-09-02).</p>
+<p><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></p><ul class="plain evidence">
+  <li><span class="meta">PMID:11587639</span> <span class="meta">(Primary paromomycin-bound bacterial decoding-A-site RNA structure (DOI:10.1016/S0969-2126(01)00629-3).)</span></li>
+</ul>
 
+
+<h2>Mechanism summary</h2>
+<dl class="fields">
+<dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— CURATOR: PMID:11587639 resolved paromomycin at 2.5 angstrom with oligoribonucleotides containing the Escherichia coli 16S-rRNA decoding A site. Direct and water-mediated contacts stabilize bulged A1492/A1493; the construct models the decoding site and its crystal packing, not an intact ribosomal subunit.</span></dd></dl>
 
 
 
@@ -233,6 +239,11 @@ type — expand a group to see its determinants.</p>
 
 
 
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:11587639</span> <span class="meta">(Primary exact-paromomycin bacterial decoding-A-site RNA cocrystal study.)</span></li>
+</ul>
+
 
 <h2>Curation history</h2>
 <ol class="events">
@@ -255,6 +266,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-03 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI/CARD identity, structure, antibiotic roles, class, FDA provenance, and retained CARD target/resistance assertions; added protein-synthesis inhibition and the directly bound decoding-site RNA model with its reduced-construct boundary.</p>
   </li>
 </ol>
 

@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:28077</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_28077">resolve</a>  <span class="sep">·</span><a href="../class/antimycobacterial.html">ANTIMYCOBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A member of the class of rifamycins that is a a semisynthetic antibiotic derived from Amycolatopsis rifamycinica (previously known as Amycolatopsis mediterranei and Streptomyces mediterranei).  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000157">rifamycin antibiotic</a><code class="curie">ARO:3000157</code></p>
@@ -114,10 +111,16 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta">ARO:3000737</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000169 (rifampin); database assertion, not a primary citation.)</span></li>
 </ul>
 
+<h3>bacterial RNA polymerase beta-subunit channel <span class="pill plain">PROTEIN_COMPLEX</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">A T. aquaticus core-RNAP cocrystal directly localized rifampicin in the beta-subunit DNA/RNA channel, where biochemical results support steric occlusion of transcripts after two to three nucleotides. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2001-03 (retrieved 2026-09-02).</p>
+<p><em>Thermus aquaticus</em> <code class="curie">NCBITaxon:271</code></p><ul class="plain evidence">
+  <li><span class="meta">PMID:11290327</span> <span class="meta">(Primary rifampicin-bound bacterial RNAP structural mechanism study (DOI:10.1016/S0092-8674(01)00286-0).)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>MULTIPLE <span class="pill plain">host shared target</span> <span class="meta">— Assigned from ChEBI roles CHEBI:37416 (EC 2.7.7.6 (RNA polymerase) inhibitor), CHEBI:48001 (protein synthesis inhibitor), CHEBI:59517 (DNA synthesis inhibitor), which map to NUCLEIC_ACID_SYNTHESIS_INHIBITION, PROTEIN_SYNTHESIS_INHIBITION. ChEBI asserts these roles on the compound; a curator should decide whether one is primary. The target it names is one the host has too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
+<dt>Mode of action</dt><dd>NUCLEIC_ACID_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— CURATOR: PMID:11290327 resolved rifampicin bound to Thermus aquaticus core RNA polymerase. It occupies a beta-subunit pocket in the DNA/RNA channel more than 12 angstrom from the active site and sterically blocks extension once nascent RNA reaches two to three nucleotides. This primary transcription mechanism replaces the source-seeded MULTIPLE bucket.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
 
 
 
@@ -405,6 +408,11 @@ type — expand a group to see its determinants.</p>
 
 
 
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:11290327</span> <span class="meta">(Primary exact-rifampicin bacterial RNA-polymerase cocrystal and biochemical study.)</span></li>
+</ul>
+
 
 <h2>Curation history</h2>
 <ol class="events">
@@ -437,6 +445,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-03 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI/CARD rifampicin/rifampin identity, structure, roles, antimycobacterial class, FDA provenance, and retained CARD assertions; replaced the ambiguous seeded MULTIPLE mode with transcription inhibition and added the directly bound RNAP complex.</p>
   </li>
 </ol>
 

@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:68590</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_68590">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>An 18-membered macrolide that is a fermentation product obtained from the Actinomycete Dactylosporangium aurantiacum. A narrow spectrum antibiotic used for treatment of Clostridium difficile-related infections.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3001318">macrocyclic antibiotic</a><code class="curie">ARO:3001318</code></p>
@@ -109,10 +106,16 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta">ARO:3003439</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3001319 (fidaxomicin); database assertion, not a primary citation.)</span></li>
 </ul>
 
+<h3>bacterial RNA polymerase <span class="pill plain">PROTEIN_COMPLEX</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">A cryo-EM structure directly observed fidaxomicin bound to C. difficile RNA polymerase; biochemical and genetic tests identified a residue that sensitizes the enzyme and contributes to narrow-spectrum activity. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2022-04 (retrieved 2026-09-02).</p>
+<p><em>Clostridioides difficile</em> <code class="curie">NCBITaxon:1496</code></p><ul class="plain evidence">
+  <li><span class="meta">PMID:35388215</span> <span class="meta">(Primary C. difficile RNAP-fidaxomicin structure and selectivity study (DOI:10.1038/s41586-022-04545-z).)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>NUCLEIC_ACID_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— Assigned from ChEBI role CHEBI:37416 (EC 2.7.7.6 (RNA polymerase) inhibitor). ChEBI asserts the role on the compound. The target it names is one the host has too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd></dl>
+<dt>Mode of action</dt><dd>NUCLEIC_ACID_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— CURATOR: PMID:35388215 resolved fidaxomicin bound to Clostridioides difficile RNA polymerase and combined structural, biochemical, genetic, and bioinformatic evidence to identify a single sensitizing residue absent from many gut commensals. These data support bacterial transcription inhibition and explain an important determinant of narrow-spectrum activity.</span></dd></dl>
 
 
 
@@ -120,6 +123,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:35388215</span> <span class="meta">(Primary exact-fidaxomicin C. difficile RNA-polymerase structure and selectivity study.)</span></li>
+</ul>
 
 
 <h2>Curation history</h2>
@@ -143,6 +151,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-03 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI/CARD identity, structure, antibacterial role, class, FDA provenance, and retained CARD target assertion; curator-confirmed transcription inhibition and added the directly bound C. difficile RNAP complex.</p>
   </li>
 </ol>
 

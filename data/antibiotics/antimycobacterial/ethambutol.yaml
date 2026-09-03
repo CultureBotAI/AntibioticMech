@@ -1,7 +1,7 @@
 identifier: CHEBI:4877
 label: ethambutol
 antimicrobial_class: ANTIMYCOBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An ethylenediamine derivative that is ethane-1,2-diamine in which one
   hydrogen attached to each of the nitrogens is sutstituted by a 1-hydroxybutan-2-yl
@@ -56,6 +56,13 @@ activity_roles:
 - CHEBI:33231
 structural_class: polyamine antibiotic
 structural_class_id: ARO:3000527
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_notes: 'CURATOR: PMID:32327601 resolved ethambutol with mycobacterial
+  EmbA-EmbB and EmbC-EmbC arabinosyltransferase complexes. The drug occupies the donor-
+  and acceptor-substrate site in EmbB and EmbC, explaining inhibition of mycobacterial
+  cell-wall arabinan synthesis and the clustering of resistance mutations near the
+  binding site.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CC[C@@H](CO)NCCN[C@@H](CC)CO
   standard_inchi: InChI=1S/C10H24N2O2/c1-3-9(7-13)11-5-6-12-10(4-2)8-14/h9-14H,3-8H2,1-2H3/t9-,10-/m0/s1
@@ -91,6 +98,9 @@ source_concepts:
   role_terms:
   - CHEBI:33231
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:32327601
+  notes: Primary exact-ethambutol Emb-complex structural and resistance study.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3000235
@@ -299,6 +309,19 @@ molecular_targets:
   - reference: ARO:3003473
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database
       assertion, not a primary citation.
+- target_label: EmbA-EmbB and EmbC-EmbC arabinosyltransferase complexes
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: Cryo-EM and X-ray structures contained ethambutol with substrate-bound
+    mycobacterial Emb complexes and localized competitive binding to the shared donor/acceptor
+    site in EmbB and EmbC.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2020-04
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:32327601
+    notes: Primary ethambutol-bound arabinosyltransferase structural study (DOI:10.1126/science.aba9102).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -316,3 +339,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:42:20Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI/CARD stereochemical identity, structure, antimycobacterial
+    role, class, FDA provenance, and retained CARD assertions; added cell-wall arabinan
+    inhibition and the directly observed EmbB/EmbC complexes.
+  llm_assisted: true
