@@ -308,24 +308,43 @@ def xref_unverified_queue(records: list[dict]) -> list[dict]:
     Keyed by record, since one record may carry several.
     """
     with (RAW_DIR / "chebi_antimicrobials.tsv").open(encoding="utf-8") as fh:
-        known = {row["chebi_id"]: row.get("standard_inchi_key") or ""
-                 for row in csv.DictReader(fh, delimiter="\t")}
+        inventory = {row["chebi_id"]: row.get("standard_inchi_key") or ""
+                     for row in csv.DictReader(fh, delimiter="\t")}
     rows = []
     for record in records:
-        unchecked = [x for x in (record.get("xrefs") or [])
-                     if x.startswith("CHEBI:") and not known.get(x)]
+        # Two different situations were reported as one. A target ABSENT from
+        # the inventory is unknown; a target PRESENT with no structure is known
+        # to be a class or a mixture, which is itself a reason the xref is not a
+        # same-structure claim. A curator can act on the second and mostly
+        # cannot on the first (#164).
+        absent, structureless = [], []
+        for xref in record.get("xrefs") or []:
+            if not xref.startswith("CHEBI:"):
+                continue
+            if xref not in inventory:
+                absent.append(xref)
+            elif not inventory[xref]:
+                structureless.append(xref)
+        unchecked = structureless + absent
         if not unchecked:
             continue
+        parts = []
+        if structureless:
+            parts.append(f"{len(structureless)} target(s) in the inventory with no "
+                         "structure — a class or mixture, so not a same-structure claim")
+        if absent:
+            parts.append(f"{len(absent)} target(s) absent from the inventory — unknown")
         rows.append({
             "queue": "xref-unverified",
             "key": record["identifier"],
             "label": record["label"],
             "source": "+".join(sorted({c["source"] for c in record.get("source_concepts", [])})),
             "source_id": unchecked[0],
-            "hint": (f"{len(unchecked)} ChEBI xref(s) with no structure in the inventory; "
-                     "same-structure unverified"),
+            "hint": "; ".join(parts),
         })
-    rows.sort(key=lambda r: (-int(r["hint"].split()[0]), r["label"].lower()))
+    # Structureless-target rows first: those are the ones a curator can settle.
+    rows.sort(key=lambda r: (0 if "no structure" in r["hint"] else 1,
+                             -int(r["hint"].split()[0]), r["label"].lower()))
     return rows
 
 
@@ -649,6 +668,77 @@ def crossref_conflict_queue() -> list[dict]:
     return out
 
 
+def xref_name_conflict_queue(records: list[dict]) -> list[dict]:
+    """Same-structure xrefs the seeder refused because naming contradicts them.
+
+    A refused xref is a source assertion the corpus declines to publish, and #136
+    is the standing lesson that such a thing needs a DESTINATION rather than a
+    deletion. This is that destination: the link, the target it pointed at, and
+    why it was not trusted, so a curator can restore it, move it to
+    `parent_compounds` if the target is strictly broader, or agree it was wrong.
+
+    Reconstructed from each record's `source_concepts` plus the committed
+    inventories, which are exactly `build_record`'s two inputs -- the record's
+    own names on one side, its concepts' xrefs on the other. Reading the records'
+    `xrefs` instead would make this queue permanently empty, since the refusal is
+    what removed them; and recomputing from one inventory row's names would drift
+    from the merged names the gate actually compares against, reporting refusals
+    that never happened. `cefdinir -> CHEBI:131724` arrives from the ARO row, not
+    the ChEBI one, so both inventories are consulted.
+    """
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from seed_from_sources import (
+        RAW_DIR,
+        load_tsv,
+        normalize_xref,
+        structureless_xref_conflict,
+        xref_names,
+    )
+
+    chebi = {row["chebi_id"]: row for row in load_tsv(RAW_DIR / "chebi_antimicrobials.tsv")}
+    keys = {cid: row.get("standard_inchi_key") or "" for cid, row in chebi.items()}
+    names = {cid: xref_names(row) for cid, row in chebi.items()}
+    concepts = dict(chebi)
+    concepts.update({row["aro_id"]: row for row in load_tsv(RAW_DIR / "aro_antibiotics.tsv")})
+
+    out = []
+    for record in records:
+        own = {" ".join((record.get("label") or "").lower().split())}
+        own |= {" ".join((syn.get("name") or "").lower().split())
+                for syn in (record.get("synonyms") or [])}
+        own -= {""}
+        # The gate applies its refusals in order, and an xref already removed as
+        # strictly BROADER never reaches the naming rule. Erythromycin A,
+        # lividomycin A and mycinamicin IV each carry their parent in both
+        # fields; reporting those here as naming refusals would credit this
+        # queue with three the seeder never made.
+        broader = set(record.get("parent_compounds") or [])
+        seen = set(broader)
+        for concept in record.get("source_concepts") or []:
+            row = concepts.get(concept.get("source_id", ""))
+            if not row:
+                continue
+            for raw in (row.get("xrefs") or "").split("|"):
+                xref = normalize_xref(raw)
+                if not xref or not xref.startswith("CHEBI:") or xref in seen:
+                    continue
+                seen.add(xref)
+                reason = structureless_xref_conflict(
+                    own, xref, keys.get(xref, ""), names.get(xref, set()))
+                if reason:
+                    out.append({
+                        "queue": "xref-name-conflict",
+                        "key": record["identifier"],
+                        "label": record["label"],
+                        "source": concept.get("source", "?"),
+                        "source_id": xref,
+                        "hint": reason,
+                    })
+    out.sort(key=lambda r: r["label"].lower())
+    return out
+
+
 def structure_unreviewed_queue(records: list[dict]) -> list[dict]:
     """Structures carried from a source that nobody has classified.
 
@@ -748,7 +838,8 @@ def main() -> int:
                                  "moa-scope", "target-evidence", "aro-class",
                                  "xref-unverified", "multi-component",
                                  "producer-candidate", "activity-candidate", "excluded",
-                                 "crossref-conflict", "structure-unreviewed"),
+                                 "crossref-conflict", "structure-unreviewed",
+                                 "xref-name-conflict"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
     parser.add_argument("--tsv", type=Path, help="Write every row (not just --limit) to this TSV.")
@@ -780,6 +871,8 @@ def main() -> int:
         queues["excluded"] = excluded_queue()
     if args.queue in ("all", "crossref-conflict"):
         queues["crossref-conflict"] = crossref_conflict_queue()
+    if args.queue in ("all", "xref-name-conflict"):
+        queues["xref-name-conflict"] = xref_name_conflict_queue(records)
     if args.queue in ("all", "structure-unreviewed"):
         queues["structure-unreviewed"] = structure_unreviewed_queue(records)
     if args.queue in ("all", "target-evidence"):
