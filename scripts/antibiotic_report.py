@@ -48,6 +48,7 @@ def summarize(records: list[tuple[Path, dict]]) -> dict:
     mechanism = Counter()
     structures = Counter()
     organismal = Counter()
+    xrefs = Counter()
     class_status: dict[str, Counter] = defaultdict(Counter)
 
     for _, record in records:
@@ -95,12 +96,27 @@ def summarize(records: list[tuple[Path, dict]]) -> dict:
     # producer organism to find; a natural product whose definition says
     # "produced by Streptomyces rochei" has one sitting in plain text. Counting
     # the candidate queues separates the backlog from the genuinely absent.
+    with (REPO_ROOT / "data" / "raw" / "chebi_antimicrobials.tsv").open(encoding="utf-8") as fh:
+        inventory = {row["chebi_id"]: row.get("standard_inchi_key") or ""
+                     for row in csv.DictReader(fh, delimiter="\t")}
+    for _, record in records:
+        for xref in record.get("xrefs") or []:
+            if not xref.startswith("CHEBI:"):
+                continue
+            if xref not in inventory:
+                xrefs["absent"] += 1
+            elif inventory[xref]:
+                xrefs["comparable"] += 1
+            else:
+                xrefs["structureless"] += 1
+
     docs = [record for _, record in records]
     organismal["producer_candidates"] = len(producer_candidate_queue(docs))
     organismal["activity_candidates"] = len(activity_candidate_queue(docs))
 
     return {
         "organismal": organismal,
+        "xrefs": xrefs,
         "structures": structures,
         "total": len(records),
         "by_class": by_class,
@@ -189,6 +205,24 @@ def print_report(stats: dict) -> None:
         print(f"    of {structures['total']} structure(s): "
               f"{structures['reviewed']} reviewed, "
               f"{structures['target_complexes']} established as target complexes")
+
+    # #164: a check that skips its hard cases must say so. "0 structure
+    # disagreements" meant "0 among the xrefs we could compare", and the ones we
+    # could not were the ones most likely to be wrong.
+    xrefs = stats["xrefs"]
+    published = xrefs["comparable"] + xrefs["structureless"] + xrefs["absent"]
+    print(f"\nChEBI xref verification — {published} published xref(s), by what the "
+          "same-structure gate could check")
+    print(f"  {xrefs['comparable']:>6d}  have a structure to compare against. The gate "
+          "REMOVES mismatches, so")
+    print("          a surviving xref is one the gate never confirmed — only failed "
+          "to refute.")
+    print(f"  {xrefs['structureless']:>6d}  point at a term with no structure: a class or "
+          "mixture, which is not")
+    print("          a same-structure claim. Naming is checked instead (#164).")
+    print(f"  {xrefs['absent']:>6d}  point outside the inventory entirely: unverifiable, "
+          "kept and queued")
+    print("          on `just worklist --queue xref-unverified`.")
 
     # #94: separate "nothing to find" from "found nothing yet".
     organismal = stats["organismal"]

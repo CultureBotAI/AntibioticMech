@@ -663,6 +663,56 @@ STRUCTURE_ID_PATTERN = r"^(PDB:[0-9][A-Za-z0-9]{3}|EMDB:EMD-[0-9]{4,5})$"
 # Read by the run summary and CLEARED at the start of every merge. A
 # module-level list that is written and never read, or never reset, is the
 # defect #169 records; this one is both read and reset, deliberately.
+def xref_names(row: dict) -> set[str]:
+    """Every name a ChEBI inventory row answers to, normalized for comparison.
+
+    The inventory encodes synonyms as `TYPE=value` — `UNIPROT NAME=gentamicin C`,
+    `IUPAC NAME=...`, `SYNONYM=Neomycin`. Comparing the raw strings makes every
+    synonym unmatchable, which would have refused `gentamicin C -> CHEBI:75616`
+    on the grounds that no name matched, while the target's own UniProt synonym
+    IS that name. Refusing on a parsing failure is not refusing on evidence.
+    """
+    values = [row.get("name") or ""]
+    for raw in (row.get("synonyms") or "").split("|"):
+        values.append(raw.split("=", 1)[1] if "=" in raw else raw)
+    return {" ".join(v.lower().split()) for v in values} - {""}
+
+
+def structureless_xref_conflict(record_names: set[str], chebi_id: str,
+                                target_key: str, target_names: set[str]) -> str | None:
+    """Why a same-structure xref to a STRUCTURELESS ChEBI term cannot stand (#164).
+
+    The structure gate below compares InChIKeys, which needs a structure on both
+    sides. When the target has none the comparison is skipped, and the xref is
+    published unexamined -- so the check does nothing on exactly the inputs most
+    likely to be wrong. That is how `cefdinir -> CHEBI:131724`, which is
+    *iclaprim*, an unrelated antibacterial, survived every gate.
+
+    But "cannot compare structures" is not "no evidence". The inventory knows the
+    target's NAME even when it has no structure, and a name is weak evidence of
+    sameness that is nonetheless conclusive evidence of DIFFERENCE when nothing
+    matches: neither the record's label nor any of its synonyms appears anywhere
+    among the target's names. That is a positive contradiction, not an absence.
+
+    So this refuses on evidence, never on ignorance. A target absent from the
+    inventory, or present with no name, is still unverifiable and still kept and
+    queued -- dropping a source assertion because we cannot check it stays the
+    worse error. Only a NAMED, structureless, wholly non-matching target is
+    refused, and the refusal is reported rather than silent.
+    """
+    if target_key:
+        return None                       # comparable: the structure gate owns it
+    if not target_names:
+        return None                       # unknown or unnamed: genuinely unverifiable
+    if record_names & target_names:
+        return None
+    return (f"{chebi_id} has no structure in the committed inventory, so the "
+            f"same-structure gate cannot compare it; and none of its names "
+            f"({', '.join(sorted(target_names)[:3])}) matches this record's "
+            f"label or synonyms. Not published as an equivalence.")
+
+
+REFUSED_STRUCTURELESS_XREFS: list[tuple[str, str, str]] = []
 MALFORMED_STRUCTURE_IDS: list[tuple[str, str]] = []
 
 # Sources the seeder itself writes structural observations for. Anything else on
@@ -861,11 +911,15 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
           decisions: dict[str, dict], source_version: str) -> tuple[dict[str, dict], list[Concept]]:
     """Group concepts into records. Returns (records, skipped-for-no-structure)."""
     MALFORMED_STRUCTURE_IDS.clear()
+    REFUSED_STRUCTURELESS_XREFS.clear()
     # InChIKey per ChEBI id, from the committed inventory. The same-structure
     # gate on xrefs uses it; a ChEBI term with no structure here is simply not
     # comparable, and its xrefs are kept and queued rather than dropped.
     chebi_keys = {cid: row["standard_inchi_key"]
                   for cid, row in chebi_rows.items() if row.get("standard_inchi_key")}
+    # Names for every inventory term, structureless ones included -- those are
+    # precisely the terms the key map cannot speak for (#164).
+    chebi_name_index = {cid: xref_names(row) for cid, row in chebi_rows.items()}
     by_identity: dict[str, list[Concept]] = defaultdict(list)
     grounding: dict[str, str] = {}
     skipped: list[Concept] = []
@@ -984,7 +1038,8 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
     records: dict[str, dict] = {}
     for identifier, group in by_identity.items():
         records[identifier] = build_record(identifier, grounding[identifier], group,
-                                           conf, source_version, chebi_keys)
+                                           conf, source_version, chebi_keys,
+                                           chebi_name_index)
     return records, skipped
 
 
@@ -1151,11 +1206,13 @@ def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
 
 def build_record(identifier: str, grounding_status: str, group: list[Concept],
                  conf: dict, source_version: str,
-                 chebi_keys: dict[str, str] | None = None) -> dict:
+                 chebi_keys: dict[str, str] | None = None,
+                 chebi_name_index: dict[str, set[str]] | None = None) -> dict:
     # InChIKey per ChEBI id, for the same-structure gate on xrefs below. Empty
     # when the caller has none: the gate then keeps every xref it cannot compare,
     # which is the behaviour it has for the majority anyway.
     chebi_keys = chebi_keys or {}
+    chebi_name_index = chebi_name_index or {}
 
     # ChEBI leads on identity and structure; ARO leads on class and mechanism.
     chebi = [c for c in group if c.source == "CHEBI"]
@@ -1255,21 +1312,43 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     #      Erythromycin A, lividomycin A and mycinamicin IV each carried one
     #      identifier in BOTH fields, which cannot both be true.
     #
-    # Where the structure cannot be compared — most referenced ChEBI terms have
-    # no structure in the committed inventory — the xref is KEPT and surfaced on
+    #   4. Its structure is UNKNOWN and its name contradicts the record's. The
+    #      structure comparison needs a structure on both sides, so a
+    #      structureless target skipped it entirely and published unexamined —
+    #      which is how cefdinir carried CHEBI:131724, *iclaprim* (#164). Where
+    #      the inventory names such a target and no name matches, that is
+    #      evidence of difference rather than absence of evidence, and the xref
+    #      is refused and reported.
+    #
+    # Where the structure cannot be compared AND no naming evidence contradicts
+    # it — most referenced ChEBI terms have no structure in the committed
+    # inventory — the xref is KEPT and surfaced on
     # `just worklist --queue xref-unverified`. Dropping it would discard a source
     # assertion on the grounds that we cannot check it, which is a different and
     # worse error than keeping one we have not checked.
     own_key = (structure or {}).get("standard_inchi_key")
     broader = set(parents)
     contested = contested_xrefs(group)
-    record["xrefs"] = [
-        x for x in xrefs
-        if x.split(":", 1)[0] not in NON_STRUCTURE_XREF_PREFIXES
-        and x not in broader
-        and x not in contested
-        and not (own_key and chebi_keys.get(x) and chebi_keys[x] != own_key)
-    ]
+    own_names = {" ".join((record.get("label") or "").lower().split())}
+    own_names |= {" ".join((syn.get("name") or "").lower().split())
+                  for syn in (record.get("synonyms") or [])}
+    own_names -= {""}
+
+    kept = []
+    for x in xrefs:
+        if (x.split(":", 1)[0] in NON_STRUCTURE_XREF_PREFIXES
+                or x in broader or x in contested):
+            continue
+        if own_key and chebi_keys.get(x) and chebi_keys[x] != own_key:
+            continue
+        if x.startswith("CHEBI:"):
+            reason = structureless_xref_conflict(
+                own_names, x, chebi_keys.get(x, ""), chebi_name_index.get(x, set()))
+            if reason:
+                REFUSED_STRUCTURELESS_XREFS.append((identifier, record.get("label", ""), reason))
+                continue
+        kept.append(x)
+    record["xrefs"] = kept
     if not record["xrefs"]:
         record.pop("xrefs")
     observations = structural_observations(group, source_version, source_version)
@@ -2365,6 +2444,11 @@ def main() -> int:
 
     print(f"{len(concepts)} source concepts -> {len(records)} records", file=sys.stderr)
     print(f"  {merged} records carry more than one source concept", file=sys.stderr)
+    if REFUSED_STRUCTURELESS_XREFS:
+        print(f"  {len(REFUSED_STRUCTURELESS_XREFS)} unverifiable ChEBI xref(s) refused "
+              "(see `just worklist --queue xref-name-conflict`)")
+        for _, label, reason in REFUSED_STRUCTURELESS_XREFS:
+            print(f"    {label}: {reason}")
     if MALFORMED_STRUCTURE_IDS:
         print(f"  {len(MALFORMED_STRUCTURE_IDS)} malformed structure accession(s) "
               "skipped (not a PDB/EMDB accession):", file=sys.stderr)

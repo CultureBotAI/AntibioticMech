@@ -168,6 +168,16 @@ that an unread natural product is.
   drug class belongs there. A related-but-not-broader compound is an xref.
 - **An xref is the same structure.** A conjugate acid, a salt, or a stereoisomer
   is a different structure and a different record.
+- **Where structures cannot be compared, names still can.** The same-structure
+  gate compares InChIKeys, which needs a structure on both sides; a target with
+  none used to skip the check and publish unexamined, which is how cefdinir
+  carried `CHEBI:131724` — *iclaprim*, an unrelated antibacterial. The gate now
+  also refuses a structureless target whose name and synonyms match none of the
+  record's. That is refusal on **evidence of difference**, not on absence of
+  evidence: a target the inventory does not know at all is still kept, still
+  queued, and never refused. Refusals land on
+  `just worklist --queue xref-name-conflict` with the reason, so a curator can
+  restore the link, move it to `parent_compounds`, or agree it was wrong.
 - **A protein target should be taxon-agnostic.** Prefer a family, complex or
   function term (GO, InterPro, ComplexPortal); a UniProt accession is an example
   of the target in one organism, and belongs in `protein_examples`.
