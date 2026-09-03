@@ -1,7 +1,7 @@
 identifier: CHEBI:77693
 label: CTBT
 antimicrobial_class: ANTIFUNGAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An organic heterotricyclic compound that is tetrazolo[5,1-c][1,2,4]benzotriazine
   substituted at position 7 by a chloro group. An antifungal and chemosensitising
@@ -20,6 +20,13 @@ parent_compounds:
 - CHEBI:36683
 activity_roles:
 - CHEBI:35718
+mode_of_action: OXIDATIVE_DAMAGE
+mode_of_action_notes: 'CURATOR: PMID:20202201 combined a Saccharomyces deletion screen,
+  early transcriptomics, oxygen dependence, Yap1 nuclear accumulation, and mitochondrial
+  MitoSOX oxidation. These results support intracellular superoxide production and
+  oxidative stress as CTBT''s antifungal-sensitizing mechanism, while no direct molecular
+  binding target was identified.'
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: Clc1ccc2c(c1)nnc1nnnn12
   standard_inchi: InChI=1S/C7H3ClN6/c8-4-1-2-6-5(3-4)9-10-7-11-12-13-14(6)7/h1-3H
@@ -29,6 +36,20 @@ chemical_structure:
   charge: 0
   average_mass: 206.596
   monoisotopic_mass: 206.01077
+molecular_targets:
+- target_label: mitochondrial superoxide generation and fungal oxidative-stress response
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  experimental_context: Genetic and transcriptomic screens, molecular-oxygen dependence,
+    Yap1 localization, and mitochondrial MitoSOX oxidation established the oxidative-stress
+    phenotype without identifying a direct binding target.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2010-03
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:20202201
+    notes: Primary CTBT yeast chemogenomic, transcriptomic, and superoxide study (DOI:10.1186/1471-2164-11-153).
 xrefs:
 - patent:EP1502918
 - reaxys:12163903
@@ -40,6 +61,9 @@ source_concepts:
   role_terms:
   - CHEBI:35718
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:20202201
+  notes: Primary exact-CTBT fungal chemogenomic and oxidative-stress mechanism study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -53,3 +77,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:19:23Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, antifungal role, and filing class;
+    added oxidative damage and the measured mitochondrial-superoxide/stress process
+    while explicitly retaining the unresolved direct-target gap.
+  llm_assisted: true

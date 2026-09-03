@@ -1,7 +1,7 @@
 identifier: CHEBI:172922
 label: ethylzingerone
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A methyl ketone that is 4-phenylbutan-2-one in which the phenyl ring is
   substituted at positions 3 and 4 by ethoxy and hydroxy groups, respectively. It
@@ -30,6 +30,13 @@ activity_roles:
 - CHEBI:172949
 - CHEBI:33282
 - CHEBI:35718
+mode_of_action: MULTIPLE
+mode_of_action_notes: 'CURATOR: PMID:32737133 combined susceptibility testing, transposon
+  mutagenesis, transcriptomics, and resequencing in Burkholderia. Killing was multifactorial,
+  with intracellular oxidation central and associated changes in stress responses,
+  permeability, pH homeostasis, macromolecular repair, and lipopolysaccharide biology;
+  no single direct molecular target was shown.'
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CCOc1cc(CCC(C)=O)ccc1O
   standard_inchi: InChI=1S/C12H16O3/c1-3-15-12-8-10(5-4-9(2)13)6-7-11(12)14/h6-8,14H,3-5H2,1-2H3
@@ -39,6 +46,21 @@ chemical_structure:
   charge: 0
   average_mass: 208.257
   monoisotopic_mass: 208.10994
+molecular_targets:
+- target_label: intracellular oxidation and associated bacterial stress responses
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  experimental_context: Multi-omics and genetic screens linked ethylzingerone exposure
+    to oxidative damage, electrophile defense, oxidized-protein repair, pH homeostasis,
+    permeability, and lipopolysaccharide pathways without identifying a direct binding
+    target.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2020-09
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:32737133
+    notes: Primary Burkholderia susceptibility, multi-omics, and mechanism study (DOI:10.1128/AEM.01808-20).
 xrefs:
 - cas:569646-79-3
 - chemspider:24208550
@@ -52,6 +74,10 @@ source_concepts:
   - CHEBI:33282
   - CHEBI:35718
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:32737133
+  notes: Primary exact-ethylzingerone Burkholderia efficacy and multifactorial-mechanism
+    study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -65,3 +91,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:19:15Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, antibacterial and preservative
+    roles, and class; added the experimentally supported multifactorial mode and downstream
+    oxidative-stress process while recording the absent direct target.
+  llm_assisted: true

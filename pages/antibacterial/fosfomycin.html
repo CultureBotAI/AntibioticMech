@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:28915</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_28915">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A phosphonic acid having an (R,S)-1,2-epoxypropyl group attached to phosphorus.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3007149">phosphonic acid antibiotic</a><code class="curie">ARO:3007149</code></p>
@@ -108,7 +105,16 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta">ARO:3000724</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000025 (fosfomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 
+<h3>UDP-N-acetylglucosamine enolpyruvyl transferase (MurA) <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">A 1.8-angstrom E. coli MurA cocrystal directly showed fosfomycin covalently bound to active-site Cys115 alongside UDP-GlcNAc. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 1996-12 (retrieved 2026-09-02).</p>
+<p><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></p><ul class="plain evidence">
+  <li><span class="meta">PMID:8994972</span> <span class="meta">(Primary fosfomycin-MurA cocrystal (DOI:10.1016/S0969-2126(96)00153-0).)</span></li>
+</ul>
 
+
+<h2>Mechanism summary</h2>
+<dl class="fields">
+<dt>Mode of action</dt><dd>CELL_WALL_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: PMID:8994972 resolved fosfomycin and UDP-N-acetylglucosamine in a 1.8-angstrom Escherichia coli MurA complex. Fosfomycin was covalently attached to Cys115, inhibiting the first committed step of bacterial peptidoglycan biosynthesis.</span></dd></dl>
 
 
 
@@ -437,6 +443,11 @@ type — expand a group to see its determinants.</p>
 
 
 
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:8994972</span> <span class="meta">(Primary exact-fosfomycin MurA cocrystal and peptidoglycan-pathway study.)</span></li>
+</ul>
+
 
 <h2>Curation history</h2>
 <ol class="events">
@@ -459,6 +470,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-03 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI/CARD identity, structure, antibiotic role, class, and provenance of retained CARD target and 48 resistance assertions; added cell-wall synthesis inhibition and the directly observed covalent MurA target.</p>
   </li>
 </ol>
 

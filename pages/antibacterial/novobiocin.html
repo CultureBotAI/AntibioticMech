@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:28368</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_28368">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A coumarin-derived antibiotic obtained from Streptomyces niveus.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000103">aminocoumarin antibiotic</a><code class="curie">ARO:3000103</code></p>
@@ -134,10 +131,16 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta">ARO:3003260</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000111 (novobiocin); database assertion, not a primary citation.)</span></li>
 </ul>
 
+<h3>DNA gyrase B 24-kDa fragment <span class="pill plain">PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">Isothermal titration and differential scanning calorimetry compared novobiocin and related coumarins binding the gyrase fragment; only clorobiocin and a synthetic analogue were crystallized in the study. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2002-06 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:12044152</span> <span class="meta">(Primary coumarin-gyrase thermodynamics and structure study (DOI:10.1021/bi0159837).)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>NUCLEIC_ACID_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— Assigned from ChEBI role CHEBI:50750 (EC 5.99.1.3 [DNA topoisomerase (ATP-hydrolysing)] inhibitor). ChEBI asserts the role on the compound. The target it names is one the host has too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd></dl>
+<dt>Mode of action</dt><dd>NUCLEIC_ACID_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— CURATOR: PMID:12044152 measured novobiocin binding thermodynamics against the 24-kDa DNA-gyrase fragment and found clorobiocin bound more strongly. The reported cocrystals contained clorobiocin or a synthetic analogue, not novobiocin, so they support coumarin structure-affinity interpretation but are not novobiocin-bound structures.</span></dd></dl>
 
 
 
@@ -248,6 +251,11 @@ type — expand a group to see its determinants.</p>
 
 
 
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:12044152</span> <span class="meta">(Primary novobiocin-versus-clorobiocin gyrase-binding thermodynamics study.)</span></li>
+</ul>
+
 
 <h2>Curation history</h2>
 <ol class="events">
@@ -270,6 +278,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-03 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI/CARD identity, structure, roles, class, and retained CARD target/resistance provenance; curator-confirmed gyrase-mediated nucleic-acid-synthesis inhibition and added the measured GyrB association without attributing another coumarin&#39;s cocrystal to novobiocin.</p>
   </li>
 </ol>
 

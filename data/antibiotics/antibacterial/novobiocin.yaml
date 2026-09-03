@@ -1,7 +1,7 @@
 identifier: CHEBI:28368
 label: novobiocin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A coumarin-derived antibiotic obtained from Streptomyces niveus.
 definition_source: ChEBI
@@ -42,10 +42,11 @@ activity_roles:
 structural_class: aminocoumarin antibiotic
 structural_class_id: ARO:3000103
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:50750 (EC 5.99.1.3 [DNA topoisomerase
-  (ATP-hydrolysing)] inhibitor). ChEBI asserts the role on the compound. The target
-  it names is one the host has too, so the mechanism is true but is not evidence of
-  selectivity — see mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:12044152 measured novobiocin binding thermodynamics
+  against the 24-kDa DNA-gyrase fragment and found clorobiocin bound more strongly.
+  The reported cocrystals contained clorobiocin or a synthetic analogue, not novobiocin,
+  so they support coumarin structure-affinity interpretation but are not novobiocin-bound
+  structures.'
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CO[C@@H]1[C@@H](OC(N)=O)[C@@H](O)[C@H](Oc2ccc3c(O)c(NC(=O)c4ccc(O)c(CC=C(C)C)c4)c(=O)oc3c2C)OC1(C)C
@@ -88,6 +89,9 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:12044152
+  notes: Primary novobiocin-versus-clorobiocin gyrase-binding thermodynamics study.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000386
@@ -246,6 +250,19 @@ molecular_targets:
   - reference: ARO:3003260
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000111 (novobiocin); database
       assertion, not a primary citation.
+- target_label: DNA gyrase B 24-kDa fragment
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: Isothermal titration and differential scanning calorimetry
+    compared novobiocin and related coumarins binding the gyrase fragment; only clorobiocin
+    and a synthetic analogue were crystallized in the study.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2002-06
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:12044152
+    notes: Primary coumarin-gyrase thermodynamics and structure study (DOI:10.1021/bi0159837).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -263,3 +280,11 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:19:06Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI/CARD identity, structure, roles, class, and retained
+    CARD target/resistance provenance; curator-confirmed gyrase-mediated nucleic-acid-synthesis
+    inhibition and added the measured GyrB association without attributing another
+    coumarin's cocrystal to novobiocin.
+  llm_assisted: true

@@ -1,7 +1,7 @@
 identifier: CHEBI:131850
 label: PR-39
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A 39 amino acid porcine cathelicidin that is rich in proline and arginine
   residues. It plays a pivotal role in the innate immune defence of the pig against
@@ -32,6 +32,14 @@ activity_roles:
 - CHEBI:33281
 - CHEBI:33282
 - CHEBI:35718
+mode_of_action: MEMBRANE_DISRUPTION
+mode_of_action_notes: 'CURATOR: PMID:24755622 found that mature PR-39 caused ATP leakage
+  and loss of membrane potential in Bacillus globigii and Escherichia coli. PMID:18519732
+  showed killing of Salmonella without overt cell lysis and identified SbmA loss-of-function
+  mutations that reduced susceptibility. Together these data support membrane permeabilization/depolarization
+  with SbmA-linked susceptibility, not universal gross lysis or directly measured
+  SbmA-dependent uptake.'
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CC[C@H](C)[C@H](NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H]1CCCN1C(=O)[C@@H]1CCCN1C(=O)[C@H](CC(C)C)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H]1CCCN1C(=O)[C@@H]1CCCN1C(=O)[C@H](Cc1ccccc1)NC(=O)[C@H](Cc1ccccc1)NC(=O)[C@@H]1CCCN1C(=O)[C@@H]1CCCN1C(=O)[C@@H]1CCCN1C(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H]1CCCN1C(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H]1CCCN1C(=O)[C@H](CC(C)C)NC(=O)[C@H](Cc1ccc(O)cc1)NC(=O)[C@@H]1CCCN1C(=O)[C@@H]1CCCN1C(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H]1CCCN1C(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H](N)CCCNC(=N)N)C(=O)N1CCC[C@H]1C(=O)N1CCC[C@H]1C(=O)NCC(=O)N[C@@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)N1CCC[C@H]1C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)N1CCC[C@H]1C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)O
   standard_inchi: InChI=1S/C229H345N69O41/c1-7-135(6)181(218(337)297-122-50-89-178(297)216(335)283-108-33-72-161(283)190(309)261-132-180(300)262-157(128-137-54-15-9-16-55-137)206(325)293-118-46-84-173(293)212(331)284-109-37-77-166(284)192(311)265-146(65-26-98-254-223(237)238)185(304)276-158(129-138-56-17-10-18-57-138)207(326)294-119-47-85-174(294)213(332)286-111-39-78-167(286)193(312)266-147(66-27-99-255-224(239)240)186(305)277-160(131-140-60-21-12-22-61-140)209(328)298-123-51-90-179(298)219(338)339)279-187(306)148(67-28-100-256-225(241)242)267-194(313)168-79-40-112-287(168)211(330)172-83-45-117-292(172)205(324)156(125-134(4)5)274-184(303)145(64-25-97-253-222(235)236)264-191(310)165-76-38-110-285(165)214(333)175-86-48-120-295(175)208(327)159(130-139-58-19-11-20-59-139)278-189(308)153(126-136-52-13-8-14-53-136)272-198(317)170-81-42-114-289(170)215(334)177-88-49-121-296(177)217(336)176-87-44-116-291(176)203(322)152(71-32-104-260-229(249)250)271-196(315)163-74-35-106-281(163)201(320)150(69-30-102-258-227(245)246)269-197(316)164-75-36-107-282(164)204(323)155(124-133(2)3)275-188(307)154(127-141-91-93-142(299)94-92-141)273-199(318)169-80-41-113-288(169)210(329)171-82-43-115-290(171)202(321)151(70-31-103-259-228(247)248)270-195(314)162-73-34-105-280(162)200(319)149(68-29-101-257-226(243)244)268-183(302)144(63-24-96-252-221(233)234)263-182(301)143(230)62-23-95-251-220(231)232/h8-22,52-61,91-94,133-135,143-179,181,299H,7,23-51,62-90,95-132,230H2,1-6H3,(H,261,309)(H,262,300)(H,263,301)(H,264,310)(H,265,311)(H,266,312)(H,267,313)(H,268,302)(H,269,316)(H,270,314)(H,271,315)(H,272,317)(H,273,318)(H,274,303)(H,275,307)(H,276,304)(H,277,305)(H,278,308)(H,279,306)(H,338,339)(H4,231,232,251)(H4,233,234,252)(H4,235,236,253)(H4,237,238,254)(H4,239,240,255)(H4,241,242,256)(H4,243,244,257)(H4,245,246,258)(H4,247,248,259)(H4,249,250,260)/t135-,143-,144-,145-,146-,147-,148-,149-,150-,151-,152-,153-,154-,155-,156-,157-,158-,159-,160-,161-,162-,163-,164-,165-,166-,167-,168-,169-,170-,171-,172-,173-,174-,175-,176-,177-,178-,179-,181-/m0/s1
@@ -41,6 +49,50 @@ chemical_structure:
   charge: 0
   average_mass: 4720.721
   monoisotopic_mass: 4717.70324
+molecular_targets:
+- target_label: bacterial cytoplasmic membrane
+  target_type: MEMBRANE
+  target_relation: ATTACKED_COMPONENT
+  experimental_context: Mature PR-39 caused ATP leakage and loss of membrane potential
+    in B. globigii and E. coli; a separate Salmonella study observed killing without
+    cell lysis, bounding the membrane-disruption interpretation.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2014-04
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:24755622
+    notes: Primary mature-PR-39 and derivative membrane-potential/ATP-leakage study
+      (DOI:10.1371/journal.pone.0095939).
+  - reference: PMID:18519732
+    notes: Primary Salmonella PR-39 resistance and non-lytic-killing study (DOI:10.1128/AAC.00205-08).
+- target_label: SbmA peptide transporter
+  target_type: PROTEIN
+  target_relation: SUSCEPTIBILITY_DETERMINANT
+  experimental_context: Independent Salmonella mutants with altered SbmA were about
+    fourfold less susceptible and killed more slowly. This establishes a genetic susceptibility
+    determinant, but the study did not directly measure peptide uptake or identify
+    SbmA as the lethal binding target.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2008-06
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:18519732
+    notes: Primary SbmA mutant selection, susceptibility, killing-rate, and fitness
+      study (DOI:10.1128/AAC.00205-08).
+resistance_mechanisms:
+- mechanism_type: OTHER
+  label: SbmA alterations reduce PR-39 susceptibility
+  gene_families:
+  - sbmA
+  note: Salmonella enterica serovar Typhimurium mutants with SbmA alterations were
+    about fourfold less susceptible and showed slower killing without an obvious measured
+    fitness cost. The study called SbmA a putative transport protein but did not directly
+    measure uptake, so the specific resistance route remains unresolved.
+  evidence:
+  - reference: PMID:18519732
+    notes: Primary PR-39 resistance selection, genetic analysis, and fitness study.
 xrefs:
 - cas:139637-11-9
 source_concepts:
@@ -53,6 +105,13 @@ source_concepts:
   - CHEBI:33282
   - CHEBI:35718
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:18519732
+  notes: Primary PR-39 Salmonella resistance, SbmA genetics, killing, and fitness
+    study.
+- reference: PMID:24755622
+  notes: Primary mature-PR-39 membrane-potential, ATP-leakage, spectrum, and cytotoxicity
+    study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -66,3 +125,11 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:19:21Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI peptide identity, structure, antimicrobial roles,
+    and class; added membrane disruption with the non-lysis boundary and SbmA as an
+    evidence-backed susceptibility/resistance determinant while preserving the unresolved
+    uptake-mechanism gap.
+  llm_assisted: true

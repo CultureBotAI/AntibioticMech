@@ -1,7 +1,7 @@
 identifier: CHEBI:134722
 label: favipiravir
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A member of the class of pyrazines that is pyrazine substituted by aminocarbonyl,
   hydroxy and fluoro groups at positions 2, 3 and 6, respectively. It is an anti-viral
@@ -53,10 +53,11 @@ activity_roles:
 - CHEBI:149553
 - CHEBI:36044
 mode_of_action: VIRAL_POLYMERASE_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:170010 (EC 2.7.7.48 (RNA-directed
-  RNA polymerase) inhibitor). ChEBI asserts the role on the compound. The role names
-  a target specific to the microbe or virus — see mode_of_action_target_scope. Not
-  a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:23917318 studied T-705RTP, the intracellularly
+  formed ribosyl-triphosphate metabolite of favipiravir, rather than direct binding
+  of the parent compound. T-705RTP competed with ATP and GTP, showed noncompetitive
+  or mixed inhibition versus UTP and CTP, and after one incorporation into nascent
+  influenza RNA inhibited further extension.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: NC(=O)c1nc(F)cnc1O
@@ -67,6 +68,20 @@ chemical_structure:
   charge: 0
   average_mass: 157.104
   monoisotopic_mass: 157.02875
+molecular_targets:
+- target_label: influenza virus RNA-dependent RNA polymerase (via T-705RTP)
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: Enzyme kinetics and primer-extension assays tested the active
+    ribosyl-triphosphate metabolite T-705RTP. They did not measure direct binding
+    of parent favipiravir to the polymerase.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2013-08
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:23917318
+    notes: Primary favipiravir-metabolite influenza polymerase study (DOI:10.1128/AAC.00649-13).
 xrefs:
 - cas:259793-96-9
 - chemspider:431002
@@ -84,6 +99,10 @@ source_concepts:
   - CHEBI:149553
   - CHEBI:36044
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:23917318
+  notes: Primary study of intracellularly activated favipiravir metabolite T-705RTP
+    against influenza RdRp.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -105,3 +124,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:18:28Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI parent-compound identity, structure, antiviral roles,
+    and filing class; curator-confirmed viral-polymerase inhibition and added the
+    measured influenza RdRp association with an explicit active-metabolite boundary.
+  llm_assisted: true
