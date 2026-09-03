@@ -248,7 +248,8 @@ molecular_targets:
       assertion, not a primary citation.
 producer_organisms:
 - taxon_id: NCBITaxon:1156913
-  taxon_label: Amycolatopsis orientalis HCCB10007 (ATCC43491)
+  taxon_label: Amycolatopsis orientalis
+  strain: HCCB10007 (ATCC43491)
   biosynthetic_gene_cluster: BGC0000455
   source: MIBIG
   source_version: 4.0.1
@@ -257,7 +258,10 @@ producer_organisms:
   reviewed: true
   note: MIBiG active entry with a non-placeholder expert reviewer; compound 'vancomycin'
     joined by exact Standard InChIKey.
-  reference: DOI:10.1021/ja00361a029
+  evidence:
+  - reference: DOI:10.1021/ja00361a029
+    notes: MIBiG attaches this reference to the compound itself, so it supports the
+      producer/compound link this item asserts.
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -307,6 +311,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:03Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:43:47Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

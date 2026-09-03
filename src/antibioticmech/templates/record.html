@@ -204,13 +204,14 @@ type — expand a group to see its determinants.</p>
   <summary>{{ g.mechanism_type }} <span class="pill plain">{{ g.rows|length }}</span></summary>
   <table>
     <caption>{{ g.mechanism_type }}</caption>
-    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Gene families</th><th scope="col">Note</th></tr></thead>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     {% for m in g.rows %}
     <tr>
-      <td>{{ m.label }}</td>
+      <td>{{ m.label }}{% if m.note %}<br><span class="meta">{{ m.note }}</span>{% endif %}</td>
       <td>{% if m.aro_id and m.aro_id.href %}<a href="{{ m.aro_id.href }}">{{ m.aro_id.id }}</a>{% elif m.aro_id %}<code class="curie">{{ m.aro_id.id }}</code>{% else %}—{% endif %}</td>
+      <td>{% if m.taxon_label %}<em>{{ m.taxon_label }}</em>{% if m.strain %} strain {{ m.strain }}{% endif %}{% if m.taxon_id %} <code class="curie">{{ m.taxon_id }}</code>{% endif %}{% if m.protein_accession %}<br><span class="meta">{{ m.protein_accession }}</span>{% endif %}{% else %}<span class="meta">not organism-specific</span>{% endif %}</td>
       <td class="meta">{{ m.gene_families|join(', ') if m.gene_families else '—' }}</td>
-      <td class="meta">{{ m.note or '—' }}</td>
+      <td class="meta">{{ evidence_list(m.evidence) }}{% if m.assay %}<span class="meta">{{ m.assay }}</span>{% endif %}</td>
     </tr>
     {% endfor %}
   </table>
@@ -223,15 +224,15 @@ type — expand a group to see its determinants.</p>
 <p class="meta">Organisms that biosynthesize this compound.</p>
 <table>
   <caption>Producer organisms</caption>
-  <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Source</th><th scope="col">Quality</th><th scope="col">Note</th><th scope="col">Reference</th></tr></thead>
+  <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Source</th><th scope="col">Quality</th><th scope="col">Note</th><th scope="col">Evidence</th></tr></thead>
   {% for p in r.producer_organisms %}
   <tr>
-    <td><em>{{ p.taxon_label }}</em> <code class="curie">{{ p.taxon_id }}</code></td>
+    <td><em>{{ p.taxon_label }}</em>{% if p.strain %} strain {{ p.strain }}{% endif %} <code class="curie">{{ p.taxon_id }}</code></td>
     <td>{{ p.biosynthetic_gene_cluster or '—' }}</td>
     <td class="meta">{{ p.source or '—' }}{% if p.source_version %} {{ p.source_version }}{% endif %}{% if p.source_record_version %} (entry {{ p.source_record_version }}){% endif %}{% if p.reviewed %}; reviewed{% endif %}</td>
     <td class="meta">{{ p.source_quality or '—' }}</td>
     <td class="meta">{{ p.note or '—' }}</td>
-    <td class="meta">{{ p.reference or '—' }}</td>
+    <td class="meta">{{ evidence_list(p.evidence) }}</td>
   </tr>
   {% endfor %}
 </table>

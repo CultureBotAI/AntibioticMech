@@ -390,6 +390,31 @@ PRODUCER_PHRASES = [
 ]
 _BINOMIAL = re.compile(r"\b([A-Z][a-z]{3,})\s+([a-z]{3,})\b")
 
+# A capitalized genus followed by any lowercase word is not a binomial. "active
+# against Staphylococci and Streptococci" matched as "Staphylococci and", which
+# put a conjunction in front of a curator as a candidate species; so did
+# "Aspergillus but", "Candida which" and their kind. Rejecting a function word
+# in the epithet slot costs nothing -- no species epithet is an English
+# conjunction, preposition, or auxiliary -- and the caller falls through to the
+# group match or reports no subject, which are both true answers.
+_NOT_AN_EPITHET = frozenset((
+    "and", "are", "but", "for", "from", "has", "have", "its", "not", "that",
+    "the", "their", "them", "they", "this", "was", "were", "when", "which",
+    "with", "other", "such", "some", "most", "many", "both", "also", "than",
+    "then", "into", "over", "more", "only", "been", "being", "does", "each",
+    "upon", "used", "using", "well", "can", "may", "where", "while", "under",
+    "after", "before", "between", "during", "against", "among", "these",
+    "those", "very", "much", "less", "least",
+))
+
+
+def _binomial_after(tail: str) -> str | None:
+    """The first genuine binomial in `tail`, or None."""
+    for match in _BINOMIAL.finditer(tail):
+        if match.group(2).lower() not in _NOT_AN_EPITHET:
+            return f"{match.group(1)} {match.group(2)}"
+    return None
+
 
 def producer_candidate_queue(records: list[dict]) -> list[dict]:
     """Records whose definition names a possible producing organism.
@@ -418,8 +443,7 @@ def producer_candidate_queue(records: list[dict]) -> list[dict]:
             if not match:
                 continue
             tail = definition[match.end():match.end() + 90]
-            binomial = _BINOMIAL.search(tail)
-            candidate = f"{binomial.group(1)} {binomial.group(2)}" if binomial else "(no binomial)"
+            candidate = _binomial_after(tail) or "(no binomial)"
             rows.append({
                 "queue": "producer-candidate",
                 "key": record["identifier"],
@@ -433,6 +457,87 @@ def producer_candidate_queue(records: list[dict]) -> list[dict]:
     rows.sort(key=lambda r: (0 if "biosynthesis stated" in r["hint"] else
                              1 if "SOURCE only" in r["hint"] else 2,
                              r["source_id"] == "(no binomial)", r["label"].lower()))
+    return rows
+
+
+ACTIVITY_PHRASES = [
+    ("active against", r"\bactiv(?:e|ity) against\b", "activity stated"),
+    ("effective against", r"\beffective against\b", "activity stated"),
+    ("inhibits the growth of", r"\binhibit(?:s|ory)? (?:the )?growth of\b", "activity stated"),
+    ("-cidal/-static against", r"\b(?:bacteri|fungi|myco|proto)(?:cid|stat)al? against\b",
+     "activity stated"),
+    ("spectrum of activity", r"\b(?:broad|narrow)[- ]spectrum\b",
+     "SPECTRUM only — no organism named"),
+    ("used to treat", r"\bused (?:to treat|in the treatment of|for the treatment of)\b",
+     "INDICATION — a disease, not a tested organism"),
+    ("used against", r"\bused against\b", "INDICATION — may name a disease, not an isolate"),
+]
+
+# Groups a source may test instead of a species. `ActivityObservation.taxon_label`
+# accepts "Organism or group tested, as named by the source", so a group is a
+# legitimate subject -- but it cannot carry an NCBITaxon CURIE, and the curator
+# needs to see which kind of subject the phrase introduced.
+_TAXON_GROUP = re.compile(
+    r"\b(gram[- ]positive|gram[- ]negative|mycobacteri\w+|enterobacteri\w+|"
+    r"staphylococc\w+|streptococc\w+|anaerob\w+|dermatophyt\w+|"
+    r"yeasts?|moulds?|molds?|fungi|bacteria|protozoa|viruses)\b",
+    re.I,
+)
+
+
+def activity_candidate_queue(records: list[dict]) -> list[dict]:
+    """Records whose definition uses activity-against language (#94).
+
+    `activity_spectrum` is the corpus's only entirely empty axis: 0 of 2909
+    records carry a single `ActivityObservation`, while the definitions are full
+    of sentences about what these compounds act on.
+
+    NOT AN EXTRACTION, and less extractable than it looks. Three distinct things
+    hide behind the same grammar:
+
+      * "active against Gram-positive bacteria" names a GROUP, which is a
+        legitimate `taxon_label` but can never carry an NCBITaxon CURIE;
+      * "used to treat tuberculosis" names an INDICATION -- a disease, not an
+        organism tested in an assay, and the leap from one to the other is the
+        curator's to make or refuse;
+      * "broad-spectrum antibiotic" names a spectrum with no subject at all.
+
+    None of the three is an observation, because `ActivityObservation` requires
+    evidence, and a reported MIC requires its units and its assay. A definition
+    supplies none of those. So this queue carries the matched phrase, what that
+    phrase actually claims, and the candidate subject, and asserts nothing.
+
+    Ranked activity-stated first, then by whether a subject was found at all.
+    """
+    rows = []
+    for record in records:
+        if record.get("activity_spectrum"):
+            continue
+        definition = record.get("definition") or ""
+        for label, pattern, claim in ACTIVITY_PHRASES:
+            match = re.search(pattern, definition, re.I)
+            if not match:
+                continue
+            tail = definition[match.end():match.end() + 90]
+            group = _TAXON_GROUP.search(tail)
+            subject = (
+                _binomial_after(tail)
+                or (group.group(1) if group else None)
+                or "(no subject named)"
+            )
+            rows.append({
+                "queue": "activity-candidate",
+                "key": record["identifier"],
+                "label": record["label"],
+                "source": "+".join(sorted({c["source"]
+                                           for c in record.get("source_concepts", [])})),
+                "source_id": subject,
+                "hint": f'{subject} — "{label}", {claim}',
+            })
+            break
+    rows.sort(key=lambda r: (0 if "activity stated" in r["hint"] else
+                             1 if "SPECTRUM only" in r["hint"] else 2,
+                             r["source_id"] == "(no subject named)", r["label"].lower()))
     return rows
 
 
@@ -610,7 +715,7 @@ def main() -> int:
                         choices=("all", "no-structure", "mechanism", "minted", "unknown-mech",
                                  "moa-scope", "target-evidence", "aro-class",
                                  "xref-unverified", "multi-component",
-                                 "producer-candidate", "excluded",
+                                 "producer-candidate", "activity-candidate", "excluded",
                                  "crossref-conflict", "structure-unreviewed"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
@@ -637,6 +742,8 @@ def main() -> int:
         queues["multi-component"] = multi_component_queue(records)
     if args.queue in ("all", "producer-candidate"):
         queues["producer-candidate"] = producer_candidate_queue(records)
+    if args.queue in ("all", "activity-candidate"):
+        queues["activity-candidate"] = activity_candidate_queue(records)
     if args.queue in ("all", "excluded"):
         queues["excluded"] = excluded_queue()
     if args.queue in ("all", "crossref-conflict"):
