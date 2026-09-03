@@ -1510,7 +1510,10 @@ def attach_phibase_resistance(records: dict[str, dict]) -> Counter:
                     f"NCBITaxon:{row['strain_taxon_id']}" if row["strain_taxon_id"] else None
                 ),
                 "alteration": row["modification"],
-                "protein_accession": row["protein_accession"] or None,
+                "protein_accession": (
+                    f"UniProtKB:{row['protein_accession']}"
+                    if row["protein_accession"] else None
+                ),
                 "gene_id": row["gene_id"] or None,
                 "phenotype_id": row["phenotype_id"] or None,
                 "phenotype_label": row["phenotype_label"],

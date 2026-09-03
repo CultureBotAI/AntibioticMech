@@ -408,11 +408,36 @@ _NOT_AN_EPITHET = frozenset((
 ))
 
 
-def _binomial_after(tail: str) -> str | None:
-    """The first genuine binomial in `tail`, or None."""
+def _tail_after(definition: str, end: int, width: int = 90) -> str:
+    """The text following a matched phrase, cut at a WORD boundary (#181).
+
+    A fixed slice put "Staphylococcus aureu" in front of a curator seven times:
+    the species name straddled the 90th character and the binomial pattern
+    matched the truncated half. A candidate that cannot be verified because it
+    does not exist is worse than no candidate, and two different truncations of
+    one organism read as two different organisms.
+    """
+    tail = definition[end:end + width]
+    if len(definition) > end + width:
+        remainder = definition[end + width:]
+        boundary = re.search(r"\s", remainder)
+        tail += remainder[: boundary.start()] if boundary else remainder
+    return tail
+
+
+def _binomial_after(tail: str, exclude_genus: str = "") -> str | None:
+    """The first genuine binomial in `tail`, or None.
+
+    `exclude_genus` rejects the record's own name in the genus slot: "Cefacetrile
+    binds ..." matched as a binomial because a capitalized compound name followed
+    by a verb is shaped exactly like one (#182).
+    """
     for match in _BINOMIAL.finditer(tail):
-        if match.group(2).lower() not in _NOT_AN_EPITHET:
-            return f"{match.group(1)} {match.group(2)}"
+        if match.group(2).lower() in _NOT_AN_EPITHET:
+            continue
+        if exclude_genus and match.group(1).lower() == exclude_genus:
+            continue
+        return f"{match.group(1)} {match.group(2)}"
     return None
 
 
@@ -442,7 +467,7 @@ def producer_candidate_queue(records: list[dict]) -> list[dict]:
             match = re.search(pattern, definition, re.I)
             if not match:
                 continue
-            tail = definition[match.end():match.end() + 90]
+            tail = _tail_after(definition, match.end())
             candidate = _binomial_after(tail) or "(no binomial)"
             rows.append({
                 "queue": "producer-candidate",
@@ -467,7 +492,7 @@ ACTIVITY_PHRASES = [
     ("-cidal/-static against", r"\b(?:bacteri|fungi|myco|proto)(?:cid|stat)al? against\b",
      "activity stated"),
     ("spectrum of activity", r"\b(?:broad|narrow)[- ]spectrum\b",
-     "SPECTRUM only — no organism named"),
+     "SPECTRUM stated — any subject below is nearby text, not the phrase's object"),
     ("used to treat", r"\bused (?:to treat|in the treatment of|for the treatment of)\b",
      "INDICATION — a disease, not a tested organism"),
     ("used against", r"\bused against\b", "INDICATION — may name a disease, not an isolate"),
@@ -514,14 +539,21 @@ def activity_candidate_queue(records: list[dict]) -> list[dict]:
         if record.get("activity_spectrum"):
             continue
         definition = record.get("definition") or ""
+        # First match wins, and ACTIVITY_PHRASES is maintained strongest-claim
+        # first so that first == strongest. An explicit strength sort was tried
+        # here and removed: with the list in strength order it could never
+        # select anything different, so it was untestable complexity claiming
+        # to fix something. `test_activity_phrases_stay_in_strength_order` is
+        # the guard that actually holds the property (#182).
         for label, pattern, claim in ACTIVITY_PHRASES:
             match = re.search(pattern, definition, re.I)
             if not match:
                 continue
-            tail = definition[match.end():match.end() + 90]
+            first_word = (record.get("label") or "").split()[:1]
+            tail = _tail_after(definition, match.end())
             group = _TAXON_GROUP.search(tail)
             subject = (
-                _binomial_after(tail)
+                _binomial_after(tail, first_word[0].lower() if first_word else "")
                 or (group.group(1) if group else None)
                 or "(no subject named)"
             )
@@ -536,7 +568,7 @@ def activity_candidate_queue(records: list[dict]) -> list[dict]:
             })
             break
     rows.sort(key=lambda r: (0 if "activity stated" in r["hint"] else
-                             1 if "SPECTRUM only" in r["hint"] else 2,
+                             1 if "SPECTRUM stated" in r["hint"] else 2,
                              r["source_id"] == "(no subject named)", r["label"].lower()))
     return rows
 

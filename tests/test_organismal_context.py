@@ -188,7 +188,7 @@ def test_a_fully_specified_association_is_accepted():
         _mechanism(taxon_id="NCBITaxon:1773", taxon_label="Mycobacterium tuberculosis",
                    strain="H37Rv", strain_taxon_id="NCBITaxon:83332",
                    alteration="Ppe44+ (wild type) [Overexpression]",
-                   protein_accession="P9WHZ3", phenotype_id="PHIPO:0000632",
+                   protein_accession="UniProtKB:P9WHZ3", phenotype_id="PHIPO:0000632",
                    phenotype_label="resistance to hydrogen peroxide",
                    assay="Cell growth assay", source=PHIBASE_RESISTANCE_SOURCE)]) == []
 
@@ -336,7 +336,7 @@ def test_the_phibase_lane_emits_structure_rather_than_prose():
     assert item["taxon_label"] == row["taxon_label"]
     assert item["alteration"] == row["modification"]
     assert item["strain"] == row["strain_label"]
-    assert item["protein_accession"] == row["protein_accession"]
+    assert item["protein_accession"] == f"UniProtKB:{row['protein_accession']}"
     # And the facts are NOT also in the note, which is the regression that
     # started #94: prose standing in for structure.
     assert row["taxon_label"] not in item["note"]
@@ -376,3 +376,135 @@ def test_no_producer_label_still_carries_a_collection_number():
             if re.search(r"\d", label) or re.search(r"\b[A-Z]{3,}\b", label):
                 offenders.append(f"{record['identifier']}: {label!r} looks strain-level")
     assert offenders == [], offenders
+
+
+# --------------------------------------------------------------------------
+# Findings from this PR's own review (#179-#185)
+# --------------------------------------------------------------------------
+
+def test_uniprot_accessions_use_one_notation_everywhere():  # #180
+    """`ProteinExample` requires the prefix; `protein_accession` must match it."""
+    offenders = []
+    for record in _records():
+        for item in record.get("resistance_mechanisms") or []:
+            accession = item.get("protein_accession")
+            if accession and not accession.startswith("UniProtKB:"):
+                offenders.append(f"{record['identifier']}: {accession!r}")
+    assert offenders == [], offenders[:10]
+
+
+def test_a_malformed_protein_accession_is_refused():  # #180
+    """A bare accession used to validate; so did 'see supplementary table 3'."""
+    for bad in ("P9WHZ3", "see supplementary table 3", "UniProtKB:"):
+        errors = _errors(resistance_mechanisms=[
+            _mechanism(taxon_id="NCBITaxon:1773", taxon_label="M. tuberculosis",
+                       protein_accession=bad)])
+        assert any("protein_accession" in e or "does not match" in e
+                   for e in errors), (bad, errors)
+
+
+def test_every_curie_prefix_the_corpus_emits_is_declared():  # #183
+    """PHIPO was emitted for all 217 associations and declared nowhere."""
+    schema = yaml.safe_load((REPO_ROOT / "src" / "antibioticmech" / "schema"
+                             / "antibioticmech.yaml").read_text(encoding="utf-8"))
+    declared = set(schema.get("prefixes") or {})
+    undeclared = set()
+    for record in _records():
+        for item in record.get("resistance_mechanisms") or []:
+            for slot in ("taxon_id", "strain_taxon_id", "protein_accession",
+                         "phenotype_id", "aro_id"):
+                value = item.get(slot)
+                if value and ":" in value:
+                    prefix = value.split(":", 1)[0]
+                    if prefix not in declared:
+                        undeclared.add(f"{prefix} (in {slot})")
+    assert undeclared == set(), sorted(undeclared)
+
+
+def test_the_site_resolves_every_prefix_the_resistance_table_shows():  # #183
+    from render_pages import XREF_URL_TEMPLATES
+    for prefix in ("NCBITaxon", "PHIPO", "UniProtKB"):
+        assert prefix in XREF_URL_TEMPLATES, prefix
+
+
+def test_a_candidate_species_name_is_never_cut_in_half():  # #181
+    """"Staphylococcus aureu" was offered to a curator seven times."""
+    from curation_worklist import _tail_after
+    # The guarantee is that the window never ENDS mid-token. A name still gets
+    # cut off when it starts near the edge -- but then it fails to match as a
+    # binomial and the row reports no subject, which is a true answer. What
+    # must never happen is a partial token that still looks like a name.
+    for width in range(1, 120):
+        definition = "x" * 85 + " Staphylococcus aureus and others"
+        tail = _tail_after(definition, 0, width)
+        assert definition.startswith(tail)
+        assert len(tail) == len(definition) or definition[len(tail)].isspace(), (
+            width, repr(tail[-24:]))
+
+
+def test_the_corpus_no_longer_offers_a_truncated_species_name():  # #181
+    from curation_worklist import corpus_records
+    offenders = [row for row in activity_candidate_queue(corpus_records())
+                 if row["source_id"].endswith(("aureu", "aure"))]
+    assert offenders == [], offenders
+
+
+def test_no_activity_row_names_a_subject_while_claiming_none():  # #182
+    """The claim column and the subject column must not contradict."""
+    from curation_worklist import corpus_records
+    for row in activity_candidate_queue(corpus_records()):
+        if "no organism named" in row["hint"]:
+            assert row["source_id"] == "(no subject named)", row
+
+
+def test_activity_phrases_stay_in_strength_order():  # #182
+    """First match wins, so the list order IS the precedence.
+
+    Reordering `ACTIVITY_PHRASES` so that a weaker claim precedes a stronger one
+    would silently file "broad-spectrum ... active against E. coli" as
+    spectrum-only. Nothing else in the module would notice.
+    """
+    from curation_worklist import ACTIVITY_PHRASES
+    strength = {"activity stated": 0, "SPECTRUM stated": 1}
+    ranks = [strength.get(claim.split(" —")[0], 2) for _, _, claim in ACTIVITY_PHRASES]
+    assert ranks == sorted(ranks), list(zip(ranks, [p[0] for p in ACTIVITY_PHRASES], strict=True))
+
+
+def test_the_strongest_claim_in_a_definition_wins():  # #182
+    """"Broad-spectrum ... active against X" is an activity claim, not a spectrum."""
+    hint = _queue_hint("A broad-spectrum agent active against Escherichia coli.")
+    assert "activity stated" in hint and "Escherichia coli" in hint, hint
+
+
+def test_the_compounds_own_name_is_never_its_candidate_organism():  # #182
+    """"Cefacetrile binds ..." was offered as a candidate binomial."""
+    rows = activity_candidate_queue([{
+        "identifier": "CHEBI:1", "label": "cefacetrile",
+        # The compound name must fall AFTER the matched phrase, which is where
+        # the real corpus row put it -- otherwise the tail never contains it and
+        # the test passes without exercising the exclusion at all.
+        "definition": "A broad-spectrum cephalosporin. Cefacetrile binds "
+                      "penicillin-binding proteins.",
+        "source_concepts": [{"source": "CHEBI"}],
+    }])
+    assert "Cefacetrile" not in rows[0]["source_id"], rows[0]
+
+
+def test_each_taxon_curie_renders_beside_the_name_it_denotes():  # #179
+    """The page printed "strain PH-1 NCBITaxon:5518", a SPECIES id."""
+    from render_pages import build_record
+    doc = {"identifier": "CHEBI:1", "label": "x", "antimicrobial_class": "ANTIBACTERIAL",
+           "resistance_mechanisms": [{
+               "mechanism_type": "UNKNOWN", "label": "a",
+               "taxon_id": "NCBITaxon:5518", "taxon_label": "Fusarium graminearum",
+               "strain": "PH-1", "strain_taxon_id": "NCBITaxon:229533",
+               "protein_accession": "UniProtKB:I1S9X9", "phenotype_id": "PHIPO:0000632",
+               "evidence": [{"reference": "PMID:1"}]}]}
+    row = build_record(REPO_ROOT / "data/antibiotics/antibacterial/x.yaml",
+                       doc, {}, "/")
+    cell = row["resistance_groups"][0]["rows"][0]
+    assert cell["taxon_id"]["id"] == "NCBITaxon:5518"
+    assert cell["strain_taxon_id"]["id"] == "NCBITaxon:229533"
+    # Both must be resolvable, or the split is invisible to a reader.
+    assert cell["taxon_id"]["href"] and cell["strain_taxon_id"]["href"]
+    assert cell["protein_accession"]["href"] and cell["phenotype_id"]["href"]
