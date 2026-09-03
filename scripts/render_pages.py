@@ -94,6 +94,16 @@ GROUNDING_MEANING = {
     "REVIEW_NEEDED": "Grounding has not been decided yet.",
 }
 
+
+def _has_chebi_and_aro(doc: dict) -> bool:
+    """Return whether both providers support this record's identity."""
+    sources = {
+        concept.get("source")
+        for concept in (doc.get("source_concepts") or [])
+        if isinstance(concept, dict)
+    }
+    return {"CHEBI", "ARO"}.issubset(sources)
+
 # Mechanism-layer fields curation fills in over time, in the order the index
 # page's coverage table shows them. Mirrors scripts/antibiotic_report.py's
 # `mechanism` counters so the site and `just report` cannot disagree.
@@ -340,9 +350,7 @@ def build(out_dir: Path) -> None:
     total = len(records)
     curation_counts = Counter(doc.get("curation_status", "?") for _, doc in records)
     grounding_counts = Counter(doc.get("grounding_status", "?") for _, doc in records)
-    multi_source = sum(
-        1 for _, doc in records if len({c["source"] for c in (doc.get("source_concepts") or [])}) > 1
-    )
+    multi_source = sum(1 for _, doc in records if _has_chebi_and_aro(doc))
     structure_complete = sum(
         1 for _, doc in records if (doc.get("chemical_structure") or {}).get("standard_inchi_key")
     )
