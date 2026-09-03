@@ -59,14 +59,14 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 | Class | Records | SEEDED | REVIEWED | With target or resistance evidence |
 |---|---:|---:|---:|---:|
-| ANTIBACTERIAL *(incl. subclasses)* | 1093 | 1077 | 16 | 285 |
+| ANTIBACTERIAL *(incl. subclasses)* | 1093 | 1077 | 16 | 284 |
 | &nbsp;&nbsp;↳ ANTIMYCOBACTERIAL *(subclass of ANTIBACTERIAL)* | 78 | 78 | 0 | 15 |
-| ANTIFUNGAL | 594 | 582 | 12 | 65 |
-| ANTIPROTOZOAL | 248 | 247 | 1 | 6 |
-| ANTIVIRAL | 473 | 450 | 23 | 44 |
-| BIOCIDE | 31 | 31 | 0 | 3 |
+| ANTIFUNGAL | 594 | 582 | 12 | 64 |
+| ANTIPROTOZOAL | 248 | 247 | 1 | 5 |
+| ANTIVIRAL | 473 | 450 | 23 | 32 |
+| BIOCIDE | 31 | 31 | 0 | 2 |
 | ANTIMICROBIAL_UNSPECIFIED | 472 | 464 | 8 | 10 |
-| **TOTAL** | **2911** | **2851** | **60** | **413** |
+| **TOTAL** | **2911** | **2851** | **60** | **397** |
 
 A row marked *(subclass of X)* is already counted in X's own row — mycobacteria are bacteria, and filing is exclusive, so a compound filed ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each record once, so the Records column does not sum to it.
 
@@ -74,7 +74,7 @@ Identity: **2671** records (92%) are grounded in a ChEBI term; **240** keep a mi
 
 Corroboration: **281** records carry source concepts from both ChEBI and CARD/ARO; **2341** come from ChEBI alone and **289** from CARD alone.
 
-Mechanism layer: **296** records carry a molecular target and **295** carry resistance determinants or associations seeded from CARD and PHI-base; **443** carry a seeded or curator-reviewed mode of action; **0** carry a curated causal graph. That last number is the work.
+Mechanism layer: **280** records carry a molecular target and **295** carry resistance determinants or associations seeded from CARD and PHI-base; **443** carry a seeded or curator-reviewed mode of action; **0** carry a curated causal graph. That last number is the work.
 
 <!-- END GENERATED CORPUS STATS -->
 
@@ -186,8 +186,9 @@ by a source concept's minted identifier), and the mechanism fields on a record �
 `mode_of_action`, `molecular_targets` beyond CARD's, `activity_spectrum`,
 `producer_organisms` beyond the MIBiG-marked slice, `causal_graphs`,
 `discussions`. `verify-corpus` does not compare those, so curation and
-reproducibility coexist — with three exceptions: MIBiG-marked producer
-assertions and Drugs@FDA-marked clinical assertions are compared to their
+reproducibility coexist — with source-owned exceptions: BindingDB-marked target,
+PHI-base-marked resistance, MIBiG-marked producer, and Drugs@FDA-marked clinical
+assertions are compared to their
 committed inventories, and a `mode_of_action` still carrying the seeder's note marker is the
 seeder's, and is compared along with its notes and target scope, because a bare
 hand edit of a seeded mechanism is drift rather than curation. Writing a

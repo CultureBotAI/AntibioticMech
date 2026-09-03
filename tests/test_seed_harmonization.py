@@ -16,10 +16,18 @@ from seed_from_sources import (  # noqa: E402
     merge,
     mint,
     normalize_xref,
+    record_yaml_matches,
     slugify,
 )
 
 CONF = yaml.safe_load(CONF_PATH.read_text(encoding="utf-8"))
+
+
+def test_yaml_mapping_order_is_not_a_seed_change():
+    record = {"identifier": "CHEBI:1", "name": "example"}
+    assert record_yaml_matches("name: example\nidentifier: CHEBI:1\n", record)
+    assert not record_yaml_matches("name: changed\nidentifier: CHEBI:1\n", record)
+    assert not record_yaml_matches(None, record)
 
 
 def test_minted_identifiers_are_stable_and_source_scoped():

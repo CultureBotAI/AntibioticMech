@@ -17,6 +17,7 @@ from evaluate_bindingdb_targets import CURATED_MARKER  # noqa: E402
 from extract_bindingdb_targets import parse_measurement  # noqa: E402
 from seed_from_sources import (  # noqa: E402
     attach_bindingdb_targets,
+    bindingdb_row_supports_target_association,
     bindingdb_sourced_target_view,
     merge_with_existing,
 )
@@ -75,6 +76,20 @@ def test_only_kd_is_promoted_to_direct_binding():
         for row in rows
         if row["measurement_type"] in {"KI", "IC50", "EC50"}
     )
+
+
+def test_non_target_specific_measurements_are_not_promoted_to_targets():
+    inventory = inventory_rows()
+    accepted = [row for row in inventory if bindingdb_row_supports_target_association(row)]
+    assert len(accepted) == 109
+    assert len(inventory) - len(accepted) == 68
+    rows = {row["bindingdb_reactant_set_id"]: row for row in inventory}
+    assert not bindingdb_row_supports_target_association(rows["868949"])
+    assert not bindingdb_row_supports_target_association(rows["1108846"])
+    assert not bindingdb_row_supports_target_association(rows["874399"])
+    assert not bindingdb_row_supports_target_association(rows["1074309"])
+    assert not bindingdb_row_supports_target_association(rows["14752"])
+    assert bindingdb_row_supports_target_association(rows["39230"])
 
 
 def test_attached_targets_keep_uniprot_as_examples_not_target_identity():

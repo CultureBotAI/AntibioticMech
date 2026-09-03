@@ -109,6 +109,12 @@ the natural thing to do, and appending is the case that needs the token.
 - A CARD-seeded item cites the ARO term and says so in `notes`. Replacing that
   with a primary citation is an upgrade a curator makes deliberately; leaving it
   is honest.
+- A BindingDB row becomes a molecular-target assertion only when its assay is
+  target-specific positive evidence. Whole-cell `EC50` values, lower bounds
+  (`>`/`>=`), rows with no assay, and review-table values remain in the raw
+  provenance inventory but are not promoted to target edges. A database linking
+  an activity row to a protein page does not establish that the protein was the
+  measured target.
 - An MIC without units is not a measurement. The schema keeps `mic_units`
   separate and a test fails on a value without them.
 

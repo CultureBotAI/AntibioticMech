@@ -806,21 +806,6 @@ molecular_targets:
     source_version: 2026-09
     source_retrieved_on: '2026-08-31'
     reference: PMID:8558522
-  - measurement_type: IC50
-    original_value: '>100000'
-    qualifier: GT
-    value: 100000.0
-    unit: nM
-    assay_name: HIV-1 RT Assay.
-    assay_description: The IC50 of reverse transcriptase is the concentration that
-      inhibits 50% of recombinant HIV-1 RT RNA-directed DNA polymerase activity in
-      vitro.
-    bindingdb_reactant_set_id: '21769'
-    bindingdb_entry_assay_id: '1549_1'
-    bindingdb_monomer_id: '1434'
-    source_version: 2026-09
-    source_retrieved_on: '2026-08-31'
-    reference: PMID:15537346
   - measurement_type: KI
     original_value: '9000'
     qualifier: EQ
@@ -842,9 +827,6 @@ molecular_targets:
     notes: BindingDB literature-curated quantitative target measurement; source value,
       assay text, reaction-set ID, and target organism retained.
   - reference: PMID:8558522
-    notes: BindingDB literature-curated quantitative target measurement; source value,
-      assay text, reaction-set ID, and target organism retained.
-  - reference: PMID:15537346
     notes: BindingDB literature-curated quantitative target measurement; source value,
       assay text, reaction-set ID, and target organism retained.
   - reference: PMID:19170521
@@ -901,50 +883,6 @@ molecular_targets:
     source_retrieved_on: '2026-08-31'
     reference: PMID:7683725
   - measurement_type: IC50
-    original_value: '>20000'
-    qualifier: GT
-    value: 20000.0
-    unit: nM
-    assay_name: HIV RT Assay
-    assay_description: The IC50 of reverse transcriptase is the concentration that
-      inhibits 50% of recombinant HIV RT RNA-directed DNA polymerase activity in vitro.
-    bindingdb_reactant_set_id: '2869'
-    bindingdb_entry_assay_id: '430_1'
-    bindingdb_monomer_id: '1434'
-    source_version: 2026-09
-    source_retrieved_on: '2026-08-31'
-    reference: PMID:8558522
-  - measurement_type: IC50
-    original_value: '>60000'
-    qualifier: GT
-    value: 60000.0
-    unit: nM
-    assay_name: HIV-1 RT Assay
-    assay_description: The IC50 of reverse transcriptase is the concentration that
-      inhibits 50% of recombinant HIV-1 RT RNA-directed DNA polymerase activity in
-      vitro.
-    bindingdb_reactant_set_id: '3278'
-    bindingdb_entry_assay_id: '402_1'
-    bindingdb_monomer_id: '1434'
-    source_version: 2026-09
-    source_retrieved_on: '2026-08-31'
-    reference: PMID:8809165
-  - measurement_type: IC50
-    original_value: '>50000'
-    qualifier: GT
-    value: 50000.0
-    unit: nM
-    assay_name: HIV-1 RT Assay
-    assay_description: The IC50 of reverse transcriptase is the concentration that
-      inhibits 50% of recombinant HIV-1 RT RNA-directed DNA polymerase activity in
-      vitro.
-    bindingdb_reactant_set_id: '3483'
-    bindingdb_entry_assay_id: '457_1'
-    bindingdb_monomer_id: '1434'
-    source_version: 2026-09
-    source_retrieved_on: '2026-08-31'
-    reference: PMID:10514285
-  - measurement_type: IC50
     original_value: '1900'
     qualifier: EQ
     value: 1900.0
@@ -959,21 +897,6 @@ molecular_targets:
     source_version: 2026-09
     source_retrieved_on: '2026-08-31'
     reference: PMID:15519161
-  - measurement_type: IC50
-    original_value: '>100000'
-    qualifier: GT
-    value: 100000.0
-    unit: nM
-    assay_name: HIV-1 RT Assay.
-    assay_description: The IC50 of reverse transcriptase is the concentration that
-      inhibits 50% of recombinant HIV-1 RT RNA-directed DNA polymerase activity in
-      vitro.
-    bindingdb_reactant_set_id: '21764'
-    bindingdb_entry_assay_id: '1549_1'
-    bindingdb_monomer_id: '1434'
-    source_version: 2026-09
-    source_retrieved_on: '2026-08-31'
-    reference: PMID:15537346
   evidence:
   - reference: PMID:8863804
     notes: BindingDB literature-curated quantitative target measurement; source value,
@@ -981,19 +904,7 @@ molecular_targets:
   - reference: PMID:7683725
     notes: BindingDB literature-curated quantitative target measurement; source value,
       assay text, reaction-set ID, and target organism retained.
-  - reference: PMID:8558522
-    notes: BindingDB literature-curated quantitative target measurement; source value,
-      assay text, reaction-set ID, and target organism retained.
-  - reference: PMID:8809165
-    notes: BindingDB literature-curated quantitative target measurement; source value,
-      assay text, reaction-set ID, and target organism retained.
-  - reference: PMID:10514285
-    notes: BindingDB literature-curated quantitative target measurement; source value,
-      assay text, reaction-set ID, and target organism retained.
   - reference: PMID:15519161
-    notes: BindingDB literature-curated quantitative target measurement; source value,
-      assay text, reaction-set ID, and target organism retained.
-  - reference: PMID:15537346
     notes: BindingDB literature-curated quantitative target measurement; source value,
       assay text, reaction-set ID, and target organism retained.
   protein_examples:
@@ -1300,44 +1211,6 @@ molecular_targets:
     entry_status: REVIEWED
     retrieved_on: '2026-08-31'
     role: BindingDB target chain 2
-- target_label: Gag-Pol polyprotein [613-1167,R896S,E946D,S1117V]/[618-1043,R896S,E946D]
-  target_type: VIRAL_PROTEIN
-  target_relation: MEASURED_TARGET_ASSOCIATION
-  taxon_id: NCBITaxon:11709
-  taxon_label: Human immunodeficiency virus 2
-  experimental_context: BindingDB quantitative measurement in the named target organism;
-    source assay descriptions and identifiers are retained per measurement.
-  evidence_status: PRIMARY_EVIDENCE
-  source: BINDINGDB
-  source_version: 2026-09
-  source_retrieved_on: '2026-08-31'
-  measurements:
-  - measurement_type: IC50
-    original_value: '>20000'
-    qualifier: GT
-    value: 20000.0
-    unit: nM
-    assay_name: HIV RT Assay
-    assay_description: The IC50 of reverse transcriptase is the concentration that
-      inhibits 50% of recombinant HIV RT RNA-directed DNA polymerase activity in vitro.
-    bindingdb_reactant_set_id: '2879'
-    bindingdb_entry_assay_id: '430_1'
-    bindingdb_monomer_id: '1434'
-    source_version: 2026-09
-    source_retrieved_on: '2026-08-31'
-    reference: PMID:8558522
-  evidence:
-  - reference: PMID:8558522
-    notes: BindingDB literature-curated quantitative target measurement; source value,
-      assay text, reaction-set ID, and target organism retained.
-  protein_examples:
-  - uniprot_id: UniProtKB:P04584
-    protein_label: Gag-Pol polyprotein
-    taxon_id: NCBITaxon:11709
-    taxon_label: Human immunodeficiency virus 2
-    entry_status: REVIEWED
-    retrieved_on: '2026-08-31'
-    role: BindingDB target chain 1
 - target_label: Reverse transcriptase
   target_type: VIRAL_PROTEIN
   target_relation: MEASURED_TARGET_ASSOCIATION
@@ -2109,6 +1982,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:24:12Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T23:56:10Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

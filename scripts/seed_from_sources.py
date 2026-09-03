@@ -1322,6 +1322,31 @@ def bindingdb_sourced_target_view(record: dict) -> list[dict]:
     ]
 
 
+def bindingdb_row_supports_target_association(row: dict[str, str]) -> bool:
+    """Return whether a BindingDB measurement supports a molecular-target edge.
+
+    BindingDB can associate whole-cell antiviral activity and review-table values
+    with a protein record.  Those rows are useful source observations, but they do
+    not by themselves establish that the named protein is the measured target.
+    Likewise, a lower bound reports that inhibition was not reached and is not
+    positive target-association evidence.
+    """
+    if row.get("measurement_type") == "EC50":
+        return False
+    if row.get("qualifier") in {"GT", "GE"}:
+        return False
+    assay_name = row.get("assay_name", "").strip().casefold()
+    assay_description = row.get("assay_description", "").strip().casefold()
+    if assay_name in {"no assay is provided", "no assay provided"}:
+        return False
+    return "review article" not in assay_description
+
+
+def record_yaml_matches(existing_text: str | None, record: dict) -> bool:
+    """Compare record data without treating YAML mapping order as a change."""
+    return existing_text is not None and yaml.safe_load(existing_text) == record
+
+
 def attach_bindingdb_targets(records: dict[str, dict]) -> Counter:
     """Attach quantitative BindingDB assertions from the committed inventory."""
     rows = load_tsv(RAW_DIR / "bindingdb_target_measurements.tsv")
@@ -1334,6 +1359,9 @@ def attach_bindingdb_targets(records: dict[str, dict]) -> Counter:
     for row in rows:
         if row.get("curation_source") != "Curated from the literature by BindingDB":
             raise ValueError("BindingDB inventory contains a non-BindingDB-curated row")
+        if not bindingdb_row_supports_target_association(row):
+            counts["rejected_non_target_specific_measurement"] += 1
+            continue
         matches = by_key.get(row["standard_inchi_key"], [])
         if len(matches) != 1:
             counts["ambiguous_or_missing_identity"] += 1
@@ -2066,6 +2094,8 @@ def main() -> int:
         f"measurements={bindingdb_counts['matched_measurements']} "
         f"assertions={bindingdb_counts['matched_target_assertions']} "
         f"records={bindingdb_counts['matched_records']} "
+        f"rejected_non_target_specific="
+        f"{bindingdb_counts['rejected_non_target_specific_measurement']} "
         f"ambiguous_or_missing={bindingdb_counts['ambiguous_or_missing_identity']}",
         file=sys.stderr,
     )
@@ -2103,8 +2133,6 @@ def main() -> int:
     if args.limit:
         selected = selected[: args.limit]
 
-    from antibioticmech.validation.write_validated import emit_antibiotic_yaml
-
     previous_paths = read_lockfile_paths()
     written = unchanged = moved = 0
     for identifier in selected:
@@ -2117,7 +2145,17 @@ def main() -> int:
         existing_text = source.read_text(encoding="utf-8") if source else None
         if existing_text is not None:
             record = merge_with_existing(record, yaml.safe_load(existing_text))
-        if source == path and not args.force and existing_text == emit_antibiotic_yaml(record):
+        # A curator-owned field can occupy a different insertion position from
+        # the same field in a freshly built seed.  YAML mapping order carries no
+        # meaning, so comparing serialized text would rewrite every reviewed
+        # record after an otherwise unrelated source refresh.  Compare the
+        # parsed record instead; --force remains the explicit canonical-format
+        # rewrite path.
+        if (
+            source == path
+            and not args.force
+            and record_yaml_matches(existing_text, record)
+        ):
             unchanged += 1
             continue
         try:
