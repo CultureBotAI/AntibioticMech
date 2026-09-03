@@ -40,6 +40,14 @@ dependencies = [
     "pyyaml>=6.0",
     "click>=8.1.0",
     "jinja2>=3.1.0",
+    # The vendored id-label correspondence gate resolves CURIEs through OAK.
+    # >=0.7.3 rather than 0.7.2: 0.7.2 declares requires_python <3.14 while this
+    # project claims >=3.10 with no ceiling; 0.7.3 widened it. Matches
+    # CultureMech, MediaIngredientMech and CellStructureMech.
+    "oaklib>=0.7.3",
+    # oaklib imports eutils, which still imports pkg_resources; setuptools 82
+    # removed it, and uv does not install setuptools unless it is declared.
+    "setuptools<82",
 ]
 
 [project.optional-dependencies]
@@ -102,7 +110,20 @@ target-version = "py310"
 # extend-exclude, not exclude: `exclude` REPLACES ruff's defaults (which cover
 # .venv, .git, build/, ...), so setting it would put the whole virtualenv in
 # scope and drown the repo's own findings in third-party ones.
-extend-exclude = ["src/antibioticmech/schema/antibioticmech_dataclasses.py"]
+extend-exclude = [
+    "src/antibioticmech/schema/antibioticmech_dataclasses.py",
+    # claw-governed vendored files: byte-identical to canon, linted there, not
+    # here. Reformatting one would break check_vendored_sync, which is the point
+    # of vendoring them. Matches CellStructureMech.
+    "scripts/check_vendored_sync.py",
+    "scripts/validate_id_label_correspondence.py",
+    "scripts/chem_formula.py",
+    "tests/test_skill_frontmatter.py",
+    "tests/test_curation_timestamp_schema.py",
+    "tests/test_id_label_empty_adapter.py",
+    "tests/test_id_label_unknown_prefix.py",
+    "tests/test_id_label_plausibility.py",
+]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "UP", "B", "SIM"]
