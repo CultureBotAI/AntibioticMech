@@ -1434,12 +1434,25 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
         _history_last(records[identifier])
 
 
+PHIBASE_RESISTANCE_SOURCE = "PHIBASE"
 PHIBASE_NOTE_MARKER = "PHI-base antimicrobial_interaction"
 
 
 def is_phibase_sourced_resistance(item: dict) -> bool:
-    """True only for a resistance association owned by the PHI-base lane."""
-    return PHIBASE_NOTE_MARKER in str(item.get("note") or "")
+    """True only for a resistance association owned by the PHI-base lane.
+
+    Ownership is the ``source`` field, as it is for the MIBiG, BindingDB and FDA
+    lanes. The note marker is the pre-#94 shape, when every organismal fact
+    lived in the note and the marker was the only thing to match on. It is still
+    recognized because the alternative is silent duplication: re-seeding a
+    checkout written before #94 would read those items as curator-written, keep
+    them, and append a second structured copy of all 217 associations beside
+    them. Recognizing the old shape makes the migration a replacement.
+    """
+    return (
+        item.get("source") == PHIBASE_RESISTANCE_SOURCE
+        or PHIBASE_NOTE_MARKER in str(item.get("note") or "")
+    )
 
 
 def phibase_sourced_resistance_view(record: dict) -> list[dict]:
@@ -1484,29 +1497,44 @@ def attach_phibase_resistance(records: dict[str, dict]) -> Counter:
                 counts["duplicate_rows"] += 1
                 continue
             seen.add(key)
-            pathogen = row["taxon_label"]
-            if row["strain_label"]:
-                pathogen += f" strain {row['strain_label']}"
-            protein = row["protein_accession"] or row["phig_id"]
-            items.append({
+            # Built in schema order, with the optional slots dropped afterwards,
+            # so an emitted item reads in the order the schema declares rather
+            # than in the order the source happened to fill it.
+            item = {
                 "mechanism_type": "UNKNOWN",
                 "label": f"{row['modification']} associated with {row['phenotype_label']}",
+                "taxon_id": f"NCBITaxon:{row['taxon_id']}",
+                "taxon_label": row["taxon_label"],
+                "strain": row["strain_label"] or None,
+                "strain_taxon_id": (
+                    f"NCBITaxon:{row['strain_taxon_id']}" if row["strain_taxon_id"] else None
+                ),
+                "alteration": row["modification"],
+                "protein_accession": row["protein_accession"] or None,
+                "gene_id": row["gene_id"] or None,
+                "phenotype_id": row["phenotype_id"] or None,
+                "phenotype_label": row["phenotype_label"],
+                "assay": row["evidence_code"],
+                "source": PHIBASE_RESISTANCE_SOURCE,
+                "source_version": row["source_commit"],
+                "source_retrieved_on": row["source_retrieved_on"],
+                # The caveat is the only part of this that is genuinely prose.
+                # Everything the note used to restate -- organism, strain,
+                # protein, allele, phenotype, assay, provenance -- is now in the
+                # slots above, where it can be queried and contradicted (#94).
                 "note": (
-                    f"{PHIBASE_NOTE_MARKER} {row['phig_id']}; {protein}; "
-                    f"{pathogen} (NCBITaxon:{row['taxon_id']}); "
-                    f"phenotype {row['phenotype_id']}; evidence code {row['evidence_code']}; "
-                    f"source commit {row['source_commit']}, retrieved {row['source_retrieved_on']}. "
                     "This is a curated gene-alteration/chemical resistance association, "
                     "not evidence for a specific biochemical resistance mechanism."
                 ),
                 "evidence": [{
                     "reference": f"PMID:{row['pmid']}",
                     "notes": (
-                        "PHI-base primary-literature antimicrobial interaction; exact ChEBI "
-                        "chemical identifier, pathogen, strain, alteration, and phenotype retained."
+                        "PHI-base primary-literature antimicrobial interaction "
+                        f"{row['phig_id']}; joined to this record by exact ChEBI identifier."
                     ),
                 }],
-            })
+            }
+            items.append({k: v for k, v in item.items() if v is not None})
         records[identifier].setdefault("resistance_mechanisms", []).extend(items)
         _history_last(records[identifier])
         counts["matched_records"] += 1
@@ -1638,6 +1666,71 @@ def attach_bindingdb_targets(records: dict[str, dict]) -> Counter:
 MIBIG_PRODUCER_SOURCE = "MIBIG"
 
 
+# Rank markers that continue a taxonomic name rather than beginning a strain
+# designation. "Francisella tularensis subsp. tularensis SCHU S4" is a name of
+# four tokens followed by a strain; "Streptomyces rochei NBRC 12908" is a name of
+# two.
+_RANK_MARKERS = ("subsp.", "var.", "f.", "pv.", "sp.", "bv.", "serovar")
+_GENUS = re.compile(r"^[A-Z][a-z]+$")
+_EPITHET = re.compile(r"^[a-z][a-z-]+$")
+
+MIBIG_REFERENCE_BASIS = {
+    "compound_evidence": (
+        "MIBiG attaches this reference to the compound itself, so it supports "
+        "the producer/compound link this item asserts."
+    ),
+    "first_mibig_legacy_reference": (
+        "MIBiG's first legacy reference for the entry, inherited rather than "
+        "attached to the compound. It supports that the entry exists; it is NOT "
+        "established as evidence for this specific producer/compound link."
+    ),
+}
+
+
+def split_organism_strain(label: str) -> tuple[str, str | None]:
+    """Split "<taxonomic name> <strain designation>" conservatively.
+
+    MIBiG's ``taxonomy.name`` is a strain name, but the accompanying
+    ``ncbiTaxId`` is frequently the SPECIES: NCBITaxon:1928 denotes
+    *Streptomyces rochei*, and writing "Streptomyces rochei NBRC 12908" as that
+    CURIE's label asserts the CURIE denotes a strain, which it does not. The
+    schema's ``strain`` slot was added for exactly this and never populated.
+
+    Splitting is safe in both directions. Where the id is species-level the
+    label stops contradicting it; where the id is strain-level the label becomes
+    less specific than the id but stays true of it, because a strain is an
+    instance of its species. What is never safe is guessing, so an unparsed name
+    is returned whole with no strain rather than split on whitespace and hoped
+    over.
+    """
+    tokens = label.split()
+    if len(tokens) < 2 or not _GENUS.match(tokens[0]):
+        return label, None
+    index = 1
+    if tokens[1] == "sp." or _EPITHET.match(tokens[1]):
+        index = 2
+    else:
+        return label, None
+    # Consume "subsp. tularensis" and friends.
+    while index + 1 < len(tokens) and tokens[index] in _RANK_MARKERS:
+        index += 2
+    if index >= len(tokens):
+        return label, None
+    # The name ends where the designation begins; an explicit "strain" keyword
+    # belongs to neither, so the boundary is fixed before consuming it.
+    name_end = index
+    if tokens[index] == "strain":
+        index += 1
+    remainder = tokens[index:]
+    if not remainder:
+        return label, None
+    # A lowercase continuation is more likely an unrecognized rank marker than a
+    # strain designation; leave the name alone rather than truncate a real name.
+    if remainder[0][0].islower():
+        return label, None
+    return " ".join(tokens[:name_end]), " ".join(remainder)
+
+
 def is_mibig_sourced_producer(item: dict) -> bool:
     """True only for a producer assertion owned by the MIBiG extractor."""
     return item.get("source") == MIBIG_PRODUCER_SOURCE
@@ -1695,9 +1788,13 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
             if key in seen:
                 continue
             seen.add(key)
-            items.append({
+            taxon_label, strain = split_organism_strain(row["taxon_label"])
+            # Schema order, optional slots dropped afterwards -- see the same
+            # pattern in the PHI-base lane.
+            item = {
                 "taxon_id": f"NCBITaxon:{row['taxon_id']}",
-                "taxon_label": row["taxon_label"],
+                "taxon_label": taxon_label,
+                "strain": strain,
                 "biosynthetic_gene_cluster": row["mibig_accession"],
                 "source": MIBIG_PRODUCER_SOURCE,
                 "source_version": release_version,
@@ -1708,8 +1805,16 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
                     "MIBiG active entry with a non-placeholder expert reviewer; "
                     f"compound {row['compound_name']!r} joined by exact Standard InChIKey."
                 ),
-                "reference": row["primary_reference"],
-            })
+                "evidence": [{
+                    "reference": row["primary_reference"],
+                    "notes": MIBIG_REFERENCE_BASIS.get(
+                        row["reference_basis"],
+                        f"MIBiG reference basis {row['reference_basis']!r}, "
+                        "not one this extractor knows how to characterize.",
+                    ),
+                }],
+            }
+            items.append({k: v for k, v in item.items() if v is not None})
         if items:
             records[identifier]["producer_organisms"] = items
             _history_last(records[identifier])

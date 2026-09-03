@@ -152,9 +152,15 @@ def test_mibig_producers_are_reviewed_and_fully_provenanced(records):
                 "source_version",
                 "source_record_version",
                 "source_quality",
-                "reference",
+                # `reference` was a scalar PMID/DOI that could not say what the
+                # citation was FOR; #94 replaced it with structured evidence
+                # carrying MIBiG's own reference basis in `notes`.
+                "evidence",
             )
             missing = [field for field in required if not producer.get(field)]
+            if not all(e.get("reference") and e.get("notes")
+                       for e in producer.get("evidence") or []):
+                missing.append("evidence[].reference+notes")
             if missing or producer.get("reviewed") is not True:
                 problems.append((path.name, missing, producer.get("reviewed")))
     assert problems == [], problems[:20]

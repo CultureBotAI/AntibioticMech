@@ -120,15 +120,25 @@ resistance_mechanisms:
       database assertion, not a primary citation.
 - mechanism_type: UNKNOWN
   label: STS1+ (wild type) [Overexpression] associated with resistance to cycloheximide
-  note: PHI-base antimicrobial_interaction PHIG:1805; P38637; Saccharomyces cerevisiae
-    strain YPH501 (NCBITaxon:4932); phenotype PHIPO:0000544; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  strain: YPH501
+  strain_taxon_id: NCBITaxon:559292
+  alteration: STS1+ (wild type) [Overexpression]
+  protein_accession: P38637
+  gene_id: YIR011C_mRNA
+  phenotype_id: PHIPO:0000544
+  phenotype_label: resistance to cycloheximide
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:8307980
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:1805; joined
+      to this record by exact ChEBI identifier.
 molecular_targets:
 - target_id: ARO:3000729
   target_label: ribosomal complex
@@ -167,6 +177,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-02T20:14:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:43:46Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

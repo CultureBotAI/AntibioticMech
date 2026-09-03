@@ -82,181 +82,318 @@ source_concepts:
 resistance_mechanisms:
 - mechanism_type: UNKNOWN
   label: Hog1::Hyg (disruption) [Not assayed] associated with resistance to iprodione
-  note: PHI-base antimicrobial_interaction PHIG:9481; Q1KTF2; Zymoseptoria tritici
-    strain IPO323 (NCBITaxon:1047171); phenotype PHIPO:0000389; evidence code Cell
-    growth assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved
-    2026-09-01. This is a curated gene-alteration/chemical resistance association,
-    not evidence for a specific biochemical resistance mechanism.
+  taxon_id: NCBITaxon:1047171
+  taxon_label: Zymoseptoria tritici
+  strain: IPO323
+  strain_taxon_id: NCBITaxon:336722
+  alteration: Hog1::Hyg (disruption) [Not assayed]
+  protein_accession: Q1KTF2
+  gene_id: Mycgr3T76502
+  phenotype_id: PHIPO:0000389
+  phenotype_label: resistance to iprodione
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:17073308
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:9481; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: Bos1(18.3 (55bp) duplication 835 + 838stop) (amino acid insertion and mutation)
     [Not assayed] associated with resistance to iprodione
-  note: PHI-base antimicrobial_interaction PHIG:4721; A0A384J5Y1; Botrytis cinerea
-    strain Bt6-4 (NCBITaxon:40559); phenotype PHIPO:0000389; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  strain: Bt6-4
+  strain_taxon_id: NCBITaxon:332648
+  alteration: Bos1(18.3 (55bp) duplication 835 + 838stop) (amino acid insertion and
+    mutation) [Not assayed]
+  protein_accession: A0A384J5Y1
+  phenotype_id: PHIPO:0000389
+  phenotype_label: resistance to iprodione
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:30686204
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: Bos1(E253D) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
-  note: PHI-base antimicrobial_interaction PHIG:4721; A0A384J5Y1; Botrytis cinerea
-    strain Bt3-4 (NCBITaxon:40559); phenotype PHIPO:0000389; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  strain: Bt3-4
+  strain_taxon_id: NCBITaxon:332648
+  alteration: Bos1(E253D) (amino acid mutation) [Not assayed]
+  protein_accession: A0A384J5Y1
+  phenotype_id: PHIPO:0000389
+  phenotype_label: resistance to iprodione
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:30686204
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: Bos1(G415D) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
-  note: PHI-base antimicrobial_interaction PHIG:4721; A0A384J5Y1; Botrytis cinerea
-    strain Yc-6 (NCBITaxon:40559); phenotype PHIPO:0000389; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  strain: Yc-6
+  strain_taxon_id: NCBITaxon:332648
+  alteration: Bos1(G415D) (amino acid mutation) [Not assayed]
+  protein_accession: A0A384J5Y1
+  phenotype_id: PHIPO:0000389
+  phenotype_label: resistance to iprodione
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:30686204
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: Bos1(Q846stop) (nonsense mutation) [Not assayed] associated with resistance
     to iprodione
-  note: PHI-base antimicrobial_interaction PHIG:4721; A0A384J5Y1; Botrytis cinerea
-    strain Nj5-10 (NCBITaxon:40559); phenotype PHIPO:0000389; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  strain: Nj5-10
+  strain_taxon_id: NCBITaxon:332648
+  alteration: Bos1(Q846stop) (nonsense mutation) [Not assayed]
+  protein_accession: A0A384J5Y1
+  phenotype_id: PHIPO:0000389
+  phenotype_label: resistance to iprodione
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:30686204
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: bos1(A493T) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
-  note: PHI-base antimicrobial_interaction PHIG:4721; A0A384J5Y1; Botrytis cinerea
-    strain B05.10 (NCBITaxon:40559); phenotype PHIPO:0000389; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  strain: B05.10
+  strain_taxon_id: NCBITaxon:332648
+  alteration: bos1(A493T) (amino acid mutation) [Not assayed]
+  protein_accession: A0A384J5Y1
+  phenotype_id: PHIPO:0000389
+  phenotype_label: resistance to iprodione
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:22912706
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: bos1(G278D) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
-  note: PHI-base antimicrobial_interaction PHIG:4721; A0A384J5Y1; Botrytis cinerea
-    strain B05.10 (NCBITaxon:40559); phenotype PHIPO:0000389; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  strain: B05.10
+  strain_taxon_id: NCBITaxon:332648
+  alteration: bos1(G278D) (amino acid mutation) [Not assayed]
+  protein_accession: A0A384J5Y1
+  phenotype_id: PHIPO:0000389
+  phenotype_label: resistance to iprodione
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:22912706
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: bos1(G415D) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
-  note: PHI-base antimicrobial_interaction PHIG:4721; A0A384J5Y1; Botrytis cinerea
-    strain B05.10 (NCBITaxon:40559); phenotype PHIPO:0000389; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  strain: B05.10
+  strain_taxon_id: NCBITaxon:332648
+  alteration: bos1(G415D) (amino acid mutation) [Not assayed]
+  protein_accession: A0A384J5Y1
+  phenotype_id: PHIPO:0000389
+  phenotype_label: resistance to iprodione
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:22912706
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: bos1(I365S E529A) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
-  note: PHI-base antimicrobial_interaction PHIG:4721; A0A384J5Y1; Botrytis cinerea
-    strain B05.10 (NCBITaxon:40559); phenotype PHIPO:0000389; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  strain: B05.10
+  strain_taxon_id: NCBITaxon:332648
+  alteration: bos1(I365S E529A) (amino acid mutation) [Not assayed]
+  protein_accession: A0A384J5Y1
+  phenotype_id: PHIPO:0000389
+  phenotype_label: resistance to iprodione
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:22912706
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: bos1(I365S M427T) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
-  note: PHI-base antimicrobial_interaction PHIG:4721; A0A384J5Y1; Botrytis cinerea
-    strain B05.10 (NCBITaxon:40559); phenotype PHIPO:0000389; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  strain: B05.10
+  strain_taxon_id: NCBITaxon:332648
+  alteration: bos1(I365S M427T) (amino acid mutation) [Not assayed]
+  protein_accession: A0A384J5Y1
+  phenotype_id: PHIPO:0000389
+  phenotype_label: resistance to iprodione
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:22912706
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: bos1(I365S T581P) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
-  note: PHI-base antimicrobial_interaction PHIG:4721; A0A384J5Y1; Botrytis cinerea
-    strain B05.10 (NCBITaxon:40559); phenotype PHIPO:0000389; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  strain: B05.10
+  strain_taxon_id: NCBITaxon:332648
+  alteration: bos1(I365S T581P) (amino acid mutation) [Not assayed]
+  protein_accession: A0A384J5Y1
+  phenotype_id: PHIPO:0000389
+  phenotype_label: resistance to iprodione
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:22912706
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: bos1(I365S V239F) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
-  note: PHI-base antimicrobial_interaction PHIG:4721; A0A384J5Y1; Botrytis cinerea
-    strain B05.10 (NCBITaxon:40559); phenotype PHIPO:0000389; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  strain: B05.10
+  strain_taxon_id: NCBITaxon:332648
+  alteration: bos1(I365S V239F) (amino acid mutation) [Not assayed]
+  protein_accession: A0A384J5Y1
+  phenotype_id: PHIPO:0000389
+  phenotype_label: resistance to iprodione
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:22912706
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: bos1(I365S) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
-  note: PHI-base antimicrobial_interaction PHIG:4721; A0A384J5Y1; Botrytis cinerea
-    strain B05.10 (NCBITaxon:40559); phenotype PHIPO:0000389; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  strain: B05.10
+  strain_taxon_id: NCBITaxon:332648
+  alteration: bos1(I365S) (amino acid mutation) [Not assayed]
+  protein_accession: A0A384J5Y1
+  phenotype_id: PHIPO:0000389
+  phenotype_label: resistance to iprodione
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:22912706
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: Hog1delta (deletion) associated with resistance to iprodione
-  note: PHI-base antimicrobial_interaction PHIG:10483; A7EQI8; Sclerotinia sclerotiorum
-    strain Scl02-05 (NCBITaxon:5180); phenotype PHIPO:0000389; evidence code Macroscopic
-    observation (qualitative observation); source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8,
-    retrieved 2026-09-01. This is a curated gene-alteration/chemical resistance association,
-    not evidence for a specific biochemical resistance mechanism.
+  taxon_id: NCBITaxon:5180
+  taxon_label: Sclerotinia sclerotiorum
+  strain: Scl02-05
+  strain_taxon_id: NCBITaxon:665079
+  alteration: Hog1delta (deletion)
+  protein_accession: A7EQI8
+  phenotype_id: PHIPO:0000389
+  phenotype_label: resistance to iprodione
+  assay: Macroscopic observation (qualitative observation)
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:38374637
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:10483; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: Shk1delta (deletion) associated with resistance to iprodione
-  note: PHI-base antimicrobial_interaction PHIG:7818; A7F519; Sclerotinia sclerotiorum
-    strain Scl02-05 (NCBITaxon:5180); phenotype PHIPO:0000389; evidence code Macroscopic
-    observation (qualitative observation); source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8,
-    retrieved 2026-09-01. This is a curated gene-alteration/chemical resistance association,
-    not evidence for a specific biochemical resistance mechanism.
+  taxon_id: NCBITaxon:5180
+  taxon_label: Sclerotinia sclerotiorum
+  strain: Scl02-05
+  strain_taxon_id: NCBITaxon:665079
+  alteration: Shk1delta (deletion)
+  protein_accession: A7F519
+  phenotype_id: PHIPO:0000389
+  phenotype_label: resistance to iprodione
+  assay: Macroscopic observation (qualitative observation)
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:38374637
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:7818; joined
+      to this record by exact ChEBI identifier.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -271,6 +408,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-02T04:31:13Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:43:47Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

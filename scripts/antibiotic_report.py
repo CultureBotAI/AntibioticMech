@@ -24,6 +24,10 @@ CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 sys.path.insert(0, str(REPO_ROOT / "src"))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
+from curation_worklist import (  # noqa: E402
+    activity_candidate_queue,
+    producer_candidate_queue,
+)
 from seed_from_sources import class_count_rows, class_parents, rollup_by_class  # noqa: E402
 
 
@@ -43,6 +47,7 @@ def summarize(records: list[tuple[Path, dict]]) -> dict:
     structure_fields = Counter()
     mechanism = Counter()
     structures = Counter()
+    organismal = Counter()
     class_status: dict[str, Counter] = defaultdict(Counter)
 
     for _, record in records:
@@ -80,8 +85,22 @@ def summarize(records: list[tuple[Path, dict]]) -> dict:
                 structures["target_complexes"] += 1
         if record.get("structural_observations"):
             mechanism["structural_observations"] += 1
+        for item in record.get("resistance_mechanisms") or []:
+            organismal["resistance_items"] += 1
+            if item.get("taxon_label"):
+                organismal["resistance_with_organism"] += 1
+
+    # An empty axis is two different situations, and reporting one number for
+    # both overstates what curation can act on. A synthetic sulfonamide has no
+    # producer organism to find; a natural product whose definition says
+    # "produced by Streptomyces rochei" has one sitting in plain text. Counting
+    # the candidate queues separates the backlog from the genuinely absent.
+    docs = [record for _, record in records]
+    organismal["producer_candidates"] = len(producer_candidate_queue(docs))
+    organismal["activity_candidates"] = len(activity_candidate_queue(docs))
 
     return {
+        "organismal": organismal,
         "structures": structures,
         "total": len(records),
         "by_class": by_class,
@@ -170,6 +189,21 @@ def print_report(stats: dict) -> None:
         print(f"    of {structures['total']} structure(s): "
               f"{structures['reviewed']} reviewed, "
               f"{structures['target_complexes']} established as target complexes")
+
+    # #94: separate "nothing to find" from "found nothing yet".
+    organismal = stats["organismal"]
+    print("\nOrganismal axis — populated, candidate, or no signal")
+    for field, candidates in (("producer_organisms", organismal["producer_candidates"]),
+                              ("activity_spectrum", organismal["activity_candidates"])):
+        populated = stats["mechanism"][field]
+        silent = total - populated - candidates
+        print(f"  {field:26s} {populated:>6d} populated   "
+              f"{candidates:>5d} with a definition signal   {silent:>5d} with none")
+    items = organismal["resistance_items"]
+    if items:
+        named = organismal["resistance_with_organism"]
+        print(f"  {'resistance in an organism':26s} {named:>6d} of {items} resistance item(s) "
+              f"name the organism the resistance was observed in")
 
 
 def write_class_tsv(stats: dict, path: Path) -> None:

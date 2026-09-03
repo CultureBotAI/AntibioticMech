@@ -482,9 +482,21 @@ classes:
         range: boolean
       note:
         range: string
-      reference:
-        description: PMID:..., DOI:..., or an opaque URL.
-        range: string
+      evidence:
+        description: >-
+          Primary-source support for the producer claim, with the basis on
+          which the source offers it.
+
+          Replaces a scalar `reference`, which could hold a PMID but nothing
+          about what that PMID was cited FOR. MIBiG distinguishes a reference
+          attached to the compound from one inherited as an entry's first legacy
+          citation; the first supports "this organism makes this molecule" and
+          the second supports only "this entry exists". Flattening both to a
+          bare identifier made the weaker one indistinguishable from the
+          stronger, which is the whole question a producer claim turns on.
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
 
   ClinicalStatusAssertion:
     description: A regulator's status for one substance-containing drug product.
@@ -889,6 +901,50 @@ classes:
     description: >-
       A route by which microbes resist this compound. Grounded in ARO where
       CARD models it, otherwise curator-described with evidence.
+
+      Resistance is an organismal claim in a way that a target is not. "Efflux"
+      names a route; "an H399P substitution in cyp51B in Aspergillus flavus
+      strain X26728 confers resistance to voriconazole" names an event in a
+      lineage, and the organism, the strain, the protein and the allele are the
+      claim rather than decoration on it. The context slots below exist so that
+      such an assertion can be read, joined and contradicted without parsing
+      prose; absent for a mechanism asserted at the route level, as CARD's are.
+    rules:
+      - description: >-
+          A taxon CURIE must arrive with the name it denotes. A bare
+          `NCBITaxon:318829` is unreadable to every consumer that lacks the
+          taxonomy to hand, and unreviewable by the curator who most needs it.
+        preconditions:
+          slot_conditions:
+            taxon_id:
+              value_presence: PRESENT
+        postconditions:
+          slot_conditions:
+            taxon_label:
+              value_presence: PRESENT
+      - description: >-
+          A strain-level taxon CURIE requires the strain designation, for the
+          same reason and because the two are routinely different ranks.
+        preconditions:
+          slot_conditions:
+            strain_taxon_id:
+              value_presence: PRESENT
+        postconditions:
+          slot_conditions:
+            strain:
+              value_presence: PRESENT
+      - description: >-
+          An allele has no meaning outside the organism carrying it. A
+          `cyp51B(H399P)` with no taxon is not a resistance observation, it is a
+          string; requiring the organism keeps the two apart at the write gate.
+        preconditions:
+          slot_conditions:
+            alteration:
+              value_presence: PRESENT
+        postconditions:
+          slot_conditions:
+            taxon_label:
+              value_presence: PRESENT
     attributes:
       mechanism_type:
         description: Coarse resistance route.
@@ -905,6 +961,73 @@ classes:
         description: Gene or protein family names implicated (e.g. "blaTEM", "ermB").
         multivalued: true
         range: string
+      taxon_id:
+        description: >-
+          NCBITaxon CURIE of the organism the resistance was observed in.
+          Absent for a route-level mechanism that is not tied to one organism.
+        range: string
+        pattern: "^NCBITaxon:[0-9]+$"
+      taxon_label:
+        description: Scientific name of that organism, as the source gives it.
+        range: string
+      strain:
+        description: >-
+          Strain or isolate designation. Kept out of `taxon_label` so that
+          "which species show this?" does not require parsing collection
+          numbers out of species names.
+        range: string
+      strain_taxon_id:
+        description: >-
+          NCBITaxon CURIE for the strain itself, where the source resolves one
+          separately from the species.
+        range: string
+        pattern: "^NCBITaxon:[0-9]+$"
+      alteration:
+        description: >-
+          The genetic or expression change associated with the phenotype, as
+          the source describes it (e.g. "cyp51B(H399P, D411N) (amino acid
+          mutation)", "Des1delta (deletion)", "Ppe44+ (wild type)
+          [Overexpression]"). Verbatim: normalizing it would assert a parse the
+          source did not make.
+        range: string
+      protein_accession:
+        description: >-
+          UniProtKB accession of the altered protein.
+
+          This is the mirror image of the rule on `MolecularTarget`, where an
+          accession is explicitly NOT the target identity: a target should be a
+          family or complex because the same target exists across organisms,
+          whereas a resistance allele exists in one protein in one lineage and
+          the accession is the most precise honest identifier for it. The
+          asymmetry is deliberate, not an oversight.
+        range: string
+      gene_id:
+        description: Source gene identifier for the altered locus, where given.
+        range: string
+      phenotype_id:
+        description: Ontology CURIE for the observed phenotype (e.g. a PHIPO term).
+        range: curie
+      phenotype_label:
+        description: Human-readable phenotype (e.g. "resistance to voriconazole").
+        range: string
+      assay:
+        description: >-
+          The method behind the phenotype call (e.g. "Cell growth assay").
+          Without it the claim is an assertion rather than an observation.
+        range: string
+      source:
+        description: >-
+          Upstream resource owning this assertion slice. Set by an extractor
+          lane so re-seeding can replace exactly what it wrote; absent on
+          curator-written items, and on CARD-seeded items, which mark ownership
+          with an evidence note that predates this slot.
+        range: string
+      source_version:
+        description: Version or commit of the upstream source for this assertion.
+        range: string
+      source_retrieved_on:
+        description: Date the source snapshot was retrieved.
+        range: date
       note:
         range: string
       evidence:

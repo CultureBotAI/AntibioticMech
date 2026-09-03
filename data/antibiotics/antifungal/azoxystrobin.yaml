@@ -132,62 +132,103 @@ resistance_mechanisms:
       database assertion, not a primary citation.
 - mechanism_type: UNKNOWN
   label: Pks1delta (deletion) associated with resistance to azoxystrobin
-  note: PHI-base antimicrobial_interaction PHIG:11363; A0A8E5ME34; Ustilaginoidea
-    virens strain P1 (NCBITaxon:1159556); phenotype PHIPO:0000388; evidence code Cell
-    growth assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved
-    2026-09-01. This is a curated gene-alteration/chemical resistance association,
-    not evidence for a specific biochemical resistance mechanism.
+  taxon_id: NCBITaxon:1159556
+  taxon_label: Ustilaginoidea virens
+  strain: P1
+  alteration: Pks1delta (deletion)
+  protein_accession: A0A8E5ME34
+  phenotype_id: PHIPO:0000388
+  phenotype_label: resistance to azoxystrobin
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:41745253
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:11363; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: Mdm10delta (deletion) associated with resistance to azoxystrobin
-  note: PHI-base antimicrobial_interaction PHIG:10867; W7MZ22; Fusarium verticillioides
-    strain M3125 (NCBITaxon:117187); phenotype PHIPO:0000388; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:117187
+  taxon_label: Fusarium verticillioides
+  strain: M3125
+  strain_taxon_id: NCBITaxon:334819
+  alteration: Mdm10delta (deletion)
+  protein_accession: W7MZ22
+  phenotype_id: PHIPO:0000388
+  phenotype_label: resistance to azoxystrobin
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:40934067
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:10867; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: cytb(G143A) (amino acid mutation) [Not assayed] associated with resistance
     to azoxystrobin
-  note: PHI-base antimicrobial_interaction PHIG:9043; A0A089QDC9; Magnaporthe oryzae
-    strain 4091-5-8 (NCBITaxon:318829); phenotype PHIPO:0000388; evidence code Cell
-    growth assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved
-    2026-09-01. This is a curated gene-alteration/chemical resistance association,
-    not evidence for a specific biochemical resistance mechanism.
+  taxon_id: NCBITaxon:318829
+  taxon_label: Magnaporthe oryzae
+  strain: 4091-5-8
+  alteration: cytb(G143A) (amino acid mutation) [Not assayed]
+  protein_accession: A0A089QDC9
+  phenotype_id: PHIPO:0000388
+  phenotype_label: resistance to azoxystrobin
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:12612806
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:9043; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: cytb(G143S) (amino acid mutation) [Not assayed] associated with resistance
     to azoxystrobin
-  note: PHI-base antimicrobial_interaction PHIG:9043; A0A089QDC9; Magnaporthe oryzae
-    strain 4091-5-8 (NCBITaxon:318829); phenotype PHIPO:0000388; evidence code Cell
-    growth assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved
-    2026-09-01. This is a curated gene-alteration/chemical resistance association,
-    not evidence for a specific biochemical resistance mechanism.
+  taxon_id: NCBITaxon:318829
+  taxon_label: Magnaporthe oryzae
+  strain: 4091-5-8
+  alteration: cytb(G143S) (amino acid mutation) [Not assayed]
+  protein_accession: A0A089QDC9
+  phenotype_id: PHIPO:0000388
+  phenotype_label: resistance to azoxystrobin
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:12612806
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:9043; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: tubA(M233I) (amino acid mutation) [Not assayed] associated with resistance
     to azoxystrobin
-  note: PHI-base antimicrobial_interaction PHIG:2781; P53373; Botrytis cinerea strain
-    NJ11 (NCBITaxon:40559); phenotype PHIPO:0000388; evidence code Cell growth assay;
-    source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  strain: NJ11
+  alteration: tubA(M233I) (amino acid mutation) [Not assayed]
+  protein_accession: P53373
+  phenotype_id: PHIPO:0000388
+  phenotype_label: resistance to azoxystrobin
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:26596626
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:2781; joined
+      to this record by exact ChEBI identifier.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -202,6 +243,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-02T04:31:18Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:43:51Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -84,70 +84,126 @@ resistance_mechanisms:
 - mechanism_type: UNKNOWN
   label: Ppe44+ (wild type) [Overexpression] associated with resistance to hydrogen
     peroxide
-  note: PHI-base antimicrobial_interaction PHIG:11310; P9WHZ3; Mycobacterium tuberculosis
-    strain H37Rv (NCBITaxon:1773); phenotype PHIPO:0000632; evidence code Macroscopic
-    observation (quantitative observation); source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8,
-    retrieved 2026-09-01. This is a curated gene-alteration/chemical resistance association,
-    not evidence for a specific biochemical resistance mechanism.
+  taxon_id: NCBITaxon:1773
+  taxon_label: Mycobacterium tuberculosis
+  strain: H37Rv
+  strain_taxon_id: NCBITaxon:83332
+  alteration: Ppe44+ (wild type) [Overexpression]
+  protein_accession: P9WHZ3
+  phenotype_id: PHIPO:0000632
+  phenotype_label: resistance to hydrogen peroxide
+  assay: Macroscopic observation (quantitative observation)
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:28743081
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:11310; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: Des1delta (deletion) associated with resistance to hydrogen peroxide
-  note: PHI-base antimicrobial_interaction PHIG:10915; G4N021; Magnaporthe oryzae
-    strain Guy11 (NCBITaxon:318829); phenotype PHIPO:0000632; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:318829
+  taxon_label: Magnaporthe oryzae
+  strain: Guy11
+  strain_taxon_id: NCBITaxon:242507
+  alteration: Des1delta (deletion)
+  protein_accession: G4N021
+  phenotype_id: PHIPO:0000632
+  phenotype_label: resistance to hydrogen peroxide
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:38056173
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:10915; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: Ndk1delta (deletion) associated with resistance to hydrogen peroxide
-  note: PHI-base antimicrobial_interaction PHIG:10429; I1RPK0; Fusarium graminearum
-    strain PH-1 (NCBITaxon:5518); phenotype PHIPO:0000632; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:5518
+  taxon_label: Fusarium graminearum
+  strain: PH-1
+  strain_taxon_id: NCBITaxon:229533
+  alteration: Ndk1delta (deletion)
+  protein_accession: I1RPK0
+  phenotype_id: PHIPO:0000632
+  phenotype_label: resistance to hydrogen peroxide
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:41277790
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:10429; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: ATG9delta (deletion) associated with resistance to hydrogen peroxide
-  note: PHI-base antimicrobial_interaction PHIG:264; I1S9X9; Fusarium graminearum
-    strain PH-1 (NCBITaxon:5518); phenotype PHIPO:0000632; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:5518
+  taxon_label: Fusarium graminearum
+  strain: PH-1
+  strain_taxon_id: NCBITaxon:229533
+  alteration: ATG9delta (deletion)
+  protein_accession: I1S9X9
+  gene_id: FGRAMPH1_01T26133
+  phenotype_id: PHIPO:0000632
+  phenotype_label: resistance to hydrogen peroxide
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:30044782
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:264; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: OS-2delta (deletion) associated with resistance to hydrogen peroxide
-  note: PHI-base antimicrobial_interaction PHIG:7590; P0C431; Fusarium graminearum
-    strain PH-1 (NCBITaxon:5518); phenotype PHIPO:0000632; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:5518
+  taxon_label: Fusarium graminearum
+  strain: PH-1
+  strain_taxon_id: NCBITaxon:229533
+  alteration: OS-2delta (deletion)
+  protein_accession: P0C431
+  gene_id: FGRAMPH1_01T26671
+  phenotype_id: PHIPO:0000632
+  phenotype_label: resistance to hydrogen peroxide
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:22591226
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:7590; joined
+      to this record by exact ChEBI identifier.
 - mechanism_type: UNKNOWN
   label: Hdf1delta (deletion) associated with resistance to hydrogen peroxide
-  note: PHI-base antimicrobial_interaction PHIG:8901; I1RCN2; Fusarium graminearum
-    strain PH-1 (NCBITaxon:5518); phenotype PHIPO:0000632; evidence code Cell growth
-    assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01.
-    This is a curated gene-alteration/chemical resistance association, not evidence
+  taxon_id: NCBITaxon:5518
+  taxon_label: Fusarium graminearum
+  strain: PH-1
+  strain_taxon_id: NCBITaxon:229533
+  alteration: Hdf1delta (deletion)
+  protein_accession: I1RCN2
+  phenotype_id: PHIPO:0000632
+  phenotype_label: resistance to hydrogen peroxide
+  assay: Cell growth assay
+  source: PHIBASE
+  source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
+  source_retrieved_on: '2026-09-01'
+  note: This is a curated gene-alteration/chemical resistance association, not evidence
     for a specific biochemical resistance mechanism.
   evidence:
   - reference: PMID:21138346
-    notes: PHI-base primary-literature antimicrobial interaction; exact ChEBI chemical
-      identifier, pathogen, strain, alteration, and phenotype retained.
+    notes: PHI-base primary-literature antimicrobial interaction PHIG:8901; joined
+      to this record by exact ChEBI identifier.
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -193,6 +249,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-02T04:31:10Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:43:44Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

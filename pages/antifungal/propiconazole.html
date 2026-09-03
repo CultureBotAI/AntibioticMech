@@ -121,36 +121,56 @@ type — expand a group to see its determinants.</p>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">5</span></summary>
   <table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
-    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Gene families</th><th scope="col">Note</th></tr></thead>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
       <td>Blumeria graminis f. sp. hordei Cyp51 with mutations associated with resistance to propiconazole</td>
       <td><a href="http://purl.obolibrary.org/obo/ARO_3009524">ARO:3009524</a></td>
+      <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
-      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta">ARO:3009524</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009182 (propiconazole); database assertion, not a primary citation.)</span></li>
+</ul>
+</td>
     </tr>
     <tr>
       <td>Colletotrichum truncatum cyp51a with mutations associated with resistance to propiconazole</td>
       <td><a href="http://purl.obolibrary.org/obo/ARO_3009215">ARO:3009215</a></td>
+      <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
-      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta">ARO:3009215</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009182 (propiconazole); database assertion, not a primary citation.)</span></li>
+</ul>
+</td>
     </tr>
     <tr>
       <td>Mycosphaerella fijiensis Cyp51a with mutations conferring resistance to propiconazole</td>
       <td><a href="http://purl.obolibrary.org/obo/ARO_3009406">ARO:3009406</a></td>
+      <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
-      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta">ARO:3009406</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009182 (propiconazole); database assertion, not a primary citation.)</span></li>
+</ul>
+</td>
     </tr>
     <tr>
       <td>Phaeosphaeria nodorum Cyp51 with mutations conferring resistance to propiconazole</td>
       <td><a href="http://purl.obolibrary.org/obo/ARO_3009529">ARO:3009529</a></td>
+      <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
-      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta">ARO:3009529</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009182 (propiconazole); database assertion, not a primary citation.)</span></li>
+</ul>
+</td>
     </tr>
     <tr>
       <td>Zymoseptoria tritici Cyp51 with mutations conferring resistance to propiconazole</td>
       <td><a href="http://purl.obolibrary.org/obo/ARO_3009402">ARO:3009402</a></td>
+      <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
-      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta">ARO:3009402</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009182 (propiconazole); database assertion, not a primary citation.)</span></li>
+</ul>
+</td>
     </tr>
   </table>
 </details>
@@ -158,12 +178,16 @@ type — expand a group to see its determinants.</p>
   <summary>UNKNOWN <span class="pill plain">1</span></summary>
   <table>
     <caption>UNKNOWN</caption>
-    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Gene families</th><th scope="col">Note</th></tr></thead>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
-      <td>CYP51Bdelta (deletion) associated with resistance to propiconazole</td>
+      <td>CYP51Bdelta (deletion) associated with resistance to propiconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
       <td>—</td>
+      <td><em>Colletotrichum gloeosporioides</em> strain JS67 <code class="curie">NCBITaxon:690256</code><br><span class="meta">L2FD62</span></td>
       <td class="meta">—</td>
-      <td class="meta">PHI-base antimicrobial_interaction PHIG:733; L2FD62; Colletotrichum gloeosporioides strain JS67 (NCBITaxon:690256); phenotype PHIPO:0000682; evidence code Cell growth assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01. This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta">PMID:32569396</span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:733; joined to this record by exact ChEBI identifier.)</span></li>
+</ul>
+<span class="meta">Cell growth assay</span></td>
     </tr>
   </table>
 </details>
@@ -198,6 +222,11 @@ type — expand a group to see its determinants.</p>
   <li>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-09-02 · seed_from_sources</span>
+    <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-09-03 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
 </ol>

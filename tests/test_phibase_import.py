@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from seed_from_sources import (  # noqa: E402
-    PHIBASE_NOTE_MARKER,
+    PHIBASE_RESISTANCE_SOURCE,
     merge_with_existing,
     phibase_sourced_resistance_view,
 )
@@ -52,8 +52,13 @@ def test_seeded_associations_do_not_claim_a_biochemical_route(records):
     ]
     assert len(imported) == 217
     assert {item["mechanism_type"] for item in imported} == {"UNKNOWN"}
-    assert all(PHIBASE_NOTE_MARKER in item["note"] for item in imported)
     assert all(item["evidence"][0]["reference"].startswith("PMID:") for item in imported)
+    # The caveat is what the note is FOR. It used to also carry the organism,
+    # strain, accession and phenotype, which #94 moved into slots; asserting on
+    # the caveat keeps the check on the claim rather than on the prose.
+    assert all("not evidence for a specific biochemical resistance mechanism" in item["note"]
+               for item in imported)
+    assert all(item["source"] == PHIBASE_RESISTANCE_SOURCE for item in imported)
 
 
 def test_reseed_replaces_only_phibase_owned_resistance_slice(records):

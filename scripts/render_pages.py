@@ -206,7 +206,15 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
                 "label": m.get("label", ""),
                 "aro_id": resolve_curie(m["aro_id"], index, root) if m.get("aro_id") else None,
                 "gene_families": m.get("gene_families") or [],
+                # Organismal context (#94). A route-level CARD determinant has
+                # none of this; a PHI-base allele association is defined by it.
+                "taxon_label": m.get("taxon_label"),
+                "taxon_id": m.get("taxon_id"),
+                "strain": m.get("strain"),
+                "protein_accession": m.get("protein_accession"),
+                "assay": m.get("assay"),
                 "note": m.get("note"),
+                "evidence": m.get("evidence") or [],
             }
         )
     # Largest group first, so the compound with 90 CARD-asserted determinants
