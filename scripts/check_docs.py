@@ -131,7 +131,7 @@ def render_block(stats: dict) -> str:
     lines.append(f"Mechanism layer: **{targets}** records carry a molecular target and "
                  f"**{resistance}** carry resistance determinants or associations seeded "
                  "from CARD and PHI-base; "
-                 f"**{moa}** carry a mode of action seeded from ChEBI's mechanism roles; "
+                 f"**{moa}** carry a mode of action; "
                  f"**{graphs}** carry a curated causal graph. That last number is the work.")
     lines.append("")
     lines.append(END)

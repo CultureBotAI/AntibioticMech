@@ -250,6 +250,71 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Delavirdine inhibits HIV-1 reverse transcriptase <span class="pill">MECHANISTIC</span></h3>
+<p>Delavirdine inhibits HIV-1 reverse transcriptase RNA-directed DNA polymerase activity, blocking the viral DNA synthesis step required for HIV-1 reverse transcription.</p><table>
+  <caption>Nodes — delavirdine_hiv1_reverse_transcriptase_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">delavirdine</code></td>
+    <td>delavirdine</td>
+    <td class="meta">COMPOUND</td>
+    <td><code class="curie">CHEBI:119573</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">hiv1_reverse_transcriptase</code></td>
+    <td>HIV-1 reverse transcriptase</td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">rna_directed_dna_polymerase_activity</code></td>
+    <td>RNA-directed DNA polymerase activity</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><code class="curie">GO:0003964</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">hiv1_reverse_transcription</code></td>
+    <td>HIV-1 reverse transcription</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+<table>
+  <caption>Edges — delavirdine_hiv1_reverse_transcriptase_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">delavirdine</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">hiv1_reverse_transcriptase</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:8809165</span> <span class="meta">(BindingDB-curated HIV-1 reverse transcriptase IC50 measurements in this record support direct inhibition by delavirdine.)</span></li>
+  <li><span class="meta">PMID:10514285</span> <span class="meta">(BindingDB-curated assays in this record measured delavirdine inhibition of wild-type and mutant HIV-1 reverse transcriptases.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">hiv1_reverse_transcriptase</code></td>
+    <td>enables</td>
+    <td><code class="curie">rna_directed_dna_polymerase_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:1377403</span> <span class="meta">(The first HIV-1 reverse transcriptase-inhibitor crystal structure supports reverse transcriptase as a viral DNA polymerase drug target.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">rna_directed_dna_polymerase_activity</code></td>
+    <td>is required for</td>
+    <td><code class="curie">hiv1_reverse_transcription</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:1377403</span> <span class="meta">(HIV-1 reverse transcriptase structural work connects the drug target to the viral DNA polymerase activity required during reverse transcription.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
 
 
 
@@ -280,6 +345,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex · LLM-assisted</span>
+    <p>Added a PMID-supported causal graph for delavirdine inhibition of HIV-1 reverse transcriptase.</p>
   </li>
 </ol>
 

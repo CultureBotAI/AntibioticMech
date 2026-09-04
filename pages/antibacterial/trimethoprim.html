@@ -1025,6 +1025,100 @@ type — expand a group to see its determinants.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Trimethoprim inhibits bacterial dihydrofolate reductase <span class="pill">MECHANISTIC</span></h3>
+<p>Trimethoprim inhibits bacterial dihydrofolate reductase, reducing tetrahydrofolate regeneration and one-carbon transfer reactions needed for nucleotide biosynthesis and growth.</p><table>
+  <caption>Nodes — trimethoprim_folate_pathway_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">trimethoprim</code></td>
+    <td>trimethoprim</td>
+    <td class="meta">COMPOUND</td>
+    <td><code class="curie">CHEBI:45924</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dhfr</code></td>
+    <td>antibiotic-sensitive dihydrofolate reductase</td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><code class="curie">ARO:3000745</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dhfr_activity</code></td>
+    <td>dihydrofolate reductase activity</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><code class="curie">GO:0004146</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">reduced_folate_pool</code></td>
+    <td>reduced folate pool</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">nucleotide_biosynthesis</code></td>
+    <td>folate-dependent nucleotide biosynthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_growth</code></td>
+    <td>bacterial growth</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+<table>
+  <caption>Edges — trimethoprim_folate_pathway_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">trimethoprim</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">bacterial_dhfr</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:14623005</span> <span class="meta">(BindingDB-curated Staphylococcus aureus DHFR IC50 measurements in this record support direct enzyme inhibition by trimethoprim.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dhfr</code></td>
+    <td>enables</td>
+    <td><code class="curie">dhfr_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:4254117</span> <span class="meta">(Miovic and Pizer treated Escherichia coli with trimethoprim to connect DHFR inhibition to folate-dependent macromolecular synthesis defects.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dhfr_activity</code></td>
+    <td>maintains</td>
+    <td><code class="curie">reduced_folate_pool</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:4254117</span> <span class="meta">(Primary E. coli trimethoprim experiments support reduced folate regeneration as the metabolic step downstream of DHFR.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">reduced_folate_pool</code></td>
+    <td>supplies one-carbon cofactors for</td>
+    <td><code class="curie">nucleotide_biosynthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:4254117</span> <span class="meta">(Primary E. coli trimethoprim experiments support nucleotide biosynthesis as a downstream consequence of DHFR inhibition.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">nucleotide_biosynthesis</code></td>
+    <td>supports</td>
+    <td><code class="curie">bacterial_growth</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:4254117</span> <span class="meta">(Macromolecular-synthesis phenotypes in trimethoprim-treated E. coli connect DHFR inhibition to growth arrest.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
 
 
 
@@ -1065,6 +1159,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex · LLM-assisted</span>
+    <p>Added a PMID-supported causal graph for trimethoprim inhibition of bacterial dihydrofolate reductase and downstream folate-dependent nucleotide biosynthesis.</p>
   </li>
 </ol>
 

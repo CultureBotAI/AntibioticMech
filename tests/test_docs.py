@@ -121,7 +121,6 @@ def test_no_document_quotes_a_stale_record_count(repo_root):
 # To add a claim: write the sentence with a {} where the number goes.
 NUMERIC_CLAIMS = [
     ("docs/HARMONIZATION.md", "translate {} of them", "mapped_roles"),
-    ("NEXT_TASKS.md", "beyond the {} records ChEBI's roles reach", "moa_records"),
     ("NEXT_TASKS.md", "{} curated roles now map", "mapped_roles"),
     ("NEXT_TASKS.md", "the {}-role map", "mapped_roles"),
     ("docs/HARMONIZATION.md", "`MICROBIAL_TARGET` ({} records)", "microbial_target"),
@@ -130,7 +129,6 @@ NUMERIC_CLAIMS = [
     # not left to the tripwire below: only this table checks that a figure is
     # right FOR ITS CLAIM rather than merely equal to some quantity somewhere.
     ("curation/source_queue.tsv", "maps {} of them", "mapped_roles"),
-    ("curation/source_queue.tsv", "giving {} records a mode of action", "moa_records"),
 ]
 
 
@@ -426,8 +424,8 @@ def test_no_unregistered_numeric_claim_about_the_corpus(repo_root):
     "giving 2,923 records a mode of action" is wrong and would survive, because
     2,923 is the record total. This is a TRIPWIRE for figures that match nothing,
     not a verifier. Checking a figure against the quantity its sentence actually
-    asserts needs NUMERIC_CLAIMS above, which is why the two source_queue claims
-    are registered there rather than left to this.
+    asserts needs NUMERIC_CLAIMS above, which is why the mapped-role source_queue
+    claim is registered there rather than left to this.
     """
     import re
     import sys

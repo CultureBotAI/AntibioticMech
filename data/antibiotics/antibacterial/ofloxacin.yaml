@@ -329,6 +329,71 @@ molecular_targets:
   - reference: ARO:3000735
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000663 (ofloxacin); database
       assertion, not a primary citation.
+causal_graphs:
+- graph_id: ofloxacin_dna_gyrase_supercoiling_inhibition
+  title: Ofloxacin inhibits bacterial DNA gyrase supercoiling
+  description: Ofloxacin inhibits the DNA gyrase-catalyzed supercoiling reaction,
+    disrupting bacterial chromosome topology control.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ofloxacin
+    label: ofloxacin
+    node_type: COMPOUND
+    grounding: antibioticmech:aro-2eea3233f3
+    xrefs:
+    - CHEBI:7731
+  - node_id: dna_gyrase
+    label: bacterial DNA gyrase
+    node_type: GENE_OR_PROTEIN
+    grounding: ARO:3000733
+    grounding_notes: Grounded through CARD's fluoroquinolone-sensitive GyrA target;
+      GyrA and GyrB form the bacterial DNA gyrase target complex.
+    gene_symbols:
+    - gyrA
+    - gyrB
+  - node_id: dna_supercoiling
+    label: ATP-dependent DNA supercoiling
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: DNA gyrase-catalyzed supercoiling measured in purified-enzyme
+      assays.
+  - node_id: dna_topology_control
+    label: bacterial DNA topology control
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Covers the gyrase-dependent DNA supercoiling step that ofloxacin
+      blocks.
+  edges:
+  - subject: ofloxacin
+    predicate: inhibits
+    object: dna_supercoiling
+    description: Ofloxacin inhibits DNA gyrase-catalyzed DNA supercoiling in purified
+      bacterial enzyme assays.
+    evidence:
+    - reference: DOI:10.1128/AAC.31.2.325
+      notes: Imamura and colleagues compared the ability of optically active ofloxacin
+        forms to inhibit Escherichia coli DNA gyrase.
+    - reference: PMID:3010848
+      notes: Zweerink and Edison included ofloxacin in comparative Micrococcus luteus
+        DNA gyrase supercoiling assays.
+  - subject: dna_gyrase
+    predicate: enables
+    object: dna_supercoiling
+    description: DNA gyrase catalyzes the ATP-dependent supercoiling reaction inhibited
+      by ofloxacin.
+    evidence:
+    - reference: PMID:3010848
+      notes: The purified-enzyme assay measured quinolone inhibition of supercoiling
+        by Micrococcus luteus DNA gyrase.
+  - subject: dna_supercoiling
+    predicate: supports
+    object: dna_topology_control
+    description: DNA supercoiling by gyrase contributes to bacterial chromosome topology
+      control.
+    evidence:
+    - reference: PMID:3010848
+      notes: The in vitro comparison links quinolone-sensitive DNA gyrase activity
+        to DNA supercoiling.
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -1343,3 +1408,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-04T02:30:00Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added primary-literature support for a causal graph of ofloxacin inhibition
+    of bacterial DNA gyrase supercoiling.
+  llm_assisted: true

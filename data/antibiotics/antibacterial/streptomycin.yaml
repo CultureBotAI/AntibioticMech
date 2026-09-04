@@ -56,11 +56,9 @@ activity_roles:
 structural_class: aminoglycoside antibiotic
 structural_class_id: ARO:0000016
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
-mode_of_action_target_scope: HOST_SHARED_TARGET
+mode_of_action_notes: 'CURATOR: Confirmed as bacterial 30S ribosomal decoding-site
+  inhibition after primary streptomycin mechanism review. PMID:23322043; PMID:24820088.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CN[C@@H]1[C@H](O[C@H]2[C@H](O[C@H]3[C@H](O)[C@@H](O)[C@H](NC(=N)N)[C@@H](O)[C@@H]3NC(=N)N)O[C@@H](C)[C@]2(O)C=O)O[C@@H](CO)[C@H](O)[C@H]1O
   standard_inchi: InChI=1S/C21H39N7O12/c1-5-21(36,4-30)16(40-17-9(26-2)13(34)10(31)6(3-29)38-17)18(37-5)39-15-8(28-20(24)25)11(32)7(27-19(22)23)12(33)14(15)35/h4-18,26,29,31-36H,3H2,1-2H3,(H4,22,23,27)(H4,24,25,28)/t5-,6-,7+,8-,9-,10-,11+,12-,13-,14+,15+,16-,17-,18-,21+/m0/s1
@@ -580,6 +578,106 @@ molecular_targets:
   - reference: ARO:3003431
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000040 (streptomycin); database
       assertion, not a primary citation.
+causal_graphs:
+- graph_id: streptomycin_30s_decoding_site_misreading
+  title: Streptomycin perturbs the bacterial 30S decoding site
+  description: Streptomycin binds the bacterial 30S ribosomal decoding site formed
+    by 16S rRNA and ribosomal protein S12, distorts 16S rRNA helix 44, and lowers
+    translational decoding accuracy.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: streptomycin
+    label: streptomycin
+    node_type: COMPOUND
+    grounding: CHEBI:17076
+  - node_id: rrna_16s
+    label: bacterial 16S rRNA
+    node_type: RNA
+    grounding: ARO:3000755
+  - node_id: ribosomal_protein_s12
+    label: ribosomal protein S12
+    node_type: GENE_OR_PROTEIN
+    grounding: ARO:3003431
+    gene_symbols:
+    - rpsL
+  - node_id: streptomycin_30s_binding_site
+    label: streptomycin binding site in the 30S ribosomal subunit
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Local 30S site composed of 16S rRNA helices and nearby S12 residues;
+      kept label-only to avoid overgrounding a drug-bound subsite.
+  - node_id: distorted_decoding_site
+    label: streptomycin-distorted decoding site
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Streptomycin-induced local conformation in the 16S rRNA decoding
+      site.
+  - node_id: decoding_accuracy
+    label: bacterial translational decoding accuracy
+    node_type: QUALITY
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Fidelity of codon recognition by aminoacyl-tRNA in the bacterial
+      A site.
+  - node_id: protein_synthesis
+    label: bacterial protein synthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial translation as the downstream process disrupted by
+      streptomycin-induced decoding errors.
+  edges:
+  - subject: rrna_16s
+    predicate: participates in
+    object: streptomycin_30s_binding_site
+    description: 16S rRNA forms the main RNA scaffold of the streptomycin binding
+      pocket in the 30S ribosomal subunit.
+    evidence:
+    - reference: PMID:24820088
+      notes: Demirci and colleagues resolved streptomycin-bound Thermus thermophilus
+        30S subunits and described 16S rRNA contacts in the streptomycin site.
+  - subject: ribosomal_protein_s12
+    predicate: participates in
+    object: streptomycin_30s_binding_site
+    description: Ribosomal protein S12 sits adjacent to the streptomycin binding site
+      and contributes residues linked to streptomycin response.
+    evidence:
+    - reference: PMID:24820088
+      notes: The 16S rRNA resistance-structure study placed S12 next to streptomycin
+        in the bacterial 30S subunit.
+  - subject: streptomycin
+    predicate: binds
+    object: streptomycin_30s_binding_site
+    description: Streptomycin binds near the codon-recognition site of the bacterial
+      30S subunit.
+    evidence:
+    - reference: PMID:23322043
+      notes: Demirci and colleagues used X-ray crystallography to locate streptomycin
+        in the Thermus thermophilus 30S decoding region.
+  - subject: streptomycin_30s_binding_site
+    predicate: promotes
+    object: distorted_decoding_site
+    description: Streptomycin binding laterally shifts the 16S rRNA decoding site.
+    evidence:
+    - reference: PMID:23322043
+      notes: Streptomycin-bound 30S structures showed local distortion of 16S rRNA
+        and bases involved in codon recognition.
+  - subject: distorted_decoding_site
+    predicate: decreases
+    object: decoding_accuracy
+    description: The streptomycin-induced decoding-site conformation promotes mRNA
+      misreading.
+    evidence:
+    - reference: PMID:23322043
+      notes: Cognate and near-cognate mRNA-tRNA crystal structures explained how streptomycin
+        promotes misreading of the genetic code.
+  - subject: decoding_accuracy
+    predicate: supports
+    object: protein_synthesis
+    description: Accurate A-site codon recognition is required for faithful bacterial
+      protein synthesis.
+    evidence:
+    - reference: PMID:11340196
+      notes: Ogle and colleagues resolved 30S ribosomal subunit complexes that define
+        the conserved A-site bases used to recognize cognate tRNA.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -597,3 +695,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-04T02:40:00Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added a PMID-supported causal graph for streptomycin binding to the bacterial
+    30S decoding site and marked the coarse target scope as curator-reviewed.
+  llm_assisted: true

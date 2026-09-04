@@ -155,8 +155,8 @@ Five disciplines keep it honest:
   it would make the corpus unable to express a real drug class. But
   `PROTEIN_SYNTHESIS_INHIBITION` alone cannot tell linezolid's bacterial 50S
   from omacetaxine's host 80S, so `mode_of_action_target_scope` says which:
-  `MICROBIAL_TARGET` (176 records) when a contributing role names a target the
-  host lacks, `HOST_SHARED_TARGET` (240) when none does. Presence is the rule
+  `MICROBIAL_TARGET` (184 records) when a contributing role names a target the
+  host lacks, `HOST_SHARED_TARGET` (233) when none does. Presence is the rule
   and a role's cohort is evidence about presence, not a second rule — reading it
   the other way made trimethoprim host-shared for a host enzyme while terbinafine
   was microbial for one. It is **not a

@@ -127,7 +127,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>NUCLEIC_ACID_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— Assigned from ChEBI role CHEBI:59517 (DNA synthesis inhibitor). ChEBI asserts the role on the compound. The target it names is one the host has too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
+<dt>Mode of action</dt><dd>NUCLEIC_ACID_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: Confirmed as bacterial DNA gyrase inhibition after primary norfloxacin mechanism review. PMID:2536729; PMID:2982149; PMID:3010848.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
 
 
 
@@ -638,6 +638,80 @@ type — expand a group to see its determinants.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Norfloxacin inhibits bacterial DNA gyrase supercoiling <span class="pill">MECHANISTIC</span></h3>
+<p>Norfloxacin binds the DNA-DNA gyrase reaction complex and inhibits DNA gyrase-catalyzed supercoiling, disrupting bacterial chromosome topology control.</p><table>
+  <caption>Nodes — norfloxacin_dna_gyrase_supercoiling_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">norfloxacin</code></td>
+    <td>norfloxacin</td>
+    <td class="meta">COMPOUND</td>
+    <td><code class="curie">CHEBI:100246</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_gyrase</code></td>
+    <td>bacterial DNA gyrase</td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><code class="curie">ARO:3000733</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_supercoiling</code></td>
+    <td>ATP-dependent DNA supercoiling</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_topology_control</code></td>
+    <td>bacterial DNA topology control</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+<table>
+  <caption>Edges — norfloxacin_dna_gyrase_supercoiling_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">norfloxacin</code></td>
+    <td>binds</td>
+    <td><code class="curie">dna_gyrase</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:2536729</span> <span class="meta">(Shen and colleagues characterized norfloxacin binding sites that appear in DNA gyrase-DNA complexes.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">norfloxacin</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">dna_supercoiling</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:2982149</span> <span class="meta">(Shen and Pernet assayed tritiated norfloxacin to probe quinolone inhibition of DNA gyrase.)</span></li>
+  <li><span class="meta">PMID:3010848</span> <span class="meta">(Zweerink and Edison compared norfloxacin and other quinolones in Micrococcus luteus DNA gyrase supercoiling assays.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_gyrase</code></td>
+    <td>enables</td>
+    <td><code class="curie">dna_supercoiling</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:3010848</span> <span class="meta">(The purified-enzyme assay measured quinolone inhibition of supercoiling by Micrococcus luteus DNA gyrase.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_supercoiling</code></td>
+    <td>supports</td>
+    <td><code class="curie">dna_topology_control</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:3010848</span> <span class="meta">(The in vitro comparison links quinolone-sensitive DNA gyrase activity to DNA supercoiling.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
 
 
 
@@ -673,6 +747,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex · LLM-assisted</span>
+    <p>Added a PMID-supported causal graph for norfloxacin inhibition of bacterial DNA gyrase supercoiling and marked the coarse target scope as curator-reviewed.</p>
   </li>
 </ol>
 

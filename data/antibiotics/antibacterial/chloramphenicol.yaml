@@ -94,11 +94,9 @@ activity_roles:
 structural_class: phenicol antibiotic
 structural_class_id: ARO:3000387
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
-mode_of_action_target_scope: HOST_SHARED_TARGET
+mode_of_action_notes: 'CURATOR: Confirmed as bacterial 50S peptidyl-transferase-center
+  inhibition after primary chloramphenicol mechanism review. PMID:12860128; PMID:35165455.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: O=C(N[C@H](CO)[C@H](O)c1ccc([N+](=O)[O-])cc1)C(Cl)Cl
   standard_inchi: InChI=1S/C11H12Cl2N2O5/c12-10(13)11(18)14-8(5-16)9(17)6-1-3-7(4-2-6)15(19)20/h1-4,8-10,16-17H,5H2,(H,14,18)/t8-,9-/m1/s1
@@ -779,6 +777,78 @@ molecular_targets:
   - reference: ARO:3000754
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
+causal_graphs:
+- graph_id: chloramphenicol_50s_peptidyl_transferase_inhibition
+  title: Chloramphenicol blocks the 50S peptidyl-transferase center
+  description: Chloramphenicol binds the 23S rRNA peptidyl-transferase center of the
+    bacterial large ribosomal subunit and blocks peptide-bond formation by the translation
+    elongation complex.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: chloramphenicol
+    label: chloramphenicol
+    node_type: COMPOUND
+    grounding: CHEBI:17698
+  - node_id: peptidyl_transferase_center_23s_rrna
+    label: 23S rRNA peptidyl-transferase center
+    node_type: RNA
+    grounding: ARO:3000754
+  - node_id: chloramphenicol_bound_ptc
+    label: chloramphenicol-bound peptidyl-transferase center
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Drug-bound state of the bacterial large-subunit catalytic center.
+  - node_id: peptide_bond_formation
+    label: ribosomal peptide-bond formation
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Peptidyl-transferase-center catalysis during bacterial translation
+      elongation.
+  - node_id: protein_synthesis
+    label: bacterial protein synthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial translation as the downstream process blocked by a
+      peptidyl-transferase-center inhibitor.
+  edges:
+  - subject: chloramphenicol
+    predicate: binds
+    object: chloramphenicol_bound_ptc
+    description: Chloramphenicol binds the peptidyl-transferase center in the large
+      ribosomal subunit.
+    evidence:
+    - reference: PMID:12860128
+      notes: Hansen and colleagues solved a chloramphenicol-bound large ribosomal
+        subunit structure with the drug in a peptidyl-transferase-center crevice.
+  - subject: peptidyl_transferase_center_23s_rrna
+    predicate: participates in
+    object: chloramphenicol_bound_ptc
+    description: The 23S rRNA peptidyl-transferase center provides the chloramphenicol
+      binding site.
+    evidence:
+    - reference: PMID:12860128
+      notes: The comparative large-subunit structures localized chloramphenicol to
+        a ribosomal RNA site adjacent to the catalytic center.
+    - reference: PMID:35165455
+      notes: Syroegin and colleagues resolved bacterial 70S complexes that place chloramphenicol
+        in the catalytic peptidyl-transferase center.
+  - subject: chloramphenicol_bound_ptc
+    predicate: decreases
+    object: peptide_bond_formation
+    description: Chloramphenicol occupancy of the peptidyl-transferase center interferes
+      with peptide-bond formation.
+    evidence:
+    - reference: PMID:35165455
+      notes: Nascent-chain ribosome structures explained the context-specific blockade
+        of peptide-bond formation by peptidyl-transferase-center chloramphenicol.
+  - subject: peptide_bond_formation
+    predicate: supports
+    object: protein_synthesis
+    description: Peptide-bond formation drives bacterial translation elongation.
+    evidence:
+    - reference: PMID:12860128
+      notes: The antibiotic-bound ribosome study interpreted chloramphenicol action
+        as competitive inhibition of peptide-bond formation in the large subunit.
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -1100,3 +1170,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-04T02:55:00Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added a PMID-supported causal graph for chloramphenicol binding to the
+    bacterial 50S peptidyl-transferase center.
+  llm_assisted: true

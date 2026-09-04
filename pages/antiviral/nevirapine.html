@@ -908,6 +908,91 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Nevirapine allosterically inhibits HIV-1 reverse transcriptase <span class="pill">MECHANISTIC</span></h3>
+<p>Nevirapine binds the non-nucleoside inhibitor pocket of HIV-1 reverse transcriptase, distorts the polymerase active-site geometry, and prevents RNA-templated viral DNA synthesis.</p><table>
+  <caption>Nodes — nevirapine_hiv1_reverse_transcriptase_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">nevirapine</code></td>
+    <td>nevirapine</td>
+    <td class="meta">COMPOUND</td>
+    <td><code class="curie">CHEBI:63613</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">hiv1_reverse_transcriptase</code></td>
+    <td>HIV-1 reverse transcriptase</td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">nnrti_pocket</code></td>
+    <td>HIV-1 reverse transcriptase non-nucleoside inhibitor pocket</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">primer_active_site_alignment</code></td>
+    <td>DNA primer 3&#39; end aligned with the polymerase active site</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">rna_directed_dna_polymerase_activity</code></td>
+    <td>RNA-directed DNA polymerase activity</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><code class="curie">GO:0003964</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">hiv1_reverse_transcription</code></td>
+    <td>HIV-1 reverse transcription</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+<table>
+  <caption>Edges — nevirapine_hiv1_reverse_transcriptase_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">nevirapine</code></td>
+    <td>opens and occupies</td>
+    <td><code class="curie">nnrti_pocket</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:22266819</span> <span class="meta">(Crystal structures of HIV-1 RT-DNA-nevirapine and comparator complexes resolve nevirapine in the NNRTI pocket.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">nnrti_pocket</code></td>
+    <td>displaces</td>
+    <td><code class="curie">primer_active_site_alignment</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:22266819</span> <span class="meta">(Das and colleagues observed nevirapine-associated primer displacement and distortion of the dNTP-binding pocket in RT-DNA crystals.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">primer_active_site_alignment</code></td>
+    <td>is required for</td>
+    <td><code class="curie">rna_directed_dna_polymerase_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:22266819</span> <span class="meta">(RT-DNA-nevirapine structural comparisons support the allosteric block between NNRTI-pocket occupancy and polymerase activity.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">rna_directed_dna_polymerase_activity</code></td>
+    <td>is required for</td>
+    <td><code class="curie">hiv1_reverse_transcription</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:1377403</span> <span class="meta">(The first HIV-1 reverse transcriptase-inhibitor crystal structure supports reverse transcriptase as a viral DNA polymerase drug target.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
 
 
 
@@ -948,6 +1033,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex · LLM-assisted</span>
+    <p>Added a PMID-supported causal graph for nevirapine allosteric inhibition of HIV-1 reverse transcriptase.</p>
   </li>
 </ol>
 

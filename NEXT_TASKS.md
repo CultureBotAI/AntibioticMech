@@ -24,7 +24,7 @@ prose below are the reasoning, the queue is the list.
   No data source will close this column: a mechanism graph is authored from
   primary literature with a citation per edge (see `curation/source_queue.tsv`,
   `discovery-literature`).
-- **Extend `mode_of_action` beyond the 416 records ChEBI's roles reach.** Done
+- **Extend `mode_of_action` for ChEBI's mechanism roles.** Done
   for those: 32 curated roles now map to `ModeOfActionEnum`. The rest have no role in the 32-role map — some bear
   mechanism-naming roles from unrelated pharmacology (angiogenesis, proteasome,
   platelet aggregation) that name no antimicrobial mechanism at all, and a few
