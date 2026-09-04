@@ -476,6 +476,71 @@ type — expand a group to see its determinants.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Ofloxacin inhibits bacterial DNA gyrase supercoiling <span class="pill">MECHANISTIC</span></h3>
+<p>Ofloxacin inhibits the DNA gyrase-catalyzed supercoiling reaction, disrupting bacterial chromosome topology control.</p><table>
+  <caption>Nodes — ofloxacin_dna_gyrase_supercoiling_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">ofloxacin</code></td>
+    <td>ofloxacin</td>
+    <td class="meta">COMPOUND</td>
+    <td><code class="curie">antibioticmech:aro-2eea3233f3</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_gyrase</code></td>
+    <td>bacterial DNA gyrase</td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><code class="curie">ARO:3000733</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_supercoiling</code></td>
+    <td>ATP-dependent DNA supercoiling</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_topology_control</code></td>
+    <td>bacterial DNA topology control</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+<table>
+  <caption>Edges — ofloxacin_dna_gyrase_supercoiling_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">ofloxacin</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">dna_supercoiling</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">DOI:10.1128/AAC.31.2.325</span> <span class="meta">(Imamura and colleagues compared the ability of optically active ofloxacin forms to inhibit Escherichia coli DNA gyrase.)</span></li>
+  <li><span class="meta">PMID:3010848</span> <span class="meta">(Zweerink and Edison included ofloxacin in comparative Micrococcus luteus DNA gyrase supercoiling assays.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_gyrase</code></td>
+    <td>enables</td>
+    <td><code class="curie">dna_supercoiling</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:3010848</span> <span class="meta">(The purified-enzyme assay measured quinolone inhibition of supercoiling by Micrococcus luteus DNA gyrase.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_supercoiling</code></td>
+    <td>supports</td>
+    <td><code class="curie">dna_topology_control</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:3010848</span> <span class="meta">(The in vitro comparison links quinolone-sensitive DNA gyrase activity to DNA supercoiling.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
 
 
 
@@ -511,6 +576,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex · LLM-assisted</span>
+    <p>Added primary-literature support for a causal graph of ofloxacin inhibition of bacterial DNA gyrase supercoiling.</p>
   </li>
 </ol>
 

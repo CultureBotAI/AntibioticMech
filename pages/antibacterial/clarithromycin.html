@@ -113,7 +113,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor). ChEBI asserts the role on the compound. The target it names is one the host has too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
+<dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: Confirmed as bacterial 50S macrolide-site inhibition after primary clarithromycin mechanism review. PMID:9425251; PMID:34935599.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
 
 
 
@@ -584,6 +584,85 @@ type — expand a group to see its determinants.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Clarithromycin blocks the bacterial 50S exit tunnel <span class="pill">MECHANISTIC</span></h3>
+<p>Clarithromycin binds the macrolide site in the bacterial 50S nascent-peptide exit tunnel, restricting translation elongation and reducing protein synthesis.</p><table>
+  <caption>Nodes — clarithromycin_50s_exit_tunnel_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">clarithromycin</code></td>
+    <td>clarithromycin</td>
+    <td class="meta">COMPOUND</td>
+    <td><code class="curie">CHEBI:3732</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosomal_50s_macrolide_site</code></td>
+    <td>bacterial 50S nascent-peptide exit tunnel macrolide site</td>
+    <td class="meta">RNA</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">clarithromycin_bound_50s</code></td>
+    <td>clarithromycin-bound 50S exit tunnel</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">translation_elongation</code></td>
+    <td>bacterial translation elongation</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">protein_synthesis</code></td>
+    <td>bacterial protein synthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+<table>
+  <caption>Edges — clarithromycin_50s_exit_tunnel_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">clarithromycin</code></td>
+    <td>binds</td>
+    <td><code class="curie">clarithromycin_bound_50s</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:34935599</span> <span class="meta">(Zhang and colleagues resolved Mycobacterium tuberculosis 50S subunits with bound clarithromycin and observed drug interactions in the 50S tunnel.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosomal_50s_macrolide_site</code></td>
+    <td>participates in</td>
+    <td><code class="curie">clarithromycin_bound_50s</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:34935599</span> <span class="meta">(The clarithromycin-bound 50S cryo-EM structure localizes the drug in the mycobacterial large-subunit exit tunnel.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">clarithromycin_bound_50s</code></td>
+    <td>decreases</td>
+    <td><code class="curie">translation_elongation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:9425251</span> <span class="meta">(Champney and Burdine measured clarithromycin-dependent inhibition of translation in Staphylococcus aureus cells.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">translation_elongation</code></td>
+    <td>supports</td>
+    <td><code class="curie">protein_synthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:9425251</span> <span class="meta">(The cellular clarithromycin study measured translation inhibition as a protein-synthesis endpoint.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
 
 
 
@@ -619,6 +698,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex · LLM-assisted</span>
+    <p>Added a PMID-supported causal graph for clarithromycin binding to the bacterial 50S macrolide site.</p>
   </li>
 </ol>
 

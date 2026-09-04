@@ -506,6 +506,100 @@ type — expand a group to see its determinants.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Daptomycin targets phosphatidylglycerol-rich bacterial membranes <span class="pill">MECHANISTIC</span></h3>
+<p>Daptomycin forms a calcium-dependent complex with phosphatidylglycerol-rich bacterial membranes, enabling selective membrane insertion and membrane-potential dissipation.</p><table>
+  <caption>Nodes — daptomycin_phosphatidylglycerol_membrane_depolarization</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">daptomycin</code></td>
+    <td>daptomycin</td>
+    <td class="meta">COMPOUND</td>
+    <td><code class="curie">CHEBI:600103</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">calcium_ion</code></td>
+    <td>calcium(2+)</td>
+    <td class="meta">CHEMICAL</td>
+    <td><code class="curie">CHEBI:29108</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">phosphatidylglycerol_rich_membrane</code></td>
+    <td>phosphatidylglycerol-rich bacterial membrane</td>
+    <td class="meta">CELL_STRUCTURE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">daptomycin_pg_complex</code></td>
+    <td>calcium-dependent daptomycin-phosphatidylglycerol complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">membrane_insertion</code></td>
+    <td>selective daptomycin uptake into the bacterial membrane</td>
+    <td class="meta">TRANSPORT_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">membrane_potential</code></td>
+    <td>bacterial membrane potential</td>
+    <td class="meta">QUALITY</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+<table>
+  <caption>Edges — daptomycin_phosphatidylglycerol_membrane_depolarization</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">daptomycin</code></td>
+    <td>participates in</td>
+    <td><code class="curie">daptomycin_pg_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:40455071</span> <span class="meta">(Machhua and colleagues found stable daptomycin-phosphatidylglycerol complex formation in vitro and in drug-treated bacterial membranes.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">calcium_ion</code></td>
+    <td>is required for</td>
+    <td><code class="curie">daptomycin_pg_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:40455071</span> <span class="meta">(The phosphatidylglycerol uptake study characterized daptomycin membrane insertion as calcium-dependent.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">phosphatidylglycerol_rich_membrane</code></td>
+    <td>participates in</td>
+    <td><code class="curie">daptomycin_pg_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:40455071</span> <span class="meta">(Phosphatidylglycerol was shown to recruit daptomycin to the bacterial membrane and enable selective uptake.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">daptomycin_pg_complex</code></td>
+    <td>promotes</td>
+    <td><code class="curie">membrane_insertion</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:40455071</span> <span class="meta">(The study connected stable complex formation with selective daptomycin insertion into model and bacterial membranes.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">membrane_insertion</code></td>
+    <td>dissipates</td>
+    <td><code class="curie">membrane_potential</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:1666494</span> <span class="meta">(Daptomycin caused calcium-dependent dissipation of membrane potential in growing Staphylococcus aureus.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
 
 
 
@@ -531,6 +625,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex · LLM-assisted</span>
+    <p>Added a PMID-supported causal graph for calcium-dependent daptomycin-phosphatidylglycerol membrane targeting.</p>
   </li>
 </ol>
 

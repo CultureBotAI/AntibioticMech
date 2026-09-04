@@ -149,7 +149,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>NUCLEIC_ACID_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— Assigned from ChEBI role CHEBI:59517 (DNA synthesis inhibitor). ChEBI asserts the role on the compound. The target it names is one the host has too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
+<dt>Mode of action</dt><dd>NUCLEIC_ACID_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: Confirmed as bacterial DNA gyrase poisoning after primary nalidixic acid mechanism review. PMID:200930.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
 
 
 
@@ -537,6 +537,85 @@ type — expand a group to see its determinants.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Nalidixic acid poisons bacterial DNA gyrase <span class="pill">MECHANISTIC</span></h3>
+<p>Nalidixic acid acts on the GyrA-containing bacterial DNA gyrase complex, trapping a protein-linked DNA cleavage state that blocks completion of DNA topology-changing reactions.</p><table>
+  <caption>Nodes — nalidixic_acid_gyrase_cleavage_complex</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">nalidixic_acid</code></td>
+    <td>nalidixic acid</td>
+    <td class="meta">COMPOUND</td>
+    <td><code class="curie">CHEBI:100147</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_gyrase</code></td>
+    <td>bacterial DNA gyrase</td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><code class="curie">ARO:3000733</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">gyrase_dna_cleavage_complex</code></td>
+    <td>DNA gyrase covalent DNA cleavage complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_religation</code></td>
+    <td>DNA gyrase DNA religation</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_topology_control</code></td>
+    <td>bacterial DNA topology control</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+<table>
+  <caption>Edges — nalidixic_acid_gyrase_cleavage_complex</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">nalidixic_acid</code></td>
+    <td>stabilizes</td>
+    <td><code class="curie">gyrase_dna_cleavage_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:200930</span> <span class="meta">(Sugino and colleagues showed nalidixic and oxolinic acids inhibit E. coli DNA gyrase and induce a relaxation-complex analogue.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_gyrase</code></td>
+    <td>participates in</td>
+    <td><code class="curie">gyrase_dna_cleavage_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:200930</span> <span class="meta">(Purified NalA/GyrA restored nalidixic acid sensitivity to DNA gyrase activity in biochemical assays.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">gyrase_dna_cleavage_complex</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">dna_religation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:200930</span> <span class="meta">(Nalidixic acid-induced gyrase complexes generated covalently protein-linked linear DNA after detergent treatment.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_religation</code></td>
+    <td>supports</td>
+    <td><code class="curie">dna_topology_control</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:200930</span> <span class="meta">(The nalidixic acid-sensitive NalA/GyrA protein participated in DNA gyrase supertwisting and ATP-independent DNA relaxation.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
 
 
 
@@ -577,6 +656,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex · LLM-assisted</span>
+    <p>Added a PMID-supported causal graph for nalidixic acid poisoning of bacterial DNA gyrase and marked the coarse target scope as curator-reviewed.</p>
   </li>
 </ol>
 

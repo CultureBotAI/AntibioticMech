@@ -172,7 +172,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>FOLATE_PATHWAY_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— Assigned from ChEBI role CHEBI:50683 (EC 1.5.1.3 (dihydrofolate reductase) inhibitor). ChEBI asserts the role on the compound. The target it names is one the host has too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd></dl>
+<dt>Mode of action</dt><dd>CELL_MEMBRANE_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: Reassigned after review of FabI/enoyl-ACP reductase inhibition in bacterial fatty-acid synthesis; primary reports identify FabI rather than dihydrofolate reductase as the antibacterial target for triclosan. PMID:10196195; PMID:10201369; PMID:9707111.</span></dd></dl>
 
 
 
@@ -296,6 +296,109 @@ type — expand a group to see its determinants.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Triclosan inhibits bacterial FabI fatty-acid synthesis <span class="pill">MECHANISTIC</span></h3>
+<p>Triclosan forms a tight inhibited FabI-NAD-triclosan state, blocking bacterial enoyl-acyl carrier protein reductase activity in type II fatty-acid synthesis and limiting membrane lipid biosynthesis.</p><table>
+  <caption>Nodes — triclosan_fabi_fatty_acid_synthesis_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">triclosan</code></td>
+    <td>triclosan</td>
+    <td class="meta">COMPOUND</td>
+    <td><code class="curie">CHEBI:164200</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">fabi</code></td>
+    <td>bacterial FabI enoyl-ACP reductase</td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><code class="curie">ARO:3000872</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">fabi_nad_triclosan_state</code></td>
+    <td>inhibited FabI-NAD-triclosan state</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">enoyl_acp_reductase_activity</code></td>
+    <td>enoyl-acyl carrier protein reductase activity</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">type_ii_fatty_acid_biosynthesis</code></td>
+    <td>type II fatty-acid biosynthesis</td>
+    <td class="meta">PATHWAY</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">membrane_lipid_biosynthesis</code></td>
+    <td>membrane lipid biosynthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+<table>
+  <caption>Edges — triclosan_fabi_fatty_acid_synthesis_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">triclosan</code></td>
+    <td>stabilizes</td>
+    <td><code class="curie">fabi_nad_triclosan_state</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:10196195</span> <span class="meta">(Heath and colleagues found that triclosan inhibits bacterial fatty-acid synthesis at FabI and increases FabI affinity for NAD+.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">fabi</code></td>
+    <td>participates in</td>
+    <td><code class="curie">fabi_nad_triclosan_state</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:10201369</span> <span class="meta">(Levy and colleagues connected triclosan activity to FabI in bacterial cells.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">fabi_nad_triclosan_state</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">enoyl_acp_reductase_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:10196195</span> <span class="meta">(Mechanistic FabI assays linked triclosan binding to inhibition of the enoyl-ACP reductase step.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">fabi</code></td>
+    <td>enables</td>
+    <td><code class="curie">enoyl_acp_reductase_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:9707111</span> <span class="meta">(McMurry and colleagues identified lipid synthesis as the triclosan target pathway and FabI as the sensitive enzyme.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">enoyl_acp_reductase_activity</code></td>
+    <td>supports</td>
+    <td><code class="curie">type_ii_fatty_acid_biosynthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:10196195</span> <span class="meta">(The FabI inhibition study placed the triclosan-sensitive step in the bacterial fatty-acid synthesis cycle.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">type_ii_fatty_acid_biosynthesis</code></td>
+    <td>supports</td>
+    <td><code class="curie">membrane_lipid_biosynthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:9707111</span> <span class="meta">(Lipid synthesis experiments connected triclosan-sensitive FabI activity to the broader lipid biosynthesis pathway.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
 
 
 
@@ -336,6 +439,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex · LLM-assisted</span>
+    <p>Added a PMID-supported causal graph for triclosan inhibition of bacterial FabI fatty-acid synthesis and marked the coarse mode of action as curator-reviewed.</p>
   </li>
 </ol>
 

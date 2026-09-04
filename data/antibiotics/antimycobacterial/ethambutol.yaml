@@ -56,6 +56,11 @@ activity_roles:
 - CHEBI:33231
 structural_class: polyamine antibiotic
 structural_class_id: ARO:3000527
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_notes: 'CURATOR: Confirmed as inhibition of mycobacterial Emb arabinosyltransferases
+  and cell-wall arabinan synthesis after primary ethambutol mechanism review. PMID:2817850;
+  PMID:8876238; PMID:19596878; PMID:32327601.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CC[C@@H](CO)NCCN[C@@H](CC)CO
   standard_inchi: InChI=1S/C10H24N2O2/c1-3-9(7-13)11-5-6-12-10(4-2)8-14/h9-14H,3-8H2,1-2H3/t9-,10-/m0/s1
@@ -299,6 +304,127 @@ molecular_targets:
   - reference: ARO:3003473
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000497 (ethambutol); database
       assertion, not a primary citation.
+causal_graphs:
+- graph_id: ethambutol_emb_arabinan_inhibition
+  title: Ethambutol inhibits mycobacterial arabinan synthesis
+  description: Ethambutol inhibits Emb arabinosyltransferase complexes, reducing arabinan
+    addition to arabinogalactan and lipoarabinomannan in the mycobacterial cell envelope.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ethambutol
+    label: ethambutol
+    node_type: COMPOUND
+    grounding: CHEBI:4877
+  - node_id: embab_complex
+    label: mycobacterial EmbA-EmbB arabinosyltransferase complex
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: EmbA-EmbB is represented as the source-supported active complex;
+      ARO target terms identify the EmbA and EmbB component enzymes, not the assembled
+      complex.
+    xrefs:
+    - ARO:3000764
+    - ARO:3000765
+    gene_symbols:
+    - embA
+    - embB
+  - node_id: embc_complex
+    label: mycobacterial EmbC arabinosyltransferase complex
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: EmbC is represented as the active dimeric arabinosyltransferase
+      complex; the ARO target term identifies the sensitive EmbC enzyme family.
+    xrefs:
+    - ARO:3000763
+    gene_symbols:
+    - embC
+  - node_id: arabinogalactan_arabinan
+    label: mycobacterial arabinogalactan arabinan
+    node_type: CHEMICAL
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Arabinan polymer attached to the mycobacterial arabinogalactan
+      core.
+  - node_id: lipoarabinomannan_arabinan
+    label: mycobacterial lipoarabinomannan arabinan
+    node_type: CHEMICAL
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Arabinan polymer added to lipoarabinomannan by EmbC.
+  - node_id: cell_wall_arabinan_synthesis
+    label: mycobacterial cell-wall arabinan synthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Emb-mediated arabinofuranose transfer onto arabinogalactan and
+      lipoarabinomannan acceptors in the mycobacterial cell envelope.
+  - node_id: mycobacterial_cell_wall_integrity
+    label: mycobacterial cell-wall integrity
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Envelope integrity supported by arabinogalactan and lipoarabinomannan
+      arabinan polymers.
+  edges:
+  - subject: ethambutol
+    predicate: binds
+    object: embab_complex
+    description: Ethambutol binds the EmbA-EmbB arabinosyltransferase complex.
+    evidence:
+    - reference: PMID:32327601
+      notes: Zhang and colleagues resolved mycobacterial EmbA-EmbB structures with
+        ethambutol and donor and acceptor substrates.
+  - subject: ethambutol
+    predicate: binds
+    object: embc_complex
+    description: Ethambutol binds EmbC arabinosyltransferase complexes.
+    evidence:
+    - reference: PMID:32327601
+      notes: Zhang and colleagues also resolved ethambutol with mycobacterial EmbC
+        complexes and assayed drug inhibition of Emb transferase activity.
+  - subject: embab_complex
+    predicate: participates in
+    object: arabinogalactan_arabinan
+    description: EmbA and EmbB add arabinan to the arabinogalactan core.
+    evidence:
+    - reference: PMID:8876238
+      notes: Belanger and colleagues linked embA and embB to mycobacterial cell-wall
+        arabinan biosynthesis and ethambutol susceptibility.
+    - reference: PMID:32327601
+      notes: The ethambutol-bound EmbA-EmbB structures captured the substrate binding
+        sites used for arabinofuranose transfer.
+  - subject: embc_complex
+    predicate: participates in
+    object: lipoarabinomannan_arabinan
+    description: EmbC promotes lipoarabinomannan arabinan synthesis.
+    evidence:
+    - reference: PMID:19596878
+      notes: Goude and colleagues showed that ethambutol inhibits EmbC-dependent lipoarabinomannan
+        synthesis in Mycobacterium tuberculosis.
+  - subject: arabinogalactan_arabinan
+    predicate: participates in
+    object: cell_wall_arabinan_synthesis
+    description: Arabinogalactan arabinan is produced by the ethambutol-sensitive
+      cell-wall arabinan pathway.
+    evidence:
+    - reference: PMID:2817850
+      notes: Takayama and Kilburn observed that ethambutol blocked transfer of glucose-derived
+        label into arabinogalactan arabinose in Mycobacterium smegmatis.
+  - subject: lipoarabinomannan_arabinan
+    predicate: participates in
+    object: cell_wall_arabinan_synthesis
+    description: Lipoarabinomannan arabinan synthesis is another branch of Emb-dependent
+      cell-wall arabinan production.
+    evidence:
+    - reference: PMID:19596878
+      notes: The EmbC inhibition study traced ethambutol-sensitive arabinan synthesis
+        into mycobacterial lipoarabinomannan.
+  - subject: cell_wall_arabinan_synthesis
+    predicate: supports
+    object: mycobacterial_cell_wall_integrity
+    description: Arabinan synthesis maintains the arabinogalactan and lipoarabinomannan
+      components of the mycobacterial cell wall.
+    evidence:
+    - reference: PMID:9142129
+      notes: Telenti and colleagues identified the M. tuberculosis embCAB cluster
+        through ethambutol resistance and placed Emb activity in mycobacterial cell-wall
+        biosynthesis.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -316,3 +442,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-04T02:50:00Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added a PMID-supported causal graph for ethambutol inhibition of Emb-dependent
+    mycobacterial cell-wall arabinan synthesis.
+  llm_assisted: true

@@ -246,6 +246,104 @@ molecular_targets:
   - reference: ARO:3003260
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000111 (novobiocin); database
       assertion, not a primary citation.
+causal_graphs:
+- graph_id: novobiocin_gyrb_atpase_inhibition
+  title: Novobiocin inhibits GyrB ATPase-dependent DNA supercoiling
+  description: Novobiocin binds the amino-terminal coumarin-binding region of bacterial
+    DNA gyrase subunit GyrB, competitively inhibits its ATPase activity, and blocks
+    ATP-dependent DNA supercoiling by gyrase.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: novobiocin
+    label: novobiocin
+    node_type: COMPOUND
+    grounding: CHEBI:28368
+  - node_id: gyrb
+    label: bacterial DNA gyrase subunit GyrB
+    node_type: GENE_OR_PROTEIN
+    grounding: ARO:3000734
+    grounding_notes: Grounded through CARD's antibiotic-sensitive GyrB target; the
+      aminocoumarin-sensitive GyrB target assertion is retained as a cross-reference.
+    xrefs:
+    - ARO:3003260
+    gene_symbols:
+    - gyrB
+  - node_id: gyrb_coumarin_binding_domain
+    label: GyrB amino-terminal coumarin-binding domain
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Coumarin-binding region of GyrB rather than a distinct molecular
+      entity; kept label-only to avoid overgrounding a drug-bound subdomain.
+  - node_id: gyrb_atpase_activity
+    label: GyrB ATPase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: ATP hydrolysis by the DNA gyrase B subunit; kept label-only because
+      this is a subunit-specific step in the DNA gyrase catalytic cycle.
+  - node_id: dna_supercoiling
+    label: ATP-dependent DNA supercoiling
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: DNA gyrase-catalyzed supercoiling measured in purified-enzyme
+      assays.
+  - node_id: dna_topology_control
+    label: bacterial DNA topology control
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Covers the gyrase-dependent DNA supercoiling step that novobiocin
+      blocks.
+  edges:
+  - subject: novobiocin
+    predicate: binds
+    object: gyrb_coumarin_binding_domain
+    description: Novobiocin binds the amino-terminal GyrB subdomain that accommodates
+      coumarin inhibitors.
+    evidence:
+    - reference: PMID:8065258
+      notes: Gilbert and Maxwell mapped coumarin-drug binding to a 24 kDa N-terminal
+        GyrB subdomain.
+  - subject: gyrb
+    predicate: contains
+    object: gyrb_coumarin_binding_domain
+    description: The coumarin-binding subdomain is part of DNA gyrase subunit B.
+    evidence:
+    - reference: PMID:8065258
+      notes: The GyrB 24 kDa amino-terminal fragment retained coumarin-drug binding.
+  - subject: gyrb
+    predicate: enables
+    object: gyrb_atpase_activity
+    description: DNA gyrase subunit B supplies the ATPase activity required for gyrase
+      strand-passage chemistry.
+    evidence:
+    - reference: PMID:6269086
+      notes: Purified GyrB carried the ATPase activity inhibited competitively by
+        novobiocin and related coumarins.
+  - subject: novobiocin
+    predicate: inhibits
+    object: gyrb_atpase_activity
+    description: Novobiocin competitively inhibits the ATPase activity of GyrB.
+    evidence:
+    - reference: PMID:6269086
+      notes: The affinity-purified GyrB study characterized novobiocin as a competitive
+        inhibitor of GyrB ATPase activity.
+  - subject: gyrb_atpase_activity
+    predicate: supports
+    object: dna_supercoiling
+    description: GyrB ATP hydrolysis powers the ATP-dependent DNA supercoiling reaction
+      catalyzed by DNA gyrase.
+    evidence:
+    - reference: PMID:794878
+      notes: Gellert and colleagues showed novobiocin inhibits ATP-dependent DNA supercoiling
+        catalyzed by purified DNA gyrase.
+  - subject: dna_supercoiling
+    predicate: supports
+    object: dna_topology_control
+    description: DNA gyrase supercoiling contributes to bacterial chromosome topology
+      control.
+    evidence:
+    - reference: PMID:794878
+      notes: The purified gyrase assays connect GyrB ATPase inhibition to loss of
+        DNA supercoiling.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -263,3 +361,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-04T01:55:00Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added a PMID-supported causal graph for novobiocin inhibition of GyrB ATPase-dependent
+    DNA supercoiling.
+  llm_assisted: true

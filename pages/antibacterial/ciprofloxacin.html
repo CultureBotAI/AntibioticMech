@@ -2091,6 +2091,124 @@ type — expand a group to see its determinants.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Ciprofloxacin poisons bacterial type II topoisomerases <span class="pill">MECHANISTIC</span></h3>
+<p>Ciprofloxacin traps bacterial DNA gyrase and topoisomerase IV on cleaved DNA, preventing resealing of the enzyme-linked DNA break and disrupting replication-linked DNA topology control.</p><table>
+  <caption>Nodes — ciprofloxacin_topoisomerase_poisoning</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">ciprofloxacin</code></td>
+    <td>ciprofloxacin</td>
+    <td class="meta">COMPOUND</td>
+    <td><code class="curie">CHEBI:100241</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_gyrase</code></td>
+    <td>bacterial DNA gyrase</td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><code class="curie">ARO:3000733</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">topoisomerase_iv</code></td>
+    <td>bacterial topoisomerase IV</td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><code class="curie">ARO:3000735</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">gyrase_dna_cleavage_complex</code></td>
+    <td>DNA gyrase covalent DNA cleavage complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">topoiv_dna_cleavage_complex</code></td>
+    <td>topoisomerase IV covalent DNA cleavage complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_religation</code></td>
+    <td>type II topoisomerase DNA religation</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_topology_control</code></td>
+    <td>replication-associated DNA topology control</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+<table>
+  <caption>Edges — ciprofloxacin_topoisomerase_poisoning</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">ciprofloxacin</code></td>
+    <td>stabilizes</td>
+    <td><code class="curie">gyrase_dna_cleavage_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:24497635</span> <span class="meta">(Mustaev and colleagues assayed ciprofloxacin-stabilized DNA cleavage by wild-type gyrase and topoisomerase IV.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_gyrase</code></td>
+    <td>participates in</td>
+    <td><code class="curie">gyrase_dna_cleavage_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:9207016</span> <span class="meta">(Cove and colleagues showed purified DNA gyrase cleaves short DNA substrates in the presence of ciprofloxacin or oxolinic acid.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">ciprofloxacin</code></td>
+    <td>stabilizes</td>
+    <td><code class="curie">topoiv_dna_cleavage_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:8891138</span> <span class="meta">(Pan and colleagues implicated both topoisomerase IV and DNA gyrase as ciprofloxacin targets in Streptococcus pneumoniae genetics experiments.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">topoisomerase_iv</code></td>
+    <td>participates in</td>
+    <td><code class="curie">topoiv_dna_cleavage_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:24497635</span> <span class="meta">(The same in vitro cleavage study included topoisomerase IV alongside gyrase in ciprofloxacin DNA-cleavage assays.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">gyrase_dna_cleavage_complex</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">dna_religation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:24497635</span> <span class="meta">(Fluoroquinolone-gyrase-DNA complexes are experimentally linked to cleaved DNA accumulation after ciprofloxacin exposure.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">topoiv_dna_cleavage_complex</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">dna_religation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:24497635</span> <span class="meta">(Topoisomerase IV was tested in parallel with gyrase in ciprofloxacin DNA-cleavage assays.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_religation</code></td>
+    <td>supports</td>
+    <td><code class="curie">dna_topology_control</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:8891138</span> <span class="meta">(Ciprofloxacin target genetics in S. pneumoniae support both gyrase and topoisomerase IV as replication-linked topoisomerase targets.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
 
 
 
@@ -2131,6 +2249,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex · LLM-assisted</span>
+    <p>Added a PMID-supported causal graph for ciprofloxacin poisoning of bacterial DNA gyrase and topoisomerase IV.</p>
   </li>
 </ol>
 

@@ -509,6 +509,85 @@ type — expand a group to see its determinants.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Levofloxacin poisons bacterial topoisomerase IV <span class="pill">MECHANISTIC</span></h3>
+<p>Levofloxacin stabilizes a bacterial topoisomerase IV-DNA cleavage complex, blocking resealing of the enzyme-linked DNA break and disrupting chromosome topology control.</p><table>
+  <caption>Nodes — levofloxacin_topoisomerase_iv_poisoning</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">levofloxacin</code></td>
+    <td>levofloxacin</td>
+    <td class="meta">COMPOUND</td>
+    <td><code class="curie">CHEBI:63598</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">topoisomerase_iv</code></td>
+    <td>bacterial topoisomerase IV</td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><code class="curie">ARO:3000735</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">topoiv_dna_cleavage_complex</code></td>
+    <td>topoisomerase IV covalent DNA cleavage complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_religation</code></td>
+    <td>topoisomerase IV DNA religation</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_topology_control</code></td>
+    <td>bacterial chromosome decatenation and topology control</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+<table>
+  <caption>Edges — levofloxacin_topoisomerase_iv_poisoning</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">levofloxacin</code></td>
+    <td>stabilizes</td>
+    <td><code class="curie">topoiv_dna_cleavage_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:27050128</span> <span class="meta">(Veselkov and colleagues resolved levofloxacin-stabilized topoisomerase IV-DNA cleavage complexes from Klebsiella pneumoniae and Streptococcus pneumoniae.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">topoisomerase_iv</code></td>
+    <td>participates in</td>
+    <td><code class="curie">topoiv_dna_cleavage_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:27050128</span> <span class="meta">(The same structures contain ParC and ParE domains with DNA and levofloxacin.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">topoiv_dna_cleavage_complex</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">dna_religation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:27050128</span> <span class="meta">(Levofloxacin was resolved in cleaved topoisomerase IV-DNA complexes, the trapped state preceding break religation.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_religation</code></td>
+    <td>supports</td>
+    <td><code class="curie">dna_topology_control</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:27050128</span> <span class="meta">(The topoisomerase IV structure study describes the levofloxacin-stabilized target as a bacterial type II topoisomerase needed for chromosome topology.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
 
 
 
@@ -534,6 +613,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex · LLM-assisted</span>
+    <p>Added a PMID-supported causal graph for levofloxacin poisoning of bacterial topoisomerase IV.</p>
   </li>
 </ol>
 

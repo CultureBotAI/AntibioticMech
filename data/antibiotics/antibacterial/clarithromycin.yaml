@@ -75,11 +75,9 @@ activity_roles:
 structural_class: macrolide antibiotic
 structural_class_id: ARO:0000000
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
-mode_of_action_target_scope: HOST_SHARED_TARGET
+mode_of_action_notes: 'CURATOR: Confirmed as bacterial 50S macrolide-site inhibition
+  after primary clarithromycin mechanism review. PMID:9425251; PMID:34935599.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@]1(O[C@H]2[C@H](C)[C@@H](O[C@]3([H])O[C@H](C)C[C@H](N(C)C)[C@H]3O)[C@](C)(OC)C[C@@H](C)C(=O)[C@H](C)[C@@H](O)[C@](C)(O)[C@@H](CC)OC(=O)[C@@H]2C)C[C@@](C)(OC)[C@@H](O)[C@H](C)O1'
   standard_inchi: InChI=1S/C38H69NO13/c1-15-26-38(10,45)31(42)21(4)28(40)19(2)17-37(9,47-14)33(52-35-29(41)25(39(11)12)16-20(3)48-35)22(5)30(23(6)34(44)50-26)51-27-18-36(8,46-13)32(43)24(7)49-27/h19-27,29-33,35,41-43,45H,15-18H2,1-14H3/t19-,20-,21+,22+,23-,24+,25+,26-,27+,29-,30+,31-,32+,33-,35+,36-,37-,38-/m1/s1
@@ -451,6 +449,78 @@ molecular_targets:
   - reference: ARO:3000757
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000065 (clarithromycin); database
       assertion, not a primary citation.
+causal_graphs:
+- graph_id: clarithromycin_50s_exit_tunnel_inhibition
+  title: Clarithromycin blocks the bacterial 50S exit tunnel
+  description: Clarithromycin binds the macrolide site in the bacterial 50S nascent-peptide
+    exit tunnel, restricting translation elongation and reducing protein synthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: clarithromycin
+    label: clarithromycin
+    node_type: COMPOUND
+    grounding: CHEBI:3732
+  - node_id: ribosomal_50s_macrolide_site
+    label: bacterial 50S nascent-peptide exit tunnel macrolide site
+    node_type: RNA
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Clarithromycin binds an rRNA-lined site in the large-subunit
+      nascent-peptide exit tunnel; ARO:3000757 is retained as the related 50S target
+      assertion but is too coarse for exact grounding.
+    xrefs:
+    - ARO:3000757
+  - node_id: clarithromycin_bound_50s
+    label: clarithromycin-bound 50S exit tunnel
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Drug-bound state of the 50S macrolide binding pocket.
+  - node_id: translation_elongation
+    label: bacterial translation elongation
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Ribosomal elongation of nascent polypeptides through the 50S
+      exit tunnel.
+  - node_id: protein_synthesis
+    label: bacterial protein synthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial translation as the downstream process restricted by
+      50S macrolide binding.
+  edges:
+  - subject: clarithromycin
+    predicate: binds
+    object: clarithromycin_bound_50s
+    description: Clarithromycin binds the large ribosomal subunit at the macrolide
+      site.
+    evidence:
+    - reference: PMID:34935599
+      notes: Zhang and colleagues resolved Mycobacterium tuberculosis 50S subunits
+        with bound clarithromycin and observed drug interactions in the 50S tunnel.
+  - subject: ribosomal_50s_macrolide_site
+    predicate: participates in
+    object: clarithromycin_bound_50s
+    description: The 50S nascent-peptide exit tunnel forms the clarithromycin binding
+      site.
+    evidence:
+    - reference: PMID:34935599
+      notes: The clarithromycin-bound 50S cryo-EM structure localizes the drug in
+        the mycobacterial large-subunit exit tunnel.
+  - subject: clarithromycin_bound_50s
+    predicate: decreases
+    object: translation_elongation
+    description: Clarithromycin-bound 50S subunits lose productive translation elongation.
+    evidence:
+    - reference: PMID:9425251
+      notes: Champney and Burdine measured clarithromycin-dependent inhibition of
+        translation in Staphylococcus aureus cells.
+  - subject: translation_elongation
+    predicate: supports
+    object: protein_synthesis
+    description: Translation elongation is required for bacterial protein synthesis.
+    evidence:
+    - reference: PMID:9425251
+      notes: The cellular clarithromycin study measured translation inhibition as
+        a protein-synthesis endpoint.
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -1423,3 +1493,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-04T03:00:00Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added a PMID-supported causal graph for clarithromycin binding to the bacterial
+    50S macrolide site.
+  llm_assisted: true

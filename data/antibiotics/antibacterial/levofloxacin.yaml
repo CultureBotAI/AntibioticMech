@@ -396,6 +396,80 @@ molecular_targets:
   - reference: ARO:3000735
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000071 (levofloxacin); database
       assertion, not a primary citation.
+causal_graphs:
+- graph_id: levofloxacin_topoisomerase_iv_poisoning
+  title: Levofloxacin poisons bacterial topoisomerase IV
+  description: Levofloxacin stabilizes a bacterial topoisomerase IV-DNA cleavage complex,
+    blocking resealing of the enzyme-linked DNA break and disrupting chromosome topology
+    control.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: levofloxacin
+    label: levofloxacin
+    node_type: COMPOUND
+    grounding: CHEBI:63598
+  - node_id: topoisomerase_iv
+    label: bacterial topoisomerase IV
+    node_type: GENE_OR_PROTEIN
+    grounding: ARO:3000735
+    grounding_notes: Grounded through CARD's fluoroquinolone-sensitive ParC target;
+      ParC and ParE form the bacterial topoisomerase IV target complex.
+    gene_symbols:
+    - parC
+    - parE
+  - node_id: topoiv_dna_cleavage_complex
+    label: topoisomerase IV covalent DNA cleavage complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Enzyme-linked DNA break stabilized by levofloxacin; kept label-only
+      because the state is drug-bound and catalytic-step specific.
+  - node_id: dna_religation
+    label: topoisomerase IV DNA religation
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Resealing step of the topoisomerase IV catalytic cycle that is
+      blocked when quinolone-stabilized cleavage complexes persist.
+  - node_id: dna_topology_control
+    label: bacterial chromosome decatenation and topology control
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Covers topoisomerase IV-dependent chromosome decatenation and
+      relaxation reactions.
+  edges:
+  - subject: levofloxacin
+    predicate: stabilizes
+    object: topoiv_dna_cleavage_complex
+    description: Levofloxacin traps bacterial topoisomerase IV on cleaved DNA.
+    evidence:
+    - reference: PMID:27050128
+      notes: Veselkov and colleagues resolved levofloxacin-stabilized topoisomerase
+        IV-DNA cleavage complexes from Klebsiella pneumoniae and Streptococcus pneumoniae.
+  - subject: topoisomerase_iv
+    predicate: participates in
+    object: topoiv_dna_cleavage_complex
+    description: ParC/ParE topoisomerase IV forms the catalytic DNA cleavage complex
+      trapped by levofloxacin.
+    evidence:
+    - reference: PMID:27050128
+      notes: The same structures contain ParC and ParE domains with DNA and levofloxacin.
+  - subject: topoiv_dna_cleavage_complex
+    predicate: inhibits
+    object: dna_religation
+    description: Stabilized topoisomerase IV cleavage complexes persist instead of
+      being resealed by the enzyme.
+    evidence:
+    - reference: PMID:27050128
+      notes: Levofloxacin was resolved in cleaved topoisomerase IV-DNA complexes,
+        the trapped state preceding break religation.
+  - subject: dna_religation
+    predicate: supports
+    object: dna_topology_control
+    description: Resealing the transient type-II-topoisomerase break is required to
+      complete chromosome decatenation and relaxation reactions.
+    evidence:
+    - reference: PMID:27050128
+      notes: The topoisomerase IV structure study describes the levofloxacin-stabilized
+        target as a bacterial type II topoisomerase needed for chromosome topology.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -413,3 +487,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-04T02:20:00Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added a PMID-supported causal graph for levofloxacin poisoning of bacterial
+    topoisomerase IV.
+  llm_assisted: true

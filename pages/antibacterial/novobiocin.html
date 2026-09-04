@@ -301,6 +301,109 @@ type — expand a group to see its determinants.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Novobiocin inhibits GyrB ATPase-dependent DNA supercoiling <span class="pill">MECHANISTIC</span></h3>
+<p>Novobiocin binds the amino-terminal coumarin-binding region of bacterial DNA gyrase subunit GyrB, competitively inhibits its ATPase activity, and blocks ATP-dependent DNA supercoiling by gyrase.</p><table>
+  <caption>Nodes — novobiocin_gyrb_atpase_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">novobiocin</code></td>
+    <td>novobiocin</td>
+    <td class="meta">COMPOUND</td>
+    <td><code class="curie">CHEBI:28368</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">gyrb</code></td>
+    <td>bacterial DNA gyrase subunit GyrB</td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><code class="curie">ARO:3000734</code></td>
+  </tr>
+  <tr>
+    <td><code class="curie">gyrb_coumarin_binding_domain</code></td>
+    <td>GyrB amino-terminal coumarin-binding domain</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">gyrb_atpase_activity</code></td>
+    <td>GyrB ATPase activity</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_supercoiling</code></td>
+    <td>ATP-dependent DNA supercoiling</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_topology_control</code></td>
+    <td>bacterial DNA topology control</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+<table>
+  <caption>Edges — novobiocin_gyrb_atpase_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">novobiocin</code></td>
+    <td>binds</td>
+    <td><code class="curie">gyrb_coumarin_binding_domain</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:8065258</span> <span class="meta">(Gilbert and Maxwell mapped coumarin-drug binding to a 24 kDa N-terminal GyrB subdomain.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">gyrb</code></td>
+    <td>contains</td>
+    <td><code class="curie">gyrb_coumarin_binding_domain</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:8065258</span> <span class="meta">(The GyrB 24 kDa amino-terminal fragment retained coumarin-drug binding.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">gyrb</code></td>
+    <td>enables</td>
+    <td><code class="curie">gyrb_atpase_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:6269086</span> <span class="meta">(Purified GyrB carried the ATPase activity inhibited competitively by novobiocin and related coumarins.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">novobiocin</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">gyrb_atpase_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:6269086</span> <span class="meta">(The affinity-purified GyrB study characterized novobiocin as a competitive inhibitor of GyrB ATPase activity.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">gyrb_atpase_activity</code></td>
+    <td>supports</td>
+    <td><code class="curie">dna_supercoiling</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:794878</span> <span class="meta">(Gellert and colleagues showed novobiocin inhibits ATP-dependent DNA supercoiling catalyzed by purified DNA gyrase.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_supercoiling</code></td>
+    <td>supports</td>
+    <td><code class="curie">dna_topology_control</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta">PMID:794878</span> <span class="meta">(The purified gyrase assays connect GyrB ATPase inhibition to loss of DNA supercoiling.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
 
 
 
@@ -326,6 +429,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex · LLM-assisted</span>
+    <p>Added a PMID-supported causal graph for novobiocin inhibition of GyrB ATPase-dependent DNA supercoiling.</p>
   </li>
 </ol>
 

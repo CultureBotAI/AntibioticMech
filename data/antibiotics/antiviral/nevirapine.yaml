@@ -1472,6 +1472,83 @@ molecular_targets:
     entry_status: UNREVIEWED
     retrieved_on: '2026-08-31'
     role: BindingDB target chain 1
+causal_graphs:
+- graph_id: nevirapine_hiv1_reverse_transcriptase_inhibition
+  title: Nevirapine allosterically inhibits HIV-1 reverse transcriptase
+  description: Nevirapine binds the non-nucleoside inhibitor pocket of HIV-1 reverse
+    transcriptase, distorts the polymerase active-site geometry, and prevents RNA-templated
+    viral DNA synthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: nevirapine
+    label: nevirapine
+    node_type: COMPOUND
+    grounding: CHEBI:63613
+  - node_id: hiv1_reverse_transcriptase
+    label: HIV-1 reverse transcriptase
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The graph is grounded to the HIV-1 Gag-Pol reverse transcriptase
+      region; a family-level exact term was not asserted.
+    xrefs:
+    - UniProtKB:P04585
+  - node_id: nnrti_pocket
+    label: HIV-1 reverse transcriptase non-nucleoside inhibitor pocket
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Drug-induced allosteric pocket observed in HIV-1 RT structures.
+  - node_id: primer_active_site_alignment
+    label: DNA primer 3' end aligned with the polymerase active site
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Structural state resolved in RT-DNA complexes; kept label-only
+      to avoid overgrounding a conformation.
+  - node_id: rna_directed_dna_polymerase_activity
+    label: RNA-directed DNA polymerase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0003964
+  - node_id: hiv1_reverse_transcription
+    label: HIV-1 reverse transcription
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Viral cDNA synthesis step blocked by HIV-1 reverse transcriptase
+      inhibition.
+  edges:
+  - subject: nevirapine
+    predicate: opens and occupies
+    object: nnrti_pocket
+    description: Nevirapine binding opens the NNRTI pocket in the HIV-1 RT-DNA complex.
+    evidence:
+    - reference: PMID:22266819
+      notes: Crystal structures of HIV-1 RT-DNA-nevirapine and comparator complexes
+        resolve nevirapine in the NNRTI pocket.
+  - subject: nnrti_pocket
+    predicate: displaces
+    object: primer_active_site_alignment
+    description: Pocket formation shifts the DNA primer terminus away from the polymerase
+      active site.
+    evidence:
+    - reference: PMID:22266819
+      notes: Das and colleagues observed nevirapine-associated primer displacement
+        and distortion of the dNTP-binding pocket in RT-DNA crystals.
+  - subject: primer_active_site_alignment
+    predicate: is required for
+    object: rna_directed_dna_polymerase_activity
+    description: Primer displacement and active-site distortion allosterically inhibit
+      RT polymerase chemistry.
+    evidence:
+    - reference: PMID:22266819
+      notes: RT-DNA-nevirapine structural comparisons support the allosteric block
+        between NNRTI-pocket occupancy and polymerase activity.
+  - subject: rna_directed_dna_polymerase_activity
+    predicate: is required for
+    object: hiv1_reverse_transcription
+    description: HIV-1 reverse transcriptase RNA-directed DNA polymerase activity
+      produces viral DNA during reverse transcription.
+    evidence:
+    - reference: PMID:1377403
+      notes: The first HIV-1 reverse transcriptase-inhibitor crystal structure supports
+        reverse transcriptase as a viral DNA polymerase drug target.
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -2112,3 +2189,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-04T01:01:11Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added a PMID-supported causal graph for nevirapine allosteric inhibition
+    of HIV-1 reverse transcriptase.
+  llm_assisted: true
