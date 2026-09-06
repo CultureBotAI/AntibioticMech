@@ -1,7 +1,7 @@
 identifier: CHEBI:29013
 label: fusidic acid
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A steroid antibiotic that is isolated from the fermentation broth of Fusidium
   coccineum.
@@ -42,10 +42,11 @@ activity_roles:
 structural_class: fusidane antibiotic
 structural_class_id: ARO:3007153
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:15843024 supports fusidic-acid inhibition of
+  translation through post-translocation stalling of elongation factor G (EF-G) on
+  the ribosome. Its structures were ligand-free G16V and T84A Thermus thermophilus
+  EF-G mutants, not fusidic-acid-bound complexes; their sensitivity, GTP-affinity,
+  and conformational effects localize a resistance-relevant target region.'
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H][C@@]12[C@H](O)C[C@@]3([H])/C(=C(\CCC=C(C)C)C(=O)O)[C@@H](OC(C)=O)C[C@]3(C)[C@@]1(C)CC[C@@]1([H])[C@H](C)[C@H](O)CC[C@]21C'
@@ -89,6 +90,9 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:15843024
+  notes: Primary fusidic-acid EF-G resistance/sensitivity and mutant-structure study.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3000773
@@ -163,6 +167,22 @@ molecular_targets:
   - reference: ARO:3000730
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000759 (fusidic acid); database
       assertion, not a primary citation.
+- target_label: elongation factor G (EF-G)
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:274
+  taxon_label: Thermus thermophilus
+  experimental_context: Fusidic-acid sensitivity and GTP-affinity measurements were
+    interpreted with structures of the G16V and T84A EF-G mutants. The structures
+    did not contain fusidic acid and therefore do not directly observe binding.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2005-05
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:15843024
+    notes: Primary EF-G mutant structure and fusidic-acid resistance/sensitivity study
+      (DOI:10.1016/j.jmb.2005.02.066).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -180,3 +200,11 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:19:04Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI/CARD identity, structure, antibacterial role, class,
+    and retained CARD target and resistance provenance; curator-confirmed protein-synthesis
+    inhibition and added EF-G evidence without recasting ligand-free mutant structures
+    as a drug-bound complex.
+  llm_assisted: true

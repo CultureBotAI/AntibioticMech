@@ -71,134 +71,6 @@ source_concepts:
   role_terms:
   - CHEBI:33282
   source_version: '2026-08-30'
-molecular_targets:
-- target_label: Replicase polyprotein 1ab
-  target_type: VIRAL_PROTEIN
-  target_relation: MEASURED_TARGET_ASSOCIATION
-  taxon_id: NCBITaxon:2697049
-  taxon_label: Severe acute respiratory syndrome coronavirus 2
-  experimental_context: BindingDB quantitative measurement in the named target organism;
-    source assay descriptions and identifiers are retained per measurement.
-  evidence_status: PRIMARY_EVIDENCE
-  source: BINDINGDB
-  source_version: 2026-09
-  source_retrieved_on: '2026-08-31'
-  measurements:
-  - measurement_type: KI
-    original_value: '7400'
-    qualifier: EQ
-    value: 7400.0
-    unit: nM
-    assay_name: Various Assay
-    assay_description: This is a review article.  Please point to the original journal.
-    bindingdb_reactant_set_id: '1074012'
-    bindingdb_entry_assay_id: '10079_1'
-    bindingdb_monomer_id: '7460'
-    source_version: 2026-09
-    source_retrieved_on: '2026-08-31'
-    reference: PMID:34798775
-  evidence:
-  - reference: PMID:34798775
-    notes: BindingDB literature-curated quantitative target measurement; source value,
-      assay text, reaction-set ID, and target organism retained.
-  protein_examples:
-  - uniprot_id: UniProtKB:P0DTD1
-    protein_label: Replicase polyprotein 1ab
-    taxon_id: NCBITaxon:2697049
-    taxon_label: Severe acute respiratory syndrome coronavirus 2
-    entry_status: REVIEWED
-    retrieved_on: '2026-08-31'
-    role: BindingDB target chain 1
-- target_label: Replicase polyprotein 1ab
-  target_type: VIRAL_PROTEIN
-  target_relation: MEASURED_TARGET_ASSOCIATION
-  taxon_id: NCBITaxon:2901879
-  taxon_label: Severe acute respiratory syndrome coronavirus
-  experimental_context: BindingDB quantitative measurement in the named target organism;
-    source assay descriptions and identifiers are retained per measurement.
-  evidence_status: PRIMARY_EVIDENCE
-  source: BINDINGDB
-  source_version: 2026-09
-  source_retrieved_on: '2026-08-31'
-  measurements:
-  - measurement_type: EC50
-    original_value: '83400'
-    qualifier: EQ
-    value: 83400.0
-    unit: nM
-    assay_name: No assay is provided
-    assay_description: This is a review article.
-    bindingdb_reactant_set_id: '868608'
-    bindingdb_entry_assay_id: '8917_1'
-    bindingdb_monomer_id: '7460'
-    source_version: 2026-09
-    source_retrieved_on: '2026-08-31'
-    reference: PMID:26878082
-  - measurement_type: IC50
-    original_value: '23800'
-    qualifier: EQ
-    value: 23800.0
-    unit: nM
-    assay_name: Various Assay
-    assay_description: This is a review article.  Please point to the original journal.
-    bindingdb_reactant_set_id: '1074198'
-    bindingdb_entry_assay_id: '10079_1'
-    bindingdb_monomer_id: '7460'
-    source_version: 2026-09
-    source_retrieved_on: '2026-08-31'
-    reference: PMID:34798775
-  evidence:
-  - reference: PMID:26878082
-    notes: BindingDB literature-curated quantitative target measurement; source value,
-      assay text, reaction-set ID, and target organism retained.
-  - reference: PMID:34798775
-    notes: BindingDB literature-curated quantitative target measurement; source value,
-      assay text, reaction-set ID, and target organism retained.
-  protein_examples:
-  - uniprot_id: UniProtKB:P0C6X7
-    protein_label: Replicase polyprotein 1ab
-    taxon_id: NCBITaxon:2901879
-    taxon_label: Severe acute respiratory syndrome coronavirus
-    entry_status: REVIEWED
-    retrieved_on: '2026-08-31'
-    role: BindingDB target chain 1
-- target_label: Spike glycoprotein
-  target_type: VIRAL_PROTEIN
-  target_relation: MEASURED_TARGET_ASSOCIATION
-  taxon_id: NCBITaxon:2901879
-  taxon_label: Severe acute respiratory syndrome coronavirus
-  experimental_context: BindingDB quantitative measurement in the named target organism;
-    source assay descriptions and identifiers are retained per measurement.
-  evidence_status: PRIMARY_EVIDENCE
-  source: BINDINGDB
-  source_version: 2026-09
-  source_retrieved_on: '2026-08-31'
-  measurements:
-  - measurement_type: EC50
-    original_value: '83400'
-    qualifier: EQ
-    value: 83400.0
-    unit: nM
-    assay_name: No assay is provided
-    assay_description: This is a review article.
-    bindingdb_reactant_set_id: '868728'
-    bindingdb_entry_assay_id: '8918_1'
-    bindingdb_monomer_id: '7460'
-    source_version: 2026-09
-    source_retrieved_on: '2026-08-31'
-    reference: PMID:32852058
-  evidence:
-  - reference: PMID:32852058
-    notes: BindingDB literature-curated quantitative target measurement; source value,
-      assay text, reaction-set ID, and target organism retained.
-  protein_examples:
-  - uniprot_id: UniProtKB:P59594
-    protein_label: Spike glycoprotein
-    taxon_id: NCBITaxon:2901879
-    taxon_label: Severe acute respiratory syndrome coronavirus
-    entry_status: REVIEWED
-    retrieved_on: '2026-08-31'
-    role: BindingDB target chain 1
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -213,6 +85,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:18:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T23:55:59Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

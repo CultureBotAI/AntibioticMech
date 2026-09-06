@@ -1,7 +1,7 @@
 identifier: CHEBI:3434
 label: carpropamid
 antimicrobial_class: ANTIFUNGAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A cyclopropylcarboxamide obtained by formal condensation of the carboxy
   group of 2,2-dichloro-1-ethyl-3-methylcyclopropanecarboxylic acid with the amino
@@ -24,6 +24,13 @@ activity_roles:
 - CHEBI:24127
 - CHEBI:35718
 - CHEBI:86328
+mode_of_action: OTHER
+mode_of_action_notes: 'CURATOR: PMID:9665698 reports a 2.1-angstrom crystal structure
+  of carpropamid bound in the hydrophobic cavity of scytalone dehydratase from the
+  rice-blast fungus reported as Pyricularia oryzae. The enzyme participates in fungal
+  melanin biosynthesis, so the coarse mechanism is retained as OTHER rather than mapped
+  to an unrelated pathway enum.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CCC1(C(=O)NC(C)c2ccc(Cl)cc2)C(C)C1(Cl)Cl
   standard_inchi: InChI=1S/C15H18Cl3NO/c1-4-14(10(3)15(14,17)18)13(20)19-9(2)11-5-7-12(16)8-6-11/h5-10H,4H2,1-3H3,(H,19,20)
@@ -33,6 +40,22 @@ chemical_structure:
   charge: 0
   average_mass: 334.674
   monoisotopic_mass: 333.0454
+molecular_targets:
+- target_label: fungal scytalone dehydratase
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:318829
+  taxon_label: Magnaporthe oryzae
+  experimental_context: A 2.1-angstrom inhibitor-enzyme cocrystal directly located
+    carpropamid in the hydrophobic cavity. The publication uses the historical organism
+    name Pyricularia oryzae.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1998-07
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:9665698
+    notes: Primary compound-enzyme cocrystal study (DOI:10.1021/bi980321b).
 xrefs:
 - cas:104030-54-8
 - kegg.compound:C10932
@@ -52,6 +75,9 @@ source_concepts:
   - CHEBI:35718
   - CHEBI:86328
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:9665698
+  notes: Primary structural mechanism study of the exact compound.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -65,3 +91,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T22:25:17Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, and antifungal class; added a
+    curator-owned melanin-pathway mechanism and direct scytalone-dehydratase target
+    supported by the compound-enzyme crystal structure.
+  llm_assisted: true

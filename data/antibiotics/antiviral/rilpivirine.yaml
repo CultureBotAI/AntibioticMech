@@ -1,7 +1,7 @@
 identifier: CHEBI:68606
 label: rilpivirine
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An aminopyrimidine that is pyrimidine-2,4-diamine in which the amino groups
   at positions 2 and 4 are substituted by 4-cyanophenyl and 4-[(E)-2-cyanovinyl]-2,6-dimethylphenyl
@@ -27,10 +27,10 @@ activity_roles:
 - CHEBI:53756
 - CHEBI:59897
 mode_of_action: VIRAL_POLYMERASE_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:53756 (HIV-1 reverse transcriptase
-  inhibitor), CHEBI:59897 (EC 2.7.7.49 (RNA-directed DNA polymerase) inhibitor). ChEBI
-  asserts the role on the compound. The role names a target specific to the microbe
-  or virus — see mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:20438081 determined crystal structures of rilpivirine
+  bound to wild-type and K103N HIV-1 reverse transcriptase, directly confirming the
+  non-nucleoside viral polymerase target and showing a similar binding mode in both
+  enzyme forms.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: Cc1cc(/C=C/C#N)cc(C)c1Nc1ccnc(Nc2ccc(C#N)cc2)n1
@@ -41,6 +41,19 @@ chemical_structure:
   charge: 0
   average_mass: 366.428
   monoisotopic_mass: 366.15929
+molecular_targets:
+- target_label: HIV-1 reverse transcriptase
+  target_type: VIRAL_PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: X-ray crystal structures resolved rilpivirine bound to both
+    wild-type and K103N HIV-1 reverse transcriptase.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2010-05
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:20438081
+    notes: Primary compound-enzyme crystal-structure study.
 xrefs:
 - cas:500287-72-9
 - drugbank:DB08864
@@ -67,6 +80,9 @@ source_concepts:
   - CHEBI:53756
   - CHEBI:59897
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:20438081
+  notes: Primary wild-type and K103N reverse-transcriptase structural study.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -80,3 +96,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:50:50Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, antiviral class, and role; curator-confirmed
+    viral polymerase inhibition and added the directly observed HIV-1 reverse-transcriptase
+    binding target.
+  llm_assisted: true

@@ -57,16 +57,16 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 <!-- BEGIN GENERATED CORPUS STATS -->
 
-| Class | Records | SEEDED | REVIEWED | With resistance evidence |
+| Class | Records | SEEDED | REVIEWED | With target or resistance evidence |
 |---|---:|---:|---:|---:|
-| ANTIBACTERIAL *(incl. subclasses)* | 1091 | 1091 | 0 | 278 |
-| &nbsp;&nbsp;↳ ANTIMYCOBACTERIAL *(subclass of ANTIBACTERIAL)* | 78 | 78 | 0 | 15 |
-| ANTIFUNGAL | 594 | 594 | 0 | 55 |
-| ANTIPROTOZOAL | 248 | 248 | 0 | 5 |
-| ANTIVIRAL | 473 | 473 | 0 | 21 |
-| BIOCIDE | 31 | 31 | 0 | 3 |
-| ANTIMICROBIAL_UNSPECIFIED | 472 | 472 | 0 | 3 |
-| **TOTAL** | **2909** | **2909** | **0** | **365** |
+| ANTIBACTERIAL *(incl. subclasses)* | 1091 | 1059 | 32 | 285 |
+| &nbsp;&nbsp;↳ ANTIMYCOBACTERIAL *(subclass of ANTIBACTERIAL)* | 78 | 75 | 3 | 15 |
+| ANTIFUNGAL | 594 | 581 | 13 | 65 |
+| ANTIPROTOZOAL | 248 | 246 | 2 | 5 |
+| ANTIVIRAL | 473 | 448 | 25 | 32 |
+| BIOCIDE | 31 | 31 | 0 | 2 |
+| ANTIMICROBIAL_UNSPECIFIED | 472 | 464 | 8 | 10 |
+| **TOTAL** | **2909** | **2829** | **80** | **399** |
 
 A row marked *(subclass of X)* is already counted in X's own row — mycobacteria are bacteria, and filing is exclusive, so a compound filed ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each record once, so the Records column does not sum to it.
 
@@ -74,7 +74,7 @@ Identity: **2669** records (92%) are grounded in a ChEBI term; **240** keep a mi
 
 Corroboration: **281** records carry source concepts from both ChEBI and CARD/ARO; **2341** come from ChEBI alone and **287** from CARD alone.
 
-Mechanism layer: **245** records carry a molecular target and **281** carry resistance determinants or associations seeded from CARD and PHI-base; **417** carry a mode of action; **16** carry a curated causal graph. That last number is the work.
+Mechanism layer: **282** records carry a molecular target and **295** carry resistance determinants or associations seeded from CARD and PHI-base; **454** carry a mode of action; **16** carry a curated causal graph. That last number is the work.
 
 <!-- END GENERATED CORPUS STATS -->
 
@@ -186,8 +186,9 @@ by a source concept's minted identifier), and the mechanism fields on a record �
 `mode_of_action`, `molecular_targets` beyond CARD's, `activity_spectrum`,
 `producer_organisms` beyond the MIBiG-marked slice, `causal_graphs`,
 `discussions`. `verify-corpus` does not compare those, so curation and
-reproducibility coexist — with three exceptions: MIBiG-marked producer
-assertions and Drugs@FDA-marked clinical assertions are compared to their
+reproducibility coexist — with source-owned exceptions: BindingDB-marked target,
+PHI-base-marked resistance, MIBiG-marked producer, and Drugs@FDA-marked clinical
+assertions are compared to their
 committed inventories, and a `mode_of_action` still carrying the seeder's note marker is the
 seeder's, and is compared along with its notes and target scope, because a bare
 hand edit of a seeded mechanism is drift rather than curation. Writing a

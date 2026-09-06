@@ -1,7 +1,7 @@
 identifier: CHEBI:156451
 label: holomycin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A dithiolopyrrolone antibiotic that is 4,5-dihydro[1,2]dithiolo[4,3-b]pyrrole
   in which the hydrogens at positions 5 and 6 have been replaced by oxo and acetamido
@@ -38,11 +38,13 @@ activity_roles:
 - CHEBI:33282
 - CHEBI:35718
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:37416 (EC 2.7.7.6 (RNA polymerase)
-  inhibitor). ChEBI asserts the role on the compound. The target it names is one the
-  host has too, so the mechanism is true but is not evidence of selectivity — see
-  mode_of_action_target_scope. Not a curator's mechanistic review.
-mode_of_action_target_scope: HOST_SHARED_TARGET
+mode_of_action_notes: 'CURATOR: PMID:11158751 found rapid, bacteriostatic inhibition
+  of RNA synthesis in Escherichia coli, independent of the RelA stringent response,
+  and beta-galactosidase kinetics consistent with impaired RNA-chain elongation. Purified
+  RNA polymerase was only weakly inhibited above growth-inhibitory concentrations,
+  so the direct target remains unresolved and intracellular conversion to an active
+  species remains possible.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CC(=O)Nc1c2sscc-2nc1=O
   standard_inchi: InChI=1S/C7H6N2O2S2/c1-3(10)8-5-6-4(2-12-13-6)9-7(5)11/h2H,1H3,(H,8,10)(H,9,11)
@@ -52,6 +54,23 @@ chemical_structure:
   charge: 0
   average_mass: 214.271
   monoisotopic_mass: 213.98707
+molecular_targets:
+- target_label: bacterial RNA synthesis and transcription elongation
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  experimental_context: Whole-cell radiolabeling and induced beta-galactosidase kinetics
+    supported rapid inhibition of bacterial transcription. Weak purified-polymerase
+    inhibition did not establish RNA polymerase as the direct target.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2001-02
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:11158751
+    notes: Primary holomycin whole-cell and purified-RNA-polymerase mechanism study
+      (DOI:10.1128/AAC.45.2.532-539.2001).
 xrefs:
 - cas:488-04-0
 - metacyc.compound:CPD-17940
@@ -66,6 +85,9 @@ source_concepts:
   - CHEBI:33282
   - CHEBI:35718
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:11158751
+  notes: Primary holomycin antibacterial spectrum and transcription-mechanism study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -79,3 +101,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:19:12Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, antibiotic roles, and antibacterial
+    class; curator-confirmed nucleic-acid-synthesis inhibition and added the measured
+    transcription phenotype while retaining the unresolved direct-target gap.
+  llm_assisted: true

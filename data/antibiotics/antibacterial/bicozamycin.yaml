@@ -1,7 +1,7 @@
 identifier: CHEBI:60584
 label: bicozamycin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A commercially important azabicyclic antibiotic obtained from Streptomyces
   sapporonensis. It inhibits the Rho protein of E. coli.
@@ -51,6 +51,13 @@ activity_roles:
 - CHEBI:33282
 structural_class: bicyclomycin-like antibiotic
 structural_class_id: ARO:3007150
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_notes: 'CURATOR: Bicozamycin and bicyclomycin are exact synonyms on
+  the merged ChEBI/CARD record. PMID:15642265 resolved bicyclomycin in bacterial Rho,
+  where it binds beside the ATP- and RNA-binding sites and noncompetitively blocks
+  ATP turnover by excluding the nucleophilic water needed for hydrolysis, thereby
+  disrupting Rho-dependent transcription termination.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: C=C1CCO[C@]2([C@@H](O)[C@@](C)(O)CO)NC(=O)[C@@]1(O)NC2=O
   standard_inchi: InChI=1S/C12H18N2O7/c1-6-3-4-21-12(7(16)10(2,19)5-15)9(18)13-11(6,20)8(17)14-12/h7,15-16,19-20H,1,3-5H2,2H3,(H,13,18)(H,14,17)/t7-,10-,11+,12-/m0/s1
@@ -83,6 +90,10 @@ source_concepts:
   role_terms:
   - CHEBI:33282
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:15642265
+  notes: Primary exact-bicyclomycin/bicozamycin Rho cocrystal and ATPase-mechanism
+    study.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3003801
@@ -107,6 +118,19 @@ molecular_targets:
   - reference: ARO:3000736
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000055 (bicyclomycin); database
       assertion, not a primary citation.
+- target_label: Rho transcription termination factor
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: A 3.15-angstrom Rho-bicyclomycin crystal structure directly
+    localized the drug next to ATP- and RNA-binding sites and showed occlusion of
+    the water required for ATP hydrolysis.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2005-01
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:15642265
+    notes: Primary bicyclomycin-bound Rho structural mechanism study (DOI:10.1016/j.str.2004.10.013).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -124,3 +148,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:42:23Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified the exact bicozamycin/bicyclomycin synonym identity, ChEBI/CARD
+    structure, antibacterial role, class, and retained CARD assertions; added transcription-termination
+    inhibition and the directly bound Rho complex.
+  llm_assisted: true

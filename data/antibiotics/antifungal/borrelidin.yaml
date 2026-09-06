@@ -1,7 +1,7 @@
 identifier: CHEBI:78661
 label: borrelidin
 antimicrobial_class: ANTIFUNGAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A macrolide that is isolated from several Streptomyces species and displays
   antibiotic, antineoplastic and antimalarial properties.
@@ -24,6 +24,12 @@ activity_roles:
 - CHEBI:33281
 - CHEBI:35718
 - CHEBI:38068
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: 'CURATOR: PMID:22967236 showed that threonine dose-dependently
+  antagonized borrelidin activity against Phytophthora sojae, measured in-vitro inhibition
+  of threonyl-tRNA synthetase, and used fluorescence and circular dichroism to support
+  formation of a tight enzyme-compound complex.'
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H][C@]1([C@]2([H])CCC[C@H]2C(=O)O)C/C=C/C=C(/C#N)[C@H](O)[C@@H](C)C[C@H](C)C[C@H](C)C[C@H](C)[C@@H](O)CC(=O)O1'
   standard_inchi: InChI=1S/C28H43NO6/c1-17-12-18(2)14-20(4)27(32)21(16-29)8-5-6-11-25(22-9-7-10-23(22)28(33)34)35-26(31)15-24(30)19(3)13-17/h5-6,8,17-20,22-25,27,30,32H,7,9-15H2,1-4H3,(H,33,34)/b6-5+,21-8-/t17-,18+,19-,20-,22+,23+,24-,25+,27+/m0/s1
@@ -33,6 +39,22 @@ chemical_structure:
   charge: 0
   average_mass: 489.653
   monoisotopic_mass: 489.30904
+molecular_targets:
+- target_label: threonyl-tRNA synthetase
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:67593
+  taxon_label: Phytophthora sojae
+  experimental_context: Threonine antagonism, purified-enzyme inhibition, fluorescence
+    spectroscopy, and circular dichroism linked antifungal activity to a tight borrelidin-ThrRS
+    complex.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-09
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:22967236
+    notes: Primary P. sojae target and antifungal-mechanism study (DOI:10.1021/jf302857x).
 xrefs:
 - cas:7184-60-3
 - kegg.compound:C15687
@@ -48,6 +70,9 @@ source_concepts:
   - CHEBI:35718
   - CHEBI:38068
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:22967236
+  notes: Primary compound-specific antifungal target study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -61,3 +86,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T22:30:57Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, roles, and antifungal filing
+    class; added threonyl-tRNA-synthetase inhibition and direct target evidence from
+    the P. sojae mechanism study.
+  llm_assisted: true

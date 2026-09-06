@@ -1,7 +1,7 @@
 identifier: CHEBI:82699
 label: oritavancin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A semisynthetic glycopeptide used (as its bisphosphate salt) for the treatment
   of acute bacterial skin and skin structure infections caused or suspected to be
@@ -31,6 +31,13 @@ activity_roles:
 - CHEBI:36047
 structural_class: glycopeptide antibiotic
 structural_class_id: ARO:3000081
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_notes: 'CURATOR: whole-cell solid-state NMR in PMID:18258256 showed
+  that oritavancin binds Staphylococcus aureus peptidoglycan through the D-Ala-D-Ala
+  stem terminus and pentaglycyl bridge. The same study measured inhibition of both
+  transglycosylation and transpeptidation, supporting a dual cell-wall-biosynthesis
+  mechanism.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CN[C@H](CC(C)C)C(=O)N[C@H]1C(=O)N[C@@H](CC(N)=O)C(=O)N[C@H]2C(=O)N[C@H]3C(=O)N[C@H](C(=O)N[C@H](C(=O)O)c4cc(O)cc(O)c4-c4cc3ccc4O)[C@H](O[C@H]3C[C@](C)(N)[C@@H](O)[C@H](C)O3)c3ccc(c(Cl)c3)Oc3cc2cc(c3O[C@@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@H]2O[C@H]2C[C@](C)(NCc3ccc(-c4ccc(Cl)cc4)cc3)[C@@H](O)[C@H](C)O2)Oc2ccc(cc2Cl)[C@H]1O
   standard_inchi: InChI=1S/C86H97Cl3N10O26/c1-35(2)22-51(92-7)77(110)98-67-69(105)42-15-20-55(49(88)24-42)120-57-26-44-27-58(73(57)125-84-74(71(107)70(106)59(34-100)122-84)124-62-32-86(6,76(109)37(4)119-62)93-33-38-8-10-39(11-9-38)40-12-17-45(87)18-13-40)121-56-21-16-43(25-50(56)89)72(123-61-31-85(5,91)75(108)36(3)118-61)68-82(115)97-66(83(116)117)48-28-46(101)29-54(103)63(48)47-23-41(14-19-53(47)102)64(79(112)99-68)96-80(113)65(44)95-78(111)52(30-60(90)104)94-81(67)114/h8-21,23-29,35-37,51-52,59,61-62,64-72,74-76,84,92-93,100-103,105-109H,22,30-34,91H2,1-7H3,(H2,90,104)(H,94,114)(H,95,111)(H,96,113)(H,97,115)(H,98,110)(H,99,112)(H,116,117)/t36-,37-,51+,52-,59+,61-,62-,64+,65+,66-,67+,68-,69+,70+,71-,72+,74+,75-,76-,84-,85-,86-/m0/s1
@@ -66,6 +73,9 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:18258256
+  notes: Primary compound-specific dual cell-wall mechanism study.
 molecular_targets:
 - target_id: ARO:3000720
   target_label: acyl-D-alanyl-D-alanine
@@ -97,6 +107,20 @@ molecular_targets:
   - reference: ARO:3000726
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000189 (oritavancin); database
       assertion, not a primary citation.
+- target_label: peptidoglycan D-Ala-D-Ala termini and pentaglycyl bridges
+  target_type: CELL_WALL_COMPONENT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  experimental_context: Solid-state NMR on selectively labeled intact cells established
+    cell-wall binding and compared transglycosylation and transpeptidation inhibition.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2008-01
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:18258256
+    notes: Primary intact-cell solid-state NMR mechanism study (DOI:10.1016/j.jmb.2008.01.031).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -114,3 +138,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T22:30:50Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, antibacterial class, and roles;
+    added the dual cell-wall-synthesis mechanism and primary NMR support beside the
+    two preserved CARD cell-wall assertions.
+  llm_assisted: true

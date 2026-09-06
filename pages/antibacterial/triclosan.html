@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:164200</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_164200">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>An aromatic ether that is phenol which is substituted at C-5 by a chloro group and at C-2 by a 2,4-dichlorophenoxy group. It is widely used as a preservative and antimicrobial agent in personal care products such as soaps, skin creams, toothpaste and deodorants as well as in household items such as plastic chopping boards, sports equipment and shoes.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3005386">disinfecting agents and antiseptics</a><code class="curie">ARO:3005386</code></p>
@@ -115,64 +112,16 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta">ARO:3000872</span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000870 (triclosan); database assertion, not a primary citation.)</span></li>
 </ul>
 
-<h3>Replicase polyprotein 1ab <span class="pill plain">VIRAL_PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
-<p class="meta">BindingDB quantitative measurement in the named target organism; source assay descriptions and identifiers are retained per measurement. Evidence status: PRIMARY_EVIDENCE. Source: BINDINGDB 2026-09 (retrieved 2026-08-31).</p>
-<p><em>Severe acute respiratory syndrome coronavirus</em> <code class="curie">NCBITaxon:2901879</code></p><table>
-  <caption>Quantitative measurements</caption>
-  <thead><tr><th scope="col">Type</th><th scope="col">Reported value</th><th scope="col">Assay</th><th scope="col">BindingDB IDs</th><th scope="col">Reference</th></tr></thead>
-  <tr>
-    <td>IC50</td>
-    <td>75000 nM</td>
-    <td><strong>Various Assay</strong><br><span class="meta">This is a review article.  Please point to the original journal.</span></td>
-    <td><code class="curie">RSID 1074309</code><br><code class="curie">assay 10079_1</code><br><code class="curie">monomer 8726</code></td>
-    <td><code class="curie">PMID:34798775</code></td>
-  </tr>
-</table>
-<table>
-  <caption>Organism-specific examples</caption>
-  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
-  <tr>
-    <td>Replicase polyprotein 1ab <code class="curie">UniProtKB:P0C6X7</code></td>
-    <td>—</td>
-    <td><em>Severe acute respiratory syndrome coronavirus</em></td>
-    <td><span class="pill">REVIEWED</span></td>
-  </tr>
-</table>
-<ul class="plain evidence">
-  <li><span class="meta">PMID:34798775</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
-</ul>
-
-<h3>Trans-2-enoyl-ACP reductase II <span class="pill plain">PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
-<p class="meta">BindingDB quantitative measurement in the named target organism; source assay descriptions and identifiers are retained per measurement. Evidence status: PRIMARY_EVIDENCE. Source: BINDINGDB 2026-09 (retrieved 2026-08-31).</p>
-<p><em>Streptococcus pneumoniae</em> <code class="curie">NCBITaxon:1313</code></p><table>
-  <caption>Quantitative measurements</caption>
-  <thead><tr><th scope="col">Type</th><th scope="col">Reported value</th><th scope="col">Assay</th><th scope="col">BindingDB IDs</th><th scope="col">Reference</th></tr></thead>
-  <tr>
-    <td>IC50</td>
-    <td>&gt;30000 nM</td>
-    <td><strong>Enzyme Inhibition Assay</strong><br><span class="meta">Assays were carried out in half-area, 96-well microtiter plates. Compounds were evaluated in assay mixtures containing components specific for each enzyme. Inhibitors were varied over the range 0.01-10 uM. The consumption of NAD(P)H was monitored for 20 min at 30 °C by following the change in absorbance at 340 nm. IC50 values were estimated from a fit of the initial velocities to a standard equation. Triclosan was included in all assays as a positive control.</span></td>
-    <td><code class="curie">RSID 14752</code><br><code class="curie">assay 1080_1</code><br><code class="curie">monomer 8726</code></td>
-    <td><code class="curie">PMID:12699381</code></td>
-  </tr>
-</table>
-<table>
-  <caption>Organism-specific examples</caption>
-  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
-  <tr>
-    <td>Probable nitronate monooxygenase <code class="curie">UniProtKB:Q9FBC5</code></td>
-    <td>—</td>
-    <td><em>Streptococcus pneumoniae</em></td>
-    <td><span class="pill plain">UNREVIEWED</span></td>
-  </tr>
-</table>
-<ul class="plain evidence">
-  <li><span class="meta">PMID:12699381</span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
+<h3>enoyl-acyl carrier protein reductase (FabI) <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">Wild-type and G93-variant enzyme assays measured triclosan inhibition; triclosan-NAD+ cocrystals were obtained for G93A, G93S, and G93V E. coli FabI, with G93V increasing IC50 from 150 to 68,500 nM. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2010-11 (retrieved 2026-09-02).</p>
+<p><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></p><ul class="plain evidence">
+  <li><span class="meta">PMID:21094257</span> <span class="meta">(Primary triclosan-bound E. coli FabI-mutant structures and resistance measurements (DOI:10.1016/j.jsb.2010.11.008).)</span></li>
 </ul>
 
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>CELL_MEMBRANE_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: Reassigned after review of FabI/enoyl-ACP reductase inhibition in bacterial fatty-acid synthesis; primary reports identify FabI rather than dihydrofolate reductase as the antibacterial target for triclosan. PMID:10196195; PMID:10201369; PMID:9707111.</span></dd></dl>
+<dt>Mode of action</dt><dd>CELL_MEMBRANE_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: PMID:21094257 measured 150 nM inhibition of wild-type Escherichia coli enoyl-acyl carrier protein reductase (FabI) and resolved triclosan-NAD+ complexes of G93A, G93S, and highly resistant G93V enzymes. These data support inhibition of bacterial type-II fatty-acid/envelope synthesis, replacing the seed&#39;s unsupported folate-pathway assignment; the structures are mutant, not wild-type, complexes.</span></dd></dl>
 
 
 
@@ -402,6 +351,11 @@ or death.</p>
 
 
 
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:21094257</span> <span class="meta">(Primary exact-triclosan FabI structural, enzyme-inhibition, and G93V-resistance study.)</span></li>
+</ul>
+
 
 <h2>Curation history</h2>
 <ol class="events">
@@ -438,6 +392,16 @@ or death.</p>
   <li>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-31 · seed_from_sources</span>
+    <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI/CARD identity, structure, roles, antibacterial class, and provenance of retained CARD/BindingDB assertions; corrected the folate-pathway seed to fatty-acid/envelope synthesis inhibition and added the primary E. coli FabI target with mutant-structure boundaries.</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-09-02 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
   <li>

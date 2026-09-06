@@ -1,7 +1,7 @@
 identifier: CHEBI:27834
 label: pentostatin
 antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A member of the class of coformycins that is coformycin in which the hydroxy
   group at position 2' is replaced with a hydrogen. It is a drug used for the treatment
@@ -60,6 +60,12 @@ parent_compounds:
 - CHEBI:39304
 activity_roles:
 - CHEBI:25605
+mode_of_action: OTHER
+mode_of_action_notes: 'CURATOR: PMID:18602399 resolved pentostatin (2''-deoxycoformycin)
+  bound to Plasmodium vivax adenosine deaminase, a central enzyme in parasite purine
+  salvage. The conserved enzyme is host-shared, while the structures identify parasite-specific
+  conformational and substrate-recognition features that may support selectivity.'
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: OC[C@H]1O[C@@H](n2cnc3c2N=CNC[C@H]3O)C[C@@H]1O
   standard_inchi: InChI=1S/C11H16N4O4/c16-3-8-6(17)1-9(19-8)15-5-14-10-7(18)2-12-4-13-11(10)15/h4-9,16-18H,1-3H2,(H,12,13)/t6-,7+,8+,9+/m0/s1
@@ -87,6 +93,10 @@ source_concepts:
   role_terms:
   - CHEBI:25605
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:18602399
+  notes: Primary exact-pentostatin P. vivax adenosine-deaminase cocrystal and selectivity
+    study.
 molecular_targets:
 - target_label: Adenosine deaminase
   target_type: PROTEIN
@@ -162,6 +172,19 @@ molecular_targets:
     entry_status: UNREVIEWED
     retrieved_on: '2026-08-31'
     role: BindingDB target chain 1
+- target_label: adenosine deaminase
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: A P. vivax ADA cocrystal with the picomolar inhibitor 2'-deoxycoformycin
+    defined inhibitor recognition and a parasite-specific substrate-induced conformational
+    change.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2008-06
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:18602399
+    notes: Primary pentostatin-bound Plasmodium vivax ADA structure (DOI:10.1016/j.jmb.2008.06.048).
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -252,3 +275,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T23:30:06Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, role, unspecified filing class,
+    retained BindingDB measurements, and retained FDA assertions; added purine-salvage
+    inhibition and the directly bound P. vivax ADA target.
+  llm_assisted: true

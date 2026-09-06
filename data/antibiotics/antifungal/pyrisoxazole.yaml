@@ -1,7 +1,7 @@
 identifier: CHEBI:83823
 label: pyrisoxazole
 antimicrobial_class: ANTIFUNGAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A diastereoisomeric mixture of (3R,5S)- and (3R,5R)-pyrisoxazole. A novel
   isomeric fungicide primarily used for control of control tomato botrytis and also
@@ -20,10 +20,11 @@ activity_roles:
 - CHEBI:77884
 - CHEBI:86328
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:77884 (EC 1.14.13.70 (sterol
-  14α-demethylase) inhibitor). ChEBI asserts the role on the compound. The target
-  it names is one the host has too, so the mechanism is true but is not evidence of
-  selectivity — see mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:32714305 identified pyrisoxazole as a sterol
+  14-alpha-demethylase inhibitor, found cross-resistance only with other demethylase
+  inhibitors, and linked resistant Botrytis cinerea mutants to CYP51 substitutions
+  and induced CYP51 expression. Direct enzyme binding was modeled rather than experimentally
+  measured, so the target is represented as a resistance determinant.'
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CN1OC(c2ccc(Cl)cc2)C[C@]1(C)c1cccnc1
@@ -34,6 +35,23 @@ chemical_structure:
   charge: 0
   average_mass: 288.778
   monoisotopic_mass: 288.10294
+molecular_targets:
+- target_label: fungal CYP51 sterol 14-alpha-demethylase
+  target_type: PROTEIN
+  target_relation: RESISTANCE_DETERMINANT
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  experimental_context: UV-induced and spontaneously selected resistant mutants, cross-resistance
+    testing, CYP51 sequencing, and expression measurements; compound binding effects
+    were assessed only by molecular docking.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2020-06
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:32714305
+    notes: Primary susceptibility, mutant-selection, sequencing, expression, and cross-resistance
+      study.
 xrefs:
 - cas:847749-37-5
 - pesticides:pyrisoxazole
@@ -48,6 +66,29 @@ source_concepts:
   - CHEBI:77884
   - CHEBI:86328
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:32714305
+  notes: Primary compound-specific target-associated resistance study.
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: Botrytis cinerea CYP51 G476S and M231T substitutions
+  gene_families:
+  - CYP51 sterol 14-alpha-demethylase
+  note: The substitutions occurred in resistant mutants; docking suggested loss of
+    electrostatic interactions, while direct compound binding was not experimentally
+    measured.
+  evidence:
+  - reference: PMID:32714305
+    notes: Primary mutant-selection and sequencing study.
+- mechanism_type: OTHER
+  label: induced CYP51 expression in pyrisoxazole-resistant isolates
+  gene_families:
+  - CYP51 sterol 14-alpha-demethylase
+  note: Pyrisoxazole exposure induced higher CYP51 expression in resistant than sensitive
+    isolates.
+  evidence:
+  - reference: PMID:32714305
+    notes: Primary target-gene expression comparison.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -65,3 +106,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:54:36Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified the exact ChEBI mixture identity, structure representation, and
+    antifungal class; curator-confirmed the demethylase-pathway mode and added CYP51
+    resistance-determinant, mutation, and expression evidence.
+  llm_assisted: true

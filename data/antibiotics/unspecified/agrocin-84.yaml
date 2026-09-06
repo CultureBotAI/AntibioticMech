@@ -1,7 +1,7 @@
 identifier: CHEBI:82809
 label: agrocin 84
 antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A nucleotide conjugate that is produced by Agrobacterium radiobacter strain
   K-84. A 'Trojan horse' antibiotic used to control crown gall.
@@ -16,6 +16,13 @@ parent_compounds:
 - CHEBI:63367
 activity_roles:
 - CHEBI:33281
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: 'CURATOR: PMID:23361008 showed that agrocin 84 is processed
+  inside susceptible Agrobacterium into the toxic moiety TM84. TM84 requires tRNA(Leu)
+  for tight binding to the leucyl-tRNA synthetase synthetic active site and traps
+  an aminoacylation-like enzyme-tRNA complex. The direct structural target claim therefore
+  applies to the active metabolite, not to unprocessed agrocin 84.'
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H][C@@]1([C@H](O)CO)OC(OP(=O)(O)Nc2ncnc3c2ncn3[C@@H]2O[C@H](COP(=O)(O)NC(=O)[C@@H](O)[C@H](O)C(C)C)[C@@H](O)[C@H]2O)[C@H](O)[C@H]1O'
   standard_inchi: InChI=1S/C22H36N6O17P2/c1-7(2)11(31)14(34)20(37)27-46(38,39)42-4-9-12(32)15(35)21(43-9)28-6-25-10-18(23-5-24-19(10)28)26-47(40,41)45-22-16(36)13(33)17(44-22)8(30)3-29/h5-9,11-17,21-22,29-36H,3-4H2,1-2H3,(H2,27,37,38,39)(H2,23,24,26,40,41)/t8-,9-,11-,12-,13-,14+,15-,16-,17+,21-,22?/m1/s1
@@ -25,6 +32,21 @@ chemical_structure:
   charge: 0
   average_mass: 718.503
   monoisotopic_mass: 718.16122
+molecular_targets:
+- target_label: leucyl-tRNA synthetase–tRNA(Leu) complex
+  target_type: PROTEIN_COMPLEX
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  experimental_context: Agrocin 84 is an imported precursor that is processed intracellularly
+    to TM84. Crystal, thermodynamic, and kinetic analyses showed that TM84—not the
+    intact precursor—binds tightly to the LeuRS-tRNA(Leu) complex.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2013-01
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:23361008
+    notes: Primary agrocin-84 activation and TM84-bound LeuRS-tRNA structural/mechanistic
+      study (DOI:10.1038/ncomms2421).
 xrefs:
 - cas:59111-78-3
 - hmdb:HMDB0030532
@@ -37,6 +59,9 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:23361008
+  notes: Primary agrocin-84 Trojan-horse activation and translation-target study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -50,3 +75,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T22:58:01Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, antibiotic role, and unspecified
+    filing class; added protein-synthesis inhibition and explicitly separated agrocin
+    84 from the directly LeuRS-bound active metabolite TM84.
+  llm_assisted: true

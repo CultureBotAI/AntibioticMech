@@ -1,7 +1,7 @@
 identifier: CHEBI:29506
 label: cethromycin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: 'A macrolide antibiotic which displays in vitro activity against both
   gram-positive and gram-negative bacteria and is currently under investigation for
@@ -47,10 +47,10 @@ activity_roles:
 structural_class: macrolide antibiotic
 structural_class_id: ARO:0000000
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:12623020 determined the Deinococcus radiodurans
+  50S ribosomal-subunit structure with ABT-773 (cethromycin) bound in the nascent-peptide
+  exit tunnel. PMID:15380262 independently measured protein-synthesis inhibition and
+  tight, slowly dissociating binding to Haemophilus influenzae ribosomes.'
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H]C(CO[C@]1(C)C[C@@H](C)C(=O)[C@H](C)[C@H]2NC(=O)O[C@]2(C)[C@@H](CC)OC(=O)[C@H](C)C(=O)[C@H](C)[C@H]1O[C@@H]1O[C@H](C)C[C@H](N(C)C)[C@H]1O)=C([H])c1cnc2ccccc2c1'
@@ -61,6 +61,22 @@ chemical_structure:
   charge: 0
   average_mass: 765.945
   monoisotopic_mass: 765.42005
+molecular_targets:
+- target_label: 50S ribosomal subunit nascent-peptide exit tunnel
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: A D. radiodurans large-subunit cocrystal localized ABT-773
+    in the protein exit tunnel; H. influenzae translation and isolated-ribosome assays
+    measured inhibition, affinity, and slow dissociation.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2003-03; 2004-10
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:12623020
+    notes: Primary ABT-773-bound bacterial ribosome structural study (PDB:1NWX; DOI:10.1016/S0969-2126(03)00022-4).
+  - reference: PMID:15380262
+    notes: Primary H. influenzae translation and ribosome-affinity study (DOI:10.1016/j.ijantimicag.2004.04.013).
 xrefs:
 - ARO:3007455
 - cas:205110-48-1
@@ -88,6 +104,11 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:12623020
+  notes: Primary cethromycin-bound bacterial ribosome structural study.
+- reference: PMID:15380262
+  notes: Primary cethromycin ribosome-affinity and translation study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -101,3 +122,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T22:58:11Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI/CARD identity, structure, roles, structural class,
+    and antibacterial class; replaced the seeded mechanism note with primary evidence
+    and added the directly bound bacterial 50S exit-tunnel target.
+  llm_assisted: true

@@ -1,7 +1,7 @@
 identifier: CHEBI:28285
 label: oligomycin A
 antimicrobial_class: ANTIFUNGAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An oligomycin with formula C45H74011. An inhibitor of mitochondrial F1FO
   ATP synthase that induces apoptosis in a variety of cell types and exhibits antifungal,
@@ -27,11 +27,10 @@ activity_roles:
 - CHEBI:33281
 - CHEBI:35718
 mode_of_action: ENERGY_METABOLISM_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:20854 (ATP synthase inhibitor),
-  CHEBI:73214 (EC 3.6.3.14 (H+-transporting two-sector ATPase) inhibitor). ChEBI asserts
-  the role on the compound. The target it names is one the host has too, so the mechanism
-  is true but is not evidence of selectivity — see mode_of_action_target_scope. Not
-  a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:22869738 reports a 1.9-angstrom crystal structure
+  of oligomycin bound across two neighboring subunit-c molecules in the yeast mitochondrial
+  ATP-synthase c-ring, explaining blockade of proton-coupled ATP synthesis. PMID:29650704
+  confirms the inhibited state in the full membrane complex by cryo-EM.'
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CC[C@H]1/C=C/C=C/C[C@@H](C)[C@H](O)[C@@](C)(O)C(=O)[C@@H](C)[C@H](O)[C@@H](C)C(=O)[C@@H](C)[C@H](O)[C@@H](C)/C=C/C(=O)O[C@@H]2[C@H](C)[C@H](CC1)O[C@]1(CC[C@H](C)[C@H](C[C@@H](C)O)O1)[C@H]2C
@@ -42,6 +41,24 @@ chemical_structure:
   charge: 0
   average_mass: 791.076
   monoisotopic_mass: 790.52311
+molecular_targets:
+- target_label: mitochondrial F_O ATP synthase c-ring
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  experimental_context: A 1.9-angstrom oligomycin-bound c10-ring crystal structure
+    and a 3.8-angstrom cryo-EM structure of the full enzyme in a lipid bilayer directly
+    defined the inhibited state.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-08; 2018-04
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:22869738
+    notes: Primary oligomycin-c-ring crystal structure (DOI:10.1073/pnas.1207912109).
+  - reference: PMID:29650704
+    notes: Primary full ATP-synthase cryo-EM study with oligomycin.
 xrefs:
 - cas:579-13-5
 - kegg.compound:C11311
@@ -60,6 +77,11 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:35718
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:22869738
+  notes: Primary direct-binding structural study.
+- reference: PMID:29650704
+  notes: Primary full-complex structural study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -73,3 +95,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T22:26:12Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, and antifungal class; curator-confirmed
+    ATP-synthesis inhibition and added the directly bound mitochondrial ATP-synthase
+    c-ring with two structural studies.
+  llm_assisted: true

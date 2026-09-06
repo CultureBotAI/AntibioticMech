@@ -111,19 +111,6 @@ molecular_targets:
     source_retrieved_on: '2026-08-31'
     reference: PMID:32272481
   - measurement_type: IC50
-    original_value: '9350'
-    qualifier: EQ
-    value: 9350.0
-    unit: nM
-    assay_name: No assay is provided
-    assay_description: This is a review article.
-    bindingdb_reactant_set_id: '868913'
-    bindingdb_entry_assay_id: '8918_1'
-    bindingdb_monomer_id: '50058655'
-    source_version: 2026-09
-    source_retrieved_on: '2026-08-31'
-    reference: PMID:32852058
-  - measurement_type: IC50
     original_value: '220'
     qualifier: EQ
     value: 220.0
@@ -140,43 +127,11 @@ molecular_targets:
     source_version: 2026-09
     source_retrieved_on: '2026-08-31'
     reference: DOI:10.1101/2020.12.16.422677
-  - measurement_type: IC50
-    original_value: '9350'
-    qualifier: EQ
-    value: 9350.0
-    unit: nM
-    assay_name: Various Assay
-    assay_description: This is a review article.  Please point to the original journal.
-    bindingdb_reactant_set_id: '1074058'
-    bindingdb_entry_assay_id: '10079_1'
-    bindingdb_monomer_id: '50058655'
-    source_version: 2026-09
-    source_retrieved_on: '2026-08-31'
-    reference: PMID:34798775
-  - measurement_type: KI
-    original_value: '3710'
-    qualifier: EQ
-    value: 3710.0
-    unit: nM
-    assay_name: Various Assay
-    assay_description: This is a review article.  Please point to the original journal.
-    bindingdb_reactant_set_id: '1074059'
-    bindingdb_entry_assay_id: '10079_1'
-    bindingdb_monomer_id: '50058655'
-    source_version: 2026-09
-    source_retrieved_on: '2026-08-31'
-    reference: PMID:34798775
   evidence:
   - reference: PMID:32272481
     notes: BindingDB literature-curated quantitative target measurement; source value,
       assay text, reaction-set ID, and target organism retained.
-  - reference: PMID:32852058
-    notes: BindingDB literature-curated quantitative target measurement; source value,
-      assay text, reaction-set ID, and target organism retained.
   - reference: DOI:10.1101/2020.12.16.422677
-    notes: BindingDB literature-curated quantitative target measurement; source value,
-      assay text, reaction-set ID, and target organism retained.
-  - reference: PMID:34798775
     notes: BindingDB literature-curated quantitative target measurement; source value,
       assay text, reaction-set ID, and target organism retained.
   protein_examples:
@@ -610,6 +565,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:19:02Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T23:56:07Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

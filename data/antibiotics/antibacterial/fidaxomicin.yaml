@@ -1,7 +1,7 @@
 identifier: CHEBI:68590
 label: fidaxomicin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An 18-membered macrolide that is a fermentation product obtained from
   the Actinomycete Dactylosporangium aurantiacum. A narrow spectrum antibiotic used
@@ -45,10 +45,11 @@ activity_roles:
 structural_class: macrocyclic antibiotic
 structural_class_id: ARO:3001318
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:37416 (EC 2.7.7.6 (RNA polymerase)
-  inhibitor). ChEBI asserts the role on the compound. The target it names is one the
-  host has too, so the mechanism is true but is not evidence of selectivity — see
-  mode_of_action_target_scope. Not a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:35388215 resolved fidaxomicin bound to Clostridioides
+  difficile RNA polymerase and combined structural, biochemical, genetic, and bioinformatic
+  evidence to identify a single sensitizing residue absent from many gut commensals.
+  These data support bacterial transcription inhibition and explain an important determinant
+  of narrow-spectrum activity.'
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: CCc1c(Cl)c(O)c(Cl)c(O)c1C(=O)O[C@H]1[C@H](O)[C@H](OC)[C@H](OC/C2=C\C=C\C[C@H](O)/C(C)=C/[C@H](CC)[C@@H](O[C@@H]3OC(C)(C)[C@@H](OC(=O)C(C)C)[C@H](O)[C@@H]3O)/C(C)=C/C(C)=C/CC([C@@H](C)O)OC2=O)O[C@@H]1C
@@ -86,6 +87,10 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:35388215
+  notes: Primary exact-fidaxomicin C. difficile RNA-polymerase structure and selectivity
+    study.
 molecular_targets:
 - target_id: ARO:3003439
   target_label: antibiotic sensitive RNA polymerase switch region
@@ -102,6 +107,21 @@ molecular_targets:
   - reference: ARO:3003439
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3001319 (fidaxomicin); database
       assertion, not a primary citation.
+- target_label: bacterial RNA polymerase
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:1496
+  taxon_label: Clostridioides difficile
+  experimental_context: A cryo-EM structure directly observed fidaxomicin bound to
+    C. difficile RNA polymerase; biochemical and genetic tests identified a residue
+    that sensitizes the enzyme and contributes to narrow-spectrum activity.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2022-04
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:35388215
+    notes: Primary C. difficile RNAP-fidaxomicin structure and selectivity study (DOI:10.1038/s41586-022-04545-z).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -119,3 +139,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:42:31Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI/CARD identity, structure, antibacterial role, class,
+    FDA provenance, and retained CARD target assertion; curator-confirmed transcription
+    inhibition and added the directly bound C. difficile RNAP complex.
+  llm_assisted: true

@@ -1,7 +1,7 @@
 identifier: CHEBI:85182
 label: dasabuvir
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A member of the class of pyrimidone, which is (as the monohydrate of its
   sodium salt) in combination with ombitasvir, paritaprevir and ritonavir (under the
@@ -22,6 +22,13 @@ parent_compounds:
 - CHEBI:38337
 activity_roles:
 - CHEBI:36044
+mode_of_action: VIRAL_POLYMERASE_INHIBITION
+mode_of_action_notes: 'CURATOR: PMID:25534735 measured nanomolar inhibition of recombinant
+  hepatitis C virus genotype 1a and 1b NS5B RNA-dependent RNA polymerases and genotype-matched
+  replicons. Resistant NS5B variants selected in vitro were consistent with binding
+  at the polymerase palm-I site; the record therefore uses measured target association
+  rather than an unqualified direct-binding claim.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: COc1c(-c2ccc3cc(NS(C)(=O)=O)ccc3c2)cc(-n2ccc(=O)nc2=O)cc1C(C)(C)C
   standard_inchi: InChI=1S/C26H27N3O5S/c1-26(2,3)22-15-20(29-11-10-23(30)27-25(29)31)14-21(24(22)34-4)18-7-6-17-13-19(28-35(5,32)33)9-8-16(17)12-18/h6-15,28H,1-5H3,(H,27,30,31)
@@ -31,6 +38,21 @@ chemical_structure:
   charge: 0
   average_mass: 493.585
   monoisotopic_mass: 493.16714
+molecular_targets:
+- target_label: hepatitis C virus NS5B RNA-dependent RNA polymerase palm-I site
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: Recombinant genotype 1a and 1b NS5B inhibition and subgenomic
+    replicon assays; selected substitutions were consistent with the palm-I site,
+    but the abstract did not report a direct compound-bound structure.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2014-12
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:25534735
+    notes: Primary recombinant-enzyme, replicon, selectivity, and resistance-selection
+      study.
 xrefs:
 - cas:1132935-63-7
 - drugcentral:4914
@@ -45,6 +67,21 @@ source_concepts:
   role_terms:
   - CHEBI:36044
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:25534735
+  notes: Primary compound-specific NS5B mechanism, activity, and resistance-profile
+    study.
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: HCV NS5B C316Y, M414T, Y448C/Y448H, and S556G variants
+  gene_families:
+  - HCV NS5B RNA-dependent RNA polymerase
+  note: These NS5B variants were selected in genotype 1 replicon cells maintained
+    at 10- or 100-fold the dasabuvir EC50 and were consistent with interaction at
+    the polymerase palm-I site.
+  evidence:
+  - reference: PMID:25534735
+    notes: Primary in-vitro selection and sequencing study.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -58,3 +95,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:50:57Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, and antiviral class; added the
+    primary-evidence NS5B polymerase mechanism, measured palm-I target association,
+    and selected target-alteration resistance variants.
+  llm_assisted: true

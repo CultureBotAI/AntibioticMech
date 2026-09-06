@@ -1,7 +1,7 @@
 identifier: CHEBI:44504
 label: nogalamycin
 antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An anthracycline antibiotic isolated from Streptomyces nogalater. It is
   a DNA intercalator and exhibits anticancer properties.
@@ -38,6 +38,12 @@ parent_compounds:
 - CHEBI:63367
 activity_roles:
 - CHEBI:33281
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_notes: 'CURATOR: PMID:1991116 resolved nogalamycin intercalated at
+  terminal CpG steps of a DNA hexamer. The drug contacts both strands in both grooves
+  and causes substantial base-pair and backbone distortions; the observed hydrogen
+  bonds did not establish sequence-specific binding.'
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H][C@@]12Oc3c(cc(O)c4c3C(=O)c3cc5c(c(O)c3C4=O)[C@@H](O[C@@H]3O[C@@H](C)[C@H](OC)[C@@](C)(OC)[C@H]3OC)C[C@](C)(O)[C@@H]5C(=O)OC)[C@@](C)(O1)[C@H](O)[C@@H](N(C)C)[C@@H]2O'
   standard_inchi: InChI=1S/C39H49NO16/c1-14-32(49-7)39(4,52-10)33(50-8)36(53-14)54-19-13-37(2,48)24(34(47)51-9)15-11-16-21(27(43)20(15)19)28(44)22-18(41)12-17-30(23(22)26(16)42)55-35-29(45)25(40(5)6)31(46)38(17,3)56-35/h11-12,14,19,24-25,29,31-33,35-36,41,43,45-46,48H,13H2,1-10H3/t14-,19-,24-,25-,29-,31+,32-,33-,35+,36-,37-,38+,39+/m0/s1
@@ -47,6 +53,20 @@ chemical_structure:
   charge: 0
   average_mass: 787.812
   monoisotopic_mass: 787.30513
+molecular_targets:
+- target_label: double-stranded DNA
+  target_type: NUCLEIC_ACID
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: An X-ray structure of nogalamycin with a self-complementary
+    DNA hexamer showed terminal-CpG intercalation, two-strand/two-groove contacts,
+    and large departures from B-DNA geometry.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1991-02
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:1991116
+    notes: Primary nogalamycin-DNA cocrystal study (DOI:10.1021/bi00219a029).
 xrefs:
 - cas:1404-15-5
 - chemspider:4451071
@@ -63,6 +83,9 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:1991116
+  notes: Primary exact-nogalamycin DNA intercalation structure.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -76,3 +99,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T23:30:09Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, antibiotic role, and unspecified
+    filing class; added nucleic-acid synthesis inhibition and directly observed, non-sequence-specific
+    DNA intercalation.
+  llm_assisted: true

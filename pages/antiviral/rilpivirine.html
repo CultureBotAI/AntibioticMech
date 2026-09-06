@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:68606</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_68606">resolve</a>  <span class="sep">·</span><a href="../class/antiviral.html">ANTIVIRAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>An aminopyrimidine that is pyrimidine-2,4-diamine in which the amino groups at positions 2 and 4 are substituted by 4-cyanophenyl and 4-[(E)-2-cyanovinyl]-2,6-dimethylphenyl groups respectively. Used for treatment of HIV.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
@@ -95,10 +92,19 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+<h2>Molecular targets</h2>
+<p class="meta">The molecular entity or process this compound acts on. Each target
+carries evidence — this is a mechanistic claim, not a classification.</p>
+<h3>HIV-1 reverse transcriptase <span class="pill plain">VIRAL_PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">X-ray crystal structures resolved rilpivirine bound to both wild-type and K103N HIV-1 reverse transcriptase. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2010-05 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:20438081</span> <span class="meta">(Primary compound-enzyme crystal-structure study.)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>VIRAL_POLYMERASE_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— Assigned from ChEBI role CHEBI:53756 (HIV-1 reverse transcriptase inhibitor), CHEBI:59897 (EC 2.7.7.49 (RNA-directed DNA polymerase) inhibitor). ChEBI asserts the role on the compound. The role names a target specific to the microbe or virus — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd></dl>
+<dt>Mode of action</dt><dd>VIRAL_POLYMERASE_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: PMID:20438081 determined crystal structures of rilpivirine bound to wild-type and K103N HIV-1 reverse transcriptase, directly confirming the non-nucleoside viral polymerase target and showing a similar binding mode in both enzyme forms.</span></dd></dl>
 
 
 
@@ -106,6 +112,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 
 
+
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:20438081</span> <span class="meta">(Primary wild-type and K103N reverse-transcriptase structural study.)</span></li>
+</ul>
 
 
 <h2>Curation history</h2>
@@ -124,6 +135,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI identity, structure, antiviral class, and role; curator-confirmed viral polymerase inhibition and added the directly observed HIV-1 reverse-transcriptase binding target.</p>
   </li>
 </ol>
 

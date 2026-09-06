@@ -1,7 +1,7 @@
 identifier: CHEBI:82977
 label: daclatasvir
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A member of the class of biphenyls that is a potent inhibitor of nonstructural
   protein 5A and is used (as its hydrochloride salt) for treatment of hepatitis C.
@@ -32,11 +32,12 @@ parent_compounds:
 activity_roles:
 - CHEBI:36044
 - CHEBI:83799
-mode_of_action: VIRAL_ASSEMBLY_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:83799 (nonstructural protein
-  5A inhibitor). ChEBI asserts the role on the compound. The role names a target specific
-  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
-  review.
+mode_of_action: MULTIPLE
+mode_of_action_notes: 'CURATOR: PMID:23089758 measured picomolar daclatasvir activity
+  against HCV NS5A genotype-3 replicons and selected NS5A resistance at residues 31
+  and 93. PMID:23431163 combined viral-kinetic modeling with cell experiments and
+  supported two effects: inhibition of viral RNA synthesis and of virion assembly/secretion.
+  Direct compound-NS5A binding was not established.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: COC(=O)N[C@H](C(=O)N1CCC[C@H]1c1ncc(-c2ccc(-c3ccc(-c4cnc([C@@H]5CCCN5C(=O)[C@@H](NC(=O)OC)C(C)C)n4)cc3)cc2)n1)C(C)C
@@ -47,6 +48,22 @@ chemical_structure:
   charge: 0
   average_mass: 738.89
   monoisotopic_mass: 738.38533
+molecular_targets:
+- target_label: hepatitis C virus nonstructural protein 5A (NS5A)
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: HCV genotype replicons, resistance selection, viral-kinetic
+    modeling, and cell experiments associated daclatasvir with NS5A-dependent replication
+    and assembly; direct binding was not established.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-10; 2013-02
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:23089758
+    notes: Primary genotype-3 NS5A replicon and resistance-selection study (DOI:10.1128/AAC.01874-12).
+  - reference: PMID:23431163
+    notes: Primary multiscale-model and in-vitro dual-mechanism study (DOI:10.1073/pnas.1203110110).
 xrefs:
 - cas:1009119-64-5
 - drugcentral:4875
@@ -62,6 +79,25 @@ source_concepts:
   - CHEBI:36044
   - CHEBI:83799
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:23089758
+  notes: Primary daclatasvir NS5A replicon and resistance study.
+- reference: PMID:23431163
+  notes: Primary daclatasvir dual-mechanism modeling and cell study.
+- reference: PMID:23403428
+  notes: Primary clinical resistance-persistence study.
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: HCV NS5A substitutions at M28, Q30, L31, and Y93
+  gene_families:
+  - HCV NS5A
+  note: Replicon selection and sequencing after 14-day monotherapy identified genotype-dependent
+    NS5A resistance variants; variants at positions 28, 30, 31, and 93 persisted for
+    up to six months in the studied populations.
+  evidence:
+  - reference: PMID:23403428
+    notes: Primary daclatasvir monotherapy sequencing and resistance-persistence study
+      (DOI:10.1128/AAC.02494-12).
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -75,3 +111,11 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T23:13:09Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact free-base ChEBI identity distinct from the administered
+    salt, structure, roles, and antiviral class; corrected the assembly-only seed
+    to MULTIPLE, added the evidence-calibrated NS5A association, and added target-alteration
+    resistance.
+  llm_assisted: true

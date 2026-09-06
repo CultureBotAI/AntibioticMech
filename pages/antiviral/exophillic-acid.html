@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:232062</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_232062">resolve</a>  <span class="sep">·</span><a href="../class/antiviral.html">ANTIVIRAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A monosaccharide derivative that is 4-(2,4-dihydroxy-6-nonylbenzoyloxy)-2-hydroxy-6-nonylbenzoic acid in which the hydroxy group at position 2 is replaced by a β-D-glucopyranosyloxy group.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
@@ -83,6 +80,25 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+<h2>Molecular targets</h2>
+<p class="meta">The molecular entity or process this compound acts on. Each target
+carries evidence — this is a mechanistic claim, not a classification.</p>
+<h3>HIV-1 integrase strand-transfer activity <span class="pill plain">VIRAL_PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">An in-vitro HIV-1 integrase strand-transfer assay measured an IC50 of 68 micromolar; direct compound binding was not established. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2003-12 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:15015729</span> <span class="meta">(Primary isolation, structure-elucidation, and HIV-1 integrase assay study.)</span></li>
+</ul>
+
+<h3>sodium taurocholate cotransporting polypeptide (NTCP) <span class="pill plain">PROTEIN</span> <span class="pill">MEASURED_TARGET_ASSOCIATION</span></h3>
+<p class="meta">Primary human hepatocyte infection, preS1 attachment, bile-acid uptake, and compound-NTCP interaction assays implicated this host HBV/HDV receptor; the abstract does not establish a cocrystal. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2022-04 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:35458494</span> <span class="meta">(Primary HBV/HDV entry and host-receptor mechanism study (DOI:10.3390/v14040764).)</span></li>
+</ul>
+
+
+<h2>Mechanism summary</h2>
+<dl class="fields">
+<dt>Mode of action</dt><dd>MULTIPLE <span class="meta">— CURATOR: exophillic acid has two compound-specific antiviral mechanisms in different systems. PMID:15015729 measured inhibition of HIV-1 integrase strand transfer (IC50 68 micromolar), whereas PMID:35458494 found that it interacts with host NTCP and blocks preS1-mediated attachment and entry of HBV and HDV without affecting intracellular HBV replication. The mixed viral and host targets make a single target-scope value inappropriate.</span></dd></dl>
 
 
 
@@ -91,6 +107,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 
 
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:15015729</span> <span class="meta">(Primary isolation and HIV-1 integrase assay report.)</span></li>
+  <li><span class="meta">PMID:35458494</span> <span class="meta">(Primary HBV/HDV entry mechanism study.)</span></li>
+</ul>
 
 
 <h2>Curation history</h2>
@@ -109,6 +130,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI identity, structure, and antiviral class; added the distinct HIV-integrase and host-NTCP entry mechanisms, used MULTIPLE for their coexistence, and deliberately omitted a misleading single scope.</p>
   </li>
 </ol>
 

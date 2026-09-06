@@ -1,7 +1,7 @@
 identifier: CHEBI:9321
 label: sulbactam
 antimicrobial_class: ANTIMICROBIAL_UNSPECIFIED
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 synonyms:
 - synonym_text: sulbactamum
@@ -37,6 +37,13 @@ parent_compounds:
 - CHEBI:25865
 activity_roles:
 - CHEBI:33281
+mode_of_action: OTHER
+mode_of_action_notes: 'CURATOR: PMID:22974281 resolved intact sulbactam in a 1.45-angstrom
+  preacylation complex with an engineered S70C SHV-1 beta-lactamase. The mutation
+  and an unexpected C70-K73 sulfenamide bond were used to trap the otherwise reactive
+  complex, so this structure establishes inhibitor recognition but is not a wild-type
+  preacylation structure.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@@]12CC(=O)N1[C@@H](C(=O)O)C(C)(C)S2(=O)=O'
   standard_inchi: InChI=1S/C8H11NO5S/c1-8(2)6(7(11)12)9-4(10)3-5(9)15(8,13)14/h5-6H,3H2,1-2H3,(H,11,12)/t5-,6+/m1/s1
@@ -46,6 +53,20 @@ chemical_structure:
   charge: 0
   average_mass: 233.245
   monoisotopic_mass: 233.03579
+molecular_targets:
+- target_label: engineered S70C SHV-1 beta-lactamase
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: A 1.45-angstrom cocrystal captured intact sulbactam in the
+    active site of S70C SHV-1; the engineered catalytic mutation and C70-K73 sulfenamide
+    bond limit extrapolation to wild-type enzyme.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-09
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:22974281
+    notes: Primary sulbactam-S70C-SHV-1 preacylation structure (DOI:10.1021/ja3073676).
 xrefs:
 - beilstein:4192832
 - cas:68373-14-8
@@ -67,6 +88,9 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:22974281
+  notes: Primary exact-sulbactam preacylation cocrystal in an engineered SHV-1 beta-lactamase.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -80,3 +104,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T23:29:55Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, antibiotic role, and unspecified
+    filing class; added beta-lactamase inhibition and the directly observed engineered-SHV-1
+    complex with its mutant-context limitation.
+  llm_assisted: true

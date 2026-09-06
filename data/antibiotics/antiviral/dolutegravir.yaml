@@ -1,7 +1,7 @@
 identifier: CHEBI:76010
 label: dolutegravir
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A monocarboxylic acid amide obtained by formal condensation of the carboxy
   group of (4R,12aS)-7-hydroxy-4-methyl-6,8-dioxo-3,4,6,8,12,12a-hexahydro-2H-pyrido[1',2':4,5]pyrazino[2,1-b][1,3]oxazine-9-carboxylic
@@ -23,10 +23,10 @@ parent_compounds:
 activity_roles:
 - CHEBI:67268
 mode_of_action: VIRAL_INTEGRASE_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:67268 (HIV-1 integrase inhibitor).
-  ChEBI asserts the role on the compound. The role names a target specific to the
-  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
-  review.
+mode_of_action_notes: 'CURATOR: PMID:22205735 tested dolutegravir against HIV-1 integrase
+  strand-transfer function in virus, site-directed mutant, and purified-enzyme assays.
+  The study also selected and confirmed R263K as a low-level resistance substitution
+  while distinguishing the integration effect from reverse transcription.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@]12Cn3cc(C(=O)NCc4ccc(F)cc4F)c(=O)c(O)c3C(=O)N1[C@H](C)CCO2'
@@ -37,6 +37,20 @@ chemical_structure:
   charge: 0
   average_mass: 419.384
   monoisotopic_mass: 419.12928
+molecular_targets:
+- target_label: HIV-1 integrase strand-transfer activity
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: Cell-culture integration and purified-integrase biochemical
+    assays compared wild-type with R263K integrase; no compound-bound structure was
+    reported in the inspected abstract.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2011-12
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:22205735
+    notes: Primary selection, reverse-genetics, integration, and purified-enzyme study.
 xrefs:
 - cas:1051375-16-6
 - drugcentral:4805
@@ -54,6 +68,22 @@ source_concepts:
   role_terms:
   - CHEBI:67268
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:22205735
+  notes: Primary integrase target and resistance study.
+- reference: PMID:22018760
+  notes: Primary randomized phase-2b antiviral-activity study.
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: HIV-1 integrase R263K substitution
+  gene_families:
+  - HIV-1 integrase
+  note: R263K emerged during in-vitro dolutegravir selection across HIV-1 subtypes
+    and conferred low-level resistance by site-directed mutagenesis while decreasing
+    integration.
+  evidence:
+  - reference: PMID:22205735
+    notes: Primary in-vitro selection and site-directed-mutagenesis study.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -67,3 +97,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:54:34Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, and antiviral class; added the
+    measured HIV-1 integrase target and R263K target-alteration resistance with primary
+    evidence.
+  llm_assisted: true

@@ -1,7 +1,7 @@
 identifier: CHEBI:77942
 label: tavaborole
 antimicrobial_class: ANTIFUNGAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A member of the class of benzoxaboroles that is 1,3-dihydro-1-hydroxy-2,1-benzoxaborole
   substituted at position 5 by a fluoro group. A topical antifungal agent used for
@@ -29,10 +29,10 @@ parent_compounds:
 activity_roles:
 - CHEBI:35718
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:17588934 showed that tavaborole (AN2690) forms
+  a stable covalent adduct with the terminal adenosine of tRNA(Leu) in the editing
+  site of yeast cytoplasmic leucyl-tRNA synthetase. Trapping enzyme-bound tRNA prevents
+  leucyl-tRNA synthesis and thereby blocks protein synthesis.'
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: OB1OCc2cc(F)ccc21
@@ -43,6 +43,20 @@ chemical_structure:
   charge: 0
   average_mass: 151.933
   monoisotopic_mass: 152.04449
+molecular_targets:
+- target_label: cytoplasmic leucyl-tRNA synthetase-tRNA(Leu) editing complex
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: Biochemical and structural experiments showed a boron-mediated
+    tRNA(Leu)-AN2690 adduct trapped in the yeast LeuRS editing site, preventing catalytic
+    turnover.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2007-06
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:17588934
+    notes: Primary tavaborole tRNA-trapping mechanism study (DOI:10.1126/science.1142189).
 xrefs:
 - cas:174671-46-6
 - drugcentral:4877
@@ -56,6 +70,9 @@ source_concepts:
   role_terms:
   - CHEBI:35718
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:17588934
+  notes: Primary exact-tavaborole LeuRS editing-site and protein-synthesis study.
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -289,3 +306,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T23:29:58Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, antifungal role, filing class,
+    and retained FDA assertions; curator-confirmed protein-synthesis inhibition and
+    added the directly observed LeuRS-tRNA editing complex.
+  llm_assisted: true

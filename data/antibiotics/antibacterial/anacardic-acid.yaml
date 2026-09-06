@@ -118,27 +118,6 @@ molecular_targets:
     source_version: 2026-09
     source_retrieved_on: '2026-08-31'
     reference: PMID:32803196
-  - measurement_type: EC50
-    original_value: '3980'
-    qualifier: EQ
-    value: 3980.0
-    unit: nM
-    assay_name: SARS-CoV-2 CPE assay
-    assay_description: SARS-CoV-2 CPE assay was conducted at Southern Research Institute
-      (Birmingham, AL) as described in previous reports30, 31. In brief, high ACE2
-      expressing Vero E6 cells were inoculated with SARS-CoV-2 (USA_WA1/2020) at 0.002
-      M.O.I. After infection of 72 h at 37 °C and 5% CO2, the cell viability was examined
-      with CellTiter-Glo ATP content assay kit (Promega, Madison, WI, USA). CPE raw
-      data were normalized to non-infected cells and virus infected cells only which
-      were set as 100% efficacy and 0 efficacy, respectively. In addition, the compound
-      cytotoxicity was evaluated in the same cells by measuring ATP content in the
-      absence of virus.
-    bindingdb_reactant_set_id: '844354'
-    bindingdb_entry_assay_id: '8814_2'
-    bindingdb_monomer_id: '50240436'
-    source_version: 2026-09
-    source_retrieved_on: '2026-08-31'
-    reference: PMID:32803196
   evidence:
   - reference: PMID:32803196
     notes: BindingDB literature-curated quantitative target measurement; source value,
@@ -169,6 +148,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:18:57Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T23:56:01Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

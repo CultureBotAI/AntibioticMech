@@ -1,7 +1,7 @@
 identifier: CHEBI:85188
 label: paritaprevir
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An azamacrocycle which is used which is in combination with dasabuvir
   sodium hydrate, ombitasvir and ritonavir (under the trade name Viekira Pak) for
@@ -33,10 +33,10 @@ parent_compounds:
 activity_roles:
 - CHEBI:36044
 mode_of_action: VIRAL_PROTEASE_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:64924 (hepatitis C protease inhibitor).
-  ChEBI asserts the role on the compound. The role names a target specific to the
-  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
-  review.
+mode_of_action_notes: 'CURATOR: PMID:25451053 studied ABT-450 (paritaprevir) as a
+  hepatitis C virus NS3/4A protease inhibitor in biochemical, genotype-replicon, resistance-selection,
+  and short monotherapy experiments. Functional evidence supports NS3/4A as the target,
+  without establishing direct compound binding in the inspected report.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@@]12C[C@@H](Oc3nc4ccccc4c4ccccc34)CN1C(=O)[C@@H](NC(=O)c1cnc(C)cn1)CCCCC/C=C\[C@@]1([H])C[C@@]1(C(=O)NS(=O)(=O)C1CC1)NC2=O'
@@ -47,6 +47,21 @@ chemical_structure:
   charge: 0
   average_mass: 765.893
   monoisotopic_mass: 765.29447
+molecular_targets:
+- target_label: hepatitis C virus NS3/4A serine protease
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: Biochemical protease assays, HCV genotype replicons, resistance
+    selection, and a three-day monotherapy study established the functional target
+    association; direct binding was not established.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2014-12
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:25451053
+    notes: Primary ABT-450 target, genotype-replicon, resistance, and monotherapy
+      study (DOI:10.1128/AAC.04227-14).
 xrefs:
 - cas:1216941-48-8
 - kegg.drug:D10580
@@ -59,6 +74,20 @@ source_concepts:
   role_terms:
   - CHEBI:36044
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:25451053
+  notes: Primary paritaprevir NS3/4A mechanism and resistance study.
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: HCV NS3 R155, A156, and D168 resistance-associated substitutions
+  gene_families:
+  - HCV NS3 serine protease
+  note: Resistance selection and mutant replicon testing identified substitutions
+    at NS3 positions R155, A156, and D168 with reduced paritaprevir susceptibility;
+    the magnitude was substitution- and genotype-dependent.
+  evidence:
+  - reference: PMID:25451053
+    notes: Primary paritaprevir resistance-selection and mutant-replicon study.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -72,3 +101,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T22:53:32Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, and antiviral class; replaced
+    the database-only mechanism rationale with primary ABT-450 evidence and added
+    the NS3/4A target plus target-alteration resistance.
+  llm_assisted: true

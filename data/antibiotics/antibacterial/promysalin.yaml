@@ -1,7 +1,7 @@
 identifier: CHEBI:171658
 label: promysalin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A carboxylic ester resulting from the formal condensation of the carboxy
   group of (2S)-1-(2-hydroxybenzoyl)-2,3-dihydro-1H-pyrrole-2-carboxylic acid with
@@ -27,6 +27,13 @@ parent_compounds:
 - CHEBI:35681
 activity_roles:
 - CHEBI:33282
+mode_of_action: MULTIPLE
+mode_of_action_notes: 'CURATOR: promysalin has context-dependent antibacterial mechanisms.
+  PMID:29300464 identified Pseudomonas aeruginosa succinate dehydrogenase through
+  affinity profiling and in-silico, in-vitro, in-vivo, and resistant-mutant validation.
+  PMID:28821717 found membrane damage and leakage in Gram-positive bacteria but explicitly
+  left the Gram-negative membrane mechanism unresolved.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CCCCCC[C@H](CCCCC[C@@H](O)C(N)=O)OC(=O)[C@@H]1CC=CN1C(=O)c1ccccc1O
   standard_inchi: InChI=1S/C26H38N2O6/c1-2-3-4-6-12-19(13-7-5-8-17-23(30)24(27)31)34-26(33)21-15-11-18-28(21)25(32)20-14-9-10-16-22(20)29/h9-11,14,16,18-19,21,23,29-30H,2-8,12-13,15,17H2,1H3,(H2,27,31)/t19-,21+,23-/m1/s1
@@ -36,6 +43,37 @@ chemical_structure:
   charge: 0
   average_mass: 474.598
   monoisotopic_mass: 474.27299
+molecular_targets:
+- target_label: succinate dehydrogenase
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  experimental_context: Affinity-based protein profiling followed by computational,
+    biochemical, cellular, and resistant-mutant validation implicated Sdh; a compound-bound
+    structure was not reported.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2018-01
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:29300464
+    notes: Primary P. aeruginosa target-identification and multi-method validation
+      study (DOI:10.1021/jacs.7b11212).
+- target_label: Gram-positive bacterial cell membrane
+  target_type: MEMBRANE
+  target_relation: ATTACKED_COMPONENT
+  experimental_context: Leakage and membrane-damage assays supported membrane disruption
+    in Gram-positive bacteria; the study did not generalize this mechanism to Gram-negative
+    bacteria.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2017-08
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:28821717
+    notes: Primary promysalin membrane-damage study with explicit Gram-positive scope
+      (DOI:10.1038/s41598-017-07567-0).
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:171658
@@ -44,6 +82,11 @@ source_concepts:
   role_terms:
   - CHEBI:33282
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:29300464
+  notes: Primary P. aeruginosa succinate-dehydrogenase target study.
+- reference: PMID:28821717
+  notes: Primary Gram-positive membrane-disruption study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -57,3 +100,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T23:13:07Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI identity, structure, role, and antibacterial class;
+    added distinct P. aeruginosa succinate-dehydrogenase and Gram-positive membrane
+    mechanisms, with the reported organism-context boundary preserved.
+  llm_assisted: true

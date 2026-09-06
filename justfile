@@ -123,6 +123,11 @@ verify-corpus *args:
 worklist *args:
     uv run python scripts/curation_worklist.py {{args}}
 
+# Every unsigned record, ordered by its next evidence-review gate. The TSV is
+# a restartable checkpoint; literature references in it are discovery leads.
+review-queue *args:
+    uv run python scripts/curation_worklist.py --queue review-readiness {{args}}
+
 # Score causal graph completeness and evidence quality, poorest records first.
 causal-graph-quality *args:
     uv run python scripts/score_causal_graph_quality.py {{args}}

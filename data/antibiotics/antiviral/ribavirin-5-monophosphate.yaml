@@ -1,7 +1,7 @@
 identifier: CHEBI:45490
 label: ribavirin 5'-monophosphate
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A 1-ribosyltriazole that is ribavirin in which the hydroxy group at the
   5'-position is replaced by a phosphonooxy group. It is the active metabolite of
@@ -40,6 +40,13 @@ parent_compounds:
 - CHEBI:63594
 activity_roles:
 - CHEBI:22587
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_notes: 'CURATOR: PMID:12235158 resolved ribavirin 5''-monophosphate
+  bound to Tritrichomonas foetus IMP dehydrogenase. IMPDH catalyzes the rate-limiting
+  step in GMP biosynthesis; its inhibition depletes guanine nucleotides needed for
+  RNA and DNA synthesis. IMPDH is conserved across microbial and host cells, with
+  isoform-dependent inhibitor sensitivity.'
+mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: NC(=O)c1ncn([C@@H]2O[C@H](COP(=O)(O)O)[C@@H](O)[C@H]2O)n1
   standard_inchi: InChI=1S/C8H13N4O8P/c9-6(15)7-10-2-12(11-7)8-5(14)4(13)3(20-8)1-19-21(16,17)18/h2-5,8,13-14H,1H2,(H2,9,15)(H2,16,17,18)/t3-,4-,5-,8-/m1/s1
@@ -49,6 +56,20 @@ chemical_structure:
   charge: 0
   average_mass: 324.186
   monoisotopic_mass: 324.0471
+molecular_targets:
+- target_label: inosine monophosphate dehydrogenase (IMPDH)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: High-resolution cocrystals of T. foetus IMPDH contained ribavirin
+    5'-monophosphate alone and with mycophenolic acid, defining the inhibitor-bound
+    active-site architecture.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2002-09
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:12235158
+    notes: Primary ribavirin-monophosphate-bound protozoan IMPDH structure (DOI:10.1074/jbc.M208330200).
 xrefs:
 - cas:40925-28-8
 - chemspider:90600
@@ -63,6 +84,9 @@ source_concepts:
   role_terms:
   - CHEBI:22587
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:12235158
+  notes: Primary exact-metabolite IMPDH cocrystal and GMP-biosynthesis mechanism study.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -76,3 +100,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T23:30:03Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI metabolite identity, structure, antiviral role, and
+    class; added guanine-nucleotide synthesis inhibition and the directly bound protozoan
+    IMPDH target with host-shared scope.
+  llm_assisted: true

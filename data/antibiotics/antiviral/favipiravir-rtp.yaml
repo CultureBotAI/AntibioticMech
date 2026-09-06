@@ -1,7 +1,7 @@
 identifier: CHEBI:170009
 label: favipiravir-RTP
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A nuceloside analogue in which the nucleobase is favipiravir. It is a
   RNA-dependent RNA polymerase inhibitor which exhibits anti-influenza and anti-coronaviral
@@ -39,10 +39,11 @@ activity_roles:
 - CHEBI:149553
 - CHEBI:36044
 mode_of_action: VIRAL_POLYMERASE_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:170010 (EC 2.7.7.48 (RNA-directed
-  RNA polymerase) inhibitor). ChEBI asserts the role on the compound. The role names
-  a target specific to the microbe or virus — see mode_of_action_target_scope. Not
-  a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:33526596 resolved favipiravir-RTP at the catalytic
+  site of the SARS-CoV-2 RNA-dependent RNA polymerase by 2.5-A cryo-EM and showed
+  weak incorporation plus suppression of RNA replication in polymerase assays. The
+  evidence concerns the active triphosphate metabolite represented by this record,
+  not parent favipiravir.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: NC(=O)c1nc(F)cn([C@@H]2O[C@H](COP(=O)(O)OP(=O)(O)OP(=O)(O)O)[C@@H](O)[C@H]2O)c1=O
@@ -53,6 +54,20 @@ chemical_structure:
   charge: 0
   average_mass: 529.156
   monoisotopic_mass: 528.97
+molecular_targets:
+- target_label: SARS-CoV-2 RNA-dependent RNA polymerase catalytic site
+  target_type: VIRAL_PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: A 2.5-A cryo-EM structure resolved favipiravir-RTP with template-primer-bound
+    RdRp; polymerase assays supported weak incorporation and suppression of RNA replication.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2021-02
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:33526596
+    notes: Primary cryo-EM structure and polymerase-activity study of the exact triphosphate
+      metabolite.
 xrefs:
 - cas:740790-94-7
 - pdb-ccd:GE6
@@ -65,6 +80,9 @@ source_concepts:
   - CHEBI:149553
   - CHEBI:36044
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:33526596
+  notes: Primary exact-metabolite structure and polymerase-mechanism study.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -78,3 +96,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T21:50:52Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified the exact triphosphate identity, structure, and antiviral class;
+    curator-confirmed viral polymerase inhibition and added the direct SARS-CoV-2
+    RdRp catalytic-site target.
+  llm_assisted: true

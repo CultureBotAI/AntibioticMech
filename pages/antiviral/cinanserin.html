@@ -25,13 +25,10 @@
   <code class="curie">CHEBI:145999</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_145999">resolve</a>  <span class="sep">·</span><a href="../class/antiviral.html">ANTIVIRAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>An aryl sulfide that is (2E)-3-phenyl-N-(2-sulfanylphenyl)prop-2-enamide in which the hydrogen of the thiol group is substituted by a 3-(dimethylamino)propyl group. It is a 5-hydroxytryptamine receptor antagonist and an inhibitor of SARS-CoV replication.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
@@ -83,10 +80,19 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
 </table>
 
+<h2>Molecular targets</h2>
+<p class="meta">The molecular entity or process this compound acts on. Each target
+carries evidence — this is a mechanistic claim, not a classification.</p>
+<h3>coronavirus 3C-like protease (3CLpro) <span class="pill plain">VIRAL_PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">Surface plasmon resonance measured binding to bacterially expressed SARS-CoV and HCoV-229E 3CL proteases; enzyme and virus-cell assays linked the interaction to protease inhibition and antiviral effects. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2005-06 (retrieved 2026-09-02).</p>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:15890949</span> <span class="meta">(Primary coronavirus 3CLpro binding, enzyme-inhibition, and cell-culture study (DOI:10.1128/JVI.79.11.7095-7103.2005).)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>VIRAL_PROTEASE_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— Assigned from ChEBI role CHEBI:147285 (EC 3.4.22.69 (SARS coronavirus main proteinase) inhibitor). ChEBI asserts the role on the compound. The role names a target specific to the microbe or virus — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd></dl>
+<dt>Mode of action</dt><dd>VIRAL_PROTEASE_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: PMID:15890949 used surface plasmon resonance to demonstrate cinanserin binding to the 3C-like proteases of SARS coronavirus and human coronavirus 229E, measured enzyme inhibition, and observed reduced viral RNA and infectious-particle production in cell culture.</span></dd></dl>
 
 
 
@@ -94,6 +100,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 
 
+
+<h2>Record-level evidence</h2>
+<ul class="plain evidence">
+  <li><span class="meta">PMID:15890949</span> <span class="meta">(Primary cinanserin coronavirus-protease mechanism study.)</span></li>
+</ul>
 
 
 <h2>Curation history</h2>
@@ -112,6 +123,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED</span>
+    <span class="meta">2026-09-02 · codex · LLM-assisted</span>
+    <p>Verified exact ChEBI identity, structure, roles, and antiviral class; replaced the database-only mechanism rationale with compound-specific primary evidence and added the directly bound coronavirus 3CLpro target.</p>
   </li>
 </ol>
 

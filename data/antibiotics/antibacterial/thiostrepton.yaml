@@ -1,7 +1,7 @@
 identifier: CHEBI:29693
 label: thiostrepton
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A heterodetic cyclic peptide, in which the cyclisation step involves a
   formal lactonisation between the carboxy group of a quinaldic acid-based residue
@@ -33,10 +33,11 @@ structural_class: ribosomally synthesized and post-translationally modified pept
   antibiotics
 structural_class_id: ARO:3009656
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:48001 (protein synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: PMID:21908407 measured thiostrepton inhibition of
+  stable 70S binding and ribosome-dependent GTP hydrolysis for elongation factors
+  EF-G and EF4. A truncated EF-G lacking domains IV and V remained active and thiostrepton-insensitive,
+  supporting disruption of factor-ribosome engagement rather than direct inhibition
+  of the soluble factors.'
 mode_of_action_target_scope: HOST_SHARED_TARGET
 chemical_structure:
   smiles: '[H][C@]12N=C(c3nc(C(=O)NC(=C)C(=O)NC(=C)C(N)=O)cs3)CC[C@@]13NC(=O)[C@H](C)NC(=O)C(=C)NC(=O)[C@H](C)NC(=O)[C@H]([C@@H](C)CC)N[C@@H]1C=Cc4c([C@H](C)O)cc(nc4[C@H]1O)C(=O)O[C@H](C)[C@H](NC(=O)c1csc(n1)[C@H]([C@](C)(O)[C@@H](C)O)NC(=O)[C@H]1CSC(=N1)/C(=C/C)NC(=O)[C@H]([C@@H](C)O)NC(=O)c1csc3n1)c1nc2cs1'
@@ -75,6 +76,9 @@ source_concepts:
   role_terms:
   - CHEBI:36047
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:21908407
+  notes: Primary thiostrepton 70S-factor binding and GTPase mechanism study.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003060
@@ -98,6 +102,20 @@ molecular_targets:
   - reference: ARO:3000757
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000686 (thiostrepton); database
       assertion, not a primary citation.
+- target_label: 70S ribosome GTPase-associated center
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: 70S binding and GTP-hydrolysis assays showed loss of stable
+    EF-G and EF4 engagement at 0.15 micromolar thiostrepton; no compound-bound structure
+    was reported in this study.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2011-09
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:21908407
+    notes: Primary 70S-factor binding, GTPase, truncation, and footprinting study
+      (DOI:10.1093/nar/gkr623).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -115,3 +133,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T23:30:16Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI/CARD identity, structure, roles, class, and retained
+    CARD target/resistance provenance; curator-confirmed protein-synthesis inhibition
+    and added the measured ribosomal GTPase-center association.
+  llm_assisted: true

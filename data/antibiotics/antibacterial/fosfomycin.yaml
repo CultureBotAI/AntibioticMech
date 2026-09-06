@@ -1,7 +1,7 @@
 identifier: CHEBI:28915
 label: fosfomycin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A phosphonic acid having an (R,S)-1,2-epoxypropyl group attached to phosphorus.
 definition_source: ChEBI
@@ -68,6 +68,11 @@ activity_roles:
 - CHEBI:33281
 structural_class: phosphonic acid antibiotic
 structural_class_id: ARO:3007149
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_notes: 'CURATOR: PMID:8994972 resolved fosfomycin and UDP-N-acetylglucosamine
+  in a 1.8-angstrom Escherichia coli MurA complex. Fosfomycin was covalently attached
+  to Cys115, inhibiting the first committed step of bacterial peptidoglycan biosynthesis.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: C[C@@H]1O[C@@H]1P(=O)(O)O
   standard_inchi: InChI=1S/C3H7O4P/c1-2-3(7-2)8(4,5)6/h2-3H,1H3,(H2,4,5,6)/t2-,3+/m0/s1
@@ -105,6 +110,9 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:8994972
+  notes: Primary exact-fosfomycin MurA cocrystal and peptidoglycan-pathway study.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_INACTIVATION
   aro_id: ARO:3000149
@@ -457,6 +465,20 @@ molecular_targets:
   - reference: ARO:3000724
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000025 (fosfomycin); database
       assertion, not a primary citation.
+- target_label: UDP-N-acetylglucosamine enolpyruvyl transferase (MurA)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  experimental_context: A 1.8-angstrom E. coli MurA cocrystal directly showed fosfomycin
+    covalently bound to active-site Cys115 alongside UDP-GlcNAc.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1996-12
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:8994972
+    notes: Primary fosfomycin-MurA cocrystal (DOI:10.1016/S0969-2126(96)00153-0).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -474,3 +496,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:19:09Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI/CARD identity, structure, antibiotic role, class,
+    and provenance of retained CARD target and 48 resistance assertions; added cell-wall
+    synthesis inhibition and the directly observed covalent MurA target.
+  llm_assisted: true

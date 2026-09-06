@@ -1,7 +1,7 @@
 identifier: CHEBI:68621
 label: boceprevir
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A synthetic tripeptide consisting of N-(tert-butylcarbamoyl)-3-methyl-L-valyl,
   a cyclopropyl-fused prolyl and 3-amino-4-cyclobutyl-2-oxobutanamide residues joined
@@ -23,10 +23,11 @@ parent_compounds:
 activity_roles:
 - CHEBI:36044
 mode_of_action: VIRAL_PROTEASE_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:64924 (hepatitis C protease inhibitor).
-  ChEBI asserts the role on the compound. The role names a target specific to the
-  microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
-  review.
+mode_of_action_notes: 'CURATOR: PMID:18201776 tested SCH 503034 (boceprevir) against
+  hepatitis C virus NS3/4A protease and selected NS3 resistance substitutions at V36,
+  T54, R155, A156, and V170. PMID:20004570 further measured boceprevir-series inhibition
+  of the NS3 protease. The inspected reports support enzyme inhibition but not a direct-binding
+  classification.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@@]12[C@@H](C(=O)NC(CC3CCC3)C(=O)C(N)=O)N(C(=O)[C@@H](NC(=O)NC(C)(C)C)C(C)(C)C)C[C@]1([H])C2(C)C'
@@ -37,6 +38,22 @@ chemical_structure:
   charge: 0
   average_mass: 519.687
   monoisotopic_mass: 519.34207
+molecular_targets:
+- target_label: hepatitis C virus NS3/4A serine protease
+  target_type: VIRAL_PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  experimental_context: Protease assays, HCV replicons, and resistance selection associated
+    boceprevir activity with NS3/4A; a compound-bound structure was not used to classify
+    this item as direct binding.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2007-12; 2009-11
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:18201776
+    notes: Primary SCH 503034 HCV NS3/4A target and resistance study (DOI:10.1016/j.antiviral.2007.11.010).
+  - reference: PMID:20004570
+    notes: Primary boceprevir-series NS3 protease structure-activity study (DOI:10.1016/j.bmcl.2009.11.094).
 xrefs:
 - cas:394730-60-0
 - drugcentral:4172
@@ -70,6 +87,22 @@ source_concepts:
   role_terms:
   - CHEBI:36044
   source_version: '2026-08-30'
+evidence:
+- reference: PMID:18201776
+  notes: Primary boceprevir target and resistance study.
+- reference: PMID:20004570
+  notes: Primary boceprevir-series NS3 protease study.
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: HCV NS3 V36, T54, R155, A156, and V170 resistance-associated substitutions
+  gene_families:
+  - HCV NS3 serine protease
+  note: Replicon selection and susceptibility testing identified substitutions at
+    these NS3 positions during boceprevir exposure; effects differed by substitution,
+    with A156 substitutions producing the largest losses.
+  evidence:
+  - reference: PMID:18201776
+    notes: Primary boceprevir resistance-selection and mutant-susceptibility study.
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -114,3 +147,11 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-02T22:53:28Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified exact ChEBI grounding, recorded structure including its source
+    stereochemical limitation, antiviral class, and FDA assertion; replaced the seeded
+    mechanism note with primary evidence and added the NS3/4A target plus target-alteration
+    resistance.
+  llm_assisted: true
