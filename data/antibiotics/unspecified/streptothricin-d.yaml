@@ -41,7 +41,8 @@ source_concepts:
   source_version: '2026-08-30'
 producer_organisms:
 - taxon_id: NCBITaxon:1928
-  taxon_label: Streptomyces rochei NBRC 12908
+  taxon_label: Streptomyces rochei
+  strain: NBRC 12908
   biosynthetic_gene_cluster: BGC0000432
   source: MIBIG
   source_version: 4.0.1
@@ -50,7 +51,11 @@ producer_organisms:
   reviewed: true
   note: MIBiG active entry with a non-placeholder expert reviewer; compound 'streptothricin
     D' joined by exact Standard InChIKey.
-  reference: PMID:22820420
+  evidence:
+  - reference: PMID:22820420
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -65,6 +70,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T17:53:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:43:56Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

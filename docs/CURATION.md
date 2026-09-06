@@ -118,12 +118,72 @@ the natural thing to do, and appending is the case that needs the token.
 - An MIC without units is not a measurement. The schema keeps `mic_units`
   separate and a test fails on a value without them.
 
+## The organismal evidence model
+
+Three of this corpus's axes are claims about organisms rather than about
+molecules, and each has a different minimum before it may be written.
+
+**A producer claim** names an organism that biosynthesizes the compound. The
+minimum is a taxon with the name that taxon CURIE denotes, plus either a primary
+citation or a characterized MIBiG BGC accession. Two distinctions carry weight:
+
+- *Strain is not part of the species name.* MIBiG says "Streptomyces rochei NBRC
+  12908" while its taxon id is `NCBITaxon:1928`, which denotes the species. The
+  designation goes in `strain`, so `taxon_label` never asserts a rank the CURIE
+  does not carry, and so "which species make this?" does not require parsing
+  collection numbers.
+- *What the citation is FOR matters.* A reference attached to the compound
+  supports the producer link; an entry's inherited first legacy reference
+  supports only that the entry exists. `ProducerOrganism.evidence` records which,
+  in `notes`. A scalar reference could not.
+
+**A resistance claim** may be asserted at either of two levels, and the level is
+the thing to get right. CARD asserts *routes* — "efflux", "target alteration" —
+which are organism-independent by construction and correctly carry no taxon. PHI-base
+asserts *events in a lineage*: an allele, in a protein, in a strain, with a
+phenotype. For those the organism is the claim, so `taxon_id`/`taxon_label`,
+`strain`, `alteration`, `protein_accession` and `phenotype_id` are structured
+slots and the schema refuses an allele with no organism attached.
+
+Note the deliberate asymmetry with targets. A `MolecularTarget` should be a
+family or complex and a UniProt accession is explicitly *not* the target
+identity, because the same target exists across organisms. A resistance allele
+exists in one protein in one lineage, so on `ResistanceMechanism` the accession
+is the most precise honest identifier available. Same identifier type, opposite
+rule, for a reason.
+
+**An activity claim** is the strictest of the three: an `ActivityObservation`
+requires evidence, and a reported MIC requires its units and the assay that
+produced it. A definition sentence supplies none of these. "Active against
+Gram-positive bacteria" names a group, which is a legitimate `taxon_label` but
+can never carry an NCBITaxon CURIE; "used to treat tuberculosis" names an
+indication, which is a disease and not an organism in an assay. Neither is an
+observation.
+
+Hence `just worklist --queue producer-candidate` and `--queue activity-candidate`
+are **queues, not extractions**. Each row carries the matched phrase, what that
+phrase actually claims, and the candidate subject; a curator supplies the
+citation that turns a candidate into a record. `just report` counts the three
+states separately — populated, candidate, and no signal in the definition —
+because a synthetic compound with no producer is not a gap in the same sense
+that an unread natural product is.
+
 ## Semantic invariants
 
 - **`parent_compounds` means strictly broader.** A ChEBI `is_a` parent or an ARO
   drug class belongs there. A related-but-not-broader compound is an xref.
 - **An xref is the same structure.** A conjugate acid, a salt, or a stereoisomer
   is a different structure and a different record.
+- **Where structures cannot be compared, names still can.** The same-structure
+  gate compares InChIKeys, which needs a structure on both sides; a target with
+  none used to skip the check and publish unexamined, which is how cefdinir
+  carried `CHEBI:131724` — *iclaprim*, an unrelated antibacterial. The gate now
+  also refuses a structureless target whose name and synonyms match none of the
+  record's. That is refusal on **evidence of difference**, not on absence of
+  evidence: a target the inventory does not know at all is still kept, still
+  queued, and never refused. Refusals land on
+  `just worklist --queue xref-name-conflict` with the reason, so a curator can
+  restore the link, move it to `parent_compounds`, or agree it was wrong.
 - **A protein target should be taxon-agnostic.** Prefer a family, complex or
   function term (GO, InterPro, ComplexPortal); a UniProt accession is an example
   of the target in one organism, and belongs in `protein_examples`.

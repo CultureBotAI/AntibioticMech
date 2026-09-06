@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import csv
 import sys
+from io import StringIO
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -91,3 +93,21 @@ def test_corpus_queue_matches_every_unsigned_record(records):
     }
     actual = {row["key"] for row in review_readiness_queue(docs)}
     assert actual == expected
+
+
+def test_committed_record_review_queue_is_current(repo_root, records):
+    docs = [record for _path, record in records]
+    output = StringIO()
+    writer = csv.DictWriter(
+        output,
+        fieldnames=["queue", "key", "label", "source", "source_id", "hint"],
+        delimiter="\t",
+        lineterminator="\n",
+    )
+    writer.writeheader()
+    writer.writerows(review_readiness_queue(docs))
+
+    assert (
+        (repo_root / "curation" / "record_review_queue.tsv").read_text(encoding="utf-8")
+        == output.getvalue()
+    )

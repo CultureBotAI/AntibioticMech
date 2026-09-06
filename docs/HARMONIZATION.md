@@ -19,7 +19,7 @@ key on:
 | `CHEBI:48923` erythromycin | A ChEBI *class* over erythromycins A–E |
 | `ARO:0000000` macrolide antibiotic | A drug class — `structural_class`, not a record |
 
-The 371 concepts in that position are not lost: `just worklist` lists them, and
+The 372 concepts in that position are not lost: `just worklist` lists them, and
 each needs either a structure or an `EXCLUDE` decision.
 
 ## Identity resolution
@@ -122,7 +122,7 @@ be the only place it survived.
 `mode_of_action` is seeded from ChEBI's own mechanism roles. The maps in
 `conf/sources.yaml` translate 32 of them — `protein synthesis inhibitor`,
 `sterol 14α-demethylase inhibitor`, `HIV-1 reverse transcriptase inhibitor` and
-so on — into `ModeOfActionEnum`, and 416 of 2,911 records carry a value.
+so on — into `ModeOfActionEnum`, and 416 of 2,909 records carry a value.
 
 This is a **restatement**, not an inference, and the distinction matters because
 the alternative was tried here and failed. Filing a record on a ChEBI structural
@@ -305,10 +305,10 @@ multi-component` lists what has two or more distinct large fragments and leaves
 the judgement to a curator.
 ## Producer organisms
 
-`producer_organisms` is the corpus's largest empty axis: 6 records of 2,911 carry
+`producer_organisms` is the corpus's largest empty axis: 6 records of 2,909 carry
 one, three from the MIBiG import and three from primary-literature curation. The
-signal is sitting in the definitions — 995
-records with none use a phrase that may introduce a producer, and 795 of those
+signal is sitting in the definitions — 994
+records with none use a phrase that may introduce a producer, and 756 of those
 are followed by a binomial.
 
 **That is a queue, not an extraction.** A taxon in a definition may be the

@@ -420,6 +420,94 @@ molecular_targets:
   - reference: PMID:40455071
     notes: Primary evidence for stable phosphatidylglycerol complex formation and
       selective bacterial-membrane uptake.
+causal_graphs:
+- graph_id: daptomycin_phosphatidylglycerol_membrane_depolarization
+  title: Daptomycin targets phosphatidylglycerol-rich bacterial membranes
+  description: Daptomycin forms a calcium-dependent complex with phosphatidylglycerol-rich
+    bacterial membranes, enabling selective membrane insertion and membrane-potential
+    dissipation.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: daptomycin
+    label: daptomycin
+    node_type: COMPOUND
+    grounding: CHEBI:600103
+  - node_id: calcium_ion
+    label: calcium(2+)
+    node_type: CHEMICAL
+    grounding: CHEBI:29108
+  - node_id: phosphatidylglycerol_rich_membrane
+    label: phosphatidylglycerol-rich bacterial membrane
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Membrane state enriched in phosphatidylglycerol; kept label-only
+      because the graph represents lipid composition rather than a named membrane
+      compartment.
+  - node_id: daptomycin_pg_complex
+    label: calcium-dependent daptomycin-phosphatidylglycerol complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Daptomycin-calcium-phosphatidylglycerol uptake complex from membrane-binding
+      experiments.
+  - node_id: membrane_insertion
+    label: selective daptomycin uptake into the bacterial membrane
+    node_type: TRANSPORT_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Drug insertion into phosphatidylglycerol-rich membranes; kept
+      label-only because it is a membrane-partitioning step rather than a transporter-mediated
+      uptake process.
+  - node_id: membrane_potential
+    label: bacterial membrane potential
+    node_type: QUALITY
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Electrical potential across the cytoplasmic membrane that is
+      dissipated after daptomycin exposure.
+  edges:
+  - subject: daptomycin
+    predicate: participates in
+    object: daptomycin_pg_complex
+    description: Daptomycin is the lipopeptide component of the stable phosphatidylglycerol
+      complex isolated from bacterial membranes.
+    evidence:
+    - reference: PMID:40455071
+      notes: Machhua and colleagues found stable daptomycin-phosphatidylglycerol complex
+        formation in vitro and in drug-treated bacterial membranes.
+  - subject: calcium_ion
+    predicate: is required for
+    object: daptomycin_pg_complex
+    description: Calcium enables the membrane-associated daptomycin-phosphatidylglycerol
+      complex.
+    evidence:
+    - reference: PMID:40455071
+      notes: The phosphatidylglycerol uptake study characterized daptomycin membrane
+        insertion as calcium-dependent.
+  - subject: phosphatidylglycerol_rich_membrane
+    predicate: participates in
+    object: daptomycin_pg_complex
+    description: Phosphatidylglycerol in bacterial membranes recruits daptomycin for
+      stable complex formation.
+    evidence:
+    - reference: PMID:40455071
+      notes: Phosphatidylglycerol was shown to recruit daptomycin to the bacterial
+        membrane and enable selective uptake.
+  - subject: daptomycin_pg_complex
+    predicate: promotes
+    object: membrane_insertion
+    description: Stable daptomycin-phosphatidylglycerol complex formation drives selective
+      daptomycin uptake into phosphatidylglycerol-rich bacterial membranes.
+    evidence:
+    - reference: PMID:40455071
+      notes: The study connected stable complex formation with selective daptomycin
+        insertion into model and bacterial membranes.
+  - subject: membrane_insertion
+    predicate: dissipates
+    object: membrane_potential
+    description: Daptomycin insertion into susceptible Gram-positive bacterial membranes
+      causes calcium-dependent loss of membrane potential.
+    evidence:
+    - reference: PMID:1666494
+      notes: Daptomycin caused calcium-dependent dissipation of membrane potential
+        in growing Staphylococcus aureus.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -437,3 +525,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-04T02:15:00Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added a PMID-supported causal graph for calcium-dependent daptomycin-phosphatidylglycerol
+    membrane targeting.
+  llm_assisted: true

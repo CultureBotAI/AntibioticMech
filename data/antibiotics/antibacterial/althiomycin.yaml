@@ -78,14 +78,19 @@ producer_organisms:
   source: PRIMARY_LITERATURE_AND_MIBIG
   note: The althiomycin NRPS-PKS cluster was identified by gene inactivation; MIBiG
     BGC0000955 links the characterized cluster.
-  reference: PMID:21626639
+  evidence:
+  - reference: PMID:21626639
+    notes: Primary biosynthetic-gene-cluster study in Myxococcus xanthus DK897.
 - taxon_id: NCBITaxon:615
   taxon_label: Serratia marcescens
   strain: Db10
   source: PRIMARY_LITERATURE
   note: Chromatographic and spectroscopic analysis identified althiomycin, and disruption
     of the alb cluster eliminated production.
-  reference: PMID:23028578
+  evidence:
+  - reference: PMID:23028578
+    notes: Primary producer, biosynthesis, and activity study in Serratia marcescens
+      Db10.
 molecular_targets:
 - target_label: bacterial ribosomal peptidyl-transferase reaction
   target_type: BIOLOGICAL_PROCESS

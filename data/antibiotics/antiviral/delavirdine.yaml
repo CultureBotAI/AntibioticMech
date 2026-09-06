@@ -322,6 +322,66 @@ molecular_targets:
     entry_status: REVIEWED
     retrieved_on: '2026-08-31'
     role: BindingDB target chain 1
+causal_graphs:
+- graph_id: delavirdine_hiv1_reverse_transcriptase_inhibition
+  title: Delavirdine inhibits HIV-1 reverse transcriptase
+  description: Delavirdine inhibits HIV-1 reverse transcriptase RNA-directed DNA polymerase
+    activity, blocking the viral DNA synthesis step required for HIV-1 reverse transcription.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: delavirdine
+    label: delavirdine
+    node_type: COMPOUND
+    grounding: CHEBI:119573
+  - node_id: hiv1_reverse_transcriptase
+    label: HIV-1 reverse transcriptase
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: The graph is grounded to the HIV-1 Gag-Pol reverse transcriptase
+      region; a family-level exact term was not asserted.
+    xrefs:
+    - UniProtKB:P04585
+  - node_id: rna_directed_dna_polymerase_activity
+    label: RNA-directed DNA polymerase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0003964
+  - node_id: hiv1_reverse_transcription
+    label: HIV-1 reverse transcription
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Viral cDNA synthesis step blocked by HIV-1 reverse transcriptase
+      inhibition.
+  edges:
+  - subject: delavirdine
+    predicate: inhibits
+    object: hiv1_reverse_transcriptase
+    description: Delavirdine inhibits recombinant HIV-1 reverse transcriptase in RNA-directed
+      DNA polymerase assays.
+    evidence:
+    - reference: PMID:8809165
+      notes: BindingDB-curated HIV-1 reverse transcriptase IC50 measurements in this
+        record support direct inhibition by delavirdine.
+    - reference: PMID:10514285
+      notes: BindingDB-curated assays in this record measured delavirdine inhibition
+        of wild-type and mutant HIV-1 reverse transcriptases.
+  - subject: hiv1_reverse_transcriptase
+    predicate: enables
+    object: rna_directed_dna_polymerase_activity
+    description: HIV-1 reverse transcriptase carries the RNA-dependent DNA polymerase
+      activity that copies the viral RNA genome into DNA.
+    evidence:
+    - reference: PMID:1377403
+      notes: The first HIV-1 reverse transcriptase-inhibitor crystal structure supports
+        reverse transcriptase as a viral DNA polymerase drug target.
+  - subject: rna_directed_dna_polymerase_activity
+    predicate: is required for
+    object: hiv1_reverse_transcription
+    description: RNA-directed DNA polymerase activity initiates the viral cDNA synthesis
+      needed for HIV-1 reverse transcription.
+    evidence:
+    - reference: PMID:1377403
+      notes: HIV-1 reverse transcriptase structural work connects the drug target
+        to the viral DNA polymerase activity required during reverse transcription.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -343,3 +403,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-04T02:05:00Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added a PMID-supported causal graph for delavirdine inhibition of HIV-1
+    reverse transcriptase.
+  llm_assisted: true

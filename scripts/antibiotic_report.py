@@ -24,6 +24,10 @@ CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 sys.path.insert(0, str(REPO_ROOT / "src"))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
+from curation_worklist import (  # noqa: E402
+    activity_candidate_queue,
+    producer_candidate_queue,
+)
 from seed_from_sources import class_count_rows, class_parents, rollup_by_class  # noqa: E402
 
 
@@ -42,6 +46,9 @@ def summarize(records: list[tuple[Path, dict]]) -> dict:
     source_combo = Counter()
     structure_fields = Counter()
     mechanism = Counter()
+    structures = Counter()
+    organismal = Counter()
+    xrefs = Counter()
     class_status: dict[str, Counter] = defaultdict(Counter)
 
     for _, record in records:
@@ -71,8 +78,46 @@ def summarize(records: list[tuple[Path, dict]]) -> dict:
             mechanism["activity_spectrum"] += 1
         if record.get("producer_organisms"):
             mechanism["producer_organisms"] += 1
+        for item in record.get("structural_observations") or []:
+            structures["total"] += 1
+            if item.get("relevance") not in (None, "UNREVIEWED"):
+                structures["reviewed"] += 1
+            if item.get("relevance") == "TARGET_COMPLEX":
+                structures["target_complexes"] += 1
+        if record.get("structural_observations"):
+            mechanism["structural_observations"] += 1
+        for item in record.get("resistance_mechanisms") or []:
+            organismal["resistance_items"] += 1
+            if item.get("taxon_label"):
+                organismal["resistance_with_organism"] += 1
+
+    # An empty axis is two different situations, and reporting one number for
+    # both overstates what curation can act on. A synthetic sulfonamide has no
+    # producer organism to find; a natural product whose definition says
+    # "produced by Streptomyces rochei" has one sitting in plain text. Counting
+    # the candidate queues separates the backlog from the genuinely absent.
+    with (REPO_ROOT / "data" / "raw" / "chebi_antimicrobials.tsv").open(encoding="utf-8") as fh:
+        inventory = {row["chebi_id"]: row.get("standard_inchi_key") or ""
+                     for row in csv.DictReader(fh, delimiter="\t")}
+    for _, record in records:
+        for xref in record.get("xrefs") or []:
+            if not xref.startswith("CHEBI:"):
+                continue
+            if xref not in inventory:
+                xrefs["absent"] += 1
+            elif inventory[xref]:
+                xrefs["comparable"] += 1
+            else:
+                xrefs["structureless"] += 1
+
+    docs = [record for _, record in records]
+    organismal["producer_candidates"] = len(producer_candidate_queue(docs))
+    organismal["activity_candidates"] = len(activity_candidate_queue(docs))
 
     return {
+        "organismal": organismal,
+        "xrefs": xrefs,
+        "structures": structures,
         "total": len(records),
         "by_class": by_class,
         "by_status": by_status,
@@ -148,9 +193,51 @@ def print_report(stats: dict) -> None:
 
     print("\nMechanism layer — what curation still owes")
     for field in ("molecular_targets", "resistance_mechanisms", "mode_of_action",
-                  "causal_graphs", "activity_spectrum", "producer_organisms"):
+                  "causal_graphs", "activity_spectrum", "producer_organisms",
+                  "structural_observations"):
         count = stats["mechanism"][field]
         print(f"  {field:26s} {count:>6d}   {count / total:6.1%}")
+
+    # A structure is only mechanistic evidence once someone says what the
+    # macromolecule is; counting accessions alone would overstate the axis.
+    structures = stats["structures"]
+    if structures["total"]:
+        print(f"    of {structures['total']} structure(s): "
+              f"{structures['reviewed']} reviewed, "
+              f"{structures['target_complexes']} established as target complexes")
+
+    # #164: a check that skips its hard cases must say so. "0 structure
+    # disagreements" meant "0 among the xrefs we could compare", and the ones we
+    # could not were the ones most likely to be wrong.
+    xrefs = stats["xrefs"]
+    published = xrefs["comparable"] + xrefs["structureless"] + xrefs["absent"]
+    print(f"\nChEBI xref verification — {published} published xref(s), by what the "
+          "same-structure gate could check")
+    print(f"  {xrefs['comparable']:>6d}  have a structure to compare against. The gate "
+          "REMOVES mismatches, so")
+    print("          a surviving xref is one the gate never confirmed — only failed "
+          "to refute.")
+    print(f"  {xrefs['structureless']:>6d}  point at a term with no structure: a class or "
+          "mixture, which is not")
+    print("          a same-structure claim. Naming is checked instead (#164).")
+    print(f"  {xrefs['absent']:>6d}  point outside the inventory entirely: unverifiable, "
+          "kept and queued")
+    print("          on `just worklist --queue xref-unverified`.")
+
+    # #94: separate "nothing to find" from "found nothing yet".
+    organismal = stats["organismal"]
+    print("\nOrganismal axis — populated, candidate, or no signal")
+    for field, candidates in (("producer_organisms", organismal["producer_candidates"]),
+                              ("activity_spectrum", organismal["activity_candidates"])):
+        populated = stats["mechanism"][field]
+        silent = total - populated - candidates
+        print(f"  {field:26s} {populated:>6d} populated   "
+              f"{candidates:>5d} with a definition signal   {silent:>5d} with none")
+    items = organismal["resistance_items"]
+    if items:
+        named = organismal["resistance_with_organism"]
+        print(f"  {'resistance in an organism':26s} {named:>6d} of {items} resistance item(s) "
+              f"name the organism the resistance was observed in")
 
 
 def write_class_tsv(stats: dict, path: Path) -> None:

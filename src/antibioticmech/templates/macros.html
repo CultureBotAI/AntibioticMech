@@ -10,3 +10,7 @@
 </ul>
 {% endif %}
 {% endmacro %}
+
+{% macro curie_link(c) %}
+{%- if c %} {% if c.href %}<a href="{{ c.href }}"><code class="curie">{{ c.id }}</code></a>{% else %}<code class="curie">{{ c.id }}</code>{% endif %}{% endif %}
+{%- endmacro %}

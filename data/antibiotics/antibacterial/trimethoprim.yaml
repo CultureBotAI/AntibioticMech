@@ -929,6 +929,92 @@ molecular_targets:
     entry_status: REVIEWED
     retrieved_on: '2026-08-31'
     role: BindingDB target chain 1
+causal_graphs:
+- graph_id: trimethoprim_folate_pathway_inhibition
+  title: Trimethoprim inhibits bacterial dihydrofolate reductase
+  description: Trimethoprim inhibits bacterial dihydrofolate reductase, reducing tetrahydrofolate
+    regeneration and one-carbon transfer reactions needed for nucleotide biosynthesis
+    and growth.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: trimethoprim
+    label: trimethoprim
+    node_type: COMPOUND
+    grounding: CHEBI:45924
+  - node_id: bacterial_dhfr
+    label: antibiotic-sensitive dihydrofolate reductase
+    node_type: GENE_OR_PROTEIN
+    grounding: ARO:3000745
+    gene_symbols:
+    - folA
+  - node_id: dhfr_activity
+    label: dihydrofolate reductase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004146
+  - node_id: reduced_folate_pool
+    label: reduced folate pool
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Represents tetrahydrofolate and one-carbon folate cofactors downstream
+      of DHFR activity.
+  - node_id: nucleotide_biosynthesis
+    label: folate-dependent nucleotide biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Covers the purine and thymidylate biosynthetic demand for one-carbon
+      folate cofactors downstream of DHFR.
+  - node_id: bacterial_growth
+    label: bacterial growth
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Generic terminal growth phenotype; not yet grounded to a taxon-specific
+      growth assay.
+  edges:
+  - subject: trimethoprim
+    predicate: inhibits
+    object: bacterial_dhfr
+    description: Trimethoprim directly inhibits bacterial DHFR in quantitative enzyme
+      assays.
+    evidence:
+    - reference: PMID:14623005
+      notes: BindingDB-curated Staphylococcus aureus DHFR IC50 measurements in this
+        record support direct enzyme inhibition by trimethoprim.
+  - subject: bacterial_dhfr
+    predicate: enables
+    object: dhfr_activity
+    description: Bacterial DHFR supplies the NADPH-dependent reduction of dihydrofolate
+      to tetrahydrofolate.
+    evidence:
+    - reference: PMID:4254117
+      notes: Miovic and Pizer treated Escherichia coli with trimethoprim to connect
+        DHFR inhibition to folate-dependent macromolecular synthesis defects.
+  - subject: dhfr_activity
+    predicate: maintains
+    object: reduced_folate_pool
+    description: DHFR activity regenerates reduced folates used in one-carbon transfer
+      reactions.
+    evidence:
+    - reference: PMID:4254117
+      notes: Primary E. coli trimethoprim experiments support reduced folate regeneration
+        as the metabolic step downstream of DHFR.
+  - subject: reduced_folate_pool
+    predicate: supplies one-carbon cofactors for
+    object: nucleotide_biosynthesis
+    description: Loss of reduced folate regeneration limits folate-dependent nucleotide
+      biosynthesis.
+    evidence:
+    - reference: PMID:4254117
+      notes: Primary E. coli trimethoprim experiments support nucleotide biosynthesis
+        as a downstream consequence of DHFR inhibition.
+  - subject: nucleotide_biosynthesis
+    predicate: supports
+    object: bacterial_growth
+    description: Impaired nucleotide biosynthesis contributes to trimethoprim growth
+      inhibition.
+    evidence:
+    - reference: PMID:4254117
+      notes: Macromolecular-synthesis phenotypes in trimethoprim-treated E. coli connect
+        DHFR inhibition to growth arrest.
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -1191,3 +1277,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-04T01:01:11Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added a PMID-supported causal graph for trimethoprim inhibition of bacterial
+    dihydrofolate reductase and downstream folate-dependent nucleotide biosynthesis.
+  llm_assisted: true

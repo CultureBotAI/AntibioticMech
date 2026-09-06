@@ -1532,6 +1532,127 @@ molecular_targets:
     entry_status: REVIEWED
     retrieved_on: '2026-08-31'
     role: BindingDB target chain 2
+causal_graphs:
+- graph_id: ciprofloxacin_topoisomerase_poisoning
+  title: Ciprofloxacin poisons bacterial type II topoisomerases
+  description: Ciprofloxacin traps bacterial DNA gyrase and topoisomerase IV on cleaved
+    DNA, preventing resealing of the enzyme-linked DNA break and disrupting replication-linked
+    DNA topology control.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ciprofloxacin
+    label: ciprofloxacin
+    node_type: COMPOUND
+    grounding: CHEBI:100241
+  - node_id: dna_gyrase
+    label: bacterial DNA gyrase
+    node_type: GENE_OR_PROTEIN
+    grounding: ARO:3000733
+    grounding_notes: Grounded through CARD's fluoroquinolone-sensitive GyrA target;
+      GyrA and GyrB form the bacterial DNA gyrase target complex.
+    xrefs:
+    - ARO:3003261
+    gene_symbols:
+    - gyrA
+    - gyrB
+  - node_id: topoisomerase_iv
+    label: bacterial topoisomerase IV
+    node_type: GENE_OR_PROTEIN
+    grounding: ARO:3000735
+    grounding_notes: Grounded through CARD's fluoroquinolone-sensitive ParC target;
+      ParC and ParE form the bacterial topoisomerase IV target complex.
+    gene_symbols:
+    - parC
+    - parE
+  - node_id: gyrase_dna_cleavage_complex
+    label: DNA gyrase covalent DNA cleavage complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Enzyme-linked DNA break stabilized by ciprofloxacin; kept label-only
+      because the state is drug-bound and catalytic-step specific.
+  - node_id: topoiv_dna_cleavage_complex
+    label: topoisomerase IV covalent DNA cleavage complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Enzyme-linked DNA break stabilized by ciprofloxacin; kept label-only
+      because the state is drug-bound and catalytic-step specific.
+  - node_id: dna_religation
+    label: type II topoisomerase DNA religation
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Resealing step of the gyrase/topoisomerase IV catalytic cycle
+      that is blocked when quinolone-stabilized cleavage complexes persist.
+  - node_id: dna_topology_control
+    label: replication-associated DNA topology control
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Covers removal of positive supercoils and daughter-chromosome
+      decatenation by gyrase and topoisomerase IV.
+  edges:
+  - subject: ciprofloxacin
+    predicate: stabilizes
+    object: gyrase_dna_cleavage_complex
+    description: Ciprofloxacin acts on DNA gyrase-DNA complexes and promotes trapped
+      gyrase-mediated DNA cleavage.
+    evidence:
+    - reference: PMID:24497635
+      notes: Mustaev and colleagues assayed ciprofloxacin-stabilized DNA cleavage
+        by wild-type gyrase and topoisomerase IV.
+  - subject: dna_gyrase
+    predicate: participates in
+    object: gyrase_dna_cleavage_complex
+    description: GyrA/GyrB DNA gyrase forms the covalent cleavage complex trapped
+      by fluoroquinolones.
+    evidence:
+    - reference: PMID:9207016
+      notes: Cove and colleagues showed purified DNA gyrase cleaves short DNA substrates
+        in the presence of ciprofloxacin or oxolinic acid.
+  - subject: ciprofloxacin
+    predicate: stabilizes
+    object: topoiv_dna_cleavage_complex
+    description: Ciprofloxacin also targets topoisomerase IV, with target preference
+      varying by pathogen and quinolone structure.
+    evidence:
+    - reference: PMID:8891138
+      notes: Pan and colleagues implicated both topoisomerase IV and DNA gyrase as
+        ciprofloxacin targets in Streptococcus pneumoniae genetics experiments.
+  - subject: topoisomerase_iv
+    predicate: participates in
+    object: topoiv_dna_cleavage_complex
+    description: ParC/ParE topoisomerase IV forms a quinolone-sensitive catalytic
+      DNA cleavage complex.
+    evidence:
+    - reference: PMID:24497635
+      notes: The same in vitro cleavage study included topoisomerase IV alongside
+        gyrase in ciprofloxacin DNA-cleavage assays.
+  - subject: gyrase_dna_cleavage_complex
+    predicate: inhibits
+    object: dna_religation
+    description: Stabilized gyrase-DNA cleavage complexes persist instead of being
+      resealed by the enzyme.
+    evidence:
+    - reference: PMID:24497635
+      notes: Fluoroquinolone-gyrase-DNA complexes are experimentally linked to cleaved
+        DNA accumulation after ciprofloxacin exposure.
+  - subject: topoiv_dna_cleavage_complex
+    predicate: inhibits
+    object: dna_religation
+    description: Stabilized topoisomerase IV-DNA cleavage complexes persist instead
+      of being resealed by the enzyme.
+    evidence:
+    - reference: PMID:24497635
+      notes: Topoisomerase IV was tested in parallel with gyrase in ciprofloxacin
+        DNA-cleavage assays.
+  - subject: dna_religation
+    predicate: supports
+    object: dna_topology_control
+    description: Resealing the transient type-II-topoisomerase break is required for
+      completion of DNA strand passage during supercoiling, relaxation, and decatenation
+      reactions.
+    evidence:
+    - reference: PMID:8891138
+      notes: Ciprofloxacin target genetics in S. pneumoniae support both gyrase and
+        topoisomerase IV as replication-linked topoisomerase targets.
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -2298,3 +2419,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-04T01:50:00Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added a PMID-supported causal graph for ciprofloxacin poisoning of bacterial
+    DNA gyrase and topoisomerase IV.
+  llm_assisted: true

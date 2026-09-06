@@ -59,22 +59,22 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 | Class | Records | SEEDED | REVIEWED | With target or resistance evidence |
 |---|---:|---:|---:|---:|
-| ANTIBACTERIAL *(incl. subclasses)* | 1093 | 1061 | 32 | 287 |
+| ANTIBACTERIAL *(incl. subclasses)* | 1091 | 1059 | 32 | 285 |
 | &nbsp;&nbsp;↳ ANTIMYCOBACTERIAL *(subclass of ANTIBACTERIAL)* | 78 | 75 | 3 | 15 |
 | ANTIFUNGAL | 594 | 581 | 13 | 65 |
-| ANTIPROTOZOAL | 248 | 246 | 2 | 6 |
-| ANTIVIRAL | 473 | 448 | 25 | 34 |
+| ANTIPROTOZOAL | 248 | 246 | 2 | 5 |
+| ANTIVIRAL | 473 | 448 | 25 | 32 |
 | BIOCIDE | 31 | 31 | 0 | 2 |
 | ANTIMICROBIAL_UNSPECIFIED | 472 | 464 | 8 | 10 |
-| **TOTAL** | **2911** | **2831** | **80** | **404** |
+| **TOTAL** | **2909** | **2829** | **80** | **399** |
 
 A row marked *(subclass of X)* is already counted in X's own row — mycobacteria are bacteria, and filing is exclusive, so a compound filed ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each record once, so the Records column does not sum to it.
 
-Identity: **2671** records (92%) are grounded in a ChEBI term; **240** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
+Identity: **2669** records (92%) are grounded in a ChEBI term; **240** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
 
-Corroboration: **281** records carry source concepts from both ChEBI and CARD/ARO; **2341** come from ChEBI alone and **289** from CARD alone.
+Corroboration: **281** records carry source concepts from both ChEBI and CARD/ARO; **2341** come from ChEBI alone and **287** from CARD alone.
 
-Mechanism layer: **287** records carry a molecular target and **296** carry resistance determinants or associations seeded from CARD and PHI-base; **454** carry a seeded or curator-reviewed mode of action; **0** carry a curated causal graph. That last number is the work.
+Mechanism layer: **282** records carry a molecular target and **295** carry resistance determinants or associations seeded from CARD and PHI-base; **454** carry a mode of action; **16** carry a curated causal graph. That last number is the work.
 
 <!-- END GENERATED CORPUS STATS -->
 
@@ -99,7 +99,7 @@ so seeding, validation, rendering and the whole test suite run offline.
 
 The generated site includes a
 **[Chemical structure map](https://culturebotai.github.io/AntibioticMech/pages/chemical-map.html)**
-covering all 2,911 records. Its coordinates and nearest neighbors use only the
+covering all 2,909 records. Its coordinates and nearest neighbors use only the
 exact stored chemical structure:
 
 ```text

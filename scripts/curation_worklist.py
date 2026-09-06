@@ -223,7 +223,7 @@ def aro_class_queue(records: list[dict], conf: dict | None = None) -> list[dict]
     """ARO-fallback records whose own definition names another target group.
 
     A molecule in CARD's antibiotic subtree is there for a bacterial reason, so
-    the fallback files it ANTIBACTERIAL — right for 257 of the 278 records it
+    the fallback files it ANTIBACTERIAL — right for 255 of the 276 records it
     reaches. For the rest CARD's own definition says otherwise, and until this
     queue existed nothing surfaced them: triflumizole sat under ANTIBACTERIAL
     while its ChEBI-grounded twin sat under ANTIFUNGAL, one compound in two
@@ -312,24 +312,43 @@ def xref_unverified_queue(records: list[dict]) -> list[dict]:
     Keyed by record, since one record may carry several.
     """
     with (RAW_DIR / "chebi_antimicrobials.tsv").open(encoding="utf-8") as fh:
-        known = {row["chebi_id"]: row.get("standard_inchi_key") or ""
-                 for row in csv.DictReader(fh, delimiter="\t")}
+        inventory = {row["chebi_id"]: row.get("standard_inchi_key") or ""
+                     for row in csv.DictReader(fh, delimiter="\t")}
     rows = []
     for record in records:
-        unchecked = [x for x in (record.get("xrefs") or [])
-                     if x.startswith("CHEBI:") and not known.get(x)]
+        # Two different situations were reported as one. A target ABSENT from
+        # the inventory is unknown; a target PRESENT with no structure is known
+        # to be a class or a mixture, which is itself a reason the xref is not a
+        # same-structure claim. A curator can act on the second and mostly
+        # cannot on the first (#164).
+        absent, structureless = [], []
+        for xref in record.get("xrefs") or []:
+            if not xref.startswith("CHEBI:"):
+                continue
+            if xref not in inventory:
+                absent.append(xref)
+            elif not inventory[xref]:
+                structureless.append(xref)
+        unchecked = structureless + absent
         if not unchecked:
             continue
+        parts = []
+        if structureless:
+            parts.append(f"{len(structureless)} target(s) in the inventory with no "
+                         "structure — a class or mixture, so not a same-structure claim")
+        if absent:
+            parts.append(f"{len(absent)} target(s) absent from the inventory — unknown")
         rows.append({
             "queue": "xref-unverified",
             "key": record["identifier"],
             "label": record["label"],
             "source": "+".join(sorted({c["source"] for c in record.get("source_concepts", [])})),
             "source_id": unchecked[0],
-            "hint": (f"{len(unchecked)} ChEBI xref(s) with no structure in the inventory; "
-                     "same-structure unverified"),
+            "hint": "; ".join(parts),
         })
-    rows.sort(key=lambda r: (-int(r["hint"].split()[0]), r["label"].lower()))
+    # Structureless-target rows first: those are the ones a curator can settle.
+    rows.sort(key=lambda r: (0 if "no structure" in r["hint"] else 1,
+                             -int(r["hint"].split()[0]), r["label"].lower()))
     return rows
 
 
@@ -394,6 +413,56 @@ PRODUCER_PHRASES = [
 ]
 _BINOMIAL = re.compile(r"\b([A-Z][a-z]{3,})\s+([a-z]{3,})\b")
 
+# A capitalized genus followed by any lowercase word is not a binomial. "active
+# against Staphylococci and Streptococci" matched as "Staphylococci and", which
+# put a conjunction in front of a curator as a candidate species; so did
+# "Aspergillus but", "Candida which" and their kind. Rejecting a function word
+# in the epithet slot costs nothing -- no species epithet is an English
+# conjunction, preposition, or auxiliary -- and the caller falls through to the
+# group match or reports no subject, which are both true answers.
+_NOT_AN_EPITHET = frozenset((
+    "and", "are", "but", "for", "from", "has", "have", "its", "not", "that",
+    "the", "their", "them", "they", "this", "was", "were", "when", "which",
+    "with", "other", "such", "some", "most", "many", "both", "also", "than",
+    "then", "into", "over", "more", "only", "been", "being", "does", "each",
+    "upon", "used", "using", "well", "can", "may", "where", "while", "under",
+    "after", "before", "between", "during", "against", "among", "these",
+    "those", "very", "much", "less", "least",
+))
+
+
+def _tail_after(definition: str, end: int, width: int = 90) -> str:
+    """The text following a matched phrase, cut at a WORD boundary (#181).
+
+    A fixed slice put "Staphylococcus aureu" in front of a curator seven times:
+    the species name straddled the 90th character and the binomial pattern
+    matched the truncated half. A candidate that cannot be verified because it
+    does not exist is worse than no candidate, and two different truncations of
+    one organism read as two different organisms.
+    """
+    tail = definition[end:end + width]
+    if len(definition) > end + width:
+        remainder = definition[end + width:]
+        boundary = re.search(r"\s", remainder)
+        tail += remainder[: boundary.start()] if boundary else remainder
+    return tail
+
+
+def _binomial_after(tail: str, exclude_genus: str = "") -> str | None:
+    """The first genuine binomial in `tail`, or None.
+
+    `exclude_genus` rejects the record's own name in the genus slot: "Cefacetrile
+    binds ..." matched as a binomial because a capitalized compound name followed
+    by a verb is shaped exactly like one (#182).
+    """
+    for match in _BINOMIAL.finditer(tail):
+        if match.group(2).lower() in _NOT_AN_EPITHET:
+            continue
+        if exclude_genus and match.group(1).lower() == exclude_genus:
+            continue
+        return f"{match.group(1)} {match.group(2)}"
+    return None
+
 
 def producer_candidate_queue(records: list[dict]) -> list[dict]:
     """Records whose definition names a possible producing organism.
@@ -420,9 +489,8 @@ def producer_candidate_queue(records: list[dict]) -> list[dict]:
             match = re.search(pattern, definition, re.I)
             if not match:
                 continue
-            tail = definition[match.end():match.end() + 90]
-            binomial = _BINOMIAL.search(tail)
-            candidate = f"{binomial.group(1)} {binomial.group(2)}" if binomial else "(no binomial)"
+            tail = _tail_after(definition, match.end())
+            candidate = _binomial_after(tail) or "(no binomial)"
             rows.append({
                 "queue": "producer-candidate",
                 "key": record["identifier"],
@@ -436,6 +504,94 @@ def producer_candidate_queue(records: list[dict]) -> list[dict]:
     rows.sort(key=lambda r: (0 if "biosynthesis stated" in r["hint"] else
                              1 if "SOURCE only" in r["hint"] else 2,
                              r["source_id"] == "(no binomial)", r["label"].lower()))
+    return rows
+
+
+ACTIVITY_PHRASES = [
+    ("active against", r"\bactiv(?:e|ity) against\b", "activity stated"),
+    ("effective against", r"\beffective against\b", "activity stated"),
+    ("inhibits the growth of", r"\binhibit(?:s|ory)? (?:the )?growth of\b", "activity stated"),
+    ("-cidal/-static against", r"\b(?:bacteri|fungi|myco|proto)(?:cid|stat)al? against\b",
+     "activity stated"),
+    ("spectrum of activity", r"\b(?:broad|narrow)[- ]spectrum\b",
+     "SPECTRUM stated — any subject below is nearby text, not the phrase's object"),
+    ("used to treat", r"\bused (?:to treat|in the treatment of|for the treatment of)\b",
+     "INDICATION — a disease, not a tested organism"),
+    ("used against", r"\bused against\b", "INDICATION — may name a disease, not an isolate"),
+]
+
+# Groups a source may test instead of a species. `ActivityObservation.taxon_label`
+# accepts "Organism or group tested, as named by the source", so a group is a
+# legitimate subject -- but it cannot carry an NCBITaxon CURIE, and the curator
+# needs to see which kind of subject the phrase introduced.
+_TAXON_GROUP = re.compile(
+    r"\b(gram[- ]positive|gram[- ]negative|mycobacteri\w+|enterobacteri\w+|"
+    r"staphylococc\w+|streptococc\w+|anaerob\w+|dermatophyt\w+|"
+    r"yeasts?|moulds?|molds?|fungi|bacteria|protozoa|viruses)\b",
+    re.I,
+)
+
+
+def activity_candidate_queue(records: list[dict]) -> list[dict]:
+    """Records whose definition uses activity-against language (#94).
+
+    `activity_spectrum` is the corpus's only entirely empty axis: 0 of 2909
+    records carry a single `ActivityObservation`, while the definitions are full
+    of sentences about what these compounds act on.
+
+    NOT AN EXTRACTION, and less extractable than it looks. Three distinct things
+    hide behind the same grammar:
+
+      * "active against Gram-positive bacteria" names a GROUP, which is a
+        legitimate `taxon_label` but can never carry an NCBITaxon CURIE;
+      * "used to treat tuberculosis" names an INDICATION -- a disease, not an
+        organism tested in an assay, and the leap from one to the other is the
+        curator's to make or refuse;
+      * "broad-spectrum antibiotic" names a spectrum with no subject at all.
+
+    None of the three is an observation, because `ActivityObservation` requires
+    evidence, and a reported MIC requires its units and its assay. A definition
+    supplies none of those. So this queue carries the matched phrase, what that
+    phrase actually claims, and the candidate subject, and asserts nothing.
+
+    Ranked activity-stated first, then by whether a subject was found at all.
+    """
+    rows = []
+    for record in records:
+        if record.get("activity_spectrum"):
+            continue
+        definition = record.get("definition") or ""
+        # First match wins, and ACTIVITY_PHRASES is maintained strongest-claim
+        # first so that first == strongest. An explicit strength sort was tried
+        # here and removed: with the list in strength order it could never
+        # select anything different, so it was untestable complexity claiming
+        # to fix something. `test_activity_phrases_stay_in_strength_order` is
+        # the guard that actually holds the property (#182).
+        for label, pattern, claim in ACTIVITY_PHRASES:
+            match = re.search(pattern, definition, re.I)
+            if not match:
+                continue
+            first_word = (record.get("label") or "").split()[:1]
+            tail = _tail_after(definition, match.end())
+            group = _TAXON_GROUP.search(tail)
+            subject = (
+                _binomial_after(tail, first_word[0].lower() if first_word else "")
+                or (group.group(1) if group else None)
+                or "(no subject named)"
+            )
+            rows.append({
+                "queue": "activity-candidate",
+                "key": record["identifier"],
+                "label": record["label"],
+                "source": "+".join(sorted({c["source"]
+                                           for c in record.get("source_concepts", [])})),
+                "source_id": subject,
+                "hint": f'{subject} — "{label}", {claim}',
+            })
+            break
+    rows.sort(key=lambda r: (0 if "activity stated" in r["hint"] else
+                             1 if "SPECTRUM stated" in r["hint"] else 2,
+                             r["source_id"] == "(no subject named)", r["label"].lower()))
     return rows
 
 
@@ -472,6 +628,145 @@ def excluded_queue() -> list[dict]:
             "hint": (rationale[:110] + "…") if len(rationale) > 110 else rationale,
         })
     out.sort(key=lambda r: r["label"].lower())
+    return out
+
+
+def crossref_conflict_queue() -> list[dict]:
+    """CARD->ChEBI links the seeder refused to trust, and why.
+
+    A refused cross-reference costs the concept its roles, its structure and its
+    EXACT grounding, which is a large silent consequence for a link a curator
+    never sees. `ARO:3000337 iclaprim -> CHEBI:31724 Isoaminile citrate` is the
+    link the gate was built for (#133); the record it produced published one
+    compound's name over another's structure, grounded EXACT, with every gate
+    green.
+
+    Recomputed from the committed inventories rather than read from seeder state,
+    so it reports what the sources say today rather than what some run happened
+    to observe.
+    """
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from seed_from_sources import RAW_DIR, crossref_conflict, load_tsv
+
+    chebi = {row["chebi_id"]: row for row in load_tsv(RAW_DIR / "chebi_antimicrobials.tsv")}
+    out = []
+    for row in load_tsv(RAW_DIR / "aro_antibiotics.tsv"):
+        chebi_id = next((x for x in (row.get("xrefs") or "").split("|")
+                         if x.startswith("CHEBI:")), "")
+        target = chebi.get(chebi_id)
+        if not target:
+            continue
+        reason = crossref_conflict(row, target)
+        if reason:
+            out.append({
+                "queue": "crossref-conflict",
+                "key": row["aro_id"],
+                "label": row["name"],
+                "source": "ARO",
+                "source_id": row["aro_id"],
+                "hint": reason,
+            })
+    out.sort(key=lambda r: r["label"].lower())
+    return out
+
+
+def xref_name_conflict_queue(records: list[dict]) -> list[dict]:
+    """Same-structure xrefs the seeder refused because naming contradicts them.
+
+    A refused xref is a source assertion the corpus declines to publish, and #136
+    is the standing lesson that such a thing needs a DESTINATION rather than a
+    deletion. This is that destination: the link, the target it pointed at, and
+    why it was not trusted, so a curator can restore it, move it to
+    `parent_compounds` if the target is strictly broader, or agree it was wrong.
+
+    Reconstructed from each record's `source_concepts` plus the committed
+    inventories, which are exactly `build_record`'s two inputs -- the record's
+    own names on one side, its concepts' xrefs on the other. Reading the records'
+    `xrefs` instead would make this queue permanently empty, since the refusal is
+    what removed them; and recomputing from one inventory row's names would drift
+    from the merged names the gate actually compares against, reporting refusals
+    that never happened. `cefdinir -> CHEBI:131724` arrives from the ARO row, not
+    the ChEBI one, so both inventories are consulted.
+    """
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from seed_from_sources import (
+        RAW_DIR,
+        load_tsv,
+        normalize_xref,
+        structureless_xref_conflict,
+        xref_names,
+    )
+
+    chebi = {row["chebi_id"]: row for row in load_tsv(RAW_DIR / "chebi_antimicrobials.tsv")}
+    keys = {cid: row.get("standard_inchi_key") or "" for cid, row in chebi.items()}
+    names = {cid: xref_names(row) for cid, row in chebi.items()}
+    concepts = dict(chebi)
+    concepts.update({row["aro_id"]: row for row in load_tsv(RAW_DIR / "aro_antibiotics.tsv")})
+
+    out = []
+    for record in records:
+        own = {" ".join((record.get("label") or "").lower().split())}
+        own |= {" ".join((syn.get("name") or "").lower().split())
+                for syn in (record.get("synonyms") or [])}
+        own -= {""}
+        # The gate applies its refusals in order, and an xref already removed as
+        # strictly BROADER never reaches the naming rule. Erythromycin A,
+        # lividomycin A and mycinamicin IV each carry their parent in both
+        # fields; reporting those here as naming refusals would credit this
+        # queue with three the seeder never made.
+        broader = set(record.get("parent_compounds") or [])
+        seen = set(broader)
+        for concept in record.get("source_concepts") or []:
+            row = concepts.get(concept.get("source_id", ""))
+            if not row:
+                continue
+            for raw in (row.get("xrefs") or "").split("|"):
+                xref = normalize_xref(raw)
+                if not xref or not xref.startswith("CHEBI:") or xref in seen:
+                    continue
+                seen.add(xref)
+                reason = structureless_xref_conflict(
+                    own, xref, keys.get(xref, ""), names.get(xref, set()))
+                if reason:
+                    out.append({
+                        "queue": "xref-name-conflict",
+                        "key": record["identifier"],
+                        "label": record["label"],
+                        "source": concept.get("source", "?"),
+                        "source_id": xref,
+                        "hint": reason,
+                    })
+    out.sort(key=lambda r: r["label"].lower())
+    return out
+
+
+def structure_unreviewed_queue(records: list[dict]) -> list[dict]:
+    """Structures carried from a source that nobody has classified.
+
+    The seeder cannot say what the macromolecule in a PDB entry is, so it emits
+    UNREVIEWED and queues the question. Two of the three in the corpus are known
+    NOT to be target complexes — PDB:1H8S is an anti-ampicillin antibody and
+    PDB:1Q3W is human GSK3-beta — which is exactly why they must not sit in the
+    corpus looking like structural evidence for a target (#95).
+    """
+    out = []
+    for record in records:
+        for item in record.get("structural_observations") or []:
+            if item.get("relevance") not in (None, "UNREVIEWED"):
+                continue
+            out.append({
+                "queue": "structure-unreviewed",
+                "key": item.get("structure_id", ""),
+                "label": record.get("label", ""),
+                "source": item.get("source", ""),
+                "source_id": record.get("identifier", ""),
+                "hint": (f"{item.get('structure_id')} carried from "
+                         f"{item.get('source')}; what the macromolecule is, and "
+                         "whether it is a target, is unestablished"),
+            })
+    out.sort(key=lambda r: (r["label"].lower(), r["key"]))
     return out
 
 
@@ -654,7 +949,9 @@ def main() -> int:
                         choices=("all", "no-structure", "mechanism", "minted", "unknown-mech",
                                  "moa-scope", "target-evidence", "aro-class",
                                  "xref-unverified", "multi-component",
-                                 "producer-candidate", "excluded", "review-readiness"),
+                                 "producer-candidate", "activity-candidate", "excluded",
+                                 "crossref-conflict", "structure-unreviewed",
+                                 "xref-name-conflict", "review-readiness"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
     parser.add_argument("--tsv", type=Path, help="Write every row (not just --limit) to this TSV.")
@@ -680,8 +977,16 @@ def main() -> int:
         queues["multi-component"] = multi_component_queue(records)
     if args.queue in ("all", "producer-candidate"):
         queues["producer-candidate"] = producer_candidate_queue(records)
+    if args.queue in ("all", "activity-candidate"):
+        queues["activity-candidate"] = activity_candidate_queue(records)
     if args.queue in ("all", "excluded"):
         queues["excluded"] = excluded_queue()
+    if args.queue in ("all", "crossref-conflict"):
+        queues["crossref-conflict"] = crossref_conflict_queue()
+    if args.queue in ("all", "xref-name-conflict"):
+        queues["xref-name-conflict"] = xref_name_conflict_queue(records)
+    if args.queue in ("all", "structure-unreviewed"):
+        queues["structure-unreviewed"] = structure_unreviewed_queue(records)
     if args.queue in ("all", "target-evidence"):
         queues["target-evidence"] = target_evidence_queue(records)
     if args.queue in ("all", "review-readiness"):

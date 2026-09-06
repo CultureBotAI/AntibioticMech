@@ -194,6 +194,13 @@ XREF_PREFIX = {
 # complex, so listing them as chemical equivalents of ampicillin and
 # alsterpaullone asserts something no source claims. `pdb-ccd` is different — it
 # identifies a ligand chemical component — and stays.
+#
+# They are no longer DISCARDED, which was the same "moved, not deleted" mistake
+# #136 records for patent and wikipedia.en xrefs. They now go to
+# `structural_observations`, where a PDB accession means what it actually means:
+# a macromolecular structure was solved containing this compound. What the
+# macromolecule IS stays UNREVIEWED until a curator says so, because that is the
+# claim the xref was silently making and could not support (#95).
 NON_STRUCTURE_XREF_PREFIXES = {"pdb", "PDB"}
 
 # Namespaces whose accessions are DOCUMENTS or ARTICLES rather than structure
@@ -222,6 +229,38 @@ DOCUMENT_XREF_PREFIXES = {"patent", "wikipedia.en"}
 # cannot be shown to span anything. If UNII xrefs arrive and do span structures,
 # the undeclared-namespace assertion catches them then, which is the right time.
 DRUG_GRANULARITY_XREF_PREFIXES = {"drugbank", "kegg.drug", "drugcentral"}
+
+# Namespaces where one value identifies one substance, so two sources offering
+# DIFFERENT values for the same record contradict each other. CARD gave cefdinir
+# iclaprim's CAS and ChEMBL id verbatim (#163) -- a copy-paste in the upstream
+# row, published here as a same-substance claim between a cephalosporin and a
+# diaminopyrimidine. Publishing both values asserts they are one compound.
+#
+# The contested value is WITHHELD, not adjudicated: ChEBI leads on identity here
+# (the same rule the record's own identifier follows), so the ARO-supplied value
+# is the one held back and surfaced for a curator. Four records are affected and
+# only cefdinir's is an upstream error -- cycloheximide and framycetin carry
+# genuine alternate registrations for the same compound. Withholding is right in
+# all three cases for the same reason: the corpus should not publish an
+# equivalence its own sources disagree about.
+CONTESTABLE_XREF_PREFIXES = {"cas", "chembl"}
+
+
+def contested_xrefs(group: list) -> set[str]:
+    """Values in a single-substance namespace that the sources disagree about."""
+    by_namespace: dict[str, dict[str, set[str]]] = {}
+    for concept in group:
+        for xref in concept.xrefs:
+            namespace = xref.split(":", 1)[0].lower()
+            if namespace in CONTESTABLE_XREF_PREFIXES:
+                by_namespace.setdefault(namespace, {}).setdefault(concept.source, set()).add(xref)
+    contested: set[str] = set()
+    for per_source in by_namespace.values():
+        grounding = per_source.get("CHEBI", set())
+        offered = per_source.get("ARO", set())
+        if grounding and offered and not (grounding & offered):
+            contested |= offered
+    return contested
 
 # Namespaces that are SUPPOSED to be structure-exact and, in this corpus, are
 # not. Named because the alternative was a test that could not see them: an
@@ -437,7 +476,7 @@ def classify(roles: list[str], conf: dict, from_aro: bool,
        five compounds — reversing a priority conf/sources.yaml argues for
        explicitly. A default, never an override.
     5. **The ARO fallback**, ANTIBACTERIAL — for a CARD molecule with none of
-       the above. Right for 257 of the 278 records it reaches.
+       the above. Right for 255 of the 276 records it reaches.
 
     Step 3 is a CURATED MAP, not a text rule, and the distinction is the whole
     point: a regex for "fungal" flags ophiobolin A, whose definition reads
@@ -521,6 +560,7 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
         concept.mechanism_roles = split_pipe(row.get("mechanism_role_ids", ""))
         concepts.append(concept)
 
+    refused: list[tuple[str, str]] = []
     for row in aro_rows:
         concept = Concept("ARO", row["aro_id"], row["name"])
         concept.definition = row["definition"]
@@ -534,6 +574,23 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
         concept.aro_parents = split_pipe(row["parent_ids"])
         chebi_id = next((x for x in split_pipe(row["xrefs"]) if x.startswith("CHEBI:")), "")
         chebi_row = chebi_rows.get(chebi_id)
+        conflict = crossref_conflict(row, chebi_row) if chebi_row else ""
+        if conflict:
+            refused.append((row["aro_id"], conflict))
+            # Not trusted, so it grants nothing: no roles, no structure, and --
+            # by dropping the xref -- no EXACT grounding either, since
+            # resolve_identity reads the same list.
+            #
+            # `chebi_id` comes from the RAW inventory row while concept.xrefs
+            # holds normalized values, so comparing them directly coupled this
+            # to normalize_xref happening to leave ChEBI ids alone. It does
+            # today; nothing enforced it, and if that changed the drop became a
+            # silent no-op that re-granted EXACT grounding to the very entry the
+            # gate had just refused (#168). Both sides are normalized here.
+            refused_xref = normalize_xref(chebi_id)
+            chebi_row = None
+            concept.xrefs = [x for x in concept.xrefs
+                             if normalize_xref(x) != refused_xref]
         # Roles and structure are independent facts about the cross-referenced
         # ChEBI entry. ChEBI can hold a compound with an antimicrobial role and
         # no default structure (miconazole, ketoconazole); reading the roles only
@@ -548,9 +605,210 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
             concept.structure = structure_from_pubchem(pubchem[row["aro_id"]])
         concepts.append(concept)
 
+    if refused:
+        # A refusal can remove a record from the corpus. Every other consequential
+        # decision in the run summary is counted; this one was silent, so a new
+        # upstream conflict would drop a record during a routine re-seed with
+        # nothing saying why (#170).
+        print(f"  {len(refused)} CARD cross-reference(s) refused as self-contradictory "
+              "(see `just worklist --queue crossref-conflict`)", file=sys.stderr)
+        for aro_id, reason in refused:
+            print(f"    {aro_id}: {reason}", file=sys.stderr)
+
     for concept in concepts:
         concept.minted = mint(concept.source, concept.source_id)
     return concepts, chebi_rows
+
+
+# --------------------------------------------------------------------------
+# CARD -> ChEBI cross-reference trust
+# --------------------------------------------------------------------------
+
+# An ARO row's CHEBI xref grants that ChEBI entry's roles, its structure AND
+# EXACT identity to the ARO concept. Nothing asked whether the two rows describe
+# the same substance, and CARD's do not always: ARO:3000337 "iclaprim" points at
+# CHEBI:31724 "Isoaminile citrate", a 2-star entry ChEBI gives no antimicrobial
+# role. The corpus published iclaprim's name over isoaminile citrate's structure,
+# grounded EXACT, and every gate passed because the corpus faithfully reproduced
+# a wrong input (#133).
+#
+# The gate is TWO INDEPENDENT IDENTIFIERS DISAGREEING. Either signal alone is
+# useless here, measured against the committed inventories:
+#
+#   name disagreement alone  29 links, and nearly all are legitimate --
+#                            rifampin/rifampicin, cefalexin/cephalexin,
+#                            dactinomycin/actinomycin D, and systematic names
+#                            such as hexaconazole / 2-(2,4-dichlorophenyl)-...
+#   CAS disagreement alone    2 links, one of which is cycloheximide, where both
+#                            rows mean the same compound and merely carry
+#                            different registrations
+#   BOTH                      1 link: iclaprim. No false positives.
+#
+# So a conflict is not "these look different" but "the two things CARD says
+# about this compound contradict each other". The cross-reference is then not
+# trusted for roles, structure or identity, and the concept falls back to
+# PubChem enrichment and a minted identifier -- which is what CARD alone can
+# support. The pair is surfaced on `just worklist --queue crossref-conflict`
+# rather than dropped silently. That queue recomputes from the inventories and
+# needs no state from a seeder run, so nothing is accumulated here: a module-level
+# list that is written and never read is a decoy pointing at the wrong mechanism
+# (#169).
+
+
+# The accession shape the schema enforces on StructuralObservation.structure_id.
+# Defined once and asserted equal to the schema's pattern by a test, so the
+# migration and the validator cannot drift apart (#174).
+STRUCTURE_ID_PATTERN = r"^(PDB:[0-9][A-Za-z0-9]{3}|EMDB:EMD-[0-9]{4,5})$"
+
+# Read by the run summary and CLEARED at the start of every merge. A
+# module-level list that is written and never read, or never reset, is the
+# defect #169 records; this one is both read and reset, deliberately.
+def xref_names(row: dict) -> set[str]:
+    """Every name a ChEBI inventory row answers to, normalized for comparison.
+
+    The inventory encodes synonyms as `TYPE=value` — `UNIPROT NAME=gentamicin C`,
+    `IUPAC NAME=...`, `SYNONYM=Neomycin`. Comparing the raw strings makes every
+    synonym unmatchable, which would have refused `gentamicin C -> CHEBI:75616`
+    on the grounds that no name matched, while the target's own UniProt synonym
+    IS that name. Refusing on a parsing failure is not refusing on evidence.
+    """
+    values = [row.get("name") or ""]
+    for raw in (row.get("synonyms") or "").split("|"):
+        values.append(raw.split("=", 1)[1] if "=" in raw else raw)
+    return {" ".join(v.lower().split()) for v in values} - {""}
+
+
+def structureless_xref_conflict(record_names: set[str], chebi_id: str,
+                                target_key: str, target_names: set[str]) -> str | None:
+    """Why a same-structure xref to a STRUCTURELESS ChEBI term cannot stand (#164).
+
+    The structure gate below compares InChIKeys, which needs a structure on both
+    sides. When the target has none the comparison is skipped, and the xref is
+    published unexamined -- so the check does nothing on exactly the inputs most
+    likely to be wrong. That is how `cefdinir -> CHEBI:131724`, which is
+    *iclaprim*, an unrelated antibacterial, survived every gate.
+
+    But "cannot compare structures" is not "no evidence". The inventory knows the
+    target's NAME even when it has no structure, and a name is weak evidence of
+    sameness that is nonetheless conclusive evidence of DIFFERENCE when nothing
+    matches: neither the record's label nor any of its synonyms appears anywhere
+    among the target's names. That is a positive contradiction, not an absence.
+
+    So this refuses on evidence, never on ignorance. A target absent from the
+    inventory, or present with no name, is still unverifiable and still kept and
+    queued -- dropping a source assertion because we cannot check it stays the
+    worse error. Only a NAMED, structureless, wholly non-matching target is
+    refused, and the refusal is reported rather than silent.
+    """
+    if target_key:
+        return None                       # comparable: the structure gate owns it
+    if not target_names:
+        return None                       # unknown or unnamed: genuinely unverifiable
+    if record_names & target_names:
+        return None
+    return (f"{chebi_id} has no structure in the committed inventory, so the "
+            f"same-structure gate cannot compare it; and none of its names "
+            f"({', '.join(sorted(target_names)[:3])}) matches this record's "
+            f"label or synonyms. Not published as an equivalence.")
+
+
+REFUSED_STRUCTURELESS_XREFS: list[tuple[str, str, str]] = []
+MALFORMED_STRUCTURE_IDS: list[tuple[str, str]] = []
+
+# Sources the seeder itself writes structural observations for. Anything else on
+# a record belongs to a curator and is not the seeder's to reproduce (#173).
+SEEDER_STRUCTURE_SOURCES = {"CHEBI", "ARO"}
+
+
+def structural_observations(group: list, source_version: str,
+                            retrieved_on: str) -> list[dict]:
+    """PDB accessions a source attached to this compound, as what they are.
+
+    Migrated rather than dropped, and deliberately NOT classified: `relevance`
+    is UNREVIEWED and `evidence_status` says a primary citation is needed. The
+    method, resolution and publication are not in any committed inventory — they
+    need RCSB, which is a networked fetch this offline step does not make. So the
+    record says a structure exists and says nothing it cannot support.
+    """
+    out: list[dict] = []
+    seen: set[str] = set()
+    for concept in group:
+        for xref in concept.xrefs:
+            namespace, _, accession = xref.partition(":")
+            if namespace.lower() != "pdb" or not accession:
+                continue
+            structure_id = f"PDB:{accession.upper()}"
+            if not re.fullmatch(STRUCTURE_ID_PATTERN, structure_id):
+                # Skipped, not emitted. write_validated_antibiotic validates the
+                # WHOLE record, so one malformed upstream accession would make an
+                # otherwise good compound unwritable — a whole record lost to a
+                # source typo (#174).
+                MALFORMED_STRUCTURE_IDS.append((concept.source_id, xref))
+                continue
+            if structure_id in seen:
+                continue
+            seen.add(structure_id)
+            out.append({
+                "structure_id": structure_id,
+                "relevance": "UNREVIEWED",
+                "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+                "source": concept.source,
+                "source_version": source_version,
+                **({"retrieved_on": retrieved_on} if retrieved_on else {}),
+            })
+    return sorted(out, key=lambda item: item["structure_id"])
+
+
+def seeded_structural_view(record: dict) -> set[str]:
+    """The structure accessions the seeder owns, ignoring curated judgement.
+
+    NOT in SEEDED_FIELDS, deliberately. The seeder emits every observation as
+    UNREVIEWED, and a curator establishing that PDB:1H8S is an ANTIBODY_COMPLEX
+    is the entire point of the field — an exact comparison would make the first
+    correct curation look like drift. What must reproduce is WHICH structures are
+    asserted and by whom: an accession cannot be invented by hand, and a seeded
+    one cannot quietly disappear.
+    """
+    return {f"{item.get('structure_id')}|{item.get('source')}"
+            for item in (record.get("structural_observations") or [])
+            if item.get("source") in SEEDER_STRUCTURE_SOURCES}
+
+
+def _cas_numbers(raw: str) -> set[str]:
+    """CAS values, ignoring empty ones.
+
+    A bare `CAS:` with no number yielded {""} — a truthy set holding nothing,
+    which made "this row has a CAS" true and could fire the gate against a row
+    that supplies no registry number at all.
+    """
+    return {value for value in (v.split(":", 1)[1] for v in split_pipe(raw or "")
+                                if v.split(":", 1)[0].lower() == "cas") if value.strip()}
+
+
+def _comparable_name(label: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", (label or "").lower())
+
+
+def crossref_conflict(aro_row: dict, chebi_row: dict) -> str:
+    """Why CARD's link to this ChEBI entry cannot be trusted, or "" when it can.
+
+    Containment, not equality, decides the name test: "polymyxin B" against
+    "polymyxin B1" and "gentamicin A" against "gentamycin A" are the same
+    compound named at different precision, and flagging those would be noise.
+    """
+    aro_name = _comparable_name(aro_row.get("name"))
+    chebi_name = _comparable_name(chebi_row.get("name"))
+    if not (aro_name and chebi_name) or aro_name in chebi_name or chebi_name in aro_name:
+        return ""
+    aro_cas = _cas_numbers(aro_row.get("xrefs"))
+    chebi_cas = _cas_numbers(chebi_row.get("xrefs"))
+    if not (aro_cas and chebi_cas) or (aro_cas & chebi_cas):
+        return ""
+    return (f"CARD links {aro_row['aro_id']} ({aro_row['name']}) to "
+            f"{chebi_row['chebi_id']} ({chebi_row['name']}), but the names differ "
+            f"and the CAS numbers disagree "
+            f"({sorted(aro_cas)[0]} vs {sorted(chebi_cas)[0]}). "
+            "Cross-reference not trusted for roles, structure or identity.")
 
 
 def resolve_identity(concept: Concept, chebi_rows: dict[str, dict]) -> tuple[str, str]:
@@ -652,11 +910,16 @@ def assign_slugs(records: dict[str, dict], lockfile: dict[str, str],
 def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
           decisions: dict[str, dict], source_version: str) -> tuple[dict[str, dict], list[Concept]]:
     """Group concepts into records. Returns (records, skipped-for-no-structure)."""
+    MALFORMED_STRUCTURE_IDS.clear()
+    REFUSED_STRUCTURELESS_XREFS.clear()
     # InChIKey per ChEBI id, from the committed inventory. The same-structure
     # gate on xrefs uses it; a ChEBI term with no structure here is simply not
     # comparable, and its xrefs are kept and queued rather than dropped.
     chebi_keys = {cid: row["standard_inchi_key"]
                   for cid, row in chebi_rows.items() if row.get("standard_inchi_key")}
+    # Names for every inventory term, structureless ones included -- those are
+    # precisely the terms the key map cannot speak for (#164).
+    chebi_name_index = {cid: xref_names(row) for cid, row in chebi_rows.items()}
     by_identity: dict[str, list[Concept]] = defaultdict(list)
     grounding: dict[str, str] = {}
     skipped: list[Concept] = []
@@ -775,7 +1038,8 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
     records: dict[str, dict] = {}
     for identifier, group in by_identity.items():
         records[identifier] = build_record(identifier, grounding[identifier], group,
-                                           conf, source_version, chebi_keys)
+                                           conf, source_version, chebi_keys,
+                                           chebi_name_index)
     return records, skipped
 
 
@@ -942,11 +1206,13 @@ def mode_of_action_from_roles(mechanism_roles: list[str], conf: dict,
 
 def build_record(identifier: str, grounding_status: str, group: list[Concept],
                  conf: dict, source_version: str,
-                 chebi_keys: dict[str, str] | None = None) -> dict:
+                 chebi_keys: dict[str, str] | None = None,
+                 chebi_name_index: dict[str, set[str]] | None = None) -> dict:
     # InChIKey per ChEBI id, for the same-structure gate on xrefs below. Empty
     # when the caller has none: the gate then keeps every xref it cannot compare,
     # which is the behaviour it has for the majority anyway.
     chebi_keys = chebi_keys or {}
+    chebi_name_index = chebi_name_index or {}
 
     # ChEBI leads on identity and structure; ARO leads on class and mechanism.
     chebi = [c for c in group if c.source == "CHEBI"]
@@ -1052,21 +1318,48 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     #      Erythromycin A, lividomycin A and mycinamicin IV each carried one
     #      identifier in BOTH fields, which cannot both be true.
     #
-    # Where the structure cannot be compared — most referenced ChEBI terms have
-    # no structure in the committed inventory — the xref is KEPT and surfaced on
+    #   4. Its structure is UNKNOWN and its name contradicts the record's. The
+    #      structure comparison needs a structure on both sides, so a
+    #      structureless target skipped it entirely and published unexamined —
+    #      which is how cefdinir carried CHEBI:131724, *iclaprim* (#164). Where
+    #      the inventory names such a target and no name matches, that is
+    #      evidence of difference rather than absence of evidence, and the xref
+    #      is refused and reported.
+    #
+    # Where the structure cannot be compared AND no naming evidence contradicts
+    # it — most referenced ChEBI terms have no structure in the committed
+    # inventory — the xref is KEPT and surfaced on
     # `just worklist --queue xref-unverified`. Dropping it would discard a source
     # assertion on the grounds that we cannot check it, which is a different and
     # worse error than keeping one we have not checked.
     own_key = (structure or {}).get("standard_inchi_key")
     broader = set(parents)
-    record["xrefs"] = [
-        x for x in xrefs
-        if x.split(":", 1)[0] not in NON_STRUCTURE_XREF_PREFIXES
-        and x not in broader
-        and not (own_key and chebi_keys.get(x) and chebi_keys[x] != own_key)
-    ]
+    contested = contested_xrefs(group)
+    own_names = {" ".join((record.get("label") or "").lower().split())}
+    own_names |= {" ".join((syn.get("name") or "").lower().split())
+                  for syn in (record.get("synonyms") or [])}
+    own_names -= {""}
+
+    kept = []
+    for x in xrefs:
+        if (x.split(":", 1)[0] in NON_STRUCTURE_XREF_PREFIXES
+                or x in broader or x in contested):
+            continue
+        if own_key and chebi_keys.get(x) and chebi_keys[x] != own_key:
+            continue
+        if x.startswith("CHEBI:"):
+            reason = structureless_xref_conflict(
+                own_names, x, chebi_keys.get(x, ""), chebi_name_index.get(x, set()))
+            if reason:
+                REFUSED_STRUCTURELESS_XREFS.append((identifier, record.get("label", ""), reason))
+                continue
+        kept.append(x)
+    record["xrefs"] = kept
     if not record["xrefs"]:
         record.pop("xrefs")
+    observations = structural_observations(group, source_version, source_version)
+    if observations:
+        record["structural_observations"] = observations
     record["source_concepts"] = [
         {
             "source": c.source,
@@ -1226,12 +1519,25 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
         _history_last(records[identifier])
 
 
+PHIBASE_RESISTANCE_SOURCE = "PHIBASE"
 PHIBASE_NOTE_MARKER = "PHI-base antimicrobial_interaction"
 
 
 def is_phibase_sourced_resistance(item: dict) -> bool:
-    """True only for a resistance association owned by the PHI-base lane."""
-    return PHIBASE_NOTE_MARKER in str(item.get("note") or "")
+    """True only for a resistance association owned by the PHI-base lane.
+
+    Ownership is the ``source`` field, as it is for the MIBiG, BindingDB and FDA
+    lanes. The note marker is the pre-#94 shape, when every organismal fact
+    lived in the note and the marker was the only thing to match on. It is still
+    recognized because the alternative is silent duplication: re-seeding a
+    checkout written before #94 would read those items as curator-written, keep
+    them, and append a second structured copy of all 217 associations beside
+    them. Recognizing the old shape makes the migration a replacement.
+    """
+    return (
+        item.get("source") == PHIBASE_RESISTANCE_SOURCE
+        or PHIBASE_NOTE_MARKER in str(item.get("note") or "")
+    )
 
 
 def phibase_sourced_resistance_view(record: dict) -> list[dict]:
@@ -1276,29 +1582,47 @@ def attach_phibase_resistance(records: dict[str, dict]) -> Counter:
                 counts["duplicate_rows"] += 1
                 continue
             seen.add(key)
-            pathogen = row["taxon_label"]
-            if row["strain_label"]:
-                pathogen += f" strain {row['strain_label']}"
-            protein = row["protein_accession"] or row["phig_id"]
-            items.append({
+            # Built in schema order, with the optional slots dropped afterwards,
+            # so an emitted item reads in the order the schema declares rather
+            # than in the order the source happened to fill it.
+            item = {
                 "mechanism_type": "UNKNOWN",
                 "label": f"{row['modification']} associated with {row['phenotype_label']}",
+                "taxon_id": f"NCBITaxon:{row['taxon_id']}",
+                "taxon_label": row["taxon_label"],
+                "strain": row["strain_label"] or None,
+                "strain_taxon_id": (
+                    f"NCBITaxon:{row['strain_taxon_id']}" if row["strain_taxon_id"] else None
+                ),
+                "alteration": row["modification"],
+                "protein_accession": (
+                    f"UniProtKB:{row['protein_accession']}"
+                    if row["protein_accession"] else None
+                ),
+                "gene_id": row["gene_id"] or None,
+                "phenotype_id": row["phenotype_id"] or None,
+                "phenotype_label": row["phenotype_label"],
+                "assay": row["evidence_code"],
+                "source": PHIBASE_RESISTANCE_SOURCE,
+                "source_version": row["source_commit"],
+                "source_retrieved_on": row["source_retrieved_on"],
+                # The caveat is the only part of this that is genuinely prose.
+                # Everything the note used to restate -- organism, strain,
+                # protein, allele, phenotype, assay, provenance -- is now in the
+                # slots above, where it can be queried and contradicted (#94).
                 "note": (
-                    f"{PHIBASE_NOTE_MARKER} {row['phig_id']}; {protein}; "
-                    f"{pathogen} (NCBITaxon:{row['taxon_id']}); "
-                    f"phenotype {row['phenotype_id']}; evidence code {row['evidence_code']}; "
-                    f"source commit {row['source_commit']}, retrieved {row['source_retrieved_on']}. "
                     "This is a curated gene-alteration/chemical resistance association, "
                     "not evidence for a specific biochemical resistance mechanism."
                 ),
                 "evidence": [{
                     "reference": f"PMID:{row['pmid']}",
                     "notes": (
-                        "PHI-base primary-literature antimicrobial interaction; exact ChEBI "
-                        "chemical identifier, pathogen, strain, alteration, and phenotype retained."
+                        "PHI-base primary-literature antimicrobial interaction "
+                        f"{row['phig_id']}; joined to this record by exact ChEBI identifier."
                     ),
                 }],
-            })
+            }
+            items.append({k: v for k, v in item.items() if v is not None})
         records[identifier].setdefault("resistance_mechanisms", []).extend(items)
         _history_last(records[identifier])
         counts["matched_records"] += 1
@@ -1338,6 +1662,20 @@ def bindingdb_row_supports_target_association(row: dict[str, str]) -> bool:
     assay_name = row.get("assay_name", "").strip().casefold()
     assay_description = row.get("assay_description", "").strip().casefold()
     if assay_name in {"no assay is provided", "no assay provided"}:
+        return False
+    if (
+        assay_name == "drc analysis by immunofluorescence"
+        or (
+            "immunofluorescence" in assay_description
+            and "vero cells" in assay_description
+            and "viral infections" in assay_description
+            and "sars-cov-2 was added" in assay_description
+        )
+        or (
+            "intracellular nucleocapsid" in assay_description
+            and "calu-3 cells" in assay_description
+        )
+    ):
         return False
     return "review article" not in assay_description
 
@@ -1458,6 +1796,71 @@ def attach_bindingdb_targets(records: dict[str, dict]) -> Counter:
 MIBIG_PRODUCER_SOURCE = "MIBIG"
 
 
+# Rank markers that continue a taxonomic name rather than beginning a strain
+# designation. "Francisella tularensis subsp. tularensis SCHU S4" is a name of
+# four tokens followed by a strain; "Streptomyces rochei NBRC 12908" is a name of
+# two.
+_RANK_MARKERS = ("subsp.", "var.", "f.", "pv.", "sp.", "bv.", "serovar")
+_GENUS = re.compile(r"^[A-Z][a-z]+$")
+_EPITHET = re.compile(r"^[a-z][a-z-]+$")
+
+MIBIG_REFERENCE_BASIS = {
+    "compound_evidence": (
+        "MIBiG attaches this reference to the compound itself, so it supports "
+        "the producer/compound link this item asserts."
+    ),
+    "first_mibig_legacy_reference": (
+        "MIBiG's first legacy reference for the entry, inherited rather than "
+        "attached to the compound. It supports that the entry exists; it is NOT "
+        "established as evidence for this specific producer/compound link."
+    ),
+}
+
+
+def split_organism_strain(label: str) -> tuple[str, str | None]:
+    """Split "<taxonomic name> <strain designation>" conservatively.
+
+    MIBiG's ``taxonomy.name`` is a strain name, but the accompanying
+    ``ncbiTaxId`` is frequently the SPECIES: NCBITaxon:1928 denotes
+    *Streptomyces rochei*, and writing "Streptomyces rochei NBRC 12908" as that
+    CURIE's label asserts the CURIE denotes a strain, which it does not. The
+    schema's ``strain`` slot was added for exactly this and never populated.
+
+    Splitting is safe in both directions. Where the id is species-level the
+    label stops contradicting it; where the id is strain-level the label becomes
+    less specific than the id but stays true of it, because a strain is an
+    instance of its species. What is never safe is guessing, so an unparsed name
+    is returned whole with no strain rather than split on whitespace and hoped
+    over.
+    """
+    tokens = label.split()
+    if len(tokens) < 2 or not _GENUS.match(tokens[0]):
+        return label, None
+    index = 1
+    if tokens[1] == "sp." or _EPITHET.match(tokens[1]):
+        index = 2
+    else:
+        return label, None
+    # Consume "subsp. tularensis" and friends.
+    while index + 1 < len(tokens) and tokens[index] in _RANK_MARKERS:
+        index += 2
+    if index >= len(tokens):
+        return label, None
+    # The name ends where the designation begins; an explicit "strain" keyword
+    # belongs to neither, so the boundary is fixed before consuming it.
+    name_end = index
+    if tokens[index] == "strain":
+        index += 1
+    remainder = tokens[index:]
+    if not remainder:
+        return label, None
+    # A lowercase continuation is more likely an unrecognized rank marker than a
+    # strain designation; leave the name alone rather than truncate a real name.
+    if remainder[0][0].islower():
+        return label, None
+    return " ".join(tokens[:name_end]), " ".join(remainder)
+
+
 def is_mibig_sourced_producer(item: dict) -> bool:
     """True only for a producer assertion owned by the MIBiG extractor."""
     return item.get("source") == MIBIG_PRODUCER_SOURCE
@@ -1515,9 +1918,13 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
             if key in seen:
                 continue
             seen.add(key)
-            items.append({
+            taxon_label, strain = split_organism_strain(row["taxon_label"])
+            # Schema order, optional slots dropped afterwards -- see the same
+            # pattern in the PHI-base lane.
+            item = {
                 "taxon_id": f"NCBITaxon:{row['taxon_id']}",
-                "taxon_label": row["taxon_label"],
+                "taxon_label": taxon_label,
+                "strain": strain,
                 "biosynthetic_gene_cluster": row["mibig_accession"],
                 "source": MIBIG_PRODUCER_SOURCE,
                 "source_version": release_version,
@@ -1528,8 +1935,16 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
                     "MIBiG active entry with a non-placeholder expert reviewer; "
                     f"compound {row['compound_name']!r} joined by exact Standard InChIKey."
                 ),
-                "reference": row["primary_reference"],
-            })
+                "evidence": [{
+                    "reference": row["primary_reference"],
+                    "notes": MIBIG_REFERENCE_BASIS.get(
+                        row["reference_basis"],
+                        f"MIBiG reference basis {row['reference_basis']!r}, "
+                        "not one this extractor knows how to characterize.",
+                    ),
+                }],
+            }
+            items.append({k: v for k, v in item.items() if v is not None})
         if items:
             records[identifier]["producer_organisms"] = items
             _history_last(records[identifier])
@@ -2077,6 +2492,16 @@ def main() -> int:
 
     print(f"{len(concepts)} source concepts -> {len(records)} records", file=sys.stderr)
     print(f"  {merged} records carry more than one source concept", file=sys.stderr)
+    if REFUSED_STRUCTURELESS_XREFS:
+        print(f"  {len(REFUSED_STRUCTURELESS_XREFS)} unverifiable ChEBI xref(s) refused "
+              "(see `just worklist --queue xref-name-conflict`)")
+        for _, label, reason in REFUSED_STRUCTURELESS_XREFS:
+            print(f"    {label}: {reason}")
+    if MALFORMED_STRUCTURE_IDS:
+        print(f"  {len(MALFORMED_STRUCTURE_IDS)} malformed structure accession(s) "
+              "skipped (not a PDB/EMDB accession):", file=sys.stderr)
+        for source_id, xref in MALFORMED_STRUCTURE_IDS:
+            print(f"    {source_id}: {xref}", file=sys.stderr)
     print(f"  {len(skipped)} concepts have no structure and are not written "
           f"(see `just worklist`)", file=sys.stderr)
     if flagged:

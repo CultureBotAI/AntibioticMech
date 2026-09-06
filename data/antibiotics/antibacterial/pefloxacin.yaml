@@ -44,11 +44,9 @@ activity_roles:
 structural_class: fluoroquinolone antibiotic
 structural_class_id: ARO:0000001
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:59517 (DNA synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
-mode_of_action_target_scope: HOST_SHARED_TARGET
+mode_of_action_notes: 'CURATOR: Confirmed as bacterial DNA gyrase inhibition after
+  primary pefloxacin mechanism review. PMID:3010848.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCN(C)CC3)cc21
   standard_inchi: InChI=1S/C17H20FN3O3/c1-3-20-10-12(17(23)24)16(22)11-8-13(18)15(9-14(11)20)21-6-4-19(2)5-7-21/h8-10H,3-7H2,1-2H3,(H,23,24)
@@ -275,6 +273,66 @@ molecular_targets:
   - reference: ARO:3000735
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000762 (pefloxacin); database
       assertion, not a primary citation.
+causal_graphs:
+- graph_id: pefloxacin_dna_gyrase_supercoiling_inhibition
+  title: Pefloxacin inhibits bacterial DNA gyrase supercoiling
+  description: Pefloxacin inhibits the DNA gyrase-catalyzed supercoiling reaction,
+    disrupting bacterial chromosome topology control.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: pefloxacin
+    label: pefloxacin
+    node_type: COMPOUND
+    grounding: CHEBI:50199
+  - node_id: dna_gyrase
+    label: bacterial DNA gyrase
+    node_type: GENE_OR_PROTEIN
+    grounding: ARO:3000733
+    grounding_notes: Grounded through CARD's fluoroquinolone-sensitive GyrA target;
+      GyrA and GyrB form the bacterial DNA gyrase target complex.
+    gene_symbols:
+    - gyrA
+    - gyrB
+  - node_id: dna_supercoiling
+    label: ATP-dependent DNA supercoiling
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: DNA gyrase-catalyzed supercoiling measured in purified-enzyme
+      assays.
+  - node_id: dna_topology_control
+    label: bacterial DNA topology control
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Covers the gyrase-dependent DNA supercoiling step that pefloxacin
+      blocks.
+  edges:
+  - subject: pefloxacin
+    predicate: inhibits
+    object: dna_supercoiling
+    description: Pefloxacin inhibits DNA gyrase-catalyzed DNA supercoiling in purified
+      bacterial enzyme assays.
+    evidence:
+    - reference: PMID:3010848
+      notes: Zweerink and Edison included perfloxacin, an older spelling for pefloxacin,
+        in comparative Micrococcus luteus DNA gyrase supercoiling assays.
+  - subject: dna_gyrase
+    predicate: enables
+    object: dna_supercoiling
+    description: DNA gyrase catalyzes the ATP-dependent supercoiling reaction inhibited
+      by pefloxacin.
+    evidence:
+    - reference: PMID:3010848
+      notes: The purified-enzyme assay measured quinolone inhibition of supercoiling
+        by Micrococcus luteus DNA gyrase.
+  - subject: dna_supercoiling
+    predicate: supports
+    object: dna_topology_control
+    description: DNA supercoiling by gyrase contributes to bacterial chromosome topology
+      control.
+    evidence:
+    - reference: PMID:3010848
+      notes: The in vitro comparison links quinolone-sensitive DNA gyrase activity
+        to DNA supercoiling.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -292,3 +350,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-04T02:35:00Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added a PMID-supported causal graph for pefloxacin inhibition of bacterial
+    DNA gyrase supercoiling and marked the coarse target scope as curator-reviewed.
+  llm_assisted: true

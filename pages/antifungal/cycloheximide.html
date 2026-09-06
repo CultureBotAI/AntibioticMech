@@ -67,7 +67,6 @@
   <li>ppdb:1680</li>
   <li>reaxys:88868</li>
   <li>wikipedia.en:Cycloheximide</li>
-  <li><a href="https://commonchemistry.cas.org/detail?cas_rn=4630-75-5">cas:4630-75-5</a></li>
   <li><a href="https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL123292/">chembl:CHEMBL123292</a></li>
   <li><a href="https://pubchem.ncbi.nlm.nih.gov/compound/2900">pubchem.compound:2900</a></li>
 </ul>
@@ -134,12 +133,16 @@ type — expand a group to see its determinants.</p>
   <summary>ANTIBIOTIC_EFFLUX <span class="pill plain">1</span></summary>
   <table>
     <caption>ANTIBIOTIC_EFFLUX</caption>
-    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Gene families</th><th scope="col">Note</th></tr></thead>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
       <td>Trychophyton rubrum MFS1 with mutations conferring resistance against cyclohexamide</td>
       <td><a href="http://purl.obolibrary.org/obo/ARO_3009291">ARO:3009291</a></td>
+      <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
-      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta">ARO:3009291</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009188 (cycloheximide); database assertion, not a primary citation.)</span></li>
+</ul>
+</td>
     </tr>
   </table>
 </details>
@@ -147,12 +150,16 @@ type — expand a group to see its determinants.</p>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">1</span></summary>
   <table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
-    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Gene families</th><th scope="col">Note</th></tr></thead>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
       <td>Saccharomyces cerevisiae ACT1 with mutations conferring resistance to cycloheximide</td>
       <td><a href="http://purl.obolibrary.org/obo/ARO_3009326">ARO:3009326</a></td>
+      <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
-      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta">ARO:3009326</span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009188 (cycloheximide); database assertion, not a primary citation.)</span></li>
+</ul>
+</td>
     </tr>
   </table>
 </details>
@@ -160,12 +167,16 @@ type — expand a group to see its determinants.</p>
   <summary>UNKNOWN <span class="pill plain">1</span></summary>
   <table>
     <caption>UNKNOWN</caption>
-    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Gene families</th><th scope="col">Note</th></tr></thead>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
-      <td>STS1+ (wild type) [Overexpression] associated with resistance to cycloheximide</td>
+      <td>STS1+ (wild type) [Overexpression] associated with resistance to cycloheximide<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
       <td>—</td>
+      <td><em>Saccharomyces cerevisiae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code class="curie">NCBITaxon:4932</code></a><br><span class="meta">strain YPH501</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_559292"><code class="curie">NCBITaxon:559292</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P38637"><code class="curie">UniProtKB:P38637</code></a> <span class="meta">YIR011C_mRNA</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000544"><code class="curie">PHIPO:0000544</code></a></td>
       <td class="meta">—</td>
-      <td class="meta">PHI-base antimicrobial_interaction PHIG:1805; P38637; Saccharomyces cerevisiae strain YPH501 (NCBITaxon:4932); phenotype PHIPO:0000544; evidence code Cell growth assay; source commit 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8, retrieved 2026-09-01. This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta">PMID:8307980</span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1805; joined to this record by exact ChEBI identifier.)</span></li>
+</ul>
+<span class="meta">Cell growth assay</span></td>
     </tr>
   </table>
 </details>
@@ -208,9 +219,24 @@ type — expand a group to see its determinants.</p>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
   <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-09-02 · seed_from_sources</span>
+    <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
     <span class="pill">REVIEWED</span>
     <span class="meta">2026-09-02 · codex · LLM-assisted</span>
     <p>Verified exact ChEBI identity, structure, roles, and filing class; curator-confirmed eukaryotic protein-synthesis inhibition and added a primary-evidence 80S target while preserving the imported CARD target.</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-09-03 · seed_from_sources</span>
+    <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-09-03 · seed_from_sources</span>
+    <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
 </ol>
 

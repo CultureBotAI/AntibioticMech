@@ -197,6 +197,103 @@ mode_of_action_notes: 'CURATOR: PMID:21094257 measured 150 nM inhibition of wild
   complexes of G93A, G93S, and highly resistant G93V enzymes. These data support inhibition
   of bacterial type-II fatty-acid/envelope synthesis, replacing the seed''s unsupported
   folate-pathway assignment; the structures are mutant, not wild-type, complexes.'
+causal_graphs:
+- graph_id: triclosan_fabi_fatty_acid_synthesis_inhibition
+  title: Triclosan inhibits bacterial FabI fatty-acid synthesis
+  description: Triclosan forms a tight inhibited FabI-NAD-triclosan state, blocking
+    bacterial enoyl-acyl carrier protein reductase activity in type II fatty-acid
+    synthesis and limiting membrane lipid biosynthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: triclosan
+    label: triclosan
+    node_type: COMPOUND
+    grounding: CHEBI:164200
+  - node_id: fabi
+    label: bacterial FabI enoyl-ACP reductase
+    node_type: GENE_OR_PROTEIN
+    grounding: ARO:3000872
+    grounding_notes: Grounded through CARD's antibiotic-sensitive enoyl-acyl carrier
+      reductase target.
+    gene_symbols:
+    - fabI
+  - node_id: fabi_nad_triclosan_state
+    label: inhibited FabI-NAD-triclosan state
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Drug-stabilized FabI state whose exact components depend on species
+      and assay context; kept label-only to avoid overgrounding a catalytic conformation.
+  - node_id: enoyl_acp_reductase_activity
+    label: enoyl-acyl carrier protein reductase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: FabI-catalyzed enoyl-ACP reduction in bacterial fatty-acid synthesis.
+  - node_id: type_ii_fatty_acid_biosynthesis
+    label: type II fatty-acid biosynthesis
+    node_type: PATHWAY
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Dissociated bacterial fatty-acid synthesis pathway containing
+      the FabI enoyl-ACP reductase step.
+  - node_id: membrane_lipid_biosynthesis
+    label: membrane lipid biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Generic downstream lipid-building process supported by bacterial
+      fatty-acid synthesis.
+  edges:
+  - subject: triclosan
+    predicate: stabilizes
+    object: fabi_nad_triclosan_state
+    description: Triclosan promotes formation of a tight inhibited FabI-NAD-triclosan
+      state.
+    evidence:
+    - reference: PMID:10196195
+      notes: Heath and colleagues found that triclosan inhibits bacterial fatty-acid
+        synthesis at FabI and increases FabI affinity for NAD+.
+  - subject: fabi
+    predicate: participates in
+    object: fabi_nad_triclosan_state
+    description: FabI is the bacterial enzyme component of the inhibited triclosan
+      target state.
+    evidence:
+    - reference: PMID:10201369
+      notes: Levy and colleagues connected triclosan activity to FabI in bacterial
+        cells.
+  - subject: fabi_nad_triclosan_state
+    predicate: inhibits
+    object: enoyl_acp_reductase_activity
+    description: The FabI-NAD-triclosan state blocks FabI enoyl-ACP reductase activity.
+    evidence:
+    - reference: PMID:10196195
+      notes: Mechanistic FabI assays linked triclosan binding to inhibition of the
+        enoyl-ACP reductase step.
+  - subject: fabi
+    predicate: enables
+    object: enoyl_acp_reductase_activity
+    description: FabI catalyzes the enoyl-acyl carrier protein reductase step targeted
+      by triclosan.
+    evidence:
+    - reference: PMID:9707111
+      notes: McMurry and colleagues identified lipid synthesis as the triclosan target
+        pathway and FabI as the sensitive enzyme.
+  - subject: enoyl_acp_reductase_activity
+    predicate: supports
+    object: type_ii_fatty_acid_biosynthesis
+    description: Enoyl-ACP reduction is required for bacterial type II fatty-acid
+      synthesis.
+    evidence:
+    - reference: PMID:10196195
+      notes: The FabI inhibition study placed the triclosan-sensitive step in the
+        bacterial fatty-acid synthesis cycle.
+  - subject: type_ii_fatty_acid_biosynthesis
+    predicate: supports
+    object: membrane_lipid_biosynthesis
+    description: Type II fatty-acid synthesis supplies acyl chains used for bacterial
+      membrane lipid synthesis.
+    evidence:
+    - reference: PMID:9707111
+      notes: Lipid synthesis experiments connected triclosan-sensitive FabI activity
+        to the broader lipid biosynthesis pathway.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -238,3 +335,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-04T02:00:00Z'
+  curator: codex
+  action: CURATED_CAUSAL_GRAPH
+  changes: Added a PMID-supported causal graph for triclosan inhibition of bacterial
+    FabI fatty-acid synthesis and marked the coarse mode of action as curator-reviewed.
+  llm_assisted: true

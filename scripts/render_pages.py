@@ -94,6 +94,16 @@ GROUNDING_MEANING = {
     "REVIEW_NEEDED": "Grounding has not been decided yet.",
 }
 
+
+def _has_chebi_and_aro(doc: dict) -> bool:
+    """Return whether both providers support this record's identity."""
+    sources = {
+        concept.get("source")
+        for concept in (doc.get("source_concepts") or [])
+        if isinstance(concept, dict)
+    }
+    return {"CHEBI", "ARO"}.issubset(sources)
+
 # Mechanism-layer fields curation fills in over time, in the order the index
 # page's coverage table shows them. Mirrors scripts/antibiotic_report.py's
 # `mechanism` counters so the site and `just report` cannot disagree.
@@ -121,6 +131,9 @@ XREF_URL_TEMPLATES = {
     "cas": "https://commonchemistry.cas.org/detail?cas_rn={}",
     "kegg.compound": "https://www.kegg.jp/entry/{}",
     "kegg.drug": "https://www.kegg.jp/entry/{}",
+    "NCBITaxon": "http://purl.obolibrary.org/obo/NCBITaxon_{}",
+    "PHIPO": "http://purl.obolibrary.org/obo/PHIPO_{}",
+    "UniProtKB": "https://www.uniprot.org/uniprotkb/{}",
 }
 
 
@@ -196,7 +209,27 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
                 "label": m.get("label", ""),
                 "aro_id": resolve_curie(m["aro_id"], index, root) if m.get("aro_id") else None,
                 "gene_families": m.get("gene_families") or [],
+                # Organismal context (#94). A route-level CARD determinant has
+                # none of this; a PHI-base allele association is defined by it.
+                #
+                # Each CURIE is resolved beside the thing it denotes. Printing
+                # "strain PH-1 NCBITaxon:5518" put a strain designation next to
+                # a SPECIES id and re-asserted on the page the confusion the
+                # record had just stopped asserting (#179).
+                "taxon_label": m.get("taxon_label"),
+                "taxon_id": (resolve_curie(m["taxon_id"], index, root)
+                             if m.get("taxon_id") else None),
+                "strain": m.get("strain"),
+                "strain_taxon_id": (resolve_curie(m["strain_taxon_id"], index, root)
+                                    if m.get("strain_taxon_id") else None),
+                "protein_accession": (resolve_curie(m["protein_accession"], index, root)
+                                      if m.get("protein_accession") else None),
+                "phenotype_id": (resolve_curie(m["phenotype_id"], index, root)
+                                 if m.get("phenotype_id") else None),
+                "gene_id": m.get("gene_id"),
+                "assay": m.get("assay"),
                 "note": m.get("note"),
+                "evidence": m.get("evidence") or [],
             }
         )
     # Largest group first, so the compound with 90 CARD-asserted determinants
@@ -340,9 +373,7 @@ def build(out_dir: Path) -> None:
     total = len(records)
     curation_counts = Counter(doc.get("curation_status", "?") for _, doc in records)
     grounding_counts = Counter(doc.get("grounding_status", "?") for _, doc in records)
-    multi_source = sum(
-        1 for _, doc in records if len({c["source"] for c in (doc.get("source_concepts") or [])}) > 1
-    )
+    multi_source = sum(1 for _, doc in records if _has_chebi_and_aro(doc))
     structure_complete = sum(
         1 for _, doc in records if (doc.get("chemical_structure") or {}).get("standard_inchi_key")
     )

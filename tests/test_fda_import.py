@@ -30,15 +30,37 @@ def test_committed_fda_inventory_is_product_level_and_conservative(repo_root):
     assert all(row["gsrs_retrieved_on"] == "2026-08-31" for row in rows)
 
 
-def test_fda_assertions_are_exactly_reproduced_and_fully_provenanced(records):
+def test_fda_assertions_are_exactly_reproduced_and_fully_provenanced(records, repo_root):
     assertions = [
         (path, record, assertion)
         for path, record in records
         for assertion in record.get("clinical_status_assertions") or []
         if assertion.get("source") == "DRUGS_AT_FDA"
     ]
-    assert len(assertions) == 3703
-    assert len({record["identifier"] for _, record, _ in assertions}) == 211
+    # Scoped to the structures the corpus actually holds, not to a frozen total.
+    # `azimycin`/dexamethasone was excluded as out of scope (#162), taking its 92
+    # FDA product rows with it: an antimicrobial corpus should not carry a
+    # corticosteroid's approvals. Asserting 3703 would have made a correct
+    # exclusion look like a regression, and would equally have hidden a real one.
+    import csv as _csv
+
+    inventory = list(_csv.DictReader(
+        (repo_root / "data" / "raw" / "fda_clinical_status.tsv").open(
+            newline="", encoding="utf-8"), delimiter="\t"))
+    in_corpus = {
+        (record.get("chemical_structure") or {}).get("standard_inchi_key")
+        for _, record in records
+    }
+    expected = [row for row in inventory if row["standard_inchi_key"] in in_corpus]
+    assert len(assertions) == len(expected), (
+        "every FDA row whose structure is in the corpus must be reproduced")
+    assert len({record["identifier"] for _, record, _ in assertions}) == \
+        len({row["standard_inchi_key"] for row in expected})
+    # And nothing may go missing silently: the only inventory structure absent
+    # from the corpus is the one a curator deliberately excluded.
+    absent = {row["standard_inchi_key"] for row in inventory} - in_corpus
+    assert absent == {"UREBDLICKHMUKA-CXSFZGCWSA-N"}, (
+        f"an FDA structure left the corpus without a decision: {absent}")
     required = {
         "application_number",
         "product_number",

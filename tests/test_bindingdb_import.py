@@ -81,14 +81,16 @@ def test_only_kd_is_promoted_to_direct_binding():
 def test_non_target_specific_measurements_are_not_promoted_to_targets():
     inventory = inventory_rows()
     accepted = [row for row in inventory if bindingdb_row_supports_target_association(row)]
-    assert len(accepted) == 109
-    assert len(inventory) - len(accepted) == 68
+    assert len(accepted) == 103
+    assert len(inventory) - len(accepted) == 74
     rows = {row["bindingdb_reactant_set_id"]: row for row in inventory}
     assert not bindingdb_row_supports_target_association(rows["868949"])
     assert not bindingdb_row_supports_target_association(rows["1108846"])
     assert not bindingdb_row_supports_target_association(rows["874399"])
     assert not bindingdb_row_supports_target_association(rows["1074309"])
     assert not bindingdb_row_supports_target_association(rows["14752"])
+    assert not bindingdb_row_supports_target_association(rows["874400"])
+    assert not any(row["assay_name"] == "DRC analysis by immunofluorescence" for row in accepted)
     assert bindingdb_row_supports_target_association(rows["39230"])
 
 
