@@ -73,11 +73,13 @@ versioned input. Pick the narrowest reproducible path that covers the compound:
   new ARO-only concepts need structures, and a seed canary before the batch.
 - **Present only in another redistributable structured source.** Add or extend
   an extractor so `conf/sources.yaml`, `SourceEnum`, `data/raw/`,
-  `data/raw/MANIFEST.yaml`, source concepts, structures and provenance reproduce
-  offline.
-- **Present only in a paper or in a restricted/name-only source.** Do not add a
-  record. File the exact source gap or use `source-queue`; the current corpus has
-  no direct curator-entry inventory for `CURATOR` records.
+  `data/raw/MANIFEST.yaml`, `ATTRIBUTION.md`, source concepts, structures and
+  provenance reproduce offline.
+- **Present only in a primary paper.** Add a reproducible direct-curator
+  inventory for `CURATOR` source concepts before the first YAML write. If that
+  lane does not exist yet, implement it or file that prerequisite.
+- **Present only in a restricted or name-only source.** Do not add a record.
+  File the exact source gap or use `source-queue`.
 
 ## Identity and structure
 
