@@ -14,6 +14,7 @@ DOC_FILES = ["README.md", "CLAUDE.md", "pyproject.toml", "docs/HARMONIZATION.md"
              "docs/CURATION.md", "NEXT_TASKS.md",
              # Skills are instructions an agent will follow literally, so a
              # command that does not exist is worse here than in prose.
+             ".claude/skills/add-antibiotic/SKILL.md",
              ".claude/skills/source-queue/SKILL.md",
              ".claude/skills/review-open-issues/SKILL.md",
              ".claude/skills/curate-yaml-record/SKILL.md"]
