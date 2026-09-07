@@ -94,8 +94,11 @@ records the sha256 of every upstream file and every emitted inventory.
 
 ## Skills
 
-`.claude/skills/` carries three repository-specific workflows:
+`.claude/skills/` carries four repository-specific workflows:
 
+- **`add-antibiotic`** — prove a named compound or publication lead is one new
+  structure, then add the reproducible source path that emits its first
+  `AntibioticRecord` without hand-writing generated YAML.
 - **`review-open-issues`** — sweep and rank the whole open-issue queue against
   the committed corpus. Its P0 tier is specific to this repository: something
   wrong that every gate passes, which is how 25 defects were once found across two review
@@ -108,7 +111,8 @@ records the sha256 of every upstream file and every emitted inventory.
   It writes records only through the validated curation-event path.
 
 The issue and source-queue workflows do not close issues, adopt sources, or edit
-the corpus. The record-curation workflow is read-only for an audit request and
+the corpus. The add-antibiotic workflow adds records only through a reproducible
+source path. The record-curation workflow is read-only for an audit request and
 may edit the named record only when the user asks to curate or improve it. None
 of the skills sends messages or mutates GitHub without explicit authorization.
 

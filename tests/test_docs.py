@@ -9,14 +9,28 @@ from __future__ import annotations
 import re
 import subprocess
 import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+SKILLS_DIR = REPO_ROOT / ".claude" / "skills"
+
+
+def _skill_docs() -> list[str]:
+    if not SKILLS_DIR.is_dir():
+        return []
+    return [
+        str(entry.relative_to(REPO_ROOT))
+        for directory in sorted(path for path in SKILLS_DIR.iterdir() if path.is_dir())
+        for entry in sorted(directory.iterdir())
+        if entry.is_file() and entry.name.lower() == "skill.md"
+    ]
+
 
 DOC_FILES = ["README.md", "CLAUDE.md", "pyproject.toml", "docs/HARMONIZATION.md",
              "docs/CURATION.md", "NEXT_TASKS.md",
              # Skills are instructions an agent will follow literally, so a
              # command that does not exist is worse here than in prose.
-             ".claude/skills/source-queue/SKILL.md",
-             ".claude/skills/review-open-issues/SKILL.md",
-             ".claude/skills/curate-yaml-record/SKILL.md"]
+             *_skill_docs()]
 
 SCRIPT_REF = re.compile(r"scripts/[a-z_]+\.py")
 JUST_REF = re.compile(r"just ([a-z][a-z-]*)")
