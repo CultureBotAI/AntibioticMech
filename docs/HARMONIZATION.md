@@ -342,8 +342,8 @@ should not have to parse a collection number out of a species name.
 projects those to two dimensions for the site's [corpus map](../pages/map.html).
 
 **It embeds the annotation, not the chemistry.** Proximity means "described
-similarly" — same class, structural family, mechanism, asserted roles — not
-"structurally similar". SMILES and InChI are deliberately excluded: a sentence
+similarly" — same class, structural family, mechanism, asserted roles,
+producing organism — not "structurally similar". SMILES and InChI are deliberately excluded: a sentence
 model reads them as gibberish long enough to dominate every document. So is the
 seeded `mode_of_action_notes`, which is near-identical across hundreds of records
 by design and would manufacture one enormous false cluster of "records carrying a

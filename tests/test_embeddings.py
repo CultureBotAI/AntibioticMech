@@ -272,6 +272,10 @@ def test_the_producing_organism_is_in_the_document_and_its_strain_is_not():
     assert "NRRL 2338" not in doc
     # The accession is an identifier, not language, and would tokenize as noise.
     assert "BGC0000055" not in doc
+    # And both exclusions are declared where the audit lives, not left implicit.
+    from embed_records import EXCLUDED
+
+    assert {"strain", "biosynthetic_gene_cluster"} <= set(EXCLUDED)
 
 
 def test_two_producers_of_one_compound_are_both_named_once():
@@ -292,3 +296,53 @@ def test_two_producers_of_one_compound_are_both_named_once():
 
     assert doc.count("Streptomyces fradiae") == 1
     assert "Pseudomonas syringae" in doc
+
+
+def test_the_producer_clause_sits_where_truncation_would_take_it_last():
+    """Position is the design claim, and substring presence does not test it.
+
+    Moving the clause after the identifiers passed every assertion here: the
+    species was still in the document, just in the slot the window drops first.
+    Nothing truncates today, with the longest document at 510 tokens against a
+    512 window, so this is latent -- which is exactly when a position assertion
+    is worth having rather than after something grows back.
+    """
+    from embed_records import build_document
+
+    record = {
+        "identifier": "CHEBI:1", "label": "widgetmycin",
+        "antimicrobial_class": "ANTIBACTERIAL",
+        "definition": "A widget antibiotic of no particular distinction.",
+        "synonyms": [{"value": "widgetin", "synonym_type": "EXACT_SYNONYM"}],
+        "producer_organisms": [
+            {"taxon_id": "NCBITaxon:1", "taxon_label": "Streptomyces fradiae"}],
+    }
+    doc = build_document(record, {})
+    assert doc.index("Streptomyces fradiae") < doc.index("A widget antibiotic")
+    assert doc.index("Streptomyces fradiae") < doc.index("identifiers:")
+
+
+def test_every_committed_producer_record_names_its_organism_in_the_document():
+    """A fixture can only test the keys I already believed in.
+
+    That sentence is this repository's own, written after reading `label` where
+    the schema says `target_label` silently dropped 249 target entries with
+    every gate green. The corpus is the check that a fixture cannot be.
+    """
+    import yaml
+    from embed_records import CORPUS_DIR, build_document
+
+    missing = []
+    seen = 0
+    for path in sorted(CORPUS_DIR.rglob("*.yaml")):
+        record = yaml.safe_load(path.read_text(encoding="utf-8"))
+        producers = record.get("producer_organisms") or []
+        if not producers:
+            continue
+        seen += 1
+        document = build_document(record, {})
+        for producer in producers:
+            if producer["taxon_label"] not in document:
+                missing.append((record["identifier"], producer["taxon_label"]))
+    assert seen == 61, seen
+    assert missing == [], missing[:10]

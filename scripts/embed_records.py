@@ -56,7 +56,12 @@ OUT = REPO_ROOT / "data" / "embeddings"
 # the audit is one list rather than an argument reconstructed from the code.
 EXCLUDED = ("smiles", "standard_inchi", "standard_inchi_key", "molecular_formula",
             "average_mass", "monoisotopic_mass", "charge", "mode_of_action_notes",
-            "curation_status", "grounding_status", "source_version")
+            "curation_status", "grounding_status", "source_version",
+            # From producer_organisms: the species goes in, these do not. A
+            # collection number and a cluster accession are opaque per token and
+            # would separate nothing. Declared here rather than left implicit in
+            # the builder, because this list is the audit (#218).
+            "strain", "biosynthetic_gene_cluster")
 
 
 def role_names() -> dict[str, str]:
@@ -133,8 +138,13 @@ def humanize(value: str) -> str:
 def build_document(record: dict, names: dict[str, str]) -> str:
     """One document per record, ordered MOST DISCRIMINATIVE FIRST.
 
-    The model's window is 512 tokens and 94 of 2,923 documents exceed it, so the
-    tail of those is silently dropped. Order therefore decides what survives.
+    The model's window is 512 tokens. No document exceeds it today and the
+    longest is 510, so nothing is currently truncated -- but that is two tokens
+    of headroom, not a reason to stop ordering. The figure this docstring used
+    to quote, 94 documents over the window, stopped being true when the synonym
+    filter landed; rebuilding today's corpus with the pre-filter builder still
+    gives 82 over and a longest of 855. Order decides what survives the moment
+    anything grows back.
     Mechanism, roles and targets — short, and the fields that actually separate
     one antibiotic from another — go before the definition; synonyms and
     identifiers, which are verbose and weakly semantic, go last and are the
@@ -174,12 +184,15 @@ def build_document(record: dict, names: dict[str, str]) -> str:
     if resistance:
         parts.append("resistance: " + ", ".join(resistance[:6]))
 
-    # The organism that makes it, which was absent entirely: a search for a
-    # producing species matched nothing, on 61 records that name one. Species
-    # only -- the strain designation is a collection number, which is opaque per
-    # token and would spend the window without separating anything. Placed with
-    # the other short discriminative fields, ahead of the definition, and it
-    # costs about four words (#218).
+    # The organism that makes it, which no field put here. Of the 61 records
+    # naming a producer, 34 had no trace of it in their document at all; 15
+    # already carried the species through their ChEBI definition and 12 the
+    # genus alone, incidentally rather than because anything asserted it.
+    #
+    # Species only. The strain designation is a collection number and the
+    # cluster accession an identifier: both are opaque per token and would
+    # spend the window separating nothing. Placed with the other short
+    # discriminative fields, ahead of the definition (#218).
     producers = dict.fromkeys(
         str(p.get("taxon_label")) for p in (record.get("producer_organisms") or [])
         if p.get("taxon_label"))
