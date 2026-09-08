@@ -270,14 +270,19 @@ def match_report(rows: list[dict]) -> tuple[Counter, list[tuple[str, str, str]]]
         exact_hits = exact.get(key, [])
         connected_hits = connectivity.get(key[:14], [])
         name = f"{row['mibig_accession']}:{row['compound_name']}"
-        if len(exact_hits) == 1:
+        # Order matters, and getting it wrong misreports the run. The seeder
+        # rejects unassigned potential stereo BEFORE it looks for a key match,
+        # so a stereo-incomplete row with one exact hit is not seedable. Testing
+        # the hit first called 11 such rows "matched" and published 77 where the
+        # seeder writes 66 (#208).
+        if row["stereo_complete"] != "true":
+            status, detail = "ambiguous", "unassigned potential stereo"
+        elif len(exact_hits) == 1:
             status, detail = "matched", exact_hits[0]
         elif len(exact_hits) > 1:
             status, detail = "ambiguous", "multiple exact corpus records: " + ",".join(exact_hits)
-        elif connected_hits or row["stereo_complete"] != "true":
-            status = "ambiguous"
-            reason = "connectivity-only match" if connected_hits else "unassigned potential stereo"
-            detail = reason + (": " + ",".join(connected_hits) if connected_hits else "")
+        elif connected_hits:
+            status, detail = "ambiguous", "connectivity-only match: " + ",".join(connected_hits)
         else:
             status, detail = "out_of_scope", "no exact or connectivity corpus match"
         counts[status] += 1
@@ -350,10 +355,17 @@ def main() -> int:
     )
     print(f"  structurally valid producer rows: {len(rows)}", file=sys.stderr)
     print(
-        "  dry-run against corpus: "
+        f"  dry-run against corpus, over the {len(rows)} inventory row(s): "
         f"matched={matches['matched']} ambiguous={matches['ambiguous']} "
-        f"rejected={sum(v for k, v in extraction.items() if k.startswith('rejected_'))} "
         f"out_of_scope={matches['out_of_scope']}",
+        file=sys.stderr,
+    )
+    # A separate line and a separate denominator: these compounds were dropped
+    # before the inventory, so they are not part of the split above (#215).
+    print(
+        f"  dropped before the inventory, of {extraction['compounds_admitted']} "
+        f"admitted compound(s): "
+        f"{sum(v for k, v in extraction.items() if k.startswith('rejected_'))}",
         file=sys.stderr,
     )
     for name, status, detail in details:

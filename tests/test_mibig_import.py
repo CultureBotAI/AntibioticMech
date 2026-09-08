@@ -80,7 +80,15 @@ def test_committed_mibig_inventory_is_evidenced_and_carries_no_activity_claims(r
     # The changelog reviewer is retained as provenance but is no longer the gate,
     # so most admitted rows carry no expert review -- and none carries the
     # placeholder that made the old gate look stricter than it was.
+    #
+    # BOTH sides are asserted. Checking only that some row reads "false" would
+    # survive an extractor that emitted "false" unconditionally: the row count
+    # would hold, and `verify-corpus` would hold too because the inventory and
+    # the corpus regenerate together (#207).
     assert any(row["expert_reviewed"] == "false" for row in rows)
+    assert sum(row["expert_reviewed"] == "true" for row in rows) == 42
+    assert all(bool(row["reviewer_ids"]) == (row["expert_reviewed"] == "true")
+               for row in rows)
     assert all("AAAAAAAAAAAAAAAAAAAAAAAA" not in row["reviewer_ids"] for row in rows)
     assert all(row["primary_reference"] for row in rows)
     assert "bioactivity" not in {column.lower() for column in rows[0]}
@@ -126,6 +134,13 @@ def test_every_seeded_producer_says_which_experiment_supports_it(records):
             if "reviewed" in producer and producer["reviewed"] is not True:
                 problems.append((record["identifier"], "reviewed present but not true"))
     assert problems == [], problems[:10]
+    # And the flag reaches the corpus at all. Without this the extractor could
+    # stop emitting expert review entirely and every assertion above would still
+    # hold, because absent satisfies "present implies true" (#207).
+    reviewed = sum(1 for _, record in records
+                   for producer in record.get("producer_organisms") or []
+                   if producer.get("source") == "MIBIG" and producer.get("reviewed") is True)
+    assert reviewed == 3, reviewed
 
 
 def test_reseed_replaces_only_the_mibig_owned_producer_slice():
