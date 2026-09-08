@@ -69,12 +69,16 @@ prose below are the reasoning, the queue is the list.
   a real starting set for a curator writing record-level evidence — but a
   reference cited by a ChEBI entry supports the compound, not necessarily any
   antimicrobial claim about it, so it cannot be seeded blind.
-- **Producer organisms and BGCs — now the top candidate.** `producer_organisms`
-  is empty on every record. MIBiG 4.0 is CC BY 4.0 with bulk JSON on Zenodo and
-  a machine-readable reviewed flag, which makes it the cleanest licence fit in
-  the queue. Honour its caveat at seed time: about 40% of 4.0-cycle entries had
-  passed expert review at publication, and that flag describes entry curation
-  rather than the strength of the compound–producer link.
+- **Producer organisms and BGCs — adopted, and the gate has been corrected.**
+  MIBiG 4.0 is CC BY 4.0 with bulk JSON on Zenodo, which makes it the cleanest
+  licence fit in the queue. The first import gated on the changelog reviewer
+  field on the belief that roughly 40% of 4.0-cycle entries had passed expert
+  review. The dump refutes that: the reviewer id is a migration placeholder on
+  2,988 of 3,013 entries, so the gate admitted 24 entries and populated six
+  records. The import now gates on MIBiG's per-locus compound-to-producer
+  evidence methods, which are machine-readable and grade the link itself rather
+  than entry curation (#203). Any further widening should come from a second
+  source, not from relaxing the evidence requirement.
 - **Activity spectrum.** `activity_spectrum` is empty. Real MIC data would come
   from a screening resource with assays attached; without the assay a number is
   not an observation, so pick the source carefully.
