@@ -67,8 +67,8 @@ def corpus_stats() -> dict:
 def render_block(stats: dict) -> str:
     total = stats["total"]
     lines = [START, ""]
-    lines.append("| Class | Records | SEEDED | REVIEWED | With target or resistance evidence |")
-    lines.append("|---|---:|---:|---:|---:|")
+    lines.append("| Class | Records | SEEDED | PROPOSED | REVIEWED | With target or resistance evidence |")
+    lines.append("|---|---:|---:|---:|---:|---:|")
     # Filing is exclusive, so a subclass's records are not also under its parent.
     # The parent row therefore carries the INCLUSIVE total and the subclass is
     # indented beneath it; otherwise the table answers "acts on bacteria?" with
@@ -82,6 +82,8 @@ def render_block(stats: dict) -> str:
     # defect as a bar drawn from the wrong number, in the columns next to it.
     seeded = rollup_by_class({c: stats["status_by_class"].get(c, Counter())["SEEDED"]
                               for c in CLASS_ORDER})
+    proposed = rollup_by_class({c: stats["status_by_class"].get(c, Counter())["PROPOSED"]
+                                for c in CLASS_ORDER})
     reviewed = rollup_by_class({c: stats["status_by_class"].get(c, Counter())["REVIEWED"]
                                 for c in CLASS_ORDER})
     evidence_incl = rollup_by_class({
@@ -95,16 +97,27 @@ def render_block(stats: dict) -> str:
             continue
         if cls in parents:
             label = f"&nbsp;&nbsp;↳ {cls} *(subclass of {parents[cls]})*"
-            shown, s_, r_, c_ = (counts[cls], stats["status_by_class"].get(cls, Counter())["SEEDED"],
-                                 stats["status_by_class"].get(cls, Counter())["REVIEWED"],
-                                 stats["target_or_resistance_by_class"].get(cls, 0))
+            shown, s_, p_, r_, c_ = (
+                counts[cls],
+                stats["status_by_class"].get(cls, Counter())["SEEDED"],
+                stats["status_by_class"].get(cls, Counter())["PROPOSED"],
+                stats["status_by_class"].get(cls, Counter())["REVIEWED"],
+                stats["target_or_resistance_by_class"].get(cls, 0),
+            )
         else:
             has_kids = inclusive[cls] != counts[cls]
             label = f"{cls} *(incl. subclasses)*" if has_kids else cls
-            shown, s_, r_, c_ = (inclusive[cls], seeded[cls], reviewed[cls], evidence_incl[cls])
-        lines.append(f"| {label} | {shown} | {s_} | {r_} | {c_} |")
+            shown, s_, p_, r_, c_ = (
+                inclusive[cls],
+                seeded[cls],
+                proposed[cls],
+                reviewed[cls],
+                evidence_incl[cls],
+            )
+        lines.append(f"| {label} | {shown} | {s_} | {p_} | {r_} | {c_} |")
     lines.append(f"| **TOTAL** | **{total}** | "
                  f"**{sum(c['SEEDED'] for c in stats['status_by_class'].values())}** | "
+                 f"**{sum(c['PROPOSED'] for c in stats['status_by_class'].values())}** | "
                  f"**{sum(c['REVIEWED'] for c in stats['status_by_class'].values())}** | "
                  f"**{sum(stats['target_or_resistance_by_class'].values())}** |")
     if any(c in parents for c in CLASS_ORDER if stats["by_class"].get(c)):

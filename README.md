@@ -57,20 +57,20 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 <!-- BEGIN GENERATED CORPUS STATS -->
 
-| Class | Records | SEEDED | REVIEWED | With target or resistance evidence |
-|---|---:|---:|---:|---:|
-| ANTIBACTERIAL *(incl. subclasses)* | 1091 | 1059 | 32 | 285 |
-| &nbsp;&nbsp;↳ ANTIMYCOBACTERIAL *(subclass of ANTIBACTERIAL)* | 78 | 75 | 3 | 15 |
-| ANTIFUNGAL | 594 | 581 | 13 | 65 |
-| ANTIPROTOZOAL | 248 | 246 | 2 | 5 |
-| ANTIVIRAL | 473 | 448 | 25 | 32 |
-| BIOCIDE | 31 | 31 | 0 | 2 |
-| ANTIMICROBIAL_UNSPECIFIED | 472 | 464 | 8 | 10 |
-| **TOTAL** | **2909** | **2829** | **80** | **399** |
+| Class | Records | SEEDED | PROPOSED | REVIEWED | With target or resistance evidence |
+|---|---:|---:|---:|---:|---:|
+| ANTIBACTERIAL *(incl. subclasses)* | 1102 | 1059 | 11 | 32 | 285 |
+| &nbsp;&nbsp;↳ ANTIMYCOBACTERIAL *(subclass of ANTIBACTERIAL)* | 78 | 75 | 0 | 3 | 15 |
+| ANTIFUNGAL | 594 | 581 | 0 | 13 | 65 |
+| ANTIPROTOZOAL | 248 | 246 | 0 | 2 | 5 |
+| ANTIVIRAL | 473 | 448 | 0 | 25 | 32 |
+| BIOCIDE | 31 | 31 | 0 | 0 | 2 |
+| ANTIMICROBIAL_UNSPECIFIED | 472 | 464 | 0 | 8 | 10 |
+| **TOTAL** | **2920** | **2829** | **11** | **80** | **399** |
 
 A row marked *(subclass of X)* is already counted in X's own row — mycobacteria are bacteria, and filing is exclusive, so a compound filed ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each record once, so the Records column does not sum to it.
 
-Identity: **2669** records (92%) are grounded in a ChEBI term; **240** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
+Identity: **2669** records (91%) are grounded in a ChEBI term; **251** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
 
 Corroboration: **281** records carry source concepts from both ChEBI and CARD/ARO; **2341** come from ChEBI alone and **287** from CARD alone.
 
@@ -99,7 +99,7 @@ so seeding, validation, rendering and the whole test suite run offline.
 
 The generated site includes a
 **[Chemical structure map](https://culturebotai.github.io/AntibioticMech/pages/chemical-map.html)**
-covering all 2,909 records. Its coordinates and nearest neighbors use only the
+covering all 2,920 records. Its coordinates and nearest neighbors use only the
 exact stored chemical structure:
 
 ```text
@@ -170,7 +170,7 @@ mode-of-action and target vocabularies cover both kinds.
 `data/antibiotics/PATHS.tsv`,
 `data/embeddings/chemical-structure-map.json`, `pages/**`, and the
 statistics block in this README. `just verify-corpus` rebuilds the corpus from
-`data/raw/` and rejects
+`data/raw/` plus `curation/curator_antibiotics.tsv` and rejects
 drift **in the fields the seeder owns** — identity, label, definition, synonyms,
 parents, xrefs, class, roles, structural class, structure, source concepts,
 grounding status, and the CARD-derived mechanism items.
@@ -182,13 +182,15 @@ to `REVIEWED`, passes every gate. Those are what review is for, not the
 reproduction check.
 
 **Curated**: `curation/decisions.tsv` (grounding and exclusion decisions, keyed
-by a source concept's minted identifier), and the mechanism fields on a record —
-`mode_of_action`, `molecular_targets` beyond CARD's, `activity_spectrum`,
-`producer_organisms` beyond the MIBiG-marked slice, `causal_graphs`,
-`discussions`. `verify-corpus` does not compare those, so curation and
-reproducibility coexist — with source-owned exceptions: BindingDB-marked target,
-PHI-base-marked resistance, MIBiG-marked producer, and Drugs@FDA-marked clinical
-assertions are compared to their
+by a source concept's minted identifier), `curation/curator_antibiotics.tsv`
+(new one-structure records from stable structure references and primary-paper
+activity evidence), and the mechanism fields on a record — `mode_of_action`,
+`molecular_targets` beyond CARD's, `activity_spectrum`, `producer_organisms`
+beyond the MIBiG-marked slice, `causal_graphs`, `discussions`. `verify-corpus`
+does not compare those mechanism fields, so curation and reproducibility coexist
+— with source-owned exceptions: BindingDB-marked target, PHI-base-marked
+resistance, MIBiG-marked producer, and Drugs@FDA-marked clinical assertions are
+compared to their
 committed inventories, and a `mode_of_action` still carrying the seeder's note marker is the
 seeder's, and is compared along with its notes and target scope, because a bare
 hand edit of a seeded mechanism is drift rather than curation. Writing a

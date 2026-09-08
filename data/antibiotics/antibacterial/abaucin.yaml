@@ -1,0 +1,52 @@
+identifier: antibioticmech:curator-f8f4ef7fbd
+label: Abaucin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A spirocyclic substituted phenethylamine with narrow-spectrum antibacterial
+  activity against Acinetobacter baumannii.
+definition_source: DOI:10.1038/s41589-023-01349-8
+synonyms:
+- synonym_text: RS-102895
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: RS102895
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: MLJS-21001
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C1CN(CCC12C3=CC=CC=C3NC(=O)O2)CCC4=CC=C(C=C4)C(F)(F)F
+  standard_inchi: InChI=1S/C21H21F3N2O2/c22-21(23,24)16-7-5-15(6-8-16)9-12-26-13-10-20(11-14-26)17-3-1-2-4-18(17)25-19(27)28-20/h1-8H,9-14H2,(H,25,27)
+  standard_inchi_key: HIDWEYPGMLIQSN-UHFFFAOYSA-N
+  molecular_formula: C21H21F3N2O2
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/10000456
+  retrieved_on: '2026-09-07'
+  charge: 0
+  average_mass: 390.4
+  monoisotopic_mass: 390.1555124
+xrefs:
+- pubchem.compound:10000456
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1038/s41589-023-01349-8#abaucin
+  source_label: Abaucin
+  minted_identifier: antibioticmech:curator-f8f4ef7fbd
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1038/s41589-023-01349-8
+    snippet: Liu et al. discovered abaucin in a deep-learning screen and reported
+      narrow-spectrum antibacterial activity against Acinetobacter baumannii, including
+      clinical isolates with intrinsic and acquired resistance mechanisms.
+    notes: PubChem CID 10000456 supplies the standard InChI, InChIKey, formula, and
+      SMILES for abaucin.
+  source_version: '2026-09-07'
+curation_history:
+- timestamp: '2026-09-08T02:13:28Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

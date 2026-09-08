@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Harmonize the committed inventories into one AntibioticRecord per structure.
 
-Reads only ``data/raw/`` — never the network — and writes
+Reads only the committed source inventories — never the network — and writes
 ``data/antibiotics/<class>/<slug>.yaml`` plus the ``PATHS.tsv`` slug lockfile.
 
     just seed                       # dry run: per-class counts, nothing written
@@ -58,6 +58,7 @@ RETIRED_FILE = CORPUS_DIR / "RETIRED.tsv"
 CONF_PATH = REPO_ROOT / "conf" / "sources.yaml"
 SCHEMA_PATH = REPO_ROOT / "src" / "antibioticmech" / "schema" / "antibioticmech.yaml"
 DECISIONS_PATH = REPO_ROOT / "curation" / "decisions.tsv"
+CURATOR_ANTIBIOTICS_PATH = REPO_ROOT / "curation" / "curator_antibiotics.tsv"
 
 CLASS_DIRS = {
     "ANTIBACTERIAL": "antibacterial",
@@ -365,7 +366,8 @@ class Concept:
 
     __slots__ = ("source", "source_id", "label", "definition", "definition_refs",
                  "roles", "parents", "xrefs", "synonyms", "structure", "structural_class",
-                 "structural_class_id", "minted", "mechanism_roles", "aro_parents")
+                 "structural_class_id", "minted", "mechanism_roles", "aro_parents",
+                 "antimicrobial_class", "source_version", "evidence")
 
     def __init__(self, source, source_id, label):
         self.source = source
@@ -385,6 +387,9 @@ class Concept:
         self.structural_class = ""
         self.structural_class_id = ""
         self.mechanism_roles: list[str] = []
+        self.antimicrobial_class = ""
+        self.source_version = ""
+        self.evidence: list[dict] = []
         self.minted = ""
 
 
@@ -445,6 +450,107 @@ def structure_from_pubchem(row: dict) -> dict:
     }
     out.update(_numeric_fields(row, charge_via_float=True))
     return {k: v for k, v in out.items() if v not in ("", None)}
+
+
+def structure_from_curator(row: dict) -> dict:
+    out = {
+        "smiles": row["smiles"],
+        "standard_inchi": row["standard_inchi"],
+        "standard_inchi_key": row["standard_inchi_key"],
+        "molecular_formula": row.get("molecular_formula", ""),
+        "structure_source": row["structure_source"],
+        "retrieved_on": row["structure_retrieved_on"],
+    }
+    out.update(_numeric_fields(row, charge_via_float=False))
+    return {k: v for k, v in out.items() if v not in ("", None)}
+
+
+CURATOR_ANTIBIOTIC_COLUMNS = [
+    "source_id", "label", "antimicrobial_class", "smiles", "standard_inchi",
+    "standard_inchi_key", "structure_source", "structure_retrieved_on",
+    "source_version", "reference", "evidence_snippet", "evidence_notes",
+    "definition", "activity_roles", "synonyms", "xrefs", "molecular_formula",
+    "charge", "average_mass", "monoisotopic_mass",
+]
+STABLE_CURATOR_REFERENCE = re.compile(r"^(DOI:10\.\S+|https://\S+)$", re.I)
+
+
+def load_curator_concepts(path: Path = CURATOR_ANTIBIOTICS_PATH) -> list[Concept]:
+    if not path.exists():
+        return []
+    with path.open(newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh, delimiter="\t")
+        if reader.fieldnames != CURATOR_ANTIBIOTIC_COLUMNS:
+            raise SystemExit(
+                f"{path} columns are {reader.fieldnames}; expected "
+                f"{CURATOR_ANTIBIOTIC_COLUMNS}"
+            )
+        rows = list(reader)
+
+    concepts = []
+    seen_source_ids: set[str] = set()
+    seen_inchikeys: dict[str, str] = {}
+    for lineno, row in enumerate(rows, 2):
+        if not any(row.values()):
+            continue
+        required = [
+            "source_id", "label", "antimicrobial_class", "smiles", "standard_inchi",
+            "standard_inchi_key", "structure_source", "structure_retrieved_on",
+            "source_version", "reference", "molecular_formula", "charge",
+        ]
+        missing = [field for field in required if not row.get(field)]
+        if missing:
+            raise SystemExit(f"{path}:{lineno} missing required field(s): {', '.join(missing)}")
+        if row["source_id"] in seen_source_ids:
+            raise SystemExit(f"{path}:{lineno} duplicates source_id {row['source_id']!r}")
+        seen_source_ids.add(row["source_id"])
+        previous_inchikey = seen_inchikeys.setdefault(row["standard_inchi_key"], row["source_id"])
+        if previous_inchikey != row["source_id"]:
+            raise SystemExit(
+                f"{path}:{lineno} duplicates Standard InChIKey "
+                f"{row['standard_inchi_key']} from {previous_inchikey!r}"
+            )
+        if row["antimicrobial_class"] not in CLASS_DIRS:
+            raise SystemExit(
+                f"{path}:{lineno} has unknown antimicrobial_class "
+                f"{row['antimicrobial_class']!r}"
+            )
+        if not STABLE_CURATOR_REFERENCE.fullmatch(row["reference"]):
+            raise SystemExit(
+                f"{path}:{lineno} reference must be DOI:10... or a stable https:// URL"
+            )
+        if not STABLE_CURATOR_REFERENCE.fullmatch(row["source_id"]):
+            raise SystemExit(
+                f"{path}:{lineno} source_id must be DOI:10... or a stable https:// URL"
+            )
+        if not STABLE_CURATOR_REFERENCE.fullmatch(row["structure_source"]):
+            raise SystemExit(
+                f"{path}:{lineno} structure_source must be DOI:10... or a stable https:// URL"
+            )
+
+        concept = Concept("CURATOR", row["source_id"], row["label"])
+        concept.definition = row.get("definition", "")
+        concept.roles = split_pipe(row.get("activity_roles", ""))
+        concept.synonyms = [(text, "EXACT_SYNONYM")
+                            for text in split_pipe(row.get("synonyms", ""))]
+        xrefs = []
+        for raw in split_pipe(row.get("xrefs", "")):
+            xref = normalize_xref(raw)
+            if xref is None:
+                raise SystemExit(f"{path}:{lineno} has invalid xref {raw!r}")
+            xrefs.append(xref)
+        concept.xrefs = xrefs
+        concept.structure = structure_from_curator(row)
+        concept.antimicrobial_class = row["antimicrobial_class"]
+        concept.source_version = row["source_version"]
+        evidence = {"reference": row["reference"]}
+        if row.get("evidence_snippet"):
+            evidence["snippet"] = row["evidence_snippet"]
+        if row.get("evidence_notes"):
+            evidence["notes"] = row["evidence_notes"]
+        concept.evidence = [evidence]
+        concepts.append(concept)
+    return concepts
 
 
 def classify(roles: list[str], conf: dict, from_aro: bool,
@@ -604,6 +710,8 @@ def build_concepts(conf: dict) -> tuple[list[Concept], dict[str, dict]]:
         elif row["aro_id"] in pubchem:
             concept.structure = structure_from_pubchem(pubchem[row["aro_id"]])
         concepts.append(concept)
+
+    concepts.extend(load_curator_concepts())
 
     if refused:
         # A refusal can remove a record from the corpus. Every other consequential
@@ -1035,6 +1143,31 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
                     f"records; ground to the existing identifier instead."
                 )
 
+    curator_collisions: dict[str, list[tuple[str, list[Concept]]]] = defaultdict(list)
+    for identifier, group in by_identity.items():
+        key = group[0].structure.get("standard_inchi_key", "")
+        if key:
+            curator_collisions[key].append((identifier, group))
+    for key, owners in sorted(curator_collisions.items()):
+        curator_rows = [
+            concept.source_id
+            for _, group in owners
+            for concept in group
+            if concept.source == "CURATOR"
+        ]
+        adopted_rows = [
+            concept.source_id
+            for _, group in owners
+            for concept in group
+            if concept.source in {"CHEBI", "ARO"}
+        ]
+        if curator_rows and adopted_rows:
+            raise SystemExit(
+                f"CURATOR source concept(s) {sorted(curator_rows)} duplicate adopted-source "
+                f"structure {key} from {sorted(adopted_rows)}. Delete the curator row and "
+                "curate the generated YAML record instead."
+            )
+
     records: dict[str, dict] = {}
     for identifier, group in by_identity.items():
         records[identifier] = build_record(identifier, grounding[identifier], group,
@@ -1217,18 +1350,36 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     # ChEBI leads on identity and structure; ARO leads on class and mechanism.
     chebi = [c for c in group if c.source == "CHEBI"]
     aro = [c for c in group if c.source == "ARO"]
-    primary = (chebi or aro)[0]
+    curator = [c for c in group if c.source == "CURATOR"]
+    if curator and (chebi or aro):
+        raise ValueError(
+            f"{identifier} merges CURATOR source concepts into an existing "
+            "adopted-source record; curate the existing YAML instead"
+        )
+    primary = (chebi or aro or curator)[0]
 
     roles = _dedupe(r for c in group for r in c.roles)
+    explicit_classes = _dedupe(c.antimicrobial_class for c in curator if c.antimicrobial_class)
+    if len(explicit_classes) > 1:
+        raise ValueError(f"{identifier} has multiple CURATOR classes: {explicit_classes}")
+    derived_class = classify(
+        roles, conf, from_aro=bool(aro),
+        aro_class_ids=tuple(c.structural_class_id for c in aro if c.structural_class_id),
+        aro_ids=tuple(c.source_id for c in aro if c.source_id),
+        aro_parent_ids=tuple(p for c in aro for p in (c.aro_parents or [])),
+    )
+    antimicrobial_class = explicit_classes[0] if explicit_classes else derived_class
     structural_class = next((c.structural_class for c in aro if c.structural_class), "")
     structural_class_id = next((c.structural_class_id for c in aro if c.structural_class_id), "")
 
     definition, definition_source = "", ""
-    for concept in (chebi + aro):
+    for concept in (chebi + aro + curator):
         if concept.definition:
             definition = concept.definition
             if concept.source == "ARO":
                 definition_source = concept.definition_refs[0] if concept.definition_refs else "ARO"
+            elif concept.source == "CURATOR":
+                definition_source = concept.evidence[0]["reference"] if concept.evidence else "CURATOR"
             else:
                 definition_source = "ChEBI"
             break
@@ -1251,13 +1402,8 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
     record: dict = {
         "identifier": identifier,
         "label": primary.label,
-        "antimicrobial_class": classify(
-            roles, conf, from_aro=bool(aro),
-            aro_class_ids=tuple(c.structural_class_id for c in aro if c.structural_class_id),
-            aro_ids=tuple(c.source_id for c in aro if c.source_id),
-            aro_parent_ids=tuple(p for c in aro for p in (c.aro_parents or [])),
-        ),
-        "curation_status": "SEEDED",
+        "antimicrobial_class": antimicrobial_class,
+        "curation_status": "PROPOSED" if curator and not (chebi or aro) else "SEEDED",
         "grounding_status": grounding_status,
     }
     if definition:
@@ -1367,16 +1513,26 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
             "source_label": c.label,
             "minted_identifier": c.minted,
             **({"role_terms": c.roles} if c.roles else {}),
-            "source_version": source_version,
+            **({"evidence": c.evidence} if c.evidence else {}),
+            "source_version": c.source_version or source_version,
         }
         for c in sorted(group, key=lambda c: (c.source, c.source_id))
     ]
-    record_curation_event(
-        record,
-        curator=SEEDER_CURATOR,
-        action="SEEDED_FROM_SOURCES",
-        changes=f"Seeded from data/raw/ inventories ({', '.join(sorted({c.source for c in group}))})",
-    )
+    sources = {c.source for c in group}
+    if sources == {"CURATOR"}:
+        record_curation_event(
+            record,
+            curator=SEEDER_CURATOR,
+            action="PROPOSED_FROM_CURATOR_INVENTORY",
+            changes="Proposed from curation/curator_antibiotics.tsv",
+        )
+    else:
+        record_curation_event(
+            record,
+            curator=SEEDER_CURATOR,
+            action="SEEDED_FROM_SOURCES",
+            changes=f"Seeded from data/raw/ inventories ({', '.join(sorted(sources))})",
+        )
     return record
 
 

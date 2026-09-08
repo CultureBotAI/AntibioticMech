@@ -25,6 +25,29 @@ useful on the no-structure queue, the largest backlog: grounding
 structure. If the target has no structure either, the seeder says so on stderr
 rather than dropping the decision silently.
 
+## Direct primary-literature additions
+
+`curation/curator_antibiotics.tsv` is the curator-owned seed inventory for
+compounds that are not yet in ChEBI or ARO but have already been established as
+one exact antimicrobial structure in the literature.
+
+One row mints one `CURATOR` source concept and must carry:
+
+- an unambiguous `source_id`, normally the activity/structure paper DOI with a
+  compound fragment such as `DOI:10.xxxx/yyyy#compound-1`;
+- `smiles`, `standard_inchi`, `standard_inchi_key`, `molecular_formula`, and
+  `charge` from a stable structure source such as a database entry or the
+  paper's machine-readable supplement;
+- one `antimicrobial_class` value;
+- one stable `reference`: either a `DOI:10...` CURIE or an `https://` URL;
+- optional `evidence_snippet` and `evidence_notes` explaining exactly where the
+  structure and antimicrobial activity are asserted.
+
+The seeder writes these rows as `PROPOSED` records whose only upstream source is
+`CURATOR`. If the curated structure later appears in ChEBI or ARO, seed-time
+folding stops the row from merging into the adopted-source record; delete the
+row and curate the generated YAML instead.
+
 ## What a REVIEWED record means
 
 A record moves from `SEEDED` to `REVIEWED` when a curator has checked all of:
@@ -244,10 +267,12 @@ silently was the error.
   scope, leaving 115; the pages they served are gone, and a
   redirect map for them is still owed (see NEXT_TASKS.md).
 - **Never hand-edit a seeded field.** `just verify-corpus` rebuilds the corpus
-  from `data/raw/` and fails on drift — for the fields the seeder owns. It
-  deliberately does not police curated fields, so it cannot see a *fabricated*
-  mechanism claim; that is what review is for. Put source changes in the extractor and
-  curator decisions in `decisions.tsv`.
+  from `data/raw/` plus `curation/curator_antibiotics.tsv` and fails on drift —
+  for the fields the seeder owns. It deliberately does not police curated
+  fields, so it cannot see a *fabricated* mechanism claim; that is what review
+  is for. Put source changes in the extractor, curator decisions in
+  `decisions.tsv`, and new publication-backed structures in
+  `curator_antibiotics.tsv`.
 - **A moved record keeps its curation.** A record whose class changes moves
   directory, and the seeder reads its previous location from `PATHS.tsv` before
   writing, so curated fields survive the move and the old file is removed in the

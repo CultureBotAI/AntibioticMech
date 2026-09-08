@@ -43,6 +43,18 @@ def test_a_valid_record_is_written(tmp_path):
     assert yaml.safe_load(path.read_text())["identifier"] == "CHEBI:42355"
 
 
+def test_source_concept_evidence_is_validated():
+    doc = yaml.safe_load(yaml.safe_dump(MINIMAL))
+    doc["source_concepts"][0]["source"] = "CURATOR"
+    doc["source_concepts"][0]["evidence"] = [{
+        "reference": "DOI:10.1000/widget",
+        "snippet": "Compound 1 inhibited Bacillus subtilis.",
+        "notes": "Table 1 reports the exact structure and activity.",
+    }]
+
+    assert not validate_antibiotic(doc)
+
+
 def test_a_record_without_a_structure_is_rejected(tmp_path):
     """The corpus's central invariant, enforced where CLAUDE.md says every write
     goes: a name is not a structure, and a structureless record must not reach
