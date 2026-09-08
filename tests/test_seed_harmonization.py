@@ -1565,3 +1565,86 @@ def test_the_corpus_no_longer_carries_the_two_false_records():
             f"{path} carries Isoaminile citrate's structure (#133)")
         assert record["identifier"] != "CHEBI:41879", (
             f"{path} is dexamethasone, a corticosteroid (#162)")
+
+
+# --------------------------------------------------------------------------
+# Re-seeding must not move anything (#216)
+# --------------------------------------------------------------------------
+
+_BASE = {
+    "identifier": "CHEBI:1",
+    "label": "example",
+    "antimicrobial_class": "ANTIBACTERIAL",
+    "curation_status": "SEEDED",
+    "grounding_status": "EXACT",
+}
+
+
+def test_reseeding_leaves_a_curator_field_where_the_curator_put_it():
+    """A one-field change must not arrive buried in reflow.
+
+    Curator fields are folded in by assignment, and assigning a key a dict does
+    not already hold appends it. So a field the seeder never emits was moved to
+    the end of the record on every re-seed; #204 relocated six records that way
+    before anyone noticed.
+
+    Asserting the merged ORDER, not the merged content: the old code produced
+    exactly the same record and only the diff was wrong, so a content assertion
+    passes under the defect. `curation_history` sits MID-RECORD here on purpose,
+    so that the final-position assertion is not satisfied by the fixture alone.
+    """
+    from seed_from_sources import merge_with_existing
+
+    fresh = dict(_BASE) | {"xrefs": ["CAS:1"], "curation_history": []}
+    existing = dict(_BASE) | {
+        # A curator field before a seeded one, and the audit trail before both.
+        "activity_spectrum": [],
+        "curation_history": [],
+        "xrefs": ["CAS:1"],
+    }
+    merged = merge_with_existing(fresh, existing)
+    assert list(merged) == [
+        "identifier", "label", "antimicrobial_class", "curation_status",
+        "grounding_status", "activity_spectrum", "xrefs", "curation_history",
+    ]
+
+
+def test_fields_only_the_fresh_seed_has_keep_their_order_and_their_neighbour():
+    """Restoring the old order must not strand or reverse a new field.
+
+    The full expected list, not a pairwise comparison. Two consecutive new keys
+    with a shared key on either side is the only fixture that separates the
+    correct splice from inserting before the neighbour, from always inserting at
+    the front, and from reversing the run -- all three of which satisfied the
+    single `index(a) < index(b)` assertion this replaces.
+    """
+    from seed_from_sources import merge_with_existing
+
+    fresh = dict(_BASE) | {
+        "definition": "new from upstream",
+        "definition_source": "CHEBI",
+        "xrefs": ["CAS:1"],
+        "curation_history": [],
+    }
+    existing = dict(_BASE) | {"xrefs": ["CAS:1"], "curation_history": []}
+    merged = merge_with_existing(fresh, existing)
+    assert list(merged) == [
+        "identifier", "label", "antimicrobial_class", "curation_status",
+        "grounding_status", "definition", "definition_source", "xrefs",
+        "curation_history",
+    ]
+
+
+def test_a_merge_neither_drops_nor_duplicates_a_field():
+    """The ordering rebuild reconstructs the dict, so its keyset is the claim."""
+    from seed_from_sources import merge_with_existing
+
+    fresh = dict(_BASE) | {"definition": "d", "xrefs": ["CAS:1"], "curation_history": []}
+    existing = dict(_BASE) | {
+        "activity_spectrum": [], "biosynthesis_origin": "NATURAL_PRODUCT",
+        "curation_history": [],
+    }
+    merged = merge_with_existing(fresh, existing)
+    keys = list(merged)
+    assert len(keys) == len(set(keys))
+    assert set(keys) >= {"definition", "xrefs", "activity_spectrum"}

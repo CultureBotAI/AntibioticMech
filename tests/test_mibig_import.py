@@ -113,13 +113,29 @@ def test_only_exact_one_to_one_structure_matches_are_seeded(records):
     # BGC0000311 balhimycin shares only a connectivity block with a corpus
     # record, so it must stay out. This does NOT guard the stereochemistry gate,
     # whatever its old comment claimed: balhimycin has no exact key match at all,
-    # so deleting that gate would not admit it (#210). The gate is guarded by
-    # BGC0000120 below, and by the count above, which would rise to 75.
+    # so deleting that gate would not admit it (#210).
     assert all(bgc != "BGC0000311" for _, bgc in claims)
-    # Patulin DOES have one exact corpus match and is kept out only because
+    # Patulin does have one exact corpus match and is kept out only because
     # MIBiG's SMILES leaves stereochemistry unassigned. Deleting the stereo
-    # check admits it, so this is the assertion that actually guards it.
+    # check admits it, measured: the count above then reads 72, and it fires
+    # first. The value of naming patulin is that it survives a count update,
+    # which is how the balhimycin line came to guard nothing.
     assert all(bgc != "BGC0000120" for _, bgc in claims)
+    # ...and the preconditions, or this is another negative assertion that
+    # passes vacuously the day MIBiG drops the entry, resolves its
+    # stereochemistry, or the corpus loses the record it matches (#210).
+    import csv
+
+    path = Path(__file__).resolve().parents[1] / "data" / "raw" / "mibig_producers.tsv"
+    with path.open(newline="", encoding="utf-8") as handle:
+        patulin = [row for row in csv.DictReader(handle, delimiter="\t")
+                   if row["mibig_accession"] == "BGC0000120"]
+    assert patulin, "BGC0000120 left the inventory; this tripwire now guards nothing"
+    assert all(row["stereo_complete"] == "false" for row in patulin)
+    keys = {row["standard_inchi_key"] for row in patulin}
+    matches = [record for _, record in records
+               if (record.get("chemical_structure") or {}).get("standard_inchi_key") in keys]
+    assert len(matches) == 1, "patulin no longer has exactly one exact corpus match"
 
 
 def test_the_four_copies_of_the_vocabulary_cannot_drift_apart():

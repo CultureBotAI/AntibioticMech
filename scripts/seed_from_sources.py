@@ -2473,9 +2473,9 @@ def _restore_key_order(merged: dict, existing: dict) -> dict:
     key a dict does not already hold APPENDS it. So every re-seed of a record
     whose curator wrote a field the seeder never emits -- a mode of action, a
     causal graph -- moved that field to the end, and the real one-field change
-    arrived buried in reflow. Six records were relocated that way by the producer
-    work in #206 before anyone noticed, which is the churn the byte-identical
-    emission contract exists to prevent (#216).
+    arrived buried in reflow. Six records were relocated that way by #204, the
+    first MIBiG gate change, before anyone noticed. That is the churn the
+    byte-identical emission contract exists to prevent (#216).
 
     The record on disk decides the order of everything it already had. A key only
     the fresh record has keeps the neighbour the fresh record gave it, so a
@@ -2488,7 +2488,8 @@ def _restore_key_order(merged: dict, existing: dict) -> dict:
             continue
         preceding = next(
             (k for k in list(merged)[:position][::-1] if k in ordered), None)
-        ordered.insert(ordered.index(preceding) + 1 if preceding else 0, key)
+        ordered.insert(
+            ordered.index(preceding) + 1 if preceding is not None else 0, key)
     rebuilt = {key: merged[key] for key in ordered}
     _history_last(rebuilt)
     return rebuilt
@@ -2916,12 +2917,15 @@ def main() -> int:
         existing_text = source.read_text(encoding="utf-8") if source else None
         if existing_text is not None:
             record = merge_with_existing(record, yaml.safe_load(existing_text))
-        # A curator-owned field can occupy a different insertion position from
-        # the same field in a freshly built seed.  YAML mapping order carries no
-        # meaning, so comparing serialized text would rewrite every reviewed
-        # record after an otherwise unrelated source refresh.  Compare the
-        # parsed record instead; --force remains the explicit canonical-format
-        # rewrite path.
+        # Compare the PARSED record, not its serialized text. YAML mapping order
+        # carries no meaning, and comparing text would rewrite every reviewed
+        # record after an otherwise unrelated source refresh.
+        #
+        # The insertion-position drift this originally guarded against is gone:
+        # `_restore_key_order` now keeps a merged record in the order it already
+        # had on disk (#216). So `--force` no longer normalizes key order either
+        # -- it re-emits each record in its own stored order. Imposing one order
+        # across the corpus is #244, and it needs the emitter, not this flag.
         if (
             source == path
             and not args.force
