@@ -115,13 +115,14 @@ def test_only_exact_one_to_one_structure_matches_are_seeded(records):
     assert all(bgc != "BGC0000311" for _, bgc in claims)
 
 
-def test_the_three_vocabularies_cannot_drift_apart():
-    """Extractor allow-list, seeder map, and schema enum are one vocabulary.
+def test_the_four_copies_of_the_vocabulary_cannot_drift_apart():
+    """One vocabulary, copied into four files, asserted to agree.
 
-    They live in three files: the extractor gates on MIBiG's raw strings, the
-    seeder maps them to schema values, and the schema declares what a record may
-    hold. Adding a term to any one alone either silently drops producer evidence
-    or writes a value closed-schema validation rejects, so the agreement is the
+    The extractor gates on MIBiG's raw strings, the seeder maps them to schema
+    values, the schema declares what a record may hold, and the site maps them
+    back to the source's wording for a reader. Adding a term to any one alone
+    silently drops producer evidence, writes a value closed-schema validation
+    rejects, or reworks the wording on a published page, so the agreement is the
     thing worth asserting -- not any one list's contents.
     """
     import yaml

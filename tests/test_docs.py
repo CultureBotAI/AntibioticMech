@@ -607,7 +607,7 @@ def test_generated_corpus_stats_name_the_counts_they_compute(repo_root):
     assert "carry a mode of action" in block
 
 
-def test_the_published_page_shows_the_source_s_own_method_wording(repo_root):
+def test_the_published_page_shows_the_method_wording_and_the_scope(repo_root):
     """A map test cannot see the template.
 
     Reverting the producer cell to the raw enum values and re-rendering leaves
@@ -625,6 +625,6 @@ def test_the_published_page_shows_the_source_s_own_method_wording(repo_root):
     # asserted only the wording -- so the PR's headline deliverable could be
     # dropped from the site by one edit (#206).
     assert "cluster inherited" in page
-    caption = (repo_root / "pages" / "antibacterial" / "vancomycin.html").read_text(
+    specific = (repo_root / "pages" / "antibacterial" / "vancomycin.html").read_text(
         encoding="utf-8")
-    assert "compound specific" in caption
+    assert "compound specific" in specific

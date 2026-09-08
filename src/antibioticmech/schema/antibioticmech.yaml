@@ -512,10 +512,15 @@ classes:
 
           MIBiG grades the link per LOCUS — heterologous expression, knock-out
           studies, enzymatic assays, and so on — so this is a claim about the
-          cluster, not about one molecule. An entry naming several compounds
-          gives all of them the same terms, so a value here does not establish that
-          the experiment covered THIS compound rather than a congener or shunt
-          product of the same pathway. See #206.
+          cluster, not about one molecule.
+
+          Whether it is ALSO a claim about this molecule is exactly what
+          `link_evidence_scope` records, and that slot is required alongside this
+          one. Where the source entry named a single compound the two coincide.
+          Where it named several, all of them carry these same terms, and a value
+          here does not establish that the experiment covered THIS compound
+          rather than a congener or shunt product of the same pathway. Read the
+          scope before reading the method. See #206.
 
           It exists because a producer claim backed by a knock-out is not the
           same claim as one backed by a homology prediction, and a consumer
