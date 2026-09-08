@@ -243,3 +243,106 @@ def test_the_corpus_synonym_selection_keeps_real_names_and_drops_iupac():
     tail = doc.split("also known as ")[1]
     assert "Vancocin" in tail, tail[:120]
     assert "(3S," not in tail and "[2-O-" not in tail, tail[:160]
+
+
+def test_the_producing_organism_is_in_the_document_and_its_strain_is_not():
+    """A search for a producing species matched nothing on 61 records (#218).
+
+    The species is short, discriminative and the field a natural-product user is
+    most likely to search by, so it belongs in the document. The strain is a
+    collection number: opaque per token, and it would spend window on something
+    that separates nothing. Asserting both halves, because including the species
+    and including the whole label are one-character apart in the code.
+    """
+    from embed_records import build_document
+
+    record = {
+        "identifier": "CHEBI:1", "label": "widgetmycin",
+        "antimicrobial_class": "ANTIBACTERIAL",
+        "producer_organisms": [
+            {"taxon_id": "NCBITaxon:405948",
+             "taxon_label": "Saccharopolyspora erythraea",
+             "strain": "NRRL 2338",
+             "biosynthetic_gene_cluster": "BGC0000055"},
+        ],
+    }
+    doc = build_document(record, {})
+
+    assert "Saccharopolyspora erythraea" in doc
+    assert "NRRL 2338" not in doc
+    # The accession is an identifier, not language, and would tokenize as noise.
+    assert "BGC0000055" not in doc
+    # And both exclusions are declared where the audit lives, not left implicit.
+    from embed_records import EXCLUDED
+
+    assert {"strain", "biosynthetic_gene_cluster"} <= set(EXCLUDED)
+
+
+def test_two_producers_of_one_compound_are_both_named_once():
+    """Deduplicated and capped, so one heavily-curated record cannot spend the
+    window listing the same organism twice."""
+    from embed_records import build_document
+
+    record = {
+        "identifier": "CHEBI:1", "label": "widgetmycin",
+        "antimicrobial_class": "ANTIBACTERIAL",
+        "producer_organisms": [
+            {"taxon_id": "NCBITaxon:1", "taxon_label": "Streptomyces fradiae"},
+            {"taxon_id": "NCBITaxon:2", "taxon_label": "Pseudomonas syringae"},
+            {"taxon_id": "NCBITaxon:1", "taxon_label": "Streptomyces fradiae"},
+        ],
+    }
+    doc = build_document(record, {})
+
+    assert doc.count("Streptomyces fradiae") == 1
+    assert "Pseudomonas syringae" in doc
+
+
+def test_the_producer_clause_sits_where_truncation_would_take_it_last():
+    """Position is the design claim, and substring presence does not test it.
+
+    Moving the clause after the identifiers passed every assertion here: the
+    species was still in the document, just in the slot the window drops first.
+    Nothing truncates today, with the longest document at 510 tokens against a
+    512 window, so this is latent -- which is exactly when a position assertion
+    is worth having rather than after something grows back.
+    """
+    from embed_records import build_document
+
+    record = {
+        "identifier": "CHEBI:1", "label": "widgetmycin",
+        "antimicrobial_class": "ANTIBACTERIAL",
+        "definition": "A widget antibiotic of no particular distinction.",
+        "synonyms": [{"value": "widgetin", "synonym_type": "EXACT_SYNONYM"}],
+        "producer_organisms": [
+            {"taxon_id": "NCBITaxon:1", "taxon_label": "Streptomyces fradiae"}],
+    }
+    doc = build_document(record, {})
+    assert doc.index("Streptomyces fradiae") < doc.index("A widget antibiotic")
+    assert doc.index("Streptomyces fradiae") < doc.index("identifiers:")
+
+
+def test_every_committed_producer_record_names_its_organism_in_the_document():
+    """A fixture can only test the keys I already believed in.
+
+    That sentence is this repository's own, written after reading `label` where
+    the schema says `target_label` silently dropped 249 target entries with
+    every gate green. The corpus is the check that a fixture cannot be.
+    """
+    import yaml
+    from embed_records import CORPUS_DIR, build_document
+
+    missing = []
+    seen = 0
+    for path in sorted(CORPUS_DIR.rglob("*.yaml")):
+        record = yaml.safe_load(path.read_text(encoding="utf-8"))
+        producers = record.get("producer_organisms") or []
+        if not producers:
+            continue
+        seen += 1
+        document = build_document(record, {})
+        for producer in producers:
+            if producer["taxon_label"] not in document:
+                missing.append((record["identifier"], producer["taxon_label"]))
+    assert seen == 61, seen
+    assert missing == [], missing[:10]
