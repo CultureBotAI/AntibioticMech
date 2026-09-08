@@ -110,9 +110,16 @@ def test_only_exact_one_to_one_structure_matches_are_seeded(records):
         ("CHEBI:28001", "BGC0000455"),
     } <= claims
     assert len(claims) == 64
-    # BGC0000311 balhimycin has only a connectivity-block match and must remain
-    # rejected until its stereochemical identity is resolved.
+    # BGC0000311 balhimycin shares only a connectivity block with a corpus
+    # record, so it must stay out. This does NOT guard the stereochemistry gate,
+    # whatever its old comment claimed: balhimycin has no exact key match at all,
+    # so deleting that gate would not admit it (#210). The gate is guarded by
+    # BGC0000120 below, and by the count above, which would rise to 75.
     assert all(bgc != "BGC0000311" for _, bgc in claims)
+    # Patulin DOES have one exact corpus match and is kept out only because
+    # MIBiG's SMILES leaves stereochemistry unassigned. Deleting the stereo
+    # check admits it, so this is the assertion that actually guards it.
+    assert all(bgc != "BGC0000120" for _, bgc in claims)
 
 
 def test_the_four_copies_of_the_vocabulary_cannot_drift_apart():

@@ -525,3 +525,71 @@ def test_each_taxon_curie_renders_beside_the_name_it_denotes():  # #179
     # Both must be resolvable, or the split is invisible to a reader.
     assert cell["taxon_id"]["href"] and cell["strain_taxon_id"]["href"]
     assert cell["protein_accession"]["href"] and cell["phenotype_id"]["href"]
+
+
+# --------------------------------------------------------------------------
+# Re-seeding must not move anything (#216)
+# --------------------------------------------------------------------------
+
+def test_reseeding_leaves_a_curator_field_where_the_curator_put_it():
+    """A one-field change must not arrive buried in reflow.
+
+    Curator fields are folded in by assignment, and assigning a key a dict does
+    not already hold appends it. So a field the seeder never emits -- a mode of
+    action, a causal graph -- was moved to the end of the record on every
+    re-seed. Six records were relocated that way by #206 before anyone noticed.
+
+    Asserting the merged ORDER, not merely the merged content: the old code
+    produced exactly the same record, and only the diff was wrong, so a content
+    assertion passes under the defect.
+    """
+    from seed_from_sources import merge_with_existing
+
+    base = {
+        "identifier": "CHEBI:1",
+        "label": "example",
+        "antimicrobial_class": "ANTIBACTERIAL",
+        "curation_status": "SEEDED",
+        "grounding_status": "EXACT",
+        "curation_history": [],
+    }
+    fresh = dict(base) | {"xrefs": ["CAS:1"]}
+    existing = {
+        "identifier": "CHEBI:1",
+        "label": "example",
+        "antimicrobial_class": "ANTIBACTERIAL",
+        "curation_status": "SEEDED",
+        "grounding_status": "EXACT",
+        # A curator field sitting BEFORE a seeded one. Appending it would move
+        # it after `xrefs`, which is the churn. `activity_spectrum` is a curator
+        # field the seeder preserves unconditionally, so this exercises the
+        # ordering and nothing else.
+        "activity_spectrum": [],
+        "xrefs": ["CAS:1"],
+        "curation_history": [],
+    }
+    merged = merge_with_existing(fresh, existing)
+    assert list(merged).index("activity_spectrum") < list(merged).index("xrefs")
+    assert [k for k in merged if k != "curation_history"] == [
+        k for k in existing if k != "curation_history"]
+    assert list(merged)[-1] == "curation_history"
+
+
+def test_a_field_only_the_fresh_seed_has_keeps_its_fresh_neighbour():
+    """Restoring the old order must not strand a genuinely new field."""
+    from seed_from_sources import merge_with_existing
+
+    base = {
+        "identifier": "CHEBI:1",
+        "label": "example",
+        "antimicrobial_class": "ANTIBACTERIAL",
+        "curation_status": "SEEDED",
+        "grounding_status": "EXACT",
+        "curation_history": [],
+    }
+    fresh = dict(base) | {"definition": "new from upstream", "xrefs": ["CAS:1"]}
+    existing = dict(base) | {"xrefs": ["CAS:1"]}
+    merged = merge_with_existing(fresh, existing)
+    # `definition` is new. It belongs next to the neighbour the seeder gave it,
+    # not at the end of the record.
+    assert list(merged).index("definition") < list(merged).index("xrefs")

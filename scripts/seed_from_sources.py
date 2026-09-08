@@ -2466,6 +2466,34 @@ def card_sourced_view(record: dict, field: str) -> list:
     return [item for item in (record.get(field) or []) if is_card_sourced(item)]
 
 
+def _restore_key_order(merged: dict, existing: dict) -> dict:
+    """Put keys the fresh seed did not produce back where they already were.
+
+    `merge_with_existing` folds curator fields in by assignment, and assigning a
+    key a dict does not already hold APPENDS it. So every re-seed of a record
+    whose curator wrote a field the seeder never emits -- a mode of action, a
+    causal graph -- moved that field to the end, and the real one-field change
+    arrived buried in reflow. Six records were relocated that way by the producer
+    work in #206 before anyone noticed, which is the churn the byte-identical
+    emission contract exists to prevent (#216).
+
+    The record on disk decides the order of everything it already had. A key only
+    the fresh record has keeps the neighbour the fresh record gave it, so a
+    genuinely new field still lands somewhere sensible rather than at the end.
+    `curation_history` is placed last afterwards, as it always was.
+    """
+    ordered = [key for key in existing if key in merged]
+    for position, key in enumerate(merged):
+        if key in ordered:
+            continue
+        preceding = next(
+            (k for k in list(merged)[:position][::-1] if k in ordered), None)
+        ordered.insert(ordered.index(preceding) + 1 if preceding else 0, key)
+    rebuilt = {key: merged[key] for key in ordered}
+    _history_last(rebuilt)
+    return rebuilt
+
+
 def merge_with_existing(record: dict, existing: dict) -> dict:
     """Fold a freshly seeded record into the one already on disk.
 
@@ -2634,8 +2662,7 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     # `retrieved_on`; that cause is fixed in extract_source_inventory.py, and
     # deleting the trail rather than the cause removed the only detector there
     # was. See #73.
-    _history_last(merged)
-    return merged
+    return _restore_key_order(merged, existing)
 
 
 def read_lockfile() -> dict[str, str]:
