@@ -525,3 +525,4 @@ def test_each_taxon_curie_renders_beside_the_name_it_denotes():  # #179
     # Both must be resolvable, or the split is invisible to a reader.
     assert cell["taxon_id"]["href"] and cell["strain_taxon_id"]["href"]
     assert cell["protein_accession"]["href"] and cell["phenotype_id"]["href"]
+
