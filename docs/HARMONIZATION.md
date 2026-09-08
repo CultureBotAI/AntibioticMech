@@ -122,7 +122,7 @@ be the only place it survived.
 `mode_of_action` is seeded from ChEBI's own mechanism roles. The maps in
 `conf/sources.yaml` translate 32 of them — `protein synthesis inhibitor`,
 `sterol 14α-demethylase inhibitor`, `HIV-1 reverse transcriptase inhibitor` and
-so on — into `ModeOfActionEnum`, and 416 of 2,909 records carry a value.
+so on — into `ModeOfActionEnum`; a minority of records carry a value today.
 
 This is a **restatement**, not an inference, and the distinction matters because
 the alternative was tried here and failed. Filing a record on a ChEBI structural
@@ -306,7 +306,7 @@ the judgement to a curator.
 ## Producer organisms
 
 `producer_organisms` remains one of the corpus's emptiest axes. Of the
-corpus's 2,909, only 61 records carry a producer at all:
+corpus's 2,920, only 61 records carry a producer at all:
 58 records carry one from the MIBiG import, and three
 come from primary-literature curation. The MIBiG share is admitted on MIBiG's own per-locus link evidence —
 heterologous expression, knock-out studies, enzymatic assays, gene expression

@@ -426,6 +426,11 @@ classes:
       source_version:
         description: Release or retrieval date of the source inventory.
         range: string
+      evidence:
+        description: Citation supporting this source concept.
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
 
   CompoundSynonym:
     description: An alternate name with its scope.

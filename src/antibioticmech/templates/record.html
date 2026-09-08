@@ -87,12 +87,13 @@ unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 {% endif %}
 
 {% if r.source_concepts %}
+{% set show_source_evidence = r.source_concepts|selectattr("evidence")|list %}
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
 <table>
   <caption>Upstream concepts merged into this record</caption>
-  <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th></tr></thead>
+  <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th>{% if show_source_evidence %}<th scope="col">Evidence</th>{% endif %}</tr></thead>
   {% for c in r.source_concepts %}
   <tr>
     <td><span class="pill plain">{{ c.source }}</span></td>
@@ -100,6 +101,7 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <td>{{ c.source_label }}</td>
     <td><code class="curie">{{ c.minted_identifier }}</code></td>
     <td class="meta">{{ c.source_version }}</td>
+    {% if show_source_evidence %}<td class="meta">{{ evidence_list(c.evidence) }}</td>{% endif %}
   </tr>
   {% endfor %}
 </table>

@@ -535,9 +535,9 @@ _TAXON_GROUP = re.compile(
 def activity_candidate_queue(records: list[dict]) -> list[dict]:
     """Records whose definition uses activity-against language (#94).
 
-    `activity_spectrum` is the corpus's only entirely empty axis: 0 of 2909
-    records carry a single `ActivityObservation`, while the definitions are full
-    of sentences about what these compounds act on.
+    `activity_spectrum` is the corpus's only entirely empty axis: no record
+    carries a single `ActivityObservation`, while the definitions are full of
+    sentences about what these compounds act on.
 
     NOT AN EXTRACTION, and less extractable than it looks. Three distinct things
     hide behind the same grammar:
