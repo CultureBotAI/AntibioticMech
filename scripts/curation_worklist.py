@@ -743,13 +743,19 @@ def xref_name_conflict_queue(records: list[dict]) -> list[dict]:
 
 
 def unnamed_producer_queue(records: list[dict]) -> list[dict]:
-    """Producer claims the seeder refused because the taxon names no organism.
+    """Producer claims the seeder refused because the taxon identifies no organism.
+
+    Two reasons reach here. The label may name nothing -- "uncultured bacterium"
+    says only that some microbe makes this -- or the identifier may be a
+    container rather than an organism while the label names one, which is the
+    harder case because the label reads perfectly well on its own.
 
     A refused claim needs a destination rather than a deletion (#136), and this
     is that destination: the compound, the cluster, the label the source gave,
     and why it was not published. The gene cluster and its citation are real, so
-    a curator who can name the organism -- from the paper, or from a later
-    taxonomy that resolves the environmental sample -- can restore the claim.
+    a curator can restore the claim: by naming the organism, from the paper or a
+    later taxonomy that resolves the environmental sample, or by correcting the
+    identifier where it is the identifier that is wrong.
 
     Reconstructed from the inventory and the corpus rather than read from the
     records, because the refusal is exactly what kept it out of the records

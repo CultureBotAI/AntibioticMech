@@ -2028,10 +2028,11 @@ _RANK_NOUNS = frozenset({"bacterium", "archaeon", "organism", "fungus",
 _HIGHER_RANK_SUFFIXES = ("aceae", "ales")
 _GENUS_TOKEN = re.compile(r"^\[?([A-Z][a-z]{2,})\]?$")
 
-# NCBI nodes that are containers rather than organisms. A CURIE must arrive with
-# the name it denotes -- the invariant #94 established for resistance claims --
-# and these denote no name at all, so a label beside one is asserting something
-# the identifier cannot support. MIBiG ships exactly one such row today,
+# NCBI nodes that are containers rather than organisms. A label beside one is
+# asserting something the identifier cannot support. #94 required a taxon CURIE
+# to arrive WITH a label, which is co-presence; that a label is the one the CURIE
+# denotes is checked nowhere yet, and this is the narrow part of it that needs no
+# taxonomy source. MIBiG ships exactly one such row today,
 # BGC0001875, whose id is the unclassified-sequences bucket while its label
 # names a real strain. The two disagree about what is being claimed, and the
 # label alone cannot show it (#221).
@@ -2039,11 +2040,31 @@ _GENUS_TOKEN = re.compile(r"^\[?([A-Z][a-z]{2,})\]?$")
 # Only these nodes. Checking that any id denotes its label needs a taxonomy
 # names source this repository does not commit; that is #186, and this list is
 # the narrow part that does not need one.
+# Two kinds, and the list is necessarily partial. NCBI's containers hold no
+# organism at all, and its top-level clades hold every organism, which answers
+# the producer question no better: "a bacterium makes this" is the same empty
+# claim as "uncultured bacterium", already refused on its label.
+#
+# Partial because there is no end to the ranks above genus, and enumerating them
+# is the wrong shape of fix. The general answer is a lineage check against the
+# NCBI taxdump, which this repository already reads at extraction time in the
+# BindingDB evaluator; see #248. Until then, refusing the nodes a producer could
+# plausibly be grounded in beats refusing none of them.
 _NON_ORGANISM_TAXA = {
     "1": "the taxonomy root",
     "12908": "unclassified sequences",
     "28384": "other sequences",
     "131567": "cellular organisms",
+    "32630": "synthetic construct",
+    "81077": "artificial sequences",
+    "29278": "vector",
+    "32644": "unidentified",
+    "408169": "metagenomes",
+    "2": "the domain Bacteria",
+    "2157": "the domain Archaea",
+    "2759": "the domain Eukaryota",
+    "4751": "the kingdom Fungi",
+    "10239": "the Viruses",
 }
 
 
@@ -2072,8 +2093,8 @@ def producer_refusal_reason(taxon_id: str, taxon_label: str) -> str | None:
     bucket = _NON_ORGANISM_TAXA.get(taxon_id)
     if bucket:
         return (f"NCBITaxon:{taxon_id} is {bucket}, not an organism, while the label "
-                f"reads {taxon_label!r}. The identifier and the name disagree about "
-                "what is being claimed.")
+                f"reads {taxon_label.rstrip('.')!r}. The identifier and the name "
+                "disagree about what is being claimed.")
     if not names_an_organism(taxon_label):
         return (f"{taxon_label!r} (NCBITaxon:{taxon_id}) identifies no organism. The "
                 "producer claim would say only that some microbe makes this.")
