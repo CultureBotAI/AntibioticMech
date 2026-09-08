@@ -925,10 +925,11 @@ producer_organisms:
   source_record_version: '5'
   source_quality: questionable
   link_evidence:
-  - Enzymatic assays
-  - Gene expression correlated with compound production
-  - Heterologous expression
-  - Knock-out studies
+  - ENZYMATIC_ASSAYS
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
   note: MIBiG active entry; compound 'erythromycin A' joined by exact Standard InChIKey.
   evidence:
   - reference: PMID:11336289
@@ -2647,6 +2648,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T02:53:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:58:46Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

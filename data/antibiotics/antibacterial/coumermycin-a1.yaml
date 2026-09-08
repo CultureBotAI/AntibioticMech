@@ -190,9 +190,10 @@ producer_organisms:
   source_record_version: '4'
   source_quality: questionable
   link_evidence:
-  - Enzymatic assays
-  - Heterologous expression
-  - Knock-out studies
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'coumermycin A1' joined by exact Standard InChIKey.
   evidence:
   - reference: PMID:14285468
@@ -217,6 +218,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T02:54:12Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:59:05Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

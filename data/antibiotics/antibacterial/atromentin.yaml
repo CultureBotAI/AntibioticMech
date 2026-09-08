@@ -60,8 +60,9 @@ producer_organisms:
   source_record_version: '2'
   source_quality: questionable
   link_evidence:
-  - Enzymatic assays
-  - Heterologous expression
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'atromentin' joined by exact Standard InChIKey.
   evidence:
   - reference: PMID:22730234
@@ -82,6 +83,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T02:53:59Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:58:57Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

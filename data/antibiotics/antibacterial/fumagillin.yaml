@@ -90,9 +90,10 @@ producer_organisms:
   source_record_version: '5'
   source_quality: questionable
   link_evidence:
-  - Enzymatic assays
-  - Heterologous expression
-  - Knock-out studies
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'Fumagillin' joined by exact Standard InChIKey.
   evidence:
   - reference: DOI:10.1021/ja312503y
@@ -112,6 +113,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T02:54:17Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:59:08Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

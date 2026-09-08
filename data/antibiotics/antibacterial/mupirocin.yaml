@@ -154,8 +154,9 @@ producer_organisms:
   source_record_version: '5'
   source_quality: questionable
   link_evidence:
-  - Gene expression correlated with compound production
-  - Knock-out studies
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'pseudomonic acid A' joined by exact Standard
     InChIKey.
   evidence:
@@ -375,6 +376,10 @@ curation_history:
     protein-synthesis inhibition and added the directly bound IleRS-tRNA complex.
   llm_assisted: true
 - timestamp: '2026-09-08T02:54:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:59:16Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

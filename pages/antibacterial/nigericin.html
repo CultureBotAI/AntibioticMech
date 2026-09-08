@@ -103,14 +103,19 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 
 <h2>Producer organisms</h2>
-<p class="meta">Organisms that biosynthesize this compound.</p>
+<p class="meta">Organisms that biosynthesize this compound. Cluster link evidence
+is how the upstream source graded the gene cluster, so it is populated only for a
+source that grades it. An empty cell is not weaker support: a curator-authored
+producer carries its support in Evidence instead. Where the source entry named
+several compounds, the evidence is marked inherited, meaning it covers this
+compound together with its congeners rather than singling it out.</p>
 <table>
   <caption>Producer organisms</caption>
   <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Cluster link evidence</th><th scope="col">Source</th><th scope="col">Quality</th><th scope="col">Note</th><th scope="col">Evidence</th></tr></thead>
   <tr>
     <td><em>Streptomyces violaceusniger</em> <code class="curie">NCBITaxon:68280</code></td>
     <td>BGC0000114</td>
-    <td class="meta">Gene expression correlated with compound production</td>
+    <td class="meta">gene expression correlated with production<br><span class="pill plain">compound specific</span></td>
     <td class="meta">MIBIG 4.0.1 (entry 5)</td>
     <td class="meta">questionable</td>
     <td class="meta">MIBiG active entry; compound &#39;nigericin&#39; joined by exact Standard InChIKey.</td>
@@ -122,7 +127,7 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   <tr>
     <td><em>Streptomyces sp.</em> <code class="curie">NCBITaxon:2583819</code><br><span class="meta">strain DASNCL29</span></td>
     <td>BGC0002038</td>
-    <td class="meta">Enzymatic assays</td>
+    <td class="meta">enzymatic assays<br><span class="pill plain">compound specific</span></td>
     <td class="meta">MIBIG 4.0.1 (entry 2)</td>
     <td class="meta">questionable</td>
     <td class="meta">MIBiG active entry; compound &#39;nigericin&#39; joined by exact Standard InChIKey.</td>
@@ -152,6 +157,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   <li>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
+    <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-09-08 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
   <li>

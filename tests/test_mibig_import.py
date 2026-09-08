@@ -109,10 +109,137 @@ def test_only_exact_one_to_one_structure_matches_are_seeded(records):
         ("CHEBI:60828", "BGC0000432"),
         ("CHEBI:28001", "BGC0000455"),
     } <= claims
-    assert len(claims) == 66
+    assert len(claims) == 64
     # BGC0000311 balhimycin has only a connectivity-block match and must remain
     # rejected until its stereochemical identity is resolved.
     assert all(bgc != "BGC0000311" for _, bgc in claims)
+
+
+def test_the_three_vocabularies_cannot_drift_apart():
+    """Extractor allow-list, seeder map, and schema enum are one vocabulary.
+
+    They live in three files: the extractor gates on MIBiG's raw strings, the
+    seeder maps them to schema values, and the schema declares what a record may
+    hold. Adding a term to any one alone either silently drops producer evidence
+    or writes a value closed-schema validation rejects, so the agreement is the
+    thing worth asserting -- not any one list's contents.
+    """
+    import yaml
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+    from seed_from_sources import MIBIG_LINK_EVIDENCE_METHODS
+
+    assert set(MIBIG_LINK_EVIDENCE_METHODS) == set(LINK_EVIDENCE_METHODS)
+
+    schema = yaml.safe_load(
+        (Path(__file__).resolve().parents[1] / "src" / "antibioticmech" / "schema"
+         / "antibioticmech.yaml").read_text(encoding="utf-8"))
+    permissible = set(schema["enums"]["LinkEvidenceMethodEnum"]["permissible_values"])
+    assert set(MIBIG_LINK_EVIDENCE_METHODS.values()) == permissible
+    # Each schema value quotes the MIBiG term it stands for, so the mapping can
+    # be checked against the source without reading the seeder.
+    for raw, value in MIBIG_LINK_EVIDENCE_METHODS.items():
+        described = schema["enums"]["LinkEvidenceMethodEnum"]["permissible_values"][value]
+        assert raw in described["description"], (value, raw)
+
+
+def test_an_unmapped_method_raises_rather_than_yielding_no_evidence():
+    """Dropping it would publish a weaker claim instead of an unhandled one."""
+    import pytest
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+    from seed_from_sources import mibig_link_evidence
+
+    assert mibig_link_evidence("Knock-out studies") == ["KNOCK_OUT_STUDIES"]
+    with pytest.raises(KeyError):
+        mibig_link_evidence("Some method MIBiG added in 4.1")
+
+
+def test_link_evidence_scope_reads_the_source_entry_not_the_surviving_rows(records):
+    """COMPOUND_SPECIFIC must mean the ENTRY named one compound.
+
+    Counting inventory rows per accession instead would misread 11 rows today:
+    an entry whose other compounds had no usable structure leaves one row behind
+    and would masquerade as a single-compound entry, publishing shared cluster
+    evidence as though it singled this molecule out (#206).
+    """
+    import csv
+
+    path = Path(__file__).resolve().parents[1] / "data" / "raw" / "mibig_producers.tsv"
+    with path.open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle, delimiter="\t"))
+    by_accession = {row["mibig_accession"]: row["entry_compound_count"] for row in rows}
+    surviving: dict[str, int] = {}
+    for row in rows:
+        surviving[row["mibig_accession"]] = surviving.get(row["mibig_accession"], 0) + 1
+    # The two readings really do disagree, or this test guards nothing.
+    assert sum(1 for a, n in by_accession.items() if (n == "1") != (surviving[a] == 1)) == 11
+
+    seen = 0
+    for _, record in records:
+        for producer in record.get("producer_organisms") or []:
+            if producer.get("source") != "MIBIG":
+                continue
+            seen += 1
+            expected = ("COMPOUND_SPECIFIC"
+                        if by_accession[producer["biosynthetic_gene_cluster"]] == "1"
+                        else "CLUSTER_INHERITED")
+            assert producer.get("link_evidence_scope") == expected, record["identifier"]
+    assert seen == 64
+
+
+def test_a_producer_naming_no_organism_is_refused_and_queued(records):
+    """"uncultured bacterium" answers no question a producer claim asks.
+
+    A genus is the minimum, and an uncultivated symbiont that HAS one stays: the
+    refusal must not swallow "uncultured Candidatus Entotheonella sp.", which is
+    a real organism identity the corpus should carry.
+    """
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+    from curation_worklist import unnamed_producer_queue
+    from seed_from_sources import names_an_organism
+
+    assert not names_an_organism("uncultured bacterium")
+    assert not names_an_organism("uncultured organism")
+    assert names_an_organism("uncultured Candidatus Entotheonella sp.") is False
+    assert names_an_organism("Streptomyces sp.")
+    assert names_an_organism("Saccharopolyspora erythraea")
+
+    published = {record["identifier"] for _, record in records
+                 for producer in record.get("producer_organisms") or []
+                 if producer["taxon_id"] == "NCBITaxon:77133"}
+    assert published == set()
+    # Refused, not lost: the cluster and its citation stay reachable.
+    queued = unnamed_producer_queue([record for _, record in records])
+    assert {row["key"] for row in queued} == {"CHEBI:156313", "CHEBI:156314"}
+    assert all(row["source_id"] == "BGC0001336" for row in queued)
+
+
+def test_closed_validation_rejects_a_link_evidence_value_outside_the_vocabulary(repo_root):
+    """The slot promised experimental support; now the schema enforces it.
+
+    Before #211 the range was a bare string, so a homology prediction, invented
+    text, and an empty list all validated clean -- the promise rested entirely on
+    the extractor, and a hand edit or a future lane could break it silently.
+    """
+    import yaml
+
+    from antibioticmech.validation.write_validated import validate_antibiotic
+
+    path = repo_root / "data" / "antibiotics" / "antibacterial" / "erythromycin-a.yaml"
+
+    def errors(**changes):
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        doc["producer_organisms"][0].update(changes)
+        return validate_antibiotic(doc)
+
+    assert errors() == []
+    assert errors(link_evidence=["HOMOLOGY_BASED_PREDICTION"])
+    assert errors(link_evidence=["TOTALLY_MADE_UP"])
+    # MIBiG's own wording is not the corpus vocabulary either, so a lane that
+    # forgot to map would fail loudly rather than write prose into the slot.
+    assert errors(link_evidence=["Knock-out studies"])
+    assert errors(link_evidence_scope="PROBABLY_FINE")
 
 
 def test_every_seeded_producer_says_which_experiment_supports_it(records):
@@ -122,7 +249,12 @@ def test_every_seeded_producer_says_which_experiment_supports_it(records):
     `reviewed` is asserted only where MIBiG records a real expert reviewer -- it
     is no longer a blanket true, which is what made the old flag misleading.
     """
-    allowed = set(LINK_EVIDENCE_METHODS)
+    # The corpus speaks the schema's vocabulary, not MIBiG's wording; the map
+    # between them is asserted by test_the_three_vocabularies_cannot_drift_apart.
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+    from seed_from_sources import MIBIG_LINK_EVIDENCE_METHODS
+
+    allowed = set(MIBIG_LINK_EVIDENCE_METHODS.values())
     problems = []
     for _, record in records:
         for producer in record.get("producer_organisms") or []:

@@ -156,6 +156,10 @@ def test_mibig_producers_are_evidenced_and_fully_provenanced(records):
                 # is here; #203 replaced a `reviewed` flag that was true of every
                 # row and therefore said nothing.
                 "link_evidence",
+                # ...and the scope that says whether that evidence singles out
+                # this compound. Without it the 22 inherited assertions are
+                # indistinguishable from the 42 specific ones (#206).
+                "link_evidence_scope",
                 # `reference` was a scalar PMID/DOI that could not say what the
                 # citation was FOR; #94 replaced it with structured evidence
                 # carrying MIBiG's own reference basis in `notes`.

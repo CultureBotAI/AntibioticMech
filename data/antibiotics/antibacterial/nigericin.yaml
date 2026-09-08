@@ -74,7 +74,8 @@ producer_organisms:
   source_record_version: '5'
   source_quality: questionable
   link_evidence:
-  - Gene expression correlated with compound production
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'nigericin' joined by exact Standard InChIKey.
   evidence:
   - reference: PMID:17584617
@@ -90,7 +91,8 @@ producer_organisms:
   source_record_version: '2'
   source_quality: questionable
   link_evidence:
-  - Enzymatic assays
+  - ENZYMATIC_ASSAYS
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'nigericin' joined by exact Standard InChIKey.
   evidence:
   - reference: PMID:35514935
@@ -111,6 +113,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T02:54:29Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:59:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

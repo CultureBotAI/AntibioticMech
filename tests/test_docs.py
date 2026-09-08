@@ -525,6 +525,15 @@ def test_no_unregistered_numeric_claim_about_the_corpus(repo_root):
     # ...and the subset whose phrase is followed by a parseable binomial.
     derivable.add(sum(1 for row in producer_candidate_queue(records)
                       if "(no binomial)" not in row["hint"]))
+    # Seeded producer assertions by whether their link evidence singles out the
+    # compound. docs/CURATION.md quotes the inherited share, and a reseed that
+    # moves it must move the sentence too (#206).
+    producers = [item for r in records for item in (r.get("producer_organisms") or [])
+                 if item.get("source") == "MIBIG"]
+    derivable.add(len(producers))
+    for scope in ("COMPOUND_SPECIFIC", "CLUSTER_INHERITED"):
+        derivable.add(sum(1 for item in producers
+                          if item.get("link_evidence_scope") == scope))
 
     unregistered: list[str] = []
     used_exemptions: set[str] = set()

@@ -65,9 +65,10 @@ producer_organisms:
   source_record_version: '5'
   source_quality: questionable
   link_evidence:
-  - Enzymatic assays
-  - Gene expression correlated with compound production
-  - Knock-out studies
+  - ENZYMATIC_ASSAYS
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'viridicatumtoxin' joined by exact Standard InChIKey.
   evidence:
   - reference: DOI:10.1016/j.chembiol.2010.03.015
@@ -87,6 +88,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T02:54:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:59:19Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

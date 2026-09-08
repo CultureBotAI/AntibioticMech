@@ -912,6 +912,7 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
     """Group concepts into records. Returns (records, skipped-for-no-structure)."""
     MALFORMED_STRUCTURE_IDS.clear()
     REFUSED_STRUCTURELESS_XREFS.clear()
+    REFUSED_UNNAMED_PRODUCERS.clear()
     # InChIKey per ChEBI id, from the committed inventory. The same-structure
     # gate on xrefs uses it; a ChEBI term with no structure here is simply not
     # comparable, and its xrefs are kept and queued rather than dropped.
@@ -1804,6 +1805,55 @@ _RANK_MARKERS = ("subsp.", "var.", "f.", "pv.", "sp.", "bv.", "serovar")
 _GENUS = re.compile(r"^[A-Z][a-z]+$")
 _EPITHET = re.compile(r"^[a-z][a-z-]+$")
 
+# The inventory is faithful to MIBiG's wording; the corpus speaks the schema's
+# closed vocabulary. Mapping here rather than in the extractor keeps the
+# committed inventory a record of what upstream said (#211).
+MIBIG_LINK_EVIDENCE_METHODS = {
+    "Heterologous expression": "HETEROLOGOUS_EXPRESSION",
+    "Knock-out studies": "KNOCK_OUT_STUDIES",
+    "Enzymatic assays": "ENZYMATIC_ASSAYS",
+    "Gene expression correlated with compound production":
+        "GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION",
+    "Correlation of genomic and metabolomic data": "GENOMIC_METABOLOMIC_CORRELATION",
+    "In vitro expression": "IN_VITRO_EXPRESSION",
+}
+
+
+def mibig_link_evidence(raw: str) -> list[str]:
+    """MIBiG's pipe-joined method names as schema vocabulary, sorted.
+
+    An unmapped method raises rather than being dropped. Dropping it would turn
+    an unrecognized method into a producer with NO link evidence, which reads as
+    a weaker claim instead of an unhandled one -- and the extractor's allow-list
+    means an unmapped value can only arrive from a MIBiG release that added a
+    term nobody has read yet.
+    """
+    methods = []
+    for name in raw.split("|"):
+        if name not in MIBIG_LINK_EVIDENCE_METHODS:
+            raise KeyError(
+                f"MIBiG link-evidence method {name!r} has no schema value. Add it to "
+                "MIBIG_LINK_EVIDENCE_METHODS and LinkEvidenceMethodEnum, or to the "
+                "extractor's exclusions, before re-seeding.")
+        methods.append(MIBIG_LINK_EVIDENCE_METHODS[name])
+    return sorted(set(methods))
+
+
+# A producer claim answers "which organism makes this". A label that names no
+# genus cannot answer it: "uncultured bacterium" says only that some bacterium
+# does. Refused rather than published, and reported, the way an unverifiable
+# cross-reference is (#217). A label that DOES name a genus is kept even when it
+# is an uncultivated symbiont -- "uncultured Candidatus Entotheonella sp." is a
+# real organism identity and the corpus should carry it.
+REFUSED_UNNAMED_PRODUCERS: list[tuple[str, str, str]] = []
+
+
+def names_an_organism(label: str) -> bool:
+    """True when the label opens with something shaped like a genus."""
+    head = label.split()
+    return bool(head) and bool(re.match(r"^[A-Z][a-z]{2,}$", head[0]))
+
+
 MIBIG_REFERENCE_BASIS = {
     "compound_evidence": (
         "MIBiG attaches this reference to the compound itself, so it supports "
@@ -1918,6 +1968,16 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
             if key in seen:
                 continue
             seen.add(key)
+            if not names_an_organism(row["taxon_label"]):
+                REFUSED_UNNAMED_PRODUCERS.append((
+                    identifier, row["mibig_accession"],
+                    f"{row['mibig_accession']} names its producer "
+                    f"{row['taxon_label']!r} (NCBITaxon:{row['taxon_id']}), which "
+                    "identifies no organism. The cluster and its citation are real; "
+                    "the producer claim would say only that some microbe makes this. "
+                    "Not published as a producer."))
+                counts["refused_unnamed_producer"] += 1
+                continue
             taxon_label, strain = split_organism_strain(row["taxon_label"])
             # Schema order, optional slots dropped afterwards -- see the same
             # pattern in the PHI-base lane.
@@ -1930,7 +1990,10 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
                 "source_version": release_version,
                 "source_record_version": row["entry_version"],
                 "source_quality": row["entry_quality"],
-                "link_evidence": row["link_evidence"].split("|"),
+                "link_evidence": mibig_link_evidence(row["link_evidence"]),
+                "link_evidence_scope": (
+                    "COMPOUND_SPECIFIC" if row["entry_compound_count"] == "1"
+                    else "CLUSTER_INHERITED"),
                 "reviewed": True if row.get("expert_reviewed") == "true" else None,
                 "note": (
                     f"MIBiG active entry; compound {row['compound_name']!r} joined "
@@ -2498,6 +2561,11 @@ def main() -> int:
               "(see `just worklist --queue xref-name-conflict`)")
         for _, label, reason in REFUSED_STRUCTURELESS_XREFS:
             print(f"    {label}: {reason}")
+    if REFUSED_UNNAMED_PRODUCERS:
+        print(f"  {len(REFUSED_UNNAMED_PRODUCERS)} producer claim(s) refused for naming "
+              "no organism (see `just worklist --queue unnamed-producer`)", file=sys.stderr)
+        for identifier, _, reason in REFUSED_UNNAMED_PRODUCERS:
+            print(f"    {identifier}: {reason}", file=sys.stderr)
     if MALFORMED_STRUCTURE_IDS:
         print(f"  {len(MALFORMED_STRUCTURE_IDS)} malformed structure accession(s) "
               "skipped (not a PDB/EMDB accession):", file=sys.stderr)

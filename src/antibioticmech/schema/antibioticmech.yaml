@@ -511,7 +511,18 @@ classes:
           one exists. MIBiG attaches no reference to the method, so this slot and
           `evidence` are independent facts rather than a citation and its label.
         multivalued: true
-        range: string
+        range: LinkEvidenceMethodEnum
+      link_evidence_scope:
+        description: >-
+          Whether `link_evidence` singles out this compound or is shared with
+          the other compounds of the same cluster.
+
+          Read it before trusting `link_evidence` about this molecule. A method
+          listed under CLUSTER_INHERITED was recorded for the cluster by a source
+          entry naming several compounds, so it does not establish that the
+          experiment followed this one rather than a congener or a shunt product
+          of the same pathway.
+        range: LinkEvidenceScopeEnum
       reviewed:
         description: >-
           Whether a human expert reviewed the upstream entry, when the source
@@ -1347,6 +1358,52 @@ enums:
       METABOLIC_BYPASS:
       OTHER:
       UNKNOWN:
+
+  LinkEvidenceMethodEnum:
+    description: >-
+      How a source established that a gene cluster produces its compounds.
+
+      Every value is experimental. MIBiG's vocabulary also carries
+      "Homology-based prediction" and a synthetic-bioinformatic method, and both
+      are absent here on purpose: a computational guess and a molecule
+      synthesized from a prediction do not show that the named organism makes
+      anything. Keeping the range closed is what stops that distinction from
+      being erased by a later hand edit (#211). The descriptions quote each
+      source term verbatim, so the mapping back to MIBiG stays checkable.
+    permissible_values:
+      HETEROLOGOUS_EXPRESSION:
+        description: MIBiG "Heterologous expression".
+      KNOCK_OUT_STUDIES:
+        description: MIBiG "Knock-out studies".
+      ENZYMATIC_ASSAYS:
+        description: MIBiG "Enzymatic assays".
+      GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION:
+        description: MIBiG "Gene expression correlated with compound production".
+      GENOMIC_METABOLOMIC_CORRELATION:
+        description: MIBiG "Correlation of genomic and metabolomic data".
+      IN_VITRO_EXPRESSION:
+        description: MIBiG "In vitro expression".
+
+  LinkEvidenceScopeEnum:
+    description: >-
+      Whether a source's link evidence singles out this compound.
+
+      Sources grade a gene cluster, not a molecule. When the source entry names
+      one compound, evidence for the cluster is evidence for that compound and
+      nothing else. When it names several, the same evidence covers all of them,
+      and this corpus cannot tell which one the experiment actually followed.
+      Without this distinction both cases read identically, and 24 of 66 seeded
+      assertions are the weaker one (#206).
+    permissible_values:
+      COMPOUND_SPECIFIC:
+        description: >-
+          The source entry named exactly one compound, so its cluster-level
+          evidence bears on this compound and no other.
+      CLUSTER_INHERITED:
+        description: >-
+          The source entry named several compounds and graded only the cluster.
+          This compound shares the evidence with its congeners, and the
+          experiment may have followed a different one of them.
 
   BiosynthesisOriginEnum:
     permissible_values:
