@@ -1801,7 +1801,6 @@ MIBIG_PRODUCER_SOURCE = "MIBIG"
 # four tokens followed by a strain; "Streptomyces rochei NBRC 12908" is a name of
 # two.
 _RANK_MARKERS = ("subsp.", "var.", "f.", "pv.", "sp.", "bv.", "serovar")
-_GENUS = re.compile(r"^[A-Z][a-z]+$")
 _EPITHET = re.compile(r"^[a-z][a-z-]+$")
 
 # The inventory is faithful to MIBiG's wording; the corpus speaks the schema's

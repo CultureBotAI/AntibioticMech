@@ -120,8 +120,11 @@ MECHANISM_FIELDS = [
 
 # The site shows each source's own wording. Lower-casing the enum name instead
 # turned "Knock-out studies" into "knock out studies" and dropped the word that
-# says WHAT correlated, on 64 published pages. The schema quotes these terms in
-# its permissible-value descriptions so the mapping stays checkable (#213).
+# says WHAT correlated, on the 58 pages that carry a producer table. The schema
+# quotes these terms in its permissible-value descriptions so the mapping stays
+# checkable. The regression arrived with the enum conversion in #211 and was
+# caught in review; #213 is the separate, and real, complaint that an empty
+# cell made curator-authored producers look weaker.
 LINK_EVIDENCE_LABELS = {
     "HETEROLOGOUS_EXPRESSION": "Heterologous expression",
     "KNOCK_OUT_STUDIES": "Knock-out studies",

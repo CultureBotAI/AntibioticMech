@@ -218,6 +218,20 @@ def test_a_route_level_mechanism_still_needs_no_organism():
     ("Lyngbya majuscula", ("Lyngbya majuscula", None)),
     ("Candida", ("Candida", None)),
     ("unclassified Streptomyces", ("unclassified Streptomyces", None)),
+    # The genus is not always the first token. NCBI prefixes a nameable genus
+    # with its culture status and brackets one whose placement is disputed, and
+    # `names_an_organism` was widened to accept both. A splitter still reading
+    # only the first token returned these whole, so the collection number would
+    # have been published inside the species name (#224). Reverting the widened
+    # splitter passed every other test and `verify-corpus`, because neither
+    # label reaches a record today and corpus reproduction does not compare
+    # producers at all.
+    ("[Oscillatoria] sp. PCC 6506", ("[Oscillatoria] sp.", "PCC 6506")),
+    ("uncultured Prochloron sp. 06037A", ("uncultured Prochloron sp.", "06037A")),
+    # ...and the prefixed forms with nothing to split still come back whole.
+    ("uncultured Prochloron sp.", ("uncultured Prochloron sp.", None)),
+    ("uncultured Candidatus Entotheonella sp.",
+     ("uncultured Candidatus Entotheonella sp.", None)),
 ])
 def test_split_organism_strain(label, expected):
     assert split_organism_strain(label) == expected

@@ -146,6 +146,7 @@ NUMERIC_CLAIMS = [
     ("curation/source_queue.tsv", "maps {} of them", "mapped_roles"),
     # Producer figures. Both halves are derivable, so the tripwire accepts them
     # swapped; only this table checks a number against ITS OWN claim (#230).
+    ("docs/CURATION.md", "22 of the {} seeded assertions", "mibig_producer_items"),
     ("docs/CURATION.md", "{} of the 64 seeded assertions", "cluster_inherited"),
     # The adoption record. Its shape carries no corpus noun, so the tripwire
     # cannot see it at all and only this table can (#230).
@@ -203,7 +204,10 @@ def test_numeric_claims_in_prose_match_the_corpus(repo_root):
     derived = _derived(repo_root)
     wrong, absent = [], []
     for name, template, key in NUMERIC_CLAIMS:
-        text = (repo_root / name).read_text(encoding="utf-8")
+        # Whitespace-normalized, so a claim may straddle a line break. Matching
+        # raw text forced every registered sentence onto one line, and the prose
+        # was visibly bent around the matcher rather than the other way round.
+        text = re.sub(r"\s+", " ", (repo_root / name).read_text(encoding="utf-8"))
         expected = template.format(derived[key])
         if expected in text:
             continue
@@ -608,10 +612,19 @@ def test_the_published_page_shows_the_source_s_own_method_wording(repo_root):
 
     Reverting the producer cell to the raw enum values and re-rendering leaves
     the map assertion and `render_pages --check` both green, so the wording
-    regression #213 fixed could re-land unseen. This reads the committed page.
+    regression the enum conversion introduced in #211 could re-land unseen.
+    This reads the committed page.
     """
     page = (repo_root / "pages" / "antibacterial" / "erythromycin-a.html").read_text(
         encoding="utf-8")
     assert "Knock-out studies" in page
     assert "Gene expression correlated with compound production" in page
     assert "KNOCK_OUT_STUDIES" not in page
+    # And the scope reaches the reader. Deleting the pill from the template and
+    # re-rendering left the whole suite green, including this test, because it
+    # asserted only the wording -- so the PR's headline deliverable could be
+    # dropped from the site by one edit (#206).
+    assert "cluster inherited" in page
+    caption = (repo_root / "pages" / "antibacterial" / "vancomycin.html").read_text(
+        encoding="utf-8")
+    assert "compound specific" in caption
