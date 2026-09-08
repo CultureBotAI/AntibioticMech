@@ -37,14 +37,6 @@ activity_roles:
 - CHEBI:33281
 - CHEBI:33282
 - CHEBI:35718
-mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
-mode_of_action_notes: 'CURATOR: PMID:11158751 found rapid, bacteriostatic inhibition
-  of RNA synthesis in Escherichia coli, independent of the RelA stringent response,
-  and beta-galactosidase kinetics consistent with impaired RNA-chain elongation. Purified
-  RNA polymerase was only weakly inhibited above growth-inhibitory concentrations,
-  so the direct target remains unresolved and intracellular conversion to an active
-  species remains possible.'
-mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CC(=O)Nc1c2sscc-2nc1=O
   standard_inchi: InChI=1S/C7H6N2O2S2/c1-3(10)8-5-6-4(2-12-13-6)9-7(5)11/h2H,1H3,(H,8,10)(H,9,11)
@@ -54,6 +46,65 @@ chemical_structure:
   charge: 0
   average_mass: 214.271
   monoisotopic_mass: 213.98707
+xrefs:
+- cas:488-04-0
+- metacyc.compound:CPD-17940
+- reaxys:188430
+source_concepts:
+- source: CHEBI
+  source_id: CHEBI:156451
+  source_label: holomycin
+  minted_identifier: antibioticmech:chebi-0e2d1eda12
+  role_terms:
+  - CHEBI:33281
+  - CHEBI:33282
+  - CHEBI:35718
+  source_version: '2026-08-30'
+producer_organisms:
+- taxon_id: NCBITaxon:527005
+  taxon_label: Yersinia ruckeri
+  strain: ATCC 29473
+  biosynthetic_gene_cluster: BGC0002091
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '3'
+  source_quality: questionable
+  link_evidence:
+  - Gene expression correlated with compound production
+  - Heterologous expression
+  - Knock-out studies
+  note: MIBiG active entry; compound 'holomycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:23572522
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+- taxon_id: NCBITaxon:1654360
+  taxon_label: Photobacterium galatheae
+  biosynthetic_gene_cluster: BGC0002412
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - Knock-out studies
+  note: MIBiG active entry; compound 'holomycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:33771780
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+evidence:
+- reference: PMID:11158751
+  notes: Primary holomycin antibacterial spectrum and transcription-mechanism study.
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: PMID:11158751 found rapid, bacteriostatic inhibition
+  of RNA synthesis in Escherichia coli, independent of the RelA stringent response,
+  and beta-galactosidase kinetics consistent with impaired RNA-chain elongation. Purified
+  RNA polymerase was only weakly inhibited above growth-inhibitory concentrations,
+  so the direct target remains unresolved and intracellular conversion to an active
+  species remains possible.'
 molecular_targets:
 - target_label: bacterial RNA synthesis and transcription elongation
   target_type: BIOLOGICAL_PROCESS
@@ -71,23 +122,6 @@ molecular_targets:
   - reference: PMID:11158751
     notes: Primary holomycin whole-cell and purified-RNA-polymerase mechanism study
       (DOI:10.1128/AAC.45.2.532-539.2001).
-xrefs:
-- cas:488-04-0
-- metacyc.compound:CPD-17940
-- reaxys:188430
-source_concepts:
-- source: CHEBI
-  source_id: CHEBI:156451
-  source_label: holomycin
-  minted_identifier: antibioticmech:chebi-0e2d1eda12
-  role_terms:
-  - CHEBI:33281
-  - CHEBI:33282
-  - CHEBI:35718
-  source_version: '2026-08-30'
-evidence:
-- reference: PMID:11158751
-  notes: Primary holomycin antibacterial spectrum and transcription-mechanism study.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -108,3 +142,7 @@ curation_history:
     class; curator-confirmed nucleic-acid-synthesis inhibition and added the measured
     transcription phenotype while retaining the unresolved direct-target gap.
   llm_assisted: true
+- timestamp: '2026-09-08T02:53:59Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

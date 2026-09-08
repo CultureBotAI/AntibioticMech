@@ -41,6 +41,24 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-30'
+producer_organisms:
+- taxon_id: NCBITaxon:467194
+  taxon_label: Streptomyces sp.
+  strain: CNQ-418
+  biosynthetic_gene_cluster: BGC0001159
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - Heterologous expression
+  - Knock-out studies
+  note: MIBiG active entry; compound 'marinopyrrole B' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:22800473
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -51,6 +69,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T02:54:26Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

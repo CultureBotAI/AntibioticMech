@@ -13,7 +13,10 @@ sources:
     homepage: https://mibig.secondarymetabolites.org/
     license: CC BY 4.0
     version: 4.0.1
-    review_policy: active entry with a non-placeholder changelog reviewer
+    admission_policy: 'active entry with at least one locus carrying an experimental
+      compound-to-producer evidence method: Correlation of genomic and metabolomic
+      data, Enzymatic assays, Gene expression correlated with compound production,
+      Heterologous expression, In vitro expression, Knock-out studies'
   fda_drugsfda:
     homepage: https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files
     license: United States government public-domain data
@@ -139,10 +142,10 @@ inventories:
     sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
     source: PubChem PUG REST (scripts/enrich_pubchem_structures.py)
   mibig_producers.tsv:
-    rows: 43
-    bytes: 29899
-    sha256: 696a6f3f47ced15d166eebf53acbe7f33891e22ecab74af0cece9565438e85fa
-    source: MIBiG 4.0.1 reviewed active entries
+    rows: 1462
+    bytes: 846568
+    sha256: c6847b5a99ba0effa1975010664abe749dd801fdf4b44144d9e14253eb6e450a
+    source: MIBiG 4.0.1 active entries with experimental BGC link evidence
   fda_clinical_status.tsv:
     rows: 3703
     bytes: 660793

@@ -38,6 +38,25 @@ source_concepts:
   source_label: nocardamine
   minted_identifier: antibioticmech:aro-017963dba2
   source_version: '2026-08-30'
+producer_organisms:
+- taxon_id: NCBITaxon:100226
+  taxon_label: Streptomyces coelicolor
+  strain: A3(2)
+  biosynthetic_gene_cluster: BGC0000940
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - Enzymatic assays
+  - Knock-out studies
+  note: MIBiG active entry; compound 'desferrioxamine E' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:15600304
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -48,6 +67,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T02:54:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

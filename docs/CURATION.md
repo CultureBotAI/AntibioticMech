@@ -136,6 +136,14 @@ citation or a characterized MIBiG BGC accession. Two distinctions carry weight:
   supports the producer link; an entry's inherited first legacy reference
   supports only that the entry exists. `ProducerOrganism.evidence` records which,
   in `notes`. A scalar reference could not.
+- *How the link was established matters, and is separate from who reviewed it.*
+  `link_evidence` carries the source's own grading of the compound-to-producer
+  link, and it is the reason a seeded producer is in the corpus. `reviewed` says
+  only that a human expert looked at the upstream entry, which MIBiG records for
+  25 of 3,013 entries; it is provenance, never an admission gate. A gate built on
+  the reviewer field reads as conservative and is not — it selects on how the
+  source books curation credit, which is why the import once carried 24 entries
+  of a licence-compatible slice two orders of magnitude larger (#203).
 
 **A resistance claim** may be asserted at either of two levels, and the level is
 the thing to get right. CARD asserts *routes* — "efflux", "target alteration" —

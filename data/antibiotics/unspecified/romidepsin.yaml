@@ -67,6 +67,24 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   source_version: '2026-08-30'
+producer_organisms:
+- taxon_id: NCBITaxon:536
+  taxon_label: Chromobacterium violaceum
+  biosynthetic_gene_cluster: BGC0000993
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - Enzymatic assays
+  - Heterologous expression
+  - Knock-out studies
+  note: MIBiG active entry; compound 'FR901228' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:17400765
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -192,6 +210,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:31Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T02:54:21Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

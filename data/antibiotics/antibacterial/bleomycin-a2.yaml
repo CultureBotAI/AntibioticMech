@@ -103,6 +103,23 @@ molecular_targets:
   - reference: ARO:3000740
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000691 (bleomycin A2); database
       assertion, not a primary citation.
+producer_organisms:
+- taxon_id: NCBITaxon:1223523
+  taxon_label: Streptomyces mobaraensis
+  strain: NBRC 13819 = DSM 40847
+  biosynthetic_gene_cluster: BGC0002350
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - Knock-out studies
+  note: MIBiG active entry; compound 'bleomycin A2' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:28256838
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -117,6 +134,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:04Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T02:54:06Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -42,6 +42,23 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   source_version: '2026-08-30'
+producer_organisms:
+- taxon_id: NCBITaxon:412963
+  taxon_label: Paraburkholderia rhizoxinica
+  biosynthetic_gene_cluster: BGC0001112
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - Enzymatic assays
+  - Knock-out studies
+  note: MIBiG active entry; compound 'rhizoxin A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:17154220
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -52,6 +69,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T02:54:28Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

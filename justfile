@@ -25,7 +25,7 @@ extract-inventory-dry:
 extract-inventory *args:
     uv run python scripts/extract_source_inventory.py {{args}}
 
-# Extract reviewed MIBiG producer/BGC assertions. RDKit converts upstream
+# Extract experimentally supported MIBiG producer/BGC assertions. RDKit converts upstream
 # SMILES to the Standard InChIKey used for the exact corpus join.
 extract-mibig *args:
     uv run --extra chemical-map python scripts/extract_mibig_producers.py {{args}}

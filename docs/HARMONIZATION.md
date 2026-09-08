@@ -305,11 +305,15 @@ multi-component` lists what has two or more distinct large fragments and leaves
 the judgement to a curator.
 ## Producer organisms
 
-`producer_organisms` is the corpus's largest empty axis: 6 records of 2,909 carry
-one, three from the MIBiG import and three from primary-literature curation. The
-signal is sitting in the definitions — 994
-records with none use a phrase that may introduce a producer, and 756 of those
-are followed by a binomial.
+`producer_organisms` remains one of the corpus's emptiest axes: 63 records of
+2,909 carry one, 60 from the MIBiG import and three from primary-literature
+curation. The MIBiG share is admitted on MIBiG's own per-locus link evidence —
+heterologous expression, knock-out studies, enzymatic assays, gene expression
+correlated with production — rather than on its changelog reviewer field, which
+holds a migration placeholder on 2,988 of 3,013 entries and so admitted 24
+entries (#203). The remaining signal is sitting in the definitions — 965 records
+with none use a phrase that may introduce a producer, and 733 of those are
+followed by a binomial.
 
 **That is a queue, not an extraction.** A taxon in a definition may be the
 producer, the isolation source, an expression host, a susceptible organism, or

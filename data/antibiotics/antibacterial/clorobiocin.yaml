@@ -125,6 +125,25 @@ molecular_targets:
   - reference: ARO:3003260
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000132 (clorobiocin); database
       assertion, not a primary citation.
+producer_organisms:
+- taxon_id: NCBITaxon:1352936
+  taxon_label: Streptomyces roseochromogenus subsp. oscitans
+  strain: DS 12.976
+  biosynthetic_gene_cluster: BGC0000832
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - Enzymatic assays
+  - Heterologous expression
+  - Knock-out studies
+  note: MIBiG active entry; compound 'clorobiocin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:12480894
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -139,6 +158,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:22Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T02:54:37Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

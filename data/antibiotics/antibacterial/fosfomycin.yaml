@@ -68,11 +68,6 @@ activity_roles:
 - CHEBI:33281
 structural_class: phosphonic acid antibiotic
 structural_class_id: ARO:3007149
-mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
-mode_of_action_notes: 'CURATOR: PMID:8994972 resolved fosfomycin and UDP-N-acetylglucosamine
-  in a 1.8-angstrom Escherichia coli MurA complex. Fosfomycin was covalently attached
-  to Cys115, inhibiting the first committed step of bacterial peptidoglycan biosynthesis.'
-mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: C[C@@H]1O[C@@H]1P(=O)(O)O
   standard_inchi: InChI=1S/C3H7O4P/c1-2-3(7-2)8(4,5)6/h2-3H,1H3,(H2,4,5,6)/t2-,3+/m0/s1
@@ -110,9 +105,6 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   source_version: '2026-08-30'
-evidence:
-- reference: PMID:8994972
-  notes: Primary exact-fosfomycin MurA cocrystal and peptidoglycan-pathway study.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_INACTIVATION
   aro_id: ARO:3000149
@@ -479,6 +471,44 @@ molecular_targets:
   evidence:
   - reference: PMID:8994972
     notes: Primary fosfomycin-MurA cocrystal (DOI:10.1016/S0969-2126(96)00153-0).
+producer_organisms:
+- taxon_id: NCBITaxon:1906
+  taxon_label: Streptomyces fradiae
+  biosynthetic_gene_cluster: BGC0000938
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - Heterologous expression
+  note: MIBiG active entry; compound 'fosfomycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2006.09.007
+    notes: MIBiG attaches this reference to the compound itself, so it supports the
+      producer/compound link this item asserts.
+- taxon_id: NCBITaxon:317
+  taxon_label: Pseudomonas syringae
+  biosynthetic_gene_cluster: BGC0001859
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - Enzymatic assays
+  note: MIBiG active entry; compound 'fosfomycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:22615277
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+evidence:
+- reference: PMID:8994972
+  notes: Primary exact-fosfomycin MurA cocrystal and peptidoglycan-pathway study.
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: PMID:8994972 resolved fosfomycin and UDP-N-acetylglucosamine
+  in a 1.8-angstrom Escherichia coli MurA complex. Fosfomycin was covalently attached
+  to Cys115, inhibiting the first committed step of bacterial peptidoglycan biosynthesis.'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -503,3 +533,7 @@ curation_history:
     and provenance of retained CARD target and 48 resistance assertions; added cell-wall
     synthesis inhibition and the directly observed covalent MurA target.
   llm_assisted: true
+- timestamp: '2026-09-08T02:54:05Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

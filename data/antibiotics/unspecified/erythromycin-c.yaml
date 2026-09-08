@@ -42,6 +42,26 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   source_version: '2026-08-30'
+producer_organisms:
+- taxon_id: NCBITaxon:405948
+  taxon_label: Saccharopolyspora erythraea
+  strain: NRRL 2338
+  biosynthetic_gene_cluster: BGC0000055
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - Enzymatic assays
+  - Gene expression correlated with compound production
+  - Heterologous expression
+  - Knock-out studies
+  note: MIBiG active entry; compound 'erythromycin C' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:11336289
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -52,6 +72,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:36Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T02:54:22Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
