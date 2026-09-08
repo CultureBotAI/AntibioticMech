@@ -431,6 +431,53 @@ def test_the_inventory_counts_an_entry_s_compounds_not_its_usable_ones(repo_root
     assert sum(1 for a, n in declared.items() if n > surviving[a]) == 22
 
 
+def test_a_taxon_that_is_a_container_rather_than_an_organism_is_refused():
+    """The identifier and the name must agree about what is being claimed.
+
+    BGC0001875 grounds its producer in NCBITaxon:12908, NCBI's unclassified
+    sequences bucket, while its label names a real strain. The label alone
+    cannot catch that: it reads as a perfectly good organism, and the naming
+    test accepts it. The row matches no corpus structure today, so the defect is
+    latent and only a direct call reaches it (#221).
+    """
+    import csv
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+    from seed_from_sources import (
+        REFUSED_UNNAMED_PRODUCERS,
+        attach_mibig_producers,
+        names_an_organism,
+        producer_refusal_reason,
+    )
+
+    path = Path(__file__).resolve().parents[1] / "data" / "raw" / "mibig_producers.tsv"
+    with path.open(newline="", encoding="utf-8") as handle:
+        row = next(r for r in csv.DictReader(handle, delimiter="\t")
+                   if r["mibig_accession"] == "BGC0001875")
+    assert row["taxon_id"] == "12908"
+    # The naming test passes on this label, which is the whole point.
+    assert names_an_organism(row["taxon_label"])
+
+    seeded = {"CHEBI:X": {
+        "identifier": "CHEBI:X", "label": "t", "curation_history": [],
+        "chemical_structure": {"standard_inchi_key": row["standard_inchi_key"]}}}
+    counts = attach_mibig_producers(seeded, "4.0.1")
+
+    assert "producer_organisms" not in seeded["CHEBI:X"]
+    assert counts["refused_unnamed_producer"] == 1
+    assert any("unclassified sequences" in reason
+               for _, _, reason in REFUSED_UNNAMED_PRODUCERS)
+    # The worklist reports what the seeder refused, and it calls this same
+    # function rather than restating the rule. Two copies drifted once (#226),
+    # and a corpus-level test could not see it: the row exercising the newer
+    # reason matches no record, so both versions produced the same queue.
+    from curation_worklist import unnamed_producer_queue
+
+    assert unnamed_producer_queue.__module__ == "curation_worklist"
+    assert producer_refusal_reason(row["taxon_id"], row["taxon_label"])
+    assert producer_refusal_reason("405948", "Saccharopolyspora erythraea") is None
+
+
 def test_every_seeded_producer_says_which_experiment_supports_it(records):
     """A widened gate must not widen into unevidenced claims.
 

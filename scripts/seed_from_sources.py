@@ -2028,6 +2028,24 @@ _RANK_NOUNS = frozenset({"bacterium", "archaeon", "organism", "fungus",
 _HIGHER_RANK_SUFFIXES = ("aceae", "ales")
 _GENUS_TOKEN = re.compile(r"^\[?([A-Z][a-z]{2,})\]?$")
 
+# NCBI nodes that are containers rather than organisms. A CURIE must arrive with
+# the name it denotes -- the invariant #94 established for resistance claims --
+# and these denote no name at all, so a label beside one is asserting something
+# the identifier cannot support. MIBiG ships exactly one such row today,
+# BGC0001875, whose id is the unclassified-sequences bucket while its label
+# names a real strain. The two disagree about what is being claimed, and the
+# label alone cannot show it (#221).
+#
+# Only these nodes. Checking that any id denotes its label needs a taxonomy
+# names source this repository does not commit; that is #186, and this list is
+# the narrow part that does not need one.
+_NON_ORGANISM_TAXA = {
+    "1": "the taxonomy root",
+    "12908": "unclassified sequences",
+    "28384": "other sequences",
+    "131567": "cellular organisms",
+}
+
 
 def _genus_tokens(tokens: list[str]) -> list[str]:
     """The genus-shaped names in `tokens`, minus status words and higher ranks."""
@@ -2040,6 +2058,26 @@ def _genus_tokens(tokens: list[str]) -> list[str]:
             continue
         found.append(match.group(1))
     return found
+
+
+def producer_refusal_reason(taxon_id: str, taxon_label: str) -> str | None:
+    """Why this taxon cannot carry a producer claim, or None if it can.
+
+    One copy, called by the seeder and by the worklist queue that reports what
+    the seeder refused. Those were two restatements of the same rule, and they
+    had already drifted once (#226); a second reason was added to one of them
+    and the drift was undetectable, because the only row exercising it matches
+    no corpus record, so both versions produced the same queue.
+    """
+    bucket = _NON_ORGANISM_TAXA.get(taxon_id)
+    if bucket:
+        return (f"NCBITaxon:{taxon_id} is {bucket}, not an organism, while the label "
+                f"reads {taxon_label!r}. The identifier and the name disagree about "
+                "what is being claimed.")
+    if not names_an_organism(taxon_label):
+        return (f"{taxon_label!r} (NCBITaxon:{taxon_id}) identifies no organism. The "
+                "producer claim would say only that some microbe makes this.")
+    return None
 
 
 def names_an_organism(label: str) -> bool:
@@ -2210,14 +2248,12 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
             if key in seen:
                 continue
             seen.add(key)
-            if not names_an_organism(row["taxon_label"]):
+            refusal = producer_refusal_reason(row["taxon_id"], row["taxon_label"])
+            if refusal:
                 REFUSED_UNNAMED_PRODUCERS.append((
                     identifier, row["mibig_accession"],
-                    f"{row['mibig_accession']} names its producer "
-                    f"{row['taxon_label']!r} (NCBITaxon:{row['taxon_id']}), which "
-                    "identifies no organism. The cluster and its citation are real; "
-                    "the producer claim would say only that some microbe makes this. "
-                    "Not published as a producer."))
+                    f"{row['mibig_accession']}: {refusal} The cluster and its citation "
+                    "are real; the producer claim is not published."))
                 counts["refused_unnamed_producer"] += 1
                 continue
             taxon_label, strain = split_organism_strain(row["taxon_label"])
@@ -2838,8 +2874,9 @@ def main() -> int:
         for _, label, reason in REFUSED_STRUCTURELESS_XREFS:
             print(f"    {label}: {reason}")
     if REFUSED_UNNAMED_PRODUCERS:
-        print(f"  {len(REFUSED_UNNAMED_PRODUCERS)} producer claim(s) refused for naming "
-              "no organism (see `just worklist --queue unnamed-producer`)", file=sys.stderr)
+        print(f"  {len(REFUSED_UNNAMED_PRODUCERS)} producer claim(s) refused: the taxon "
+              "does not identify an organism (see `just worklist --queue "
+              "unnamed-producer`)", file=sys.stderr)
         for identifier, _, reason in REFUSED_UNNAMED_PRODUCERS:
             print(f"    {identifier}: {reason}", file=sys.stderr)
     if MALFORMED_STRUCTURE_IDS:

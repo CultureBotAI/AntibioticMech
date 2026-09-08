@@ -758,7 +758,7 @@ def unnamed_producer_queue(records: list[dict]) -> list[dict]:
     """
     import sys
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from seed_from_sources import RAW_DIR, load_tsv, names_an_organism
+    from seed_from_sources import RAW_DIR, load_tsv, producer_refusal_reason
 
     by_key: dict[str, list[dict]] = {}
     for record in records:
@@ -785,7 +785,13 @@ def unnamed_producer_queue(records: list[dict]) -> list[dict]:
         # where the seeder refuses once per cluster and taxon (#226).
         if not row.get("link_evidence"):
             continue
-        if row.get("stereo_complete") != "true" or names_an_organism(row["taxon_label"]):
+        if row.get("stereo_complete") != "true":
+            continue
+        # The seeder's own rule, called rather than restated. Two copies drifted
+        # once already (#226), and the drift was undetectable because the only
+        # row exercising the newer reason matches no corpus record.
+        refusal = producer_refusal_reason(row["taxon_id"], row["taxon_label"])
+        if not refusal:
             continue
         matches = by_key.get(row.get("standard_inchi_key", ""), [])
         if len(matches) != 1:
@@ -802,8 +808,7 @@ def unnamed_producer_queue(records: list[dict]) -> list[dict]:
             "label": matches[0]["label"],
             "source": "MIBIG",
             "source_id": row["mibig_accession"],
-            "hint": (f"{row['taxon_label']!r} (NCBITaxon:{row['taxon_id']}) names no "
-                     f"organism; cluster and citation {row['primary_reference']} stand"),
+            "hint": f"{refusal} Cluster and citation {row['primary_reference']} stand.",
         })
     out.sort(key=lambda r: r["label"].lower())
     return out
