@@ -256,13 +256,17 @@ producer_organisms:
   source_record_version: '6'
   source_quality: questionable
   link_evidence:
-  - Knock-out studies
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
   reviewed: true
   note: MIBiG active entry; compound 'vancomycin' joined by exact Standard InChIKey.
   evidence:
   - reference: DOI:10.1021/ja00361a029
-    notes: MIBiG attaches this reference to the compound itself, so it supports the
-      producer/compound link this item asserts.
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -320,6 +324,14 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T02:54:04Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:59:00Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T15:31:54Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -34,6 +34,7 @@ from seed_from_sources import (  # noqa: E402
     attach_mibig_producers,
     attach_phibase_resistance,
     is_phibase_sourced_resistance,
+    names_an_organism,
     split_organism_strain,
 )
 
@@ -217,6 +218,20 @@ def test_a_route_level_mechanism_still_needs_no_organism():
     ("Lyngbya majuscula", ("Lyngbya majuscula", None)),
     ("Candida", ("Candida", None)),
     ("unclassified Streptomyces", ("unclassified Streptomyces", None)),
+    # The genus is not always the first token. NCBI prefixes a nameable genus
+    # with its culture status and brackets one whose placement is disputed, and
+    # `names_an_organism` was widened to accept both. A splitter still reading
+    # only the first token returned these whole, so the collection number would
+    # have been published inside the species name (#224). Reverting the widened
+    # splitter passed every other test and `verify-corpus`, because neither
+    # label reaches a record today and corpus reproduction does not compare
+    # producers at all.
+    ("[Oscillatoria] sp. PCC 6506", ("[Oscillatoria] sp.", "PCC 6506")),
+    ("uncultured Prochloron sp. 06037A", ("uncultured Prochloron sp.", "06037A")),
+    # ...and the prefixed forms with nothing to split still come back whole.
+    ("uncultured Prochloron sp.", ("uncultured Prochloron sp.", None)),
+    ("uncultured Candidatus Entotheonella sp.",
+     ("uncultured Candidatus Entotheonella sp.", None)),
 ])
 def test_split_organism_strain(label, expected):
     assert split_organism_strain(label) == expected
@@ -320,7 +335,8 @@ def _first_accepted_mibig_row():
     for row in csv.DictReader(
         (REPO_ROOT / "data" / "raw" / "mibig_producers.tsv").read_text(
             encoding="utf-8").splitlines(), delimiter="\t"):
-        if row["link_evidence"] and row["stereo_complete"] == "true":
+        if (row["link_evidence"] and row["stereo_complete"] == "true"
+                and names_an_organism(row["taxon_label"])):
             return row
     raise AssertionError("no MIBiG row passes the lane's own filters")
 
@@ -345,9 +361,10 @@ def test_the_phibase_lane_emits_structure_rather_than_prose():
 
 
 def test_the_mibig_lane_splits_the_strain_and_says_what_the_citation_supports():
-    # The first row the lane would ACCEPT: it rejects rows without link evidence
-    # and rows with incomplete stereochemistry before it ever builds an item, so
-    # the first row of the file is not necessarily one that reaches the code.
+    # The first row the lane would ACCEPT: it rejects rows without link evidence,
+    # rows with incomplete stereochemistry, and rows whose taxon names no
+    # organism before it ever builds an item, so the first row of the file is not
+    # necessarily one that reaches the code under test.
     row = _first_accepted_mibig_row()
     records = _seed_one(row["standard_inchi_key"])
     attach_mibig_producers(records, "4.0.1")

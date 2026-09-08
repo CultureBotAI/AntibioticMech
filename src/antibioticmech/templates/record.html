@@ -228,7 +228,14 @@ type — expand a group to see its determinants.</p>
 
 {% if r.producer_organisms %}
 <h2>Producer organisms</h2>
-<p class="meta">Organisms that biosynthesize this compound.</p>
+<p class="meta">Organisms that biosynthesize this compound. Cluster link evidence
+is how the upstream source graded the gene cluster, so it is populated only for a
+source that grades it. An empty cell is not weaker support: a curator-authored
+producer carries its support in Evidence instead. Where the source entry named
+several compounds, the evidence is marked inherited, meaning it covers this
+compound together with the cluster's other products rather than singling it out.
+Those products need not be related to each other: a cluster can list an
+intermediate, a precursor and a finished antibiotic side by side.</p>
 <table>
   <caption>Producer organisms</caption>
   <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Cluster link evidence</th><th scope="col">Source</th><th scope="col">Quality</th><th scope="col">Note</th><th scope="col">Evidence</th></tr></thead>
@@ -236,7 +243,7 @@ type — expand a group to see its determinants.</p>
   <tr>
     <td><em>{{ p.taxon_label }}</em> <code class="curie">{{ p.taxon_id }}</code>{% if p.strain %}<br><span class="meta">strain {{ p.strain }}</span>{% endif %}</td>
     <td>{{ p.biosynthetic_gene_cluster or '—' }}</td>
-    <td class="meta">{{ p.link_evidence | join('; ') if p.link_evidence else '—' }}</td>
+    <td class="meta">{% if p.link_evidence %}{{ p.link_evidence_labels | join('; ') }}{% if p.link_evidence_scope %}<br><span class="pill{{ ' warn' if p.link_evidence_scope == 'CLUSTER_INHERITED' else ' plain' }}">{{ p.link_evidence_scope.replace("_", " ").lower() }}</span>{% endif %}{% else %}—{% endif %}</td>
     <td class="meta">{{ p.source or '—' }}{% if p.source_version %} {{ p.source_version }}{% endif %}{% if p.source_record_version %} (entry {{ p.source_record_version }}){% endif %}{% if p.reviewed %}; reviewed{% endif %}</td>
     <td class="meta">{{ p.source_quality or '—' }}</td>
     <td class="meta">{{ p.note or '—' }}</td>

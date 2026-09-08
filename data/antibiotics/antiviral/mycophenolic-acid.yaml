@@ -82,13 +82,17 @@ producer_organisms:
   source_record_version: '4'
   source_quality: questionable
   link_evidence:
-  - Knock-out studies
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'mycophenolic acid' joined by exact Standard
     InChIKey.
   evidence:
   - reference: DOI:10.1128/aem.03015-10
-    notes: MIBiG attaches this reference to the compound itself, so it supports the
-      producer/compound link this item asserts.
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
 - taxon_id: NCBITaxon:5082
   taxon_label: Penicillium roqueforti
   biosynthetic_gene_cluster: BGC0002616
@@ -97,7 +101,8 @@ producer_organisms:
   source_record_version: '2'
   source_quality: questionable
   link_evidence:
-  - Gene expression correlated with compound production
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'mycophenolic acid' joined by exact Standard
     InChIKey.
   evidence:
@@ -113,13 +118,17 @@ producer_organisms:
   source_record_version: '2'
   source_quality: questionable
   link_evidence:
-  - Gene expression correlated with compound production
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'mycophenolic acid' joined by exact Standard
     InChIKey.
   evidence:
   - reference: DOI:10.1128/aem.41.3.729-736.1981
-    notes: MIBiG attaches this reference to the compound itself, so it supports the
-      producer/compound link this item asserts.
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -134,6 +143,14 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T02:54:00Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:58:58Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T15:31:52Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

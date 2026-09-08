@@ -70,9 +70,10 @@ producer_organisms:
   source_record_version: '3'
   source_quality: questionable
   link_evidence:
-  - Gene expression correlated with compound production
-  - Heterologous expression
-  - Knock-out studies
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'holomycin' joined by exact Standard InChIKey.
   evidence:
   - reference: PMID:23572522
@@ -87,7 +88,8 @@ producer_organisms:
   source_record_version: '2'
   source_quality: questionable
   link_evidence:
-  - Knock-out studies
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'holomycin' joined by exact Standard InChIKey.
   evidence:
   - reference: PMID:33771780
@@ -143,6 +145,10 @@ curation_history:
     transcription phenotype while retaining the unresolved direct-target gap.
   llm_assisted: true
 - timestamp: '2026-09-08T02:53:59Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:58:57Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

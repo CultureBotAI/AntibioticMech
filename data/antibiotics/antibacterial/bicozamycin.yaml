@@ -129,8 +129,9 @@ producer_organisms:
   source_record_version: '5'
   source_quality: questionable
   link_evidence:
-  - Enzymatic assays
-  - Heterologous expression
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'bicyclomycin' joined by exact Standard InChIKey.
   evidence:
   - reference: PMID:29053243
@@ -173,6 +174,10 @@ curation_history:
     inhibition and the directly bound Rho complex.
   llm_assisted: true
 - timestamp: '2026-09-08T02:54:20Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:59:10Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

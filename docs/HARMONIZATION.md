@@ -305,9 +305,10 @@ multi-component` lists what has two or more distinct large fragments and leaves
 the judgement to a curator.
 ## Producer organisms
 
-`producer_organisms` remains one of the corpus's emptiest axes: 63 records of
-2,920 carry one, 60 from the MIBiG import and three from primary-literature
-curation. The MIBiG share is admitted on MIBiG's own per-locus link evidence —
+`producer_organisms` remains one of the corpus's emptiest axes. Of the
+corpus's 2,920, only 61 records carry a producer at all:
+58 records carry one from the MIBiG import, and three
+come from primary-literature curation. The MIBiG share is admitted on MIBiG's own per-locus link evidence —
 heterologous expression, knock-out studies, enzymatic assays, gene expression
 correlated with production — rather than on its changelog reviewer field, which
 holds a migration placeholder on 2,988 of 3,013 entries and so admitted 24

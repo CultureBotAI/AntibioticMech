@@ -742,6 +742,73 @@ def xref_name_conflict_queue(records: list[dict]) -> list[dict]:
     return out
 
 
+def unnamed_producer_queue(records: list[dict]) -> list[dict]:
+    """Producer claims the seeder refused because the taxon names no organism.
+
+    A refused claim needs a destination rather than a deletion (#136), and this
+    is that destination: the compound, the cluster, the label the source gave,
+    and why it was not published. The gene cluster and its citation are real, so
+    a curator who can name the organism -- from the paper, or from a later
+    taxonomy that resolves the environmental sample -- can restore the claim.
+
+    Reconstructed from the inventory and the corpus rather than read from the
+    records, because the refusal is exactly what kept it out of the records
+    (#217). Only rows the structure join would actually have published are
+    reported; an inventory row matching no corpus record was never a candidate.
+    """
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from seed_from_sources import RAW_DIR, load_tsv, names_an_organism
+
+    by_key: dict[str, list[dict]] = {}
+    for record in records:
+        key = (record.get("chemical_structure") or {}).get("standard_inchi_key")
+        if key:
+            by_key.setdefault(key, []).append(record)
+
+    # A curator who resolves the organism and writes the producer has finished
+    # the item, and the queue must stop asking. Reconstructing the refusal from
+    # the inventory alone could never retire anything, so the backlog would have
+    # grown a permanent entry the work could not clear.
+    restored = {
+        (record["identifier"], item.get("biosynthetic_gene_cluster"))
+        for record in records
+        for item in (record.get("producer_organisms") or [])
+    }
+
+    out: list[dict] = []
+    seen: set[tuple[str, str, str]] = set()
+    for row in load_tsv(RAW_DIR / "mibig_producers.tsv"):
+        # The seeder's gate, in the seeder's order. Restating a subset of it let
+        # this queue report a refusal for a cluster the import had already
+        # excluded for want of link evidence, and report one row per compound
+        # where the seeder refuses once per cluster and taxon (#226).
+        if not row.get("link_evidence"):
+            continue
+        if row.get("stereo_complete") != "true" or names_an_organism(row["taxon_label"]):
+            continue
+        matches = by_key.get(row.get("standard_inchi_key", ""), [])
+        if len(matches) != 1:
+            continue
+        key = (matches[0]["identifier"], row["mibig_accession"], row["taxon_id"])
+        if key in seen:
+            continue
+        seen.add(key)
+        if (matches[0]["identifier"], row["mibig_accession"]) in restored:
+            continue
+        out.append({
+            "queue": "unnamed-producer",
+            "key": matches[0]["identifier"],
+            "label": matches[0]["label"],
+            "source": "MIBIG",
+            "source_id": row["mibig_accession"],
+            "hint": (f"{row['taxon_label']!r} (NCBITaxon:{row['taxon_id']}) names no "
+                     f"organism; cluster and citation {row['primary_reference']} stand"),
+        })
+    out.sort(key=lambda r: r["label"].lower())
+    return out
+
+
 def structure_unreviewed_queue(records: list[dict]) -> list[dict]:
     """Structures carried from a source that nobody has classified.
 
@@ -951,7 +1018,8 @@ def main() -> int:
                                  "xref-unverified", "multi-component",
                                  "producer-candidate", "activity-candidate", "excluded",
                                  "crossref-conflict", "structure-unreviewed",
-                                 "xref-name-conflict", "review-readiness"),
+                                 "xref-name-conflict", "unnamed-producer",
+                                 "review-readiness"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
     parser.add_argument("--tsv", type=Path, help="Write every row (not just --limit) to this TSV.")
@@ -985,6 +1053,8 @@ def main() -> int:
         queues["crossref-conflict"] = crossref_conflict_queue()
     if args.queue in ("all", "xref-name-conflict"):
         queues["xref-name-conflict"] = xref_name_conflict_queue(records)
+    if args.queue in ("all", "unnamed-producer"):
+        queues["unnamed-producer"] = unnamed_producer_queue(records)
     if args.queue in ("all", "structure-unreviewed"):
         queues["structure-unreviewed"] = structure_unreviewed_queue(records)
     if args.queue in ("all", "target-evidence"):

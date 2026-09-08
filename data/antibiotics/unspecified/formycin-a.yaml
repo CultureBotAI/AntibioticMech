@@ -47,8 +47,9 @@ producer_organisms:
   source_record_version: '2'
   source_quality: questionable
   link_evidence:
-  - Enzymatic assays
-  - Knock-out studies
+  - ENZYMATIC_ASSAYS
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'formycin A' joined by exact Standard InChIKey.
   evidence:
   - reference: PMID:30942582
@@ -69,6 +70,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T02:54:14Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:59:06Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

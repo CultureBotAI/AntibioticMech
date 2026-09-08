@@ -7,8 +7,15 @@ carry this attribution with it.
 ## Required attribution
 
 > AntibioticMech (CultureBotAI), CC BY 4.0. Derived from ChEBI (EMBL-EBI,
-> CC BY 4.0) and the Antibiotic Resistance Ontology (CARD, McMaster University,
-> CC BY 4.0), with chemical structures from PubChem (NCBI).
+> CC BY 4.0), the Antibiotic Resistance Ontology (CARD, McMaster University,
+> CC BY 4.0) and MIBiG (CC BY 4.0), with chemical structures from PubChem
+> (NCBI).
+
+MIBiG is named here because its licence requires it and because the
+machine-readable route below does not reach it: a MIBiG-derived claim is marked
+on `producer_organisms[].source`, not in `source_concepts`, so a consumer
+following the per-record method alone would not find it. Three further adopted
+sources are missing from this notice entirely — see #243.
 
 ## Per-record provenance
 
@@ -51,6 +58,15 @@ Alcock BP, Huynh W, Chalil R, et al. CARD 2023: expanded curation, support for
 machine learning, and resistome prediction at the Comprehensive Antibiotic
 Resistance Database. *Nucleic Acids Res.* 2023;51(D1):D690-D699.
 doi:10.1093/nar/gkac920
+
+**MIBiG** — the Minimum Information about a Biosynthetic Gene Cluster
+repository. CC BY 4.0. Supplies producer organisms, biosynthetic gene cluster
+accessions, and the per-locus evidence grading the compound-to-producer link.
+<https://mibig.secondarymetabolites.org/>
+
+Zdouc MM, Blin K, Louwen NLL, et al. MIBiG 4.0: advancing biosynthetic gene
+cluster curation through global collaboration. *Nucleic Acids Res.*
+2025;53(D1):D678-D690. doi:10.1093/nar/gkae1115
 
 **PubChem** — NCBI, NLM, NIH. Public domain (US Government work). Supplies
 structures for the CARD molecules ChEBI does not cover.

@@ -91,8 +91,9 @@ producer_organisms:
   source_record_version: '5'
   source_quality: questionable
   link_evidence:
-  - Enzymatic assays
-  - Heterologous expression
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'clavulanic acid' joined by exact Standard InChIKey.
   evidence:
   - reference: PMID:8088547
@@ -113,6 +114,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T02:54:17Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:59:08Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

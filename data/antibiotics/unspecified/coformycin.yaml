@@ -52,9 +52,10 @@ producer_organisms:
   source_record_version: '3'
   source_quality: questionable
   link_evidence:
-  - Enzymatic assays
-  - Heterologous expression
-  - Knock-out studies
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
   note: MIBiG active entry; compound 'coformycin' joined by exact Standard InChIKey.
   evidence:
   - reference: PMID:30217843
@@ -69,8 +70,9 @@ producer_organisms:
   source_record_version: '3'
   source_quality: questionable
   link_evidence:
-  - Enzymatic assays
-  - Heterologous expression
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: COMPOUND_SPECIFIC
   note: MIBiG active entry; compound 'coformycin' joined by exact Standard InChIKey.
   evidence:
   - reference: PMID:32350138
@@ -91,6 +93,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T02:54:00Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:58:58Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -49,6 +49,7 @@ COLUMNS = [
     "reviewer_ids",
     "compound_name",
     "compound_index",
+    "entry_compound_count",
     "smiles",
     "standard_inchi",
     "standard_inchi_key",
@@ -208,6 +209,7 @@ def extract(path: Path, conf: dict) -> tuple[list[dict], Counter]:
             continue
         reviewers = reviewer_ids(entry, placeholder)
         counts["entries_admitted"] += 1
+        compound_count = len(entry.get("compounds") or [])
         taxonomy = entry.get("taxonomy") or {}
         taxon_id = taxonomy.get("ncbiTaxId")
         taxon_label = str(taxonomy.get("name") or "").strip()
@@ -237,6 +239,12 @@ def extract(path: Path, conf: dict) -> tuple[list[dict], Counter]:
                 "reviewer_ids": "|".join(reviewers),
                 "compound_name": " ".join(str(compound.get("name") or "").split()),
                 "compound_index": str(index),
+                # How many compounds the SOURCE entry named, not how many rows
+                # survive here. An entry whose other compounds lacked structures
+                # would otherwise look like a single-compound entry, and its
+                # cluster-level evidence would be published as compound-specific
+                # (#206).
+                "entry_compound_count": str(compound_count),
                 "smiles": smiles,
                 **structure,
                 "taxon_id": str(taxon_id),

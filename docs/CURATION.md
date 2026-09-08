@@ -159,6 +159,27 @@ citation or a characterized MIBiG BGC accession. Two distinctions carry weight:
   supports the producer link; an entry's inherited first legacy reference
   supports only that the entry exists. `ProducerOrganism.evidence` records which,
   in `notes`. A scalar reference could not.
+- *A producer must name an organism.* "uncultured bacterium" is a real NCBI
+  taxon and a real thing for a source to say, but as a producer claim it answers
+  nothing: it states that some microbe makes this. A label that names no genus is
+  refused and queued on `just worklist --queue unnamed-producer`, with its
+  cluster and citation intact so a curator can restore it. The genus may appear
+  anywhere in the label, because NCBI prefixes a nameable genus with its culture
+  status and brackets one whose placement is disputed: "uncultured Candidatus
+  Entotheonella sp." and "[Oscillatoria] sp. PCC 6506" both name an organism a
+  reader can look up, and both are kept. A lower-case rank noun overrides all of
+  that, because it is the source saying the name is missing: "Chloroflexi
+  bacterium TSY" carries a capitalized taxon and is still refused, since that
+  taxon is a phylum. Case matters — *Cyanobacterium aponinum* is a genus and
+  stays.
+- *Cluster evidence is not compound evidence.* Sources grade a gene cluster, not
+  a molecule. When the source entry names one compound the two coincide; when it
+  names several, the same evidence is recorded against all of them and cannot say
+  which the experiment followed. Nor are those compounds necessarily congeners:
+  one MIBiG entry lists a tripeptide precursor, an intermediate and a finished
+  penicillin under a single enzymatic-assay grading. `link_evidence_scope` records which case a claim is in, and
+  22 of the 64 seeded assertions are the weaker one. Read it before trusting
+  `link_evidence` about a particular molecule.
 - *How the link was established matters, and is separate from who reviewed it.*
   `link_evidence` carries the source's own grading of the compound-to-producer
   link, and it is the reason a seeded producer is in the corpus. `reviewed` says

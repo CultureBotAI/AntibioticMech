@@ -118,6 +118,24 @@ MECHANISM_FIELDS = [
     ("datasets", "Datasets"),
 ]
 
+# The site shows each source's own wording. Lower-casing the enum name instead
+# turned "Knock-out studies" into "knock out studies" and dropped the word that
+# says WHAT correlated, on the 58 pages carrying a MIBiG producer. The schema
+# quotes these terms in its permissible-value descriptions so the mapping stays
+# checkable. The regression arrived with the enum conversion in #211 and was
+# caught in review; #213 is the separate, and real, complaint that an empty
+# cell made curator-authored producers look weaker.
+LINK_EVIDENCE_LABELS = {
+    "HETEROLOGOUS_EXPRESSION": "Heterologous expression",
+    "KNOCK_OUT_STUDIES": "Knock-out studies",
+    "ENZYMATIC_ASSAYS": "Enzymatic assays",
+    "GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION":
+        "Gene expression correlated with compound production",
+    "GENOMIC_METABOLOMIC_CORRELATION": "Correlation of genomic and metabolomic data",
+    "IN_VITRO_EXPRESSION": "In vitro expression",
+}
+
+
 # CURIE prefixes this site resolves to an external page, in the exact casing
 # they appear in the corpus (the schema's own `prefixes:` block uses
 # different casing for some of these — e.g. CHEMBL.COMPOUND, KEGG — that does
@@ -301,7 +319,14 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
         "activity_spectrum": doc.get("activity_spectrum") or [],
         "resistance_mechanisms": doc.get("resistance_mechanisms") or [],
         "resistance_groups": resistance_groups,
-        "producer_organisms": doc.get("producer_organisms") or [],
+        "producer_organisms": [
+            item | {"link_evidence_labels": [
+                # An unmapped value would silently vanish from the page, so it
+                # falls back to the code itself rather than to nothing.
+                LINK_EVIDENCE_LABELS.get(method, method)
+                for method in (item.get("link_evidence") or [])]}
+            for item in (doc.get("producer_organisms") or [])
+        ],
         "causal_graphs": doc.get("causal_graphs") or [],
         "discussions": doc.get("discussions") or [],
         "datasets": doc.get("datasets") or [],

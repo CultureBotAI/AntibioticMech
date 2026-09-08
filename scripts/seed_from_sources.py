@@ -1957,13 +1957,129 @@ MIBIG_PRODUCER_SOURCE = "MIBIG"
 # four tokens followed by a strain; "Streptomyces rochei NBRC 12908" is a name of
 # two.
 _RANK_MARKERS = ("subsp.", "var.", "f.", "pv.", "sp.", "bv.", "serovar")
-_GENUS = re.compile(r"^[A-Z][a-z]+$")
 _EPITHET = re.compile(r"^[a-z][a-z-]+$")
 
+# The inventory is faithful to MIBiG's wording; the corpus speaks the schema's
+# closed vocabulary. Mapping here rather than in the extractor keeps the
+# committed inventory a record of what upstream said (#211).
+MIBIG_LINK_EVIDENCE_METHODS = {
+    "Heterologous expression": "HETEROLOGOUS_EXPRESSION",
+    "Knock-out studies": "KNOCK_OUT_STUDIES",
+    "Enzymatic assays": "ENZYMATIC_ASSAYS",
+    "Gene expression correlated with compound production":
+        "GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION",
+    "Correlation of genomic and metabolomic data": "GENOMIC_METABOLOMIC_CORRELATION",
+    "In vitro expression": "IN_VITRO_EXPRESSION",
+}
+
+
+def mibig_link_evidence(raw: str) -> list[str]:
+    """MIBiG's pipe-joined method names as schema vocabulary, sorted.
+
+    An unmapped method raises rather than being dropped. Dropping it would turn
+    an unrecognized method into a producer with NO link evidence, which reads as
+    a weaker claim instead of an unhandled one -- and the extractor's allow-list
+    means an unmapped value can only arrive from a MIBiG release that added a
+    term nobody has read yet.
+    """
+    methods = []
+    for name in raw.split("|"):
+        if name not in MIBIG_LINK_EVIDENCE_METHODS:
+            raise KeyError(
+                f"MIBiG link-evidence method {name!r} has no schema value. Add it to "
+                "MIBIG_LINK_EVIDENCE_METHODS and LinkEvidenceMethodEnum, or to the "
+                "extractor's exclusions, before re-seeding.")
+        methods.append(MIBIG_LINK_EVIDENCE_METHODS[name])
+    return sorted(set(methods))
+
+
+# A producer claim answers "which organism makes this". A label that names no
+# genus cannot answer it: "uncultured bacterium" says only that some bacterium
+# does. Refused rather than published, and reported, the way an unverifiable
+# cross-reference is (#217). A label that DOES name a genus is kept even when it
+# is an uncultivated symbiont -- "uncultured Candidatus Entotheonella sp." is a
+# real organism identity and the corpus should carry it.
+REFUSED_UNNAMED_PRODUCERS: list[tuple[str, str, str]] = []
+
+# Capitalized words that are status or placement markers rather than genera.
+# `Candidatus` prefixes a proposed name, and the rest are NCBI's words for "we
+# cannot say". Without this list they would each pass for a genus.
+_NOT_A_GENUS = frozenset({"Candidatus", "Uncultured", "Unclassified",
+                          "Unidentified", "Unknown"})
+# NCBI writes "<higher taxon> bacterium <strain>" for an organism it can place
+# but not name, so a rank noun is the source saying the name is missing.
+# "Chloroflexi bacterium TSY" names a PHYLUM, and reading only for a
+# genus-shaped token accepted it.
+#
+# Matched only in lower case, because several of these words are also validly
+# published genera. "Cyanobacterium aponinum" is a real organism and cyanobacteria
+# are a major producer clade, so a case-blind veto would have refused it.
+# "symbiont" and "endosymbiont" are deliberately absent: they describe a
+# lifestyle, not a missing name, and "Burkholderia rhizoxinica endosymbiont"
+# names its organism perfectly well.
+_RANK_NOUNS = frozenset({"bacterium", "archaeon", "organism", "fungus",
+                         "eukaryote", "cyanobacterium", "proteobacterium",
+                         "actinobacterium"})
+# Family and order endings. No validly published genus ends in either, so these
+# are safe to veto outright, which "-ia" is not: Nocardia and Burkholderia are
+# genera. A bare phylum used alone, without a rank noun beside it, is therefore
+# still accepted; NCBI does not write labels that way, and no suffix separates
+# Chloroflexi from a genus without also refusing real ones.
+_HIGHER_RANK_SUFFIXES = ("aceae", "ales")
+_GENUS_TOKEN = re.compile(r"^\[?([A-Z][a-z]{2,})\]?$")
+
+
+def _genus_tokens(tokens: list[str]) -> list[str]:
+    """The genus-shaped names in `tokens`, minus status words and higher ranks."""
+    found = []
+    for token in tokens:
+        match = _GENUS_TOKEN.match(token)
+        if not match or match.group(1) in _NOT_A_GENUS:
+            continue
+        if match.group(1).endswith(_HIGHER_RANK_SUFFIXES):
+            continue
+        found.append(match.group(1))
+    return found
+
+
+def names_an_organism(label: str) -> bool:
+    """True when some token in the label is shaped like a genus.
+
+    Any token, not the first one. NCBI routinely prefixes a genus it can name
+    with words for the culture status or the uncertainty of its placement, and
+    those prefixes do not make the name less of an identity: "uncultured
+    Candidatus Entotheonella sp." and "[Oscillatoria] sp. PCC 6506" both name a
+    genus a reader can look up, while "uncultured bacterium" and "fungal sp."
+    name none. Reading only the first token refused all four alike (#217).
+
+    Brackets are NCBI's marker for a name whose generic placement is disputed,
+    which is a taxonomic argument about a real organism, so they are stripped
+    rather than treated as disqualifying.
+
+    A lower-case rank noun vetoes the label. "Chloroflexi bacterium TSY" carries
+    a capitalized taxon and still names no organism, because that taxon is a
+    phylum and "bacterium" beside it is the source saying so.
+    """
+    tokens = label.split()
+    if _RANK_NOUNS & {token.strip(".,") for token in tokens}:
+        return False
+    return bool(_genus_tokens(tokens))
+
+
+# What MIBiG actually attached each reference to. Neither basis is evidence for
+# the producer link, because MIBiG publishes none: its locus evidence objects
+# carry a method and no reference at all. Saying otherwise was a real overclaim
+# in the corpus -- compound-level evidence in MIBiG is structure elucidation and
+# nothing else, NMR 1,234 times, mass spectrometry 550, MS/MS 237, then chemical
+# derivatisation, authentic standards, X-ray and total synthesis. A citation for
+# how a structure was solved does not show that an organism makes it.
 MIBIG_REFERENCE_BASIS = {
     "compound_evidence": (
-        "MIBiG attaches this reference to the compound itself, so it supports "
-        "the producer/compound link this item asserts."
+        "MIBiG attaches this reference to the compound, as support for its "
+        "STRUCTURE: every compound-level method in the release is structure "
+        "elucidation (NMR, mass spectrometry, X-ray, total synthesis). It "
+        "establishes what the molecule is. It is NOT evidence that this organism "
+        "produces it; MIBiG attaches no reference to the producer link at all."
     ),
     "first_mibig_legacy_reference": (
         "MIBiG's first legacy reference for the entry, inherited rather than "
@@ -1988,13 +2104,27 @@ def split_organism_strain(label: str) -> tuple[str, str | None]:
     instance of its species. What is never safe is guessing, so an unparsed name
     is returned whole with no strain rather than split on whitespace and hoped
     over.
+
+    The genus is looked for anywhere in the label, not only at its start, and
+    everything before it stays part of the name. NCBI prefixes a nameable genus
+    with its culture status and brackets one whose generic placement is disputed,
+    so "uncultured Prochloron sp. 06037A" and "[Oscillatoria] sp. PCC 6506" both
+    carry a collection number this would otherwise leave inside `taxon_label`.
+    `names_an_organism` was widened to accept exactly those labels, and a
+    splitter still reading only the first token would have published the
+    designation as part of the species name the day one matched (#224).
     """
     tokens = label.split()
-    if len(tokens) < 2 or not _GENUS.match(tokens[0]):
+    genus = next(
+        (position for position, token in enumerate(tokens)
+         if (match := _GENUS_TOKEN.match(token)) and match.group(1) not in _NOT_A_GENUS),
+        None,
+    )
+    if genus is None or len(tokens) < genus + 2:
         return label, None
-    index = 1
-    if tokens[1] == "sp." or _EPITHET.match(tokens[1]):
-        index = 2
+    index = genus + 1
+    if tokens[index] == "sp." or _EPITHET.match(tokens[index]):
+        index += 1
     else:
         return label, None
     # Consume "subsp. tularensis" and friends.
@@ -2038,6 +2168,12 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
     identity evidence here. An inventory row with incomplete potential stereo,
     or a key shared by multiple corpus records, is counted and skipped.
     """
+    # Cleared here rather than in `merge`, because this is where it is filled.
+    # The two sibling lists are appended from inside `merge`'s call tree, so
+    # clearing at its entry is right for them; doing the same for this one would
+    # make correctness depend on the order the caller happens to use, and would
+    # leak state into any test calling this function directly (#227).
+    REFUSED_UNNAMED_PRODUCERS.clear()
     rows = load_tsv(RAW_DIR / "mibig_producers.tsv")
     by_key: dict[str, list[str]] = defaultdict(list)
     for identifier, record in records.items():
@@ -2074,6 +2210,16 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
             if key in seen:
                 continue
             seen.add(key)
+            if not names_an_organism(row["taxon_label"]):
+                REFUSED_UNNAMED_PRODUCERS.append((
+                    identifier, row["mibig_accession"],
+                    f"{row['mibig_accession']} names its producer "
+                    f"{row['taxon_label']!r} (NCBITaxon:{row['taxon_id']}), which "
+                    "identifies no organism. The cluster and its citation are real; "
+                    "the producer claim would say only that some microbe makes this. "
+                    "Not published as a producer."))
+                counts["refused_unnamed_producer"] += 1
+                continue
             taxon_label, strain = split_organism_strain(row["taxon_label"])
             # Schema order, optional slots dropped afterwards -- see the same
             # pattern in the PHI-base lane.
@@ -2086,7 +2232,10 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
                 "source_version": release_version,
                 "source_record_version": row["entry_version"],
                 "source_quality": row["entry_quality"],
-                "link_evidence": row["link_evidence"].split("|"),
+                "link_evidence": mibig_link_evidence(row["link_evidence"]),
+                "link_evidence_scope": (
+                    "COMPOUND_SPECIFIC" if row["entry_compound_count"] == "1"
+                    else "CLUSTER_INHERITED"),
                 "reviewed": True if row.get("expert_reviewed") == "true" else None,
                 "note": (
                     f"MIBiG active entry; compound {row['compound_name']!r} joined "
@@ -2102,6 +2251,12 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
                 }],
             }
             items.append({k: v for k, v in item.items() if v is not None})
+            # Counted here, not derived as matched minus refused. Those two are
+            # in different units -- matched counts inventory rows passing the
+            # structure gate, refusals count claims surviving the dedupe -- so
+            # the subtraction printed the wrong total as soon as one entry
+            # contributed two rows for one record (#227).
+            counts["published"] += 1
         if items:
             records[identifier]["producer_organisms"] = items
             _history_last(records[identifier])
@@ -2654,6 +2809,11 @@ def main() -> int:
               "(see `just worklist --queue xref-name-conflict`)")
         for _, label, reason in REFUSED_STRUCTURELESS_XREFS:
             print(f"    {label}: {reason}")
+    if REFUSED_UNNAMED_PRODUCERS:
+        print(f"  {len(REFUSED_UNNAMED_PRODUCERS)} producer claim(s) refused for naming "
+              "no organism (see `just worklist --queue unnamed-producer`)", file=sys.stderr)
+        for identifier, _, reason in REFUSED_UNNAMED_PRODUCERS:
+            print(f"    {identifier}: {reason}", file=sys.stderr)
     if MALFORMED_STRUCTURE_IDS:
         print(f"  {len(MALFORMED_STRUCTURE_IDS)} malformed structure accession(s) "
               "skipped (not a PDB/EMDB accession):", file=sys.stderr)
@@ -2684,6 +2844,8 @@ def main() -> int:
     print(
         "  MIBiG producers: "
         f"matched={mibig_counts['matched']} "
+        f"refused_unnamed={mibig_counts['refused_unnamed_producer']} "
+        f"published={mibig_counts['published']} "
         f"ambiguous={mibig_counts['ambiguous_stereochemistry'] + mibig_counts['ambiguous_corpus_identity']} "
         f"out_of_scope={mibig_counts['out_of_scope']}",
         file=sys.stderr,
