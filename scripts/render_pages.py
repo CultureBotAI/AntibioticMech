@@ -118,10 +118,6 @@ MECHANISM_FIELDS = [
     ("datasets", "Datasets"),
 ]
 
-# CURIE prefixes this site resolves to an external page, in the exact casing
-# they appear in the corpus (the schema's own `prefixes:` block uses
-# different casing for some of these — e.g. CHEMBL.COMPOUND, KEGG — that does
-# not match what the seeder actually writes, so it is not used here).
 # The site shows each source's own wording. Lower-casing the enum name instead
 # turned "Knock-out studies" into "knock out studies" and dropped the word that
 # says WHAT correlated, on 64 published pages. The schema quotes these terms in
@@ -137,6 +133,10 @@ LINK_EVIDENCE_LABELS = {
 }
 
 
+# CURIE prefixes this site resolves to an external page, in the exact casing
+# they appear in the corpus (the schema's own `prefixes:` block uses
+# different casing for some of these — e.g. CHEMBL.COMPOUND, KEGG — that does
+# not match what the seeder actually writes, so it is not used here).
 XREF_URL_TEMPLATES = {
     "CHEBI": "http://purl.obolibrary.org/obo/CHEBI_{}",
     "ARO": "http://purl.obolibrary.org/obo/ARO_{}",

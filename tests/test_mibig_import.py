@@ -162,6 +162,10 @@ def test_an_unmapped_method_raises_rather_than_yielding_no_evidence():
     from seed_from_sources import mibig_link_evidence
 
     assert mibig_link_evidence("Knock-out studies") == ["KNOCK_OUT_STUDIES"]
+    # Sorted and deduplicated, so a re-seed of unchanged data stays byte-identical
+    # however the source happened to order or repeat the methods.
+    assert mibig_link_evidence("Knock-out studies|Enzymatic assays|Knock-out studies") == [
+        "ENZYMATIC_ASSAYS", "KNOCK_OUT_STUDIES"]
     with pytest.raises(KeyError):
         mibig_link_evidence("Some method MIBiG added in 4.1")
 
@@ -302,6 +306,59 @@ def test_closed_validation_rejects_a_link_evidence_value_outside_the_vocabulary(
     # forgot to map would fail loudly rather than write prose into the slot.
     assert errors(link_evidence=["Knock-out studies"])
     assert errors(link_evidence_scope="PROBABLY_FINE")
+
+
+def test_evidence_without_a_scope_is_rejected_by_the_schema_rule(repo_root):
+    """Deleting the rule must not be a green-gate no-op.
+
+    Verified the gap it closes: with the rule stripped, a producer carrying
+    methods and no scope validated clean, and nothing else asserted the pairing
+    for a producer that is not MIBiG's (#228).
+    """
+    import yaml
+
+    from antibioticmech.validation.write_validated import validate_antibiotic
+
+    path = repo_root / "data" / "antibiotics" / "antibacterial" / "erythromycin-a.yaml"
+    doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+    doc["producer_organisms"][0].pop("link_evidence_scope")
+    assert validate_antibiotic(doc)
+
+    # And for a curator-authored producer, which no corpus-integrity test covers
+    # because those filter on the MIBiG source marker.
+    doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+    doc["producer_organisms"] = [{
+        "taxon_id": "NCBITaxon:1", "taxon_label": "Example organism",
+        "link_evidence": ["KNOCK_OUT_STUDIES"],
+    }]
+    assert validate_antibiotic(doc)
+
+
+def test_the_inventory_counts_an_entry_s_compounds_not_its_usable_ones(repo_root):
+    """The count must survive compounds the extractor could not use.
+
+    Narrowing it to structure-bearing compounds would reproduce the defect #206
+    fixed, in the one file the scope test never reads: the inventory would then
+    agree with its own row count everywhere and every scope would read
+    COMPOUND_SPECIFIC. No test calls the extractor, so this asserts the property
+    on the committed inventory instead.
+    """
+    import csv
+    from collections import Counter
+
+    path = repo_root / "data" / "raw" / "mibig_producers.tsv"
+    with path.open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle, delimiter="\t"))
+    surviving = Counter(row["mibig_accession"] for row in rows)
+    declared = {row["mibig_accession"]: int(row["entry_compound_count"]) for row in rows}
+    # Constant within an accession, and never fewer than the rows that survived.
+    for row in rows:
+        assert int(row["entry_compound_count"]) == declared[row["mibig_accession"]]
+        assert declared[row["mibig_accession"]] >= surviving[row["mibig_accession"]]
+        assert int(row["compound_index"]) <= declared[row["mibig_accession"]]
+    # And it genuinely exceeds the surviving count somewhere, or it is just the
+    # row count wearing another name.
+    assert sum(1 for a, n in declared.items() if n > surviving[a]) == 22
 
 
 def test_every_seeded_producer_says_which_experiment_supports_it(records):

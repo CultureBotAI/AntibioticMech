@@ -144,7 +144,11 @@ citation or a characterized MIBiG BGC accession. Two distinctions carry weight:
   anywhere in the label, because NCBI prefixes a nameable genus with its culture
   status and brackets one whose placement is disputed: "uncultured Candidatus
   Entotheonella sp." and "[Oscillatoria] sp. PCC 6506" both name an organism a
-  reader can look up, and both are kept.
+  reader can look up, and both are kept. A lower-case rank noun overrides all of
+  that, because it is the source saying the name is missing: "Chloroflexi
+  bacterium TSY" carries a capitalized taxon and is still refused, since that
+  taxon is a phylum. Case matters — *Cyanobacterium aponinum* is a genus and
+  stays.
 - *Cluster evidence is not compound evidence.* Sources grade a gene cluster, not
   a molecule. When the source entry names one compound the two coincide; when it
   names several, the same experiment covers all of them and cannot say which it

@@ -1852,13 +1852,39 @@ REFUSED_UNNAMED_PRODUCERS: list[tuple[str, str, str]] = []
 _NOT_A_GENUS = frozenset({"Candidatus", "Uncultured", "Unclassified",
                           "Unidentified", "Unknown"})
 # NCBI writes "<higher taxon> bacterium <strain>" for an organism it can place
-# but not name, so a bare rank noun anywhere in the label is the source saying
-# the name is missing. "Chloroflexi bacterium TSY" names a PHYLUM, and reading
-# only for a genus-shaped token accepted it.
+# but not name, so a rank noun is the source saying the name is missing.
+# "Chloroflexi bacterium TSY" names a PHYLUM, and reading only for a
+# genus-shaped token accepted it.
+#
+# Matched only in lower case, because several of these words are also validly
+# published genera. "Cyanobacterium aponinum" is a real organism and cyanobacteria
+# are a major producer clade, so a case-blind veto would have refused it.
+# "symbiont" and "endosymbiont" are deliberately absent: they describe a
+# lifestyle, not a missing name, and "Burkholderia rhizoxinica endosymbiont"
+# names its organism perfectly well.
 _RANK_NOUNS = frozenset({"bacterium", "archaeon", "organism", "fungus",
                          "eukaryote", "cyanobacterium", "proteobacterium",
-                         "actinobacterium", "symbiont", "endosymbiont"})
+                         "actinobacterium"})
+# Family and order endings. No validly published genus ends in either, so these
+# are safe to veto outright, which "-ia" is not: Nocardia and Burkholderia are
+# genera. A bare phylum used alone, without a rank noun beside it, is therefore
+# still accepted; NCBI does not write labels that way, and no suffix separates
+# Chloroflexi from a genus without also refusing real ones.
+_HIGHER_RANK_SUFFIXES = ("aceae", "ales")
 _GENUS_TOKEN = re.compile(r"^\[?([A-Z][a-z]{2,})\]?$")
+
+
+def _genus_tokens(tokens: list[str]) -> list[str]:
+    """The genus-shaped names in `tokens`, minus status words and higher ranks."""
+    found = []
+    for token in tokens:
+        match = _GENUS_TOKEN.match(token)
+        if not match or match.group(1) in _NOT_A_GENUS:
+            continue
+        if match.group(1).endswith(_HIGHER_RANK_SUFFIXES):
+            continue
+        found.append(match.group(1))
+    return found
 
 
 def names_an_organism(label: str) -> bool:
@@ -1875,18 +1901,14 @@ def names_an_organism(label: str) -> bool:
     which is a taxonomic argument about a real organism, so they are stripped
     rather than treated as disqualifying.
 
-    A bare rank noun vetoes the label outright, before any genus is looked for.
-    "Chloroflexi bacterium TSY" carries a capitalized taxon and still names no
-    organism, because that taxon is a phylum and "bacterium" is the source
-    saying so.
+    A lower-case rank noun vetoes the label. "Chloroflexi bacterium TSY" carries
+    a capitalized taxon and still names no organism, because that taxon is a
+    phylum and "bacterium" beside it is the source saying so.
     """
     tokens = label.split()
-    if _RANK_NOUNS & {token.lower().strip(".,") for token in tokens}:
+    if _RANK_NOUNS & {token.strip(".,") for token in tokens}:
         return False
-    return any(
-        (match := _GENUS_TOKEN.match(token)) and match.group(1) not in _NOT_A_GENUS
-        for token in tokens
-    )
+    return bool(_genus_tokens(tokens))
 
 
 MIBIG_REFERENCE_BASIS = {
@@ -1917,13 +1939,27 @@ def split_organism_strain(label: str) -> tuple[str, str | None]:
     instance of its species. What is never safe is guessing, so an unparsed name
     is returned whole with no strain rather than split on whitespace and hoped
     over.
+
+    The genus is looked for anywhere in the label, not only at its start, and
+    everything before it stays part of the name. NCBI prefixes a nameable genus
+    with its culture status and brackets one whose generic placement is disputed,
+    so "uncultured Prochloron sp. 06037A" and "[Oscillatoria] sp. PCC 6506" both
+    carry a collection number this would otherwise leave inside `taxon_label`.
+    `names_an_organism` was widened to accept exactly those labels, and a
+    splitter still reading only the first token would have published the
+    designation as part of the species name the day one matched (#224).
     """
     tokens = label.split()
-    if len(tokens) < 2 or not _GENUS.match(tokens[0]):
+    genus = next(
+        (position for position, token in enumerate(tokens)
+         if (match := _GENUS_TOKEN.match(token)) and match.group(1) not in _NOT_A_GENUS),
+        None,
+    )
+    if genus is None or len(tokens) < genus + 2:
         return label, None
-    index = 1
-    if tokens[1] == "sp." or _EPITHET.match(tokens[1]):
-        index = 2
+    index = genus + 1
+    if tokens[index] == "sp." or _EPITHET.match(tokens[index]):
+        index += 1
     else:
         return label, None
     # Consume "subsp. tularensis" and friends.
@@ -2050,6 +2086,12 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
                 }],
             }
             items.append({k: v for k, v in item.items() if v is not None})
+            # Counted here, not derived as matched minus refused. Those two are
+            # in different units -- matched counts inventory rows passing the
+            # structure gate, refusals count claims surviving the dedupe -- so
+            # the subtraction printed the wrong total as soon as one entry
+            # contributed two rows for one record (#227).
+            counts["published"] += 1
         if items:
             records[identifier]["producer_organisms"] = items
             _history_last(records[identifier])
@@ -2638,7 +2680,7 @@ def main() -> int:
         "  MIBiG producers: "
         f"matched={mibig_counts['matched']} "
         f"refused_unnamed={mibig_counts['refused_unnamed_producer']} "
-        f"published={mibig_counts['matched'] - mibig_counts['refused_unnamed_producer']} "
+        f"published={mibig_counts['published']} "
         f"ambiguous={mibig_counts['ambiguous_stereochemistry'] + mibig_counts['ambiguous_corpus_identity']} "
         f"out_of_scope={mibig_counts['out_of_scope']}",
         file=sys.stderr,

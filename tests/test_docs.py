@@ -147,7 +147,10 @@ NUMERIC_CLAIMS = [
     # Producer figures. Both halves are derivable, so the tripwire accepts them
     # swapped; only this table checks a number against ITS OWN claim (#230).
     ("docs/CURATION.md", "{} of the 64 seeded assertions", "cluster_inherited"),
-    ("docs/HARMONIZATION.md", "{} records of 2,909 carry one", "producer_records"),
+    # The adoption record. Its shape carries no corpus noun, so the tripwire
+    # cannot see it at all and only this table can (#230).
+    ("curation/source_queue.tsv", "of which it publishes {}", "mibig_producer_items"),
+    ("docs/HARMONIZATION.md", "{} records carry a producer", "producer_records"),
     ("docs/HARMONIZATION.md", "{} records carry one from the MIBiG import",
      "mibig_producer_records"),
 ]
@@ -182,6 +185,7 @@ def _derived(repo_root):
             "microbial_target": scopes["MICROBIAL_TARGET"],
             "host_shared_target": scopes["HOST_SHARED_TARGET"],
             "producer_records": sum(1 for r in records if r.get("producer_organisms")),
+            "mibig_producer_items": len(mibig),
             "mibig_producer_records": sum(
                 1 for r in records
                 if any(p.get("source") == "MIBIG" for p in (r.get("producer_organisms") or []))),
@@ -597,3 +601,17 @@ def test_generated_corpus_stats_name_the_counts_they_compute(repo_root):
     assert "With target or resistance evidence" in block
     assert "With resistance evidence" not in block
     assert "carry a mode of action" in block
+
+
+def test_the_published_page_shows_the_source_s_own_method_wording(repo_root):
+    """A map test cannot see the template.
+
+    Reverting the producer cell to the raw enum values and re-rendering leaves
+    the map assertion and `render_pages --check` both green, so the wording
+    regression #213 fixed could re-land unseen. This reads the committed page.
+    """
+    page = (repo_root / "pages" / "antibacterial" / "erythromycin-a.html").read_text(
+        encoding="utf-8")
+    assert "Knock-out studies" in page
+    assert "Gene expression correlated with compound production" in page
+    assert "KNOCK_OUT_STUDIES" not in page
