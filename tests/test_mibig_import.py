@@ -431,6 +431,99 @@ def test_the_inventory_counts_an_entry_s_compounds_not_its_usable_ones(repo_root
     assert sum(1 for a, n in declared.items() if n > surviving[a]) == 22
 
 
+def test_a_taxon_that_is_a_container_rather_than_an_organism_is_refused():
+    """The identifier and the name must agree about what is being claimed.
+
+    BGC0001875 grounds its producer in NCBITaxon:12908, NCBI's unclassified
+    sequences bucket, while its label names a real strain. The label alone
+    cannot catch that: it reads as a perfectly good organism, and the naming
+    test accepts it. The row matches no corpus structure today, so the defect is
+    latent and only a direct call reaches it (#221).
+    """
+    import csv
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+    from seed_from_sources import (
+        _NON_ORGANISM_TAXA,
+        REFUSED_UNNAMED_PRODUCERS,
+        attach_mibig_producers,
+        names_an_organism,
+        producer_refusal_reason,
+    )
+
+    # The whole list, not only the entry today's inventory happens to exercise.
+    # Removing any of the other thirteen passed every test, because only 12908
+    # appears in the data.
+    assert set(_NON_ORGANISM_TAXA) == {
+        "1", "2", "2157", "2759", "4751", "10239", "12908", "28384",
+        "29278", "32630", "32644", "81077", "131567", "408169",
+    }
+
+    path = Path(__file__).resolve().parents[1] / "data" / "raw" / "mibig_producers.tsv"
+    with path.open(newline="", encoding="utf-8") as handle:
+        row = next(r for r in csv.DictReader(handle, delimiter="\t")
+                   if r["mibig_accession"] == "BGC0001875")
+    assert row["taxon_id"] == "12908"
+    # The naming test passes on this label, which is the whole point.
+    assert names_an_organism(row["taxon_label"])
+
+    seeded = {"CHEBI:X": {
+        "identifier": "CHEBI:X", "label": "t", "curation_history": [],
+        "chemical_structure": {"standard_inchi_key": row["standard_inchi_key"]}}}
+    counts = attach_mibig_producers(seeded, "4.0.1")
+
+    assert "producer_organisms" not in seeded["CHEBI:X"]
+    assert counts["refused_unnamed_producer"] == 1
+    assert any("unclassified sequences" in reason
+               for _, _, reason in REFUSED_UNNAMED_PRODUCERS)
+    assert producer_refusal_reason(row["taxon_id"], row["taxon_label"])
+    assert producer_refusal_reason("405948", "Saccharopolyspora erythraea") is None
+
+
+def test_the_worklist_reports_exactly_what_the_seeder_refused():
+    """Parity over the inventory, not over the corpus.
+
+    The queue restated the seeder's rule and drifted once (#226). A corpus-level
+    check cannot catch the next drift: the rows exercising the newer refusal
+    reason match no record, so a queue missing that reason entirely produces an
+    identical two-row output. Reverting the queue to the old label-only rule
+    passed all 16 tests here.
+
+    So every refusable inventory row is given a record to match, and the two are
+    then compared. They disagree the moment either stops calling the shared rule.
+    """
+    import csv
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+    from curation_worklist import unnamed_producer_queue
+    from seed_from_sources import (
+        REFUSED_UNNAMED_PRODUCERS,
+        attach_mibig_producers,
+        producer_refusal_reason,
+    )
+
+    path = Path(__file__).resolve().parents[1] / "data" / "raw" / "mibig_producers.tsv"
+    with path.open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle, delimiter="\t"))
+    refusable = [row for row in rows
+                 if row["link_evidence"] and row["stereo_complete"] == "true"
+                 and producer_refusal_reason(row["taxon_id"], row["taxon_label"])]
+    assert refusable, "no inventory row is refusable; this test guards nothing"
+
+    # One synthetic record per refusable structure, so every one is reachable.
+    corpus = [{"identifier": f"TEST:{index}", "label": f"t{index}",
+               "curation_history": [],
+               "chemical_structure": {"standard_inchi_key": key}}
+              for index, key in enumerate(
+                  dict.fromkeys(row["standard_inchi_key"] for row in refusable))]
+    seeded = {record["identifier"]: dict(record) for record in corpus}
+    attach_mibig_producers(seeded, "4.0.1")
+    from_seeder = {(identifier, accession)
+                   for identifier, accession, _ in REFUSED_UNNAMED_PRODUCERS}
+    from_queue = {(row["key"], row["source_id"]) for row in unnamed_producer_queue(corpus)}
+    assert from_seeder == from_queue, from_seeder ^ from_queue
+
+
 def test_every_seeded_producer_says_which_experiment_supports_it(records):
     """A widened gate must not widen into unevidenced claims.
 

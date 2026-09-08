@@ -743,13 +743,19 @@ def xref_name_conflict_queue(records: list[dict]) -> list[dict]:
 
 
 def unnamed_producer_queue(records: list[dict]) -> list[dict]:
-    """Producer claims the seeder refused because the taxon names no organism.
+    """Producer claims the seeder refused because the taxon identifies no organism.
+
+    Two reasons reach here. The label may name nothing -- "uncultured bacterium"
+    says only that some microbe makes this -- or the identifier may be a
+    container rather than an organism while the label names one, which is the
+    harder case because the label reads perfectly well on its own.
 
     A refused claim needs a destination rather than a deletion (#136), and this
     is that destination: the compound, the cluster, the label the source gave,
     and why it was not published. The gene cluster and its citation are real, so
-    a curator who can name the organism -- from the paper, or from a later
-    taxonomy that resolves the environmental sample -- can restore the claim.
+    a curator can restore the claim: by naming the organism, from the paper or a
+    later taxonomy that resolves the environmental sample, or by correcting the
+    identifier where it is the identifier that is wrong.
 
     Reconstructed from the inventory and the corpus rather than read from the
     records, because the refusal is exactly what kept it out of the records
@@ -758,7 +764,7 @@ def unnamed_producer_queue(records: list[dict]) -> list[dict]:
     """
     import sys
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from seed_from_sources import RAW_DIR, load_tsv, names_an_organism
+    from seed_from_sources import RAW_DIR, load_tsv, producer_refusal_reason
 
     by_key: dict[str, list[dict]] = {}
     for record in records:
@@ -785,7 +791,13 @@ def unnamed_producer_queue(records: list[dict]) -> list[dict]:
         # where the seeder refuses once per cluster and taxon (#226).
         if not row.get("link_evidence"):
             continue
-        if row.get("stereo_complete") != "true" or names_an_organism(row["taxon_label"]):
+        if row.get("stereo_complete") != "true":
+            continue
+        # The seeder's own rule, called rather than restated. Two copies drifted
+        # once already (#226), and the drift was undetectable because the only
+        # row exercising the newer reason matches no corpus record.
+        refusal = producer_refusal_reason(row["taxon_id"], row["taxon_label"])
+        if not refusal:
             continue
         matches = by_key.get(row.get("standard_inchi_key", ""), [])
         if len(matches) != 1:
@@ -802,8 +814,7 @@ def unnamed_producer_queue(records: list[dict]) -> list[dict]:
             "label": matches[0]["label"],
             "source": "MIBIG",
             "source_id": row["mibig_accession"],
-            "hint": (f"{row['taxon_label']!r} (NCBITaxon:{row['taxon_id']}) names no "
-                     f"organism; cluster and citation {row['primary_reference']} stand"),
+            "hint": f"{refusal} Cluster and citation {row['primary_reference']} stand.",
         })
     out.sort(key=lambda r: r["label"].lower())
     return out

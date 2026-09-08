@@ -34,7 +34,7 @@ from seed_from_sources import (  # noqa: E402
     attach_mibig_producers,
     attach_phibase_resistance,
     is_phibase_sourced_resistance,
-    names_an_organism,
+    producer_refusal_reason,
     split_organism_strain,
 )
 
@@ -336,7 +336,7 @@ def _first_accepted_mibig_row():
         (REPO_ROOT / "data" / "raw" / "mibig_producers.tsv").read_text(
             encoding="utf-8").splitlines(), delimiter="\t"):
         if (row["link_evidence"] and row["stereo_complete"] == "true"
-                and names_an_organism(row["taxon_label"])):
+                and not producer_refusal_reason(row["taxon_id"], row["taxon_label"])):
             return row
     raise AssertionError("no MIBiG row passes the lane's own filters")
 
