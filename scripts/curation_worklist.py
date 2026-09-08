@@ -766,6 +766,16 @@ def unnamed_producer_queue(records: list[dict]) -> list[dict]:
         if key:
             by_key.setdefault(key, []).append(record)
 
+    # A curator who resolves the organism and writes the producer has finished
+    # the item, and the queue must stop asking. Reconstructing the refusal from
+    # the inventory alone could never retire anything, so the backlog would have
+    # grown a permanent entry the work could not clear.
+    restored = {
+        (record["identifier"], item.get("biosynthetic_gene_cluster"))
+        for record in records
+        for item in (record.get("producer_organisms") or [])
+    }
+
     out: list[dict] = []
     seen: set[tuple[str, str, str]] = set()
     for row in load_tsv(RAW_DIR / "mibig_producers.tsv"):
@@ -784,6 +794,8 @@ def unnamed_producer_queue(records: list[dict]) -> list[dict]:
         if key in seen:
             continue
         seen.add(key)
+        if (matches[0]["identifier"], row["mibig_accession"]) in restored:
+            continue
         out.append({
             "queue": "unnamed-producer",
             "key": matches[0]["identifier"],

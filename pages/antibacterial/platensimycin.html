@@ -104,7 +104,9 @@ is how the upstream source graded the gene cluster, so it is populated only for 
 source that grades it. An empty cell is not weaker support: a curator-authored
 producer carries its support in Evidence instead. Where the source entry named
 several compounds, the evidence is marked inherited, meaning it covers this
-compound together with its congeners rather than singling it out.</p>
+compound together with the cluster's other products rather than singling it out.
+Those products need not be related to each other: a cluster can list an
+intermediate, a precursor and a finished antibiotic side by side.</p>
 <table>
   <caption>Producer organisms</caption>
   <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Cluster link evidence</th><th scope="col">Source</th><th scope="col">Quality</th><th scope="col">Note</th><th scope="col">Evidence</th></tr></thead>
@@ -116,7 +118,7 @@ compound together with its congeners rather than singling it out.</p>
     <td class="meta">questionable</td>
     <td class="meta">MIBiG active entry; compound &#39;platensimycin&#39; joined by exact Standard InChIKey.</td>
     <td class="meta"><ul class="plain evidence">
-  <li><span class="meta">PMID:16710421</span> <span class="meta">(MIBiG attaches this reference to the compound itself, so it supports the producer/compound link this item asserts.)</span></li>
+  <li><span class="meta">PMID:16710421</span> <span class="meta">(MIBiG attaches this reference to the compound, as support for its STRUCTURE: every compound-level method in the release is structure elucidation (NMR, mass spectrometry, X-ray, total synthesis). It establishes what the molecule is. It is NOT evidence that this organism produces it; MIBiG attaches no reference to the producer link at all.)</span></li>
 </ul>
 </td>
   </tr>
@@ -141,6 +143,11 @@ compound together with its congeners rather than singling it out.</p>
   <li>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
+    <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">RESEEDED_FROM_SOURCES</span>
+    <span class="meta">2026-09-08 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
   <li>

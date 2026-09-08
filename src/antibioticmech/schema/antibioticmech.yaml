@@ -458,6 +458,20 @@ classes:
           slot_conditions:
             link_evidence_scope:
               value_presence: PRESENT
+      - description: >-
+          And the converse. A scope with no method says only that evidence this
+          record does not carry would have been inherited, or would not have
+          been, which is a claim about nothing. The renderer compounds it by
+          showing an em dash and dropping the orphan scope, so the invalid state
+          is invisible on the page (#240).
+        preconditions:
+          slot_conditions:
+            link_evidence_scope:
+              value_presence: PRESENT
+        postconditions:
+          slot_conditions:
+            link_evidence:
+              value_presence: PRESENT
     attributes:
       taxon_id:
         description: NCBITaxon CURIE of the producing organism.

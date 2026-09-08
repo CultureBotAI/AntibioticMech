@@ -335,6 +335,52 @@ def test_evidence_without_a_scope_is_rejected_by_the_schema_rule(repo_root):
     assert validate_antibiotic(doc)
 
 
+def test_the_extractor_counts_source_compounds_including_unusable_ones(tmp_path):
+    """Exercises `extract` itself, on a synthetic archive.
+
+    Every other assertion about this column reads the committed inventory, so
+    narrowing the count to compounds the extractor could use would stay
+    invisible until the next extraction. This builds an entry with three
+    compounds of which one has a usable structure, and asserts the surviving row
+    still reports three -- the exact shape that would otherwise publish shared
+    cluster evidence as compound-specific (#241).
+    """
+    import io
+    import json
+    import tarfile
+
+    from extract_mibig_producers import extract
+
+    entry = {
+        "accession": "BGC9999999",
+        "status": "active",
+        "version": "1",
+        "quality": "high",
+        "loci": [{"evidence": [{"method": "Knock-out studies"}]}],
+        "taxonomy": {"ncbiTaxId": 1902, "name": "Streptomyces coelicolor A3(2)"},
+        "legacy_references": ["pubmed:1"],
+        "compounds": [
+            {"name": "no structure at all"},
+            {"name": "usable", "structure": "CCO"},
+            {"name": "unparseable", "structure": "not a smiles"},
+        ],
+    }
+    payload = json.dumps(entry).encode("utf-8")
+    archive = tmp_path / "mibig.tar"
+    with tarfile.open(archive, "w") as handle:
+        info = tarfile.TarInfo("BGC9999999.json")
+        info.size = len(payload)
+        handle.addfile(info, io.BytesIO(payload))
+
+    rows, counts = extract(
+        archive, {"mibig": {"reviewer_placeholder": "AAAAAAAAAAAAAAAAAAAAAAAA"}})
+
+    assert len(rows) == 1, rows
+    assert rows[0]["compound_name"] == "usable"
+    assert rows[0]["entry_compound_count"] == "3"
+    assert counts["entries_admitted"] == 1
+
+
 def test_the_inventory_counts_an_entry_s_compounds_not_its_usable_ones(repo_root):
     """The count must survive compounds the extractor could not use.
 

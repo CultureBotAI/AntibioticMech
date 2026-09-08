@@ -1910,10 +1910,20 @@ def names_an_organism(label: str) -> bool:
     return bool(_genus_tokens(tokens))
 
 
+# What MIBiG actually attached each reference to. Neither basis is evidence for
+# the producer link, because MIBiG publishes none: its locus evidence objects
+# carry a method and no reference at all. Saying otherwise was a real overclaim
+# in the corpus -- compound-level evidence in MIBiG is structure elucidation and
+# nothing else, NMR 1,234 times, mass spectrometry 550, MS/MS 237, then chemical
+# derivatisation, authentic standards, X-ray and total synthesis. A citation for
+# how a structure was solved does not show that an organism makes it.
 MIBIG_REFERENCE_BASIS = {
     "compound_evidence": (
-        "MIBiG attaches this reference to the compound itself, so it supports "
-        "the producer/compound link this item asserts."
+        "MIBiG attaches this reference to the compound, as support for its "
+        "STRUCTURE: every compound-level method in the release is structure "
+        "elucidation (NMR, mass spectrometry, X-ray, total synthesis). It "
+        "establishes what the molecule is. It is NOT evidence that this organism "
+        "produces it; MIBiG attaches no reference to the producer link at all."
     ),
     "first_mibig_legacy_reference": (
         "MIBiG's first legacy reference for the entry, inherited rather than "

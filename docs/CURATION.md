@@ -151,8 +151,10 @@ citation or a characterized MIBiG BGC accession. Two distinctions carry weight:
   stays.
 - *Cluster evidence is not compound evidence.* Sources grade a gene cluster, not
   a molecule. When the source entry names one compound the two coincide; when it
-  names several, the same experiment covers all of them and cannot say which it
-  followed. `link_evidence_scope` records which case a claim is in, and
+  names several, the same evidence is recorded against all of them and cannot say
+  which the experiment followed. Nor are those compounds necessarily congeners:
+  one MIBiG entry lists a tripeptide precursor, an intermediate and a finished
+  penicillin under a single enzymatic-assay grading. `link_evidence_scope` records which case a claim is in, and
   22 of the 64 seeded assertions are the weaker one. Read it before trusting
   `link_evidence` about a particular molecule.
 - *How the link was established matters, and is separate from who reviewed it.*
