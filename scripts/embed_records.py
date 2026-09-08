@@ -174,6 +174,18 @@ def build_document(record: dict, names: dict[str, str]) -> str:
     if resistance:
         parts.append("resistance: " + ", ".join(resistance[:6]))
 
+    # The organism that makes it, which was absent entirely: a search for a
+    # producing species matched nothing, on 61 records that name one. Species
+    # only -- the strain designation is a collection number, which is opaque per
+    # token and would spend the window without separating anything. Placed with
+    # the other short discriminative fields, ahead of the definition, and it
+    # costs about four words (#218).
+    producers = dict.fromkeys(
+        str(p.get("taxon_label")) for p in (record.get("producer_organisms") or [])
+        if p.get("taxon_label"))
+    if producers:
+        parts.append("produced by " + ", ".join(list(producers)[:4]))
+
     if record.get("definition"):
         parts.append(str(record["definition"]))
 
