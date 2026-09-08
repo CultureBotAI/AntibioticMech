@@ -16,6 +16,7 @@ from seed_from_sources import (  # noqa: E402
     Concept,
     build_record,
     classify,
+    flag_structure_collisions,
     load_curator_concepts,
     merge,
     mint,
@@ -152,6 +153,35 @@ def test_curator_inventory_rejects_duplicate_structures(tmp_path):
 
     with pytest.raises(SystemExit, match="duplicates Standard InChIKey"):
         load_curator_concepts(path)
+
+
+def test_curator_inventory_cannot_duplicate_a_chebi_record():
+    key = "VNWKTOKETHGBQD-UHFFFAOYSA-N"
+    chebi = _concept("CHEBI", "CHEBI:1", "methane", key)
+    curator = _concept("CURATOR", "DOI:10.1000/widget#compound-1", "widgetmycin", key)
+
+    with pytest.raises(SystemExit, match="duplicate adopted-source structure"):
+        merge([chebi, curator], {"CHEBI:1": {"standard_inchi_key": key}}, CONF, {}, "2026-09-01")
+
+
+def test_curator_inventory_cannot_fall_through_as_an_aro_only_collision():
+    key = "VNWKTOKETHGBQD-UHFFFAOYSA-N"
+    aro = _concept("ARO", "ARO:1", "methane", key)
+    curator = _concept("CURATOR", "DOI:10.1000/widget#compound-1", "widgetmycin", key)
+
+    with pytest.raises(SystemExit, match="duplicate adopted-source structure"):
+        merge([aro, curator], {}, CONF, {}, "2026-09-01")
+
+
+def test_aro_only_structure_collisions_still_reach_the_review_queue():
+    key = "VNWKTOKETHGBQD-UHFFFAOYSA-N"
+    first = _concept("ARO", "ARO:1", "widgetmycin", key)
+    second = _concept("ARO", "ARO:2", "methane", key)
+
+    records, skipped = merge([first, second], {}, CONF, {}, "2026-09-01")
+
+    assert skipped == []
+    assert flag_structure_collisions(records, "2026-09-01") == 2
 
 
 def test_existing_records_keep_the_manifest_source_version():

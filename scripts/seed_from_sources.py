@@ -1143,6 +1143,31 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
                     f"records; ground to the existing identifier instead."
                 )
 
+    curator_collisions: dict[str, list[tuple[str, list[Concept]]]] = defaultdict(list)
+    for identifier, group in by_identity.items():
+        key = group[0].structure.get("standard_inchi_key", "")
+        if key:
+            curator_collisions[key].append((identifier, group))
+    for key, owners in sorted(curator_collisions.items()):
+        curator_rows = [
+            concept.source_id
+            for _, group in owners
+            for concept in group
+            if concept.source == "CURATOR"
+        ]
+        adopted_rows = [
+            concept.source_id
+            for _, group in owners
+            for concept in group
+            if concept.source in {"CHEBI", "ARO"}
+        ]
+        if curator_rows and adopted_rows:
+            raise SystemExit(
+                f"CURATOR source concept(s) {sorted(curator_rows)} duplicate adopted-source "
+                f"structure {key} from {sorted(adopted_rows)}. Delete the curator row and "
+                "curate the generated YAML record instead."
+            )
+
     records: dict[str, dict] = {}
     for identifier, group in by_identity.items():
         records[identifier] = build_record(identifier, grounding[identifier], group,

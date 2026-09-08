@@ -35,6 +35,11 @@ COMMANDS = [
         "An ADOPTED source must be one the pipeline reads under verified redistribution terms.",
     ),
     (
+        "curator antibiotic structures",
+        [sys.executable, "scripts/check_curator_antibiotics.py"],
+        "Hand-maintained curator additions must carry one internally consistent molecule.",
+    ),
+    (
         "tests",
         [sys.executable, "-m", "pytest", "-q"],
         "Tests cover harmonization rules and corpus-wide invariants per-record validation cannot see.",
