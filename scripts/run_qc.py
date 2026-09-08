@@ -47,7 +47,7 @@ COMMANDS = [
     (
         "corpus reproduction",
         [sys.executable, "scripts/verify_corpus.py"],
-        "A schema-valid hand edit is still invalid unless the corpus reproduces from data/raw/.",
+        "A schema-valid hand edit is still invalid unless the corpus reproduces from its inventories.",
     ),
     (
         "chemical map",

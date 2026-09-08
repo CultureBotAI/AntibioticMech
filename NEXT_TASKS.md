@@ -17,7 +17,7 @@ prose below are the reasoning, the queue is the list.
 
 ## Now
 
-- **Curate the first mechanism graphs.** 0 of 2,909 records carry a
+- **Curate the first mechanism graphs.** 0 of 2,920 records carry a
   `causal_graph`; that number is the point of the repository. Start with the 318
   records that already have CARD target or resistance evidence to build on —
   `just worklist --queue mechanism` ranks them by how much evidence is waiting.

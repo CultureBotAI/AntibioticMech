@@ -1,0 +1,41 @@
+identifier: antibioticmech:curator-68713b9d28
+label: Fisetin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A flavonoid with antibacterial activity against drug-resistant bacterial
+  pathogens.
+definition_source: DOI:10.1128/spectrum.02374-25
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C1=CC(=C(C=C1C2=C(C(=O)C3=C(O2)C=C(C=C3)O)O)O)O
+  standard_inchi: InChI=1S/C15H10O6/c16-8-2-3-9-12(6-8)21-15(14(20)13(9)19)7-1-4-10(17)11(18)5-7/h1-6,16-18,20H
+  standard_inchi_key: XHEFDIBZLJXQHF-UHFFFAOYSA-N
+  molecular_formula: C15H10O6
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/5281614
+  retrieved_on: '2026-09-07'
+  charge: 0
+  average_mass: 286.24
+  monoisotopic_mass: 286.04773803
+xrefs:
+- pubchem.compound:5281614
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/spectrum.02374-25#fisetin
+  source_label: Fisetin
+  minted_identifier: antibioticmech:curator-68713b9d28
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/spectrum.02374-25
+    snippet: Zai et al. reported fisetin among six Terminalia flavonoids that inhibited
+      growth of both methicillin- and beta-lactam-resistant bacterial pathogens.
+    notes: PubChem CID 5281614 supplies the standard InChI, InChIKey, formula, and
+      SMILES for fisetin.
+  source_version: '2026-09-07'
+curation_history:
+- timestamp: '2026-09-08T02:20:36Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

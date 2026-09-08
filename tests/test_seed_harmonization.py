@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 
+import csv
 import sys
 from pathlib import Path
 
+import pytest
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
@@ -12,7 +14,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from seed_from_sources import (  # noqa: E402
     CONF_PATH,
     Concept,
+    build_record,
     classify,
+    load_curator_concepts,
     merge,
     mint,
     normalize_xref,
@@ -21,6 +25,48 @@ from seed_from_sources import (  # noqa: E402
 )
 
 CONF = yaml.safe_load(CONF_PATH.read_text(encoding="utf-8"))
+CURATOR_HEADER = [
+    "source_id", "label", "antimicrobial_class", "smiles", "standard_inchi",
+    "standard_inchi_key", "structure_source", "structure_retrieved_on",
+    "source_version", "reference", "evidence_snippet", "evidence_notes",
+    "definition", "activity_roles", "synonyms", "xrefs", "molecular_formula",
+    "charge", "average_mass", "monoisotopic_mass",
+]
+
+
+def _curator_inventory(tmp_path, *rows: dict, **overrides: str) -> Path:
+    if overrides:
+        rows = (overrides,)
+    if not rows:
+        rows = ({},)
+    path = tmp_path / "curator_antibiotics.tsv"
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=CURATOR_HEADER, delimiter="\t")
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({
+                "source_id": "DOI:10.1000/widget#compound-1",
+                "label": "widgetmycin",
+                "antimicrobial_class": "ANTIBACTERIAL",
+                "smiles": "C",
+                "standard_inchi": "InChI=1S/CH4/h1H4",
+                "standard_inchi_key": "VNWKTOKETHGBQD-UHFFFAOYSA-N",
+                "structure_source": "DOI:10.1000/widget",
+                "structure_retrieved_on": "2026-09-07",
+                "source_version": "2026-09-07",
+                "reference": "DOI:10.1000/widget",
+                "evidence_snippet": "Compound 1 inhibited Bacillus subtilis.",
+                "evidence_notes": "Table 1 reports the exact structure and activity.",
+                "definition": "A curated antibacterial methane placeholder.",
+                "activity_roles": "CHEBI:33282",
+                "synonyms": "compound 1|WM-1",
+                "xrefs": "PubChem:123",
+                "molecular_formula": "CH4",
+                "charge": "0",
+                "average_mass": "16.043",
+                "monoisotopic_mass": "16.0313",
+            } | row)
+    return path
 
 
 def test_yaml_mapping_order_is_not_a_seed_change():
@@ -36,6 +82,88 @@ def test_minted_identifiers_are_stable_and_source_scoped():
     assert mint("ARO", "ARO:0000006") == mint("ARO", "ARO:0000006")
     assert mint("ARO", "ARO:0000006") != mint("CHEBI", "ARO:0000006")
     assert mint("ARO", "ARO:0000006").startswith("antibioticmech:aro-")
+
+
+def test_curator_inventory_emits_a_proposed_record_with_source_evidence(tmp_path):
+    concepts = load_curator_concepts(_curator_inventory(tmp_path))
+    for concept in concepts:
+        concept.minted = mint(concept.source, concept.source_id)
+
+    records, skipped = merge(concepts, {}, CONF, {}, "2026-09-01")
+    identifier = mint("CURATOR", "DOI:10.1000/widget#compound-1")
+    record = records[identifier]
+
+    assert skipped == []
+    assert record["label"] == "widgetmycin"
+    assert record["antimicrobial_class"] == "ANTIBACTERIAL"
+    assert record["curation_status"] == "PROPOSED"
+    assert record["definition_source"] == "DOI:10.1000/widget"
+    assert record["source_concepts"] == [{
+        "source": "CURATOR",
+        "source_id": "DOI:10.1000/widget#compound-1",
+        "source_label": "widgetmycin",
+        "minted_identifier": identifier,
+        "role_terms": ["CHEBI:33282"],
+        "evidence": [{
+            "reference": "DOI:10.1000/widget",
+            "snippet": "Compound 1 inhibited Bacillus subtilis.",
+            "notes": "Table 1 reports the exact structure and activity.",
+        }],
+        "source_version": "2026-09-07",
+    }]
+
+
+def test_curator_inventory_accepts_https_references(tmp_path):
+    concepts = load_curator_concepts(_curator_inventory(
+        tmp_path,
+        reference="https://example.org/stable/widgetmycin",
+    ))
+
+    assert concepts[0].evidence[0]["reference"] == "https://example.org/stable/widgetmycin"
+
+
+def test_curator_inventory_requires_a_doi_or_stable_url(tmp_path):
+    path = _curator_inventory(tmp_path, reference="PMID:123")
+
+    with pytest.raises(SystemExit, match="reference must be DOI"):
+        load_curator_concepts(path)
+
+
+def test_curator_inventory_requires_stable_structure_provenance(tmp_path):
+    path = _curator_inventory(tmp_path, structure_source="RCSB PRD_000001")
+
+    with pytest.raises(SystemExit, match="structure_source must be DOI"):
+        load_curator_concepts(path)
+
+
+def test_curator_inventory_rejects_bad_xrefs(tmp_path):
+    path = _curator_inventory(tmp_path, xrefs="not an xref")
+
+    with pytest.raises(SystemExit, match="invalid xref"):
+        load_curator_concepts(path)
+
+
+def test_curator_inventory_rejects_duplicate_structures(tmp_path):
+    path = _curator_inventory(
+        tmp_path,
+        {"source_id": "DOI:10.1000/widget#compound-1"},
+        {"source_id": "DOI:10.1000/widget#compound-2"},
+    )
+
+    with pytest.raises(SystemExit, match="duplicates Standard InChIKey"):
+        load_curator_concepts(path)
+
+
+def test_existing_records_keep_the_manifest_source_version():
+    concept = Concept("CHEBI", "CHEBI:1", "widgetmycin")
+    concept.minted = mint(concept.source, concept.source_id)
+    concept.roles = ["CHEBI:33282"]
+    concept.structure = {"standard_inchi_key": "VNWKTOKETHGBQD-UHFFFAOYSA-N"}
+
+    record = build_record("CHEBI:1", "EXACT", [concept], CONF, "2026-09-01")
+
+    assert record["curation_status"] == "SEEDED"
+    assert record["source_concepts"][0]["source_version"] == "2026-09-01"
 
 
 def test_xrefs_that_cannot_resolve_are_dropped_not_guessed():

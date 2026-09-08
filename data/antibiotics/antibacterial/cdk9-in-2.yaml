@@ -1,0 +1,40 @@
+identifier: antibioticmech:curator-9e16033cea
+label: CDK9-IN-2
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A small-molecule HPrK inhibitor with antibacterial activity against Gram-positive
+  bacteria and mycoplasmas.
+definition_source: DOI:10.1128/spectrum.03977-25
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C1CC(CCC1N)NC2=NC=C(C(=C2)C3=NC(=CC=C3)NCC4=CC(=CC=C4)F)Cl
+  standard_inchi: InChI=1S/C23H25ClFN5/c24-20-14-28-23(29-18-9-7-17(26)8-10-18)12-19(20)21-5-2-6-22(30-21)27-13-15-3-1-4-16(25)11-15/h1-6,11-12,14,17-18H,7-10,13,26H2,(H,27,30)(H,28,29)
+  standard_inchi_key: XKHXPTSUVPZYDW-UHFFFAOYSA-N
+  molecular_formula: C23H25ClFN5
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/49855228
+  retrieved_on: '2026-09-07'
+  charge: 0
+xrefs:
+- pubchem.compound:49855228
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/spectrum.03977-25#cdk9-in-2
+  source_label: CDK9-IN-2
+  minted_identifier: antibioticmech:curator-9e16033cea
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/spectrum.03977-25
+    snippet: Yan et al. identified CDK9-IN-2 in an HPrK kinase activity screen and
+      reported antibacterial activity against multidrug-resistant Streptococcus suis,
+      other Gram-positive species, and mycoplasmas.
+    notes: PubChem CID 49855228 supplies the standard InChI, InChIKey, formula, and
+      SMILES for CDK9-IN-2.
+  source_version: '2026-09-07'
+curation_history:
+- timestamp: '2026-09-07T20:02:15Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

@@ -9,7 +9,8 @@ with antimicrobial activity**, harmonized from ChEBI (3-star entries bearing an
 antimicrobial role) and CARD/ARO (the antibiotic molecule subtree), with
 structures for CARD-only molecules fetched from PubChem. One generated YAML
 record lives at `data/antibiotics/<class>/<slug>.yaml`. The committed
-inventories in `data/raw/` are the reproducible inputs.
+inventories in `data/raw/` and `curation/curator_antibiotics.tsv` are the
+reproducible inputs.
 
 Read these before changing domain behavior:
 
@@ -54,8 +55,9 @@ just seed-apply --prune   # only when stale records should be removed
 ## Generated-file boundaries
 
 **Never hand-edit a record.** `data/antibiotics/` is generated from the committed
-inventories plus curation decisions. Put source harmonization changes in the
-extractor or seeder, and curator decisions in `curation/decisions.tsv`.
+inventories plus curated seed inputs. Put source harmonization changes in the
+extractor or seeder, grounding/exclusion decisions in `curation/decisions.tsv`,
+and new publication-backed structures in `curation/curator_antibiotics.tsv`.
 `just verify-corpus` rejects drift.
 
 **Never write a record except through `write_validated_antibiotic`.** It runs

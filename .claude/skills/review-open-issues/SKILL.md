@@ -48,11 +48,11 @@ honoured, all with every check passing. So: run the gates, and then check the
 "the corpus asserts the right thing".
 
 **3. Figures drift fast, and issues quote figures.**
-The corpus went 2,603 → 2,469 → 2,909 records inside one working session, as a
-trust filter tightened and a scope decision widened. An issue quoting a record
-count, a class breakdown or a coverage percentage may be describing a corpus
-that no longer exists. Re-derive every number before repeating it, and say so
-when a title has drifted.
+Corpus totals moved through 2,603, 2,469, and 2,909 inside one working session,
+as a trust filter tightened and a scope decision widened. An issue quoting a
+record count, a class breakdown or a coverage percentage may be describing a
+corpus that no longer exists. Re-derive every number before repeating it, and
+say so when a title has drifted.
 
 **4. Some issues are blocked on someone who is not us.**
 Three distinct kinds, none of them stalled engineering work, and none rankable

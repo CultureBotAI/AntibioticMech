@@ -224,6 +224,7 @@ def test_the_declared_class_hierarchy_governs_every_count(repo_root):
     import yaml
     counts: dict[str, int] = {}
     seeded_counts: dict[str, int] = {}
+    proposed_counts: dict[str, int] = {}
     reviewed_counts: dict[str, int] = {}
     for path in (repo_root / "data" / "antibiotics").rglob("*.yaml"):
         record = yaml.safe_load(path.read_text(encoding="utf-8"))
@@ -232,11 +233,14 @@ def test_the_declared_class_hierarchy_governs_every_count(repo_root):
             counts[cls] = counts.get(cls, 0) + 1
             if record.get("curation_status") == "SEEDED":
                 seeded_counts[cls] = seeded_counts.get(cls, 0) + 1
+            if record.get("curation_status") == "PROPOSED":
+                proposed_counts[cls] = proposed_counts.get(cls, 0) + 1
             if record.get("curation_status") == "REVIEWED":
                 reviewed_counts[cls] = reviewed_counts.get(cls, 0) + 1
 
     inclusive = rollup_by_class(counts)
     seeded_inclusive = rollup_by_class(seeded_counts)
+    proposed_inclusive = rollup_by_class(proposed_counts)
     reviewed_inclusive = rollup_by_class(reviewed_counts)
     for child, parent in parents.items():
         if not counts.get(child):
@@ -255,6 +259,7 @@ def test_the_declared_class_hierarchy_governs_every_count(repo_root):
         # every column rolls up, not only Records
         expected_columns = (
             f"| {inclusive[parent]} | {seeded_inclusive[parent]} | "
+            f"{proposed_inclusive[parent]} | "
             f"{reviewed_inclusive[parent]} |"
         )
         assert expected_columns in readme, "the status columns did not roll up with Records"

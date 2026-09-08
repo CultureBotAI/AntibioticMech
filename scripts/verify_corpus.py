@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prove data/antibiotics/ is exactly what data/raw/ produces.
+"""Prove data/antibiotics/ is exactly what the seed inventories produce.
 
 Schema validation checks each record's *shape*. It cannot see that a record was
 hand-edited into a plausible but unsourced claim, that a structure was swapped,
@@ -192,10 +192,10 @@ def main() -> int:
             print(f"  STALE     {identifier} in PATHS.tsv but not produced")
 
     if problems:
-        print("\ncorpus does not reproduce from data/raw/. Fix the extractor, the seeder, or "
-              "curation/decisions.tsv — not the record.", file=sys.stderr)
+        print("\ncorpus does not reproduce from data/raw/ plus curator inputs. Fix the "
+              "extractor, the seeder, or curation/*.tsv — not the record.", file=sys.stderr)
         return 1
-    print("\ncorpus reproduces exactly from data/raw/.")
+    print("\ncorpus reproduces exactly from data/raw/ plus curator inputs.")
     return 0
 
 
