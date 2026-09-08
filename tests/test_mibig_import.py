@@ -136,11 +136,22 @@ def test_the_three_vocabularies_cannot_drift_apart():
          / "antibioticmech.yaml").read_text(encoding="utf-8"))
     permissible = set(schema["enums"]["LinkEvidenceMethodEnum"]["permissible_values"])
     assert set(MIBIG_LINK_EVIDENCE_METHODS.values()) == permissible
+    # Distinct, or two source terms could be collapsed onto one value and the
+    # orphaned value deleted, leaving both set equalities true while the corpus
+    # recorded one method where the source recorded two (#229).
+    assert len(set(MIBIG_LINK_EVIDENCE_METHODS.values())) == len(MIBIG_LINK_EVIDENCE_METHODS)
     # Each schema value quotes the MIBiG term it stands for, so the mapping can
     # be checked against the source without reading the seeder.
     for raw, value in MIBIG_LINK_EVIDENCE_METHODS.items():
         described = schema["enums"]["LinkEvidenceMethodEnum"]["permissible_values"][value]
         assert raw in described["description"], (value, raw)
+
+    # The site shows the source's wording, so its label map is a fourth copy of
+    # the same vocabulary and drifts the same way. It must render each value as
+    # the exact term the source used, or the page quietly reworded the evidence.
+    from render_pages import LINK_EVIDENCE_LABELS
+
+    assert {v: k for k, v in MIBIG_LINK_EVIDENCE_METHODS.items()} == LINK_EVIDENCE_LABELS
 
 
 def test_an_unmapped_method_raises_rather_than_yielding_no_evidence():
@@ -173,7 +184,30 @@ def test_link_evidence_scope_reads_the_source_entry_not_the_surviving_rows(recor
     for row in rows:
         surviving[row["mibig_accession"]] = surviving.get(row["mibig_accession"], 0) + 1
     # The two readings really do disagree, or this test guards nothing.
-    assert sum(1 for a, n in by_accession.items() if (n == "1") != (surviving[a] == 1)) == 11
+    divergent = {a for a, n in by_accession.items() if (n == "1") != (surviving[a] == 1)}
+    assert len(divergent) == 11
+
+    # None of the 11 reaches a corpus record today, so scanning the corpus alone
+    # cannot tell the two implementations apart: switching the seeder to count
+    # surviving rows leaves all 64 published scopes byte-identical. The defect
+    # has to be exercised directly, on a row from the divergent set.
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+    from seed_from_sources import attach_mibig_producers
+
+    fixture = next(row for row in rows
+                   if row["mibig_accession"] in divergent
+                   and row["stereo_complete"] == "true")
+    assert surviving[fixture["mibig_accession"]] == 1
+    assert fixture["entry_compound_count"] != "1"
+    seeded = {"CHEBI:X": {
+        "identifier": "CHEBI:X", "label": "t", "curation_history": [],
+        "chemical_structure": {"standard_inchi_key": fixture["standard_inchi_key"]}}}
+    attach_mibig_producers(seeded, "4.0.1")
+    produced = seeded["CHEBI:X"].get("producer_organisms")
+    assert produced, "the lane matched nothing; the fixture is wrong, not the code"
+    assert produced[0]["link_evidence_scope"] == "CLUSTER_INHERITED", (
+        f"{fixture['mibig_accession']} is the only surviving row of an entry naming "
+        f"{fixture['entry_compound_count']} compounds; its evidence is inherited")
 
     seen = 0
     for _, record in records:
@@ -200,10 +234,38 @@ def test_a_producer_naming_no_organism_is_refused_and_queued(records):
     from seed_from_sources import names_an_organism
 
     assert not names_an_organism("uncultured bacterium")
+    assert not names_an_organism("Uncultured bacterium")
     assert not names_an_organism("uncultured organism")
-    assert names_an_organism("uncultured Candidatus Entotheonella sp.") is False
+    assert not names_an_organism("fungal sp. No.14919")
+    assert not names_an_organism("Chloroflexi bacterium TSY")
     assert names_an_organism("Streptomyces sp.")
     assert names_an_organism("Saccharopolyspora erythraea")
+    # A culture-status or placement prefix does not stop a name being a name.
+    # Reading only the first token refused all four of these, which would have
+    # dropped four real genera the day one of them matched a structure (#217).
+    assert names_an_organism("uncultured Candidatus Entotheonella sp.")
+    assert names_an_organism("uncultured Prochloron sp.")
+    assert names_an_organism("[Oscillatoria] sp. PCC 6506")
+    # Every label the committed inventory offers is classified deliberately.
+    # A predicate that drifted would show up here as a changed refusal set,
+    # rather than as producers quietly missing from a later corpus.
+    import csv
+
+    path = Path(__file__).resolve().parents[1] / "data" / "raw" / "mibig_producers.tsv"
+    with path.open(newline="", encoding="utf-8") as handle:
+        labels = {row["taxon_label"] for row in csv.DictReader(handle, delimiter="\t")}
+    assert {label for label in labels if not names_an_organism(label)} == {
+        # A capitalized taxon that is a PHYLUM, which a genus-shaped test alone
+        # accepted. The rank noun beside it is the source saying so.
+        "Chloroflexi bacterium TSY",
+        "Uncultured bacterium",
+        "fungal sp. No.14919",
+        "uncultured bacterium",
+        "uncultured bacterium AB1650",
+        "uncultured bacterium BAC AB649/1850",
+        "uncultured bacterium psy1",
+        "uncultured organism",
+    }
 
     published = {record["identifier"] for _, record in records
                  for producer in record.get("producer_organisms") or []

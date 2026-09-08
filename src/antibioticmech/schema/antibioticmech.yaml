@@ -443,6 +443,21 @@ classes:
     description: >-
       An organism that biosynthesizes this compound. A producer claim is a
       biological claim and should carry a citation or a BGC accession.
+    rules:
+      - description: >-
+          Link evidence is meaningless without the scope that says what it
+          covers. A method recorded for a gene cluster does not by itself say
+          whether the source entry named one compound or twenty, and a reader
+          deciding whether to trust the claim about THIS molecule needs that
+          before the method is of any use (#228).
+        preconditions:
+          slot_conditions:
+            link_evidence:
+              value_presence: PRESENT
+        postconditions:
+          slot_conditions:
+            link_evidence_scope:
+              value_presence: PRESENT
     attributes:
       taxon_id:
         description: NCBITaxon CURIE of the producing organism.
@@ -498,7 +513,7 @@ classes:
           MIBiG grades the link per LOCUS — heterologous expression, knock-out
           studies, enzymatic assays, and so on — so this is a claim about the
           cluster, not about one molecule. An entry naming several compounds
-          gives all of them the same terms, and 24 of the seeded assertions come
+          gives all of them the same terms, and 22 of the 64 seeded assertions come
           from such an entry, so a value here does not by itself establish that
           the experiment covered THIS compound rather than a congener or shunt
           product of the same pathway. See #206.
@@ -1392,7 +1407,7 @@ enums:
       one compound, evidence for the cluster is evidence for that compound and
       nothing else. When it names several, the same evidence covers all of them,
       and this corpus cannot tell which one the experiment actually followed.
-      Without this distinction both cases read identically, and 24 of 66 seeded
+      Without this distinction both cases read identically, and 22 of 64 seeded
       assertions are the weaker one (#206).
     permissible_values:
       COMPOUND_SPECIFIC:

@@ -912,7 +912,6 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
     """Group concepts into records. Returns (records, skipped-for-no-structure)."""
     MALFORMED_STRUCTURE_IDS.clear()
     REFUSED_STRUCTURELESS_XREFS.clear()
-    REFUSED_UNNAMED_PRODUCERS.clear()
     # InChIKey per ChEBI id, from the committed inventory. The same-structure
     # gate on xrefs uses it; a ChEBI term with no structure here is simply not
     # comparable, and its xrefs are kept and queued rather than dropped.
@@ -1847,11 +1846,47 @@ def mibig_link_evidence(raw: str) -> list[str]:
 # real organism identity and the corpus should carry it.
 REFUSED_UNNAMED_PRODUCERS: list[tuple[str, str, str]] = []
 
+# Capitalized words that are status or placement markers rather than genera.
+# `Candidatus` prefixes a proposed name, and the rest are NCBI's words for "we
+# cannot say". Without this list they would each pass for a genus.
+_NOT_A_GENUS = frozenset({"Candidatus", "Uncultured", "Unclassified",
+                          "Unidentified", "Unknown"})
+# NCBI writes "<higher taxon> bacterium <strain>" for an organism it can place
+# but not name, so a bare rank noun anywhere in the label is the source saying
+# the name is missing. "Chloroflexi bacterium TSY" names a PHYLUM, and reading
+# only for a genus-shaped token accepted it.
+_RANK_NOUNS = frozenset({"bacterium", "archaeon", "organism", "fungus",
+                         "eukaryote", "cyanobacterium", "proteobacterium",
+                         "actinobacterium", "symbiont", "endosymbiont"})
+_GENUS_TOKEN = re.compile(r"^\[?([A-Z][a-z]{2,})\]?$")
+
 
 def names_an_organism(label: str) -> bool:
-    """True when the label opens with something shaped like a genus."""
-    head = label.split()
-    return bool(head) and bool(re.match(r"^[A-Z][a-z]{2,}$", head[0]))
+    """True when some token in the label is shaped like a genus.
+
+    Any token, not the first one. NCBI routinely prefixes a genus it can name
+    with words for the culture status or the uncertainty of its placement, and
+    those prefixes do not make the name less of an identity: "uncultured
+    Candidatus Entotheonella sp." and "[Oscillatoria] sp. PCC 6506" both name a
+    genus a reader can look up, while "uncultured bacterium" and "fungal sp."
+    name none. Reading only the first token refused all four alike (#217).
+
+    Brackets are NCBI's marker for a name whose generic placement is disputed,
+    which is a taxonomic argument about a real organism, so they are stripped
+    rather than treated as disqualifying.
+
+    A bare rank noun vetoes the label outright, before any genus is looked for.
+    "Chloroflexi bacterium TSY" carries a capitalized taxon and still names no
+    organism, because that taxon is a phylum and "bacterium" is the source
+    saying so.
+    """
+    tokens = label.split()
+    if _RANK_NOUNS & {token.lower().strip(".,") for token in tokens}:
+        return False
+    return any(
+        (match := _GENUS_TOKEN.match(token)) and match.group(1) not in _NOT_A_GENUS
+        for token in tokens
+    )
 
 
 MIBIG_REFERENCE_BASIS = {
@@ -1932,6 +1967,12 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
     identity evidence here. An inventory row with incomplete potential stereo,
     or a key shared by multiple corpus records, is counted and skipped.
     """
+    # Cleared here rather than in `merge`, because this is where it is filled.
+    # The two sibling lists are appended from inside `merge`'s call tree, so
+    # clearing at its entry is right for them; doing the same for this one would
+    # make correctness depend on the order the caller happens to use, and would
+    # leak state into any test calling this function directly (#227).
+    REFUSED_UNNAMED_PRODUCERS.clear()
     rows = load_tsv(RAW_DIR / "mibig_producers.tsv")
     by_key: dict[str, list[str]] = defaultdict(list)
     for identifier, record in records.items():
@@ -2596,6 +2637,8 @@ def main() -> int:
     print(
         "  MIBiG producers: "
         f"matched={mibig_counts['matched']} "
+        f"refused_unnamed={mibig_counts['refused_unnamed_producer']} "
+        f"published={mibig_counts['matched'] - mibig_counts['refused_unnamed_producer']} "
         f"ambiguous={mibig_counts['ambiguous_stereochemistry'] + mibig_counts['ambiguous_corpus_identity']} "
         f"out_of_scope={mibig_counts['out_of_scope']}",
         file=sys.stderr,

@@ -144,6 +144,12 @@ NUMERIC_CLAIMS = [
     # not left to the tripwire below: only this table checks that a figure is
     # right FOR ITS CLAIM rather than merely equal to some quantity somewhere.
     ("curation/source_queue.tsv", "maps {} of them", "mapped_roles"),
+    # Producer figures. Both halves are derivable, so the tripwire accepts them
+    # swapped; only this table checks a number against ITS OWN claim (#230).
+    ("docs/CURATION.md", "{} of the 64 seeded assertions", "cluster_inherited"),
+    ("docs/HARMONIZATION.md", "{} records of 2,909 carry one", "producer_records"),
+    ("docs/HARMONIZATION.md", "{} records carry one from the MIBiG import",
+     "mibig_producer_records"),
 ]
 
 
@@ -158,7 +164,7 @@ def _derived(repo_root):
     # after curators add mechanisms. Rebuild the source-derived view so signing
     # off a record does not rewrite the historical/source-coverage count.
     sys.path.insert(0, str(repo_root / "scripts"))
-    from curation_worklist import seeded_mechanism_view
+    from curation_worklist import corpus_records, seeded_mechanism_view
 
     seeded = seeded_mechanism_view()
     moa_records = sum(bool(item.get("mode_of_action")) for item in seeded.values())
@@ -168,9 +174,19 @@ def _derived(repo_root):
         for scope in ("MICROBIAL_TARGET", "HOST_SHARED_TARGET")
     }
 
+    records = corpus_records()
+    producers = [p for r in records for p in (r.get("producer_organisms") or [])]
+    mibig = [p for p in producers if p.get("source") == "MIBIG"]
+
     return {"mapped_roles": len(set(base) | set(euk)), "moa_records": moa_records,
             "microbial_target": scopes["MICROBIAL_TARGET"],
-            "host_shared_target": scopes["HOST_SHARED_TARGET"]}
+            "host_shared_target": scopes["HOST_SHARED_TARGET"],
+            "producer_records": sum(1 for r in records if r.get("producer_organisms")),
+            "mibig_producer_records": sum(
+                1 for r in records
+                if any(p.get("source") == "MIBIG" for p in (r.get("producer_organisms") or []))),
+            "cluster_inherited": sum(
+                1 for p in mibig if p.get("link_evidence_scope") == "CLUSTER_INHERITED")}
 
 
 def test_numeric_claims_in_prose_match_the_corpus(repo_root):
@@ -531,6 +547,9 @@ def test_no_unregistered_numeric_claim_about_the_corpus(repo_root):
     producers = [item for r in records for item in (r.get("producer_organisms") or [])
                  if item.get("source") == "MIBIG"]
     derivable.add(len(producers))
+    derivable.add(sum(1 for r in records if r.get("producer_organisms")))
+    derivable.add(sum(1 for r in records if any(
+        item.get("source") == "MIBIG" for item in (r.get("producer_organisms") or []))))
     for scope in ("COMPOUND_SPECIFIC", "CLUSTER_INHERITED"):
         derivable.add(sum(1 for item in producers
                           if item.get("link_evidence_scope") == scope))

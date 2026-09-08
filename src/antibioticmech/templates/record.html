@@ -239,7 +239,7 @@ compound together with its congeners rather than singling it out.</p>
   <tr>
     <td><em>{{ p.taxon_label }}</em> <code class="curie">{{ p.taxon_id }}</code>{% if p.strain %}<br><span class="meta">strain {{ p.strain }}</span>{% endif %}</td>
     <td>{{ p.biosynthetic_gene_cluster or '—' }}</td>
-    <td class="meta">{% if p.link_evidence %}{{ p.link_evidence | map('replace', '_', ' ') | map('lower') | join('; ') }}{% if p.link_evidence_scope %}<br><span class="pill{{ ' warn' if p.link_evidence_scope == 'CLUSTER_INHERITED' else ' plain' }}">{{ p.link_evidence_scope.replace("_", " ").lower() }}</span>{% endif %}{% else %}—{% endif %}</td>
+    <td class="meta">{% if p.link_evidence %}{{ p.link_evidence_labels | join('; ') }}{% if p.link_evidence_scope %}<br><span class="pill{{ ' warn' if p.link_evidence_scope == 'CLUSTER_INHERITED' else ' plain' }}">{{ p.link_evidence_scope.replace("_", " ").lower() }}</span>{% endif %}{% else %}—{% endif %}</td>
     <td class="meta">{{ p.source or '—' }}{% if p.source_version %} {{ p.source_version }}{% endif %}{% if p.source_record_version %} (entry {{ p.source_record_version }}){% endif %}{% if p.reviewed %}; reviewed{% endif %}</td>
     <td class="meta">{{ p.source_quality or '—' }}</td>
     <td class="meta">{{ p.note or '—' }}</td>

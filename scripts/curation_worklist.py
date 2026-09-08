@@ -767,12 +767,23 @@ def unnamed_producer_queue(records: list[dict]) -> list[dict]:
             by_key.setdefault(key, []).append(record)
 
     out: list[dict] = []
+    seen: set[tuple[str, str, str]] = set()
     for row in load_tsv(RAW_DIR / "mibig_producers.tsv"):
+        # The seeder's gate, in the seeder's order. Restating a subset of it let
+        # this queue report a refusal for a cluster the import had already
+        # excluded for want of link evidence, and report one row per compound
+        # where the seeder refuses once per cluster and taxon (#226).
+        if not row.get("link_evidence"):
+            continue
         if row.get("stereo_complete") != "true" or names_an_organism(row["taxon_label"]):
             continue
         matches = by_key.get(row.get("standard_inchi_key", ""), [])
         if len(matches) != 1:
             continue
+        key = (matches[0]["identifier"], row["mibig_accession"], row["taxon_id"])
+        if key in seen:
+            continue
+        seen.add(key)
         out.append({
             "queue": "unnamed-producer",
             "key": matches[0]["identifier"],
