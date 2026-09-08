@@ -45,6 +45,21 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   source_version: '2026-08-30'
+producer_organisms:
+- taxon_id: NCBITaxon:1867
+  taxon_label: Actinoplanes teichomyceticus
+  biosynthetic_gene_cluster: BGC0000440
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - Enzymatic assays
+  note: MIBiG active entry; compound 'Teicoplanin A2-3' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1016/0195-6701(86)90011-3
+    notes: MIBiG attaches this reference to the compound itself, so it supports the
+      producer/compound link this item asserts.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -55,6 +70,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:31Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T02:54:09Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -478,8 +478,31 @@ classes:
       source_quality:
         description: Quality label assigned by the upstream resource.
         range: string
+      link_evidence:
+        description: >-
+          How the upstream resource established that this organism makes this
+          compound, in that resource's own controlled vocabulary.
+
+          MIBiG grades the compound-to-producer link per locus — heterologous
+          expression, knock-out studies, enzymatic assays, and so on — and this
+          is the slot that carries those terms. It exists because a producer
+          claim backed by a knock-out is not the same claim as one backed by a
+          homology prediction, and a consumer deciding whether to trust the
+          link needs to see which it is. Only experimentally supported methods
+          are seeded, so a value here is always experimental support; the slot
+          says which experiment, not merely that one exists.
+        multivalued: true
+        range: string
       reviewed:
-        description: Whether the upstream entry passed the declared review filter.
+        description: >-
+          Whether a human expert reviewed the upstream entry, when the source
+          records that separately from its evidence.
+
+          Absent means the source records no expert review, which is the common
+          case and is not a defect: MIBiG stores a placeholder reviewer on 2,988
+          of its 3,013 entries, so the flag is present on very few. It is never
+          the reason a claim was seeded — `link_evidence` is — and it must not
+          be read as one.
         range: boolean
       note:
         range: string

@@ -59,6 +59,22 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-30'
+producer_organisms:
+- taxon_id: NCBITaxon:58346
+  taxon_label: Streptomyces platensis
+  biosynthetic_gene_cluster: BGC0001140
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - Heterologous expression
+  - Knock-out studies
+  note: MIBiG active entry; compound 'platensimycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:16710421
+    notes: MIBiG attaches this reference to the compound itself, so it supports the
+      producer/compound link this item asserts.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -69,6 +85,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T02:54:26Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -38,6 +38,22 @@ resistance_mechanisms:
   - reference: ARO:3003917
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003915 (lysocin
       E); database assertion, not a primary citation.
+producer_organisms:
+- taxon_id: NCBITaxon:72226
+  taxon_label: Lysobacter sp.
+  biosynthetic_gene_cluster: BGC0002384
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '3'
+  source_quality: questionable
+  link_evidence:
+  - Knock-out studies
+  note: MIBiG active entry; compound 'lysocin E' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:32610008
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -48,6 +64,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T02:54:36Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

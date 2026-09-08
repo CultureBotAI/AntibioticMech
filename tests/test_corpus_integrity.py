@@ -138,8 +138,8 @@ def test_mechanistic_claims_carry_evidence(records):
     assert unsupported == [], unsupported[:20]
 
 
-def test_mibig_producers_are_reviewed_and_fully_provenanced(records):
-    """Every imported producer is a reviewed, versioned MIBiG+BGC assertion."""
+def test_mibig_producers_are_evidenced_and_fully_provenanced(records):
+    """Every imported producer is an evidenced, versioned MIBiG+BGC assertion."""
     problems = []
     for path, record in records:
         for producer in record.get("producer_organisms") or []:
@@ -152,6 +152,10 @@ def test_mibig_producers_are_reviewed_and_fully_provenanced(records):
                 "source_version",
                 "source_record_version",
                 "source_quality",
+                # `link_evidence` is the admission gate and the reason the claim
+                # is here; #203 replaced a `reviewed` flag that was true of every
+                # row and therefore said nothing.
+                "link_evidence",
                 # `reference` was a scalar PMID/DOI that could not say what the
                 # citation was FOR; #94 replaced it with structured evidence
                 # carrying MIBiG's own reference basis in `notes`.
@@ -161,8 +165,10 @@ def test_mibig_producers_are_reviewed_and_fully_provenanced(records):
             if not all(e.get("reference") and e.get("notes")
                        for e in producer.get("evidence") or []):
                 missing.append("evidence[].reference+notes")
-            if missing or producer.get("reviewed") is not True:
-                problems.append((path.name, missing, producer.get("reviewed")))
+            if "reviewed" in producer and producer["reviewed"] is not True:
+                missing.append("reviewed present but not true")
+            if missing:
+                problems.append((path.name, missing))
     assert problems == [], problems[:20]
 
 

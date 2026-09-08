@@ -41,6 +41,23 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:33282
   source_version: '2026-08-30'
+producer_organisms:
+- taxon_id: NCBITaxon:668825
+  taxon_label: Streptomyces sp.
+  strain: ATCC 700974
+  biosynthetic_gene_cluster: BGC0002300
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - Knock-out studies
+  note: MIBiG active entry; compound 'albomycin delta1' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:22704654
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -51,6 +68,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T02:54:31Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

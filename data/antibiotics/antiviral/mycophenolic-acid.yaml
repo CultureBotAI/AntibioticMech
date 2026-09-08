@@ -73,6 +73,53 @@ source_concepts:
   - CHEBI:149553
   - CHEBI:33281
   source_version: '2026-08-30'
+producer_organisms:
+- taxon_id: NCBITaxon:5074
+  taxon_label: Penicillium brevicompactum
+  biosynthetic_gene_cluster: BGC0000104
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - Knock-out studies
+  note: MIBiG active entry; compound 'mycophenolic acid' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: DOI:10.1128/aem.03015-10
+    notes: MIBiG attaches this reference to the compound itself, so it supports the
+      producer/compound link this item asserts.
+- taxon_id: NCBITaxon:5082
+  taxon_label: Penicillium roqueforti
+  biosynthetic_gene_cluster: BGC0002616
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - Gene expression correlated with compound production
+  note: MIBiG active entry; compound 'mycophenolic acid' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:27889155
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+- taxon_id: NCBITaxon:5074
+  taxon_label: Penicillium brevicompactum
+  biosynthetic_gene_cluster: BGC0002619
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - Gene expression correlated with compound production
+  note: MIBiG active entry; compound 'mycophenolic acid' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: DOI:10.1128/aem.41.3.729-736.1981
+    notes: MIBiG attaches this reference to the compound itself, so it supports the
+      producer/compound link this item asserts.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -83,6 +130,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:26Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T02:54:00Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

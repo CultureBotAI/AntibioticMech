@@ -73,16 +73,18 @@ pubchem:
 mibig:
   name: Minimum Information about a Biosynthetic Gene Cluster
   description: >-
-    Reviewed producer-organism and biosynthetic-gene-cluster assertions. The
-    first import accepts only active entries with a non-placeholder changelog
-    reviewer and joins compounds to the corpus by exact Standard InChIKey.
+    Experimentally supported producer-organism and biosynthetic-gene-cluster
+    assertions. The import accepts an active entry when at least one of its
+    loci carries an experimental compound-to-producer evidence method, and
+    joins compounds to the corpus by exact Standard InChIKey.
   homepage: https://mibig.secondarymetabolites.org/
   archive_url: https://zenodo.org/records/14835872/files/mibig_json_4.0.tar.gz?download=1
   archive_name: mibig_json_4.0.tar.gz
   version: 4.0.1
   license: CC BY 4.0
-  # Used by MIBiG for automated migrations and legacy submissions. It is not
-  # evidence that an expert reviewed the entry.
+  # Used by MIBiG for automated migrations and legacy submissions on 2,988 of
+  # 3,013 entries. It is not evidence that an expert reviewed the entry, and
+  # it is not the admission gate -- see LINK_EVIDENCE_METHODS in the extractor.
   reviewer_placeholder: AAAAAAAAAAAAAAAAAAAAAAAA
 
 fda_drugsfda:

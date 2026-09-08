@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Extract reviewed MIBiG compound/producer assertions into a compact inventory.
+"""Extract experimentally supported MIBiG compound/producer assertions.
 
 The official archive is cached under ``downloads/`` and is never committed.
 The emitted TSV is an offline input to ``seed_from_sources.py``.
@@ -8,10 +8,13 @@ The emitted TSV is an offline input to ``seed_from_sources.py``.
     uv run --extra chemical-map python scripts/extract_mibig_producers.py
     uv run --extra chemical-map python scripts/extract_mibig_producers.py --offline
 
-An entry is called reviewed only when it is active and its changelog contains a
-non-placeholder reviewer. Exact Standard InChIKey matching is used only for the
-dry-run report; the inventory retains every structurally valid compound from an
-eligible entry so future corpus additions can match without reinterpreting names.
+An entry is admitted when it is active and at least one of its loci carries an
+experimental method from ``LINK_EVIDENCE_METHODS`` for the compound-to-producer
+link. That controlled vocabulary is what MIBiG actually publishes about how the
+link was established, so the gate selects on evidence rather than on curation
+bookkeeping. Exact Standard InChIKey matching is used only for the dry-run
+report; the inventory retains every structurally valid compound from an eligible
+entry so future corpus additions can match without reinterpreting names.
 """
 
 from __future__ import annotations
@@ -41,7 +44,8 @@ COLUMNS = [
     "mibig_accession",
     "entry_version",
     "entry_quality",
-    "reviewed",
+    "link_evidence",
+    "expert_reviewed",
     "reviewer_ids",
     "compound_name",
     "compound_index",
@@ -54,6 +58,24 @@ COLUMNS = [
     "primary_reference",
     "reference_basis",
 ]
+
+# MIBiG grades the compound-to-producer link per locus in a controlled
+# vocabulary. Everything listed here is experimental support for that link:
+# the cluster was expressed, knocked out, assayed, or correlated with observed
+# production. The vocabulary also carries entries this list deliberately omits.
+# "Homology-based prediction" is a computational guess, and
+# "Synthetic-bioinformatic natural product (syn-BNP)" means the molecule was
+# chemically synthesized from a predicted structure, so neither shows that the
+# named organism makes the compound. This is an allow-list rather than a
+# deny-list so a method MIBiG adds later is excluded until a curator reads it.
+LINK_EVIDENCE_METHODS = (
+    "Correlation of genomic and metabolomic data",
+    "Enzymatic assays",
+    "Gene expression correlated with compound production",
+    "Heterologous expression",
+    "In vitro expression",
+    "Knock-out studies",
+)
 
 
 def sha256_of(path: Path) -> str:
@@ -94,6 +116,24 @@ def archive_entries(path: Path):
             if handle is None:
                 raise ValueError(f"could not read MIBiG member {member.name}")
             yield json.load(handle)
+
+
+def link_evidence_methods(entry: dict) -> list[str]:
+    """The allow-listed experimental methods supporting this entry's BGC link.
+
+    MIBiG attaches evidence to a locus, not to a compound, so an entry with any
+    experimentally characterized locus is offered as experimentally supported
+    for its compounds. Methods outside ``LINK_EVIDENCE_METHODS`` are dropped
+    here, so an entry whose only evidence is predicted returns an empty list
+    and never reaches the inventory.
+    """
+    allowed = set(LINK_EVIDENCE_METHODS)
+    return sorted({
+        method
+        for locus in entry.get("loci") or []
+        for evidence in locus.get("evidence") or []
+        if (method := evidence.get("method")) in allowed
+    })
 
 
 def reviewer_ids(entry: dict, placeholder: str) -> list[str]:
@@ -159,16 +199,20 @@ def extract(path: Path, conf: dict) -> tuple[list[dict], Counter]:
     counts: Counter = Counter()
     for entry in archive_entries(path):
         counts["entries_total"] += 1
-        reviewers = reviewer_ids(entry, placeholder)
-        if entry.get("status") != "active" or not reviewers:
-            counts["entries_not_reviewed_active"] += 1
+        if entry.get("status") != "active":
+            counts["entries_not_active"] += 1
             continue
-        counts["entries_reviewed_active"] += 1
+        methods = link_evidence_methods(entry)
+        if not methods:
+            counts["entries_without_link_evidence"] += 1
+            continue
+        reviewers = reviewer_ids(entry, placeholder)
+        counts["entries_admitted"] += 1
         taxonomy = entry.get("taxonomy") or {}
         taxon_id = taxonomy.get("ncbiTaxId")
         taxon_label = str(taxonomy.get("name") or "").strip()
         for index, compound in enumerate(entry.get("compounds", []), start=1):
-            counts["compounds_reviewed_active"] += 1
+            counts["compounds_admitted"] += 1
             if not taxon_id or not taxon_label:
                 counts["rejected_missing_taxonomy"] += 1
                 continue
@@ -188,7 +232,8 @@ def extract(path: Path, conf: dict) -> tuple[list[dict], Counter]:
                 "mibig_accession": entry["accession"],
                 "entry_version": str(entry.get("version") or ""),
                 "entry_quality": str(entry.get("quality") or ""),
-                "reviewed": "true",
+                "link_evidence": "|".join(methods),
+                "expert_reviewed": "true" if reviewers else "false",
                 "reviewer_ids": "|".join(reviewers),
                 "compound_name": " ".join(str(compound.get("name") or "").split()),
                 "compound_index": str(index),
@@ -255,7 +300,11 @@ def update_manifest(conf: dict, archive: Path, inventory: Path) -> None:
         "homepage": cfg["homepage"],
         "license": cfg["license"],
         "version": cfg["version"],
-        "review_policy": "active entry with a non-placeholder changelog reviewer",
+        "admission_policy": (
+            "active entry with at least one locus carrying an experimental "
+            "compound-to-producer evidence method: "
+            + ", ".join(LINK_EVIDENCE_METHODS)
+        ),
     }
     manifest.setdefault("downloads", {})[archive.name] = {
         "url": cfg["archive_url"],
@@ -268,7 +317,7 @@ def update_manifest(conf: dict, archive: Path, inventory: Path) -> None:
         "rows": row_count,
         "bytes": inventory.stat().st_size,
         "sha256": sha256_of(inventory),
-        "source": f"MIBiG {cfg['version']} reviewed active entries",
+        "source": f"MIBiG {cfg['version']} active entries with experimental BGC link evidence",
     }
     MANIFEST_PATH.write_text(
         yaml.safe_dump(manifest, sort_keys=False, allow_unicode=True), encoding="utf-8")
@@ -293,7 +342,12 @@ def main() -> int:
     rows, extraction = extract(archive, conf)
     matches, details = match_report(rows)
     print(f"MIBiG {cfg['version']}: {extraction['entries_total']} entries", file=sys.stderr)
-    print(f"  reviewed active entries: {extraction['entries_reviewed_active']}", file=sys.stderr)
+    print(
+        f"  active entries with experimental link evidence: {extraction['entries_admitted']}"
+        f" (not active: {extraction['entries_not_active']},"
+        f" no link evidence: {extraction['entries_without_link_evidence']})",
+        file=sys.stderr,
+    )
     print(f"  structurally valid producer rows: {len(rows)}", file=sys.stderr)
     print(
         "  dry-run against corpus: "

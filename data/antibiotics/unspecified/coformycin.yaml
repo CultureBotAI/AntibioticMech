@@ -43,6 +43,40 @@ source_concepts:
   role_terms:
   - CHEBI:25605
   source_version: '2026-08-30'
+producer_organisms:
+- taxon_id: NCBITaxon:686309
+  taxon_label: Micromonospora haikouensis
+  biosynthetic_gene_cluster: BGC0002435
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '3'
+  source_quality: questionable
+  link_evidence:
+  - Enzymatic assays
+  - Heterologous expression
+  - Knock-out studies
+  note: MIBiG active entry; compound 'coformycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:30217843
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+- taxon_id: NCBITaxon:212423
+  taxon_label: Streptomyces kaniharaensis
+  biosynthetic_gene_cluster: BGC0002462
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '3'
+  source_quality: questionable
+  link_evidence:
+  - Enzymatic assays
+  - Heterologous expression
+  note: MIBiG active entry; compound 'coformycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:32350138
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -53,6 +87,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:26Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T02:54:00Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

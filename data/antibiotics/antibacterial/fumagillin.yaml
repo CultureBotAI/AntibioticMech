@@ -80,6 +80,24 @@ source_concepts:
   - CHEBI:36047
   - CHEBI:86327
   source_version: '2026-08-30'
+producer_organisms:
+- taxon_id: NCBITaxon:330879
+  taxon_label: Aspergillus fumigatus
+  strain: Af293
+  biosynthetic_gene_cluster: BGC0001067
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - Enzymatic assays
+  - Heterologous expression
+  - Knock-out studies
+  note: MIBiG active entry; compound 'Fumagillin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1021/ja312503y
+    notes: MIBiG attaches this reference to the compound itself, so it supports the
+      producer/compound link this item asserts.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -90,6 +108,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T02:54:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

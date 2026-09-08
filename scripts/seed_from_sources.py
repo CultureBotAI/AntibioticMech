@@ -1876,7 +1876,7 @@ def mibig_sourced_producer_view(record: dict) -> list[dict]:
 
 
 def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Counter:
-    """Attach reviewed MIBiG producer/BGC evidence by exact Standard InChIKey.
+    """Attach experimentally supported MIBiG producer/BGC evidence by InChIKey.
 
     Names, database cross-references, and connectivity-only matches are never
     identity evidence here. An inventory row with incomplete potential stereo,
@@ -1891,8 +1891,8 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
     grouped: dict[str, list[dict]] = defaultdict(list)
     counts: Counter = Counter()
     for row in rows:
-        if row.get("reviewed") != "true":
-            counts["rejected_not_reviewed"] += 1
+        if not row.get("link_evidence"):
+            counts["rejected_no_link_evidence"] += 1
             continue
         if row.get("stereo_complete") != "true":
             counts["ambiguous_stereochemistry"] += 1
@@ -1930,10 +1930,11 @@ def attach_mibig_producers(records: dict[str, dict], release_version: str) -> Co
                 "source_version": release_version,
                 "source_record_version": row["entry_version"],
                 "source_quality": row["entry_quality"],
-                "reviewed": True,
+                "link_evidence": row["link_evidence"].split("|"),
+                "reviewed": True if row.get("expert_reviewed") == "true" else None,
                 "note": (
-                    "MIBiG active entry with a non-placeholder expert reviewer; "
-                    f"compound {row['compound_name']!r} joined by exact Standard InChIKey."
+                    f"MIBiG active entry; compound {row['compound_name']!r} joined "
+                    "by exact Standard InChIKey."
                 ),
                 "evidence": [{
                     "reference": row["primary_reference"],

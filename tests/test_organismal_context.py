@@ -320,7 +320,7 @@ def _first_accepted_mibig_row():
     for row in csv.DictReader(
         (REPO_ROOT / "data" / "raw" / "mibig_producers.tsv").read_text(
             encoding="utf-8").splitlines(), delimiter="\t"):
-        if row["reviewed"] == "true" and row["stereo_complete"] == "true":
+        if row["link_evidence"] and row["stereo_complete"] == "true":
             return row
     raise AssertionError("no MIBiG row passes the lane's own filters")
 
@@ -345,9 +345,9 @@ def test_the_phibase_lane_emits_structure_rather_than_prose():
 
 
 def test_the_mibig_lane_splits_the_strain_and_says_what_the_citation_supports():
-    # The first row the lane would ACCEPT: it rejects unreviewed entries and
-    # incomplete stereochemistry before it ever builds an item, so the first row
-    # of the file is not necessarily one that reaches the code under test.
+    # The first row the lane would ACCEPT: it rejects rows without link evidence
+    # and rows with incomplete stereochemistry before it ever builds an item, so
+    # the first row of the file is not necessarily one that reaches the code.
     row = _first_accepted_mibig_row()
     records = _seed_one(row["standard_inchi_key"])
     attach_mibig_producers(records, "4.0.1")
