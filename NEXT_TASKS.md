@@ -35,7 +35,7 @@ prose below are the reasoning, the queue is the list.
   than a structural description (a per-class review, not a regex), and curated
   review literature per compound. Prefer the second for anything that will carry
   a causal graph anyway.
-- **Ground the 250 minted records.** `just worklist --queue minted`. Most are
+- **Ground the 259 minted records.** `just worklist --queue minted`. Most are
   CARD molecules with a PubChem structure and no ChEBI entry; some deserve a
   ChEBI term request.
 - **Re-file the compounds no source classifies well.** After #2 and #3, a
@@ -50,11 +50,10 @@ prose below are the reasoning, the queue is the list.
 ## Next
 
 - **Find a resistance source for the antiviral records.** CARD covers bacterial
-  and (increasingly) fungal resistance; it has nothing for viruses, so all 474
-  antiviral records carry an empty `resistance_mechanisms` while 220
-  antibacterial, 43 antifungal, 14 antimycobacterial and 2 antiprotozoal records
-  carry CARD determinants. The obvious candidates are the Stanford HIV
-  Drug Resistance Database for HIV, and the literature for HBV/HSV/influenza —
+  and (increasingly) fungal resistance; it has nothing for viruses, so 461
+  antiviral records still carry an empty `resistance_mechanisms`. The obvious
+  candidates are the Stanford HIV Drug Resistance Database for HIV, and the
+  literature for HBV/HSV/influenza —
   each would need the same treatment CARD got: a committed inventory, an explicit
   citation on every item, and a mechanism vocabulary that says what it means.
   Until then the asymmetry should be visible in the report rather than read as

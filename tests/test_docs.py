@@ -154,6 +154,14 @@ NUMERIC_CLAIMS = [
     ("docs/HARMONIZATION.md", "{} records carry a producer", "producer_records"),
     ("docs/HARMONIZATION.md", "{} records carry one from the MIBiG import",
      "mibig_producer_records"),
+    ("NEXT_TASKS.md", "the {} minted records", "minted_records"),
+    ("NEXT_TASKS.md", "{} antiviral records still carry an empty `resistance_mechanisms`",
+     "antiviral_without_resistance"),
+    ("curation/source_queue.tsv", "supplies {} product-level APPROVED assertions",
+     "fda_clinical_assertions"),
+    ("curation/source_queue.tsv", "{} exact structure records", "fda_clinical_records"),
+    ("curation/source_queue.tsv", "{} antiviral records still carry empty resistance_mechanisms",
+     "antiviral_without_resistance"),
 ]
 
 
@@ -181,10 +189,27 @@ def _derived(repo_root):
     records = corpus_records()
     producers = [p for r in records for p in (r.get("producer_organisms") or [])]
     mibig = [p for p in producers if p.get("source") == "MIBIG"]
+    fda = [
+        item
+        for r in records
+        for item in (r.get("clinical_status_assertions") or [])
+        if item.get("source") == "DRUGS_AT_FDA"
+    ]
 
     return {"mapped_roles": len(set(base) | set(euk)), "moa_records": moa_records,
             "microbial_target": scopes["MICROBIAL_TARGET"],
             "host_shared_target": scopes["HOST_SHARED_TARGET"],
+            "minted_records": sum(
+                1 for r in records if r.get("grounding_status") == "MINTED"),
+            "antiviral_without_resistance": sum(
+                1 for r in records
+                if r.get("antimicrobial_class") == "ANTIVIRAL"
+                and not r.get("resistance_mechanisms")),
+            "fda_clinical_assertions": len(fda),
+            "fda_clinical_records": sum(
+                1 for r in records
+                if any(item.get("source") == "DRUGS_AT_FDA"
+                       for item in (r.get("clinical_status_assertions") or []))),
             "producer_records": sum(1 for r in records if r.get("producer_organisms")),
             "mibig_producer_items": len(mibig),
             "mibig_producer_records": sum(
