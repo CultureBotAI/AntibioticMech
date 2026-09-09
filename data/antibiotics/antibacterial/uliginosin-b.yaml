@@ -1,0 +1,42 @@
+identifier: antibioticmech:curator-c59ef1b1f4
+label: Uliginosin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A polyprenylated acylphloroglucinol with antibacterial activity against
+  drug-resistant Staphylococcus aureus.
+definition_source: DOI:10.5599/admet.3333
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)C(=O)C1=C(C(=C(C(C1=O)(C)C)O)CC2=C(C(=C3C(=C2O)C=CC(O3)(C)C)C(=O)C(C)C)O)O
+  standard_inchi: InChI=1S/C28H34O8/c1-12(2)19(29)17-22(32)15(21(31)14-9-10-27(5,6)36-24(14)17)11-16-23(33)18(20(30)13(3)4)26(35)28(7,8)25(16)34/h9-10,12-13,31-34H,11H2,1-8H3
+  standard_inchi_key: JJUVIYDZIBWTQA-UHFFFAOYSA-N
+  molecular_formula: C28H34O8
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/5315118
+  retrieved_on: '2026-09-08'
+  charge: 0
+  average_mass: 498.6
+  monoisotopic_mass: 498.22536804
+xrefs:
+- pubchem.compound:5315118
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.5599/admet.3333#uliginosin-b
+  source_label: Uliginosin B
+  minted_identifier: antibioticmech:curator-c59ef1b1f4
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.5599/admet.3333
+    snippet: Scaffo et al. tested isolated uliginosin B against reference and drug-resistant
+      Staphylococcus aureus isolates, reported MICs of 3.125 to 6.25 ug/mL and MBCs
+      of 6.25 to 12.5 ug/mL, and linked exposure to oxidative stress.
+    notes: PubChem CID 5315118 supplies the standard InChI, InChIKey, formula, and
+      SMILES for uliginosin B.
+  source_version: '2026-09-08'
+curation_history:
+- timestamp: '2026-09-08T20:25:54Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

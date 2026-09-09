@@ -1,0 +1,53 @@
+identifier: antibioticmech:curator-d33759f162
+label: Cladribine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A synthetic purine analogue with antibacterial activity against carbapenem-resistant
+  Klebsiella pneumoniae.
+definition_source: DOI:10.1186/s12866-026-05197-z
+synonyms:
+- synonym_text: 2-Chloro-2'-deoxyadenosine
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: Leustatin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: 2-CdA
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C1[C@@H]([C@H](O[C@H]1N2C=NC3=C(N=C(N=C32)Cl)N)CO)O
+  standard_inchi: InChI=1S/C10H12ClN5O3/c11-10-14-8(12)7-9(15-10)16(3-13-7)6-1-4(18)5(2-17)19-6/h3-6,17-18H,1-2H2,(H2,12,14,15)/t4-,5+,6+/m0/s1
+  standard_inchi_key: PTOAARAWEBMLNO-KVQBGUIXSA-N
+  molecular_formula: C10H12ClN5O3
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/20279
+  retrieved_on: '2026-09-08'
+  charge: 0
+  average_mass: 285.69
+  monoisotopic_mass: 285.062867
+xrefs:
+- pubchem.compound:20279
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1186/s12866-026-05197-z#cladribine
+  source_label: Cladribine
+  minted_identifier: antibioticmech:curator-d33759f162
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1186/s12866-026-05197-z
+    snippet: Liu et al. identified cladribine as a potential antimicrobial candidate
+      against carbapenem-resistant Klebsiella pneumoniae, reported growth inhibition
+      and bactericidal activity against clinical isolates, and measured reduced pulmonary
+      bacterial burden in a mouse lung infection model.
+    notes: PubChem CID 20279 supplies the standard InChI, InChIKey, formula, and isomeric
+      SMILES for cladribine.
+  source_version: '2026-09-08'
+curation_history:
+- timestamp: '2026-09-08T20:25:54Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

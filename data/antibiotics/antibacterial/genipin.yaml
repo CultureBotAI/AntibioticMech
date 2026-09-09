@@ -1,0 +1,47 @@
+identifier: antibioticmech:curator-a1214aecf9
+label: Genipin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: An iridoid with antibacterial activity against canine ocular staphylococcal
+  isolates.
+definition_source: DOI:10.1167/iovs.67.3.18
+synonyms:
+- synonym_text: (+)-Genipin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COC(=O)C1=CO[C@H]([C@H]2[C@@H]1CC=C2CO)O
+  standard_inchi: InChI=1S/C11H14O5/c1-15-10(13)8-5-16-11(14)9-6(4-12)2-3-7(8)9/h2,5,7,9,11-12,14H,3-4H2,1H3/t7-,9-,11-/m1/s1
+  standard_inchi_key: AZKVWQKMDGGDSV-BCMRRPTOSA-N
+  molecular_formula: C11H14O5
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/442424
+  retrieved_on: '2026-09-08'
+  charge: 0
+  average_mass: 226.23
+  monoisotopic_mass: 226.08412354
+xrefs:
+- pubchem.compound:442424
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1167/iovs.67.3.18#genipin
+  source_label: Genipin
+  minted_identifier: antibioticmech:curator-a1214aecf9
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1167/iovs.67.3.18
+    snippet: Slenter et al. tested genipin against canine ocular Staphylococcus pseudintermedius,
+      Pseudomonas aeruginosa, and Streptococcus canis isolates, reported minimum bactericidal
+      concentrations, and measured concentration-dependent bactericidal activity against
+      staphylococci.
+    notes: PubChem CID 442424 supplies the standard InChI, InChIKey, formula, and
+      isomeric SMILES for genipin.
+  source_version: '2026-09-08'
+curation_history:
+- timestamp: '2026-09-08T20:25:54Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

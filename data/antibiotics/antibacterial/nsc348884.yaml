@@ -1,0 +1,50 @@
+identifier: antibioticmech:curator-8e9e4cae3e
+label: NSC348884
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A benzimidazole analogue with antibacterial activity against carbapenem-resistant
+  Gram-negative bacteria.
+definition_source: DOI:10.1016/j.bcp.2026.117910
+synonyms:
+- synonym_text: NSC 348884
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: NSC-348884
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC1=CC2=C(C=C1)N=C(N2)CN(CCN(CC3=NC4=C(N3)C=C(C=C4)C)CC5=NC6=C(N5)C=C(C=C6)C)CC7=NC8=C(N7)C=C(C=C8)C
+  standard_inchi: InChI=1S/C38H40N10/c1-23-5-9-27-31(15-23)43-35(39-27)19-47(20-36-40-28-10-6-24(2)16-32(28)44-36)13-14-48(21-37-41-29-11-7-25(3)17-33(29)45-37)22-38-42-30-12-8-26(4)18-34(30)46-38/h5-12,15-18H,13-14,19-22H2,1-4H3,(H,39,43)(H,40,44)(H,41,45)(H,42,46)
+  standard_inchi_key: KZOLQEUQAFTQFM-UHFFFAOYSA-N
+  molecular_formula: C38H40N10
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/335974
+  retrieved_on: '2026-09-08'
+  charge: 0
+  average_mass: 636.8
+  monoisotopic_mass: 636.34374132
+xrefs:
+- pubchem.compound:335974
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1016/j.bcp.2026.117910#nsc348884
+  source_label: NSC348884
+  minted_identifier: antibioticmech:curator-8e9e4cae3e
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1016/j.bcp.2026.117910
+    snippet: Zhang et al. identified NSC348884 as a benzimidazole analogue with direct
+      antibacterial activity against carbapenem-resistant Acinetobacter baumannii,
+      reported anti-biofilm activity, and measured reduced blood bacterial load in
+      a mouse systemic infection model.
+    notes: PubChem CID 335974 supplies the standard InChI, InChIKey, formula, and
+      SMILES for NSC348884.
+  source_version: '2026-09-08'
+curation_history:
+- timestamp: '2026-09-08T20:25:54Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

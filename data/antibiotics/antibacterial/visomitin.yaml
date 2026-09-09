@@ -1,0 +1,53 @@
+identifier: antibioticmech:curator-96ae7dffd3
+label: Visomitin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A plastoquinonyl-decyl-triphenylphosphonium bromide with antibacterial
+  activity against Enterococcus.
+definition_source: DOI:10.11817/j.issn.1672-7347.2026.250522
+synonyms:
+- synonym_text: SKQ1 bromide
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: SKQ-1 bromide
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: plastoquinonyl-decyl-triphenylphosphonium bromide
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC1=C(C(=O)C(=CC1=O)CCCCCCCCCC[P+](C2=CC=CC=C2)(C3=CC=CC=C3)C4=CC=CC=C4)C.[Br-]
+  standard_inchi: InChI=1S/C36H42O2P.BrH/c1-29-30(2)36(38)31(28-35(29)37)20-12-7-5-3-4-6-8-19-27-39(32-21-13-9-14-22-32,33-23-15-10-16-24-33)34-25-17-11-18-26-34;/h9-11,13-18,21-26,28H,3-8,12,19-20,27H2,1-2H3;1H/q+1;/p-1
+  standard_inchi_key: WYHFWTRUGAFNKW-UHFFFAOYSA-M
+  molecular_formula: C36H42BrO2P
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/16679091
+  retrieved_on: '2026-09-08'
+  charge: 0
+  average_mass: 617.6
+  monoisotopic_mass: 616.21058
+xrefs:
+- pubchem.compound:16679091
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.11817/j.issn.1672-7347.2026.250522#visomitin
+  source_label: Visomitin
+  minted_identifier: antibioticmech:curator-96ae7dffd3
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.11817/j.issn.1672-7347.2026.250522
+    snippet: Yang et al. reported that Visomitin had MIC values of 4 to 8 ug/mL and
+      MBC values of 4 to 16 ug/mL against Enterococcus, showed time-dependent bactericidal
+      activity, inhibited and partly eradicated biofilms, and reduced abscess size
+      and bacterial load in a mouse subcutaneous abscess model.
+    notes: PubChem CID 16679091 supplies the standard InChI, InChIKey, formula, and
+      SMILES for Visomitin.
+  source_version: '2026-09-08'
+curation_history:
+- timestamp: '2026-09-08T21:42:22Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
