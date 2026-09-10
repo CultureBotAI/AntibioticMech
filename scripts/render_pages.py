@@ -33,6 +33,7 @@ from __future__ import annotations
 import argparse
 import filecmp
 import json
+import re
 import shutil
 import sys
 from collections import Counter, defaultdict
@@ -136,13 +137,31 @@ LINK_EVIDENCE_LABELS = {
 }
 
 
-# CURIE prefixes this site resolves to an external page: the schema's own
-# `prefixes:` block, which #96 aligned with the casing the seeder actually
-# writes, so one declaration serves validation, expansion and this site.
+# CURIE prefixes this site resolves to an external page. The expansions come
+# from the schema's `prefixes:` block, which #96 aligned with the casing the
+# seeder writes, so one declaration serves validation, expansion and this site.
+#
+# Only the namespaces an xref slot may carry, plus the few `resolve_curie`
+# labels on purpose. Taking every http prefix in the block minted 404 links on
+# 260 pages -- the corpus's own w3id namespace resolves nowhere -- and on 1,935
+# more for three print registries with no public resolver at all, which are
+# shown as bare CURIEs instead.
+NO_RESOLVER = {"reaxys", "beilstein", "gmelin"}
+# A base plus an id is not always a URL: these registries key their pages by
+# id but serve them under a file suffix, which a trailing placeholder cannot
+# express. Verified against each host.
+URL_SUFFIX = {"ppdb": ".htm", "vsdb": ".htm", "bpdb": ".htm", "pesticides": ".html",
+              "chemspider": ".html"}
+ALSO_RESOLVED = {"NCBITaxon", "PHIPO", "UniProtKB"}
+
+
 def _xref_url_templates() -> dict[str, str]:
     schema = yaml.safe_load(SCHEMA_PATH.read_text(encoding="utf-8"))
-    return {prefix: base + "{}" for prefix, base in (schema.get("prefixes") or {}).items()
-            if str(base).startswith("http")}
+    alternation = re.match(r"\^\((.*)\):", schema["types"]["xref_curie"]["pattern"]).group(1)
+    wanted = {p.replace("\\", "") for p in alternation.split("|")} | ALSO_RESOLVED
+    return {prefix: base + "{}" + URL_SUFFIX.get(prefix, "")
+            for prefix, base in (schema.get("prefixes") or {}).items()
+            if prefix in wanted and prefix not in NO_RESOLVER and str(base).startswith("http")}
 
 
 SCHEMA_PATH = REPO_ROOT / "src" / "antibioticmech" / "schema" / "antibioticmech.yaml"

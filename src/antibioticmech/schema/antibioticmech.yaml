@@ -67,8 +67,10 @@ prefixes:
   bpdb: https://sitem.herts.ac.uk/aeru/bpdb/Reports/
   pesticides: http://www.alanwood.net/pesticides/
   molbase: http://www.molbase.com/en/index.php?app=search&search_keyword=
-  # Print and licensed registries with no public resolver of their own; the
-  # Bioregistry resolver is the honest expansion rather than a made-up one.
+  # Print and licensed registries with no public resolver. A prefix needs a
+  # namespace URI, and the Bioregistry resolver form is the conventional one,
+  # but it does not resolve for these three, so the site shows them as bare
+  # CURIEs rather than linking to a 404.
   reaxys: "https://bioregistry.io/reaxys:"
   beilstein: "https://bioregistry.io/beilstein:"
   gmelin: "https://bioregistry.io/gmelin:"
@@ -210,9 +212,9 @@ classes:
           Patents and encyclopedia articles about this compound. A patent
           covers a class and an article covers a topic; neither identifies a
           structure, and a patent really does sit on two unrelated fungicides
-          here. Kept because 96% of them point at exactly one record and are
-          useful, moved out of `xrefs` because that is not what `xrefs` means
-          (#136).
+          here. Kept because nearly all of them point at exactly one record and
+          are useful, moved out of `xrefs` because that is not what `xrefs`
+          means (#136).
         multivalued: true
         range: xref_curie
 

@@ -339,18 +339,21 @@ def withhold_spanning_xrefs(records: dict[str, dict]) -> int:
         for r in records.values() for x in (r.get("xrefs") or []))
     if not spanning:
         return 0
-    labels: dict[str, list[str]] = {}
-    for record in records.values():
+    # Records are named by identifier AND label: two records can share a label
+    # (triflumizole is both CHEBI:81784 and a minted ARO record), and naming
+    # them by label alone produced "also published on ." in the report.
+    names: dict[str, set[str]] = {}
+    for identifier, record in records.items():
         for xref in record.get("xrefs") or []:
             if xref in spanning:
-                labels.setdefault(xref, []).append(record.get("label", record["identifier"]))
+                names.setdefault(xref, set()).add(f"{record.get('label', '')} ({identifier})")
     withheld = 0
     for identifier, record in records.items():
         kept = [x for x in (record.get("xrefs") or []) if x not in spanning]
         for xref in (record.get("xrefs") or []):
             if xref in spanning:
                 namespace = xref.split(":", 1)[0]
-                others = sorted(set(labels[xref]) - {record.get("label", identifier)})
+                others = sorted(names[xref] - {f"{record.get('label', '')} ({identifier})"})
                 REFUSED_SPANNING_XREFS.append((
                     identifier, record.get("label", ""),
                     f"{xref} is also published on {', '.join(others)}. A {namespace} "

@@ -225,3 +225,56 @@ def test_every_xref_prefix_is_declared_and_the_type_enforces_it(records, repo_ro
     assert validate_antibiotic(doc) == []
     doc["xrefs"] = list(doc.get("xrefs") or []) + ["CHEMBL.COMPOUND:CHEMBL1"]
     assert validate_antibiotic(doc), "an undeclared prefix validated clean"
+
+
+def test_the_site_links_only_namespaces_that_resolve(repo_root):
+    """Deriving link templates from every schema prefix minted 404 links.
+
+    The corpus's own w3id namespace resolves nowhere, and it appeared as a
+    "resolve" link on 260 pages; three print registries have no resolver and
+    appeared on 1,935. Templates are the xref namespaces plus the few labels the
+    site resolves on purpose, and a base that needs a file suffix carries it.
+    """
+    import re
+
+    import yaml
+    from render_pages import ALSO_RESOLVED, NO_RESOLVER, XREF_URL_TEMPLATES
+
+    schema = yaml.safe_load((repo_root / "src" / "antibioticmech" / "schema"
+                             / "antibioticmech.yaml").read_text(encoding="utf-8"))
+    pattern = schema["types"]["xref_curie"]["pattern"]
+    xref_prefixes = {p.replace("\\", "") for p in re.match(r"\^\((.*)\):", pattern).group(1).split("|")}
+    assert set(XREF_URL_TEMPLATES) == (xref_prefixes - NO_RESOLVER) | ALSO_RESOLVED
+    assert "antibioticmech" not in XREF_URL_TEMPLATES
+    assert all("{}" in template for template in XREF_URL_TEMPLATES.values())
+    assert XREF_URL_TEMPLATES["ppdb"].endswith("{}.htm")
+    assert XREF_URL_TEMPLATES["pesticides"].endswith("{}.html")
+
+
+def test_withholding_strips_a_spanning_accession_from_every_record_it_spans():
+    """Direct, because the committed corpus is already stripped: deleting the
+    corpus-wide pass left every test green and only verify-corpus noticed."""
+    from seed_from_sources import REFUSED_SPANNING_XREFS, withhold_spanning_xrefs
+
+    records = {
+        "A": {"identifier": "A", "label": "a", "chemical_structure": {"standard_inchi_key": "K1"},
+              "xrefs": ["cas:1", "cas:9"], "drug_xrefs": ["drugbank:DB1"]},
+        "B": {"identifier": "B", "label": "b", "chemical_structure": {"standard_inchi_key": "K2"},
+              "xrefs": ["cas:1"], "drug_xrefs": ["drugbank:DB1"]},
+        "C": {"identifier": "C", "label": "c", "chemical_structure": {"standard_inchi_key": "K1"},
+              "xrefs": ["cas:9"]},
+    }
+    REFUSED_SPANNING_XREFS.clear()
+    assert withhold_spanning_xrefs(records) == 2
+    assert records["A"]["xrefs"] == ["cas:9"]
+    assert "xrefs" not in records["B"], "an emptied slot is removed, not left as []"
+    assert records["C"]["xrefs"] == ["cas:9"], "the same key twice is one structure, not a span"
+    assert records["A"]["drug_xrefs"] == ["drugbank:DB1"], "drug slots are not this pass's business"
+    assert {r[0] for r in REFUSED_SPANNING_XREFS} == {"A", "B"}
+    assert all("(" in r[2] for r in REFUSED_SPANNING_XREFS), "records are named by label and identifier"
+
+
+def test_no_record_carries_an_empty_xref_slot(records):
+    empty = [f"{p.name}: {slot}" for p, r in records for slot in ("xrefs", "drug_xrefs", "document_xrefs")
+             if slot in r and not r[slot]]
+    assert empty == [], empty[:8]

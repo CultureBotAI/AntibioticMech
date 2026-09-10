@@ -877,15 +877,15 @@ def xref_span_conflict_queue(records: list[dict]) -> list[dict]:
         carried += [(key, x, record) for x in kept]
 
     spanning = spanning_accessions((key, xref) for key, xref, _ in carried)
-    labels: dict[str, set[str]] = {}
+    names: dict[str, set[str]] = {}
     for _, xref, record in carried:
         if xref in spanning:
-            labels.setdefault(xref, set()).add(record["label"])
+            names.setdefault(xref, set()).add(f"{record['label']} ({record['identifier']})")
     out = []
     for _, xref, record in carried:
         if xref not in spanning:
             continue
-        others = sorted(labels[xref] - {record["label"]})
+        others = sorted(names[xref] - {f"{record['label']} ({record['identifier']})"})
         out.append({
             "queue": "xref-span-conflict",
             "key": record["identifier"],
