@@ -52,6 +52,26 @@ def test_source_citations_are_labeled_as_leads_not_evidence():
     assert "0 record evidence item(s)" in row["hint"]
 
 
+def test_source_concept_evidence_references_are_literature_leads():
+    record = _record(
+        "antibioticmech:curator-1",
+        source_concepts=[
+            {
+                "source": "CURATOR",
+                "source_id": "DOI:10.1/example#compound-1",
+                "evidence": [
+                    {"reference": "DOI:10.1/example"},
+                    {"reference": "https://pubchem.ncbi.nlm.nih.gov/compound/1"},
+                ],
+            }
+        ],
+    )
+    refs = {("CURATOR", "DOI:10.1/example#compound-1"): ("DOI:10.1/example",)}
+    row = review_readiness_queue([record], source_refs=refs)[0]
+    assert row["source_id"] == "DOI:10.1/example"
+    assert "1 source literature lead(s)" in row["hint"]
+
+
 def test_identity_and_structure_are_checked_before_mechanism():
     minted = _record("antibioticmech:1", grounding_status="MINTED")
     incomplete = _record("CHEBI:6", chemical_structure={"smiles": "CC"})

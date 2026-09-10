@@ -948,6 +948,17 @@ def review_readiness_queue(
     if source_refs is None:
         source_refs = source_literature_leads()
 
+    def concept_literature_refs(concept: dict) -> tuple[str, ...]:
+        refs = list(source_refs.get((concept.get("source", ""),
+                                     concept.get("source_id", "")), ()))
+        refs.extend(
+            reference
+            for evidence in concept.get("evidence") or []
+            for reference in [evidence.get("reference", "")]
+            if reference.startswith(("PMID:", "DOI:"))
+        )
+        return tuple(refs)
+
     priorities = {
         "SIGNOFF_REVIEW": 0,
         "TARGET_EVIDENCE_REVIEW": 1,
@@ -994,8 +1005,7 @@ def review_readiness_queue(
         leads = tuple(dict.fromkeys(
             ref
             for concept in record.get("source_concepts") or []
-            for ref in source_refs.get((concept.get("source", ""),
-                                        concept.get("source_id", "")), ())
+            for ref in concept_literature_refs(concept)
         ))
         sources = "+".join(sorted({
             concept.get("source", "")
