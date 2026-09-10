@@ -497,7 +497,6 @@ def normalize_xref(raw: str) -> str | None:
         # food, and filing it as a compound would be the same mislabel the
         # other way round; leave it unmapped so the undeclared prefix fails
         # validation and someone looks.
-        mapped = None
         return None
     if mapped is None and BIOREGISTRY_PREFIX.match(prefix):
         mapped = prefix
