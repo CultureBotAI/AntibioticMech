@@ -1,0 +1,46 @@
+identifier: antibioticmech:curator-34020091be
+label: ECF transporter inhibitor 36
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 1,4-triazole-pyridinyl salicylic acid derivative with antibacterial
+  activity against Gram-positive bacteria.
+definition_source: DOI:10.1021/acs.jmedchem.5c02721
+synonyms:
+- synonym_text: compound 36
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C(O)C1=CC(OCC2=CC(C3=CC(Cl)=C(OC(C)C)N=C3)=CC(N4N=NC(C(C)(C)C)=C4)=C2)=CC=C1O
+  standard_inchi: InChI=1S/C28H29ClN4O5/c1-16(2)38-26-23(29)11-19(13-30-26)18-8-17(15-37-21-6-7-24(34)22(12-21)27(35)36)9-20(10-18)33-14-25(31-32-33)28(3,4)5/h6-14,16,34H,15H2,1-5H3,(H,35,36)
+  standard_inchi_key: KBHNQPNHOFMZND-UHFFFAOYSA-N
+  molecular_formula: C28H29ClN4O5
+  structure_source: https://pubs.acs.org/doi/suppl/10.1021/acs.jmedchem.5c02721/suppl_file/jm5c02721_si_002.csv
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 537.02
+  monoisotopic_mass: 536.182647708
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acs.jmedchem.5c02721#36
+  source_label: ECF transporter inhibitor 36
+  minted_identifier: antibioticmech:curator-34020091be
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/acs.jmedchem.5c02721
+    snippet: Exapicheidou et al. reported that compound 36 inhibited Enterococcus
+      faecalis, Enterococcus faecium, and Streptococcus pneumoniae strains with MIC
+      values of 0.5 to 4 ug/mL and had an ECF-FolT2 IC50 of 42.84 uM in the Lactobacillus
+      delbrueckii proteoliposome uptake assay.
+    notes: Supplementary Data CSV row 36 reports the SMILES for compound 36 and Scheme
+      5 supplies the same triazolyl derivative scaffold; the CSV SMILES was normalized
+      with RDKit to derive the standard InChI and InChIKey.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-09-10T08:18:35Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
