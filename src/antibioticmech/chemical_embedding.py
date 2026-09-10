@@ -325,14 +325,10 @@ def projection_neighbor_overlap(
 def structure_hash(
     records: list[StructureRecord],
     config: EmbeddingConfig,
-    versions: dict[str, str],
 ) -> str:
     payload = {
         "model_version": MODEL_VERSION,
         "configuration": configuration_dict(config),
-        # Record Python for provenance, but do not make a 3.10 vs 3.12 QC
-        # matrix stale when the locked chemistry stack is otherwise identical.
-        "versions": {key: value for key, value in versions.items() if key != "python"},
         "records": [
             {
                 "identifier": record.identifier,
@@ -366,9 +362,10 @@ def corpus_fingerprint(records: list[StructureRecord]) -> str:
     """Hash the normalized corpus inputs from which the artifact is built.
 
     Unlike a commit SHA, this fingerprint remains valid after rebases and also
-    describes uncommitted inputs accurately.  Model configuration and runtime
-    dependencies remain the separate concern of ``input_hash`` and
-    ``structure_hash``.
+    describes uncommitted inputs accurately. Model configuration remains the
+    separate concern of ``input_hash`` and ``structure_hash``; runtime
+    dependency versions are artifact provenance, not freshness inputs, because
+    the committed map must validate under every locked platform.
     """
 
     return _sha256([asdict(record) for record in records])
@@ -500,7 +497,7 @@ def build_artifact(
                 ],
             }
         )
-    structure_digest = structure_hash(records, config, versions)
+    structure_digest = structure_hash(records, config)
     display_digest = display_hash(records)
     return {
         "schema_version": ARTIFACT_SCHEMA_VERSION,
@@ -535,8 +532,7 @@ def serialize_artifact(artifact: dict[str, Any]) -> str:
 def expected_artifact_metadata(
     records: list[StructureRecord], config: EmbeddingConfig = DEFAULT_CONFIG
 ) -> dict[str, Any]:
-    versions = dependency_versions()
-    structure_digest = structure_hash(records, config, versions)
+    structure_digest = structure_hash(records, config)
     display_digest = display_hash(records)
     return {
         "schema_version": ARTIFACT_SCHEMA_VERSION,
@@ -564,10 +560,6 @@ def validate_artifact(
     for key, value in expected.items():
         if artifact.get(key) != value:
             errors.append(f"{key} is stale")
-    artifact_versions = artifact.get("versions") or {}
-    for key, value in dependency_versions().items():
-        if key != "python" and artifact_versions.get(key) != value:
-            errors.append(f"versions.{key} is stale")
     rows = artifact.get("records")
     if not isinstance(rows, list):
         return [*errors, "records must be a list"]

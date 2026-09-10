@@ -1,0 +1,57 @@
+identifier: antibioticmech:curator-9a2e3114cb
+label: Ibipinabant
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A cannabinoid receptor 1 antagonist with antibacterial activity against
+  Neisseria gonorrhoeae.
+definition_source: DOI:10.1128/aac.01231-25
+synonyms:
+- synonym_text: BMS-646256
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: SLV-319
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: JD 5001
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CN=C(NS(=O)(=O)C1=CC=C(C=C1)Cl)N2C[C@@H](C(=N2)C3=CC=C(C=C3)Cl)C4=CC=CC=C4
+  standard_inchi: InChI=1S/C23H20Cl2N4O2S/c1-26-23(28-32(30,31)20-13-11-19(25)12-14-20)29-15-21(16-5-3-2-4-6-16)22(27-29)17-7-9-18(24)10-8-17/h2-14,21H,15H2,1H3,(H,26,28)/t21-/m1/s1
+  standard_inchi_key: AXJQVVLKUYCICH-OAQYLSRUSA-N
+  molecular_formula: C23H20Cl2N4O2S
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/9826744
+  retrieved_on: '2026-09-08'
+  charge: 0
+  average_mass: 487.4
+  monoisotopic_mass: 486.0684025
+xrefs:
+- pubchem.compound:9826744
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/aac.01231-25#ibipinabant
+  source_label: Ibipinabant
+  minted_identifier: antibioticmech:curator-9a2e3114cb
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/aac.01231-25
+    snippet: Dove et al. identified ibipinabant as the most potent anti-gonococcal
+      hit in a 2,528-molecule screen, reported bactericidal activity against Neisseria
+      gonorrhoeae, and measured a significant gonococcal-burden reduction in a mouse
+      genital tract infection model.
+    notes: PubChem CID 9826744 supplies the standard InChI, InChIKey, formula, and
+      isomeric SMILES for ibipinabant.
+  source_version: '2026-09-08'
+curation_history:
+- timestamp: '2026-09-08T20:23:16Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-09-08T20:25:05Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
