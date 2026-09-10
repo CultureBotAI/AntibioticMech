@@ -199,7 +199,7 @@ def test_spanning_accessions_is_structure_exact_only():
 def test_every_xref_prefix_is_declared_and_the_type_enforces_it(records, repo_root):
     """A prefix the schema cannot expand is an identifier that goes nowhere.
 
-    8,796 of 12,410 cross-references carried one while closed validation stayed
+    8,796 of 12,419 cross-references carried one while closed validation stayed
     green, because `curie` checks shape only (#96). The `xref_curie` alternation
     is asserted equal to what the corpus carries, and the validator is shown to
     reject a prefix outside it.

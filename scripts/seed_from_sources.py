@@ -218,7 +218,7 @@ NON_STRUCTURE_XREF_PREFIXES = {"pdb", "PDB"}
 # said it was the wrong remedy: nearly every one of them maps to exactly ONE
 # structure here, so removing them would have cost far more useful links than
 # false equivalences. Issue #92 asked for such identifiers to be MOVED out of
-# chemical xrefs rather than deleted, and #136 is the destination (#136).
+# chemical xrefs rather than deleted; `document_xrefs` is that destination (#136).
 DOCUMENT_XREF_PREFIXES = {"patent", "wikipedia.en"}
 
 # Namespaces that identify a DRUG rather than an exact structure, so one
@@ -492,6 +492,13 @@ def normalize_xref(raw: str) -> str | None:
     prefix, local = raw.split(":", 1)
     local = local.strip()
     mapped = XREF_PREFIX.get(prefix)
+    if prefix == "foodb.food" and not local.startswith("FDB"):
+        # The remap rests on the FDB pattern. A FOOD-prefixed id would be a
+        # food, and filing it as a compound would be the same mislabel the
+        # other way round; leave it unmapped so the undeclared prefix fails
+        # validation and someone looks.
+        mapped = None
+        return None
     if mapped is None and BIOREGISTRY_PREFIX.match(prefix):
         mapped = prefix
     if mapped is None or not CURIE_LOCAL.match(local):
