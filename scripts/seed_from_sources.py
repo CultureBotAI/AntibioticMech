@@ -2558,9 +2558,9 @@ def _retrieval_dates(record: dict) -> tuple[set[str], set[str]]:
     ChEBI and ARO concepts both carry the ONE manifest `retrieved_on`, which is
     the newest download mtime -- so they are collapsed to a single set rather
     than reported per source, where one would move whenever the other did.
-    CURATOR concepts carry the version of curation/curator_antibiotics.tsv
-    instead, which is a different file with a different meaning, so it is kept
-    apart. Empty values are dropped rather than printed as a blank.
+    CURATOR concepts carry their row's `source_version` column from
+    curation/curator_antibiotics.tsv instead, which is a different file with a
+    different meaning, so it is kept apart. Empty values are dropped rather than printed as a blank.
     """
     upstream, curator = set(), set()
     for concept in record.get("source_concepts") or []:
@@ -2629,7 +2629,11 @@ def reseed_changes(existing: dict, record: dict, moved: list[str]) -> str:
         if not after:
             return ""
         now = ", ".join(sorted(after))
-        if before and before != after:
+        if not before:
+            # Nothing on disk to compare against, so "unchanged" would be a
+            # claim about a value the record never carried.
+            return f" {noun} {now}."
+        if before != after:
             return f" {noun} {', '.join(sorted(before))} -> {now}."
         return f" {noun} {now}, unchanged."
 

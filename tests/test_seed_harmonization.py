@@ -993,8 +993,8 @@ def test_a_genuine_reseed_always_appends_an_event():
     `merge_with_existing` appends a RESEEDED event only when a seeded field
     actually moved, so the `unchanged` guard is already the duplicate
     suppressor. Any further collapse can therefore only delete events that
-    record real changes — and `changes` is a constant string, so it cannot tell
-    two re-seeds apart. One did exactly that: it removed the events recording 13
+    record real changes — two events with identical text are two real changes
+    that moved the same fields. One did exactly that: it removed the events recording 13
     genuine mechanism assignments, and would have swallowed every subsequent
     ChEBI release the same way, leaving trails asserting nothing had happened
     since months before the data moved (#73).
@@ -1651,7 +1651,7 @@ def test_a_merge_neither_drops_nor_duplicates_a_field():
 
 
 # --------------------------------------------------------------------------
-# The reseed event says what moved, and claims a cause only when provable (#189)
+# The reseed event says what moved, and claims no cause (#189)
 # --------------------------------------------------------------------------
 
 def _seeded_record(**overrides):
@@ -1739,10 +1739,22 @@ def test_a_lane_change_names_the_lane_and_its_upstream_version():
     resistance = {"mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION", "label": "x",
                   "taxon_id": "NCBITaxon:1", "taxon_label": "Aspergillus x",
                   "source": "PHIBASE", "source_version": "abc123"}
-    fresh = _seeded_record(producer_organisms=[producer], resistance_mechanisms=[resistance])
+    card = {"mechanism_type": "ANTIBIOTIC_EFFLUX", "label": "y", "aro_id": "ARO:3000001",
+            "evidence": [{"reference": "ARO:3000001",
+                          "notes": "CARD/ARO asserts this determinant"}]}
+    bindingdb = {"target_label": "z", "target_type": "PROTEIN", "source": "BINDINGDB",
+                 "source_version": "2026-09"}
+    fresh = _seeded_record(producer_organisms=[producer],
+                           resistance_mechanisms=[resistance, card],
+                           molecular_targets=[bindingdb])
     changes = _event(fresh, _seeded_record())
+    # Every lane the delta compares, so deleting any one of them from the
+    # delta fails here. The first version exercised MIBiG and PHI-base only,
+    # and dropping the CARD or BindingDB lane left the whole suite green.
     assert "producer_organisms (MIBIG 4.0.1)" in changes
     assert "resistance_mechanisms (PHIBASE abc123)" in changes
+    assert "resistance_mechanisms (CARD)" in changes
+    assert "molecular_targets (BINDINGDB 2026-09)" in changes
     assert "Upstream retrieval date 2026-08-30, unchanged." in changes
 
 
@@ -1759,6 +1771,15 @@ def test_a_curator_record_reports_its_curator_inputs_apart_from_upstream():
     assert "Upstream" not in changes
     changes = _event(curated("2026-09-07", label="renamed"), curated("2026-09-07"))
     assert changes == "Re-seeded; changed: label. Curator inputs 2026-09-07, unchanged."
+
+
+def test_a_date_the_record_never_carried_is_not_called_unchanged():
+    existing = _seeded_record(source_concepts=[
+        {"source": "CHEBI", "source_id": "CHEBI:1", "source_version": ""}])
+    fresh = _seeded_record(source_concepts=[
+        {"source": "CHEBI", "source_id": "CHEBI:1", "source_version": "2026-08-30"}])
+    assert _event(fresh, existing) == (
+        "Re-seeded; changed: source_concepts. Upstream retrieval date 2026-08-30.")
 
 
 def test_a_blank_source_version_is_not_printed():
@@ -1779,13 +1800,17 @@ def test_a_seeded_clinical_status_change_is_named():
                                          "jurisdiction": "US-FDA",
                                          "source_version": "2026-08-28"}])
     changes = _event(with_fda("APPROVED"), with_fda("INVESTIGATIONAL"))
-    assert "clinical_status" in changes
-    assert "clinical_status_assertions (DRUGS_AT_FDA 2026-08-28)" in changes
+    # The full clause, not a substring: "clinical_status" is satisfied by
+    # "clinical_status_assertions" alone, which is the other comparison.
+    assert changes.startswith(
+        "Re-seeded; changed: clinical_status_assertions (DRUGS_AT_FDA 2026-08-28), "
+        "clinical_status.")
 
 
-def test_the_event_names_exactly_what_the_unchanged_guard_compares():
-    """One definition. An event that names a field the guard ignores, or a
-    guard that fires on a field the event omits, is the drift this prevents."""
+def test_no_delta_writes_no_event():
+    """The guard is `not reseed_delta(...)`, so an empty delta must leave the
+    trail exactly as it was. The one-definition property itself is exercised by
+    the tests above, which each move one comparison and read it back."""
     from seed_from_sources import merge_with_existing
 
     existing = _seeded_record()
