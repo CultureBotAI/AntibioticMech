@@ -2552,52 +2552,37 @@ def _restore_key_order(merged: dict, existing: dict) -> dict:
     return rebuilt
 
 
-def _source_versions(record: dict) -> dict[str, str]:
-    """Each grounding source's inventory version as the record carries it."""
-    return {
-        str(concept.get("source")): str(concept.get("source_version") or "")
-        for concept in (record.get("source_concepts") or [])
-        if concept.get("source")
-    }
+def _retrieval_dates(record: dict) -> tuple[set[str], set[str]]:
+    """The upstream retrieval date(s) and curator-input version(s) on a record.
 
-
-def _lane_versions(record: dict, field: str, source: str) -> list[str]:
-    """Distinct upstream versions on a lane's items, for the event text."""
-    return sorted({
-        str(item.get("source_version"))
-        for item in (record.get(field) or [])
-        if item.get("source") == source and item.get("source_version")
-    })
-
-
-def reseed_changes(existing: dict, record: dict, merged: dict,
-                   curator_owns_clinical: bool) -> str:
-    """Say what a re-seed changed, and claim a cause only where it is provable.
-
-    The trail used to write one constant sentence, "Re-seeded from updated
-    data/raw/ inventories", on every re-seed that changed anything. That is the
-    one question a history exists to answer, and for any record whose content
-    moved because a harmonization RULE changed it answered wrongly: #187
-    removed two false cross-references with the inventories byte-identical,
-    and both records recorded an inventory update that git shows never
-    happened (#189).
-
-    A ChEBI or ARO refresh is visible on the record itself, as the
-    `source_version` each source concept carries, so an inventory update is
-    asserted when one of those moved and not otherwise. Everything else the
-    event says is what moved, not why: the fields, and for a source lane the
-    upstream version its items now carry. A reader comparing that against the
-    unchanged grounding versions can see for themselves that a lane refresh
-    or a rule is the only remaining explanation.
+    ChEBI and ARO concepts both carry the ONE manifest `retrieved_on`, which is
+    the newest download mtime -- so they are collapsed to a single set rather
+    than reported per source, where one would move whenever the other did.
+    CURATOR concepts carry the version of curation/curator_antibiotics.tsv
+    instead, which is a different file with a different meaning, so it is kept
+    apart. Empty values are dropped rather than printed as a blank.
     """
-    moved: list[str] = [f for f in SEEDED_FIELDS if existing.get(f) != record.get(f)]
-    lanes = (
-        ("molecular_targets", card_sourced_view, "CARD"),
-        ("resistance_mechanisms", card_sourced_view, "CARD"),
-    )
-    for field, view, source in lanes:
-        if view(existing, field) != view(record, field):
-            moved.append(f"{field} ({source})")
+    upstream, curator = set(), set()
+    for concept in record.get("source_concepts") or []:
+        version = str(concept.get("source_version") or "").strip()
+        if not version:
+            continue
+        (curator if concept.get("source") == "CURATOR" else upstream).add(version)
+    return upstream, curator
+
+
+def reseed_delta(existing: dict, record: dict, merged: dict,
+                 curator_owns_clinical: bool) -> list[str]:
+    """Every seeder-owned comparison that moved, named for the event.
+
+    This is the ONE definition of "something the seeder owns changed": the
+    unchanged guard is `not reseed_delta(...)`, so the fields an event names and
+    the fields that decide whether an event is written cannot drift apart.
+    """
+    moved = [f for f in SEEDED_FIELDS if existing.get(f) != record.get(f)]
+    for field in ("molecular_targets", "resistance_mechanisms"):
+        if card_sourced_view(existing, field) != card_sourced_view(record, field):
+            moved.append(f"{field} (CARD)")
     for field, view, source in (
         ("molecular_targets", bindingdb_sourced_target_view, BINDINGDB_TARGET_SOURCE),
         ("resistance_mechanisms", phibase_sourced_resistance_view, PHIBASE_RESISTANCE_SOURCE),
@@ -2605,25 +2590,52 @@ def reseed_changes(existing: dict, record: dict, merged: dict,
         ("clinical_status_assertions", fda_sourced_clinical_view, FDA_CLINICAL_SOURCE),
     ):
         if view(existing) != view(record):
-            versions = _lane_versions(record, field, source)
+            versions = sorted({
+                str(item.get("source_version"))
+                for item in (record.get(field) or [])
+                if item.get("source") == source and item.get("source_version")})
             moved.append(f"{field} ({source}{' ' + ', '.join(versions) if versions else ''})")
     if not curator_owns_clinical and existing.get("clinical_status") != merged.get("clinical_status"):
         moved.append("clinical_status")
     moved += [f for f in ("mode_of_action", "mode_of_action_notes", "mode_of_action_target_scope")
               if existing.get(f) != merged.get(f)]
+    return moved
 
-    before, after = _source_versions(existing), _source_versions(record)
-    refreshed = [f"{s} {before[s]} -> {after[s]}"
-                 for s in sorted(after) if s in before and before[s] != after[s]]
-    steady = [f"{s} {after[s]}" for s in sorted(after) if s in before and before[s] == after[s]]
-    changed = ", ".join(moved) or "no seeded field; the merged view moved"
-    if refreshed:
-        return (f"Re-seeded from updated data/raw/ inventories ({'; '.join(refreshed)}). "
-                f"Changed: {changed}.")
-    return (f"Re-seeded with the grounding inventories unchanged"
-            f"{' (' + ', '.join(steady) + ')' if steady else ''}; the change came from a "
-            f"harmonization rule or a source lane, not a ChEBI or ARO refresh. "
-            f"Changed: {changed}.")
+
+def reseed_changes(existing: dict, record: dict, moved: list[str]) -> str:
+    """Say what a re-seed changed. State facts; claim no cause.
+
+    The trail used to write "Re-seeded from updated data/raw/ inventories" on
+    every re-seed that changed anything, which is false whenever a harmonization
+    RULE moved the content: #187 removed two false cross-references with the
+    inventories byte-identical, and cefdinir recorded an inventory update git
+    shows never happened (#189).
+
+    The first replacement tried to say which cause applied, and its review
+    showed the record cannot support that either. The retrieval date on a
+    concept is the newest download mtime, shared by ChEBI and ARO, and it does
+    not move when the extractor is re-run on cached downloads -- so "inventory
+    unchanged" would have been the same class of falsehood pointed the other
+    way. A record does not carry the inventory digests it was built from.
+
+    So the event names what moved and the dates the record carries, and leaves
+    the why to the pull request, which is where it is actually recorded.
+    """
+    changed = ", ".join(moved)
+    before_up, before_cur = _retrieval_dates(existing)
+    after_up, after_cur = _retrieval_dates(record)
+
+    def span(before: set[str], after: set[str], noun: str) -> str:
+        if not after:
+            return ""
+        now = ", ".join(sorted(after))
+        if before and before != after:
+            return f" {noun} {', '.join(sorted(before))} -> {now}."
+        return f" {noun} {now}, unchanged."
+
+    return (f"Re-seeded; changed: {changed}."
+            + span(before_up, after_up, "Upstream retrieval date")
+            + span(before_cur, after_cur, "Curator inputs"))
 
 
 def merge_with_existing(record: dict, existing: dict) -> dict:
@@ -2753,24 +2765,11 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     # nothing had happened while the data moved, which is #73's failure reached
     # by a different road. Compared against MERGED rather than against the fresh
     # derivation, so a curator-owned block (copied forward verbatim above)
-    # registers as unchanged instead of logging a re-seed on every run.
-    unchanged = all(existing.get(f) == record.get(f) for f in SEEDED_FIELDS) and all(
-        card_sourced_view(existing, f) == card_sourced_view(record, f)
-        for f in ("molecular_targets", "resistance_mechanisms")
-    ) and (
-        bindingdb_sourced_target_view(existing) == bindingdb_sourced_target_view(record)
-    ) and (
-        phibase_sourced_resistance_view(existing) == phibase_sourced_resistance_view(record)
-    ) and (
-        mibig_sourced_producer_view(existing) == mibig_sourced_producer_view(record)
-    ) and (
-        fda_sourced_clinical_view(existing) == fda_sourced_clinical_view(record)
-    ) and (
-        curator_owns_clinical or existing.get("clinical_status") == merged.get("clinical_status")
-    ) and all(
-        existing.get(f) == merged.get(f)
-        for f in ("mode_of_action", "mode_of_action_notes", "mode_of_action_target_scope")
-    )
+    # registers as unchanged instead of logging a re-seed on every run. All of
+    # those comparisons live in `reseed_delta`, which is also what the event
+    # names, so the two cannot disagree about what counts as a change.
+    moved = reseed_delta(existing, record, merged, curator_owns_clinical)
+    unchanged = not moved
     if unchanged:
         # Nothing the seeder owns changed: keep the trail exactly as it is,
         # rather than appending a new event on every run.
@@ -2781,13 +2780,14 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
             merged,
             curator=SEEDER_CURATOR,
             action="RESEEDED_FROM_SOURCES",
-            changes=reseed_changes(existing, record, merged, curator_owns_clinical),
+            changes=reseed_changes(existing, record, moved),
         )
     # No de-duplication pass here, deliberately. The `unchanged` guard above is
     # the duplicate suppressor: an event is appended ONLY when a seeded field
     # actually moved. So every event a collapse could ever delete is one that
-    # records a real change, and `changes` is a constant string that cannot
-    # tell two re-seeds apart. A pass that ran here removed 13 events recording
+    # records a real change; two events with identical text are two real
+    # changes that happened to move the same fields, not duplicates. A pass
+    # that ran here removed 13 events recording
     # genuine mechanism assignments (nikkomycin-z's chitin-synthase fix among
     # them) and would have swallowed every future ChEBI release the same way.
     # The 2,923 duplicates that motivated it were the symptom of a falsified
