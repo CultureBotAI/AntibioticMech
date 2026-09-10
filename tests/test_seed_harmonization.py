@@ -1648,3 +1648,86 @@ def test_a_merge_neither_drops_nor_duplicates_a_field():
     keys = list(merged)
     assert len(keys) == len(set(keys))
     assert set(keys) >= {"definition", "xrefs", "activity_spectrum"}
+
+
+# --------------------------------------------------------------------------
+# The reseed event says what moved, and claims a cause only when provable (#189)
+# --------------------------------------------------------------------------
+
+def _seeded_record(**overrides):
+    base = {
+        "identifier": "CHEBI:1", "label": "example",
+        "antimicrobial_class": "ANTIBACTERIAL", "curation_status": "SEEDED",
+        "grounding_status": "EXACT", "xrefs": ["cas:1", "chembl:CHEMBL1"],
+        "source_concepts": [
+            {"source": "CHEBI", "source_id": "CHEBI:1", "source_version": "2026-08-30"},
+            {"source": "ARO", "source_id": "ARO:1", "source_version": "2026-08-30"},
+        ],
+        "curation_history": [{"timestamp": "2026-08-30T00:00:00Z",
+                              "curator": "seed_from_sources",
+                              "action": "SEEDED_FROM_SOURCES", "changes": "Seeded"}],
+    }
+    base.update(overrides)
+    return base
+
+
+def test_a_rule_driven_change_is_not_recorded_as_an_inventory_update():
+    """The one question a history exists to answer, answered wrongly before.
+
+    #187 removed two false cross-references with data/raw byte-identical, and
+    both records recorded "Re-seeded from updated data/raw/ inventories". The
+    inventories had not moved; a gate had. The event must say which field
+    moved and must not name a refresh the record itself shows did not happen.
+    """
+    from seed_from_sources import merge_with_existing
+
+    existing = _seeded_record()
+    fresh = _seeded_record(xrefs=["cas:1"])          # a rule refused chembl:CHEMBL1
+    merged = merge_with_existing(fresh, existing)
+    event = merged["curation_history"][-1]
+    assert event["action"] == "RESEEDED_FROM_SOURCES"
+    assert "updated data/raw" not in event["changes"]
+    assert "xrefs" in event["changes"]
+    assert "ARO 2026-08-30" in event["changes"] and "CHEBI 2026-08-30" in event["changes"]
+    assert "rule" in event["changes"]
+
+
+def test_an_inventory_refresh_is_recorded_with_the_version_it_moved_to():
+    """When a source version really changed, say so, and say from what to what."""
+    from seed_from_sources import merge_with_existing
+
+    existing = _seeded_record()
+    fresh = _seeded_record(
+        xrefs=["cas:1", "chembl:CHEMBL1", "drugbank:DB1"],
+        source_concepts=[
+            {"source": "CHEBI", "source_id": "CHEBI:1", "source_version": "2026-09-15"},
+            {"source": "ARO", "source_id": "ARO:1", "source_version": "2026-08-30"},
+        ],
+    )
+    merged = merge_with_existing(fresh, existing)
+    changes = merged["curation_history"][-1]["changes"]
+    assert changes.startswith("Re-seeded from updated data/raw/ inventories")
+    assert "CHEBI 2026-08-30 -> 2026-09-15" in changes
+    assert "ARO" not in changes.split("Changed:")[0].replace("ARO 2026-08-30 ->", "")
+    assert "xrefs" in changes and "source_concepts" in changes
+
+
+def test_a_lane_change_names_the_lane_and_its_upstream_version():
+    """A MIBiG refresh moves producers without moving the grounding versions.
+
+    The event must not call that a rule, and must not call it a ChEBI refresh
+    either: it names the lane and the version its items now carry, and leaves
+    the grounding versions visibly unchanged beside it.
+    """
+    from seed_from_sources import merge_with_existing
+
+    producer = {"taxon_id": "NCBITaxon:1", "taxon_label": "Streptomyces x",
+                "source": "MIBIG", "source_version": "4.0.1",
+                "link_evidence": ["KNOCK_OUT_STUDIES"],
+                "link_evidence_scope": "COMPOUND_SPECIFIC"}
+    existing = _seeded_record()
+    fresh = _seeded_record(producer_organisms=[producer])
+    changes = merge_with_existing(fresh, existing)["curation_history"][-1]["changes"]
+    assert "updated data/raw" not in changes
+    assert "producer_organisms (MIBIG 4.0.1)" in changes
+    assert "CHEBI 2026-08-30" in changes

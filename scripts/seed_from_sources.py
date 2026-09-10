@@ -2552,6 +2552,80 @@ def _restore_key_order(merged: dict, existing: dict) -> dict:
     return rebuilt
 
 
+def _source_versions(record: dict) -> dict[str, str]:
+    """Each grounding source's inventory version as the record carries it."""
+    return {
+        str(concept.get("source")): str(concept.get("source_version") or "")
+        for concept in (record.get("source_concepts") or [])
+        if concept.get("source")
+    }
+
+
+def _lane_versions(record: dict, field: str, source: str) -> list[str]:
+    """Distinct upstream versions on a lane's items, for the event text."""
+    return sorted({
+        str(item.get("source_version"))
+        for item in (record.get(field) or [])
+        if item.get("source") == source and item.get("source_version")
+    })
+
+
+def reseed_changes(existing: dict, record: dict, merged: dict,
+                   curator_owns_clinical: bool) -> str:
+    """Say what a re-seed changed, and claim a cause only where it is provable.
+
+    The trail used to write one constant sentence, "Re-seeded from updated
+    data/raw/ inventories", on every re-seed that changed anything. That is the
+    one question a history exists to answer, and for any record whose content
+    moved because a harmonization RULE changed it answered wrongly: #187
+    removed two false cross-references with the inventories byte-identical,
+    and both records recorded an inventory update that git shows never
+    happened (#189).
+
+    A ChEBI or ARO refresh is visible on the record itself, as the
+    `source_version` each source concept carries, so an inventory update is
+    asserted when one of those moved and not otherwise. Everything else the
+    event says is what moved, not why: the fields, and for a source lane the
+    upstream version its items now carry. A reader comparing that against the
+    unchanged grounding versions can see for themselves that a lane refresh
+    or a rule is the only remaining explanation.
+    """
+    moved: list[str] = [f for f in SEEDED_FIELDS if existing.get(f) != record.get(f)]
+    lanes = (
+        ("molecular_targets", card_sourced_view, "CARD"),
+        ("resistance_mechanisms", card_sourced_view, "CARD"),
+    )
+    for field, view, source in lanes:
+        if view(existing, field) != view(record, field):
+            moved.append(f"{field} ({source})")
+    for field, view, source in (
+        ("molecular_targets", bindingdb_sourced_target_view, BINDINGDB_TARGET_SOURCE),
+        ("resistance_mechanisms", phibase_sourced_resistance_view, PHIBASE_RESISTANCE_SOURCE),
+        ("producer_organisms", mibig_sourced_producer_view, MIBIG_PRODUCER_SOURCE),
+        ("clinical_status_assertions", fda_sourced_clinical_view, FDA_CLINICAL_SOURCE),
+    ):
+        if view(existing) != view(record):
+            versions = _lane_versions(record, field, source)
+            moved.append(f"{field} ({source}{' ' + ', '.join(versions) if versions else ''})")
+    if not curator_owns_clinical and existing.get("clinical_status") != merged.get("clinical_status"):
+        moved.append("clinical_status")
+    moved += [f for f in ("mode_of_action", "mode_of_action_notes", "mode_of_action_target_scope")
+              if existing.get(f) != merged.get(f)]
+
+    before, after = _source_versions(existing), _source_versions(record)
+    refreshed = [f"{s} {before[s]} -> {after[s]}"
+                 for s in sorted(after) if s in before and before[s] != after[s]]
+    steady = [f"{s} {after[s]}" for s in sorted(after) if s in before and before[s] == after[s]]
+    changed = ", ".join(moved) or "no seeded field; the merged view moved"
+    if refreshed:
+        return (f"Re-seeded from updated data/raw/ inventories ({'; '.join(refreshed)}). "
+                f"Changed: {changed}.")
+    return (f"Re-seeded with the grounding inventories unchanged"
+            f"{' (' + ', '.join(steady) + ')' if steady else ''}; the change came from a "
+            f"harmonization rule or a source lane, not a ChEBI or ARO refresh. "
+            f"Changed: {changed}.")
+
+
 def merge_with_existing(record: dict, existing: dict) -> dict:
     """Fold a freshly seeded record into the one already on disk.
 
@@ -2707,7 +2781,7 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
             merged,
             curator=SEEDER_CURATOR,
             action="RESEEDED_FROM_SOURCES",
-            changes="Re-seeded from updated data/raw/ inventories",
+            changes=reseed_changes(existing, record, merged, curator_owns_clinical),
         )
     # No de-duplication pass here, deliberately. The `unchanged` guard above is
     # the duplicate suppressor: an event is appended ONLY when a seeded field
