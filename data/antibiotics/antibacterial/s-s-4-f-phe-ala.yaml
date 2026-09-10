@@ -1,0 +1,47 @@
+identifier: antibioticmech:curator-1a87ac78a7
+label: (S,S)-4-F-Phe-Ala
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: An (S,S)-4-fluorophenylalanine-alanine dipeptide with antibacterial and
+  antibiofilm activity against Pseudomonas aeruginosa.
+definition_source: DOI:10.3390/molecules31132341
+synonyms:
+- synonym_text: compound 11b
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: 4-F-Phe-Ala
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@H](NC(=O)[C@@H](N)Cc1ccc(F)cc1)C(=O)O
+  standard_inchi: InChI=1S/C12H15FN2O3/c1-7(12(17)18)15-11(16)10(14)6-8-2-4-9(13)5-3-8/h2-5,7,10H,6,14H2,1H3,(H,15,16)(H,17,18)/t7-,10-/m0/s1
+  standard_inchi_key: HGNZUVLSZXGIAH-XVKPBYJWSA-N
+  molecular_formula: C12H15FN2O3
+  structure_source: https://www.mdpi.com/article/10.3390/molecules31132341/s1
+  retrieved_on: '2026-09-09'
+  charge: 0
+  average_mass: 254.26
+  monoisotopic_mass: 254.10667056
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.3390/molecules31132341#11b
+  source_label: (S,S)-4-F-Phe-Ala
+  minted_identifier: antibioticmech:curator-1a87ac78a7
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.3390/molecules31132341
+    snippet: Dounay et al. reported that compound 11b, (S,S)-4-F-Phe-Ala, inhibited
+      Pseudomonas aeruginosa growth with IC50 and IC90 values of 0.57 and 3.46 ug/mL
+      and inhibited biofilm formation with IC50 and IC90 values of 0.36 and 2.95 ug/mL.
+    notes: Supplementary Scheme S1 and the characterization block for 11b supply the
+      connectivity and stereochemistry used to derive the standard InChI and InChIKey.
+  source_version: '2026-09-09'
+curation_history:
+- timestamp: '2026-09-10T06:58:35Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
