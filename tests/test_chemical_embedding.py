@@ -146,10 +146,8 @@ def test_nonstructure_metadata_does_not_change_structure_hash():
         structural_class="different display class",
         synonyms=("another synonym",),
     )
-    versions = dependency_versions()
-
-    assert structure_hash([original], EmbeddingConfig(), versions) == structure_hash(
-        [edited], EmbeddingConfig(), versions
+    assert structure_hash([original], EmbeddingConfig()) == structure_hash(
+        [edited], EmbeddingConfig()
     )
     assert display_hash([original]) != display_hash([edited])
     assert corpus_fingerprint([original]) != corpus_fingerprint([edited])
@@ -180,6 +178,31 @@ def test_artifact_validation_checks_hashes_coverage_and_quality():
         "artifact identifiers do not exactly match PATHS.tsv order",
         "neighbor_overlap_at_10 is below 0.45",
     ]
+
+
+def test_artifact_dependency_versions_are_provenance_not_staleness_inputs():
+    """A macOS-generated artifact must validate under the locked Linux wheels."""
+    records = [record()]
+    artifact = expected_artifact_metadata(records)
+    artifact.update(
+        {
+            "versions": {
+                "python": "3.12.14",
+                "rdkit": "platform-specific",
+                "numpy": "platform-specific",
+                "scikit_learn": "platform-specific",
+                "umap": "0.5.12",
+            },
+            "records": [{"identifier": records[0].identifier}],
+            "quality": {
+                "trustworthiness_at_10": 0.97,
+                "neighbor_overlap_at_10": 0.49,
+                "zero_distance_stereoisomer_pairs": 0,
+            },
+        }
+    )
+
+    assert validate_artifact(artifact, records) == []
 
 
 def test_serialization_is_compact_deterministic_json():

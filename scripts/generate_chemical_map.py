@@ -59,7 +59,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--check",
         action="store_true",
-        help="Check hashes, versions, coverage, and quality metadata without writing.",
+        help="Check hashes, coverage, and quality metadata without writing.",
     )
     parser.add_argument(
         "--recompute",
