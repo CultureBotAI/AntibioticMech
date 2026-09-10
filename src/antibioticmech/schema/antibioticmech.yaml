@@ -59,7 +59,7 @@ prefixes:
   umbbd.compound: http://eawag-bbd.ethz.ch/servlets/pageservlet?ptype=c&compID=
   ecmdb: http://ecmdb.ca/compounds/
   ymdb: http://www.ymdb.ca/compounds/
-  foodb.food: https://foodb.ca/foods/
+  foodb.compound: https://foodb.ca/compounds/
   glytoucan: https://glytoucan.org/Structures/Glycans/
   glygen: https://glytoucan.org/Structures/Glycans/
   ppdb: https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/
@@ -120,7 +120,7 @@ types:
       cross-references came to carry a prefix the schema did not know while
       every gate stayed green (#96). The alternation is asserted against the
       corpus and the `prefixes:` block by tests/test_xref_identity.py.
-    pattern: '^(ARO|CHEBI|beilstein|bpdb|cas|chembl|chemspider|drugbank|drugcentral|ecmdb|foodb\.food|glygen|glytoucan|gmelin|hmdb|kegg\.compound|kegg\.drug|kegg\.glycan|knapsack|lincs\.smallmolecule|lipidmaps|metacyc\.compound|molbase|patent|pdb\-ccd|pesticides|ppdb|pubchem\.compound|reaxys|umbbd\.compound|vsdb|wikipedia\.en|ymdb):[A-Za-z0-9._-]+$'
+    pattern: '^(ARO|CHEBI|beilstein|bpdb|cas|chembl|chemspider|drugbank|drugcentral|ecmdb|foodb\.compound|glygen|glytoucan|gmelin|hmdb|kegg\.compound|kegg\.drug|kegg\.glycan|knapsack|lincs\.smallmolecule|lipidmaps|metacyc\.compound|molbase|patent|pdb\-ccd|pesticides|ppdb|pubchem\.compound|reaxys|umbbd\.compound|vsdb|wikipedia\.en|ymdb):[A-Za-z0-9._-]+$'
 
 # ================================================================
 # ROOT CLASS — one YAML file per AntibioticRecord

@@ -164,7 +164,6 @@ def _xref_url_templates() -> dict[str, str]:
             if prefix in wanted and prefix not in NO_RESOLVER and str(base).startswith("http")}
 
 
-SCHEMA_PATH = REPO_ROOT / "src" / "antibioticmech" / "schema" / "antibioticmech.yaml"
 XREF_URL_TEMPLATES = _xref_url_templates()
 
 
@@ -220,7 +219,7 @@ def external_iri(identifier: str) -> str | None:
 
 def resolve_curie(curie: str, index: dict[str, dict], root: str) -> dict:
     """Turn a CURIE into a link: internal if it is a record in this corpus,
-    external if its prefix is one of the handful this site resolves,
+    external if its prefix is one this site resolves,
     otherwise a bare, unlinked CURIE."""
     entry = index.get(curie)
     if entry:

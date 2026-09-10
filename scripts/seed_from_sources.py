@@ -186,6 +186,10 @@ XREF_PREFIX = {
     "CAS": "cas",
     "CHEBI": "CHEBI",
     "ARO": "ARO",
+    # ChEBI files its FooDB links as foods, but every accession it carries is
+    # FDB-prefixed, which is FooDB's COMPOUND namespace; the food namespace is
+    # FOOD-prefixed. Linked as foods, all 51 went to a 404 page.
+    "foodb.food": "foodb.compound",
 }
 
 # Namespaces that do NOT identify a chemical structure, and so cannot mean "the
@@ -210,25 +214,24 @@ NON_STRUCTURE_XREF_PREFIXES = {"pdb", "PDB"}
 # field defined as "the same structure", and patent:WO2011108759 really does sit
 # on ametoctradin and silthiofam, two unrelated fungicides.
 #
-# THEY ARE KEPT ANYWAY, for now, because dropping them was the wrong remedy and
-# measuring said so: 96% of the 709 wikipedia.en accessions and 97% of the 1,027
-# patent accessions map to exactly ONE structure in this corpus, so removing
-# 1,800 useful links would have cost 57 false equivalences — and left 7 records
-# with no cross-references at all. Issue #92 asked for such identifiers to be
-# MOVED out of chemical xrefs, not deleted, and the destination is a schema
-# decision this repository has not taken. See #136.
+# They are KEPT, in `document_xrefs`. Dropping them was tried and measuring
+# said it was the wrong remedy: nearly every one of them maps to exactly ONE
+# structure here, so removing them would have cost far more useful links than
+# false equivalences. Issue #92 asked for such identifiers to be MOVED out of
+# chemical xrefs rather than deleted, and #136 is the destination (#136).
 DOCUMENT_XREF_PREFIXES = {"patent", "wikipedia.en"}
 
 # Namespaces that identify a DRUG rather than an exact structure, so one
 # accession legitimately spans a parent compound and its salts and stereoisomers
 # — drugbank:DB00639 covers butoconazole, butoconazole nitrate and both
-# enantiomers. Kept for their utility, and named so the exception is declared
-# rather than discovered. See #134.
+# enantiomers. Kept for their utility, in `drug_xrefs`, so what the field means
+# is visible on the record rather than declared in a constant. See #134.
 # `unii` was here and is not: the corpus contains ZERO unii xrefs, so declaring
 # a granularity exception for it was speculation dressed as documentation, and
 # the grounding check skipped it silently because a prefix that never appears
 # cannot be shown to span anything. If UNII xrefs arrive and do span structures,
-# the undeclared-namespace assertion catches them then, which is the right time.
+# the no-accession-spans-two-structures invariant catches them then, which is
+# the right time.
 DRUG_GRANULARITY_XREF_PREFIXES = {"drugbank", "kegg.drug", "drugcentral"}
 
 # Namespaces where one value identifies one substance, so two sources offering

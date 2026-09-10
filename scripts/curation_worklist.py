@@ -894,7 +894,9 @@ def xref_span_conflict_queue(records: list[dict]) -> list[dict]:
             "source_id": xref,
             "hint": f"also published on {', '.join(others)}; one accession, two structures",
         })
-    out.sort(key=lambda r: (r["source_id"], r["label"].lower()))
+    # The identifier breaks label ties, so two records sharing a label come
+    # out in one order whatever order they were read in.
+    out.sort(key=lambda r: (r["source_id"], r["label"].lower(), r["key"]))
     return out
 
 
