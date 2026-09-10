@@ -50,13 +50,15 @@ chemical_structure:
   monoisotopic_mass: 253.10942
 xrefs:
 - cas:500-92-5
-- drugbank:DB01131
-- drugcentral:2282
 - hmdb:HMDB0015263
 - kegg.compound:C07631
-- kegg.drug:D08428
 - lincs.smallmolecule:LSM-2618
 - reaxys:2811599
+drug_xrefs:
+- drugbank:DB01131
+- drugcentral:2282
+- kegg.drug:D08428
+document_xrefs:
 - wikipedia.en:Proguanil
 source_concepts:
 - source: CHEBI
@@ -77,6 +79,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:43Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

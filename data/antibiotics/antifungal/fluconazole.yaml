@@ -67,18 +67,20 @@ xrefs:
 - ARO:3007508
 - beilstein:4269710
 - cas:86386-73-4
-- drugbank:DB00196
-- drugcentral:1187
 - hmdb:HMDB0014342
-- kegg.drug:D00322
 - lincs.smallmolecule:LSM-2106
-- patent:GB2099818
-- patent:US4404216
 - pdb-ccd:TPF
 - reaxys:7311650
-- wikipedia.en:Fluconazole
 - chembl:CHEMBL106
 - pubchem.compound:3365
+drug_xrefs:
+- drugbank:DB00196
+- drugcentral:1187
+- kegg.drug:D00322
+document_xrefs:
+- patent:GB2099818
+- patent:US4404216
+- wikipedia.en:Fluconazole
 source_concepts:
 - source: ARO
   source_id: ARO:3007508
@@ -3599,6 +3601,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-03T01:55:03Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:29Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

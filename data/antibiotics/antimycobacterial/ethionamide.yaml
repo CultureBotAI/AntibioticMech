@@ -74,17 +74,19 @@ chemical_structure:
 xrefs:
 - ARO:3003474
 - cas:536-33-4
-- drugbank:DB00609
-- drugcentral:1083
 - hmdb:HMDB0014747
 - kegg.compound:C07665
-- kegg.drug:D00591
 - lincs.smallmolecule:LSM-5620
-- patent:GB800250
 - reaxys:116474
-- wikipedia.en:Ethionamide
 - chembl:CHEMBL1441
 - pubchem.compound:2761171
+drug_xrefs:
+- drugbank:DB00609
+- drugcentral:1083
+- kegg.drug:D00591
+document_xrefs:
+- patent:GB800250
+- wikipedia.en:Ethionamide
 source_concepts:
 - source: ARO
   source_id: ARO:3003474
@@ -206,6 +208,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:09Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:30Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

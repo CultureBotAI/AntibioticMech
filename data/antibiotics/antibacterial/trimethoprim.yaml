@@ -55,19 +55,21 @@ xrefs:
 - ARO:3000188
 - beilstein:625127
 - cas:738-70-5
-- drugbank:DB00440
-- drugcentral:2755
 - gmelin:808843
 - hmdb:HMDB0014583
 - kegg.compound:C01965
-- kegg.drug:D00145
 - lincs.smallmolecule:LSM-5246
 - pdb-ccd:TOP
 - reaxys:625127
 - vsdb:1745
-- wikipedia.en:Trimethoprim
 - chembl:CHEMBL22
 - pubchem.compound:5578
+drug_xrefs:
+- drugbank:DB00440
+- drugcentral:2755
+- kegg.drug:D00145
+document_xrefs:
+- wikipedia.en:Trimethoprim
 source_concepts:
 - source: ARO
   source_id: ARO:3000188
@@ -1283,3 +1285,7 @@ curation_history:
   changes: Added a PMID-supported causal graph for trimethoprim inhibition of bacterial
     dihydrofolate reductase and downstream folate-dependent nucleotide biosynthesis.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

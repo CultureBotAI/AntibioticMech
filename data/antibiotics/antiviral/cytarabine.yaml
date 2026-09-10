@@ -63,14 +63,16 @@ chemical_structure:
   monoisotopic_mass: 243.08552
 xrefs:
 - cas:147-94-4
-- drugbank:DB00987
-- drugcentral:770
 - hmdb:HMDB0015122
 - kegg.compound:C02961
-- kegg.drug:D00168
 - lincs.smallmolecule:LSM-5470
 - pdb-ccd:AR3
 - reaxys:89175
+drug_xrefs:
+- drugbank:DB00987
+- drugcentral:770
+- kegg.drug:D00168
+document_xrefs:
 - wikipedia.en:Cytarabine
 source_concepts:
 - source: CHEBI
@@ -688,6 +690,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:22Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:18Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

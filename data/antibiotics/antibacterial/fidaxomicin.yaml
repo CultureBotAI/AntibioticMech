@@ -63,13 +63,15 @@ chemical_structure:
 xrefs:
 - ARO:3001319
 - cas:873857-62-6
-- kegg.drug:D09394
-- patent:US2008269145
-- patent:WO2006085838
 - reaxys:12687773
-- wikipedia.en:Fidaxomicin
 - chembl:CHEMBL1255800
 - pubchem.compound:10034073
+drug_xrefs:
+- kegg.drug:D09394
+document_xrefs:
+- patent:US2008269145
+- patent:WO2006085838
+- wikipedia.en:Fidaxomicin
 source_concepts:
 - source: ARO
   source_id: ARO:3001319
@@ -146,3 +148,7 @@ curation_history:
     FDA provenance, and retained CARD target assertion; curator-confirmed transcription
     inhibition and added the directly bound C. difficile RNAP complex.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

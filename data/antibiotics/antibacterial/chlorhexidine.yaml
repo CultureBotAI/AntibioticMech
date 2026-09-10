@@ -49,16 +49,18 @@ chemical_structure:
 xrefs:
 - ARO:3007039
 - cas:55-56-1
-- drugbank:DB00878
-- drugcentral:597
 - kegg.compound:C06902
-- kegg.drug:D07668
 - lincs.smallmolecule:LSM-5633
 - reaxys:2826432
 - vsdb:1779
-- wikipedia.en:Chlorhexidine
 - chembl:CHEMBL790
 - pubchem.compound:9552079
+drug_xrefs:
+- drugbank:DB00878
+- drugcentral:597
+- kegg.drug:D07668
+document_xrefs:
+- wikipedia.en:Chlorhexidine
 source_concepts:
 - source: ARO
   source_id: ARO:3007039
@@ -168,6 +170,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T21:57:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:25Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

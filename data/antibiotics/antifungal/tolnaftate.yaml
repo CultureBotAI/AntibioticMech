@@ -60,17 +60,19 @@ chemical_structure:
 xrefs:
 - ARO:3009174
 - cas:2398-96-1
-- drugbank:DB00525
-- drugcentral:3617
 - hmdb:HMDB0005005
-- kegg.drug:D00381
 - lincs.smallmolecule:LSM-5554
-- patent:US2010035939
-- patent:WO2010037089
 - reaxys:2752620
-- wikipedia.en:Tolnaftate
 - chembl:CHEMBL83668
 - pubchem.compound:5510
+drug_xrefs:
+- drugbank:DB00525
+- drugcentral:3617
+- kegg.drug:D00381
+document_xrefs:
+- patent:US2010035939
+- patent:WO2010037089
+- wikipedia.en:Tolnaftate
 source_concepts:
 - source: ARO
   source_id: ARO:3009174
@@ -96,6 +98,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:46Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

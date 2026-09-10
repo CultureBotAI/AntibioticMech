@@ -59,9 +59,10 @@ molecular_targets:
     notes: Primary tavaborole tRNA-trapping mechanism study (DOI:10.1126/science.1142189).
 xrefs:
 - cas:174671-46-6
+- reaxys:10657796
+drug_xrefs:
 - drugcentral:4877
 - kegg.drug:D10169
-- reaxys:10657796
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:77942
@@ -313,3 +314,7 @@ curation_history:
     and retained FDA assertions; curator-confirmed protein-synthesis inhibition and
     added the directly observed LeuRS-tRNA editing complex.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

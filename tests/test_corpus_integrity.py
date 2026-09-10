@@ -106,7 +106,8 @@ def test_every_curie_field_is_a_curie(records):
     for path, record in records:
         candidates = [record["identifier"]]
         candidates += record.get("parent_compounds") or []
-        candidates += record.get("xrefs") or []
+        for slot in ("xrefs", "drug_xrefs", "document_xrefs"):
+            candidates += record.get(slot) or []
         candidates += record.get("activity_roles") or []
         for concept in record.get("source_concepts") or []:
             candidates.append(concept["minted_identifier"])

@@ -69,11 +69,13 @@ chemical_structure:
   monoisotopic_mass: 273.06269
 xrefs:
 - cas:106941-25-7
-- drugbank:DB00718
 - kegg.compound:C11277
-- kegg.drug:D02768
 - pdb-ccd:5HG
 - reaxys:3561094
+drug_xrefs:
+- drugbank:DB00718
+- kegg.drug:D02768
+document_xrefs:
 - wikipedia.en:Adefovir
 source_concepts:
 - source: CHEBI
@@ -102,6 +104,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T04:10:19Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:16Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -133,14 +133,16 @@ xrefs:
 - bpdb:2062
 - cas:7681-93-8
 - chemspider:10468784
-- drugbank:DB00826
-- drugcentral:1885
 - foodb.food:FDB002337
 - hmdb:HMDB0014964
 - kegg.compound:C08073
-- kegg.drug:D00884
 - metacyc.compound:CPD-17213
 - pesticides:natamycin
+drug_xrefs:
+- drugbank:DB00826
+- drugcentral:1885
+- kegg.drug:D00884
+document_xrefs:
 - wikipedia.en:Natamycin
 source_concepts:
 - source: CHEBI
@@ -208,3 +210,7 @@ curation_history:
     added the primary-evidence ergosterol target and a curator-owned mode of action
     that explicitly excludes membrane permeabilization.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -110,16 +110,18 @@ xrefs:
 - bpdb:2008
 - cas:97-53-0
 - chemspider:13876103
-- drugcentral:4648
 - foodb.food:FDB012171
 - hmdb:HMDB0005809
 - kegg.compound:C10453
-- kegg.drug:D04117
 - knapsack:C00000619
 - lincs.smallmolecule:LSM-2720
 - metacyc.compound:CPD-6481
 - pdb-ccd:EOL
 - reaxys:1366759
+drug_xrefs:
+- drugcentral:4648
+- kegg.drug:D04117
+document_xrefs:
 - wikipedia.en:Eugenol
 source_concepts:
 - source: CHEBI
@@ -139,6 +141,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:30Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

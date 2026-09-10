@@ -80,14 +80,16 @@ chemical_structure:
 xrefs:
 - ARO:3007754
 - cas:25999-31-9
-- drugbank:DB11423
-- kegg.drug:D04671
 - lincs.smallmolecule:LSM-2214
 - lipidmaps:LMPK09000002
 - pdb-ccd:LSD
-- wikipedia.en:Lasalocid
 - chembl:CHEMBL145347
 - pubchem.compound:5360807
+drug_xrefs:
+- drugbank:DB11423
+- kegg.drug:D04671
+document_xrefs:
+- wikipedia.en:Lasalocid
 source_concepts:
 - source: ARO
   source_id: ARO:3007754
@@ -115,6 +117,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:45Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

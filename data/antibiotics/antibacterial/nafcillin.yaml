@@ -68,18 +68,20 @@ chemical_structure:
 xrefs:
 - ARO:3004018
 - cas:147-52-4
+- kegg.compound:C07250
+- lincs.smallmolecule:LSM-2402
+- reaxys:5405727
+- chembl:CHEMBL1443
+- pubchem.compound:8982
+drug_xrefs:
 - drugbank:DB00607
 - drugcentral:1869
-- kegg.compound:C07250
 - kegg.drug:D08242
-- lincs.smallmolecule:LSM-2402
+document_xrefs:
 - patent:GB880400
 - patent:US3157639
 - patent:US3506645
-- reaxys:5405727
 - wikipedia.en:Nafcillin
-- chembl:CHEMBL1443
-- pubchem.compound:8982
 source_concepts:
 - source: ARO
   source_id: ARO:3004018
@@ -123,6 +125,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:40Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

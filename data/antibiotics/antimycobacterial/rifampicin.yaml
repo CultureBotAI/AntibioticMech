@@ -65,17 +65,19 @@ chemical_structure:
 xrefs:
 - ARO:3000169
 - cas:13292-46-1
-- drugbank:DB01045
 - hmdb:HMDB0015179
 - kegg.compound:C06688
-- kegg.drug:D00211
-- patent:NL6509961
-- patent:US3342810
 - pdb-ccd:RFP
 - reaxys:5723476
-- wikipedia.en:Rifampicin
 - chembl:CHEMBL374478
 - pubchem.compound:135398735
+drug_xrefs:
+- drugbank:DB01045
+- kegg.drug:D00211
+document_xrefs:
+- patent:NL6509961
+- patent:US3342810
+- wikipedia.en:Rifampicin
 source_concepts:
 - source: ARO
   source_id: ARO:3000169
@@ -884,3 +886,7 @@ curation_history:
     the ambiguous seeded MULTIPLE mode with transcription inhibition and added the
     directly bound RNAP complex.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:17Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

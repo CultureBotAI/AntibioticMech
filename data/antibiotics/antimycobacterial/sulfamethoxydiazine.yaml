@@ -82,14 +82,16 @@ chemical_structure:
   monoisotopic_mass: 280.06301
 xrefs:
 - cas:651-06-9
-- drugcentral:2511
 - gmelin:2615207
-- kegg.drug:D02517
 - lincs.smallmolecule:LSM-6683
+- reaxys:621130
+drug_xrefs:
+- drugcentral:2511
+- kegg.drug:D02517
+document_xrefs:
 - patent:BE633513
 - patent:DE1101428
 - patent:US3214335
-- reaxys:621130
 - wikipedia.en:Sulfameter
 source_concepts:
 - source: CHEBI
@@ -141,6 +143,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:31Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

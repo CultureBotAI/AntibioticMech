@@ -74,7 +74,6 @@ chemical_structure:
 xrefs:
 - beilstein:1754556
 - cas:334-48-5
-- drugbank:DB03600
 - ecmdb:ECMDB21204
 - gmelin:69184
 - hmdb:HMDB0000511
@@ -84,6 +83,8 @@ xrefs:
 - metacyc.compound:CPD-3617
 - pdb-ccd:DKA
 - ymdb:YMDB00677
+drug_xrefs:
+- drugbank:DB03600
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:30813
@@ -102,6 +103,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:20Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

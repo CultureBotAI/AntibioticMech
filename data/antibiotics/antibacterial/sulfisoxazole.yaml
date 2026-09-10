@@ -129,16 +129,18 @@ xrefs:
 - ARO:3000330
 - beilstein:263871
 - cas:127-69-5
-- drugbank:DB00263
-- drugcentral:2529
 - gmelin:864477
 - kegg.compound:C07318
-- kegg.drug:D00450
 - lincs.smallmolecule:LSM-3120
-- patent:US2430094
-- wikipedia.en:Sulfisoxazole
 - chembl:CHEMBL453
 - pubchem.compound:5344
+drug_xrefs:
+- drugbank:DB00263
+- drugcentral:2529
+- kegg.drug:D00450
+document_xrefs:
+- patent:US2430094
+- wikipedia.en:Sulfisoxazole
 source_concepts:
 - source: ARO
   source_id: ARO:3000330
@@ -470,6 +472,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:59:58Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:11Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -75,16 +75,18 @@ chemical_structure:
 xrefs:
 - beilstein:1101094
 - cas:123-99-9
-- drugbank:DB00548
-- drugcentral:270
 - gmelin:261342
 - hmdb:HMDB0000784
 - kegg.compound:C08261
-- kegg.drug:D03034
 - lipidmaps:LMFA01170054
 - metacyc.compound:CPD0-1265
 - pdb-ccd:AZ1
 - reaxys:1101094
+drug_xrefs:
+- drugbank:DB00548
+- drugcentral:270
+- kegg.drug:D03034
+document_xrefs:
 - wikipedia.en:Azelaic_Acid
 source_concepts:
 - source: CHEBI
@@ -282,6 +284,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:29Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:30Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

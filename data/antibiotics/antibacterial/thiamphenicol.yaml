@@ -45,15 +45,16 @@ chemical_structure:
 xrefs:
 - ARO:3000456
 - cas:15318-45-3
-- drugbank:DB08621
-- drugcentral:2624
 - kegg.compound:C12853
-- kegg.drug:D01407
 - lincs.smallmolecule:LSM-5858
 - pdb-ccd:TH8
 - vsdb:1911
 - chembl:CHEMBL1236282
 - pubchem.compound:27200
+drug_xrefs:
+- drugbank:DB08621
+- drugcentral:2624
+- kegg.drug:D01407
 source_concepts:
 - source: ARO
   source_id: ARO:3000456
@@ -296,6 +297,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:05Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:22Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

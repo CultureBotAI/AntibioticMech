@@ -65,9 +65,11 @@ molecular_targets:
 xrefs:
 - cas:1611493-60-7
 - chemspider:44208822
+- pdb-ccd:KLQ
+drug_xrefs:
 - drugbank:DB11799
 - kegg.drug:D10909
-- pdb-ccd:KLQ
+document_xrefs:
 - wikipedia.en:Bictegravir
 source_concepts:
 - source: CHEBI
@@ -111,3 +113,7 @@ curation_history:
     HIV-1 integrase strand-transfer inhibition and added the measured target association
     and selected target-alteration resistance with primary evidence.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:15Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

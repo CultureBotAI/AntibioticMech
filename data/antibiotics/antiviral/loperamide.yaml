@@ -40,15 +40,17 @@ chemical_structure:
   monoisotopic_mass: 476.22306
 xrefs:
 - cas:53179-11-6
-- drugbank:DB00836
-- drugcentral:1599
 - hmdb:HMDB0004999
 - kegg.compound:C07080
-- kegg.drug:D08144
 - lincs.smallmolecule:LSM-3365
+- reaxys:1558273
+drug_xrefs:
+- drugbank:DB00836
+- drugcentral:1599
+- kegg.drug:D08144
+document_xrefs:
 - patent:FR2100711
 - patent:US3714159
-- reaxys:1558273
 - wikipedia.en:Loperamide
 source_concepts:
 - source: CHEBI
@@ -80,6 +82,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-06T06:14:10Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:35Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

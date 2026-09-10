@@ -56,17 +56,19 @@ xrefs:
 - ARO:3007687
 - beilstein:763034
 - cas:30516-87-1
-- drugbank:DB00495
-- drugcentral:2861
 - kegg.compound:C07210
-- kegg.drug:D00413
 - lincs.smallmolecule:LSM-5806
 - metacyc.compound:CPD-15110
-- patent:US4724232
 - pdb-ccd:AZZ
-- wikipedia.en:Zidovudine
 - chembl:CHEMBL129
 - pubchem.compound:35370
+drug_xrefs:
+- drugbank:DB00495
+- drugcentral:2861
+- kegg.drug:D00413
+document_xrefs:
+- patent:US4724232
+- wikipedia.en:Zidovudine
 source_concepts:
 - source: ARO
   source_id: ARO:3007687
@@ -503,6 +505,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:18Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:11Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

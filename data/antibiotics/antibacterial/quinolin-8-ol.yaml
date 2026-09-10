@@ -48,13 +48,15 @@ chemical_structure:
   monoisotopic_mass: 145.05276
 xrefs:
 - cas:148-24-3
-- drugcentral:3290
 - kegg.compound:C19434
-- kegg.drug:D05321
 - metacyc.compound:8-HYDROXYQUINOLINE
 - pdb-ccd:HQY
 - ppdb:1354
 - reaxys:114512
+drug_xrefs:
+- drugcentral:3290
+- kegg.drug:D05321
+document_xrefs:
 - wikipedia.en:8-Hydroxyquinoline
 source_concepts:
 - source: CHEBI
@@ -75,6 +77,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:30Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

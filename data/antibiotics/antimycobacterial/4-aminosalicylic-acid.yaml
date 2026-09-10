@@ -54,21 +54,23 @@ chemical_structure:
 xrefs:
 - ARO:3004019
 - cas:65-49-6
-- drugbank:DB00233
-- drugcentral:2050
 - gmelin:306153
 - hmdb:HMDB0014378
 - kegg.compound:C02518
-- kegg.drug:D00162
 - lincs.smallmolecule:LSM-5862
+- pdb-ccd:BHA
+- reaxys:473071
+- chembl:CHEMBL1169
+- pubchem.compound:4649
+drug_xrefs:
+- drugbank:DB00233
+- drugcentral:2050
+- kegg.drug:D00162
+document_xrefs:
 - patent:DE50835
 - patent:US2844625
 - patent:US427564
-- pdb-ccd:BHA
-- reaxys:473071
 - wikipedia.en:Aminosalicylic_Acid
-- chembl:CHEMBL1169
-- pubchem.compound:4649
 source_concepts:
 - source: ARO
   source_id: ARO:3004019
@@ -150,6 +152,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:21Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

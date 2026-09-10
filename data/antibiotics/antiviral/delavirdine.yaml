@@ -58,13 +58,15 @@ chemical_structure:
   monoisotopic_mass: 456.19436
 xrefs:
 - cas:136817-59-9
-- drugbank:DB00705
-- drugcentral:799
 - kegg.compound:C06941
-- kegg.drug:D07782
-- patent:WO9109849
 - pdb-ccd:SPP
 - reaxys:6356813
+drug_xrefs:
+- drugbank:DB00705
+- drugcentral:799
+- kegg.drug:D07782
+document_xrefs:
+- patent:WO9109849
 - wikipedia.en:Delavirdine
 source_concepts:
 - source: CHEBI
@@ -409,3 +411,7 @@ curation_history:
   changes: Added a PMID-supported causal graph for delavirdine inhibition of HIV-1
     reverse transcriptase.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:11Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

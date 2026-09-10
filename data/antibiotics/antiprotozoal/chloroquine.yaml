@@ -70,17 +70,18 @@ chemical_structure:
   monoisotopic_mass: 319.18153
 xrefs:
 - cas:54-05-7
-- drugbank:DB00608
-- drugcentral:607
 - gmelin:781126
 - hmdb:HMDB0014746
 - kegg.compound:C07625
-- kegg.drug:D02366
 - lincs.smallmolecule:LSM-1901
+- reaxys:482809
+drug_xrefs:
+- drugbank:DB00608
+- drugcentral:607
+- kegg.drug:D02366
+document_xrefs:
 - patent:DE683692
 - patent:US2233970
-- pdb-ccd:CLQ
-- reaxys:482809
 - wikipedia.en:Chloroquine
 source_concepts:
 - source: CHEBI
@@ -101,6 +102,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:25Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

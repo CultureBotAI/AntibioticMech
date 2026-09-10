@@ -68,15 +68,17 @@ chemical_structure:
 xrefs:
 - ARO:0000060
 - cas:72558-82-8
-- drugbank:DB00438
 - kegg.compound:C06889
-- kegg.drug:D07654
-- patent:DE2921316
-- patent:US4258041
 - reaxys:5475149
-- wikipedia.en:Ceftazidime
 - chembl:CHEMBL44354
 - pubchem.compound:5481173
+drug_xrefs:
+- drugbank:DB00438
+- kegg.drug:D07654
+document_xrefs:
+- patent:DE2921316
+- patent:US4258041
+- wikipedia.en:Ceftazidime
 source_concepts:
 - source: ARO
   source_id: ARO:0000060
@@ -1931,6 +1933,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:06Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:24Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

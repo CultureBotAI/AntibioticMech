@@ -88,19 +88,21 @@ xrefs:
 - ARO:3000704
 - beilstein:945586
 - cas:153-61-7
-- drugbank:DB00456
-- drugcentral:574
 - hmdb:HMDB0014599
 - kegg.compound:C07761
-- kegg.drug:D07635
 - lincs.smallmolecule:LSM-15184
-- patent:FR1384197
-- patent:US3218318
 - pdb-ccd:CLS
 - reaxys:945586
-- wikipedia.en:Cephalothin
 - chembl:CHEMBL617
 - pubchem.compound:6024
+drug_xrefs:
+- drugbank:DB00456
+- drugcentral:574
+- kegg.drug:D07635
+document_xrefs:
+- patent:FR1384197
+- patent:US3218318
+- wikipedia.en:Cephalothin
 source_concepts:
 - source: ARO
   source_id: ARO:3000704
@@ -338,6 +340,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:59:59Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:11Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

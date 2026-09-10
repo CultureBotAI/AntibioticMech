@@ -104,24 +104,26 @@ chemical_structure:
 xrefs:
 - ARO:0000051
 - cas:60-54-8
-- drugbank:DB00759
-- drugcentral:2611
 - gmelin:1103368
 - kegg.compound:C06570
-- kegg.drug:D00201
 - metacyc.compound:CPD0-1414
+- pdb-ccd:TAC
+- reaxys:2230417
+- vsdb:1739
+- chembl:CHEMBL1440
+- pubchem.compound:54675776
+drug_xrefs:
+- drugbank:DB00759
+- drugcentral:2611
+- kegg.drug:D00201
+document_xrefs:
 - patent:US2699054
 - patent:US2712517
 - patent:US2886595
 - patent:US3005023
 - patent:US3019173
 - patent:US3301899
-- pdb-ccd:TAC
-- reaxys:2230417
-- vsdb:1739
 - wikipedia.en:Tetracycline
-- chembl:CHEMBL1440
-- pubchem.compound:54675776
 source_concepts:
 - source: ARO
   source_id: ARO:0000051
@@ -1010,3 +1012,7 @@ curation_history:
     of 116 retained CARD resistance assertions; curator-confirmed protein synthesis
     inhibition and added the directly bound 30S target.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:17Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

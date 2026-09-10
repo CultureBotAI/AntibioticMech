@@ -79,19 +79,21 @@ chemical_structure:
 xrefs:
 - ARO:3000661
 - cas:389-08-2
-- drugbank:DB00779
-- drugcentral:1875
 - kegg.compound:C05079
-- kegg.drug:D00183
 - lincs.smallmolecule:LSM-5590
-- patent:BE612258
-- patent:US3590036
 - pdb-ccd:NIX
 - reaxys:750515
 - vsdb:1880
-- wikipedia.en:Nalidixic_Acid
 - chembl:CHEMBL5
 - pubchem.compound:4421
+drug_xrefs:
+- drugbank:DB00779
+- drugcentral:1875
+- kegg.drug:D00183
+document_xrefs:
+- patent:BE612258
+- patent:US3590036
+- wikipedia.en:Nalidixic_Acid
 source_concepts:
 - source: ARO
   source_id: ARO:3000661
@@ -739,3 +741,7 @@ curation_history:
   changes: Added a PMID-supported causal graph for nalidixic acid poisoning of bacterial
     DNA gyrase and marked the coarse target scope as curator-reviewed.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:10Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

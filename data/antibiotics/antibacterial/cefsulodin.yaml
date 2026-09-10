@@ -47,12 +47,14 @@ chemical_structure:
 xrefs:
 - ARO:3004727
 - cas:62587-73-9
-- drugcentral:558
 - kegg.compound:C11253
-- kegg.drug:D07653
-- wikipedia.en:Cefsulodin
 - chembl:CHEMBL3351077
 - pubchem.compound:5284530
+drug_xrefs:
+- drugcentral:558
+- kegg.drug:D07653
+document_xrefs:
+- wikipedia.en:Cefsulodin
 source_concepts:
 - source: ARO
   source_id: ARO:3004727
@@ -80,6 +82,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:31Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:24Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

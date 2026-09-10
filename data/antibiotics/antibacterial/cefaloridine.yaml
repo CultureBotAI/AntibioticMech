@@ -83,13 +83,15 @@ chemical_structure:
 xrefs:
 - ARO:3004129
 - cas:50-59-9
-- drugcentral:573
 - kegg.compound:C11754
-- kegg.drug:D01075
 - reaxys:4166301
-- wikipedia.en:Cephaloridine
 - chembl:CHEMBL316157
 - pubchem.compound:5773
+drug_xrefs:
+- drugcentral:573
+- kegg.drug:D01075
+document_xrefs:
+- wikipedia.en:Cephaloridine
 source_concepts:
 - source: ARO
   source_id: ARO:3004129
@@ -146,6 +148,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:25Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -48,15 +48,17 @@ chemical_structure:
   monoisotopic_mass: 326.35487
 xrefs:
 - cas:661-19-8
-- drugbank:DB00632
-- drugcentral:940
 - foodb.food:FDB007105
 - hmdb:HMDB0014770
 - knapsack:C00030805
 - lipidmaps:LMFA05000008
+- reaxys:1770470
+drug_xrefs:
+- drugbank:DB00632
+- drugcentral:940
+document_xrefs:
 - patent:GB2484201
 - patent:US2011146702
-- reaxys:1770470
 - wikipedia.en:1-Docosanol
 source_concepts:
 - source: CHEBI
@@ -275,6 +277,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:23Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:20Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

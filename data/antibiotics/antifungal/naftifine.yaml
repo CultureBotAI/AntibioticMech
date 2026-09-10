@@ -53,17 +53,19 @@ chemical_structure:
 xrefs:
 - ARO:3007506
 - cas:65472-88-0
-- drugbank:DB00735
-- drugcentral:1872
 - hmdb:HMDB0014873
 - kegg.compound:C08071
-- kegg.drug:D08245
-- patent:BE853976
-- patent:US4282251
 - reaxys:2983617
-- wikipedia.en:Naftifine
 - chembl:CHEMBL626
 - pubchem.compound:47641
+drug_xrefs:
+- drugbank:DB00735
+- drugcentral:1872
+- kegg.drug:D08245
+document_xrefs:
+- patent:BE853976
+- patent:US4282251
+- wikipedia.en:Naftifine
 source_concepts:
 - source: ARO
   source_id: ARO:3007506
@@ -93,6 +95,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T20:07:31Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:40Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

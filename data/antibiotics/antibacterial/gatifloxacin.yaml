@@ -70,18 +70,20 @@ chemical_structure:
 xrefs:
 - ARO:3000659
 - cas:112811-59-3
-- drugbank:DB01044
-- drugcentral:1280
 - gmelin:2281206
 - kegg.compound:C07661
-- kegg.drug:D08011
 - lincs.smallmolecule:LSM-5139
-- patent:EP230295
-- patent:US4980470
 - reaxys:7445861
-- wikipedia.en:Gatifloxacin
 - chembl:CHEMBL31
 - pubchem.compound:5379
+drug_xrefs:
+- drugbank:DB01044
+- drugcentral:1280
+- kegg.drug:D08011
+document_xrefs:
+- patent:EP230295
+- patent:US4980470
+- wikipedia.en:Gatifloxacin
 source_concepts:
 - source: ARO
   source_id: ARO:3000659
@@ -282,6 +284,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:10Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:31Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

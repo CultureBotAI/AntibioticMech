@@ -49,11 +49,13 @@ xrefs:
 - beilstein:5206722
 - cas:527-75-3
 - kegg.compound:C06653
-- kegg.drug:D03098
 - lipidmaps:LMPK04000012
 - metacyc.compound:CPD-13805
-- patent:CN101104631
 - reaxys:74652
+drug_xrefs:
+- kegg.drug:D03098
+document_xrefs:
+- patent:CN101104631
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:28196
@@ -101,6 +103,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T05:59:00Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:18Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

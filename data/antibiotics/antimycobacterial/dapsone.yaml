@@ -106,17 +106,19 @@ chemical_structure:
 xrefs:
 - ARO:3003412
 - cas:80-08-0
-- drugbank:DB00250
-- drugcentral:782
 - hmdb:HMDB0014395
 - kegg.compound:C07666
-- kegg.drug:D00592
 - lincs.smallmolecule:LSM-5714
-- patent:FR829926
 - reaxys:788055
-- wikipedia.en:Dapsone
 - chembl:CHEMBL1043
 - pubchem.compound:2955
+drug_xrefs:
+- drugbank:DB00250
+- drugcentral:782
+- kegg.drug:D00592
+document_xrefs:
+- patent:FR829926
+- wikipedia.en:Dapsone
 source_concepts:
 - source: ARO
   source_id: ARO:3003412
@@ -980,6 +982,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:08Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:28Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

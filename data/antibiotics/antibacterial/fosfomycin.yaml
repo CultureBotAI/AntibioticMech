@@ -80,16 +80,16 @@ chemical_structure:
 xrefs:
 - ARO:0000025
 - cas:23155-02-4
-- drugbank:DB00828
-- drugcentral:1243
 - kegg.compound:C06454
-- kegg.drug:D04253
 - knapsack:C00000789
-- metacyc.compound:CPD0-1113
 - pdb-ccd:FCN
 - reaxys:1680831
 - chembl:CHEMBL1757
 - pubchem.compound:73491
+drug_xrefs:
+- drugbank:DB00828
+- drugcentral:1243
+- kegg.drug:D04253
 source_concepts:
 - source: ARO
   source_id: ARO:0000025
@@ -547,6 +547,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T15:31:55Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:19Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

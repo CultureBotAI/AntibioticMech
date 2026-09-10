@@ -61,10 +61,11 @@ chemical_structure:
   monoisotopic_mass: 515.22408
 xrefs:
 - cas:908-54-3
-- drugbank:DB03608
-- patent:US2838485
-- pdb-ccd:BRN
 - reaxys:3841323
+drug_xrefs:
+- drugbank:DB03608
+document_xrefs:
+- patent:US2838485
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:82615
@@ -83,6 +84,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:42Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

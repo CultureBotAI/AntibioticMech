@@ -38,12 +38,14 @@ chemical_structure:
   monoisotopic_mass: 306.25588
 xrefs:
 - cas:64218-02-6
-- drugcentral:2222
 - kegg.compound:C13273
-- kegg.drug:D01803
 - metacyc.compound:CPD-11423
-- patent:US4059641
 - reaxys:2217548
+drug_xrefs:
+- drugcentral:2222
+- kegg.drug:D01803
+document_xrefs:
+- patent:US4059641
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:32023
@@ -62,6 +64,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:21Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -76,17 +76,19 @@ chemical_structure:
   monoisotopic_mass: 255.01362
 xrefs:
 - cas:72-14-0
-- drugbank:DB06147
-- drugcentral:2527
 - gmelin:218965
 - hmdb:HMDB0015619
 - kegg.compound:C11169
-- kegg.drug:D01047
 - lincs.smallmolecule:LSM-5327
+- reaxys:226178
+drug_xrefs:
+- drugbank:DB06147
+- drugcentral:2527
+- kegg.drug:D01047
+document_xrefs:
 - patent:GB517272
 - patent:US2362087
 - patent:US4665100
-- reaxys:226178
 - wikipedia.en:Sulfathiazole
 source_concepts:
 - source: CHEBI
@@ -106,6 +108,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:45Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -73,21 +73,23 @@ chemical_structure:
 xrefs:
 - ARO:3000324
 - cas:68-35-9
-- drugbank:DB00359
-- drugcentral:2500
 - gmelin:219136
 - hmdb:HMDB0014503
 - kegg.compound:C07658
-- kegg.drug:D00587
 - lincs.smallmolecule:LSM-5457
+- reaxys:235192
+- vsdb:1740
+- chembl:CHEMBL439
+- pubchem.compound:5215
+drug_xrefs:
+- drugbank:DB00359
+- drugcentral:2500
+- kegg.drug:D00587
+document_xrefs:
 - patent:GB557055
 - patent:US2407966
 - patent:US2410793
-- reaxys:235192
-- vsdb:1740
 - wikipedia.en:Sulfadiazine
-- chembl:CHEMBL439
-- pubchem.compound:5215
 source_concepts:
 - source: ARO
   source_id: ARO:3000324
@@ -267,6 +269,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:20Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:45Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

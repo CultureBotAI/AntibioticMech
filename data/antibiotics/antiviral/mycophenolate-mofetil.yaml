@@ -47,12 +47,14 @@ chemical_structure:
   monoisotopic_mass: 433.21005
 xrefs:
 - cas:128794-94-5
-- drugbank:DB00688
-- drugcentral:1859
 - hmdb:HMDB0014826
 - kegg.compound:C07908
-- kegg.drug:D00752
 - reaxys:7500599
+drug_xrefs:
+- drugbank:DB00688
+- drugcentral:1859
+- kegg.drug:D00752
+document_xrefs:
 - wikipedia.en:Mycophenolate_mofetil
 source_concepts:
 - source: CHEBI
@@ -1048,6 +1050,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:44Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

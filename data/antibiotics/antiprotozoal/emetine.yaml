@@ -74,13 +74,15 @@ molecular_targets:
 xrefs:
 - beilstein:6253162
 - cas:483-18-1
-- drugbank:DB13393
-- drugcentral:1001
 - kegg.compound:C09421
 - knapsack:C00001849
 - lincs.smallmolecule:LSM-2041
 - metacyc.compound:CPD-14817
 - reaxys:100834
+drug_xrefs:
+- drugbank:DB13393
+- drugcentral:1001
+document_xrefs:
 - wikipedia.en:Emetine
 source_concepts:
 - source: CHEBI
@@ -116,3 +118,7 @@ curation_history:
     and antiprotozoal filing class; curator-confirmed protein-synthesis inhibition
     and added the directly observed P. falciparum 80S ribosome target.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

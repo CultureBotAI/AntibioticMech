@@ -69,20 +69,22 @@ chemical_structure:
 xrefs:
 - ARO:3000158
 - cas:83905-01-5
-- drugbank:DB00207
-- drugcentral:276
 - hmdb:HMDB0014352
 - kegg.compound:C06838
-- kegg.drug:D07486
 - lincs.smallmolecule:LSM-5821
-- patent:BE892357
-- patent:US4517359
 - pdb-ccd:ZIT
 - reaxys:5387583
 - reaxys:8820027
-- wikipedia.en:Azithromycin
 - chembl:CHEMBL529
 - pubchem.compound:447043
+drug_xrefs:
+- drugbank:DB00207
+- drugcentral:276
+- kegg.drug:D07486
+document_xrefs:
+- patent:BE892357
+- patent:US4517359
+- wikipedia.en:Azithromycin
 source_concepts:
 - source: ARO
   source_id: ARO:3000158
@@ -513,6 +515,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:04Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:19Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

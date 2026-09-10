@@ -42,11 +42,12 @@ chemical_structure:
 xrefs:
 - beilstein:61646
 - cas:4696-76-8
-- drugcentral:1520
 - kegg.compound:C00825
-- kegg.drug:D07497
 - knapsack:C00018692
 - pdb-ccd:9CS
+drug_xrefs:
+- drugcentral:1520
+- kegg.drug:D07497
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:28098
@@ -65,6 +66,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:29Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:18Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

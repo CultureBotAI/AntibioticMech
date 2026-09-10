@@ -81,19 +81,21 @@ chemical_structure:
 xrefs:
 - ARO:0000013
 - cas:37517-28-5
-- drugbank:DB00479
-- drugcentral:157
 - hmdb:HMDB0014622
 - kegg.compound:C06820
-- kegg.drug:D02543
 - lincs.smallmolecule:LSM-5935
 - metacyc.compound:CPD-14197
-- patent:DE2234315
-- patent:US3781268
 - reaxys:5915117
-- wikipedia.en:Amikacin
 - chembl:CHEMBL177
 - pubchem.compound:37768
+drug_xrefs:
+- drugbank:DB00479
+- drugcentral:157
+- kegg.drug:D02543
+document_xrefs:
+- patent:DE2234315
+- patent:US3781268
+- wikipedia.en:Amikacin
 source_concepts:
 - source: ARO
   source_id: ARO:0000013
@@ -856,6 +858,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:02Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

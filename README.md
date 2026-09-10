@@ -130,7 +130,8 @@ output in the pinned local environment.
 `src/antibioticmech/schema/antibioticmech.yaml` defines:
 
 - **AntibioticRecord** — root class, one per YAML file: `identifier`, `label`,
-  `definition`, `synonyms`, `parent_compounds`, `xrefs`, `antimicrobial_class`,
+  `definition`, `synonyms`, `parent_compounds`, `xrefs`, `drug_xrefs`,
+`document_xrefs`, `antimicrobial_class`,
   `activity_roles`, `structural_class`, `chemical_structure`, `source_concepts`,
   `grounding_status`, `curation_status`, `curation_history`.
 - **ChemicalStructure** — SMILES, standard InChI, InChIKey, formula, charge,
@@ -172,7 +173,7 @@ mode-of-action and target vocabularies cover both kinds.
 statistics block in this README. `just verify-corpus` rebuilds the corpus from
 `data/raw/` plus `curation/curator_antibiotics.tsv` and rejects
 drift **in the fields the seeder owns** — identity, label, definition, synonyms,
-parents, xrefs, class, roles, structural class, structure, source concepts,
+parents, the three xref slots, class, roles, structural class, structure, source concepts,
 grounding status, and the CARD-derived mechanism items.
 
 It does **not** compare curated fields, by design, or curation would make the

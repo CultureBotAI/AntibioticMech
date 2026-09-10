@@ -90,18 +90,20 @@ chemical_structure:
 xrefs:
 - ARO:0000065
 - cas:81103-11-9
-- drugbank:DB01211
-- drugcentral:668
 - kegg.compound:C06912
-- kegg.drug:D00276
 - lincs.smallmolecule:LSM-5606
 - lipidmaps:LMPK04000014
-- patent:EP41355
-- patent:US4331803
 - pdb-ccd:CTY
 - reaxys:3581974
 - chembl:CHEMBL1741
 - pubchem.compound:84029
+drug_xrefs:
+- drugbank:DB01211
+- drugcentral:668
+- kegg.drug:D00276
+document_xrefs:
+- patent:EP41355
+- patent:US4331803
 source_concepts:
 - source: ARO
   source_id: ARO:0000065
@@ -1499,3 +1501,7 @@ curation_history:
   changes: Added a PMID-supported causal graph for clarithromycin binding to the bacterial
     50S macrolide site.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:26Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

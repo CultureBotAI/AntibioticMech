@@ -51,16 +51,18 @@ chemical_structure:
 xrefs:
 - bpdb:1359
 - cas:77-92-9
-- drugbank:DB04272
-- drugcentral:666
 - gmelin:4240
 - hmdb:HMDB0000094
 - kegg.compound:C00158
-- kegg.drug:D00037
 - knapsack:C00007619
 - metacyc.compound:CIT
 - pdb-ccd:CIT
 - reaxys:782061
+drug_xrefs:
+- drugbank:DB04272
+- drugcentral:666
+- kegg.drug:D00037
+document_xrefs:
 - wikipedia.en:Citric_Acid
 source_concepts:
 - source: CHEBI
@@ -80,6 +82,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:20Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -70,21 +70,23 @@ xrefs:
 - ARO:3009432
 - beilstein:611403
 - cas:148-79-8
-- drugbank:DB00730
-- drugcentral:2621
 - hmdb:HMDB0014868
-- kegg.drug:D00372
 - lincs.smallmolecule:LSM-3741
 - metacyc.compound:THIABENDAZOLE
-- patent:US3017415
 - pdb-ccd:TMG
 - pesticides:thiabendazole
 - ppdb:629
 - reaxys:611403
 - vsdb:629
-- wikipedia.en:Thiabendazole
 - chembl:CHEMBL625
 - pubchem.compound:5430
+drug_xrefs:
+- drugbank:DB00730
+- drugcentral:2621
+- kegg.drug:D00372
+document_xrefs:
+- patent:US3017415
+- wikipedia.en:Thiabendazole
 source_concepts:
 - source: ARO
   source_id: ARO:3009432
@@ -330,6 +332,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-03T01:55:03Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:29Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -66,19 +66,21 @@ chemical_structure:
 xrefs:
 - ARO:0000039
 - cas:1695-77-8
-- drugbank:DB00919
-- drugcentral:2468
 - hmdb:HMDB0015055
 - kegg.compound:C02078
-- kegg.drug:D08526
 - lincs.smallmolecule:LSM-5298
-- patent:US4203903
-- patent:WO2005041984
 - pdb-ccd:SCM
 - reaxys:2171701
-- wikipedia.en:Spectinomycin
 - chembl:CHEMBL1167
 - pubchem.compound:15541
+drug_xrefs:
+- drugbank:DB00919
+- drugcentral:2468
+- kegg.drug:D08526
+document_xrefs:
+- patent:US4203903
+- patent:WO2005041984
+- wikipedia.en:Spectinomycin
 source_concepts:
 - source: ARO
   source_id: ARO:0000039
@@ -492,3 +494,7 @@ curation_history:
     and provenance of 48 retained CARD resistance assertions; added protein-synthesis
     inhibition and the directly observed 30S head-swivel mechanism.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

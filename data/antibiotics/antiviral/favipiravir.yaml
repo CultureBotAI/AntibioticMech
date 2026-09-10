@@ -85,10 +85,12 @@ molecular_targets:
 xrefs:
 - cas:259793-96-9
 - chemspider:431002
+- reaxys:9697246
+drug_xrefs:
 - drugbank:DB12466
 - drugcentral:4887
 - kegg.drug:D09537
-- reaxys:9697246
+document_xrefs:
 - wikipedia.en:Favipiravir
 source_concepts:
 - source: CHEBI
@@ -131,3 +133,7 @@ curation_history:
     and filing class; curator-confirmed viral-polymerase inhibition and added the
     measured influenza RdRp association with an explicit active-metabolite boundary.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:12Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

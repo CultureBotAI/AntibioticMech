@@ -50,13 +50,15 @@ chemical_structure:
 xrefs:
 - ARO:3004726
 - cas:84957-29-9
-- drugcentral:553
 - kegg.compound:C11199
-- kegg.drug:D07649
 - reaxys:4241500
-- wikipedia.en:Cefpirome
 - chembl:CHEMBL65794
 - pubchem.compound:5479539
+drug_xrefs:
+- drugcentral:553
+- kegg.drug:D07649
+document_xrefs:
+- wikipedia.en:Cefpirome
 source_concepts:
 - source: ARO
   source_id: ARO:3004726
@@ -97,6 +99,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:31Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:24Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

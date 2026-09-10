@@ -72,15 +72,17 @@ xrefs:
 - ARO:3009188
 - cas:66-81-9
 - kegg.compound:C06685
-- kegg.drug:D03625
 - knapsack:C00047211
 - lincs.smallmolecule:LSM-2791
 - pdb-ccd:3HE
 - ppdb:1680
 - reaxys:88868
-- wikipedia.en:Cycloheximide
 - chembl:CHEMBL123292
 - pubchem.compound:2900
+drug_xrefs:
+- kegg.drug:D03625
+document_xrefs:
+- wikipedia.en:Cycloheximide
 source_concepts:
 - source: ARO
   source_id: ARO:3009188
@@ -209,6 +211,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-03T01:54:57Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

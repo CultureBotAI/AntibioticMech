@@ -53,16 +53,18 @@ chemical_structure:
   monoisotopic_mass: 315.02739
 xrefs:
 - cas:154598-52-4
-- drugbank:DB00625
-- drugcentral:989
 - hmdb:HMDB0014763
 - kegg.compound:C08088
-- kegg.drug:D00896
 - lincs.smallmolecule:LSM-5526
-- patent:EP582455
-- patent:US5519021
 - pdb-ccd:EFZ
 - reaxys:7387333
+drug_xrefs:
+- drugbank:DB00625
+- drugcentral:989
+- kegg.drug:D00896
+document_xrefs:
+- patent:EP582455
+- patent:US5519021
 - wikipedia.en:Efavirenz
 source_concepts:
 - source: CHEBI
@@ -429,6 +431,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:18Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:11Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -56,16 +56,18 @@ chemical_structure:
   monoisotopic_mass: 284.13472
 xrefs:
 - cas:60-87-7
-- drugbank:DB01069
-- drugcentral:2286
 - gmelin:337077
 - hmdb:HMDB0015202
 - kegg.compound:C07404
-- kegg.drug:D00494
 - lincs.smallmolecule:LSM-4440
+- reaxys:88554
+drug_xrefs:
+- drugbank:DB01069
+- drugcentral:2286
+- kegg.drug:D00494
+document_xrefs:
 - patent:US2530451
 - patent:US2607773
-- reaxys:88554
 - wikipedia.en:Promethazine
 source_concepts:
 - source: CHEBI
@@ -85,6 +87,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:43Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

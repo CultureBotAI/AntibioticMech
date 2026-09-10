@@ -57,12 +57,13 @@ chemical_structure:
   monoisotopic_mass: 697.30983
 xrefs:
 - cas:6998-60-3
-- drugcentral:4817
 - kegg.compound:C12044
-- kegg.drug:D02549
 - lipidmaps:LMPK05000005
 - metacyc.compound:CPD-10236
 - reaxys:5401012
+drug_xrefs:
+- drugcentral:4817
+- kegg.drug:D02549
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:29673
@@ -82,6 +83,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:19Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -59,14 +59,16 @@ chemical_structure:
   monoisotopic_mass: 458.23045
 xrefs:
 - cas:23110-15-8
-- drugbank:DB02640
-- drugcentral:3253
 - kegg.compound:C09668
 - knapsack:C00003133
 - lipidmaps:LMPR0103060003
+- reaxys:5360220
+drug_xrefs:
+- drugbank:DB02640
+- drugcentral:3253
+document_xrefs:
 - patent:US2652356
 - patent:US2803586
-- reaxys:5360220
 - wikipedia.en:Fumagillin
 source_concepts:
 - source: CHEBI
@@ -124,6 +126,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T15:32:01Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:30Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

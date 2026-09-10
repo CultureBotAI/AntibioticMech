@@ -53,12 +53,14 @@ molecular_targets:
     notes: Primary selection, reverse-genetics, integration, and purified-enzyme study.
 xrefs:
 - cas:1051375-16-6
-- drugcentral:4805
-- kegg.drug:D10066
-- patent:EP2602260
-- patent:WO2006116764
 - pdb-ccd:DLU
 - reaxys:12732602
+drug_xrefs:
+- drugcentral:4805
+- kegg.drug:D10066
+document_xrefs:
+- patent:EP2602260
+- patent:WO2006116764
 - wikipedia.en:Dolutegravir
 source_concepts:
 - source: CHEBI
@@ -104,3 +106,7 @@ curation_history:
     measured HIV-1 integrase target and R263K target-alteration resistance with primary
     evidence.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

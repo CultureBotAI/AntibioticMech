@@ -75,19 +75,21 @@ chemical_structure:
 xrefs:
 - ARO:0000063
 - cas:55268-75-2
+- kegg.compound:C06894
+- metacyc.compound:CPD0-2069
+- reaxys:5783190
+- chembl:CHEMBL1436
+- pubchem.compound:5479529
+drug_xrefs:
 - drugbank:DB01112
 - drugcentral:565
-- kegg.compound:C06894
 - kegg.drug:D00262
-- metacyc.compound:CPD0-2069
+document_xrefs:
 - patent:DE2439880
 - patent:DE2706413
 - patent:US3974153
 - patent:US4267320
-- reaxys:5783190
 - wikipedia.en:Cefuroxime
-- chembl:CHEMBL1436
-- pubchem.compound:5479529
 source_concepts:
 - source: ARO
   source_id: ARO:0000063
@@ -256,6 +258,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:06Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:24Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

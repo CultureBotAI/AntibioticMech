@@ -91,22 +91,24 @@ chemical_structure:
 xrefs:
 - ARO:3000637
 - cas:69-53-4
-- drugbank:DB00415
-- drugcentral:198
 - hmdb:HMDB0014559
 - kegg.compound:C06574
-- kegg.drug:D00204
 - lincs.smallmolecule:LSM-5761
-- patent:GB902703
-- patent:US2985648
-- patent:US3157640
 - pdb-ccd:AIC
 - pdb-ccd:PN1
 - reaxys:4300240
 - vsdb:1849
-- wikipedia.en:Ampicillin
 - chembl:CHEMBL174
 - pubchem.compound:6249
+drug_xrefs:
+- drugbank:DB00415
+- drugcentral:198
+- kegg.drug:D00204
+document_xrefs:
+- patent:GB902703
+- patent:US2985648
+- patent:US3157640
+- wikipedia.en:Ampicillin
 structural_observations:
 - structure_id: PDB:1H8S
   relevance: UNREVIEWED
@@ -425,6 +427,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T23:21:02Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:19Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

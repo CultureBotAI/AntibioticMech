@@ -41,13 +41,14 @@ chemical_structure:
 xrefs:
 - ARO:0000030
 - cas:220620-09-7
-- drugbank:DB00560
-- drugcentral:2661
 - kegg.compound:C12012
-- kegg.drug:D01079
 - reaxys:8379453
 - chembl:CHEMBL376140
 - pubchem.compound:54686904
+drug_xrefs:
+- drugbank:DB00560
+- drugcentral:2661
+- kegg.drug:D01079
 source_concepts:
 - source: ARO
   source_id: ARO:0000030
@@ -370,6 +371,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:00Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:13Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

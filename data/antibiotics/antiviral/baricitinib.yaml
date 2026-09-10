@@ -62,11 +62,13 @@ chemical_structure:
 xrefs:
 - cas:1187594-09-7
 - chemspider:26373084
-- drugbank:DB11817
 - hmdb:HMDB0248873
-- kegg.drug:D10308
 - lincs.smallmolecule:LSM-6709
 - pdb-ccd:3JW
+drug_xrefs:
+- drugbank:DB11817
+- kegg.drug:D10308
+document_xrefs:
 - wikipedia.en:Baricitinib
 source_concepts:
 - source: CHEBI
@@ -264,6 +266,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:40Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:46Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -106,98 +106,122 @@ def test_the_gate_is_load_bearing():
     assert normalize_xref("pdb-ccd:AMP") == "pdb-ccd:AMP"
 
 
-def test_document_namespaces_are_named_even_though_they_are_kept(records):
+def test_document_namespaces_live_in_document_xrefs(records):
     """A patent covers a CLASS and an article covers a topic, so neither
-    identifies a structure — and both are kept anyway.
-
-    Dropping them was tried and reverted, because measuring said the remedy cost
-    more than the defect: 96% of the 709 `wikipedia.en` accessions and 97% of the
-    1,027 `patent` accessions map to exactly ONE structure here, so removing
-    ~1,800 links would have fixed 57 false equivalences and left 7 records with
-    no cross-references at all. #92 asked for such identifiers to be MOVED, and
-    the destination is a schema decision not yet taken (#136).
-
-    So the test asserts the honest state: the namespaces are NAMED, and they are
-    still present. A future PR that moves them should change this test
-    deliberately rather than find it already green.
-    """
+    identifies a structure. They were kept in `xrefs` for want of a destination
+    (#136); the destination exists now, and they are there and nowhere else."""
     from seed_from_sources import DOCUMENT_XREF_PREFIXES, NON_STRUCTURE_XREF_PREFIXES
 
     assert {"patent", "wikipedia.en"} == DOCUMENT_XREF_PREFIXES
-    # Named, but NOT dropped — the two sets are deliberately disjoint.
     assert not (DOCUMENT_XREF_PREFIXES & NON_STRUCTURE_XREF_PREFIXES)
-
-    present = {x.split(":", 1)[0] for _p, r in records for x in (r.get("xrefs") or [])}
-    assert present >= DOCUMENT_XREF_PREFIXES, "they were dropped without updating this test"
-
-    # `pdb:` really is dropped: a macromolecular entry is not a compound at all,
-    # which is a stronger claim than "this identifier is coarse".
-    assert "pdb" in NON_STRUCTURE_XREF_PREFIXES
-    offenders = [f"{p.name}: {x}" for p, r in records
-                 for x in (r.get("xrefs") or []) if x.split(":", 1)[0].lower() == "pdb"]
+    in_docs = {x.split(":", 1)[0] for _p, r in records for x in (r.get("document_xrefs") or [])}
+    assert in_docs == DOCUMENT_XREF_PREFIXES, "moved, but not all of them, or something else came along"
+    leaked = [f"{p.name}: {x}" for p, r in records
+              for x in (r.get("xrefs") or []) if x.split(":", 1)[0] in DOCUMENT_XREF_PREFIXES]
+    assert leaked == [], leaked[:8]
+    # `pdb:` really is dropped, not moved: a macromolecular entry is not about
+    # this compound at all.
+    offenders = [f"{p.name}: {x}" for p, r in records for slot in ("xrefs", "drug_xrefs", "document_xrefs")
+                 for x in (r.get(slot) or []) if x.split(":", 1)[0].lower() == "pdb"]
     assert offenders == [], offenders[:8]
 
 
-def test_drug_granularity_namespaces_are_named_rather_than_pretended_about(records):
-    """`xrefs` cannot be read as "one accession, one structure", and saying so is
-    better than implying otherwise.
+def test_drug_namespaces_live_in_drug_xrefs_and_nothing_in_xrefs_spans_two_structures(records):
+    """`xrefs` means one accession, one structure, and now it does.
 
-    `drugbank:DB00639` legitimately covers butoconazole, butoconazole nitrate
-    and both enantiomers: DrugBank identifies a DRUG. Those accessions are kept
-    because they are useful, and the exception is declared in the seeder rather
-    than left for a consumer to discover.
+    DrugBank identifies a DRUG, so `drugbank:DB00639` covering butoconazole,
+    its nitrate and both enantiomers is that namespace's meaning; it lives in
+    `drug_xrefs`. What stays in `xrefs` is held to the contract corpus-wide by
+    the seeder: an accession landing on two InChIKeys is withheld from both.
+    A "known coarse" declaration used to let 20 such accessions through as a
+    listed exception (#137); the invariant is asserted instead of declared.
     """
-    from seed_from_sources import (
-        DOCUMENT_XREF_PREFIXES,
-        DRUG_GRANULARITY_XREF_PREFIXES,
-        KNOWN_COARSE_XREF_PREFIXES,
-    )
+    from seed_from_sources import DRUG_GRANULARITY_XREF_PREFIXES
 
-    # The constant is a DECLARATION, not a code path — the same-structure gate
-    # only compares ChEBI ids, so nothing reads it at seed time. That makes it
-    # exactly the kind of comment-shaped constant that drifts into fiction, so
-    # it is checked against the corpus: every prefix named must really span
-    # several structures, or it is claiming a problem that does not exist.
+    in_drug = {x.split(":", 1)[0] for _p, r in records for x in (r.get("drug_xrefs") or [])}
+    assert in_drug == DRUG_GRANULARITY_XREF_PREFIXES
+    leaked = [f"{p.name}: {x}" for p, r in records
+              for x in (r.get("xrefs") or []) if x.split(":", 1)[0] in DRUG_GRANULARITY_XREF_PREFIXES]
+    assert leaked == [], leaked[:8]
+
     spans = collections.defaultdict(set)
     for _p, record in records:
         key = (record.get("chemical_structure") or {}).get("standard_inchi_key")
-        if not key:
-            continue
         for xref in (record.get("xrefs") or []):
             spans[xref].add(key)
-    multi_prefixes = {x.split(":", 1)[0] for x, keys in spans.items() if len(keys) > 1}
-    seen = {x.split(":", 1)[0] for x in spans}
-    unfounded = {p for p in DRUG_GRANULARITY_XREF_PREFIXES
-                 if p in seen and p not in multi_prefixes}
-    assert unfounded == set(), (
-        f"declared as drug-granularity but never spans two structures: {sorted(unfounded)}")
+    multi = sorted(x for x, keys in spans.items() if len(keys) > 1)
+    assert multi == [], f"{len(multi)} structure-exact accession(s) span two structures: {multi[:6]}"
+    # And the drug slot really does span, or moving it out was theatre.
+    drug_spans = collections.defaultdict(set)
+    for _p, record in records:
+        key = (record.get("chemical_structure") or {}).get("standard_inchi_key")
+        for xref in (record.get("drug_xrefs") or []):
+            drug_spans[xref].add(key)
+    assert any(len(keys) > 1 for keys in drug_spans.values())
 
-    # And a prefix the corpus does not contain AT ALL cannot be grounded either
-    # way, so declaring one is speculation the check would skip in silence.
-    # `unii` was declared and had zero occurrences. If such a namespace arrives
-    # later and really does span structures, the undeclared assertion below
-    # catches it then — which is the right moment to declare it.
-    absent = {p for p in DRUG_GRANULARITY_XREF_PREFIXES if p not in seen}
-    assert absent == set(), (
-        f"declared as drug-granularity but absent from the corpus, so unverifiable: "
-        f"{sorted(absent)}")
-    assert "drugbank" in DRUG_GRANULARITY_XREF_PREFIXES
 
-    # Nothing in a namespace we have NOT accounted for may span several
-    # structures. The first version of this filtered on ("pdb", "patent",
-    # "wikipedia.en") — exactly the prefixes the test above asserts are absent
-    # or accounted for — so the set was empty by construction and the assertion
-    # could never fail. Replacing it with `pass` left 7 tests passing.
-    #
-    # Blind to 22 real ones: chembl:CHEMBL134561 is asserted to be both cefdinir
-    # and iclaprim, pdb-ccd:CLQ both chloroquine and its (R)-enantiomer.
-    # `pdb-ccd` was kept in #92 precisely because it identifies a chemical
-    # component, so those are the same defect that PR fixed, surviving under a
-    # test that said it could not.
-    multi = {x for x, keys in spans.items() if len(keys) > 1}
-    accounted = (DRUG_GRANULARITY_XREF_PREFIXES | DOCUMENT_XREF_PREFIXES
-                 | KNOWN_COARSE_XREF_PREFIXES)
-    undeclared = {x for x in multi if x.split(":", 1)[0] not in accounted}
-    assert undeclared == set(), (
-        f"{len(undeclared)} accession(s) in namespaces claiming to be "
-        f"structure-exact span several structures: {sorted(undeclared)[:6]}")
+def test_withheld_accessions_are_queued_not_lost(records):
+    """A refused assertion needs a destination. The queue reconstructs the
+    withheld accessions from the inventories through the seeder's own spanning
+    test, so it cannot disagree with what the seeder withheld."""
+    from curation_worklist import xref_span_conflict_queue
+
+    docs = [r for _p, r in records]
+    queued = xref_span_conflict_queue(docs)
+    accessions = {row["source_id"] for row in queued}
+    assert "chembl:CHEMBL1999880" in accessions, "the narbomycin/nybomycin pair, #137's live case"
+    assert "cas:69388-84-7" in accessions
+    assert len(accessions) == 20, sorted(accessions)
+    # An accession the per-record gate refused for another reason never reaches
+    # the spanning test, in the seeder or here: CHEBI:8309 is polymyxin B1, and
+    # rule 2 refuses it on polymyxin B2 as a known different structure. A queue
+    # that restated the gate from the inventory listed it as spanning.
+    assert "CHEBI:8309" not in accessions
+    present = {x for r in docs for x in (r.get("xrefs") or [])}
+    assert not (accessions & present), sorted(accessions & present)[:6]
+    # Every queued record really carries one of the spanning concepts.
+    assert all(any(row["key"] == r["identifier"] for r in docs) for row in queued)
+
+
+def test_spanning_accessions_is_structure_exact_only():
+    from seed_from_sources import spanning_accessions
+
+    found = spanning_accessions([
+        ("KEY1", "cas:1"), ("KEY2", "cas:1"),                    # spans: withheld
+        ("KEY1", "drugbank:DB1"), ("KEY2", "drugbank:DB1"),      # drug slot: not this function's business
+        ("KEY1", "patent:US1"), ("KEY2", "patent:US1"),          # document slot: likewise
+        ("KEY1", "cas:2"), ("KEY1", "cas:2"),                    # one key twice is not a span
+        (None, "cas:3"), ("KEY9", "cas:3"),                      # no key on one side: not a span
+    ])
+    assert found == {"cas:1": {"KEY1", "KEY2"}}
+
+
+def test_every_xref_prefix_is_declared_and_the_type_enforces_it(records, repo_root):
+    """A prefix the schema cannot expand is an identifier that goes nowhere.
+
+    8,796 of 12,410 cross-references carried one while closed validation stayed
+    green, because `curie` checks shape only (#96). The `xref_curie` alternation
+    is asserted equal to what the corpus carries, and the validator is shown to
+    reject a prefix outside it.
+    """
+    import re
+
+    import yaml
+
+    from antibioticmech.validation.write_validated import validate_antibiotic
+
+    schema = yaml.safe_load((repo_root / "src" / "antibioticmech" / "schema"
+                             / "antibioticmech.yaml").read_text(encoding="utf-8"))
+    declared = set(schema["prefixes"])
+    pattern = schema["types"]["xref_curie"]["pattern"]
+    allowed = {p.replace("\\", "") for p in re.match(r"\^\((.*)\):", pattern).group(1).split("|")}
+    used = {x.split(":", 1)[0] for _p, r in records
+            for slot in ("xrefs", "drug_xrefs", "document_xrefs") for x in (r.get(slot) or [])}
+    assert used <= declared, sorted(used - declared)
+    assert used == allowed, (sorted(used - allowed), sorted(allowed - used))
+
+    doc = yaml.safe_load((repo_root / "data" / "antibiotics" / "antibacterial"
+                          / "erythromycin-a.yaml").read_text(encoding="utf-8"))
+    assert validate_antibiotic(doc) == []
+    doc["xrefs"] = list(doc.get("xrefs") or []) + ["CHEMBL.COMPOUND:CHEMBL1"]
+    assert validate_antibiotic(doc), "an undeclared prefix validated clean"

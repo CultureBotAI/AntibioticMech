@@ -60,11 +60,13 @@ chemical_structure:
 xrefs:
 - ARO:3003897
 - cas:856866-72-3
-- kegg.drug:D09685
 - reaxys:10589936
-- wikipedia.en:Tedizolid
 - chembl:CHEMBL1257051
 - pubchem.compound:11234049
+drug_xrefs:
+- kegg.drug:D09685
+document_xrefs:
+- wikipedia.en:Tedizolid
 source_concepts:
 - source: ARO
   source_id: ARO:3003897
@@ -98,6 +100,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:43Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

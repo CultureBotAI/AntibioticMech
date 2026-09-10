@@ -62,13 +62,14 @@ chemical_structure:
   monoisotopic_mass: 489.97692
 xrefs:
 - cas:64211-46-7
-- drugbank:DB00239
-- hmdb:HMDB0014384
 - kegg.compound:C08075
+- reaxys:6042368
+drug_xrefs:
+- drugbank:DB00239
 - kegg.drug:D00885
+document_xrefs:
 - patent:DE2657578
 - patent:US4124767
-- reaxys:6042368
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:7826
@@ -165,6 +166,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:37Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:41Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

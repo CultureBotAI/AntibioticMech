@@ -56,8 +56,12 @@ molecular_targets:
     notes: Primary boceprevir-series NS3 protease structure-activity study (DOI:10.1016/j.bmcl.2009.11.094).
 xrefs:
 - cas:394730-60-0
+- pdb-ccd:HU5
+- reaxys:10502086
+drug_xrefs:
 - drugcentral:4172
 - kegg.drug:D08876
+document_xrefs:
 - patent:US2005249702
 - patent:US2006275366
 - patent:US2006276404
@@ -76,8 +80,6 @@ xrefs:
 - patent:WO2008076316
 - patent:WO2008079216
 - patent:WO2010117936
-- pdb-ccd:HU5
-- reaxys:10502086
 - wikipedia.en:Boceprevir
 source_concepts:
 - source: CHEBI
@@ -155,3 +157,7 @@ curation_history:
     mechanism note with primary evidence and added the NS3/4A target plus target-alteration
     resistance.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

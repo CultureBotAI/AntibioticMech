@@ -65,13 +65,15 @@ chemical_structure:
   monoisotopic_mass: 151.1361
 xrefs:
 - cas:768-94-5
-- drugbank:DB00915
-- drugcentral:144
 - gmelin:27066
 - kegg.compound:C06818
-- kegg.drug:D07441
 - reaxys:2204333
 - vsdb:2961
+drug_xrefs:
+- drugbank:DB00915
+- drugcentral:144
+- kegg.drug:D07441
+document_xrefs:
 - wikipedia.en:Amantadine
 source_concepts:
 - source: CHEBI
@@ -91,6 +93,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:16Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -61,15 +61,17 @@ chemical_structure:
 xrefs:
 - cas:66428-89-5
 - cas:66575-29-9
-- drugbank:DB02587
 - kegg.compound:C09076
-- kegg.drug:D03584
 - knapsack:C00003416
+- pdb-ccd:FOK
+- reaxys:4300863
+drug_xrefs:
+- drugbank:DB02587
+- kegg.drug:D03584
+document_xrefs:
 - patent:DE2557784
 - patent:US4088659
 - patent:US4476140
-- pdb-ccd:FOK
-- reaxys:4300863
 - wikipedia.en:Forskolin
 source_concepts:
 - source: CHEBI
@@ -89,6 +91,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:27Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

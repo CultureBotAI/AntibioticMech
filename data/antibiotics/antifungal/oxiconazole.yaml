@@ -56,16 +56,17 @@ chemical_structure:
 xrefs:
 - ARO:3007520
 - cas:64211-45-6
-- drugbank:DB00239
-- drugcentral:3408
-- hmdb:HMDB0014384
 - kegg.compound:C08074
-- kegg.drug:D08313
-- patent:US4550175
 - reaxys:6004213
-- wikipedia.en:Oxiconazole
 - chembl:CHEMBL1262
 - pubchem.compound:5353853
+drug_xrefs:
+- drugbank:DB00239
+- drugcentral:3408
+- kegg.drug:D08313
+document_xrefs:
+- patent:US4550175
+- wikipedia.en:Oxiconazole
 source_concepts:
 - source: ARO
   source_id: ARO:3007520
@@ -97,6 +98,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T04:10:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:41Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

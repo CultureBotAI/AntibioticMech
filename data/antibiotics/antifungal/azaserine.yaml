@@ -55,11 +55,13 @@ chemical_structure:
 xrefs:
 - cas:115-02-6
 - kegg.compound:C19194
-- kegg.drug:D03032
 - metacyc.compound:L-AZASERINE
+- pdb-ccd:AZS
+drug_xrefs:
+- kegg.drug:D03032
+document_xrefs:
 - patent:US2996435
 - patent:US3030388
-- pdb-ccd:AZS
 - wikipedia.en:Azaserine
 source_concepts:
 - source: CHEBI
@@ -80,6 +82,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:40Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

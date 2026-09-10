@@ -50,18 +50,20 @@ chemical_structure:
 xrefs:
 - ARO:3000638
 - cas:37091-66-0
+- kegg.compound:C06839
+- lincs.smallmolecule:LSM-15179
+- reaxys:5785146
+- chembl:CHEMBL1537
+- pubchem.compound:6479523
+drug_xrefs:
 - drugbank:DB01061
 - drugcentral:277
-- kegg.compound:C06839
 - kegg.drug:D02339
-- lincs.smallmolecule:LSM-15179
+document_xrefs:
 - patent:CN101585844
 - patent:FR2100682
 - patent:US3933795
-- reaxys:5785146
 - wikipedia.en:Azlocillin
-- chembl:CHEMBL1537
-- pubchem.compound:6479523
 source_concepts:
 - source: ARO
   source_id: ARO:3000638
@@ -109,6 +111,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:04Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:19Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

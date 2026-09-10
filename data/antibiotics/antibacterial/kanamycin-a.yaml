@@ -72,16 +72,18 @@ xrefs:
 - ARO:0000049
 - beilstein:61647
 - cas:59-01-8
-- drugbank:DB01172
-- drugcentral:1519
 - gmelin:2044856
 - kegg.compound:C01822
 - lincs.smallmolecule:LSM-5261
 - pdb-ccd:KAN
 - vsdb:1921
-- wikipedia.en:Kanamycin
 - chembl:CHEMBL223520
 - pubchem.compound:6032
+drug_xrefs:
+- drugbank:DB01172
+- drugcentral:1519
+document_xrefs:
+- wikipedia.en:Kanamycin
 source_concepts:
 - source: ARO
   source_id: ARO:0000049
@@ -678,6 +680,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:01Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:15Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -51,8 +51,9 @@ molecular_targets:
   - reference: PMID:20202201
     notes: Primary CTBT yeast chemogenomic, transcriptomic, and superoxide study (DOI:10.1186/1471-2164-11-153).
 xrefs:
-- patent:EP1502918
 - reaxys:12163903
+document_xrefs:
+- patent:EP1502918
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:77693
@@ -84,3 +85,7 @@ curation_history:
     added oxidative damage and the measured mitochondrial-superoxide/stress process
     while explicitly retaining the unresolved direct-target gap.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:41Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

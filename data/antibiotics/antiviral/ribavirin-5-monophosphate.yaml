@@ -73,9 +73,10 @@ molecular_targets:
 xrefs:
 - cas:40925-28-8
 - chemspider:90600
-- drugbank:DB14663
 - hmdb:HMDB0257208
 - pdb-ccd:RVP
+drug_xrefs:
+- drugbank:DB14663
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:45490
@@ -107,3 +108,7 @@ curation_history:
     class; added guanine-nucleotide synthesis inhibition and the directly bound protozoan
     IMPDH target with host-shared scope.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

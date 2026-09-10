@@ -70,15 +70,16 @@ molecular_targets:
 xrefs:
 - beilstein:4192832
 - cas:68373-14-8
-- cas:69388-84-7
-- drugcentral:2492
 - hmdb:HMDB0258566
 - kegg.compound:C07770
-- kegg.drug:D08533
 - lincs.smallmolecule:LSM-5553
+- pdb-ccd:0RN
+drug_xrefs:
+- drugcentral:2492
+- kegg.drug:D08533
+document_xrefs:
 - patent:BE867859
 - patent:US4234579
-- pdb-ccd:0RN
 - wikipedia.en:Sulbactam
 source_concepts:
 - source: CHEBI
@@ -111,3 +112,7 @@ curation_history:
     filing class; added beta-lactamase inhibition and the directly observed engineered-SHV-1
     complex with its mutant-context limitation.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

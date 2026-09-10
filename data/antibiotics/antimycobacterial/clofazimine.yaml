@@ -59,13 +59,15 @@ xrefs:
 - ARO:3004012
 - beilstein:8168151
 - cas:2030-63-9
-- drugbank:DB00845
 - kegg.compound:C06915
-- kegg.drug:D00278
 - lincs.smallmolecule:LSM-5669
-- patent:US2948726
 - chembl:CHEMBL1292
 - pubchem.compound:2794
+drug_xrefs:
+- drugbank:DB00845
+- kegg.drug:D00278
+document_xrefs:
+- patent:US2948726
 source_concepts:
 - source: ARO
   source_id: ARO:3004012
@@ -150,6 +152,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:07Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:26Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -62,16 +62,18 @@ chemical_structure:
 xrefs:
 - ARO:3004013
 - cas:79660-72-3
-- drugbank:DB04576
-- drugcentral:1177
 - kegg.compound:C13179
-- kegg.drug:D01716
 - lincs.smallmolecule:LSM-6633
-- patent:US4398029
 - reaxys:4300996
-- wikipedia.en:Fleroxacin
 - chembl:CHEMBL6273
 - pubchem.compound:3357
+drug_xrefs:
+- drugbank:DB04576
+- drugcentral:1177
+- kegg.drug:D01716
+document_xrefs:
+- patent:US4398029
+- wikipedia.en:Fleroxacin
 source_concepts:
 - source: ARO
   source_id: ARO:3004013
@@ -133,6 +135,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:05Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:21Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -70,16 +70,18 @@ chemical_structure:
 xrefs:
 - ARO:3000699
 - cas:144-82-1
-- drugbank:DB00576
-- drugcentral:2512
 - kegg.compound:C08050
-- kegg.drug:D00870
 - lincs.smallmolecule:LSM-5455
-- patent:US2447702
 - reaxys:255002
-- wikipedia.en:Sulfamethizole
 - chembl:CHEMBL1191
 - pubchem.compound:5328
+drug_xrefs:
+- drugbank:DB00576
+- drugcentral:2512
+- kegg.drug:D00870
+document_xrefs:
+- patent:US2447702
+- wikipedia.en:Sulfamethizole
 source_concepts:
 - source: ARO
   source_id: ARO:3000699
@@ -213,6 +215,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:20Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:45Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

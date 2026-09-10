@@ -68,15 +68,17 @@ chemical_structure:
 xrefs:
 - ARO:3000674
 - cas:112362-50-2
-- drugbank:DB01764
-- drugcentral:778
 - hmdb:HMDB0015566
 - kegg.compound:C08033
-- kegg.drug:D00853
 - pdb-ccd:DOL
-- wikipedia.en:Dalfopristin
 - chembl:CHEMBL1200937
 - pubchem.compound:6323289
+drug_xrefs:
+- drugbank:DB01764
+- drugcentral:778
+- kegg.drug:D00853
+document_xrefs:
+- wikipedia.en:Dalfopristin
 source_concepts:
 - source: ARO
   source_id: ARO:3000674
@@ -366,3 +368,7 @@ curation_history:
     of retained CARD resistance assertions; curator-confirmed protein-synthesis inhibition
     and added a primary dalfopristin-bound 50S target beside the imported target.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

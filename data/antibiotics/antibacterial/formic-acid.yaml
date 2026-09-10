@@ -64,16 +64,18 @@ chemical_structure:
 xrefs:
 - bpdb:1749
 - cas:64-18-6
-- drugbank:DB01942
 - gmelin:1008
 - hmdb:HMDB0000142
 - kegg.compound:C00058
 - knapsack:C00001182
 - lipidmaps:LMFA01010040
 - metacyc.compound:FORMATE
-- patent:CN101481304
 - pdb-ccd:FMT
 - reaxys:1209246
+drug_xrefs:
+- drugbank:DB01942
+document_xrefs:
+- patent:CN101481304
 - wikipedia.en:Formic_acid
 source_concepts:
 - source: CHEBI
@@ -93,6 +95,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:20Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

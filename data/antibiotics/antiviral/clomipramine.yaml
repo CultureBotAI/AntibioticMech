@@ -49,15 +49,17 @@ chemical_structure:
   monoisotopic_mass: 314.15498
 xrefs:
 - cas:303-49-1
-- drugbank:DB01242
-- drugcentral:701
 - kegg.compound:C06918
-- kegg.drug:D07727
 - lincs.smallmolecule:LSM-3171
-- patent:CH371799
-- patent:US3467650
 - pdb-ccd:CXX
 - reaxys:1323477
+drug_xrefs:
+- drugbank:DB01242
+- drugcentral:701
+- kegg.drug:D07727
+document_xrefs:
+- patent:CH371799
+- patent:US3467650
 - wikipedia.en:Clomipramine
 source_concepts:
 - source: CHEBI
@@ -85,6 +87,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-02T23:56:07Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:30Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

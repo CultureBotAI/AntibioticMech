@@ -55,15 +55,17 @@ chemical_structure:
   monoisotopic_mass: 374.17611
 xrefs:
 - cas:68-88-2
-- drugbank:DB00557
-- drugcentral:1400
 - hmdb:HMDB0014697
 - kegg.compound:C07045
-- kegg.drug:D08054
 - lincs.smallmolecule:LSM-5103
-- patent:US2899436
 - reaxys:321392
 - vsdb:2977
+drug_xrefs:
+- drugbank:DB00557
+- drugcentral:1400
+- kegg.drug:D08054
+document_xrefs:
+- patent:US2899436
 - wikipedia.en:Hydroxyzine
 source_concepts:
 - source: CHEBI
@@ -83,6 +85,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:35Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:32Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

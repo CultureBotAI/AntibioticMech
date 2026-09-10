@@ -65,12 +65,14 @@ xrefs:
 - ARO:3000150
 - cas:4434-05-3
 - kegg.compound:C05073
-- kegg.drug:D02333
 - knapsack:C00002461
 - reaxys:5230975
-- wikipedia.en:Coumermycin_A1
 - chembl:CHEMBL389471
 - pubchem.compound:54675768
+drug_xrefs:
+- kegg.drug:D02333
+document_xrefs:
+- wikipedia.en:Coumermycin_A1
 source_concepts:
 - source: ARO
   source_id: ARO:3000150
@@ -222,6 +224,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T05:59:05Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:27Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

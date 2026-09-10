@@ -45,10 +45,12 @@ chemical_structure:
   monoisotopic_mass: 157.88141
 xrefs:
 - cas:7722-64-7
-- drugbank:DB13831
 - foodb.food:FDB016259
-- kegg.drug:D02053
 - reaxys:11343348
+drug_xrefs:
+- drugbank:DB13831
+- kegg.drug:D02053
+document_xrefs:
 - wikipedia.en:Potassium_permanganate
 source_concepts:
 - source: CHEBI
@@ -68,6 +70,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:16Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

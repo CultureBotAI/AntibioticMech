@@ -85,15 +85,17 @@ chemical_structure:
   monoisotopic_mass: 167.02657
 xrefs:
 - cas:154-42-7
-- drugbank:DB00352
-- drugcentral:2632
 - kegg.compound:C07648
-- kegg.drug:D08603
 - knapsack:C00018807
 - lincs.smallmolecule:LSM-6723
 - metacyc.compound:CPD-5721
 - pdb-ccd:DX4
 - reaxys:1074099
+drug_xrefs:
+- drugbank:DB00352
+- drugcentral:2632
+- kegg.drug:D08603
+document_xrefs:
 - wikipedia.en:Thioguanine
 source_concepts:
 - source: CHEBI
@@ -113,6 +115,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:46Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

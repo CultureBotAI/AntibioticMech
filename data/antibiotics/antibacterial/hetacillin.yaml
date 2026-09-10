@@ -52,14 +52,16 @@ xrefs:
 - ARO:3009132
 - beilstein:5405483
 - cas:3511-16-8
-- drugbank:DB00739
-- drugcentral:1363
 - kegg.compound:C11729
-- kegg.drug:D01074
-- patent:US3198804
-- wikipedia.en:Hetacillin
 - chembl:CHEMBL1201116
 - pubchem.compound:443387
+drug_xrefs:
+- drugbank:DB00739
+- drugcentral:1363
+- kegg.drug:D01074
+document_xrefs:
+- patent:US3198804
+- wikipedia.en:Hetacillin
 source_concepts:
 - source: ARO
   source_id: ARO:3009132
@@ -87,6 +89,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:35Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:32Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

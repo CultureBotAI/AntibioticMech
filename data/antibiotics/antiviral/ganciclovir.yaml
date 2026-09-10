@@ -67,14 +67,16 @@ chemical_structure:
 xrefs:
 - beilstein:3654487
 - cas:82410-32-0
-- drugbank:DB01004
-- drugcentral:1277
 - hmdb:HMDB0015139
-- kegg.drug:D00333
 - lincs.smallmolecule:LSM-5382
-- patent:US4355032
 - pdb-ccd:GA2
 - reaxys:3654487
+drug_xrefs:
+- drugbank:DB01004
+- drugcentral:1277
+- kegg.drug:D00333
+document_xrefs:
+- patent:US4355032
 - wikipedia.en:Ganciclovir
 source_concepts:
 - source: CHEBI
@@ -209,6 +211,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:29Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -67,15 +67,17 @@ chemical_structure:
 xrefs:
 - ARO:0000037
 - cas:37321-09-8
-- drugbank:DB04626
 - kegg.compound:C01555
-- kegg.drug:D02322
-- patent:US3691279
 - pdb-ccd:AM2
 - reaxys:4610404
 - vsdb:1743
 - chembl:CHEMBL1909452
 - pubchem.compound:3081545
+drug_xrefs:
+- drugbank:DB04626
+- kegg.drug:D02322
+document_xrefs:
+- patent:US3691279
 source_concepts:
 - source: ARO
   source_id: ARO:0000037
@@ -144,6 +146,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:02Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -73,15 +73,17 @@ chemical_structure:
 xrefs:
 - ARO:0000047
 - cas:53-79-2
-- drugbank:DB08437
 - kegg.compound:C01610
-- kegg.drug:D05653
 - knapsack:C00001507
 - lincs.smallmolecule:LSM-2788
 - reaxys:70234
-- wikipedia.en:Puromycin
 - chembl:CHEMBL469912
 - pubchem.compound:439530
+drug_xrefs:
+- drugbank:DB08437
+- kegg.drug:D05653
+document_xrefs:
+- wikipedia.en:Puromycin
 source_concepts:
 - source: ARO
   source_id: ARO:0000047
@@ -157,6 +159,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:01Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:15Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -52,9 +52,10 @@ chemical_structure:
 xrefs:
 - cas:102-29-4
 - kegg.compound:C12064
-- kegg.drug:D02393
 - lincs.smallmolecule:LSM-3915
 - reaxys:1865490
+drug_xrefs:
+- kegg.drug:D02393
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:29672
@@ -73,6 +74,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:19Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

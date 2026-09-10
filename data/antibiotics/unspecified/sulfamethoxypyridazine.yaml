@@ -87,12 +87,14 @@ chemical_structure:
   monoisotopic_mass: 280.06301
 xrefs:
 - cas:80-35-3
-- drugcentral:2515
 - gmelin:1443440
-- kegg.drug:D02439
 - lincs.smallmolecule:LSM-5204
-- patent:US2712012
 - reaxys:277076
+drug_xrefs:
+- drugcentral:2515
+- kegg.drug:D02439
+document_xrefs:
+- patent:US2712012
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:102516
@@ -111,6 +113,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:23Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:11Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

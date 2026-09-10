@@ -89,16 +89,18 @@ chemical_structure:
 xrefs:
 - ARO:0000043
 - cas:4697-36-3
-- drugbank:DB00578
-- drugcentral:492
 - hmdb:HMDB0014717
 - kegg.compound:C06869
-- kegg.drug:D07614
-- patent:US3142673
 - reaxys:1230663
-- wikipedia.en:Carbenicillin
 - chembl:CHEMBL1214
 - pubchem.compound:20824
+drug_xrefs:
+- drugbank:DB00578
+- drugcentral:492
+- kegg.drug:D07614
+document_xrefs:
+- patent:US3142673
+- wikipedia.en:Carbenicillin
 source_concepts:
 - source: ARO
   source_id: ARO:0000043
@@ -175,6 +177,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:05Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:22Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

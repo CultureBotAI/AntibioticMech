@@ -52,14 +52,16 @@ chemical_structure:
   monoisotopic_mass: 527.17915
 xrefs:
 - cas:20830-81-3
-- drugbank:DB00694
-- drugcentral:786
 - kegg.compound:C01907
-- kegg.drug:D07776
 - lincs.smallmolecule:LSM-2962
 - lipidmaps:LMPK13050002
 - pdb-ccd:DM1
 - reaxys:1445583
+drug_xrefs:
+- drugbank:DB00694
+- drugcentral:786
+- kegg.drug:D07776
+document_xrefs:
 - wikipedia.en:Daunorubicin
 source_concepts:
 - source: CHEBI
@@ -79,6 +81,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:27Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

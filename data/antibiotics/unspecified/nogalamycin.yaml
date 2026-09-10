@@ -71,9 +71,11 @@ xrefs:
 - cas:1404-15-5
 - chemspider:4451071
 - kegg.compound:C18633
-- kegg.drug:D05198
 - metacyc.compound:CPD-15795
 - pdb-ccd:NGM
+drug_xrefs:
+- kegg.drug:D05198
+document_xrefs:
 - wikipedia.en:Nogalamycin
 source_concepts:
 - source: CHEBI
@@ -106,3 +108,7 @@ curation_history:
     filing class; added nucleic-acid synthesis inhibition and directly observed, non-sequence-specific
     DNA intercalation.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

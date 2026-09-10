@@ -69,15 +69,17 @@ chemical_structure:
   monoisotopic_mass: 318.09575
 xrefs:
 - cas:50-53-3
-- drugbank:DB00477
-- drugcentral:621
 - hmdb:HMDB0014620
 - kegg.compound:C06906
-- kegg.drug:D00270
 - lincs.smallmolecule:LSM-4017
-- patent:US2645640
 - pdb-ccd:Z80
 - reaxys:289793
+drug_xrefs:
+- drugbank:DB00477
+- drugcentral:621
+- kegg.drug:D00270
+document_xrefs:
+- patent:US2645640
 - wikipedia.en:Chlorpromazine
 source_concepts:
 - source: CHEBI
@@ -157,6 +159,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-02T23:56:04Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:25Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

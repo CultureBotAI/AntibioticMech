@@ -62,15 +62,17 @@ chemical_structure:
   monoisotopic_mass: 813.45107
 xrefs:
 - cas:2751-09-9
-- drugbank:DB01361
-- drugcentral:2769
 - hmdb:HMDB0015448
 - kegg.compound:C12753
-- kegg.drug:D01322
 - lincs.smallmolecule:LSM-5510
 - lipidmaps:LMPK04000042
 - pdb-ccd:TAO
 - reaxys:77547
+drug_xrefs:
+- drugbank:DB01361
+- drugcentral:2769
+- kegg.drug:D01322
+document_xrefs:
 - wikipedia.en:Troleandomycin
 source_concepts:
 - source: CHEBI
@@ -121,6 +123,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:28Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

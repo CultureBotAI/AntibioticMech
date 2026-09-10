@@ -92,19 +92,20 @@ xrefs:
 - ARO:0000006
 - beilstein:75000
 - cas:114-07-8
-- cas:1675-02-1
-- drugbank:DB00199
-- drugcentral:1048
 - kegg.compound:C01912
-- kegg.drug:D00140
 - lincs.smallmolecule:LSM-3416
 - lipidmaps:LMPK04000006
 - metacyc.compound:CPD-13804
-- patent:US2823203
 - pdb-ccd:ERY
 - reaxys:75279
 - chembl:CHEMBL532
 - pubchem.compound:12560
+drug_xrefs:
+- drugbank:DB00199
+- drugcentral:1048
+- kegg.drug:D00140
+document_xrefs:
+- patent:US2823203
 source_concepts:
 - source: ARO
   source_id: ARO:0000006
@@ -2652,6 +2653,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T05:58:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:08Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

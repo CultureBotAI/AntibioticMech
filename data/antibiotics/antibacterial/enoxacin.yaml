@@ -74,19 +74,21 @@ chemical_structure:
 xrefs:
 - ARO:0000023
 - cas:74011-58-8
+- kegg.compound:C06979
+- lincs.smallmolecule:LSM-5848
+- reaxys:3628995
+- vsdb:1896
+- chembl:CHEMBL826
+- pubchem.compound:3229
+drug_xrefs:
 - drugbank:DB00467
 - drugcentral:1013
-- kegg.compound:C06979
 - kegg.drug:D00310
-- lincs.smallmolecule:LSM-5848
+document_xrefs:
 - patent:EP9425
 - patent:US4352803
 - patent:US4359578
-- reaxys:3628995
-- vsdb:1896
 - wikipedia.en:Enoxacin
-- chembl:CHEMBL826
-- pubchem.compound:3229
 source_concepts:
 - source: ARO
   source_id: ARO:0000023
@@ -341,6 +343,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:00Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:14Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

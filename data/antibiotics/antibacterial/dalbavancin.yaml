@@ -43,12 +43,14 @@ chemical_structure:
 xrefs:
 - ARO:3000466
 - cas:171500-79-1
-- drugcentral:777
-- kegg.drug:D03640
 - reaxys:9839185
-- wikipedia.en:Dalbavancin
 - chembl:CHEMBL3301669
 - pubchem.compound:23724878
+drug_xrefs:
+- drugcentral:777
+- kegg.drug:D03640
+document_xrefs:
+- wikipedia.en:Dalbavancin
 source_concepts:
 - source: ARO
   source_id: ARO:3000466
@@ -96,6 +98,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:18Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:43Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

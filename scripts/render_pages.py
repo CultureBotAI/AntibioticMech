@@ -136,23 +136,17 @@ LINK_EVIDENCE_LABELS = {
 }
 
 
-# CURIE prefixes this site resolves to an external page, in the exact casing
-# they appear in the corpus (the schema's own `prefixes:` block uses
-# different casing for some of these — e.g. CHEMBL.COMPOUND, KEGG — that does
-# not match what the seeder actually writes, so it is not used here).
-XREF_URL_TEMPLATES = {
-    "CHEBI": "http://purl.obolibrary.org/obo/CHEBI_{}",
-    "ARO": "http://purl.obolibrary.org/obo/ARO_{}",
-    "pubchem.compound": "https://pubchem.ncbi.nlm.nih.gov/compound/{}",
-    "chembl": "https://www.ebi.ac.uk/chembl/compound_report_card/{}/",
-    "drugbank": "https://go.drugbank.com/drugs/{}",
-    "cas": "https://commonchemistry.cas.org/detail?cas_rn={}",
-    "kegg.compound": "https://www.kegg.jp/entry/{}",
-    "kegg.drug": "https://www.kegg.jp/entry/{}",
-    "NCBITaxon": "http://purl.obolibrary.org/obo/NCBITaxon_{}",
-    "PHIPO": "http://purl.obolibrary.org/obo/PHIPO_{}",
-    "UniProtKB": "https://www.uniprot.org/uniprotkb/{}",
-}
+# CURIE prefixes this site resolves to an external page: the schema's own
+# `prefixes:` block, which #96 aligned with the casing the seeder actually
+# writes, so one declaration serves validation, expansion and this site.
+def _xref_url_templates() -> dict[str, str]:
+    schema = yaml.safe_load(SCHEMA_PATH.read_text(encoding="utf-8"))
+    return {prefix: base + "{}" for prefix, base in (schema.get("prefixes") or {}).items()
+            if str(base).startswith("http")}
+
+
+SCHEMA_PATH = REPO_ROOT / "src" / "antibioticmech" / "schema" / "antibioticmech.yaml"
+XREF_URL_TEMPLATES = _xref_url_templates()
 
 
 def load_records() -> list[tuple[Path, dict]]:
@@ -303,6 +297,9 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
         ),
         "parent_compounds": [resolve_curie(c, index, root) for c in (doc.get("parent_compounds") or [])],
         "xrefs": [resolve_curie(c, index, root) for c in (doc.get("xrefs") or [])],
+        "drug_xrefs": [resolve_curie(c, index, root) for c in (doc.get("drug_xrefs") or [])],
+        "document_xrefs": [resolve_curie(c, index, root)
+                           for c in (doc.get("document_xrefs") or [])],
         "activity_roles": [resolve_curie(c, index, root) for c in (doc.get("activity_roles") or [])],
         "structure": doc.get("chemical_structure") or None,
         "synonyms": [

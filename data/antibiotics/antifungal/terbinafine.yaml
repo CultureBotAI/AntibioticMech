@@ -53,16 +53,18 @@ chemical_structure:
 xrefs:
 - ARO:3007507
 - cas:91161-71-6
-- drugbank:DB00857
-- drugcentral:2597
 - hmdb:HMDB0014995
 - kegg.compound:C08079
-- kegg.drug:D02375
 - metacyc.compound:CPD-10571
 - reaxys:4256376
-- wikipedia.en:Terbinafine
 - chembl:CHEMBL822
 - pubchem.compound:1549008
+drug_xrefs:
+- drugbank:DB00857
+- drugcentral:2597
+- kegg.drug:D02375
+document_xrefs:
+- wikipedia.en:Terbinafine
 source_concepts:
 - source: ARO
   source_id: ARO:3007507
@@ -279,6 +281,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-03T01:55:17Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:45Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

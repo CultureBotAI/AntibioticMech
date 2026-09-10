@@ -44,9 +44,10 @@ chemical_structure:
 xrefs:
 - cas:475-81-0
 - kegg.compound:C09446
-- kegg.drug:D08014
 - knapsack:C00001861
 - reaxys:95206
+drug_xrefs:
+- kegg.drug:D08014
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:5373
@@ -65,6 +66,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:35Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:31Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

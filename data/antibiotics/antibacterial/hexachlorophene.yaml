@@ -148,18 +148,20 @@ chemical_structure:
   monoisotopic_mass: 403.8499
 xrefs:
 - cas:70-30-4
-- drugbank:DB00756
-- drugcentral:1364
 - hmdb:HMDB0014894
 - kegg.compound:C08039
-- kegg.drug:D00859
 - lincs.smallmolecule:LSM-6032
-- patent:US2250480
-- patent:US2435593
-- patent:US2812365
 - pdb-ccd:H3P
 - ppdb:381
 - reaxys:2064407
+drug_xrefs:
+- drugbank:DB00756
+- drugcentral:1364
+- kegg.drug:D00859
+document_xrefs:
+- patent:US2250480
+- patent:US2435593
+- patent:US2812365
 - wikipedia.en:Hexachlorophene
 source_concepts:
 - source: CHEBI
@@ -509,6 +511,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-06T06:14:06Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:32Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

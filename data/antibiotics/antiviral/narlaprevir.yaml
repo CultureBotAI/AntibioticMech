@@ -80,10 +80,12 @@ molecular_targets:
 xrefs:
 - cas:865466-24-6
 - chemspider:10031710
-- drugbank:DB14760
-- kegg.drug:D09644
 - lincs.smallmolecule:LSM-45473
 - pdb-ccd:NNA
+drug_xrefs:
+- drugbank:DB14760
+- kegg.drug:D09644
+document_xrefs:
 - wikipedia.en:Narlaprevir
 source_concepts:
 - source: CHEBI
@@ -130,3 +132,7 @@ curation_history:
     the mixed SARS/HCV seed rationale with narlaprevir-specific HCV NS3/4A evidence
     and added target-alteration resistance observed during treatment.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:15Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
