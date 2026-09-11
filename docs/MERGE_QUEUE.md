@@ -5,12 +5,25 @@ and required PR checks pass. This applies to documentation changes too.
 
 1. Open a PR against `main` and complete its review.
 2. Wait for the required checks listed below.
-3. Use the PR's merge control to enter the queue. From the CLI, run
-   `gh pr merge <number> --repo CultureBotAI/AntibioticMech` after those checks pass.
+3. Use the PR's merge control to enter the queue. From the CLI, supply
+   the exact head SHA that was reviewed:
+
+   ```bash
+   gh pr merge <number> --repo CultureBotAI/AntibioticMech \
+     --match-head-commit <reviewed-head-sha>
+   ```
+
 4. Follow the new `merge_group` workflow runs. They validate the combined
    commit containing current `main`, this PR, and any earlier queued changes.
 5. Let GitHub merge after the queue checks pass. If the PR is removed from
    the queue, inspect the failed queue run, fix the cause, and enter again.
+
+Successful queue admission or auto-merge scheduling does not mean merged.
+Before deleting a remote branch or local worktree, confirm GitHub reports
+`state: MERGED` and verify the same PR number, target repository and `main`
+base, source repository and branch, and exact reviewed head SHA. Keep the
+branch and worktree while queued or if ejected. Review any changed head
+again before admitting it to the queue.
 
 ## Required checks
 
