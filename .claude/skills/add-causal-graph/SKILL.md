@@ -107,14 +107,14 @@ Keep wording causal but honest. For example, use "stabilizes a cleavage
 complex", "binds the 30S decoding site", "is required for", or "reduces"
 only when the source supports that direction and strength. If the source only
 shows a correlated mutant or phenotypic rescue, either draw the narrower
-supported edge or leave a `Discussion` attached to `causal_graphs#<edge_id>` for
-the unresolved step.
+supported edge or leave a `Discussion` attached to `causal_graphs#<graph_id>` or
+the affected mechanism fields for the unresolved step.
 
 ## Co-Curate Nearby Fields
 
 Adding the first causal graph often exposes missing or stale mechanism fields.
-In the same guarded mutation, update only claims that the same review actually
-supports:
+In the same guarded mutation, update only claims that the same mechanism review
+actually verified and supports:
 
 - `mode_of_action`, `mode_of_action_target_scope` and `mode_of_action_notes`;
 - `molecular_targets` evidence or reviewed target scope;
