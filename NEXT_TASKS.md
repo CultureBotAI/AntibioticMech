@@ -17,7 +17,7 @@ prose below are the reasoning, the queue is the list.
 
 ## Now
 
-- **Curate the next mechanism graphs.** 16 of 2,938 records carry a
+- **Curate the next mechanism graphs.** 16 of 2,939 records carry a
   `causal_graph`; that number is the point of the repository. Start with the 399
   records that already have target or resistance evidence to build on —
   `just worklist --queue mechanism` ranks them by how much evidence is waiting.
@@ -35,7 +35,7 @@ prose below are the reasoning, the queue is the list.
   than a structural description (a per-class review, not a regex), and curated
   review literature per compound. Prefer the second for anything that will carry
   a causal graph anyway.
-- **Ground the 269 minted records.** `just worklist --queue minted`. Most are
+- **Ground the 270 minted records.** `just worklist --queue minted`. Most are
   CARD molecules with a PubChem structure and no ChEBI entry; some deserve a
   ChEBI term request.
 - **Re-file the compounds no source classifies well.** After #2 and #3, a
