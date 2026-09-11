@@ -141,15 +141,17 @@ chemical_structure:
 xrefs:
 - cas:50-65-7
 - chemspider:4322
-- drugbank:DB06803
-- drugcentral:1912
 - hmdb:HMDB0015679
-- kegg.drug:D00436
 - lincs.smallmolecule:LSM-2787
 - pesticides:niclosamide
 - ppdb:1929
 - reaxys:2820605
 - vsdb:1929
+drug_xrefs:
+- drugbank:DB06803
+- drugcentral:1912
+- kegg.drug:D00436
+document_xrefs:
 - wikipedia.en:Niclosamide
 source_concepts:
 - source: CHEBI
@@ -181,6 +183,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-06T06:14:19Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:41Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

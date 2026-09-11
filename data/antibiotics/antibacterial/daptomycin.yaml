@@ -79,11 +79,13 @@ chemical_structure:
 xrefs:
 - ARO:0000068
 - cas:103060-53-3
-- drugbank:DB00080
 - kegg.compound:C12013
-- kegg.drug:D01080
-- wikipedia.en:Daptomycin
 - pubchem.compound:16134395
+drug_xrefs:
+- drugbank:DB00080
+- kegg.drug:D01080
+document_xrefs:
+- wikipedia.en:Daptomycin
 source_concepts:
 - source: ARO
   source_id: ARO:0000068
@@ -531,3 +533,7 @@ curation_history:
   changes: Added a PMID-supported causal graph for calcium-dependent daptomycin-phosphatidylglycerol
     membrane targeting.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

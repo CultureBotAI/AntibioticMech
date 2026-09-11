@@ -99,18 +99,20 @@ chemical_structure:
 xrefs:
 - ARO:3009163
 - cas:58-14-0
-- drugbank:DB00205
-- drugcentral:2332
 - hmdb:HMDB0014350
 - kegg.compound:C07391
-- kegg.drug:D00488
 - lincs.smallmolecule:LSM-3967
 - pdb-ccd:CP6
 - reaxys:219864
 - vsdb:1912
-- wikipedia.en:Pyrimethamine
 - chembl:CHEMBL36
 - pubchem.compound:4993
+drug_xrefs:
+- drugbank:DB00205
+- drugcentral:2332
+- kegg.drug:D00488
+document_xrefs:
+- wikipedia.en:Pyrimethamine
 source_concepts:
 - source: ARO
   source_id: ARO:3009163
@@ -270,6 +272,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:44Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

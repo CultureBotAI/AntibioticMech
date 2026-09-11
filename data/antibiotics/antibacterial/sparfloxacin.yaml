@@ -46,14 +46,16 @@ xrefs:
 - ARO:3000666
 - beilstein:3658018
 - cas:110871-86-8
-- drugbank:DB01208
-- drugcentral:2466
 - kegg.compound:C07662
-- kegg.drug:D00590
 - lincs.smallmolecule:LSM-5251
-- wikipedia.en:Sparfloxacin
 - chembl:CHEMBL850
 - pubchem.compound:60464
+drug_xrefs:
+- drugbank:DB01208
+- drugcentral:2466
+- kegg.drug:D00590
+document_xrefs:
+- wikipedia.en:Sparfloxacin
 source_concepts:
 - source: ARO
   source_id: ARO:3000666
@@ -306,6 +308,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:20Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:45Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -35,12 +35,48 @@ prefixes:
   IAO: http://purl.obolibrary.org/obo/IAO_
   NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
   PHIPO: http://purl.obolibrary.org/obo/PHIPO_
-  # Chemistry and drug registries
+  # Chemistry and drug registries. Every prefix the seeder writes into an
+  # xref slot is declared here, in the casing it is written -- the corpus
+  # spells them the Bioregistry way, and a schema that declared CHEMBL.COMPOUND
+  # while the records said chembl could expand 71% of the corpus's
+  # cross-references to nothing while closed validation stayed green (#96).
+  # The `xref_curie` type below restricts the three xref slots to this list.
   pubchem.compound: https://pubchem.ncbi.nlm.nih.gov/compound/
-  CHEMBL.COMPOUND: https://www.ebi.ac.uk/chembl/compound_report_card/
   cas: https://commonchemistry.cas.org/detail?cas_rn=
+  chembl: https://www.ebi.ac.uk/chembl/id_lookup/
+  chemspider: http://www.chemspider.com/Chemical-Structure.
   drugbank: https://go.drugbank.com/drugs/
-  KEGG: https://www.kegg.jp/entry/
+  drugcentral: http://drugcentral.org/drugcard/
+  kegg.compound: https://www.kegg.jp/entry/
+  kegg.drug: https://www.kegg.jp/entry/
+  kegg.glycan: https://www.kegg.jp/entry/
+  hmdb: http://www.hmdb.ca/metabolites/
+  knapsack: http://www.knapsackfamily.com/knapsack_core/information.php?word=
+  lipidmaps: http://www.lipidmaps.org/data/LMSDRecord.php?LMID=
+  lincs.smallmolecule: http://lincsportal.ccs.miami.edu/SmallMolecules/#/view/
+  metacyc.compound: https://metacyc.org/compound?orgid=META&id=
+  pdb-ccd: https://www.ebi.ac.uk/pdbe-srv/pdbechem/chemicalCompound/show/
+  umbbd.compound: http://eawag-bbd.ethz.ch/servlets/pageservlet?ptype=c&compID=
+  ecmdb: http://ecmdb.ca/compounds/
+  ymdb: http://www.ymdb.ca/compounds/
+  foodb.compound: https://foodb.ca/compounds/
+  glytoucan: https://glytoucan.org/Structures/Glycans/
+  glygen: https://glytoucan.org/Structures/Glycans/
+  ppdb: https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/
+  vsdb: https://sitem.herts.ac.uk/aeru/vsdb/Reports/
+  bpdb: https://sitem.herts.ac.uk/aeru/bpdb/Reports/
+  pesticides: http://www.alanwood.net/pesticides/
+  molbase: http://www.molbase.com/en/index.php?app=search&search_keyword=
+  # Print and licensed registries with no public resolver. A prefix needs a
+  # namespace URI, and the Bioregistry resolver form is the conventional one,
+  # but it does not resolve for these three, so the site shows them as bare
+  # CURIEs rather than linking to a 404.
+  reaxys: "https://bioregistry.io/reaxys:"
+  beilstein: "https://bioregistry.io/beilstein:"
+  gmelin: "https://bioregistry.io/gmelin:"
+  # Documents and articles, which the document_xrefs slot carries.
+  patent: https://www.google.com/patents/
+  wikipedia.en: http://en.wikipedia.org/wiki/
   unii: https://precision.fda.gov/uniisearch/srs/unii/
   inchikey: https://www.chemspider.com/inchikey/
   npatlas: https://www.npatlas.org/explore/compounds/
@@ -74,6 +110,17 @@ types:
     uri: xsd:string
     description: A compact URI (prefix:local), e.g. CHEBI:48923.
     pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+
+  xref_curie:
+    typeof: string
+    uri: xsd:string
+    description: >-
+      A cross-reference whose prefix is one this schema declares and can
+      expand. `curie` checks shape only, which is how 8,796 of 12,419
+      cross-references came to carry a prefix the schema did not know while
+      every gate stayed green (#96). The alternation is asserted against the
+      corpus and the `prefixes:` block by tests/test_xref_identity.py.
+    pattern: '^(ARO|CHEBI|beilstein|bpdb|cas|chembl|chemspider|drugbank|drugcentral|ecmdb|foodb\.compound|glygen|glytoucan|gmelin|hmdb|kegg\.compound|kegg\.drug|kegg\.glycan|knapsack|lincs\.smallmolecule|lipidmaps|metacyc\.compound|molbase|patent|pdb\-ccd|pesticides|ppdb|pubchem\.compound|reaxys|umbbd\.compound|vsdb|wikipedia\.en|ymdb):[A-Za-z0-9._-]+$'
 
 # ================================================================
 # ROOT CLASS — one YAML file per AntibioticRecord
@@ -135,12 +182,41 @@ classes:
 
       xrefs:
         description: >-
-          Equivalent identifiers in other resources (ARO, PubChem, ChEMBL, CAS,
-          DrugBank, KEGG, UNII). Use only for the same structure; a broader
-          class belongs in `parent_compounds`.
+          Identifiers for THE SAME STRUCTURE in other resources: ChEBI, ARO,
+          PubChem, ChEMBL, CAS, KEGG COMPOUND, and the other structure
+          registries the schema declares. A broader class belongs in
+          `parent_compounds`; a drug-level identifier in `drug_xrefs`; a
+          patent or article in `document_xrefs`.
+
+          The seeder enforces the contract corpus-wide: an accession in one of
+          these namespaces that lands on two different InChIKeys names at most
+          one of them, and the corpus cannot tell which, so it is withheld from
+          both and queued on `just worklist --queue xref-span-conflict` rather
+          than published as an equivalence (#137).
         multivalued: true
-        range: curie
+        range: xref_curie
         slot_uri: oboInOwl:hasDbXref
+
+      drug_xrefs:
+        description: >-
+          Identifiers in registries that name a DRUG rather than a structure:
+          DrugBank, DrugCentral, KEGG DRUG. One such accession legitimately
+          covers a parent compound, its salts and its stereoisomers, which this
+          corpus keeps as separate records, so it cannot mean "the same
+          structure" and does not live in `xrefs` (#134).
+        multivalued: true
+        range: xref_curie
+
+      document_xrefs:
+        description: >-
+          Patents and encyclopedia articles about this compound. A patent
+          covers a class and an article covers a topic; neither identifies a
+          structure, and a patent really does sit on two unrelated fungicides
+          here. Kept because nearly all of them point at exactly one record and
+          are useful, moved out of `xrefs` because that is not what `xrefs`
+          means (#136).
+        multivalued: true
+        range: xref_curie
 
       antimicrobial_class:
         description: >-

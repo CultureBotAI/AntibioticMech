@@ -44,12 +44,14 @@ chemical_structure:
   monoisotopic_mass: 384.19689
 xrefs:
 - cas:179324-69-7
-- drugbank:DB00188
-- drugcentral:391
-- kegg.drug:D03150
 - lincs.smallmolecule:LSM-6281
 - pdb-ccd:BO2
 - reaxys:8723817
+drug_xrefs:
+- drugbank:DB00188
+- drugcentral:391
+- kegg.drug:D03150
+document_xrefs:
 - wikipedia.en:Bortezomib
 source_concepts:
 - source: CHEBI
@@ -772,6 +774,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:31Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

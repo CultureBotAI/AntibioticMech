@@ -64,9 +64,11 @@ molecular_targets:
 xrefs:
 - cas:59721-28-7
 - chemspider:2440
+drug_xrefs:
 - drugbank:DB13729
 - drugcentral:471
 - kegg.drug:D07606
+document_xrefs:
 - wikipedia.en:Camostat
 source_concepts:
 - source: CHEBI
@@ -108,3 +110,7 @@ curation_history:
     roles, and class; added host-protease-dependent viral-entry inhibition while preserving
     the study's unresolved individual-protease boundary.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:12Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

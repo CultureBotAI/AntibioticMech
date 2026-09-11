@@ -129,16 +129,18 @@ chemical_structure:
 xrefs:
 - ARO:3000657
 - cas:7542-37-2
-- drugbank:DB01421
-- drugcentral:2067
 - kegg.compound:C00832
-- kegg.drug:D07467
-- patent:US2895876
-- patent:US2916485
 - pdb-ccd:PAR
 - reaxys:72285
 - chembl:CHEMBL370143
 - pubchem.compound:165580
+drug_xrefs:
+- drugbank:DB01421
+- drugcentral:2067
+- kegg.drug:D07467
+document_xrefs:
+- patent:US2895876
+- patent:US2916485
 source_concepts:
 - source: ARO
   source_id: ARO:3000657
@@ -329,3 +331,7 @@ curation_history:
     inhibition and the directly bound decoding-site RNA model with its reduced-construct
     boundary.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

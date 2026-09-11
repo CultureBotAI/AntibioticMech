@@ -88,20 +88,22 @@ chemical_structure:
 xrefs:
 - ARO:3000688
 - cas:67-45-8
-- drugbank:DB00614
-- drugcentral:1257
 - hmdb:HMDB0014752
 - kegg.compound:C07999
-- kegg.drug:D00830
 - lincs.smallmolecule:LSM-6543
+- reaxys:384794
+- chembl:CHEMBL1103
+- pubchem.compound:5323714
+drug_xrefs:
+- drugbank:DB00614
+- drugcentral:1257
+- kegg.drug:D00830
+document_xrefs:
 - patent:GB735136
 - patent:US2742462
 - patent:US2759931
 - patent:US2927110
-- reaxys:384794
 - wikipedia.en:Furazolidone
-- chembl:CHEMBL1103
-- pubchem.compound:5323714
 source_concepts:
 - source: ARO
   source_id: ARO:3000688
@@ -131,6 +133,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:35Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:31Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

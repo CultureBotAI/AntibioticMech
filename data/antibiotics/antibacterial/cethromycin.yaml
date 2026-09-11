@@ -80,13 +80,15 @@ molecular_targets:
 xrefs:
 - ARO:3007455
 - cas:205110-48-1
-- drugbank:DB06419
 - kegg.compound:C12020
-- kegg.drug:D02391
 - pdb-ccd:773
-- wikipedia.en:Cethromycin
 - chembl:CHEMBL3989904
 - pubchem.compound:447451
+drug_xrefs:
+- drugbank:DB06419
+- kegg.drug:D02391
+document_xrefs:
+- wikipedia.en:Cethromycin
 source_concepts:
 - source: ARO
   source_id: ARO:3007455
@@ -129,3 +131,7 @@ curation_history:
     and antibacterial class; replaced the seeded mechanism note with primary evidence
     and added the directly bound bacterial 50S exit-tunnel target.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:19Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

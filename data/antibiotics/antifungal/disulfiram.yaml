@@ -54,15 +54,17 @@ chemical_structure:
   monoisotopic_mass: 296.05093
 xrefs:
 - cas:97-77-8
-- drugbank:DB00822
-- drugcentral:928
 - hmdb:HMDB0014960
 - kegg.compound:C01692
-- kegg.drug:D00131
 - lincs.smallmolecule:LSM-5467
 - metacyc.compound:DISULFIRAM
 - pesticides:disulfiram
 - reaxys:1712560
+drug_xrefs:
+- drugbank:DB00822
+- drugcentral:928
+- kegg.drug:D00131
+document_xrefs:
 - wikipedia.en:Disulfiram
 source_concepts:
 - source: CHEBI
@@ -569,6 +571,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-02T23:56:07Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:29Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

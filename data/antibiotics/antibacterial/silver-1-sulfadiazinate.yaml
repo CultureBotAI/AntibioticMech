@@ -43,10 +43,12 @@ chemical_structure:
   monoisotopic_mass: 355.94972
 xrefs:
 - cas:22199-08-2
-- drugbank:DB05245
 - gmelin:288660
-- kegg.drug:D00433
 - reaxys:924042
+drug_xrefs:
+- drugbank:DB05245
+- kegg.drug:D00433
+document_xrefs:
 - wikipedia.en:Silver_sulfadiazine
 source_concepts:
 - source: CHEBI
@@ -182,6 +184,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:45Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -57,21 +57,23 @@ chemical_structure:
   monoisotopic_mass: 122.03678
 xrefs:
 - cas:65-85-0
-- drugbank:DB03793
-- drugcentral:4664
 - gmelin:2946
 - hmdb:HMDB0001870
 - kegg.compound:C00180
 - kegg.compound:C00539
-- kegg.drug:D00038
 - knapsack:C00000207
 - lincs.smallmolecule:LSM-37118
 - metacyc.compound:BENZOATE
 - pdb-ccd:BEZ
 - ppdb:1475
 - reaxys:636131
-- wikipedia.en:Benzoic_Acid
 - ymdb:YMDB02301
+drug_xrefs:
+- drugbank:DB03793
+- drugcentral:4664
+- kegg.drug:D00038
+document_xrefs:
+- wikipedia.en:Benzoic_Acid
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:30746
@@ -90,6 +92,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:20Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -59,15 +59,17 @@ xrefs:
 - cas:1401-69-0
 - hmdb:HMDB0034108
 - kegg.compound:C01457
-- kegg.drug:D02490
 - lipidmaps:LMPK04000004
 - metacyc.compound:TYLOSIN
-- patent:US2004082524
 - pdb-ccd:TYK
 - reaxys:4651020
-- wikipedia.en:Tylosin
 - chembl:CHEMBL42743
 - pubchem.compound:5280440
+drug_xrefs:
+- kegg.drug:D02490
+document_xrefs:
+- patent:US2004082524
+- wikipedia.en:Tylosin
 source_concepts:
 - source: ARO
   source_id: ARO:3000145
@@ -396,6 +398,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:01Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:15Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

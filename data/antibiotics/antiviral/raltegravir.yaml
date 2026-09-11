@@ -70,12 +70,14 @@ molecular_targets:
 xrefs:
 - cas:518048-05-0
 - chemspider:16445111
-- drugbank:DB06817
-- drugcentral:2352
-- kegg.drug:D06676
 - lincs.smallmolecule:LSM-5233
 - pdb-ccd:RLT
 - reaxys:10696228
+drug_xrefs:
+- drugbank:DB06817
+- drugcentral:2352
+- kegg.drug:D06676
+document_xrefs:
 - wikipedia.en:Raltegravir
 source_concepts:
 - source: CHEBI
@@ -123,3 +125,7 @@ curation_history:
     direct retroviral intasome target, explicit prototype-foamy-virus model limitation,
     and structurally supported resistance pathways.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

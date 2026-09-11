@@ -44,18 +44,20 @@ chemical_structure:
 xrefs:
 - ARO:3007045
 - cas:93106-60-6
-- drugcentral:1017
 - hmdb:HMDB0029861
-- kegg.drug:D02473
 - lincs.smallmolecule:LSM-3709
+- reaxys:5307824
+- vsdb:1762
+- chembl:CHEMBL15511
+- pubchem.compound:71188
+drug_xrefs:
+- drugcentral:1017
+- kegg.drug:D02473
+document_xrefs:
 - patent:KR20130080422
 - patent:RU2491922
 - patent:US4659603
-- reaxys:5307824
-- vsdb:1762
 - wikipedia.en:Enrofloxacin
-- chembl:CHEMBL15511
-- pubchem.compound:71188
 source_concepts:
 - source: ARO
   source_id: ARO:3007045
@@ -99,6 +101,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:25Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

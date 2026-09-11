@@ -53,16 +53,18 @@ chemical_structure:
 xrefs:
 - ARO:3007504
 - cas:1397-89-3
-- drugbank:DB00681
-- drugcentral:197
 - kegg.compound:C06573
-- kegg.drug:D00203
 - lipidmaps:LMPK06000002
-- patent:US2908611
 - reaxys:4645978
-- wikipedia.en:Amphotericin_B
 - chembl:CHEMBL267345
 - pubchem.compound:5280965
+drug_xrefs:
+- drugbank:DB00681
+- drugcentral:197
+- kegg.drug:D00203
+document_xrefs:
+- patent:US2908611
+- wikipedia.en:Amphotericin_B
 source_concepts:
 - source: ARO
   source_id: ARO:3007504
@@ -485,6 +487,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:21Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

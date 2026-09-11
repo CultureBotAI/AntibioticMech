@@ -50,10 +50,11 @@ chemical_structure:
 xrefs:
 - cas:60207-31-0
 - kegg.compound:C18701
-- kegg.drug:D03023
 - pesticides:azaconazole
 - ppdb:45
 - reaxys:822252
+drug_xrefs:
+- kegg.drug:D03023
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:81898
@@ -79,6 +80,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T04:10:35Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:42Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

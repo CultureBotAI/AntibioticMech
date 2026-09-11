@@ -820,6 +820,86 @@ def unnamed_producer_queue(records: list[dict]) -> list[dict]:
     return out
 
 
+def xref_span_conflict_queue(records: list[dict]) -> list[dict]:
+    """Structure-exact accessions the seeder withheld for spanning two structures.
+
+    A refused assertion needs a destination (#136): the accession, the records
+    it landed on, and why it was withheld, so a curator can restore it to the
+    one record it names. Reconstructed from the inventories through each
+    record's `source_concepts`, since the withholding is exactly what removed
+    it from the records -- and passed through the seeder's own per-record gate
+    first, so an accession the gate had already refused for another reason
+    never reaches the spanning test here either. Restating the gate listed
+    CHEBI:8309 on polymyxin B2, which rule 2 refuses before spanning is asked.
+    """
+    import sys
+    from types import SimpleNamespace
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from seed_from_sources import (
+        RAW_DIR,
+        contested_xrefs,
+        gate_xrefs,
+        load_tsv,
+        normalize_xref,
+        spanning_accessions,
+        xref_names,
+    )
+
+    chebi = {row["chebi_id"]: row for row in load_tsv(RAW_DIR / "chebi_antimicrobials.tsv")}
+    keys = {cid: row.get("standard_inchi_key") or "" for cid, row in chebi.items()}
+    names = {cid: xref_names(row) for cid, row in chebi.items()}
+    rows = dict(chebi)
+    rows.update({row["aro_id"]: row for row in load_tsv(RAW_DIR / "aro_antibiotics.tsv")})
+
+    carried: list[tuple[str, str, dict]] = []
+    for record in records:
+        key = (record.get("chemical_structure") or {}).get("standard_inchi_key") or ""
+        own = {" ".join((record.get("label") or "").lower().split())}
+        own |= {" ".join((syn.get("name") or "").lower().split())
+                for syn in (record.get("synonyms") or [])}
+        own -= {""}
+        group, raw_xrefs, seen = [], [], set()
+        for concept in record.get("source_concepts") or []:
+            row = rows.get(concept.get("source_id", ""))
+            if not row:
+                continue
+            xrefs = [x for x in (normalize_xref(v) for v in (row.get("xrefs") or "").split("|")) if x]
+            group.append(SimpleNamespace(source=concept.get("source"), xrefs=xrefs))
+            for x in xrefs:
+                if x not in seen:
+                    seen.add(x)
+                    raw_xrefs.append(x)
+        kept = gate_xrefs(raw_xrefs, own_key=key, own_names=own,
+                          broader=set(record.get("parent_compounds") or []),
+                          contested=contested_xrefs(group), chebi_keys=keys,
+                          chebi_name_index=names, refused=[],
+                          identity=(record["identifier"], record.get("label", "")))
+        carried += [(key, x, record) for x in kept]
+
+    spanning = spanning_accessions((key, xref) for key, xref, _ in carried)
+    names: dict[str, set[str]] = {}
+    for _, xref, record in carried:
+        if xref in spanning:
+            names.setdefault(xref, set()).add(f"{record['label']} ({record['identifier']})")
+    out = []
+    for _, xref, record in carried:
+        if xref not in spanning:
+            continue
+        others = sorted(names[xref] - {f"{record['label']} ({record['identifier']})"})
+        out.append({
+            "queue": "xref-span-conflict",
+            "key": record["identifier"],
+            "label": record["label"],
+            "source": "+".join(sorted({c["source"] for c in record.get("source_concepts", [])})),
+            "source_id": xref,
+            "hint": f"also published on {', '.join(others)}; one accession, two structures",
+        })
+    # The identifier breaks label ties, so two records sharing a label come
+    # out in one order whatever order they were read in.
+    out.sort(key=lambda r: (r["source_id"], r["label"].lower(), r["key"]))
+    return out
+
+
 def structure_unreviewed_queue(records: list[dict]) -> list[dict]:
     """Structures carried from a source that nobody has classified.
 
@@ -1039,7 +1119,8 @@ def main() -> int:
                                  "xref-unverified", "multi-component",
                                  "producer-candidate", "activity-candidate", "excluded",
                                  "crossref-conflict", "structure-unreviewed",
-                                 "xref-name-conflict", "unnamed-producer",
+                                 "xref-name-conflict", "xref-span-conflict",
+                                 "unnamed-producer",
                                  "review-readiness"),
                         default="all")
     parser.add_argument("--limit", type=int, default=25, help="Rows printed per queue.")
@@ -1074,6 +1155,8 @@ def main() -> int:
         queues["crossref-conflict"] = crossref_conflict_queue()
     if args.queue in ("all", "xref-name-conflict"):
         queues["xref-name-conflict"] = xref_name_conflict_queue(records)
+    if args.queue in ("all", "xref-span-conflict"):
+        queues["xref-span-conflict"] = xref_span_conflict_queue(records)
     if args.queue in ("all", "unnamed-producer"):
         queues["unnamed-producer"] = unnamed_producer_queue(records)
     if args.queue in ("all", "structure-unreviewed"):

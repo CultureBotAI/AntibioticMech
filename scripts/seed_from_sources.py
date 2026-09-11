@@ -186,6 +186,10 @@ XREF_PREFIX = {
     "CAS": "cas",
     "CHEBI": "CHEBI",
     "ARO": "ARO",
+    # ChEBI files its FooDB links as foods, but every accession it carries is
+    # FDB-prefixed, which is FooDB's COMPOUND namespace; the food namespace is
+    # FOOD-prefixed. Linked as foods, all 51 went to a 404 page.
+    "foodb.food": "foodb.compound",
 }
 
 # Namespaces that do NOT identify a chemical structure, and so cannot mean "the
@@ -210,25 +214,24 @@ NON_STRUCTURE_XREF_PREFIXES = {"pdb", "PDB"}
 # field defined as "the same structure", and patent:WO2011108759 really does sit
 # on ametoctradin and silthiofam, two unrelated fungicides.
 #
-# THEY ARE KEPT ANYWAY, for now, because dropping them was the wrong remedy and
-# measuring said so: 96% of the 709 wikipedia.en accessions and 97% of the 1,027
-# patent accessions map to exactly ONE structure in this corpus, so removing
-# 1,800 useful links would have cost 57 false equivalences — and left 7 records
-# with no cross-references at all. Issue #92 asked for such identifiers to be
-# MOVED out of chemical xrefs, not deleted, and the destination is a schema
-# decision this repository has not taken. See #136.
+# They are KEPT, in `document_xrefs`. Dropping them was tried and measuring
+# said it was the wrong remedy: nearly every one of them maps to exactly ONE
+# structure here, so removing them would have cost far more useful links than
+# false equivalences. Issue #92 asked for such identifiers to be MOVED out of
+# chemical xrefs rather than deleted; `document_xrefs` is that destination (#136).
 DOCUMENT_XREF_PREFIXES = {"patent", "wikipedia.en"}
 
 # Namespaces that identify a DRUG rather than an exact structure, so one
 # accession legitimately spans a parent compound and its salts and stereoisomers
 # — drugbank:DB00639 covers butoconazole, butoconazole nitrate and both
-# enantiomers. Kept for their utility, and named so the exception is declared
-# rather than discovered. See #134.
+# enantiomers. Kept for their utility, in `drug_xrefs`, so what the field means
+# is visible on the record rather than declared in a constant. See #134.
 # `unii` was here and is not: the corpus contains ZERO unii xrefs, so declaring
 # a granularity exception for it was speculation dressed as documentation, and
 # the grounding check skipped it silently because a prefix that never appears
 # cannot be shown to span anything. If UNII xrefs arrive and do span structures,
-# the undeclared-namespace assertion catches them then, which is the right time.
+# the no-accession-spans-two-structures invariant catches them then, which is
+# the right time.
 DRUG_GRANULARITY_XREF_PREFIXES = {"drugbank", "kegg.drug", "drugcentral"}
 
 # Namespaces where one value identifies one substance, so two sources offering
@@ -263,23 +266,111 @@ def contested_xrefs(group: list) -> set[str]:
             contested |= offered
     return contested
 
-# Namespaces that are SUPPOSED to be structure-exact and, in this corpus, are
-# not. Named because the alternative was a test that could not see them: an
-# earlier version checked only the namespaces already known to be coarse, so it
-# was empty by construction and passed while 22 accessions contradicted it.
-#
-#   chembl:CHEMBL134561   asserted to be both cefdinir and iclaprim — and see
-#                         #133, where iclaprim's own identity is wrong
-#   pdb-ccd:CLQ           chloroquine and its (R)-enantiomer
-#   pdb-ccd:BRN           diminazene and its diaceturate salt
-#   cas (7), metacyc.compound (5), hmdb (3), knapsack (3)
-#
-# These are NOT a granularity convention like DrugBank's; a CAS number is meant
-# to name one substance. Each is either an upstream error or a salt/parent pair
-# the source treats as one. Listed so the count cannot grow unnoticed, and filed
-# as #137 rather than resolved by silently widening the exception.
-KNOWN_COARSE_XREF_PREFIXES = {"cas", "metacyc.compound", "hmdb", "knapsack",
-                              "pdb-ccd", "chembl"}
+# Where each namespace's accession goes. `xrefs` means the same structure;
+# the two named sets mean something else and get their own slots, so the
+# exception is a field a consumer can see rather than a constant they have
+# to know about (#134, #136).
+def xref_slot(xref: str) -> str:
+    prefix = xref.split(":", 1)[0]
+    if prefix in DRUG_GRANULARITY_XREF_PREFIXES:
+        return "drug_xrefs"
+    if prefix in DOCUMENT_XREF_PREFIXES:
+        return "document_xrefs"
+    return "xrefs"
+
+
+# A structure-exact accession published on two different InChIKeys names at
+# most one of them, and the corpus cannot tell which: cas:69388-84-7 sits on
+# sulbactam and sulbactam sodium, and chembl:CHEMBL1999880 on narbomycin and
+# nybomycin, two unrelated antibiotics. A "known coarse" constant used to
+# DECLARE such namespaces and let the accessions through, which turned a
+# defect into a listed exception nobody triaged (#137). They are now withheld
+# from every record they span and reported, so a curator can put each one back
+# on the record it actually names. Structure-exact namespaces only: a DrugBank
+# id spanning a salt and its parent is that namespace's meaning, not an error.
+REFUSED_SPANNING_XREFS: list[tuple[str, str, str]] = []
+
+
+def spanning_accessions(pairs) -> dict[str, set[str]]:
+    """Structure-exact accessions that land on more than one InChIKey.
+
+    `pairs` yields (standard_inchi_key, xref). One function for the seeder and
+    the worklist queue that reports what it withheld, so the two cannot drift.
+    """
+    keys: dict[str, set[str]] = {}
+    for key, xref in pairs:
+        if key and xref_slot(xref) == "xrefs":
+            keys.setdefault(xref, set()).add(key)
+    return {xref: found for xref, found in keys.items() if len(found) > 1}
+
+
+def gate_xrefs(xrefs, *, own_key: str, own_names: set[str], broader: set[str],
+               contested: set[str], chebi_keys: dict[str, str],
+               chebi_name_index: dict[str, set[str]], refused: list,
+               identity: tuple[str, str]) -> list[str]:
+    """The per-record cross-reference gate, in the order the rules apply.
+
+    One function, because the worklist queue that reports what the corpus-wide
+    spanning pass withheld has to know what reached that pass -- and a queue
+    that restated these rules from the inventory rows listed CHEBI:8309 on
+    polymyxin B2, where rule 2 had already refused it as a known different
+    structure. Restating a gate is how #226 and #250 happened; calling it is
+    the fix.
+    """
+    identifier, label = identity
+    kept = []
+    for x in xrefs:
+        if (x.split(":", 1)[0] in NON_STRUCTURE_XREF_PREFIXES
+                or x in broader or x in contested):
+            continue
+        if own_key and chebi_keys.get(x) and chebi_keys[x] != own_key:
+            continue
+        if x.startswith("CHEBI:"):
+            reason = structureless_xref_conflict(
+                own_names, x, chebi_keys.get(x, ""), chebi_name_index.get(x, set()))
+            if reason:
+                refused.append((identifier, label, reason))
+                continue
+        kept.append(x)
+    return kept
+
+
+def withhold_spanning_xrefs(records: dict[str, dict]) -> int:
+    """Strip every structure-exact accession that spans two structures."""
+    spanning = spanning_accessions(
+        ((r.get("chemical_structure") or {}).get("standard_inchi_key"), x)
+        for r in records.values() for x in (r.get("xrefs") or []))
+    if not spanning:
+        return 0
+    # Records are named by identifier AND label: two records can share a label
+    # (triflumizole is both CHEBI:81784 and a minted ARO record), and naming
+    # them by label alone produced "also published on ." in the report.
+    names: dict[str, set[str]] = {}
+    for identifier, record in records.items():
+        for xref in record.get("xrefs") or []:
+            if xref in spanning:
+                names.setdefault(xref, set()).add(f"{record.get('label', '')} ({identifier})")
+    withheld = 0
+    for identifier, record in records.items():
+        kept = [x for x in (record.get("xrefs") or []) if x not in spanning]
+        for xref in (record.get("xrefs") or []):
+            if xref in spanning:
+                namespace = xref.split(":", 1)[0]
+                others = sorted(names[xref] - {f"{record.get('label', '')} ({identifier})"})
+                REFUSED_SPANNING_XREFS.append((
+                    identifier, record.get("label", ""),
+                    f"{xref} is also published on {', '.join(others)}. A {namespace} "
+                    "accession names one substance, so it belongs to at most one of "
+                    "these records and the corpus cannot tell which. Withheld from all "
+                    "of them."))
+                withheld += 1
+        if kept:
+            record["xrefs"] = kept
+        else:
+            record.pop("xrefs", None)
+    return withheld
+
+
 CURIE_LOCAL = re.compile(r"^[A-Za-z0-9._-]+$")
 BIOREGISTRY_PREFIX = re.compile(r"^[a-z][a-z0-9._-]*$")
 
@@ -288,7 +379,8 @@ BIOREGISTRY_PREFIX = re.compile(r"^[a-z][a-z0-9._-]*$")
 # list so "what the seeder owns" has exactly one definition.
 SEEDED_FIELDS = [
     "identifier", "label", "definition", "definition_source", "synonyms",
-    "parent_compounds", "xrefs", "antimicrobial_class", "activity_roles",
+    "parent_compounds", "xrefs", "drug_xrefs", "document_xrefs",
+    "antimicrobial_class", "activity_roles",
     "structural_class", "structural_class_id", "chemical_structure",
     "source_concepts", "grounding_status",
 ]
@@ -400,6 +492,12 @@ def normalize_xref(raw: str) -> str | None:
     prefix, local = raw.split(":", 1)
     local = local.strip()
     mapped = XREF_PREFIX.get(prefix)
+    if prefix == "foodb.food" and not local.startswith("FDB"):
+        # The remap rests on the FDB pattern. A FOOD-prefixed id would be a
+        # food, and filing it as a compound would be the same mislabel the
+        # other way round; leave it unmapped so the undeclared prefix fails
+        # validation and someone looks.
+        return None
     if mapped is None and BIOREGISTRY_PREFIX.match(prefix):
         mapped = prefix
     if mapped is None or not CURIE_LOCAL.match(local):
@@ -1020,6 +1118,7 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
     """Group concepts into records. Returns (records, skipped-for-no-structure)."""
     MALFORMED_STRUCTURE_IDS.clear()
     REFUSED_STRUCTURELESS_XREFS.clear()
+    REFUSED_SPANNING_XREFS.clear()
     # InChIKey per ChEBI id, from the committed inventory. The same-structure
     # gate on xrefs uses it; a ChEBI term with no structure here is simply not
     # comparable, and its xrefs are kept and queued rather than dropped.
@@ -1173,6 +1272,9 @@ def merge(concepts: list[Concept], chebi_rows: dict[str, dict], conf: dict,
         records[identifier] = build_record(identifier, grounding[identifier], group,
                                            conf, source_version, chebi_keys,
                                            chebi_name_index)
+    # Corpus-wide, because the property is corpus-wide: no record can know on
+    # its own that another record carries the same CAS number.
+    withhold_spanning_xrefs(records)
     return records, skipped
 
 
@@ -1486,23 +1588,19 @@ def build_record(identifier: str, grounding_status: str, group: list[Concept],
                   for syn in (record.get("synonyms") or [])}
     own_names -= {""}
 
-    kept = []
-    for x in xrefs:
-        if (x.split(":", 1)[0] in NON_STRUCTURE_XREF_PREFIXES
-                or x in broader or x in contested):
-            continue
-        if own_key and chebi_keys.get(x) and chebi_keys[x] != own_key:
-            continue
-        if x.startswith("CHEBI:"):
-            reason = structureless_xref_conflict(
-                own_names, x, chebi_keys.get(x, ""), chebi_name_index.get(x, set()))
-            if reason:
-                REFUSED_STRUCTURELESS_XREFS.append((identifier, record.get("label", ""), reason))
-                continue
-        kept.append(x)
-    record["xrefs"] = kept
-    if not record["xrefs"]:
-        record.pop("xrefs")
+    kept = gate_xrefs(xrefs, own_key=own_key, own_names=own_names, broader=broader,
+                      contested=contested, chebi_keys=chebi_keys,
+                      chebi_name_index=chebi_name_index,
+                      refused=REFUSED_STRUCTURELESS_XREFS,
+                      identity=(identifier, record.get("label", "")))
+    # Three slots, by what the namespace means. Emitted in this order so the
+    # drug and document identifiers sit beside the structure ones on disk.
+    by_slot: dict[str, list[str]] = {"xrefs": [], "drug_xrefs": [], "document_xrefs": []}
+    for x in kept:
+        by_slot[xref_slot(x)].append(x)
+    for slot, values in by_slot.items():
+        if values:
+            record[slot] = values
     observations = structural_observations(group, source_version, source_version)
     if observations:
         record["structural_observations"] = observations
@@ -2978,6 +3076,11 @@ def main() -> int:
               "unnamed-producer`)", file=sys.stderr)
         for identifier, _, reason in REFUSED_UNNAMED_PRODUCERS:
             print(f"    {identifier}: {reason}", file=sys.stderr)
+    if REFUSED_SPANNING_XREFS:
+        accessions = {reason.split(" ", 1)[0] for _, _, reason in REFUSED_SPANNING_XREFS}
+        print(f"  {len(accessions)} structure-exact accession(s) withheld from "
+              f"{len(REFUSED_SPANNING_XREFS)} record(s) for spanning two structures "
+              "(see `just worklist --queue xref-span-conflict`)", file=sys.stderr)
     if MALFORMED_STRUCTURE_IDS:
         print(f"  {len(MALFORMED_STRUCTURE_IDS)} malformed structure accession(s) "
               "skipped (not a PDB/EMDB accession):", file=sys.stderr)

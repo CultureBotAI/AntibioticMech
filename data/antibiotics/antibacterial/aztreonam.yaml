@@ -52,16 +52,18 @@ xrefs:
 - ARO:3000550
 - beilstein:3577211
 - cas:78110-38-0
-- drugbank:DB00355
-- drugcentral:279
 - kegg.compound:C06840
-- kegg.drug:D00240
-- patent:NL8100571
 - pdb-ccd:AZR
 - reaxys:3577211
-- wikipedia.en:Aztreonam
 - chembl:CHEMBL158
 - pubchem.compound:5742832
+drug_xrefs:
+- drugbank:DB00355
+- drugcentral:279
+- kegg.drug:D00240
+document_xrefs:
+- patent:NL8100571
+- wikipedia.en:Aztreonam
 source_concepts:
 - source: ARO
   source_id: ARO:3000550
@@ -505,6 +507,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:00Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:14Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

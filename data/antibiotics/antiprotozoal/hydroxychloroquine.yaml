@@ -72,14 +72,16 @@ chemical_structure:
   monoisotopic_mass: 335.17644
 xrefs:
 - cas:118-42-3
-- drugbank:DB01611
-- drugcentral:1395
 - hmdb:HMDB0015549
 - kegg.compound:C07043
-- kegg.drug:D08050
 - lincs.smallmolecule:LSM-5193
-- patent:US2546658
 - reaxys:253894
+drug_xrefs:
+- drugbank:DB01611
+- drugcentral:1395
+- kegg.drug:D08050
+document_xrefs:
+- patent:US2546658
 - wikipedia.en:Hydroxychloroquine
 source_concepts:
 - source: CHEBI
@@ -108,6 +110,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-02T23:56:08Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:32Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

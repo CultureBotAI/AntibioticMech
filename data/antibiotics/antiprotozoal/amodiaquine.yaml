@@ -39,14 +39,16 @@ chemical_structure:
   monoisotopic_mass: 355.14514
 xrefs:
 - cas:86-42-0
-- drugbank:DB00613
-- drugcentral:186
 - kegg.compound:C07626
-- kegg.drug:D02922
 - lincs.smallmolecule:LSM-4042
-- patent:US2474821
 - pdb-ccd:CQA
 - reaxys:300962
+drug_xrefs:
+- drugbank:DB00613
+- drugcentral:186
+- kegg.drug:D02922
+document_xrefs:
+- patent:US2474821
 - wikipedia.en:Amodiaquine
 source_concepts:
 - source: CHEBI
@@ -79,6 +81,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-06T06:13:47Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

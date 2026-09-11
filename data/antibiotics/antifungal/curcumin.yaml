@@ -54,16 +54,18 @@ chemical_structure:
 xrefs:
 - cas:458-37-7
 - chemspider:839564
-- drugbank:DB11672
 - hmdb:HMDB0002269
 - kegg.compound:C10443
 - knapsack:C00002731
 - lincs.smallmolecule:LSM-43083
 - metacyc.compound:CPD-6602
-- patent:DE859145
-- patent:KR20130050834
 - pdb-ccd:CC9
 - reaxys:2306965
+drug_xrefs:
+- drugbank:DB11672
+document_xrefs:
+- patent:DE859145
+- patent:KR20130050834
 - wikipedia.en:Curcumin
 source_concepts:
 - source: CHEBI
@@ -83,6 +85,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:27Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

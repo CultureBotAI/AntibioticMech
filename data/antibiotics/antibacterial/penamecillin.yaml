@@ -46,14 +46,16 @@ chemical_structure:
 xrefs:
 - ARO:3009128
 - cas:983-85-7
-- drugcentral:2077
-- kegg.drug:D05406
-- patent:GB1003479
-- patent:US3250679
 - reaxys:5164412
-- wikipedia.en:Penamecillin
 - chembl:CHEMBL2106988
 - pubchem.compound:10250769
+drug_xrefs:
+- drugcentral:2077
+- kegg.drug:D05406
+document_xrefs:
+- patent:GB1003479
+- patent:US3250679
+- wikipedia.en:Penamecillin
 source_concepts:
 - source: ARO
   source_id: ARO:3009128
@@ -81,6 +83,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:24Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:11Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

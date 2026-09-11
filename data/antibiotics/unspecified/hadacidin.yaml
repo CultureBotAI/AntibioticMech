@@ -43,10 +43,12 @@ chemical_structure:
   monoisotopic_mass: 119.02186
 xrefs:
 - cas:689-13-4
-- drugbank:DB02109
-- patent:US3154578
 - pdb-ccd:HDA
 - reaxys:1927168
+drug_xrefs:
+- drugbank:DB02109
+document_xrefs:
+- patent:US3154578
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:43040
@@ -65,6 +67,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:27Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

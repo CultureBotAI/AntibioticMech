@@ -62,18 +62,20 @@ chemical_structure:
 xrefs:
 - ARO:3000644
 - cas:53994-73-3
-- drugbank:DB00833
-- drugcentral:525
 - hmdb:HMDB0014971
 - kegg.compound:C06877
-- kegg.drug:D00256
 - lincs.smallmolecule:LSM-5368
-- patent:DE2408698
-- patent:US3925372
 - reaxys:3632473
-- wikipedia.en:Cefaclor
 - chembl:CHEMBL1201018
 - pubchem.compound:51039
+drug_xrefs:
+- drugbank:DB00833
+- drugcentral:525
+- kegg.drug:D00256
+document_xrefs:
+- patent:DE2408698
+- patent:US3925372
+- wikipedia.en:Cefaclor
 source_concepts:
 - source: ARO
   source_id: ARO:3000644
@@ -129,6 +131,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:05Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:23Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

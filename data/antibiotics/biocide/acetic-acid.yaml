@@ -75,11 +75,9 @@ chemical_structure:
   monoisotopic_mass: 60.02113
 xrefs:
 - cas:64-19-7
-- drugcentral:4211
 - gmelin:1380
 - hmdb:HMDB0000042
 - kegg.compound:C00033
-- kegg.drug:D00010
 - knapsack:C00001176
 - lipidmaps:LMFA01010002
 - metacyc.compound:ACET
@@ -87,6 +85,10 @@ xrefs:
 - pdb-ccd:ACY
 - ppdb:1333
 - reaxys:506007
+drug_xrefs:
+- drugcentral:4211
+- kegg.drug:D00010
+document_xrefs:
 - wikipedia.en:Acetic_acid
 source_concepts:
 - source: CHEBI
@@ -106,6 +108,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:13Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

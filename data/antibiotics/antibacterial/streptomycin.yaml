@@ -74,18 +74,20 @@ chemical_structure:
 xrefs:
 - ARO:0000040
 - cas:57-92-1
-- drugbank:DB01082
-- drugcentral:2481
 - hmdb:HMDB0015214
 - kegg.compound:C00413
-- kegg.drug:D08531
 - metacyc.compound:STREPTOMYCIN
 - pdb-ccd:SRY
 - pesticides:streptomycin
 - reaxys:74498
-- wikipedia.en:Streptomycin
 - chembl:CHEMBL372795
 - pubchem.compound:19649
+drug_xrefs:
+- drugbank:DB01082
+- drugcentral:2481
+- kegg.drug:D08531
+document_xrefs:
+- wikipedia.en:Streptomycin
 source_concepts:
 - source: ARO
   source_id: ARO:0000040
@@ -729,3 +731,7 @@ curation_history:
   changes: Added a PMID-supported causal graph for streptomycin binding to the bacterial
     30S decoding site and marked the coarse target scope as curator-reviewed.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:14Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

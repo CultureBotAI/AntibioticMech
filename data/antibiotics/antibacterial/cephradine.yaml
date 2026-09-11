@@ -80,14 +80,16 @@ chemical_structure:
 xrefs:
 - ARO:3004009
 - cas:38821-53-3
-- drugbank:DB01333
-- drugcentral:576
 - hmdb:HMDB0015428
-- kegg.drug:D00264
 - reaxys:4211105
-- wikipedia.en:Cephradine
 - chembl:CHEMBL1604
 - pubchem.compound:38103
+drug_xrefs:
+- drugbank:DB01333
+- drugcentral:576
+- kegg.drug:D00264
+document_xrefs:
+- wikipedia.en:Cephradine
 source_concepts:
 - source: ARO
   source_id: ARO:3004009
@@ -135,6 +137,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:06Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:25Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

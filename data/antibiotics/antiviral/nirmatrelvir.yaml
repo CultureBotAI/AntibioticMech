@@ -68,8 +68,10 @@ molecular_targets:
     notes: Primary enzyme-kinetics comparison of wild-type and six Mpro variants.
 xrefs:
 - cas:2628280-40-8
+drug_xrefs:
 - drugbank:DB16691
 - kegg.drug:D12244
+document_xrefs:
 - wikipedia.en:Nirmatrelvir
 source_concepts:
 - source: CHEBI
@@ -104,3 +106,7 @@ curation_history:
     SARS-CoV-2 main-protease inhibition and added the direct structural target with
     primary evidence.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:14Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

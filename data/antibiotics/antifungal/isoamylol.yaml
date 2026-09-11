@@ -69,12 +69,13 @@ chemical_structure:
   monoisotopic_mass: 88.08882
 xrefs:
 - cas:123-51-3
-- drugbank:DB02296
 - gmelin:49460
 - hmdb:HMDB0006007
 - kegg.compound:C07328
 - reaxys:1718835
 - ymdb:YMDB00570
+drug_xrefs:
+- drugbank:DB02296
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:15837
@@ -93,6 +94,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:26Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:14Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

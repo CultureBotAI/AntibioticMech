@@ -131,12 +131,14 @@ chemical_structure:
 xrefs:
 - cas:83-73-8
 - chemspider:3597
-- drugbank:DB09115
-- drugcentral:1457
 - kegg.compound:C07636
-- kegg.drug:D00581
 - lincs.smallmolecule:LSM-25652
 - reaxys:153639
+drug_xrefs:
+- drugbank:DB09115
+- drugcentral:1457
+- kegg.drug:D00581
+document_xrefs:
 - wikipedia.en:Diiodohydroxyquinoline
 source_concepts:
 - source: CHEBI
@@ -157,6 +159,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:35Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:32Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

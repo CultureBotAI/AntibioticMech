@@ -37,13 +37,15 @@ chemical_structure:
   monoisotopic_mass: 300.05284
 xrefs:
 - cas:89786-04-9
-- drugbank:DB01606
-- drugcentral:2572
 - kegg.compound:C07771
-- kegg.drug:D00660
 - lincs.smallmolecule:LSM-5323
 - pdb-ccd:TAZ
 - reaxys:4787944
+drug_xrefs:
+- drugbank:DB01606
+- drugcentral:2572
+- kegg.drug:D00660
+document_xrefs:
 - wikipedia.en:Tazobactam
 source_concepts:
 - source: CHEBI
@@ -63,6 +65,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:45Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

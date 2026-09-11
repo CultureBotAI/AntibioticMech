@@ -68,15 +68,17 @@ xrefs:
 - ARO:3007469
 - beilstein:249133
 - cas:127-79-7
-- drugbank:DB01581
-- drugcentral:2510
 - gmelin:219949
-- kegg.drug:D02435
 - lincs.smallmolecule:LSM-5979
-- patent:US2407966
-- wikipedia.en:Sulfamerazine
 - chembl:CHEMBL438
 - pubchem.compound:5325
+drug_xrefs:
+- drugbank:DB01581
+- drugcentral:2510
+- kegg.drug:D02435
+document_xrefs:
+- patent:US2407966
+- wikipedia.en:Sulfamerazine
 source_concepts:
 - source: ARO
   source_id: ARO:3007469
@@ -102,6 +104,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:23Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:11Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

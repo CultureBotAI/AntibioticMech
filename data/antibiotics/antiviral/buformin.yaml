@@ -65,13 +65,15 @@ chemical_structure:
 xrefs:
 - cas:692-13-7
 - chemspider:2374
-- drugbank:DB04830
-- drugcentral:423
 - hmdb:HMDB0249431
 - kegg.compound:C07674
-- kegg.drug:D00595
 - pdb-ccd:BFR
 - reaxys:607037
+drug_xrefs:
+- drugbank:DB04830
+- drugcentral:423
+- kegg.drug:D00595
+document_xrefs:
 - wikipedia.en:Buformin
 source_concepts:
 - source: CHEBI
@@ -91,6 +93,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:22Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

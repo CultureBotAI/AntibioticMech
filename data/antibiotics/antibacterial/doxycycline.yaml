@@ -91,22 +91,23 @@ xrefs:
 - ARO:0000069
 - cas:564-25-0
 - chemspider:10469369
-- drugbank:DB00254
-- drugcentral:961
 - hmdb:HMDB0014399
 - kegg.compound:C06973
-- kegg.drug:D07876
-- knapsack:C00017127
 - lipidmaps:LMPK07000001
 - metacyc.compound:CPD-19256
-- patent:US3019260
-- patent:US3200149
 - pdb-ccd:DXT
 - reaxys:3041790
 - vsdb:1840
-- wikipedia.en:Doxycycline
 - chembl:CHEMBL1200699
 - pubchem.compound:54671203
+drug_xrefs:
+- drugbank:DB00254
+- drugcentral:961
+- kegg.drug:D07876
+document_xrefs:
+- patent:US3019260
+- patent:US3200149
+- wikipedia.en:Doxycycline
 source_concepts:
 - source: ARO
   source_id: ARO:0000069
@@ -259,6 +260,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:10Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:30Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

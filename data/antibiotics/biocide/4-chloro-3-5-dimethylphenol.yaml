@@ -79,14 +79,16 @@ chemical_structure:
   monoisotopic_mass: 156.03419
 xrefs:
 - cas:88-04-0
-- drugcentral:3094
 - kegg.compound:C14715
-- kegg.drug:D03473
 - lincs.smallmolecule:LSM-19962
-- patent:US2350677
 - ppdb:1615
 - reaxys:1862539
 - vsdb:1615
+drug_xrefs:
+- drugcentral:3094
+- kegg.drug:D03473
+document_xrefs:
+- patent:US2350677
 - wikipedia.en:Chloroxylenol
 source_concepts:
 - source: CHEBI
@@ -106,6 +108,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:31Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:22Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

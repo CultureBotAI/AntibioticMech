@@ -102,20 +102,21 @@ chemical_structure:
 xrefs:
 - ARO:3000760
 - cas:68-41-7
-- drugbank:DB00260
-- drugcentral:759
-- hmdb:HMDB0014405
-- kegg.drug:D00877
 - lincs.smallmolecule:LSM-5932
 - lipidmaps:LMPK14000007
 - metacyc.compound:CPD-2482
-- patent:US2772280
-- patent:US2840565
 - pdb-ccd:4AX
 - reaxys:80798
-- wikipedia.en:Cycloserine
 - chembl:CHEMBL771
 - pubchem.compound:6234
+drug_xrefs:
+- drugbank:DB00260
+- drugcentral:759
+- kegg.drug:D00877
+document_xrefs:
+- patent:US2772280
+- patent:US2840565
+- wikipedia.en:Cycloserine
 source_concepts:
 - source: ARO
   source_id: ARO:3000760
@@ -260,3 +261,7 @@ curation_history:
     added cell-wall synthesis inhibition and primary alanine-racemase kinetics while
     preserving the ligase-evidence gap.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:27Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

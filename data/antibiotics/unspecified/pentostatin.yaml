@@ -77,13 +77,15 @@ chemical_structure:
   monoisotopic_mass: 268.11716
 xrefs:
 - cas:53910-25-1
-- drugbank:DB00552
-- drugcentral:2098
 - hmdb:HMDB0014692
 - kegg.compound:C02267
-- kegg.drug:D00155
-- patent:US20040181052
 - pdb-ccd:DCF
+drug_xrefs:
+- drugbank:DB00552
+- drugcentral:2098
+- kegg.drug:D00155
+document_xrefs:
+- patent:US20040181052
 - wikipedia.en:Pentostatin
 source_concepts:
 - source: CHEBI
@@ -282,3 +284,7 @@ curation_history:
     retained BindingDB measurements, and retained FDA assertions; added purine-salvage
     inhibition and the directly bound P. vivax ADA target.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:17Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

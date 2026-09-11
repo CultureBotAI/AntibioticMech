@@ -91,13 +91,15 @@ chemical_structure:
 xrefs:
 - ARO:0000003
 - cas:55779-06-1
-- drugcentral:250
 - kegg.compound:C17708
-- kegg.drug:D07470
 - reaxys:3570275
-- wikipedia.en:Astromicin
 - chembl:CHEMBL3084803
 - pubchem.compound:5284517
+drug_xrefs:
+- drugcentral:250
+- kegg.drug:D07470
+document_xrefs:
+- wikipedia.en:Astromicin
 source_concepts:
 - source: ARO
   source_id: ARO:0000003
@@ -187,6 +189,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:07Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:26Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

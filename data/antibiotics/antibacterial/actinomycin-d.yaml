@@ -48,14 +48,16 @@ xrefs:
 - ARO:3000696
 - beilstein:4173766
 - cas:50-76-0
-- drugbank:DB00970
-- drugcentral:774
 - kegg.compound:C06770
-- kegg.drug:D00214
 - lincs.smallmolecule:LSM-5783
-- wikipedia.en:Dactinomycin
 - chembl:CHEMBL1554
 - pubchem.compound:457193
+drug_xrefs:
+- drugbank:DB00970
+- drugcentral:774
+- kegg.drug:D00214
+document_xrefs:
+- wikipedia.en:Dactinomycin
 source_concepts:
 - source: ARO
   source_id: ARO:3000696
@@ -258,6 +260,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:02Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -104,12 +104,14 @@ chemical_structure:
   monoisotopic_mass: 239.98833
 xrefs:
 - cas:137-26-8
-- drugcentral:3601
 - kegg.compound:C11160
-- kegg.drug:D06114
 - pesticides:thiram
 - ppdb:642
 - reaxys:1725821
+drug_xrefs:
+- drugcentral:3601
+- kegg.drug:D06114
+document_xrefs:
 - wikipedia.en:Thiram
 source_concepts:
 - source: CHEBI
@@ -130,6 +132,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:45Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -66,9 +66,11 @@ molecular_targets:
     notes: Primary multiscale-model and in-vitro dual-mechanism study (DOI:10.1073/pnas.1203110110).
 xrefs:
 - cas:1009119-64-5
+- reaxys:13077731
+drug_xrefs:
 - drugcentral:4875
 - kegg.drug:D10065
-- reaxys:13077731
+document_xrefs:
 - wikipedia.en:Daclatasvir
 source_concepts:
 - source: CHEBI
@@ -119,3 +121,7 @@ curation_history:
     to MULTIPLE, added the evidence-calibrated NS5A association, and added target-alteration
     resistance.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

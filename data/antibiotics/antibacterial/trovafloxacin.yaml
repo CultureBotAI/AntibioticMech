@@ -62,15 +62,17 @@ chemical_structure:
 xrefs:
 - ARO:3000664
 - cas:147059-72-1
-- drugbank:DB00685
-- drugcentral:2777
 - hmdb:HMDB0014823
 - kegg.compound:C07664
-- kegg.drug:D08654
 - reaxys:8172628
-- wikipedia.en:Trovafloxacin
 - chembl:CHEMBL428
 - pubchem.compound:62959
+drug_xrefs:
+- drugbank:DB00685
+- drugcentral:2777
+- kegg.drug:D08654
+document_xrefs:
+- wikipedia.en:Trovafloxacin
 source_concepts:
 - source: ARO
   source_id: ARO:3000664
@@ -259,6 +261,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:20Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:46Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -33,13 +33,15 @@ chemical_structure:
 xrefs:
 - ARO:3004728
 - cas:87638-04-8
-- drugcentral:521
-- kegg.drug:D01560
-- patent:EP93376
-- patent:US4572801
 - reaxys:5786139
 - chembl:CHEMBL1614658
 - pubchem.compound:6540466
+drug_xrefs:
+- drugcentral:521
+- kegg.drug:D01560
+document_xrefs:
+- patent:EP93376
+- patent:US4572801
 source_concepts:
 - source: ARO
   source_id: ARO:3004728
@@ -67,6 +69,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:35Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:32Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

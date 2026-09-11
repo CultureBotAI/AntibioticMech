@@ -65,17 +65,19 @@ xrefs:
 - ARO:3004008
 - beilstein:4031996
 - cas:21593-23-7
-- drugbank:DB01139
-- drugcentral:575
 - hmdb:HMDB0015270
 - hmdb:HMDB0030451
 - kegg.compound:C06896
-- kegg.drug:D07636
 - reaxys:4031966
 - vsdb:1845
-- wikipedia.en:Cephapirin
 - chembl:CHEMBL1599
 - pubchem.compound:30699
+drug_xrefs:
+- drugbank:DB01139
+- drugcentral:575
+- kegg.drug:D07636
+document_xrefs:
+- wikipedia.en:Cephapirin
 source_concepts:
 - source: ARO
   source_id: ARO:3004008
@@ -123,6 +125,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:10Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:32Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

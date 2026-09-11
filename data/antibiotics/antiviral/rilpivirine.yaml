@@ -56,9 +56,13 @@ molecular_targets:
     notes: Primary compound-enzyme crystal-structure study.
 xrefs:
 - cas:500287-72-9
-- drugbank:DB08864
 - hmdb:HMDB0061725
+- pdb-ccd:T27
+- reaxys:9952270
+drug_xrefs:
+- drugbank:DB08864
 - kegg.drug:D09720
+document_xrefs:
 - patent:US2008280849
 - patent:WO2004016581
 - patent:WO2004069812
@@ -68,8 +72,6 @@ xrefs:
 - patent:WO2007082922
 - patent:WO2007113254
 - patent:WO2009007441
-- pdb-ccd:T27
-- reaxys:9952270
 - wikipedia.en:Rilpivirine
 source_concepts:
 - source: CHEBI
@@ -103,3 +105,7 @@ curation_history:
     viral polymerase inhibition and added the directly observed HIV-1 reverse-transcriptase
     binding target.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:38Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

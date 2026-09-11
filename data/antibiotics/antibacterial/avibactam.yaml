@@ -58,8 +58,10 @@ molecular_targets:
     notes: Primary avibactam-bound OXA-24/OXA-48 structural and kinetic study (DOI:10.1021/cb500703p).
 xrefs:
 - cas:1192500-31-4
-- drugcentral:4946
 - reaxys:22542284
+drug_xrefs:
+- drugcentral:4946
+document_xrefs:
 - wikipedia.en:Avibactam
 source_concepts:
 - source: CHEBI
@@ -93,3 +95,7 @@ curation_history:
     form, structure, roles, and antibacterial filing class; added the resistance-enzyme
     mechanism and directly bound OXA beta-lactamase target.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:44Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

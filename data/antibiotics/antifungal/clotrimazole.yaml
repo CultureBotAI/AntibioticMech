@@ -60,17 +60,19 @@ chemical_structure:
 xrefs:
 - ARO:3007516
 - cas:23593-75-1
-- drugbank:DB00257
-- drugcentral:719
 - hmdb:HMDB0001922
 - kegg.compound:C06922
-- kegg.drug:D00282
 - lincs.smallmolecule:LSM-5341
 - pdb-ccd:CL6
 - reaxys:622318
-- wikipedia.en:Clotrimazole
 - chembl:CHEMBL104
 - pubchem.compound:2812
+drug_xrefs:
+- drugbank:DB00257
+- drugcentral:719
+- kegg.drug:D00282
+document_xrefs:
+- wikipedia.en:Clotrimazole
 source_concepts:
 - source: ARO
   source_id: ARO:3007516
@@ -877,6 +879,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:26Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:26Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -106,10 +106,12 @@ chemical_structure:
   monoisotopic_mass: 152.04734
 xrefs:
 - cas:99-76-3
-- drugcentral:1766
 - hmdb:HMDB0032572
-- kegg.drug:D01400
 - pdb-ccd:MPB
+drug_xrefs:
+- drugcentral:1766
+- kegg.drug:D01400
+document_xrefs:
 - wikipedia.en:Methylparaben
 source_concepts:
 - source: CHEBI
@@ -130,6 +132,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:21Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

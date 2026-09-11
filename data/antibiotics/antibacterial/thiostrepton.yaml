@@ -51,16 +51,18 @@ chemical_structure:
 xrefs:
 - ARO:3000686
 - cas:1393-48-2
-- drugbank:DB11467
 - kegg.compound:C12054
-- kegg.drug:D06111
 - knapsack:C00000753
 - metacyc.compound:CPD-13481
 - reaxys:7390758
 - vsdb:3007
-- wikipedia.en:Thiostrepton
 - chembl:CHEMBL1236460
 - pubchem.compound:16129666
+drug_xrefs:
+- drugbank:DB11467
+- kegg.drug:D06111
+document_xrefs:
+- wikipedia.en:Thiostrepton
 source_concepts:
 - source: ARO
   source_id: ARO:3000686
@@ -140,3 +142,7 @@ curation_history:
     CARD target/resistance provenance; curator-confirmed protein-synthesis inhibition
     and added the measured ribosomal GTPase-center association.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:20Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

@@ -51,11 +51,12 @@ chemical_structure:
 xrefs:
 - ARO:3000758
 - cas:66508-53-0
-- drugbank:DB02948
 - pdb-ccd:FOM
 - reaxys:4133006
 - chembl:CHEMBL203125
 - pubchem.compound:572
+drug_xrefs:
+- drugbank:DB02948
 source_concepts:
 - source: ARO
   source_id: ARO:3000758
@@ -127,3 +128,7 @@ curation_history:
     and retained CARD target provenance; added the directly observed DXR target and
     recorded the absent coarse isoprenoid-pathway enum as an explicit gap.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

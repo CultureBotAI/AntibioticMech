@@ -88,20 +88,22 @@ chemical_structure:
 xrefs:
 - ARO:0000075
 - cas:67-20-9
+- kegg.compound:C07268
+- reaxys:8132135
+- chembl:CHEMBL572
+- pubchem.compound:6604200
+drug_xrefs:
 - drugbank:DB00698
 - drugcentral:1949
-- kegg.compound:C07268
 - kegg.drug:D00439
+document_xrefs:
 - patent:US2610181
 - patent:US2898335
 - patent:US2927110
 - patent:WO2006019844
 - patent:WO2008103673
 - patent:WO2010065110
-- reaxys:8132135
 - wikipedia.en:Nitrofurantoin
-- chembl:CHEMBL572
-- pubchem.compound:6604200
 source_concepts:
 - source: ARO
   source_id: ARO:0000075
@@ -579,6 +581,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:16Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:40Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

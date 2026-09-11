@@ -53,14 +53,16 @@ xrefs:
 - ARO:3000646
 - beilstein:6025058
 - cas:79350-37-1
-- drugbank:DB00671
-- drugcentral:537
 - kegg.compound:C06881
-- kegg.drug:D00258
-- patent:EP30630
-- patent:US4409214
 - chembl:CHEMBL1541
 - pubchem.compound:5362065
+drug_xrefs:
+- drugbank:DB00671
+- drugcentral:537
+- kegg.drug:D00258
+document_xrefs:
+- patent:EP30630
+- patent:US4409214
 source_concepts:
 - source: ARO
   source_id: ARO:3000646
@@ -165,6 +167,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:09Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:29Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -68,14 +68,16 @@ chemical_structure:
   monoisotopic_mass: 310.07358
 xrefs:
 - cas:122-11-2
-- drugbank:DB06150
-- drugcentral:2501
 - gmelin:677830
 - hmdb:HMDB0015621
-- kegg.drug:D01142
 - lincs.smallmolecule:LSM-5790
 - reaxys:306856
 - vsdb:1833
+drug_xrefs:
+- drugbank:DB06150
+- drugcentral:2501
+- kegg.drug:D01142
+document_xrefs:
 - wikipedia.en:Sulfadimethoxine
 source_concepts:
 - source: CHEBI
@@ -95,6 +97,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:31Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:22Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

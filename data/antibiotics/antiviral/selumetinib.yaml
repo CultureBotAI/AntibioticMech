@@ -56,10 +56,12 @@ chemical_structure:
   monoisotopic_mass: 456.00001
 xrefs:
 - cas:606143-52-6
-- kegg.drug:D09666
 - lincs.smallmolecule:LSM-1056
 - pdb-ccd:3EW
 - reaxys:11099648
+drug_xrefs:
+- kegg.drug:D09666
+document_xrefs:
 - wikipedia.en:Selumetinib
 source_concepts:
 - source: CHEBI
@@ -131,6 +133,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:45Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

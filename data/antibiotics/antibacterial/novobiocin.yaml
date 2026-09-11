@@ -60,18 +60,20 @@ chemical_structure:
 xrefs:
 - ARO:3000111
 - cas:303-81-1
-- drugbank:DB01051
-- drugcentral:1974
 - hmdb:HMDB0015185
 - kegg.compound:C05080
 - knapsack:C00002487
 - lincs.smallmolecule:LSM-5910
-- patent:WO2012049521
-- patent:WO2012103487
 - pdb-ccd:NOV
 - reaxys:1445842
 - chembl:CHEMBL36506
 - pubchem.compound:54675769
+drug_xrefs:
+- drugbank:DB01051
+- drugcentral:1974
+document_xrefs:
+- patent:WO2012049521
+- patent:WO2012103487
 source_concepts:
 - source: ARO
   source_id: ARO:3000111
@@ -392,3 +394,7 @@ curation_history:
   changes: Added a PMID-supported causal graph for novobiocin inhibition of GyrB ATPase-dependent
     DNA supercoiling.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:18Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

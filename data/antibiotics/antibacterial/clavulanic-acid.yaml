@@ -62,16 +62,18 @@ chemical_structure:
 xrefs:
 - beilstein:787059
 - cas:58001-44-8
-- drugbank:DB00766
-- drugcentral:669
 - hmdb:HMDB0014904
 - kegg.compound:C06662
-- kegg.drug:D07711
 - knapsack:C00018091
-- patent:DE2517316
 - pdb-ccd:J01
 - reaxys:787059
 - vsdb:1930
+drug_xrefs:
+- drugbank:DB00766
+- drugcentral:669
+- kegg.drug:D07711
+document_xrefs:
+- patent:DE2517316
 - wikipedia.en:Clavulanic_Acid
 source_concepts:
 - source: CHEBI
@@ -118,6 +120,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T05:59:08Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:30Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

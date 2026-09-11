@@ -52,12 +52,14 @@ chemical_structure:
   monoisotopic_mass: 296.06201
 xrefs:
 - cas:70-00-8
-- drugbank:DB00432
-- drugcentral:2743
 - hmdb:HMDB0014576
-- kegg.drug:D00391
 - lincs.smallmolecule:LSM-5217
 - reaxys:568095
+drug_xrefs:
+- drugbank:DB00432
+- drugcentral:2743
+- kegg.drug:D00391
+document_xrefs:
 - wikipedia.en:Trifluridine
 source_concepts:
 - source: CHEBI
@@ -150,6 +152,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:37Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:40Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

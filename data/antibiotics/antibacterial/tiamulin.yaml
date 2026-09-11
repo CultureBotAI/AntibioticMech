@@ -49,14 +49,16 @@ xrefs:
 - ARO:3000671
 - cas:55297-95-5
 - kegg.compound:C12065
-- kegg.drug:D06127
-- patent:DE2248237
-- patent:US3919290
 - pdb-ccd:MUL
 - reaxys:7348837
-- wikipedia.en:Tiamulin
 - chembl:CHEMBL1234521
 - pubchem.compound:656958
+drug_xrefs:
+- kegg.drug:D06127
+document_xrefs:
+- patent:DE2248237
+- patent:US3919290
+- wikipedia.en:Tiamulin
 source_concepts:
 - source: ARO
   source_id: ARO:3000671
@@ -224,6 +226,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:28Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

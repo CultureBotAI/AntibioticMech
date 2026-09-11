@@ -56,17 +56,19 @@ chemical_structure:
 xrefs:
 - ARO:3000520
 - cas:54-85-3
-- drugbank:DB00951
-- drugcentral:1497
 - gmelin:82804
 - kegg.compound:C07054
-- kegg.drug:D00346
 - lincs.smallmolecule:LSM-6682
 - metacyc.compound:ISONIAZIDE
 - reaxys:119374
-- wikipedia.en:Isoniazid
 - chembl:CHEMBL64
 - pubchem.compound:3767
+drug_xrefs:
+- drugbank:DB00951
+- drugcentral:1497
+- kegg.drug:D00346
+document_xrefs:
+- wikipedia.en:Isoniazid
 source_concepts:
 - source: ARO
   source_id: ARO:3000520
@@ -1126,6 +1128,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:11Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:33Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

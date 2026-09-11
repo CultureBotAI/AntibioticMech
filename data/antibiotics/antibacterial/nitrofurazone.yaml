@@ -95,16 +95,18 @@ chemical_structure:
   monoisotopic_mass: 198.0389
 xrefs:
 - cas:59-87-0
-- drugbank:DB00336
-- drugcentral:1950
 - hmdb:HMDB0014480
 - kegg.compound:C08042
-- kegg.drug:D00862
 - lincs.smallmolecule:LSM-3779
-- patent:US2416234
-- patent:US2927110
 - pdb-ccd:NFZ
 - reaxys:86403
+drug_xrefs:
+- drugbank:DB00336
+- drugcentral:1950
+- kegg.drug:D00862
+document_xrefs:
+- patent:US2416234
+- patent:US2927110
 - wikipedia.en:Nitrofural
 source_concepts:
 - source: CHEBI
@@ -125,6 +127,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:28Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

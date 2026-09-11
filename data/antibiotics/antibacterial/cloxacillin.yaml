@@ -91,19 +91,21 @@ xrefs:
 - ARO:0000011
 - beilstein:1232834
 - cas:61-72-3
-- drugbank:DB01147
-- drugcentral:720
 - hmdb:HMDB0015278
 - kegg.compound:C06923
-- kegg.drug:D07733
 - lincs.smallmolecule:LSM-15183
-- patent:US2996501
 - pdb-ccd:CXN
 - reaxys:1232834
 - vsdb:1859
-- wikipedia.en:Cloxacillin
 - chembl:CHEMBL891
 - pubchem.compound:6098
+drug_xrefs:
+- drugbank:DB01147
+- drugcentral:720
+- kegg.drug:D07733
+document_xrefs:
+- patent:US2996501
+- wikipedia.en:Cloxacillin
 source_concepts:
 - source: ARO
   source_id: ARO:0000011
@@ -161,6 +163,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:09Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:30Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -64,18 +64,20 @@ xrefs:
 - ARO:3003413
 - beilstein:112306
 - cas:98-96-4
-- drugbank:DB00339
-- drugcentral:2328
 - gmelin:279021
 - hmdb:HMDB0014483
 - kegg.compound:C01956
-- kegg.drug:D00144
 - lincs.smallmolecule:LSM-5425
 - pdb-ccd:PZA
 - reaxys:112306
-- wikipedia.en:Pyrazinamide
 - chembl:CHEMBL614
 - pubchem.compound:1046
+drug_xrefs:
+- drugbank:DB00339
+- drugcentral:2328
+- kegg.drug:D00144
+document_xrefs:
+- wikipedia.en:Pyrazinamide
 source_concepts:
 - source: ARO
   source_id: ARO:3003413
@@ -258,6 +260,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:28Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

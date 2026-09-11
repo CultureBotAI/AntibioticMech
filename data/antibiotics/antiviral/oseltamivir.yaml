@@ -67,13 +67,15 @@ chemical_structure:
   monoisotopic_mass: 312.20491
 xrefs:
 - cas:196618-13-0
-- drugbank:DB00198
-- drugcentral:2001
 - hmdb:HMDB0014343
 - kegg.compound:C08092
-- kegg.drug:D08306
-- patent:US5763483
 - reaxys:8003908
+drug_xrefs:
+- drugbank:DB00198
+- drugcentral:2001
+- kegg.drug:D08306
+document_xrefs:
+- patent:US5763483
 - wikipedia.en:Oseltamivir
 source_concepts:
 - source: CHEBI
@@ -94,6 +96,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:43Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:41Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

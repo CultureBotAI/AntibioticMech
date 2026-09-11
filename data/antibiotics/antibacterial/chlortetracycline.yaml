@@ -56,15 +56,17 @@ chemical_structure:
 xrefs:
 - ARO:3000528
 - cas:57-62-5
-- drugcentral:624
 - hmdb:HMDB0014401
 - kegg.compound:C06571
-- kegg.drug:D07689
 - lipidmaps:LMPK07000004
-- patent:US2482055
 - pdb-ccd:CTC
 - chembl:CHEMBL404520
 - pubchem.compound:54675777
+drug_xrefs:
+- drugcentral:624
+- kegg.drug:D07689
+document_xrefs:
+- patent:US2482055
 source_concepts:
 - source: ARO
   source_id: ARO:3000528
@@ -217,6 +219,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:02Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

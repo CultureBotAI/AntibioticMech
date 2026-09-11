@@ -59,19 +59,21 @@ chemical_structure:
 xrefs:
 - ARO:3000639
 - cas:51481-65-3
+- kegg.compound:C07221
+- reaxys:6081499
+- chembl:CHEMBL1731
+- pubchem.compound:656511
+drug_xrefs:
 - drugbank:DB00948
 - drugcentral:1795
-- kegg.compound:C07221
 - kegg.drug:D05021
+document_xrefs:
 - patent:CN101328187
 - patent:CN101585845
 - patent:CN1485035
 - patent:DE2152967
 - patent:US3974142
-- reaxys:6081499
 - wikipedia.en:Mezlocillin
-- chembl:CHEMBL1731
-- pubchem.compound:656511
 source_concepts:
 - source: ARO
   source_id: ARO:3000639
@@ -127,6 +129,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:16Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:39Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

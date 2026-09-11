@@ -65,8 +65,8 @@ just verify-corpus --summary
 ```
 
 Inspect relevant worklist entries, especially `mechanism`, `moa-scope`,
-`target-evidence`, `xref-unverified`, `multi-component`, and
-`producer-candidate`. A green gate establishes structural consistency, not
+`target-evidence`, `xref-unverified`, `xref-span-conflict`, `multi-component`,
+and `producer-candidate`. A green gate establishes structural consistency, not
 scientific truth.
 
 For a bulk request, still review records one at a time. Generate the exhaustive

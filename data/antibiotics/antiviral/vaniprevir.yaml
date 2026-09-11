@@ -70,10 +70,12 @@ molecular_targets:
 xrefs:
 - cas:923590-37-8
 - chemspider:28475381
+- pdb-ccd:SU3
+drug_xrefs:
 - drugbank:DB11929
 - drugcentral:4939
 - kegg.drug:D09987
-- pdb-ccd:SU3
+document_xrefs:
 - wikipedia.en:Vaniprevir
 source_concepts:
 - source: CHEBI
@@ -118,3 +120,7 @@ curation_history:
     HCV NS3/4A inhibition, the measured viral target, and treatment-emergent target-alteration
     resistance evidence.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:12Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

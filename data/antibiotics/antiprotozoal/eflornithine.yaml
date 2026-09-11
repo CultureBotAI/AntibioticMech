@@ -49,12 +49,14 @@ xrefs:
 - beilstein:2250529
 - cas:67037-37-0
 - cas:70052-12-9
-- drugbank:DB03856
-- drugcentral:990
 - kegg.compound:C07997
-- kegg.drug:D07883
 - pdb-ccd:DMO
 - reaxys:2250529
+drug_xrefs:
+- drugbank:DB03856
+- drugcentral:990
+- kegg.drug:D07883
+document_xrefs:
 - wikipedia.en:Eflornithine
 source_concepts:
 - source: CHEBI
@@ -74,6 +76,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:32Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:27Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

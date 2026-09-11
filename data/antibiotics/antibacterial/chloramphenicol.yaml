@@ -114,25 +114,27 @@ xrefs:
 - beilstein:2225532
 - cas:56-75-7
 - chemspider:5744
-- drugbank:DB00446
-- drugcentral:589
 - hmdb:HMDB0014589
 - kegg.compound:C00918
-- kegg.drug:D00104
 - lincs.smallmolecule:LSM-5256
 - metacyc.compound:CHLORAMPHENICOL
+- pdb-ccd:CLM
+- pesticides:chloramphenicol
+- vsdb:1835
+- chembl:CHEMBL130
+- pubchem.compound:5959
+drug_xrefs:
+- drugbank:DB00446
+- drugcentral:589
+- kegg.drug:D00104
+document_xrefs:
 - patent:GB795131
 - patent:GB796901
 - patent:US2483871
 - patent:US2483884
 - patent:US2483892
 - patent:US2839577
-- pdb-ccd:CLM
-- pesticides:chloramphenicol
-- vsdb:1835
 - wikipedia.en:Chloramphenicol
-- chembl:CHEMBL130
-- pubchem.compound:5959
 source_concepts:
 - source: ARO
   source_id: ARO:3000385
@@ -1204,3 +1206,7 @@ curation_history:
   changes: Added a PMID-supported causal graph for chloramphenicol binding to the
     bacterial 50S peptidyl-transferase center.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:15Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

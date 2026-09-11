@@ -40,15 +40,17 @@ chemical_structure:
   monoisotopic_mass: 465.15697
 xrefs:
 - cas:50972-17-3
-- drugbank:DB01602
-- drugcentral:280
 - hmdb:HMDB0015540
 - kegg.compound:C08122
+- reaxys:5784318
+drug_xrefs:
+- drugbank:DB01602
+- drugcentral:280
 - kegg.drug:D07487
+document_xrefs:
 - patent:DE2144457
 - patent:US3873521
 - patent:US3939270
-- reaxys:5784318
 - wikipedia.en:Bacampicillin
 source_concepts:
 - source: CHEBI
@@ -68,6 +70,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:19Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

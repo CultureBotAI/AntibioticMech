@@ -52,15 +52,17 @@ chemical_structure:
   monoisotopic_mass: 108.05751
 xrefs:
 - cas:108-39-4
-- drugbank:DB01776
 - gmelin:101411
 - hmdb:HMDB0002048
 - kegg.compound:C01467
-- kegg.drug:D04951
 - metacyc.compound:CPD-112
 - pdb-ccd:CRS
 - reaxys:506719
 - umbbd.compound:c0282
+drug_xrefs:
+- drugbank:DB01776
+- kegg.drug:D04951
+document_xrefs:
 - wikipedia.en:M-cresol
 source_concepts:
 - source: CHEBI
@@ -80,6 +82,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:27Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:15Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

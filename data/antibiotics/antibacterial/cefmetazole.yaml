@@ -46,14 +46,16 @@ xrefs:
 - ARO:3004001
 - beilstein:5406306
 - cas:56796-20-4
-- drugbank:DB00274
-- drugcentral:539
 - kegg.compound:C08103
-- kegg.drug:D00910
 - lincs.smallmolecule:LSM-5594
-- wikipedia.en:Cefmetazole
 - chembl:CHEMBL1201195
 - pubchem.compound:42008
+drug_xrefs:
+- drugbank:DB00274
+- drugcentral:539
+- kegg.drug:D00910
+document_xrefs:
+- wikipedia.en:Cefmetazole
 source_concepts:
 - source: ARO
   source_id: ARO:3004001
@@ -109,6 +111,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:05Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:23Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

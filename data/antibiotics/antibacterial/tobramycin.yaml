@@ -82,16 +82,18 @@ chemical_structure:
 xrefs:
 - ARO:0000052
 - cas:32986-56-4
-- drugbank:DB00684
-- drugcentral:2684
 - kegg.compound:C00397
-- kegg.drug:D00063
 - lincs.smallmolecule:LSM-6534
 - pdb-ccd:TOY
 - reaxys:1357507
-- wikipedia.en:Tobramycin
 - chembl:CHEMBL1747
 - pubchem.compound:36294
+drug_xrefs:
+- drugbank:DB00684
+- drugcentral:2684
+- kegg.drug:D00063
+document_xrefs:
+- wikipedia.en:Tobramycin
 source_concepts:
 - source: ARO
   source_id: ARO:0000052
@@ -1549,6 +1551,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:03Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:18Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

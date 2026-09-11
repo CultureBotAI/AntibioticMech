@@ -46,9 +46,11 @@ chemical_structure:
 xrefs:
 - beilstein:4900637
 - cas:24356-60-3
-- drugbank:DB01139
 - kegg.compound:C08101
+drug_xrefs:
+- drugbank:DB01139
 - kegg.drug:D00908
+document_xrefs:
 - patent:US3422100
 - patent:US3503967
 - patent:US3578661
@@ -228,6 +230,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:25Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

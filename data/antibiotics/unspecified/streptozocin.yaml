@@ -62,16 +62,18 @@ chemical_structure:
   monoisotopic_mass: 265.091
 xrefs:
 - cas:18883-66-4
-- drugbank:DB00428
 - hmdb:HMDB0014572
 - kegg.compound:C07313
+- reaxys:2060675
+drug_xrefs:
+- drugbank:DB00428
 - kegg.drug:D05932
+document_xrefs:
 - patent:FR1434920
 - patent:US2005271747
 - patent:US2005272738
 - patent:US2008085882
 - patent:US4156777
-- reaxys:2060675
 - wikipedia.en:Streptozocin
 source_concepts:
 - source: CHEBI
@@ -91,6 +93,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:45Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

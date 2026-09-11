@@ -52,12 +52,14 @@ chemical_structure:
 xrefs:
 - ARO:3007503
 - cas:166663-25-8
-- drugbank:DB00362
-- kegg.drug:D03211
 - reaxys:7408417
-- wikipedia.en:Anidulafungin
 - chembl:CHEMBL264241
 - pubchem.compound:166548
+drug_xrefs:
+- drugbank:DB00362
+- kegg.drug:D03211
+document_xrefs:
+- wikipedia.en:Anidulafungin
 source_concepts:
 - source: ARO
   source_id: ARO:3007503
@@ -457,6 +459,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-03T01:55:06Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:31Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

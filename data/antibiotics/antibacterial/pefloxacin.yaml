@@ -59,18 +59,20 @@ chemical_structure:
 xrefs:
 - ARO:3000762
 - cas:70458-92-3
+- hmdb:HMDB0014630
+- lincs.smallmolecule:LSM-5653
+- reaxys:567618
+- chembl:CHEMBL267648
+- pubchem.compound:51081
+drug_xrefs:
 - drugbank:DB00487
 - drugcentral:2071
-- hmdb:HMDB0014630
 - kegg.drug:D02306
-- lincs.smallmolecule:LSM-5653
+document_xrefs:
 - patent:DE2840910
 - patent:US4292317
 - patent:US5095112
-- reaxys:567618
 - wikipedia.en:Pefloxacin
-- chembl:CHEMBL267648
-- pubchem.compound:51081
 source_concepts:
 - source: ARO
   source_id: ARO:3000762
@@ -356,3 +358,7 @@ curation_history:
   changes: Added a PMID-supported causal graph for pefloxacin inhibition of bacterial
     DNA gyrase supercoiling and marked the coarse target scope as curator-reviewed.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

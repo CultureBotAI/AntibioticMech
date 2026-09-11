@@ -46,15 +46,17 @@ chemical_structure:
   monoisotopic_mass: 314.22458
 xrefs:
 - cas:13956-29-1
-- drugbank:DB09061
-- drugcentral:5288
 - kegg.compound:C07578
 - knapsack:C00002641
 - lipidmaps:LMPK13120001
 - metacyc.compound:CPD-7173
-- patent:US2304669
 - pdb-ccd:P0T
 - reaxys:2222023
+drug_xrefs:
+- drugbank:DB09061
+- drugcentral:5288
+document_xrefs:
+- patent:US2304669
 - wikipedia.en:Cannabidiol
 source_concepts:
 - source: CHEBI
@@ -105,6 +107,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:36Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:39Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

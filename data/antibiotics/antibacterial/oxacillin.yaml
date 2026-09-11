@@ -78,17 +78,19 @@ chemical_structure:
 xrefs:
 - ARO:0000056
 - cas:66-79-5
-- drugbank:DB00713
-- drugcentral:2006
 - hmdb:HMDB0014851
 - kegg.compound:C07334
-- kegg.drug:D08307
 - lincs.smallmolecule:LSM-6005
-- patent:US2996501
 - reaxys:1093589
-- wikipedia.en:Oxacillin
 - chembl:CHEMBL819
 - pubchem.compound:6196
+drug_xrefs:
+- drugbank:DB00713
+- drugcentral:2006
+- kegg.drug:D08307
+document_xrefs:
+- patent:US2996501
+- wikipedia.en:Oxacillin
 source_concepts:
 - source: ARO
   source_id: ARO:0000056
@@ -174,6 +176,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:17Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:41Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -138,11 +138,13 @@ chemical_structure:
   monoisotopic_mass: 407.21283
 xrefs:
 - cas:548-62-9
-- drugbank:DB00406
 - hmdb:HMDB0014550
-- kegg.drug:D01046
 - pdb-ccd:CVI
 - reaxys:3580948
+drug_xrefs:
+- drugbank:DB00406
+- kegg.drug:D01046
+document_xrefs:
 - wikipedia.en:Crystal_violet
 source_concepts:
 - source: CHEBI
@@ -194,6 +196,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:27Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:27Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

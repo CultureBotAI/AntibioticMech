@@ -51,12 +51,14 @@ chemical_structure:
   monoisotopic_mass: 266.11676
 xrefs:
 - cas:129618-40-2
-- drugbank:DB00238
 - kegg.compound:C07263
-- kegg.drug:D00435
 - lincs.smallmolecule:LSM-5336
 - pdb-ccd:NVP
 - reaxys:4757598
+drug_xrefs:
+- drugbank:DB00238
+- kegg.drug:D00435
+document_xrefs:
 - wikipedia.en:Nevirapine
 source_concepts:
 - source: CHEBI
@@ -2072,3 +2074,7 @@ curation_history:
   changes: Added a PMID-supported causal graph for nevirapine allosteric inhibition
     of HIV-1 reverse transcriptase.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

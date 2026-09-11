@@ -43,13 +43,15 @@ chemical_structure:
 xrefs:
 - ARO:3004732
 - cas:209342-40-5
-- drugcentral:4920
-- kegg.drug:D10575
-- patent:WO2011003091
 - reaxys:14830297
-- wikipedia.en:Finafloxacin
 - chembl:CHEMBL1908370
 - pubchem.compound:11567473
+drug_xrefs:
+- drugcentral:4920
+- kegg.drug:D10575
+document_xrefs:
+- patent:WO2011003091
+- wikipedia.en:Finafloxacin
 source_concepts:
 - source: ARO
   source_id: ARO:3004732
@@ -108,6 +110,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:39Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:44Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

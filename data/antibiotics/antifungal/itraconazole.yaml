@@ -60,14 +60,16 @@ chemical_structure:
 xrefs:
 - ARO:3007511
 - cas:84625-61-6
-- drugbank:DB01167
-- kegg.drug:D00350
-- patent:EP6711
-- patent:US4267179
 - vsdb:1853
-- wikipedia.en:Itraconazole
 - chembl:CHEMBL64391
 - pubchem.compound:55283
+drug_xrefs:
+- drugbank:DB01167
+- kegg.drug:D00350
+document_xrefs:
+- patent:EP6711
+- patent:US4267179
+- wikipedia.en:Itraconazole
 source_concepts:
 - source: ARO
   source_id: ARO:3007511
@@ -1210,6 +1212,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-03T01:55:07Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:33Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

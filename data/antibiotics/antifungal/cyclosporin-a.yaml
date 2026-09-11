@@ -75,18 +75,20 @@ chemical_structure:
 xrefs:
 - cas:59865-13-3
 - chemspider:4447449
-- drugbank:DB00091
-- drugcentral:760
 - hmdb:HMDB0250682
 - kegg.compound:C05086
-- kegg.drug:D00184
 - knapsack:C00001517
 - lincs.smallmolecule:LSM-1703
 - lipidmaps:LMPK14000003
 - metacyc.compound:CPD-20532
-- patent:US4117118
 - reaxys:3647785
 - vsdb:1765
+drug_xrefs:
+- drugbank:DB00091
+- drugcentral:760
+- kegg.drug:D00184
+document_xrefs:
+- patent:US4117118
 - wikipedia.en:Ciclosporin
 source_concepts:
 - source: CHEBI
@@ -1335,6 +1337,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:27Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:27Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

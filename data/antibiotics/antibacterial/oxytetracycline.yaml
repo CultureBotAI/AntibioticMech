@@ -64,19 +64,20 @@ xrefs:
 - beilstein:2686362
 - bpdb:503
 - cas:79-57-2
-- drugbank:DB00595
-- drugcentral:2041
 - gmelin:623487
 - hmdb:HMDB0014733
 - kegg.compound:C06624
-- knapsack:C00017127
 - lipidmaps:LMPK07000005
 - pesticides:oxytetracycline
 - reaxys:2714587
 - vsdb:503
-- wikipedia.en:Oxytetracycline
 - chembl:CHEMBL1517
 - pubchem.compound:54675779
+drug_xrefs:
+- drugbank:DB00595
+- drugcentral:2041
+document_xrefs:
+- wikipedia.en:Oxytetracycline
 source_concepts:
 - source: ARO
   source_id: ARO:3000668
@@ -327,6 +328,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:02Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

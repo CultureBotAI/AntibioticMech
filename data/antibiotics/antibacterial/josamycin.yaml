@@ -70,18 +70,20 @@ xrefs:
 - ARO:3001227
 - ARO:3001221
 - cas:16846-24-5
-- drugbank:DB01321
-- drugcentral:1518
 - hmdb:HMDB0015418
 - kegg.compound:C12662
-- kegg.drug:D01235
 - knapsack:C00018736
 - pdb-ccd:JOS
-- wikipedia.en:Josamycin
 - chembl:CHEMBL224436
 - pubchem.compound:5284579
 - chembl:CHEMBL2106399
 - pubchem.compound:5282189
+drug_xrefs:
+- drugbank:DB01321
+- drugcentral:1518
+- kegg.drug:D01235
+document_xrefs:
+- wikipedia.en:Josamycin
 source_concepts:
 - source: ARO
   source_id: ARO:3001221
@@ -162,6 +164,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:21Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

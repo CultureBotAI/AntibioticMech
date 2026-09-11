@@ -72,19 +72,21 @@ xrefs:
 - ARO:3007468
 - beilstein:511852
 - cas:63-74-1
-- drugbank:DB00259
-- drugcentral:2521
 - gmelin:83068
 - hmdb:HMDB0014404
 - kegg.compound:C07458
-- kegg.drug:D08543
 - lincs.smallmolecule:LSM-6524
 - pdb-ccd:SAN
 - reaxys:511852
 - vsdb:1924
-- wikipedia.en:Sulfanilamide
 - chembl:CHEMBL21
 - pubchem.compound:5333
+drug_xrefs:
+- drugbank:DB00259
+- drugcentral:2521
+- kegg.drug:D08543
+document_xrefs:
+- wikipedia.en:Sulfanilamide
 source_concepts:
 - source: ARO
   source_id: ARO:3007468
@@ -331,6 +333,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:19:02Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:28Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

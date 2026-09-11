@@ -51,14 +51,16 @@ chemical_structure:
 xrefs:
 - beilstein:497807
 - cas:83-89-6
-- drugbank:DB01103
-- drugcentral:2338
 - hmdb:HMDB0015235
 - kegg.compound:C07339
-- kegg.drug:D08179
 - lincs.smallmolecule:LSM-1577
 - metacyc.compound:ATABRINE
 - reaxys:95500
+drug_xrefs:
+- drugbank:DB01103
+- drugcentral:2338
+- kegg.drug:D08179
+document_xrefs:
 - wikipedia.en:Quinacrine
 source_concepts:
 - source: CHEBI
@@ -78,6 +80,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:45Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:44Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

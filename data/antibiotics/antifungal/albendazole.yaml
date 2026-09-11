@@ -69,19 +69,21 @@ chemical_structure:
 xrefs:
 - ARO:3007090
 - cas:54965-21-8
-- drugbank:DB00518
-- drugcentral:103
 - hmdb:HMDB0014659
 - kegg.compound:C01779
-- kegg.drug:D00134
 - lincs.smallmolecule:LSM-3782
 - metacyc.compound:ALBENDAZOLE
 - pesticides:albendazole
 - reaxys:752696
 - vsdb:895
-- wikipedia.en:Albendazole
 - chembl:CHEMBL1483
 - pubchem.compound:2082
+drug_xrefs:
+- drugbank:DB00518
+- drugcentral:103
+- kegg.drug:D00134
+document_xrefs:
+- wikipedia.en:Albendazole
 source_concepts:
 - source: ARO
   source_id: ARO:3007090
@@ -327,6 +329,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:20Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:14Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

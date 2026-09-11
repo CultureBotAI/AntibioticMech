@@ -65,10 +65,12 @@ chemical_structure:
   monoisotopic_mass: 180.07864
 xrefs:
 - cas:94-13-3
-- drugcentral:2307
 - hmdb:HMDB0032574
-- kegg.drug:D01422
 - reaxys:1103245
+drug_xrefs:
+- drugcentral:2307
+- kegg.drug:D01422
+document_xrefs:
 - wikipedia.en:Propylparaben
 source_concepts:
 - source: CHEBI
@@ -89,6 +91,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:22Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

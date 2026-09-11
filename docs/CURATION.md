@@ -256,19 +256,30 @@ entry — ampicillin carried `pdb:1H8S`, an anti-ampicillin *antibody* complex);
 one whose structure is known and different (polymyxin B2 carried `CHEBI:8309`,
 which is polymyxin B1); and one already listed in `parent_compounds`, which
 means strictly broader and cannot also mean the same. `pdb-ccd` stays — it
-identifies a ligand chemical component. `patent:` and `wikipedia.en` fail the same test — a patent covers a class of
-compounds and an article covers a topic — but are **kept**, because dropping
-them cost more than it fixed: 97% of the 1,027 `patent` accessions and 96% of the 709 `wikipedia.en`
-accessions map to exactly one structure in this corpus, so removing ~1,800 links would have fixed 57 false
-equivalences and left 7 records with no cross-references at all. Issue #92 asked
-for such identifiers to be *moved* rather than deleted, and the destination is a
-schema decision not yet taken (#136).
+identifies a ligand chemical component.
 
-**One caveat the field cannot escape.** Some namespaces identify a *drug* rather
-than a molecule — `drugbank:DB00639` legitimately covers butoconazole, its
-nitrate and both enantiomers, which this corpus keeps as separate records. Those
-are kept for their utility and named in `DRUG_GRANULARITY_XREF_PREFIXES`, so the
-exception is declared rather than discovered. See issue #134.
+**Three slots, by what the namespace means.** `patent:` and `wikipedia.en`
+identify documents — a patent covers a class of compounds and an article covers
+a topic — so they live in `document_xrefs`, not in a field defined as "the same
+structure". They are kept, because dropping them was tried and cost more than it
+fixed: nearly all of them point at exactly one record. DrugBank, DrugCentral and
+KEGG DRUG identify a *drug*: `drugbank:DB00639` legitimately covers butoconazole,
+its nitrate and both enantiomers, which this corpus keeps as separate records.
+Those live in `drug_xrefs`. What remains in `xrefs` is structure-exact, and the
+seeder holds it to that corpus-wide: an accession in a structure-exact namespace
+that lands on two different InChIKeys — `cas:69388-84-7` on sulbactam and
+sulbactam sodium, `chembl:CHEMBL1999880` on narbomycin and nybomycin — names at
+most one of them, and the corpus cannot tell which. It is **withheld** from every
+record it spans and listed by `just worklist --queue xref-span-conflict`, so a
+curator can put it back on the record it actually names. An earlier version
+declared such namespaces "known coarse" and let the accessions through, which
+turned a defect into a listed exception nobody triaged (#134, #136, #137).
+
+**Every prefix is declared.** The schema's `prefixes:` block names each
+namespace an xref slot may carry, in the casing the seeder writes, and the
+`xref_curie` type restricts the three slots to that list — so an undeclared
+prefix now fails closed validation instead of passing as a well-shaped string
+the schema could not expand (#96).
 
 Where the structure cannot be compared, the xref is **kept** and listed by
 `just worklist --queue xref-unverified`. Dropping a source assertion because we

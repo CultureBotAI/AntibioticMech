@@ -47,12 +47,14 @@ chemical_structure:
 xrefs:
 - ARO:3000534
 - cas:61379-65-5
-- drugbank:DB01201
 - kegg.compound:C08059
-- kegg.drug:D00879
-- wikipedia.en:Rifapentine
 - chembl:CHEMBL1660
 - pubchem.compound:135403821
+drug_xrefs:
+- drugbank:DB01201
+- kegg.drug:D00879
+document_xrefs:
+- wikipedia.en:Rifapentine
 source_concepts:
 - source: ARO
   source_id: ARO:3000534
@@ -248,6 +250,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:08Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:28Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

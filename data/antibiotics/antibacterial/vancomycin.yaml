@@ -60,18 +60,20 @@ chemical_structure:
 xrefs:
 - ARO:0000028
 - cas:1404-90-6
-- drugbank:DB00512
-- drugcentral:2807
 - kegg.compound:C06689
-- kegg.drug:D00212
 - knapsack:C00016052
 - metacyc.compound:CPD-12245
-- patent:US3067099
 - pdb-ccd:VAN
 - reaxys:3132
-- wikipedia.en:Vancomycin
 - chembl:CHEMBL262777
 - pubchem.compound:14969
+drug_xrefs:
+- drugbank:DB00512
+- drugcentral:2807
+- kegg.drug:D00212
+document_xrefs:
+- patent:US3067099
+- wikipedia.en:Vancomycin
 source_concepts:
 - source: ARO
   source_id: ARO:0000028
@@ -332,6 +334,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-08T15:31:54Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

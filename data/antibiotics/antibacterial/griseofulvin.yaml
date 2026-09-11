@@ -86,19 +86,21 @@ chemical_structure:
   monoisotopic_mass: 352.07137
 xrefs:
 - cas:126-07-8
-- drugbank:DB00400
-- drugcentral:1331
 - kegg.compound:C06686
-- kegg.drug:D00209
 - knapsack:C00002398
 - lincs.smallmolecule:LSM-5259
 - lipidmaps:LMPK13060001
 - metacyc.compound:CPD-17786
-- patent:US3069328
-- patent:US3069329
 - ppdb:1807
 - reaxys:95226
 - vsdb:1807
+drug_xrefs:
+- drugbank:DB00400
+- drugcentral:1331
+- kegg.drug:D00209
+document_xrefs:
+- patent:US3069328
+- patent:US3069329
 - wikipedia.en:Griseofulvin
 source_concepts:
 - source: CHEBI
@@ -120,6 +122,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:28Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

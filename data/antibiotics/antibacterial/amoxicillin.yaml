@@ -102,21 +102,23 @@ chemical_structure:
 xrefs:
 - ARO:0000064
 - cas:26787-78-0
-- drugbank:DB01060
-- drugcentral:192
 - hmdb:HMDB0015193
 - kegg.compound:C06827
-- kegg.drug:D07452
 - lincs.smallmolecule:LSM-5654
+- reaxys:4274654
+- vsdb:1741
+- chembl:CHEMBL1082
+- pubchem.compound:33613
+drug_xrefs:
+- drugbank:DB01060
+- drugcentral:192
+- kegg.drug:D07452
+document_xrefs:
 - patent:DE1942693
 - patent:GB1241844
 - patent:GB978178
 - patent:US3192198
-- reaxys:4274654
-- vsdb:1741
 - wikipedia.en:Amoxicillin
-- chembl:CHEMBL1082
-- pubchem.compound:33613
 source_concepts:
 - source: ARO
   source_id: ARO:0000064
@@ -382,6 +384,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:02Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:17Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

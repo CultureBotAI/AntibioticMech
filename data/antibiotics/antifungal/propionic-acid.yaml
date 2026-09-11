@@ -75,13 +75,14 @@ chemical_structure:
 xrefs:
 - beilstein:506071
 - cas:79-09-4
-- drugbank:DB03766
 - gmelin:1821
 - kegg.compound:C00163
-- kegg.drug:D02310
 - lipidmaps:LMFA01010003
 - pdb-ccd:PPI
 - ppdb:1341
+drug_xrefs:
+- drugbank:DB03766
+- kegg.drug:D02310
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:30768
@@ -100,6 +101,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:30Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:20Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

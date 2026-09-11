@@ -52,10 +52,12 @@ chemical_structure:
   monoisotopic_mass: 246.94619
 xrefs:
 - cas:98-72-6
-- kegg.drug:D05175
-- patent:US2653160
 - reaxys:2939908
 - vsdb:2984
+drug_xrefs:
+- kegg.drug:D05175
+document_xrefs:
+- patent:US2653160
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:62629
@@ -74,6 +76,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:36Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:34Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

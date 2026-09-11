@@ -77,20 +77,22 @@ xrefs:
 - ARO:0000008
 - beilstein:4216947
 - cas:35607-66-0
-- drugbank:DB01331
-- drugcentral:550
 - hmdb:HMDB0015426
 - kegg.compound:C06887
-- kegg.drug:D02345
 - lincs.smallmolecule:LSM-5786
+- pdb-ccd:CFX
+- reaxys:4216947
+- chembl:CHEMBL996
+- pubchem.compound:441199
+drug_xrefs:
+- drugbank:DB01331
+- drugcentral:550
+- kegg.drug:D02345
+document_xrefs:
 - patent:DE2129675
 - patent:DE2203653
 - patent:US4297488
-- pdb-ccd:CFX
-- reaxys:4216947
 - wikipedia.en:Cefoxitin
-- chembl:CHEMBL996
-- pubchem.compound:441199
 source_concepts:
 - source: ARO
   source_id: ARO:0000008
@@ -301,6 +303,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:01Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:16Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

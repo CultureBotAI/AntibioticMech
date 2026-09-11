@@ -34,12 +34,14 @@ chemical_structure:
 xrefs:
 - ARO:0000027
 - beilstein:6951235
-- drugbank:DB00778
 - lincs.smallmolecule:LSM-20929
-- patent:FR2473525
-- patent:US4349545
 - chembl:CHEMBL1214185
 - pubchem.compound:6915744
+drug_xrefs:
+- drugbank:DB00778
+document_xrefs:
+- patent:FR2473525
+- patent:US4349545
 source_concepts:
 - source: ARO
   source_id: ARO:0000027
@@ -283,6 +285,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:09Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:30Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

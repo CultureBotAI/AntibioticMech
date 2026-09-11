@@ -91,18 +91,20 @@ chemical_structure:
 xrefs:
 - ARO:0000071
 - cas:100986-85-4
-- drugbank:DB01137
-- drugcentral:1569
 - hmdb:HMDB0001929
 - kegg.compound:C07660
-- kegg.drug:D08120
 - lincs.smallmolecule:LSM-5270
 - pdb-ccd:LFX
 - reaxys:5385660
 - vsdb:1899
-- wikipedia.en:Levofloxacin
 - chembl:CHEMBL5315124
 - pubchem.compound:149096
+drug_xrefs:
+- drugbank:DB01137
+- drugcentral:1569
+- kegg.drug:D08120
+document_xrefs:
+- wikipedia.en:Levofloxacin
 source_concepts:
 - source: ARO
   source_id: ARO:0000071
@@ -493,3 +495,7 @@ curation_history:
   changes: Added a PMID-supported causal graph for levofloxacin poisoning of bacterial
     topoisomerase IV.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

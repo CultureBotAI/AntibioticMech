@@ -74,15 +74,17 @@ xrefs:
 - beilstein:1907337
 - cas:55963-79-6
 - cas:58-89-9
-- drugbank:DB00431
-- drugcentral:1583
 - gmelin:2179629
 - hmdb:HMDB0014575
 - kegg.compound:C07075
-- kegg.drug:D00360
 - ppdb:370
 - umbbd.compound:c0141
 - vsdb:370
+drug_xrefs:
+- drugbank:DB00431
+- drugcentral:1583
+- kegg.drug:D00360
+document_xrefs:
 - wikipedia.en:Lindane
 source_concepts:
 - source: CHEBI
@@ -302,6 +304,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T18:22:24Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:22Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

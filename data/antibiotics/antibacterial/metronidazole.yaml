@@ -77,18 +77,20 @@ chemical_structure:
 xrefs:
 - ARO:3000689
 - cas:443-48-1
-- drugbank:DB00916
-- drugcentral:1790
 - hmdb:HMDB0015052
-- kegg.drug:D00409
 - lincs.smallmolecule:LSM-5628
-- patent:US2944061
 - pdb-ccd:2MN
 - reaxys:611683
 - vsdb:1826
-- wikipedia.en:Metronidazole
 - chembl:CHEMBL137
 - pubchem.compound:4173
+drug_xrefs:
+- drugbank:DB00916
+- drugcentral:1790
+- kegg.drug:D00409
+document_xrefs:
+- patent:US2944061
+- wikipedia.en:Metronidazole
 source_concepts:
 - source: ARO
   source_id: ARO:3000689
@@ -2438,6 +2440,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:16Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:39Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

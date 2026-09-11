@@ -65,15 +65,17 @@ chemical_structure:
   monoisotopic_mass: 543.17406
 xrefs:
 - cas:56420-45-2
-- drugbank:DB00445
-- drugcentral:1030
 - kegg.compound:C11230
-- kegg.drug:D07901
 - lincs.smallmolecule:LSM-2078
-- patent:DE2510866
-- patent:US4058519
 - pdb-ccd:DM6
 - reaxys:1445812
+drug_xrefs:
+- drugbank:DB00445
+- drugcentral:1030
+- kegg.drug:D07901
+document_xrefs:
+- patent:DE2510866
+- patent:US4058519
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:47898
@@ -92,6 +94,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:30Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

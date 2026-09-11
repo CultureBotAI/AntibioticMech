@@ -36,14 +36,16 @@ chemical_structure:
   monoisotopic_mass: 567.31308
 xrefs:
 - cas:159989-64-7
-- drugbank:DB00220
-- drugcentral:1893
 - hmdb:HMDB0014365
 - kegg.compound:C07257
-- kegg.drug:D08259
 - lincs.smallmolecule:LSM-5819
 - pdb-ccd:1UN
 - reaxys:7419619
+drug_xrefs:
+- drugbank:DB00220
+- drugcentral:1893
+- kegg.drug:D08259
+document_xrefs:
 - wikipedia.en:Nelfinavir
 source_concepts:
 - source: CHEBI
@@ -63,6 +65,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-30T09:02:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:40Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

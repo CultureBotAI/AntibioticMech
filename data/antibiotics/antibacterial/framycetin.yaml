@@ -70,10 +70,7 @@ chemical_structure:
 xrefs:
 - ARO:0000005
 - cas:119-04-0
-- drugbank:DB00452
-- drugcentral:1896
 - kegg.compound:C01737
-- kegg.drug:D05140
 - lincs.smallmolecule:LSM-5787
 - metacyc.compound:CPD-14142
 - pdb-ccd:NMY
@@ -81,6 +78,10 @@ xrefs:
 - vsdb:1783
 - chembl:CHEMBL3989751
 - pubchem.compound:8378
+drug_xrefs:
+- drugbank:DB00452
+- drugcentral:1896
+- kegg.drug:D05140
 source_concepts:
 - source: ARO
   source_id: ARO:0000005
@@ -339,6 +340,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-09-03T06:49:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:40Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

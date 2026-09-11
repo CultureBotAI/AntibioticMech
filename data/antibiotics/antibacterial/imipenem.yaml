@@ -62,17 +62,19 @@ xrefs:
 - ARO:3000170
 - beilstein:434624
 - cas:64221-86-9
-- drugbank:DB01598
-- drugcentral:1426
 - kegg.compound:C06665
-- kegg.drug:D04515
 - lincs.smallmolecule:LSM-6568
-- patent:BE848545
-- patent:US4194047
 - reaxys:434624
-- wikipedia.en:Imipenem
 - chembl:CHEMBL148
 - pubchem.compound:104838
+drug_xrefs:
+- drugbank:DB01598
+- drugcentral:1426
+- kegg.drug:D04515
+document_xrefs:
+- patent:BE848545
+- patent:US4194047
+- wikipedia.en:Imipenem
 source_concepts:
 - source: ARO
   source_id: ARO:3000170
@@ -291,6 +293,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:00:09Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:29Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

@@ -59,18 +59,20 @@ chemical_structure:
 xrefs:
 - ARO:0000072
 - cas:165800-03-3
-- drugbank:DB00601
-- drugcentral:1584
 - kegg.compound:C08146
-- kegg.drug:D00947
 - lincs.smallmolecule:LSM-5750
-- patent:US5688792
-- patent:WO957271
 - pdb-ccd:ZLD
 - reaxys:7496939
-- wikipedia.en:Linezolid
 - chembl:CHEMBL126
 - pubchem.compound:441401
+drug_xrefs:
+- drugbank:DB00601
+- drugcentral:1584
+- kegg.drug:D00947
+document_xrefs:
+- patent:US5688792
+- patent:WO957271
+- wikipedia.en:Linezolid
 source_concepts:
 - source: ARO
   source_id: ARO:0000072
@@ -1003,3 +1005,7 @@ curation_history:
     status, and CARD target/resistance provenance; curator-confirmed protein synthesis
     inhibition and added the directly bound 50S A-site target.
   llm_assisted: true
+- timestamp: '2026-09-10T07:43:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

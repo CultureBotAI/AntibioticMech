@@ -58,15 +58,17 @@ chemical_structure:
 xrefs:
 - beilstein:2003535
 - cas:97-18-7
-- drugbank:DB04813
-- drugcentral:3032
 - kegg.compound:C07967
-- kegg.drug:D00802
 - lincs.smallmolecule:LSM-2862
 - pdb-ccd:B1T
 - pesticides:bithionol
 - ppdb:2889
 - vsdb:2889
+drug_xrefs:
+- drugbank:DB04813
+- drugcentral:3032
+- kegg.drug:D00802
+document_xrefs:
 - wikipedia.en:Bithionol
 source_concepts:
 - source: CHEBI
@@ -141,6 +143,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
 - timestamp: '2026-08-31T19:18:58Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:20Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories

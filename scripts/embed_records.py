@@ -212,7 +212,10 @@ def build_document(record: dict, names: dict[str, str]) -> str:
     # are what truncation should take first.
     ground = [str(record.get("identifier"))]
     ground += [str(p) for p in (record.get("parent_compounds") or [])]
-    ground += [str(x) for x in (record.get("xrefs") or [])]
+    # All three xref slots: the split by meaning (#134, #136) changes what a
+    # field asserts, not which accessions cluster records together.
+    for slot in ("xrefs", "drug_xrefs", "document_xrefs"):
+        ground += [str(x) for x in (record.get(slot) or [])]
     ground = list(dict.fromkeys(g for g in ground if g))[:12]
     parts.append("identifiers: " + ", ".join(ground))
 
