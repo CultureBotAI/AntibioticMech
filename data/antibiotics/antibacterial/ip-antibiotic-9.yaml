@@ -1,0 +1,48 @@
+identifier: antibioticmech:curator-0f96f23968
+label: IP-antibiotic 9
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 5,7-dichloro-8-hydroxyquinoline isobutylamino derivative with antibacterial
+  activity against multidrug-resistant Neisseria gonorrhoeae.
+definition_source: DOI:10.1021/acsinfecdis.5c00812
+synonyms:
+- synonym_text: compound 9
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: 5,7-Dichloro-2-(isobutylamino)quinolin-8-ol
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)CNc1ccc2c(Cl)cc(Cl)c(O)c2n1
+  standard_inchi: InChI=1S/C13H14Cl2N2O/c1-7(2)6-16-11-4-3-8-9(14)5-10(15)13(18)12(8)17-11/h3-5,7,18H,6H2,1-2H3,(H,16,17)
+  standard_inchi_key: MFOPKMQUXATYFM-UHFFFAOYSA-N
+  molecular_formula: C13H14Cl2N2O
+  structure_source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12797230/
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 285.17
+  monoisotopic_mass: 284.048318428
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acsinfecdis.5c00812#9
+  source_label: IP-antibiotic 9
+  minted_identifier: antibioticmech:curator-0f96f23968
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/acsinfecdis.5c00812
+    snippet: Jen et al. synthesized 12 IP-antibiotic candidates and reported that
+      compound 9 inhibited multidrug-resistant Neisseria gonorrhoeae WHO Z with a
+      MIC of 1.25 mg/L in the preliminary Table 1 assay.
+    notes: Table 1 supplies the exact 5,7-dichloro-8-hydroxyquinoline isobutylamino
+      structure for compound 9, and the experimental section names it as 5,7-Dichloro-2-(isobutylamino)quinolin-8-ol.
+      The structure was normalized with RDKit to derive the standard InChI and InChIKey.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-09-11T02:30:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
