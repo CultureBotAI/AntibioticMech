@@ -17,7 +17,7 @@ prose below are the reasoning, the queue is the list.
 
 ## Now
 
-- **Curate the next mechanism graphs.** 16 of 2,930 records carry a
+- **Curate the next mechanism graphs.** 16 of 2,935 records carry a
   `causal_graph`; that number is the point of the repository. Start with the 399
   records that already have target or resistance evidence to build on —
   `just worklist --queue mechanism` ranks them by how much evidence is waiting.
@@ -35,7 +35,7 @@ prose below are the reasoning, the queue is the list.
   than a structural description (a per-class review, not a regex), and curated
   review literature per compound. Prefer the second for anything that will carry
   a causal graph anyway.
-- **Ground the 261 minted records.** `just worklist --queue minted`. Most are
+- **Ground the 266 minted records.** `just worklist --queue minted`. Most are
   CARD molecules with a PubChem structure and no ChEBI entry; some deserve a
   ChEBI term request.
 - **Re-file the compounds no source classifies well.** After #2 and #3, a
@@ -59,7 +59,7 @@ prose below are the reasoning, the queue is the list.
   Until then the asymmetry should be visible in the report rather than read as
   "antivirals have no known resistance".
 
-- **Decide what the 371 structureless concepts are.** `just worklist
+- **Decide what the 372 structureless concepts are.** `just worklist
   --queue no-structure`. Each is a mixture, a class, a preparation, or a
   compound whose structure simply is not in ChEBI or PubChem. They need
   `EXCLUDE` decisions with rationale, or a structure.
