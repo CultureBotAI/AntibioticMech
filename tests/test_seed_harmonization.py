@@ -993,8 +993,8 @@ def test_a_genuine_reseed_always_appends_an_event():
     `merge_with_existing` appends a RESEEDED event only when a seeded field
     actually moved, so the `unchanged` guard is already the duplicate
     suppressor. Any further collapse can therefore only delete events that
-    record real changes — and `changes` is a constant string, so it cannot tell
-    two re-seeds apart. One did exactly that: it removed the events recording 13
+    record real changes — two events with identical text are two real changes
+    that moved the same fields. One did exactly that: it removed the events recording 13
     genuine mechanism assignments, and would have swallowed every subsequent
     ChEBI release the same way, leaving trails asserting nothing had happened
     since months before the data moved (#73).
@@ -1648,3 +1648,171 @@ def test_a_merge_neither_drops_nor_duplicates_a_field():
     keys = list(merged)
     assert len(keys) == len(set(keys))
     assert set(keys) >= {"definition", "xrefs", "activity_spectrum"}
+
+
+# --------------------------------------------------------------------------
+# The reseed event says what moved, and claims no cause (#189)
+# --------------------------------------------------------------------------
+
+def _seeded_record(**overrides):
+    base = {
+        "identifier": "CHEBI:1", "label": "example",
+        "antimicrobial_class": "ANTIBACTERIAL", "curation_status": "SEEDED",
+        "grounding_status": "EXACT", "xrefs": ["cas:1", "chembl:CHEMBL1"],
+        "source_concepts": [
+            {"source": "CHEBI", "source_id": "CHEBI:1", "source_version": "2026-08-30"},
+            {"source": "ARO", "source_id": "ARO:1", "source_version": "2026-08-30"},
+        ],
+        "curation_history": [{"timestamp": "2026-08-30T00:00:00Z",
+                              "curator": "seed_from_sources",
+                              "action": "SEEDED_FROM_SOURCES", "changes": "Seeded"}],
+    }
+    base.update(overrides)
+    return base
+
+
+def _event(fresh, existing):
+    from seed_from_sources import merge_with_existing
+
+    event = merge_with_existing(fresh, existing)["curation_history"][-1]
+    assert event["action"] == "RESEEDED_FROM_SOURCES"
+    return event["changes"]
+
+
+def test_a_rule_driven_change_is_not_recorded_as_an_inventory_update():
+    """The one question a history exists to answer, answered wrongly before.
+
+    #187 removed two false cross-references with data/raw byte-identical, and
+    both records recorded "Re-seeded from updated data/raw/ inventories". The
+    event now names the field and the retrieval date the record carries, and
+    claims no cause at all -- the record cannot prove one, and a first attempt
+    to infer it was shown to be wrong in three ways.
+    """
+    changes = _event(_seeded_record(xrefs=["cas:1"]), _seeded_record())
+    assert changes == ("Re-seeded; changed: xrefs. "
+                       "Upstream retrieval date 2026-08-30, unchanged.")
+    assert "updated data/raw" not in changes
+
+
+def test_a_moved_retrieval_date_is_reported_once_with_its_transition():
+    """ChEBI and ARO share one retrieval date, so it is reported once.
+
+    Reporting it per source would say "CHEBI moved" whenever only aro.obo was
+    re-fetched, which is a refresh that did not happen -- the defect class this
+    fix exists to remove.
+    """
+    fresh = _seeded_record(
+        xrefs=["cas:1", "chembl:CHEMBL1", "drugbank:DB1"],
+        source_concepts=[
+            {"source": "CHEBI", "source_id": "CHEBI:1", "source_version": "2026-09-15"},
+            {"source": "ARO", "source_id": "ARO:1", "source_version": "2026-09-15"},
+        ])
+    changes = _event(fresh, _seeded_record())
+    assert "Upstream retrieval date 2026-08-30 -> 2026-09-15." in changes
+    assert changes.count("2026-09-15") == 1
+    assert "changed: xrefs, source_concepts." in changes
+    assert "CHEBI" not in changes and "ARO" not in changes
+
+
+def test_a_newly_grounded_concept_shows_as_a_source_concept_change():
+    """A concept the record did not have before is a change, not a refresh."""
+    fresh = _seeded_record(source_concepts=[
+        {"source": "CHEBI", "source_id": "CHEBI:1", "source_version": "2026-08-30"},
+        {"source": "ARO", "source_id": "ARO:1", "source_version": "2026-08-30"},
+        {"source": "ARO", "source_id": "ARO:2", "source_version": "2026-08-30"},
+    ])
+    changes = _event(fresh, _seeded_record())
+    assert changes == ("Re-seeded; changed: source_concepts. "
+                       "Upstream retrieval date 2026-08-30, unchanged.")
+
+
+def test_a_lane_change_names_the_lane_and_its_upstream_version():
+    """A MIBiG refresh moves producers without moving the retrieval date.
+
+    Two lanes, so dropping any single lane from the delta is caught, not only
+    the one that happened to be exercised.
+    """
+    producer = {"taxon_id": "NCBITaxon:1", "taxon_label": "Streptomyces x",
+                "source": "MIBIG", "source_version": "4.0.1",
+                "link_evidence": ["KNOCK_OUT_STUDIES"],
+                "link_evidence_scope": "COMPOUND_SPECIFIC"}
+    resistance = {"mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION", "label": "x",
+                  "taxon_id": "NCBITaxon:1", "taxon_label": "Aspergillus x",
+                  "source": "PHIBASE", "source_version": "abc123"}
+    card = {"mechanism_type": "ANTIBIOTIC_EFFLUX", "label": "y", "aro_id": "ARO:3000001",
+            "evidence": [{"reference": "ARO:3000001",
+                          "notes": "CARD/ARO asserts this determinant"}]}
+    bindingdb = {"target_label": "z", "target_type": "PROTEIN", "source": "BINDINGDB",
+                 "source_version": "2026-09"}
+    fresh = _seeded_record(producer_organisms=[producer],
+                           resistance_mechanisms=[resistance, card],
+                           molecular_targets=[bindingdb])
+    changes = _event(fresh, _seeded_record())
+    # Every lane the delta compares, so deleting any one of them from the
+    # delta fails here. The first version exercised MIBiG and PHI-base only,
+    # and dropping the CARD or BindingDB lane left the whole suite green.
+    assert "producer_organisms (MIBIG 4.0.1)" in changes
+    assert "resistance_mechanisms (PHIBASE abc123)" in changes
+    assert "resistance_mechanisms (CARD)" in changes
+    assert "molecular_targets (BINDINGDB 2026-09)" in changes
+    assert "Upstream retrieval date 2026-08-30, unchanged." in changes
+
+
+def test_a_curator_record_reports_its_curator_inputs_apart_from_upstream():
+    """curation/curator_antibiotics.tsv is not data/raw, and its version is its own."""
+    def curated(version, **over):
+        return _seeded_record(source_concepts=[
+            {"source": "CURATOR", "source_id": "CURATOR:1", "source_version": version}], **over)
+    changes = _event(curated("2026-09-09", label="renamed"), curated("2026-09-07"))
+    # The version lives on the concept, so a moved version is itself a change
+    # to source_concepts, and the event says so rather than hiding it.
+    assert changes == ("Re-seeded; changed: label, source_concepts. "
+                       "Curator inputs 2026-09-07 -> 2026-09-09.")
+    assert "Upstream" not in changes
+    changes = _event(curated("2026-09-07", label="renamed"), curated("2026-09-07"))
+    assert changes == "Re-seeded; changed: label. Curator inputs 2026-09-07, unchanged."
+
+
+def test_a_date_the_record_never_carried_is_not_called_unchanged():
+    existing = _seeded_record(source_concepts=[
+        {"source": "CHEBI", "source_id": "CHEBI:1", "source_version": ""}])
+    fresh = _seeded_record(source_concepts=[
+        {"source": "CHEBI", "source_id": "CHEBI:1", "source_version": "2026-08-30"}])
+    assert _event(fresh, existing) == (
+        "Re-seeded; changed: source_concepts. Upstream retrieval date 2026-08-30.")
+
+
+def test_a_blank_source_version_is_not_printed():
+    fresh = _seeded_record(label="renamed", source_concepts=[
+        {"source": "CHEBI", "source_id": "CHEBI:1", "source_version": ""}])
+    existing = _seeded_record(source_concepts=[
+        {"source": "CHEBI", "source_id": "CHEBI:1", "source_version": ""}])
+    assert _event(fresh, existing) == "Re-seeded; changed: label."
+
+
+def test_a_seeded_clinical_status_change_is_named():
+    """Only a status the seeder owns: a record holding `clinical_status` with no
+    Drugs@FDA assertion behind it is curator-owned by design and writes nothing."""
+    def with_fda(status):
+        return _seeded_record(
+            clinical_status=status,
+            clinical_status_assertions=[{"source": "DRUGS_AT_FDA", "status": status,
+                                         "jurisdiction": "US-FDA",
+                                         "source_version": "2026-08-28"}])
+    changes = _event(with_fda("APPROVED"), with_fda("INVESTIGATIONAL"))
+    # The full clause, not a substring: "clinical_status" is satisfied by
+    # "clinical_status_assertions" alone, which is the other comparison.
+    assert changes.startswith(
+        "Re-seeded; changed: clinical_status_assertions (DRUGS_AT_FDA 2026-08-28), "
+        "clinical_status.")
+
+
+def test_no_delta_writes_no_event():
+    """The guard is `not reseed_delta(...)`, so an empty delta must leave the
+    trail exactly as it was. The one-definition property itself is exercised by
+    the tests above, which each move one comparison and read it back."""
+    from seed_from_sources import merge_with_existing
+
+    existing = _seeded_record()
+    merged = merge_with_existing(_seeded_record(), existing)
+    assert merged["curation_history"] == existing["curation_history"]
