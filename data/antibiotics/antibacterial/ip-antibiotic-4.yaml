@@ -1,0 +1,48 @@
+identifier: antibioticmech:curator-811a417697
+label: IP-antibiotic 4
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 5,7-dichloro-8-hydroxyquinoline hexanamide with antibacterial activity
+  against multidrug-resistant Neisseria gonorrhoeae.
+definition_source: DOI:10.1021/acsinfecdis.5c00812
+synonyms:
+- synonym_text: compound 4
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: N-(5,7-Dichloro-8-hydroxyquinolin-2-yl)hexanamide
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCCC(=O)Nc1ccc2c(Cl)cc(Cl)c(O)c2n1
+  standard_inchi: InChI=1S/C15H16Cl2N2O2/c1-2-3-4-5-13(20)18-12-7-6-9-10(16)8-11(17)15(21)14(9)19-12/h6-8,21H,2-5H2,1H3,(H,18,19,20)
+  standard_inchi_key: SSXGEVPIXTZCAB-UHFFFAOYSA-N
+  molecular_formula: C15H16Cl2N2O2
+  structure_source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12797230/
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 327.21
+  monoisotopic_mass: 326.058883112
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acsinfecdis.5c00812#4
+  source_label: IP-antibiotic 4
+  minted_identifier: antibioticmech:curator-811a417697
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/acsinfecdis.5c00812
+    snippet: Jen et al. synthesized 12 IP-antibiotic candidates and reported that
+      compound 4 inhibited multidrug-resistant Neisseria gonorrhoeae WHO Z with a
+      MIC of 5 mg/L in the preliminary Table 1 assay.
+    notes: Table 1 supplies the exact 5,7-dichloro-8-hydroxyquinoline hexanamide structure
+      for compound 4, and the experimental section names it as N-(5,7-Dichloro-8-hydroxyquinolin-2-yl)hexanamide.
+      The structure was normalized with RDKit to derive the standard InChI and InChIKey.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-09-11T06:48:57Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
