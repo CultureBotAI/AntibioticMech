@@ -96,11 +96,15 @@ records the sha256 of every upstream file and every emitted inventory.
 
 ## Skills
 
-`.claude/skills/` carries four repository-specific workflows:
+`.claude/skills/` carries five repository-specific workflows:
 
 - **`add-antibiotic`** — prove a named compound or publication lead is one new
   structure, then add the reproducible source path that emits its first
   `AntibioticRecord` without hand-writing generated YAML.
+- **`add-causal-graph`** — add or improve an evidence-backed mechanism graph on
+  one existing antibiotic record, keeping every directed causal edge attached to
+  its own primary-paper support and writing only through the validated
+  curation-event path.
 - **`review-open-issues`** — sweep and rank the whole open-issue queue against
   the committed corpus. Its P0 tier is specific to this repository: something
   wrong that every gate passes, which is how 25 defects were once found across two review
