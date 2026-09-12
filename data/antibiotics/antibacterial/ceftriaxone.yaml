@@ -122,6 +122,20 @@ activity_spectrum:
       BioSample SAMN11953774, E. coli, ceftriaxone MIC >32 micrograms/mL, and interpretation
       R.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution ceftriaxone MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1305'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10596&PanelID=1247
+    snippet: Ceftriaxone  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1305, Study ID MULTI-17,
+      BioSample SAMN46941623, Escherichia coli, ceftriaxone MIC >32 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: '[H][C@]12SCC(CSc3nc(=O)c(=O)nn3C)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1'
   standard_inchi: InChI=1S/C18H18N8O7S3/c1-25-18(22-12(28)13(29)23-25)36-4-6-3-34-15-9(14(30)26(15)10(6)16(31)32)21-11(27)8(24-33-2)7-5-35-17(19)20-7/h5,9,15H,3-4H2,1-2H3,(H2,19,20)(H,21,27)(H,23,29)(H,31,32)/b24-8-/t9-,15-/m1/s1
@@ -393,4 +407,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank ceftriaxone-resistant Escherichia
     coli MIC observation from isolate 0346.
+  llm_assisted: true
+- timestamp: '2026-09-12T09:55:47Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank ceftriaxone-resistant Escherichia
+    coli isolate MIC observation for AR-1305.
   llm_assisted: true

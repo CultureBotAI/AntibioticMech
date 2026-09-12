@@ -81,6 +81,20 @@ activity_spectrum:
       BioSample SAMN11953774, E. coli, aztreonam MIC >64 micrograms/mL, and interpretation
       R.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution aztreonam MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1305'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10596&PanelID=1247
+    snippet: Aztreonam  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1305, Study ID MULTI-17,
+      BioSample SAMN46941623, Escherichia coli, aztreonam MIC >32 micrograms/mL, and
+      interpretation R.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: C[C@H]1[C@H](NC(=O)/C(=N\OC(C)(C)C(=O)O)c2csc([NH3+])n2)C(=O)N1S(=O)(=O)[O-]
   standard_inchi: InChI=1S/C13H17N5O8S2/c1-5-7(10(20)18(5)28(23,24)25)16-9(19)8(6-4-27-12(14)15-6)17-26-13(2,3)11(21)22/h4-5,7H,1-3H3,(H2,14,15)(H,16,19)(H,21,22)(H,23,24,25)/b17-8-/t5-,7-/m0/s1
@@ -579,4 +593,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank aztreonam-resistant Escherichia
     coli MIC observation from isolate 0346.
+  llm_assisted: true
+- timestamp: '2026-09-12T09:55:46Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank aztreonam-resistant Escherichia
+    coli isolate MIC observation for AR-1305.
   llm_assisted: true
