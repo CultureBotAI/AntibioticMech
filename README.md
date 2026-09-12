@@ -80,6 +80,10 @@ Mechanism layer: **282** records carry a molecular target and **295** carry resi
 
 ## Quick start
 
+Use Python 3.13, pinned in `.python-version`, for development and GitHub CI.
+CI runs each check on this single minor to avoid duplicate jobs; package
+compatibility metadata remains in `pyproject.toml`.
+
 ```bash
 just install                       # uv sync --extra dev
 just seed                          # dry run: what would be written, per class
