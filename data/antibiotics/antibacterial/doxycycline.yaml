@@ -78,6 +78,20 @@ activity_roles:
 - CHEBI:38068
 structural_class: tetracycline antibiotic
 structural_class_id: ARO:3000050
+activity_spectrum:
+- taxon_id: NCBITaxon:1352
+  taxon_label: Enterococcus faecium
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution doxycycline MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0783
+  evidence:
+  - reference: https://wwwn.cdc.gov/arisolatebank/panel/IsolateDetail?IsolateID=10094&PanelID=1130
+    snippet: Doxycycline  | 16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0783, Study ID VRE-03,
+      BioSample SAMN15040082, E. faecium, doxycycline MIC 16 micrograms/mL, and interpretation
+      R.
 chemical_structure:
   smiles: '[H][C@@]12C(=C(O)[C@]3(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@]3([H])[C@H]1O)C(=O)c1c(O)cccc1[C@@H]2C'
   standard_inchi: InChI=1S/C22H24N2O8/c1-7-8-5-4-6-9(25)11(8)16(26)12-10(7)17(27)14-15(24(2)3)18(28)13(21(23)31)20(30)22(14,32)19(12)29/h4-7,10,14-15,17,25,27-29,32H,1-3H3,(H2,23,31)/t7-,10+,14+,15-,17-,22-/m0/s1
@@ -267,3 +281,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-12T06:40:09Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank doxycycline-resistant Enterococcus
+    faecium isolate MIC observation.
+  llm_assisted: true

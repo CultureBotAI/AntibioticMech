@@ -38,6 +38,34 @@ activity_roles:
 - CHEBI:36047
 structural_class: tetracycline antibiotic
 structural_class_id: ARO:3000050
+activity_spectrum:
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  mic_value: 16.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0497
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=497&PanelID=10
+    snippet: Minocycline  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0497, Study ID NEW-10,
+      BioSample SAMN11953783, K. pneumoniae, minocycline MIC >16 micrograms/mL, and
+      interpretation R.
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
+    CLSI 2024 M100 S34.
+  strain: 0297
+  evidence:
+  - reference: https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=297&PanelID=1
+    snippet: Minocycline  | 16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0297, Study ID ACI-25,
+      BioSample SAMN04901687, A. baumannii, minocycline MIC 16 micrograms/mL, and
+      interpretation R.
 chemical_structure:
   smiles: '[H][C@@]12Cc3c(N(C)C)ccc(O)c3C(=O)C1=C(O)[C@]1(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@]1([H])C2'
   standard_inchi: InChI=1S/C23H27N3O7/c1-25(2)12-5-6-13(27)15-10(12)7-9-8-11-17(26(3)4)19(29)16(22(24)32)21(31)23(11,33)20(30)14(9)18(15)28/h5-6,9,11,17,27,29-30,33H,7-8H2,1-4H3,(H2,24,32)/t9-,11-,17-,23-/m0/s1
@@ -253,3 +281,15 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-12T06:51:02Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank minocycline-resistant Klebsiella
+    pneumoniae isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T06:55:44Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank minocycline-resistant Acinetobacter
+    baumannii isolate MIC observation.
+  llm_assisted: true

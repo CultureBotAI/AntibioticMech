@@ -46,6 +46,21 @@ activity_roles:
 - CHEBI:35816
 structural_class: rifamycin antibiotic
 structural_class_id: ARO:3000157
+activity_spectrum:
+- taxon_id: NCBITaxon:1352
+  taxon_label: Enterococcus faecium
+  mic_value: 4.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution rifampin MIC; modal MIC reported; interpreted using CLSI
+    2025 M100 S35.
+  strain: 0783
+  evidence:
+  - reference: https://wwwn.cdc.gov/arisolatebank/panel/IsolateDetail?IsolateID=10094&PanelID=1130
+    snippet: Rifampin  | >4  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0783, Study ID VRE-03,
+      BioSample SAMN15040082, E. faecium, rifampin MIC >4 micrograms/mL, and interpretation
+      R.
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_notes: 'CURATOR: PMID:11290327 resolved rifampicin bound to Thermus
   aquaticus core RNA polymerase. It occupies a beta-subunit pocket in the DNA/RNA
@@ -890,3 +905,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-12T06:40:10Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank rifampin-resistant Enterococcus
+    faecium isolate MIC observation.
+  llm_assisted: true

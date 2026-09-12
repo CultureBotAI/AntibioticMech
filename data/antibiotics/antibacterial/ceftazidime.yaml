@@ -56,6 +56,46 @@ activity_roles:
 - CHEBI:36047
 structural_class: cephalosporin
 structural_class_id: ARO:0000032
+activity_spectrum:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution ceftazidime MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0349
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=349&PanelID=10
+    snippet: Ceftazidime  | 32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0349, Study ID NEW-04,
+      BioSample SAMN11953777, E. coli, ceftazidime MIC 32 micrograms/mL, and interpretation
+      R.
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  mic_value: 64.0
+  mic_units: mg/L
+  assay: Broth microdilution ceftazidime MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0497
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=497&PanelID=10
+    snippet: Ceftazidime  | 64  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0497, Study ID NEW-10,
+      BioSample SAMN11953783, K. pneumoniae, ceftazidime MIC 64 micrograms/mL, and
+      interpretation R.
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  mic_value: 128.0
+  mic_units: mg/L
+  assay: Broth microdilution ceftazidime MIC; modal MIC reported; interpreted using
+    CLSI 2024 M100 S34.
+  strain: 0297
+  evidence:
+  - reference: https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=297&PanelID=1
+    snippet: Ceftazidime  | 128  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0297, Study ID ACI-25,
+      BioSample SAMN04901687, A. baumannii, ceftazidime MIC 128 micrograms/mL, and
+      interpretation R.
 chemical_structure:
   smiles: '[H][C@]12SCC(C[n+]3ccccc3)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)/C(=N\OC(C)(C)C(=O)O)c1csc(N)n1'
   standard_inchi: InChI=1S/C22H22N6O7S2/c1-22(2,20(33)34)35-26-13(12-10-37-21(23)24-12)16(29)25-14-17(30)28-15(19(31)32)11(9-36-18(14)28)8-27-6-4-3-5-7-27/h3-7,10,14,18H,8-9H2,1-2H3,(H4-,23,24,25,29,31,32,33,34)/b26-13-/t14-,18-/m1/s1
@@ -1940,3 +1980,27 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-12T06:43:12Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank ceftazidime-resistant Escherichia
+    coli isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T06:51:01Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank ceftazidime-resistant Klebsiella
+    pneumoniae isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T06:55:43Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank ceftazidime-resistant Acinetobacter
+    baumannii isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T07:07:13Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Corrected the CDC/FDA AR Isolate Bank 0349 breakpoint context from CLSI
+    2024 M100 S34 to CLSI 2025 M100 S35.
+  llm_assisted: true

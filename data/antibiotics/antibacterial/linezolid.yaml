@@ -41,6 +41,43 @@ activity_roles:
 - CHEBI:36047
 structural_class: oxazolidinone antibiotic
 structural_class_id: ARO:3000079
+activity_spectrum:
+- taxon_id: NCBITaxon:1352
+  taxon_label: Enterococcus faecium
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: Broth microdilution linezolid MIC; interpreted according to EUCAST guidelines.
+  strain: C59
+  evidence:
+  - reference: DOI:10.1093/jac/dkaa227
+    snippet: All expressed resistance to linezolid
+    notes: Freitas et al. report WGS representative C59, BioProject PRJNA580369, GenBank
+      accession WLYR00000000, healthy-human Portugal 2001 isolate, and linezolid MIC
+      8 mg/L.
+- taxon_id: NCBITaxon:1352
+  taxon_label: Enterococcus faecium
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: Broth microdilution linezolid MIC; interpreted according to EUCAST guidelines.
+  strain: 149T
+  evidence:
+  - reference: DOI:10.1093/jac/dkaa227
+    snippet: All expressed resistance to linezolid
+    notes: Freitas et al. report WGS representative 149T, BioProject PRJNA580369,
+      GenBank accession WLYQ00000000, cow-milk Tunisia 2015 isolate, and linezolid
+      MIC 8 mg/L.
+- taxon_id: NCBITaxon:1352
+  taxon_label: Enterococcus faecium
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: Broth microdilution linezolid MIC; interpreted according to EUCAST guidelines.
+  strain: 2Fez
+  evidence:
+  - reference: DOI:10.1093/jac/dkaa227
+    snippet: All expressed resistance to linezolid
+    notes: Freitas et al. report WGS representative 2Fez, BioProject PRJNA580369,
+      GenBank accession WLYP00000000, hospital-surveillance faeces Portugal 2015 isolate,
+      and linezolid MIC 8 mg/L.
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_notes: 'CURATOR: PMID:18757750 resolved linezolid in the A-site pocket
   of the Deinococcus radiodurans 50S peptidyl-transferase center. It overlaps the
@@ -1009,3 +1046,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-12T06:29:42Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added three DOI-backed linezolid-resistant Enterococcus faecium isolate
+    MIC observations from Freitas et al. 2020.
+  llm_assisted: true
