@@ -92,6 +92,20 @@ activity_spectrum:
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0297, Study ID ACI-25,
       BioSample SAMN04901687, A. baumannii, cefepime MIC >32 micrograms/mL, and interpretation
       R.
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution cefepime MIC; modal MIC reported; interpreted using CLSI
+    2025 M100 S35.
+  strain: '0346'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=346&PanelID=10
+    snippet: Cefepime  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0346, Study ID NEW-01,
+      BioSample SAMN11953774, E. coli, cefepime MIC >32 micrograms/mL, and interpretation
+      R.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: '[H][C@]12SCC(C[N+]3(C)CCCC3)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1'
   standard_inchi: InChI=1S/C19H24N6O5S2/c1-25(5-3-4-6-25)7-10-8-31-17-13(16(27)24(17)14(10)18(28)29)22-15(26)12(23-30-2)11-9-32-19(20)21-11/h9,13,17H,3-8H2,1-2H3,(H3-,20,21,22,26,28,29)/b23-12-/t13-,17-/m1/s1
@@ -286,4 +300,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Corrected the CDC/FDA AR Isolate Bank 0349 breakpoint context from CLSI
     2024 M100 S34 to CLSI 2025 M100 S35.
+  llm_assisted: true
+- timestamp: '2026-09-12T08:19:04Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank cefepime-resistant Escherichia
+    coli MIC observation from isolate 0346.
   llm_assisted: true

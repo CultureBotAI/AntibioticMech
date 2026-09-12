@@ -83,6 +83,20 @@ activity_spectrum:
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0497, Study ID NEW-10,
       BioSample SAMN11953783, K. pneumoniae, amikacin MIC 16 micrograms/mL, and interpretation
       R.
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 64.0
+  mic_units: mg/L
+  assay: Broth microdilution amikacin MIC; modal MIC reported; interpreted using CLSI
+    2025 M100 S35.
+  strain: '0346'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=346&PanelID=10
+    snippet: Amikacin  | >64  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0346, Study ID NEW-01,
+      BioSample SAMN11953774, E. coli, amikacin MIC >64 micrograms/mL, and interpretation
+      R.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: NCC[C@H](O)C(=O)N[C@@H]1C[C@H](N)[C@@H](O[C@H]2O[C@H](CN)[C@@H](O)[C@H](O)[C@H]2O)[C@H](O)[C@H]1O[C@H]1O[C@H](CO)[C@@H](O)[C@H](N)[C@H]1O
   standard_inchi: InChI=1S/C22H43N5O13/c23-2-1-8(29)20(36)27-7-3-6(25)18(39-22-16(34)15(33)13(31)9(4-24)37-22)17(35)19(7)40-21-14(32)11(26)12(30)10(5-28)38-21/h6-19,21-22,28-35H,1-5,23-26H2,(H,27,36)/t6-,7+,8-,9+,10+,11-,12+,13+,14+,15-,16+,17-,18+,19-,21+,22+/m0/s1
@@ -884,4 +898,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank amikacin-resistant Klebsiella
     pneumoniae isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T08:19:02Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank amikacin-resistant Escherichia
+    coli MIC observation from isolate 0346.
   llm_assisted: true

@@ -62,6 +62,20 @@ activity_spectrum:
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0297, Study ID ACI-25,
       BioSample SAMN04901687, A. baumannii, gentamicin MIC >16 micrograms/mL, and
       interpretation R.
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0346'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=346&PanelID=10
+    snippet: Gentamicin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0346, Study ID NEW-01,
+      BioSample SAMN11953774, E. coli, gentamicin MIC >16 micrograms/mL, and interpretation
+      R.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: CC(C1CCC(C(O1)OC2C(CC(C(C2O)OC3C(C(C(CO3)(C)O)NC)O)N)N)N)NC
   standard_inchi: InChI=1S/C21H43N5O7/c1-9(25-3)13-6-5-10(22)19(31-13)32-16-11(23)7-12(24)17(14(16)27)33-20-15(28)18(26-4)21(2,29)8-30-20/h9-20,25-29H,5-8,22-24H2,1-4H3
@@ -337,4 +351,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Corrected the CDC/FDA AR Isolate Bank 0349 breakpoint context from CLSI
     2024 M100 S34 to CLSI 2025 M100 S35.
+  llm_assisted: true
+- timestamp: '2026-09-12T08:19:05Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank gentamicin-resistant Escherichia
+    coli MIC observation from isolate 0346.
   llm_assisted: true

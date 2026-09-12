@@ -135,6 +135,20 @@ activity_spectrum:
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0074, Study ID CarbaNP-43,
       BioSample SAMN04014915, K. aerogenes, ampicillin MIC >32 micrograms/mL, and
       interpretation R.
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution ampicillin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0346'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=346&PanelID=10
+    snippet: Ampicillin  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0346, Study ID NEW-01,
+      BioSample SAMN11953774, E. coli, ampicillin MIC >32 micrograms/mL, and interpretation
+      R.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)[C@H](N)c1ccccc1'
   standard_inchi: InChI=1S/C16H19N3O4S/c1-16(2)11(15(22)23)19-13(21)10(14(19)24-16)18-12(20)9(17)8-6-4-3-5-7-8/h3-7,9-11,14H,17H2,1-2H3,(H,18,20)(H,22,23)/t9-,10-,11+,14-/m1/s1
@@ -525,4 +539,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: 'Fixes #286. Corrected the CDC/FDA AR Isolate Bank 0074 breakpoint context
     from CLSI 2024 M100 S34 to CLSI 2025 M100 S35.'
+  llm_assisted: true
+- timestamp: '2026-09-12T08:19:03Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank ampicillin-resistant Escherichia
+    coli MIC observation from isolate 0346.
   llm_assisted: true
