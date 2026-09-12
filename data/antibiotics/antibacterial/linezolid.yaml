@@ -78,6 +78,74 @@ activity_spectrum:
     notes: Freitas et al. report WGS representative 2Fez, BioProject PRJNA580369,
       GenBank accession WLYP00000000, hospital-surveillance faeces Portugal 2015 isolate,
       and linezolid MIC 8 mg/L.
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution linezolid MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0701'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=701&PanelID=1125
+    snippet: Linezolid  | 16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0701, Study ID TLZD-01,
+      BioSample SAMN11953851, Staphylococcus aureus, linezolid MIC 16 micrograms/mL,
+      and interpretation R.
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: Broth microdilution linezolid MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0702'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=702&PanelID=1125
+    snippet: Linezolid  | 8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0702, Study ID TLZD-02,
+      BioSample SAMN11953852, Staphylococcus aureus, linezolid MIC 8 micrograms/mL,
+      and interpretation R.
+- taxon_id: NCBITaxon:1282
+  taxon_label: Staphylococcus epidermidis
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution linezolid MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0726'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=726&PanelID=1125
+    snippet: Linezolid  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0726, Study ID TLZD-26,
+      BioSample SAMN11953876, Staphylococcus epidermidis, linezolid MIC >16 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:1283
+  taxon_label: Staphylococcus haemolyticus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution linezolid MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0729
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=729&PanelID=1125
+    snippet: Linezolid  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0729, Study ID TLZD-29,
+      BioSample SAMN11953879, Staphylococcus haemolyticus, linezolid MIC >16 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:1283
+  taxon_label: Staphylococcus haemolyticus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution linezolid MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0730'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=730&PanelID=1125
+    snippet: Linezolid  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0730, Study ID TLZD-30,
+      BioSample SAMN11953880, Staphylococcus haemolyticus, linezolid MIC >16 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_notes: 'CURATOR: PMID:18757750 resolved linezolid in the A-site pocket
   of the Deinococcus radiodurans 50S peptidyl-transferase center. It overlaps the
@@ -1051,4 +1119,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added three DOI-backed linezolid-resistant Enterococcus faecium isolate
     MIC observations from Freitas et al. 2020.
+  llm_assisted: true
+- timestamp: '2026-09-12T09:04:52Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added five CDC/FDA AR Isolate Bank linezolid-resistant Staphylococcus activity
+    observations for AR-0701, AR-0702, AR-0726, AR-0729, and AR-0730.
   llm_assisted: true
