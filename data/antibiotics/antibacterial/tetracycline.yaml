@@ -143,6 +143,20 @@ activity_spectrum:
       BioSample SAMN11953774, E. coli, tetracycline MIC >32 micrograms/mL, and interpretation
       R.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution tetracycline MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1305'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10596&PanelID=1247
+    snippet: Tetracycline  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1305, Study ID MULTI-17,
+      BioSample SAMN46941623, Escherichia coli, tetracycline MIC >32 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_notes: 'CURATOR: PMID:11163189 determined the atomic structure of tetracycline
   bound at discrete sites on the bacterial 30S ribosomal subunit. The observed drug-ribosome
@@ -1102,4 +1116,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank tetracycline-resistant Escherichia
     coli MIC observation from isolate 0346.
+  llm_assisted: true
+- timestamp: '2026-09-12T09:55:48Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank tetracycline-resistant Escherichia
+    coli isolate MIC observation for AR-1305.
   llm_assisted: true
