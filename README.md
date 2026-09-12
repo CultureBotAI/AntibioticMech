@@ -197,6 +197,11 @@ seeder's, and is compared along with its notes and target scope, because a bare
 hand edit of a seeded mechanism is drift rather than curation. Writing a
 `CURATOR:` note claims the field and ends the comparison.
 
+## Contributing
+
+See the [native merge queue guide](docs/MERGE_QUEUE.md) for PR checks,
+queue validation, and recovery when a queued change fails.
+
 ## Licence
 
 Two licences, because the repository holds two different things.
