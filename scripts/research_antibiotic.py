@@ -19,7 +19,7 @@ ANTIBIOTICS_DIR = REPO_ROOT / "data" / "antibiotics"
 RESEARCH_DIR = REPO_ROOT / "research"
 TEMPLATE = REPO_ROOT / "templates" / "antibiotic_mechanism_research.md"
 DEFAULT_CLIENT_COMMAND = (
-    "uvx --python 3.12 --prerelease=allow "
+    "uvx --python 3.13 --prerelease=allow "
     "--from deep-research-client[cyberian] deep-research-client"
 )
 PROVIDER_ALIASES = {"edison": "falcon", "futurehouse": "falcon", "claude-code": "claude_code"}
