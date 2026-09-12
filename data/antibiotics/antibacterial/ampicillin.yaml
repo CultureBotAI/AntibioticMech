@@ -127,7 +127,7 @@ activity_spectrum:
   mic_qualifier: '>'
   mic_units: mg/L
   assay: Broth microdilution ampicillin MIC; modal MIC reported; interpreted using
-    CLSI 2024 M100 S34.
+    CLSI 2025 M100 S35.
   strain: '0074'
   evidence:
   - reference: https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=74&PanelID=1168
@@ -519,4 +519,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Corrected the CDC/FDA AR Isolate Bank 0349 breakpoint context from CLSI
     2024 M100 S34 to CLSI 2025 M100 S35.
+  llm_assisted: true
+- timestamp: '2026-09-12T07:24:56Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: 'Fixes #286. Corrected the CDC/FDA AR Isolate Bank 0074 breakpoint context
+    from CLSI 2024 M100 S34 to CLSI 2025 M100 S35.'
   llm_assisted: true
