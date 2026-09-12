@@ -68,6 +68,49 @@ activity_roles:
 - CHEBI:36047
 structural_class: cephalosporin
 structural_class_id: ARO:0000032
+activity_spectrum:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 8.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution cefazolin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0349
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=349&PanelID=10
+    snippet: Cefazolin  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0349, Study ID NEW-04,
+      BioSample SAMN11953777, E. coli, cefazolin MIC >8 micrograms/mL, and interpretation
+      R.
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  mic_value: 8.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution cefazolin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0497
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=497&PanelID=10
+    snippet: Cefazolin  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0497, Study ID NEW-10,
+      BioSample SAMN11953783, K. pneumoniae, cefazolin MIC >8 micrograms/mL, and interpretation
+      R.
+- taxon_id: NCBITaxon:548
+  taxon_label: Klebsiella aerogenes
+  mic_value: 8.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution cefazolin MIC; modal MIC reported; interpreted using
+    CLSI 2024 M100 S34.
+  strain: '0074'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=74&PanelID=1168
+    snippet: Cefazolin  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0074, Study ID CarbaNP-43,
+      BioSample SAMN04014915, K. aerogenes, cefazolin MIC >8 micrograms/mL, and interpretation
+      R.
 chemical_structure:
   smiles: '[H][C@]12SCC(CSc3nnc(C)s3)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)Cn1cnnn1'
   standard_inchi: InChI=1S/C14H14N8O4S3/c1-6-17-18-14(29-6)28-4-7-3-27-12-9(11(24)22(12)10(7)13(25)26)16-8(23)2-21-5-15-19-20-21/h5,9,12H,2-4H2,1H3,(H,16,23)(H,25,26)/t9-,12-/m1/s1
@@ -240,3 +283,27 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-12T06:43:11Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank cefazolin-resistant Escherichia
+    coli isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T06:51:01Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank cefazolin-resistant Klebsiella
+    pneumoniae isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T07:01:47Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank cefazolin-resistant Klebsiella
+    aerogenes isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T07:07:12Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Corrected the CDC/FDA AR Isolate Bank 0349 breakpoint context from CLSI
+    2024 M100 S34 to CLSI 2025 M100 S35.
+  llm_assisted: true

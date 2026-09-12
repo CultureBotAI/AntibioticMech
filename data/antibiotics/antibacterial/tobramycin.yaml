@@ -70,6 +70,47 @@ activity_roles:
 - CHEBI:33282
 structural_class: aminoglycoside antibiotic
 structural_class_id: ARO:0000016
+activity_spectrum:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 16.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution tobramycin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0349
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=349&PanelID=10
+    snippet: Tobramycin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0349, Study ID NEW-04,
+      BioSample SAMN11953777, E. coli, tobramycin MIC >16 micrograms/mL, and interpretation
+      R.
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution tobramycin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0497
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=497&PanelID=10
+    snippet: Tobramycin  | 16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0497, Study ID NEW-10,
+      BioSample SAMN11953783, K. pneumoniae, tobramycin MIC 16 micrograms/mL, and
+      interpretation R.
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution tobramycin MIC; modal MIC reported; interpreted using
+    CLSI 2024 M100 S34.
+  strain: 0297
+  evidence:
+  - reference: https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=297&PanelID=1
+    snippet: Tobramycin  | 16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0297, Study ID ACI-25,
+      BioSample SAMN04901687, A. baumannii, tobramycin MIC 16 micrograms/mL, and interpretation
+      R.
 chemical_structure:
   smiles: NC[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](N)[C@H]3O)[C@H](N)C[C@@H]2N)[C@H](N)C[C@@H]1O
   standard_inchi: InChI=1S/C18H37N5O9/c19-3-9-8(25)2-7(22)17(29-9)31-15-5(20)1-6(21)16(14(15)28)32-18-13(27)11(23)12(26)10(4-24)30-18/h5-18,24-28H,1-4,19-23H2/t5-,6+,7+,8-,9+,10+,11-,12+,13+,14-,15+,16-,17+,18+/m0/s1
@@ -1558,3 +1599,27 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-12T06:43:13Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank tobramycin-resistant Escherichia
+    coli isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T06:51:02Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank tobramycin-resistant Klebsiella
+    pneumoniae isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T06:55:44Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank tobramycin-resistant Acinetobacter
+    baumannii isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T07:07:14Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Corrected the CDC/FDA AR Isolate Bank 0349 breakpoint context from CLSI
+    2024 M100 S34 to CLSI 2025 M100 S35.
+  llm_assisted: true

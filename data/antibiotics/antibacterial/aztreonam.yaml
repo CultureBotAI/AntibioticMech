@@ -39,6 +39,34 @@ activity_roles:
 - CHEBI:36047
 structural_class: monobactam
 structural_class_id: ARO:0000004
+activity_spectrum:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 64.0
+  mic_units: mg/L
+  assay: Broth microdilution aztreonam MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0349
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=349&PanelID=10
+    snippet: Aztreonam  | 64  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0349, Study ID NEW-04,
+      BioSample SAMN11953777, E. coli, aztreonam MIC 64 micrograms/mL, and interpretation
+      R.
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  mic_value: 64.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution aztreonam MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0497
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=497&PanelID=10
+    snippet: Aztreonam  | >64  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0497, Study ID NEW-10,
+      BioSample SAMN11953783, K. pneumoniae, aztreonam MIC >64 micrograms/mL, and
+      interpretation R.
 chemical_structure:
   smiles: C[C@H]1[C@H](NC(=O)/C(=N\OC(C)(C)C(=O)O)c2csc([NH3+])n2)C(=O)N1S(=O)(=O)[O-]
   standard_inchi: InChI=1S/C13H17N5O8S2/c1-5-7(10(20)18(5)28(23,24)25)16-9(19)8(6-4-27-12(14)15-6)17-26-13(2,3)11(21)22/h4-5,7H,1-3H3,(H2,14,15)(H,16,19)(H,21,22)(H,23,24,25)/b17-8-/t5-,7-/m0/s1
@@ -514,3 +542,21 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-12T06:43:11Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank aztreonam-resistant Escherichia
+    coli isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T06:51:01Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank aztreonam-resistant Klebsiella
+    pneumoniae isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T07:07:12Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Corrected the CDC/FDA AR Isolate Bank 0349 breakpoint context from CLSI
+    2024 M100 S34 to CLSI 2025 M100 S35.
+  llm_assisted: true

@@ -49,6 +49,20 @@ activity_roles:
 - CHEBI:36047
 structural_class: carbapenem
 structural_class_id: ARO:0000020
+activity_spectrum:
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  mic_value: 64.0
+  mic_units: mg/L
+  assay: Broth microdilution imipenem MIC; modal MIC reported; interpreted using CLSI
+    2024 M100 S34.
+  strain: 0297
+  evidence:
+  - reference: https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=297&PanelID=1
+    snippet: Imipenem  | 64  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0297, Study ID ACI-25,
+      BioSample SAMN04901687, A. baumannii, imipenem MIC 64 micrograms/mL, and interpretation
+      R.
 chemical_structure:
   smiles: '[H]C(=N)NCCSC1=C(C(=O)O)N2C(=O)[C@]([H])([C@@H](C)O)[C@@]2([H])C1'
   standard_inchi: InChI=1S/C12H17N3O4S/c1-6(16)9-7-4-8(20-3-2-14-5-13)10(12(18)19)15(7)11(9)17/h5-7,9,16H,2-4H2,1H3,(H2,13,14)(H,18,19)/t6-,7-,9-/m1/s1
@@ -300,3 +314,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-12T06:55:43Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank imipenem-resistant Acinetobacter
+    baumannii isolate MIC observation.
+  llm_assisted: true

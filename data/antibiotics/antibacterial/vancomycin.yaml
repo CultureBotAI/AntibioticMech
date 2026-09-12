@@ -48,6 +48,47 @@ activity_roles:
 - CHEBI:36047
 structural_class: glycopeptide antibiotic
 structural_class_id: ARO:3000081
+activity_spectrum:
+- taxon_id: NCBITaxon:1351
+  taxon_label: Enterococcus faecalis
+  mic_value: 64.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution vancomycin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0781
+  evidence:
+  - reference: https://wwwn.cdc.gov/arisolatebank/panel/IsolateDetail?IsolateID=10092&PanelID=1130
+    snippet: Vancomycin  | >64  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0781, Study ID VRE-01,
+      BioSample SAMN15040080, E. faecalis, vancomycin MIC >64 micrograms/mL, and interpretation
+      R.
+- taxon_id: NCBITaxon:1351
+  taxon_label: Enterococcus faecalis
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution vancomycin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0782
+  evidence:
+  - reference: https://wwwn.cdc.gov/arisolatebank/panel/IsolateDetail?IsolateID=10093&PanelID=1130
+    snippet: Vancomycin  | 32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0782, Study ID VRE-02,
+      BioSample SAMN15040081, E. faecalis, vancomycin MIC 32 micrograms/mL, and interpretation
+      R.
+- taxon_id: NCBITaxon:1352
+  taxon_label: Enterococcus faecium
+  mic_value: 64.0
+  mic_units: mg/L
+  assay: Broth microdilution vancomycin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0783
+  evidence:
+  - reference: https://wwwn.cdc.gov/arisolatebank/panel/IsolateDetail?IsolateID=10094&PanelID=1130
+    snippet: Vancomycin  | 64  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0783, Study ID VRE-03,
+      BioSample SAMN15040082, E. faecium, vancomycin MIC 64 micrograms/mL, and interpretation
+      R.
 chemical_structure:
   smiles: CN[C@H](CC(C)C)C(=O)N[C@H]1C(=O)N[C@@H](CC(N)=O)C(=O)N[C@H]2C(=O)N[C@H]3C(=O)N[C@H](C(=O)N[C@H](C(=O)O)c4cc(O)cc(O)c4-c4cc3ccc4O)[C@H](O)c3ccc(c(Cl)c3)Oc3cc2cc(c3O[C@@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@H]2O[C@H]2C[C@](C)(N)[C@H](O)[C@H](C)O2)Oc2ccc(cc2Cl)[C@H]1O
   standard_inchi: InChI=1S/C66H75Cl2N9O24/c1-23(2)12-34(71-5)58(88)76-49-51(83)26-7-10-38(32(67)14-26)97-40-16-28-17-41(55(40)101-65-56(54(86)53(85)42(22-78)99-65)100-44-21-66(4,70)57(87)24(3)96-44)98-39-11-8-27(15-33(39)68)52(84)50-63(93)75-48(64(94)95)31-18-29(79)19-37(81)45(31)30-13-25(6-9-36(30)80)46(60(90)77-50)74-61(91)47(28)73-59(89)35(20-43(69)82)72-62(49)92/h6-11,13-19,23-24,34-35,42,44,46-54,56-57,65,71,78-81,83-87H,12,20-22,70H2,1-5H3,(H2,69,82)(H,72,92)(H,73,89)(H,74,91)(H,75,93)(H,76,88)(H,77,90)(H,94,95)/t24-,34+,35-,42+,44-,46+,47+,48-,49+,50-,51+,52+,53+,54-,56+,57+,65-,66-/m0/s1
@@ -341,3 +382,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-12T06:35:27Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added three stable-URL CDC/FDA AR Isolate Bank vancomycin-resistant Enterococcus
+    faecalis/faecium isolate MIC observations.
+  llm_assisted: true

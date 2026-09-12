@@ -79,6 +79,62 @@ activity_roles:
 - CHEBI:36047
 structural_class: penicillin beta-lactam
 structural_class_id: ARO:3000008
+activity_spectrum:
+- taxon_id: NCBITaxon:1352
+  taxon_label: Enterococcus faecium
+  mic_value: 64.0
+  mic_units: mg/L
+  assay: Broth microdilution ampicillin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0783
+  evidence:
+  - reference: https://wwwn.cdc.gov/arisolatebank/panel/IsolateDetail?IsolateID=10094&PanelID=1130
+    snippet: Ampicillin  | 64  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0783, Study ID VRE-03,
+      BioSample SAMN15040082, E. faecium, ampicillin MIC 64 micrograms/mL, and interpretation
+      R.
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 32.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution ampicillin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0349
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=349&PanelID=10
+    snippet: Ampicillin  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0349, Study ID NEW-04,
+      BioSample SAMN11953777, E. coli, ampicillin MIC >32 micrograms/mL, and interpretation
+      R.
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  mic_value: 32.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution ampicillin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0497
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=497&PanelID=10
+    snippet: Ampicillin  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0497, Study ID NEW-10,
+      BioSample SAMN11953783, K. pneumoniae, ampicillin MIC >32 micrograms/mL, and
+      interpretation R.
+- taxon_id: NCBITaxon:548
+  taxon_label: Klebsiella aerogenes
+  mic_value: 32.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution ampicillin MIC; modal MIC reported; interpreted using
+    CLSI 2024 M100 S34.
+  strain: '0074'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=74&PanelID=1168
+    snippet: Ampicillin  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0074, Study ID CarbaNP-43,
+      BioSample SAMN04014915, K. aerogenes, ampicillin MIC >32 micrograms/mL, and
+      interpretation R.
 chemical_structure:
   smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)[C@H](N)c1ccccc1'
   standard_inchi: InChI=1S/C16H19N3O4S/c1-16(2)11(15(22)23)19-13(21)10(14(19)24-16)18-12(20)9(17)8-6-4-3-5-7-8/h3-7,9-11,14H,17H2,1-2H3,(H,18,20)(H,22,23)/t9-,10-,11+,14-/m1/s1
@@ -434,3 +490,33 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-12T06:40:09Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank ampicillin-resistant Enterococcus
+    faecium isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T06:43:11Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank ampicillin-resistant Escherichia
+    coli isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T06:51:01Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank ampicillin-resistant Klebsiella
+    pneumoniae isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T07:01:47Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank ampicillin-resistant Klebsiella
+    aerogenes isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T07:07:12Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Corrected the CDC/FDA AR Isolate Bank 0349 breakpoint context from CLSI
+    2024 M100 S34 to CLSI 2025 M100 S35.
+  llm_assisted: true

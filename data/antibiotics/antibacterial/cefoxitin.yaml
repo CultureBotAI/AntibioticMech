@@ -64,6 +64,57 @@ activity_roles:
 - CHEBI:36047
 structural_class: cephalosporin
 structural_class_id: ARO:0000032
+activity_spectrum:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: In-house reference broth microdilution cefoxitin MIC; modal MIC from at least
+    three tests; interpreted using CLSI M100 28th ed.
+  strain: AR-0978
+  evidence:
+  - reference: DOI:10.1128/JCM.02038-19
+    notes: Gargis et al. Table 1 reports mecA-positive S. aureus isolate AR-0978,
+      cefoxitin BMD MIC 16 micrograms/mL with interpretation R, clonal complex CC5,
+      and SCCmec type VI.
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: In-house reference broth microdilution cefoxitin MIC; modal MIC from at least
+    three tests; interpreted using CLSI M100 28th ed.
+  strain: AR-0979
+  evidence:
+  - reference: DOI:10.1128/JCM.02038-19
+    notes: Gargis et al. Table 1 reports mecA-positive S. aureus isolate AR-0979,
+      cefoxitin BMD MIC 8 micrograms/mL with interpretation R, clonal complex CC5,
+      and SCCmec type VI.
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: In-house reference broth microdilution cefoxitin MIC; modal MIC from at least
+    three tests; interpreted using CLSI M100 28th ed.
+  strain: AR-0997
+  evidence:
+  - reference: DOI:10.1128/JCM.02038-19
+    notes: Gargis et al. Table 1 reports mecA-positive S. aureus isolate AR-0997,
+      cefoxitin BMD MIC 16 micrograms/mL with interpretation R, clonal complex CC5,
+      and SCCmec type IV.
+- taxon_id: NCBITaxon:548
+  taxon_label: Klebsiella aerogenes
+  mic_value: 16.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution cefoxitin MIC; modal MIC reported; interpreted using
+    CLSI 2024 M100 S34.
+  strain: '0074'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=74&PanelID=1168
+    snippet: Cefoxitin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0074, Study ID CarbaNP-43,
+      BioSample SAMN04014915, K. aerogenes, cefoxitin MIC >16 micrograms/mL, and interpretation
+      R.
 chemical_structure:
   smiles: '[H][C@]12SCC(COC(N)=O)=C(C(=O)O)N1C(=O)[C@]2(NC(=O)Cc1cccs1)OC'
   standard_inchi: InChI=1S/C16H17N3O7S2/c1-25-16(18-10(20)5-9-3-2-4-27-9)13(23)19-11(12(21)22)8(6-26-15(17)24)7-28-14(16)19/h2-4,14H,5-7H2,1H3,(H2,17,24)(H,18,20)(H,21,22)/t14-,16+/m1/s1
@@ -310,3 +361,15 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-12T06:45:37Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added three DOI-backed cefoxitin-resistant Staphylococcus aureus isolate
+    MIC observations from Gargis et al. 2020.
+  llm_assisted: true
+- timestamp: '2026-09-12T07:01:47Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank cefoxitin-resistant Klebsiella
+    aerogenes isolate MIC observation.
+  llm_assisted: true

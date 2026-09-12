@@ -93,6 +93,21 @@ activity_roles:
 - CHEBI:36047
 structural_class: phenicol antibiotic
 structural_class_id: ARO:3000387
+activity_spectrum:
+- taxon_id: NCBITaxon:1351
+  taxon_label: Enterococcus faecalis
+  mic_value: 32.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution chloramphenicol MIC; modal MIC reported; interpreted
+    using CLSI 2025 M100 S35.
+  strain: 0782
+  evidence:
+  - reference: https://wwwn.cdc.gov/arisolatebank/panel/IsolateDetail?IsolateID=10093&PanelID=1130
+    snippet: Chloramphenicol  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0782, Study ID VRE-02,
+      BioSample SAMN15040081, E. faecalis, chloramphenicol MIC >32 micrograms/mL,
+      and interpretation R.
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_notes: 'CURATOR: PMID:20876128 resolved chloramphenicol on the Escherichia
   coli ribosome at approximately 3.3-3.4 angstrom resolution, directly defining its
@@ -1210,3 +1225,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-12T06:40:09Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank chloramphenicol-resistant
+    Enterococcus faecalis isolate MIC observation.
+  llm_assisted: true

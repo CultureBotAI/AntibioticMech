@@ -34,6 +34,34 @@ parent_compounds:
 - ARO:0000016
 structural_class: aminoglycoside antibiotic
 structural_class_id: ARO:0000016
+activity_spectrum:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0349
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=349&PanelID=10
+    snippet: Gentamicin  | 8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0349, Study ID NEW-04,
+      BioSample SAMN11953777, E. coli, gentamicin MIC 8 micrograms/mL, and interpretation
+      R.
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  mic_value: 16.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
+    CLSI 2024 M100 S34.
+  strain: 0297
+  evidence:
+  - reference: https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=297&PanelID=1
+    snippet: Gentamicin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0297, Study ID ACI-25,
+      BioSample SAMN04901687, A. baumannii, gentamicin MIC >16 micrograms/mL, and
+      interpretation R.
 chemical_structure:
   smiles: CC(C1CCC(C(O1)OC2C(CC(C(C2O)OC3C(C(C(CO3)(C)O)NC)O)N)N)N)NC
   standard_inchi: InChI=1S/C21H43N5O7/c1-9(25-3)13-6-5-10(22)19(31-13)32-16-11(23)7-12(24)17(14(16)27)33-20-15(28)18(26-4)21(2,29)8-30-20/h9-20,25-29H,5-8,22-24H2,1-4H3
@@ -292,3 +320,21 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-12T06:43:12Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank gentamicin-resistant Escherichia
+    coli isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T06:55:43Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank gentamicin-resistant Acinetobacter
+    baumannii isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-12T07:07:13Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Corrected the CDC/FDA AR Isolate Bank 0349 breakpoint context from CLSI
+    2024 M100 S34 to CLSI 2025 M100 S35.
+  llm_assisted: true

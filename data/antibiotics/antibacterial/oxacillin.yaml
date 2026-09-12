@@ -66,6 +66,43 @@ activity_roles:
 - CHEBI:36047
 structural_class: penicillin beta-lactam
 structural_class_id: ARO:3000008
+activity_spectrum:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: In-house reference broth microdilution oxacillin MIC; modal MIC from at least
+    three tests; interpreted using CLSI M100 28th ed.
+  strain: AR-0978
+  evidence:
+  - reference: DOI:10.1128/JCM.02038-19
+    notes: Gargis et al. Table 1 reports mecA-positive S. aureus isolate AR-0978,
+      oxacillin BMD MIC 16 micrograms/mL with interpretation R, clonal complex CC5,
+      and SCCmec type VI.
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: In-house reference broth microdilution oxacillin MIC; modal MIC from at least
+    three tests; interpreted using CLSI M100 28th ed.
+  strain: AR-0979
+  evidence:
+  - reference: DOI:10.1128/JCM.02038-19
+    notes: Gargis et al. Table 1 reports mecA-positive S. aureus isolate AR-0979,
+      oxacillin BMD MIC 8 micrograms/mL with interpretation R, clonal complex CC5,
+      and SCCmec type VI.
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: In-house reference broth microdilution oxacillin MIC; modal MIC from at least
+    three tests; interpreted using CLSI M100 28th ed.
+  strain: AR-0997
+  evidence:
+  - reference: DOI:10.1128/JCM.02038-19
+    notes: Gargis et al. Table 1 reports mecA-positive S. aureus isolate AR-0997,
+      oxacillin BMD MIC 16 micrograms/mL with interpretation R, clonal complex CC5,
+      and SCCmec type IV.
 chemical_structure:
   smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)c1c(-c2ccccc2)noc1C'
   standard_inchi: InChI=1S/C19H19N3O5S/c1-9-11(12(21-27-9)10-7-5-4-6-8-10)15(23)20-13-16(24)22-14(18(25)26)19(2,3)28-17(13)22/h4-8,13-14,17H,1-3H3,(H,20,23)(H,25,26)/t13-,14+,17-/m1/s1
@@ -183,3 +220,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-12T06:45:37Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added three DOI-backed oxacillin-resistant Staphylococcus aureus isolate
+    MIC observations from Gargis et al. 2020.
+  llm_assisted: true
