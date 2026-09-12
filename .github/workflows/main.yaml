@@ -5,14 +5,16 @@ on:  # yamllint disable-line rule:truthy
   push:
     branches: [main]
   pull_request:
+  merge_group:
+    types: [checks_requested]
 
 permissions:
   contents: read
 
-# A second push supersedes the first; nothing waits on the older run.
+# New PR commits may supersede older PR runs; preserve every queue verdict.
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   qc:
