@@ -280,6 +280,32 @@ activity_spectrum:
       BioSample SAMN11953852, Staphylococcus aureus, tetracycline MIC >16 micrograms/mL,
       and interpretation R.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:485
+  taxon_label: Neisseria gonorrhoeae
+  mic_value: 2.0
+  mic_units: mg/L
+  assay: Broth microdilution tetracycline MIC; modal MIC reported; interpreted using
+    CLSI 2026 M100 Ed36.
+  strain: '1280'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10571&PanelID=10
+    snippet: Tetracycline  | 2  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1280, Study ID NEW-37,
+      BioSample SAMN35332250, source Urethral swab, Neisseria gonorrhoeae, tetracycline
+      MIC 2 micrograms/mL, and interpretation R.
+- taxon_id: NCBITaxon:485
+  taxon_label: Neisseria gonorrhoeae
+  mic_value: 2.0
+  mic_units: mg/L
+  assay: Broth microdilution tetracycline MIC; modal MIC reported; interpreted using
+    CLSI 2026 M100 Ed36.
+  strain: '1281'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10572&PanelID=10
+    snippet: Tetracycline  | 2  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1281, Study ID NEW-38,
+      BioSample SAMN35332251, source Urine, Neisseria gonorrhoeae, tetracycline MIC
+      2 micrograms/mL, and interpretation R.
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_notes: 'CURATOR: PMID:11163189 determined the atomic structure of tetracycline
   bound at discrete sites on the bacterial 30S ribosomal subunit. The observed drug-ribosome
@@ -1258,4 +1284,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added two stable-URL CDC/FDA AR Isolate Bank Panel 1125 tetracycline-resistant
     Staphylococcus aureus activity observations for AR-0701 and AR-0702.
+  llm_assisted: true
+- timestamp: '2026-09-13T20:19:31Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added two stable-URL CDC/FDA AR Isolate Bank Panel 10 tetracycline-resistant
+    Neisseria gonorrhoeae MIC observations for AR-1280 and AR-1281.
   llm_assisted: true
