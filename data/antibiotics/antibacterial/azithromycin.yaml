@@ -102,6 +102,19 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-30'
+activity_spectrum:
+- taxon_id: NCBITaxon:485
+  taxon_label: Neisseria gonorrhoeae
+  mic_value: 2.0
+  mic_units: mg/L
+  assay: Azithromycin MIC; interpreted using CLSI 2026 M100 Ed36.
+  strain: '1281'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10572&PanelID=10
+    snippet: Azithromycin  | 2  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1281, Study ID NEW-38,
+      BioSample SAMN35332251, Neisseria gonorrhoeae, azithromycin MIC 2 micrograms/mL,
+      and interpretation R.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3000250
@@ -522,3 +535,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-13T10:54:57Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 azithromycin-resistant
+    Neisseria gonorrhoeae activity observation for AR-1281.
+  llm_assisted: true
