@@ -10,6 +10,33 @@ parent_compounds:
 - ARO:3000050
 structural_class: tetracycline antibiotic
 structural_class_id: ARO:3000050
+activity_spectrum:
+- taxon_id: NCBITaxon:354276
+  taxon_label: Enterobacter cloacae complex
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution omadacycline MIC; modal MIC reported; interpreted using
+    FDA breakpoints per the CDC/FDA AR Isolate Bank Panel 1247 footnote.
+  strain: '1152'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10443&PanelID=1247
+    snippet: Omadacycline  | 16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1152, Study ID MULTI-04,
+      BioSample SAMN34111339, Enterobacter cloacae complex, omadacycline MIC 16 micrograms/mL,
+      and interpretation R.
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution omadacycline MIC; modal MIC reported; interpreted using
+    FDA breakpoints per the CDC/FDA AR Isolate Bank Panel 1247 footnote.
+  strain: '1163'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10454&PanelID=1247
+    snippet: Omadacycline  | 16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1163, Study ID MULTI-15,
+      BioSample SAMN34111349, Klebsiella pneumoniae, omadacycline MIC 16 micrograms/mL,
+      and interpretation R.
 chemical_structure:
   smiles: CC(C)(C)CNCC1=CC(=C2C[C@H]3C[C@H]4[C@@H](C(=O)C(=C([C@]4(C(=O)C3=C(C2=C1O)O)O)O)C(=O)N)N(C)C)N(C)C
   standard_inchi: InChI=1S/C29H40N4O7/c1-28(2,3)12-31-11-14-10-17(32(4)5)15-8-13-9-16-21(33(6)7)24(36)20(27(30)39)26(38)29(16,40)25(37)18(13)23(35)19(15)22(14)34/h10,13,16,21,31,34-35,38,40H,8-9,11-12H2,1-7H3,(H2,30,39)/t13-,16-,21-,29-/m0/s1
@@ -44,3 +71,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-13T02:38:36Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added 2 stable-URL CDC/FDA AR Isolate Bank omadacycline-resistant Multi-Mechanism
+    panel MIC observations for AR-1152 and AR-1163.
+  llm_assisted: true
