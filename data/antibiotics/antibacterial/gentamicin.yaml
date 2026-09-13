@@ -90,6 +90,61 @@ activity_spectrum:
       BioSample SAMN46941623, Escherichia coli, gentamicin MIC >16 micrograms/mL,
       and interpretation R.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0702'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=702&PanelID=1125
+    snippet: Gentamicin  | 16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0702, Study ID TLZD-02,
+      BioSample SAMN11953852, Staphylococcus aureus, gentamicin MIC 16 micrograms/mL,
+      and interpretation R.
+- taxon_id: NCBITaxon:1282
+  taxon_label: Staphylococcus epidermidis
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0726'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=726&PanelID=1125
+    snippet: Gentamicin  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0726, Study ID TLZD-26,
+      BioSample SAMN11953876, Staphylococcus epidermidis, gentamicin MIC >32 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:1283
+  taxon_label: Staphylococcus haemolyticus
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0729
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=729&PanelID=1125
+    snippet: Gentamicin  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0729, Study ID TLZD-29,
+      BioSample SAMN11953879, Staphylococcus haemolyticus, gentamicin MIC >32 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:1283
+  taxon_label: Staphylococcus haemolyticus
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0730'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=730&PanelID=1125
+    snippet: Gentamicin  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0730, Study ID TLZD-30,
+      BioSample SAMN11953880, Staphylococcus haemolyticus, gentamicin MIC >32 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: CC(C1CCC(C(O1)OC2C(CC(C(C2O)OC3C(C(C(CO3)(C)O)NC)O)N)N)N)NC
   standard_inchi: InChI=1S/C21H43N5O7/c1-9(25-3)13-6-5-10(22)19(31-13)32-16-11(23)7-12(24)17(14(16)27)33-20-15(28)18(26-4)21(2,29)8-30-20/h9-20,25-29H,5-8,22-24H2,1-4H3
@@ -377,4 +432,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank gentamicin-resistant Escherichia
     coli isolate MIC observation for AR-1305.
+  llm_assisted: true
+- timestamp: '2026-09-13T06:31:54Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added four stable-URL CDC/FDA AR Isolate Bank Panel 1125 gentamicin-resistant
+    Staphylococcus MIC observations for AR-0702, AR-0726, AR-0729, and AR-0730.
   llm_assisted: true
