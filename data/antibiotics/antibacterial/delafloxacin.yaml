@@ -32,6 +32,22 @@ source_concepts:
   source_label: delafloxacin
   minted_identifier: antibioticmech:aro-edae5f55a0
   source_version: '2026-08-30'
+activity_spectrum:
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 4.0
+  mic_units: mg/L
+  assay: Broth microdilution delafloxacin MIC; modal MIC reported; interpreted using
+    FDA breakpoints in a CLSI 2025 M100 S35 table.
+  strain: '1269'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10560&PanelID=10
+    snippet: Delafloxacin [1] | >4 | R; [1] Based on FDA break points
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1269, Study ID NEW-35,
+      BioSample SAMN33435242, Pseudomonas aeruginosa, delafloxacin MIC >4 micrograms/mL,
+      and interpretation R. The delafloxacin row is footnoted as Based on FDA break
+      points; the table footer states INT values are derived from CLSI 2025 M100 S35.
+  mic_qualifier: '>'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -45,3 +61,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-13T11:55:56Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 delafloxacin-resistant
+    Pseudomonas aeruginosa activity observation for AR-1269.
+  llm_assisted: true
