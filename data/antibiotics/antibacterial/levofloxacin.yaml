@@ -322,6 +322,73 @@ activity_spectrum:
       BioSample SAMN34111349, Klebsiella pneumoniae, levofloxacin MIC >8 micrograms/mL,
       and interpretation R.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution levofloxacin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0701'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=701&PanelID=1125
+    snippet: Levofloxacin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0701, Study ID TLZD-01,
+      BioSample SAMN11953851, Staphylococcus aureus, levofloxacin MIC >16 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 4.0
+  mic_units: mg/L
+  assay: Broth microdilution levofloxacin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0702'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=702&PanelID=1125
+    snippet: Levofloxacin  | 4  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0702, Study ID TLZD-02,
+      BioSample SAMN11953852, Staphylococcus aureus, levofloxacin MIC 4 micrograms/mL,
+      and interpretation R.
+- taxon_id: NCBITaxon:1282
+  taxon_label: Staphylococcus epidermidis
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution levofloxacin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0726'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=726&PanelID=1125
+    snippet: Levofloxacin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0726, Study ID TLZD-26,
+      BioSample SAMN11953876, Staphylococcus epidermidis, levofloxacin MIC >16 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:1283
+  taxon_label: Staphylococcus haemolyticus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution levofloxacin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0729
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=729&PanelID=1125
+    snippet: Levofloxacin  | 16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0729, Study ID TLZD-29,
+      BioSample SAMN11953879, Staphylococcus haemolyticus, levofloxacin MIC 16 micrograms/mL,
+      and interpretation R.
+- taxon_id: NCBITaxon:1283
+  taxon_label: Staphylococcus haemolyticus
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: Broth microdilution levofloxacin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0730'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=730&PanelID=1125
+    snippet: Levofloxacin  | 8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0730, Study ID TLZD-30,
+      BioSample SAMN11953880, Staphylococcus haemolyticus, levofloxacin MIC 8 micrograms/mL,
+      and interpretation R.
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:50750 (EC 5.99.1.3 [DNA topoisomerase
   (ATP-hydrolysing)] inhibitor), CHEBI:53559 (topoisomerase IV inhibitor), CHEBI:59517
@@ -791,4 +858,10 @@ curation_history:
   changes: Added 13 stable-URL CDC/FDA AR Isolate Bank levofloxacin-resistant Multi-Mechanism
     panel MIC observations for AR-1149, AR-1150, AR-1152, AR-1153, AR-1155, AR-1156,
     AR-1157, AR-1158, AR-1159, AR-1160, AR-1161, AR-1162, and AR-1163.
+  llm_assisted: true
+- timestamp: '2026-09-13T05:35:30Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added five stable-URL CDC/FDA AR Isolate Bank Panel 1125 levofloxacin-resistant
+    Staphylococcus MIC observations for AR-0701, AR-0702, AR-0726, AR-0729, and AR-0730.
   llm_assisted: true
