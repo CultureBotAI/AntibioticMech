@@ -21,7 +21,7 @@ activity_spectrum:
   mic_value: 8.0
   mic_units: mg/L
   assay: Broth microdilution plazomicin MIC; modal MIC reported; interpreted using
-    CLSI 2025 M100 S35.
+    FDA breakpoints per the CDC/FDA AR Isolate Bank Panel 1247 footnote.
   strain: '1153'
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10444&PanelID=1247
@@ -35,7 +35,7 @@ activity_spectrum:
   mic_value: 8.0
   mic_units: mg/L
   assay: Broth microdilution plazomicin MIC; modal MIC reported; interpreted using
-    CLSI 2025 M100 S35.
+    FDA breakpoints per the CDC/FDA AR Isolate Bank Panel 1247 footnote.
   strain: '1158'
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10449&PanelID=1247
@@ -49,7 +49,7 @@ activity_spectrum:
   mic_value: 8.0
   mic_units: mg/L
   assay: Broth microdilution plazomicin MIC; modal MIC reported; interpreted using
-    CLSI 2025 M100 S35.
+    FDA breakpoints per the CDC/FDA AR Isolate Bank Panel 1247 footnote.
   strain: '1163'
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10454&PanelID=1247
@@ -104,4 +104,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added 3 stable-URL CDC/FDA AR Isolate Bank plazomicin-resistant Multi-Mechanism
     panel MIC observations for AR-1153, AR-1158, and AR-1163.
+  llm_assisted: true
+- timestamp: '2026-09-13T01:51:34Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Corrected CDC/FDA AR Isolate Bank plazomicin activity observations to cite
+    FDA breakpoints rather than CLSI M100 S35.
   llm_assisted: true
