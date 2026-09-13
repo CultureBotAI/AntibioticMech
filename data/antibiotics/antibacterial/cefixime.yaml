@@ -174,3 +174,37 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-13T17:28:53Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added two stable-URL CDC/FDA AR Isolate Bank Panel 10 cefixime-resistant
+    Neisseria gonorrhoeae MIC observations for AR-1280 and AR-1281.
+  llm_assisted: true
+activity_spectrum:
+- taxon_id: NCBITaxon:485
+  taxon_label: Neisseria gonorrhoeae
+  mic_value: 1.0
+  mic_units: mg/L
+  assay: Broth microdilution cefixime MIC; modal MIC reported; interpreted using CLSI
+    2026 M100 Ed36.
+  strain: '1280'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10571&PanelID=10
+    snippet: Cefixime  | 1  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1280, Study ID NEW-37,
+      BioSample SAMN35332250, source Urethral swab, Neisseria gonorrhoeae, cefixime
+      MIC 1 micrograms/mL, and interpretation R.
+- taxon_id: NCBITaxon:485
+  taxon_label: Neisseria gonorrhoeae
+  mic_value: 1.0
+  mic_units: mg/L
+  assay: Broth microdilution cefixime MIC; modal MIC reported; interpreted using CLSI
+    2026 M100 Ed36.
+  strain: '1281'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10572&PanelID=10
+    snippet: Cefixime  | >1  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1281, Study ID NEW-38,
+      BioSample SAMN35332251, source Urine, Neisseria gonorrhoeae, cefixime MIC >1
+      micrograms/mL, and interpretation R.
+  mic_qualifier: '>'
