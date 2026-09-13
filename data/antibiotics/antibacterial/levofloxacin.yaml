@@ -389,6 +389,21 @@ activity_spectrum:
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0730, Study ID TLZD-30,
       BioSample SAMN11953880, Staphylococcus haemolyticus, levofloxacin MIC 8 micrograms/mL,
       and interpretation R.
+- taxon_id: NCBITaxon:1351
+  taxon_label: Enterococcus faecalis
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: Broth microdilution levofloxacin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0780
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10047&PanelID=10
+    snippet: Levofloxacin  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0780, Study ID NEW-31,
+      Enterococcus faecalis, source Blood, no currently available BioSample/SRA/Genome
+      accession, levofloxacin MIC >8 micrograms/mL, and interpretation R. The table
+      footer states INT values are derived from CLSI 2025 M100 S35.
+  mic_qualifier: '>'
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:50750 (EC 5.99.1.3 [DNA topoisomerase
   (ATP-hydrolysing)] inhibitor), CHEBI:53559 (topoisomerase IV inhibitor), CHEBI:59517
@@ -864,4 +879,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added five stable-URL CDC/FDA AR Isolate Bank Panel 1125 levofloxacin-resistant
     Staphylococcus MIC observations for AR-0701, AR-0702, AR-0726, AR-0729, and AR-0730.
+  llm_assisted: true
+- timestamp: '2026-09-13T21:15:15Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 levofloxacin-resistant
+    Enterococcus faecalis MIC observation for AR-0780.
   llm_assisted: true
