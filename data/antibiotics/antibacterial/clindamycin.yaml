@@ -66,6 +66,46 @@ activity_roles:
 - CHEBI:33281
 structural_class: lincosamide antibiotic
 structural_class_id: ARO:0000017
+activity_spectrum:
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 0.5
+  mic_units: mg/L
+  assay: Broth microdilution clindamycin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0701'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=701&PanelID=1125
+    snippet: Clindamycin  | 0.5  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0701, Study ID TLZD-01,
+      BioSample SAMN11953851, Staphylococcus aureus, clindamycin MIC 0.5 micrograms/mL,
+      interpretation R, and footnote 'Inducible clindamycin resistance detected'.
+- taxon_id: NCBITaxon:1283
+  taxon_label: Staphylococcus haemolyticus
+  mic_value: 2.0
+  mic_units: mg/L
+  assay: Broth microdilution clindamycin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0729
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=729&PanelID=1125
+    snippet: Clindamycin  | 2  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0729, Study ID TLZD-29,
+      BioSample SAMN11953879, Staphylococcus haemolyticus, clindamycin MIC 2 micrograms/mL,
+      interpretation R, and footnote 'Inducible clindamycin resistance detected'.
+- taxon_id: NCBITaxon:1283
+  taxon_label: Staphylococcus haemolyticus
+  mic_value: 2.0
+  mic_units: mg/L
+  assay: Broth microdilution clindamycin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0730'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=730&PanelID=1125
+    snippet: Clindamycin  | 2  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0730, Study ID TLZD-30,
+      BioSample SAMN11953880, Staphylococcus haemolyticus, clindamycin MIC 2 micrograms/mL,
+      interpretation R, and footnote 'No inducible clindamycin resistance detected'.
 chemical_structure:
   smiles: '[H][C@]1([C@H](NC(=O)[C@@H]2C[C@@H](CCC)CN2C)[C@H](C)Cl)O[C@H](SC)[C@H](O)[C@@H](O)[C@H]1O'
   standard_inchi: InChI=1S/C18H33ClN2O5S/c1-5-6-10-7-11(21(3)8-10)17(25)20-12(9(2)19)16-14(23)13(22)15(24)18(26-16)27-4/h9-16,18,22-24H,5-8H2,1-4H3,(H,20,25)/t9-,10+,11-,12+,13-,14+,15+,16+,18+/m0/s1
@@ -574,3 +614,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-13T07:34:16Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added three stable-URL CDC/FDA AR Isolate Bank Panel 1125 clindamycin-resistant
+    Staphylococcus activity observations for AR-0701, AR-0729, and AR-0730.
+  llm_assisted: true
