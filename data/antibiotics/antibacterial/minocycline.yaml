@@ -79,6 +79,87 @@ activity_spectrum:
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1305, Study ID MULTI-17,
       BioSample SAMN46941623, Escherichia coli, minocycline MIC 16 micrograms/mL,
       and interpretation R.
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1149'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10440&PanelID=1247
+    snippet: Minocycline  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1149, Study ID MULTI-01,
+      BioSample SAMN34111336, Klebsiella pneumoniae, minocycline MIC >16 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:354276
+  taxon_label: Enterobacter cloacae complex
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1151'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10442&PanelID=1247
+    snippet: Minocycline  | 16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1151, Study ID MULTI-03,
+      BioSample SAMN34111338, Enterobacter cloacae complex, minocycline MIC 16 micrograms/mL,
+      and interpretation R.
+- taxon_id: NCBITaxon:354276
+  taxon_label: Enterobacter cloacae complex
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1152'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10443&PanelID=1247
+    snippet: Minocycline  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1152, Study ID MULTI-04,
+      BioSample SAMN34111339, Enterobacter cloacae complex, minocycline MIC >16 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1153'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10444&PanelID=1247
+    snippet: Minocycline  | 8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1153, Study ID MULTI-05,
+      BioSample SAMN34111340, Klebsiella pneumoniae, minocycline MIC 8 micrograms/mL,
+      and interpretation R.
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1162'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10453&PanelID=1247
+    snippet: Minocycline  | 16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1162, Study ID MULTI-14,
+      BioSample SAMN34111348, Escherichia coli, minocycline MIC 16 micrograms/mL,
+      and interpretation R.
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1163'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10454&PanelID=1247
+    snippet: Minocycline  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1163, Study ID MULTI-15,
+      BioSample SAMN34111349, Klebsiella pneumoniae, minocycline MIC >16 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: '[H][C@@]12Cc3c(N(C)C)ccc(O)c3C(=O)C1=C(O)[C@]1(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@]1([H])C2'
   standard_inchi: InChI=1S/C23H27N3O7/c1-25(2)12-5-6-13(27)15-10(12)7-9-8-11-17(26(3)4)19(29)16(22(24)32)21(31)23(11,33)20(30)14(9)18(15)28/h5-6,9,11,17,27,29-30,33H,7-8H2,1-4H3,(H2,24,32)/t9-,11-,17-,23-/m0/s1
@@ -311,4 +392,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank minocycline-resistant Escherichia
     coli isolate MIC observation for AR-1305.
+  llm_assisted: true
+- timestamp: '2026-09-13T00:06:09Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added 6 stable-URL CDC/FDA AR Isolate Bank minocycline-resistant Multi-Mechanism
+    panel MIC observations for AR-1149, AR-1151, AR-1152, AR-1153, AR-1162, and AR-1163.
   llm_assisted: true
