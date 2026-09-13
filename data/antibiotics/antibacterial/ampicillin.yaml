@@ -275,6 +275,21 @@ activity_spectrum:
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1163, Study ID MULTI-15,
       BioSample SAMN34111349, Klebsiella pneumoniae, ampicillin MIC >32 micrograms/mL,
       and interpretation R.
+- taxon_id: NCBITaxon:546
+  taxon_label: Citrobacter freundii
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution ampicillin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0637'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10046&PanelID=10
+    snippet: Ampicillin  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0637, Study ID NEW-27,
+      BioSample SAMN10055345, Citrobacter freundii, source Chicken breast, ampicillin
+      MIC >32 micrograms/mL, and interpretation R. The table footer states INT values
+      are derived from CLSI 2025 M100 S35.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)[C@H](N)c1ccccc1'
   standard_inchi: InChI=1S/C16H19N3O4S/c1-16(2)11(15(22)23)19-13(21)10(14(19)24-16)18-12(20)9(17)8-6-4-3-5-7-8/h3-7,9-11,14H,17H2,1-2H3,(H,18,20)(H,22,23)/t9-,10-,11+,14-/m1/s1
@@ -678,4 +693,10 @@ curation_history:
   changes: Added 9 stable-URL CDC/FDA AR Isolate Bank ampicillin-resistant Multi-Mechanism
     panel MIC observations for AR-1149, AR-1150, AR-1151, AR-1152, AR-1153, AR-1158,
     AR-1160, AR-1162, and AR-1163.
+  llm_assisted: true
+- timestamp: '2026-09-13T22:12:36Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 ampicillin-resistant
+    Citrobacter freundii MIC observation for AR-0637.
   llm_assisted: true
