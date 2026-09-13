@@ -76,6 +76,62 @@ activity_roles:
 - CHEBI:36047
 structural_class: nitrofuran antibiotic
 structural_class_id: ARO:3004116
+activity_spectrum:
+- taxon_id: NCBITaxon:354276
+  taxon_label: Enterobacter cloacae complex
+  mic_value: 128.0
+  mic_units: mg/L
+  assay: Broth microdilution nitrofurantoin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1151'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10442&PanelID=1247
+    snippet: Nitrofurantoin  | 128  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1151, Study ID MULTI-03,
+      BioSample SAMN34111338, Enterobacter cloacae complex, nitrofurantoin MIC 128
+      micrograms/mL, and interpretation R.
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  mic_value: 128.0
+  mic_units: mg/L
+  assay: Broth microdilution nitrofurantoin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1153'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10444&PanelID=1247
+    snippet: Nitrofurantoin  | >128  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1153, Study ID MULTI-05,
+      BioSample SAMN34111340, Klebsiella pneumoniae, nitrofurantoin MIC >128 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  mic_value: 128.0
+  mic_units: mg/L
+  assay: Broth microdilution nitrofurantoin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1158'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10449&PanelID=1247
+    snippet: Nitrofurantoin  | >128  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1158, Study ID MULTI-10,
+      BioSample SAMN34111344, Klebsiella pneumoniae, nitrofurantoin MIC >128 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  mic_value: 128.0
+  mic_units: mg/L
+  assay: Broth microdilution nitrofurantoin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1163'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10454&PanelID=1247
+    snippet: Nitrofurantoin  | >128  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1163, Study ID MULTI-15,
+      BioSample SAMN34111349, Klebsiella pneumoniae, nitrofurantoin MIC >128 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: O=C1CN(/N=C/c2ccc([N+](=O)[O-])o2)C(=O)N1
   standard_inchi: InChI=1S/C8H6N4O5/c13-6-4-11(8(14)10-6)9-3-5-1-2-7(17-5)12(15)16/h1-3H,4H2,(H,10,13,14)/b9-3+
@@ -588,3 +644,9 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-13T01:19:47Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added 4 stable-URL CDC/FDA AR Isolate Bank nitrofurantoin-resistant Multi-Mechanism
+    panel MIC observations for AR-1151, AR-1153, AR-1158, and AR-1163.
+  llm_assisted: true
