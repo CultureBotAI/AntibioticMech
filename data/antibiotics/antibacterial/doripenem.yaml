@@ -40,6 +40,34 @@ activity_spectrum:
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0297, Study ID ACI-25,
       BioSample SAMN04901687, A. baumannii, doripenem MIC >8 micrograms/mL, and interpretation
       R.
+- taxon_id: NCBITaxon:573
+  taxon_label: Klebsiella pneumoniae
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: Broth microdilution doripenem MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0347'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=347&PanelID=10
+    snippet: Doripenem  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0347, Study ID NEW-02,
+      BioSample SAMN11953775, Klebsiella pneumoniae, doripenem MIC >8 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: Broth microdilution doripenem MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0348
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=348&PanelID=10
+    snippet: Doripenem  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0348, Study ID NEW-03,
+      BioSample SAMN11953776, Escherichia coli, doripenem MIC >8 micrograms/mL, and
+      interpretation R.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: C[C@@H](O)[C@H]1C(=O)N2C(C(=O)O)=C(S[C@@H]3CN[C@H](CNS(N)(=O)=O)C3)[C@H](C)[C@H]12
   standard_inchi: InChI=1S/C15H24N4O6S2/c1-6-11-10(7(2)20)14(21)19(11)12(15(22)23)13(6)26-9-3-8(17-5-9)4-18-27(16,24)25/h6-11,17-18,20H,3-5H2,1-2H3,(H,22,23)(H2,16,24,25)/t6-,7-,8+,9+,10-,11-/m1/s1
@@ -190,4 +218,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank doripenem-resistant Acinetobacter
     baumannii isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-13T15:24:32Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added two stable-URL CDC/FDA AR Isolate Bank Panel 10 doripenem-resistant
+    Klebsiella pneumoniae and Escherichia coli MIC observations for AR-0347 and AR-0348.
   llm_assisted: true
