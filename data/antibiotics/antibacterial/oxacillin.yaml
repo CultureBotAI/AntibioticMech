@@ -103,6 +103,76 @@ activity_spectrum:
     notes: Gargis et al. Table 1 reports mecA-positive S. aureus isolate AR-0997,
       oxacillin BMD MIC 16 micrograms/mL with interpretation R, clonal complex CC5,
       and SCCmec type IV.
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution oxacillin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0701'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=701&PanelID=1125
+    snippet: Oxacillin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0701, Study ID TLZD-01,
+      BioSample SAMN11953851, Staphylococcus aureus, oxacillin MIC >16 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution oxacillin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0702'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=702&PanelID=1125
+    snippet: Oxacillin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0702, Study ID TLZD-02,
+      BioSample SAMN11953852, Staphylococcus aureus, oxacillin MIC >16 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:1282
+  taxon_label: Staphylococcus epidermidis
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution oxacillin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0726'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=726&PanelID=1125
+    snippet: Oxacillin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0726, Study ID TLZD-26,
+      BioSample SAMN11953876, Staphylococcus epidermidis, oxacillin MIC >16 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:1283
+  taxon_label: Staphylococcus haemolyticus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution oxacillin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0729
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=729&PanelID=1125
+    snippet: Oxacillin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0729, Study ID TLZD-29,
+      BioSample SAMN11953879, Staphylococcus haemolyticus, oxacillin MIC >16 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:1283
+  taxon_label: Staphylococcus haemolyticus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution oxacillin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0730'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=730&PanelID=1125
+    snippet: Oxacillin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0730, Study ID TLZD-30,
+      BioSample SAMN11953880, Staphylococcus haemolyticus, oxacillin MIC >16 micrograms/mL,
+      and interpretation R.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)c1c(-c2ccccc2)noc1C'
   standard_inchi: InChI=1S/C19H19N3O5S/c1-9-11(12(21-27-9)10-7-5-4-6-8-10)15(23)20-13-16(24)22-14(18(25)26)19(2,3)28-17(13)22/h4-8,13-14,17H,1-3H3,(H,20,23)(H,25,26)/t13-,14+,17-/m1/s1
@@ -225,4 +295,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added three DOI-backed oxacillin-resistant Staphylococcus aureus isolate
     MIC observations from Gargis et al. 2020.
+  llm_assisted: true
+- timestamp: '2026-09-13T04:35:34Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added five stable-URL CDC/FDA AR Isolate Bank Panel 1125 oxacillin-resistant
+    Staphylococcus MIC observations for AR-0701, AR-0702, AR-0726, AR-0729, and AR-0730.
   llm_assisted: true
