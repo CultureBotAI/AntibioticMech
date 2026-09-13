@@ -286,6 +286,32 @@ activity_spectrum:
       BioSample SAMN34111347, Pseudomonas aeruginosa, ciprofloxacin MIC >8 micrograms/mL,
       and interpretation R.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:485
+  taxon_label: Neisseria gonorrhoeae
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution ciprofloxacin MIC; modal MIC reported; interpreted using
+    CLSI 2026 M100 Ed36.
+  strain: '1280'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10571&PanelID=10
+    snippet: Ciprofloxacin  | 16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1280, Study ID NEW-37,
+      BioSample SAMN35332250, source Urethral swab, Neisseria gonorrhoeae, ciprofloxacin
+      MIC 16 micrograms/mL, and interpretation R.
+- taxon_id: NCBITaxon:485
+  taxon_label: Neisseria gonorrhoeae
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution ciprofloxacin MIC; modal MIC reported; interpreted using
+    CLSI 2026 M100 Ed36.
+  strain: '1281'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10572&PanelID=10
+    snippet: Ciprofloxacin  | 16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1281, Study ID NEW-38,
+      BioSample SAMN35332251, source Urine, Neisseria gonorrhoeae, ciprofloxacin MIC
+      16 micrograms/mL, and interpretation R.
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:50750 (EC 5.99.1.3 [DNA topoisomerase
   (ATP-hydrolysing)] inhibitor), CHEBI:53559 (topoisomerase IV inhibitor), CHEBI:59517
@@ -2697,4 +2723,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added 5 stable-URL CDC/FDA AR Isolate Bank ciprofloxacin-resistant Multi-Mechanism
     panel MIC observations for AR-1155, AR-1156, AR-1157, AR-1159, and AR-1161.
+  llm_assisted: true
+- timestamp: '2026-09-13T19:22:11Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added two stable-URL CDC/FDA AR Isolate Bank Panel 10 ciprofloxacin-resistant
+    Neisseria gonorrhoeae MIC observations for AR-1280 and AR-1281.
   llm_assisted: true
