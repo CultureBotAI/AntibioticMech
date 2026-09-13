@@ -269,6 +269,36 @@ activity_spectrum:
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1163, Study ID MULTI-15,
       BioSample SAMN34111349, Klebsiella pneumoniae, cefoxitin MIC >16 micrograms/mL,
       and interpretation R.
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution cefoxitin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0701'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=701&PanelID=1125
+    snippet: Cefoxitin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0701, Study ID TLZD-01,
+      BioSample SAMN11953851, Staphylococcus aureus, cefoxitin MIC >16 micrograms/mL,
+      interpretation R, and footnote 'Cefoxitin is tested as a surrogate for mecA-mediated
+      oxacillin resistance'.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution cefoxitin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0702'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=702&PanelID=1125
+    snippet: Cefoxitin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0702, Study ID TLZD-02,
+      BioSample SAMN11953852, Staphylococcus aureus, cefoxitin MIC >16 micrograms/mL,
+      interpretation R, and footnote 'Cefoxitin is tested as a surrogate for mecA-mediated
+      oxacillin resistance'.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: '[H][C@]12SCC(COC(N)=O)=C(C(=O)O)N1C(=O)[C@]2(NC(=O)Cc1cccs1)OC'
   standard_inchi: InChI=1S/C16H17N3O7S2/c1-25-16(18-10(20)5-9-3-2-4-27-9)13(23)19-11(12(21)22)8(6-26-15(17)24)7-28-14(16)19/h2-4,14H,5-7H2,1H3,(H2,17,24)(H,18,20)(H,21,22)/t14-,16+/m1/s1
@@ -551,4 +581,10 @@ curation_history:
   changes: Added 9 stable-URL CDC/FDA AR Isolate Bank cefoxitin-resistant Multi-Mechanism
     panel MIC observations for AR-1149, AR-1150, AR-1151, AR-1152, AR-1153, AR-1158,
     AR-1160, AR-1162, and AR-1163.
+  llm_assisted: true
+- timestamp: '2026-09-13T08:31:54Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added two stable-URL CDC/FDA AR Isolate Bank Panel 1125 cefoxitin-resistant
+    Staphylococcus aureus activity observations for AR-0701 and AR-0702.
   llm_assisted: true
