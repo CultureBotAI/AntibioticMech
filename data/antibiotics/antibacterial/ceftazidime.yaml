@@ -317,6 +317,20 @@ activity_spectrum:
       BioSample SAMN34111349, Klebsiella pneumoniae, ceftazidime MIC >128 micrograms/mL,
       and interpretation R.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 128.0
+  mic_units: mg/L
+  assay: Broth microdilution ceftazidime MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1106'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10397&PanelID=10
+    snippet: Ceftazidime  | 128  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1106, Study ID NEW-32,
+      BioSample SAMN19970475, Pseudomonas aeruginosa, ceftazidime MIC 128 micrograms/mL,
+      and interpretation R. The table footer states INT values are derived from CLSI
+      2025 M100 S35.
 chemical_structure:
   smiles: '[H][C@]12SCC(C[n+]3ccccc3)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)/C(=N\OC(C)(C)C(=O)O)c1csc(N)n1'
   standard_inchi: InChI=1S/C22H22N6O7S2/c1-22(2,20(33)34)35-26-13(12-10-37-21(23)24-12)16(29)25-14-17(30)28-15(19(31)32)11(9-36-18(14)28)8-27-6-4-3-5-7-27/h3-7,10,14,18H,8-9H2,1-2H3,(H4-,23,24,25,29,31,32,33,34)/b26-13-/t14-,18-/m1/s1
@@ -2243,4 +2257,10 @@ curation_history:
   changes: Added 14 stable-URL CDC/FDA AR Isolate Bank ceftazidime-resistant Multi-Mechanism
     panel MIC observations for AR-1149, AR-1150, AR-1151, AR-1152, AR-1153, AR-1155,
     AR-1156, AR-1157, AR-1158, AR-1159, AR-1160, AR-1161, AR-1162, and AR-1163.
+  llm_assisted: true
+- timestamp: '2026-09-14T02:00:58Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 ceftazidime-resistant
+    Pseudomonas aeruginosa MIC observation for AR-1106.
   llm_assisted: true
