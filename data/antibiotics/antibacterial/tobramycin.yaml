@@ -318,6 +318,21 @@ activity_spectrum:
       BioSample SAMN19970475, Pseudomonas aeruginosa, tobramycin MIC 8 micrograms/mL,
       and interpretation R. The table footer states INT values are derived from CLSI
       2025 M100 S35.
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution tobramycin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1107'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10398&PanelID=10
+    snippet: Tobramycin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1107, Study ID NEW-33,
+      BioSample SAMN31096620, Pseudomonas aeruginosa, tobramycin MIC >16 micrograms/mL,
+      and interpretation R. The table footer states INT values are derived from CLSI
+      2025 M100 S35.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: NC[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](N)[C@H]3O)[C@H](N)C[C@@H]2N)[C@H](N)C[C@@H]1O
   standard_inchi: InChI=1S/C18H37N5O9/c19-3-9-8(25)2-7(22)17(29-9)31-15-5(20)1-6(21)16(14(15)28)32-18-13(27)11(23)12(26)10(4-24)30-18/h5-18,24-28H,1-4,19-23H2/t5-,6+,7+,8-,9+,10+,11-,12+,13+,14-,15+,16-,17+,18+/m0/s1
@@ -1848,4 +1863,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 tobramycin-resistant
     Pseudomonas aeruginosa MIC observation for AR-1106.
+  llm_assisted: true
+- timestamp: '2026-09-15T13:56:24Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 tobramycin-resistant
+    Pseudomonas aeruginosa MIC observation for AR-1107.
   llm_assisted: true
