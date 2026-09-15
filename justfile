@@ -231,3 +231,7 @@ embed-map *args:
 # The authoritative quality gate used both locally and in CI.
 qc:
     uv run --extra chemical-map python scripts/run_qc.py
+
+# Preview/export the streaming full-corpus semantic text inputs (no model inference).
+text-map-inputs *args:
+    uv run python scripts/text_map_inputs.py {{args}}

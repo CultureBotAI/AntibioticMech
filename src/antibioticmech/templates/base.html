@@ -16,7 +16,12 @@
   <nav>
     <a href="{{ root }}index.html">Overview</a>
     <a href="{{ root }}browse.html">Browse</a>
+{% if text_map_enabled %}
+    <a href="{{ root }}text-map/">Semantic text map</a>
+    <a href="{{ root }}map.html">Legacy description map</a>
+{% else %}
     <a href="{{ root }}map.html">Map</a>
+{% endif %}
     <a href="{{ root }}chemical-map.html">Chemical map</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
   </nav>
