@@ -15,12 +15,12 @@ The adapter does not load models, reuse vector caches, or change corpus records.
 The text uses the existing domain-specific `embed_records.py` representation.
 It preserves meaningful fields and the documented exclusion of curation process
 metadata and raw chemical/protein sequences. Page links follow the current site
-renderer and point at individual records. The shared fleet runtime will consume
-this input to generate pinned BGE/PaCMAP artifacts after governance integration;
-the adapter alone does not publish a map or certify old cache provenance.
+renderer and point at individual records. The installed shared fleet runtime consumes
+this input to generate pinned BGE/PaCMAP artifacts; the adapter alone does not
+publish a map or certify old cache provenance.
 
-Site publication is explicitly disabled in `conf/text_map.yaml` until the shared
-runtime and a verified full-corpus bundle are available. When enabled, `just render`
+Site publication is enabled in `conf/text_map.yaml` with a verified full-corpus
+bundle at `data/text_map/current.json`. `just render`
 exports fresh full inputs and verifies the pinned BGE encoder and actual PaCMAP
 projection before changing the existing site. It stages the bundle into
 `pages/text-map/` and adds a Semantic text map navigation link. A missing, stale or
@@ -28,8 +28,17 @@ invalid enabled bundle fails the build. Existing specialty maps remain available
 Each row's page is relative to `pages/`: from the deployed `pages/text-map/` URL,
 `../` plus that page resolves to the existing record URL.
 
-When enabled, the pinned shared BGE map is the primary text-map navigation target.
+The pinned shared BGE map is the primary text-map navigation target.
 Historical full-description/definition-only text coordinates are explicitly legacy
 views: their missing model revision and complete input identity are not backfilled
 or inferred from a current cache. Chemical and protein-feature maps remain
 separate specialty views with their own representations.
+
+The [locked runtime guide](../conf/embedding-runtime/README.md) documents the
+installed Python 3.13 environment and the explicit export, inspect, embed,
+project and check commands. Semantic curation requires a matching local
+cache-backed map refresh before enabled site checks can pass: export the full
+current corpus, update its verified vector cache, rebuild the bundle and run
+its freshness check before rendering. Unchanged records reuse matching cache
+entries. Model inference is not run automatically in CI, and historical caches
+without matching provenance are not silently reused.
