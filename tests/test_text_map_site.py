@@ -24,6 +24,16 @@ def fake_pipeline():
         "model": "BAAI/bge-large-en-v1.5",
         "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
         "dimension": 1024,
+        "max_seq_length": 512,
+        "format_version": 1,
+        "normalized": True,
+        "dtype": "float32-le",
+        "pooling": "sentence-transformers-model",
+        "truncation": "tail",
+        "inference_device": "cpu",
+        "weight_dtype": "torch.float32",
+        "query_instruction": None,
+        "library_versions": {"sentence-transformers": "5.3.0", "torch": "2.10.0"},
     }
     manifest = {"encoder": profile, "projection": {"implementation": "pacmap.PaCMAP"}}
 
@@ -32,7 +42,8 @@ def fake_pipeline():
         calls.append(("validate", bundle, input_path))
         return manifest
 
-    def stage(output, published_dir, *, input_path):
+    def stage(output, published_dir, *, input_path, expected_bundle):
+        assert expected_bundle == "a" * 64
         assert json.loads(input_path.read_text()) == {"test": "fresh full inputs"}
         calls.append(("stage", output, published_dir))
         return manifest
@@ -41,7 +52,8 @@ def fake_pipeline():
         MODEL=profile["model"],
         MODEL_REVISION=profile["revision"],
         MODEL_DIMENSION=1024,
-        current_bundle=lambda output: output / "fixture-bundle",
+        MAX_SEQ_LENGTH=512,
+        current_bundle=lambda output: output / ("a" * 64),
         validate_bundle=validate,
         stage_map=stage,
     )
@@ -176,6 +188,14 @@ def test_real_renderer_keeps_staged_map_and_links_from_record_pages(tmp_path, mo
     page = (output / path.parent.name / (path.stem + ".html")).read_text()
     assert 'href="../text-map/">Semantic text map</a>' in page
     assert (output / "chemical-map.html").is_file()
+    landing = (output / "index.html").read_text()
+    assert landing.index('href="text-map/"') < landing.index('href="map.html"')
+    assert "Legacy description map" in landing
+    assert 'href="chemical-map.html"' in landing
+    disabled = tmp_path / "disabled-site"
+    render_pages._build(disabled, None)
+    assert 'href="text-map/"' not in (disabled / "index.html").read_text()
+    assert 'href="chemical-map.html"' in (disabled / "index.html").read_text()
 
 
 def test_current_semantic_navigation_precedes_the_labeled_legacy_view():
@@ -193,3 +213,35 @@ def test_current_semantic_navigation_precedes_the_labeled_legacy_view():
     assert "saved model revision and" in legacy
     assert "complete input fingerprint are unavailable" in legacy
     assert "Open the current semantic text map" in legacy
+
+
+def test_pointer_swap_after_preflight_cannot_publish_a_replacement(tmp_path, monkeypatch):
+    pipeline, _, _ = enable_fixture(tmp_path, monkeypatch)
+    selection = ["a" * 64]
+    pipeline.current_bundle = lambda output: output / selection[0]
+    published = tmp_path / "published"
+    published.mkdir()
+    old_page = published / "index.html"
+    old_page.write_text("prior site")
+
+    def stage(output, destination, *, input_path, expected_bundle=None):
+        # Model the canonical stage API's prewrite guard. A caller omitting
+        # expected_bundle would follow the replacement pointer and overwrite.
+        if expected_bundle is not None and pipeline.current_bundle(output).name != expected_bundle:
+            raise ValueError("current map bundle changed after preflight")
+        old_page.write_text("incorrect replacement")
+
+    pipeline.stage_map = stage
+    with site.prepare_text_map(tmp_path) as ready:
+        assert ready.expected_bundle == "a" * 64
+        selection[0] = "b" * 64
+        with pytest.raises(ValueError, match="changed after preflight"):
+            ready.stage(published)
+    assert old_page.read_text() == "prior site"
+
+
+def test_otherwise_matching_bge_with_alternate_window_is_rejected(tmp_path, monkeypatch):
+    _, _, manifest = enable_fixture(tmp_path, monkeypatch)
+    manifest["encoder"]["max_seq_length"] = 256
+    with pytest.raises(ValueError, match="pinned fleet BGE"), site.prepare_text_map(tmp_path):
+        pass
