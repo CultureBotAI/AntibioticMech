@@ -337,9 +337,12 @@ should not have to parse a collection number out of a species name.
 
 ## The corpus map
 
-`just embed` turns each record into a 1024-d vector with a local model
-(BAAI/bge-large-en-v1.5, no API and no per-record cost), and `just embed-map`
-projects those to two dimensions for the site's [corpus map](../pages/map.html).
+The primary [semantic text map](../pages/text-map/index.html) uses the fleet's
+pinned BGE model and PaCMAP. Follow [TEXT_MAP_INPUTS.md](TEXT_MAP_INPUTS.md) and
+the shared locked runtime for generation and cache-backed refresh. The old
+`just embed` and `just embed-map` generators are retired; the
+[historical corpus map](../pages/map.html) remains available without claiming
+current text or a retrospectively inferred model revision.
 
 **It embeds the annotation, not the chemistry.** Proximity means "described
 similarly" — same class, structural family, mechanism, asserted roles,
@@ -356,7 +359,8 @@ useful for curation: an outlier is usually a record whose annotation is thin or
 inconsistent with its neighbours, and a cluster spanning two classes is worth
 looking at.
 
-It separates the classes without being told them: in the raw 1024-d embedding
+The following measurements describe the historical generation, not the new
+common map. It separated the classes without being told them: in the raw 1024-d embedding
 **83%** of a compound's ten nearest neighbours share its class, against a **23%**
 baseline for these class sizes. That is the encoder's number, and it is the one
 this section is entitled to — the 2-D map scores higher (86%) only because

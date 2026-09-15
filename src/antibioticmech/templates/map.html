@@ -1,7 +1,13 @@
 {% extends "base.html" %}
-{% block title %}Corpus map · AntibioticMech{% endblock %}
+{% block title %}Legacy description map · AntibioticMech{% endblock %}
 {% block content %}
-<h1>Corpus map</h1>
+<h1>Legacy description map</h1>
+<p class="meta">Historical full-description text view. The saved model revision and
+complete input fingerprint are unavailable, so this view cannot be certified
+against the current corpus.</p>
+{% if text_map_enabled %}
+<p><a href="{{ root }}text-map/">Open the current semantic text map</a></p>
+{% endif %}
 <p class="lede">{{ map.n }} compounds projected from their record text into two dimensions
 ({{ map.method|upper }} over {{ map.model }}).</p>
 

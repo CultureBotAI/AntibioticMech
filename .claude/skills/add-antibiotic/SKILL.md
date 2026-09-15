@@ -139,8 +139,14 @@ After the canary is correct:
 ```bash
 just seed-apply
 just chemical-map
-just embed
-just embed-map
+```
+
+Refresh the common semantic map through `docs/TEXT_MAP_INPUTS.md` and
+`conf/embedding-runtime/README.md`: export complete inputs, reuse the matching
+cache, run a real canary before new inference, then project and validate the new
+bundle. The historical text generators are retired. After that refresh:
+
+```bash
 just render
 just docs-stats
 just qc
@@ -154,9 +160,9 @@ just source-queue
 just provenance-check
 ```
 
-`pages/**`, `data/embeddings/chemical-structure-map.json`, and
-`data/embeddings/corpus_map.json` are generated. Rebuild them; do not edit them
-by hand.
+`pages/**`, `data/embeddings/chemical-structure-map.json`, and `data/text_map/`
+are generated. Rebuild them through their maintained commands; do not edit them
+by hand. Preserve the historical `data/embeddings/corpus_map.json` snapshot.
 
 ## Report
 
