@@ -151,17 +151,18 @@ activity_spectrum:
 - taxon_id: NCBITaxon:573
   taxon_label: Klebsiella pneumoniae
   mic_value: 8.0
-  mic_qualifier: '>'
   mic_units: mg/L
   assay: Broth microdilution ciprofloxacin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: 0497
   evidence:
-  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=497&PanelID=10
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=497&PanelID=10
     snippet: Ciprofloxacin  | >8  | R
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0497, Study ID NEW-10,
-      BioSample SAMN11953783, K. pneumoniae, ciprofloxacin MIC >8 micrograms/mL, and
-      interpretation R.
+      BioSample SAMN11953783, source Bile, Klebsiella pneumoniae, ciprofloxacin MIC
+      >8 micrograms/mL, and interpretation R. The table footer states INT values are
+      derived from CLSI 2025 M100 S35.
+  mic_qualifier: '>'
 - taxon_id: NCBITaxon:470
   taxon_label: Acinetobacter baumannii
   mic_value: 8.0
@@ -472,6 +473,21 @@ activity_spectrum:
     snippet: Ciprofloxacin  | >8  | R
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0494, Study ID NEW-07,
       BioSample SAMN11953780, source Urine, Escherichia coli, ciprofloxacin MIC >8
+      micrograms/mL, and interpretation R. The table footer states INT values are
+      derived from CLSI 2025 M100 S35.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: Broth microdilution ciprofloxacin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0495
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=495&PanelID=10
+    snippet: Ciprofloxacin  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0495, Study ID NEW-08,
+      BioSample SAMN11953781, source Urine, Escherichia coli, ciprofloxacin MIC >8
       micrograms/mL, and interpretation R. The table footer states INT values are
       derived from CLSI 2025 M100 S35.
   mic_qualifier: '>'
@@ -2958,4 +2974,17 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 ciprofloxacin-resistant
     Escherichia coli MIC observation for AR-0494.
+  llm_assisted: true
+- timestamp: '2026-09-15T02:31:41Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 ciprofloxacin-resistant
+    Escherichia coli MIC observation for AR-0495.
+  llm_assisted: true
+- timestamp: '2026-09-15T03:34:23Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Replaced one CDC/FDA AR Isolate Bank Panel 10 ciprofloxacin-resistant Klebsiella
+    pneumoniae MIC observation for AR-0497 with the canonical isolate-detail URL and
+    source metadata.
   llm_assisted: true

@@ -404,6 +404,21 @@ activity_spectrum:
       accession, levofloxacin MIC >8 micrograms/mL, and interpretation R. The table
       footer states INT values are derived from CLSI 2025 M100 S35.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: Broth microdilution levofloxacin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1106'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10397&PanelID=10
+    snippet: Levofloxacin  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1106, Study ID NEW-32,
+      BioSample SAMN19970475, Pseudomonas aeruginosa, levofloxacin MIC >8 micrograms/mL,
+      and interpretation R. The table footer states INT values are derived from CLSI
+      2025 M100 S35.
+  mic_qualifier: '>'
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:50750 (EC 5.99.1.3 [DNA topoisomerase
   (ATP-hydrolysing)] inhibitor), CHEBI:53559 (topoisomerase IV inhibitor), CHEBI:59517
@@ -885,4 +900,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 levofloxacin-resistant
     Enterococcus faecalis MIC observation for AR-0780.
+  llm_assisted: true
+- timestamp: '2026-09-15T05:31:43Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 levofloxacin-resistant
+    Pseudomonas aeruginosa MIC observation for AR-1106.
   llm_assisted: true
