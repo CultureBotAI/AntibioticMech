@@ -15,6 +15,8 @@ def test_record_page_renders_source_concept_evidence():
         loader=FileSystemLoader(TEMPLATES_DIR),
         autoescape=select_autoescape(["html", "xml"]),
     )
+    from mechanism_graph import graph_svg
+    env.filters["graph_svg"] = graph_svg
 
     html = env.get_template("record.html").render(
         r={
