@@ -291,6 +291,21 @@ activity_spectrum:
       >32 micrograms/mL, and interpretation R. The table footer states INT values
       are derived from CLSI 2025 M100 S35.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution aztreonam MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1270'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10561&PanelID=10
+    snippet: Aztreonam  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1270, Study ID NEW-36,
+      BioSample SAMN33435243, source Cornea, Pseudomonas aeruginosa, aztreonam MIC
+      >32 micrograms/mL, and interpretation R. The table footer states INT values
+      are derived from CLSI 2025 M100 S35.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: C[C@H]1[C@H](NC(=O)/C(=N\OC(C)(C)C(=O)O)c2csc([NH3+])n2)C(=O)N1S(=O)(=O)[O-]
   standard_inchi: InChI=1S/C13H17N5O8S2/c1-5-7(10(20)18(5)28(23,24)25)16-9(19)8(6-4-27-12(14)15-6)17-26-13(2,3)11(21)22/h4-5,7H,1-3H3,(H2,14,15)(H,16,19)(H,21,22)(H,23,24,25)/b17-8-/t5-,7-/m0/s1
@@ -814,4 +829,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 aztreonam-resistant
     Pseudomonas aeruginosa MIC observation for AR-1269.
+  llm_assisted: true
+- timestamp: '2026-09-16T15:37:17Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 aztreonam-resistant
+    Pseudomonas aeruginosa MIC observation for AR-1270.
   llm_assisted: true
