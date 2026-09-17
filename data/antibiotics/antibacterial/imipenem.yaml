@@ -308,6 +308,20 @@ activity_spectrum:
       BioSample SAMN33435243, source Cornea, Pseudomonas aeruginosa, imipenem MIC
       16 micrograms/mL, and interpretation R. The table footer states INT values are
       derived from CLSI 2025 M100 S35.
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 64.0
+  mic_units: mg/L
+  assay: Broth microdilution imipenem MIC; modal MIC reported; interpreted using CLSI
+    2025 M100 S35.
+  strain: '1328'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10619&PanelID=10
+    snippet: Imipenem  | 64  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1328, Study ID NEW-39,
+      BioSample SAMN50502207, source Urine, Pseudomonas aeruginosa, imipenem MIC 64
+      micrograms/mL, and interpretation R. The table footer states INT values are
+      derived from CLSI 2025 M100 S35.
 chemical_structure:
   smiles: '[H]C(=N)NCCSC1=C(C(=O)O)N2C(=O)[C@]([H])([C@@H](C)O)[C@@]2([H])C1'
   standard_inchi: InChI=1S/C12H17N3O4S/c1-6(16)9-7-4-8(20-3-2-14-5-13)10(12(18)19)15(7)11(9)17/h5-7,9,16H,2-4H2,1H3,(H2,13,14)(H,18,19)/t6-,7-,9-/m1/s1
@@ -601,4 +615,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 imipenem-resistant
     Pseudomonas aeruginosa MIC observation for AR-1270.
+  llm_assisted: true
+- timestamp: '2026-09-17T02:11:48Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 imipenem-resistant
+    Pseudomonas aeruginosa MIC observation for AR-1328.
   llm_assisted: true
