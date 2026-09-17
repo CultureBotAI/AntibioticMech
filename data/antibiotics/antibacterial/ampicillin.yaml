@@ -320,6 +320,20 @@ activity_spectrum:
       MIC >32 micrograms/mL, and interpretation R. The table footer states INT values
       are derived from CLSI 2025 M100 S35.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:1352
+  taxon_label: Enterococcus faecium
+  mic_value: 128.0
+  mic_units: mg/L
+  assay: Broth microdilution ampicillin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '0500'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=500&PanelID=10
+    snippet: Ampicillin  | 128  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0500, Study ID NEW-13,
+      BioSample SAMN11953784, source Blood, Enterococcus faecium, ampicillin MIC 128
+      micrograms/mL, and interpretation R. The table footer states INT values are
+      derived from CLSI 2025 M100 S35.
 chemical_structure:
   smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)[C@H](N)c1ccccc1'
   standard_inchi: InChI=1S/C16H19N3O4S/c1-16(2)11(15(22)23)19-13(21)10(14(19)24-16)18-12(20)9(17)8-6-4-3-5-7-8/h3-7,9-11,14H,17H2,1-2H3,(H,18,20)(H,22,23)/t9-,10-,11+,14-/m1/s1
@@ -741,4 +755,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 ampicillin-resistant
     Enterobacter cloacae complex MIC observation for AR-1331.
+  llm_assisted: true
+- timestamp: '2026-09-17T12:31:01Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 ampicillin-resistant
+    Enterococcus faecium MIC observation for AR-0500.
   llm_assisted: true
