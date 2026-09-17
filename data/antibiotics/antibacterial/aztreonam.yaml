@@ -336,6 +336,21 @@ activity_spectrum:
       MIC >32 micrograms/mL, and interpretation R. The table footer states INT values
       are derived from CLSI 2025 M100 S35.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 64.0
+  mic_units: mg/L
+  assay: Broth microdilution aztreonam MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0495
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=495&PanelID=10
+    snippet: Aztreonam  | >64  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0495, Study ID NEW-08,
+      BioSample SAMN11953781, source Urine, Escherichia coli, aztreonam MIC >64 micrograms/mL,
+      and interpretation R. The table footer states INT values are derived from CLSI
+      2025 M100 S35.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: C[C@H]1[C@H](NC(=O)/C(=N\OC(C)(C)C(=O)O)c2csc([NH3+])n2)C(=O)N1S(=O)(=O)[O-]
   standard_inchi: InChI=1S/C13H17N5O8S2/c1-5-7(10(20)18(5)28(23,24)25)16-9(19)8(6-4-27-12(14)15-6)17-26-13(2,3)11(21)22/h4-5,7H,1-3H3,(H2,14,15)(H,16,19)(H,21,22)(H,23,24,25)/b17-8-/t5-,7-/m0/s1
@@ -877,4 +892,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 aztreonam-resistant
     Enterobacter cloacae complex MIC observation for AR-1329.
+  llm_assisted: true
+- timestamp: '2026-09-17T15:32:05Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 aztreonam-resistant
+    Escherichia coli MIC observation for AR-0495.
   llm_assisted: true
