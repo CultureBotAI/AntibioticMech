@@ -363,6 +363,21 @@ activity_spectrum:
       >32 micrograms/mL, and interpretation R. The table footer states INT values
       are derived from CLSI 2025 M100 S35.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution cefepime MIC; modal MIC reported; interpreted using CLSI
+    2025 M100 S35.
+  strain: '1328'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10619&PanelID=10
+    snippet: Cefepime  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1328, Study ID NEW-39,
+      BioSample SAMN50502207, source Urine, Pseudomonas aeruginosa, cefepime MIC >32
+      micrograms/mL, and interpretation R. The table footer states INT values are
+      derived from CLSI 2025 M100 S35.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: '[H][C@]12SCC(C[N+]3(C)CCCC3)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1'
   standard_inchi: InChI=1S/C19H24N6O5S2/c1-25(5-3-4-6-25)7-10-8-31-17-13(16(27)24(17)14(10)18(28)29)22-15(26)12(23-30-2)11-9-32-19(20)21-11/h9,13,17H,3-8H2,1-2H3,(H3-,20,21,22,26,28,29)/b23-12-/t13-,17-/m1/s1
@@ -600,4 +615,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 cefepime-resistant
     Pseudomonas aeruginosa MIC observation for AR-1270.
+  llm_assisted: true
+- timestamp: '2026-09-16T23:59:26Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 cefepime-resistant
+    Pseudomonas aeruginosa MIC observation for AR-1328.
   llm_assisted: true
