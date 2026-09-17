@@ -329,6 +329,21 @@ activity_spectrum:
       MIC >16 micrograms/mL, and interpretation R. The table footer states INT values
       are derived from CLSI 2025 M100 S35.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:354276
+  taxon_label: Enterobacter cloacae complex
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: Broth microdilution cefoxitin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: '1331'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10622&PanelID=10
+    snippet: Cefoxitin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1331, Study ID NEW-42,
+      BioSample SAMN50502209, source Wound, Enterobacter cloacae complex, cefoxitin
+      MIC >16 micrograms/mL, and interpretation R. The table footer states INT values
+      are derived from CLSI 2025 M100 S35.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: '[H][C@]12SCC(COC(N)=O)=C(C(=O)O)N1C(=O)[C@]2(NC(=O)Cc1cccs1)OC'
   standard_inchi: InChI=1S/C16H17N3O7S2/c1-25-16(18-10(20)5-9-3-2-4-27-9)13(23)19-11(12(21)22)8(6-26-15(17)24)7-28-14(16)19/h2-4,14H,5-7H2,1H3,(H2,17,24)(H,18,20)(H,21,22)/t14-,16+/m1/s1
@@ -629,4 +644,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 cefoxitin-resistant
     Enterobacter cloacae complex MIC observation for AR-1329.
+  llm_assisted: true
+- timestamp: '2026-09-17T11:27:09Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 cefoxitin-resistant
+    Enterobacter cloacae complex MIC observation for AR-1331.
   llm_assisted: true
