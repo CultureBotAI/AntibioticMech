@@ -140,6 +140,21 @@ activity_spectrum:
       MIC >8 micrograms/mL, and interpretation R. The table footer states INT values
       are derived from CLSI 2025 M100 S35.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: Broth microdilution cefazolin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35.
+  strain: 0495
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=495&PanelID=10
+    snippet: Cefazolin  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0495, Study ID NEW-08,
+      BioSample SAMN11953781, source Urine, Escherichia coli, cefazolin MIC >8 micrograms/mL,
+      and interpretation R. The table footer states INT values are derived from CLSI
+      2025 M100 S35.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: '[H][C@]12SCC(CSc3nnc(C)s3)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)Cn1cnnn1'
   standard_inchi: InChI=1S/C14H14N8O4S3/c1-6-17-18-14(29-6)28-4-7-3-27-12-9(11(24)22(12)10(7)13(25)26)16-8(23)2-21-5-15-19-20-21/h5,9,12H,2-4H2,1H3,(H,16,23)(H,25,26)/t9-,12-/m1/s1
@@ -353,4 +368,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 cefazolin-resistant
     Citrobacter freundii MIC observation for AR-0637.
+  llm_assisted: true
+- timestamp: '2026-09-17T16:34:35Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 cefazolin-resistant
+    Escherichia coli MIC observation for AR-0495.
   llm_assisted: true
