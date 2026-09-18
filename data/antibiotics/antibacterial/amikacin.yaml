@@ -269,6 +269,21 @@ activity_spectrum:
       micrograms/mL, and interpretation R. The table footer states INT values are
       derived from CLSI 2025 M100 S35.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  mic_value: 64.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution amikacin MIC; modal MIC reported; interpreted using CLSI
+    2020 M100 S30 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
+  strain: 0083
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=83&PanelID=1227
+    snippet: Amikacin  | >64  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0083, Study ID CarbaNP-52,
+      BioSample SAMN04014924, source Unknown, Acinetobacter baumannii, MLST ST1(Pasteur)
+      and ST231/1604(Oxford), amikacin MIC >64 mg/L (originally >64 micrograms/mL),
+      and interpretation R.
 chemical_structure:
   smiles: NCC[C@H](O)C(=O)N[C@@H]1C[C@H](N)[C@@H](O[C@H]2O[C@H](CN)[C@@H](O)[C@H](O)[C@H]2O)[C@H](O)[C@H]1O[C@H]1O[C@H](CO)[C@@H](O)[C@H](N)[C@H]1O
   standard_inchi: InChI=1S/C22H43N5O13/c23-2-1-8(29)20(36)27-7-3-6(25)18(39-22-16(34)15(33)13(31)9(4-24)37-22)17(35)19(7)40-21-14(32)11(26)12(30)10(5-28)38-21/h6-19,21-22,28-35H,1-5,23-26H2,(H,27,36)/t6-,7+,8-,9+,10+,11-,12+,13+,14+,15-,16+,17-,18+,19-,21+,22+/m0/s1
@@ -1107,4 +1122,12 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 amikacin-resistant
     Pseudomonas aeruginosa MIC observation for AR-1328.
+  llm_assisted: true
+- timestamp: '2026-09-18T12:47:36Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1227 amikacin-resistant
+    Acinetobacter baumannii MIC observation for AR-0083; preserved source Unknown,
+    BioSample SAMN04014924, Study ID CarbaNP-52, and MLST ST1(Pasteur)/ST231/1604(Oxford)
+    in evidence notes.
   llm_assisted: true
