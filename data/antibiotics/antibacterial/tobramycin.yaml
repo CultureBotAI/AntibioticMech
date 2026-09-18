@@ -448,7 +448,8 @@ activity_spectrum:
     snippet: Tobramycin  | 16  | R
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0033, Study ID CarbaNP-02,
       BioSample SAMN04014874, source Unknown, Acinetobacter baumannii, MLST ST85(Pasteur)
-      and ST1089(Oxford), tobramycin MIC 16 micrograms/mL, and interpretation R.
+      and ST1089(Oxford), tobramycin MIC 16 mg/L (originally 16 micrograms/mL), and
+      interpretation R.
 chemical_structure:
   smiles: NC[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](N)[C@H]3O)[C@H](N)C[C@@H]2N)[C@H](N)C[C@@H]1O
   standard_inchi: InChI=1S/C18H37N5O9/c19-3-9-8(25)2-7(22)17(29-9)31-15-5(20)1-6(21)16(14(15)28)32-18-13(27)11(23)12(26)10(4-24)30-18/h5-18,24-28H,1-4,19-23H2/t5-,6+,7+,8-,9+,10+,11-,12+,13+,14-,15+,16-,17+,18+/m0/s1
@@ -2031,8 +2032,16 @@ curation_history:
 - timestamp: '2026-09-18T10:14:31Z'
   curator: codex
   action: CURATED_RESISTANT_TAXA
-  changes: Added CDC/FDA AR Isolate Bank Panel 1227 isolate 0033 Acinetobacter baumannii
-    tobramycin MIC 16 mg/L with interpretation R; preserved source Unknown, BioSample
-    SAMN04014874, Study ID CarbaNP-02, and MLST ST85(Pasteur)/ST1089(Oxford) in evidence
-    notes.
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1227 tobramycin-resistant
+    Acinetobacter baumannii MIC observation for AR-0033; preserved source Unknown,
+    BioSample SAMN04014874, Study ID CarbaNP-02, and MLST ST85(Pasteur)/ST1089(Oxford)
+    in evidence notes.
+  llm_assisted: true
+- timestamp: '2026-09-18T10:50:52Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: 'Fixes #428. Clarified the CDC/FDA AR Isolate Bank Panel 1227 isolate 0033
+    tobramycin evidence note for BioSample SAMN04014874 to include both normalized
+    and original MIC units, and revised the same-row curation-history wording to call
+    out the stable isolate-detail URL.'
   llm_assisted: true
