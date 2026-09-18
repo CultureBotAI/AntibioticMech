@@ -336,6 +336,19 @@ activity_spectrum:
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0033, Study ID CarbaNP-02,
       BioSample SAMN04014874, source Unknown, Acinetobacter baumannii, MLST ST85(Pasteur)
       and ST1089(Oxford), imipenem MIC 64 micrograms/mL, and interpretation R.
+- taxon_id: NCBITaxon:548
+  taxon_label: Klebsiella aerogenes
+  mic_value: 4.0
+  mic_units: mg/L
+  assay: Broth microdilution imipenem MIC; modal MIC reported; interpreted using CLSI
+    2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 1168 footnote.
+  strain: '0074'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=74&PanelID=1168
+    snippet: Imipenem  | 4  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0074, Study ID CarbaNP-43,
+      BioSample SAMN04014915, source Fluid Peritoneal, Klebsiella aerogenes, imipenem
+      MIC 4 mg/L (originally 4 micrograms/mL), and interpretation R.
 chemical_structure:
   smiles: '[H]C(=N)NCCSC1=C(C(=O)O)N2C(=O)[C@]([H])([C@@H](C)O)[C@@]2([H])C1'
   standard_inchi: InChI=1S/C12H17N3O4S/c1-6(16)9-7-4-8(20-3-2-14-5-13)10(12(18)19)15(7)11(9)17/h5-7,9,16H,2-4H2,1H3,(H2,13,14)(H,18,19)/t6-,7-,9-/m1/s1
@@ -643,4 +656,11 @@ curation_history:
     imipenem MIC 64 mg/L with interpretation R; preserved source Unknown, BioSample
     SAMN04014874, Study ID CarbaNP-02, and MLST ST85(Pasteur)/ST1089(Oxford) in evidence
     notes.
+  llm_assisted: true
+- timestamp: '2026-09-18T14:42:01Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1168 imipenem-resistant
+    Klebsiella aerogenes MIC observation for AR-0074; preserved source Fluid Peritoneal,
+    BioSample SAMN04014915, and Study ID CarbaNP-43 in evidence notes.
   llm_assisted: true
