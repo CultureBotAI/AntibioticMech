@@ -408,6 +408,21 @@ activity_spectrum:
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0033, Study ID CarbaNP-02,
       BioSample SAMN04014874, source Unknown, Acinetobacter baumannii, MLST ST85(Pasteur)
       and ST1089(Oxford), cefepime MIC >32 micrograms/mL, and interpretation R.
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  mic_value: 32.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution cefepime MIC; modal MIC reported; interpreted using CLSI
+    2024 M100 S34 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
+  strain: 0078
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=78&PanelID=1227
+    snippet: Cefepime  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0078, Study ID CarbaNP-47,
+      BioSample SAMN04014919, source Pus, Acinetobacter baumannii, MLST ST229(Pasteur)
+      and ST203(Oxford), cefepime MIC >32 mg/L (originally >32 micrograms/mL), and
+      interpretation R.
 chemical_structure:
   smiles: '[H][C@]12SCC(C[N+]3(C)CCCC3)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1'
   standard_inchi: InChI=1S/C19H24N6O5S2/c1-25(5-3-4-6-25)7-10-8-31-17-13(16(27)24(17)14(10)18(28)29)22-15(26)12(23-30-2)11-9-32-19(20)21-11/h9,13,17H,3-8H2,1-2H3,(H3-,20,21,22,26,28,29)/b23-12-/t13-,17-/m1/s1
@@ -664,4 +679,12 @@ curation_history:
   changes: Added CDC/FDA AR Isolate Bank Panel 1227 isolate 0033 Acinetobacter baumannii
     cefepime MIC >32 mg/L with interpretation R; preserved BioSample SAMN04014874
     and Study ID CarbaNP-02 in evidence notes.
+  llm_assisted: true
+- timestamp: '2026-09-18T16:45:44Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1227 cefepime-resistant
+    Acinetobacter baumannii MIC observation for AR-0078; preserved source Pus, BioSample
+    SAMN04014919, Study ID CarbaNP-47, and MLST ST229(Pasteur)/ST203(Oxford) in evidence
+    notes.
   llm_assisted: true
