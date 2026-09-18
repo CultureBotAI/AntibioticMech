@@ -84,6 +84,19 @@ activity_spectrum:
       BioSample SAMN11953776, Escherichia coli, ertapenem MIC >8 micrograms/mL, and
       interpretation R.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:548
+  taxon_label: Klebsiella aerogenes
+  mic_value: 2.0
+  mic_units: mg/L
+  assay: Broth microdilution ertapenem MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 1168 footnote.
+  strain: '0074'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=74&PanelID=1168
+    snippet: Ertapenem  | 2  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0074, Study ID CarbaNP-43,
+      BioSample SAMN04014915, source Fluid Peritoneal, Klebsiella aerogenes, ertapenem
+      MIC 2 mg/L (originally 2 micrograms/mL), and interpretation R.
 chemical_structure:
   smiles: '[H][C@@]1(SC2=C(C(=O)O)N3C(=O)[C@]([H])([C@@H](C)O)[C@@]3([H])[C@H]2C)CN[C@]([H])(C(=O)Nc2cccc(C(=O)O)c2)C1'
   standard_inchi: InChI=1S/C22H25N3O7S/c1-9-16-15(10(2)26)20(28)25(16)17(22(31)32)18(9)33-13-7-14(23-8-13)19(27)24-12-5-3-4-11(6-12)21(29)30/h3-6,9-10,13-16,23,26H,7-8H2,1-2H3,(H,24,27)(H,29,30)(H,31,32)/t9-,10-,13+,14+,15-,16-/m1/s1
@@ -238,4 +251,11 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added two stable-URL CDC/FDA AR Isolate Bank Panel 10 ertapenem-resistant
     Klebsiella pneumoniae and Escherichia coli MIC observations for AR-0347 and AR-0348.
+  llm_assisted: true
+- timestamp: '2026-09-18T13:49:45Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1168 ertapenem-resistant
+    Klebsiella aerogenes MIC observation for AR-0074; preserved source Fluid Peritoneal,
+    BioSample SAMN04014915, and Study ID CarbaNP-43 in evidence notes.
   llm_assisted: true
