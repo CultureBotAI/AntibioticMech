@@ -448,6 +448,21 @@ activity_spectrum:
       BioSample SAMN11953781, source Urine, Escherichia coli, ceftazidime MIC 64 micrograms/mL,
       and interpretation R. The table footer states INT values are derived from CLSI
       2025 M100 S35.
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  mic_value: 128.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution ceftazidime MIC; modal MIC reported; CDC/FDA AR Isolate
+    Bank reports an R interpretation without a versioned breakpoint footnote on this
+    isolate page.
+  strain: '0033'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=33&PanelID=1227
+    snippet: Ceftazidime  | >128  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0033, Study ID CarbaNP-02,
+      BioSample SAMN04014874, source Unknown, Acinetobacter baumannii, MLST ST85(Pasteur)
+      and ST1089(Oxford), ceftazidime MIC >128 micrograms/mL, and interpretation R.
 chemical_structure:
   smiles: '[H][C@]12SCC(C[n+]3ccccc3)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)/C(=N\OC(C)(C)C(=O)O)c1csc(N)n1'
   standard_inchi: InChI=1S/C22H22N6O7S2/c1-22(2,20(33)34)35-26-13(12-10-37-21(23)24-12)16(29)25-14-17(30)28-15(19(31)32)11(9-36-18(14)28)8-27-6-4-3-5-7-27/h3-7,10,14,18H,8-9H2,1-2H3,(H4-,23,24,25,29,31,32,33,34)/b26-13-/t14-,18-/m1/s1
@@ -2428,4 +2443,11 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 ceftazidime-resistant
     Escherichia coli MIC observation for AR-0495.
+  llm_assisted: true
+- timestamp: '2026-09-18T01:41:14Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added CDC/FDA AR Isolate Bank Panel 1227 isolate 0033 Acinetobacter baumannii
+    ceftazidime MIC >128 mg/L with interpretation R; preserved BioSample SAMN04014874
+    and Study ID CarbaNP-02 in evidence notes.
   llm_assisted: true
