@@ -509,6 +509,20 @@ activity_spectrum:
       BioSample SAMN11953781, source Urine, Escherichia coli, levofloxacin MIC >8
       micrograms/mL, and interpretation R. The table footer states INT values are
       derived from CLSI 2025 M100 S35.
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: Broth microdilution levofloxacin MIC; modal MIC reported; CDC/FDA AR Isolate
+    Bank reports an R interpretation without a versioned breakpoint footnote on this
+    isolate page.
+  strain: '0033'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=33&PanelID=1227
+    snippet: Levofloxacin  | 8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0033, Study ID CarbaNP-02,
+      BioSample SAMN04014874, source Unknown, Acinetobacter baumannii, MLST ST85(Pasteur)
+      and ST1089(Oxford), levofloxacin MIC 8 micrograms/mL, and interpretation R.
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:50750 (EC 5.99.1.3 [DNA topoisomerase
   (ATP-hydrolysing)] inhibitor), CHEBI:53559 (topoisomerase IV inhibitor), CHEBI:59517
@@ -1032,4 +1046,12 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 levofloxacin-resistant
     Escherichia coli MIC observation for AR-0495.
+  llm_assisted: true
+- timestamp: '2026-09-18T07:35:18Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added CDC/FDA AR Isolate Bank Panel 1227 isolate 0033 Acinetobacter baumannii
+    levofloxacin MIC 8 mg/L with interpretation R; preserved source Unknown, BioSample
+    SAMN04014874, Study ID CarbaNP-02, and MLST ST85(Pasteur)/ST1089(Oxford) in evidence
+    notes.
   llm_assisted: true
