@@ -159,6 +159,20 @@ activity_spectrum:
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0033, Study ID CarbaNP-02,
       BioSample SAMN04014874, source Unknown, Acinetobacter baumannii, MLST ST85(Pasteur)
       and ST1089(Oxford), gentamicin MIC 16 micrograms/mL, and interpretation R.
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  mic_value: 16.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
+    CLSI 2024 M100 S34 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
+  strain: 0078
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=78&PanelID=1227
+    snippet: Gentamicin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0078, Study ID CarbaNP-47,
+      BioSample SAMN04014919, source Pus, Acinetobacter baumannii, MLST ST229(Pasteur)
+      and ST203(Oxford), gentamicin MIC >16 micrograms/mL, and interpretation R.
 chemical_structure:
   smiles: CC(C1CCC(C(O1)OC2C(CC(C(C2O)OC3C(C(C(CO3)(C)O)NC)O)N)N)N)NC
   standard_inchi: InChI=1S/C21H43N5O7/c1-9(25-3)13-6-5-10(22)19(31-13)32-16-11(23)7-12(24)17(14(16)27)33-20-15(28)18(26-4)21(2,29)8-30-20/h9-20,25-29H,5-8,22-24H2,1-4H3
@@ -460,4 +474,10 @@ curation_history:
     gentamicin MIC 16 mg/L with interpretation R; preserved source Unknown, BioSample
     SAMN04014874, Study ID CarbaNP-02, and MLST ST85(Pasteur)/ST1089(Oxford) in evidence
     notes.
+  llm_assisted: true
+- timestamp: '2026-09-18T23:24:52Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added CDC/FDA AR Isolate Bank isolate 0078 Acinetobacter baumannii gentamicin
+    MIC >16 mg/L resistance observation from Panel 1227.
   llm_assisted: true
