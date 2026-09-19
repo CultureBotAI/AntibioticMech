@@ -290,6 +290,7 @@ or death.</p>
 {% if cg.description %}<p>{{ cg.description }}</p>{% endif %}
 {% if cg.scope_notes %}<p class="meta">{{ cg.scope_notes }}</p>{% endif %}
 {% if cg.nodes %}
+{{ cg | graph_svg(loop.index) }}
 <table>
   <caption>Nodes — {{ cg.graph_id }}</caption>
   <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
