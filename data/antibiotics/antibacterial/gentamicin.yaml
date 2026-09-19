@@ -188,6 +188,19 @@ activity_spectrum:
       BioSample SAMN04014924, source Unknown, Acinetobacter baumannii, MLST ST1(Pasteur)
       and ST231/1604(Oxford), gentamicin MIC >16 mg/L (originally >16 micrograms/mL),
       and interpretation R.
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 10 footnote.
+  strain: 0538
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=538&PanelID=10
+    snippet: Gentamicin  | 8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0538, Study ID NEW-22,
+      BioSample SAMN11953785, Escherichia coli, gentamicin MIC 8 mg/L (originally
+      8 micrograms/mL), and interpretation R.
 chemical_structure:
   smiles: CC(C1CCC(C(O1)OC2C(CC(C(C2O)OC3C(C(C(CO3)(C)O)NC)O)N)N)N)NC
   standard_inchi: InChI=1S/C21H43N5O7/c1-9(25-3)13-6-5-10(22)19(31-13)32-16-11(23)7-12(24)17(14(16)27)33-20-15(28)18(26-4)21(2,29)8-30-20/h9-20,25-29H,5-8,22-24H2,1-4H3
@@ -503,4 +516,11 @@ curation_history:
     Acinetobacter baumannii MIC observation for AR-0083; preserved source Unknown,
     BioSample SAMN04014924, Study ID CarbaNP-52, and MLST ST1(Pasteur)/ST231/1604(Oxford)
     in evidence notes.
+  llm_assisted: true
+- timestamp: '2026-09-19T21:56:07Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 gentamicin-resistant
+    Escherichia coli MIC observation for AR-0538; preserved BioSample SAMN11953785
+    and Study ID NEW-22 in evidence notes.
   llm_assisted: true
