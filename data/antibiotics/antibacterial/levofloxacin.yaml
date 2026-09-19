@@ -552,6 +552,20 @@ activity_spectrum:
       BioSample SAMN04014924, source Unknown, Acinetobacter baumannii, MLST ST1(Pasteur)
       and ST231/1604(Oxford), levofloxacin MIC 8 mg/L (originally 8 micrograms/mL),
       and interpretation R.
+- taxon_id: NCBITaxon:1352
+  taxon_label: Enterococcus faecium
+  mic_value: 8.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution levofloxacin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 10 footnote.
+  strain: '0500'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=500&PanelID=10
+    snippet: Levofloxacin  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0500, Study ID NEW-13,
+      BioSample SAMN11953784, source Blood, Enterococcus faecium, levofloxacin MIC
+      >8 mg/L (originally >8 micrograms/mL), and interpretation R.
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:50750 (EC 5.99.1.3 [DNA topoisomerase
   (ATP-hydrolysing)] inhibitor), CHEBI:53559 (topoisomerase IV inhibitor), CHEBI:59517
@@ -1099,4 +1113,11 @@ curation_history:
     Acinetobacter baumannii MIC observation for AR-0083; preserved source Unknown,
     BioSample SAMN04014924, Study ID CarbaNP-52, and MLST ST1(Pasteur)/ST231/1604(Oxford)
     in evidence notes.
+  llm_assisted: true
+- timestamp: '2026-09-19T18:59:48Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 levofloxacin-resistant
+    Enterococcus faecium MIC observation for AR-0500; preserved source Blood, BioSample
+    SAMN11953784, and Study ID NEW-13 in evidence notes.
   llm_assisted: true
