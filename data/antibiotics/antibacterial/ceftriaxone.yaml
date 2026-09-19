@@ -222,6 +222,21 @@ activity_spectrum:
       BioSample SAMN04014919, source Pus, Acinetobacter baumannii, MLST ST229(Pasteur)
       and ST203(Oxford), ceftriaxone MIC >32 mg/L (originally >32 micrograms/mL),
       and interpretation R.
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  mic_value: 32.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution ceftriaxone MIC; modal MIC reported; interpreted using
+    CLSI 2020 M100 S30 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
+  strain: 0083
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=83&PanelID=1227
+    snippet: Ceftriaxone  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0083, Study ID CarbaNP-52,
+      BioSample SAMN04014924, source Unknown, Acinetobacter baumannii, MLST ST1(Pasteur)
+      and ST231/1604(Oxford), ceftriaxone MIC >32 mg/L (originally >32 micrograms/mL),
+      and interpretation R.
 chemical_structure:
   smiles: '[H][C@]12SCC(CSc3nc(=O)c(=O)nn3C)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1'
   standard_inchi: InChI=1S/C18H18N8O7S3/c1-25-18(22-12(28)13(29)23-25)36-4-6-3-34-15-9(14(30)26(15)10(6)16(31)32)21-11(27)8(24-33-2)7-5-35-17(19)20-7/h5,9,15H,3-4H2,1-2H3,(H2,19,20)(H,21,27)(H,23,29)(H,31,32)/b24-8-/t9-,15-/m1/s1
@@ -532,4 +547,12 @@ curation_history:
     Acinetobacter baumannii MIC observation for AR-0078; preserved source Pus, BioSample
     SAMN04014919, Study ID CarbaNP-47, and MLST ST229(Pasteur)/ST203(Oxford) in evidence
     notes.
+  llm_assisted: true
+- timestamp: '2026-09-19T08:47:28Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1227 ceftriaxone-resistant
+    Acinetobacter baumannii MIC observation for AR-0083; preserved source Unknown,
+    BioSample SAMN04014924, Study ID CarbaNP-52, and MLST ST1(Pasteur)/ST231/1604(Oxford)
+    in evidence notes.
   llm_assisted: true
