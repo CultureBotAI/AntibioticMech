@@ -61,6 +61,20 @@ activity_spectrum:
     notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0783, Study ID VRE-03,
       BioSample SAMN15040082, E. faecium, rifampin MIC >4 micrograms/mL, and interpretation
       R.
+- taxon_id: NCBITaxon:1352
+  taxon_label: Enterococcus faecium
+  mic_value: 4.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution rifampin MIC; modal MIC reported; interpreted using CLSI
+    2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 10 footnote.
+  strain: '0500'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=500&PanelID=10
+    snippet: Rifampin  | >4  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0500, Study ID NEW-13,
+      BioSample SAMN11953784, source Blood, Enterococcus faecium, rifampin MIC >4
+      mg/L (originally >4 micrograms/mL), and interpretation R.
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_notes: 'CURATOR: PMID:11290327 resolved rifampicin bound to Thermus
   aquaticus core RNA polymerase. It occupies a beta-subunit pocket in the DNA/RNA
@@ -910,4 +924,11 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank rifampin-resistant Enterococcus
     faecium isolate MIC observation.
+  llm_assisted: true
+- timestamp: '2026-09-19T20:00:18Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 rifampicin-resistant
+    Enterococcus faecium MIC observation for AR-0500; preserved source Blood, BioSample
+    SAMN11953784, and Study ID NEW-13 in evidence notes.
   llm_assisted: true
