@@ -289,6 +289,21 @@ activity_spectrum:
       BioSample SAMN04014919, source Pus, Acinetobacter baumannii, MLST ST229(Pasteur)
       and ST203(Oxford), cefotaxime MIC >64 mg/L (originally >64 micrograms/mL), and
       interpretation R.
+- taxon_id: NCBITaxon:470
+  taxon_label: Acinetobacter baumannii
+  mic_value: 64.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: Broth microdilution cefotaxime MIC; modal MIC reported; interpreted using
+    CLSI 2020 M100 S30 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
+  strain: 0083
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=83&PanelID=1227
+    snippet: Cefotaxime  | >64  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0083, Study ID CarbaNP-52,
+      BioSample SAMN04014924, source Unknown, Acinetobacter baumannii, MLST ST1(Pasteur)
+      and ST231/1604(Oxford), cefotaxime MIC >64 mg/L (originally >64 micrograms/mL),
+      and interpretation R.
 chemical_structure:
   smiles: '[H][C@]12SCC(COC(C)=O)=C(C(=O)O)N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1'
   standard_inchi: InChI=1S/C16H17N5O7S2/c1-6(22)28-3-7-4-29-14-10(13(24)21(14)11(7)15(25)26)19-12(23)9(20-27-2)8-5-30-16(17)18-8/h5,10,14H,3-4H2,1-2H3,(H2,17,18)(H,19,23)(H,25,26)/b20-9-/t10-,14-/m1/s1
@@ -575,4 +590,12 @@ curation_history:
     Acinetobacter baumannii MIC observation for AR-0078; preserved source Pus, BioSample
     SAMN04014919, Study ID CarbaNP-47, and MLST ST229(Pasteur)/ST203(Oxford) in evidence
     notes.
+  llm_assisted: true
+- timestamp: '2026-09-19T06:51:24Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1227 cefotaxime-resistant
+    Acinetobacter baumannii MIC observation for AR-0083; preserved source Unknown,
+    BioSample SAMN04014924, Study ID CarbaNP-52, and MLST ST1(Pasteur)/ST231/1604(Oxford)
+    in evidence notes.
   llm_assisted: true
