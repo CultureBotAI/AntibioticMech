@@ -453,6 +453,36 @@ activity_spectrum:
       BioSample accession unavailable, collection year 2019, location USA, source
       Urine, MLST ST357(Pasteur), Pseudomonas aeruginosa, cefepime MIC >32 mg/L (originally
       >32 micrograms/mL), and interpretation R.
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 32.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: CDC/FDA AR Isolate Bank cefepime MIC; interpreted using CLSI 2026 M100 Ed36
+    per the Panel 1394 footnote.
+  strain: '1333'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10624&PanelID=1394
+    snippet: Cefepime  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1333, Study ID IMP-11,
+      BioSample accession unavailable, collection year 2017, location USA, source
+      Urine, MLST ST2731(Pasteur), Pseudomonas aeruginosa, cefepime MIC >32 mg/L (originally
+      >32 micrograms/mL), and interpretation R.
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 32.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: CDC/FDA AR Isolate Bank cefepime MIC; interpreted using CLSI 2026 M100 S36
+    per the Panel 1394 footnote.
+  strain: '1334'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10625&PanelID=1394
+    snippet: Cefepime  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1334, Study ID IMP-12,
+      BioSample accession unavailable, collection year 2022, location USA, source
+      P-trap water, MLST ST235(Pasteur), Pseudomonas aeruginosa, cefepime MIC >32
+      mg/L (originally >32 micrograms/mL), and interpretation R.
 chemical_structure:
   smiles: '[H][C@]12SCC(C[N+]3(C)CCCC3)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)/C(=N\OC)c1csc(N)n1'
   standard_inchi: InChI=1S/C19H24N6O5S2/c1-25(5-3-4-6-25)7-10-8-31-17-13(16(27)24(17)14(10)18(28)29)22-15(26)12(23-30-2)11-9-32-19(20)21-11/h9,13,17H,3-8H2,1-2H3,(H3-,20,21,22,26,28,29)/b23-12-/t13-,17-/m1/s1
@@ -733,4 +763,12 @@ curation_history:
     Pseudomonas aeruginosa MIC observation for AR-1332; preserved source Urine, Study
     ID IMP-10, unavailable BioSample accession, and MLST ST357(Pasteur) in evidence
     notes.
+  llm_assisted: true
+- timestamp: '2026-09-20T15:57:03Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added two stable-URL CDC/FDA AR Isolate Bank Panel 1394 cefepime-resistant
+    Pseudomonas aeruginosa MIC observations for AR-1333 and AR-1334; preserved sources
+    Urine and P-trap water, Study IDs IMP-11 and IMP-12, unavailable BioSample accessions,
+    and MLST ST2731(Pasteur)/ST235(Pasteur) in evidence notes.
   llm_assisted: true
