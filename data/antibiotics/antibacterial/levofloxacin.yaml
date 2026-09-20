@@ -595,6 +595,21 @@ activity_spectrum:
       BioSample accession unavailable, collection year 2019, location USA, source
       Urine, MLST ST357(Pasteur), Pseudomonas aeruginosa, levofloxacin MIC >8 mg/L
       (originally >8 micrograms/mL), and interpretation R.
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 8.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: CDC/FDA AR Isolate Bank levofloxacin MIC; interpreted using CLSI 2026 M100
+    Ed36 per the Panel 1394 footnote.
+  strain: '1333'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10624&PanelID=1394
+    snippet: Levofloxacin  | >8  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1333, Study ID IMP-11,
+      BioSample accession unavailable, collection year 2017, location USA, source
+      Urine, MLST ST2731(Pasteur), Pseudomonas aeruginosa, levofloxacin MIC >8 mg/L
+      (originally >8 micrograms/mL), and interpretation R.
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_notes: Assigned from ChEBI role CHEBI:50750 (EC 5.99.1.3 [DNA topoisomerase
   (ATP-hydrolysing)] inhibitor), CHEBI:53559 (topoisomerase IV inhibitor), CHEBI:59517
@@ -1163,5 +1178,13 @@ curation_history:
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1394 levofloxacin-resistant
     Pseudomonas aeruginosa MIC observation for AR-1332; preserved source Urine, Study
     ID IMP-10, unavailable BioSample accession, and MLST ST357(Pasteur) in evidence
+    notes.
+  llm_assisted: true
+- timestamp: '2026-09-20T07:16:48Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1394 levofloxacin-resistant
+    Pseudomonas aeruginosa MIC observation for AR-1333; preserved source Urine, Study
+    ID IMP-11, unavailable BioSample accession, and MLST ST2731(Pasteur) in evidence
     notes.
   llm_assisted: true
