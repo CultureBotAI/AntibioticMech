@@ -480,6 +480,21 @@ activity_spectrum:
       BioSample SAMN04014924, source Unknown, Acinetobacter baumannii, MLST ST1(Pasteur)
       and ST231/1604(Oxford), tobramycin MIC >16 mg/L (originally >16 micrograms/mL),
       and interpretation R.
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 16.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: CDC/FDA AR Isolate Bank tobramycin MIC; interpreted using CLSI 2026 M100
+    Ed36 per the Panel 1394 footnote.
+  strain: '1332'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10623&PanelID=1394
+    snippet: Tobramycin  | >16  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1332, Study ID IMP-10,
+      BioSample accession unavailable, collection year 2019, location USA, source
+      Urine, MLST ST357(Pasteur), Pseudomonas aeruginosa, tobramycin MIC >16 mg/L
+      (originally >16 micrograms/mL), and interpretation R.
 chemical_structure:
   smiles: NC[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](N)[C@H]3O)[C@H](N)C[C@@H]2N)[C@H](N)C[C@@H]1O
   standard_inchi: InChI=1S/C18H37N5O9/c19-3-9-8(25)2-7(22)17(29-9)31-15-5(20)1-6(21)16(14(15)28)32-18-13(27)11(23)12(26)10(4-24)30-18/h5-18,24-28H,1-4,19-23H2/t5-,6+,7+,8-,9+,10+,11-,12+,13+,14-,15+,16-,17+,18+/m0/s1
@@ -2098,4 +2113,12 @@ curation_history:
     Acinetobacter baumannii MIC observation for AR-0083; preserved source Unknown,
     BioSample SAMN04014924, Study ID CarbaNP-52, and MLST ST1(Pasteur)/ST231/1604(Oxford)
     in evidence notes.
+  llm_assisted: true
+- timestamp: '2026-09-20T13:59:01Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1394 tobramycin-resistant
+    Pseudomonas aeruginosa MIC observation for AR-1332; preserved source Urine, Study
+    ID IMP-10, unavailable BioSample accession, and MLST ST357(Pasteur) in evidence
+    notes.
   llm_assisted: true
