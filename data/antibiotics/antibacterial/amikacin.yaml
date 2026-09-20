@@ -298,6 +298,21 @@ activity_spectrum:
       BioSample SAMN04014919, source Pus, Acinetobacter baumannii, MLST ST229(Pasteur)
       and ST203(Oxford), amikacin MIC 64 mg/L (originally 64 micrograms/mL), and interpretation
       R.
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 64.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: CDC/FDA AR Isolate Bank amikacin MIC; interpreted using CLSI 2026 M100 Ed36
+    per the Panel 1394 footnote.
+  strain: '1332'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10623&PanelID=1394
+    snippet: Amikacin  | >64  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1332, Study ID IMP-10,
+      BioSample accession unavailable, collection year 2019, location USA, source
+      Urine, MLST ST357(Pasteur), Pseudomonas aeruginosa, amikacin MIC >64 mg/L (originally
+      >64 micrograms/mL), and interpretation R.
 chemical_structure:
   smiles: NCC[C@H](O)C(=O)N[C@@H]1C[C@H](N)[C@@H](O[C@H]2O[C@H](CN)[C@@H](O)[C@H](O)[C@H]2O)[C@H](O)[C@H]1O[C@H]1O[C@H](CO)[C@@H](O)[C@H](N)[C@H]1O
   standard_inchi: InChI=1S/C22H43N5O13/c23-2-1-8(29)20(36)27-7-3-6(25)18(39-22-16(34)15(33)13(31)9(4-24)37-22)17(35)19(7)40-21-14(32)11(26)12(30)10(5-28)38-21/h6-19,21-22,28-35H,1-5,23-26H2,(H,27,36)/t6-,7+,8-,9+,10+,11-,12+,13+,14+,15-,16+,17-,18+,19-,21+,22+/m0/s1
@@ -1151,5 +1166,13 @@ curation_history:
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1227 amikacin-resistant
     Acinetobacter baumannii MIC observation for AR-0078; preserved source Pus, BioSample
     SAMN04014919, Study ID CarbaNP-47, and MLST ST229(Pasteur)/ST203(Oxford) in evidence
+    notes.
+  llm_assisted: true
+- timestamp: '2026-09-20T14:58:02Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1394 amikacin-resistant
+    Pseudomonas aeruginosa MIC observation for AR-1332; preserved source Urine, Study
+    ID IMP-10, unavailable BioSample accession, and MLST ST357(Pasteur) in evidence
     notes.
   llm_assisted: true
