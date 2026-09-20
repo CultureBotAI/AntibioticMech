@@ -349,6 +349,34 @@ activity_spectrum:
       and interpretation R. The table footer states INT values are derived from CLSI
       2025 M100 S35.
   mic_qualifier: '>'
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution ampicillin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 10 footnote.
+  strain: 0538
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=538&PanelID=10
+    snippet: Ampicillin  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0538, Study ID NEW-22,
+      BioSample SAMN11953785, organism Escherichia coli, ampicillin MIC >32 mg/L (originally
+      >32 micrograms/mL), and interpretation R.
+  mic_qualifier: '>'
+- taxon_id: NCBITaxon:90371
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution ampicillin MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 10 footnote.
+  strain: 0539
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=539&PanelID=10
+    snippet: Ampicillin  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0539, Study ID NEW-23,
+      BioSample SAMN07688908, source Stool, organism Salmonella Typhimurium, ampicillin
+      MIC >32 mg/L (originally >32 micrograms/mL), and interpretation R.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: '[H][C@]12SC(C)(C)[C@H](C(=O)O)N1C(=O)[C@H]2NC(=O)[C@H](N)c1ccccc1'
   standard_inchi: InChI=1S/C16H19N3O4S/c1-16(2)11(15(22)23)19-13(21)10(14(19)24-16)18-12(20)9(17)8-6-4-3-5-7-8/h3-7,9-11,14H,17H2,1-2H3,(H,18,20)(H,22,23)/t9-,10-,11+,14-/m1/s1
@@ -782,4 +810,12 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 ampicillin-resistant
     Escherichia coli MIC observation for AR-0495.
+  llm_assisted: true
+- timestamp: '2026-09-20T21:57:34Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added two stable-URL CDC/FDA AR Isolate Bank Panel 10 ampicillin-resistant
+    Escherichia coli and Salmonella Typhimurium MIC observations for AR-0538 and AR-0539;
+    preserved BioSamples SAMN11953785/SAMN07688908, Study IDs NEW-22/NEW-23, and source
+    Stool for AR-0539 in evidence notes.
   llm_assisted: true
