@@ -523,6 +523,21 @@ activity_spectrum:
       BioSample accession unavailable, collection year 2017, location USA, source
       Urine, MLST ST2731(Pasteur), Pseudomonas aeruginosa, ceftazidime MIC >128 mg/L
       (originally >128 micrograms/mL), and interpretation R.
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 128.0
+  mic_units: mg/L
+  assay: CDC/FDA AR Isolate Bank ceftazidime MIC; interpreted using CLSI 2026 M100
+    S36 per the Panel 1394 footnote.
+  strain: '1334'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10625&PanelID=1394
+    snippet: Ceftazidime  | >128  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1334, Study ID IMP-12,
+      BioSample accession unavailable, collection year 2022, location USA, source
+      P-trap water, MLST ST235(Pasteur), Pseudomonas aeruginosa, ceftazidime MIC >128
+      mg/L (originally >128 micrograms/mL), and interpretation R.
+  mic_qualifier: '>'
 chemical_structure:
   smiles: '[H][C@]12SCC(C[n+]3ccccc3)=C(C(=O)[O-])N1C(=O)[C@H]2NC(=O)/C(=N\OC(C)(C)C(=O)O)c1csc(N)n1'
   standard_inchi: InChI=1S/C22H22N6O7S2/c1-22(2,20(33)34)35-26-13(12-10-37-21(23)24-12)16(29)25-14-17(30)28-15(19(31)32)11(9-36-18(14)28)8-27-6-4-3-5-7-27/h3-7,10,14,18H,8-9H2,1-2H3,(H4-,23,24,25,29,31,32,33,34)/b26-13-/t14-,18-/m1/s1
@@ -2541,5 +2556,13 @@ curation_history:
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1394 ceftazidime-resistant
     Pseudomonas aeruginosa MIC observation for AR-1333; preserved source Urine, Study
     ID IMP-11, unavailable BioSample accession, and MLST ST2731(Pasteur) in evidence
+    notes.
+  llm_assisted: true
+- timestamp: '2026-09-20T09:20:24Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1394 ceftazidime-resistant
+    Pseudomonas aeruginosa MIC observation for AR-1334; preserved source P-trap water,
+    Study ID IMP-12, unavailable BioSample accession, and MLST ST235(Pasteur) in evidence
     notes.
   llm_assisted: true
