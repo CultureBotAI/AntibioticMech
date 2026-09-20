@@ -378,6 +378,21 @@ activity_spectrum:
       BioSample SAMN04014924, source Unknown, Acinetobacter baumannii, MLST ST1(Pasteur)
       and ST231/1604(Oxford), imipenem MIC >64 mg/L (originally >64 micrograms/mL),
       and interpretation R.
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 64.0
+  mic_qualifier: '>'
+  mic_units: mg/L
+  assay: CDC/FDA AR Isolate Bank imipenem MIC; interpreted using CLSI 2026 M100 Ed36
+    per the Panel 1394 footnote.
+  strain: '1332'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10623&PanelID=1394
+    snippet: Imipenem  | >64  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1332, Study ID IMP-10,
+      BioSample accession unavailable, collection year 2019, location USA, source
+      Urine, MLST ST357(Pasteur), Pseudomonas aeruginosa, imipenem MIC >64 mg/L (originally
+      >64 micrograms/mL), and interpretation R.
 chemical_structure:
   smiles: '[H]C(=N)NCCSC1=C(C(=O)O)N2C(=O)[C@]([H])([C@@H](C)O)[C@@]2([H])C1'
   standard_inchi: InChI=1S/C12H17N3O4S/c1-6(16)9-7-4-8(20-3-2-14-5-13)10(12(18)19)15(7)11(9)17/h5-7,9,16H,2-4H2,1H3,(H2,13,14)(H,18,19)/t6-,7-,9-/m1/s1
@@ -708,4 +723,12 @@ curation_history:
     Acinetobacter baumannii MIC observation for AR-0083; preserved source Unknown,
     BioSample SAMN04014924, Study ID CarbaNP-52, and MLST ST1(Pasteur)/ST231/1604(Oxford)
     in evidence notes.
+  llm_assisted: true
+- timestamp: '2026-09-20T12:12:32Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1394 imipenem-resistant
+    Pseudomonas aeruginosa MIC observation for AR-1332; preserved source Urine, Study
+    ID IMP-10, unavailable BioSample accession, and MLST ST357(Pasteur) in evidence
+    notes.
   llm_assisted: true
