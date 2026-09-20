@@ -395,6 +395,20 @@ activity_spectrum:
       BioSample accession unavailable, collection year 2017, location USA, source
       Urine, MLST ST2731(Pasteur), Pseudomonas aeruginosa, aztreonam MIC >32 mg/L
       (originally >32 micrograms/mL), and interpretation R.
+- taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: CDC/FDA AR Isolate Bank aztreonam MIC; interpreted using CLSI 2026 M100 S36
+    per the Panel 1394 footnote.
+  strain: '1334'
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10625&PanelID=1394
+    snippet: Aztreonam  | 32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 1334, Study ID IMP-12,
+      BioSample accession unavailable, collection year 2022, location USA, source
+      P-trap water, MLST ST235(Pasteur), Pseudomonas aeruginosa, aztreonam MIC 32
+      mg/L (originally 32 micrograms/mL), and interpretation R.
 chemical_structure:
   smiles: C[C@H]1[C@H](NC(=O)/C(=N\OC(C)(C)C(=O)O)c2csc([NH3+])n2)C(=O)N1S(=O)(=O)[O-]
   standard_inchi: InChI=1S/C13H17N5O8S2/c1-5-7(10(20)18(5)28(23,24)25)16-9(19)8(6-4-27-12(14)15-6)17-26-13(2,3)11(21)22/h4-5,7H,1-3H3,(H2,14,15)(H,16,19)(H,21,22)(H,23,24,25)/b17-8-/t5-,7-/m0/s1
@@ -964,5 +978,13 @@ curation_history:
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1394 aztreonam-resistant
     Pseudomonas aeruginosa MIC observation for AR-1333; preserved source Urine, Study
     ID IMP-11, unavailable BioSample accession, and MLST ST2731(Pasteur) in evidence
+    notes.
+  llm_assisted: true
+- timestamp: '2026-09-20T08:19:41Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1394 aztreonam-resistant
+    Pseudomonas aeruginosa MIC observation for AR-1334; preserved source P-trap water,
+    Study ID IMP-12, unavailable BioSample accession, and MLST ST235(Pasteur) in evidence
     notes.
   llm_assisted: true
