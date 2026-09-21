@@ -96,7 +96,7 @@ records the sha256 of every upstream file and every emitted inventory.
 
 ## Skills
 
-`.claude/skills/` carries six repository-specific workflows:
+`.claude/skills/` carries seven repository-specific workflows:
 
 - **`add-antibiotic`** — prove a named compound or publication lead is one new
   structure, then add the reproducible source path that emits its first
@@ -119,6 +119,9 @@ records the sha256 of every upstream file and every emitted inventory.
   antibiotic YAML record by checking identity and scientific claims, adding
   claim-level evidence, assessing completeness, and resolving supportable gaps.
   It writes records only through the validated curation-event path.
+- **`review-yaml-category`** — review a coherent antibiotic record category or
+  cohort without editing records, deciding membership, lump/split boundaries,
+  and systemic follow-up.
 
 The issue and source-queue workflows do not close issues, adopt sources, or edit
 the corpus. The add-antibiotic workflow adds records only through a reproducible
