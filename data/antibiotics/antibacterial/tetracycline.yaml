@@ -350,6 +350,20 @@ activity_spectrum:
       BioSample SAMN04014924, source Unknown, Acinetobacter baumannii, MLST ST1(Pasteur)
       and ST231/1604(Oxford), tetracycline MIC >32 mg/L (originally >32 micrograms/mL),
       and interpretation R.
+- taxon_id: NCBITaxon:90371
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium
+  mic_value: 32.0
+  mic_units: mg/L
+  assay: Broth microdilution tetracycline MIC; modal MIC reported; interpreted using
+    CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 10 footnote.
+  strain: 0539
+  evidence:
+  - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=539&PanelID=10
+    snippet: Tetracycline  | >32  | R
+    notes: CDC/FDA AR Isolate Bank reports AR Bank isolate 0539, Study ID NEW-23,
+      BioSample SAMN07688908, source Stool, organism Salmonella Typhimurium, tetracycline
+      MIC >32 mg/L (originally >32 micrograms/mL), and interpretation R.
+  mic_qualifier: '>'
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_notes: 'CURATOR: PMID:11163189 determined the atomic structure of tetracycline
   bound at discrete sites on the bacterial 30S ribosomal subunit. The observed drug-ribosome
@@ -1356,4 +1370,11 @@ curation_history:
     Acinetobacter baumannii MIC observation for AR-0083; preserved source Unknown,
     BioSample SAMN04014924, Study ID CarbaNP-52, and MLST ST1(Pasteur)/ST231/1604(Oxford)
     in evidence notes.
+  llm_assisted: true
+- timestamp: '2026-09-21T01:21:04Z'
+  curator: codex
+  action: CURATED_RESISTANT_TAXA
+  changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 tetracycline-resistant
+    Salmonella Typhimurium MIC observation for AR-0539; preserved source Stool, BioSample
+    SAMN07688908, and Study ID NEW-23 in evidence notes.
   llm_assisted: true
