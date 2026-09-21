@@ -45,10 +45,10 @@ the same SMILES, Standard InChI, Standard InChIKey, formula, charge, average mas
 
 The ChEBI graph exposes `CHEBI:3434` carpropamid and `CHEBI:83403` monochlorobenzenes as direct
 `subClassOf` parents of `CHEBI:47351`, matching the record's `parent_compounds` list. An
-ignored-inclusive search for `RXDMAYSSBPYBFW` across `data`, `curation`, and `reports` found only this
-record plus `data/antibiotics/antifungal/carpropamid.yaml`; that sibling is the broader stereochemistry-
-unspecified `CHEBI:3434` structure with Standard InChIKey `RXDMAYSSBPYBFW-UHFFFAOYSA-N`, not a duplicate
-of the stereospecific child reviewed here.
+ignored-inclusive search for `RXDMAYSSBPYBFW` across `data`, `curation`, and `reports` found only the
+target and `CHEBI:3434` carpropamid raw rows plus their generated YAML records. The carpropamid sibling
+is the broader stereochemistry-unspecified `CHEBI:3434` structure with Standard InChIKey
+`RXDMAYSSBPYBFW-UHFFFAOYSA-N`, not a duplicate of the stereospecific child reviewed here.
 
 RCSB Chemical Component `CRP` is the exact ligand for this record: RCSB reports component `CRP` with
 the same systematic name, formula, formal charge, Standard InChI, Standard InChIKey
@@ -57,9 +57,9 @@ the same systematic name, formula, formal charge, Standard InChI, Standard InChI
 
 The `ANTIFUNGAL` class is consistent with the ChEBI-derived `CHEBI:24127` fungicide,
 `CHEBI:35718` antifungal-agent, and `CHEBI:86328` antifungal-agrochemical role terms in the committed
-raw inventory. The child `CHEBI:47351` no longer exposes direct `has role` edges through OLS, but the
-extracted ChEBI row in `data/raw/chebi_antimicrobials.tsv` preserves those three accepted role terms and
-`conf/sources.yaml` maps each to `ANTIFUNGAL`.
+raw inventory. The current child `CHEBI:47351` term does not expose direct `has role` edges through OLS,
+but the extracted ChEBI row in `data/raw/chebi_antimicrobials.tsv` preserves those three accepted role
+terms and `conf/sources.yaml` maps each to `ANTIFUNGAL`.
 
 ## Evidence
 
