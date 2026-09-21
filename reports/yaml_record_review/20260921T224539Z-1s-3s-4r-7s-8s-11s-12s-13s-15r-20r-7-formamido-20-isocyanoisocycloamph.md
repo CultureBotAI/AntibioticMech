@@ -75,9 +75,10 @@ terms, while the Semantic Scholar provider returned HTTP 429.
 
 The record is incomplete as a reviewed antimicrobial activity record. PMID:19199790 reports a quantitative
 antiplasmodial result for the exact compound, but the YAML has no `activity_spectrum` item carrying the
-assay organism, assay description, IC50 value and units, or primary evidence. That information should be
-added only after inspecting the full paper far enough to recover the Plasmodium species or strain and
-assay setup; the abstract does not name the tested organism.
+assay organism, assay description, represented endpoint, units, or primary evidence. That result should
+be curated only after inspecting the full paper far enough to recover the *Plasmodium* species or strain,
+assay setup, and a schema-valid representation; the abstract reports an `IC50`, while
+`ActivityObservation`'s numeric fields are MIC-specific.
 
 The missing `mode_of_action`, `molecular_targets`, `resistance_mechanisms`, and `causal_graphs` are
 honest unknowns from the inspected source text. The exact mechanism of action was not stated in the
@@ -96,7 +97,7 @@ curation decision, overlay, curator-inventory row, or prior review report for th
 
 | Severity | Finding | Evidence | Future owner |
 |---|---|---|---|
-| Major | The known quantitative antiplasmodial assay from PMID:19199790 has not been promoted to an `ActivityObservation`. The source lead reports compound 1 with `IC50 0.5 microg/mL`, while the generated YAML has no organism-level activity item and no primary evidence. | ChEBI `pubmed:19199790` xref; repository PubMed search result for PMID:19199790; `just worklist` row for `CHEBI:65905`. | Curator-owned fields in `data/antibiotics/antiprotozoal/1s-3s-4r-7s-8s-11s-12s-13s-15r-20r-7-formamido-20-isocyanoisocycloamph.yaml`, written only through `record_curation_event` and `write_validated_antibiotic`. |
+| Major | The known quantitative antiplasmodial assay from PMID:19199790 is not represented as evidence-backed activity or as an explicit schema gap. The PubMed abstract reports compound 1 with `IC50 0.5 microg/mL`, while the generated YAML has no organism-level activity item, no primary evidence, and no discussion of whether an IC50 can be represented without overloading MIC slots. | ChEBI `pubmed:19199790` xref; repository PubMed search result for PMID:19199790; `just worklist` row for `CHEBI:65905`. | Curator-owned fields in `data/antibiotics/antiprotozoal/1s-3s-4r-7s-8s-11s-12s-13s-15r-20r-7-formamido-20-isocyanoisocycloamph.yaml`, written only through `record_curation_event` and `write_validated_antibiotic`. |
 
 No blocker findings.
 
@@ -104,9 +105,10 @@ No minor findings.
 
 ## Recommended Edits
 
-1. Inspect PMID:19199790 full text and curate the reported in vitro antiplasmodial assay into
-   `activity_spectrum` if the article supplies the tested *Plasmodium* taxon or strain and assay method
-   for compound 1. Preserve `IC50` as the qualifier and `0.5 microg/mL` as the reported value and units.
+1. Inspect PMID:19199790 full text and curate the reported in vitro antiplasmodial assay only if the
+   article supplies the tested *Plasmodium* taxon or strain, assay method, and a MIC or other
+   schema-valid endpoint for compound 1. If the only quantitative endpoint is IC50, add a bounded
+   `CURATION_TODO` discussion instead of storing the value in MIC-specific slots.
 
 2. Add record-level `PMID:19199790` evidence to document that the ChEBI definition's isolation and
    antiplasmodial-activity statements have been checked against the primary paper.
