@@ -34,8 +34,9 @@ status assertions, and no `Discussion` entries.
 | `just review-queue --limit 5` | Confirmed `nalidixic acid` remains in `review-readiness`: `TARGET_EVIDENCE_REVIEW`, one target assertion needing primary evidence. |
 
 No separate single-record term, reference, or history validator is documented in
-the local `justfile`. The full `just qc` gate was left for the PR-level check
-after this report because this review made no YAML mutation.
+the local `justfile`. A later local `just qc` attempt stopped during dependency
+resolution because pinned `rdkit==2026.3.5` has no macOS x86_64 wheel; the full
+Linux gate is therefore left to required PR CI.
 
 ## Identity and Grounding
 
