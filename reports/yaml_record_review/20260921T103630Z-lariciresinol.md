@@ -126,10 +126,10 @@ Correctly empty optional slots:
   route is imported.
 - No `producer_organisms`: ChEBI records plant origin metadata, but this record
   has no curated microbial biosynthesis claim.
-- No `clinical_status` or `clinical_status_assertions`: no official regulatory
-  source was found or expected for this natural-product lignan.
-- No `datasets`: the bounded review found no public dataset accession that
-  should be linked.
+- No `clinical_status` or `clinical_status_assertions`: the ChEBI-only source
+  concept and inspected metadata do not assert regulatory use.
+- No `datasets`: the inspected ChEBI, PubMed, Europe PMC, and public registry
+  metadata did not surface a dataset accession for this compound.
 
 Ignored-inclusive absence search:
 
