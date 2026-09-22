@@ -165,11 +165,12 @@ No minor findings.
 
 ## Recommended Edits
 
-1. Trace why live ChEBI assigns `CHEBI:33281` to exact `CHEBI:41425`. If the
-   role has exact-compound antimicrobial assay provenance, curate that primary
-   paper through the record's `activity_spectrum`; if it is only inherited from
-   the `CHEBI:23066` cephalosporin class without an exact assay, consider a
-   scoped source exclusion in `curation/decisions.tsv`.
+1. Trace why the pinned ChEBI source row assigns `CHEBI:33281` to exact
+   `CHEBI:41425`, and inspect the next ChEBI refresh diff for the same role.
+   If the role has exact-compound antimicrobial assay provenance, curate that
+   primary paper through the record's `activity_spectrum`; if it is only
+   inherited from the `CHEBI:23066` cephalosporin class without an exact assay,
+   consider a scoped source exclusion in `curation/decisions.tsv`.
 2. Inspect the exact `Glutaryl-7-aminocephalosporanic acid`,
    `Glutaryl-7-ACA`, `Gl-7-ACA`, and `27920-90-7` PubMed candidates only for
    exact antimicrobial assays. Require purified exact `CHEBI:41425`, a
