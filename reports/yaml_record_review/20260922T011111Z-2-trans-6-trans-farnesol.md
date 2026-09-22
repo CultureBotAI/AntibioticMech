@@ -63,8 +63,8 @@ propagates in-scope ChEBI roles from a bearer to every descendant, and
 `ANTIMICROBIAL_UNSPECIFIED`.
 
 The live KEGG COMPOUND `C01126` entry is also `(2E,6E)-farnesol`; its formula,
-mass, CAS, ChEBI, LIPID MAPS, and KNApSAcK links agree with ChEBI's all-trans
-structure. The raw ChEBI row also includes `hmdb:HMDB0004305` and
+mass, CAS, ChEBI, and LIPID MAPS links agree with ChEBI's all-trans structure.
+The raw ChEBI row also includes `hmdb:HMDB0004305` and
 `knapsack:C00003132`, but the seeder withholds both from the generated YAML
 because the same accessions also appear on stereochemically broader
 `CHEBI:28600`.
