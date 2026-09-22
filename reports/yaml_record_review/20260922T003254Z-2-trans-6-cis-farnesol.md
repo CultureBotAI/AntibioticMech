@@ -159,7 +159,7 @@ resolved the three relevant ChEBI CURIEs through OLS. Direct `curl` calls to EBI
 OLS verified the term payload and parent/role endpoints used for the detailed
 edge checks.
 
-Both repository publication searches used `env -u NCBI_EMAIL` so no contact email
+All repository publication searches used `env -u NCBI_EMAIL` so no contact email
 was sent in NCBI API metadata. The first punctuation-heavy exact query
 overmatched newer PubMed records that mentioned unrelated `trans`, `cis`, and
 `2E` tokens, so the review above relies on the narrower Title/Abstract query,
