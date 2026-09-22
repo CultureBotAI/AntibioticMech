@@ -120,7 +120,7 @@ scientific name, but its all-names search maps that synonym to species
 `NCBITaxon:219895`, whose current scientific name is `Syzygium nervosum` and
 whose synonym list retains `Cleistocalyx operculatus`. That mapping confirms
 the plant name as a taxon lead; it does not, by itself, promote the isolation
-context into a microbial `ProducerOrganism`.
+context into a `ProducerOrganism` claim.
 
 Bounded repository publication searches for `PMID:20886838` and for the
 `Cleistocalyx operculatus` chalcone-neuraminidase context each found the same
