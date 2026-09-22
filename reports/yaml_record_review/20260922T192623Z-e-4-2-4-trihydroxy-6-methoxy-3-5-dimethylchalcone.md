@@ -147,8 +147,8 @@ their measured H1N1, H274Y, and H9N2 assays.
 The empty producer slot is preferable to over-scoped filler.
 `Cleistocalyx operculatus`, now `Syzygium nervosum`, is a credible isolation
 source, and the full worklist correctly reports a `producer-candidate` row for
-curator review, but a plant source is not a microbial producer claim in this
-corpus.
+curator review, but the source-only phrase does not by itself prove a
+biosynthetic producer claim.
 
 The empty `resistance_mechanisms`, `clinical_status_assertions`, `datasets`,
 and `discussions` slots are also acceptable. No measured resistance edge,
@@ -180,11 +180,10 @@ No minor findings.
 3. Add `activity_spectrum` rows only for source-reported observations with
    exact compound identity, assay, value, units, and organism or strain scope.
    Use IC50 fields only if the table maps quantitative values to `CHEBI:70655`.
-4. Keep the `Cleistocalyx operculatus` / `Syzygium nervosum`
-   `producer-candidate` row unresolved unless future policy expands the
-   producer model beyond microbial producers. Do not add a
-   `ProducerOrganism` row for this plant isolation source under the current
-   model.
+4. Treat `Cleistocalyx operculatus` / `Syzygium nervosum` as an isolation-source
+   lead, not automatically as a biosynthetic producer. Add a `ProducerOrganism`
+   row only if inspected primary evidence supports exact `CHEBI:70655`
+   production and satisfies the field's assertion-level evidence requirements.
 5. Leave the ChEBI PubMed cross-reference out of the same-structure `xrefs`;
    cite PMID `20886838` from assertion-level `evidence` blocks if its tables or
    text are later curated into target, activity, or provenance fields.
