@@ -102,20 +102,21 @@ isolation and structure lead rather than inspected claim-level support for a
 producer or antiviral assay row.
 
 A bounded PubMed helper search for `Alpinia officinarum diarylheptanoids
-neuraminidase` found `PMID:33309269`, a 2020 Bioorganic Chemistry paper on
+neuraminidase` found `PMID:33309269`, a Bioorganic Chemistry paper on
 neuraminidase-inhibitory diarylheptanoids from `Alpinia officinarum`. Its
 abstract reports virtual screening, 30 diarylheptanoids, stable binding in NA
 for 10 of them, and potent in-vitro NA inhibition by five of them. The abstract
 does not name exact `CHEBI:66027`, so this is a future full-text curation lead
 for the seeded role, not evidence that can be attached to this exact compound.
 
-Bounded PubMed helper and direct PubMed eSearch queries for the exact Standard
-InChIKey `JHJPDDBIHSFERA-GOSISDBHSA-N`, exact CAS `68622-73-1`, exact ChEBI
-label, and exact IUPAC synonym returned zero indexed candidates. The bounded
-checks therefore identified source-level ChEBI PubMed leads and one
-neuraminidase-specific `Alpinia officinarum` lead, but no source that could be
-verified from an indexed abstract as an exact activity, molecular-target, or
-producer claim for `CHEBI:66027`.
+Bounded PubMed helper searches for the exact Standard InChIKey
+`JHJPDDBIHSFERA-GOSISDBHSA-N`, exact CAS `68622-73-1`, and exact IUPAC synonym
+returned no title/abstract candidates. Direct PubMed eSearch queries for those
+same exact identifiers and the exact ChEBI label returned zero indexed
+candidates. The bounded checks therefore identified source-level ChEBI PubMed
+leads and one neuraminidase-specific `Alpinia officinarum` lead, but no source
+that could be verified from an indexed abstract as an exact activity,
+molecular-target, or producer claim for `CHEBI:66027`.
 
 No NCBI Taxonomy verification was needed for this pass because the review did
 not add source-organism or susceptible-organism rows. The available snippets
