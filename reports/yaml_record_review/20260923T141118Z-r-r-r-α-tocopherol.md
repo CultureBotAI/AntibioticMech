@@ -3,7 +3,7 @@
 - Repository: CultureBotAI/AntibioticMech
 - Record: data/antibiotics/antiviral/r-r-r-α-tocopherol.yaml
 - Started UTC: 2026-09-23T14:11:18Z
-- Finished UTC: 2026-09-23T14:11:25Z
+- Finished UTC: 2026-09-23T14:13:40Z
 - Verdict: needs curation
 
 ## Target
@@ -38,6 +38,7 @@ found the target, its `PATHS.tsv` row, the ChEBI raw row, and
 | `just worklist --limit 0 --tsv /tmp/r-r-r-alpha-tocopherol-worklist.tsv` | Passed; `CHEBI:18145` appears only in `mechanism` and `review-readiness`. |
 | `just review-queue --limit 136` | Passed; `CHEBI:18145` is the first queue row after already reviewed `(R)-tosufloxacin`. |
 | `just lint` | Passed; `ruff` reported `All checks passed!`. |
+| `git diff --cached --check` | Passed after staging this ignored report. |
 
 `just verify-corpus` and `just worklist` both emitted the known CARD
 `ARO:3000337` / iclaprim cross-reference refusal; that warning is unrelated to
