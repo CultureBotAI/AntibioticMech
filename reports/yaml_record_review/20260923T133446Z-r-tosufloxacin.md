@@ -168,9 +168,9 @@ No blockers found. No minor findings found.
   `data/raw/chebi_antimicrobials.tsv`, `data/antibiotics/PATHS.tsv`,
   generated YAML records, and `curation/record_review_queue.tsv`, and found no
   prior `r-tosufloxacin` review report under `reports/yaml_record_review/`.
-- The OLS4 relation endpoint for `CHEBI:77584` surfaced neighboring ChEBI terms
-  but not a role edge beyond the generic `CHEBI:33281` imported in the local raw
-  ChEBI inventory.
+- The OLS4 relation endpoint for `CHEBI:77584` surfaced neighboring ChEBI
+  enantiomer and protonation terms. It did not return the generic `CHEBI:33281`
+  antimicrobial role, which was verified from the local raw ChEBI inventory.
 - The repository exposes only full-corpus worklist categories for mechanism,
   cross-reference, producer, target-evidence, and review-readiness checks.
   `CHEBI:77584` was absent from all inspected queues except `mechanism` and
