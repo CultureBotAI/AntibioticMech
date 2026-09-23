@@ -3,7 +3,7 @@
 - Repository: CultureBotAI/AntibioticMech
 - Record: data/antibiotics/antibacterial/s-chlorphenesin.yaml
 - Started UTC: 2026-09-23T19:03:14Z
-- Finished UTC: 2026-09-23T19:03:14Z
+- Finished UTC: 2026-09-23T19:06:15Z
 - Verdict: needs curation
 
 ## Target
@@ -32,6 +32,7 @@ This review inspected the complete YAML record and treated `data/raw/chebi_antim
 | `just review-queue --limit 116` | Passed and listed `(S)-chlorphenesin` as `MECHANISM_REVIEW: mechanism is absent; 0 source literature lead(s), 0 record evidence item(s), 0 target(s)`. |
 | `git diff --check` | Passed before writing this report. |
 | `just lint` | Passed. |
+| `git diff --cached --check` | Passed after staging this report. |
 
 No narrower single-record term, reference, or curation-history validator is exposed for this plain ChEBI-seeded record, so the review used the available single-record schema checks plus full-corpus reproducibility and queue/worklist checks.
 
