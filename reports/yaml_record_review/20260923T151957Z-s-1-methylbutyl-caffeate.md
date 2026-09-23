@@ -35,7 +35,7 @@ This review read the entire generated record at
 | OLS4 ChEBI `CHEBI:70482` term lookup | Passed; the live ChEBI term is active and matched the generated definition, SMILES, Standard InChI, Standard InChIKey, formula, charge, masses, and xref/source lead split. |
 | OLS4 ChEBI graph and role lookups | Passed; `CHEBI:65331` is the direct `subClassOf` parent, `CHEBI:77518` is the `has functional parent` 2-pentanol, `CHEBI:70868` resolves to `antileishmanial agent`, and `CHEBI:76924` is a plant-metabolite role that this antimicrobial corpus correctly does not file as an `activity_roles` value. |
 | PubMed `PMID:20954722` XML fetch | Passed; resolved to the expected 2010 Journal of Natural Products paper with DOI `10.1021/np1005357`. |
-| `env -u NCBI_EMAIL uv run python scripts/search_publications.py --provider pubmed --query '"AGXDVPULWUXVDT-PCGIRMHASA-N"[All Fields] OR "CHEBI:70482"[All Fields] OR "(S)-1'\''-methylbutyl caffeate"' --limit 20 --output /tmp/s-1-methylbutyl-caffeate-pubmed-exact.jsonl` | PubMed returned one candidate, the exact source lead `PMID:20954722`. |
+| `env -u NCBI_EMAIL uv run python scripts/search_publications.py --provider pubmed --query '"AGXDVPULWUXVDT-PCGIRMHASA-N"[All Fields] OR "CHEBI:70482"[All Fields] OR "(S)-1'-methylbutyl caffeate"' --limit 20 --output /tmp/s-1-methylbutyl-caffeate-pubmed-exact.jsonl` | PubMed returned one candidate, the exact source lead `PMID:20954722`. |
 | Single-record term, reference, or history validators | Not available for this plain ChEBI-seeded generated record. The narrowest repository validators exposed by `justfile` for these concerns are the full-corpus `verify-corpus`, `worklist`, and `review-queue` checks above. |
 | `just lint` | Passed after writing this ignored report. |
 | `git diff --cached --check` | Passed after staging this ignored report. |
@@ -126,9 +126,10 @@ No blockers were found.
    `write_validated_antibiotic`.
 2. If the full text reports a source-supported organism context, add one or
    more `ActivityObservation` entries for the `Leishmania amazonensis` assay
-   with its exact value type, units, assay, and `PMID:20954722` evidence.
-   Preserve an `IC50` as an `activity_notes` detail if it cannot be represented
-   in the MIC-specific slots.
+   with its exact value type, units, assay, and `PMID:20954722` evidence. If
+   the assay reports only an `IC50`, preserve that quantitative context in a
+   representable evidence note or concrete `Discussion`; do not force it into
+   MIC-specific slots.
 3. Add `mode_of_action`, `molecular_targets`, or `causal_graphs` only if the
    paper or a follow-up primary source proves a mechanistic claim for the exact
    `CHEBI:70482` structure.
