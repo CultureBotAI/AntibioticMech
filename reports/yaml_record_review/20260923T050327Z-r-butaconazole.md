@@ -34,7 +34,7 @@ The full target YAML was read before judgement. `CHEBI:59287` resolves through
 | `just verify-corpus --summary` | Pass; 2,939 records expected and on disk, 0 missing, 0 unexpected, 0 drifted, 0 identifiers absent from `PATHS.tsv`, 0 stale lockfile rows. |
 | `just review-queue --limit 125` | Pass; `CHEBI:59287` is queued immediately after the already-reviewed `(R)-bromazine hydrochloride` row with `MECHANISM_REVIEW: mechanism is source-seeded and not curator-checked; 0 source literature lead(s), 0 record evidence item(s), 0 target(s)`. |
 | `just worklist --limit 0 --tsv /tmp/r-butaconazole-worklist.tsv` | Pass; the relevant entries were `mechanism` and `review-readiness`; the record was not queued for minted grounding, xref, multi-component, producer-candidate, activity-candidate, structure, scope, or target-evidence defects. |
-| `env -u NCBI_EMAIL uv run python scripts/search_publications.py --query '"(R)-butoconazole" OR "(R)-butaconazole" OR "1-{(2R)-4-(4-chlorophenyl)-2-[(2,6-dichlorophenyl)sulfanyl]butyl}-1H-imidazole"' --limit 20` | PubMed returned racemic butoconazole clinical, plasma, and broad in-vitro activity leads, including `PMID:30425538`, `PMID:24939312`, and `PMID:6094418`; Semantic Scholar returned HTTP 429 and was unavailable for this pass. |
+| `env -u NCBI_EMAIL uv run python scripts/search_publications.py --query '"(R)-butoconazole" OR "(R)-butaconazole" OR "1-{(2R)-4-(4-chlorophenyl)-2-[(2,6-dichlorophenyl)sulfanyl]butyl}-1H-imidazole"' --limit 20` | PubMed returned butoconazole clinical, plasma, and broad in-vitro activity leads, including `PMID:30425538`, `PMID:24939312`, and `PMID:6094418`; Semantic Scholar returned HTTP 429 and was unavailable for this pass. |
 | `env -u NCBI_EMAIL uv run python scripts/search_publications.py --query '"SWLMUYACZKCSHZ-MRXNPFEDSA-N" OR "1-{(2R)-4-(4-chlorophenyl)-2-[(2,6-dichlorophenyl)sulfanyl]butyl}-1H-imidazole"' --limit 20` | PubMed found no exact InChIKey or exact IUPAC candidates; Semantic Scholar returned HTTP 429 and was unavailable for this pass. |
 | `env -u NCBI_EMAIL uv run python scripts/search_publications.py --query 'butoconazole ERG11 CYP51 lanosterol demethylase ergosterol Candida resistance MIC' --limit 20` | PubMed found no candidate; Semantic Scholar returned HTTP 429 and was unavailable for this pass. |
 
@@ -55,10 +55,10 @@ The ChEBI import row for `CHEBI:59287` exactly matches the generated identity:
 - neutral formula `C19H17Cl3N2S` and charge `0`
 - same-structure xref `reaxys:6374956`
 
-The record denotes the neutral `(R)` enantiomer of butoconazole, not racemic
-butoconazole `CHEBI:3240`, racemic butoconazole nitrate `CHEBI:3241`, the
-opposite `(S)` enantiomer `CHEBI:59288`, the `(R)` nitrate salt `CHEBI:59289`,
-or the `(S)` nitrate salt `CHEBI:59290`. The broader racemate and salt records
+The record denotes the neutral `(R)` enantiomer of butoconazole, not broader
+butoconazole `CHEBI:3240`, butoconazole nitrate `CHEBI:3241`, the opposite
+`(S)` enantiomer `CHEBI:59288`, the `(R)` nitrate salt `CHEBI:59289`, or the
+`(S)` nitrate salt `CHEBI:59290`. The broader butoconazole and salt records
 carry DrugBank, KEGG, CAS, and other xrefs that ChEBI does not assert for the
 isolated `(R)` free base, so the generated record correctly imports only the
 one same-structure Reaxys xref from exact `CHEBI:59287`.
@@ -85,7 +85,7 @@ Existing claim evidence is narrow:
 | Claim | Evidence review |
 |---|---|
 | ChEBI identity, definition, role, parent, structure, and same-structure xref fields | Database-seeded from the `CHEBI:59287` row in `data/raw/chebi_antimicrobials.tsv`; no curator-owned literature citation is required at record level. |
-| `(R)-butaconazole` is parented to butoconazole | The ChEBI source row lists `CHEBI:3240`, the racemic butoconazole record, as the broader parent. That is a strict broader relationship, not an exact xref. |
+| `(R)-butaconazole` is parented to butoconazole | The ChEBI source row lists `CHEBI:3240`, the broader butoconazole record, as the parent. That is a strict broader relationship, not an exact xref. |
 | `ERGOSTEROL_PATHWAY_INHIBITION` and `HOST_SHARED_TARGET` | Source-seeded from ChEBI role `CHEBI:75282`; the local ChEBI row carries no PMID or DOI source-literature lead for the exact `(R)` enantiomer. |
 
 The record has no `molecular_targets`, `activity_observations`,
@@ -94,8 +94,8 @@ record-level literature `evidence` items. No existing citation is attached to a
 broader claim than it supports.
 
 The exact-label search did not find a compound-specific mechanism or antifungal
-assay for the isolated neutral `(R)` enantiomer. It returned racemic
-butoconazole or butoconazole-nitrate leads: `PMID:30425538`, a Bayesian network
+assay for the isolated neutral `(R)` enantiomer. It returned butoconazole or
+butoconazole-nitrate leads: `PMID:30425538`, a Bayesian network
 meta-analysis of vulvovaginal candidiasis clinical trials; `PMID:24939312`, a
 plasma LC-MS/MS pharmacokinetic method for butoconazole nitrate suppositories;
 and `PMID:6094418`, a 1984 relative-inhibition-factor study that tested
@@ -121,14 +121,14 @@ exact `(R)` enantiomer:
 
 The exact ChEBI source row has no PMID or DOI lead. Future activity curation
 needs primary full text or another exact source before copying MIC values,
-clinical-use claims, or sterol-demethylase mechanism details from racemic
-butoconazole or racemic butoconazole nitrate onto isolated `(R)-butoconazole`.
+clinical-use claims, or sterol-demethylase mechanism details from broader
+butoconazole or butoconazole nitrate records onto isolated `(R)-butoconazole`.
 
 ## Findings
 
 | Severity | Finding | Maintained owner |
 |---|---|---|
-| major | `mode_of_action` and `mode_of_action_target_scope` are still source-seeded rather than curator-checked, and the record has no `molecular_targets`, `activity_observations`, or `causal_graphs`. ChEBI asserts `CHEBI:75282` for exact `CHEBI:59287`, but the local ChEBI row carries no source PMID/DOI and the bounded PubMed searches found only racemic butoconazole or butoconazole-nitrate leads rather than exact `(R)-butoconazole` mechanism evidence. | Curator-owned additions in `data/antibiotics/antifungal/r-butaconazole.yaml`, written through `record_curation_event` and `write_validated_antibiotic`; if ChEBI later changes this term's role or source xrefs, the ChEBI inventory extractor owns that refresh. |
+| major | `mode_of_action` and `mode_of_action_target_scope` are still source-seeded rather than curator-checked, and the record has no `molecular_targets`, `activity_observations`, or `causal_graphs`. ChEBI asserts `CHEBI:75282` for exact `CHEBI:59287`, but the local ChEBI row carries no source PMID/DOI and the bounded PubMed searches found only broader butoconazole or butoconazole-nitrate leads rather than exact `(R)-butoconazole` mechanism evidence. | Curator-owned additions in `data/antibiotics/antifungal/r-butaconazole.yaml`, written through `record_curation_event` and `write_validated_antibiotic`; if ChEBI later changes this term's role or source xrefs, the ChEBI inventory extractor owns that refresh. |
 
 No blockers or minor findings were found.
 
@@ -137,8 +137,8 @@ No blockers or minor findings were found.
 1. Inspect ChEBI's upstream provenance for `CHEBI:59287` and decide whether the
    exact `(R)` enantiomer has primary literature behind its
    `CHEBI:75282` role.
-2. Inspect racemic butoconazole and butoconazole-nitrate antifungal leads only
-   as parent and salt follow-up. Curate them to `CHEBI:3240`, `CHEBI:3241`,
+2. Inspect butoconazole and butoconazole-nitrate antifungal leads only as
+   parent and salt follow-up. Curate them to `CHEBI:3240`, `CHEBI:3241`,
    `CHEBI:59289`, or another exact record only if the source compound form is
    explicit.
 3. Replace or confirm the source-seeded `mode_of_action` only if primary text
