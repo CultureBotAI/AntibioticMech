@@ -19,7 +19,7 @@
 | Maintained owner | Generated from `data/raw/chebi_antimicrobials.tsv`; do not hand-edit the generated YAML |
 | Source concept | CHEBI / CHEBI:37907 / `antibioticmech:chebi-cf7fff59b7` |
 
-The entire target YAML was read before judging the record. The generated record contains seeded ChEBI identity, role, structure, `beilstein:7084298`, and source-concept fields only: it has no `mode_of_action`, `mode_of_action_target_scope`, `molecular_targets`, `activity_observations`, `resistance_mechanisms`, `producer_organisms`, `causal_graphs`, `datasets`, `discussions`, or record-level `evidence`.
+The entire target YAML was read before judging the record. The generated record contains seeded ChEBI identity, role, structure, `beilstein:7084298`, and source-concept fields only: it has no `mode_of_action`, `mode_of_action_target_scope`, `molecular_targets`, `activity_spectrum`, `resistance_mechanisms`, `producer_organisms`, `causal_graphs`, `datasets`, `discussions`, or record-level `evidence`.
 
 ## Validation
 
