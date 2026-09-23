@@ -40,6 +40,7 @@ mechanism, activity observation, producer, discussion, dataset, or causal graph.
 | `just review-queue --limit 110` | Pass: `CHEBI:67373` is the next queued record after the already-reviewed `(R)-mandelic acid`; its row says `MECHANISM_REVIEW: mechanism is absent; 1 source literature lead(s), 0 record evidence item(s), 0 target(s)`. |
 | `just lint` | Pass: `ruff check .` reported `All checks passed!`. |
 | `git diff --check` | Pass: no whitespace errors before writing this report. |
+| `git diff --cached --check` | Pass: no whitespace errors in the staged single-report diff. |
 
 No narrower single-record term, reference, or history validator is exposed for
 this ChEBI-seeded record; the schema/strict checks, `verify-corpus`, and
@@ -179,6 +180,7 @@ After any exact-term curation or source refresh, rerun:
 5. `just review-queue --limit 110`
 6. `just lint`
 7. `git diff --check`
+8. `git diff --cached --check`
 
 Manually compare future activity curation against the full Wu, Peng, Chen, and
 Tsai table to confirm that an activity observation has been attached to the
