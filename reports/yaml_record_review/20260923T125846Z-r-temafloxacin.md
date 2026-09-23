@@ -3,7 +3,7 @@
 - Repository: CultureBotAI/AntibioticMech
 - Record: data/antibiotics/antibacterial/r-temafloxacin.yaml
 - Started UTC: 2026-09-23T12:58:46Z
-- Finished UTC: 2026-09-23T12:59:11Z
+- Finished UTC: 2026-09-23T13:01:45Z
 - Verdict: needs curation
 
 ## Target
