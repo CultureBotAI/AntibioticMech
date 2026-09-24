@@ -128,9 +128,10 @@ Consequential gaps:
   `molecular_targets`, and `causal_graphs` are absent, so the record has no
   curator-owned antiprotozoal mechanism.
 - `producer_organisms` is absent despite source PMIDs naming *Vinca difformis*,
-  *Vinca minor*, *Alstonia spatulata*, and *Kopsia arborea* as
-  exact-compound plant-source leads and the ChEBI definition specifically
-  mentioning *Alstonia spatulata*.
+  *Vinca minor*, *Alstonia spatulata*, and *Kopsia arborea* as vincadifformine
+  plant-source leads and the ChEBI definition specifically mentioning
+  *Alstonia spatulata*. Full-text review is still needed before any lead can be
+  promoted to an exact `(−)-vincadifformine` producer assertion.
 
 Correctly empty optional slots:
 
