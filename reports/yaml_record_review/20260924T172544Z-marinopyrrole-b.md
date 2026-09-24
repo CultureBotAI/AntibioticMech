@@ -38,7 +38,7 @@ sibling, and the already-merged marinopyrrole A review, with no prior exact
 | `just validate-strict data/antibiotics/antibacterial/marinopyrrole-b.yaml --out /tmp/marinopyrrole-b-validate-strict.tsv` | Pass: 1 file scanned, 0 files with `ERROR`, 0 total `ERROR` rows. |
 | `just verify-corpus --summary` | Pass: 2,939 records expected and present; 0 missing, unexpected, or drifted records; 0 `PATHS.tsv` discrepancies. The only diagnostic was the known unrelated `iclaprim`/`CHEBI:31724` CARD cross-reference refusal. |
 | `just worklist --limit 0 --tsv /tmp/antibioticmech-worklist.tsv` | Pass: wrote the full TSV. `CHEBI:66679` appears on `mechanism` and `review-readiness` only. |
-| `just review-queue --limit 0 --tsv /tmp/antibioticmech-review-queue.tsv` | Pass: regenerated the full `review-readiness` queue and listed `CHEBI:66679` as `MECHANISM_REVIEW: mechanism is absent; 2 source literature leads, 0 record evidence items, 0 targets`. |
+| `just review-queue --limit 0 --tsv /tmp/antibioticmech-review-queue.tsv` | Pass: regenerated the full `review-readiness` queue and listed `CHEBI:66679` as `MECHANISM_REVIEW: mechanism is absent; 2 source literature leads, 0 record evidence items, 0 targets`; this queue counter checks top-level record `evidence` and does not include nested MIBiG producer evidence. |
 | ChEBI OLS4 lookups for `CHEBI:66679` | Pass: the official term, direct parents, and direct `has role` relations resolve and agree with the generated identity, structure, parent, Reaxys xref, and antimicrobial role fields. |
 | NCBI EFetch for ChEBI PMIDs plus `PMID:22800473` | Pass: resolved all three inspected PubMed identifiers and their DOIs. |
 | MIBiG `BGC0001159.5/annotations.json` | Pass: resolved the official active MIBiG `BGC0001159` version 5 payload that backs the imported producer row. |
@@ -95,7 +95,7 @@ molecular target, no activity observation, and no causal graph.
 The full worklist places this identifier only on:
 
 - `mechanism`: absent mode of action, with `0 CARD target(s), 0 resistance edge(s) to build on`
-- `review-readiness`: `MECHANISM_REVIEW`, with 2 source literature leads, 0 record evidence items, and 0 targets
+- `review-readiness`: `MECHANISM_REVIEW`, with 2 source literature leads, 0 top-level record evidence items, and 0 targets
 
 The same complete worklist has no exact `CHEBI:66679` row for
 `target-evidence`, `minted`, `unknown-mech`, `moa-scope`, `aro-class`,
@@ -105,9 +105,10 @@ The same complete worklist has no exact `CHEBI:66679` row for
 
 An NCBI PubMed title/abstract search for the exact phrase `"marinopyrrole B"`
 found 3 papers on 2026-09-24: the original discovery paper, a first-synthesis
-paper for racemic marinopyrrole B, and an in silico human wMUS81 paper. The
-search confirms that the exact abstract-visible marinopyrrole B literature is
-narrow and does not add a source-backed antimicrobial target candidate.
+paper for racemic marinopyrrole B, and a wMUS81 docking study. Together with
+the 2 ChEBI-seeded PubMed leads above, this exact abstract-visible check found
+no source-backed antimicrobial target candidate, but it is not a substitute for
+a future full-text mechanism search.
 
 Empty slots for `mode_of_action`, `mode_of_action_target_scope`,
 `molecular_targets`, `activity_spectrum`, `resistance_mechanisms`,
