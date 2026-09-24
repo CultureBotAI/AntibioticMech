@@ -45,7 +45,7 @@ record-level evidence, curated `mode_of_action`, `mode_of_action_target_scope`,
 | ChEBI page lookup for `CHEBI:63687` | Passed; current ChEBI agreed with the generated label, 3-star status, definition, IUPAC synonym, formula, charge, average mass, monoisotopic mass, SMILES, Standard InChI, Standard InChIKey, LINCS xref, CAS number, Reaxys registry number, `CHEBI:38068` antimalarial role, `CHEBI:63681` parent, and `CHEBI:63684` opposite-enantiomer relation. |
 | PubMed/Semantic Scholar search for `CHEBI:63687`, `XEEQGYMUWCZPDN-DOMZBBRYSA-N`, `51742-87-1`, `5629059`, and `(-)-Mefloquine` | Partial pass; PubMed returned 20 mostly generic mefloquine leads, while Semantic Scholar returned an invalid response. |
 | PubMed/Semantic Scholar search for `(11S,2'R)-erythro-mefloquine OR (-)-mefloquine Plasmodium mechanism` | Partial pass; PubMed returned 0 candidates, while Semantic Scholar returned HTTP 429. |
-| PubMed/Semantic Scholar exact-identifier search for `CHEBI:63687`, `XEEQGYMUWCZPDN-DOMZBBRYSA-N`, `51742-87-1`, `5629059`, and `"(11S,2R)-2,8-bis"` | Partial pass; PubMed returned one unrelated `PMID:5629059` false positive caused by the numeric Reaxys registry number, while Semantic Scholar returned an invalid response. |
+| PubMed/Semantic Scholar exact-identifier search for `CHEBI:63687`, `XEEQGYMUWCZPDN-DOMZBBRYSA-N`, `51742-87-1`, `5629059`, `"(11S,2'R)-2,8-bis"`, and the full ChEBI IUPAC synonym | Partial pass; PubMed returned one unrelated `PMID:5629059` false positive caused by the numeric Reaxys registry number, while corrected-locant PubMed searches for the stereochemical phrase and full IUPAC synonym each returned 0 candidates. Semantic Scholar returned an invalid response. |
 | Reaxys xref `5629059` | Not independently checked: ChEBI lists this Reaxys registry number on exact `CHEBI:63687`, but Reaxys had no public resolver available in this workflow. |
 
 No separate focused term, reference, or history validator is exposed in
@@ -87,7 +87,8 @@ hidden files.
 
 The bounded publication searches did not resolve a primary mechanism or target
 for exact `CHEBI:63687`. The broad identity query returned generic recent
-mefloquine leads, and the exact identifier query returned only unrelated
+mefloquine leads, the corrected-locant exact synonym searches returned no
+candidates, and the exact identifier query returned only unrelated
 `PMID:5629059`, a false positive from the bare Reaxys registry number matching
 a PubMed identifier.
 
