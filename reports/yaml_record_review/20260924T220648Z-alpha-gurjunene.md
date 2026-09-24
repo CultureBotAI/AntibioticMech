@@ -105,8 +105,9 @@ Bounded PubMed searches:
   gurjunene constituent, but no public title or abstract that exposed an
   isolated exact `(−)-α-gurjunene` MIC or mechanism ready to curate.
 - The PubMed xref query dropped the InChIKey stem, CAS number, and MetaCyc ID
-  as quoted phrases not found and searched only `C19734`; it returned four
-  PMIDs and did not materially narrow the exact-compound search.
+  as quoted phrases not found and searched only `C19734`; its four PMIDs were
+  off-target human transcription, signaling, or promoter-methods records from
+  2007-2010 with no `gurjunene` mention in their public titles or abstracts.
 
 ## Completeness
 
