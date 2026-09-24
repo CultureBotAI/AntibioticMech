@@ -85,7 +85,7 @@ Checked exact xrefs:
 | Xref | Check |
 |---|---|
 | `kegg.compound:C09875` | KEGG names `(R)-(-)-alpha-Phellandrene`, formula `C10H16`, and DB links to `ChEBI: 301`, `LIPIDMAPS: LMPR0102090021`, and `KNApSAcK: C00003051`. |
-| `knapsack:C00003051` | KNApSAcK resolves `C00003051` to `alpha-Phellandrene`, formula `C10H16`, and the same stereospecific Standard InChI; its page uses the broad CAS `99-83-2`. |
+| `knapsack:C00003051` | KNApSAcK resolves `C00003051` to `alpha-Phellandrene`, formula `C10H16`, and the same stereospecific Standard InChI, but its page displays mismatched InChIKey `OGLDWXZKYODSOB-UEQNJFAPNA-N` and broad CAS `99-83-2`. |
 | `lipidmaps:LMPR0102090021` | LIPID MAPS resolves `LMPR0102090021` to `(R)-(-)-alpha-Phellandrene`, formula `C10H16`, KEGG `C09875`, ChEBI `301`, and the same Standard InChIKey. |
 | `cas:4221-98-1` | Present on official ChEBI and KEGG for exact `CHEBI:301`; the CAS Common Chemistry public page returned an application-shell detail error and its API returned `401`, so it was not independently verified. |
 | `beilstein:2497824`, `beilstein:5239645`, `reaxys:4290853` | Present on official ChEBI; not independently checked because Beilstein/Reaxys are not publicly resolvable identifier registries. |
