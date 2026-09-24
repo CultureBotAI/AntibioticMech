@@ -1,8 +1,8 @@
-# YAML Record Review: (-)-marinopyrrole A
+# YAML Record Review: (−)-marinopyrrole A
 
 - Repository: `CultureBotAI/AntibioticMech`
 - Record: `data/antibiotics/antibacterial/marinopyrrole-a.yaml`
-- Started UTC: 2026-09-24T16:46:33Z
+- Started UTC: 2026-09-24T16:44:43Z
 - Finished UTC: 2026-09-24T16:47:15Z
 - Verdict: needs curation
 
@@ -11,7 +11,7 @@
 | Field | Value |
 | --- | --- |
 | Identifier | `CHEBI:66678` |
-| Label | `(-)-marinopyrrole A` |
+| Label | `(−)-marinopyrrole A` |
 | Path | `data/antibiotics/antibacterial/marinopyrrole-a.yaml` |
 | Class | `ANTIBACTERIAL` |
 | Curation status | `SEEDED` |
@@ -42,6 +42,7 @@ prior `marinopyrrole-a` review report or duplicate `CHEBI:66678` record.
 | ChEBI OLS4 lookups for `CHEBI:66678` | Pass: the official term, direct parents, and direct `has role` relations resolve and agree with the generated identity, structure, parent, Reaxys xref, and antimicrobial role fields. |
 | NCBI EFetch for ChEBI PMIDs plus `PMID:22800473` | Pass: resolved all seven inspected PubMed identifiers and their DOIs. |
 | MIBiG `BGC0001159.5/annotations.json` | Pass: resolved the official active MIBiG `BGC0001159` version 5 payload that backs the imported producer row. |
+| NCBI Taxonomy EFetch for `NCBITaxon:467194` | Pass: resolved taxon `467194` as species-rank `Streptomyces sp. CNQ-418` in the Bacteria division. |
 
 No narrower single-record term, reference, or history validator is exposed for
 plain generated ChEBI/MIBiG records. The full-corpus `worklist` and
@@ -51,12 +52,12 @@ concerns.
 ## Identity and Grounding
 
 The YAML denotes one exact, ChEBI-grounded structure: neutral
-`(-)-marinopyrrole A`, the tetrachloro bipyrrole natural product with Standard
+`(−)-marinopyrrole A`, the tetrachloro bipyrrole natural product with Standard
 InChIKey `QYPJBTMRYKRTFG-UHFFFAOYSA-N`.
 
 | Claim | Review |
 | --- | --- |
-| ChEBI identity | The official OLS4 exact lookup for `CHEBI:66678` returned one ChEBI class labelled `(-)-marinopyrrole A`, matching the YAML label apart from Unicode minus normalization. |
+| ChEBI identity | The official OLS4 exact lookup for `CHEBI:66678` returned one ChEBI class labelled `(-)-marinopyrrole A`, matching the YAML label apart from minus-glyph normalization. |
 | Structure | OLS4, `data/raw/chebi_antimicrobials.tsv`, and the YAML agree on SMILES `O=C(c1ccccc1O)c1nc(Cl)c(Cl)c1-n1c(C(=O)c2ccccc2O)cc(Cl)c1Cl`, Standard InChI `InChI=1S/C22H12Cl4N2O4/c23-12-9-13(19(31)10-5-1-3-7-14(10)29)28(22(12)26)18-16(24)21(25)27-17(18)20(32)11-6-2-4-8-15(11)30/h1-9,27,29-30H`, Standard InChIKey `QYPJBTMRYKRTFG-UHFFFAOYSA-N`, formula `C22H12Cl4N2O4`, neutral charge, average mass `510.16`, and monoisotopic mass `507.95512`. |
 | Synonym | OLS4 and the raw ChEBI row report the same exact IUPAC synonym retained in the record: `(4,4',5,5'-tetrachloro-1'H-1,3'-bipyrrole-2,2'-diyl)bis[(2-hydroxyphenyl)methanone]`. |
 | ChEBI parents | The OLS4 parent lookup returns exactly the four broader classes in `parent_compounds`: `CHEBI:26455` pyrroles, `CHEBI:33853` phenols, `CHEBI:36683` organochlorine compound, and `CHEBI:76224` aromatic ketone. |
