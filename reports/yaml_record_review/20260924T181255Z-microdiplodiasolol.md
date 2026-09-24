@@ -37,7 +37,7 @@ target YAML, and current branch checkout log, with no prior exact
 | `just validate-strict data/antibiotics/antibacterial/microdiplodiasolol.yaml --out /tmp/microdiplodiasolol-validate-strict.tsv` | Pass: 1 file scanned, 0 files with `ERROR`, 0 total `ERROR` rows. |
 | `just verify-corpus --summary` | Pass: 2,939 records expected and present; 0 missing, unexpected, or drifted records; 0 `PATHS.tsv` discrepancies. The only diagnostic was the known unrelated `iclaprim`/`CHEBI:31724` CARD cross-reference refusal. |
 | `just worklist --limit 0 --tsv /tmp/antibioticmech-worklist.tsv` | Pass: wrote the full TSV. `CHEBI:68285` appears on `mechanism`, `producer-candidate`, and `review-readiness`. |
-| `just review-queue --limit 0 --tsv /tmp/antibioticmech-review-queue.tsv` | Pass: regenerated the full `review-readiness` queue and listed `CHEBI:68285` as `MECHANISM_REVIEW: mechanism is absent; 1 source literature lead, 0 record evidence items, 0 targets`. |
+| `just review-queue --limit 0 --tsv /tmp/antibioticmech-review-queue.tsv` | Pass: regenerated the full `review-readiness` queue and listed `CHEBI:68285` as `MECHANISM_REVIEW: mechanism is absent; 1 source literature lead(s), 0 record evidence item(s), 0 target(s)`. |
 | ChEBI OLS4 lookups for `CHEBI:68285` | Pass: the official exact search, term lookup, direct parent lookup, and direct `has role` lookup resolve and agree with the generated identity, structure, parent, Reaxys xref, and antibacterial role fields. |
 | NCBI EFetch for `PMID:21244021` | Pass: resolved the ChEBI literature lead and its DOI. |
 | NCBI PubMed ESearch | Pass: exact `microdiplodiasolol` title/abstract search found 0 rows on 2026-09-24; broader `Microdiplodia` title/abstract search found 12 rows, including `PMID:21244021`. |
@@ -99,10 +99,9 @@ An NCBI PubMed title/abstract search for the exact phrase
 `"microdiplodiasolol"` found 0 rows on 2026-09-24, which means ChEBI's own
 `PMID:21244021` lead cannot be rediscovered from PubMed title/abstract
 metadata by exact record label. A broader `Microdiplodia` title/abstract search
-found 12 rows, including the ChEBI lead. That is enough to flag
-`PMID:21244021` as the most direct starting point for a full-text check, but
-not enough to add a schema-ready activity or producer observation from the
-abstract alone.
+found 12 rows, including the ChEBI lead; that genus-level context is useful for
+bounded rediscovery only, not as compound-specific evidence for a schema-ready
+activity or producer observation.
 
 Empty slots for `mode_of_action`, `mode_of_action_target_scope`,
 `molecular_targets`, `activity_observations`, `resistance_mechanisms`,
@@ -115,12 +114,10 @@ definition text.
 
 | Severity | Finding | Evidence | Maintained owner |
 | --- | --- | --- | --- |
-| Major | The record still needs compound-specific mechanism and activity review before it can become `REVIEWED`. | The YAML has no `mode_of_action`, no molecular targets, no activity observations, and no causal graph. `just worklist` keeps `CHEBI:68285` on `mechanism` and `review-readiness` even though ChEBI supplies `PMID:21244021` as a source literature lead. The PubMed abstract for that lead supports the Microdiplodia natural-products context but does not expose a compound-specific MIC, molecular target, or mode of action for `(−)-microdiplodiasolol`. | Future curator-owned fields on `data/antibiotics/antibacterial/microdiplodiasolol.yaml`, written through `record_curation_event` and `write_validated_antibiotic`. |
-| Major | The genus-level producer lead needs full-text confirmation before `producer_organisms` can be populated. | `just worklist` places `CHEBI:68285` on `producer-candidate` because the ChEBI definition says the compound was isolated from `Microdiplodia species`, and `PMID:21244021` resolves to a paper about metabolites from an endophytic `Microdiplodia sp.`. The abstract does not expose an NCBITaxon-resolvable species, strain, or enough source context for a schema-ready producer claim. | Future curator-owned `producer_organisms` rows on `data/antibiotics/antibacterial/microdiplodiasolol.yaml`, written through `record_curation_event` and `write_validated_antibiotic`. |
+| Major | The record still needs compound-specific mechanism review before it can become `REVIEWED`. | The YAML has no `mode_of_action`, no molecular targets, no activity observations, and no causal graph. `just worklist` keeps `CHEBI:68285` on `mechanism` and `review-readiness` even though ChEBI supplies `PMID:21244021` as a source literature lead. The PubMed abstract for that lead supports the Microdiplodia natural-products context but does not expose a compound-specific MIC, molecular target, or mode of action for `(−)-microdiplodiasolol`. | Future curator-owned fields on `data/antibiotics/antibacterial/microdiplodiasolol.yaml`, written through `record_curation_event` and `write_validated_antibiotic`. |
+| Minor | The genus-level producer lead should be checked before any optional `producer_organisms` row is added. | `just worklist` places `CHEBI:68285` on `producer-candidate` because the ChEBI definition says the compound was isolated from `Microdiplodia species`, and `PMID:21244021` resolves to a paper about metabolites from an endophytic `Microdiplodia sp.`. The abstract does not expose an NCBITaxon-resolvable species, strain, or enough source context for a schema-ready producer claim, so leaving the optional producer slot empty is honest until full-text inspection. | Future curator-owned `producer_organisms` rows on `data/antibiotics/antibacterial/microdiplodiasolol.yaml`, written through `record_curation_event` and `write_validated_antibiotic`. |
 
 No blocker findings found.
-
-No minor findings found.
 
 ## Recommended Edits
 
