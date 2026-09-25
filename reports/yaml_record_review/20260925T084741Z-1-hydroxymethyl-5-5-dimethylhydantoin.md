@@ -44,7 +44,7 @@ Resolution:
 | `just worklist --limit 0 --tsv /tmp/antibioticmech-chebi-143246-worklist.tsv` | Passed after the known unrelated CARD diagnostic; exact `CHEBI:143246` rows appear only in `mechanism` and `review-readiness`. |
 | `just review-queue --limit 0 --tsv /tmp/antibioticmech-review-queue.tsv` | Passed and confirmed that `CHEBI:143246` remains queued for absent mechanism evidence with one source literature lead, zero record evidence items, and zero targets. |
 | `uv run runoak -i ols:chebi labels CHEBI:143246 CHEBI:33281 CHEBI:24628 CHEBI:73080` | Passed: OLS resolved the exact compound, the generic antimicrobial role, and both parent terms to `1-(hydroxymethyl)-5,5-dimethylhydantoin`, `antimicrobial agent`, `imidazolidine-2,4-dione`, and `hemiaminal`. |
-| OLS4 term lookups for `CHEBI:143246` and `CHEBI:33281` | Passed: exact `CHEBI:143246` is current, ChEBI-defining, 3-star, and carries the same structure annotations and xrefs as the generated record; its live `RO:0000087` / `has role` relation returns only `CHEBI:33281` / `antimicrobial agent`. |
+| OLS4 term lookups for `CHEBI:143246` and `CHEBI:33281` | Passed: exact `CHEBI:143246` is current, ChEBI-defining, 3-star, and carries matching structure annotations and generated chemical xrefs; its `pubmed:22633837` cross-reference is captured locally as the ChEBI literature lead, and its live `RO:0000087` / `has role` relation returns only `CHEBI:33281` / `antimicrobial agent`. |
 | PubChem property lookup for CID `67000` | Passed: PubChem reports the same formula `C6H10N2O3`, charge `0`, InChI, InChIKey `SIQZJFKTROUNPI-UHFFFAOYSA-N`, and IUPAC name as the ChEBI-seeded record. |
 
 No narrower single-record reference, term, or curation-history validator is
