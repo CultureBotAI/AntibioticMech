@@ -189,7 +189,9 @@ No blocker findings were found.
 - The exact PubMed label, CHEBI CURIE, and InChIKey searches are useful
   bounded discovery checks only; the review report above relies on ChEBI,
   PubChem, NCBI Taxonomy, and the 2007 `Microtropis fokienensis` primary-paper
-  metadata for its identity, source, and activity judgements.
+  metadata for its identity, source, and broad cohort-level activity context.
+  Exact `CHEBI:65774` activity remains unverified until the ACS full-text table
+  is inspected.
 - ChEBI records `Microtropis fokienensis` root metadata with
   `NCBITaxon:1089417`, `BTO:0001188`, and `PMID:17315960`, but the seeded YAML
   correctly omits `producer_organisms` until a curator accepts that isolation
