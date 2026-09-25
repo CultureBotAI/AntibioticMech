@@ -126,11 +126,13 @@ assertion, or exact microbial biosynthesis claim for `CHEBI:141405`.
    *Pseudomonas syringae* pv. tomato and direct in vitro inactivity, not a
    microbial MIC.
 
-2. If a future curator models the antimicrobial effect, represent it as
-   host-plant defense activation rather than as direct fungal killing. Any
-   `mode_of_action: OTHER`, target, or causal graph would need primary evidence
-   on the relevant plant defense node and should avoid asserting an unknown
-   fungal molecular target.
+2. If full text confirms that the antimicrobial effect is solely plant-mediated,
+   use a `Discussion` to record that curation gap unless there is a
+   schema-supported way to model a crop-host defense node. Do not force the
+   effect into `mode_of_action`, `mode_of_action_target_scope`, or
+   `molecular_targets` unless primary evidence supports a direct microbial
+   target or a future schema pattern explicitly represents plant-mediated
+   protection.
 
 3. Re-check the live ChEBI `CHEBI:73182` / plant activator role after the next
    ChEBI extraction. It is correctly absent from the current local
