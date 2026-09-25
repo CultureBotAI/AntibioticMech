@@ -36,7 +36,7 @@ The full 50-line YAML record was read. It is a generated ChEBI-only seed with:
 | `just review-queue --limit 0 --tsv /tmp/antibioticmech-review-queue.tsv` | Passed; wrote 2,859 review-readiness rows. The target is row 161 with `MECHANISM_REVIEW: mechanism is absent; 1 source literature lead(s), 0 record evidence item(s), 0 target(s)`. |
 | `just worklist --queue mechanism --limit 0 --tsv /tmp/antibioticmech-mechanism-queue.tsv` | Passed; wrote 2,848 rows. The target is row 467 with `0 CARD target(s), 0 resistance edge(s) to build on`. |
 | `just worklist --queue activity-candidate --limit 0 --tsv /tmp/antibioticmech-activity-candidate-queue.tsv` | Passed; wrote 496 rows. `CHEBI:65736` is absent from this queue. |
-| `just worklist --queue producer-candidate --limit 0 --tsv /tmp/antibioticmech-producer-candidate-queue.tsv` | Passed; wrote 965 rows. The target is row 190 because the ChEBI definition says it was isolated from *Geissospermum sericeum*, a plant source lead only. |
+| `just worklist --queue producer-candidate --limit 0 --tsv /tmp/antibioticmech-producer-candidate-queue.tsv` | Passed; wrote 965 rows. The target is row 190 because the ChEBI definition says it was isolated from *Geissospermum sericeum*, which is source context but not direct biosynthesis evidence. |
 | `just validate data/antibiotics/antiprotozoal/1-2-dehydrogeissoschizoline.yaml` | Passed with `No issues found`. |
 | `just validate-strict data/antibiotics/antiprotozoal/1-2-dehydrogeissoschizoline.yaml --out /tmp/dehydrogeissoschizoline-65736-validate-strict.tsv` | Passed; one file scanned, zero `ERROR` rows. |
 | `just verify-corpus --summary` | Passed after the same unrelated `iclaprim` diagnostic; 2,939 records expected, 2,939 on disk, and no missing, unexpected, drifted, absent-from-`PATHS.tsv`, or stale-lockfile rows. |
@@ -132,8 +132,9 @@ The current record is a faithful ChEBI seed, but it is not complete enough for
 - The exact identity, ChEBI grounding, source concept, structure, class, and
   antiplasmodial role are supported.
 - Leaving `producer_organisms` empty is correct. The inspected source and live
-  ChEBI page say the compound was isolated from bark of the plant
-  *Geissospermum sericeum*, not that a microbe biosynthesizes it.
+  ChEBI page say the compound was isolated from bark of
+  *Geissospermum sericeum*, not that the plant, an endophyte, or another
+  organism is experimentally shown to biosynthesize it.
 - The source lead appears to contain direct antiplasmodial IC50 data, but the
   table has not been inspected and the current `ActivityObservation` numeric
   slots are MIC-specific. A curator should not coerce an IC50 into `mic_value`.
@@ -164,8 +165,9 @@ The current record is a faithful ChEBI seed, but it is not complete enough for
    in `strain`, the assay context, and `EvidenceItem.reference: PMID:11809075`.
    Preserve the IC50 values in evidence notes only if no first-class IC50 fields
    exist.
-4. Treat *Geissospermum sericeum* as source-of-isolation context only. Do not add
-   it to `producer_organisms`.
+4. Treat *Geissospermum sericeum* as source-of-isolation context only unless a
+   source demonstrates biosynthesis. Do not add it to `producer_organisms` from
+   this isolation statement alone.
 
 ## Follow-up Checks
 
