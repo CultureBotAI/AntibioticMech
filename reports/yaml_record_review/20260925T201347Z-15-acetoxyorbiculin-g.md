@@ -29,12 +29,12 @@ lead `PMID:18471021`; the emitted `source_concepts` entry records the
 ChEBI identity, minted identifier, role term, and source version.
 
 Ignored-file-inclusive searches covered report Markdown under
-`reports/yaml_record_review` plus YAML/TSV files under `curation` and `data`,
-including all `data/antibiotics` record YAML. They covered the identifier
-`CHEBI:65364`, exact label `15-acetoxyorbiculin G`, InChIKey
-`YOWBCRNBOMRTPW-NPIRVHPYSA-N`, minted identifier
-`antibioticmech:chebi-d8d395979b`, and path slug
-`15-acetoxyorbiculin-g`, and found only:
+`reports/yaml_record_review` plus YAML/TSV files under `curation`, `data/raw`,
+and `data/antibiotics`, including all `data/antibiotics` record YAML. They
+covered the identifier `CHEBI:65364`, exact label `15-acetoxyorbiculin G`,
+InChIKey `YOWBCRNBOMRTPW-NPIRVHPYSA-N`, minted identifier
+`antibioticmech:chebi-d8d395979b`, and path slug `15-acetoxyorbiculin-g`, and
+found only:
 
 - the active review queue row in `curation/record_review_queue.tsv`;
 - the raw ChEBI row in `data/raw/chebi_antimicrobials.tsv`;
