@@ -110,7 +110,7 @@ mechanism, target, activity, resistance, producer, or causal-graph claim.
 
 | ID | Severity | Finding | Maintained owner |
 |---|---|---|---|
-| F1 | Major | The record has an exact ChEBI identity and generic ChEBI antibacterial role but no exact primary source for antimicrobial activity, mechanism, or a molecular target. Exact PubMed searches for the InChIKey and ChEBI structural synonyms found no hits, and the `1β-methylcarbapenem` literature leads visible in PubMed describe substituted derivative series or named derivatives rather than exact `CHEBI:46764`. | Future curator-owned `mode_of_action`, `molecular_targets`, `activity_spectrum`, and optional `discussions` on `data/antibiotics/antibacterial/1β-methylcarbapenem.yaml`, written through `write_validated_antibiotic`; if an exhaustive exact search proves the ChEBI role is scaffold-only, `curation/decisions.tsv` should exclude `antibioticmech:chebi-fe486ebf7b`. |
+| F1 | Major | The record has an exact ChEBI identity and generic ChEBI antibacterial role but no local exact primary source for antimicrobial activity, mechanism, or a molecular target. Exact PubMed searches for the InChIKey and ChEBI structural synonyms found no hits, and the `1β-methylcarbapenem` literature leads visible in PubMed describe substituted derivative series or named derivatives rather than exact `CHEBI:46764`. | Future curator-owned `mode_of_action`, `molecular_targets`, `activity_spectrum`, and optional `discussions` on `data/antibiotics/antibacterial/1β-methylcarbapenem.yaml`, written through `write_validated_antibiotic`; if an exhaustive exact search proves the ChEBI role is scaffold-only, `curation/decisions.tsv` should exclude `antibioticmech:chebi-fe486ebf7b`. |
 
 No blocker findings were found.
 
