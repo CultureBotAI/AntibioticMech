@@ -47,7 +47,7 @@ The full 82-line YAML record was read. It is a generated ChEBI-only seed with:
 | Check | Result |
 |---|---|
 | `just review-queue --limit 0 --tsv /tmp/antibioticmech-review-queue.tsv` | Passed; wrote 2,859 review-readiness rows. The target is row 163 with `MECHANISM_REVIEW: mechanism is absent; 7 source literature lead(s), 0 record evidence item(s), 0 target(s)`. |
-| `just worklist --queue mechanism --limit 0 --tsv /tmp/antibioticmech-mechanism-queue.tsv` | Passed; `CHEBI:140779` is absent from this queue. |
+| `just worklist --queue mechanism --limit 0 --tsv /tmp/antibioticmech-mechanism-queue.tsv` | Passed; the target is row 469 with `0 CARD target(s), 0 resistance edge(s) to build on`. |
 | `just worklist --queue activity-candidate --limit 0 --tsv /tmp/antibioticmech-activity-candidate-queue.tsv` | Passed; `CHEBI:140779` is absent from this queue. |
 | `just worklist --queue producer-candidate --limit 0 --tsv /tmp/antibioticmech-producer-candidate-queue.tsv` | Passed; `CHEBI:140779` is absent from this queue. |
 | `just worklist --queue xref-unverified --limit 0 --tsv /tmp/antibioticmech-xref-unverified-queue.tsv` | Passed; `CHEBI:140779` is absent from this queue. |
