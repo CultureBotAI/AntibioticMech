@@ -29,9 +29,10 @@ The record has no record-level `evidence`, `molecular_targets`,
 
 The ignored-file-inclusive exact search covered `reports/yaml_record_review`,
 `data`, and `curation` for `CHEBI:66671`, the exact ChEBI label, the path stem,
-and an ASCII `1b-hydroxymaprounic` spelling; it found no prior review report
-and only the generated record, `data/antibiotics/PATHS.tsv`, the raw ChEBI row,
-and `curation/record_review_queue.tsv`.
+and an ASCII `1b-hydroxymaprounic` spelling; it found no prior review report.
+The maintained record-specific hits outside generated embedding inventories were
+the generated record, `data/antibiotics/PATHS.tsv`, the raw ChEBI row, and
+`curation/record_review_queue.tsv`.
 
 ## Validation
 
