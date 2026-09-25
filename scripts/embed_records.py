@@ -32,8 +32,9 @@ Output (data/embeddings/, vectors gitignored — large and rebuildable):
   ids.json          the N record identifiers, in row order
   meta.json         {model, dim, count, normalized, text_mode}
 
-  just embed                          # whole corpus (~2,900 records, seconds)
-  python3 scripts/embed_records.py --limit 20 --model BAAI/bge-large-en-v1.5
+Generation is retired; use docs/TEXT_MAP_INPUTS.md and the shared locked
+runtime in conf/embedding-runtime/README.md. This module retains the
+domain document builder and --dry-run preview; it writes no vectors.
 """
 
 from __future__ import annotations
@@ -41,7 +42,6 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
-import json
 import sys
 from pathlib import Path
 
@@ -266,6 +266,16 @@ def main() -> int:
                     help="print the documents that WOULD be embedded and stop")
     args = ap.parse_args()
 
+    if not args.dry_run:
+        print(
+            'Legacy text generation is retired. Follow docs/TEXT_MAP_INPUTS.md and '
+            'conf/embedding-runtime/README.md to export complete inputs with just '
+            'text-map-inputs, then embed/project/check using the shared locked BGE '
+            'runtime. Historical and chemical maps are retained.',
+            file=sys.stderr,
+        )
+        return 2
+
     ids, docs, meta = load_corpus()
     if not ids:
         print("no records found under data/antibiotics/", file=sys.stderr)
@@ -274,7 +284,7 @@ def main() -> int:
         ids, docs, meta = ids[:args.limit], docs[:args.limit], meta[:args.limit]
 
     if args.dry_run:
-        print(f"{len(ids):,} records would be embedded with {args.model}\n")
+        print(f"{len(ids):,} historical document previews (model label: {args.model})\n")
         for i, d in zip(ids[:3], docs[:3], strict=True):
             print(f"--- {i} ---\n{d}\n")
         lengths = [len(d) for d in docs]
@@ -283,28 +293,6 @@ def main() -> int:
         print("\n--dry-run: nothing written.")
         return 0
 
-    import numpy as np
-    import torch
-    from sentence_transformers import SentenceTransformer
-
-    device = args.device or ("mps" if torch.backends.mps.is_available()
-                             else "cuda" if torch.cuda.is_available() else "cpu")
-    print(f"{len(ids):,} records -> embedding with {args.model} on {device}")
-    model = SentenceTransformer(args.model, device=device)
-    vectors = model.encode(docs, batch_size=args.batch, convert_to_numpy=True,
-                           normalize_embeddings=True, show_progress_bar=True)
-
-    OUT.mkdir(parents=True, exist_ok=True)
-    np.save(OUT / "vectors.f16.npy", vectors.astype(np.float16))
-    (OUT / "ids.json").write_text(json.dumps(ids), encoding="utf-8")
-    (OUT / "records.json").write_text(json.dumps(meta), encoding="utf-8")
-    (OUT / "meta.json").write_text(json.dumps({
-        "model": args.model, "dim": int(vectors.shape[1]), "count": len(ids),
-        "normalized": True, "excluded_fields": list(EXCLUDED),
-        "corpus_fingerprint": corpus_fingerprint(docs),
-    }, indent=2), encoding="utf-8")
-    print(f"wrote {vectors.shape[0]:,} x {vectors.shape[1]} vectors to "
-          f"{OUT.relative_to(REPO_ROOT)}/")
     return 0
 
 
