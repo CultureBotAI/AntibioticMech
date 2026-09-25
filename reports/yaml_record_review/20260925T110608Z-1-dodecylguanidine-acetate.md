@@ -179,7 +179,7 @@ Empty optional slots left without unsupported filler:
 
 | ID | Severity | Finding | Maintained owner |
 |---|---|---|---|
-| F1 | Major | The exact dodine acetate record is still a bare ChEBI seed even though exact dodecylguanidine acetate / monoacetate literature supports membrane damage in *P. syringae*, membrane effects in *F. sulphureum*, species-dependent antifungal respiration and membrane effects in *U. maydis* and *Z. tritici*, and activity/sensitivity observations. Without a curated `mode_of_action`, claim-level evidence, and a causal graph or bounded veto, the record cannot satisfy the repository `REVIEWED` gate. | Curator-owned fields on `data/antibiotics/antibacterial/1-dodecylguanidine-acetate.yaml`, written through a guarded mutator using `record_curation_event` and `write_validated_antibiotic`. |
+| F1 | Major | The exact dodine acetate record is still a bare ChEBI seed even though exact dodecylguanidine acetate / monoacetate literature supports membrane damage in *P. syringae*, membrane effects in *F. sulphureum*, species-dependent antifungal respiration and membrane effects in *U. maydis* and *Z. tritici*, and activity/sensitivity observations. Without a curated `mode_of_action` and claim-level evidence for any mechanism or activity additions, the record cannot satisfy the repository `REVIEWED` gate; a causal graph remains a goal-state follow-up. | Curator-owned fields on `data/antibiotics/antibacterial/1-dodecylguanidine-acetate.yaml`, written through a guarded mutator using `record_curation_event` and `write_validated_antibiotic`. |
 
 No blocker findings.
 
