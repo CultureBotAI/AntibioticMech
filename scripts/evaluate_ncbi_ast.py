@@ -358,6 +358,7 @@ def evaluate_rows(
     rows_with_bioproject = 0
     rows_with_project_context = 0
     rows_with_target_acc = 0
+    rows_with_taxon = 0
 
     for row in rows:
         antibiotic = first_value(row, ANTIBIOTIC_ALIASES)
@@ -371,6 +372,7 @@ def evaluate_rows(
         rows_with_bioproject += int(has_value(row, BIOPROJECT_ALIASES))
         rows_with_project_context += int(has_project_context(row))
         rows_with_target_acc += int(has_value(row, TARGET_ALIASES))
+        rows_with_taxon += int(has_value(row, TAXON_ALIASES))
 
     antibiotic_rows = []
     exact_name_matched_rows = 0
@@ -439,6 +441,7 @@ def evaluate_rows(
                 "bioproject_count": sum(has_value(row, BIOPROJECT_ALIASES) for row in antibiotic_ast_rows),
                 "project_context_count": sum(has_project_context(row) for row in antibiotic_ast_rows),
                 "target_acc_count": sum(has_value(row, TARGET_ALIASES) for row in antibiotic_ast_rows),
+                "taxon_count": sum(has_value(row, TAXON_ALIASES) for row in antibiotic_ast_rows),
                 "phenotype_count": sum(has_value(row, PHENOTYPE_ALIASES) for row in antibiotic_ast_rows),
                 "mic_count": sum(has_value(row, MIC_ALIASES) for row in antibiotic_ast_rows),
                 "standardized_mic_count": len(valid_mic_measurements),
@@ -477,6 +480,7 @@ def evaluate_rows(
         "rows_with_bioproject": rows_with_bioproject,
         "rows_with_project_context": rows_with_project_context,
         "rows_with_target_acc": rows_with_target_acc,
+        "rows_with_taxon": rows_with_taxon,
         "exact_name_matched_antibiotics": sum(
             row["exact_name_candidate_count"] == 1 for row in antibiotic_rows
         ),
@@ -518,6 +522,7 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
         "bioproject_count",
         "project_context_count",
         "target_acc_count",
+        "taxon_count",
         "phenotype_count",
         "mic_count",
         "standardized_mic_count",
@@ -659,6 +664,7 @@ def main() -> int:
         f"project_context_rows={result['rows_with_project_context']} "
         f"target_acc_rows={result['rows_with_target_acc']}"
     )
+    print(f"  context: taxon_rows={result['rows_with_taxon']}")
     print(
         f"  lexical exact-name candidates: antibiotics={result['exact_name_matched_antibiotics']} "
         f"rows={result['exact_name_matched_rows']}"

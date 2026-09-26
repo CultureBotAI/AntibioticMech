@@ -75,12 +75,14 @@ def test_evaluate_rows_summarizes_submitted_antibiotic_names():
     assert result["rows_with_bioproject"] == 1
     assert result["rows_with_project_context"] == 1
     assert result["rows_with_target_acc"] == 1
+    assert result["rows_with_taxon"] == 1
 
     amikacin = result["antibiotic_rows"][0]
     assert amikacin["antibiotic"] == "amikacin"
     assert amikacin["exact_name_candidate_identifiers"] == "CHEBI:2637"
     assert amikacin["mapping_status"] == ""
     assert amikacin["project_context_count"] == 1
+    assert amikacin["taxon_count"] == 1
     assert amikacin["mic_count"] == 1
     assert amikacin["disk_diffusion_count"] == 0
     assert amikacin["taxon_labels"] == "Escherichia coli"
@@ -354,6 +356,7 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
     assert result["rows_with_bioproject"] == 2
     assert result["rows_with_project_context"] == 2
     assert result["rows_with_target_acc"] == 1
+    assert result["rows_with_taxon"] == 2
     assert result["antibiotic_rows"][0]["mic_count"] == 1
     assert result["antibiotic_rows"][0]["standardized_mic_count"] == 1
     assert result["antibiotic_rows"][0]["standardized_mic_values"] == "<=2 mg/L"
@@ -483,6 +486,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "bioproject_count": 7,
             "project_context_count": 7,
             "target_acc_count": 7,
+            "taxon_count": 7,
             "phenotype_count": 7,
             "mic_count": 7,
             "standardized_mic_count": 7,
@@ -518,6 +522,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "bioproject_count": "7",
         "project_context_count": "7",
         "target_acc_count": "7",
+        "taxon_count": "7",
         "phenotype_count": "7",
         "mic_count": "7",
         "standardized_mic_count": "7",
@@ -734,6 +739,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
 
     assert "exact_mapped_activity_groups=1" in result.stdout
     assert "project_context_rows=1" in result.stdout
+    assert "taxon_rows=1" in result.stdout
     assert antibiotic_report.exists()
 
     with template.open(newline="", encoding="utf-8") as handle:
