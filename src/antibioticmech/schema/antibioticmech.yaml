@@ -1031,6 +1031,19 @@ classes:
               value_presence: PRESENT
             assay:
               value_presence: PRESENT
+      - description: >-
+          A disk-diffusion zone diameter must carry its units and the method
+          that produced it.
+        preconditions:
+          slot_conditions:
+            disk_diffusion_value:
+              value_presence: PRESENT
+        postconditions:
+          slot_conditions:
+            disk_diffusion_units:
+              value_presence: PRESENT
+            assay:
+              value_presence: PRESENT
     attributes:
       taxon_id:
         description: NCBITaxon CURIE of the organism tested.
@@ -1051,6 +1064,15 @@ classes:
         range: string
       mic_qualifier:
         description: Relational qualifier for the reported value (e.g. ">", "<=", "MIC90").
+        range: string
+      disk_diffusion_value:
+        description: Disk-diffusion inhibition zone diameter, in `disk_diffusion_units`.
+        range: float
+      disk_diffusion_units:
+        description: Units for `disk_diffusion_value`; usually mm. Required whenever `disk_diffusion_value` is set.
+        range: string
+      disk_diffusion_qualifier:
+        description: Relational qualifier for the reported disk-diffusion value (e.g. ">", "<=").
         range: string
       assay:
         description: Method (e.g. "CLSI broth microdilution", "agar diffusion").

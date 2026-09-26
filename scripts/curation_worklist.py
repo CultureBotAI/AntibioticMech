@@ -550,9 +550,10 @@ def activity_candidate_queue(records: list[dict]) -> list[dict]:
       * "broad-spectrum antibiotic" names a spectrum with no subject at all.
 
     None of the three is an observation, because `ActivityObservation` requires
-    evidence, and a reported MIC requires its units and its assay. A definition
-    supplies none of those. So this queue carries the matched phrase, what that
-    phrase actually claims, and the candidate subject, and asserts nothing.
+    evidence, and a reported MIC or disk-diffusion diameter requires its units
+    and its assay. A definition supplies none of those. So this queue carries
+    the matched phrase, what that phrase actually claims, and the candidate
+    subject, and asserts nothing.
 
     Ranked activity-stated first, then by whether a subject was found at all.
     """

@@ -210,12 +210,13 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 without a method is not an observation — every row here carries an assay.</p>
 <table>
   <caption>Activity observations</caption>
-  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th></tr></thead>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th></tr></thead>
   {% for a in r.activity_spectrum %}
   <tr>
     <td><em>{{ a.taxon_label }}</em>{% if a.taxon_id %} <code class="curie">{{ a.taxon_id }}</code>{% endif %}</td>
     <td>{% if a.activity %}<span class="pill{{ ' warn' if a.activity in ('INACTIVE','INTERMEDIATE','RESISTANT','INTRINSICALLY_RESISTANT') else '' }}">{{ a.activity }}</span>{% else %}—{% endif %}</td>
-    <td class="num">{% if a.mic_value is not none %}{{ a.mic_qualifier or '' }}{{ a.mic_value }} {{ a.mic_units or '' }}{% else %}—{% endif %}</td>
+    <td class="num">{% if a.mic_value is defined and a.mic_value is not none %}{{ a.mic_qualifier or '' }}{{ a.mic_value }} {{ a.mic_units or '' }}{% else %}—{% endif %}</td>
+    <td class="num">{% if a.disk_diffusion_value is defined and a.disk_diffusion_value is not none %}{{ a.disk_diffusion_qualifier or '' }}{{ a.disk_diffusion_value }} {{ a.disk_diffusion_units or '' }}{% else %}—{% endif %}</td>
     <td class="meta">{{ a.assay or '—' }}</td>
     <td class="meta">{{ a.strain or '—' }}</td>
     <td class="meta">

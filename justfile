@@ -67,6 +67,10 @@ evaluate-cryptic *args:
 evaluate-amrfinder *args:
     uv run python scripts/evaluate_amrfinderplus.py {{args}}
 
+# Evaluate an NCBI Pathogen Detection AST export and optional curated structure crosswalk.
+evaluate-ncbi-ast *args:
+    uv run python scripts/evaluate_ncbi_ast.py {{args}}
+
 # Find exact-ligand PDB entries that overlap established BindingDB UniProt targets.
 evaluate-rcsb-pdb *args:
     uv run python scripts/evaluate_rcsb_pdb.py {{args}}

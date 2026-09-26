@@ -64,15 +64,31 @@ def test_record_page_renders_activity_sample_accessions():
             "activity_spectrum": [{
                 "taxon_label": "Escherichia coli",
                 "taxon_id": "NCBITaxon:562",
+                "activity": "RESISTANT",
                 "mic_value": 32.0,
                 "mic_qualifier": ">",
                 "mic_units": "mg/L",
+                "disk_diffusion_value": 18.0,
+                "disk_diffusion_qualifier": ">=",
+                "disk_diffusion_units": "mm",
                 "assay": "broth microdilution",
                 "strain": "AR-0001",
                 "biosample_accession": "SAMN11953777",
                 "bioproject_accession": "PRJNA123456",
                 "assembly_accession": "GCF_000005845.2",
                 "sra_accessions": ["SRR123456"],
+            }, {
+                "taxon_label": "Staphylococcus aureus",
+                "activity": "SUSCEPTIBLE",
+                "mic_value": 1.0,
+                "mic_units": "mg/L",
+                "assay": "broth microdilution",
+            }, {
+                "taxon_label": "Pseudomonas aeruginosa",
+                "activity": "RESISTANT",
+                "disk_diffusion_value": 12.0,
+                "disk_diffusion_units": "mm",
+                "assay": "Kirby-Bauer disk diffusion",
             }],
         },
         root="../",
@@ -80,6 +96,10 @@ def test_record_page_renders_activity_sample_accessions():
     )
 
     assert '<th scope="col">Sample/genome</th>' in html
+    assert '<th scope="col">Disk diffusion</th>' in html
+    assert "&gt;=18.0 mm" in html
+    assert "1.0 mg/L</td>\n    <td class=\"num\">—</td>" in html
+    assert "<td class=\"num\">—</td>\n    <td class=\"num\">12.0 mm</td>" in html
     assert "BioSample" in html
     assert "SAMN11953777" in html
     assert "BioProject" in html

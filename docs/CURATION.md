@@ -138,8 +138,8 @@ the natural thing to do, and appending is the case that needs the token.
   provenance inventory but are not promoted to target edges. A database linking
   an activity row to a protein page does not establish that the protein was the
   measured target.
-- An MIC without units is not a measurement. The schema keeps `mic_units`
-  separate and a test fails on a value without them.
+- A numeric MIC or disk-diffusion diameter without units is not a measurement.
+  The schema keeps units separate and a test fails on a value without them.
 
 ## The organismal evidence model
 
@@ -205,12 +205,12 @@ is the most precise honest identifier available. Same identifier type, opposite
 rule, for a reason.
 
 **An activity claim** is the strictest of the three: an `ActivityObservation`
-requires evidence, and a reported MIC requires its units and the assay that
-produced it. A definition sentence supplies none of these. "Active against
-Gram-positive bacteria" names a group, which is a legitimate `taxon_label` but
-can never carry an NCBITaxon CURIE; "used to treat tuberculosis" names an
-indication, which is a disease and not an organism in an assay. Neither is an
-observation.
+requires evidence, and a reported MIC or disk-diffusion diameter requires its
+units and the assay that produced it. A definition sentence supplies none of
+these. "Active against Gram-positive bacteria" names a group, which is a
+legitimate `taxon_label` but can never carry an NCBITaxon CURIE; "used to treat
+tuberculosis" names an indication, which is a disease and not an organism in an
+assay. Neither is an observation.
 
 When an AST source names the assayed isolate's sequencing context, preserve it
 as structured provenance: `biosample_accession`, `bioproject_accession`,

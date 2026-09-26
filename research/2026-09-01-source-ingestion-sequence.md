@@ -159,6 +159,20 @@ submitted field relationships needed for a claim, and deduplication of
 BioSample/BioProject rows already present in CRyPTIC or other project datasets.
 No contact was made.
 
+2026-09-26 follow-up: `scripts/evaluate_ncbi_ast.py` now preflights AST
+Browser CSV/TSV and BigQuery-shaped exports without seeding rows. It summarizes
+submitted antibiotic strings by lexical exact-corpus candidates, ambiguous
+matches, unmatched names, BioSample/BioProject/target-accession coverage, MIC
+or disk-diffusion coverage, and measurement signs standardized to qualifiers
+and units. It can also emit the fillable seven-column drug-map template that a
+curator turns into the exact-structure crosswalk. When supplied with a partially
+curated crosswalk, it writes a compact grouped activity report for exact-mapped
+rows with valid MIC or disk-diffusion measurements. Curated crosswalk rows must
+explicitly separate exact single-structure mappings from mixtures, drug
+classes, combinations, ambiguous stereochemical names, and missing corpus
+records; exact rows are validated against current corpus Standard InChIKeys so
+a stale mapping cannot silently promote observations onto the wrong structure.
+
 ## 5. RCSB PDB candidate audit
 
 Sources:
@@ -187,5 +201,9 @@ just evaluate-cryptic --dst DST_MEASUREMENTS.parquet \
 just extract-phibase-dry --amr phibase_amr_export.csv --phenotypes phipo.csv
 just evaluate-amrfinder --catalog ReferenceGeneCatalog.txt --families fam.tsv \
   --aro data/raw/aro_resistance_edges.tsv
+just evaluate-ncbi-ast --ast ast.tsv --antibiotic-report ncbi_ast_antibiotics.tsv \
+  --drug-map-template ncbi_ast_drug_map.tsv
+just evaluate-ncbi-ast --ast ast.tsv --drug-map ncbi_ast_drug_map.tsv \
+  --activity-report ncbi_ast_activity.tsv
 just evaluate-rcsb-pdb
 ```

@@ -78,9 +78,13 @@ prose below are the reasoning, the queue is the list.
   evidence methods, which are machine-readable and grade the link itself rather
   than entry curation (#203). Any further widening should come from a second
   source, not from relaxing the evidence requirement.
-- **Activity spectrum.** `activity_spectrum` is empty. Real MIC data would come
-  from a screening resource with assays attached; without the assay a number is
-  not an observation, so pick the source carefully.
+- **Activity spectrum.** CRyPTIC 3.4.0 now seeds grouped DST/UKMYC MIC rows
+  against exact-mapped drugs. Next, widen measured resistance phenotypes by
+  preflighting NCBI Pathogen Detection AST exports with `just
+  evaluate-ncbi-ast` to quantify which submitted antibiotic strings have exact
+  lexical corpus candidates, which remain ambiguous, and which BioSample /
+  BioProject-backed rows would need deduplication before a curated crosswalk
+  can promote rows into `activity_spectrum`.
 - **A `research/` path.** Sibling repos run model-assisted deep research per
   entity with a manifest of what was actually paid for. The `research` extra in
   `pyproject.toml` is declared and unused; wire it up when there is a question
