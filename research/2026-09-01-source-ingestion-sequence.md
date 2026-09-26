@@ -55,6 +55,17 @@ Required unblocking evidence: a versioned CRyPTIC drug-code crosswalk carrying
 an exact structure identifier or Standard InChIKey, including an explicit rule
 for combinations, salts, stereoisomers and assay reagent forms.
 
+2026-09-26 follow-up: `curation/cryptic_drug_map.tsv` now supplies that v3.4.0
+crosswalk. It maps 29 of 39 drug codes to exact structure records and leaves
+combinations, drug classes, mixtures, absent structures and ambiguous
+stereochemical names unmapped. The evaluator validates the crosswalk against the
+upstream `DRUG_CODES.csv.gz` names and the current corpus InChIKeys; on the
+pinned CRyPTIC 3.4.0 parquet files, 26 of those mapped codes occur and
+858,402 of 949,865 DST/UKMYC rows become structure-grounded. No row is seeded
+yet: the remaining design decision is a compact committed inventory that
+preserves MIC/method/quality/provenance without checking in a giant row-for-row
+activity table.
+
 ## 2. PHI-base AMR adoption
 
 Sources:
