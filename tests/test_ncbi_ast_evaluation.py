@@ -210,8 +210,8 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
         },
         {
             "Antibiotic": "cefepime",
-            "BioSample": "SAMN11953778",
-            "BioProject": "PRJNA292666",
+            "BioSample": "SAMEA11953778",
+            "BioProject": "PRJEB292666",
             "Organism group": "Klebsiella pneumoniae",
             "Resistance phenotype": "S",
             "Measurement sign": ">",
@@ -313,6 +313,8 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
     }
     assert activity_rows[0]["activity_group_id"].startswith("ncbi_ast:")
     assert activity_rows[1]["ast_row_count"] == 1
+    assert activity_rows[1]["biosample_accession"] == "SAMEA11953778"
+    assert activity_rows[1]["bioproject_accession"] == "PRJEB292666"
     assert activity_rows[1]["activity"] == "SUSCEPTIBLE"
     assert activity_rows[1]["disk_diffusion_value"] == "18"
     assert activity_rows[1]["disk_diffusion_qualifier"] == ">"
