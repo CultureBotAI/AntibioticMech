@@ -545,6 +545,42 @@ def test_read_drug_map_rejects_identity_drift(tmp_path):
         read_drug_map(path, {"CHEBI:2637": "LKCWBDHBTVXHDL-RMDFUYIESA-N"})
 
 
+def test_read_drug_map_rejects_malformed_rows(tmp_path):
+    path = tmp_path / "ncbi_ast_antibiotic_map.tsv"
+    path.write_text(
+        "\t".join(DRUG_MAP_COLUMNS)
+        + "\n"
+        + "amikacin\tamikacin\tMIXTURE\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="identifier is missing"):
+        read_drug_map(path, {})
+
+    path.write_text(
+        "\t".join(DRUG_MAP_COLUMNS)
+        + "\n"
+        + "amikacin\tamikacin\tMIXTURE\t\t\tnone\tok\textra\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="unexpected extra TSV field"):
+        read_drug_map(path, {})
+
+
+def test_read_drug_map_requires_mapping_rationale(tmp_path):
+    path = tmp_path / "ncbi_ast_antibiotic_map.tsv"
+    path.write_text(
+        "\t".join(DRUG_MAP_COLUMNS)
+        + "\n"
+        + "amikacin\tamikacin\tMIXTURE\t\t\t\tmixture\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="mapping_basis is required"):
+        read_drug_map(path, {})
+
+
 def test_read_project_dedupe_map_accepts_biosample_and_bioproject_keys(tmp_path):
     path = tmp_path / "ncbi_ast_project_dedupe.tsv"
     with path.open("w", newline="", encoding="utf-8") as handle:
@@ -588,6 +624,42 @@ def test_read_project_dedupe_map_rejects_bad_accessions(tmp_path):
     )
 
     with pytest.raises(ValueError, match="invalid BioProject accession"):
+        read_project_dedupe_map(path)
+
+
+def test_read_project_dedupe_map_rejects_malformed_rows(tmp_path):
+    path = tmp_path / "ncbi_ast_project_dedupe.tsv"
+    path.write_text(
+        "\t".join(PROJECT_DEDUPE_COLUMNS)
+        + "\n"
+        + "BioSample\tSAMN11953777\tCRYPTIC\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="source_version is missing"):
+        read_project_dedupe_map(path)
+
+    path.write_text(
+        "\t".join(PROJECT_DEDUPE_COLUMNS)
+        + "\n"
+        + "BioSample\tSAMN11953777\tCRYPTIC\t3.4.0\tnotes\textra\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="unexpected extra TSV field"):
+        read_project_dedupe_map(path)
+
+
+def test_read_project_dedupe_map_requires_source_version(tmp_path):
+    path = tmp_path / "ncbi_ast_project_dedupe.tsv"
+    path.write_text(
+        "\t".join(PROJECT_DEDUPE_COLUMNS)
+        + "\n"
+        + "BioSample\tSAMN11953777\tCRYPTIC\t\tBioSample represented elsewhere.\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="source_version is required"):
         read_project_dedupe_map(path)
 
 

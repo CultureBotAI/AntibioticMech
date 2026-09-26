@@ -174,14 +174,16 @@ retrieval-date columns. A second curated deduplication TSV can exclude BioSample
 or whole-BioProject contexts that are already represented by CRyPTIC or another
 source before those exact groups are written. Curated crosswalk rows must
 explicitly separate exact single-structure mappings from mixtures, drug classes,
-combinations, ambiguous stereochemical names, and missing corpus records; exact
-rows are validated against current corpus Standard InChIKeys so a stale mapping
-cannot silently promote observations onto the wrong structure. The seeder
-validates the report header, source metadata, BioSample/BioProject dedupe
-fields, activity calls, and MIC or disk-diffusion measurement shape before
-consuming that compact activity report as an NCBI_AST-owned source slice,
-replacing only those NCBI AST observations on future re-seeds while preserving
-CRyPTIC and curator-owned `activity_spectrum` rows.
+combinations, ambiguous stereochemical names, and missing corpus records; the
+evaluator now refuses ragged map rows and requires a mapping basis, notes, and
+dedupe source versions before writing an exact report. Exact rows are validated
+against current corpus Standard InChIKeys so a stale mapping cannot silently
+promote observations onto the wrong structure. The seeder validates the report
+header, source metadata, BioSample/BioProject dedupe fields, activity calls, and
+MIC or disk-diffusion measurement shape before consuming that compact activity
+report as an NCBI_AST-owned source slice, replacing only those NCBI AST
+observations on future re-seeds while preserving CRyPTIC and curator-owned
+`activity_spectrum` rows.
 
 ## 5. RCSB PDB candidate audit
 
