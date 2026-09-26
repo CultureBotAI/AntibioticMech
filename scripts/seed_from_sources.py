@@ -31,6 +31,7 @@ import contextlib
 import csv
 import hashlib
 import json
+import math
 import re
 import shutil
 import sys
@@ -2175,6 +2176,57 @@ def attach_cryptic_activity(records: dict[str, dict]) -> Counter:
 NCBI_AST_ACTIVITY_SOURCE = "NCBI_AST"
 NCBI_AST_ACTIVITY_INVENTORY = RAW_DIR / "ncbi_ast_activity.tsv"
 NCBI_AST_REFERENCE = "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/"
+NCBI_AST_ACTIVITY_GROUP_COLUMNS = [
+    "source_name",
+    "normalized_antibiotic",
+    "identifier",
+    "standard_inchi_key",
+    "taxon_label",
+    "biosample_accession",
+    "bioproject_accession",
+    "assembly_accession",
+    "phenotype",
+    "activity",
+    "mic_value",
+    "mic_qualifier",
+    "mic_units",
+    "disk_diffusion_value",
+    "disk_diffusion_qualifier",
+    "disk_diffusion_units",
+    "platform",
+    "vendor",
+    "reagent",
+    "standard",
+]
+NCBI_AST_ACTIVITY_COLUMNS = [
+    "activity_group_id",
+    "source_version",
+    "source_retrieved_on",
+    "ast_row_count",
+    *NCBI_AST_ACTIVITY_GROUP_COLUMNS,
+]
+NCBI_AST_REQUIRED_ACTIVITY_COLUMNS = (
+    "activity_group_id",
+    "source_version",
+    "source_retrieved_on",
+    "ast_row_count",
+    "source_name",
+    "normalized_antibiotic",
+    "identifier",
+    "standard_inchi_key",
+    "taxon_label",
+    "biosample_accession",
+    "bioproject_accession",
+)
+NCBI_AST_ACTIVITY_BY_PHENOTYPE = {
+    "i": "INTERMEDIATE",
+    "intermediate": "INTERMEDIATE",
+    "r": "RESISTANT",
+    "resistant": "RESISTANT",
+    "s": "SUSCEPTIBLE",
+    "susceptible": "SUSCEPTIBLE",
+}
+NCBI_AST_MEASUREMENT_QUALIFIERS = {"", "<", "<=", ">", ">="}
 
 
 def is_ncbi_ast_sourced_activity(item: dict) -> bool:
@@ -2257,6 +2309,130 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
     return observation
 
 
+def ncbi_ast_activity_group_id(row: dict[str, str]) -> str:
+    digest = hashlib.sha256()
+    for column in NCBI_AST_ACTIVITY_GROUP_COLUMNS:
+        digest.update(row[column].encode("utf-8"))
+        digest.update(b"\0")
+    return f"ncbi_ast:{digest.hexdigest()[:16]}"
+
+
+def _require_ncbi_ast_measurement(
+    row: dict[str, str],
+    *,
+    value_field: str,
+    qualifier_field: str,
+    units_field: str,
+    expected_units: str,
+    path: Path,
+    line_number: int,
+) -> bool:
+    prefix = f"{path}:{line_number}"
+    value = row[value_field]
+    qualifier = row[qualifier_field]
+    units = row[units_field]
+
+    if not value:
+        if qualifier:
+            raise ValueError(f"{prefix}: {qualifier_field} requires {value_field}")
+        if units:
+            raise ValueError(f"{prefix}: {units_field} requires {value_field}")
+        return False
+
+    if qualifier not in NCBI_AST_MEASUREMENT_QUALIFIERS:
+        raise ValueError(f"{prefix}: {qualifier_field} has invalid qualifier {qualifier!r}")
+    if units != expected_units:
+        raise ValueError(f"{prefix}: {units_field} must be {expected_units!r}")
+    try:
+        parsed = float(value)
+    except ValueError as error:
+        raise ValueError(f"{prefix}: {value_field} must be numeric") from error
+    if not math.isfinite(parsed):
+        raise ValueError(f"{prefix}: {value_field} must be finite")
+    return True
+
+
+def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
+    """Load a curated NCBI AST exact report and reject malformed source rows."""
+    if not path.exists():
+        raise SystemExit(f"missing inventory {path}; run `just evaluate-ncbi-ast`")
+
+    rows = []
+    seen_group_ids = set()
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if reader.fieldnames != NCBI_AST_ACTIVITY_COLUMNS:
+            raise ValueError(
+                f"{path}: expected NCBI AST activity header "
+                f"{NCBI_AST_ACTIVITY_COLUMNS!r}, found {reader.fieldnames!r}"
+            )
+        for line_number, row in enumerate(reader, start=2):
+            prefix = f"{path}:{line_number}"
+            if None in row:
+                raise ValueError(f"{prefix}: unexpected extra TSV field")
+            for field, value in row.items():
+                if value is None:
+                    raise ValueError(f"{prefix}: {field} is missing")
+            for field in NCBI_AST_REQUIRED_ACTIVITY_COLUMNS:
+                if not row[field]:
+                    raise ValueError(f"{prefix}: {field} is required")
+            try:
+                source_retrieved_on = date.fromisoformat(row["source_retrieved_on"])
+            except ValueError as error:
+                raise ValueError(
+                    f"{prefix}: source_retrieved_on must be an ISO date"
+                ) from error
+            if source_retrieved_on.isoformat() != row["source_retrieved_on"]:
+                raise ValueError(f"{prefix}: source_retrieved_on must be an ISO date")
+            try:
+                ast_row_count = int(row["ast_row_count"])
+            except ValueError as error:
+                raise ValueError(f"{prefix}: ast_row_count must be an integer") from error
+            if ast_row_count <= 0:
+                raise ValueError(f"{prefix}: ast_row_count must be positive")
+            expected_activity = NCBI_AST_ACTIVITY_BY_PHENOTYPE.get(
+                row["phenotype"].casefold(),
+                "",
+            )
+            if row["activity"] != expected_activity:
+                raise ValueError(
+                    f"{prefix}: activity must match phenotype {row['phenotype']!r}"
+                )
+            expected_group_id = ncbi_ast_activity_group_id(row)
+            if row["activity_group_id"] != expected_group_id:
+                raise ValueError(
+                    f"{prefix}: activity_group_id must be {expected_group_id!r}"
+                )
+            if row["activity_group_id"] in seen_group_ids:
+                raise ValueError(f"{prefix}: duplicate activity_group_id")
+            seen_group_ids.add(row["activity_group_id"])
+
+            has_mic = _require_ncbi_ast_measurement(
+                row,
+                value_field="mic_value",
+                qualifier_field="mic_qualifier",
+                units_field="mic_units",
+                expected_units="mg/L",
+                path=path,
+                line_number=line_number,
+            )
+            has_disk_diffusion = _require_ncbi_ast_measurement(
+                row,
+                value_field="disk_diffusion_value",
+                qualifier_field="disk_diffusion_qualifier",
+                units_field="disk_diffusion_units",
+                expected_units="mm",
+                path=path,
+                line_number=line_number,
+            )
+            if not has_mic and not has_disk_diffusion:
+                raise ValueError(
+                    f"{prefix}: mic_value or disk_diffusion_value is required"
+                )
+            rows.append(row)
+    return rows
+
+
 def attach_ncbi_ast_activity(records: dict[str, dict]) -> Counter:
     """Attach compact NCBI AST groups when their curated exact report is present."""
     counts: Counter = Counter()
@@ -2265,7 +2441,7 @@ def attach_ncbi_ast_activity(records: dict[str, dict]) -> Counter:
         return counts
 
     observations_by_record: dict[str, list[dict]] = defaultdict(list)
-    for row in load_tsv(NCBI_AST_ACTIVITY_INVENTORY):
+    for row in load_ncbi_ast_activity_inventory(NCBI_AST_ACTIVITY_INVENTORY):
         identifier = row["identifier"]
         record = records.get(identifier)
         if (

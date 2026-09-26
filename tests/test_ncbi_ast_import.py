@@ -6,14 +6,24 @@ import csv
 import sys
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 import seed_from_sources  # noqa: E402
-from evaluate_ncbi_ast import ACTIVITY_REPORT_COLUMNS  # noqa: E402
+from evaluate_ncbi_ast import (  # noqa: E402
+    ACTIVITY_REPORT_COLUMNS,
+    ACTIVITY_REPORT_GROUP_COLUMNS,
+    activity_group_id,
+)
 from seed_from_sources import (  # noqa: E402
+    NCBI_AST_ACTIVITY_COLUMNS,
+    NCBI_AST_ACTIVITY_GROUP_COLUMNS,
     NCBI_AST_ACTIVITY_SOURCE,
     attach_ncbi_ast_activity,
+    load_ncbi_ast_activity_inventory,
     merge_with_existing,
+    ncbi_ast_activity_group_id,
     ncbi_ast_sourced_activity_view,
 )
 
@@ -28,7 +38,6 @@ def write_activity_report(path: Path, rows: list[dict[str, str]]) -> None:
 def ncbi_ast_row(**overrides: str) -> dict[str, str]:
     row = {column: "" for column in ACTIVITY_REPORT_COLUMNS}
     row.update({
-        "activity_group_id": "ncbi_ast:7fe9356073d90a3d",
         "source_version": "2026-09-26-ast-browser",
         "source_retrieved_on": "2026-09-26",
         "ast_row_count": "2",
@@ -51,21 +60,100 @@ def ncbi_ast_row(**overrides: str) -> dict[str, str]:
         "standard": "CLSI",
     })
     row.update(overrides)
+    if "activity_group_id" not in overrides:
+        row["activity_group_id"] = activity_group_id(row)
     return row
+
+
+def test_ncbi_ast_activity_columns_match_the_evaluator_contract():
+    row = ncbi_ast_row()
+
+    assert NCBI_AST_ACTIVITY_COLUMNS == ACTIVITY_REPORT_COLUMNS
+    assert NCBI_AST_ACTIVITY_GROUP_COLUMNS == ACTIVITY_REPORT_GROUP_COLUMNS
+    assert ncbi_ast_activity_group_id(row) == activity_group_id(row)
+
+
+def test_load_ncbi_ast_activity_inventory_accepts_disk_only_rows(tmp_path):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    row = ncbi_ast_row(
+        mic_value="",
+        mic_qualifier="",
+        mic_units="",
+        disk_diffusion_value="18",
+        disk_diffusion_qualifier=">=",
+        disk_diffusion_units="mm",
+    )
+    write_activity_report(path, [row])
+
+    assert load_ncbi_ast_activity_inventory(path) == [row]
+
+
+def test_load_ncbi_ast_activity_inventory_rejects_header_drift(tmp_path):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    path.write_text("activity_group_id\tunexpected\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="expected NCBI AST activity header"):
+        load_ncbi_ast_activity_inventory(path)
+
+
+def test_load_ncbi_ast_activity_inventory_rejects_short_rows(tmp_path):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle, delimiter="\t")
+        writer.writerow(ACTIVITY_REPORT_COLUMNS)
+        writer.writerow(["ncbi_ast:short"])
+
+    with pytest.raises(ValueError, match="source_version is missing"):
+        load_ncbi_ast_activity_inventory(path)
+
+
+def test_load_ncbi_ast_activity_inventory_rejects_duplicate_groups(tmp_path):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    write_activity_report(path, [ncbi_ast_row(), ncbi_ast_row()])
+
+    with pytest.raises(ValueError, match="duplicate activity_group_id"):
+        load_ncbi_ast_activity_inventory(path)
+
+
+@pytest.mark.parametrize(
+    ("overrides", "message"),
+    [
+        ({"source_retrieved_on": "20260926"}, "source_retrieved_on must be an ISO date"),
+        ({"ast_row_count": "0"}, "ast_row_count must be positive"),
+        ({"taxon_label": ""}, "taxon_label is required"),
+        ({"biosample_accession": ""}, "biosample_accession is required"),
+        ({"activity": "NON_SUSCEPTIBLE"}, "activity must match phenotype"),
+        ({"phenotype": "S", "activity": "RESISTANT"}, "activity must match phenotype"),
+        ({"activity_group_id": "ncbi_ast:stale"}, "activity_group_id must be"),
+        ({"mic_value": "high"}, "mic_value must be numeric"),
+        ({"mic_qualifier": "MIC90"}, "mic_qualifier has invalid qualifier"),
+        ({"mic_value": ""}, "mic_qualifier requires mic_value"),
+        (
+            {"mic_value": "", "mic_qualifier": "", "mic_units": ""},
+            "mic_value or disk_diffusion_value is required",
+        ),
+    ],
+)
+def test_load_ncbi_ast_activity_inventory_rejects_malformed_rows(
+    tmp_path,
+    overrides,
+    message,
+):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    write_activity_report(path, [ncbi_ast_row(**overrides)])
+
+    with pytest.raises(ValueError, match=message):
+        load_ncbi_ast_activity_inventory(path)
 
 
 def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypatch):
     path = tmp_path / "ncbi_ast_activity.tsv"
-    write_activity_report(
-        path,
-        [
-            ncbi_ast_row(
-                disk_diffusion_value="18",
-                disk_diffusion_qualifier=">=",
-                disk_diffusion_units="mm",
-            ),
-        ],
+    row = ncbi_ast_row(
+        disk_diffusion_value="18",
+        disk_diffusion_qualifier=">=",
+        disk_diffusion_units="mm",
     )
+    write_activity_report(path, [row])
     monkeypatch.setattr(seed_from_sources, "NCBI_AST_ACTIVITY_INVENTORY", path)
     records = {
         "CHEBI:478164": {
@@ -95,7 +183,7 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     assert observation["source"] == NCBI_AST_ACTIVITY_SOURCE
     assert observation["source_version"] == "2026-09-26-ast-browser"
     assert observation["source_retrieved_on"] == "2026-09-26"
-    assert observation["source_observation_id"] == "ncbi_ast:7fe9356073d90a3d"
+    assert observation["source_observation_id"] == row["activity_group_id"]
     assert "platform AST" in observation["assay"]
     assert "standard CLSI" in observation["assay"]
     assert "BioSample, BioProject and assembly context" in observation["evidence"][0]["notes"]
