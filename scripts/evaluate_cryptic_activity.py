@@ -71,6 +71,7 @@ UKMYC_GROUP_COLUMNS = [
     "log2mic",
     "binary_phenotype",
 ]
+STANDARDIZED_MIC_COLUMNS = ["mic_value", "mic_qualifier", "mic_units"]
 INVENTORY_COLUMNS = [
     "source_version",
     "source_table",
@@ -79,12 +80,15 @@ INVENTORY_COLUMNS = [
     "source_name",
     "identifier",
     "standard_inchi_key",
+    *STANDARDIZED_MIC_COLUMNS,
     "row_count",
     "isolate_count",
     "site_count",
     *DST_GROUP_COLUMNS,
     *UKMYC_GROUP_COLUMNS,
 ]
+MIC_PATTERN = re.compile(r"^(?P<qualifier><=|>=|<|>)?(?P<value>(?:\d+(?:\.\d*)?|\.\d+))$")
+MIC_UNITS = "mg/L"
 
 
 def md5_of(path: Path) -> str:
@@ -203,6 +207,25 @@ def tsv_cell(value) -> str:
     return str(value)
 
 
+def parse_mic(value) -> tuple[str, str, str]:
+    raw = tsv_cell(value).strip()
+    if not raw or raw.casefold() == "nan":
+        return "", "", ""
+
+    match = MIC_PATTERN.match(raw)
+    if match is None:
+        raise ValueError(f"unsupported CRyPTIC MIC value: {raw!r}")
+    return match.group("value"), match.group("qualifier") or "", MIC_UNITS
+
+
+def standardized_mic(source_table: str, group: dict) -> tuple[str, str, str]:
+    if source_table == DST_TABLE:
+        return parse_mic(group.get("method_mic"))
+    if source_table == UKMYC_TABLE:
+        return parse_mic(group.get("mic"))
+    raise ValueError(f"unrecognized CRyPTIC activity table: {source_table}")
+
+
 def activity_group_id(source_table: str, group_values: list[object]) -> str:
     digest = hashlib.sha256()
     for value in [VERSION, source_table, *group_values]:
@@ -223,6 +246,7 @@ def activity_inventory_row(
     if mapping["mapping_status"] != EXACT_MAPPING_STATUS:
         return None
 
+    mic_value, mic_qualifier, mic_units = standardized_mic(source_table, group)
     row = {column: "" for column in INVENTORY_COLUMNS}
     row.update({
         "source_version": VERSION,
@@ -235,6 +259,9 @@ def activity_inventory_row(
         "source_name": drug_codes[code],
         "identifier": mapping["identifier"],
         "standard_inchi_key": mapping["standard_inchi_key"],
+        "mic_value": mic_value,
+        "mic_qualifier": mic_qualifier,
+        "mic_units": mic_units,
         "row_count": tsv_cell(group["row_count"]),
         "isolate_count": tsv_cell(group["isolate_count"]),
         "site_count": tsv_cell(group.get("site_count")),

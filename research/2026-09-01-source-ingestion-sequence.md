@@ -67,8 +67,10 @@ exact-mapped observations by grouping DST on drug, method, phenotype and quality
 and UKMYC on drug, plate design, primary method, quality, MIC and binary
 phenotype; each row retains a stable group id plus the row, isolate and site
 counts needed to audit the grouping without checking in a giant row-for-row
-activity table. The remaining blockers are Mycobacterium tuberculosis complex
-taxon semantics, MIC parsing, and source-owned `ActivityObservation`
+activity table. It also standardizes CRyPTIC MIC strings into `mic_value`,
+`mic_qualifier` and `mic_units`, using mg/L for both DST `METHOD_MIC` and UKMYC
+`MIC` while preserving the raw columns. The remaining blockers are Mycobacterium
+tuberculosis complex taxon semantics and source-owned `ActivityObservation`
 replacement.
 
 ## 2. PHI-base AMR adoption

@@ -18,6 +18,7 @@ from evaluate_cryptic_activity import (  # noqa: E402
     UKMYC_TABLE,
     activity_inventory,
     activity_inventory_row,
+    parse_mic,
     validated_drug_mappings,
     write_inventory,
 )
@@ -121,6 +122,27 @@ def test_cryptic_drug_map_rejects_identity_drift(tmp_path):
         validated_drug_mappings(path, {"AMI": "AMIKACIN"})
 
 
+@pytest.mark.parametrize(
+    ("raw", "parsed"),
+    [
+        ("<=0.25", ("0.25", "<=", "mg/L")),
+        (">16", ("16", ">", "mg/L")),
+        ("0.5", ("0.5", "", "mg/L")),
+        (".125", (".125", "", "mg/L")),
+        (None, ("", "", "")),
+        ("nan", ("", "", "")),
+        ("", ("", "", "")),
+    ],
+)
+def test_parse_mic_standardizes_cryptic_mic_shape(raw, parsed):
+    assert parse_mic(raw) == parsed
+
+
+def test_parse_mic_rejects_unexpected_values():
+    with pytest.raises(ValueError, match="unsupported CRyPTIC MIC value"):
+        parse_mic("0.5-1")
+
+
 def test_dst_inventory_group_is_compact_and_structure_grounded():
     row = activity_inventory_row(
         DST_TABLE,
@@ -152,6 +174,9 @@ def test_dst_inventory_group_is_compact_and_structure_grounded():
     assert set(row) == set(INVENTORY_COLUMNS)
     assert row["activity_group_id"].startswith("dst_measurements:")
     assert row["identifier"] == "CHEBI:2637"
+    assert row["mic_value"] == "0.25"
+    assert row["mic_qualifier"] == "<="
+    assert row["mic_units"] == "mg/L"
     assert row["method_mic"] == "<=0.25"
     assert row["row_count"] == "6983"
     assert row["platedesign"] == ""
@@ -199,6 +224,9 @@ def test_ukmyc_inventory_group_keeps_mic_shape_and_filters_non_exact_mappings():
 
     assert row
     assert row["activity_group_id"].startswith("ukmyc_phenotypes:")
+    assert row["mic_value"] == "0.25"
+    assert row["mic_qualifier"] == "<="
+    assert row["mic_units"] == "mg/L"
     assert row["belongs_gpi"] == "true"
     assert row["mic"] == "<=0.25"
     assert row["log2mic"] == "-2.0"
