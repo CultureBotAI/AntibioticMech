@@ -214,11 +214,18 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
         },
     }
 
-    activity_rows = exact_activity_rows(rows, mappings)
+    activity_rows = exact_activity_rows(
+        rows,
+        mappings,
+        source_version="2026-09-26-ast-browser",
+        source_retrieved_on="2026-09-26",
+    )
 
     assert len(activity_rows) == 2
     assert activity_rows[0] == {
         "activity_group_id": activity_rows[0]["activity_group_id"],
+        "source_version": "2026-09-26-ast-browser",
+        "source_retrieved_on": "2026-09-26",
         "ast_row_count": 2,
         "source_name": "cefepime",
         "normalized_antibiotic": "cefepime",
@@ -551,6 +558,8 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
     rows = [
         {
             "activity_group_id": "ncbi_ast:7fe9356073d90a3d",
+            "source_version": "2026-09-26-ast-browser",
+            "source_retrieved_on": "2026-09-26",
             "ast_row_count": 2,
             "source_name": "cefepime",
             "normalized_antibiotic": "cefepime",
@@ -582,6 +591,8 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
 
     assert actual == [{
         "activity_group_id": "ncbi_ast:7fe9356073d90a3d",
+        "source_version": "2026-09-26-ast-browser",
+        "source_retrieved_on": "2026-09-26",
         "ast_row_count": "2",
         "source_name": "cefepime",
         "normalized_antibiotic": "cefepime",
@@ -682,6 +693,10 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             str(template),
             "--activity-report",
             str(activity_report),
+            "--source-version",
+            "2026-09-26-ast-browser",
+            "--source-retrieved-on",
+            "2026-09-26",
         ],
         check=True,
         text=True,
@@ -701,6 +716,8 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
         assert "target_acc" not in (reader.fieldnames or [])
 
     assert activity_rows[0]["assembly_accession"] == "GCF_003123125.1"
+    assert activity_rows[0]["source_version"] == "2026-09-26-ast-browser"
+    assert activity_rows[0]["source_retrieved_on"] == "2026-09-26"
     assert activity_rows[0]["mic_value"] == "64"
     assert activity_rows[0]["mic_qualifier"] == ">"
     assert activity_rows[0]["mic_units"] == "mg/L"
@@ -727,3 +744,56 @@ def test_cli_rejects_activity_report_without_drug_map(tmp_path):
     assert result.returncode == 2
     assert "--activity-report requires --drug-map" in result.stderr
     assert not activity_report.exists()
+
+
+def test_cli_rejects_activity_report_without_source_metadata(tmp_path):
+    ast = tmp_path / "ast.tsv"
+    ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
+    drug_map = tmp_path / "ncbi_ast_drug_map.tsv"
+    drug_map.write_text(
+        "\t".join(DRUG_MAP_COLUMNS)
+        + "\n"
+        + "amikacin\tamikacin\tMISSING_CORPUS_RECORD\t\t\tnone\tmissing\n",
+        encoding="utf-8",
+    )
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            "--drug-map",
+            str(drug_map),
+            "--activity-report",
+            str(tmp_path / "ncbi_ast_activity.tsv"),
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 2
+    assert "--activity-report requires --source-version" in result.stderr
+
+
+def test_cli_rejects_non_iso_activity_report_retrieval_dates(tmp_path):
+    ast = tmp_path / "ast.tsv"
+    ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            "--antibiotic-report",
+            str(tmp_path / "ncbi_ast_antibiotics.tsv"),
+            "--source-retrieved-on",
+            "September 26, 2026",
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 2
+    assert "--source-retrieved-on must be an ISO date" in result.stderr
