@@ -264,8 +264,9 @@ def read_drug_map(path: Path, structure_keys: dict[str, str]) -> dict[str, dict[
 def exact_activity_rows(
     rows: list[dict[str, str]],
     mappings: dict[str, dict[str, str]],
-    source_version: str = "",
-    source_retrieved_on: str = "",
+    *,
+    source_version: str,
+    source_retrieved_on: str,
 ) -> list[dict[str, str]]:
     """Return grouped, exact-mapped AST measurements without seeding claims."""
 
