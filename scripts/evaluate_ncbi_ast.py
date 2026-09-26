@@ -159,6 +159,15 @@ def has_project_context(row: dict[str, str]) -> bool:
     return has_value(row, BIOSAMPLE_ALIASES) and has_value(row, BIOPROJECT_ALIASES)
 
 
+def has_valid_project_context(row: dict[str, str]) -> bool:
+    biosample_accession = first_value(row, BIOSAMPLE_ALIASES)
+    bioproject_accession = first_value(row, BIOPROJECT_ALIASES)
+    return (
+        BIOSAMPLE_PATTERN.match(biosample_accession) is not None
+        and BIOPROJECT_PATTERN.match(bioproject_accession) is not None
+    )
+
+
 def standardized_measurement(
     row: dict[str, str],
     aliases: Iterable[str],
@@ -401,7 +410,7 @@ def exact_activity_rows(
         taxon_label = first_value(row, TAXON_ALIASES)
         biosample_accession = first_value(row, BIOSAMPLE_ALIASES)
         bioproject_accession = first_value(row, BIOPROJECT_ALIASES)
-        if not taxon_label or not biosample_accession or not bioproject_accession:
+        if not taxon_label or not has_valid_project_context(row):
             continue
         if project_dedupe_hit(row, project_dedupe):
             continue
