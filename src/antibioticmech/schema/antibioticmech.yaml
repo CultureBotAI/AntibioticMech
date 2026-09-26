@@ -1058,6 +1058,22 @@ classes:
       strain:
         description: Strain designation, where the source names one.
         range: string
+      measurement_count:
+        description: >-
+          Number of upstream activity measurements represented by this
+          observation. Greater than 1 when a bulk source groups raw rows that
+          share the same organism, compound, method and result.
+        range: integer
+      isolate_count:
+        description: >-
+          Number of distinct isolates represented by this observation, when the
+          source groups rows by isolate.
+        range: integer
+      site_count:
+        description: >-
+          Number of distinct study or testing sites represented by this
+          observation, where the source reports site identifiers.
+        range: integer
       biosample_accession:
         description: >-
           NCBI/INSDC BioSample accession for the tested isolate or specimen,
@@ -1490,6 +1506,12 @@ enums:
       ACTIVE:
       INACTIVE:
       VARIABLE:
+      SUSCEPTIBLE:
+        description: Phenotypic AST call reported as susceptible by the source.
+      INTERMEDIATE:
+        description: Phenotypic AST call reported as intermediate by the source.
+      RESISTANT:
+        description: Phenotypic AST call reported as resistant by the source.
       INTRINSICALLY_RESISTANT:
         description: The organism is intrinsically resistant, per the source.
 

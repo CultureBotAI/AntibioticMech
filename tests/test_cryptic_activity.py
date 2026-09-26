@@ -9,6 +9,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
+import seed_from_sources  # noqa: E402
 from evaluate_cryptic_activity import (  # noqa: E402
     DEFAULT_DRUG_MAP,
     DST_GROUP_COLUMNS,
@@ -24,6 +25,7 @@ from evaluate_cryptic_activity import (  # noqa: E402
 )
 from seed_from_sources import (  # noqa: E402
     CRYPTIC_ACTIVITY_SOURCE,
+    attach_cryptic_activity,
     cryptic_sourced_activity_view,
     merge_with_existing,
 )
@@ -296,9 +298,126 @@ def test_activity_inventory_fetches_each_result_before_reusing_duckdb_connection
     assert [row["source_table"] for row in rows] == [DST_TABLE, UKMYC_TABLE]
 
 
+def test_compact_inventory_row_becomes_a_grouped_activity_observation(tmp_path, monkeypatch):
+    row = {column: "" for column in INVENTORY_COLUMNS}
+    row.update({
+        "source_version": "3.4.0",
+        "source_table": UKMYC_TABLE,
+        "activity_group_id": "ukmyc_phenotypes:abc",
+        "drug_code": "AMI",
+        "source_name": "AMIKACIN",
+        "identifier": "CHEBI:2637",
+        "standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N",
+        "mic_value": "0.25",
+        "mic_qualifier": "<=",
+        "mic_units": "mg/L",
+        "row_count": "6184",
+        "isolate_count": "6184",
+        "site_count": "11",
+        "platedesign": "UKMYC6",
+        "belongs_gpi": "true",
+        "phenotype_quality": "HIGH",
+        "readingday": "14",
+        "primary_method": "VZ",
+        "phenotype_description": "VZ,TM AGREE",
+        "mic": "<=0.25",
+        "log2mic": "-2.0",
+        "binary_phenotype": "R",
+    })
+    write_inventory(tmp_path / "cryptic_activity.tsv", [row])
+    monkeypatch.setattr(
+        seed_from_sources,
+        "CRYPTIC_ACTIVITY_INVENTORY",
+        tmp_path / "cryptic_activity.tsv",
+    )
+
+    records = {"CHEBI:2637": {
+        "identifier": "CHEBI:2637",
+        "chemical_structure": {"standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N"},
+        "curation_history": [],
+    }}
+
+    counts = attach_cryptic_activity(records)
+    observation = records["CHEBI:2637"]["activity_spectrum"][0]
+
+    assert counts["matched_observations"] == 1
+    assert counts["matched_records"] == 1
+    assert "taxon_id" not in observation
+    assert observation["taxon_label"] == "Mycobacterium tuberculosis complex"
+    assert observation["activity"] == "RESISTANT"
+    assert observation["mic_value"] == 0.25
+    assert observation["mic_qualifier"] == "<="
+    assert observation["measurement_count"] == 6184
+    assert observation["isolate_count"] == 6184
+    assert observation["site_count"] == 11
+    assert observation["source"] == CRYPTIC_ACTIVITY_SOURCE
+    assert observation["source_version"] == "3.4.0"
+    assert observation["source_observation_id"] == "ukmyc_phenotypes:abc"
+    assert "UKMYC6" in observation["assay"]
+    assert "primary method VZ" in observation["assay"]
+    assert "row_count=6184" in observation["evidence"][0]["notes"]
+
+
+def test_cryptic_activity_writer_rejects_identity_drift(tmp_path, monkeypatch):
+    row = {column: "" for column in INVENTORY_COLUMNS}
+    row.update({
+        "source_version": "3.4.0",
+        "source_table": UKMYC_TABLE,
+        "activity_group_id": "ukmyc_phenotypes:abc",
+        "drug_code": "AMI",
+        "identifier": "CHEBI:2637",
+        "standard_inchi_key": "STALE",
+        "mic_value": "0.25",
+        "mic_units": "mg/L",
+        "row_count": "6184",
+        "isolate_count": "6184",
+    })
+    write_inventory(tmp_path / "cryptic_activity.tsv", [row])
+    monkeypatch.setattr(
+        seed_from_sources,
+        "CRYPTIC_ACTIVITY_INVENTORY",
+        tmp_path / "cryptic_activity.tsv",
+    )
+    records = {"CHEBI:2637": {
+        "identifier": "CHEBI:2637",
+        "chemical_structure": {"standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N"},
+        "curation_history": [],
+    }}
+
+    counts = attach_cryptic_activity(records)
+
+    assert counts["identity_drift"] == 1
+    assert "activity_spectrum" not in records["CHEBI:2637"]
+
+
+def test_compact_activity_observation_can_be_qualitative_without_mic():
+    row = {column: "" for column in INVENTORY_COLUMNS}
+    row.update({
+        "source_version": "3.4.0",
+        "source_table": DST_TABLE,
+        "activity_group_id": "dst_measurements:abc",
+        "drug_code": "AMI",
+        "source": "CRyPTIC",
+        "identifier": "CHEBI:2637",
+        "standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N",
+        "row_count": "3",
+        "isolate_count": "3",
+        "method_1": "liquid media",
+        "method_2": "microdilution plate",
+        "method_3": "UKMYC6",
+        "phenotype": "I",
+        "quality": "LOW",
+    })
+
+    observation = seed_from_sources.cryptic_activity_observation(row)
+
+    assert "mic_value" not in observation
+    assert "mic_units" not in observation
+    assert observation["activity"] == "INTERMEDIATE"
+
+
 def test_reseed_replaces_only_the_cryptic_activity_slice():
     new_cryptic = {
-        "taxon_id": "NCBITaxon:1763",
         "taxon_label": "Mycobacterium tuberculosis complex",
         "activity": "RESISTANT",
         "mic_value": 2.0,
@@ -312,7 +431,7 @@ def test_reseed_replaces_only_the_cryptic_activity_slice():
     old_cryptic = new_cryptic | {"source_observation_id": "UKMYC_PHENOTYPES:stale"}
     curated = {
         "taxon_label": "Escherichia coli",
-        "activity": "SENSITIVE",
+        "activity": "SUSCEPTIBLE",
         "assay": "curated broth microdilution",
         "source": "CURATOR",
         "evidence": [{"reference": "PMID:1"}],
@@ -336,7 +455,6 @@ def test_reseed_replaces_only_the_cryptic_activity_slice():
 
 def test_reseed_drops_stale_cryptic_activity_when_the_source_stops_emitting_it():
     old_cryptic = {
-        "taxon_id": "NCBITaxon:1763",
         "taxon_label": "Mycobacterium tuberculosis complex",
         "activity": "RESISTANT",
         "assay": "UKMYC broth microdilution",

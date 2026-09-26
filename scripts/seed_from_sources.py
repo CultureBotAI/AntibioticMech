@@ -2048,6 +2048,14 @@ def attach_bindingdb_targets(records: dict[str, dict]) -> Counter:
 
 
 CRYPTIC_ACTIVITY_SOURCE = "CRYPTIC"
+CRYPTIC_ACTIVITY_INVENTORY = RAW_DIR / "cryptic_activity.tsv"
+CRYPTIC_REFERENCE = "DOI:10.5281/zenodo.15680920"
+CRYPTIC_TAXON_LABEL = "Mycobacterium tuberculosis complex"
+CRYPTIC_CALLS = {
+    "S": "SUSCEPTIBLE",
+    "I": "INTERMEDIATE",
+    "R": "RESISTANT",
+}
 
 
 def is_cryptic_sourced_activity(item: dict) -> bool:
@@ -2061,6 +2069,107 @@ def cryptic_sourced_activity_view(record: dict) -> list[dict]:
         for item in (record.get("activity_spectrum") or [])
         if is_cryptic_sourced_activity(item)
     ]
+
+
+def cryptic_activity_assay(row: dict[str, str]) -> str:
+    if row["source_table"] == "UKMYC_PHENOTYPES":
+        parts = [f"CRyPTIC UKMYC {row['platedesign']}"]
+        if row.get("primary_method"):
+            parts.append(f"primary method {row['primary_method']}")
+        if row.get("readingday"):
+            parts.append(f"reading day {row['readingday']}")
+        return "; ".join(parts)
+
+    if row["source_table"] != "DST_MEASUREMENTS":
+        raise ValueError(f"unrecognized CRyPTIC activity table: {row['source_table']}")
+    parts = ["CRyPTIC DST"]
+    for column in ("source", "method_1", "method_2", "method_3"):
+        if row.get(column):
+            parts.append(row[column])
+    if row.get("method_cc"):
+        parts.append(f"critical concentration {row['method_cc']} mg/L")
+    return "; ".join(parts)
+
+
+def cryptic_activity_observation(row: dict[str, str]) -> dict:
+    """Convert one compact CRyPTIC group into one grouped activity observation."""
+    note_fields = [
+        "source_table",
+        "activity_group_id",
+        "drug_code",
+        "row_count",
+        "isolate_count",
+        "site_count",
+        "source",
+        "method_1",
+        "method_2",
+        "method_3",
+        "method_cc",
+        "method_mic",
+        "phenotype",
+        "quality",
+        "platedesign",
+        "belongs_gpi",
+        "phenotype_quality",
+        "readingday",
+        "primary_method",
+        "phenotype_description",
+        "mic",
+        "log2mic",
+        "binary_phenotype",
+    ]
+    notes = "; ".join(f"{field}={row[field]}" for field in note_fields if row.get(field))
+    observation = {
+        "taxon_label": CRYPTIC_TAXON_LABEL,
+        "assay": cryptic_activity_assay(row),
+        "measurement_count": int(row["row_count"]),
+        "isolate_count": int(row["isolate_count"]),
+        "source": CRYPTIC_ACTIVITY_SOURCE,
+        "source_version": row["source_version"],
+        "source_observation_id": row["activity_group_id"],
+        "evidence": [{
+            "reference": CRYPTIC_REFERENCE,
+            "notes": f"Compact CRyPTIC {row['source_version']} grouped activity row: {notes}.",
+        }],
+    }
+    if row["mic_value"]:
+        observation["mic_value"] = float(row["mic_value"])
+        observation["mic_units"] = row["mic_units"]
+        if row["mic_qualifier"]:
+            observation["mic_qualifier"] = row["mic_qualifier"]
+    if row["site_count"]:
+        observation["site_count"] = int(row["site_count"])
+    call = CRYPTIC_CALLS.get(row.get("phenotype") or row.get("binary_phenotype"))
+    if call:
+        observation["activity"] = call
+    return observation
+
+
+def attach_cryptic_activity(records: dict[str, dict]) -> Counter:
+    """Attach compact CRyPTIC phenotype groups when their inventory is present."""
+    counts: Counter = Counter()
+    if not CRYPTIC_ACTIVITY_INVENTORY.exists():
+        counts["missing_inventory"] = 1
+        return counts
+
+    observations_by_record: dict[str, list[dict]] = defaultdict(list)
+    for row in load_tsv(CRYPTIC_ACTIVITY_INVENTORY):
+        identifier = row["identifier"]
+        record = records.get(identifier)
+        if (
+            record is None
+            or record["chemical_structure"].get("standard_inchi_key") != row["standard_inchi_key"]
+        ):
+            counts["identity_drift"] += 1
+            continue
+        observations_by_record[identifier].append(cryptic_activity_observation(row))
+        counts["matched_observations"] += 1
+
+    for identifier, observations in observations_by_record.items():
+        records[identifier].setdefault("activity_spectrum", []).extend(observations)
+        _history_last(records[identifier])
+        counts["matched_records"] += 1
+    return counts
 
 
 MIBIG_PRODUCER_SOURCE = "MIBIG"
@@ -3080,6 +3189,7 @@ def main() -> int:
     attach_aro_mechanism(records, source_version)
     phibase_counts = attach_phibase_resistance(records)
     bindingdb_counts = attach_bindingdb_targets(records)
+    cryptic_counts = attach_cryptic_activity(records)
     mibig_counts = attach_mibig_producers(
         records,
         str(manifest.get("sources", {}).get("mibig", {}).get("version", "")),
@@ -3135,6 +3245,13 @@ def main() -> int:
         f"rejected_non_target_specific="
         f"{bindingdb_counts['rejected_non_target_specific_measurement']} "
         f"ambiguous_or_missing={bindingdb_counts['ambiguous_or_missing_identity']}",
+        file=sys.stderr,
+    )
+    print(
+        "  CRyPTIC activity: "
+        f"observations={cryptic_counts['matched_observations']} "
+        f"records={cryptic_counts['matched_records']} "
+        f"identity_drift={cryptic_counts['identity_drift']}",
         file=sys.stderr,
     )
     print(
