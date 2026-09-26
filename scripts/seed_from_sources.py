@@ -2227,6 +2227,8 @@ NCBI_AST_ACTIVITY_BY_PHENOTYPE = {
     "susceptible": "SUSCEPTIBLE",
 }
 NCBI_AST_MEASUREMENT_QUALIFIERS = {"", "<", "<=", ">", ">="}
+NCBI_AST_BIOSAMPLE_PATTERN = re.compile(r"^SAM(N|D|EA)[0-9]+$")
+NCBI_AST_BIOPROJECT_PATTERN = re.compile(r"^PRJ(NA|EB|DB)[0-9]+$")
 
 
 def is_ncbi_ast_sourced_activity(item: dict) -> bool:
@@ -2376,6 +2378,10 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
             for field in NCBI_AST_REQUIRED_ACTIVITY_COLUMNS:
                 if not row[field]:
                     raise ValueError(f"{prefix}: {field} is required")
+            if NCBI_AST_BIOSAMPLE_PATTERN.match(row["biosample_accession"]) is None:
+                raise ValueError(f"{prefix}: invalid BioSample accession")
+            if NCBI_AST_BIOPROJECT_PATTERN.match(row["bioproject_accession"]) is None:
+                raise ValueError(f"{prefix}: invalid BioProject accession")
             try:
                 source_retrieved_on = date.fromisoformat(row["source_retrieved_on"])
             except ValueError as error:
