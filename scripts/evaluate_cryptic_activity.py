@@ -14,6 +14,8 @@ import argparse
 import csv
 import gzip
 import hashlib
+import io
+import math
 import re
 from collections import defaultdict
 from pathlib import Path
@@ -202,9 +204,14 @@ def validated_drug_mappings(path: Path, drug_codes: dict[str, str]) -> dict[str,
 def tsv_cell(value) -> str:
     if value is None:
         return ""
+    if isinstance(value, float) and math.isnan(value):
+        return ""
     if isinstance(value, bool):
         return str(value).lower()
-    return str(value)
+    text = str(value)
+    if text.casefold() == "nan":
+        return ""
+    return text
 
 
 def parse_mic(value) -> tuple[str, str, str]:
@@ -333,15 +340,21 @@ def write_inventory(path: Path, rows: list[dict[str, str]]) -> None:
         seen_ids.add(group_id)
 
     path.parent.mkdir(parents=True, exist_ok=True)
+    buffer = io.StringIO()
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
-            handle,
+            buffer,
             fieldnames=INVENTORY_COLUMNS,
             delimiter="\t",
             lineterminator="\n",
         )
         writer.writeheader()
-        writer.writerows(rows)
+        handle.write(buffer.getvalue())
+        for row in rows:
+            buffer.seek(0)
+            buffer.truncate(0)
+            writer.writerow(row)
+            handle.write(buffer.getvalue().rstrip("\n").rstrip("\t") + "\n")
 
 
 def evaluate(dst: Path, ukmyc: Path, drug_codes: Path, drug_map: Path) -> dict:
@@ -469,7 +482,8 @@ def main() -> int:
     if args.inventory_out:
         write_inventory(args.inventory_out, inventory_rows)
         print(f"wrote compact activity inventory: {args.inventory_out}")
-    print(f"--dry-run: {eligible_rows} observations eligible; nothing written")
+    else:
+        print(f"--dry-run: {eligible_rows} observations eligible; nothing written")
     return 0
 
 

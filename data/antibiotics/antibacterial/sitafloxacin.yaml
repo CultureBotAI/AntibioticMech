@@ -90,6 +90,97 @@ resistance_mechanisms:
   - reference: ARO:3003929
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3003690 (sitafloxacin);
       database assertion, not a primary citation.
+activity_spectrum:
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; colourmetric
+  measurement_count: 7
+  isolate_count: 7
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:ad04fdb05e0e7a79
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:ad04fdb05e0e7a79; drug_code=STX; row_count=7;
+      isolate_count=7; source=SEQTREAT2020; method_1=liquid media; method_2=microdilution
+      plate; method_3=colourmetric; method_mic=0.0312; quality=MEDIUM.'
+  mic_value: 0.0312
+  mic_units: mg/L
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; colourmetric
+  measurement_count: 5
+  isolate_count: 5
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:8e262c515b9aeffb
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:8e262c515b9aeffb; drug_code=STX; row_count=5;
+      isolate_count=5; source=SEQTREAT2020; method_1=liquid media; method_2=microdilution
+      plate; method_3=colourmetric; method_mic=0.0625; quality=MEDIUM.'
+  mic_value: 0.0625
+  mic_units: mg/L
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; colourmetric
+  measurement_count: 6
+  isolate_count: 6
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:3580b3aaeaeb6163
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:3580b3aaeaeb6163; drug_code=STX; row_count=6;
+      isolate_count=6; source=SEQTREAT2020; method_1=liquid media; method_2=microdilution
+      plate; method_3=colourmetric; method_mic=0.125; quality=MEDIUM.'
+  mic_value: 0.125
+  mic_units: mg/L
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; colourmetric
+  measurement_count: 13
+  isolate_count: 13
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:20e267f9c175aaeb
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:20e267f9c175aaeb; drug_code=STX; row_count=13;
+      isolate_count=13; source=SEQTREAT2020; method_1=liquid media; method_2=microdilution
+      plate; method_3=colourmetric; method_mic=0.25; quality=MEDIUM.'
+  mic_value: 0.25
+  mic_units: mg/L
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; colourmetric
+  measurement_count: 5
+  isolate_count: 5
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:477a610b089bf8f9
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:477a610b089bf8f9; drug_code=STX; row_count=5;
+      isolate_count=5; source=SEQTREAT2020; method_1=liquid media; method_2=microdilution
+      plate; method_3=colourmetric; method_mic=0.5; quality=MEDIUM.'
+  mic_value: 0.5
+  mic_units: mg/L
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; 7H10; critical concentration
+    2.0 mg/L
+  measurement_count: 36
+  isolate_count: 36
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:7571dc008555871e
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:7571dc008555871e; drug_code=STX; row_count=36;
+      isolate_count=36; source=SEQTREAT2020; method_1=solid media; method_2=middlebrook;
+      method_3=7H10; method_cc=2.0; phenotype=S; quality=MEDIUM.'
+  activity: SUSCEPTIBLE
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -107,3 +198,8 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-26T12:07:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval
+    date 2026-08-30, unchanged.'

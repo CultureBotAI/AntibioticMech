@@ -103,6 +103,21 @@ source_concepts:
   - CHEBI:36047
   source_version: '2026-08-30'
 activity_spectrum:
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; 7H10; critical concentration
+    3.0 mg/L
+  measurement_count: 6
+  isolate_count: 6
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:4d1e7eca77db3e10
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:4d1e7eca77db3e10; drug_code=AZM; row_count=6;
+      isolate_count=6; source=SEQTREAT2020; method_1=solid media; method_2=middlebrook;
+      method_3=7H10; method_cc=3.0; phenotype=R; quality=MEDIUM.'
+  activity: RESISTANT
 - taxon_id: NCBITaxon:485
   taxon_label: Neisseria gonorrhoeae
   mic_value: 2.0
@@ -548,3 +563,8 @@ curation_history:
   changes: Structured BioSample accessions on 1 activity_spectrum observation(s) where
     evidence notes already named exactly one accession.
   llm_assisted: true
+- timestamp: '2026-09-26T12:07:42Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval
+    date 2026-08-30, unchanged.'

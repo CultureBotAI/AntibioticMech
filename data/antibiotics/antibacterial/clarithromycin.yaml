@@ -451,6 +451,94 @@ molecular_targets:
   - reference: ARO:3000757
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000065 (clarithromycin); database
       assertion, not a primary citation.
+activity_spectrum:
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; CLIRES2020; not specified
+  measurement_count: 1
+  isolate_count: 1
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:7ad2dae30611c786
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:7ad2dae30611c786; drug_code=CLR; row_count=1;
+      isolate_count=1; source=CLIRES2020; method_1=not specified; phenotype=R; quality=MEDIUM.'
+  activity: RESISTANT
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; MYCOTB; critical
+    concentration 0.5 mg/L
+  measurement_count: 6
+  isolate_count: 6
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:8dfbc8268f59c44e
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:8dfbc8268f59c44e; drug_code=CLR; row_count=6;
+      isolate_count=6; source=SEQTREAT2020; method_1=liquid media; method_2=microdilution
+      plate; method_3=MYCOTB; method_cc=0.5; phenotype=R; quality=MEDIUM.'
+  activity: RESISTANT
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; MYCOTB; critical
+    concentration 0.5 mg/L
+  measurement_count: 6
+  isolate_count: 6
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:2570281013579230
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:2570281013579230; drug_code=CLR; row_count=6;
+      isolate_count=6; source=SEQTREAT2020; method_1=liquid media; method_2=microdilution
+      plate; method_3=MYCOTB; method_cc=0.5; phenotype=S; quality=MEDIUM.'
+  activity: SUSCEPTIBLE
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; SEQTREAT2020; liquid media; microdilution plate; MYCOTB; critical
+    concentration 0.5 mg/L
+  measurement_count: 451
+  isolate_count: 451
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:47146be3ceed881e
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:47146be3ceed881e; drug_code=CLR; row_count=451;
+      isolate_count=451; source=SEQTREAT2020; method_1=liquid media; method_2=microdilution
+      plate; method_3=MYCOTB; method_cc=0.5; phenotype=U; quality=MEDIUM.'
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; 7H10; critical concentration
+    3.0 mg/L
+  measurement_count: 52
+  isolate_count: 52
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:8dced4f3a41a403e
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:8dced4f3a41a403e; drug_code=CLR; row_count=52;
+      isolate_count=52; source=SEQTREAT2020; method_1=solid media; method_2=middlebrook;
+      method_3=7H10; method_cc=3.0; phenotype=R; quality=MEDIUM.'
+  activity: RESISTANT
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; 7H10; critical concentration
+    3.0 mg/L
+  measurement_count: 21
+  isolate_count: 21
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:c93b3887119912c3
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:c93b3887119912c3; drug_code=CLR; row_count=21;
+      isolate_count=21; source=SEQTREAT2020; method_1=solid media; method_2=middlebrook;
+      method_3=7H10; method_cc=3.0; phenotype=S; quality=MEDIUM.'
+  activity: SUSCEPTIBLE
 causal_graphs:
 - graph_id: clarithromycin_50s_exit_tunnel_inhibition
   title: Clarithromycin blocks the bacterial 50S exit tunnel
@@ -1505,3 +1593,8 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-26T12:07:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval
+    date 2026-08-30, unchanged.'
