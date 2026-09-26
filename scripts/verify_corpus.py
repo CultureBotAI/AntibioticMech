@@ -46,6 +46,7 @@ from seed_from_sources import (  # noqa: E402
     attach_cryptic_activity,
     attach_fda_clinical_status,
     attach_mibig_producers,
+    attach_ncbi_ast_activity,
     attach_phibase_resistance,
     bindingdb_sourced_target_view,
     build_concepts,
@@ -57,6 +58,7 @@ from seed_from_sources import (  # noqa: E402
     load_decisions,
     merge,
     mibig_sourced_producer_view,
+    ncbi_ast_sourced_activity_view,
     phibase_sourced_resistance_view,
     read_lockfile,
     record_path,
@@ -84,6 +86,7 @@ def rebuild() -> dict[str, dict]:
     attach_phibase_resistance(records)
     attach_bindingdb_targets(records)
     attach_cryptic_activity(records)
+    attach_ncbi_ast_activity(records)
     attach_mibig_producers(
         records,
         str(manifest.get("sources", {}).get("mibig", {}).get("version", "")),
@@ -129,6 +132,8 @@ def main() -> int:
         if bindingdb_sourced_target_view(want) != bindingdb_sourced_target_view(actual):
             drifted.append((path, "molecular_targets"))
         if cryptic_sourced_activity_view(want) != cryptic_sourced_activity_view(actual):
+            drifted.append((path, "activity_spectrum"))
+        if ncbi_ast_sourced_activity_view(want) != ncbi_ast_sourced_activity_view(actual):
             drifted.append((path, "activity_spectrum"))
         if mibig_sourced_producer_view(want) != mibig_sourced_producer_view(actual):
             drifted.append((path, "producer_organisms"))
