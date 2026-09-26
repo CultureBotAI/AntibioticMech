@@ -197,6 +197,36 @@ def activity_group_id(row: dict[str, str]) -> str:
     return f"ncbi_ast:{digest.hexdigest()[:16]}"
 
 
+def validate_table_header(path: Path, fieldnames: list[str] | None) -> None:
+    """Reject malformed headers before DictReader can drop duplicate columns."""
+    if not fieldnames:
+        raise ValueError(f"{path}: missing header")
+
+    seen = {}
+    for index, field in enumerate(fieldnames, start=1):
+        if not field:
+            raise ValueError(f"{path}: header column {index} is empty")
+        normalized = normalize_header(field)
+        if not normalized:
+            raise ValueError(f"{path}: header column {index} normalizes to empty")
+        if normalized in seen:
+            raise ValueError(
+                f"{path}: duplicate header {field!r} "
+                f"normalizes to {normalized!r}; already saw {seen[normalized]!r}"
+            )
+        seen[normalized] = field
+
+
+def require_exact_table_row(row: dict, path: Path, line_number: int) -> None:
+    """Reject rows whose cells do not match an already-validated header."""
+    prefix = f"{path}:{line_number}"
+    if None in row:
+        raise ValueError(f"{prefix}: unexpected extra delimited field")
+    for field, value in row.items():
+        if value is None:
+            raise ValueError(f"{prefix}: {field} is missing")
+
+
 def read_table(path: Path) -> list[dict[str, str]]:
     sample = path.read_text(encoding="utf-8", errors="replace")[:4096]
     try:
@@ -205,7 +235,13 @@ def read_table(path: Path) -> list[dict[str, str]]:
         dialect = csv.excel_tab if path.suffix.lower() in {".tsv", ".tab"} else csv.excel
 
     with path.open(newline="", encoding="utf-8", errors="replace") as handle:
-        return list(csv.DictReader(handle, dialect=dialect))
+        reader = csv.DictReader(handle, dialect=dialect)
+        validate_table_header(path, reader.fieldnames)
+        rows = []
+        for row in reader:
+            require_exact_table_row(row, path, reader.line_num)
+            rows.append(row)
+        return rows
 
 
 def corpus_name_candidates(root: Path = REPO_ROOT) -> tuple[dict[str, set[str]], dict[str, str]]:
@@ -227,16 +263,6 @@ def corpus_name_candidates(root: Path = REPO_ROOT) -> tuple[dict[str, set[str]],
     return candidates, structure_keys
 
 
-def require_exact_tsv_row(row: dict, path: Path, line_number: int) -> None:
-    """Reject rows whose cells do not match an already-validated TSV header."""
-    prefix = f"{path}:{line_number}"
-    if None in row:
-        raise ValueError(f"{prefix}: unexpected extra TSV field")
-    for field, value in row.items():
-        if value is None:
-            raise ValueError(f"{prefix}: {field} is missing")
-
-
 def read_drug_map(path: Path, structure_keys: dict[str, str]) -> dict[str, dict[str, str]]:
     """Read a partial NCBI antibiotic-value crosswalk and validate exact rows."""
 
@@ -247,7 +273,7 @@ def read_drug_map(path: Path, structure_keys: dict[str, str]) -> dict[str, dict[
 
         rows = {}
         for line_number, row in enumerate(reader, start=2):
-            require_exact_tsv_row(row, path, line_number)
+            require_exact_table_row(row, path, line_number)
             for field in (
                 "source_record_id",
                 "source_name",
@@ -309,7 +335,7 @@ def read_project_dedupe_map(path: Path) -> dict[tuple[str, str], dict[str, str]]
 
         rows = {}
         for line_number, row in enumerate(reader, start=2):
-            require_exact_tsv_row(row, path, line_number)
+            require_exact_table_row(row, path, line_number)
             accession_type = row["accession_type"]
             accession = row["accession"]
             if accession_type not in PROJECT_DEDUPE_ACCESSIONS:
