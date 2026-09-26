@@ -2218,7 +2218,14 @@ NCBI_AST_REQUIRED_ACTIVITY_COLUMNS = (
     "biosample_accession",
     "bioproject_accession",
 )
-NCBI_AST_ACTIVITY_CALLS = {"SUSCEPTIBLE", "INTERMEDIATE", "RESISTANT"}
+NCBI_AST_ACTIVITY_BY_PHENOTYPE = {
+    "i": "INTERMEDIATE",
+    "intermediate": "INTERMEDIATE",
+    "r": "RESISTANT",
+    "resistant": "RESISTANT",
+    "s": "SUSCEPTIBLE",
+    "susceptible": "SUSCEPTIBLE",
+}
 NCBI_AST_MEASUREMENT_QUALIFIERS = {"", "<", "<=", ">", ">="}
 
 
@@ -2383,8 +2390,14 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                 raise ValueError(f"{prefix}: ast_row_count must be an integer") from error
             if ast_row_count <= 0:
                 raise ValueError(f"{prefix}: ast_row_count must be positive")
-            if row["activity"] and row["activity"] not in NCBI_AST_ACTIVITY_CALLS:
-                raise ValueError(f"{prefix}: activity has invalid call {row['activity']!r}")
+            expected_activity = NCBI_AST_ACTIVITY_BY_PHENOTYPE.get(
+                row["phenotype"].casefold(),
+                "",
+            )
+            if row["activity"] != expected_activity:
+                raise ValueError(
+                    f"{prefix}: activity must match phenotype {row['phenotype']!r}"
+                )
             expected_group_id = ncbi_ast_activity_group_id(row)
             if row["activity_group_id"] != expected_group_id:
                 raise ValueError(
