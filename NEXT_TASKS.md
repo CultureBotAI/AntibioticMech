@@ -84,9 +84,10 @@ prose below are the reasoning, the queue is the list.
   crosswalks, and emits source-versioned exact activity reports with MIC or
   disk-diffusion measurements on BioSample/BioProject-backed rows. It can
   exclude curated BioSample/BioProject contexts already represented by CRyPTIC
-  or another source before writing an exact report. Next, fill a real NCBI AST
-  drug crosswalk and project-dedup map, then turn the deduplicated exact rows
-  into a guarded source slice.
+  or another source before writing an exact report, and the seeder can consume
+  that report as an NCBI_AST-owned source slice. Next, fill a real NCBI AST
+  drug crosswalk and project-dedup map, then commit a deduplicated exact report
+  once licensing is resolved.
 - **A `research/` path.** Sibling repos run model-assisted deep research per
   entity with a manifest of what was actually paid for. The `research` extra in
   `pyproject.toml` is declared and unused; wire it up when there is a question

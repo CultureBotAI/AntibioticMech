@@ -2172,6 +2172,118 @@ def attach_cryptic_activity(records: dict[str, dict]) -> Counter:
     return counts
 
 
+NCBI_AST_ACTIVITY_SOURCE = "NCBI_AST"
+NCBI_AST_ACTIVITY_INVENTORY = RAW_DIR / "ncbi_ast_activity.tsv"
+NCBI_AST_REFERENCE = "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/"
+
+
+def is_ncbi_ast_sourced_activity(item: dict) -> bool:
+    """True only for an activity observation owned by the NCBI AST lane."""
+    return item.get("source") == NCBI_AST_ACTIVITY_SOURCE
+
+
+def ncbi_ast_sourced_activity_view(record: dict) -> list[dict]:
+    return [
+        item
+        for item in (record.get("activity_spectrum") or [])
+        if is_ncbi_ast_sourced_activity(item)
+    ]
+
+
+def ncbi_ast_activity_assay(row: dict[str, str]) -> str:
+    parts = ["NCBI Pathogen Detection AST"]
+    if row.get("platform"):
+        parts.append(f"platform {row['platform']}")
+    if row.get("vendor"):
+        parts.append(f"vendor {row['vendor']}")
+    if row.get("reagent"):
+        parts.append(f"reagent {row['reagent']}")
+    if row.get("standard"):
+        parts.append(f"standard {row['standard']}")
+    return "; ".join(parts)
+
+
+def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
+    """Convert one compact NCBI AST group into one grouped activity observation."""
+    note_fields = [
+        "activity_group_id",
+        "ast_row_count",
+        "source_name",
+        "normalized_antibiotic",
+        "taxon_label",
+        "biosample_accession",
+        "bioproject_accession",
+        "assembly_accession",
+        "phenotype",
+        "platform",
+        "vendor",
+        "reagent",
+        "standard",
+    ]
+    notes = "; ".join(f"{field}={row[field]}" for field in note_fields if row.get(field))
+    observation = {
+        "taxon_label": row["taxon_label"],
+        "assay": ncbi_ast_activity_assay(row),
+        "measurement_count": int(row["ast_row_count"]),
+        "source": NCBI_AST_ACTIVITY_SOURCE,
+        "source_version": row["source_version"],
+        "source_retrieved_on": row["source_retrieved_on"],
+        "source_observation_id": row["activity_group_id"],
+        "evidence": [{
+            "reference": NCBI_AST_REFERENCE,
+            "notes": (
+                "Compact NCBI Pathogen Detection AST grouped activity row. "
+                "The underlying AST rows are submitter-provided; source BioSample, "
+                f"BioProject and assembly context are retained for audit: {notes}."
+            ),
+        }],
+    }
+
+    if row.get("activity"):
+        observation["activity"] = row["activity"]
+    if row.get("mic_value"):
+        observation["mic_value"] = float(row["mic_value"])
+        observation["mic_units"] = row["mic_units"]
+        if row.get("mic_qualifier"):
+            observation["mic_qualifier"] = row["mic_qualifier"]
+    if row.get("disk_diffusion_value"):
+        observation["disk_diffusion_value"] = float(row["disk_diffusion_value"])
+        observation["disk_diffusion_units"] = row["disk_diffusion_units"]
+        if row.get("disk_diffusion_qualifier"):
+            observation["disk_diffusion_qualifier"] = row["disk_diffusion_qualifier"]
+    for field in ("biosample_accession", "bioproject_accession", "assembly_accession"):
+        if row.get(field):
+            observation[field] = row[field]
+    return observation
+
+
+def attach_ncbi_ast_activity(records: dict[str, dict]) -> Counter:
+    """Attach compact NCBI AST groups when their curated exact report is present."""
+    counts: Counter = Counter()
+    if not NCBI_AST_ACTIVITY_INVENTORY.exists():
+        counts["missing_inventory"] = 1
+        return counts
+
+    observations_by_record: dict[str, list[dict]] = defaultdict(list)
+    for row in load_tsv(NCBI_AST_ACTIVITY_INVENTORY):
+        identifier = row["identifier"]
+        record = records.get(identifier)
+        if (
+            record is None
+            or record["chemical_structure"].get("standard_inchi_key") != row["standard_inchi_key"]
+        ):
+            counts["identity_drift"] += 1
+            continue
+        observations_by_record[identifier].append(ncbi_ast_activity_observation(row))
+        counts["matched_observations"] += 1
+
+    for identifier, observations in observations_by_record.items():
+        records[identifier].setdefault("activity_spectrum", []).extend(observations)
+        _history_last(records[identifier])
+        counts["matched_records"] += 1
+    return counts
+
+
 MIBIG_PRODUCER_SOURCE = "MIBIG"
 
 
@@ -2810,6 +2922,7 @@ def reseed_delta(existing: dict, record: dict, merged: dict,
         ("molecular_targets", bindingdb_sourced_target_view, BINDINGDB_TARGET_SOURCE),
         ("resistance_mechanisms", phibase_sourced_resistance_view, PHIBASE_RESISTANCE_SOURCE),
         ("activity_spectrum", cryptic_sourced_activity_view, CRYPTIC_ACTIVITY_SOURCE),
+        ("activity_spectrum", ncbi_ast_sourced_activity_view, NCBI_AST_ACTIVITY_SOURCE),
         ("producer_organisms", mibig_sourced_producer_view, MIBIG_PRODUCER_SOURCE),
         ("clinical_status_assertions", fda_sourced_clinical_view, FDA_CLINICAL_SOURCE),
     ):
@@ -2889,6 +3002,7 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
         item
         for item in existing_activities
         if not is_cryptic_sourced_activity(item)
+        and not is_ncbi_ast_sourced_activity(item)
     ]
     if seeded_activities or curator_activities:
         merged["activity_spectrum"] = seeded_activities + curator_activities
@@ -3190,6 +3304,7 @@ def main() -> int:
     phibase_counts = attach_phibase_resistance(records)
     bindingdb_counts = attach_bindingdb_targets(records)
     cryptic_counts = attach_cryptic_activity(records)
+    ncbi_ast_counts = attach_ncbi_ast_activity(records)
     mibig_counts = attach_mibig_producers(
         records,
         str(manifest.get("sources", {}).get("mibig", {}).get("version", "")),
@@ -3252,6 +3367,13 @@ def main() -> int:
         f"observations={cryptic_counts['matched_observations']} "
         f"records={cryptic_counts['matched_records']} "
         f"identity_drift={cryptic_counts['identity_drift']}",
+        file=sys.stderr,
+    )
+    print(
+        "  NCBI AST activity: "
+        f"observations={ncbi_ast_counts['matched_observations']} "
+        f"records={ncbi_ast_counts['matched_records']} "
+        f"identity_drift={ncbi_ast_counts['identity_drift']}",
         file=sys.stderr,
     )
     print(

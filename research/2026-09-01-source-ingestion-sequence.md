@@ -176,7 +176,10 @@ source before those exact groups are written. Curated crosswalk rows must
 explicitly separate exact single-structure mappings from mixtures, drug classes,
 combinations, ambiguous stereochemical names, and missing corpus records; exact
 rows are validated against current corpus Standard InChIKeys so a stale mapping
-cannot silently promote observations onto the wrong structure.
+cannot silently promote observations onto the wrong structure. The seeder can
+consume that compact activity report as an NCBI_AST-owned source slice,
+replacing only those NCBI AST observations on future re-seeds while preserving
+CRyPTIC and curator-owned `activity_spectrum` rows.
 
 ## 5. RCSB PDB candidate audit
 
