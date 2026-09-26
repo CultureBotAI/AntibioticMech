@@ -14,8 +14,7 @@ metadata:
 Find and, when asked to curate, add defensible phenotypic resistance
 observations for one existing `AntibioticRecord`. Prefer taxon- and
 strain-specific MICs backed by primary papers or redistributable AST rows; keep
-genome/sample accessions when sources provide them, even though the current
-`ActivityObservation` schema has no dedicated BioSample, Assembly or SRA slot.
+genome/sample accessions when sources provide them.
 
 ## Boundaries
 
@@ -97,9 +96,11 @@ Map the organism at the same precision the source supports:
 - Fill `taxon_label` exactly enough to name the tested organism or group.
 - Add `taxon_id` only after verifying it is the NCBITaxon CURIE for that label.
 - Put strain or isolate designations in `strain`, not in `taxon_label`.
-- Do not put BioSample, BioProject, SRA or Assembly accessions in `taxon_id`.
-  Preserve them in evidence notes with the source row ID until a structured
-  genome/sample slot exists.
+- Put BioSample, BioProject, NCBI Assembly and SRA accessions in
+  `biosample_accession`, `bioproject_accession`, `assembly_accession` and
+  `sra_accessions`; do not put them in `taxon_id`.
+- Keep source row IDs and unsupported genome/sample identifiers in evidence
+  notes.
 - Do not generalize one resistant strain to a resistant species or genus.
 
 Preserve breakpoint context honestly. CLSI and EUCAST breakpoints are
@@ -168,9 +169,9 @@ and the curation-history event describes the actual diff.
 ## Report
 
 Report the record path, resistant taxa or strains found, NCBITaxon CURIEs,
-strain/isolate names, genome/sample accessions that were present but not
-structurable, normalized MICs with original units, breakpoint standard or
-qualitative call, PMIDs/DOIs/database rows supporting each observation, any
-`resistance_mechanisms` separately added, representation gaps left as
-`Discussion` entries, generated files refreshed and every validation command
-run.
+strain/isolate names, BioSample/BioProject/Assembly/SRA accessions, unsupported
+sample identifiers left in notes, normalized MICs with original units,
+breakpoint standard or qualitative call, PMIDs/DOIs/database rows supporting
+each observation, any `resistance_mechanisms` separately added, representation
+gaps left as `Discussion` entries, generated files refreshed and every
+validation command run.

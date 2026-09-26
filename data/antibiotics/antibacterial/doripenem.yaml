@@ -34,6 +34,7 @@ activity_spectrum:
   assay: Broth microdilution doripenem MIC; modal MIC reported; interpreted using
     CLSI 2024 M100 S34.
   strain: 0297
+  biosample_accession: SAMN04901687
   evidence:
   - reference: https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=297&PanelID=1
     snippet: Doripenem  | >8  | R
@@ -47,6 +48,7 @@ activity_spectrum:
   assay: Broth microdilution doripenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '0347'
+  biosample_accession: SAMN11953775
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=347&PanelID=10
     snippet: Doripenem  | >8  | R
@@ -61,6 +63,7 @@ activity_spectrum:
   assay: Broth microdilution doripenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: 0348
+  biosample_accession: SAMN11953776
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=348&PanelID=10
     snippet: Doripenem  | >8  | R
@@ -77,6 +80,7 @@ activity_spectrum:
     Bank reports an R interpretation without a versioned breakpoint footnote on this
     isolate page.
   strain: '0033'
+  biosample_accession: SAMN04014874
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=33&PanelID=1227
     snippet: Doripenem  | >8  | R
@@ -91,6 +95,7 @@ activity_spectrum:
   assay: Broth microdilution doripenem MIC; modal MIC reported; interpreted using
     CLSI 2024 M100 S34 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
   strain: 0078
+  biosample_accession: SAMN04014919
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=78&PanelID=1227
     snippet: Doripenem  | >8  | R
@@ -106,6 +111,7 @@ activity_spectrum:
   assay: Broth microdilution doripenem MIC; modal MIC reported; interpreted using
     CLSI 2020 M100 S30 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
   strain: 0083
+  biosample_accession: SAMN04014924
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=83&PanelID=1227
     snippet: Doripenem  | >8  | R
@@ -293,4 +299,10 @@ curation_history:
     Acinetobacter baumannii MIC observation for AR-0083; preserved source Unknown,
     BioSample SAMN04014924, Study ID CarbaNP-52, and MLST ST1(Pasteur)/ST231/1604(Oxford)
     in evidence notes.
+  llm_assisted: true
+- timestamp: '2026-09-26T07:00:39Z'
+  curator: codex
+  action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
+  changes: Structured BioSample accessions on 6 activity_spectrum observation(s) where
+    evidence notes already named exactly one accession.
   llm_assisted: true

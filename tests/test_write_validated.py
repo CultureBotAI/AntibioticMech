@@ -80,6 +80,46 @@ def test_an_mic_without_units_or_assay_is_rejected(tmp_path):
     assert not validate_antibiotic(complete)
 
 
+def test_activity_observation_accepts_sample_and_genome_accessions(tmp_path):
+    doc = dict(MINIMAL) | {"activity_spectrum": [
+        {
+            "taxon_label": "Escherichia coli",
+            "mic_value": 2.0,
+            "mic_units": "mg/L",
+            "assay": "broth microdilution",
+            "strain": "AR-0001",
+            "biosample_accession": "SAMN11953777",
+            "bioproject_accession": "PRJNA123456",
+            "assembly_accession": "GCF_000005845.2",
+            "sra_accessions": ["SRR123456", "SRX123456"],
+            "source": "NCBI_AST",
+            "source_version": "2026-09-26",
+            "source_retrieved_on": "2026-09-26",
+            "source_observation_id": "SAMN11953777|cefepime",
+            "evidence": [{"reference": "PMID:1"}],
+        }
+    ]}
+    assert not validate_antibiotic(doc)
+
+    doc["activity_spectrum"][0]["biosample_accession"] = "SAMEA123456"
+    assert not validate_antibiotic(doc)
+
+
+def test_activity_observation_rejects_malformed_sample_accessions(tmp_path):
+    doc = dict(MINIMAL) | {"activity_spectrum": [
+        {
+            "taxon_label": "Escherichia coli",
+            "assay": "broth microdilution",
+            "biosample_accession": "BioSample:SAMN11953777",
+            "assembly_accession": "SAMN11953777",
+            "evidence": [{"reference": "PMID:1"}],
+        }
+    ]}
+    messages = [err.message for err in validate_antibiotic(doc)]
+    assert any("biosample_accession" in message for message in messages)
+    assert any("assembly_accession" in message for message in messages)
+
+
 def test_an_unknown_field_is_rejected_and_nothing_is_written(tmp_path):
     """Closed-mode validation. In LinkML's default open mode this record passes
     and a typo becomes a silently ignored field."""

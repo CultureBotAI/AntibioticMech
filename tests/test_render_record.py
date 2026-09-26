@@ -44,3 +44,46 @@ def test_record_page_renders_source_concept_evidence():
     assert '<th scope="col">Evidence</th>' in html
     assert "DOI:10.1000/widget" in html
     assert "Compound 1 inhibited Bacillus subtilis." in html
+
+
+def test_record_page_renders_activity_sample_accessions():
+    env = Environment(
+        loader=FileSystemLoader(TEMPLATES_DIR),
+        autoescape=select_autoescape(["html", "xml"]),
+    )
+
+    html = env.get_template("record.html").render(
+        r={
+            "identifier": "antibioticmech:curator-widget",
+            "label": "widgetmycin",
+            "class_slug": "antibacterial",
+            "antimicrobial_class": "ANTIBACTERIAL",
+            "grounding_status": "MINTED",
+            "curation_status": "PROPOSED",
+            "source_concepts": [],
+            "activity_spectrum": [{
+                "taxon_label": "Escherichia coli",
+                "taxon_id": "NCBITaxon:562",
+                "mic_value": 32.0,
+                "mic_qualifier": ">",
+                "mic_units": "mg/L",
+                "assay": "broth microdilution",
+                "strain": "AR-0001",
+                "biosample_accession": "SAMN11953777",
+                "bioproject_accession": "PRJNA123456",
+                "assembly_accession": "GCF_000005845.2",
+                "sra_accessions": ["SRR123456"],
+            }],
+        },
+        root="../",
+        stats={},
+    )
+
+    assert '<th scope="col">Sample/genome</th>' in html
+    assert "BioSample" in html
+    assert "SAMN11953777" in html
+    assert "BioProject" in html
+    assert "PRJNA123456" in html
+    assert "Assembly" in html
+    assert "GCF_000005845.2" in html
+    assert "SRR123456" in html

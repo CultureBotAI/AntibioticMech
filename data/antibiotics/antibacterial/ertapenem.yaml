@@ -49,6 +49,7 @@ activity_spectrum:
   assay: Broth microdilution ertapenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1305'
+  biosample_accession: SAMN46941623
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10596&PanelID=1247
     snippet: Ertapenem  | >8  | R
@@ -63,6 +64,7 @@ activity_spectrum:
   assay: Broth microdilution ertapenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '0347'
+  biosample_accession: SAMN11953775
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=347&PanelID=10
     snippet: Ertapenem  | >8  | R
@@ -77,6 +79,7 @@ activity_spectrum:
   assay: Broth microdilution ertapenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: 0348
+  biosample_accession: SAMN11953776
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=348&PanelID=10
     snippet: Ertapenem  | >8  | R
@@ -91,6 +94,7 @@ activity_spectrum:
   assay: Broth microdilution ertapenem MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 1168 footnote.
   strain: '0074'
+  biosample_accession: SAMN04014915
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=74&PanelID=1168
     snippet: Ertapenem  | 2  | R
@@ -258,4 +262,10 @@ curation_history:
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 1168 ertapenem-resistant
     Klebsiella aerogenes MIC observation for AR-0074; preserved source Fluid Peritoneal,
     BioSample SAMN04014915, and Study ID CarbaNP-43 in evidence notes.
+  llm_assisted: true
+- timestamp: '2026-09-26T07:00:40Z'
+  curator: codex
+  action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
+  changes: Structured BioSample accessions on 4 activity_spectrum observation(s) where
+    evidence notes already named exactly one accession.
   llm_assisted: true

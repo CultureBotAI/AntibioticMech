@@ -47,6 +47,7 @@ activity_spectrum:
   assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: 0497
+  biosample_accession: SAMN11953783
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=497&PanelID=10
     snippet: Minocycline  | >16  | R
@@ -60,6 +61,7 @@ activity_spectrum:
   assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
     CLSI 2024 M100 S34.
   strain: 0297
+  biosample_accession: SAMN04901687
   evidence:
   - reference: https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=297&PanelID=1
     snippet: Minocycline  | 16  | R
@@ -73,6 +75,7 @@ activity_spectrum:
   assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1305'
+  biosample_accession: SAMN46941623
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10596&PanelID=1247
     snippet: Minocycline  | 16  | R
@@ -86,6 +89,7 @@ activity_spectrum:
   assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1149'
+  biosample_accession: SAMN34111336
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10440&PanelID=1247
     snippet: Minocycline  | >16  | R
@@ -100,6 +104,7 @@ activity_spectrum:
   assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1151'
+  biosample_accession: SAMN34111338
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10442&PanelID=1247
     snippet: Minocycline  | 16  | R
@@ -113,6 +118,7 @@ activity_spectrum:
   assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1152'
+  biosample_accession: SAMN34111339
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10443&PanelID=1247
     snippet: Minocycline  | >16  | R
@@ -127,6 +133,7 @@ activity_spectrum:
   assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1153'
+  biosample_accession: SAMN34111340
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10444&PanelID=1247
     snippet: Minocycline  | 8  | R
@@ -140,6 +147,7 @@ activity_spectrum:
   assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1162'
+  biosample_accession: SAMN34111348
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10453&PanelID=1247
     snippet: Minocycline  | 16  | R
@@ -153,6 +161,7 @@ activity_spectrum:
   assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1163'
+  biosample_accession: SAMN34111349
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10454&PanelID=1247
     snippet: Minocycline  | >16  | R
@@ -167,6 +176,7 @@ activity_spectrum:
   assay: Broth microdilution minocycline MIC; modal MIC reported; interpreted using
     CLSI 2020 M100 S30 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
   strain: 0083
+  biosample_accession: SAMN04014924
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=83&PanelID=1227
     snippet: Minocycline  | 16  | R
@@ -420,4 +430,10 @@ curation_history:
     Acinetobacter baumannii MIC observation for AR-0083; preserved source Unknown,
     BioSample SAMN04014924, Study ID CarbaNP-52, and MLST ST1(Pasteur)/ST231/1604(Oxford)
     in evidence notes.
+  llm_assisted: true
+- timestamp: '2026-09-26T07:00:42Z'
+  curator: codex
+  action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
+  changes: Structured BioSample accessions on 10 activity_spectrum observation(s)
+    where evidence notes already named exactly one accession.
   llm_assisted: true

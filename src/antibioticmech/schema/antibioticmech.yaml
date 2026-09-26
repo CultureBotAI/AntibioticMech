@@ -1058,6 +1058,40 @@ classes:
       strain:
         description: Strain designation, where the source names one.
         range: string
+      biosample_accession:
+        description: >-
+          NCBI/INSDC BioSample accession for the tested isolate or specimen,
+          where the source provides one.
+        range: string
+        pattern: "^SAM(N|D|EA)[0-9]+$"
+      bioproject_accession:
+        description: BioProject accession for the sequencing project behind this AST row.
+        range: string
+        pattern: "^PRJ(NA|EB|DB)[0-9]+$"
+      assembly_accession:
+        description: NCBI Assembly accession for the genome tied to this AST row.
+        range: string
+        pattern: "^GC[AF]_[0-9]+(\\.[0-9]+)?$"
+      sra_accessions:
+        description: SRA, ENA or DRA run, experiment, sample or study accessions tied to this row.
+        multivalued: true
+        range: string
+        pattern: "^(SRR|ERR|DRR|SRX|ERX|DRX|SRP|ERP|DRP|SRS|ERS|DRS)[0-9]+$"
+      source:
+        description: >-
+          Upstream resource owning this observation. Set by an extractor lane so
+          re-seeding can replace exactly what it wrote; absent on
+          curator-written observations.
+        range: string
+      source_version:
+        description: Version or release of the upstream source for this observation.
+        range: string
+      source_retrieved_on:
+        description: Date the source snapshot was retrieved.
+        range: date
+      source_observation_id:
+        description: Stable upstream row, isolate or measurement identifier for this observation.
+        range: string
       evidence:
         description: Citation for this observation. Required.
         required: true

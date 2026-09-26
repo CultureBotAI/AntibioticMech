@@ -57,6 +57,7 @@ activity_spectrum:
   assay: Broth microdilution vancomycin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: 0781
+  biosample_accession: SAMN15040080
   evidence:
   - reference: https://wwwn.cdc.gov/arisolatebank/panel/IsolateDetail?IsolateID=10092&PanelID=1130
     snippet: Vancomycin  | >64  | R
@@ -70,6 +71,7 @@ activity_spectrum:
   assay: Broth microdilution vancomycin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: 0782
+  biosample_accession: SAMN15040081
   evidence:
   - reference: https://wwwn.cdc.gov/arisolatebank/panel/IsolateDetail?IsolateID=10093&PanelID=1130
     snippet: Vancomycin  | 32  | R
@@ -83,6 +85,7 @@ activity_spectrum:
   assay: Broth microdilution vancomycin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: 0783
+  biosample_accession: SAMN15040082
   evidence:
   - reference: https://wwwn.cdc.gov/arisolatebank/panel/IsolateDetail?IsolateID=10094&PanelID=1130
     snippet: Vancomycin  | 64  | R
@@ -387,4 +390,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added three stable-URL CDC/FDA AR Isolate Bank vancomycin-resistant Enterococcus
     faecalis/faecium isolate MIC observations.
+  llm_assisted: true
+- timestamp: '2026-09-26T07:00:46Z'
+  curator: codex
+  action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
+  changes: Structured BioSample accessions on 3 activity_spectrum observation(s) where
+    evidence notes already named exactly one accession.
   llm_assisted: true
