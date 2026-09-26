@@ -31,6 +31,13 @@ DRUG_MAP_COLUMNS = [
     "mapping_basis",
     "notes",
 ]
+PROJECT_DEDUPE_COLUMNS = [
+    "accession_type",
+    "accession",
+    "source",
+    "source_version",
+    "notes",
+]
 ACTIVITY_REPORT_GROUP_COLUMNS = [
     "source_name",
     "normalized_antibiotic",
@@ -98,6 +105,12 @@ MEASUREMENT_PATTERN = re.compile(r"^(?P<qualifier><=|>=|<|>|=)?\s*(?P<value>(?:\
 MEASUREMENT_SIGNS = {"", "<=", ">=", "<", ">", "="}
 MIC_UNITS = "mg/L"
 DISK_DIFFUSION_UNITS = "mm"
+BIOSAMPLE_PATTERN = re.compile(r"^SAM(N|D|EA)[0-9]+$")
+BIOPROJECT_PATTERN = re.compile(r"^PRJ(NA|EB|DB)[0-9]+$")
+PROJECT_DEDUPE_ACCESSIONS = {
+    "BioSample": (BIOSAMPLE_ALIASES, BIOSAMPLE_PATTERN),
+    "BioProject": (BIOPROJECT_ALIASES, BIOPROJECT_PATTERN),
+}
 ACTIVITY_CALLS = {
     "i": "INTERMEDIATE",
     "intermediate": "INTERMEDIATE",
@@ -265,15 +278,61 @@ def read_drug_map(path: Path, structure_keys: dict[str, str]) -> dict[str, dict[
         return rows
 
 
+def read_project_dedupe_map(path: Path) -> dict[tuple[str, str], dict[str, str]]:
+    """Read curated source-context exclusions used before seeding NCBI AST rows."""
+
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if reader.fieldnames != PROJECT_DEDUPE_COLUMNS:
+            raise ValueError(f"unexpected NCBI AST project dedupe columns: {reader.fieldnames}")
+
+        rows = {}
+        for row in reader:
+            accession_type = row["accession_type"]
+            accession = row["accession"]
+            if accession_type not in PROJECT_DEDUPE_ACCESSIONS:
+                raise ValueError(f"{accession}: unsupported accession_type {accession_type!r}")
+
+            _, pattern = PROJECT_DEDUPE_ACCESSIONS[accession_type]
+            if pattern.match(accession) is None:
+                raise ValueError(f"{accession}: invalid {accession_type} accession")
+            if not row["source"]:
+                raise ValueError(f"{accession}: source is required")
+            if not row["notes"]:
+                raise ValueError(f"{accession}: notes are required")
+
+            key = (accession_type, accession)
+            if key in rows:
+                raise ValueError(f"duplicate NCBI AST project dedupe key: {key}")
+            rows[key] = row
+        return rows
+
+
+def project_dedupe_hit(
+    row: dict[str, str],
+    project_dedupe: dict[tuple[str, str], dict[str, str]],
+) -> dict[str, str] | None:
+    for accession_type, (aliases, _) in PROJECT_DEDUPE_ACCESSIONS.items():
+        accession = first_value(row, aliases)
+        if not accession:
+            continue
+        hit = project_dedupe.get((accession_type, accession))
+        if hit is not None:
+            return hit
+    return None
+
+
 def exact_activity_rows(
     rows: list[dict[str, str]],
     mappings: dict[str, dict[str, str]],
     *,
     source_version: str,
     source_retrieved_on: str,
+    project_dedupe: dict[tuple[str, str], dict[str, str]] | None = None,
 ) -> list[dict[str, str]]:
     """Return grouped, dedupe-ready exact AST measurements without seeding claims."""
 
+    project_dedupe = project_dedupe or {}
     grouped: dict[tuple[str, ...], dict[str, str]] = {}
     counts: Counter[tuple[str, ...]] = Counter()
     for row in rows:
@@ -293,6 +352,8 @@ def exact_activity_rows(
         biosample_accession = first_value(row, BIOSAMPLE_ALIASES)
         bioproject_accession = first_value(row, BIOPROJECT_ALIASES)
         if not taxon_label or not biosample_accession or not bioproject_accession:
+            continue
+        if project_dedupe_hit(row, project_dedupe):
             continue
 
         phenotype = first_value(row, PHENOTYPE_ALIASES)
@@ -349,8 +410,10 @@ def evaluate_rows(
     candidates: dict[str, set[str]],
     structure_keys: dict[str, str],
     mappings: dict[str, dict[str, str]] | None = None,
+    project_dedupe: dict[tuple[str, str], dict[str, str]] | None = None,
 ) -> dict:
     mappings = mappings or {}
+    project_dedupe = project_dedupe or {}
     rows_by_antibiotic: dict[str, list[dict[str, str]]] = defaultdict(list)
     names_by_antibiotic: dict[str, set[str]] = defaultdict(set)
     rows_without_antibiotic = 0
@@ -359,6 +422,7 @@ def evaluate_rows(
     rows_with_project_context = 0
     rows_with_target_acc = 0
     rows_with_taxon = 0
+    rows_with_dedupe_context = 0
 
     for row in rows:
         antibiotic = first_value(row, ANTIBIOTIC_ALIASES)
@@ -373,6 +437,7 @@ def evaluate_rows(
         rows_with_project_context += int(has_project_context(row))
         rows_with_target_acc += int(has_value(row, TARGET_ALIASES))
         rows_with_taxon += int(has_value(row, TAXON_ALIASES))
+        rows_with_dedupe_context += int(project_dedupe_hit(row, project_dedupe) is not None)
 
     antibiotic_rows = []
     exact_name_matched_rows = 0
@@ -440,6 +505,10 @@ def evaluate_rows(
                 "biosample_count": sum(has_value(row, BIOSAMPLE_ALIASES) for row in antibiotic_ast_rows),
                 "bioproject_count": sum(has_value(row, BIOPROJECT_ALIASES) for row in antibiotic_ast_rows),
                 "project_context_count": sum(has_project_context(row) for row in antibiotic_ast_rows),
+                "dedupe_context_count": sum(
+                    project_dedupe_hit(row, project_dedupe) is not None
+                    for row in antibiotic_ast_rows
+                ),
                 "target_acc_count": sum(has_value(row, TARGET_ALIASES) for row in antibiotic_ast_rows),
                 "taxon_count": sum(has_value(row, TAXON_ALIASES) for row in antibiotic_ast_rows),
                 "phenotype_count": sum(has_value(row, PHENOTYPE_ALIASES) for row in antibiotic_ast_rows),
@@ -481,6 +550,7 @@ def evaluate_rows(
         "rows_with_project_context": rows_with_project_context,
         "rows_with_target_acc": rows_with_target_acc,
         "rows_with_taxon": rows_with_taxon,
+        "rows_with_dedupe_context": rows_with_dedupe_context,
         "exact_name_matched_antibiotics": sum(
             row["exact_name_candidate_count"] == 1 for row in antibiotic_rows
         ),
@@ -521,6 +591,7 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
         "biosample_count",
         "bioproject_count",
         "project_context_count",
+        "dedupe_context_count",
         "target_acc_count",
         "taxon_count",
         "phenotype_count",
@@ -613,6 +684,15 @@ def main() -> int:
         type=Path,
         help="Optional partial curated crosswalk from submitted antibiotic strings to exact structures.",
     )
+    parser.add_argument(
+        "--project-dedupe-map",
+        type=Path,
+        help=(
+            "Optional TSV of BioSample/BioProject accessions already represented "
+            "by another source; matching rows are counted and excluded from "
+            "--activity-report."
+        ),
+    )
     args = parser.parse_args()
     if args.activity_report and not args.drug_map:
         parser.error("--activity-report requires --drug-map with exact curated mappings.")
@@ -629,7 +709,18 @@ def main() -> int:
     rows = read_table(args.ast)
     candidates, structure_keys = corpus_name_candidates()
     mappings = read_drug_map(args.drug_map, structure_keys) if args.drug_map else {}
-    result = evaluate_rows(rows, candidates, structure_keys, mappings=mappings)
+    project_dedupe = (
+        read_project_dedupe_map(args.project_dedupe_map)
+        if args.project_dedupe_map
+        else {}
+    )
+    result = evaluate_rows(
+        rows,
+        candidates,
+        structure_keys,
+        mappings=mappings,
+        project_dedupe=project_dedupe,
+    )
 
     if args.antibiotic_report:
         write_antibiotic_report(result["antibiotic_rows"], args.antibiotic_report)
@@ -641,6 +732,7 @@ def main() -> int:
             mappings,
             source_version=args.source_version,
             source_retrieved_on=args.source_retrieved_on,
+            project_dedupe=project_dedupe,
         )
         if args.activity_report
         else []
@@ -665,6 +757,7 @@ def main() -> int:
         f"target_acc_rows={result['rows_with_target_acc']}"
     )
     print(f"  context: taxon_rows={result['rows_with_taxon']}")
+    print(f"  dedupe: source_context_rows={result['rows_with_dedupe_context']}")
     print(
         f"  lexical exact-name candidates: antibiotics={result['exact_name_matched_antibiotics']} "
         f"rows={result['exact_name_matched_rows']}"

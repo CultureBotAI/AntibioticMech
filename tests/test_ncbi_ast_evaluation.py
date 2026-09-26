@@ -13,11 +13,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from evaluate_ncbi_ast import (  # noqa: E402
     DRUG_MAP_COLUMNS,
+    PROJECT_DEDUPE_COLUMNS,
     corpus_name_candidates,
     evaluate_rows,
     exact_activity_rows,
     normalize_header,
     read_drug_map,
+    read_project_dedupe_map,
     read_table,
     write_activity_report,
     write_antibiotic_report,
@@ -63,7 +65,20 @@ def test_evaluate_rows_summarizes_submitted_antibiotic_names():
         "CHEBI:44650": "TWO",
     }
 
-    result = evaluate_rows(rows, candidates, structure_keys)
+    result = evaluate_rows(
+        rows,
+        candidates,
+        structure_keys,
+        project_dedupe={
+            ("BioSample", "SAMN00000001"): {
+                "accession_type": "BioSample",
+                "accession": "SAMN00000001",
+                "source": "CRYPTIC",
+                "source_version": "3.4.0",
+                "notes": "already represented in an adopted project dataset",
+            },
+        },
+    )
 
     assert result["rows_with_antibiotic"] == 3
     assert result["rows_without_antibiotic"] == 1
@@ -76,12 +91,14 @@ def test_evaluate_rows_summarizes_submitted_antibiotic_names():
     assert result["rows_with_project_context"] == 1
     assert result["rows_with_target_acc"] == 1
     assert result["rows_with_taxon"] == 1
+    assert result["rows_with_dedupe_context"] == 1
 
     amikacin = result["antibiotic_rows"][0]
     assert amikacin["antibiotic"] == "amikacin"
     assert amikacin["exact_name_candidate_identifiers"] == "CHEBI:2637"
     assert amikacin["mapping_status"] == ""
     assert amikacin["project_context_count"] == 1
+    assert amikacin["dedupe_context_count"] == 1
     assert amikacin["taxon_count"] == 1
     assert amikacin["mic_count"] == 1
     assert amikacin["disk_diffusion_count"] == 0
@@ -285,6 +302,67 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
     assert activity_rows[1]["mic_value"] == ""
 
 
+def test_exact_activity_rows_excludes_known_source_context():
+    rows = [
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953777",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "R",
+            "mic": "2",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953778",
+            "bioproject_acc": "PRJNA292667",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "S",
+            "mic": "4",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953779",
+            "bioproject_acc": "PRJNA292668",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "S",
+            "mic": "8",
+        },
+    ]
+    mappings = {
+        "cefepime": {
+            "mapping_status": "EXACT",
+            "identifier": "CHEBI:478164",
+            "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+        },
+    }
+
+    activity_rows = exact_activity_rows(
+        rows,
+        mappings,
+        source_version="2026-09-26-ast-browser",
+        source_retrieved_on="2026-09-26",
+        project_dedupe={
+            ("BioSample", "SAMN11953777"): {
+                "accession_type": "BioSample",
+                "accession": "SAMN11953777",
+                "source": "CRYPTIC",
+                "source_version": "3.4.0",
+                "notes": "already represented in an adopted project dataset",
+            },
+            ("BioProject", "PRJNA292667"): {
+                "accession_type": "BioProject",
+                "accession": "PRJNA292667",
+                "source": "CRYPTIC",
+                "source_version": "3.4.0",
+                "notes": "already represented in an adopted project dataset",
+            },
+        },
+    )
+
+    assert [row["biosample_accession"] for row in activity_rows] == ["SAMN11953779"]
+
+
 def test_read_table_accepts_browser_tsv_exports(tmp_path):
     path = tmp_path / "ast.tsv"
     path.write_text(
@@ -467,6 +545,52 @@ def test_read_drug_map_rejects_identity_drift(tmp_path):
         read_drug_map(path, {"CHEBI:2637": "LKCWBDHBTVXHDL-RMDFUYIESA-N"})
 
 
+def test_read_project_dedupe_map_accepts_biosample_and_bioproject_keys(tmp_path):
+    path = tmp_path / "ncbi_ast_project_dedupe.tsv"
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=PROJECT_DEDUPE_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows([
+            {
+                "accession_type": "BioSample",
+                "accession": "SAMN11953777",
+                "source": "CRYPTIC",
+                "source_version": "3.4.0",
+                "notes": "BioSample represented in an adopted project dataset.",
+            },
+            {
+                "accession_type": "BioProject",
+                "accession": "PRJNA292666",
+                "source": "OTHER",
+                "source_version": "2026-09",
+                "notes": "Whole project represented elsewhere.",
+            },
+        ])
+
+    rows = read_project_dedupe_map(path)
+
+    assert rows[("BioSample", "SAMN11953777")]["source"] == "CRYPTIC"
+    assert rows[("BioProject", "PRJNA292666")]["source_version"] == "2026-09"
+
+
+def test_read_project_dedupe_map_rejects_bad_accessions(tmp_path):
+    path = tmp_path / "ncbi_ast_project_dedupe.tsv"
+    path.write_text(
+        "\t".join(PROJECT_DEDUPE_COLUMNS)
+        + "\n"
+        + "BioProject\tSAMN11953777\tCRYPTIC\t3.4.0\twrong accession type\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="invalid BioProject accession"):
+        read_project_dedupe_map(path)
+
+
 def test_antibiotic_report_is_a_stable_tsv(tmp_path):
     path = tmp_path / "ncbi_ast_antibiotics.tsv"
     rows = [
@@ -485,6 +609,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "biosample_count": 7,
             "bioproject_count": 7,
             "project_context_count": 7,
+            "dedupe_context_count": 0,
             "target_acc_count": 7,
             "taxon_count": 7,
             "phenotype_count": 7,
@@ -521,6 +646,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "biosample_count": "7",
         "bioproject_count": "7",
         "project_context_count": "7",
+        "dedupe_context_count": "0",
         "target_acc_count": "7",
         "taxon_count": "7",
         "phenotype_count": "7",
@@ -688,6 +814,20 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             "reagent": "broth microdilution",
             "standard": "CLSI",
         })
+        writer.writerow({
+            "antibiotic": "amikacin",
+            "biosample_acc": "SAMN11953778",
+            "bioproject_acc": "PRJNA292667",
+            "target_acc": "GCF_003123126.1",
+            "scientific_name": "Klebsiella pneumoniae",
+            "phenotype": "R",
+            "measurement_sign": ">",
+            "mic": "64",
+            "platform": "AST",
+            "vendor": "NCBI",
+            "reagent": "broth microdilution",
+            "standard": "CLSI",
+        })
 
     _, structure_keys = corpus_name_candidates()
     drug_map = tmp_path / "ncbi_ast_drug_map.tsv"
@@ -709,6 +849,23 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             "notes": "NCBI names the active amikacin parent.",
         })
 
+    project_dedupe = tmp_path / "ncbi_ast_project_dedupe.tsv"
+    with project_dedupe.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=PROJECT_DEDUPE_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerow({
+            "accession_type": "BioProject",
+            "accession": "PRJNA292667",
+            "source": "CRYPTIC",
+            "source_version": "3.4.0",
+            "notes": "Project represented in an adopted source lane.",
+        })
+
     antibiotic_report = tmp_path / "ncbi_ast_antibiotics.tsv"
     template = tmp_path / "ncbi_ast_drug_map_template.tsv"
     activity_report = tmp_path / "ncbi_ast_activity.tsv"
@@ -721,6 +878,8 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             str(ast),
             "--drug-map",
             str(drug_map),
+            "--project-dedupe-map",
+            str(project_dedupe),
             "--antibiotic-report",
             str(antibiotic_report),
             "--drug-map-template",
@@ -738,8 +897,9 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     )
 
     assert "exact_mapped_activity_groups=1" in result.stdout
-    assert "project_context_rows=1" in result.stdout
-    assert "taxon_rows=1" in result.stdout
+    assert "project_context_rows=2" in result.stdout
+    assert "taxon_rows=2" in result.stdout
+    assert "source_context_rows=1" in result.stdout
     assert antibiotic_report.exists()
 
     with template.open(newline="", encoding="utf-8") as handle:

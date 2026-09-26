@@ -154,9 +154,10 @@ contact before production use.
 
 Disposition: no corpus import. Per project direction, license resolution is
 deferred and is not treated as the blocker in this pass. The remaining
-technical gates are structure-grounded antibiotic identity, validation of the
-submitted field relationships needed for a claim, and deduplication of
-BioSample/BioProject rows already present in CRyPTIC or other project datasets.
+technical gates are curated structure-grounded antibiotic identity, validation
+of the submitted field relationships needed for a claim, and curated
+deduplication of BioSample/BioProject rows already present in CRyPTIC or other
+project datasets.
 No contact was made.
 
 2026-09-26 follow-up: `scripts/evaluate_ncbi_ast.py` now preflights AST
@@ -165,16 +166,17 @@ submitted antibiotic strings by lexical exact-corpus candidates, ambiguous
 matches, unmatched names, taxon/BioSample/BioProject/target-accession coverage,
 MIC or disk-diffusion coverage, and measurement signs standardized to
 qualifiers and units. It can also emit the fillable seven-column drug-map
-template that a
-curator turns into the exact-structure crosswalk. When supplied with a partially
-curated crosswalk, it writes a compact grouped activity report for exact-mapped
-rows with valid MIC or disk-diffusion measurements, BioSample/BioProject
-context for deduplication, and source-versioning and retrieval-date columns.
-Curated crosswalk rows must explicitly separate exact single-structure mappings
-from mixtures, drug classes, combinations, ambiguous stereochemical names, and
-missing corpus records; exact rows are validated against current corpus
-Standard InChIKeys so a stale mapping cannot silently promote observations onto
-the wrong structure.
+template that a curator turns into the exact-structure crosswalk. When supplied
+with a partially curated crosswalk, it writes a compact grouped activity report
+for exact-mapped rows with valid MIC or disk-diffusion measurements,
+BioSample/BioProject context for deduplication, and source-versioning and
+retrieval-date columns. A second curated deduplication TSV can exclude BioSample
+or whole-BioProject contexts that are already represented by CRyPTIC or another
+source before those exact groups are written. Curated crosswalk rows must
+explicitly separate exact single-structure mappings from mixtures, drug classes,
+combinations, ambiguous stereochemical names, and missing corpus records; exact
+rows are validated against current corpus Standard InChIKeys so a stale mapping
+cannot silently promote observations onto the wrong structure.
 
 ## 5. RCSB PDB candidate audit
 
@@ -207,6 +209,7 @@ just evaluate-amrfinder --catalog ReferenceGeneCatalog.txt --families fam.tsv \
 just evaluate-ncbi-ast --ast ast.tsv --antibiotic-report ncbi_ast_antibiotics.tsv \
   --drug-map-template ncbi_ast_drug_map.tsv
 just evaluate-ncbi-ast --ast ast.tsv --drug-map ncbi_ast_drug_map.tsv \
+  --project-dedupe-map ncbi_ast_project_dedupe.tsv \
   --activity-report ncbi_ast_activity.tsv \
   --source-version 2026-09-26-ast-browser --source-retrieved-on 2026-09-26
 just evaluate-rcsb-pdb
