@@ -79,12 +79,12 @@ prose below are the reasoning, the queue is the list.
   than entry curation (#203). Any further widening should come from a second
   source, not from relaxing the evidence requirement.
 - **Activity spectrum.** CRyPTIC 3.4.0 now seeds grouped DST/UKMYC MIC rows
-  against exact-mapped drugs. Next, widen measured resistance phenotypes by
-  preflighting NCBI Pathogen Detection AST exports with `just
-  evaluate-ncbi-ast` to quantify which submitted antibiotic strings have exact
-  lexical corpus candidates, which remain ambiguous, and which BioSample /
-  BioProject-backed rows would need deduplication before a curated crosswalk
-  can promote rows into `activity_spectrum`.
+  against exact-mapped drugs. The NCBI Pathogen Detection AST preflight now
+  audits submitted antibiotic strings, writes fillable exact-structure
+  crosswalks, and emits source-versioned exact activity reports with MIC or
+  disk-diffusion measurements. Next, turn those reports into a guarded source
+  slice only after BioSample/BioProject rows are deduplicated against CRyPTIC
+  and other project deposits.
 - **A `research/` path.** Sibling repos run model-assisted deep research per
   entity with a manifest of what was actually paid for. The `research` extra in
   `pyproject.toml` is declared and unused; wire it up when there is a question

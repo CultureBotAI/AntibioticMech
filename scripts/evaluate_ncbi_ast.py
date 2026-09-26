@@ -15,6 +15,7 @@ import hashlib
 import re
 from collections import Counter, defaultdict
 from collections.abc import Iterable
+from datetime import date
 from pathlib import Path
 
 import yaml
@@ -54,6 +55,8 @@ ACTIVITY_REPORT_GROUP_COLUMNS = [
 ]
 ACTIVITY_REPORT_COLUMNS = [
     "activity_group_id",
+    "source_version",
+    "source_retrieved_on",
     "ast_row_count",
     *ACTIVITY_REPORT_GROUP_COLUMNS,
 ]
@@ -261,6 +264,9 @@ def read_drug_map(path: Path, structure_keys: dict[str, str]) -> dict[str, dict[
 def exact_activity_rows(
     rows: list[dict[str, str]],
     mappings: dict[str, dict[str, str]],
+    *,
+    source_version: str,
+    source_retrieved_on: str,
 ) -> list[dict[str, str]]:
     """Return grouped, exact-mapped AST measurements without seeding claims."""
 
@@ -310,6 +316,8 @@ def exact_activity_rows(
     for group_key, row in grouped.items():
         activity_rows.append({
             "activity_group_id": activity_group_id(row),
+            "source_version": source_version,
+            "source_retrieved_on": source_retrieved_on,
             "ast_row_count": counts[group_key],
             **row,
         })
@@ -560,6 +568,22 @@ def main() -> int:
         ),
     )
     parser.add_argument(
+        "--source-version",
+        default="",
+        help=(
+            "Optional AST export or BigQuery snapshot version to stamp on "
+            "--activity-report rows."
+        ),
+    )
+    parser.add_argument(
+        "--source-retrieved-on",
+        default="",
+        help=(
+            "Optional ISO retrieval date for the AST export to stamp on "
+            "--activity-report rows."
+        ),
+    )
+    parser.add_argument(
         "--drug-map-template",
         type=Path,
         help="Optional fillable TSV crosswalk for every submitted antibiotic string.",
@@ -572,6 +596,15 @@ def main() -> int:
     args = parser.parse_args()
     if args.activity_report and not args.drug_map:
         parser.error("--activity-report requires --drug-map with exact curated mappings.")
+    if args.activity_report and not args.source_version:
+        parser.error("--activity-report requires --source-version.")
+    if args.activity_report and not args.source_retrieved_on:
+        parser.error("--activity-report requires --source-retrieved-on.")
+    if args.source_retrieved_on:
+        try:
+            date.fromisoformat(args.source_retrieved_on)
+        except ValueError:
+            parser.error("--source-retrieved-on must be an ISO date.")
 
     rows = read_table(args.ast)
     candidates, structure_keys = corpus_name_candidates()
@@ -582,7 +615,16 @@ def main() -> int:
         write_antibiotic_report(result["antibiotic_rows"], args.antibiotic_report)
     if args.drug_map_template:
         write_drug_map_template(result["antibiotic_rows"], args.drug_map_template)
-    activity_rows = exact_activity_rows(rows, mappings) if args.activity_report else []
+    activity_rows = (
+        exact_activity_rows(
+            rows,
+            mappings,
+            source_version=args.source_version,
+            source_retrieved_on=args.source_retrieved_on,
+        )
+        if args.activity_report
+        else []
+    )
     if args.activity_report:
         write_activity_report(activity_rows, args.activity_report)
 
