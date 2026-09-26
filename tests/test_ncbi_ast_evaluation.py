@@ -84,6 +84,29 @@ def test_evaluate_rows_summarizes_submitted_antibiotic_names():
     assert amikacin["taxon_labels"] == "Escherichia coli"
 
 
+def test_evaluate_rows_coalesces_antibiotic_spellings_for_drug_maps(tmp_path):
+    result = evaluate_rows(
+        [
+            {"Antibiotic": "amikacin", "BioSample": "SAMN00000001"},
+            {"Antibiotic": "AMIKACIN", "BioSample": "SAMN00000002"},
+        ],
+        {"amikacin": {"CHEBI:2637"}},
+        {"CHEBI:2637": "LKCWBDHBTVXHDL-RMDFUYIESA-N"},
+    )
+
+    assert result["antibiotic_values"] == 1
+    assert result["antibiotic_rows"][0]["normalized_antibiotic"] == "amikacin"
+    assert result["antibiotic_rows"][0]["ast_rows"] == 2
+
+    path = tmp_path / "ncbi_ast_drug_map.tsv"
+    write_drug_map_template(result["antibiotic_rows"], path)
+
+    with path.open(newline="", encoding="utf-8") as handle:
+        template_rows = list(csv.DictReader(handle, delimiter="\t"))
+
+    assert [row["source_record_id"] for row in template_rows] == ["amikacin"]
+
+
 def test_evaluate_rows_keeps_curated_mappings_separate_from_lexical_candidates():
     rows = [
         {"Antibiotic": "amikacin", "BioSample": "SAMN00000001"},

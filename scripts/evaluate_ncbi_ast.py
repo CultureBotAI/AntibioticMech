@@ -334,6 +334,7 @@ def evaluate_rows(
 ) -> dict:
     mappings = mappings or {}
     rows_by_antibiotic: dict[str, list[dict[str, str]]] = defaultdict(list)
+    names_by_antibiotic: dict[str, set[str]] = defaultdict(set)
     rows_without_antibiotic = 0
     rows_with_biosample = 0
     rows_with_bioproject = 0
@@ -344,7 +345,9 @@ def evaluate_rows(
         if not antibiotic:
             rows_without_antibiotic += 1
             continue
-        rows_by_antibiotic[antibiotic].append(row)
+        normalized = normalize(antibiotic)
+        rows_by_antibiotic[normalized].append(row)
+        names_by_antibiotic[normalized].add(antibiotic)
         rows_with_biosample += int(has_value(row, BIOSAMPLE_ALIASES))
         rows_with_bioproject += int(has_value(row, BIOPROJECT_ALIASES))
         rows_with_target_acc += int(has_value(row, TARGET_ALIASES))
@@ -356,11 +359,14 @@ def evaluate_rows(
     exact_mapped_rows = 0
     non_exact_mapped_rows = 0
     unmapped_rows = 0
-    for antibiotic, antibiotic_ast_rows in sorted(
+    for normalized, antibiotic_ast_rows in sorted(
         rows_by_antibiotic.items(),
-        key=lambda item: (-len(item[1]), item[0].casefold()),
+        key=lambda item: (-len(item[1]), item[0]),
     ):
-        normalized = normalize(antibiotic)
+        antibiotic = sorted(
+            names_by_antibiotic[normalized],
+            key=lambda name: (name.casefold(), name),
+        )[0]
         identifiers = sorted(candidates.get(normalized, set()))
         mapping = mappings.get(normalized, {})
         row_count = len(antibiotic_ast_rows)
