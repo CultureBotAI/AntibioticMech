@@ -382,7 +382,7 @@ def test_read_table_accepts_browser_tsv_exports(tmp_path):
     assert normalize_header("AST.Antibiotic") == "antibiotic"
 
 
-def test_read_table_ignores_ragged_extra_columns(tmp_path):
+def test_read_table_rejects_ragged_rows(tmp_path):
     path = tmp_path / "ast.tsv"
     path.write_text(
         "AST.Antibiotic\tBioSample\n"
@@ -390,14 +390,56 @@ def test_read_table_ignores_ragged_extra_columns(tmp_path):
         encoding="utf-8",
     )
 
-    result = evaluate_rows(
-        read_table(path),
-        {"cefepime": {"CHEBI:478164"}},
-        {"CHEBI:478164": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
+    with pytest.raises(ValueError, match="unexpected extra delimited field"):
+        read_table(path)
+
+    path.write_text(
+        "AST.Antibiotic\tBioSample\tMIC\n"
+        "cefepime\tSAMN11953777\n",
+        encoding="utf-8",
     )
 
-    assert result["rows_with_antibiotic"] == 1
-    assert result["rows_with_biosample"] == 1
+    with pytest.raises(ValueError, match="MIC is missing"):
+        read_table(path)
+
+
+def test_read_table_rejects_malformed_headers(tmp_path):
+    path = tmp_path / "ast.csv"
+    path.write_text(
+        "Antibiotic,Antibiotic\n"
+        "cefepime,cefepime\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="duplicate header"):
+        read_table(path)
+
+    path.write_text(
+        "Antibiotic,\n"
+        "cefepime,SAMN11953777\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="header column 2 is empty"):
+        read_table(path)
+
+    path.write_text(
+        "AST.Antibiotic,AMR.Antibiotic\n"
+        "cefepime,cefepime\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="normalizes to 'antibiotic'"):
+        read_table(path)
+
+    path.write_text(
+        "Antibiotic,AST.\n"
+        "cefepime,ignored\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="normalizes to empty"):
+        read_table(path)
 
 
 def test_evaluate_rows_accepts_ncbi_browser_field_names():
@@ -564,7 +606,7 @@ def test_read_drug_map_rejects_malformed_rows(tmp_path):
         encoding="utf-8",
     )
 
-    with pytest.raises(ValueError, match="unexpected extra TSV field"):
+    with pytest.raises(ValueError, match="unexpected extra delimited field"):
         read_drug_map(path, {})
 
 
@@ -646,7 +688,7 @@ def test_read_project_dedupe_map_rejects_malformed_rows(tmp_path):
         encoding="utf-8",
     )
 
-    with pytest.raises(ValueError, match="unexpected extra TSV field"):
+    with pytest.raises(ValueError, match="unexpected extra delimited field"):
         read_project_dedupe_map(path)
 
 
