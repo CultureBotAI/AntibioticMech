@@ -82,9 +82,11 @@ prose below are the reasoning, the queue is the list.
   against exact-mapped drugs. The NCBI Pathogen Detection AST preflight now
   audits submitted antibiotic strings, writes fillable exact-structure
   crosswalks, and emits source-versioned exact activity reports with MIC or
-  disk-diffusion measurements on BioSample/BioProject-backed rows. Next, use
-  those project keys to deduplicate reports against CRyPTIC and other project
-  deposits before turning them into a guarded source slice.
+  disk-diffusion measurements on BioSample/BioProject-backed rows. It can
+  exclude curated BioSample/BioProject contexts already represented by CRyPTIC
+  or another source before writing an exact report. Next, fill a real NCBI AST
+  drug crosswalk and project-dedup map, then turn the deduplicated exact rows
+  into a guarded source slice.
 - **A `research/` path.** Sibling repos run model-assisted deep research per
   entity with a manifest of what was actually paid for. The `research` extra in
   `pyproject.toml` is declared and unused; wire it up when there is a question
