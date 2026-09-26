@@ -1077,6 +1077,21 @@ classes:
         multivalued: true
         range: string
         pattern: "^(SRR|ERR|DRR|SRX|ERX|DRX|SRP|ERP|DRP|SRS|ERS|DRS)[0-9]+$"
+      source:
+        description: >-
+          Upstream resource owning this observation. Set by an extractor lane so
+          re-seeding can replace exactly what it wrote; absent on
+          curator-written observations.
+        range: string
+      source_version:
+        description: Version or release of the upstream source for this observation.
+        range: string
+      source_retrieved_on:
+        description: Date the source snapshot was retrieved.
+        range: date
+      source_observation_id:
+        description: Stable upstream row, isolate or measurement identifier for this observation.
+        range: string
       evidence:
         description: Citation for this observation. Required.
         required: true

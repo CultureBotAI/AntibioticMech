@@ -92,6 +92,10 @@ def test_activity_observation_accepts_sample_and_genome_accessions(tmp_path):
             "bioproject_accession": "PRJNA123456",
             "assembly_accession": "GCF_000005845.2",
             "sra_accessions": ["SRR123456", "SRX123456"],
+            "source": "NCBI_AST",
+            "source_version": "2026-09-26",
+            "source_retrieved_on": "2026-09-26",
+            "source_observation_id": "SAMN11953777|cefepime",
             "evidence": [{"reference": "PMID:1"}],
         }
     ]}
