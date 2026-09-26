@@ -227,6 +227,16 @@ def corpus_name_candidates(root: Path = REPO_ROOT) -> tuple[dict[str, set[str]],
     return candidates, structure_keys
 
 
+def require_exact_tsv_row(row: dict, path: Path, line_number: int) -> None:
+    """Reject rows whose cells do not match an already-validated TSV header."""
+    prefix = f"{path}:{line_number}"
+    if None in row:
+        raise ValueError(f"{prefix}: unexpected extra TSV field")
+    for field, value in row.items():
+        if value is None:
+            raise ValueError(f"{prefix}: {field} is missing")
+
+
 def read_drug_map(path: Path, structure_keys: dict[str, str]) -> dict[str, dict[str, str]]:
     """Read a partial NCBI antibiotic-value crosswalk and validate exact rows."""
 
@@ -236,7 +246,18 @@ def read_drug_map(path: Path, structure_keys: dict[str, str]) -> dict[str, dict[
             raise ValueError(f"unexpected NCBI AST drug map columns: {reader.fieldnames}")
 
         rows = {}
-        for row in reader:
+        for line_number, row in enumerate(reader, start=2):
+            require_exact_tsv_row(row, path, line_number)
+            for field in (
+                "source_record_id",
+                "source_name",
+                "mapping_status",
+                "mapping_basis",
+                "notes",
+            ):
+                if not row[field]:
+                    raise ValueError(f"{path}:{line_number}: {field} is required")
+
             normalized_name = normalize(row["source_name"])
             if row["source_record_id"] != normalized_name:
                 raise ValueError(
@@ -287,7 +308,8 @@ def read_project_dedupe_map(path: Path) -> dict[tuple[str, str], dict[str, str]]
             raise ValueError(f"unexpected NCBI AST project dedupe columns: {reader.fieldnames}")
 
         rows = {}
-        for row in reader:
+        for line_number, row in enumerate(reader, start=2):
+            require_exact_tsv_row(row, path, line_number)
             accession_type = row["accession_type"]
             accession = row["accession"]
             if accession_type not in PROJECT_DEDUPE_ACCESSIONS:
@@ -298,6 +320,8 @@ def read_project_dedupe_map(path: Path) -> dict[tuple[str, str], dict[str, str]]
                 raise ValueError(f"{accession}: invalid {accession_type} accession")
             if not row["source"]:
                 raise ValueError(f"{accession}: source is required")
+            if not row["source_version"]:
+                raise ValueError(f"{accession}: source_version is required")
             if not row["notes"]:
                 raise ValueError(f"{accession}: notes are required")
 
