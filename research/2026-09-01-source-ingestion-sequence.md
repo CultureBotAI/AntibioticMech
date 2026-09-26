@@ -69,9 +69,11 @@ phenotype; each row retains a stable group id plus the row, isolate and site
 counts needed to audit the grouping without checking in a giant row-for-row
 activity table. It also standardizes CRyPTIC MIC strings into `mic_value`,
 `mic_qualifier` and `mic_units`, using mg/L for both DST `METHOD_MIC` and UKMYC
-`MIC` while preserving the raw columns. The remaining blockers are Mycobacterium
-tuberculosis complex taxon semantics and source-owned `ActivityObservation`
-replacement.
+`MIC` while preserving the raw columns. The seed merge path now treats
+CRyPTIC-owned `activity_spectrum` rows as a replaceable source slice, so future
+re-seeds can replace stale upstream observations without touching curated
+activity rows. The remaining blockers are Mycobacterium tuberculosis complex
+taxon semantics and an `ActivityObservation` writer.
 
 ## 2. PHI-base AMR adoption
 

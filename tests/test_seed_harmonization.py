@@ -1744,9 +1744,12 @@ def test_a_lane_change_names_the_lane_and_its_upstream_version():
                           "notes": "CARD/ARO asserts this determinant"}]}
     bindingdb = {"target_label": "z", "target_type": "PROTEIN", "source": "BINDINGDB",
                  "source_version": "2026-09"}
+    activity = {"taxon_label": "Mycobacterium tuberculosis complex", "source": "CRYPTIC",
+                "source_version": "3.4.0"}
     fresh = _seeded_record(producer_organisms=[producer],
                            resistance_mechanisms=[resistance, card],
-                           molecular_targets=[bindingdb])
+                           molecular_targets=[bindingdb],
+                           activity_spectrum=[activity])
     changes = _event(fresh, _seeded_record())
     # Every lane the delta compares, so deleting any one of them from the
     # delta fails here. The first version exercised MIBiG and PHI-base only,
@@ -1755,6 +1758,7 @@ def test_a_lane_change_names_the_lane_and_its_upstream_version():
     assert "resistance_mechanisms (PHIBASE abc123)" in changes
     assert "resistance_mechanisms (CARD)" in changes
     assert "molecular_targets (BINDINGDB 2026-09)" in changes
+    assert "activity_spectrum (CRYPTIC 3.4.0)" in changes
     assert "Upstream retrieval date 2026-08-30, unchanged." in changes
 
 

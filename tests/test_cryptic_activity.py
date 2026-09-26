@@ -22,6 +22,11 @@ from evaluate_cryptic_activity import (  # noqa: E402
     validated_drug_mappings,
     write_inventory,
 )
+from seed_from_sources import (  # noqa: E402
+    CRYPTIC_ACTIVITY_SOURCE,
+    cryptic_sourced_activity_view,
+    merge_with_existing,
+)
 
 CRYPTIC_340_CODES = {
     "AMC": "AMOXICILIN-CLAVULANATE",
@@ -289,3 +294,66 @@ def test_activity_inventory_fetches_each_result_before_reusing_duckdb_connection
     )
 
     assert [row["source_table"] for row in rows] == [DST_TABLE, UKMYC_TABLE]
+
+
+def test_reseed_replaces_only_the_cryptic_activity_slice():
+    new_cryptic = {
+        "taxon_id": "NCBITaxon:1763",
+        "taxon_label": "Mycobacterium tuberculosis complex",
+        "activity": "RESISTANT",
+        "mic_value": 2.0,
+        "mic_units": "mg/L",
+        "assay": "UKMYC broth microdilution",
+        "source": CRYPTIC_ACTIVITY_SOURCE,
+        "source_version": "3.4.0",
+        "source_observation_id": "UKMYC_PHENOTYPES:abc",
+        "evidence": [{"reference": "DOI:10.5281/zenodo.15680920"}],
+    }
+    old_cryptic = new_cryptic | {"source_observation_id": "UKMYC_PHENOTYPES:stale"}
+    curated = {
+        "taxon_label": "Escherichia coli",
+        "activity": "SENSITIVE",
+        "assay": "curated broth microdilution",
+        "source": "CURATOR",
+        "evidence": [{"reference": "PMID:1"}],
+    }
+    base = {
+        "identifier": "CHEBI:1",
+        "label": "example",
+        "antimicrobial_class": "ANTIBACTERIAL",
+        "curation_status": "SEEDED",
+        "grounding_status": "EXACT",
+        "curation_history": [],
+    }
+
+    fresh = base | {"activity_spectrum": [new_cryptic]}
+    existing = base | {"activity_spectrum": [old_cryptic, curated]}
+    merged = merge_with_existing(fresh, existing)
+
+    assert cryptic_sourced_activity_view(merged) == [new_cryptic]
+    assert merged["activity_spectrum"] == [new_cryptic, curated]
+
+
+def test_reseed_drops_stale_cryptic_activity_when_the_source_stops_emitting_it():
+    old_cryptic = {
+        "taxon_id": "NCBITaxon:1763",
+        "taxon_label": "Mycobacterium tuberculosis complex",
+        "activity": "RESISTANT",
+        "assay": "UKMYC broth microdilution",
+        "source": CRYPTIC_ACTIVITY_SOURCE,
+        "source_version": "3.4.0",
+        "source_observation_id": "UKMYC_PHENOTYPES:stale",
+        "evidence": [{"reference": "DOI:10.5281/zenodo.15680920"}],
+    }
+    base = {
+        "identifier": "CHEBI:1",
+        "label": "example",
+        "antimicrobial_class": "ANTIBACTERIAL",
+        "curation_status": "SEEDED",
+        "grounding_status": "EXACT",
+        "curation_history": [],
+    }
+
+    merged = merge_with_existing(base, base | {"activity_spectrum": [old_cryptic]})
+
+    assert "activity_spectrum" not in merged

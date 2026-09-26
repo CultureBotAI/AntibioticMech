@@ -47,6 +47,7 @@ from seed_from_sources import (  # noqa: E402
     bindingdb_sourced_target_view,
     build_concepts,
     card_sourced_view,
+    cryptic_sourced_activity_view,
     curator_owns_mode_of_action,
     fda_sourced_clinical_view,
     flag_structure_collisions,
@@ -123,6 +124,8 @@ def main() -> int:
             drifted.append((path, "resistance_mechanisms"))
         if bindingdb_sourced_target_view(want) != bindingdb_sourced_target_view(actual):
             drifted.append((path, "molecular_targets"))
+        if cryptic_sourced_activity_view(want) != cryptic_sourced_activity_view(actual):
+            drifted.append((path, "activity_spectrum"))
         if mibig_sourced_producer_view(want) != mibig_sourced_producer_view(actual):
             drifted.append((path, "producer_organisms"))
         if fda_sourced_clinical_view(want) != fda_sourced_clinical_view(actual):
