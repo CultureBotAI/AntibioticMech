@@ -73,12 +73,16 @@ def test_evaluate_rows_summarizes_submitted_antibiotic_names():
     assert result["unmatched_antibiotics"] == 1
     assert result["rows_with_biosample"] == 2
     assert result["rows_with_bioproject"] == 1
+    assert result["rows_with_project_context"] == 1
     assert result["rows_with_target_acc"] == 1
+    assert result["rows_with_taxon"] == 1
 
     amikacin = result["antibiotic_rows"][0]
     assert amikacin["antibiotic"] == "amikacin"
     assert amikacin["exact_name_candidate_identifiers"] == "CHEBI:2637"
     assert amikacin["mapping_status"] == ""
+    assert amikacin["project_context_count"] == 1
+    assert amikacin["taxon_count"] == 1
     assert amikacin["mic_count"] == 1
     assert amikacin["disk_diffusion_count"] == 0
     assert amikacin["taxon_labels"] == "Escherichia coli"
@@ -195,6 +199,30 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "Resistance phenotype": "S",
             "Measurement sign": ">",
             "Disk diffusion": "18",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953779",
+            "taxgroup_name": "Escherichia coli and Shigella",
+            "phenotype": "R",
+            "measurement_sign": "<=",
+            "mic": "2",
+        },
+        {
+            "antibiotic": "cefepime",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli and Shigella",
+            "phenotype": "R",
+            "measurement_sign": "<=",
+            "mic": "2",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953780",
+            "bioproject_acc": "PRJNA292666",
+            "phenotype": "R",
+            "measurement_sign": "<=",
+            "mic": "2",
         },
         {"antibiotic": "cefepime", "measurement_sign": "<", "mic": ">4"},
         {"antibiotic": "cefepime", "phenotype": "R"},
@@ -326,7 +354,9 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
 
     assert result["rows_with_biosample"] == 2
     assert result["rows_with_bioproject"] == 2
+    assert result["rows_with_project_context"] == 2
     assert result["rows_with_target_acc"] == 1
+    assert result["rows_with_taxon"] == 2
     assert result["antibiotic_rows"][0]["mic_count"] == 1
     assert result["antibiotic_rows"][0]["standardized_mic_count"] == 1
     assert result["antibiotic_rows"][0]["standardized_mic_values"] == "<=2 mg/L"
@@ -454,7 +484,9 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "exact_name_candidate_inchi_keys": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
             "biosample_count": 7,
             "bioproject_count": 7,
+            "project_context_count": 7,
             "target_acc_count": 7,
+            "taxon_count": 7,
             "phenotype_count": 7,
             "mic_count": 7,
             "standardized_mic_count": 7,
@@ -488,7 +520,9 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "exact_name_candidate_inchi_keys": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
         "biosample_count": "7",
         "bioproject_count": "7",
+        "project_context_count": "7",
         "target_acc_count": "7",
+        "taxon_count": "7",
         "phenotype_count": "7",
         "mic_count": "7",
         "standardized_mic_count": "7",
@@ -704,6 +738,8 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     )
 
     assert "exact_mapped_activity_groups=1" in result.stdout
+    assert "project_context_rows=1" in result.stdout
+    assert "taxon_rows=1" in result.stdout
     assert antibiotic_report.exists()
 
     with template.open(newline="", encoding="utf-8") as handle:

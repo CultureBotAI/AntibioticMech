@@ -142,6 +142,10 @@ def has_value(row: dict[str, str], aliases: Iterable[str]) -> bool:
     return bool(first_value(row, aliases))
 
 
+def has_project_context(row: dict[str, str]) -> bool:
+    return has_value(row, BIOSAMPLE_ALIASES) and has_value(row, BIOPROJECT_ALIASES)
+
+
 def standardized_measurement(
     row: dict[str, str],
     aliases: Iterable[str],
@@ -268,7 +272,7 @@ def exact_activity_rows(
     source_version: str,
     source_retrieved_on: str,
 ) -> list[dict[str, str]]:
-    """Return grouped, exact-mapped AST measurements without seeding claims."""
+    """Return grouped, dedupe-ready exact AST measurements without seeding claims."""
 
     grouped: dict[tuple[str, ...], dict[str, str]] = {}
     counts: Counter[tuple[str, ...]] = Counter()
@@ -285,15 +289,21 @@ def exact_activity_rows(
         if not mic[0] and not disk[0]:
             continue
 
+        taxon_label = first_value(row, TAXON_ALIASES)
+        biosample_accession = first_value(row, BIOSAMPLE_ALIASES)
+        bioproject_accession = first_value(row, BIOPROJECT_ALIASES)
+        if not taxon_label or not biosample_accession or not bioproject_accession:
+            continue
+
         phenotype = first_value(row, PHENOTYPE_ALIASES)
         out = {
             "source_name": source_name,
             "normalized_antibiotic": normalize(source_name),
             "identifier": mapping["identifier"],
             "standard_inchi_key": mapping["standard_inchi_key"],
-            "taxon_label": first_value(row, TAXON_ALIASES),
-            "biosample_accession": first_value(row, BIOSAMPLE_ALIASES),
-            "bioproject_accession": first_value(row, BIOPROJECT_ALIASES),
+            "taxon_label": taxon_label,
+            "biosample_accession": biosample_accession,
+            "bioproject_accession": bioproject_accession,
             "assembly_accession": first_value(row, TARGET_ALIASES),
             "phenotype": phenotype,
             "activity": ACTIVITY_CALLS.get(phenotype.casefold(), ""),
@@ -346,7 +356,9 @@ def evaluate_rows(
     rows_without_antibiotic = 0
     rows_with_biosample = 0
     rows_with_bioproject = 0
+    rows_with_project_context = 0
     rows_with_target_acc = 0
+    rows_with_taxon = 0
 
     for row in rows:
         antibiotic = first_value(row, ANTIBIOTIC_ALIASES)
@@ -358,7 +370,9 @@ def evaluate_rows(
         names_by_antibiotic[normalized].add(antibiotic)
         rows_with_biosample += int(has_value(row, BIOSAMPLE_ALIASES))
         rows_with_bioproject += int(has_value(row, BIOPROJECT_ALIASES))
+        rows_with_project_context += int(has_project_context(row))
         rows_with_target_acc += int(has_value(row, TARGET_ALIASES))
+        rows_with_taxon += int(has_value(row, TAXON_ALIASES))
 
     antibiotic_rows = []
     exact_name_matched_rows = 0
@@ -425,7 +439,9 @@ def evaluate_rows(
                 ),
                 "biosample_count": sum(has_value(row, BIOSAMPLE_ALIASES) for row in antibiotic_ast_rows),
                 "bioproject_count": sum(has_value(row, BIOPROJECT_ALIASES) for row in antibiotic_ast_rows),
+                "project_context_count": sum(has_project_context(row) for row in antibiotic_ast_rows),
                 "target_acc_count": sum(has_value(row, TARGET_ALIASES) for row in antibiotic_ast_rows),
+                "taxon_count": sum(has_value(row, TAXON_ALIASES) for row in antibiotic_ast_rows),
                 "phenotype_count": sum(has_value(row, PHENOTYPE_ALIASES) for row in antibiotic_ast_rows),
                 "mic_count": sum(has_value(row, MIC_ALIASES) for row in antibiotic_ast_rows),
                 "standardized_mic_count": len(valid_mic_measurements),
@@ -462,7 +478,9 @@ def evaluate_rows(
         "antibiotic_values": len(rows_by_antibiotic),
         "rows_with_biosample": rows_with_biosample,
         "rows_with_bioproject": rows_with_bioproject,
+        "rows_with_project_context": rows_with_project_context,
         "rows_with_target_acc": rows_with_target_acc,
+        "rows_with_taxon": rows_with_taxon,
         "exact_name_matched_antibiotics": sum(
             row["exact_name_candidate_count"] == 1 for row in antibiotic_rows
         ),
@@ -502,7 +520,9 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
         "exact_name_candidate_inchi_keys",
         "biosample_count",
         "bioproject_count",
+        "project_context_count",
         "target_acc_count",
+        "taxon_count",
         "phenotype_count",
         "mic_count",
         "standardized_mic_count",
@@ -564,7 +584,7 @@ def main() -> int:
         type=Path,
         help=(
             "Optional TSV of grouped exact-mapped AST rows with valid MIC or disk "
-            "measurements; requires --drug-map."
+            "measurements and BioSample/BioProject context; requires --drug-map."
         ),
     )
     parser.add_argument(
@@ -641,8 +661,10 @@ def main() -> int:
     print(
         f"  identifiers: biosample_rows={result['rows_with_biosample']} "
         f"bioproject_rows={result['rows_with_bioproject']} "
+        f"project_context_rows={result['rows_with_project_context']} "
         f"target_acc_rows={result['rows_with_target_acc']}"
     )
+    print(f"  context: taxon_rows={result['rows_with_taxon']}")
     print(
         f"  lexical exact-name candidates: antibiotics={result['exact_name_matched_antibiotics']} "
         f"rows={result['exact_name_matched_rows']}"

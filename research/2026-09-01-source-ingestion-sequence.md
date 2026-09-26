@@ -162,17 +162,19 @@ No contact was made.
 2026-09-26 follow-up: `scripts/evaluate_ncbi_ast.py` now preflights AST
 Browser CSV/TSV and BigQuery-shaped exports without seeding rows. It summarizes
 submitted antibiotic strings by lexical exact-corpus candidates, ambiguous
-matches, unmatched names, BioSample/BioProject/target-accession coverage, MIC
-or disk-diffusion coverage, and measurement signs standardized to qualifiers
-and units. It can also emit the fillable seven-column drug-map template that a
+matches, unmatched names, taxon/BioSample/BioProject/target-accession coverage,
+MIC or disk-diffusion coverage, and measurement signs standardized to
+qualifiers and units. It can also emit the fillable seven-column drug-map
+template that a
 curator turns into the exact-structure crosswalk. When supplied with a partially
 curated crosswalk, it writes a compact grouped activity report for exact-mapped
-rows with valid MIC or disk-diffusion measurements, source-versioning and
-retrieval-date columns. Curated crosswalk rows must explicitly separate exact
-single-structure mappings from mixtures, drug classes, combinations, ambiguous
-stereochemical names, and missing corpus records; exact rows are validated
-against current corpus Standard InChIKeys so a stale mapping cannot silently
-promote observations onto the wrong structure.
+rows with valid MIC or disk-diffusion measurements, BioSample/BioProject
+context for deduplication, and source-versioning and retrieval-date columns.
+Curated crosswalk rows must explicitly separate exact single-structure mappings
+from mixtures, drug classes, combinations, ambiguous stereochemical names, and
+missing corpus records; exact rows are validated against current corpus
+Standard InChIKeys so a stale mapping cannot silently promote observations onto
+the wrong structure.
 
 ## 5. RCSB PDB candidate audit
 
