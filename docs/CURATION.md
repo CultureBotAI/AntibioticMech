@@ -212,6 +212,13 @@ can never carry an NCBITaxon CURIE; "used to treat tuberculosis" names an
 indication, which is a disease and not an organism in an assay. Neither is an
 observation.
 
+When an AST source names the assayed isolate's sequencing context, preserve it
+as structured provenance: `biosample_accession`, `bioproject_accession`,
+`assembly_accession` and `sra_accessions` live on `ActivityObservation` beside
+the taxon and strain they identify. These accessions are not organism
+identifiers, so `taxon_id` still carries only the NCBITaxon CURIE for the
+written `taxon_label`.
+
 Hence `just worklist --queue producer-candidate` and `--queue activity-candidate`
 are **queues, not extractions**. Each row carries the matched phrase, what that
 phrase actually claims, and the candidate subject; a curator supplies the

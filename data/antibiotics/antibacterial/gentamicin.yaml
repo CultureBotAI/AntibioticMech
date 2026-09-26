@@ -42,6 +42,7 @@ activity_spectrum:
   assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: 0349
+  biosample_accession: SAMN11953777
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=349&PanelID=10
     snippet: Gentamicin  | 8  | R
@@ -56,6 +57,7 @@ activity_spectrum:
   assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
     CLSI 2024 M100 S34.
   strain: 0297
+  biosample_accession: SAMN04901687
   evidence:
   - reference: https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=297&PanelID=1
     snippet: Gentamicin  | >16  | R
@@ -69,6 +71,7 @@ activity_spectrum:
   assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '0346'
+  biosample_accession: SAMN11953774
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=346&PanelID=10
     snippet: Gentamicin  | >16  | R
@@ -83,6 +86,7 @@ activity_spectrum:
   assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '1305'
+  biosample_accession: SAMN46941623
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10596&PanelID=1247
     snippet: Gentamicin  | >16  | R
@@ -97,6 +101,7 @@ activity_spectrum:
   assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '0702'
+  biosample_accession: SAMN11953852
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=702&PanelID=1125
     snippet: Gentamicin  | 16  | R
@@ -110,6 +115,7 @@ activity_spectrum:
   assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '0726'
+  biosample_accession: SAMN11953876
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=726&PanelID=1125
     snippet: Gentamicin  | >32  | R
@@ -124,6 +130,7 @@ activity_spectrum:
   assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: 0729
+  biosample_accession: SAMN11953879
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=729&PanelID=1125
     snippet: Gentamicin  | >32  | R
@@ -138,6 +145,7 @@ activity_spectrum:
   assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35.
   strain: '0730'
+  biosample_accession: SAMN11953880
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=730&PanelID=1125
     snippet: Gentamicin  | >32  | R
@@ -153,6 +161,7 @@ activity_spectrum:
     Bank reports an R interpretation without a versioned breakpoint footnote on this
     isolate page.
   strain: '0033'
+  biosample_accession: SAMN04014874
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=33&PanelID=1227
     snippet: Gentamicin  | 16  | R
@@ -167,6 +176,7 @@ activity_spectrum:
   assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
     CLSI 2024 M100 S34 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
   strain: 0078
+  biosample_accession: SAMN04014919
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=78&PanelID=1227
     snippet: Gentamicin  | >16  | R
@@ -181,6 +191,7 @@ activity_spectrum:
   assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
     CLSI 2020 M100 S30 per the CDC/FDA AR Isolate Bank Panel 1227 footnote.
   strain: 0083
+  biosample_accession: SAMN04014924
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=83&PanelID=1227
     snippet: Gentamicin  | >16  | R
@@ -195,6 +206,7 @@ activity_spectrum:
   assay: Broth microdilution gentamicin MIC; modal MIC reported; interpreted using
     CLSI 2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 10 footnote.
   strain: 0538
+  biosample_accession: SAMN11953785
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=538&PanelID=10
     snippet: Gentamicin  | 8  | R
@@ -523,4 +535,10 @@ curation_history:
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 gentamicin-resistant
     Escherichia coli MIC observation for AR-0538; preserved BioSample SAMN11953785
     and Study ID NEW-22 in evidence notes.
+  llm_assisted: true
+- timestamp: '2026-09-26T07:00:41Z'
+  curator: codex
+  action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
+  changes: Structured BioSample accessions on 12 activity_spectrum observation(s)
+    where evidence notes already named exactly one accession.
   llm_assisted: true

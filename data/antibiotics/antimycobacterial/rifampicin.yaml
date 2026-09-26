@@ -55,6 +55,7 @@ activity_spectrum:
   assay: Broth microdilution rifampin MIC; modal MIC reported; interpreted using CLSI
     2025 M100 S35.
   strain: 0783
+  biosample_accession: SAMN15040082
   evidence:
   - reference: https://wwwn.cdc.gov/arisolatebank/panel/IsolateDetail?IsolateID=10094&PanelID=1130
     snippet: Rifampin  | >4  | R
@@ -69,6 +70,7 @@ activity_spectrum:
   assay: Broth microdilution rifampin MIC; modal MIC reported; interpreted using CLSI
     2025 M100 S35 per the CDC/FDA AR Isolate Bank Panel 10 footnote.
   strain: '0500'
+  biosample_accession: SAMN11953784
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=500&PanelID=10
     snippet: Rifampin  | >4  | R
@@ -931,4 +933,10 @@ curation_history:
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 rifampicin-resistant
     Enterococcus faecium MIC observation for AR-0500; preserved source Blood, BioSample
     SAMN11953784, and Study ID NEW-13 in evidence notes.
+  llm_assisted: true
+- timestamp: '2026-09-26T07:00:50Z'
+  curator: codex
+  action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
+  changes: Structured BioSample accessions on 2 activity_spectrum observation(s) where
+    evidence notes already named exactly one accession.
   llm_assisted: true

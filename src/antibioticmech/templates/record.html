@@ -210,7 +210,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 without a method is not an observation — every row here carries an assay.</p>
 <table>
   <caption>Activity observations</caption>
-  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Assay</th><th scope="col">Strain</th></tr></thead>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th></tr></thead>
   {% for a in r.activity_spectrum %}
   <tr>
     <td><em>{{ a.taxon_label }}</em>{% if a.taxon_id %} <code class="curie">{{ a.taxon_id }}</code>{% endif %}</td>
@@ -218,6 +218,14 @@ without a method is not an observation — every row here carries an assay.</p>
     <td class="num">{% if a.mic_value is not none %}{{ a.mic_qualifier or '' }}{{ a.mic_value }} {{ a.mic_units or '' }}{% else %}—{% endif %}</td>
     <td class="meta">{{ a.assay or '—' }}</td>
     <td class="meta">{{ a.strain or '—' }}</td>
+    <td class="meta">
+      {% if a.biosample_accession or a.bioproject_accession or a.assembly_accession or a.sra_accessions %}
+        {% if a.biosample_accession %}BioSample <code class="curie">{{ a.biosample_accession }}</code><br>{% endif %}
+        {% if a.bioproject_accession %}BioProject <code class="curie">{{ a.bioproject_accession }}</code><br>{% endif %}
+        {% if a.assembly_accession %}Assembly <code class="curie">{{ a.assembly_accession }}</code><br>{% endif %}
+        {% for accession in a.sra_accessions or [] %}SRA <code class="curie">{{ accession }}</code><br>{% endfor %}
+      {% else %}—{% endif %}
+    </td>
   </tr>
   {% endfor %}
 </table>

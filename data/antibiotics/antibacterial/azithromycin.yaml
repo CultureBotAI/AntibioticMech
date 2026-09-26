@@ -109,6 +109,7 @@ activity_spectrum:
   mic_units: mg/L
   assay: Azithromycin MIC; interpreted using CLSI 2026 M100 Ed36.
   strain: '1281'
+  biosample_accession: SAMN35332251
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10572&PanelID=10
     snippet: Azithromycin  | 2  | R
@@ -540,4 +541,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 azithromycin-resistant
     Neisseria gonorrhoeae activity observation for AR-1281.
+  llm_assisted: true
+- timestamp: '2026-09-26T07:00:35Z'
+  curator: codex
+  action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
+  changes: Structured BioSample accessions on 1 activity_spectrum observation(s) where
+    evidence notes already named exactly one accession.
   llm_assisted: true

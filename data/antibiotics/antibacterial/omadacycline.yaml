@@ -18,6 +18,7 @@ activity_spectrum:
   assay: Broth microdilution omadacycline MIC; modal MIC reported; interpreted using
     FDA breakpoints per the CDC/FDA AR Isolate Bank Panel 1247 footnote.
   strain: '1152'
+  biosample_accession: SAMN34111339
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10443&PanelID=1247
     snippet: Omadacycline  | 16  | R
@@ -31,6 +32,7 @@ activity_spectrum:
   assay: Broth microdilution omadacycline MIC; modal MIC reported; interpreted using
     FDA breakpoints per the CDC/FDA AR Isolate Bank Panel 1247 footnote.
   strain: '1163'
+  biosample_accession: SAMN34111349
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10454&PanelID=1247
     snippet: Omadacycline  | 16  | R
@@ -44,6 +46,7 @@ activity_spectrum:
   assay: Broth microdilution omadacycline MIC; modal MIC reported; interpreted using
     FDA breakpoints per the CDC/FDA AR Isolate Bank Panel 10 footnote.
   strain: '0347'
+  biosample_accession: SAMN11953775
   evidence:
   - reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=347&PanelID=10
     snippet: Omadacycline  | 32  | R
@@ -95,4 +98,10 @@ curation_history:
   action: CURATED_RESISTANT_TAXA
   changes: Added one stable-URL CDC/FDA AR Isolate Bank Panel 10 omadacycline-resistant
     Klebsiella pneumoniae activity observation for AR-0347.
+  llm_assisted: true
+- timestamp: '2026-09-26T07:00:43Z'
+  curator: codex
+  action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
+  changes: Structured BioSample accessions on 3 activity_spectrum observation(s) where
+    evidence notes already named exactly one accession.
   llm_assisted: true
