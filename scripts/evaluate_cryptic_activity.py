@@ -48,6 +48,43 @@ EXPECTED_MD5 = {
     "DST_MEASUREMENTS.parquet": "45b4501ea7c3925af565dbbc6188dec0",
     "UKMYC_PHENOTYPES.parquet": "020b6c0af6c05e19610a59f5ef97b832",
 }
+DST_TABLE = "DST_MEASUREMENTS"
+UKMYC_TABLE = "UKMYC_PHENOTYPES"
+DST_GROUP_COLUMNS = [
+    "source",
+    "method_1",
+    "method_2",
+    "method_3",
+    "method_cc",
+    "method_mic",
+    "phenotype",
+    "quality",
+]
+UKMYC_GROUP_COLUMNS = [
+    "platedesign",
+    "belongs_gpi",
+    "phenotype_quality",
+    "readingday",
+    "primary_method",
+    "phenotype_description",
+    "mic",
+    "log2mic",
+    "binary_phenotype",
+]
+INVENTORY_COLUMNS = [
+    "source_version",
+    "source_table",
+    "activity_group_id",
+    "drug_code",
+    "source_name",
+    "identifier",
+    "standard_inchi_key",
+    "row_count",
+    "isolate_count",
+    "site_count",
+    *DST_GROUP_COLUMNS,
+    *UKMYC_GROUP_COLUMNS,
+]
 
 
 def md5_of(path: Path) -> str:
@@ -158,6 +195,128 @@ def validated_drug_mappings(path: Path, drug_codes: dict[str, str]) -> dict[str,
     return mappings
 
 
+def tsv_cell(value) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, bool):
+        return str(value).lower()
+    return str(value)
+
+
+def activity_group_id(source_table: str, group_values: list[object]) -> str:
+    digest = hashlib.sha256()
+    for value in [VERSION, source_table, *group_values]:
+        digest.update(tsv_cell(value).encode("utf-8"))
+        digest.update(b"\0")
+    return f"{source_table.lower()}:{digest.hexdigest()[:16]}"
+
+
+def activity_inventory_row(
+    source_table: str,
+    group_columns: list[str],
+    group: dict,
+    drug_codes: dict[str, str],
+    mappings: dict[str, dict[str, str]],
+) -> dict[str, str] | None:
+    code = group["drug_code"]
+    mapping = mappings[code]
+    if mapping["mapping_status"] != EXACT_MAPPING_STATUS:
+        return None
+
+    row = {column: "" for column in INVENTORY_COLUMNS}
+    row.update({
+        "source_version": VERSION,
+        "source_table": source_table,
+        "activity_group_id": activity_group_id(
+            source_table,
+            [code, *(group[column] for column in group_columns)],
+        ),
+        "drug_code": code,
+        "source_name": drug_codes[code],
+        "identifier": mapping["identifier"],
+        "standard_inchi_key": mapping["standard_inchi_key"],
+        "row_count": tsv_cell(group["row_count"]),
+        "isolate_count": tsv_cell(group["isolate_count"]),
+        "site_count": tsv_cell(group.get("site_count")),
+    })
+    row.update({column: tsv_cell(group[column]) for column in group_columns})
+    return row
+
+
+def fetch_dict_rows(connection, query: str, params: list[str]) -> list[dict]:
+    cursor = connection.execute(query, params)
+    names = [column[0] for column in cursor.description]
+    return [dict(zip(names, values, strict=True)) for values in cursor.fetchall()]
+
+
+def activity_inventory(connection, dst: Path, ukmyc: Path, drug_codes: dict[str, str],
+                       mappings: dict[str, dict[str, str]]) -> list[dict[str, str]]:
+    dst_groups = fetch_dict_rows(
+        connection,
+        """
+        SELECT DRUG AS drug_code, SOURCE AS source, METHOD_1 AS method_1,
+               METHOD_2 AS method_2, METHOD_3 AS method_3, METHOD_CC AS method_cc,
+               METHOD_MIC AS method_mic, PHENOTYPE AS phenotype, QUALITY AS quality,
+               count(*) AS row_count, count(DISTINCT UNIQUEID) AS isolate_count
+        FROM read_parquet(?)
+        GROUP BY DRUG, SOURCE, METHOD_1, METHOD_2, METHOD_3, METHOD_CC, METHOD_MIC,
+                 PHENOTYPE, QUALITY
+        ORDER BY DRUG, SOURCE, METHOD_1, METHOD_2, METHOD_3, METHOD_CC, METHOD_MIC,
+                 PHENOTYPE, QUALITY
+        """,
+        [str(dst)],
+    )
+    ukmyc_groups = fetch_dict_rows(
+        connection,
+        """
+        SELECT DRUG AS drug_code, PLATEDESIGN AS platedesign, BELONGS_GPI AS belongs_gpi,
+               PHENOTYPE_QUALITY AS phenotype_quality, READINGDAY AS readingday,
+               PRIMARY_METHOD AS primary_method,
+               PHENOTYPE_DESCRIPTION AS phenotype_description, MIC AS mic,
+               LOG2MIC AS log2mic, BINARY_PHENOTYPE AS binary_phenotype,
+               count(*) AS row_count, count(DISTINCT UNIQUEID) AS isolate_count,
+               count(DISTINCT SITEID) AS site_count
+        FROM read_parquet(?)
+        GROUP BY DRUG, PLATEDESIGN, BELONGS_GPI, PHENOTYPE_QUALITY, READINGDAY,
+                 PRIMARY_METHOD, PHENOTYPE_DESCRIPTION, MIC, LOG2MIC, BINARY_PHENOTYPE
+        ORDER BY DRUG, PLATEDESIGN, BELONGS_GPI, PHENOTYPE_QUALITY, READINGDAY,
+                 PRIMARY_METHOD, PHENOTYPE_DESCRIPTION, MIC, LOG2MIC, BINARY_PHENOTYPE
+        """,
+        [str(ukmyc)],
+    )
+
+    rows = []
+    for source_table, columns, groups in (
+        (DST_TABLE, DST_GROUP_COLUMNS, dst_groups),
+        (UKMYC_TABLE, UKMYC_GROUP_COLUMNS, ukmyc_groups),
+    ):
+        for group in groups:
+            row = activity_inventory_row(source_table, columns, group, drug_codes, mappings)
+            if row is not None:
+                rows.append(row)
+    return rows
+
+
+def write_inventory(path: Path, rows: list[dict[str, str]]) -> None:
+    seen_ids = set()
+    for row in rows:
+        group_id = row["activity_group_id"]
+        if group_id in seen_ids:
+            raise ValueError(f"duplicate CRyPTIC activity_group_id: {group_id}")
+        seen_ids.add(group_id)
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=INVENTORY_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(rows)
+
+
 def evaluate(dst: Path, ukmyc: Path, drug_codes: Path, drug_map: Path) -> dict:
     try:
         import duckdb
@@ -224,6 +383,7 @@ def evaluate(dst: Path, ukmyc: Path, drug_codes: Path, drug_map: Path) -> dict:
         "dst": dst_summary,
         "ukmyc": ukmyc_summary,
         "drugs": drug_rows,
+        "inventory": activity_inventory(connection, dst, ukmyc, codes, mappings),
     }
 
 
@@ -233,6 +393,11 @@ def main() -> int:
     parser.add_argument("--ukmyc", type=Path, required=True)
     parser.add_argument("--drug-codes", type=Path, required=True)
     parser.add_argument("--drug-map", type=Path, default=DEFAULT_DRUG_MAP)
+    parser.add_argument(
+        "--inventory-out",
+        type=Path,
+        help="Write the compact exact-mapped CRyPTIC activity inventory TSV.",
+    )
     args = parser.parse_args()
     missing = [
         str(path)
@@ -256,10 +421,12 @@ def main() -> int:
     candidates = [row for row in result["drugs"] if row["name_only_candidates"]]
     grounded = [row for row in result["drugs"] if row["eligible_rows"]]
     eligible_rows = sum(row["eligible_rows"] for row in grounded)
+    inventory_rows = result["inventory"]
     print(
         f"  name-only corpus candidates={len(candidates)}; "
         f"structure-grounded drugs={len(grounded)}; eligible rows={eligible_rows}"
     )
+    print(f"  compact exact-mapped activity groups={len(inventory_rows)}")
     reported = [row for row in result["drugs"] if row["name_only_candidates"] or row["eligible_rows"]]
     for row in reported:
         if row["mapping_status"] == EXACT_MAPPING_STATUS:
@@ -272,6 +439,9 @@ def main() -> int:
             f"rows={row['dst_rows'] + row['ukmyc_rows']} MIC={row['mic_rows']}; "
             f"{suffix}"
         )
+    if args.inventory_out:
+        write_inventory(args.inventory_out, inventory_rows)
+        print(f"wrote compact activity inventory: {args.inventory_out}")
     print(f"--dry-run: {eligible_rows} observations eligible; nothing written")
     return 0
 
