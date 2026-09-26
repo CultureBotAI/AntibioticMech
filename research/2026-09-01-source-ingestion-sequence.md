@@ -62,9 +62,14 @@ stereochemical names unmapped. The evaluator validates the crosswalk against the
 upstream `DRUG_CODES.csv.gz` names and the current corpus InChIKeys; on the
 pinned CRyPTIC 3.4.0 parquet files, 26 of those mapped codes occur and
 858,402 of 949,865 DST/UKMYC rows become structure-grounded. No row is seeded
-yet: the remaining design decision is a compact committed inventory that
-preserves MIC/method/quality/provenance without checking in a giant row-for-row
-activity table.
+yet. The evaluator can now write a 4,012-row compact activity inventory for the
+exact-mapped observations by grouping DST on drug, method, phenotype and quality
+and UKMYC on drug, plate design, primary method, quality, MIC and binary
+phenotype; each row retains a stable group id plus the row, isolate and site
+counts needed to audit the grouping without checking in a giant row-for-row
+activity table. The remaining blockers are Mycobacterium tuberculosis complex
+taxon semantics, MIC parsing, and source-owned `ActivityObservation`
+replacement.
 
 ## 2. PHI-base AMR adoption
 
