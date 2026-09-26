@@ -58,6 +58,7 @@ def test_cryptic_drug_map_covers_the_pinned_code_table():
     mappings = validated_drug_mappings(DEFAULT_DRUG_MAP, CRYPTIC_340_CODES)
 
     assert len(mappings) == 39
+    assert sum(row["mapping_status"] == "EXACT" for row in mappings.values()) == 29
     assert mappings["AMI"]["identifier"] == "CHEBI:2637"
     assert mappings["CYC"]["mapping_status"] == "AMBIGUOUS_STEREOCHEMISTRY"
     assert mappings["FQS"]["mapping_status"] == "DRUG_CLASS"
