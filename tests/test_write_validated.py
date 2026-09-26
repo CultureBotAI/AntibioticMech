@@ -67,17 +67,31 @@ def test_a_record_without_a_structure_is_rejected(tmp_path):
     assert validate_antibiotic(no_key)
 
 
-def test_an_mic_without_units_or_assay_is_rejected(tmp_path):
+def test_activity_measurements_without_units_or_assay_are_rejected(tmp_path):
     """A number without a method is not an observation — a schema rule now, not
     only a corpus test, so it holds for the first curated record too."""
-    bare = dict(MINIMAL) | {"activity_spectrum": [
+    bare_mic = dict(MINIMAL) | {"activity_spectrum": [
         {"taxon_label": "Escherichia coli", "mic_value": 2.0,
          "evidence": [{"reference": "PMID:1"}]}]}
-    assert validate_antibiotic(bare)
-    complete = dict(MINIMAL) | {"activity_spectrum": [
+    complete_mic = dict(MINIMAL) | {"activity_spectrum": [
         {"taxon_label": "Escherichia coli", "mic_value": 2.0, "mic_units": "mg/L",
          "assay": "CLSI broth microdilution", "evidence": [{"reference": "PMID:1"}]}]}
-    assert not validate_antibiotic(complete)
+    bare_disk = dict(MINIMAL) | {"activity_spectrum": [
+        {"taxon_label": "Escherichia coli", "disk_diffusion_value": 18.0,
+         "evidence": [{"reference": "PMID:1"}]}]}
+    complete_disk = dict(MINIMAL) | {"activity_spectrum": [
+        {
+            "taxon_label": "Escherichia coli",
+            "disk_diffusion_value": 18.0,
+            "disk_diffusion_units": "mm",
+            "assay": "Kirby-Bauer disk diffusion",
+            "evidence": [{"reference": "PMID:1"}],
+        }]}
+
+    assert validate_antibiotic(bare_mic)
+    assert not validate_antibiotic(complete_mic)
+    assert validate_antibiotic(bare_disk)
+    assert not validate_antibiotic(complete_disk)
 
 
 def test_activity_observation_accepts_sample_and_genome_accessions(tmp_path):
@@ -87,6 +101,9 @@ def test_activity_observation_accepts_sample_and_genome_accessions(tmp_path):
             "activity": "RESISTANT",
             "mic_value": 2.0,
             "mic_units": "mg/L",
+            "disk_diffusion_value": 18.0,
+            "disk_diffusion_units": "mm",
+            "disk_diffusion_qualifier": ">=",
             "assay": "broth microdilution",
             "measurement_count": 7,
             "isolate_count": 7,
