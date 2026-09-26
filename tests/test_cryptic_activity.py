@@ -160,7 +160,7 @@ def test_dst_inventory_group_is_compact_and_structure_grounded():
             "method_1": "liquid media",
             "method_2": "microdilution plate",
             "method_3": "UKMYC6",
-            "method_cc": "1.0",
+            "method_cc": "nan",
             "method_mic": "<=0.25",
             "phenotype": "S",
             "quality": "HIGH",
@@ -184,6 +184,7 @@ def test_dst_inventory_group_is_compact_and_structure_grounded():
     assert row["mic_value"] == "0.25"
     assert row["mic_qualifier"] == "<="
     assert row["mic_units"] == "mg/L"
+    assert row["method_cc"] == ""
     assert row["method_mic"] == "<=0.25"
     assert row["row_count"] == "6983"
     assert row["platedesign"] == ""
@@ -244,10 +245,17 @@ def test_ukmyc_inventory_group_keeps_mic_shape_and_filters_non_exact_mappings():
 
 def test_write_inventory_uses_the_committed_column_contract(tmp_path):
     path = tmp_path / "cryptic_inventory.tsv"
+    row = {column: "" for column in INVENTORY_COLUMNS}
+    row.update({
+        "source_version": "3.4.0",
+        "source_table": "DST_MEASUREMENTS",
+        "activity_group_id": "dst_measurements:abc",
+    })
 
-    write_inventory(path, [])
+    write_inventory(path, [row])
 
-    assert path.read_text(encoding="utf-8") == "\t".join(INVENTORY_COLUMNS) + "\n"
+    lines = path.read_text(encoding="utf-8").splitlines()
+    assert lines == ["\t".join(INVENTORY_COLUMNS), "3.4.0\tDST_MEASUREMENTS\tdst_measurements:abc"]
     assert b"\r" not in path.read_bytes()
 
 

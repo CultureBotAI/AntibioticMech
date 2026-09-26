@@ -42,6 +42,14 @@ sources:
     retrieved_on: '2026-09-01'
     row_policy: ChEBI-grounded antimicrobial_interaction with resistance PHIPO and
       PMID
+  cryptic:
+    homepage: https://zenodo.org/records/15680920
+    license: CC BY 4.0
+    version: 3.4.0
+    doi: 10.5281/zenodo.15680920
+    retrieved_on: '2026-09-26'
+    row_policy: Exact drug-code mappings grouped by release table, drug, raw method,
+      phenotype, quality, and MIC shape
 downloads:
   compounds.tsv.gz:
     url: https://ftp.ebi.ac.uk/pub/databases/chebi/flat_files/compounds.tsv.gz
@@ -115,6 +123,18 @@ downloads:
     url: https://raw.githubusercontent.com/PHI-base/phibase-pipeline/bdaf084c971366084badabee96bd65da2ee84ae9/src/phibase_pipeline/data/phipo.csv
     bytes: 63236
     sha256: 0bb2d1f960058af67f2f291537b962abee312889fa80ad999ffa9d057107ca65
+  DRUG_CODES.csv.gz:
+    url: https://zenodo.org/records/15680920/files/DRUG_CODES.csv.gz?download=1
+    bytes: 385
+    sha256: f1359c8c839afd613a903f311c7bcebe1f7c3a5597cb0e65ac608c36d3cc489b
+  DST_MEASUREMENTS.parquet:
+    url: https://zenodo.org/records/15680920/files/DST_MEASUREMENTS.parquet?download=1
+    bytes: 2723899
+    sha256: a3159a5e4ce0f4d51d61a31be2b5b45fce1e1f5185e8988cb36a4d57826910b2
+  UKMYC_PHENOTYPES.parquet:
+    url: https://zenodo.org/records/15680920/files/UKMYC_PHENOTYPES.parquet?download=1
+    bytes: 1559813
+    sha256: e374887ab49379f8ed11fcbbfd1b6793c5ad17453cf0a25ad3513c0d1e5058a4
 inventories:
   aro_antibiotics.tsv:
     rows: 644
@@ -161,3 +181,8 @@ inventories:
     bytes: 65088
     sha256: 3fa60cf6c8d7ee3505e8760faa4373d2258335d6a19a7f5292638eab82851e5e
     source: PHI-base ChEBI-grounded gene-antimicrobial resistance interactions
+  cryptic_activity.tsv:
+    rows: 4012
+    bytes: 734481
+    sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+    source: CRyPTIC 3.4.0 exact-mapped grouped DST/UKMYC activity observations

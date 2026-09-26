@@ -10,9 +10,9 @@ public source endpoints.
 
 - PHI-base is adopted and seeded: 217 resistance associations on 23 exact
   ChEBI-grounded corpus structures.
-- CRyPTIC remains `EVALUATING`: its measurements are valuable, but release
-  3.4.0 supplies drug names/codes rather than structures or stable chemical
-  identifiers, so zero observations pass the structure-identity gate.
+- CRyPTIC is adopted and seeded: the hand-audited drug-code crosswalk and
+  compact inventory seed 4,012 grouped DST/UKMYC activity observations on 26
+  exact structure records.
 - AMRFinderPlus remains a reference audit: it adds family/class coverage but
   cannot support structure-specific resistance claims without another mapping
   and evidence layer.
@@ -61,23 +61,20 @@ combinations, drug classes, mixtures, absent structures and ambiguous
 stereochemical names unmapped. The evaluator validates the crosswalk against the
 upstream `DRUG_CODES.csv.gz` names and the current corpus InChIKeys; on the
 pinned CRyPTIC 3.4.0 parquet files, 26 of those mapped codes occur and
-858,402 of 949,865 DST/UKMYC rows become structure-grounded. No row is seeded
-yet. The evaluator can now write a 4,012-row compact activity inventory for the
-exact-mapped observations by grouping DST on drug, method, phenotype and quality
-and UKMYC on drug, plate design, primary method, quality, MIC and binary
-phenotype; each row retains a stable group id plus the row, isolate and site
-counts needed to audit the grouping without checking in a giant row-for-row
-activity table. It also standardizes CRyPTIC MIC strings into `mic_value`,
-`mic_qualifier` and `mic_units`, using mg/L for both DST `METHOD_MIC` and UKMYC
-`MIC` while preserving the raw columns. The seed merge path now treats
-CRyPTIC-owned `activity_spectrum` rows as a replaceable source slice, so future
-re-seeds can replace stale upstream observations without touching curated
-activity rows. The `ActivityObservation` writer now consumes the compact
-inventory if `data/raw/cryptic_activity.tsv` exists, keeps the source's
+858,402 of 949,865 DST/UKMYC rows become structure-grounded. The committed
+`data/raw/cryptic_activity.tsv` inventory compacts them into 4,012 grouped
+activity rows by grouping DST on drug, method, phenotype and quality and UKMYC
+on drug, plate design, primary method, quality, MIC and binary phenotype; each
+row retains a stable group id plus the row, isolate and site counts needed to
+audit the grouping without checking in a giant row-for-row activity table. It
+also standardizes CRyPTIC MIC strings into `mic_value`, `mic_qualifier` and
+`mic_units`, using mg/L for both DST `METHOD_MIC` and UKMYC `MIC` while
+preserving the raw columns. The seed merge path treats CRyPTIC-owned
+`activity_spectrum` rows as a replaceable source slice, so future re-seeds can
+replace stale upstream observations without touching curated activity rows. The
+`ActivityObservation` writer consumes the compact inventory, keeps the source's
 Mycobacterium tuberculosis complex label without inventing a species-level taxon
 CURIE, and stores the row, isolate and site counts needed to audit the grouping.
-No row is seeded until that compact inventory is committed from the pinned
-release files.
 
 ## 2. PHI-base AMR adoption
 

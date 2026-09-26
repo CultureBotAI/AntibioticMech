@@ -38,6 +38,21 @@ source_concepts:
   source_label: thioacetazone
   minted_identifier: antibioticmech:aro-727d7249f2
   source_version: '2026-08-30'
+activity_spectrum:
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; KMVALIDATION2025; not specified
+  measurement_count: 68
+  isolate_count: 68
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:63b184ae5799038b
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:63b184ae5799038b; drug_code=TZE; row_count=68;
+      isolate_count=68; source=KMVALIDATION2025; method_1=not specified; phenotype=R;
+      quality=MEDIUM.'
+  activity: RESISTANT
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -51,3 +66,8 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-26T12:07:31Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval
+    date 2026-08-30, unchanged.'
