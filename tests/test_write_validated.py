@@ -84,9 +84,13 @@ def test_activity_observation_accepts_sample_and_genome_accessions(tmp_path):
     doc = dict(MINIMAL) | {"activity_spectrum": [
         {
             "taxon_label": "Escherichia coli",
+            "activity": "RESISTANT",
             "mic_value": 2.0,
             "mic_units": "mg/L",
             "assay": "broth microdilution",
+            "measurement_count": 7,
+            "isolate_count": 7,
+            "site_count": 2,
             "strain": "AR-0001",
             "biosample_accession": "SAMN11953777",
             "bioproject_accession": "PRJNA123456",

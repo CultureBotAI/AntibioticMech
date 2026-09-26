@@ -72,8 +72,12 @@ activity table. It also standardizes CRyPTIC MIC strings into `mic_value`,
 `MIC` while preserving the raw columns. The seed merge path now treats
 CRyPTIC-owned `activity_spectrum` rows as a replaceable source slice, so future
 re-seeds can replace stale upstream observations without touching curated
-activity rows. The remaining blockers are Mycobacterium tuberculosis complex
-taxon semantics and an `ActivityObservation` writer.
+activity rows. The `ActivityObservation` writer now consumes the compact
+inventory if `data/raw/cryptic_activity.tsv` exists, keeps the source's
+Mycobacterium tuberculosis complex label without inventing a species-level taxon
+CURIE, and stores the row, isolate and site counts needed to audit the grouping.
+No row is seeded until that compact inventory is committed from the pinned
+release files.
 
 ## 2. PHI-base AMR adoption
 
