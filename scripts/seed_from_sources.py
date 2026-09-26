@@ -2047,6 +2047,22 @@ def attach_bindingdb_targets(records: dict[str, dict]) -> Counter:
     return counts
 
 
+CRYPTIC_ACTIVITY_SOURCE = "CRYPTIC"
+
+
+def is_cryptic_sourced_activity(item: dict) -> bool:
+    """True only for an activity observation owned by the CRyPTIC lane."""
+    return item.get("source") == CRYPTIC_ACTIVITY_SOURCE
+
+
+def cryptic_sourced_activity_view(record: dict) -> list[dict]:
+    return [
+        item
+        for item in (record.get("activity_spectrum") or [])
+        if is_cryptic_sourced_activity(item)
+    ]
+
+
 MIBIG_PRODUCER_SOURCE = "MIBIG"
 
 
@@ -2684,6 +2700,7 @@ def reseed_delta(existing: dict, record: dict, merged: dict,
     for field, view, source in (
         ("molecular_targets", bindingdb_sourced_target_view, BINDINGDB_TARGET_SOURCE),
         ("resistance_mechanisms", phibase_sourced_resistance_view, PHIBASE_RESISTANCE_SOURCE),
+        ("activity_spectrum", cryptic_sourced_activity_view, CRYPTIC_ACTIVITY_SOURCE),
         ("producer_organisms", mibig_sourced_producer_view, MIBIG_PRODUCER_SOURCE),
         ("clinical_status_assertions", fda_sourced_clinical_view, FDA_CLINICAL_SOURCE),
     ):
@@ -2756,6 +2773,18 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
     for field in CURATOR_FIELDS:
         if field in existing:
             merged[field] = existing[field]
+
+    seeded_activities = list(record.get("activity_spectrum") or [])
+    existing_activities = list(existing.get("activity_spectrum") or [])
+    curator_activities = [
+        item
+        for item in existing_activities
+        if not is_cryptic_sourced_activity(item)
+    ]
+    if seeded_activities or curator_activities:
+        merged["activity_spectrum"] = seeded_activities + curator_activities
+    elif existing_activities:
+        merged.pop("activity_spectrum", None)
 
     # MIBiG owns only the assertions explicitly marked with its source. A fresh
     # extraction replaces that slice while hand-curated producers survive after
