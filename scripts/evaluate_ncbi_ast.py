@@ -38,6 +38,9 @@ PROJECT_DEDUPE_COLUMNS = [
     "source_version",
     "notes",
 ]
+# Bump with ACTIVITY_REPORT_GROUP_COLUMNS because those columns define the
+# stable activity_group_id digest for committed exact reports.
+ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v1"
 ACTIVITY_REPORT_GROUP_COLUMNS = [
     "source_name",
     "normalized_antibiotic",
@@ -211,6 +214,8 @@ def measurement_label(measurement: tuple[str, str, str]) -> str:
 
 def activity_group_id(row: dict[str, str]) -> str:
     digest = hashlib.sha256()
+    digest.update(ACTIVITY_GROUP_ID_VERSION.encode("utf-8"))
+    digest.update(b"\0")
     for column in ACTIVITY_REPORT_GROUP_COLUMNS:
         digest.update(row[column].encode("utf-8"))
         digest.update(b"\0")
