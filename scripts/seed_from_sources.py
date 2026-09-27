@@ -2176,6 +2176,9 @@ def attach_cryptic_activity(records: dict[str, dict]) -> Counter:
 NCBI_AST_ACTIVITY_SOURCE = "NCBI_AST"
 NCBI_AST_ACTIVITY_INVENTORY = RAW_DIR / "ncbi_ast_activity.tsv"
 NCBI_AST_REFERENCE = "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/"
+# Bump with NCBI_AST_ACTIVITY_GROUP_COLUMNS because those columns define the
+# stable source_observation_id digest for committed exact reports.
+NCBI_AST_ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v1"
 NCBI_AST_ACTIVITY_GROUP_COLUMNS = [
     "source_name",
     "normalized_antibiotic",
@@ -2319,6 +2322,8 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
 
 def ncbi_ast_activity_group_id(row: dict[str, str]) -> str:
     digest = hashlib.sha256()
+    digest.update(NCBI_AST_ACTIVITY_GROUP_ID_VERSION.encode("utf-8"))
+    digest.update(b"\0")
     for column in NCBI_AST_ACTIVITY_GROUP_COLUMNS:
         digest.update(row[column].encode("utf-8"))
         digest.update(b"\0")

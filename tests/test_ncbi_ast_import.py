@@ -12,6 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 import seed_from_sources  # noqa: E402
 from evaluate_ncbi_ast import (  # noqa: E402
+    ACTIVITY_GROUP_ID_VERSION,
     ACTIVITY_REPORT_COLUMNS,
     ACTIVITY_REPORT_GROUP_COLUMNS,
     activity_group_id,
@@ -19,6 +20,7 @@ from evaluate_ncbi_ast import (  # noqa: E402
 from seed_from_sources import (  # noqa: E402
     NCBI_AST_ACTIVITY_COLUMNS,
     NCBI_AST_ACTIVITY_GROUP_COLUMNS,
+    NCBI_AST_ACTIVITY_GROUP_ID_VERSION,
     NCBI_AST_ACTIVITY_SOURCE,
     attach_ncbi_ast_activity,
     load_ncbi_ast_activity_inventory,
@@ -69,6 +71,8 @@ def test_ncbi_ast_activity_columns_match_the_evaluator_contract():
     row = ncbi_ast_row()
 
     assert NCBI_AST_ACTIVITY_COLUMNS == ACTIVITY_REPORT_COLUMNS
+    assert NCBI_AST_ACTIVITY_GROUP_ID_VERSION == ACTIVITY_GROUP_ID_VERSION
+    assert ACTIVITY_GROUP_ID_VERSION == "ncbi_ast_activity_group_v1"
     assert NCBI_AST_ACTIVITY_GROUP_COLUMNS == ACTIVITY_REPORT_GROUP_COLUMNS
     assert ncbi_ast_activity_group_id(row) == activity_group_id(row)
 
