@@ -203,6 +203,7 @@ def test_evaluate_rows_counts_exact_activity_report_candidates_after_dedupe():
             "antibiotic": "cefepime",
             "biosample_acc": "SAMN11953779",
             "bioproject_acc": "PRJNA292667",
+            "asm_acc": "not-an-assembly",
             "target_acc": "PDT000001234.1",
             "taxgroup_name": "Escherichia coli",
             "mic": "8",
@@ -246,8 +247,13 @@ def test_evaluate_rows_counts_exact_activity_report_candidates_after_dedupe():
     )
 
     assert result["exact_mapped_rows"] == 3
+    assert result["rows_with_invalid_target_acc"] == 1
+    assert result["rows_with_invalid_assembly_acc"] == 1
     assert result["exact_mapped_activity_report_candidate_rows"] == 1
     assert result["antibiotic_rows"][0]["activity_report_candidate_count"] == 1
+    assert result["antibiotic_rows"][0]["invalid_target_acc_count"] == 1
+    assert result["antibiotic_rows"][0]["assembly_acc_count"] == 1
+    assert result["antibiotic_rows"][0]["invalid_assembly_acc_count"] == 1
     assert result["antibiotic_rows"][1]["activity_report_candidate_count"] == 1
 
 
@@ -795,6 +801,9 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
     assert result["rows_with_project_context"] == 2
     assert result["rows_with_valid_project_context"] == 2
     assert result["rows_with_target_acc"] == 1
+    assert result["rows_with_assembly_acc"] == 1
+    assert result["rows_with_invalid_target_acc"] == 0
+    assert result["rows_with_invalid_assembly_acc"] == 0
     assert result["rows_with_taxon"] == 2
     assert result["antibiotic_rows"][0]["mic_count"] == 1
     assert result["antibiotic_rows"][0]["standardized_mic_count"] == 1
@@ -1176,6 +1185,9 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "dedupe_context_count": 0,
             "activity_report_candidate_count": 7,
             "target_acc_count": 7,
+            "invalid_target_acc_count": 0,
+            "assembly_acc_count": 7,
+            "invalid_assembly_acc_count": 0,
             "taxon_count": 7,
             "phenotype_count": 7,
             "mic_count": 7,
@@ -1215,6 +1227,9 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "dedupe_context_count": "0",
         "activity_report_candidate_count": "7",
         "target_acc_count": "7",
+        "invalid_target_acc_count": "0",
+        "assembly_acc_count": "7",
+        "invalid_assembly_acc_count": "0",
         "taxon_count": "7",
         "phenotype_count": "7",
         "mic_count": "7",
