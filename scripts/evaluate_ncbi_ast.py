@@ -194,6 +194,8 @@ def standardized_measurement(
     match = MEASUREMENT_PATTERN.match(raw_value.strip())
     if match is None:
         return None
+    if float(match.group("value")) <= 0:
+        return None
 
     value_qualifier = match.group("qualifier") or ""
     sign_qualifier = first_value(row, MEASUREMENT_SIGN_ALIASES)

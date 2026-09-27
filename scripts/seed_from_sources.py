@@ -2362,6 +2362,8 @@ def _require_ncbi_ast_measurement(
         raise ValueError(f"{prefix}: {value_field} must be numeric") from error
     if not math.isfinite(parsed):
         raise ValueError(f"{prefix}: {value_field} must be finite")
+    if parsed <= 0:
+        raise ValueError(f"{prefix}: {value_field} must be positive")
     return True
 
 
