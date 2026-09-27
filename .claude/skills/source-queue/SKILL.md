@@ -99,8 +99,9 @@ Also establish, and write into `rationale`:
   `chebi` row once it landed.
 
 A licence that cannot be reached is a result too. Record the attempt, the URLs
-tried and what blocked them, so the next pass does not repeat a failed fetch —
-Stanford HIVdb renders its terms client-side and returns nothing to a fetcher.
+tried and what blocked them, so the next pass does not repeat a failed fetch.
+If an authorized maintainer later answers, record the reply, the exact data
+surface it covers, and any surfaces it leaves unresolved.
 
 ## Folding in a research report
 

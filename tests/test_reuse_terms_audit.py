@@ -12,7 +12,8 @@ def test_reuse_outreach_distinguishes_sent_requests_from_pending_draft(repo_root
     assert "| CO-ADD | Not sent |" in text
     assert "No authenticated mail/form-capable channel" in text
     assert "Google image reCAPTCHA" in text
-    assert "remain unverified" in text
+    assert "BV-BRC remains\nunverified" in text
+    assert "Stanford HIVDB's response resolves" in text
 
 
 def test_reuse_audit_keeps_unverified_sources_out_of_adopted_state(repo_root):
@@ -21,7 +22,8 @@ def test_reuse_audit_keeps_unverified_sources_out_of_adopted_state(repo_root):
     assert by_id["bv-brc"][8] == "CANDIDATE"
     assert by_id["bv-brc"][5] == "UNVERIFIED"
     assert by_id["stanford-hivdb"][8] == "CANDIDATE"
-    assert by_id["stanford-hivdb"][5] == "UNVERIFIED"
+    assert by_id["stanford-hivdb"][5] == "CC0_OK"
+    assert by_id["stanford-hivdb"][10] == "https://github.com/hivdb/hivfacts"
     assert by_id["co-add"][8] == "BLOCKED"
     assert by_id["co-add"][10] == "https://db.co-add.org/downloads/"
     assert "archive contains no README or licence" in by_id["co-add"][11]
