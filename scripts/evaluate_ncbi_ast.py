@@ -473,6 +473,54 @@ def project_dedupe_hit(
     return None
 
 
+def activity_report_context(
+    row: dict[str, str],
+    project_dedupe: dict[tuple[str, str], dict[str, str]],
+) -> dict[str, str] | None:
+    """Return the mapping-independent grouped activity fields a row can support."""
+
+    measurements = standardized_activity_measurements(row)
+    if measurements is None:
+        return None
+
+    taxon_label = first_value(row, TAXON_ALIASES)
+    biosample_accession = first_value(row, BIOSAMPLE_ALIASES)
+    bioproject_accession = first_value(row, BIOPROJECT_ALIASES)
+    if not taxon_label or not has_valid_project_context(row):
+        return None
+
+    target_accession = valid_target_accession(row)
+    if target_accession is None:
+        return None
+    assembly_accession = valid_assembly_accession(row)
+    if assembly_accession is None:
+        return None
+    if project_dedupe_hit(row, project_dedupe):
+        return None
+
+    mic, disk = measurements
+    phenotype = first_value(row, PHENOTYPE_ALIASES)
+    return {
+        "taxon_label": taxon_label,
+        "biosample_accession": biosample_accession,
+        "bioproject_accession": bioproject_accession,
+        "target_accession": target_accession,
+        "assembly_accession": assembly_accession,
+        "phenotype": phenotype,
+        "activity": ACTIVITY_CALLS.get(phenotype.casefold(), ""),
+        "mic_value": mic[0],
+        "mic_qualifier": mic[1],
+        "mic_units": mic[2],
+        "disk_diffusion_value": disk[0],
+        "disk_diffusion_qualifier": disk[1],
+        "disk_diffusion_units": disk[2],
+        "platform": first_value(row, PLATFORM_ALIASES),
+        "vendor": first_value(row, VENDOR_ALIASES),
+        "reagent": first_value(row, REAGENT_ALIASES),
+        "standard": first_value(row, STANDARD_ALIASES),
+    }
+
+
 def project_dedupe_report_rows(
     rows: list[dict[str, str]],
     mappings: dict[str, dict[str, str]] | None = None,
@@ -493,15 +541,7 @@ def project_dedupe_report_rows(
         source_name = first_value(row, ANTIBIOTIC_ALIASES)
         if not source_name:
             continue
-        if not first_value(row, TAXON_ALIASES):
-            continue
-        if standardized_activity_measurements(row) is None:
-            continue
-        if valid_target_accession(row) is None:
-            continue
-        if valid_assembly_accession(row) is None:
-            continue
-        if project_dedupe_hit(row, project_dedupe):
+        if activity_report_context(row, project_dedupe) is None:
             continue
         normalized_antibiotic = normalize(source_name)
         exact_mapped = (
@@ -565,48 +605,16 @@ def exact_activity_rows(
         if not mapping or mapping.get("mapping_status") != EXACT_MAPPING_STATUS:
             continue
 
-        measurements = standardized_activity_measurements(row)
-        if measurements is None:
-            continue
-        mic, disk = measurements
-
-        taxon_label = first_value(row, TAXON_ALIASES)
-        biosample_accession = first_value(row, BIOSAMPLE_ALIASES)
-        bioproject_accession = first_value(row, BIOPROJECT_ALIASES)
-        if not taxon_label or not has_valid_project_context(row):
-            continue
-        target_accession = valid_target_accession(row)
-        if target_accession is None:
-            continue
-        assembly_accession = valid_assembly_accession(row)
-        if assembly_accession is None:
-            continue
-        if project_dedupe_hit(row, project_dedupe):
+        context = activity_report_context(row, project_dedupe)
+        if context is None:
             continue
 
-        phenotype = first_value(row, PHENOTYPE_ALIASES)
         out = {
             "source_name": mapping["source_name"],
             "normalized_antibiotic": normalize(source_name),
             "identifier": mapping["identifier"],
             "standard_inchi_key": mapping["standard_inchi_key"],
-            "taxon_label": taxon_label,
-            "biosample_accession": biosample_accession,
-            "bioproject_accession": bioproject_accession,
-            "target_accession": target_accession,
-            "assembly_accession": assembly_accession,
-            "phenotype": phenotype,
-            "activity": ACTIVITY_CALLS.get(phenotype.casefold(), ""),
-            "mic_value": mic[0],
-            "mic_qualifier": mic[1],
-            "mic_units": mic[2],
-            "disk_diffusion_value": disk[0],
-            "disk_diffusion_qualifier": disk[1],
-            "disk_diffusion_units": disk[2],
-            "platform": first_value(row, PLATFORM_ALIASES),
-            "vendor": first_value(row, VENDOR_ALIASES),
-            "reagent": first_value(row, REAGENT_ALIASES),
-            "standard": first_value(row, STANDARD_ALIASES),
+            **context,
         }
         group_key = tuple(out[column] for column in ACTIVITY_REPORT_GROUP_COLUMNS)
         grouped[group_key] = out
@@ -675,6 +683,7 @@ def evaluate_rows(
     ambiguous_name_rows = 0
     unmatched_rows = 0
     exact_mapped_rows = 0
+    exact_mapped_activity_report_candidate_rows = 0
     non_exact_mapped_rows = 0
     unmapped_rows = 0
     for normalized, antibiotic_ast_rows in sorted(
@@ -688,6 +697,10 @@ def evaluate_rows(
         identifiers = sorted(candidates.get(normalized, set()))
         mapping = mappings.get(normalized, {})
         row_count = len(antibiotic_ast_rows)
+        activity_report_candidate_count = sum(
+            activity_report_context(row, project_dedupe) is not None
+            for row in antibiotic_ast_rows
+        )
         if len(identifiers) == 1:
             exact_name_matched_rows += row_count
         elif len(identifiers) > 1:
@@ -696,6 +709,7 @@ def evaluate_rows(
             unmatched_rows += row_count
         if mapping.get("mapping_status") == EXACT_MAPPING_STATUS:
             exact_mapped_rows += row_count
+            exact_mapped_activity_report_candidate_rows += activity_report_candidate_count
         elif mapping.get("mapping_status"):
             non_exact_mapped_rows += row_count
         else:
@@ -743,6 +757,7 @@ def evaluate_rows(
                     project_dedupe_hit(row, project_dedupe) is not None
                     for row in antibiotic_ast_rows
                 ),
+                "activity_report_candidate_count": activity_report_candidate_count,
                 "target_acc_count": sum(has_value(row, TARGET_ALIASES) for row in antibiotic_ast_rows),
                 "taxon_count": sum(has_value(row, TAXON_ALIASES) for row in antibiotic_ast_rows),
                 "phenotype_count": sum(has_value(row, PHENOTYPE_ALIASES) for row in antibiotic_ast_rows),
@@ -797,6 +812,9 @@ def evaluate_rows(
         "exact_mapped_antibiotics": sum(
             row["mapping_status"] == EXACT_MAPPING_STATUS for row in antibiotic_rows
         ),
+        "exact_mapped_activity_report_candidate_rows": (
+            exact_mapped_activity_report_candidate_rows
+        ),
         "non_exact_mapped_antibiotics": sum(
             bool(row["mapping_status"]) and row["mapping_status"] != EXACT_MAPPING_STATUS
             for row in antibiotic_rows
@@ -828,6 +846,7 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
         "project_context_count",
         "valid_project_context_count",
         "dedupe_context_count",
+        "activity_report_candidate_count",
         "target_acc_count",
         "taxon_count",
         "phenotype_count",
@@ -1034,7 +1053,9 @@ def main() -> int:
     )
     print(
         f"  curated exact mappings: antibiotics={result['exact_mapped_antibiotics']} "
-        f"rows={result['exact_mapped_rows']}"
+        f"rows={result['exact_mapped_rows']} "
+        f"activity_report_candidate_rows="
+        f"{result['exact_mapped_activity_report_candidate_rows']}"
     )
     print(
         f"  ambiguous names: antibiotics={result['ambiguous_name_antibiotics']} "
