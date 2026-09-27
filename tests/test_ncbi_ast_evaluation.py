@@ -695,6 +695,36 @@ def test_read_drug_map_rejects_malformed_rows(tmp_path):
     with pytest.raises(ValueError, match="unexpected extra delimited field"):
         read_drug_map(path, {})
 
+    path.write_text(
+        "\t".join(DRUG_MAP_COLUMNS)
+        + "\n"
+        + 'amikacin\tamikacin\tMIXTURE\t\t\tnone\t"ambiguous\nname"\n',
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="notes contains a tab or newline"):
+        read_drug_map(path, {})
+
+    path.write_text(
+        "\t".join(DRUG_MAP_COLUMNS)
+        + "\n"
+        + 'amikacin\tamikacin\tMIXTURE\t\t\tnone\t"ambiguous\tname"\n',
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="notes contains a tab or newline"):
+        read_drug_map(path, {})
+
+    path.write_text(
+        "\t".join(DRUG_MAP_COLUMNS)
+        + "\n"
+        + 'amikacin\tamikacin\tMIXTURE\t\t\tnone\t"ambiguous\n"\n',
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="notes contains a tab or newline"):
+        read_drug_map(path, {})
+
 
 def test_read_drug_map_requires_mapping_rationale(tmp_path):
     path = tmp_path / "ncbi_ast_antibiotic_map.tsv"
@@ -785,6 +815,36 @@ def test_read_project_dedupe_map_rejects_malformed_rows(tmp_path):
     )
 
     with pytest.raises(ValueError, match="unexpected extra delimited field"):
+        read_project_dedupe_map(path)
+
+    path.write_text(
+        "\t".join(PROJECT_DEDUPE_COLUMNS)
+        + "\n"
+        + 'BioSample\tSAMN11953777\tCRYPTIC\t3.4.0\t"BioSample\nrepresented"\n',
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="notes contains a tab or newline"):
+        read_project_dedupe_map(path)
+
+    path.write_text(
+        "\t".join(PROJECT_DEDUPE_COLUMNS)
+        + "\n"
+        + 'BioSample\tSAMN11953777\tCRYPTIC\t3.4.0\t"BioSample\trepresented"\n',
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="notes contains a tab or newline"):
+        read_project_dedupe_map(path)
+
+    path.write_text(
+        "\t".join(PROJECT_DEDUPE_COLUMNS)
+        + "\n"
+        + 'BioSample\tSAMN11953777\tCRYPTIC\t3.4.0\t"\nrepresented"\n',
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="notes contains a tab or newline"):
         read_project_dedupe_map(path)
 
 

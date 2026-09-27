@@ -73,6 +73,7 @@ ACTIVITY_REPORT_COLUMNS = [
 ]
 EXACT_MAPPING_STATUS = "EXACT"
 PROJECT_DEDUPE_SELF_SOURCE = "NCBI_AST"
+CURATED_TSV_CONTROL_CHARS = frozenset("\t\r\n")
 MAPPING_STATUSES = {
     EXACT_MAPPING_STATUS,
     "AMBIGUOUS_STEREOCHEMISTRY",
@@ -271,6 +272,17 @@ def strip_table_row(row: dict[str, str]) -> dict[str, str]:
     return {field: value.strip() for field, value in row.items()}
 
 
+def strip_curated_tsv_row(
+    row: dict[str, str],
+    path: Path,
+    line_number: int,
+) -> dict[str, str]:
+    for field, value in row.items():
+        if any(char in value for char in CURATED_TSV_CONTROL_CHARS):
+            raise ValueError(f"{path}:{line_number}: {field} contains a tab or newline")
+    return strip_table_row(row)
+
+
 def read_table(path: Path) -> list[dict[str, str]]:
     sample = path.read_text(encoding="utf-8", errors="replace")[:4096]
     try:
@@ -318,7 +330,7 @@ def read_drug_map(path: Path, structure_keys: dict[str, str]) -> dict[str, dict[
         rows = {}
         for line_number, row in enumerate(reader, start=2):
             require_exact_table_row(row, path, line_number)
-            row = strip_table_row(row)
+            row = strip_curated_tsv_row(row, path, line_number)
             require_non_blank_fields(
                 row,
                 (
@@ -384,7 +396,7 @@ def read_project_dedupe_map(path: Path) -> dict[tuple[str, str], dict[str, str]]
         rows = {}
         for line_number, row in enumerate(reader, start=2):
             require_exact_table_row(row, path, line_number)
-            row = strip_table_row(row)
+            row = strip_curated_tsv_row(row, path, line_number)
             accession_type = row["accession_type"]
             accession = row["accession"]
             if accession_type not in PROJECT_DEDUPE_ACCESSIONS:
