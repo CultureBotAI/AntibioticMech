@@ -247,6 +247,21 @@ def require_exact_table_row(row: dict, path: Path, line_number: int) -> None:
             raise ValueError(f"{prefix}: {field} is missing")
 
 
+def require_non_blank_fields(
+    row: dict[str, str],
+    fields: Iterable[str],
+    path: Path,
+    line_number: int,
+) -> None:
+    for field in fields:
+        if not row[field].strip():
+            raise ValueError(f"{path}:{line_number}: {field} is required")
+
+
+def strip_table_row(row: dict[str, str]) -> dict[str, str]:
+    return {field: value.strip() for field, value in row.items()}
+
+
 def read_table(path: Path) -> list[dict[str, str]]:
     sample = path.read_text(encoding="utf-8", errors="replace")[:4096]
     try:
@@ -294,15 +309,19 @@ def read_drug_map(path: Path, structure_keys: dict[str, str]) -> dict[str, dict[
         rows = {}
         for line_number, row in enumerate(reader, start=2):
             require_exact_table_row(row, path, line_number)
-            for field in (
-                "source_record_id",
-                "source_name",
-                "mapping_status",
-                "mapping_basis",
-                "notes",
-            ):
-                if not row[field]:
-                    raise ValueError(f"{path}:{line_number}: {field} is required")
+            row = strip_table_row(row)
+            require_non_blank_fields(
+                row,
+                (
+                    "source_record_id",
+                    "source_name",
+                    "mapping_status",
+                    "mapping_basis",
+                    "notes",
+                ),
+                path,
+                line_number,
+            )
 
             normalized_name = normalize(row["source_name"])
             if row["source_record_id"] != normalized_name:
@@ -356,6 +375,7 @@ def read_project_dedupe_map(path: Path) -> dict[tuple[str, str], dict[str, str]]
         rows = {}
         for line_number, row in enumerate(reader, start=2):
             require_exact_table_row(row, path, line_number)
+            row = strip_table_row(row)
             accession_type = row["accession_type"]
             accession = row["accession"]
             if accession_type not in PROJECT_DEDUPE_ACCESSIONS:
@@ -364,16 +384,16 @@ def read_project_dedupe_map(path: Path) -> dict[tuple[str, str], dict[str, str]]
             _, pattern = PROJECT_DEDUPE_ACCESSIONS[accession_type]
             if pattern.match(accession) is None:
                 raise ValueError(f"{accession}: invalid {accession_type} accession")
+            require_non_blank_fields(
+                row,
+                ("source", "source_version", "notes"),
+                path,
+                line_number,
+            )
             if normalize(row["source"]) == normalize(PROJECT_DEDUPE_SELF_SOURCE):
                 raise ValueError(
                     f"{accession}: project dedupe source cannot be {PROJECT_DEDUPE_SELF_SOURCE}"
                 )
-            if not row["source"].strip():
-                raise ValueError(f"{accession}: source is required")
-            if not row["source_version"]:
-                raise ValueError(f"{accession}: source_version is required")
-            if not row["notes"]:
-                raise ValueError(f"{accession}: notes are required")
 
             key = (accession_type, accession)
             if key in rows:
