@@ -107,6 +107,7 @@ MIC_UNITS = "mg/L"
 DISK_DIFFUSION_UNITS = "mm"
 BIOSAMPLE_PATTERN = re.compile(r"^SAM(N|D|EA)[0-9]+$")
 BIOPROJECT_PATTERN = re.compile(r"^PRJ(NA|EB|DB)[0-9]+$")
+ASSEMBLY_PATTERN = re.compile(r"^GC[AF]_[0-9]+(\.[0-9]+)?$")
 PROJECT_DEDUPE_ACCESSIONS = {
     "BioSample": (BIOSAMPLE_ALIASES, BIOSAMPLE_PATTERN),
     "BioProject": (BIOPROJECT_ALIASES, BIOPROJECT_PATTERN),
@@ -166,6 +167,15 @@ def has_valid_project_context(row: dict[str, str]) -> bool:
         BIOSAMPLE_PATTERN.match(biosample_accession) is not None
         and BIOPROJECT_PATTERN.match(bioproject_accession) is not None
     )
+
+
+def valid_assembly_accession(row: dict[str, str]) -> str | None:
+    accession = first_value(row, TARGET_ALIASES)
+    if not accession:
+        return ""
+    if ASSEMBLY_PATTERN.match(accession) is None:
+        return None
+    return accession
 
 
 def standardized_measurement(
@@ -412,6 +422,9 @@ def exact_activity_rows(
         bioproject_accession = first_value(row, BIOPROJECT_ALIASES)
         if not taxon_label or not has_valid_project_context(row):
             continue
+        assembly_accession = valid_assembly_accession(row)
+        if assembly_accession is None:
+            continue
         if project_dedupe_hit(row, project_dedupe):
             continue
 
@@ -424,7 +437,7 @@ def exact_activity_rows(
             "taxon_label": taxon_label,
             "biosample_accession": biosample_accession,
             "bioproject_accession": bioproject_accession,
-            "assembly_accession": first_value(row, TARGET_ALIASES),
+            "assembly_accession": assembly_accession,
             "phenotype": phenotype,
             "activity": ACTIVITY_CALLS.get(phenotype.casefold(), ""),
             "mic_value": mic[0],
