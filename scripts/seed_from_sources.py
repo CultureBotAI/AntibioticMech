@@ -2230,6 +2230,11 @@ NCBI_AST_MEASUREMENT_QUALIFIERS = {"", "<", "<=", ">", ">="}
 NCBI_AST_BIOSAMPLE_PATTERN = re.compile(r"^SAM(N|D|EA)[0-9]+$")
 NCBI_AST_BIOPROJECT_PATTERN = re.compile(r"^PRJ(NA|EB|DB)[0-9]+$")
 NCBI_AST_ASSEMBLY_PATTERN = re.compile(r"^GC[AF]_[0-9]+(\.[0-9]+)?$")
+NCBI_AST_NORMALIZED_NAME_PATTERN = re.compile(r"[^a-z0-9]+")
+
+
+def normalized_ncbi_ast_name(value: str) -> str:
+    return NCBI_AST_NORMALIZED_NAME_PATTERN.sub("", value.casefold())
 
 
 def is_ncbi_ast_sourced_activity(item: dict) -> bool:
@@ -2388,6 +2393,8 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                 and NCBI_AST_ASSEMBLY_PATTERN.match(row["assembly_accession"]) is None
             ):
                 raise ValueError(f"{prefix}: invalid Assembly accession")
+            if row["normalized_antibiotic"] != normalized_ncbi_ast_name(row["source_name"]):
+                raise ValueError(f"{prefix}: normalized_antibiotic must match source_name")
             try:
                 source_retrieved_on = date.fromisoformat(row["source_retrieved_on"])
             except ValueError as error:

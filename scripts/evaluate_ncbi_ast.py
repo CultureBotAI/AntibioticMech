@@ -430,7 +430,7 @@ def exact_activity_rows(
 
         phenotype = first_value(row, PHENOTYPE_ALIASES)
         out = {
-            "source_name": source_name,
+            "source_name": mapping["source_name"],
             "normalized_antibiotic": normalize(source_name),
             "identifier": mapping["identifier"],
             "standard_inchi_key": mapping["standard_inchi_key"],
