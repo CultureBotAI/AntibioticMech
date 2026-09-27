@@ -110,6 +110,14 @@ def test_load_ncbi_ast_activity_inventory_accepts_insdc_project_context(
     assert load_ncbi_ast_activity_inventory(path) == [row]
 
 
+def test_load_ncbi_ast_activity_inventory_accepts_versionless_gca_assembly(tmp_path):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    row = ncbi_ast_row(assembly_accession="GCA_003123125")
+    write_activity_report(path, [row])
+
+    assert load_ncbi_ast_activity_inventory(path) == [row]
+
+
 def test_load_ncbi_ast_activity_inventory_rejects_header_drift(tmp_path):
     path = tmp_path / "ncbi_ast_activity.tsv"
     path.write_text("activity_group_id\tunexpected\n", encoding="utf-8")
@@ -146,6 +154,7 @@ def test_load_ncbi_ast_activity_inventory_rejects_duplicate_groups(tmp_path):
         ({"biosample_accession": ""}, "biosample_accession is required"),
         ({"biosample_accession": "BioSample:SAMN11953777"}, "invalid BioSample accession"),
         ({"bioproject_accession": "SAMN11953777"}, "invalid BioProject accession"),
+        ({"assembly_accession": "SAMN11953777"}, "invalid Assembly accession"),
         ({"activity": "NON_SUSCEPTIBLE"}, "activity must match phenotype"),
         ({"phenotype": "S", "activity": "RESISTANT"}, "activity must match phenotype"),
         ({"activity_group_id": "ncbi_ast:stale"}, "activity_group_id must be"),

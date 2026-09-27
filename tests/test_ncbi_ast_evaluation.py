@@ -212,6 +212,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "Antibiotic": "cefepime",
             "BioSample": "SAMEA11953778",
             "BioProject": "PRJEB292666",
+            "Assembly Accession": "GCA_003123126",
             "Organism group": "Klebsiella pneumoniae",
             "Resistance phenotype": "S",
             "Measurement sign": ">",
@@ -220,6 +221,16 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
         {
             "antibiotic": "cefepime",
             "biosample_acc": "SAMN11953779",
+            "taxgroup_name": "Escherichia coli and Shigella",
+            "phenotype": "R",
+            "measurement_sign": "<=",
+            "mic": "2",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953782",
+            "bioproject_acc": "PRJNA292666",
+            "target_acc": "not-an-assembly",
             "taxgroup_name": "Escherichia coli and Shigella",
             "phenotype": "R",
             "measurement_sign": "<=",
@@ -315,6 +326,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
     assert activity_rows[1]["ast_row_count"] == 1
     assert activity_rows[1]["biosample_accession"] == "SAMEA11953778"
     assert activity_rows[1]["bioproject_accession"] == "PRJEB292666"
+    assert activity_rows[1]["assembly_accession"] == "GCA_003123126"
     assert activity_rows[1]["activity"] == "SUSCEPTIBLE"
     assert activity_rows[1]["disk_diffusion_value"] == "18"
     assert activity_rows[1]["disk_diffusion_qualifier"] == ">"
