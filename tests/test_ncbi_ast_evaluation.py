@@ -1211,7 +1211,17 @@ def test_cli_rejects_activity_report_without_source_metadata(tmp_path):
     assert "--activity-report requires --source-version" in result.stderr
 
 
-def test_cli_rejects_non_iso_activity_report_retrieval_dates(tmp_path):
+@pytest.mark.parametrize(
+    "source_retrieved_on",
+    [
+        "September 26, 2026",
+        "20260926",
+    ],
+)
+def test_cli_rejects_non_iso_activity_report_retrieval_dates(
+    tmp_path,
+    source_retrieved_on,
+):
     ast = tmp_path / "ast.tsv"
     ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
 
@@ -1224,7 +1234,7 @@ def test_cli_rejects_non_iso_activity_report_retrieval_dates(tmp_path):
             "--antibiotic-report",
             str(tmp_path / "ncbi_ast_antibiotics.tsv"),
             "--source-retrieved-on",
-            "September 26, 2026",
+            source_retrieved_on,
         ],
         text=True,
         capture_output=True,
