@@ -1211,6 +1211,54 @@ def test_cli_rejects_activity_report_without_source_metadata(tmp_path):
     assert "--activity-report requires --source-version" in result.stderr
 
 
+def test_cli_rejects_activity_report_with_blank_source_version(tmp_path):
+    ast = tmp_path / "ast.tsv"
+    ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            "--drug-map",
+            str(tmp_path / "ncbi_ast_drug_map.tsv"),
+            "--activity-report",
+            str(tmp_path / "ncbi_ast_activity.tsv"),
+            "--source-version",
+            " ",
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 2
+    assert "--activity-report requires --source-version" in result.stderr
+
+
+def test_cli_rejects_padded_source_version(tmp_path):
+    ast = tmp_path / "ast.tsv"
+    ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            "--antibiotic-report",
+            str(tmp_path / "ncbi_ast_antibiotics.tsv"),
+            "--source-version",
+            " 2026-09-26-ast-browser ",
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 2
+    assert "--source-version must not have leading or trailing whitespace" in result.stderr
+
+
 @pytest.mark.parametrize(
     "source_retrieved_on",
     [

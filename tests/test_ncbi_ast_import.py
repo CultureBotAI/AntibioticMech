@@ -153,9 +153,11 @@ def test_load_ncbi_ast_activity_inventory_rejects_duplicate_groups(tmp_path):
     ("overrides", "message"),
     [
         ({"source_retrieved_on": "20260926"}, "source_retrieved_on must be an ISO date"),
+        ({"source_version": " "}, "source_version is required"),
         ({"ast_row_count": "0"}, "ast_row_count must be positive"),
         ({"taxon_label": ""}, "taxon_label is required"),
         ({"biosample_accession": ""}, "biosample_accession is required"),
+        ({"platform": " AST"}, "platform has leading or trailing whitespace"),
         ({"biosample_accession": "BioSample:SAMN11953777"}, "invalid BioSample accession"),
         ({"bioproject_accession": "SAMN11953777"}, "invalid BioProject accession"),
         ({"assembly_accession": "SAMN11953777"}, "invalid Assembly accession"),
