@@ -89,6 +89,7 @@ def test_evaluate_rows_summarizes_submitted_antibiotic_names():
     assert result["rows_with_biosample"] == 2
     assert result["rows_with_bioproject"] == 1
     assert result["rows_with_project_context"] == 1
+    assert result["rows_with_valid_project_context"] == 1
     assert result["rows_with_target_acc"] == 1
     assert result["rows_with_taxon"] == 1
     assert result["rows_with_dedupe_context"] == 1
@@ -98,6 +99,7 @@ def test_evaluate_rows_summarizes_submitted_antibiotic_names():
     assert amikacin["exact_name_candidate_identifiers"] == "CHEBI:2637"
     assert amikacin["mapping_status"] == ""
     assert amikacin["project_context_count"] == 1
+    assert amikacin["valid_project_context_count"] == 1
     assert amikacin["dedupe_context_count"] == 1
     assert amikacin["taxon_count"] == 1
     assert amikacin["mic_count"] == 1
@@ -524,6 +526,7 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
     assert result["rows_with_biosample"] == 2
     assert result["rows_with_bioproject"] == 2
     assert result["rows_with_project_context"] == 2
+    assert result["rows_with_valid_project_context"] == 2
     assert result["rows_with_target_acc"] == 1
     assert result["rows_with_taxon"] == 2
     assert result["antibiotic_rows"][0]["mic_count"] == 1
@@ -537,6 +540,37 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
         == "Escherichia coli|Klebsiella pneumoniae"
     )
     assert result["antibiotic_rows"][0]["phenotypes"] == "R|S"
+
+
+def test_evaluate_rows_counts_valid_project_context_separately():
+    rows = [
+        {
+            "Antibiotic": "cefepime",
+            "BioSample": "SAMN11953777",
+            "BioProject": "PRJNA292666",
+        },
+        {
+            "Antibiotic": "cefepime",
+            "BioSample": "not-a-biosample",
+            "BioProject": "PRJNA292666",
+        },
+        {
+            "Antibiotic": "cefepime",
+            "BioSample": "SAMN11953779",
+            "BioProject": "not-a-bioproject",
+        },
+    ]
+
+    result = evaluate_rows(
+        rows,
+        {"cefepime": {"CHEBI:478164"}},
+        {"CHEBI:478164": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
+    )
+
+    assert result["rows_with_project_context"] == 3
+    assert result["rows_with_valid_project_context"] == 1
+    assert result["antibiotic_rows"][0]["project_context_count"] == 3
+    assert result["antibiotic_rows"][0]["valid_project_context_count"] == 1
 
 
 def test_evaluate_rows_counts_invalid_measurement_shapes():
@@ -772,6 +806,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "biosample_count": 7,
             "bioproject_count": 7,
             "project_context_count": 7,
+            "valid_project_context_count": 7,
             "dedupe_context_count": 0,
             "target_acc_count": 7,
             "taxon_count": 7,
@@ -809,6 +844,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "biosample_count": "7",
         "bioproject_count": "7",
         "project_context_count": "7",
+        "valid_project_context_count": "7",
         "dedupe_context_count": "0",
         "target_acc_count": "7",
         "taxon_count": "7",
@@ -1061,6 +1097,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
 
     assert "exact_mapped_activity_groups=1" in result.stdout
     assert "project_context_rows=2" in result.stdout
+    assert "valid_project_context_rows=2" in result.stdout
     assert "taxon_rows=2" in result.stdout
     assert "source_context_rows=1" in result.stdout
     assert antibiotic_report.exists()
