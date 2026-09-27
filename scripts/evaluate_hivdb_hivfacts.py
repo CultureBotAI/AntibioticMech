@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
-"""Audit Stanford HIVDB hivfacts drugs against corpus exact-structure records.
+"""Audit Stanford HIVDB hivfacts drugs and HIV-1 mutation lists.
 
 hivfacts names drugs by HIVDB abbreviations and includes boosted protease
 inhibitors such as ATV/r. This preflight reports exact lexical corpus matches
-as identity-curation leads only: HIVDB scoring rules still need a mutation model
-before the repository can seed resistance assertions from them.
+as identity-curation leads only.
+
+The HIV-1 DRMs, SDRMs and TSMs in hivfacts are class-level mutation catalogs.
+They are curated mutation evidence, but not exact drug-specific rules. Evaluating
+them here makes the mutation surface visible without flattening entire classes
+such as NRTI into one compound assertion.
 """
 
 from __future__ import annotations
@@ -55,6 +59,15 @@ DRUG_MAP_COLUMNS = [
     "mapping_basis",
     "notes",
 ]
+MUTATION_REPORT_COLUMNS = [
+    "source_list",
+    "drug_class",
+    "gene",
+    "position",
+    "aa",
+    "expanded_mutation_count",
+    "expanded_mutations",
+]
 
 EXACT_MAPPING_STATUS = "EXACT"
 MAPPING_STATUSES = {
@@ -64,6 +77,8 @@ MAPPING_STATUSES = {
     "MISSING_CORPUS_RECORD",
 }
 CURATED_TSV_CONTROL_CHARS = frozenset("\t\r\n")
+COMPACT_TOKEN_PATTERN = re.compile(r"^[A-Z0-9]+$")
+COMPACT_AA_PATTERN = re.compile(r"^[A-Z_-]+$")
 
 
 def normalize(value: str) -> str:
@@ -336,12 +351,127 @@ def evaluate_drugs(
     }
 
 
+def read_class_mutation_list(path: Path, source_list: str) -> list[dict[str, str]]:
+    """Read a hivfacts HIV-1 class-level mutation list.
+
+    ``drms_hiv1.json`` and related files group compact AA strings by drug class;
+    for example, ``{"position": 46, "aa": "IL"}`` means PR:46I and PR:46L.
+    Keep the compact row and the expanded labels distinct so the report can
+    preserve the source shape while still making the represented mutations
+    countable.
+    """
+
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict):
+        raise ValueError(f"{path}: expected a JSON object keyed by drug class")
+
+    rows: list[dict[str, str]] = []
+    seen: set[tuple[str, str, str, str, str]] = set()
+    seen_expanded: set[tuple[str, str, str]] = set()
+    for drug_class, mutations in payload.items():
+        if not isinstance(drug_class, str) or not drug_class.strip():
+            raise ValueError(f"{path}: mutation list has a blank drug class")
+        drug_class = drug_class.strip()
+        if not COMPACT_TOKEN_PATTERN.fullmatch(drug_class):
+            raise ValueError(f"{path}: mutation list has invalid drug class {drug_class!r}")
+        if not isinstance(mutations, list):
+            raise ValueError(f"{path}: {drug_class} mutation list is not an array")
+        for index, mutation in enumerate(mutations, start=1):
+            if not isinstance(mutation, dict):
+                raise ValueError(f"{path}: {drug_class} row {index} is not an object")
+            gene = mutation.get("gene")
+            position = mutation.get("position")
+            aa = mutation.get("aa")
+            if not isinstance(gene, str) or not gene.strip():
+                raise ValueError(f"{path}: {drug_class} row {index} has no gene")
+            if not isinstance(position, int) or position <= 0:
+                raise ValueError(f"{path}: {drug_class} row {index} has invalid position")
+            if not isinstance(aa, str) or not aa.strip():
+                raise ValueError(f"{path}: {drug_class} row {index} has no aa")
+            gene = gene.strip()
+            aa = aa.strip()
+            if not COMPACT_TOKEN_PATTERN.fullmatch(gene):
+                raise ValueError(f"{path}: {drug_class} row {index} has invalid gene {gene!r}")
+            if not COMPACT_AA_PATTERN.fullmatch(aa):
+                raise ValueError(f"{path}: {drug_class} row {index} has invalid aa {aa!r}")
+
+            row = {
+                "source_list": source_list,
+                "drug_class": drug_class,
+                "gene": gene,
+                "position": str(position),
+                "aa": aa,
+            }
+            key = (source_list, drug_class, gene, row["position"], aa)
+            if key in seen:
+                label = mutation_label(gene, position, aa)
+                raise ValueError(f"{path}: duplicate {source_list} {drug_class} mutation {label}")
+            seen.add(key)
+            for label in expanded_mutations(row):
+                expanded_key = (source_list, drug_class, label)
+                if expanded_key in seen_expanded:
+                    raise ValueError(
+                        f"{path}: duplicate expanded {source_list} {drug_class} "
+                        f"mutation {label}"
+                    )
+                seen_expanded.add(expanded_key)
+            rows.append(row)
+
+    return rows
+
+
+def expanded_mutations(row: Mapping[str, str]) -> list[str]:
+    return [
+        mutation_label(row["gene"], int(row["position"]), aa)
+        for aa in row["aa"]
+    ]
+
+
+def mutation_label(gene: str, position: int, aa: str) -> str:
+    return f"{gene}:{position}{aa}"
+
+
+def evaluate_class_mutations(rows: list[dict[str, str]]) -> dict:
+    report_rows = []
+    for row in rows:
+        mutations = expanded_mutations(row)
+        report_rows.append(
+            {
+                **row,
+                "expanded_mutation_count": len(mutations),
+                "expanded_mutations": "|".join(mutations),
+            }
+        )
+
+    return {
+        "mutation_rows": len(rows),
+        "expanded_mutations": sum(len(row["aa"]) for row in rows),
+        "source_lists": Counter(row["source_list"] for row in rows),
+        "drug_classes": Counter(row["drug_class"] for row in rows),
+        "genes": Counter(row["gene"] for row in rows),
+        "mutation_rows_report": report_rows,
+    }
+
+
 def write_drug_report(rows: list[dict], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
             handle,
             fieldnames=DRUG_REPORT_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def write_mutation_report(rows: list[dict], path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=MUTATION_REPORT_COLUMNS,
             delimiter="\t",
             lineterminator="\n",
         )
@@ -386,6 +516,14 @@ def main() -> int:
         type=Path,
         help="Optional TSV template for a curated HIVDB drug crosswalk.",
     )
+    parser.add_argument("--hiv1-drms", type=Path, help="Optional hivfacts data/drms_hiv1.json.")
+    parser.add_argument("--hiv1-sdrms", type=Path, help="Optional hivfacts data/sdrms_hiv1.json.")
+    parser.add_argument("--hiv1-tsms", type=Path, help="Optional hivfacts data/tsms_hiv1.json.")
+    parser.add_argument(
+        "--mutation-report",
+        type=Path,
+        help="Optional TSV class-level HIV-1 DRM/SDRM/TSM audit.",
+    )
     parser.add_argument("--corpus-root", type=Path, default=REPO_ROOT, help=argparse.SUPPRESS)
     args = parser.parse_args()
 
@@ -396,6 +534,29 @@ def main() -> int:
     drugs = read_drugs(args.drugs)
     mappings = read_drug_map(args.drug_map, structure_keys, drugs) if args.drug_map else {}
     result = evaluate_drugs(drugs, candidates, structure_keys, mappings=mappings)
+
+    mutation_inputs = [
+        ("DRM", args.hiv1_drms),
+        ("SDRM", args.hiv1_sdrms),
+        ("TSM", args.hiv1_tsms),
+    ]
+    missing_mutation_inputs = [
+        path
+        for _, path in mutation_inputs
+        if path is not None and not path.exists()
+    ]
+    if missing_mutation_inputs:
+        raise SystemExit(
+            "missing hivfacts mutation input(s): "
+            + ", ".join(str(path) for path in missing_mutation_inputs)
+        )
+    mutation_rows = [
+        row
+        for source_list, path in mutation_inputs
+        if path is not None
+        for row in read_class_mutation_list(path, source_list)
+    ]
+    mutation_result = evaluate_class_mutations(mutation_rows)
 
     print("Stanford HIVDB hivfacts drug identity audit")
     print(
@@ -409,6 +570,17 @@ def main() -> int:
         "  drug classes: "
         + ", ".join(f"{name}={count}" for name, count in sorted(result["drug_classes"].items()))
     )
+    if mutation_rows:
+        print(
+            "  HIV-1 class-level mutation lists: "
+            f"rows={mutation_result['mutation_rows']} "
+            f"expanded_mutations={mutation_result['expanded_mutations']} "
+            "source_lists="
+            + ",".join(
+                f"{name}={count}"
+                for name, count in sorted(mutation_result["source_lists"].items())
+            )
+        )
 
     if args.drug_report:
         write_drug_report(result["drug_rows"], args.drug_report)
@@ -416,8 +588,14 @@ def main() -> int:
     if args.drug_map_template:
         write_drug_map_template(result["drug_rows"], args.drug_map_template)
         print(f"wrote {args.drug_map_template}")
+    if args.mutation_report:
+        write_mutation_report(mutation_result["mutation_rows_report"], args.mutation_report)
+        print(f"wrote {args.mutation_report}")
 
-    print("--audit: no rows seeded; HIVDB mutation rules need a schema-specific importer")
+    print(
+        "--audit: no rows seeded; HIVDB drug-specific mutation rules need a "
+        "schema-specific importer"
+    )
     return 0
 
 
