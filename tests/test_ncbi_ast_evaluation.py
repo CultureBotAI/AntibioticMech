@@ -788,6 +788,19 @@ def test_read_project_dedupe_map_requires_source_version(tmp_path):
         read_project_dedupe_map(path)
 
 
+def test_read_project_dedupe_map_rejects_self_source(tmp_path):
+    path = tmp_path / "ncbi_ast_project_dedupe.tsv"
+    path.write_text(
+        "\t".join(PROJECT_DEDUPE_COLUMNS)
+        + "\n"
+        + "BioSample\tSAMN11953777\t NCBI AST \t2026-09\tnot a separate adopted source\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="source cannot be NCBI_AST"):
+        read_project_dedupe_map(path)
+
+
 def test_antibiotic_report_is_a_stable_tsv(tmp_path):
     path = tmp_path / "ncbi_ast_antibiotics.tsv"
     rows = [
