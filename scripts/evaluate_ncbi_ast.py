@@ -208,6 +208,14 @@ def valid_assembly_accession(row: dict[str, str]) -> str | None:
     return valid_accession(row, ASSEMBLY_ALIASES, ASSEMBLY_PATTERN)
 
 
+def has_invalid_target_accession(row: dict[str, str]) -> bool:
+    return valid_target_accession(row) is None
+
+
+def has_invalid_assembly_accession(row: dict[str, str]) -> bool:
+    return valid_assembly_accession(row) is None
+
+
 def standardized_measurement(
     row: dict[str, str],
     aliases: Iterable[str],
@@ -659,6 +667,9 @@ def evaluate_rows(
     rows_with_project_context = 0
     rows_with_valid_project_context = 0
     rows_with_target_acc = 0
+    rows_with_assembly_acc = 0
+    rows_with_invalid_target_acc = 0
+    rows_with_invalid_assembly_acc = 0
     rows_with_taxon = 0
     rows_with_dedupe_context = 0
 
@@ -675,6 +686,9 @@ def evaluate_rows(
         rows_with_project_context += int(has_project_context(row))
         rows_with_valid_project_context += int(has_valid_project_context(row))
         rows_with_target_acc += int(has_value(row, TARGET_ALIASES))
+        rows_with_assembly_acc += int(has_value(row, ASSEMBLY_ALIASES))
+        rows_with_invalid_target_acc += int(has_invalid_target_accession(row))
+        rows_with_invalid_assembly_acc += int(has_invalid_assembly_accession(row))
         rows_with_taxon += int(has_value(row, TAXON_ALIASES))
         rows_with_dedupe_context += int(project_dedupe_hit(row, project_dedupe) is not None)
 
@@ -759,6 +773,15 @@ def evaluate_rows(
                 ),
                 "activity_report_candidate_count": activity_report_candidate_count,
                 "target_acc_count": sum(has_value(row, TARGET_ALIASES) for row in antibiotic_ast_rows),
+                "invalid_target_acc_count": sum(
+                    has_invalid_target_accession(row) for row in antibiotic_ast_rows
+                ),
+                "assembly_acc_count": sum(
+                    has_value(row, ASSEMBLY_ALIASES) for row in antibiotic_ast_rows
+                ),
+                "invalid_assembly_acc_count": sum(
+                    has_invalid_assembly_accession(row) for row in antibiotic_ast_rows
+                ),
                 "taxon_count": sum(has_value(row, TAXON_ALIASES) for row in antibiotic_ast_rows),
                 "phenotype_count": sum(has_value(row, PHENOTYPE_ALIASES) for row in antibiotic_ast_rows),
                 "mic_count": sum(has_value(row, MIC_ALIASES) for row in antibiotic_ast_rows),
@@ -799,6 +822,9 @@ def evaluate_rows(
         "rows_with_project_context": rows_with_project_context,
         "rows_with_valid_project_context": rows_with_valid_project_context,
         "rows_with_target_acc": rows_with_target_acc,
+        "rows_with_assembly_acc": rows_with_assembly_acc,
+        "rows_with_invalid_target_acc": rows_with_invalid_target_acc,
+        "rows_with_invalid_assembly_acc": rows_with_invalid_assembly_acc,
         "rows_with_taxon": rows_with_taxon,
         "rows_with_dedupe_context": rows_with_dedupe_context,
         "exact_name_matched_antibiotics": sum(
@@ -848,6 +874,9 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
         "dedupe_context_count",
         "activity_report_candidate_count",
         "target_acc_count",
+        "invalid_target_acc_count",
+        "assembly_acc_count",
+        "invalid_assembly_acc_count",
         "taxon_count",
         "phenotype_count",
         "mic_count",
@@ -1043,7 +1072,13 @@ def main() -> int:
         f"bioproject_rows={result['rows_with_bioproject']} "
         f"project_context_rows={result['rows_with_project_context']} "
         f"valid_project_context_rows={result['rows_with_valid_project_context']} "
-        f"target_acc_rows={result['rows_with_target_acc']}"
+        f"target_acc_rows={result['rows_with_target_acc']} "
+        f"assembly_acc_rows={result['rows_with_assembly_acc']}"
+    )
+    print(
+        f"  invalid identifiers: target_acc_rows="
+        f"{result['rows_with_invalid_target_acc']} "
+        f"assembly_acc_rows={result['rows_with_invalid_assembly_acc']}"
     )
     print(f"  context: taxon_rows={result['rows_with_taxon']}")
     print(f"  dedupe: source_context_rows={result['rows_with_dedupe_context']}")
