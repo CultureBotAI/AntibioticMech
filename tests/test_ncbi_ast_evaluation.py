@@ -635,7 +635,7 @@ def test_read_drug_map_accepts_exact_and_non_exact_rows(tmp_path):
         ])
         + "\n"
         + "\n".join([
-            "amikacin\tamikacin\tEXACT\tCHEBI:2637\t"
+            "amikacin\t amikacin \tEXACT\tCHEBI:2637\t"
             "LKCWBDHBTVXHDL-RMDFUYIESA-N\tparent_base\tok",
             "gentamicin\tgentamicin\tMIXTURE\t\t\tnone\tmixture",
         ])
@@ -646,6 +646,7 @@ def test_read_drug_map_accepts_exact_and_non_exact_rows(tmp_path):
     mappings = read_drug_map(path, {"CHEBI:2637": "LKCWBDHBTVXHDL-RMDFUYIESA-N"})
 
     assert mappings["amikacin"]["identifier"] == "CHEBI:2637"
+    assert mappings["amikacin"]["source_name"] == "amikacin"
     assert mappings["gentamicin"]["mapping_status"] == "MIXTURE"
     assert mappings["gentamicin"]["identifier"] == ""
 
@@ -698,11 +699,21 @@ def test_read_drug_map_requires_mapping_rationale(tmp_path):
     path.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + "amikacin\tamikacin\tMIXTURE\t\t\t\tmixture\n",
+        + "amikacin\tamikacin\tMIXTURE\t\t\t \tmixture\n",
         encoding="utf-8",
     )
 
     with pytest.raises(ValueError, match="mapping_basis is required"):
+        read_drug_map(path, {})
+
+    path.write_text(
+        "\t".join(DRUG_MAP_COLUMNS)
+        + "\n"
+        + "amikacin\tamikacin\tMIXTURE\t\t\tnone\t \n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="notes is required"):
         read_drug_map(path, {})
 
 
@@ -720,7 +731,7 @@ def test_read_project_dedupe_map_accepts_biosample_and_bioproject_keys(tmp_path)
             {
                 "accession_type": "BioSample",
                 "accession": "SAMN11953777",
-                "source": "CRYPTIC",
+                "source": " CRYPTIC ",
                 "source_version": "3.4.0",
                 "notes": "BioSample represented in an adopted project dataset.",
             },
@@ -780,11 +791,24 @@ def test_read_project_dedupe_map_requires_source_version(tmp_path):
     path.write_text(
         "\t".join(PROJECT_DEDUPE_COLUMNS)
         + "\n"
-        + "BioSample\tSAMN11953777\tCRYPTIC\t\tBioSample represented elsewhere.\n",
+        + "BioSample\tSAMN11953777\tCRYPTIC\t \tBioSample represented elsewhere.\n",
         encoding="utf-8",
     )
 
     with pytest.raises(ValueError, match="source_version is required"):
+        read_project_dedupe_map(path)
+
+
+def test_read_project_dedupe_map_requires_notes(tmp_path):
+    path = tmp_path / "ncbi_ast_project_dedupe.tsv"
+    path.write_text(
+        "\t".join(PROJECT_DEDUPE_COLUMNS)
+        + "\n"
+        + "BioSample\tSAMN11953777\tCRYPTIC\t3.4.0\t \n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="notes is required"):
         read_project_dedupe_map(path)
 
 
