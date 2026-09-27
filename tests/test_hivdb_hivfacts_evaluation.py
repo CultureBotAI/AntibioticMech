@@ -17,12 +17,16 @@ from evaluate_hivdb_hivfacts import (  # noqa: E402
     DEFAULT_DRUG_MAP,
     DRUG_MAP_COLUMNS,
     HIVDB_HIVFACTS_COMMIT,
+    MUTATION_REPORT_COLUMNS,
     corpus_name_candidates,
+    evaluate_class_mutations,
     evaluate_drugs,
+    read_class_mutation_list,
     read_drug_map,
     read_drugs,
     write_drug_map_template,
     write_drug_report,
+    write_mutation_report,
 )
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -203,6 +207,99 @@ def test_evaluate_drugs_adds_curated_mapping_fields():
     assert result["drug_rows"][0]["identifier"] == "CHEBI:421707"
     assert result["drug_rows"][0]["mapping_notes"] == "HIVDB fullName is the exact corpus label."
     assert result["drug_rows"][1]["mapping_status"] == ""
+
+
+def test_read_class_mutation_list_expands_compact_hivdb_rows(tmp_path):
+    path = tmp_path / "drms_hiv1.json"
+    path.write_text(
+        json.dumps(
+            {
+                "NRTI": [
+                    {"gene": "RT", "position": 184, "aa": "VI"},
+                    {"gene": "RT", "position": 69, "aa": "D_"},
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    rows = read_class_mutation_list(path, "DRM")
+
+    assert rows == [
+        {
+            "source_list": "DRM",
+            "drug_class": "NRTI",
+            "gene": "RT",
+            "position": "184",
+            "aa": "VI",
+        },
+        {
+            "source_list": "DRM",
+            "drug_class": "NRTI",
+            "gene": "RT",
+            "position": "69",
+            "aa": "D_",
+        },
+    ]
+    report = evaluate_class_mutations(rows)
+    assert report["mutation_rows"] == 2
+    assert report["expanded_mutations"] == 4
+    assert report["source_lists"] == {"DRM": 2}
+    assert report["drug_classes"] == {"NRTI": 2}
+    assert report["genes"] == {"RT": 2}
+    assert report["mutation_rows_report"][0]["expanded_mutation_count"] == 2
+    assert report["mutation_rows_report"][0]["expanded_mutations"] == "RT:184V|RT:184I"
+    assert report["mutation_rows_report"][1]["expanded_mutations"] == "RT:69D|RT:69_"
+
+
+def test_read_class_mutation_list_rejects_malformed_rows(tmp_path):
+    path = tmp_path / "drms_hiv1.json"
+
+    path.write_text(json.dumps([]), encoding="utf-8")
+    with pytest.raises(ValueError, match="expected a JSON object"):
+        read_class_mutation_list(path, "DRM")
+
+    path.write_text(json.dumps({"NRTI": [{"gene": "RT", "position": 0, "aa": "M"}]}))
+    with pytest.raises(ValueError, match="NRTI row 1 has invalid position"):
+        read_class_mutation_list(path, "DRM")
+
+    path.write_text(json.dumps({"NRTI": [{"gene": "RT-1", "position": 184, "aa": "V"}]}))
+    with pytest.raises(ValueError, match="NRTI row 1 has invalid gene 'RT-1'"):
+        read_class_mutation_list(path, "DRM")
+
+    path.write_text(json.dumps({"NRTI": [{"gene": "RT", "position": 184, "aa": "M184V"}]}))
+    with pytest.raises(ValueError, match="NRTI row 1 has invalid aa 'M184V'"):
+        read_class_mutation_list(path, "DRM")
+
+    path.write_text(
+        json.dumps(
+            {
+                "NRTI": [
+                    {"gene": "RT", "position": 184, "aa": "V"},
+                    {"gene": "RT", "position": 184, "aa": "V"},
+                ]
+            }
+        )
+    )
+    with pytest.raises(ValueError, match="duplicate DRM NRTI mutation RT:184V"):
+        read_class_mutation_list(path, "DRM")
+
+    path.write_text(
+        json.dumps(
+            {
+                "NRTI": [
+                    {"gene": "RT", "position": 184, "aa": "V"},
+                    {"gene": "RT", "position": 184, "aa": "VI"},
+                ]
+            }
+        )
+    )
+    with pytest.raises(ValueError, match="duplicate expanded DRM NRTI mutation RT:184V"):
+        read_class_mutation_list(path, "DRM")
+
+    path.write_text(json.dumps({"NRTI": [{"gene": "RT", "position": 184, "aa": "VV"}]}))
+    with pytest.raises(ValueError, match="duplicate expanded DRM NRTI mutation RT:184V"):
+        read_class_mutation_list(path, "DRM")
 
 
 def test_read_drugs_validates_hivfacts_drug_abbreviations(tmp_path):
@@ -489,6 +586,42 @@ def test_write_drug_report_preserves_hivdb_identity_columns(tmp_path):
     ]
 
 
+def test_write_mutation_report_preserves_class_level_mutation_columns(tmp_path):
+    path = tmp_path / "hivdb_mutations.tsv"
+
+    write_mutation_report(
+        [
+            {
+                "source_list": "DRM",
+                "drug_class": "NRTI",
+                "gene": "RT",
+                "position": "184",
+                "aa": "VI",
+                "expanded_mutation_count": 2,
+                "expanded_mutations": "RT:184V|RT:184I",
+            }
+        ],
+        path,
+    )
+
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        assert reader.fieldnames == MUTATION_REPORT_COLUMNS
+        rows = list(reader)
+
+    assert rows == [
+        {
+            "source_list": "DRM",
+            "drug_class": "NRTI",
+            "gene": "RT",
+            "position": "184",
+            "aa": "VI",
+            "expanded_mutation_count": "2",
+            "expanded_mutations": "RT:184V|RT:184I",
+        }
+    ]
+
+
 def test_cli_writes_non_seeding_drug_audit(tmp_path):
     directory = tmp_path / "data" / "antibiotics" / "antiviral"
     directory.mkdir(parents=True)
@@ -524,6 +657,12 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
         encoding="utf-8",
     )
     drug_map_template = tmp_path / "hivdb_drug_map.tsv"
+    drms = tmp_path / "drms_hiv1.json"
+    drms.write_text(
+        json.dumps({"NRTI": [{"gene": "RT", "position": 184, "aa": "VI"}]}),
+        encoding="utf-8",
+    )
+    mutation_report = tmp_path / "hivdb_mutations.tsv"
 
     result = subprocess.run(
         [
@@ -537,6 +676,10 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
             str(drug_map),
             "--drug-map-template",
             str(drug_map_template),
+            "--hiv1-drms",
+            str(drms),
+            "--mutation-report",
+            str(mutation_report),
             "--corpus-root",
             str(tmp_path),
         ],
@@ -548,9 +691,14 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
 
     assert report.exists()
     assert drug_map_template.exists()
+    assert mutation_report.exists()
     with report.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle, delimiter="\t"))
     assert rows[0]["mapping_status"] == "EXACT"
     assert rows[0]["identifier"] == "CHEBI:421707"
+    with mutation_report.open(newline="", encoding="utf-8") as handle:
+        mutation_rows = list(csv.DictReader(handle, delimiter="\t"))
+    assert mutation_rows[0]["expanded_mutations"] == "RT:184V|RT:184I"
     assert "Stanford HIVDB hivfacts drug identity audit" in result.stdout
+    assert "HIV-1 class-level mutation lists: rows=1 expanded_mutations=2" in result.stdout
     assert "no rows seeded" in result.stdout
