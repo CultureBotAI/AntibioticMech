@@ -44,6 +44,9 @@ PROJECT_DEDUPE_REPORT_COLUMNS = [
     "accession",
     "ast_rows",
     "exact_mapped_rows",
+    "exact_mapped_antibiotic_values",
+    "exact_mapped_antibiotics",
+    "exact_mapped_identifiers",
     "biosample_count",
     "bioproject_count",
     "antibiotic_values",
@@ -544,6 +547,8 @@ def project_dedupe_report_rows(
     biosample_accessions: dict[tuple[str, str], set[str]] = defaultdict(set)
     bioproject_accessions: dict[tuple[str, str], set[str]] = defaultdict(set)
     antibiotics: dict[tuple[str, str], set[str]] = defaultdict(set)
+    exact_mapped_antibiotics: dict[tuple[str, str], set[str]] = defaultdict(set)
+    exact_mapped_identifiers: dict[tuple[str, str], set[str]] = defaultdict(set)
     taxon_labels: dict[tuple[str, str], set[str]] = defaultdict(set)
 
     for row in rows:
@@ -558,10 +563,8 @@ def project_dedupe_report_rows(
         biosample_accession = first_value(row, BIOSAMPLE_ALIASES)
         bioproject_accession = first_value(row, BIOPROJECT_ALIASES)
         normalized_antibiotic = normalize(source_name)
-        exact_mapped = (
-            mappings.get(normalized_antibiotic, {}).get("mapping_status")
-            == EXACT_MAPPING_STATUS
-        )
+        mapping = mappings.get(normalized_antibiotic, {})
+        exact_mapped = mapping.get("mapping_status") == EXACT_MAPPING_STATUS
         taxon_label = first_value(row, TAXON_ALIASES)
 
         for accession_type, (aliases, pattern) in PROJECT_DEDUPE_ACCESSIONS.items():
@@ -582,11 +585,21 @@ def project_dedupe_report_rows(
             bioproject_accessions[key].add(bioproject_accession)
             if normalized_antibiotic:
                 antibiotics[key].add(normalized_antibiotic)
+            if exact_mapped:
+                exact_mapped_antibiotics[key].add(normalized_antibiotic)
+                exact_mapped_identifiers[key].add(mapping["identifier"])
             if taxon_label:
                 taxon_labels[key].add(taxon_label)
 
     report_rows = []
     for key, row in contexts.items():
+        row["exact_mapped_antibiotic_values"] = len(exact_mapped_antibiotics[key])
+        row["exact_mapped_antibiotics"] = "|".join(
+            sorted(exact_mapped_antibiotics[key])
+        )
+        row["exact_mapped_identifiers"] = "|".join(
+            sorted(exact_mapped_identifiers[key])
+        )
         row["biosample_count"] = len(biosample_accessions[key])
         row["bioproject_count"] = len(bioproject_accessions[key])
         row["antibiotic_values"] = len(antibiotics[key])
