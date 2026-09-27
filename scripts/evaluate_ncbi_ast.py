@@ -68,6 +68,7 @@ ACTIVITY_REPORT_COLUMNS = [
     *ACTIVITY_REPORT_GROUP_COLUMNS,
 ]
 EXACT_MAPPING_STATUS = "EXACT"
+PROJECT_DEDUPE_SELF_SOURCE = "NCBI_AST"
 MAPPING_STATUSES = {
     EXACT_MAPPING_STATUS,
     "AMBIGUOUS_STEREOCHEMISTRY",
@@ -363,7 +364,11 @@ def read_project_dedupe_map(path: Path) -> dict[tuple[str, str], dict[str, str]]
             _, pattern = PROJECT_DEDUPE_ACCESSIONS[accession_type]
             if pattern.match(accession) is None:
                 raise ValueError(f"{accession}: invalid {accession_type} accession")
-            if not row["source"]:
+            if normalize(row["source"]) == normalize(PROJECT_DEDUPE_SELF_SOURCE):
+                raise ValueError(
+                    f"{accession}: project dedupe source cannot be {PROJECT_DEDUPE_SELF_SOURCE}"
+                )
+            if not row["source"].strip():
                 raise ValueError(f"{accession}: source is required")
             if not row["source_version"]:
                 raise ValueError(f"{accession}: source_version is required")
