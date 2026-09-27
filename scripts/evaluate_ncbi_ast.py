@@ -50,7 +50,7 @@ PROJECT_DEDUPE_REPORT_COLUMNS = [
 ]
 # Bump with ACTIVITY_REPORT_GROUP_COLUMNS because those columns define the
 # stable activity_group_id digest for committed exact reports.
-ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v1"
+ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v2"
 ACTIVITY_REPORT_GROUP_COLUMNS = [
     "source_name",
     "normalized_antibiotic",
@@ -59,6 +59,7 @@ ACTIVITY_REPORT_GROUP_COLUMNS = [
     "taxon_label",
     "biosample_accession",
     "bioproject_accession",
+    "target_accession",
     "assembly_accession",
     "phenotype",
     "activity",
@@ -101,7 +102,8 @@ ANTIBIOTIC_ALIASES = (
 )
 BIOSAMPLE_ALIASES = ("biosample", "biosampleaccession", "biosampleacc")
 BIOPROJECT_ALIASES = ("bioproject", "bioprojectaccession", "bioprojectacc")
-TARGET_ALIASES = ("targetacc", "targetaccession", "assemblyaccession", "target")
+TARGET_ALIASES = ("targetacc", "targetaccession", "target")
+ASSEMBLY_ALIASES = ("assemblyaccession", "assembly", "asmacc")
 MIC_ALIASES = ("mic", "micvalue", "minimuminhibitoryconcentration")
 DISK_ALIASES = ("diskdiffusion", "diskdiameter", "diskzone")
 MEASUREMENT_SIGN_ALIASES = ("measurementsign", "sign")
@@ -122,6 +124,7 @@ MIC_UNITS = "mg/L"
 DISK_DIFFUSION_UNITS = "mm"
 BIOSAMPLE_PATTERN = re.compile(r"^SAM(N|D|EA)[0-9]+$")
 BIOPROJECT_PATTERN = re.compile(r"^PRJ(NA|EB|DB)[0-9]+$")
+TARGET_PATTERN = re.compile(r"^PDT[0-9]+(\.[0-9]+)?$")
 ASSEMBLY_PATTERN = re.compile(r"^GC[AF]_[0-9]+(\.[0-9]+)?$")
 PROJECT_DEDUPE_ACCESSIONS = {
     "BioSample": (BIOSAMPLE_ALIASES, BIOSAMPLE_PATTERN),
@@ -184,13 +187,25 @@ def has_valid_project_context(row: dict[str, str]) -> bool:
     )
 
 
-def valid_assembly_accession(row: dict[str, str]) -> str | None:
-    accession = first_value(row, TARGET_ALIASES)
+def valid_accession(
+    row: dict[str, str],
+    aliases: Iterable[str],
+    pattern: re.Pattern[str],
+) -> str | None:
+    accession = first_value(row, aliases)
     if not accession:
         return ""
-    if ASSEMBLY_PATTERN.match(accession) is None:
+    if pattern.match(accession) is None:
         return None
     return accession
+
+
+def valid_target_accession(row: dict[str, str]) -> str | None:
+    return valid_accession(row, TARGET_ALIASES, TARGET_PATTERN)
+
+
+def valid_assembly_accession(row: dict[str, str]) -> str | None:
+    return valid_accession(row, ASSEMBLY_ALIASES, ASSEMBLY_PATTERN)
 
 
 def standardized_measurement(
@@ -482,6 +497,8 @@ def project_dedupe_report_rows(
             continue
         if standardized_activity_measurements(row) is None:
             continue
+        if valid_target_accession(row) is None:
+            continue
         if valid_assembly_accession(row) is None:
             continue
         if project_dedupe_hit(row, project_dedupe):
@@ -558,6 +575,9 @@ def exact_activity_rows(
         bioproject_accession = first_value(row, BIOPROJECT_ALIASES)
         if not taxon_label or not has_valid_project_context(row):
             continue
+        target_accession = valid_target_accession(row)
+        if target_accession is None:
+            continue
         assembly_accession = valid_assembly_accession(row)
         if assembly_accession is None:
             continue
@@ -573,6 +593,7 @@ def exact_activity_rows(
             "taxon_label": taxon_label,
             "biosample_accession": biosample_accession,
             "bioproject_accession": bioproject_accession,
+            "target_accession": target_accession,
             "assembly_accession": assembly_accession,
             "phenotype": phenotype,
             "activity": ACTIVITY_CALLS.get(phenotype.casefold(), ""),
