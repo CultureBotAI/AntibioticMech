@@ -57,10 +57,11 @@ prose below are the reasoning, the queue is the list.
   each would need the same treatment CARD got: a committed inventory, an explicit
   citation on every item, and a mechanism vocabulary that says what it means.
   The HIVDB evaluator now validates the exact drug map plus class-level HIV-1
-  DRM, SDRM and TSM lists without seeding those class catalogs as exact-drug
-  resistance claims. Until a drug-specific mutation-rule importer exists, the
-  antiviral asymmetry should be visible in the report rather than read as
-  "antivirals have no known resistance".
+  DRM, SDRM and TSM lists and class-specific drug pattern level/score matrices
+  without seeding those catalogs as exact-drug resistance claims. Until a
+  drug-specific mutation-rule importer exists, the antiviral asymmetry should be
+  visible in the report rather than read as "antivirals have no known
+  resistance".
 
 - **Decide what the 372 structureless concepts are.** `just worklist
   --queue no-structure`. Each is a mixture, a class, a preparation, or a
