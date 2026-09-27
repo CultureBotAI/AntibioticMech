@@ -755,6 +755,14 @@ def write_activity_report(rows: list[dict], path: Path) -> None:
         writer.writerows(rows)
 
 
+def is_iso_date(value: str) -> bool:
+    try:
+        parsed = date.fromisoformat(value)
+    except ValueError:
+        return False
+    return parsed.isoformat() == value
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ast", type=Path, required=True, help="NCBI AST Browser CSV/TSV export.")
@@ -813,11 +821,8 @@ def main() -> int:
         parser.error("--activity-report requires --source-version.")
     if args.activity_report and not args.source_retrieved_on:
         parser.error("--activity-report requires --source-retrieved-on.")
-    if args.source_retrieved_on:
-        try:
-            date.fromisoformat(args.source_retrieved_on)
-        except ValueError:
-            parser.error("--source-retrieved-on must be an ISO date.")
+    if args.source_retrieved_on and not is_iso_date(args.source_retrieved_on):
+        parser.error("--source-retrieved-on must be an ISO date.")
 
     rows = read_table(args.ast)
     candidates, structure_keys = corpus_name_candidates()
