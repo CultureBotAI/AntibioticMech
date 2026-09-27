@@ -2178,7 +2178,7 @@ NCBI_AST_ACTIVITY_INVENTORY = RAW_DIR / "ncbi_ast_activity.tsv"
 NCBI_AST_REFERENCE = "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/"
 # Bump with NCBI_AST_ACTIVITY_GROUP_COLUMNS because those columns define the
 # stable source_observation_id digest for committed exact reports.
-NCBI_AST_ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v1"
+NCBI_AST_ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v2"
 NCBI_AST_ACTIVITY_GROUP_COLUMNS = [
     "source_name",
     "normalized_antibiotic",
@@ -2187,6 +2187,7 @@ NCBI_AST_ACTIVITY_GROUP_COLUMNS = [
     "taxon_label",
     "biosample_accession",
     "bioproject_accession",
+    "target_accession",
     "assembly_accession",
     "phenotype",
     "activity",
@@ -2232,6 +2233,7 @@ NCBI_AST_ACTIVITY_BY_PHENOTYPE = {
 NCBI_AST_MEASUREMENT_QUALIFIERS = {"", "<", "<=", ">", ">="}
 NCBI_AST_BIOSAMPLE_PATTERN = re.compile(r"^SAM(N|D|EA)[0-9]+$")
 NCBI_AST_BIOPROJECT_PATTERN = re.compile(r"^PRJ(NA|EB|DB)[0-9]+$")
+NCBI_AST_TARGET_PATTERN = re.compile(r"^PDT[0-9]+(\.[0-9]+)?$")
 NCBI_AST_ASSEMBLY_PATTERN = re.compile(r"^GC[AF]_[0-9]+(\.[0-9]+)?$")
 NCBI_AST_NORMALIZED_NAME_PATTERN = re.compile(r"[^a-z0-9]+")
 NCBI_AST_TSV_CONTROL_CHARS = frozenset("\t\r\n")
@@ -2277,6 +2279,7 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
         "taxon_label",
         "biosample_accession",
         "bioproject_accession",
+        "target_accession",
         "assembly_accession",
         "phenotype",
         "platform",
@@ -2298,7 +2301,8 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
             "notes": (
                 "Compact NCBI Pathogen Detection AST grouped activity row. "
                 "The underlying AST rows are submitter-provided; source BioSample, "
-                f"BioProject and assembly context are retained for audit: {notes}."
+                "BioProject, target and assembly context are retained for audit: "
+                f"{notes}."
             ),
         }],
     }
@@ -2408,6 +2412,11 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                 raise ValueError(f"{prefix}: invalid BioSample accession")
             if NCBI_AST_BIOPROJECT_PATTERN.match(row["bioproject_accession"]) is None:
                 raise ValueError(f"{prefix}: invalid BioProject accession")
+            if (
+                row["target_accession"]
+                and NCBI_AST_TARGET_PATTERN.match(row["target_accession"]) is None
+            ):
+                raise ValueError(f"{prefix}: invalid Pathogen Detection target accession")
             if (
                 row["assembly_accession"]
                 and NCBI_AST_ASSEMBLY_PATTERN.match(row["assembly_accession"]) is None

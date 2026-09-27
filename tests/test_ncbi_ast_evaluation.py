@@ -37,7 +37,7 @@ def test_evaluate_rows_summarizes_submitted_antibiotic_names():
             "Antibiotic": "amikacin",
             "BioSample": "SAMN00000001",
             "BioProject": "PRJNA1",
-            "target_acc": "GCF_000000001.1",
+            "target_acc": "PDT000000001.1",
             "Scientific name": "Escherichia coli",
             "Phenotype": "R",
             "MIC": "4",
@@ -186,7 +186,8 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "antibiotic": "cefepime",
             "biosample_acc": "SAMN11953777",
             "bioproject_acc": "PRJNA292666",
-            "target_acc": "GCF_003123125.1",
+            "target_acc": "PDT000001234.1",
+            "asm_acc": "GCF_003123125.1",
             "taxgroup_name": "Escherichia coli and Shigella",
             "scientific_name": "Escherichia coli",
             "phenotype": "R",
@@ -201,7 +202,8 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "antibiotic": "CEFEPIME",
             "biosample_acc": "SAMN11953777",
             "bioproject_acc": "PRJNA292666",
-            "target_acc": "GCF_003123125.1",
+            "target_acc": "PDT000001234.1",
+            "asm_acc": "GCF_003123125.1",
             "taxgroup_name": "Escherichia coli and Shigella",
             "scientific_name": "Escherichia coli",
             "phenotype": "R",
@@ -216,7 +218,8 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "antibiotic": "cefepime",
             "biosample_acc": "SAMN11953777",
             "bioproject_acc": "PRJNA292666",
-            "target_acc": "GCF_003123125.1",
+            "target_acc": "PDT000001234.1",
+            "asm_acc": "GCF_003123125.1",
             "taxgroup_name": "Escherichia coli and Shigella",
             "scientific_name": "Escherichia coli",
             "phenotype": "R",
@@ -249,7 +252,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "antibiotic": "cefepime",
             "biosample_acc": "SAMN11953782",
             "bioproject_acc": "PRJNA292666",
-            "target_acc": "not-an-assembly",
+            "target_acc": "not-a-target",
             "taxgroup_name": "Escherichia coli and Shigella",
             "phenotype": "R",
             "measurement_sign": "<=",
@@ -328,6 +331,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
         "taxon_label": "Escherichia coli",
         "biosample_accession": "SAMN11953777",
         "bioproject_accession": "PRJNA292666",
+        "target_accession": "PDT000001234.1",
         "assembly_accession": "GCF_003123125.1",
         "phenotype": "R",
         "activity": "RESISTANT",
@@ -343,6 +347,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
         "standard": "CLSI",
     }
     assert activity_rows[0]["activity_group_id"].startswith("ncbi_ast:")
+    assert activity_rows[0]["target_accession"] == "PDT000001234.1"
     assert activity_rows[1]["ast_row_count"] == 1
     assert activity_rows[1]["biosample_accession"] == "SAMEA11953778"
     assert activity_rows[1]["bioproject_accession"] == "PRJEB292666"
@@ -416,6 +421,48 @@ def test_exact_activity_rows_excludes_known_source_context():
     assert [row["biosample_accession"] for row in activity_rows] == ["SAMN11953779"]
 
 
+def test_exact_activity_rows_keeps_target_accession_separate_from_assembly():
+    rows = [
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953777",
+            "bioproject_acc": "PRJNA292666",
+            "target_acc": "PDT000001234.1",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "R",
+            "mic": "2",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953778",
+            "bioproject_acc": "PRJNA292666",
+            "target_acc": "GCF_003123125.1",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "R",
+            "mic": "4",
+        },
+    ]
+    mappings = {
+        "cefepime": {
+            "mapping_status": "EXACT",
+            "source_name": "cefepime",
+            "identifier": "CHEBI:478164",
+            "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+        },
+    }
+
+    activity_rows = exact_activity_rows(
+        rows,
+        mappings,
+        source_version="2026-09-26-ast-browser",
+        source_retrieved_on="2026-09-26",
+    )
+
+    assert len(activity_rows) == 1
+    assert activity_rows[0]["target_accession"] == "PDT000001234.1"
+    assert activity_rows[0]["assembly_accession"] == ""
+
+
 def test_project_dedupe_report_rows_rank_valid_project_contexts():
     rows = [
         {
@@ -465,7 +512,7 @@ def test_project_dedupe_report_rows_rank_valid_project_contexts():
             "antibiotic": "cefepime",
             "biosample_acc": "SAMN11953782",
             "bioproject_acc": "PRJNA292666",
-            "target_acc": "not-an-assembly",
+            "target_acc": "not-a-target",
             "taxgroup_name": "Escherichia coli",
             "mic": "2",
         },
@@ -646,6 +693,7 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
         {
             "biosample_acc": "SAMN11953777",
             "bioproject_acc": "PRJNA292666",
+            "target_acc": "PDT000001234.1",
             "assembly_accession": "GCF_003123125.1",
             "taxgroup_name": "Escherichia coli and Shigella",
             "scientific_name": "Escherichia coli",
@@ -1174,6 +1222,7 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
             "taxon_label": "Escherichia coli and Shigella",
             "biosample_accession": "SAMN11953777",
             "bioproject_accession": "PRJNA292666",
+            "target_accession": "PDT000001234.1",
             "assembly_accession": "GCF_003123125.1",
             "phenotype": "R",
             "activity": "RESISTANT",
@@ -1207,6 +1256,7 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
         "taxon_label": "Escherichia coli and Shigella",
         "biosample_accession": "SAMN11953777",
         "bioproject_accession": "PRJNA292666",
+        "target_accession": "PDT000001234.1",
         "assembly_accession": "GCF_003123125.1",
         "phenotype": "R",
         "activity": "RESISTANT",
@@ -1263,6 +1313,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
                 "biosample_acc",
                 "bioproject_acc",
                 "target_acc",
+                "asm_acc",
                 "scientific_name",
                 "phenotype",
                 "measurement_sign",
@@ -1280,7 +1331,8 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             "antibiotic": "amikacin",
             "biosample_acc": "SAMN11953777",
             "bioproject_acc": "PRJNA292666",
-            "target_acc": "GCF_003123125.1",
+            "target_acc": "PDT000001234.1",
+            "asm_acc": "GCF_003123125.1",
             "scientific_name": "Klebsiella pneumoniae",
             "phenotype": "R",
             "measurement_sign": ">",
@@ -1294,7 +1346,8 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             "antibiotic": "amikacin",
             "biosample_acc": "SAMN11953778",
             "bioproject_acc": "PRJNA292667",
-            "target_acc": "GCF_003123126.1",
+            "target_acc": "PDT000001235.1",
+            "asm_acc": "GCF_003123126.1",
             "scientific_name": "Klebsiella pneumoniae",
             "phenotype": "R",
             "measurement_sign": ">",
@@ -1389,6 +1442,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     with activity_report.open(newline="", encoding="utf-8") as handle:
         reader = csv.DictReader(handle, delimiter="\t")
         activity_rows = list(reader)
+        assert "target_accession" in (reader.fieldnames or [])
         assert "assembly_accession" in (reader.fieldnames or [])
         assert "target_acc" not in (reader.fieldnames or [])
 
@@ -1401,6 +1455,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     ]
 
     assert activity_rows[0]["assembly_accession"] == "GCF_003123125.1"
+    assert activity_rows[0]["target_accession"] == "PDT000001234.1"
     assert activity_rows[0]["source_version"] == "2026-09-26-ast-browser"
     assert activity_rows[0]["source_retrieved_on"] == "2026-09-26"
     assert activity_rows[0]["mic_value"] == "64"

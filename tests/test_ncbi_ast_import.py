@@ -50,6 +50,7 @@ def ncbi_ast_row(**overrides: str) -> dict[str, str]:
         "taxon_label": "Escherichia coli and Shigella",
         "biosample_accession": "SAMN11953777",
         "bioproject_accession": "PRJNA292666",
+        "target_accession": "PDT000001234.1",
         "assembly_accession": "GCF_003123125.1",
         "phenotype": "R",
         "activity": "RESISTANT",
@@ -72,7 +73,7 @@ def test_ncbi_ast_activity_columns_match_the_evaluator_contract():
 
     assert NCBI_AST_ACTIVITY_COLUMNS == ACTIVITY_REPORT_COLUMNS
     assert NCBI_AST_ACTIVITY_GROUP_ID_VERSION == ACTIVITY_GROUP_ID_VERSION
-    assert ACTIVITY_GROUP_ID_VERSION == "ncbi_ast_activity_group_v1"
+    assert ACTIVITY_GROUP_ID_VERSION == "ncbi_ast_activity_group_v2"
     assert NCBI_AST_ACTIVITY_GROUP_COLUMNS == ACTIVITY_REPORT_GROUP_COLUMNS
     assert ncbi_ast_activity_group_id(row) == activity_group_id(row)
 
@@ -162,6 +163,7 @@ def test_load_ncbi_ast_activity_inventory_rejects_duplicate_groups(tmp_path):
         ({"platform": "AST\nCLSI"}, "platform contains a tab or newline"),
         ({"biosample_accession": "BioSample:SAMN11953777"}, "invalid BioSample accession"),
         ({"bioproject_accession": "SAMN11953777"}, "invalid BioProject accession"),
+        ({"target_accession": "GCF_003123125.1"}, "invalid Pathogen Detection target"),
         ({"assembly_accession": "SAMN11953777"}, "invalid Assembly accession"),
         ({"normalized_antibiotic": "stale"}, "normalized_antibiotic must match source_name"),
         ({"activity": "NON_SUSCEPTIBLE"}, "activity must match phenotype"),
@@ -234,7 +236,8 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     assert observation["source_observation_id"] == row["activity_group_id"]
     assert "platform AST" in observation["assay"]
     assert "standard CLSI" in observation["assay"]
-    assert "BioSample, BioProject and assembly context" in observation["evidence"][0]["notes"]
+    assert "target_accession=PDT000001234.1" in observation["evidence"][0]["notes"]
+    assert "BioSample, BioProject, target and assembly context" in observation["evidence"][0]["notes"]
 
 
 def test_attach_ncbi_ast_activity_rejects_identity_drift(tmp_path, monkeypatch):
