@@ -226,6 +226,18 @@ def measurement_label(measurement: tuple[str, str, str]) -> str:
     return f"{qualifier}{value} {units}"
 
 
+def standardized_activity_measurements(
+    row: dict[str, str],
+) -> tuple[tuple[str, str, str], tuple[str, str, str]] | None:
+    mic = standardized_measurement(row, MIC_ALIASES, MIC_UNITS)
+    disk = standardized_measurement(row, DISK_ALIASES, DISK_DIFFUSION_UNITS)
+    if mic is None or disk is None:
+        return None
+    if not mic[0] and not disk[0]:
+        return None
+    return mic, disk
+
+
 def activity_group_id(row: dict[str, str]) -> str:
     digest = hashlib.sha256()
     digest.update(ACTIVITY_GROUP_ID_VERSION.encode("utf-8"))
@@ -466,6 +478,12 @@ def project_dedupe_report_rows(
         source_name = first_value(row, ANTIBIOTIC_ALIASES)
         if not source_name:
             continue
+        if not first_value(row, TAXON_ALIASES):
+            continue
+        if standardized_activity_measurements(row) is None:
+            continue
+        if valid_assembly_accession(row) is None:
+            continue
         if project_dedupe_hit(row, project_dedupe):
             continue
         normalized_antibiotic = normalize(source_name)
@@ -530,12 +548,10 @@ def exact_activity_rows(
         if not mapping or mapping.get("mapping_status") != EXACT_MAPPING_STATUS:
             continue
 
-        mic = standardized_measurement(row, MIC_ALIASES, MIC_UNITS)
-        disk = standardized_measurement(row, DISK_ALIASES, DISK_DIFFUSION_UNITS)
-        if mic is None or disk is None:
+        measurements = standardized_activity_measurements(row)
+        if measurements is None:
             continue
-        if not mic[0] and not disk[0]:
-            continue
+        mic, disk = measurements
 
         taxon_label = first_value(row, TAXON_ALIASES)
         biosample_accession = first_value(row, BIOSAMPLE_ALIASES)
