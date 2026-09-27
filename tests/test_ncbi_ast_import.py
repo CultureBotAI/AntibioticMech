@@ -155,6 +155,7 @@ def test_load_ncbi_ast_activity_inventory_rejects_duplicate_groups(tmp_path):
         ({"source_retrieved_on": "20260926"}, "source_retrieved_on must be an ISO date"),
         ({"source_version": " "}, "source_version is required"),
         ({"ast_row_count": "0"}, "ast_row_count must be positive"),
+        ({"ast_row_count": "02"}, "ast_row_count must use canonical integer '2'"),
         ({"taxon_label": ""}, "taxon_label is required"),
         ({"biosample_accession": ""}, "biosample_accession is required"),
         ({"platform": " AST"}, "platform has leading or trailing whitespace"),
