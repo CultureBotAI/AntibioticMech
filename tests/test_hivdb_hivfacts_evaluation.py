@@ -18,15 +18,19 @@ from evaluate_hivdb_hivfacts import (  # noqa: E402
     DRUG_MAP_COLUMNS,
     HIVDB_HIVFACTS_COMMIT,
     MUTATION_REPORT_COLUMNS,
+    PATTERN_REPORT_COLUMNS,
     corpus_name_candidates,
     evaluate_class_mutations,
+    evaluate_drug_patterns,
     evaluate_drugs,
     read_class_mutation_list,
     read_drug_map,
+    read_drug_patterns,
     read_drugs,
     write_drug_map_template,
     write_drug_report,
     write_mutation_report,
+    write_pattern_report,
 )
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -495,6 +499,235 @@ def test_read_drug_map_rejects_non_exact_structure_fields(tmp_path):
         read_drug_map(path, {"CHEBI:421707": "MCI"}, hivdb_source_rows())
 
 
+def test_read_drug_patterns_audits_level_score_matrices(tmp_path):
+    path = tmp_path / "patterns-NRTI.json"
+    path.write_text(
+        json.dumps(
+            [
+                {
+                    "gene": "RT",
+                    "drugClass": "NRTI",
+                    "pattern": "M184V",
+                    "count": 17,
+                    "ABC Level": 3,
+                    "ABC Score": 15.0,
+                    "AZT Level": 1,
+                    "AZT Score": -5.0,
+                },
+                {
+                    "gene": "RT",
+                    "drugClass": "NRTI",
+                    "pattern": "M41L,M184V,T215Y",
+                    "count": 7,
+                    "ABC Level": 4,
+                    "ABC Score": 30.0,
+                    "AZT Level": 5,
+                    "AZT Score": 60,
+                },
+            ]
+        ),
+        encoding="utf-8",
+    )
+    source_rows = [
+        {
+            "source_record_id": "ABC",
+            "display_abbr": "ABC",
+            "name": "ABC",
+            "full_name": "abacavir",
+            "drug_class": "NRTI",
+            "synonyms": "",
+        },
+        {
+            "source_record_id": "AZT",
+            "display_abbr": "AZT",
+            "name": "AZT",
+            "full_name": "zidovudine",
+            "drug_class": "NRTI",
+            "synonyms": "",
+        },
+    ]
+
+    rows = read_drug_patterns(path, source_rows)
+    result = evaluate_drug_patterns(
+        rows,
+        source_rows,
+        {
+            "ABC": {
+                "mapping_status": "EXACT",
+                "identifier": "CHEBI:421707",
+                "standard_inchi_key": "MCI",
+            },
+            "AZT": {"mapping_status": "AMBIGUOUS_IDENTITY"},
+        },
+    )
+
+    assert rows[0]["scores"] == {
+        "ABC": {"level": 3, "score": 15.0},
+        "AZT": {"level": 1, "score": -5.0},
+    }
+    assert result["pattern_rows"] == 2
+    assert result["drug_pattern_score_pairs"] == 4
+    assert result["exact_pattern_score_pairs"] == 2
+    assert result["non_exact_pattern_score_pairs"] == 2
+    assert result["drug_classes"] == {"NRTI": 2}
+    assert result["genes"] == {"RT": 2}
+    assert result["pattern_report_rows"] == [
+        {
+            "source_pattern_file": "patterns-NRTI.json",
+            "drug_class": "NRTI",
+            "source_record_id": "ABC",
+            "source_name": "abacavir",
+            "mapping_status": "EXACT",
+            "identifier": "CHEBI:421707",
+            "standard_inchi_key": "MCI",
+            "pattern_rows": 2,
+            "nonzero_score_rows": 2,
+            "max_level": 4,
+            "min_score": 15.0,
+            "max_score": 30.0,
+        },
+        {
+            "source_pattern_file": "patterns-NRTI.json",
+            "drug_class": "NRTI",
+            "source_record_id": "AZT",
+            "source_name": "zidovudine",
+            "mapping_status": "AMBIGUOUS_IDENTITY",
+            "identifier": "",
+            "standard_inchi_key": "",
+            "pattern_rows": 2,
+            "nonzero_score_rows": 2,
+            "max_level": 5,
+            "min_score": -5.0,
+            "max_score": 60.0,
+        },
+    ]
+
+
+def test_read_drug_patterns_accepts_empty_pattern_files(tmp_path):
+    path = tmp_path / "patterns-CAI.json"
+    path.write_text("[]", encoding="utf-8")
+
+    assert read_drug_patterns(path, hivdb_source_rows()) == []
+
+
+def test_read_drug_patterns_rejects_bad_matrices(tmp_path):
+    path = tmp_path / "patterns-NRTI.json"
+    source_rows = [
+        {
+            "source_record_id": "ABC",
+            "display_abbr": "ABC",
+            "name": "ABC",
+            "full_name": "abacavir",
+            "drug_class": "NRTI",
+            "synonyms": "",
+        }
+    ]
+
+    path.write_text(json.dumps({}), encoding="utf-8")
+    with pytest.raises(ValueError, match="expected a JSON array"):
+        read_drug_patterns(path, source_rows)
+
+    path.write_text(
+        json.dumps(
+            [
+                {
+                    "gene": "RT",
+                    "drugClass": "NRTI",
+                    "pattern": "M184V",
+                    "count": 1,
+                    "ABC Level": 3,
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    with pytest.raises(
+        ValueError,
+        match=r"missing=\['ABC Score'\]",
+    ):
+        read_drug_patterns(path, source_rows)
+
+    path.write_text(
+        json.dumps(
+            [
+                {
+                    "gene": "RT",
+                    "drugClass": "NRTI",
+                    "pattern": "M184V",
+                    "count": 1,
+                    "ABC Level": 6,
+                    "ABC Score": 15.0,
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    with pytest.raises(ValueError, match="invalid ABC Level"):
+        read_drug_patterns(path, source_rows)
+
+    path.write_text(
+        json.dumps(
+            [
+                {
+                    "gene": "RT",
+                    "drugClass": "NRTI",
+                    "pattern": "M184V",
+                    "count": 1,
+                    "ABC Level": 3,
+                    "ABC Score": "15.0",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    with pytest.raises(ValueError, match="invalid ABC Score"):
+        read_drug_patterns(path, source_rows)
+
+    path.write_text(
+        json.dumps(
+            [
+                {
+                    "gene": "RT",
+                    "drugClass": "CAI",
+                    "pattern": "M184V",
+                    "count": 1,
+                    "ABC Level": 3,
+                    "ABC Score": 15.0,
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    with pytest.raises(ValueError, match="unknown drugClass 'CAI'"):
+        read_drug_patterns(path, source_rows)
+
+    path.write_text(
+        json.dumps(
+            [
+                {
+                    "gene": "RT",
+                    "drugClass": "NRTI",
+                    "pattern": "M184V",
+                    "count": 1,
+                    "ABC Level": 3,
+                    "ABC Score": 15.0,
+                },
+                {
+                    "gene": "RT",
+                    "drugClass": "NRTI",
+                    "pattern": "M184V",
+                    "count": 1,
+                    "ABC Level": 3,
+                    "ABC Score": 15.0,
+                },
+            ]
+        ),
+        encoding="utf-8",
+    )
+    with pytest.raises(ValueError, match="duplicate NRTI RT pattern M184V"):
+        read_drug_patterns(path, source_rows)
+
+
 def test_write_drug_map_template_preserves_hivdb_source_columns(tmp_path):
     path = tmp_path / "hivdb_drug_map.tsv"
     write_drug_map_template(
@@ -622,6 +855,52 @@ def test_write_mutation_report_preserves_class_level_mutation_columns(tmp_path):
     ]
 
 
+def test_write_pattern_report_preserves_hivdb_score_columns(tmp_path):
+    path = tmp_path / "hivdb_patterns.tsv"
+
+    write_pattern_report(
+        [
+            {
+                "source_pattern_file": "patterns-NRTI.json",
+                "drug_class": "NRTI",
+                "source_record_id": "ABC",
+                "source_name": "abacavir",
+                "mapping_status": "EXACT",
+                "identifier": "CHEBI:421707",
+                "standard_inchi_key": "MCI",
+                "pattern_rows": 2,
+                "nonzero_score_rows": 2,
+                "max_level": 4,
+                "min_score": 15.0,
+                "max_score": 30.0,
+            }
+        ],
+        path,
+    )
+
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        assert reader.fieldnames == PATTERN_REPORT_COLUMNS
+        rows = list(reader)
+
+    assert rows == [
+        {
+            "source_pattern_file": "patterns-NRTI.json",
+            "drug_class": "NRTI",
+            "source_record_id": "ABC",
+            "source_name": "abacavir",
+            "mapping_status": "EXACT",
+            "identifier": "CHEBI:421707",
+            "standard_inchi_key": "MCI",
+            "pattern_rows": "2",
+            "nonzero_score_rows": "2",
+            "max_level": "4",
+            "min_score": "15.0",
+            "max_score": "30.0",
+        }
+    ]
+
+
 def test_cli_writes_non_seeding_drug_audit(tmp_path):
     directory = tmp_path / "data" / "antibiotics" / "antiviral"
     directory.mkdir(parents=True)
@@ -663,6 +942,23 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
         encoding="utf-8",
     )
     mutation_report = tmp_path / "hivdb_mutations.tsv"
+    patterns = tmp_path / "patterns-NRTI.json"
+    patterns.write_text(
+        json.dumps(
+            [
+                {
+                    "gene": "RT",
+                    "drugClass": "NRTI",
+                    "pattern": "M184V",
+                    "count": 17,
+                    "ABC Level": 3,
+                    "ABC Score": 15.0,
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    pattern_report = tmp_path / "hivdb_patterns.tsv"
 
     result = subprocess.run(
         [
@@ -680,6 +976,10 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
             str(drms),
             "--mutation-report",
             str(mutation_report),
+            "--hiv1-patterns",
+            str(patterns),
+            "--pattern-report",
+            str(pattern_report),
             "--corpus-root",
             str(tmp_path),
         ],
@@ -692,6 +992,7 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
     assert report.exists()
     assert drug_map_template.exists()
     assert mutation_report.exists()
+    assert pattern_report.exists()
     with report.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle, delimiter="\t"))
     assert rows[0]["mapping_status"] == "EXACT"
@@ -699,6 +1000,11 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
     with mutation_report.open(newline="", encoding="utf-8") as handle:
         mutation_rows = list(csv.DictReader(handle, delimiter="\t"))
     assert mutation_rows[0]["expanded_mutations"] == "RT:184V|RT:184I"
+    with pattern_report.open(newline="", encoding="utf-8") as handle:
+        pattern_rows = list(csv.DictReader(handle, delimiter="\t"))
+    assert pattern_rows[0]["mapping_status"] == "EXACT"
+    assert pattern_rows[0]["pattern_rows"] == "1"
     assert "Stanford HIVDB hivfacts drug identity audit" in result.stdout
     assert "HIV-1 class-level mutation lists: rows=1 expanded_mutations=2" in result.stdout
+    assert "HIV-1 drug pattern matrices: rows=1 level_score_pairs=1" in result.stdout
     assert "no rows seeded" in result.stdout

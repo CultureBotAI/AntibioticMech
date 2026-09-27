@@ -68,6 +68,21 @@ MUTATION_REPORT_COLUMNS = [
     "expanded_mutation_count",
     "expanded_mutations",
 ]
+PATTERN_REPORT_COLUMNS = [
+    "source_pattern_file",
+    "drug_class",
+    "source_record_id",
+    "source_name",
+    "mapping_status",
+    "identifier",
+    "standard_inchi_key",
+    "pattern_rows",
+    "nonzero_score_rows",
+    "max_level",
+    "min_score",
+    "max_score",
+]
+PATTERN_FIELDS = frozenset({"gene", "drugClass", "pattern", "count"})
 
 EXACT_MAPPING_STATUS = "EXACT"
 MAPPING_STATUSES = {
@@ -79,6 +94,7 @@ MAPPING_STATUSES = {
 CURATED_TSV_CONTROL_CHARS = frozenset("\t\r\n")
 COMPACT_TOKEN_PATTERN = re.compile(r"^[A-Z0-9]+$")
 COMPACT_AA_PATTERN = re.compile(r"^[A-Z_-]+$")
+PATTERN_CONTROL_CHARS = frozenset("\t\r\n")
 
 
 def normalize(value: str) -> str:
@@ -420,6 +436,114 @@ def read_class_mutation_list(path: Path, source_list: str) -> list[dict[str, str
     return rows
 
 
+def read_drug_patterns(
+    path: Path,
+    source_rows: list[dict[str, str]],
+) -> list[dict]:
+    """Read one hivfacts HIV-1 drug-class pattern score matrix."""
+
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, list):
+        raise ValueError(f"{path}: expected a JSON array of drug patterns")
+
+    source_ids_by_class: dict[str, list[str]] = defaultdict(list)
+    for row in source_rows:
+        source_ids_by_class[row["drug_class"]].append(row["source_record_id"])
+
+    rows: list[dict] = []
+    seen: set[tuple[str, str, str]] = set()
+    file_drug_class = ""
+    for index, item in enumerate(payload, start=1):
+        if not isinstance(item, dict):
+            raise ValueError(f"{path}: row {index} is not an object")
+        for field in PATTERN_FIELDS:
+            if field not in item:
+                raise ValueError(f"{path}: row {index} has no {field}")
+
+        gene = item["gene"]
+        drug_class = item["drugClass"]
+        pattern = item["pattern"]
+        count = item["count"]
+        if not isinstance(gene, str) or not gene.strip():
+            raise ValueError(f"{path}: row {index} has no gene")
+        if not isinstance(drug_class, str) or not drug_class.strip():
+            raise ValueError(f"{path}: row {index} has no drugClass")
+        if not isinstance(pattern, str) or not pattern.strip():
+            raise ValueError(f"{path}: row {index} has no pattern")
+        if not isinstance(count, int) or isinstance(count, bool) or count <= 0:
+            raise ValueError(f"{path}: row {index} has invalid count")
+
+        gene = gene.strip()
+        drug_class = drug_class.strip()
+        pattern = pattern.strip()
+        if not COMPACT_TOKEN_PATTERN.fullmatch(gene):
+            raise ValueError(f"{path}: row {index} has invalid gene {gene!r}")
+        if not COMPACT_TOKEN_PATTERN.fullmatch(drug_class):
+            raise ValueError(f"{path}: row {index} has invalid drugClass {drug_class!r}")
+        if any(char in pattern for char in PATTERN_CONTROL_CHARS):
+            raise ValueError(f"{path}: row {index} pattern contains a tab or newline")
+        if file_drug_class and file_drug_class != drug_class:
+            raise ValueError(
+                f"{path}: row {index} mixes drugClass {drug_class!r} "
+                f"after {file_drug_class!r}"
+            )
+        file_drug_class = drug_class
+
+        drug_ids = source_ids_by_class.get(drug_class)
+        if not drug_ids:
+            raise ValueError(f"{path}: row {index} has unknown drugClass {drug_class!r}")
+        expected_fields = set(PATTERN_FIELDS)
+        for source_record_id in drug_ids:
+            expected_fields.add(f"{source_record_id} Level")
+            expected_fields.add(f"{source_record_id} Score")
+        if set(item) != expected_fields:
+            missing = sorted(expected_fields - set(item))
+            extra = sorted(set(item) - expected_fields)
+            raise ValueError(
+                f"{path}: {drug_class} row {index} has unexpected pattern columns "
+                f"missing={missing} extra={extra}"
+            )
+
+        scores = {}
+        for source_record_id in drug_ids:
+            level = item[f"{source_record_id} Level"]
+            score = item[f"{source_record_id} Score"]
+            if not isinstance(level, int) or isinstance(level, bool) or not 1 <= level <= 5:
+                raise ValueError(
+                    f"{path}: {drug_class} row {index} has invalid "
+                    f"{source_record_id} Level"
+                )
+            if (
+                not isinstance(score, int | float)
+                or isinstance(score, bool)
+            ):
+                raise ValueError(
+                    f"{path}: {drug_class} row {index} has invalid "
+                    f"{source_record_id} Score"
+                )
+            scores[source_record_id] = {
+                "level": level,
+                "score": float(score),
+            }
+
+        key = (drug_class, gene, pattern)
+        if key in seen:
+            raise ValueError(f"{path}: duplicate {drug_class} {gene} pattern {pattern}")
+        seen.add(key)
+        rows.append(
+            {
+                "source_pattern_file": path.name,
+                "drug_class": drug_class,
+                "gene": gene,
+                "pattern": pattern,
+                "count": count,
+                "scores": scores,
+            }
+        )
+
+    return rows
+
+
 def expanded_mutations(row: Mapping[str, str]) -> list[str]:
     return [
         mutation_label(row["gene"], int(row["position"]), aa)
@@ -453,6 +577,77 @@ def evaluate_class_mutations(rows: list[dict[str, str]]) -> dict:
     }
 
 
+def evaluate_drug_patterns(
+    rows: list[dict],
+    source_rows: list[dict[str, str]],
+    mappings: Mapping[str, Mapping[str, str]],
+) -> dict:
+    source_rows_by_id = {
+        row["source_record_id"]: row
+        for row in source_rows
+    }
+    report_rows_by_key = {}
+    exact_pattern_score_pairs = 0
+    non_exact_pattern_score_pairs = 0
+
+    for row in rows:
+        for source_record_id, score_row in row["scores"].items():
+            mapping = mappings.get(source_record_id, {})
+            if mapping.get("mapping_status") == EXACT_MAPPING_STATUS:
+                exact_pattern_score_pairs += 1
+            else:
+                non_exact_pattern_score_pairs += 1
+
+            source_row = source_rows_by_id[source_record_id]
+            key = (row["source_pattern_file"], row["drug_class"], source_record_id)
+            report_row = report_rows_by_key.setdefault(
+                key,
+                {
+                    "source_pattern_file": row["source_pattern_file"],
+                    "drug_class": row["drug_class"],
+                    "source_record_id": source_record_id,
+                    "source_name": source_row["full_name"],
+                    "mapping_status": mapping.get("mapping_status", ""),
+                    "identifier": mapping.get("identifier", ""),
+                    "standard_inchi_key": mapping.get("standard_inchi_key", ""),
+                    "pattern_rows": 0,
+                    "nonzero_score_rows": 0,
+                    "max_level": 0,
+                    "min_score": None,
+                    "max_score": None,
+                },
+            )
+            report_row["pattern_rows"] += 1
+            if score_row["score"] != 0:
+                report_row["nonzero_score_rows"] += 1
+            report_row["max_level"] = max(report_row["max_level"], score_row["level"])
+            report_row["min_score"] = (
+                score_row["score"]
+                if report_row["min_score"] is None
+                else min(report_row["min_score"], score_row["score"])
+            )
+            report_row["max_score"] = (
+                score_row["score"]
+                if report_row["max_score"] is None
+                else max(report_row["max_score"], score_row["score"])
+            )
+
+    return {
+        "pattern_rows": len(rows),
+        "drug_pattern_score_pairs": (
+            exact_pattern_score_pairs + non_exact_pattern_score_pairs
+        ),
+        "exact_pattern_score_pairs": exact_pattern_score_pairs,
+        "non_exact_pattern_score_pairs": non_exact_pattern_score_pairs,
+        "drug_classes": Counter(row["drug_class"] for row in rows),
+        "genes": Counter(row["gene"] for row in rows),
+        "pattern_report_rows": [
+            report_rows_by_key[key]
+            for key in sorted(report_rows_by_key)
+        ],
+    }
+
+
 def write_drug_report(rows: list[dict], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
@@ -472,6 +667,19 @@ def write_mutation_report(rows: list[dict], path: Path) -> None:
         writer = csv.DictWriter(
             handle,
             fieldnames=MUTATION_REPORT_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def write_pattern_report(rows: list[dict], path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=PATTERN_REPORT_COLUMNS,
             delimiter="\t",
             lineterminator="\n",
         )
@@ -524,6 +732,18 @@ def main() -> int:
         type=Path,
         help="Optional TSV class-level HIV-1 DRM/SDRM/TSM audit.",
     )
+    parser.add_argument(
+        "--hiv1-patterns",
+        action="append",
+        type=Path,
+        default=[],
+        help="Optional hivfacts data/patterns-hiv1/patterns-*.json; repeatable.",
+    )
+    parser.add_argument(
+        "--pattern-report",
+        type=Path,
+        help="Optional TSV HIV-1 drug pattern score audit.",
+    )
     parser.add_argument("--corpus-root", type=Path, default=REPO_ROOT, help=argparse.SUPPRESS)
     args = parser.parse_args()
 
@@ -550,6 +770,17 @@ def main() -> int:
             "missing hivfacts mutation input(s): "
             + ", ".join(str(path) for path in missing_mutation_inputs)
         )
+    missing_pattern_inputs = [
+        path
+        for path in args.hiv1_patterns
+        if not path.exists()
+    ]
+    if missing_pattern_inputs:
+        raise SystemExit(
+            "missing hivfacts pattern input(s): "
+            + ", ".join(str(path) for path in missing_pattern_inputs)
+        )
+
     mutation_rows = [
         row
         for source_list, path in mutation_inputs
@@ -557,6 +788,12 @@ def main() -> int:
         for row in read_class_mutation_list(path, source_list)
     ]
     mutation_result = evaluate_class_mutations(mutation_rows)
+    pattern_rows = [
+        row
+        for path in args.hiv1_patterns
+        for row in read_drug_patterns(path, drugs)
+    ]
+    pattern_result = evaluate_drug_patterns(pattern_rows, drugs, mappings)
 
     print("Stanford HIVDB hivfacts drug identity audit")
     print(
@@ -581,6 +818,14 @@ def main() -> int:
                 for name, count in sorted(mutation_result["source_lists"].items())
             )
         )
+    if args.hiv1_patterns:
+        print(
+            "  HIV-1 drug pattern matrices: "
+            f"rows={pattern_result['pattern_rows']} "
+            f"level_score_pairs={pattern_result['drug_pattern_score_pairs']} "
+            f"exact_pairs={pattern_result['exact_pattern_score_pairs']} "
+            f"non_exact_pairs={pattern_result['non_exact_pattern_score_pairs']}"
+        )
 
     if args.drug_report:
         write_drug_report(result["drug_rows"], args.drug_report)
@@ -591,6 +836,9 @@ def main() -> int:
     if args.mutation_report:
         write_mutation_report(mutation_result["mutation_rows_report"], args.mutation_report)
         print(f"wrote {args.mutation_report}")
+    if args.pattern_report:
+        write_pattern_report(pattern_result["pattern_report_rows"], args.pattern_report)
+        print(f"wrote {args.pattern_report}")
 
     print(
         "--audit: no rows seeded; HIVDB drug-specific mutation rules need a "
