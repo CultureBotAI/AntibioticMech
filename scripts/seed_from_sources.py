@@ -2426,6 +2426,12 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                 raise ValueError(f"{prefix}: ast_row_count must be an integer") from error
             if ast_row_count <= 0:
                 raise ValueError(f"{prefix}: ast_row_count must be positive")
+            canonical_ast_row_count = str(ast_row_count)
+            if row["ast_row_count"] != canonical_ast_row_count:
+                raise ValueError(
+                    f"{prefix}: ast_row_count must use canonical integer "
+                    f"{canonical_ast_row_count!r}"
+                )
             expected_activity = NCBI_AST_ACTIVITY_BY_PHENOTYPE.get(
                 row["phenotype"].casefold(),
                 "",
