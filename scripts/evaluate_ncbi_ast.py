@@ -44,6 +44,8 @@ PROJECT_DEDUPE_REPORT_COLUMNS = [
     "accession",
     "ast_rows",
     "exact_mapped_rows",
+    "biosample_count",
+    "bioproject_count",
     "antibiotic_values",
     "antibiotics",
     "taxon_labels",
@@ -539,6 +541,8 @@ def project_dedupe_report_rows(
     mappings = mappings or {}
     project_dedupe = project_dedupe or {}
     contexts: dict[tuple[str, str], dict[str, int | str]] = {}
+    biosample_accessions: dict[tuple[str, str], set[str]] = defaultdict(set)
+    bioproject_accessions: dict[tuple[str, str], set[str]] = defaultdict(set)
     antibiotics: dict[tuple[str, str], set[str]] = defaultdict(set)
     taxon_labels: dict[tuple[str, str], set[str]] = defaultdict(set)
 
@@ -551,6 +555,8 @@ def project_dedupe_report_rows(
             continue
         if activity_report_context(row, project_dedupe) is None:
             continue
+        biosample_accession = first_value(row, BIOSAMPLE_ALIASES)
+        bioproject_accession = first_value(row, BIOPROJECT_ALIASES)
         normalized_antibiotic = normalize(source_name)
         exact_mapped = (
             mappings.get(normalized_antibiotic, {}).get("mapping_status")
@@ -572,6 +578,8 @@ def project_dedupe_report_rows(
                 }
             contexts[key]["ast_rows"] += 1
             contexts[key]["exact_mapped_rows"] += int(exact_mapped)
+            biosample_accessions[key].add(biosample_accession)
+            bioproject_accessions[key].add(bioproject_accession)
             if normalized_antibiotic:
                 antibiotics[key].add(normalized_antibiotic)
             if taxon_label:
@@ -579,6 +587,8 @@ def project_dedupe_report_rows(
 
     report_rows = []
     for key, row in contexts.items():
+        row["biosample_count"] = len(biosample_accessions[key])
+        row["bioproject_count"] = len(bioproject_accessions[key])
         row["antibiotic_values"] = len(antibiotics[key])
         row["antibiotics"] = "|".join(sorted(antibiotics[key]))
         row["taxon_labels"] = "|".join(sorted(taxon_labels[key]))
