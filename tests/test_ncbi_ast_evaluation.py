@@ -18,12 +18,14 @@ from evaluate_ncbi_ast import (  # noqa: E402
     evaluate_rows,
     exact_activity_rows,
     normalize_header,
+    project_dedupe_report_rows,
     read_drug_map,
     read_project_dedupe_map,
     read_table,
     write_activity_report,
     write_antibiotic_report,
     write_drug_map_template,
+    write_project_dedupe_report,
 )
 
 SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "evaluate_ncbi_ast.py"
@@ -412,6 +414,119 @@ def test_exact_activity_rows_excludes_known_source_context():
     )
 
     assert [row["biosample_accession"] for row in activity_rows] == ["SAMN11953779"]
+
+
+def test_project_dedupe_report_rows_rank_valid_project_contexts():
+    rows = [
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953777",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+        },
+        {
+            "antibiotic": "CEFEPIME",
+            "biosample_acc": "SAMN11953778",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Klebsiella pneumoniae",
+        },
+        {
+            "antibiotic": "gentamicin",
+            "biosample_acc": "SAMN11953779",
+            "bioproject_acc": "PRJNA292667",
+            "taxgroup_name": "Escherichia coli",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "not-a-biosample",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+        },
+        {
+            "biosample_acc": "SAMN11953780",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+        },
+    ]
+    mappings = {
+        "cefepime": {
+            "mapping_status": "EXACT",
+            "identifier": "CHEBI:478164",
+            "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+        },
+        "gentamicin": {
+            "mapping_status": "MIXTURE",
+            "identifier": "",
+            "standard_inchi_key": "",
+        },
+    }
+
+    report_rows = project_dedupe_report_rows(rows, mappings)
+
+    assert report_rows == [
+        {
+            "accession_type": "BioProject",
+            "accession": "PRJNA292666",
+            "ast_rows": 2,
+            "exact_mapped_rows": 2,
+            "antibiotic_values": 1,
+            "antibiotics": "cefepime",
+            "taxon_labels": "Escherichia coli|Klebsiella pneumoniae",
+        },
+        {
+            "accession_type": "BioSample",
+            "accession": "SAMN11953777",
+            "ast_rows": 1,
+            "exact_mapped_rows": 1,
+            "antibiotic_values": 1,
+            "antibiotics": "cefepime",
+            "taxon_labels": "Escherichia coli",
+        },
+        {
+            "accession_type": "BioSample",
+            "accession": "SAMN11953778",
+            "ast_rows": 1,
+            "exact_mapped_rows": 1,
+            "antibiotic_values": 1,
+            "antibiotics": "cefepime",
+            "taxon_labels": "Klebsiella pneumoniae",
+        },
+        {
+            "accession_type": "BioProject",
+            "accession": "PRJNA292667",
+            "ast_rows": 1,
+            "exact_mapped_rows": 0,
+            "antibiotic_values": 1,
+            "antibiotics": "gentamicin",
+            "taxon_labels": "Escherichia coli",
+        },
+        {
+            "accession_type": "BioSample",
+            "accession": "SAMN11953779",
+            "ast_rows": 1,
+            "exact_mapped_rows": 0,
+            "antibiotic_values": 1,
+            "antibiotics": "gentamicin",
+            "taxon_labels": "Escherichia coli",
+        },
+    ]
+
+    report_rows = project_dedupe_report_rows(
+        rows,
+        mappings,
+        {
+            ("BioProject", "PRJNA292666"): {
+                "source": "CRYPTIC",
+                "source_version": "3.4.0",
+                "notes": "Project represented in an adopted source lane.",
+            },
+        },
+    )
+
+    assert [row["accession"] for row in report_rows] == [
+        "PRJNA292667",
+        "SAMN11953779",
+    ]
 
 
 def test_read_table_accepts_browser_tsv_exports(tmp_path):
@@ -1075,6 +1190,36 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
     }]
 
 
+def test_project_dedupe_report_is_a_stable_tsv(tmp_path):
+    path = tmp_path / "ncbi_ast_project_dedupe_report.tsv"
+    rows = [
+        {
+            "accession_type": "BioProject",
+            "accession": "PRJNA292666",
+            "ast_rows": 7,
+            "exact_mapped_rows": 6,
+            "antibiotic_values": 2,
+            "antibiotics": "amikacin|cefepime",
+            "taxon_labels": "Escherichia coli",
+        },
+    ]
+
+    write_project_dedupe_report(rows, path)
+
+    with path.open(newline="", encoding="utf-8") as handle:
+        actual = list(csv.DictReader(handle, delimiter="\t"))
+
+    assert actual == [{
+        "accession_type": "BioProject",
+        "accession": "PRJNA292666",
+        "ast_rows": "7",
+        "exact_mapped_rows": "6",
+        "antibiotic_values": "2",
+        "antibiotics": "amikacin|cefepime",
+        "taxon_labels": "Escherichia coli",
+    }]
+
+
 def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     ast = tmp_path / "ast.tsv"
     with ast.open("w", newline="", encoding="utf-8") as handle:
@@ -1166,6 +1311,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
 
     antibiotic_report = tmp_path / "ncbi_ast_antibiotics.tsv"
     template = tmp_path / "ncbi_ast_drug_map_template.tsv"
+    project_report = tmp_path / "ncbi_ast_project_dedupe_report.tsv"
     activity_report = tmp_path / "ncbi_ast_activity.tsv"
 
     result = subprocess.run(
@@ -1182,6 +1328,8 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             str(antibiotic_report),
             "--drug-map-template",
             str(template),
+            "--project-dedupe-report",
+            str(project_report),
             "--activity-report",
             str(activity_report),
             "--source-version",
@@ -1199,6 +1347,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert "valid_project_context_rows=2" in result.stdout
     assert "taxon_rows=2" in result.stdout
     assert "source_context_rows=1" in result.stdout
+    assert "project_dedupe_report=" in result.stdout
     assert antibiotic_report.exists()
 
     with template.open(newline="", encoding="utf-8") as handle:
@@ -1209,6 +1358,14 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
         activity_rows = list(reader)
         assert "assembly_accession" in (reader.fieldnames or [])
         assert "target_acc" not in (reader.fieldnames or [])
+
+    with project_report.open(newline="", encoding="utf-8") as handle:
+        project_rows = list(csv.DictReader(handle, delimiter="\t"))
+
+    assert [row["accession"] for row in project_rows] == [
+        "PRJNA292666",
+        "SAMN11953777",
+    ]
 
     assert activity_rows[0]["assembly_accession"] == "GCF_003123125.1"
     assert activity_rows[0]["source_version"] == "2026-09-26-ast-browser"

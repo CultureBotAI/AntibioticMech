@@ -39,6 +39,15 @@ PROJECT_DEDUPE_COLUMNS = [
     "source_version",
     "notes",
 ]
+PROJECT_DEDUPE_REPORT_COLUMNS = [
+    "accession_type",
+    "accession",
+    "ast_rows",
+    "exact_mapped_rows",
+    "antibiotic_values",
+    "antibiotics",
+    "taxon_labels",
+]
 # Bump with ACTIVITY_REPORT_GROUP_COLUMNS because those columns define the
 # stable activity_group_id digest for committed exact reports.
 ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v1"
@@ -437,6 +446,71 @@ def project_dedupe_hit(
     return None
 
 
+def project_dedupe_report_rows(
+    rows: list[dict[str, str]],
+    mappings: dict[str, dict[str, str]] | None = None,
+    project_dedupe: dict[tuple[str, str], dict[str, str]] | None = None,
+) -> list[dict]:
+    """Return valid BioSample/BioProject accessions worth dedupe curation."""
+
+    mappings = mappings or {}
+    project_dedupe = project_dedupe or {}
+    contexts: dict[tuple[str, str], dict[str, int | str]] = {}
+    antibiotics: dict[tuple[str, str], set[str]] = defaultdict(set)
+    taxon_labels: dict[tuple[str, str], set[str]] = defaultdict(set)
+
+    for row in rows:
+        if not has_valid_project_context(row):
+            continue
+
+        source_name = first_value(row, ANTIBIOTIC_ALIASES)
+        if not source_name:
+            continue
+        if project_dedupe_hit(row, project_dedupe):
+            continue
+        normalized_antibiotic = normalize(source_name)
+        exact_mapped = (
+            mappings.get(normalized_antibiotic, {}).get("mapping_status")
+            == EXACT_MAPPING_STATUS
+        )
+        taxon_label = first_value(row, TAXON_ALIASES)
+
+        for accession_type, (aliases, pattern) in PROJECT_DEDUPE_ACCESSIONS.items():
+            accession = first_value(row, aliases)
+            if pattern.match(accession) is None:
+                continue
+            key = (accession_type, accession)
+            if key not in contexts:
+                contexts[key] = {
+                    "accession_type": accession_type,
+                    "accession": accession,
+                    "ast_rows": 0,
+                    "exact_mapped_rows": 0,
+                }
+            contexts[key]["ast_rows"] += 1
+            contexts[key]["exact_mapped_rows"] += int(exact_mapped)
+            if normalized_antibiotic:
+                antibiotics[key].add(normalized_antibiotic)
+            if taxon_label:
+                taxon_labels[key].add(taxon_label)
+
+    report_rows = []
+    for key, row in contexts.items():
+        row["antibiotic_values"] = len(antibiotics[key])
+        row["antibiotics"] = "|".join(sorted(antibiotics[key]))
+        row["taxon_labels"] = "|".join(sorted(taxon_labels[key]))
+        report_rows.append(row)
+    return sorted(
+        report_rows,
+        key=lambda row: (
+            -row["exact_mapped_rows"],
+            -row["ast_rows"],
+            row["accession_type"],
+            row["accession"],
+        ),
+    )
+
+
 def exact_activity_rows(
     rows: list[dict[str, str]],
     mappings: dict[str, dict[str, str]],
@@ -754,6 +828,19 @@ def write_drug_map_template(rows: list[dict], path: Path) -> None:
             })
 
 
+def write_project_dedupe_report(rows: list[dict], path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=PROJECT_DEDUPE_REPORT_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(rows)
+
+
 def write_activity_report(rows: list[dict], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
@@ -826,6 +913,14 @@ def main() -> int:
             "--activity-report."
         ),
     )
+    parser.add_argument(
+        "--project-dedupe-report",
+        type=Path,
+        help=(
+            "Optional TSV ranking valid BioSample/BioProject accessions for "
+            "curating --project-dedupe-map exclusions."
+        ),
+    )
     args = parser.parse_args()
     if args.activity_report and not args.drug_map:
         parser.error("--activity-report requires --drug-map with exact curated mappings.")
@@ -858,6 +953,11 @@ def main() -> int:
         write_antibiotic_report(result["antibiotic_rows"], args.antibiotic_report)
     if args.drug_map_template:
         write_drug_map_template(result["antibiotic_rows"], args.drug_map_template)
+    if args.project_dedupe_report:
+        write_project_dedupe_report(
+            project_dedupe_report_rows(rows, mappings, project_dedupe),
+            args.project_dedupe_report,
+        )
     activity_rows = (
         exact_activity_rows(
             rows,
@@ -912,6 +1012,8 @@ def main() -> int:
         print(f"  antibiotic_report={args.antibiotic_report}")
     if args.drug_map_template:
         print(f"  drug_map_template={args.drug_map_template}")
+    if args.project_dedupe_report:
+        print(f"  project_dedupe_report={args.project_dedupe_report}")
     if args.activity_report:
         print(
             f"  exact_mapped_activity_groups={len(activity_rows)} "
