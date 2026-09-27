@@ -2234,6 +2234,7 @@ NCBI_AST_BIOSAMPLE_PATTERN = re.compile(r"^SAM(N|D|EA)[0-9]+$")
 NCBI_AST_BIOPROJECT_PATTERN = re.compile(r"^PRJ(NA|EB|DB)[0-9]+$")
 NCBI_AST_ASSEMBLY_PATTERN = re.compile(r"^GC[AF]_[0-9]+(\.[0-9]+)?$")
 NCBI_AST_NORMALIZED_NAME_PATTERN = re.compile(r"[^a-z0-9]+")
+NCBI_AST_TSV_CONTROL_CHARS = frozenset("\t\r\n")
 
 
 def normalized_ncbi_ast_name(value: str) -> str:
@@ -2393,6 +2394,8 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
             for field, value in row.items():
                 if value is None:
                     raise ValueError(f"{prefix}: {field} is missing")
+                if any(char in value for char in NCBI_AST_TSV_CONTROL_CHARS):
+                    raise ValueError(f"{prefix}: {field} contains a tab or newline")
             for field in NCBI_AST_REQUIRED_ACTIVITY_COLUMNS:
                 if not row[field].strip():
                     raise ValueError(f"{prefix}: {field} is required")
