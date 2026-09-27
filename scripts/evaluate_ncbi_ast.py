@@ -817,8 +817,10 @@ def main() -> int:
     args = parser.parse_args()
     if args.activity_report and not args.drug_map:
         parser.error("--activity-report requires --drug-map with exact curated mappings.")
-    if args.activity_report and not args.source_version:
+    if args.activity_report and not args.source_version.strip():
         parser.error("--activity-report requires --source-version.")
+    if args.source_version != args.source_version.strip():
+        parser.error("--source-version must not have leading or trailing whitespace.")
     if args.activity_report and not args.source_retrieved_on:
         parser.error("--activity-report requires --source-retrieved-on.")
     if args.source_retrieved_on and not is_iso_date(args.source_retrieved_on):

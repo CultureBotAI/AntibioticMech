@@ -2394,8 +2394,13 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                 if value is None:
                     raise ValueError(f"{prefix}: {field} is missing")
             for field in NCBI_AST_REQUIRED_ACTIVITY_COLUMNS:
-                if not row[field]:
+                if not row[field].strip():
                     raise ValueError(f"{prefix}: {field} is required")
+            for field, value in row.items():
+                if value != value.strip():
+                    raise ValueError(
+                        f"{prefix}: {field} has leading or trailing whitespace"
+                    )
             if NCBI_AST_BIOSAMPLE_PATTERN.match(row["biosample_accession"]) is None:
                 raise ValueError(f"{prefix}: invalid BioSample accession")
             if NCBI_AST_BIOPROJECT_PATTERN.match(row["bioproject_accession"]) is None:
