@@ -10,15 +10,16 @@ has a visible CC BY 4.0 site licence compatible with this corpus, but a scoped
 confirmation for API/bulk susceptibility rows is still prudent. CO-ADD exposes
 an official public bulk CSV distribution, but its archive contains no licence
 and the program website's terms block systematic redistribution without prior
-written permission. BV-BRC and Stanford HIVDB expose useful data and software,
-but no verified data-reuse grant covering the requested rows was found.
+written permission. BV-BRC and Stanford HIVDB expose useful data and software;
+BV-BRC had no verified data-reuse grant covering the requested rows, and
+Stanford HIVDB had no such grant until the 2026-09-05 follow-up recorded below.
 
 | Source | Exact data scope | Verified public position | Corpus decision |
 |---|---|---|---|
 | BV-BRC | `genome_amr` / AMR phenotype rows where `evidence` is exactly `Laboratory Method`; exclude computational prediction/classifier rows | Website, privacy policy, docs, and API-code licence do not state data redistribution rights | UNVERIFIED; official tracker request open; no import |
 | BacDive | Strain-level antibiotic susceptibility fields exposed by pages/API/bulk access | Current BacDive footer links its Copyright & License statement directly to CC BY 4.0 | Compatible with attribution; official scope-confirmation request open; no import in #106 |
 | CO-ADD | Official r03.02-2020 bulk CSV: inhibition and dose-response rows with compound identity/SMILES, project/library, assay, organism/strain, concentration or response, and units | Public download exists, but the archive has no licence; site material is personal/non-commercial only, and systematic download/storage and reproduction require written permission. ChEMBL copy is CC BY-SA 3.0 | BLOCKED absent a written grant covering the official bulk files and derivatives |
-| Stanford HIVDB | Download/API resistance mutations, drug-susceptibility interpretation/evidence, version and references | No database-data reuse grant found; CMS GPL is not assumed to license database contents | UNVERIFIED; official tracker request open; no import |
+| Stanford HIVDB | `hivdb/hivfacts` resistance-mutation data used by Sierra | No database-data reuse grant was found on 2026-08-31; on 2026-09-05 a Sierra maintainer identified `hivdb/hivfacts` as public-domain Unlicense data | CC0-compatible for `hivdb/hivfacts`; no import |
 
 ## Evidence inspected
 
@@ -97,6 +98,13 @@ but no verified data-reuse grant covering the requested rows was found.
   [hivdb/sierra #40](https://github.com/hivdb/sierra/issues/40); no response had
   been posted when rechecked on 2026-08-31.
 
+2026-09-05 follow-up: a Sierra maintainer answered that the data used by Sierra
+are released separately in `hivdb/hivfacts` under the public-domain Unlicense.
+The `hivdb/hivfacts` repository advertises SPDX `Unlicense` metadata and its
+`LICENSE` file is the Unlicense text. This resolves redistribution for
+`hivdb/hivfacts`; it does not broaden the grant to every Stanford HIVDB endpoint
+or web page.
+
 ## Legal/semantic guardrails
 
 - Free access, an API, and an open-source client/server do not establish a data
@@ -113,7 +121,7 @@ but no verified data-reuse grant covering the requested rows was found.
 - HIVDB interpretations or mutation evidence must not be inferred to apply to
   non-HIV viruses.
 
-The requests and their transmission state are archived separately. BV-BRC,
-BacDive, and Stanford HIVDB requests are open in official GitHub trackers with
-responses pending. The CO-ADD request is still an unsent email/form draft; none
-of these requests is proof of permission.
+The requests and their transmission state are archived separately. BV-BRC and
+BacDive requests are open in official GitHub trackers with responses pending.
+The CO-ADD request is still an unsent email/form draft. The Stanford HIVDB
+request resolved only the `hivdb/hivfacts` data surface.

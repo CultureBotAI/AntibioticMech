@@ -2,7 +2,7 @@
 
 Date drafted: 2026-08-31
 Issue: #106
-Status: **PARTIALLY SENT — three official GitHub requests open; one email/form request pending**
+Status: **PARTIALLY ANSWERED — Stanford HIVDB terms resolved; two official GitHub requests open; one email/form request pending**
 
 These requests deliberately identify the exact data scope and ask separately
 about access, modification, commercial redistribution, attribution, and
@@ -14,15 +14,17 @@ sender before any source is marked adopted.
 | Source | Sent on | Channel | Request | Response |
 | --- | --- | --- | --- | --- |
 | BV-BRC | 2026-08-31 | Official API GitHub tracker | [BV-BRC-API #204](https://github.com/BV-BRC/BV-BRC-API/issues/204) | Pending |
-| Stanford HIVDB | 2026-08-31 | Official Sierra GitHub tracker | [hivdb/sierra #40](https://github.com/hivdb/sierra/issues/40) | Pending |
+| Stanford HIVDB | 2026-08-31 | Official Sierra GitHub tracker | [hivdb/sierra #40](https://github.com/hivdb/sierra/issues/40) | 2026-09-05 response identifies `hivdb/hivfacts` as public-domain Unlicense data |
 | BacDive | 2026-08-31 | Official BacDive API GitHub tracker | [LeibnizDSMZ/bacdive-api #1](https://github.com/LeibnizDSMZ/bacdive-api/issues/1) | Pending |
 | CO-ADD | Not sent | `info@co-add.org` or official CAPTCHA-protected contact form | Draft below | No authenticated mail/form-capable channel in this workspace |
 
 The three GitHub requests were posted by the authenticated repository maintainer
-account and link back to AntibioticMech issue #106. Opening a public request does
-not change a source's reuse determination: BV-BRC and HIVDB remain unverified,
-and BacDive remains a candidate, until authorized maintainers answer the precise
-data-content questions.
+account and link back to AntibioticMech issue #106. Opening a public request
+does not change a source's reuse determination by itself: BV-BRC remains
+unverified and BacDive remains a candidate until authorized maintainers answer
+the precise data-content questions. Stanford HIVDB's response resolves
+redistribution for the `hivdb/hivfacts` data surface used by Sierra, not for
+every Stanford HIVDB endpoint or web page.
 
 ## BV-BRC — `help@bv-brc.org`
 
@@ -91,10 +93,12 @@ attribution/citation, version or retrieval-date requirements, and any depositor
 or third-party fields excluded from the grant. We are not asking to relicense
 the ChEMBL copy.
 
-## Stanford HIVDB — `hivdbteam@lists.stanford.edu`
+## Stanford HIVDB — official Sierra GitHub tracker
 
 Sent through the official Sierra issue tracker as
-[hivdb/sierra #40](https://github.com/hivdb/sierra/issues/40); response pending.
+[hivdb/sierra #40](https://github.com/hivdb/sierra/issues/40). A 2026-09-05
+response from a Sierra maintainer identified `hivdb/hivfacts` as the data used
+by Sierra and pointed to that repository's public-domain Unlicense.
 
 Subject: Reuse terms for Stanford HIVDB resistance data
 

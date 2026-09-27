@@ -159,10 +159,13 @@ HIVDB the best candidate for the 474 antiviral records that ARO cannot cover.
 The data describes genotype-drug susceptibility and algorithmic interpretation,
 not the same object as the current compound-centric `ResistanceMechanism`.
 
-Two gates remain:
+2026-09-05 follow-up: the first gate is resolved for the `hivdb/hivfacts`
+repository used by Sierra. A Sierra maintainer answered the official reuse
+request and identified `hivdb/hivfacts` as public-domain Unlicense data.
 
-1. obtain explicit redistribution terms from Stanford HIVDB; and
-2. design a mutation/gene-variant evidence model rather than flattening a
+One gate remains:
+
+1. design a mutation/gene-variant evidence model rather than flattening a
    genotype score into a generic resistance-mechanism label.
 
 Its scope is primarily HIV. It does not close resistance gaps for influenza,
@@ -332,7 +335,7 @@ an upstream licence.
 | BindingDB-curated | targets and affinities | monthly bulk | CC BY 4.0 | implement after target rules |
 | BindingDB ChEMBL rows | targets and affinities | mixed bulk | CC BY-SA 3.0 | exclude |
 | BV-BRC | strain AST/MIC | API | unverified | request terms |
-| Stanford HIVDB | HIV genotype-drug resistance | bulk | unverified | request terms and extend schema |
+| Stanford HIVDB | HIV genotype-drug resistance | bulk | public-domain Unlicense for `hivdb/hivfacts`; broader endpoints unresolved | design mutation schema and importer |
 | RCSB PDB | compound-target structures | API + bulk | CC0 | structural evidence only |
 | AMRFinderPlus | AMR genes/mutations | bulk | public domain | coverage audit/reference |
 | LOTUS | structure-organism-reference occurrences | Wikidata/bulk | CC0 | follow MIBiG; do not infer production |
@@ -384,9 +387,9 @@ Every importer should satisfy these invariants before its data reaches a record:
    salts, prodrugs, and combination products before enabling writes.
 4. Implement a BindingDB-curated-only target report with strict microbial/viral
    target and primary-citation filters.
-5. Send reuse-permission questions to BV-BRC, Stanford HIVDB, BacDive, and
-   CO-ADD. Record the replies, scope, date, and permitted redistribution in the
-   source queue.
+5. Keep the BV-BRC, BacDive, and CO-ADD reuse-permission requests current.
+   Stanford HIVDB is resolved for `hivdb/hivfacts`; record any future replies,
+   scope, date, and permitted redistribution in the source queue.
 6. If BV-BRC terms permit redistribution, build a laboratory-only AST importer.
    Otherwise curate a small, high-value spectrum set from primary literature.
 7. Keep share-alike, NonCommercial, and no-resale content in separate sidecars
