@@ -21,6 +21,9 @@ import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
+DEFAULT_DRUG_MAP = REPO_ROOT / "curation" / "hivdb_drug_map.tsv"
+HIVDB_HIVFACTS_COMMIT = "be1c11a5145fea9073fdb71801919d4a34265336"
+
 REQUIRED_DRUG_FIELDS = ("displayAbbr", "drugClass", "fullName", "name")
 DRUG_REPORT_COLUMNS = [
     "source_record_id",
@@ -41,6 +44,7 @@ DRUG_REPORT_COLUMNS = [
     "mapping_notes",
 ]
 DRUG_MAP_COLUMNS = [
+    "source_version",
     "source_record_id",
     "source_name",
     "hivdb_name",
@@ -198,6 +202,7 @@ def read_drug_map(
                     "source_name",
                     "hivdb_name",
                     "drug_class",
+                    "source_version",
                     "mapping_status",
                     "mapping_basis",
                     "notes",
@@ -209,6 +214,11 @@ def read_drug_map(
             source_record_id = row["source_record_id"]
             if source_record_id in rows:
                 raise ValueError(f"duplicate HIVDB drug mapping: {source_record_id}")
+            if row["source_version"] != HIVDB_HIVFACTS_COMMIT:
+                raise ValueError(
+                    f"{source_record_id}: source_version {row['source_version']!r} "
+                    f"!= {HIVDB_HIVFACTS_COMMIT!r}"
+                )
             if row["mapping_status"] not in MAPPING_STATUSES:
                 raise ValueError(
                     f"{source_record_id}: unknown mapping_status {row['mapping_status']!r}"
@@ -352,6 +362,7 @@ def write_drug_map_template(rows: list[dict], path: Path) -> None:
         for row in rows:
             writer.writerow(
                 {
+                    "source_version": HIVDB_HIVFACTS_COMMIT,
                     "source_record_id": row["source_record_id"],
                     "source_name": row["full_name"],
                     "hivdb_name": row["name"],
