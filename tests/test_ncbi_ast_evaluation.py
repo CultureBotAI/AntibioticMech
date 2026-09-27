@@ -164,6 +164,7 @@ def test_evaluate_rows_keeps_curated_mappings_separate_from_lexical_candidates()
 
     assert result["exact_mapped_antibiotics"] == 1
     assert result["exact_mapped_rows"] == 2
+    assert result["exact_mapped_activity_report_candidate_rows"] == 0
     assert result["non_exact_mapped_antibiotics"] == 1
     assert result["non_exact_mapped_rows"] == 1
     assert result["unmapped_antibiotics"] == 0
@@ -178,6 +179,76 @@ def test_evaluate_rows_keeps_curated_mappings_separate_from_lexical_candidates()
     gentamicin = result["antibiotic_rows"][1]
     assert gentamicin["mapping_status"] == "MIXTURE"
     assert gentamicin["identifier"] == ""
+
+
+def test_evaluate_rows_counts_exact_activity_report_candidates_after_dedupe():
+    rows = [
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953777",
+            "bioproject_acc": "PRJNA292666",
+            "target_acc": "PDT000001234.1",
+            "taxgroup_name": "Escherichia coli",
+            "mic": "2",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953778",
+            "bioproject_acc": "PRJNA292666",
+            "target_acc": "not-a-target",
+            "taxgroup_name": "Escherichia coli",
+            "mic": "4",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953779",
+            "bioproject_acc": "PRJNA292667",
+            "target_acc": "PDT000001234.1",
+            "taxgroup_name": "Escherichia coli",
+            "mic": "8",
+        },
+        {
+            "antibiotic": "gentamicin",
+            "biosample_acc": "SAMN11953780",
+            "bioproject_acc": "PRJNA292668",
+            "target_acc": "PDT000001234.1",
+            "taxgroup_name": "Escherichia coli",
+            "mic": "16",
+        },
+    ]
+    mappings = {
+        "cefepime": {
+            "mapping_status": "EXACT",
+            "identifier": "CHEBI:478164",
+            "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+        },
+        "gentamicin": {
+            "mapping_status": "MIXTURE",
+            "identifier": "",
+            "standard_inchi_key": "",
+        },
+    }
+
+    result = evaluate_rows(
+        rows,
+        {"cefepime": {"CHEBI:478164"}},
+        {"CHEBI:478164": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
+        mappings=mappings,
+        project_dedupe={
+            ("BioProject", "PRJNA292667"): {
+                "accession_type": "BioProject",
+                "accession": "PRJNA292667",
+                "source": "CRYPTIC",
+                "source_version": "3.4.0",
+                "notes": "Project represented in an adopted source lane.",
+            },
+        },
+    )
+
+    assert result["exact_mapped_rows"] == 3
+    assert result["exact_mapped_activity_report_candidate_rows"] == 1
+    assert result["antibiotic_rows"][0]["activity_report_candidate_count"] == 1
+    assert result["antibiotic_rows"][1]["activity_report_candidate_count"] == 1
 
 
 def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
@@ -1103,6 +1174,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "project_context_count": 7,
             "valid_project_context_count": 7,
             "dedupe_context_count": 0,
+            "activity_report_candidate_count": 7,
             "target_acc_count": 7,
             "taxon_count": 7,
             "phenotype_count": 7,
@@ -1141,6 +1213,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "project_context_count": "7",
         "valid_project_context_count": "7",
         "dedupe_context_count": "0",
+        "activity_report_candidate_count": "7",
         "target_acc_count": "7",
         "taxon_count": "7",
         "phenotype_count": "7",
@@ -1429,6 +1502,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     )
 
     assert "exact_mapped_activity_groups=1" in result.stdout
+    assert "activity_report_candidate_rows=1" in result.stdout
     assert "project_context_rows=2" in result.stdout
     assert "valid_project_context_rows=2" in result.stdout
     assert "taxon_rows=2" in result.stdout
