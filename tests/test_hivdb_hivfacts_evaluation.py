@@ -14,7 +14,9 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from evaluate_hivdb_hivfacts import (  # noqa: E402
+    DEFAULT_DRUG_MAP,
     DRUG_MAP_COLUMNS,
+    HIVDB_HIVFACTS_COMMIT,
     corpus_name_candidates,
     evaluate_drugs,
     read_drug_map,
@@ -23,7 +25,8 @@ from evaluate_hivdb_hivfacts import (  # noqa: E402
     write_drug_report,
 )
 
-SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "evaluate_hivdb_hivfacts.py"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+SCRIPT = REPO_ROOT / "scripts" / "evaluate_hivdb_hivfacts.py"
 
 
 def hivdb_source_rows() -> list[dict[str, str]]:
@@ -45,6 +48,85 @@ def hivdb_source_rows() -> list[dict[str, str]]:
             "synonyms": "",
         },
     ]
+
+
+PINNED_HIVDB_102_DRUGS = [
+    {"source_record_id": "ABC", "name": "ABC", "full_name": "abacavir", "drug_class": "NRTI"},
+    {"source_record_id": "AZT", "name": "AZT", "full_name": "zidovudine", "drug_class": "NRTI"},
+    {"source_record_id": "D4T", "name": "D4T", "full_name": "stavudine", "drug_class": "NRTI"},
+    {"source_record_id": "DDI", "name": "DDI", "full_name": "didanosine", "drug_class": "NRTI"},
+    {"source_record_id": "FTC", "name": "FTC", "full_name": "emtricitabine", "drug_class": "NRTI"},
+    {"source_record_id": "3TC", "name": "LMV", "full_name": "lamivudine", "drug_class": "NRTI"},
+    {"source_record_id": "TDF", "name": "TDF", "full_name": "tenofovir", "drug_class": "NRTI"},
+    {"source_record_id": "ISL", "name": "ISL", "full_name": "islatravir", "drug_class": "NRTI"},
+    {"source_record_id": "ATV/r", "name": "ATV", "full_name": "atazanavir/r", "drug_class": "PI"},
+    {"source_record_id": "DRV/r", "name": "DRV", "full_name": "darunavir/r", "drug_class": "PI"},
+    {"source_record_id": "FPV/r", "name": "FPV", "full_name": "fosamprenavir/r", "drug_class": "PI"},
+    {"source_record_id": "IDV/r", "name": "IDV", "full_name": "indinavir/r", "drug_class": "PI"},
+    {"source_record_id": "LPV/r", "name": "LPV", "full_name": "lopinavir/r", "drug_class": "PI"},
+    {"source_record_id": "NFV", "name": "NFV", "full_name": "nelfinavir", "drug_class": "PI"},
+    {"source_record_id": "SQV/r", "name": "SQV", "full_name": "saquinavir/r", "drug_class": "PI"},
+    {"source_record_id": "TPV/r", "name": "TPV", "full_name": "tipranavir/r", "drug_class": "PI"},
+    {"source_record_id": "DOR", "name": "DOR", "full_name": "doravirine", "drug_class": "NNRTI"},
+    {"source_record_id": "EFV", "name": "EFV", "full_name": "efavirenz", "drug_class": "NNRTI"},
+    {"source_record_id": "ETR", "name": "ETR", "full_name": "etravirine", "drug_class": "NNRTI"},
+    {"source_record_id": "NVP", "name": "NVP", "full_name": "nevirapine", "drug_class": "NNRTI"},
+    {"source_record_id": "RPV", "name": "RPV", "full_name": "rilpivirine", "drug_class": "NNRTI"},
+    {"source_record_id": "DPV", "name": "DPV", "full_name": "dapivirine", "drug_class": "NNRTI"},
+    {"source_record_id": "BIC", "name": "BIC", "full_name": "bictegravir", "drug_class": "INSTI"},
+    {"source_record_id": "CAB", "name": "CAB", "full_name": "cabotegravir", "drug_class": "INSTI"},
+    {"source_record_id": "DTG", "name": "DTG", "full_name": "dolutegravir", "drug_class": "INSTI"},
+    {"source_record_id": "EVG", "name": "EVG", "full_name": "elvitegravir", "drug_class": "INSTI"},
+    {"source_record_id": "RAL", "name": "RAL", "full_name": "raltegravir", "drug_class": "INSTI"},
+    {"source_record_id": "LEN", "name": "LEN", "full_name": "lenacapavir", "drug_class": "CAI"},
+]
+
+
+def exact_map_identifiers(path: Path) -> set[str]:
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        assert reader.fieldnames == DRUG_MAP_COLUMNS
+        return {
+            row["identifier"]
+            for row in reader
+            if row["mapping_status"] == "EXACT"
+        }
+
+
+def corpus_structure_keys_for(identifiers: set[str]) -> dict[str, str]:
+    keys = {}
+    remaining = set(identifiers)
+    for path in sorted((REPO_ROOT / "data" / "antibiotics").rglob("*.yaml")):
+        text = path.read_text(encoding="utf-8")
+        if not text.startswith("identifier: "):
+            continue
+        identifier = text.splitlines()[0].removeprefix("identifier: ")
+        if identifier not in remaining:
+            continue
+        record = yaml.safe_load(text)
+        keys[identifier] = record["chemical_structure"]["standard_inchi_key"]
+        remaining.remove(identifier)
+
+    assert not remaining
+    return keys
+
+
+def test_curated_hivdb_drug_map_covers_pinned_hivfacts_drugs():
+    mappings = read_drug_map(
+        DEFAULT_DRUG_MAP,
+        corpus_structure_keys_for(exact_map_identifiers(DEFAULT_DRUG_MAP)),
+        PINNED_HIVDB_102_DRUGS,
+    )
+
+    assert len(mappings) == 28
+    assert sum(row["mapping_status"] == "EXACT" for row in mappings.values()) == 16
+    assert sum(row["mapping_status"] == "COMBINATION" for row in mappings.values()) == 7
+    assert mappings["ABC"]["identifier"] == "CHEBI:421707"
+    assert mappings["AZT"]["identifier"] == "CHEBI:10110"
+    assert mappings["DOR"]["mapping_status"] == "MISSING_CORPUS_RECORD"
+    assert mappings["DOR"]["identifier"] == ""
+    assert mappings["TDF"]["mapping_status"] == "AMBIGUOUS_IDENTITY"
+    assert mappings["ATV/r"]["mapping_status"] == "COMBINATION"
 
 
 def test_evaluate_drugs_reports_exact_and_boosted_identity_matches():
@@ -195,9 +277,11 @@ def test_read_drug_map_accepts_exact_and_non_exact_rows(tmp_path):
         + "\n"
         + "\n".join(
             [
-                "ABC\t abacavir \tABC\tNRTI\tEXACT\tCHEBI:421707\t"
+                f"{HIVDB_HIVFACTS_COMMIT}\tABC\t abacavir \tABC\tNRTI\t"
+                "EXACT\tCHEBI:421707\t"
                 "MCI\tfull_name\tHIVDB fullName is the exact corpus label.",
-                "ATV/r\tatazanavir/r\tATV\tPI\tCOMBINATION\t\t\t"
+                f"{HIVDB_HIVFACTS_COMMIT}\tATV/r\tatazanavir/r\tATV\tPI\t"
+                "COMBINATION\t\t\t"
                 "ritonavir_boosted\tBoosted protease-inhibitor row.",
             ]
         )
@@ -218,9 +302,11 @@ def test_read_drug_map_rejects_identity_drift(tmp_path):
     path.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + "ABC\tabacavir sulfate\tABC\tNRTI\tEXACT\tCHEBI:421707\t"
+        + f"{HIVDB_HIVFACTS_COMMIT}\tABC\tabacavir sulfate\tABC\tNRTI\t"
+        + "EXACT\tCHEBI:421707\t"
         + "MCI\tfull_name\twrong salt\n"
-        + "ATV/r\tatazanavir/r\tATV\tPI\tCOMBINATION\t\t\t"
+        + f"{HIVDB_HIVFACTS_COMMIT}\tATV/r\tatazanavir/r\tATV\tPI\t"
+        + "COMBINATION\t\t\t"
         + "ritonavir_boosted\tBoosted protease-inhibitor row.\n",
         encoding="utf-8",
     )
@@ -231,9 +317,11 @@ def test_read_drug_map_rejects_identity_drift(tmp_path):
     path.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + "ABC\tabacavir\tABC\tNRTI\tEXACT\tCHEBI:421707\t"
+        + f"{HIVDB_HIVFACTS_COMMIT}\tABC\tabacavir\tABC\tNRTI\t"
+        + "EXACT\tCHEBI:421707\t"
         + "WRONGINCHIKEY\tfull_name\twrong structure\n"
-        + "ATV/r\tatazanavir/r\tATV\tPI\tCOMBINATION\t\t\t"
+        + f"{HIVDB_HIVFACTS_COMMIT}\tATV/r\tatazanavir/r\tATV\tPI\t"
+        + "COMBINATION\t\t\t"
         + "ritonavir_boosted\tBoosted protease-inhibitor row.\n",
         encoding="utf-8",
     )
@@ -242,12 +330,31 @@ def test_read_drug_map_rejects_identity_drift(tmp_path):
         read_drug_map(path, {"CHEBI:421707": "MCI"}, hivdb_source_rows())
 
 
+def test_read_drug_map_rejects_source_version_drift(tmp_path):
+    path = tmp_path / "hivdb_drug_map.tsv"
+    path.write_text(
+        "\t".join(DRUG_MAP_COLUMNS)
+        + "\n"
+        + "stale\tABC\tabacavir\tABC\tNRTI\t"
+        + "EXACT\tCHEBI:421707\t"
+        + "MCI\tfull_name\tok\n"
+        + f"{HIVDB_HIVFACTS_COMMIT}\tATV/r\tatazanavir/r\tATV\tPI\t"
+        + "COMBINATION\t\t\t"
+        + "ritonavir_boosted\tBoosted protease-inhibitor row.\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="source_version 'stale'"):
+        read_drug_map(path, {"CHEBI:421707": "MCI"}, hivdb_source_rows())
+
+
 def test_read_drug_map_rejects_stale_and_incomplete_maps(tmp_path):
     path = tmp_path / "hivdb_drug_map.tsv"
     path.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + "ABC\tabacavir\tABC\tNRTI\tEXACT\tCHEBI:421707\t"
+        + f"{HIVDB_HIVFACTS_COMMIT}\tABC\tabacavir\tABC\tNRTI\t"
+        + "EXACT\tCHEBI:421707\t"
         + "MCI\tfull_name\tok\n",
         encoding="utf-8",
     )
@@ -258,11 +365,14 @@ def test_read_drug_map_rejects_stale_and_incomplete_maps(tmp_path):
     path.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + "ABC\tabacavir\tABC\tNRTI\tEXACT\tCHEBI:421707\t"
+        + f"{HIVDB_HIVFACTS_COMMIT}\tABC\tabacavir\tABC\tNRTI\t"
+        + "EXACT\tCHEBI:421707\t"
         + "MCI\tfull_name\tok\n"
-        + "ATV/r\tatazanavir/r\tATV\tPI\tCOMBINATION\t\t\t"
+        + f"{HIVDB_HIVFACTS_COMMIT}\tATV/r\tatazanavir/r\tATV\tPI\t"
+        + "COMBINATION\t\t\t"
         + "ritonavir_boosted\tBoosted protease-inhibitor row.\n"
-        + "OLD\toldavir\tOLD\tNRTI\tMISSING_CORPUS_RECORD\t\t\tmissing\tstale\n",
+        + f"{HIVDB_HIVFACTS_COMMIT}\tOLD\toldavir\tOLD\tNRTI\t"
+        + "MISSING_CORPUS_RECORD\t\t\tmissing\tstale\n",
         encoding="utf-8",
     )
 
@@ -275,9 +385,11 @@ def test_read_drug_map_rejects_non_exact_structure_fields(tmp_path):
     path.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + "ABC\tabacavir\tABC\tNRTI\tMISSING_CORPUS_RECORD\tCHEBI:421707\t"
+        + f"{HIVDB_HIVFACTS_COMMIT}\tABC\tabacavir\tABC\tNRTI\t"
+        + "MISSING_CORPUS_RECORD\tCHEBI:421707\t"
         + "MCI\tmissing\twrong\n"
-        + "ATV/r\tatazanavir/r\tATV\tPI\tCOMBINATION\t\t\t"
+        + f"{HIVDB_HIVFACTS_COMMIT}\tATV/r\tatazanavir/r\tATV\tPI\t"
+        + "COMBINATION\t\t\t"
         + "ritonavir_boosted\tBoosted protease-inhibitor row.\n",
         encoding="utf-8",
     )
@@ -311,6 +423,7 @@ def test_write_drug_map_template_preserves_hivdb_source_columns(tmp_path):
 
     assert rows == [
         {
+            "source_version": HIVDB_HIVFACTS_COMMIT,
             "source_record_id": "ABC",
             "source_name": "abacavir",
             "hivdb_name": "ABC",
@@ -405,7 +518,8 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
     drug_map.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + "ABC\tabacavir\tABC\tNRTI\tEXACT\tCHEBI:421707\t"
+        + f"{HIVDB_HIVFACTS_COMMIT}\tABC\tabacavir\tABC\tNRTI\t"
+        + "EXACT\tCHEBI:421707\t"
         + "MCI\tfull_name\tHIVDB fullName is the exact corpus label.\n",
         encoding="utf-8",
     )

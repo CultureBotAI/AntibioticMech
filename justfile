@@ -63,6 +63,10 @@ extract-phibase-dry *args:
 evaluate-cryptic *args:
     uv run --extra source-ingest python scripts/evaluate_cryptic_activity.py {{args}}
 
+# Evaluate Stanford HIVDB hivfacts drugs without seeding resistance assertions.
+evaluate-hivdb *args:
+    uv run python scripts/evaluate_hivdb_hivfacts.py {{args}}
+
 # Compare AMRFinderPlus families/classes with the committed ARO resistance slice.
 evaluate-amrfinder *args:
     uv run python scripts/evaluate_amrfinderplus.py {{args}}
