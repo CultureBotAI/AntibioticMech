@@ -16,6 +16,7 @@ import re
 from collections import Counter, defaultdict
 from collections.abc import Iterable
 from datetime import date
+from decimal import Decimal
 from pathlib import Path
 
 import yaml
@@ -194,7 +195,8 @@ def standardized_measurement(
     match = MEASUREMENT_PATTERN.match(raw_value.strip())
     if match is None:
         return None
-    if float(match.group("value")) <= 0:
+    value = Decimal(match.group("value"))
+    if value <= 0:
         return None
 
     value_qualifier = match.group("qualifier") or ""
@@ -206,7 +208,7 @@ def standardized_measurement(
     qualifier = sign_qualifier or value_qualifier
     if qualifier == "=":
         qualifier = ""
-    return match.group("value"), qualifier, units
+    return format(value.normalize(), "f"), qualifier, units
 
 
 def measurement_label(measurement: tuple[str, str, str]) -> str:

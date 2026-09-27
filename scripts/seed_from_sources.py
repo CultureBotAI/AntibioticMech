@@ -31,12 +31,12 @@ import contextlib
 import csv
 import hashlib
 import json
-import math
 import re
 import shutil
 import sys
 from collections import Counter, defaultdict
 from datetime import date
+from decimal import Decimal, InvalidOperation
 from functools import lru_cache
 from pathlib import Path
 
@@ -2357,13 +2357,18 @@ def _require_ncbi_ast_measurement(
     if units != expected_units:
         raise ValueError(f"{prefix}: {units_field} must be {expected_units!r}")
     try:
-        parsed = float(value)
-    except ValueError as error:
+        parsed = Decimal(value)
+    except InvalidOperation as error:
         raise ValueError(f"{prefix}: {value_field} must be numeric") from error
-    if not math.isfinite(parsed):
+    if not parsed.is_finite():
         raise ValueError(f"{prefix}: {value_field} must be finite")
     if parsed <= 0:
         raise ValueError(f"{prefix}: {value_field} must be positive")
+    canonical = format(parsed.normalize(), "f")
+    if value != canonical:
+        raise ValueError(
+            f"{prefix}: {value_field} must use canonical decimal {canonical!r}"
+        )
     return True
 
 
