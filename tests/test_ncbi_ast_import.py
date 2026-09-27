@@ -164,8 +164,13 @@ def test_load_ncbi_ast_activity_inventory_rejects_duplicate_groups(tmp_path):
         ({"phenotype": "S", "activity": "RESISTANT"}, "activity must match phenotype"),
         ({"activity_group_id": "ncbi_ast:stale"}, "activity_group_id must be"),
         ({"mic_value": "high"}, "mic_value must be numeric"),
+        ({"mic_value": "0"}, "mic_value must be positive"),
         ({"mic_qualifier": "MIC90"}, "mic_qualifier has invalid qualifier"),
         ({"mic_value": ""}, "mic_qualifier requires mic_value"),
+        (
+            {"disk_diffusion_value": "0", "disk_diffusion_units": "mm"},
+            "disk_diffusion_value must be positive",
+        ),
         (
             {"mic_value": "", "mic_qualifier": "", "mic_units": ""},
             "mic_value or disk_diffusion_value is required",

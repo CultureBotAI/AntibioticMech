@@ -576,9 +576,11 @@ def test_evaluate_rows_counts_valid_project_context_separately():
 def test_evaluate_rows_counts_invalid_measurement_shapes():
     rows = [
         {"Antibiotic": "cefepime", "Measurement sign": "<=", "MIC": "2"},
+        {"Antibiotic": "cefepime", "MIC": "0"},
         {"Antibiotic": "cefepime", "Measurement sign": "<", "MIC": ">4"},
         {"Antibiotic": "cefepime", "MIC": "not-numeric"},
         {"Antibiotic": "cefepime", "Measurement sign": ">", "Disk diffusion": "18"},
+        {"Antibiotic": "cefepime", "Disk diffusion": "0"},
         {"Antibiotic": "cefepime", "Measurement sign": "approximately", "Disk diffusion": "19"},
     ]
 
@@ -589,13 +591,13 @@ def test_evaluate_rows_counts_invalid_measurement_shapes():
     )
 
     cefepime = result["antibiotic_rows"][0]
-    assert cefepime["mic_count"] == 3
+    assert cefepime["mic_count"] == 4
     assert cefepime["standardized_mic_count"] == 1
-    assert cefepime["invalid_mic_count"] == 2
+    assert cefepime["invalid_mic_count"] == 3
     assert cefepime["standardized_mic_values"] == "<=2 mg/L"
-    assert cefepime["disk_diffusion_count"] == 2
+    assert cefepime["disk_diffusion_count"] == 3
     assert cefepime["standardized_disk_diffusion_count"] == 1
-    assert cefepime["invalid_disk_diffusion_count"] == 1
+    assert cefepime["invalid_disk_diffusion_count"] == 2
     assert cefepime["standardized_disk_diffusion_values"] == ">18 mm"
 
 
