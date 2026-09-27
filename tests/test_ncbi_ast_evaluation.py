@@ -194,6 +194,21 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "standard": "CLSI",
         },
         {
+            "antibiotic": "CEFEPIME",
+            "biosample_acc": "SAMN11953777",
+            "bioproject_acc": "PRJNA292666",
+            "target_acc": "GCF_003123125.1",
+            "taxgroup_name": "Escherichia coli and Shigella",
+            "scientific_name": "Escherichia coli",
+            "phenotype": "R",
+            "measurement_sign": "<=",
+            "mic": "2",
+            "platform": "AST",
+            "vendor": "NCBI",
+            "reagent": "broth microdilution",
+            "standard": "CLSI",
+        },
+        {
             "antibiotic": "cefepime",
             "biosample_acc": "SAMN11953777",
             "bioproject_acc": "PRJNA292666",
@@ -278,6 +293,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
     mappings = {
         "cefepime": {
             "mapping_status": "EXACT",
+            "source_name": "cefepime",
             "identifier": "CHEBI:478164",
             "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
         },
@@ -300,7 +316,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
         "activity_group_id": activity_rows[0]["activity_group_id"],
         "source_version": "2026-09-26-ast-browser",
         "source_retrieved_on": "2026-09-26",
-        "ast_row_count": 2,
+        "ast_row_count": 3,
         "source_name": "cefepime",
         "normalized_antibiotic": "cefepime",
         "identifier": "CHEBI:478164",
@@ -364,6 +380,7 @@ def test_exact_activity_rows_excludes_known_source_context():
     mappings = {
         "cefepime": {
             "mapping_status": "EXACT",
+            "source_name": "cefepime",
             "identifier": "CHEBI:478164",
             "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
         },
