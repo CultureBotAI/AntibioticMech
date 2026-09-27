@@ -492,6 +492,7 @@ def evaluate_rows(
     rows_with_biosample = 0
     rows_with_bioproject = 0
     rows_with_project_context = 0
+    rows_with_valid_project_context = 0
     rows_with_target_acc = 0
     rows_with_taxon = 0
     rows_with_dedupe_context = 0
@@ -507,6 +508,7 @@ def evaluate_rows(
         rows_with_biosample += int(has_value(row, BIOSAMPLE_ALIASES))
         rows_with_bioproject += int(has_value(row, BIOPROJECT_ALIASES))
         rows_with_project_context += int(has_project_context(row))
+        rows_with_valid_project_context += int(has_valid_project_context(row))
         rows_with_target_acc += int(has_value(row, TARGET_ALIASES))
         rows_with_taxon += int(has_value(row, TAXON_ALIASES))
         rows_with_dedupe_context += int(project_dedupe_hit(row, project_dedupe) is not None)
@@ -577,6 +579,9 @@ def evaluate_rows(
                 "biosample_count": sum(has_value(row, BIOSAMPLE_ALIASES) for row in antibiotic_ast_rows),
                 "bioproject_count": sum(has_value(row, BIOPROJECT_ALIASES) for row in antibiotic_ast_rows),
                 "project_context_count": sum(has_project_context(row) for row in antibiotic_ast_rows),
+                "valid_project_context_count": sum(
+                    has_valid_project_context(row) for row in antibiotic_ast_rows
+                ),
                 "dedupe_context_count": sum(
                     project_dedupe_hit(row, project_dedupe) is not None
                     for row in antibiotic_ast_rows
@@ -620,6 +625,7 @@ def evaluate_rows(
         "rows_with_biosample": rows_with_biosample,
         "rows_with_bioproject": rows_with_bioproject,
         "rows_with_project_context": rows_with_project_context,
+        "rows_with_valid_project_context": rows_with_valid_project_context,
         "rows_with_target_acc": rows_with_target_acc,
         "rows_with_taxon": rows_with_taxon,
         "rows_with_dedupe_context": rows_with_dedupe_context,
@@ -663,6 +669,7 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
         "biosample_count",
         "bioproject_count",
         "project_context_count",
+        "valid_project_context_count",
         "dedupe_context_count",
         "target_acc_count",
         "taxon_count",
@@ -826,6 +833,7 @@ def main() -> int:
         f"  identifiers: biosample_rows={result['rows_with_biosample']} "
         f"bioproject_rows={result['rows_with_bioproject']} "
         f"project_context_rows={result['rows_with_project_context']} "
+        f"valid_project_context_rows={result['rows_with_valid_project_context']} "
         f"target_acc_rows={result['rows_with_target_acc']}"
     )
     print(f"  context: taxon_rows={result['rows_with_taxon']}")
