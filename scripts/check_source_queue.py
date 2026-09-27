@@ -13,6 +13,8 @@ This checks the claims that are checkable:
   * ADOPTED means adopted: the source appears in conf/sources.yaml, its
     redistribution terms have been verified, and it carries a verification date
   * conversely, every source the pipeline actually reads has an ADOPTED row
+  * optional exact-report inventories that would activate an evaluating source
+    cannot be committed before their source is adopted
   * an ADOPTED seed source carries terms the corpus's own licence can pass on.
     This is a tripwire AT ADOPTION, not a ban on candidates: a CANDIDATE row may
     sit at `use: SEED` with UNVERIFIED terms for as long as it takes to check
@@ -74,10 +76,45 @@ EXTRA_GAPS = {"identity", "structures", "evidence", "classification", "mechanism
 # check that silently stops checking is worse than no check.
 SOURCE_MARKER = "name"
 
+# Some evaluators can already write exact, source-versioned inventories for a
+# candidate lane before the repository is legally ready to seed from that lane.
+# Once one of those files appears under data/raw, it would be redistributed and
+# consumed by seed_from_sources.py, so the source queue has to say ADOPTED first.
+OPTIONAL_ADOPTION_INVENTORIES = {
+    "ncbi-ast": Path("data/raw/ncbi_ast_activity.tsv"),
+}
+
 
 def source_sections(conf: dict) -> set[str]:
     return {key for key, value in conf.items()
             if isinstance(value, dict) and SOURCE_MARKER in value}
+
+
+def present_optional_inventories(root: Path = REPO_ROOT) -> dict[str, Path]:
+    return {
+        source_id: path
+        for source_id, path in OPTIONAL_ADOPTION_INVENTORIES.items()
+        if (root / path).exists()
+    }
+
+
+def optional_inventory_problems(
+    queue_by_source: dict[str, dict[str, str]],
+    present_inventories: dict[str, Path],
+) -> list[str]:
+    problems = []
+    for source_id, path in sorted(present_inventories.items()):
+        row = queue_by_source.get(source_id)
+        if row is None:
+            problems.append(
+                f"{source_id}: {path} exists but has no queue row"
+            )
+        elif row["status"] != "ADOPTED":
+            problems.append(
+                f"{source_id}: {path} exists but source status is "
+                f"{row['status']}, not ADOPTED"
+            )
+    return problems
 
 
 def record_fields() -> set[str]:
@@ -103,12 +140,14 @@ def main() -> int:
 
     problems: list[str] = []
     seen: set[str] = set()
+    queue_by_source: dict[str, dict[str, str]] = {}
 
     for row in rows:
         sid = row["source_id"]
         if sid in seen:
             problems.append(f"{sid}: duplicate row")
         seen.add(sid)
+        queue_by_source.setdefault(sid, row)
 
         for column, allowed in (("use", USE), ("structures", STRUCTURES),
                                 ("redistribution", REDISTRIBUTION), ("access", ACCESS),
@@ -151,6 +190,10 @@ def main() -> int:
     adopted = {r["source_id"] for r in rows if r["status"] == "ADOPTED"}
     for source in sorted(pipeline_sources - adopted):
         problems.append(f"{source}: read by conf/sources.yaml but has no ADOPTED queue row")
+    problems.extend(optional_inventory_problems(
+        queue_by_source,
+        present_optional_inventories(),
+    ))
 
     if problems:
         print("source queue check FAILED:", file=sys.stderr)

@@ -32,7 +32,11 @@ COMMANDS = [
     (
         "source queue",
         [sys.executable, "scripts/check_source_queue.py"],
-        "An ADOPTED source must be one the pipeline reads under verified redistribution terms.",
+        (
+            "An ADOPTED source must be one the pipeline reads under verified "
+            "redistribution terms, and optional exact reports cannot be "
+            "committed pre-adoption."
+        ),
     ),
     (
         "curator antibiotic structures",
