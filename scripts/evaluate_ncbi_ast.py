@@ -127,6 +127,14 @@ COLLECTION_DATE_ALIASES = ("collectiondate",)
 CREATE_DATE_ALIASES = ("createdate",)
 HOST_ALIASES = ("host",)
 ISOLATION_SOURCE_ALIASES = ("isolationsource",)
+SOURCE_CONTEXT_ALIASES = (
+    ("isolation_type", ISOLATION_TYPE_ALIASES),
+    ("location", LOCATION_ALIASES),
+    ("collection_date", COLLECTION_DATE_ALIASES),
+    ("create_date", CREATE_DATE_ALIASES),
+    ("host", HOST_ALIASES),
+    ("isolation_source", ISOLATION_SOURCE_ALIASES),
+)
 MIC_ALIASES = ("mic", "micmgl", "micvalue", "minimuminhibitoryconcentration")
 DISK_ALIASES = ("diskdiffusion", "diskdiffusionmm", "diskdiameter", "diskzone")
 MEASUREMENT_SIGN_ALIASES = ("measurementsign", "sign")
@@ -639,12 +647,10 @@ def activity_report_context(
         "target_accession": target_accession,
         "assembly_accession": assembly_accession,
         "sra_accessions": sra_accessions,
-        "isolation_type": first_value(row, ISOLATION_TYPE_ALIASES),
-        "location": first_value(row, LOCATION_ALIASES),
-        "collection_date": first_value(row, COLLECTION_DATE_ALIASES),
-        "create_date": first_value(row, CREATE_DATE_ALIASES),
-        "host": first_value(row, HOST_ALIASES),
-        "isolation_source": first_value(row, ISOLATION_SOURCE_ALIASES),
+        **{
+            field: first_value(row, aliases)
+            for field, aliases in SOURCE_CONTEXT_ALIASES
+        },
         "phenotype": phenotype,
         "activity": activity,
         "mic_value": mic[0],
@@ -863,6 +869,7 @@ def evaluate_rows(
     rows_with_invalid_phenotype = 0
     rows_with_assay_method = 0
     rows_with_dedupe_context = 0
+    rows_with_source_context = Counter()
 
     for row in rows:
         antibiotic = first_value(row, ANTIBIOTIC_ALIASES)
@@ -889,6 +896,8 @@ def evaluate_rows(
         rows_with_invalid_phenotype += int(has_invalid_phenotype(row))
         rows_with_assay_method += int(has_assay_method(row))
         rows_with_dedupe_context += int(project_dedupe_hit(row, project_dedupe) is not None)
+        for field, aliases in SOURCE_CONTEXT_ALIASES:
+            rows_with_source_context[field] += int(has_value(row, aliases))
 
     unused_project_dedupe_keys = sorted(
         set(project_dedupe) - used_project_dedupe_keys(rows, project_dedupe),
@@ -1002,6 +1011,12 @@ def evaluate_rows(
                 "invalid_sra_accessions_count": sum(
                     has_invalid_sra_accessions(row) for row in antibiotic_ast_rows
                 ),
+                **{
+                    f"{field}_count": sum(
+                        has_value(row, aliases) for row in antibiotic_ast_rows
+                    )
+                    for field, aliases in SOURCE_CONTEXT_ALIASES
+                },
                 "taxon_id_count": sum(
                     has_value(row, TAXON_ID_ALIASES) for row in antibiotic_ast_rows
                 ),
@@ -1070,6 +1085,10 @@ def evaluate_rows(
         "rows_with_invalid_phenotype": rows_with_invalid_phenotype,
         "rows_with_assay_method": rows_with_assay_method,
         "rows_with_dedupe_context": rows_with_dedupe_context,
+        **{
+            f"rows_with_{field}": rows_with_source_context[field]
+            for field, _ in SOURCE_CONTEXT_ALIASES
+        },
         "exact_name_matched_antibiotics": sum(
             row["exact_name_candidate_count"] == 1 for row in antibiotic_rows
         ),
@@ -1128,6 +1147,12 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
         "invalid_assembly_acc_count",
         "sra_accessions_count",
         "invalid_sra_accessions_count",
+        "isolation_type_count",
+        "location_count",
+        "collection_date_count",
+        "create_date_count",
+        "host_count",
+        "isolation_source_count",
         "taxon_id_count",
         "invalid_taxon_id_count",
         "taxon_count",
@@ -1385,6 +1410,14 @@ def main() -> int:
         f"phenotype_rows={result['rows_with_phenotype']} "
         f"invalid_phenotype_rows={result['rows_with_invalid_phenotype']} "
         f"assay_method_rows={result['rows_with_assay_method']}"
+    )
+    print(
+        f"  isolation context: isolation_type_rows={result['rows_with_isolation_type']} "
+        f"location_rows={result['rows_with_location']} "
+        f"collection_date_rows={result['rows_with_collection_date']} "
+        f"create_date_rows={result['rows_with_create_date']} "
+        f"host_rows={result['rows_with_host']} "
+        f"isolation_source_rows={result['rows_with_isolation_source']}"
     )
     print(f"  dedupe: source_context_rows={result['rows_with_dedupe_context']}")
     print(
