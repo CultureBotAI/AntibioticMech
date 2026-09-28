@@ -2448,6 +2448,10 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                 row["phenotype"].casefold(),
                 "",
             )
+            if row["phenotype"] and not expected_activity:
+                raise ValueError(
+                    f"{prefix}: unsupported phenotype {row['phenotype']!r}"
+                )
             if row["activity"] != expected_activity:
                 raise ValueError(
                     f"{prefix}: activity must match phenotype {row['phenotype']!r}"
