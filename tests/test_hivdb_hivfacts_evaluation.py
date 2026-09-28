@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from evaluate_hivdb_hivfacts import (  # noqa: E402
     ALGORITHM_REPORT_COLUMNS,
+    ALGORITHM_TERM_REPORT_COLUMNS,
     DEFAULT_DRUG_MAP,
     DRUG_MAP_COLUMNS,
     HIVDB_HIVFACTS_COMMIT,
@@ -31,6 +32,7 @@ from evaluate_hivdb_hivfacts import (  # noqa: E402
     read_drugs,
     read_hiv1_algorithm,
     write_algorithm_report,
+    write_algorithm_term_report,
     write_drug_map_template,
     write_drug_report,
     write_mutation_report,
@@ -822,6 +824,24 @@ def test_read_hiv1_algorithm_audits_drug_specific_score_rules(tmp_path):
             "negative_score_assignments": 1,
             "min_score": -10.0,
             "max_score": 15.0,
+            "score_term_rows": [
+                {
+                    "score_term_index": 1,
+                    "score_term": "65R => -10",
+                    "score_assignments": 1,
+                    "negative_score_assignments": 1,
+                    "min_score": -10.0,
+                    "max_score": -10.0,
+                },
+                {
+                    "score_term_index": 2,
+                    "score_term": "MAX(184I => 15, 184V => 15)",
+                    "score_assignments": 2,
+                    "negative_score_assignments": 0,
+                    "min_score": 15.0,
+                    "max_score": 15.0,
+                },
+            ],
         },
         {
             "algorithm_name": "HIVDB",
@@ -838,6 +858,16 @@ def test_read_hiv1_algorithm_audits_drug_specific_score_rules(tmp_path):
             "negative_score_assignments": 0,
             "min_score": 15.0,
             "max_score": 15.0,
+            "score_term_rows": [
+                {
+                    "score_term_index": 1,
+                    "score_term": "41L => 15",
+                    "score_assignments": 1,
+                    "negative_score_assignments": 0,
+                    "min_score": 15.0,
+                    "max_score": 15.0,
+                },
+            ],
         },
     ]
     assert result["algorithm_drugs"] == 2
@@ -847,6 +877,25 @@ def test_read_hiv1_algorithm_audits_drug_specific_score_rules(tmp_path):
     assert result["non_exact_score_assignments"] == 1
     assert result["full_name_mismatches"] == 1
     assert result["algorithm_report_rows"][0]["mapping_status"] == "EXACT"
+    assert result["algorithm_term_report_rows"][1] == {
+        "algorithm_name": "HIVDB",
+        "algorithm_version": "10.2",
+        "algorithm_date": "2026-04-26",
+        "source_record_id": "ABC",
+        "source_name": "abacavir",
+        "algorithm_full_name": "abacavir",
+        "full_name_matches": "true",
+        "drug_class": "NRTI",
+        "mapping_status": "EXACT",
+        "identifier": "CHEBI:421707",
+        "standard_inchi_key": "MCI",
+        "score_term_index": 2,
+        "score_term": "MAX(184I => 15, 184V => 15)",
+        "score_assignments": 2,
+        "negative_score_assignments": 0,
+        "min_score": 15.0,
+        "max_score": 15.0,
+    }
 
 
 def test_read_hiv1_algorithm_rejects_bad_drug_score_rules(tmp_path):
@@ -1105,6 +1154,62 @@ def test_write_algorithm_report_preserves_hivdb_score_rule_columns(tmp_path):
     ]
 
 
+def test_write_algorithm_term_report_preserves_hivdb_score_formula_terms(tmp_path):
+    path = tmp_path / "hivdb_algorithm_terms.tsv"
+
+    write_algorithm_term_report(
+        [
+            {
+                "algorithm_name": "HIVDB",
+                "algorithm_version": "10.2",
+                "algorithm_date": "2026-04-26",
+                "source_record_id": "ABC",
+                "source_name": "abacavir",
+                "algorithm_full_name": "abacavir",
+                "full_name_matches": "true",
+                "drug_class": "NRTI",
+                "mapping_status": "EXACT",
+                "identifier": "CHEBI:421707",
+                "standard_inchi_key": "MCI",
+                "score_term_index": 2,
+                "score_term": "MAX(184I => 15, 184V => 15)",
+                "score_assignments": 2,
+                "negative_score_assignments": 0,
+                "min_score": 15.0,
+                "max_score": 15.0,
+            }
+        ],
+        path,
+    )
+
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        assert reader.fieldnames == ALGORITHM_TERM_REPORT_COLUMNS
+        rows = list(reader)
+
+    assert rows == [
+        {
+            "algorithm_name": "HIVDB",
+            "algorithm_version": "10.2",
+            "algorithm_date": "2026-04-26",
+            "source_record_id": "ABC",
+            "source_name": "abacavir",
+            "algorithm_full_name": "abacavir",
+            "full_name_matches": "true",
+            "drug_class": "NRTI",
+            "mapping_status": "EXACT",
+            "identifier": "CHEBI:421707",
+            "standard_inchi_key": "MCI",
+            "score_term_index": "2",
+            "score_term": "MAX(184I => 15, 184V => 15)",
+            "score_assignments": "2",
+            "negative_score_assignments": "0",
+            "min_score": "15.0",
+            "max_score": "15.0",
+        }
+    ]
+
+
 def test_cli_writes_non_seeding_drug_audit(tmp_path):
     directory = tmp_path / "data" / "antibiotics" / "antiviral"
     directory.mkdir(parents=True)
@@ -1177,7 +1282,7 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
     <NAME>ABC</NAME>
     <FULLNAME>abacavir</FULLNAME>
     <RULE>
-      <CONDITION><![CDATA[SCORE FROM (184V => 15)]]></CONDITION>
+      <CONDITION><![CDATA[SCORE FROM (65R => -10, MAX(184I => 15, 184V => 15))]]></CONDITION>
       <ACTIONS><SCORERANGE><USE_GLOBALRANGE/></SCORERANGE></ACTIONS>
     </RULE>
   </DRUG>
@@ -1186,6 +1291,7 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
         encoding="utf-8",
     )
     algorithm_report = tmp_path / "hivdb_algorithm.tsv"
+    algorithm_term_report = tmp_path / "hivdb_algorithm_terms.tsv"
 
     result = subprocess.run(
         [
@@ -1211,6 +1317,8 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
             str(algorithm),
             "--algorithm-report",
             str(algorithm_report),
+            "--algorithm-term-report",
+            str(algorithm_term_report),
             "--corpus-root",
             str(tmp_path),
         ],
@@ -1225,6 +1333,7 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
     assert mutation_report.exists()
     assert pattern_report.exists()
     assert algorithm_report.exists()
+    assert algorithm_term_report.exists()
     with report.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle, delimiter="\t"))
     assert rows[0]["mapping_status"] == "EXACT"
@@ -1239,9 +1348,13 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
     with algorithm_report.open(newline="", encoding="utf-8") as handle:
         algorithm_rows = list(csv.DictReader(handle, delimiter="\t"))
     assert algorithm_rows[0]["mapping_status"] == "EXACT"
-    assert algorithm_rows[0]["score_assignments"] == "1"
+    assert algorithm_rows[0]["score_assignments"] == "3"
+    with algorithm_term_report.open(newline="", encoding="utf-8") as handle:
+        algorithm_term_rows = list(csv.DictReader(handle, delimiter="\t"))
+    assert algorithm_term_rows[1]["score_term"] == "MAX(184I => 15, 184V => 15)"
+    assert algorithm_term_rows[1]["score_assignments"] == "2"
     assert "Stanford HIVDB hivfacts drug identity audit" in result.stdout
     assert "HIV-1 class-level mutation lists: rows=1 expanded_mutations=2" in result.stdout
     assert "HIV-1 drug pattern matrices: rows=1 level_score_pairs=1" in result.stdout
-    assert "HIV-1 algorithm score rules: drugs=1 score_assignments=1" in result.stdout
+    assert "HIV-1 algorithm score rules: drugs=1 score_assignments=3" in result.stdout
     assert "no rows seeded" in result.stdout
