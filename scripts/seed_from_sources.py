@@ -2462,7 +2462,7 @@ NCBI_AST_ASSEMBLY_PATTERN = re.compile(r"^GC[AF]_[0-9]+(\.[0-9]+)?$")
 NCBI_AST_SRA_ACCESSION_PATTERN = re.compile(
     r"^(SRR|ERR|DRR|SRX|ERX|DRX|SRP|ERP|DRP|SRS|ERS|DRS)[0-9]+$"
 )
-NCBI_AST_TAXON_PATTERN = re.compile(r"^NCBITaxon:[0-9]+$")
+NCBI_AST_TAXON_PATTERN = re.compile(r"^NCBITaxon:[1-9][0-9]*$")
 NCBI_AST_NORMALIZED_NAME_PATTERN = re.compile(r"[^a-z0-9]+")
 NCBI_AST_TSV_CONTROL_CHARS = frozenset("\t\r\n")
 

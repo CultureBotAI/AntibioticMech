@@ -171,7 +171,7 @@ TAXON_ID_ALIASES = (
     "ncbitaxonid",
     "ncbitaxonomyid",
 )
-TAXON_ID_PATTERN = re.compile(r"^(?:NCBITaxon:)?([0-9]+)$")
+TAXON_ID_PATTERN = re.compile(r"^(?:NCBITaxon:)?([1-9][0-9]*)$")
 
 
 def normalize(value: str) -> str:

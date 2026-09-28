@@ -198,6 +198,8 @@ def test_load_ncbi_ast_activity_inventory_rejects_mixed_source_metadata(tmp_path
         ({"biosample_accession": "BioSample:SAMN11953777"}, "invalid BioSample accession"),
         ({"bioproject_accession": "SAMN11953777"}, "invalid BioProject accession"),
         ({"taxon_id": "562"}, "invalid NCBI Taxonomy CURIE"),
+        ({"taxon_id": "NCBITaxon:0"}, "invalid NCBI Taxonomy CURIE"),
+        ({"taxon_id": "NCBITaxon:000562"}, "invalid NCBI Taxonomy CURIE"),
         ({"target_accession": "GCF_003123125.1"}, "invalid Pathogen Detection target"),
         ({"assembly_accession": "SAMN11953777"}, "invalid Assembly accession"),
         ({"sra_accessions": "SAMN11953777"}, "invalid SRA accession"),

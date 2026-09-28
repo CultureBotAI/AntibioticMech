@@ -17,11 +17,13 @@ from evaluate_ncbi_ast import (  # noqa: E402
     corpus_name_candidates,
     evaluate_rows,
     exact_activity_rows,
+    has_invalid_taxon_id,
     normalize_header,
     project_dedupe_report_rows,
     read_drug_map,
     read_project_dedupe_map,
     read_table,
+    valid_taxon_id,
     write_activity_report,
     write_antibiotic_report,
     write_drug_map_template,
@@ -1000,6 +1002,26 @@ def test_read_table_rejects_malformed_headers(tmp_path):
 
     with pytest.raises(ValueError, match="normalizes to empty"):
         read_table(path)
+
+
+@pytest.mark.parametrize(
+    ("source_value", "expected"),
+    [
+        ("562", "NCBITaxon:562"),
+        ("NCBITaxon:562", "NCBITaxon:562"),
+        (" 562 ", "NCBITaxon:562"),
+        ("", ""),
+        ("0", None),
+        ("000562", None),
+        ("NCBITaxon:000562", None),
+        ("not-a-taxid", None),
+    ],
+)
+def test_valid_taxon_id_accepts_only_canonical_positive_taxids(source_value, expected):
+    row = {"TaxID": source_value}
+
+    assert valid_taxon_id(row) == expected
+    assert has_invalid_taxon_id(row) is (expected is None)
 
 
 def test_evaluate_rows_accepts_ncbi_browser_field_names():
