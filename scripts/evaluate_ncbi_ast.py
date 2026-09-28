@@ -56,7 +56,7 @@ PROJECT_DEDUPE_REPORT_COLUMNS = [
 ]
 # Bump with ACTIVITY_REPORT_GROUP_COLUMNS because those columns define the
 # stable activity_group_id digest for committed exact reports.
-ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v5"
+ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v6"
 ACTIVITY_REPORT_GROUP_COLUMNS = [
     "source_name",
     "normalized_antibiotic",
@@ -69,6 +69,12 @@ ACTIVITY_REPORT_GROUP_COLUMNS = [
     "target_accession",
     "assembly_accession",
     "sra_accessions",
+    "isolation_type",
+    "location",
+    "collection_date",
+    "create_date",
+    "host",
+    "isolation_source",
     "phenotype",
     "activity",
     "mic_value",
@@ -115,6 +121,12 @@ BIOPROJECT_ALIASES = ("bioproject", "bioprojectaccession", "bioprojectacc")
 TARGET_ALIASES = ("targetacc", "targetaccession", "target", "isolate")
 ASSEMBLY_ALIASES = ("assemblyaccession", "assembly", "asmacc")
 SRA_ALIASES = ("sra", "sraaccession", "sraaccessions", "sraacc", "run", "runs")
+ISOLATION_TYPE_ALIASES = ("isolationtype",)
+LOCATION_ALIASES = ("location",)
+COLLECTION_DATE_ALIASES = ("collectiondate",)
+CREATE_DATE_ALIASES = ("createdate",)
+HOST_ALIASES = ("host",)
+ISOLATION_SOURCE_ALIASES = ("isolationsource",)
 MIC_ALIASES = ("mic", "micmgl", "micvalue", "minimuminhibitoryconcentration")
 DISK_ALIASES = ("diskdiffusion", "diskdiffusionmm", "diskdiameter", "diskzone")
 MEASUREMENT_SIGN_ALIASES = ("measurementsign", "sign")
@@ -627,6 +639,12 @@ def activity_report_context(
         "target_accession": target_accession,
         "assembly_accession": assembly_accession,
         "sra_accessions": sra_accessions,
+        "isolation_type": first_value(row, ISOLATION_TYPE_ALIASES),
+        "location": first_value(row, LOCATION_ALIASES),
+        "collection_date": first_value(row, COLLECTION_DATE_ALIASES),
+        "create_date": first_value(row, CREATE_DATE_ALIASES),
+        "host": first_value(row, HOST_ALIASES),
+        "isolation_source": first_value(row, ISOLATION_SOURCE_ALIASES),
         "phenotype": phenotype,
         "activity": activity,
         "mic_value": mic[0],

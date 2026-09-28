@@ -145,7 +145,8 @@ Sources:
 
 The AST Browser offers downloadable, submitter-provided phenotypic observations
 with BioSample, organism, antibiotic, S/R phenotype, MIC or disk measurement,
-measurement sign, laboratory typing method, platform, reagent, testing standard
+measurement sign, laboratory typing method, platform, reagent, testing standard,
+isolation type, location, collection and create dates, host, isolation source
 and BioProject. NCBI says it does not verify relationships between submitted
 fields. Its general policy places no NCBI restriction on molecular data, but
 also says rights are not transferred from submitters and NCBI cannot transfer
@@ -170,11 +171,13 @@ template that a curator turns into the exact-structure crosswalk. When supplied
 with a partially curated crosswalk, it writes a compact grouped activity report
 for exact-mapped rows with valid MIC or disk-diffusion measurements,
 optional NCBI Taxonomy identifiers normalized to `NCBITaxon` CURIEs,
-BioSample/BioProject context for deduplication, and source-versioning and
-retrieval-date columns. That report keeps NCBI Pathogen Detection `target_acc`
-values separate from source TaxIDs and `GCA_`/`GCF_` Assembly accessions so the
-former can audit source isolate grouping without being mislabeled as an NCBI
-Assembly accession. A second curated deduplication TSV can exclude BioSample or
+BioSample/BioProject context for deduplication, source isolation metadata, and
+source-versioning and retrieval-date columns. That report keeps NCBI Pathogen
+Detection `target_acc` values separate from source TaxIDs and `GCA_`/`GCF_`
+Assembly accessions so the former can audit source isolate grouping without
+being mislabeled as an NCBI Assembly accession, and it keeps isolation type,
+location, collection and create dates, host, and isolation source as audit
+columns. A second curated deduplication TSV can exclude BioSample or
 whole-BioProject contexts that are already represented by CRyPTIC or another
 source before those exact groups are written. Curated crosswalk rows must
 explicitly separate exact single-structure mappings from mixtures, drug classes,

@@ -466,6 +466,12 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
         "target_accession": "PDT000001234.1",
         "assembly_accession": "GCF_003123125.1",
         "sra_accessions": "ERR111111|SRR222222",
+        "isolation_type": "",
+        "location": "",
+        "collection_date": "",
+        "create_date": "",
+        "host": "",
+        "isolation_source": "",
         "phenotype": "R",
         "activity": "RESISTANT",
         "mic_value": "2",
@@ -492,6 +498,48 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
     assert activity_rows[1]["disk_diffusion_qualifier"] == ""
     assert activity_rows[1]["disk_diffusion_units"] == "mm"
     assert activity_rows[1]["mic_value"] == ""
+
+
+def test_exact_activity_rows_preserves_source_isolation_context():
+    rows = [
+        {
+            "Antibiotic": "cefepime",
+            "BioSample": "SAMN11953777",
+            "BioProject": "PRJNA292666",
+            "Organism group": "Escherichia coli",
+            "Phenotype": "R",
+            "MIC": "2",
+            "Laboratory typing platform": "AST",
+            "Isolation type": "clinical",
+            "Location": "USA",
+            "Collection date": "2020",
+            "Create date": "2020-01-31",
+            "Host": "Homo sapiens",
+            "Isolation source": "blood",
+        },
+    ]
+    mappings = {
+        "cefepime": {
+            "mapping_status": "EXACT",
+            "source_name": "cefepime",
+            "identifier": "CHEBI:478164",
+            "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+        },
+    }
+
+    activity_rows = exact_activity_rows(
+        rows,
+        mappings,
+        source_version="2026-09-26-ast-browser",
+        source_retrieved_on="2026-09-26",
+    )
+
+    assert activity_rows[0]["isolation_type"] == "clinical"
+    assert activity_rows[0]["location"] == "USA"
+    assert activity_rows[0]["collection_date"] == "2020"
+    assert activity_rows[0]["create_date"] == "2020-01-31"
+    assert activity_rows[0]["host"] == "Homo sapiens"
+    assert activity_rows[0]["isolation_source"] == "blood"
 
 
 def test_exact_activity_rows_excludes_unknown_phenotypes():
@@ -1642,6 +1690,12 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
             "target_accession": "PDT000001234.1",
             "assembly_accession": "GCF_003123125.1",
             "sra_accessions": "ERR111111|SRR222222",
+            "isolation_type": "clinical",
+            "location": "USA",
+            "collection_date": "2020",
+            "create_date": "2020-01-31",
+            "host": "Homo sapiens",
+            "isolation_source": "blood",
             "phenotype": "R",
             "activity": "RESISTANT",
             "mic_value": "2",
@@ -1680,6 +1734,12 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
         "target_accession": "PDT000001234.1",
         "assembly_accession": "GCF_003123125.1",
         "sra_accessions": "ERR111111|SRR222222",
+        "isolation_type": "clinical",
+        "location": "USA",
+        "collection_date": "2020",
+        "create_date": "2020-01-31",
+        "host": "Homo sapiens",
+        "isolation_source": "blood",
         "phenotype": "R",
         "activity": "RESISTANT",
         "mic_value": "2",
@@ -1788,6 +1848,12 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
                 "Isolate",
                 "asm_acc",
                 "Run",
+                "Isolation type",
+                "Location",
+                "Collection date",
+                "Create date",
+                "Host",
+                "Isolation source",
                 "TaxID",
                 "scientific_name",
                 "Laboratory typing method",
@@ -1810,6 +1876,12 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             "Isolate": "PDT000001234.1",
             "asm_acc": "GCF_003123125.1",
             "Run": "SRR222222,ERR111111",
+            "Isolation type": "clinical",
+            "Location": "USA",
+            "Collection date": "2020",
+            "Create date": "2020-01-31",
+            "Host": "Homo sapiens",
+            "Isolation source": "blood",
             "TaxID": "573",
             "scientific_name": "Klebsiella pneumoniae",
             "Laboratory typing method": "MIC",
@@ -1938,6 +2010,8 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
         assert "target_accession" in (reader.fieldnames or [])
         assert "assembly_accession" in (reader.fieldnames or [])
         assert "sra_accessions" in (reader.fieldnames or [])
+        assert "isolation_type" in (reader.fieldnames or [])
+        assert "isolation_source" in (reader.fieldnames or [])
         assert "taxon_id" in (reader.fieldnames or [])
         assert "method" in (reader.fieldnames or [])
         assert "target_acc" not in (reader.fieldnames or [])
@@ -1971,6 +2045,12 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert activity_rows[0]["assembly_accession"] == "GCF_003123125.1"
     assert activity_rows[0]["target_accession"] == "PDT000001234.1"
     assert activity_rows[0]["sra_accessions"] == "ERR111111|SRR222222"
+    assert activity_rows[0]["isolation_type"] == "clinical"
+    assert activity_rows[0]["location"] == "USA"
+    assert activity_rows[0]["collection_date"] == "2020"
+    assert activity_rows[0]["create_date"] == "2020-01-31"
+    assert activity_rows[0]["host"] == "Homo sapiens"
+    assert activity_rows[0]["isolation_source"] == "blood"
     assert activity_rows[0]["method"] == "MIC"
     assert activity_rows[0]["source_version"] == "2026-09-26-ast-browser"
     assert activity_rows[0]["source_retrieved_on"] == "2026-09-26"

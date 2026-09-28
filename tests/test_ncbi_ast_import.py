@@ -76,7 +76,7 @@ def test_ncbi_ast_activity_columns_match_the_evaluator_contract():
 
     assert NCBI_AST_ACTIVITY_COLUMNS == ACTIVITY_REPORT_COLUMNS
     assert NCBI_AST_ACTIVITY_GROUP_ID_VERSION == ACTIVITY_GROUP_ID_VERSION
-    assert ACTIVITY_GROUP_ID_VERSION == "ncbi_ast_activity_group_v5"
+    assert ACTIVITY_GROUP_ID_VERSION == "ncbi_ast_activity_group_v6"
     assert NCBI_AST_ACTIVITY_GROUP_COLUMNS == ACTIVITY_REPORT_GROUP_COLUMNS
     assert ncbi_ast_activity_group_id(row) == activity_group_id(row)
 
@@ -263,6 +263,12 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
         disk_diffusion_qualifier=">=",
         disk_diffusion_units="mm",
         sra_accessions="ERR111111|SRR222222",
+        isolation_type="clinical",
+        location="USA",
+        collection_date="2020",
+        create_date="2020-01-31",
+        host="Homo sapiens",
+        isolation_source="blood",
     )
     write_activity_report(path, [row])
     monkeypatch.setattr(seed_from_sources, "NCBI_AST_ACTIVITY_INVENTORY", path)
@@ -306,7 +312,13 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     assert "standard CLSI" in observation["assay"]
     assert "target_accession=PDT000001234.1" in observation["evidence"][0]["notes"]
     assert "sra_accessions=ERR111111|SRR222222" in observation["evidence"][0]["notes"]
-    assert "BioSample, BioProject, target, assembly and SRA context" in observation["evidence"][0]["notes"]
+    assert "isolation_type=clinical" in observation["evidence"][0]["notes"]
+    assert "host=Homo sapiens" in observation["evidence"][0]["notes"]
+    assert "isolation_source=blood" in observation["evidence"][0]["notes"]
+    assert (
+        "BioSample, BioProject, target, assembly, SRA and isolation context"
+        in observation["evidence"][0]["notes"]
+    )
 
 
 def test_attach_ncbi_ast_activity_rejects_identity_drift(tmp_path, monkeypatch):

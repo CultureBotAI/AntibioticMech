@@ -2395,7 +2395,7 @@ NCBI_AST_ACTIVITY_INVENTORY = RAW_DIR / "ncbi_ast_activity.tsv"
 NCBI_AST_REFERENCE = "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/"
 # Bump with NCBI_AST_ACTIVITY_GROUP_COLUMNS because those columns define the
 # stable source_observation_id digest for committed exact reports.
-NCBI_AST_ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v5"
+NCBI_AST_ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v6"
 NCBI_AST_ACTIVITY_GROUP_COLUMNS = [
     "source_name",
     "normalized_antibiotic",
@@ -2408,6 +2408,12 @@ NCBI_AST_ACTIVITY_GROUP_COLUMNS = [
     "target_accession",
     "assembly_accession",
     "sra_accessions",
+    "isolation_type",
+    "location",
+    "collection_date",
+    "create_date",
+    "host",
+    "isolation_source",
     "phenotype",
     "activity",
     "mic_value",
@@ -2515,6 +2521,12 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
         "target_accession",
         "assembly_accession",
         "sra_accessions",
+        "isolation_type",
+        "location",
+        "collection_date",
+        "create_date",
+        "host",
+        "isolation_source",
         "phenotype",
         "method",
         "platform",
@@ -2537,7 +2549,8 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
             "notes": (
                 "Compact NCBI Pathogen Detection AST grouped activity row. "
                 "The underlying AST rows are submitter-provided; source BioSample, "
-                "BioProject, target, assembly and SRA context are retained for audit: "
+                "BioProject, target, assembly, SRA and isolation context are "
+                "retained for audit: "
                 f"{notes}."
             ),
         }],
