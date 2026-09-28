@@ -94,6 +94,7 @@ def test_evaluate_rows_summarizes_submitted_antibiotic_names():
     assert result["rows_with_valid_project_context"] == 1
     assert result["rows_with_target_acc"] == 1
     assert result["rows_with_taxon"] == 1
+    assert result["rows_with_assay_method"] == 0
     assert result["rows_with_dedupe_context"] == 1
 
     amikacin = result["antibiotic_rows"][0]
@@ -104,6 +105,7 @@ def test_evaluate_rows_summarizes_submitted_antibiotic_names():
     assert amikacin["valid_project_context_count"] == 1
     assert amikacin["dedupe_context_count"] == 1
     assert amikacin["taxon_count"] == 1
+    assert amikacin["assay_method_count"] == 0
     assert amikacin["mic_count"] == 1
     assert amikacin["disk_diffusion_count"] == 0
     assert amikacin["taxon_labels"] == "Escherichia coli"
@@ -190,6 +192,7 @@ def test_evaluate_rows_counts_exact_activity_report_candidates_after_dedupe():
             "target_acc": "PDT000001234.1",
             "taxgroup_name": "Escherichia coli",
             "mic": "2",
+            "platform": "AST",
         },
         {
             "antibiotic": "cefepime",
@@ -198,6 +201,7 @@ def test_evaluate_rows_counts_exact_activity_report_candidates_after_dedupe():
             "target_acc": "not-a-target",
             "taxgroup_name": "Escherichia coli",
             "mic": "4",
+            "platform": "AST",
         },
         {
             "antibiotic": "cefepime",
@@ -207,6 +211,7 @@ def test_evaluate_rows_counts_exact_activity_report_candidates_after_dedupe():
             "target_acc": "PDT000001234.1",
             "taxgroup_name": "Escherichia coli",
             "mic": "8",
+            "platform": "AST",
         },
         {
             "antibiotic": "gentamicin",
@@ -215,6 +220,7 @@ def test_evaluate_rows_counts_exact_activity_report_candidates_after_dedupe():
             "target_acc": "PDT000001234.1",
             "taxgroup_name": "Escherichia coli",
             "mic": "16",
+            "platform": "AST",
         },
     ]
     mappings = {
@@ -249,6 +255,7 @@ def test_evaluate_rows_counts_exact_activity_report_candidates_after_dedupe():
     assert result["exact_mapped_rows"] == 3
     assert result["rows_with_invalid_target_acc"] == 1
     assert result["rows_with_invalid_assembly_acc"] == 1
+    assert result["rows_with_assay_method"] == 4
     assert result["exact_mapped_activity_report_candidate_rows"] == 1
     assert result["antibiotic_rows"][0]["activity_report_candidate_count"] == 1
     assert result["antibiotic_rows"][0]["invalid_target_acc_count"] == 1
@@ -316,10 +323,20 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "Resistance phenotype": "S",
             "Measurement sign": ">",
             "Disk diffusion": "18.0",
+            "Laboratory typing method version or reagent": "disk diffusion",
         },
         {
             "antibiotic": "cefepime",
             "biosample_acc": "SAMN11953779",
+            "taxgroup_name": "Escherichia coli and Shigella",
+            "phenotype": "R",
+            "measurement_sign": "<=",
+            "mic": "2",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953785",
+            "bioproject_acc": "PRJNA292666",
             "taxgroup_name": "Escherichia coli and Shigella",
             "phenotype": "R",
             "measurement_sign": "<=",
@@ -445,6 +462,7 @@ def test_exact_activity_rows_excludes_known_source_context():
             "taxgroup_name": "Escherichia coli",
             "phenotype": "R",
             "mic": "2",
+            "platform": "AST",
         },
         {
             "antibiotic": "cefepime",
@@ -453,6 +471,7 @@ def test_exact_activity_rows_excludes_known_source_context():
             "taxgroup_name": "Escherichia coli",
             "phenotype": "S",
             "mic": "4",
+            "platform": "AST",
         },
         {
             "antibiotic": "cefepime",
@@ -461,6 +480,7 @@ def test_exact_activity_rows_excludes_known_source_context():
             "taxgroup_name": "Escherichia coli",
             "phenotype": "S",
             "mic": "8",
+            "platform": "AST",
         },
     ]
     mappings = {
@@ -508,6 +528,7 @@ def test_exact_activity_rows_keeps_target_accession_separate_from_assembly():
             "taxgroup_name": "Escherichia coli",
             "phenotype": "R",
             "mic": "2",
+            "platform": "AST",
         },
         {
             "antibiotic": "cefepime",
@@ -517,6 +538,7 @@ def test_exact_activity_rows_keeps_target_accession_separate_from_assembly():
             "taxgroup_name": "Escherichia coli",
             "phenotype": "R",
             "mic": "4",
+            "platform": "AST",
         },
     ]
     mappings = {
@@ -548,6 +570,7 @@ def test_project_dedupe_report_rows_rank_valid_project_contexts():
             "bioproject_acc": "PRJNA292666",
             "taxgroup_name": "Escherichia coli",
             "mic": "2",
+            "platform": "AST",
         },
         {
             "antibiotic": "CEFEPIME",
@@ -556,6 +579,7 @@ def test_project_dedupe_report_rows_rank_valid_project_contexts():
             "taxgroup_name": "Klebsiella pneumoniae",
             "measurement_sign": ">=",
             "disk_diffusion": "18",
+            "platform": "AST",
         },
         {
             "antibiotic": "gentamicin",
@@ -563,6 +587,14 @@ def test_project_dedupe_report_rows_rank_valid_project_contexts():
             "bioproject_acc": "PRJNA292667",
             "taxgroup_name": "Escherichia coli",
             "mic": "4",
+            "platform": "AST",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953785",
+            "bioproject_acc": "PRJNA292669",
+            "taxgroup_name": "Escherichia coli",
+            "mic": "2",
         },
         {
             "antibiotic": "cefepime",
@@ -1214,6 +1246,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "assembly_acc_count": 7,
             "invalid_assembly_acc_count": 0,
             "taxon_count": 7,
+            "assay_method_count": 7,
             "phenotype_count": 7,
             "mic_count": 7,
             "standardized_mic_count": 7,
@@ -1256,6 +1289,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "assembly_acc_count": "7",
         "invalid_assembly_acc_count": "0",
         "taxon_count": "7",
+        "assay_method_count": "7",
         "phenotype_count": "7",
         "mic_count": "7",
         "standardized_mic_count": "7",
@@ -1556,6 +1590,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert "project_context_rows=2" in result.stdout
     assert "valid_project_context_rows=2" in result.stdout
     assert "taxon_rows=2" in result.stdout
+    assert "assay_method_rows=2" in result.stdout
     assert "source_context_rows=1" in result.stdout
     assert "project_dedupe_report=" in result.stdout
     assert antibiotic_report.exists()
