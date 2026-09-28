@@ -1043,6 +1043,33 @@ def test_evaluate_rows_counts_invalid_measurement_shapes():
     assert cefepime["standardized_disk_diffusion_values"] == ">18 mm"
 
 
+def test_evaluate_rows_enforces_ncbi_measurement_ranges():
+    rows = [
+        {"Antibiotic": "cefepime", "MIC": "1024"},
+        {"Antibiotic": "cefepime", "MIC": "1024.1"},
+        {"Antibiotic": "cefepime", "Disk diffusion": "6"},
+        {"Antibiotic": "cefepime", "Disk diffusion": "5.9"},
+        {"Antibiotic": "cefepime", "Disk diffusion": "150"},
+        {"Antibiotic": "cefepime", "Disk diffusion": "150.1"},
+    ]
+
+    result = evaluate_rows(
+        rows,
+        {"cefepime": {"CHEBI:478164"}},
+        {"CHEBI:478164": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
+    )
+
+    cefepime = result["antibiotic_rows"][0]
+    assert cefepime["mic_count"] == 2
+    assert cefepime["standardized_mic_count"] == 1
+    assert cefepime["invalid_mic_count"] == 1
+    assert cefepime["standardized_mic_values"] == "1024 mg/L"
+    assert cefepime["disk_diffusion_count"] == 4
+    assert cefepime["standardized_disk_diffusion_count"] == 2
+    assert cefepime["invalid_disk_diffusion_count"] == 2
+    assert cefepime["standardized_disk_diffusion_values"] == "150 mm|6 mm"
+
+
 def test_corpus_name_candidates_include_record_labels_and_synonyms(tmp_path):
     path = tmp_path / "data" / "antibiotics" / "antibacterial"
     path.mkdir(parents=True)

@@ -215,8 +215,17 @@ def test_load_ncbi_ast_activity_inventory_rejects_mixed_source_metadata(tmp_path
         ({"mic_value": "high"}, "mic_value must be numeric"),
         ({"mic_value": "2.0"}, "mic_value must use canonical decimal '2'"),
         ({"mic_value": "0"}, "mic_value must be positive"),
+        ({"mic_value": "1024.1"}, "mic_value must be at most 1024"),
         ({"mic_qualifier": "MIC90"}, "mic_qualifier has invalid qualifier"),
         ({"mic_value": ""}, "mic_qualifier requires mic_value"),
+        (
+            {"disk_diffusion_value": "5", "disk_diffusion_units": "mm"},
+            "disk_diffusion_value must be at least 6",
+        ),
+        (
+            {"disk_diffusion_value": "150.1", "disk_diffusion_units": "mm"},
+            "disk_diffusion_value must be at most 150",
+        ),
         (
             {"disk_diffusion_value": "0", "disk_diffusion_units": "mm"},
             "disk_diffusion_value must be positive",
