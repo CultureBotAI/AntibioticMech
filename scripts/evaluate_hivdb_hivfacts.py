@@ -15,8 +15,10 @@ from __future__ import annotations
 
 import argparse
 import csv
+import datetime as dt
 import json
 import re
+import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
 from collections.abc import Iterable, Mapping
 from pathlib import Path
@@ -82,6 +84,25 @@ PATTERN_REPORT_COLUMNS = [
     "min_score",
     "max_score",
 ]
+ALGORITHM_REPORT_COLUMNS = [
+    "algorithm_name",
+    "algorithm_version",
+    "algorithm_date",
+    "source_record_id",
+    "source_name",
+    "algorithm_full_name",
+    "full_name_matches",
+    "drug_class",
+    "mapping_status",
+    "identifier",
+    "standard_inchi_key",
+    "score_terms",
+    "score_assignments",
+    "negative_score_assignments",
+    "min_score",
+    "max_score",
+    "uses_global_range",
+]
 PATTERN_FIELDS = frozenset({"gene", "drugClass", "pattern", "count"})
 
 EXACT_MAPPING_STATUS = "EXACT"
@@ -95,6 +116,7 @@ CURATED_TSV_CONTROL_CHARS = frozenset("\t\r\n")
 COMPACT_TOKEN_PATTERN = re.compile(r"^[A-Z0-9]+$")
 COMPACT_AA_PATTERN = re.compile(r"^[A-Z_-]+$")
 PATTERN_CONTROL_CHARS = frozenset("\t\r\n")
+SCORE_ASSIGNMENT_PATTERN = re.compile(r"=>\s*(-?\d+(?:\.\d+)?)")
 
 
 def normalize(value: str) -> str:
@@ -544,6 +566,192 @@ def read_drug_patterns(
     return rows
 
 
+def xml_child_text(parent: ET.Element, child_name: str, path: Path, context: str) -> str:
+    child = parent.find(child_name)
+    if child is None or child.text is None or not child.text.strip():
+        raise ValueError(f"{path}: {context} has no {child_name}")
+    value = child.text.strip()
+    if any(char in value for char in CURATED_TSV_CONTROL_CHARS):
+        raise ValueError(f"{path}: {context} {child_name} contains a tab or newline")
+    return value
+
+
+def xml_block_text(parent: ET.Element, child_name: str, path: Path, context: str) -> str:
+    child = parent.find(child_name)
+    if child is None or child.text is None or not child.text.strip():
+        raise ValueError(f"{path}: {context} has no {child_name}")
+    value = child.text.strip()
+    if any(char in value for char in "\t\r"):
+        raise ValueError(f"{path}: {context} {child_name} contains a tab or carriage return")
+    return value
+
+
+def score_condition_stats(condition: str, path: Path, source_record_id: str) -> dict:
+    condition = condition.strip()
+    prefix = "SCORE FROM ("
+    if not condition.startswith(prefix) or not condition.endswith(")"):
+        raise ValueError(f"{path}: {source_record_id} rule is not a SCORE FROM block")
+
+    terms = []
+    term_start = len(prefix)
+    depth = 0
+    for index, char in enumerate(condition[len(prefix) : -1], start=len(prefix)):
+        if char == "(":
+            depth += 1
+        elif char == ")":
+            depth -= 1
+            if depth < 0:
+                raise ValueError(f"{path}: {source_record_id} rule has unbalanced parentheses")
+        elif char == "," and depth == 0:
+            terms.append(condition[term_start:index].strip())
+            term_start = index + 1
+
+    if depth:
+        raise ValueError(f"{path}: {source_record_id} rule has unbalanced parentheses")
+    terms.append(condition[term_start:-1].strip())
+
+    scores = []
+    for index, term in enumerate(terms, start=1):
+        if not term:
+            raise ValueError(f"{path}: {source_record_id} score term {index} is blank")
+        term_scores = [float(score) for score in SCORE_ASSIGNMENT_PATTERN.findall(term)]
+        if not term_scores:
+            raise ValueError(
+                f"{path}: {source_record_id} score term {index} "
+                "has no score assignment"
+            )
+        scores.extend(term_scores)
+
+    return {
+        "score_terms": len(terms),
+        "score_assignments": len(scores),
+        "negative_score_assignments": sum(score < 0 for score in scores),
+        "min_score": min(scores),
+        "max_score": max(scores),
+    }
+
+
+def read_hiv1_algorithm(path: Path, source_rows: list[dict[str, str]]) -> list[dict]:
+    """Read drug-specific score rules from a hivfacts ASI HIVDB XML algorithm."""
+
+    root = ET.parse(path).getroot()
+    if root.tag != "ALGORITHM":
+        raise ValueError(f"{path}: expected ALGORITHM root")
+
+    algorithm_name = xml_child_text(root, "ALGNAME", path, "ALGORITHM")
+    algorithm_version = xml_child_text(root, "ALGVERSION", path, "ALGORITHM")
+    algorithm_date = xml_child_text(root, "ALGDATE", path, "ALGORITHM")
+    try:
+        dt.date.fromisoformat(algorithm_date)
+    except ValueError as error:
+        raise ValueError(f"{path}: invalid ALGDATE {algorithm_date!r}") from error
+
+    source_rows_by_id = {row["source_record_id"]: row for row in source_rows}
+    if len(source_rows_by_id) != len(source_rows):
+        raise ValueError("duplicate HIVDB drug source rows")
+
+    definitions = root.find("DEFINITIONS")
+    if definitions is None:
+        raise ValueError(f"{path}: ALGORITHM has no DEFINITIONS")
+
+    defined_source_ids: set[str] = set()
+    for index, drug_class_node in enumerate(definitions.findall("DRUGCLASS"), start=1):
+        drug_class = xml_child_text(
+            drug_class_node,
+            "NAME",
+            path,
+            f"DRUGCLASS {index}",
+        )
+        raw_drug_list = xml_child_text(
+            drug_class_node,
+            "DRUGLIST",
+            path,
+            f"DRUGCLASS {drug_class}",
+        )
+        source_record_ids = [
+            source_record_id.strip()
+            for source_record_id in raw_drug_list.split(",")
+            if source_record_id.strip()
+        ]
+        if not source_record_ids:
+            raise ValueError(f"{path}: DRUGCLASS {drug_class} has no drugs")
+
+        for source_record_id in source_record_ids:
+            if source_record_id in defined_source_ids:
+                raise ValueError(
+                    f"{path}: duplicate algorithm drug class entry {source_record_id}"
+                )
+            defined_source_ids.add(source_record_id)
+            source_row = source_rows_by_id.get(source_record_id)
+            if source_row is None:
+                raise ValueError(
+                    f"{path}: algorithm class {drug_class} names unknown drug "
+                    f"{source_record_id}"
+                )
+            if source_row["drug_class"] != drug_class:
+                raise ValueError(
+                    f"{path}: algorithm class {drug_class} for {source_record_id} "
+                    f"!= hivfacts class {source_row['drug_class']}"
+                )
+
+    missing_defined_ids = set(source_rows_by_id) - defined_source_ids
+    if missing_defined_ids:
+        raise ValueError(
+            f"{path}: algorithm drug classes omit {sorted(missing_defined_ids)}"
+        )
+
+    rows = []
+    seen_drugs: set[str] = set()
+    for index, drug_node in enumerate(root.findall("DRUG"), start=1):
+        source_record_id = xml_child_text(drug_node, "NAME", path, f"DRUG {index}")
+        algorithm_full_name = xml_child_text(
+            drug_node,
+            "FULLNAME",
+            path,
+            f"DRUG {source_record_id}",
+        )
+        source_row = source_rows_by_id.get(source_record_id)
+        if source_row is None:
+            raise ValueError(f"{path}: algorithm names unknown drug {source_record_id}")
+        if source_record_id in seen_drugs:
+            raise ValueError(f"{path}: duplicate algorithm drug {source_record_id}")
+        seen_drugs.add(source_record_id)
+
+        rules = drug_node.findall("RULE")
+        if len(rules) != 1:
+            raise ValueError(
+                f"{path}: {source_record_id} must have exactly one score rule"
+            )
+        condition = xml_block_text(rules[0], "CONDITION", path, source_record_id)
+        if rules[0].find("ACTIONS/SCORERANGE/USE_GLOBALRANGE") is None:
+            raise ValueError(f"{path}: {source_record_id} does not use GLOBALRANGE")
+
+        rows.append(
+            {
+                "algorithm_name": algorithm_name,
+                "algorithm_version": algorithm_version,
+                "algorithm_date": algorithm_date,
+                "source_record_id": source_record_id,
+                "source_name": source_row["full_name"],
+                "algorithm_full_name": algorithm_full_name,
+                "full_name_matches": (
+                    "true"
+                    if algorithm_full_name == source_row["full_name"]
+                    else "false"
+                ),
+                "drug_class": source_row["drug_class"],
+                "uses_global_range": "true",
+                **score_condition_stats(condition, path, source_record_id),
+            }
+        )
+
+    missing_drugs = set(source_rows_by_id) - seen_drugs
+    if missing_drugs:
+        raise ValueError(f"{path}: algorithm omits drugs {sorted(missing_drugs)}")
+
+    return rows
+
+
 def expanded_mutations(row: Mapping[str, str]) -> list[str]:
     return [
         mutation_label(row["gene"], int(row["position"]), aa)
@@ -648,6 +856,41 @@ def evaluate_drug_patterns(
     }
 
 
+def evaluate_hiv1_algorithm_rules(
+    rows: list[dict],
+    mappings: Mapping[str, Mapping[str, str]],
+) -> dict:
+    report_rows = []
+    exact_score_assignments = 0
+    non_exact_score_assignments = 0
+    for row in rows:
+        mapping = mappings.get(row["source_record_id"], {})
+        score_assignments = row["score_assignments"]
+        if mapping.get("mapping_status") == EXACT_MAPPING_STATUS:
+            exact_score_assignments += score_assignments
+        else:
+            non_exact_score_assignments += score_assignments
+
+        report_rows.append(
+            {
+                **row,
+                "mapping_status": mapping.get("mapping_status", ""),
+                "identifier": mapping.get("identifier", ""),
+                "standard_inchi_key": mapping.get("standard_inchi_key", ""),
+            }
+        )
+
+    return {
+        "algorithm_drugs": len(rows),
+        "score_terms": sum(row["score_terms"] for row in rows),
+        "score_assignments": exact_score_assignments + non_exact_score_assignments,
+        "exact_score_assignments": exact_score_assignments,
+        "non_exact_score_assignments": non_exact_score_assignments,
+        "full_name_mismatches": sum(row["full_name_matches"] != "true" for row in rows),
+        "algorithm_report_rows": report_rows,
+    }
+
+
 def write_drug_report(rows: list[dict], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
@@ -680,6 +923,19 @@ def write_pattern_report(rows: list[dict], path: Path) -> None:
         writer = csv.DictWriter(
             handle,
             fieldnames=PATTERN_REPORT_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def write_algorithm_report(rows: list[dict], path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=ALGORITHM_REPORT_COLUMNS,
             delimiter="\t",
             lineterminator="\n",
         )
@@ -744,6 +1000,16 @@ def main() -> int:
         type=Path,
         help="Optional TSV HIV-1 drug pattern score audit.",
     )
+    parser.add_argument(
+        "--hiv1-algorithm",
+        type=Path,
+        help="Optional hivfacts data/algorithms/HIVDB_*.xml.",
+    )
+    parser.add_argument(
+        "--algorithm-report",
+        type=Path,
+        help="Optional TSV HIV-1 drug-specific algorithm score audit.",
+    )
     parser.add_argument("--corpus-root", type=Path, default=REPO_ROOT, help=argparse.SUPPRESS)
     args = parser.parse_args()
 
@@ -780,6 +1046,8 @@ def main() -> int:
             "missing hivfacts pattern input(s): "
             + ", ".join(str(path) for path in missing_pattern_inputs)
         )
+    if args.hiv1_algorithm is not None and not args.hiv1_algorithm.exists():
+        raise SystemExit(f"missing hivfacts algorithm input: {args.hiv1_algorithm}")
 
     mutation_rows = [
         row
@@ -794,6 +1062,12 @@ def main() -> int:
         for row in read_drug_patterns(path, drugs)
     ]
     pattern_result = evaluate_drug_patterns(pattern_rows, drugs, mappings)
+    algorithm_rows = (
+        read_hiv1_algorithm(args.hiv1_algorithm, drugs)
+        if args.hiv1_algorithm is not None
+        else []
+    )
+    algorithm_result = evaluate_hiv1_algorithm_rules(algorithm_rows, mappings)
 
     print("Stanford HIVDB hivfacts drug identity audit")
     print(
@@ -826,6 +1100,15 @@ def main() -> int:
             f"exact_pairs={pattern_result['exact_pattern_score_pairs']} "
             f"non_exact_pairs={pattern_result['non_exact_pattern_score_pairs']}"
         )
+    if args.hiv1_algorithm:
+        print(
+            "  HIV-1 algorithm score rules: "
+            f"drugs={algorithm_result['algorithm_drugs']} "
+            f"score_assignments={algorithm_result['score_assignments']} "
+            f"exact_assignments={algorithm_result['exact_score_assignments']} "
+            f"non_exact_assignments={algorithm_result['non_exact_score_assignments']} "
+            f"full_name_mismatches={algorithm_result['full_name_mismatches']}"
+        )
 
     if args.drug_report:
         write_drug_report(result["drug_rows"], args.drug_report)
@@ -839,6 +1122,12 @@ def main() -> int:
     if args.pattern_report:
         write_pattern_report(pattern_result["pattern_report_rows"], args.pattern_report)
         print(f"wrote {args.pattern_report}")
+    if args.algorithm_report:
+        write_algorithm_report(
+            algorithm_result["algorithm_report_rows"],
+            args.algorithm_report,
+        )
+        print(f"wrote {args.algorithm_report}")
 
     print(
         "--audit: no rows seeded; HIVDB drug-specific mutation rules need a "
