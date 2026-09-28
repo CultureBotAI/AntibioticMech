@@ -1828,12 +1828,15 @@ def attach_phibase_resistance(records: dict[str, dict]) -> Counter:
             counts["identity_drift"] += 1
             continue
         grouped[row["identifier"]].append(row)
-        counts["matched_associations"] += 1
 
     for identifier, matched_rows in sorted(grouped.items()):
         items = []
         seen = set()
         for row in matched_rows:
+            refusal = non_organism_taxon_reason(row["taxon_id"], row["taxon_label"])
+            if refusal:
+                counts["refused_non_organism_taxon"] += 1
+                continue
             key = (
                 row["phig_id"], row["taxon_id"], row["strain_taxon_id"],
                 row["strain_label"], row["modification"], row["phenotype_id"], row["pmid"],
@@ -1883,6 +1886,9 @@ def attach_phibase_resistance(records: dict[str, dict]) -> Counter:
                 }],
             }
             items.append({k: v for k, v in item.items() if v is not None})
+            counts["matched_associations"] += 1
+        if not items:
+            continue
         records[identifier].setdefault("resistance_mechanisms", []).extend(items)
         _history_last(records[identifier])
         counts["matched_records"] += 1
@@ -2949,15 +2955,24 @@ def producer_refusal_reason(taxon_id: str, taxon_label: str) -> str | None:
     and the drift was undetectable, because the only row exercising it matches
     no corpus record, so both versions produced the same queue.
     """
-    bucket = _NON_ORGANISM_TAXA.get(taxon_id)
-    if bucket:
-        return (f"NCBITaxon:{taxon_id} is {bucket}, not an organism, while the label "
-                f"reads {taxon_label.rstrip('.')!r}. The identifier and the name "
-                "disagree about what is being claimed.")
+    reason = non_organism_taxon_reason(taxon_id, taxon_label)
+    if reason:
+        return reason
     if not names_an_organism(taxon_label):
         return (f"{taxon_label!r} (NCBITaxon:{taxon_id}) identifies no organism. The "
                 "producer claim would say only that some microbe makes this.")
     return None
+
+
+def non_organism_taxon_reason(taxon_id: str, taxon_label: str) -> str | None:
+    bucket = _NON_ORGANISM_TAXA.get(taxon_id)
+    if not bucket:
+        return None
+    return (
+        f"NCBITaxon:{taxon_id} is {bucket}, not an organism, while the label "
+        f"reads {taxon_label.rstrip('.')!r}. The identifier and the name "
+        "disagree about what is being claimed."
+    )
 
 
 def names_an_organism(label: str) -> bool:

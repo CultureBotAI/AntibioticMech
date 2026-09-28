@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
+import seed_from_sources  # noqa: E402
 from seed_from_sources import (  # noqa: E402
     PHIBASE_RESISTANCE_SOURCE,
     merge_with_existing,
@@ -59,6 +60,47 @@ def test_seeded_associations_do_not_claim_a_biochemical_route(records):
     assert all("not evidence for a specific biochemical resistance mechanism" in item["note"]
                for item in imported)
     assert all(item["source"] == PHIBASE_RESISTANCE_SOURCE for item in imported)
+
+
+def test_phibase_refuses_container_taxa(tmp_path, monkeypatch):
+    row = {
+        "identifier": "CHEBI:1",
+        "standard_inchi_key": "AAAAAAAAAAAAAA-AAAAAAAAAA-A",
+        "phig_id": "PHIG:1",
+        "protein_accession": "P1",
+        "gene_id": "gene-1",
+        "taxon_id": "12908",
+        "taxon_label": "Aspergillus flavus",
+        "strain_taxon_id": "",
+        "strain_label": "",
+        "modification": "erg11delta (deletion)",
+        "phenotype_id": "PHIPO:1",
+        "phenotype_label": "resistance to widgetmycin",
+        "evidence_code": "Cell growth assay",
+        "interaction_type": "antimicrobial_interaction",
+        "pmid": "1",
+        "source_commit": "test",
+        "source_retrieved_on": "2026-09-28",
+    }
+    path = tmp_path / "phibase_amr.tsv"
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=row.keys(), delimiter="\t")
+        writer.writeheader()
+        writer.writerow(row)
+    monkeypatch.setattr(seed_from_sources, "RAW_DIR", tmp_path)
+    records = {
+        "CHEBI:1": {
+            "identifier": "CHEBI:1",
+            "chemical_structure": {"standard_inchi_key": row["standard_inchi_key"]},
+            "curation_history": [],
+        },
+    }
+
+    counts = seed_from_sources.attach_phibase_resistance(records)
+
+    assert counts["refused_non_organism_taxon"] == 1
+    assert counts["matched_associations"] == 0
+    assert "resistance_mechanisms" not in records["CHEBI:1"]
 
 
 def test_reseed_replaces_only_phibase_owned_resistance_slice(records):
