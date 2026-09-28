@@ -2395,12 +2395,13 @@ NCBI_AST_ACTIVITY_INVENTORY = RAW_DIR / "ncbi_ast_activity.tsv"
 NCBI_AST_REFERENCE = "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/"
 # Bump with NCBI_AST_ACTIVITY_GROUP_COLUMNS because those columns define the
 # stable source_observation_id digest for committed exact reports.
-NCBI_AST_ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v3"
+NCBI_AST_ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v4"
 NCBI_AST_ACTIVITY_GROUP_COLUMNS = [
     "source_name",
     "normalized_antibiotic",
     "identifier",
     "standard_inchi_key",
+    "taxon_id",
     "taxon_label",
     "biosample_accession",
     "bioproject_accession",
@@ -2461,6 +2462,7 @@ NCBI_AST_ASSEMBLY_PATTERN = re.compile(r"^GC[AF]_[0-9]+(\.[0-9]+)?$")
 NCBI_AST_SRA_ACCESSION_PATTERN = re.compile(
     r"^(SRR|ERR|DRR|SRX|ERX|DRX|SRP|ERP|DRP|SRS|ERS|DRS)[0-9]+$"
 )
+NCBI_AST_TAXON_PATTERN = re.compile(r"^NCBITaxon:[1-9][0-9]*$")
 NCBI_AST_NORMALIZED_NAME_PATTERN = re.compile(r"[^a-z0-9]+")
 NCBI_AST_TSV_CONTROL_CHARS = frozenset("\t\r\n")
 
@@ -2503,6 +2505,7 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
         "isolate_count",
         "source_name",
         "normalized_antibiotic",
+        "taxon_id",
         "taxon_label",
         "biosample_accession",
         "bioproject_accession",
@@ -2538,6 +2541,8 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
 
     if row.get("activity"):
         observation["activity"] = row["activity"]
+    if row.get("taxon_id"):
+        observation["taxon_id"] = row["taxon_id"]
     if row.get("mic_value"):
         observation["mic_value"] = float(row["mic_value"])
         observation["mic_units"] = row["mic_units"]
@@ -2674,6 +2679,8 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                 raise ValueError(f"{prefix}: invalid BioSample accession")
             if NCBI_AST_BIOPROJECT_PATTERN.match(row["bioproject_accession"]) is None:
                 raise ValueError(f"{prefix}: invalid BioProject accession")
+            if row["taxon_id"] and NCBI_AST_TAXON_PATTERN.match(row["taxon_id"]) is None:
+                raise ValueError(f"{prefix}: invalid NCBI Taxonomy CURIE")
             if (
                 row["target_accession"]
                 and NCBI_AST_TARGET_PATTERN.match(row["target_accession"]) is None

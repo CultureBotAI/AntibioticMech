@@ -48,6 +48,7 @@ def ncbi_ast_row(**overrides: str) -> dict[str, str]:
         "normalized_antibiotic": "cefepime",
         "identifier": "CHEBI:478164",
         "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+        "taxon_id": "NCBITaxon:562",
         "taxon_label": "Escherichia coli and Shigella",
         "biosample_accession": "SAMN11953777",
         "bioproject_accession": "PRJNA292666",
@@ -74,7 +75,7 @@ def test_ncbi_ast_activity_columns_match_the_evaluator_contract():
 
     assert NCBI_AST_ACTIVITY_COLUMNS == ACTIVITY_REPORT_COLUMNS
     assert NCBI_AST_ACTIVITY_GROUP_ID_VERSION == ACTIVITY_GROUP_ID_VERSION
-    assert ACTIVITY_GROUP_ID_VERSION == "ncbi_ast_activity_group_v3"
+    assert ACTIVITY_GROUP_ID_VERSION == "ncbi_ast_activity_group_v4"
     assert NCBI_AST_ACTIVITY_GROUP_COLUMNS == ACTIVITY_REPORT_GROUP_COLUMNS
     assert ncbi_ast_activity_group_id(row) == activity_group_id(row)
 
@@ -196,6 +197,9 @@ def test_load_ncbi_ast_activity_inventory_rejects_mixed_source_metadata(tmp_path
         ({"platform": "AST\nCLSI"}, "platform contains a tab or newline"),
         ({"biosample_accession": "BioSample:SAMN11953777"}, "invalid BioSample accession"),
         ({"bioproject_accession": "SAMN11953777"}, "invalid BioProject accession"),
+        ({"taxon_id": "562"}, "invalid NCBI Taxonomy CURIE"),
+        ({"taxon_id": "NCBITaxon:0"}, "invalid NCBI Taxonomy CURIE"),
+        ({"taxon_id": "NCBITaxon:000562"}, "invalid NCBI Taxonomy CURIE"),
         ({"target_accession": "GCF_003123125.1"}, "invalid Pathogen Detection target"),
         ({"assembly_accession": "SAMN11953777"}, "invalid Assembly accession"),
         ({"sra_accessions": "SAMN11953777"}, "invalid SRA accession"),
@@ -271,6 +275,7 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
 
     assert counts["matched_observations"] == 1
     assert counts["matched_records"] == 1
+    assert observation["taxon_id"] == "NCBITaxon:562"
     assert observation["taxon_label"] == "Escherichia coli and Shigella"
     assert observation["activity"] == "RESISTANT"
     assert observation["mic_value"] == 2.0
