@@ -270,6 +270,20 @@ def standardized_activity_measurements(
     return mic, disk
 
 
+def standardized_activity_call(row: dict[str, str]) -> tuple[str, str] | None:
+    phenotype = first_value(row, PHENOTYPE_ALIASES)
+    if not phenotype:
+        return "", ""
+    activity = ACTIVITY_CALLS.get(phenotype.casefold())
+    if activity is None:
+        return None
+    return phenotype, activity
+
+
+def has_invalid_phenotype(row: dict[str, str]) -> bool:
+    return standardized_activity_call(row) is None
+
+
 def activity_group_id(row: dict[str, str]) -> str:
     digest = hashlib.sha256()
     digest.update(ACTIVITY_GROUP_ID_VERSION.encode("utf-8"))
@@ -499,6 +513,9 @@ def activity_report_context(
     measurements = standardized_activity_measurements(row)
     if measurements is None:
         return None
+    activity_call = standardized_activity_call(row)
+    if activity_call is None:
+        return None
 
     taxon_label = first_value(row, TAXON_ALIASES)
     biosample_accession = first_value(row, BIOSAMPLE_ALIASES)
@@ -518,7 +535,7 @@ def activity_report_context(
         return None
 
     mic, disk = measurements
-    phenotype = first_value(row, PHENOTYPE_ALIASES)
+    phenotype, activity = activity_call
     return {
         "taxon_label": taxon_label,
         "biosample_accession": biosample_accession,
@@ -526,7 +543,7 @@ def activity_report_context(
         "target_accession": target_accession,
         "assembly_accession": assembly_accession,
         "phenotype": phenotype,
-        "activity": ACTIVITY_CALLS.get(phenotype.casefold(), ""),
+        "activity": activity,
         "mic_value": mic[0],
         "mic_qualifier": mic[1],
         "mic_units": mic[2],
@@ -700,6 +717,8 @@ def evaluate_rows(
     rows_with_invalid_target_acc = 0
     rows_with_invalid_assembly_acc = 0
     rows_with_taxon = 0
+    rows_with_phenotype = 0
+    rows_with_invalid_phenotype = 0
     rows_with_assay_method = 0
     rows_with_dedupe_context = 0
 
@@ -720,6 +739,8 @@ def evaluate_rows(
         rows_with_invalid_target_acc += int(has_invalid_target_accession(row))
         rows_with_invalid_assembly_acc += int(has_invalid_assembly_accession(row))
         rows_with_taxon += int(has_value(row, TAXON_ALIASES))
+        rows_with_phenotype += int(has_value(row, PHENOTYPE_ALIASES))
+        rows_with_invalid_phenotype += int(has_invalid_phenotype(row))
         rows_with_assay_method += int(has_assay_method(row))
         rows_with_dedupe_context += int(project_dedupe_hit(row, project_dedupe) is not None)
 
@@ -814,8 +835,11 @@ def evaluate_rows(
                     has_invalid_assembly_accession(row) for row in antibiotic_ast_rows
                 ),
                 "taxon_count": sum(has_value(row, TAXON_ALIASES) for row in antibiotic_ast_rows),
-                "assay_method_count": sum(has_assay_method(row) for row in antibiotic_ast_rows),
                 "phenotype_count": sum(has_value(row, PHENOTYPE_ALIASES) for row in antibiotic_ast_rows),
+                "invalid_phenotype_count": sum(
+                    has_invalid_phenotype(row) for row in antibiotic_ast_rows
+                ),
+                "assay_method_count": sum(has_assay_method(row) for row in antibiotic_ast_rows),
                 "mic_count": sum(has_value(row, MIC_ALIASES) for row in antibiotic_ast_rows),
                 "standardized_mic_count": len(valid_mic_measurements),
                 "invalid_mic_count": sum(measurement is None for measurement in mic_measurements),
@@ -858,6 +882,8 @@ def evaluate_rows(
         "rows_with_invalid_target_acc": rows_with_invalid_target_acc,
         "rows_with_invalid_assembly_acc": rows_with_invalid_assembly_acc,
         "rows_with_taxon": rows_with_taxon,
+        "rows_with_phenotype": rows_with_phenotype,
+        "rows_with_invalid_phenotype": rows_with_invalid_phenotype,
         "rows_with_assay_method": rows_with_assay_method,
         "rows_with_dedupe_context": rows_with_dedupe_context,
         "exact_name_matched_antibiotics": sum(
@@ -911,8 +937,9 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
         "assembly_acc_count",
         "invalid_assembly_acc_count",
         "taxon_count",
-        "assay_method_count",
         "phenotype_count",
+        "invalid_phenotype_count",
+        "assay_method_count",
         "mic_count",
         "standardized_mic_count",
         "invalid_mic_count",
@@ -1116,6 +1143,8 @@ def main() -> int:
     )
     print(
         f"  context: taxon_rows={result['rows_with_taxon']} "
+        f"phenotype_rows={result['rows_with_phenotype']} "
+        f"invalid_phenotype_rows={result['rows_with_invalid_phenotype']} "
         f"assay_method_rows={result['rows_with_assay_method']}"
     )
     print(f"  dedupe: source_context_rows={result['rows_with_dedupe_context']}")

@@ -256,6 +256,7 @@ def test_evaluate_rows_counts_exact_activity_report_candidates_after_dedupe():
     assert result["rows_with_invalid_target_acc"] == 1
     assert result["rows_with_invalid_assembly_acc"] == 1
     assert result["rows_with_assay_method"] == 4
+    assert result["rows_with_invalid_phenotype"] == 0
     assert result["exact_mapped_activity_report_candidate_rows"] == 1
     assert result["antibiotic_rows"][0]["activity_report_candidate_count"] == 1
     assert result["antibiotic_rows"][0]["invalid_target_acc_count"] == 1
@@ -453,6 +454,73 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
     assert activity_rows[1]["mic_value"] == ""
 
 
+def test_exact_activity_rows_excludes_unknown_phenotypes():
+    rows = [
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953777",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "R",
+            "mic": "2",
+            "platform": "AST",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953778",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "non-susceptible",
+            "mic": "4",
+            "platform": "AST",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953779",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+            "mic": "8",
+            "platform": "AST",
+        },
+    ]
+    mappings = {
+        "cefepime": {
+            "mapping_status": "EXACT",
+            "source_name": "cefepime",
+            "identifier": "CHEBI:478164",
+            "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+        },
+    }
+
+    result = evaluate_rows(
+        rows,
+        {"cefepime": {"CHEBI:478164"}},
+        {"CHEBI:478164": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
+        mappings=mappings,
+    )
+    activity_rows = exact_activity_rows(
+        rows,
+        mappings,
+        source_version="2026-09-26-ast-browser",
+        source_retrieved_on="2026-09-26",
+    )
+
+    assert result["rows_with_phenotype"] == 2
+    assert result["rows_with_invalid_phenotype"] == 1
+    assert result["exact_mapped_activity_report_candidate_rows"] == 2
+    assert result["antibiotic_rows"][0]["invalid_phenotype_count"] == 1
+    assert {row["biosample_accession"] for row in activity_rows} == {
+        "SAMN11953777",
+        "SAMN11953779",
+    }
+    assert {
+        row["activity"] for row in activity_rows
+    } == {
+        "",
+        "RESISTANT",
+    }
+
+
 def test_exact_activity_rows_excludes_known_source_context():
     rows = [
         {
@@ -595,6 +663,15 @@ def test_project_dedupe_report_rows_rank_valid_project_contexts():
             "bioproject_acc": "PRJNA292669",
             "taxgroup_name": "Escherichia coli",
             "mic": "2",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953786",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "non-susceptible",
+            "mic": "2",
+            "platform": "AST",
         },
         {
             "antibiotic": "cefepime",
@@ -1248,6 +1325,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "taxon_count": 7,
             "assay_method_count": 7,
             "phenotype_count": 7,
+            "invalid_phenotype_count": 0,
             "mic_count": 7,
             "standardized_mic_count": 7,
             "invalid_mic_count": 0,
@@ -1291,6 +1369,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "taxon_count": "7",
         "assay_method_count": "7",
         "phenotype_count": "7",
+        "invalid_phenotype_count": "0",
         "mic_count": "7",
         "standardized_mic_count": "7",
         "invalid_mic_count": "0",
@@ -1590,6 +1669,8 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert "project_context_rows=2" in result.stdout
     assert "valid_project_context_rows=2" in result.stdout
     assert "taxon_rows=2" in result.stdout
+    assert "phenotype_rows=2" in result.stdout
+    assert "invalid_phenotype_rows=0" in result.stdout
     assert "assay_method_rows=2" in result.stdout
     assert "source_context_rows=1" in result.stdout
     assert "project_dedupe_report=" in result.stdout

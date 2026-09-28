@@ -166,6 +166,7 @@ def test_load_ncbi_ast_activity_inventory_rejects_duplicate_groups(tmp_path):
         ({"target_accession": "GCF_003123125.1"}, "invalid Pathogen Detection target"),
         ({"assembly_accession": "SAMN11953777"}, "invalid Assembly accession"),
         ({"normalized_antibiotic": "stale"}, "normalized_antibiotic must match source_name"),
+        ({"phenotype": "non-susceptible", "activity": ""}, "unsupported phenotype"),
         ({"activity": "NON_SUSCEPTIBLE"}, "activity must match phenotype"),
         ({"phenotype": "S", "activity": "RESISTANT"}, "activity must match phenotype"),
         ({"activity_group_id": "ncbi_ast:stale"}, "activity_group_id must be"),
