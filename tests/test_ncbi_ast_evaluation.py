@@ -222,6 +222,16 @@ def test_evaluate_rows_counts_exact_activity_report_candidates_after_dedupe():
             "mic": "16",
             "platform": "AST",
         },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953781",
+            "bioproject_acc": "PRJNA292666",
+            "target_acc": "PDT000001234.1",
+            "Run": "not-an-sra-accession",
+            "taxgroup_name": "Escherichia coli",
+            "mic": "32",
+            "platform": "AST",
+        },
     ]
     mappings = {
         "cefepime": {
@@ -252,16 +262,18 @@ def test_evaluate_rows_counts_exact_activity_report_candidates_after_dedupe():
         },
     )
 
-    assert result["exact_mapped_rows"] == 3
+    assert result["exact_mapped_rows"] == 4
     assert result["rows_with_invalid_target_acc"] == 1
     assert result["rows_with_invalid_assembly_acc"] == 1
-    assert result["rows_with_assay_method"] == 4
+    assert result["rows_with_invalid_sra_accessions"] == 1
+    assert result["rows_with_assay_method"] == 5
     assert result["rows_with_invalid_phenotype"] == 0
     assert result["exact_mapped_activity_report_candidate_rows"] == 1
     assert result["antibiotic_rows"][0]["activity_report_candidate_count"] == 1
     assert result["antibiotic_rows"][0]["invalid_target_acc_count"] == 1
     assert result["antibiotic_rows"][0]["assembly_acc_count"] == 1
     assert result["antibiotic_rows"][0]["invalid_assembly_acc_count"] == 1
+    assert result["antibiotic_rows"][0]["invalid_sra_accessions_count"] == 1
     assert result["antibiotic_rows"][1]["activity_report_candidate_count"] == 1
 
 
@@ -273,6 +285,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "bioproject_acc": "PRJNA292666",
             "target_acc": "PDT000001234.1",
             "asm_acc": "GCF_003123125.1",
+            "Run": "SRR222222,ERR111111 SRR222222",
             "taxgroup_name": "Escherichia coli and Shigella",
             "scientific_name": "Escherichia coli",
             "phenotype": "R",
@@ -289,6 +302,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "bioproject_acc": "PRJNA292666",
             "target_acc": "PDT000001234.1",
             "asm_acc": "GCF_003123125.1",
+            "Run": "ERR111111|SRR222222",
             "taxgroup_name": "Escherichia coli and Shigella",
             "scientific_name": "Escherichia coli",
             "phenotype": "R",
@@ -305,6 +319,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "bioproject_acc": "PRJNA292666",
             "target_acc": "PDT000001234.1",
             "asm_acc": "GCF_003123125.1",
+            "Run": "ERR111111|SRR222222",
             "taxgroup_name": "Escherichia coli and Shigella",
             "scientific_name": "Escherichia coli",
             "phenotype": "R",
@@ -429,6 +444,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
         "bioproject_accession": "PRJNA292666",
         "target_accession": "PDT000001234.1",
         "assembly_accession": "GCF_003123125.1",
+        "sra_accessions": "ERR111111|SRR222222",
         "phenotype": "R",
         "activity": "RESISTANT",
         "mic_value": "2",
@@ -917,6 +933,8 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
         {
             "BioSample": "SAMN11953778",
             "BioProject": "PRJNA292666",
+            "Isolate": "PDT000001235.1",
+            "Run": "SRR222222;ERR111111",
             "Organism group": "Klebsiella pneumoniae",
             "Antibiotic": "cefepime",
             "Measurement sign": ">",
@@ -935,10 +953,12 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
     assert result["rows_with_bioproject"] == 2
     assert result["rows_with_project_context"] == 2
     assert result["rows_with_valid_project_context"] == 2
-    assert result["rows_with_target_acc"] == 1
+    assert result["rows_with_target_acc"] == 2
     assert result["rows_with_assembly_acc"] == 1
+    assert result["rows_with_sra_accessions"] == 1
     assert result["rows_with_invalid_target_acc"] == 0
     assert result["rows_with_invalid_assembly_acc"] == 0
+    assert result["rows_with_invalid_sra_accessions"] == 0
     assert result["rows_with_taxon"] == 2
     assert result["antibiotic_rows"][0]["mic_count"] == 1
     assert result["antibiotic_rows"][0]["standardized_mic_count"] == 1
@@ -1323,6 +1343,8 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "invalid_target_acc_count": 0,
             "assembly_acc_count": 7,
             "invalid_assembly_acc_count": 0,
+            "sra_accessions_count": 7,
+            "invalid_sra_accessions_count": 0,
             "taxon_count": 7,
             "assay_method_count": 7,
             "phenotype_count": 7,
@@ -1367,6 +1389,8 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "invalid_target_acc_count": "0",
         "assembly_acc_count": "7",
         "invalid_assembly_acc_count": "0",
+        "sra_accessions_count": "7",
+        "invalid_sra_accessions_count": "0",
         "taxon_count": "7",
         "assay_method_count": "7",
         "phenotype_count": "7",
@@ -1452,6 +1476,7 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
             "bioproject_accession": "PRJNA292666",
             "target_accession": "PDT000001234.1",
             "assembly_accession": "GCF_003123125.1",
+            "sra_accessions": "ERR111111|SRR222222",
             "phenotype": "R",
             "activity": "RESISTANT",
             "mic_value": "2",
@@ -1487,6 +1512,7 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
         "bioproject_accession": "PRJNA292666",
         "target_accession": "PDT000001234.1",
         "assembly_accession": "GCF_003123125.1",
+        "sra_accessions": "ERR111111|SRR222222",
         "phenotype": "R",
         "activity": "RESISTANT",
         "mic_value": "2",
@@ -1551,8 +1577,9 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
                 "antibiotic",
                 "biosample_acc",
                 "bioproject_acc",
-                "target_acc",
+                "Isolate",
                 "asm_acc",
+                "Run",
                 "scientific_name",
                 "phenotype",
                 "measurement_sign",
@@ -1570,8 +1597,9 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             "antibiotic": "amikacin",
             "biosample_acc": "SAMN11953777",
             "bioproject_acc": "PRJNA292666",
-            "target_acc": "PDT000001234.1",
+            "Isolate": "PDT000001234.1",
             "asm_acc": "GCF_003123125.1",
+            "Run": "SRR222222,ERR111111",
             "scientific_name": "Klebsiella pneumoniae",
             "phenotype": "R",
             "measurement_sign": ">",
@@ -1585,8 +1613,9 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             "antibiotic": "amikacin",
             "biosample_acc": "SAMN11953778",
             "bioproject_acc": "PRJNA292667",
-            "target_acc": "PDT000001235.1",
+            "Isolate": "PDT000001235.1",
             "asm_acc": "GCF_003123126.1",
+            "Run": "SRR222223",
             "scientific_name": "Klebsiella pneumoniae",
             "phenotype": "R",
             "measurement_sign": ">",
@@ -1687,6 +1716,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
         activity_rows = list(reader)
         assert "target_accession" in (reader.fieldnames or [])
         assert "assembly_accession" in (reader.fieldnames or [])
+        assert "sra_accessions" in (reader.fieldnames or [])
         assert "target_acc" not in (reader.fieldnames or [])
 
     with project_report.open(newline="", encoding="utf-8") as handle:
@@ -1701,6 +1731,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
 
     assert activity_rows[0]["assembly_accession"] == "GCF_003123125.1"
     assert activity_rows[0]["target_accession"] == "PDT000001234.1"
+    assert activity_rows[0]["sra_accessions"] == "ERR111111|SRR222222"
     assert activity_rows[0]["source_version"] == "2026-09-26-ast-browser"
     assert activity_rows[0]["source_retrieved_on"] == "2026-09-26"
     assert activity_rows[0]["isolate_count"] == "1"
