@@ -15,7 +15,11 @@ venv/
 htmlcov/
 
 # Generated reports — regenerate with `just report` / `just validate-all`
-reports/
+reports/*
+!reports/yaml_record_review/
+!reports/yaml_record_review/*.md
+!reports/yaml_category_review/
+!reports/yaml_category_review/*.md
 # ...except the research manifest, which is NOT regenerable. It records what
 # was actually paid for: which novel terms were researched, how long each took,
 # and which failed and why. Re-running would cost the whole batch again.
