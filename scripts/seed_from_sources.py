@@ -2424,6 +2424,8 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                 raise ValueError(f"{prefix}: invalid Assembly accession")
             if row["normalized_antibiotic"] != normalized_ncbi_ast_name(row["source_name"]):
                 raise ValueError(f"{prefix}: normalized_antibiotic must match source_name")
+            if not row["platform"] and not row["reagent"]:
+                raise ValueError(f"{prefix}: platform or reagent is required")
             try:
                 source_retrieved_on = date.fromisoformat(row["source_retrieved_on"])
             except ValueError as error:
