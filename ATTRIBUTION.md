@@ -8,20 +8,17 @@ carry this attribution with it.
 
 > AntibioticMech (CultureBotAI), CC BY 4.0. Derived from ChEBI (EMBL-EBI,
 > CC BY 4.0), the Antibiotic Resistance Ontology (CARD, McMaster University,
-> CC BY 4.0) and MIBiG (CC BY 4.0), with chemical structures from PubChem
-> (NCBI).
-
-MIBiG is named here because its licence requires it and because the
-machine-readable route below does not reach it: a MIBiG-derived claim is marked
-on `producer_organisms[].source`, not in `source_concepts`, so a consumer
-following the per-record method alone would not find it. Three further adopted
-sources are missing from this notice entirely — see #243.
+> CC BY 4.0), MIBiG (CC BY 4.0), BindingDB (CC BY 4.0), PHI-base
+> (CC BY 4.0), the CRyPTIC Consortium Dataset (CC BY 4.0), Drugs@FDA
+> (U.S. Food and Drug Administration) and FDA GSRS / UNII (FDA and NCATS),
+> with chemical structures from PubChem (NCBI).
 
 ## Per-record provenance
 
 Attribution is machine-readable, not only a notice. Every record carries a
-`source_concepts` block naming each upstream concept that resolved to it, with
-that source's own identifier and label:
+`source_concepts` block naming each ChEBI, ARO, or curator concept that
+resolved to its chemical structure identity, with that source's own identifier
+and label:
 
 ```yaml
 source_concepts:
@@ -35,8 +32,14 @@ source_concepts:
   minted_identifier: antibioticmech:aro-...
 ```
 
-A consumer taking a subset of the corpus can therefore derive exactly which
-upstream resources that subset depends on, rather than carrying a blanket notice.
+Source-owned mechanism, activity, production, and regulatory assertions carry
+their source on the item itself: `producer_organisms[].source`,
+`molecular_targets[].source`, `resistance_mechanisms[].source`,
+`activity_spectrum[].source`, and `clinical_status_assertions[].source`.
+
+A consumer taking a subset of the corpus can derive exactly which upstream
+resources that subset depends on from both record identity and item-level
+source fields, rather than carrying a blanket notice.
 
 ## Sources
 
@@ -67,6 +70,40 @@ accessions, and the per-locus evidence grading the compound-to-producer link.
 Zdouc MM, Blin K, Louwen NLL, et al. MIBiG 4.0: advancing biosynthetic gene
 cluster curation through global collaboration. *Nucleic Acids Res.*
 2025;53(D1):D678-D690. doi:10.1093/nar/gkae1115
+
+**BindingDB** — CC BY 4.0 for records curated directly from primary
+literature by BindingDB. Supplies quantitative compound-target measurements
+from article-curated rows. Rows BindingDB imported from ChEMBL and other
+providers are excluded. <https://www.bindingdb.org/>
+
+Liu T, Hwang L, Burley SK, Nitsche CI, Southan C, Walters WP, Gilson MK.
+BindingDB in 2024: a FAIR knowledgebase of protein-small molecule binding data.
+*Nucleic Acids Res.* 2025;53(D1):D1633-D1644. doi:10.1093/nar/gkae1075
+
+**PHI-base** — the Pathogen-Host Interactions database. CC BY 4.0. Supplies
+curated ChEBI-grounded pathogen gene--antimicrobial resistance interactions
+with primary PubMed citations. <https://phi5.phi-base.org/>
+
+Urban M, Cuzick A, Seager J, et al. PHI-base: the multi-species pathogen-host
+interaction database in 2025. *Nucleic Acids Res.* 2025;53(D1):D826-D838.
+doi:10.1093/nar/gkae1084
+
+**CRyPTIC Consortium Dataset** — CRyPTIC Consortium. CC BY 4.0. Supplies
+grouped DST and UKMYC *Mycobacterium tuberculosis* complex activity
+observations from exact-mapped drug codes. <https://zenodo.org/records/15680920>
+
+CRyPTIC Consortium. CRyPTIC Consortium Dataset. Zenodo.
+doi:10.5281/zenodo.15680920
+
+**Drugs@FDA** — U.S. Food and Drug Administration. United States government
+public-domain data. Supplies product-level human-drug approval and marketing
+facts for exact GSRS-grounded single-ingredient products.
+<https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files>
+
+**FDA GSRS / UNII** — U.S. Food and Drug Administration and the National Center
+for Advancing Translational Sciences. United States government public data;
+GSRS materials are Apache-2.0. Supplies the UNII and chemical-structure
+identity layer used to ground Drugs@FDA products exactly. <https://gsrs.ncats.nih.gov/>
 
 **PubChem** — NCBI, NLM, NIH. Public domain (US Government work). Supplies
 structures for the CARD molecules ChEBI does not cover.

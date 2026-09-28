@@ -31,6 +31,37 @@ def test_reuse_audit_keeps_unverified_sources_out_of_adopted_state(repo_root):
     assert by_id["bacdive"][5] == "ATTRIBUTION"
 
 
+def test_attribution_notice_covers_adopted_redistributed_sources(repo_root):
+    text = (repo_root / "ATTRIBUTION.md").read_text(encoding="utf-8")
+    rows = (repo_root / "curation" / "source_queue.tsv").read_text().splitlines()
+    adopted = {row.split("\t", 1)[0] for row in rows[1:]
+               if row.split("\t")[8] == "ADOPTED"}
+    attribution_markers = {
+        "aro": "Antibiotic Resistance Ontology",
+        "bindingdb": "BindingDB",
+        "chebi": "ChEBI",
+        "cryptic": "CRyPTIC Consortium Dataset",
+        "fda_drugsfda": "Drugs@FDA",
+        "fda_gsrs": "FDA GSRS / UNII",
+        "mibig": "MIBiG",
+        "phibase": "PHI-base",
+        "pubchem": "PubChem",
+    }
+
+    assert set(attribution_markers) == adopted
+    for marker in attribution_markers.values():
+        assert marker in text
+
+    for field in (
+        "producer_organisms[].source",
+        "molecular_targets[].source",
+        "resistance_mechanisms[].source",
+        "activity_spectrum[].source",
+        "clinical_status_assertions[].source",
+    ):
+        assert field in text
+
+
 def test_coadd_audit_records_distribution_without_implying_reuse_permission(repo_root):
     audit = (repo_root / "research" / "2026-08-31-reuse-terms-audit.md").read_text()
     outreach = (repo_root / "research" / "2026-08-31-reuse-terms-outreach.md").read_text()
