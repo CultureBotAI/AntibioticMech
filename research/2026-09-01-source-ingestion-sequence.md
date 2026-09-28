@@ -165,9 +165,10 @@ No contact was made.
 Browser CSV/TSV and BigQuery-shaped exports without seeding rows. It summarizes
 submitted antibiotic strings by lexical exact-corpus candidates, ambiguous
 matches, unmatched names, taxon/BioSample/BioProject/target-accession coverage,
-MIC or disk-diffusion coverage, and measurement signs standardized to
-qualifiers and units. It can also emit the fillable seven-column drug-map
-template that a curator turns into the exact-structure crosswalk. When supplied
+source isolation metadata coverage, MIC or disk-diffusion coverage, and
+measurement signs standardized to qualifiers and units. It can also emit the
+fillable seven-column drug-map template that a curator turns into the
+exact-structure crosswalk. When supplied
 with a partially curated crosswalk, it writes a compact grouped activity report
 for exact-mapped rows with valid MIC or disk-diffusion measurements,
 optional NCBI Taxonomy identifiers normalized to `NCBITaxon` CURIEs,

@@ -1084,6 +1084,12 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
             "target_acc": "PDT000001234.1",
             "assembly_accession": "GCF_003123125.1",
             "TaxID": "562",
+            "Isolation type": "clinical",
+            "Location": "USA",
+            "Collection date": "2020",
+            "Create date": "2020-01-31",
+            "Host": "Homo sapiens",
+            "Isolation source": "blood",
             "taxgroup_name": "Escherichia coli and Shigella",
             "scientific_name": "Escherichia coli",
             "antibiotic": "cefepime",
@@ -1130,6 +1136,12 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
     assert result["rows_with_assembly_acc"] == 1
     assert result["rows_with_sra_accessions"] == 1
     assert result["rows_with_taxon_id"] == 3
+    assert result["rows_with_isolation_type"] == 1
+    assert result["rows_with_location"] == 1
+    assert result["rows_with_collection_date"] == 1
+    assert result["rows_with_create_date"] == 1
+    assert result["rows_with_host"] == 1
+    assert result["rows_with_isolation_source"] == 1
     assert result["rows_with_invalid_target_acc"] == 0
     assert result["rows_with_invalid_assembly_acc"] == 0
     assert result["rows_with_invalid_sra_accessions"] == 0
@@ -1142,6 +1154,12 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
     assert result["antibiotic_rows"][0]["standardized_disk_diffusion_count"] == 1
     assert result["antibiotic_rows"][0]["standardized_disk_diffusion_values"] == ">18 mm"
     assert result["antibiotic_rows"][0]["taxon_id_count"] == 3
+    assert result["antibiotic_rows"][0]["isolation_type_count"] == 1
+    assert result["antibiotic_rows"][0]["location_count"] == 1
+    assert result["antibiotic_rows"][0]["collection_date_count"] == 1
+    assert result["antibiotic_rows"][0]["create_date_count"] == 1
+    assert result["antibiotic_rows"][0]["host_count"] == 1
+    assert result["antibiotic_rows"][0]["isolation_source_count"] == 1
     assert result["antibiotic_rows"][0]["invalid_taxon_id_count"] == 1
     assert result["antibiotic_rows"][0]["taxon_ids"] == "NCBITaxon:562|NCBITaxon:573"
     assert (
@@ -1551,6 +1569,12 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "invalid_assembly_acc_count": 0,
             "sra_accessions_count": 7,
             "invalid_sra_accessions_count": 0,
+            "isolation_type_count": 7,
+            "location_count": 7,
+            "collection_date_count": 7,
+            "create_date_count": 7,
+            "host_count": 7,
+            "isolation_source_count": 7,
             "taxon_id_count": 7,
             "invalid_taxon_id_count": 0,
             "taxon_count": 7,
@@ -1600,6 +1624,12 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "invalid_assembly_acc_count": "0",
         "sra_accessions_count": "7",
         "invalid_sra_accessions_count": "0",
+        "isolation_type_count": "7",
+        "location_count": "7",
+        "collection_date_count": "7",
+        "create_date_count": "7",
+        "host_count": "7",
+        "isolation_source_count": "7",
         "taxon_id_count": "7",
         "invalid_taxon_id_count": "0",
         "taxon_count": "7",
@@ -1994,12 +2024,27 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert "phenotype_rows=2" in result.stdout
     assert "invalid_phenotype_rows=0" in result.stdout
     assert "assay_method_rows=2" in result.stdout
+    assert "isolation_type_rows=1" in result.stdout
+    assert "location_rows=1" in result.stdout
+    assert "collection_date_rows=1" in result.stdout
+    assert "create_date_rows=1" in result.stdout
+    assert "host_rows=1" in result.stdout
+    assert "isolation_source_rows=1" in result.stdout
     assert "source_context_rows=1" in result.stdout
     assert "unused_antibiotics=0" in result.stdout
     assert "unused_source_contexts=0" in result.stdout
     assert "project_dedupe_report=" in result.stdout
     assert "project_dedupe_map_template=" in result.stdout
     assert antibiotic_report.exists()
+    with antibiotic_report.open(newline="", encoding="utf-8") as handle:
+        antibiotic_rows = list(csv.DictReader(handle, delimiter="\t"))
+
+    assert antibiotic_rows[0]["isolation_type_count"] == "1"
+    assert antibiotic_rows[0]["location_count"] == "1"
+    assert antibiotic_rows[0]["collection_date_count"] == "1"
+    assert antibiotic_rows[0]["create_date_count"] == "1"
+    assert antibiotic_rows[0]["host_count"] == "1"
+    assert antibiotic_rows[0]["isolation_source_count"] == "1"
 
     with template.open(newline="", encoding="utf-8") as handle:
         assert list(csv.DictReader(handle, delimiter="\t"))[0]["source_record_id"] == "amikacin"
