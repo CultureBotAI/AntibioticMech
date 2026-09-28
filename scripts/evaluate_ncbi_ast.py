@@ -1068,6 +1068,26 @@ def write_project_dedupe_report(rows: list[dict], path: Path) -> None:
         writer.writerows(rows)
 
 
+def write_project_dedupe_map_template(rows: list[dict], path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=PROJECT_DEDUPE_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({
+                "accession_type": row["accession_type"],
+                "accession": row["accession"],
+                "source": "",
+                "source_version": "",
+                "notes": "",
+            })
+
+
 def write_activity_report(rows: list[dict], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
@@ -1148,6 +1168,14 @@ def main() -> int:
             "curating --project-dedupe-map exclusions."
         ),
     )
+    parser.add_argument(
+        "--project-dedupe-map-template",
+        type=Path,
+        help=(
+            "Optional fillable TSV for curating BioSample/BioProject "
+            "--project-dedupe-map exclusions."
+        ),
+    )
     args = parser.parse_args()
     if args.activity_report and not args.drug_map:
         parser.error("--activity-report requires --drug-map with exact curated mappings.")
@@ -1180,10 +1208,22 @@ def main() -> int:
         write_antibiotic_report(result["antibiotic_rows"], args.antibiotic_report)
     if args.drug_map_template:
         write_drug_map_template(result["antibiotic_rows"], args.drug_map_template)
+    project_dedupe_report_rows_ = []
+    if args.project_dedupe_report or args.project_dedupe_map_template:
+        project_dedupe_report_rows_ = project_dedupe_report_rows(
+            rows,
+            mappings,
+            project_dedupe,
+        )
     if args.project_dedupe_report:
         write_project_dedupe_report(
-            project_dedupe_report_rows(rows, mappings, project_dedupe),
+            project_dedupe_report_rows_,
             args.project_dedupe_report,
+        )
+    if args.project_dedupe_map_template:
+        write_project_dedupe_map_template(
+            project_dedupe_report_rows_,
+            args.project_dedupe_map_template,
         )
     activity_rows = (
         exact_activity_rows(
@@ -1264,6 +1304,8 @@ def main() -> int:
         print(f"  drug_map_template={args.drug_map_template}")
     if args.project_dedupe_report:
         print(f"  project_dedupe_report={args.project_dedupe_report}")
+    if args.project_dedupe_map_template:
+        print(f"  project_dedupe_map_template={args.project_dedupe_map_template}")
     if args.activity_report:
         print(
             f"  exact_mapped_activity_groups={len(activity_rows)} "

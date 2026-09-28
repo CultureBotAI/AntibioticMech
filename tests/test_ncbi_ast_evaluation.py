@@ -25,6 +25,7 @@ from evaluate_ncbi_ast import (  # noqa: E402
     write_activity_report,
     write_antibiotic_report,
     write_drug_map_template,
+    write_project_dedupe_map_template,
     write_project_dedupe_report,
 )
 
@@ -1616,6 +1617,44 @@ def test_project_dedupe_report_is_a_stable_tsv(tmp_path):
     }]
 
 
+def test_project_dedupe_map_template_is_fillable_by_the_curator(tmp_path):
+    path = tmp_path / "ncbi_ast_project_dedupe.tsv"
+    rows = [
+        {
+            "accession_type": "BioProject",
+            "accession": "PRJNA292666",
+            "ast_rows": 7,
+        },
+        {
+            "accession_type": "BioSample",
+            "accession": "SAMN11953777",
+            "ast_rows": 1,
+        },
+    ]
+
+    write_project_dedupe_map_template(rows, path)
+
+    with path.open(newline="", encoding="utf-8") as handle:
+        actual = list(csv.DictReader(handle, delimiter="\t"))
+
+    assert actual == [
+        {
+            "accession_type": "BioProject",
+            "accession": "PRJNA292666",
+            "source": "",
+            "source_version": "",
+            "notes": "",
+        },
+        {
+            "accession_type": "BioSample",
+            "accession": "SAMN11953777",
+            "source": "",
+            "source_version": "",
+            "notes": "",
+        },
+    ]
+
+
 def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     ast = tmp_path / "ast.tsv"
     with ast.open("w", newline="", encoding="utf-8") as handle:
@@ -1714,6 +1753,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     antibiotic_report = tmp_path / "ncbi_ast_antibiotics.tsv"
     template = tmp_path / "ncbi_ast_drug_map_template.tsv"
     project_report = tmp_path / "ncbi_ast_project_dedupe_report.tsv"
+    project_template = tmp_path / "ncbi_ast_project_dedupe_template.tsv"
     activity_report = tmp_path / "ncbi_ast_activity.tsv"
 
     result = subprocess.run(
@@ -1732,6 +1772,8 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             str(template),
             "--project-dedupe-report",
             str(project_report),
+            "--project-dedupe-map-template",
+            str(project_template),
             "--activity-report",
             str(activity_report),
             "--source-version",
@@ -1755,6 +1797,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert "source_context_rows=1" in result.stdout
     assert "unused_antibiotics=0" in result.stdout
     assert "project_dedupe_report=" in result.stdout
+    assert "project_dedupe_map_template=" in result.stdout
     assert antibiotic_report.exists()
 
     with template.open(newline="", encoding="utf-8") as handle:
@@ -1771,10 +1814,24 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     with project_report.open(newline="", encoding="utf-8") as handle:
         project_rows = list(csv.DictReader(handle, delimiter="\t"))
 
+    with project_template.open(newline="", encoding="utf-8") as handle:
+        project_template_rows = list(csv.DictReader(handle, delimiter="\t"))
+
     assert [row["accession"] for row in project_rows] == [
         "PRJNA292666",
         "SAMN11953777",
     ]
+    assert [row["accession"] for row in project_template_rows] == [
+        "PRJNA292666",
+        "SAMN11953777",
+    ]
+    assert project_template_rows[0] == {
+        "accession_type": "BioProject",
+        "accession": "PRJNA292666",
+        "source": "",
+        "source_version": "",
+        "notes": "",
+    }
     assert project_rows[0]["exact_mapped_antibiotics"] == "amikacin"
     assert project_rows[0]["exact_mapped_identifiers"] == "CHEBI:2637"
 
