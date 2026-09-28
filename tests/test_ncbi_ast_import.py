@@ -74,7 +74,7 @@ def test_ncbi_ast_activity_columns_match_the_evaluator_contract():
 
     assert NCBI_AST_ACTIVITY_COLUMNS == ACTIVITY_REPORT_COLUMNS
     assert NCBI_AST_ACTIVITY_GROUP_ID_VERSION == ACTIVITY_GROUP_ID_VERSION
-    assert ACTIVITY_GROUP_ID_VERSION == "ncbi_ast_activity_group_v2"
+    assert ACTIVITY_GROUP_ID_VERSION == "ncbi_ast_activity_group_v3"
     assert NCBI_AST_ACTIVITY_GROUP_COLUMNS == ACTIVITY_REPORT_GROUP_COLUMNS
     assert ncbi_ast_activity_group_id(row) == activity_group_id(row)
 
@@ -198,6 +198,15 @@ def test_load_ncbi_ast_activity_inventory_rejects_mixed_source_metadata(tmp_path
         ({"bioproject_accession": "SAMN11953777"}, "invalid BioProject accession"),
         ({"target_accession": "GCF_003123125.1"}, "invalid Pathogen Detection target"),
         ({"assembly_accession": "SAMN11953777"}, "invalid Assembly accession"),
+        ({"sra_accessions": "SAMN11953777"}, "invalid SRA accession"),
+        (
+            {"sra_accessions": "SRR222222|ERR111111"},
+            "sra_accessions must be unique and sorted",
+        ),
+        (
+            {"sra_accessions": "ERR111111|ERR111111"},
+            "sra_accessions must be unique and sorted",
+        ),
         ({"normalized_antibiotic": "stale"}, "normalized_antibiotic must match source_name"),
         ({"phenotype": "non-susceptible", "activity": ""}, "unsupported phenotype"),
         ({"activity": "NON_SUSCEPTIBLE"}, "activity must match phenotype"),
@@ -236,6 +245,7 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
         disk_diffusion_value="18",
         disk_diffusion_qualifier=">=",
         disk_diffusion_units="mm",
+        sra_accessions="ERR111111|SRR222222",
     )
     write_activity_report(path, [row])
     monkeypatch.setattr(seed_from_sources, "NCBI_AST_ACTIVITY_INVENTORY", path)
@@ -265,6 +275,7 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     assert observation["biosample_accession"] == "SAMN11953777"
     assert observation["bioproject_accession"] == "PRJNA292666"
     assert observation["assembly_accession"] == "GCF_003123125.1"
+    assert observation["sra_accessions"] == ["ERR111111", "SRR222222"]
     assert observation["source"] == NCBI_AST_ACTIVITY_SOURCE
     assert observation["source_version"] == "2026-09-26-ast-browser"
     assert observation["source_retrieved_on"] == "2026-09-26"
@@ -273,7 +284,8 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     assert "isolate_count=1" in observation["evidence"][0]["notes"]
     assert "standard CLSI" in observation["assay"]
     assert "target_accession=PDT000001234.1" in observation["evidence"][0]["notes"]
-    assert "BioSample, BioProject, target and assembly context" in observation["evidence"][0]["notes"]
+    assert "sra_accessions=ERR111111|SRR222222" in observation["evidence"][0]["notes"]
+    assert "BioSample, BioProject, target, assembly and SRA context" in observation["evidence"][0]["notes"]
 
 
 def test_attach_ncbi_ast_activity_rejects_identity_drift(tmp_path, monkeypatch):

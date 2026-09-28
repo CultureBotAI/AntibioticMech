@@ -55,7 +55,7 @@ PROJECT_DEDUPE_REPORT_COLUMNS = [
 ]
 # Bump with ACTIVITY_REPORT_GROUP_COLUMNS because those columns define the
 # stable activity_group_id digest for committed exact reports.
-ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v2"
+ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v3"
 ACTIVITY_REPORT_GROUP_COLUMNS = [
     "source_name",
     "normalized_antibiotic",
@@ -66,6 +66,7 @@ ACTIVITY_REPORT_GROUP_COLUMNS = [
     "bioproject_accession",
     "target_accession",
     "assembly_accession",
+    "sra_accessions",
     "phenotype",
     "activity",
     "mic_value",
@@ -108,8 +109,9 @@ ANTIBIOTIC_ALIASES = (
 )
 BIOSAMPLE_ALIASES = ("biosample", "biosampleaccession", "biosampleacc")
 BIOPROJECT_ALIASES = ("bioproject", "bioprojectaccession", "bioprojectacc")
-TARGET_ALIASES = ("targetacc", "targetaccession", "target")
+TARGET_ALIASES = ("targetacc", "targetaccession", "target", "isolate")
 ASSEMBLY_ALIASES = ("assemblyaccession", "assembly", "asmacc")
+SRA_ALIASES = ("sra", "sraaccession", "sraaccessions", "sraacc", "run", "runs")
 MIC_ALIASES = ("mic", "micvalue", "minimuminhibitoryconcentration")
 DISK_ALIASES = ("diskdiffusion", "diskdiameter", "diskzone")
 MEASUREMENT_SIGN_ALIASES = ("measurementsign", "sign")
@@ -132,6 +134,8 @@ BIOSAMPLE_PATTERN = re.compile(r"^SAM(N|D|EA)[0-9]+$")
 BIOPROJECT_PATTERN = re.compile(r"^PRJ(NA|EB|DB)[0-9]+$")
 TARGET_PATTERN = re.compile(r"^PDT[0-9]+(\.[0-9]+)?$")
 ASSEMBLY_PATTERN = re.compile(r"^GC[AF]_[0-9]+(\.[0-9]+)?$")
+SRA_ACCESSION_PATTERN = re.compile(r"^(SRR|ERR|DRR|SRX|ERX|DRX|SRP|ERP|DRP|SRS|ERS|DRS)[0-9]+$")
+SRA_SPLIT_PATTERN = re.compile(r"[\s,;|]+")
 PROJECT_DEDUPE_ACCESSIONS = {
     "BioSample": (BIOSAMPLE_ALIASES, BIOSAMPLE_PATTERN),
     "BioProject": (BIOPROJECT_ALIASES, BIOPROJECT_PATTERN),
@@ -214,12 +218,30 @@ def valid_assembly_accession(row: dict[str, str]) -> str | None:
     return valid_accession(row, ASSEMBLY_ALIASES, ASSEMBLY_PATTERN)
 
 
+def valid_sra_accessions(row: dict[str, str]) -> str | None:
+    accessions = SRA_SPLIT_PATTERN.split(first_value(row, SRA_ALIASES))
+    if not any(accessions):
+        return ""
+    normalized = []
+    for accession in accessions:
+        if not accession:
+            continue
+        if SRA_ACCESSION_PATTERN.match(accession) is None:
+            return None
+        normalized.append(accession)
+    return "|".join(sorted(set(normalized)))
+
+
 def has_invalid_target_accession(row: dict[str, str]) -> bool:
     return valid_target_accession(row) is None
 
 
 def has_invalid_assembly_accession(row: dict[str, str]) -> bool:
     return valid_assembly_accession(row) is None
+
+
+def has_invalid_sra_accessions(row: dict[str, str]) -> bool:
+    return valid_sra_accessions(row) is None
 
 
 def has_assay_method(row: dict[str, str]) -> bool:
@@ -532,6 +554,9 @@ def activity_report_context(
     assembly_accession = valid_assembly_accession(row)
     if assembly_accession is None:
         return None
+    sra_accessions = valid_sra_accessions(row)
+    if sra_accessions is None:
+        return None
     if project_dedupe_hit(row, project_dedupe):
         return None
 
@@ -543,6 +568,7 @@ def activity_report_context(
         "bioproject_accession": bioproject_accession,
         "target_accession": target_accession,
         "assembly_accession": assembly_accession,
+        "sra_accessions": sra_accessions,
         "phenotype": phenotype,
         "activity": activity,
         "mic_value": mic[0],
@@ -718,8 +744,10 @@ def evaluate_rows(
     rows_with_valid_project_context = 0
     rows_with_target_acc = 0
     rows_with_assembly_acc = 0
+    rows_with_sra_accessions = 0
     rows_with_invalid_target_acc = 0
     rows_with_invalid_assembly_acc = 0
+    rows_with_invalid_sra_accessions = 0
     rows_with_taxon = 0
     rows_with_phenotype = 0
     rows_with_invalid_phenotype = 0
@@ -740,8 +768,10 @@ def evaluate_rows(
         rows_with_valid_project_context += int(has_valid_project_context(row))
         rows_with_target_acc += int(has_value(row, TARGET_ALIASES))
         rows_with_assembly_acc += int(has_value(row, ASSEMBLY_ALIASES))
+        rows_with_sra_accessions += int(has_value(row, SRA_ALIASES))
         rows_with_invalid_target_acc += int(has_invalid_target_accession(row))
         rows_with_invalid_assembly_acc += int(has_invalid_assembly_accession(row))
+        rows_with_invalid_sra_accessions += int(has_invalid_sra_accessions(row))
         rows_with_taxon += int(has_value(row, TAXON_ALIASES))
         rows_with_phenotype += int(has_value(row, PHENOTYPE_ALIASES))
         rows_with_invalid_phenotype += int(has_invalid_phenotype(row))
@@ -838,6 +868,12 @@ def evaluate_rows(
                 "invalid_assembly_acc_count": sum(
                     has_invalid_assembly_accession(row) for row in antibiotic_ast_rows
                 ),
+                "sra_accessions_count": sum(
+                    has_value(row, SRA_ALIASES) for row in antibiotic_ast_rows
+                ),
+                "invalid_sra_accessions_count": sum(
+                    has_invalid_sra_accessions(row) for row in antibiotic_ast_rows
+                ),
                 "taxon_count": sum(has_value(row, TAXON_ALIASES) for row in antibiotic_ast_rows),
                 "phenotype_count": sum(has_value(row, PHENOTYPE_ALIASES) for row in antibiotic_ast_rows),
                 "invalid_phenotype_count": sum(
@@ -883,8 +919,10 @@ def evaluate_rows(
         "rows_with_valid_project_context": rows_with_valid_project_context,
         "rows_with_target_acc": rows_with_target_acc,
         "rows_with_assembly_acc": rows_with_assembly_acc,
+        "rows_with_sra_accessions": rows_with_sra_accessions,
         "rows_with_invalid_target_acc": rows_with_invalid_target_acc,
         "rows_with_invalid_assembly_acc": rows_with_invalid_assembly_acc,
+        "rows_with_invalid_sra_accessions": rows_with_invalid_sra_accessions,
         "rows_with_taxon": rows_with_taxon,
         "rows_with_phenotype": rows_with_phenotype,
         "rows_with_invalid_phenotype": rows_with_invalid_phenotype,
@@ -940,6 +978,8 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
         "invalid_target_acc_count",
         "assembly_acc_count",
         "invalid_assembly_acc_count",
+        "sra_accessions_count",
+        "invalid_sra_accessions_count",
         "taxon_count",
         "phenotype_count",
         "invalid_phenotype_count",
@@ -1138,12 +1178,14 @@ def main() -> int:
         f"project_context_rows={result['rows_with_project_context']} "
         f"valid_project_context_rows={result['rows_with_valid_project_context']} "
         f"target_acc_rows={result['rows_with_target_acc']} "
-        f"assembly_acc_rows={result['rows_with_assembly_acc']}"
+        f"assembly_acc_rows={result['rows_with_assembly_acc']} "
+        f"sra_accession_rows={result['rows_with_sra_accessions']}"
     )
     print(
         f"  invalid identifiers: target_acc_rows="
         f"{result['rows_with_invalid_target_acc']} "
-        f"assembly_acc_rows={result['rows_with_invalid_assembly_acc']}"
+        f"assembly_acc_rows={result['rows_with_invalid_assembly_acc']} "
+        f"sra_accession_rows={result['rows_with_invalid_sra_accessions']}"
     )
     print(
         f"  context: taxon_rows={result['rows_with_taxon']} "
