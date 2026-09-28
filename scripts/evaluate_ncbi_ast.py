@@ -112,8 +112,8 @@ BIOPROJECT_ALIASES = ("bioproject", "bioprojectaccession", "bioprojectacc")
 TARGET_ALIASES = ("targetacc", "targetaccession", "target", "isolate")
 ASSEMBLY_ALIASES = ("assemblyaccession", "assembly", "asmacc")
 SRA_ALIASES = ("sra", "sraaccession", "sraaccessions", "sraacc", "run", "runs")
-MIC_ALIASES = ("mic", "micvalue", "minimuminhibitoryconcentration")
-DISK_ALIASES = ("diskdiffusion", "diskdiameter", "diskzone")
+MIC_ALIASES = ("mic", "micmgl", "micvalue", "minimuminhibitoryconcentration")
+DISK_ALIASES = ("diskdiffusion", "diskdiffusionmm", "diskdiameter", "diskzone")
 MEASUREMENT_SIGN_ALIASES = ("measurementsign", "sign")
 PLATFORM_ALIASES = ("platform", "laboratorytypingplatform")
 REAGENT_ALIASES = ("reagent", "laboratorytypingmethodversionorreagent")
@@ -127,7 +127,7 @@ PHENOTYPE_ALIASES = (
     "interpretation",
 )
 MEASUREMENT_PATTERN = re.compile(r"^(?P<qualifier><=|>=|<|>|=)?\s*(?P<value>(?:\d+(?:\.\d*)?|\.\d+))$")
-MEASUREMENT_SIGNS = {"", "<=", ">=", "<", ">", "="}
+MEASUREMENT_SIGNS = {"", "<=", ">=", "<", ">", "=", "=="}
 MIC_UNITS = "mg/L"
 DISK_DIFFUSION_UNITS = "mm"
 BIOSAMPLE_PATTERN = re.compile(r"^SAM(N|D|EA)[0-9]+$")
@@ -268,10 +268,12 @@ def standardized_measurement(
     sign_qualifier = first_value(row, MEASUREMENT_SIGN_ALIASES)
     if sign_qualifier not in MEASUREMENT_SIGNS:
         return None
-    if value_qualifier and sign_qualifier and value_qualifier != sign_qualifier:
+    value_comparator = "=" if value_qualifier == "=" else value_qualifier
+    sign_comparator = "=" if sign_qualifier in {"=", "=="} else sign_qualifier
+    if value_comparator and sign_comparator and value_comparator != sign_comparator:
         return None
     qualifier = sign_qualifier or value_qualifier
-    if qualifier == "=":
+    if qualifier in {"=", "=="}:
         qualifier = ""
     return format(value.normalize(), "f"), qualifier, units
 

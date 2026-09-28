@@ -337,8 +337,8 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "Assembly Accession": "GCA_003123126",
             "Organism group": "Klebsiella pneumoniae",
             "Resistance phenotype": "S",
-            "Measurement sign": ">",
-            "Disk diffusion": "18.0",
+            "Measurement sign": "==",
+            "Disk diffusion (mm)": "18.0",
             "Laboratory typing method version or reagent": "disk diffusion",
         },
         {
@@ -466,7 +466,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
     assert activity_rows[1]["assembly_accession"] == "GCA_003123126"
     assert activity_rows[1]["activity"] == "SUSCEPTIBLE"
     assert activity_rows[1]["disk_diffusion_value"] == "18"
-    assert activity_rows[1]["disk_diffusion_qualifier"] == ">"
+    assert activity_rows[1]["disk_diffusion_qualifier"] == ""
     assert activity_rows[1]["disk_diffusion_units"] == "mm"
     assert activity_rows[1]["mic_value"] == ""
 
@@ -928,7 +928,7 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
             "antibiotic": "cefepime",
             "measurement_sign": "<=",
             "phenotype": "R",
-            "mic": "2",
+            "MIC (mg/L)": "2",
         },
         {
             "BioSample": "SAMN11953778",
@@ -939,7 +939,17 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
             "Antibiotic": "cefepime",
             "Measurement sign": ">",
             "Resistance phenotype": "S",
-            "Disk diffusion": "18",
+            "Disk diffusion (mm)": "18",
+        },
+        {
+            "BioSample": "SAMN11953779",
+            "BioProject": "PRJNA292666",
+            "Organism group": "Klebsiella pneumoniae",
+            "Antibiotic": "cefepime",
+            "Measurement sign": "==",
+            "Resistance phenotype": "S",
+            "MIC (mg/L)": "4",
+            "Laboratory typing platform": "AST",
         },
     ]
 
@@ -949,20 +959,20 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
         {"CHEBI:478164": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
     )
 
-    assert result["rows_with_biosample"] == 2
-    assert result["rows_with_bioproject"] == 2
-    assert result["rows_with_project_context"] == 2
-    assert result["rows_with_valid_project_context"] == 2
+    assert result["rows_with_biosample"] == 3
+    assert result["rows_with_bioproject"] == 3
+    assert result["rows_with_project_context"] == 3
+    assert result["rows_with_valid_project_context"] == 3
     assert result["rows_with_target_acc"] == 2
     assert result["rows_with_assembly_acc"] == 1
     assert result["rows_with_sra_accessions"] == 1
     assert result["rows_with_invalid_target_acc"] == 0
     assert result["rows_with_invalid_assembly_acc"] == 0
     assert result["rows_with_invalid_sra_accessions"] == 0
-    assert result["rows_with_taxon"] == 2
-    assert result["antibiotic_rows"][0]["mic_count"] == 1
-    assert result["antibiotic_rows"][0]["standardized_mic_count"] == 1
-    assert result["antibiotic_rows"][0]["standardized_mic_values"] == "<=2 mg/L"
+    assert result["rows_with_taxon"] == 3
+    assert result["antibiotic_rows"][0]["mic_count"] == 2
+    assert result["antibiotic_rows"][0]["standardized_mic_count"] == 2
+    assert result["antibiotic_rows"][0]["standardized_mic_values"] == "4 mg/L|<=2 mg/L"
     assert result["antibiotic_rows"][0]["disk_diffusion_count"] == 1
     assert result["antibiotic_rows"][0]["standardized_disk_diffusion_count"] == 1
     assert result["antibiotic_rows"][0]["standardized_disk_diffusion_values"] == ">18 mm"
@@ -1007,6 +1017,7 @@ def test_evaluate_rows_counts_valid_project_context_separately():
 def test_evaluate_rows_counts_invalid_measurement_shapes():
     rows = [
         {"Antibiotic": "cefepime", "Measurement sign": "<=", "MIC": "2"},
+        {"Antibiotic": "cefepime", "Measurement sign": "==", "MIC": "=3"},
         {"Antibiotic": "cefepime", "MIC": "0"},
         {"Antibiotic": "cefepime", "Measurement sign": "<", "MIC": ">4"},
         {"Antibiotic": "cefepime", "MIC": "not-numeric"},
@@ -1022,10 +1033,10 @@ def test_evaluate_rows_counts_invalid_measurement_shapes():
     )
 
     cefepime = result["antibiotic_rows"][0]
-    assert cefepime["mic_count"] == 4
-    assert cefepime["standardized_mic_count"] == 1
+    assert cefepime["mic_count"] == 5
+    assert cefepime["standardized_mic_count"] == 2
     assert cefepime["invalid_mic_count"] == 3
-    assert cefepime["standardized_mic_values"] == "<=2 mg/L"
+    assert cefepime["standardized_mic_values"] == "3 mg/L|<=2 mg/L"
     assert cefepime["disk_diffusion_count"] == 3
     assert cefepime["standardized_disk_diffusion_count"] == 1
     assert cefepime["invalid_disk_diffusion_count"] == 2
