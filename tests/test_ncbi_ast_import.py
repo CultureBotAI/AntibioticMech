@@ -283,6 +283,7 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     assert observation["isolate_count"] == 1
     assert observation["biosample_accession"] == "SAMN11953777"
     assert observation["bioproject_accession"] == "PRJNA292666"
+    assert observation["pathogen_detection_target_accession"] == "PDT000001234.1"
     assert observation["assembly_accession"] == "GCF_003123125.1"
     assert observation["sra_accessions"] == ["ERR111111", "SRR222222"]
     assert observation["source"] == NCBI_AST_ACTIVITY_SOURCE

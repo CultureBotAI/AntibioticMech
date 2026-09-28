@@ -220,9 +220,10 @@ without a method is not an observation — every row here carries an assay.</p>
     <td class="meta">{{ a.assay or '—' }}</td>
     <td class="meta">{{ a.strain or '—' }}</td>
     <td class="meta">
-      {% if a.biosample_accession or a.bioproject_accession or a.assembly_accession or a.sra_accessions %}
+      {% if a.biosample_accession or a.bioproject_accession or a.pathogen_detection_target_accession or a.assembly_accession or a.sra_accessions %}
         {% if a.biosample_accession %}BioSample <code class="curie">{{ a.biosample_accession }}</code><br>{% endif %}
         {% if a.bioproject_accession %}BioProject <code class="curie">{{ a.bioproject_accession }}</code><br>{% endif %}
+        {% if a.pathogen_detection_target_accession %}Pathogen Detection <code class="curie">{{ a.pathogen_detection_target_accession }}</code><br>{% endif %}
         {% if a.assembly_accession %}Assembly <code class="curie">{{ a.assembly_accession }}</code><br>{% endif %}
         {% for accession in a.sra_accessions or [] %}SRA <code class="curie">{{ accession }}</code><br>{% endfor %}
       {% else %}—{% endif %}

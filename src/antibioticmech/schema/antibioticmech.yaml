@@ -1116,6 +1116,11 @@ classes:
         description: BioProject accession for the sequencing project behind this AST row.
         range: string
         pattern: "^PRJ(NA|EB|DB)[0-9]+$"
+      pathogen_detection_target_accession:
+        description: >-
+          NCBI Pathogen Detection target accession for the tested isolate.
+        range: string
+        pattern: "^PDT[0-9]+(\\.[0-9]+)?$"
       assembly_accession:
         description: NCBI Assembly accession for the genome tied to this AST row.
         range: string

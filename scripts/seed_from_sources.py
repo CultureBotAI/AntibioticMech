@@ -2548,6 +2548,8 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
         observation["disk_diffusion_units"] = row["disk_diffusion_units"]
         if row.get("disk_diffusion_qualifier"):
             observation["disk_diffusion_qualifier"] = row["disk_diffusion_qualifier"]
+    if row.get("target_accession"):
+        observation["pathogen_detection_target_accession"] = row["target_accession"]
     for field in ("biosample_accession", "bioproject_accession", "assembly_accession"):
         if row.get(field):
             observation[field] = row[field]

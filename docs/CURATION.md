@@ -213,7 +213,8 @@ tuberculosis" names an indication, which is a disease and not an organism in an
 assay. Neither is an observation.
 
 When an AST source names the assayed isolate's sequencing context, preserve it
-as structured provenance: `biosample_accession`, `bioproject_accession`,
+as structured provenance: `biosample_accession`, `bioproject_accession`, NCBI
+Pathogen Detection's own `pathogen_detection_target_accession`,
 `assembly_accession` and `sra_accessions` live on `ActivityObservation` beside
 the taxon and strain they identify. These accessions are not organism
 identifiers, so `taxon_id` still carries only the NCBITaxon CURIE for the
