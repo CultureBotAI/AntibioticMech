@@ -27,6 +27,7 @@ import yaml
 
 from antibioticmech.hivdb_score_rules import (
     HIVDB_SCORE_RULE_COLUMNS,
+    HIVDB_SCORE_RULE_GENE_BY_DRUG_CLASS,
     hivdb_score_rule_id,
 )
 
@@ -99,6 +100,7 @@ ALGORITHM_REPORT_COLUMNS = [
     "algorithm_full_name",
     "full_name_matches",
     "drug_class",
+    "gene",
     "mapping_status",
     "identifier",
     "standard_inchi_key",
@@ -723,6 +725,11 @@ def read_hiv1_algorithm(path: Path, source_rows: list[dict[str, str]]) -> list[d
                     f"{path}: algorithm class {drug_class} for {source_record_id} "
                     f"!= hivfacts class {source_row['drug_class']}"
                 )
+            if drug_class not in HIVDB_SCORE_RULE_GENE_BY_DRUG_CLASS:
+                raise ValueError(
+                    f"{path}: algorithm class {drug_class} has no score-rule "
+                    "gene mapping"
+                )
 
     missing_defined_ids = set(source_rows_by_id) - defined_source_ids
     if missing_defined_ids:
@@ -771,6 +778,7 @@ def read_hiv1_algorithm(path: Path, source_rows: list[dict[str, str]]) -> list[d
                     else "false"
                 ),
                 "drug_class": source_row["drug_class"],
+                "gene": HIVDB_SCORE_RULE_GENE_BY_DRUG_CLASS[source_row["drug_class"]],
                 "uses_global_range": "true",
                 **score_condition_stats(score_term_rows),
                 "score_term_rows": score_term_rows,
@@ -915,6 +923,7 @@ def evaluate_hiv1_algorithm_rules(
                 "algorithm_full_name": row["algorithm_full_name"],
                 "full_name_matches": row["full_name_matches"],
                 "drug_class": row["drug_class"],
+                "gene": row["gene"],
                 "mapping_status": mapping.get("mapping_status", ""),
                 "identifier": mapping.get("identifier", ""),
                 "standard_inchi_key": mapping.get("standard_inchi_key", ""),
@@ -938,6 +947,7 @@ def evaluate_hiv1_algorithm_rules(
                 "algorithm_full_name": row["algorithm_full_name"],
                 "full_name_matches": row["full_name_matches"],
                 "drug_class": row["drug_class"],
+                "gene": row["gene"],
                 "mapping_status": mapping.get("mapping_status", ""),
                 "identifier": mapping.get("identifier", ""),
                 "standard_inchi_key": mapping.get("standard_inchi_key", ""),

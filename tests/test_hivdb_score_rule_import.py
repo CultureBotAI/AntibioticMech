@@ -52,6 +52,7 @@ def hivdb_score_rule_row(**overrides: str) -> dict[str, str]:
         "algorithm_full_name": "abacavir",
         "full_name_matches": "true",
         "drug_class": "NRTI",
+        "gene": "RT",
         "mapping_status": "EXACT",
         "identifier": "CHEBI:421707",
         "standard_inchi_key": "MCI",
@@ -90,6 +91,8 @@ def test_load_hivdb_score_rule_inventory_accepts_exact_term_rows(tmp_path):
     ("overrides", "message"),
     [
         ({"mapping_status": "COMBINATION"}, "mapping_status must be 'EXACT'"),
+        ({"drug_class": "EI"}, "EI.*no score-rule gene mapping"),
+        ({"gene": "PR"}, "gene must be 'RT'"),
         ({"source_rule_id": "hivdb_hivfacts:stale"}, "source_rule_id must be"),
         ({"score_term_index": "02"}, "score_term_index must use canonical"),
         ({"score_assignments": "0"}, "score_assignments must be at least 1"),
@@ -130,6 +133,7 @@ def test_attach_hivdb_score_rules_writes_source_rules(tmp_path, monkeypatch):
     assert counts["matched_records"] == 1
     rule = records["CHEBI:421707"]["genotype_resistance_score_rules"][0]
     assert rule["pathogen_label"] == "Human immunodeficiency virus 1"
+    assert rule["gene"] == "RT"
     assert rule["source"] == HIVDB_SCORE_RULE_SOURCE
     assert rule["source_version"] == row["source_version"]
     assert rule["source_rule_id"] == row["source_rule_id"]
@@ -212,6 +216,7 @@ def test_hivdb_score_rules_are_closed_schema_valid():
             "genotype_resistance_score_rules": [
                 {
                     "pathogen_label": "Human immunodeficiency virus 1",
+                    "gene": "RT",
                     "drug_class": "NRTI",
                     "algorithm_name": "HIVDB",
                     "algorithm_version": "10.2",
@@ -243,6 +248,7 @@ def test_hivdb_score_rules_are_closed_schema_valid():
 def test_reseed_replaces_only_the_hivdb_score_rule_slice():
     new_hivdb = {
         "pathogen_label": "Human immunodeficiency virus 1",
+        "gene": "RT",
         "drug_class": "NRTI",
         "algorithm_name": "HIVDB",
         "algorithm_version": "10.2",
