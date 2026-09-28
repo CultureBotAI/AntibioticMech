@@ -12,12 +12,13 @@ on disk.
 
 Exit status is 1 on any drift. The seeded fields are the ones compared; curated
 fields a seeder never writes in full (causal_graphs, curator-owned
-activity_spectrum rows, curator-owned producer_organisms, clinical_status,
-discussions, datasets, curator evidence, and curation_history beyond the seed
-event) are deliberately NOT compared, so curation is possible without the check
-going permanently red. The source-owned slices of mixed fields are compared
-separately below. Curator-owned items are covered by validation and by
-tests/test_corpus_integrity.py instead.
+activity_spectrum rows, curator-owned producer_organisms, curator-owned
+genotype_resistance_score_rules, clinical_status, discussions, datasets, curator
+evidence, and curation_history beyond the seed event) are deliberately NOT
+compared, so curation is possible without the check going permanently red. The
+source-owned slices of mixed fields are compared separately below.
+Curator-owned items are covered by validation and by tests/test_corpus_integrity.py
+instead.
 
 `mode_of_action` is NOT one of them. The seeder writes it from ChEBI's mechanism
 roles, and it IS compared — together with its notes — for as long as the notes
@@ -45,6 +46,7 @@ from seed_from_sources import (  # noqa: E402
     attach_bindingdb_targets,
     attach_cryptic_activity,
     attach_fda_clinical_status,
+    attach_hivdb_score_rules,
     attach_mibig_producers,
     attach_ncbi_ast_activity,
     attach_phibase_resistance,
@@ -55,6 +57,7 @@ from seed_from_sources import (  # noqa: E402
     curator_owns_mode_of_action,
     fda_sourced_clinical_view,
     flag_structure_collisions,
+    hivdb_sourced_score_rule_view,
     load_decisions,
     merge,
     mibig_sourced_producer_view,
@@ -87,6 +90,7 @@ def rebuild() -> dict[str, dict]:
     attach_bindingdb_targets(records)
     attach_cryptic_activity(records)
     attach_ncbi_ast_activity(records)
+    attach_hivdb_score_rules(records)
     attach_mibig_producers(
         records,
         str(manifest.get("sources", {}).get("mibig", {}).get("version", "")),
@@ -135,6 +139,8 @@ def main() -> int:
             drifted.append((path, "activity_spectrum"))
         if ncbi_ast_sourced_activity_view(want) != ncbi_ast_sourced_activity_view(actual):
             drifted.append((path, "activity_spectrum"))
+        if hivdb_sourced_score_rule_view(want) != hivdb_sourced_score_rule_view(actual):
+            drifted.append((path, "genotype_resistance_score_rules"))
         if mibig_sourced_producer_view(want) != mibig_sourced_producer_view(actual):
             drifted.append((path, "producer_organisms"))
         if fda_sourced_clinical_view(want) != fda_sourced_clinical_view(actual):

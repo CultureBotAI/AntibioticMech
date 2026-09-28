@@ -25,6 +25,11 @@ from pathlib import Path
 
 import yaml
 
+from antibioticmech.hivdb_score_rules import (
+    HIVDB_SCORE_RULE_COLUMNS,
+    hivdb_score_rule_id,
+)
+
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 DEFAULT_DRUG_MAP = REPO_ROOT / "curation" / "hivdb_drug_map.tsv"
@@ -85,6 +90,7 @@ PATTERN_REPORT_COLUMNS = [
     "max_score",
 ]
 ALGORITHM_REPORT_COLUMNS = [
+    "source_version",
     "algorithm_name",
     "algorithm_version",
     "algorithm_date",
@@ -103,25 +109,7 @@ ALGORITHM_REPORT_COLUMNS = [
     "max_score",
     "uses_global_range",
 ]
-ALGORITHM_TERM_REPORT_COLUMNS = [
-    "algorithm_name",
-    "algorithm_version",
-    "algorithm_date",
-    "source_record_id",
-    "source_name",
-    "algorithm_full_name",
-    "full_name_matches",
-    "drug_class",
-    "mapping_status",
-    "identifier",
-    "standard_inchi_key",
-    "score_term_index",
-    "score_term",
-    "score_assignments",
-    "negative_score_assignments",
-    "min_score",
-    "max_score",
-]
+ALGORITHM_TERM_REPORT_COLUMNS = HIVDB_SCORE_RULE_COLUMNS
 PATTERN_FIELDS = frozenset({"gene", "drugClass", "pattern", "count"})
 
 EXACT_MAPPING_STATUS = "EXACT"
@@ -918,6 +906,7 @@ def evaluate_hiv1_algorithm_rules(
 
         report_rows.append(
             {
+                "source_version": HIVDB_HIVFACTS_COMMIT,
                 "algorithm_name": row["algorithm_name"],
                 "algorithm_version": row["algorithm_version"],
                 "algorithm_date": row["algorithm_date"],
@@ -938,22 +927,24 @@ def evaluate_hiv1_algorithm_rules(
             }
         )
         for term_row in row["score_term_rows"]:
-            term_report_rows.append(
-                {
-                    "algorithm_name": row["algorithm_name"],
-                    "algorithm_version": row["algorithm_version"],
-                    "algorithm_date": row["algorithm_date"],
-                    "source_record_id": row["source_record_id"],
-                    "source_name": row["source_name"],
-                    "algorithm_full_name": row["algorithm_full_name"],
-                    "full_name_matches": row["full_name_matches"],
-                    "drug_class": row["drug_class"],
-                    "mapping_status": mapping.get("mapping_status", ""),
-                    "identifier": mapping.get("identifier", ""),
-                    "standard_inchi_key": mapping.get("standard_inchi_key", ""),
-                    **term_row,
-                }
-            )
+            report_row = {
+                "source_rule_id": "",
+                "source_version": HIVDB_HIVFACTS_COMMIT,
+                "algorithm_name": row["algorithm_name"],
+                "algorithm_version": row["algorithm_version"],
+                "algorithm_date": row["algorithm_date"],
+                "source_record_id": row["source_record_id"],
+                "source_name": row["source_name"],
+                "algorithm_full_name": row["algorithm_full_name"],
+                "full_name_matches": row["full_name_matches"],
+                "drug_class": row["drug_class"],
+                "mapping_status": mapping.get("mapping_status", ""),
+                "identifier": mapping.get("identifier", ""),
+                "standard_inchi_key": mapping.get("standard_inchi_key", ""),
+                **term_row,
+            }
+            report_row["source_rule_id"] = hivdb_score_rule_id(report_row)
+            term_report_rows.append(report_row)
 
     return {
         "algorithm_drugs": len(rows),
