@@ -47,6 +47,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from antibioticmech.curate.curation_event import record_curation_event  # noqa: E402
 from antibioticmech.hivdb_score_rules import (  # noqa: E402
     HIVDB_SCORE_RULE_COLUMNS,
+    HIVDB_SCORE_RULE_GENE_BY_DRUG_CLASS,
     hivdb_score_rule_id,
 )
 from antibioticmech.validation.write_validated import (  # noqa: E402
@@ -1974,6 +1975,14 @@ def load_hivdb_score_rule_inventory(path: Path) -> list[dict[str, str]]:
 
             if row["mapping_status"] != "EXACT":
                 raise ValueError(f"{prefix}: mapping_status must be 'EXACT'")
+            expected_gene = HIVDB_SCORE_RULE_GENE_BY_DRUG_CLASS.get(row["drug_class"])
+            if expected_gene is None:
+                raise ValueError(
+                    f"{prefix}: drug_class {row['drug_class']!r} "
+                    "has no score-rule gene mapping"
+                )
+            if row["gene"] != expected_gene:
+                raise ValueError(f"{prefix}: gene must be {expected_gene!r}")
             if row["full_name_matches"] not in {"true", "false"}:
                 raise ValueError(f"{prefix}: full_name_matches must be 'true' or 'false'")
             try:
@@ -2032,6 +2041,7 @@ def load_hivdb_score_rule_inventory(path: Path) -> list[dict[str, str]]:
 def hivdb_score_rule(row: dict[str, str]) -> dict:
     return {
         "pathogen_label": "Human immunodeficiency virus 1",
+        "gene": row["gene"],
         "drug_class": row["drug_class"],
         "algorithm_name": row["algorithm_name"],
         "algorithm_version": row["algorithm_version"],

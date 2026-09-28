@@ -826,6 +826,7 @@ def test_read_hiv1_algorithm_audits_drug_specific_score_rules(tmp_path):
             "algorithm_full_name": "abacavir",
             "full_name_matches": "true",
             "drug_class": "NRTI",
+            "gene": "RT",
             "uses_global_range": "true",
             "score_terms": 2,
             "score_assignments": 3,
@@ -860,6 +861,7 @@ def test_read_hiv1_algorithm_audits_drug_specific_score_rules(tmp_path):
             "algorithm_full_name": "azidothymidine",
             "full_name_matches": "false",
             "drug_class": "NRTI",
+            "gene": "RT",
             "uses_global_range": "true",
             "score_terms": 1,
             "score_assignments": 1,
@@ -896,6 +898,7 @@ def test_read_hiv1_algorithm_audits_drug_specific_score_rules(tmp_path):
             "algorithm_full_name": "abacavir",
             "full_name_matches": "true",
             "drug_class": "NRTI",
+            "gene": "RT",
             "mapping_status": "EXACT",
             "identifier": "CHEBI:421707",
             "standard_inchi_key": "MCI",
@@ -934,6 +937,26 @@ def test_read_hiv1_algorithm_rejects_bad_drug_score_rules(tmp_path):
     )
     with pytest.raises(ValueError, match="ABC does not use GLOBALRANGE"):
         read_hiv1_algorithm(path, algorithm_source_rows())
+
+    path.write_text(
+        """<?xml version="1.0" encoding="UTF-8"?>
+<ALGORITHM>
+  <ALGNAME>HIVDB</ALGNAME>
+  <ALGVERSION>10.2</ALGVERSION>
+  <ALGDATE>2026-04-26</ALGDATE>
+  <DEFINITIONS>
+    <DRUGCLASS><NAME>EI</NAME><DRUGLIST>ABC,AZT</DRUGLIST></DRUGCLASS>
+  </DEFINITIONS>
+</ALGORITHM>
+""",
+        encoding="utf-8",
+    )
+    rows = [
+        row | {"drug_class": "EI"}
+        for row in algorithm_source_rows()
+    ]
+    with pytest.raises(ValueError, match="EI has no score-rule gene mapping"):
+        read_hiv1_algorithm(path, rows)
 
 
 def test_write_drug_map_template_preserves_hivdb_source_columns(tmp_path):
@@ -1124,6 +1147,7 @@ def test_write_algorithm_report_preserves_hivdb_score_rule_columns(tmp_path):
                 "algorithm_full_name": "abacavir",
                 "full_name_matches": "true",
                 "drug_class": "NRTI",
+                "gene": "RT",
                 "mapping_status": "EXACT",
                 "identifier": "CHEBI:421707",
                 "standard_inchi_key": "MCI",
@@ -1154,6 +1178,7 @@ def test_write_algorithm_report_preserves_hivdb_score_rule_columns(tmp_path):
             "algorithm_full_name": "abacavir",
             "full_name_matches": "true",
             "drug_class": "NRTI",
+            "gene": "RT",
             "mapping_status": "EXACT",
             "identifier": "CHEBI:421707",
             "standard_inchi_key": "MCI",
@@ -1183,6 +1208,7 @@ def test_write_algorithm_term_report_preserves_hivdb_score_formula_terms(tmp_pat
                     "algorithm_full_name": "abacavir",
                     "full_name_matches": "true",
                     "drug_class": "NRTI",
+                    "gene": "RT",
                     "mapping_status": "EXACT",
                     "identifier": "CHEBI:421707",
                     "standard_inchi_key": "MCI",
@@ -1215,6 +1241,7 @@ def test_write_algorithm_term_report_preserves_hivdb_score_formula_terms(tmp_pat
                 "algorithm_full_name": "abacavir",
                 "full_name_matches": "true",
                 "drug_class": "NRTI",
+                "gene": "RT",
                 "mapping_status": "EXACT",
                 "identifier": "CHEBI:421707",
                 "standard_inchi_key": "MCI",

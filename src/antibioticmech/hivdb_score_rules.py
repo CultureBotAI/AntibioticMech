@@ -6,6 +6,13 @@ import hashlib
 from collections.abc import Mapping
 
 HIVDB_SCORE_RULE_ID_VERSION = "hivdb_score_rule_v1"
+HIVDB_SCORE_RULE_GENE_BY_DRUG_CLASS = {
+    "NRTI": "RT",
+    "NNRTI": "RT",
+    "PI": "PR",
+    "INSTI": "IN",
+    "CAI": "CA",
+}
 HIVDB_SCORE_RULE_ID_COLUMNS = [
     "source_version",
     "algorithm_name",
@@ -26,6 +33,7 @@ HIVDB_SCORE_RULE_COLUMNS = [
     "algorithm_full_name",
     "full_name_matches",
     "drug_class",
+    "gene",
     "mapping_status",
     "identifier",
     "standard_inchi_key",
