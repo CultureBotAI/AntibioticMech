@@ -56,7 +56,7 @@ PROJECT_DEDUPE_REPORT_COLUMNS = [
 ]
 # Bump with ACTIVITY_REPORT_GROUP_COLUMNS because those columns define the
 # stable activity_group_id digest for committed exact reports.
-ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v4"
+ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v5"
 ACTIVITY_REPORT_GROUP_COLUMNS = [
     "source_name",
     "normalized_antibiotic",
@@ -77,6 +77,7 @@ ACTIVITY_REPORT_GROUP_COLUMNS = [
     "disk_diffusion_value",
     "disk_diffusion_qualifier",
     "disk_diffusion_units",
+    "method",
     "platform",
     "vendor",
     "reagent",
@@ -117,6 +118,7 @@ SRA_ALIASES = ("sra", "sraaccession", "sraaccessions", "sraacc", "run", "runs")
 MIC_ALIASES = ("mic", "micmgl", "micvalue", "minimuminhibitoryconcentration")
 DISK_ALIASES = ("diskdiffusion", "diskdiffusionmm", "diskdiameter", "diskzone")
 MEASUREMENT_SIGN_ALIASES = ("measurementsign", "sign")
+METHOD_ALIASES = ("method", "laboratorytypingmethod", "labtypingmethod")
 PLATFORM_ALIASES = ("platform", "laboratorytypingplatform")
 REAGENT_ALIASES = ("reagent", "laboratorytypingmethodversionorreagent")
 STANDARD_ALIASES = ("standard", "testingstandard")
@@ -273,7 +275,11 @@ def has_invalid_taxon_id(row: dict[str, str]) -> bool:
 
 
 def has_assay_method(row: dict[str, str]) -> bool:
-    return has_value(row, PLATFORM_ALIASES) or has_value(row, REAGENT_ALIASES)
+    return (
+        has_value(row, METHOD_ALIASES)
+        or has_value(row, PLATFORM_ALIASES)
+        or has_value(row, REAGENT_ALIASES)
+    )
 
 
 def standardized_measurement(
@@ -629,6 +635,7 @@ def activity_report_context(
         "disk_diffusion_value": disk[0],
         "disk_diffusion_qualifier": disk[1],
         "disk_diffusion_units": disk[2],
+        "method": first_value(row, METHOD_ALIASES),
         "platform": first_value(row, PLATFORM_ALIASES),
         "vendor": first_value(row, VENDOR_ALIASES),
         "reagent": first_value(row, REAGENT_ALIASES),

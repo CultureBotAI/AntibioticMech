@@ -145,12 +145,12 @@ Sources:
 
 The AST Browser offers downloadable, submitter-provided phenotypic observations
 with BioSample, organism, antibiotic, S/R phenotype, MIC or disk measurement,
-measurement sign, platform, reagent, testing standard and BioProject. NCBI says
-it does not verify relationships between submitted fields. Its general policy
-places no NCBI restriction on molecular data, but also says rights are not
-transferred from submitters and NCBI cannot transfer them to third parties.
-The BigQuery route is an alpha release and its documentation asks users to make
-contact before production use.
+measurement sign, laboratory typing method, platform, reagent, testing standard
+and BioProject. NCBI says it does not verify relationships between submitted
+fields. Its general policy places no NCBI restriction on molecular data, but
+also says rights are not transferred from submitters and NCBI cannot transfer
+them to third parties. The BigQuery route is an alpha release and its
+documentation asks users to make contact before production use.
 
 Disposition: no corpus import. Per project direction, license resolution is
 deferred and is not treated as the blocker in this pass. The remaining

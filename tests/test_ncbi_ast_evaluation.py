@@ -305,9 +305,10 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "phenotype": "R",
             "measurement_sign": "<=",
             "mic": "2",
+            "method": "MIC",
             "platform": "AST",
             "vendor": "NCBI",
-            "reagent": "broth microdilution",
+            "reagent": "Sensititre GNX2F",
             "standard": "CLSI",
         },
         {
@@ -323,9 +324,10 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "phenotype": "R",
             "measurement_sign": "<=",
             "mic": "2.0",
+            "method": "MIC",
             "platform": "AST",
             "vendor": "NCBI",
-            "reagent": "broth microdilution",
+            "reagent": "Sensititre GNX2F",
             "standard": "CLSI",
         },
         {
@@ -341,9 +343,10 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "phenotype": "R",
             "measurement_sign": "<=",
             "mic": "02.00",
+            "method": "MIC",
             "platform": "AST",
             "vendor": "NCBI",
-            "reagent": "broth microdilution",
+            "reagent": "Sensititre GNX2F",
             "standard": "CLSI",
         },
         {
@@ -356,7 +359,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "Resistance phenotype": "S",
             "Measurement sign": "==",
             "Disk diffusion (mm)": "18.0",
-            "Laboratory typing method version or reagent": "disk diffusion",
+            "Laboratory typing method": "disk diffusion",
         },
         {
             "antibiotic": "cefepime",
@@ -471,9 +474,10 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
         "disk_diffusion_value": "",
         "disk_diffusion_qualifier": "",
         "disk_diffusion_units": "",
+        "method": "MIC",
         "platform": "AST",
         "vendor": "NCBI",
-        "reagent": "broth microdilution",
+        "reagent": "Sensititre GNX2F",
         "standard": "CLSI",
     }
     assert activity_rows[0]["activity_group_id"].startswith("ncbi_ast:")
@@ -1646,9 +1650,10 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
             "disk_diffusion_value": "",
             "disk_diffusion_qualifier": "",
             "disk_diffusion_units": "",
+            "method": "MIC",
             "platform": "AST",
             "vendor": "NCBI",
-            "reagent": "broth microdilution",
+            "reagent": "Sensititre GNX2F",
             "standard": "CLSI",
         }
     ]
@@ -1683,9 +1688,10 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
         "disk_diffusion_value": "",
         "disk_diffusion_qualifier": "",
         "disk_diffusion_units": "",
+        "method": "MIC",
         "platform": "AST",
         "vendor": "NCBI",
-        "reagent": "broth microdilution",
+        "reagent": "Sensititre GNX2F",
         "standard": "CLSI",
     }]
 
@@ -1784,6 +1790,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
                 "Run",
                 "TaxID",
                 "scientific_name",
+                "Laboratory typing method",
                 "phenotype",
                 "measurement_sign",
                 "mic",
@@ -1805,6 +1812,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             "Run": "SRR222222,ERR111111",
             "TaxID": "573",
             "scientific_name": "Klebsiella pneumoniae",
+            "Laboratory typing method": "MIC",
             "phenotype": "R",
             "measurement_sign": ">",
             "mic": "64",
@@ -1822,6 +1830,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             "Run": "SRR222223",
             "TaxID": "573",
             "scientific_name": "Klebsiella pneumoniae",
+            "Laboratory typing method": "MIC",
             "phenotype": "R",
             "measurement_sign": ">",
             "mic": "64",
@@ -1930,6 +1939,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
         assert "assembly_accession" in (reader.fieldnames or [])
         assert "sra_accessions" in (reader.fieldnames or [])
         assert "taxon_id" in (reader.fieldnames or [])
+        assert "method" in (reader.fieldnames or [])
         assert "target_acc" not in (reader.fieldnames or [])
 
     with project_report.open(newline="", encoding="utf-8") as handle:
@@ -1961,6 +1971,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert activity_rows[0]["assembly_accession"] == "GCF_003123125.1"
     assert activity_rows[0]["target_accession"] == "PDT000001234.1"
     assert activity_rows[0]["sra_accessions"] == "ERR111111|SRR222222"
+    assert activity_rows[0]["method"] == "MIC"
     assert activity_rows[0]["source_version"] == "2026-09-26-ast-browser"
     assert activity_rows[0]["source_retrieved_on"] == "2026-09-26"
     assert activity_rows[0]["isolate_count"] == "1"
