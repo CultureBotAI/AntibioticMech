@@ -103,6 +103,25 @@ ALGORITHM_REPORT_COLUMNS = [
     "max_score",
     "uses_global_range",
 ]
+ALGORITHM_TERM_REPORT_COLUMNS = [
+    "algorithm_name",
+    "algorithm_version",
+    "algorithm_date",
+    "source_record_id",
+    "source_name",
+    "algorithm_full_name",
+    "full_name_matches",
+    "drug_class",
+    "mapping_status",
+    "identifier",
+    "standard_inchi_key",
+    "score_term_index",
+    "score_term",
+    "score_assignments",
+    "negative_score_assignments",
+    "min_score",
+    "max_score",
+]
 PATTERN_FIELDS = frozenset({"gene", "drugClass", "pattern", "count"})
 
 EXACT_MAPPING_STATUS = "EXACT"
@@ -586,7 +605,11 @@ def xml_block_text(parent: ET.Element, child_name: str, path: Path, context: str
     return value
 
 
-def score_condition_stats(condition: str, path: Path, source_record_id: str) -> dict:
+def score_condition_terms(
+    condition: str,
+    path: Path,
+    source_record_id: str,
+) -> list[dict]:
     condition = condition.strip()
     prefix = "SCORE FROM ("
     if not condition.startswith(prefix) or not condition.endswith(")"):
@@ -610,7 +633,7 @@ def score_condition_stats(condition: str, path: Path, source_record_id: str) -> 
         raise ValueError(f"{path}: {source_record_id} rule has unbalanced parentheses")
     terms.append(condition[term_start:-1].strip())
 
-    scores = []
+    rows = []
     for index, term in enumerate(terms, start=1):
         if not term:
             raise ValueError(f"{path}: {source_record_id} score term {index} is blank")
@@ -620,14 +643,33 @@ def score_condition_stats(condition: str, path: Path, source_record_id: str) -> 
                 f"{path}: {source_record_id} score term {index} "
                 "has no score assignment"
             )
-        scores.extend(term_scores)
+        rows.append(
+            {
+                "score_term_index": index,
+                "score_term": " ".join(term.split()),
+                "score_assignments": len(term_scores),
+                "negative_score_assignments": sum(score < 0 for score in term_scores),
+                "min_score": min(term_scores),
+                "max_score": max(term_scores),
+            }
+        )
+
+    return rows
+
+
+def score_condition_stats(terms: list[dict]) -> dict:
+    min_scores = [row["min_score"] for row in terms]
+    max_scores = [row["max_score"] for row in terms]
 
     return {
         "score_terms": len(terms),
-        "score_assignments": len(scores),
-        "negative_score_assignments": sum(score < 0 for score in scores),
-        "min_score": min(scores),
-        "max_score": max(scores),
+        "score_assignments": sum(row["score_assignments"] for row in terms),
+        "negative_score_assignments": sum(
+            row["negative_score_assignments"]
+            for row in terms
+        ),
+        "min_score": min(min_scores),
+        "max_score": max(max_scores),
     }
 
 
@@ -725,6 +767,7 @@ def read_hiv1_algorithm(path: Path, source_rows: list[dict[str, str]]) -> list[d
         condition = xml_block_text(rules[0], "CONDITION", path, source_record_id)
         if rules[0].find("ACTIONS/SCORERANGE/USE_GLOBALRANGE") is None:
             raise ValueError(f"{path}: {source_record_id} does not use GLOBALRANGE")
+        score_term_rows = score_condition_terms(condition, path, source_record_id)
 
         rows.append(
             {
@@ -741,7 +784,8 @@ def read_hiv1_algorithm(path: Path, source_rows: list[dict[str, str]]) -> list[d
                 ),
                 "drug_class": source_row["drug_class"],
                 "uses_global_range": "true",
-                **score_condition_stats(condition, path, source_record_id),
+                **score_condition_stats(score_term_rows),
+                "score_term_rows": score_term_rows,
             }
         )
 
@@ -861,6 +905,7 @@ def evaluate_hiv1_algorithm_rules(
     mappings: Mapping[str, Mapping[str, str]],
 ) -> dict:
     report_rows = []
+    term_report_rows = []
     exact_score_assignments = 0
     non_exact_score_assignments = 0
     for row in rows:
@@ -873,12 +918,42 @@ def evaluate_hiv1_algorithm_rules(
 
         report_rows.append(
             {
-                **row,
+                "algorithm_name": row["algorithm_name"],
+                "algorithm_version": row["algorithm_version"],
+                "algorithm_date": row["algorithm_date"],
+                "source_record_id": row["source_record_id"],
+                "source_name": row["source_name"],
+                "algorithm_full_name": row["algorithm_full_name"],
+                "full_name_matches": row["full_name_matches"],
+                "drug_class": row["drug_class"],
                 "mapping_status": mapping.get("mapping_status", ""),
                 "identifier": mapping.get("identifier", ""),
                 "standard_inchi_key": mapping.get("standard_inchi_key", ""),
+                "score_terms": row["score_terms"],
+                "score_assignments": row["score_assignments"],
+                "negative_score_assignments": row["negative_score_assignments"],
+                "min_score": row["min_score"],
+                "max_score": row["max_score"],
+                "uses_global_range": row["uses_global_range"],
             }
         )
+        for term_row in row["score_term_rows"]:
+            term_report_rows.append(
+                {
+                    "algorithm_name": row["algorithm_name"],
+                    "algorithm_version": row["algorithm_version"],
+                    "algorithm_date": row["algorithm_date"],
+                    "source_record_id": row["source_record_id"],
+                    "source_name": row["source_name"],
+                    "algorithm_full_name": row["algorithm_full_name"],
+                    "full_name_matches": row["full_name_matches"],
+                    "drug_class": row["drug_class"],
+                    "mapping_status": mapping.get("mapping_status", ""),
+                    "identifier": mapping.get("identifier", ""),
+                    "standard_inchi_key": mapping.get("standard_inchi_key", ""),
+                    **term_row,
+                }
+            )
 
     return {
         "algorithm_drugs": len(rows),
@@ -888,6 +963,7 @@ def evaluate_hiv1_algorithm_rules(
         "non_exact_score_assignments": non_exact_score_assignments,
         "full_name_mismatches": sum(row["full_name_matches"] != "true" for row in rows),
         "algorithm_report_rows": report_rows,
+        "algorithm_term_report_rows": term_report_rows,
     }
 
 
@@ -936,6 +1012,19 @@ def write_algorithm_report(rows: list[dict], path: Path) -> None:
         writer = csv.DictWriter(
             handle,
             fieldnames=ALGORITHM_REPORT_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def write_algorithm_term_report(rows: list[dict], path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=ALGORITHM_TERM_REPORT_COLUMNS,
             delimiter="\t",
             lineterminator="\n",
         )
@@ -1009,6 +1098,11 @@ def main() -> int:
         "--algorithm-report",
         type=Path,
         help="Optional TSV HIV-1 drug-specific algorithm score audit.",
+    )
+    parser.add_argument(
+        "--algorithm-term-report",
+        type=Path,
+        help="Optional TSV HIV-1 drug-specific algorithm score-term audit.",
     )
     parser.add_argument("--corpus-root", type=Path, default=REPO_ROOT, help=argparse.SUPPRESS)
     args = parser.parse_args()
@@ -1128,6 +1222,12 @@ def main() -> int:
             args.algorithm_report,
         )
         print(f"wrote {args.algorithm_report}")
+    if args.algorithm_term_report:
+        write_algorithm_term_report(
+            algorithm_result["algorithm_term_report_rows"],
+            args.algorithm_term_report,
+        )
+        print(f"wrote {args.algorithm_term_report}")
 
     print(
         "--audit: no rows seeded; HIVDB drug-specific mutation rules need a "
