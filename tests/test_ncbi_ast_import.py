@@ -59,9 +59,10 @@ def ncbi_ast_row(**overrides: str) -> dict[str, str]:
         "mic_value": "2",
         "mic_qualifier": "<=",
         "mic_units": "mg/L",
+        "method": "MIC",
         "platform": "AST",
         "vendor": "NCBI",
-        "reagent": "broth microdilution",
+        "reagent": "Sensititre GNX2F",
         "standard": "CLSI",
     })
     row.update(overrides)
@@ -75,7 +76,7 @@ def test_ncbi_ast_activity_columns_match_the_evaluator_contract():
 
     assert NCBI_AST_ACTIVITY_COLUMNS == ACTIVITY_REPORT_COLUMNS
     assert NCBI_AST_ACTIVITY_GROUP_ID_VERSION == ACTIVITY_GROUP_ID_VERSION
-    assert ACTIVITY_GROUP_ID_VERSION == "ncbi_ast_activity_group_v4"
+    assert ACTIVITY_GROUP_ID_VERSION == "ncbi_ast_activity_group_v5"
     assert NCBI_AST_ACTIVITY_GROUP_COLUMNS == ACTIVITY_REPORT_GROUP_COLUMNS
     assert ncbi_ast_activity_group_id(row) == activity_group_id(row)
 
@@ -193,7 +194,10 @@ def test_load_ncbi_ast_activity_inventory_rejects_mixed_source_metadata(tmp_path
         ({"taxon_label": ""}, "taxon_label is required"),
         ({"biosample_accession": ""}, "biosample_accession is required"),
         ({"platform": " AST"}, "platform has leading or trailing whitespace"),
-        ({"platform": "", "reagent": ""}, "platform or reagent is required"),
+        (
+            {"method": "", "platform": "", "reagent": ""},
+            "method, platform or reagent is required",
+        ),
         ({"platform": "AST\nCLSI"}, "platform contains a tab or newline"),
         ({"biosample_accession": "BioSample:SAMN11953777"}, "invalid BioSample accession"),
         ({"bioproject_accession": "SAMN11953777"}, "invalid BioProject accession"),
@@ -296,7 +300,9 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     assert observation["source_retrieved_on"] == "2026-09-26"
     assert observation["source_observation_id"] == row["activity_group_id"]
     assert "platform AST" in observation["assay"]
+    assert "method MIC" in observation["assay"]
     assert "isolate_count=1" in observation["evidence"][0]["notes"]
+    assert "method=MIC" in observation["evidence"][0]["notes"]
     assert "standard CLSI" in observation["assay"]
     assert "target_accession=PDT000001234.1" in observation["evidence"][0]["notes"]
     assert "sra_accessions=ERR111111|SRR222222" in observation["evidence"][0]["notes"]

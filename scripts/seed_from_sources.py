@@ -2395,7 +2395,7 @@ NCBI_AST_ACTIVITY_INVENTORY = RAW_DIR / "ncbi_ast_activity.tsv"
 NCBI_AST_REFERENCE = "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/"
 # Bump with NCBI_AST_ACTIVITY_GROUP_COLUMNS because those columns define the
 # stable source_observation_id digest for committed exact reports.
-NCBI_AST_ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v4"
+NCBI_AST_ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v5"
 NCBI_AST_ACTIVITY_GROUP_COLUMNS = [
     "source_name",
     "normalized_antibiotic",
@@ -2416,6 +2416,7 @@ NCBI_AST_ACTIVITY_GROUP_COLUMNS = [
     "disk_diffusion_value",
     "disk_diffusion_qualifier",
     "disk_diffusion_units",
+    "method",
     "platform",
     "vendor",
     "reagent",
@@ -2486,6 +2487,8 @@ def ncbi_ast_sourced_activity_view(record: dict) -> list[dict]:
 
 def ncbi_ast_activity_assay(row: dict[str, str]) -> str:
     parts = ["NCBI Pathogen Detection AST"]
+    if row.get("method"):
+        parts.append(f"method {row['method']}")
     if row.get("platform"):
         parts.append(f"platform {row['platform']}")
     if row.get("vendor"):
@@ -2513,6 +2516,7 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
         "assembly_accession",
         "sra_accessions",
         "phenotype",
+        "method",
         "platform",
         "vendor",
         "reagent",
@@ -2707,8 +2711,8 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                     )
             if row["normalized_antibiotic"] != normalized_ncbi_ast_name(row["source_name"]):
                 raise ValueError(f"{prefix}: normalized_antibiotic must match source_name")
-            if not row["platform"] and not row["reagent"]:
-                raise ValueError(f"{prefix}: platform or reagent is required")
+            if not row["method"] and not row["platform"] and not row["reagent"]:
+                raise ValueError(f"{prefix}: method, platform or reagent is required")
             if expected_source_version is None:
                 expected_source_version = row["source_version"]
             elif row["source_version"] != expected_source_version:
