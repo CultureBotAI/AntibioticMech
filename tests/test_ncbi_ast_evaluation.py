@@ -419,6 +419,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
         "source_version": "2026-09-26-ast-browser",
         "source_retrieved_on": "2026-09-26",
         "ast_row_count": 3,
+        "isolate_count": 1,
         "source_name": "cefepime",
         "normalized_antibiotic": "cefepime",
         "identifier": "CHEBI:478164",
@@ -1441,6 +1442,7 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
             "source_version": "2026-09-26-ast-browser",
             "source_retrieved_on": "2026-09-26",
             "ast_row_count": 2,
+            "isolate_count": 1,
             "source_name": "cefepime",
             "normalized_antibiotic": "cefepime",
             "identifier": "CHEBI:478164",
@@ -1475,6 +1477,7 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
         "source_version": "2026-09-26-ast-browser",
         "source_retrieved_on": "2026-09-26",
         "ast_row_count": "2",
+        "isolate_count": "1",
         "source_name": "cefepime",
         "normalized_antibiotic": "cefepime",
         "identifier": "CHEBI:478164",
@@ -1700,6 +1703,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert activity_rows[0]["target_accession"] == "PDT000001234.1"
     assert activity_rows[0]["source_version"] == "2026-09-26-ast-browser"
     assert activity_rows[0]["source_retrieved_on"] == "2026-09-26"
+    assert activity_rows[0]["isolate_count"] == "1"
     assert activity_rows[0]["mic_value"] == "64"
     assert activity_rows[0]["mic_qualifier"] == ">"
     assert activity_rows[0]["mic_units"] == "mg/L"

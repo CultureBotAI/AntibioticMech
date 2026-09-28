@@ -84,6 +84,7 @@ ACTIVITY_REPORT_COLUMNS = [
     "source_version",
     "source_retrieved_on",
     "ast_row_count",
+    "isolate_count",
     *ACTIVITY_REPORT_GROUP_COLUMNS,
 ]
 EXACT_MAPPING_STATUS = "EXACT"
@@ -653,6 +654,7 @@ def exact_activity_rows(
     project_dedupe = project_dedupe or {}
     grouped: dict[tuple[str, ...], dict[str, str]] = {}
     counts: Counter[tuple[str, ...]] = Counter()
+    isolates: dict[tuple[str, ...], set[str]] = defaultdict(set)
     for row in rows:
         source_name = first_value(row, ANTIBIOTIC_ALIASES)
         mapping = mappings.get(normalize(source_name))
@@ -673,6 +675,7 @@ def exact_activity_rows(
         group_key = tuple(out[column] for column in ACTIVITY_REPORT_GROUP_COLUMNS)
         grouped[group_key] = out
         counts[group_key] += 1
+        isolates[group_key].add(context["biosample_accession"])
 
     activity_rows = []
     for group_key, row in grouped.items():
@@ -681,6 +684,7 @@ def exact_activity_rows(
             "source_version": source_version,
             "source_retrieved_on": source_retrieved_on,
             "ast_row_count": counts[group_key],
+            "isolate_count": len(isolates[group_key]),
             **row,
         })
     return sorted(

@@ -43,6 +43,7 @@ def ncbi_ast_row(**overrides: str) -> dict[str, str]:
         "source_version": "2026-09-26-ast-browser",
         "source_retrieved_on": "2026-09-26",
         "ast_row_count": "2",
+        "isolate_count": "1",
         "source_name": "cefepime",
         "normalized_antibiotic": "cefepime",
         "identifier": "CHEBI:478164",
@@ -182,6 +183,12 @@ def test_load_ncbi_ast_activity_inventory_rejects_mixed_source_metadata(tmp_path
         ({"source_version": " "}, "source_version is required"),
         ({"ast_row_count": "0"}, "ast_row_count must be positive"),
         ({"ast_row_count": "02"}, "ast_row_count must use canonical integer '2'"),
+        ({"isolate_count": "0"}, "isolate_count must be positive"),
+        ({"isolate_count": "02"}, "isolate_count must use canonical integer '2'"),
+        (
+            {"isolate_count": "2"},
+            "isolate_count must be 1 for a BioSample-grouped row",
+        ),
         ({"taxon_label": ""}, "taxon_label is required"),
         ({"biosample_accession": ""}, "biosample_accession is required"),
         ({"platform": " AST"}, "platform has leading or trailing whitespace"),
@@ -254,6 +261,7 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     assert observation["disk_diffusion_qualifier"] == ">="
     assert observation["disk_diffusion_units"] == "mm"
     assert observation["measurement_count"] == 2
+    assert observation["isolate_count"] == 1
     assert observation["biosample_accession"] == "SAMN11953777"
     assert observation["bioproject_accession"] == "PRJNA292666"
     assert observation["assembly_accession"] == "GCF_003123125.1"
@@ -262,6 +270,7 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     assert observation["source_retrieved_on"] == "2026-09-26"
     assert observation["source_observation_id"] == row["activity_group_id"]
     assert "platform AST" in observation["assay"]
+    assert "isolate_count=1" in observation["evidence"][0]["notes"]
     assert "standard CLSI" in observation["assay"]
     assert "target_accession=PDT000001234.1" in observation["evidence"][0]["notes"]
     assert "BioSample, BioProject, target and assembly context" in observation["evidence"][0]["notes"]

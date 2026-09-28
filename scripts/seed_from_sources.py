@@ -2207,6 +2207,7 @@ NCBI_AST_ACTIVITY_COLUMNS = [
     "source_version",
     "source_retrieved_on",
     "ast_row_count",
+    "isolate_count",
     *NCBI_AST_ACTIVITY_GROUP_COLUMNS,
 ]
 NCBI_AST_REQUIRED_ACTIVITY_COLUMNS = (
@@ -2214,6 +2215,7 @@ NCBI_AST_REQUIRED_ACTIVITY_COLUMNS = (
     "source_version",
     "source_retrieved_on",
     "ast_row_count",
+    "isolate_count",
     "source_name",
     "normalized_antibiotic",
     "identifier",
@@ -2274,6 +2276,7 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
     note_fields = [
         "activity_group_id",
         "ast_row_count",
+        "isolate_count",
         "source_name",
         "normalized_antibiotic",
         "taxon_label",
@@ -2292,6 +2295,7 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
         "taxon_label": row["taxon_label"],
         "assay": ncbi_ast_activity_assay(row),
         "measurement_count": int(row["ast_row_count"]),
+        "isolate_count": int(row["isolate_count"]),
         "source": NCBI_AST_ACTIVITY_SOURCE,
         "source_version": row["source_version"],
         "source_retrieved_on": row["source_retrieved_on"],
@@ -2377,6 +2381,27 @@ def _require_ncbi_ast_measurement(
     return True
 
 
+def _require_ncbi_ast_positive_integer(
+    row: dict[str, str],
+    field: str,
+    path: Path,
+    line_number: int,
+) -> int:
+    prefix = f"{path}:{line_number}"
+    try:
+        parsed = int(row[field])
+    except ValueError as error:
+        raise ValueError(f"{prefix}: {field} must be an integer") from error
+    if parsed <= 0:
+        raise ValueError(f"{prefix}: {field} must be positive")
+    canonical = str(parsed)
+    if row[field] != canonical:
+        raise ValueError(
+            f"{prefix}: {field} must use canonical integer {canonical!r}"
+        )
+    return parsed
+
+
 def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
     """Load a curated NCBI AST exact report and reject malformed source rows."""
     if not path.exists():
@@ -2449,17 +2474,21 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                     f"{prefix}: source_retrieved_on must be "
                     f"{expected_source_retrieved_on!r}"
                 )
-            try:
-                ast_row_count = int(row["ast_row_count"])
-            except ValueError as error:
-                raise ValueError(f"{prefix}: ast_row_count must be an integer") from error
-            if ast_row_count <= 0:
-                raise ValueError(f"{prefix}: ast_row_count must be positive")
-            canonical_ast_row_count = str(ast_row_count)
-            if row["ast_row_count"] != canonical_ast_row_count:
+            _require_ncbi_ast_positive_integer(
+                row,
+                "ast_row_count",
+                path,
+                line_number,
+            )
+            isolate_count = _require_ncbi_ast_positive_integer(
+                row,
+                "isolate_count",
+                path,
+                line_number,
+            )
+            if isolate_count != 1:
                 raise ValueError(
-                    f"{prefix}: ast_row_count must use canonical integer "
-                    f"{canonical_ast_row_count!r}"
+                    f"{prefix}: isolate_count must be 1 for a BioSample-grouped row"
                 )
             expected_activity = NCBI_AST_ACTIVITY_BY_PHENOTYPE.get(
                 row["phenotype"].casefold(),
