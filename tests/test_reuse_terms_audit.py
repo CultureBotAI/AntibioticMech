@@ -21,7 +21,7 @@ def test_reuse_audit_keeps_unverified_sources_out_of_adopted_state(repo_root):
     by_id = {row.split("\t", 1)[0]: row.split("\t") for row in rows[1:]}
     assert by_id["bv-brc"][8] == "CANDIDATE"
     assert by_id["bv-brc"][5] == "UNVERIFIED"
-    assert by_id["stanford-hivdb"][8] == "EVALUATING"
+    assert by_id["stanford-hivdb"][8] == "ADOPTED"
     assert by_id["stanford-hivdb"][5] == "CC0_OK"
     assert by_id["stanford-hivdb"][10] == "https://github.com/hivdb/hivfacts"
     assert by_id["co-add"][8] == "BLOCKED"
@@ -46,6 +46,7 @@ def test_attribution_notice_covers_adopted_redistributed_sources(repo_root):
         "mibig": "MIBiG",
         "phibase": "PHI-base",
         "pubchem": "PubChem",
+        "stanford-hivdb": "Stanford HIVDB",
     }
 
     assert set(attribution_markers) == adopted
@@ -57,6 +58,7 @@ def test_attribution_notice_covers_adopted_redistributed_sources(repo_root):
         "molecular_targets[].source",
         "resistance_mechanisms[].source",
         "activity_spectrum[].source",
+        "genotype_resistance_score_rules[].source",
         "clinical_status_assertions[].source",
     ):
         assert field in text

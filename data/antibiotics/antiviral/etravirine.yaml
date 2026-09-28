@@ -99,6 +99,432 @@ molecular_targets:
     entry_status: UNREVIEWED
     retrieved_on: '2026-08-31'
     role: BindingDB target chain 1
+genotype_resistance_score_rules:
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:7c4b6474c6fcbde1
+  score_term_index: 1
+  score_term: 98G => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 1: 98G => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:98e15d11ead2f5e8
+  score_term_index: 2
+  score_term: MAX(100I => 30, 100V => 10)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 2: MAX(100I => 30, 100V => 10)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:9af1238c46dff62e
+  score_term_index: 3
+  score_term: MAX(101E => 10, 101P => 45, 101H => 10)
+  score_assignments: 3
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 45.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 3: MAX(101E => 10, 101P => 45, 101H => 10)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:6725db667becaf62
+  score_term_index: 4
+  score_term: 106I => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 4: 106I => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:ffe3a28c0be96a88
+  score_term_index: 5
+  score_term: MAX(138K => 10, 138G => 10, 138Q => 10, 138R => 10, 138A => 10)
+  score_assignments: 5
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 5: MAX(138K => 10, 138G => 10, 138Q => 10, 138R => 10, 138A
+      => 10)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:6701d24411c25813
+  score_term_index: 6
+  score_term: MAX(179F => 15, 179D => 10, 179E => 10, 179L => 10)
+  score_assignments: 4
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 6: MAX(179F => 15, 179D => 10, 179E => 10, 179L => 10)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:685858f0f957fae1
+  score_term_index: 7
+  score_term: MAX(181C => 30, 181I => 60, 181V => 60, 181F => 15, 181G => 15, 181S
+    => 15)
+  score_assignments: 6
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 7: MAX(181C => 30, 181I => 60, 181V => 60, 181F => 15, 181G
+      => 15, 181S => 15)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:e636fe606da12ffb
+  score_term_index: 8
+  score_term: 188L => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 8: 188L => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:f1f717a1cd0f6697
+  score_term_index: 9
+  score_term: MAX(190C => 10, 190E => 45, 190Q => 45, 190S => 10, 190T => 10, 190V
+    => 10, 190A => 10)
+  score_assignments: 7
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 45.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 9: MAX(190C => 10, 190E => 45, 190Q => 45, 190S => 10, 190T
+      => 10, 190V => 10, 190A => 10)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:4c06c33eec5e3c70
+  score_term_index: 10
+  score_term: 221Y => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 10: 221Y => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:43449a992034aa53
+  score_term_index: 11
+  score_term: 227C => 30
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 30.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 11: 227C => 30'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:af8b9a021aed40aa
+  score_term_index: 12
+  score_term: 230L => 30
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 30.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 12: 230L => 30'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:1421ecd53a365e2c
+  score_term_index: 13
+  score_term: 98G AND 234I => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 13: 98G AND 234I => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:38637b4423086ddf
+  score_term_index: 14
+  score_term: 106I AND 227CLIVY => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 14: 106I AND 227CLIVY => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:3f4d2385e4162b96
+  score_term_index: 15
+  score_term: 181CIV AND 190ACSTV => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 15: 181CIV AND 190ACSTV => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:359c422a4b53a2c1
+  score_term_index: 16
+  score_term: 98G AND 181CIV => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 16: 98G AND 181CIV => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:c40176047a905066
+  score_term_index: 17
+  score_term: 101E AND 181C => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 17: 101E AND 181C => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:127c41a57a3ed870
+  score_term_index: 18
+  score_term: MAX(101E AND 190A => 5, 101E AND 190S => 5)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 18: MAX(101E AND 190A => 5, 101E AND 190S => 5)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:c2391c93cf118d40
+  score_term_index: 19
+  score_term: 98G AND 227CL => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 19: 98G AND 227CL => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:d0fc22e0a3d6af63
+  score_term_index: 20
+  score_term: 101E AND 188L => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 20: 101E AND 188L => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NNRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: ETR
+  source_rule_id: hivdb_hivfacts:f04ca478bc44cd53
+  score_term_index: 21
+  score_term: MAX(179F AND 181C => 15, 179T AND 181C => 10)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 ETR score term 21: MAX(179F AND 181C => 15, 179T AND 181C => 10)'
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -340,3 +766,8 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-28T17:24:14Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: genotype_resistance_score_rules (HIVDB_HIVFACTS be1c11a5145fea9073fdb71801919d4a34265336).
+    Upstream retrieval date 2026-08-30, unchanged.'

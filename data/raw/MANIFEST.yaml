@@ -50,6 +50,13 @@ sources:
     retrieved_on: '2026-09-26'
     row_policy: Exact drug-code mappings grouped by release table, drug, raw method,
       phenotype, quality, and MIC shape
+  stanford-hivdb:
+    homepage: https://github.com/hivdb/hivfacts
+    license: Unlicense
+    version: be1c11a5145fea9073fdb71801919d4a34265336
+    algorithm: HIVDB 10.2
+    retrieved_on: '2026-09-28'
+    row_policy: Exact HIVDB drug-specific genotype score-rule terms
 downloads:
   compounds.tsv.gz:
     url: https://ftp.ebi.ac.uk/pub/databases/chebi/flat_files/compounds.tsv.gz
@@ -135,6 +142,10 @@ downloads:
     url: https://zenodo.org/records/15680920/files/UKMYC_PHENOTYPES.parquet?download=1
     bytes: 1559813
     sha256: e374887ab49379f8ed11fcbbfd1b6793c5ad17453cf0a25ad3513c0d1e5058a4
+  hivfacts-be1c11a5145fea9073fdb71801919d4a34265336.tar.gz:
+    url: https://github.com/hivdb/hivfacts/archive/be1c11a5145fea9073fdb71801919d4a34265336.tar.gz
+    bytes: 11463058
+    sha256: 739fabb7e15a96688af5990b3a56d0ca57a2cf612417dcaf35b69637f8deb4e9
 inventories:
   aro_antibiotics.tsv:
     rows: 644
@@ -186,3 +197,8 @@ inventories:
     bytes: 734481
     sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
     source: CRyPTIC 3.4.0 exact-mapped grouped DST/UKMYC activity observations
+  hivdb_algorithm_terms.tsv:
+    rows: 467
+    bytes: 105943
+    sha256: fdecfc0f3f98c09ac8b8255495e7eb6598b0af13db80c6f74c3aab46d4f62dad
+    source: Stanford HIVDB hivfacts HIVDB 10.2 exact-mapped score-rule terms

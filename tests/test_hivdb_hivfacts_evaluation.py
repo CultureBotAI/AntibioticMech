@@ -28,6 +28,7 @@ from evaluate_hivdb_hivfacts import (  # noqa: E402
     evaluate_drug_patterns,
     evaluate_drugs,
     evaluate_hiv1_algorithm_rules,
+    exact_algorithm_term_report_rows,
     read_class_mutation_list,
     read_drug_map,
     read_drug_patterns,
@@ -1256,6 +1257,18 @@ def test_write_algorithm_term_report_preserves_hivdb_score_formula_terms(tmp_pat
     ]
 
 
+def test_exact_algorithm_term_report_rows_keeps_exact_rows_only():
+    exact_row = {"mapping_status": "EXACT", "source_record_id": "ABC"}
+    rows = [
+        exact_row,
+        {"mapping_status": "AMBIGUOUS_IDENTITY", "source_record_id": "TDF"},
+        {"mapping_status": "COMBINATION", "source_record_id": "LPV/r"},
+        {"mapping_status": "MISSING_CORPUS_RECORD", "source_record_id": "NFV"},
+    ]
+
+    assert exact_algorithm_term_report_rows(rows) == [exact_row]
+
+
 def test_cli_writes_non_seeding_drug_audit(tmp_path):
     directory = tmp_path / "data" / "antibiotics" / "antiviral"
     directory.mkdir(parents=True)
@@ -1338,6 +1351,7 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
     )
     algorithm_report = tmp_path / "hivdb_algorithm.tsv"
     algorithm_term_report = tmp_path / "hivdb_algorithm_terms.tsv"
+    exact_algorithm_term_report = tmp_path / "hivdb_algorithm_terms_exact.tsv"
 
     result = subprocess.run(
         [
@@ -1365,6 +1379,8 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
             str(algorithm_report),
             "--algorithm-term-report",
             str(algorithm_term_report),
+            "--exact-algorithm-term-report",
+            str(exact_algorithm_term_report),
             "--corpus-root",
             str(tmp_path),
         ],
@@ -1380,6 +1396,7 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
     assert pattern_report.exists()
     assert algorithm_report.exists()
     assert algorithm_term_report.exists()
+    assert exact_algorithm_term_report.exists()
     with report.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle, delimiter="\t"))
     assert rows[0]["mapping_status"] == "EXACT"
@@ -1399,6 +1416,9 @@ def test_cli_writes_non_seeding_drug_audit(tmp_path):
         algorithm_term_rows = list(csv.DictReader(handle, delimiter="\t"))
     assert algorithm_term_rows[1]["score_term"] == "MAX(184I => 15, 184V => 15)"
     assert algorithm_term_rows[1]["score_assignments"] == "2"
+    with exact_algorithm_term_report.open(newline="", encoding="utf-8") as handle:
+        exact_algorithm_term_rows = list(csv.DictReader(handle, delimiter="\t"))
+    assert exact_algorithm_term_rows == algorithm_term_rows
     assert "Stanford HIVDB hivfacts drug identity audit" in result.stdout
     assert "HIV-1 class-level mutation lists: rows=1 expanded_mutations=2" in result.stdout
     assert "HIV-1 drug pattern matrices: rows=1 level_score_pairs=1" in result.stdout

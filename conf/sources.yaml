@@ -154,6 +154,20 @@ cryptic:
   doi: 10.5281/zenodo.15680920
   version: 3.4.0
 
+stanford-hivdb:
+  name: Stanford HIV Drug Resistance Database
+  description: >-
+    HIV-1 drug-specific genotype score-rule formula terms from the HIVDB 10.2
+    algorithm distributed in hivdb/hivfacts, joined to corpus antiretroviral
+    compounds through a curated exact HIVDB abbreviation map.
+  homepage: https://github.com/hivdb/hivfacts
+  license: Unlicense
+  commit: be1c11a5145fea9073fdb71801919d4a34265336
+  algorithm: HIVDB 10.2
+  row_policy: >-
+    Exact HIVDB drug mappings only; boosted combinations, ambiguous identities
+    and missing corpus structures are rejected.
+
 # ----------------------------------------------------------------------------
 # Role scope — which ChEBI roles put a compound in this corpus.
 #
