@@ -75,6 +75,7 @@ def test_record_page_renders_activity_sample_accessions():
                 "strain": "AR-0001",
                 "biosample_accession": "SAMN11953777",
                 "bioproject_accession": "PRJNA123456",
+                "pathogen_detection_target_accession": "PDT000001234.1",
                 "assembly_accession": "GCF_000005845.2",
                 "sra_accessions": ["SRR123456"],
             }, {
@@ -104,6 +105,8 @@ def test_record_page_renders_activity_sample_accessions():
     assert "SAMN11953777" in html
     assert "BioProject" in html
     assert "PRJNA123456" in html
+    assert "Pathogen Detection" in html
+    assert "PDT000001234.1" in html
     assert "Assembly" in html
     assert "GCF_000005845.2" in html
     assert "SRR123456" in html

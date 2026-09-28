@@ -111,6 +111,7 @@ def test_activity_observation_accepts_sample_and_genome_accessions(tmp_path):
             "strain": "AR-0001",
             "biosample_accession": "SAMN11953777",
             "bioproject_accession": "PRJNA123456",
+            "pathogen_detection_target_accession": "PDT000001234.1",
             "assembly_accession": "GCF_000005845.2",
             "sra_accessions": ["SRR123456", "SRX123456"],
             "source": "NCBI_AST",
@@ -132,12 +133,14 @@ def test_activity_observation_rejects_malformed_sample_accessions(tmp_path):
             "taxon_label": "Escherichia coli",
             "assay": "broth microdilution",
             "biosample_accession": "BioSample:SAMN11953777",
+            "pathogen_detection_target_accession": "GCF_003123125.1",
             "assembly_accession": "SAMN11953777",
             "evidence": [{"reference": "PMID:1"}],
         }
     ]}
     messages = [err.message for err in validate_antibiotic(doc)]
     assert any("biosample_accession" in message for message in messages)
+    assert any("pathogen_detection_target_accession" in message for message in messages)
     assert any("assembly_accession" in message for message in messages)
 
 
