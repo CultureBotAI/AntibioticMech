@@ -667,6 +667,16 @@ def activity_report_context(
     }
 
 
+def project_dedupe_excludes_activity_report(
+    row: dict[str, str],
+    project_dedupe: dict[tuple[str, str], dict[str, str]],
+) -> bool:
+    return (
+        project_dedupe_hit(row, project_dedupe) is not None
+        and activity_report_context(row, {}) is not None
+    )
+
+
 def project_dedupe_key_label(key: tuple[str, str]) -> str:
     accession_type, accession = key
     return f"{accession_type}:{accession}"
@@ -909,6 +919,7 @@ def evaluate_rows(
     unmatched_rows = 0
     exact_mapped_rows = 0
     exact_mapped_activity_report_candidate_rows = 0
+    exact_mapped_activity_report_dedupe_excluded_rows = 0
     non_exact_mapped_rows = 0
     unmapped_rows = 0
     unused_mapping_antibiotics = sorted(set(mappings) - set(rows_by_antibiotic))
@@ -927,6 +938,10 @@ def evaluate_rows(
             activity_report_context(row, project_dedupe) is not None
             for row in antibiotic_ast_rows
         )
+        activity_report_dedupe_excluded_count = sum(
+            project_dedupe_excludes_activity_report(row, project_dedupe)
+            for row in antibiotic_ast_rows
+        )
         if len(identifiers) == 1:
             exact_name_matched_rows += row_count
         elif len(identifiers) > 1:
@@ -936,6 +951,9 @@ def evaluate_rows(
         if mapping.get("mapping_status") == EXACT_MAPPING_STATUS:
             exact_mapped_rows += row_count
             exact_mapped_activity_report_candidate_rows += activity_report_candidate_count
+            exact_mapped_activity_report_dedupe_excluded_rows += (
+                activity_report_dedupe_excluded_count
+            )
         elif mapping.get("mapping_status"):
             non_exact_mapped_rows += row_count
         else:
@@ -995,6 +1013,9 @@ def evaluate_rows(
                     for row in antibiotic_ast_rows
                 ),
                 "activity_report_candidate_count": activity_report_candidate_count,
+                "activity_report_dedupe_excluded_count": (
+                    activity_report_dedupe_excluded_count
+                ),
                 "target_acc_count": sum(has_value(row, TARGET_ALIASES) for row in antibiotic_ast_rows),
                 "invalid_target_acc_count": sum(
                     has_invalid_target_accession(row) for row in antibiotic_ast_rows
@@ -1103,6 +1124,9 @@ def evaluate_rows(
         "exact_mapped_activity_report_candidate_rows": (
             exact_mapped_activity_report_candidate_rows
         ),
+        "exact_mapped_activity_report_dedupe_excluded_rows": (
+            exact_mapped_activity_report_dedupe_excluded_rows
+        ),
         "non_exact_mapped_antibiotics": sum(
             bool(row["mapping_status"]) and row["mapping_status"] != EXACT_MAPPING_STATUS
             for row in antibiotic_rows
@@ -1141,6 +1165,7 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
         "valid_project_context_count",
         "dedupe_context_count",
         "activity_report_candidate_count",
+        "activity_report_dedupe_excluded_count",
         "target_acc_count",
         "invalid_target_acc_count",
         "assembly_acc_count",
@@ -1428,7 +1453,9 @@ def main() -> int:
         f"  curated exact mappings: antibiotics={result['exact_mapped_antibiotics']} "
         f"rows={result['exact_mapped_rows']} "
         f"activity_report_candidate_rows="
-        f"{result['exact_mapped_activity_report_candidate_rows']}"
+        f"{result['exact_mapped_activity_report_candidate_rows']} "
+        f"activity_report_dedupe_excluded_rows="
+        f"{result['exact_mapped_activity_report_dedupe_excluded_rows']}"
     )
     print(
         f"  ambiguous names: antibiotics={result['ambiguous_name_antibiotics']} "

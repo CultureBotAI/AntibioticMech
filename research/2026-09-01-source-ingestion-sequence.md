@@ -173,7 +173,9 @@ with a partially curated crosswalk, it writes a compact grouped activity report
 for exact-mapped rows with valid MIC or disk-diffusion measurements,
 optional NCBI Taxonomy identifiers normalized to `NCBITaxon` CURIEs,
 BioSample/BioProject context for deduplication, source isolation metadata, and
-source-versioning and retrieval-date columns. That report keeps NCBI Pathogen
+source-versioning and retrieval-date columns. Its audits report how many
+otherwise eligible exact rows a curated BioSample/BioProject map excludes before
+the grouped exact report is written. That report keeps NCBI Pathogen
 Detection `target_acc` values separate from source TaxIDs and `GCA_`/`GCF_`
 Assembly accessions so the former can audit source isolate grouping without
 being mislabeled as an NCBI Assembly accession, and it keeps isolation type,
