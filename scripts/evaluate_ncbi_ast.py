@@ -607,6 +607,31 @@ def activity_report_context(
     }
 
 
+def project_dedupe_key_label(key: tuple[str, str]) -> str:
+    accession_type, accession = key
+    return f"{accession_type}:{accession}"
+
+
+def used_project_dedupe_keys(
+    rows: list[dict[str, str]],
+    project_dedupe: dict[tuple[str, str], dict[str, str]],
+) -> set[tuple[str, str]]:
+    """Return curated source-context exclusions exercised by eligible AST rows."""
+
+    used_keys = set()
+    for row in rows:
+        if not first_value(row, ANTIBIOTIC_ALIASES):
+            continue
+        if activity_report_context(row, {}) is None:
+            continue
+
+        for accession_type, (aliases, _) in PROJECT_DEDUPE_ACCESSIONS.items():
+            key = (accession_type, first_value(row, aliases))
+            if key in project_dedupe:
+                used_keys.add(key)
+    return used_keys
+
+
 def project_dedupe_report_rows(
     rows: list[dict[str, str]],
     mappings: dict[str, dict[str, str]] | None = None,
@@ -801,6 +826,10 @@ def evaluate_rows(
         rows_with_assay_method += int(has_assay_method(row))
         rows_with_dedupe_context += int(project_dedupe_hit(row, project_dedupe) is not None)
 
+    unused_project_dedupe_keys = sorted(
+        set(project_dedupe) - used_project_dedupe_keys(rows, project_dedupe),
+        key=lambda key: (key[0], key[1]),
+    )
     antibiotic_rows = []
     exact_name_matched_rows = 0
     ambiguous_name_rows = 0
@@ -987,6 +1016,10 @@ def evaluate_rows(
         "unmapped_rows": unmapped_rows,
         "unused_mapping_antibiotics": len(unused_mapping_antibiotics),
         "unused_mapping_antibiotic_values": "|".join(unused_mapping_antibiotics),
+        "unused_project_dedupe_contexts": len(unused_project_dedupe_keys),
+        "unused_project_dedupe_values": "|".join(
+            project_dedupe_key_label(key) for key in unused_project_dedupe_keys
+        ),
         "antibiotic_rows": antibiotic_rows,
     }
 
@@ -1296,6 +1329,14 @@ def main() -> int:
         )
         if result["unused_mapping_antibiotic_values"]:
             drift += f" values={result['unused_mapping_antibiotic_values']}"
+        print(drift)
+    if args.project_dedupe_map:
+        drift = (
+            f"  project dedupe drift: unused_source_contexts="
+            f"{result['unused_project_dedupe_contexts']}"
+        )
+        if result["unused_project_dedupe_values"]:
+            drift += f" values={result['unused_project_dedupe_values']}"
         print(drift)
     print("  leading antibiotics: " + ", ".join(f"{name}={count}" for name, count in leading))
     if args.antibiotic_report:

@@ -848,6 +848,70 @@ def test_project_dedupe_report_rows_rank_valid_project_contexts():
     ]
 
 
+def test_evaluate_rows_audits_unused_project_dedupe_contexts():
+    rows = [
+        {
+            "antibiotic": "amikacin",
+            "biosample_acc": "SAMN11953777",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Klebsiella pneumoniae",
+            "mic": "64",
+            "platform": "AST",
+        },
+        {
+            "antibiotic": "amikacin",
+            "biosample_acc": "SAMN11953778",
+            "bioproject_acc": "PRJNA292667",
+            "taxgroup_name": "Klebsiella pneumoniae",
+            "mic": "64",
+        },
+    ]
+    project_dedupe = {
+        ("BioProject", "PRJNA292666"): {
+            "accession_type": "BioProject",
+            "accession": "PRJNA292666",
+            "source": "CRYPTIC",
+            "source_version": "3.4.0",
+            "notes": "Project represented in an adopted source lane.",
+        },
+        ("BioSample", "SAMN11953777"): {
+            "accession_type": "BioSample",
+            "accession": "SAMN11953777",
+            "source": "CRYPTIC",
+            "source_version": "3.4.0",
+            "notes": "BioSample represented in an adopted source lane.",
+        },
+        ("BioProject", "PRJNA292667"): {
+            "accession_type": "BioProject",
+            "accession": "PRJNA292667",
+            "source": "CRYPTIC",
+            "source_version": "3.4.0",
+            "notes": "Ineligible without an assay method.",
+        },
+        ("BioSample", "SAMN11953779"): {
+            "accession_type": "BioSample",
+            "accession": "SAMN11953779",
+            "source": "CRYPTIC",
+            "source_version": "3.4.0",
+            "notes": "No longer appears in this export.",
+        },
+    }
+
+    result = evaluate_rows(
+        rows,
+        {"amikacin": {"CHEBI:2637"}},
+        {"CHEBI:2637": "LKCWBDHBTVXHDL-RMDFUYIESA-N"},
+        project_dedupe=project_dedupe,
+    )
+
+    assert result["rows_with_dedupe_context"] == 2
+    assert result["unused_project_dedupe_contexts"] == 2
+    assert (
+        result["unused_project_dedupe_values"]
+        == "BioProject:PRJNA292667|BioSample:SAMN11953779"
+    )
+
+
 def test_read_table_accepts_browser_tsv_exports(tmp_path):
     path = tmp_path / "ast.tsv"
     path.write_text(
@@ -1796,6 +1860,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert "assay_method_rows=2" in result.stdout
     assert "source_context_rows=1" in result.stdout
     assert "unused_antibiotics=0" in result.stdout
+    assert "unused_source_contexts=0" in result.stdout
     assert "project_dedupe_report=" in result.stdout
     assert "project_dedupe_map_template=" in result.stdout
     assert antibiotic_report.exists()
