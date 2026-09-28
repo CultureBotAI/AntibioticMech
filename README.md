@@ -215,13 +215,16 @@ Two licences, because the repository holds two different things.
 
 **Record content — `data/antibiotics/**` and `data/raw/**`:
 [CC BY 4.0](LICENSE-DATA), attribution in [ATTRIBUTION.md](ATTRIBUTION.md).**
-It is derived from ChEBI (CC BY 4.0) and CARD's ARO (CC BY 4.0), and CC BY
-content cannot be re-dedicated to the public domain: §3(b) permits an adapter's
-licence only if it does not prevent recipients complying with the original, and
-stripping attribution does exactly that. So the corpus is redistributable —
-freely, commercially, modified — provided the attribution rides along.
+It is derived from CC BY 4.0 and public sources, and CC BY content cannot be
+re-dedicated to the public domain: §3(b) permits an adapter's licence only if it
+does not prevent recipients complying with the original, and stripping
+attribution does exactly that. So the corpus is redistributable — freely,
+commercially, modified — provided the attribution rides along.
 
-Attribution is per-record and machine-readable: every record's `source_concepts`
-block names the upstream concepts it came from, so a consumer taking a subset can
-derive precisely which sources that subset depends on.
+Attribution is per-record and machine-readable: `source_concepts` name the
+upstream concepts that ground each record's chemical identity, and source-owned
+claims mark their own `producer_organisms`, `molecular_targets`,
+`resistance_mechanisms`, `activity_spectrum`, or
+`clinical_status_assertions` item with a `source`. A consumer taking a subset
+can derive precisely which sources that subset depends on.
 `data/raw/MANIFEST.yaml` records what was retrieved and when.
