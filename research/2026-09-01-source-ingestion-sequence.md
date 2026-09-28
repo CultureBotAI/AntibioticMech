@@ -169,13 +169,14 @@ qualifiers and units. It can also emit the fillable seven-column drug-map
 template that a curator turns into the exact-structure crosswalk. When supplied
 with a partially curated crosswalk, it writes a compact grouped activity report
 for exact-mapped rows with valid MIC or disk-diffusion measurements,
+optional NCBI Taxonomy identifiers normalized to `NCBITaxon` CURIEs,
 BioSample/BioProject context for deduplication, and source-versioning and
 retrieval-date columns. That report keeps NCBI Pathogen Detection `target_acc`
-values separate from `GCA_`/`GCF_` Assembly accessions so the former can audit
-source isolate grouping without being mislabeled as an NCBI Assembly accession.
-A second curated deduplication TSV can exclude BioSample or whole-BioProject
-contexts that are already represented by CRyPTIC or another source before those
-exact groups are written. Curated crosswalk rows must
+values separate from source TaxIDs and `GCA_`/`GCF_` Assembly accessions so the
+former can audit source isolate grouping without being mislabeled as an NCBI
+Assembly accession. A second curated deduplication TSV can exclude BioSample or
+whole-BioProject contexts that are already represented by CRyPTIC or another
+source before those exact groups are written. Curated crosswalk rows must
 explicitly separate exact single-structure mappings from mixtures, drug classes,
 combinations, ambiguous stereochemical names, and missing corpus records; the
 evaluator now refuses ragged map rows and requires a mapping basis, notes, and

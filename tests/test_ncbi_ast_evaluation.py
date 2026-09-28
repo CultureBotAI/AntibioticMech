@@ -297,6 +297,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "target_acc": "PDT000001234.1",
             "asm_acc": "GCF_003123125.1",
             "Run": "SRR222222,ERR111111 SRR222222",
+            "TaxID": "562",
             "taxgroup_name": "Escherichia coli and Shigella",
             "scientific_name": "Escherichia coli",
             "phenotype": "R",
@@ -314,6 +315,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "target_acc": "PDT000001234.1",
             "asm_acc": "GCF_003123125.1",
             "Run": "ERR111111|SRR222222",
+            "TaxID": "NCBITaxon:562",
             "taxgroup_name": "Escherichia coli and Shigella",
             "scientific_name": "Escherichia coli",
             "phenotype": "R",
@@ -331,6 +333,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "target_acc": "PDT000001234.1",
             "asm_acc": "GCF_003123125.1",
             "Run": "ERR111111|SRR222222",
+            "TaxID": "562",
             "taxgroup_name": "Escherichia coli and Shigella",
             "scientific_name": "Escherichia coli",
             "phenotype": "R",
@@ -346,6 +349,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "BioSample": "SAMEA11953778",
             "BioProject": "PRJEB292666",
             "Assembly Accession": "GCA_003123126",
+            "NCBI Taxonomy ID": "NCBITaxon:573",
             "Organism group": "Klebsiella pneumoniae",
             "Resistance phenotype": "S",
             "Measurement sign": "==",
@@ -450,6 +454,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
         "normalized_antibiotic": "cefepime",
         "identifier": "CHEBI:478164",
         "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+        "taxon_id": "NCBITaxon:562",
         "taxon_label": "Escherichia coli",
         "biosample_accession": "SAMN11953777",
         "bioproject_accession": "PRJNA292666",
@@ -472,6 +477,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
     assert activity_rows[0]["activity_group_id"].startswith("ncbi_ast:")
     assert activity_rows[0]["target_accession"] == "PDT000001234.1"
     assert activity_rows[1]["ast_row_count"] == 1
+    assert activity_rows[1]["taxon_id"] == "NCBITaxon:573"
     assert activity_rows[1]["biosample_accession"] == "SAMEA11953778"
     assert activity_rows[1]["bioproject_accession"] == "PRJEB292666"
     assert activity_rows[1]["assembly_accession"] == "GCA_003123126"
@@ -770,6 +776,7 @@ def test_project_dedupe_report_rows_rank_valid_project_contexts():
             "bioproject_count": 1,
             "antibiotic_values": 1,
             "antibiotics": "cefepime",
+            "taxon_ids": "",
             "taxon_labels": "Escherichia coli|Klebsiella pneumoniae",
         },
         {
@@ -784,6 +791,7 @@ def test_project_dedupe_report_rows_rank_valid_project_contexts():
             "bioproject_count": 1,
             "antibiotic_values": 1,
             "antibiotics": "cefepime",
+            "taxon_ids": "",
             "taxon_labels": "Escherichia coli",
         },
         {
@@ -798,6 +806,7 @@ def test_project_dedupe_report_rows_rank_valid_project_contexts():
             "bioproject_count": 1,
             "antibiotic_values": 1,
             "antibiotics": "cefepime",
+            "taxon_ids": "",
             "taxon_labels": "Klebsiella pneumoniae",
         },
         {
@@ -812,6 +821,7 @@ def test_project_dedupe_report_rows_rank_valid_project_contexts():
             "bioproject_count": 1,
             "antibiotic_values": 1,
             "antibiotics": "gentamicin",
+            "taxon_ids": "",
             "taxon_labels": "Escherichia coli",
         },
         {
@@ -826,6 +836,7 @@ def test_project_dedupe_report_rows_rank_valid_project_contexts():
             "bioproject_count": 1,
             "antibiotic_values": 1,
             "antibiotics": "gentamicin",
+            "taxon_ids": "",
             "taxon_labels": "Escherichia coli",
         },
     ]
@@ -998,6 +1009,7 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
             "bioproject_acc": "PRJNA292666",
             "target_acc": "PDT000001234.1",
             "assembly_accession": "GCF_003123125.1",
+            "TaxID": "562",
             "taxgroup_name": "Escherichia coli and Shigella",
             "scientific_name": "Escherichia coli",
             "antibiotic": "cefepime",
@@ -1010,6 +1022,7 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
             "BioProject": "PRJNA292666",
             "Isolate": "PDT000001235.1",
             "Run": "SRR222222;ERR111111",
+            "NCBI Taxonomy ID": "NCBITaxon:573",
             "Organism group": "Klebsiella pneumoniae",
             "Antibiotic": "cefepime",
             "Measurement sign": ">",
@@ -1019,6 +1032,7 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
         {
             "BioSample": "SAMN11953779",
             "BioProject": "PRJNA292666",
+            "TaxID": "not-a-taxid",
             "Organism group": "Klebsiella pneumoniae",
             "Antibiotic": "cefepime",
             "Measurement sign": "==",
@@ -1041,9 +1055,11 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
     assert result["rows_with_target_acc"] == 2
     assert result["rows_with_assembly_acc"] == 1
     assert result["rows_with_sra_accessions"] == 1
+    assert result["rows_with_taxon_id"] == 3
     assert result["rows_with_invalid_target_acc"] == 0
     assert result["rows_with_invalid_assembly_acc"] == 0
     assert result["rows_with_invalid_sra_accessions"] == 0
+    assert result["rows_with_invalid_taxon_id"] == 1
     assert result["rows_with_taxon"] == 3
     assert result["antibiotic_rows"][0]["mic_count"] == 2
     assert result["antibiotic_rows"][0]["standardized_mic_count"] == 2
@@ -1051,6 +1067,9 @@ def test_evaluate_rows_accepts_ncbi_browser_field_names():
     assert result["antibiotic_rows"][0]["disk_diffusion_count"] == 1
     assert result["antibiotic_rows"][0]["standardized_disk_diffusion_count"] == 1
     assert result["antibiotic_rows"][0]["standardized_disk_diffusion_values"] == ">18 mm"
+    assert result["antibiotic_rows"][0]["taxon_id_count"] == 3
+    assert result["antibiotic_rows"][0]["invalid_taxon_id_count"] == 1
+    assert result["antibiotic_rows"][0]["taxon_ids"] == "NCBITaxon:562|NCBITaxon:573"
     assert (
         result["antibiotic_rows"][0]["taxon_labels"]
         == "Escherichia coli|Klebsiella pneumoniae"
@@ -1458,6 +1477,8 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "invalid_assembly_acc_count": 0,
             "sra_accessions_count": 7,
             "invalid_sra_accessions_count": 0,
+            "taxon_id_count": 7,
+            "invalid_taxon_id_count": 0,
             "taxon_count": 7,
             "assay_method_count": 7,
             "phenotype_count": 7,
@@ -1470,6 +1491,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "standardized_disk_diffusion_count": 0,
             "invalid_disk_diffusion_count": 0,
             "standardized_disk_diffusion_values": "",
+            "taxon_ids": "NCBITaxon:562",
             "taxon_labels": "Escherichia coli",
             "phenotypes": "R|S",
         }
@@ -1504,6 +1526,8 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "invalid_assembly_acc_count": "0",
         "sra_accessions_count": "7",
         "invalid_sra_accessions_count": "0",
+        "taxon_id_count": "7",
+        "invalid_taxon_id_count": "0",
         "taxon_count": "7",
         "assay_method_count": "7",
         "phenotype_count": "7",
@@ -1516,6 +1540,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "standardized_disk_diffusion_count": "0",
         "invalid_disk_diffusion_count": "0",
         "standardized_disk_diffusion_values": "",
+        "taxon_ids": "NCBITaxon:562",
         "taxon_labels": "Escherichia coli",
         "phenotypes": "R|S",
     }]
@@ -1584,6 +1609,7 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
             "normalized_antibiotic": "cefepime",
             "identifier": "CHEBI:478164",
             "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+            "taxon_id": "NCBITaxon:562",
             "taxon_label": "Escherichia coli and Shigella",
             "biosample_accession": "SAMN11953777",
             "bioproject_accession": "PRJNA292666",
@@ -1620,6 +1646,7 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
         "normalized_antibiotic": "cefepime",
         "identifier": "CHEBI:478164",
         "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+        "taxon_id": "NCBITaxon:562",
         "taxon_label": "Escherichia coli and Shigella",
         "biosample_accession": "SAMN11953777",
         "bioproject_accession": "PRJNA292666",
@@ -1656,6 +1683,7 @@ def test_project_dedupe_report_is_a_stable_tsv(tmp_path):
             "bioproject_count": 1,
             "antibiotic_values": 2,
             "antibiotics": "amikacin|cefepime",
+            "taxon_ids": "NCBITaxon:562",
             "taxon_labels": "Escherichia coli",
         },
     ]
@@ -1677,6 +1705,7 @@ def test_project_dedupe_report_is_a_stable_tsv(tmp_path):
         "bioproject_count": "1",
         "antibiotic_values": "2",
         "antibiotics": "amikacin|cefepime",
+        "taxon_ids": "NCBITaxon:562",
         "taxon_labels": "Escherichia coli",
     }]
 
@@ -1731,6 +1760,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
                 "Isolate",
                 "asm_acc",
                 "Run",
+                "TaxID",
                 "scientific_name",
                 "phenotype",
                 "measurement_sign",
@@ -1751,6 +1781,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             "Isolate": "PDT000001234.1",
             "asm_acc": "GCF_003123125.1",
             "Run": "SRR222222,ERR111111",
+            "TaxID": "573",
             "scientific_name": "Klebsiella pneumoniae",
             "phenotype": "R",
             "measurement_sign": ">",
@@ -1767,6 +1798,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             "Isolate": "PDT000001235.1",
             "asm_acc": "GCF_003123126.1",
             "Run": "SRR222223",
+            "TaxID": "573",
             "scientific_name": "Klebsiella pneumoniae",
             "phenotype": "R",
             "measurement_sign": ">",
@@ -1854,6 +1886,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert "activity_report_candidate_rows=1" in result.stdout
     assert "project_context_rows=2" in result.stdout
     assert "valid_project_context_rows=2" in result.stdout
+    assert "taxon_id_rows=2" in result.stdout
     assert "taxon_rows=2" in result.stdout
     assert "phenotype_rows=2" in result.stdout
     assert "invalid_phenotype_rows=0" in result.stdout
@@ -1874,6 +1907,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
         assert "target_accession" in (reader.fieldnames or [])
         assert "assembly_accession" in (reader.fieldnames or [])
         assert "sra_accessions" in (reader.fieldnames or [])
+        assert "taxon_id" in (reader.fieldnames or [])
         assert "target_acc" not in (reader.fieldnames or [])
 
     with project_report.open(newline="", encoding="utf-8") as handle:
@@ -1899,7 +1933,9 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     }
     assert project_rows[0]["exact_mapped_antibiotics"] == "amikacin"
     assert project_rows[0]["exact_mapped_identifiers"] == "CHEBI:2637"
+    assert project_rows[0]["taxon_ids"] == "NCBITaxon:573"
 
+    assert activity_rows[0]["taxon_id"] == "NCBITaxon:573"
     assert activity_rows[0]["assembly_accession"] == "GCF_003123125.1"
     assert activity_rows[0]["target_accession"] == "PDT000001234.1"
     assert activity_rows[0]["sra_accessions"] == "ERR111111|SRR222222"

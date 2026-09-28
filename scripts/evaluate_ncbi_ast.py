@@ -51,16 +51,18 @@ PROJECT_DEDUPE_REPORT_COLUMNS = [
     "bioproject_count",
     "antibiotic_values",
     "antibiotics",
+    "taxon_ids",
     "taxon_labels",
 ]
 # Bump with ACTIVITY_REPORT_GROUP_COLUMNS because those columns define the
 # stable activity_group_id digest for committed exact reports.
-ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v3"
+ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v4"
 ACTIVITY_REPORT_GROUP_COLUMNS = [
     "source_name",
     "normalized_antibiotic",
     "identifier",
     "standard_inchi_key",
+    "taxon_id",
     "taxon_label",
     "biosample_accession",
     "bioproject_accession",
@@ -161,6 +163,15 @@ TAXON_ALIASES = (
     "taxgroupname",
     "taxgroup",
 )
+TAXON_ID_ALIASES = (
+    "taxid",
+    "taxonid",
+    "taxonomyid",
+    "ncbitaxid",
+    "ncbitaxonid",
+    "ncbitaxonomyid",
+)
+TAXON_ID_PATTERN = re.compile(r"^(?:NCBITaxon:)?([0-9]+)$")
 
 
 def normalize(value: str) -> str:
@@ -235,6 +246,16 @@ def valid_sra_accessions(row: dict[str, str]) -> str | None:
     return "|".join(sorted(set(normalized)))
 
 
+def valid_taxon_id(row: dict[str, str]) -> str | None:
+    taxon_id = first_value(row, TAXON_ID_ALIASES)
+    if not taxon_id:
+        return ""
+    match = TAXON_ID_PATTERN.match(taxon_id)
+    if match is None:
+        return None
+    return f"NCBITaxon:{match.group(1)}"
+
+
 def has_invalid_target_accession(row: dict[str, str]) -> bool:
     return valid_target_accession(row) is None
 
@@ -245,6 +266,10 @@ def has_invalid_assembly_accession(row: dict[str, str]) -> bool:
 
 def has_invalid_sra_accessions(row: dict[str, str]) -> bool:
     return valid_sra_accessions(row) is None
+
+
+def has_invalid_taxon_id(row: dict[str, str]) -> bool:
+    return valid_taxon_id(row) is None
 
 
 def has_assay_method(row: dict[str, str]) -> bool:
@@ -563,10 +588,13 @@ def activity_report_context(
     if activity_call is None:
         return None
 
+    taxon_id = valid_taxon_id(row)
     taxon_label = first_value(row, TAXON_ALIASES)
     biosample_accession = first_value(row, BIOSAMPLE_ALIASES)
     bioproject_accession = first_value(row, BIOPROJECT_ALIASES)
     if not taxon_label or not has_valid_project_context(row):
+        return None
+    if taxon_id is None:
         return None
     if not has_assay_method(row):
         return None
@@ -586,6 +614,7 @@ def activity_report_context(
     mic, disk = measurements
     phenotype, activity = activity_call
     return {
+        "taxon_id": taxon_id,
         "taxon_label": taxon_label,
         "biosample_accession": biosample_accession,
         "bioproject_accession": bioproject_accession,
@@ -647,6 +676,7 @@ def project_dedupe_report_rows(
     antibiotics: dict[tuple[str, str], set[str]] = defaultdict(set)
     exact_mapped_antibiotics: dict[tuple[str, str], set[str]] = defaultdict(set)
     exact_mapped_identifiers: dict[tuple[str, str], set[str]] = defaultdict(set)
+    taxon_ids: dict[tuple[str, str], set[str]] = defaultdict(set)
     taxon_labels: dict[tuple[str, str], set[str]] = defaultdict(set)
 
     for row in rows:
@@ -656,14 +686,16 @@ def project_dedupe_report_rows(
         source_name = first_value(row, ANTIBIOTIC_ALIASES)
         if not source_name:
             continue
-        if activity_report_context(row, project_dedupe) is None:
+        context = activity_report_context(row, project_dedupe)
+        if context is None:
             continue
         biosample_accession = first_value(row, BIOSAMPLE_ALIASES)
         bioproject_accession = first_value(row, BIOPROJECT_ALIASES)
         normalized_antibiotic = normalize(source_name)
         mapping = mappings.get(normalized_antibiotic, {})
         exact_mapped = mapping.get("mapping_status") == EXACT_MAPPING_STATUS
-        taxon_label = first_value(row, TAXON_ALIASES)
+        taxon_id = context["taxon_id"]
+        taxon_label = context["taxon_label"]
 
         for accession_type, (aliases, pattern) in PROJECT_DEDUPE_ACCESSIONS.items():
             accession = first_value(row, aliases)
@@ -686,6 +718,8 @@ def project_dedupe_report_rows(
             if exact_mapped:
                 exact_mapped_antibiotics[key].add(normalized_antibiotic)
                 exact_mapped_identifiers[key].add(mapping["identifier"])
+            if taxon_id:
+                taxon_ids[key].add(taxon_id)
             if taxon_label:
                 taxon_labels[key].add(taxon_label)
 
@@ -702,6 +736,7 @@ def project_dedupe_report_rows(
         row["bioproject_count"] = len(bioproject_accessions[key])
         row["antibiotic_values"] = len(antibiotics[key])
         row["antibiotics"] = "|".join(sorted(antibiotics[key]))
+        row["taxon_ids"] = "|".join(sorted(taxon_ids[key]))
         row["taxon_labels"] = "|".join(sorted(taxon_labels[key]))
         report_rows.append(row)
     return sorted(
@@ -793,9 +828,11 @@ def evaluate_rows(
     rows_with_target_acc = 0
     rows_with_assembly_acc = 0
     rows_with_sra_accessions = 0
+    rows_with_taxon_id = 0
     rows_with_invalid_target_acc = 0
     rows_with_invalid_assembly_acc = 0
     rows_with_invalid_sra_accessions = 0
+    rows_with_invalid_taxon_id = 0
     rows_with_taxon = 0
     rows_with_phenotype = 0
     rows_with_invalid_phenotype = 0
@@ -817,9 +854,11 @@ def evaluate_rows(
         rows_with_target_acc += int(has_value(row, TARGET_ALIASES))
         rows_with_assembly_acc += int(has_value(row, ASSEMBLY_ALIASES))
         rows_with_sra_accessions += int(has_value(row, SRA_ALIASES))
+        rows_with_taxon_id += int(has_value(row, TAXON_ID_ALIASES))
         rows_with_invalid_target_acc += int(has_invalid_target_accession(row))
         rows_with_invalid_assembly_acc += int(has_invalid_assembly_accession(row))
         rows_with_invalid_sra_accessions += int(has_invalid_sra_accessions(row))
+        rows_with_invalid_taxon_id += int(has_invalid_taxon_id(row))
         rows_with_taxon += int(has_value(row, TAXON_ALIASES))
         rows_with_phenotype += int(has_value(row, PHENOTYPE_ALIASES))
         rows_with_invalid_phenotype += int(has_invalid_phenotype(row))
@@ -938,6 +977,12 @@ def evaluate_rows(
                 "invalid_sra_accessions_count": sum(
                     has_invalid_sra_accessions(row) for row in antibiotic_ast_rows
                 ),
+                "taxon_id_count": sum(
+                    has_value(row, TAXON_ID_ALIASES) for row in antibiotic_ast_rows
+                ),
+                "invalid_taxon_id_count": sum(
+                    has_invalid_taxon_id(row) for row in antibiotic_ast_rows
+                ),
                 "taxon_count": sum(has_value(row, TAXON_ALIASES) for row in antibiotic_ast_rows),
                 "phenotype_count": sum(has_value(row, PHENOTYPE_ALIASES) for row in antibiotic_ast_rows),
                 "invalid_phenotype_count": sum(
@@ -965,6 +1010,12 @@ def evaluate_rows(
                     first_value(row, TAXON_ALIASES) for row in antibiotic_ast_rows
                     if first_value(row, TAXON_ALIASES)
                 })),
+                "taxon_ids": "|".join(sorted({
+                    taxon_id for taxon_id in (
+                        valid_taxon_id(row) for row in antibiotic_ast_rows
+                    )
+                    if taxon_id
+                })),
                 "phenotypes": "|".join(sorted({
                     first_value(row, PHENOTYPE_ALIASES) for row in antibiotic_ast_rows
                     if first_value(row, PHENOTYPE_ALIASES)
@@ -984,9 +1035,11 @@ def evaluate_rows(
         "rows_with_target_acc": rows_with_target_acc,
         "rows_with_assembly_acc": rows_with_assembly_acc,
         "rows_with_sra_accessions": rows_with_sra_accessions,
+        "rows_with_taxon_id": rows_with_taxon_id,
         "rows_with_invalid_target_acc": rows_with_invalid_target_acc,
         "rows_with_invalid_assembly_acc": rows_with_invalid_assembly_acc,
         "rows_with_invalid_sra_accessions": rows_with_invalid_sra_accessions,
+        "rows_with_invalid_taxon_id": rows_with_invalid_taxon_id,
         "rows_with_taxon": rows_with_taxon,
         "rows_with_phenotype": rows_with_phenotype,
         "rows_with_invalid_phenotype": rows_with_invalid_phenotype,
@@ -1050,6 +1103,8 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
         "invalid_assembly_acc_count",
         "sra_accessions_count",
         "invalid_sra_accessions_count",
+        "taxon_id_count",
+        "invalid_taxon_id_count",
         "taxon_count",
         "phenotype_count",
         "invalid_phenotype_count",
@@ -1062,6 +1117,7 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
         "standardized_disk_diffusion_count",
         "invalid_disk_diffusion_count",
         "standardized_disk_diffusion_values",
+        "taxon_ids",
         "taxon_labels",
         "phenotypes",
     ]
@@ -1289,13 +1345,15 @@ def main() -> int:
         f"valid_project_context_rows={result['rows_with_valid_project_context']} "
         f"target_acc_rows={result['rows_with_target_acc']} "
         f"assembly_acc_rows={result['rows_with_assembly_acc']} "
-        f"sra_accession_rows={result['rows_with_sra_accessions']}"
+        f"sra_accession_rows={result['rows_with_sra_accessions']} "
+        f"taxon_id_rows={result['rows_with_taxon_id']}"
     )
     print(
         f"  invalid identifiers: target_acc_rows="
         f"{result['rows_with_invalid_target_acc']} "
         f"assembly_acc_rows={result['rows_with_invalid_assembly_acc']} "
-        f"sra_accession_rows={result['rows_with_invalid_sra_accessions']}"
+        f"sra_accession_rows={result['rows_with_invalid_sra_accessions']} "
+        f"taxon_id_rows={result['rows_with_invalid_taxon_id']}"
     )
     print(
         f"  context: taxon_rows={result['rows_with_taxon']} "
