@@ -45,6 +45,10 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from antibioticmech.curate.curation_event import record_curation_event  # noqa: E402
+from antibioticmech.hivdb_score_rules import (  # noqa: E402
+    HIVDB_SCORE_RULE_COLUMNS,
+    hivdb_score_rule_id,
+)
 from antibioticmech.validation.write_validated import (  # noqa: E402
     ValidationFailedError,
     write_validated_antibiotic,
@@ -1884,6 +1888,203 @@ def attach_phibase_resistance(records: dict[str, dict]) -> Counter:
     return counts
 
 
+HIVDB_SCORE_RULE_SOURCE = "HIVDB_HIVFACTS"
+HIVDB_SCORE_RULE_INVENTORY = RAW_DIR / "hivdb_algorithm_terms.tsv"
+HIVDB_SCORE_RULE_REFERENCE = "https://github.com/hivdb/hivfacts"
+HIVDB_SCORE_RULE_TSV_CONTROL_CHARS = frozenset("\t\r\n")
+
+
+def is_hivdb_sourced_score_rule(item: dict) -> bool:
+    """True only for a genotype score rule owned by the HIVDB lane."""
+    return item.get("source") == HIVDB_SCORE_RULE_SOURCE
+
+
+def hivdb_sourced_score_rule_view(record: dict) -> list[dict]:
+    return [
+        item
+        for item in (record.get("genotype_resistance_score_rules") or [])
+        if is_hivdb_sourced_score_rule(item)
+    ]
+
+
+def _require_hivdb_integer(
+    row: dict[str, str],
+    field: str,
+    path: Path,
+    line_number: int,
+    *,
+    minimum: int,
+) -> int:
+    prefix = f"{path}:{line_number}"
+    try:
+        parsed = int(row[field])
+    except ValueError as error:
+        raise ValueError(f"{prefix}: {field} must be an integer") from error
+    if parsed < minimum:
+        raise ValueError(f"{prefix}: {field} must be at least {minimum}")
+    if row[field] != str(parsed):
+        raise ValueError(f"{prefix}: {field} must use canonical integer {parsed!r}")
+    return parsed
+
+
+def _require_hivdb_score(
+    row: dict[str, str],
+    field: str,
+    path: Path,
+    line_number: int,
+) -> Decimal:
+    prefix = f"{path}:{line_number}"
+    try:
+        parsed = Decimal(row[field])
+    except InvalidOperation as error:
+        raise ValueError(f"{prefix}: {field} must be numeric") from error
+    if not parsed.is_finite():
+        raise ValueError(f"{prefix}: {field} must be finite")
+    return parsed
+
+
+def load_hivdb_score_rule_inventory(path: Path) -> list[dict[str, str]]:
+    """Load a curated exact HIVDB algorithm-term report."""
+    if not path.exists():
+        raise SystemExit(f"missing inventory {path}; run `just evaluate-hivdb`")
+
+    rows = []
+    seen_rule_ids = set()
+    expected_algorithm = None
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if reader.fieldnames != HIVDB_SCORE_RULE_COLUMNS:
+            raise ValueError(
+                f"{path}: expected HIVDB score-rule header "
+                f"{HIVDB_SCORE_RULE_COLUMNS!r}, found {reader.fieldnames!r}"
+            )
+        for line_number, row in enumerate(reader, start=2):
+            prefix = f"{path}:{line_number}"
+            if None in row:
+                raise ValueError(f"{prefix}: unexpected extra TSV field")
+            for field, value in row.items():
+                if value is None:
+                    raise ValueError(f"{prefix}: {field} is missing")
+                if any(char in value for char in HIVDB_SCORE_RULE_TSV_CONTROL_CHARS):
+                    raise ValueError(f"{prefix}: {field} contains a tab or newline")
+                if value != value.strip():
+                    raise ValueError(f"{prefix}: {field} has leading or trailing whitespace")
+                if not value:
+                    raise ValueError(f"{prefix}: {field} is required")
+
+            if row["mapping_status"] != "EXACT":
+                raise ValueError(f"{prefix}: mapping_status must be 'EXACT'")
+            if row["full_name_matches"] not in {"true", "false"}:
+                raise ValueError(f"{prefix}: full_name_matches must be 'true' or 'false'")
+            try:
+                algorithm_date = date.fromisoformat(row["algorithm_date"])
+            except ValueError as error:
+                raise ValueError(f"{prefix}: algorithm_date must be an ISO date") from error
+            if algorithm_date.isoformat() != row["algorithm_date"]:
+                raise ValueError(f"{prefix}: algorithm_date must be an ISO date")
+
+            algorithm = (
+                row["source_version"],
+                row["algorithm_name"],
+                row["algorithm_version"],
+                row["algorithm_date"],
+            )
+            if expected_algorithm is None:
+                expected_algorithm = algorithm
+            elif algorithm != expected_algorithm:
+                raise ValueError(f"{prefix}: HIVDB rows must come from one algorithm")
+
+            score_assignments = _require_hivdb_integer(
+                row,
+                "score_assignments",
+                path,
+                line_number,
+                minimum=1,
+            )
+            negative_score_assignments = _require_hivdb_integer(
+                row,
+                "negative_score_assignments",
+                path,
+                line_number,
+                minimum=0,
+            )
+            _require_hivdb_integer(row, "score_term_index", path, line_number, minimum=1)
+            if negative_score_assignments > score_assignments:
+                raise ValueError(
+                    f"{prefix}: negative_score_assignments exceeds score_assignments"
+                )
+            min_score = _require_hivdb_score(row, "min_score", path, line_number)
+            max_score = _require_hivdb_score(row, "max_score", path, line_number)
+            if min_score > max_score:
+                raise ValueError(f"{prefix}: min_score exceeds max_score")
+
+            expected_rule_id = hivdb_score_rule_id(row)
+            if row["source_rule_id"] != expected_rule_id:
+                raise ValueError(f"{prefix}: source_rule_id must be {expected_rule_id!r}")
+            if row["source_rule_id"] in seen_rule_ids:
+                raise ValueError(f"{prefix}: duplicate source_rule_id")
+            seen_rule_ids.add(row["source_rule_id"])
+            rows.append(row)
+
+    return rows
+
+
+def hivdb_score_rule(row: dict[str, str]) -> dict:
+    return {
+        "pathogen_label": "Human immunodeficiency virus 1",
+        "drug_class": row["drug_class"],
+        "algorithm_name": row["algorithm_name"],
+        "algorithm_version": row["algorithm_version"],
+        "algorithm_date": row["algorithm_date"],
+        "source_record_id": row["source_record_id"],
+        "source_rule_id": row["source_rule_id"],
+        "score_term_index": int(row["score_term_index"]),
+        "score_term": row["score_term"],
+        "score_assignments": int(row["score_assignments"]),
+        "negative_score_assignments": int(row["negative_score_assignments"]),
+        "min_score": float(row["min_score"]),
+        "max_score": float(row["max_score"]),
+        "source": HIVDB_SCORE_RULE_SOURCE,
+        "source_version": row["source_version"],
+        "evidence": [{
+            "reference": HIVDB_SCORE_RULE_REFERENCE,
+            "notes": (
+                f"Stanford HIVDB hivfacts {row['source_version']} "
+                f"{row['algorithm_name']} {row['algorithm_version']} "
+                f"{row['source_record_id']} score term {row['score_term_index']}: "
+                f"{row['score_term']}"
+            ),
+        }],
+    }
+
+
+def attach_hivdb_score_rules(records: dict[str, dict]) -> Counter:
+    """Attach exact HIVDB score rules when their curated term report is present."""
+    counts: Counter = Counter()
+    if not HIVDB_SCORE_RULE_INVENTORY.exists():
+        counts["missing_inventory"] = 1
+        return counts
+
+    rules_by_record: dict[str, list[dict]] = defaultdict(list)
+    for row in load_hivdb_score_rule_inventory(HIVDB_SCORE_RULE_INVENTORY):
+        identifier = row["identifier"]
+        record = records.get(identifier)
+        if (
+            record is None
+            or record["chemical_structure"].get("standard_inchi_key") != row["standard_inchi_key"]
+        ):
+            counts["identity_drift"] += 1
+            continue
+        rules_by_record[identifier].append(hivdb_score_rule(row))
+        counts["matched_rules"] += 1
+
+    for identifier, rules in rules_by_record.items():
+        records[identifier].setdefault("genotype_resistance_score_rules", []).extend(rules)
+        _history_last(records[identifier])
+        counts["matched_records"] += 1
+    return counts
+
+
 BINDINGDB_TARGET_SOURCE = "BINDINGDB"
 
 
@@ -3234,6 +3435,11 @@ def reseed_delta(existing: dict, record: dict, merged: dict,
     for field, view, source in (
         ("molecular_targets", bindingdb_sourced_target_view, BINDINGDB_TARGET_SOURCE),
         ("resistance_mechanisms", phibase_sourced_resistance_view, PHIBASE_RESISTANCE_SOURCE),
+        (
+            "genotype_resistance_score_rules",
+            hivdb_sourced_score_rule_view,
+            HIVDB_SCORE_RULE_SOURCE,
+        ),
         ("activity_spectrum", cryptic_sourced_activity_view, CRYPTIC_ACTIVITY_SOURCE),
         ("activity_spectrum", ncbi_ast_sourced_activity_view, NCBI_AST_ACTIVITY_SOURCE),
         ("producer_organisms", mibig_sourced_producer_view, MIBIG_PRODUCER_SOURCE),
@@ -3321,6 +3527,19 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
         merged["activity_spectrum"] = seeded_activities + curator_activities
     elif existing_activities:
         merged.pop("activity_spectrum", None)
+
+    seeded_score_rules = list(record.get("genotype_resistance_score_rules") or [])
+    curator_score_rules = [
+        item
+        for item in (existing.get("genotype_resistance_score_rules") or [])
+        if not is_hivdb_sourced_score_rule(item)
+    ]
+    if seeded_score_rules or curator_score_rules:
+        merged["genotype_resistance_score_rules"] = (
+            seeded_score_rules + curator_score_rules
+        )
+    else:
+        merged.pop("genotype_resistance_score_rules", None)
 
     # MIBiG owns only the assertions explicitly marked with its source. A fresh
     # extraction replaces that slice while hand-curated producers survive after
@@ -3618,6 +3837,7 @@ def main() -> int:
     bindingdb_counts = attach_bindingdb_targets(records)
     cryptic_counts = attach_cryptic_activity(records)
     ncbi_ast_counts = attach_ncbi_ast_activity(records)
+    hivdb_counts = attach_hivdb_score_rules(records)
     mibig_counts = attach_mibig_producers(
         records,
         str(manifest.get("sources", {}).get("mibig", {}).get("version", "")),
@@ -3687,6 +3907,13 @@ def main() -> int:
         f"observations={ncbi_ast_counts['matched_observations']} "
         f"records={ncbi_ast_counts['matched_records']} "
         f"identity_drift={ncbi_ast_counts['identity_drift']}",
+        file=sys.stderr,
+    )
+    print(
+        "  HIVDB score rules: "
+        f"rules={hivdb_counts['matched_rules']} "
+        f"records={hivdb_counts['matched_records']} "
+        f"identity_drift={hivdb_counts['identity_drift']}",
         file=sys.stderr,
     )
     print(

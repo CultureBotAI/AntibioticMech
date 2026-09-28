@@ -345,6 +345,16 @@ classes:
         inlined_as_list: true
         range: ResistanceMechanism
 
+      genotype_resistance_score_rules:
+        description: >-
+          Drug-specific genotype interpretation rules that assign numerical
+          resistance scores to one or more source-named variants. These are
+          predictive algorithm terms, not biochemical routes, and must not be
+          flattened into `ResistanceMechanism` rows.
+        multivalued: true
+        inlined_as_list: true
+        range: GenotypeResistanceScoreRule
+
       clinical_status:
         description: Regulatory / use status, where a source states it.
         range: ClinicalStatusEnum
@@ -1279,6 +1289,84 @@ classes:
         range: string
       evidence:
         description: Citation for the resistance claim. Required.
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
+
+  GenotypeResistanceScoreRule:
+    description: >-
+      One term in a drug-specific genotype interpretation algorithm. A term can
+      name a single variant, a group expression such as `MAX(...)`, or another
+      source formula whose score contributes to an algorithmic resistance call.
+      The score is preserved as source evidence about that exact drug, not as a
+      claim that the variants establish a generic biochemical resistance route.
+    attributes:
+      pathogen_label:
+        description: Virus or organism whose genotype the algorithm interprets.
+        required: true
+        range: string
+      gene:
+        description: Source gene or protein region interpreted by this rule, when known.
+        range: string
+      drug_class:
+        description: Source drug-class grouping for the exact drug.
+        required: true
+        range: string
+      algorithm_name:
+        description: Source algorithm name.
+        required: true
+        range: string
+      algorithm_version:
+        description: Source algorithm version.
+        required: true
+        range: string
+      algorithm_date:
+        description: Source algorithm release date.
+        required: true
+        range: date
+      source_record_id:
+        description: Source drug identifier this score term applies to.
+        required: true
+        range: string
+      source_rule_id:
+        description: Stable digest of this source score term.
+        required: true
+        range: string
+      score_term_index:
+        description: One-based order of this top-level score term within the source rule.
+        required: true
+        range: integer
+      score_term:
+        description: Verbatim source score formula term.
+        required: true
+        range: string
+      score_assignments:
+        description: Number of variant-to-score assignments represented inside the term.
+        required: true
+        range: integer
+      negative_score_assignments:
+        description: Number of represented score assignments with negative scores.
+        required: true
+        range: integer
+      min_score:
+        description: Lowest score assigned inside this term.
+        required: true
+        range: float
+      max_score:
+        description: Highest score assigned inside this term.
+        required: true
+        range: float
+      source:
+        description: Upstream resource owning this score-rule assertion.
+        required: true
+        range: string
+      source_version:
+        description: Version or commit of the upstream source for this score rule.
+        required: true
+        range: string
+      evidence:
+        description: Citation for this source score rule.
         required: true
         multivalued: true
         inlined_as_list: true

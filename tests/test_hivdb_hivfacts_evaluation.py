@@ -11,6 +11,8 @@ from pathlib import Path
 import pytest
 import yaml
 
+from antibioticmech.hivdb_score_rules import hivdb_score_rule_id
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from evaluate_hivdb_hivfacts import (  # noqa: E402
@@ -41,6 +43,12 @@ from evaluate_hivdb_hivfacts import (  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = REPO_ROOT / "scripts" / "evaluate_hivdb_hivfacts.py"
+
+
+def with_hivdb_score_rule_id(row: dict) -> dict:
+    row = {"source_rule_id": "", **row}
+    row["source_rule_id"] = hivdb_score_rule_id(row)
+    return row
 
 
 def hivdb_source_rows() -> list[dict[str, str]]:
@@ -877,25 +885,28 @@ def test_read_hiv1_algorithm_audits_drug_specific_score_rules(tmp_path):
     assert result["non_exact_score_assignments"] == 1
     assert result["full_name_mismatches"] == 1
     assert result["algorithm_report_rows"][0]["mapping_status"] == "EXACT"
-    assert result["algorithm_term_report_rows"][1] == {
-        "algorithm_name": "HIVDB",
-        "algorithm_version": "10.2",
-        "algorithm_date": "2026-04-26",
-        "source_record_id": "ABC",
-        "source_name": "abacavir",
-        "algorithm_full_name": "abacavir",
-        "full_name_matches": "true",
-        "drug_class": "NRTI",
-        "mapping_status": "EXACT",
-        "identifier": "CHEBI:421707",
-        "standard_inchi_key": "MCI",
-        "score_term_index": 2,
-        "score_term": "MAX(184I => 15, 184V => 15)",
-        "score_assignments": 2,
-        "negative_score_assignments": 0,
-        "min_score": 15.0,
-        "max_score": 15.0,
-    }
+    assert result["algorithm_term_report_rows"][1] == with_hivdb_score_rule_id(
+        {
+            "source_version": HIVDB_HIVFACTS_COMMIT,
+            "algorithm_name": "HIVDB",
+            "algorithm_version": "10.2",
+            "algorithm_date": "2026-04-26",
+            "source_record_id": "ABC",
+            "source_name": "abacavir",
+            "algorithm_full_name": "abacavir",
+            "full_name_matches": "true",
+            "drug_class": "NRTI",
+            "mapping_status": "EXACT",
+            "identifier": "CHEBI:421707",
+            "standard_inchi_key": "MCI",
+            "score_term_index": 2,
+            "score_term": "MAX(184I => 15, 184V => 15)",
+            "score_assignments": 2,
+            "negative_score_assignments": 0,
+            "min_score": 15.0,
+            "max_score": 15.0,
+        }
+    )
 
 
 def test_read_hiv1_algorithm_rejects_bad_drug_score_rules(tmp_path):
@@ -1104,6 +1115,7 @@ def test_write_algorithm_report_preserves_hivdb_score_rule_columns(tmp_path):
     write_algorithm_report(
         [
             {
+                "source_version": HIVDB_HIVFACTS_COMMIT,
                 "algorithm_name": "HIVDB",
                 "algorithm_version": "10.2",
                 "algorithm_date": "2026-04-26",
@@ -1133,6 +1145,7 @@ def test_write_algorithm_report_preserves_hivdb_score_rule_columns(tmp_path):
 
     assert rows == [
         {
+            "source_version": HIVDB_HIVFACTS_COMMIT,
             "algorithm_name": "HIVDB",
             "algorithm_version": "10.2",
             "algorithm_date": "2026-04-26",
@@ -1159,7 +1172,41 @@ def test_write_algorithm_term_report_preserves_hivdb_score_formula_terms(tmp_pat
 
     write_algorithm_term_report(
         [
+            with_hivdb_score_rule_id(
+                {
+                    "source_version": HIVDB_HIVFACTS_COMMIT,
+                    "algorithm_name": "HIVDB",
+                    "algorithm_version": "10.2",
+                    "algorithm_date": "2026-04-26",
+                    "source_record_id": "ABC",
+                    "source_name": "abacavir",
+                    "algorithm_full_name": "abacavir",
+                    "full_name_matches": "true",
+                    "drug_class": "NRTI",
+                    "mapping_status": "EXACT",
+                    "identifier": "CHEBI:421707",
+                    "standard_inchi_key": "MCI",
+                    "score_term_index": 2,
+                    "score_term": "MAX(184I => 15, 184V => 15)",
+                    "score_assignments": 2,
+                    "negative_score_assignments": 0,
+                    "min_score": 15.0,
+                    "max_score": 15.0,
+                }
+            )
+        ],
+        path,
+    )
+
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        assert reader.fieldnames == ALGORITHM_TERM_REPORT_COLUMNS
+        rows = list(reader)
+
+    assert rows == [
+        with_hivdb_score_rule_id(
             {
+                "source_version": HIVDB_HIVFACTS_COMMIT,
                 "algorithm_name": "HIVDB",
                 "algorithm_version": "10.2",
                 "algorithm_date": "2026-04-26",
@@ -1171,42 +1218,14 @@ def test_write_algorithm_term_report_preserves_hivdb_score_formula_terms(tmp_pat
                 "mapping_status": "EXACT",
                 "identifier": "CHEBI:421707",
                 "standard_inchi_key": "MCI",
-                "score_term_index": 2,
+                "score_term_index": "2",
                 "score_term": "MAX(184I => 15, 184V => 15)",
-                "score_assignments": 2,
-                "negative_score_assignments": 0,
-                "min_score": 15.0,
-                "max_score": 15.0,
+                "score_assignments": "2",
+                "negative_score_assignments": "0",
+                "min_score": "15.0",
+                "max_score": "15.0",
             }
-        ],
-        path,
-    )
-
-    with path.open(newline="", encoding="utf-8") as handle:
-        reader = csv.DictReader(handle, delimiter="\t")
-        assert reader.fieldnames == ALGORITHM_TERM_REPORT_COLUMNS
-        rows = list(reader)
-
-    assert rows == [
-        {
-            "algorithm_name": "HIVDB",
-            "algorithm_version": "10.2",
-            "algorithm_date": "2026-04-26",
-            "source_record_id": "ABC",
-            "source_name": "abacavir",
-            "algorithm_full_name": "abacavir",
-            "full_name_matches": "true",
-            "drug_class": "NRTI",
-            "mapping_status": "EXACT",
-            "identifier": "CHEBI:421707",
-            "standard_inchi_key": "MCI",
-            "score_term_index": "2",
-            "score_term": "MAX(184I => 15, 184V => 15)",
-            "score_assignments": "2",
-            "negative_score_assignments": "0",
-            "min_score": "15.0",
-            "max_score": "15.0",
-        }
+        )
     ]
 
 
