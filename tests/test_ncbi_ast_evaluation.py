@@ -155,6 +155,14 @@ def test_evaluate_rows_keeps_curated_mappings_separate_from_lexical_candidates()
             "mapping_basis": "none",
             "notes": "Gentamicin is not one grounded structure.",
         },
+        "oldncbirow": {
+            "mapping_status": "EXACT",
+            "source_name": "old NCBI row",
+            "identifier": "CHEBI:2637",
+            "standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N",
+            "mapping_basis": "parent_base",
+            "notes": "Stale row from an older AST export.",
+        },
     }
 
     result = evaluate_rows(
@@ -171,6 +179,8 @@ def test_evaluate_rows_keeps_curated_mappings_separate_from_lexical_candidates()
     assert result["non_exact_mapped_rows"] == 1
     assert result["unmapped_antibiotics"] == 0
     assert result["unmapped_rows"] == 0
+    assert result["unused_mapping_antibiotics"] == 1
+    assert result["unused_mapping_antibiotic_values"] == "oldncbirow"
 
     amikacin = result["antibiotic_rows"][0]
     assert amikacin["antibiotic"] == "amikacin"
@@ -1743,6 +1753,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert "invalid_phenotype_rows=0" in result.stdout
     assert "assay_method_rows=2" in result.stdout
     assert "source_context_rows=1" in result.stdout
+    assert "unused_antibiotics=0" in result.stdout
     assert "project_dedupe_report=" in result.stdout
     assert antibiotic_report.exists()
 

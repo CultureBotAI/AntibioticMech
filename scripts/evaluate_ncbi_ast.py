@@ -809,6 +809,7 @@ def evaluate_rows(
     exact_mapped_activity_report_candidate_rows = 0
     non_exact_mapped_rows = 0
     unmapped_rows = 0
+    unused_mapping_antibiotics = sorted(set(mappings) - set(rows_by_antibiotic))
     for normalized, antibiotic_ast_rows in sorted(
         rows_by_antibiotic.items(),
         key=lambda item: (-len(item[1]), item[0]),
@@ -984,6 +985,8 @@ def evaluate_rows(
         "exact_mapped_rows": exact_mapped_rows,
         "non_exact_mapped_rows": non_exact_mapped_rows,
         "unmapped_rows": unmapped_rows,
+        "unused_mapping_antibiotics": len(unused_mapping_antibiotics),
+        "unused_mapping_antibiotic_values": "|".join(unused_mapping_antibiotics),
         "antibiotic_rows": antibiotic_rows,
     }
 
@@ -1246,6 +1249,14 @@ def main() -> int:
         f"  unmatched names: antibiotics={result['unmatched_antibiotics']} "
         f"rows={result['unmatched_rows']}"
     )
+    if args.drug_map:
+        drift = (
+            f"  curated map drift: unused_antibiotics="
+            f"{result['unused_mapping_antibiotics']}"
+        )
+        if result["unused_mapping_antibiotic_values"]:
+            drift += f" values={result['unused_mapping_antibiotic_values']}"
+        print(drift)
     print("  leading antibiotics: " + ", ".join(f"{name}={count}" for name, count in leading))
     if args.antibiotic_report:
         print(f"  antibiotic_report={args.antibiotic_report}")
