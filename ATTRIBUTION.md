@@ -10,8 +10,9 @@ carry this attribution with it.
 > CC BY 4.0), the Antibiotic Resistance Ontology (CARD, McMaster University,
 > CC BY 4.0), MIBiG (CC BY 4.0), BindingDB (CC BY 4.0), PHI-base
 > (CC BY 4.0), the CRyPTIC Consortium Dataset (CC BY 4.0), Drugs@FDA
-> (U.S. Food and Drug Administration) and FDA GSRS / UNII (FDA and NCATS),
-> with chemical structures from PubChem (NCBI).
+> (U.S. Food and Drug Administration), FDA GSRS / UNII (FDA and NCATS), and
+> Stanford HIVDB hivfacts (Unlicense), with chemical structures from PubChem
+> (NCBI).
 
 ## Per-record provenance
 
@@ -35,7 +36,8 @@ source_concepts:
 Source-owned mechanism, activity, production, and regulatory assertions carry
 their source on the item itself: `producer_organisms[].source`,
 `molecular_targets[].source`, `resistance_mechanisms[].source`,
-`activity_spectrum[].source`, and `clinical_status_assertions[].source`.
+`activity_spectrum[].source`, `genotype_resistance_score_rules[].source`, and
+`clinical_status_assertions[].source`.
 
 A consumer taking a subset of the corpus can derive exactly which upstream
 resources that subset depends on from both record identity and item-level
@@ -94,6 +96,11 @@ observations from exact-mapped drug codes. <https://zenodo.org/records/15680920>
 
 CRyPTIC Consortium. CRyPTIC Consortium Dataset. Zenodo.
 doi:10.5281/zenodo.15680920
+
+**Stanford HIVDB / hivfacts** — Stanford HIV Drug Resistance Database
+hivfacts. Unlicense. Supplies exact HIV-1 drug-specific HIVDB 10.2 genotype
+score-rule formula terms for exact-mapped antiretroviral compounds.
+<https://github.com/hivdb/hivfacts/>
 
 **Drugs@FDA** — U.S. Food and Drug Administration. United States government
 public-domain data. Supplies product-level human-drug approval and marketing

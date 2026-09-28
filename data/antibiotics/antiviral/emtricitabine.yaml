@@ -89,6 +89,289 @@ source_concepts:
   - CHEBI:36044
   - CHEBI:53756
   source_version: '2026-08-30'
+genotype_resistance_score_rules:
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: FTC
+  source_rule_id: hivdb_hivfacts:d14d0325b1fd484e
+  score_term_index: 1
+  score_term: MAX(65N => 15, 65R => 15)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 FTC score term 1: MAX(65N => 15, 65R => 15)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: FTC
+  source_rule_id: hivdb_hivfacts:69f77f584e59f9a1
+  score_term_index: 2
+  score_term: 67d => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 FTC score term 2: 67d => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: FTC
+  source_rule_id: hivdb_hivfacts:23519f7b11f1579f
+  score_term_index: 3
+  score_term: 68d => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 FTC score term 3: 68d => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: FTC
+  source_rule_id: hivdb_hivfacts:1c609d061f69a8f8
+  score_term_index: 4
+  score_term: MAX(69i => 30, 69d => 15)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 30.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 FTC score term 4: MAX(69i => 30, 69d => 15)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: FTC
+  source_rule_id: hivdb_hivfacts:123dd8ab09183334
+  score_term_index: 5
+  score_term: MAX(70E => 10, 70G => 10, 70N => 10, 70Q => 10, 70S => 10, 70T => 10,
+    70d => 10)
+  score_assignments: 7
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 FTC score term 5: MAX(70E => 10, 70G => 10, 70N => 10, 70Q => 10, 70S =>
+      10, 70T => 10, 70d => 10)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: FTC
+  source_rule_id: hivdb_hivfacts:11deb4455f54281b
+  score_term_index: 6
+  score_term: 75I => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 FTC score term 6: 75I => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: FTC
+  source_rule_id: hivdb_hivfacts:0bcb8c50cbe4c575
+  score_term_index: 7
+  score_term: 77L => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 FTC score term 7: 77L => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: FTC
+  source_rule_id: hivdb_hivfacts:06cf40e193454256
+  score_term_index: 8
+  score_term: 116Y => 5
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 5.0
+  max_score: 5.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 FTC score term 8: 116Y => 5'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: FTC
+  source_rule_id: hivdb_hivfacts:f5c10d1052f9a76f
+  score_term_index: 9
+  score_term: MAX(151L => 10, 151M => 15)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 FTC score term 9: MAX(151L => 10, 151M => 15)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: FTC
+  source_rule_id: hivdb_hivfacts:85b0bc58a43061db
+  score_term_index: 10
+  score_term: MAX(184I => 60, 184V => 60)
+  score_assignments: 2
+  negative_score_assignments: 0
+  min_score: 60.0
+  max_score: 60.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 FTC score term 10: MAX(184I => 60, 184V => 60)'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: FTC
+  source_rule_id: hivdb_hivfacts:c9a03db57c59be02
+  score_term_index: 11
+  score_term: 65RN AND 151M => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 FTC score term 11: 65RN AND 151M => 10'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: FTC
+  source_rule_id: hivdb_hivfacts:08f115fafaf99ebc
+  score_term_index: 12
+  score_term: 77L AND 116Y AND 151ML => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 FTC score term 12: 77L AND 116Y AND 151ML => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: FTC
+  source_rule_id: hivdb_hivfacts:e8ee42fbcd3da907
+  score_term_index: 13
+  score_term: 41L AND 210W AND 215FY => 15
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 15.0
+  max_score: 15.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 FTC score term 13: 41L AND 210W AND 215FY => 15'
+- pathogen_label: Human immunodeficiency virus 1
+  gene: RT
+  drug_class: NRTI
+  algorithm_name: HIVDB
+  algorithm_version: '10.2'
+  algorithm_date: '2026-04-26'
+  source_record_id: FTC
+  source_rule_id: hivdb_hivfacts:e64b89b4762a613a
+  score_term_index: 14
+  score_term: 67EGNHST AND 70R AND 219ENQRW => 10
+  score_assignments: 1
+  negative_score_assignments: 0
+  min_score: 10.0
+  max_score: 10.0
+  source: HIVDB_HIVFACTS
+  source_version: be1c11a5145fea9073fdb71801919d4a34265336
+  evidence:
+  - reference: https://github.com/hivdb/hivfacts
+    notes: 'Stanford HIVDB hivfacts be1c11a5145fea9073fdb71801919d4a34265336 HIVDB
+      10.2 FTC score term 14: 67EGNHST AND 70R AND 219ENQRW => 10'
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -221,3 +504,8 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-28T17:23:52Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: genotype_resistance_score_rules (HIVDB_HIVFACTS be1c11a5145fea9073fdb71801919d4a34265336).
+    Upstream retrieval date 2026-08-30, unchanged.'

@@ -968,6 +968,10 @@ def evaluate_hiv1_algorithm_rules(
     }
 
 
+def exact_algorithm_term_report_rows(rows: list[dict]) -> list[dict]:
+    return [row for row in rows if row["mapping_status"] == EXACT_MAPPING_STATUS]
+
+
 def write_drug_report(rows: list[dict], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
@@ -1105,6 +1109,11 @@ def main() -> int:
         type=Path,
         help="Optional TSV HIV-1 drug-specific algorithm score-term audit.",
     )
+    parser.add_argument(
+        "--exact-algorithm-term-report",
+        type=Path,
+        help="Optional TSV exact-mapped HIV-1 algorithm score-term seed inventory.",
+    )
     parser.add_argument("--corpus-root", type=Path, default=REPO_ROOT, help=argparse.SUPPRESS)
     args = parser.parse_args()
 
@@ -1229,6 +1238,14 @@ def main() -> int:
             args.algorithm_term_report,
         )
         print(f"wrote {args.algorithm_term_report}")
+    if args.exact_algorithm_term_report:
+        write_algorithm_term_report(
+            exact_algorithm_term_report_rows(
+                algorithm_result["algorithm_term_report_rows"]
+            ),
+            args.exact_algorithm_term_report,
+        )
+        print(f"wrote {args.exact_algorithm_term_report}")
 
     print(
         "--audit: no rows seeded; HIVDB drug-specific mutation rules need a "
