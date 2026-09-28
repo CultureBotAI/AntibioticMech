@@ -160,6 +160,7 @@ def test_load_ncbi_ast_activity_inventory_rejects_duplicate_groups(tmp_path):
         ({"taxon_label": ""}, "taxon_label is required"),
         ({"biosample_accession": ""}, "biosample_accession is required"),
         ({"platform": " AST"}, "platform has leading or trailing whitespace"),
+        ({"platform": "", "reagent": ""}, "platform or reagent is required"),
         ({"platform": "AST\nCLSI"}, "platform contains a tab or newline"),
         ({"biosample_accession": "BioSample:SAMN11953777"}, "invalid BioSample accession"),
         ({"bioproject_accession": "SAMN11953777"}, "invalid BioProject accession"),
