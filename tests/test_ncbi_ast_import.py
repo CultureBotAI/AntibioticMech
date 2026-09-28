@@ -150,6 +150,31 @@ def test_load_ncbi_ast_activity_inventory_rejects_duplicate_groups(tmp_path):
         load_ncbi_ast_activity_inventory(path)
 
 
+def test_load_ncbi_ast_activity_inventory_rejects_mixed_source_metadata(tmp_path):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    write_activity_report(path, [
+        ncbi_ast_row(),
+        ncbi_ast_row(
+            biosample_accession="SAMN11953778",
+            source_version="2026-09-27-ast-browser",
+        ),
+    ])
+
+    with pytest.raises(ValueError, match="source_version must be"):
+        load_ncbi_ast_activity_inventory(path)
+
+    write_activity_report(path, [
+        ncbi_ast_row(),
+        ncbi_ast_row(
+            biosample_accession="SAMN11953778",
+            source_retrieved_on="2026-09-27",
+        ),
+    ])
+
+    with pytest.raises(ValueError, match="source_retrieved_on must be '2026-09-26'"):
+        load_ncbi_ast_activity_inventory(path)
+
+
 @pytest.mark.parametrize(
     ("overrides", "message"),
     [

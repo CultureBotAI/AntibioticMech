@@ -2384,6 +2384,8 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
 
     rows = []
     seen_group_ids = set()
+    expected_source_version = None
+    expected_source_retrieved_on = None
     with path.open(newline="", encoding="utf-8") as handle:
         reader = csv.DictReader(handle, delimiter="\t")
         if reader.fieldnames != NCBI_AST_ACTIVITY_COLUMNS:
@@ -2426,6 +2428,12 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                 raise ValueError(f"{prefix}: normalized_antibiotic must match source_name")
             if not row["platform"] and not row["reagent"]:
                 raise ValueError(f"{prefix}: platform or reagent is required")
+            if expected_source_version is None:
+                expected_source_version = row["source_version"]
+            elif row["source_version"] != expected_source_version:
+                raise ValueError(
+                    f"{prefix}: source_version must be {expected_source_version!r}"
+                )
             try:
                 source_retrieved_on = date.fromisoformat(row["source_retrieved_on"])
             except ValueError as error:
@@ -2434,6 +2442,13 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                 ) from error
             if source_retrieved_on.isoformat() != row["source_retrieved_on"]:
                 raise ValueError(f"{prefix}: source_retrieved_on must be an ISO date")
+            if expected_source_retrieved_on is None:
+                expected_source_retrieved_on = row["source_retrieved_on"]
+            elif row["source_retrieved_on"] != expected_source_retrieved_on:
+                raise ValueError(
+                    f"{prefix}: source_retrieved_on must be "
+                    f"{expected_source_retrieved_on!r}"
+                )
             try:
                 ast_row_count = int(row["ast_row_count"])
             except ValueError as error:
