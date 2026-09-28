@@ -130,6 +130,9 @@ MEASUREMENT_PATTERN = re.compile(r"^(?P<qualifier><=|>=|<|>|=)?\s*(?P<value>(?:\
 MEASUREMENT_SIGNS = {"", "<=", ">=", "<", ">", "=", "=="}
 MIC_UNITS = "mg/L"
 DISK_DIFFUSION_UNITS = "mm"
+MIC_MAX_VALUE = Decimal("1024")
+DISK_DIFFUSION_MIN_VALUE = Decimal("6")
+DISK_DIFFUSION_MAX_VALUE = Decimal("150")
 BIOSAMPLE_PATTERN = re.compile(r"^SAM(N|D|EA)[0-9]+$")
 BIOPROJECT_PATTERN = re.compile(r"^PRJ(NA|EB|DB)[0-9]+$")
 TARGET_PATTERN = re.compile(r"^PDT[0-9]+(\.[0-9]+)?$")
@@ -252,6 +255,9 @@ def standardized_measurement(
     row: dict[str, str],
     aliases: Iterable[str],
     units: str,
+    *,
+    minimum: Decimal | None = None,
+    maximum: Decimal | None = None,
 ) -> tuple[str, str, str] | None:
     raw_value = first_value(row, aliases)
     if not raw_value:
@@ -262,6 +268,10 @@ def standardized_measurement(
         return None
     value = Decimal(match.group("value"))
     if value <= 0:
+        return None
+    if minimum is not None and value < minimum:
+        return None
+    if maximum is not None and value > maximum:
         return None
 
     value_qualifier = match.group("qualifier") or ""
@@ -286,8 +296,19 @@ def measurement_label(measurement: tuple[str, str, str]) -> str:
 def standardized_activity_measurements(
     row: dict[str, str],
 ) -> tuple[tuple[str, str, str], tuple[str, str, str]] | None:
-    mic = standardized_measurement(row, MIC_ALIASES, MIC_UNITS)
-    disk = standardized_measurement(row, DISK_ALIASES, DISK_DIFFUSION_UNITS)
+    mic = standardized_measurement(
+        row,
+        MIC_ALIASES,
+        MIC_UNITS,
+        maximum=MIC_MAX_VALUE,
+    )
+    disk = standardized_measurement(
+        row,
+        DISK_ALIASES,
+        DISK_DIFFUSION_UNITS,
+        minimum=DISK_DIFFUSION_MIN_VALUE,
+        maximum=DISK_DIFFUSION_MAX_VALUE,
+    )
     if mic is None or disk is None:
         return None
     if not mic[0] and not disk[0]:
@@ -818,11 +839,22 @@ def evaluate_rows(
             unmapped_rows += row_count
 
         mic_measurements = [
-            standardized_measurement(row, MIC_ALIASES, MIC_UNITS)
+            standardized_measurement(
+                row,
+                MIC_ALIASES,
+                MIC_UNITS,
+                maximum=MIC_MAX_VALUE,
+            )
             for row in antibiotic_ast_rows
         ]
         disk_measurements = [
-            standardized_measurement(row, DISK_ALIASES, DISK_DIFFUSION_UNITS)
+            standardized_measurement(
+                row,
+                DISK_ALIASES,
+                DISK_DIFFUSION_UNITS,
+                minimum=DISK_DIFFUSION_MIN_VALUE,
+                maximum=DISK_DIFFUSION_MAX_VALUE,
+            )
             for row in antibiotic_ast_rows
         ]
         valid_mic_measurements = [

@@ -2234,6 +2234,9 @@ NCBI_AST_ACTIVITY_BY_PHENOTYPE = {
     "susceptible": "SUSCEPTIBLE",
 }
 NCBI_AST_MEASUREMENT_QUALIFIERS = {"", "<", "<=", ">", ">="}
+NCBI_AST_MIC_MAX_VALUE = Decimal("1024")
+NCBI_AST_DISK_DIFFUSION_MIN_VALUE = Decimal("6")
+NCBI_AST_DISK_DIFFUSION_MAX_VALUE = Decimal("150")
 NCBI_AST_BIOSAMPLE_PATTERN = re.compile(r"^SAM(N|D|EA)[0-9]+$")
 NCBI_AST_BIOPROJECT_PATTERN = re.compile(r"^PRJ(NA|EB|DB)[0-9]+$")
 NCBI_AST_TARGET_PATTERN = re.compile(r"^PDT[0-9]+(\.[0-9]+)?$")
@@ -2353,6 +2356,8 @@ def _require_ncbi_ast_measurement(
     qualifier_field: str,
     units_field: str,
     expected_units: str,
+    minimum: Decimal | None = None,
+    maximum: Decimal | None = None,
     path: Path,
     line_number: int,
 ) -> bool:
@@ -2380,6 +2385,10 @@ def _require_ncbi_ast_measurement(
         raise ValueError(f"{prefix}: {value_field} must be finite")
     if parsed <= 0:
         raise ValueError(f"{prefix}: {value_field} must be positive")
+    if minimum is not None and parsed < minimum:
+        raise ValueError(f"{prefix}: {value_field} must be at least {minimum:f}")
+    if maximum is not None and parsed > maximum:
+        raise ValueError(f"{prefix}: {value_field} must be at most {maximum:f}")
     canonical = format(parsed.normalize(), "f")
     if value != canonical:
         raise ValueError(
@@ -2538,6 +2547,7 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                 qualifier_field="mic_qualifier",
                 units_field="mic_units",
                 expected_units="mg/L",
+                maximum=NCBI_AST_MIC_MAX_VALUE,
                 path=path,
                 line_number=line_number,
             )
@@ -2547,6 +2557,8 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                 qualifier_field="disk_diffusion_qualifier",
                 units_field="disk_diffusion_units",
                 expected_units="mm",
+                minimum=NCBI_AST_DISK_DIFFUSION_MIN_VALUE,
+                maximum=NCBI_AST_DISK_DIFFUSION_MAX_VALUE,
                 path=path,
                 line_number=line_number,
             )
