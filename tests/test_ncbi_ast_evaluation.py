@@ -245,6 +245,15 @@ def test_evaluate_rows_counts_exact_activity_report_candidates_after_dedupe():
             "mic": "32",
             "platform": "AST",
         },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953782",
+            "bioproject_acc": "PRJNA292667",
+            "target_acc": "PDT000001236.1",
+            "taxgroup_name": "Escherichia coli",
+            "mic": "64",
+            "platform": "AST",
+        },
     ]
     mappings = {
         "cefepime": {
@@ -275,14 +284,17 @@ def test_evaluate_rows_counts_exact_activity_report_candidates_after_dedupe():
         },
     )
 
-    assert result["exact_mapped_rows"] == 4
+    assert result["exact_mapped_rows"] == 5
     assert result["rows_with_invalid_target_acc"] == 1
     assert result["rows_with_invalid_assembly_acc"] == 1
     assert result["rows_with_invalid_sra_accessions"] == 1
-    assert result["rows_with_assay_method"] == 5
+    assert result["rows_with_assay_method"] == 6
+    assert result["rows_with_dedupe_context"] == 2
     assert result["rows_with_invalid_phenotype"] == 0
     assert result["exact_mapped_activity_report_candidate_rows"] == 1
+    assert result["exact_mapped_activity_report_dedupe_excluded_rows"] == 1
     assert result["antibiotic_rows"][0]["activity_report_candidate_count"] == 1
+    assert result["antibiotic_rows"][0]["activity_report_dedupe_excluded_count"] == 1
     assert result["antibiotic_rows"][0]["invalid_target_acc_count"] == 1
     assert result["antibiotic_rows"][0]["assembly_acc_count"] == 1
     assert result["antibiotic_rows"][0]["invalid_assembly_acc_count"] == 1
@@ -1563,6 +1575,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "valid_project_context_count": 7,
             "dedupe_context_count": 0,
             "activity_report_candidate_count": 7,
+            "activity_report_dedupe_excluded_count": 2,
             "target_acc_count": 7,
             "invalid_target_acc_count": 0,
             "assembly_acc_count": 7,
@@ -1618,6 +1631,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "valid_project_context_count": "7",
         "dedupe_context_count": "0",
         "activity_report_candidate_count": "7",
+        "activity_report_dedupe_excluded_count": "2",
         "target_acc_count": "7",
         "invalid_target_acc_count": "0",
         "assembly_acc_count": "7",
@@ -2031,6 +2045,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert "host_rows=1" in result.stdout
     assert "isolation_source_rows=1" in result.stdout
     assert "source_context_rows=1" in result.stdout
+    assert "activity_report_dedupe_excluded_rows=1" in result.stdout
     assert "unused_antibiotics=0" in result.stdout
     assert "unused_source_contexts=0" in result.stdout
     assert "project_dedupe_report=" in result.stdout
@@ -2045,6 +2060,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert antibiotic_rows[0]["create_date_count"] == "1"
     assert antibiotic_rows[0]["host_count"] == "1"
     assert antibiotic_rows[0]["isolation_source_count"] == "1"
+    assert antibiotic_rows[0]["activity_report_dedupe_excluded_count"] == "1"
 
     with template.open(newline="", encoding="utf-8") as handle:
         assert list(csv.DictReader(handle, delimiter="\t"))[0]["source_record_id"] == "amikacin"
