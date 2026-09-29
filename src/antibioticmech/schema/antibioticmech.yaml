@@ -1133,6 +1133,24 @@ classes:
         multivalued: true
         range: string
         pattern: "^(SRR|ERR|DRR|SRX|ERX|DRX|SRP|ERP|DRP|SRS|ERS|DRS)[0-9]+$"
+      isolation_type:
+        description: Source isolation category for the tested isolate or specimen.
+        range: string
+      isolation_location:
+        description: Source geographic isolation label for the tested isolate or specimen.
+        range: string
+      collection_date:
+        description: Source collection date or year for the tested isolate or specimen.
+        range: string
+      source_create_date:
+        description: Date the upstream source record was created, where the source reports one.
+        range: string
+      host_label:
+        description: Host organism label for the tested isolate or specimen, where the source reports one.
+        range: string
+      isolation_source:
+        description: Source material or site from which the tested isolate was recovered.
+        range: string
       source:
         description: >-
           Upstream resource owning this observation. Set by an extractor lane so
