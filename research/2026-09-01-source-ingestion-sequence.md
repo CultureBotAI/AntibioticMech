@@ -167,9 +167,9 @@ submitted antibiotic strings by lexical exact-corpus candidates, ambiguous
 matches, unmatched names, taxon/BioSample/BioProject/target-accession coverage,
 source isolation metadata coverage, MIC or disk-diffusion coverage, and
 measurement signs standardized to qualifiers and units, treating `mg/L` and
-`ug/mL` MIC headings as the same numeric unit. It can also emit the
-fillable seven-column drug-map template that a curator turns into the
-exact-structure crosswalk. When supplied
+`ug/mL` MIC headings as the same numeric unit. It can also emit the fillable
+source-versioned drug-map template that a curator turns into the exact-structure
+crosswalk. When supplied
 with a partially curated crosswalk, it writes a compact grouped activity report
 for exact-mapped rows with valid MIC or disk-diffusion measurements,
 optional NCBI Taxonomy identifiers normalized to `NCBITaxon` CURIEs,
