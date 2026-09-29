@@ -25,9 +25,11 @@ from evaluate_cryptic_activity import (  # noqa: E402
     write_inventory,
 )
 from seed_from_sources import (  # noqa: E402
+    CRYPTIC_ACTIVITY_COLUMNS,
     CRYPTIC_ACTIVITY_SOURCE,
     attach_cryptic_activity,
     cryptic_sourced_activity_view,
+    load_cryptic_activity_inventory,
     merge_with_existing,
 )
 
@@ -72,6 +74,49 @@ CRYPTIC_340_CODES = {
     "TRD": "TERIZIDONE",
     "TZE": "THIOACETAZONE",
 }
+
+
+def cryptic_inventory_row(**overrides: str) -> dict[str, str]:
+    row = {column: "" for column in INVENTORY_COLUMNS}
+    row.update({
+        "source_version": "3.4.0",
+        "source_table": UKMYC_TABLE,
+        "activity_group_id": "ukmyc_phenotypes:abc",
+        "drug_code": "AMI",
+        "source_name": "AMIKACIN",
+        "identifier": "CHEBI:2637",
+        "standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N",
+        "mic_value": "0.25",
+        "mic_qualifier": "<=",
+        "mic_units": "mg/L",
+        "row_count": "6184",
+        "isolate_count": "6184",
+        "site_count": "11",
+        "platedesign": "UKMYC6",
+        "binary_phenotype": "R",
+    })
+    row.update(overrides)
+    return row
+
+
+def write_raw_inventory(
+    path: Path,
+    rows: list[dict[str, str]],
+    fieldnames: list[str] | None = None,
+) -> None:
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=fieldnames or INVENTORY_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def test_cryptic_activity_columns_match_the_evaluator_contract():
+    assert CRYPTIC_ACTIVITY_COLUMNS == INVENTORY_COLUMNS
 
 
 def test_cryptic_drug_map_covers_the_pinned_code_table():
@@ -268,6 +313,77 @@ def test_write_inventory_rejects_duplicate_group_ids(tmp_path):
         write_inventory(tmp_path / "cryptic_inventory.tsv", [row, row])
 
 
+def test_load_cryptic_activity_inventory_accepts_committed_column_contract(tmp_path):
+    path = tmp_path / "cryptic_activity.tsv"
+    row = cryptic_inventory_row()
+    write_raw_inventory(path, [row])
+
+    assert load_cryptic_activity_inventory(path) == [row]
+
+
+def test_load_cryptic_activity_inventory_rejects_header_drift(tmp_path):
+    path = tmp_path / "cryptic_activity.tsv"
+    path.write_text("source_version\tunexpected\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="expected CRyPTIC activity header"):
+        load_cryptic_activity_inventory(path)
+
+
+def test_load_cryptic_activity_inventory_rejects_ragged_rows(tmp_path):
+    path = tmp_path / "cryptic_activity.tsv"
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle, delimiter="\t")
+        writer.writerow(INVENTORY_COLUMNS)
+        writer.writerow(["3.4.0"])
+
+    with pytest.raises(ValueError, match="source_table is required"):
+        load_cryptic_activity_inventory(path)
+
+    path.write_text(
+        "\t".join(INVENTORY_COLUMNS)
+        + "\n"
+        + "\t".join(cryptic_inventory_row().values())
+        + "\textra\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="unexpected extra TSV field"):
+        load_cryptic_activity_inventory(path)
+
+
+@pytest.mark.parametrize(
+    ("overrides", "message"),
+    [
+        ({"source_version": " 3.4.0"}, "source_version has leading or trailing"),
+        ({"source_table": "UNKNOWN_TABLE"}, "unsupported source_table"),
+        ({"row_count": ""}, "row_count is required"),
+        ({"row_count": "0"}, "row_count must be positive"),
+        ({"row_count": "06184"}, "row_count must use canonical integer '6184'"),
+        ({"isolate_count": "many"}, "isolate_count must be an integer"),
+        ({"site_count": "-1"}, "site_count must be positive"),
+        ({"mic_value": "high"}, "mic_value must be numeric"),
+        ({"mic_value": "0"}, "mic_value must be positive"),
+        ({"mic_value": "0.25", "mic_qualifier": "=="}, "invalid qualifier"),
+        ({"mic_value": "0.25", "mic_units": ""}, "mic_units must be 'mg/L'"),
+        ({"mic_value": "", "mic_qualifier": "<="}, "mic_qualifier requires mic_value"),
+        (
+            {"mic_value": "", "mic_qualifier": "", "mic_units": "mg/L"},
+            "mic_units requires mic_value",
+        ),
+    ],
+)
+def test_load_cryptic_activity_inventory_rejects_malformed_rows(
+    tmp_path,
+    overrides,
+    message,
+):
+    path = tmp_path / "cryptic_activity.tsv"
+    write_raw_inventory(path, [cryptic_inventory_row(**overrides)])
+
+    with pytest.raises(ValueError, match=message):
+        load_cryptic_activity_inventory(path)
+
+
 def test_activity_inventory_fetches_each_result_before_reusing_duckdb_connection():
     class ReusedCursorConnection:
         def execute(self, _query, params):
@@ -368,19 +484,7 @@ def test_compact_inventory_row_becomes_a_grouped_activity_observation(tmp_path, 
 
 
 def test_cryptic_activity_writer_rejects_identity_drift(tmp_path, monkeypatch):
-    row = {column: "" for column in INVENTORY_COLUMNS}
-    row.update({
-        "source_version": "3.4.0",
-        "source_table": UKMYC_TABLE,
-        "activity_group_id": "ukmyc_phenotypes:abc",
-        "drug_code": "AMI",
-        "identifier": "CHEBI:2637",
-        "standard_inchi_key": "STALE",
-        "mic_value": "0.25",
-        "mic_units": "mg/L",
-        "row_count": "6184",
-        "isolate_count": "6184",
-    })
+    row = cryptic_inventory_row(standard_inchi_key="STALE")
     write_inventory(tmp_path / "cryptic_activity.tsv", [row])
     monkeypatch.setattr(
         seed_from_sources,
@@ -400,34 +504,9 @@ def test_cryptic_activity_writer_rejects_identity_drift(tmp_path, monkeypatch):
 
 
 def test_cryptic_activity_seeder_rejects_duplicate_groups(tmp_path, monkeypatch):
-    row = {column: "" for column in INVENTORY_COLUMNS}
-    row.update({
-        "source_version": "3.4.0",
-        "source_table": UKMYC_TABLE,
-        "activity_group_id": "ukmyc_phenotypes:abc",
-        "drug_code": "AMI",
-        "source_name": "AMIKACIN",
-        "identifier": "CHEBI:2637",
-        "standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N",
-        "mic_value": "0.25",
-        "mic_qualifier": "<=",
-        "mic_units": "mg/L",
-        "row_count": "6184",
-        "isolate_count": "6184",
-        "site_count": "11",
-        "platedesign": "UKMYC6",
-        "binary_phenotype": "R",
-    })
+    row = cryptic_inventory_row()
     path = tmp_path / "cryptic_activity.tsv"
-    with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(
-            handle,
-            fieldnames=INVENTORY_COLUMNS,
-            delimiter="\t",
-            lineterminator="\n",
-        )
-        writer.writeheader()
-        writer.writerows([row, row])
+    write_raw_inventory(path, [row, row])
     monkeypatch.setattr(
         seed_from_sources,
         "CRYPTIC_ACTIVITY_INVENTORY",
