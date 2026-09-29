@@ -165,6 +165,8 @@ MIC_MAX_VALUE = Decimal("1024")
 DISK_DIFFUSION_MIN_VALUE = Decimal("6")
 DISK_DIFFUSION_MAX_VALUE = Decimal("150")
 MICROGRAM_HEADER_TRANSLATION = str.maketrans({"µ": "u", "μ": "u"})
+# Raw AST CSV cells can legally quote these, but exact TSV reports cannot.
+SOURCE_TSV_CONTROL_TRANSLATION = str.maketrans({"\t": " ", "\r": " ", "\n": " "})
 BIOSAMPLE_PATTERN = re.compile(r"^SAM(N|D|EA)[0-9]+$")
 BIOPROJECT_PATTERN = re.compile(r"^PRJ(NA|EB|DB)[0-9]+$")
 TARGET_PATTERN = re.compile(r"^PDT[0-9]+(\.[0-9]+)?$")
@@ -220,8 +222,9 @@ def first_value(row: dict[str, str], aliases: Iterable[str]) -> str:
                 continue
             if value is None:
                 continue
-            if normalize_header(key) == alias and value.strip():
-                return value.strip()
+            cleaned = value.translate(SOURCE_TSV_CONTROL_TRANSLATION).strip()
+            if normalize_header(key) == alias and cleaned:
+                return cleaned
     return ""
 
 

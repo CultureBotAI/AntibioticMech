@@ -30,6 +30,7 @@ from evaluate_ncbi_ast import (  # noqa: E402
     write_project_dedupe_map_template,
     write_project_dedupe_report,
 )
+from seed_from_sources import load_ncbi_ast_activity_inventory  # noqa: E402
 
 SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "evaluate_ncbi_ast.py"
 
@@ -605,6 +606,61 @@ def test_exact_activity_rows_preserves_gcp_isolate_context_aliases():
     assert activity_rows[0]["isolation_type"] == "clinical"
     assert activity_rows[0]["location"] == "USA"
     assert activity_rows[0]["create_date"] == "2020-01-31"
+
+
+def test_exact_activity_rows_normalizes_raw_source_tsv_controls(tmp_path):
+    rows = [
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953777",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia\ncoli",
+            "phenotype": "R",
+            "mic": "2",
+            "Laboratory typing method": "broth\tmicrodilution",
+            "Laboratory typing platform": "AST\rGCP",
+            "Laboratory typing method version or reagent": "Sensititre\nGNX2F",
+            "Testing standard": "CLSI\tM100",
+            "epi_type": "human\rclinical",
+            "geo_loc_name": "USA\nCalifornia",
+            "host": "Homo\tsapiens",
+            "isolation_source": "blood\nculture",
+        },
+    ]
+    mappings = {
+        "cefepime": {
+            "mapping_status": "EXACT",
+            "source_name": "cefepime",
+            "identifier": "CHEBI:478164",
+            "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+        },
+    }
+
+    activity_rows = exact_activity_rows(
+        rows,
+        mappings,
+        source_version="2026-09-26-ast-browser",
+        source_retrieved_on="2026-09-26",
+    )
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    write_activity_report(activity_rows, path)
+    loaded_rows = load_ncbi_ast_activity_inventory(path)
+
+    assert len(loaded_rows) == 1
+    assert all(
+        not any(control in value for control in "\t\r\n")
+        for row in loaded_rows
+        for value in row.values()
+    )
+    assert loaded_rows[0]["taxon_label"] == "Escherichia coli"
+    assert loaded_rows[0]["method"] == "broth microdilution"
+    assert loaded_rows[0]["platform"] == "AST GCP"
+    assert loaded_rows[0]["reagent"] == "Sensititre GNX2F"
+    assert loaded_rows[0]["standard"] == "CLSI M100"
+    assert loaded_rows[0]["isolation_type"] == "human clinical"
+    assert loaded_rows[0]["location"] == "USA California"
+    assert loaded_rows[0]["host"] == "Homo sapiens"
+    assert loaded_rows[0]["isolation_source"] == "blood culture"
 
 
 def test_exact_activity_rows_normalizes_microgram_mic_headers_to_mg_per_l():
