@@ -2122,6 +2122,40 @@ def test_project_dedupe_map_template_is_fillable_by_the_curator(tmp_path):
     ]
 
 
+@pytest.mark.parametrize(
+    ("writer", "partial_row", "missing_column"),
+    [
+        (
+            lambda rows, path: write_drug_map_template(
+                rows,
+                path,
+                source_version="2026-09-26-ast-browser",
+            ),
+            {"normalized_antibiotic": "cefepime"},
+            "antibiotic",
+        ),
+        (
+            write_project_dedupe_map_template,
+            {"accession_type": "BioProject"},
+            "accession",
+        ),
+    ],
+)
+def test_template_writers_reject_missing_input_columns(
+    tmp_path,
+    writer,
+    partial_row,
+    missing_column,
+):
+    path = tmp_path / "report.tsv"
+    path.write_text("keep me\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match=fr"missing columns: {missing_column}"):
+        writer([partial_row], path)
+
+    assert path.read_text(encoding="utf-8") == "keep me\n"
+
+
 def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     ast = tmp_path / "ast.tsv"
     with ast.open("w", newline="", encoding="utf-8") as handle:

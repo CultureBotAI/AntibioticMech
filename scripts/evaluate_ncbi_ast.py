@@ -33,6 +33,15 @@ DRUG_MAP_COLUMNS = [
     "mapping_basis",
     "notes",
 ]
+DRUG_MAP_TEMPLATE_INPUT_COLUMNS = [
+    "antibiotic",
+    "normalized_antibiotic",
+    "mapping_status",
+    "identifier",
+    "standard_inchi_key",
+    "mapping_basis",
+    "mapping_notes",
+]
 PROJECT_DEDUPE_COLUMNS = [
     "accession_type",
     "accession",
@@ -54,6 +63,10 @@ PROJECT_DEDUPE_REPORT_COLUMNS = [
     "antibiotics",
     "taxon_ids",
     "taxon_labels",
+]
+PROJECT_DEDUPE_MAP_TEMPLATE_INPUT_COLUMNS = [
+    "accession_type",
+    "accession",
 ]
 ANTIBIOTIC_REPORT_COLUMNS = [
     "antibiotic",
@@ -512,6 +525,17 @@ def require_output_columns(
 def require_output_rows(rows: list[dict], fieldnames: list[str], path: Path) -> None:
     for row_number, row in enumerate(rows, start=1):
         require_output_columns(row, fieldnames, path, row_number)
+
+
+def require_input_rows(rows: list[dict], fieldnames: list[str], path: Path) -> None:
+    for row_number, row in enumerate(rows, start=1):
+        missing = [field for field in fieldnames if field not in row]
+        if missing:
+            columns = ", ".join(missing)
+            raise ValueError(
+                f"{path}: template input row {row_number} "
+                f"is missing columns: {columns}"
+            )
 
 
 def strip_table_row(row: dict[str, str]) -> dict[str, str]:
@@ -1252,6 +1276,7 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
 
 
 def write_drug_map_template(rows: list[dict], path: Path, source_version: str) -> None:
+    require_input_rows(rows, DRUG_MAP_TEMPLATE_INPUT_COLUMNS, path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=DRUG_MAP_COLUMNS, delimiter="\t", lineterminator="\n")
@@ -1284,6 +1309,7 @@ def write_project_dedupe_report(rows: list[dict], path: Path) -> None:
 
 
 def write_project_dedupe_map_template(rows: list[dict], path: Path) -> None:
+    require_input_rows(rows, PROJECT_DEDUPE_MAP_TEMPLATE_INPUT_COLUMNS, path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
