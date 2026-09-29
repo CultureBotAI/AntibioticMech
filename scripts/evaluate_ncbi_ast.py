@@ -136,7 +136,13 @@ SOURCE_CONTEXT_ALIASES = (
     ("host", HOST_ALIASES),
     ("isolation_source", ISOLATION_SOURCE_ALIASES),
 )
-MIC_ALIASES = ("mic", "micmgl", "micvalue", "minimuminhibitoryconcentration")
+MIC_ALIASES = (
+    "mic",
+    "micmgl",
+    "micugml",
+    "micvalue",
+    "minimuminhibitoryconcentration",
+)
 DISK_ALIASES = ("diskdiffusion", "diskdiffusionmm", "diskdiameter", "diskzone")
 MEASUREMENT_SIGN_ALIASES = ("measurementsign", "sign")
 METHOD_ALIASES = ("method", "laboratorytypingmethod", "labtypingmethod")
@@ -158,6 +164,7 @@ DISK_DIFFUSION_UNITS = "mm"
 MIC_MAX_VALUE = Decimal("1024")
 DISK_DIFFUSION_MIN_VALUE = Decimal("6")
 DISK_DIFFUSION_MAX_VALUE = Decimal("150")
+MICROGRAM_HEADER_TRANSLATION = str.maketrans({"µ": "u", "μ": "u"})
 BIOSAMPLE_PATTERN = re.compile(r"^SAM(N|D|EA)[0-9]+$")
 BIOPROJECT_PATTERN = re.compile(r"^PRJ(NA|EB|DB)[0-9]+$")
 TARGET_PATTERN = re.compile(r"^PDT[0-9]+(\.[0-9]+)?$")
@@ -202,7 +209,8 @@ def normalize(value: str) -> str:
 
 
 def normalize_header(value: str) -> str:
-    return normalize(value.removeprefix("AST.").removeprefix("AMR."))
+    header = value.removeprefix("AST.").removeprefix("AMR.")
+    return normalize(header.translate(MICROGRAM_HEADER_TRANSLATION))
 
 
 def first_value(row: dict[str, str], aliases: Iterable[str]) -> str:

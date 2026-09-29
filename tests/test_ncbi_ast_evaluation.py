@@ -558,6 +558,40 @@ def test_exact_activity_rows_preserves_source_isolation_context():
     assert activity_rows[0]["isolation_source"] == "blood"
 
 
+def test_exact_activity_rows_normalizes_microgram_mic_headers_to_mg_per_l():
+    rows = [
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953777",
+            "bioproject_acc": "PRJNA292666",
+            "target_acc": "PDT000001234.1",
+            "taxgroup_name": "Escherichia coli",
+            "Laboratory typing method": "MIC",
+            "MIC (µg/mL)": "2",
+        },
+    ]
+    mappings = {
+        "cefepime": {
+            "mapping_status": "EXACT",
+            "identifier": "CHEBI:478164",
+            "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+            "source_name": "cefepime",
+        },
+    }
+
+    activity_rows = exact_activity_rows(
+        rows,
+        mappings,
+        source_version="2026-09-26-ast-browser",
+        source_retrieved_on="2026-09-26",
+    )
+
+    assert len(activity_rows) == 1
+    assert activity_rows[0]["mic_value"] == "2"
+    assert activity_rows[0]["mic_qualifier"] == ""
+    assert activity_rows[0]["mic_units"] == "mg/L"
+
+
 def test_exact_activity_rows_excludes_unknown_phenotypes():
     rows = [
         {
@@ -1214,6 +1248,25 @@ def test_evaluate_rows_counts_valid_project_context_separately():
     assert result["rows_with_valid_project_context"] == 1
     assert result["antibiotic_rows"][0]["project_context_count"] == 3
     assert result["antibiotic_rows"][0]["valid_project_context_count"] == 1
+
+
+def test_evaluate_rows_normalizes_microgram_mic_headers_to_mg_per_l():
+    rows = [
+        {"Antibiotic": "cefepime", "MIC (ug/mL)": "2"},
+        {"Antibiotic": "cefepime", "MIC (µg/mL)": "4"},
+        {"Antibiotic": "cefepime", "AMR.MIC (μg/mL)": "8"},
+    ]
+
+    result = evaluate_rows(
+        rows,
+        {"cefepime": {"CHEBI:478164"}},
+        {"CHEBI:478164": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
+    )
+
+    cefepime = result["antibiotic_rows"][0]
+    assert cefepime["mic_count"] == 3
+    assert cefepime["standardized_mic_count"] == 3
+    assert cefepime["standardized_mic_values"] == "2 mg/L|4 mg/L|8 mg/L"
 
 
 def test_evaluate_rows_counts_invalid_measurement_shapes():
