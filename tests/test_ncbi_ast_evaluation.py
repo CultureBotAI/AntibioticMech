@@ -129,7 +129,11 @@ def test_evaluate_rows_coalesces_antibiotic_spellings_for_drug_maps(tmp_path):
     assert result["antibiotic_rows"][0]["ast_rows"] == 2
 
     path = tmp_path / "ncbi_ast_drug_map.tsv"
-    write_drug_map_template(result["antibiotic_rows"], path)
+    write_drug_map_template(
+        result["antibiotic_rows"],
+        path,
+        source_version="2026-09-26-ast-browser",
+    )
 
     with path.open(newline="", encoding="utf-8") as handle:
         template_rows = list(csv.DictReader(handle, delimiter="\t"))
@@ -1294,6 +1298,7 @@ def test_read_drug_map_accepts_exact_and_non_exact_rows(tmp_path):
     path = tmp_path / "ncbi_ast_antibiotic_map.tsv"
     path.write_text(
         "\t".join([
+            "source_version",
             "source_record_id",
             "source_name",
             "mapping_status",
@@ -1304,15 +1309,19 @@ def test_read_drug_map_accepts_exact_and_non_exact_rows(tmp_path):
         ])
         + "\n"
         + "\n".join([
-            "amikacin\t amikacin \tEXACT\tCHEBI:2637\t"
+            "2026-09-26-ast-browser\tamikacin\t amikacin \tEXACT\tCHEBI:2637\t"
             "LKCWBDHBTVXHDL-RMDFUYIESA-N\tparent_base\tok",
-            "gentamicin\tgentamicin\tMIXTURE\t\t\tnone\tmixture",
+            "2026-09-26-ast-browser\tgentamicin\tgentamicin\tMIXTURE\t\t\tnone\tmixture",
         ])
         + "\n",
         encoding="utf-8",
     )
 
-    mappings = read_drug_map(path, {"CHEBI:2637": "LKCWBDHBTVXHDL-RMDFUYIESA-N"})
+    mappings = read_drug_map(
+        path,
+        {"CHEBI:2637": "LKCWBDHBTVXHDL-RMDFUYIESA-N"},
+        source_version="2026-09-26-ast-browser",
+    )
 
     assert mappings["amikacin"]["identifier"] == "CHEBI:2637"
     assert mappings["amikacin"]["source_name"] == "amikacin"
@@ -1324,6 +1333,7 @@ def test_read_drug_map_rejects_identity_drift(tmp_path):
     path = tmp_path / "ncbi_ast_antibiotic_map.tsv"
     path.write_text(
         "\t".join([
+            "source_version",
             "source_record_id",
             "source_name",
             "mapping_status",
@@ -1332,12 +1342,34 @@ def test_read_drug_map_rejects_identity_drift(tmp_path):
             "mapping_basis",
             "notes",
         ])
-        + "\namikacin\tamikacin\tEXACT\tCHEBI:2637\tWRONGINCHIKEY\tparent_base\tok\n",
+        + (
+            "\n2026-09-26-ast-browser\tamikacin\tamikacin\tEXACT\t"
+            "CHEBI:2637\tWRONGINCHIKEY\tparent_base\tok\n"
+        ),
         encoding="utf-8",
     )
 
     with pytest.raises(ValueError, match="does not match CHEBI:2637"):
-        read_drug_map(path, {"CHEBI:2637": "LKCWBDHBTVXHDL-RMDFUYIESA-N"})
+        read_drug_map(
+            path,
+            {"CHEBI:2637": "LKCWBDHBTVXHDL-RMDFUYIESA-N"},
+            source_version="2026-09-26-ast-browser",
+        )
+
+
+def test_read_drug_map_rejects_source_version_drift(tmp_path):
+    path = tmp_path / "ncbi_ast_antibiotic_map.tsv"
+    path.write_text(
+        "\t".join(DRUG_MAP_COLUMNS)
+        + (
+            "\n2026-09-25-ast-browser\tamikacin\tamikacin\tMIXTURE\t\t\t"
+            "none\tmixture\n"
+        ),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="source_version '2026-09-25-ast-browser'"):
+        read_drug_map(path, {}, source_version="2026-09-26-ast-browser")
 
 
 def test_read_drug_map_rejects_malformed_rows(tmp_path):
@@ -1345,52 +1377,52 @@ def test_read_drug_map_rejects_malformed_rows(tmp_path):
     path.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + "amikacin\tamikacin\tMIXTURE\n",
+        + "2026-09-26-ast-browser\tamikacin\tamikacin\tMIXTURE\n",
         encoding="utf-8",
     )
 
     with pytest.raises(ValueError, match="identifier is missing"):
-        read_drug_map(path, {})
+        read_drug_map(path, {}, source_version="2026-09-26-ast-browser")
 
     path.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + "amikacin\tamikacin\tMIXTURE\t\t\tnone\tok\textra\n",
+        + "2026-09-26-ast-browser\tamikacin\tamikacin\tMIXTURE\t\t\tnone\tok\textra\n",
         encoding="utf-8",
     )
 
     with pytest.raises(ValueError, match="unexpected extra delimited field"):
-        read_drug_map(path, {})
+        read_drug_map(path, {}, source_version="2026-09-26-ast-browser")
 
     path.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + 'amikacin\tamikacin\tMIXTURE\t\t\tnone\t"ambiguous\nname"\n',
+        + '2026-09-26-ast-browser\tamikacin\tamikacin\tMIXTURE\t\t\tnone\t"ambiguous\nname"\n',
         encoding="utf-8",
     )
 
     with pytest.raises(ValueError, match="notes contains a tab or newline"):
-        read_drug_map(path, {})
+        read_drug_map(path, {}, source_version="2026-09-26-ast-browser")
 
     path.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + 'amikacin\tamikacin\tMIXTURE\t\t\tnone\t"ambiguous\tname"\n',
+        + '2026-09-26-ast-browser\tamikacin\tamikacin\tMIXTURE\t\t\tnone\t"ambiguous\tname"\n',
         encoding="utf-8",
     )
 
     with pytest.raises(ValueError, match="notes contains a tab or newline"):
-        read_drug_map(path, {})
+        read_drug_map(path, {}, source_version="2026-09-26-ast-browser")
 
     path.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + 'amikacin\tamikacin\tMIXTURE\t\t\tnone\t"ambiguous\n"\n',
+        + '2026-09-26-ast-browser\tamikacin\tamikacin\tMIXTURE\t\t\tnone\t"ambiguous\n"\n',
         encoding="utf-8",
     )
 
     with pytest.raises(ValueError, match="notes contains a tab or newline"):
-        read_drug_map(path, {})
+        read_drug_map(path, {}, source_version="2026-09-26-ast-browser")
 
 
 def test_read_drug_map_requires_mapping_rationale(tmp_path):
@@ -1398,22 +1430,22 @@ def test_read_drug_map_requires_mapping_rationale(tmp_path):
     path.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + "amikacin\tamikacin\tMIXTURE\t\t\t \tmixture\n",
+        + "2026-09-26-ast-browser\tamikacin\tamikacin\tMIXTURE\t\t\t \tmixture\n",
         encoding="utf-8",
     )
 
     with pytest.raises(ValueError, match="mapping_basis is required"):
-        read_drug_map(path, {})
+        read_drug_map(path, {}, source_version="2026-09-26-ast-browser")
 
     path.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + "amikacin\tamikacin\tMIXTURE\t\t\tnone\t \n",
+        + "2026-09-26-ast-browser\tamikacin\tamikacin\tMIXTURE\t\t\tnone\t \n",
         encoding="utf-8",
     )
 
     with pytest.raises(ValueError, match="notes is required"):
-        read_drug_map(path, {})
+        read_drug_map(path, {}, source_version="2026-09-26-ast-browser")
 
 
 def test_read_project_dedupe_map_accepts_biosample_and_bioproject_keys(tmp_path):
@@ -1687,13 +1719,18 @@ def test_drug_map_template_is_fillable_by_the_curator(tmp_path):
         },
     ]
 
-    write_drug_map_template(rows, path)
+    write_drug_map_template(
+        rows,
+        path,
+        source_version="2026-09-26-ast-browser",
+    )
 
     with path.open(newline="", encoding="utf-8") as handle:
         actual = list(csv.DictReader(handle, delimiter="\t"))
 
     assert actual == [
         {
+            "source_version": "2026-09-26-ast-browser",
             "source_record_id": "cefepime",
             "source_name": "cefepime",
             "mapping_status": "EXACT",
@@ -1703,6 +1740,7 @@ def test_drug_map_template_is_fillable_by_the_curator(tmp_path):
             "notes": "NCBI names the active cefepime parent.",
         },
         {
+            "source_version": "2026-09-26-ast-browser",
             "source_record_id": "gentamicin",
             "source_name": "gentamicin",
             "mapping_status": "",
@@ -1967,6 +2005,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
         )
         writer.writeheader()
         writer.writerow({
+            "source_version": "2026-09-26-ast-browser",
             "source_record_id": "amikacin",
             "source_name": "amikacin",
             "mapping_status": "EXACT",
@@ -2151,7 +2190,10 @@ def test_cli_rejects_activity_report_without_source_metadata(tmp_path):
     drug_map.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + "amikacin\tamikacin\tMISSING_CORPUS_RECORD\t\t\tnone\tmissing\n",
+        + (
+            "2026-09-26-ast-browser\tamikacin\tamikacin\t"
+            "MISSING_CORPUS_RECORD\t\t\tnone\tmissing\n"
+        ),
         encoding="utf-8",
     )
 
@@ -2172,6 +2214,48 @@ def test_cli_rejects_activity_report_without_source_metadata(tmp_path):
 
     assert result.returncode == 2
     assert "--activity-report requires --source-version" in result.stderr
+
+
+def test_cli_rejects_drug_map_without_source_version(tmp_path):
+    ast = tmp_path / "ast.tsv"
+    ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            "--drug-map",
+            str(tmp_path / "ncbi_ast_drug_map.tsv"),
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 2
+    assert "--drug-map and --drug-map-template require --source-version" in result.stderr
+
+
+def test_cli_rejects_drug_map_template_without_source_version(tmp_path):
+    ast = tmp_path / "ast.tsv"
+    ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            "--drug-map-template",
+            str(tmp_path / "ncbi_ast_drug_map.tsv"),
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 2
+    assert "--drug-map and --drug-map-template require --source-version" in result.stderr
 
 
 def test_cli_rejects_activity_report_with_blank_source_version(tmp_path):

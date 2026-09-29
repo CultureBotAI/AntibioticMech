@@ -223,7 +223,8 @@ just evaluate-cryptic --dst DST_MEASUREMENTS.parquet \
 just extract-phibase-dry --amr phibase_amr_export.csv --phenotypes phipo.csv
 just evaluate-amrfinder --catalog ReferenceGeneCatalog.txt --families fam.tsv \
   --aro data/raw/aro_resistance_edges.tsv
-just evaluate-ncbi-ast --ast ast.tsv --antibiotic-report ncbi_ast_antibiotics.tsv \
+just evaluate-ncbi-ast --ast ast.tsv --source-version 2026-09-26-ast-browser \
+  --antibiotic-report ncbi_ast_antibiotics.tsv \
   --drug-map-template ncbi_ast_drug_map.tsv
 just evaluate-ncbi-ast --ast ast.tsv --drug-map ncbi_ast_drug_map.tsv \
   --project-dedupe-map ncbi_ast_project_dedupe.tsv \

@@ -24,6 +24,7 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 DRUG_MAP_COLUMNS = [
+    "source_version",
     "source_record_id",
     "source_name",
     "mapping_status",
@@ -483,7 +484,11 @@ def corpus_name_candidates(root: Path = REPO_ROOT) -> tuple[dict[str, set[str]],
     return candidates, structure_keys
 
 
-def read_drug_map(path: Path, structure_keys: dict[str, str]) -> dict[str, dict[str, str]]:
+def read_drug_map(
+    path: Path,
+    structure_keys: dict[str, str],
+    source_version: str,
+) -> dict[str, dict[str, str]]:
     """Read a partial NCBI antibiotic-value crosswalk and validate exact rows."""
 
     with path.open(newline="", encoding="utf-8") as handle:
@@ -498,6 +503,7 @@ def read_drug_map(path: Path, structure_keys: dict[str, str]) -> dict[str, dict[
             require_non_blank_fields(
                 row,
                 (
+                    "source_version",
                     "source_record_id",
                     "source_name",
                     "mapping_status",
@@ -516,6 +522,11 @@ def read_drug_map(path: Path, structure_keys: dict[str, str]) -> dict[str, dict[
                 )
             if normalized_name in rows:
                 raise ValueError(f"duplicate NCBI AST antibiotic mapping: {normalized_name}")
+            if row["source_version"] != source_version:
+                raise ValueError(
+                    f"{row['source_name']}: source_version {row['source_version']!r} "
+                    f"!= {source_version!r}"
+                )
             if row["mapping_status"] not in MAPPING_STATUSES:
                 raise ValueError(
                     f"{row['source_name']}: unknown mapping_status {row['mapping_status']!r}"
@@ -1202,13 +1213,14 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
         writer.writerows(rows)
 
 
-def write_drug_map_template(rows: list[dict], path: Path) -> None:
+def write_drug_map_template(rows: list[dict], path: Path, source_version: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=DRUG_MAP_COLUMNS, delimiter="\t", lineterminator="\n")
         writer.writeheader()
         for row in rows:
             writer.writerow({
+                "source_version": source_version,
                 "source_record_id": row["normalized_antibiotic"],
                 "source_name": row["antibiotic"],
                 "mapping_status": row["mapping_status"],
@@ -1293,8 +1305,8 @@ def main() -> int:
         "--source-version",
         default="",
         help=(
-            "Optional AST export or BigQuery snapshot version to stamp on "
-            "--activity-report rows."
+            "Optional AST export or BigQuery snapshot version to pin "
+            "--drug-map mappings and stamp on --activity-report rows."
         ),
     )
     parser.add_argument(
@@ -1345,6 +1357,8 @@ def main() -> int:
         parser.error("--activity-report requires --drug-map with exact curated mappings.")
     if args.activity_report and not args.source_version.strip():
         parser.error("--activity-report requires --source-version.")
+    if (args.drug_map or args.drug_map_template) and not args.source_version.strip():
+        parser.error("--drug-map and --drug-map-template require --source-version.")
     if args.source_version != args.source_version.strip():
         parser.error("--source-version must not have leading or trailing whitespace.")
     if args.activity_report and not args.source_retrieved_on:
@@ -1354,7 +1368,11 @@ def main() -> int:
 
     rows = read_table(args.ast)
     candidates, structure_keys = corpus_name_candidates()
-    mappings = read_drug_map(args.drug_map, structure_keys) if args.drug_map else {}
+    mappings = (
+        read_drug_map(args.drug_map, structure_keys, source_version=args.source_version)
+        if args.drug_map
+        else {}
+    )
     project_dedupe = (
         read_project_dedupe_map(args.project_dedupe_map)
         if args.project_dedupe_map
@@ -1371,7 +1389,11 @@ def main() -> int:
     if args.antibiotic_report:
         write_antibiotic_report(result["antibiotic_rows"], args.antibiotic_report)
     if args.drug_map_template:
-        write_drug_map_template(result["antibiotic_rows"], args.drug_map_template)
+        write_drug_map_template(
+            result["antibiotic_rows"],
+            args.drug_map_template,
+            source_version=args.source_version,
+        )
     project_dedupe_report_rows_ = []
     if args.project_dedupe_report or args.project_dedupe_map_template:
         project_dedupe_report_rows_ = project_dedupe_report_rows(
