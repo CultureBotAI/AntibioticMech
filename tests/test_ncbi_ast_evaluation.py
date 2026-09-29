@@ -2506,6 +2506,75 @@ def test_cli_rejects_ast_without_antibiotic_values_before_opening_reports(tmp_pa
     assert template.read_text(encoding="utf-8") == "keep template\n"
 
 
+def test_cli_rejects_empty_activity_report_before_opening_sibling_reports(tmp_path):
+    ast = tmp_path / "ast.tsv"
+    ast.write_text(
+        (
+            "antibiotic\tbiosample_acc\tbioproject_acc\tTaxID\t"
+            "scientific_name\tphenotype\tmic\n"
+            "amikacin\tSAMN11953777\tPRJNA292666\t573\t"
+            "Klebsiella pneumoniae\tR\t64\n"
+        ),
+        encoding="utf-8",
+    )
+
+    drug_map = tmp_path / "ncbi_ast_drug_map.tsv"
+    with drug_map.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=DRUG_MAP_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerow({
+            "source_version": "2026-09-26-ast-browser",
+            "source_record_id": "amikacin",
+            "source_name": "amikacin",
+            "mapping_status": "EXACT",
+            "identifier": "CHEBI:2637",
+            "standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N",
+            "mapping_basis": "parent_base",
+            "notes": "NCBI names the active amikacin parent.",
+        })
+
+    antibiotic_report = tmp_path / "ncbi_ast_antibiotics.tsv"
+    template = tmp_path / "ncbi_ast_drug_map_template.tsv"
+    activity_report = tmp_path / "ncbi_ast_activity.tsv"
+    antibiotic_report.write_text("keep antibiotic report\n", encoding="utf-8")
+    template.write_text("keep template\n", encoding="utf-8")
+    activity_report.write_text("keep activity report\n", encoding="utf-8")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            "--drug-map",
+            str(drug_map),
+            "--antibiotic-report",
+            str(antibiotic_report),
+            "--drug-map-template",
+            str(template),
+            "--activity-report",
+            str(activity_report),
+            "--source-version",
+            "2026-09-26-ast-browser",
+            "--source-retrieved-on",
+            "2026-09-26",
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 1
+    assert "NCBI AST activity report has no rows" in result.stderr
+    assert antibiotic_report.read_text(encoding="utf-8") == "keep antibiotic report\n"
+    assert template.read_text(encoding="utf-8") == "keep template\n"
+    assert activity_report.read_text(encoding="utf-8") == "keep activity report\n"
+
+
 def test_cli_rejects_activity_report_without_source_metadata(tmp_path):
     ast = tmp_path / "ast.tsv"
     ast.write_text("antibiotic\namikacin\n", encoding="utf-8")

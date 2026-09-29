@@ -1341,10 +1341,14 @@ def write_project_dedupe_map_template(rows: list[dict], path: Path) -> None:
             })
 
 
-def write_activity_report(rows: list[dict], path: Path) -> None:
+def require_activity_report_rows(rows: list[dict], path: Path) -> None:
     if not rows:
         raise ValueError(f"{path}: NCBI AST activity report has no rows")
     require_output_rows(rows, ACTIVITY_REPORT_COLUMNS, path)
+
+
+def write_activity_report(rows: list[dict], path: Path) -> None:
+    require_activity_report_rows(rows, path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
@@ -1468,6 +1472,19 @@ def main() -> int:
         mappings=mappings,
         project_dedupe=project_dedupe,
     )
+    activity_rows = (
+        exact_activity_rows(
+            rows,
+            mappings,
+            source_version=args.source_version,
+            source_retrieved_on=args.source_retrieved_on,
+            project_dedupe=project_dedupe,
+        )
+        if args.activity_report
+        else []
+    )
+    if args.activity_report:
+        require_activity_report_rows(activity_rows, args.activity_report)
 
     if args.antibiotic_report:
         write_antibiotic_report(result["antibiotic_rows"], args.antibiotic_report)
@@ -1494,17 +1511,6 @@ def main() -> int:
             project_dedupe_report_rows_,
             args.project_dedupe_map_template,
         )
-    activity_rows = (
-        exact_activity_rows(
-            rows,
-            mappings,
-            source_version=args.source_version,
-            source_retrieved_on=args.source_retrieved_on,
-            project_dedupe=project_dedupe,
-        )
-        if args.activity_report
-        else []
-    )
     if args.activity_report:
         write_activity_report(activity_rows, args.activity_report)
 
