@@ -4115,8 +4115,7 @@ def main() -> int:
     print(
         "  PHI-base resistance: "
         f"associations={phibase_counts['matched_associations']} "
-        f"records={phibase_counts['matched_records']} "
-        f"identity_drift={phibase_counts['identity_drift']}",
+        f"records={phibase_counts['matched_records']}",
         file=sys.stderr,
     )
     print(
@@ -4132,22 +4131,19 @@ def main() -> int:
     print(
         "  CRyPTIC activity: "
         f"observations={cryptic_counts['matched_observations']} "
-        f"records={cryptic_counts['matched_records']} "
-        f"identity_drift={cryptic_counts['identity_drift']}",
+        f"records={cryptic_counts['matched_records']}",
         file=sys.stderr,
     )
     print(
         "  NCBI AST activity: "
         f"observations={ncbi_ast_counts['matched_observations']} "
-        f"records={ncbi_ast_counts['matched_records']} "
-        f"identity_drift={ncbi_ast_counts['identity_drift']}",
+        f"records={ncbi_ast_counts['matched_records']}",
         file=sys.stderr,
     )
     print(
         "  HIVDB score rules: "
         f"rules={hivdb_counts['matched_rules']} "
-        f"records={hivdb_counts['matched_records']} "
-        f"identity_drift={hivdb_counts['identity_drift']}",
+        f"records={hivdb_counts['matched_records']}",
         file=sys.stderr,
     )
     print(
