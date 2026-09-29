@@ -568,7 +568,7 @@ classes:
         description: NCBITaxon CURIE of the producing organism.
         required: true
         range: string
-        pattern: "^NCBITaxon:[0-9]+$"
+        pattern: "^NCBITaxon:[1-9][0-9]*$"
       taxon_label:
         description: Scientific name of the producing organism.
         required: true
@@ -770,7 +770,7 @@ classes:
       taxon_id:
         description: Organism in which this target assertion was evaluated.
         range: string
-        pattern: "^NCBITaxon:[0-9]+$"
+        pattern: "^NCBITaxon:[1-9][0-9]*$"
       taxon_label:
         description: Source organism label for this assertion.
         range: string
@@ -891,7 +891,7 @@ classes:
       taxon_id:
         description: Source organism of the macromolecule.
         range: string
-        pattern: "^NCBITaxon:[0-9]+$"
+        pattern: "^NCBITaxon:[1-9][0-9]*$"
       taxon_label:
         range: string
       ligand_component:
@@ -1008,7 +1008,7 @@ classes:
       taxon_id:
         required: true
         range: string
-        pattern: "^NCBITaxon:[0-9]+$"
+        pattern: "^NCBITaxon:[1-9][0-9]*$"
       taxon_label:
         required: true
         range: string
@@ -1058,7 +1058,7 @@ classes:
       taxon_id:
         description: NCBITaxon CURIE of the organism tested.
         range: string
-        pattern: "^NCBITaxon:[0-9]+$"
+        pattern: "^NCBITaxon:[1-9][0-9]*$"
       taxon_label:
         description: Organism or group tested, as named by the source.
         required: true
@@ -1221,7 +1221,7 @@ classes:
           NCBITaxon CURIE of the organism the resistance was observed in.
           Absent for a route-level mechanism that is not tied to one organism.
         range: string
-        pattern: "^NCBITaxon:[0-9]+$"
+        pattern: "^NCBITaxon:[1-9][0-9]*$"
       taxon_label:
         description: Scientific name of that organism, as the source gives it.
         range: string
@@ -1236,7 +1236,7 @@ classes:
           NCBITaxon CURIE for the strain itself, where the source resolves one
           separately from the species.
         range: string
-        pattern: "^NCBITaxon:[0-9]+$"
+        pattern: "^NCBITaxon:[1-9][0-9]*$"
       alteration:
         description: >-
           The genetic or expression change associated with the phenotype, as
