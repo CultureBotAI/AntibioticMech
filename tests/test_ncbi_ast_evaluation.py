@@ -558,6 +558,55 @@ def test_exact_activity_rows_preserves_source_isolation_context():
     assert activity_rows[0]["isolation_source"] == "blood"
 
 
+def test_exact_activity_rows_preserves_gcp_isolate_context_aliases():
+    rows = [
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953777",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "R",
+            "mic": "2",
+            "platform": "AST",
+            "epi_type": "clinical",
+            "geo_loc_name": "USA",
+            "creation_date": "2020-01-31",
+        },
+    ]
+    mappings = {
+        "cefepime": {
+            "mapping_status": "EXACT",
+            "source_name": "cefepime",
+            "identifier": "CHEBI:478164",
+            "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+        },
+    }
+
+    result = evaluate_rows(
+        rows,
+        {"cefepime": {"CHEBI:478164"}},
+        {"CHEBI:478164": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
+        mappings=mappings,
+    )
+    activity_rows = exact_activity_rows(
+        rows,
+        mappings,
+        source_version="2026-09-26-ast-browser",
+        source_retrieved_on="2026-09-26",
+    )
+
+    assert result["rows_with_isolation_type"] == 1
+    assert result["rows_with_location"] == 1
+    assert result["rows_with_create_date"] == 1
+    assert result["antibiotic_rows"][0]["isolation_type_count"] == 1
+    assert result["antibiotic_rows"][0]["location_count"] == 1
+    assert result["antibiotic_rows"][0]["create_date_count"] == 1
+    assert len(activity_rows) == 1
+    assert activity_rows[0]["isolation_type"] == "clinical"
+    assert activity_rows[0]["location"] == "USA"
+    assert activity_rows[0]["create_date"] == "2020-01-31"
+
+
 def test_exact_activity_rows_normalizes_microgram_mic_headers_to_mg_per_l():
     rows = [
         {
