@@ -2526,13 +2526,12 @@ def attach_cryptic_activity(records: dict[str, dict]) -> Counter:
     observations_by_record: dict[str, list[dict]] = defaultdict(list)
     for row in load_cryptic_activity_inventory(CRYPTIC_ACTIVITY_INVENTORY):
         identifier = row["identifier"]
-        record = records.get(identifier)
-        if (
-            record is None
-            or record["chemical_structure"].get("standard_inchi_key") != row["standard_inchi_key"]
-        ):
-            counts["identity_drift"] += 1
-            continue
+        require_compact_activity_identity(
+            records,
+            row,
+            source="CRYPTIC",
+            row_id=row["activity_group_id"],
+        )
         observations_by_record[identifier].append(cryptic_activity_observation(row))
         counts["matched_observations"] += 1
 
@@ -2633,6 +2632,29 @@ NCBI_AST_SOURCE_CONTEXT_FIELDS = {
     "host": "host_label",
     "isolation_source": "isolation_source",
 }
+
+
+def require_compact_activity_identity(
+    records: dict[str, dict],
+    row: dict[str, str],
+    *,
+    source: str,
+    row_id: str,
+) -> None:
+    """Reject stale compact activity rows before they look like source deletions."""
+    identifier = row["identifier"]
+    record = records.get(identifier)
+    if record is None:
+        raise ValueError(
+            f"{source} {row_id}: mapped identifier {identifier} is not in the corpus"
+        )
+
+    expected_inchi_key = record["chemical_structure"].get("standard_inchi_key")
+    if row["standard_inchi_key"] != expected_inchi_key:
+        raise ValueError(
+            f"{source} {row_id}: mapped InChIKey {row['standard_inchi_key']} "
+            f"does not match {identifier} ({expected_inchi_key})"
+        )
 
 
 def normalized_ncbi_ast_name(value: str) -> str:
@@ -2987,13 +3009,12 @@ def attach_ncbi_ast_activity(records: dict[str, dict]) -> Counter:
     observations_by_record: dict[str, list[dict]] = defaultdict(list)
     for row in load_ncbi_ast_activity_inventory(NCBI_AST_ACTIVITY_INVENTORY):
         identifier = row["identifier"]
-        record = records.get(identifier)
-        if (
-            record is None
-            or record["chemical_structure"].get("standard_inchi_key") != row["standard_inchi_key"]
-        ):
-            counts["identity_drift"] += 1
-            continue
+        require_compact_activity_identity(
+            records,
+            row,
+            source="NCBI_AST",
+            row_id=row["activity_group_id"],
+        )
         observations_by_record[identifier].append(ncbi_ast_activity_observation(row))
         counts["matched_observations"] += 1
 

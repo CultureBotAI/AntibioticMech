@@ -507,24 +507,46 @@ def test_compact_inventory_row_becomes_a_grouped_activity_observation(tmp_path, 
     assert "row_count=6184" in observation["evidence"][0]["notes"]
 
 
-def test_cryptic_activity_writer_rejects_identity_drift(tmp_path, monkeypatch):
-    row = cryptic_inventory_row(standard_inchi_key="STALE")
+@pytest.mark.parametrize(
+    ("row_overrides", "records", "message"),
+    [
+        (
+            {"standard_inchi_key": "STALE"},
+            {
+                "CHEBI:2637": {
+                    "identifier": "CHEBI:2637",
+                    "chemical_structure": {
+                        "standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N",
+                    },
+                    "curation_history": [],
+                },
+            },
+            "mapped InChIKey STALE does not match CHEBI:2637",
+        ),
+        (
+            {"identifier": "CHEBI:999999", "standard_inchi_key": "STALE"},
+            {},
+            "mapped identifier CHEBI:999999 is not in the corpus",
+        ),
+    ],
+)
+def test_cryptic_activity_writer_rejects_identity_drift(
+    tmp_path,
+    monkeypatch,
+    row_overrides,
+    records,
+    message,
+):
+    row = cryptic_inventory_row(**row_overrides)
     write_inventory(tmp_path / "cryptic_activity.tsv", [row])
     monkeypatch.setattr(
         seed_from_sources,
         "CRYPTIC_ACTIVITY_INVENTORY",
         tmp_path / "cryptic_activity.tsv",
     )
-    records = {"CHEBI:2637": {
-        "identifier": "CHEBI:2637",
-        "chemical_structure": {"standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N"},
-        "curation_history": [],
-    }}
 
-    counts = attach_cryptic_activity(records)
-
-    assert counts["identity_drift"] == 1
-    assert "activity_spectrum" not in records["CHEBI:2637"]
+    with pytest.raises(ValueError, match=message):
+        attach_cryptic_activity(records)
 
 
 def test_cryptic_activity_seeder_rejects_duplicate_groups(tmp_path, monkeypatch):
