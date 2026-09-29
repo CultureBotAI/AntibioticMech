@@ -1820,13 +1820,12 @@ def attach_phibase_resistance(records: dict[str, dict]) -> Counter:
     counts: Counter = Counter()
     grouped: dict[str, list[dict]] = defaultdict(list)
     for row in rows:
-        record = records.get(row["identifier"])
-        if record is None:
-            counts["missing_identifier"] += 1
-            continue
-        if record["chemical_structure"]["standard_inchi_key"] != row["standard_inchi_key"]:
-            counts["identity_drift"] += 1
-            continue
+        require_seed_row_identity(
+            records,
+            row,
+            source=PHIBASE_RESISTANCE_SOURCE,
+            row_id=row["phig_id"],
+        )
         grouped[row["identifier"]].append(row)
 
     for identifier, matched_rows in sorted(grouped.items()):
@@ -2084,13 +2083,12 @@ def attach_hivdb_score_rules(records: dict[str, dict]) -> Counter:
     rules_by_record: dict[str, list[dict]] = defaultdict(list)
     for row in load_hivdb_score_rule_inventory(HIVDB_SCORE_RULE_INVENTORY):
         identifier = row["identifier"]
-        record = records.get(identifier)
-        if (
-            record is None
-            or record["chemical_structure"].get("standard_inchi_key") != row["standard_inchi_key"]
-        ):
-            counts["identity_drift"] += 1
-            continue
+        require_seed_row_identity(
+            records,
+            row,
+            source=HIVDB_SCORE_RULE_SOURCE,
+            row_id=row["source_rule_id"],
+        )
         rules_by_record[identifier].append(hivdb_score_rule(row))
         counts["matched_rules"] += 1
 
@@ -2526,7 +2524,7 @@ def attach_cryptic_activity(records: dict[str, dict]) -> Counter:
     observations_by_record: dict[str, list[dict]] = defaultdict(list)
     for row in load_cryptic_activity_inventory(CRYPTIC_ACTIVITY_INVENTORY):
         identifier = row["identifier"]
-        require_compact_activity_identity(
+        require_seed_row_identity(
             records,
             row,
             source="CRYPTIC",
@@ -2634,14 +2632,14 @@ NCBI_AST_SOURCE_CONTEXT_FIELDS = {
 }
 
 
-def require_compact_activity_identity(
+def require_seed_row_identity(
     records: dict[str, dict],
     row: dict[str, str],
     *,
     source: str,
     row_id: str,
 ) -> None:
-    """Reject stale compact activity rows before they look like source deletions."""
+    """Reject stale exact source rows before they look like source deletions."""
     identifier = row["identifier"]
     record = records.get(identifier)
     if record is None:
@@ -3009,7 +3007,7 @@ def attach_ncbi_ast_activity(records: dict[str, dict]) -> Counter:
     observations_by_record: dict[str, list[dict]] = defaultdict(list)
     for row in load_ncbi_ast_activity_inventory(NCBI_AST_ACTIVITY_INVENTORY):
         identifier = row["identifier"]
-        require_compact_activity_identity(
+        require_seed_row_identity(
             records,
             row,
             source="NCBI_AST",
