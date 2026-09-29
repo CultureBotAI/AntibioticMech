@@ -134,6 +134,16 @@ def test_load_ncbi_ast_activity_inventory_rejects_header_drift(tmp_path):
         load_ncbi_ast_activity_inventory(path)
 
 
+def test_load_ncbi_ast_activity_inventory_rejects_empty_reports(tmp_path):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle, delimiter="\t")
+        writer.writerow(ACTIVITY_REPORT_COLUMNS)
+
+    with pytest.raises(ValueError, match="NCBI AST activity inventory has no rows"):
+        load_ncbi_ast_activity_inventory(path)
+
+
 def test_load_ncbi_ast_activity_inventory_rejects_short_rows(tmp_path):
     path = tmp_path / "ncbi_ast_activity.tsv"
     with path.open("w", newline="", encoding="utf-8") as handle:

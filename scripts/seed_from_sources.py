@@ -2994,6 +2994,8 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                     f"{prefix}: mic_value or disk_diffusion_value is required"
                 )
             rows.append(row)
+    if not rows:
+        raise ValueError(f"{path}: NCBI AST activity inventory has no rows")
     return rows
 
 
