@@ -444,6 +444,23 @@ def require_non_blank_fields(
             raise ValueError(f"{path}:{line_number}: {field} is required")
 
 
+def require_output_columns(
+    row: dict,
+    fieldnames: list[str],
+    path: Path,
+    row_number: int,
+) -> None:
+    missing = [field for field in fieldnames if field not in row]
+    if missing:
+        columns = ", ".join(missing)
+        raise ValueError(f"{path}: output row {row_number} is missing columns: {columns}")
+
+
+def require_output_rows(rows: list[dict], fieldnames: list[str], path: Path) -> None:
+    for row_number, row in enumerate(rows, start=1):
+        require_output_columns(row, fieldnames, path, row_number)
+
+
 def strip_table_row(row: dict[str, str]) -> dict[str, str]:
     return {field: value.strip() for field, value in row.items()}
 
@@ -1168,7 +1185,6 @@ def evaluate_rows(
 
 
 def write_antibiotic_report(rows: list[dict], path: Path) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = [
         "antibiotic",
         "normalized_antibiotic",
@@ -1218,6 +1234,8 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
         "taxon_labels",
         "phenotypes",
     ]
+    require_output_rows(rows, fieldnames, path)
+    path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t", lineterminator="\n")
         writer.writeheader()
@@ -1243,6 +1261,7 @@ def write_drug_map_template(rows: list[dict], path: Path, source_version: str) -
 
 
 def write_project_dedupe_report(rows: list[dict], path: Path) -> None:
+    require_output_rows(rows, PROJECT_DEDUPE_REPORT_COLUMNS, path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
@@ -1276,6 +1295,7 @@ def write_project_dedupe_map_template(rows: list[dict], path: Path) -> None:
 
 
 def write_activity_report(rows: list[dict], path: Path) -> None:
+    require_output_rows(rows, ACTIVITY_REPORT_COLUMNS, path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(

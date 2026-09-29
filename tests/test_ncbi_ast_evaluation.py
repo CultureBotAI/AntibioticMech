@@ -2038,6 +2038,29 @@ def test_project_dedupe_report_is_a_stable_tsv(tmp_path):
     }]
 
 
+@pytest.mark.parametrize(
+    ("writer", "partial_row", "missing_column"),
+    [
+        (write_antibiotic_report, {"antibiotic": "cefepime"}, "normalized_antibiotic"),
+        (write_project_dedupe_report, {"accession_type": "BioProject"}, "accession"),
+        (write_activity_report, {"activity_group_id": "ncbi_ast:test"}, "source_version"),
+    ],
+)
+def test_report_writers_reject_missing_columns(
+    tmp_path,
+    writer,
+    partial_row,
+    missing_column,
+):
+    path = tmp_path / "report.tsv"
+    path.write_text("keep me\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match=fr"missing columns: {missing_column}"):
+        writer([partial_row], path)
+
+    assert path.read_text(encoding="utf-8") == "keep me\n"
+
+
 def test_project_dedupe_map_template_is_fillable_by_the_curator(tmp_path):
     path = tmp_path / "ncbi_ast_project_dedupe.tsv"
     rows = [
