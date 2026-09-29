@@ -301,6 +301,12 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     assert observation["pathogen_detection_target_accession"] == "PDT000001234.1"
     assert observation["assembly_accession"] == "GCF_003123125.1"
     assert observation["sra_accessions"] == ["ERR111111", "SRR222222"]
+    assert observation["isolation_type"] == "clinical"
+    assert observation["isolation_location"] == "USA"
+    assert observation["collection_date"] == "2020"
+    assert observation["source_create_date"] == "2020-01-31"
+    assert observation["host_label"] == "Homo sapiens"
+    assert observation["isolation_source"] == "blood"
     assert observation["source"] == NCBI_AST_ACTIVITY_SOURCE
     assert observation["source_version"] == "2026-09-26-ast-browser"
     assert observation["source_retrieved_on"] == "2026-09-26"

@@ -2625,6 +2625,14 @@ NCBI_AST_SRA_ACCESSION_PATTERN = re.compile(
 NCBI_AST_TAXON_PATTERN = re.compile(r"^NCBITaxon:[1-9][0-9]*$")
 NCBI_AST_NORMALIZED_NAME_PATTERN = re.compile(r"[^a-z0-9]+")
 NCBI_AST_TSV_CONTROL_CHARS = frozenset("\t\r\n")
+NCBI_AST_SOURCE_CONTEXT_FIELDS = {
+    "isolation_type": "isolation_type",
+    "location": "isolation_location",
+    "collection_date": "collection_date",
+    "create_date": "source_create_date",
+    "host": "host_label",
+    "isolation_source": "isolation_source",
+}
 
 
 def normalized_ncbi_ast_name(value: str) -> str:
@@ -2730,6 +2738,9 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
             observation[field] = row[field]
     if row.get("sra_accessions"):
         observation["sra_accessions"] = row["sra_accessions"].split("|")
+    for source_field, observation_field in NCBI_AST_SOURCE_CONTEXT_FIELDS.items():
+        if row.get(source_field):
+            observation[observation_field] = row[source_field]
     return observation
 
 
