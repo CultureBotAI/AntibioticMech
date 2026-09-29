@@ -1372,6 +1372,8 @@ def main() -> int:
         parser.error("--drug-map and --drug-map-template require --source-version.")
     if args.source_version != args.source_version.strip():
         parser.error("--source-version must not have leading or trailing whitespace.")
+    if any(char in args.source_version for char in CURATED_TSV_CONTROL_CHARS):
+        parser.error("--source-version must not contain tabs or newlines.")
     if args.activity_report and not args.source_retrieved_on:
         parser.error("--activity-report requires --source-retrieved-on.")
     if args.source_retrieved_on and not is_iso_date(args.source_retrieved_on):

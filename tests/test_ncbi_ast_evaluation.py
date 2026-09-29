@@ -2464,6 +2464,30 @@ def test_cli_rejects_padded_source_version(tmp_path):
     assert "--source-version must not have leading or trailing whitespace" in result.stderr
 
 
+@pytest.mark.parametrize("source_version", ["2026\t09", "2026\n09", "2026\r09"])
+def test_cli_rejects_source_version_tsv_controls(tmp_path, source_version):
+    ast = tmp_path / "ast.tsv"
+    ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            "--antibiotic-report",
+            str(tmp_path / "ncbi_ast_antibiotics.tsv"),
+            "--source-version",
+            source_version,
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 2
+    assert "--source-version must not contain tabs or newlines" in result.stderr
+
+
 @pytest.mark.parametrize(
     "source_retrieved_on",
     [
