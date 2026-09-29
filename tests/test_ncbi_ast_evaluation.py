@@ -2475,6 +2475,37 @@ def test_cli_rejects_activity_report_without_drug_map(tmp_path):
     assert not activity_report.exists()
 
 
+def test_cli_rejects_ast_without_antibiotic_values_before_opening_reports(tmp_path):
+    ast = tmp_path / "ast.tsv"
+    ast.write_text("BioSample\tMIC\nSAMN11953777\t2\n", encoding="utf-8")
+    antibiotic_report = tmp_path / "ncbi_ast_antibiotics.tsv"
+    template = tmp_path / "ncbi_ast_drug_map_template.tsv"
+    antibiotic_report.write_text("keep antibiotic report\n", encoding="utf-8")
+    template.write_text("keep template\n", encoding="utf-8")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            "--antibiotic-report",
+            str(antibiotic_report),
+            "--drug-map-template",
+            str(template),
+            "--source-version",
+            "2026-09-26-ast-browser",
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 1
+    assert "NCBI AST table has no rows with antibiotic values" in result.stderr
+    assert antibiotic_report.read_text(encoding="utf-8") == "keep antibiotic report\n"
+    assert template.read_text(encoding="utf-8") == "keep template\n"
+
+
 def test_cli_rejects_activity_report_without_source_metadata(tmp_path):
     ast = tmp_path / "ast.tsv"
     ast.write_text("antibiotic\namikacin\n", encoding="utf-8")

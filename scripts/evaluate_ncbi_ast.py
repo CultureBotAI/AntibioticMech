@@ -572,6 +572,11 @@ def read_table(path: Path) -> list[dict[str, str]]:
         return rows
 
 
+def require_any_antibiotic_value(rows: list[dict[str, str]], path: Path) -> None:
+    if not any(has_value(row, ANTIBIOTIC_ALIASES) for row in rows):
+        raise ValueError(f"{path}: NCBI AST table has no rows with antibiotic values")
+
+
 def corpus_name_candidates(root: Path = REPO_ROOT) -> tuple[dict[str, set[str]], dict[str, str]]:
     candidates: dict[str, set[str]] = defaultdict(set)
     structure_keys: dict[str, str] = {}
@@ -1444,6 +1449,7 @@ def main() -> int:
         parser.error("--source-retrieved-on must be an ISO date.")
 
     rows = read_table(args.ast)
+    require_any_antibiotic_value(rows, args.ast)
     candidates, structure_keys = corpus_name_candidates()
     mappings = (
         read_drug_map(args.drug_map, structure_keys, source_version=args.source_version)
