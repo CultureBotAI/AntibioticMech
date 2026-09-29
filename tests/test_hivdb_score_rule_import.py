@@ -87,6 +87,14 @@ def test_load_hivdb_score_rule_inventory_accepts_exact_term_rows(tmp_path):
     assert load_hivdb_score_rule_inventory(path) == [row]
 
 
+def test_load_hivdb_score_rule_inventory_rejects_empty_reports(tmp_path):
+    path = tmp_path / "hivdb_algorithm_terms.tsv"
+    write_score_rule_report(path, [])
+
+    with pytest.raises(ValueError, match="HIVDB score-rule inventory has no rows"):
+        load_hivdb_score_rule_inventory(path)
+
+
 @pytest.mark.parametrize(
     ("overrides", "message"),
     [
