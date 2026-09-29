@@ -1569,6 +1569,14 @@ def test_read_drug_map_rejects_source_version_drift(tmp_path):
         read_drug_map(path, {}, source_version="2026-09-26-ast-browser")
 
 
+def test_read_drug_map_rejects_header_only_maps(tmp_path):
+    path = tmp_path / "ncbi_ast_antibiotic_map.tsv"
+    path.write_text("\t".join(DRUG_MAP_COLUMNS) + "\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="NCBI AST drug map has no rows"):
+        read_drug_map(path, {}, source_version="2026-09-26-ast-browser")
+
+
 def test_read_drug_map_rejects_malformed_rows(tmp_path):
     path = tmp_path / "ncbi_ast_antibiotic_map.tsv"
     path.write_text(
