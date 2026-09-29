@@ -55,6 +55,55 @@ PROJECT_DEDUPE_REPORT_COLUMNS = [
     "taxon_ids",
     "taxon_labels",
 ]
+ANTIBIOTIC_REPORT_COLUMNS = [
+    "antibiotic",
+    "normalized_antibiotic",
+    "ast_rows",
+    "mapping_status",
+    "identifier",
+    "standard_inchi_key",
+    "mapping_basis",
+    "mapping_notes",
+    "exact_name_candidate_count",
+    "exact_name_candidate_identifiers",
+    "exact_name_candidate_inchi_keys",
+    "biosample_count",
+    "bioproject_count",
+    "project_context_count",
+    "valid_project_context_count",
+    "dedupe_context_count",
+    "activity_report_candidate_count",
+    "activity_report_dedupe_excluded_count",
+    "target_acc_count",
+    "invalid_target_acc_count",
+    "assembly_acc_count",
+    "invalid_assembly_acc_count",
+    "sra_accessions_count",
+    "invalid_sra_accessions_count",
+    "isolation_type_count",
+    "location_count",
+    "collection_date_count",
+    "create_date_count",
+    "host_count",
+    "isolation_source_count",
+    "taxon_id_count",
+    "invalid_taxon_id_count",
+    "taxon_count",
+    "phenotype_count",
+    "invalid_phenotype_count",
+    "assay_method_count",
+    "mic_count",
+    "standardized_mic_count",
+    "invalid_mic_count",
+    "standardized_mic_values",
+    "disk_diffusion_count",
+    "standardized_disk_diffusion_count",
+    "invalid_disk_diffusion_count",
+    "standardized_disk_diffusion_values",
+    "taxon_ids",
+    "taxon_labels",
+    "phenotypes",
+]
 # Bump with ACTIVITY_REPORT_GROUP_COLUMNS because those columns define the
 # stable activity_group_id digest for committed exact reports.
 ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v6"
@@ -454,6 +503,10 @@ def require_output_columns(
     if missing:
         columns = ", ".join(missing)
         raise ValueError(f"{path}: output row {row_number} is missing columns: {columns}")
+    unexpected = [field for field in row if field not in fieldnames]
+    if unexpected:
+        columns = ", ".join(unexpected)
+        raise ValueError(f"{path}: output row {row_number} has unexpected columns: {columns}")
 
 
 def require_output_rows(rows: list[dict], fieldnames: list[str], path: Path) -> None:
@@ -1185,59 +1238,15 @@ def evaluate_rows(
 
 
 def write_antibiotic_report(rows: list[dict], path: Path) -> None:
-    fieldnames = [
-        "antibiotic",
-        "normalized_antibiotic",
-        "ast_rows",
-        "mapping_status",
-        "identifier",
-        "standard_inchi_key",
-        "mapping_basis",
-        "mapping_notes",
-        "exact_name_candidate_count",
-        "exact_name_candidate_identifiers",
-        "exact_name_candidate_inchi_keys",
-        "biosample_count",
-        "bioproject_count",
-        "project_context_count",
-        "valid_project_context_count",
-        "dedupe_context_count",
-        "activity_report_candidate_count",
-        "activity_report_dedupe_excluded_count",
-        "target_acc_count",
-        "invalid_target_acc_count",
-        "assembly_acc_count",
-        "invalid_assembly_acc_count",
-        "sra_accessions_count",
-        "invalid_sra_accessions_count",
-        "isolation_type_count",
-        "location_count",
-        "collection_date_count",
-        "create_date_count",
-        "host_count",
-        "isolation_source_count",
-        "taxon_id_count",
-        "invalid_taxon_id_count",
-        "taxon_count",
-        "phenotype_count",
-        "invalid_phenotype_count",
-        "assay_method_count",
-        "mic_count",
-        "standardized_mic_count",
-        "invalid_mic_count",
-        "standardized_mic_values",
-        "disk_diffusion_count",
-        "standardized_disk_diffusion_count",
-        "invalid_disk_diffusion_count",
-        "standardized_disk_diffusion_values",
-        "taxon_ids",
-        "taxon_labels",
-        "phenotypes",
-    ]
-    require_output_rows(rows, fieldnames, path)
+    require_output_rows(rows, ANTIBIOTIC_REPORT_COLUMNS, path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t", lineterminator="\n")
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=ANTIBIOTIC_REPORT_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(rows)
 

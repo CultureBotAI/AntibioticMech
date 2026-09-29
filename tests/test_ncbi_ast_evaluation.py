@@ -12,8 +12,11 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from evaluate_ncbi_ast import (  # noqa: E402
+    ACTIVITY_REPORT_COLUMNS,
+    ANTIBIOTIC_REPORT_COLUMNS,
     DRUG_MAP_COLUMNS,
     PROJECT_DEDUPE_COLUMNS,
+    PROJECT_DEDUPE_REPORT_COLUMNS,
     corpus_name_candidates,
     evaluate_rows,
     exact_activity_rows,
@@ -2057,6 +2060,26 @@ def test_report_writers_reject_missing_columns(
 
     with pytest.raises(ValueError, match=fr"missing columns: {missing_column}"):
         writer([partial_row], path)
+
+    assert path.read_text(encoding="utf-8") == "keep me\n"
+
+
+@pytest.mark.parametrize(
+    ("writer", "fieldnames"),
+    [
+        (write_antibiotic_report, ANTIBIOTIC_REPORT_COLUMNS),
+        (write_project_dedupe_report, PROJECT_DEDUPE_REPORT_COLUMNS),
+        (write_activity_report, ACTIVITY_REPORT_COLUMNS),
+    ],
+)
+def test_report_writers_reject_unexpected_columns(tmp_path, writer, fieldnames):
+    path = tmp_path / "report.tsv"
+    path.write_text("keep me\n", encoding="utf-8")
+    row = {field: "" for field in fieldnames}
+    row["unexpected"] = "value"
+
+    with pytest.raises(ValueError, match="unexpected columns: unexpected"):
+        writer([row], path)
 
     assert path.read_text(encoding="utf-8") == "keep me\n"
 
