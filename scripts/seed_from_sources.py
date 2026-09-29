@@ -2371,7 +2371,13 @@ def attach_cryptic_activity(records: dict[str, dict]) -> Counter:
         return counts
 
     observations_by_record: dict[str, list[dict]] = defaultdict(list)
+    seen_activity_group_ids = set()
     for row in load_tsv(CRYPTIC_ACTIVITY_INVENTORY):
+        activity_group_id = row["activity_group_id"]
+        if activity_group_id in seen_activity_group_ids:
+            raise ValueError(f"duplicate CRyPTIC activity_group_id: {activity_group_id}")
+        seen_activity_group_ids.add(activity_group_id)
+
         identifier = row["identifier"]
         record = records.get(identifier)
         if (

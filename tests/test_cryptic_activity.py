@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import csv
 import sys
 from pathlib import Path
 
@@ -396,6 +397,51 @@ def test_cryptic_activity_writer_rejects_identity_drift(tmp_path, monkeypatch):
 
     assert counts["identity_drift"] == 1
     assert "activity_spectrum" not in records["CHEBI:2637"]
+
+
+def test_cryptic_activity_seeder_rejects_duplicate_groups(tmp_path, monkeypatch):
+    row = {column: "" for column in INVENTORY_COLUMNS}
+    row.update({
+        "source_version": "3.4.0",
+        "source_table": UKMYC_TABLE,
+        "activity_group_id": "ukmyc_phenotypes:abc",
+        "drug_code": "AMI",
+        "source_name": "AMIKACIN",
+        "identifier": "CHEBI:2637",
+        "standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N",
+        "mic_value": "0.25",
+        "mic_qualifier": "<=",
+        "mic_units": "mg/L",
+        "row_count": "6184",
+        "isolate_count": "6184",
+        "site_count": "11",
+        "platedesign": "UKMYC6",
+        "binary_phenotype": "R",
+    })
+    path = tmp_path / "cryptic_activity.tsv"
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=INVENTORY_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows([row, row])
+    monkeypatch.setattr(
+        seed_from_sources,
+        "CRYPTIC_ACTIVITY_INVENTORY",
+        path,
+    )
+
+    records = {"CHEBI:2637": {
+        "identifier": "CHEBI:2637",
+        "chemical_structure": {"standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N"},
+        "curation_history": [],
+    }}
+
+    with pytest.raises(ValueError, match="duplicate CRyPTIC activity_group_id"):
+        attach_cryptic_activity(records)
 
 
 def test_compact_activity_observation_can_be_qualitative_without_mic():
