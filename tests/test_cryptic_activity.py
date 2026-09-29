@@ -313,6 +313,30 @@ def test_write_inventory_rejects_duplicate_group_ids(tmp_path):
         write_inventory(tmp_path / "cryptic_inventory.tsv", [row, row])
 
 
+@pytest.mark.parametrize(
+    ("row", "message"),
+    [
+        ({"source_version": "3.4.0"}, "missing columns: source_table"),
+        (
+            {column: "" for column in INVENTORY_COLUMNS} | {"unexpected": "value"},
+            "unexpected columns: unexpected",
+        ),
+    ],
+)
+def test_write_inventory_rejects_malformed_rows_before_opening(
+    tmp_path,
+    row,
+    message,
+):
+    path = tmp_path / "cryptic_inventory.tsv"
+    path.write_text("keep me\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match=message):
+        write_inventory(path, [row])
+
+    assert path.read_text(encoding="utf-8") == "keep me\n"
+
+
 def test_load_cryptic_activity_inventory_accepts_committed_column_contract(tmp_path):
     path = tmp_path / "cryptic_activity.tsv"
     row = cryptic_inventory_row()
