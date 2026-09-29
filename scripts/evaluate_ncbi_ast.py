@@ -664,6 +664,8 @@ def read_drug_map(
                     f"does not match {identifier} ({expected})"
                 )
             rows[normalized_name] = row
+        if not rows:
+            raise ValueError(f"{path}: NCBI AST drug map has no rows")
         return rows
 
 
