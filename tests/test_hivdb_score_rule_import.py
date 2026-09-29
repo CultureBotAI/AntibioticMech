@@ -175,21 +175,39 @@ def test_attach_hivdb_score_rules_noops_without_inventory(tmp_path, monkeypatch)
     }
 
 
-def test_attach_hivdb_score_rules_skips_stale_identity(tmp_path, monkeypatch):
+@pytest.mark.parametrize(
+    ("row_overrides", "records", "message"),
+    [
+        (
+            {},
+            {
+                "CHEBI:421707": {
+                    "identifier": "CHEBI:421707",
+                    "chemical_structure": {"standard_inchi_key": "STALE"},
+                },
+            },
+            "mapped InChIKey MCI does not match CHEBI:421707",
+        ),
+        (
+            {"identifier": "CHEBI:999999", "standard_inchi_key": "STALE"},
+            {},
+            "mapped identifier CHEBI:999999 is not in the corpus",
+        ),
+    ],
+)
+def test_attach_hivdb_score_rules_rejects_identity_drift(
+    tmp_path,
+    monkeypatch,
+    row_overrides,
+    records,
+    message,
+):
     path = tmp_path / "hivdb_algorithm_terms.tsv"
-    write_score_rule_report(path, [hivdb_score_rule_row()])
+    write_score_rule_report(path, [hivdb_score_rule_row(**row_overrides)])
     monkeypatch.setattr(seed_from_sources, "HIVDB_SCORE_RULE_INVENTORY", path)
-    records = {
-        "CHEBI:421707": {
-            "identifier": "CHEBI:421707",
-            "chemical_structure": {"standard_inchi_key": "STALE"},
-        }
-    }
 
-    counts = attach_hivdb_score_rules(records)
-
-    assert counts["identity_drift"] == 1
-    assert "genotype_resistance_score_rules" not in records["CHEBI:421707"]
+    with pytest.raises(ValueError, match=message):
+        attach_hivdb_score_rules(records)
 
 
 def test_hivdb_score_rules_are_closed_schema_valid():

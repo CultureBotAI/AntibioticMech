@@ -27,6 +27,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
+import seed_from_sources  # noqa: E402
 from curation_worklist import activity_candidate_queue  # noqa: E402
 from seed_from_sources import (  # noqa: E402
     PHIBASE_NOTE_MARKER,
@@ -330,6 +331,14 @@ def _first_inventory_row(name):
         delimiter="\t")))
 
 
+def _write_rows(path: Path, rows: list[dict[str, str]]) -> None:
+    import csv
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=rows[0].keys(), delimiter="\t")
+        writer.writeheader()
+        writer.writerows(rows)
+
+
 def _first_accepted_mibig_row():
     import csv
     for row in csv.DictReader(
@@ -341,8 +350,11 @@ def _first_accepted_mibig_row():
     raise AssertionError("no MIBiG row passes the lane's own filters")
 
 
-def test_the_phibase_lane_emits_structure_rather_than_prose():
+def test_the_phibase_lane_emits_structure_rather_than_prose(tmp_path, monkeypatch):
     row = _first_inventory_row("phibase_amr")
+    _write_rows(tmp_path / "phibase_amr.tsv", [row])
+    monkeypatch.setattr(seed_from_sources, "RAW_DIR", tmp_path)
+
     records = _seed_one(row["standard_inchi_key"], row["identifier"])
     attach_phibase_resistance(records)
     items = records[row["identifier"]]["resistance_mechanisms"]
@@ -525,4 +537,3 @@ def test_each_taxon_curie_renders_beside_the_name_it_denotes():  # #179
     # Both must be resolvable, or the split is invisible to a reader.
     assert cell["taxon_id"]["href"] and cell["strain_taxon_id"]["href"]
     assert cell["protein_accession"]["href"] and cell["phenotype_id"]["href"]
-
