@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 
+import yaml
 from linkml_runtime.utils.schemaview import SchemaView
 
 
@@ -44,6 +45,33 @@ def _permissible(view, enum_name: str) -> set[str]:
     return set(view.get_enum(enum_name).permissible_values)
 
 
+def test_ncbi_taxon_patterns_accept_only_positive_canonical_curies(schema_path):
+    schema = yaml.safe_load(schema_path.read_text(encoding="utf-8"))
+    expected = "^NCBITaxon:[1-9][0-9]*$"
+    expected_slots = {
+        "ActivityObservation.taxon_id",
+        "MolecularTarget.taxon_id",
+        "ProducerOrganism.taxon_id",
+        "ProteinExample.taxon_id",
+        "ResistanceMechanism.strain_taxon_id",
+        "ResistanceMechanism.taxon_id",
+        "StructuralObservation.taxon_id",
+    }
+
+    seen = set()
+    problems = []
+    for class_name, class_body in schema["classes"].items():
+        for slot_name, slot in (class_body.get("attributes") or {}).items():
+            if not slot_name.endswith("taxon_id"):
+                continue
+            seen.add(f"{class_name}.{slot_name}")
+            if slot.get("pattern") != expected:
+                problems.append(f"{class_name}.{slot_name}: {slot.get('pattern')!r}")
+
+    assert seen == expected_slots
+    assert problems == []
+
+
 def test_corpus_uses_only_declared_enum_values(schema_path, records):
     """Per-record validation already enforces this for records written through
     the gate. This catches a hand-edited value across the whole corpus at once."""
@@ -79,8 +107,6 @@ def test_class_hierarchy_is_declared_where_consumers_will_find_it(schema_path):
     those records are NOT also under antibacterial. A consumer asking "what acts
     on bacteria?" has to take both, and the only honest place to say so is the
     schema. The generated site derives its cross-links from here."""
-    import yaml
-
     values = yaml.safe_load(schema_path.read_text(encoding="utf-8"))[
         "enums"]["AntimicrobialClassEnum"]["permissible_values"]
     assert (values["ANTIMYCOBACTERIAL"] or {}).get("is_a") == "ANTIBACTERIAL"
@@ -99,8 +125,6 @@ def test_every_class_the_schema_declares_has_a_directory(schema_path):
     the enum without a directory fails here rather than at seed time."""
     import sys
     from pathlib import Path
-
-    import yaml
 
     sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
     from seed_from_sources import CLASS_DIRS
