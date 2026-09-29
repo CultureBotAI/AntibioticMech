@@ -1333,6 +1333,8 @@ def write_project_dedupe_map_template(rows: list[dict], path: Path) -> None:
 
 
 def write_activity_report(rows: list[dict], path: Path) -> None:
+    if not rows:
+        raise ValueError(f"{path}: NCBI AST activity report has no rows")
     require_output_rows(rows, ACTIVITY_REPORT_COLUMNS, path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
