@@ -1096,16 +1096,19 @@ classes:
           observation. Greater than 1 when a bulk source groups raw rows that
           share the same organism, compound, method and result.
         range: integer
+        minimum_value: 1
       isolate_count:
         description: >-
           Number of distinct isolates represented by this observation, when the
           source groups rows by isolate.
         range: integer
+        minimum_value: 1
       site_count:
         description: >-
           Number of distinct study or testing sites represented by this
           observation, where the source reports site identifiers.
         range: integer
+        minimum_value: 1
       biosample_accession:
         description: >-
           NCBI/INSDC BioSample accession for the tested isolate or specimen,

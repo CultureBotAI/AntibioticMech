@@ -72,6 +72,30 @@ def test_ncbi_taxon_patterns_accept_only_positive_canonical_curies(schema_path):
     assert problems == []
 
 
+def test_activity_observation_count_slots_are_positive(schema_path):
+    attributes = yaml.safe_load(schema_path.read_text(encoding="utf-8"))[
+        "classes"]["ActivityObservation"]["attributes"]
+    count_slots = {
+        name: slot
+        for name, slot in attributes.items()
+        if name.endswith("_count")
+    }
+
+    assert set(count_slots) == {
+        "isolate_count",
+        "measurement_count",
+        "site_count",
+    }
+    assert {
+        name: slot.get("minimum_value")
+        for name, slot in count_slots.items()
+    } == {
+        "isolate_count": 1,
+        "measurement_count": 1,
+        "site_count": 1,
+    }
+
+
 def test_corpus_uses_only_declared_enum_values(schema_path, records):
     """Per-record validation already enforces this for records written through
     the gate. This catches a hand-edited value across the whole corpus at once."""
