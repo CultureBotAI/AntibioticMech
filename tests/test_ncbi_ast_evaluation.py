@@ -1203,6 +1203,14 @@ def test_read_table_rejects_ragged_rows(tmp_path):
         read_table(path)
 
 
+def test_read_table_rejects_header_only_source_exports(tmp_path):
+    path = tmp_path / "ast.tsv"
+    path.write_text("AST.Antibiotic\tBioSample\tMIC\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="NCBI AST table has no rows"):
+        read_table(path)
+
+
 def test_read_table_rejects_malformed_headers(tmp_path):
     path = tmp_path / "ast.csv"
     path.write_text(

@@ -567,6 +567,8 @@ def read_table(path: Path) -> list[dict[str, str]]:
         for row in reader:
             require_exact_table_row(row, path, reader.line_num)
             rows.append(row)
+        if not rows:
+            raise ValueError(f"{path}: NCBI AST table has no rows")
         return rows
 
 
