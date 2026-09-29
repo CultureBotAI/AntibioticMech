@@ -127,6 +127,28 @@ def test_activity_observation_accepts_sample_and_genome_accessions(tmp_path):
     assert not validate_antibiotic(doc)
 
 
+@pytest.mark.parametrize(
+    "count_field",
+    ["isolate_count", "measurement_count", "site_count"],
+)
+def test_activity_observation_rejects_nonpositive_group_counts(count_field):
+    doc = dict(MINIMAL) | {"activity_spectrum": [
+        {
+            "taxon_label": "Escherichia coli",
+            "activity": "RESISTANT",
+            "assay": "broth microdilution",
+            "evidence": [{"reference": "PMID:1"}],
+            count_field: 1,
+        },
+    ]}
+    assert not validate_antibiotic(doc)
+
+    doc["activity_spectrum"][0][count_field] = 0
+    messages = [err.message for err in validate_antibiotic(doc)]
+
+    assert any(count_field in message for message in messages)
+
+
 def test_activity_observation_rejects_malformed_sample_accessions(tmp_path):
     doc = dict(MINIMAL) | {"activity_spectrum": [
         {
