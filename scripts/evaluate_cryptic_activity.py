@@ -347,6 +347,8 @@ def require_inventory_rows(rows: list[dict[str, str]], path: Path) -> None:
 
 def write_inventory(path: Path, rows: list[dict[str, str]]) -> None:
     require_inventory_rows(rows, path)
+    if not rows:
+        raise ValueError(f"{path}: CRyPTIC activity inventory has no rows")
     seen_ids = set()
     for row in rows:
         group_id = row["activity_group_id"]

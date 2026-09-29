@@ -2424,6 +2424,8 @@ def load_cryptic_activity_inventory(path: Path) -> list[dict[str, str]]:
                 raise ValueError(f"{prefix}: duplicate CRyPTIC activity_group_id")
             seen_activity_group_ids.add(activity_group_id)
             rows.append(row)
+    if not rows:
+        raise ValueError(f"{path}: CRyPTIC activity inventory has no rows")
     return rows
 
 

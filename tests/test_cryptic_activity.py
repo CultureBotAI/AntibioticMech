@@ -313,6 +313,16 @@ def test_write_inventory_rejects_duplicate_group_ids(tmp_path):
         write_inventory(tmp_path / "cryptic_inventory.tsv", [row, row])
 
 
+def test_write_inventory_rejects_empty_reports_before_opening(tmp_path):
+    path = tmp_path / "cryptic_inventory.tsv"
+    path.write_text("keep me\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="CRyPTIC activity inventory has no rows"):
+        write_inventory(path, [])
+
+    assert path.read_text(encoding="utf-8") == "keep me\n"
+
+
 @pytest.mark.parametrize(
     ("row", "message"),
     [
@@ -350,6 +360,14 @@ def test_load_cryptic_activity_inventory_rejects_header_drift(tmp_path):
     path.write_text("source_version\tunexpected\n", encoding="utf-8")
 
     with pytest.raises(ValueError, match="expected CRyPTIC activity header"):
+        load_cryptic_activity_inventory(path)
+
+
+def test_load_cryptic_activity_inventory_rejects_empty_reports(tmp_path):
+    path = tmp_path / "cryptic_activity.tsv"
+    write_raw_inventory(path, [])
+
+    with pytest.raises(ValueError, match="CRyPTIC activity inventory has no rows"):
         load_cryptic_activity_inventory(path)
 
 
