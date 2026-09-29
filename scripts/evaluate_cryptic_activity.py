@@ -331,7 +331,22 @@ def activity_inventory(connection, dst: Path, ukmyc: Path, drug_codes: dict[str,
     return rows
 
 
+def require_inventory_rows(rows: list[dict[str, str]], path: Path) -> None:
+    for row_number, row in enumerate(rows, start=1):
+        missing = [column for column in INVENTORY_COLUMNS if column not in row]
+        if missing:
+            columns = ", ".join(missing)
+            raise ValueError(f"{path}: inventory row {row_number} is missing columns: {columns}")
+        unexpected = [column for column in row if column not in INVENTORY_COLUMNS]
+        if unexpected:
+            columns = ", ".join(unexpected)
+            raise ValueError(
+                f"{path}: inventory row {row_number} has unexpected columns: {columns}"
+            )
+
+
 def write_inventory(path: Path, rows: list[dict[str, str]]) -> None:
+    require_inventory_rows(rows, path)
     seen_ids = set()
     for row in rows:
         group_id = row["activity_group_id"]
