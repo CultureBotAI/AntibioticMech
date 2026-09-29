@@ -166,7 +166,8 @@ Browser CSV/TSV and BigQuery-shaped exports without seeding rows. It summarizes
 submitted antibiotic strings by lexical exact-corpus candidates, ambiguous
 matches, unmatched names, taxon/BioSample/BioProject/target-accession coverage,
 source isolation metadata coverage, MIC or disk-diffusion coverage, and
-measurement signs standardized to qualifiers and units. It can also emit the
+measurement signs standardized to qualifiers and units, treating `mg/L` and
+`ug/mL` MIC headings as the same numeric unit. It can also emit the
 fillable seven-column drug-map template that a curator turns into the
 exact-structure crosswalk. When supplied
 with a partially curated crosswalk, it writes a compact grouped activity report
