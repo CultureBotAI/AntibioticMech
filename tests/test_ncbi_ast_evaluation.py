@@ -2027,6 +2027,16 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
     }]
 
 
+def test_write_activity_report_rejects_empty_reports_before_opening(tmp_path):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    path.write_text("keep me\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="NCBI AST activity report has no rows"):
+        write_activity_report([], path)
+
+    assert path.read_text(encoding="utf-8") == "keep me\n"
+
+
 def test_project_dedupe_report_is_a_stable_tsv(tmp_path):
     path = tmp_path / "ncbi_ast_project_dedupe_report.tsv"
     rows = [
