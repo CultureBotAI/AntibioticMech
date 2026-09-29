@@ -2274,6 +2274,159 @@ CRYPTIC_CALLS = {
     "I": "INTERMEDIATE",
     "R": "RESISTANT",
 }
+CRYPTIC_ACTIVITY_COLUMNS = [
+    "source_version",
+    "source_table",
+    "activity_group_id",
+    "drug_code",
+    "source_name",
+    "identifier",
+    "standard_inchi_key",
+    "mic_value",
+    "mic_qualifier",
+    "mic_units",
+    "row_count",
+    "isolate_count",
+    "site_count",
+    "source",
+    "method_1",
+    "method_2",
+    "method_3",
+    "method_cc",
+    "method_mic",
+    "phenotype",
+    "quality",
+    "platedesign",
+    "belongs_gpi",
+    "phenotype_quality",
+    "readingday",
+    "primary_method",
+    "phenotype_description",
+    "mic",
+    "log2mic",
+    "binary_phenotype",
+]
+CRYPTIC_REQUIRED_ACTIVITY_COLUMNS = (
+    "source_version",
+    "source_table",
+    "activity_group_id",
+    "drug_code",
+    "source_name",
+    "identifier",
+    "standard_inchi_key",
+    "row_count",
+    "isolate_count",
+)
+CRYPTIC_ACTIVITY_TABLES = {"DST_MEASUREMENTS", "UKMYC_PHENOTYPES"}
+CRYPTIC_MIC_QUALIFIERS = {"", "<", "<=", ">", ">="}
+CRYPTIC_TSV_CONTROL_CHARS = frozenset("\t\r\n")
+
+
+def _require_cryptic_positive_integer(
+    row: dict[str, str],
+    field: str,
+    path: Path,
+    line_number: int,
+) -> None:
+    prefix = f"{path}:{line_number}"
+    try:
+        parsed = int(row[field])
+    except ValueError as error:
+        raise ValueError(f"{prefix}: {field} must be an integer") from error
+    if parsed <= 0:
+        raise ValueError(f"{prefix}: {field} must be positive")
+    canonical = str(parsed)
+    if row[field] != canonical:
+        raise ValueError(
+            f"{prefix}: {field} must use canonical integer {canonical!r}"
+        )
+
+
+def _require_cryptic_mic(
+    row: dict[str, str],
+    path: Path,
+    line_number: int,
+) -> None:
+    prefix = f"{path}:{line_number}"
+    value = row["mic_value"]
+    qualifier = row["mic_qualifier"]
+    units = row["mic_units"]
+
+    if not value:
+        if qualifier:
+            raise ValueError(f"{prefix}: mic_qualifier requires mic_value")
+        if units:
+            raise ValueError(f"{prefix}: mic_units requires mic_value")
+        return
+
+    if qualifier not in CRYPTIC_MIC_QUALIFIERS:
+        raise ValueError(f"{prefix}: mic_qualifier has invalid qualifier {qualifier!r}")
+    if units != "mg/L":
+        raise ValueError(f"{prefix}: mic_units must be 'mg/L'")
+    try:
+        parsed = Decimal(value)
+    except InvalidOperation as error:
+        raise ValueError(f"{prefix}: mic_value must be numeric") from error
+    if not parsed.is_finite():
+        raise ValueError(f"{prefix}: mic_value must be finite")
+    if parsed <= 0:
+        raise ValueError(f"{prefix}: mic_value must be positive")
+
+
+def load_cryptic_activity_inventory(path: Path) -> list[dict[str, str]]:
+    """Load a compact CRyPTIC activity inventory and reject malformed rows."""
+    if not path.exists():
+        raise SystemExit(f"missing inventory {path}; run `just evaluate-cryptic`")
+
+    rows = []
+    seen_activity_group_ids = set()
+    expected_source_version = None
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if reader.fieldnames != CRYPTIC_ACTIVITY_COLUMNS:
+            raise ValueError(
+                f"{path}: expected CRyPTIC activity header "
+                f"{CRYPTIC_ACTIVITY_COLUMNS!r}, found {reader.fieldnames!r}"
+            )
+        for line_number, row in enumerate(reader, start=2):
+            prefix = f"{path}:{line_number}"
+            if None in row:
+                raise ValueError(f"{prefix}: unexpected extra TSV field")
+            row = {
+                field: "" if value is None else value
+                for field, value in row.items()
+            }
+            for field, value in row.items():
+                if any(char in value for char in CRYPTIC_TSV_CONTROL_CHARS):
+                    raise ValueError(f"{prefix}: {field} contains a tab or newline")
+                if value != value.strip():
+                    raise ValueError(
+                        f"{prefix}: {field} has leading or trailing whitespace"
+                    )
+            for field in CRYPTIC_REQUIRED_ACTIVITY_COLUMNS:
+                if not row[field]:
+                    raise ValueError(f"{prefix}: {field} is required")
+
+            if row["source_table"] not in CRYPTIC_ACTIVITY_TABLES:
+                raise ValueError(f"{prefix}: unsupported source_table {row['source_table']!r}")
+            if expected_source_version is None:
+                expected_source_version = row["source_version"]
+            elif row["source_version"] != expected_source_version:
+                raise ValueError(
+                    f"{prefix}: source_version must be {expected_source_version!r}"
+                )
+            for field in ("row_count", "isolate_count"):
+                _require_cryptic_positive_integer(row, field, path, line_number)
+            if row["site_count"]:
+                _require_cryptic_positive_integer(row, "site_count", path, line_number)
+            _require_cryptic_mic(row, path, line_number)
+
+            activity_group_id = row["activity_group_id"]
+            if activity_group_id in seen_activity_group_ids:
+                raise ValueError(f"{prefix}: duplicate CRyPTIC activity_group_id")
+            seen_activity_group_ids.add(activity_group_id)
+            rows.append(row)
+    return rows
 
 
 def is_cryptic_sourced_activity(item: dict) -> bool:
@@ -2371,13 +2524,7 @@ def attach_cryptic_activity(records: dict[str, dict]) -> Counter:
         return counts
 
     observations_by_record: dict[str, list[dict]] = defaultdict(list)
-    seen_activity_group_ids = set()
-    for row in load_tsv(CRYPTIC_ACTIVITY_INVENTORY):
-        activity_group_id = row["activity_group_id"]
-        if activity_group_id in seen_activity_group_ids:
-            raise ValueError(f"duplicate CRyPTIC activity_group_id: {activity_group_id}")
-        seen_activity_group_ids.add(activity_group_id)
-
+    for row in load_cryptic_activity_inventory(CRYPTIC_ACTIVITY_INVENTORY):
         identifier = row["identifier"]
         record = records.get(identifier)
         if (
