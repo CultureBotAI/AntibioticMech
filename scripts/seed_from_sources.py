@@ -2040,6 +2040,8 @@ def load_hivdb_score_rule_inventory(path: Path) -> list[dict[str, str]]:
             seen_rule_ids.add(row["source_rule_id"])
             rows.append(row)
 
+    if not rows:
+        raise ValueError(f"{path}: HIVDB score-rule inventory has no rows")
     return rows
 
 
