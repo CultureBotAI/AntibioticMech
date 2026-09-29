@@ -30,6 +30,17 @@ def test_optional_inventory_problems_rejects_preadoption_exact_reports():
 
     assert optional_inventory_problems(
         {"ncbi-ast": {"status": "EVALUATING"}},
+        {},
+    ) == []
+    assert optional_inventory_problems(
+        {"ncbi-ast": {"status": "ADOPTED"}},
+        {},
+    ) == [
+        "ncbi-ast: data/raw/ncbi_ast_activity.tsv is required when source "
+        "status is ADOPTED",
+    ]
+    assert optional_inventory_problems(
+        {"ncbi-ast": {"status": "EVALUATING"}},
         present,
     ) == [
         "ncbi-ast: data/raw/ncbi_ast_activity.tsv exists but source status is "

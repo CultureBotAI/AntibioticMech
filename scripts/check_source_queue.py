@@ -76,10 +76,11 @@ EXTRA_GAPS = {"identity", "structures", "evidence", "classification", "mechanism
 # check that silently stops checking is worse than no check.
 SOURCE_MARKER = "name"
 
-# Some evaluators can already write exact, source-versioned inventories for a
-# candidate lane before the repository is legally ready to seed from that lane.
-# Once one of those files appears under data/raw, it would be redistributed and
-# consumed by seed_from_sources.py, so the source queue has to say ADOPTED first.
+# Some evaluators can already write exact, source-versioned inventories before
+# the repository is legally ready to seed from that lane. Once one of those
+# files appears under data/raw, it would be redistributed and consumed by
+# seed_from_sources.py, so the source queue has to say ADOPTED first. Once that
+# source is ADOPTED, the inventory stops being optional and must be committed.
 OPTIONAL_ADOPTION_INVENTORIES = {
     "ncbi-ast": Path("data/raw/ncbi_ast_activity.tsv"),
 }
@@ -113,6 +114,16 @@ def optional_inventory_problems(
             problems.append(
                 f"{source_id}: {path} exists but source status is "
                 f"{row['status']}, not ADOPTED"
+            )
+    for source_id, path in sorted(OPTIONAL_ADOPTION_INVENTORIES.items()):
+        row = queue_by_source.get(source_id)
+        if (
+            row is not None
+            and row["status"] == "ADOPTED"
+            and source_id not in present_inventories
+        ):
+            problems.append(
+                f"{source_id}: {path} is required when source status is ADOPTED"
             )
     return problems
 
