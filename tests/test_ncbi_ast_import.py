@@ -327,22 +327,42 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     )
 
 
-def test_attach_ncbi_ast_activity_rejects_identity_drift(tmp_path, monkeypatch):
+@pytest.mark.parametrize(
+    ("row_overrides", "records", "message"),
+    [
+        (
+            {"standard_inchi_key": "STALE"},
+            {
+                "CHEBI:478164": {
+                    "identifier": "CHEBI:478164",
+                    "chemical_structure": {
+                        "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+                    },
+                    "curation_history": [],
+                },
+            },
+            "mapped InChIKey STALE does not match CHEBI:478164",
+        ),
+        (
+            {"identifier": "CHEBI:999999", "standard_inchi_key": "STALE"},
+            {},
+            "mapped identifier CHEBI:999999 is not in the corpus",
+        ),
+    ],
+)
+def test_attach_ncbi_ast_activity_rejects_identity_drift(
+    tmp_path,
+    monkeypatch,
+    row_overrides,
+    records,
+    message,
+):
     path = tmp_path / "ncbi_ast_activity.tsv"
-    write_activity_report(path, [ncbi_ast_row(standard_inchi_key="STALE")])
+    write_activity_report(path, [ncbi_ast_row(**row_overrides)])
     monkeypatch.setattr(seed_from_sources, "NCBI_AST_ACTIVITY_INVENTORY", path)
-    records = {
-        "CHEBI:478164": {
-            "identifier": "CHEBI:478164",
-            "chemical_structure": {"standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
-            "curation_history": [],
-        },
-    }
 
-    counts = attach_ncbi_ast_activity(records)
-
-    assert counts["identity_drift"] == 1
-    assert "activity_spectrum" not in records["CHEBI:478164"]
+    with pytest.raises(ValueError, match=message):
+        attach_ncbi_ast_activity(records)
 
 
 def test_reseed_replaces_only_the_ncbi_ast_activity_slice():
