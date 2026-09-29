@@ -800,13 +800,16 @@ def project_dedupe_key_label(key: tuple[str, str]) -> str:
 
 def used_project_dedupe_keys(
     rows: list[dict[str, str]],
+    mappings: dict[str, dict[str, str]],
     project_dedupe: dict[tuple[str, str], dict[str, str]],
 ) -> set[tuple[str, str]]:
-    """Return curated source-context exclusions exercised by eligible AST rows."""
+    """Return curated source-context exclusions exercised by exact AST rows."""
 
     used_keys = set()
     for row in rows:
-        if not first_value(row, ANTIBIOTIC_ALIASES):
+        source_name = first_value(row, ANTIBIOTIC_ALIASES)
+        mapping = mappings.get(normalize(source_name))
+        if not mapping or mapping.get("mapping_status") != EXACT_MAPPING_STATUS:
             continue
         if activity_report_context(row, {}) is None:
             continue
@@ -1026,7 +1029,7 @@ def evaluate_rows(
             rows_with_source_context[field] += int(has_value(row, aliases))
 
     unused_project_dedupe_keys = sorted(
-        set(project_dedupe) - used_project_dedupe_keys(rows, project_dedupe),
+        set(project_dedupe) - used_project_dedupe_keys(rows, mappings, project_dedupe),
         key=lambda key: (key[0], key[1]),
     )
     antibiotic_rows = []

@@ -1088,6 +1088,14 @@ def test_evaluate_rows_audits_unused_project_dedupe_contexts():
             "taxgroup_name": "Klebsiella pneumoniae",
             "mic": "64",
         },
+        {
+            "antibiotic": "gentamicin",
+            "biosample_acc": "SAMN11953780",
+            "bioproject_acc": "PRJNA292668",
+            "taxgroup_name": "Klebsiella pneumoniae",
+            "mic": "64",
+            "platform": "AST",
+        },
     ]
     project_dedupe = {
         ("BioProject", "PRJNA292666"): {
@@ -1118,20 +1126,40 @@ def test_evaluate_rows_audits_unused_project_dedupe_contexts():
             "source_version": "3.4.0",
             "notes": "No longer appears in this export.",
         },
+        ("BioProject", "PRJNA292668"): {
+            "accession_type": "BioProject",
+            "accession": "PRJNA292668",
+            "source": "CRYPTIC",
+            "source_version": "3.4.0",
+            "notes": "Non-exact antibiotic mapping.",
+        },
+    }
+    mappings = {
+        "amikacin": {
+            "mapping_status": "EXACT",
+            "identifier": "CHEBI:2637",
+            "standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N",
+        },
+        "gentamicin": {
+            "mapping_status": "MIXTURE",
+            "identifier": "",
+            "standard_inchi_key": "",
+        },
     }
 
     result = evaluate_rows(
         rows,
         {"amikacin": {"CHEBI:2637"}},
         {"CHEBI:2637": "LKCWBDHBTVXHDL-RMDFUYIESA-N"},
+        mappings=mappings,
         project_dedupe=project_dedupe,
     )
 
-    assert result["rows_with_dedupe_context"] == 2
-    assert result["unused_project_dedupe_contexts"] == 2
+    assert result["rows_with_dedupe_context"] == 3
+    assert result["unused_project_dedupe_contexts"] == 3
     assert (
         result["unused_project_dedupe_values"]
-        == "BioProject:PRJNA292667|BioSample:SAMN11953779"
+        == "BioProject:PRJNA292667|BioProject:PRJNA292668|BioSample:SAMN11953779"
     )
 
 
