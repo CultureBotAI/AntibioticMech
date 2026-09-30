@@ -2668,6 +2668,16 @@ def test_template_writers_reject_missing_input_columns(
         ),
         (
             write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(
+                exact_mapped_rows=1,
+                exact_mapped_antibiotic_values=0,
+                exact_mapped_antibiotics="",
+                exact_mapped_identifiers="",
+            ),
+            "exact_mapped_rows requires exact_mapped_antibiotic_values",
+        ),
+        (
+            write_project_dedupe_report,
             ncbi_ast_project_dedupe_report_row(biosample_count=8),
             "biosample_count must be <= ast_rows",
         ),
