@@ -50,6 +50,7 @@ def ncbi_ast_row(**overrides: str) -> dict[str, str]:
         "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
         "taxon_id": "NCBITaxon:562",
         "taxon_label": "Escherichia coli and Shigella",
+        "strain": "CDC-1234",
         "biosample_accession": "SAMN11953777",
         "bioproject_accession": "PRJNA292666",
         "target_accession": "PDT000001234.1",
@@ -76,7 +77,7 @@ def test_ncbi_ast_activity_columns_match_the_evaluator_contract():
 
     assert NCBI_AST_ACTIVITY_COLUMNS == ACTIVITY_REPORT_COLUMNS
     assert NCBI_AST_ACTIVITY_GROUP_ID_VERSION == ACTIVITY_GROUP_ID_VERSION
-    assert ACTIVITY_GROUP_ID_VERSION == "ncbi_ast_activity_group_v6"
+    assert ACTIVITY_GROUP_ID_VERSION == "ncbi_ast_activity_group_v7"
     assert NCBI_AST_ACTIVITY_GROUP_COLUMNS == ACTIVITY_REPORT_GROUP_COLUMNS
     assert ncbi_ast_activity_group_id(row) == activity_group_id(row)
 
@@ -297,6 +298,7 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     assert counts["matched_records"] == 1
     assert observation["taxon_id"] == "NCBITaxon:562"
     assert observation["taxon_label"] == "Escherichia coli and Shigella"
+    assert observation["strain"] == "CDC-1234"
     assert observation["activity"] == "RESISTANT"
     assert observation["mic_value"] == 2.0
     assert observation["mic_qualifier"] == "<="
@@ -327,6 +329,7 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     assert "method=MIC" in observation["evidence"][0]["notes"]
     assert "standard CLSI" in observation["assay"]
     assert "target_accession=PDT000001234.1" in observation["evidence"][0]["notes"]
+    assert "strain=CDC-1234" in observation["evidence"][0]["notes"]
     assert "sra_accessions=ERR111111|SRR222222" in observation["evidence"][0]["notes"]
     assert "isolation_type=clinical" in observation["evidence"][0]["notes"]
     assert "host=Homo sapiens" in observation["evidence"][0]["notes"]

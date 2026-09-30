@@ -119,7 +119,7 @@ ANTIBIOTIC_REPORT_COLUMNS = [
 ]
 # Bump with ACTIVITY_REPORT_GROUP_COLUMNS because those columns define the
 # stable activity_group_id digest for committed exact reports.
-ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v6"
+ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v7"
 ACTIVITY_REPORT_GROUP_COLUMNS = [
     "source_name",
     "normalized_antibiotic",
@@ -127,6 +127,7 @@ ACTIVITY_REPORT_GROUP_COLUMNS = [
     "standard_inchi_key",
     "taxon_id",
     "taxon_label",
+    "strain",
     "biosample_accession",
     "bioproject_accession",
     "target_accession",
@@ -184,6 +185,7 @@ BIOPROJECT_ALIASES = ("bioproject", "bioprojectaccession", "bioprojectacc")
 TARGET_ALIASES = ("targetacc", "targetaccession", "target", "isolate")
 ASSEMBLY_ALIASES = ("assemblyaccession", "assembly", "asmacc")
 SRA_ALIASES = ("sra", "sraaccession", "sraaccessions", "sraacc", "run", "runs")
+STRAIN_ALIASES = ("strain",)
 ISOLATION_TYPE_ALIASES = ("isolationtype", "epitype")
 LOCATION_ALIASES = ("location", "geolocname")
 COLLECTION_DATE_ALIASES = ("collectiondate",)
@@ -767,6 +769,7 @@ def activity_report_context(
     return {
         "taxon_id": taxon_id,
         "taxon_label": taxon_label,
+        "strain": first_value(row, STRAIN_ALIASES),
         "biosample_accession": biosample_accession,
         "bioproject_accession": bioproject_accession,
         "target_accession": target_accession,

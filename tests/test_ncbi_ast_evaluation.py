@@ -322,6 +322,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "TaxID": "562",
             "taxgroup_name": "Escherichia coli and Shigella",
             "scientific_name": "Escherichia coli",
+            "strain": "CDC-1234",
             "phenotype": "R",
             "measurement_sign": "<=",
             "mic": "2",
@@ -341,6 +342,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "TaxID": "NCBITaxon:562",
             "taxgroup_name": "Escherichia coli and Shigella",
             "scientific_name": "Escherichia coli",
+            "strain": "CDC-1234",
             "phenotype": "R",
             "measurement_sign": "<=",
             "mic": "2.0",
@@ -360,6 +362,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
             "TaxID": "562",
             "taxgroup_name": "Escherichia coli and Shigella",
             "scientific_name": "Escherichia coli",
+            "strain": "CDC-1234",
             "phenotype": "R",
             "measurement_sign": "<=",
             "mic": "02.00",
@@ -481,6 +484,7 @@ def test_exact_activity_rows_groups_exact_mapped_valid_measurements():
         "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
         "taxon_id": "NCBITaxon:562",
         "taxon_label": "Escherichia coli",
+        "strain": "CDC-1234",
         "biosample_accession": "SAMN11953777",
         "bioproject_accession": "PRJNA292666",
         "target_accession": "PDT000001234.1",
@@ -572,6 +576,7 @@ def test_exact_activity_rows_preserves_gcp_isolate_context_aliases():
             "phenotype": "R",
             "mic": "2",
             "platform": "AST",
+            "strain": "KPNIH1",
             "epi_type": "clinical",
             "geo_loc_name": "USA",
             "creation_date": "2020-01-31",
@@ -606,6 +611,7 @@ def test_exact_activity_rows_preserves_gcp_isolate_context_aliases():
     assert result["antibiotic_rows"][0]["location_count"] == 1
     assert result["antibiotic_rows"][0]["create_date_count"] == 1
     assert len(activity_rows) == 1
+    assert activity_rows[0]["strain"] == "KPNIH1"
     assert activity_rows[0]["isolation_type"] == "clinical"
     assert activity_rows[0]["location"] == "USA"
     assert activity_rows[0]["create_date"] == "2020-01-31"
@@ -1972,6 +1978,7 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
             "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
             "taxon_id": "NCBITaxon:562",
             "taxon_label": "Escherichia coli and Shigella",
+            "strain": "CDC-1234",
             "biosample_accession": "SAMN11953777",
             "bioproject_accession": "PRJNA292666",
             "target_accession": "PDT000001234.1",
@@ -2016,6 +2023,7 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
         "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
         "taxon_id": "NCBITaxon:562",
         "taxon_label": "Escherichia coli and Shigella",
+        "strain": "CDC-1234",
         "biosample_accession": "SAMN11953777",
         "bioproject_accession": "PRJNA292666",
         "target_accession": "PDT000001234.1",
@@ -2230,6 +2238,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
                 "Isolation source",
                 "TaxID",
                 "scientific_name",
+                "strain",
                 "Laboratory typing method",
                 "phenotype",
                 "measurement_sign",
@@ -2258,6 +2267,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
             "Isolation source": "blood",
             "TaxID": "573",
             "scientific_name": "Klebsiella pneumoniae",
+            "strain": "KPNIH1",
             "Laboratory typing method": "MIC",
             "phenotype": "R",
             "measurement_sign": ">",
@@ -2405,6 +2415,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
         assert "isolation_type" in (reader.fieldnames or [])
         assert "isolation_source" in (reader.fieldnames or [])
         assert "taxon_id" in (reader.fieldnames or [])
+        assert "strain" in (reader.fieldnames or [])
         assert "method" in (reader.fieldnames or [])
         assert "target_acc" not in (reader.fieldnames or [])
 
@@ -2434,6 +2445,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert project_rows[0]["taxon_ids"] == "NCBITaxon:573"
 
     assert activity_rows[0]["taxon_id"] == "NCBITaxon:573"
+    assert activity_rows[0]["strain"] == "KPNIH1"
     assert activity_rows[0]["assembly_accession"] == "GCF_003123125.1"
     assert activity_rows[0]["target_accession"] == "PDT000001234.1"
     assert activity_rows[0]["sra_accessions"] == "ERR111111|SRR222222"
