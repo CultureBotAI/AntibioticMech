@@ -1397,6 +1397,51 @@ def require_activity_report_rows(rows: list[dict], path: Path) -> None:
     if not rows:
         raise ValueError(f"{path}: NCBI AST activity report has no rows")
     require_output_rows(rows, ACTIVITY_REPORT_COLUMNS, path)
+    seen_group_ids = set()
+    expected_source_version = None
+    expected_source_retrieved_on = None
+    for row_number, row in enumerate(rows, start=1):
+        prefix = f"{path}: output row {row_number}"
+        for field, value in row.items():
+            if value is None:
+                raise ValueError(f"{prefix}: {field} is missing")
+            string_value = str(value)
+            if any(char in string_value for char in CURATED_TSV_CONTROL_CHARS):
+                raise ValueError(f"{prefix}: {field} contains a tab or newline")
+            if string_value != string_value.strip():
+                raise ValueError(f"{prefix}: {field} has leading or trailing whitespace")
+
+        if expected_source_version is None:
+            expected_source_version = row["source_version"]
+        elif row["source_version"] != expected_source_version:
+            raise ValueError(
+                f"{prefix}: source_version must be {expected_source_version!r}"
+            )
+
+        if not row["source_version"]:
+            raise ValueError(f"{prefix}: source_version is required")
+
+        source_retrieved_on = row["source_retrieved_on"]
+        if not source_retrieved_on:
+            raise ValueError(f"{prefix}: source_retrieved_on is required")
+        if not is_iso_date(source_retrieved_on):
+            raise ValueError(f"{prefix}: source_retrieved_on must be an ISO date")
+        if expected_source_retrieved_on is None:
+            expected_source_retrieved_on = source_retrieved_on
+        elif source_retrieved_on != expected_source_retrieved_on:
+            raise ValueError(
+                f"{prefix}: source_retrieved_on must be "
+                f"{expected_source_retrieved_on!r}"
+            )
+
+        expected_group_id = activity_group_id(row)
+        if row["activity_group_id"] != expected_group_id:
+            raise ValueError(
+                f"{prefix}: activity_group_id must be {expected_group_id!r}"
+            )
+        if row["activity_group_id"] in seen_group_ids:
+            raise ValueError(f"{prefix}: duplicate activity_group_id")
+        seen_group_ids.add(row["activity_group_id"])
 
 
 def write_activity_report(rows: list[dict], path: Path) -> None:

@@ -17,6 +17,7 @@ from evaluate_ncbi_ast import (  # noqa: E402
     DRUG_MAP_COLUMNS,
     PROJECT_DEDUPE_COLUMNS,
     PROJECT_DEDUPE_REPORT_COLUMNS,
+    activity_group_id,
     corpus_name_candidates,
     evaluate_rows,
     exact_activity_rows,
@@ -36,6 +37,36 @@ from evaluate_ncbi_ast import (  # noqa: E402
 from seed_from_sources import load_ncbi_ast_activity_inventory  # noqa: E402
 
 SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "evaluate_ncbi_ast.py"
+
+
+def ncbi_ast_activity_report_row(**overrides: str) -> dict:
+    activity_rows = exact_activity_rows(
+        [
+            {
+                "antibiotic": "cefepime",
+                "biosample_acc": "SAMN11953777",
+                "bioproject_acc": "PRJNA292666",
+                "taxgroup_name": "Escherichia coli",
+                "phenotype": "R",
+                "mic": "2",
+                "method": "MIC",
+            },
+        ],
+        {
+            "cefepime": {
+                "mapping_status": "EXACT",
+                "source_name": "cefepime",
+                "identifier": "CHEBI:478164",
+                "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+            },
+        },
+        source_version="2026-09-26-ast-browser",
+        source_retrieved_on="2026-09-26",
+    )
+
+    row = activity_rows[0]
+    row.update(overrides)
+    return row
 
 
 def test_evaluate_rows_summarizes_submitted_antibiotic_names():
@@ -2094,6 +2125,7 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
             "standard": "CLSI",
         }
     ]
+    rows[0]["activity_group_id"] = activity_group_id(rows[0])
 
     write_activity_report(rows, path)
 
@@ -2101,7 +2133,7 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
         actual = list(csv.DictReader(handle, delimiter="\t"))
 
     assert actual == [{
-        "activity_group_id": "ncbi_ast:7fe9356073d90a3d",
+        "activity_group_id": rows[0]["activity_group_id"],
         "source_version": "2026-09-26-ast-browser",
         "source_retrieved_on": "2026-09-26",
         "ast_row_count": "2",
@@ -2146,6 +2178,81 @@ def test_write_activity_report_rejects_empty_reports_before_opening(tmp_path):
 
     with pytest.raises(ValueError, match="NCBI AST activity report has no rows"):
         write_activity_report([], path)
+
+    assert path.read_text(encoding="utf-8") == "keep me\n"
+
+
+@pytest.mark.parametrize(
+    ("overrides", "message"),
+    [
+        ({"source_version": ""}, "source_version is required"),
+        (
+            {"source_version": " 2026-09-26-ast-browser "},
+            "source_version has leading or trailing whitespace",
+        ),
+        ({"source_version": "2026-09-26\tast-browser"}, "source_version contains"),
+        ({"source_retrieved_on": ""}, "source_retrieved_on is required"),
+        (
+            {"source_retrieved_on": "20260926"},
+            "source_retrieved_on must be an ISO date",
+        ),
+        ({"method": "MIC\nbroth"}, "method contains"),
+        ({"method": " MIC"}, "method has leading or trailing whitespace"),
+        ({"activity_group_id": "ncbi_ast:stale"}, "activity_group_id must be"),
+    ],
+)
+def test_write_activity_report_rejects_malformed_rows_before_opening(
+    tmp_path,
+    overrides,
+    message,
+):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    path.write_text("keep me\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match=message):
+        write_activity_report([ncbi_ast_activity_report_row(**overrides)], path)
+
+    assert path.read_text(encoding="utf-8") == "keep me\n"
+
+
+def test_write_activity_report_rejects_mixed_source_metadata_before_opening(tmp_path):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    path.write_text("keep me\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="source_version must be"):
+        write_activity_report(
+            [
+                ncbi_ast_activity_report_row(),
+                ncbi_ast_activity_report_row(
+                    biosample_accession="SAMN11953778",
+                    source_version="2026-09-27-ast-browser",
+                ),
+            ],
+            path,
+        )
+
+    with pytest.raises(ValueError, match="source_retrieved_on must be '2026-09-26'"):
+        write_activity_report(
+            [
+                ncbi_ast_activity_report_row(),
+                ncbi_ast_activity_report_row(
+                    biosample_accession="SAMN11953778",
+                    source_retrieved_on="2026-09-27",
+                ),
+            ],
+            path,
+        )
+
+    assert path.read_text(encoding="utf-8") == "keep me\n"
+
+
+def test_write_activity_report_rejects_duplicate_groups_before_opening(tmp_path):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    path.write_text("keep me\n", encoding="utf-8")
+    row = ncbi_ast_activity_report_row()
+
+    with pytest.raises(ValueError, match="duplicate activity_group_id"):
+        write_activity_report([row, row], path)
 
     assert path.read_text(encoding="utf-8") == "keep me\n"
 
