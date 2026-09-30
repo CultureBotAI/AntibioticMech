@@ -2481,6 +2481,19 @@ def test_project_dedupe_report_is_a_stable_tsv(tmp_path):
     }]
 
 
+def test_write_project_dedupe_report_rejects_duplicate_contexts_before_opening(
+    tmp_path,
+):
+    path = tmp_path / "ncbi_ast_project_dedupe_report.tsv"
+    path.write_text("keep me\n", encoding="utf-8")
+    row = ncbi_ast_project_dedupe_report_row()
+
+    with pytest.raises(ValueError, match="duplicate project dedupe context"):
+        write_project_dedupe_report([row, row], path)
+
+    assert path.read_text(encoding="utf-8") == "keep me\n"
+
+
 @pytest.mark.parametrize(
     ("writer", "partial_row", "missing_column"),
     [
