@@ -2198,6 +2198,83 @@ def test_write_activity_report_rejects_empty_reports_before_opening(tmp_path):
         ),
         ({"method": "MIC\nbroth"}, "method contains"),
         ({"method": " MIC"}, "method has leading or trailing whitespace"),
+        ({"ast_row_count": "0"}, "ast_row_count must be positive"),
+        ({"ast_row_count": "02"}, "ast_row_count must use canonical integer '2'"),
+        ({"isolate_count": "0"}, "isolate_count must be positive"),
+        ({"isolate_count": "02"}, "isolate_count must use canonical integer '2'"),
+        (
+            {"isolate_count": "2"},
+            "isolate_count must be 1 for a BioSample-grouped row",
+        ),
+        ({"taxon_label": ""}, "taxon_label is required"),
+        ({"biosample_accession": ""}, "biosample_accession is required"),
+        ({"biosample_accession": "BioSample:SAMN11953777"}, "invalid BioSample"),
+        ({"bioproject_accession": "SAMN11953777"}, "invalid BioProject"),
+        ({"taxon_id": "562"}, "invalid NCBI Taxonomy CURIE"),
+        ({"taxon_id": "NCBITaxon:0"}, "invalid NCBI Taxonomy CURIE"),
+        ({"taxon_id": "NCBITaxon:000562"}, "invalid NCBI Taxonomy CURIE"),
+        (
+            {"target_accession": "GCF_003123125.1"},
+            "invalid Pathogen Detection target",
+        ),
+        ({"assembly_accession": "SAMN11953777"}, "invalid Assembly accession"),
+        ({"sra_accessions": "SAMN11953777"}, "invalid SRA accession"),
+        (
+            {"sra_accessions": "SRR222222|ERR111111"},
+            "sra_accessions must be unique and sorted",
+        ),
+        (
+            {"sra_accessions": "ERR111111|ERR111111"},
+            "sra_accessions must be unique and sorted",
+        ),
+        (
+            {"normalized_antibiotic": "stale"},
+            "normalized_antibiotic must match source_name",
+        ),
+        (
+            {"method": "", "platform": "", "reagent": ""},
+            "method, platform or reagent is required",
+        ),
+        ({"create_date": "20200131"}, "create_date must be an ISO date"),
+        (
+            {"phenotype": "non-susceptible", "activity": ""},
+            "unsupported phenotype",
+        ),
+        ({"activity": "NON_SUSCEPTIBLE"}, "activity must match phenotype"),
+        ({"phenotype": "S", "activity": "RESISTANT"}, "activity must match phenotype"),
+        ({"mic_value": "high"}, "mic_value must be numeric"),
+        ({"mic_value": "2.0"}, "mic_value must use canonical decimal '2'"),
+        ({"mic_value": "0"}, "mic_value must be positive"),
+        ({"mic_value": "1024.1"}, "mic_value must be at most 1024"),
+        ({"mic_qualifier": "MIC90"}, "mic_qualifier has invalid qualifier"),
+        (
+            {"mic_value": "", "mic_qualifier": "<=", "mic_units": ""},
+            "mic_qualifier requires mic_value",
+        ),
+        (
+            {
+                "mic_value": "",
+                "mic_qualifier": "",
+                "mic_units": "mg/L",
+            },
+            "mic_units requires mic_value",
+        ),
+        (
+            {"disk_diffusion_value": "5", "disk_diffusion_units": "mm"},
+            "disk_diffusion_value must be at least 6",
+        ),
+        (
+            {"disk_diffusion_value": "150.1", "disk_diffusion_units": "mm"},
+            "disk_diffusion_value must be at most 150",
+        ),
+        (
+            {"disk_diffusion_value": "0", "disk_diffusion_units": "mm"},
+            "disk_diffusion_value must be positive",
+        ),
+        (
+            {"mic_value": "", "mic_qualifier": "", "mic_units": ""},
+            "mic_value or disk_diffusion_value is required",
+        ),
         ({"activity_group_id": "ncbi_ast:stale"}, "activity_group_id must be"),
     ],
 )
