@@ -3,9 +3,11 @@
 from __future__ import annotations
 
 import hashlib
+import re
 from collections.abc import Mapping
 
 HIVDB_SCORE_RULE_ID_VERSION = "hivdb_score_rule_v1"
+HIVDB_SCORE_ASSIGNMENT_PATTERN = re.compile(r"=>\s*(-?\d+(?:\.\d+)?)")
 HIVDB_SCORE_RULE_GENE_BY_DRUG_CLASS = {
     "NRTI": "RT",
     "NNRTI": "RT",
