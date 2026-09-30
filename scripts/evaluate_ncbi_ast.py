@@ -1494,6 +1494,7 @@ def require_sorted_pipe_values(
 def require_project_dedupe_report_rows(rows: list[dict], path: Path) -> None:
     require_output_rows(rows, PROJECT_DEDUPE_REPORT_COLUMNS, path)
 
+    seen_keys = set()
     for row_number, raw_row in enumerate(rows, start=1):
         prefix = f"{path}: output row {row_number}"
         row = {field: str(raw_row[field]) for field in PROJECT_DEDUPE_REPORT_COLUMNS}
@@ -1504,6 +1505,10 @@ def require_project_dedupe_report_rows(rows: list[dict], path: Path) -> None:
         accession_pattern = PROJECT_DEDUPE_ACCESSIONS[accession_type][1]
         if accession_pattern.match(row["accession"]) is None:
             raise ValueError(f"{prefix}: invalid {accession_type} accession")
+        key = (accession_type, row["accession"])
+        if key in seen_keys:
+            raise ValueError(f"{prefix}: duplicate project dedupe context {key}")
+        seen_keys.add(key)
 
         ast_rows = require_project_dedupe_report_integer(
             row,
