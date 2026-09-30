@@ -13,6 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import seed_from_sources  # noqa: E402
 from evaluate_cryptic_activity import (  # noqa: E402
     DEFAULT_DRUG_MAP,
+    DRUG_MAP_COLUMNS,
     DST_GROUP_COLUMNS,
     DST_TABLE,
     INVENTORY_COLUMNS,
@@ -21,6 +22,7 @@ from evaluate_cryptic_activity import (  # noqa: E402
     activity_inventory,
     activity_inventory_row,
     parse_mic,
+    read_drug_map,
     validated_drug_mappings,
     write_inventory,
 )
@@ -74,6 +76,7 @@ CRYPTIC_340_CODES = {
     "TRD": "TERIZIDONE",
     "TZE": "THIOACETAZONE",
 }
+CRYPTIC_DRUG_MAP_HEADER = "\t".join(DRUG_MAP_COLUMNS) + "\n"
 
 
 def cryptic_inventory_row(**overrides: str) -> dict[str, str]:
@@ -173,6 +176,68 @@ def test_cryptic_drug_map_rejects_identity_drift(tmp_path):
 
     with pytest.raises(ValueError, match="does not match CHEBI:2637"):
         validated_drug_mappings(path, {"AMI": "AMIKACIN"})
+
+
+def test_cryptic_drug_map_rejects_malformed_rows(tmp_path):
+    path = tmp_path / "map.tsv"
+    path.write_text(
+        CRYPTIC_DRUG_MAP_HEADER + "3.4.0\tAMI\tAMIKACIN\tEXACT\tCHEBI:2637\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="standard_inchi_key is missing"):
+        read_drug_map(path)
+
+    path.write_text(
+        CRYPTIC_DRUG_MAP_HEADER
+        + "3.4.0\tAMI\tAMIKACIN\tEXACT\tCHEBI:2637\t"
+        + "LKCWBDHBTVXHDL-RMDFUYIESA-N\tparent_base\tok\textra\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="unexpected extra delimited field"):
+        read_drug_map(path)
+
+    path.write_text(
+        CRYPTIC_DRUG_MAP_HEADER
+        + '3.4.0\tAMI\tAMIKACIN\tEXACT\tCHEBI:2637\t'
+        + 'LKCWBDHBTVXHDL-RMDFUYIESA-N\tparent_base\t"tab\tin note"\n',
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="notes contains a tab or newline"):
+        read_drug_map(path)
+
+    path.write_text(
+        CRYPTIC_DRUG_MAP_HEADER
+        + '3.4.0\tAMI\tAMIKACIN\tEXACT\tCHEBI:2637\t'
+        + 'LKCWBDHBTVXHDL-RMDFUYIESA-N\tparent_base\t"newline\nin note"\n',
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="notes contains a tab or newline"):
+        read_drug_map(path)
+
+
+def test_cryptic_drug_map_requires_mapping_rationale(tmp_path):
+    path = tmp_path / "map.tsv"
+    path.write_text(
+        CRYPTIC_DRUG_MAP_HEADER
+        + "3.4.0\tAMC\tAMOXICILIN-CLAVULANATE\tCOMBINATION\t\t\t \tcombination\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="mapping_basis is required"):
+        read_drug_map(path)
+
+    path.write_text(
+        CRYPTIC_DRUG_MAP_HEADER
+        + "3.4.0\tAMC\tAMOXICILIN-CLAVULANATE\tCOMBINATION\t\t\tnone\t \n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="notes is required"):
+        read_drug_map(path)
 
 
 @pytest.mark.parametrize(
