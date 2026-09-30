@@ -1956,6 +1956,7 @@ def load_hivdb_score_rule_inventory(path: Path) -> list[dict[str, str]]:
 
     rows = []
     seen_rule_ids = set()
+    seen_term_positions = set()
     expected_algorithm = None
     with path.open(newline="", encoding="utf-8") as handle:
         reader = csv.DictReader(handle, delimiter="\t")
@@ -2022,7 +2023,16 @@ def load_hivdb_score_rule_inventory(path: Path) -> list[dict[str, str]]:
                 line_number,
                 minimum=0,
             )
-            _require_hivdb_integer(row, "score_term_index", path, line_number, minimum=1)
+            score_term_index = _require_hivdb_integer(
+                row, "score_term_index", path, line_number, minimum=1
+            )
+            term_position = (row["source_record_id"], score_term_index)
+            if term_position in seen_term_positions:
+                raise ValueError(
+                    f"{prefix}: duplicate score_term_index {score_term_index} "
+                    f"for source_record_id {row['source_record_id']!r}"
+                )
+            seen_term_positions.add(term_position)
             if negative_score_assignments > score_assignments:
                 raise ValueError(
                     f"{prefix}: negative_score_assignments exceeds score_assignments"

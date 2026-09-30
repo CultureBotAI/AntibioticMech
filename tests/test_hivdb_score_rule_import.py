@@ -95,6 +95,35 @@ def test_load_hivdb_score_rule_inventory_rejects_empty_reports(tmp_path):
         load_hivdb_score_rule_inventory(path)
 
 
+def test_load_hivdb_score_rule_inventory_rejects_duplicate_score_term_positions(
+    tmp_path,
+):
+    path = tmp_path / "hivdb_algorithm_terms.tsv"
+    write_score_rule_report(
+        path,
+        [
+            hivdb_score_rule_row(
+                score_term="65R => -10",
+                score_assignments="1",
+                negative_score_assignments="1",
+                min_score="-10.0",
+                max_score="-10.0",
+            ),
+            hivdb_score_rule_row(
+                score_term="184V => 15",
+                score_assignments="1",
+                score_term_index="2",
+            ),
+        ],
+    )
+
+    with pytest.raises(
+        ValueError,
+        match="duplicate score_term_index 2 for source_record_id 'ABC'",
+    ):
+        load_hivdb_score_rule_inventory(path)
+
+
 @pytest.mark.parametrize(
     ("overrides", "message"),
     [
