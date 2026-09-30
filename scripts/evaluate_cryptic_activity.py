@@ -19,6 +19,7 @@ import math
 import re
 from collections import defaultdict
 from collections.abc import Iterable
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
 import yaml
@@ -91,8 +92,20 @@ INVENTORY_COLUMNS = [
     *DST_GROUP_COLUMNS,
     *UKMYC_GROUP_COLUMNS,
 ]
+REQUIRED_INVENTORY_COLUMNS = (
+    "source_version",
+    "source_table",
+    "activity_group_id",
+    "drug_code",
+    "source_name",
+    "identifier",
+    "standard_inchi_key",
+    "row_count",
+    "isolate_count",
+)
 MIC_PATTERN = re.compile(r"^(?P<qualifier><=|>=|<|>)?(?P<value>(?:\d+(?:\.\d*)?|\.\d+))$")
 MIC_UNITS = "mg/L"
+MIC_QUALIFIERS = {"", "<", "<=", ">", ">="}
 
 
 def md5_of(path: Path) -> str:
@@ -289,6 +302,14 @@ def activity_group_id(source_table: str, group_values: list[object]) -> str:
     return f"{source_table.lower()}:{digest.hexdigest()[:16]}"
 
 
+def group_columns_for_table(source_table: str) -> list[str]:
+    if source_table == DST_TABLE:
+        return DST_GROUP_COLUMNS
+    if source_table == UKMYC_TABLE:
+        return UKMYC_GROUP_COLUMNS
+    raise ValueError(f"unrecognized CRyPTIC activity table: {source_table}")
+
+
 def activity_inventory_row(
     source_table: str,
     group_columns: list[str],
@@ -380,29 +401,103 @@ def activity_inventory(connection, dst: Path, ukmyc: Path, drug_codes: dict[str,
 
 
 def require_inventory_rows(rows: list[dict[str, str]], path: Path) -> None:
+    if not rows:
+        raise ValueError(f"{path}: CRyPTIC activity inventory has no rows")
+
+    seen_ids = set()
     for row_number, row in enumerate(rows, start=1):
+        prefix = f"{path}: inventory row {row_number}"
         missing = [column for column in INVENTORY_COLUMNS if column not in row]
         if missing:
             columns = ", ".join(missing)
-            raise ValueError(f"{path}: inventory row {row_number} is missing columns: {columns}")
+            raise ValueError(f"{prefix} is missing columns: {columns}")
         unexpected = [column for column in row if column not in INVENTORY_COLUMNS]
         if unexpected:
             columns = ", ".join(unexpected)
+            raise ValueError(f"{prefix} has unexpected columns: {columns}")
+
+        for field, value in row.items():
+            if value is None:
+                raise ValueError(f"{prefix}: {field} is missing")
+            string_value = str(value)
+            if any(char in string_value for char in CURATED_TSV_CONTROL_CHARS):
+                raise ValueError(f"{prefix}: {field} contains a tab or newline")
+            if string_value != string_value.strip():
+                raise ValueError(f"{prefix}: {field} has leading or trailing whitespace")
+
+        for field in REQUIRED_INVENTORY_COLUMNS:
+            if not row[field]:
+                raise ValueError(f"{prefix}: {field} is required")
+
+        if row["source_version"] != VERSION:
+            raise ValueError(f"{prefix}: source_version {row['source_version']!r} != {VERSION!r}")
+
+        group_columns = group_columns_for_table(row["source_table"])
+        expected_group_id = activity_group_id(
+            row["source_table"],
+            [row["drug_code"], *(row[column] for column in group_columns)],
+        )
+        if row["activity_group_id"] != expected_group_id:
             raise ValueError(
-                f"{path}: inventory row {row_number} has unexpected columns: {columns}"
+                f"{prefix}: activity_group_id must be {expected_group_id!r}"
             )
+
+        group_id = row["activity_group_id"]
+        if group_id in seen_ids:
+            raise ValueError(f"{prefix}: duplicate CRyPTIC activity_group_id")
+        seen_ids.add(group_id)
+
+        for field in ("row_count", "isolate_count"):
+            require_positive_inventory_integer(row, field, prefix)
+        if row["site_count"]:
+            require_positive_inventory_integer(row, "site_count", prefix)
+        require_inventory_mic(row, prefix)
+
+
+def require_positive_inventory_integer(
+    row: dict[str, str],
+    field: str,
+    prefix: str,
+) -> None:
+    try:
+        parsed = int(row[field])
+    except ValueError as error:
+        raise ValueError(f"{prefix}: {field} must be an integer") from error
+    if parsed <= 0:
+        raise ValueError(f"{prefix}: {field} must be positive")
+    canonical = str(parsed)
+    if row[field] != canonical:
+        raise ValueError(f"{prefix}: {field} must use canonical integer {canonical!r}")
+
+
+def require_inventory_mic(row: dict[str, str], prefix: str) -> None:
+    value = row["mic_value"]
+    qualifier = row["mic_qualifier"]
+    units = row["mic_units"]
+
+    if not value:
+        if qualifier:
+            raise ValueError(f"{prefix}: mic_qualifier requires mic_value")
+        if units:
+            raise ValueError(f"{prefix}: mic_units requires mic_value")
+        return
+
+    if qualifier not in MIC_QUALIFIERS:
+        raise ValueError(f"{prefix}: mic_qualifier has invalid qualifier {qualifier!r}")
+    if units != MIC_UNITS:
+        raise ValueError(f"{prefix}: mic_units must be {MIC_UNITS!r}")
+    try:
+        parsed = Decimal(value)
+    except InvalidOperation as error:
+        raise ValueError(f"{prefix}: mic_value must be numeric") from error
+    if not parsed.is_finite():
+        raise ValueError(f"{prefix}: mic_value must be finite")
+    if parsed <= 0:
+        raise ValueError(f"{prefix}: mic_value must be positive")
 
 
 def write_inventory(path: Path, rows: list[dict[str, str]]) -> None:
     require_inventory_rows(rows, path)
-    if not rows:
-        raise ValueError(f"{path}: CRyPTIC activity inventory has no rows")
-    seen_ids = set()
-    for row in rows:
-        group_id = row["activity_group_id"]
-        if group_id in seen_ids:
-            raise ValueError(f"duplicate CRyPTIC activity_group_id: {group_id}")
-        seen_ids.add(group_id)
 
     path.parent.mkdir(parents=True, exist_ok=True)
     buffer = io.StringIO()
