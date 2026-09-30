@@ -164,7 +164,10 @@ ACTIVITY_REPORT_COLUMNS = [
 ]
 EXACT_MAPPING_STATUS = "EXACT"
 PROJECT_DEDUPE_SELF_SOURCE = "NCBI_AST"
-PROJECT_DEDUPE_ALLOWED_SOURCES = frozenset({"CRYPTIC"})
+PROJECT_DEDUPE_SOURCE_VERSIONS = {
+    "CRYPTIC": "3.4.0",
+}
+PROJECT_DEDUPE_ALLOWED_SOURCES = frozenset(PROJECT_DEDUPE_SOURCE_VERSIONS)
 CURATED_TSV_CONTROL_CHARS = frozenset("\t\r\n")
 MAPPING_STATUSES = {
     EXACT_MAPPING_STATUS,
@@ -734,6 +737,12 @@ def read_project_dedupe_map(path: Path) -> dict[tuple[str, str], dict[str, str]]
                 raise ValueError(
                     f"{accession}: unsupported project dedupe source {row['source']!r}; "
                     f"expected one of {allowed}"
+                )
+            expected_source_version = PROJECT_DEDUPE_SOURCE_VERSIONS[row["source"]]
+            if row["source_version"] != expected_source_version:
+                raise ValueError(
+                    f"{accession}: {row['source']} project dedupe source_version "
+                    f"{row['source_version']!r} != {expected_source_version!r}"
                 )
 
             key = (accession_type, accession)
