@@ -117,6 +117,8 @@ extend-exclude = [
     # here. Reformatting one would break check_vendored_sync, which is the point
     # of vendoring them. Matches CellStructureMech.
     "scripts/check_vendored_sync.py",
+    "scripts/auto_merge_ready_prs.py",
+    "scripts/verify_merge_integrity.py",
     "scripts/validate_id_label_correspondence.py",
     "scripts/chem_formula.py",
     "tests/test_skill_frontmatter.py",
