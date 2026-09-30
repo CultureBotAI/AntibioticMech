@@ -69,6 +69,53 @@ def ncbi_ast_activity_report_row(**overrides: str) -> dict:
     return row
 
 
+def ncbi_ast_antibiotic_report_row(**overrides: object) -> dict:
+    row = {field: "" for field in ANTIBIOTIC_REPORT_COLUMNS}
+    row.update({
+        "antibiotic": "cefepime",
+        "normalized_antibiotic": "cefepime",
+        "mapping_basis": "parent_base",
+        "mapping_notes": "NCBI names the active cefepime parent.",
+    })
+    row.update(overrides)
+    return row
+
+
+def ncbi_ast_project_dedupe_report_row(**overrides: object) -> dict:
+    row = {field: "" for field in PROJECT_DEDUPE_REPORT_COLUMNS}
+    row.update({
+        "accession_type": "BioProject",
+        "accession": "PRJNA292666",
+        "taxon_ids": "NCBITaxon:562",
+        "taxon_labels": "Escherichia coli",
+    })
+    row.update(overrides)
+    return row
+
+
+def ncbi_ast_drug_map_template_row(**overrides: object) -> dict:
+    row = {
+        "antibiotic": "cefepime",
+        "normalized_antibiotic": "cefepime",
+        "mapping_status": "EXACT",
+        "identifier": "CHEBI:478164",
+        "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+        "mapping_basis": "parent_base",
+        "mapping_notes": "NCBI names the active cefepime parent.",
+    }
+    row.update(overrides)
+    return row
+
+
+def ncbi_ast_project_dedupe_template_row(**overrides: object) -> dict:
+    row = {
+        "accession_type": "BioProject",
+        "accession": "PRJNA292666",
+    }
+    row.update(overrides)
+    return row
+
+
 def test_evaluate_rows_summarizes_submitted_antibiotic_names():
     rows = [
         {
@@ -2487,6 +2534,114 @@ def test_template_writers_reject_missing_input_columns(
 
     with pytest.raises(ValueError, match=fr"missing columns: {missing_column}"):
         writer([partial_row], path)
+
+    assert path.read_text(encoding="utf-8") == "keep me\n"
+
+
+@pytest.mark.parametrize(
+    ("writer", "row", "message"),
+    [
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(antibiotic=None),
+            "antibiotic is missing",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(mapping_notes="curated\nnote"),
+            "mapping_notes contains a tab or newline",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(mapping_basis=" parent_base"),
+            "mapping_basis has leading or trailing whitespace",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(accession=None),
+            "accession is missing",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(taxon_labels="Escherichia\tcoli"),
+            "taxon_labels contains a tab or newline",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(taxon_ids=" NCBITaxon:562"),
+            "taxon_ids has leading or trailing whitespace",
+        ),
+        (
+            lambda rows, path: write_drug_map_template(
+                rows,
+                path,
+                source_version="2026-09-26-ast-browser",
+            ),
+            ncbi_ast_drug_map_template_row(antibiotic=None),
+            "antibiotic is missing",
+        ),
+        (
+            lambda rows, path: write_drug_map_template(
+                rows,
+                path,
+                source_version="2026-09-26-ast-browser",
+            ),
+            ncbi_ast_drug_map_template_row(mapping_notes="curated\nnote"),
+            "mapping_notes contains a tab or newline",
+        ),
+        (
+            write_project_dedupe_map_template,
+            ncbi_ast_project_dedupe_template_row(accession_type=" BioProject"),
+            "accession_type has leading or trailing whitespace",
+        ),
+        (
+            write_project_dedupe_map_template,
+            ncbi_ast_project_dedupe_template_row(accession="PRJNA292666\r"),
+            "accession contains a tab or newline",
+        ),
+    ],
+)
+def test_curation_report_writers_reject_malformed_values_before_opening(
+    tmp_path,
+    writer,
+    row,
+    message,
+):
+    path = tmp_path / "report.tsv"
+    path.write_text("keep me\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match=message):
+        writer([row], path)
+
+    assert path.read_text(encoding="utf-8") == "keep me\n"
+
+
+@pytest.mark.parametrize(
+    ("source_version", "message"),
+    [
+        (None, "source_version is missing"),
+        ("", "source_version is required"),
+        ("2026-09-26\nast-browser", "source_version contains a tab or newline"),
+        (
+            " 2026-09-26-ast-browser ",
+            "source_version has leading or trailing whitespace",
+        ),
+    ],
+)
+def test_drug_map_template_rejects_malformed_source_version_before_opening(
+    tmp_path,
+    source_version,
+    message,
+):
+    path = tmp_path / "report.tsv"
+    path.write_text("keep me\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match=message):
+        write_drug_map_template(
+            [ncbi_ast_drug_map_template_row()],
+            path,
+            source_version=source_version,
+        )
 
     assert path.read_text(encoding="utf-8") == "keep me\n"
 

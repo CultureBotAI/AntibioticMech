@@ -566,9 +566,24 @@ def require_output_columns(
         raise ValueError(f"{path}: output row {row_number} has unexpected columns: {columns}")
 
 
+def require_tsv_safe_value(value: object, field: str, prefix: str) -> str:
+    if value is None:
+        raise ValueError(f"{prefix}: {field} is missing")
+
+    string_value = str(value)
+    if any(char in string_value for char in CURATED_TSV_CONTROL_CHARS):
+        raise ValueError(f"{prefix}: {field} contains a tab or newline")
+    if string_value != string_value.strip():
+        raise ValueError(f"{prefix}: {field} has leading or trailing whitespace")
+    return string_value
+
+
 def require_output_rows(rows: list[dict], fieldnames: list[str], path: Path) -> None:
     for row_number, row in enumerate(rows, start=1):
         require_output_columns(row, fieldnames, path, row_number)
+        prefix = f"{path}: output row {row_number}"
+        for field in fieldnames:
+            require_tsv_safe_value(row[field], field, prefix)
 
 
 def require_input_rows(rows: list[dict], fieldnames: list[str], path: Path) -> None:
@@ -580,6 +595,9 @@ def require_input_rows(rows: list[dict], fieldnames: list[str], path: Path) -> N
                 f"{path}: template input row {row_number} "
                 f"is missing columns: {columns}"
             )
+        prefix = f"{path}: template input row {row_number}"
+        for field in fieldnames:
+            require_tsv_safe_value(row[field], field, prefix)
 
 
 def strip_table_row(row: dict[str, str]) -> dict[str, str]:
@@ -1357,6 +1375,9 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
 
 def write_drug_map_template(rows: list[dict], path: Path, source_version: str) -> None:
     require_input_rows(rows, DRUG_MAP_TEMPLATE_INPUT_COLUMNS, path)
+    source_version = require_tsv_safe_value(source_version, "source_version", str(path))
+    if not source_version:
+        raise ValueError(f"{path}: source_version is required")
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=DRUG_MAP_COLUMNS, delimiter="\t", lineterminator="\n")
