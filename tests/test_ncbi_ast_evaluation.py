@@ -76,8 +76,52 @@ def ncbi_ast_antibiotic_report_row(**overrides: object) -> dict:
     row.update({
         "antibiotic": "cefepime",
         "normalized_antibiotic": "cefepime",
+        "ast_rows": "7",
+        "mapping_status": "EXACT",
+        "identifier": "CHEBI:478164",
+        "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
         "mapping_basis": "parent_base",
         "mapping_notes": "NCBI names the active cefepime parent.",
+        "exact_name_candidate_count": "1",
+        "exact_name_candidate_identifiers": "CHEBI:478164",
+        "exact_name_candidate_inchi_keys": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+        "biosample_count": "7",
+        "bioproject_count": "7",
+        "project_context_count": "7",
+        "valid_project_context_count": "7",
+        "dedupe_context_count": "0",
+        "activity_report_candidate_count": "5",
+        "activity_report_dedupe_excluded_count": "2",
+        "target_acc_count": "7",
+        "invalid_target_acc_count": "0",
+        "assembly_acc_count": "7",
+        "invalid_assembly_acc_count": "0",
+        "sra_accessions_count": "7",
+        "invalid_sra_accessions_count": "0",
+        "isolation_type_count": "7",
+        "location_count": "7",
+        "collection_date_count": "7",
+        "create_date_count": "7",
+        "invalid_create_date_count": "0",
+        "host_count": "7",
+        "isolation_source_count": "7",
+        "taxon_id_count": "7",
+        "invalid_taxon_id_count": "0",
+        "taxon_count": "7",
+        "phenotype_count": "7",
+        "invalid_phenotype_count": "0",
+        "assay_method_count": "7",
+        "mic_count": "7",
+        "standardized_mic_count": "7",
+        "invalid_mic_count": "0",
+        "standardized_mic_values": "<=2 mg/L",
+        "disk_diffusion_count": "0",
+        "standardized_disk_diffusion_count": "0",
+        "invalid_disk_diffusion_count": "0",
+        "standardized_disk_diffusion_values": "",
+        "taxon_ids": "NCBITaxon:562",
+        "taxon_labels": "Escherichia coli",
+        "phenotypes": "R|S",
     })
     row.update(overrides)
     return row
@@ -2040,7 +2084,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "project_context_count": 7,
             "valid_project_context_count": 7,
             "dedupe_context_count": 0,
-            "activity_report_candidate_count": 7,
+            "activity_report_candidate_count": 5,
             "activity_report_dedupe_excluded_count": 2,
             "target_acc_count": 7,
             "invalid_target_acc_count": 0,
@@ -2097,7 +2141,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "project_context_count": "7",
         "valid_project_context_count": "7",
         "dedupe_context_count": "0",
-        "activity_report_candidate_count": "7",
+        "activity_report_candidate_count": "5",
         "activity_report_dedupe_excluded_count": "2",
         "target_acc_count": "7",
         "invalid_target_acc_count": "0",
@@ -2494,6 +2538,19 @@ def test_write_project_dedupe_report_rejects_duplicate_contexts_before_opening(
     assert path.read_text(encoding="utf-8") == "keep me\n"
 
 
+def test_write_antibiotic_report_rejects_duplicate_antibiotics_before_opening(
+    tmp_path,
+):
+    path = tmp_path / "ncbi_ast_antibiotics.tsv"
+    path.write_text("keep me\n", encoding="utf-8")
+    row = ncbi_ast_antibiotic_report_row()
+
+    with pytest.raises(ValueError, match="duplicate NCBI AST antibiotic report row"):
+        write_antibiotic_report([row, row], path)
+
+    assert path.read_text(encoding="utf-8") == "keep me\n"
+
+
 @pytest.mark.parametrize(
     ("writer", "partial_row", "missing_column"),
     [
@@ -2656,6 +2713,83 @@ def test_template_writers_reject_missing_input_columns(
             write_antibiotic_report,
             ncbi_ast_antibiotic_report_row(mapping_basis=" parent_base"),
             "mapping_basis has leading or trailing whitespace",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(normalized_antibiotic="cefipime"),
+            "normalized_antibiotic must match antibiotic",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(mapping_status="NOT_EXACT"),
+            "unknown mapping_status",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(identifier=""),
+            "EXACT mapping needs identifier and standard_inchi_key",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                mapping_status="MIXTURE",
+                identifier="CHEBI:478164",
+            ),
+            "non-EXACT mapping must not carry structure fields",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(ast_rows="07"),
+            "ast_rows must use canonical integer '7'",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                biosample_count="6",
+            ),
+            "project_context_count must be <= biosample_count",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                bioproject_count="6",
+            ),
+            "project_context_count must be <= bioproject_count",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                project_context_count="6",
+            ),
+            "valid_project_context_count must be <= project_context_count",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                activity_report_candidate_count="6",
+            ),
+            "activity_report_candidate_count plus "
+            "activity_report_dedupe_excluded_count must be <= ast_rows",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                standardized_mic_count="6",
+            ),
+            "mic_count must match standardized_mic_count plus invalid_mic_count",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(taxon_ids="NCBITaxon:0"),
+            "invalid taxon_ids value",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                exact_name_candidate_identifiers="",
+            ),
+            "exact_name_candidate_count must match "
+            "exact_name_candidate_identifiers",
         ),
         (
             write_project_dedupe_report,

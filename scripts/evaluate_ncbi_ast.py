@@ -1416,8 +1416,180 @@ def evaluate_rows(
     }
 
 
-def write_antibiotic_report(rows: list[dict], path: Path) -> None:
+ANTIBIOTIC_REPORT_COUNT_FIELDS = tuple(
+    field
+    for field in ANTIBIOTIC_REPORT_COLUMNS
+    if field == "ast_rows" or field.endswith("_count")
+)
+ANTIBIOTIC_REPORT_AST_ROW_BOUNDED_COUNT_FIELDS = tuple(
+    field
+    for field in ANTIBIOTIC_REPORT_COUNT_FIELDS
+    if field not in {"ast_rows", "exact_name_candidate_count"}
+)
+ANTIBIOTIC_REPORT_COUNT_BOUNDS = (
+    ("project_context_count", "biosample_count"),
+    ("project_context_count", "bioproject_count"),
+    ("valid_project_context_count", "project_context_count"),
+    ("invalid_target_acc_count", "target_acc_count"),
+    ("invalid_assembly_acc_count", "assembly_acc_count"),
+    ("invalid_sra_accessions_count", "sra_accessions_count"),
+    ("invalid_create_date_count", "create_date_count"),
+    ("invalid_taxon_id_count", "taxon_id_count"),
+    ("invalid_phenotype_count", "phenotype_count"),
+)
+
+
+def require_report_integer(
+    row: dict[str, str],
+    field: str,
+    prefix: str,
+    *,
+    minimum: int = 0,
+) -> int:
+    try:
+        parsed = int(row[field])
+    except ValueError as error:
+        raise ValueError(f"{prefix}: {field} must be an integer") from error
+    if parsed < minimum:
+        raise ValueError(f"{prefix}: {field} must be at least {minimum}")
+    canonical = str(parsed)
+    if row[field] != canonical:
+        raise ValueError(f"{prefix}: {field} must use canonical integer {canonical!r}")
+    return parsed
+
+
+def require_antibiotic_report_rows(rows: list[dict], path: Path) -> None:
     require_output_rows(rows, ANTIBIOTIC_REPORT_COLUMNS, path)
+
+    seen_antibiotics = set()
+    for row_number, raw_row in enumerate(rows, start=1):
+        prefix = f"{path}: output row {row_number}"
+        row = {
+            field: str(raw_row[field])
+            for field in ANTIBIOTIC_REPORT_COLUMNS
+        }
+
+        normalized_antibiotic = row["normalized_antibiotic"]
+        if not normalized_antibiotic:
+            raise ValueError(f"{prefix}: normalized_antibiotic is required")
+        if normalized_antibiotic != normalize(row["antibiotic"]):
+            raise ValueError(f"{prefix}: normalized_antibiotic must match antibiotic")
+        if normalized_antibiotic in seen_antibiotics:
+            raise ValueError(
+                f"{prefix}: duplicate NCBI AST antibiotic report row "
+                f"{normalized_antibiotic!r}"
+            )
+        seen_antibiotics.add(normalized_antibiotic)
+
+        mapping_status = row["mapping_status"]
+        if mapping_status and mapping_status not in MAPPING_STATUSES:
+            raise ValueError(
+                f"{prefix}: unknown mapping_status {mapping_status!r}"
+            )
+        has_mapping = bool(row["identifier"] or row["standard_inchi_key"])
+        if mapping_status:
+            require_non_blank_fields(
+                row,
+                ("mapping_basis", "mapping_notes"),
+                path,
+                row_number,
+            )
+        if mapping_status == EXACT_MAPPING_STATUS:
+            if not row["identifier"] or not row["standard_inchi_key"]:
+                raise ValueError(
+                    f"{prefix}: EXACT mapping needs identifier and standard_inchi_key"
+                )
+        elif has_mapping:
+            raise ValueError(
+                f"{prefix}: non-EXACT mapping must not carry structure fields"
+            )
+
+        counts = {
+            field: require_report_integer(
+                row,
+                field,
+                prefix,
+                minimum=1 if field == "ast_rows" else 0,
+            )
+            for field in ANTIBIOTIC_REPORT_COUNT_FIELDS
+        }
+        for field in ANTIBIOTIC_REPORT_AST_ROW_BOUNDED_COUNT_FIELDS:
+            if counts[field] > counts["ast_rows"]:
+                raise ValueError(f"{prefix}: {field} must be <= ast_rows")
+
+        for field, maximum_field in ANTIBIOTIC_REPORT_COUNT_BOUNDS:
+            if counts[field] > counts[maximum_field]:
+                raise ValueError(
+                    f"{prefix}: {field} must be <= {maximum_field}"
+                )
+        if (
+            counts["activity_report_candidate_count"]
+            + counts["activity_report_dedupe_excluded_count"]
+            > counts["ast_rows"]
+        ):
+            raise ValueError(
+                f"{prefix}: activity_report_candidate_count plus "
+                "activity_report_dedupe_excluded_count must be <= ast_rows"
+            )
+        if (
+            counts["standardized_mic_count"]
+            + counts["invalid_mic_count"]
+            != counts["mic_count"]
+        ):
+            raise ValueError(
+                f"{prefix}: mic_count must match standardized_mic_count plus "
+                "invalid_mic_count"
+            )
+        if (
+            counts["standardized_disk_diffusion_count"]
+            + counts["invalid_disk_diffusion_count"]
+            != counts["disk_diffusion_count"]
+        ):
+            raise ValueError(
+                f"{prefix}: disk_diffusion_count must match "
+                "standardized_disk_diffusion_count plus "
+                "invalid_disk_diffusion_count"
+            )
+
+        candidate_identifiers = require_sorted_pipe_values(
+            row,
+            "exact_name_candidate_identifiers",
+            prefix,
+        )
+        candidate_keys = (
+            row["exact_name_candidate_inchi_keys"].split("|")
+            if row["exact_name_candidate_inchi_keys"]
+            else []
+        )
+        if any(not value for value in candidate_keys):
+            raise ValueError(
+                f"{prefix}: exact_name_candidate_inchi_keys contains an empty value"
+            )
+        if len(candidate_identifiers) != counts["exact_name_candidate_count"]:
+            raise ValueError(
+                f"{prefix}: exact_name_candidate_count must match "
+                "exact_name_candidate_identifiers"
+            )
+        if len(candidate_keys) != counts["exact_name_candidate_count"]:
+            raise ValueError(
+                f"{prefix}: exact_name_candidate_count must match "
+                "exact_name_candidate_inchi_keys"
+            )
+
+        require_sorted_pipe_values(
+            row,
+            "taxon_ids",
+            prefix,
+            pattern=ACTIVITY_REPORT_TAXON_ID_PATTERN,
+        )
+        require_sorted_pipe_values(row, "taxon_labels", prefix)
+        require_sorted_pipe_values(row, "phenotypes", prefix)
+        require_sorted_pipe_values(row, "standardized_mic_values", prefix)
+        require_sorted_pipe_values(row, "standardized_disk_diffusion_values", prefix)
+
+
+def write_antibiotic_report(rows: list[dict], path: Path) -> None:
+    require_antibiotic_report_rows(rows, path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
@@ -1471,25 +1643,6 @@ def write_drug_map_template(rows: list[dict], path: Path, source_version: str) -
             })
 
 
-def require_project_dedupe_report_integer(
-    row: dict[str, str],
-    field: str,
-    prefix: str,
-    *,
-    minimum: int = 0,
-) -> int:
-    try:
-        parsed = int(row[field])
-    except ValueError as error:
-        raise ValueError(f"{prefix}: {field} must be an integer") from error
-    if parsed < minimum:
-        raise ValueError(f"{prefix}: {field} must be at least {minimum}")
-    canonical = str(parsed)
-    if row[field] != canonical:
-        raise ValueError(f"{prefix}: {field} must use canonical integer {canonical!r}")
-    return parsed
-
-
 def require_sorted_pipe_values(
     row: dict[str, str],
     field: str,
@@ -1529,35 +1682,35 @@ def require_project_dedupe_report_rows(rows: list[dict], path: Path) -> None:
             raise ValueError(f"{prefix}: duplicate project dedupe context {key}")
         seen_keys.add(key)
 
-        ast_rows = require_project_dedupe_report_integer(
+        ast_rows = require_report_integer(
             row,
             "ast_rows",
             prefix,
             minimum=1,
         )
-        exact_mapped_rows = require_project_dedupe_report_integer(
+        exact_mapped_rows = require_report_integer(
             row,
             "exact_mapped_rows",
             prefix,
         )
-        exact_mapped_antibiotic_values = require_project_dedupe_report_integer(
+        exact_mapped_antibiotic_values = require_report_integer(
             row,
             "exact_mapped_antibiotic_values",
             prefix,
         )
-        biosample_count = require_project_dedupe_report_integer(
+        biosample_count = require_report_integer(
             row,
             "biosample_count",
             prefix,
             minimum=1,
         )
-        bioproject_count = require_project_dedupe_report_integer(
+        bioproject_count = require_report_integer(
             row,
             "bioproject_count",
             prefix,
             minimum=1,
         )
-        antibiotic_values = require_project_dedupe_report_integer(
+        antibiotic_values = require_report_integer(
             row,
             "antibiotic_values",
             prefix,
