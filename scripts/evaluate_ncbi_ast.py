@@ -178,10 +178,9 @@ REQUIRED_ACTIVITY_REPORT_COLUMNS = (
 )
 EXACT_MAPPING_STATUS = "EXACT"
 PROJECT_DEDUPE_SELF_SOURCE = "NCBI_AST"
-PROJECT_DEDUPE_SOURCE_VERSIONS = {
-    "CRYPTIC": "3.4.0",
+PROJECT_DEDUPE_SOURCE_INVENTORIES = {
+    "CRYPTIC": REPO_ROOT / "data" / "raw" / "cryptic_activity.tsv",
 }
-PROJECT_DEDUPE_ALLOWED_SOURCES = frozenset(PROJECT_DEDUPE_SOURCE_VERSIONS)
 CURATED_TSV_CONTROL_CHARS = frozenset("\t\r\n")
 MAPPING_STATUSES = {
     EXACT_MAPPING_STATUS,
@@ -615,6 +614,58 @@ def strip_curated_tsv_row(
     return strip_table_row(row)
 
 
+def project_dedupe_inventory_source_version(source: str, path: Path) -> str:
+    """Return the single source_version represented by an adopted compact report."""
+
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        validate_table_header(path, reader.fieldnames)
+        if "source_version" not in reader.fieldnames:
+            raise ValueError(
+                f"{path}: missing source_version column for {source} project dedupe"
+            )
+
+        versions = set()
+        for line_number, row in enumerate(reader, start=2):
+            prefix = f"{path}:{line_number}"
+            if None in row:
+                raise ValueError(f"{prefix}: unexpected extra delimited field")
+            source_version = row["source_version"]
+            if source_version is None:
+                raise ValueError(f"{prefix}: source_version is missing")
+            if any(char in source_version for char in CURATED_TSV_CONTROL_CHARS):
+                raise ValueError(f"{prefix}: source_version contains a tab or newline")
+            if source_version != source_version.strip():
+                raise ValueError(
+                    f"{prefix}: source_version has leading or trailing whitespace"
+                )
+            if not source_version:
+                raise ValueError(f"{prefix}: source_version is required")
+            versions.add(source_version)
+
+    if not versions:
+        raise ValueError(f"{path}: no {source} source_version values for project dedupe")
+    if len(versions) > 1:
+        raise ValueError(
+            f"{path}: expected one {source} source_version for project dedupe, "
+            f"found {', '.join(sorted(versions))}"
+        )
+    return next(iter(versions))
+
+
+def project_dedupe_source_versions(
+    source_inventories: dict[str, Path] | None = None,
+) -> dict[str, str]:
+    """Return supported dedupe sources and the inventory versions they own now."""
+
+    if source_inventories is None:
+        source_inventories = PROJECT_DEDUPE_SOURCE_INVENTORIES
+    return {
+        source: project_dedupe_inventory_source_version(source, path)
+        for source, path in source_inventories.items()
+    }
+
+
 def read_table(path: Path) -> list[dict[str, str]]:
     sample = path.read_text(encoding="utf-8", errors="replace")[:4096]
     try:
@@ -736,9 +787,15 @@ def read_drug_map(
         return rows
 
 
-def read_project_dedupe_map(path: Path) -> dict[tuple[str, str], dict[str, str]]:
+def read_project_dedupe_map(
+    path: Path,
+    source_versions: dict[str, str] | None = None,
+) -> dict[tuple[str, str], dict[str, str]]:
     """Read curated source-context exclusions used before seeding NCBI AST rows."""
 
+    if source_versions is None:
+        source_versions = project_dedupe_source_versions()
+    allowed_sources = frozenset(source_versions)
     with path.open(newline="", encoding="utf-8") as handle:
         reader = csv.DictReader(handle, delimiter="\t")
         if reader.fieldnames != PROJECT_DEDUPE_COLUMNS:
@@ -766,13 +823,13 @@ def read_project_dedupe_map(path: Path) -> dict[tuple[str, str], dict[str, str]]
                 raise ValueError(
                     f"{accession}: project dedupe source cannot be {PROJECT_DEDUPE_SELF_SOURCE}"
                 )
-            if row["source"] not in PROJECT_DEDUPE_ALLOWED_SOURCES:
-                allowed = ", ".join(sorted(PROJECT_DEDUPE_ALLOWED_SOURCES))
+            if row["source"] not in allowed_sources:
+                allowed = ", ".join(sorted(allowed_sources))
                 raise ValueError(
                     f"{accession}: unsupported project dedupe source {row['source']!r}; "
                     f"expected one of {allowed}"
                 )
-            expected_source_version = PROJECT_DEDUPE_SOURCE_VERSIONS[row["source"]]
+            expected_source_version = source_versions[row["source"]]
             if row["source_version"] != expected_source_version:
                 raise ValueError(
                     f"{accession}: {row['source']} project dedupe source_version "
