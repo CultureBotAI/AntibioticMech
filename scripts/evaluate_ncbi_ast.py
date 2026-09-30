@@ -1430,8 +1430,27 @@ def write_antibiotic_report(rows: list[dict], path: Path) -> None:
         writer.writerows(rows)
 
 
-def write_drug_map_template(rows: list[dict], path: Path, source_version: str) -> None:
+def require_drug_map_template_rows(rows: list[dict], path: Path) -> None:
     require_input_rows(rows, DRUG_MAP_TEMPLATE_INPUT_COLUMNS, path)
+
+    seen_source_record_ids = set()
+    for row_number, row in enumerate(rows, start=1):
+        prefix = f"{path}: template input row {row_number}"
+        normalized_antibiotic = str(row["normalized_antibiotic"])
+        if not normalized_antibiotic:
+            raise ValueError(f"{prefix}: normalized_antibiotic is required")
+        if normalized_antibiotic != normalize(str(row["antibiotic"])):
+            raise ValueError(f"{prefix}: normalized_antibiotic must match antibiotic")
+        if normalized_antibiotic in seen_source_record_ids:
+            raise ValueError(
+                f"{prefix}: duplicate NCBI AST antibiotic template row "
+                f"{normalized_antibiotic!r}"
+            )
+        seen_source_record_ids.add(normalized_antibiotic)
+
+
+def write_drug_map_template(rows: list[dict], path: Path, source_version: str) -> None:
+    require_drug_map_template_rows(rows, path)
     source_version = require_tsv_safe_value(source_version, "source_version", str(path))
     if not source_version:
         raise ValueError(f"{path}: source_version is required")
