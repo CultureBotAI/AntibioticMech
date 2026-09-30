@@ -193,6 +193,7 @@ def test_load_ncbi_ast_activity_inventory_rejects_mixed_source_metadata(tmp_path
     ("overrides", "message"),
     [
         ({"source_retrieved_on": "20260926"}, "source_retrieved_on must be an ISO date"),
+        ({"create_date": "20200131"}, "create_date must be an ISO date"),
         ({"source_version": " "}, "source_version is required"),
         ({"ast_row_count": "0"}, "ast_row_count must be positive"),
         ({"ast_row_count": "02"}, "ast_row_count must use canonical integer '2'"),
