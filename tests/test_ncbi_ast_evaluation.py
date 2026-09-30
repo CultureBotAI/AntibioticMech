@@ -2795,6 +2795,48 @@ def test_template_writers_reject_missing_input_columns(
         (
             write_antibiotic_report,
             ncbi_ast_antibiotic_report_row(
+                taxon_id_count=1,
+                taxon_ids="NCBITaxon:562|NCBITaxon:573",
+            ),
+            "taxon_ids must have no more values than valid_taxon_id_count",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(taxon_id_count=1, taxon_ids=""),
+            "valid_taxon_id_count requires taxon_ids",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                mic_count=1,
+                standardized_mic_count=1,
+                standardized_mic_values="2 mg/L|4 mg/L",
+            ),
+            "standardized_mic_values must have no more values than "
+            "standardized_mic_count",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                mic_count=1,
+                standardized_mic_count=1,
+                standardized_mic_values="",
+            ),
+            "standardized_mic_count requires standardized_mic_values",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                disk_diffusion_count=1,
+                standardized_disk_diffusion_count=1,
+                standardized_disk_diffusion_values="",
+            ),
+            "standardized_disk_diffusion_count requires "
+            "standardized_disk_diffusion_values",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
                 exact_name_candidate_identifiers="",
             ),
             "exact_name_candidate_count must match "
@@ -3023,6 +3065,23 @@ def test_curation_report_writers_reject_malformed_values_before_opening(
         writer([row], path)
 
     assert path.read_text(encoding="utf-8") == "keep me\n"
+
+
+def test_antibiotic_report_allows_only_invalid_taxon_ids(tmp_path):
+    path = tmp_path / "report.tsv"
+
+    write_antibiotic_report(
+        [
+            ncbi_ast_antibiotic_report_row(
+                taxon_id_count=1,
+                invalid_taxon_id_count=1,
+                taxon_ids="",
+            )
+        ],
+        path,
+    )
+
+    assert path.exists()
 
 
 @pytest.mark.parametrize(
