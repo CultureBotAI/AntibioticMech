@@ -1632,6 +1632,7 @@ def write_project_dedupe_report(rows: list[dict], path: Path) -> None:
 def require_project_dedupe_template_rows(rows: list[dict], path: Path) -> None:
     require_input_rows(rows, PROJECT_DEDUPE_MAP_TEMPLATE_INPUT_COLUMNS, path)
 
+    seen_keys = set()
     for row_number, row in enumerate(rows, start=1):
         prefix = f"{path}: template input row {row_number}"
         accession_type = str(row["accession_type"])
@@ -1641,6 +1642,10 @@ def require_project_dedupe_template_rows(rows: list[dict], path: Path) -> None:
         accession = str(row["accession"])
         if accession_pattern.match(accession) is None:
             raise ValueError(f"{prefix}: invalid {accession_type} accession")
+        key = (accession_type, accession)
+        if key in seen_keys:
+            raise ValueError(f"{prefix}: duplicate project dedupe context {key}")
+        seen_keys.add(key)
 
 
 def write_project_dedupe_map_template(rows: list[dict], path: Path) -> None:
