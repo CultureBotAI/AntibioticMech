@@ -88,6 +88,15 @@ def ncbi_ast_project_dedupe_report_row(**overrides: object) -> dict:
     row.update({
         "accession_type": "BioProject",
         "accession": "PRJNA292666",
+        "ast_rows": 7,
+        "exact_mapped_rows": 6,
+        "exact_mapped_antibiotic_values": 2,
+        "exact_mapped_antibiotics": "amikacin|cefepime",
+        "exact_mapped_identifiers": "CHEBI:2637|CHEBI:478164",
+        "biosample_count": 3,
+        "bioproject_count": 1,
+        "antibiotic_values": 2,
+        "antibiotics": "amikacin|cefepime",
         "taxon_ids": "NCBITaxon:562",
         "taxon_labels": "Escherichia coli",
     })
@@ -2621,6 +2630,66 @@ def test_template_writers_reject_missing_input_columns(
             "taxon_ids has leading or trailing whitespace",
         ),
         (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(accession_type="Assembly"),
+            "unsupported accession_type",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(accession="SAMN11953777"),
+            "invalid BioProject accession",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(ast_rows="07"),
+            "ast_rows must use canonical integer '7'",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(
+                ast_rows=2,
+                exact_mapped_rows=3,
+            ),
+            "exact_mapped_rows must be <= ast_rows",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(
+                exact_mapped_antibiotic_values=1,
+            ),
+            "exact_mapped_antibiotic_values must match exact_mapped_antibiotics",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(
+                exact_mapped_rows=1,
+            ),
+            "exact_mapped_antibiotic_values must be <= exact_mapped_rows",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(
+                exact_mapped_antibiotic_values=0,
+                exact_mapped_antibiotics="",
+            ),
+            "exact_mapped_identifiers require exact_mapped_antibiotics",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(antibiotics="cefepime|amikacin"),
+            "antibiotics must be unique and sorted",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(taxon_ids="NCBITaxon:0"),
+            "invalid taxon_ids value",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(bioproject_count=2),
+            "bioproject_count must be 1 for BioProject rows",
+        ),
+        (
             lambda rows, path: write_drug_map_template(
                 rows,
                 path,
@@ -2647,6 +2716,16 @@ def test_template_writers_reject_missing_input_columns(
             write_project_dedupe_map_template,
             ncbi_ast_project_dedupe_template_row(accession="PRJNA292666\r"),
             "accession contains a tab or newline",
+        ),
+        (
+            write_project_dedupe_map_template,
+            ncbi_ast_project_dedupe_template_row(accession_type="Assembly"),
+            "unsupported accession_type",
+        ),
+        (
+            write_project_dedupe_map_template,
+            ncbi_ast_project_dedupe_template_row(accession="SAMN11953777"),
+            "invalid BioProject accession",
         ),
     ],
 )
