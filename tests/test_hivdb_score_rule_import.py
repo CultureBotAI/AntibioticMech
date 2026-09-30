@@ -127,6 +127,34 @@ def test_load_hivdb_score_rule_inventory_rejects_duplicate_score_term_positions(
 @pytest.mark.parametrize(
     ("overrides", "message"),
     [
+        ({"score_assignments": "1"}, "score_assignments must match score_term"),
+        (
+            {"negative_score_assignments": "1"},
+            "negative_score_assignments must match score_term",
+        ),
+        ({"min_score": "10.0"}, "min_score must match score_term"),
+        ({"max_score": "20.0"}, "max_score must match score_term"),
+        (
+            {"score_term": "MAX(184I, 184V)"},
+            "score_term has no score assignments",
+        ),
+    ],
+)
+def test_load_hivdb_score_rule_inventory_rejects_score_term_statistic_drift(
+    tmp_path,
+    overrides,
+    message,
+):
+    path = tmp_path / "hivdb_algorithm_terms.tsv"
+    write_score_rule_report(path, [hivdb_score_rule_row(**overrides)])
+
+    with pytest.raises(ValueError, match=message):
+        load_hivdb_score_rule_inventory(path)
+
+
+@pytest.mark.parametrize(
+    ("overrides", "message"),
+    [
         ({"mapping_status": "COMBINATION"}, "mapping_status must be 'EXACT'"),
         ({"drug_class": "EI"}, "EI.*no score-rule gene mapping"),
         ({"gene": "PR"}, "gene must be 'RT'"),

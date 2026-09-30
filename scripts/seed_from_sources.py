@@ -46,6 +46,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from antibioticmech.curate.curation_event import record_curation_event  # noqa: E402
 from antibioticmech.hivdb_score_rules import (  # noqa: E402
+    HIVDB_SCORE_ASSIGNMENT_PATTERN,
     HIVDB_SCORE_RULE_COLUMNS,
     HIVDB_SCORE_RULE_GENE_BY_DRUG_CLASS,
     hivdb_score_rule_id,
@@ -1949,6 +1950,35 @@ def _require_hivdb_score(
     return parsed
 
 
+def _require_hivdb_score_term_stats(
+    row: dict[str, str],
+    *,
+    score_assignments: int,
+    negative_score_assignments: int,
+    min_score: Decimal,
+    max_score: Decimal,
+    path: Path,
+    line_number: int,
+) -> None:
+    prefix = f"{path}:{line_number}"
+    scores = [
+        Decimal(score)
+        for score in HIVDB_SCORE_ASSIGNMENT_PATTERN.findall(row["score_term"])
+    ]
+    if not scores:
+        raise ValueError(f"{prefix}: score_term has no score assignments")
+    if score_assignments != len(scores):
+        raise ValueError(f"{prefix}: score_assignments must match score_term")
+    if negative_score_assignments != sum(score < 0 for score in scores):
+        raise ValueError(
+            f"{prefix}: negative_score_assignments must match score_term"
+        )
+    if min_score != min(scores):
+        raise ValueError(f"{prefix}: min_score must match score_term")
+    if max_score != max(scores):
+        raise ValueError(f"{prefix}: max_score must match score_term")
+
+
 def load_hivdb_score_rule_inventory(path: Path) -> list[dict[str, str]]:
     """Load a curated exact HIVDB algorithm-term report."""
     if not path.exists():
@@ -2041,6 +2071,15 @@ def load_hivdb_score_rule_inventory(path: Path) -> list[dict[str, str]]:
             max_score = _require_hivdb_score(row, "max_score", path, line_number)
             if min_score > max_score:
                 raise ValueError(f"{prefix}: min_score exceeds max_score")
+            _require_hivdb_score_term_stats(
+                row,
+                score_assignments=score_assignments,
+                negative_score_assignments=negative_score_assignments,
+                min_score=min_score,
+                max_score=max_score,
+                path=path,
+                line_number=line_number,
+            )
 
             expected_rule_id = hivdb_score_rule_id(row)
             if row["source_rule_id"] != expected_rule_id:

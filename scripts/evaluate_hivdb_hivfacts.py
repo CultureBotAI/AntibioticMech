@@ -26,6 +26,7 @@ from pathlib import Path
 import yaml
 
 from antibioticmech.hivdb_score_rules import (
+    HIVDB_SCORE_ASSIGNMENT_PATTERN,
     HIVDB_SCORE_RULE_COLUMNS,
     HIVDB_SCORE_RULE_GENE_BY_DRUG_CLASS,
     hivdb_score_rule_id,
@@ -125,7 +126,6 @@ CURATED_TSV_CONTROL_CHARS = frozenset("\t\r\n")
 COMPACT_TOKEN_PATTERN = re.compile(r"^[A-Z0-9]+$")
 COMPACT_AA_PATTERN = re.compile(r"^[A-Z_-]+$")
 PATTERN_CONTROL_CHARS = frozenset("\t\r\n")
-SCORE_ASSIGNMENT_PATTERN = re.compile(r"=>\s*(-?\d+(?:\.\d+)?)")
 
 
 def normalize(value: str) -> str:
@@ -627,7 +627,9 @@ def score_condition_terms(
     for index, term in enumerate(terms, start=1):
         if not term:
             raise ValueError(f"{path}: {source_record_id} score term {index} is blank")
-        term_scores = [float(score) for score in SCORE_ASSIGNMENT_PATTERN.findall(term)]
+        term_scores = [
+            float(score) for score in HIVDB_SCORE_ASSIGNMENT_PATTERN.findall(term)
+        ]
         if not term_scores:
             raise ValueError(
                 f"{path}: {source_record_id} score term {index} "
