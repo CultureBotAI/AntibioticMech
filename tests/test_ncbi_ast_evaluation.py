@@ -2739,6 +2739,15 @@ def test_template_writers_reject_missing_input_columns(
         ),
         (
             write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                mapping_status="",
+                identifier="",
+                standard_inchi_key="",
+            ),
+            "unmapped row must not carry mapping rationale",
+        ),
+        (
+            write_antibiotic_report,
             ncbi_ast_antibiotic_report_row(ast_rows="07"),
             "ast_rows must use canonical integer '7'",
         ),
@@ -2965,6 +2974,19 @@ def test_template_writers_reject_missing_input_columns(
                 identifier="CHEBI:478164",
             ),
             "non-EXACT mapping must not carry structure fields",
+        ),
+        (
+            lambda rows, path: write_drug_map_template(
+                rows,
+                path,
+                source_version="2026-09-26-ast-browser",
+            ),
+            ncbi_ast_drug_map_template_row(
+                mapping_status="",
+                identifier="",
+                standard_inchi_key="",
+            ),
+            "unmapped row must not carry mapping rationale",
         ),
         (
             write_project_dedupe_map_template,
