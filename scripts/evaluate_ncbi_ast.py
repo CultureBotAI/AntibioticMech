@@ -1580,16 +1580,45 @@ def require_antibiotic_report_rows(rows: list[dict], path: Path) -> None:
                 "exact_name_candidate_inchi_keys"
             )
 
-        require_sorted_pipe_values(
+        valid_taxon_id_count = (
+            counts["taxon_id_count"] - counts["invalid_taxon_id_count"]
+        )
+        require_count_bounded_pipe_values(
             row,
             "taxon_ids",
             prefix,
+            valid_taxon_id_count,
+            "valid_taxon_id_count",
             pattern=ACTIVITY_REPORT_TAXON_ID_PATTERN,
         )
-        require_sorted_pipe_values(row, "taxon_labels", prefix)
-        require_sorted_pipe_values(row, "phenotypes", prefix)
-        require_sorted_pipe_values(row, "standardized_mic_values", prefix)
-        require_sorted_pipe_values(row, "standardized_disk_diffusion_values", prefix)
+        require_count_bounded_pipe_values(
+            row,
+            "taxon_labels",
+            prefix,
+            counts["taxon_count"],
+            "taxon_count",
+        )
+        require_count_bounded_pipe_values(
+            row,
+            "phenotypes",
+            prefix,
+            counts["phenotype_count"],
+            "phenotype_count",
+        )
+        require_count_bounded_pipe_values(
+            row,
+            "standardized_mic_values",
+            prefix,
+            counts["standardized_mic_count"],
+            "standardized_mic_count",
+        )
+        require_count_bounded_pipe_values(
+            row,
+            "standardized_disk_diffusion_values",
+            prefix,
+            counts["standardized_disk_diffusion_count"],
+            "standardized_disk_diffusion_count",
+        )
 
 
 def write_antibiotic_report(rows: list[dict], path: Path) -> None:
@@ -1695,6 +1724,25 @@ def require_sorted_pipe_values(
         for value in values:
             if pattern.match(value) is None:
                 raise ValueError(f"{prefix}: invalid {field} value {value!r}")
+    return values
+
+
+def require_count_bounded_pipe_values(
+    row: dict[str, str],
+    field: str,
+    prefix: str,
+    count: int,
+    count_field: str,
+    *,
+    pattern: re.Pattern[str] | None = None,
+) -> list[str]:
+    values = require_sorted_pipe_values(row, field, prefix, pattern=pattern)
+    if count and not values:
+        raise ValueError(f"{prefix}: {count_field} requires {field}")
+    if len(values) > count:
+        raise ValueError(
+            f"{prefix}: {field} must have no more values than {count_field}"
+        )
     return values
 
 
