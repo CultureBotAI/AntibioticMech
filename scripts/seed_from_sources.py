@@ -2598,7 +2598,7 @@ NCBI_AST_ACTIVITY_INVENTORY = RAW_DIR / "ncbi_ast_activity.tsv"
 NCBI_AST_REFERENCE = "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/"
 # Bump with NCBI_AST_ACTIVITY_GROUP_COLUMNS because those columns define the
 # stable source_observation_id digest for committed exact reports.
-NCBI_AST_ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v6"
+NCBI_AST_ACTIVITY_GROUP_ID_VERSION = "ncbi_ast_activity_group_v7"
 NCBI_AST_ACTIVITY_GROUP_COLUMNS = [
     "source_name",
     "normalized_antibiotic",
@@ -2606,6 +2606,7 @@ NCBI_AST_ACTIVITY_GROUP_COLUMNS = [
     "standard_inchi_key",
     "taxon_id",
     "taxon_label",
+    "strain",
     "biosample_accession",
     "bioproject_accession",
     "target_accession",
@@ -2750,6 +2751,7 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
         "normalized_antibiotic",
         "taxon_id",
         "taxon_label",
+        "strain",
         "biosample_accession",
         "bioproject_accession",
         "target_accession",
@@ -2794,6 +2796,8 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
         observation["activity"] = row["activity"]
     if row.get("taxon_id"):
         observation["taxon_id"] = row["taxon_id"]
+    if row.get("strain"):
+        observation["strain"] = row["strain"]
     if row.get("mic_value"):
         observation["mic_value"] = float(row["mic_value"])
         observation["mic_units"] = row["mic_units"]
