@@ -1735,7 +1735,7 @@ def test_read_project_dedupe_map_accepts_biosample_and_bioproject_keys(tmp_path)
             {
                 "accession_type": "BioProject",
                 "accession": "PRJNA292666",
-                "source": "OTHER",
+                "source": "CRYPTIC",
                 "source_version": "2026-09",
                 "notes": "Whole project represented elsewhere.",
             },
@@ -1849,6 +1849,19 @@ def test_read_project_dedupe_map_rejects_self_source(tmp_path):
     )
 
     with pytest.raises(ValueError, match="source cannot be NCBI_AST"):
+        read_project_dedupe_map(path)
+
+
+def test_read_project_dedupe_map_rejects_unknown_source(tmp_path):
+    path = tmp_path / "ncbi_ast_project_dedupe.tsv"
+    path.write_text(
+        "\t".join(PROJECT_DEDUPE_COLUMNS)
+        + "\n"
+        + "BioSample\tSAMN11953777\tCRPTIC\t3.4.0\tunknown source owner\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="unsupported project dedupe source 'CRPTIC'"):
         read_project_dedupe_map(path)
 
 
