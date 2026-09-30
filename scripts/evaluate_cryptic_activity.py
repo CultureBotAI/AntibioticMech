@@ -18,6 +18,7 @@ import io
 import math
 import re
 from collections import defaultdict
+from collections.abc import Iterable
 from pathlib import Path
 
 import yaml
@@ -45,6 +46,7 @@ MAPPING_STATUSES = {
     "MISSING_CORPUS_RECORD",
     "MIXTURE",
 }
+CURATED_TSV_CONTROL_CHARS = frozenset("\t\r\n")
 EXPECTED_MD5 = {
     "DRUG_CODES.csv.gz": "923d3a193df21698bd6a00f857ab337e",
     "DST_MEASUREMENTS.parquet": "45b4501ea7c3925af565dbbc6188dec0",
@@ -145,13 +147,59 @@ def corpus_structure_keys() -> dict[str, str]:
     return keys
 
 
+def require_exact_table_row(row: dict, path: Path, line_number: int) -> None:
+    prefix = f"{path}:{line_number}"
+    if None in row:
+        raise ValueError(f"{prefix}: unexpected extra delimited field")
+    for field, value in row.items():
+        if value is None:
+            raise ValueError(f"{prefix}: {field} is missing")
+
+
+def require_non_blank_fields(
+    row: dict[str, str],
+    fields: Iterable[str],
+    path: Path,
+    line_number: int,
+) -> None:
+    for field in fields:
+        if not row[field].strip():
+            raise ValueError(f"{path}:{line_number}: {field} is required")
+
+
+def strip_curated_tsv_row(
+    row: dict[str, str],
+    path: Path,
+    line_number: int,
+) -> dict[str, str]:
+    for field, value in row.items():
+        if any(char in value for char in CURATED_TSV_CONTROL_CHARS):
+            raise ValueError(f"{path}:{line_number}: {field} contains a tab or newline")
+    return {field: value.strip() for field, value in row.items()}
+
+
 def read_drug_map(path: Path) -> dict[str, dict[str, str]]:
     with path.open(newline="", encoding="utf-8") as handle:
         reader = csv.DictReader(handle, delimiter="\t")
         if reader.fieldnames != DRUG_MAP_COLUMNS:
             raise ValueError(f"unexpected CRyPTIC drug map columns: {reader.fieldnames}")
         rows = {}
-        for row in reader:
+        for line_number, row in enumerate(reader, start=2):
+            require_exact_table_row(row, path, line_number)
+            row = strip_curated_tsv_row(row, path, line_number)
+            require_non_blank_fields(
+                row,
+                (
+                    "source_version",
+                    "source_record_id",
+                    "source_name",
+                    "mapping_status",
+                    "mapping_basis",
+                    "notes",
+                ),
+                path,
+                line_number,
+            )
             code = row["source_record_id"]
             if code in rows:
                 raise ValueError(f"duplicate CRyPTIC drug map code: {code}")
