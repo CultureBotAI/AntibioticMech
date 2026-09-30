@@ -16,7 +16,7 @@ import re
 from collections import Counter, defaultdict
 from collections.abc import Iterable
 from datetime import date
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
 import yaml
@@ -162,6 +162,20 @@ ACTIVITY_REPORT_COLUMNS = [
     "isolate_count",
     *ACTIVITY_REPORT_GROUP_COLUMNS,
 ]
+REQUIRED_ACTIVITY_REPORT_COLUMNS = (
+    "activity_group_id",
+    "source_version",
+    "source_retrieved_on",
+    "ast_row_count",
+    "isolate_count",
+    "source_name",
+    "normalized_antibiotic",
+    "identifier",
+    "standard_inchi_key",
+    "taxon_label",
+    "biosample_accession",
+    "bioproject_accession",
+)
 EXACT_MAPPING_STATUS = "EXACT"
 PROJECT_DEDUPE_SELF_SOURCE = "NCBI_AST"
 PROJECT_DEDUPE_SOURCE_VERSIONS = {
@@ -228,6 +242,7 @@ PHENOTYPE_ALIASES = (
 )
 MEASUREMENT_PATTERN = re.compile(r"^(?P<qualifier><=|>=|<|>|=)?\s*(?P<value>(?:\d+(?:\.\d*)?|\.\d+))$")
 MEASUREMENT_SIGNS = {"", "<=", ">=", "<", ">", "=", "=="}
+MEASUREMENT_QUALIFIERS = {"", "<", "<=", ">", ">="}
 MIC_UNITS = "mg/L"
 DISK_DIFFUSION_UNITS = "mm"
 MIC_MAX_VALUE = Decimal("1024")
@@ -273,6 +288,7 @@ TAXON_ID_ALIASES = (
     "ncbitaxonomyid",
 )
 TAXON_ID_PATTERN = re.compile(r"^(?:NCBITaxon:)?([1-9][0-9]*)$")
+ACTIVITY_REPORT_TAXON_ID_PATTERN = re.compile(r"^NCBITaxon:[1-9][0-9]*$")
 
 
 def normalize(value: str) -> str:
@@ -1393,6 +1409,69 @@ def write_project_dedupe_map_template(rows: list[dict], path: Path) -> None:
             })
 
 
+def require_activity_report_positive_integer(
+    row: dict[str, str],
+    field: str,
+    prefix: str,
+) -> int:
+    try:
+        parsed = int(row[field])
+    except ValueError as error:
+        raise ValueError(f"{prefix}: {field} must be an integer") from error
+    if parsed <= 0:
+        raise ValueError(f"{prefix}: {field} must be positive")
+    canonical = str(parsed)
+    if row[field] != canonical:
+        raise ValueError(f"{prefix}: {field} must use canonical integer {canonical!r}")
+    return parsed
+
+
+def require_activity_report_measurement(
+    row: dict[str, str],
+    *,
+    value_field: str,
+    qualifier_field: str,
+    units_field: str,
+    expected_units: str,
+    minimum: Decimal | None = None,
+    maximum: Decimal | None = None,
+    prefix: str,
+) -> bool:
+    value = row[value_field]
+    qualifier = row[qualifier_field]
+    units = row[units_field]
+
+    if not value:
+        if qualifier:
+            raise ValueError(f"{prefix}: {qualifier_field} requires {value_field}")
+        if units:
+            raise ValueError(f"{prefix}: {units_field} requires {value_field}")
+        return False
+
+    if qualifier not in MEASUREMENT_QUALIFIERS:
+        raise ValueError(f"{prefix}: {qualifier_field} has invalid qualifier {qualifier!r}")
+    if units != expected_units:
+        raise ValueError(f"{prefix}: {units_field} must be {expected_units!r}")
+    try:
+        parsed = Decimal(value)
+    except InvalidOperation as error:
+        raise ValueError(f"{prefix}: {value_field} must be numeric") from error
+    if not parsed.is_finite():
+        raise ValueError(f"{prefix}: {value_field} must be finite")
+    if parsed <= 0:
+        raise ValueError(f"{prefix}: {value_field} must be positive")
+    if minimum is not None and parsed < minimum:
+        raise ValueError(f"{prefix}: {value_field} must be at least {minimum:f}")
+    if maximum is not None and parsed > maximum:
+        raise ValueError(f"{prefix}: {value_field} must be at most {maximum:f}")
+    canonical = format(parsed.normalize(), "f")
+    if value != canonical:
+        raise ValueError(
+            f"{prefix}: {value_field} must use canonical decimal {canonical!r}"
+        )
+    return True
+
+
 def require_activity_report_rows(rows: list[dict], path: Path) -> None:
     if not rows:
         raise ValueError(f"{path}: NCBI AST activity report has no rows")
@@ -1400,9 +1479,9 @@ def require_activity_report_rows(rows: list[dict], path: Path) -> None:
     seen_group_ids = set()
     expected_source_version = None
     expected_source_retrieved_on = None
-    for row_number, row in enumerate(rows, start=1):
+    for row_number, raw_row in enumerate(rows, start=1):
         prefix = f"{path}: output row {row_number}"
-        for field, value in row.items():
+        for field, value in raw_row.items():
             if value is None:
                 raise ValueError(f"{prefix}: {field} is missing")
             string_value = str(value)
@@ -1410,6 +1489,45 @@ def require_activity_report_rows(rows: list[dict], path: Path) -> None:
                 raise ValueError(f"{prefix}: {field} contains a tab or newline")
             if string_value != string_value.strip():
                 raise ValueError(f"{prefix}: {field} has leading or trailing whitespace")
+
+        row = {
+            field: str(raw_row[field])
+            for field in ACTIVITY_REPORT_COLUMNS
+        }
+        for field in REQUIRED_ACTIVITY_REPORT_COLUMNS:
+            if not row[field].strip():
+                raise ValueError(f"{prefix}: {field} is required")
+
+        if BIOSAMPLE_PATTERN.match(row["biosample_accession"]) is None:
+            raise ValueError(f"{prefix}: invalid BioSample accession")
+        if BIOPROJECT_PATTERN.match(row["bioproject_accession"]) is None:
+            raise ValueError(f"{prefix}: invalid BioProject accession")
+        if row["taxon_id"] and not ACTIVITY_REPORT_TAXON_ID_PATTERN.match(
+            row["taxon_id"]
+        ):
+            raise ValueError(f"{prefix}: invalid NCBI Taxonomy CURIE")
+        if row["target_accession"] and not TARGET_PATTERN.match(row["target_accession"]):
+            raise ValueError(f"{prefix}: invalid Pathogen Detection target accession")
+        if row["assembly_accession"] and not ASSEMBLY_PATTERN.match(
+            row["assembly_accession"]
+        ):
+            raise ValueError(f"{prefix}: invalid Assembly accession")
+        if row["sra_accessions"]:
+            sra_accessions = row["sra_accessions"].split("|")
+            invalid_sra_accessions = [
+                accession
+                for accession in sra_accessions
+                if SRA_ACCESSION_PATTERN.match(accession) is None
+            ]
+            if invalid_sra_accessions:
+                raise ValueError(f"{prefix}: invalid SRA accession")
+            canonical_sra_accessions = "|".join(sorted(set(sra_accessions)))
+            if row["sra_accessions"] != canonical_sra_accessions:
+                raise ValueError(f"{prefix}: sra_accessions must be unique and sorted")
+        if row["normalized_antibiotic"] != normalize(row["source_name"]):
+            raise ValueError(f"{prefix}: normalized_antibiotic must match source_name")
+        if not row["method"] and not row["platform"] and not row["reagent"]:
+            raise ValueError(f"{prefix}: method, platform or reagent is required")
 
         if expected_source_version is None:
             expected_source_version = row["source_version"]
@@ -1433,6 +1551,50 @@ def require_activity_report_rows(rows: list[dict], path: Path) -> None:
                 f"{prefix}: source_retrieved_on must be "
                 f"{expected_source_retrieved_on!r}"
             )
+
+        if row["create_date"] and not is_iso_date(row["create_date"]):
+            raise ValueError(f"{prefix}: create_date must be an ISO date")
+
+        require_activity_report_positive_integer(row, "ast_row_count", prefix)
+        isolate_count = require_activity_report_positive_integer(
+            row,
+            "isolate_count",
+            prefix,
+        )
+        if isolate_count != 1:
+            raise ValueError(
+                f"{prefix}: isolate_count must be 1 for a BioSample-grouped row"
+            )
+
+        expected_activity = ACTIVITY_CALLS.get(row["phenotype"].casefold(), "")
+        if row["phenotype"] and not expected_activity:
+            raise ValueError(f"{prefix}: unsupported phenotype {row['phenotype']!r}")
+        if row["activity"] != expected_activity:
+            raise ValueError(
+                f"{prefix}: activity must match phenotype {row['phenotype']!r}"
+            )
+
+        has_mic = require_activity_report_measurement(
+            row,
+            value_field="mic_value",
+            qualifier_field="mic_qualifier",
+            units_field="mic_units",
+            expected_units=MIC_UNITS,
+            maximum=MIC_MAX_VALUE,
+            prefix=prefix,
+        )
+        has_disk_diffusion = require_activity_report_measurement(
+            row,
+            value_field="disk_diffusion_value",
+            qualifier_field="disk_diffusion_qualifier",
+            units_field="disk_diffusion_units",
+            expected_units=DISK_DIFFUSION_UNITS,
+            minimum=DISK_DIFFUSION_MIN_VALUE,
+            maximum=DISK_DIFFUSION_MAX_VALUE,
+            prefix=prefix,
+        )
+        if not has_mic and not has_disk_diffusion:
+            raise ValueError(f"{prefix}: mic_value or disk_diffusion_value is required")
 
         expected_group_id = activity_group_id(row)
         if row["activity_group_id"] != expected_group_id:
