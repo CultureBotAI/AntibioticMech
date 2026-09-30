@@ -2900,6 +2900,24 @@ def _require_ncbi_ast_positive_integer(
     return parsed
 
 
+def _require_ncbi_ast_iso_date(
+    row: dict[str, str],
+    field: str,
+    path: Path,
+    line_number: int,
+) -> None:
+    value = row[field]
+    if not value:
+        return
+    prefix = f"{path}:{line_number}"
+    try:
+        parsed = date.fromisoformat(value)
+    except ValueError as error:
+        raise ValueError(f"{prefix}: {field} must be an ISO date") from error
+    if parsed.isoformat() != value:
+        raise ValueError(f"{prefix}: {field} must be an ISO date")
+
+
 def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
     """Load a curated NCBI AST exact report and reject malformed source rows."""
     if not path.exists():
@@ -2973,14 +2991,18 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                 raise ValueError(
                     f"{prefix}: source_version must be {expected_source_version!r}"
                 )
-            try:
-                source_retrieved_on = date.fromisoformat(row["source_retrieved_on"])
-            except ValueError as error:
-                raise ValueError(
-                    f"{prefix}: source_retrieved_on must be an ISO date"
-                ) from error
-            if source_retrieved_on.isoformat() != row["source_retrieved_on"]:
-                raise ValueError(f"{prefix}: source_retrieved_on must be an ISO date")
+            _require_ncbi_ast_iso_date(
+                row,
+                "source_retrieved_on",
+                path,
+                line_number,
+            )
+            _require_ncbi_ast_iso_date(
+                row,
+                "create_date",
+                path,
+                line_number,
+            )
             if expected_source_retrieved_on is None:
                 expected_source_retrieved_on = row["source_retrieved_on"]
             elif row["source_retrieved_on"] != expected_source_retrieved_on:

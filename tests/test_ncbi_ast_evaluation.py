@@ -607,13 +607,68 @@ def test_exact_activity_rows_preserves_gcp_isolate_context_aliases():
     assert result["rows_with_isolation_type"] == 1
     assert result["rows_with_location"] == 1
     assert result["rows_with_create_date"] == 1
+    assert result["rows_with_invalid_create_date"] == 0
     assert result["antibiotic_rows"][0]["isolation_type_count"] == 1
     assert result["antibiotic_rows"][0]["location_count"] == 1
     assert result["antibiotic_rows"][0]["create_date_count"] == 1
+    assert result["antibiotic_rows"][0]["invalid_create_date_count"] == 0
     assert len(activity_rows) == 1
     assert activity_rows[0]["strain"] == "KPNIH1"
     assert activity_rows[0]["isolation_type"] == "clinical"
     assert activity_rows[0]["location"] == "USA"
+    assert activity_rows[0]["create_date"] == "2020-01-31"
+
+
+def test_exact_activity_rows_excludes_invalid_create_dates():
+    rows = [
+        {
+            "Antibiotic": "cefepime",
+            "BioSample": "SAMN11953777",
+            "BioProject": "PRJNA292666",
+            "Organism group": "Escherichia coli",
+            "Phenotype": "R",
+            "MIC": "2",
+            "Laboratory typing platform": "AST",
+            "Create date": "20200131",
+        },
+        {
+            "Antibiotic": "cefepime",
+            "BioSample": "SAMN11953778",
+            "BioProject": "PRJNA292666",
+            "Organism group": "Escherichia coli",
+            "Phenotype": "R",
+            "MIC": "2",
+            "Laboratory typing platform": "AST",
+            "Create date": "2020-01-31",
+        },
+    ]
+    mappings = {
+        "cefepime": {
+            "mapping_status": "EXACT",
+            "source_name": "cefepime",
+            "identifier": "CHEBI:478164",
+            "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+        },
+    }
+
+    result = evaluate_rows(
+        rows,
+        {"cefepime": {"CHEBI:478164"}},
+        {"CHEBI:478164": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
+        mappings=mappings,
+    )
+    activity_rows = exact_activity_rows(
+        rows,
+        mappings,
+        source_version="2026-09-26-ast-browser",
+        source_retrieved_on="2026-09-26",
+    )
+
+    assert result["rows_with_create_date"] == 2
+    assert result["rows_with_invalid_create_date"] == 1
+    assert result["exact_mapped_activity_report_candidate_rows"] == 1
+    assert result["antibiotic_rows"][0]["invalid_create_date_count"] == 1
+    assert [row["biosample_accession"] for row in activity_rows] == ["SAMN11953778"]
     assert activity_rows[0]["create_date"] == "2020-01-31"
 
 
@@ -1829,6 +1884,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "location_count": 7,
             "collection_date_count": 7,
             "create_date_count": 7,
+            "invalid_create_date_count": 0,
             "host_count": 7,
             "isolation_source_count": 7,
             "taxon_id_count": 7,
@@ -1885,6 +1941,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "location_count": "7",
         "collection_date_count": "7",
         "create_date_count": "7",
+        "invalid_create_date_count": "0",
         "host_count": "7",
         "isolation_source_count": "7",
         "taxon_id_count": "7",
@@ -2383,6 +2440,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert "location_rows=1" in result.stdout
     assert "collection_date_rows=1" in result.stdout
     assert "create_date_rows=1" in result.stdout
+    assert "invalid_create_date_rows=0" in result.stdout
     assert "host_rows=1" in result.stdout
     assert "isolation_source_rows=1" in result.stdout
     assert "source_context_rows=1" in result.stdout
@@ -2399,6 +2457,7 @@ def test_cli_writes_all_ncbi_ast_reports(tmp_path):
     assert antibiotic_rows[0]["location_count"] == "1"
     assert antibiotic_rows[0]["collection_date_count"] == "1"
     assert antibiotic_rows[0]["create_date_count"] == "1"
+    assert antibiotic_rows[0]["invalid_create_date_count"] == "0"
     assert antibiotic_rows[0]["host_count"] == "1"
     assert antibiotic_rows[0]["isolation_source_count"] == "1"
     assert antibiotic_rows[0]["activity_report_dedupe_excluded_count"] == "1"

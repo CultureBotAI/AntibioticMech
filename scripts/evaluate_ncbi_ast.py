@@ -97,6 +97,7 @@ ANTIBIOTIC_REPORT_COLUMNS = [
     "location_count",
     "collection_date_count",
     "create_date_count",
+    "invalid_create_date_count",
     "host_count",
     "isolation_source_count",
     "taxon_id_count",
@@ -344,6 +345,23 @@ def valid_sra_accessions(row: dict[str, str]) -> str | None:
     return "|".join(sorted(set(normalized)))
 
 
+def is_iso_date(value: str) -> bool:
+    try:
+        parsed = date.fromisoformat(value)
+    except ValueError:
+        return False
+    return parsed.isoformat() == value
+
+
+def valid_create_date(row: dict[str, str]) -> str | None:
+    create_date = first_value(row, CREATE_DATE_ALIASES)
+    if not create_date:
+        return ""
+    if not is_iso_date(create_date):
+        return None
+    return create_date
+
+
 def valid_taxon_id(row: dict[str, str]) -> str | None:
     taxon_id = first_value(row, TAXON_ID_ALIASES)
     if not taxon_id:
@@ -368,6 +386,10 @@ def has_invalid_sra_accessions(row: dict[str, str]) -> bool:
 
 def has_invalid_taxon_id(row: dict[str, str]) -> bool:
     return valid_taxon_id(row) is None
+
+
+def has_invalid_create_date(row: dict[str, str]) -> bool:
+    return valid_create_date(row) is None
 
 
 def has_assay_method(row: dict[str, str]) -> bool:
@@ -761,11 +783,19 @@ def activity_report_context(
     sra_accessions = valid_sra_accessions(row)
     if sra_accessions is None:
         return None
+    create_date = valid_create_date(row)
+    if create_date is None:
+        return None
     if project_dedupe_hit(row, project_dedupe):
         return None
 
     mic, disk = measurements
     phenotype, activity = activity_call
+    source_context = {
+        field: first_value(row, aliases)
+        for field, aliases in SOURCE_CONTEXT_ALIASES
+    }
+    source_context["create_date"] = create_date
     return {
         "taxon_id": taxon_id,
         "taxon_label": taxon_label,
@@ -775,10 +805,7 @@ def activity_report_context(
         "target_accession": target_accession,
         "assembly_accession": assembly_accession,
         "sra_accessions": sra_accessions,
-        **{
-            field: first_value(row, aliases)
-            for field, aliases in SOURCE_CONTEXT_ALIASES
-        },
+        **source_context,
         "phenotype": phenotype,
         "activity": activity,
         "mic_value": mic[0],
@@ -1008,6 +1035,7 @@ def evaluate_rows(
     rows_with_taxon = 0
     rows_with_phenotype = 0
     rows_with_invalid_phenotype = 0
+    rows_with_invalid_create_date = 0
     rows_with_assay_method = 0
     rows_with_dedupe_context = 0
     rows_with_source_context = Counter()
@@ -1032,6 +1060,7 @@ def evaluate_rows(
         rows_with_invalid_assembly_acc += int(has_invalid_assembly_accession(row))
         rows_with_invalid_sra_accessions += int(has_invalid_sra_accessions(row))
         rows_with_invalid_taxon_id += int(has_invalid_taxon_id(row))
+        rows_with_invalid_create_date += int(has_invalid_create_date(row))
         rows_with_taxon += int(has_value(row, TAXON_ALIASES))
         rows_with_phenotype += int(has_value(row, PHENOTYPE_ALIASES))
         rows_with_invalid_phenotype += int(has_invalid_phenotype(row))
@@ -1169,6 +1198,9 @@ def evaluate_rows(
                     )
                     for field, aliases in SOURCE_CONTEXT_ALIASES
                 },
+                "invalid_create_date_count": sum(
+                    has_invalid_create_date(row) for row in antibiotic_ast_rows
+                ),
                 "taxon_id_count": sum(
                     has_value(row, TAXON_ID_ALIASES) for row in antibiotic_ast_rows
                 ),
@@ -1235,6 +1267,7 @@ def evaluate_rows(
         "rows_with_taxon": rows_with_taxon,
         "rows_with_phenotype": rows_with_phenotype,
         "rows_with_invalid_phenotype": rows_with_invalid_phenotype,
+        "rows_with_invalid_create_date": rows_with_invalid_create_date,
         "rows_with_assay_method": rows_with_assay_method,
         "rows_with_dedupe_context": rows_with_dedupe_context,
         **{
@@ -1362,14 +1395,6 @@ def write_activity_report(rows: list[dict], path: Path) -> None:
         )
         writer.writeheader()
         writer.writerows(rows)
-
-
-def is_iso_date(value: str) -> bool:
-    try:
-        parsed = date.fromisoformat(value)
-    except ValueError:
-        return False
-    return parsed.isoformat() == value
 
 
 def main() -> int:
@@ -1555,6 +1580,7 @@ def main() -> int:
         f"location_rows={result['rows_with_location']} "
         f"collection_date_rows={result['rows_with_collection_date']} "
         f"create_date_rows={result['rows_with_create_date']} "
+        f"invalid_create_date_rows={result['rows_with_invalid_create_date']} "
         f"host_rows={result['rows_with_host']} "
         f"isolation_source_rows={result['rows_with_isolation_source']}"
     )
