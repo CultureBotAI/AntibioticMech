@@ -11,6 +11,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
+import evaluate_ncbi_ast  # noqa: E402
 from evaluate_ncbi_ast import (  # noqa: E402
     ACTIVITY_REPORT_COLUMNS,
     ANTIBIOTIC_REPORT_COLUMNS,
@@ -24,6 +25,7 @@ from evaluate_ncbi_ast import (  # noqa: E402
     has_invalid_taxon_id,
     normalize_header,
     project_dedupe_report_rows,
+    project_dedupe_source_versions,
     read_drug_map,
     read_project_dedupe_map,
     read_table,
@@ -1823,6 +1825,53 @@ def test_read_project_dedupe_map_accepts_biosample_and_bioproject_keys(tmp_path)
 
     assert rows[("BioSample", "SAMN11953777")]["source"] == "CRYPTIC"
     assert rows[("BioProject", "PRJNA292666")]["source_version"] == "3.4.0"
+
+
+def test_read_project_dedupe_map_uses_current_adopted_source_versions(
+    tmp_path,
+    monkeypatch,
+):
+    inventory = tmp_path / "cryptic_activity.tsv"
+    inventory.write_text(
+        "source_version\tactivity_group_id\n"
+        "3.5.0\tcryptic:test\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(
+        evaluate_ncbi_ast,
+        "PROJECT_DEDUPE_SOURCE_INVENTORIES",
+        {"CRYPTIC": inventory},
+    )
+    path = tmp_path / "ncbi_ast_project_dedupe.tsv"
+    path.write_text(
+        "\t".join(PROJECT_DEDUPE_COLUMNS)
+        + "\n"
+        + (
+            "BioSample\tSAMN11953777\tCRYPTIC\t3.5.0\t"
+            "BioSample represented in the current CRyPTIC report.\n"
+        ),
+        encoding="utf-8",
+    )
+
+    rows = read_project_dedupe_map(path)
+
+    assert rows[("BioSample", "SAMN11953777")]["source_version"] == "3.5.0"
+
+
+def test_project_dedupe_source_versions_require_one_version(tmp_path):
+    inventory = tmp_path / "cryptic_activity.tsv"
+    inventory.write_text(
+        "source_version\tactivity_group_id\n"
+        "3.4.0\tcryptic:one\n"
+        "3.5.0\tcryptic:two\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(
+        ValueError,
+        match="expected one CRYPTIC source_version for project dedupe",
+    ):
+        project_dedupe_source_versions({"CRYPTIC": inventory})
 
 
 def test_read_project_dedupe_map_rejects_bad_accessions(tmp_path):
