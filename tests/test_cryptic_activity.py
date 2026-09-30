@@ -19,6 +19,7 @@ from evaluate_cryptic_activity import (  # noqa: E402
     INVENTORY_COLUMNS,
     UKMYC_GROUP_COLUMNS,
     UKMYC_TABLE,
+    activity_group_id,
     activity_inventory,
     activity_inventory_row,
     parse_mic,
@@ -79,12 +80,11 @@ CRYPTIC_340_CODES = {
 CRYPTIC_DRUG_MAP_HEADER = "\t".join(DRUG_MAP_COLUMNS) + "\n"
 
 
-def cryptic_inventory_row(**overrides: str) -> dict[str, str]:
+def cryptic_inventory_row(**overrides: str | None) -> dict[str, str]:
     row = {column: "" for column in INVENTORY_COLUMNS}
     row.update({
         "source_version": "3.4.0",
         "source_table": UKMYC_TABLE,
-        "activity_group_id": "ukmyc_phenotypes:abc",
         "drug_code": "AMI",
         "source_name": "AMIKACIN",
         "identifier": "CHEBI:2637",
@@ -98,6 +98,11 @@ def cryptic_inventory_row(**overrides: str) -> dict[str, str]:
         "platedesign": "UKMYC6",
         "binary_phenotype": "R",
     })
+    row.update(overrides)
+    row["activity_group_id"] = activity_group_id(
+        UKMYC_TABLE,
+        [row["drug_code"], *(row[column] for column in UKMYC_GROUP_COLUMNS)],
+    )
     row.update(overrides)
     return row
 
@@ -116,6 +121,31 @@ def write_raw_inventory(
         )
         writer.writeheader()
         writer.writerows(rows)
+
+
+def cryptic_report_row(**overrides: str | None) -> dict[str, str]:
+    row = {column: "" for column in INVENTORY_COLUMNS}
+    row.update({
+        "source_version": "3.4.0",
+        "source_table": DST_TABLE,
+        "drug_code": "AMI",
+        "source_name": "AMIKACIN",
+        "identifier": "CHEBI:2637",
+        "standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N",
+        "row_count": "12",
+        "isolate_count": "12",
+        "source": "BASHTHEBUG",
+        "method_1": "MGIT",
+        "phenotype": "R",
+        "quality": "HIGH",
+    })
+    row.update(overrides)
+    row["activity_group_id"] = activity_group_id(
+        DST_TABLE,
+        [row["drug_code"], *(row[column] for column in DST_GROUP_COLUMNS)],
+    )
+    row.update(overrides)
+    return row
 
 
 def test_cryptic_activity_columns_match_the_evaluator_contract():
@@ -356,23 +386,18 @@ def test_ukmyc_inventory_group_keeps_mic_shape_and_filters_non_exact_mappings():
 
 def test_write_inventory_uses_the_committed_column_contract(tmp_path):
     path = tmp_path / "cryptic_inventory.tsv"
-    row = {column: "" for column in INVENTORY_COLUMNS}
-    row.update({
-        "source_version": "3.4.0",
-        "source_table": "DST_MEASUREMENTS",
-        "activity_group_id": "dst_measurements:abc",
-    })
+    row = cryptic_report_row()
 
     write_inventory(path, [row])
 
     lines = path.read_text(encoding="utf-8").splitlines()
-    assert lines == ["\t".join(INVENTORY_COLUMNS), "3.4.0\tDST_MEASUREMENTS\tdst_measurements:abc"]
+    assert lines[0] == "\t".join(INVENTORY_COLUMNS)
+    assert lines[1].startswith("3.4.0\tDST_MEASUREMENTS\tdst_measurements:")
     assert b"\r" not in path.read_bytes()
 
 
 def test_write_inventory_rejects_duplicate_group_ids(tmp_path):
-    row = {column: "" for column in INVENTORY_COLUMNS}
-    row["activity_group_id"] = "dst_measurements:duplicate"
+    row = cryptic_report_row()
 
     with pytest.raises(ValueError, match="duplicate CRyPTIC activity_group_id"):
         write_inventory(tmp_path / "cryptic_inventory.tsv", [row, row])
@@ -395,6 +420,73 @@ def test_write_inventory_rejects_empty_reports_before_opening(tmp_path):
         (
             {column: "" for column in INVENTORY_COLUMNS} | {"unexpected": "value"},
             "unexpected columns: unexpected",
+        ),
+        (
+            cryptic_report_row(source_name=None),
+            "source_name is missing",
+        ),
+        (
+            cryptic_report_row(source_name="AMIKA\tCIN"),
+            "source_name contains a tab or newline",
+        ),
+        (
+            cryptic_report_row(method_1="MGIT\n"),
+            "method_1 contains a tab or newline",
+        ),
+        (
+            cryptic_report_row(source_name=" AMIKACIN"),
+            "source_name has leading or trailing whitespace",
+        ),
+        (
+            cryptic_report_row(identifier=""),
+            "identifier is required",
+        ),
+        (
+            cryptic_report_row(source_version="3.4.1"),
+            "source_version '3.4.1' != '3.4.0'",
+        ),
+        (
+            cryptic_report_row(source_table="UNKNOWN"),
+            "unrecognized CRyPTIC activity table",
+        ),
+        (
+            cryptic_report_row(activity_group_id="dst_measurements:stale"),
+            "activity_group_id must be",
+        ),
+        (
+            cryptic_report_row(row_count="0"),
+            "row_count must be positive",
+        ),
+        (
+            cryptic_report_row(isolate_count="1.0"),
+            "isolate_count must be an integer",
+        ),
+        (
+            cryptic_report_row(site_count="-1"),
+            "site_count must be positive",
+        ),
+        (
+            cryptic_report_row(mic_qualifier="<="),
+            "mic_qualifier requires mic_value",
+        ),
+        (
+            cryptic_report_row(mic_value="nan", mic_units="mg/L"),
+            "mic_value must be finite",
+        ),
+        (
+            cryptic_report_row(
+                mic_value="0.25",
+                mic_qualifier="~",
+                mic_units="mg/L",
+            ),
+            "mic_qualifier has invalid qualifier",
+        ),
+        (
+            cryptic_report_row(
+                mic_value="0.25",
+                mic_units="ug/mL",
+            ),
+            "mic_units must be 'mg/L'",
         ),
     ],
 )
@@ -531,31 +623,17 @@ def test_activity_inventory_fetches_each_result_before_reusing_duckdb_connection
 
 
 def test_compact_inventory_row_becomes_a_grouped_activity_observation(tmp_path, monkeypatch):
-    row = {column: "" for column in INVENTORY_COLUMNS}
-    row.update({
-        "source_version": "3.4.0",
-        "source_table": UKMYC_TABLE,
-        "activity_group_id": "ukmyc_phenotypes:abc",
-        "drug_code": "AMI",
-        "source_name": "AMIKACIN",
-        "identifier": "CHEBI:2637",
-        "standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N",
-        "mic_value": "0.25",
-        "mic_qualifier": "<=",
-        "mic_units": "mg/L",
-        "row_count": "6184",
-        "isolate_count": "6184",
-        "site_count": "11",
-        "platedesign": "UKMYC6",
-        "belongs_gpi": "true",
-        "phenotype_quality": "HIGH",
-        "readingday": "14",
-        "primary_method": "VZ",
-        "phenotype_description": "VZ,TM AGREE",
-        "mic": "<=0.25",
-        "log2mic": "-2.0",
-        "binary_phenotype": "R",
-    })
+    row = cryptic_inventory_row(
+        platedesign="UKMYC6",
+        belongs_gpi="true",
+        phenotype_quality="HIGH",
+        readingday="14",
+        primary_method="VZ",
+        phenotype_description="VZ,TM AGREE",
+        mic="<=0.25",
+        log2mic="-2.0",
+        binary_phenotype="R",
+    )
     write_inventory(tmp_path / "cryptic_activity.tsv", [row])
     monkeypatch.setattr(
         seed_from_sources,
@@ -584,7 +662,7 @@ def test_compact_inventory_row_becomes_a_grouped_activity_observation(tmp_path, 
     assert observation["site_count"] == 11
     assert observation["source"] == CRYPTIC_ACTIVITY_SOURCE
     assert observation["source_version"] == "3.4.0"
-    assert observation["source_observation_id"] == "ukmyc_phenotypes:abc"
+    assert observation["source_observation_id"] == row["activity_group_id"]
     assert "UKMYC6" in observation["assay"]
     assert "primary method VZ" in observation["assay"]
     assert "row_count=6184" in observation["evidence"][0]["notes"]
