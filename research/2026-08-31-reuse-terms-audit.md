@@ -17,7 +17,7 @@ Stanford HIVDB had no such grant until the 2026-09-05 follow-up recorded below.
 | Source | Exact data scope | Verified public position | Corpus decision |
 |---|---|---|---|
 | BV-BRC | `genome_amr` / AMR phenotype rows where `evidence` is exactly `Laboratory Method`; exclude computational prediction/classifier rows | Website, privacy policy, docs, and API-code licence do not state data redistribution rights | UNVERIFIED; official tracker request open; no import |
-| BacDive | Strain-level antibiotic susceptibility fields exposed by pages/API/bulk access | Current BacDive footer links its Copyright & License statement directly to CC BY 4.0 | Compatible with attribution; official scope-confirmation request open; no import in #106 |
+| BacDive | Strain-level antibiotic susceptibility fields exposed by pages/API/bulk access | Current BacDive footer links its Copyright & License statement directly to CC BY 4.0; API tracker response agrees for API/bulk data but recommends website-ticket confirmation | Compatible with attribution; official scope confirmation still required; no import in #106 |
 | CO-ADD | Official r03.02-2020 bulk CSV: inhibition and dose-response rows with compound identity/SMILES, project/library, assay, organism/strain, concentration or response, and units | Public download exists, but the archive has no licence; site material is personal/non-commercial only, and systematic download/storage and reproduction require written permission. ChEMBL copy is CC BY-SA 3.0 | BLOCKED absent a written grant covering the official bulk files and derivatives |
 | Stanford HIVDB | `hivdb/hivfacts` resistance-mutation data used by Sierra | No database-data reuse grant was found on 2026-08-31; on 2026-09-05 a Sierra maintainer identified `hivdb/hivfacts` as public-domain Unlicense data | CC0-compatible for `hivdb/hivfacts`; no import |
 
@@ -47,9 +47,12 @@ Stanford HIVDB had no such grant until the 2026-09-05 follow-up recorded below.
 - [BacDive contact form](https://bacdive.dsmz.de/contact) provides explicit
   Content and Web services categories for a scoped confirmation. SHA-256:
   `39bbded9ff40585476a4607eb27de1c2fa3c032b5173c2b7eaa16f5a217557da`.
-- The scoped request is open as
-  [LeibnizDSMZ/bacdive-api #1](https://github.com/LeibnizDSMZ/bacdive-api/issues/1);
-  no response had been posted when rechecked on 2026-08-31.
+- The scoped request through
+  [LeibnizDSMZ/bacdive-api #1](https://github.com/LeibnizDSMZ/bacdive-api/issues/1)
+  received a 2026-09-29 API maintainer reply saying the API or bulk-download
+  data are CC BY 4.0, but recommending a BacDive website ticket for official
+  confirmation. Official DSMZ confirmation of susceptibility API/bulk scope and
+  third-party exclusions remains unresolved.
 
 ### CO-ADD
 
@@ -121,7 +124,8 @@ or web page.
 - HIVDB interpretations or mutation evidence must not be inferred to apply to
   non-HIV viruses.
 
-The requests and their transmission state are archived separately. BV-BRC and
-BacDive requests are open in official GitHub trackers with responses pending.
-The CO-ADD request is still an unsent email/form draft. The Stanford HIVDB
-request resolved only the `hivdb/hivfacts` data surface.
+The requests and their transmission state are archived separately. BV-BRC is
+still pending in its official GitHub tracker, and BacDive has an API-tracker
+reply that recommends website-ticket confirmation. The CO-ADD request is still
+an unsent email/form draft. The Stanford HIVDB request resolved only the
+`hivdb/hivfacts` data surface.
