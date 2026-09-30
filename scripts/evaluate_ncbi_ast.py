@@ -1557,6 +1557,11 @@ def require_project_dedupe_report_rows(rows: list[dict], path: Path) -> None:
                 f"{prefix}: exact_mapped_antibiotic_values must be <= "
                 "exact_mapped_rows"
             )
+        if exact_mapped_rows and not exact_mapped_antibiotic_values:
+            raise ValueError(
+                f"{prefix}: exact_mapped_rows requires "
+                "exact_mapped_antibiotic_values"
+            )
 
         exact_mapped_antibiotics = require_sorted_pipe_values(
             row,
