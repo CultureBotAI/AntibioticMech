@@ -1544,6 +1544,10 @@ def require_project_dedupe_report_rows(rows: list[dict], path: Path) -> None:
             raise ValueError(f"{prefix}: exact_mapped_rows must be <= ast_rows")
         if antibiotic_values > ast_rows:
             raise ValueError(f"{prefix}: antibiotic_values must be <= ast_rows")
+        if biosample_count > ast_rows:
+            raise ValueError(f"{prefix}: biosample_count must be <= ast_rows")
+        if bioproject_count > ast_rows:
+            raise ValueError(f"{prefix}: bioproject_count must be <= ast_rows")
         if exact_mapped_antibiotic_values > antibiotic_values:
             raise ValueError(
                 f"{prefix}: exact_mapped_antibiotic_values must be <= antibiotic_values"
@@ -1571,6 +1575,7 @@ def require_project_dedupe_report_rows(rows: list[dict], path: Path) -> None:
             prefix,
             pattern=ACTIVITY_REPORT_TAXON_ID_PATTERN,
         )
+        taxon_labels = require_sorted_pipe_values(row, "taxon_labels", prefix)
 
         if len(exact_mapped_antibiotics) != exact_mapped_antibiotic_values:
             raise ValueError(
@@ -1583,14 +1588,17 @@ def require_project_dedupe_report_rows(rows: list[dict], path: Path) -> None:
             raise ValueError(
                 f"{prefix}: exact_mapped_antibiotics must be a subset of antibiotics"
             )
+        if len(exact_mapped_identifiers) > exact_mapped_antibiotic_values:
+            raise ValueError(
+                f"{prefix}: exact_mapped_identifiers must have no more values "
+                "than exact_mapped_antibiotic_values"
+            )
         if exact_mapped_antibiotics and not exact_mapped_identifiers:
             raise ValueError(
                 f"{prefix}: exact_mapped_identifiers are required for exact mappings"
             )
-        if exact_mapped_identifiers and not exact_mapped_antibiotics:
-            raise ValueError(
-                f"{prefix}: exact_mapped_identifiers require exact_mapped_antibiotics"
-            )
+        if not taxon_labels:
+            raise ValueError(f"{prefix}: taxon_labels is required")
         if accession_type == "BioSample" and biosample_count != 1:
             raise ValueError(f"{prefix}: biosample_count must be 1 for BioSample rows")
         if accession_type == "BioProject" and bioproject_count != 1:

@@ -2668,11 +2668,20 @@ def test_template_writers_reject_missing_input_columns(
         ),
         (
             write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(biosample_count=8),
+            "biosample_count must be <= ast_rows",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(bioproject_count=8),
+            "bioproject_count must be <= ast_rows",
+        ),
+        (
+            write_project_dedupe_report,
             ncbi_ast_project_dedupe_report_row(
-                exact_mapped_antibiotic_values=0,
-                exact_mapped_antibiotics="",
+                exact_mapped_identifiers="CHEBI:2637|CHEBI:478164|CHEBI:63638",
             ),
-            "exact_mapped_identifiers require exact_mapped_antibiotics",
+            "exact_mapped_identifiers must have no more values",
         ),
         (
             write_project_dedupe_report,
@@ -2683,6 +2692,16 @@ def test_template_writers_reject_missing_input_columns(
             write_project_dedupe_report,
             ncbi_ast_project_dedupe_report_row(taxon_ids="NCBITaxon:0"),
             "invalid taxon_ids value",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(taxon_labels="Klebsiella|Escherichia"),
+            "taxon_labels must be unique and sorted",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(taxon_labels=""),
+            "taxon_labels is required",
         ),
         (
             write_project_dedupe_report,
