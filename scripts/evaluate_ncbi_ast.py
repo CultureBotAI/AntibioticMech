@@ -1620,6 +1620,28 @@ def require_drug_map_template_rows(rows: list[dict], path: Path) -> None:
             )
         seen_source_record_ids.add(normalized_antibiotic)
 
+        mapping_status = str(row["mapping_status"])
+        if mapping_status and mapping_status not in MAPPING_STATUSES:
+            raise ValueError(
+                f"{prefix}: unknown mapping_status {mapping_status!r}"
+            )
+        identifier = str(row["identifier"])
+        standard_inchi_key = str(row["standard_inchi_key"])
+        has_mapping = bool(identifier or standard_inchi_key)
+        if mapping_status:
+            for field in ("mapping_basis", "mapping_notes"):
+                if not str(row[field]):
+                    raise ValueError(f"{prefix}: {field} is required")
+        if mapping_status == EXACT_MAPPING_STATUS:
+            if not identifier or not standard_inchi_key:
+                raise ValueError(
+                    f"{prefix}: EXACT mapping needs identifier and standard_inchi_key"
+                )
+        elif has_mapping:
+            raise ValueError(
+                f"{prefix}: non-EXACT mapping must not carry structure fields"
+            )
+
 
 def write_drug_map_template(rows: list[dict], path: Path, source_version: str) -> None:
     require_drug_map_template_rows(rows, path)

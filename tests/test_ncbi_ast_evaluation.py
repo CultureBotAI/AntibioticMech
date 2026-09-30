@@ -2923,6 +2923,50 @@ def test_template_writers_reject_missing_input_columns(
             "normalized_antibiotic must match antibiotic",
         ),
         (
+            lambda rows, path: write_drug_map_template(
+                rows,
+                path,
+                source_version="2026-09-26-ast-browser",
+            ),
+            ncbi_ast_drug_map_template_row(mapping_status="NOT_EXACT"),
+            "unknown mapping_status",
+        ),
+        (
+            lambda rows, path: write_drug_map_template(
+                rows,
+                path,
+                source_version="2026-09-26-ast-browser",
+            ),
+            ncbi_ast_drug_map_template_row(
+                mapping_status="MIXTURE",
+                identifier="",
+                standard_inchi_key="",
+                mapping_basis="",
+            ),
+            "mapping_basis is required",
+        ),
+        (
+            lambda rows, path: write_drug_map_template(
+                rows,
+                path,
+                source_version="2026-09-26-ast-browser",
+            ),
+            ncbi_ast_drug_map_template_row(identifier=""),
+            "EXACT mapping needs identifier and standard_inchi_key",
+        ),
+        (
+            lambda rows, path: write_drug_map_template(
+                rows,
+                path,
+                source_version="2026-09-26-ast-browser",
+            ),
+            ncbi_ast_drug_map_template_row(
+                mapping_status="MIXTURE",
+                identifier="CHEBI:478164",
+            ),
+            "non-EXACT mapping must not carry structure fields",
+        ),
+        (
             write_project_dedupe_map_template,
             ncbi_ast_project_dedupe_template_row(accession_type=" BioProject"),
             "accession_type has leading or trailing whitespace",
