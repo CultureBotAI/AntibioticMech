@@ -1452,8 +1452,153 @@ def write_drug_map_template(rows: list[dict], path: Path, source_version: str) -
             })
 
 
-def write_project_dedupe_report(rows: list[dict], path: Path) -> None:
+def require_project_dedupe_report_integer(
+    row: dict[str, str],
+    field: str,
+    prefix: str,
+    *,
+    minimum: int = 0,
+) -> int:
+    try:
+        parsed = int(row[field])
+    except ValueError as error:
+        raise ValueError(f"{prefix}: {field} must be an integer") from error
+    if parsed < minimum:
+        raise ValueError(f"{prefix}: {field} must be at least {minimum}")
+    canonical = str(parsed)
+    if row[field] != canonical:
+        raise ValueError(f"{prefix}: {field} must use canonical integer {canonical!r}")
+    return parsed
+
+
+def require_sorted_pipe_values(
+    row: dict[str, str],
+    field: str,
+    prefix: str,
+    *,
+    pattern: re.Pattern[str] | None = None,
+) -> list[str]:
+    values = row[field].split("|") if row[field] else []
+    if any(not value for value in values):
+        raise ValueError(f"{prefix}: {field} contains an empty value")
+    canonical_values = sorted(set(values))
+    if values != canonical_values:
+        raise ValueError(f"{prefix}: {field} must be unique and sorted")
+    if pattern is not None:
+        for value in values:
+            if pattern.match(value) is None:
+                raise ValueError(f"{prefix}: invalid {field} value {value!r}")
+    return values
+
+
+def require_project_dedupe_report_rows(rows: list[dict], path: Path) -> None:
     require_output_rows(rows, PROJECT_DEDUPE_REPORT_COLUMNS, path)
+
+    for row_number, raw_row in enumerate(rows, start=1):
+        prefix = f"{path}: output row {row_number}"
+        row = {field: str(raw_row[field]) for field in PROJECT_DEDUPE_REPORT_COLUMNS}
+
+        accession_type = row["accession_type"]
+        if accession_type not in PROJECT_DEDUPE_ACCESSIONS:
+            raise ValueError(f"{prefix}: unsupported accession_type {accession_type!r}")
+        accession_pattern = PROJECT_DEDUPE_ACCESSIONS[accession_type][1]
+        if accession_pattern.match(row["accession"]) is None:
+            raise ValueError(f"{prefix}: invalid {accession_type} accession")
+
+        ast_rows = require_project_dedupe_report_integer(
+            row,
+            "ast_rows",
+            prefix,
+            minimum=1,
+        )
+        exact_mapped_rows = require_project_dedupe_report_integer(
+            row,
+            "exact_mapped_rows",
+            prefix,
+        )
+        exact_mapped_antibiotic_values = require_project_dedupe_report_integer(
+            row,
+            "exact_mapped_antibiotic_values",
+            prefix,
+        )
+        biosample_count = require_project_dedupe_report_integer(
+            row,
+            "biosample_count",
+            prefix,
+            minimum=1,
+        )
+        bioproject_count = require_project_dedupe_report_integer(
+            row,
+            "bioproject_count",
+            prefix,
+            minimum=1,
+        )
+        antibiotic_values = require_project_dedupe_report_integer(
+            row,
+            "antibiotic_values",
+            prefix,
+            minimum=1,
+        )
+
+        if exact_mapped_rows > ast_rows:
+            raise ValueError(f"{prefix}: exact_mapped_rows must be <= ast_rows")
+        if antibiotic_values > ast_rows:
+            raise ValueError(f"{prefix}: antibiotic_values must be <= ast_rows")
+        if exact_mapped_antibiotic_values > antibiotic_values:
+            raise ValueError(
+                f"{prefix}: exact_mapped_antibiotic_values must be <= antibiotic_values"
+            )
+        if exact_mapped_antibiotic_values > exact_mapped_rows:
+            raise ValueError(
+                f"{prefix}: exact_mapped_antibiotic_values must be <= "
+                "exact_mapped_rows"
+            )
+
+        exact_mapped_antibiotics = require_sorted_pipe_values(
+            row,
+            "exact_mapped_antibiotics",
+            prefix,
+        )
+        exact_mapped_identifiers = require_sorted_pipe_values(
+            row,
+            "exact_mapped_identifiers",
+            prefix,
+        )
+        antibiotics = require_sorted_pipe_values(row, "antibiotics", prefix)
+        require_sorted_pipe_values(
+            row,
+            "taxon_ids",
+            prefix,
+            pattern=ACTIVITY_REPORT_TAXON_ID_PATTERN,
+        )
+
+        if len(exact_mapped_antibiotics) != exact_mapped_antibiotic_values:
+            raise ValueError(
+                f"{prefix}: exact_mapped_antibiotic_values must match "
+                "exact_mapped_antibiotics"
+            )
+        if len(antibiotics) != antibiotic_values:
+            raise ValueError(f"{prefix}: antibiotic_values must match antibiotics")
+        if set(exact_mapped_antibiotics) - set(antibiotics):
+            raise ValueError(
+                f"{prefix}: exact_mapped_antibiotics must be a subset of antibiotics"
+            )
+        if exact_mapped_antibiotics and not exact_mapped_identifiers:
+            raise ValueError(
+                f"{prefix}: exact_mapped_identifiers are required for exact mappings"
+            )
+        if exact_mapped_identifiers and not exact_mapped_antibiotics:
+            raise ValueError(
+                f"{prefix}: exact_mapped_identifiers require exact_mapped_antibiotics"
+            )
+        if accession_type == "BioSample" and biosample_count != 1:
+            raise ValueError(f"{prefix}: biosample_count must be 1 for BioSample rows")
+        if accession_type == "BioProject" and bioproject_count != 1:
+            raise ValueError(f"{prefix}: bioproject_count must be 1 for BioProject rows")
+
+
+def write_project_dedupe_report(rows: list[dict], path: Path) -> None:
+    require_project_dedupe_report_rows(rows, path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
@@ -1466,8 +1611,22 @@ def write_project_dedupe_report(rows: list[dict], path: Path) -> None:
         writer.writerows(rows)
 
 
-def write_project_dedupe_map_template(rows: list[dict], path: Path) -> None:
+def require_project_dedupe_template_rows(rows: list[dict], path: Path) -> None:
     require_input_rows(rows, PROJECT_DEDUPE_MAP_TEMPLATE_INPUT_COLUMNS, path)
+
+    for row_number, row in enumerate(rows, start=1):
+        prefix = f"{path}: template input row {row_number}"
+        accession_type = str(row["accession_type"])
+        if accession_type not in PROJECT_DEDUPE_ACCESSIONS:
+            raise ValueError(f"{prefix}: unsupported accession_type {accession_type!r}")
+        accession_pattern = PROJECT_DEDUPE_ACCESSIONS[accession_type][1]
+        accession = str(row["accession"])
+        if accession_pattern.match(accession) is None:
+            raise ValueError(f"{prefix}: invalid {accession_type} accession")
+
+
+def write_project_dedupe_map_template(rows: list[dict], path: Path) -> None:
+    require_project_dedupe_template_rows(rows, path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
