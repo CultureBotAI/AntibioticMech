@@ -164,6 +164,7 @@ ACTIVITY_REPORT_COLUMNS = [
 ]
 EXACT_MAPPING_STATUS = "EXACT"
 PROJECT_DEDUPE_SELF_SOURCE = "NCBI_AST"
+PROJECT_DEDUPE_ALLOWED_SOURCES = frozenset({"CRYPTIC"})
 CURATED_TSV_CONTROL_CHARS = frozenset("\t\r\n")
 MAPPING_STATUSES = {
     EXACT_MAPPING_STATUS,
@@ -727,6 +728,12 @@ def read_project_dedupe_map(path: Path) -> dict[tuple[str, str], dict[str, str]]
             if normalize(row["source"]) == normalize(PROJECT_DEDUPE_SELF_SOURCE):
                 raise ValueError(
                     f"{accession}: project dedupe source cannot be {PROJECT_DEDUPE_SELF_SOURCE}"
+                )
+            if row["source"] not in PROJECT_DEDUPE_ALLOWED_SOURCES:
+                allowed = ", ".join(sorted(PROJECT_DEDUPE_ALLOWED_SOURCES))
+                raise ValueError(
+                    f"{accession}: unsupported project dedupe source {row['source']!r}; "
+                    f"expected one of {allowed}"
                 )
 
             key = (accession_type, accession)
