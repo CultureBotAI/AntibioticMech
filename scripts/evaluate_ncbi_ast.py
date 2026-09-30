@@ -1494,6 +1494,10 @@ def require_antibiotic_report_rows(rows: list[dict], path: Path) -> None:
                 path,
                 row_number,
             )
+        elif row["mapping_basis"] or row["mapping_notes"]:
+            raise ValueError(
+                f"{prefix}: unmapped row must not carry mapping rationale"
+            )
         if mapping_status == EXACT_MAPPING_STATUS:
             if not row["identifier"] or not row["standard_inchi_key"]:
                 raise ValueError(
@@ -1627,11 +1631,20 @@ def require_drug_map_template_rows(rows: list[dict], path: Path) -> None:
             )
         identifier = str(row["identifier"])
         standard_inchi_key = str(row["standard_inchi_key"])
+        mapping_basis = str(row["mapping_basis"])
+        mapping_notes = str(row["mapping_notes"])
         has_mapping = bool(identifier or standard_inchi_key)
         if mapping_status:
-            for field in ("mapping_basis", "mapping_notes"):
-                if not str(row[field]):
+            for field, value in (
+                ("mapping_basis", mapping_basis),
+                ("mapping_notes", mapping_notes),
+            ):
+                if not value:
                     raise ValueError(f"{prefix}: {field} is required")
+        elif mapping_basis or mapping_notes:
+            raise ValueError(
+                f"{prefix}: unmapped row must not carry mapping rationale"
+            )
         if mapping_status == EXACT_MAPPING_STATUS:
             if not identifier or not standard_inchi_key:
                 raise ValueError(
