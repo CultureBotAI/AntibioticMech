@@ -2575,6 +2575,23 @@ def test_project_dedupe_map_template_is_fillable_by_the_curator(tmp_path):
     ]
 
 
+def test_write_drug_map_template_rejects_duplicate_antibiotics_before_opening(
+    tmp_path,
+):
+    path = tmp_path / "ncbi_ast_drug_map.tsv"
+    path.write_text("keep me\n", encoding="utf-8")
+    row = ncbi_ast_drug_map_template_row()
+
+    with pytest.raises(ValueError, match="duplicate NCBI AST antibiotic template row"):
+        write_drug_map_template(
+            [row, row],
+            path,
+            source_version="2026-09-26-ast-browser",
+        )
+
+    assert path.read_text(encoding="utf-8") == "keep me\n"
+
+
 def test_write_project_dedupe_map_template_rejects_duplicate_contexts_before_opening(
     tmp_path,
 ):
@@ -2761,6 +2778,15 @@ def test_template_writers_reject_missing_input_columns(
             ),
             ncbi_ast_drug_map_template_row(mapping_notes="curated\nnote"),
             "mapping_notes contains a tab or newline",
+        ),
+        (
+            lambda rows, path: write_drug_map_template(
+                rows,
+                path,
+                source_version="2026-09-26-ast-browser",
+            ),
+            ncbi_ast_drug_map_template_row(normalized_antibiotic="cefipime"),
+            "normalized_antibiotic must match antibiotic",
         ),
         (
             write_project_dedupe_map_template,
