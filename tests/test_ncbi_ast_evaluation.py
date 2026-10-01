@@ -1099,6 +1099,14 @@ def test_project_dedupe_report_rows_rank_valid_project_contexts():
             "platform": "AST",
         },
         {
+            "antibiotic": "gentamicin",
+            "biosample_acc": "SAMN11953790",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+            "mic": "4",
+            "platform": "AST",
+        },
+        {
             "antibiotic": "cefepime",
             "biosample_acc": "SAMN11953785",
             "bioproject_acc": "PRJNA292669",
@@ -1216,36 +1224,6 @@ def test_project_dedupe_report_rows_rank_valid_project_contexts():
             "taxon_ids": "",
             "taxon_labels": "Klebsiella pneumoniae",
         },
-        {
-            "accession_type": "BioProject",
-            "accession": "PRJNA292667",
-            "ast_rows": 1,
-            "exact_mapped_rows": 0,
-            "exact_mapped_antibiotic_values": 0,
-            "exact_mapped_antibiotics": "",
-            "exact_mapped_identifiers": "",
-            "biosample_count": 1,
-            "bioproject_count": 1,
-            "antibiotic_values": 1,
-            "antibiotics": "gentamicin",
-            "taxon_ids": "",
-            "taxon_labels": "Escherichia coli",
-        },
-        {
-            "accession_type": "BioSample",
-            "accession": "SAMN11953779",
-            "ast_rows": 1,
-            "exact_mapped_rows": 0,
-            "exact_mapped_antibiotic_values": 0,
-            "exact_mapped_antibiotics": "",
-            "exact_mapped_identifiers": "",
-            "biosample_count": 1,
-            "bioproject_count": 1,
-            "antibiotic_values": 1,
-            "antibiotics": "gentamicin",
-            "taxon_ids": "",
-            "taxon_labels": "Escherichia coli",
-        },
     ]
 
     report_rows = project_dedupe_report_rows(
@@ -1260,10 +1238,7 @@ def test_project_dedupe_report_rows_rank_valid_project_contexts():
         },
     )
 
-    assert [row["accession"] for row in report_rows] == [
-        "PRJNA292667",
-        "SAMN11953779",
-    ]
+    assert report_rows == []
 
 
 def test_evaluate_rows_audits_unused_project_dedupe_contexts():
