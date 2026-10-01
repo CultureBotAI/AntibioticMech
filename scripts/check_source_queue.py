@@ -91,6 +91,21 @@ def source_sections(conf: dict) -> set[str]:
             if isinstance(value, dict) and SOURCE_MARKER in value}
 
 
+def pipeline_use_problems(
+    queue_by_source: dict[str, dict[str, str]],
+    pipeline_sources: set[str],
+) -> list[str]:
+    problems = []
+    for source in sorted(pipeline_sources):
+        row = queue_by_source.get(source)
+        if row is not None and row["use"] != "SEED":
+            problems.append(
+                f"{source}: read by conf/sources.yaml but use is "
+                f"{row['use']}, not SEED"
+            )
+    return problems
+
+
 def present_optional_inventories(root: Path = REPO_ROOT) -> dict[str, Path]:
     return {
         source_id: path
@@ -201,6 +216,9 @@ def main() -> int:
     adopted = {r["source_id"] for r in rows if r["status"] == "ADOPTED"}
     for source in sorted(pipeline_sources - adopted):
         problems.append(f"{source}: read by conf/sources.yaml but has no ADOPTED queue row")
+    # Configured sources feed committed record content, so they must use the
+    # SEED lane that trips the corpus redistribution gate.
+    problems.extend(pipeline_use_problems(queue_by_source, pipeline_sources))
     problems.extend(optional_inventory_problems(
         queue_by_source,
         present_optional_inventories(),
