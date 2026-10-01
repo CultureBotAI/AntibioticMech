@@ -1441,6 +1441,7 @@ ANTIBIOTIC_REPORT_COUNT_BOUNDS = (
     ("activity_report_dedupe_excluded_count", "valid_project_context_count"),
     ("activity_report_dedupe_excluded_count", "taxon_count"),
     ("activity_report_dedupe_excluded_count", "assay_method_count"),
+    ("activity_report_dedupe_excluded_count", "dedupe_context_count"),
     ("invalid_target_acc_count", "target_acc_count"),
     ("invalid_assembly_acc_count", "assembly_acc_count"),
     ("invalid_sra_accessions_count", "sra_accessions_count"),
