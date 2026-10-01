@@ -1863,14 +1863,10 @@ def require_project_dedupe_report_rows(rows: list[dict], path: Path) -> None:
             raise ValueError(f"{prefix}: biosample_count must be <= ast_rows")
         if bioproject_count > ast_rows:
             raise ValueError(f"{prefix}: bioproject_count must be <= ast_rows")
-        if exact_mapped_antibiotic_values > antibiotic_values:
+        if exact_mapped_antibiotic_values != antibiotic_values:
             raise ValueError(
-                f"{prefix}: exact_mapped_antibiotic_values must be <= antibiotic_values"
-            )
-        if exact_mapped_rows and not exact_mapped_antibiotic_values:
-            raise ValueError(
-                f"{prefix}: exact_mapped_rows requires "
-                "exact_mapped_antibiotic_values"
+                f"{prefix}: exact_mapped_antibiotic_values must match "
+                "antibiotic_values"
             )
 
         exact_mapped_antibiotics = require_sorted_pipe_values(
@@ -1899,9 +1895,9 @@ def require_project_dedupe_report_rows(rows: list[dict], path: Path) -> None:
             )
         if len(antibiotics) != antibiotic_values:
             raise ValueError(f"{prefix}: antibiotic_values must match antibiotics")
-        if set(exact_mapped_antibiotics) - set(antibiotics):
+        if exact_mapped_antibiotics != antibiotics:
             raise ValueError(
-                f"{prefix}: exact_mapped_antibiotics must be a subset of antibiotics"
+                f"{prefix}: exact_mapped_antibiotics must match antibiotics"
             )
         if len(exact_mapped_identifiers) > exact_mapped_antibiotic_values:
             raise ValueError(
