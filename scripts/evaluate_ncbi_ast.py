@@ -1453,6 +1453,16 @@ ANTIBIOTIC_REPORT_ACTIVITY_CONTEXT_COUNT_FIELDS = (
     "taxon_count",
     "assay_method_count",
 )
+ANTIBIOTIC_REPORT_ACTIVITY_EXCLUDING_COUNT_FIELDS = (
+    "invalid_target_acc_count",
+    "invalid_assembly_acc_count",
+    "invalid_sra_accessions_count",
+    "invalid_create_date_count",
+    "invalid_taxon_id_count",
+    "invalid_phenotype_count",
+    "invalid_mic_count",
+    "invalid_disk_diffusion_count",
+)
 
 
 def require_report_integer(
@@ -1561,6 +1571,13 @@ def require_antibiotic_report_rows(rows: list[dict], path: Path) -> None:
                     f"{prefix}: activity_report_candidate_count plus "
                     f"activity_report_dedupe_excluded_count must be <= {field}"
                 )
+        for field in ANTIBIOTIC_REPORT_ACTIVITY_EXCLUDING_COUNT_FIELDS:
+            if prededupe_activity_rows + counts[field] > counts["ast_rows"]:
+                raise ValueError(
+                    f"{prefix}: activity_report_candidate_count plus "
+                    "activity_report_dedupe_excluded_count plus "
+                    f"{field} must be <= ast_rows"
+                )
         if (
             counts["standardized_mic_count"]
             + counts["invalid_mic_count"]
@@ -1579,6 +1596,16 @@ def require_antibiotic_report_rows(rows: list[dict], path: Path) -> None:
                 f"{prefix}: disk_diffusion_count must match "
                 "standardized_disk_diffusion_count plus "
                 "invalid_disk_diffusion_count"
+            )
+        if (
+            prededupe_activity_rows
+            > counts["standardized_mic_count"]
+            + counts["standardized_disk_diffusion_count"]
+        ):
+            raise ValueError(
+                f"{prefix}: activity_report_candidate_count plus "
+                "activity_report_dedupe_excluded_count must be <= "
+                "standardized_mic_count plus standardized_disk_diffusion_count"
             )
 
         candidate_identifiers = require_sorted_pipe_values(

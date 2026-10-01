@@ -2954,6 +2954,8 @@ def test_template_writers_reject_missing_input_columns(
         (
             write_antibiotic_report,
             ncbi_ast_antibiotic_report_row(
+                activity_report_candidate_count=1,
+                activity_report_dedupe_excluded_count=0,
                 mic_count=1,
                 standardized_mic_count=1,
                 standardized_mic_values="2 mg/L|4 mg/L",
@@ -2964,6 +2966,8 @@ def test_template_writers_reject_missing_input_columns(
         (
             write_antibiotic_report,
             ncbi_ast_antibiotic_report_row(
+                activity_report_candidate_count=1,
+                activity_report_dedupe_excluded_count=0,
                 mic_count=1,
                 standardized_mic_count=1,
                 standardized_mic_values="",
@@ -3306,6 +3310,8 @@ def test_antibiotic_report_allows_only_invalid_taxon_ids(tmp_path):
     write_antibiotic_report(
         [
             ncbi_ast_antibiotic_report_row(
+                activity_report_candidate_count=4,
+                activity_report_dedupe_excluded_count=2,
                 taxon_id_count=1,
                 invalid_taxon_id_count=1,
                 taxon_ids="",
@@ -3315,6 +3321,75 @@ def test_antibiotic_report_allows_only_invalid_taxon_ids(tmp_path):
     )
 
     assert path.exists()
+
+
+@pytest.mark.parametrize(
+    ("invalid_count_overrides", "invalid_field"),
+    [
+        ({"invalid_target_acc_count": 1}, "invalid_target_acc_count"),
+        ({"invalid_assembly_acc_count": 1}, "invalid_assembly_acc_count"),
+        ({"invalid_sra_accessions_count": 1}, "invalid_sra_accessions_count"),
+        ({"invalid_create_date_count": 1}, "invalid_create_date_count"),
+        ({"invalid_taxon_id_count": 1}, "invalid_taxon_id_count"),
+        ({"invalid_phenotype_count": 1}, "invalid_phenotype_count"),
+        (
+            {
+                "standardized_mic_count": 6,
+                "invalid_mic_count": 1,
+            },
+            "invalid_mic_count",
+        ),
+        (
+            {
+                "disk_diffusion_count": 1,
+                "invalid_disk_diffusion_count": 1,
+            },
+            "invalid_disk_diffusion_count",
+        ),
+    ],
+)
+def test_antibiotic_report_bounds_activity_rows_to_valid_contexts(
+    tmp_path,
+    invalid_count_overrides,
+    invalid_field,
+):
+    path = tmp_path / "report.tsv"
+
+    with pytest.raises(
+        ValueError,
+        match=(
+            "activity_report_candidate_count plus "
+            "activity_report_dedupe_excluded_count plus "
+            f"{invalid_field} must be <= ast_rows"
+        ),
+    ):
+        write_antibiotic_report(
+            [ncbi_ast_antibiotic_report_row(**invalid_count_overrides)],
+            path,
+        )
+
+
+def test_antibiotic_report_bounds_activity_rows_to_measurements(tmp_path):
+    path = tmp_path / "report.tsv"
+
+    with pytest.raises(
+        ValueError,
+        match=(
+            "activity_report_candidate_count plus "
+            "activity_report_dedupe_excluded_count must be <= "
+            "standardized_mic_count plus standardized_disk_diffusion_count"
+        ),
+    ):
+        write_antibiotic_report(
+            [
+                ncbi_ast_antibiotic_report_row(
+                    mic_count=5,
+                    standardized_mic_count=5,
+                    standardized_mic_values="<=2 mg/L",
+                )
+            ],
+            path,
+        )
 
 
 @pytest.mark.parametrize(
