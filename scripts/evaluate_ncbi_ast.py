@@ -1763,6 +1763,8 @@ def require_pipe_values(
     values = row[field].split("|") if row[field] else []
     if any(not value for value in values):
         raise ValueError(f"{prefix}: {field} contains an empty value")
+    if any(value != value.strip() for value in values):
+        raise ValueError(f"{prefix}: {field} contains a padded value")
     if pattern is not None:
         for value in values:
             if pattern.match(value) is None:
