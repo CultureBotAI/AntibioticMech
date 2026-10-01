@@ -770,7 +770,7 @@ def read_drug_map(
                 raise ValueError(
                     f"{row['source_name']}: EXACT mapping needs identifier and standard_inchi_key"
                 )
-            if normalize(row["mapping_basis"]) == "none":
+            if is_no_mapping_basis(row["mapping_basis"]):
                 raise ValueError(
                     f"{row['source_name']}: EXACT mapping needs a non-none mapping_basis"
                 )
@@ -1506,6 +1506,10 @@ def require_antibiotic_report_rows(rows: list[dict], path: Path) -> None:
                 raise ValueError(
                     f"{prefix}: EXACT mapping needs identifier and standard_inchi_key"
                 )
+            if is_no_mapping_basis(row["mapping_basis"]):
+                raise ValueError(
+                    f"{prefix}: EXACT mapping needs a non-none mapping_basis"
+                )
             require_standard_inchi_key(
                 row["standard_inchi_key"],
                 "standard_inchi_key",
@@ -1684,6 +1688,10 @@ def require_drug_map_template_rows(rows: list[dict], path: Path) -> None:
                 raise ValueError(
                     f"{prefix}: EXACT mapping needs identifier and standard_inchi_key"
                 )
+            if is_no_mapping_basis(mapping_basis):
+                raise ValueError(
+                    f"{prefix}: EXACT mapping needs a non-none mapping_basis"
+                )
             require_standard_inchi_key(
                 standard_inchi_key,
                 "standard_inchi_key",
@@ -1751,6 +1759,10 @@ def require_pipe_values(
 def require_standard_inchi_key(value: str, field: str, prefix: str) -> None:
     if STANDARD_INCHI_KEY_PATTERN.match(value) is None:
         raise ValueError(f"{prefix}: invalid {field} value {value!r}")
+
+
+def is_no_mapping_basis(value: str) -> bool:
+    return normalize(value) == "none"
 
 
 def require_count_bounded_pipe_values(
