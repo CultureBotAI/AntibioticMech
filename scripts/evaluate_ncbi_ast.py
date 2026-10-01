@@ -1855,8 +1855,8 @@ def require_project_dedupe_report_rows(rows: list[dict], path: Path) -> None:
             minimum=1,
         )
 
-        if exact_mapped_rows > ast_rows:
-            raise ValueError(f"{prefix}: exact_mapped_rows must be <= ast_rows")
+        if exact_mapped_rows != ast_rows:
+            raise ValueError(f"{prefix}: exact_mapped_rows must match ast_rows")
         if antibiotic_values > ast_rows:
             raise ValueError(f"{prefix}: antibiotic_values must be <= ast_rows")
         if biosample_count > ast_rows:
@@ -1866,11 +1866,6 @@ def require_project_dedupe_report_rows(rows: list[dict], path: Path) -> None:
         if exact_mapped_antibiotic_values > antibiotic_values:
             raise ValueError(
                 f"{prefix}: exact_mapped_antibiotic_values must be <= antibiotic_values"
-            )
-        if exact_mapped_antibiotic_values > exact_mapped_rows:
-            raise ValueError(
-                f"{prefix}: exact_mapped_antibiotic_values must be <= "
-                "exact_mapped_rows"
             )
         if exact_mapped_rows and not exact_mapped_antibiotic_values:
             raise ValueError(
