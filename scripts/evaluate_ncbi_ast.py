@@ -2065,6 +2065,11 @@ def require_activity_report_rows(rows: list[dict], path: Path) -> None:
                 raise ValueError(f"{prefix}: sra_accessions must be unique and sorted")
         if row["normalized_antibiotic"] != normalize(row["source_name"]):
             raise ValueError(f"{prefix}: normalized_antibiotic must match source_name")
+        require_standard_inchi_key(
+            row["standard_inchi_key"],
+            "standard_inchi_key",
+            prefix,
+        )
         if not row["method"] and not row["platform"] and not row["reagent"]:
             raise ValueError(f"{prefix}: method, platform or reagent is required")
 
