@@ -668,7 +668,8 @@ def project_dedupe_source_versions(
 
 
 def read_table(path: Path) -> list[dict[str, str]]:
-    sample = path.read_text(encoding="utf-8", errors="replace")[:4096]
+    with path.open(encoding="utf-8", errors="replace") as handle:
+        sample = handle.read(4096)
     try:
         dialect = csv.Sniffer().sniff(sample, delimiters=",\t")
     except csv.Error:

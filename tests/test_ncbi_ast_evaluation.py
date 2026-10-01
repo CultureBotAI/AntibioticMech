@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import io
 import subprocess
 import sys
 from pathlib import Path
@@ -1374,6 +1375,40 @@ def test_read_table_accepts_browser_tsv_exports(tmp_path):
         "MIC": "2",
     }]
     assert normalize_header("AST.Antibiotic") == "antibiotic"
+
+
+def test_read_table_sniffs_a_bounded_prefix(tmp_path, monkeypatch):
+    path = tmp_path / "ast.tsv"
+    content = (
+        "AST.Antibiotic\tBioSample\tMIC\n"
+        "cefepime\tSAMN11953777\t2\n"
+    )
+    path.write_text(
+        content,
+        encoding="utf-8",
+    )
+
+    sample_sizes = []
+    real_open = type(path).open
+
+    class TrackingSample(io.StringIO):
+        def read(self, size=-1):
+            sample_sizes.append(size)
+            return super().read(size)
+
+    def open_tracking_sample(self, *args, **kwargs):
+        if self == path and not sample_sizes:
+            return TrackingSample(content)
+        return real_open(self, *args, **kwargs)
+
+    monkeypatch.setattr(type(path), "open", open_tracking_sample)
+
+    assert read_table(path) == [{
+        "AST.Antibiotic": "cefepime",
+        "BioSample": "SAMN11953777",
+        "MIC": "2",
+    }]
+    assert sample_sizes == [4096]
 
 
 def test_read_table_rejects_ragged_rows(tmp_path):
