@@ -228,6 +228,10 @@ just evaluate-ncbi-ast --ast ast.tsv --source-version 2026-09-26-ast-browser \
   --antibiotic-report ncbi_ast_antibiotics.tsv \
   --drug-map-template ncbi_ast_drug_map.tsv
 just evaluate-ncbi-ast --ast ast.tsv --drug-map ncbi_ast_drug_map.tsv \
+  --project-dedupe-report ncbi_ast_project_dedupe_report.tsv \
+  --project-dedupe-map-template ncbi_ast_project_dedupe.tsv \
+  --source-version 2026-09-26-ast-browser
+just evaluate-ncbi-ast --ast ast.tsv --drug-map ncbi_ast_drug_map.tsv \
   --project-dedupe-map ncbi_ast_project_dedupe.tsv \
   --activity-report ncbi_ast_activity.tsv \
   --source-version 2026-09-26-ast-browser --source-retrieved-on 2026-09-26
