@@ -2874,9 +2874,71 @@ def test_template_writers_reject_missing_input_columns(
             write_antibiotic_report,
             ncbi_ast_antibiotic_report_row(
                 activity_report_candidate_count="6",
+                valid_project_context_count="5",
+            ),
+            "activity_report_candidate_count must be <= "
+            "valid_project_context_count",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                activity_report_candidate_count="6",
+                valid_project_context_count="7",
+                taxon_count="5",
+            ),
+            "activity_report_candidate_count must be <= taxon_count",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                activity_report_candidate_count="6",
+                valid_project_context_count="7",
+                taxon_count="7",
+                assay_method_count="5",
+            ),
+            "activity_report_candidate_count must be <= assay_method_count",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                activity_report_candidate_count="6",
+                activity_report_dedupe_excluded_count="2",
             ),
             "activity_report_candidate_count plus "
-            "activity_report_dedupe_excluded_count must be <= ast_rows",
+            "activity_report_dedupe_excluded_count must be <= "
+            "valid_project_context_count",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                ast_rows="10",
+                biosample_count="10",
+                bioproject_count="10",
+                project_context_count="10",
+                valid_project_context_count="10",
+                taxon_count="8",
+                assay_method_count="10",
+                activity_report_candidate_count="5",
+                activity_report_dedupe_excluded_count="4",
+            ),
+            "activity_report_candidate_count plus "
+            "activity_report_dedupe_excluded_count must be <= taxon_count",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                ast_rows="10",
+                biosample_count="10",
+                bioproject_count="10",
+                project_context_count="10",
+                valid_project_context_count="10",
+                taxon_count="10",
+                assay_method_count="8",
+                activity_report_candidate_count="5",
+                activity_report_dedupe_excluded_count="4",
+            ),
+            "activity_report_candidate_count plus "
+            "activity_report_dedupe_excluded_count must be <= assay_method_count",
         ),
         (
             write_antibiotic_report,
