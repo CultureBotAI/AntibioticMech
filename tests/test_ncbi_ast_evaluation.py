@@ -3051,6 +3051,16 @@ def test_template_writers_reject_missing_input_columns(
         (
             write_project_dedupe_report,
             ncbi_ast_project_dedupe_report_row(
+                exact_mapped_rows=0,
+                exact_mapped_antibiotic_values=0,
+                exact_mapped_antibiotics="",
+                exact_mapped_identifiers="",
+            ),
+            "exact_mapped_rows must be at least 1",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(
                 exact_mapped_rows=1,
                 exact_mapped_antibiotic_values=0,
                 exact_mapped_antibiotics="",
