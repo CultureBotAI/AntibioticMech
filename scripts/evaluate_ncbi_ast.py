@@ -1003,6 +1003,8 @@ def project_dedupe_report_rows(
         normalized_antibiotic = normalize(source_name)
         mapping = mappings.get(normalized_antibiotic, {})
         exact_mapped = mapping.get("mapping_status") == EXACT_MAPPING_STATUS
+        if not exact_mapped:
+            continue
         taxon_id = context["taxon_id"]
         taxon_label = context["taxon_label"]
 
