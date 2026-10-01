@@ -2222,6 +2222,23 @@ def write_activity_report(rows: list[dict], path: Path) -> None:
         writer.writerows(rows)
 
 
+def reject_reused_cli_paths(
+    parser: argparse.ArgumentParser,
+    paths: Iterable[tuple[str, Path | None]],
+) -> None:
+    """Prevent one evaluator invocation from overwriting its own inputs/outputs."""
+
+    seen: dict[Path, str] = {}
+    for option, path in paths:
+        if path is None:
+            continue
+        resolved = path.expanduser().resolve()
+        previous = seen.get(resolved)
+        if previous is not None:
+            parser.error(f"{option} must not reuse {previous} path: {path}")
+        seen[resolved] = option
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ast", type=Path, required=True, help="NCBI AST Browser CSV/TSV export.")
@@ -2313,6 +2330,19 @@ def main() -> int:
         parser.error("--activity-report requires --source-retrieved-on.")
     if args.source_retrieved_on and not is_iso_date(args.source_retrieved_on):
         parser.error("--source-retrieved-on must be an ISO date.")
+    reject_reused_cli_paths(
+        parser,
+        (
+            ("--ast", args.ast),
+            ("--drug-map", args.drug_map),
+            ("--project-dedupe-map", args.project_dedupe_map),
+            ("--antibiotic-report", args.antibiotic_report),
+            ("--activity-report", args.activity_report),
+            ("--drug-map-template", args.drug_map_template),
+            ("--project-dedupe-report", args.project_dedupe_report),
+            ("--project-dedupe-map-template", args.project_dedupe_map_template),
+        ),
+    )
 
     rows = read_table(args.ast)
     require_any_antibiotic_value(rows, args.ast)

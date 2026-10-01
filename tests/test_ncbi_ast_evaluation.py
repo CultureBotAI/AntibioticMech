@@ -3740,6 +3740,65 @@ def test_cli_rejects_project_dedupe_options_without_drug_map(
         assert not dedupe_report.exists()
 
 
+def test_cli_rejects_drug_map_template_over_curated_drug_map(tmp_path):
+    ast = tmp_path / "ast.tsv"
+    ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
+    drug_map = tmp_path / "ncbi_ast_drug_map.tsv"
+    drug_map.write_text("keep curated drug map\n", encoding="utf-8")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            "--drug-map",
+            str(drug_map),
+            "--drug-map-template",
+            str(drug_map),
+            "--source-version",
+            "2026-09-26-ast-browser",
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 2
+    assert "--drug-map-template must not reuse --drug-map path" in result.stderr
+    assert drug_map.read_text(encoding="utf-8") == "keep curated drug map\n"
+
+
+def test_cli_rejects_sibling_reports_with_the_same_path(tmp_path):
+    ast = tmp_path / "ast.tsv"
+    ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
+    report = tmp_path / "ncbi_ast_report.tsv"
+    report.write_text("keep report\n", encoding="utf-8")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            "--antibiotic-report",
+            str(report),
+            "--drug-map-template",
+            str(report),
+            "--source-version",
+            "2026-09-26-ast-browser",
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 2
+    assert (
+        "--drug-map-template must not reuse --antibiotic-report path"
+        in result.stderr
+    )
+    assert report.read_text(encoding="utf-8") == "keep report\n"
+
+
 def test_cli_rejects_ast_without_antibiotic_values_before_opening_reports(tmp_path):
     ast = tmp_path / "ast.tsv"
     ast.write_text("BioSample\tMIC\nSAMN11953777\t2\n", encoding="utf-8")
