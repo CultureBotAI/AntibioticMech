@@ -3038,6 +3038,7 @@ def test_template_writers_reject_missing_input_columns(
             write_project_dedupe_report,
             ncbi_ast_project_dedupe_report_row(
                 exact_mapped_antibiotic_values=1,
+                antibiotic_values=1,
             ),
             "exact_mapped_antibiotic_values must match exact_mapped_antibiotics",
         ),
@@ -3054,16 +3055,17 @@ def test_template_writers_reject_missing_input_columns(
         (
             write_project_dedupe_report,
             ncbi_ast_project_dedupe_report_row(
-                ast_rows=1,
-                exact_mapped_rows=1,
-                biosample_count=1,
-                antibiotic_values=1,
-                antibiotics="cefepime",
-                exact_mapped_antibiotic_values=0,
-                exact_mapped_antibiotics="",
-                exact_mapped_identifiers="",
+                exact_mapped_antibiotic_values=1,
+                exact_mapped_antibiotics="cefepime",
             ),
-            "exact_mapped_rows requires exact_mapped_antibiotic_values",
+            "exact_mapped_antibiotic_values must match antibiotic_values",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(
+                exact_mapped_antibiotics="cefepime|meropenem",
+            ),
+            "exact_mapped_antibiotics must match antibiotics",
         ),
         (
             write_project_dedupe_report,
