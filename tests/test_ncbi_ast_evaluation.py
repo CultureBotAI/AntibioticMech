@@ -2843,6 +2843,13 @@ def test_template_writers_reject_missing_input_columns(
             "exact_name_candidate_identifiers",
         ),
         (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                exact_name_candidate_inchi_keys="HVFLCNVBZFFHBT",
+            ),
+            "invalid exact_name_candidate_inchi_keys value",
+        ),
+        (
             write_project_dedupe_report,
             ncbi_ast_project_dedupe_report_row(accession=None),
             "accession is missing",

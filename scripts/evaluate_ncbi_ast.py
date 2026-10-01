@@ -22,6 +22,7 @@ from pathlib import Path
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+STANDARD_INCHI_KEY_PATTERN = re.compile(r"^[A-Z]{14}-[A-Z]{10}-[A-Z]$")
 
 DRUG_MAP_COLUMNS = [
     "source_version",
@@ -1560,15 +1561,12 @@ def require_antibiotic_report_rows(rows: list[dict], path: Path) -> None:
             "exact_name_candidate_identifiers",
             prefix,
         )
-        candidate_keys = (
-            row["exact_name_candidate_inchi_keys"].split("|")
-            if row["exact_name_candidate_inchi_keys"]
-            else []
+        candidate_keys = require_pipe_values(
+            row,
+            "exact_name_candidate_inchi_keys",
+            prefix,
+            pattern=STANDARD_INCHI_KEY_PATTERN,
         )
-        if any(not value for value in candidate_keys):
-            raise ValueError(
-                f"{prefix}: exact_name_candidate_inchi_keys contains an empty value"
-            )
         if len(candidate_identifiers) != counts["exact_name_candidate_count"]:
             raise ValueError(
                 f"{prefix}: exact_name_candidate_count must match "
@@ -1714,12 +1712,23 @@ def require_sorted_pipe_values(
     *,
     pattern: re.Pattern[str] | None = None,
 ) -> list[str]:
-    values = row[field].split("|") if row[field] else []
-    if any(not value for value in values):
-        raise ValueError(f"{prefix}: {field} contains an empty value")
+    values = require_pipe_values(row, field, prefix, pattern=pattern)
     canonical_values = sorted(set(values))
     if values != canonical_values:
         raise ValueError(f"{prefix}: {field} must be unique and sorted")
+    return values
+
+
+def require_pipe_values(
+    row: dict[str, str],
+    field: str,
+    prefix: str,
+    *,
+    pattern: re.Pattern[str] | None = None,
+) -> list[str]:
+    values = row[field].split("|") if row[field] else []
+    if any(not value for value in values):
+        raise ValueError(f"{prefix}: {field} contains an empty value")
     if pattern is not None:
         for value in values:
             if pattern.match(value) is None:
