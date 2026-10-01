@@ -3102,6 +3102,13 @@ def test_template_writers_reject_missing_input_columns(
         ),
         (
             write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(
+                taxon_labels="Escherichia coli |Klebsiella pneumoniae"
+            ),
+            "taxon_labels contains a padded value",
+        ),
+        (
+            write_project_dedupe_report,
             ncbi_ast_project_dedupe_report_row(taxon_labels=""),
             "taxon_labels is required",
         ),
