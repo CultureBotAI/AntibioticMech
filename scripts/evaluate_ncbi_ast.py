@@ -770,6 +770,10 @@ def read_drug_map(
                 raise ValueError(
                     f"{row['source_name']}: EXACT mapping needs identifier and standard_inchi_key"
                 )
+            if normalize(row["mapping_basis"]) == "none":
+                raise ValueError(
+                    f"{row['source_name']}: EXACT mapping needs a non-none mapping_basis"
+                )
             expected = structure_keys.get(identifier)
             if expected is None:
                 raise ValueError(
