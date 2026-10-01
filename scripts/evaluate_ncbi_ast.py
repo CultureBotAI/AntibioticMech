@@ -1433,12 +1433,23 @@ ANTIBIOTIC_REPORT_COUNT_BOUNDS = (
     ("project_context_count", "biosample_count"),
     ("project_context_count", "bioproject_count"),
     ("valid_project_context_count", "project_context_count"),
+    ("activity_report_candidate_count", "valid_project_context_count"),
+    ("activity_report_candidate_count", "taxon_count"),
+    ("activity_report_candidate_count", "assay_method_count"),
+    ("activity_report_dedupe_excluded_count", "valid_project_context_count"),
+    ("activity_report_dedupe_excluded_count", "taxon_count"),
+    ("activity_report_dedupe_excluded_count", "assay_method_count"),
     ("invalid_target_acc_count", "target_acc_count"),
     ("invalid_assembly_acc_count", "assembly_acc_count"),
     ("invalid_sra_accessions_count", "sra_accessions_count"),
     ("invalid_create_date_count", "create_date_count"),
     ("invalid_taxon_id_count", "taxon_id_count"),
     ("invalid_phenotype_count", "phenotype_count"),
+)
+ANTIBIOTIC_REPORT_ACTIVITY_CONTEXT_COUNT_FIELDS = (
+    "valid_project_context_count",
+    "taxon_count",
+    "assay_method_count",
 )
 
 
@@ -1538,15 +1549,16 @@ def require_antibiotic_report_rows(rows: list[dict], path: Path) -> None:
                 raise ValueError(
                     f"{prefix}: {field} must be <= {maximum_field}"
                 )
-        if (
+        prededupe_activity_rows = (
             counts["activity_report_candidate_count"]
             + counts["activity_report_dedupe_excluded_count"]
-            > counts["ast_rows"]
-        ):
-            raise ValueError(
-                f"{prefix}: activity_report_candidate_count plus "
-                "activity_report_dedupe_excluded_count must be <= ast_rows"
-            )
+        )
+        for field in ANTIBIOTIC_REPORT_ACTIVITY_CONTEXT_COUNT_FIELDS:
+            if prededupe_activity_rows > counts[field]:
+                raise ValueError(
+                    f"{prefix}: activity_report_candidate_count plus "
+                    f"activity_report_dedupe_excluded_count must be <= {field}"
+                )
         if (
             counts["standardized_mic_count"]
             + counts["invalid_mic_count"]
