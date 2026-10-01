@@ -2850,6 +2850,13 @@ def test_template_writers_reject_missing_input_columns(
             "invalid exact_name_candidate_inchi_keys value",
         ),
         (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                standard_inchi_key="HVFLCNVBZFFHBT",
+            ),
+            "invalid standard_inchi_key value",
+        ),
+        (
             write_project_dedupe_report,
             ncbi_ast_project_dedupe_report_row(accession=None),
             "accession is missing",
@@ -3011,6 +3018,17 @@ def test_template_writers_reject_missing_input_columns(
             ),
             ncbi_ast_drug_map_template_row(identifier=""),
             "EXACT mapping needs identifier and standard_inchi_key",
+        ),
+        (
+            lambda rows, path: write_drug_map_template(
+                rows,
+                path,
+                source_version="2026-09-26-ast-browser",
+            ),
+            ncbi_ast_drug_map_template_row(
+                standard_inchi_key="HVFLCNVBZFFHBT",
+            ),
+            "invalid standard_inchi_key value",
         ),
         (
             lambda rows, path: write_drug_map_template(

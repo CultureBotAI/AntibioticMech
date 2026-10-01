@@ -1504,6 +1504,11 @@ def require_antibiotic_report_rows(rows: list[dict], path: Path) -> None:
                 raise ValueError(
                     f"{prefix}: EXACT mapping needs identifier and standard_inchi_key"
                 )
+            require_standard_inchi_key(
+                row["standard_inchi_key"],
+                "standard_inchi_key",
+                prefix,
+            )
         elif has_mapping:
             raise ValueError(
                 f"{prefix}: non-EXACT mapping must not carry structure fields"
@@ -1677,6 +1682,11 @@ def require_drug_map_template_rows(rows: list[dict], path: Path) -> None:
                 raise ValueError(
                     f"{prefix}: EXACT mapping needs identifier and standard_inchi_key"
                 )
+            require_standard_inchi_key(
+                standard_inchi_key,
+                "standard_inchi_key",
+                prefix,
+            )
         elif has_mapping:
             raise ValueError(
                 f"{prefix}: non-EXACT mapping must not carry structure fields"
@@ -1734,6 +1744,11 @@ def require_pipe_values(
             if pattern.match(value) is None:
                 raise ValueError(f"{prefix}: invalid {field} value {value!r}")
     return values
+
+
+def require_standard_inchi_key(value: str, field: str, prefix: str) -> None:
+    if STANDARD_INCHI_KEY_PATTERN.match(value) is None:
+        raise ValueError(f"{prefix}: invalid {field} value {value!r}")
 
 
 def require_count_bounded_pipe_values(
