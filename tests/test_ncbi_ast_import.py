@@ -228,6 +228,10 @@ def test_load_ncbi_ast_activity_inventory_rejects_mixed_source_metadata(tmp_path
             "sra_accessions must be unique and sorted",
         ),
         ({"normalized_antibiotic": "stale"}, "normalized_antibiotic must match source_name"),
+        (
+            {"standard_inchi_key": "HVFLCNVBZFFHBT"},
+            "invalid standard_inchi_key value",
+        ),
         ({"phenotype": "non-susceptible", "activity": ""}, "unsupported phenotype"),
         ({"activity": "NON_SUSCEPTIBLE"}, "activity must match phenotype"),
         ({"phenotype": "S", "activity": "RESISTANT"}, "activity must match phenotype"),
@@ -345,7 +349,7 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     ("row_overrides", "records", "message"),
     [
         (
-            {"standard_inchi_key": "STALE"},
+            {"standard_inchi_key": "AAAAAAAAAAAAAA-AAAAAAAAAA-A"},
             {
                 "CHEBI:478164": {
                     "identifier": "CHEBI:478164",
@@ -355,10 +359,14 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
                     "curation_history": [],
                 },
             },
-            "mapped InChIKey STALE does not match CHEBI:478164",
+            "mapped InChIKey AAAAAAAAAAAAAA-AAAAAAAAAA-A "
+            "does not match CHEBI:478164",
         ),
         (
-            {"identifier": "CHEBI:999999", "standard_inchi_key": "STALE"},
+            {
+                "identifier": "CHEBI:999999",
+                "standard_inchi_key": "AAAAAAAAAAAAAA-AAAAAAAAAA-A",
+            },
             {},
             "mapped identifier CHEBI:999999 is not in the corpus",
         ),
