@@ -9,6 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from check_source_queue import (  # noqa: E402
     optional_inventory_problems,
+    pipeline_use_problems,
     present_optional_inventories,
 )
 
@@ -53,3 +54,26 @@ def test_optional_inventory_problems_rejects_preadoption_exact_reports():
         {"ncbi-ast": {"status": "ADOPTED"}},
         present,
     ) == []
+
+
+def test_pipeline_use_problems_rejects_configured_non_seed_sources():
+    queue_by_source = {
+        "configured-curate": {"use": "CURATE_ONLY"},
+        "configured-reference": {"use": "REFERENCE"},
+        "configured-seed": {"use": "SEED"},
+    }
+
+    assert pipeline_use_problems(
+        queue_by_source,
+        {
+            "configured-curate",
+            "configured-reference",
+            "configured-seed",
+            "missing",
+        },
+    ) == [
+        "configured-curate: read by conf/sources.yaml but use is "
+        "CURATE_ONLY, not SEED",
+        "configured-reference: read by conf/sources.yaml but use is "
+        "REFERENCE, not SEED",
+    ]
