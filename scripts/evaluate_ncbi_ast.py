@@ -1827,6 +1827,7 @@ def require_project_dedupe_report_rows(rows: list[dict], path: Path) -> None:
             row,
             "exact_mapped_rows",
             prefix,
+            minimum=1,
         )
         exact_mapped_antibiotic_values = require_report_integer(
             row,
