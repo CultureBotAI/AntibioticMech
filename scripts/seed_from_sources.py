@@ -2674,6 +2674,7 @@ NCBI_AST_SRA_ACCESSION_PATTERN = re.compile(
     r"^(SRR|ERR|DRR|SRX|ERX|DRX|SRP|ERP|DRP|SRS|ERS|DRS)[0-9]+$"
 )
 NCBI_AST_TAXON_PATTERN = re.compile(r"^NCBITaxon:[1-9][0-9]*$")
+NCBI_AST_STANDARD_INCHI_KEY_PATTERN = re.compile(r"^[A-Z]{14}-[A-Z]{10}-[A-Z]$")
 NCBI_AST_NORMALIZED_NAME_PATTERN = re.compile(r"[^a-z0-9]+")
 NCBI_AST_TSV_CONTROL_CHARS = frozenset("\t\r\n")
 NCBI_AST_SOURCE_CONTEXT_FIELDS = {
@@ -2983,6 +2984,16 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                     )
             if row["normalized_antibiotic"] != normalized_ncbi_ast_name(row["source_name"]):
                 raise ValueError(f"{prefix}: normalized_antibiotic must match source_name")
+            if (
+                NCBI_AST_STANDARD_INCHI_KEY_PATTERN.match(
+                    row["standard_inchi_key"]
+                )
+                is None
+            ):
+                raise ValueError(
+                    f"{prefix}: invalid standard_inchi_key value "
+                    f"{row['standard_inchi_key']!r}"
+                )
             if not row["method"] and not row["platform"] and not row["reagent"]:
                 raise ValueError(f"{prefix}: method, platform or reagent is required")
             if expected_source_version is None:
