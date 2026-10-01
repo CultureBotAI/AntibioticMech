@@ -1783,6 +1783,27 @@ def test_read_drug_map_rejects_identity_drift(tmp_path):
         )
 
 
+def test_read_drug_map_rejects_exact_rows_with_no_mapping_basis(tmp_path):
+    path = tmp_path / "ncbi_ast_antibiotic_map.tsv"
+    path.write_text(
+        "\t".join(DRUG_MAP_COLUMNS)
+        + "\n"
+        + (
+            "2026-09-26-ast-browser\tamikacin\tamikacin\tEXACT\tCHEBI:2637\t"
+            "LKCWBDHBTVXHDL-RMDFUYIESA-N\tnone\t"
+            "Exact rows must say how the source name identifies this structure.\n"
+        ),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="EXACT mapping needs a non-none mapping_basis"):
+        read_drug_map(
+            path,
+            {"CHEBI:2637": "LKCWBDHBTVXHDL-RMDFUYIESA-N"},
+            source_version="2026-09-26-ast-browser",
+        )
+
+
 def test_read_drug_map_rejects_source_version_drift(tmp_path):
     path = tmp_path / "ncbi_ast_antibiotic_map.tsv"
     path.write_text(
