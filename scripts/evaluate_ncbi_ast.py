@@ -2260,6 +2260,13 @@ def main() -> int:
     args = parser.parse_args()
     if args.activity_report and not args.drug_map:
         parser.error("--activity-report requires --drug-map with exact curated mappings.")
+    if (
+        args.project_dedupe_report or args.project_dedupe_map_template
+    ) and not args.drug_map:
+        parser.error(
+            "--project-dedupe-report and --project-dedupe-map-template "
+            "require --drug-map with exact curated mappings."
+        )
     if args.activity_report and not args.source_version.strip():
         parser.error("--activity-report requires --source-version.")
     if (args.drug_map or args.drug_map_template) and not args.source_version.strip():

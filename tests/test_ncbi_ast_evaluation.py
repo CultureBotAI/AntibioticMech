@@ -3584,6 +3584,42 @@ def test_cli_rejects_activity_report_without_drug_map(tmp_path):
     assert not activity_report.exists()
 
 
+@pytest.mark.parametrize(
+    "dedupe_report_option",
+    [
+        "--project-dedupe-report",
+        "--project-dedupe-map-template",
+    ],
+)
+def test_cli_rejects_project_dedupe_reports_without_drug_map(
+    tmp_path,
+    dedupe_report_option,
+):
+    ast = tmp_path / "ast.tsv"
+    ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
+    dedupe_report = tmp_path / "ncbi_ast_project_dedupe.tsv"
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            dedupe_report_option,
+            str(dedupe_report),
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 2
+    assert (
+        "--project-dedupe-report and --project-dedupe-map-template require --drug-map"
+        in result.stderr
+    )
+    assert not dedupe_report.exists()
+
+
 def test_cli_rejects_ast_without_antibiotic_values_before_opening_reports(tmp_path):
     ast = tmp_path / "ast.tsv"
     ast.write_text("BioSample\tMIC\nSAMN11953777\t2\n", encoding="utf-8")
