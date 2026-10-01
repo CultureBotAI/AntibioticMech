@@ -2239,6 +2239,35 @@ def reject_reused_cli_paths(
         seen[resolved] = option
 
 
+def reject_unsafe_cli_output_paths(
+    parser: argparse.ArgumentParser,
+    paths: Iterable[tuple[str, Path | None]],
+) -> None:
+    """Reject output paths that would fail after sibling reports are written."""
+
+    output_paths = []
+    for option, path in paths:
+        if path is None:
+            continue
+
+        expanded = path.expanduser()
+        if expanded.exists() and expanded.is_dir():
+            parser.error(f"{option} must be a file path, not a directory: {path}")
+        if expanded.parent.exists() and not expanded.parent.is_dir():
+            parser.error(
+                f"{option} parent must be a directory: {expanded.parent}"
+            )
+        output_paths.append((option, path, expanded.resolve(strict=False)))
+
+    for child_option, child_path, child_resolved in output_paths:
+        for parent_option, _, parent_resolved in output_paths:
+            if child_option != parent_option and parent_resolved in child_resolved.parents:
+                parser.error(
+                    f"{child_option} must not be nested under "
+                    f"{parent_option} path: {child_path}"
+                )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ast", type=Path, required=True, help="NCBI AST Browser CSV/TSV export.")
@@ -2336,6 +2365,16 @@ def main() -> int:
             ("--ast", args.ast),
             ("--drug-map", args.drug_map),
             ("--project-dedupe-map", args.project_dedupe_map),
+            ("--antibiotic-report", args.antibiotic_report),
+            ("--activity-report", args.activity_report),
+            ("--drug-map-template", args.drug_map_template),
+            ("--project-dedupe-report", args.project_dedupe_report),
+            ("--project-dedupe-map-template", args.project_dedupe_map_template),
+        ),
+    )
+    reject_unsafe_cli_output_paths(
+        parser,
+        (
             ("--antibiotic-report", args.antibiotic_report),
             ("--activity-report", args.activity_report),
             ("--drug-map-template", args.drug_map_template),
