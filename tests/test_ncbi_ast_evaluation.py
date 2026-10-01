@@ -2611,6 +2611,17 @@ def test_write_project_dedupe_report_rejects_duplicate_contexts_before_opening(
     assert path.read_text(encoding="utf-8") == "keep me\n"
 
 
+def test_project_dedupe_report_allows_missing_taxon_ids(tmp_path):
+    path = tmp_path / "ncbi_ast_project_dedupe_report.tsv"
+
+    write_project_dedupe_report(
+        [ncbi_ast_project_dedupe_report_row(taxon_ids="")],
+        path,
+    )
+
+    assert path.exists()
+
+
 def test_write_antibiotic_report_rejects_duplicate_antibiotics_before_opening(
     tmp_path,
 ):
@@ -3093,6 +3104,38 @@ def test_template_writers_reject_missing_input_columns(
             write_project_dedupe_report,
             ncbi_ast_project_dedupe_report_row(taxon_ids="NCBITaxon:0"),
             "invalid taxon_ids value",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(
+                ast_rows=1,
+                exact_mapped_rows=1,
+                exact_mapped_antibiotic_values=1,
+                exact_mapped_antibiotics="cefepime",
+                exact_mapped_identifiers="CHEBI:478164",
+                biosample_count=1,
+                bioproject_count=1,
+                antibiotic_values=1,
+                antibiotics="cefepime",
+                taxon_ids="NCBITaxon:562|NCBITaxon:573",
+            ),
+            "taxon_ids must have no more values than ast_rows",
+        ),
+        (
+            write_project_dedupe_report,
+            ncbi_ast_project_dedupe_report_row(
+                ast_rows=1,
+                exact_mapped_rows=1,
+                exact_mapped_antibiotic_values=1,
+                exact_mapped_antibiotics="cefepime",
+                exact_mapped_identifiers="CHEBI:478164",
+                biosample_count=1,
+                bioproject_count=1,
+                antibiotic_values=1,
+                antibiotics="cefepime",
+                taxon_labels="Escherichia coli|Klebsiella pneumoniae",
+            ),
+            "taxon_labels must have no more values than ast_rows",
         ),
         (
             write_project_dedupe_report,

@@ -1880,7 +1880,7 @@ def require_project_dedupe_report_rows(rows: list[dict], path: Path) -> None:
             prefix,
         )
         antibiotics = require_sorted_pipe_values(row, "antibiotics", prefix)
-        require_sorted_pipe_values(
+        taxon_ids = require_sorted_pipe_values(
             row,
             "taxon_ids",
             prefix,
@@ -1907,6 +1907,14 @@ def require_project_dedupe_report_rows(rows: list[dict], path: Path) -> None:
         if exact_mapped_antibiotics and not exact_mapped_identifiers:
             raise ValueError(
                 f"{prefix}: exact_mapped_identifiers are required for exact mappings"
+            )
+        if len(taxon_ids) > ast_rows:
+            raise ValueError(
+                f"{prefix}: taxon_ids must have no more values than ast_rows"
+            )
+        if len(taxon_labels) > ast_rows:
+            raise ValueError(
+                f"{prefix}: taxon_labels must have no more values than ast_rows"
             )
         if not taxon_labels:
             raise ValueError(f"{prefix}: taxon_labels is required")
