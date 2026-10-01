@@ -2381,6 +2381,13 @@ def test_write_activity_report_rejects_empty_reports_before_opening(tmp_path):
             "normalized_antibiotic must match source_name",
         ),
         (
+            {
+                "standard_inchi_key": "HVFLCNVBZFFHBT",
+                "activity_group_id": "ncbi_ast:9f4d0c7961e56702",
+            },
+            "invalid standard_inchi_key value",
+        ),
+        (
             {"method": "", "platform": "", "reagent": ""},
             "method, platform or reagent is required",
         ),
