@@ -1735,7 +1735,7 @@ def test_read_drug_map_accepts_exact_and_non_exact_rows(tmp_path):
         ])
         + "\n"
         + "\n".join([
-            "2026-09-26-ast-browser\tamikacin\t amikacin \tEXACT\tCHEBI:2637\t"
+            "2026-09-26-ast-browser\tamikacin\tamikacin\tEXACT\tCHEBI:2637\t"
             "LKCWBDHBTVXHDL-RMDFUYIESA-N\tparent_base\tok",
             "2026-09-26-ast-browser\tgentamicin\tgentamicin\tMIXTURE\t\t\tnone\tmixture",
         ])
@@ -1864,7 +1864,7 @@ def test_read_drug_map_requires_mapping_rationale(tmp_path):
     path.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + "2026-09-26-ast-browser\tamikacin\tamikacin\tMIXTURE\t\t\t \tmixture\n",
+        + "2026-09-26-ast-browser\tamikacin\tamikacin\tMIXTURE\t\t\t\tmixture\n",
         encoding="utf-8",
     )
 
@@ -1874,11 +1874,30 @@ def test_read_drug_map_requires_mapping_rationale(tmp_path):
     path.write_text(
         "\t".join(DRUG_MAP_COLUMNS)
         + "\n"
-        + "2026-09-26-ast-browser\tamikacin\tamikacin\tMIXTURE\t\t\tnone\t \n",
+        + "2026-09-26-ast-browser\tamikacin\tamikacin\tMIXTURE\t\t\tnone\t\n",
         encoding="utf-8",
     )
 
     with pytest.raises(ValueError, match="notes is required"):
+        read_drug_map(path, {}, source_version="2026-09-26-ast-browser")
+
+
+def test_read_drug_map_rejects_padded_cells(tmp_path):
+    path = tmp_path / "ncbi_ast_antibiotic_map.tsv"
+    path.write_text(
+        "\t".join(DRUG_MAP_COLUMNS)
+        + "\n"
+        + (
+            "2026-09-26-ast-browser\tamikacin\t amikacin\tMIXTURE\t\t\t"
+            "none\tmixture\n"
+        ),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(
+        ValueError,
+        match="source_name has leading or trailing whitespace",
+    ):
         read_drug_map(path, {}, source_version="2026-09-26-ast-browser")
 
 
@@ -1896,7 +1915,7 @@ def test_read_project_dedupe_map_accepts_biosample_and_bioproject_keys(tmp_path)
             {
                 "accession_type": "BioSample",
                 "accession": "SAMN11953777",
-                "source": " CRYPTIC ",
+                "source": "CRYPTIC",
                 "source_version": "3.4.0",
                 "notes": "BioSample represented in an adopted project dataset.",
             },
@@ -2033,7 +2052,7 @@ def test_read_project_dedupe_map_requires_source_version(tmp_path):
     path.write_text(
         "\t".join(PROJECT_DEDUPE_COLUMNS)
         + "\n"
-        + "BioSample\tSAMN11953777\tCRYPTIC\t \tBioSample represented elsewhere.\n",
+        + "BioSample\tSAMN11953777\tCRYPTIC\t\tBioSample represented elsewhere.\n",
         encoding="utf-8",
     )
 
@@ -2046,7 +2065,7 @@ def test_read_project_dedupe_map_requires_notes(tmp_path):
     path.write_text(
         "\t".join(PROJECT_DEDUPE_COLUMNS)
         + "\n"
-        + "BioSample\tSAMN11953777\tCRYPTIC\t3.4.0\t \n",
+        + "BioSample\tSAMN11953777\tCRYPTIC\t3.4.0\t\n",
         encoding="utf-8",
     )
 
@@ -2059,7 +2078,7 @@ def test_read_project_dedupe_map_rejects_self_source(tmp_path):
     path.write_text(
         "\t".join(PROJECT_DEDUPE_COLUMNS)
         + "\n"
-        + "BioSample\tSAMN11953777\t NCBI AST \t2026-09\tnot a separate adopted source\n",
+        + "BioSample\tSAMN11953777\tNCBI_AST\t2026-09\tnot a separate adopted source\n",
         encoding="utf-8",
     )
 
@@ -2096,6 +2115,22 @@ def test_read_project_dedupe_map_rejects_stale_source_version(tmp_path):
         ValueError,
         match=r"CRYPTIC project dedupe source_version '3\.3\.0' != '3\.4\.0'",
     ):
+        read_project_dedupe_map(path)
+
+
+def test_read_project_dedupe_map_rejects_padded_cells(tmp_path):
+    path = tmp_path / "ncbi_ast_project_dedupe.tsv"
+    path.write_text(
+        "\t".join(PROJECT_DEDUPE_COLUMNS)
+        + "\n"
+        + (
+            "BioSample\tSAMN11953777\t CRYPTIC\t3.4.0\t"
+            "BioSample represented in an adopted project dataset.\n"
+        ),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="source has leading or trailing whitespace"):
         read_project_dedupe_map(path)
 
 

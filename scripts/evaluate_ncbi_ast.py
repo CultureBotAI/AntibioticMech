@@ -600,19 +600,16 @@ def require_input_rows(rows: list[dict], fieldnames: list[str], path: Path) -> N
             require_tsv_safe_value(row[field], field, prefix)
 
 
-def strip_table_row(row: dict[str, str]) -> dict[str, str]:
-    return {field: value.strip() for field, value in row.items()}
-
-
-def strip_curated_tsv_row(
+def require_curated_tsv_row(
     row: dict[str, str],
     path: Path,
     line_number: int,
 ) -> dict[str, str]:
-    for field, value in row.items():
-        if any(char in value for char in CURATED_TSV_CONTROL_CHARS):
-            raise ValueError(f"{path}:{line_number}: {field} contains a tab or newline")
-    return strip_table_row(row)
+    prefix = f"{path}:{line_number}"
+    return {
+        field: require_tsv_safe_value(value, field, prefix)
+        for field, value in row.items()
+    }
 
 
 def project_dedupe_inventory_source_version(source: str, path: Path) -> str:
@@ -726,7 +723,7 @@ def read_drug_map(
         rows = {}
         for line_number, row in enumerate(reader, start=2):
             require_exact_table_row(row, path, line_number)
-            row = strip_curated_tsv_row(row, path, line_number)
+            row = require_curated_tsv_row(row, path, line_number)
             require_non_blank_fields(
                 row,
                 (
@@ -806,7 +803,7 @@ def read_project_dedupe_map(
         rows = {}
         for line_number, row in enumerate(reader, start=2):
             require_exact_table_row(row, path, line_number)
-            row = strip_curated_tsv_row(row, path, line_number)
+            row = require_curated_tsv_row(row, path, line_number)
             accession_type = row["accession_type"]
             accession = row["accession"]
             if accession_type not in PROJECT_DEDUPE_ACCESSIONS:
