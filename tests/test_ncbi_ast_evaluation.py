@@ -90,7 +90,7 @@ def ncbi_ast_antibiotic_report_row(**overrides: object) -> dict:
         "bioproject_count": "7",
         "project_context_count": "7",
         "valid_project_context_count": "7",
-        "dedupe_context_count": "0",
+        "dedupe_context_count": "2",
         "activity_report_candidate_count": "5",
         "activity_report_dedupe_excluded_count": "2",
         "target_acc_count": "7",
@@ -2149,7 +2149,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
             "bioproject_count": 7,
             "project_context_count": 7,
             "valid_project_context_count": 7,
-            "dedupe_context_count": 0,
+            "dedupe_context_count": 2,
             "activity_report_candidate_count": 5,
             "activity_report_dedupe_excluded_count": 2,
             "target_acc_count": 7,
@@ -2206,7 +2206,7 @@ def test_antibiotic_report_is_a_stable_tsv(tmp_path):
         "bioproject_count": "7",
         "project_context_count": "7",
         "valid_project_context_count": "7",
-        "dedupe_context_count": "0",
+        "dedupe_context_count": "2",
         "activity_report_candidate_count": "5",
         "activity_report_dedupe_excluded_count": "2",
         "target_acc_count": "7",
@@ -2906,6 +2906,7 @@ def test_template_writers_reject_missing_input_columns(
                 assay_method_count="10",
                 activity_report_candidate_count="5",
                 activity_report_dedupe_excluded_count="4",
+                dedupe_context_count="4",
             ),
             "activity_report_candidate_count plus "
             "activity_report_dedupe_excluded_count must be <= taxon_count",
@@ -2922,9 +2923,17 @@ def test_template_writers_reject_missing_input_columns(
                 assay_method_count="8",
                 activity_report_candidate_count="5",
                 activity_report_dedupe_excluded_count="4",
+                dedupe_context_count="4",
             ),
             "activity_report_candidate_count plus "
             "activity_report_dedupe_excluded_count must be <= assay_method_count",
+        ),
+        (
+            write_antibiotic_report,
+            ncbi_ast_antibiotic_report_row(
+                dedupe_context_count="1",
+            ),
+            "activity_report_dedupe_excluded_count must be <= dedupe_context_count",
         ),
         (
             write_antibiotic_report,
