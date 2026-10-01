@@ -3799,6 +3799,67 @@ def test_cli_rejects_sibling_reports_with_the_same_path(tmp_path):
     assert report.read_text(encoding="utf-8") == "keep report\n"
 
 
+def test_cli_rejects_directory_outputs_before_opening_siblings(tmp_path):
+    ast = tmp_path / "ast.tsv"
+    ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
+    antibiotic_report = tmp_path / "antibiotic-report"
+    antibiotic_report.write_text("keep antibiotic report\n", encoding="utf-8")
+    drug_map_template = tmp_path / "template_dir"
+    drug_map_template.mkdir()
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            "--antibiotic-report",
+            str(antibiotic_report),
+            "--drug-map-template",
+            str(drug_map_template),
+            "--source-version",
+            "2026-09-26-ast-browser",
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 2
+    assert "--drug-map-template must be a file path" in result.stderr
+    assert antibiotic_report.read_text(encoding="utf-8") == "keep antibiotic report\n"
+
+
+def test_cli_rejects_nested_outputs_before_opening_parents(tmp_path):
+    ast = tmp_path / "ast.tsv"
+    ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
+    antibiotic_report = tmp_path / "antibiotic-report"
+    drug_map_template = antibiotic_report / "ncbi_ast_drug_map.tsv"
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            "--antibiotic-report",
+            str(antibiotic_report),
+            "--drug-map-template",
+            str(drug_map_template),
+            "--source-version",
+            "2026-09-26-ast-browser",
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 2
+    assert (
+        "--drug-map-template must not be nested under --antibiotic-report path"
+        in result.stderr
+    )
+    assert not antibiotic_report.exists()
+
+
 def test_cli_rejects_ast_without_antibiotic_values_before_opening_reports(tmp_path):
     ast = tmp_path / "ast.tsv"
     ast.write_text("BioSample\tMIC\nSAMN11953777\t2\n", encoding="utf-8")
