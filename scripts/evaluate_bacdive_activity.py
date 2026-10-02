@@ -407,13 +407,31 @@ def source_reference_ids(row: Mapping[str, Any]) -> str:
     return "|".join(sorted(values))
 
 
-def taxon_context(record: Mapping[str, Any]) -> dict[str, str]:
+def record_sections(
+    bacdive_id_value: str,
+    record: Mapping[str, Any],
+    wanted_keys: Iterable[str],
+) -> Iterable[Mapping[str, Any]]:
+    wanted = set(wanted_keys)
     for key, value in record.items():
-        if normalize(str(key)) in TAXONOMY_SECTION_KEYS and isinstance(value, Mapping):
-            return {
-                "taxon_label": first_value(value, TAXON_LABEL_ALIASES),
-                "strain": first_value(value, STRAIN_ALIASES),
-            }
+        if normalize(str(key)) not in wanted:
+            continue
+        if isinstance(value, Mapping):
+            yield value
+        elif value not in (None, ""):
+            raise ValueError(f"BacDive-ID {bacdive_id_value} {key} must be an object")
+
+
+def taxon_context(bacdive_id_value: str, record: Mapping[str, Any]) -> dict[str, str]:
+    for section in record_sections(
+        bacdive_id_value,
+        record,
+        TAXONOMY_SECTION_KEYS,
+    ):
+        return {
+            "taxon_label": first_value(section, TAXON_LABEL_ALIASES),
+            "strain": first_value(section, STRAIN_ALIASES),
+        }
     return {"taxon_label": "", "strain": ""}
 
 
@@ -438,10 +456,15 @@ def disk_diffusion_value(value: Any) -> str | None:
     return decimal_string(parsed)
 
 
-def physiology_sections(record: Mapping[str, Any]) -> Iterable[Mapping[str, Any]]:
-    for key, value in record.items():
-        if normalize(str(key)) in PHYSIOLOGY_SECTION_KEYS and isinstance(value, Mapping):
-            yield value
+def physiology_sections(
+    bacdive_id_value: str,
+    record: Mapping[str, Any],
+) -> Iterable[Mapping[str, Any]]:
+    yield from record_sections(
+        bacdive_id_value,
+        record,
+        PHYSIOLOGY_SECTION_KEYS,
+    )
 
 
 def source_section_rows(
@@ -460,7 +483,7 @@ def antibiotic_name_rows(
     bacdive_id_value: str,
     record: Mapping[str, Any],
 ) -> Iterable[tuple[str, str, str, str]]:
-    for section in physiology_sections(record):
+    for section in physiology_sections(bacdive_id_value, record):
         for row in source_section_rows(
             section,
             ANTIBIOTICA_SECTION_KEYS,
@@ -481,7 +504,7 @@ def antibiogram_rows(
     bacdive_id_value: str,
     record: Mapping[str, Any],
 ) -> Iterable[tuple[str, str, str | None]]:
-    for section in physiology_sections(record):
+    for section in physiology_sections(bacdive_id_value, record):
         for key, value in section.items():
             source_section = ANTIBIOGRAM_SECTION_BY_KEY.get(normalize(str(key)))
             if source_section is None:
@@ -509,11 +532,11 @@ def exact_activity_rows(
     rows: list[dict[str, str]] = []
 
     for bacdive_id_value, record in sorted(records.items()):
-        context = taxon_context(record)
+        context = taxon_context(bacdive_id_value, record)
         if not context["taxon_label"]:
             continue
 
-        for section in physiology_sections(record):
+        for section in physiology_sections(bacdive_id_value, record):
             for source_row_index, row in enumerate(
                 source_section_rows(
                     section,
