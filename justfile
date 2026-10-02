@@ -75,6 +75,10 @@ evaluate-amrfinder *args:
 evaluate-ncbi-ast *args:
     uv run python scripts/evaluate_ncbi_ast.py {{args}}
 
+# Evaluate BacDive v2 fetch exports without attaching name-only antibiotics to records.
+evaluate-bacdive *args:
+    uv run python scripts/evaluate_bacdive_activity.py {{args}}
+
 # Find exact-ligand PDB entries that overlap established BindingDB UniProt targets.
 evaluate-rcsb-pdb *args:
     uv run python scripts/evaluate_rcsb_pdb.py {{args}}
