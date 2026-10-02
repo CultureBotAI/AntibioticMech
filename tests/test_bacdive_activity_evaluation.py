@@ -19,6 +19,7 @@ from evaluate_bacdive_activity import (  # noqa: E402
     corpus_name_candidates,
     evaluate_records,
     exact_activity_rows,
+    merge_bacdive_records,
     read_activity_report,
     read_bacdive_fetch,
     read_drug_map,
@@ -592,6 +593,34 @@ def test_read_bacdive_fetch_accepts_single_record_objects(tmp_path):
     assert read_bacdive_fetch(path) == {"24493": bacdive_record()}
 
 
+def test_read_bacdive_fetch_rejects_non_record_results(tmp_path):
+    path = tmp_path / "bacdive.json"
+    path.write_text(json.dumps({"results": {"24493": "not a record"}}), encoding="utf-8")
+
+    with pytest.raises(ValueError, match="result 24493 is not a BacDive record object"):
+        read_bacdive_fetch(path)
+
+
+def test_read_bacdive_fetch_rejects_duplicate_bacdive_ids(tmp_path):
+    path = tmp_path / "bacdive.json"
+    path.write_text(
+        json.dumps({"results": {"first": bacdive_record(), "second": bacdive_record()}}),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="duplicate BacDive-ID 24493"):
+        read_bacdive_fetch(path)
+
+
+def test_merge_bacdive_records_rejects_duplicate_input_ids(tmp_path):
+    with pytest.raises(ValueError, match="duplicate BacDive-ID across inputs: 24493"):
+        merge_bacdive_records(
+            {"24493": bacdive_record()},
+            {"24493": bacdive_record()},
+            tmp_path / "bacdive2.json",
+        )
+
+
 def test_write_drug_report_and_map_template(tmp_path):
     rows = report_rows(tmp_path)
     report = tmp_path / "bacdive_antibiotics.tsv"
@@ -717,6 +746,29 @@ def test_cli_reads_drug_map_without_prefilling_template(tmp_path):
         "met_antibiogram_v2",
         "met_antibiotica",
     }
+
+
+def test_cli_rejects_duplicate_bacdive_ids_across_inputs(tmp_path):
+    first = tmp_path / "bacdive1.json"
+    second = tmp_path / "bacdive2.json"
+    first.write_text(json.dumps({"results": {"24493": bacdive_record()}}), encoding="utf-8")
+    second.write_text(json.dumps({"results": {"24493": bacdive_record()}}), encoding="utf-8")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--bacdive",
+            str(first),
+            str(second),
+        ],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+
+    assert result.returncode != 0
+    assert "duplicate BacDive-ID across inputs: 24493" in result.stderr
 
 
 def test_cli_validates_activity_report(tmp_path):

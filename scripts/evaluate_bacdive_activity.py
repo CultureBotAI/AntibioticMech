@@ -279,6 +279,23 @@ def as_rows(value: Any) -> list[Mapping[str, Any]]:
     return []
 
 
+def bacdive_records_by_id(
+    path: Path,
+    entries: Iterable[tuple[str, Any]],
+) -> dict[str, Mapping[str, Any]]:
+    records: dict[str, Mapping[str, Any]] = {}
+    for record_key, record in entries:
+        if not isinstance(record, Mapping):
+            raise ValueError(
+                f"{path}: result {record_key} is not a BacDive record object"
+            )
+        identifier = bacdive_id(record_key, record)
+        if identifier in records:
+            raise ValueError(f"{path}: duplicate BacDive-ID {identifier}")
+        records[identifier] = record
+    return records
+
+
 def read_bacdive_fetch(path: Path) -> dict[str, Mapping[str, Any]]:
     payload = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(payload, Mapping):
@@ -288,18 +305,28 @@ def read_bacdive_fetch(path: Path) -> dict[str, Mapping[str, Any]]:
 
     results = payload.get("results", payload)
     if isinstance(results, list):
-        return {
-            bacdive_id(str(index), record): record
-            for index, record in enumerate(results, start=1)
-            if isinstance(record, Mapping)
-        }
+        return bacdive_records_by_id(
+            path,
+            ((str(index), record) for index, record in enumerate(results, start=1)),
+        )
     if isinstance(results, Mapping):
-        return {
-            bacdive_id(str(record_key), record): record
-            for record_key, record in results.items()
-            if isinstance(record, Mapping)
-        }
+        return bacdive_records_by_id(
+            path,
+            ((str(record_key), record) for record_key, record in results.items()),
+        )
     raise ValueError(f"{path}: expected a results object or array")
+
+
+def merge_bacdive_records(
+    records: dict[str, Mapping[str, Any]],
+    incoming: Mapping[str, Mapping[str, Any]],
+    path: Path,
+) -> None:
+    duplicate_ids = sorted(set(records) & set(incoming))
+    if duplicate_ids:
+        joined = ", ".join(duplicate_ids)
+        raise ValueError(f"{path}: duplicate BacDive-ID across inputs: {joined}")
+    records.update(incoming)
 
 
 def corpus_name_candidates(root: Path = REPO_ROOT) -> tuple[dict[str, set[str]], dict[str, str]]:
@@ -1195,7 +1222,7 @@ def main() -> int:
 
     records: dict[str, Mapping[str, Any]] = {}
     for path in args.bacdive:
-        records.update(read_bacdive_fetch(path))
+        merge_bacdive_records(records, read_bacdive_fetch(path), path)
 
     name_candidates, structure_keys = corpus_name_candidates()
     validated_activity_rows = (
