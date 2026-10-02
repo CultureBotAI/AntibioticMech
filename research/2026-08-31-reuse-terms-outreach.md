@@ -21,7 +21,7 @@ sender before any source is marked adopted.
 The three GitHub requests were posted by the authenticated repository maintainer
 account and link back to AntibioticMech issue #106. Opening a public request
 does not change a source's reuse determination by itself: BV-BRC remains
-unverified, and BacDive remains a candidate until official BacDive website
+unverified, and BacDive remains unadopted until official BacDive website
 confirmation answers the precise data-content questions. Stanford HIVDB's response resolves
 redistribution for the `hivdb/hivfacts` data surface used by Sierra, not for
 every Stanford HIVDB endpoint or web page.
