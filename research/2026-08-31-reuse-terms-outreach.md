@@ -2,7 +2,7 @@
 
 Date drafted: 2026-08-31
 Issue: #106
-Status: **PARTIALLY ANSWERED — Stanford HIVDB terms resolved; two official GitHub requests open; one email/form request pending**
+Status: **PARTIALLY ANSWERED — Stanford HIVDB terms resolved; BV-BRC GitHub request open; BacDive website-ticket confirmation pending; one email/form request pending**
 
 These requests deliberately identify the exact data scope and ask separately
 about access, modification, commercial redistribution, attribution, and
@@ -15,7 +15,7 @@ sender before any source is marked adopted.
 | --- | --- | --- | --- | --- |
 | BV-BRC | 2026-08-31 | Official API GitHub tracker | [BV-BRC-API #204](https://github.com/BV-BRC/BV-BRC-API/issues/204) | Pending |
 | Stanford HIVDB | 2026-08-31 | Official Sierra GitHub tracker | [hivdb/sierra #40](https://github.com/hivdb/sierra/issues/40) | 2026-09-05 response identifies `hivdb/hivfacts` as public-domain Unlicense data |
-| BacDive | 2026-08-31 | Official BacDive API GitHub tracker | [LeibnizDSMZ/bacdive-api #1](https://github.com/LeibnizDSMZ/bacdive-api/issues/1) | Answered 2026-09-29; official BacDive ticket still required |
+| BacDive | 2026-08-31 | Official BacDive API GitHub tracker | [LeibnizDSMZ/bacdive-api #1](https://github.com/LeibnizDSMZ/bacdive-api/issues/1) | Answered 2026-09-29; closed 2026-09-30; official BacDive ticket still required |
 | CO-ADD | Not sent | `info@co-add.org` or official CAPTCHA-protected contact form | Draft below | No authenticated mail/form-capable channel in this workspace |
 
 The three GitHub requests were posted by the authenticated repository maintainer
@@ -52,8 +52,9 @@ Sent through the official BacDive API issue tracker as
 [LeibnizDSMZ/bacdive-api #1](https://github.com/LeibnizDSMZ/bacdive-api/issues/1);
 answered on 2026-09-29 with a maintainer reply that says BacDive API or
 bulk-download data are CC BY 4.0 and recommends a BacDive website ticket for
-official confirmation. The issue distinguishes the API client's MIT software
-licence from the data-content terms that require confirmation.
+official confirmation; the tracker issue was closed on 2026-09-30. The issue
+distinguishes the API client's MIT software licence from the data-content
+terms that require confirmation.
 
 Subject: Confirm CC BY 4.0 scope for BacDive susceptibility API/bulk rows
 

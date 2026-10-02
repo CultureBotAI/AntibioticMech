@@ -9,6 +9,7 @@ def test_reuse_outreach_distinguishes_sent_requests_from_pending_draft(repo_root
     assert "hivdb/sierra #40" in text
     assert "LeibnizDSMZ/bacdive-api #1" in text
     assert "| BacDive | 2026-08-31 | Official BacDive API GitHub tracker |" in text
+    assert "closed 2026-09-30; official BacDive ticket still required" in text
     assert "| CO-ADD | Not sent |" in text
     assert "No authenticated mail/form-capable channel" in text
     assert "Google image reCAPTCHA" in text
@@ -29,6 +30,10 @@ def test_reuse_audit_keeps_unverified_sources_out_of_adopted_state(repo_root):
     assert "archive contains no README or licence" in by_id["co-add"][11]
     assert "REQUEST DRAFTED, NOT SENT" in by_id["co-add"][11]
     assert by_id["bacdive"][5] == "ATTRIBUTION"
+    assert by_id["bacdive"][8] == "CANDIDATE"
+    assert "met_antibiotica" in by_id["bacdive"][11]
+    assert "met_antibiogram_v2" in by_id["bacdive"][11]
+    assert "no data are adopted until DSMZ confirms" in by_id["bacdive"][11]
 
 
 def test_attribution_notice_covers_adopted_redistributed_sources(repo_root):
