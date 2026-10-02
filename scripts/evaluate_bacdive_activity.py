@@ -767,6 +767,11 @@ def require_activity_report_rows(rows: list[dict[str, str]], path: Path) -> None
         if not row["activity"] and not row["disk_diffusion_value"]:
             raise ValueError(f"{prefix}: activity or disk_diffusion_value is required")
         if row["source_section"] == "met_antibiotica":
+            if normalize(row["source_field"]) not in ANTIBIOTICA_NAME_ALIASES:
+                raise ValueError(
+                    f"{prefix}: unsupported met_antibiotica source_field "
+                    f"{row['source_field']!r}"
+                )
             if not row["activity"]:
                 raise ValueError(f"{prefix}: met_antibiotica rows require activity")
             if (
@@ -792,6 +797,25 @@ def require_activity_report_rows(rows: list[dict[str, str]], path: Path) -> None
             expected_assay = f"BacDive {row['source_section']} disk diffusion"
             if row["assay"] != expected_assay:
                 raise ValueError(f"{prefix}: assay must be {expected_assay!r}")
+            source_name, source_section = antibiogram_source_name(
+                row["source_field"],
+                row["source_section"],
+            )
+            if not source_name:
+                raise ValueError(
+                    f"{prefix}: unsupported disk-diffusion source_field "
+                    f"{row['source_field']!r}"
+                )
+            if source_section != row["source_section"]:
+                raise ValueError(
+                    f"{prefix}: source_field {row['source_field']!r} belongs to "
+                    f"{source_section}, not {row['source_section']}"
+                )
+            if source_name != row["source_name"]:
+                raise ValueError(
+                    f"{prefix}: source_field {row['source_field']!r} maps to "
+                    f"{source_name!r}, not source_name {row['source_name']!r}"
+                )
 
         if row["disk_diffusion_value"] and row["disk_diffusion_units"] != "mm":
             raise ValueError(f"{prefix}: disk_diffusion_units must be mm")
