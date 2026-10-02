@@ -1026,6 +1026,15 @@ def test_exact_activity_rows_excludes_unknown_phenotypes():
             "mic": "8",
             "platform": "AST",
         },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953780",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "not defined",
+            "mic": "16",
+            "platform": "AST",
+        },
     ]
     mappings = {
         "cefepime": {
@@ -1049,13 +1058,14 @@ def test_exact_activity_rows_excludes_unknown_phenotypes():
         source_retrieved_on="2026-09-26",
     )
 
-    assert result["rows_with_phenotype"] == 2
+    assert result["rows_with_phenotype"] == 3
     assert result["rows_with_invalid_phenotype"] == 1
-    assert result["exact_mapped_activity_report_candidate_rows"] == 2
+    assert result["exact_mapped_activity_report_candidate_rows"] == 3
     assert result["antibiotic_rows"][0]["invalid_phenotype_count"] == 1
     assert {row["biosample_accession"] for row in activity_rows} == {
         "SAMN11953777",
         "SAMN11953779",
+        "SAMN11953780",
     }
     assert {
         row["activity"] for row in activity_rows
@@ -1063,6 +1073,12 @@ def test_exact_activity_rows_excludes_unknown_phenotypes():
         "",
         "RESISTANT",
     }
+    activity_by_biosample = {
+        row["biosample_accession"]: row
+        for row in activity_rows
+    }
+    assert activity_by_biosample["SAMN11953780"]["phenotype"] == "not defined"
+    assert activity_by_biosample["SAMN11953780"]["activity"] == ""
 
 
 def test_exact_activity_rows_excludes_known_source_context():

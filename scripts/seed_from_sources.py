@@ -2662,6 +2662,7 @@ NCBI_AST_ACTIVITY_BY_PHENOTYPE = {
     "s": "SUSCEPTIBLE",
     "susceptible": "SUSCEPTIBLE",
 }
+NCBI_AST_NO_ACTIVITY_CALL_PHENOTYPES = {"not defined"}
 NCBI_AST_MEASUREMENT_QUALIFIERS = {"", "<", "<=", ">", ">="}
 NCBI_AST_MIC_MAX_VALUE = Decimal("1024")
 NCBI_AST_DISK_DIFFUSION_MIN_VALUE = Decimal("6")
@@ -3037,14 +3038,17 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                 raise ValueError(
                     f"{prefix}: isolate_count must be 1 for a BioSample-grouped row"
                 )
-            expected_activity = NCBI_AST_ACTIVITY_BY_PHENOTYPE.get(
-                row["phenotype"].casefold(),
-                "",
-            )
-            if row["phenotype"] and not expected_activity:
-                raise ValueError(
-                    f"{prefix}: unsupported phenotype {row['phenotype']!r}"
-                )
+            phenotype = row["phenotype"].casefold()
+            if phenotype in NCBI_AST_NO_ACTIVITY_CALL_PHENOTYPES:
+                expected_activity = ""
+            elif phenotype:
+                expected_activity = NCBI_AST_ACTIVITY_BY_PHENOTYPE.get(phenotype)
+                if expected_activity is None:
+                    raise ValueError(
+                        f"{prefix}: unsupported phenotype {row['phenotype']!r}"
+                    )
+            else:
+                expected_activity = ""
             if row["activity"] != expected_activity:
                 raise ValueError(
                     f"{prefix}: activity must match phenotype {row['phenotype']!r}"

@@ -273,6 +273,7 @@ ACTIVITY_CALLS = {
     "s": "SUSCEPTIBLE",
     "susceptible": "SUSCEPTIBLE",
 }
+NO_ACTIVITY_CALL_PHENOTYPES = {"not defined"}
 TAXON_ALIASES = (
     "scientificname",
     "organismname",
@@ -508,7 +509,10 @@ def standardized_activity_call(row: dict[str, str]) -> tuple[str, str] | None:
     phenotype = first_value(row, PHENOTYPE_ALIASES)
     if not phenotype:
         return "", ""
-    activity = ACTIVITY_CALLS.get(phenotype.casefold())
+    normalized_phenotype = phenotype.casefold()
+    if normalized_phenotype in NO_ACTIVITY_CALL_PHENOTYPES:
+        return phenotype, ""
+    activity = ACTIVITY_CALLS.get(normalized_phenotype)
     if activity is None:
         return None
     return phenotype, activity
