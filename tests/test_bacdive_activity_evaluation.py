@@ -19,8 +19,10 @@ from evaluate_bacdive_activity import (  # noqa: E402
     corpus_name_candidates,
     evaluate_records,
     exact_activity_rows,
+    read_activity_report,
     read_bacdive_fetch,
     read_drug_map,
+    source_activity_id,
     write_activity_report,
     write_drug_map_template,
     write_drug_report,
@@ -113,6 +115,18 @@ def write_drug_map(path: Path, rows: list[dict[str, str]]) -> None:
         writer = csv.DictWriter(
             handle,
             fieldnames=DRUG_MAP_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def write_raw_activity_report(path: Path, rows: list[dict[str, str]]) -> None:
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=ACTIVITY_REPORT_COLUMNS,
             delimiter="\t",
             lineterminator="\n",
         )
@@ -374,6 +388,112 @@ def test_write_activity_report_rejects_stale_ids(tmp_path):
         write_activity_report(rows, tmp_path / "bacdive_activity.tsv")
 
 
+def test_read_activity_report_accepts_exact_activity_rows(tmp_path):
+    path = tmp_path / "bacdive_activity.tsv"
+    rows = exact_activity_rows(
+        {"24493": bacdive_record()},
+        {"ampicillin": bacdive_drug_map_row()},
+        SOURCE_VERSION,
+    )
+    write_activity_report(rows, path)
+
+    assert read_activity_report(
+        path,
+        {"CHEBI:28971": AMPICILLIN_INCHI_KEY},
+        SOURCE_VERSION,
+    ) == rows
+
+
+def test_read_activity_report_rejects_header_drift(tmp_path):
+    path = tmp_path / "bacdive_activity.tsv"
+    path.write_text("source_activity_id\tunexpected\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="unexpected BacDive activity report columns"):
+        read_activity_report(
+            path,
+            {"CHEBI:28971": AMPICILLIN_INCHI_KEY},
+            SOURCE_VERSION,
+        )
+
+
+def test_read_activity_report_rejects_header_only_reports(tmp_path):
+    path = tmp_path / "bacdive_activity.tsv"
+    write_raw_activity_report(path, [])
+
+    with pytest.raises(ValueError, match="BacDive activity report has no rows"):
+        read_activity_report(
+            path,
+            {"CHEBI:28971": AMPICILLIN_INCHI_KEY},
+            SOURCE_VERSION,
+        )
+
+
+def test_read_activity_report_rejects_short_rows(tmp_path):
+    path = tmp_path / "bacdive_activity.tsv"
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle, delimiter="\t", lineterminator="\n")
+        writer.writerow(ACTIVITY_REPORT_COLUMNS)
+        writer.writerow(["bacdive:short"])
+
+    with pytest.raises(ValueError, match="source_version is missing"):
+        read_activity_report(
+            path,
+            {"CHEBI:28971": AMPICILLIN_INCHI_KEY},
+            SOURCE_VERSION,
+        )
+
+
+@pytest.mark.parametrize(
+    ("overrides", "refresh_activity_id", "match"),
+    [
+        (
+            {"source_version": "2026-10-01-v2-fetch"},
+            False,
+            "source_version '2026-10-01-v2-fetch'",
+        ),
+        ({"source_row_index": "2"}, False, "source_activity_id is stale"),
+        (
+            {"source_row_index": "01"},
+            True,
+            "source_row_index must use canonical integer",
+        ),
+        (
+            {"identifier": "CHEBI:999999"},
+            True,
+            "mapped identifier CHEBI:999999 is not in the corpus",
+        ),
+        (
+            {"standard_inchi_key": "WRONGINCHIKEY"},
+            True,
+            "does not match CHEBI:28971",
+        ),
+    ],
+)
+def test_read_activity_report_rejects_stale_or_malformed_rows(
+    tmp_path,
+    overrides,
+    refresh_activity_id,
+    match,
+):
+    path = tmp_path / "bacdive_activity.tsv"
+    rows = exact_activity_rows(
+        {"24493": bacdive_record()},
+        {"ampicillin": bacdive_drug_map_row()},
+        SOURCE_VERSION,
+    )
+    rows[0].update(overrides)
+    if refresh_activity_id:
+        rows[0]["source_activity_id"] = source_activity_id(rows[0])
+    write_raw_activity_report(path, rows)
+
+    with pytest.raises(ValueError, match=match):
+        read_activity_report(
+            path,
+            {"CHEBI:28971": AMPICILLIN_INCHI_KEY},
+            SOURCE_VERSION,
+        )
+
+
 def test_read_bacdive_fetch_accepts_v2_results_objects(tmp_path):
     path = tmp_path / "bacdive.json"
     path.write_text(
@@ -518,6 +638,52 @@ def test_cli_reads_drug_map_without_prefilling_template(tmp_path):
     }
 
 
+def test_cli_validates_activity_report(tmp_path):
+    activity_report = tmp_path / "bacdive_activity.tsv"
+    write_activity_report(
+        exact_activity_rows(
+            {"24493": bacdive_record()},
+            {"ampicillin": bacdive_drug_map_row()},
+            SOURCE_VERSION,
+        ),
+        activity_report,
+    )
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--source-version",
+            SOURCE_VERSION,
+            "--validate-activity-report",
+            str(activity_report),
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    assert result.stdout.startswith("BacDive activity preflight: records=0 ")
+    assert "activity_report_rows=2" in result.stdout
+
+
+def test_cli_rejects_drug_report_without_bacdive(tmp_path):
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--drug-report",
+            str(tmp_path / "bacdive_antibiotics.tsv"),
+        ],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+
+    assert result.returncode != 0
+    assert "--bacdive is required unless only --validate-activity-report is used" in result.stderr
+
+
 def test_cli_rejects_drug_map_without_source_version(tmp_path):
     path = tmp_path / "bacdive.json"
     path.write_text(json.dumps({"results": {"24493": bacdive_record()}}), encoding="utf-8")
@@ -538,7 +704,34 @@ def test_cli_rejects_drug_map_without_source_version(tmp_path):
 
     assert result.returncode != 0
     assert (
-        "--drug-map, --drug-map-template and --activity-report require --source-version"
+        "--drug-map, --drug-map-template, --activity-report and "
+        "--validate-activity-report require --source-version"
+        in result.stderr
+    )
+
+
+def test_cli_rejects_validate_activity_report_without_source_version(tmp_path):
+    path = tmp_path / "bacdive.json"
+    path.write_text(json.dumps({"results": {"24493": bacdive_record()}}), encoding="utf-8")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--bacdive",
+            str(path),
+            "--validate-activity-report",
+            str(tmp_path / "bacdive_activity.tsv"),
+        ],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+
+    assert result.returncode != 0
+    assert (
+        "--drug-map, --drug-map-template, --activity-report and "
+        "--validate-activity-report require --source-version"
         in result.stderr
     )
 
@@ -594,3 +787,34 @@ def test_cli_rejects_drug_map_template_over_curated_drug_map(tmp_path):
     assert result.returncode != 0
     assert "--drug-map-template must not reuse --drug-map path" in result.stderr
     assert drug_map.read_text(encoding="utf-8") == "keep curated map\n"
+
+
+def test_cli_rejects_activity_report_over_validated_activity_report(tmp_path):
+    path = tmp_path / "bacdive.json"
+    activity_report = tmp_path / "bacdive_activity.tsv"
+    path.write_text(json.dumps({"results": {"24493": bacdive_record()}}), encoding="utf-8")
+    activity_report.write_text("keep validation input\n", encoding="utf-8")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--bacdive",
+            str(path),
+            "--source-version",
+            SOURCE_VERSION,
+            "--drug-map",
+            str(tmp_path / "bacdive_drug_map.tsv"),
+            "--activity-report",
+            str(activity_report),
+            "--validate-activity-report",
+            str(activity_report),
+        ],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+
+    assert result.returncode != 0
+    assert "--validate-activity-report must not reuse --activity-report path" in result.stderr
+    assert activity_report.read_text(encoding="utf-8") == "keep validation input\n"

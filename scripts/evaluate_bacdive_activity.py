@@ -918,6 +918,51 @@ def write_drug_report(rows: list[dict[str, str]], path: Path) -> None:
         writer.writerows(rows)
 
 
+def read_activity_report(
+    path: Path,
+    structure_keys: Mapping[str, str],
+    source_version: str,
+) -> list[dict[str, str]]:
+    """Read and validate a BacDive exact activity report."""
+
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if reader.fieldnames != ACTIVITY_REPORT_COLUMNS:
+            raise ValueError(
+                f"unexpected BacDive activity report columns: {reader.fieldnames}"
+            )
+
+        rows = []
+        for line_number, row in enumerate(reader, start=2):
+            require_exact_table_row(row, path, line_number)
+            rows.append(require_curated_tsv_row(row, path, line_number))
+
+    if not rows:
+        raise ValueError(f"{path}: BacDive activity report has no rows")
+
+    require_activity_report_rows(rows, path)
+    for index, row in enumerate(rows, start=1):
+        prefix = f"{path}: row {index}"
+        if row["source_version"] != source_version:
+            raise ValueError(
+                f"{prefix}: source_version {row['source_version']!r} "
+                f"!= {source_version!r}"
+            )
+
+        identifier = row["identifier"]
+        expected = structure_keys.get(identifier)
+        if expected is None:
+            raise ValueError(
+                f"{prefix}: mapped identifier {identifier} is not in the corpus"
+            )
+        if row["standard_inchi_key"] != expected:
+            raise ValueError(
+                f"{prefix}: mapped InChIKey {row['standard_inchi_key']} "
+                f"does not match {identifier} ({expected})"
+            )
+    return rows
+
+
 def write_activity_report(rows: list[dict[str, str]], path: Path) -> None:
     require_activity_report_rows(rows, path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -1009,15 +1054,19 @@ def main() -> int:
         "--bacdive",
         type=Path,
         nargs="+",
-        required=True,
-        help="One or more BacDive v2 /fetch JSON exports.",
+        default=[],
+        help=(
+            "One or more BacDive v2 /fetch JSON exports. Required unless "
+            "only --validate-activity-report is used."
+        ),
     )
     parser.add_argument(
         "--source-version",
         default="",
         help=(
-            "Optional BacDive export version to pin --drug-map mappings and "
-            "stamp on --drug-map-template and --activity-report rows."
+            "Optional BacDive export version to pin --drug-map mappings, "
+            "validate --validate-activity-report rows, and stamp on "
+            "--drug-map-template and --activity-report rows."
         ),
     )
     parser.add_argument(
@@ -1040,6 +1089,11 @@ def main() -> int:
         type=Path,
         help="Optional exact-mapped TSV of BacDive activity rows with source context.",
     )
+    parser.add_argument(
+        "--validate-activity-report",
+        type=Path,
+        help="Optional existing BacDive exact activity TSV to validate.",
+    )
     args = parser.parse_args()
     if args.activity_report and not args.drug_map:
         parser.error("--activity-report requires --drug-map.")
@@ -1047,12 +1101,24 @@ def main() -> int:
         args.drug_map
         or args.drug_map_template
         or args.activity_report
+        or args.validate_activity_report
     ) and not args.source_version.strip():
-        parser.error("--drug-map, --drug-map-template and --activity-report require --source-version.")
+        parser.error(
+            "--drug-map, --drug-map-template, --activity-report and "
+            "--validate-activity-report require --source-version."
+        )
     if args.source_version != args.source_version.strip():
         parser.error("--source-version must not have leading or trailing whitespace.")
     if any(char in args.source_version for char in CURATED_TSV_CONTROL_CHARS):
         parser.error("--source-version must not contain tabs or newlines.")
+    if not args.bacdive and (
+        not args.validate_activity_report
+        or args.drug_map
+        or args.drug_report
+        or args.drug_map_template
+        or args.activity_report
+    ):
+        parser.error("--bacdive is required unless only --validate-activity-report is used.")
     reject_reused_cli_paths(
         parser,
         [("--bacdive", path) for path in args.bacdive]
@@ -1061,6 +1127,7 @@ def main() -> int:
             ("--drug-report", args.drug_report),
             ("--drug-map-template", args.drug_map_template),
             ("--activity-report", args.activity_report),
+            ("--validate-activity-report", args.validate_activity_report),
         ],
     )
     reject_unsafe_cli_output_paths(
@@ -1077,6 +1144,15 @@ def main() -> int:
         records.update(read_bacdive_fetch(path))
 
     name_candidates, structure_keys = corpus_name_candidates()
+    validated_activity_rows = (
+        read_activity_report(
+            args.validate_activity_report,
+            structure_keys,
+            args.source_version,
+        )
+        if args.validate_activity_report
+        else []
+    )
     template_rows = evaluate_records(records, name_candidates, structure_keys)
     drug_map = (
         read_drug_map(
@@ -1111,7 +1187,8 @@ def main() -> int:
         f"records={len(records)} antibiotic_values={len(rows)} "
         f"rows={sum(int(row['bacdive_row_count']) for row in rows)} "
         f"single_exact_name_candidates={sum(1 for row in rows if row['exact_name_candidate_count'] == '1')} "
-        f"exact_activity_rows={len(activity_rows)}"
+        f"exact_activity_rows={len(activity_rows)} "
+        f"activity_report_rows={len(validated_activity_rows)}"
     )
     return 0
 
