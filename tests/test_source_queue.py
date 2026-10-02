@@ -5,6 +5,8 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from check_source_queue import (  # noqa: E402
@@ -14,44 +16,63 @@ from check_source_queue import (  # noqa: E402
 )
 
 
-def test_present_optional_inventories_notices_ncbi_ast_exact_reports(tmp_path):
+@pytest.mark.parametrize(
+    ("source_id", "relative_path"),
+    [
+        ("bacdive", Path("data/raw/bacdive_activity.tsv")),
+        ("ncbi-ast", Path("data/raw/ncbi_ast_activity.tsv")),
+    ],
+)
+def test_present_optional_inventories_notices_preadoption_exact_reports(
+    tmp_path,
+    source_id,
+    relative_path,
+):
     assert present_optional_inventories(tmp_path) == {}
 
-    path = tmp_path / "data" / "raw" / "ncbi_ast_activity.tsv"
+    path = tmp_path / relative_path
     path.parent.mkdir(parents=True)
-    path.write_text("activity_group_id\n", encoding="utf-8")
+    path.write_text("id\n", encoding="utf-8")
 
-    assert present_optional_inventories(tmp_path) == {
-        "ncbi-ast": Path("data/raw/ncbi_ast_activity.tsv"),
-    }
+    assert present_optional_inventories(tmp_path) == {source_id: relative_path}
 
 
-def test_optional_inventory_problems_rejects_preadoption_exact_reports():
-    present = {"ncbi-ast": Path("data/raw/ncbi_ast_activity.tsv")}
+@pytest.mark.parametrize(
+    ("source_id", "relative_path"),
+    [
+        ("bacdive", Path("data/raw/bacdive_activity.tsv")),
+        ("ncbi-ast", Path("data/raw/ncbi_ast_activity.tsv")),
+    ],
+)
+def test_optional_inventory_problems_rejects_preadoption_exact_reports(
+    source_id,
+    relative_path,
+):
+    present = {source_id: relative_path}
 
     assert optional_inventory_problems(
-        {"ncbi-ast": {"status": "EVALUATING"}},
+        {source_id: {"status": "EVALUATING"}},
         {},
     ) == []
     assert optional_inventory_problems(
-        {"ncbi-ast": {"status": "ADOPTED"}},
+        {source_id: {"status": "ADOPTED"}},
         {},
     ) == [
-        "ncbi-ast: data/raw/ncbi_ast_activity.tsv is required when source "
+        f"{source_id}: {relative_path} is required when source "
         "status is ADOPTED",
     ]
     assert optional_inventory_problems(
-        {"ncbi-ast": {"status": "EVALUATING"}},
+        {source_id: {"status": "EVALUATING"}},
         present,
     ) == [
-        "ncbi-ast: data/raw/ncbi_ast_activity.tsv exists but source status is "
+        f"{source_id}: {relative_path} exists but source status is "
         "EVALUATING, not ADOPTED",
     ]
     assert optional_inventory_problems({}, present) == [
-        "ncbi-ast: data/raw/ncbi_ast_activity.tsv exists but has no queue row",
+        f"{source_id}: {relative_path} exists but has no queue row",
     ]
     assert optional_inventory_problems(
-        {"ncbi-ast": {"status": "ADOPTED"}},
+        {source_id: {"status": "ADOPTED"}},
         present,
     ) == []
 
