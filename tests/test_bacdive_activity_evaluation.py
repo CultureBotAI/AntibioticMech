@@ -477,6 +477,26 @@ def test_read_activity_report_rejects_short_rows(tmp_path):
             True,
             "source_record_id must be the normalized source_name",
         ),
+        (
+            {
+                "activity": "",
+                "disk_diffusion_value": "18",
+                "disk_diffusion_units": "mm",
+                "assay": "BacDive met_antibiotica disk diffusion",
+            },
+            False,
+            "met_antibiotica rows require activity",
+        ),
+        (
+            {
+                "disk_diffusion_value": "18",
+                "disk_diffusion_units": "mm",
+                "assay": "BacDive met_antibiogram_v2 disk diffusion",
+                "medium": "Mueller Hinton",
+            },
+            False,
+            "met_antibiotica rows must not carry disk-diffusion fields",
+        ),
     ],
 )
 def test_read_activity_report_rejects_stale_or_malformed_rows(
@@ -494,6 +514,39 @@ def test_read_activity_report_rejects_stale_or_malformed_rows(
     rows[0].update(overrides)
     if refresh_activity_id:
         rows[0]["source_activity_id"] = source_activity_id(rows[0])
+    write_raw_activity_report(path, rows)
+
+    with pytest.raises(ValueError, match=match):
+        read_activity_report(
+            path,
+            {"CHEBI:28971": AMPICILLIN_INCHI_KEY},
+            SOURCE_VERSION,
+        )
+
+
+@pytest.mark.parametrize(
+    ("overrides", "match"),
+    [
+        ({"activity": "RESISTANT"}, "disk-diffusion rows must not carry activity"),
+        (
+            {"source_concentration": "10 mg/L"},
+            "disk-diffusion rows must not carry source_concentration",
+        ),
+        ({"assay": "disk diffusion"}, "assay must be 'BacDive met_antibiogram_v2"),
+    ],
+)
+def test_read_activity_report_rejects_malformed_disk_rows(
+    tmp_path,
+    overrides,
+    match,
+):
+    path = tmp_path / "bacdive_activity.tsv"
+    rows = exact_activity_rows(
+        {"24493": bacdive_record()},
+        {"ampicillin": bacdive_drug_map_row()},
+        SOURCE_VERSION,
+    )
+    rows[1].update(overrides)
     write_raw_activity_report(path, rows)
 
     with pytest.raises(ValueError, match=match):

@@ -766,6 +766,32 @@ def require_activity_report_rows(rows: list[dict[str, str]], path: Path) -> None
             raise ValueError(f"{prefix}: unsupported activity {row['activity']!r}")
         if not row["activity"] and not row["disk_diffusion_value"]:
             raise ValueError(f"{prefix}: activity or disk_diffusion_value is required")
+        if row["source_section"] == "met_antibiotica":
+            if not row["activity"]:
+                raise ValueError(f"{prefix}: met_antibiotica rows require activity")
+            if (
+                row["disk_diffusion_value"]
+                or row["disk_diffusion_units"]
+                or row["assay"]
+                or row["medium"]
+            ):
+                raise ValueError(
+                    f"{prefix}: met_antibiotica rows must not carry "
+                    "disk-diffusion fields"
+                )
+        else:
+            if row["activity"]:
+                raise ValueError(
+                    f"{prefix}: disk-diffusion rows must not carry activity"
+                )
+            if row["source_concentration"]:
+                raise ValueError(
+                    f"{prefix}: disk-diffusion rows must not carry "
+                    "source_concentration"
+                )
+            expected_assay = f"BacDive {row['source_section']} disk diffusion"
+            if row["assay"] != expected_assay:
+                raise ValueError(f"{prefix}: assay must be {expected_assay!r}")
 
         if row["disk_diffusion_value"] and row["disk_diffusion_units"] != "mm":
             raise ValueError(f"{prefix}: disk_diffusion_units must be mm")
