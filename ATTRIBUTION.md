@@ -119,8 +119,9 @@ structures for the CARD molecules ChEBI does not cover.
 Kim S, Chen J, Cheng T, et al. PubChem 2023 update. *Nucleic Acids Res.*
 2023;51(D1):D1373-D1380. doi:10.1093/nar/gkac956
 
-## What is CC0
+## Project-authored material
 
-Everything that is this repository's own work rather than an upstream source's:
-the code under `scripts/` and `src/`, the schema, the tests, the configuration,
-the documentation, and the curation decisions in `curation/`. See [LICENSE](LICENSE).
+Project-authored data and narrative documentation are [CC BY 4.0](LICENSE-DATA).
+Project-authored code, schemas, scripts, tests and website templates are
+[BSD-3-Clause](LICENSE-CODE). Source material retains its applicable terms and
+attributions. See [LICENSE](LICENSE) for the complete scope.

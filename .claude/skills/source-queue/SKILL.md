@@ -40,7 +40,7 @@ source is. In order:
    must never be seeded. This is a hard gate, not a weighting.
 
    The corpus's record content is **CC BY 4.0** (`LICENSE-DATA`), decided in
-   issue #27; the code is CC0. Judge a candidate against that:
+   issue #27; the code is BSD-3-Clause. Judge a candidate against that:
 
    - **CC BY** — acceptable. Add the source to `ATTRIBUTION.md` when adopting.
    - **CC BY-SA** — refused for seeding. Share-alike would propagate to the whole
@@ -70,7 +70,7 @@ the second one's value is only knowable after the first.
 licence page — not a summary, not a memory, not another database's claim about
 it. Record the date in `verified_on`. `scripts/check_source_queue.py` refuses an
 ADOPTED row whose terms are unverified, and refuses a `SEED` adoption under
-`RESTRICTED` terms, because the CC0 promise is only as strong as the weakest
+`RESTRICTED` terms, because the redistribution claim is only as strong as the weakest
 thing seeded into the corpus.
 
 Also establish, and write into `rationale`:

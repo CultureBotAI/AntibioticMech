@@ -208,18 +208,14 @@ queue validation, and recovery when a queued change fails.
 
 ## Licence
 
-Two licences, because the repository holds two different things.
+Project-authored data, records, annotations, mappings, data exports and narrative
+documentation are licensed under [CC BY 4.0](LICENSE-DATA). Project-authored
+code, scripts, tests, schemas and website templates are licensed under
+[BSD-3-Clause](LICENSE-CODE). See [LICENSE](LICENSE) for scope and attribution.
 
-**Code, schema, tests, configuration, documentation and curation decisions:
-[CC0 1.0](LICENSE).** This repository's own work, dedicated to the public domain.
-
-**Record content — `data/antibiotics/**` and `data/raw/**`:
-[CC BY 4.0](LICENSE-DATA), attribution in [ATTRIBUTION.md](ATTRIBUTION.md).**
-It is derived from CC BY 4.0 and public sources, and CC BY content cannot be
-re-dedicated to the public domain: §3(b) permits an adapter's licence only if it
-does not prevent recipients complying with the original, and stripping
-attribution does exactly that. So the corpus is redistributable — freely,
-commercially, modified — provided the attribution rides along.
+Third-party material retains its own licenses and notices. Preserve upstream
+attribution and source-specific terms when redistributing a record or subset.
+Previously released material remains available under its original license.
 
 Attribution is per-record and machine-readable: `source_concepts` name the
 upstream concepts that ground each record's chemical identity, and source-owned
