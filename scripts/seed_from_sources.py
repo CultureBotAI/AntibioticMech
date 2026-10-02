@@ -2657,12 +2657,16 @@ NCBI_AST_REQUIRED_ACTIVITY_COLUMNS = (
 NCBI_AST_ACTIVITY_BY_PHENOTYPE = {
     "i": "INTERMEDIATE",
     "intermediate": "INTERMEDIATE",
+    "ns": "NONSUSCEPTIBLE",
+    "nonsusceptible": "NONSUSCEPTIBLE",
     "r": "RESISTANT",
     "resistant": "RESISTANT",
     "s": "SUSCEPTIBLE",
     "susceptible": "SUSCEPTIBLE",
+    "ssd": "SUSCEPTIBLE_DOSE_DEPENDENT",
+    "susceptibledosedependent": "SUSCEPTIBLE_DOSE_DEPENDENT",
 }
-NCBI_AST_NO_ACTIVITY_CALL_PHENOTYPES = {"not defined"}
+NCBI_AST_NO_ACTIVITY_CALL_PHENOTYPES = {"n", "nd", "notdefined"}
 NCBI_AST_MEASUREMENT_QUALIFIERS = {"", "<", "<=", ">", ">="}
 NCBI_AST_MIC_MAX_VALUE = Decimal("1024")
 NCBI_AST_DISK_DIFFUSION_MIN_VALUE = Decimal("6")
@@ -2713,6 +2717,10 @@ def require_seed_row_identity(
 
 def normalized_ncbi_ast_name(value: str) -> str:
     return NCBI_AST_NORMALIZED_NAME_PATTERN.sub("", value.casefold())
+
+
+def normalized_ncbi_ast_phenotype(value: str) -> str:
+    return normalized_ncbi_ast_name(value)
 
 
 def is_ncbi_ast_sourced_activity(item: dict) -> bool:
@@ -3038,7 +3046,7 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                 raise ValueError(
                     f"{prefix}: isolate_count must be 1 for a BioSample-grouped row"
                 )
-            phenotype = row["phenotype"].casefold()
+            phenotype = normalized_ncbi_ast_phenotype(row["phenotype"])
             if phenotype in NCBI_AST_NO_ACTIVITY_CALL_PHENOTYPES:
                 expected_activity = ""
             elif phenotype:

@@ -135,6 +135,30 @@ def test_load_ncbi_ast_activity_inventory_accepts_not_defined_phenotype(tmp_path
     assert load_ncbi_ast_activity_inventory(path) == [row]
 
 
+@pytest.mark.parametrize(
+    ("phenotype", "activity"),
+    [
+        ("NS", "NONSUSCEPTIBLE"),
+        ("nonsusceptible", "NONSUSCEPTIBLE"),
+        ("non-susceptible", "NONSUSCEPTIBLE"),
+        ("SSD", "SUSCEPTIBLE_DOSE_DEPENDENT"),
+        ("susceptible-dose dependent", "SUSCEPTIBLE_DOSE_DEPENDENT"),
+        ("N", ""),
+        ("ND", ""),
+    ],
+)
+def test_load_ncbi_ast_activity_inventory_accepts_extended_ncbi_phenotypes(
+    tmp_path,
+    phenotype,
+    activity,
+):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    row = ncbi_ast_row(phenotype=phenotype, activity=activity)
+    write_activity_report(path, [row])
+
+    assert load_ncbi_ast_activity_inventory(path) == [row]
+
+
 def test_load_ncbi_ast_activity_inventory_rejects_header_drift(tmp_path):
     path = tmp_path / "ncbi_ast_activity.tsv"
     path.write_text("activity_group_id\tunexpected\n", encoding="utf-8")
@@ -240,8 +264,8 @@ def test_load_ncbi_ast_activity_inventory_rejects_mixed_source_metadata(tmp_path
             {"standard_inchi_key": "HVFLCNVBZFFHBT"},
             "invalid standard_inchi_key value",
         ),
-        ({"phenotype": "non-susceptible", "activity": ""}, "unsupported phenotype"),
-        ({"activity": "NON_SUSCEPTIBLE"}, "activity must match phenotype"),
+        ({"phenotype": "unknown", "activity": ""}, "unsupported phenotype"),
+        ({"activity": "NONSUSCEPTIBLE"}, "activity must match phenotype"),
         ({"phenotype": "S", "activity": "RESISTANT"}, "activity must match phenotype"),
         ({"activity_group_id": "ncbi_ast:stale"}, "activity_group_id must be"),
         ({"mic_value": "high"}, "mic_value must be numeric"),

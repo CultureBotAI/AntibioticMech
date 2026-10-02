@@ -90,6 +90,18 @@ def test_record_page_renders_activity_sample_accessions():
                 "disk_diffusion_value": 12.0,
                 "disk_diffusion_units": "mm",
                 "assay": "Kirby-Bauer disk diffusion",
+            }, {
+                "taxon_label": "Klebsiella pneumoniae",
+                "activity": "NONSUSCEPTIBLE",
+                "mic_value": 4.0,
+                "mic_units": "mg/L",
+                "assay": "NCBI Pathogen Detection AST",
+            }, {
+                "taxon_label": "Salmonella enterica",
+                "activity": "SUSCEPTIBLE_DOSE_DEPENDENT",
+                "mic_value": 2.0,
+                "mic_units": "mg/L",
+                "assay": "NCBI Pathogen Detection AST",
             }],
         },
         root="../",
@@ -103,6 +115,8 @@ def test_record_page_renders_activity_sample_accessions():
     assert "<td class=\"num\">—</td>\n    <td class=\"num\">12.0 mm</td>" in html
     assert "BioSample" in html
     assert "SAMN11953777" in html
+    assert '<span class="pill warn">NONSUSCEPTIBLE</span>' in html
+    assert '<span class="pill warn">SUSCEPTIBLE_DOSE_DEPENDENT</span>' in html
     assert "BioProject" in html
     assert "PRJNA123456" in html
     assert "Pathogen Detection" in html

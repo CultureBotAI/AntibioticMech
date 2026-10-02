@@ -268,12 +268,16 @@ PROJECT_DEDUPE_ACCESSIONS = {
 ACTIVITY_CALLS = {
     "i": "INTERMEDIATE",
     "intermediate": "INTERMEDIATE",
+    "ns": "NONSUSCEPTIBLE",
+    "nonsusceptible": "NONSUSCEPTIBLE",
     "r": "RESISTANT",
     "resistant": "RESISTANT",
     "s": "SUSCEPTIBLE",
     "susceptible": "SUSCEPTIBLE",
+    "ssd": "SUSCEPTIBLE_DOSE_DEPENDENT",
+    "susceptibledosedependent": "SUSCEPTIBLE_DOSE_DEPENDENT",
 }
-NO_ACTIVITY_CALL_PHENOTYPES = {"not defined"}
+NO_ACTIVITY_CALL_PHENOTYPES = {"n", "nd", "notdefined"}
 TAXON_ALIASES = (
     "scientificname",
     "organismname",
@@ -516,7 +520,7 @@ def standardized_activity_call(row: dict[str, str]) -> tuple[str, str] | None:
 def activity_for_phenotype(phenotype: str) -> str | None:
     if not phenotype:
         return ""
-    normalized_phenotype = phenotype.casefold()
+    normalized_phenotype = normalize(phenotype)
     if normalized_phenotype in NO_ACTIVITY_CALL_PHENOTYPES:
         return ""
     return ACTIVITY_CALLS.get(normalized_phenotype)
