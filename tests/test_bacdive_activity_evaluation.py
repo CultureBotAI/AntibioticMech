@@ -13,12 +13,15 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from evaluate_bacdive_activity import (  # noqa: E402
+    ACTIVITY_REPORT_COLUMNS,
     DRUG_MAP_COLUMNS,
     DRUG_REPORT_COLUMNS,
     corpus_name_candidates,
     evaluate_records,
+    exact_activity_rows,
     read_bacdive_fetch,
     read_drug_map,
+    write_activity_report,
     write_drug_map_template,
     write_drug_report,
 )
@@ -41,6 +44,7 @@ def bacdive_record() -> dict:
                     "@ref": 119508,
                     "Chebi-ID": "chebi:28971",
                     "metabolite": "ampicillin",
+                    "concentration": "10 mg/L",
                     "is sensitive": "no",
                     "is resistant": "yes",
                 },
@@ -285,6 +289,91 @@ def test_evaluate_records_summarizes_met_antibiotica_and_disk_columns(tmp_path):
     assert rows[4]["invalid_disk_diffusion_count"] == "1"
 
 
+def test_exact_activity_rows_preserve_exact_mapped_bacdive_context(tmp_path):
+    mappings = {
+        "ampicillin": bacdive_drug_map_row(),
+        "trimethoprimsulfamethoxazole119": bacdive_drug_map_row(
+            source_record_id="trimethoprimsulfamethoxazole119",
+            source_name="Trimethoprim-sulfamethoxazole (1:19)",
+            mapping_status="COMBINATION",
+            identifier="",
+            standard_inchi_key="",
+            mapping_basis="none",
+            notes="Fixed trimethoprim and sulfamethoxazole combination.",
+        ),
+    }
+
+    rows = exact_activity_rows(
+        {"24493": bacdive_record()},
+        mappings,
+        SOURCE_VERSION,
+    )
+
+    assert len(rows) == 2
+    assert [row["source_section"] for row in rows] == [
+        "met_antibiotica",
+        "met_antibiogram_v2",
+    ]
+    assert {row["source_activity_id"] for row in rows} == {
+        "bacdive:5038512ce05fd01f",
+        "bacdive:928d8199da6513ce",
+    }
+    assert rows[0] == {
+        "source_activity_id": "bacdive:5038512ce05fd01f",
+        "source_version": SOURCE_VERSION,
+        "source_record_id": "ampicillin",
+        "source_name": "Ampicillin",
+        "identifier": "CHEBI:28971",
+        "standard_inchi_key": AMPICILLIN_INCHI_KEY,
+        "bacdive_id": "24493",
+        "taxon_label": "Phaeobacter gallaeciensis",
+        "strain": "BS 107",
+        "source_section": "met_antibiotica",
+        "source_row_index": "1",
+        "source_field": "metabolite",
+        "source_reference_ids": "119508",
+        "activity": "RESISTANT",
+        "source_concentration": "10 mg/L",
+        "disk_diffusion_value": "",
+        "disk_diffusion_units": "",
+        "assay": "",
+        "medium": "",
+    }
+    assert rows[1] == {
+        "source_activity_id": "bacdive:928d8199da6513ce",
+        "source_version": SOURCE_VERSION,
+        "source_record_id": "ampicillin",
+        "source_name": "Ampicillin",
+        "identifier": "CHEBI:28971",
+        "standard_inchi_key": AMPICILLIN_INCHI_KEY,
+        "bacdive_id": "24493",
+        "taxon_label": "Phaeobacter gallaeciensis",
+        "strain": "BS 107",
+        "source_section": "met_antibiogram_v2",
+        "source_row_index": "1",
+        "source_field": "AMP_antibiogramV2",
+        "source_reference_ids": "119508",
+        "activity": "",
+        "source_concentration": "",
+        "disk_diffusion_value": "18",
+        "disk_diffusion_units": "mm",
+        "assay": "BacDive met_antibiogram_v2 disk diffusion",
+        "medium": "Mueller Hinton",
+    }
+
+
+def test_write_activity_report_rejects_stale_ids(tmp_path):
+    rows = exact_activity_rows(
+        {"24493": bacdive_record()},
+        {"ampicillin": bacdive_drug_map_row()},
+        SOURCE_VERSION,
+    )
+    rows[0]["source_row_index"] = "2"
+
+    with pytest.raises(ValueError, match="source_activity_id is stale"):
+        write_activity_report(rows, tmp_path / "bacdive_activity.tsv")
+
+
 def test_read_bacdive_fetch_accepts_v2_results_objects(tmp_path):
     path = tmp_path / "bacdive.json"
     path.write_text(
@@ -306,9 +395,11 @@ def test_write_drug_report_and_map_template(tmp_path):
     rows = report_rows(tmp_path)
     report = tmp_path / "bacdive_antibiotics.tsv"
     template = tmp_path / "bacdive_drug_map.tsv"
+    activity = tmp_path / "bacdive_activity.tsv"
 
     write_drug_report(rows, report)
     write_drug_map_template(rows, template, SOURCE_VERSION)
+    write_activity_report([], activity)
 
     with report.open(newline="", encoding="utf-8") as handle:
         reader = csv.DictReader(handle, delimiter="\t")
@@ -336,6 +427,11 @@ def test_write_drug_report_and_map_template(tmp_path):
         "mapping_basis": "",
         "notes": "",
     }
+
+    with activity.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        assert reader.fieldnames == ACTIVITY_REPORT_COLUMNS
+        assert list(reader) == []
 
 
 def test_cli_writes_bacdive_reports(tmp_path):
@@ -375,6 +471,7 @@ def test_cli_reads_drug_map_without_prefilling_template(tmp_path):
     drug_map = tmp_path / "bacdive_drug_map.tsv"
     report = tmp_path / "bacdive_antibiotics.tsv"
     template = tmp_path / "bacdive_drug_map_template.tsv"
+    activity_report = tmp_path / "bacdive_activity.tsv"
     path.write_text(
         json.dumps({"results": {"24493": bacdive_record()}}),
         encoding="utf-8",
@@ -395,6 +492,8 @@ def test_cli_reads_drug_map_without_prefilling_template(tmp_path):
             str(report),
             "--drug-map-template",
             str(template),
+            "--activity-report",
+            str(activity_report),
         ],
         check=True,
         capture_output=True,
@@ -405,11 +504,18 @@ def test_cli_reads_drug_map_without_prefilling_template(tmp_path):
         report_rows_by_id = {row["source_record_id"]: row for row in csv.DictReader(handle, delimiter="\t")}
     with template.open(newline="", encoding="utf-8") as handle:
         template_rows_by_id = {row["source_record_id"]: row for row in csv.DictReader(handle, delimiter="\t")}
+    with activity_report.open(newline="", encoding="utf-8") as handle:
+        activity_rows = list(csv.DictReader(handle, delimiter="\t"))
 
     assert report_rows_by_id["ampicillin"]["mapping_status"] == "EXACT"
     assert report_rows_by_id["ampicillin"]["identifier"] == "CHEBI:28971"
     assert template_rows_by_id["ampicillin"]["mapping_status"] == ""
     assert template_rows_by_id["ampicillin"]["identifier"] == ""
+    assert len(activity_rows) == 2
+    assert {row["source_section"] for row in activity_rows} == {
+        "met_antibiogram_v2",
+        "met_antibiotica",
+    }
 
 
 def test_cli_rejects_drug_map_without_source_version(tmp_path):
@@ -431,7 +537,34 @@ def test_cli_rejects_drug_map_without_source_version(tmp_path):
     )
 
     assert result.returncode != 0
-    assert "--drug-map and --drug-map-template require --source-version" in result.stderr
+    assert (
+        "--drug-map, --drug-map-template and --activity-report require --source-version"
+        in result.stderr
+    )
+
+
+def test_cli_rejects_activity_report_without_drug_map(tmp_path):
+    path = tmp_path / "bacdive.json"
+    path.write_text(json.dumps({"results": {"24493": bacdive_record()}}), encoding="utf-8")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--bacdive",
+            str(path),
+            "--source-version",
+            SOURCE_VERSION,
+            "--activity-report",
+            str(tmp_path / "bacdive_activity.tsv"),
+        ],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+
+    assert result.returncode != 0
+    assert "--activity-report requires --drug-map" in result.stderr
 
 
 def test_cli_rejects_drug_map_template_over_curated_drug_map(tmp_path):
