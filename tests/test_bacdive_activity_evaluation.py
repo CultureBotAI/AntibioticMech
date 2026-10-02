@@ -394,6 +394,23 @@ def test_exact_activity_rows_preserves_scalar_reference_arrays():
     assert rows[0]["source_reference_ids"] == "119508|119509"
 
 
+def test_exact_activity_rows_preserves_scalar_antibiogram_reference_arrays():
+    record = bacdive_record()
+    record["Physiology and metabolism"]["antibiogram"]["@ref"] = [
+        "119509",
+        119508,
+        "",
+    ]
+
+    rows = exact_activity_rows(
+        {"24493": record},
+        {"ampicillin": bacdive_drug_map_row()},
+        SOURCE_VERSION,
+    )
+
+    assert rows[1]["source_reference_ids"] == "119508|119509"
+
+
 def test_write_activity_report_rejects_stale_ids(tmp_path):
     rows = exact_activity_rows(
         {"24493": bacdive_record()},
@@ -863,6 +880,37 @@ def test_exact_activity_rows_rejects_malformed_antibiogram_medium():
     with pytest.raises(
         ValueError,
         match="BacDive-ID 24493 antibiogram row 1 Medium_antibiogramV2",
+    ):
+        exact_activity_rows(
+            {"24493": record},
+            {"ampicillin": bacdive_drug_map_row()},
+            SOURCE_VERSION,
+        )
+
+
+@pytest.mark.parametrize("disk_value", [[18], {"value": 18}])
+def test_evaluate_records_rejects_malformed_antibiogram_disk_values(disk_value):
+    record = bacdive_record()
+    record["Physiology and metabolism"]["antibiogram"]["AMP_antibiogramV2"] = (
+        disk_value
+    )
+
+    with pytest.raises(
+        ValueError,
+        match="BacDive-ID 24493 antibiogram row 1 AMP_antibiogramV2",
+    ):
+        evaluate_records({"24493": record}, {}, {})
+
+
+def test_exact_activity_rows_rejects_malformed_antibiogram_disk_values():
+    record = bacdive_record()
+    record["Physiology and metabolism"]["antibiogram"]["AMP_antibiogramV2"] = [
+        18,
+    ]
+
+    with pytest.raises(
+        ValueError,
+        match="BacDive-ID 24493 antibiogram row 1 AMP_antibiogramV2",
     ):
         exact_activity_rows(
             {"24493": record},
