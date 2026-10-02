@@ -998,6 +998,70 @@ def test_exact_activity_rows_normalizes_microgram_mic_headers_to_mg_per_l():
     assert activity_rows[0]["mic_units"] == "mg/L"
 
 
+def test_exact_activity_rows_converts_ncbi_biosample_generic_measurements():
+    rows = [
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953777",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "R",
+            "Measurement sign": "<=",
+            "Measurement": "2",
+            "Measurement unit": "microgram/milliliter",
+            "Laboratory typing method": "MIC",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953778",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "S",
+            "Measurement sign": ">",
+            "Measurement": "18",
+            "Measurement units": "millimeters",
+            "Laboratory typing method": "disk diffusion",
+        },
+    ]
+    mappings = {
+        "cefepime": {
+            "mapping_status": "EXACT",
+            "identifier": "CHEBI:478164",
+            "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+            "source_name": "cefepime",
+        },
+    }
+
+    result = evaluate_rows(
+        rows,
+        {"cefepime": {"CHEBI:478164"}},
+        {"CHEBI:478164": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
+        mappings=mappings,
+    )
+    activity_rows = exact_activity_rows(
+        rows,
+        mappings,
+        source_version="2026-09-26-ast-browser",
+        source_retrieved_on="2026-09-26",
+    )
+
+    assert result["antibiotic_rows"][0]["mic_count"] == 1
+    assert result["antibiotic_rows"][0]["standardized_mic_count"] == 1
+    assert result["antibiotic_rows"][0]["standardized_mic_values"] == "<=2 mg/L"
+    assert result["antibiotic_rows"][0]["disk_diffusion_count"] == 1
+    assert result["antibiotic_rows"][0]["standardized_disk_diffusion_count"] == 1
+    assert result["antibiotic_rows"][0]["standardized_disk_diffusion_values"] == ">18 mm"
+    assert len(activity_rows) == 2
+    assert activity_rows[0]["mic_value"] == "2"
+    assert activity_rows[0]["mic_qualifier"] == "<="
+    assert activity_rows[0]["mic_units"] == "mg/L"
+    assert activity_rows[0]["disk_diffusion_value"] == ""
+    assert activity_rows[1]["mic_value"] == ""
+    assert activity_rows[1]["disk_diffusion_value"] == "18"
+    assert activity_rows[1]["disk_diffusion_qualifier"] == ">"
+    assert activity_rows[1]["disk_diffusion_units"] == "mm"
+
+
 @pytest.mark.parametrize(
     ("phenotype", "activity"),
     [
@@ -1007,6 +1071,8 @@ def test_exact_activity_rows_normalizes_microgram_mic_headers_to_mg_per_l():
         ("sensitive", "SUSCEPTIBLE"),
         ("SSD", "SUSCEPTIBLE_DOSE_DEPENDENT"),
         ("susceptible-dose dependent", "SUSCEPTIBLE_DOSE_DEPENDENT"),
+        ("HLAR", "RESISTANT"),
+        ("high level aminoglycoside resistance", "RESISTANT"),
         ("N", ""),
         ("ND", ""),
         ("not defined", ""),

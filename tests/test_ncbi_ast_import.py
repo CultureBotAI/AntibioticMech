@@ -144,6 +144,8 @@ def test_load_ncbi_ast_activity_inventory_accepts_not_defined_phenotype(tmp_path
         ("sensitive", "SUSCEPTIBLE"),
         ("SSD", "SUSCEPTIBLE_DOSE_DEPENDENT"),
         ("susceptible-dose dependent", "SUSCEPTIBLE_DOSE_DEPENDENT"),
+        ("HLAR", "RESISTANT"),
+        ("high level aminoglycoside resistance", "RESISTANT"),
         ("N", ""),
         ("ND", ""),
     ],

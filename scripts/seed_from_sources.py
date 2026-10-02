@@ -2664,6 +2664,8 @@ NCBI_AST_ACTIVITY_BY_PHENOTYPE = {
     "s": "SUSCEPTIBLE",
     "sensitive": "SUSCEPTIBLE",
     "susceptible": "SUSCEPTIBLE",
+    "hlar": "RESISTANT",
+    "highlevelaminoglycosideresistance": "RESISTANT",
     "ssd": "SUSCEPTIBLE_DOSE_DEPENDENT",
     "susceptibledosedependent": "SUSCEPTIBLE_DOSE_DEPENDENT",
 }
