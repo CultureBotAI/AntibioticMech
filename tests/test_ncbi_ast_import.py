@@ -141,6 +141,7 @@ def test_load_ncbi_ast_activity_inventory_accepts_not_defined_phenotype(tmp_path
         ("NS", "NONSUSCEPTIBLE"),
         ("nonsusceptible", "NONSUSCEPTIBLE"),
         ("non-susceptible", "NONSUSCEPTIBLE"),
+        ("sensitive", "SUSCEPTIBLE"),
         ("SSD", "SUSCEPTIBLE_DOSE_DEPENDENT"),
         ("susceptible-dose dependent", "SUSCEPTIBLE_DOSE_DEPENDENT"),
         ("N", ""),
