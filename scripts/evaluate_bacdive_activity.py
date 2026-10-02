@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import re
 from collections import Counter, defaultdict
@@ -58,6 +59,37 @@ DRUG_REPORT_COLUMNS = [
     "mapping_basis",
     "mapping_notes",
 ]
+ACTIVITY_ID_VERSION = "bacdive_activity_row_v1"
+ACTIVITY_ID_COLUMNS = [
+    "source_record_id",
+    "identifier",
+    "standard_inchi_key",
+    "bacdive_id",
+    "source_section",
+    "source_row_index",
+    "source_field",
+]
+ACTIVITY_REPORT_COLUMNS = [
+    "source_activity_id",
+    "source_version",
+    "source_record_id",
+    "source_name",
+    "identifier",
+    "standard_inchi_key",
+    "bacdive_id",
+    "taxon_label",
+    "strain",
+    "source_section",
+    "source_row_index",
+    "source_field",
+    "source_reference_ids",
+    "activity",
+    "source_concentration",
+    "disk_diffusion_value",
+    "disk_diffusion_units",
+    "assay",
+    "medium",
+]
 
 EXACT_MAPPING_STATUS = "EXACT"
 MAPPING_STATUSES = {
@@ -90,11 +122,36 @@ ANTIBIOTICA_NAME_ALIASES = (
     "antibiotic",
 )
 ANTIBIOTICA_CHEBI_ALIASES = ("chebiid",)
+ANTIBIOTICA_CONCENTRATION_ALIASES = (
+    "concentration",
+    "concentrationantib",
+    "metaboliteconcentration",
+)
 ANTIBIOTICA_ACTIVITY_ALIASES = {
     "SUSCEPTIBLE": ("issensitive", "absensitive"),
     "INTERMEDIATE": ("isintermediate", "abintermediate"),
     "RESISTANT": ("isresistant", "abresistant"),
 }
+ACTIVITY_CALLS = frozenset(ANTIBIOTICA_ACTIVITY_ALIASES)
+REFERENCE_ALIASES = ("ref",)
+TAXONOMY_SECTION_KEYS = {
+    "nameandtaxonomicclassification",
+    "nametaxonomicclassification",
+}
+TAXON_LABEL_ALIASES = (
+    "fullscientificname",
+    "scientificname",
+    "species",
+)
+STRAIN_ALIASES = (
+    "straindesignation",
+    "strain",
+)
+ANTIBIOGRAM_MEDIUM_ALIASES = (
+    "medium",
+    "mediumantibiogram",
+    "mediumantibiogramv2",
+)
 
 ANTIBIOGRAM_V1_FIELDS = {
     "P": "Penicillin G",
@@ -265,13 +322,21 @@ def corpus_name_candidates(root: Path = REPO_ROOT) -> tuple[dict[str, set[str]],
 
 
 def first_value(row: Mapping[str, Any], aliases: Iterable[str]) -> str:
+    _, value = first_field_value(row, aliases)
+    return value
+
+
+def first_field_value(
+    row: Mapping[str, Any],
+    aliases: Iterable[str],
+) -> tuple[str, str]:
     alias_set = set(aliases)
     for key, value in row.items():
         if value in (None, ""):
             continue
         if normalize(str(key)) in alias_set:
-            return str(value).strip()
-    return ""
+            return str(key), str(value).strip()
+    return "", ""
 
 
 def source_chebi_id(row: Mapping[str, Any]) -> str:
@@ -293,6 +358,29 @@ def activity_call(row: Mapping[str, Any]) -> str:
     if len(observed) != 1:
         return ""
     return observed[0]
+
+
+def source_reference_ids(row: Mapping[str, Any]) -> str:
+    values: set[str] = set()
+    for key, value in row.items():
+        if normalize(str(key)) not in REFERENCE_ALIASES or value in (None, ""):
+            continue
+        raw_values = value if isinstance(value, list) else [value]
+        for raw_value in raw_values:
+            text = str(raw_value).strip()
+            if text:
+                values.add(text)
+    return "|".join(sorted(values))
+
+
+def taxon_context(record: Mapping[str, Any]) -> dict[str, str]:
+    for key, value in record.items():
+        if normalize(str(key)) in TAXONOMY_SECTION_KEYS and isinstance(value, Mapping):
+            return {
+                "taxon_label": first_value(value, TAXON_LABEL_ALIASES),
+                "strain": first_value(value, STRAIN_ALIASES),
+            }
+    return {"taxon_label": "", "strain": ""}
 
 
 def decimal_string(value: Decimal) -> str:
@@ -367,6 +455,147 @@ def antibiogram_rows(
                         yield source_name, row_source_section, standardized_value
                     elif standardized_value is None:
                         yield source_name, row_source_section, None
+
+
+def exact_activity_rows(
+    records: Mapping[str, Mapping[str, Any]],
+    drug_map: Mapping[str, Mapping[str, str]],
+    source_version: str,
+) -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+
+    for bacdive_id_value, record in sorted(records.items()):
+        context = taxon_context(record)
+        if not context["taxon_label"]:
+            continue
+
+        for section in physiology_sections(record):
+            for source_row_index, row in enumerate(
+                source_section_rows(section, ANTIBIOTICA_SECTION_KEYS),
+                start=1,
+            ):
+                source_field, source_name = first_field_value(
+                    row,
+                    ANTIBIOTICA_NAME_ALIASES,
+                )
+                mapping = drug_map.get(normalize(source_name))
+                activity = activity_call(row)
+                if (
+                    not mapping
+                    or mapping.get("mapping_status") != EXACT_MAPPING_STATUS
+                    or not activity
+                ):
+                    continue
+
+                rows.append(
+                    activity_report_row(
+                        mapping=mapping,
+                        source_version=source_version,
+                        bacdive_id=bacdive_id_value,
+                        source_section="met_antibiotica",
+                        source_row_index=source_row_index,
+                        source_field=source_field,
+                        source_reference_ids=source_reference_ids(row),
+                        taxon_label=context["taxon_label"],
+                        strain=context["strain"],
+                        activity=activity,
+                        source_concentration=first_value(
+                            row,
+                            ANTIBIOTICA_CONCENTRATION_ALIASES,
+                        ),
+                    )
+                )
+
+            for key, value in section.items():
+                source_section = ANTIBIOGRAM_SECTION_BY_KEY.get(normalize(str(key)))
+                if source_section is None:
+                    continue
+
+                for source_row_index, row in enumerate(as_rows(value), start=1):
+                    medium = first_value(row, ANTIBIOGRAM_MEDIUM_ALIASES)
+                    for field, cell in row.items():
+                        source_name, row_source_section = antibiogram_source_name(
+                            str(field),
+                            source_section,
+                        )
+                        mapping = drug_map.get(normalize(source_name))
+                        disk_value = disk_diffusion_value(cell)
+                        if (
+                            not mapping
+                            or mapping.get("mapping_status") != EXACT_MAPPING_STATUS
+                            or not disk_value
+                        ):
+                            continue
+
+                        rows.append(
+                            activity_report_row(
+                                mapping=mapping,
+                                source_version=source_version,
+                                bacdive_id=bacdive_id_value,
+                                source_section=row_source_section,
+                                source_row_index=source_row_index,
+                                source_field=str(field),
+                                source_reference_ids=source_reference_ids(row),
+                                taxon_label=context["taxon_label"],
+                                strain=context["strain"],
+                                disk_diffusion_value=disk_value,
+                                medium=medium,
+                                assay=f"BacDive {row_source_section} disk diffusion",
+                            )
+                        )
+
+    return rows
+
+
+def activity_report_row(
+    *,
+    mapping: Mapping[str, str],
+    source_version: str,
+    bacdive_id: str,
+    source_section: str,
+    source_row_index: int,
+    source_field: str,
+    source_reference_ids: str,
+    taxon_label: str,
+    strain: str,
+    activity: str = "",
+    source_concentration: str = "",
+    disk_diffusion_value: str = "",
+    medium: str = "",
+    assay: str = "",
+) -> dict[str, str]:
+    row = {
+        "source_version": source_version,
+        "source_record_id": mapping["source_record_id"],
+        "source_name": mapping["source_name"],
+        "identifier": mapping["identifier"],
+        "standard_inchi_key": mapping["standard_inchi_key"],
+        "bacdive_id": bacdive_id,
+        "taxon_label": taxon_label,
+        "strain": strain,
+        "source_section": source_section,
+        "source_row_index": str(source_row_index),
+        "source_field": source_field,
+        "source_reference_ids": source_reference_ids,
+        "activity": activity,
+        "source_concentration": source_concentration,
+        "disk_diffusion_value": disk_diffusion_value,
+        "disk_diffusion_units": "mm" if disk_diffusion_value else "",
+        "assay": assay,
+        "medium": medium,
+    }
+    row["source_activity_id"] = source_activity_id(row)
+    return row
+
+
+def source_activity_id(row: Mapping[str, str]) -> str:
+    payload = "\x1f".join(
+        [
+            ACTIVITY_ID_VERSION,
+            *(row[column] for column in ACTIVITY_ID_COLUMNS),
+        ]
+    )
+    return f"bacdive:{hashlib.sha256(payload.encode('utf-8')).hexdigest()[:16]}"
 
 
 def evaluate_records(
@@ -477,6 +706,74 @@ def require_report_rows(rows: list[dict[str, str]], path: Path) -> None:
             raise ValueError(f"{prefix}: normalized_source_name drift for source_name")
         if row["mapping_status"] and row["mapping_status"] not in MAPPING_STATUSES:
             raise ValueError(f"{prefix}: unknown mapping_status {row['mapping_status']!r}")
+
+
+def require_activity_report_rows(rows: list[dict[str, str]], path: Path) -> None:
+    seen_activity_ids = set()
+    for index, row in enumerate(rows, start=1):
+        prefix = f"{path}: row {index}"
+        for field in ACTIVITY_REPORT_COLUMNS:
+            if field not in row:
+                raise ValueError(f"{prefix}: missing {field}")
+            require_tsv_safe_value(row[field], field, prefix)
+
+        require_non_blank_fields(
+            row,
+            (
+                "source_activity_id",
+                "source_version",
+                "source_record_id",
+                "source_name",
+                "identifier",
+                "standard_inchi_key",
+                "bacdive_id",
+                "taxon_label",
+                "source_section",
+                "source_row_index",
+                "source_field",
+            ),
+            path,
+            index,
+        )
+        if row["source_activity_id"] != source_activity_id(row):
+            raise ValueError(f"{prefix}: source_activity_id is stale")
+        if row["source_activity_id"] in seen_activity_ids:
+            raise ValueError(f"{prefix}: duplicate source_activity_id")
+        seen_activity_ids.add(row["source_activity_id"])
+
+        try:
+            source_row_index = int(row["source_row_index"])
+        except ValueError as error:
+            raise ValueError(f"{prefix}: source_row_index must be numeric") from error
+        if source_row_index <= 0:
+            raise ValueError(f"{prefix}: source_row_index must be positive")
+        if row["source_row_index"] != str(source_row_index):
+            raise ValueError(
+                f"{prefix}: source_row_index must use canonical integer "
+                f"{source_row_index!r}"
+            )
+        if row["source_section"] not in {
+            "met_antibiogram",
+            "met_antibiogram_v2",
+            "met_antibiotica",
+        }:
+            raise ValueError(f"{prefix}: unsupported source_section {row['source_section']!r}")
+        if row["activity"] and row["activity"] not in ACTIVITY_CALLS:
+            raise ValueError(f"{prefix}: unsupported activity {row['activity']!r}")
+        if not row["activity"] and not row["disk_diffusion_value"]:
+            raise ValueError(f"{prefix}: activity or disk_diffusion_value is required")
+
+        if row["disk_diffusion_value"] and row["disk_diffusion_units"] != "mm":
+            raise ValueError(f"{prefix}: disk_diffusion_units must be mm")
+        if row["disk_diffusion_units"] and not row["disk_diffusion_value"]:
+            raise ValueError(f"{prefix}: disk_diffusion_units requires disk_diffusion_value")
+        if row["disk_diffusion_value"] and not row["assay"]:
+            raise ValueError(f"{prefix}: assay is required for disk_diffusion_value")
+        if (
+            row["disk_diffusion_value"]
+            and disk_diffusion_value(row["disk_diffusion_value"]) != row["disk_diffusion_value"]
+        ):
+            raise ValueError(f"{prefix}: invalid disk_diffusion_value")
 
 
 def require_exact_table_row(row: dict, path: Path, line_number: int) -> None:
@@ -621,6 +918,20 @@ def write_drug_report(rows: list[dict[str, str]], path: Path) -> None:
         writer.writerows(rows)
 
 
+def write_activity_report(rows: list[dict[str, str]], path: Path) -> None:
+    require_activity_report_rows(rows, path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=ACTIVITY_REPORT_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(rows)
+
+
 def write_drug_map_template(rows: list[dict[str, str]], path: Path, source_version: str) -> None:
     require_report_rows(rows, path)
     source_version = require_tsv_safe_value(source_version, "source_version", str(path))
@@ -706,7 +1017,7 @@ def main() -> int:
         default="",
         help=(
             "Optional BacDive export version to pin --drug-map mappings and "
-            "stamp on --drug-map-template rows."
+            "stamp on --drug-map-template and --activity-report rows."
         ),
     )
     parser.add_argument(
@@ -724,9 +1035,20 @@ def main() -> int:
         type=Path,
         help="Optional fillable TSV crosswalk from BacDive antibiotic names to exact structures.",
     )
+    parser.add_argument(
+        "--activity-report",
+        type=Path,
+        help="Optional exact-mapped TSV of BacDive activity rows with source context.",
+    )
     args = parser.parse_args()
-    if (args.drug_map or args.drug_map_template) and not args.source_version.strip():
-        parser.error("--drug-map and --drug-map-template require --source-version.")
+    if args.activity_report and not args.drug_map:
+        parser.error("--activity-report requires --drug-map.")
+    if (
+        args.drug_map
+        or args.drug_map_template
+        or args.activity_report
+    ) and not args.source_version.strip():
+        parser.error("--drug-map, --drug-map-template and --activity-report require --source-version.")
     if args.source_version != args.source_version.strip():
         parser.error("--source-version must not have leading or trailing whitespace.")
     if any(char in args.source_version for char in CURATED_TSV_CONTROL_CHARS):
@@ -738,6 +1060,7 @@ def main() -> int:
             ("--drug-map", args.drug_map),
             ("--drug-report", args.drug_report),
             ("--drug-map-template", args.drug_map_template),
+            ("--activity-report", args.activity_report),
         ],
     )
     reject_unsafe_cli_output_paths(
@@ -745,6 +1068,7 @@ def main() -> int:
         (
             ("--drug-report", args.drug_report),
             ("--drug-map-template", args.drug_map_template),
+            ("--activity-report", args.activity_report),
         ),
     )
 
@@ -774,12 +1098,20 @@ def main() -> int:
             args.drug_map_template,
             args.source_version,
         )
+    activity_rows = (
+        exact_activity_rows(records, drug_map, args.source_version)
+        if args.activity_report
+        else []
+    )
+    if args.activity_report:
+        write_activity_report(activity_rows, args.activity_report)
 
     print(
         "BacDive activity preflight: "
         f"records={len(records)} antibiotic_values={len(rows)} "
         f"rows={sum(int(row['bacdive_row_count']) for row in rows)} "
-        f"single_exact_name_candidates={sum(1 for row in rows if row['exact_name_candidate_count'] == '1')}"
+        f"single_exact_name_candidates={sum(1 for row in rows if row['exact_name_candidate_count'] == '1')} "
+        f"exact_activity_rows={len(activity_rows)}"
     )
     return 0
 
