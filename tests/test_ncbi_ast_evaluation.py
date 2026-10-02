@@ -1004,6 +1004,7 @@ def test_exact_activity_rows_normalizes_microgram_mic_headers_to_mg_per_l():
         ("NS", "NONSUSCEPTIBLE"),
         ("nonsusceptible", "NONSUSCEPTIBLE"),
         ("non-susceptible", "NONSUSCEPTIBLE"),
+        ("sensitive", "SUSCEPTIBLE"),
         ("SSD", "SUSCEPTIBLE_DOSE_DEPENDENT"),
         ("susceptible-dose dependent", "SUSCEPTIBLE_DOSE_DEPENDENT"),
         ("N", ""),

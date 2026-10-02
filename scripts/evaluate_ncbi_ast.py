@@ -273,6 +273,7 @@ ACTIVITY_CALLS = {
     "r": "RESISTANT",
     "resistant": "RESISTANT",
     "s": "SUSCEPTIBLE",
+    "sensitive": "SUSCEPTIBLE",
     "susceptible": "SUSCEPTIBLE",
     "ssd": "SUSCEPTIBLE_DOSE_DEPENDENT",
     "susceptibledosedependent": "SUSCEPTIBLE_DOSE_DEPENDENT",
