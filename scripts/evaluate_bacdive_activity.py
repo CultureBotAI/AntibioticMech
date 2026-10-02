@@ -271,11 +271,18 @@ def bacdive_id(record_key: str, record: Mapping[str, Any]) -> str:
     return str(record_key)
 
 
-def as_rows(value: Any) -> list[Mapping[str, Any]]:
-    if isinstance(value, list):
-        return [item for item in value if isinstance(item, Mapping)]
+def as_rows(value: Any, context: str) -> list[Mapping[str, Any]]:
     if isinstance(value, Mapping):
         return [value]
+    if isinstance(value, list):
+        rows = []
+        for index, item in enumerate(value, start=1):
+            if not isinstance(item, Mapping):
+                raise ValueError(f"{context} row {index} is not an object")
+            rows.append(item)
+        return rows
+    if value not in (None, ""):
+        raise ValueError(f"{context} must be an object or array")
     return []
 
 
@@ -440,16 +447,25 @@ def physiology_sections(record: Mapping[str, Any]) -> Iterable[Mapping[str, Any]
 def source_section_rows(
     section: Mapping[str, Any],
     wanted_keys: Iterable[str],
+    *,
+    bacdive_id_value: str,
 ) -> Iterable[Mapping[str, Any]]:
     wanted = set(wanted_keys)
     for key, value in section.items():
         if normalize(str(key)) in wanted:
-            yield from as_rows(value)
+            yield from as_rows(value, f"BacDive-ID {bacdive_id_value} {key}")
 
 
-def antibiotic_name_rows(record: Mapping[str, Any]) -> Iterable[tuple[str, str, str, str]]:
+def antibiotic_name_rows(
+    bacdive_id_value: str,
+    record: Mapping[str, Any],
+) -> Iterable[tuple[str, str, str, str]]:
     for section in physiology_sections(record):
-        for row in source_section_rows(section, ANTIBIOTICA_SECTION_KEYS):
+        for row in source_section_rows(
+            section,
+            ANTIBIOTICA_SECTION_KEYS,
+            bacdive_id_value=bacdive_id_value,
+        ):
             source_name = first_value(row, ANTIBIOTICA_NAME_ALIASES)
             if not source_name:
                 continue
@@ -462,6 +478,7 @@ def antibiotic_name_rows(record: Mapping[str, Any]) -> Iterable[tuple[str, str, 
 
 
 def antibiogram_rows(
+    bacdive_id_value: str,
     record: Mapping[str, Any],
 ) -> Iterable[tuple[str, str, str | None]]:
     for section in physiology_sections(record):
@@ -469,7 +486,7 @@ def antibiogram_rows(
             source_section = ANTIBIOGRAM_SECTION_BY_KEY.get(normalize(str(key)))
             if source_section is None:
                 continue
-            for row in as_rows(value):
+            for row in as_rows(value, f"BacDive-ID {bacdive_id_value} {key}"):
                 for field, cell in row.items():
                     source_name, row_source_section = antibiogram_source_name(
                         str(field),
@@ -498,7 +515,11 @@ def exact_activity_rows(
 
         for section in physiology_sections(record):
             for source_row_index, row in enumerate(
-                source_section_rows(section, ANTIBIOTICA_SECTION_KEYS),
+                source_section_rows(
+                    section,
+                    ANTIBIOTICA_SECTION_KEYS,
+                    bacdive_id_value=bacdive_id_value,
+                ),
                 start=1,
             ):
                 source_field, source_name = first_field_value(
@@ -538,7 +559,10 @@ def exact_activity_rows(
                 if source_section is None:
                     continue
 
-                for source_row_index, row in enumerate(as_rows(value), start=1):
+                for source_row_index, row in enumerate(
+                    as_rows(value, f"BacDive-ID {bacdive_id_value} {key}"),
+                    start=1,
+                ):
                     medium = first_value(row, ANTIBIOGRAM_MEDIUM_ALIASES)
                     for field, cell in row.items():
                         source_name, row_source_section = antibiogram_source_name(
@@ -653,7 +677,10 @@ def evaluate_records(
         )
 
     for bacdive_id_value, record in sorted(records.items()):
-        for source_name, section, activity, chebi_id in antibiotic_name_rows(record):
+        for source_name, section, activity, chebi_id in antibiotic_name_rows(
+            bacdive_id_value,
+            record,
+        ):
             entry = entry_for(source_name)
             entry["source_names"].add(source_name)
             entry["source_sections"].add(section)
@@ -664,7 +691,7 @@ def evaluate_records(
             if chebi_id:
                 entry["source_chebi_ids"].add(chebi_id)
 
-        for source_name, section, value in antibiogram_rows(record):
+        for source_name, section, value in antibiogram_rows(bacdive_id_value, record):
             entry = entry_for(source_name)
             entry["source_names"].add(source_name)
             entry["source_sections"].add(section)
