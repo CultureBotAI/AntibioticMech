@@ -649,6 +649,32 @@ def test_evaluate_records_rejects_malformed_activity_section_rows(
         evaluate_records({"24493": record}, {}, {})
 
 
+def test_evaluate_records_rejects_malformed_physiology_sections():
+    record = bacdive_record()
+    record["Physiology and metabolism"] = ["not a section"]
+
+    with pytest.raises(
+        ValueError,
+        match="BacDive-ID 24493 Physiology and metabolism must be an object",
+    ):
+        evaluate_records({"24493": record}, {}, {})
+
+
+def test_exact_activity_rows_rejects_malformed_taxonomy_sections():
+    record = bacdive_record()
+    record["Name and taxonomic classification"] = ["not a section"]
+
+    with pytest.raises(
+        ValueError,
+        match="BacDive-ID 24493 Name and taxonomic classification must be an object",
+    ):
+        exact_activity_rows(
+            {"24493": record},
+            {"ampicillin": bacdive_drug_map_row()},
+            SOURCE_VERSION,
+        )
+
+
 def test_merge_bacdive_records_rejects_duplicate_input_ids(tmp_path):
     with pytest.raises(ValueError, match="duplicate BacDive-ID across inputs: 24493"):
         merge_bacdive_records(
