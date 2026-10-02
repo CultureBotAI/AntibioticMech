@@ -127,6 +127,14 @@ def test_load_ncbi_ast_activity_inventory_accepts_versionless_gca_assembly(tmp_p
     assert load_ncbi_ast_activity_inventory(path) == [row]
 
 
+def test_load_ncbi_ast_activity_inventory_accepts_not_defined_phenotype(tmp_path):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    row = ncbi_ast_row(phenotype="not defined", activity="")
+    write_activity_report(path, [row])
+
+    assert load_ncbi_ast_activity_inventory(path) == [row]
+
+
 def test_load_ncbi_ast_activity_inventory_rejects_header_drift(tmp_path):
     path = tmp_path / "ncbi_ast_activity.tsv"
     path.write_text("activity_group_id\tunexpected\n", encoding="utf-8")
