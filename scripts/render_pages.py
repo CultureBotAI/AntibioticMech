@@ -42,6 +42,11 @@ from pathlib import Path
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+if __package__:
+    from .mechanism_graph import graph_svg
+else:
+    from mechanism_graph import graph_svg
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 TEMPLATES_DIR = REPO_ROOT / "src" / "antibioticmech" / "templates"
@@ -377,6 +382,7 @@ def build(out_dir: Path) -> None:
         trim_blocks=True,
         lstrip_blocks=True,
     )
+    env.filters["graph_svg"] = graph_svg
 
     # A CURIE referenced by another record (parent_compounds, xrefs,
     # activity_roles, a molecular target, a resistance determinant) is
