@@ -377,6 +377,23 @@ def test_exact_activity_rows_preserve_exact_mapped_bacdive_context(tmp_path):
     }
 
 
+def test_exact_activity_rows_preserves_scalar_reference_arrays():
+    record = bacdive_record()
+    record["Physiology and metabolism"]["antibiotic resistance"][0]["@ref"] = [
+        "119509",
+        119508,
+        "",
+    ]
+
+    rows = exact_activity_rows(
+        {"24493": record},
+        {"ampicillin": bacdive_drug_map_row()},
+        SOURCE_VERSION,
+    )
+
+    assert rows[0]["source_reference_ids"] == "119508|119509"
+
+
 def test_write_activity_report_rejects_stale_ids(tmp_path):
     rows = exact_activity_rows(
         {"24493": bacdive_record()},
@@ -727,6 +744,59 @@ def test_evaluate_records_rejects_malformed_activity_section_rows(
         evaluate_records({"24493": record}, {}, {})
 
 
+@pytest.mark.parametrize(
+    ("field", "value"),
+    [
+        ("metabolite", ["ampicillin"]),
+        ("Chebi-ID", {"value": "CHEBI:28971"}),
+        ("is resistant", ["yes"]),
+    ],
+)
+def test_evaluate_records_rejects_malformed_met_antibiotica_scalar_fields(
+    field,
+    value,
+):
+    record = bacdive_record()
+    record["Physiology and metabolism"]["antibiotic resistance"][0][field] = value
+
+    with pytest.raises(
+        ValueError,
+        match=f"BacDive-ID 24493 antibiotic resistance row 1 {field} must be a scalar",
+    ):
+        evaluate_records({"24493": record}, {}, {})
+
+
+@pytest.mark.parametrize(
+    ("field", "value", "match"),
+    [
+        (
+            "concentration",
+            ["10 mg/L"],
+            "BacDive-ID 24493 antibiotic resistance row 1 concentration",
+        ),
+        (
+            "@ref",
+            [{"id": 119508}],
+            r"BacDive-ID 24493 antibiotic resistance row 1 @ref entry 1",
+        ),
+    ],
+)
+def test_exact_activity_rows_rejects_malformed_met_antibiotica_activity_fields(
+    field,
+    value,
+    match,
+):
+    record = bacdive_record()
+    record["Physiology and metabolism"]["antibiotic resistance"][0][field] = value
+
+    with pytest.raises(ValueError, match=match):
+        exact_activity_rows(
+            {"24493": record},
+            {"ampicillin": bacdive_drug_map_row()},
+            SOURCE_VERSION,
+        )
+
+
 def test_evaluate_records_rejects_malformed_physiology_sections():
     record = bacdive_record()
     record["Physiology and metabolism"] = ["not a section"]
@@ -745,6 +815,54 @@ def test_exact_activity_rows_rejects_malformed_taxonomy_sections():
     with pytest.raises(
         ValueError,
         match="BacDive-ID 24493 Name and taxonomic classification must be an object",
+    ):
+        exact_activity_rows(
+            {"24493": record},
+            {"ampicillin": bacdive_drug_map_row()},
+            SOURCE_VERSION,
+        )
+
+
+@pytest.mark.parametrize(
+    ("field", "value", "match"),
+    [
+        (
+            "species",
+            ["Phaeobacter gallaeciensis"],
+            "BacDive-ID 24493 Name and taxonomic classification species",
+        ),
+        (
+            "strain designation",
+            {"value": "BS 107"},
+            "BacDive-ID 24493 Name and taxonomic classification strain designation",
+        ),
+    ],
+)
+def test_exact_activity_rows_rejects_malformed_taxonomy_scalar_fields(
+    field,
+    value,
+    match,
+):
+    record = bacdive_record()
+    record["Name and taxonomic classification"][field] = value
+
+    with pytest.raises(ValueError, match=match):
+        exact_activity_rows(
+            {"24493": record},
+            {"ampicillin": bacdive_drug_map_row()},
+            SOURCE_VERSION,
+        )
+
+
+def test_exact_activity_rows_rejects_malformed_antibiogram_medium():
+    record = bacdive_record()
+    record["Physiology and metabolism"]["antibiogram"]["Medium_antibiogramV2"] = [
+        "Mueller Hinton",
+    ]
+
+    with pytest.raises(
+        ValueError,
+        match="BacDive-ID 24493 antibiogram row 1 Medium_antibiogramV2",
     ):
         exact_activity_rows(
             {"24493": record},
