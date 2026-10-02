@@ -227,6 +227,8 @@ MIC_ALIASES = (
     "minimuminhibitoryconcentration",
 )
 DISK_ALIASES = ("diskdiffusion", "diskdiffusionmm", "diskdiameter", "diskzone")
+GENERIC_MEASUREMENT_ALIASES = ("measurement",)
+GENERIC_MEASUREMENT_UNIT_ALIASES = ("measurementunit", "measurementunits")
 MEASUREMENT_SIGN_ALIASES = ("measurementsign", "sign")
 METHOD_ALIASES = ("method", "laboratorytypingmethod", "labtypingmethod")
 PLATFORM_ALIASES = ("platform", "laboratorytypingplatform")
@@ -249,6 +251,19 @@ MEASUREMENT_SIGNS = {"", "<=", ">=", "<", ">", "=", "=="}
 MEASUREMENT_QUALIFIERS = {"", "<", "<=", ">", ">="}
 MIC_UNITS = "mg/L"
 DISK_DIFFUSION_UNITS = "mm"
+GENERIC_MIC_UNITS = {
+    "mgl",
+    "ugml",
+    "microgrammilliliter",
+    "microgrammillilitre",
+    "microgramsmilliliter",
+    "microgramsmillilitre",
+}
+GENERIC_DISK_DIFFUSION_UNITS = {
+    "mm",
+    "millimeter",
+    "millimeters",
+}
 MIC_MAX_VALUE = Decimal("1024")
 DISK_DIFFUSION_MIN_VALUE = Decimal("6")
 DISK_DIFFUSION_MAX_VALUE = Decimal("150")
@@ -275,6 +290,8 @@ ACTIVITY_CALLS = {
     "s": "SUSCEPTIBLE",
     "sensitive": "SUSCEPTIBLE",
     "susceptible": "SUSCEPTIBLE",
+    "hlar": "RESISTANT",
+    "highlevelaminoglycosideresistance": "RESISTANT",
     "ssd": "SUSCEPTIBLE_DOSE_DEPENDENT",
     "susceptibledosedependent": "SUSCEPTIBLE_DOSE_DEPENDENT",
 }
@@ -482,6 +499,61 @@ def standardized_measurement(
     return format(value.normalize(), "f"), qualifier, units
 
 
+def generic_measurement_kind(row: dict[str, str]) -> str:
+    if has_value(row, MIC_ALIASES) or has_value(row, DISK_ALIASES):
+        return ""
+    if not has_value(row, GENERIC_MEASUREMENT_ALIASES):
+        return ""
+
+    unit = first_value(row, GENERIC_MEASUREMENT_UNIT_ALIASES)
+    normalized_unit = normalize(unit.translate(MICROGRAM_HEADER_TRANSLATION))
+    if normalized_unit in GENERIC_MIC_UNITS:
+        return "mic"
+    if normalized_unit in GENERIC_DISK_DIFFUSION_UNITS:
+        return "disk_diffusion"
+    return ""
+
+
+def has_mic_measurement(row: dict[str, str]) -> bool:
+    return has_value(row, MIC_ALIASES) or generic_measurement_kind(row) == "mic"
+
+
+def has_disk_diffusion_measurement(row: dict[str, str]) -> bool:
+    return (
+        has_value(row, DISK_ALIASES)
+        or generic_measurement_kind(row) == "disk_diffusion"
+    )
+
+
+def standardized_typed_measurement(
+    row: dict[str, str],
+    aliases: Iterable[str],
+    units: str,
+    kind: str,
+    *,
+    minimum: Decimal | None = None,
+    maximum: Decimal | None = None,
+) -> tuple[str, str, str] | None:
+    measurement = standardized_measurement(
+        row,
+        aliases,
+        units,
+        minimum=minimum,
+        maximum=maximum,
+    )
+    if measurement is None or measurement[0]:
+        return measurement
+    if generic_measurement_kind(row) != kind:
+        return "", "", ""
+    return standardized_measurement(
+        row,
+        GENERIC_MEASUREMENT_ALIASES,
+        units,
+        minimum=minimum,
+        maximum=maximum,
+    )
+
+
 def measurement_label(measurement: tuple[str, str, str]) -> str:
     value, qualifier, units = measurement
     return f"{qualifier}{value} {units}"
@@ -490,16 +562,18 @@ def measurement_label(measurement: tuple[str, str, str]) -> str:
 def standardized_activity_measurements(
     row: dict[str, str],
 ) -> tuple[tuple[str, str, str], tuple[str, str, str]] | None:
-    mic = standardized_measurement(
+    mic = standardized_typed_measurement(
         row,
         MIC_ALIASES,
         MIC_UNITS,
+        "mic",
         maximum=MIC_MAX_VALUE,
     )
-    disk = standardized_measurement(
+    disk = standardized_typed_measurement(
         row,
         DISK_ALIASES,
         DISK_DIFFUSION_UNITS,
+        "disk_diffusion",
         minimum=DISK_DIFFUSION_MIN_VALUE,
         maximum=DISK_DIFFUSION_MAX_VALUE,
     )
@@ -1264,19 +1338,21 @@ def evaluate_rows(
             unmapped_rows += row_count
 
         mic_measurements = [
-            standardized_measurement(
+            standardized_typed_measurement(
                 row,
                 MIC_ALIASES,
                 MIC_UNITS,
+                "mic",
                 maximum=MIC_MAX_VALUE,
             )
             for row in antibiotic_ast_rows
         ]
         disk_measurements = [
-            standardized_measurement(
+            standardized_typed_measurement(
                 row,
                 DISK_ALIASES,
                 DISK_DIFFUSION_UNITS,
+                "disk_diffusion",
                 minimum=DISK_DIFFUSION_MIN_VALUE,
                 maximum=DISK_DIFFUSION_MAX_VALUE,
             )
@@ -1357,13 +1433,16 @@ def evaluate_rows(
                     has_invalid_phenotype(row) for row in antibiotic_ast_rows
                 ),
                 "assay_method_count": sum(has_assay_method(row) for row in antibiotic_ast_rows),
-                "mic_count": sum(has_value(row, MIC_ALIASES) for row in antibiotic_ast_rows),
+                "mic_count": sum(has_mic_measurement(row) for row in antibiotic_ast_rows),
                 "standardized_mic_count": len(valid_mic_measurements),
                 "invalid_mic_count": sum(measurement is None for measurement in mic_measurements),
                 "standardized_mic_values": "|".join(
                     sorted({measurement_label(measurement) for measurement in valid_mic_measurements})
                 ),
-                "disk_diffusion_count": sum(has_value(row, DISK_ALIASES) for row in antibiotic_ast_rows),
+                "disk_diffusion_count": sum(
+                    has_disk_diffusion_measurement(row)
+                    for row in antibiotic_ast_rows
+                ),
                 "standardized_disk_diffusion_count": len(valid_disk_measurements),
                 "invalid_disk_diffusion_count": sum(
                     measurement is None for measurement in disk_measurements
