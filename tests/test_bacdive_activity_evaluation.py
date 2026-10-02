@@ -612,6 +612,43 @@ def test_read_bacdive_fetch_rejects_duplicate_bacdive_ids(tmp_path):
         read_bacdive_fetch(path)
 
 
+@pytest.mark.parametrize(
+    ("section_name", "section_value", "match"),
+    [
+        (
+            "antibiotic resistance",
+            ["not a row"],
+            "BacDive-ID 24493 antibiotic resistance row 1 is not an object",
+        ),
+        (
+            "antibiotic resistance",
+            "not rows",
+            "BacDive-ID 24493 antibiotic resistance must be an object or array",
+        ),
+        (
+            "antibiogram",
+            ["not a row"],
+            "BacDive-ID 24493 antibiogram row 1 is not an object",
+        ),
+        (
+            "antibiogram",
+            "not rows",
+            "BacDive-ID 24493 antibiogram must be an object or array",
+        ),
+    ],
+)
+def test_evaluate_records_rejects_malformed_activity_section_rows(
+    section_name,
+    section_value,
+    match,
+):
+    record = bacdive_record()
+    record["Physiology and metabolism"][section_name] = section_value
+
+    with pytest.raises(ValueError, match=match):
+        evaluate_records({"24493": record}, {}, {})
+
+
 def test_merge_bacdive_records_rejects_duplicate_input_ids(tmp_path):
     with pytest.raises(ValueError, match="duplicate BacDive-ID across inputs: 24493"):
         merge_bacdive_records(
