@@ -391,26 +391,36 @@ def corpus_name_candidates(root: Path = REPO_ROOT) -> tuple[dict[str, set[str]],
     return candidates, structure_keys
 
 
-def first_value(row: Mapping[str, Any], aliases: Iterable[str]) -> str:
-    _, value = first_field_value(row, aliases)
+def scalar_text(value: Any, context: str, field: str) -> str:
+    if isinstance(value, Mapping | list):
+        raise ValueError(f"{context} {field} must be a scalar")
+    if value in (None, ""):
+        return ""
+    return str(value).strip()
+
+
+def first_value(row: Mapping[str, Any], aliases: Iterable[str], *, context: str) -> str:
+    _, value = first_field_value(row, aliases, context=context)
     return value
 
 
 def first_field_value(
     row: Mapping[str, Any],
     aliases: Iterable[str],
+    *,
+    context: str,
 ) -> tuple[str, str]:
     alias_set = set(aliases)
     for key, value in row.items():
-        if value in (None, ""):
-            continue
         if normalize(str(key)) in alias_set:
-            return str(key), str(value).strip()
+            text = scalar_text(value, context, str(key))
+            if text:
+                return str(key), text
     return "", ""
 
 
-def source_chebi_id(row: Mapping[str, Any]) -> str:
-    chebi_id = first_value(row, ANTIBIOTICA_CHEBI_ALIASES)
+def source_chebi_id(row: Mapping[str, Any], *, context: str) -> str:
+    chebi_id = first_value(row, ANTIBIOTICA_CHEBI_ALIASES, context=context)
     if not chebi_id:
         return ""
     match = CHEBI_ID_PATTERN.match(chebi_id.strip())
@@ -419,10 +429,10 @@ def source_chebi_id(row: Mapping[str, Any]) -> str:
     return f"CHEBI:{match.group('id')}"
 
 
-def activity_call(row: Mapping[str, Any]) -> str:
+def activity_call(row: Mapping[str, Any], *, context: str) -> str:
     observed = []
     for activity, aliases in ANTIBIOTICA_ACTIVITY_ALIASES.items():
-        value = normalize(first_value(row, aliases))
+        value = normalize(first_value(row, aliases, context=context))
         if value in TRUE_ACTIVITY_VALUES:
             observed.append(activity)
     if len(observed) != 1:
@@ -430,14 +440,15 @@ def activity_call(row: Mapping[str, Any]) -> str:
     return observed[0]
 
 
-def source_reference_ids(row: Mapping[str, Any]) -> str:
+def source_reference_ids(row: Mapping[str, Any], *, context: str) -> str:
     values: set[str] = set()
     for key, value in row.items():
         if normalize(str(key)) not in REFERENCE_ALIASES or value in (None, ""):
             continue
         raw_values = value if isinstance(value, list) else [value]
-        for raw_value in raw_values:
-            text = str(raw_value).strip()
+        for index, raw_value in enumerate(raw_values, start=1):
+            field = str(key) if not isinstance(value, list) else f"{key} entry {index}"
+            text = scalar_text(raw_value, context, field)
             if text:
                 values.add(text)
     return "|".join(sorted(values))
@@ -447,26 +458,30 @@ def record_sections(
     bacdive_id_value: str,
     record: Mapping[str, Any],
     wanted_keys: Iterable[str],
-) -> Iterable[Mapping[str, Any]]:
+) -> Iterable[tuple[str, Mapping[str, Any]]]:
     wanted = set(wanted_keys)
     for key, value in record.items():
         if normalize(str(key)) not in wanted:
             continue
         if isinstance(value, Mapping):
-            yield value
+            yield f"BacDive-ID {bacdive_id_value} {key}", value
         elif value not in (None, ""):
             raise ValueError(f"BacDive-ID {bacdive_id_value} {key} must be an object")
 
 
 def taxon_context(bacdive_id_value: str, record: Mapping[str, Any]) -> dict[str, str]:
-    for section in record_sections(
+    for section_context, section in record_sections(
         bacdive_id_value,
         record,
         TAXONOMY_SECTION_KEYS,
     ):
         return {
-            "taxon_label": first_value(section, TAXON_LABEL_ALIASES),
-            "strain": first_value(section, STRAIN_ALIASES),
+            "taxon_label": first_value(
+                section,
+                TAXON_LABEL_ALIASES,
+                context=section_context,
+            ),
+            "strain": first_value(section, STRAIN_ALIASES, context=section_context),
         }
     return {"taxon_label": "", "strain": ""}
 
@@ -496,11 +511,12 @@ def physiology_sections(
     bacdive_id_value: str,
     record: Mapping[str, Any],
 ) -> Iterable[Mapping[str, Any]]:
-    yield from record_sections(
+    for _, section in record_sections(
         bacdive_id_value,
         record,
         PHYSIOLOGY_SECTION_KEYS,
-    )
+    ):
+        yield section
 
 
 def source_section_rows(
@@ -508,11 +524,13 @@ def source_section_rows(
     wanted_keys: Iterable[str],
     *,
     bacdive_id_value: str,
-) -> Iterable[Mapping[str, Any]]:
+) -> Iterable[tuple[str, Mapping[str, Any]]]:
     wanted = set(wanted_keys)
     for key, value in section.items():
         if normalize(str(key)) in wanted:
-            yield from as_rows(value, f"BacDive-ID {bacdive_id_value} {key}")
+            context = f"BacDive-ID {bacdive_id_value} {key}"
+            for index, row in enumerate(as_rows(value, context), start=1):
+                yield f"{context} row {index}", row
 
 
 def antibiotic_name_rows(
@@ -520,19 +538,23 @@ def antibiotic_name_rows(
     record: Mapping[str, Any],
 ) -> Iterable[tuple[str, str, str, str]]:
     for section in physiology_sections(bacdive_id_value, record):
-        for row in source_section_rows(
+        for row_context, row in source_section_rows(
             section,
             ANTIBIOTICA_SECTION_KEYS,
             bacdive_id_value=bacdive_id_value,
         ):
-            source_name = first_value(row, ANTIBIOTICA_NAME_ALIASES)
+            source_name = first_value(
+                row,
+                ANTIBIOTICA_NAME_ALIASES,
+                context=row_context,
+            )
             if not source_name:
                 continue
             yield (
                 source_name,
                 "met_antibiotica",
-                activity_call(row),
-                source_chebi_id(row),
+                activity_call(row, context=row_context),
+                source_chebi_id(row, context=row_context),
             )
 
 
@@ -545,7 +567,8 @@ def antibiogram_rows(
             source_section = ANTIBIOGRAM_SECTION_BY_KEY.get(normalize(str(key)))
             if source_section is None:
                 continue
-            for row in as_rows(value, f"BacDive-ID {bacdive_id_value} {key}"):
+            context = f"BacDive-ID {bacdive_id_value} {key}"
+            for row in as_rows(value, context):
                 for field, cell in row.items():
                     source_name, row_source_section = antibiogram_source_name(
                         str(field),
@@ -568,12 +591,12 @@ def exact_activity_rows(
     rows: list[dict[str, str]] = []
 
     for bacdive_id_value, record in sorted(records.items()):
-        context = taxon_context(bacdive_id_value, record)
-        if not context["taxon_label"]:
+        taxon = taxon_context(bacdive_id_value, record)
+        if not taxon["taxon_label"]:
             continue
 
         for section in physiology_sections(bacdive_id_value, record):
-            for source_row_index, row in enumerate(
+            for source_row_index, (row_context, row) in enumerate(
                 source_section_rows(
                     section,
                     ANTIBIOTICA_SECTION_KEYS,
@@ -584,9 +607,10 @@ def exact_activity_rows(
                 source_field, source_name = first_field_value(
                     row,
                     ANTIBIOTICA_NAME_ALIASES,
+                    context=row_context,
                 )
                 mapping = drug_map.get(normalize(source_name))
-                activity = activity_call(row)
+                activity = activity_call(row, context=row_context)
                 if (
                     not mapping
                     or mapping.get("mapping_status") != EXACT_MAPPING_STATUS
@@ -602,13 +626,17 @@ def exact_activity_rows(
                         source_section="met_antibiotica",
                         source_row_index=source_row_index,
                         source_field=source_field,
-                        source_reference_ids=source_reference_ids(row),
-                        taxon_label=context["taxon_label"],
-                        strain=context["strain"],
+                        source_reference_ids=source_reference_ids(
+                            row,
+                            context=row_context,
+                        ),
+                        taxon_label=taxon["taxon_label"],
+                        strain=taxon["strain"],
                         activity=activity,
                         source_concentration=first_value(
                             row,
                             ANTIBIOTICA_CONCENTRATION_ALIASES,
+                            context=row_context,
                         ),
                     )
                 )
@@ -618,11 +646,17 @@ def exact_activity_rows(
                 if source_section is None:
                     continue
 
+                section_context = f"BacDive-ID {bacdive_id_value} {key}"
                 for source_row_index, row in enumerate(
-                    as_rows(value, f"BacDive-ID {bacdive_id_value} {key}"),
+                    as_rows(value, section_context),
                     start=1,
                 ):
-                    medium = first_value(row, ANTIBIOGRAM_MEDIUM_ALIASES)
+                    row_context = f"{section_context} row {source_row_index}"
+                    medium = first_value(
+                        row,
+                        ANTIBIOGRAM_MEDIUM_ALIASES,
+                        context=row_context,
+                    )
                     for field, cell in row.items():
                         source_name, row_source_section = antibiogram_source_name(
                             str(field),
@@ -645,9 +679,12 @@ def exact_activity_rows(
                                 source_section=row_source_section,
                                 source_row_index=source_row_index,
                                 source_field=str(field),
-                                source_reference_ids=source_reference_ids(row),
-                                taxon_label=context["taxon_label"],
-                                strain=context["strain"],
+                                source_reference_ids=source_reference_ids(
+                                    row,
+                                    context=row_context,
+                                ),
+                                taxon_label=taxon["taxon_label"],
+                                strain=taxon["strain"],
                                 disk_diffusion_value=disk_value,
                                 medium=medium,
                                 assay=f"BacDive {row_source_section} disk diffusion",
