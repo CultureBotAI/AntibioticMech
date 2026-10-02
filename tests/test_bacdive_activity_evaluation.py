@@ -612,6 +612,32 @@ def test_read_bacdive_fetch_rejects_duplicate_bacdive_ids(tmp_path):
         read_bacdive_fetch(path)
 
 
+def test_read_bacdive_fetch_rejects_malformed_general_section(tmp_path):
+    path = tmp_path / "bacdive.json"
+    record = bacdive_record()
+    record["General"] = ["not metadata"]
+    path.write_text(json.dumps({"results": {"24493": record}}), encoding="utf-8")
+
+    with pytest.raises(
+        ValueError,
+        match="BacDive record 24493 General must be an object",
+    ):
+        read_bacdive_fetch(path)
+
+
+def test_read_bacdive_fetch_rejects_malformed_general_bacdive_id(tmp_path):
+    path = tmp_path / "bacdive.json"
+    record = bacdive_record()
+    record["General"]["BacDive-ID"] = {"value": 24493}
+    path.write_text(json.dumps({"results": {"24493": record}}), encoding="utf-8")
+
+    with pytest.raises(
+        ValueError,
+        match="BacDive record 24493 General BacDive-ID must be a scalar",
+    ):
+        read_bacdive_fetch(path)
+
+
 @pytest.mark.parametrize(
     ("section_name", "section_value", "match"),
     [
