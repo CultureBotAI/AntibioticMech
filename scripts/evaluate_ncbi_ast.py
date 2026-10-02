@@ -15,7 +15,7 @@ import hashlib
 import re
 from collections import Counter, defaultdict
 from collections.abc import Iterable
-from datetime import date
+from datetime import date, datetime
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
@@ -241,6 +241,10 @@ PHENOTYPE_ALIASES = (
     "interpretation",
 )
 MEASUREMENT_PATTERN = re.compile(r"^(?P<qualifier><=|>=|<|>|=)?\s*(?P<value>(?:\d+(?:\.\d*)?|\.\d+))$")
+UTC_TIMESTAMP_PATTERN = re.compile(
+    r"^(?P<date>[0-9]{4}-[0-9]{2}-[0-9]{2})"
+    r"T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\.[0-9]+)?Z$"
+)
 MEASUREMENT_SIGNS = {"", "<=", ">=", "<", ">", "=", "=="}
 MEASUREMENT_QUALIFIERS = {"", "<", "<=", ">", ">="}
 MIC_UNITS = "mg/L"
@@ -373,13 +377,28 @@ def is_iso_date(value: str) -> bool:
     return parsed.isoformat() == value
 
 
+def compact_iso_date(value: str) -> str | None:
+    if is_iso_date(value):
+        return value
+
+    match = UTC_TIMESTAMP_PATTERN.match(value)
+    if match is None:
+        return None
+    try:
+        datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    iso_date = match.group("date")
+    if not is_iso_date(iso_date):
+        return None
+    return iso_date
+
+
 def valid_create_date(row: dict[str, str]) -> str | None:
     create_date = first_value(row, CREATE_DATE_ALIASES)
     if not create_date:
         return ""
-    if not is_iso_date(create_date):
-        return None
-    return create_date
+    return compact_iso_date(create_date)
 
 
 def valid_taxon_id(row: dict[str, str]) -> str | None:

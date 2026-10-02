@@ -753,7 +753,7 @@ def test_exact_activity_rows_preserves_gcp_isolate_context_aliases():
     assert activity_rows[0]["create_date"] == "2020-01-31"
 
 
-def test_exact_activity_rows_preserves_browser_target_creation_date():
+def test_exact_activity_rows_normalizes_browser_target_creation_date():
     rows = [
         {
             "antibiotic": "cefepime",
@@ -763,7 +763,7 @@ def test_exact_activity_rows_preserves_browser_target_creation_date():
             "phenotype": "R",
             "mic": "2",
             "platform": "AST",
-            "target_creation_date": "2020-01-31",
+            "target_creation_date": "2020-01-31T08:54:05Z",
         },
         {
             "antibiotic": "cefepime",
@@ -773,7 +773,47 @@ def test_exact_activity_rows_preserves_browser_target_creation_date():
             "phenotype": "R",
             "mic": "4",
             "platform": "AST",
+            "target_creation_date": "2020-02-01",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953779",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "R",
+            "mic": "8",
+            "platform": "AST",
             "target_creation_date": "20200131",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953780",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "R",
+            "mic": "16",
+            "platform": "AST",
+            "target_creation_date": "2020-13-01T08:54:05Z",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953781",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "R",
+            "mic": "32",
+            "platform": "AST",
+            "target_creation_date": "2020-03-01T08:54:05.123Z",
+        },
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953782",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": "R",
+            "mic": "64",
+            "platform": "AST",
+            "target_creation_date": "2020-01-31T99:99:99Z",
         },
     ]
     mappings = {
@@ -798,13 +838,22 @@ def test_exact_activity_rows_preserves_browser_target_creation_date():
         source_retrieved_on="2026-09-26",
     )
 
-    assert result["rows_with_create_date"] == 2
-    assert result["rows_with_invalid_create_date"] == 1
-    assert result["antibiotic_rows"][0]["create_date_count"] == 2
-    assert result["antibiotic_rows"][0]["invalid_create_date_count"] == 1
-    assert len(activity_rows) == 1
-    assert activity_rows[0]["biosample_accession"] == "SAMN11953777"
-    assert activity_rows[0]["create_date"] == "2020-01-31"
+    assert result["rows_with_create_date"] == 6
+    assert result["rows_with_invalid_create_date"] == 3
+    assert result["antibiotic_rows"][0]["create_date_count"] == 6
+    assert result["antibiotic_rows"][0]["invalid_create_date_count"] == 3
+    activity_by_biosample = {
+        row["biosample_accession"]: row
+        for row in activity_rows
+    }
+    assert set(activity_by_biosample) == {
+        "SAMN11953777",
+        "SAMN11953778",
+        "SAMN11953781",
+    }
+    assert activity_by_biosample["SAMN11953777"]["create_date"] == "2020-01-31"
+    assert activity_by_biosample["SAMN11953778"]["create_date"] == "2020-02-01"
+    assert activity_by_biosample["SAMN11953781"]["create_date"] == "2020-03-01"
 
 
 def test_exact_activity_rows_excludes_invalid_create_dates():
