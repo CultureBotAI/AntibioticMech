@@ -478,6 +478,11 @@ def test_read_activity_report_rejects_short_rows(tmp_path):
             "source_record_id must be the normalized source_name",
         ),
         (
+            {"source_field": "AMP_antibiogramV2"},
+            True,
+            "unsupported met_antibiotica source_field",
+        ),
+        (
             {
                 "activity": "",
                 "disk_diffusion_value": "18",
@@ -533,6 +538,18 @@ def test_read_activity_report_rejects_stale_or_malformed_rows(
             "disk-diffusion rows must not carry source_concentration",
         ),
         ({"assay": "disk diffusion"}, "assay must be 'BacDive met_antibiogram_v2"),
+        (
+            {"source_field": "NOTREAL_antibiogramV2"},
+            "unsupported disk-diffusion source_field",
+        ),
+        (
+            {"source_field": "AMP_antibiogram"},
+            "belongs to met_antibiogram, not met_antibiogram_v2",
+        ),
+        (
+            {"source_field": "CAZ_antibiogramV2"},
+            "maps to 'Ceftazidime', not source_name 'Ampicillin'",
+        ),
     ],
 )
 def test_read_activity_report_rejects_malformed_disk_rows(
@@ -547,6 +564,7 @@ def test_read_activity_report_rejects_malformed_disk_rows(
         SOURCE_VERSION,
     )
     rows[1].update(overrides)
+    rows[1]["source_activity_id"] = source_activity_id(rows[1])
     write_raw_activity_report(path, rows)
 
     with pytest.raises(ValueError, match=match):
