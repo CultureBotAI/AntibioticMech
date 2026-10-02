@@ -2506,6 +2506,20 @@ def test_activity_report_is_a_stable_tsv(tmp_path):
     }]
 
 
+def test_write_activity_report_accepts_not_defined_phenotype(tmp_path):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    row = ncbi_ast_activity_report_row(phenotype="not defined", activity="")
+    row["activity_group_id"] = activity_group_id(row)
+
+    write_activity_report([row], path)
+
+    with path.open(newline="", encoding="utf-8") as handle:
+        actual = list(csv.DictReader(handle, delimiter="\t"))
+
+    assert actual[0]["phenotype"] == "not defined"
+    assert actual[0]["activity"] == ""
+
+
 def test_write_activity_report_rejects_empty_reports_before_opening(tmp_path):
     path = tmp_path / "ncbi_ast_activity.tsv"
     path.write_text("keep me\n", encoding="utf-8")

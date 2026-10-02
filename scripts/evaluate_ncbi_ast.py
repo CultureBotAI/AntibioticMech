@@ -507,15 +507,19 @@ def standardized_activity_measurements(
 
 def standardized_activity_call(row: dict[str, str]) -> tuple[str, str] | None:
     phenotype = first_value(row, PHENOTYPE_ALIASES)
-    if not phenotype:
-        return "", ""
-    normalized_phenotype = phenotype.casefold()
-    if normalized_phenotype in NO_ACTIVITY_CALL_PHENOTYPES:
-        return phenotype, ""
-    activity = ACTIVITY_CALLS.get(normalized_phenotype)
+    activity = activity_for_phenotype(phenotype)
     if activity is None:
         return None
     return phenotype, activity
+
+
+def activity_for_phenotype(phenotype: str) -> str | None:
+    if not phenotype:
+        return ""
+    normalized_phenotype = phenotype.casefold()
+    if normalized_phenotype in NO_ACTIVITY_CALL_PHENOTYPES:
+        return ""
+    return ACTIVITY_CALLS.get(normalized_phenotype)
 
 
 def has_invalid_phenotype(row: dict[str, str]) -> bool:
@@ -2191,8 +2195,8 @@ def require_activity_report_rows(rows: list[dict], path: Path) -> None:
                 f"{prefix}: isolate_count must be 1 for a BioSample-grouped row"
             )
 
-        expected_activity = ACTIVITY_CALLS.get(row["phenotype"].casefold(), "")
-        if row["phenotype"] and not expected_activity:
+        expected_activity = activity_for_phenotype(row["phenotype"])
+        if expected_activity is None:
             raise ValueError(f"{prefix}: unsupported phenotype {row['phenotype']!r}")
         if row["activity"] != expected_activity:
             raise ValueError(
