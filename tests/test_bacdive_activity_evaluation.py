@@ -593,6 +593,15 @@ def test_read_bacdive_fetch_accepts_single_record_objects(tmp_path):
     assert read_bacdive_fetch(path) == {"24493": bacdive_record()}
 
 
+def test_read_bacdive_fetch_uses_positive_integer_result_keys_as_id_fallback(tmp_path):
+    path = tmp_path / "bacdive.json"
+    record = bacdive_record()
+    del record["General"]
+    path.write_text(json.dumps({"results": {" 24493 ": record}}), encoding="utf-8")
+
+    assert read_bacdive_fetch(path) == {"24493": record}
+
+
 def test_read_bacdive_fetch_rejects_non_record_results(tmp_path):
     path = tmp_path / "bacdive.json"
     path.write_text(json.dumps({"results": {"24493": "not a record"}}), encoding="utf-8")
@@ -634,6 +643,49 @@ def test_read_bacdive_fetch_rejects_malformed_general_bacdive_id(tmp_path):
     with pytest.raises(
         ValueError,
         match="BacDive record 24493 General BacDive-ID must be a scalar",
+    ):
+        read_bacdive_fetch(path)
+
+
+@pytest.mark.parametrize("bacdive_id_value", [0, -1, True, "24493.0"])
+def test_read_bacdive_fetch_rejects_malformed_scalar_general_bacdive_id(
+    tmp_path,
+    bacdive_id_value,
+):
+    path = tmp_path / "bacdive.json"
+    record = bacdive_record()
+    record["General"]["BacDive-ID"] = bacdive_id_value
+    path.write_text(json.dumps({"results": {"24493": record}}), encoding="utf-8")
+
+    with pytest.raises(
+        ValueError,
+        match="BacDive record 24493 General BacDive-ID must be a positive integer",
+    ):
+        read_bacdive_fetch(path)
+
+
+def test_read_bacdive_fetch_rejects_single_records_without_general_bacdive_id(tmp_path):
+    path = tmp_path / "bacdive.json"
+    record = bacdive_record()
+    record["General"] = {}
+    path.write_text(json.dumps(record), encoding="utf-8")
+
+    with pytest.raises(
+        ValueError,
+        match="BacDive record 1 is missing General BacDive-ID",
+    ):
+        read_bacdive_fetch(path)
+
+
+def test_read_bacdive_fetch_rejects_list_records_without_general_bacdive_id(tmp_path):
+    path = tmp_path / "bacdive.json"
+    record = bacdive_record()
+    del record["General"]
+    path.write_text(json.dumps({"results": [record]}), encoding="utf-8")
+
+    with pytest.raises(
+        ValueError,
+        match="BacDive record 1 is missing General BacDive-ID",
     ):
         read_bacdive_fetch(path)
 

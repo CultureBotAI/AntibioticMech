@@ -233,6 +233,7 @@ ANTIBIOGRAM_FIELDS_BY_SECTION = {
 }
 
 TRUE_ACTIVITY_VALUES = {"1", "+", "true", "yes", "positive"}
+BACDIVE_ID_PATTERN = re.compile(r"^[1-9][0-9]*$")
 CHEBI_ID_PATTERN = re.compile(r"^(?:CHEBI[:_])?(?P<id>[1-9][0-9]*)$", re.IGNORECASE)
 DISK_DIFFUSION_VALUE_PATTERN = re.compile(r"^(?:\d+(?:\.\d*)?|\.\d+)$")
 
@@ -262,7 +263,25 @@ def antibiogram_source_name(
     return ANTIBIOGRAM_FIELDS_BY_SECTION[fallback_section].get(code, ""), fallback_section
 
 
-def bacdive_id(record_key: str, record: Mapping[str, Any]) -> str:
+def canonical_bacdive_id(value: Any, record_key: str, field: str) -> str:
+    if isinstance(value, Mapping | list):
+        raise ValueError(
+            f"BacDive record {record_key} {field} must be a scalar"
+        )
+    identifier = str(value).strip()
+    if BACDIVE_ID_PATTERN.fullmatch(identifier) is None:
+        raise ValueError(
+            f"BacDive record {record_key} {field} must be a positive integer"
+        )
+    return identifier
+
+
+def bacdive_id(
+    record_key: str,
+    record: Mapping[str, Any],
+    *,
+    allow_key_fallback: bool = True,
+) -> str:
     general = record.get("General")
     if general not in (None, "") and not isinstance(general, Mapping):
         raise ValueError(f"BacDive record {record_key} General must be an object")
@@ -271,12 +290,14 @@ def bacdive_id(record_key: str, record: Mapping[str, Any]) -> str:
             value = general.get(field)
             if value in (None, ""):
                 continue
-            if isinstance(value, Mapping | list):
-                raise ValueError(
-                    f"BacDive record {record_key} General {field} must be a scalar"
-                )
-            return str(value)
-    return str(record_key)
+            return canonical_bacdive_id(
+                value,
+                record_key,
+                f"General {field}",
+            )
+    if allow_key_fallback:
+        return canonical_bacdive_id(record_key, record_key, "key")
+    raise ValueError(f"BacDive record {record_key} is missing General BacDive-ID")
 
 
 def as_rows(value: Any, context: str) -> list[Mapping[str, Any]]:
@@ -297,6 +318,8 @@ def as_rows(value: Any, context: str) -> list[Mapping[str, Any]]:
 def bacdive_records_by_id(
     path: Path,
     entries: Iterable[tuple[str, Any]],
+    *,
+    allow_key_fallback: bool = True,
 ) -> dict[str, Mapping[str, Any]]:
     records: dict[str, Mapping[str, Any]] = {}
     for record_key, record in entries:
@@ -304,7 +327,11 @@ def bacdive_records_by_id(
             raise ValueError(
                 f"{path}: result {record_key} is not a BacDive record object"
             )
-        identifier = bacdive_id(record_key, record)
+        identifier = bacdive_id(
+            record_key,
+            record,
+            allow_key_fallback=allow_key_fallback,
+        )
         if identifier in records:
             raise ValueError(f"{path}: duplicate BacDive-ID {identifier}")
         records[identifier] = record
@@ -316,13 +343,14 @@ def read_bacdive_fetch(path: Path) -> dict[str, Mapping[str, Any]]:
     if not isinstance(payload, Mapping):
         raise ValueError(f"{path}: expected a BacDive v2 fetch JSON object")
     if "General" in payload:
-        return {bacdive_id("1", payload): payload}
+        return {bacdive_id("1", payload, allow_key_fallback=False): payload}
 
     results = payload.get("results", payload)
     if isinstance(results, list):
         return bacdive_records_by_id(
             path,
             ((str(index), record) for index, record in enumerate(results, start=1)),
+            allow_key_fallback=False,
         )
     if isinstance(results, Mapping):
         return bacdive_records_by_id(
