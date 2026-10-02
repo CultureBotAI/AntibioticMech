@@ -467,6 +467,16 @@ def test_read_activity_report_rejects_short_rows(tmp_path):
             True,
             "does not match CHEBI:28971",
         ),
+        (
+            {"source_name": "Ampicillin sodium"},
+            False,
+            "source_record_id must be the normalized source_name",
+        ),
+        (
+            {"source_record_id": "ampicillinsodium"},
+            True,
+            "source_record_id must be the normalized source_name",
+        ),
     ],
 )
 def test_read_activity_report_rejects_stale_or_malformed_rows(

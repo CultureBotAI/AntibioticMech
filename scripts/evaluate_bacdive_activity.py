@@ -740,6 +740,10 @@ def require_activity_report_rows(rows: list[dict[str, str]], path: Path) -> None
         if row["source_activity_id"] in seen_activity_ids:
             raise ValueError(f"{prefix}: duplicate source_activity_id")
         seen_activity_ids.add(row["source_activity_id"])
+        if row["source_record_id"] != normalize(row["source_name"]):
+            raise ValueError(
+                f"{prefix}: source_record_id must be the normalized source_name"
+            )
 
         try:
             source_row_index = int(row["source_row_index"])
