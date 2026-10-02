@@ -373,8 +373,10 @@ def evaluate_records(
     records: Mapping[str, Mapping[str, Any]],
     name_candidates: Mapping[str, set[str]],
     structure_keys: Mapping[str, str],
+    drug_map: Mapping[str, Mapping[str, str]] | None = None,
 ) -> list[dict[str, str]]:
     entries: dict[str, dict[str, Any]] = {}
+    drug_map = drug_map or {}
 
     def entry_for(source_name: str) -> dict[str, Any]:
         normalized = normalize(source_name)
@@ -422,36 +424,36 @@ def evaluate_records(
     for normalized, entry in sorted(entries.items()):
         source_name = sorted(entry["source_names"], key=lambda name: (name.casefold(), name))[0]
         candidates = sorted(name_candidates.get(normalized, set()))
-        report_rows.append({
-            "source_record_id": normalized,
-            "source_name": source_name,
-            "normalized_source_name": normalized,
-            "source_sections": "|".join(sorted(entry["source_sections"])),
-            "bacdive_row_count": str(entry["bacdive_rows"]),
-            "bacdive_id_count": str(len(entry["bacdive_ids"])),
-            "bacdive_ids": "|".join(sorted(entry["bacdive_ids"])),
-            "activity_call_count": str(sum(entry["activity_calls"].values())),
-            "activity_calls": "|".join(
-                f"{activity}:{count}"
-                for activity, count in sorted(entry["activity_calls"].items())
-            ),
-            "disk_diffusion_count": str(entry["disk_diffusion_count"]),
-            "invalid_disk_diffusion_count": str(entry["invalid_disk_diffusion_count"]),
-            "standardized_disk_diffusion_values": "|".join(
-                sorted(entry["disk_diffusion_values"])
-            ),
-            "source_chebi_ids": "|".join(sorted(entry["source_chebi_ids"])),
-            "exact_name_candidate_count": str(len(candidates)),
-            "exact_name_candidate_identifiers": "|".join(candidates),
-            "exact_name_candidate_inchi_keys": "|".join(
-                structure_keys[identifier] for identifier in candidates
-            ),
-            "mapping_status": "",
-            "identifier": "",
-            "standard_inchi_key": "",
-            "mapping_basis": "",
-            "mapping_notes": "",
-        })
+        mapping = drug_map.get(normalized, {})
+        report_rows.append(
+            {
+                "source_record_id": normalized,
+                "source_name": source_name,
+                "normalized_source_name": normalized,
+                "source_sections": "|".join(sorted(entry["source_sections"])),
+                "bacdive_row_count": str(entry["bacdive_rows"]),
+                "bacdive_id_count": str(len(entry["bacdive_ids"])),
+                "bacdive_ids": "|".join(sorted(entry["bacdive_ids"])),
+                "activity_call_count": str(sum(entry["activity_calls"].values())),
+                "activity_calls": "|".join(
+                    f"{activity}:{count}" for activity, count in sorted(entry["activity_calls"].items())
+                ),
+                "disk_diffusion_count": str(entry["disk_diffusion_count"]),
+                "invalid_disk_diffusion_count": str(entry["invalid_disk_diffusion_count"]),
+                "standardized_disk_diffusion_values": "|".join(sorted(entry["disk_diffusion_values"])),
+                "source_chebi_ids": "|".join(sorted(entry["source_chebi_ids"])),
+                "exact_name_candidate_count": str(len(candidates)),
+                "exact_name_candidate_identifiers": "|".join(candidates),
+                "exact_name_candidate_inchi_keys": "|".join(
+                    structure_keys[identifier] for identifier in candidates
+                ),
+                "mapping_status": mapping.get("mapping_status", ""),
+                "identifier": mapping.get("identifier", ""),
+                "standard_inchi_key": mapping.get("standard_inchi_key", ""),
+                "mapping_basis": mapping.get("mapping_basis", ""),
+                "mapping_notes": mapping.get("notes", ""),
+            }
+        )
     return report_rows
 
 
@@ -475,6 +477,134 @@ def require_report_rows(rows: list[dict[str, str]], path: Path) -> None:
             raise ValueError(f"{prefix}: normalized_source_name drift for source_name")
         if row["mapping_status"] and row["mapping_status"] not in MAPPING_STATUSES:
             raise ValueError(f"{prefix}: unknown mapping_status {row['mapping_status']!r}")
+
+
+def require_exact_table_row(row: dict, path: Path, line_number: int) -> None:
+    prefix = f"{path}:{line_number}"
+    if None in row:
+        raise ValueError(f"{prefix}: unexpected extra delimited field")
+    for field, value in row.items():
+        if value is None:
+            raise ValueError(f"{prefix}: {field} is missing")
+
+
+def require_curated_tsv_value(value: str, field: str, prefix: str) -> str:
+    if any(char in value for char in CURATED_TSV_CONTROL_CHARS):
+        raise ValueError(f"{prefix}: {field} contains a tab or newline")
+    if value != value.strip():
+        raise ValueError(f"{prefix}: {field} has leading or trailing whitespace")
+    return value
+
+
+def require_curated_tsv_row(
+    row: dict[str, str],
+    path: Path,
+    line_number: int,
+) -> dict[str, str]:
+    prefix = f"{path}:{line_number}"
+    return {field: require_curated_tsv_value(value, field, prefix) for field, value in row.items()}
+
+
+def require_non_blank_fields(
+    row: Mapping[str, str],
+    fields: Iterable[str],
+    path: Path,
+    line_number: int,
+) -> None:
+    for field in fields:
+        if not row[field]:
+            raise ValueError(f"{path}:{line_number}: {field} is required")
+
+
+def report_rows_by_source_record_id(
+    rows: Iterable[Mapping[str, str]],
+) -> dict[str, Mapping[str, str]]:
+    by_source_record_id: dict[str, Mapping[str, str]] = {}
+    for row in rows:
+        source_record_id = row["source_record_id"]
+        if source_record_id in by_source_record_id:
+            raise ValueError(f"duplicate BacDive report source_record_id: {source_record_id}")
+        by_source_record_id[source_record_id] = row
+    return by_source_record_id
+
+
+def read_drug_map(
+    path: Path,
+    structure_keys: Mapping[str, str],
+    current_report_rows: Iterable[Mapping[str, str]],
+    source_version: str,
+) -> dict[str, dict[str, str]]:
+    """Read and validate a curated BacDive antibiotic-name crosswalk."""
+
+    current_rows = report_rows_by_source_record_id(current_report_rows)
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if reader.fieldnames != DRUG_MAP_COLUMNS:
+            raise ValueError(f"unexpected BacDive drug map columns: {reader.fieldnames}")
+
+        rows = {}
+        for line_number, row in enumerate(reader, start=2):
+            require_exact_table_row(row, path, line_number)
+            row = require_curated_tsv_row(row, path, line_number)
+            require_non_blank_fields(
+                row,
+                (
+                    "source_version",
+                    "source_record_id",
+                    "source_name",
+                    "mapping_status",
+                    "mapping_basis",
+                    "notes",
+                ),
+                path,
+                line_number,
+            )
+
+            source_record_id = row["source_record_id"]
+            source_name = row["source_name"]
+            current_row = current_rows.get(source_record_id)
+            if current_row is None:
+                raise ValueError(
+                    f"{source_name}: source_record_id {source_record_id!r} "
+                    "is not in the current BacDive report"
+                )
+            if source_name != current_row["source_name"]:
+                raise ValueError(
+                    f"{source_record_id}: source_name {source_name!r} "
+                    f"!= current BacDive source_name {current_row['source_name']!r}"
+                )
+            if source_record_id in rows:
+                raise ValueError(f"duplicate BacDive drug mapping: {source_record_id}")
+            if row["source_version"] != source_version:
+                raise ValueError(
+                    f"{source_name}: source_version {row['source_version']!r} != {source_version!r}"
+                )
+            if row["mapping_status"] not in MAPPING_STATUSES:
+                raise ValueError(f"{source_name}: unknown mapping_status {row['mapping_status']!r}")
+
+            has_mapping = bool(row["identifier"] or row["standard_inchi_key"])
+            if row["mapping_status"] != EXACT_MAPPING_STATUS:
+                if has_mapping:
+                    raise ValueError(f"{source_name}: non-EXACT mapping must not carry structure fields")
+                rows[source_record_id] = row
+                continue
+
+            identifier = row["identifier"]
+            if not identifier or not row["standard_inchi_key"]:
+                raise ValueError(f"{source_name}: EXACT mapping needs identifier and standard_inchi_key")
+            expected = structure_keys.get(identifier)
+            if expected is None:
+                raise ValueError(f"{source_name}: mapped identifier {identifier} is not in the corpus")
+            if row["standard_inchi_key"] != expected:
+                raise ValueError(
+                    f"{source_name}: mapped InChIKey {row['standard_inchi_key']} "
+                    f"does not match {identifier} ({expected})"
+                )
+            rows[source_record_id] = row
+
+        if not rows:
+            raise ValueError(f"{path}: BacDive drug map has no rows")
+        return rows
 
 
 def write_drug_report(rows: list[dict[str, str]], path: Path) -> None:
@@ -507,16 +637,59 @@ def write_drug_map_template(rows: list[dict[str, str]], path: Path, source_versi
         )
         writer.writeheader()
         for row in rows:
-            writer.writerow({
-                "source_version": source_version,
-                "source_record_id": row["source_record_id"],
-                "source_name": row["source_name"],
-                "mapping_status": row["mapping_status"],
-                "identifier": row["identifier"],
-                "standard_inchi_key": row["standard_inchi_key"],
-                "mapping_basis": row["mapping_basis"],
-                "notes": row["mapping_notes"],
-            })
+            writer.writerow(
+                {
+                    "source_version": source_version,
+                    "source_record_id": row["source_record_id"],
+                    "source_name": row["source_name"],
+                    "mapping_status": row["mapping_status"],
+                    "identifier": row["identifier"],
+                    "standard_inchi_key": row["standard_inchi_key"],
+                    "mapping_basis": row["mapping_basis"],
+                    "notes": row["mapping_notes"],
+                }
+            )
+
+
+def reject_reused_cli_paths(
+    parser: argparse.ArgumentParser,
+    paths: Iterable[tuple[str, Path | None]],
+) -> None:
+    """Prevent one evaluator invocation from overwriting its own inputs/outputs."""
+
+    seen: dict[Path, str] = {}
+    for option, path in paths:
+        if path is None:
+            continue
+        resolved = path.expanduser().resolve()
+        previous = seen.get(resolved)
+        if previous is not None:
+            parser.error(f"{option} must not reuse {previous} path: {path}")
+        seen[resolved] = option
+
+
+def reject_unsafe_cli_output_paths(
+    parser: argparse.ArgumentParser,
+    paths: Iterable[tuple[str, Path | None]],
+) -> None:
+    """Reject output paths that would fail after sibling reports are written."""
+
+    output_paths = []
+    for option, path in paths:
+        if path is None:
+            continue
+
+        expanded = path.expanduser()
+        if expanded.exists() and expanded.is_dir():
+            parser.error(f"{option} must be a file path, not a directory: {path}")
+        if expanded.parent.exists() and not expanded.parent.is_dir():
+            parser.error(f"{option} parent must be a directory: {expanded.parent}")
+        output_paths.append((option, path, expanded.resolve(strict=False)))
+
+    for child_option, child_path, child_resolved in output_paths:
+        for parent_option, _, parent_resolved in output_paths:
+            if child_option != parent_option and parent_resolved in child_resolved.parents:
+                parser.error(f"{child_option} must not be nested under {parent_option} path: {child_path}")
 
 
 def main() -> int:
@@ -531,7 +704,15 @@ def main() -> int:
     parser.add_argument(
         "--source-version",
         default="",
-        help="Optional BacDive export version to stamp on --drug-map-template rows.",
+        help=(
+            "Optional BacDive export version to pin --drug-map mappings and "
+            "stamp on --drug-map-template rows."
+        ),
+    )
+    parser.add_argument(
+        "--drug-map",
+        type=Path,
+        help="Optional curated TSV crosswalk from BacDive antibiotic names to exact structures.",
     )
     parser.add_argument(
         "--drug-report",
@@ -544,18 +725,55 @@ def main() -> int:
         help="Optional fillable TSV crosswalk from BacDive antibiotic names to exact structures.",
     )
     args = parser.parse_args()
+    if (args.drug_map or args.drug_map_template) and not args.source_version.strip():
+        parser.error("--drug-map and --drug-map-template require --source-version.")
+    if args.source_version != args.source_version.strip():
+        parser.error("--source-version must not have leading or trailing whitespace.")
+    if any(char in args.source_version for char in CURATED_TSV_CONTROL_CHARS):
+        parser.error("--source-version must not contain tabs or newlines.")
+    reject_reused_cli_paths(
+        parser,
+        [("--bacdive", path) for path in args.bacdive]
+        + [
+            ("--drug-map", args.drug_map),
+            ("--drug-report", args.drug_report),
+            ("--drug-map-template", args.drug_map_template),
+        ],
+    )
+    reject_unsafe_cli_output_paths(
+        parser,
+        (
+            ("--drug-report", args.drug_report),
+            ("--drug-map-template", args.drug_map_template),
+        ),
+    )
 
     records: dict[str, Mapping[str, Any]] = {}
     for path in args.bacdive:
         records.update(read_bacdive_fetch(path))
 
     name_candidates, structure_keys = corpus_name_candidates()
-    rows = evaluate_records(records, name_candidates, structure_keys)
+    template_rows = evaluate_records(records, name_candidates, structure_keys)
+    drug_map = (
+        read_drug_map(
+            args.drug_map,
+            structure_keys,
+            template_rows,
+            source_version=args.source_version,
+        )
+        if args.drug_map
+        else {}
+    )
+    rows = evaluate_records(records, name_candidates, structure_keys, drug_map) if drug_map else template_rows
 
     if args.drug_report:
         write_drug_report(rows, args.drug_report)
     if args.drug_map_template:
-        write_drug_map_template(rows, args.drug_map_template, args.source_version)
+        write_drug_map_template(
+            template_rows,
+            args.drug_map_template,
+            args.source_version,
+        )
 
     print(
         "BacDive activity preflight: "
