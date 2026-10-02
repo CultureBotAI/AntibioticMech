@@ -82,6 +82,7 @@ SOURCE_MARKER = "name"
 # seed_from_sources.py, so the source queue has to say ADOPTED first. Once that
 # source is ADOPTED, the inventory stops being optional and must be committed.
 OPTIONAL_ADOPTION_INVENTORIES = {
+    "bacdive": Path("data/raw/bacdive_activity.tsv"),
     "ncbi-ast": Path("data/raw/ncbi_ast_activity.tsv"),
 }
 
