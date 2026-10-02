@@ -264,9 +264,17 @@ def antibiogram_source_name(
 
 def bacdive_id(record_key: str, record: Mapping[str, Any]) -> str:
     general = record.get("General")
+    if general not in (None, "") and not isinstance(general, Mapping):
+        raise ValueError(f"BacDive record {record_key} General must be an object")
     if isinstance(general, Mapping):
-        value = general.get("BacDive-ID") or general.get("BacDive ID")
-        if value not in (None, ""):
+        for field in ("BacDive-ID", "BacDive ID"):
+            value = general.get(field)
+            if value in (None, ""):
+                continue
+            if isinstance(value, Mapping | list):
+                raise ValueError(
+                    f"BacDive record {record_key} General {field} must be a scalar"
+                )
             return str(value)
     return str(record_key)
 
