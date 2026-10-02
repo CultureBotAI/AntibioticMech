@@ -998,6 +998,59 @@ def test_exact_activity_rows_normalizes_microgram_mic_headers_to_mg_per_l():
     assert activity_rows[0]["mic_units"] == "mg/L"
 
 
+@pytest.mark.parametrize(
+    ("phenotype", "activity"),
+    [
+        ("NS", "NONSUSCEPTIBLE"),
+        ("nonsusceptible", "NONSUSCEPTIBLE"),
+        ("non-susceptible", "NONSUSCEPTIBLE"),
+        ("SSD", "SUSCEPTIBLE_DOSE_DEPENDENT"),
+        ("susceptible-dose dependent", "SUSCEPTIBLE_DOSE_DEPENDENT"),
+        ("N", ""),
+        ("ND", ""),
+        ("not defined", ""),
+    ],
+)
+def test_exact_activity_rows_accepts_ncbi_extended_phenotypes(phenotype, activity):
+    rows = [
+        {
+            "antibiotic": "cefepime",
+            "biosample_acc": "SAMN11953777",
+            "bioproject_acc": "PRJNA292666",
+            "taxgroup_name": "Escherichia coli",
+            "phenotype": phenotype,
+            "mic": "2",
+            "platform": "AST",
+        },
+    ]
+    mappings = {
+        "cefepime": {
+            "mapping_status": "EXACT",
+            "source_name": "cefepime",
+            "identifier": "CHEBI:478164",
+            "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+        },
+    }
+
+    result = evaluate_rows(
+        rows,
+        {"cefepime": {"CHEBI:478164"}},
+        {"CHEBI:478164": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
+        mappings=mappings,
+    )
+    activity_rows = exact_activity_rows(
+        rows,
+        mappings,
+        source_version="2026-09-26-ast-browser",
+        source_retrieved_on="2026-09-26",
+    )
+
+    assert result["rows_with_invalid_phenotype"] == 0
+    assert len(activity_rows) == 1
+    assert activity_rows[0]["phenotype"] == phenotype
+    assert activity_rows[0]["activity"] == activity
+
+
 def test_exact_activity_rows_excludes_unknown_phenotypes():
     rows = [
         {
@@ -1014,7 +1067,7 @@ def test_exact_activity_rows_excludes_unknown_phenotypes():
             "biosample_acc": "SAMN11953778",
             "bioproject_acc": "PRJNA292666",
             "taxgroup_name": "Escherichia coli",
-            "phenotype": "non-susceptible",
+            "phenotype": "unknown",
             "mic": "4",
             "platform": "AST",
         },
@@ -1237,7 +1290,7 @@ def test_project_dedupe_report_rows_rank_valid_project_contexts():
             "biosample_acc": "SAMN11953786",
             "bioproject_acc": "PRJNA292666",
             "taxgroup_name": "Escherichia coli",
-            "phenotype": "non-susceptible",
+            "phenotype": "unknown",
             "mic": "2",
             "platform": "AST",
         },
@@ -2592,10 +2645,10 @@ def test_write_activity_report_rejects_empty_reports_before_opening(tmp_path):
         ),
         ({"create_date": "20200131"}, "create_date must be an ISO date"),
         (
-            {"phenotype": "non-susceptible", "activity": ""},
+            {"phenotype": "unknown", "activity": ""},
             "unsupported phenotype",
         ),
-        ({"activity": "NON_SUSCEPTIBLE"}, "activity must match phenotype"),
+        ({"activity": "NONSUSCEPTIBLE"}, "activity must match phenotype"),
         ({"phenotype": "S", "activity": "RESISTANT"}, "activity must match phenotype"),
         ({"mic_value": "high"}, "mic_value must be numeric"),
         ({"mic_value": "2.0"}, "mic_value must use canonical decimal '2'"),
