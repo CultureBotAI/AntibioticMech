@@ -4422,6 +4422,53 @@ def test_cli_rejects_validate_activity_report_without_source_metadata(tmp_path):
     assert "--validate-activity-report requires --source-version" in result.stderr
 
 
+def test_cli_rejects_ast_outputs_without_ast(tmp_path):
+    antibiotic_report = tmp_path / "ncbi_ast_antibiotics.tsv"
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--antibiotic-report",
+            str(antibiotic_report),
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 2
+    assert (
+        "--ast is required unless only --validate-activity-report is used"
+        in result.stderr
+    )
+    assert not antibiotic_report.exists()
+
+
+def test_cli_validates_activity_report_without_ast(tmp_path):
+    activity_report = tmp_path / "ncbi_ast_activity.tsv"
+    write_activity_report(
+        cefepime_activity_rows(),
+        activity_report,
+    )
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--validate-activity-report",
+            str(activity_report),
+            "--source-version",
+            "2026-09-26-ast-browser",
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    assert result.stdout.startswith("NCBI Pathogen Detection AST audit")
+    assert "activity_report_rows=1" in result.stdout
+
+
 def test_cli_rejects_drug_map_without_source_version(tmp_path):
     ast = tmp_path / "ast.tsv"
     ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
