@@ -133,6 +133,7 @@ ANTIBIOTICA_ACTIVITY_ALIASES = {
     "RESISTANT": ("isresistant", "abresistant"),
 }
 ACTIVITY_CALLS = frozenset(ANTIBIOTICA_ACTIVITY_ALIASES)
+REFERENCE_ID_DELIMITER = "|"
 REFERENCE_ALIASES = ("ref",)
 TAXONOMY_SECTION_KEYS = {
     "nameandtaxonomicclassification",
@@ -449,9 +450,14 @@ def source_reference_ids(row: Mapping[str, Any], *, context: str) -> str:
         for index, raw_value in enumerate(raw_values, start=1):
             field = str(key) if not isinstance(value, list) else f"{key} entry {index}"
             text = scalar_text(raw_value, context, field)
+            if REFERENCE_ID_DELIMITER in text:
+                raise ValueError(
+                    f"{context} {field} must not contain "
+                    f"{REFERENCE_ID_DELIMITER!r}"
+                )
             if text:
                 values.add(text)
-    return "|".join(sorted(values))
+    return REFERENCE_ID_DELIMITER.join(sorted(values))
 
 
 def record_sections(
@@ -908,6 +914,9 @@ def require_activity_report_rows(rows: list[dict[str, str]], path: Path) -> None
         if row["source_activity_id"] in seen_activity_ids:
             raise ValueError(f"{prefix}: duplicate source_activity_id")
         seen_activity_ids.add(row["source_activity_id"])
+        if BACDIVE_ID_PATTERN.fullmatch(row["bacdive_id"]) is None:
+            raise ValueError(f"{prefix}: bacdive_id must be a positive integer")
+        require_canonical_source_reference_ids(row["source_reference_ids"], prefix)
         if row["source_record_id"] != normalize(row["source_name"]):
             raise ValueError(
                 f"{prefix}: source_record_id must be the normalized source_name"
@@ -996,6 +1005,19 @@ def require_activity_report_rows(rows: list[dict[str, str]], path: Path) -> None
             and disk_diffusion_value(row["disk_diffusion_value"]) != row["disk_diffusion_value"]
         ):
             raise ValueError(f"{prefix}: invalid disk_diffusion_value")
+
+
+def require_canonical_source_reference_ids(value: str, prefix: str) -> None:
+    if not value:
+        return
+    values = value.split(REFERENCE_ID_DELIMITER)
+    if any(not entry for entry in values):
+        raise ValueError(f"{prefix}: source_reference_ids has an empty segment")
+    if value != REFERENCE_ID_DELIMITER.join(sorted(set(values))):
+        raise ValueError(
+            f"{prefix}: source_reference_ids must be a sorted unique "
+            "pipe-delimited list"
+        )
 
 
 def require_exact_table_row(row: dict, path: Path, line_number: int) -> None:
