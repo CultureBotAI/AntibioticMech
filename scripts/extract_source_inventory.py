@@ -641,32 +641,13 @@ def main() -> int:
         print(f"  wrote {path.relative_to(REPO_ROOT)} ({len(rows)} rows)", file=sys.stderr)
 
     manifest = build_manifest(conf, written)
-    # Inventories written by independent extractors are carried forward rather
-    # than dropping their provenance on a ChEBI/ARO refresh.
+    # Only this extractor's entries may change. Keep independent pins even for
+    # missing files so provenance checking still detects the missing inputs.
     old_path = RAW_DIR / MANIFEST
     if old_path.exists():
         previous = yaml.safe_load(old_path.read_text(encoding="utf-8")) or {}
-        for name in (
-            "pubchem_structures.tsv",
-            "mibig_producers.tsv",
-            "fda_clinical_status.tsv",
-        ):
-            carried = previous.get("inventories", {}).get(name)
-            if carried and (RAW_DIR / name).exists():
-                manifest["inventories"][name] = carried
-        for name in ("mibig", "fda_drugsfda", "fda_gsrs"):
-            carried = previous.get("sources", {}).get(name)
-            if carried:
-                manifest["sources"][name] = carried
-        for name in (
-            "mibig_json_4.0.tar.gz",
-            "drugsatfda.zip",
-            "other-unii-0001-of-0001.json.zip",
-            "fda_gsrs_candidates.jsonl",
-        ):
-            carried = previous.get("downloads", {}).get(name)
-            if carried:
-                manifest["downloads"][name] = carried
+        for section in ("sources", "downloads", "inventories"):
+            manifest[section] = previous.get(section, {}) | manifest[section]
     (RAW_DIR / MANIFEST).write_text(
         yaml.safe_dump(manifest, sort_keys=False, allow_unicode=True), encoding="utf-8")
     print(f"  wrote {(RAW_DIR / MANIFEST).relative_to(REPO_ROOT)}", file=sys.stderr)
