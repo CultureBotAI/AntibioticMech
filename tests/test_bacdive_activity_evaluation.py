@@ -23,6 +23,7 @@ from evaluate_bacdive_activity import (  # noqa: E402
     read_activity_report,
     read_bacdive_fetch,
     read_drug_map,
+    require_activity_report_matches_current,
     source_activity_id,
     write_activity_report,
     write_drug_map_template,
@@ -626,6 +627,99 @@ def test_read_activity_report_rejects_malformed_disk_rows(
         )
 
 
+def test_require_activity_report_matches_current_rejects_stale_source_values(
+    tmp_path,
+):
+    current_rows = exact_activity_rows(
+        {"24493": bacdive_record()},
+        {"ampicillin": bacdive_drug_map_row()},
+        SOURCE_VERSION,
+    )
+    stale_rows = [dict(row) for row in current_rows]
+    stale_rows[0]["source_concentration"] = "20 mg/L"
+
+    with pytest.raises(
+        ValueError,
+        match=(
+            r"bacdive:5038512ce05fd01f source_concentration "
+            r"'20 mg/L' != current BacDive '10 mg/L'"
+        ),
+    ):
+        require_activity_report_matches_current(
+            stale_rows,
+            current_rows,
+            tmp_path / "bacdive_activity.tsv",
+        )
+
+
+def test_require_activity_report_matches_current_rejects_missing_rows(tmp_path):
+    current_rows = exact_activity_rows(
+        {"24493": bacdive_record()},
+        {"ampicillin": bacdive_drug_map_row()},
+        SOURCE_VERSION,
+    )
+
+    with pytest.raises(
+        ValueError,
+        match="missing current BacDive activity row bacdive:928d8199da6513ce",
+    ):
+        require_activity_report_matches_current(
+            current_rows[:1],
+            current_rows,
+            tmp_path / "bacdive_activity.tsv",
+        )
+
+
+def test_require_activity_report_matches_current_rejects_unexpected_rows(
+    tmp_path,
+):
+    current_rows = exact_activity_rows(
+        {"24493": bacdive_record()},
+        {"ampicillin": bacdive_drug_map_row()},
+        SOURCE_VERSION,
+    )
+    previous_record = bacdive_record()
+    previous_record["Physiology and metabolism"]["antibiotic resistance"].append(
+        {
+            "metabolite": "Ampicillin",
+            "concentration": "20 mg/L",
+            "is resistant": "yes",
+        }
+    )
+    stale_rows = exact_activity_rows(
+        {"24493": previous_record},
+        {"ampicillin": bacdive_drug_map_row()},
+        SOURCE_VERSION,
+    )
+
+    with pytest.raises(
+        ValueError,
+        match="unexpected stale BacDive activity row bacdive:b390fefb074550b0",
+    ):
+        require_activity_report_matches_current(
+            stale_rows,
+            current_rows,
+            tmp_path / "bacdive_activity.tsv",
+        )
+
+
+def test_require_activity_report_matches_current_rejects_duplicate_current_rows(
+    tmp_path,
+):
+    current_rows = exact_activity_rows(
+        {"24493": bacdive_record()},
+        {"ampicillin": bacdive_drug_map_row()},
+        SOURCE_VERSION,
+    )
+
+    with pytest.raises(ValueError, match="duplicate source_activity_id"):
+        require_activity_report_matches_current(
+            current_rows[:1],
+            [current_rows[0], current_rows[0]],
+            tmp_path / "bacdive_activity.tsv",
+        )
+
+
 def test_read_bacdive_fetch_accepts_v2_results_objects(tmp_path):
     path = tmp_path / "bacdive.json"
     path.write_text(
@@ -1127,6 +1221,54 @@ def test_cli_validates_activity_report(tmp_path):
 
     assert result.stdout.startswith("BacDive activity preflight: records=0 ")
     assert "activity_report_rows=2" in result.stdout
+
+
+def test_cli_rejects_stale_activity_report_against_current_bacdive(tmp_path):
+    bacdive_path = tmp_path / "bacdive.json"
+    drug_map = tmp_path / "bacdive_drug_map.tsv"
+    activity_report = tmp_path / "bacdive_activity.tsv"
+    stale_record = bacdive_record()
+    current_record = bacdive_record()
+    current_record["Physiology and metabolism"]["antibiotic resistance"][0][
+        "concentration"
+    ] = "20 mg/L"
+    bacdive_path.write_text(
+        json.dumps({"results": {"24493": current_record}}),
+        encoding="utf-8",
+    )
+    write_drug_map(drug_map, [bacdive_drug_map_row()])
+    write_activity_report(
+        exact_activity_rows(
+            {"24493": stale_record},
+            {"ampicillin": bacdive_drug_map_row()},
+            SOURCE_VERSION,
+        ),
+        activity_report,
+    )
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--bacdive",
+            str(bacdive_path),
+            "--source-version",
+            SOURCE_VERSION,
+            "--drug-map",
+            str(drug_map),
+            "--validate-activity-report",
+            str(activity_report),
+        ],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+
+    assert result.returncode != 0
+    assert (
+        "bacdive:5038512ce05fd01f source_concentration "
+        "'10 mg/L' != current BacDive '20 mg/L'"
+    ) in result.stderr
 
 
 def test_cli_rejects_drug_report_without_bacdive(tmp_path):
