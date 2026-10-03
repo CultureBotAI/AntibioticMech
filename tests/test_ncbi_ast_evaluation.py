@@ -27,9 +27,11 @@ from evaluate_ncbi_ast import (  # noqa: E402
     normalize_header,
     project_dedupe_report_rows,
     project_dedupe_source_versions,
+    read_activity_report,
     read_drug_map,
     read_project_dedupe_map,
     read_table,
+    require_activity_report_matches_current,
     valid_taxon_id,
     write_activity_report,
     write_antibiotic_report,
@@ -42,30 +44,44 @@ from seed_from_sources import load_ncbi_ast_activity_inventory  # noqa: E402
 SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "evaluate_ncbi_ast.py"
 
 
-def ncbi_ast_activity_report_row(**overrides: str) -> dict:
-    activity_rows = exact_activity_rows(
-        [
-            {
-                "antibiotic": "cefepime",
-                "biosample_acc": "SAMN11953777",
-                "bioproject_acc": "PRJNA292666",
-                "taxgroup_name": "Escherichia coli",
-                "phenotype": "R",
-                "mic": "2",
-                "method": "MIC",
-            },
-        ],
-        {
-            "cefepime": {
-                "mapping_status": "EXACT",
-                "source_name": "cefepime",
-                "identifier": "CHEBI:478164",
-                "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
-            },
-        },
-        source_version="2026-09-26-ast-browser",
-        source_retrieved_on="2026-09-26",
+def ncbi_ast_source_row(**overrides: str) -> dict[str, str]:
+    row = {
+        "antibiotic": "cefepime",
+        "biosample_acc": "SAMN11953777",
+        "bioproject_acc": "PRJNA292666",
+        "taxgroup_name": "Escherichia coli",
+        "phenotype": "R",
+        "mic": "2",
+        "method": "MIC",
+    }
+    row.update(overrides)
+    return row
+
+
+def cefepime_drug_mapping() -> dict[str, str]:
+    return {
+        "mapping_status": "EXACT",
+        "source_name": "cefepime",
+        "identifier": "CHEBI:478164",
+        "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+    }
+
+
+def cefepime_activity_rows(
+    *rows: dict[str, str],
+    source_version: str = "2026-09-26-ast-browser",
+    source_retrieved_on: str = "2026-09-26",
+) -> list[dict[str, str]]:
+    return exact_activity_rows(
+        list(rows) or [ncbi_ast_source_row()],
+        {"cefepime": cefepime_drug_mapping()},
+        source_version=source_version,
+        source_retrieved_on=source_retrieved_on,
     )
+
+
+def ncbi_ast_activity_report_row(**overrides: str) -> dict:
+    activity_rows = cefepime_activity_rows()
 
     row = activity_rows[0]
     row.update(overrides)
@@ -2809,6 +2825,145 @@ def test_write_activity_report_rejects_duplicate_groups_before_opening(tmp_path)
     assert path.read_text(encoding="utf-8") == "keep me\n"
 
 
+def test_read_activity_report_accepts_current_exact_rows(tmp_path):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    row = ncbi_ast_activity_report_row()
+    write_activity_report([row], path)
+
+    loaded_rows = read_activity_report(
+        path,
+        {"CHEBI:478164": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
+        "2026-09-26-ast-browser",
+    )
+
+    assert loaded_rows == [{
+        column: str(value)
+        for column, value in row.items()
+    }]
+
+
+@pytest.mark.parametrize(
+    ("overrides", "structure_keys", "source_version", "message"),
+    [
+        (
+            {"source_version": "2026-09-27-ast-browser"},
+            {"CHEBI:478164": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
+            "2026-09-26-ast-browser",
+            r"source_version '2026-09-27-ast-browser' != "
+            r"'2026-09-26-ast-browser'",
+        ),
+        (
+            {
+                "identifier": "CHEBI:999999999",
+                "standard_inchi_key": "AAAAAAAAAAAAAA-BBBBBBBBBB-C",
+            },
+            {"CHEBI:478164": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
+            "2026-09-26-ast-browser",
+            r"mapped identifier CHEBI:999999999 is not in the corpus",
+        ),
+        (
+            {"standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N"},
+            {"CHEBI:478164": "HVFLCNVBZFFHBT-ZKDACBOMSA-N"},
+            "2026-09-26-ast-browser",
+            r"mapped InChIKey LKCWBDHBTVXHDL-RMDFUYIESA-N does not match "
+            r"CHEBI:478164",
+        ),
+    ],
+)
+def test_read_activity_report_rejects_stale_source_or_structure_values(
+    tmp_path,
+    overrides,
+    structure_keys,
+    source_version,
+    message,
+):
+    path = tmp_path / "ncbi_ast_activity.tsv"
+    row = ncbi_ast_activity_report_row(**overrides)
+    row["activity_group_id"] = activity_group_id(row)
+    write_activity_report([row], path)
+
+    with pytest.raises(ValueError, match=message):
+        read_activity_report(path, structure_keys, source_version)
+
+
+def test_require_activity_report_matches_current_rejects_stale_source_values(
+    tmp_path,
+):
+    current_rows = cefepime_activity_rows()
+    stale_rows = [dict(row) for row in current_rows]
+    stale_rows[0]["ast_row_count"] = "2"
+
+    with pytest.raises(
+        ValueError,
+        match=r"ast_row_count '2' != current NCBI AST '1'",
+    ):
+        require_activity_report_matches_current(
+            stale_rows,
+            current_rows,
+            tmp_path / "ncbi_ast_activity.tsv",
+        )
+
+
+def test_require_activity_report_matches_current_rejects_missing_rows(
+    tmp_path,
+):
+    current_rows = cefepime_activity_rows(
+        ncbi_ast_source_row(),
+        ncbi_ast_source_row(
+            biosample_acc="SAMN11953778",
+            phenotype="S",
+            mic="1",
+        ),
+    )
+
+    with pytest.raises(
+        ValueError,
+        match=r"missing current NCBI AST activity row ncbi_ast:",
+    ):
+        require_activity_report_matches_current(
+            current_rows[:1],
+            current_rows,
+            tmp_path / "ncbi_ast_activity.tsv",
+        )
+
+
+def test_require_activity_report_matches_current_rejects_unexpected_rows(
+    tmp_path,
+):
+    current_rows = cefepime_activity_rows()
+    stale_rows = cefepime_activity_rows(
+        ncbi_ast_source_row(),
+        ncbi_ast_source_row(
+            biosample_acc="SAMN11953778",
+            phenotype="S",
+            mic="1",
+        ),
+    )
+
+    with pytest.raises(
+        ValueError,
+        match=r"unexpected stale NCBI AST activity row ncbi_ast:",
+    ):
+        require_activity_report_matches_current(
+            stale_rows,
+            current_rows,
+            tmp_path / "ncbi_ast_activity.tsv",
+        )
+
+
+def test_require_activity_report_matches_current_rejects_duplicate_current_rows(
+    tmp_path,
+):
+    current_rows = cefepime_activity_rows()
+
+    with pytest.raises(ValueError, match="duplicate activity_group_id"):
+        require_activity_report_matches_current(
+            current_rows[:1],
+            [current_rows[0], current_rows[0]],
+            tmp_path / "ncbi_ast_activity.tsv",
+        )
+
+
 def test_project_dedupe_report_is_a_stable_tsv(tmp_path):
     path = tmp_path / "ncbi_ast_project_dedupe_report.tsv"
     rows = [
@@ -4246,6 +4401,27 @@ def test_cli_rejects_activity_report_without_source_metadata(tmp_path):
     assert "--activity-report requires --source-version" in result.stderr
 
 
+def test_cli_rejects_validate_activity_report_without_source_metadata(tmp_path):
+    ast = tmp_path / "ast.tsv"
+    ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            "--validate-activity-report",
+            str(tmp_path / "ncbi_ast_activity.tsv"),
+        ],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 2
+    assert "--validate-activity-report requires --source-version" in result.stderr
+
+
 def test_cli_rejects_drug_map_without_source_version(tmp_path):
     ast = tmp_path / "ast.tsv"
     ast.write_text("antibiotic\namikacin\n", encoding="utf-8")
@@ -4391,3 +4567,67 @@ def test_cli_rejects_non_iso_activity_report_retrieval_dates(
 
     assert result.returncode == 2
     assert "--source-retrieved-on must be an ISO date" in result.stderr
+
+
+def test_cli_rejects_stale_activity_report_against_current_ast(tmp_path):
+    ast_rows = [ncbi_ast_source_row()]
+
+    activity_report = tmp_path / "ncbi_ast_activity.tsv"
+    write_activity_report(
+        cefepime_activity_rows(*ast_rows),
+        activity_report,
+    )
+
+    ast = tmp_path / "ast.tsv"
+    with ast.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=ast_rows[0],
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows([*ast_rows, *ast_rows])
+
+    drug_map = tmp_path / "ncbi_ast_drug_map.tsv"
+    with drug_map.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=DRUG_MAP_COLUMNS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerow({
+            "source_version": "2026-09-26-ast-browser",
+            "source_record_id": "cefepime",
+            "source_name": "cefepime",
+            "mapping_status": "EXACT",
+            "identifier": "CHEBI:478164",
+            "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+            "mapping_basis": "parent_base",
+            "notes": "NCBI names the active cefepime parent.",
+        })
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--ast",
+            str(ast),
+            "--drug-map",
+            str(drug_map),
+            "--validate-activity-report",
+            str(activity_report),
+            "--source-version",
+            "2026-09-26-ast-browser",
+            "--source-retrieved-on",
+            "2026-09-26",
+        ],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+
+    assert result.returncode != 0
+    assert "ast_row_count '1' != current NCBI AST '2'" in result.stderr
