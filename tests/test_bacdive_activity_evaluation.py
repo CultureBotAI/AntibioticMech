@@ -537,6 +537,22 @@ def test_read_activity_report_rejects_short_rows(tmp_path):
             False,
             "met_antibiotica rows must not carry disk-diffusion fields",
         ),
+        ({"bacdive_id": "24493.0"}, True, "bacdive_id must be a positive integer"),
+        (
+            {"source_reference_ids": "119509|119508"},
+            False,
+            "source_reference_ids must be a sorted unique pipe-delimited list",
+        ),
+        (
+            {"source_reference_ids": "119508|119508"},
+            False,
+            "source_reference_ids must be a sorted unique pipe-delimited list",
+        ),
+        (
+            {"source_reference_ids": "|119508"},
+            False,
+            "source_reference_ids has an empty segment",
+        ),
     ],
 )
 def test_read_activity_report_rejects_stale_or_malformed_rows(
@@ -795,6 +811,12 @@ def test_evaluate_records_rejects_malformed_met_antibiotica_scalar_fields(
             "@ref",
             [{"id": 119508}],
             r"BacDive-ID 24493 antibiotic resistance row 1 @ref entry 1",
+        ),
+        (
+            "@ref",
+            "119508|119509",
+            r"BacDive-ID 24493 antibiotic resistance row 1 @ref "
+            r"must not contain '\|'",
         ),
     ],
 )
