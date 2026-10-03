@@ -56,6 +56,8 @@ CHEMICAL_MAP_ARTIFACT = REPO_ROOT / "data" / "embeddings" / "chemical-structure-
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 from seed_from_sources import CLASS_DIRS, class_parents, rollup_by_class  # noqa: E402
 
+from antibioticmech.activity_collections import load_record  # noqa: E402
+
 MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "MANIFEST.yaml"
 
 # Where the site is served from; the sitemap needs absolute URLs.
@@ -170,8 +172,7 @@ XREF_URL_TEMPLATES = _xref_url_templates()
 def load_records() -> list[tuple[Path, dict]]:
     out = []
     for path in sorted(CORPUS_DIR.rglob("*.yaml")):
-        with path.open(encoding="utf-8") as fh:
-            doc = yaml.safe_load(fh)
+        doc = load_record(path)
         if isinstance(doc, dict):
             out.append((path, doc))
     return out

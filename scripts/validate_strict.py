@@ -35,6 +35,8 @@ from linkml.validator import Validator
 from linkml.validator.plugins import JsonschemaValidationPlugin
 from linkml.validator.report import Severity
 
+from antibioticmech.activity_collections import expand_activities
+
 _REPO_ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_PATH = _REPO_ROOT / "src" / "antibioticmech" / "schema" / "antibioticmech.yaml"
 DEFAULT_ROOTS = [_REPO_ROOT / "data" / "antibiotics"]
@@ -114,6 +116,12 @@ def validate_one(path: Path) -> list[dict]:
 
     try:
         report = validator.validate(instance, target_class=TARGET_CLASS)
+        if isinstance(instance, dict) and "activity_collections" in instance:
+            expanded = expand_activities(instance, path)
+            report.results.extend(validator.validate(expanded, target_class=TARGET_CLASS).results)
+    except (ValueError, OSError) as e:
+        return [{"file": str(path), "category": "activity_collection_error", "detail": "",
+                 "path": "activity_collections", "message": str(e)[:300]}]
     except Exception as e:  # noqa: BLE001 — surface anything weird as a row
         return [{
             "file": str(path),

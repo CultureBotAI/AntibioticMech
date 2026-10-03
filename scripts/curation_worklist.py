@@ -49,6 +49,8 @@ from seed_from_sources import (  # noqa: E402
     merge,
 )
 
+from antibioticmech.activity_collections import load_record  # noqa: E402
+
 CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 
 
@@ -76,7 +78,7 @@ def no_structure_queue() -> list[dict]:
 
 
 def corpus_records() -> list[dict]:
-    return [yaml.safe_load(p.read_text(encoding="utf-8")) for p in sorted(CORPUS_DIR.rglob("*.yaml"))]
+    return [load_record(p) for p in sorted(CORPUS_DIR.rglob("*.yaml"))]
 
 
 def mechanism_queue(records: list[dict]) -> list[dict]:

@@ -15,6 +15,8 @@ import seed_from_sources as seed  # noqa: E402
 from ncbi_ast_biosamples import activity_observations  # noqa: E402
 from test_ncbi_ast_biosamples import convert, pair, review_file, sample  # noqa: E402
 
+from antibioticmech import activity_collections  # noqa: E402
+
 
 @pytest.fixture
 def template():
@@ -65,7 +67,7 @@ def test_disk_only_and_missing_fields_do_not_invent_mic(template):
 
 def record_fixture():
     path = seed.read_lockfile_paths()["CHEBI:478164"]
-    existing = yaml.safe_load(path.read_text())
+    existing = activity_collections.load_record(path)
     fresh = copy.deepcopy(existing)
     fresh["activity_spectrum"] = [
         a for a in fresh.get("activity_spectrum", []) if seed.is_cryptic_sourced_activity(a)
@@ -80,9 +82,26 @@ def test_real_record_write_roundtrip_and_reseed(tmp_path, template):
     assert existing == before
     assert metrics["observations"] == 1
     assert metrics["yaml_bytes"] > 0 and metrics["html_bytes"] > 0
-    loaded = yaml.safe_load((tmp_path / "records" / metrics["record"]).read_text())
+    loaded = activity_collections.load_record(tmp_path / "records" / metrics["record"])
     assert seed.ncbi_ast_sourced_activity_view(loaded) == seed.ncbi_ast_sourced_activity_view(fresh)
     assert seed.merge_with_existing(fresh, loaded) == loaded
+
+
+def test_publication_audit_resolves_and_counts_all_artifacts(tmp_path, template, monkeypatch):
+    monkeypatch.setattr(activity_collections, "COLLECTION_SIZE", 3)
+    path, existing, fresh = record_fixture()
+    original = copy.deepcopy(fresh["activity_spectrum"][-1])
+    for number in range(1, 7):
+        fresh["activity_spectrum"].append({**original, "source_observation_id": f"fixture-{number}"})
+    metrics = publication.audit_record(fresh, existing, path, tmp_path, template, {})
+    written = tmp_path / "records" / metrics["record"]
+    loaded = activity_collections.load_record(written)
+    assert metrics["observations"] == 7
+    assert metrics["collection_files"] == 3
+    assert metrics["collection_bytes"] == sum(p.stat().st_size for p in written.parent.glob("*.jsonl.gz"))
+    assert seed.ncbi_ast_sourced_activity_view(loaded) == seed.ncbi_ast_sourced_activity_view(fresh)
+    html = (tmp_path / "pages" / Path(metrics["record"]).with_suffix(".html")).read_text()
+    publication.verify_activity_table(html, loaded["activity_spectrum"])
 
 
 def test_merge_rejects_non_ast_source_loss():

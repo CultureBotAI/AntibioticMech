@@ -16,8 +16,6 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-import yaml
-
 REPO_ROOT = Path(__file__).resolve().parents[1]
 CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 
@@ -30,11 +28,13 @@ from curation_worklist import (  # noqa: E402
 )
 from seed_from_sources import class_count_rows, class_parents, rollup_by_class  # noqa: E402
 
+from antibioticmech.activity_collections import load_record  # noqa: E402
+
 
 def load_corpus() -> list[tuple[Path, dict]]:
     out = []
     for path in sorted(CORPUS_DIR.rglob("*.yaml")):
-        out.append((path, yaml.safe_load(path.read_text(encoding="utf-8"))))
+        out.append((path, load_record(path)))
     return out
 
 

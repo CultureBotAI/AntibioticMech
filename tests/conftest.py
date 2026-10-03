@@ -10,7 +10,8 @@ import csv
 from pathlib import Path
 
 import pytest
-import yaml
+
+from antibioticmech.activity_collections import load_record
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
@@ -36,8 +37,7 @@ def records() -> list[tuple[Path, dict]]:
         pytest.skip(f"no corpus at {CORPUS_DIR}; run `just seed-apply`")
     out = []
     for path in sorted(CORPUS_DIR.rglob("*.yaml")):
-        with path.open(encoding="utf-8") as fh:
-            out.append((path, yaml.safe_load(fh)))
+        out.append((path, load_record(path)))
     if not out:
         pytest.skip(f"corpus at {CORPUS_DIR} is empty")
     return out

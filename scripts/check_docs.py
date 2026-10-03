@@ -17,13 +17,13 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-import yaml
-
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from seed_from_sources import class_parents, rollup_by_class  # noqa: E402
+
+from antibioticmech.activity_collections import load_record  # noqa: E402
 
 CORPUS_DIR = REPO_ROOT / "data" / "antibiotics"
 README = REPO_ROOT / "README.md"
@@ -45,7 +45,7 @@ def corpus_stats() -> dict:
 
     total = 0
     for path in sorted(CORPUS_DIR.rglob("*.yaml")):
-        record = yaml.safe_load(path.read_text(encoding="utf-8"))
+        record = load_record(path)
         total += 1
         cls = record["antimicrobial_class"]
         by_class[cls] += 1
