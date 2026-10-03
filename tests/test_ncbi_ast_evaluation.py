@@ -44,6 +44,18 @@ from seed_from_sources import load_ncbi_ast_activity_inventory  # noqa: E402
 SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "evaluate_ncbi_ast.py"
 
 
+def test_cached_field_lookup_keeps_alias_priority_and_reads_current_values():
+    row = {"MIC value": "8", "MIC (mg/L)": "2", "mic": "", None: "ignored"}
+    assert evaluate_ncbi_ast.first_value(row, ("mic", "micmgl", "micvalue")) == "2"
+    row["mic"] = " 4\n"
+    assert evaluate_ncbi_ast.first_value(row, ("mic", "micmgl", "micvalue")) == "4"
+    row["mic"] = None
+    row["MIC (mg/L)"] = ""
+    assert evaluate_ncbi_ast.first_value(row, ("mic", "micmgl", "micvalue")) == "8"
+    row["AST.mic"] = "16"
+    assert evaluate_ncbi_ast.first_value(row, ("mic", "micmgl", "micvalue")) == "16"
+
+
 def ncbi_ast_source_row(**overrides: str) -> dict[str, str]:
     row = {
         "antibiotic": "cefepime",

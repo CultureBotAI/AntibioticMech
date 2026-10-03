@@ -71,6 +71,10 @@ evaluate-hivdb *args:
 evaluate-amrfinder *args:
     uv run python scripts/evaluate_amrfinderplus.py {{args}}
 
+# Download a count-checked native AST Browser export and checksum manifest.
+fetch-ncbi-ast *args:
+    uv run python scripts/fetch_ncbi_ast.py {{args}}
+
 # Evaluate an NCBI Pathogen Detection AST export and optional curated structure crosswalk.
 evaluate-ncbi-ast *args:
     uv run python scripts/evaluate_ncbi_ast.py {{args}}
