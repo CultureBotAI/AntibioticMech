@@ -4,12 +4,13 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 import pytest
-import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from render_pages import TEMPLATES_DIR, build_record  # noqa: E402
+
+from antibioticmech.activity_collections import load_record  # noqa: E402
 
 
 class Tables(HTMLParser):
@@ -38,7 +39,7 @@ def test_rendered_tables_have_named_keyboard_scroll_regions(view):
                       autoescape=select_autoescape(["html"]))
     if view == "record":
         path = ROOT / "data/antibiotics/antibacterial/ampicillin.yaml"
-        doc = yaml.safe_load(path.read_text())
+        doc = load_record(path)
         context = {"r": build_record(path, doc, {}, "../"), "root": "../", "stats": {}}
     else:
         context = {

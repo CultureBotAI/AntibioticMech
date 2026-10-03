@@ -67,7 +67,7 @@ def test_disk_only_and_missing_fields_do_not_invent_mic(template):
 
 def record_fixture():
     path = seed.read_lockfile_paths()["CHEBI:478164"]
-    existing = yaml.safe_load(path.read_text())
+    existing = activity_collections.load_record(path)
     fresh = copy.deepcopy(existing)
     fresh["activity_spectrum"] = [
         a for a in fresh.get("activity_spectrum", []) if seed.is_cryptic_sourced_activity(a)
@@ -82,7 +82,7 @@ def test_real_record_write_roundtrip_and_reseed(tmp_path, template):
     assert existing == before
     assert metrics["observations"] == 1
     assert metrics["yaml_bytes"] > 0 and metrics["html_bytes"] > 0
-    loaded = yaml.safe_load((tmp_path / "records" / metrics["record"]).read_text())
+    loaded = activity_collections.load_record(tmp_path / "records" / metrics["record"])
     assert seed.ncbi_ast_sourced_activity_view(loaded) == seed.ncbi_ast_sourced_activity_view(fresh)
     assert seed.merge_with_existing(fresh, loaded) == loaded
 

@@ -519,7 +519,9 @@ def test_no_unregistered_numeric_claim_about_the_corpus(repo_root):
     sys.path.insert(0, str(repo_root / "scripts"))
     sys.path.insert(0, str(repo_root / "src"))
 
-    records = [yaml.safe_load(p.read_text(encoding="utf-8"))
+    from antibioticmech.activity_collections import load_record
+
+    records = [load_record(p)
                for p in (repo_root / "data" / "antibiotics").rglob("*.yaml")]
     conf = yaml.safe_load((repo_root / "conf" / "sources.yaml").read_text(encoding="utf-8"))
 
