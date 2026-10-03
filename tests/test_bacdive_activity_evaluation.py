@@ -24,6 +24,7 @@ from evaluate_bacdive_activity import (  # noqa: E402
     read_bacdive_fetch,
     read_drug_map,
     require_activity_report_matches_current,
+    require_standard_inchi_key,
     source_activity_id,
     write_activity_report,
     write_drug_map_template,
@@ -452,6 +453,28 @@ def test_write_activity_report_rejects_leading_or_trailing_whitespace(tmp_path):
         write_activity_report(rows, tmp_path / "bacdive_activity.tsv")
 
 
+def test_write_activity_report_rejects_invalid_standard_inchi_key(tmp_path):
+    rows = exact_activity_rows(
+        {"24493": bacdive_record()},
+        {"ampicillin": bacdive_drug_map_row()},
+        SOURCE_VERSION,
+    )
+    rows[0]["standard_inchi_key"] = "WRONGINCHIKEY"
+    rows[0]["source_activity_id"] = source_activity_id(rows[0])
+
+    with pytest.raises(ValueError, match="invalid standard_inchi_key value"):
+        write_activity_report(rows, tmp_path / "bacdive_activity.tsv")
+
+
+def test_require_standard_inchi_key_rejects_trailing_newline():
+    with pytest.raises(ValueError, match="invalid standard_inchi_key value"):
+        require_standard_inchi_key(
+            f"{AMPICILLIN_INCHI_KEY}\n",
+            "standard_inchi_key",
+            "bacdive_activity.tsv: row 1",
+        )
+
+
 def test_read_activity_report_rejects_header_drift(tmp_path):
     path = tmp_path / "bacdive_activity.tsv"
     path.write_text("source_activity_id\tunexpected\n", encoding="utf-8")
@@ -511,7 +534,7 @@ def test_read_activity_report_rejects_short_rows(tmp_path):
             "mapped identifier CHEBI:999999 is not in the corpus",
         ),
         (
-            {"standard_inchi_key": "WRONGINCHIKEY"},
+            {"standard_inchi_key": "AAAAAAAAAAAAAA-AAAAAAAAAA-A"},
             True,
             "does not match CHEBI:28971",
         ),
