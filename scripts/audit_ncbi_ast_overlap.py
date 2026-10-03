@@ -17,6 +17,7 @@ import evaluate_cryptic_activity as cryptic
 import evaluate_ncbi_ast as ast
 from ncbi_ast_assays import apply_assay_review, read_assay_review
 from ncbi_ast_isolates import file_sha256, load_isolate_snapshot
+from ncbi_ast_taxonomy import SCOPE_NAME, SCOPE_REFERENCE, SCOPE_TAXID, load_snapshot, relationship
 from seed_from_sources import load_cryptic_activity_inventory
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -120,6 +121,54 @@ def assay_contexts(rows: list[dict]) -> list[dict]:
     ]
 
 
+def taxonomy_scope(rows: list[dict], records: dict, membership: dict) -> dict:
+    if cryptic.VERSION != "3.4.0":
+        raise ValueError("CRyPTIC release scope must be reviewed for the new version")
+    counts: Counter = Counter()
+    taxa: dict[str, dict] = {}
+    for row in rows:
+        curie = row["taxon_id"]
+        taxid = curie.removeprefix("NCBITaxon:")
+        status = relationship(taxid, records)
+        if status == "OUTSIDE_SCOPE" and row["biosample_accession"] in membership["all_samples"]:
+            status = "TAXON_SAMPLE_CONFLICT"
+        elif taxid in records and row["taxon_label"] != records[taxid]["scientific_name"]:
+            status = "TAXON_LABEL_REVIEW"
+        counts[(status, "groups")] += 1
+        counts[(status, "measurements")] += int(row["ast_row_count"])
+        entry = taxa.setdefault(curie, {
+            "taxon_id": curie, "scientific_name": records.get(taxid, {}).get("scientific_name", ""),
+            "lineage_taxids": records.get(taxid, {}).get("lineage_taxids", []),
+            "groups": 0, "measurements": 0, "statuses": set(), "source_taxon_labels": set(),
+        })
+        entry["groups"] += 1
+        entry["measurements"] += int(row["ast_row_count"])
+        entry["statuses"].add(status)
+        entry["source_taxon_labels"].add(row["taxon_label"])
+    for entry in taxa.values():
+        entry["statuses"] = sorted(entry["statuses"])
+        entry["source_taxon_labels"] = sorted(entry["source_taxon_labels"])
+    statuses = ["OUTSIDE_SCOPE", "WITHIN_SCOPE", "ANCESTOR_OF_SCOPE", "UNRESOLVED",
+                "TAXON_SAMPLE_CONFLICT", "TAXON_LABEL_REVIEW"]
+    return {
+        "scope_taxon_id": "NCBITaxon:" + SCOPE_TAXID, "scope_name": SCOPE_NAME,
+        "scope_reference": SCOPE_REFERENCE,
+        "conclusion": ("DISJOINT_BY_REPORTED_TAXONOMY" if rows and
+                       counts[("OUTSIDE_SCOPE", "groups")] == len(rows) else "REVIEW_REQUIRED"),
+        "counts": {status: {kind: counts[(status, kind)] for kind in ("groups", "measurements")}
+                   for status in statuses},
+        "taxa": [taxa[key] for key in sorted(taxa)],
+        "limitations": [
+            "Conditional on source TaxIDs and CRyPTIC's published complex-wide scope, "
+            "including pDST-only isolates.",
+            "Does not resolve aliases or independently re-identify isolates; "
+            "conflicting sample IDs require review.",
+            "TaxID/name disagreements require review, including legitimate scientific-name changes.",
+            "Does not establish within-source uniqueness, drug identity, assay validity, or source adoption.",
+        ],
+    }
+
+
 def audit(args) -> dict:
     import duckdb
 
@@ -166,6 +215,13 @@ def audit(args) -> dict:
         input_paths["project_dedupe_map"] = args.project_dedupe_map
     if args.assay_review:
         input_paths["assay_review"] = args.assay_review
+    taxonomy = None
+    if args.taxonomy_snapshot:
+        taxonomy = taxonomy_scope(
+            report, load_snapshot(args.taxonomy_snapshot, args.activity_report, report), membership,
+        )
+        input_paths["taxonomy"] = args.taxonomy_snapshot / "taxonomy.xml"
+        input_paths["taxonomy_manifest"] = args.taxonomy_snapshot / "snapshot.json"
     return {
         "scope": "Exact accession overlap; review leads only, not automatic duplicate exclusions.",
         "limitations": [
@@ -181,6 +237,7 @@ def audit(args) -> dict:
         "raw_ast": overlap_summary(raw, membership, raw=True, mappings=mappings),
         "eligible_ast": overlap_summary(report, membership, raw=False, mappings=mappings),
         "eligible_assay_contexts": assay_contexts(report),
+        "taxonomy_scope": taxonomy,
     }
 
 
@@ -191,6 +248,7 @@ def main() -> None:
     parser.add_argument("--drug-map", type=Path, default=ROOT / "curation/ncbi_ast_drug_map.tsv")
     parser.add_argument("--project-dedupe-map", type=Path)
     parser.add_argument("--assay-review", type=Path)
+    parser.add_argument("--taxonomy-snapshot", type=Path)
     parser.add_argument("--cryptic-directory", type=Path, default=ROOT / "downloads/cryptic_3.4.0")
     parser.add_argument("--cryptic-drug-map", type=Path, default=cryptic.DEFAULT_DRUG_MAP)
     parser.add_argument("--cryptic-inventory", type=Path, default=ROOT / "data/raw/cryptic_activity.tsv")
