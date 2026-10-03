@@ -25,6 +25,7 @@ from typing import Any
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+STANDARD_INCHI_KEY_PATTERN = re.compile(r"^[A-Z]{14}-[A-Z]{10}-[A-Z]$")
 
 DRUG_MAP_COLUMNS = [
     "source_version",
@@ -861,9 +862,11 @@ def evaluate_records(
 
 
 def require_tsv_safe_value(value: str, field: str, prefix: str) -> str:
-    value = str(value).strip()
+    value = str(value)
     if any(char in value for char in CURATED_TSV_CONTROL_CHARS):
         raise ValueError(f"{prefix}: {field} contains a tab or newline")
+    if value != value.strip():
+        raise ValueError(f"{prefix}: {field} has leading or trailing whitespace")
     return value
 
 
@@ -916,6 +919,11 @@ def require_activity_report_rows(rows: list[dict[str, str]], path: Path) -> None
         seen_activity_ids.add(row["source_activity_id"])
         if BACDIVE_ID_PATTERN.fullmatch(row["bacdive_id"]) is None:
             raise ValueError(f"{prefix}: bacdive_id must be a positive integer")
+        require_standard_inchi_key(
+            row["standard_inchi_key"],
+            "standard_inchi_key",
+            prefix,
+        )
         require_canonical_source_reference_ids(row["source_reference_ids"], prefix)
         if row["source_record_id"] != normalize(row["source_name"]):
             raise ValueError(
@@ -1018,6 +1026,11 @@ def require_canonical_source_reference_ids(value: str, prefix: str) -> None:
             f"{prefix}: source_reference_ids must be a sorted unique "
             "pipe-delimited list"
         )
+
+
+def require_standard_inchi_key(value: str, field: str, prefix: str) -> None:
+    if STANDARD_INCHI_KEY_PATTERN.fullmatch(value) is None:
+        raise ValueError(f"{prefix}: invalid {field} value {value!r}")
 
 
 def require_exact_table_row(row: dict, path: Path, line_number: int) -> None:
