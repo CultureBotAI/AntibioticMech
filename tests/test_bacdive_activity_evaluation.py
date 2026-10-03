@@ -440,6 +440,18 @@ def test_read_activity_report_accepts_exact_activity_rows(tmp_path):
     ) == rows
 
 
+def test_write_activity_report_rejects_leading_or_trailing_whitespace(tmp_path):
+    rows = exact_activity_rows(
+        {"24493": bacdive_record()},
+        {"ampicillin": bacdive_drug_map_row()},
+        SOURCE_VERSION,
+    )
+    rows[0]["taxon_label"] = " Phaeobacter gallaeciensis"
+
+    with pytest.raises(ValueError, match="taxon_label has leading or trailing whitespace"):
+        write_activity_report(rows, tmp_path / "bacdive_activity.tsv")
+
+
 def test_read_activity_report_rejects_header_drift(tmp_path):
     path = tmp_path / "bacdive_activity.tsv"
     path.write_text("source_activity_id\tunexpected\n", encoding="utf-8")

@@ -861,9 +861,11 @@ def evaluate_records(
 
 
 def require_tsv_safe_value(value: str, field: str, prefix: str) -> str:
-    value = str(value).strip()
+    value = str(value)
     if any(char in value for char in CURATED_TSV_CONTROL_CHARS):
         raise ValueError(f"{prefix}: {field} contains a tab or newline")
+    if value != value.strip():
+        raise ValueError(f"{prefix}: {field} has leading or trailing whitespace")
     return value
 
 
