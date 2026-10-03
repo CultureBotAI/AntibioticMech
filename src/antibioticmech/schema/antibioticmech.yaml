@@ -1022,11 +1022,67 @@ classes:
         description: Source-backed role in this mechanism, including component role for a complex.
         range: string
 
+  PathogenDetectionContext:
+    description: >-
+      One genome target associated with a measured BioSample result. Keep
+      target, assembly, project and source date paired when a single result
+      is exported under multiple genomes; these are not replicate assays.
+    attributes:
+      pathogen_detection_target_accession:
+        description: Versioned NCBI Pathogen Detection target accession.
+        required: true
+        range: string
+        pattern: "^PDT[0-9]+\\.[0-9]+$"
+      assembly_accession:
+        description: Assembly linked to this target, when provided.
+        range: string
+        pattern: "^GC[AF]_[0-9]+\\.[0-9]+$"
+      bioproject_accession:
+        description: BioProject for this genome target, not an assay replicate.
+        range: string
+        pattern: "^PRJ(NA|EB|DB)[0-9]+$"
+      sra_accessions:
+        description: Sequencing accessions associated with this target.
+        multivalued: true
+        range: string
+        pattern: "^(SRR|ERR|DRR|SRX|ERX|DRX|SRP|ERP|DRP|SRS|ERS|DRS)[0-9]+$"
+      source_create_date:
+        description: Creation date of this source genome target.
+        range: string
+      source_observation_id:
+        description: Original source export group represented by this context.
+        required: true
+        range: string
+
   ActivityObservation:
     description: >-
       One activity claim against one target organism, with the assay that
       produced it. A number without a method is not an observation.
     rules:
+      - description: >-
+          Multiple paired genome contexts replace the corresponding singleton
+          fields; no single target or project is selected as representative.
+        preconditions:
+          slot_conditions:
+            pathogen_detection_contexts:
+              value_presence: PRESENT
+        postconditions:
+          all_of:
+            - slot_conditions:
+                bioproject_accession:
+                  value_presence: ABSENT
+            - slot_conditions:
+                pathogen_detection_target_accession:
+                  value_presence: ABSENT
+            - slot_conditions:
+                assembly_accession:
+                  value_presence: ABSENT
+            - slot_conditions:
+                sra_accessions:
+                  value_presence: ABSENT
+            - slot_conditions:
+                source_create_date:
+                  value_presence: ABSENT
       - description: >-
           A reported MIC must carry its units and the method that produced it.
           Both were documented requirements enforced only by a test; expressing
@@ -1097,6 +1153,13 @@ classes:
           share the same organism, compound, method and result.
         range: integer
         minimum_value: 1
+      source_export_row_count:
+        description: >-
+          Number of source export rows represented, when different from the
+          measurement count. A single BioSample result repeated under several
+          genome targets is one measurement, not several assay replicates.
+        range: integer
+        minimum_value: 1
       isolate_count:
         description: >-
           Number of distinct isolates represented by this observation, when the
@@ -1115,6 +1178,15 @@ classes:
           where the source provides one.
         range: string
         pattern: "^SAM(N|D|EA)[0-9]+$"
+      pathogen_detection_contexts:
+        description: >-
+          Paired genome contexts for a source-verified result exported under
+          multiple Pathogen Detection targets. Replaces singleton genome fields
+          without choosing or losing any genome association.
+        multivalued: true
+        minimum_cardinality: 2
+        inlined_as_list: true
+        range: PathogenDetectionContext
       bioproject_accession:
         description: BioProject accession for the sequencing project behind this AST row.
         range: string

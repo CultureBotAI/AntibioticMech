@@ -85,6 +85,7 @@ def test_activity_observation_count_slots_are_positive(schema_path):
         "isolate_count",
         "measurement_count",
         "site_count",
+        "source_export_row_count",
     }
     assert {
         name: slot.get("minimum_value")
@@ -93,6 +94,7 @@ def test_activity_observation_count_slots_are_positive(schema_path):
         "isolate_count": 1,
         "measurement_count": 1,
         "site_count": 1,
+        "source_export_row_count": 1,
     }
 
 

@@ -96,6 +96,19 @@ def test_record_page_renders_activity_sample_accessions():
                 "mic_value": 4.0,
                 "mic_units": "mg/L",
                 "assay": "NCBI Pathogen Detection AST",
+                "measurement_count": 1,
+                "source_export_row_count": 2,
+                "pathogen_detection_contexts": [{
+                    "pathogen_detection_target_accession": "PDT000000001.1",
+                    "assembly_accession": "GCA_000000001.1",
+                    "bioproject_accession": "PRJNA1",
+                    "source_create_date": "2026-01-01",
+                }, {
+                    "pathogen_detection_target_accession": "PDT000000002.1",
+                    "assembly_accession": "GCA_000000002.1",
+                    "bioproject_accession": "PRJNA2",
+                    "source_create_date": "2026-02-01",
+                }],
             }, {
                 "taxon_label": "Salmonella enterica",
                 "activity": "SUSCEPTIBLE_DOSE_DEPENDENT",
@@ -124,3 +137,8 @@ def test_record_page_renders_activity_sample_accessions():
     assert "Assembly" in html
     assert "GCF_000005845.2" in html
     assert "SRR123456" in html
+    assert html.count('class="genome-context"') == 2
+    for accession in ("PDT000000001.1", "PDT000000002.1", "GCA_000000001.1", "GCA_000000002.1"):
+        assert accession in html
+    assert "1 measurement(s); 2 source export rows" in html
+    assert "Source created 2026-02-01" in html

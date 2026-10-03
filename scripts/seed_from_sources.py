@@ -48,6 +48,7 @@ from ncbi_ast_assays import (
     has_informative_assay_context,
     read_assay_review,
 )
+from ncbi_ast_biosamples import activity_observations as ncbi_ast_observations
 from ncbi_ast_isolates import ISOLATE_REFERENCE, require_isolate_provenance
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
@@ -3264,7 +3265,8 @@ def attach_ncbi_ast_activity(records: dict[str, dict]) -> Counter:
 
     assay_review = read_assay_review(DEFAULT_REVIEW_MAP)
     observations_by_record: dict[str, list[dict]] = defaultdict(list)
-    for row in load_ncbi_ast_activity_inventory(NCBI_AST_ACTIVITY_INVENTORY):
+    rows = load_ncbi_ast_activity_inventory(NCBI_AST_ACTIVITY_INVENTORY)
+    for row in rows:
         identifier = row["identifier"]
         require_seed_row_identity(
             records,
@@ -3272,7 +3274,10 @@ def attach_ncbi_ast_activity(records: dict[str, dict]) -> Counter:
             source="NCBI_AST",
             row_id=row["activity_group_id"],
         )
-        observations_by_record[identifier].append(ncbi_ast_activity_observation(row, assay_review))
+    for identifier, observation in ncbi_ast_observations(
+        rows, NCBI_AST_ACTIVITY_INVENTORY, lambda row: ncbi_ast_activity_observation(row, assay_review),
+    ):
+        observations_by_record[identifier].append(observation)
         counts["matched_observations"] += 1
 
     for identifier, observations in observations_by_record.items():
