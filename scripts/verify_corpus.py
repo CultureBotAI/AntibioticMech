@@ -79,7 +79,7 @@ from seed_from_sources import (  # noqa: E402
 CARD_FIELDS = ["molecular_targets", "resistance_mechanisms"]
 
 
-def rebuild() -> dict[str, dict]:
+def rebuild(*, ncbi_ast_inventory: Path | None = None) -> dict[str, dict]:
     conf = yaml.safe_load(CONF_PATH.read_text(encoding="utf-8"))
     manifest = yaml.safe_load((RAW_DIR / "MANIFEST.yaml").read_text(encoding="utf-8"))
     concepts, chebi_rows = build_concepts(conf)
@@ -89,7 +89,7 @@ def rebuild() -> dict[str, dict]:
     attach_phibase_resistance(records)
     attach_bindingdb_targets(records)
     attach_cryptic_activity(records)
-    attach_ncbi_ast_activity(records)
+    attach_ncbi_ast_activity(records, inventory=ncbi_ast_inventory)
     attach_hivdb_score_rules(records)
     attach_mibig_producers(
         records,
