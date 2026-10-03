@@ -2333,6 +2333,85 @@ def write_activity_report(rows: list[dict], path: Path) -> None:
         writer.writerows(rows)
 
 
+def read_activity_report(
+    path: Path,
+    structure_keys: dict[str, str],
+    source_version: str,
+) -> list[dict[str, str]]:
+    """Read and validate an existing NCBI AST exact activity report."""
+
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if reader.fieldnames != ACTIVITY_REPORT_COLUMNS:
+            raise ValueError(
+                f"unexpected NCBI AST activity report columns: {reader.fieldnames}"
+            )
+
+        rows = []
+        for line_number, row in enumerate(reader, start=2):
+            require_exact_table_row(row, path, line_number)
+            rows.append(require_curated_tsv_row(row, path, line_number))
+
+    require_activity_report_rows(rows, path)
+    for index, row in enumerate(rows, start=1):
+        prefix = f"{path}: row {index}"
+        if row["source_version"] != source_version:
+            raise ValueError(
+                f"{prefix}: source_version {row['source_version']!r} "
+                f"!= {source_version!r}"
+            )
+
+        identifier = row["identifier"]
+        expected = structure_keys.get(identifier)
+        if expected is None:
+            raise ValueError(
+                f"{prefix}: mapped identifier {identifier} is not in the corpus"
+            )
+        if row["standard_inchi_key"] != expected:
+            raise ValueError(
+                f"{prefix}: mapped InChIKey {row['standard_inchi_key']} "
+                f"does not match {identifier} ({expected})"
+            )
+    return rows
+
+
+def require_activity_report_matches_current(
+    validated_rows: list[dict[str, str]],
+    current_rows: list[dict[str, str]],
+    path: Path,
+) -> None:
+    """Compare a validated exact report with rows regenerated from NCBI AST."""
+
+    require_activity_report_rows(current_rows, path)
+
+    validated_by_id = {row["activity_group_id"]: row for row in validated_rows}
+    current_by_id = {row["activity_group_id"]: row for row in current_rows}
+
+    missing_ids = sorted(set(current_by_id) - set(validated_by_id))
+    if missing_ids:
+        raise ValueError(
+            f"{path}: missing current NCBI AST activity row {missing_ids[0]}"
+        )
+
+    unexpected_ids = sorted(set(validated_by_id) - set(current_by_id))
+    if unexpected_ids:
+        raise ValueError(
+            f"{path}: unexpected stale NCBI AST activity row {unexpected_ids[0]}"
+        )
+
+    for activity_group_id_ in sorted(current_by_id):
+        validated_row = validated_by_id[activity_group_id_]
+        current_row = current_by_id[activity_group_id_]
+        for field in ACTIVITY_REPORT_COLUMNS:
+            validated_value = str(validated_row[field])
+            current_value = str(current_row[field])
+            if validated_value != current_value:
+                raise ValueError(
+                    f"{path}: {activity_group_id_} {field} "
+                    f"{validated_value!r} != current NCBI AST {current_value!r}"
+                )
+
+
 def reject_reused_cli_paths(
     parser: argparse.ArgumentParser,
     paths: Iterable[tuple[str, Path | None]],
@@ -2394,6 +2473,11 @@ def main() -> int:
             "Optional TSV of grouped exact-mapped AST rows with valid MIC or disk "
             "measurements and BioSample/BioProject context; requires --drug-map."
         ),
+    )
+    parser.add_argument(
+        "--validate-activity-report",
+        type=Path,
+        help="Optional existing NCBI AST exact activity TSV to validate.",
     )
     parser.add_argument(
         "--source-version",
@@ -2460,6 +2544,8 @@ def main() -> int:
         )
     if args.activity_report and not args.source_version.strip():
         parser.error("--activity-report requires --source-version.")
+    if args.validate_activity_report and not args.source_version.strip():
+        parser.error("--validate-activity-report requires --source-version.")
     if (args.drug_map or args.drug_map_template) and not args.source_version.strip():
         parser.error("--drug-map and --drug-map-template require --source-version.")
     if args.source_version != args.source_version.strip():
@@ -2468,6 +2554,15 @@ def main() -> int:
         parser.error("--source-version must not contain tabs or newlines.")
     if args.activity_report and not args.source_retrieved_on:
         parser.error("--activity-report requires --source-retrieved-on.")
+    if (
+        args.validate_activity_report
+        and args.drug_map
+        and not args.source_retrieved_on
+    ):
+        parser.error(
+            "--validate-activity-report with --drug-map requires "
+            "--source-retrieved-on."
+        )
     if args.source_retrieved_on and not is_iso_date(args.source_retrieved_on):
         parser.error("--source-retrieved-on must be an ISO date.")
     reject_reused_cli_paths(
@@ -2476,6 +2571,7 @@ def main() -> int:
             ("--ast", args.ast),
             ("--drug-map", args.drug_map),
             ("--project-dedupe-map", args.project_dedupe_map),
+            ("--validate-activity-report", args.validate_activity_report),
             ("--antibiotic-report", args.antibiotic_report),
             ("--activity-report", args.activity_report),
             ("--drug-map-template", args.drug_map_template),
@@ -2497,6 +2593,15 @@ def main() -> int:
     rows = read_table(args.ast)
     require_any_antibiotic_value(rows, args.ast)
     candidates, structure_keys = corpus_name_candidates()
+    validated_activity_rows = (
+        read_activity_report(
+            args.validate_activity_report,
+            structure_keys,
+            args.source_version,
+        )
+        if args.validate_activity_report
+        else []
+    )
     mappings = (
         read_drug_map(args.drug_map, structure_keys, source_version=args.source_version)
         if args.drug_map
@@ -2522,11 +2627,17 @@ def main() -> int:
             source_retrieved_on=args.source_retrieved_on,
             project_dedupe=project_dedupe,
         )
-        if args.activity_report
+        if args.activity_report or (args.validate_activity_report and mappings)
         else []
     )
     if args.activity_report:
         require_activity_report_rows(activity_rows, args.activity_report)
+    if args.validate_activity_report and mappings:
+        require_activity_report_matches_current(
+            validated_activity_rows,
+            activity_rows,
+            args.validate_activity_report,
+        )
 
     if args.antibiotic_report:
         write_antibiotic_report(result["antibiotic_rows"], args.antibiotic_report)
