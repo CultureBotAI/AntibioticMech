@@ -558,6 +558,10 @@ def test_load_cryptic_activity_inventory_rejects_ragged_rows(tmp_path):
         ({"row_count": ""}, "row_count is required"),
         ({"row_count": "0"}, "row_count must be positive"),
         ({"row_count": "06184"}, "row_count must use canonical integer '6184'"),
+        (
+            {"activity_group_id": "ukmyc_phenotypes:stale"},
+            "activity_group_id must be",
+        ),
         ({"isolate_count": "many"}, "isolate_count must be an integer"),
         ({"site_count": "-1"}, "site_count must be positive"),
         ({"mic_value": "high"}, "mic_value must be numeric"),
