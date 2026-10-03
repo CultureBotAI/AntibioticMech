@@ -41,6 +41,7 @@ from functools import lru_cache
 from pathlib import Path
 
 import yaml
+from ncbi_ast_assays import has_informative_assay_context
 from ncbi_ast_isolates import ISOLATE_REFERENCE, require_isolate_provenance
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
@@ -3138,8 +3139,8 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                     f"{prefix}: invalid standard_inchi_key value "
                     f"{row['standard_inchi_key']!r}"
                 )
-            if not row["method"] and not row["platform"] and not row["reagent"]:
-                raise ValueError(f"{prefix}: method, platform or reagent is required")
+            if not has_informative_assay_context(row["method"], row["platform"], row["reagent"]):
+                raise ValueError(f"{prefix}: informative method, platform or reagent is required")
             if expected_source_version is None:
                 expected_source_version = row["source_version"]
             elif row["source_version"] != expected_source_version:

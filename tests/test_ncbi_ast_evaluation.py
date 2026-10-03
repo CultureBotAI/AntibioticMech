@@ -79,6 +79,25 @@ def cefepime_drug_mapping() -> dict[str, str]:
     }
 
 
+@pytest.mark.parametrize(("platform", "reagent"), [
+    ("", "96-Well Plate"), ("In-house", "96-Well Plate"), ("Other", ""),
+    ("Not applicable", "0"), ("unknown", "not collected"),
+])
+def test_generic_context_is_not_an_assay_method(platform, reagent):
+    row = ncbi_ast_source_row(method="", platform=platform, reagent=reagent)
+    assert not evaluate_ncbi_ast.has_assay_method(row)
+    assert cefepime_activity_rows(row) == []
+
+
+@pytest.mark.parametrize(("platform", "reagent"), [
+    ("Sensititre", "96-Well Plate"), ("Vitek", "0"),
+    ("Other", "broth microdilution"), ("Not applicable", "Antibiotic disk"),
+])
+def test_informative_context_survives_other_placeholder_fields(platform, reagent):
+    row = ncbi_ast_source_row(method="", platform=platform, reagent=reagent)
+    assert evaluate_ncbi_ast.has_assay_method(row)
+
+
 def cefepime_activity_rows(
     *rows: dict[str, str],
     source_version: str = "2026-09-26-ast-browser",
