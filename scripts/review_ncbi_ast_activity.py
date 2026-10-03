@@ -7,6 +7,7 @@ from pathlib import Path
 
 from evaluate_ncbi_ast import corpus_name_candidates, read_activity_report, write_activity_report
 from ncbi_ast_assays import DEFAULT_REVIEW_MAP, apply_assay_review, read_assay_review
+from ncbi_ast_inventory import activity_report_sha256, inventory_metadata
 from ncbi_ast_isolates import file_sha256
 
 
@@ -19,7 +20,7 @@ def main() -> None:
     if args.output_directory.exists():
         parser.error(f"refusing to overwrite {args.output_directory}")
     review = read_assay_review(args.assay_review)
-    if file_sha256(args.activity_report) != review.candidate_sha256:
+    if activity_report_sha256(args.activity_report) != review.candidate_sha256:
         parser.error("candidate report checksum does not match the reviewed snapshot")
     _, keys = corpus_name_candidates()
     rows = read_activity_report(args.activity_report, keys, review.source_version)
@@ -35,6 +36,7 @@ def main() -> None:
         "output_sha256": file_sha256(output), "input_groups": len(rows),
         "accepted_groups": len(accepted), "quarantined_groups": len(rows) - len(accepted),
         "decisions": decisions,
+        "candidate_inventory": inventory_metadata(args.activity_report),
     }
     (args.output_directory / "review.json").write_text(json.dumps(summary, indent=2) + "\n")
     print(json.dumps(summary, indent=2))

@@ -10,6 +10,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from check_source_queue import (  # noqa: E402
+    OPTIONAL_ADOPTION_INVENTORIES,
     optional_inventory_problems,
     pipeline_use_problems,
     present_optional_inventories,
@@ -21,6 +22,7 @@ from check_source_queue import (  # noqa: E402
     [
         ("bacdive", Path("data/raw/bacdive_activity.tsv")),
         ("ncbi-ast", Path("data/raw/ncbi_ast_activity.tsv")),
+        ("ncbi-ast", Path("data/raw/ncbi_ast_activity.tsv.gz")),
     ],
 )
 def test_present_optional_inventories_notices_preadoption_exact_reports(
@@ -34,7 +36,7 @@ def test_present_optional_inventories_notices_preadoption_exact_reports(
     path.parent.mkdir(parents=True)
     path.write_text("id\n", encoding="utf-8")
 
-    assert present_optional_inventories(tmp_path) == {source_id: relative_path}
+    assert present_optional_inventories(tmp_path) == {source_id: (relative_path,)}
 
 
 @pytest.mark.parametrize(
@@ -42,13 +44,15 @@ def test_present_optional_inventories_notices_preadoption_exact_reports(
     [
         ("bacdive", Path("data/raw/bacdive_activity.tsv")),
         ("ncbi-ast", Path("data/raw/ncbi_ast_activity.tsv")),
+        ("ncbi-ast", Path("data/raw/ncbi_ast_activity.tsv.gz")),
     ],
 )
 def test_optional_inventory_problems_rejects_preadoption_exact_reports(
     source_id,
     relative_path,
 ):
-    present = {source_id: relative_path}
+    present = {source_id: (relative_path,)}
+    alternatives = " or ".join(map(str, OPTIONAL_ADOPTION_INVENTORIES[source_id]))
 
     assert optional_inventory_problems(
         {source_id: {"status": "EVALUATING"}},
@@ -58,7 +62,7 @@ def test_optional_inventory_problems_rejects_preadoption_exact_reports(
         {source_id: {"status": "ADOPTED"}},
         {},
     ) == [
-        f"{source_id}: {relative_path} is required when source "
+        f"{source_id}: {alternatives} is required when source "
         "status is ADOPTED",
     ]
     assert optional_inventory_problems(
@@ -98,3 +102,25 @@ def test_pipeline_use_problems_rejects_configured_non_seed_sources():
         "configured-reference: read by conf/sources.yaml but use is "
         "REFERENCE, not SEED",
     ]
+
+
+@pytest.mark.parametrize("status", ["EVALUATING", "ADOPTED"])
+def test_source_queue_rejects_dual_ncbi_ast_inventories(tmp_path, status):
+    paths = OPTIONAL_ADOPTION_INVENTORIES["ncbi-ast"]
+    for relative in paths:
+        path = tmp_path / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(b"inventory")
+    problems = optional_inventory_problems(
+        {"ncbi-ast": {"status": status}}, present_optional_inventories(tmp_path)
+    )
+    assert any("ambiguous inventories" in problem for problem in problems)
+
+
+def test_source_queue_does_not_ignore_dangling_gzip_link(tmp_path):
+    path = tmp_path / "data/raw/ncbi_ast_activity.tsv.gz"
+    path.parent.mkdir(parents=True)
+    path.symlink_to("missing")
+    present = present_optional_inventories(tmp_path)
+    assert present == {"ncbi-ast": (path.relative_to(tmp_path),)}
+    assert optional_inventory_problems({"ncbi-ast": {"status": "EVALUATING"}}, present)

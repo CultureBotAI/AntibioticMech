@@ -18,6 +18,7 @@ from activity_pages import FORMAT, INDEX_FORMAT, PAGE_SIZE, render_activity_page
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from ncbi_ast_assays import DEFAULT_REVIEW_MAP
 from ncbi_ast_biosamples import DEFAULT_REVIEW
+from ncbi_ast_inventory import inventory_metadata
 from ncbi_ast_isolates import file_sha256
 from render_pages import TEMPLATES_DIR, build_record
 from render_pages import build as build_site
@@ -385,7 +386,10 @@ def audit(inventory: Path, output: Path, *, full_site: bool = False) -> dict:
         lstrip_blocks=True,
     )
     template = env.get_template("record.html")
-    result = {"records": [], "unchanged_records": 0, "inputs": hashes}
+    result = {
+        "records": [], "unchanged_records": 0, "inputs": hashes,
+        "activity_inventory": inventory_metadata(inventory),
+    }
     reports.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix=".ncbi-publication-", dir=reports) as temporary:
         staged = Path(temporary) / "audit"

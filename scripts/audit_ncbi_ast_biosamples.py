@@ -18,6 +18,7 @@ from ncbi_ast_biosamples import (
     read_review,
     repeated_target_groups,
 )
+from ncbi_ast_inventory import activity_report_sha256, inventory_metadata
 from ncbi_ast_isolates import file_sha256, require_iso_date
 from seed_from_sources import load_ncbi_ast_activity_inventory, ncbi_ast_activity_observation
 
@@ -44,7 +45,7 @@ def verify_source_review(directory: Path, inventory: Path, rows: list[dict], rev
         or metadata.get("requested_accessions") != requested
         or metadata.get("sha256") != hashlib.sha256(payload).hexdigest()
         or metadata.get("bytes") != len(payload)
-        or metadata.get("activity_report_sha256") != file_sha256(inventory)
+        or metadata.get("activity_report_sha256") != activity_report_sha256(inventory)
     ):
         raise ValueError("BioSample snapshot manifest does not match captured evidence")
     require_iso_date(metadata.get("source_retrieved_on"), "BioSample snapshot")
@@ -142,6 +143,7 @@ def audit(args) -> dict:
         "collapsed_assemblies": sorted(assemblies),
         "original_groups_accounted_for": len(covered),
         "inputs": {key: {"path": str(path), "sha256": file_sha256(path)} for key, path in paths.items()},
+        "activity_inventory": inventory_metadata(args.activity_report),
         "scope": "Source-verified export fan-out only; "
         "no independent phenotype verification or source adoption.",
     }

@@ -16,7 +16,8 @@ from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-from ncbi_ast_isolates import file_sha256, require_iso_date
+from ncbi_ast_inventory import activity_report_sha256
+from ncbi_ast_isolates import require_iso_date
 
 ENDPOINT = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
 DEFAULT_REVIEW = Path(__file__).resolve().parents[1] / "curation/ncbi_ast_biosample_review.json"
@@ -195,7 +196,7 @@ def fetch_review(activity_report: Path, output_dir: Path) -> dict:
 
     if output_dir.exists():
         raise ValueError(f"snapshot directory already exists: {output_dir}")
-    checksum = file_sha256(activity_report)
+    checksum = activity_report_sha256(activity_report)
     rows = load_ncbi_ast_activity_inventory(activity_report)
     groups = repeated_target_groups(rows)
     if not groups:
@@ -205,7 +206,7 @@ def fetch_review(activity_report: Path, output_dir: Path) -> dict:
     with urlopen(Request(ENDPOINT, data=urlencode(params).encode("ascii")), timeout=300) as response:
         payload = response.read()
     samples = read_biosamples(payload, requested)
-    if file_sha256(activity_report) != checksum:
+    if activity_report_sha256(activity_report) != checksum:
         raise ValueError("activity report changed during BioSample retrieval")
     metadata = {
         "source": "NCBI_BIOSAMPLE_EFETCH",
@@ -251,7 +252,7 @@ def read_review(path: Path, activity_report: Path, groups: list[list[dict]]) -> 
         r"[a-f0-9]{64}", review["biosample_sha256"]
     ):
         raise ValueError("invalid BioSample snapshot checksum")
-    if review["activity_report_sha256"] != file_sha256(activity_report):
+    if review["activity_report_sha256"] != activity_report_sha256(activity_report):
         raise ValueError("BioSample review does not match the exact activity report")
     if not isinstance(review["groups"], list):
         raise ValueError("BioSample review groups must be a list")

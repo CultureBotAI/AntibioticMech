@@ -2403,9 +2403,11 @@ def require_activity_report_rows(rows: list[dict], path: Path) -> None:
 
 
 def write_activity_report(rows: list[dict], path: Path) -> None:
+    from ncbi_ast_inventory import write_activity_text
+
     require_activity_report_rows(rows, path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", newline="", encoding="utf-8") as handle:
+    with write_activity_text(path) as handle:
         writer = csv.DictWriter(
             handle,
             fieldnames=ACTIVITY_REPORT_COLUMNS,
@@ -2422,8 +2424,9 @@ def read_activity_report(
     source_version: str,
 ) -> list[dict[str, str]]:
     """Read and validate an existing NCBI AST exact activity report."""
+    from ncbi_ast_inventory import open_activity_text
 
-    with path.open(newline="", encoding="utf-8") as handle:
+    with open_activity_text(path) as handle:
         reader = csv.DictReader(handle, delimiter="\t")
         if reader.fieldnames != ACTIVITY_REPORT_COLUMNS:
             raise ValueError(

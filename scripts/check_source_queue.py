@@ -35,6 +35,7 @@ import sys
 from pathlib import Path
 
 import yaml
+from ncbi_ast_inventory import inventory_candidates
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 QUEUE_PATH = REPO_ROOT / "curation" / "source_queue.tsv"
@@ -82,8 +83,8 @@ SOURCE_MARKER = "name"
 # seed_from_sources.py, so the source queue has to say ADOPTED first. Once that
 # source is ADOPTED, the inventory stops being optional and must be committed.
 OPTIONAL_ADOPTION_INVENTORIES = {
-    "bacdive": Path("data/raw/bacdive_activity.tsv"),
-    "ncbi-ast": Path("data/raw/ncbi_ast_activity.tsv"),
+    "bacdive": (Path("data/raw/bacdive_activity.tsv"),),
+    "ncbi-ast": inventory_candidates(Path("data/raw/ncbi_ast_activity.tsv")),
 }
 
 
@@ -107,20 +108,23 @@ def pipeline_use_problems(
     return problems
 
 
-def present_optional_inventories(root: Path = REPO_ROOT) -> dict[str, Path]:
+def present_optional_inventories(root: Path = REPO_ROOT) -> dict[str, tuple[Path, ...]]:
     return {
-        source_id: path
-        for source_id, path in OPTIONAL_ADOPTION_INVENTORIES.items()
-        if (root / path).exists()
+        source_id: present
+        for source_id, paths in OPTIONAL_ADOPTION_INVENTORIES.items()
+        if (present := tuple(p for p in paths if (root / p).exists() or (root / p).is_symlink()))
     }
 
 
 def optional_inventory_problems(
     queue_by_source: dict[str, dict[str, str]],
-    present_inventories: dict[str, Path],
+    present_inventories: dict[str, tuple[Path, ...]],
 ) -> list[str]:
     problems = []
-    for source_id, path in sorted(present_inventories.items()):
+    for source_id, paths in sorted(present_inventories.items()):
+        path = ", ".join(map(str, paths))
+        if len(paths) > 1:
+            problems.append(f"{source_id}: ambiguous inventories: {path}; retain exactly one")
         row = queue_by_source.get(source_id)
         if row is None:
             problems.append(
@@ -131,7 +135,7 @@ def optional_inventory_problems(
                 f"{source_id}: {path} exists but source status is "
                 f"{row['status']}, not ADOPTED"
             )
-    for source_id, path in sorted(OPTIONAL_ADOPTION_INVENTORIES.items()):
+    for source_id, paths in sorted(OPTIONAL_ADOPTION_INVENTORIES.items()):
         row = queue_by_source.get(source_id)
         if (
             row is not None
@@ -139,7 +143,7 @@ def optional_inventory_problems(
             and source_id not in present_inventories
         ):
             problems.append(
-                f"{source_id}: {path} is required when source status is ADOPTED"
+                f"{source_id}: {' or '.join(map(str, paths))} is required when source status is ADOPTED"
             )
     return problems
 
