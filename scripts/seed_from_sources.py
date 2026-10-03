@@ -2391,6 +2391,7 @@ CRYPTIC_UKMYC_GROUP_COLUMNS = (
     "binary_phenotype",
 )
 CRYPTIC_MIC_QUALIFIERS = {"", "<", "<=", ">", ">="}
+CRYPTIC_MIC_PATTERN = re.compile(r"^(?P<qualifier><=|>=|<|>)?(?P<value>(?:\d+(?:\.\d*)?|\.\d+))$")
 CRYPTIC_TSV_CONTROL_CHARS = frozenset("\t\r\n")
 
 
@@ -2414,6 +2415,46 @@ def cryptic_activity_group_id(row: dict[str, str]) -> str:
         digest.update(row[column].encode("utf-8"))
         digest.update(b"\0")
     return f"{row['source_table'].lower()}:{digest.hexdigest()[:16]}"
+
+
+def cryptic_unused_columns_for_table(source_table: str) -> tuple[str, ...]:
+    if source_table == CRYPTIC_DST_TABLE:
+        return ("site_count", *CRYPTIC_UKMYC_GROUP_COLUMNS)
+    if source_table == CRYPTIC_UKMYC_TABLE:
+        return CRYPTIC_DST_GROUP_COLUMNS
+    raise ValueError(f"unsupported source_table {source_table!r}")
+
+
+def cryptic_parse_mic(value: str) -> tuple[str, str, str]:
+    raw = value.strip()
+    if not raw or raw.casefold() == "nan":
+        return "", "", ""
+
+    match = CRYPTIC_MIC_PATTERN.match(raw)
+    if match is None:
+        raise ValueError(f"unsupported CRyPTIC MIC value {raw!r}")
+    return match.group("value"), match.group("qualifier") or "", "mg/L"
+
+
+def cryptic_standardized_mic(row: dict[str, str]) -> tuple[str, str, str]:
+    if row["source_table"] == CRYPTIC_DST_TABLE:
+        return cryptic_parse_mic(row["method_mic"])
+    if row["source_table"] == CRYPTIC_UKMYC_TABLE:
+        return cryptic_parse_mic(row["mic"])
+    raise ValueError(f"unsupported source_table {row['source_table']!r}")
+
+
+def _require_cryptic_table_fields(
+    row: dict[str, str],
+    path: Path,
+    line_number: int,
+) -> None:
+    prefix = f"{path}:{line_number}"
+    for field in cryptic_unused_columns_for_table(row["source_table"]):
+        if row[field]:
+            raise ValueError(
+                f"{prefix}: {row['source_table']} rows must not carry {field}"
+            )
 
 
 def _require_cryptic_positive_integer(
@@ -2467,6 +2508,23 @@ def _require_cryptic_mic(
         raise ValueError(f"{prefix}: mic_value must be positive")
 
 
+def _require_cryptic_standardized_mic(
+    row: dict[str, str],
+    path: Path,
+    line_number: int,
+) -> None:
+    prefix = f"{path}:{line_number}"
+    expected = cryptic_standardized_mic(row)
+    actual = (row["mic_value"], row["mic_qualifier"], row["mic_units"])
+    if actual != expected:
+        expected_value, expected_qualifier, expected_units = expected
+        raise ValueError(
+            f"{prefix}: standardized MIC must be {expected_value!r}, "
+            f"{expected_qualifier!r}, {expected_units!r} for the raw "
+            f"{row['source_table']} MIC"
+        )
+
+
 def load_cryptic_activity_inventory(path: Path) -> list[dict[str, str]]:
     """Load a compact CRyPTIC activity inventory and reject malformed rows."""
     if not path.exists():
@@ -2503,6 +2561,7 @@ def load_cryptic_activity_inventory(path: Path) -> list[dict[str, str]]:
 
             if row["source_table"] not in CRYPTIC_ACTIVITY_TABLES:
                 raise ValueError(f"{prefix}: unsupported source_table {row['source_table']!r}")
+            _require_cryptic_table_fields(row, path, line_number)
             if expected_source_version is None:
                 expected_source_version = row["source_version"]
             elif row["source_version"] != expected_source_version:
@@ -2520,6 +2579,7 @@ def load_cryptic_activity_inventory(path: Path) -> list[dict[str, str]]:
             if row["site_count"]:
                 _require_cryptic_positive_integer(row, "site_count", path, line_number)
             _require_cryptic_mic(row, path, line_number)
+            _require_cryptic_standardized_mic(row, path, line_number)
 
             activity_group_id = row["activity_group_id"]
             if activity_group_id in seen_activity_group_ids:

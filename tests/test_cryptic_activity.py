@@ -96,6 +96,7 @@ def cryptic_inventory_row(**overrides: str | None) -> dict[str, str]:
         "isolate_count": "6184",
         "site_count": "11",
         "platedesign": "UKMYC6",
+        "mic": "<=0.25",
         "binary_phenotype": "R",
     })
     row.update(overrides)
@@ -450,6 +451,18 @@ def test_write_inventory_rejects_empty_reports_before_opening(tmp_path):
             "unrecognized CRyPTIC activity table",
         ),
         (
+            cryptic_report_row(platedesign="UKMYC6"),
+            "DST_MEASUREMENTS rows must not carry platedesign",
+        ),
+        (
+            cryptic_inventory_row(source="CRyPTIC"),
+            "UKMYC_PHENOTYPES rows must not carry source",
+        ),
+        (
+            cryptic_report_row(method_mic="0.5"),
+            "standardized MIC must be '0.5', '', 'mg/L'",
+        ),
+        (
             cryptic_report_row(activity_group_id="dst_measurements:stale"),
             "activity_group_id must be",
         ),
@@ -462,7 +475,7 @@ def test_write_inventory_rejects_empty_reports_before_opening(tmp_path):
             "isolate_count must be an integer",
         ),
         (
-            cryptic_report_row(site_count="-1"),
+            cryptic_inventory_row(site_count="-1"),
             "site_count must be positive",
         ),
         (
@@ -561,6 +574,14 @@ def test_load_cryptic_activity_inventory_rejects_ragged_rows(tmp_path):
         (
             {"activity_group_id": "ukmyc_phenotypes:stale"},
             "activity_group_id must be",
+        ),
+        (
+            {"source": "CRyPTIC"},
+            "UKMYC_PHENOTYPES rows must not carry source",
+        ),
+        (
+            {"mic": "0.5"},
+            "standardized MIC must be '0.5', '', 'mg/L'",
         ),
         ({"isolate_count": "many"}, "isolate_count must be an integer"),
         ({"site_count": "-1"}, "site_count must be positive"),

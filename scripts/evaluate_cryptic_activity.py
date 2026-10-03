@@ -310,6 +310,14 @@ def group_columns_for_table(source_table: str) -> list[str]:
     raise ValueError(f"unrecognized CRyPTIC activity table: {source_table}")
 
 
+def unused_inventory_columns_for_table(source_table: str) -> list[str]:
+    if source_table == DST_TABLE:
+        return ["site_count", *UKMYC_GROUP_COLUMNS]
+    if source_table == UKMYC_TABLE:
+        return DST_GROUP_COLUMNS
+    raise ValueError(f"unrecognized CRyPTIC activity table: {source_table}")
+
+
 def activity_inventory_row(
     source_table: str,
     group_columns: list[str],
@@ -433,6 +441,7 @@ def require_inventory_rows(rows: list[dict[str, str]], path: Path) -> None:
             raise ValueError(f"{prefix}: source_version {row['source_version']!r} != {VERSION!r}")
 
         group_columns = group_columns_for_table(row["source_table"])
+        require_table_specific_inventory_fields(row, prefix)
         expected_group_id = activity_group_id(
             row["source_table"],
             [row["drug_code"], *(row[column] for column in group_columns)],
@@ -452,6 +461,7 @@ def require_inventory_rows(rows: list[dict[str, str]], path: Path) -> None:
         if row["site_count"]:
             require_positive_inventory_integer(row, "site_count", prefix)
         require_inventory_mic(row, prefix)
+        require_standardized_inventory_mic(row, prefix)
 
 
 def require_positive_inventory_integer(
@@ -494,6 +504,26 @@ def require_inventory_mic(row: dict[str, str], prefix: str) -> None:
         raise ValueError(f"{prefix}: mic_value must be finite")
     if parsed <= 0:
         raise ValueError(f"{prefix}: mic_value must be positive")
+
+
+def require_table_specific_inventory_fields(row: dict[str, str], prefix: str) -> None:
+    for field in unused_inventory_columns_for_table(row["source_table"]):
+        if row[field]:
+            raise ValueError(
+                f"{prefix}: {row['source_table']} rows must not carry {field}"
+            )
+
+
+def require_standardized_inventory_mic(row: dict[str, str], prefix: str) -> None:
+    expected = standardized_mic(row["source_table"], row)
+    actual = (row["mic_value"], row["mic_qualifier"], row["mic_units"])
+    if actual != expected:
+        expected_value, expected_qualifier, expected_units = expected
+        raise ValueError(
+            f"{prefix}: standardized MIC must be {expected_value!r}, "
+            f"{expected_qualifier!r}, {expected_units!r} for the raw "
+            f"{row['source_table']} MIC"
+        )
 
 
 def write_inventory(path: Path, rows: list[dict[str, str]]) -> None:
