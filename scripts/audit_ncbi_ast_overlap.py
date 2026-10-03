@@ -15,6 +15,7 @@ from pathlib import Path
 
 import evaluate_cryptic_activity as cryptic
 import evaluate_ncbi_ast as ast
+from ncbi_ast_assays import apply_assay_review, read_assay_review
 from ncbi_ast_isolates import file_sha256, load_isolate_snapshot
 from seed_from_sources import load_cryptic_activity_inventory
 
@@ -151,6 +152,8 @@ def audit(args) -> dict:
         source_retrieved_on=report[0]["source_retrieved_on"], isolate_snapshot=snapshot,
         project_dedupe=dedupe,
     )
+    if args.assay_review:
+        current, _ = apply_assay_review(current, read_assay_review(args.assay_review))
     ast.require_activity_report_matches_current(report, current, args.activity_report)
     input_paths = {
         "ast": args.ast, "activity_report": args.activity_report, "drug_map": args.drug_map,
@@ -161,6 +164,8 @@ def audit(args) -> dict:
     }
     if args.project_dedupe_map:
         input_paths["project_dedupe_map"] = args.project_dedupe_map
+    if args.assay_review:
+        input_paths["assay_review"] = args.assay_review
     return {
         "scope": "Exact accession overlap; review leads only, not automatic duplicate exclusions.",
         "limitations": [
@@ -185,6 +190,7 @@ def main() -> None:
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--drug-map", type=Path, default=ROOT / "curation/ncbi_ast_drug_map.tsv")
     parser.add_argument("--project-dedupe-map", type=Path)
+    parser.add_argument("--assay-review", type=Path)
     parser.add_argument("--cryptic-directory", type=Path, default=ROOT / "downloads/cryptic_3.4.0")
     parser.add_argument("--cryptic-drug-map", type=Path, default=cryptic.DEFAULT_DRUG_MAP)
     parser.add_argument("--cryptic-inventory", type=Path, default=ROOT / "data/raw/cryptic_activity.tsv")
