@@ -117,6 +117,12 @@ def test_biosample_review_and_paired_observations_survive_recompression(tmp_path
     review.write_text(json.dumps(data))
     with pytest.raises(ValueError, match="exact activity report"):
         list(biosamples.activity_observations(rows, zipped, convert, review))
+    data["activity_report_sha256"] = inventory.activity_report_sha256(plain)
+    review.write_text(json.dumps(data))
+    zipped.write_bytes(gzip.compress(plain.read_bytes().replace(b"\r\n", b"\n")))
+    assert seed.load_ncbi_ast_activity_inventory(zipped) == rows
+    with pytest.raises(ValueError, match="exact activity report"):
+        list(biosamples.activity_observations(rows, zipped, convert, review))
 
 
 def test_taxonomy_review_checks_logical_bytes_not_container(tmp_path, monkeypatch):

@@ -58,4 +58,7 @@ path; an absent explicit path is an error.
 The source-queue checker detects both representations and rejects either
 before adoption. Adoption still requires the source-terms decision, configured
 source, committed inventory and provenance-manifest entry, and corpus checks.
+For gzip inventories the provenance gate checks the stored `sha256` and `bytes`,
+requires `encoding: gzip`, `content_sha256` and `content_bytes`, and counts rows
+from the expanded TSV. Its file discovery includes both representations.
 Do not commit the staged inventory or evaluated observations before that gate.
