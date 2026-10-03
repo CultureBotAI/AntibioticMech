@@ -82,6 +82,21 @@ def test_ncbi_ast_activity_columns_match_the_evaluator_contract():
     assert ncbi_ast_activity_group_id(row) == activity_group_id(row)
 
 
+@pytest.mark.parametrize(("platform", "reagent"), [
+    ("", "96-Well Plate"), ("In-house", "96-Well Plate"), ("Other", ""),
+])
+def test_uninformative_assay_context_is_rejected_at_both_report_boundaries(tmp_path, platform, reagent):
+    from evaluate_ncbi_ast import require_activity_report_rows
+
+    row = ncbi_ast_row(method="", platform=platform, reagent=reagent)
+    path = tmp_path / "activity.tsv"
+    write_activity_report(path, [row])
+    with pytest.raises(ValueError, match="method, platform or reagent"):
+        load_ncbi_ast_activity_inventory(path)
+    with pytest.raises(ValueError, match="method, platform or reagent"):
+        require_activity_report_rows([row], path)
+
+
 def test_load_ncbi_ast_activity_inventory_accepts_disk_only_rows(tmp_path):
     path = tmp_path / "ncbi_ast_activity.tsv"
     row = ncbi_ast_row(

@@ -79,6 +79,10 @@ fetch-ncbi-ast *args:
 evaluate-ncbi-ast *args:
     uv run python scripts/evaluate_ncbi_ast.py {{args}}
 
+# Compare rebuilt AST reports with the adopted CRyPTIC phenotype/sample membership.
+audit-ncbi-ast-overlap *args:
+    uv run --extra source-ingest python scripts/audit_ncbi_ast_overlap.py {{args}}
+
 # Evaluate BacDive v2 fetch exports without attaching name-only antibiotics to records.
 evaluate-bacdive *args:
     uv run python scripts/evaluate_bacdive_activity.py {{args}}

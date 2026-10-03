@@ -21,6 +21,7 @@ from functools import lru_cache
 from pathlib import Path
 
 import yaml
+from ncbi_ast_assays import has_informative_assay_context
 from ncbi_ast_isolates import (
     ISOLATE_PROVENANCE_COLUMNS,
     IsolateSnapshot,
@@ -469,10 +470,10 @@ def has_invalid_create_date(row: dict[str, str]) -> bool:
 
 
 def has_assay_method(row: dict[str, str]) -> bool:
-    return (
-        has_value(row, METHOD_ALIASES)
-        or has_value(row, PLATFORM_ALIASES)
-        or has_value(row, REAGENT_ALIASES)
+    return has_informative_assay_context(
+        first_value(row, METHOD_ALIASES),
+        first_value(row, PLATFORM_ALIASES),
+        first_value(row, REAGENT_ALIASES),
     )
 
 
@@ -2321,8 +2322,8 @@ def require_activity_report_rows(rows: list[dict], path: Path) -> None:
             "standard_inchi_key",
             prefix,
         )
-        if not row["method"] and not row["platform"] and not row["reagent"]:
-            raise ValueError(f"{prefix}: method, platform or reagent is required")
+        if not has_informative_assay_context(row["method"], row["platform"], row["reagent"]):
+            raise ValueError(f"{prefix}: informative method, platform or reagent is required")
 
         if expected_source_version is None:
             expected_source_version = row["source_version"]
