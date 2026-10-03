@@ -2460,7 +2460,14 @@ def reject_unsafe_cli_output_paths(
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--ast", type=Path, required=True, help="NCBI AST Browser CSV/TSV export.")
+    parser.add_argument(
+        "--ast",
+        type=Path,
+        help=(
+            "NCBI AST Browser CSV/TSV export. Required unless only "
+            "--validate-activity-report is used."
+        ),
+    )
     parser.add_argument(
         "--antibiotic-report",
         type=Path,
@@ -2565,6 +2572,17 @@ def main() -> int:
         )
     if args.source_retrieved_on and not is_iso_date(args.source_retrieved_on):
         parser.error("--source-retrieved-on must be an ISO date.")
+    if args.ast is None and (
+        not args.validate_activity_report
+        or args.drug_map
+        or args.project_dedupe_map
+        or args.project_dedupe_report
+        or args.project_dedupe_map_template
+        or args.antibiotic_report
+        or args.activity_report
+        or args.drug_map_template
+    ):
+        parser.error("--ast is required unless only --validate-activity-report is used.")
     reject_reused_cli_paths(
         parser,
         (
@@ -2590,8 +2608,6 @@ def main() -> int:
         ),
     )
 
-    rows = read_table(args.ast)
-    require_any_antibiotic_value(rows, args.ast)
     candidates, structure_keys = corpus_name_candidates()
     validated_activity_rows = (
         read_activity_report(
@@ -2602,6 +2618,14 @@ def main() -> int:
         if args.validate_activity_report
         else []
     )
+    if args.ast is None:
+        print("NCBI Pathogen Detection AST audit")
+        print(f"  activity_report_rows={len(validated_activity_rows)}")
+        print("--audit: no rows seeded; submitted antibiotic names are not exact structure identifiers")
+        return 0
+
+    rows = read_table(args.ast)
+    require_any_antibiotic_value(rows, args.ast)
     mappings = (
         read_drug_map(args.drug_map, structure_keys, source_version=args.source_version)
         if args.drug_map
