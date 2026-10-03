@@ -14,3 +14,10 @@
 {% macro curie_link(c) %}
 {%- if c %} {% if c.href %}<a href="{{ c.href }}"><code class="curie">{{ c.id }}</code></a>{% else %}<code class="curie">{{ c.id }}</code>{% endif %}{% endif %}
 {%- endmacro %}
+
+{# Static containment preserves table semantics and works without JavaScript. #}
+{% macro scroll_table(label) %}
+<div class="table-scroll" role="region" aria-label="{{ label }}" tabindex="0">
+{{ caller() }}
+</div>
+{% endmacro %}
