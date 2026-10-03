@@ -14,6 +14,8 @@ from typing import Any
 import yaml
 from deep_research_contract import ContractError, render_prompt_template, run_codex_research
 
+from antibioticmech.activity_collections import expand_activities
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 ANTIBIOTICS_DIR = REPO_ROOT / "data" / "antibiotics"
 RESEARCH_DIR = REPO_ROOT / "research"
@@ -34,7 +36,7 @@ def load_record(path: Path) -> dict[str, Any]:
     data = yaml.safe_load(path.read_text(encoding="utf-8"))
     if not isinstance(data, dict):
         raise ValueError(f"Antibiotic file is not a YAML mapping: {path}")
-    return data
+    return expand_activities(data, path)
 
 
 def resolve_record(target: str) -> Path:

@@ -314,6 +314,16 @@ classes:
         description: Whether the compound kills or inhibits growth, where a source states it.
         range: CidalityEnum
 
+      activity_collections:
+        description: >-
+          Lossless compressed collections of source-owned ActivityObservation
+          rows. Resolve each content-addressed sibling artifact and insert its
+          rows at the declared expanded offset before interpreting activity.
+        multivalued: true
+        inlined_as_list: true
+        minimum_cardinality: 1
+        range: ActivityCollection
+
       activity_spectrum:
         description: >-
           Measured or curated activity against specific taxa. Each item is one
@@ -1021,6 +1031,51 @@ classes:
       role:
         description: Source-backed role in this mechanism, including component role for a complex.
         range: string
+
+  ActivityCollection:
+    description: >-
+      One bounded gzip-compressed JSON Lines artifact containing a format and
+      exact compound-identity header followed by complete ActivityObservation
+      objects. Checksums, counts, source context, and order are verified by the
+      record loader; compression never substitutes aggregated biological claims.
+    attributes:
+      format:
+        required: true
+        pattern: "^antibioticmech-activity-jsonl-v1$"
+      path:
+        required: true
+        pattern: "^activity-[a-f0-9]{64}\\.jsonl\\.gz$"
+      sha256:
+        required: true
+        pattern: "^[a-f0-9]{64}$"
+      byte_size:
+        required: true
+        range: integer
+        minimum_value: 1
+        maximum_value: 16777216
+      offset:
+        description: Zero-based insertion position in the fully expanded observation list.
+        required: true
+        range: integer
+        minimum_value: 0
+      observation_count:
+        required: true
+        range: integer
+        minimum_value: 1
+        maximum_value: 500
+      measurement_count:
+        required: true
+        range: integer
+        minimum_value: 1
+      source:
+        description: Source ownership; this collection lane currently admits only NCBI AST.
+        required: true
+        pattern: "^NCBI_AST$"
+      source_version:
+        required: true
+      source_retrieved_on:
+        required: true
+        range: date
 
   PathogenDetectionContext:
     description: >-

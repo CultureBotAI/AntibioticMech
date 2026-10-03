@@ -26,6 +26,7 @@ from seed_from_sources import (
 )
 from verify_corpus import rebuild
 
+from antibioticmech.activity_collections import load_record
 from antibioticmech.validation.write_validated import write_validated_antibiotic
 
 
@@ -168,7 +169,7 @@ def audit_record(fresh: dict, existing: dict, path: Path, directory: Path, templ
     yaml_path = directory / "records" / relative
     write_validated_antibiotic(merged, yaml_path)
     write_seconds = time.monotonic() - started
-    reloaded = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
+    reloaded = load_record(yaml_path)
     if reloaded != merged:
         raise ValueError("YAML round trip changed the complete record")
     if merge_with_existing(fresh, reloaded) != reloaded:
@@ -180,6 +181,8 @@ def audit_record(fresh: dict, existing: dict, path: Path, directory: Path, templ
     html_path.parent.mkdir(parents=True, exist_ok=True)
     html_path.write_text(html, encoding="utf-8")
     observations = ncbi_ast_sourced_activity_view(reloaded)
+    physical = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
+    collections = physical.get("activity_collections", [])
     return {
         "identifier": fresh["identifier"],
         "record": str(relative),
@@ -188,6 +191,8 @@ def audit_record(fresh: dict, existing: dict, path: Path, directory: Path, templ
         "paired_context_observations": sum(bool(a.get("pathogen_detection_contexts")) for a in observations),
         "total_activity_rows": len(reloaded.get("activity_spectrum", [])),
         "yaml_bytes": yaml_path.stat().st_size,
+        "collection_bytes": sum(c["byte_size"] for c in collections),
+        "collection_files": len(collections),
         "html_bytes": html_path.stat().st_size,
         "yaml_sha256": file_sha256(yaml_path),
         "html_sha256": file_sha256(html_path),
@@ -215,6 +220,7 @@ def audit(inventory: Path, output: Path) -> dict:
                 DEFAULT_REVIEW_MAP,
                 DEFAULT_REVIEW,
                 *paths.values(),
+                *CORPUS_DIR.rglob("activity-*.jsonl.gz"),
                 *REPO_ROOT.glob("data/raw/*"),
                 *REPO_ROOT.glob("conf/*"),
                 *REPO_ROOT.glob("curation/*"),
@@ -222,6 +228,7 @@ def audit(inventory: Path, output: Path) -> dict:
                 *TEMPLATES_DIR.rglob("*"),
                 *REPO_ROOT.glob("src/antibioticmech/schema/*.yaml"),
                 *REPO_ROOT.glob("src/antibioticmech/validation/*.py"),
+                REPO_ROOT / "src/antibioticmech/activity_collections.py",
             ]
         )
     )
@@ -254,7 +261,7 @@ def audit(inventory: Path, output: Path) -> dict:
         ordered = sorted(records, key=lambda i: (-len(records[i].get("activity_spectrum", [])), i))
         for identifier in ordered:
             fresh, path = records[identifier], paths[identifier]
-            existing = yaml.safe_load(path.read_text(encoding="utf-8"))
+            existing = load_record(path)
             if not ncbi_ast_sourced_activity_view(fresh) and not ncbi_ast_sourced_activity_view(existing):
                 if verify_merge(fresh, existing) != existing:
                     raise ValueError(f"unaffected record changed: {identifier}")
@@ -282,6 +289,8 @@ def audit(inventory: Path, output: Path) -> dict:
                 "paired_context_observations",
                 "total_activity_rows",
                 "yaml_bytes",
+                "collection_bytes",
+                "collection_files",
                 "html_bytes",
             )
         }

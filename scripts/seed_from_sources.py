@@ -53,6 +53,11 @@ from ncbi_ast_isolates import ISOLATE_REFERENCE, require_isolate_provenance
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
+from antibioticmech.activity_collections import (  # noqa: E402
+    expand_activities,
+    load_record,
+    orphaned_activity_artifacts,
+)
 from antibioticmech.curate.curation_event import record_curation_event  # noqa: E402
 from antibioticmech.hivdb_score_rules import (  # noqa: E402
     HIVDB_SCORE_ASSIGNMENT_PATTERN,
@@ -2210,9 +2215,16 @@ def bindingdb_row_supports_target_association(row: dict[str, str]) -> bool:
     return "review article" not in assay_description
 
 
-def record_yaml_matches(existing_text: str | None, record: dict) -> bool:
+def record_yaml_matches(existing_text: str | None, record: dict, *, record_path: Path | None = None) -> bool:
     """Compare record data without treating YAML mapping order as a change."""
-    return existing_text is not None and yaml.safe_load(existing_text) == record
+    if existing_text is None:
+        return False
+    existing = yaml.safe_load(existing_text)
+    if isinstance(existing, dict) and "activity_collections" in existing:
+        if record_path is None:
+            raise ValueError("collection comparison requires a record path")
+        existing = expand_activities(existing, record_path)
+    return existing == record
 
 
 def attach_bindingdb_targets(records: dict[str, dict]) -> Counter:
@@ -4463,7 +4475,7 @@ def main() -> int:
         source = path if path.exists() else (old_path if old_path and old_path.exists() else None)
         existing_text = source.read_text(encoding="utf-8") if source else None
         if existing_text is not None:
-            record = merge_with_existing(record, yaml.safe_load(existing_text))
+            record = merge_with_existing(record, load_record(source))
         # Compare the PARSED record, not its serialized text. YAML mapping order
         # carries no meaning, and comparing text would rewrite every reviewed
         # record after an otherwise unrelated source refresh.
@@ -4476,7 +4488,7 @@ def main() -> int:
         if (
             source == path
             and not args.force
-            and record_yaml_matches(existing_text, record)
+            and record_yaml_matches(existing_text, record, record_path=source)
         ):
             unchanged += 1
             continue
@@ -4507,10 +4519,15 @@ def main() -> int:
             if path not in keep:
                 path.unlink()
                 removed += 1
+        orphaned = orphaned_activity_artifacts(CORPUS_DIR)
+        for artifact in orphaned:
+            artifact.unlink()
         for directory in sorted(CORPUS_DIR.iterdir()):
             if directory.is_dir() and not any(directory.iterdir()):
                 shutil.rmtree(directory)
         print(f"  pruned {removed} records no longer produced", file=sys.stderr)
+        if orphaned:
+            print(f"  pruned {len(orphaned)} unreferenced activity artifacts", file=sys.stderr)
 
     print(f"wrote {written} records ({unchanged} already current"
           + (f", {moved} moved between classes" if moved else "") + ")", file=sys.stderr)

@@ -69,6 +69,8 @@ from seed_from_sources import (  # noqa: E402
     seeded_structural_view,
 )
 
+from antibioticmech.activity_collections import load_record  # noqa: E402
+
 # The seeded field list is imported from the seeder so there is one definition
 # of what it owns. `molecular_targets` and `resistance_mechanisms` are compared
 # separately, because a curator may add items to those lists beside the
@@ -123,7 +125,7 @@ def main() -> int:
     for path, identifier in sorted(wanted.items(), key=lambda kv: str(kv[0])):
         if path not in on_disk:
             continue
-        actual = yaml.safe_load(path.read_text(encoding="utf-8"))
+        actual = load_record(path)
         want = expected[identifier]
         for field in SEEDED_FIELDS:
             if want.get(field) != actual.get(field):
