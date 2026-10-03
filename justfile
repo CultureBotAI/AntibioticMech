@@ -75,6 +75,10 @@ evaluate-amrfinder *args:
 fetch-ncbi-ast *args:
     uv run python scripts/fetch_ncbi_ast.py {{args}}
 
+# Snapshot NCBI taxonomy lineages for the exact AST report plus the CRyPTIC complex.
+fetch-ncbi-ast-taxonomy *args:
+    uv run python scripts/ncbi_ast_taxonomy.py {{args}}
+
 # Evaluate an NCBI Pathogen Detection AST export and optional curated structure crosswalk.
 evaluate-ncbi-ast *args:
     uv run python scripts/evaluate_ncbi_ast.py {{args}}
