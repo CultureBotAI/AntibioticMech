@@ -75,3 +75,60 @@ design before claiming publication readiness. The lossless storage and browsing
 follow-up is [#1022](https://github.com/CultureBotAI/AntibioticMech/issues/1022).
 Passing the serialization audit does not resolve that issue or the deferred
 source-terms decision.
+
+## Complete retained-data result
+
+The full audit completed successfully in 1,673.148 seconds at code commit
+`b33cf28d25c0470a15a9b0c185e48cb6a594a1ca`:
+
+| Check | Result |
+|---|---:|
+| Affected exact-structure records | 32 |
+| Unaffected records unchanged | 2,907 |
+| AST observations and measurements | 188,759 |
+| Consolidated observations retaining paired genome contexts | 52 |
+| All rendered activity rows, including existing non-AST rows | 190,833 |
+| Affected YAML bytes | 561,498,455 |
+| Affected HTML bytes | 120,919,520 |
+
+Every affected full record passed closed-schema writing, complete YAML reload
+equality, and unchanged reseeding. Every activity cell matched the serialized
+observation. Non-AST activities, unrelated fields, existing history, and all
+captured input files were preserved. The retained evidence is
+`reports/ncbi_ast_publication_2026-10-03/audit.json`, SHA-256
+`c61d9299c7e0ff356544daeecd7f95d786a313bc03bb3904fce106c3f40ca30c`.
+The report includes per-record output checksums, sizes, timings, and input hashes.
+
+These byte counts belong to that pinned run before main's table-accessibility
+wrapper changes were merged into this branch. The subsequent source-queue
+status update describes these results; it is not an input to the earlier run.
+Neither the full audit nor this status update adopts NCBI AST.
+
+After merging the tested parent into commit
+`2c4f3162e`, the audit/seeder/validation scripts, schema, inventories, configuration,
+and corpus still match the full-run commit. Only inherited table-accessibility
+templates changed. A second read-only check verified each retained YAML checksum,
+loaded the same records with `yaml.CSafeLoader`, rebuilt the full record views,
+and rerendered all 32 pages with the updated template. All 190,833 activity rows
+and all seven cells matched again. Updated HTML totals 120,944,491 bytes;
+`record.html` SHA-256 is
+`caa347620f5797c773b2c0bd650a31d78e6d9d8435baf03b69fab9cf93765dbd`.
+The original full audit used the production `yaml.safe_load` path, not this
+faster supplemental reader. The original retained artifacts are unchanged.
+Repeating the main audit command with a new output-directory name exercises
+the full production path against the current templates.
+
+## Regression checks
+
+- 148 focused AST/publication/schema/rendering tests passed before the parent
+  merge; 160 seed-harmonization/CRyPTIC/publication tests also passed. These
+  suites overlap, so their counts are not additive.
+- After the parent merge, all 150 focused AST/publication/schema/rendering and
+  table-scrolling tests passed.
+- All 2,939 existing records strictly validated and reproduced exactly; all
+  existing record pages and seven class views passed render-check.
+- Lint, source-queue validation, and whitespace checks passed.
+- Fixtures deliberately alter rendered MICs, phenotype calls, genome links,
+  dates, counts, row order, non-AST content, and input files to check refusal.
+  They also cover real validated writes, source-slice replacement, curator
+  preservation, unchanged reseeding, and staged-output cleanup on failure.
