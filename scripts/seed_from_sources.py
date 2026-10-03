@@ -2366,9 +2366,54 @@ CRYPTIC_REQUIRED_ACTIVITY_COLUMNS = (
     "row_count",
     "isolate_count",
 )
-CRYPTIC_ACTIVITY_TABLES = {"DST_MEASUREMENTS", "UKMYC_PHENOTYPES"}
+CRYPTIC_DST_TABLE = "DST_MEASUREMENTS"
+CRYPTIC_UKMYC_TABLE = "UKMYC_PHENOTYPES"
+CRYPTIC_ACTIVITY_TABLES = {CRYPTIC_DST_TABLE, CRYPTIC_UKMYC_TABLE}
+CRYPTIC_DST_GROUP_COLUMNS = (
+    "source",
+    "method_1",
+    "method_2",
+    "method_3",
+    "method_cc",
+    "method_mic",
+    "phenotype",
+    "quality",
+)
+CRYPTIC_UKMYC_GROUP_COLUMNS = (
+    "platedesign",
+    "belongs_gpi",
+    "phenotype_quality",
+    "readingday",
+    "primary_method",
+    "phenotype_description",
+    "mic",
+    "log2mic",
+    "binary_phenotype",
+)
 CRYPTIC_MIC_QUALIFIERS = {"", "<", "<=", ">", ">="}
 CRYPTIC_TSV_CONTROL_CHARS = frozenset("\t\r\n")
+
+
+def cryptic_group_columns_for_table(source_table: str) -> tuple[str, ...]:
+    if source_table == CRYPTIC_DST_TABLE:
+        return CRYPTIC_DST_GROUP_COLUMNS
+    if source_table == CRYPTIC_UKMYC_TABLE:
+        return CRYPTIC_UKMYC_GROUP_COLUMNS
+    raise ValueError(f"unsupported source_table {source_table!r}")
+
+
+def cryptic_activity_group_id(row: dict[str, str]) -> str:
+    digest = hashlib.sha256()
+    columns = (
+        "source_version",
+        "source_table",
+        "drug_code",
+        *cryptic_group_columns_for_table(row["source_table"]),
+    )
+    for column in columns:
+        digest.update(row[column].encode("utf-8"))
+        digest.update(b"\0")
+    return f"{row['source_table'].lower()}:{digest.hexdigest()[:16]}"
 
 
 def _require_cryptic_positive_integer(
@@ -2463,6 +2508,12 @@ def load_cryptic_activity_inventory(path: Path) -> list[dict[str, str]]:
             elif row["source_version"] != expected_source_version:
                 raise ValueError(
                     f"{prefix}: source_version must be {expected_source_version!r}"
+                )
+            expected_activity_group_id = cryptic_activity_group_id(row)
+            if row["activity_group_id"] != expected_activity_group_id:
+                raise ValueError(
+                    f"{prefix}: activity_group_id must be "
+                    f"{expected_activity_group_id!r}"
                 )
             for field in ("row_count", "isolate_count"):
                 _require_cryptic_positive_integer(row, field, path, line_number)
