@@ -119,8 +119,11 @@ declare source adoption complete.
 - Full AST/CRyPTIC reconstruction and overlap audit passed after applying the
   review. No accepted observation has a direct shared BioSample or BioProject;
   the previously documented accession-alias and phenotype-only limits remain.
-- 404 focused AST tests passed, followed by the new atomic-attachment regression
-  and all 19 assay-review tests. Unrecognized contexts, stale versions,
-  duplicate JSON keys, malformed decisions, and quarantine are tested.
+- 407 focused AST tests passed after merging current main, including all 21
+  assay-review tests. Unrecognized contexts, stale versions, duplicate JSON
+  keys, malformed decisions, quarantine, partial attachment, changed candidate
+  files, and output overwrite refusal are tested.
+- All 2,939 existing corpus records reproduce exactly, without missing, extra,
+  or drifted records.
 - Lint, source-queue validation, and diff whitespace checks passed. Full
   RDKit-dependent QC remains a Linux CI gate.

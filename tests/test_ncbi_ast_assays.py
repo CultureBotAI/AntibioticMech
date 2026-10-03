@@ -2,6 +2,7 @@
 
 import copy
 import json
+import subprocess
 import sys
 from pathlib import Path
 
@@ -137,3 +138,26 @@ def test_attachment_requires_review_and_does_not_partially_mutate_records(tmp_pa
     with pytest.raises(ValueError, match="quarantined"):
         seed_from_sources.attach_ncbi_ast_activity(records)
     assert records == before
+
+
+@pytest.mark.parametrize("existing_output", [False, True])
+def test_review_cli_rejects_changed_candidates_and_existing_outputs_before_writing(tmp_path, existing_output):
+    review_path = write_review(tmp_path, review_data())
+    candidate = tmp_path / "candidate.tsv"
+    candidate.write_text("not the pinned report")
+    output = tmp_path / "output"
+    if existing_output:
+        output.mkdir()
+        (output / "sentinel").write_text("retain")
+    script = Path(__file__).resolve().parents[1] / "scripts/review_ncbi_ast_activity.py"
+    result = subprocess.run([
+        sys.executable, str(script), "--activity-report", str(candidate),
+        "--assay-review", str(review_path), "--output-directory", str(output),
+    ], capture_output=True, text=True)
+    assert result.returncode != 0
+    assert ("refusing to overwrite" if existing_output else "checksum") in result.stderr
+    if existing_output:
+        assert (output / "sentinel").read_text() == "retain"
+        assert list(output.iterdir()) == [output / "sentinel"]
+    else:
+        assert not output.exists()
