@@ -1207,6 +1207,42 @@ def read_activity_report(
     return rows
 
 
+def require_activity_report_matches_current(
+    validated_rows: list[dict[str, str]],
+    current_rows: list[dict[str, str]],
+    path: Path,
+) -> None:
+    """Compare a validated exact report with rows regenerated from BacDive."""
+
+    require_activity_report_rows(current_rows, path)
+
+    validated_by_id = {row["source_activity_id"]: row for row in validated_rows}
+    current_by_id = {row["source_activity_id"]: row for row in current_rows}
+
+    missing_ids = sorted(set(current_by_id) - set(validated_by_id))
+    if missing_ids:
+        raise ValueError(
+            f"{path}: missing current BacDive activity row {missing_ids[0]}"
+        )
+
+    unexpected_ids = sorted(set(validated_by_id) - set(current_by_id))
+    if unexpected_ids:
+        raise ValueError(
+            f"{path}: unexpected stale BacDive activity row {unexpected_ids[0]}"
+        )
+
+    for source_activity_id in sorted(current_by_id):
+        validated_row = validated_by_id[source_activity_id]
+        current_row = current_by_id[source_activity_id]
+        for field in ACTIVITY_REPORT_COLUMNS:
+            if validated_row[field] != current_row[field]:
+                raise ValueError(
+                    f"{path}: {source_activity_id} {field} "
+                    f"{validated_row[field]!r} != current BacDive "
+                    f"{current_row[field]!r}"
+                )
+
+
 def write_activity_report(rows: list[dict[str, str]], path: Path) -> None:
     require_activity_report_rows(rows, path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -1420,9 +1456,15 @@ def main() -> int:
         )
     activity_rows = (
         exact_activity_rows(records, drug_map, args.source_version)
-        if args.activity_report
+        if args.activity_report or (args.validate_activity_report and drug_map)
         else []
     )
+    if args.validate_activity_report and drug_map:
+        require_activity_report_matches_current(
+            validated_activity_rows,
+            activity_rows,
+            args.validate_activity_report,
+        )
     if args.activity_report:
         write_activity_report(activity_rows, args.activity_report)
 
