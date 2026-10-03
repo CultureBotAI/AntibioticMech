@@ -105,8 +105,11 @@ def fetch_snapshot(output_dir: Path, query: str) -> dict:
                 f"NCBI AST row count changed or export is incomplete: "
                 f"before={before}, exported={row_count}, after={after}"
             )
+        digest = hashlib.sha256()
         with export.open("rb") as handle:
-            checksum = hashlib.file_digest(handle, "sha256").hexdigest()
+            for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+                digest.update(chunk)
+        checksum = digest.hexdigest()
         metadata = {
             "source": "NCBI_AST",
             "source_version": "ast-browser-sha256:" + checksum,

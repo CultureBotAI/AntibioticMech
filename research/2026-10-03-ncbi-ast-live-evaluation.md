@@ -30,6 +30,13 @@ racemate while levofloxacin maps to its specified stereoisomer; gentamicin,
 kanamycin, colistin, and component-unspecified complexes remain mixtures.
 Combination measurements cannot attach to either individual component.
 
+For the other ambiguous lexical matches, tetracycline selects `CHEBI:27902`
+and not the separately curated zwitterion `CHEBI:77932`, even though they
+share a Standard InChIKey. Doxycycline selects `CHEBI:50845` and not the
+monohydrate `CHEBI:60648`. These decisions preserve the corpus's distinction
+between ChEBI identifiers; a matching name or InChIKey alone cannot choose
+between them.
+
 Evidence consulted:
 
 - [NCBI AST documentation](https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/)
@@ -67,6 +74,32 @@ A fresh download needs its own checksum/version and a re-audited drug map.
 The native TSV keeps measurement signs, MIC in mg/L, and disk diffusion in mm.
 The evaluator keeps those measurement types separate and preserves the source
 phenotype, assay platform/reagent, and sample/project context.
+
+## Verified Local Results
+
+The complete evaluation finished successfully. The independent seeder loader
+`load_ncbi_ast_activity_inventory` accepted all report rows, and
+`ncbi_ast_activity_observation` converted each one without writing records.
+
+| Measure | Count |
+|---|---:|
+| Source observations | 505,890 |
+| Observations on the 36 mapped structures | 331,596 |
+| Measurement/context-eligible observations | 233,497 |
+| Output groups (one observation per group in this export) | 233,497 |
+| Structures with eligible observations | 32 |
+| BioSamples in the eligible report | 24,670 |
+| BioProjects in the eligible report | 347 |
+| MIC groups, standardized to mg/L | 232,467 |
+| Disk-diffusion groups, in mm | 1,030 |
+
+The normalized activity calls are 151,692 susceptible, 47,267 resistant,
+3,485 intermediate, 157 susceptible-dose-dependent, and 179 nonsusceptible.
+Another 30,717 observations carry valid measurements but no normalized activity
+call; the raw source phenotype remains available for audit. These counts are
+observations, not unique resistant isolates or species-wide resistance claims.
+No cross-source deduplication was applied in this run, so these are candidate
+observations, not incremental corpus coverage.
 
 ## Adoption Work
 

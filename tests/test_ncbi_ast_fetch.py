@@ -44,6 +44,14 @@ def test_snapshot_preserves_native_export_and_provenance(tmp_path, monkeypatch):
     assert metadata["sha256"] == hashlib.sha256(payload).hexdigest()
 
 
+def test_snapshot_checksum_supports_python310(tmp_path, monkeypatch):
+    monkeypatch.delattr(hashlib, "file_digest", raising=False)
+    payload = native_export()
+    fake_responses(monkeypatch, payload)
+    metadata = fetch.fetch_snapshot(tmp_path / "snapshot", "*:*")
+    assert metadata["sha256"] == hashlib.sha256(payload).hexdigest()
+
+
 @pytest.mark.parametrize("payload,before,after,match", [
     (native_export(), 2, 2, "incomplete"),
     (native_export(), 1, 2, "count changed"),
