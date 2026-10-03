@@ -87,6 +87,10 @@ review-ncbi-ast-biosamples *args:
 audit-ncbi-ast-biosamples *args:
     uv run python scripts/audit_ncbi_ast_biosamples.py {{args}}
 
+# Exercise full AST record writes and rendering in a private reports/ directory.
+audit-ncbi-ast-publication *args:
+    uv run python scripts/audit_ncbi_ast_publication.py {{args}}
+
 # Evaluate an NCBI Pathogen Detection AST export and optional curated structure crosswalk.
 evaluate-ncbi-ast *args:
     uv run python scripts/evaluate_ncbi_ast.py {{args}}

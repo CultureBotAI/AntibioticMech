@@ -3256,16 +3256,22 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
     return rows
 
 
-def attach_ncbi_ast_activity(records: dict[str, dict]) -> Counter:
+def attach_ncbi_ast_activity(
+    records: dict[str, dict], *, inventory: Path | None = None,
+) -> Counter:
     """Attach compact NCBI AST groups when their curated exact report is present."""
     counts: Counter = Counter()
-    if not NCBI_AST_ACTIVITY_INVENTORY.exists():
+    if inventory is None:
+        inventory = NCBI_AST_ACTIVITY_INVENTORY
+    elif not inventory.is_file():
+        raise ValueError(f"explicit NCBI AST inventory does not exist: {inventory}")
+    if not inventory.exists():
         counts["missing_inventory"] = 1
         return counts
 
     assay_review = read_assay_review(DEFAULT_REVIEW_MAP)
     observations_by_record: dict[str, list[dict]] = defaultdict(list)
-    rows = load_ncbi_ast_activity_inventory(NCBI_AST_ACTIVITY_INVENTORY)
+    rows = load_ncbi_ast_activity_inventory(inventory)
     for row in rows:
         identifier = row["identifier"]
         require_seed_row_identity(
@@ -3275,7 +3281,7 @@ def attach_ncbi_ast_activity(records: dict[str, dict]) -> Counter:
             row_id=row["activity_group_id"],
         )
     for identifier, observation in ncbi_ast_observations(
-        rows, NCBI_AST_ACTIVITY_INVENTORY, lambda row: ncbi_ast_activity_observation(row, assay_review),
+        rows, inventory, lambda row: ncbi_ast_activity_observation(row, assay_review),
     ):
         observations_by_record[identifier].append(observation)
         counts["matched_observations"] += 1
