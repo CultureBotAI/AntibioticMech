@@ -13,7 +13,7 @@ import yaml
 
 
 @pytest.fixture
-def refresh(tmp_path, monkeypatch, repo_root):
+def refresh(tmp_path, monkeypatch, repo_root, request):
     sys.path.insert(0, str(repo_root / "scripts"))
     import check_provenance as checker
     import extract_source_inventory as extractor
@@ -32,12 +32,21 @@ def refresh(tmp_path, monkeypatch, repo_root):
     previous = yaml.safe_load((repo_root / "data/raw/MANIFEST.yaml").read_text())
     previous["sources"]["chebi"]["license"] = "outdated fixture license"
     previous["sources"]["aro"]["molecule_root"] = "outdated fixture root"
+    if getattr(request, "param", None) == "gzip":
+        previous["inventories"]["ncbi_ast_activity.tsv.gz"] = {
+            "source": "synthetic fixture, not adopted data",
+        }
     owned = {extractor.CHEBI_INVENTORY, extractor.ARO_INVENTORY,
              extractor.ARO_RESISTANCE, extractor.ARO_TARGETS, extractor.CHEBI_ROLE_NAMES}
     payload = b"column\nvalue\n"
     for name, entry in previous["inventories"].items():
-        (raw / name).write_bytes(payload)
-        entry.update(rows=1, bytes=len(payload), sha256=hashlib.sha256(payload).hexdigest())
+        compressed = name.endswith(".gz")
+        stored = gzip.compress(payload, mtime=0) if compressed else payload
+        (raw / name).write_bytes(stored)
+        entry.update(rows=1, bytes=len(stored), sha256=hashlib.sha256(stored).hexdigest())
+        if compressed or "content_sha256" in entry:
+            entry.update(encoding="gzip" if compressed else "identity",
+                         content_sha256=hashlib.sha256(payload).hexdigest(), content_bytes=len(payload))
     manifest_path = raw / "MANIFEST.yaml"
     manifest_path.write_text(yaml.safe_dump(previous, sort_keys=False))
     monkeypatch.setattr(extractor, "REPO_ROOT", tmp_path)
@@ -82,17 +91,17 @@ def test_refresh_preserves_all_other_sources_and_updates_only_owned_entries(refr
     assert path.read_bytes() == first_bytes
 
 
+@pytest.mark.parametrize("refresh", ["gzip"], indirect=True)
 def test_refresh_preserves_future_compressed_inventory_metadata_without_adopting_it(refresh):
     extractor, _, raw, path, previous, _, _ = refresh
     payload = b"column\nvalue\n"
-    compressed = gzip.compress(payload, mtime=0)
     name = "ncbi_ast_activity.tsv.gz"
-    (raw / name).write_bytes(compressed)
-    entry = dict(rows=1, bytes=len(compressed), sha256=hashlib.sha256(compressed).hexdigest(),
-                 encoding="gzip", content_sha256=hashlib.sha256(payload).hexdigest(),
-                 content_bytes=len(payload), source="synthetic fixture, not adopted data")
-    previous["inventories"][name] = entry
-    path.write_text(yaml.safe_dump(previous, sort_keys=False))
+    compressed = (raw / name).read_bytes()
+    assert gzip.decompress(compressed) == payload
+    entry = previous["inventories"][name]
+    assert entry["content_sha256"] == hashlib.sha256(payload).hexdigest()
+    assert entry["content_bytes"] == len(payload)
+    assert entry["encoding"] == "gzip"
     assert extractor.main() == 0
     assert yaml.safe_load(path.read_text())["inventories"][name] == entry
     assert (raw / name).read_bytes() == compressed
