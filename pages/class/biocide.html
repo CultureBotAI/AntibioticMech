@@ -25,6 +25,7 @@
 <p class="lede">31 compound records. Disinfectants and antimicrobial food or cosmetic preservatives.</p>
 <input class="searchbox" id="q" type="search" data-index="biocide.json" data-total="31" placeholder="Filter all 31 records…" aria-label="Filter records">
 <p class="meta" id="count" aria-live="polite"></p>
+<div class="table-scroll" role="region" aria-label="Biocide compounds" tabindex="0">
 <table id="tbl">
   <caption>Biocide compounds</caption>
   <thead><tr><th scope="col">Compound</th><th scope="col">Structural class</th><th scope="col">Grounding</th><th scope="col">Curation</th><th scope="col">Sources</th></tr></thead>
@@ -248,6 +249,8 @@
   </tr>
   </tbody>
 </table>
+
+</div>
 <script>
 (function () {
   var box = document.getElementById('q'), out = document.getElementById('count');

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "macros.html" import scroll_table %}
 {% block wrapclass %} wide{% endblock %}
 {% block title %}{{ label }} — AntibioticMech{% endblock %}
 {% block content %}
@@ -23,6 +24,7 @@
 {% endif %}
 <input class="searchbox" id="q" type="search" data-index="{{ index_url }}" data-total="{{ total }}" placeholder="Filter all {{ total }} records…" aria-label="Filter records">
 <p class="meta" id="count" aria-live="polite"></p>
+{% call scroll_table(label ~ " compounds") %}
 <table id="tbl">
   <caption>{{ label }} compounds</caption>
   <thead><tr><th scope="col">Compound</th><th scope="col">Structural class</th><th scope="col">Grounding</th><th scope="col">Curation</th><th scope="col">Sources</th></tr></thead>
@@ -38,6 +40,7 @@
   {% endfor %}
   </tbody>
 </table>
+{% endcall %}
 {% if pager %}
 <nav class="pager" aria-label="Pages">
   {% for pg in pager %}{% if pg.n == page %}<span class="pill plain" aria-current="page">{{ pg.n }}</span>{% else %}<a href="{{ pg.href }}">{{ pg.n }}</a>{% endif %} {% endfor %}
