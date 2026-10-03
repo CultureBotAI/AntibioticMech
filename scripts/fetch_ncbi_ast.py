@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Snapshot the public NCBI AST Browser export for offline evaluation."""
+"""Snapshot public NCBI AST measurements or linked isolate identity metadata."""
 
 from __future__ import annotations
 
 import argparse
 import csv
-import hashlib
 import json
 import shutil
 import tempfile
@@ -13,6 +12,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import urlopen
+
+from ncbi_ast_isolates import (
+    ISOLATE_SOURCE,
+    ISOLATE_VERSION_PREFIX,
+    file_sha256,
+    read_isolate_export,
+)
 
 ENDPOINT = "https://www.ncbi.nlm.nih.gov/pathogens/pathogens-srv/"
 FIELDS = [
@@ -42,8 +48,8 @@ EXPORT_HEADER = [label for _, label in FIELDS]
 EXPORT_HEADER[0] = "#" + EXPORT_HEADER[0]
 
 
-def source_count(query: str) -> int:
-    params = dict(action="retrieve", collection="ast", fq=query, fl="id", limit=1)
+def source_count(query: str, collection: str = "ast") -> int:
+    params = dict(action="retrieve", collection=collection, fq=query, fl="id", limit=1)
     with urlopen(ENDPOINT + "?" + urlencode(params), timeout=60) as response:
         payload = json.load(response)
     if payload.get("success") is not True:
@@ -82,43 +88,47 @@ def inspect_export(path: Path) -> int:
     return len(seen)
 
 
-def fetch_snapshot(output_dir: Path, query: str) -> dict:
+def fetch_snapshot(output_dir: Path, query: str, collection: str = "ast") -> dict:
     """Publish a new directory only after the export and count checks pass."""
     if output_dir.exists():
         raise ValueError(f"snapshot directory already exists: {output_dir}")
     if not query.strip():
         raise ValueError("query must not be empty")
+    if collection not in {"ast", "isolates"}:
+        raise ValueError(f"unsupported NCBI collection: {collection}")
     output_dir.parent.mkdir(parents=True, exist_ok=True)
     started = datetime.now(timezone.utc).isoformat()
-    before = source_count(query)
-    url = export_url(query)
+    before = source_count(query, collection)
+    filename = "ast.tsv" if collection == "ast" else "isolates.json"
+    url = export_url(query) if collection == "ast" else ENDPOINT + "?" + urlencode({
+        "action": "retrieve", "collection": collection, "fq": query, "limit": before,
+        "fl": "target_acc,biosample_acc,bioproject_acc,taxid,scientific_name,asm_acc,strain",
+    })
     with tempfile.TemporaryDirectory(prefix=".ncbi-ast-", dir=output_dir.parent) as temporary:
         staged = Path(temporary) / "snapshot"
         staged.mkdir()
-        export = staged / "ast.tsv"
+        export = staged / filename
         with urlopen(url, timeout=300) as response, export.open("wb") as handle:
             shutil.copyfileobj(response, handle)
-        row_count = inspect_export(export)
-        after = source_count(query)
+        row_count = inspect_export(export) if collection == "ast" else len(read_isolate_export(export))
+        after = source_count(query, collection)
         if row_count != before or row_count != after:
             raise ValueError(
                 f"NCBI AST row count changed or export is incomplete: "
                 f"before={before}, exported={row_count}, after={after}"
             )
-        digest = hashlib.sha256()
-        with export.open("rb") as handle:
-            for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-                digest.update(chunk)
-        checksum = digest.hexdigest()
+        checksum = file_sha256(export)
         metadata = {
-            "source": "NCBI_AST",
-            "source_version": "ast-browser-sha256:" + checksum,
+            "source": "NCBI_AST" if collection == "ast" else ISOLATE_SOURCE,
+            "source_version": (
+                "ast-browser-sha256:" if collection == "ast" else ISOLATE_VERSION_PREFIX
+            ) + checksum,
             "source_retrieved_on": started[:10],
             "retrieval_started_at": started,
             "retrieval_finished_at": datetime.now(timezone.utc).isoformat(),
             "query": query,
             "export_url": url,
-            "file": "ast.tsv",
+            "file": filename,
             "sha256": checksum,
             "bytes": export.stat().st_size,
             "rows": row_count,
@@ -135,10 +145,14 @@ def fetch_snapshot(output_dir: Path, query: str) -> dict:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", required=True, type=Path)
-    parser.add_argument("--query", default="*:*", help="AST Browser Solr query (default: all rows).")
+    parser.add_argument("--collection", choices=("ast", "isolates"), default="ast")
+    parser.add_argument("--query", help="Solr query; defaults to all AST rows or AST-linked isolates.")
     args = parser.parse_args()
-    metadata = fetch_snapshot(args.output_dir, args.query)
-    print(f"Downloaded {metadata['rows']} AST observations to {args.output_dir}")
+    query = args.query if args.query is not None else (
+        "*:*" if args.collection == "ast" else "number_drugs_tested:[1 TO *]"
+    )
+    metadata = fetch_snapshot(args.output_dir, query, args.collection)
+    print(f"Downloaded {metadata['rows']} {args.collection} rows to {args.output_dir}")
     print(f"Source version: {metadata['source_version']}")
     return 0
 

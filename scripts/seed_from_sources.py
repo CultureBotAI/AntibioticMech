@@ -41,6 +41,7 @@ from functools import lru_cache
 from pathlib import Path
 
 import yaml
+from ncbi_ast_isolates import ISOLATE_REFERENCE, require_isolate_provenance
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
@@ -2747,6 +2748,8 @@ NCBI_AST_ACTIVITY_COLUMNS = [
     "activity_group_id",
     "source_version",
     "source_retrieved_on",
+    "isolate_source_version",
+    "isolate_source_retrieved_on",
     "ast_row_count",
     "isolate_count",
     *NCBI_AST_ACTIVITY_GROUP_COLUMNS,
@@ -2915,6 +2918,18 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
             ),
         }],
     }
+    if row.get("isolate_source_version"):
+        observation["evidence"].append({
+            "reference": ISOLATE_REFERENCE,
+            "notes": (
+                "Isolate identity metadata joined on exact versioned target_accession="
+                f"{row['target_accession']}; BioSample, BioProject and scientific name "
+                "were checked for agreement. "
+                f"source_version={row['isolate_source_version']}; "
+                f"source_retrieved_on={row['isolate_source_retrieved_on']}. "
+                "This source supports taxon/strain/assembly context, not a resistance call."
+            ),
+        })
 
     if row.get("activity"):
         observation["activity"] = row["activity"]
@@ -3051,6 +3066,7 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
     seen_group_ids = set()
     expected_source_version = None
     expected_source_retrieved_on = None
+    expected_isolate_provenance = None
     with path.open(newline="", encoding="utf-8") as handle:
         reader = csv.DictReader(handle, delimiter="\t")
         if reader.fieldnames != NCBI_AST_ACTIVITY_COLUMNS:
@@ -3075,6 +3091,11 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
                     raise ValueError(
                         f"{prefix}: {field} has leading or trailing whitespace"
                     )
+            isolate_provenance = require_isolate_provenance(row, prefix)
+            if expected_isolate_provenance is None:
+                expected_isolate_provenance = isolate_provenance
+            elif isolate_provenance != expected_isolate_provenance:
+                raise ValueError(f"{prefix}: inconsistent isolate snapshot provenance")
             if NCBI_AST_BIOSAMPLE_PATTERN.match(row["biosample_accession"]) is None:
                 raise ValueError(f"{prefix}: invalid BioSample accession")
             if NCBI_AST_BIOPROJECT_PATTERN.match(row["bioproject_accession"]) is None:
