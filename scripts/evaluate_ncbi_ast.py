@@ -17,6 +17,7 @@ from collections import Counter, defaultdict
 from collections.abc import Iterable
 from datetime import date, datetime
 from decimal import Decimal, InvalidOperation
+from functools import lru_cache
 from pathlib import Path
 
 import yaml
@@ -327,15 +328,20 @@ def normalize_header(value: str) -> str:
     return normalize(header.translate(MICROGRAM_HEADER_TRANSLATION))
 
 
+@lru_cache(maxsize=256)
+def matching_headers(headers: tuple[str | None, ...], aliases: tuple[str, ...]) -> tuple[str, ...]:
+    return tuple(
+        key for alias in aliases for key in headers
+        if key is not None and normalize_header(key) == alias
+    )
+
+
 def first_value(row: dict[str, str], aliases: Iterable[str]) -> str:
-    for alias in aliases:
-        for key, value in row.items():
-            if key is None:
-                continue
-            if value is None:
-                continue
+    for key in matching_headers(tuple(row), tuple(aliases)):
+        value = row[key]
+        if value is not None:
             cleaned = value.translate(SOURCE_TSV_CONTROL_TRANSLATION).strip()
-            if normalize_header(key) == alias and cleaned:
+            if cleaned:
                 return cleaned
     return ""
 
@@ -799,7 +805,10 @@ def corpus_name_candidates(root: Path = REPO_ROOT) -> tuple[dict[str, set[str]],
     candidates: dict[str, set[str]] = defaultdict(set)
     structure_keys: dict[str, str] = {}
     for path in sorted((root / "data" / "antibiotics").rglob("*.yaml")):
-        record = yaml.safe_load(path.read_text(encoding="utf-8"))
+        record = yaml.load(
+            path.read_text(encoding="utf-8"),
+            Loader=getattr(yaml, "CSafeLoader", yaml.SafeLoader),
+        )
         identifier = record["identifier"]
         structure_keys[identifier] = record["chemical_structure"]["standard_inchi_key"]
 
