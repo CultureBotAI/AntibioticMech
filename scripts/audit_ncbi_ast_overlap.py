@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit exact BioSample overlap with adopted CRyPTIC evidence, without seeding.
+"""Audit BioSample overlap with CRyPTIC and existing corpus evidence, without seeding.
 
 Rebuild both inventories before comparing sample/drug membership. A shared
 sample is a review lead, not proof that two assays are the same observation.
@@ -20,7 +20,126 @@ from ncbi_ast_isolates import file_sha256, load_isolate_snapshot
 from ncbi_ast_taxonomy import SCOPE_NAME, SCOPE_REFERENCE, SCOPE_TAXID, load_snapshot, relationship
 from seed_from_sources import load_cryptic_activity_inventory
 
+from antibioticmech.activity_collections import load_record
+
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def corpus_input_hashes(directory: Path) -> dict[str, str]:
+    records = sorted(directory.rglob("*.yaml"))
+    if not records:
+        raise ValueError("empty existing corpus cannot establish overlap coverage")
+    paths = {*records, *directory.rglob("activity-*.jsonl.gz")}
+    lock = directory / "PATHS.tsv"
+    if lock.exists() or lock.is_symlink():
+        paths.add(lock)
+    if any(path.is_symlink() or not path.is_file() for path in paths):
+        raise ValueError("existing corpus inputs must be regular files")
+    return {str(path): file_sha256(path) for path in sorted(paths)}
+
+
+def require_same_corpus(directory: Path, inputs: dict[str, str]) -> None:
+    if corpus_input_hashes(directory) != inputs:
+        raise ValueError("existing corpus changed during overlap audit")
+
+
+def corpus_membership(directory: Path) -> dict:
+    """Index tested samples, not species-level resistance or project exclusions."""
+    inputs = corpus_input_hashes(directory)
+    by_sample: dict[str, list[dict]] = defaultdict(list)
+    projects: set[str] = set()
+    counts: Counter = Counter()
+    for name in inputs:
+        path = Path(name)
+        if path.suffix != ".yaml":
+            continue
+        doc = load_record(path)
+        identifier = doc.get("identifier")
+        key = doc.get("chemical_structure", {}).get("standard_inchi_key")
+        if not isinstance(identifier, str) or not identifier or not isinstance(key, str) or not re.fullmatch(
+            r"[A-Z]{14}-[A-Z]{10}-[A-Z]", key,
+        ):
+            raise ValueError(f"existing corpus record requires exact chemical identity: {path}")
+        counts["records"] += 1
+        for number, row in enumerate(doc.get("activity_spectrum", []), 1):
+            if row.get("source") == "NCBI_AST":
+                counts["ast_observations_excluded"] += 1
+                continue
+            counts["observations"] += 1
+            contexts = [row, *row.get("pathogen_detection_contexts", [])]
+            samples = {context["biosample_accession"] for context in contexts
+                       if context.get("biosample_accession")}
+            row_projects = {context["bioproject_accession"] for context in contexts
+                            if context.get("bioproject_accession")}
+            if any(not isinstance(value, str) or not re.fullmatch(r"SAM(N|D|EA)[0-9]+", value)
+                   for value in samples):
+                raise ValueError(f"existing corpus has invalid BioSample: {path}")
+            if any(not isinstance(value, str) or not re.fullmatch(r"PRJ(NA|EB|DB)[0-9]+", value)
+                   for value in row_projects):
+                raise ValueError(f"existing corpus has invalid BioProject: {path}")
+            projects.update(row_projects)
+            counts["observations_with_biosample" if samples else "observations_without_biosample"] += 1
+            reference = {"record": str(path), "identifier": identifier, "standard_inchi_key": key,
+                         "activity_observation_number": number, "source": row.get("source"),
+                         "source_observation_id": row.get("source_observation_id"),
+                         "evidence": row.get("evidence", [])}
+            for sample in sorted(samples):
+                by_sample[sample].append(reference)
+    require_same_corpus(directory, inputs)
+    return {
+        "by_sample": by_sample, "projects": projects, "inputs": inputs,
+        "counts": {name: counts[name] for name in (
+            "records", "observations", "observations_with_biosample",
+            "observations_without_biosample", "ast_observations_excluded",
+        )} | {"biosamples": len(by_sample), "bioprojects": len(projects)},
+    }
+
+
+def corpus_overlap_summary(rows, membership: dict, *, raw: bool, mappings: dict) -> dict:
+    counts: Counter = Counter()
+    shared: dict[str, dict] = {}
+    for row in rows:
+        if raw:
+            sample = ast.first_value(row, ast.BIOSAMPLE_ALIASES)
+            project = ast.first_value(row, ast.BIOPROJECT_ALIASES)
+            drug = ast.first_value(row, ast.ANTIBIOTIC_ALIASES)
+            mapping = mappings.get(ast.normalize(drug), {})
+            exact = mapping.get("mapping_status") == "EXACT"
+            identifier, key = ((mapping.get("identifier"), mapping.get("standard_inchi_key"))
+                               if exact else (None, None))
+            count = 1
+        else:
+            sample, project, drug = (
+                row["biosample_accession"], row["bioproject_accession"], row["source_name"],
+            )
+            identifier, key = row["identifier"], row["standard_inchi_key"]
+            count = int(row["ast_row_count"])
+        counts["groups_or_rows"] += 1
+        counts["export_rows"] += count
+        if project in membership["projects"]:
+            counts["shared_project_export_rows"] += count
+        references = membership["by_sample"].get(sample, [])
+        if not references:
+            continue
+        counts["shared_sample_export_rows"] += count
+        exact_match = any(ref["identifier"] == identifier and ref["standard_inchi_key"] == key
+                          for ref in references)
+        if exact_match:
+            counts["shared_sample_and_compound_export_rows"] += count
+        lead = shared.setdefault(sample, {
+            "biosample_accession": sample, "source_names": set(),
+            "exact_matched_identifiers": set(), "existing_observations": references,
+        })
+        lead["source_names"].add(drug)
+        if exact_match:
+            lead["exact_matched_identifiers"].add(identifier)
+    for lead in shared.values():
+        for field in ("source_names", "exact_matched_identifiers"):
+            lead[field] = sorted(lead[field])
+    return {name: counts[name] for name in (
+        "groups_or_rows", "export_rows", "shared_sample_export_rows",
+        "shared_sample_and_compound_export_rows", "shared_project_export_rows",
+    )} | {"sample_review_leads": [shared[key] for key in sorted(shared)]}
 
 
 def require_same_inventory(adopted: list[dict], rebuilt: list[dict]) -> None:
@@ -172,6 +291,7 @@ def taxonomy_scope(rows: list[dict], records: dict, membership: dict) -> dict:
 def audit(args) -> dict:
     import duckdb
 
+    corpus = corpus_membership(args.corpus_directory)
     release = args.cryptic_directory
     dst, ukmyc, codes = [release / name for name in (
         "DST_MEASUREMENTS.parquet", "UKMYC_PHENOTYPES.parquet", "DRUG_CODES.csv.gz",
@@ -222,11 +342,18 @@ def audit(args) -> dict:
         )
         input_paths["taxonomy"] = args.taxonomy_snapshot / "taxonomy.xml"
         input_paths["taxonomy_manifest"] = args.taxonomy_snapshot / "snapshot.json"
+    corpus_overlap = {
+        "membership": corpus["counts"], "inputs": corpus["inputs"],
+        "raw_ast": corpus_overlap_summary(raw, corpus, raw=True, mappings=mappings),
+        "eligible_ast": corpus_overlap_summary(report, corpus, raw=False, mappings=mappings),
+    }
+    require_same_corpus(args.corpus_directory, corpus["inputs"])
     return {
         "scope": "Exact accession overlap; review leads only, not automatic duplicate exclusions.",
         "limitations": [
             "Different BioSample accessions may identify the same isolate; aliases are unresolved.",
             "Phenotype-only CRyPTIC samples without a WGS accession link cannot be accession-matched.",
+            "Existing corpus observations without BioSample accessions cannot be accession-matched.",
             "A shared sample/drug does not prove duplicate measurements or justify project-wide exclusion.",
             "Assay signatures retain submitted values; informative text does not certify field consistency.",
         ],
@@ -234,6 +361,7 @@ def audit(args) -> dict:
         "inputs": {key: {"path": str(path), "sha256": file_sha256(path)}
                    for key, path in input_paths.items()},
         "cryptic_membership": membership["counts"],
+        "existing_corpus": corpus_overlap,
         "raw_ast": overlap_summary(raw, membership, raw=True, mappings=mappings),
         "eligible_ast": overlap_summary(report, membership, raw=False, mappings=mappings),
         "eligible_assay_contexts": assay_contexts(report),
@@ -249,6 +377,7 @@ def main() -> None:
     parser.add_argument("--project-dedupe-map", type=Path)
     parser.add_argument("--assay-review", type=Path)
     parser.add_argument("--taxonomy-snapshot", type=Path)
+    parser.add_argument("--corpus-directory", type=Path, default=ROOT / "data/antibiotics")
     parser.add_argument("--cryptic-directory", type=Path, default=ROOT / "downloads/cryptic_3.4.0")
     parser.add_argument("--cryptic-drug-map", type=Path, default=cryptic.DEFAULT_DRUG_MAP)
     parser.add_argument("--cryptic-inventory", type=Path, default=ROOT / "data/raw/cryptic_activity.tsv")
