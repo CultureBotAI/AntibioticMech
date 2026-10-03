@@ -76,6 +76,35 @@ its own checksum even when the measured phenotype is unchanged.
 
 ## Adoption Boundary
 
+The full captured-pair evaluation completed successfully:
+
+| Measure | Count |
+|---|---:|
+| AST rows joined without identifier conflicts | 505,890 |
+| Input rows with source TaxIDs after enrichment | 505,890 |
+| Input rows with source Assembly accessions | 472,931 |
+| Eligible exact-report observations | 233,497 |
+| Eligible observations with TaxIDs | 233,497 |
+| Eligible observations with Assembly accessions | 228,650 |
+| Eligible observations with strain labels | 203,968 |
+| Distinct source TaxIDs in the eligible report | 440 |
+| Distinct Assembly accessions in the eligible report | 24,187 |
+
+The independent seeder loader accepted every enriched report row. Every one
+of the 233,497 converted `ActivityObservation` objects also passed closed-schema
+validation. A full multiset comparison with the pre-enrichment report, omitting
+only the added identity/provenance fields and derived group ID, found all other
+fields unchanged: MIC and disk values, qualifiers, units, assays, phenotype
+calls, sample/project context, counts and original AST provenance. None of
+these checks wrote corpus records.
+
+Focused tests passed (365 downloader, join, evaluator and importer cases), as
+did 86 harmonization/source-queue tests, lint, and exact reproduction of all
+2,939 existing corpus records. Review issue #1012 exposed conflicting optional
+identity aliases when isolate metadata was absent; failing/passing regressions
+cover the fix and preservation of agreeing aliases. Full local `just qc`
+cannot install the pinned RDKit wheel on macOS x86_64; Linux QC remains required.
+
 NCBI AST remains `EVALUATING`; the enriched report is not installed as a seed
 inventory. CRyPTIC/source overlap, submitted assay consistency, the remaining
 drug labels and the deferred source-terms decision remain adoption work.
