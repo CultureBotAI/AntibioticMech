@@ -205,6 +205,24 @@ def test_missing_genome_and_strain_stay_missing(tmp_path):
     assert "assembly_accession" not in row and "strain" not in row
 
 
+@pytest.mark.parametrize("values,field", [
+    ({"assembly_accession": "GCA_000000001.1", "asm_acc": "GCA_000000002.1"}, "asm_acc"),
+    ({"strain": "first", "Strain": "second"}, "strain"),
+])
+def test_missing_optional_metadata_does_not_allow_contradictory_ast_aliases(tmp_path, values, field):
+    snapshot = load_isolate_snapshot(snapshot_directory(tmp_path, [isolate_record(asm_acc="", strain="")]))
+    with pytest.raises(ValueError, match=field):
+        enrich_isolate_identity([ast_row(**values)], snapshot)
+
+
+def test_equal_ast_aliases_survive_absent_optional_metadata(tmp_path):
+    snapshot = load_isolate_snapshot(snapshot_directory(tmp_path, [isolate_record(asm_acc="", strain="")]))
+    row = ast_row(assembly_accession="GCA_000000001.1", asm_acc="GCA_000000001.1",
+                  strain="first", Strain="first", TaxID="NCBITaxon:747")
+    result = enrich_isolate_identity([row], snapshot)[0]
+    assert all(result[key] == value for key, value in row.items())
+
+
 def test_enriched_report_round_trips_to_schema_with_both_sources(tmp_path):
     from antibioticmech.validation.write_validated import validate_antibiotic
 

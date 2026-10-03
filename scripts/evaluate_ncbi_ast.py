@@ -1010,7 +1010,10 @@ def enrich_isolate_identity(
             ]
             if field == "taxid":
                 values = [value.removeprefix("NCBITaxon:") for value in values]
-            if (required and not values) or (expected and any(v != expected for v in values)):
+            if (
+                (required and not values) or len(set(values)) > 1
+                or (expected and any(v != expected for v in values))
+            ):
                 raise ValueError(f"AST row {number} {target}: conflicting or missing {field}")
         # Organism-group labels can intentionally be broader than scientific_name.
         names = []
