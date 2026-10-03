@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import evidence_list, curie_link %}
+{% from "macros.html" import evidence_list, curie_link, scroll_table %}
 {% block title %}{{ r.label }} — AntibioticMech{% endblock %}
 {% block description %}{{ r.label }} ({{ r.identifier }}): {{ r.definition or (r.structural_class or 'an antimicrobial compound') }}{% endblock %}
 {% block content %}
@@ -40,6 +40,7 @@ signed off on this record yet.</p></div>
 
 {% if r.structure %}
 <h2>Chemical structure</h2>
+{% call scroll_table("Computed structure properties") %}
 <table>
   <caption>Computed structure properties</caption>
   <tbody>
@@ -51,6 +52,7 @@ signed off on this record yet.</p></div>
   {% if r.structure.standard_inchi_key %}<tr><th scope="row">InChIKey</th><td class="struct-value">{{ r.structure.standard_inchi_key }}</td></tr>{% endif %}
   </tbody>
 </table>
+{% endcall %}
 {% if r.structure.smiles %}<p class="meta">SMILES</p><pre class="struct-block">{{ r.structure.smiles }}</pre>{% endif %}
 {% if r.structure.standard_inchi %}<p class="meta">InChI</p><pre class="struct-block">{{ r.structure.standard_inchi }}</pre>{% endif %}
 {% endif %}
@@ -118,6 +120,7 @@ unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <h2>Source concepts</h2>
 <p class="meta">Every upstream concept that resolved to this record. The merge is
 the product: this is what shows ChEBI and CARD are describing the same structure.</p>
+{% call scroll_table("Source concepts") %}
 <table>
   <caption>Upstream concepts merged into this record</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Native ID</th><th scope="col">Label</th><th scope="col">Minted CURIE</th><th scope="col">Version</th>{% if show_source_evidence %}<th scope="col">Evidence</th>{% endif %}</tr></thead>
@@ -132,6 +135,7 @@ the product: this is what shows ChEBI and CARD are describing the same structure
   </tr>
   {% endfor %}
 </table>
+{% endcall %}
 {% endif %}
 
 {% if r.molecular_targets %}
@@ -144,6 +148,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <p class="meta">{{ t.experimental_context }} Evidence status: {{ t.evidence_status }}. Source: {{ t.source }} {{ t.source_version }} (retrieved {{ t.source_retrieved_on }}).</p>
 {% if t.taxon_label %}<p><em>{{ t.taxon_label }}</em>{% if t.taxon_id %} <code class="curie">{{ t.taxon_id }}</code>{% endif %}{% if t.strain %}; strain {{ t.strain }}{% endif %}</p>{% endif %}
 {% if t.measurements %}
+{% call scroll_table(t.target_label ~ " quantitative measurements") %}
 <table>
   <caption>Quantitative measurements</caption>
   <thead><tr><th scope="col">Type</th><th scope="col">Reported value</th><th scope="col">Assay</th><th scope="col">BindingDB IDs</th><th scope="col">Reference</th></tr></thead>
@@ -157,8 +162,10 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   </tr>
   {% endfor %}
 </table>
+{% endcall %}
 {% endif %}
 {% if t.protein_examples %}
+{% call scroll_table(t.target_label ~ " organism-specific examples") %}
 <table>
   <caption>Organism-specific examples</caption>
   <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
@@ -171,6 +178,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   </tr>
   {% endfor %}
 </table>
+{% endcall %}
 {% endif %}
 {{ evidence_list(t.evidence) }}
 {% endfor %}
@@ -188,6 +196,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 {% if r.clinical_status_assertions %}
 <h2>Regulatory status evidence</h2>
 <p class="meta">Product-level regulatory assertions; identity and status retain separate sources.</p>
+{% call scroll_table("Regulatory status evidence") %}
 <table>
   <caption>Regulatory status evidence</caption>
   <thead><tr><th scope="col">Application / product</th><th scope="col">Status</th><th scope="col">Ingredient</th><th scope="col">Approval date</th><th scope="col">Marketing</th><th scope="col">Sources</th></tr></thead>
@@ -202,12 +211,14 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   </tr>
   {% endfor %}
 </table>
+{% endcall %}
 {% endif %}
 
 {% if r.activity_spectrum %}
 <h2>Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
+{% call scroll_table("Activity observations") %}
 <table>
   <caption>Activity observations</caption>
   <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th></tr></thead>
@@ -241,6 +252,7 @@ without a method is not an observation — every row here carries an assay.</p>
   </tr>
   {% endfor %}
 </table>
+{% endcall %}
 {% endif %}
 
 {% if r.resistance_groups %}
@@ -251,7 +263,8 @@ type — expand a group to see its determinants.</p>
 {% for g in r.resistance_groups %}
 <details class="details-group"{% if loop.index0 == 0 %} open{% endif %}>
   <summary>{{ g.mechanism_type }} <span class="pill plain">{{ g.rows|length }}</span></summary>
-  <table>
+  {% call scroll_table("Resistance mechanism: " ~ g.mechanism_type) %}
+<table>
     <caption>{{ g.mechanism_type }}</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     {% for m in g.rows %}
@@ -269,6 +282,7 @@ type — expand a group to see its determinants.</p>
     </tr>
     {% endfor %}
   </table>
+{% endcall %}
 </details>
 {% endfor %}
 {% endif %}
@@ -283,6 +297,7 @@ several compounds, the evidence is marked inherited, meaning it covers this
 compound together with the cluster's other products rather than singling it out.
 Those products need not be related to each other: a cluster can list an
 intermediate, a precursor and a finished antibiotic side by side.</p>
+{% call scroll_table("Producer organisms") %}
 <table>
   <caption>Producer organisms</caption>
   <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Cluster link evidence</th><th scope="col">Source</th><th scope="col">Quality</th><th scope="col">Note</th><th scope="col">Evidence</th></tr></thead>
@@ -298,6 +313,7 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
   </tr>
   {% endfor %}
 </table>
+{% endcall %}
 {% endif %}
 
 {% if r.causal_graphs %}
@@ -310,6 +326,7 @@ or death.</p>
 {% if cg.description %}<p>{{ cg.description }}</p>{% endif %}
 {% if cg.scope_notes %}<p class="meta">{{ cg.scope_notes }}</p>{% endif %}
 {% if cg.nodes %}
+{% call scroll_table("Nodes: " ~ cg.graph_id) %}
 <table>
   <caption>Nodes — {{ cg.graph_id }}</caption>
   <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
@@ -322,8 +339,10 @@ or death.</p>
   </tr>
   {% endfor %}
 </table>
+{% endcall %}
 {% endif %}
 {% if cg.edges %}
+{% call scroll_table("Edges: " ~ cg.graph_id) %}
 <table>
   <caption>Edges — {{ cg.graph_id }}</caption>
   <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
@@ -336,6 +355,7 @@ or death.</p>
   </tr>
   {% endfor %}
 </table>
+{% endcall %}
 {% endif %}
 {% endfor %}
 {% endif %}
@@ -357,6 +377,7 @@ compound.</p>
 
 {% if r.datasets %}
 <h2>Related datasets</h2>
+{% call scroll_table("Related datasets") %}
 <table>
   <caption>Public datasets relevant to this compound</caption>
   <thead><tr><th scope="col">Dataset</th><th scope="col">Type</th><th scope="col">Repository</th><th scope="col">Description</th></tr></thead>
@@ -369,6 +390,7 @@ compound.</p>
   </tr>
   {% endfor %}
 </table>
+{% endcall %}
 {% endif %}
 
 {% if r.evidence %}
