@@ -1029,7 +1029,7 @@ def require_canonical_source_reference_ids(value: str, prefix: str) -> None:
 
 
 def require_standard_inchi_key(value: str, field: str, prefix: str) -> None:
-    if STANDARD_INCHI_KEY_PATTERN.match(value) is None:
+    if STANDARD_INCHI_KEY_PATTERN.fullmatch(value) is None:
         raise ValueError(f"{prefix}: invalid {field} value {value!r}")
 
 

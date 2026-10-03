@@ -24,6 +24,7 @@ from evaluate_bacdive_activity import (  # noqa: E402
     read_bacdive_fetch,
     read_drug_map,
     require_activity_report_matches_current,
+    require_standard_inchi_key,
     source_activity_id,
     write_activity_report,
     write_drug_map_template,
@@ -463,6 +464,15 @@ def test_write_activity_report_rejects_invalid_standard_inchi_key(tmp_path):
 
     with pytest.raises(ValueError, match="invalid standard_inchi_key value"):
         write_activity_report(rows, tmp_path / "bacdive_activity.tsv")
+
+
+def test_require_standard_inchi_key_rejects_trailing_newline():
+    with pytest.raises(ValueError, match="invalid standard_inchi_key value"):
+        require_standard_inchi_key(
+            f"{AMPICILLIN_INCHI_KEY}\n",
+            "standard_inchi_key",
+            "bacdive_activity.tsv: row 1",
+        )
 
 
 def test_read_activity_report_rejects_header_drift(tmp_path):
