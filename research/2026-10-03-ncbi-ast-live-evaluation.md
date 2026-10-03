@@ -101,6 +101,39 @@ observations, not unique resistant isolates or species-wide resistance claims.
 No cross-source deduplication was applied in this run, so these are candidate
 observations, not incremental corpus coverage.
 
+## Isolate Metadata Join Audit
+
+A separate, local Isolates Browser metadata export was retrieved on 2026-10-03
+from `https://www.ncbi.nlm.nih.gov/pathogens/pathogens-srv/` with these parameters:
+
+```text
+action=retrieve
+collection=isolates
+fq=number_drugs_tested:[1 TO *]
+fl=target_acc,biosample_acc,bioproject_acc,taxid,scientific_name,asm_acc,strain,isolate_identifiers
+limit=40000
+```
+
+After inspecting a two-row canary, the full response was saved locally to
+`downloads/ncbi_ast_isolates_2026-10-03/isolates.json`. It contains 37,177
+records, equal to its returned `totalCount`, with unique `target_acc` values.
+Its 12,111,786 bytes have SHA-256
+`20c33c4ad6483ca5d57ae9305c194d7c4214700bffae4b6e8aede52a7ad25408`.
+
+An exact, version-preserving `target_acc` join covers all 37,177 AST targets
+and all 505,890 AST rows. There are no BioSample, BioProject, or scientific-name
+disagreements in those joined rows. All 37,177 metadata records have a source
+TaxID; 34,373 have an Assembly accession and 29,479 have a strain label. Those
+fields cover 505,890, 472,931, and 428,889 AST rows, respectively.
+
+This establishes that genome/taxon enrichment is feasible for this captured
+pair of exports. It does not yet change the exact activity report or schema
+records. The next integration step must carry both snapshot hashes and dates,
+fail closed on duplicate targets or conflicting sample/project/name context,
+and keep missing assembly accessions absent. `isolate_identifiers` is a mixed
+identifier list, not an SRA-run column. No genotype or predicted-resistance
+fields were requested or used as measured phenotype evidence.
+
 ## Adoption Work
 
 NCBI AST remains `EVALUATING`. These local reports do not activate the seeder or
@@ -109,6 +142,8 @@ publish source observations in the CC BY 4.0 corpus. Before adoption:
 1. Resolve BioSample/BioProject overlap with CRyPTIC and other adopted sources.
 2. Join the Isolates Browser on exact `target_acc` to retain TaxIDs, assemblies,
    strain names, and sequencing accessions, checking source identity agreement.
+   The local join audit above passed; the reproducible enrichment path and its
+   source-provenance representation are still to be implemented.
    The native AST export carries organism labels and PDT accessions; those must
    not be mislabeled as taxonomy or genome identifiers.
 3. Review assay and submitted-field consistency. NCBI explicitly does not
