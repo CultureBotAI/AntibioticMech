@@ -507,6 +507,10 @@ def disk_diffusion_value(value: Any) -> str | None:
     return decimal_string(parsed)
 
 
+def source_disk_diffusion_value(value: Any, *, context: str, field: str) -> str | None:
+    return disk_diffusion_value(scalar_text(value, context, field))
+
+
 def physiology_sections(
     bacdive_id_value: str,
     record: Mapping[str, Any],
@@ -568,7 +572,8 @@ def antibiogram_rows(
             if source_section is None:
                 continue
             context = f"BacDive-ID {bacdive_id_value} {key}"
-            for row in as_rows(value, context):
+            for row_index, row in enumerate(as_rows(value, context), start=1):
+                row_context = f"{context} row {row_index}"
                 for field, cell in row.items():
                     source_name, row_source_section = antibiogram_source_name(
                         str(field),
@@ -576,7 +581,11 @@ def antibiogram_rows(
                     )
                     if not source_name:
                         continue
-                    standardized_value = disk_diffusion_value(cell)
+                    standardized_value = source_disk_diffusion_value(
+                        cell,
+                        context=row_context,
+                        field=str(field),
+                    )
                     if standardized_value:
                         yield source_name, row_source_section, standardized_value
                     elif standardized_value is None:
@@ -662,13 +671,22 @@ def exact_activity_rows(
                             str(field),
                             source_section,
                         )
+                        if not source_name:
+                            continue
+
                         mapping = drug_map.get(normalize(source_name))
-                        disk_value = disk_diffusion_value(cell)
                         if (
                             not mapping
                             or mapping.get("mapping_status") != EXACT_MAPPING_STATUS
-                            or not disk_value
                         ):
+                            continue
+
+                        disk_value = source_disk_diffusion_value(
+                            cell,
+                            context=row_context,
+                            field=str(field),
+                        )
+                        if not disk_value:
                             continue
 
                         rows.append(
