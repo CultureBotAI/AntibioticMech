@@ -129,7 +129,7 @@ def test_attachment_requires_review_and_does_not_partially_mutate_records(tmp_pa
     key = "AAAAAAAAAAAAAA-AAAAAAAAAA-A"
     first = {**row(), "identifier": "CHEBI:1", "standard_inchi_key": key, "mic_units": "mg/L",
              "taxon_label": "E. coli", "isolate_count": "1", "source_retrieved_on": "2026-10-03",
-             "activity_group_id": "one"}
+             "activity_group_id": "one", "biosample_accession": "", "target_accession": ""}
     second = {**first, "activity_group_id": "two", "mic_value": "", "disk_diffusion_value": "20"}
     monkeypatch.setattr(seed_from_sources, "load_ncbi_ast_activity_inventory", lambda _: [first, second])
     records = {"CHEBI:1": {"identifier": "CHEBI:1", "chemical_structure": {"standard_inchi_key": key},

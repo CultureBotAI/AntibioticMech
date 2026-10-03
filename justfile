@@ -79,6 +79,14 @@ fetch-ncbi-ast *args:
 fetch-ncbi-ast-taxonomy *args:
     uv run python scripts/ncbi_ast_taxonomy.py {{args}}
 
+# Check repeated genome-target exports against original BioSample antibiograms.
+review-ncbi-ast-biosamples *args:
+    uv run python scripts/ncbi_ast_biosamples.py {{args}}
+
+# Rebuild the BioSample review and validate all consolidated observations without seeding.
+audit-ncbi-ast-biosamples *args:
+    uv run python scripts/audit_ncbi_ast_biosamples.py {{args}}
+
 # Evaluate an NCBI Pathogen Detection AST export and optional curated structure crosswalk.
 evaluate-ncbi-ast *args:
     uv run python scripts/evaluate_ncbi_ast.py {{args}}
