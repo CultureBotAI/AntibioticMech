@@ -102,13 +102,26 @@ function values(value) {
         await page.locator('.activity-results-pager [data-step="1"]').click();
         assert((await page.locator(".activity-status").textContent()).includes("51-"));
       }
+      const unreported = observations.flatMap((row, i) => row.activity ? [] : [i + 1]);
+      if (unreported.length) {
+        await filter.selectOption("=");
+        await page.waitForFunction(n => document.querySelector(".activity-status").textContent.startsWith(`${n} matching observations;`), unreported.length);
+        const ids = await page.locator(".activity-results tbody tr td:first-child a").allTextContents();
+        assert.deepEqual(ids.map(Number), unreported.slice(0, 50));
+        const labels = await page.locator(".activity-results tbody tr td:nth-child(4)").allTextContents();
+        assert(labels.every(label => label === "Not reported"));
+        await page.screenshot({path: path.join(output, `unreported-activity-${viewport.width}.png`)});
+      }
       await page.getByRole("searchbox").fill("nonexistent-accession-qa");
       await page.waitForFunction(() => document.querySelector(".activity-status").textContent === "No matching observations.");
       await page.getByRole("button", {name: "Reset", exact: true}).click();
       await page.locator(".activity-default").waitFor({state: "visible"});
       assert.equal(await page.locator(".activity-default tbody tr").count(), 100);
       assert.deepEqual(errors, []);
-      report.viewports.push({viewport, observations: observations.length, overflow, checks: "complete download, evidence, paired context structure, cross-page search, page jump, filtering, result pagination, empty state, reset"});
+      report.viewports.push({viewport, observations: observations.length,
+        unreportedActivities: unreported.length,
+        pairedContextObservations: observations.filter(row => row.pathogen_detection_contexts?.length > 1).length,
+        overflow, checks: "complete download, evidence, paired context structure, cross-page search, page jump, filtering, unreported activity filtering, result pagination, empty state, reset"});
       await context.close();
     }
 

@@ -20,12 +20,21 @@ NCBI AST remains `EVALUATING`; these commands do not adopt the source.
 
 ## Non-Publishing Workflow
 
+The examples use the [expanded reviewed cohort](../research/2026-10-03-ncbi-ast-drug-coverage.md).
+Its exact uncompressed report SHA-256 is
+`bcac2fb84c9f7df5d78fab90f330738e31dcdb7b82bc3dfc7069a351edacc41a`,
+matching `curation/ncbi_ast_biosample_review.json`. Input reports and review
+files must belong to the same cohort. Earlier reports require their historical
+review files and code revision; the current review correctly rejects an old
+inventory even when its gzip container is otherwise valid. Use new output
+directories when repeating commands; existing results are never overwritten.
+
 Pack an existing validated report without reserializing its TSV:
 
 ```bash
 uv run python scripts/ncbi_ast_inventory.py \
-  --activity-report reports/ncbi_ast_assay_reviewed_2026-10-03/activity.tsv \
-  --output-directory reports/ncbi_ast_compressed_inventory_2026-10-03
+  --activity-report reports/ncbi_ast_drug_expanded_reviewed_2026-10-03/activity.tsv \
+  --output-directory reports/ncbi_ast_drug_expanded_compressed_2026-10-03
 ```
 
 The command stages `activity.tsv.gz` and `inventory.json` under `reports/`,
@@ -43,8 +52,8 @@ Exercise the compressed inventory through the full production-path audit:
 
 ```bash
 uv run python scripts/audit_ncbi_ast_publication.py \
-  --activity-report reports/ncbi_ast_compressed_inventory_2026-10-03/activity.tsv.gz \
-  --output-directory reports/ncbi_ast_compressed_publication_2026-10-03 \
+  --activity-report reports/ncbi_ast_drug_expanded_compressed_2026-10-03/activity.tsv.gz \
+  --output-directory reports/ncbi_ast_drug_expanded_publication_2026-10-03 \
   --full-site
 ```
 

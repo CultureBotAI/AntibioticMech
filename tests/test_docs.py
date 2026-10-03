@@ -6,6 +6,7 @@ reader hits before anyone else does.
 
 from __future__ import annotations
 
+import json
 import re
 import subprocess
 import sys
@@ -27,13 +28,21 @@ def _skill_docs() -> list[str]:
 
 
 DOC_FILES = ["README.md", "CLAUDE.md", "pyproject.toml", "docs/HARMONIZATION.md",
-             "docs/CURATION.md", "NEXT_TASKS.md",
+             "docs/CURATION.md", "docs/NCBI_AST_INVENTORY.md", "NEXT_TASKS.md",
              # Skills are instructions an agent will follow literally, so a
              # command that does not exist is worse here than in prose.
              *_skill_docs()]
 
 SCRIPT_REF = re.compile(r"scripts/[a-z_]+\.py")
 JUST_REF = re.compile(r"just ([a-z][a-z-]*)")
+
+
+def test_ncbi_ast_inventory_guide_pins_the_current_reviewed_cohort(repo_root):
+    review = json.loads((repo_root / "curation/ncbi_ast_biosample_review.json").read_text())
+    guide = (repo_root / "docs/NCBI_AST_INVENTORY.md").read_text()
+    assert f"`{review['activity_report_sha256']}`" in guide, (
+        "Refresh the inventory guide's example cohort and logical checksum when its review changes"
+    )
 
 
 def test_every_skill_declares_the_frontmatter_the_loader_needs(repo_root):

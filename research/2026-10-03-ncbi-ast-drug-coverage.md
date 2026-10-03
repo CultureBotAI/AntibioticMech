@@ -231,10 +231,12 @@ This is an ignored evaluation artifact, not an adopted production inventory.
   committed inputs. No generated record, schema, or public page changes.
 - Lint, source-queue validation, and whitespace checks pass. Linux QC is
   required on the final PR head before merge.
-- The expanded cohort has not yet repeated the production merge/write/reload
-  and rendered-publication audit. The existing full publication evidence is
-  only for the earlier pinned cohort; run the publication audit on the expanded
-  compressed inventory before adoption.
+- The expanded cohort now passes the full production merge/write/reload and
+  rendered-publication audit, including complete downloads, unchanged reseeding
+  and full-site local links. Representative desktop/mobile browser checks also
+  pass for cefotaxime and cefovecin, including missing categorical calls. See
+  [the expanded publication report](2026-10-03-ncbi-ast-expanded-publication.md)
+  for exact artifacts, checksums, scope and reproduction commands.
 - Source-terms resolution remains deferred, and adoption still requires source
   configuration, a committed inventory/manifest, and publication gates.
   Unmapped drug labels and quarantined assay contexts remain curation work.
