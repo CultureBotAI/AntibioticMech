@@ -31,7 +31,8 @@ run. Elapsed time was 483.781 seconds on this machine.
 | Checked quantity | Result |
 |---|---:|
 | Exact compound records with AST observations | 32 |
-| AST observations and distinct measured results | 188,759 |
+| AST observations | 188,759 |
+| Sum of source measurement counts | 188,759 |
 | All activity rows, including existing non-AST rows | 190,833 |
 | Consolidated observations with paired genome contexts | 52 |
 | Unaffected records checked and unchanged | 2,907 |
