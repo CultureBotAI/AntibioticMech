@@ -141,6 +141,42 @@ def test_complete_download_cannot_silently_drop_nonactivity_fields(tmp_path, env
         verify_activity_publication(doc, tmp_path, result)
 
 
+@pytest.mark.parametrize("attribute", [
+    "data-index", "data-identifier", "data-key", "data-total", "data-page-size",
+])
+def test_audit_rejects_broken_browser_bindings(tmp_path, env, doc, attribute):
+    result = publish(doc, tmp_path, env)
+    page = tmp_path / result["pages"][0]
+    value = {
+        "data-index": result["activity"]["index"], "data-identifier": doc["identifier"],
+        "data-key": doc["chemical_structure"]["standard_inchi_key"],
+        "data-total": "201", "data-page-size": "100",
+    }[attribute]
+    html = page.read_text()
+    before = f'{attribute}="{value}"'
+    assert before in html
+    page.write_text(html.replace(before, f'{attribute}="wrong"', 1))
+    with pytest.raises(ValueError, match="browser binding"):
+        verify_activity_publication(doc, tmp_path, result)
+
+
+@pytest.mark.parametrize("mutation", ["absent", "duplicate", "duplicate-attribute"])
+def test_audit_requires_exactly_one_browser_root(tmp_path, env, doc, mutation):
+    result = publish(doc, tmp_path, env)
+    page = tmp_path / result["pages"][0]
+    html = page.read_text()
+    if mutation == "duplicate":
+        root = html.split('<section id="activity-browser"', 1)[1].split(">", 1)[0]
+        html += '<section id="activity-browser"' + root + "></section>"
+    elif mutation == "absent":
+        html = html.replace('id="activity-browser"', 'id="missing-browser"')
+    else:
+        html = html.replace('id="activity-browser"', 'id="activity-browser" data-index="wrong"')
+    page.write_text(html)
+    with pytest.raises(ValueError, match="browser binding"):
+        verify_activity_publication(doc, tmp_path, result)
+
+
 def test_browser_limits_and_expanded_input_are_enforced(tmp_path, env, doc, monkeypatch):
     doc["activity_collections"] = [{"path": "not-expanded"}]
     with pytest.raises(ValueError, match="expanded"):
@@ -150,6 +186,13 @@ def test_browser_limits_and_expanded_input_are_enforced(tmp_path, env, doc, monk
     with pytest.raises(ValueError, match="browser payload"):
         publish(doc, tmp_path, env)
     assert publish({**doc, "activity_spectrum": []}, tmp_path, env) == {"written": set(), "pages": []}
+
+
+def test_unexpanded_collection_only_record_cannot_look_empty(tmp_path, env, doc):
+    doc.pop("activity_spectrum")
+    doc["activity_collections"] = [{"path": "not-expanded"}]
+    with pytest.raises(ValueError, match="expanded"):
+        publish(doc, tmp_path, env)
 
 
 def test_search_includes_both_paired_contexts_and_unknown_filters(doc):

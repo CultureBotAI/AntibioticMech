@@ -8,7 +8,7 @@ const index = JSON.parse(zlib.gunzipSync(payload));
 const context = {identifier: index.identifier, key: index.standard_inchi_key, total: String(index.total)};
 assert.equal(validatePayload(index, context, true).length, 201);
 assert.equal(filterRows(index.rows, "gCa_2.1", "", "")[0][0], 201);
-assert.equal(filterRows(index.rows, "ＧＣＡ_２.１", "", "")[0][0], 201);
+assert.equal(filterRows(index.rows, "\uff27\uff23\uff21_\uff12.\uff11", "", "")[0][0], 201);
 assert.equal(filterRows(index.rows, "gca_2.1 SAMN200", "=", "=").length, 1);
 assert.equal(filterRows(index.rows, "gca_2.1", "=RESISTANT", "").length, 0);
 assert.equal(filterRows(index.rows, "", "=RESISTANT", "=NCBI_AST").length, 200);

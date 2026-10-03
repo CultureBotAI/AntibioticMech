@@ -54,9 +54,14 @@ class ActivityTable(HTMLParser):
         self.anchors = []
         self.details = []
         self.links = []
+        self.browser_roots = []
 
     def handle_starttag(self, tag, attrs):
         attributes = dict(attrs)
+        if attributes.get("id") == "activity-browser":
+            if len(attrs) != len(attributes):
+                raise ValueError("activity browser bindings contain duplicate attributes")
+            self.browser_roots.append(attributes)
         if tag == "a":
             self.links.append(attributes)
         if tag == "table":
@@ -197,6 +202,13 @@ def verify_activity_publication(doc: dict, out_dir: Path, publication: dict) -> 
         verify_activity_table(html, rows, evidence=True, offset=offset)
         parser = ActivityTable()
         parser.feed(html)
+        expected_browser = {
+            "id": "activity-browser", "data-index": index_path.name,
+            "data-identifier": doc["identifier"], "data-key": identity["standard_inchi_key"],
+            "data-total": str(len(observations)), "data-page-size": str(PAGE_SIZE),
+        }
+        if parser.browser_roots != [expected_browser]:
+            raise ValueError("activity browser bindings differ")
         data_links = [link["href"] for link in parser.links if link.get("class") == "activity-data"]
         if len(data_links) != len(rows) or len(set(data_links)) != 1:
             raise ValueError("missing or inconsistent activity evidence links")

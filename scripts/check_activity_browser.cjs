@@ -34,6 +34,10 @@ function values(value) {
       const record = JSON.parse(zlib.gunzipSync(await response.body()));
       const observations = record.activity_spectrum;
       assert(observations.length > 100, "This QA run requires a multi-page compound");
+      const pendingDownload = page.waitForEvent("download");
+      await page.getByRole("link", {name: "Complete record (JSON.gz)"}).click();
+      const download = await pendingDownload;
+      assert.deepEqual(JSON.parse(zlib.gunzipSync(fs.readFileSync(await download.path()))), record);
       const overflow = await page.evaluate(() => ({width: innerWidth, document: document.documentElement.scrollWidth}));
       assert(overflow.document <= overflow.width, JSON.stringify(overflow));
       await page.screenshot({path: path.join(output, `activity-${viewport.width}.png`)});
@@ -65,6 +69,21 @@ function values(value) {
       await lastRow.locator(".activity-detail > dl").waitFor();
       const lastText = await lastRow.locator(".activity-detail").textContent();
       for (const value of values(last)) assert(lastText.includes(value), `Missing final evidence: ${value}`);
+      const pairedIndex = observations.findIndex(row => row.pathogen_detection_contexts?.length > 1);
+      if (pairedIndex >= 0) {
+        const paired = observations[pairedIndex];
+        const address = new URL(`activity-${Math.floor(pairedIndex / 100) + 1}.html#observation-${pairedIndex + 1}`, url);
+        await page.goto(address.href);
+        const pairedRow = page.locator(`#observation-${pairedIndex + 1}`);
+        await pairedRow.locator("summary").click();
+        await pairedRow.locator(".activity-detail > dl").waitFor();
+        const contexts = pairedRow.locator(".activity-detail dt").filter({hasText: /^pathogen detection contexts$/}).locator("+ dd > ol > li");
+        assert.equal(await contexts.count(), paired.pathogen_detection_contexts.length);
+        for (let i = 0; i < paired.pathogen_detection_contexts.length; i++) {
+          const text = await contexts.nth(i).textContent();
+          for (const value of values(paired.pathogen_detection_contexts[i])) assert(text.includes(value));
+        }
+      }
       await page.goto(url);
       await page.getByLabel("Page", {exact: true}).fill(String(Math.ceil(observations.length / 100)));
       await page.getByRole("button", {name: "Go", exact: true}).click();
@@ -89,7 +108,7 @@ function values(value) {
       await page.locator(".activity-default").waitFor({state: "visible"});
       assert.equal(await page.locator(".activity-default tbody tr").count(), 100);
       assert.deepEqual(errors, []);
-      report.viewports.push({viewport, observations: observations.length, overflow, checks: "evidence, cross-page search, page jump, filtering, result pagination, empty state, reset"});
+      report.viewports.push({viewport, observations: observations.length, overflow, checks: "complete download, evidence, paired context structure, cross-page search, page jump, filtering, result pagination, empty state, reset"});
       await context.close();
     }
 

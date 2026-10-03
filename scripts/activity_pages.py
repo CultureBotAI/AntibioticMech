@@ -51,11 +51,11 @@ def write_json(directory: Path, prefix: str, value: dict, *, browser: bool = Tru
 
 def render_activity_pages(doc: dict, record_path: Path, out_dir: Path, env, stats: dict) -> dict:
     """Write all pages/assets; return record-preview context and pruning ownership."""
+    if doc.get("activity_collections"):
+        raise ValueError("activity publication requires a fully expanded record")
     observations = doc.get("activity_spectrum") or []
     if not observations:
         return {"written": set(), "pages": []}
-    if doc.get("activity_collections"):
-        raise ValueError("activity publication requires a fully expanded record")
     relative = Path(record_path.parent.name) / record_path.stem
     directory = out_dir / relative
     directory.mkdir(parents=True, exist_ok=True)
