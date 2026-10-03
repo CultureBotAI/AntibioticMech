@@ -323,6 +323,8 @@ def test_load_ncbi_ast_activity_inventory_rejects_malformed_rows(
 
 
 def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypatch):
+    from ncbi_ast_assays import AssayReview, assay_signature
+
     path = tmp_path / "ncbi_ast_activity.tsv"
     row = ncbi_ast_row(
         disk_diffusion_value="18",
@@ -338,6 +340,13 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     )
     write_activity_report(path, [row])
     monkeypatch.setattr(seed_from_sources, "NCBI_AST_ACTIVITY_INVENTORY", path)
+    review = AssayReview("assay-review-sha256:" + "a" * 64, row["source_version"],
+                         "2026-10-03", "b" * 64, {assay_signature(row): {
+                             "basis": "synthetic", "decision": "ACCEPT",
+                             "explanation": "Synthetic dual-assay test fixture.",
+                             "references": ["https://example.org/assay"],
+                         }})
+    monkeypatch.setattr(seed_from_sources, "read_assay_review", lambda _: review)
     records = {
         "CHEBI:478164": {
             "identifier": "CHEBI:478164",
@@ -388,6 +397,7 @@ def test_attach_ncbi_ast_activity_writes_source_observations(tmp_path, monkeypat
     assert "sra_accessions=ERR111111|SRR222222" in observation["evidence"][0]["notes"]
     assert "isolation_type=clinical" in observation["evidence"][0]["notes"]
     assert "host=Homo sapiens" in observation["evidence"][0]["notes"]
+    assert review.version in observation["evidence"][1]["notes"]
     assert "isolation_source=blood" in observation["evidence"][0]["notes"]
     assert (
         "BioSample, BioProject, target, assembly, SRA and isolation context"

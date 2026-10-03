@@ -1,0 +1,595 @@
+{
+  "source_version": "ast-browser-sha256:ec6901ddfa0da41c0250875abc39b075d345c249cc39dbb17a998efaad2af184",
+  "reviewed_on": "2026-10-03",
+  "candidate_sha256": "84def0c3b6b4ecb41d34bcd7945b3def05e218d68bc0e777f928c5bc2df4c7ec",
+  "rationales": {
+    "sensititre_mic": {
+      "decision": "ACCEPT",
+      "explanation": "Reported Sensititre/TREK platform supports MIC measurements. Raw reagent labels are retained, not promoted to verified panel identities.",
+      "references": [
+        "https://www.thermofisher.com/us/en/home/clinical/clinical-microbiology/antimicrobial-susceptibility-testing/resources.html",
+        "https://www.trekds.com/pdf/TRK_catalog.pdf"
+      ]
+    },
+    "sensititer_alias": {
+      "decision": "ACCEPT",
+      "explanation": "Curator interprets Sensititer as a spelling variant of Sensititre in this snapshot; the original label remains unchanged. This is a method-family interpretation, not a chemical identity mapping.",
+      "references": [
+        "https://www.thermofisher.com/us/en/home/clinical/clinical-microbiology/antimicrobial-susceptibility-testing/resources.html",
+        "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/"
+      ]
+    },
+    "microscan_mic": {
+      "decision": "ACCEPT",
+      "explanation": "Reported MicroScan platform supports MIC testing and 96-well panels; Siemens is a documented historical MicroScan vendor. No result or breakpoint is independently verified.",
+      "references": [
+        "https://media.beckmancoulter.com/en/products/microbiology/microscan-walkaway-plus-system",
+        "https://www.beckmancoulter.com/en/about-beckman-coulter/newsroom/press-releases/2014/siemens-healthcare-diagnostics-microbiology-acquisition"
+      ]
+    },
+    "phoenix_mic": {
+      "decision": "ACCEPT",
+      "explanation": "Reported Phoenix platform supports MIC testing. No specific unrecognized reagent code is promoted to a verified panel identity.",
+      "references": [
+        "https://www.bd.com/en-ca/products-and-solutions/products/product-families/bd-phoenix-panels"
+      ]
+    },
+    "vitek_mic": {
+      "decision": "ACCEPT",
+      "explanation": "Reported Vitek platform family supports MIC measurements. Raw card labels remain submitter assertions, not independently certified panel identities.",
+      "references": [
+        "https://www.biomerieux.com/us/en/our-offer/clinical-products/vitek-2.html"
+      ]
+    },
+    "explicit_dilution": {
+      "decision": "ACCEPT",
+      "explanation": "Source explicitly names agar dilution or broth microdilution alongside a MIC. Retain the submitted measurement without inventing protocol parameters.",
+      "references": [
+        "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/"
+      ]
+    },
+    "explicit_disk": {
+      "decision": "ACCEPT",
+      "explanation": "Source explicitly names disk diffusion or an antibiotic disk and supplies a disk-zone measurement. Preserve the submitted interpretation without recalculating breakpoints.",
+      "references": [
+        "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/"
+      ]
+    },
+    "scan_disk": {
+      "decision": "ACCEPT",
+      "explanation": "The named Scan 500 instrument reads inhibition zones; the source also explicitly identifies disk diffusion.",
+      "references": [
+        "https://www.interscience.com/en/products/inhibition-zone-readers/scan-500?lang=en"
+      ]
+    },
+    "etest_mic": {
+      "decision": "ACCEPT",
+      "explanation": "The reported E-Test/ETEST reagent or platform supplies a gradient MIC, not a disk diameter.",
+      "references": [
+        "https://www.biomerieux.com/corp/en/our-offer/clinical-products/etest.html"
+      ]
+    },
+    "measurement_conflict": {
+      "decision": "QUARANTINE",
+      "explanation": "Measurement type and submitted assay context are unresolved: disk-zone results name MIC instruments, or a MIC names only an antibiotic disk. Do not infer a corrected value or assay.",
+      "references": [
+        "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/",
+        "https://www.biomerieux.com/us/en/our-offer/clinical-products/vitek-2.html",
+        "https://media.beckmancoulter.com/en/products/microbiology/microscan-walkaway-plus-system"
+      ]
+    },
+    "mixed_assays": {
+      "decision": "QUARANTINE",
+      "explanation": "ETEST can supplement automated testing, but the record does not establish which assay produced this MIC. Conflicting platform/reagent or vendor fields remain unresolved; no method is selected by inference.",
+      "references": [
+        "https://www.biomerieux.com/corp/en/our-offer/clinical-products/etest.html",
+        "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/"
+      ]
+    },
+    "panel_format_conflict": {
+      "decision": "QUARANTINE",
+      "explanation": "The submitted 96-Well Plate conflicts with documented VITEK 2 card or Phoenix panel formats. Quarantine pending source-level adjudication rather than rewriting the reagent or assuming the instrument version.",
+      "references": [
+        "https://www.biomerieux.com/us/en/our-offer/clinical-products/vitek-2.html",
+        "https://www.accessdata.fda.gov/cdrh_docs/pdf12/K123266.pdf"
+      ]
+    },
+    "vendor_conflict": {
+      "decision": "QUARANTINE",
+      "explanation": "Submitted Vitek platform with Trek vendor leaves instrument identity unresolved; neither field is silently overridden.",
+      "references": [
+        "https://www.biomerieux.com/us/en/our-offer/clinical-products/vitek-2.html",
+        "https://www.trekds.com/pdf/TRK_catalog.pdf"
+      ]
+    },
+    "ambiguous_kb": {
+      "decision": "QUARANTINE",
+      "explanation": "KB panel is an unexpanded source abbreviation. Do not assume a particular disk method until original submitter evidence establishes its meaning.",
+      "references": [
+        "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/"
+      ]
+    }
+  },
+  "contexts": [
+    {
+      "method": "",
+      "platform": "",
+      "vendor": "",
+      "reagent": "E-Test",
+      "measurement": "MIC",
+      "basis": "etest_mic"
+    },
+    {
+      "method": "",
+      "platform": "",
+      "vendor": "",
+      "reagent": "Kirby Bauer disk diffusion",
+      "measurement": "DISK",
+      "basis": "explicit_disk"
+    },
+    {
+      "method": "",
+      "platform": "",
+      "vendor": "",
+      "reagent": "agar dilution",
+      "measurement": "MIC",
+      "basis": "explicit_dilution"
+    },
+    {
+      "method": "",
+      "platform": "",
+      "vendor": "",
+      "reagent": "broth microdilution",
+      "measurement": "MIC",
+      "basis": "explicit_dilution"
+    },
+    {
+      "method": "",
+      "platform": "",
+      "vendor": "",
+      "reagent": "cation adjusted Mueller-Hinton (MH) agar dilution",
+      "measurement": "MIC",
+      "basis": "explicit_dilution"
+    },
+    {
+      "method": "",
+      "platform": "",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "E-Test",
+      "measurement": "MIC",
+      "basis": "etest_mic"
+    },
+    {
+      "method": "",
+      "platform": "Etest",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "etest_mic"
+    },
+    {
+      "method": "",
+      "platform": "KB panel",
+      "vendor": "Becton Dickinson",
+      "reagent": "",
+      "measurement": "DISK",
+      "basis": "ambiguous_kb"
+    },
+    {
+      "method": "",
+      "platform": "Microscan",
+      "vendor": "",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "microscan_mic"
+    },
+    {
+      "method": "",
+      "platform": "Microscan",
+      "vendor": "",
+      "reagent": "96-Well Plate",
+      "measurement": "MIC",
+      "basis": "microscan_mic"
+    },
+    {
+      "method": "",
+      "platform": "Microscan",
+      "vendor": "Beckman Coulter Inc",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "microscan_mic"
+    },
+    {
+      "method": "",
+      "platform": "Microscan",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "E-Test",
+      "measurement": "MIC",
+      "basis": "mixed_assays"
+    },
+    {
+      "method": "",
+      "platform": "Microscan",
+      "vendor": "SIRSCAN",
+      "reagent": "",
+      "measurement": "DISK",
+      "basis": "measurement_conflict"
+    },
+    {
+      "method": "",
+      "platform": "Microscan",
+      "vendor": "Siemens",
+      "reagent": "",
+      "measurement": "DISK",
+      "basis": "measurement_conflict"
+    },
+    {
+      "method": "",
+      "platform": "Microscan",
+      "vendor": "Siemens",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "microscan_mic"
+    },
+    {
+      "method": "",
+      "platform": "Microscan",
+      "vendor": "Siemens",
+      "reagent": "0",
+      "measurement": "MIC",
+      "basis": "microscan_mic"
+    },
+    {
+      "method": "",
+      "platform": "Microscan",
+      "vendor": "Siemens",
+      "reagent": "96-Well Plate",
+      "measurement": "MIC",
+      "basis": "microscan_mic"
+    },
+    {
+      "method": "",
+      "platform": "Not applicable",
+      "vendor": "Not applicable",
+      "reagent": "Antibiotic disk",
+      "measurement": "DISK",
+      "basis": "explicit_disk"
+    },
+    {
+      "method": "",
+      "platform": "Not applicable",
+      "vendor": "Not applicable",
+      "reagent": "Antibiotic disk",
+      "measurement": "MIC",
+      "basis": "measurement_conflict"
+    },
+    {
+      "method": "",
+      "platform": "Phoenix",
+      "vendor": "",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "phoenix_mic"
+    },
+    {
+      "method": "",
+      "platform": "Phoenix",
+      "vendor": "Becton Dickinson",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "phoenix_mic"
+    },
+    {
+      "method": "",
+      "platform": "Phoenix",
+      "vendor": "Becton Dickinson",
+      "reagent": "96-Well Plate",
+      "measurement": "MIC",
+      "basis": "panel_format_conflict"
+    },
+    {
+      "method": "",
+      "platform": "Phoenix",
+      "vendor": "Becton Dickinson",
+      "reagent": "GM-NEG",
+      "measurement": "MIC",
+      "basis": "phoenix_mic"
+    },
+    {
+      "method": "",
+      "platform": "Phoenix NMIC-203 card",
+      "vendor": "Becton Dickinson",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "phoenix_mic"
+    },
+    {
+      "method": "",
+      "platform": "Scan 500",
+      "vendor": "Interscience",
+      "reagent": "Disk difussion method in Mueller-Hinton Agar",
+      "measurement": "DISK",
+      "basis": "scan_disk"
+    },
+    {
+      "method": "",
+      "platform": "Sensititer",
+      "vendor": "",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "sensititer_alias"
+    },
+    {
+      "method": "",
+      "platform": "Sensititre",
+      "vendor": "",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "sensititre_mic"
+    },
+    {
+      "method": "",
+      "platform": "Sensititre",
+      "vendor": "",
+      "reagent": "96-Well Plate",
+      "measurement": "MIC",
+      "basis": "sensititre_mic"
+    },
+    {
+      "method": "",
+      "platform": "Sensititre",
+      "vendor": "",
+      "reagent": "Panel: CMV2AGNF",
+      "measurement": "MIC",
+      "basis": "sensititre_mic"
+    },
+    {
+      "method": "",
+      "platform": "Sensititre",
+      "vendor": "TREK Diagnostic Systems",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "sensititre_mic"
+    },
+    {
+      "method": "",
+      "platform": "Sensititre",
+      "vendor": "TREK Diagnostic Systems",
+      "reagent": "BOPO6F plate; cattle host",
+      "measurement": "MIC",
+      "basis": "sensititre_mic"
+    },
+    {
+      "method": "",
+      "platform": "Sensititre",
+      "vendor": "TREK Diagnostic Systems",
+      "reagent": "BOPO6F plate; cattle host; respiratory body site",
+      "measurement": "MIC",
+      "basis": "sensititre_mic"
+    },
+    {
+      "method": "",
+      "platform": "Sensititre",
+      "vendor": "TREK Diagnostic Systems",
+      "reagent": "CMV2AGNF",
+      "measurement": "MIC",
+      "basis": "sensititre_mic"
+    },
+    {
+      "method": "",
+      "platform": "Sensititre",
+      "vendor": "TREK Diagnostic Systems",
+      "reagent": "CMV3AGNF",
+      "measurement": "MIC",
+      "basis": "sensititre_mic"
+    },
+    {
+      "method": "",
+      "platform": "Sensititre",
+      "vendor": "TREK Diagnostic Systems",
+      "reagent": "Plate: BOPO6F;  Host: Cattle; Body Site: Respiratory",
+      "measurement": "MIC",
+      "basis": "sensititre_mic"
+    },
+    {
+      "method": "",
+      "platform": "Sensititre",
+      "vendor": "Trek",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "sensititre_mic"
+    },
+    {
+      "method": "",
+      "platform": "Sensititre",
+      "vendor": "Trek",
+      "reagent": "96-Well Plate",
+      "measurement": "MIC",
+      "basis": "sensititre_mic"
+    },
+    {
+      "method": "",
+      "platform": "Sensititre",
+      "vendor": "Trek",
+      "reagent": "GM-NEG",
+      "measurement": "MIC",
+      "basis": "sensititre_mic"
+    },
+    {
+      "method": "",
+      "platform": "Sensititre microbroth dilution using EUVSEC and EUVSEC2 plates",
+      "vendor": "Thermo Scientific",
+      "reagent": "96-Well Plate",
+      "measurement": "MIC",
+      "basis": "sensititre_mic"
+    },
+    {
+      "method": "",
+      "platform": "TREK Sensititre panel",
+      "vendor": "Thermo Fisher Scientific",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "sensititre_mic"
+    },
+    {
+      "method": "",
+      "platform": "Trek sensititre",
+      "vendor": "Trek",
+      "reagent": "Trek Specialized panel",
+      "measurement": "MIC",
+      "basis": "sensititre_mic"
+    },
+    {
+      "method": "",
+      "platform": "VITEK2",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "vitek_mic"
+    },
+    {
+      "method": "",
+      "platform": "Vitek",
+      "vendor": "",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "vitek_mic"
+    },
+    {
+      "method": "",
+      "platform": "Vitek",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "",
+      "measurement": "DISK",
+      "basis": "measurement_conflict"
+    },
+    {
+      "method": "",
+      "platform": "Vitek",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "vitek_mic"
+    },
+    {
+      "method": "",
+      "platform": "Vitek",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "0",
+      "measurement": "MIC",
+      "basis": "vitek_mic"
+    },
+    {
+      "method": "",
+      "platform": "Vitek",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "96-Well Plate",
+      "measurement": "MIC",
+      "basis": "panel_format_conflict"
+    },
+    {
+      "method": "",
+      "platform": "Vitek",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "AST-GN98",
+      "measurement": "MIC",
+      "basis": "vitek_mic"
+    },
+    {
+      "method": "",
+      "platform": "Vitek",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "E-Test",
+      "measurement": "MIC",
+      "basis": "mixed_assays"
+    },
+    {
+      "method": "",
+      "platform": "Vitek",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "GM-NEG",
+      "measurement": "DISK",
+      "basis": "measurement_conflict"
+    },
+    {
+      "method": "",
+      "platform": "Vitek",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "GM-NEG",
+      "measurement": "MIC",
+      "basis": "vitek_mic"
+    },
+    {
+      "method": "",
+      "platform": "Vitek",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "Vitek 2 (with API confirmation) AST-GN60",
+      "measurement": "MIC",
+      "basis": "vitek_mic"
+    },
+    {
+      "method": "",
+      "platform": "Vitek",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "Vitek 2 AST-GN60",
+      "measurement": "MIC",
+      "basis": "vitek_mic"
+    },
+    {
+      "method": "",
+      "platform": "Vitek",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "Vitek 2 AST-GN90",
+      "measurement": "MIC",
+      "basis": "vitek_mic"
+    },
+    {
+      "method": "",
+      "platform": "Vitek",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "Vitek 2 GN",
+      "measurement": "MIC",
+      "basis": "vitek_mic"
+    },
+    {
+      "method": "",
+      "platform": "Vitek",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "Vitek 2 GN- AST-GN51",
+      "measurement": "MIC",
+      "basis": "vitek_mic"
+    },
+    {
+      "method": "",
+      "platform": "Vitek",
+      "vendor": "Trek",
+      "reagent": "GM-NEG",
+      "measurement": "MIC",
+      "basis": "vendor_conflict"
+    },
+    {
+      "method": "",
+      "platform": "Vitek GM-NEG card",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "",
+      "measurement": "DISK",
+      "basis": "measurement_conflict"
+    },
+    {
+      "method": "",
+      "platform": "Vitek II",
+      "vendor": "Biom\u00e9rieux",
+      "reagent": "",
+      "measurement": "MIC",
+      "basis": "vitek_mic"
+    },
+    {
+      "method": "",
+      "platform": "disk diffusion",
+      "vendor": "Becton Dickinson",
+      "reagent": "",
+      "measurement": "DISK",
+      "basis": "explicit_disk"
+    }
+  ]
+}

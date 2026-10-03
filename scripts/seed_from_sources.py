@@ -41,7 +41,13 @@ from functools import lru_cache
 from pathlib import Path
 
 import yaml
-from ncbi_ast_assays import has_informative_assay_context
+from ncbi_ast_assays import (
+    DEFAULT_REVIEW_MAP,
+    REVIEW_REFERENCE,
+    AssayReview,
+    has_informative_assay_context,
+    read_assay_review,
+)
 from ncbi_ast_isolates import ISOLATE_REFERENCE, require_isolate_provenance
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
@@ -2869,7 +2875,7 @@ def ncbi_ast_activity_assay(row: dict[str, str]) -> str:
     return "; ".join(parts)
 
 
-def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
+def ncbi_ast_activity_observation(row: dict[str, str], assay_review: AssayReview | None = None) -> dict:
     """Convert one compact NCBI AST group into one grouped activity observation."""
     note_fields = [
         "activity_group_id",
@@ -2929,6 +2935,18 @@ def ncbi_ast_activity_observation(row: dict[str, str]) -> dict:
                 f"source_version={row['isolate_source_version']}; "
                 f"source_retrieved_on={row['isolate_source_retrieved_on']}. "
                 "This source supports taxon/strain/assembly context, not a resistance call."
+            ),
+        })
+
+    if assay_review is not None:
+        decision = assay_review.require_accepted(row)
+        observation["evidence"].append({
+            "reference": REVIEW_REFERENCE,
+            "notes": (
+                f"assay_review_version={assay_review.version}; reviewed_on={assay_review.reviewed_on}; "
+                f"basis={decision['basis']}; {decision['explanation']} "
+                f"References: {'; '.join(decision['references'])}. "
+                "Review supports assay-context compatibility, not independent verification of the result."
             ),
         })
 
@@ -3244,6 +3262,7 @@ def attach_ncbi_ast_activity(records: dict[str, dict]) -> Counter:
         counts["missing_inventory"] = 1
         return counts
 
+    assay_review = read_assay_review(DEFAULT_REVIEW_MAP)
     observations_by_record: dict[str, list[dict]] = defaultdict(list)
     for row in load_ncbi_ast_activity_inventory(NCBI_AST_ACTIVITY_INVENTORY):
         identifier = row["identifier"]
@@ -3253,7 +3272,7 @@ def attach_ncbi_ast_activity(records: dict[str, dict]) -> Counter:
             source="NCBI_AST",
             row_id=row["activity_group_id"],
         )
-        observations_by_record[identifier].append(ncbi_ast_activity_observation(row))
+        observations_by_record[identifier].append(ncbi_ast_activity_observation(row, assay_review))
         counts["matched_observations"] += 1
 
     for identifier, observations in observations_by_record.items():

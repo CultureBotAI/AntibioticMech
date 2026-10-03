@@ -83,6 +83,10 @@ evaluate-ncbi-ast *args:
 audit-ncbi-ast-overlap *args:
     uv run --extra source-ingest python scripts/audit_ncbi_ast_overlap.py {{args}}
 
+# Apply the pinned assay review before an AST inventory is eligible for seeding.
+review-ncbi-ast *args:
+    uv run python scripts/review_ncbi_ast_activity.py {{args}}
+
 # Evaluate BacDive v2 fetch exports without attaching name-only antibiotics to records.
 evaluate-bacdive *args:
     uv run python scripts/evaluate_bacdive_activity.py {{args}}
