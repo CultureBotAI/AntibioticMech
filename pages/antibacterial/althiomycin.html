@@ -7,7 +7,7 @@
 <meta name="description" content="althiomycin (CHEBI:157683): A peptide antibiotic isolated from soil and enteric bacteria. It is a protein synthesis inhibitor which exhibits antibacterial activity against both Gram-positive and Gram-negative bacteria.">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -118,14 +118,16 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: Confirmed against PMID:4917791 in intact-cell and cell-free Escherichia coli B assays. Althiomycin inhibited bacterial protein synthesis and the puromycin reaction without inhibiting aminoacyl-tRNA synthesis or aminoacyl-tRNA binding to ribosomes. The microbial scope replaces the generic role-derived HOST_SHARED_TARGET value.</span></dd></dl>
 
 
-<h2>Activity spectrum</h2>
+<h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">2 observations &middot; <a href="althiomycin/activity-1.html">Browse all observations</a> &middot; <a href="althiomycin/record-6ed7c4f2874e62926a424e8e0708c2a0eb895b68f2b20d06f125071c9ed51a56.json.gz" download>Complete record (JSON.gz)</a></p>
 <div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
-  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th></tr></thead>
-  <tr>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
     <td><em>Bacillus subtilis</em> <code class="curie">NCBITaxon:1423</code></td>
     <td><span class="pill">ACTIVE</span></td>
     <td class="num">—</td>
@@ -134,8 +136,13 @@ without a method is not an observation — every row here carries an assay.</p>
     <td class="meta">—</td>
     <td class="meta">
 —    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="2" data-identifier="CHEBI:157683" data-key="VQQNQKXWJMRPHT-GMLCBOFYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="althiomycin/activity-1-37f270a8752ab02ca6b4f677a17766516b3ca48530f1ca914feba0258aa6481f.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
+  <tr id="observation-2">
     <td><em>Staphylococcus aureus</em> <code class="curie">NCBITaxon:1280</code></td>
     <td><span class="pill">ACTIVE</span></td>
     <td class="num">—</td>
@@ -144,10 +151,17 @@ without a method is not an observation — every row here carries an assay.</p>
     <td class="meta">—</td>
     <td class="meta">
 —    </td>
+    <td><details class="activity-evidence" data-row="1" data-offset="0" data-total="2" data-identifier="CHEBI:157683" data-key="VQQNQKXWJMRPHT-GMLCBOFYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="althiomycin/activity-1-37f270a8752ab02ca6b4f677a17766516b3ca48530f1ca914feba0258aa6481f.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
+  </tbody>
 </table>
 
 </div>
+
 
 
 <h2>Producer organisms</h2>
