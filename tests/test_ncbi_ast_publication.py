@@ -101,7 +101,7 @@ def test_publication_audit_resolves_and_counts_all_artifacts(tmp_path, template,
     assert metrics["collection_bytes"] == sum(p.stat().st_size for p in written.parent.glob("*.jsonl.gz"))
     assert seed.ncbi_ast_sourced_activity_view(loaded) == seed.ncbi_ast_sourced_activity_view(fresh)
     html = (tmp_path / "pages" / Path(metrics["record"]).with_suffix(".html")).read_text()
-    publication.verify_activity_table(html, loaded["activity_spectrum"])
+    publication.verify_activity_table(html, loaded["activity_spectrum"], evidence=True)
 
 
 def test_merge_rejects_non_ast_source_loss():

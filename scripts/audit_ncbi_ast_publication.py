@@ -4,18 +4,23 @@
 from __future__ import annotations
 
 import argparse
+import gzip
+import hashlib
 import json
 import tempfile
 import time
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import unquote, urlsplit
 
 import yaml
+from activity_pages import FORMAT, INDEX_FORMAT, PAGE_SIZE, render_activity_pages, search_row
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from ncbi_ast_assays import DEFAULT_REVIEW_MAP
 from ncbi_ast_biosamples import DEFAULT_REVIEW
 from ncbi_ast_isolates import file_sha256
 from render_pages import TEMPLATES_DIR, build_record
+from render_pages import build as build_site
 from seed_from_sources import (
     CORPUS_DIR,
     REPO_ROOT,
@@ -46,8 +51,14 @@ class ActivityTable(HTMLParser):
         self.cell = None
         self.row = []
         self.matches = 0
+        self.anchors = []
+        self.details = []
+        self.links = []
 
     def handle_starttag(self, tag, attrs):
+        attributes = dict(attrs)
+        if tag == "a":
+            self.links.append(attributes)
         if tag == "table":
             if self.table:
                 raise ValueError("unexpected nested table")
@@ -56,10 +67,13 @@ class ActivityTable(HTMLParser):
             self.caption = []
         elif tag == "tr" and self.active:
             self.row = []
+            self.anchors.append(attributes.get("id"))
         elif tag == "td" and self.active:
             self.cell = []
         elif tag == "br" and self.cell is not None:
             self.cell.append(" ")
+        elif tag == "details" and self.active:
+            self.details.append(attributes)
 
     def handle_data(self, data):
         if self.caption is not None:
@@ -130,15 +144,88 @@ def displayed_cells(observation: dict) -> list[str]:
     ]
 
 
-def verify_activity_table(html: str, observations: list[dict]) -> None:
+def verify_activity_table(html: str, observations: list[dict], *, evidence=False, offset=0) -> None:
     parser = ActivityTable()
     parser.feed(html)
     parser.close()
     if parser.table or parser.cell is not None or parser.matches != int(bool(observations)):
         raise ValueError("missing, duplicated, or incomplete activity table")
     expected = [displayed_cells(observation) for observation in observations]
+    if evidence:
+        expected = [row + ["Evidence Page data (JSON.gz)"] for row in expected]
+        # The header row has no anchor; every scientific row must have its full-record ordinal.
+        if parser.anchors != [None, *[f"observation-{offset + i}" for i in range(1, len(observations) + 1)]]:
+            raise ValueError("activity observation anchors differ")
     if parser.rows != expected:
         raise ValueError("rendered activity rows differ from serialized observations")
+
+
+def verify_activity_publication(doc: dict, out_dir: Path, publication: dict) -> dict:
+    """Check every bounded row, data envelope, evidence link, index and complete download."""
+    observations = doc["activity_spectrum"]
+    first = out_dir / publication["pages"][0]
+    directory = first.parent
+    identity = {
+        "identifier": doc["identifier"],
+        "standard_inchi_key": doc["chemical_structure"]["standard_inchi_key"],
+        "total": len(observations),
+    }
+
+    def read_asset(path):
+        payload = path.read_bytes()
+        if not path.name.endswith(f"-{hashlib.sha256(payload).hexdigest()}.json.gz"):
+            raise ValueError("activity asset checksum mismatch")
+        return json.loads(gzip.decompress(payload))
+
+    download = directory / Path(publication["activity"]["download"]).name
+    if read_asset(download) != doc:
+        raise ValueError("complete record download differs")
+    index_path = directory / publication["activity"]["index"]
+    expected_index = {"format": INDEX_FORMAT, **identity,
+                      "rows": [search_row(i, row) for i, row in enumerate(observations, 1)]}
+    if read_asset(index_path) != expected_index:
+        raise ValueError("activity search index differs")
+    expected_pages = [directory / f"activity-{i}.html"
+                      for i in range(1, (len(observations) + PAGE_SIZE - 1) // PAGE_SIZE + 1)]
+    if [out_dir / page for page in publication["pages"]] != expected_pages:
+        raise ValueError("activity page coverage differs")
+    sizes = []
+    for number, page in enumerate(expected_pages, 1):
+        offset = (number - 1) * PAGE_SIZE
+        rows = observations[offset:offset + PAGE_SIZE]
+        html = page.read_text(encoding="utf-8")
+        verify_activity_table(html, rows, evidence=True, offset=offset)
+        parser = ActivityTable()
+        parser.feed(html)
+        data_links = [link["href"] for link in parser.links if link.get("class") == "activity-data"]
+        if len(data_links) != len(rows) or len(set(data_links)) != 1:
+            raise ValueError("missing or inconsistent activity evidence links")
+        if any(Path(link).name != link for link in data_links):
+            raise ValueError("activity data link escaped page directory")
+        data_path = directory / data_links[0]
+        if read_asset(data_path) != {"format": FORMAT, **identity, "offset": offset, "observations": rows}:
+            raise ValueError("complete activity page differs")
+        expected_details = [
+            {"class": "activity-evidence", "data-row": str(i), "data-offset": str(offset),
+             "data-total": str(len(observations)), "data-identifier": doc["identifier"],
+             "data-key": identity["standard_inchi_key"]} for i in range(len(rows))
+        ]
+        if parser.details != expected_details:
+            raise ValueError("activity evidence bindings differ")
+        for direction, target in [("prev", number - 1), ("next", number + 1)]:
+            expected = [f"activity-{target}.html"] * 2 if 1 <= target <= len(expected_pages) else []
+            actual = [link["href"] for link in parser.links if link.get("rel") == direction]
+            if actual != expected:
+                raise ValueError("activity pagination links differ")
+        if not any(link.get("href") == download.name and "download" in link for link in parser.links):
+            raise ValueError("complete download link missing")
+        sizes.append(page.stat().st_size)
+    return {
+        "activity_page_count": len(sizes), "activity_html_bytes": sum(sizes),
+        "max_activity_html_bytes": max(sizes), "download_bytes": download.stat().st_size,
+        "browser_data_bytes": sum(path.stat().st_size for path in publication["written"]
+                                  if path.suffix == ".gz" and path != download),
+    }
 
 
 def verify_merge(fresh: dict, existing: dict) -> dict:
@@ -175,8 +262,12 @@ def audit_record(fresh: dict, existing: dict, path: Path, directory: Path, templ
     if merge_with_existing(fresh, reloaded) != reloaded:
         raise ValueError("unchanged reseeding duplicated or changed record content/history")
     roundtrip_seconds = time.monotonic() - started - write_seconds
-    html = template.render(r=build_record(path, reloaded, index, root="../"), root="../", stats={})
-    verify_activity_table(html, reloaded.get("activity_spectrum", []))
+    publication = render_activity_pages(reloaded, path, directory / "pages", template.environment, {})
+    record = build_record(path, reloaded, index, root="../")
+    record.update(activity=publication["activity"], activity_spectrum=publication["preview"])
+    html = template.render(r=record, root="../", stats={})
+    verify_activity_table(html, publication["preview"], evidence=True)
+    page_metrics = verify_activity_publication(reloaded, directory / "pages", publication)
     html_path = directory / "pages" / relative.with_suffix(".html")
     html_path.parent.mkdir(parents=True, exist_ok=True)
     html_path.write_text(html, encoding="utf-8")
@@ -184,6 +275,7 @@ def audit_record(fresh: dict, existing: dict, path: Path, directory: Path, templ
     physical = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
     collections = physical.get("activity_collections", [])
     return {
+        **page_metrics,
         "identifier": fresh["identifier"],
         "record": str(relative),
         "observations": len(observations),
@@ -202,7 +294,36 @@ def audit_record(fresh: dict, existing: dict, path: Path, directory: Path, templ
     }
 
 
-def audit(inventory: Path, output: Path) -> dict:
+def verify_site_links(directory: Path) -> int:
+    """Check local page/download/style/script targets without requesting external URLs."""
+    class Links(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.targets = []
+
+        def handle_starttag(self, tag, attrs):
+            field = "href" if tag in {"a", "link"} else "src" if tag in {"script", "img"} else None
+            target = dict(attrs).get(field)
+            if target:
+                self.targets.append(target)
+
+    directory = directory.resolve()
+    checked = 0
+    for path in directory.rglob("*.html"):
+        parser = Links()
+        parser.feed(path.read_text(encoding="utf-8"))
+        for href in parser.targets:
+            url = urlsplit(href)
+            if url.scheme or url.netloc or not url.path:
+                continue
+            target = (path.parent / unquote(url.path)).resolve()
+            if not target.is_relative_to(directory) or not target.is_file():
+                raise ValueError(f"broken local site link: {path.relative_to(directory)} -> {href}")
+            checked += 1
+    return checked
+
+
+def audit(inventory: Path, output: Path, *, full_site: bool = False) -> dict:
     # Keep evaluation artifacts in the ignored report tree, never publishable paths.
     output = output.resolve()
     reports = (REPO_ROOT / "reports").resolve()
@@ -276,6 +397,18 @@ def audit(inventory: Path, output: Path) -> dict:
             print(json.dumps(metrics, sort_keys=True), flush=True)
         if not result["records"]:
             raise ValueError("no AST records audited")
+        if full_site:
+            # Replace rebuilt candidates with the validated, merged publication records.
+            for identifier, path in paths.items():
+                published = staged / "records" / path.relative_to(CORPUS_DIR)
+                records[identifier] = load_record(published if published.exists() else path)
+            site = staged / "site"
+            build_site(site, records=[(paths[i], records[i]) for i in sorted(records)])
+            for asset in (staged / "pages").rglob("*.gz"):
+                if asset.read_bytes() != (site / asset.relative_to(staged / "pages")).read_bytes():
+                    raise ValueError("full-site evidence/download differs from audited asset")
+            result["full_site"] = {"records": len(records), "local_links": verify_site_links(site)}
+            print(json.dumps(result["full_site"], sort_keys=True), flush=True)
         if any(
             not Path(path).is_file() or file_sha256(Path(path)) != checksum
             for path, checksum in hashes.items()
@@ -292,13 +425,19 @@ def audit(inventory: Path, output: Path) -> dict:
                 "collection_bytes",
                 "collection_files",
                 "html_bytes",
+                "activity_page_count",
+                "activity_html_bytes",
+                "download_bytes",
+                "browser_data_bytes",
             )
         }
         result["elapsed_seconds"] = round(time.monotonic() - started, 3)
         result["scope"] = (
             "Production record merge, closed-schema write, YAML round trip, reseed idempotence, "
-            "and complete record-template activity cells. No source adoption, independent phenotype "
-            "verification, full-site navigation test, or browser usability claim."
+            "bounded record/activity-page cells, complete evidence assets, search-index coverage, "
+            "and expanded-record downloads. No source adoption, independent phenotype "
+            "verification or browser usability claim. Full-site rendering/local link validation "
+            "is included only when the report has a full_site entry."
         )
         (staged / "audit.json").write_text(
             json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8"
@@ -313,8 +452,9 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--activity-report", type=Path, required=True)
     parser.add_argument("--output-directory", type=Path, required=True)
+    parser.add_argument("--full-site", action="store_true")
     args = parser.parse_args()
-    result = audit(args.activity_report, args.output_directory)
+    result = audit(args.activity_report, args.output_directory, full_site=args.full_site)
     print(json.dumps(result["totals"], indent=2))
 
 

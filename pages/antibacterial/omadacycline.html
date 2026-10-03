@@ -7,7 +7,7 @@
 <meta name="description" content="omadacycline (antibioticmech:aro-ea6589413a): An aminomethylcycline antibiotic that targets 16s rRNA in gram positive and gram negative bacteria.">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -87,14 +87,16 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 
 
-<h2>Activity spectrum</h2>
+<h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">3 observations &middot; <a href="omadacycline/activity-1.html">Browse all observations</a> &middot; <a href="omadacycline/record-91bda242f3e892143ebf0abd7e9d0d79c1e392d810047145b0f9045415b20cc9.json.gz" download>Complete record (JSON.gz)</a></p>
 <div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
-  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th></tr></thead>
-  <tr>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
     <td><em>Enterobacter cloacae complex</em> <code class="curie">NCBITaxon:354276</code></td>
     <td>—</td>
     <td class="num">16.0 mg/L</td>
@@ -103,8 +105,13 @@ without a method is not an observation — every row here carries an assay.</p>
     <td class="meta">1152</td>
     <td class="meta">
 BioSample <code class="curie">SAMN34111339</code><br>    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="3" data-identifier="antibioticmech:aro-ea6589413a" data-key="VJYKVCURWJGLPG-IQZGDKDPSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="omadacycline/activity-1-a4abab79356eab35c4279518757ba9d86918ddb071ead6dce923f2056ce101ec.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
+  <tr id="observation-2">
     <td><em>Klebsiella pneumoniae</em> <code class="curie">NCBITaxon:573</code></td>
     <td>—</td>
     <td class="num">16.0 mg/L</td>
@@ -113,8 +120,13 @@ BioSample <code class="curie">SAMN34111339</code><br>    </td>
     <td class="meta">1163</td>
     <td class="meta">
 BioSample <code class="curie">SAMN34111349</code><br>    </td>
+    <td><details class="activity-evidence" data-row="1" data-offset="0" data-total="3" data-identifier="antibioticmech:aro-ea6589413a" data-key="VJYKVCURWJGLPG-IQZGDKDPSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="omadacycline/activity-1-a4abab79356eab35c4279518757ba9d86918ddb071ead6dce923f2056ce101ec.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
-  <tr>
+  <tr id="observation-3">
     <td><em>Klebsiella pneumoniae</em> <code class="curie">NCBITaxon:573</code></td>
     <td>—</td>
     <td class="num">32.0 mg/L</td>
@@ -123,10 +135,17 @@ BioSample <code class="curie">SAMN34111349</code><br>    </td>
     <td class="meta">0347</td>
     <td class="meta">
 BioSample <code class="curie">SAMN11953775</code><br>    </td>
+    <td><details class="activity-evidence" data-row="2" data-offset="0" data-total="3" data-identifier="antibioticmech:aro-ea6589413a" data-key="VJYKVCURWJGLPG-IQZGDKDPSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="omadacycline/activity-1-a4abab79356eab35c4279518757ba9d86918ddb071ead6dce923f2056ce101ec.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
   </tr>
+  </tbody>
 </table>
 
 </div>
+
 
 
 

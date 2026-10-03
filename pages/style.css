@@ -115,6 +115,31 @@ body {
 .wrap { max-width: 60rem; margin: 0 auto; }
 .wrap.wide { max-width: 76rem; }
 
+[hidden] { display: none !important; }
+.activity-filters { display: flex; flex-wrap: wrap; gap: .75rem; align-items: end; margin: 1rem 0; }
+.activity-filters label { display: grid; gap: .2rem; font-size: .85rem; max-width: 100%; }
+.activity-filters label:first-child { flex: 1 1 16rem; }
+.activity-filters input, .activity-filters select, .activity-filters button,
+.activity-jump input, .activity-jump button,
+.activity-results-pager button, .activity-retry, .activity-detail button {
+  font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line);
+  border-radius: 4px; padding: .4rem .6rem; min-height: 2.5rem; max-width: 100%;
+}
+.activity-filters select { width: 100%; }
+.activity-jump { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: .5rem 0; }
+.activity-jump input { width: 6rem; }
+.activity-status { min-height: 1.6em; }
+.activity-evidence summary { cursor: pointer; white-space: nowrap; }
+.activity-evidence[open] { width: 32rem; max-width: 75vw; }
+.activity-detail { font-size: .85rem; overflow-wrap: anywhere; }
+.activity-detail dl { display: block; margin: .5rem 0; }
+.activity-detail dt { font-weight: 600; }
+.activity-detail dd { margin: 0 0 .5rem; }
+.activity-detail ol { padding-left: 1.2rem; }
+.activity-detail li { margin-bottom: .5rem; }
+.activity-results td { overflow-wrap: anywhere; }
+tr[id^="observation-"]:target { outline: 2px solid var(--accent); outline-offset: -2px; }
+
 header.site {
   position: relative;
   border-bottom: 1px solid var(--line);
