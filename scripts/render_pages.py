@@ -56,6 +56,9 @@ CHEMICAL_MAP_ARTIFACT = REPO_ROOT / "data" / "embeddings" / "chemical-structure-
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 from seed_from_sources import CLASS_DIRS, class_parents, rollup_by_class  # noqa: E402
 
+sys.path.insert(0, str(REPO_ROOT / "src"))
+from antibioticmech.text_map_site import PreparedTextMap, prepare_text_map  # noqa: E402
+
 MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "MANIFEST.yaml"
 
 # Where the site is served from; the sitemap needs absolute URLs.
@@ -366,6 +369,12 @@ def class_hierarchy() -> dict[str, list[str]]:
 
 
 def build(out_dir: Path) -> None:
+    # Validate the complete current inputs before changing a published site.
+    with prepare_text_map(REPO_ROOT) as text_map:
+        _build(out_dir, text_map)
+
+
+def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
     records = load_records()
     chemical_map = load_chemical_map({doc["identifier"] for _, doc in records})
     if not records:
@@ -377,6 +386,8 @@ def build(out_dir: Path) -> None:
         trim_blocks=True,
         lstrip_blocks=True,
     )
+
+    env.globals["text_map_enabled"] = text_map is not None
 
     # A CURIE referenced by another record (parent_compounds, xrefs,
     # activity_roles, a molecular target, a resistance determinant) is
@@ -400,6 +411,8 @@ def build(out_dir: Path) -> None:
             f"a previously rendered site."
         )
     out_dir.mkdir(parents=True, exist_ok=True)
+    if text_map is not None:
+        text_map.stage(out_dir)
     class_dirs = sorted({path.parent.name for path, _ in records})
     for class_dir in class_dirs:
         (out_dir / class_dir).mkdir(exist_ok=True)
@@ -631,6 +644,8 @@ def build(out_dir: Path) -> None:
     (out_dir / ".nojekyll").write_text("", encoding="utf-8")
 
     listed = ["index.html", "browse.html", "chemical-map.html", "404.html"] + class_pages
+    if text_map is not None:
+        listed.append("text-map/index.html")
     listed += [f"{path.parent.name}/{path.stem}.html" for path, _ in records]
     urls = "\n".join(f"  <url><loc>{SITE_BASE}{page}</loc></url>" for page in listed)
     (out_dir / "sitemap.xml").write_text(
@@ -654,6 +669,9 @@ def build(out_dir: Path) -> None:
         out_dir / ".nojekyll",
         out_dir / "sitemap.xml", out_dir / "robots.txt",
     }
+    if text_map is not None:
+        written |= {out_dir / "text-map" / name
+                    for name in ("index.html", "points.json", "manifest.json")}
     if map_rendered:
         written.add(out_dir / "map.html")
     written |= {out_dir / page for page in class_pages}
