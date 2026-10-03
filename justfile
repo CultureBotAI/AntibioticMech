@@ -71,7 +71,7 @@ evaluate-hivdb *args:
 evaluate-amrfinder *args:
     uv run python scripts/evaluate_amrfinderplus.py {{args}}
 
-# Download a count-checked native AST Browser export and checksum manifest.
+# Download count-checked AST measurements or linked isolate metadata with a checksum manifest.
 fetch-ncbi-ast *args:
     uv run python scripts/fetch_ncbi_ast.py {{args}}
 

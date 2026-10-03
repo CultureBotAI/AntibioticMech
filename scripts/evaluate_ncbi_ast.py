@@ -21,6 +21,13 @@ from functools import lru_cache
 from pathlib import Path
 
 import yaml
+from ncbi_ast_isolates import (
+    ISOLATE_PROVENANCE_COLUMNS,
+    IsolateSnapshot,
+    file_sha256,
+    load_isolate_snapshot,
+    require_isolate_provenance,
+)
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 STANDARD_INCHI_KEY_PATTERN = re.compile(r"^[A-Z]{14}-[A-Z]{10}-[A-Z]$")
@@ -160,6 +167,7 @@ ACTIVITY_REPORT_COLUMNS = [
     "activity_group_id",
     "source_version",
     "source_retrieved_on",
+    *ISOLATE_PROVENANCE_COLUMNS,
     "ast_row_count",
     "isolate_count",
     *ACTIVITY_REPORT_GROUP_COLUMNS,
@@ -975,6 +983,60 @@ def project_dedupe_hit(
     return None
 
 
+def enrich_isolate_identity(
+    rows: list[dict[str, str]], snapshot: IsolateSnapshot,
+) -> list[dict[str, str]]:
+    """Join only exact versioned targets with agreeing sample/project/name context."""
+    enriched = []
+    for number, row in enumerate(rows, start=1):
+        target = first_value(row, TARGET_ALIASES)
+        record = snapshot.records.get(target)
+        if record is None:
+            raise ValueError(f"AST row {number}: no exact isolate target {target!r}")
+        checks = (
+            (TARGET_ALIASES, "target_acc", True),
+            (BIOSAMPLE_ALIASES, "biosample_acc", True),
+            (BIOPROJECT_ALIASES, "bioproject_acc", True),
+            (TAXON_ID_ALIASES, "taxid", False),
+            (ASSEMBLY_ALIASES, "asm_acc", False),
+            (STRAIN_ALIASES, "strain", False),
+        )
+        for aliases, field, required in checks:
+            expected = record[field]
+            values = [
+                row[key].translate(SOURCE_TSV_CONTROL_TRANSLATION).strip()
+                for key in matching_headers(tuple(row), tuple(aliases))
+                if row[key] is not None and row[key].strip()
+            ]
+            if field == "taxid":
+                values = [value.removeprefix("NCBITaxon:") for value in values]
+            if (
+                (required and not values) or len(set(values)) > 1
+                or (expected and any(v != expected for v in values))
+            ):
+                raise ValueError(f"AST row {number} {target}: conflicting or missing {field}")
+        # Organism-group labels can intentionally be broader than scientific_name.
+        names = []
+        for alias in TAXON_ALIASES:
+            names = [
+                row[key].translate(SOURCE_TSV_CONTROL_TRANSLATION).strip()
+                for key in matching_headers(tuple(row), (alias,))
+                if row[key] is not None and row[key].strip()
+            ]
+            if names:
+                break
+        if not names or any(name != record["scientific_name"] for name in names):
+            raise ValueError(f"AST row {number} {target}: conflicting scientific_name")
+        out = dict(row)
+        out["taxid"] = record["taxid"]
+        if record["asm_acc"]:
+            out["assembly_accession"] = record["asm_acc"]
+        if record["strain"]:
+            out["strain"] = record["strain"]
+        enriched.append(out)
+    return enriched
+
+
 def activity_report_context(
     row: dict[str, str],
     project_dedupe: dict[tuple[str, str], dict[str, str]],
@@ -1183,6 +1245,7 @@ def exact_activity_rows(
     source_version: str,
     source_retrieved_on: str,
     project_dedupe: dict[tuple[str, str], dict[str, str]] | None = None,
+    isolate_snapshot: IsolateSnapshot | None = None,
 ) -> list[dict[str, str]]:
     """Return grouped, dedupe-ready exact AST measurements without seeding claims."""
 
@@ -1218,6 +1281,10 @@ def exact_activity_rows(
             "activity_group_id": activity_group_id(row),
             "source_version": source_version,
             "source_retrieved_on": source_retrieved_on,
+            "isolate_source_version": isolate_snapshot.source_version if isolate_snapshot else "",
+            "isolate_source_retrieved_on": (
+                isolate_snapshot.source_retrieved_on if isolate_snapshot else ""
+            ),
             "ast_row_count": counts[group_key],
             "isolate_count": len(isolates[group_key]),
             **row,
@@ -2196,6 +2263,7 @@ def require_activity_report_rows(rows: list[dict], path: Path) -> None:
     seen_group_ids = set()
     expected_source_version = None
     expected_source_retrieved_on = None
+    expected_isolate_provenance = None
     for row_number, raw_row in enumerate(rows, start=1):
         prefix = f"{path}: output row {row_number}"
         for field, value in raw_row.items():
@@ -2211,6 +2279,11 @@ def require_activity_report_rows(rows: list[dict], path: Path) -> None:
             field: str(raw_row[field])
             for field in ACTIVITY_REPORT_COLUMNS
         }
+        isolate_provenance = require_isolate_provenance(row, prefix)
+        if expected_isolate_provenance is None:
+            expected_isolate_provenance = isolate_provenance
+        elif isolate_provenance != expected_isolate_provenance:
+            raise ValueError(f"{prefix}: inconsistent isolate snapshot provenance")
         for field in REQUIRED_ACTIVITY_REPORT_COLUMNS:
             if not row[field].strip():
                 raise ValueError(f"{prefix}: {field} is required")
@@ -2483,6 +2556,10 @@ def main() -> int:
         help="Optional TSV summarizing each submitted antibiotic value.",
     )
     parser.add_argument(
+        "--isolate-snapshot", type=Path,
+        help="Optional checksum-pinned isolate snapshot directory for exact taxon/genome joins.",
+    )
+    parser.add_argument(
         "--activity-report",
         type=Path,
         help=(
@@ -2547,6 +2624,8 @@ def main() -> int:
         ),
     )
     args = parser.parse_args()
+    if args.isolate_snapshot and not args.ast:
+        parser.error("--isolate-snapshot requires --ast.")
     if args.activity_report and not args.drug_map:
         parser.error("--activity-report requires --drug-map with exact curated mappings.")
     if (
@@ -2596,6 +2675,11 @@ def main() -> int:
         parser,
         (
             ("--ast", args.ast),
+            ("--isolate-snapshot", args.isolate_snapshot),
+            ("isolate snapshot manifest", args.isolate_snapshot / "snapshot.json"
+             if args.isolate_snapshot else None),
+            ("isolate snapshot data", args.isolate_snapshot / "isolates.json"
+             if args.isolate_snapshot else None),
             ("--drug-map", args.drug_map),
             ("--project-dedupe-map", args.project_dedupe_map),
             ("--validate-activity-report", args.validate_activity_report),
@@ -2635,6 +2719,12 @@ def main() -> int:
 
     rows = read_table(args.ast)
     require_any_antibiotic_value(rows, args.ast)
+    isolate_snapshot = None
+    if args.isolate_snapshot:
+        if args.source_version != "ast-browser-sha256:" + file_sha256(args.ast):
+            parser.error("--isolate-snapshot requires --source-version to match the AST file SHA-256.")
+        isolate_snapshot = load_isolate_snapshot(args.isolate_snapshot)
+        rows = enrich_isolate_identity(rows, isolate_snapshot)
     mappings = (
         read_drug_map(args.drug_map, structure_keys, source_version=args.source_version)
         if args.drug_map
@@ -2659,6 +2749,7 @@ def main() -> int:
             source_version=args.source_version,
             source_retrieved_on=args.source_retrieved_on,
             project_dedupe=project_dedupe,
+            isolate_snapshot=isolate_snapshot,
         )
         if args.activity_report or (args.validate_activity_report and mappings)
         else []
@@ -2706,6 +2797,9 @@ def main() -> int:
     }).most_common(10)
 
     print("NCBI Pathogen Detection AST audit")
+    if isolate_snapshot:
+        print(f"  isolate_source_version={isolate_snapshot.source_version}")
+        print(f"  isolate_source_retrieved_on={isolate_snapshot.source_retrieved_on}")
     print(
         f"  rows={result['total_rows']} rows_with_antibiotic={result['rows_with_antibiotic']} "
         f"antibiotic_values={result['antibiotic_values']}"
