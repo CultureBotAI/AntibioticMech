@@ -49,6 +49,7 @@ from ncbi_ast_assays import (
     read_assay_review,
 )
 from ncbi_ast_biosamples import activity_observations as ncbi_ast_observations
+from ncbi_ast_inventory import open_activity_text, resolve_inventory
 from ncbi_ast_isolates import ISOLATE_REFERENCE, require_isolate_provenance
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
@@ -3099,7 +3100,7 @@ def load_ncbi_ast_activity_inventory(path: Path) -> list[dict[str, str]]:
     expected_source_version = None
     expected_source_retrieved_on = None
     expected_isolate_provenance = None
-    with path.open(newline="", encoding="utf-8") as handle:
+    with open_activity_text(path) as handle:
         reader = csv.DictReader(handle, delimiter="\t")
         if reader.fieldnames != NCBI_AST_ACTIVITY_COLUMNS:
             raise ValueError(
@@ -3274,7 +3275,7 @@ def attach_ncbi_ast_activity(
     """Attach compact NCBI AST groups when their curated exact report is present."""
     counts: Counter = Counter()
     if inventory is None:
-        inventory = NCBI_AST_ACTIVITY_INVENTORY
+        inventory = resolve_inventory(NCBI_AST_ACTIVITY_INVENTORY)
     elif not inventory.is_file():
         raise ValueError(f"explicit NCBI AST inventory does not exist: {inventory}")
     if not inventory.exists():

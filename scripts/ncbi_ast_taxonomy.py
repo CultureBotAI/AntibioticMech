@@ -14,7 +14,8 @@ from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-from ncbi_ast_isolates import file_sha256, require_iso_date
+from ncbi_ast_inventory import activity_report_sha256
+from ncbi_ast_isolates import require_iso_date
 
 ENDPOINT = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
 SOURCE = "NCBI_TAXONOMY_EFETCH"
@@ -86,7 +87,7 @@ def fetch_snapshot(activity_report: Path, output_dir: Path) -> dict:
 
     if output_dir.exists():
         raise ValueError(f"snapshot directory already exists: {output_dir}")
-    checksum = file_sha256(activity_report)
+    checksum = activity_report_sha256(activity_report)
     rows = load_ncbi_ast_activity_inventory(activity_report)
     if not rows:
         raise ValueError("taxonomy snapshot requires a nonempty activity report")
@@ -98,7 +99,7 @@ def fetch_snapshot(activity_report: Path, output_dir: Path) -> dict:
     with urlopen(request, timeout=300) as response:
         payload = response.read()
     parse_taxonomy(payload, requested)
-    if file_sha256(activity_report) != checksum:
+    if activity_report_sha256(activity_report) != checksum:
         raise ValueError("activity report changed during taxonomy retrieval")
     metadata = {
         "source": SOURCE, "source_retrieved_on": started.date().isoformat(),
@@ -126,7 +127,7 @@ def load_snapshot(directory: Path, activity_report: Path, rows: list[dict]) -> d
             or metadata.get("file") != "taxonomy.xml" or metadata.get("endpoint") != ENDPOINT):
         raise ValueError("not an NCBI taxonomy snapshot")
     require_iso_date(metadata.get("source_retrieved_on"), "taxonomy snapshot")
-    if metadata.get("activity_report_sha256") != file_sha256(activity_report):
+    if metadata.get("activity_report_sha256") != activity_report_sha256(activity_report):
         raise ValueError("taxonomy snapshot activity report checksum mismatch")
     requested = requested_taxids(rows)
     if metadata.get("requested_taxids") != requested:
