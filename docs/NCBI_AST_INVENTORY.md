@@ -3,7 +3,9 @@
 The exact activity report supports plain UTF-8 TSV and gzip-compressed TSV
 (`.tsv.gz`). Compression changes storage only, not scientific rows, group IDs,
 compound mappings, assay decisions, or paired BioSample/genome observations.
-NCBI AST remains `EVALUATING`; these commands do not adopt the source.
+NCBI AST adoption is `BLOCKED` pending source-terms clarification; these
+commands remain non-publishing evaluation tools and do not adopt the source.
+See the [2026-10-04 terms review](../research/2026-10-04-ncbi-ast-source-terms.md).
 
 ## Checksum Contract
 
