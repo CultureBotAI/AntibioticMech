@@ -15,7 +15,17 @@ grant for all submitted phenotypes and metadata in this cohort. This is a
 repository adoption decision under the source-queue policy, not a conclusion
 that NCBI prohibits reuse or that individual measurements are copyrightable.
 
-No evaluated inventory, collection or observation is installed in production.
+No evaluated bulk inventory or AST activity collection/observation is installed
+in the production corpus. This does **not** mean no source-derived evidence has
+been committed: `curation/ncbi_ast_biosample_review.json` already contains 62
+`antibiogram_row` evidence objects, and `curation/ncbi_ast_assay_review.json`
+retains 60 source assay contexts. The dated research reports also discuss source
+examples. These review artifacts are public repository content, not ignored raw
+snapshots. They are examples of retained evidence, not an exhaustive rights
+inventory. The clarification must cover this existing material as well as the
+proposed bulk adoption. This change does not remove earlier curation or resolve
+its terms by calling it review evidence; that retrospective scope remains open
+under #1040.
 The technical audits remain useful; passing them does not resolve this gate.
 #1040 stays open for the uncompleted production-adoption checklist.
 
@@ -125,6 +135,12 @@ reviewed subset contains 213,144 source groups representing 213,082 measured
 observations on 40 exact compounds. We would preserve source accessions and
 citations, normalize units and schema, disclose transformations, and provide
 downloadable derived records for commercial and noncommercial reuse.
+
+The bulk inventory and AST corpus observations have not been adopted. Our public
+repository already contains limited source-derived review evidence, including
+62 BioSample antibiogram rows and 60 assay contexts, plus examples discussed in
+research reports. Please include this retained evidence in the clarification;
+we are not assuming that review artifacts are exempt from applicable terms.
 
 Does NCBI's molecular-data policy apply to these submitted AST phenotypes and
 all four metadata surfaces above? Please identify the applicable authoritative
