@@ -67,6 +67,14 @@ evaluate-cryptic *args:
 evaluate-cryptic-membership *args:
     uv run --extra source-ingest python scripts/evaluate_cryptic_membership.py {{args}}
 
+# Stage normalized membership inputs; --apply requires the staged-cohort review.
+extract-cryptic-memberships *args:
+    uv run --extra source-ingest python scripts/extract_cryptic_memberships.py {{args}}
+
+# Independently check production membership, optionally against raw files and pages.
+audit-cryptic-memberships *args:
+    uv run --extra source-ingest python scripts/audit_cryptic_memberships.py {{args}}
+
 # Evaluate Stanford HIVDB hivfacts drugs without seeding resistance assertions.
 evaluate-hivdb *args:
     uv run python scripts/evaluate_hivdb_hivfacts.py {{args}}

@@ -15,6 +15,7 @@ from urllib.parse import unquote, urlsplit
 
 import yaml
 from activity_pages import FORMAT, INDEX_FORMAT, PAGE_SIZE, render_activity_pages, search_row
+from audit_membership_publication import audit_membership_publication
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from ncbi_ast_assays import DEFAULT_REVIEW_MAP
 from ncbi_ast_biosamples import DEFAULT_REVIEW
@@ -33,6 +34,7 @@ from seed_from_sources import (
 from verify_corpus import rebuild
 
 from antibioticmech.activity_collections import load_record
+from antibioticmech.activity_memberships import FIELD, collection_bytes
 from antibioticmech.validation.write_validated import write_validated_antibiotic
 
 
@@ -150,13 +152,19 @@ def displayed_cells(observation: dict) -> list[str]:
     ]
 
 
-def verify_activity_table(html: str, observations: list[dict], *, evidence=False, offset=0) -> None:
+def verify_activity_table(html: str, observations: list[dict], *, evidence=False, offset=0,
+                          memberships=None) -> None:
     parser = ActivityTable()
     parser.feed(html)
     parser.close()
     if parser.table or parser.cell is not None or parser.matches != int(bool(observations)):
         raise ValueError("missing, duplicated, or incomplete activity table")
     expected = [displayed_cells(observation) for observation in observations]
+    for i, row in enumerate(expected, offset + 1):
+        if i in (memberships or {}):
+            member = memberships[i]
+            prefix = f"{member['count']} source isolates {member['measurements']} measurements"
+            row[6] = prefix if row[6] == "\u2014" else f"{prefix} {row[6]}"
     if evidence:
         expected = [row + ["Evidence Page data (JSON.gz)"] for row in expected]
         # The header row has no anchor; every scientific row must have its full-record ordinal.
@@ -186,23 +194,34 @@ def verify_activity_publication(doc: dict, out_dir: Path, publication: dict) -> 
     download = directory / Path(publication["activity"]["download"]).name
     if read_asset(download) != doc:
         raise ValueError("complete record download differs")
+    memberships = audit_membership_publication(doc, directory)
     index_path = directory / publication["activity"]["index"]
     expected_index = {"format": INDEX_FORMAT, **identity,
                       "rows": [search_row(i, row) for i, row in enumerate(observations, 1)]}
+    if memberships["entries"]:
+        expected_index["memberships"] = memberships["entries"]
+        for number, link in memberships["links"].items():
+            row = expected_index["rows"][number - 1]
+            row[6] = " ".join(filter(None, (row[6], f"{link['count']} source isolates")))
     if read_asset(index_path) != expected_index:
         raise ValueError("activity search index differs")
     expected_pages = [directory / f"activity-{i}.html"
                       for i in range(1, (len(observations) + PAGE_SIZE - 1) // PAGE_SIZE + 1)]
-    if [out_dir / page for page in publication["pages"]] != expected_pages:
+    if [out_dir / page for page in publication["pages"]] != expected_pages + memberships["pages"]:
         raise ValueError("activity page coverage differs")
     sizes = []
     for number, page in enumerate(expected_pages, 1):
         offset = (number - 1) * PAGE_SIZE
         rows = observations[offset:offset + PAGE_SIZE]
         html = page.read_text(encoding="utf-8")
-        verify_activity_table(html, rows, evidence=True, offset=offset)
+        verify_activity_table(html, rows, evidence=True, offset=offset, memberships=memberships["links"])
         parser = ActivityTable()
         parser.feed(html)
+        for ordinal in range(offset + 1, offset + len(rows) + 1):
+            if ordinal in memberships["links"] and not any(
+                link.get("href") == memberships["links"][ordinal]["href"] for link in parser.links
+            ):
+                raise ValueError("membership observation link missing")
         expected_browser = {
             "id": "activity-browser", "data-index": index_path.name,
             "data-identifier": doc["identifier"], "data-key": identity["standard_inchi_key"],
@@ -267,7 +286,9 @@ def audit_record(fresh: dict, existing: dict, path: Path, directory: Path, templ
     merged = verify_merge(fresh, existing)
     relative = path.relative_to(CORPUS_DIR)
     yaml_path = directory / "records" / relative
-    write_validated_antibiotic(merged, yaml_path)
+    write_validated_antibiotic(merged, yaml_path, membership_artifacts={
+        reference["path"]: collection_bytes(reference, path) for reference in merged.get(FIELD, [])
+    })
     write_seconds = time.monotonic() - started
     reloaded = load_record(yaml_path)
     if reloaded != merged:
@@ -279,7 +300,8 @@ def audit_record(fresh: dict, existing: dict, path: Path, directory: Path, templ
     record = build_record(path, reloaded, index, root="../")
     record.update(activity=publication["activity"], activity_spectrum=publication["preview"])
     html = template.render(r=record, root="../", stats={})
-    verify_activity_table(html, publication["preview"], evidence=True)
+    verify_activity_table(html, publication["preview"], evidence=True,
+                          memberships=publication["activity"].get("memberships"))
     page_metrics = verify_activity_publication(reloaded, directory / "pages", publication)
     html_path = directory / "pages" / relative.with_suffix(".html")
     html_path.parent.mkdir(parents=True, exist_ok=True)

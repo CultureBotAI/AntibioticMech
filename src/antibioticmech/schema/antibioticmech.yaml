@@ -324,6 +324,17 @@ classes:
         minimum_cardinality: 1
         range: ActivityCollection
 
+      activity_membership_collections:
+        description: >-
+          Content-addressed source-isolate registries and measurement multiplicities
+          for grouped activity observations. Membership does not assert a strain,
+          taxon identifier, genome assembly, or species-wide resistance. Each group
+          is bound to the complete observation by its canonical JSON checksum.
+        multivalued: true
+        inlined_as_list: true
+        minimum_cardinality: 1
+        range: ActivityMembershipCollection
+
       activity_spectrum:
         description: >-
           Measured or curated activity against specific taxa. Each item is one
@@ -1076,6 +1087,79 @@ classes:
       source_retrieved_on:
         required: true
         range: date
+
+  ActivityMembershipCollection:
+    description: >-
+      One bounded gzip JSON artifact with exact compound identity, source provenance,
+      a source-isolate registry, and groups of registry indices and measurement
+      counts. A registry entry pairs its source_isolate_id with sequencing_context
+      (BioSample, BioProject, and run), or explicit null when absent from the pinned
+      sequencing snapshot. Missing context does not mean an isolate was never
+      sequenced; a run does not establish a successful assembly. The loader checks
+      all indices, observation hashes, group coverage, counts, and provenance.
+    attributes:
+      format:
+        required: true
+        pattern: "^antibioticmech-activity-memberships-v1$"
+      path:
+        required: true
+        pattern: "^membership-[a-f0-9]{64}\\.json\\.gz$"
+      sha256:
+        required: true
+        pattern: "^[a-f0-9]{64}$"
+      byte_size:
+        required: true
+        range: integer
+        minimum_value: 1
+        maximum_value: 16777216
+      uncompressed_byte_size:
+        required: true
+        range: integer
+        minimum_value: 1
+        maximum_value: 16777216
+      source:
+        required: true
+      source_version:
+        required: true
+      source_reference:
+        required: true
+        range: uri
+        pattern: "^https://[^/]+/.*$"
+      source_retrieved_on:
+        description: Retrieval date of the supporting sequencing snapshot, not the assays.
+        required: true
+        range: date
+      source_snapshot_sha256:
+        description: Checksum of the source sequencing snapshot used for the join.
+        required: true
+        pattern: "^[a-f0-9]{64}$"
+      activity_inventory_sha256:
+        description: Checksum of the adopted grouped phenotype inventory.
+        required: true
+        pattern: "^[a-f0-9]{64}$"
+      subject_count:
+        description: Distinct source isolate IDs within this compound, not across compounds.
+        required: true
+        range: integer
+        minimum_value: 1
+      observation_count:
+        required: true
+        range: integer
+        minimum_value: 1
+      membership_count:
+        description: Sum of source isolate IDs within groups; an isolate may occur in several groups.
+        required: true
+        range: integer
+        minimum_value: 1
+      measurement_count:
+        required: true
+        range: integer
+        minimum_value: 1
+      unlinked_subject_count:
+        description: Distinct source isolate IDs with no join to the pinned sequencing snapshot.
+        required: true
+        range: integer
+        minimum_value: 0
 
   PathogenDetectionContext:
     description: >-

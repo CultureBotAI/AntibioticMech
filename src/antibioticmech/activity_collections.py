@@ -238,16 +238,20 @@ def expand_activities(doc: dict, record_path: Path) -> dict:
 
 
 def load_record(path: Path) -> dict:
+    from antibioticmech.activity_memberships import validate_memberships
+
     document = yaml.safe_load(path.read_text(encoding="utf-8"))
     if not isinstance(document, dict):
         raise ValueError(f"{path}: expected a record mapping")
-    return expand_activities(document, path)
+    expanded = expand_activities(document, path)
+    validate_memberships(expanded, path)
+    return expanded
 
 
-def write_artifacts(artifacts: dict[str, bytes], directory: Path) -> None:
+def write_artifacts(artifacts: dict[str, bytes], directory: Path, *, pattern=ARTIFACT_NAME) -> None:
     """Install immutable artifacts before the record references them."""
     for name, payload in artifacts.items():
-        match = ARTIFACT_NAME.fullmatch(name)
+        match = pattern.fullmatch(name)
         if not match or hashlib.sha256(payload).hexdigest() != match[1] or len(payload) > MAX_BYTES:
             raise ValueError("invalid activity artifact name or content address")
     for name, payload in artifacts.items():

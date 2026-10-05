@@ -223,6 +223,52 @@ identify. Genome and sample accessions are not organism identifiers, so
 `source_version`, `source_retrieved_on` and `source_observation_id` so a re-run
 can replace exactly the observations owned by that upstream lane.
 
+Grouped CRyPTIC observations retain their original assay claims in YAML, while
+`activity_membership_collections` references one bounded, content-addressed
+`membership-<sha256>.json.gz` sibling per compound and source version. Its
+`subjects` registry pairs each `source_isolate_id` (CRyPTIC UNIQUEID) with a
+`sequencing_context` containing BioSample, BioProject, and run accessions, or
+explicit `null` for no join to the pinned WGS snapshot. Source IDs are not strain
+names, TaxIDs, or assemblies. Shared BioSamples do not collapse distinct source
+IDs; missing joins do not establish that an isolate was never sequenced.
+
+Each `groups` entry names a `source_observation_id`, binds the entire observation
+with `observation_sha256`, and lists `{subject_index, measurement_count}` members.
+Indices are zero-based; counts preserve repeated measurements within a group.
+The canonical observation checksum covers ASCII-escaped, key-sorted, compact JSON
+with a trailing newline. The Python writer is the canonical serializer, including
+its distinction between integer and floating-point number representations. The
+loader rejects stale observation hashes, incomplete group coverage, duplicate IDs,
+dangling or unused indices, partial sequencing contexts, identity/provenance/count
+drift, and artifacts above 16 MiB compressed or expanded. YAML descriptors retain
+the WGS snapshot checksum and retrieval date separately from the phenotype
+inventory checksum. Changing an assay requires regenerating its membership binding.
+
+The reproducible CRyPTIC inputs are `data/raw/cryptic_activity.tsv`,
+`cryptic_isolates.tsv.gz`, and `cryptic_memberships.tsv.gz`, pinned in `MANIFEST.yaml`
+alongside the exact drug map and WGS snapshot. Stage them with
+`just extract-cryptic-memberships --wgs-retrieved-on <actual-date> --output-dir
+reports/<new-directory>`; inspect the full-cohort report before repeating with
+`--apply` and a new staging directory. This extraction is offline and verifies the
+pinned release files. Use the standard dry-run, validated-writer canary, and bulk
+seed workflow afterward. Reseeding replaces only the `CRYPTIC` membership slice
+and records a curation event; unrelated sources and curated observations survive.
+`just verify-corpus` reproduces the references and validates the physical artifacts.
+Generated activity pages link each group to a paginated source-isolate view, index
+source IDs and paired accessions, and offer lossless registry downloads. The complete
+JSON record uses the same relative sibling references as the YAML record.
+
+`just audit-cryptic-memberships --raw-release downloads/cryptic_3.4.0 --pages pages`
+checks every member against the adopted inputs, original typed Parquet groups,
+paired sequencing contexts, published observation links, and searchable accessions.
+Browser QA is repeatable with `node tests/membership_browser.playwright.cjs pages
+reports/<new-directory>` when Playwright and Chrome are installed. Set
+`PLAYWRIGHT_MODULE` to an existing module path when it is not on Node's module
+search path. The loopback-only test blocks external browser requests and checks
+pagination, accession search, invalid selections, corrupt-data retry, and readable
+desktop/mobile geometry; it saves screenshots and a JSON report. Node unit tests
+run under pytest separately; the Playwright check is an explicit local QA step.
+
 Hence `just worklist --queue producer-candidate` and `--queue activity-candidate`
 are **queues, not extractions**. Each row carries the matched phrase, what that
 phrase actually claims, and the candidate subject; a curator supplies the

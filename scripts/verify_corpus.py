@@ -45,6 +45,7 @@ from seed_from_sources import (  # noqa: E402
     attach_aro_mechanism,
     attach_bindingdb_targets,
     attach_cryptic_activity,
+    attach_cryptic_memberships,
     attach_fda_clinical_status,
     attach_hivdb_score_rules,
     attach_mibig_producers,
@@ -53,6 +54,7 @@ from seed_from_sources import (  # noqa: E402
     bindingdb_sourced_target_view,
     build_concepts,
     card_sourced_view,
+    cryptic_membership_view,
     cryptic_sourced_activity_view,
     curator_owns_mode_of_action,
     fda_sourced_clinical_view,
@@ -91,6 +93,7 @@ def rebuild(*, ncbi_ast_inventory: Path | None = None) -> dict[str, dict]:
     attach_phibase_resistance(records)
     attach_bindingdb_targets(records)
     attach_cryptic_activity(records)
+    attach_cryptic_memberships(records)
     attach_ncbi_ast_activity(records, inventory=ncbi_ast_inventory)
     attach_hivdb_score_rules(records)
     attach_mibig_producers(
@@ -139,6 +142,8 @@ def main() -> int:
             drifted.append((path, "molecular_targets"))
         if cryptic_sourced_activity_view(want) != cryptic_sourced_activity_view(actual):
             drifted.append((path, "activity_spectrum"))
+        if cryptic_membership_view(want) != cryptic_membership_view(actual):
+            drifted.append((path, "activity_membership_collections"))
         if ncbi_ast_sourced_activity_view(want) != ncbi_ast_sourced_activity_view(actual):
             drifted.append((path, "activity_spectrum"))
         if hivdb_sourced_score_rule_view(want) != hivdb_sourced_score_rule_view(actual):

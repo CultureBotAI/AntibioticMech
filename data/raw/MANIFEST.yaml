@@ -50,6 +50,12 @@ sources:
     retrieved_on: '2026-09-26'
     row_policy: Exact drug-code mappings grouped by release table, drug, raw method,
       phenotype, quality, and MIC shape
+    membership:
+      retrieved_on: '2026-10-05'
+      source_snapshot_sha256: b4ca79ecef0937fa0a3c304b82dcc0b45f49bd5ce404a4e6009181f4cdf62bb2
+      activity_inventory_sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+      drug_map_sha256: 69643f9b5e6dfc91761a4541317de63c5dca565131f6a07a3193878d7f863a54
+      generated_by: scripts/extract_cryptic_memberships.py
   stanford-hivdb:
     homepage: https://github.com/hivdb/hivfacts
     license: Unlicense
@@ -146,6 +152,11 @@ downloads:
     url: https://github.com/hivdb/hivfacts/archive/be1c11a5145fea9073fdb71801919d4a34265336.tar.gz
     bytes: 11463058
     sha256: 739fabb7e15a96688af5990b3a56d0ca57a2cf612417dcaf35b69637f8deb4e9
+  WGS_SAMPLES.parquet:
+    url: https://zenodo.org/records/15680920/files/WGS_SAMPLES.parquet?download=1
+    sha256: b4ca79ecef0937fa0a3c304b82dcc0b45f49bd5ce404a4e6009181f4cdf62bb2
+    bytes: 9410557
+    retrieved_on: '2026-10-05'
 inventories:
   aro_antibiotics.tsv:
     rows: 644
@@ -202,3 +213,21 @@ inventories:
     bytes: 105943
     sha256: fdecfc0f3f98c09ac8b8255495e7eb6598b0af13db80c6f74c3aab46d4f62dad
     source: Stanford HIVDB hivfacts HIVDB 10.2 exact-mapped score-rule terms
+  cryptic_isolates.tsv.gz:
+    rows: 65444
+    encoding: gzip
+    sha256: 7d51bf3032e295a56e2543f52f12e59d6a8589ad6f2208e2314a154e6e8cf2c5
+    bytes: 760065
+    content_sha256: 0c289fc07b5a974e41eeea67c60357d528c013175857984ef9c44ea6727f91e4
+    content_bytes: 5265399
+    source: CRyPTIC 3.4.0 exact adopted phenotype groups joined to WGS_SAMPLES by
+      UNIQUEID
+  cryptic_memberships.tsv.gz:
+    rows: 857940
+    encoding: gzip
+    sha256: f121fc3ac48a44a89931366d908877d833bd846d9690257583c5dbbdb8bd2601
+    bytes: 6141536
+    content_sha256: d4bb90fc9f9eba113955edc00a3ab5477a6c9f7af2471e7b3af95aee34a64d35
+    content_bytes: 72282802
+    source: CRyPTIC 3.4.0 exact adopted phenotype groups joined to WGS_SAMPLES by
+      UNIQUEID

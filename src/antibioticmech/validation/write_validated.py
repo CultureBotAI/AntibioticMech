@@ -41,6 +41,7 @@ from linkml.validator.plugins import JsonschemaValidationPlugin
 from linkml.validator.report import Severity, ValidationResult
 
 from antibioticmech.activity_collections import expand_activities, pack_activities, write_artifacts
+from antibioticmech.activity_memberships import FIELD, validate_memberships, write_membership_artifacts
 
 DEFAULT_SCHEMA_PATH = Path(__file__).resolve().parents[1] / "schema" / "antibioticmech.yaml"
 DEFAULT_TARGET_CLASS = "AntibioticRecord"
@@ -88,6 +89,7 @@ def validate_antibiotic(
     target_class: str = DEFAULT_TARGET_CLASS,
     schema_path: Path = DEFAULT_SCHEMA_PATH,
     record_path: Path | None = None,
+    membership_artifacts: dict[str, bytes] | None = None,
 ) -> list[ValidationResult]:
     """Return the list of ERROR-severity validation results (empty when clean)."""
     validator = _get_validator(schema_path)
@@ -103,6 +105,15 @@ def validate_antibiotic(
         except (ValueError, OSError) as error:
             errors.append(ValidationResult(
                 type="activity_collection_error", message=str(error), severity=Severity.ERROR,
+            ))
+    if not errors and target_class == DEFAULT_TARGET_CLASS and (FIELD in doc or membership_artifacts):
+        try:
+            if record_path is None:
+                raise ValueError("membership validation requires the record path")
+            validate_memberships(doc, record_path, artifacts=membership_artifacts)
+        except (ValueError, OSError) as error:
+            errors.append(ValidationResult(
+                type="activity_membership_error", message=str(error), severity=Severity.ERROR,
             ))
     return errors
 
@@ -129,6 +140,7 @@ def write_validated_antibiotic(
     target_class: str = DEFAULT_TARGET_CLASS,
     schema_path: Path = DEFAULT_SCHEMA_PATH,
     yaml_kwargs: dict[str, Any] | None = None,
+    membership_artifacts: dict[str, bytes] | None = None,
 ) -> None:
     """Write ``doc`` to ``path`` as YAML, but only if validation passes.
 
@@ -150,7 +162,8 @@ def write_validated_antibiotic(
         raise ValidationFailedError(path, [
             ValidationResult(type="activity_collection_error", message=str(error), severity=Severity.ERROR),
         ]) from error
-    errors = validate_antibiotic(expanded, target_class=target_class, schema_path=schema_path)
+    errors = validate_antibiotic(expanded, target_class=target_class, schema_path=schema_path,
+                                record_path=path, membership_artifacts=membership_artifacts)
     if errors:
         raise ValidationFailedError(path, errors)
     try:
@@ -168,6 +181,7 @@ def write_validated_antibiotic(
     text = yaml.safe_dump(physical, **{**EMIT_OPTS, **(yaml_kwargs or {})})
     path.parent.mkdir(parents=True, exist_ok=True)
     write_artifacts(artifacts, path.parent)
+    write_membership_artifacts(membership_artifacts or {}, path.parent)
     # Artifacts are immutable and complete before an atomic record replacement.
     temporary_path = None
     try:

@@ -1420,6 +1420,23 @@ activity_spectrum:
       isolate_count=1068; source=WHO2019; method_1=solid media; method_2=LJ; method_cc=4.0;
       phenotype=S; quality=MEDIUM.'
   activity: SUSCEPTIBLE
+activity_membership_collections:
+- format: antibioticmech-activity-memberships-v1
+  path: membership-738883557a108df986efcd8b9903b58b8ab2a3f3836809d026e2c09ee8b4b6ee.json.gz
+  sha256: 738883557a108df986efcd8b9903b58b8ab2a3f3836809d026e2c09ee8b4b6ee
+  byte_size: 322136
+  uncompressed_byte_size: 4526058
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_reference: https://zenodo.org/records/15680920
+  source_retrieved_on: '2026-10-05'
+  source_snapshot_sha256: b4ca79ecef0937fa0a3c304b82dcc0b45f49bd5ce404a4e6009181f4cdf62bb2
+  activity_inventory_sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+  subject_count: 19992
+  observation_count: 76
+  membership_count: 21518
+  measurement_count: 21518
+  unlinked_subject_count: 2792
 causal_graphs:
 - graph_id: ofloxacin_dna_gyrase_supercoiling_inhibition
   title: Ofloxacin inhibits bacterial DNA gyrase supercoiling
@@ -2510,3 +2527,8 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval
     date 2026-08-30, unchanged.'
+- timestamp: '2026-10-05T07:27:33Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
+    retrieval date 2026-08-30, unchanged.'

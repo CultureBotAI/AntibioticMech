@@ -491,6 +491,23 @@ activity_spectrum:
       BioSample accession unavailable, collection year 2022, location USA, source
       P-trap water, MLST ST235(Pasteur), Pseudomonas aeruginosa, meropenem MIC >8
       mg/L (originally >8 micrograms/mL), and interpretation R.
+activity_membership_collections:
+- format: antibioticmech-activity-memberships-v1
+  path: membership-9e0f3db07aca7b7e669bb0cb87d46010fa0503837f4dffee94ea82c1d1447548.json.gz
+  sha256: 9e0f3db07aca7b7e669bb0cb87d46010fa0503837f4dffee94ea82c1d1447548
+  byte_size: 572
+  uncompressed_byte_size: 868
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_reference: https://zenodo.org/records/15680920
+  source_retrieved_on: '2026-10-05'
+  source_snapshot_sha256: b4ca79ecef0937fa0a3c304b82dcc0b45f49bd5ce404a4e6009181f4cdf62bb2
+  activity_inventory_sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+  subject_count: 1
+  observation_count: 1
+  membership_count: 1
+  measurement_count: 1
+  unlinked_subject_count: 0
 chemical_structure:
   smiles: '[H][C@]12[C@@H](C)C(S[C@@H]3CN[C@H](C(=O)N(C)C)C3)=C(C(=O)O)N1C(=O)[C@]2([H])[C@@H](C)O'
   standard_inchi: InChI=1S/C17H25N3O5S/c1-7-12-11(8(2)21)16(23)20(12)13(17(24)25)14(7)26-9-5-10(18-6-9)15(22)19(3)4/h7-12,18,21H,5-6H2,1-4H3,(H,24,25)/t7-,8-,9+,10+,11-,12-/m1/s1
@@ -818,3 +835,8 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval
     date 2026-08-30, unchanged.'
+- timestamp: '2026-10-05T07:26:11Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
+    retrieval date 2026-08-30, unchanged.'

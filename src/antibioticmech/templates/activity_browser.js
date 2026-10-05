@@ -68,6 +68,13 @@
             row.slice(1).every(value => typeof value === "string"))) {
         throw new Error("Incomplete or invalid search index.");
       }
+      if (data.memberships !== undefined && (!Array.isArray(data.memberships) ||
+          !data.memberships.every(entry => Array.isArray(entry) && entry.length === 2 &&
+            typeof entry[0] === "string" && Array.isArray(entry[1]) && entry[1].length &&
+            entry[1].every(number => Number.isSafeInteger(number) && number > 0 && number <= total) &&
+            new Set(entry[1]).size === entry[1].length))) {
+        throw new Error("Invalid membership search index.");
+      }
       return data.rows;
     }
     const offset = Number(context.offset);
@@ -80,10 +87,21 @@
     return data.observations;
   }
 
-  function filterRows(rows, query, activity, source) {
+  function filterRows(rows, query, activity, source, memberships = []) {
     const tokens = normalize(query).trim().split(/\s+/).filter(Boolean);
-    return rows.filter(row => (!activity || `=${row[4]}` === activity) &&
-      (!source || `=${row[5]}` === source) && tokens.every(token => row[7].includes(token)));
+    const candidates = rows.filter(row => (!activity || `=${row[4]}` === activity) &&
+      (!source || `=${row[5]}` === source));
+    const missing = new Map(candidates.map(row => [row[0], tokens.filter(token => !row[7].includes(token))]));
+    const matched = new Set(candidates.filter(row => !missing.get(row[0]).length).map(row => row[0]));
+    // Every residual token must match ONE source subject, not different isolates.
+    if (tokens.length) for (const [text, numbers] of memberships) {
+      for (const number of numbers) {
+        if (!matched.has(number) && missing.has(number) && missing.get(number).every(token => text.includes(token))) {
+          matched.add(number);
+        }
+      }
+    }
+    return candidates.filter(row => matched.has(row[0]));
   }
 
   function element(tag, text, parent) {
@@ -214,7 +232,7 @@
         const data = await fetchJSON(root.dataset.index);
         const rows = validatePayload(data, root.dataset, true);
         if (ticket !== generation) return;
-        matches = filterRows(rows, ...values);
+        matches = filterRows(rows, ...values, data.memberships || []);
         showResults();
       } catch (error) {
         if (ticket !== generation) return;
@@ -235,6 +253,7 @@
   }
 
   if (typeof module !== "undefined") module.exports = {normalize, filterRows, validatePayload, boundedBytes, fetchJSON};
+  globalThis.AntibioticActivityData = {normalize, fetchJSON, element, fullValue};
   if (typeof document === "undefined") return;
   const supported = typeof DecompressionStream !== "undefined" && typeof crypto !== "undefined" && crypto.subtle;
   if (!supported) return;
