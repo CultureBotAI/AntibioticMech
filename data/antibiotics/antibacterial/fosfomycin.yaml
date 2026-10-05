@@ -471,6 +471,16 @@ molecular_targets:
   evidence:
   - reference: PMID:8994972
     notes: Primary fosfomycin-MurA cocrystal (DOI:10.1016/S0969-2126(96)00153-0).
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A749
+    protein_label: UDP-N-acetylglucosamine 1-carboxyvinyltransferase
+    gene_symbol: murA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-05'
+    role: MurA cocrystallized with fosfomycin; UniProtKB:P0A749 maps PMID:8994972
+      to PDB:1UAE. The parent target retains the primary binding evidence.
 producer_organisms:
 - taxon_id: NCBITaxon:1906
   taxon_label: Streptomyces fradiae
@@ -554,3 +564,18 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-05T17:39:43Z'
+  curator: codex
+  action: ADD_PATHWAY_LINKS
+  changes: Added reviewed PathwayMech relationships and any supported protein example
+    from curation/pathway_links.yaml; organism and evidence limits are recorded in
+    each basis.
+  llm_assisted: true
+related_records:
+- corpus: PathwayMech
+  identifier: WikiPathways:WP5060
+  relation: TARGETS_PATHWAY_COMPONENT
+  basis: PMID:8994972 establishes the E. coli MurA–fosfomycin complex. The linked
+    E. coli pathway contains MurA (UniProtKB:P0A749); this links the target to its
+    pathway, not the drug to every step.
+  source_version: aa305727458c44ab05614901334540e2c87a9f3a

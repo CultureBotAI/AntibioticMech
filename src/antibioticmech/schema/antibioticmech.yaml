@@ -277,6 +277,14 @@ classes:
         inlined_as_list: true
         range: MolecularTarget
 
+      related_records:
+        description: >-
+          Curator-owned cross-corpus relationships with an explicit evidence
+          basis and source revision. These are not exact-identity xrefs.
+        multivalued: true
+        inlined_as_list: true
+        range: CrossCorpusLink
+
       mode_of_action:
         description: >-
           Coarse mechanism bucket (cell-wall synthesis inhibition, protein

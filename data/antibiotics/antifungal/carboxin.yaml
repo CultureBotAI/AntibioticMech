@@ -856,3 +856,19 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-05T17:40:26Z'
+  curator: codex
+  action: ADD_PATHWAY_LINKS
+  changes: Added reviewed PathwayMech relationships and any supported protein example
+    from curation/pathway_links.yaml; organism and evidence limits are recorded in
+    each basis.
+  llm_assisted: true
+related_records:
+- corpus: PathwayMech
+  identifier: WikiPathways:WP296
+  relation: RELATED_PATHWAY_ACTIVITY
+  basis: PMID:4336692 reports inhibition between succinate and coenzyme Q in mitochondria
+    from Ustilago maydis and S. cerevisiae. The linked yeast TCA record contains succinate
+    dehydrogenase. The evidence supports this activity connection, not inhibition
+    of every TCA reaction or exact strain equivalence.
+  source_version: aa305727458c44ab05614901334540e2c87a9f3a

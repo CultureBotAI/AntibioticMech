@@ -288,3 +288,18 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-05T17:40:28Z'
+  curator: codex
+  action: ADD_PATHWAY_LINKS
+  changes: Added reviewed PathwayMech relationships and any supported protein example
+    from curation/pathway_links.yaml; organism and evidence limits are recorded in
+    each basis.
+  llm_assisted: true
+related_records:
+- corpus: PathwayMech
+  identifier: gomodel:YeastPathways_PWY-5670-1
+  relation: RELATED_PATHWAY_ACTIVITY
+  basis: PMID:10991846 identifies the squalene-epoxidase step targeted by terbinafine
+    in the Candida sterol pathway. The linked epoxysqualene pathway represents the
+    corresponding S. cerevisiae activity; no same-strain or drug-sensitivity assertion.
+  source_version: aa305727458c44ab05614901334540e2c87a9f3a
