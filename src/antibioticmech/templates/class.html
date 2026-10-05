@@ -30,7 +30,7 @@
   <thead><tr><th scope="col">Compound</th><th scope="col">Structural class</th><th scope="col">Grounding</th><th scope="col">Curation</th><th scope="col">Sources</th></tr></thead>
   <tbody>
   {% for r in records %}
-  <tr>
+  <tr data-identifiers="{{ r.identifiers|select|join(' ') }}">
     <td><a href="../{{ slug }}/{{ r.slug }}.html">{{ r.label }}</a></td>
     <td class="meta">{{ r.structural_class }}</td>
     <td><span class="pill{{ ' warn' if r.grounding != 'EXACT' else '' }}">{{ r.grounding }}</span></td>
@@ -76,11 +76,11 @@
   }
   function apply() {
     pending = null;
-    var raw = box.value.toLowerCase();
+    var raw = box.value.trim().toLowerCase();
     if (!raw) { body.innerHTML = original; out.textContent = ''; return; }
     var slugged = raw.replace(/[^a-z0-9]+/g, '-');
     var hits = index.filter(function (r) {
-      var k = (r[0] + ' ' + r[1] + ' ' + r[2] + ' ' + r[5]).toLowerCase();
+      var k = (r[0] + ' ' + r[1] + ' ' + r[2] + ' ' + r[5] + ' ' + (r[6] || '')).toLowerCase();
       return k.indexOf(raw) !== -1 || k.indexOf(slugged) !== -1;
     });
     draw(hits.slice(0, 500));
@@ -94,7 +94,7 @@
     index = [].slice.call(body.querySelectorAll('tr')).map(function (tr) {
       var td = tr.querySelectorAll('td'), a = tr.querySelector('a');
       return [td[0].textContent, a ? a.getAttribute('href').replace(/.*\/|\.html$/g, '') : '',
-              td[1].textContent, td[2].textContent, td[3].textContent, td[4].textContent];
+              td[1].textContent, td[2].textContent, td[3].textContent, td[4].textContent, tr.getAttribute('data-identifiers') || ''];
     });
   }
 

@@ -111,21 +111,43 @@
     return node;
   }
 
-  function fullValue(value) {
+  function referenceURL(value, key = "") {
+    if (typeof value !== "string") return null;
+    const namespaces = {
+      biosample_accession: "https://www.ncbi.nlm.nih.gov/biosample/",
+      bioproject_accession: "https://www.ncbi.nlm.nih.gov/bioproject/",
+      run_accession: "https://www.ncbi.nlm.nih.gov/sra/?term=",
+      sra_accessions: "https://www.ncbi.nlm.nih.gov/sra/?term=",
+      assembly_accession: "https://www.ncbi.nlm.nih.gov/assembly/"
+    };
+    if (namespaces[key]) return namespaces[key] + encodeURIComponent(value);
+    const match = /^(PMID|DOI|NCBITaxon):(.+)$/i.exec(value);
+    if (match) {
+      const bases = {pmid: "https://pubmed.ncbi.nlm.nih.gov/", doi: "https://doi.org/",
+        ncbitaxon: "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id="};
+      return bases[match[1].toLowerCase()] + encodeURIComponent(match[2]);
+    }
+    if (key === "reference" && /^https?:\/\//i.test(value)) return value;
+    return null;
+  }
+
+  function fullValue(value, key = "") {
     if (Array.isArray(value)) {
       const list = element("ol");
-      for (const item of value) element("li", undefined, list).append(fullValue(item));
+      for (const item of value) element("li", undefined, list).append(fullValue(item, key));
       return list;
     }
     if (value !== null && typeof value === "object") {
       const list = element("dl");
       for (const [key, item] of Object.entries(value)) {
         element("dt", key.replaceAll("_", " "), list);
-        element("dd", undefined, list).append(fullValue(item));
+        element("dd", undefined, list).append(fullValue(item, key));
       }
       return list;
     }
-    // Source strings are always text, never markup, even for evidence snippets.
+    const href = referenceURL(value, key);
+    if (href) { const link = element("a", value); link.href = href; return link; }
+    // Source strings are always text, never interpreted as markup.
     return element("span", value === null ? "null" : String(value));
   }
 
@@ -252,7 +274,7 @@
     search();
   }
 
-  if (typeof module !== "undefined") module.exports = {normalize, filterRows, validatePayload, boundedBytes, fetchJSON};
+  if (typeof module !== "undefined") module.exports = {normalize, filterRows, validatePayload, boundedBytes, fetchJSON, referenceURL};
   globalThis.AntibioticActivityData = {normalize, fetchJSON, element, fullValue};
   if (typeof document === "undefined") return;
   const supported = typeof DecompressionStream !== "undefined" && typeof crypto !== "undefined" && crypto.subtle;

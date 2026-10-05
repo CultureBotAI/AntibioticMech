@@ -166,7 +166,10 @@
         const row = element("tr", undefined, body);
         element("td", subject.source_isolate_id, row);
         element("td", String(member.measurement_count), row);
-        for (const key of Object.keys(accessionPatterns)) element("td", context?.[key] || "Not in snapshot", row);
+        for (const key of Object.keys(accessionPatterns)) {
+          const cell = element("td", undefined, row);
+          cell.append(fullValue(context?.[key] || "Not in snapshot", context ? key : ""));
+        }
       }
       previous.disabled = page === 0; next.disabled = start + SIZE >= matches.length;
       pager.querySelector("span").textContent = `Page ${page + 1} of ${Math.ceil(matches.length / SIZE)}`;

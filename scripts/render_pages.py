@@ -31,12 +31,14 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import csv
 import filecmp
 import json
 import re
 import shutil
 import sys
 from collections import Counter, defaultdict
+from functools import lru_cache
 from pathlib import Path
 
 import yaml
@@ -219,6 +221,26 @@ def external_iri(identifier: str) -> str | None:
     return template.format(local) if template else None
 
 
+@lru_cache(maxsize=1)
+def term_labels() -> dict[str, str]:
+    """Labels from the committed source inventories, never guessed from CURIEs."""
+    labels: dict[str, set[str]] = defaultdict(set)
+    sources = [
+        ("chebi_antimicrobials.tsv", "chebi_id", "name"),
+        ("aro_antibiotics.tsv", "aro_id", "name"),
+        ("aro_antibiotics.tsv", "drug_class_id", "drug_class_label"),
+        ("chebi_role_names.tsv", "role_id", "name"),
+    ]
+    for filename, id_key, label_key in sources:
+        path = MANIFEST_PATH.parent / filename
+        if path.exists():
+            with path.open(encoding="utf-8", newline="") as source:
+                for row in csv.DictReader(source, delimiter="\t"):
+                    if row.get(id_key) and row.get(label_key):
+                        labels[row[id_key]].add(row[label_key])
+    return {key: next(iter(values)) for key, values in labels.items() if len(values) == 1}
+
+
 def resolve_curie(curie: str, index: dict[str, dict], root: str) -> dict:
     """Turn a CURIE into a link: internal if it is a record in this corpus,
     external if its prefix is one this site resolves,
@@ -228,7 +250,7 @@ def resolve_curie(curie: str, index: dict[str, dict], root: str) -> dict:
         href = f"{root}{entry['class_dir']}/{entry['slug']}.html"
         return {"id": curie, "label": entry["label"], "href": href}
     href = external_iri(curie)
-    return {"id": curie, "label": None, "href": href}
+    return {"id": curie, "label": term_labels().get(curie), "href": href}
 
 
 def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> dict:
@@ -344,7 +366,9 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
                 for method in (item.get("link_evidence") or [])]}
             for item in (doc.get("producer_organisms") or [])
         ],
-        "causal_graphs": doc.get("causal_graphs") or [],
+        "causal_graphs": [{**g, "nodes": [{**n, "resolved_grounding": resolve_curie(
+            n["grounding"], index, root) if n.get("grounding") else None}
+            for n in g.get("nodes") or []]} for g in doc.get("causal_graphs") or []],
         "discussions": doc.get("discussions") or [],
         "datasets": doc.get("datasets") or [],
         "evidence": doc.get("evidence") or [],
@@ -466,6 +490,10 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
         by_class[class_dir].append(
             {
                 "label": doc["label"],
+                "identifier": doc["identifier"],
+                "identifiers": [doc["identifier"], *(doc.get("xrefs") or []),
+                                (doc.get("chemical_structure") or {}).get("standard_inchi_key"),
+                                *(c.get("source_id") for c in doc.get("source_concepts") or [])],
                 "slug": path.stem,
                 "structural_class": doc.get("structural_class") or "",
                 "grounding": doc.get("grounding_status", "?"),
@@ -576,7 +604,7 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
         (out_dir / "class" / f"{class_dir}.json").write_text(
             json.dumps(
                 [[r["label"], r["slug"], r["structural_class"], r["grounding"], r["status"],
-                  ", ".join(r["sources"])] for r in ordered],
+                  ", ".join(r["sources"]), " ".join(filter(None, r["identifiers"]))] for r in ordered],
                 separators=(",", ":"), ensure_ascii=False,
             ),
             encoding="utf-8",
@@ -624,7 +652,7 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
         encoding="utf-8",
     )
     (out_dir / "404.html").write_text(
-        env.get_template("not_found.html").render(root="", stats=stats),
+        env.get_template("not_found.html").render(root=SITE_BASE, stats=stats),
         encoding="utf-8",
     )
     shutil.copyfile(TEMPLATES_DIR / "style.css", out_dir / "style.css")
@@ -637,6 +665,18 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
     shutil.copyfile(
         CHEMICAL_MAP_ARTIFACT,
         out_dir / "data" / "chemical-structure-map.json",
+    )
+    # Search metadata is a presentation sidecar: it cannot change scientific
+    # distances, coordinates or the hash-bound structure-map artifact.
+    search_ids = {
+        doc["identifier"]: list(filter(None, [
+            doc["identifier"], (doc.get("chemical_structure") or {}).get("standard_inchi_key"),
+            *(doc.get("xrefs") or []),
+            *(item.get("source_id") for item in doc.get("source_concepts") or []),
+        ])) for _, doc in records
+    }
+    (out_dir / "data" / "chemical-search.json").write_text(
+        json.dumps(search_ids, ensure_ascii=False, sort_keys=True), encoding="utf-8"
     )
     # Without this, Pages runs Jekyll over the site and silently drops any
     # path beginning with an underscore — a 404 rather than a visible error.
@@ -662,6 +702,7 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
     written = {
         out_dir / "index.html", out_dir / "browse.html", out_dir / "chemical-map.html",
         out_dir / "chemical-map.js", out_dir / "data" / "chemical-structure-map.json",
+        out_dir / "data" / "chemical-search.json",
         out_dir / "404.html", out_dir / "style.css", out_dir / "theme-toggle.js",
         out_dir / "activity-browser.js",
         out_dir / "membership-browser.js",
@@ -709,6 +750,8 @@ def main(argv: list[str] | None = None) -> int:
 
     if not args.check:
         build(args.out)
+        if args.out.resolve() == PAGES_DIR.resolve():
+            shutil.copyfile(PAGES_DIR / "404.html", REPO_ROOT / "404.html")
         return 0
 
     import tempfile
@@ -717,6 +760,9 @@ def main(argv: list[str] | None = None) -> int:
         target = Path(tmp) / "site"
         build(target)
         stale = []
+        root_404 = REPO_ROOT / "404.html"
+        if not root_404.exists() or root_404.read_bytes() != (target / "404.html").read_bytes():
+            stale.append("../404.html")
         for rendered in sorted(target.rglob("*")):
             if rendered.is_dir():
                 continue
