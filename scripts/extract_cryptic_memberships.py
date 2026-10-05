@@ -96,7 +96,7 @@ def extract(args):
     rebuilt, metadata = load_adopted([g["activity"] for g in groups], raw_dir=output, drug_map=args.drug_map)
     if metadata is None or any(rebuilt[g["activity"]["activity_group_id"]] != g["members"] for g in groups):
         raise ValueError("CRyPTIC normalized inventory round trip changed membership")
-    report.update(status="ADOPTED" if args.apply else "STAGED", membership=provenance,
+    report.update(status="STAGED", membership=provenance,
                   inventories={name: manifest["inventories"][name] for name in counts},
                   extractor_sha256=sha256(Path(__file__)))
     (output / "report.json").write_text(json.dumps(report, sort_keys=True, indent=2) + "\n", encoding="utf-8")
@@ -106,6 +106,10 @@ def extract(args):
         for name in counts:
             shutil.copyfile(output / name, manifest_path.parent / name)
         manifest_path.write_text(manifest_text, encoding="utf-8")
+        report["status"] = "ADOPTED"
+        (output / "report.json").write_text(
+            json.dumps(report, sort_keys=True, indent=2) + "\n", encoding="utf-8"
+        )
     return report
 
 

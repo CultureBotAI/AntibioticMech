@@ -227,3 +227,34 @@ def test_independent_raw_audit_checks_counts_context_and_extra_pairs(cohort, ado
             altered[("extra", "extra")] = (1, None)
         with pytest.raises(ValueError):
             audit.raw_audit(cohort[2], altered, release)
+
+
+@pytest.mark.parametrize("fault", ["manifest-drift", "inventory-copy", "manifest-write"])
+def test_failed_installation_never_reports_adoption(adopted, monkeypatch, fault):
+    raw, _, args = adopted
+    args.output_dir = args.output_dir.with_name("failed-install")
+    copyfile, write_text, load_adopted = shutil.copyfile, Path.write_text, extractor.load_adopted
+
+    def fail_copy(source, destination, *positional, **kwargs):
+        if fault == "inventory-copy" and Path(destination) == raw / inventory.ISOLATES:
+            raise OSError("injected copy failure")
+        return copyfile(source, destination, *positional, **kwargs)
+
+    def fail_write(path, text, *positional, **kwargs):
+        if fault == "manifest-write" and path == raw / "MANIFEST.yaml":
+            raise OSError("injected manifest failure")
+        return write_text(path, text, *positional, **kwargs)
+
+    def drift_manifest(*positional, **kwargs):
+        result = load_adopted(*positional, **kwargs)
+        if fault == "manifest-drift":
+            path = raw / "MANIFEST.yaml"
+            path.write_text(path.read_text() + "# concurrent edit\n")
+        return result
+
+    monkeypatch.setattr(extractor.shutil, "copyfile", fail_copy)
+    monkeypatch.setattr(Path, "write_text", fail_write)
+    monkeypatch.setattr(extractor, "load_adopted", drift_manifest)
+    with pytest.raises((OSError, ValueError), match="injected|manifest changed"):
+        extractor.extract(args)
+    assert json.loads((args.output_dir / "report.json").read_text())["status"] == "STAGED"
