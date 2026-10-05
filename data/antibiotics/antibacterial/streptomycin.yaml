@@ -1746,6 +1746,23 @@ activity_spectrum:
       isolate_count=1420; source=WHO2019; method_1=solid media; method_2=LJ; method_cc=WHO;
       phenotype=S; quality=MEDIUM.'
   activity: SUSCEPTIBLE
+activity_membership_collections:
+- format: antibioticmech-activity-memberships-v1
+  path: membership-5d78682c251448a04fac7803f5304c0b1493c1dfd438404e41962efadd69d948.json.gz
+  sha256: 5d78682c251448a04fac7803f5304c0b1493c1dfd438404e41962efadd69d948
+  byte_size: 351379
+  uncompressed_byte_size: 5069766
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_reference: https://zenodo.org/records/15680920
+  source_retrieved_on: '2026-10-05'
+  source_snapshot_sha256: b4ca79ecef0937fa0a3c304b82dcc0b45f49bd5ce404a4e6009181f4cdf62bb2
+  activity_inventory_sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+  subject_count: 22860
+  observation_count: 80
+  membership_count: 23635
+  measurement_count: 23635
+  unlinked_subject_count: 4067
 causal_graphs:
 - graph_id: streptomycin_30s_decoding_site_misreading
   title: Streptomycin perturbs the bacterial 30S decoding site
@@ -1885,3 +1902,8 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval
     date 2026-08-30, unchanged.'
+- timestamp: '2026-10-05T07:25:25Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
+    retrieval date 2026-08-30, unchanged.'

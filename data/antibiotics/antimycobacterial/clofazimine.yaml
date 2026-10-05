@@ -4280,6 +4280,23 @@ activity_spectrum:
       isolate_count=1; site_count=1; platedesign=UKMYC6; belongs_gpi=false; phenotype_quality=MEDIUM;
       readingday=21; primary_method=VZ; phenotype_description=VZ ONLY.'
   site_count: 1
+activity_membership_collections:
+- format: antibioticmech-activity-memberships-v1
+  path: membership-7b5cad83f592ae26f0f37987b516b738e0be245e92a4677095975ee4aba11d6b.json.gz
+  sha256: 7b5cad83f592ae26f0f37987b516b738e0be245e92a4677095975ee4aba11d6b
+  byte_size: 537155
+  uncompressed_byte_size: 7190755
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_reference: https://zenodo.org/records/15680920
+  source_retrieved_on: '2026-10-05'
+  source_snapshot_sha256: b4ca79ecef0937fa0a3c304b82dcc0b45f49bd5ce404a4e6009181f4cdf62bb2
+  activity_inventory_sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+  subject_count: 28818
+  observation_count: 242
+  membership_count: 53593
+  measurement_count: 53593
+  unlinked_subject_count: 7987
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -4306,3 +4323,8 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval
     date 2026-08-30, unchanged.'
+- timestamp: '2026-10-05T07:26:05Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
+    retrieval date 2026-08-30, unchanged.'

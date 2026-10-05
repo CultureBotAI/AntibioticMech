@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}{{ activity.label }}: source isolates - AntibioticMech{% endblock %}
+{% block head %}
+<script src="{{ root }}activity-browser.js" defer></script>
+<script src="{{ root }}membership-browser.js" defer></script>
+{% endblock %}
+{% block wrapclass %} wide{% endblock %}
+{% block content %}
+<p><a href="{{ record_href }}">{{ activity.label }} record</a> &middot; <a href="activity-1.html">Activity observations</a></p>
+<h1>{{ activity.label }}: source isolates</h1>
+<section id="membership-browser" data-index="{{ index }}" data-identifier="{{ activity.identifier }}" data-key="{{ activity.standard_inchi_key }}" data-total="{{ activity.total }}">
+  <form class="activity-filters" hidden role="search" aria-label="Source isolates">
+    <label>Observation<select name="group"></select></label>
+    <label>Source isolate or accession<input name="query" type="search" autocomplete="off"></label>
+    <label>Sequencing context<select name="context"><option value="">All isolates</option><option value="linked">Linked in snapshot</option><option value="unlinked">Not in snapshot</option></select></label>
+    <button type="reset">Reset</button>
+  </form>
+  <p class="membership-status" role="status"></p>
+  <button class="membership-retry" type="button" hidden>Retry</button>
+  <div class="membership-observation"></div>
+  <div class="membership-results"></div>
+  <nav class="membership-pager pager" aria-label="Source isolate results" hidden>
+    <button type="button" data-step="-1" aria-label="Previous isolates" title="Previous isolates">&larr;</button><span></span><button type="button" data-step="1" aria-label="Next isolates" title="Next isolates">&rarr;</button>
+  </nav>
+  <noscript><p>Source-isolate downloads</p></noscript>
+</section>
+<h2>Source Data</h2>
+<ul>{% for collection in downloads %}<li><a href="{{ collection.path }}" download>{{ collection.source }} {{ collection.source_version }} membership registry (JSON.gz)</a> &middot; {{ collection.subject_count }} source IDs &middot; {{ collection.unlinked_subject_count }} without a sequencing join &middot; <a href="{{ collection.source_reference }}">Source release</a> &middot; retrieved {{ collection.source_retrieved_on }}</li>{% endfor %}</ul>
+<p class="meta">Source IDs are not strain names or taxon identifiers. Sequencing links identify runs, not assemblies. An absent join means no match in this snapshot, not that an isolate was never sequenced.</p>
+{% endblock %}

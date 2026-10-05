@@ -4981,6 +4981,23 @@ activity_spectrum:
       BioSample accession unavailable, collection year 2017, location USA, source
       Urine, MLST ST2731(Pasteur), Pseudomonas aeruginosa, amikacin MIC >64 mg/L (originally
       >64 micrograms/mL), and interpretation R.
+activity_membership_collections:
+- format: antibioticmech-activity-memberships-v1
+  path: membership-a37c45fb1a20e600de75799e474f2e0bd69cd13bd42d517882d768c88ca75adc.json.gz
+  sha256: a37c45fb1a20e600de75799e474f2e0bd69cd13bd42d517882d768c88ca75adc
+  byte_size: 682199
+  uncompressed_byte_size: 9402686
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_reference: https://zenodo.org/records/15680920
+  source_retrieved_on: '2026-10-05'
+  source_snapshot_sha256: b4ca79ecef0937fa0a3c304b82dcc0b45f49bd5ce404a4e6009181f4cdf62bb2
+  activity_inventory_sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+  subject_count: 38217
+  observation_count: 276
+  membership_count: 63785
+  measurement_count: 63785
+  unlinked_subject_count: 8584
 chemical_structure:
   smiles: NCC[C@H](O)C(=O)N[C@@H]1C[C@H](N)[C@@H](O[C@H]2O[C@H](CN)[C@@H](O)[C@H](O)[C@H]2O)[C@H](O)[C@H]1O[C@H]1O[C@H](CO)[C@@H](O)[C@H](N)[C@H]1O
   standard_inchi: InChI=1S/C22H43N5O13/c23-2-1-8(29)20(36)27-7-3-6(25)18(39-22-16(34)15(33)13(31)9(4-24)37-22)17(35)19(7)40-21-14(32)11(26)12(30)10(5-28)38-21/h6-19,21-22,28-35H,1-5,23-26H2,(H,27,36)/t6-,7+,8-,9+,10+,11-,12+,13+,14+,15-,16+,17-,18+,19-,21+,22+/m0/s1
@@ -5863,3 +5880,8 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval
     date 2026-08-30, unchanged.'
+- timestamp: '2026-10-05T07:25:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
+    retrieval date 2026-08-30, unchanged.'

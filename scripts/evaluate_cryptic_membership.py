@@ -165,13 +165,8 @@ def json_line(value: dict) -> bytes:
     return (json.dumps(value, sort_keys=True, separators=(",", ":"), allow_nan=False) + "\n").encode()
 
 
-def evaluate(args) -> dict:
-    if args.output_dir.exists() or args.output_dir.is_symlink():
-        raise ValueError(f"refusing to overwrite {args.output_dir}")
-    output = args.output_dir.resolve()
-    for name in ("data", "curation", "pages", "src"):
-        if output.is_relative_to(ROOT / name):
-            raise ValueError("membership evaluation cannot write into production directories")
+def recover_cohort(args):
+    """Reproduce adopted groups and recover memberships from checksum-pinned files."""
     files = {"drug_codes": args.drug_codes, "dst": args.dst, "ukmyc": args.ukmyc,
              "wgs": args.wgs, "drug_map": args.drug_map, "inventory": args.inventory,
              "evaluator": Path(__file__), "activity_evaluator": Path(cryptic.__file__),
@@ -200,6 +195,17 @@ def evaluate(args) -> dict:
     for key, path in files.items():
         if sha256(path) != inputs[key]["sha256"]:
             raise ValueError(f"CRyPTIC membership input changed during evaluation: {path}")
+    return groups, report
+
+
+def evaluate(args) -> dict:
+    if args.output_dir.exists() or args.output_dir.is_symlink():
+        raise ValueError(f"refusing to overwrite {args.output_dir}")
+    output = args.output_dir.resolve()
+    for name in ("data", "curation", "pages", "src"):
+        if output.is_relative_to(ROOT / name):
+            raise ValueError("membership evaluation cannot write into production directories")
+    groups, report = recover_cohort(args)
     args.output_dir.mkdir(parents=True, exist_ok=False)
     artifact = args.output_dir / "group-membership.jsonl.gz"
     with artifact.open("xb") as raw, gzip.GzipFile(fileobj=raw, mode="wb", filename="", mtime=0) as handle:

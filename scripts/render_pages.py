@@ -633,6 +633,7 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
     shutil.copyfile(TEMPLATES_DIR / "theme-toggle.js", out_dir / "theme-toggle.js")
     shutil.copyfile(TEMPLATES_DIR / "chemical_map.js", out_dir / "chemical-map.js")
     shutil.copyfile(TEMPLATES_DIR / "activity_browser.js", out_dir / "activity-browser.js")
+    shutil.copyfile(TEMPLATES_DIR / "membership_browser.js", out_dir / "membership-browser.js")
     shutil.copyfile(
         CHEMICAL_MAP_ARTIFACT,
         out_dir / "data" / "chemical-structure-map.json",
@@ -663,6 +664,7 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
         out_dir / "chemical-map.js", out_dir / "data" / "chemical-structure-map.json",
         out_dir / "404.html", out_dir / "style.css", out_dir / "theme-toggle.js",
         out_dir / "activity-browser.js",
+        out_dir / "membership-browser.js",
         out_dir / ".nojekyll",
         out_dir / "sitemap.xml", out_dir / "robots.txt",
     }

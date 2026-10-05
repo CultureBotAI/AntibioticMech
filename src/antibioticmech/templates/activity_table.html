@@ -14,6 +14,8 @@
     <td class="meta">{{ a.assay or '—' }}</td>
     <td class="meta">{{ a.strain or '—' }}</td>
     <td class="meta">
+      {% set membership = activity.memberships.get(activity.offset + loop.index) if activity and activity.memberships else none %}
+      {% if membership %}<a href="{{ membership.href }}">{{ membership.count }} source isolates</a><br>{{ membership.measurements }} measurements<br>{% endif %}
       {% if a.biosample_accession or a.bioproject_accession or a.pathogen_detection_target_accession or a.assembly_accession or a.sra_accessions or a.pathogen_detection_contexts %}
         {% if a.biosample_accession %}BioSample <code class="curie">{{ a.biosample_accession }}</code><br>{% endif %}
         {% if a.bioproject_accession %}BioProject <code class="curie">{{ a.bioproject_accession }}</code><br>{% endif %}
@@ -30,7 +32,7 @@
         </div>
         {% endfor %}
         {% if a.source_export_row_count %}{{ a.measurement_count }} measurement(s); {{ a.source_export_row_count }} source export rows{% endif %}{% endif %}
-      {% else %}—{% endif %}
+      {% elif not membership %}—{% endif %}
     </td>
     {% if activity %}
     <td><details class="activity-evidence" data-row="{{ loop.index0 }}" data-offset="{{ activity.offset }}" data-total="{{ activity.total }}" data-identifier="{{ activity.identifier }}" data-key="{{ activity.standard_inchi_key }}">

@@ -459,6 +459,23 @@ activity_spectrum:
       BioSample accession unavailable, collection year 2022, location USA, source
       P-trap water, MLST ST235(Pasteur), Pseudomonas aeruginosa, imipenem MIC 32 mg/L
       (originally 32 micrograms/mL), and interpretation R.
+activity_membership_collections:
+- format: antibioticmech-activity-memberships-v1
+  path: membership-2f553591fd7d9f400a667324a69322ac4bd355abd986077173e13671a29bb752.json.gz
+  sha256: 2f553591fd7d9f400a667324a69322ac4bd355abd986077173e13671a29bb752
+  byte_size: 574
+  uncompressed_byte_size: 869
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_reference: https://zenodo.org/records/15680920
+  source_retrieved_on: '2026-10-05'
+  source_snapshot_sha256: b4ca79ecef0937fa0a3c304b82dcc0b45f49bd5ce404a4e6009181f4cdf62bb2
+  activity_inventory_sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+  subject_count: 1
+  observation_count: 1
+  membership_count: 1
+  measurement_count: 1
+  unlinked_subject_count: 0
 chemical_structure:
   smiles: '[H]C(=N)NCCSC1=C(C(=O)O)N2C(=O)[C@]([H])([C@@H](C)O)[C@@]2([H])C1'
   standard_inchi: InChI=1S/C12H17N3O4S/c1-6(16)9-7-4-8(20-3-2-14-5-13)10(12(18)19)15(7)11(9)17/h5-7,9,16H,2-4H2,1H3,(H2,13,14)(H,18,19)/t6-,7-,9-/m1/s1
@@ -817,3 +834,8 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval
     date 2026-08-30, unchanged.'
+- timestamp: '2026-10-05T07:26:19Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
+    retrieval date 2026-08-30, unchanged.'

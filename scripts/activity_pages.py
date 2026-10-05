@@ -9,6 +9,8 @@ import json
 import unicodedata
 from pathlib import Path
 
+from membership_pages import prepare_memberships
+
 PAGE_SIZE = 100
 PREVIEW_SIZE = 20
 MAX_BROWSER_BYTES = 16 * 1024 * 1024
@@ -71,14 +73,24 @@ def render_activity_pages(doc: dict, record_path: Path, out_dir: Path, env, stat
         "standard_inchi_key": doc["chemical_structure"]["standard_inchi_key"],
         "total": len(observations),
     }
+    memberships = prepare_memberships(doc, record_path, directory)
+    written.update(memberships["written"])
     download = asset("record", doc, browser=False)
     index_rows = [search_row(i, row) for i, row in enumerate(observations, 1)]
-    index = asset("search", {"format": INDEX_FORMAT, **identity, "rows": index_rows})
+    for number, link in memberships["links"].items():
+        index_rows[number - 1][6] = " ".join(filter(None, (
+            index_rows[number - 1][6], f"{link['count']} source isolates",
+        )))
+    index_payload = {"format": INDEX_FORMAT, **identity, "rows": index_rows}
+    if memberships["entries"]:
+        index_payload["memberships"] = memberships["entries"]
+    index = asset("search", index_payload)
     common = {
         **identity, "label": doc["label"], "download": download, "index": index,
         "page_size": PAGE_SIZE, "page_count": (len(observations) + PAGE_SIZE - 1) // PAGE_SIZE,
         "activities": sorted({row[4] for row in index_rows}),
         "sources": sorted({row[5] for row in index_rows}),
+        "memberships": memberships["links"],
     }
     pages = []
     first_data = None
@@ -98,6 +110,18 @@ def render_activity_pages(doc: dict, record_path: Path, out_dir: Path, env, stat
         ), encoding="utf-8")
         written.add(page)
         pages.append(page.relative_to(out_dir).as_posix())
+    if memberships["groups"]:
+        membership_index = asset("membership-index", {
+            "format": "antibioticmech-membership-index-v1", **identity,
+            "collections": memberships["downloads"], "groups": memberships["groups"],
+        })
+        page = directory / "memberships.html"
+        page.write_text(env.get_template("memberships.html").render(
+            activity=common, index=membership_index, downloads=memberships["downloads"],
+            record_href=f"../{record_path.stem}.html#activity", root="../../", stats=stats,
+        ), encoding="utf-8")
+        written.add(page)
+        pages.append(page.relative_to(out_dir).as_posix())
     preview = observations[:PREVIEW_SIZE] if len(observations) > PAGE_SIZE else observations
     return {
         "written": written, "pages": pages, "preview": preview,
@@ -105,5 +129,7 @@ def render_activity_pages(doc: dict, record_path: Path, out_dir: Path, env, stat
             **common, "offset": 0, "data": f"{record_path.stem}/{first_data}",
             "download": f"{record_path.stem}/{download}",
             "home": f"{record_path.stem}/activity-1.html",
+            "memberships": {number: {**link, "href": f"{record_path.stem}/{link['href']}"}
+                            for number, link in memberships["links"].items()},
         },
     }

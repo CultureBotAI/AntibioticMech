@@ -54,10 +54,22 @@ from ncbi_ast_isolates import ISOLATE_REFERENCE, require_isolate_provenance
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
+from cryptic_membership_inventory import attach as attach_membership_inventory  # noqa: E402
+from cryptic_membership_inventory import sourced_view as cryptic_membership_view  # noqa: E402
+
 from antibioticmech.activity_collections import (  # noqa: E402
     expand_activities,
     load_record,
     orphaned_activity_artifacts,
+)
+from antibioticmech.activity_memberships import (  # noqa: E402
+    FIELD as MEMBERSHIP_FIELD,
+)
+from antibioticmech.activity_memberships import (
+    collection_bytes as membership_bytes,
+)
+from antibioticmech.activity_memberships import (
+    orphaned_membership_artifacts,
 )
 from antibioticmech.curate.curation_event import record_curation_event  # noqa: E402
 from antibioticmech.hivdb_score_rules import (  # noqa: E402
@@ -2726,6 +2738,16 @@ def attach_cryptic_activity(records: dict[str, dict]) -> Counter:
     return counts
 
 
+def attach_cryptic_memberships(records: dict[str, dict]) -> dict[str, bytes]:
+    artifacts = attach_membership_inventory(
+        records, load_cryptic_activity_inventory(CRYPTIC_ACTIVITY_INVENTORY), raw_dir=RAW_DIR,
+    )
+    for record in records.values():
+        if MEMBERSHIP_FIELD in record:
+            _history_last(record)
+    return artifacts
+
+
 NCBI_AST_ACTIVITY_SOURCE = "NCBI_AST"
 NCBI_AST_ACTIVITY_INVENTORY = RAW_DIR / "ncbi_ast_activity.tsv"
 NCBI_AST_REFERENCE = "https://www.ncbi.nlm.nih.gov/pathogens/docs/ast/"
@@ -3958,6 +3980,7 @@ def reseed_delta(existing: dict, record: dict, merged: dict,
             HIVDB_SCORE_RULE_SOURCE,
         ),
         ("activity_spectrum", cryptic_sourced_activity_view, CRYPTIC_ACTIVITY_SOURCE),
+        (MEMBERSHIP_FIELD, cryptic_membership_view, CRYPTIC_ACTIVITY_SOURCE),
         ("activity_spectrum", ncbi_ast_sourced_activity_view, NCBI_AST_ACTIVITY_SOURCE),
         ("producer_organisms", mibig_sourced_producer_view, MIBIG_PRODUCER_SOURCE),
         ("clinical_status_assertions", fda_sourced_clinical_view, FDA_CLINICAL_SOURCE),
@@ -4044,6 +4067,15 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
         merged["activity_spectrum"] = seeded_activities + curator_activities
     elif existing_activities:
         merged.pop("activity_spectrum", None)
+
+    memberships = list(record.get(MEMBERSHIP_FIELD, [])) + [
+        item for item in existing.get(MEMBERSHIP_FIELD, [])
+        if item.get("source") != CRYPTIC_ACTIVITY_SOURCE
+    ]
+    if memberships:
+        merged[MEMBERSHIP_FIELD] = memberships
+    else:
+        merged.pop(MEMBERSHIP_FIELD, None)
 
     seeded_score_rules = list(record.get("genotype_resistance_score_rules") or [])
     curator_score_rules = [
@@ -4353,6 +4385,7 @@ def main() -> int:
     phibase_counts = attach_phibase_resistance(records)
     bindingdb_counts = attach_bindingdb_targets(records)
     cryptic_counts = attach_cryptic_activity(records)
+    membership_artifacts = attach_cryptic_memberships(records)
     ncbi_ast_counts = attach_ncbi_ast_activity(records)
     hivdb_counts = attach_hivdb_score_rules(records)
     mibig_counts = attach_mibig_producers(
@@ -4494,7 +4527,14 @@ def main() -> int:
             unchanged += 1
             continue
         try:
-            write_validated_antibiotic(record, path)
+            record_artifacts = {}
+            for reference in record.get(MEMBERSHIP_FIELD, []):
+                name = reference["path"]
+                if name in membership_artifacts:
+                    record_artifacts[name] = membership_artifacts[name]
+                elif source is not None and source.parent != path.parent:
+                    record_artifacts[name] = membership_bytes(reference, source)
+            write_validated_antibiotic(record, path, membership_artifacts=record_artifacts)
             written += 1
         except ValidationFailedError as exc:
             print(exc.summary(), file=sys.stderr)
@@ -4520,7 +4560,7 @@ def main() -> int:
             if path not in keep:
                 path.unlink()
                 removed += 1
-        orphaned = orphaned_activity_artifacts(CORPUS_DIR)
+        orphaned = orphaned_activity_artifacts(CORPUS_DIR) + orphaned_membership_artifacts(CORPUS_DIR)
         for artifact in orphaned:
             artifact.unlink()
         for directory in sorted(CORPUS_DIR.iterdir()):

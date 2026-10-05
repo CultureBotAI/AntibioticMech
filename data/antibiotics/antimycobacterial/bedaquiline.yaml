@@ -5026,6 +5026,23 @@ activity_spectrum:
   mic_qualifier: '>'
   site_count: 1
   activity: RESISTANT
+activity_membership_collections:
+- format: antibioticmech-activity-memberships-v1
+  path: membership-6b383e544dfda7c86a34bb09fc0a31e04fcc8aa720871faa54c9fc76d21785a5.json.gz
+  sha256: 6b383e544dfda7c86a34bb09fc0a31e04fcc8aa720871faa54c9fc76d21785a5
+  byte_size: 504362
+  uncompressed_byte_size: 6708476
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_reference: https://zenodo.org/records/15680920
+  source_retrieved_on: '2026-10-05'
+  source_snapshot_sha256: b4ca79ecef0937fa0a3c304b82dcc0b45f49bd5ce404a4e6009181f4cdf62bb2
+  activity_inventory_sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+  subject_count: 26523
+  observation_count: 284
+  membership_count: 49899
+  measurement_count: 49899
+  unlinked_subject_count: 7080
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -5048,3 +5065,8 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval
     date 2026-08-30, unchanged.'
+- timestamp: '2026-10-05T07:27:10Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
+    retrieval date 2026-08-30, unchanged.'

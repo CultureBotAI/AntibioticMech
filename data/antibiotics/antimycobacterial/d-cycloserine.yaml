@@ -306,6 +306,23 @@ activity_spectrum:
       activity_group_id=dst_measurements:def514ad5bed9fa3; drug_code=DCS; row_count=279;
       isolate_count=279; source=SEQTREAT2020; method_1=solid media; method_2=LJ; method_cc=WHO;
       phenotype=U; quality=MEDIUM.'
+activity_membership_collections:
+- format: antibioticmech-activity-memberships-v1
+  path: membership-22631023b6dca71a93fd60519c5fa3c79d2ed7f467966a445b206ca860ebea69.json.gz
+  sha256: 22631023b6dca71a93fd60519c5fa3c79d2ed7f467966a445b206ca860ebea69
+  byte_size: 43588
+  uncompressed_byte_size: 499436
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_reference: https://zenodo.org/records/15680920
+  source_retrieved_on: '2026-10-05'
+  source_snapshot_sha256: b4ca79ecef0937fa0a3c304b82dcc0b45f49bd5ce404a4e6009181f4cdf62bb2
+  activity_inventory_sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+  subject_count: 2147
+  observation_count: 7
+  membership_count: 2147
+  measurement_count: 2147
+  unlinked_subject_count: 387
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -371,3 +388,8 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: activity_spectrum (CRYPTIC 3.4.0). Upstream retrieval
     date 2026-08-30, unchanged.'
+- timestamp: '2026-10-05T07:26:08Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
+    retrieval date 2026-08-30, unchanged.'
