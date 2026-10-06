@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% from "activity_table.html" import activity_table %}
 {% block head %}{% if r.activity %}<script src="{{ root }}activity-browser.js" defer></script>{% endif %}{% endblock %}
-{% from "macros.html" import evidence_list, curie_link, scroll_table %}
+{% from "macros.html" import evidence_list, curie_link, scroll_table, reference_link, labeled_term %}
 {% block title %}{{ r.label }} — AntibioticMech{% endblock %}
 {% block description %}{{ r.label }} ({{ r.identifier }}): {{ r.definition or (r.structural_class or 'an antimicrobial compound') }}{% endblock %}
 {% block content %}
@@ -33,8 +33,7 @@ signed off on this record yet.</p></div>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
 <ul class="plain">
   {% for p in r.parent_compounds %}
-  <li>{% if p.href %}<a href="{{ p.href }}">{{ p.label or p.id }}</a>{% else %}{{ p.label or p.id }}{% endif %}
-      <code class="curie">{{ p.id }}</code></li>
+  <li>{{ labeled_term(p) }}</li>
   {% endfor %}
 </ul>
 {% endif %}
@@ -111,8 +110,7 @@ article covers a topic; neither identifies a structure.</p>
 unreduced evidence behind its <code>antimicrobial_class</code>.</p>
 <ul class="plain">
   {% for a in r.activity_roles %}
-  <li>{% if a.href %}<a href="{{ a.href }}">{{ a.label or a.id }}</a>{% else %}{{ a.label or a.id }}{% endif %}
-    <code class="curie">{{ a.id }}</code></li>
+  <li>{{ labeled_term(a) }}</li>
   {% endfor %}
 </ul>
 {% endif %}
@@ -275,8 +273,8 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
   <thead><tr><th scope="col">Organism</th><th scope="col">BGC</th><th scope="col">Cluster link evidence</th><th scope="col">Source</th><th scope="col">Quality</th><th scope="col">Note</th><th scope="col">Evidence</th></tr></thead>
   {% for p in r.producer_organisms %}
   <tr>
-    <td><em>{{ p.taxon_label }}</em> <code class="curie">{{ p.taxon_id }}</code>{% if p.strain %}<br><span class="meta">strain {{ p.strain }}</span>{% endif %}</td>
-    <td>{{ p.biosynthetic_gene_cluster or '—' }}</td>
+    <td><em>{{ p.taxon_label }}</em> {{ reference_link(p.taxon_id) }}{% if p.strain %}<br><span class="meta">strain {{ p.strain }}</span>{% endif %}</td>
+    <td>{{ reference_link(p.biosynthetic_gene_cluster, 'MIBiG') if p.biosynthetic_gene_cluster else '—' }}</td>
     <td class="meta">{% if p.link_evidence %}{{ p.link_evidence_labels | join('; ') }}{% if p.link_evidence_scope %}<br><span class="pill{{ ' warn' if p.link_evidence_scope == 'CLUSTER_INHERITED' else ' plain' }}">{{ p.link_evidence_scope.replace("_", " ").lower() }}</span>{% endif %}{% else %}—{% endif %}</td>
     <td class="meta">{{ p.source or '—' }}{% if p.source_version %} {{ p.source_version }}{% endif %}{% if p.source_record_version %} (entry {{ p.source_record_version }}){% endif %}{% if p.reviewed %}; reviewed{% endif %}</td>
     <td class="meta">{{ p.source_quality or '—' }}</td>
@@ -307,7 +305,7 @@ or death.</p>
     <td><code class="curie">{{ n.node_id }}</code></td>
     <td>{{ n.label }}</td>
     <td class="meta">{{ n.node_type }}</td>
-    <td>{% if n.grounding %}<code class="curie">{{ n.grounding }}</code>{% elif n.grounding_status %}<span class="pill warn">{{ n.grounding_status }}</span>{% else %}—{% endif %}</td>
+    <td>{% if n.resolved_grounding and n.resolved_grounding.href %}{{ curie_link(n.resolved_grounding) }}{% elif n.grounding %}{{ reference_link(n.grounding) }}{% elif n.grounding_status %}<span class="pill warn">{{ n.grounding_status }}</span>{% else %}—{% endif %}</td>
   </tr>
   {% endfor %}
 </table>

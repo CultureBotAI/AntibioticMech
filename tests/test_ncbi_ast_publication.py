@@ -65,6 +65,22 @@ def test_disk_only_and_missing_fields_do_not_invent_mic(template):
     publication.verify_activity_table(render(template, []), [])
 
 
+def test_inline_evidence_references_snippets_and_notes_are_checked(template):
+    observations = [{
+        "taxon_label": "Example",
+        "evidence": [
+            {"reference": "PMID:123456", "snippet": "Measured < 2 & retained", "notes": "source context"},
+            {"reference": "doi:10.1234/example"},
+        ],
+    }]
+    html = render(template, observations)
+    publication.verify_activity_table(html, observations)
+    for text in ("PMID:123456", "Measured", "source context", "doi:10.1234/example"):
+        assert text in html
+        with pytest.raises(ValueError, match="rendered activity"):
+            publication.verify_activity_table(html.replace(text, "lost"), observations)
+
+
 def record_fixture():
     path = seed.read_lockfile_paths()["CHEBI:478164"]
     existing = activity_collections.load_record(path)

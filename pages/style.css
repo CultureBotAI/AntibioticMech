@@ -544,3 +544,6 @@ tr.subclass td:first-child { padding-left: 1.6rem; }
 #map-controls .legend.off { opacity: .4; text-decoration: line-through; }
 #corpus-map { max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
 figure { margin: 0; }
+
+/* Preserve complete scientific names and prose on narrow screens. */
+main h1, main p, main li, main dd { overflow-wrap: anywhere; }
