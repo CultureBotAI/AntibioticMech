@@ -393,3 +393,18 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
     retrieval date 2026-08-30, unchanged.'
+- timestamp: '2026-10-05T17:40:28Z'
+  curator: codex
+  action: ADD_PATHWAY_LINKS
+  changes: Added reviewed PathwayMech relationships and any supported protein example
+    from curation/pathway_links.yaml; organism and evidence limits are recorded in
+    each basis.
+  llm_assisted: true
+related_records:
+- corpus: PathwayMech
+  identifier: WikiPathways:WP5060
+  relation: TARGETS_PATHWAY_COMPONENT
+  basis: PMID:4555420 reports inhibition of E. coli alanine racemase by D-cycloserine.
+    The linked E. coli pathway contains alanine racemase. The experiment used E. coli
+    W; this is an enzyme/process correspondence, not strain identity.
+  source_version: aa305727458c44ab05614901334540e2c87a9f3a

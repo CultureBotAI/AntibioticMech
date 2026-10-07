@@ -138,6 +138,15 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 {% endcall %}
 {% endif %}
 
+{% if r.related_records %}
+<h2>Related pathway records</h2>
+<p class="meta">Evidence-qualified relationships to a pinned corpus revision.</p>
+{% for link in r.related_records %}
+<p>{% if link.url %}<a href="{{ link.url }}">{{ link.corpus }}: {{ link.identifier }}</a>{% else %}{{ link.corpus }}: {{ link.identifier }}{% endif %}
+<span class="pill plain">{{ link.relation }}</span><br>{{ link.basis }}<br>
+<span class="meta">Source revision: <code>{{ link.source_version }}</code></span></p>
+{% endfor %}
+{% endif %}
 {% if r.molecular_targets %}
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target

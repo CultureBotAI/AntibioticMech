@@ -427,6 +427,7 @@ CURATOR_FIELDS = [
     "cidality", "biosynthesis_origin",
     "activity_spectrum", "causal_graphs", "datasets",
     "contributors",
+    "related_records",
 ]
 
 SYNONYM_TYPE = {
