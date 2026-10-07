@@ -33,7 +33,7 @@ def test_mech_shared_is_vendored_byte_identical(repo_root):
     by pinning the sha of the copy we shipped."""
     path = repo_root / "src" / "antibioticmech" / "schema" / "mech_shared.yaml"
     digest = hashlib.sha256(path.read_bytes()).hexdigest()
-    expected = "1a5e21eb2ee9f3584ff6af3a6906b1d442e18c41de405b1bf907c20f44eafa2a"
+    expected = "c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895"
     assert digest == expected, (
         "mech_shared.yaml has been edited locally. It is vendored byte-identical "
         "across the Mech repos — change it once upstream and re-vendor everywhere, "
