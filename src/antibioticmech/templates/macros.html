@@ -5,11 +5,38 @@
 {% if items %}
 <ul class="plain evidence">
   {% for e in items %}
-  <li><span class="meta">{{ e.reference }}</span>{% if e.snippet %} — "{{ e.snippet }}"{% endif %}{% if e.notes %} <span class="meta">({{ e.notes }})</span>{% endif %}</li>
+  <li><span class="meta">{{ reference_link(e.reference) }}</span>{% if e.snippet %} — "{{ e.snippet }}"{% endif %}{% if e.notes %} <span class="meta">({{ e.notes }})</span>{% endif %}</li>
   {% endfor %}
 </ul>
 {% endif %}
 {% endmacro %}
+
+{% macro reference_link(value, namespace='') -%}
+{%- set text = value|default('', true)|string -%}
+{%- set parts = text.split(':', 1) -%}
+{%- set prefix = namespace or (parts[0] if parts|length == 2 else '') -%}
+{%- set local = text if namespace else (parts[1] if parts|length == 2 else '') -%}
+{%- set bases = {'PMID': 'https://pubmed.ncbi.nlm.nih.gov/', 'DOI': 'https://doi.org/',
+  'NCBITAXON': 'https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=',
+  'MIBIG': 'https://mibig.secondarymetabolites.org/go/',
+  'CHEBI': 'https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:',
+  'GO': 'https://amigo.geneontology.org/amigo/term/GO:',
+  'ARO': 'https://purl.obolibrary.org/obo/ARO_',
+  'BIOSAMPLE': 'https://www.ncbi.nlm.nih.gov/biosample/',
+  'BIOPROJECT': 'https://www.ncbi.nlm.nih.gov/bioproject/',
+  'SRA': 'https://www.ncbi.nlm.nih.gov/sra/?term=',
+  'ASSEMBLY': 'https://www.ncbi.nlm.nih.gov/assembly/'} -%}
+{%- if text.startswith('https://') or text.startswith('http://') -%}
+<a href="{{ text }}">{{ text }}</a>
+{%- elif bases.get(prefix|upper) and local -%}
+<a href="{{ bases[prefix|upper] }}{{ local|urlencode }}">{{ text }}</a>
+{%- else -%}{{ text }}{%- endif -%}
+{%- endmacro %}
+
+{% macro labeled_term(c) -%}
+{%- if c.label %}{{ c.label }} {% else %}<span class="meta">Label unavailable</span> {% endif -%}
+{{ curie_link(c) }}
+{%- endmacro %}
 
 {% macro curie_link(c) %}
 {%- if c %} {% if c.href %}<a href="{{ c.href }}"><code class="curie">{{ c.id }}</code></a>{% else %}<code class="curie">{{ c.id }}</code>{% endif %}{% endif %}

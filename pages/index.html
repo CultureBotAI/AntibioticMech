@@ -73,7 +73,7 @@
     <a class="stat" href="browse.html"><b>2939</b><span>compound records</span></a>
     <a class="stat" href="index.html#identity-grounding"><b>2669</b><span>ontology-grounded</span></a>
     <a class="stat" href="index.html#source-integration"><b>281</b><span>ChEBI and ARO</span></a>
-    <a class="stat" href="index.html#review-status"><b>80</b><span>curator-reviewed</span></a>
+    <a class="stat" href="index.html#review-status"><b>80</b><span>REVIEWED status</span></a>
   </div>
 </header>
 
@@ -82,8 +82,8 @@
   <div class="card">
     <div class="actions"><a class="btn" href="browse.html">Browse records</a></div>
     <h2>Record browser</h2>
-    <p>Every compound in the corpus, searchable, with its class, grounding
-       status and review state.</p>
+    <p>Browse every compound by antimicrobial class, with its grounding
+       and curation status. Each class has an identifier and name filter.</p>
   </div>
   <div class="card">
     <div class="actions">
@@ -203,8 +203,11 @@
 </table>
 
 <div class="note warn" id="review-status">
+  <p>SEEDED and REVIEWED describe recorded curation workflow states. Curation may
+  be agent-assisted; these counts do not establish human review. Consult each
+  record’s curation history for the actor and method.</p>
   <p><strong>This corpus is machine-generated.</strong> 2829 of
-  2939 records (96.3%) have had no human review — their
+  2939 records (96.3%) have the SEEDED workflow status — their
   identity, structure and resistance/target links come straight from ChEBI's and
   CARD's own data. A database assertion is not a primary citation; treat SEEDED
   records as a starting point for curation, not a reviewed claim.</p>

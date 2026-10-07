@@ -14,6 +14,9 @@
   const legend = document.getElementById("map-legend");
   const selection = document.getElementById("map-selection");
   const results = document.getElementById("map-results");
+  const resultCount = document.getElementById("map-search-count");
+  const showMore = document.getElementById("map-show-more");
+  let resultLimit = 20;
   const tooltip = document.getElementById("map-tooltip");
 
   const classColors = {
@@ -194,20 +197,24 @@
   function updateResults() {
     const query = search.value.trim().toLocaleLowerCase();
     results.replaceChildren();
+    showMore.hidden = true;
+    resultCount.textContent = "";
     if (!query) {
       const item = document.createElement("li");
       item.textContent = "Enter a name, synonym, or identifier.";
       results.append(item);
       return;
     }
-    const matches = state.visible.filter((record) => record.search.includes(query)).slice(0, 20);
+    const matches = state.visible.filter((record) => record.search.includes(query));
+    resultCount.textContent = `${matches.length} matching compounds; ${Math.min(matches.length, resultLimit)} shown.`;
+    showMore.hidden = matches.length <= resultLimit;
     if (!matches.length) {
       const item = document.createElement("li");
       item.textContent = "No visible compounds match.";
       results.append(item);
       return;
     }
-    matches.forEach((record) => {
+    matches.slice(0, resultLimit).forEach((record) => {
       const item = document.createElement("li");
       const button = document.createElement("button");
       button.type = "button";
@@ -227,9 +234,13 @@
     );
     if (state.selected && !state.visible.includes(state.selected)) {
       state.selected = null;
+      const url = new URL(window.location.href);
+      url.searchParams.delete("id");
+      history.replaceState(null, "", url);
       selection.innerHTML = "<h2>Select a compound</h2><p>The previous selection is hidden by the class filter.</p>";
     }
     status.textContent = `Showing ${state.visible.length} of ${state.records.length} compounds.`;
+    resultLimit = 20;
     rebuildLegend();
     updateResults();
     draw();
@@ -252,9 +263,17 @@
       const response = await fetch(root.dataset.source);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const artifact = await response.json();
+      const idResponse = await fetch(root.dataset.identifiers);
+      if (!idResponse.ok) throw new Error(`Search identifiers unavailable (${idResponse.status})`);
+      const identifiers = await idResponse.json();
+      if (Object.keys(identifiers).length !== artifact.records.length || artifact.records.some(
+        record => !Array.isArray(identifiers[record.identifier]) ||
+          !identifiers[record.identifier].every(value => typeof value === "string")
+      )) throw new Error("Search identifiers do not match this map.");
       state.records = artifact.records.map((record) => ({
         ...record,
-        search: [record.identifier, record.label, record.structural_class, ...record.synonyms]
+        search: [record.identifier, record.label, record.structural_class, ...record.synonyms,
+          ...identifiers[record.identifier]]
           .join("\n").toLocaleLowerCase()
       }));
       state.records.forEach((record) => state.byId.set(record.identifier, record));
@@ -285,7 +304,8 @@
     }
   }
 
-  search.addEventListener("input", updateResults);
+  search.addEventListener("input", () => { resultLimit = 20; updateResults(); });
+  showMore.addEventListener("click", () => { resultLimit += 20; updateResults(); });
   classFilter.addEventListener("change", applyFilters);
   colorMode.addEventListener("change", () => {
     rebuildLegend();
@@ -295,6 +315,8 @@
     search.value = "";
     classFilter.value = "";
     colorMode.value = "class";
+    state.selected = null;
+    selection.innerHTML = "<h2>Select a compound</h2><p>Search by name or select a point.</p>";
     const url = new URL(window.location.href);
     url.searchParams.delete("id");
     history.replaceState(null, "", url);

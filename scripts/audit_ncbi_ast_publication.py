@@ -170,6 +170,17 @@ def verify_activity_table(html: str, observations: list[dict], *, evidence=False
         # The header row has no anchor; every scientific row must have its full-record ordinal.
         if parser.anchors != [None, *[f"observation-{offset + i}" for i in range(1, len(observations) + 1)]]:
             raise ValueError("activity observation anchors differ")
+    else:
+        for row, observation in zip(expected, observations, strict=True):
+            references = []
+            for item in observation.get("evidence", []):
+                reference = item.get("reference") or ""
+                if item.get("snippet"):
+                    reference += f' — "{item["snippet"]}"'
+                if item.get("notes"):
+                    reference += f' ({item["notes"]})'
+                references.append(reference)
+            row.append(normalized(" ".join(references)))
     if parser.rows != expected:
         raise ValueError("rendered activity rows differ from serialized observations")
 
