@@ -166,6 +166,31 @@ assays, every observation has evidence on the closest supported AST claim,
 taxon IDs denote the written labels, isolate/genome IDs are not silently lost,
 and the curation-history event describes the actual diff.
 
+## Structured research assessment
+
+Follow [docs/record-reviews.md](../../../docs/record-reviews.md) and
+[the local profile](../../../docs/record-review-profile.md) for every resolved
+read-only resistant-taxa assessment. Capture the exact compound and inspected
+inputs before research with `scripts/record_review.py inspect`; preserve MIC
+units, assay, breakpoint edition, strain/isolate and genome identifiers as
+evidence-linked assessment dimensions. Record bounded search scope and access
+limits rather than interpreting an unlocated observation as susceptibility.
+
+Save a scoped `kind: record` assessment with the shared commands:
+
+```bash
+uv run python scripts/record_review.py validate <completed-review.yaml>
+uv run python scripts/record_review.py save --content <completed-review.yaml>
+```
+
+Link both `reviews/structured/<YYYYMMDDTHHMMSSZ>-<slug>/review.yaml` and its
+derived `review.md`. This does not establish whole-record sign-off. A required
+check that cannot run leaves an assessed review partial/blocked. Raw search
+results, AST extracts and queue readiness are not completed scientific reviews;
+deterministic-only inspections use `scientific_review: false`. For read-only
+requests, skip the guarded write and regeneration steps and preserve native
+curation status and history.
+
 ## Report
 
 Report the record path, resistant taxa or strains found, NCBITaxon CURIEs,
